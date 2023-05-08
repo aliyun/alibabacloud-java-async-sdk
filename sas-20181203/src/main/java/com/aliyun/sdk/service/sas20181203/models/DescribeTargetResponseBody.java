@@ -62,7 +62,7 @@ public class DescribeTargetResponseBody extends TeaModel {
         private Integer totalCount; 
 
         /**
-         * The ID of the request.
+         * RequestId.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -70,7 +70,7 @@ public class DescribeTargetResponseBody extends TeaModel {
         }
 
         /**
-         * The information about the server.
+         * Targets.
          */
         public Builder targets(java.util.List < Targets> targets) {
             this.targets = targets;
@@ -78,7 +78,7 @@ public class DescribeTargetResponseBody extends TeaModel {
         }
 
         /**
-         * The total number of entries returned.
+         * TotalCount.
          */
         public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;
@@ -142,7 +142,7 @@ public class DescribeTargetResponseBody extends TeaModel {
             private String targetType; 
 
             /**
-             * The flag that is added to the server. This parameter can be empty.
+             * Flag.
              */
             public Builder flag(String flag) {
                 this.flag = flag;
@@ -150,7 +150,7 @@ public class DescribeTargetResponseBody extends TeaModel {
             }
 
             /**
-             * The UUID of the server or the ID of the server group.
+             * Target.
              */
             public Builder target(String target) {
                 this.target = target;
@@ -158,11 +158,7 @@ public class DescribeTargetResponseBody extends TeaModel {
             }
 
             /**
-             * The type of the object. Valid values:
-             * <p>
-             * 
-             * *   **uuid**: a server
-             * *   **groupId**: a server group
+             * TargetType.
              */
             public Builder targetType(String targetType) {
                 this.targetType = targetType;

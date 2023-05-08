@@ -99,7 +99,7 @@ public class ModifyLogMetaStatusRequest extends Request {
         } 
 
         /**
-         * The ID of the request source. Set the value to **sas**.
+         * From.
          */
         public Builder from(String from) {
             this.putQueryParameter("From", from);
@@ -108,10 +108,7 @@ public class ModifyLogMetaStatusRequest extends Request {
         }
 
         /**
-         * The name of the dedicated Logstore in which logs are stored.
-         * <p>
-         * 
-         * >  You can call the [DescribeLogMeta](~~DescribeLogMeta~~) operation to query the names of Logstores.
+         * LogStore.
          */
         public Builder logStore(String logStore) {
             this.putQueryParameter("LogStore", logStore);
@@ -120,10 +117,7 @@ public class ModifyLogMetaStatusRequest extends Request {
         }
 
         /**
-         * The name of the project.
-         * <p>
-         * 
-         * >  You can call the [DescribeLogMeta](~~DescribeLogMeta~~) operation to query the names of projects.
+         * Project.
          */
         public Builder project(String project) {
             this.putQueryParameter("Project", project);
@@ -132,11 +126,7 @@ public class ModifyLogMetaStatusRequest extends Request {
         }
 
         /**
-         * The status of the log analysis feature. Valid values:
-         * <p>
-         * 
-         * *   **enabled**
-         * *   **disabled**
+         * Status.
          */
         public Builder status(String status) {
             this.putQueryParameter("Status", status);

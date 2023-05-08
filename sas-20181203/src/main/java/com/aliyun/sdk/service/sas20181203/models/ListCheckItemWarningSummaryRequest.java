@@ -194,33 +194,15 @@ public class ListCheckItemWarningSummaryRequest extends Request {
         } 
 
         /**
-         * The name of the check item. Fuzzy match is supported.
-         */
-        public Builder checkItemFuzzy(String checkItemFuzzy) {
-            this.putQueryParameter("CheckItemFuzzy", checkItemFuzzy);
-            this.checkItemFuzzy = checkItemFuzzy;
-            return this;
-        }
-
-        /**
          * The risk level. Default value: null, which indicates that check items at all risk levels are queried.Valid values:
          * <p>
          * *   **high**
          * *   **medium**
          * *   **low**
          */
-        public Builder checkLevel(String checkLevel) {
-            this.putQueryParameter("CheckLevel", checkLevel);
-            this.checkLevel = checkLevel;
-            return this;
-        }
-
-        /**
-         * The type of the check item.
-         */
-        public Builder checkType(String checkType) {
-            this.putQueryParameter("CheckType", checkType);
-            this.checkType = checkType;
+        public Builder checkItemFuzzy(String checkItemFuzzy) {
+            this.putQueryParameter("CheckItemFuzzy", checkItemFuzzy);
+            this.checkItemFuzzy = checkItemFuzzy;
             return this;
         }
 
@@ -230,6 +212,24 @@ public class ListCheckItemWarningSummaryRequest extends Request {
          * *   **1**: failed
          * *   **3**: passed
          */
+        public Builder checkLevel(String checkLevel) {
+            this.putQueryParameter("CheckLevel", checkLevel);
+            this.checkLevel = checkLevel;
+            return this;
+        }
+
+        /**
+         * The type of the baseline.
+         */
+        public Builder checkType(String checkType) {
+            this.putQueryParameter("CheckType", checkType);
+            this.checkType = checkType;
+            return this;
+        }
+
+        /**
+         * The type of the check item.
+         */
         public Builder checkWarningStatus(Integer checkWarningStatus) {
             this.putQueryParameter("CheckWarningStatus", checkWarningStatus);
             this.checkWarningStatus = checkWarningStatus;
@@ -237,7 +237,7 @@ public class ListCheckItemWarningSummaryRequest extends Request {
         }
 
         /**
-         * The name of the field that is used to query containers.
+         * The name of the check item. Fuzzy match is supported.
          */
         public Builder containerFieldName(String containerFieldName) {
             this.putQueryParameter("ContainerFieldName", containerFieldName);
@@ -246,32 +246,11 @@ public class ListCheckItemWarningSummaryRequest extends Request {
         }
 
         /**
-         * The value of the field that is used to query containers.
+         * The name of the field that is used to query containers.
          */
         public Builder containerFieldValue(String containerFieldValue) {
             this.putQueryParameter("ContainerFieldValue", containerFieldValue);
             this.containerFieldValue = containerFieldValue;
-            return this;
-        }
-
-        /**
-         * The number of the page to return. Default value: **1**.
-         */
-        public Builder currentPage(Integer currentPage) {
-            this.putQueryParameter("CurrentPage", currentPage);
-            this.currentPage = currentPage;
-            return this;
-        }
-
-        /**
-         * The ID of the asset group.
-         * <p>
-         * 
-         * > You can call the [DescribeAllGroups](~~DescribeAllGroups~~) operation to query the IDs of asset groups.
-         */
-        public Builder groupId(Long groupId) {
-            this.putQueryParameter("GroupId", groupId);
-            this.groupId = groupId;
             return this;
         }
 
@@ -282,9 +261,9 @@ public class ListCheckItemWarningSummaryRequest extends Request {
          * *   **zh**: Chinese
          * *   **en**: English
          */
-        public Builder lang(String lang) {
-            this.putQueryParameter("Lang", lang);
-            this.lang = lang;
+        public Builder currentPage(Integer currentPage) {
+            this.putQueryParameter("CurrentPage", currentPage);
+            this.currentPage = currentPage;
             return this;
         }
 
@@ -294,6 +273,24 @@ public class ListCheckItemWarningSummaryRequest extends Request {
          * 
          * > We recommend that you do not leave this parameter empty.
          */
+        public Builder groupId(Long groupId) {
+            this.putQueryParameter("GroupId", groupId);
+            this.groupId = groupId;
+            return this;
+        }
+
+        /**
+         * The value of the field that is used to query containers.
+         */
+        public Builder lang(String lang) {
+            this.putQueryParameter("Lang", lang);
+            this.lang = lang;
+            return this;
+        }
+
+        /**
+         * The number of the page to return. Default value: **1**.
+         */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
             this.pageSize = pageSize;
@@ -301,7 +298,7 @@ public class ListCheckItemWarningSummaryRequest extends Request {
         }
 
         /**
-         * The type of the baseline.
+         * Queries the risk statistics of check items by page.
          */
         public Builder riskType(String riskType) {
             this.putQueryParameter("RiskType", riskType);

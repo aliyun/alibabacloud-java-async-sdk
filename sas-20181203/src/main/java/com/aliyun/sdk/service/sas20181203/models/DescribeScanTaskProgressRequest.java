@@ -55,10 +55,7 @@ public class DescribeScanTaskProgressRequest extends Request {
         } 
 
         /**
-         * The ID of the virus scan task.
-         * <p>
-         * 
-         * >  You can call the [StartVirusScanTask](~~StartVirusScanTask~~) operation to query the IDs of virus scan tasks.
+         * TaskId.
          */
         public Builder taskId(Long taskId) {
             this.putQueryParameter("TaskId", taskId);

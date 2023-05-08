@@ -50,7 +50,7 @@ public class DescribeEventOnStageResponseBody extends TeaModel {
         private SecurityEventStageResponse securityEventStageResponse; 
 
         /**
-         * The ID of the request.
+         * RequestId.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -58,7 +58,7 @@ public class DescribeEventOnStageResponseBody extends TeaModel {
         }
 
         /**
-         * The platforms that are supported by the feature of container threat detection.
+         * SecurityEventStageResponse.
          */
         public Builder securityEventStageResponse(SecurityEventStageResponse securityEventStageResponse) {
             this.securityEventStageResponse = securityEventStageResponse;
@@ -98,12 +98,7 @@ public class DescribeEventOnStageResponseBody extends TeaModel {
             private java.util.Map < String, ? > securityEventOnStag; 
 
             /**
-             * The platform that is supported by the feature of container threat detection. Valid values:
-             * <p>
-             * 
-             * *   **container**
-             * *   **linux**
-             * *   **windows**
+             * SecurityEventOnStag.
              */
             public Builder securityEventOnStag(java.util.Map < String, ? > securityEventOnStag) {
                 this.securityEventOnStag = securityEventOnStag;

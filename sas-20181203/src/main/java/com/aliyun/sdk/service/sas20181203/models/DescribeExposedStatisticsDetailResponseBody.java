@@ -62,7 +62,7 @@ public class DescribeExposedStatisticsDetailResponseBody extends TeaModel {
         private java.util.List < StatisticsDetails> statisticsDetails; 
 
         /**
-         * The pagination information.
+         * The number of the page to return.
          */
         public Builder pageInfo(PageInfo pageInfo) {
             this.pageInfo = pageInfo;
@@ -70,7 +70,13 @@ public class DescribeExposedStatisticsDetailResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request, which is used to locate and troubleshoot issues.
+         * The resource from which the asset is exposed. Valid values:
+         * <p>
+         * 
+         * *   **INTERNET_IP**: the IP address of the Elastic Compute Service (ECS) instance
+         * *   **SLB**: the public IP address of the SLB instance
+         * *   **EIP**: the elastic IP address (EIP)
+         * *   **DNAT**: the NAT gateway that connects to the Internet by using the DNAT feature
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -78,7 +84,7 @@ public class DescribeExposedStatisticsDetailResponseBody extends TeaModel {
         }
 
         /**
-         * An array consisting of the gateway assets, ports, system components, or public IP addresses that are exposed on the Internet and are returned.
+         * The region ID of the asset.
          */
         public Builder statisticsDetails(java.util.List < StatisticsDetails> statisticsDetails) {
             this.statisticsDetails = statisticsDetails;
@@ -154,7 +160,7 @@ public class DescribeExposedStatisticsDetailResponseBody extends TeaModel {
             private Integer totalCount; 
 
             /**
-             * The number of entries returned on the current page.
+             * An array consisting of the gateway assets, ports, system components, or public IP addresses that are exposed on the Internet and are returned.
              */
             public Builder count(Integer count) {
                 this.count = count;
@@ -162,7 +168,7 @@ public class DescribeExposedStatisticsDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The page number of the returned page.
+             * exposureType
              */
             public Builder currentPage(Integer currentPage) {
                 this.currentPage = currentPage;
@@ -170,7 +176,7 @@ public class DescribeExposedStatisticsDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The number of entries returned per page.
+             * The port that is exposed on the Internet.
              */
             public Builder pageSize(Integer pageSize) {
                 this.pageSize = pageSize;
@@ -178,7 +184,7 @@ public class DescribeExposedStatisticsDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The total number of entries returned.
+             * lb-2ze4rso39h4nczcqs****
              */
             public Builder totalCount(Integer totalCount) {
                 this.totalCount = totalCount;
@@ -311,7 +317,7 @@ public class DescribeExposedStatisticsDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The system component that is exposed on the Internet.
+             * Queries the gateway assets, ports, system components, or public IP addresses that are exposed on the Internet.
              */
             public Builder exposureComponent(String exposureComponent) {
                 this.exposureComponent = exposureComponent;
@@ -319,7 +325,11 @@ public class DescribeExposedStatisticsDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The public IP address that is exposed on the Internet.
+             * The type of the gateway asset. This parameter is required when the **StatisticsType** parameter is set to **exposureType**. Valid values:
+             * <p>
+             * 
+             * *   **SLB**: the public IP address of a Server Load Balancer (SLB) instance
+             * *   **DNAT**: the NAT gateway that connects to the Internet by using the DNAT feature
              */
             public Builder exposureIp(String exposureIp) {
                 this.exposureIp = exposureIp;
@@ -327,7 +337,7 @@ public class DescribeExposedStatisticsDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The port that is exposed on the Internet.
+             * The number of entries returned per page.
              */
             public Builder exposurePort(String exposurePort) {
                 this.exposurePort = exposurePort;
@@ -335,13 +345,7 @@ public class DescribeExposedStatisticsDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The resource from which the asset is exposed. Valid values:
-             * <p>
-             * 
-             * *   **INTERNET_IP**: the IP address of the Elastic Compute Service (ECS) instance
-             * *   **SLB**: the public IP address of the SLB instance
-             * *   **EIP**: the elastic IP address (EIP)
-             * *   **DNAT**: the NAT gateway that connects to the Internet by using the DNAT feature
+             * The ID of the request, which is used to locate and troubleshoot issues.
              */
             public Builder exposureType(String exposureType) {
                 this.exposureType = exposureType;
@@ -349,13 +353,7 @@ public class DescribeExposedStatisticsDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the instance to which the resource belongs. The valid values of this parameter vary based on the value of the ExposureType parameter.
-             * <p>
-             * 
-             * *   If the value of the **ExposureType** parameter is **INTERNET_IP**, the value of this parameter is an empty string.
-             * *   If the value of the **ExposureType** parameter is **SLB**, the value of this parameter is the ID of the Internet-facing SLB instance.
-             * *   If the value of the **ExposureType** parameter is **EIP**, the value of this parameter is the ID of the EIP.
-             * *   If the value of the **ExposureType** parameter is **DNAT**, the value of this parameter is the ID of the NAT gateway.
+             * DescribeExposedStatisticsDetail
              */
             public Builder exposureTypeId(String exposureTypeId) {
                 this.exposureTypeId = exposureTypeId;
@@ -371,7 +369,7 @@ public class DescribeExposedStatisticsDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The region ID of the asset.
+             * 20
              */
             public Builder regionId(String regionId) {
                 this.regionId = regionId;

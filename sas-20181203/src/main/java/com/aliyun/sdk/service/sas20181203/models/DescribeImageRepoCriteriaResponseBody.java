@@ -50,7 +50,7 @@ public class DescribeImageRepoCriteriaResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * An array consisting of the filter conditions that are supported by the image repository.
+         * CriteriaList.
          */
         public Builder criteriaList(java.util.List < CriteriaList> criteriaList) {
             this.criteriaList = criteriaList;
@@ -58,7 +58,7 @@ public class DescribeImageRepoCriteriaResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request, which is used to locate and troubleshoot issues.
+         * RequestId.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -122,21 +122,7 @@ public class DescribeImageRepoCriteriaResponseBody extends TeaModel {
             private String values; 
 
             /**
-             * The name of the filter condition. Valid values:
-             * <p>
-             * 
-             * *   **instanceId**: the ID of the image instance.
-             * *   **repoName**: the name of the image repository.
-             * *   **repoId**: the ID of the image repository.
-             * *   **repoNamespace**: the namespace of the image repository.
-             * *   **regionId**: the region of the image.
-             * *   **vulStatus**: indicates whether vulnerabilities exist.
-             * *   **alarmStatus**: indicates whether security alerts exist.
-             * *   **hcStatus**: indicates whether baseline risks exist.
-             * *   **riskStatus**: indicates whether risks exist.
-             * *   **registryType**: the type of the image repository.
-             * *   **ImageId**: the ID of the image.
-             * *   **tag**: the tag of the image
+             * Name.
              */
             public Builder name(String name) {
                 this.name = name;
@@ -144,11 +130,7 @@ public class DescribeImageRepoCriteriaResponseBody extends TeaModel {
             }
 
             /**
-             * The type of the filter condition. Valid values:
-             * <p>
-             * 
-             * *   **input**: The filter condition needs to be specified.
-             * *   **select**: The filter condition is an option that can be selected from the drop-down list.
+             * Type.
              */
             public Builder type(String type) {
                 this.type = type;
@@ -156,10 +138,7 @@ public class DescribeImageRepoCriteriaResponseBody extends TeaModel {
             }
 
             /**
-             * The value of the filter condition. This parameter is returned only if the value of **Type** is **select**.
-             * <p>
-             * 
-             * > If the value of **Type** is **input**, the value of this parameter is an empty string.
+             * Values.
              */
             public Builder values(String values) {
                 this.values = values;

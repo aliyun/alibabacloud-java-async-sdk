@@ -84,11 +84,7 @@ public class ModifyEmgVulSubmitRequest extends Request {
         } 
 
         /**
-         * The language of the content within the request and response. Default value: **zh**. Valid values:
-         * <p>
-         * 
-         * *   **zh**: Chinese
-         * *   **en**: English
+         * Lang.
          */
         public Builder lang(String lang) {
             this.putQueryParameter("Lang", lang);
@@ -97,7 +93,7 @@ public class ModifyEmgVulSubmitRequest extends Request {
         }
 
         /**
-         * The name of the vulnerability.
+         * Name.
          */
         public Builder name(String name) {
             this.putQueryParameter("Name", name);
@@ -106,11 +102,7 @@ public class ModifyEmgVulSubmitRequest extends Request {
         }
 
         /**
-         * Specifies whether to scan for urgent vulnerabilities. Valid values:
-         * <p>
-         * 
-         * *   **yes**
-         * *   **no**
+         * UserAgreement.
          */
         public Builder userAgreement(String userAgreement) {
             this.putQueryParameter("UserAgreement", userAgreement);

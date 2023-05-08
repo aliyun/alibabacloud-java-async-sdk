@@ -82,11 +82,7 @@ public class DescribeSecurityStatInfoRequest extends Request {
         } 
 
         /**
-         * The language of the content within the request and response. Default value: **zh**. Valid values:
-         * <p>
-         * 
-         * *   **zh**: Chinese
-         * *   **en**: English
+         * The numbers of low-risk unfixed vulnerabilities at all points in time.
          */
         public Builder lang(String lang) {
             this.putQueryParameter("Lang", lang);
@@ -95,7 +91,7 @@ public class DescribeSecurityStatInfoRequest extends Request {
         }
 
         /**
-         * The ID of the account that is added to the resource directory as a member for multi-account control. You can use this parameter to query the security status of the account.
+         * The number of **high-risk** unfixed vulnerabilities at each point in time.
          */
         public Builder resourceDirectoryAccountId(String resourceDirectoryAccountId) {
             this.putQueryParameter("ResourceDirectoryAccountId", resourceDirectoryAccountId);
@@ -104,7 +100,7 @@ public class DescribeSecurityStatInfoRequest extends Request {
         }
 
         /**
-         * The source IP address of the request.
+         * The total number of baseline risk items on the current day.
          */
         public Builder sourceIp(String sourceIp) {
             this.putQueryParameter("SourceIp", sourceIp);

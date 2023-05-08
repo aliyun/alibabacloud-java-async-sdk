@@ -267,11 +267,7 @@ public class AddClientUserDefineRuleRequest extends Request {
         } 
 
         /**
-         * The action of the custom defense rule. Valid values:
-         * <p>
-         * 
-         * *   **0**: allow
-         * *   **1**: block
+         * ActionType.
          */
         public Builder actionType(Integer actionType) {
             this.putQueryParameter("ActionType", actionType);
@@ -280,7 +276,7 @@ public class AddClientUserDefineRuleRequest extends Request {
         }
 
         /**
-         * The command line.
+         * Cmdline.
          */
         public Builder cmdline(String cmdline) {
             this.putQueryParameter("Cmdline", cmdline);
@@ -289,7 +285,7 @@ public class AddClientUserDefineRuleRequest extends Request {
         }
 
         /**
-         * The file path.
+         * FilePath.
          */
         public Builder filePath(String filePath) {
             this.putQueryParameter("FilePath", filePath);
@@ -298,7 +294,7 @@ public class AddClientUserDefineRuleRequest extends Request {
         }
 
         /**
-         * The IP address.
+         * IP.
          */
         public Builder ip(String ip) {
             this.putQueryParameter("IP", ip);
@@ -307,7 +303,7 @@ public class AddClientUserDefineRuleRequest extends Request {
         }
 
         /**
-         * The hash values of processes.
+         * Md5List.
          */
         public Builder md5List(String md5List) {
             this.putQueryParameter("Md5List", md5List);
@@ -316,7 +312,7 @@ public class AddClientUserDefineRuleRequest extends Request {
         }
 
         /**
-         * The name of the custom defense rule.
+         * Name.
          */
         public Builder name(String name) {
             this.putQueryParameter("Name", name);
@@ -325,7 +321,7 @@ public class AddClientUserDefineRuleRequest extends Request {
         }
 
         /**
-         * The new file path after the file is renamed.
+         * NewFilePath.
          */
         public Builder newFilePath(String newFilePath) {
             this.putQueryParameter("NewFilePath", newFilePath);
@@ -334,7 +330,7 @@ public class AddClientUserDefineRuleRequest extends Request {
         }
 
         /**
-         * The parent command line.
+         * ParentCmdline.
          */
         public Builder parentCmdline(String parentCmdline) {
             this.putQueryParameter("ParentCmdline", parentCmdline);
@@ -343,7 +339,7 @@ public class AddClientUserDefineRuleRequest extends Request {
         }
 
         /**
-         * The path to the parent process.
+         * ParentProcPath.
          */
         public Builder parentProcPath(String parentProcPath) {
             this.putQueryParameter("ParentProcPath", parentProcPath);
@@ -352,12 +348,7 @@ public class AddClientUserDefineRuleRequest extends Request {
         }
 
         /**
-         * The type of the operating system. Valid values:
-         * <p>
-         * 
-         * *   **windows**: Windows
-         * *   **linux**: Linux
-         * *   **all**: all types
+         * Platform.
          */
         public Builder platform(String platform) {
             this.putQueryParameter("Platform", platform);
@@ -366,7 +357,7 @@ public class AddClientUserDefineRuleRequest extends Request {
         }
 
         /**
-         * The port number. This parameter is deprecated.
+         * Port.
          */
         public Builder port(Integer port) {
             this.putQueryParameter("Port", port);
@@ -375,7 +366,7 @@ public class AddClientUserDefineRuleRequest extends Request {
         }
 
         /**
-         * The port number. Valid values: **1 to 65535**.
+         * PortStr.
          */
         public Builder portStr(String portStr) {
             this.putQueryParameter("PortStr", portStr);
@@ -384,7 +375,7 @@ public class AddClientUserDefineRuleRequest extends Request {
         }
 
         /**
-         * The path to the process.
+         * ProcPath.
          */
         public Builder procPath(String procPath) {
             this.putQueryParameter("ProcPath", procPath);
@@ -393,7 +384,7 @@ public class AddClientUserDefineRuleRequest extends Request {
         }
 
         /**
-         * The registry value.
+         * RegistryContent.
          */
         public Builder registryContent(String registryContent) {
             this.putQueryParameter("RegistryContent", registryContent);
@@ -402,7 +393,7 @@ public class AddClientUserDefineRuleRequest extends Request {
         }
 
         /**
-         * The registry key.
+         * RegistryKey.
          */
         public Builder registryKey(String registryKey) {
             this.putQueryParameter("RegistryKey", registryKey);
@@ -411,16 +402,7 @@ public class AddClientUserDefineRuleRequest extends Request {
         }
 
         /**
-         * The type of the custom defense rule. Valid values:
-         * <p>
-         * 
-         * *   **1**: Process hash
-         * *   **2**: Command line
-         * *   **3**: Process Network
-         * *   **4**: File Read and Write
-         * *   **5**: Operation on Registry
-         * *   **6**: Dynamic-link Library Loading
-         * *   **7**: File Renaming
+         * Type.
          */
         public Builder type(Integer type) {
             this.putQueryParameter("Type", type);

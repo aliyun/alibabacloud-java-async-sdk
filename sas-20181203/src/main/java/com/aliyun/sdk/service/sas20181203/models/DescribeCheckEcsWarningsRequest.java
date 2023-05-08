@@ -54,7 +54,7 @@ public class DescribeCheckEcsWarningsRequest extends Request {
         } 
 
         /**
-         * The source IP address of the request.
+         * SourceIp.
          */
         public Builder sourceIp(String sourceIp) {
             this.putQueryParameter("SourceIp", sourceIp);

@@ -54,7 +54,10 @@ public class DescribeSuspEventExportInfoRequest extends Request {
         } 
 
         /**
-         * ExportId.
+         * The ID of the export task.
+         * <p>
+         * 
+         * > You can call the [ExportSuspEvents](~~ExportSuspEvents~~) operation to query the ID.
          */
         public Builder exportId(Integer exportId) {
             this.putQueryParameter("ExportId", exportId);

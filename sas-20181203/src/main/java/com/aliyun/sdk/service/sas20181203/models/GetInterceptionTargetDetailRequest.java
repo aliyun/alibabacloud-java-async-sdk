@@ -55,10 +55,7 @@ public class GetInterceptionTargetDetailRequest extends Request {
         } 
 
         /**
-         * The ID of the network object.
-         * <p>
-         * 
-         * > You can call the [ListInterceptionTargetPage](~~ListInterceptionTargetPage~~) operation to query the IDs of network objects.
+         * TargetId.
          */
         public Builder targetId(Long targetId) {
             this.putQueryParameter("TargetId", targetId);

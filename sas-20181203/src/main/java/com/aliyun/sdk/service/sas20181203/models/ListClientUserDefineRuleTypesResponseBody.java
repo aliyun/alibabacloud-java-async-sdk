@@ -50,7 +50,7 @@ public class ListClientUserDefineRuleTypesResponseBody extends TeaModel {
         private java.util.List < String > userDefineRuleTypes; 
 
         /**
-         * The ID of the request, which is used to locate and troubleshoot issues.
+         * RequestId.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -58,7 +58,7 @@ public class ListClientUserDefineRuleTypesResponseBody extends TeaModel {
         }
 
         /**
-         * An array consisting of the rule types that are supported.
+         * UserDefineRuleTypes.
          */
         public Builder userDefineRuleTypes(java.util.List < String > userDefineRuleTypes) {
             this.userDefineRuleTypes = userDefineRuleTypes;

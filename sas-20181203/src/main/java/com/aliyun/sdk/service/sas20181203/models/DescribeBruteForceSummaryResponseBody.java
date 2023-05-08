@@ -50,7 +50,7 @@ public class DescribeBruteForceSummaryResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The statistics of IP address blocking policies.
+         * BruteForceSummary.
          */
         public Builder bruteForceSummary(BruteForceSummary bruteForceSummary) {
             this.bruteForceSummary = bruteForceSummary;
@@ -58,7 +58,7 @@ public class DescribeBruteForceSummaryResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request, which is used to locate and troubleshoot issues.
+         * RequestId.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -75,12 +75,32 @@ public class DescribeBruteForceSummaryResponseBody extends TeaModel {
         @NameInMap("AllStrategyCount")
         private Integer allStrategyCount;
 
+        @NameInMap("AntiBruteForceRuleCount")
+        private String antiBruteForceRuleCount;
+
+        @NameInMap("CustomEffectiveCount")
+        private String customEffectiveCount;
+
+        @NameInMap("CustomRecordCount")
+        private String customRecordCount;
+
         @NameInMap("EffectiveCount")
         private Integer effectiveCount;
 
+        @NameInMap("SystemEffectiveCount")
+        private String systemEffectiveCount;
+
+        @NameInMap("SystemRecordCount")
+        private String systemRecordCount;
+
         private BruteForceSummary(Builder builder) {
             this.allStrategyCount = builder.allStrategyCount;
+            this.antiBruteForceRuleCount = builder.antiBruteForceRuleCount;
+            this.customEffectiveCount = builder.customEffectiveCount;
+            this.customRecordCount = builder.customRecordCount;
             this.effectiveCount = builder.effectiveCount;
+            this.systemEffectiveCount = builder.systemEffectiveCount;
+            this.systemRecordCount = builder.systemRecordCount;
         }
 
         public static Builder builder() {
@@ -99,18 +119,58 @@ public class DescribeBruteForceSummaryResponseBody extends TeaModel {
         }
 
         /**
+         * @return antiBruteForceRuleCount
+         */
+        public String getAntiBruteForceRuleCount() {
+            return this.antiBruteForceRuleCount;
+        }
+
+        /**
+         * @return customEffectiveCount
+         */
+        public String getCustomEffectiveCount() {
+            return this.customEffectiveCount;
+        }
+
+        /**
+         * @return customRecordCount
+         */
+        public String getCustomRecordCount() {
+            return this.customRecordCount;
+        }
+
+        /**
          * @return effectiveCount
          */
         public Integer getEffectiveCount() {
             return this.effectiveCount;
         }
 
+        /**
+         * @return systemEffectiveCount
+         */
+        public String getSystemEffectiveCount() {
+            return this.systemEffectiveCount;
+        }
+
+        /**
+         * @return systemRecordCount
+         */
+        public String getSystemRecordCount() {
+            return this.systemRecordCount;
+        }
+
         public static final class Builder {
             private Integer allStrategyCount; 
+            private String antiBruteForceRuleCount; 
+            private String customEffectiveCount; 
+            private String customRecordCount; 
             private Integer effectiveCount; 
+            private String systemEffectiveCount; 
+            private String systemRecordCount; 
 
             /**
-             * The total number of IP address blocking policies.
+             * AllStrategyCount.
              */
             public Builder allStrategyCount(Integer allStrategyCount) {
                 this.allStrategyCount = allStrategyCount;
@@ -118,10 +178,50 @@ public class DescribeBruteForceSummaryResponseBody extends TeaModel {
             }
 
             /**
-             * The number of enabled IP address blocking policies.
+             * AntiBruteForceRuleCount.
+             */
+            public Builder antiBruteForceRuleCount(String antiBruteForceRuleCount) {
+                this.antiBruteForceRuleCount = antiBruteForceRuleCount;
+                return this;
+            }
+
+            /**
+             * CustomEffectiveCount.
+             */
+            public Builder customEffectiveCount(String customEffectiveCount) {
+                this.customEffectiveCount = customEffectiveCount;
+                return this;
+            }
+
+            /**
+             * CustomRecordCount.
+             */
+            public Builder customRecordCount(String customRecordCount) {
+                this.customRecordCount = customRecordCount;
+                return this;
+            }
+
+            /**
+             * EffectiveCount.
              */
             public Builder effectiveCount(Integer effectiveCount) {
                 this.effectiveCount = effectiveCount;
+                return this;
+            }
+
+            /**
+             * SystemEffectiveCount.
+             */
+            public Builder systemEffectiveCount(String systemEffectiveCount) {
+                this.systemEffectiveCount = systemEffectiveCount;
+                return this;
+            }
+
+            /**
+             * SystemRecordCount.
+             */
+            public Builder systemRecordCount(String systemRecordCount) {
+                this.systemRecordCount = systemRecordCount;
                 return this;
             }
 

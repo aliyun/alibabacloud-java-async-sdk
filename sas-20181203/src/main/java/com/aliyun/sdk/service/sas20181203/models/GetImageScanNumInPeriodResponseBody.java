@@ -50,7 +50,7 @@ public class GetImageScanNumInPeriodResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The data returned.
+         * ImageScanData.
          */
         public Builder imageScanData(ImageScanData imageScanData) {
             this.imageScanData = imageScanData;
@@ -58,7 +58,7 @@ public class GetImageScanNumInPeriodResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request, which is used to locate and troubleshoot issues.
+         * RequestId.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -98,7 +98,7 @@ public class GetImageScanNumInPeriodResponseBody extends TeaModel {
             private Integer imageScanCount; 
 
             /**
-             * The number of image scans.
+             * ImageScanCount.
              */
             public Builder imageScanCount(Integer imageScanCount) {
                 this.imageScanCount = imageScanCount;

@@ -50,7 +50,7 @@ public class DescribeRiskCheckSummaryResponseBody extends TeaModel {
         private RiskCheckSummary riskCheckSummary; 
 
         /**
-         * The ID of the request, which is used to locate and troubleshoot issues.
+         * RequestId.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -58,7 +58,7 @@ public class DescribeRiskCheckSummaryResponseBody extends TeaModel {
         }
 
         /**
-         * The summary information about the check results of cloud service configurations.
+         * RiskCheckSummary.
          */
         public Builder riskCheckSummary(RiskCheckSummary riskCheckSummary) {
             this.riskCheckSummary = riskCheckSummary;
@@ -110,7 +110,7 @@ public class DescribeRiskCheckSummaryResponseBody extends TeaModel {
             private String status; 
 
             /**
-             * The number of detected risk items.
+             * Count.
              */
             public Builder count(Integer count) {
                 this.count = count;
@@ -118,11 +118,7 @@ public class DescribeRiskCheckSummaryResponseBody extends TeaModel {
             }
 
             /**
-             * The status of the check item after the check is finished. Valid values:
-             * <p>
-             * 
-             * *   **pass**: The check item passed the check, which indicates that the check item is normal.
-             * *   **failed**: The check item failed the check, which indicates that risks are detected based on the check item.
+             * Status.
              */
             public Builder status(String status) {
                 this.status = status;
@@ -223,7 +219,7 @@ public class DescribeRiskCheckSummaryResponseBody extends TeaModel {
             private String title; 
 
             /**
-             * An array that consists of the statistics about check results.
+             * CountByStatus.
              */
             public Builder countByStatus(java.util.List < CountByStatus> countByStatus) {
                 this.countByStatus = countByStatus;
@@ -231,7 +227,7 @@ public class DescribeRiskCheckSummaryResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the check item type.
+             * Id.
              */
             public Builder id(Long id) {
                 this.id = id;
@@ -239,7 +235,7 @@ public class DescribeRiskCheckSummaryResponseBody extends TeaModel {
             }
 
             /**
-             * The remaining time before the check is complete.
+             * RemainingTime.
              */
             public Builder remainingTime(Integer remainingTime) {
                 this.remainingTime = remainingTime;
@@ -247,7 +243,7 @@ public class DescribeRiskCheckSummaryResponseBody extends TeaModel {
             }
 
             /**
-             * The sequence number of the check item type in the **All Types** drop-down list in the Security Center console.
+             * Sort.
              */
             public Builder sort(Integer sort) {
                 this.sort = sort;
@@ -255,13 +251,7 @@ public class DescribeRiskCheckSummaryResponseBody extends TeaModel {
             }
 
             /**
-             * The status of the check. Valid values:
-             * <p>
-             * 
-             * *   **finish**: The check is finished.
-             * *   **running**: The check is in progress.
-             * *   **waiting**: The check is pending.
-             * *   **notStart**: The check is not started.
+             * Status.
              */
             public Builder status(String status) {
                 this.status = status;
@@ -269,7 +259,7 @@ public class DescribeRiskCheckSummaryResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the check item type.
+             * Title.
              */
             public Builder title(String title) {
                 this.title = title;
@@ -322,7 +312,7 @@ public class DescribeRiskCheckSummaryResponseBody extends TeaModel {
             private String key; 
 
             /**
-             * The number of check items at the specified risk level.
+             * Count.
              */
             public Builder count(Integer count) {
                 this.count = count;
@@ -330,12 +320,7 @@ public class DescribeRiskCheckSummaryResponseBody extends TeaModel {
             }
 
             /**
-             * The risk level of the check items. Valid values:
-             * <p>
-             * 
-             * *   **high**
-             * *   **medium**
-             * *   **low**
+             * Key.
              */
             public Builder key(String key) {
                 this.key = key;
@@ -484,7 +469,7 @@ public class DescribeRiskCheckSummaryResponseBody extends TeaModel {
             private Float riskRate; 
 
             /**
-             * The number of affected assets.
+             * AffectedAssetCount.
              */
             public Builder affectedAssetCount(Integer affectedAssetCount) {
                 this.affectedAssetCount = affectedAssetCount;
@@ -492,7 +477,7 @@ public class DescribeRiskCheckSummaryResponseBody extends TeaModel {
             }
 
             /**
-             * The number of the check items that failed the check.
+             * DisabledRiskCount.
              */
             public Builder disabledRiskCount(Integer disabledRiskCount) {
                 this.disabledRiskCount = disabledRiskCount;
@@ -500,7 +485,7 @@ public class DescribeRiskCheckSummaryResponseBody extends TeaModel {
             }
 
             /**
-             * The number of the check items that passed the check.
+             * EnabledRiskCount.
              */
             public Builder enabledRiskCount(Integer enabledRiskCount) {
                 this.enabledRiskCount = enabledRiskCount;
@@ -508,7 +493,7 @@ public class DescribeRiskCheckSummaryResponseBody extends TeaModel {
             }
 
             /**
-             * An array that consists of the statistics for each type of check item.
+             * Groups.
              */
             public Builder groups(java.util.List < Groups> groups) {
                 this.groups = groups;
@@ -516,7 +501,7 @@ public class DescribeRiskCheckSummaryResponseBody extends TeaModel {
             }
 
             /**
-             * The number of check items.
+             * ItemCount.
              */
             public Builder itemCount(Integer itemCount) {
                 this.itemCount = itemCount;
@@ -524,7 +509,7 @@ public class DescribeRiskCheckSummaryResponseBody extends TeaModel {
             }
 
             /**
-             * The number of risk items detected in the last check.
+             * PreviousCount.
              */
             public Builder previousCount(Integer previousCount) {
                 this.previousCount = previousCount;
@@ -532,7 +517,7 @@ public class DescribeRiskCheckSummaryResponseBody extends TeaModel {
             }
 
             /**
-             * The timestamp of the last check. Unit: milliseconds.
+             * PreviousTime.
              */
             public Builder previousTime(Long previousTime) {
                 this.previousTime = previousTime;
@@ -540,7 +525,7 @@ public class DescribeRiskCheckSummaryResponseBody extends TeaModel {
             }
 
             /**
-             * The number of detected risk items.
+             * RiskCount.
              */
             public Builder riskCount(Integer riskCount) {
                 this.riskCount = riskCount;
@@ -548,7 +533,7 @@ public class DescribeRiskCheckSummaryResponseBody extends TeaModel {
             }
 
             /**
-             * An array that consists of the number of check items at each risk level.
+             * RiskLevelCount.
              */
             public Builder riskLevelCount(java.util.List < RiskLevelCount> riskLevelCount) {
                 this.riskLevelCount = riskLevelCount;
@@ -556,7 +541,7 @@ public class DescribeRiskCheckSummaryResponseBody extends TeaModel {
             }
 
             /**
-             * The proportion of risk items to all check items.
+             * RiskRate.
              */
             public Builder riskRate(Float riskRate) {
                 this.riskRate = riskRate;

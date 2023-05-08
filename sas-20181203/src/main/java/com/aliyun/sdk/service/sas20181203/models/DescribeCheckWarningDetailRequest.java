@@ -83,10 +83,7 @@ public class DescribeCheckWarningDetailRequest extends Request {
         } 
 
         /**
-         * The ID of the alert that is triggered by the check item.
-         * <p>
-         * 
-         * >  To query the details about a specified check item, you must provide the ID of the alert that is triggered by the check item. You can call the [DescribeCheckWarnings](~~DescribeCheckWarnings~~) operation to query the IDs of alerts.
+         * The ID of the request, which is used to locate and troubleshoot issues.
          */
         public Builder checkWarningId(Long checkWarningId) {
             this.putQueryParameter("CheckWarningId", checkWarningId);
@@ -95,11 +92,7 @@ public class DescribeCheckWarningDetailRequest extends Request {
         }
 
         /**
-         * The language of the content within the request and the response. Valid values:
-         * <p>
-         * 
-         * *   **zh**: Chinese
-         * *   **en**: English
+         * The ID of the check item.
          */
         public Builder lang(String lang) {
             this.putQueryParameter("Lang", lang);
@@ -108,7 +101,7 @@ public class DescribeCheckWarningDetailRequest extends Request {
         }
 
         /**
-         * The source IP address of the request.
+         * The additional information about the risk item.
          */
         public Builder sourceIp(String sourceIp) {
             this.putQueryParameter("SourceIp", sourceIp);

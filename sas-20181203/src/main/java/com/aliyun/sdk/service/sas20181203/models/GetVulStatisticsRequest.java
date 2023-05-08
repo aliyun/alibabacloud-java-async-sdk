@@ -84,10 +84,7 @@ public class GetVulStatisticsRequest extends Request {
         } 
 
         /**
-         * The ID of the asset group. Separate multiple IDs with commas (,).
-         * <p>
-         * 
-         * >  You can call the [DescribeAllGroups](~~DescribeAllGroups~~) operation to query the IDs of asset groups.
+         * GroupIdList.
          */
         public Builder groupIdList(String groupIdList) {
             this.putQueryParameter("GroupIdList", groupIdList);
@@ -96,7 +93,7 @@ public class GetVulStatisticsRequest extends Request {
         }
 
         /**
-         * The source IP address of the request.
+         * SourceIp.
          */
         public Builder sourceIp(String sourceIp) {
             this.putQueryParameter("SourceIp", sourceIp);
@@ -105,15 +102,7 @@ public class GetVulStatisticsRequest extends Request {
         }
 
         /**
-         * The type of the vulnerability whose statistics you want to query. Separate multiple types with commas (,). Valid values:
-         * <p>
-         * 
-         * *   **cve**: Linux software vulnerability
-         * *   **sys**: Windows system vulnerability
-         * *   **cms**: Web-CMS vulnerability
-         * *   **emg**: urgent vulnerability
-         * *   **app**: vulnerability detected by using a web scanner
-         * *   **sca**: vulnerability detected based on software component analysis
+         * TypeList.
          */
         public Builder typeList(String typeList) {
             this.putQueryParameter("TypeList", typeList);

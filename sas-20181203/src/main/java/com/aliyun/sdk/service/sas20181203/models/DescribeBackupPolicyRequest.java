@@ -55,10 +55,12 @@ public class DescribeBackupPolicyRequest extends Request {
         } 
 
         /**
-         * The ID of the anti-ransomware policy.
+         * The status of the anti-ransomware policy. Valid values:
          * <p>
          * 
-         * >  You can call the [DescribeBackupPolicies](~~DescribeBackupPolicies~~) operation to query the IDs of anti-ransomware policies.
+         * *   **enabled**: The anti-ransomware policy is manually enabled.
+         * *   **disabled**: The anti-ransomware policy is manually disabled. After an anti-ransomware policy is disabled, the data backup task that is running based on the policy stops.
+         * *   **closed**: The anti-ransomware policy automatically stops because the anti-ransomware capacity is insufficient.
          */
         public Builder id(Long id) {
             this.putQueryParameter("Id", id);

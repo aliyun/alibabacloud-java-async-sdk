@@ -54,7 +54,7 @@ public class DescribeExposedInstanceCriteriaRequest extends Request {
         } 
 
         /**
-         * The value of the search condition. Fuzzy match is supported.
+         * DescribeExposedInstanceCriteria
          */
         public Builder value(String value) {
             this.putQueryParameter("Value", value);

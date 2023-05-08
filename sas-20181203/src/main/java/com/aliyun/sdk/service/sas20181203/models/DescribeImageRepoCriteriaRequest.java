@@ -54,10 +54,7 @@ public class DescribeImageRepoCriteriaRequest extends Request {
         } 
 
         /**
-         * The value of the filter condition.
-         * <p>
-         * 
-         * > You can perform fuzzy search based on the image ID, image tag, image instance ID, image repository name, image repository namespace, image repository ID, image repository region, image digest, and image repository type.
+         * Value.
          */
         public Builder value(String value) {
             this.putQueryParameter("Value", value);

@@ -110,7 +110,7 @@ public class DescribeQuaraFileDownloadInfoResponseBody extends TeaModel {
         private String uuid; 
 
         /**
-         * DownloadUrl.
+         * The URL that is used to download the file. The URL is valid for five minutes.
          */
         public Builder downloadUrl(String downloadUrl) {
             this.downloadUrl = downloadUrl;
@@ -118,7 +118,7 @@ public class DescribeQuaraFileDownloadInfoResponseBody extends TeaModel {
         }
 
         /**
-         * Md5.
+         * The MD5 hash value of the quarantined file.
          */
         public Builder md5(String md5) {
             this.md5 = md5;
@@ -126,7 +126,7 @@ public class DescribeQuaraFileDownloadInfoResponseBody extends TeaModel {
         }
 
         /**
-         * Path.
+         * The file path.
          */
         public Builder path(String path) {
             this.path = path;
@@ -134,7 +134,7 @@ public class DescribeQuaraFileDownloadInfoResponseBody extends TeaModel {
         }
 
         /**
-         * QuaraFileId.
+         * The ID of the quarantined file.
          */
         public Builder quaraFileId(Integer quaraFileId) {
             this.quaraFileId = quaraFileId;
@@ -142,7 +142,7 @@ public class DescribeQuaraFileDownloadInfoResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -150,7 +150,7 @@ public class DescribeQuaraFileDownloadInfoResponseBody extends TeaModel {
         }
 
         /**
-         * Tag.
+         * The tag that is added to the related alert.
          */
         public Builder tag(String tag) {
             this.tag = tag;
@@ -158,7 +158,7 @@ public class DescribeQuaraFileDownloadInfoResponseBody extends TeaModel {
         }
 
         /**
-         * Uuid.
+         * The UUID of the server.
          */
         public Builder uuid(String uuid) {
             this.uuid = uuid;

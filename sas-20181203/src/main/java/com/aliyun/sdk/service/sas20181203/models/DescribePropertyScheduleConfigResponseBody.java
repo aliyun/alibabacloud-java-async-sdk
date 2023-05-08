@@ -50,10 +50,7 @@ public class DescribePropertyScheduleConfigResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The configuration time. Unit: hours.
-         * <p>
-         * 
-         * >  The value **0** indicates that asset fingerprint collection is disabled for this type of asset.
+         * Config.
          */
         public Builder config(String config) {
             this.config = config;
@@ -61,7 +58,7 @@ public class DescribePropertyScheduleConfigResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request, which is used to locate and troubleshoot issues.
+         * RequestId.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

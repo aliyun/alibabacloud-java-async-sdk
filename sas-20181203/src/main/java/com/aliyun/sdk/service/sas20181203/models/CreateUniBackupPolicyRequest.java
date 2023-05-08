@@ -216,7 +216,7 @@ public class CreateUniBackupPolicyRequest extends Request {
         } 
 
         /**
-         * The name of the database account.
+         * AccountName.
          */
         public Builder accountName(String accountName) {
             this.putQueryParameter("AccountName", accountName);
@@ -225,7 +225,7 @@ public class CreateUniBackupPolicyRequest extends Request {
         }
 
         /**
-         * The password of the database account.
+         * AccountPassword.
          */
         public Builder accountPassword(String accountPassword) {
             this.putQueryParameter("AccountPassword", accountPassword);
@@ -234,11 +234,7 @@ public class CreateUniBackupPolicyRequest extends Request {
         }
 
         /**
-         * Specifies whether the database is manually added. Valid values:
-         * <p>
-         * 
-         * *   **true**: yes
-         * *   **false**: no
+         * DatabaseAddByUser.
          */
         public Builder databaseAddByUser(String databaseAddByUser) {
             this.putQueryParameter("DatabaseAddByUser", databaseAddByUser);
@@ -247,12 +243,7 @@ public class CreateUniBackupPolicyRequest extends Request {
         }
 
         /**
-         * The type of the database. Valid values:
-         * <p>
-         * 
-         * *   **MYSQL**
-         * *   **ORACLE**
-         * *   **MSSQL**
+         * DatabaseType.
          */
         public Builder databaseType(String databaseType) {
             this.putQueryParameter("DatabaseType", databaseType);
@@ -261,13 +252,7 @@ public class CreateUniBackupPolicyRequest extends Request {
         }
 
         /**
-         * The policy for full backup. The value of this parameter is a JSON string that contains the following fields:
-         * <p>
-         * 
-         * *   **start**: the start time of a backup task
-         * *   **interval**: the interval of backup tasks
-         * *   **type**: the unit of the interval
-         * *   **days**: the days of a week on which a backup task is performed
+         * FullPlan.
          */
         public Builder fullPlan(java.util.Map < String, ? > fullPlan) {
             String fullPlanShrink = shrink(fullPlan, "FullPlan", "json");
@@ -277,13 +262,7 @@ public class CreateUniBackupPolicyRequest extends Request {
         }
 
         /**
-         * The policy for incremental backup. The value of this parameter is a JSON string that contains the following fields:
-         * <p>
-         * 
-         * *   **start**: the start time of a backup task
-         * *   **interval**: the interval of backup tasks
-         * *   **type**: the unit of the interval
-         * *   **days**: the days of a week on which a backup task is performed
+         * IncPlan.
          */
         public Builder incPlan(java.util.Map < String, ? > incPlan) {
             String incPlanShrink = shrink(incPlan, "IncPlan", "json");
@@ -293,10 +272,7 @@ public class CreateUniBackupPolicyRequest extends Request {
         }
 
         /**
-         * The ID of the Elastic Compute Service (ECS) instance.
-         * <p>
-         * 
-         * >  You can call the [DescribeUniBackupDatabase](~~DescribeUniBackupDatabase~~) operation to query the IDs of ECS instances.
+         * InstanceId.
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -305,7 +281,7 @@ public class CreateUniBackupPolicyRequest extends Request {
         }
 
         /**
-         * The name of the anti-ransomware policy.
+         * PolicyName.
          */
         public Builder policyName(String policyName) {
             this.putQueryParameter("PolicyName", policyName);
@@ -314,7 +290,7 @@ public class CreateUniBackupPolicyRequest extends Request {
         }
 
         /**
-         * The retention period of backup data.
+         * Retention.
          */
         public Builder retention(Integer retention) {
             this.putQueryParameter("Retention", retention);
@@ -323,7 +299,7 @@ public class CreateUniBackupPolicyRequest extends Request {
         }
 
         /**
-         * The maximum network bandwidth that is allowed during data backup. Unit: bytes.
+         * SpeedLimiter.
          */
         public Builder speedLimiter(Long speedLimiter) {
             this.putQueryParameter("SpeedLimiter", speedLimiter);
@@ -332,7 +308,7 @@ public class CreateUniBackupPolicyRequest extends Request {
         }
 
         /**
-         * The region in which the server resides.
+         * UniRegionId.
          */
         public Builder uniRegionId(String uniRegionId) {
             this.putQueryParameter("UniRegionId", uniRegionId);
@@ -341,10 +317,7 @@ public class CreateUniBackupPolicyRequest extends Request {
         }
 
         /**
-         * The UUID of the server whose data is backed up based on the anti-ransomware policy.
-         * <p>
-         * 
-         * >  You can call the [DescribeCloudCenterInstances](~~141932~~) operation to query the UUIDs of servers.
+         * Uuid.
          */
         public Builder uuid(String uuid) {
             this.putQueryParameter("Uuid", uuid);

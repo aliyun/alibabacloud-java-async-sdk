@@ -50,7 +50,7 @@ public class DescribeCriteriaResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * An array that consists of the filter conditions.
+         * CriteriaList.
          */
         public Builder criteriaList(java.util.List < CriteriaList> criteriaList) {
             this.criteriaList = criteriaList;
@@ -58,7 +58,7 @@ public class DescribeCriteriaResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request, which is used to locate and troubleshoot issues.
+         * DescribeCriteria
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -134,11 +134,7 @@ public class DescribeCriteriaResponseBody extends TeaModel {
             private String values; 
 
             /**
-             * The structured attribute values of the assets that match the keyword. The value of this parameter is in the JSON format and contains the following fields:
-             * <p>
-             * 
-             * *   **vendor**: providers
-             * *   **regionIds**: IDs of supported regions
+             * MultiValues.
              */
             public Builder multiValues(String multiValues) {
                 this.multiValues = multiValues;
@@ -146,7 +142,7 @@ public class DescribeCriteriaResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the filter condition.
+             * Name.
              */
             public Builder name(String name) {
                 this.name = name;
@@ -154,11 +150,7 @@ public class DescribeCriteriaResponseBody extends TeaModel {
             }
 
             /**
-             * The type of the filter condition. Valid values:
-             * <p>
-             * 
-             * *   **input**: The filter condition needs to be specified.
-             * *   **select**: The filter condition is an option that can be selected from the drop-down list.
+             * Type.
              */
             public Builder type(String type) {
                 this.type = type;
@@ -166,7 +158,7 @@ public class DescribeCriteriaResponseBody extends TeaModel {
             }
 
             /**
-             * The attribute values of the assets that match the keyword.
+             * Values.
              */
             public Builder values(String values) {
                 this.values = values;

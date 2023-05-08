@@ -55,10 +55,7 @@ public class RebootMachineRequest extends Request {
         } 
 
         /**
-         * The UUID of the server that you want to restart.
-         * <p>
-         * 
-         * >  You can call the [DescribeCloudCenterInstances](~~describecloudcenterinstances~~) operation to query the UUIDs of servers.
+         * Uuid.
          */
         public Builder uuid(String uuid) {
             this.putQueryParameter("Uuid", uuid);

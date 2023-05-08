@@ -62,7 +62,7 @@ public class DescribeDomainListResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * An array that consists of the information about domain names.
+         * DomainListResponseList.
          */
         public Builder domainListResponseList(java.util.List < DomainListResponseList> domainListResponseList) {
             this.domainListResponseList = domainListResponseList;
@@ -70,7 +70,7 @@ public class DescribeDomainListResponseBody extends TeaModel {
         }
 
         /**
-         * The pagination information.
+         * PageInfo.
          */
         public Builder pageInfo(PageInfo pageInfo) {
             this.pageInfo = pageInfo;
@@ -78,7 +78,7 @@ public class DescribeDomainListResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request, which is used to locate and troubleshoot issues.
+         * DescribeDomainList
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -130,7 +130,7 @@ public class DescribeDomainListResponseBody extends TeaModel {
             private String ipList; 
 
             /**
-             * The name of the domain or website.
+             * Domain.
              */
             public Builder domain(String domain) {
                 this.domain = domain;
@@ -138,7 +138,7 @@ public class DescribeDomainListResponseBody extends TeaModel {
             }
 
             /**
-             * The IP addresses of the domain name.
+             * IpList.
              */
             public Builder ipList(String ipList) {
                 this.ipList = ipList;
@@ -215,7 +215,7 @@ public class DescribeDomainListResponseBody extends TeaModel {
             private Integer totalCount; 
 
             /**
-             * The number of entries returned on the current page.
+             * Count.
              */
             public Builder count(Integer count) {
                 this.count = count;
@@ -223,7 +223,7 @@ public class DescribeDomainListResponseBody extends TeaModel {
             }
 
             /**
-             * The page number of the returned page.
+             * CurrentPage.
              */
             public Builder currentPage(Integer currentPage) {
                 this.currentPage = currentPage;
@@ -231,7 +231,7 @@ public class DescribeDomainListResponseBody extends TeaModel {
             }
 
             /**
-             * The number of entries returned per page. Default value: **10**.
+             * PageSize.
              */
             public Builder pageSize(Integer pageSize) {
                 this.pageSize = pageSize;
@@ -239,7 +239,7 @@ public class DescribeDomainListResponseBody extends TeaModel {
             }
 
             /**
-             * The total number of entries returned.
+             * TotalCount.
              */
             public Builder totalCount(Integer totalCount) {
                 this.totalCount = totalCount;

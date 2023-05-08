@@ -62,7 +62,7 @@ public class DescribeCheckFixDetailsResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * An array that consists of the parameters.
+         * The specified value of the rule parameter.
          */
         public Builder checkFixDetails(java.util.List < CheckFixDetails> checkFixDetails) {
             this.checkFixDetails = checkFixDetails;
@@ -70,7 +70,7 @@ public class DescribeCheckFixDetailsResponseBody extends TeaModel {
         }
 
         /**
-         * The number of risk items that can be fixed.
+         * Count.
          */
         public Builder count(Integer count) {
             this.count = count;
@@ -78,7 +78,7 @@ public class DescribeCheckFixDetailsResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request, which is used to locate and troubleshoot issues.
+         * RequestId.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -214,7 +214,7 @@ public class DescribeCheckFixDetailsResponseBody extends TeaModel {
             private String value; 
 
             /**
-             * The options that can be selected for the rule parameter if the value of the ParamType parameter is 2.
+             * EnumValue.
              */
             public Builder enumValue(String enumValue) {
                 this.enumValue = enumValue;
@@ -222,7 +222,7 @@ public class DescribeCheckFixDetailsResponseBody extends TeaModel {
             }
 
             /**
-             * The maximum value of the rule parameter.
+             * MaxValue.
              */
             public Builder maxValue(Integer maxValue) {
                 this.maxValue = maxValue;
@@ -230,7 +230,7 @@ public class DescribeCheckFixDetailsResponseBody extends TeaModel {
             }
 
             /**
-             * The minimum value of the rule parameter.
+             * MinValue.
              */
             public Builder minValue(Integer minValue) {
                 this.minValue = minValue;
@@ -238,7 +238,7 @@ public class DescribeCheckFixDetailsResponseBody extends TeaModel {
             }
 
             /**
-             * The default value of the rule parameter.
+             * The number of risk items that can be fixed.
              */
             public Builder paramDefaultValue(String paramDefaultValue) {
                 this.paramDefaultValue = paramDefaultValue;
@@ -246,7 +246,7 @@ public class DescribeCheckFixDetailsResponseBody extends TeaModel {
             }
 
             /**
-             * The description of the rule parameter.
+             * The ID of the risk item.
              */
             public Builder paramDesc(String paramDesc) {
                 this.paramDesc = paramDesc;
@@ -254,7 +254,7 @@ public class DescribeCheckFixDetailsResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the rule parameter.
+             * The ID of the request, which is used to locate and troubleshoot issues.
              */
             public Builder paramName(String paramName) {
                 this.paramName = paramName;
@@ -262,11 +262,7 @@ public class DescribeCheckFixDetailsResponseBody extends TeaModel {
             }
 
             /**
-             * The type of the rule parameter. Valid values:
-             * <p>
-             * 
-             * *   **1**: input
-             * *   **2**: selection
+             * Queries the parameters that you can configure to fix specified risk items.
              */
             public Builder paramType(Integer paramType) {
                 this.paramType = paramType;
@@ -274,7 +270,7 @@ public class DescribeCheckFixDetailsResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the rule.
+             * RuleId.
              */
             public Builder ruleId(String ruleId) {
                 this.ruleId = ruleId;
@@ -282,7 +278,7 @@ public class DescribeCheckFixDetailsResponseBody extends TeaModel {
             }
 
             /**
-             * The specified value of the rule parameter.
+             * Value.
              */
             public Builder value(String value) {
                 this.value = value;
@@ -407,7 +403,7 @@ public class DescribeCheckFixDetailsResponseBody extends TeaModel {
             private String varName; 
 
             /**
-             * The ID of the risk item.
+             * The information about the rule parameter.
              */
             public Builder checkId(Long checkId) {
                 this.checkId = checkId;
@@ -415,7 +411,11 @@ public class DescribeCheckFixDetailsResponseBody extends TeaModel {
             }
 
             /**
-             * The default value of the rule.
+             * The language of the content within the request and response. Default value: **zh**. Valid values:
+             * <p>
+             * 
+             * *   **zh**: Chinese
+             * *   **en**: English
              */
             public Builder defaultValue(Integer defaultValue) {
                 this.defaultValue = defaultValue;
@@ -423,11 +423,7 @@ public class DescribeCheckFixDetailsResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether the rule is optional. Valid values:
-             * <p>
-             * 
-             * *   **1**: yes
-             * *   **0**: no
+             * The rule that is supported by the risk item.
              */
             public Builder optional(Integer optional) {
                 this.optional = optional;
@@ -443,7 +439,10 @@ public class DescribeCheckFixDetailsResponseBody extends TeaModel {
             }
 
             /**
-             * The description of the rule.
+             * The ID of the risk item.
+             * <p>
+             * 
+             * >  You can call the [DescribeCheckWarningSummary](~~116179~~) operation to query the IDs of risk items.
              */
             public Builder ruleDesc(String ruleDesc) {
                 this.ruleDesc = ruleDesc;
@@ -451,7 +450,7 @@ public class DescribeCheckFixDetailsResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the rule.
+             * The data returned.
              */
             public Builder ruleId(String ruleId) {
                 this.ruleId = ruleId;
@@ -459,7 +458,7 @@ public class DescribeCheckFixDetailsResponseBody extends TeaModel {
             }
 
             /**
-             * The specified value of the rule parameter.
+             * The ID of the rule.
              */
             public Builder value(Integer value) {
                 this.value = value;
@@ -467,7 +466,7 @@ public class DescribeCheckFixDetailsResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the variable.
+             * The specified value of the rule parameter.
              */
             public Builder varName(String varName) {
                 this.varName = varName;
@@ -544,7 +543,7 @@ public class DescribeCheckFixDetailsResponseBody extends TeaModel {
             private java.util.List < Rules> rules; 
 
             /**
-             * The detailed description of the risk item.
+             * The description of the risk item.
              */
             public Builder checkDesc(String checkDesc) {
                 this.checkDesc = checkDesc;
@@ -552,7 +551,7 @@ public class DescribeCheckFixDetailsResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the risk item.
+             * The minimum value of the rule parameter.
              */
             public Builder checkId(Long checkId) {
                 this.checkId = checkId;
@@ -560,7 +559,7 @@ public class DescribeCheckFixDetailsResponseBody extends TeaModel {
             }
 
             /**
-             * The description of the risk item.
+             * The information about the parameter.
              */
             public Builder checkItem(String checkItem) {
                 this.checkItem = checkItem;
@@ -568,7 +567,7 @@ public class DescribeCheckFixDetailsResponseBody extends TeaModel {
             }
 
             /**
-             * An array consisting of the rules that are supported by the risk item.
+             * The options that can be selected for the rule parameter if the value of the ParamType parameter is 2.
              */
             public Builder rules(java.util.List < Rules> rules) {
                 this.rules = rules;

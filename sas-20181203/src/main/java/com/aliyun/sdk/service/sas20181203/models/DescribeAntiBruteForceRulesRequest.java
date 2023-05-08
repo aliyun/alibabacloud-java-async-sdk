@@ -21,6 +21,10 @@ public class DescribeAntiBruteForceRulesRequest extends Request {
     private Long id;
 
     @Query
+    @NameInMap("Name")
+    private String name;
+
+    @Query
     @NameInMap("PageSize")
     private String pageSize;
 
@@ -36,6 +40,7 @@ public class DescribeAntiBruteForceRulesRequest extends Request {
         super(builder);
         this.currentPage = builder.currentPage;
         this.id = builder.id;
+        this.name = builder.name;
         this.pageSize = builder.pageSize;
         this.resourceOwnerId = builder.resourceOwnerId;
         this.sourceIp = builder.sourceIp;
@@ -69,6 +74,13 @@ public class DescribeAntiBruteForceRulesRequest extends Request {
     }
 
     /**
+     * @return name
+     */
+    public String getName() {
+        return this.name;
+    }
+
+    /**
      * @return pageSize
      */
     public String getPageSize() {
@@ -92,6 +104,7 @@ public class DescribeAntiBruteForceRulesRequest extends Request {
     public static final class Builder extends Request.Builder<DescribeAntiBruteForceRulesRequest, Builder> {
         private Integer currentPage; 
         private Long id; 
+        private String name; 
         private String pageSize; 
         private Long resourceOwnerId; 
         private String sourceIp; 
@@ -104,6 +117,7 @@ public class DescribeAntiBruteForceRulesRequest extends Request {
             super(request);
             this.currentPage = request.currentPage;
             this.id = request.id;
+            this.name = request.name;
             this.pageSize = request.pageSize;
             this.resourceOwnerId = request.resourceOwnerId;
             this.sourceIp = request.sourceIp;
@@ -119,14 +133,20 @@ public class DescribeAntiBruteForceRulesRequest extends Request {
         }
 
         /**
-         * The ID of the defense rule.
-         * <p>
-         * 
-         * > You can call the [DescribeAntiBruteForceRules](~~DescribeAntiBruteForceRules~~) operation to query the IDs of defense rules.
+         * Id.
          */
         public Builder id(Long id) {
             this.putQueryParameter("Id", id);
             this.id = id;
+            return this;
+        }
+
+        /**
+         * Name.
+         */
+        public Builder name(String name) {
+            this.putQueryParameter("Name", name);
+            this.name = name;
             return this;
         }
 
@@ -149,7 +169,7 @@ public class DescribeAntiBruteForceRulesRequest extends Request {
         }
 
         /**
-         * The source IP address of the request.
+         * SourceIp.
          */
         public Builder sourceIp(String sourceIp) {
             this.putQueryParameter("SourceIp", sourceIp);

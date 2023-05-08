@@ -124,7 +124,7 @@ public class DescribeUniBackupDatabaseRequest extends Request {
         } 
 
         /**
-         * The number of the page to return. Default value: **1**.
+         * CurrentPage.
          */
         public Builder currentPage(Integer currentPage) {
             this.putQueryParameter("CurrentPage", currentPage);
@@ -133,12 +133,7 @@ public class DescribeUniBackupDatabaseRequest extends Request {
         }
 
         /**
-         * The type of the database. Valid values:
-         * <p>
-         * 
-         * *   **MYSQL**
-         * *   **MSSQL**
-         * *   **Oracle**
+         * DatabaseType.
          */
         public Builder databaseType(String databaseType) {
             this.putQueryParameter("DatabaseType", databaseType);
@@ -147,7 +142,7 @@ public class DescribeUniBackupDatabaseRequest extends Request {
         }
 
         /**
-         * The name of the Elastic Compute Service (ECS) instance.
+         * InstanceName.
          */
         public Builder instanceName(String instanceName) {
             this.putQueryParameter("InstanceName", instanceName);
@@ -156,10 +151,7 @@ public class DescribeUniBackupDatabaseRequest extends Request {
         }
 
         /**
-         * The number of entries to return on each page. Default value: 20. If you leave this parameter empty, 20 entries are returned on each page.
-         * <p>
-         * 
-         * >  We recommend that you do not leave this parameter empty.
+         * PageSize.
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -168,11 +160,7 @@ public class DescribeUniBackupDatabaseRequest extends Request {
         }
 
         /**
-         * The condition that is used to query the database. Valid values:
-         * <p>
-         * 
-         * *   **create**: newly created
-         * *   **restore**: restored
+         * QueryType.
          */
         public Builder queryType(String queryType) {
             this.putQueryParameter("QueryType", queryType);
@@ -181,7 +169,7 @@ public class DescribeUniBackupDatabaseRequest extends Request {
         }
 
         /**
-         * The region ID of the server that hosts the database.
+         * UniRegionId.
          */
         public Builder uniRegionId(String uniRegionId) {
             this.putQueryParameter("UniRegionId", uniRegionId);

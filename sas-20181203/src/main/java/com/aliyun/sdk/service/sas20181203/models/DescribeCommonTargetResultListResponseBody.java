@@ -50,7 +50,7 @@ public class DescribeCommonTargetResultListResponseBody extends TeaModel {
         private TargetConfig targetConfig; 
 
         /**
-         * The ID of the request, which is used to locate and troubleshoot issues.
+         * RequestId.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -58,7 +58,7 @@ public class DescribeCommonTargetResultListResponseBody extends TeaModel {
         }
 
         /**
-         * The information about the configuration item.
+         * TargetConfig.
          */
         public Builder targetConfig(TargetConfig targetConfig) {
             this.targetConfig = targetConfig;
@@ -158,11 +158,7 @@ public class DescribeCommonTargetResultListResponseBody extends TeaModel {
             private String type; 
 
             /**
-             * The identifier that indicates whether the configuration item is applied to the server. Valid values:
-             * <p>
-             * 
-             * *   **add**: applied
-             * *   **del**: not applied
+             * Flag.
              */
             public Builder flag(String flag) {
                 this.flag = flag;
@@ -170,7 +166,7 @@ public class DescribeCommonTargetResultListResponseBody extends TeaModel {
             }
 
             /**
-             * The default identifier.
+             * TargetDefault.
              */
             public Builder targetDefault(String targetDefault) {
                 this.targetDefault = targetDefault;
@@ -178,10 +174,7 @@ public class DescribeCommonTargetResultListResponseBody extends TeaModel {
             }
 
             /**
-             * An array that consists of the IDs of the server groups or the UUIDs of the servers.
-             * <p>
-             * 
-             * >  If **uuid** is returned for the **TargetType** parameter, **UUIDs** of the servers are returned. If **groupId** is returned for the **TargetType** parameter, IDs of the server groups are returned.
+             * TargetList.
              */
             public Builder targetList(java.util.List < String > targetList) {
                 this.targetList = targetList;
@@ -189,11 +182,7 @@ public class DescribeCommonTargetResultListResponseBody extends TeaModel {
             }
 
             /**
-             * The type of the server to which the configuration item is applied. Valid values:
-             * <p>
-             * 
-             * *   **uuid**: a server
-             * *   **groupId**: a server group
+             * TargetType.
              */
             public Builder targetType(String targetType) {
                 this.targetType = targetType;
@@ -201,7 +190,7 @@ public class DescribeCommonTargetResultListResponseBody extends TeaModel {
             }
 
             /**
-             * The total number of entries returned.
+             * TotalCount.
              */
             public Builder totalCount(String totalCount) {
                 this.totalCount = totalCount;
@@ -209,13 +198,7 @@ public class DescribeCommonTargetResultListResponseBody extends TeaModel {
             }
 
             /**
-             * The type of the configuration item. Valid values:
-             * <p>
-             * 
-             * *   **webshell_timescan**: webshell detection and removal
-             * *   **aliscriptengine**: in-depth detection engine
-             * *   **alidetect**: installation scope of local file detection
-             * *   **alidetect-scan-enable**: detection scope of local file detection
+             * Type.
              */
             public Builder type(String type) {
                 this.type = type;

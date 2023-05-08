@@ -97,7 +97,7 @@ public class DescribeStrategyExecDetailRequest extends Request {
         } 
 
         /**
-         * The number of the page to return. Default value: **1**.
+         * CurrentPage.
          */
         public Builder currentPage(Integer currentPage) {
             this.putQueryParameter("CurrentPage", currentPage);
@@ -106,7 +106,7 @@ public class DescribeStrategyExecDetailRequest extends Request {
         }
 
         /**
-         * The number of entries to return on each page. Default value: **10**.
+         * PageSize.
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -115,7 +115,7 @@ public class DescribeStrategyExecDetailRequest extends Request {
         }
 
         /**
-         * The source IP address of the request.
+         * SourceIp.
          */
         public Builder sourceIp(String sourceIp) {
             this.putQueryParameter("SourceIp", sourceIp);
@@ -124,7 +124,7 @@ public class DescribeStrategyExecDetailRequest extends Request {
         }
 
         /**
-         * The ID of the baseline check policy.
+         * StrategyId.
          */
         public Builder strategyId(Integer strategyId) {
             this.putQueryParameter("StrategyId", strategyId);

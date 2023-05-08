@@ -68,11 +68,7 @@ public class DescribeSecureSuggestionRequest extends Request {
         } 
 
         /**
-         * The language of the content within the request and response. Default value: **zh**. Valid values:
-         * <p>
-         * 
-         * *   **zh**: Chinese
-         * *   **en**: English
+         * The ID of the request, which is used to locate and troubleshoot issues.
          */
         public Builder lang(String lang) {
             this.putQueryParameter("Lang", lang);
@@ -81,7 +77,7 @@ public class DescribeSecureSuggestionRequest extends Request {
         }
 
         /**
-         * The source IP address of the request.
+         * An array that consists of the unhandled security risks.
          */
         public Builder sourceIp(String sourceIp) {
             this.putQueryParameter("SourceIp", sourceIp);

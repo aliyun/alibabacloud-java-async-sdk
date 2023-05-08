@@ -50,7 +50,7 @@ public class DescribeNsasSuspEventTypeResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * An array that consists of the information about the alert type.
+         * EventTypes.
          */
         public Builder eventTypes(java.util.List < EventTypes> eventTypes) {
             this.eventTypes = eventTypes;
@@ -58,7 +58,7 @@ public class DescribeNsasSuspEventTypeResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request, which is used to locate and troubleshoot issues.
+         * RequestId.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -122,7 +122,7 @@ public class DescribeNsasSuspEventTypeResponseBody extends TeaModel {
             private String type; 
 
             /**
-             * The name of the alert type.
+             * Name.
              */
             public Builder name(String name) {
                 this.name = name;
@@ -130,7 +130,7 @@ public class DescribeNsasSuspEventTypeResponseBody extends TeaModel {
             }
 
             /**
-             * The number of assets for which an alert of the type is generated.
+             * SuspEventCount.
              */
             public Builder suspEventCount(Integer suspEventCount) {
                 this.suspEventCount = suspEventCount;
@@ -138,7 +138,7 @@ public class DescribeNsasSuspEventTypeResponseBody extends TeaModel {
             }
 
             /**
-             * The alert type.
+             * Type.
              */
             public Builder type(String type) {
                 this.type = type;

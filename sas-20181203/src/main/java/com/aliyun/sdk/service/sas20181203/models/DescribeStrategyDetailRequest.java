@@ -83,7 +83,7 @@ public class DescribeStrategyDetailRequest extends Request {
         } 
 
         /**
-         * The ID of the baseline check policy.
+         * The alias of the check item.
          */
         public Builder id(String id) {
             this.putQueryParameter("Id", id);
@@ -92,11 +92,7 @@ public class DescribeStrategyDetailRequest extends Request {
         }
 
         /**
-         * The language of the content within the request and response. Default value: **zh**. Valid values:
-         * <p>
-         * 
-         * *   **zh**: Chinese
-         * *   **en**: English
+         * The default value of the rule.
          */
         public Builder lang(String lang) {
             this.putQueryParameter("Lang", lang);
@@ -105,7 +101,7 @@ public class DescribeStrategyDetailRequest extends Request {
         }
 
         /**
-         * The source IP address of the request.
+         * The minimum value of the rule parameter.
          */
         public Builder sourceIp(String sourceIp) {
             this.putQueryParameter("SourceIp", sourceIp);

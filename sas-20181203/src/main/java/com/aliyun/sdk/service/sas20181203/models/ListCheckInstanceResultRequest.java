@@ -181,7 +181,7 @@ public class ListCheckInstanceResultRequest extends Request {
         } 
 
         /**
-         * The ID of the check item.
+         * CheckId.
          */
         public Builder checkId(Long checkId) {
             this.putQueryParameter("CheckId", checkId);
@@ -190,7 +190,7 @@ public class ListCheckInstanceResultRequest extends Request {
         }
 
         /**
-         * The number of the page to return.
+         * CurrentPage.
          */
         public Builder currentPage(Integer currentPage) {
             this.putQueryParameter("CurrentPage", currentPage);
@@ -199,7 +199,7 @@ public class ListCheckInstanceResultRequest extends Request {
         }
 
         /**
-         * The ID of the instance.
+         * InstanceIdKey.
          */
         public Builder instanceIdKey(String instanceIdKey) {
             this.putQueryParameter("InstanceIdKey", instanceIdKey);
@@ -208,7 +208,7 @@ public class ListCheckInstanceResultRequest extends Request {
         }
 
         /**
-         * The instance IDs of cloud services.
+         * InstanceIds.
          */
         public Builder instanceIds(java.util.List < String > instanceIds) {
             this.putQueryParameter("InstanceIds", instanceIds);
@@ -217,7 +217,7 @@ public class ListCheckInstanceResultRequest extends Request {
         }
 
         /**
-         * The name of the instance.
+         * InstanceNameKey.
          */
         public Builder instanceNameKey(String instanceNameKey) {
             this.putQueryParameter("InstanceNameKey", instanceNameKey);
@@ -226,11 +226,7 @@ public class ListCheckInstanceResultRequest extends Request {
         }
 
         /**
-         * The language of the content within the request and response. Default value: **zh**. Valid values:
-         * <p>
-         * 
-         * *   **zh**: Chinese
-         * *   **en**: English
+         * Lang.
          */
         public Builder lang(String lang) {
             this.putQueryParameter("Lang", lang);
@@ -239,7 +235,7 @@ public class ListCheckInstanceResultRequest extends Request {
         }
 
         /**
-         * The number of entries to return on each page.
+         * PageSize.
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -248,7 +244,7 @@ public class ListCheckInstanceResultRequest extends Request {
         }
 
         /**
-         * The region ID of the instance.
+         * RegionIdKey.
          */
         public Builder regionIdKey(String regionIdKey) {
             this.putQueryParameter("RegionIdKey", regionIdKey);
@@ -257,7 +253,7 @@ public class ListCheckInstanceResultRequest extends Request {
         }
 
         /**
-         * The sort type of the instances.
+         * SortTypes.
          */
         public Builder sortTypes(java.util.List < String > sortTypes) {
             this.putQueryParameter("SortTypes", sortTypes);
@@ -266,7 +262,7 @@ public class ListCheckInstanceResultRequest extends Request {
         }
 
         /**
-         * The statuses of check items.
+         * Statuses.
          */
         public Builder statuses(java.util.List < String > statuses) {
             this.putQueryParameter("Statuses", statuses);

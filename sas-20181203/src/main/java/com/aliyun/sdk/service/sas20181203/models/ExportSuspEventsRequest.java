@@ -292,7 +292,7 @@ public class ExportSuspEventsRequest extends Request {
         } 
 
         /**
-         * AssetsTypeList.
+         * The types of assets.
          */
         public Builder assetsTypeList(java.util.List < String > assetsTypeList) {
             this.putQueryParameter("AssetsTypeList", assetsTypeList);
@@ -301,7 +301,10 @@ public class ExportSuspEventsRequest extends Request {
         }
 
         /**
-         * ClusterId.
+         * The ID of the cluster that you want to query.
+         * <p>
+         * 
+         * > You can call the [DescribeGroupedContainerInstances](~~DescribeGroupedContainerInstances~~) operation to query the IDs of clusters.
          */
         public Builder clusterId(String clusterId) {
             this.putQueryParameter("ClusterId", clusterId);
@@ -310,7 +313,21 @@ public class ExportSuspEventsRequest extends Request {
         }
 
         /**
-         * ContainerFieldName.
+         * The key of the condition that is used to query alert events on containers. Valid values:
+         * <p>
+         * 
+         * *   **instanceId**: the ID of the asset
+         * *   **appName**: the name of the application
+         * *   **clusterId**: the ID of the cluster
+         * *   **regionId**: the ID of the region
+         * *   **nodeName**: the name of the node
+         * *   **namespace**: the namespace
+         * *   **clusterName**: the name of the cluster
+         * *   **image**: the name of the image
+         * *   **imageRepoName**: the name of the image repository
+         * *   **imageRepoNamespace**: the namespace to which the image repository belongs
+         * *   **imageRepoTag**: the tag that is added to the image
+         * *   **imageDigest**: the digest of the image
          */
         public Builder containerFieldName(String containerFieldName) {
             this.putQueryParameter("ContainerFieldName", containerFieldName);
@@ -319,7 +336,7 @@ public class ExportSuspEventsRequest extends Request {
         }
 
         /**
-         * ContainerFieldValue.
+         * The value of the condition that is used to query alert events on containers.
          */
         public Builder containerFieldValue(String containerFieldValue) {
             this.putQueryParameter("ContainerFieldValue", containerFieldValue);
@@ -328,7 +345,7 @@ public class ExportSuspEventsRequest extends Request {
         }
 
         /**
-         * CurrentPage.
+         * The number of the page to return.
          */
         public Builder currentPage(String currentPage) {
             this.putQueryParameter("CurrentPage", currentPage);
@@ -337,7 +354,11 @@ public class ExportSuspEventsRequest extends Request {
         }
 
         /**
-         * Dealed.
+         * The status of the alert event. Valid values:
+         * <p>
+         * 
+         * *   **N**: unhandled
+         * *   **Y**: handled
          */
         public Builder dealed(String dealed) {
             this.putQueryParameter("Dealed", dealed);
@@ -346,7 +367,7 @@ public class ExportSuspEventsRequest extends Request {
         }
 
         /**
-         * From.
+         * The data source of the exception. Set the value to sas.
          */
         public Builder from(String from) {
             this.putQueryParameter("From", from);
@@ -355,7 +376,11 @@ public class ExportSuspEventsRequest extends Request {
         }
 
         /**
-         * Lang.
+         * The language of the content within the request and response. Default value: **zh**. Valid values:
+         * <p>
+         * 
+         * *   **zh**: Chinese
+         * *   **en**: English
          */
         public Builder lang(String lang) {
             this.putQueryParameter("Lang", lang);
@@ -364,7 +389,12 @@ public class ExportSuspEventsRequest extends Request {
         }
 
         /**
-         * Levels.
+         * The severity of the alert event. Separate multiple severities with commas (,). Valid values:
+         * <p>
+         * 
+         * *   **serious**
+         * *   **suspicious**
+         * *   **remind**
          */
         public Builder levels(String levels) {
             this.putQueryParameter("Levels", levels);
@@ -373,7 +403,7 @@ public class ExportSuspEventsRequest extends Request {
         }
 
         /**
-         * Name.
+         * The complete name of the exception.
          */
         public Builder name(String name) {
             this.putQueryParameter("Name", name);
@@ -382,7 +412,7 @@ public class ExportSuspEventsRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * The number of entries to return on each page. Default value: **20**.
          */
         public Builder pageSize(String pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -391,7 +421,32 @@ public class ExportSuspEventsRequest extends Request {
         }
 
         /**
-         * ParentEventTypes.
+         * The alert type of the alert event. Valid values:
+         * <p>
+         * 
+         * *   **Suspicious process**
+         * *   **Webshell**
+         * *   **Unusual logon**
+         * *   **Exception**
+         * *   **Sensitive file tampering**
+         * *   **Malicious process (cloud threat detection)**
+         * *   **Suspicious network connection**
+         * *   **Suspicious account**
+         * *   **Application intrusion event**
+         * *   **Cloud threat detection**
+         * *   **Precise defense**
+         * *   **Application whitelist**
+         * *   **Persistent webshell**
+         * *   **Web application threat detection**
+         * *   **Malicious script**
+         * *   **Threat intelligence**
+         * *   **Malicious network activity**
+         * *   **Cluster exception**
+         * *   **Webshell (on-premises threat detection)**
+         * *   **Vulnerability exploitation**
+         * *   **Malicious process (on-premises threat detection)**
+         * *   **Trusted exception**
+         * *   **Others**
          */
         public Builder parentEventTypes(String parentEventTypes) {
             this.putQueryParameter("ParentEventTypes", parentEventTypes);
@@ -400,7 +455,7 @@ public class ExportSuspEventsRequest extends Request {
         }
 
         /**
-         * Remark.
+         * The remarks.
          */
         public Builder remark(String remark) {
             this.putQueryParameter("Remark", remark);
@@ -409,7 +464,7 @@ public class ExportSuspEventsRequest extends Request {
         }
 
         /**
-         * SourceIp.
+         * The source IP address of the request. The value of this parameter is specified by the system.
          */
         public Builder sourceIp(String sourceIp) {
             this.putQueryParameter("SourceIp", sourceIp);
@@ -418,7 +473,18 @@ public class ExportSuspEventsRequest extends Request {
         }
 
         /**
-         * Status.
+         * The handling status of the exception. Valid values:
+         * <p>
+         * 
+         * *   **0**: all status
+         * *   **1**: pending handling
+         * *   **2**: ignored
+         * *   **4**: confirmed
+         * *   **8**: marked as false positive
+         * *   **16**: handling
+         * *   **32**: handled
+         * *   **64**: expired
+         * *   **128**: deleted
          */
         public Builder status(String status) {
             this.putQueryParameter("Status", status);
@@ -427,7 +493,12 @@ public class ExportSuspEventsRequest extends Request {
         }
 
         /**
-         * TargetType.
+         * The dimension from which you want to configure the feature. Valid values:
+         * <p>
+         * 
+         * *   **uuid**: the UUID of the asset
+         * *   **image_repo**: the ID of the image repository
+         * *   **Cluster**: the ID of the cluster
          */
         public Builder targetType(String targetType) {
             this.putQueryParameter("TargetType", targetType);
@@ -436,7 +507,7 @@ public class ExportSuspEventsRequest extends Request {
         }
 
         /**
-         * TimeEnd.
+         * The end of the time range during which the exception is detected.
          */
         public Builder timeEnd(String timeEnd) {
             this.putQueryParameter("TimeEnd", timeEnd);
@@ -445,7 +516,7 @@ public class ExportSuspEventsRequest extends Request {
         }
 
         /**
-         * TimeStart.
+         * The beginning of the time range during which the exception is detected.
          */
         public Builder timeStart(String timeStart) {
             this.putQueryParameter("TimeStart", timeStart);

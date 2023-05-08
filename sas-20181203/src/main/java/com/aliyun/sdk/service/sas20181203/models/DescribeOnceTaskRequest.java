@@ -138,7 +138,7 @@ public class DescribeOnceTaskRequest extends Request {
         } 
 
         /**
-         * The number of the page to return. Default value: **1**.
+         * The pagination information.
          */
         public Builder currentPage(Integer currentPage) {
             this.putQueryParameter("CurrentPage", currentPage);
@@ -147,7 +147,7 @@ public class DescribeOnceTaskRequest extends Request {
         }
 
         /**
-         * The timestamp when the root task ends. Unit: milliseconds.
+         * The ID of the request, which is used to locate and troubleshoot issues.
          */
         public Builder endTimeQuery(Long endTimeQuery) {
             this.putQueryParameter("EndTimeQuery", endTimeQuery);
@@ -156,7 +156,7 @@ public class DescribeOnceTaskRequest extends Request {
         }
 
         /**
-         * The number of entries to return on each page. Default value: **20**.
+         * The page number of the returned page.
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -165,10 +165,7 @@ public class DescribeOnceTaskRequest extends Request {
         }
 
         /**
-         * The ID of the root task.
-         * <p>
-         * 
-         * > You must specify at least one of the **TaskType** and **RootTaskId** parameters.
+         * The ID of the task.
          */
         public Builder rootTaskId(String rootTaskId) {
             this.putQueryParameter("RootTaskId", rootTaskId);
@@ -177,7 +174,7 @@ public class DescribeOnceTaskRequest extends Request {
         }
 
         /**
-         * The timestamp when the root task starts. Unit: milliseconds.
+         * The data returned.
          */
         public Builder startTimeQuery(Long startTimeQuery) {
             this.putQueryParameter("StartTimeQuery", startTimeQuery);
@@ -186,7 +183,7 @@ public class DescribeOnceTaskRequest extends Request {
         }
 
         /**
-         * The ID of the task.
+         * The number of entries returned per page. Default value: **20**.
          */
         public Builder taskId(String taskId) {
             this.putQueryParameter("TaskId", taskId);
@@ -195,14 +192,7 @@ public class DescribeOnceTaskRequest extends Request {
         }
 
         /**
-         * The type of the task. Valid values:
-         * <p>
-         * 
-         * *   **CLIENT\_PROBLEM_CHECK**: a task of the Security Center agent
-         * *   **CLIENT\_DEV_OPS**: an O\&M task of Cloud Assistant
-         * *   **ASSET\_SECURITY_CHECK**: a task of asset information collection
-         * 
-         * > You must specify at least one of the **TaskType** and **RootTaskId** parameters.
+         * The number of entries to return on each page. Default value: **20**.
          */
         public Builder taskType(String taskType) {
             this.putQueryParameter("TaskType", taskType);

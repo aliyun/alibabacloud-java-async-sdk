@@ -96,11 +96,7 @@ public class DescribeStrategyRequest extends Request {
         } 
 
         /**
-         * The type of the baseline check policy that you want to query. Valid values:
-         * <p>
-         * 
-         * *   **common**: standard baseline check policy
-         * *   **custom**: custom baseline check policy
+         * CustomType.
          */
         public Builder customType(String customType) {
             this.putQueryParameter("CustomType", customType);
@@ -109,11 +105,7 @@ public class DescribeStrategyRequest extends Request {
         }
 
         /**
-         * The language of the content within the request and response. Default value: **zh**. Valid values:
-         * <p>
-         * 
-         * *   **zh**: Chinese
-         * *   **en**: English
+         * Lang.
          */
         public Builder lang(String lang) {
             this.putQueryParameter("Lang", lang);
@@ -122,7 +114,7 @@ public class DescribeStrategyRequest extends Request {
         }
 
         /**
-         * The source IP address of the request.
+         * SourceIp.
          */
         public Builder sourceIp(String sourceIp) {
             this.putQueryParameter("SourceIp", sourceIp);
@@ -131,7 +123,7 @@ public class DescribeStrategyRequest extends Request {
         }
 
         /**
-         * The ID of the baseline check policy that you want to query. Separate multiple IDs with commas (,).
+         * StrategyIds.
          */
         public Builder strategyIds(String strategyIds) {
             this.putQueryParameter("StrategyIds", strategyIds);

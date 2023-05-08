@@ -172,7 +172,10 @@ public class CreateInterceptionRuleRequest extends Request {
         } 
 
         /**
-         * ClusterId.
+         * The ID of the container cluster.
+         * <p>
+         * 
+         * > You can call the [DescribeGroupedContainerInstances](~~DescribeGroupedContainerInstances~~) operation to query the IDs of container clusters.
          */
         public Builder clusterId(String clusterId) {
             this.putQueryParameter("ClusterId", clusterId);
@@ -181,7 +184,7 @@ public class CreateInterceptionRuleRequest extends Request {
         }
 
         /**
-         * ClusterName.
+         * The name of the cluster.
          */
         public Builder clusterName(String clusterName) {
             this.putQueryParameter("ClusterName", clusterName);
@@ -190,7 +193,11 @@ public class CreateInterceptionRuleRequest extends Request {
         }
 
         /**
-         * DstTargetList.
+         * The information about the destination network object. The value of this parameter contains the following fields:
+         * <p>
+         * 
+         * *   targetId: the ID of the destination network object. You can call the [ListInterceptionTargetPage](~~ListInterceptionTargetPage~~) operation to query the ID.
+         * *   ports: the destination port ranges.
          */
         public Builder dstTargetList(java.util.Map < String, ? > dstTargetList) {
             String dstTargetListShrink = shrink(dstTargetList, "DstTargetList", "json");
@@ -200,7 +207,12 @@ public class CreateInterceptionRuleRequest extends Request {
         }
 
         /**
-         * InterceptType.
+         * The action on traffic. Valid values:
+         * <p>
+         * 
+         * *   **1**: blocks traffic.
+         * *   **2**: allows traffic and generates alerts.
+         * *   **3**: allows traffic and does not generate alerts.
          */
         public Builder interceptType(Long interceptType) {
             this.putQueryParameter("InterceptType", interceptType);
@@ -209,7 +221,7 @@ public class CreateInterceptionRuleRequest extends Request {
         }
 
         /**
-         * OrderIndex.
+         * The priority of the defense rule. Valid values: 1 to 1000. A smaller value indicates a higher priority.
          */
         public Builder orderIndex(Long orderIndex) {
             this.putQueryParameter("OrderIndex", orderIndex);
@@ -218,7 +230,7 @@ public class CreateInterceptionRuleRequest extends Request {
         }
 
         /**
-         * RuleName.
+         * The name of the defense rule.
          */
         public Builder ruleName(String ruleName) {
             this.putQueryParameter("RuleName", ruleName);
@@ -227,7 +239,11 @@ public class CreateInterceptionRuleRequest extends Request {
         }
 
         /**
-         * RuleSwitch.
+         * Specifies the status of the defense rule. Valid values:
+         * <p>
+         * 
+         * *   **0**: disables the rule.
+         * *   **1**: enables the rule.
          */
         public Builder ruleSwitch(Integer ruleSwitch) {
             this.putQueryParameter("RuleSwitch", ruleSwitch);
@@ -236,7 +252,10 @@ public class CreateInterceptionRuleRequest extends Request {
         }
 
         /**
-         * RuleType.
+         * The type of the defense rule. Valid values:
+         * <p>
+         * 
+         * *   customize: custom rule
          */
         public Builder ruleType(String ruleType) {
             this.putQueryParameter("RuleType", ruleType);
@@ -245,7 +264,10 @@ public class CreateInterceptionRuleRequest extends Request {
         }
 
         /**
-         * SrcTarget.
+         * The source network object. The value of this parameter contains the following field:
+         * <p>
+         * 
+         * *   targetId: the ID of the source network object. You can call the [ListInterceptionTargetPage](~~ListInterceptionTargetPage~~) operation to query the ID.
          */
         public Builder srcTarget(java.util.Map < String, ? > srcTarget) {
             String srcTargetShrink = shrink(srcTarget, "SrcTarget", "json");

@@ -62,7 +62,7 @@ public class ListSystemClientRulesResponseBody extends TeaModel {
         private java.util.List < RuleList> ruleList; 
 
         /**
-         * The pagination information.
+         * PageInfo.
          */
         public Builder pageInfo(PageInfo pageInfo) {
             this.pageInfo = pageInfo;
@@ -70,7 +70,7 @@ public class ListSystemClientRulesResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request, which is used to locate and troubleshoot issues.
+         * RequestId.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -78,7 +78,7 @@ public class ListSystemClientRulesResponseBody extends TeaModel {
         }
 
         /**
-         * An array that consists of the rules.
+         * RuleList.
          */
         public Builder ruleList(java.util.List < RuleList> ruleList) {
             this.ruleList = ruleList;
@@ -142,7 +142,7 @@ public class ListSystemClientRulesResponseBody extends TeaModel {
             private Integer totalCount; 
 
             /**
-             * The page number of the returned page.
+             * CurrentPage.
              */
             public Builder currentPage(Integer currentPage) {
                 this.currentPage = currentPage;
@@ -150,7 +150,7 @@ public class ListSystemClientRulesResponseBody extends TeaModel {
             }
 
             /**
-             * The number of entries returned per page.
+             * PageSize.
              */
             public Builder pageSize(Integer pageSize) {
                 this.pageSize = pageSize;
@@ -158,7 +158,7 @@ public class ListSystemClientRulesResponseBody extends TeaModel {
             }
 
             /**
-             * The total number of entries returned.
+             * TotalCount.
              */
             public Builder totalCount(Integer totalCount) {
                 this.totalCount = totalCount;
@@ -211,7 +211,7 @@ public class ListSystemClientRulesResponseBody extends TeaModel {
             private String policyName; 
 
             /**
-             * The policy key.
+             * PolicyKey.
              */
             public Builder policyKey(String policyKey) {
                 this.policyKey = policyKey;
@@ -219,7 +219,7 @@ public class ListSystemClientRulesResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the policy.
+             * PolicyName.
              */
             public Builder policyName(String policyName) {
                 this.policyName = policyName;
@@ -356,7 +356,7 @@ public class ListSystemClientRulesResponseBody extends TeaModel {
             private String switchId; 
 
             /**
-             * The name of the aggregation type for the rule.
+             * AggregationName.
              */
             public Builder aggregationName(String aggregationName) {
                 this.aggregationName = aggregationName;
@@ -364,7 +364,7 @@ public class ListSystemClientRulesResponseBody extends TeaModel {
             }
 
             /**
-             * The description of the rule.
+             * Description.
              */
             public Builder description(String description) {
                 this.description = description;
@@ -372,12 +372,7 @@ public class ListSystemClientRulesResponseBody extends TeaModel {
             }
 
             /**
-             * The type of the operating system. Valid values:
-             * <p>
-             * 
-             * *   **windows**: Windows
-             * *   **linux**: Linux
-             * *   **all**: all types
+             * Platform.
              */
             public Builder platform(String platform) {
                 this.platform = platform;
@@ -385,7 +380,7 @@ public class ListSystemClientRulesResponseBody extends TeaModel {
             }
 
             /**
-             * An array that consists of the policies.
+             * Policies.
              */
             public Builder policies(java.util.List < Policies> policies) {
                 this.policies = policies;
@@ -393,7 +388,7 @@ public class ListSystemClientRulesResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the rule.
+             * RuleId.
              */
             public Builder ruleId(Long ruleId) {
                 this.ruleId = ruleId;
@@ -401,7 +396,7 @@ public class ListSystemClientRulesResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the rule.
+             * RuleName.
              */
             public Builder ruleName(String ruleName) {
                 this.ruleName = ruleName;
@@ -409,13 +404,7 @@ public class ListSystemClientRulesResponseBody extends TeaModel {
             }
 
             /**
-             * The type of the rule. Valid values:
-             * <p>
-             * 
-             * *   **1**: alihips
-             * *   **2**: alinet
-             * *   **3**: alidetect
-             * *   **4**: alisecguard
+             * RuleType.
              */
             public Builder ruleType(Integer ruleType) {
                 this.ruleType = ruleType;
@@ -423,11 +412,7 @@ public class ListSystemClientRulesResponseBody extends TeaModel {
             }
 
             /**
-             * The status of the rule. Valid values:
-             * <p>
-             * 
-             * *   **online**: enabled
-             * *   **offline**: disabled
+             * Status.
              */
             public Builder status(Integer status) {
                 this.status = status;
@@ -435,7 +420,7 @@ public class ListSystemClientRulesResponseBody extends TeaModel {
             }
 
             /**
-             * The switch ID of the rule.
+             * SwitchId.
              */
             public Builder switchId(String switchId) {
                 this.switchId = switchId;

@@ -98,7 +98,7 @@ public class DescribeSecurityStatInfoResponseBody extends TeaModel {
         private Vulnerability vulnerability; 
 
         /**
-         * The detailed statistics of attacks.
+         * The numbers of baseline risk items that have the high-risk level at all points in time.
          */
         public Builder attackEvent(AttackEvent attackEvent) {
             this.attackEvent = attackEvent;
@@ -106,7 +106,7 @@ public class DescribeSecurityStatInfoResponseBody extends TeaModel {
         }
 
         /**
-         * The detailed statistics of baseline risk items.
+         * The number of **serious** alerts at each point in time.
          */
         public Builder healthCheck(HealthCheck healthCheck) {
             this.healthCheck = healthCheck;
@@ -114,7 +114,7 @@ public class DescribeSecurityStatInfoResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request, which is used to locate and troubleshoot issues.
+         * The points in time when data of unfixed vulnerabilities is collected in the trend chart.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -122,7 +122,7 @@ public class DescribeSecurityStatInfoResponseBody extends TeaModel {
         }
 
         /**
-         * The detailed statistics of unhandled alerts.
+         * The risk levels of baseline risk items.
          */
         public Builder securityEvent(SecurityEvent securityEvent) {
             this.securityEvent = securityEvent;
@@ -130,11 +130,7 @@ public class DescribeSecurityStatInfoResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether the request was successful. Valid values:
-         * <p>
-         * 
-         * *   **true**: The request was successful.
-         * *   **false**: The request failed.
+         * The number of baseline risk items that have the medium-risk level at each point in time.
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -142,7 +138,7 @@ public class DescribeSecurityStatInfoResponseBody extends TeaModel {
         }
 
         /**
-         * The detailed statistics of unfixed vulnerabilities.
+         * The number of baseline risk items that have the low-risk level at each point in time.
          */
         public Builder vulnerability(Vulnerability vulnerability) {
             this.vulnerability = vulnerability;
@@ -206,7 +202,7 @@ public class DescribeSecurityStatInfoResponseBody extends TeaModel {
             private java.util.List < String > valueArray; 
 
             /**
-             * The points in time when the number of attacks is collected in the trend chart.
+             * The total number of baseline risk items at all points in time.
              */
             public Builder dateArray(java.util.List < String > dateArray) {
                 this.dateArray = dateArray;
@@ -214,7 +210,7 @@ public class DescribeSecurityStatInfoResponseBody extends TeaModel {
             }
 
             /**
-             * The total number of attacks on the current day.
+             * The time periods during which data of the same alert is collected.
              */
             public Builder totalCount(Integer totalCount) {
                 this.totalCount = totalCount;
@@ -222,7 +218,7 @@ public class DescribeSecurityStatInfoResponseBody extends TeaModel {
             }
 
             /**
-             * The numbers of attacks at all points in time.
+             * The number of **medium-risk** unfixed vulnerabilities on the current day.
              */
             public Builder valueArray(java.util.List < String > valueArray) {
                 this.valueArray = valueArray;
@@ -383,7 +379,7 @@ public class DescribeSecurityStatInfoResponseBody extends TeaModel {
             private java.util.List < String > valueArray; 
 
             /**
-             * The points in time when data of baseline risk items is collected in the trend chart.
+             * The number of **medium-risk** unfixed vulnerabilities at each point in time.
              */
             public Builder dateArray(java.util.List < String > dateArray) {
                 this.dateArray = dateArray;
@@ -391,7 +387,12 @@ public class DescribeSecurityStatInfoResponseBody extends TeaModel {
             }
 
             /**
-             * The number of baseline risk items that have the high-risk level on the current day.
+             * The risk level of the unhandled alert. Valid values:
+             * <p>
+             * 
+             * *   **remind**
+             * *   **suspicious**
+             * *   **serious**
              */
             public Builder highCount(Integer highCount) {
                 this.highCount = highCount;
@@ -399,7 +400,7 @@ public class DescribeSecurityStatInfoResponseBody extends TeaModel {
             }
 
             /**
-             * The numbers of baseline risk items that have the high-risk level at all points in time.
+             * The point in time when data of unfixed vulnerabilities is collected in the trend chart.
              */
             public Builder highList(java.util.List < String > highList) {
                 this.highList = highList;
@@ -407,7 +408,7 @@ public class DescribeSecurityStatInfoResponseBody extends TeaModel {
             }
 
             /**
-             * The risk levels of baseline risk items.
+             * The time periods during which data of baseline risk items is collected.
              */
             public Builder levelsOn(java.util.List < String > levelsOn) {
                 this.levelsOn = levelsOn;
@@ -415,7 +416,7 @@ public class DescribeSecurityStatInfoResponseBody extends TeaModel {
             }
 
             /**
-             * The number of baseline risk items that have the low-risk level on the current day.
+             * The total number of unhandled alerts on the current day.
              */
             public Builder lowCount(Integer lowCount) {
                 this.lowCount = lowCount;
@@ -423,7 +424,7 @@ public class DescribeSecurityStatInfoResponseBody extends TeaModel {
             }
 
             /**
-             * The numbers of baseline risk items that have the low-risk level at all points in time.
+             * The numbers of suspicious alerts at all points in time.
              */
             public Builder lowList(java.util.List < String > lowList) {
                 this.lowList = lowList;
@@ -431,7 +432,7 @@ public class DescribeSecurityStatInfoResponseBody extends TeaModel {
             }
 
             /**
-             * The number of baseline risk items that have the medium-risk level on the current day.
+             * The numbers of attacks at all points in time.
              */
             public Builder mediumCount(Integer mediumCount) {
                 this.mediumCount = mediumCount;
@@ -439,7 +440,7 @@ public class DescribeSecurityStatInfoResponseBody extends TeaModel {
             }
 
             /**
-             * The numbers of baseline risk items that have the medium-risk level at all points in time.
+             * The number of baseline risk items that have the high-risk level on the current day.
              */
             public Builder mediumList(java.util.List < String > mediumList) {
                 this.mediumList = mediumList;
@@ -447,7 +448,12 @@ public class DescribeSecurityStatInfoResponseBody extends TeaModel {
             }
 
             /**
-             * The time periods during which data of baseline risk items is collected.
+             * The risk level of the unfixed vulnerability. Valid values:
+             * <p>
+             * 
+             * *   **asap**: high
+             * *   **later**: medium
+             * *   **Nntf**: low
              */
             public Builder timeArray(java.util.List < String > timeArray) {
                 this.timeArray = timeArray;
@@ -455,7 +461,7 @@ public class DescribeSecurityStatInfoResponseBody extends TeaModel {
             }
 
             /**
-             * The total number of baseline risk items on the current day.
+             * The detailed statistics of attacks.
              */
             public Builder totalCount(Integer totalCount) {
                 this.totalCount = totalCount;
@@ -463,7 +469,7 @@ public class DescribeSecurityStatInfoResponseBody extends TeaModel {
             }
 
             /**
-             * The total number of baseline risk items at all points in time.
+             * The numbers of baseline risk items that have the low-risk level at all points in time.
              */
             public Builder valueArray(java.util.List < String > valueArray) {
                 this.valueArray = valueArray;
@@ -624,7 +630,7 @@ public class DescribeSecurityStatInfoResponseBody extends TeaModel {
             private java.util.List < String > valueArray; 
 
             /**
-             * The points in time when data of unhandled alerts is collected in the trend chart.
+             * The numbers of high-risk unfixed vulnerabilities at all points in time.
              */
             public Builder dateArray(java.util.List < String > dateArray) {
                 this.dateArray = dateArray;
@@ -632,7 +638,7 @@ public class DescribeSecurityStatInfoResponseBody extends TeaModel {
             }
 
             /**
-             * The risk levels of unhandled alerts.
+             * The point in time when the number of attacks is collected in the trend chart.
              */
             public Builder levelsOn(java.util.List < String > levelsOn) {
                 this.levelsOn = levelsOn;
@@ -640,7 +646,7 @@ public class DescribeSecurityStatInfoResponseBody extends TeaModel {
             }
 
             /**
-             * The number of **remind** alerts on the current day.
+             * The points in time when data of unhandled alerts is collected in the trend chart.
              */
             public Builder remindCount(Integer remindCount) {
                 this.remindCount = remindCount;
@@ -648,7 +654,7 @@ public class DescribeSecurityStatInfoResponseBody extends TeaModel {
             }
 
             /**
-             * The numbers of remind alerts at all points in time.
+             * The numbers of unhandled alerts at all points in time.
              */
             public Builder remindList(java.util.List < String > remindList) {
                 this.remindList = remindList;
@@ -656,7 +662,11 @@ public class DescribeSecurityStatInfoResponseBody extends TeaModel {
             }
 
             /**
-             * The number of **serious** alerts on the current day.
+             * The language of the content within the request and response. Default value: **zh**. Valid values:
+             * <p>
+             * 
+             * *   **zh**: Chinese
+             * *   **en**: English
              */
             public Builder seriousCount(Integer seriousCount) {
                 this.seriousCount = seriousCount;
@@ -664,7 +674,7 @@ public class DescribeSecurityStatInfoResponseBody extends TeaModel {
             }
 
             /**
-             * The numbers of serious alerts at all points in time.
+             * The number of **low-risk** unfixed vulnerabilities on the current day.
              */
             public Builder seriousList(java.util.List < String > seriousList) {
                 this.seriousList = seriousList;
@@ -672,7 +682,7 @@ public class DescribeSecurityStatInfoResponseBody extends TeaModel {
             }
 
             /**
-             * The number of **suspicious** alerts on the current day.
+             * The number of baseline risk items that have the high-risk level at each point in time.
              */
             public Builder suspiciousCount(Integer suspiciousCount) {
                 this.suspiciousCount = suspiciousCount;
@@ -680,7 +690,7 @@ public class DescribeSecurityStatInfoResponseBody extends TeaModel {
             }
 
             /**
-             * The numbers of suspicious alerts at all points in time.
+             * The number of **remind** alerts on the current day.
              */
             public Builder suspiciousList(java.util.List < String > suspiciousList) {
                 this.suspiciousList = suspiciousList;
@@ -688,7 +698,7 @@ public class DescribeSecurityStatInfoResponseBody extends TeaModel {
             }
 
             /**
-             * The time periods during which data of the same alert is collected.
+             * The numbers of medium-risk unfixed vulnerabilities at all points in time.
              */
             public Builder timeArray(java.util.List < String > timeArray) {
                 this.timeArray = timeArray;
@@ -696,7 +706,7 @@ public class DescribeSecurityStatInfoResponseBody extends TeaModel {
             }
 
             /**
-             * The total number of unhandled alerts on the current day.
+             * The number of baseline risk items that have the low-risk level on the current day.
              */
             public Builder totalCount(Integer totalCount) {
                 this.totalCount = totalCount;
@@ -704,7 +714,7 @@ public class DescribeSecurityStatInfoResponseBody extends TeaModel {
             }
 
             /**
-             * The numbers of unhandled alerts at all points in time.
+             * The total number of unfixed vulnerabilities on the current day.
              */
             public Builder valueArray(java.util.List < String > valueArray) {
                 this.valueArray = valueArray;
@@ -865,7 +875,7 @@ public class DescribeSecurityStatInfoResponseBody extends TeaModel {
             private java.util.List < String > valueArray; 
 
             /**
-             * The number of **high-risk** unfixed vulnerabilities on the current day.
+             * The points in time when the number of attacks is collected in the trend chart.
              */
             public Builder asapCount(Integer asapCount) {
                 this.asapCount = asapCount;
@@ -873,7 +883,7 @@ public class DescribeSecurityStatInfoResponseBody extends TeaModel {
             }
 
             /**
-             * The numbers of high-risk unfixed vulnerabilities at all points in time.
+             * The risk levels of unhandled alerts.
              */
             public Builder asapList(java.util.List < String > asapList) {
                 this.asapList = asapList;
@@ -881,7 +891,7 @@ public class DescribeSecurityStatInfoResponseBody extends TeaModel {
             }
 
             /**
-             * The points in time when data of unfixed vulnerabilities is collected in the trend chart.
+             * The numbers of high-risk unfixed vulnerabilities at all points in time.
              */
             public Builder dateArray(java.util.List < String > dateArray) {
                 this.dateArray = dateArray;
@@ -889,7 +899,7 @@ public class DescribeSecurityStatInfoResponseBody extends TeaModel {
             }
 
             /**
-             * The number of **medium-risk** unfixed vulnerabilities on the current day.
+             * The number of **suspicious** alerts on the current day.
              */
             public Builder laterCount(Integer laterCount) {
                 this.laterCount = laterCount;
@@ -897,7 +907,7 @@ public class DescribeSecurityStatInfoResponseBody extends TeaModel {
             }
 
             /**
-             * The numbers of medium-risk unfixed vulnerabilities at all points in time.
+             * LaterList.
              */
             public Builder laterList(java.util.List < String > laterList) {
                 this.laterList = laterList;
@@ -905,7 +915,7 @@ public class DescribeSecurityStatInfoResponseBody extends TeaModel {
             }
 
             /**
-             * The risk levels of unfixed vulnerabilities.
+             * The point in time when the number of attacks is collected in the trend chart.
              */
             public Builder levelsOn(java.util.List < String > levelsOn) {
                 this.levelsOn = levelsOn;
@@ -913,7 +923,7 @@ public class DescribeSecurityStatInfoResponseBody extends TeaModel {
             }
 
             /**
-             * The number of **low-risk** unfixed vulnerabilities on the current day.
+             * The points in time when data of baseline risk items is collected in the trend chart.
              */
             public Builder nntfCount(Integer nntfCount) {
                 this.nntfCount = nntfCount;
@@ -921,7 +931,7 @@ public class DescribeSecurityStatInfoResponseBody extends TeaModel {
             }
 
             /**
-             * The numbers of low-risk unfixed vulnerabilities at all points in time.
+             * The time periods during which data of unfixed vulnerabilities is collected.
              */
             public Builder nntfList(java.util.List < String > nntfList) {
                 this.nntfList = nntfList;
@@ -929,7 +939,7 @@ public class DescribeSecurityStatInfoResponseBody extends TeaModel {
             }
 
             /**
-             * The time periods during which data of unfixed vulnerabilities is collected.
+             * Queries the statistics of each security check item and the daily statistics in the trend chart based on each security check item.
              */
             public Builder timeArray(java.util.List < String > timeArray) {
                 this.timeArray = timeArray;
@@ -937,7 +947,7 @@ public class DescribeSecurityStatInfoResponseBody extends TeaModel {
             }
 
             /**
-             * The total number of unfixed vulnerabilities on the current day.
+             * The numbers of remind alerts at all points in time.
              */
             public Builder totalCount(Integer totalCount) {
                 this.totalCount = totalCount;
@@ -945,7 +955,7 @@ public class DescribeSecurityStatInfoResponseBody extends TeaModel {
             }
 
             /**
-             * The numbers of unfixed vulnerabilities at all points in time.
+             * The ID of the request, which is used to locate and troubleshoot issues.
              */
             public Builder valueArray(java.util.List < String > valueArray) {
                 this.valueArray = valueArray;

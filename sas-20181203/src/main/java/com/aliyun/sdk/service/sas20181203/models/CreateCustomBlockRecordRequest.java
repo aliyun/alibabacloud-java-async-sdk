@@ -114,7 +114,7 @@ public class CreateCustomBlockRecordRequest extends Request {
         } 
 
         /**
-         * The IP address that you want to specify in the policy.
+         * BlockIp.
          */
         public Builder blockIp(String blockIp) {
             this.putQueryParameter("BlockIp", blockIp);
@@ -123,11 +123,7 @@ public class CreateCustomBlockRecordRequest extends Request {
         }
 
         /**
-         * The traffic direction that you want to specify in the policy. Valid values:
-         * <p>
-         * 
-         * *   **in**: inbound
-         * *   **out**: outbound
+         * Bound.
          */
         public Builder bound(String bound) {
             this.putQueryParameter("Bound", bound);
@@ -136,7 +132,7 @@ public class CreateCustomBlockRecordRequest extends Request {
         }
 
         /**
-         * The expiration time of the policy.
+         * ExpireTime.
          */
         public Builder expireTime(Long expireTime) {
             this.putQueryParameter("ExpireTime", expireTime);
@@ -154,7 +150,7 @@ public class CreateCustomBlockRecordRequest extends Request {
         }
 
         /**
-         * The UUIDs of the servers. Separate multiple UUIDs with commas (,).
+         * Uuids.
          */
         public Builder uuids(String uuids) {
             this.putQueryParameter("Uuids", uuids);

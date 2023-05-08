@@ -464,6 +464,9 @@ public class DescribeSuspEventsResponseBody extends TeaModel {
         @NameInMap("Id")
         private Long id;
 
+        @NameInMap("ImageUuid")
+        private String imageUuid;
+
         @NameInMap("InstanceId")
         private String instanceId;
 
@@ -572,6 +575,7 @@ public class DescribeSuspEventsResponseBody extends TeaModel {
             this.eventSubType = builder.eventSubType;
             this.hasTraceInfo = builder.hasTraceInfo;
             this.id = builder.id;
+            this.imageUuid = builder.imageUuid;
             this.instanceId = builder.instanceId;
             this.instanceName = builder.instanceName;
             this.internetIp = builder.internetIp;
@@ -769,6 +773,13 @@ public class DescribeSuspEventsResponseBody extends TeaModel {
          */
         public Long getId() {
             return this.id;
+        }
+
+        /**
+         * @return imageUuid
+         */
+        public String getImageUuid() {
+            return this.imageUuid;
         }
 
         /**
@@ -991,6 +1002,7 @@ public class DescribeSuspEventsResponseBody extends TeaModel {
             private String eventSubType; 
             private Boolean hasTraceInfo; 
             private Long id; 
+            private String imageUuid; 
             private String instanceId; 
             private String instanceName; 
             private String internetIp; 
@@ -1226,6 +1238,14 @@ public class DescribeSuspEventsResponseBody extends TeaModel {
              */
             public Builder id(Long id) {
                 this.id = id;
+                return this;
+            }
+
+            /**
+             * ImageUuid.
+             */
+            public Builder imageUuid(String imageUuid) {
+                this.imageUuid = imageUuid;
                 return this;
             }
 

@@ -84,7 +84,11 @@ public class OperateVirusEventsRequest extends Request {
         } 
 
         /**
-         * OperationAll.
+         * Specifies whether to handle all alert events. Valid values:
+         * <p>
+         * 
+         * *   **1**: yes
+         * *   **0**: no
          */
         public Builder operationAll(Integer operationAll) {
             this.putQueryParameter("OperationAll", operationAll);
@@ -93,7 +97,13 @@ public class OperateVirusEventsRequest extends Request {
         }
 
         /**
-         * OperationCode.
+         * The operation that you want to perform on the alert events. Valid values:
+         * <p>
+         * 
+         * *   **default**: performs in-depth detection and removal
+         * *   **ignore**: ignores the alert event
+         * *   **advance_mark_mis_info**: adds the alert events to the whitelist
+         * *   **manual_handled**: marks the alert events as manually handled
          */
         public Builder operationCode(String operationCode) {
             this.putQueryParameter("OperationCode", operationCode);
@@ -102,7 +112,7 @@ public class OperateVirusEventsRequest extends Request {
         }
 
         /**
-         * OperationRange.
+         * The handling scope.
          */
         public Builder operationRange(String operationRange) {
             this.putQueryParameter("OperationRange", operationRange);

@@ -82,10 +82,7 @@ public class UpdateJenkinsImageRegistryNameRequest extends Request {
         } 
 
         /**
-         * The ID of the image repository.
-         * <p>
-         * 
-         * > You can call the [PageImageRegistry](~~PageImageRegistry~~) operation to query the IDs of image repositories.
+         * 镜像仓id
          */
         public Builder registryId(Long registryId) {
             this.putBodyParameter("RegistryId", registryId);
@@ -94,7 +91,7 @@ public class UpdateJenkinsImageRegistryNameRequest extends Request {
         }
 
         /**
-         * The name of the image repository.
+         * 保留周期
          */
         public Builder registryName(String registryName) {
             this.putBodyParameter("RegistryName", registryName);
@@ -103,7 +100,7 @@ public class UpdateJenkinsImageRegistryNameRequest extends Request {
         }
 
         /**
-         * The source IP address of the request.
+         * SourceIp.
          */
         public Builder sourceIp(String sourceIp) {
             this.putQueryParameter("SourceIp", sourceIp);

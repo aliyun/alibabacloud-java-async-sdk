@@ -50,7 +50,7 @@ public class DescribeCommonTargetConfigResponseBody extends TeaModel {
         private java.util.List < TargetList> targetList; 
 
         /**
-         * The ID of the request, which is used to locate and troubleshoot issues.
+         * RequestId.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -58,7 +58,7 @@ public class DescribeCommonTargetConfigResponseBody extends TeaModel {
         }
 
         /**
-         * An array that consists of the details of the configuration items.
+         * TargetList.
          */
         public Builder targetList(java.util.List < TargetList> targetList) {
             this.targetList = targetList;
@@ -122,11 +122,7 @@ public class DescribeCommonTargetConfigResponseBody extends TeaModel {
             private String targetType; 
 
             /**
-             * The mode in which the configuration takes effect. Valid values:
-             * <p>
-             * 
-             * *   **add**: In this mode, the configuration takes effect on the assets.
-             * *   **del**: In this mode, the configuration does not take effect on the assets.
+             * Flag.
              */
             public Builder flag(String flag) {
                 this.flag = flag;
@@ -134,16 +130,7 @@ public class DescribeCommonTargetConfigResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the asset on which the configuration takes effect.
-             * <p>
-             * 
-             * > 
-             * 
-             * *   When you set the **TargetType** parameter to **uuid**, the value of this parameter indicates the UUID of an asset.
-             * 
-             * *   When you set the **TargetType** parameter to **Cluster**, the value of this parameter indicates the ID of a cluster.
-             * 
-             * *   When you set the **TargetType** parameter to **image_repo**, the value of this parameter indicates the ID of an image repository.
+             * Target.
              */
             public Builder target(String target) {
                 this.target = target;
@@ -151,12 +138,7 @@ public class DescribeCommonTargetConfigResponseBody extends TeaModel {
             }
 
             /**
-             * The dimension from on which the feature was configured. Valid values:
-             * <p>
-             * 
-             * *   **uuid**: the UUID of the asset
-             * *   **Cluster**: the ID of the cluster
-             * *   **image_repo**: the ID of the image repository
+             * TargetType.
              */
             public Builder targetType(String targetType) {
                 this.targetType = targetType;

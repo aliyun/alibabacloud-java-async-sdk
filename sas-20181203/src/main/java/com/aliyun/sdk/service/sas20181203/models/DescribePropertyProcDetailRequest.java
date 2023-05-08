@@ -180,7 +180,7 @@ public class DescribePropertyProcDetailRequest extends Request {
         } 
 
         /**
-         * The startup parameter of the process.
+         * The timestamp of last data collection. Unit: milliseconds.
          */
         public Builder cmdline(String cmdline) {
             this.putQueryParameter("Cmdline", cmdline);
@@ -189,7 +189,7 @@ public class DescribePropertyProcDetailRequest extends Request {
         }
 
         /**
-         * The number of the page to return. Default value: **1**.
+         * The timestamp when the process starts. Unit: milliseconds.
          */
         public Builder currentPage(Integer currentPage) {
             this.putQueryParameter("CurrentPage", currentPage);
@@ -198,7 +198,7 @@ public class DescribePropertyProcDetailRequest extends Request {
         }
 
         /**
-         * Specifies whether fuzzy search by process name is supported. If you want to use fuzzy search, set the parameter to 1. If you set the parameter to a different value or leave the parameter empty, fuzzy search is not supported.
+         * The name of the process.
          */
         public Builder extend(String extend) {
             this.putQueryParameter("Extend", extend);
@@ -207,7 +207,7 @@ public class DescribePropertyProcDetailRequest extends Request {
         }
 
         /**
-         * The name of the process.
+         * The startup parameter of the process.
          */
         public Builder name(String name) {
             this.putQueryParameter("Name", name);
@@ -216,7 +216,7 @@ public class DescribePropertyProcDetailRequest extends Request {
         }
 
         /**
-         * The number of entries to return on each page. Default value: **10**.
+         * The name or IP address of the server.
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -225,7 +225,7 @@ public class DescribePropertyProcDetailRequest extends Request {
         }
 
         /**
-         * The timestamp when the process ends. Unit: milliseconds.
+         * The public IP address of the server.
          */
         public Builder procTimeEnd(Long procTimeEnd) {
             this.putQueryParameter("ProcTimeEnd", procTimeEnd);
@@ -234,7 +234,7 @@ public class DescribePropertyProcDetailRequest extends Request {
         }
 
         /**
-         * The timestamp when the process starts. Unit: milliseconds.
+         * The number of the page to return. Default value: **1**.
          */
         public Builder procTimeStart(Long procTimeStart) {
             this.putQueryParameter("ProcTimeStart", procTimeStart);
@@ -243,7 +243,7 @@ public class DescribePropertyProcDetailRequest extends Request {
         }
 
         /**
-         * The name or IP address of the server.
+         * 1648809853000
          */
         public Builder remark(String remark) {
             this.putQueryParameter("Remark", remark);
@@ -252,7 +252,7 @@ public class DescribePropertyProcDetailRequest extends Request {
         }
 
         /**
-         * The user who runs the process.
+         * The permission that is required to run the process.
          */
         public Builder user(String user) {
             this.putQueryParameter("User", user);
@@ -261,7 +261,7 @@ public class DescribePropertyProcDetailRequest extends Request {
         }
 
         /**
-         * The UUID of the server.
+         * The private IP address of the server.
          */
         public Builder uuid(String uuid) {
             this.putQueryParameter("Uuid", uuid);

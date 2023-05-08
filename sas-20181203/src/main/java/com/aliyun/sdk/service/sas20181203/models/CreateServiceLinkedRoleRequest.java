@@ -54,11 +54,7 @@ public class CreateServiceLinkedRoleRequest extends Request {
         } 
 
         /**
-         * The service-linked role. Default value: **AliyunServiceRoleForSas**. Valid values:
-         * <p>
-         * 
-         * *   **AliyunServiceRoleForSas**: the service-linked role of Security Center. Security Center assumes this role to access the resources of other cloud services within your account.
-         * *   **AliyunServiceRoleForSasCspm**: the service-linked role of Security Center-CSPM. Security Center-CSPM assumes this role to access the resources of other cloud services within your account.
+         * ServiceLinkedRole.
          */
         public Builder serviceLinkedRole(String serviceLinkedRole) {
             this.putQueryParameter("ServiceLinkedRole", serviceLinkedRole);

@@ -126,7 +126,7 @@ public class EnableBruteForceRecordRequest extends Request {
         } 
 
         /**
-         * The IP address that is specified in the policy.
+         * BlockIp.
          */
         public Builder blockIp(String blockIp) {
             this.putQueryParameter("BlockIp", blockIp);
@@ -135,11 +135,7 @@ public class EnableBruteForceRecordRequest extends Request {
         }
 
         /**
-         * The traffic direction that is specified in the policy. Valid values:
-         * <p>
-         * 
-         * *   **in**: inbound
-         * *   **out**: outbound
+         * Bound.
          */
         public Builder bound(String bound) {
             this.putQueryParameter("Bound", bound);
@@ -148,10 +144,7 @@ public class EnableBruteForceRecordRequest extends Request {
         }
 
         /**
-         * The ID of the policy that you want to enable.
-         * <p>
-         * 
-         * > You can call the [DescribeBruteForceRecords](~~DescribeBruteForceRecords~~) operation to query the IDs of policies.
+         * Id.
          */
         public Builder id(Long id) {
             this.putQueryParameter("Id", id);
@@ -160,7 +153,7 @@ public class EnableBruteForceRecordRequest extends Request {
         }
 
         /**
-         * The port number.
+         * Port.
          */
         public Builder port(String port) {
             this.putQueryParameter("Port", port);
@@ -178,7 +171,7 @@ public class EnableBruteForceRecordRequest extends Request {
         }
 
         /**
-         * The UUID of the server.
+         * Uuid.
          */
         public Builder uuid(String uuid) {
             this.putQueryParameter("Uuid", uuid);

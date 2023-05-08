@@ -125,11 +125,51 @@ public class ListCloudAssetInstancesRequest extends Request {
         } 
 
         /**
-         * The cloud service assets.
+         * The cloud service asset.
          */
         public Builder cloudAssetTypes(java.util.List < CloudAssetTypes> cloudAssetTypes) {
             this.putQueryParameter("CloudAssetTypes", cloudAssetTypes);
             this.cloudAssetTypes = cloudAssetTypes;
+            return this;
+        }
+
+        /**
+         * The logical relation for multiple search conditions. Valid values:
+         * <p>
+         * 
+         * *   **OR**: The search conditions use a logical **OR**.
+         * *   **AND**: The search conditions use a logical **AND**.
+         */
+        public Builder criteria(String criteria) {
+            this.putQueryParameter("Criteria", criteria);
+            this.criteria = criteria;
+            return this;
+        }
+
+        /**
+         * The cloud service assets.
+         */
+        public Builder currentPage(Integer currentPage) {
+            this.putQueryParameter("CurrentPage", currentPage);
+            this.currentPage = currentPage;
+            return this;
+        }
+
+        /**
+         * The number of entries to return on each page. Maximum value: 100. Default value: 20.
+         */
+        public Builder logicalExp(String logicalExp) {
+            this.putQueryParameter("LogicalExp", logicalExp);
+            this.logicalExp = logicalExp;
+            return this;
+        }
+
+        /**
+         * The number of the page to return.
+         */
+        public Builder pageSize(Integer pageSize) {
+            this.putQueryParameter("PageSize", pageSize);
+            this.pageSize = pageSize;
             return this;
         }
 
@@ -147,46 +187,6 @@ public class ListCloudAssetInstancesRequest extends Request {
          *     *   **AND**: The search conditions use a logical **AND**.
          * 
          * > You can call the [GetCloudAssetCriteria](~~GetCloudAssetCriteria~~) operation to query supported search conditions.
-         */
-        public Builder criteria(String criteria) {
-            this.putQueryParameter("Criteria", criteria);
-            this.criteria = criteria;
-            return this;
-        }
-
-        /**
-         * The number of the page to return.
-         */
-        public Builder currentPage(Integer currentPage) {
-            this.putQueryParameter("CurrentPage", currentPage);
-            this.currentPage = currentPage;
-            return this;
-        }
-
-        /**
-         * The logical relation for multiple search conditions. Valid values:
-         * <p>
-         * 
-         * *   **OR**: The search conditions use a logical **OR**.
-         * *   **AND**: The search conditions use a logical **AND**.
-         */
-        public Builder logicalExp(String logicalExp) {
-            this.putQueryParameter("LogicalExp", logicalExp);
-            this.logicalExp = logicalExp;
-            return this;
-        }
-
-        /**
-         * The number of entries to return on each page. Maximum value: 100. Default value: 20.
-         */
-        public Builder pageSize(Integer pageSize) {
-            this.putQueryParameter("PageSize", pageSize);
-            this.pageSize = pageSize;
-            return this;
-        }
-
-        /**
-         * The region ID of the instance.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -240,10 +240,11 @@ public class ListCloudAssetInstancesRequest extends Request {
             private Integer assetType; 
 
             /**
-             * The subtype of the cloud asset.
+             * Indicates whether the request was successful. Valid values:
              * <p>
              * 
-             * You can call the [GetCloudAssetCriteria](~~GetCloudAssetCriteria~~) operation to query the subtypes of cloud assets from the AssetSubType response parameter.
+             * *   **true**: The request was successful.
+             * *   **false**: The request failed.
              */
             public Builder assetSubType(Integer assetSubType) {
                 this.assetSubType = assetSubType;
@@ -251,10 +252,10 @@ public class ListCloudAssetInstancesRequest extends Request {
             }
 
             /**
-             * The type of the cloud asset.
+             * The subtype of the cloud asset.
              * <p>
              * 
-             * You can call the [GetCloudAssetCriteria](~~GetCloudAssetCriteria~~) operation to query the types of cloud assets from the AssetType response parameter.
+             * You can call the [GetCloudAssetCriteria](~~GetCloudAssetCriteria~~) operation to query the subtypes of cloud assets from the AssetSubType response parameter.
              */
             public Builder assetType(Integer assetType) {
                 this.assetType = assetType;

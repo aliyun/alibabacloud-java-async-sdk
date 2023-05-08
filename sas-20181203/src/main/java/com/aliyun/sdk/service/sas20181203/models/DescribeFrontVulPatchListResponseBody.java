@@ -50,7 +50,7 @@ public class DescribeFrontVulPatchListResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * An array consisting of the information about the pre-patches that are required to fix the specified Windows system vulnerability.
+         * FrontPatchList.
          */
         public Builder frontPatchList(java.util.List < FrontPatchList> frontPatchList) {
             this.frontPatchList = frontPatchList;
@@ -58,7 +58,7 @@ public class DescribeFrontVulPatchListResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request, which is used to locate and troubleshoot issues.
+         * RequestId.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -110,7 +110,7 @@ public class DescribeFrontVulPatchListResponseBody extends TeaModel {
             private String name; 
 
             /**
-             * The name of the vulnerability.
+             * AliasName.
              */
             public Builder aliasName(String aliasName) {
                 this.aliasName = aliasName;
@@ -118,7 +118,7 @@ public class DescribeFrontVulPatchListResponseBody extends TeaModel {
             }
 
             /**
-             * The version number of the pre-patch that is required to fix the Windows system vulnerability.
+             * Name.
              */
             public Builder name(String name) {
                 this.name = name;
@@ -171,7 +171,7 @@ public class DescribeFrontVulPatchListResponseBody extends TeaModel {
             private String uuid; 
 
             /**
-             * An array consisting of the pre-patches that are required to fix the specified Windows system vulnerability on the server.
+             * PatchList.
              */
             public Builder patchList(java.util.List < PatchList> patchList) {
                 this.patchList = patchList;
@@ -179,7 +179,7 @@ public class DescribeFrontVulPatchListResponseBody extends TeaModel {
             }
 
             /**
-             * The UUID of the server.
+             * Uuid.
              */
             public Builder uuid(String uuid) {
                 this.uuid = uuid;

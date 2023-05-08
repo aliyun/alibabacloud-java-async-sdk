@@ -153,7 +153,7 @@ public class DescribeSuspEventQuaraFilesRequest extends Request {
         } 
 
         /**
-         * The number of the page to return.
+         * The page number of the returned page.
          */
         public Builder currentPage(String currentPage) {
             this.putQueryParameter("CurrentPage", currentPage);
@@ -162,7 +162,7 @@ public class DescribeSuspEventQuaraFilesRequest extends Request {
         }
 
         /**
-         * The ID of the request source. Set the value to **sas**.
+         * The number of entries returned per page.
          */
         public Builder from(String from) {
             this.putQueryParameter("From", from);
@@ -171,7 +171,7 @@ public class DescribeSuspEventQuaraFilesRequest extends Request {
         }
 
         /**
-         * The ID of the asset group.
+         * The ID of the request source. Set the value to **sas**.
          */
         public Builder groupId(String groupId) {
             this.putQueryParameter("GroupId", groupId);
@@ -180,7 +180,7 @@ public class DescribeSuspEventQuaraFilesRequest extends Request {
         }
 
         /**
-         * The ID of the server group to which the server belongs. The quarantined file is located on the server.
+         * The ID of the request, which is used to locate and troubleshoot issues.
          */
         public Builder groupingId(Long groupingId) {
             this.putQueryParameter("GroupingId", groupingId);
@@ -189,7 +189,7 @@ public class DescribeSuspEventQuaraFilesRequest extends Request {
         }
 
         /**
-         * The number of entries to return on each page.
+         * The unique ID of the quarantined file.
          */
         public Builder pageSize(String pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -198,7 +198,7 @@ public class DescribeSuspEventQuaraFilesRequest extends Request {
         }
 
         /**
-         * The unique ID of the quarantined file.
+         * The ID of the server group to which the server belongs. The quarantined file is located on the server.
          */
         public Builder quaraTag(String quaraTag) {
             this.putQueryParameter("QuaraTag", quaraTag);
@@ -207,7 +207,7 @@ public class DescribeSuspEventQuaraFilesRequest extends Request {
         }
 
         /**
-         * The source IP address of the request.
+         * The ID of the asset group.
          */
         public Builder sourceIp(String sourceIp) {
             this.putQueryParameter("SourceIp", sourceIp);
@@ -216,15 +216,7 @@ public class DescribeSuspEventQuaraFilesRequest extends Request {
         }
 
         /**
-         * The status of the quarantined file that you want to query. Valid values:
-         * <p>
-         * 
-         * *   **quaraFailed**: The file fails to be quarantined.
-         * *   **quaraDone**: The file is quarantined.
-         * *   **quaraing**: The file is being quarantined.
-         * *   **rollbackFailed**: The system fails to cancel quarantining the file.
-         * *   **rollbackDone**: The system cancelled quarantining the file.
-         * *   **rollbacking**: The system is cancelling quarantining the file.
+         * The number of the page to return.
          */
         public Builder status(String status) {
             this.putQueryParameter("Status", status);

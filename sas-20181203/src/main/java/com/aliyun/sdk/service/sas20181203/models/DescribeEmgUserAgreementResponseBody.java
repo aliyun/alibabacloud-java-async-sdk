@@ -50,11 +50,7 @@ public class DescribeEmgUserAgreementResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * Indicates whether Security Center is authorized to scan for urgent vulnerabilities. Valid values:
-         * <p>
-         * 
-         * *   **true**: yes
-         * *   **false**: no
+         * Auth.
          */
         public Builder auth(Boolean auth) {
             this.auth = auth;
@@ -62,7 +58,7 @@ public class DescribeEmgUserAgreementResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * RequestId.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

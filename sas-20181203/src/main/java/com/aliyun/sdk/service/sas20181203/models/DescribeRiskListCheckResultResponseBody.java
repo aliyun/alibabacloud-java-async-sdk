@@ -50,7 +50,7 @@ public class DescribeRiskListCheckResultResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The number of risk items for each cloud service.
+         * List.
          */
         public Builder list(java.util.List < List> list) {
             this.list = list;
@@ -58,7 +58,7 @@ public class DescribeRiskListCheckResultResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request, which is used to locate and troubleshoot issues.
+         * RequestId.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -110,7 +110,7 @@ public class DescribeRiskListCheckResultResponseBody extends TeaModel {
             private Long riskCount; 
 
             /**
-             * The instance ID of the cloud service.
+             * InstanceId.
              */
             public Builder instanceId(String instanceId) {
                 this.instanceId = instanceId;
@@ -118,7 +118,7 @@ public class DescribeRiskListCheckResultResponseBody extends TeaModel {
             }
 
             /**
-             * The total number of risk items detected in the current cloud service.
+             * riskCount.
              */
             public Builder riskCount(Long riskCount) {
                 this.riskCount = riskCount;

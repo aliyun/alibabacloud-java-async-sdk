@@ -70,11 +70,7 @@ public class ModifyVpcHoneyPotRequest extends Request {
         } 
 
         /**
-         * Specifies whether to enable or disable the honeypot. Valid values:
-         * <p>
-         * 
-         * *   **disable**
-         * *   **enable**
+         * HoneyPotAction.
          */
         public Builder honeyPotAction(String honeyPotAction) {
             this.putQueryParameter("HoneyPotAction", honeyPotAction);
@@ -83,10 +79,7 @@ public class ModifyVpcHoneyPotRequest extends Request {
         }
 
         /**
-         * The ID of the virtual private cloud (VPC) on which the honeypot is deployed.
-         * <p>
-         * 
-         * >  You can call the [DescribeVpcHoneyPotList](~~DescribeVpcHoneyPotList~~) operation to query the IDs of VPCs.
+         * VpcId.
          */
         public Builder vpcId(String vpcId) {
             this.putQueryParameter("VpcId", vpcId);

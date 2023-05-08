@@ -98,7 +98,7 @@ public class UpdateHoneypotResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * The status code returned. The status code **200** indicates that the request was successful. Other status codes indicate that the request failed. You can identify the cause of the failure based on the status code.
+         * Code.
          */
         public Builder code(String code) {
             this.code = code;
@@ -106,7 +106,7 @@ public class UpdateHoneypotResponseBody extends TeaModel {
         }
 
         /**
-         * The information about the honeypot.
+         * Data.
          */
         public Builder data(Data data) {
             this.data = data;
@@ -114,7 +114,7 @@ public class UpdateHoneypotResponseBody extends TeaModel {
         }
 
         /**
-         * The HTTP status code returned.
+         * HttpStatusCode.
          */
         public Builder httpStatusCode(Integer httpStatusCode) {
             this.httpStatusCode = httpStatusCode;
@@ -122,7 +122,7 @@ public class UpdateHoneypotResponseBody extends TeaModel {
         }
 
         /**
-         * The message returned.
+         * Message.
          */
         public Builder message(String message) {
             this.message = message;
@@ -130,7 +130,7 @@ public class UpdateHoneypotResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request, which is used to locate and troubleshoot issues.
+         * RequestId.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -138,11 +138,7 @@ public class UpdateHoneypotResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether the request was successful. Valid values:
-         * <p>
-         * 
-         * *   **true**: The request was successful.
-         * *   **false**: The request failed.
+         * Success.
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -254,7 +250,7 @@ public class UpdateHoneypotResponseBody extends TeaModel {
             private java.util.List < String > state; 
 
             /**
-             * The ID of the honeypot.
+             * 蜜罐ID
              */
             public Builder honeypotId(String honeypotId) {
                 this.honeypotId = honeypotId;
@@ -262,7 +258,7 @@ public class UpdateHoneypotResponseBody extends TeaModel {
             }
 
             /**
-             * The display name of the honeypot image.
+             * 蜜罐镜像显示名称
              */
             public Builder honeypotImageDisplayName(String honeypotImageDisplayName) {
                 this.honeypotImageDisplayName = honeypotImageDisplayName;
@@ -270,7 +266,7 @@ public class UpdateHoneypotResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the honeypot image.
+             * 蜜罐镜像名称
              */
             public Builder honeypotImageName(String honeypotImageName) {
                 this.honeypotImageName = honeypotImageName;
@@ -278,7 +274,7 @@ public class UpdateHoneypotResponseBody extends TeaModel {
             }
 
             /**
-             * The custom name of the honeypot.
+             * 蜜罐自定义名称
              */
             public Builder honeypotName(String honeypotName) {
                 this.honeypotName = honeypotName;
@@ -286,7 +282,7 @@ public class UpdateHoneypotResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the management node.
+             * 管理节点唯一id
              */
             public Builder nodeId(String nodeId) {
                 this.nodeId = nodeId;
@@ -294,7 +290,7 @@ public class UpdateHoneypotResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the custom configuration for the honeypot.
+             * 蜜罐自定义参数ID
              */
             public Builder presetId(String presetId) {
                 this.presetId = presetId;
@@ -302,7 +298,7 @@ public class UpdateHoneypotResponseBody extends TeaModel {
             }
 
             /**
-             * An array that consists of the status information about the honeypot.
+             * 蜜罐状态
              */
             public Builder state(java.util.List < String > state) {
                 this.state = state;

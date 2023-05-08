@@ -96,7 +96,7 @@ public class DescribePropertyUserItemRequest extends Request {
         } 
 
         /**
-         * The number of the page to return.
+         * The number of entries to return on each page.
          */
         public Builder currentPage(Integer currentPage) {
             this.putQueryParameter("CurrentPage", currentPage);
@@ -105,11 +105,7 @@ public class DescribePropertyUserItemRequest extends Request {
         }
 
         /**
-         * Specifies whether to forcefully refresh the data that you want to query. Valid values:
-         * <p>
-         * 
-         * *   **true**: yes
-         * *   **false**: no
+         * The information about the account.
          */
         public Builder forceFlush(Boolean forceFlush) {
             this.putQueryParameter("ForceFlush", forceFlush);
@@ -118,7 +114,7 @@ public class DescribePropertyUserItemRequest extends Request {
         }
 
         /**
-         * The number of entries to return on each page.
+         * The ID of the request.
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -127,7 +123,7 @@ public class DescribePropertyUserItemRequest extends Request {
         }
 
         /**
-         * The information about the account.
+         * The number of the page to return.
          */
         public Builder user(String user) {
             this.putQueryParameter("User", user);

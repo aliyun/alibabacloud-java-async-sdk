@@ -62,7 +62,7 @@ public class DescribeHoneyPotAuthResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The total quota.
+         * HoneyPotAuthCount.
          */
         public Builder honeyPotAuthCount(Long honeyPotAuthCount) {
             this.honeyPotAuthCount = honeyPotAuthCount;
@@ -70,7 +70,7 @@ public class DescribeHoneyPotAuthResponseBody extends TeaModel {
         }
 
         /**
-         * The quota that is consumed.
+         * HoneyPotCount.
          */
         public Builder honeyPotCount(Integer honeyPotCount) {
             this.honeyPotCount = honeyPotCount;
@@ -78,7 +78,7 @@ public class DescribeHoneyPotAuthResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request, which is used to locate and troubleshoot issues.
+         * RequestId.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

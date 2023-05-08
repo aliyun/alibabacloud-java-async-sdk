@@ -188,11 +188,7 @@ public class CreateCycleTaskRequest extends Request {
         } 
 
         /**
-         * Specifies whether to enable the task. Valid values:
-         * <p>
-         * 
-         * *   **1**: yes
-         * *   **0**: no
+         * Enable.
          */
         public Builder enable(Integer enable) {
             this.putQueryParameter("Enable", enable);
@@ -201,7 +197,7 @@ public class CreateCycleTaskRequest extends Request {
         }
 
         /**
-         * The first time when the task is performed.
+         * FirstDateStr.
          */
         public Builder firstDateStr(Long firstDateStr) {
             this.putQueryParameter("FirstDateStr", firstDateStr);
@@ -210,7 +206,7 @@ public class CreateCycleTaskRequest extends Request {
         }
 
         /**
-         * The interval of the task.
+         * IntervalPeriod.
          */
         public Builder intervalPeriod(Integer intervalPeriod) {
             this.putQueryParameter("IntervalPeriod", intervalPeriod);
@@ -219,7 +215,7 @@ public class CreateCycleTaskRequest extends Request {
         }
 
         /**
-         * The additional information.
+         * Param.
          */
         public Builder param(String param) {
             this.putQueryParameter("Param", param);
@@ -228,11 +224,7 @@ public class CreateCycleTaskRequest extends Request {
         }
 
         /**
-         * The unit of the scan interval. Valid values:
-         * <p>
-         * 
-         * *   **day**: days
-         * *   **hour**: hours
+         * PeriodUnit.
          */
         public Builder periodUnit(String periodUnit) {
             this.putQueryParameter("PeriodUnit", periodUnit);
@@ -241,7 +233,7 @@ public class CreateCycleTaskRequest extends Request {
         }
 
         /**
-         * The additional source for the task.
+         * Source.
          */
         public Builder source(String source) {
             this.putQueryParameter("Source", source);
@@ -250,7 +242,7 @@ public class CreateCycleTaskRequest extends Request {
         }
 
         /**
-         * The time when the task ends. Unit: hours.
+         * TargetEndTime.
          */
         public Builder targetEndTime(Integer targetEndTime) {
             this.putQueryParameter("TargetEndTime", targetEndTime);
@@ -259,7 +251,7 @@ public class CreateCycleTaskRequest extends Request {
         }
 
         /**
-         * The time when the task is started. Unit: hours.
+         * TargetStartTime.
          */
         public Builder targetStartTime(Integer targetStartTime) {
             this.putQueryParameter("TargetStartTime", targetStartTime);
@@ -268,12 +260,7 @@ public class CreateCycleTaskRequest extends Request {
         }
 
         /**
-         * The name of the task. Valid values:
-         * <p>
-         * 
-         * *   **VIRUS_VUL_SCHEDULE_SCAN**: virus scan task
-         * *   **IMAGE_SCAN**: image scan task
-         * *   **EMG_VUL_SCHEDULE_SCAN**: urgent vulnerability scan task
+         * TaskName.
          */
         public Builder taskName(String taskName) {
             this.putQueryParameter("TaskName", taskName);
@@ -282,12 +269,7 @@ public class CreateCycleTaskRequest extends Request {
         }
 
         /**
-         * The type of the task. Valid values:
-         * <p>
-         * 
-         * *   **VIRUS_VUL_SCHEDULE_SCAN**: virus scan task
-         * *   **IMAGE_SCAN**: image scan task
-         * *   **EMG_VUL_SCHEDULE_SCAN**: urgent vulnerability scan task
+         * TaskType.
          */
         public Builder taskType(String taskType) {
             this.putQueryParameter("TaskType", taskType);

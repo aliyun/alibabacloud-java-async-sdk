@@ -69,7 +69,7 @@ public class DescribeLogstoreStorageRequest extends Request {
         } 
 
         /**
-         * The ID of the request source. Set the value to **sas**.
+         * The ID of the request, which is used to locate and troubleshoot issues.
          */
         public Builder from(String from) {
             this.putQueryParameter("From", from);
@@ -78,11 +78,7 @@ public class DescribeLogstoreStorageRequest extends Request {
         }
 
         /**
-         * The language of the content within the request and response. Default value: **zh**. Valid values:
-         * <p>
-         * 
-         * *   **zh**: Chinese
-         * *   **en**: English
+         * The purchased log storage capacity, in GB.
          */
         public Builder lang(String lang) {
             this.putQueryParameter("Lang", lang);

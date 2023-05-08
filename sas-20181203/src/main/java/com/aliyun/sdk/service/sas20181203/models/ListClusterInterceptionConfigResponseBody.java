@@ -62,7 +62,7 @@ public class ListClusterInterceptionConfigResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * An array that consists of the configurations of the cluster.
+         * ClusterConfigList.
          */
         public Builder clusterConfigList(java.util.List < ClusterConfigList> clusterConfigList) {
             this.clusterConfigList = clusterConfigList;
@@ -70,7 +70,7 @@ public class ListClusterInterceptionConfigResponseBody extends TeaModel {
         }
 
         /**
-         * The pagination information.
+         * PageInfo.
          */
         public Builder pageInfo(PageInfo pageInfo) {
             this.pageInfo = pageInfo;
@@ -78,7 +78,7 @@ public class ListClusterInterceptionConfigResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request, which is used to locate and troubleshoot issues.
+         * RequestId.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -202,13 +202,7 @@ public class ListClusterInterceptionConfigResponseBody extends TeaModel {
             private Long totalRuleCount; 
 
             /**
-             * The status of the container firewall feature. Valid values:
-             * <p>
-             * 
-             * *   **-1**: unknown
-             * *   **0**: abnormal
-             * *   **1**: normal
-             * *   **2**: normal to be confirmed
+             * ClusterCNNFStatus.
              */
             public Builder clusterCNNFStatus(Integer clusterCNNFStatus) {
                 this.clusterCNNFStatus = clusterCNNFStatus;
@@ -216,7 +210,7 @@ public class ListClusterInterceptionConfigResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the cluster.
+             * ClusterId.
              */
             public Builder clusterId(String clusterId) {
                 this.clusterId = clusterId;
@@ -224,7 +218,7 @@ public class ListClusterInterceptionConfigResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the cluster.
+             * ClusterName.
              */
             public Builder clusterName(String clusterName) {
                 this.clusterName = clusterName;
@@ -232,14 +226,7 @@ public class ListClusterInterceptionConfigResponseBody extends TeaModel {
             }
 
             /**
-             * The type of the cluster. Valid values:
-             * <p>
-             * 
-             * *   **ManagedKubernetes**: managed Kubernetes cluster
-             * *   **NotManagedKubernetes**: non-managed Kubernetes cluster
-             * *   **PrivateKubernetes**: private cluster
-             * *   **kubernetes**: dedicated Kubernetes cluster
-             * *   **ask**: dedicated serverless Kubernetes (ASK) cluster
+             * ClusterType.
              */
             public Builder clusterType(String clusterType) {
                 this.clusterType = clusterType;
@@ -247,11 +234,7 @@ public class ListClusterInterceptionConfigResponseBody extends TeaModel {
             }
 
             /**
-             * The status of the defense rule. Valid values:
-             * <p>
-             * 
-             * *   **0**: disabled
-             * *   **1**: enabled
+             * InterceptionSwitch.
              */
             public Builder interceptionSwitch(Integer interceptionSwitch) {
                 this.interceptionSwitch = interceptionSwitch;
@@ -259,7 +242,7 @@ public class ListClusterInterceptionConfigResponseBody extends TeaModel {
             }
 
             /**
-             * The number of defense rules that are in effect.
+             * OpenRuleCount.
              */
             public Builder openRuleCount(Long openRuleCount) {
                 this.openRuleCount = openRuleCount;
@@ -267,7 +250,7 @@ public class ListClusterInterceptionConfigResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether the container firewall feature is supported.
+             * SupportCNNF.
              */
             public Builder supportCNNF(Boolean supportCNNF) {
                 this.supportCNNF = supportCNNF;
@@ -275,7 +258,7 @@ public class ListClusterInterceptionConfigResponseBody extends TeaModel {
             }
 
             /**
-             * The total number of defense rules.
+             * TotalRuleCount.
              */
             public Builder totalRuleCount(Long totalRuleCount) {
                 this.totalRuleCount = totalRuleCount;
@@ -352,7 +335,7 @@ public class ListClusterInterceptionConfigResponseBody extends TeaModel {
             private Integer totalCount; 
 
             /**
-             * The number of entries returned on the current page.
+             * Count.
              */
             public Builder count(Integer count) {
                 this.count = count;
@@ -360,7 +343,7 @@ public class ListClusterInterceptionConfigResponseBody extends TeaModel {
             }
 
             /**
-             * The page number of the returned page.
+             * CurrrentPage.
              */
             public Builder currrentPage(Integer currrentPage) {
                 this.currrentPage = currrentPage;
@@ -368,7 +351,7 @@ public class ListClusterInterceptionConfigResponseBody extends TeaModel {
             }
 
             /**
-             * The number of entries returned per page.
+             * PageSize.
              */
             public Builder pageSize(Integer pageSize) {
                 this.pageSize = pageSize;
@@ -376,7 +359,7 @@ public class ListClusterInterceptionConfigResponseBody extends TeaModel {
             }
 
             /**
-             * The total number of entries returned.
+             * TotalCount.
              */
             public Builder totalCount(Integer totalCount) {
                 this.totalCount = totalCount;

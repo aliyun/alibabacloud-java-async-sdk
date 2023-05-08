@@ -50,7 +50,10 @@ public class GetCloudAssetCriteriaResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * An array consisting of the information about the filter conditions that are used to search for cloud assets.
+         * The values of the search condition. This parameter is returned only if the value of **Type** is **select**.
+         * <p>
+         * 
+         * >  If the value of **Type** is **input**, the value of this parameter is an empty string.
          */
         public Builder criteriaList(java.util.List < CriteriaList> criteriaList) {
             this.criteriaList = criteriaList;
@@ -134,11 +137,7 @@ public class GetCloudAssetCriteriaResponseBody extends TeaModel {
             private String values; 
 
             /**
-             * The structured attribute values of the assets that match the keyword. The value of this parameter is in the JSON format and contains the following fields:
-             * <p>
-             * 
-             * *   **vendor**: providers
-             * *   **regionIds**: IDs of supported regions
+             * MultiValues.
              */
             public Builder multiValues(String multiValues) {
                 this.multiValues = multiValues;
@@ -146,14 +145,7 @@ public class GetCloudAssetCriteriaResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the filter condition. Valid values:
-             * <p>
-             * 
-             * *   **instanceId**: the ID of the instance
-             * *   **instanceName**: the name of an instance
-             * *   **internetIp**: the public IP address
-             * *   **riskStatus**: the risk status
-             * *   **vendorRegionId**: the region ID by service provider
+             * Name.
              */
             public Builder name(String name) {
                 this.name = name;
@@ -161,11 +153,7 @@ public class GetCloudAssetCriteriaResponseBody extends TeaModel {
             }
 
             /**
-             * The type of the filter condition. Valid values:
-             * <p>
-             * 
-             * *   **input**: The filter condition needs to be specified.
-             * *   **select**: The filter condition is an option that can be selected from the drop-down list.
+             * GetCloudAssetCriteria
              */
             public Builder type(String type) {
                 this.type = type;
@@ -173,10 +161,7 @@ public class GetCloudAssetCriteriaResponseBody extends TeaModel {
             }
 
             /**
-             * The values of the search condition. This parameter is returned only if the value of **Type** is **select**.
-             * <p>
-             * 
-             * >  If the value of **Type** is **input**, the value of this parameter is an empty string.
+             * Values.
              */
             public Builder values(String values) {
                 this.values = values;

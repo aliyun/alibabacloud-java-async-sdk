@@ -54,10 +54,7 @@ public class DescribeHcExportInfoRequest extends Request {
         } 
 
         /**
-         * The ID of the export task.
-         * <p>
-         * 
-         * >  You can call the [ExportWarning](~~ExportWarning~~) operation to query the IDs of export tasks.
+         * ExportId.
          */
         public Builder exportId(Long exportId) {
             this.putQueryParameter("ExportId", exportId);

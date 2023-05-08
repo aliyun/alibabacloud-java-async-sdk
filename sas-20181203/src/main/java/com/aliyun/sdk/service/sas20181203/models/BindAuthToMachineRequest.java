@@ -155,11 +155,7 @@ public class BindAuthToMachineRequest extends Request {
         }
 
         /**
-         * Specifies whether to automatically bind servers to Security Center. Valid values:
-         * <p>
-         * 
-         * *   **0**: no
-         * *   **1**: yes
+         * The shortage in the quota for cores of servers that can be protected.
          */
         public Builder autoBind(Integer autoBind) {
             this.putQueryParameter("AutoBind", autoBind);
@@ -168,10 +164,7 @@ public class BindAuthToMachineRequest extends Request {
         }
 
         /**
-         * The UUIDs of the servers that you want to bind to Security Center.
-         * <p>
-         * 
-         * >  You must specify at least one of the **Bind** and **UnBind** parameters.
+         * The ID of the request, which is used to locate and troubleshoot issues.
          */
         public Builder bind(java.util.List < String > bind) {
             this.putQueryParameter("Bind", bind);
@@ -180,15 +173,29 @@ public class BindAuthToMachineRequest extends Request {
         }
 
         /**
-         * Specifies whether to bind all servers to Security Center. Default value: **false**. Valid values:
+         * The UUID of the server that you want to bind to Security Center.
          * <p>
          * 
-         * *   **true**: yes
-         * *   **false**: no
+         * >  You can call the [DescribeCloudCenterInstances](~~DescribeCloudCenterInstances~~) operation to query the UUIDs of servers.
          */
         public Builder bindAll(Boolean bindAll) {
             this.putQueryParameter("BindAll", bindAll);
             this.bindAll = bindAll;
+            return this;
+        }
+
+        /**
+         * The status code that indicates the result. Valid values:
+         * <p>
+         * 
+         * *   **0**: The servers are bound to or unbound from Security Center.
+         * *   **1**: The values that you specified for the parameters are invalid.
+         * *   **2**: The quota for servers that can be protected is insufficient.
+         * *   **3**: The quota for cores of servers that can be protected is insufficient.
+         */
+        public Builder criteria(String criteria) {
+            this.putQueryParameter("Criteria", criteria);
+            this.criteria = criteria;
             return this;
         }
 
@@ -198,19 +205,6 @@ public class BindAuthToMachineRequest extends Request {
          * 
          * >  A search condition can be an instance ID, instance name, virtual private cloud (VPC) ID, region, or public IP address. You can call the [DescribeCriteria](~~DescribeCriteria~~) operation to query the supported search conditions.
          */
-        public Builder criteria(String criteria) {
-            this.putQueryParameter("Criteria", criteria);
-            this.criteria = criteria;
-            return this;
-        }
-
-        /**
-         * The logical relationship among multiple search conditions. Valid values:
-         * <p>
-         * 
-         * *   **OR**: Search conditions are evaluated by using a logical **OR**.
-         * *   **AND**: Search conditions are evaluated by using a logical **AND**.
-         */
         public Builder logicalExp(String logicalExp) {
             this.putQueryParameter("LogicalExp", logicalExp);
             this.logicalExp = logicalExp;
@@ -218,10 +212,7 @@ public class BindAuthToMachineRequest extends Request {
         }
 
         /**
-         * The UUIDs of the servers that you want to unbind from Security Center.
-         * <p>
-         * 
-         * >  You must specify at least one of the **Bind** and **UnBind** parameters.
+         * Binds servers to Security Center or unbinds servers from Security Center.
          */
         public Builder unBind(java.util.List < String > unBind) {
             this.putQueryParameter("UnBind", unBind);

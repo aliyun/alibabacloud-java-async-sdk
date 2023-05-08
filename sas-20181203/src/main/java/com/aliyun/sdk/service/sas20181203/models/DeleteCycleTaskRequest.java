@@ -55,10 +55,7 @@ public class DeleteCycleTaskRequest extends Request {
         } 
 
         /**
-         * The ID of the task configuration.
-         * <p>
-         * 
-         * >  You can call the [DescribeCycleTaskList](~~DescribeCycleTaskList~~) operation to query the IDs of task configurations.
+         * ConfigId.
          */
         public Builder configId(String configId) {
             this.putQueryParameter("ConfigId", configId);

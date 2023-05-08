@@ -152,7 +152,7 @@ public class ListInterceptionHistoryRequest extends Request {
         } 
 
         /**
-         * ClusterId.
+         * The ID of the container cluster.
          */
         public Builder clusterId(String clusterId) {
             this.putQueryParameter("ClusterId", clusterId);
@@ -161,7 +161,7 @@ public class ListInterceptionHistoryRequest extends Request {
         }
 
         /**
-         * CurrentPage.
+         * The number of the page to return.
          */
         public Builder currentPage(Integer currentPage) {
             this.putQueryParameter("CurrentPage", currentPage);
@@ -170,7 +170,7 @@ public class ListInterceptionHistoryRequest extends Request {
         }
 
         /**
-         * EndTime.
+         * The end of the time range to query. The value is a UNIX timestamp.
          */
         public Builder endTime(Long endTime) {
             this.putQueryParameter("EndTime", endTime);
@@ -179,7 +179,7 @@ public class ListInterceptionHistoryRequest extends Request {
         }
 
         /**
-         * HistoryName.
+         * The name of the alert.
          */
         public Builder historyName(String historyName) {
             this.putQueryParameter("HistoryName", historyName);
@@ -188,7 +188,7 @@ public class ListInterceptionHistoryRequest extends Request {
         }
 
         /**
-         * InterceptionTypes.
+         * The types of exceptions.
          */
         public Builder interceptionTypes(java.util.List < Integer > interceptionTypes) {
             this.putQueryParameter("InterceptionTypes", interceptionTypes);
@@ -197,7 +197,12 @@ public class ListInterceptionHistoryRequest extends Request {
         }
 
         /**
-         * Lang.
+         * 设置请求和接收消息的语言类型。默认值**zh**。取值：
+         * <p>
+         * 
+         * 
+         * - **zh**：中文
+         * - **en**：英文
          */
         public Builder lang(String lang) {
             this.putQueryParameter("Lang", lang);
@@ -206,7 +211,7 @@ public class ListInterceptionHistoryRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * The number of entries to return on each page.
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -215,7 +220,7 @@ public class ListInterceptionHistoryRequest extends Request {
         }
 
         /**
-         * StartTime.
+         * The start of the time range to query. The value is a UNIX timestamp.
          */
         public Builder startTime(Long startTime) {
             this.putQueryParameter("StartTime", startTime);

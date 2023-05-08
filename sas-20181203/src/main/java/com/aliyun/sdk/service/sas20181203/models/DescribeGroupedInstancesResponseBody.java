@@ -62,7 +62,7 @@ public class DescribeGroupedInstancesResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * An array that consists of the information about the assets.
+         * Instances.
          */
         public Builder instances(java.util.List < Instances> instances) {
             this.instances = instances;
@@ -70,7 +70,7 @@ public class DescribeGroupedInstancesResponseBody extends TeaModel {
         }
 
         /**
-         * The pagination information.
+         * The number of assets that are not protected by Security Center.
          */
         public Builder pageInfo(PageInfo pageInfo) {
             this.pageInfo = pageInfo;
@@ -78,7 +78,7 @@ public class DescribeGroupedInstancesResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request, which is used to locate and troubleshoot issues.
+         * The name of the server group.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -94,6 +94,9 @@ public class DescribeGroupedInstancesResponseBody extends TeaModel {
     public static class Instances extends TeaModel {
         @NameInMap("AsapVulInstanceCount")
         private Long asapVulInstanceCount;
+
+        @NameInMap("AuthVersionCheckCount")
+        private Integer authVersionCheckCount;
 
         @NameInMap("FieldAliasName")
         private String fieldAliasName;
@@ -112,6 +115,7 @@ public class DescribeGroupedInstancesResponseBody extends TeaModel {
 
         private Instances(Builder builder) {
             this.asapVulInstanceCount = builder.asapVulInstanceCount;
+            this.authVersionCheckCount = builder.authVersionCheckCount;
             this.fieldAliasName = builder.fieldAliasName;
             this.groupFlag = builder.groupFlag;
             this.instanceCount = builder.instanceCount;
@@ -132,6 +136,13 @@ public class DescribeGroupedInstancesResponseBody extends TeaModel {
          */
         public Long getAsapVulInstanceCount() {
             return this.asapVulInstanceCount;
+        }
+
+        /**
+         * @return authVersionCheckCount
+         */
+        public Integer getAuthVersionCheckCount() {
+            return this.authVersionCheckCount;
         }
 
         /**
@@ -171,6 +182,7 @@ public class DescribeGroupedInstancesResponseBody extends TeaModel {
 
         public static final class Builder {
             private Long asapVulInstanceCount; 
+            private Integer authVersionCheckCount; 
             private String fieldAliasName; 
             private Integer groupFlag; 
             private String instanceCount; 
@@ -178,7 +190,7 @@ public class DescribeGroupedInstancesResponseBody extends TeaModel {
             private String unProtectedInstanceCount; 
 
             /**
-             * The number of assets on which high-risk vulnerabilities are detected.
+             * AsapVulInstanceCount.
              */
             public Builder asapVulInstanceCount(Long asapVulInstanceCount) {
                 this.asapVulInstanceCount = asapVulInstanceCount;
@@ -186,7 +198,15 @@ public class DescribeGroupedInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the server group.
+             * AuthVersionCheckCount.
+             */
+            public Builder authVersionCheckCount(Integer authVersionCheckCount) {
+                this.authVersionCheckCount = authVersionCheckCount;
+                return this;
+            }
+
+            /**
+             * FieldAliasName.
              */
             public Builder fieldAliasName(String fieldAliasName) {
                 this.fieldAliasName = fieldAliasName;
@@ -194,11 +214,7 @@ public class DescribeGroupedInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * The type of the server group. Valid values:
-             * <p>
-             * 
-             * *   **0**: the default group
-             * *   **1**: other group
+             * GroupFlag.
              */
             public Builder groupFlag(Integer groupFlag) {
                 this.groupFlag = groupFlag;
@@ -206,10 +222,7 @@ public class DescribeGroupedInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * The total number of assets that belong to the specified type.
-             * <p>
-             * 
-             * >  If the **MachineTypes** request parameter is not specified, the value of the InstanceCount parameter is the total number of your assets.
+             * InstanceCount.
              */
             public Builder instanceCount(String instanceCount) {
                 this.instanceCount = instanceCount;
@@ -217,7 +230,7 @@ public class DescribeGroupedInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * The number of assets that are at risk.
+             * RiskInstanceCount.
              */
             public Builder riskInstanceCount(String riskInstanceCount) {
                 this.riskInstanceCount = riskInstanceCount;
@@ -225,7 +238,7 @@ public class DescribeGroupedInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * The number of assets that are not protected by Security Center.
+             * UnProtectedInstanceCount.
              */
             public Builder unProtectedInstanceCount(String unProtectedInstanceCount) {
                 this.unProtectedInstanceCount = unProtectedInstanceCount;
@@ -302,7 +315,7 @@ public class DescribeGroupedInstancesResponseBody extends TeaModel {
             private Integer totalCount; 
 
             /**
-             * The number of entries returned on the current page.
+             * 58928
              */
             public Builder count(Integer count) {
                 this.count = count;
@@ -310,7 +323,7 @@ public class DescribeGroupedInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * The page number of the returned page.
+             * The ID of the request, which is used to locate and troubleshoot issues.
              */
             public Builder currentPage(Integer currentPage) {
                 this.currentPage = currentPage;
@@ -318,7 +331,7 @@ public class DescribeGroupedInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * The number of entries returned per page. Default value: **20**.
+             * Queries the statistical information about assets based on a specified filter condition.
              */
             public Builder pageSize(Integer pageSize) {
                 this.pageSize = pageSize;
@@ -326,7 +339,7 @@ public class DescribeGroupedInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * The total number of entries returned.
+             * DescribeGroupedInstances
              */
             public Builder totalCount(Integer totalCount) {
                 this.totalCount = totalCount;

@@ -110,7 +110,7 @@ public class DescribeWebLockStatusResponseBody extends TeaModel {
         private Integer whiteCount; 
 
         /**
-         * The total quota that you purchase for web tamper proofing.
+         * AuthCount.
          */
         public Builder authCount(Integer authCount) {
             this.authCount = authCount;
@@ -118,7 +118,7 @@ public class DescribeWebLockStatusResponseBody extends TeaModel {
         }
 
         /**
-         * The used quota for web tamper proofing.
+         * BindCount.
          */
         public Builder bindCount(Integer bindCount) {
             this.bindCount = bindCount;
@@ -126,7 +126,7 @@ public class DescribeWebLockStatusResponseBody extends TeaModel {
         }
 
         /**
-         * The number of blocked processes.
+         * BlockCount.
          */
         public Builder blockCount(Integer blockCount) {
             this.blockCount = blockCount;
@@ -134,7 +134,7 @@ public class DescribeWebLockStatusResponseBody extends TeaModel {
         }
 
         /**
-         * The number of protected directories.
+         * DirCount.
          */
         public Builder dirCount(Integer dirCount) {
             this.dirCount = dirCount;
@@ -142,7 +142,7 @@ public class DescribeWebLockStatusResponseBody extends TeaModel {
         }
 
         /**
-         * The timestamp when the quota for web tamper proofing expires.
+         * ExpireTime.
          */
         public Builder expireTime(Long expireTime) {
             this.expireTime = expireTime;
@@ -150,7 +150,7 @@ public class DescribeWebLockStatusResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request, which is used to locate and troubleshoot issues.
+         * RequestId.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -158,7 +158,7 @@ public class DescribeWebLockStatusResponseBody extends TeaModel {
         }
 
         /**
-         * The number of processes that are added to the process whitelist.
+         * WhiteCount.
          */
         public Builder whiteCount(Integer whiteCount) {
             this.whiteCount = whiteCount;

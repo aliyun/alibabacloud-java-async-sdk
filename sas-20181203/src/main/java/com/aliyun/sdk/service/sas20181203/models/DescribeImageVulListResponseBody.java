@@ -94,7 +94,7 @@ public class DescribeImageVulListResponseBody extends TeaModel {
         }
 
         /**
-         * The number of entries returned per page. Default value: **10**.
+         * The number of entries returned per page. Default value: **10**
          */
         public Builder pageSize(Integer pageSize) {
             this.pageSize = pageSize;
@@ -102,7 +102,7 @@ public class DescribeImageVulListResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request, which is used to locate and troubleshoot issues.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -118,7 +118,7 @@ public class DescribeImageVulListResponseBody extends TeaModel {
         }
 
         /**
-         * An array that consists of the vulnerabilities.
+         * The vulnerabilities.
          */
         public Builder vulRecords(java.util.List < VulRecords> vulRecords) {
             this.vulRecords = vulRecords;
@@ -282,7 +282,7 @@ public class DescribeImageVulListResponseBody extends TeaModel {
             }
 
             /**
-             * The path of the software that has the vulnerability.
+             * The path to the software that has the vulnerability.
              */
             public Builder path(String path) {
                 this.path = path;
@@ -815,8 +815,8 @@ public class DescribeImageVulListResponseBody extends TeaModel {
              * Indicates whether the vulnerability can be fixed in the Security Center console. Valid values:
              * <p>
              * 
-             * *   **yes**: yes
-             * *   **no**: no
+             * *   **yes**
+             * *   **no**
              */
             public Builder canFix(String canFix) {
                 this.canFix = canFix;
@@ -827,8 +827,8 @@ public class DescribeImageVulListResponseBody extends TeaModel {
              * Indicates whether the packages of the software that has the vulnerability can be upgraded by using Security Center. Valid values:
              * <p>
              * 
-             * *   **true**: yes
-             * *   **false**: no
+             * *   **true**
+             * *   **false**
              */
             public Builder canUpdate(Boolean canUpdate) {
                 this.canUpdate = canUpdate;
@@ -1022,7 +1022,7 @@ public class DescribeImageVulListResponseBody extends TeaModel {
             }
 
             /**
-             * The timestamp of the scan. Unit: milliseconds.
+             * The time at which the scan was performed. This value is a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.
              */
             public Builder scanTime(Long scanTime) {
                 this.scanTime = scanTime;

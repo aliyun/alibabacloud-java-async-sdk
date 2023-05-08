@@ -153,7 +153,7 @@ public class DescribeImageBaselineCheckResultRequest extends Request {
         } 
 
         /**
-         * The search condition for the image baseline.
+         * Criteria.
          */
         public Builder criteria(String criteria) {
             this.putQueryParameter("Criteria", criteria);
@@ -162,11 +162,7 @@ public class DescribeImageBaselineCheckResultRequest extends Request {
         }
 
         /**
-         * The type of the search condition. Valid values:
-         * <p>
-         * 
-         * *   **BaselineNameAlias**: baseline name
-         * *   **BaselineClassAlias**: baseline category
+         * CriteriaType.
          */
         public Builder criteriaType(String criteriaType) {
             this.putQueryParameter("CriteriaType", criteriaType);
@@ -175,7 +171,7 @@ public class DescribeImageBaselineCheckResultRequest extends Request {
         }
 
         /**
-         * The number of the page to return. Default value: 1.
+         * CurrentPage.
          */
         public Builder currentPage(Integer currentPage) {
             this.putQueryParameter("CurrentPage", currentPage);
@@ -184,7 +180,7 @@ public class DescribeImageBaselineCheckResultRequest extends Request {
         }
 
         /**
-         * The UUID of the image.
+         * ImageUuid.
          */
         public Builder imageUuid(String imageUuid) {
             this.putQueryParameter("ImageUuid", imageUuid);
@@ -193,11 +189,7 @@ public class DescribeImageBaselineCheckResultRequest extends Request {
         }
 
         /**
-         * The language of the content within the request and response. Default value: **zh**. Valid values:
-         * <p>
-         * 
-         * *   **zh**: Chinese
-         * *   **en**: English
+         * Lang.
          */
         public Builder lang(String lang) {
             this.putQueryParameter("Lang", lang);
@@ -206,7 +198,7 @@ public class DescribeImageBaselineCheckResultRequest extends Request {
         }
 
         /**
-         * The number of entries to return on each page. Default value: **20**.
+         * PageSize.
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -215,12 +207,7 @@ public class DescribeImageBaselineCheckResultRequest extends Request {
         }
 
         /**
-         * The severity of the image baseline that you want to query. Separate multiple severities with commas (,). By default, all valid values are used. Valid values:
-         * <p>
-         * 
-         * *   **high**
-         * *   **medium**
-         * *   **low**
+         * RiskLevel.
          */
         public Builder riskLevel(String riskLevel) {
             this.putQueryParameter("RiskLevel", riskLevel);
@@ -229,7 +216,7 @@ public class DescribeImageBaselineCheckResultRequest extends Request {
         }
 
         /**
-         * The types of the assets that you want to scan.
+         * ScanRange.
          */
         public Builder scanRange(java.util.List < String > scanRange) {
             this.putQueryParameter("ScanRange", scanRange);

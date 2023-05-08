@@ -83,7 +83,7 @@ public class GetCheckDetailRequest extends Request {
         } 
 
         /**
-         * The ID of the check item.
+         * CheckId.
          */
         public Builder checkId(Long checkId) {
             this.putQueryParameter("CheckId", checkId);
@@ -92,11 +92,7 @@ public class GetCheckDetailRequest extends Request {
         }
 
         /**
-         * The language of the content within the request and response. Default value: **zh**. Valid values:
-         * <p>
-         * 
-         * *   **zh**: Chinese
-         * *   **en**: English
+         * Lang.
          */
         public Builder lang(String lang) {
             this.putQueryParameter("Lang", lang);

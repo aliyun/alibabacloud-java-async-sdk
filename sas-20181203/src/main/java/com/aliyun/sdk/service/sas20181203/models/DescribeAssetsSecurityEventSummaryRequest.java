@@ -110,10 +110,7 @@ public class DescribeAssetsSecurityEventSummaryRequest extends Request {
         } 
 
         /**
-         * The ID of the cluster to which the container belongs.
-         * <p>
-         * 
-         * > You can call the [DescribeGroupedContainerInstances](~~DescribeGroupedContainerInstances~~) operation to query the IDs of clusters.
+         * ClusterId.
          */
         public Builder clusterId(String clusterId) {
             this.putQueryParameter("ClusterId", clusterId);
@@ -122,28 +119,7 @@ public class DescribeAssetsSecurityEventSummaryRequest extends Request {
         }
 
         /**
-         * The key of the condition that is used to query on containers. Valid values:
-         * <p>
-         * 
-         * *   **instanceId**: the ID of the container instance
-         * *   **clusterId**: the ID of the cluster
-         * *   **regionId**: the region ID of the container
-         * *   **clusterName**: the name of the cluster
-         * *   **image**: the name of the image
-         * *   **imageRepoName**: the name of the image repository
-         * *   **imageRepoNamespace**: the namespace to which the image repository belongs
-         * *   **imageRepoTag**: the tag that is added to the image repository
-         * *   **imageDigest**: the digest of the image
-         * *   **ClusterType**: the type of the cluster
-         * *   **hostIp**: the public IP address
-         * *   **pod**: the pod
-         * *   **podIp**: the IP address of the pod
-         * *   **containerId**: the ID of the container
-         * *   **vulStatus**: whether vulnerabilities are detected on the container
-         * *   **alarmStatus**: whether alerts are generated for the container
-         * *   **riskStatus**: whether risks are detected on the container
-         * *   **riskLevel**: the risk level of the container
-         * *   **containerScope**: the type of the container
+         * ContainerFieldName.
          */
         public Builder containerFieldName(String containerFieldName) {
             this.putQueryParameter("ContainerFieldName", containerFieldName);
@@ -152,7 +128,7 @@ public class DescribeAssetsSecurityEventSummaryRequest extends Request {
         }
 
         /**
-         * The value of the condition that is used to query on containers.
+         * ContainerFieldValue.
          */
         public Builder containerFieldValue(String containerFieldValue) {
             this.putQueryParameter("ContainerFieldValue", containerFieldValue);
@@ -170,7 +146,7 @@ public class DescribeAssetsSecurityEventSummaryRequest extends Request {
         }
 
         /**
-         * The source IP address of the request.
+         * SourceIp.
          */
         public Builder sourceIp(String sourceIp) {
             this.putQueryParameter("SourceIp", sourceIp);

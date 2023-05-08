@@ -168,7 +168,10 @@ public class DescribeImageRepoListRequest extends Request {
         } 
 
         /**
-         * The number of the page to return. Default value: **1**.
+         * The type of the feature. Valid values:
+         * <p>
+         * 
+         * *   **image_repo**: image repository protection
          */
         public Builder currentPage(Integer currentPage) {
             this.putQueryParameter("CurrentPage", currentPage);
@@ -177,13 +180,11 @@ public class DescribeImageRepoListRequest extends Request {
         }
 
         /**
-         * The name of the field that is used for the query. Valid values:
+         * Indicates whether the feature takes effect on the image repository. Valid values:
          * <p>
          * 
-         * *   **repoName**: the name of the image repository
-         * *   **repoNamespace**: the namespace to which the image repository belongs
-         * 
-         * >  This parameter takes effect only when the **OperateType** parameter is set to **other**.
+         * *   **add**: yes
+         * *   **del**: no
          */
         public Builder fieldName(String fieldName) {
             this.putQueryParameter("FieldName", fieldName);
@@ -192,14 +193,20 @@ public class DescribeImageRepoListRequest extends Request {
         }
 
         /**
-         * The value of the field that is used for the query.
-         * <p>
-         * 
-         * >  This parameter takes effect only when the **OperateType** parameter is set to **other**.
+         * The namespace to which the image repository belongs.
          */
         public Builder fieldValue(String fieldValue) {
             this.putQueryParameter("FieldValue", fieldValue);
             this.fieldValue = fieldValue;
+            return this;
+        }
+
+        /**
+         * The pagination information.
+         */
+        public Builder operateType(String operateType) {
+            this.putQueryParameter("OperateType", operateType);
+            this.operateType = operateType;
             return this;
         }
 
@@ -210,18 +217,6 @@ public class DescribeImageRepoListRequest extends Request {
          * *   **count**: counts statistics
          * *   **other**: others
          */
-        public Builder operateType(String operateType) {
-            this.putQueryParameter("OperateType", operateType);
-            this.operateType = operateType;
-            return this;
-        }
-
-        /**
-         * The number of entries to return on each page. Default value: 20. If you leave this parameter empty, 20 entries are returned on each page.
-         * <p>
-         * 
-         * >  We recommend that you do not leave this parameter empty.
-         */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
             this.pageSize = pageSize;
@@ -229,7 +224,7 @@ public class DescribeImageRepoListRequest extends Request {
         }
 
         /**
-         * The name of the image repository.
+         * The number of entries returned on the current page.
          */
         public Builder repoName(String repoName) {
             this.putQueryParameter("RepoName", repoName);
@@ -238,7 +233,7 @@ public class DescribeImageRepoListRequest extends Request {
         }
 
         /**
-         * The namespace to which the image repository belongs.
+         * The name of the image repository.
          */
         public Builder repoNamespace(String repoNamespace) {
             this.putQueryParameter("RepoNamespace", repoNamespace);
@@ -247,10 +242,7 @@ public class DescribeImageRepoListRequest extends Request {
         }
 
         /**
-         * The condition by which the feature is applied. Valid values:
-         * <p>
-         * 
-         * *   **image_repo**: the ID of the image repository
+         * The total number of image repositories.
          */
         public Builder targetType(String targetType) {
             this.putQueryParameter("TargetType", targetType);
@@ -259,10 +251,7 @@ public class DescribeImageRepoListRequest extends Request {
         }
 
         /**
-         * The type of the feature. Valid values:
-         * <p>
-         * 
-         * *   **image_repo**: image repository protection
+         * The information about the image repository.
          */
         public Builder type(String type) {
             this.putQueryParameter("Type", type);

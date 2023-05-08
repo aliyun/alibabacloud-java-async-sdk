@@ -98,7 +98,7 @@ public class CreateHoneypotResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * The status code returned. The status code **200** indicates that the request was is successful. Other status codes indicate that the request failed. You can identify the cause of the failure based on the status code.
+         * The status code returned. The status code **200** indicates that the request was successful. Other status codes indicate that the request failed. You can identify the cause of the failure based on the status code.
          */
         public Builder code(String code) {
             this.code = code;
@@ -266,7 +266,7 @@ public class CreateHoneypotResponseBody extends TeaModel {
             private java.util.List < String > state; 
 
             /**
-             * The name of the management node to which the honeypot is deployed.
+             * The name of the management node.
              */
             public Builder controlNodeName(String controlNodeName) {
                 this.controlNodeName = controlNodeName;
@@ -282,7 +282,7 @@ public class CreateHoneypotResponseBody extends TeaModel {
             }
 
             /**
-             * The display name of the image that is used for the honeypot.
+             * The display name of the honeypot image.
              */
             public Builder honeypotImageDisplayName(String honeypotImageDisplayName) {
                 this.honeypotImageDisplayName = honeypotImageDisplayName;
@@ -290,7 +290,7 @@ public class CreateHoneypotResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the image that is used for the honeypot.
+             * The name of the honeypot image.
              */
             public Builder honeypotImageName(String honeypotImageName) {
                 this.honeypotImageName = honeypotImageName;
@@ -322,7 +322,7 @@ public class CreateHoneypotResponseBody extends TeaModel {
             }
 
             /**
-             * The status of the honeypot.
+             * An array that consists of the status information about the honeypot.
              */
             public Builder state(java.util.List < String > state) {
                 this.state = state;

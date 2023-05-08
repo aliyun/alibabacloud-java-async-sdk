@@ -152,10 +152,7 @@ public class DescribeNsasSuspEventTypeRequest extends Request {
         } 
 
         /**
-         * The name of the container field. Valid values:
-         * <p>
-         * 
-         * *   **clusterId**: the ID of the cluster
+         * ContainerFieldName.
          */
         public Builder containerFieldName(String containerFieldName) {
             this.putQueryParameter("ContainerFieldName", containerFieldName);
@@ -164,7 +161,7 @@ public class DescribeNsasSuspEventTypeRequest extends Request {
         }
 
         /**
-         * The value of the container field.
+         * ContainerFieldValue.
          */
         public Builder containerFieldValue(String containerFieldValue) {
             this.putQueryParameter("ContainerFieldValue", containerFieldValue);
@@ -173,7 +170,7 @@ public class DescribeNsasSuspEventTypeRequest extends Request {
         }
 
         /**
-         * The ID of the request source. Set the value to **sas**, which indicates that the request is sent from Security Center.
+         * From.
          */
         public Builder from(String from) {
             this.putQueryParameter("From", from);
@@ -182,11 +179,7 @@ public class DescribeNsasSuspEventTypeRequest extends Request {
         }
 
         /**
-         * The language of the content within the request and response. Default value: **zh**. Valid values:
-         * <p>
-         * 
-         * *   **zh**: Chinese
-         * *   **en**: English
+         * Lang.
          */
         public Builder lang(String lang) {
             this.putQueryParameter("Lang", lang);
@@ -195,7 +188,7 @@ public class DescribeNsasSuspEventTypeRequest extends Request {
         }
 
         /**
-         * The name of the alert type.
+         * Name.
          */
         public Builder name(String name) {
             this.putQueryParameter("Name", name);
@@ -204,7 +197,7 @@ public class DescribeNsasSuspEventTypeRequest extends Request {
         }
 
         /**
-         * The name of the server.
+         * Remark.
          */
         public Builder remark(String remark) {
             this.putQueryParameter("Remark", remark);
@@ -213,7 +206,7 @@ public class DescribeNsasSuspEventTypeRequest extends Request {
         }
 
         /**
-         * The source IP address of the request.
+         * SourceIp.
          */
         public Builder sourceIp(String sourceIp) {
             this.putQueryParameter("SourceIp", sourceIp);
@@ -222,10 +215,7 @@ public class DescribeNsasSuspEventTypeRequest extends Request {
         }
 
         /**
-         * The UUIDs of servers. Separate multiple UUIDs with commas (,).
-         * <p>
-         * 
-         * > You can call the [DescribeCloudCenterInstances](~~141932~~) operation to query the UUIDs of servers.
+         * Uuids.
          */
         public Builder uuids(String uuids) {
             this.putQueryParameter("Uuids", uuids);

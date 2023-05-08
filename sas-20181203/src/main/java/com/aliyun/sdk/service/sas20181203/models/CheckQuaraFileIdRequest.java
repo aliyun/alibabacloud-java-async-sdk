@@ -70,10 +70,7 @@ public class CheckQuaraFileIdRequest extends Request {
         } 
 
         /**
-         * The IDs of quarantined files that you want to check.
-         * <p>
-         * 
-         * >  You can call the [DescribeSuspEventQuaraFiles](~~DescribeSuspEventQuaraFiles~~) operation to query the IDs of quarantined files.
+         * QuaraFileIds.
          */
         public Builder quaraFileIds(java.util.List < String > quaraFileIds) {
             this.putQueryParameter("QuaraFileIds", quaraFileIds);
@@ -82,10 +79,7 @@ public class CheckQuaraFileIdRequest extends Request {
         }
 
         /**
-         * The UUID of the server on which you want to check quarantined files.
-         * <p>
-         * 
-         * >  You can call the [DescribeCloudCenterInstances](~~DescribeCloudCenterInstances~~) operation to query the UUIDs of servers.
+         * Uuid.
          */
         public Builder uuid(String uuid) {
             this.putQueryParameter("Uuid", uuid);

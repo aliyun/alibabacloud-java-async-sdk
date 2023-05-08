@@ -62,7 +62,7 @@ public class DescribeRestorePlansResponseBody extends TeaModel {
         private java.util.List < RestorePlans> restorePlans; 
 
         /**
-         * The pagination information.
+         * PageInfo.
          */
         public Builder pageInfo(PageInfo pageInfo) {
             this.pageInfo = pageInfo;
@@ -70,7 +70,7 @@ public class DescribeRestorePlansResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request, which is used to locate and troubleshoot issues.
+         * RequestId.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -78,7 +78,7 @@ public class DescribeRestorePlansResponseBody extends TeaModel {
         }
 
         /**
-         * An array that consists of the restoration tasks.
+         * RestorePlans.
          */
         public Builder restorePlans(java.util.List < RestorePlans> restorePlans) {
             this.restorePlans = restorePlans;
@@ -154,7 +154,7 @@ public class DescribeRestorePlansResponseBody extends TeaModel {
             private Integer totalCount; 
 
             /**
-             * The number of entries returned on the current page.
+             * Count.
              */
             public Builder count(Integer count) {
                 this.count = count;
@@ -162,7 +162,7 @@ public class DescribeRestorePlansResponseBody extends TeaModel {
             }
 
             /**
-             * The page number of the returned page.
+             * CurrentPage.
              */
             public Builder currentPage(Integer currentPage) {
                 this.currentPage = currentPage;
@@ -170,7 +170,7 @@ public class DescribeRestorePlansResponseBody extends TeaModel {
             }
 
             /**
-             * The number of entries returned per page.
+             * PageSize.
              */
             public Builder pageSize(Integer pageSize) {
                 this.pageSize = pageSize;
@@ -178,7 +178,7 @@ public class DescribeRestorePlansResponseBody extends TeaModel {
             }
 
             /**
-             * The total number of entries returned.
+             * TotalCount.
              */
             public Builder totalCount(Integer totalCount) {
                 this.totalCount = totalCount;
@@ -339,7 +339,7 @@ public class DescribeRestorePlansResponseBody extends TeaModel {
             private Long updatedTime; 
 
             /**
-             * The timestamp when the restoration task was created. Unit: milliseconds.
+             * CreatedTime.
              */
             public Builder createdTime(Long createdTime) {
                 this.createdTime = createdTime;
@@ -347,7 +347,7 @@ public class DescribeRestorePlansResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the database.
+             * DatabaseName.
              */
             public Builder databaseName(String databaseName) {
                 this.databaseName = databaseName;
@@ -355,7 +355,7 @@ public class DescribeRestorePlansResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the server on which the database resides.
+             * InstanceName.
              */
             public Builder instanceName(String instanceName) {
                 this.instanceName = instanceName;
@@ -363,7 +363,7 @@ public class DescribeRestorePlansResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the anti-ransomware policy.
+             * PolicyId.
              */
             public Builder policyId(Long policyId) {
                 this.policyId = policyId;
@@ -371,7 +371,7 @@ public class DescribeRestorePlansResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the anti-ransomware policy.
+             * PolicyName.
              */
             public Builder policyName(String policyName) {
                 this.policyName = policyName;
@@ -379,7 +379,7 @@ public class DescribeRestorePlansResponseBody extends TeaModel {
             }
 
             /**
-             * The point in time to which data is restored.
+             * RestorePoint.
              */
             public Builder restorePoint(Long restorePoint) {
                 this.restorePoint = restorePoint;
@@ -387,15 +387,7 @@ public class DescribeRestorePlansResponseBody extends TeaModel {
             }
 
             /**
-             * The status of the restoration task. Valid values:
-             * <p>
-             * 
-             * *   **init**: initializing
-             * *   **created**: creating
-             * *   **running**: running
-             * *   **completed**: complete
-             * *   **error**: failed
-             * *   **restoring**: restoring
+             * Status.
              */
             public Builder status(String status) {
                 this.status = status;
@@ -403,7 +395,7 @@ public class DescribeRestorePlansResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the destination database.
+             * TargetDatabaseName.
              */
             public Builder targetDatabaseName(String targetDatabaseName) {
                 this.targetDatabaseName = targetDatabaseName;
@@ -411,7 +403,7 @@ public class DescribeRestorePlansResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the destination server.
+             * TargetInstanceId.
              */
             public Builder targetInstanceId(String targetInstanceId) {
                 this.targetInstanceId = targetInstanceId;
@@ -419,7 +411,7 @@ public class DescribeRestorePlansResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the destination server.
+             * TargetInstanceName.
              */
             public Builder targetInstanceName(String targetInstanceName) {
                 this.targetInstanceName = targetInstanceName;
@@ -427,7 +419,7 @@ public class DescribeRestorePlansResponseBody extends TeaModel {
             }
 
             /**
-             * The timestamp when the restoration task was last updated. Unit: milliseconds.
+             * UpdatedTime.
              */
             public Builder updatedTime(Long updatedTime) {
                 this.updatedTime = updatedTime;

@@ -477,7 +477,7 @@ public class DescribeSuspEventsRequest extends Request {
          * The ID of the alert event.
          * <p>
          * 
-         * >  To query the details about the exceptions of an alert event, you must specify the ID of the alert event. You can call the [DescribeAlarmEventList](~~DescribeAlarmEventList~~) operation to query the IDs of alert events.
+         * >  To query the details about the exceptions of an alert event, you must specify the ID of the alert event. You can call the [DescribeSuspEvents](~~DescribeSuspEvents~~) operation to query the IDs of alert events.
          */
         public Builder alarmUniqueInfo(String alarmUniqueInfo) {
             this.putQueryParameter("AlarmUniqueInfo", alarmUniqueInfo);

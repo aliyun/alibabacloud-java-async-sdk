@@ -62,7 +62,7 @@ public class DescribeVulFixStatisticsResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * An array that consists of the statistics of vulnerability fixes by vulnerability type.
+         * FixStat.
          */
         public Builder fixStat(java.util.List < FixStat> fixStat) {
             this.fixStat = fixStat;
@@ -70,7 +70,7 @@ public class DescribeVulFixStatisticsResponseBody extends TeaModel {
         }
 
         /**
-         * The total statistics of vulnerability fixes.
+         * FixTotal.
          */
         public Builder fixTotal(FixTotal fixTotal) {
             this.fixTotal = fixTotal;
@@ -78,7 +78,7 @@ public class DescribeVulFixStatisticsResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request, which is used to locate and troubleshoot issues.
+         * RequestId.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -166,7 +166,7 @@ public class DescribeVulFixStatisticsResponseBody extends TeaModel {
             private String type; 
 
             /**
-             * The number of vulnerabilities that are fixed on the current day.
+             * FixedTodayNum.
              */
             public Builder fixedTodayNum(Integer fixedTodayNum) {
                 this.fixedTodayNum = fixedTodayNum;
@@ -174,7 +174,7 @@ public class DescribeVulFixStatisticsResponseBody extends TeaModel {
             }
 
             /**
-             * The total number of fixed vulnerabilities.
+             * FixedTotalNum.
              */
             public Builder fixedTotalNum(Integer fixedTotalNum) {
                 this.fixedTotalNum = fixedTotalNum;
@@ -182,7 +182,7 @@ public class DescribeVulFixStatisticsResponseBody extends TeaModel {
             }
 
             /**
-             * The number of vulnerabilities that are being fixed.
+             * FixingNum.
              */
             public Builder fixingNum(Integer fixingNum) {
                 this.fixingNum = fixingNum;
@@ -190,7 +190,7 @@ public class DescribeVulFixStatisticsResponseBody extends TeaModel {
             }
 
             /**
-             * The number of unfixed vulnerabilities.
+             * NeedFixNum.
              */
             public Builder needFixNum(Integer needFixNum) {
                 this.needFixNum = needFixNum;
@@ -198,14 +198,7 @@ public class DescribeVulFixStatisticsResponseBody extends TeaModel {
             }
 
             /**
-             * The type of the vulnerability. Valid values:
-             * <p>
-             * 
-             * *   **cve**: Linux software vulnerability
-             * *   **sys**: Windows system vulnerability
-             * *   **cms**: Web-CMS vulnerability
-             * *   **app**: application vulnerability
-             * *   **emg**: urgent vulnerability
+             * Type.
              */
             public Builder type(String type) {
                 this.type = type;
@@ -282,7 +275,7 @@ public class DescribeVulFixStatisticsResponseBody extends TeaModel {
             private Integer needFixNum; 
 
             /**
-             * The number of vulnerabilities that are fixed on the current day.
+             * FixedTodayNum.
              */
             public Builder fixedTodayNum(Integer fixedTodayNum) {
                 this.fixedTodayNum = fixedTodayNum;
@@ -290,7 +283,7 @@ public class DescribeVulFixStatisticsResponseBody extends TeaModel {
             }
 
             /**
-             * The total number of fixed vulnerabilities.
+             * FixedTotalNum.
              */
             public Builder fixedTotalNum(Integer fixedTotalNum) {
                 this.fixedTotalNum = fixedTotalNum;
@@ -298,7 +291,7 @@ public class DescribeVulFixStatisticsResponseBody extends TeaModel {
             }
 
             /**
-             * The number of vulnerabilities that are being fixed.
+             * FixingNum.
              */
             public Builder fixingNum(Integer fixingNum) {
                 this.fixingNum = fixingNum;
@@ -306,7 +299,7 @@ public class DescribeVulFixStatisticsResponseBody extends TeaModel {
             }
 
             /**
-             * The number of unfixed vulnerabilities.
+             * NeedFixNum.
              */
             public Builder needFixNum(Integer needFixNum) {
                 this.needFixNum = needFixNum;

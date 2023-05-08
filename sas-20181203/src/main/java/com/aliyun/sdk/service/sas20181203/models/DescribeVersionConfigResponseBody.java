@@ -377,7 +377,7 @@ public class DescribeVersionConfigResponseBody extends TeaModel {
          * The quota for the application whitelist feature.
          * <p>
          * 
-         * >  The quantity of servers that are allowed by the quota is deducted by one each time you apply an application whitelist to a server. After you enable the application whitelist feature, the quota is 20 by default.
+         * > The quantity of servers that are allowed by the quota is deducted by one each time you apply an application whitelist to a server. After you enable the application whitelist feature, the quota is 20 by default.
          */
         public Builder appWhiteListAuthCount(Long appWhiteListAuthCount) {
             this.appWhiteListAuthCount = appWhiteListAuthCount;
@@ -403,7 +403,7 @@ public class DescribeVersionConfigResponseBody extends TeaModel {
          * *   **7**: Ultimate edition
          * *   **10**: Value-added Plan edition
          * 
-         * >  If you purchase the Multi-version edition of Security Center, the value indicates the most advanced edition that is used in the Multi-version edition. If you do not purchase the Multi-version edition of Security Center, the value indicates the edition of Security Center.
+         * > If you purchase the Multi-version edition of Security Center, the value indicates the most advanced edition that is used in the Multi-version edition. If you do not purchase the Multi-version edition of Security Center, the value indicates the edition of Security Center.
          */
         public Builder highestVersion(Integer highestVersion) {
             this.highestVersion = highestVersion;
@@ -447,7 +447,11 @@ public class DescribeVersionConfigResponseBody extends TeaModel {
         }
 
         /**
-         * IsNewMultiVersion.
+         * Indicates whether Security Center runs the latest version of the Multi-version edition.
+         * <p>
+         * 
+         * *   **true**: yes
+         * *   **false**: no
          */
         public Builder isNewMultiVersion(Boolean isNewMultiVersion) {
             this.isNewMultiVersion = isNewMultiVersion;
@@ -514,7 +518,7 @@ public class DescribeVersionConfigResponseBody extends TeaModel {
          * The timestamp when Security Center is released. Unit: milliseconds. The value of this parameter is seven days after Security Center expires.
          * <p>
          * 
-         * >  If you do not renew the subscription within seven days after the expiration date, the Value-added Plan, Basic Anti-Virus, Advanced, or Enterprise edition is downgraded to the Basic edition. In this case, you can no longer view the configurations of Security Center or historical statistics such as DDoS alerts. You must purchase another subscription of the Basic Anti-Virus, Advanced, or Enterprise edition to continue using relevant features. For more information, see [Purchase Security Center](~~42308~~).
+         * > If you do not renew the subscription within seven days after the expiration date, the Value-added Plan, Anti-virus, Advanced, or Enterprise edition is downgraded to the Basic edition. In this case, you can no longer view the existing configurations or statistics such as DDoS alerts. You must purchase the Anti-virus, Advanced, or Enterprise edition to continue using relevant features. For more information, see [Purchase Security Center](~~42308~~).
          */
         public Builder releaseTime(Long releaseTime) {
             this.releaseTime = releaseTime;
@@ -522,7 +526,7 @@ public class DescribeVersionConfigResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -530,7 +534,7 @@ public class DescribeVersionConfigResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether log analysis is purchased. Valid values:
+         * Indicates whether the log analysis feature is purchased. Valid values:
          * <p>
          * 
          * *   **0**: no
@@ -570,7 +574,7 @@ public class DescribeVersionConfigResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether the custom alert feature is enabled. Valid values:
+         * Indicates whether the custom alerting feature is enabled. Valid values:
          * <p>
          * 
          * *   **0**: no
@@ -619,10 +623,10 @@ public class DescribeVersionConfigResponseBody extends TeaModel {
         }
 
         /**
-         * The quota for the web tamper proofing feature. The quantity of servers that are allowed by the quota is deducted by one each time a server is protected by the web tamper proofing feature. Valid values: 0 to N.
+         * The quota for the web tamper proofing feature. The quantity of servers that are allowed by the quota is deducted by one each time you enable the web tamper proofing feature for a server. Valid values: 0 to N.
          * <p>
          * 
-         * >  N indicates the number of servers that you own.
+         * > N indicates the number of servers that you own.
          */
         public Builder webLockAuthCount(Long webLockAuthCount) {
             this.webLockAuthCount = webLockAuthCount;

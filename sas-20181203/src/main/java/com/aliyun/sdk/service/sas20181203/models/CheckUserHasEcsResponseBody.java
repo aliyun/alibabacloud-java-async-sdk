@@ -86,7 +86,7 @@ public class CheckUserHasEcsResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * The status code returned. The status code **200** indicates that the request is successful. Other status codes indicate that the request fails. You can identify the cause of the failure based on the status code.
+         * Code.
          */
         public Builder code(String code) {
             this.code = code;
@@ -94,11 +94,7 @@ public class CheckUserHasEcsResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether ECS instances exist. Valid values:
-         * <p>
-         * 
-         * *   **true**: yes
-         * *   **false**: no
+         * Data.
          */
         public Builder data(Boolean data) {
             this.data = data;
@@ -106,7 +102,7 @@ public class CheckUserHasEcsResponseBody extends TeaModel {
         }
 
         /**
-         * The error message returned.
+         * Message.
          */
         public Builder message(String message) {
             this.message = message;
@@ -114,7 +110,7 @@ public class CheckUserHasEcsResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request, which is used to locate and troubleshoot issues.
+         * RequestId.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -122,11 +118,7 @@ public class CheckUserHasEcsResponseBody extends TeaModel {
         }
 
         /**
-         * The status of the request. Valid values:
-         * <p>
-         * 
-         * *   **true**: The request is successful.
-         * *   **false**: The request fails.
+         * Success.
          */
         public Builder success(Boolean success) {
             this.success = success;

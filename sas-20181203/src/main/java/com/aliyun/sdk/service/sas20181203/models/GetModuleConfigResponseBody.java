@@ -86,7 +86,7 @@ public class GetModuleConfigResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * HttpStatusCode.
+         * The response code returned.
          */
         public Builder httpStatusCode(Integer httpStatusCode) {
             this.httpStatusCode = httpStatusCode;
@@ -94,7 +94,7 @@ public class GetModuleConfigResponseBody extends TeaModel {
         }
 
         /**
-         * ModuleConfigList.
+         * An array that consists of the configurations of the module.
          */
         public Builder moduleConfigList(java.util.List < ModuleConfigList> moduleConfigList) {
             this.moduleConfigList = moduleConfigList;
@@ -102,7 +102,7 @@ public class GetModuleConfigResponseBody extends TeaModel {
         }
 
         /**
-         * PageInfo.
+         * The pagination information.
          */
         public Builder pageInfo(PageInfo pageInfo) {
             this.pageInfo = pageInfo;
@@ -110,7 +110,7 @@ public class GetModuleConfigResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request, which is used to locate and troubleshoot issues.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -118,7 +118,7 @@ public class GetModuleConfigResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * Indicates whether the request was successful.
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -218,7 +218,7 @@ public class GetModuleConfigResponseBody extends TeaModel {
             private String uuid; 
 
             /**
-             * GroupId.
+             * The ID of the server group to which the server belongs.
              */
             public Builder groupId(Integer groupId) {
                 this.groupId = groupId;
@@ -226,7 +226,7 @@ public class GetModuleConfigResponseBody extends TeaModel {
             }
 
             /**
-             * InstanceId.
+             * The instance ID of the server.
              */
             public Builder instanceId(String instanceId) {
                 this.instanceId = instanceId;
@@ -234,7 +234,7 @@ public class GetModuleConfigResponseBody extends TeaModel {
             }
 
             /**
-             * InstanceName.
+             * The instance name of the server.
              */
             public Builder instanceName(String instanceName) {
                 this.instanceName = instanceName;
@@ -242,7 +242,7 @@ public class GetModuleConfigResponseBody extends TeaModel {
             }
 
             /**
-             * Ip.
+             * The IP address of the server.
              */
             public Builder ip(String ip) {
                 this.ip = ip;
@@ -250,7 +250,7 @@ public class GetModuleConfigResponseBody extends TeaModel {
             }
 
             /**
-             * Region.
+             * The region in which the server resides.
              */
             public Builder region(String region) {
                 this.region = region;
@@ -258,7 +258,7 @@ public class GetModuleConfigResponseBody extends TeaModel {
             }
 
             /**
-             * Uuid.
+             * The UUID of the server.
              */
             public Builder uuid(String uuid) {
                 this.uuid = uuid;
@@ -323,7 +323,7 @@ public class GetModuleConfigResponseBody extends TeaModel {
             private String moduleName; 
 
             /**
-             * ConfigName.
+             * The name of the configuration.
              */
             public Builder configName(String configName) {
                 this.configName = configName;
@@ -331,7 +331,7 @@ public class GetModuleConfigResponseBody extends TeaModel {
             }
 
             /**
-             * Items.
+             * An array that consists of the configuration items.
              */
             public Builder items(java.util.List < Items> items) {
                 this.items = items;
@@ -339,7 +339,7 @@ public class GetModuleConfigResponseBody extends TeaModel {
             }
 
             /**
-             * ModuleName.
+             * The name of the module.
              */
             public Builder moduleName(String moduleName) {
                 this.moduleName = moduleName;
@@ -416,7 +416,7 @@ public class GetModuleConfigResponseBody extends TeaModel {
             private Integer totalCount; 
 
             /**
-             * Count.
+             * The number of entries returned on the current page.
              */
             public Builder count(Integer count) {
                 this.count = count;
@@ -424,7 +424,7 @@ public class GetModuleConfigResponseBody extends TeaModel {
             }
 
             /**
-             * CurrentPage.
+             * The page number of the returned page.
              */
             public Builder currentPage(Integer currentPage) {
                 this.currentPage = currentPage;
@@ -432,7 +432,7 @@ public class GetModuleConfigResponseBody extends TeaModel {
             }
 
             /**
-             * PageSize.
+             * The number of entries returned per page.
              */
             public Builder pageSize(Integer pageSize) {
                 this.pageSize = pageSize;
@@ -440,7 +440,7 @@ public class GetModuleConfigResponseBody extends TeaModel {
             }
 
             /**
-             * TotalCount.
+             * The total number of entries returned.
              */
             public Builder totalCount(Integer totalCount) {
                 this.totalCount = totalCount;

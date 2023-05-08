@@ -359,7 +359,7 @@ public class GetHoneypotPresetResponseBody extends TeaModel {
             private String presetType; 
 
             /**
-             * The name of the management node to which the honeypot is deployed.
+             * The name of the management node.
              */
             public Builder controlNodeName(String controlNodeName) {
                 this.controlNodeName = controlNodeName;
@@ -375,7 +375,7 @@ public class GetHoneypotPresetResponseBody extends TeaModel {
             }
 
             /**
-             * The display name of the image that is used for the honeypot.
+             * The display name of the honeypot image.
              */
             public Builder honeypotImageDisplayName(String honeypotImageDisplayName) {
                 this.honeypotImageDisplayName = honeypotImageDisplayName;
@@ -383,7 +383,7 @@ public class GetHoneypotPresetResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the image that is used for the honeypot.
+             * The name of the honeypot image.
              */
             public Builder honeypotImageName(String honeypotImageName) {
                 this.honeypotImageName = honeypotImageName;
@@ -399,7 +399,7 @@ public class GetHoneypotPresetResponseBody extends TeaModel {
             }
 
             /**
-             * The custom configurations of the honeypot template.
+             * The custom configuration of the honeypot template.
              */
             public Builder meta(String meta) {
                 this.meta = meta;
@@ -423,12 +423,12 @@ public class GetHoneypotPresetResponseBody extends TeaModel {
             }
 
             /**
-             * The type of the template. Valid values:
+             * The type of the honeypot template. Valid values:
              * <p>
              * 
-             * *   **TEMP**: automatically generated
-             * *   **CUSTOM**: custom
-             * *   **DEFAULT**: default
+             * *   **TEMP**: automatically generated template
+             * *   **CUSTOM**: custom template
+             * *   **DEFAULT**: default template
              */
             public Builder presetType(String presetType) {
                 this.presetType = presetType;

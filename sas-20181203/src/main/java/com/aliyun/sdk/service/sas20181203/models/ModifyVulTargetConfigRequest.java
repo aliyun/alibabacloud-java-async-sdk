@@ -108,7 +108,7 @@ public class ModifyVulTargetConfigRequest extends Request {
         }
 
         /**
-         * SourceIp.
+         * 1.2.XX.XX
          */
         public Builder sourceIp(String sourceIp) {
             this.putQueryParameter("SourceIp", sourceIp);
@@ -117,7 +117,7 @@ public class ModifyVulTargetConfigRequest extends Request {
         }
 
         /**
-         * Type.
+         * Configures vulnerability detection for a server.
          */
         public Builder type(String type) {
             this.putQueryParameter("Type", type);

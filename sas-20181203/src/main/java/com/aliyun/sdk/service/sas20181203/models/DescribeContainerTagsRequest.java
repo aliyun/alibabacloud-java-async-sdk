@@ -141,7 +141,7 @@ public class DescribeContainerTagsRequest extends Request {
         } 
 
         /**
-         * The name of the application.
+         * AppName.
          */
         public Builder appName(String appName) {
             this.putQueryParameter("AppName", appName);
@@ -150,10 +150,7 @@ public class DescribeContainerTagsRequest extends Request {
         }
 
         /**
-         * The ID of the cluster to which the container belongs.
-         * <p>
-         * 
-         * > You can call the [DescribeGroupedContainerInstances](~~DescribeGroupedContainerInstances~~) operation to query the IDs of clusters.
+         * ClusterId.
          */
         public Builder clusterId(String clusterId) {
             this.putQueryParameter("ClusterId", clusterId);
@@ -162,7 +159,7 @@ public class DescribeContainerTagsRequest extends Request {
         }
 
         /**
-         * The number of the page to return. Default value: **1**.
+         * CurrentPage.
          */
         public Builder currentPage(Integer currentPage) {
             this.putQueryParameter("CurrentPage", currentPage);
@@ -171,13 +168,7 @@ public class DescribeContainerTagsRequest extends Request {
         }
 
         /**
-         * The name of the attribute that is used for the query. Valid values:
-         * <p>
-         * 
-         * *   **namespace**: the namespace
-         * *   **appName**: the application name
-         * *   **image**: the image
-         * *   **tag**: the tag
+         * FieldName.
          */
         public Builder fieldName(String fieldName) {
             this.putQueryParameter("FieldName", fieldName);
@@ -186,7 +177,7 @@ public class DescribeContainerTagsRequest extends Request {
         }
 
         /**
-         * The value of the attribute that is used for the query.
+         * FieldValue.
          */
         public Builder fieldValue(String fieldValue) {
             this.putQueryParameter("FieldValue", fieldValue);
@@ -195,7 +186,7 @@ public class DescribeContainerTagsRequest extends Request {
         }
 
         /**
-         * The namespace.
+         * Namespace.
          */
         public Builder namespace(String namespace) {
             this.putQueryParameter("Namespace", namespace);
@@ -204,7 +195,7 @@ public class DescribeContainerTagsRequest extends Request {
         }
 
         /**
-         * The number of entries to return on each page. Default value: 200.
+         * PageSize.
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);

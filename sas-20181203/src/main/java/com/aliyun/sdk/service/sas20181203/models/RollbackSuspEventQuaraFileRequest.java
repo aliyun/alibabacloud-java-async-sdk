@@ -82,7 +82,7 @@ public class RollbackSuspEventQuaraFileRequest extends Request {
         } 
 
         /**
-         * The ID of the request source. Set the value to sas.
+         * From.
          */
         public Builder from(String from) {
             this.putQueryParameter("From", from);
@@ -91,9 +91,7 @@ public class RollbackSuspEventQuaraFileRequest extends Request {
         }
 
         /**
-         * The ID of the quarantined file.   
-         * <p>
-         * > If you do not configure this parameter, you cannot call the RollbackSuspEventQuaraFile operation to restore a quarantined file. You can call the [DescribeSuspEventQuaraFiles](~~DescribeSuspEventQuaraFiles~~) operation to query the IDs of quarantined files.
+         * QuaraFileId.
          */
         public Builder quaraFileId(Integer quaraFileId) {
             this.putQueryParameter("QuaraFileId", quaraFileId);
@@ -102,7 +100,7 @@ public class RollbackSuspEventQuaraFileRequest extends Request {
         }
 
         /**
-         * The source IP address of the request.
+         * SourceIp.
          */
         public Builder sourceIp(String sourceIp) {
             this.putQueryParameter("SourceIp", sourceIp);

@@ -50,7 +50,7 @@ public class DescribeTraceInfoNodeResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * Node.
+         * The details about the node.
          */
         public Builder node(Node node) {
             this.node = node;
@@ -58,7 +58,7 @@ public class DescribeTraceInfoNodeResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -110,7 +110,7 @@ public class DescribeTraceInfoNodeResponseBody extends TeaModel {
             private String value; 
 
             /**
-             * Name.
+             * The name of the property.
              */
             public Builder name(String name) {
                 this.name = name;
@@ -118,7 +118,7 @@ public class DescribeTraceInfoNodeResponseBody extends TeaModel {
             }
 
             /**
-             * Value.
+             * The value of the property.
              */
             public Builder value(String value) {
                 this.value = value;
@@ -183,7 +183,7 @@ public class DescribeTraceInfoNodeResponseBody extends TeaModel {
             private String type; 
 
             /**
-             * Name.
+             * The name of the node.
              */
             public Builder name(String name) {
                 this.name = name;
@@ -191,7 +191,7 @@ public class DescribeTraceInfoNodeResponseBody extends TeaModel {
             }
 
             /**
-             * PropertyList.
+             * An array that consists of the properties of the node.
              */
             public Builder propertyList(java.util.List < PropertyList> propertyList) {
                 this.propertyList = propertyList;
@@ -199,7 +199,7 @@ public class DescribeTraceInfoNodeResponseBody extends TeaModel {
             }
 
             /**
-             * Type.
+             * The type of the node.
              */
             public Builder type(String type) {
                 this.type = type;

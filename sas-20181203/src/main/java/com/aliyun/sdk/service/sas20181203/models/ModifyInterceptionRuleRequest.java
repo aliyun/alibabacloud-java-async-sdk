@@ -153,10 +153,7 @@ public class ModifyInterceptionRuleRequest extends Request {
         } 
 
         /**
-         * The ID of the container cluster.
-         * <p>
-         * 
-         * > You can call the [DescribeGroupedContainerInstances](~~182997~~) operation to query the IDs of container clusters.
+         * ClusterId.
          */
         public Builder clusterId(String clusterId) {
             this.putQueryParameter("ClusterId", clusterId);
@@ -165,7 +162,7 @@ public class ModifyInterceptionRuleRequest extends Request {
         }
 
         /**
-         * The list of destination network objects.
+         * DstTarget.
          */
         public Builder dstTarget(java.util.Map < String, ? > dstTarget) {
             String dstTargetShrink = shrink(dstTarget, "DstTarget", "json");
@@ -175,12 +172,7 @@ public class ModifyInterceptionRuleRequest extends Request {
         }
 
         /**
-         * The interception mode. Valid values:
-         * <p>
-         * 
-         * *   **1**: block
-         * *   **2**: alert
-         * *   **3**: allow
+         * InterceptType.
          */
         public Builder interceptType(Integer interceptType) {
             this.putQueryParameter("InterceptType", interceptType);
@@ -189,7 +181,7 @@ public class ModifyInterceptionRuleRequest extends Request {
         }
 
         /**
-         * The priority of the rule. Valid values: 1 to 1000. A smaller value indicates a higher priority.
+         * OrderIndex.
          */
         public Builder orderIndex(Long orderIndex) {
             this.putQueryParameter("OrderIndex", orderIndex);
@@ -198,7 +190,7 @@ public class ModifyInterceptionRuleRequest extends Request {
         }
 
         /**
-         * The ID of the rule.
+         * RuleId.
          */
         public Builder ruleId(Long ruleId) {
             this.putQueryParameter("RuleId", ruleId);
@@ -207,7 +199,7 @@ public class ModifyInterceptionRuleRequest extends Request {
         }
 
         /**
-         * The name of the rule.
+         * RuleName.
          */
         public Builder ruleName(String ruleName) {
             this.putQueryParameter("RuleName", ruleName);
@@ -216,11 +208,7 @@ public class ModifyInterceptionRuleRequest extends Request {
         }
 
         /**
-         * Specifies whether the rule is enabled. Valid values:
-         * <p>
-         * 
-         * *   **1**: enabled
-         * *   **0**: disabled
+         * RuleSwitch.
          */
         public Builder ruleSwitch(Integer ruleSwitch) {
             this.putQueryParameter("RuleSwitch", ruleSwitch);
@@ -229,7 +217,7 @@ public class ModifyInterceptionRuleRequest extends Request {
         }
 
         /**
-         * The list of source network objects.
+         * SrcTarget.
          */
         public Builder srcTarget(java.util.Map < String, ? > srcTarget) {
             String srcTargetShrink = shrink(srcTarget, "SrcTarget", "json");

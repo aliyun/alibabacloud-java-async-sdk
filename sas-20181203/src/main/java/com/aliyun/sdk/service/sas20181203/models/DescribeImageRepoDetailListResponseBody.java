@@ -62,7 +62,11 @@ public class DescribeImageRepoDetailListResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * An array that consists of the information about image repositories.
+         * Indicates whether the image repository is at risk. Valid values:
+         * <p>
+         * 
+         * *   **YES**
+         * *   **NO**
          */
         public Builder imageRepoResponses(java.util.List < ImageRepoResponses> imageRepoResponses) {
             this.imageRepoResponses = imageRepoResponses;
@@ -70,7 +74,7 @@ public class DescribeImageRepoDetailListResponseBody extends TeaModel {
         }
 
         /**
-         * The pagination information.
+         * The total number of image repositories.
          */
         public Builder pageInfo(PageInfo pageInfo) {
             this.pageInfo = pageInfo;
@@ -78,7 +82,7 @@ public class DescribeImageRepoDetailListResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request, which is used to locate and troubleshoot issues.
+         * The number of entries returned per page.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -286,10 +290,18 @@ public class DescribeImageRepoDetailListResponseBody extends TeaModel {
             private String vulStatus; 
 
             /**
-             * The number of alerts that are generated for the image repository.
+             * The number of images.
              */
             public Builder alarmCount(Integer alarmCount) {
                 this.alarmCount = alarmCount;
+                return this;
+            }
+
+            /**
+             * The region ID of the image.
+             */
+            public Builder alarmStatus(String alarmStatus) {
+                this.alarmStatus = alarmStatus;
                 return this;
             }
 
@@ -300,24 +312,56 @@ public class DescribeImageRepoDetailListResponseBody extends TeaModel {
              * *   **YES**
              * *   **NO**
              */
-            public Builder alarmStatus(String alarmStatus) {
-                this.alarmStatus = alarmStatus;
-                return this;
-            }
-
-            /**
-             * The address of the image repository.
-             */
             public Builder endpoints(String endpoints) {
                 this.endpoints = endpoints;
                 return this;
             }
 
             /**
-             * The number of baseline risk items on the image repository.
+             * The number of alerts that are generated for the image repository.
              */
             public Builder hcCount(Integer hcCount) {
                 this.hcCount = hcCount;
+                return this;
+            }
+
+            /**
+             * The namespace to which the image repository belongs.
+             */
+            public Builder hcStatus(String hcStatus) {
+                this.hcStatus = hcStatus;
+                return this;
+            }
+
+            /**
+             * ImageCount.
+             */
+            public Builder imageCount(Integer imageCount) {
+                this.imageCount = imageCount;
+                return this;
+            }
+
+            /**
+             * The number of baseline risk items on the image repository.
+             */
+            public Builder instanceId(String instanceId) {
+                this.instanceId = instanceId;
+                return this;
+            }
+
+            /**
+             * The number of vulnerabilities detected on the image repository.
+             */
+            public Builder regionId(String regionId) {
+                this.regionId = regionId;
+                return this;
+            }
+
+            /**
+             * The ID of the image repository.
+             */
+            public Builder registryType(String registryType) {
+                this.registryType = registryType;
                 return this;
             }
 
@@ -328,32 +372,24 @@ public class DescribeImageRepoDetailListResponseBody extends TeaModel {
              * *   **NO**
              * *   **YES**
              */
-            public Builder hcStatus(String hcStatus) {
-                this.hcStatus = hcStatus;
+            public Builder repoId(String repoId) {
+                this.repoId = repoId;
                 return this;
             }
 
             /**
-             * The number of images.
+             * RepoName.
              */
-            public Builder imageCount(Integer imageCount) {
-                this.imageCount = imageCount;
+            public Builder repoName(String repoName) {
+                this.repoName = repoName;
                 return this;
             }
 
             /**
-             * The ID of the image.
+             * RepoNamespace.
              */
-            public Builder instanceId(String instanceId) {
-                this.instanceId = instanceId;
-                return this;
-            }
-
-            /**
-             * The region ID of the image.
-             */
-            public Builder regionId(String regionId) {
-                this.regionId = regionId;
+            public Builder repoNamespace(String repoNamespace) {
+                this.repoNamespace = repoNamespace;
                 return this;
             }
 
@@ -366,49 +402,13 @@ public class DescribeImageRepoDetailListResponseBody extends TeaModel {
              * *   **quay**
              * *   **CI/CD**
              */
-            public Builder registryType(String registryType) {
-                this.registryType = registryType;
-                return this;
-            }
-
-            /**
-             * The ID of the image repository.
-             */
-            public Builder repoId(String repoId) {
-                this.repoId = repoId;
-                return this;
-            }
-
-            /**
-             * The name of the image repository.
-             */
-            public Builder repoName(String repoName) {
-                this.repoName = repoName;
-                return this;
-            }
-
-            /**
-             * The namespace to which the image repository belongs.
-             */
-            public Builder repoNamespace(String repoNamespace) {
-                this.repoNamespace = repoNamespace;
-                return this;
-            }
-
-            /**
-             * Indicates whether the image repository is at risk. Valid values:
-             * <p>
-             * 
-             * *   **YES**
-             * *   **NO**
-             */
             public Builder riskStatus(String riskStatus) {
                 this.riskStatus = riskStatus;
                 return this;
             }
 
             /**
-             * The number of vulnerabilities detected on the image repository.
+             * The name of the image repository.
              */
             public Builder vulCount(Integer vulCount) {
                 this.vulCount = vulCount;
@@ -416,11 +416,7 @@ public class DescribeImageRepoDetailListResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether vulnerabilities are detected on the image repository. Valid values:
-             * <p>
-             * 
-             * *   **YES**
-             * *   **NO**
+             * The ID of the image.
              */
             public Builder vulStatus(String vulStatus) {
                 this.vulStatus = vulStatus;
@@ -497,7 +493,7 @@ public class DescribeImageRepoDetailListResponseBody extends TeaModel {
             private Integer totalCount; 
 
             /**
-             * The number of entries returned on the current page.
+             * The address of the image repository.
              */
             public Builder count(Integer count) {
                 this.count = count;
@@ -505,7 +501,7 @@ public class DescribeImageRepoDetailListResponseBody extends TeaModel {
             }
 
             /**
-             * The page number of the returned page.
+             * The number of entries returned on the current page.
              */
             public Builder currentPage(Integer currentPage) {
                 this.currentPage = currentPage;
@@ -513,7 +509,7 @@ public class DescribeImageRepoDetailListResponseBody extends TeaModel {
             }
 
             /**
-             * The number of entries returned per page.
+             * An array that consists of the information about image repositories.
              */
             public Builder pageSize(Integer pageSize) {
                 this.pageSize = pageSize;
@@ -521,7 +517,7 @@ public class DescribeImageRepoDetailListResponseBody extends TeaModel {
             }
 
             /**
-             * The total number of image repositories.
+             * The information about the image repository.
              */
             public Builder totalCount(Integer totalCount) {
                 this.totalCount = totalCount;

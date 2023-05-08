@@ -82,10 +82,11 @@ public class DescribeCheckFixDetailsRequest extends Request {
         } 
 
         /**
-         * The ID of the risk item.
+         * Indicates whether the rule is optional. Valid values:
          * <p>
          * 
-         * >  You can call the [DescribeRiskType](~~DescribeRiskType~~) operation to query the IDs of risk items.
+         * *   **1**: yes
+         * *   **0**: no
          */
         public Builder checkIds(String checkIds) {
             this.putQueryParameter("CheckIds", checkIds);
@@ -94,11 +95,7 @@ public class DescribeCheckFixDetailsRequest extends Request {
         }
 
         /**
-         * The language of the content within the request and response. Default value: **zh**. Valid values:
-         * <p>
-         * 
-         * *   **zh**: Chinese
-         * *   **en**: English
+         * The description of the rule.
          */
         public Builder lang(String lang) {
             this.putQueryParameter("Lang", lang);
@@ -107,10 +104,7 @@ public class DescribeCheckFixDetailsRequest extends Request {
         }
 
         /**
-         * The ID of the baseline.
-         * <p>
-         * 
-         * >  You can call the [DescribeCheckWarningSummary](~~116179~~) operation to query the IDs of baselines.
+         * The default value of the rule.
          */
         public Builder riskId(Long riskId) {
             this.putQueryParameter("RiskId", riskId);

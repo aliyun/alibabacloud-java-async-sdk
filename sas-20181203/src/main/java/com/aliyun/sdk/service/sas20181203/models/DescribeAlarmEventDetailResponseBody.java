@@ -575,7 +575,7 @@ public class DescribeAlarmEventDetailResponseBody extends TeaModel {
              * The unique ID of the alert event.
              * <p>
              * 
-             * >  To query the details about an alert event, you must specify the unique ID of the alert event. You can call the [DescribeAlarmEventList](~~DescribeAlarmEventList~~) operation to query the unique IDs of alert events.
+             * >  To query the details about an alert event, you must specify the unique ID of the alert event. You can call the [DescribeSuspEvents](~~DescribeSuspEvents~~) operation to query the unique IDs of alert events.
              */
             public Builder alarmUniqueInfo(String alarmUniqueInfo) {
                 this.alarmUniqueInfo = alarmUniqueInfo;

@@ -68,11 +68,7 @@ public class DescribeRiskTypeRequest extends Request {
         } 
 
         /**
-         * The language of the content within the request and response. Default value: **zh**. Valid values:
-         * <p>
-         * 
-         * *   **zh**: Chinese
-         * *   **en**: English
+         * The name of the baseline type.
          */
         public Builder lang(String lang) {
             this.putQueryParameter("Lang", lang);

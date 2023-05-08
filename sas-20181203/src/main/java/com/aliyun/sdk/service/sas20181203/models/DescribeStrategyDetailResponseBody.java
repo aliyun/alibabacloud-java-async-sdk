@@ -50,7 +50,7 @@ public class DescribeStrategyDetailResponseBody extends TeaModel {
         private Strategy strategy; 
 
         /**
-         * The ID of the request, which is used to locate and troubleshoot issues.
+         * An array that consists of the whitelist of risk items.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -58,7 +58,7 @@ public class DescribeStrategyDetailResponseBody extends TeaModel {
         }
 
         /**
-         * The information about the baseline check policy.
+         * The source IP address of the request.
          */
         public Builder strategy(Strategy strategy) {
             this.strategy = strategy;
@@ -182,7 +182,7 @@ public class DescribeStrategyDetailResponseBody extends TeaModel {
             private String value; 
 
             /**
-             * If the value of paramType is 2, this parameter provides the options that can be selected for the rule parameter.
+             * EnumValue.
              */
             public Builder enumValue(String enumValue) {
                 this.enumValue = enumValue;
@@ -190,7 +190,7 @@ public class DescribeStrategyDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The maximum value of the rule parameter.
+             * Queries the details of a baseline check policy.
              */
             public Builder maxValue(Integer maxValue) {
                 this.maxValue = maxValue;
@@ -198,7 +198,7 @@ public class DescribeStrategyDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The minimum value of the rule parameter.
+             * MinValue.
              */
             public Builder minValue(Integer minValue) {
                 this.minValue = minValue;
@@ -206,7 +206,11 @@ public class DescribeStrategyDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The default value of the rule parameter.
+             * Indicates whether the rule is included in the policy. Valid values:
+             * <p>
+             * 
+             * *   **1**: yes
+             * *   **0**: no
              */
             public Builder paramDefaultValue(String paramDefaultValue) {
                 this.paramDefaultValue = paramDefaultValue;
@@ -214,7 +218,7 @@ public class DescribeStrategyDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The description of the rule parameter.
+             * ParamDesc.
              */
             public Builder paramDesc(String paramDesc) {
                 this.paramDesc = paramDesc;
@@ -222,7 +226,7 @@ public class DescribeStrategyDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the rule parameter.
+             * The time when the baseline check based on the baseline check policy ends.
              */
             public Builder paramName(String paramName) {
                 this.paramName = paramName;
@@ -230,11 +234,7 @@ public class DescribeStrategyDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The type of the rule parameter. Valid values:
-             * <p>
-             * 
-             * *   **1**: input
-             * *   **2**: selection
+             * WB01224678
              */
             public Builder paramType(Integer paramType) {
                 this.paramType = paramType;
@@ -242,7 +242,7 @@ public class DescribeStrategyDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The specified value of the rule parameter.
+             * An array that consists of sub-risk items.
              */
             public Builder value(String value) {
                 this.value = value;
@@ -331,7 +331,7 @@ public class DescribeStrategyDetailResponseBody extends TeaModel {
             private String ruleId; 
 
             /**
-             * The default value of the rule.
+             * The description of the check item.
              */
             public Builder defaultValue(Integer defaultValue) {
                 this.defaultValue = defaultValue;
@@ -339,11 +339,11 @@ public class DescribeStrategyDetailResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether the rule is included in the policy. Valid values:
+             * Indicates whether the sub-risk item is selected. Valid values:
              * <p>
              * 
-             * *   **1**: yes
-             * *   **0**: no
+             * *   **true**: yes
+             * *   **false**: no
              */
             public Builder optional(Integer optional) {
                 this.optional = optional;
@@ -351,7 +351,7 @@ public class DescribeStrategyDetailResponseBody extends TeaModel {
             }
 
             /**
-             * An array that consists of the rule parameters.
+             * The specified value of the rule parameter.
              */
             public Builder paramList(java.util.List < ParamList> paramList) {
                 this.paramList = paramList;
@@ -359,7 +359,7 @@ public class DescribeStrategyDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The description of the rule.
+             * The check item.
              */
             public Builder ruleDesc(String ruleDesc) {
                 this.ruleDesc = ruleDesc;
@@ -367,7 +367,11 @@ public class DescribeStrategyDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the rule.
+             * Indicates whether the risk item is selected. Valid values:
+             * <p>
+             * 
+             * *   **true**: yes
+             * *   **false**: no
              */
             public Builder ruleId(String ruleId) {
                 this.ruleId = ruleId;
@@ -444,7 +448,7 @@ public class DescribeStrategyDetailResponseBody extends TeaModel {
             private java.util.List < Rules> rules; 
 
             /**
-             * The description of the check item.
+             * The name of the baseline check policy.
              */
             public Builder checkDesc(String checkDesc) {
                 this.checkDesc = checkDesc;
@@ -452,7 +456,11 @@ public class DescribeStrategyDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the check item.
+             * The language of the content within the request and response. Default value: **zh**. Valid values:
+             * <p>
+             * 
+             * *   **zh**: Chinese
+             * *   **en**: English
              */
             public Builder checkId(Long checkId) {
                 this.checkId = checkId;
@@ -460,7 +468,7 @@ public class DescribeStrategyDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The check item.
+             * The maximum value of the rule parameter.
              */
             public Builder checkItem(String checkItem) {
                 this.checkItem = checkItem;
@@ -468,7 +476,7 @@ public class DescribeStrategyDetailResponseBody extends TeaModel {
             }
 
             /**
-             * An array that consists of the details of rules.
+             * The ID of the baseline check policy.
              */
             public Builder rules(java.util.List < Rules> rules) {
                 this.rules = rules;
@@ -545,7 +553,11 @@ public class DescribeStrategyDetailResponseBody extends TeaModel {
             private String typeName; 
 
             /**
-             * The alias of the sub-check item.
+             * The type of the baseline check policy. Valid values:
+             * <p>
+             * 
+             * *   **common**: standard baseline check policy
+             * *   **custom**: custom baseline check policy
              */
             public Builder alias(String alias) {
                 this.alias = alias;
@@ -553,7 +565,7 @@ public class DescribeStrategyDetailResponseBody extends TeaModel {
             }
 
             /**
-             * An array that consists of the details of custom check items.
+             * The data returned.
              */
             public Builder checkDetails(java.util.List < CheckDetails> checkDetails) {
                 this.checkDetails = checkDetails;
@@ -561,11 +573,7 @@ public class DescribeStrategyDetailResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether the sub-risk item is selected. Valid values:
-             * <p>
-             * 
-             * *   **true**: yes
-             * *   **false**: no
+             * If the value of paramType is 2, this parameter provides the options that can be selected for the rule parameter.
              */
             public Builder on(Boolean on) {
                 this.on = on;
@@ -573,7 +581,7 @@ public class DescribeStrategyDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The type of the sub-check item.
+             * The description of the rule.
              */
             public Builder typeName(String typeName) {
                 this.typeName = typeName;
@@ -650,7 +658,11 @@ public class DescribeStrategyDetailResponseBody extends TeaModel {
             private String typeName; 
 
             /**
-             * The alias of the check item.
+             * The condition by which the baseline check policy is applied to the asset. Valid values:
+             * <p>
+             * 
+             * *   **groupId**: the ID of the asset group
+             * *   **uuid**: the UUID of the asset
              */
             public Builder alias(String alias) {
                 this.alias = alias;
@@ -658,11 +670,7 @@ public class DescribeStrategyDetailResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether the risk item is selected. Valid values:
-             * <p>
-             * 
-             * *   **true**: yes
-             * *   **false**: no
+             * The ID of the check item.
              */
             public Builder on(Boolean on) {
                 this.on = on;
@@ -670,7 +678,7 @@ public class DescribeStrategyDetailResponseBody extends TeaModel {
             }
 
             /**
-             * An array that consists of sub-risk items.
+             * The information about the rule parameter.
              */
             public Builder subTypes(java.util.List < SubTypes> subTypes) {
                 this.subTypes = subTypes;
@@ -678,7 +686,7 @@ public class DescribeStrategyDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The check item.
+             * An array that consists of the details of custom check items.
              */
             public Builder typeName(String typeName) {
                 this.typeName = typeName;
@@ -839,11 +847,7 @@ public class DescribeStrategyDetailResponseBody extends TeaModel {
             private Integer type; 
 
             /**
-             * The type of the baseline check policy. Valid values:
-             * <p>
-             * 
-             * *   **common**: standard baseline check policy
-             * *   **custom**: custom baseline check policy
+             * CustomType.
              */
             public Builder customType(String customType) {
                 this.customType = customType;
@@ -851,10 +855,26 @@ public class DescribeStrategyDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The check interval of the policy.
+             * The alias of the sub-check item.
              */
             public Builder cycleDays(Integer cycleDays) {
                 this.cycleDays = cycleDays;
+                return this;
+            }
+
+            /**
+             * The details of the rule.
+             */
+            public Builder cycleStartTime(Integer cycleStartTime) {
+                this.cycleStartTime = cycleStartTime;
+                return this;
+            }
+
+            /**
+             * EndTime.
+             */
+            public Builder endTime(String endTime) {
+                this.endTime = endTime;
                 return this;
             }
 
@@ -867,29 +887,13 @@ public class DescribeStrategyDetailResponseBody extends TeaModel {
              * *   **12**: 12:00 to 18:00
              * *   **18**: 18:00 to 24:00
              */
-            public Builder cycleStartTime(Integer cycleStartTime) {
-                this.cycleStartTime = cycleStartTime;
-                return this;
-            }
-
-            /**
-             * The time when the baseline check based on the baseline check policy ends.
-             */
-            public Builder endTime(String endTime) {
-                this.endTime = endTime;
-                return this;
-            }
-
-            /**
-             * The ID of the baseline check policy.
-             */
             public Builder id(Integer id) {
                 this.id = id;
                 return this;
             }
 
             /**
-             * The name of the baseline check policy.
+             * The ID of the rule.
              */
             public Builder name(String name) {
                 this.name = name;
@@ -897,7 +901,7 @@ public class DescribeStrategyDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The subtype of the baselines.
+             * RiskSubTypeName.
              */
             public Builder riskSubTypeName(String riskSubTypeName) {
                 this.riskSubTypeName = riskSubTypeName;
@@ -905,7 +909,7 @@ public class DescribeStrategyDetailResponseBody extends TeaModel {
             }
 
             /**
-             * An array that consists of the whitelist of risk items.
+             * The check item.
              */
             public Builder riskTypeWhiteListQueryResultList(java.util.List < RiskTypeWhiteListQueryResultList> riskTypeWhiteListQueryResultList) {
                 this.riskTypeWhiteListQueryResultList = riskTypeWhiteListQueryResultList;
@@ -913,7 +917,7 @@ public class DescribeStrategyDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the baseline check based on the baseline check policy starts.
+             * StartTime.
              */
             public Builder startTime(String startTime) {
                 this.startTime = startTime;
@@ -921,11 +925,7 @@ public class DescribeStrategyDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The condition by which the baseline check policy is applied to the asset. Valid values:
-             * <p>
-             * 
-             * *   **groupId**: the ID of the asset group
-             * *   **uuid**: the UUID of the asset
+             * TargetType.
              */
             public Builder targetType(String targetType) {
                 this.targetType = targetType;
@@ -933,11 +933,7 @@ public class DescribeStrategyDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The type of the baseline check policy. Valid values:
-             * <p>
-             * 
-             * *   **1**: standard baseline check policy
-             * *   **2**: custom baseline check policy
+             * The name of the rule parameter.
              */
             public Builder type(Integer type) {
                 this.type = type;

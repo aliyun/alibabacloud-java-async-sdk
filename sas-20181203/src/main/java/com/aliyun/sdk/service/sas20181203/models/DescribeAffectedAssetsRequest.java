@@ -82,7 +82,7 @@ public class DescribeAffectedAssetsRequest extends Request {
         } 
 
         /**
-         * Current.
+         * The number of the page to return.
          */
         public Builder current(String current) {
             this.putQueryParameter("Current", current);
@@ -91,7 +91,12 @@ public class DescribeAffectedAssetsRequest extends Request {
         }
 
         /**
-         * Levels.
+         * The severity. Separate multiple severities with commas (,). Valid values:
+         * <p>
+         * 
+         * *   serious
+         * *   suspicious
+         * *   remind
          */
         public Builder levels(String levels) {
             this.putQueryParameter("Levels", levels);
@@ -100,7 +105,10 @@ public class DescribeAffectedAssetsRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * The number of entries to return on each page. Default value: 20. If you leave this parameter empty, 20 entries are returned on each page.
+         * <p>
+         * 
+         * > We recommend that you do not leave this parameter empty.
          */
         public Builder pageSize(String pageSize) {
             this.putQueryParameter("PageSize", pageSize);

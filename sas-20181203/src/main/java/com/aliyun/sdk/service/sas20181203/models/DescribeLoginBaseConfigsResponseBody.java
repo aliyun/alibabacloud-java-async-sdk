@@ -210,6 +210,9 @@ public class DescribeLoginBaseConfigsResponseBody extends TeaModel {
         @NameInMap("Location")
         private String location;
 
+        @NameInMap("Remark")
+        private String remark;
+
         @NameInMap("StartTime")
         private String startTime;
 
@@ -227,6 +230,7 @@ public class DescribeLoginBaseConfigsResponseBody extends TeaModel {
             this.endTime = builder.endTime;
             this.ip = builder.ip;
             this.location = builder.location;
+            this.remark = builder.remark;
             this.startTime = builder.startTime;
             this.targetList = builder.targetList;
             this.totalCount = builder.totalCount;
@@ -270,6 +274,13 @@ public class DescribeLoginBaseConfigsResponseBody extends TeaModel {
         }
 
         /**
+         * @return remark
+         */
+        public String getRemark() {
+            return this.remark;
+        }
+
+        /**
          * @return startTime
          */
         public String getStartTime() {
@@ -302,6 +313,7 @@ public class DescribeLoginBaseConfigsResponseBody extends TeaModel {
             private String endTime; 
             private String ip; 
             private String location; 
+            private String remark; 
             private String startTime; 
             private java.util.List < TargetList> targetList; 
             private Integer totalCount; 
@@ -336,6 +348,14 @@ public class DescribeLoginBaseConfigsResponseBody extends TeaModel {
              */
             public Builder location(String location) {
                 this.location = location;
+                return this;
+            }
+
+            /**
+             * Remark.
+             */
+            public Builder remark(String remark) {
+                this.remark = remark;
                 return this;
             }
 

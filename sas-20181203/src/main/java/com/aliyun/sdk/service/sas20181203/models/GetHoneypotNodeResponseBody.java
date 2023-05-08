@@ -98,7 +98,7 @@ public class GetHoneypotNodeResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * The status code returned. The status code **200** indicates that the request was successful. Other status codes indicate that the request failed. You can identify the cause of the failure based on the status code.
+         * Code.
          */
         public Builder code(String code) {
             this.code = code;
@@ -106,7 +106,7 @@ public class GetHoneypotNodeResponseBody extends TeaModel {
         }
 
         /**
-         * The details of the management node.
+         * HoneypotNode.
          */
         public Builder honeypotNode(HoneypotNode honeypotNode) {
             this.honeypotNode = honeypotNode;
@@ -114,7 +114,7 @@ public class GetHoneypotNodeResponseBody extends TeaModel {
         }
 
         /**
-         * The HTTP status code of the request.
+         * HttpStatusCode.
          */
         public Builder httpStatusCode(Integer httpStatusCode) {
             this.httpStatusCode = httpStatusCode;
@@ -122,7 +122,7 @@ public class GetHoneypotNodeResponseBody extends TeaModel {
         }
 
         /**
-         * The message returned.
+         * Message.
          */
         public Builder message(String message) {
             this.message = message;
@@ -130,7 +130,7 @@ public class GetHoneypotNodeResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request, which is used to locate and troubleshoot issues.
+         * RequestId.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -138,11 +138,7 @@ public class GetHoneypotNodeResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether the request was successful. Valid values:
-         * <p>
-         * 
-         * *   **true**: The request was successful.
-         * *   **false**: The request failed.
+         * Success.
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -326,11 +322,7 @@ public class GetHoneypotNodeResponseBody extends TeaModel {
             private Boolean upgradeAvailable; 
 
             /**
-             * Indicates whether the honeypot is allowed to access the Internet. Valid values:
-             * <p>
-             * 
-             * *   **true**: The honeypot is allowed to access the Internet.
-             * *   **false**: The honeypot is not allowed to access the Internet.
+             * AllowHoneypotAccessInternet.
              */
             public Builder allowHoneypotAccessInternet(Boolean allowHoneypotAccessInternet) {
                 this.allowHoneypotAccessInternet = allowHoneypotAccessInternet;
@@ -338,7 +330,7 @@ public class GetHoneypotNodeResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the management node is created.
+             * 创建时间
              */
             public Builder createTime(String createTime) {
                 this.createTime = createTime;
@@ -346,7 +338,7 @@ public class GetHoneypotNodeResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the instance.
+             * 实例id
              */
             public Builder ecsInstanceId(String ecsInstanceId) {
                 this.ecsInstanceId = ecsInstanceId;
@@ -354,7 +346,7 @@ public class GetHoneypotNodeResponseBody extends TeaModel {
             }
 
             /**
-             * The maximum number of honeypots that can be deployed to the management node.
+             * 蜜罐上限数量
              */
             public Builder honeypotTotalCount(Integer honeypotTotalCount) {
                 this.honeypotTotalCount = honeypotTotalCount;
@@ -362,7 +354,7 @@ public class GetHoneypotNodeResponseBody extends TeaModel {
             }
 
             /**
-             * The number of honeypots that are deployed on the management node.
+             * 蜜罐使用数量
              */
             public Builder honeypotUsedCount(Integer honeypotUsedCount) {
                 this.honeypotUsedCount = honeypotUsedCount;
@@ -370,7 +362,7 @@ public class GetHoneypotNodeResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the management node.
+             * 节点id
              */
             public Builder nodeId(String nodeId) {
                 this.nodeId = nodeId;
@@ -378,7 +370,7 @@ public class GetHoneypotNodeResponseBody extends TeaModel {
             }
 
             /**
-             * The IP address of the management node.
+             * NodeIp.
              */
             public Builder nodeIp(String nodeIp) {
                 this.nodeIp = nodeIp;
@@ -386,7 +378,7 @@ public class GetHoneypotNodeResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the management node.
+             * 节点名称
              */
             public Builder nodeName(String nodeName) {
                 this.nodeName = nodeName;
@@ -394,7 +386,7 @@ public class GetHoneypotNodeResponseBody extends TeaModel {
             }
 
             /**
-             * The maximum number of probes that can be deployed for the management node.
+             * 探针上限数目
              */
             public Builder probeTotalCount(Integer probeTotalCount) {
                 this.probeTotalCount = probeTotalCount;
@@ -402,7 +394,7 @@ public class GetHoneypotNodeResponseBody extends TeaModel {
             }
 
             /**
-             * The number of probes that are deployed for the management node.
+             * 探针使用数量
              */
             public Builder probeUsedCount(Integer probeUsedCount) {
                 this.probeUsedCount = probeUsedCount;
@@ -410,7 +402,7 @@ public class GetHoneypotNodeResponseBody extends TeaModel {
             }
 
             /**
-             * An array that consists of the allowed CIDR blocks.
+             * 放行网段
              */
             public Builder securityGroupProbeIpList(java.util.List < String > securityGroupProbeIpList) {
                 this.securityGroupProbeIpList = securityGroupProbeIpList;
@@ -418,14 +410,7 @@ public class GetHoneypotNodeResponseBody extends TeaModel {
             }
 
             /**
-             * The status of the management node. Valid values:
-             * <p>
-             * 
-             * *   **0**: preparing
-             * *   **1**: normally running
-             * *   **2**: abnormal
-             * *   **4**: starting
-             * *   **5**: upgrading
+             * 管理节点状态
              */
             public Builder totalStatus(Integer totalStatus) {
                 this.totalStatus = totalStatus;
@@ -433,11 +418,7 @@ public class GetHoneypotNodeResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether the management node can be upgraded. Valid values:
-             * <p>
-             * 
-             * *   **true**: yes
-             * *   **false**: no
+             * UpgradeAvailable.
              */
             public Builder upgradeAvailable(Boolean upgradeAvailable) {
                 this.upgradeAvailable = upgradeAvailable;

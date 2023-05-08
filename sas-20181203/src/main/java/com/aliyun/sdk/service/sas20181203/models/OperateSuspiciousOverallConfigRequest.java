@@ -112,11 +112,7 @@ public class OperateSuspiciousOverallConfigRequest extends Request {
         } 
 
         /**
-         * Specifies whether to enable the feature. Valid values:
-         * <p>
-         * 
-         * *   **on**: yes
-         * *   **off**: no
+         * Config.
          */
         public Builder config(String config) {
             this.putQueryParameter("Config", config);
@@ -125,11 +121,7 @@ public class OperateSuspiciousOverallConfigRequest extends Request {
         }
 
         /**
-         * The language of the content within the request and response. Default value: **zh**. Valid values:
-         * <p>
-         * 
-         * *   **zh**: Chinese
-         * *   **en**: English
+         * Lang.
          */
         public Builder lang(String lang) {
             this.putQueryParameter("Lang", lang);
@@ -138,13 +130,7 @@ public class OperateSuspiciousOverallConfigRequest extends Request {
         }
 
         /**
-         * Specifies whether to configure assets for the feature. Default value: **false**. Valid values:
-         * <p>
-         * 
-         * *   **true**: yes
-         * *   **false**: no
-         * 
-         * >  This parameter takes effect only when you set **Config** to **on**.
+         * NoTargetAsOn.
          */
         public Builder noTargetAsOn(Boolean noTargetAsOn) {
             this.putQueryParameter("NoTargetAsOn", noTargetAsOn);
@@ -153,7 +139,7 @@ public class OperateSuspiciousOverallConfigRequest extends Request {
         }
 
         /**
-         * The source IP address of the request.
+         * OperateSuspiciousOverallConfig
          */
         public Builder sourceIp(String sourceIp) {
             this.putQueryParameter("SourceIp", sourceIp);
@@ -162,15 +148,7 @@ public class OperateSuspiciousOverallConfigRequest extends Request {
         }
 
         /**
-         * The type of the feature. Valid values:
-         * <p>
-         * 
-         * *   **auto_breaking**: Anti-Virus
-         * *   **ransomware_breaking**: Anti-ransomware (Bait Capture)
-         * *   **webshell\_cloud_breaking**: Webshell Protection
-         * *   **alinet**: Behavior prevention
-         * *   **k8s\_log_analysis**: K8s Threat Detection
-         * *   **alisecguard**: Defense mode for Client Protection
+         * Type.
          */
         public Builder type(String type) {
             this.putQueryParameter("Type", type);

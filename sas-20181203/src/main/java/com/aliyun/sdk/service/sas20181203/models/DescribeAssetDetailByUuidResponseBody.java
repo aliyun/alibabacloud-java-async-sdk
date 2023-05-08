@@ -50,7 +50,7 @@ public class DescribeAssetDetailByUuidResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The details of the server.
+         * The kernel version of the operating system.
          */
         public Builder assetDetail(AssetDetail assetDetail) {
             this.assetDetail = assetDetail;
@@ -58,7 +58,7 @@ public class DescribeAssetDetailByUuidResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request, which is used to locate and troubleshoot issues.
+         * The timestamp when Security Center records the details of the server. Unit: milliseconds.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -482,6 +482,111 @@ public class DescribeAssetDetailByUuidResponseBody extends TeaModel {
             private String vpcInstanceId; 
 
             /**
+             * The name of the region in which the server resides.
+             */
+            public Builder assetType(String assetType) {
+                this.assetType = assetType;
+                return this;
+            }
+
+            /**
+             * The operating system information about the server.
+             */
+            public Builder authModifyTime(Long authModifyTime) {
+                this.authModifyTime = authModifyTime;
+                return this;
+            }
+
+            /**
+             * The name of the host.
+             */
+            public Builder authVersion(Integer authVersion) {
+                this.authVersion = authVersion;
+                return this;
+            }
+
+            /**
+             * The memory size of the server. Unit: MB.
+             */
+            public Builder bind(Boolean bind) {
+                this.bind = bind;
+                return this;
+            }
+
+            /**
+             * The name of the server.
+             */
+            public Builder clientStatus(String clientStatus) {
+                this.clientStatus = clientStatus;
+                return this;
+            }
+
+            /**
+             * An array that consists of the information about the disk.
+             */
+            public Builder clientVersion(String clientVersion) {
+                this.clientVersion = clientVersion;
+                return this;
+            }
+
+            /**
+             * The IP addresses of the server.
+             */
+            public Builder cpu(Integer cpu) {
+                this.cpu = cpu;
+                return this;
+            }
+
+            /**
+             * Indicates whether Security Center is authorized to protect the asset. Valid values:
+             * <p>
+             * 
+             * *   **true**: yes
+             * *   **false**: no
+             */
+            public Builder cpuInfo(String cpuInfo) {
+                this.cpuInfo = cpuInfo;
+                return this;
+            }
+
+            /**
+             * The status of the Security Center agent. Valid values:
+             * <p>
+             * 
+             * *   **pause**: The Security Center agent suspends protection for your server.
+             * *   **online**: The Security Center agent is protecting your server.
+             * *   **offline**: The Security Center agent does not protect your server.
+             */
+            public Builder createTime(Long createTime) {
+                this.createTime = createTime;
+                return this;
+            }
+
+            /**
+             * DiskInfoList.
+             */
+            public Builder diskInfoList(java.util.List < String > diskInfoList) {
+                this.diskInfoList = diskInfoList;
+                return this;
+            }
+
+            /**
+             * The MAC addresses of the server.
+             */
+            public Builder flag(Integer flag) {
+                this.flag = flag;
+                return this;
+            }
+
+            /**
+             * The ID of the server.
+             */
+            public Builder groupTrace(String groupTrace) {
+                this.groupTrace = groupTrace;
+                return this;
+            }
+
+            /**
              * The type of the asset. Valid values:
              * <p>
              * 
@@ -494,16 +599,155 @@ public class DescribeAssetDetailByUuidResponseBody extends TeaModel {
              * *   **6**: image
              * *   **7**: container
              */
-            public Builder assetType(String assetType) {
-                this.assetType = assetType;
+            public Builder hostName(String hostName) {
+                this.hostName = hostName;
+                return this;
+            }
+
+            /**
+             * The UUID of the server.
+             */
+            public Builder instanceId(String instanceId) {
+                this.instanceId = instanceId;
+                return this;
+            }
+
+            /**
+             * The operating system type of the server.
+             */
+            public Builder instanceName(String instanceName) {
+                this.instanceName = instanceName;
+                return this;
+            }
+
+            /**
+             * The name of the operating system.
+             */
+            public Builder internetIp(String internetIp) {
+                this.internetIp = internetIp;
+                return this;
+            }
+
+            /**
+             * The number of CPU cores.
+             */
+            public Builder intranetIp(String intranetIp) {
+                this.intranetIp = intranetIp;
+                return this;
+            }
+
+            /**
+             * The private IP address of the server.
+             */
+            public Builder ip(String ip) {
+                this.ip = ip;
+                return this;
+            }
+
+            /**
+             * The information about the disk. This parameter contains the following fields:
+             * <p>
+             * 
+             * *   **diskName**: the name of the disk.
+             * *   **totalSize**: the total amount of the disk space. Unit: GB.
+             * *   **useSize**: the amount of the used disk space. Unit: GB.
+             * *   **useSizeByte**: the amount of the used disk space. Unit: bytes.
+             * *   **totalSizeByte**: the total amount of the disk space. Unit: bytes.
+             */
+            public Builder ipList(java.util.List < String > ipList) {
+                this.ipList = ipList;
+                return this;
+            }
+
+            /**
+             * The memory size of the server. Unit: GB.
+             */
+            public Builder kernel(String kernel) {
+                this.kernel = kernel;
+                return this;
+            }
+
+            /**
+             * MacList.
+             */
+            public Builder macList(java.util.List < String > macList) {
+                this.macList = macList;
+                return this;
+            }
+
+            /**
+             * The region in which the server resides.
+             */
+            public Builder mem(Integer mem) {
+                this.mem = mem;
+                return this;
+            }
+
+            /**
+             * The group to which the server belongs. By default, the servers that are not grouped belong to the **Default** group.
+             */
+            public Builder memory(Long memory) {
+                this.memory = memory;
+                return this;
+            }
+
+            /**
+             * The ID of the region in which the asset resides.
+             */
+            public Builder os(String os) {
+                this.os = os;
+                return this;
+            }
+
+            /**
+             * The tag that is added to the server.
+             */
+            public Builder osDetail(String osDetail) {
+                this.osDetail = osDetail;
+                return this;
+            }
+
+            /**
+             * The ID of the virtual private cloud (VPC) in which the server resides.
+             */
+            public Builder osName(String osName) {
+                this.osName = osName;
                 return this;
             }
 
             /**
              * The timestamp when Security Center is authorized to protect the asset. Unit: milliseconds.
              */
-            public Builder authModifyTime(Long authModifyTime) {
-                this.authModifyTime = authModifyTime;
+            public Builder region(String region) {
+                this.region = region;
+                return this;
+            }
+
+            /**
+             * Indicates whether the asset is provided by Alibaba Cloud. Valid values:
+             * <p>
+             * 
+             * *   **0**: yes
+             * *   **1**: no
+             */
+            public Builder regionId(String regionId) {
+                this.regionId = regionId;
+                return this;
+            }
+
+            /**
+             * The media access control (MAC) addresses of the server.
+             */
+            public Builder regionName(String regionName) {
+                this.regionName = regionName;
+                return this;
+            }
+
+            /**
+             * The version of the Security Center agent.
+             */
+            public Builder sysInfo(String sysInfo) {
+                this.sysInfo = sysInfo;
                 return this;
             }
 
@@ -518,250 +762,13 @@ public class DescribeAssetDetailByUuidResponseBody extends TeaModel {
              * *   **7**: Ultimate edition
              * *   **10**: Value-added Plan edition
              */
-            public Builder authVersion(Integer authVersion) {
-                this.authVersion = authVersion;
-                return this;
-            }
-
-            /**
-             * Indicates whether Security Center is authorized to protect the asset. Valid values:
-             * <p>
-             * 
-             * *   **true**: yes
-             * *   **false**: no
-             */
-            public Builder bind(Boolean bind) {
-                this.bind = bind;
-                return this;
-            }
-
-            /**
-             * The status of the Security Center agent. Valid values:
-             * <p>
-             * 
-             * *   **pause**: The Security Center agent suspends protection for your server.
-             * *   **online**: The Security Center agent is protecting your server.
-             * *   **offline**: The Security Center agent does not protect your server.
-             */
-            public Builder clientStatus(String clientStatus) {
-                this.clientStatus = clientStatus;
-                return this;
-            }
-
-            /**
-             * The version of the Security Center agent.
-             */
-            public Builder clientVersion(String clientVersion) {
-                this.clientVersion = clientVersion;
-                return this;
-            }
-
-            /**
-             * The number of CPU cores.
-             */
-            public Builder cpu(Integer cpu) {
-                this.cpu = cpu;
-                return this;
-            }
-
-            /**
-             * The details of the CPU.
-             */
-            public Builder cpuInfo(String cpuInfo) {
-                this.cpuInfo = cpuInfo;
-                return this;
-            }
-
-            /**
-             * The timestamp when Security Center records the details of the server. Unit: milliseconds.
-             */
-            public Builder createTime(Long createTime) {
-                this.createTime = createTime;
-                return this;
-            }
-
-            /**
-             * An array that consists of the information about the disk.
-             */
-            public Builder diskInfoList(java.util.List < String > diskInfoList) {
-                this.diskInfoList = diskInfoList;
-                return this;
-            }
-
-            /**
-             * Indicates whether the asset is provided by Alibaba Cloud. Valid values:
-             * <p>
-             * 
-             * *   **0**: yes
-             * *   **1**: no
-             */
-            public Builder flag(Integer flag) {
-                this.flag = flag;
-                return this;
-            }
-
-            /**
-             * The group to which the server belongs. By default, the servers that are not grouped belong to the **Default** group.
-             */
-            public Builder groupTrace(String groupTrace) {
-                this.groupTrace = groupTrace;
-                return this;
-            }
-
-            /**
-             * The name of the host.
-             */
-            public Builder hostName(String hostName) {
-                this.hostName = hostName;
-                return this;
-            }
-
-            /**
-             * The ID of the server.
-             */
-            public Builder instanceId(String instanceId) {
-                this.instanceId = instanceId;
-                return this;
-            }
-
-            /**
-             * The name of the server.
-             */
-            public Builder instanceName(String instanceName) {
-                this.instanceName = instanceName;
-                return this;
-            }
-
-            /**
-             * The public IP address of the server.
-             */
-            public Builder internetIp(String internetIp) {
-                this.internetIp = internetIp;
-                return this;
-            }
-
-            /**
-             * The private IP address of the server.
-             */
-            public Builder intranetIp(String intranetIp) {
-                this.intranetIp = intranetIp;
-                return this;
-            }
-
-            /**
-             * The IP address that is assigned to the Elastic Compute Service (ECS) instance.
-             */
-            public Builder ip(String ip) {
-                this.ip = ip;
-                return this;
-            }
-
-            /**
-             * The IP addresses of the server.
-             */
-            public Builder ipList(java.util.List < String > ipList) {
-                this.ipList = ipList;
-                return this;
-            }
-
-            /**
-             * The kernel version of the operating system.
-             */
-            public Builder kernel(String kernel) {
-                this.kernel = kernel;
-                return this;
-            }
-
-            /**
-             * The media access control (MAC) addresses of the server.
-             */
-            public Builder macList(java.util.List < String > macList) {
-                this.macList = macList;
-                return this;
-            }
-
-            /**
-             * The memory size of the server. Unit: GB.
-             */
-            public Builder mem(Integer mem) {
-                this.mem = mem;
-                return this;
-            }
-
-            /**
-             * The memory size of the server. Unit: MB.
-             */
-            public Builder memory(Long memory) {
-                this.memory = memory;
-                return this;
-            }
-
-            /**
-             * The operating system type of the server.
-             */
-            public Builder os(String os) {
-                this.os = os;
-                return this;
-            }
-
-            /**
-             * The operating system version of the server.
-             */
-            public Builder osDetail(String osDetail) {
-                this.osDetail = osDetail;
-                return this;
-            }
-
-            /**
-             * The name of the operating system.
-             */
-            public Builder osName(String osName) {
-                this.osName = osName;
-                return this;
-            }
-
-            /**
-             * The region in which the server resides.
-             */
-            public Builder region(String region) {
-                this.region = region;
-                return this;
-            }
-
-            /**
-             * The ID of the region in which the asset resides.
-             */
-            public Builder regionId(String regionId) {
-                this.regionId = regionId;
-                return this;
-            }
-
-            /**
-             * The name of the region in which the server resides.
-             */
-            public Builder regionName(String regionName) {
-                this.regionName = regionName;
-                return this;
-            }
-
-            /**
-             * The operating system information about the server.
-             */
-            public Builder sysInfo(String sysInfo) {
-                this.sysInfo = sysInfo;
-                return this;
-            }
-
-            /**
-             * The tag that is added to the server.
-             */
             public Builder tag(String tag) {
                 this.tag = tag;
                 return this;
             }
 
             /**
-             * The UUID of the server.
+             * The IP addresses of the server.
              */
             public Builder uuid(String uuid) {
                 this.uuid = uuid;
@@ -769,7 +776,7 @@ public class DescribeAssetDetailByUuidResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the virtual private cloud (VPC) in which the server resides.
+             * The IP address that is assigned to the Elastic Compute Service (ECS) instance.
              */
             public Builder vpcInstanceId(String vpcInstanceId) {
                 this.vpcInstanceId = vpcInstanceId;

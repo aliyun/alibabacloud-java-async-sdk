@@ -110,7 +110,7 @@ public class ListVulAutoRepairConfigResponseBody extends TeaModel {
         private java.util.List < VulAutoRepairConfigList> vulAutoRepairConfigList; 
 
         /**
-         * The status code returned. The status code **200** indicates that the request was successful. Other status codes indicate that the request failed. You can identify the cause of the failure based on the status code.
+         * Code.
          */
         public Builder code(String code) {
             this.code = code;
@@ -118,7 +118,7 @@ public class ListVulAutoRepairConfigResponseBody extends TeaModel {
         }
 
         /**
-         * The HTTP status code returned.
+         * HttpStatusCode.
          */
         public Builder httpStatusCode(Integer httpStatusCode) {
             this.httpStatusCode = httpStatusCode;
@@ -126,7 +126,7 @@ public class ListVulAutoRepairConfigResponseBody extends TeaModel {
         }
 
         /**
-         * The error message returned.
+         * Message.
          */
         public Builder message(String message) {
             this.message = message;
@@ -134,7 +134,7 @@ public class ListVulAutoRepairConfigResponseBody extends TeaModel {
         }
 
         /**
-         * The pagination information.
+         * PageInfo.
          */
         public Builder pageInfo(PageInfo pageInfo) {
             this.pageInfo = pageInfo;
@@ -142,7 +142,7 @@ public class ListVulAutoRepairConfigResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request, which is used to locate and troubleshoot issues.
+         * RequestId.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -150,11 +150,7 @@ public class ListVulAutoRepairConfigResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether the request was successful. Valid values:
-         * <p>
-         * 
-         * *   **true**: The request was successful.
-         * *   **false**: The request failed.
+         * Success.
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -162,7 +158,7 @@ public class ListVulAutoRepairConfigResponseBody extends TeaModel {
         }
 
         /**
-         * An array consisting of the existing configurations of vulnerabilities that can be automatically fixed.
+         * VulAutoRepairConfigList.
          */
         public Builder vulAutoRepairConfigList(java.util.List < VulAutoRepairConfigList> vulAutoRepairConfigList) {
             this.vulAutoRepairConfigList = vulAutoRepairConfigList;
@@ -238,7 +234,7 @@ public class ListVulAutoRepairConfigResponseBody extends TeaModel {
             private Integer totalCount; 
 
             /**
-             * The number of entries returned on the current page.
+             * Count.
              */
             public Builder count(Integer count) {
                 this.count = count;
@@ -246,7 +242,7 @@ public class ListVulAutoRepairConfigResponseBody extends TeaModel {
             }
 
             /**
-             * The page number of the returned page.
+             * CurrentPage.
              */
             public Builder currentPage(Integer currentPage) {
                 this.currentPage = currentPage;
@@ -254,7 +250,7 @@ public class ListVulAutoRepairConfigResponseBody extends TeaModel {
             }
 
             /**
-             * The number of entries returned per page. Default value: **10**.
+             * PageSize.
              */
             public Builder pageSize(Integer pageSize) {
                 this.pageSize = pageSize;
@@ -262,7 +258,7 @@ public class ListVulAutoRepairConfigResponseBody extends TeaModel {
             }
 
             /**
-             * The total number of entries returned.
+             * TotalCount.
              */
             public Builder totalCount(Integer totalCount) {
                 this.totalCount = totalCount;
@@ -351,7 +347,7 @@ public class ListVulAutoRepairConfigResponseBody extends TeaModel {
             private String type; 
 
             /**
-             * The alias of the vulnerability.
+             * AliasName.
              */
             public Builder aliasName(String aliasName) {
                 this.aliasName = aliasName;
@@ -359,7 +355,7 @@ public class ListVulAutoRepairConfigResponseBody extends TeaModel {
             }
 
             /**
-             * The configuration ID of the vulnerability.
+             * Id.
              */
             public Builder id(Long id) {
                 this.id = id;
@@ -367,7 +363,7 @@ public class ListVulAutoRepairConfigResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the vulnerability.
+             * Name.
              */
             public Builder name(String name) {
                 this.name = name;
@@ -375,7 +371,7 @@ public class ListVulAutoRepairConfigResponseBody extends TeaModel {
             }
 
             /**
-             * The reason why the vulnerability can be automatically fixed.
+             * Reason.
              */
             public Builder reason(String reason) {
                 this.reason = reason;
@@ -383,11 +379,7 @@ public class ListVulAutoRepairConfigResponseBody extends TeaModel {
             }
 
             /**
-             * The type of the vulnerability. Valid values:
-             * <p>
-             * 
-             * *   **cve**: Linux software vulnerability
-             * *   **sys**: Windows system vulnerability
+             * Type.
              */
             public Builder type(String type) {
                 this.type = type;

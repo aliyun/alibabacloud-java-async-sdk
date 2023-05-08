@@ -50,7 +50,7 @@ public class CreateSimilarSecurityEventsQueryTaskResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The information about the task that queries alert events of the same alert type.
+         * CreateSimilarSecurityEventsQueryTaskResponse.
          */
         public Builder createSimilarSecurityEventsQueryTaskResponse(CreateSimilarSecurityEventsQueryTaskResponse createSimilarSecurityEventsQueryTaskResponse) {
             this.createSimilarSecurityEventsQueryTaskResponse = createSimilarSecurityEventsQueryTaskResponse;
@@ -58,7 +58,7 @@ public class CreateSimilarSecurityEventsQueryTaskResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request, which is used to locate and troubleshoot issues.
+         * RequestId.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -110,16 +110,7 @@ public class CreateSimilarSecurityEventsQueryTaskResponseBody extends TeaModel {
             private Long taskId; 
 
             /**
-             * The status of the task. Valid values:
-             * <p>
-             * 
-             * *   **New**: The task is created.
-             * *   **RetrievingData**: Data is being retrieved.
-             * *   **DataRetrieved**: Data is retrieved.
-             * *   **Processing**: The task is running.
-             * *   **Success**: The task is successful.
-             * *   **Failed**: The task failed.
-             * *   **PartialFailed**: The task partially failed.
+             * Status.
              */
             public Builder status(String status) {
                 this.status = status;
@@ -127,7 +118,7 @@ public class CreateSimilarSecurityEventsQueryTaskResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the task.
+             * TaskId.
              */
             public Builder taskId(Long taskId) {
                 this.taskId = taskId;

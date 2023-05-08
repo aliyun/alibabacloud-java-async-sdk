@@ -50,7 +50,7 @@ public class GetFileDetectApiInvokeInfoResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The data returned.
+         * Data.
          */
         public Builder data(Data data) {
             this.data = data;
@@ -58,7 +58,7 @@ public class GetFileDetectApiInvokeInfoResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request, which is used to locate and troubleshoot issues.
+         * Id of the request
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -158,7 +158,7 @@ public class GetFileDetectApiInvokeInfoResponseBody extends TeaModel {
             private String timeUnit; 
 
             /**
-             * The total quota.
+             * AuthCount.
              */
             public Builder authCount(Long authCount) {
                 this.authCount = authCount;
@@ -166,7 +166,7 @@ public class GetFileDetectApiInvokeInfoResponseBody extends TeaModel {
             }
 
             /**
-             * The timestamp when the quota expires.
+             * Expire.
              */
             public Builder expire(Long expire) {
                 this.expire = expire;
@@ -174,7 +174,7 @@ public class GetFileDetectApiInvokeInfoResponseBody extends TeaModel {
             }
 
             /**
-             * The API rate limit.
+             * FlowRate.
              */
             public Builder flowRate(Integer flowRate) {
                 this.flowRate = flowRate;
@@ -182,7 +182,7 @@ public class GetFileDetectApiInvokeInfoResponseBody extends TeaModel {
             }
 
             /**
-             * The remaining quota.
+             * RemainAuthCount.
              */
             public Builder remainAuthCount(Long remainAuthCount) {
                 this.remainAuthCount = remainAuthCount;
@@ -190,11 +190,7 @@ public class GetFileDetectApiInvokeInfoResponseBody extends TeaModel {
             }
 
             /**
-             * The version of the malicious file detection SDK. Valid values:
-             * <p>
-             * 
-             * *   **1**: the Trial version
-             * *   **2**: the Enterprise version
+             * SaleVersion.
              */
             public Builder saleVersion(Integer saleVersion) {
                 this.saleVersion = saleVersion;
@@ -202,11 +198,7 @@ public class GetFileDetectApiInvokeInfoResponseBody extends TeaModel {
             }
 
             /**
-             * The time unit of the API rate limit. Valid values:
-             * <p>
-             * 
-             * *   **SECONDS**
-             * *   **MINUTES**
+             * TimeUnit.
              */
             public Builder timeUnit(String timeUnit) {
                 this.timeUnit = timeUnit;

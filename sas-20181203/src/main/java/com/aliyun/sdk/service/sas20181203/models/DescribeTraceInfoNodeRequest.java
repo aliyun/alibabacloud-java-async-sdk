@@ -156,7 +156,10 @@ public class DescribeTraceInfoNodeRequest extends Request {
         } 
 
         /**
-         * EventName.
+         * The name of the alert event.
+         * <p>
+         * 
+         * > You can call the [DescribeSuspEvents](~~DescribeSuspEvents~~) operation to query the names of alerts events.
          */
         public Builder eventName(String eventName) {
             this.putQueryParameter("EventName", eventName);
@@ -165,7 +168,7 @@ public class DescribeTraceInfoNodeRequest extends Request {
         }
 
         /**
-         * From.
+         * The ID of the request source. Set the value to sas.
          */
         public Builder from(String from) {
             this.putQueryParameter("From", from);
@@ -174,7 +177,7 @@ public class DescribeTraceInfoNodeRequest extends Request {
         }
 
         /**
-         * IncidentTime.
+         * The time when the alert event was first detected.
          */
         public Builder incidentTime(Long incidentTime) {
             this.putQueryParameter("IncidentTime", incidentTime);
@@ -183,7 +186,11 @@ public class DescribeTraceInfoNodeRequest extends Request {
         }
 
         /**
-         * Lang.
+         * The language of the content within the request and response. Default value: **zh**. Valid values:
+         * <p>
+         * 
+         * *   **zh**: Chinese
+         * *   **en**: English
          */
         public Builder lang(String lang) {
             this.putQueryParameter("Lang", lang);
@@ -192,7 +199,7 @@ public class DescribeTraceInfoNodeRequest extends Request {
         }
 
         /**
-         * SourceIp.
+         * The source IP address of the request. The value of this parameter is specified by the system.
          */
         public Builder sourceIp(String sourceIp) {
             this.putQueryParameter("SourceIp", sourceIp);
@@ -201,7 +208,7 @@ public class DescribeTraceInfoNodeRequest extends Request {
         }
 
         /**
-         * Type.
+         * The type of the vertex. You can call the [DescribeTraceInfoDetail](~~DescribeTraceInfoDetail~~) operation to query the types of vertexes.
          */
         public Builder type(String type) {
             this.putQueryParameter("Type", type);
@@ -210,7 +217,7 @@ public class DescribeTraceInfoNodeRequest extends Request {
         }
 
         /**
-         * Uuid.
+         * The UUID of the server. You can call the [DescribeSuspEvents](~~DescribeSuspEvents~~) operation to query the UUIDs of servers.
          */
         public Builder uuid(String uuid) {
             this.putQueryParameter("Uuid", uuid);
@@ -219,7 +226,7 @@ public class DescribeTraceInfoNodeRequest extends Request {
         }
 
         /**
-         * VertexId.
+         * The ID of the vertex.
          */
         public Builder vertexId(String vertexId) {
             this.putQueryParameter("VertexId", vertexId);

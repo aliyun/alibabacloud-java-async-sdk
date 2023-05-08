@@ -68,7 +68,7 @@ public class DeleteSecurityEventMarkMissListRequest extends Request {
         } 
 
         /**
-         * Ids.
+         * The IDs of custom defense rule.
          */
         public Builder ids(java.util.List < Long > ids) {
             this.putQueryParameter("Ids", ids);

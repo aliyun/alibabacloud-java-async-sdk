@@ -74,7 +74,7 @@ public class ListCloudAssetInstancesResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * An array that consists of the details of the cloud assets.
+         * The details of the cloud asset.
          */
         public Builder instances(java.util.List < Instances> instances) {
             this.instances = instances;
@@ -82,7 +82,7 @@ public class ListCloudAssetInstancesResponseBody extends TeaModel {
         }
 
         /**
-         * The pagination information.
+         * The page number of the returned page.
          */
         public Builder pageInfo(PageInfo pageInfo) {
             this.pageInfo = pageInfo;
@@ -90,7 +90,7 @@ public class ListCloudAssetInstancesResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request, which is used to locate and troubleshoot issues.
+         * The pagination information.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -98,11 +98,7 @@ public class ListCloudAssetInstancesResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether the request was successful. Valid values:
-         * <p>
-         * 
-         * *   **true**: The request was successful.
-         * *   **false**: The request failed.
+         * The ID of the request, which is used to locate and troubleshoot issues.
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -286,7 +282,7 @@ public class ListCloudAssetInstancesResponseBody extends TeaModel {
             private Integer vendor; 
 
             /**
-             * Indicates whether alerts are generated for the cloud asset. Valid values:
+             * Indicates whether risks are detected on the cloud asset. Valid values:
              * <p>
              * 
              * *   **YES**
@@ -294,6 +290,22 @@ public class ListCloudAssetInstancesResponseBody extends TeaModel {
              */
             public Builder alarmStatus(String alarmStatus) {
                 this.alarmStatus = alarmStatus;
+                return this;
+            }
+
+            /**
+             * The instance ID of the cloud asset.
+             */
+            public Builder assetSubType(String assetSubType) {
+                this.assetSubType = assetSubType;
+                return this;
+            }
+
+            /**
+             * The security information about the cloud asset.
+             */
+            public Builder assetSubTypeName(String assetSubTypeName) {
+                this.assetSubTypeName = assetSubTypeName;
                 return this;
             }
 
@@ -357,16 +369,83 @@ public class ListCloudAssetInstancesResponseBody extends TeaModel {
              * *   **27**: Elasticsearch
              *     * **0**: instance
              */
-            public Builder assetSubType(String assetSubType) {
-                this.assetSubType = assetSubType;
+            public Builder assetType(Integer assetType) {
+                this.assetType = assetType;
                 return this;
             }
 
             /**
              * The subtype name of the cloud asset.
              */
-            public Builder assetSubTypeName(String assetSubTypeName) {
-                this.assetSubTypeName = assetSubTypeName;
+            public Builder assetTypeName(String assetTypeName) {
+                this.assetTypeName = assetTypeName;
+                return this;
+            }
+
+            /**
+             * The public IP address of the instance.
+             */
+            public Builder createdTime(Long createdTime) {
+                this.createdTime = createdTime;
+                return this;
+            }
+
+            /**
+             * The instance name of the cloud asset.
+             */
+            public Builder instanceId(String instanceId) {
+                this.instanceId = instanceId;
+                return this;
+            }
+
+            /**
+             * The time when the instance was created.
+             */
+            public Builder instanceName(String instanceName) {
+                this.instanceName = instanceName;
+                return this;
+            }
+
+            /**
+             * Indicates whether alerts are generated for the cloud asset. Valid values:
+             * <p>
+             * 
+             * *   **YES**
+             * *   **NO**
+             */
+            public Builder internetIp(String internetIp) {
+                this.internetIp = internetIp;
+                return this;
+            }
+
+            /**
+             * The type of the cloud asset by source. Valid values:
+             * <p>
+             * 
+             * *   **0**: an asset provided by Alibaba Cloud
+             * *   **1**: a third-party cloud asset
+             * *   **2**: an asset in a data center
+             * *   **3**, **4**, **5**, and **7**: other cloud asset
+             * *   **8**: a lightweight asset
+             */
+            public Builder regionId(String regionId) {
+                this.regionId = regionId;
+                return this;
+            }
+
+            /**
+             * The type name of the cloud asset.
+             */
+            public Builder riskStatus(String riskStatus) {
+                this.riskStatus = riskStatus;
+                return this;
+            }
+
+            /**
+             * SecurityInfo.
+             */
+            public Builder securityInfo(String securityInfo) {
+                this.securityInfo = securityInfo;
                 return this;
             }
 
@@ -398,89 +477,6 @@ public class ListCloudAssetInstancesResponseBody extends TeaModel {
              * *   **25**: IDaaS EIAM
              * *   **26**: PolarDB-X
              * *   **27**: Elasticsearch
-             */
-            public Builder assetType(Integer assetType) {
-                this.assetType = assetType;
-                return this;
-            }
-
-            /**
-             * The type name of the cloud asset.
-             */
-            public Builder assetTypeName(String assetTypeName) {
-                this.assetTypeName = assetTypeName;
-                return this;
-            }
-
-            /**
-             * The time when the instance was created.
-             */
-            public Builder createdTime(Long createdTime) {
-                this.createdTime = createdTime;
-                return this;
-            }
-
-            /**
-             * The instance ID of the cloud asset.
-             */
-            public Builder instanceId(String instanceId) {
-                this.instanceId = instanceId;
-                return this;
-            }
-
-            /**
-             * The instance name of the cloud asset.
-             */
-            public Builder instanceName(String instanceName) {
-                this.instanceName = instanceName;
-                return this;
-            }
-
-            /**
-             * The public IP address of the instance.
-             */
-            public Builder internetIp(String internetIp) {
-                this.internetIp = internetIp;
-                return this;
-            }
-
-            /**
-             * The region ID of the cloud asset.
-             */
-            public Builder regionId(String regionId) {
-                this.regionId = regionId;
-                return this;
-            }
-
-            /**
-             * Indicates whether risks are detected on the cloud asset. Valid values:
-             * <p>
-             * 
-             * *   **YES**
-             * *   **NO**
-             */
-            public Builder riskStatus(String riskStatus) {
-                this.riskStatus = riskStatus;
-                return this;
-            }
-
-            /**
-             * The security information about the cloud asset.
-             */
-            public Builder securityInfo(String securityInfo) {
-                this.securityInfo = securityInfo;
-                return this;
-            }
-
-            /**
-             * The type of the cloud asset by source. Valid values:
-             * <p>
-             * 
-             * *   **0**: an asset provided by Alibaba Cloud
-             * *   **1**: a third-party cloud asset
-             * *   **2**: an asset in a data center
-             * *   **3**, **4**, **5**, and **7**: other cloud asset
-             * *   **8**: a lightweight asset
              */
             public Builder vendor(Integer vendor) {
                 this.vendor = vendor;
@@ -557,7 +553,7 @@ public class ListCloudAssetInstancesResponseBody extends TeaModel {
             private Integer totalCount; 
 
             /**
-             * The number of entries returned on the current page.
+             * An array that consists of the details of the cloud assets.
              */
             public Builder count(Integer count) {
                 this.count = count;
@@ -565,7 +561,7 @@ public class ListCloudAssetInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * The page number of the returned page.
+             * The number of entries returned per page.
              */
             public Builder currentPage(Integer currentPage) {
                 this.currentPage = currentPage;
@@ -573,7 +569,7 @@ public class ListCloudAssetInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * The number of entries returned per page.
+             * The total number of cloud assets.
              */
             public Builder pageSize(Integer pageSize) {
                 this.pageSize = pageSize;
@@ -581,7 +577,7 @@ public class ListCloudAssetInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * The total number of cloud assets.
+             * The number of entries returned on the current page.
              */
             public Builder totalCount(Integer totalCount) {
                 this.totalCount = totalCount;

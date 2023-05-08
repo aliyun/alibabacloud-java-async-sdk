@@ -96,7 +96,7 @@ public class DescribePropertySoftwareItemRequest extends Request {
         } 
 
         /**
-         * The number of the page to return.
+         * The name of the software that you want to query.
          */
         public Builder currentPage(Integer currentPage) {
             this.putQueryParameter("CurrentPage", currentPage);
@@ -105,7 +105,7 @@ public class DescribePropertySoftwareItemRequest extends Request {
         }
 
         /**
-         * Specifies whether to forcefully refresh the data that you want to query.
+         * The number of servers on which the software is installed.
          */
         public Builder forceFlush(Boolean forceFlush) {
             this.putQueryParameter("ForceFlush", forceFlush);
@@ -114,7 +114,7 @@ public class DescribePropertySoftwareItemRequest extends Request {
         }
 
         /**
-         * The name of the software that you want to query.
+         * The pagination information.
          */
         public Builder name(String name) {
             this.putQueryParameter("Name", name);
@@ -123,7 +123,7 @@ public class DescribePropertySoftwareItemRequest extends Request {
         }
 
         /**
-         * The number of entries to return on each page.
+         * 1
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);

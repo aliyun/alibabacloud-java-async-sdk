@@ -133,7 +133,7 @@ public class ListHoneypotRequest extends Request {
         }
 
         /**
-         * The IDs of honeypots.
+         * The IDs of the honeypots.
          */
         public Builder honeypotIds(java.util.List < String > honeypotIds) {
             this.putQueryParameter("HoneypotIds", honeypotIds);
@@ -151,7 +151,7 @@ public class ListHoneypotRequest extends Request {
         }
 
         /**
-         * The ID of the management node to which the honeypot belongs.
+         * The ID of the management node.
          */
         public Builder nodeId(String nodeId) {
             this.putQueryParameter("NodeId", nodeId);
@@ -160,7 +160,7 @@ public class ListHoneypotRequest extends Request {
         }
 
         /**
-         * The name of the management node to which the honeypot belongs.
+         * The name of the management node.
          */
         public Builder nodeName(String nodeName) {
             this.putQueryParameter("NodeName", nodeName);

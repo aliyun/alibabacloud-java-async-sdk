@@ -55,7 +55,7 @@ public class GetClientUserDefineRuleRequest extends Request {
         } 
 
         /**
-         * The ID of the custom defense rule.
+         * Id.
          */
         public Builder id(Long id) {
             this.putQueryParameter("Id", id);

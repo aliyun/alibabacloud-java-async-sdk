@@ -62,7 +62,7 @@ public class DescribePropertyCronDetailResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The pagination information.
+         * The username of the account that runs the scheduled task.
          */
         public Builder pageInfo(PageInfo pageInfo) {
             this.pageInfo = pageInfo;
@@ -70,7 +70,7 @@ public class DescribePropertyCronDetailResponseBody extends TeaModel {
         }
 
         /**
-         * The details of the scheduled tasks.
+         * 10
          */
         public Builder propertys(java.util.List < Propertys> propertys) {
             this.propertys = propertys;
@@ -78,7 +78,7 @@ public class DescribePropertyCronDetailResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request, which is used to locate and troubleshoot issues.
+         * The username of the account that runs the scheduled task.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -154,7 +154,7 @@ public class DescribePropertyCronDetailResponseBody extends TeaModel {
             private Integer totalCount; 
 
             /**
-             * The number of entries returned on the current page.
+             * The path to the scheduled task.
              */
             public Builder count(Integer count) {
                 this.count = count;
@@ -162,7 +162,7 @@ public class DescribePropertyCronDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The page number of the returned page.
+             * The UUID of the server.
              */
             public Builder currentPage(Integer currentPage) {
                 this.currentPage = currentPage;
@@ -170,7 +170,7 @@ public class DescribePropertyCronDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The number of entries returned per page. Default value: **10**.
+             * The interval at which the scheduled task is performed.
              */
             public Builder pageSize(Integer pageSize) {
                 this.pageSize = pageSize;
@@ -178,7 +178,7 @@ public class DescribePropertyCronDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The total number of entries returned.
+             * The number of entries returned on the current page.
              */
             public Builder totalCount(Integer totalCount) {
                 this.totalCount = totalCount;
@@ -351,7 +351,7 @@ public class DescribePropertyCronDetailResponseBody extends TeaModel {
             private String uuid; 
 
             /**
-             * The command that is used to run the scheduled task.
+             * The number of the page to return. Default value: **1**.
              */
             public Builder cmd(String cmd) {
                 this.cmd = cmd;
@@ -359,7 +359,7 @@ public class DescribePropertyCronDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The timestamp of the last fingerprint collection. Unit: milliseconds.
+             * DescribePropertyCronDetail
              */
             public Builder createTimestamp(Long createTimestamp) {
                 this.createTimestamp = createTimestamp;
@@ -367,7 +367,7 @@ public class DescribePropertyCronDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the server.
+             * The IP addresses of the server.
              */
             public Builder instanceId(String instanceId) {
                 this.instanceId = instanceId;
@@ -375,7 +375,7 @@ public class DescribePropertyCronDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the server.
+             * The ID of the request, which is used to locate and troubleshoot issues.
              */
             public Builder instanceName(String instanceName) {
                 this.instanceName = instanceName;
@@ -383,7 +383,7 @@ public class DescribePropertyCronDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The public IP address of the server.
+             * The pagination information.
              */
             public Builder internetIp(String internetIp) {
                 this.internetIp = internetIp;
@@ -391,7 +391,7 @@ public class DescribePropertyCronDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The private IP address of the server.
+             * The name of the server.
              */
             public Builder intranetIp(String intranetIp) {
                 this.intranetIp = intranetIp;
@@ -399,7 +399,7 @@ public class DescribePropertyCronDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The IP addresses of the server.
+             * The ID of the server.
              */
             public Builder ip(String ip) {
                 this.ip = ip;
@@ -407,7 +407,7 @@ public class DescribePropertyCronDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The MD5 hash value of the path to the scheduled task.
+             * Queries the details of scheduled tasks on the Host page.
              */
             public Builder md5(String md5) {
                 this.md5 = md5;
@@ -415,7 +415,7 @@ public class DescribePropertyCronDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The interval at which the scheduled task is performed.
+             * The number of entries returned per page. Default value: **10**.
              */
             public Builder period(String period) {
                 this.period = period;
@@ -423,7 +423,7 @@ public class DescribePropertyCronDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The path to the scheduled task.
+             * The MD5 hash value of the path to the scheduled task.
              */
             public Builder source(String source) {
                 this.source = source;
@@ -431,7 +431,7 @@ public class DescribePropertyCronDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The username of the account that runs the scheduled task.
+             * root
              */
             public Builder user(String user) {
                 this.user = user;

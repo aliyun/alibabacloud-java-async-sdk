@@ -68,11 +68,7 @@ public class GetCheckSummaryRequest extends Request {
         } 
 
         /**
-         * The language of the content within the request and response. Valid values:
-         * <p>
-         * 
-         * *   **zh**: Chinese
-         * *   **en**: English
+         * Lang.
          */
         public Builder lang(String lang) {
             this.putQueryParameter("Lang", lang);
@@ -81,7 +77,7 @@ public class GetCheckSummaryRequest extends Request {
         }
 
         /**
-         * The account ID of the resource directory.
+         * ResourceDirectoryAccountId.
          */
         public Builder resourceDirectoryAccountId(String resourceDirectoryAccountId) {
             this.putQueryParameter("ResourceDirectoryAccountId", resourceDirectoryAccountId);

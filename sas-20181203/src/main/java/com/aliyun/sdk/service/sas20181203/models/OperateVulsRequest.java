@@ -100,7 +100,7 @@ public class OperateVulsRequest extends Request {
         } 
 
         /**
-         * The operation on the vulnerabilities. Set the value to **vul_fix**, which indicates vulnerability fixing.
+         * OperateType.
          */
         public Builder operateType(String operateType) {
             this.putQueryParameter("OperateType", operateType);
@@ -109,7 +109,7 @@ public class OperateVulsRequest extends Request {
         }
 
         /**
-         * The type of the vulnerabilities that you want to fix. Set the value to **cve**, which indicates Linux software vulnerabilities.
+         * Type.
          */
         public Builder type(String type) {
             this.putQueryParameter("Type", type);
@@ -118,7 +118,7 @@ public class OperateVulsRequest extends Request {
         }
 
         /**
-         * The UUIDs of servers for which you want to fix vulnerabilities.
+         * Uuids.
          */
         public Builder uuids(java.util.List < String > uuids) {
             this.putQueryParameter("Uuids", uuids);
@@ -127,7 +127,7 @@ public class OperateVulsRequest extends Request {
         }
 
         /**
-         * The names of the vulnerabilities that you want to fix.
+         * VulNames.
          */
         public Builder vulNames(java.util.List < String > vulNames) {
             this.putQueryParameter("VulNames", vulNames);

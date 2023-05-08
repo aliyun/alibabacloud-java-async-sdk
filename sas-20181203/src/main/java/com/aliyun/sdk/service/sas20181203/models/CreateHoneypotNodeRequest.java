@@ -97,11 +97,11 @@ public class CreateHoneypotNodeRequest extends Request {
         } 
 
         /**
-         * Specifies whether to allow the honeypots to access the Internet. Valid values:
+         * Specifies whether to allow honeypots to access the Internet. Valid values:
          * <p>
          * 
-         * *   **true**: allows the honeypots to access the Internet.
-         * *   **false**: does not allow the honeypots to access the Internet.
+         * *   **true**: allows honeypots to access the Internet.
+         * *   **false**: does not allow honeypots to access the Internet.
          */
         public Builder allowHoneypotAccessInternet(Boolean allowHoneypotAccessInternet) {
             this.putQueryParameter("AllowHoneypotAccessInternet", allowHoneypotAccessInternet);
@@ -110,7 +110,7 @@ public class CreateHoneypotNodeRequest extends Request {
         }
 
         /**
-         * The number of probes that you want to allocate for the management node.
+         * The number of available probes.
          */
         public Builder availableProbeNum(Integer availableProbeNum) {
             this.putQueryParameter("AvailableProbeNum", availableProbeNum);

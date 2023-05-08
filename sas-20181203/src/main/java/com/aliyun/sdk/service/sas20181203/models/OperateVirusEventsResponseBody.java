@@ -50,7 +50,7 @@ public class OperateVirusEventsResponseBody extends TeaModel {
         private Long taskId; 
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -58,7 +58,7 @@ public class OperateVirusEventsResponseBody extends TeaModel {
         }
 
         /**
-         * TaskId.
+         * The ID of the task to handle multiple alert events at a time.
          */
         public Builder taskId(Long taskId) {
             this.taskId = taskId;

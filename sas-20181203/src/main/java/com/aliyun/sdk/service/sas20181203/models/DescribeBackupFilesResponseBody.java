@@ -62,7 +62,7 @@ public class DescribeBackupFilesResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * An array that consists of the backup files returned.
+         * BackupFiles.
          */
         public Builder backupFiles(java.util.List < BackupFiles> backupFiles) {
             this.backupFiles = backupFiles;
@@ -70,7 +70,7 @@ public class DescribeBackupFilesResponseBody extends TeaModel {
         }
 
         /**
-         * The pagination information.
+         * The number of entries returned per page. Default value: **10**.
          */
         public Builder pageInfo(PageInfo pageInfo) {
             this.pageInfo = pageInfo;
@@ -78,7 +78,7 @@ public class DescribeBackupFilesResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request, which is used to locate and troubleshoot issues.
+         * The number of the page to return. Default value: **1**.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -154,7 +154,7 @@ public class DescribeBackupFilesResponseBody extends TeaModel {
             private String type; 
 
             /**
-             * The name of the anti-ransomware policy.
+             * Name.
              */
             public Builder name(String name) {
                 this.name = name;
@@ -162,7 +162,7 @@ public class DescribeBackupFilesResponseBody extends TeaModel {
             }
 
             /**
-             * The size of the backup file. Unit: bytes.
+             * Size.
              */
             public Builder size(Long size) {
                 this.size = size;
@@ -170,7 +170,7 @@ public class DescribeBackupFilesResponseBody extends TeaModel {
             }
 
             /**
-             * The path to the subdirectory of the backup file.
+             * Subtree.
              */
             public Builder subtree(String subtree) {
                 this.subtree = subtree;
@@ -178,11 +178,7 @@ public class DescribeBackupFilesResponseBody extends TeaModel {
             }
 
             /**
-             * The type of the protected file. Valid values:
-             * <p>
-             * 
-             * *   **file**: files
-             * *   **dir**: folders
+             * Type.
              */
             public Builder type(String type) {
                 this.type = type;
@@ -259,7 +255,7 @@ public class DescribeBackupFilesResponseBody extends TeaModel {
             private Integer totalCount; 
 
             /**
-             * The number of backup files returned on the current page.
+             * Count.
              */
             public Builder count(Integer count) {
                 this.count = count;
@@ -267,7 +263,7 @@ public class DescribeBackupFilesResponseBody extends TeaModel {
             }
 
             /**
-             * The page number of the returned page.
+             * The ID of the request, which is used to locate and troubleshoot issues.
              */
             public Builder currentPage(Integer currentPage) {
                 this.currentPage = currentPage;
@@ -275,7 +271,7 @@ public class DescribeBackupFilesResponseBody extends TeaModel {
             }
 
             /**
-             * The number of entries returned per page. Default value: **10**.
+             * Queries backup files.
              */
             public Builder pageSize(Integer pageSize) {
                 this.pageSize = pageSize;
@@ -283,7 +279,7 @@ public class DescribeBackupFilesResponseBody extends TeaModel {
             }
 
             /**
-             * The total number of backup files returned.
+             * WB01014029
              */
             public Builder totalCount(Integer totalCount) {
                 this.totalCount = totalCount;

@@ -83,11 +83,7 @@ public class UninstallBackupClientRequest extends Request {
         } 
 
         /**
-         * The version of the anti-ransomware policy. You can call the [DescribeBackupPolicies](~~DescribeBackupPolicies~~) operation to query the versions of anti-ransomware policies. Valid values:
-         * <p>
-         * 
-         * *   **1.0.0**
-         * *   **2.0.0**
+         * PolicyVersion.
          */
         public Builder policyVersion(String policyVersion) {
             this.putQueryParameter("PolicyVersion", policyVersion);
@@ -96,10 +92,7 @@ public class UninstallBackupClientRequest extends Request {
         }
 
         /**
-         * The UUID of the server from which you want to uninstall the anti-ransomware agent.
-         * <p>
-         * 
-         * > You must specify at least one of the UuidList and Uuid parameters.
+         * Uuid.
          */
         public Builder uuid(String uuid) {
             this.putQueryParameter("Uuid", uuid);
@@ -108,10 +101,7 @@ public class UninstallBackupClientRequest extends Request {
         }
 
         /**
-         * The UUIDs of the servers from which you want to uninstall the anti-ransomware agent.
-         * <p>
-         * 
-         * > You must specify at least one of the UuidList and Uuid parameters.
+         * UuidList.
          */
         public Builder uuidList(java.util.List < String > uuidList) {
             this.putQueryParameter("UuidList", uuidList);

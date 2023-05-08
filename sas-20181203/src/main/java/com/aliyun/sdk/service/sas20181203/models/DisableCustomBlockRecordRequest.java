@@ -84,10 +84,7 @@ public class DisableCustomBlockRecordRequest extends Request {
         } 
 
         /**
-         * The IP address that is specified in the policy.
-         * <p>
-         * 
-         * > You can call the [DescribeCustomBlockRecords](~~DescribeCustomBlockRecords~~) operation to query the IP address.
+         * BlockIp.
          */
         public Builder blockIp(String blockIp) {
             this.putQueryParameter("BlockIp", blockIp);
@@ -96,11 +93,7 @@ public class DisableCustomBlockRecordRequest extends Request {
         }
 
         /**
-         * The traffic direction that is specified in the policy. Valid values:
-         * <p>
-         * 
-         * *   **in**: inbound
-         * *   **out**: outbound
+         * Bound.
          */
         public Builder bound(String bound) {
             this.putQueryParameter("Bound", bound);

@@ -110,11 +110,7 @@ public class ModifyWebLockProcessStatusRequest extends Request {
         } 
 
         /**
-         * Specifies whether to change the status of the process on multiple servers on which the process runs at the same time. Valid values:
-         * <p>
-         * 
-         * *   **0**: no
-         * *   **1**: yes
+         * DealAll.
          */
         public Builder dealAll(Integer dealAll) {
             this.putQueryParameter("DealAll", dealAll);
@@ -123,7 +119,7 @@ public class ModifyWebLockProcessStatusRequest extends Request {
         }
 
         /**
-         * The parameters required to change the status of multiple processes at a time. The value is in the JSON format.
+         * OperateInfo.
          */
         public Builder operateInfo(String operateInfo) {
             this.putQueryParameter("OperateInfo", operateInfo);
@@ -132,7 +128,7 @@ public class ModifyWebLockProcessStatusRequest extends Request {
         }
 
         /**
-         * The paths to the processes.
+         * ProcessPath.
          */
         public Builder processPath(java.util.List < String > processPath) {
             this.putQueryParameter("ProcessPath", processPath);
@@ -141,11 +137,7 @@ public class ModifyWebLockProcessStatusRequest extends Request {
         }
 
         /**
-         * The status of the process. Valid values:
-         * <p>
-         * 
-         * *   **0**: cancels adding the process to the process whitelist
-         * *   **1**: adds the process to the process whitelist
+         * Status.
          */
         public Builder status(Integer status) {
             this.putQueryParameter("Status", status);
@@ -154,7 +146,7 @@ public class ModifyWebLockProcessStatusRequest extends Request {
         }
 
         /**
-         * The UUID of the server.
+         * Uuid.
          */
         public Builder uuid(String uuid) {
             this.putQueryParameter("Uuid", uuid);

@@ -82,7 +82,7 @@ public class DescribeImageBaselineDetailRequest extends Request {
         } 
 
         /**
-         * The information about the baseline.
+         * BaselineItemKey.
          */
         public Builder baselineItemKey(String baselineItemKey) {
             this.putQueryParameter("BaselineItemKey", baselineItemKey);
@@ -91,7 +91,7 @@ public class DescribeImageBaselineDetailRequest extends Request {
         }
 
         /**
-         * The UUID of the image.
+         * ImageUuid.
          */
         public Builder imageUuid(String imageUuid) {
             this.putQueryParameter("ImageUuid", imageUuid);
@@ -100,11 +100,7 @@ public class DescribeImageBaselineDetailRequest extends Request {
         }
 
         /**
-         * The language of the content within the request and response. Default value: **zh**. Valid values:
-         * <p>
-         * 
-         * *   **zh**: Chinese
-         * *   **en**: English
+         * Lang.
          */
         public Builder lang(String lang) {
             this.putQueryParameter("Lang", lang);

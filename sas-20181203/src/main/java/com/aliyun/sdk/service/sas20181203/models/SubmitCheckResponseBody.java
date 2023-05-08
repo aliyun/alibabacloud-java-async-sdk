@@ -62,7 +62,7 @@ public class SubmitCheckResponseBody extends TeaModel {
         private String taskId; 
 
         /**
-         * The data returned if the call is successful.
+         * Data.
          */
         public Builder data(Data data) {
             this.data = data;
@@ -70,7 +70,7 @@ public class SubmitCheckResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request, which is used to locate and troubleshoot issues.
+         * RequestId.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -78,7 +78,7 @@ public class SubmitCheckResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the configuration assessment task.
+         * TaskId.
          */
         public Builder taskId(String taskId) {
             this.taskId = taskId;
@@ -118,10 +118,7 @@ public class SubmitCheckResponseBody extends TeaModel {
             private String operateCode; 
 
             /**
-             * The operation code of the configuration assessment task.
-             * <p>
-             * 
-             * *   **Throttling**: frequency limit
+             * OperateCode.
              */
             public Builder operateCode(String operateCode) {
                 this.operateCode = operateCode;

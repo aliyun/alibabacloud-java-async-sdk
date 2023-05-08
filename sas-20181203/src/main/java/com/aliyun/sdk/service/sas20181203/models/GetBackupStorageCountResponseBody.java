@@ -50,7 +50,7 @@ public class GetBackupStorageCountResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The details about the anti-ransomware capacity.
+         * BackupStorageCount.
          */
         public Builder backupStorageCount(BackupStorageCount backupStorageCount) {
             this.backupStorageCount = backupStorageCount;
@@ -58,7 +58,7 @@ public class GetBackupStorageCountResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request, which is used to locate and troubleshoot issues.
+         * RequestId.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -146,7 +146,7 @@ public class GetBackupStorageCountResponseBody extends TeaModel {
             private Long usageStorageByte; 
 
             /**
-             * The anti-ransomware capacity that you purchased. Unit: bytes.
+             * BuyStorageByte.
              */
             public Builder buyStorageByte(Long buyStorageByte) {
                 this.buyStorageByte = buyStorageByte;
@@ -154,7 +154,7 @@ public class GetBackupStorageCountResponseBody extends TeaModel {
             }
 
             /**
-             * The storage capacity that is occupied by the backup data of your servers. Unit: bytes.
+             * EcsUsageStorageByte.
              */
             public Builder ecsUsageStorageByte(Long ecsUsageStorageByte) {
                 this.ecsUsageStorageByte = ecsUsageStorageByte;
@@ -162,11 +162,7 @@ public class GetBackupStorageCountResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether the anti-ransomware capacity that is used exceeds the anti-ransomware capacity that you purchased. Valid values:
-             * <p>
-             * 
-             * *   **0**: no
-             * *   **1**: yes
+             * Overflow.
              */
             public Builder overflow(Integer overflow) {
                 this.overflow = overflow;
@@ -174,7 +170,7 @@ public class GetBackupStorageCountResponseBody extends TeaModel {
             }
 
             /**
-             * The storage capacity that is occupied by the backup data of your databases. Unit: bytes.
+             * UniUsageStorageByte.
              */
             public Builder uniUsageStorageByte(Long uniUsageStorageByte) {
                 this.uniUsageStorageByte = uniUsageStorageByte;
@@ -182,7 +178,7 @@ public class GetBackupStorageCountResponseBody extends TeaModel {
             }
 
             /**
-             * The total anti-ransomware capacity that is used. Unit: bytes.
+             * UsageStorageByte.
              */
             public Builder usageStorageByte(Long usageStorageByte) {
                 this.usageStorageByte = usageStorageByte;

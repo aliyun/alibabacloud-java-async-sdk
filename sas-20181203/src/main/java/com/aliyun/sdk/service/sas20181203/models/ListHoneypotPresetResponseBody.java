@@ -110,7 +110,7 @@ public class ListHoneypotPresetResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * The status code returned. The status code **200** indicates that the request was successful. Other status codes indicate that the request failed. You can identify the cause of the failure based on the status code.
+         * Code.
          */
         public Builder code(String code) {
             this.code = code;
@@ -118,7 +118,7 @@ public class ListHoneypotPresetResponseBody extends TeaModel {
         }
 
         /**
-         * The HTTP status code returned.
+         * HttpStatusCode.
          */
         public Builder httpStatusCode(Integer httpStatusCode) {
             this.httpStatusCode = httpStatusCode;
@@ -126,7 +126,7 @@ public class ListHoneypotPresetResponseBody extends TeaModel {
         }
 
         /**
-         * An array that consists of the honeypot templates.
+         * List.
          */
         public Builder list(java.util.List < List> list) {
             this.list = list;
@@ -134,7 +134,7 @@ public class ListHoneypotPresetResponseBody extends TeaModel {
         }
 
         /**
-         * The message returned.
+         * Message.
          */
         public Builder message(String message) {
             this.message = message;
@@ -142,7 +142,7 @@ public class ListHoneypotPresetResponseBody extends TeaModel {
         }
 
         /**
-         * The pagination information.
+         * PageInfo.
          */
         public Builder pageInfo(PageInfo pageInfo) {
             this.pageInfo = pageInfo;
@@ -150,7 +150,7 @@ public class ListHoneypotPresetResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request, which is used to locate and troubleshoot issues.
+         * RequestId.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -158,11 +158,7 @@ public class ListHoneypotPresetResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether the request was successful. Valid values:
-         * <p>
-         * 
-         * *   **true**: The request was successful.
-         * *   **false**: The request failed.
+         * Success.
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -274,7 +270,7 @@ public class ListHoneypotPresetResponseBody extends TeaModel {
             private String presetType; 
 
             /**
-             * The name of the management node.
+             * 蜜罐管理节点名称
              */
             public Builder controlNodeName(String controlNodeName) {
                 this.controlNodeName = controlNodeName;
@@ -282,7 +278,7 @@ public class ListHoneypotPresetResponseBody extends TeaModel {
             }
 
             /**
-             * The display name of the honeypot image.
+             * 蜜罐镜像展示名称
              */
             public Builder honeypotImageDisplayName(String honeypotImageDisplayName) {
                 this.honeypotImageDisplayName = honeypotImageDisplayName;
@@ -290,7 +286,7 @@ public class ListHoneypotPresetResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the honeypot image.
+             * HoneypotImageName.
              */
             public Builder honeypotImageName(String honeypotImageName) {
                 this.honeypotImageName = honeypotImageName;
@@ -298,7 +294,7 @@ public class ListHoneypotPresetResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the honeypot template.
+             * 蜜罐模板唯一ID
              */
             public Builder honeypotPresetId(String honeypotPresetId) {
                 this.honeypotPresetId = honeypotPresetId;
@@ -306,7 +302,7 @@ public class ListHoneypotPresetResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the management node.
+             * 管理节点唯一id
              */
             public Builder nodeId(String nodeId) {
                 this.nodeId = nodeId;
@@ -314,7 +310,7 @@ public class ListHoneypotPresetResponseBody extends TeaModel {
             }
 
             /**
-             * The custom name of the honeypot template.
+             * 蜜罐模板自定义名称
              */
             public Builder presetName(String presetName) {
                 this.presetName = presetName;
@@ -322,12 +318,7 @@ public class ListHoneypotPresetResponseBody extends TeaModel {
             }
 
             /**
-             * The type of the honeypot template. Valid values:
-             * <p>
-             * 
-             * *   **TEMP**: automatically generated template
-             * *   **CUSTOM**: custom template
-             * *   **DEFAULT**: default template
+             * 模板类型
              */
             public Builder presetType(String presetType) {
                 this.presetType = presetType;
@@ -404,7 +395,7 @@ public class ListHoneypotPresetResponseBody extends TeaModel {
             private Integer totalCount; 
 
             /**
-             * The number of entries returned on the current page.
+             * Count.
              */
             public Builder count(Integer count) {
                 this.count = count;
@@ -412,7 +403,7 @@ public class ListHoneypotPresetResponseBody extends TeaModel {
             }
 
             /**
-             * The page number of the returned page.
+             * CurrentPage.
              */
             public Builder currentPage(Integer currentPage) {
                 this.currentPage = currentPage;
@@ -420,7 +411,7 @@ public class ListHoneypotPresetResponseBody extends TeaModel {
             }
 
             /**
-             * The number of entries returned per page. Default value: 20.
+             * PageSize.
              */
             public Builder pageSize(Integer pageSize) {
                 this.pageSize = pageSize;
@@ -428,7 +419,7 @@ public class ListHoneypotPresetResponseBody extends TeaModel {
             }
 
             /**
-             * The total number of entries returned.
+             * TotalCount.
              */
             public Builder totalCount(Integer totalCount) {
                 this.totalCount = totalCount;

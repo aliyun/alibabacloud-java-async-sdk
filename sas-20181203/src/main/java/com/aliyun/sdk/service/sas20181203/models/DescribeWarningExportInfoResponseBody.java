@@ -134,7 +134,7 @@ public class DescribeWarningExportInfoResponseBody extends TeaModel {
         private Integer totalCount; 
 
         /**
-         * The number of baseline entries that are exported.
+         * CurrentCount.
          */
         public Builder currentCount(Integer currentCount) {
             this.currentCount = currentCount;
@@ -142,14 +142,7 @@ public class DescribeWarningExportInfoResponseBody extends TeaModel {
         }
 
         /**
-         * The status of the export task.
-         * <p>
-         * 
-         * Valid values:
-         * 
-         * *   **init**: The task is being initialized.
-         * *   **exporting**: The task is in progress.
-         * *   **success**: The task is successful.
+         * ExportStatus.
          */
         public Builder exportStatus(String exportStatus) {
             this.exportStatus = exportStatus;
@@ -157,7 +150,7 @@ public class DescribeWarningExportInfoResponseBody extends TeaModel {
         }
 
         /**
-         * The name of the exported Excel file.
+         * FileName.
          */
         public Builder fileName(String fileName) {
             this.fileName = fileName;
@@ -165,7 +158,7 @@ public class DescribeWarningExportInfoResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the export task for the baseline check result.
+         * Id.
          */
         public Builder id(Long id) {
             this.id = id;
@@ -173,7 +166,7 @@ public class DescribeWarningExportInfoResponseBody extends TeaModel {
         }
 
         /**
-         * The URL at which you can download the exported Excel file.
+         * Queries the progress of a export task for a baseline check result.
          */
         public Builder link(String link) {
             this.link = link;
@@ -181,7 +174,7 @@ public class DescribeWarningExportInfoResponseBody extends TeaModel {
         }
 
         /**
-         * The message that shows the export task result. The value is fixed as **successful**, which indicates that the export task is successful.
+         * Message.
          */
         public Builder message(String message) {
             this.message = message;
@@ -189,7 +182,7 @@ public class DescribeWarningExportInfoResponseBody extends TeaModel {
         }
 
         /**
-         * The progress percentage of the export task.
+         * DescribeWarningExportInfo
          */
         public Builder progress(Integer progress) {
             this.progress = progress;
@@ -197,7 +190,7 @@ public class DescribeWarningExportInfoResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request, which is used to locate and troubleshoot issues.
+         * RequestId.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -205,7 +198,7 @@ public class DescribeWarningExportInfoResponseBody extends TeaModel {
         }
 
         /**
-         * The total number of baseline entries returned.
+         * TotalCount.
          */
         public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;

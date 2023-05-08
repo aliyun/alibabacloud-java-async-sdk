@@ -124,11 +124,46 @@ public class DescribeWebLockBindListRequest extends Request {
         } 
 
         /**
-         * The number of the page to return. Pages start from page 1. Default value: 1.
+         * on
          */
         public Builder currentPage(Integer currentPage) {
             this.putQueryParameter("CurrentPage", currentPage);
             this.currentPage = currentPage;
+            return this;
+        }
+
+        /**
+         * The error code for web tamper proofing. Valid values:
+         * <p>
+         * 
+         * *   **2001**: The Security Center agent is offline.
+         * *   **9999**: The connection timed out.
+         */
+        public Builder lang(String lang) {
+            this.putQueryParameter("Lang", lang);
+            this.lang = lang;
+            return this;
+        }
+
+        /**
+         * The error message for web tamper proofing. Valid values:
+         * <p>
+         * 
+         * *   **client offline**: The Security Center agent is offline.
+         * *   **timeout**: The connection timed out.
+         */
+        public Builder pageSize(Integer pageSize) {
+            this.putQueryParameter("PageSize", pageSize);
+            this.pageSize = pageSize;
+            return this;
+        }
+
+        /**
+         * The page number of the returned page. Pages start from page 1. Default value: 1.
+         */
+        public Builder remark(String remark) {
+            this.putQueryParameter("Remark", remark);
+            this.remark = remark;
             return this;
         }
 
@@ -139,33 +174,6 @@ public class DescribeWebLockBindListRequest extends Request {
          * *   **zh**: Chinese
          * *   **en**: English
          */
-        public Builder lang(String lang) {
-            this.putQueryParameter("Lang", lang);
-            this.lang = lang;
-            return this;
-        }
-
-        /**
-         * The number of entries to return on each page. Default value: 20.
-         */
-        public Builder pageSize(Integer pageSize) {
-            this.putQueryParameter("PageSize", pageSize);
-            this.pageSize = pageSize;
-            return this;
-        }
-
-        /**
-         * The string that allows you to search for servers in fuzzy match mode. You can enter a server name or IP address.
-         */
-        public Builder remark(String remark) {
-            this.putQueryParameter("Remark", remark);
-            this.remark = remark;
-            return this;
-        }
-
-        /**
-         * The source IP address of the request.
-         */
         public Builder sourceIp(String sourceIp) {
             this.putQueryParameter("SourceIp", sourceIp);
             this.sourceIp = sourceIp;
@@ -173,11 +181,7 @@ public class DescribeWebLockBindListRequest extends Request {
         }
 
         /**
-         * The protection status of the server that you want to query. Valid values:
-         * <p>
-         * 
-         * *   **on**: protected
-         * *   **off**: unprotected
+         * The name of the server.
          */
         public Builder status(String status) {
             this.putQueryParameter("Status", status);

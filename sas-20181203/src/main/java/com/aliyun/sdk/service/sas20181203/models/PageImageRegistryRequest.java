@@ -124,7 +124,7 @@ public class PageImageRegistryRequest extends Request {
         } 
 
         /**
-         * The number of the page to return.
+         * CurrentPage.
          */
         public Builder currentPage(Integer currentPage) {
             this.putBodyParameter("CurrentPage", currentPage);
@@ -133,7 +133,7 @@ public class PageImageRegistryRequest extends Request {
         }
 
         /**
-         * The number of entries to return on each page. Default value: 20.
+         * PageSize.
          */
         public Builder pageSize(Integer pageSize) {
             this.putBodyParameter("PageSize", pageSize);
@@ -142,7 +142,7 @@ public class PageImageRegistryRequest extends Request {
         }
 
         /**
-         * The name of the image repository. Fuzzy match is supported.
+         * 镜像仓名称
          */
         public Builder registryNameLike(String registryNameLike) {
             this.putBodyParameter("RegistryNameLike", registryNameLike);
@@ -151,7 +151,7 @@ public class PageImageRegistryRequest extends Request {
         }
 
         /**
-         * The types of image repositories.
+         * 镜像仓类型in
          */
         public Builder registryTypeInList(java.util.List < String > registryTypeInList) {
             this.putBodyParameter("RegistryTypeInList", registryTypeInList);
@@ -160,7 +160,7 @@ public class PageImageRegistryRequest extends Request {
         }
 
         /**
-         * The types of excluded image repositories.
+         * 镜像仓类型not in
          */
         public Builder registryTypeNotInList(java.util.List < String > registryTypeNotInList) {
             this.putBodyParameter("RegistryTypeNotInList", registryTypeNotInList);
@@ -169,7 +169,7 @@ public class PageImageRegistryRequest extends Request {
         }
 
         /**
-         * The source IP address of the request.
+         * SourceIp.
          */
         public Builder sourceIp(String sourceIp) {
             this.putQueryParameter("SourceIp", sourceIp);

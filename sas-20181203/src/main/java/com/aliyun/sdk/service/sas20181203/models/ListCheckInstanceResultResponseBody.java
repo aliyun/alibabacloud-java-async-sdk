@@ -86,7 +86,7 @@ public class ListCheckInstanceResultResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * An array that consists of the basic information about the instances.
+         * BasicData.
          */
         public Builder basicData(java.util.List < BasicData> basicData) {
             this.basicData = basicData;
@@ -94,7 +94,7 @@ public class ListCheckInstanceResultResponseBody extends TeaModel {
         }
 
         /**
-         * The extended information about the instances.
+         * Checks.
          */
         public Builder checks(java.util.List < java.util.Map<String, ?>> checks) {
             this.checks = checks;
@@ -102,7 +102,7 @@ public class ListCheckInstanceResultResponseBody extends TeaModel {
         }
 
         /**
-         * The metadata information about the search conditions that can be used to filter instances.
+         * Columns.
          */
         public Builder columns(java.util.List < Columns> columns) {
             this.columns = columns;
@@ -110,7 +110,7 @@ public class ListCheckInstanceResultResponseBody extends TeaModel {
         }
 
         /**
-         * The pagination information.
+         * PageInfo.
          */
         public Builder pageInfo(PageInfo pageInfo) {
             this.pageInfo = pageInfo;
@@ -118,7 +118,7 @@ public class ListCheckInstanceResultResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request, which is used to locate and troubleshoot issues.
+         * RequestId.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -206,7 +206,7 @@ public class ListCheckInstanceResultResponseBody extends TeaModel {
             private String status; 
 
             /**
-             * The check result ID of the instance.
+             * Id.
              */
             public Builder id(Long id) {
                 this.id = id;
@@ -214,7 +214,7 @@ public class ListCheckInstanceResultResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the server.
+             * InstanceId.
              */
             public Builder instanceId(String instanceId) {
                 this.instanceId = instanceId;
@@ -222,7 +222,7 @@ public class ListCheckInstanceResultResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the server.
+             * InstanceName.
              */
             public Builder instanceName(String instanceName) {
                 this.instanceName = instanceName;
@@ -230,7 +230,7 @@ public class ListCheckInstanceResultResponseBody extends TeaModel {
             }
 
             /**
-             * The region ID of the instance.
+             * RegionId.
              */
             public Builder regionId(String regionId) {
                 this.regionId = regionId;
@@ -238,14 +238,7 @@ public class ListCheckInstanceResultResponseBody extends TeaModel {
             }
 
             /**
-             * The statuses of check items. Multiple statuses are separated by commas (,). Valid values:
-             * <p>
-             * 
-             * *   **PASS**
-             * *   **NOT_PASS**
-             * *   **CHECKING**
-             * *   **NOT_CHECK**
-             * *   **WHITELIST**
+             * Status.
              */
             public Builder status(String status) {
                 this.status = status;
@@ -310,7 +303,7 @@ public class ListCheckInstanceResultResponseBody extends TeaModel {
             private String type; 
 
             /**
-             * The search condition.
+             * Key.
              */
             public Builder key(String key) {
                 this.key = key;
@@ -318,7 +311,7 @@ public class ListCheckInstanceResultResponseBody extends TeaModel {
             }
 
             /**
-             * The display name of the search condition.
+             * ShowName.
              */
             public Builder showName(String showName) {
                 this.showName = showName;
@@ -326,11 +319,7 @@ public class ListCheckInstanceResultResponseBody extends TeaModel {
             }
 
             /**
-             * The format of the check results for the instances. Valid values:
-             * <p>
-             * 
-             * *   **text**
-             * *   **link**
+             * Type.
              */
             public Builder type(String type) {
                 this.type = type;
@@ -431,7 +420,7 @@ public class ListCheckInstanceResultResponseBody extends TeaModel {
             private String type; 
 
             /**
-             * The metadata information about the details of the instances.
+             * Grids.
              */
             public Builder grids(java.util.List < Grids> grids) {
                 this.grids = grids;
@@ -439,7 +428,7 @@ public class ListCheckInstanceResultResponseBody extends TeaModel {
             }
 
             /**
-             * The search condition.
+             * Key.
              */
             public Builder key(String key) {
                 this.key = key;
@@ -447,11 +436,7 @@ public class ListCheckInstanceResultResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether the search condition is used. Valid values:
-             * <p>
-             * 
-             * *   **true**: yes
-             * *   **false**: no
+             * Search.
              */
             public Builder search(Boolean search) {
                 this.search = search;
@@ -459,7 +444,7 @@ public class ListCheckInstanceResultResponseBody extends TeaModel {
             }
 
             /**
-             * The value of the search condition.
+             * SearchKey.
              */
             public Builder searchKey(String searchKey) {
                 this.searchKey = searchKey;
@@ -467,7 +452,7 @@ public class ListCheckInstanceResultResponseBody extends TeaModel {
             }
 
             /**
-             * The display name of the search condition.
+             * ShowName.
              */
             public Builder showName(String showName) {
                 this.showName = showName;
@@ -475,11 +460,7 @@ public class ListCheckInstanceResultResponseBody extends TeaModel {
             }
 
             /**
-             * The format of the check results for the instances. Valid values:
-             * <p>
-             * 
-             * *   **text**
-             * *   **link**
+             * Type.
              */
             public Builder type(String type) {
                 this.type = type;
@@ -556,7 +537,7 @@ public class ListCheckInstanceResultResponseBody extends TeaModel {
             private Integer totalCount; 
 
             /**
-             * The number of entries returned on the current page.
+             * Count.
              */
             public Builder count(String count) {
                 this.count = count;
@@ -564,7 +545,7 @@ public class ListCheckInstanceResultResponseBody extends TeaModel {
             }
 
             /**
-             * The page number of the returned page.
+             * CurrentPage.
              */
             public Builder currentPage(Integer currentPage) {
                 this.currentPage = currentPage;
@@ -572,7 +553,7 @@ public class ListCheckInstanceResultResponseBody extends TeaModel {
             }
 
             /**
-             * The number of entries returned per page.
+             * PageSize.
              */
             public Builder pageSize(Integer pageSize) {
                 this.pageSize = pageSize;
@@ -580,7 +561,7 @@ public class ListCheckInstanceResultResponseBody extends TeaModel {
             }
 
             /**
-             * The total number of entries returned.
+             * TotalCount.
              */
             public Builder totalCount(Integer totalCount) {
                 this.totalCount = totalCount;

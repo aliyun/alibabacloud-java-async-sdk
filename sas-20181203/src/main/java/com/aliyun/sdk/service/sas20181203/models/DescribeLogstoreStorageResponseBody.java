@@ -98,7 +98,7 @@ public class DescribeLogstoreStorageResponseBody extends TeaModel {
         private String userProject; 
 
         /**
-         * The name of the dedicated Logstore that is used to store full logs of Security Center. The value is fixed as **sas-log**.
+         * WB01014029
          */
         public Builder logstore(String logstore) {
             this.logstore = logstore;
@@ -106,7 +106,7 @@ public class DescribeLogstoreStorageResponseBody extends TeaModel {
         }
 
         /**
-         * The purchased log storage capacity, in GB.
+         * Preserve.
          */
         public Builder preserve(Long preserve) {
             this.preserve = preserve;
@@ -114,7 +114,7 @@ public class DescribeLogstoreStorageResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request, which is used to locate and troubleshoot issues.
+         * 谈佳伟
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -122,10 +122,7 @@ public class DescribeLogstoreStorageResponseBody extends TeaModel {
         }
 
         /**
-         * The number of days during which logs can be retained. The value is fixed as **180**, which indicates that logs can be retained for 180 days.
-         * <p>
-         * 
-         * >  You are not allowed to change the value of this parameter.
+         * DescribeLogstoreStorage
          */
         public Builder ttl(Integer ttl) {
             this.ttl = ttl;
@@ -133,7 +130,7 @@ public class DescribeLogstoreStorageResponseBody extends TeaModel {
         }
 
         /**
-         * The used log storage capacity, in GB.
+         * Queries the purchased log storage capacity.
          */
         public Builder used(Long used) {
             this.used = used;
@@ -141,7 +138,7 @@ public class DescribeLogstoreStorageResponseBody extends TeaModel {
         }
 
         /**
-         * The name of the dedicated Project that is used to store full logs of Security Center.
+         * UserProject.
          */
         public Builder userProject(String userProject) {
             this.userProject = userProject;

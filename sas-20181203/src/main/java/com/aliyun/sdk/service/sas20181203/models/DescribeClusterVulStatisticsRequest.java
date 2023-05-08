@@ -68,7 +68,7 @@ public class DescribeClusterVulStatisticsRequest extends Request {
         } 
 
         /**
-         * The ID of the container cluster.
+         * ClusterId.
          */
         public Builder clusterId(String clusterId) {
             this.putQueryParameter("ClusterId", clusterId);
@@ -77,12 +77,7 @@ public class DescribeClusterVulStatisticsRequest extends Request {
         }
 
         /**
-         * The type of the vulnerabilities. Valid values:
-         * <p>
-         * 
-         * *   **cve**: Linux software vulnerabilities
-         * *   **app**: application vulnerabilities
-         * *   **sca**: vulnerabilities that are detected based on software component analysis
+         * Types.
          */
         public Builder types(String types) {
             this.putQueryParameter("Types", types);

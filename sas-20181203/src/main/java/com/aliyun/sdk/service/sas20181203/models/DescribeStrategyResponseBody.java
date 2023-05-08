@@ -50,7 +50,7 @@ public class DescribeStrategyResponseBody extends TeaModel {
         private java.util.List < Strategies> strategies; 
 
         /**
-         * The ID of the request, which is used to locate and troubleshoot issues.
+         * RequestId.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -58,7 +58,7 @@ public class DescribeStrategyResponseBody extends TeaModel {
         }
 
         /**
-         * An array that consists of the baseline check policies.
+         * Strategies.
          */
         public Builder strategies(java.util.List < Strategies> strategies) {
             this.strategies = strategies;
@@ -122,11 +122,7 @@ public class DescribeStrategyResponseBody extends TeaModel {
             private String targetType; 
 
             /**
-             * Indicates whether the baseline check policy is applied to the asset group. Valid values:
-             * <p>
-             * 
-             * *   **add**: yes
-             * *   **del**: no
+             * Flag.
              */
             public Builder flag(String flag) {
                 this.flag = flag;
@@ -134,7 +130,7 @@ public class DescribeStrategyResponseBody extends TeaModel {
             }
 
             /**
-             * The asset group ID or UUID of the asset to which the baseline check policy is applied.
+             * Target.
              */
             public Builder target(String target) {
                 this.target = target;
@@ -142,11 +138,7 @@ public class DescribeStrategyResponseBody extends TeaModel {
             }
 
             /**
-             * The condition by which the baseline check policy is applied to the asset. Valid values:
-             * <p>
-             * 
-             * *   **groupId**: the ID of the asset group
-             * *   **uuid**: the UUID of the asset
+             * TargetType.
              */
             public Builder targetType(String targetType) {
                 this.targetType = targetType;
@@ -343,7 +335,7 @@ public class DescribeStrategyResponseBody extends TeaModel {
             private Integer type; 
 
             /**
-             * An array consisting of the assets to which the baseline check policy is applied.
+             * ConfigTargets.
              */
             public Builder configTargets(java.util.List < ConfigTargets> configTargets) {
                 this.configTargets = configTargets;
@@ -351,11 +343,7 @@ public class DescribeStrategyResponseBody extends TeaModel {
             }
 
             /**
-             * The type of the baseline check policy. Valid values:
-             * <p>
-             * 
-             * *   **common**: standard baseline check policy
-             * *   **custom**: custom baseline check policy
+             * CustomType.
              */
             public Builder customType(String customType) {
                 this.customType = customType;
@@ -363,13 +351,7 @@ public class DescribeStrategyResponseBody extends TeaModel {
             }
 
             /**
-             * The cycle of the baseline check. Valid values:
-             * <p>
-             * 
-             * *   **1**: every 2 days
-             * *   **3**: every 4 days
-             * *   **7**: every 8 days
-             * *   30: every 31 days
+             * CycleDays.
              */
             public Builder cycleDays(Integer cycleDays) {
                 this.cycleDays = cycleDays;
@@ -377,13 +359,7 @@ public class DescribeStrategyResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the baseline check starts. Valid values:
-             * <p>
-             * 
-             * *   **0**: The baseline check starts within the time range from 00:00 to 06:00.
-             * *   **6**: The baseline check starts within the time range from 06:00 to 12:00.
-             * *   **12**: The baseline check starts within the time range from 12:00 to 18:00.
-             * *   **18**: The baseline check starts within the time range from 18:00 to 24:00.
+             * CycleStartTime.
              */
             public Builder cycleStartTime(Integer cycleStartTime) {
                 this.cycleStartTime = cycleStartTime;
@@ -391,7 +367,7 @@ public class DescribeStrategyResponseBody extends TeaModel {
             }
 
             /**
-             * The number of the assets to which the baseline check policy is applied.
+             * EcsCount.
              */
             public Builder ecsCount(Integer ecsCount) {
                 this.ecsCount = ecsCount;
@@ -399,7 +375,7 @@ public class DescribeStrategyResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the baseline check based on the baseline check policy ends.
+             * EndTime.
              */
             public Builder endTime(String endTime) {
                 this.endTime = endTime;
@@ -407,11 +383,7 @@ public class DescribeStrategyResponseBody extends TeaModel {
             }
 
             /**
-             * The status of the baseline check policy. Valid values:
-             * <p>
-             * 
-             * *   **1**: disabled
-             * *   **2**: enabled
+             * ExecStatus.
              */
             public Builder execStatus(Integer execStatus) {
                 this.execStatus = execStatus;
@@ -419,7 +391,7 @@ public class DescribeStrategyResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the baseline check policy.
+             * Id.
              */
             public Builder id(Integer id) {
                 this.id = id;
@@ -427,7 +399,7 @@ public class DescribeStrategyResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the baseline check policy.
+             * Name.
              */
             public Builder name(String name) {
                 this.name = name;
@@ -435,7 +407,7 @@ public class DescribeStrategyResponseBody extends TeaModel {
             }
 
             /**
-             * The proportion of risk items to all baseline check items in the baseline check result.
+             * PassRate.
              */
             public Builder passRate(Integer passRate) {
                 this.passRate = passRate;
@@ -443,7 +415,7 @@ public class DescribeStrategyResponseBody extends TeaModel {
             }
 
             /**
-             * The number of the assets on which the baseline check is complete.
+             * ProcessRate.
              */
             public Builder processRate(Integer processRate) {
                 this.processRate = processRate;
@@ -451,7 +423,7 @@ public class DescribeStrategyResponseBody extends TeaModel {
             }
 
             /**
-             * The number of baseline check items in the baseline check policy.
+             * RiskCount.
              */
             public Builder riskCount(Integer riskCount) {
                 this.riskCount = riskCount;
@@ -459,7 +431,7 @@ public class DescribeStrategyResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the baseline check based on the baseline check policy starts.
+             * StartTime.
              */
             public Builder startTime(String startTime) {
                 this.startTime = startTime;
@@ -467,11 +439,7 @@ public class DescribeStrategyResponseBody extends TeaModel {
             }
 
             /**
-             * The source of the baseline check policy. Valid values:
-             * <p>
-             * 
-             * *   **1**: built-in policy, which indicates that the baseline check policy is provided and performed by Security Center by default.
-             * *   **2**: user-defined policy, which can be a standard or custom baseline check policy.
+             * Type.
              */
             public Builder type(Integer type) {
                 this.type = type;

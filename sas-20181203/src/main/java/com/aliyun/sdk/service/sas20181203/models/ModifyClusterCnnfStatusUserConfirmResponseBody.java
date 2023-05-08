@@ -38,7 +38,7 @@ public class ModifyClusterCnnfStatusUserConfirmResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The ID of the request, which is used to locate and troubleshoot issues.
+         * Id of the request
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

@@ -62,7 +62,7 @@ public class DescribeExposedCheckWarningResponseBody extends TeaModel {
         private java.util.List < WarningList> warningList; 
 
         /**
-         * The total number of entries returned.
+         * Count.
          */
         public Builder count(Integer count) {
             this.count = count;
@@ -70,7 +70,7 @@ public class DescribeExposedCheckWarningResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request, which is used to locate and troubleshoot issues.
+         * RequestId.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -78,7 +78,7 @@ public class DescribeExposedCheckWarningResponseBody extends TeaModel {
         }
 
         /**
-         * An array that consists of the baseline risk items of the exposed server.
+         * WarningList.
          */
         public Builder warningList(java.util.List < WarningList> warningList) {
             this.warningList = warningList;
@@ -166,10 +166,7 @@ public class DescribeExposedCheckWarningResponseBody extends TeaModel {
             private String uuid; 
 
             /**
-             * The ID of the baseline.
-             * <p>
-             * 
-             * >  You can call the [DescribeCheckWarningSummary](~~116179~~) operation to query the IDs of baselines.
+             * RiskId.
              */
             public Builder riskId(Long riskId) {
                 this.riskId = riskId;
@@ -177,7 +174,7 @@ public class DescribeExposedCheckWarningResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the baseline.
+             * RiskName.
              */
             public Builder riskName(String riskName) {
                 this.riskName = riskName;
@@ -185,7 +182,7 @@ public class DescribeExposedCheckWarningResponseBody extends TeaModel {
             }
 
             /**
-             * The display name of the baseline sub type.
+             * SubTypeAlias.
              */
             public Builder subTypeAlias(String subTypeAlias) {
                 this.subTypeAlias = subTypeAlias;
@@ -193,7 +190,7 @@ public class DescribeExposedCheckWarningResponseBody extends TeaModel {
             }
 
             /**
-             * The display name of the baseline type.
+             * TypeAlias.
              */
             public Builder typeAlias(String typeAlias) {
                 this.typeAlias = typeAlias;
@@ -201,7 +198,7 @@ public class DescribeExposedCheckWarningResponseBody extends TeaModel {
             }
 
             /**
-             * The UUID of the server.
+             * Uuid.
              */
             public Builder uuid(String uuid) {
                 this.uuid = uuid;

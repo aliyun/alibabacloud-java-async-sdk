@@ -62,7 +62,7 @@ public class DescribePropertyPortItemResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The pagination information.
+         * The page number of the returned page.
          */
         public Builder pageInfo(PageInfo pageInfo) {
             this.pageInfo = pageInfo;
@@ -70,7 +70,7 @@ public class DescribePropertyPortItemResponseBody extends TeaModel {
         }
 
         /**
-         * An array that consists of the ports returned.
+         * The number of the listening port.
          */
         public Builder propertyItems(java.util.List < PropertyItems> propertyItems) {
             this.propertyItems = propertyItems;
@@ -78,7 +78,7 @@ public class DescribePropertyPortItemResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * The pagination information.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -154,7 +154,7 @@ public class DescribePropertyPortItemResponseBody extends TeaModel {
             private Integer totalCount; 
 
             /**
-             * The number of entries returned on the current page.
+             * An array that consists of the ports returned.
              */
             public Builder count(Integer count) {
                 this.count = count;
@@ -162,7 +162,7 @@ public class DescribePropertyPortItemResponseBody extends TeaModel {
             }
 
             /**
-             * The page number of the returned page.
+             * The number of entries returned per page.
              */
             public Builder currentPage(Integer currentPage) {
                 this.currentPage = currentPage;
@@ -170,7 +170,7 @@ public class DescribePropertyPortItemResponseBody extends TeaModel {
             }
 
             /**
-             * The number of entries returned per page.
+             * The total number of entries returned.
              */
             public Builder pageSize(Integer pageSize) {
                 this.pageSize = pageSize;
@@ -178,7 +178,7 @@ public class DescribePropertyPortItemResponseBody extends TeaModel {
             }
 
             /**
-             * The total number of entries returned.
+             * The number of entries returned on the current page.
              */
             public Builder totalCount(Integer totalCount) {
                 this.totalCount = totalCount;
@@ -243,7 +243,7 @@ public class DescribePropertyPortItemResponseBody extends TeaModel {
             private String proto; 
 
             /**
-             * The number of servers that use the port.
+             * The network protocol of the port.
              */
             public Builder count(Integer count) {
                 this.count = count;
@@ -251,7 +251,7 @@ public class DescribePropertyPortItemResponseBody extends TeaModel {
             }
 
             /**
-             * The number of the listening port.
+             * The number of servers that use the port.
              */
             public Builder port(String port) {
                 this.port = port;
@@ -259,7 +259,7 @@ public class DescribePropertyPortItemResponseBody extends TeaModel {
             }
 
             /**
-             * The network protocol of the port.
+             * Queries information about all ports.
              */
             public Builder proto(String proto) {
                 this.proto = proto;

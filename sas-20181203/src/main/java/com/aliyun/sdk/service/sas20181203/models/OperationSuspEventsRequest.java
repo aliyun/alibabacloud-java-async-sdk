@@ -126,10 +126,7 @@ public class OperationSuspEventsRequest extends Request {
         } 
 
         /**
-         * The ID of the request source.
-         * <p>
-         * 
-         * Set the value to **sas**, which indicates that the request is sent from Security Center.
+         * From.
          */
         public Builder from(String from) {
             this.putQueryParameter("From", from);
@@ -138,14 +135,7 @@ public class OperationSuspEventsRequest extends Request {
         }
 
         /**
-         * The operation that you want to perform on alerts. Valid values:
-         * <p>
-         * 
-         * *   **deal**: quarantines the source file of the malicious process.
-         * *   **ignore**: ignores the alerts.
-         * *   **mark\_mis_info**: marks the alerts as false positives by adding the alerts to the whitelist.
-         * *   **rm\_mark\_mis_info**: cancels marking the alerts as false positives by removing the alerts from the whitelist.
-         * *   **offline_handled**: marks the alerts as handled.
+         * WB01014029
          */
         public Builder operation(String operation) {
             this.putQueryParameter("Operation", operation);
@@ -154,7 +144,7 @@ public class OperationSuspEventsRequest extends Request {
         }
 
         /**
-         * The source IP address of the request.
+         * Handles multiple exceptions at a time.
          */
         public Builder sourceIp(String sourceIp) {
             this.putQueryParameter("SourceIp", sourceIp);
@@ -163,12 +153,7 @@ public class OperationSuspEventsRequest extends Request {
         }
 
         /**
-         * The suboperation that you want to perform when you quarantine the source file of the malicious process. Valid values:
-         * <p>
-         * 
-         * *   **killAndQuaraFileByPidAndMd5andPath**: terminates the process based on its process ID (PID) and quarantines the source file of the process.
-         * *   **quaraFileByMd5andPath**: quarantines the source file of the process.
-         * *   **killAndQuaraFileByMd5andPath**: terminates the process and quarantines the source file of the process.
+         * SubOperation.
          */
         public Builder subOperation(String subOperation) {
             this.putQueryParameter("SubOperation", subOperation);
@@ -177,10 +162,7 @@ public class OperationSuspEventsRequest extends Request {
         }
 
         /**
-         * The IDs of alert events.
-         * <p>
-         * 
-         * >  You can call the [DescribeAlarmEventList](~~DescribeAlarmEventList~~) operation to obtain the IDs of alert events from the SecurityEventIds response parameter.
+         * OperationSuspEvents
          */
         public Builder suspiciousEventIds(String suspiciousEventIds) {
             this.putQueryParameter("SuspiciousEventIds", suspiciousEventIds);
@@ -189,11 +171,7 @@ public class OperationSuspEventsRequest extends Request {
         }
 
         /**
-         * The type of the exceptions. Valid values:
-         * <p>
-         * 
-         * *   **alarm**: alerts
-         * *   **null**: exceptions
+         * WarnType.
          */
         public Builder warnType(String warnType) {
             this.putQueryParameter("WarnType", warnType);

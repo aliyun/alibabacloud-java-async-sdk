@@ -146,7 +146,7 @@ public class DescribeExposedStatisticsResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The total number of high-risk vulnerabilities that are exposed on the Internet and can be exploited by attackers.
+         * ExposedAsapVulCount.
          */
         public Builder exposedAsapVulCount(Integer exposedAsapVulCount) {
             this.exposedAsapVulCount = exposedAsapVulCount;
@@ -154,7 +154,7 @@ public class DescribeExposedStatisticsResponseBody extends TeaModel {
         }
 
         /**
-         * The total number of system components that are exposed on the Internet. The components include OpenSSL and OpenSSH.
+         * The total number of low-risk vulnerabilities that are exposed on the Internet and can be exploited by attackers.
          */
         public Builder exposedComponentCount(Integer exposedComponentCount) {
             this.exposedComponentCount = exposedComponentCount;
@@ -162,7 +162,7 @@ public class DescribeExposedStatisticsResponseBody extends TeaModel {
         }
 
         /**
-         * The total number of servers that are exposed on the Internet.
+         * DescribeExposedStatistics
          */
         public Builder exposedInstanceCount(Integer exposedInstanceCount) {
             this.exposedInstanceCount = exposedInstanceCount;
@@ -170,7 +170,7 @@ public class DescribeExposedStatisticsResponseBody extends TeaModel {
         }
 
         /**
-         * The total number of IP addresses that are exposed on the Internet.
+         * ExposedIpCount.
          */
         public Builder exposedIpCount(Integer exposedIpCount) {
             this.exposedIpCount = exposedIpCount;
@@ -178,7 +178,7 @@ public class DescribeExposedStatisticsResponseBody extends TeaModel {
         }
 
         /**
-         * The total number of medium-risk vulnerabilities that are exposed on the Internet and can be exploited by attackers.
+         * The ID of the request, which is used to locate and troubleshoot issues.
          */
         public Builder exposedLaterVulCount(Integer exposedLaterVulCount) {
             this.exposedLaterVulCount = exposedLaterVulCount;
@@ -186,7 +186,7 @@ public class DescribeExposedStatisticsResponseBody extends TeaModel {
         }
 
         /**
-         * The total number of low-risk vulnerabilities that are exposed on the Internet and can be exploited by attackers.
+         * ExposedNntfVulCount.
          */
         public Builder exposedNntfVulCount(Integer exposedNntfVulCount) {
             this.exposedNntfVulCount = exposedNntfVulCount;
@@ -194,7 +194,7 @@ public class DescribeExposedStatisticsResponseBody extends TeaModel {
         }
 
         /**
-         * The total number of ports that are exposed on the Internet.
+         * Queries the exposure statistics of the assets on the Internet.
          */
         public Builder exposedPortCount(Integer exposedPortCount) {
             this.exposedPortCount = exposedPortCount;
@@ -202,7 +202,7 @@ public class DescribeExposedStatisticsResponseBody extends TeaModel {
         }
 
         /**
-         * The total number of system keys that are detected on your servers and are exposed on the Internet.
+         * ExposedWeekPasswordMachineCount.
          */
         public Builder exposedWeekPasswordMachineCount(Integer exposedWeekPasswordMachineCount) {
             this.exposedWeekPasswordMachineCount = exposedWeekPasswordMachineCount;
@@ -210,7 +210,7 @@ public class DescribeExposedStatisticsResponseBody extends TeaModel {
         }
 
         /**
-         * The total number of gateway assets that are exposed on the Internet. The gateway assets include NAT gateways and Server Load Balancer (SLB) instances.
+         * GatewayAssetCount.
          */
         public Builder gatewayAssetCount(Integer gatewayAssetCount) {
             this.gatewayAssetCount = gatewayAssetCount;
@@ -218,7 +218,7 @@ public class DescribeExposedStatisticsResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request, which is used to locate and troubleshoot issues.
+         * The total number of servers that are exposed on the Internet.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

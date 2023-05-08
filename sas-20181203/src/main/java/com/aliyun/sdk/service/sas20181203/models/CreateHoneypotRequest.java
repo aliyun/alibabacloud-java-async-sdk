@@ -114,10 +114,10 @@ public class CreateHoneypotRequest extends Request {
         } 
 
         /**
-         * The ID of the image that is used for the honeypot.
+         * The ID of the honeypot image.
          * <p>
          * 
-         * >  You can call the [ListAvailableHoneypot](~~ListAvailableHoneypot~~) operation to obtain the IDs of images from the **HoneypotImageId** response parameter.
+         * > You can call the [ListAvailableHoneypot](~~ListAvailableHoneypot~~) operation to query the IDs of images from the **HoneypotImageId** response parameter.
          */
         public Builder honeypotImageId(String honeypotImageId) {
             this.putQueryParameter("HoneypotImageId", honeypotImageId);
@@ -126,10 +126,10 @@ public class CreateHoneypotRequest extends Request {
         }
 
         /**
-         * The name of the image that is used for the honeypot.
+         * The name of the honeypot image.
          * <p>
          * 
-         * >  You can call the [ListAvailableHoneypot](~~ListAvailableHoneypot~~) operation to obtain the names of images from the **HoneypotImageName** response parameter.
+         * > You can call the [ListAvailableHoneypot](~~ListAvailableHoneypot~~) operation to query the names of images from the **HoneypotImageName** response parameter.
          */
         public Builder honeypotImageName(String honeypotImageName) {
             this.putQueryParameter("HoneypotImageName", honeypotImageName);
@@ -156,14 +156,14 @@ public class CreateHoneypotRequest extends Request {
          *     *   **web**: Git Directory Leak
          *     *   **close**: Disabled
          * 
-         * *   **trojan\_git_addr**: Git Trojan Address.
+         * *   **trojan_git_addr**: Git Trojan Address.
          * 
          * *   **trojan_git.zip**: Git Trojan.
          * 
          * *   **burp**: Burp-specific Defense. Valid values:
          * 
-         *     *   **open**: Enabled
-         *     *   **close**: Disabled
+         *     *   **open**: Enable
+         *     *   **close**: Disable
          * 
          * *   **portrait_option**: Source Tracing Configuration. Valid values:
          * 
@@ -177,10 +177,10 @@ public class CreateHoneypotRequest extends Request {
         }
 
         /**
-         * The ID of the management node to which you want to deploy the honeypot.
+         * The ID of the management node.
          * <p>
          * 
-         * >  You can call the [ListHoneypotNode](~~ListHoneypotNode~~) operation to obtain the IDs of management nodes.
+         * > You can call the [ListHoneypotNode](~~ListHoneypotNode~~) operation to query the IDs of management nodes.
          */
         public Builder nodeId(String nodeId) {
             this.putQueryParameter("NodeId", nodeId);

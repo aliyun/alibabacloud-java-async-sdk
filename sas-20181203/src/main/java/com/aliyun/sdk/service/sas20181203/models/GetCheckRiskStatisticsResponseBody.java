@@ -62,7 +62,7 @@ public class GetCheckRiskStatisticsResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The number of risk scenarios.
+         * Count.
          */
         public Builder count(Integer count) {
             this.count = count;
@@ -70,7 +70,7 @@ public class GetCheckRiskStatisticsResponseBody extends TeaModel {
         }
 
         /**
-         * An array consisting of the statistics on check items that are used in risk scenarios.
+         * Data.
          */
         public Builder data(java.util.List < Data> data) {
             this.data = data;
@@ -78,7 +78,7 @@ public class GetCheckRiskStatisticsResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request, which is used to locate and troubleshoot issues.
+         * RequestId.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -190,7 +190,7 @@ public class GetCheckRiskStatisticsResponseBody extends TeaModel {
             private String typeName; 
 
             /**
-             * The name of the baseline type.
+             * 基线类别名称
              */
             public Builder alias(String alias) {
                 this.alias = alias;
@@ -198,7 +198,7 @@ public class GetCheckRiskStatisticsResponseBody extends TeaModel {
             }
 
             /**
-             * The number of high-risk items.
+             * 高危检查项数量
              */
             public Builder highWarningCount(Integer highWarningCount) {
                 this.highWarningCount = highWarningCount;
@@ -206,7 +206,7 @@ public class GetCheckRiskStatisticsResponseBody extends TeaModel {
             }
 
             /**
-             * The number of low-risk items.
+             * 低危检查项数量
              */
             public Builder lowWarningCount(Integer lowWarningCount) {
                 this.lowWarningCount = lowWarningCount;
@@ -214,7 +214,7 @@ public class GetCheckRiskStatisticsResponseBody extends TeaModel {
             }
 
             /**
-             * The number of medium-risk items.
+             * 中危检查项数量
              */
             public Builder mediumWarningCount(Integer mediumWarningCount) {
                 this.mediumWarningCount = mediumWarningCount;
@@ -222,7 +222,7 @@ public class GetCheckRiskStatisticsResponseBody extends TeaModel {
             }
 
             /**
-             * The number of passed check items.
+             * 通过检查项数量
              */
             public Builder passCount(Integer passCount) {
                 this.passCount = passCount;
@@ -230,7 +230,7 @@ public class GetCheckRiskStatisticsResponseBody extends TeaModel {
             }
 
             /**
-             * The total number of check items.
+             * 检查项总数量
              */
             public Builder totalCount(Integer totalCount) {
                 this.totalCount = totalCount;
@@ -238,7 +238,7 @@ public class GetCheckRiskStatisticsResponseBody extends TeaModel {
             }
 
             /**
-             * The baseline type.
+             * 基线类别
              */
             public Builder typeName(String typeName) {
                 this.typeName = typeName;
@@ -351,7 +351,7 @@ public class GetCheckRiskStatisticsResponseBody extends TeaModel {
             private Integer totalCount; 
 
             /**
-             * The number of high-risk items.
+             * 高危检查项数量
              */
             public Builder highWarningCount(Integer highWarningCount) {
                 this.highWarningCount = highWarningCount;
@@ -359,7 +359,7 @@ public class GetCheckRiskStatisticsResponseBody extends TeaModel {
             }
 
             /**
-             * The number of low-risk items.
+             * 低危检查项数量
              */
             public Builder lowWarningCount(Integer lowWarningCount) {
                 this.lowWarningCount = lowWarningCount;
@@ -367,7 +367,7 @@ public class GetCheckRiskStatisticsResponseBody extends TeaModel {
             }
 
             /**
-             * The number of medium-risk items.
+             * 中危检查项数量
              */
             public Builder mediumWarningCount(Integer mediumWarningCount) {
                 this.mediumWarningCount = mediumWarningCount;
@@ -375,7 +375,7 @@ public class GetCheckRiskStatisticsResponseBody extends TeaModel {
             }
 
             /**
-             * The number of passed check items.
+             * 通过检查项数量
              */
             public Builder passCount(Integer passCount) {
                 this.passCount = passCount;
@@ -383,7 +383,7 @@ public class GetCheckRiskStatisticsResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the risk scenario.
+             * 风险场景名称
              */
             public Builder sceneName(String sceneName) {
                 this.sceneName = sceneName;
@@ -391,7 +391,7 @@ public class GetCheckRiskStatisticsResponseBody extends TeaModel {
             }
 
             /**
-             * An array consisting of the statistics on check items that are used in the risk scenario by baseline type.
+             * SubStatistics.
              */
             public Builder subStatistics(java.util.List < SubStatistics> subStatistics) {
                 this.subStatistics = subStatistics;
@@ -399,7 +399,7 @@ public class GetCheckRiskStatisticsResponseBody extends TeaModel {
             }
 
             /**
-             * The total number of check items.
+             * 检查项总数量
              */
             public Builder totalCount(Integer totalCount) {
                 this.totalCount = totalCount;

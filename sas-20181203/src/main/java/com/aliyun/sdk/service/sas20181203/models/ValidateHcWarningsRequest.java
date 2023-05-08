@@ -13,13 +13,12 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class ValidateHcWarningsRequest extends Request {
     @Query
-    @NameInMap("RiskIds")
-    @Validation(required = true)
-    private String riskIds;
+    @NameInMap("CheckIds")
+    private String checkIds;
 
     @Query
-    @NameInMap("SourceIp")
-    private String sourceIp;
+    @NameInMap("RiskIds")
+    private String riskIds;
 
     @Query
     @NameInMap("Uuids")
@@ -28,8 +27,8 @@ public class ValidateHcWarningsRequest extends Request {
 
     private ValidateHcWarningsRequest(Builder builder) {
         super(builder);
+        this.checkIds = builder.checkIds;
         this.riskIds = builder.riskIds;
-        this.sourceIp = builder.sourceIp;
         this.uuids = builder.uuids;
     }
 
@@ -47,17 +46,17 @@ public class ValidateHcWarningsRequest extends Request {
     }
 
     /**
+     * @return checkIds
+     */
+    public String getCheckIds() {
+        return this.checkIds;
+    }
+
+    /**
      * @return riskIds
      */
     public String getRiskIds() {
         return this.riskIds;
-    }
-
-    /**
-     * @return sourceIp
-     */
-    public String getSourceIp() {
-        return this.sourceIp;
     }
 
     /**
@@ -68,8 +67,8 @@ public class ValidateHcWarningsRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<ValidateHcWarningsRequest, Builder> {
+        private String checkIds; 
         private String riskIds; 
-        private String sourceIp; 
         private String uuids; 
 
         private Builder() {
@@ -78,13 +77,22 @@ public class ValidateHcWarningsRequest extends Request {
 
         private Builder(ValidateHcWarningsRequest request) {
             super(request);
+            this.checkIds = request.checkIds;
             this.riskIds = request.riskIds;
-            this.sourceIp = request.sourceIp;
             this.uuids = request.uuids;
         } 
 
         /**
-         * The IDs of risk items that you want to verify. Separate multiple IDs with commas (,).
+         * CheckIds.
+         */
+        public Builder checkIds(String checkIds) {
+            this.putQueryParameter("CheckIds", checkIds);
+            this.checkIds = checkIds;
+            return this;
+        }
+
+        /**
+         * The UUIDs of servers on which you want to verify risk items.
          */
         public Builder riskIds(String riskIds) {
             this.putQueryParameter("RiskIds", riskIds);
@@ -93,16 +101,7 @@ public class ValidateHcWarningsRequest extends Request {
         }
 
         /**
-         * The source IP address of the request.
-         */
-        public Builder sourceIp(String sourceIp) {
-            this.putQueryParameter("SourceIp", sourceIp);
-            this.sourceIp = sourceIp;
-            return this;
-        }
-
-        /**
-         * The UUIDs of servers on which you want to verify risk items.
+         * The ID of the request.
          */
         public Builder uuids(String uuids) {
             this.putQueryParameter("Uuids", uuids);

@@ -69,7 +69,7 @@ public class DescribeSuspiciousOverallConfigRequest extends Request {
         } 
 
         /**
-         * The source IP address of the request.
+         * SourceIp.
          */
         public Builder sourceIp(String sourceIp) {
             this.putQueryParameter("SourceIp", sourceIp);
@@ -78,15 +78,7 @@ public class DescribeSuspiciousOverallConfigRequest extends Request {
         }
 
         /**
-         * The type of the feature. Valid values:
-         * <p>
-         * 
-         * *   **auto_breaking**: Anti-Virus
-         * *   **ransomware_breaking**: Anti-ransomware (Bait Capture)
-         * *   **webshell\_cloud_breaking**: Webshell Protection
-         * *   **alinet**: Behavior prevention
-         * *   **k8s\_log_analysis**: K8s Threat Detection
-         * *   **alisecguard**: Defense mode for Client Protection
+         * Type.
          */
         public Builder type(String type) {
             this.putQueryParameter("Type", type);

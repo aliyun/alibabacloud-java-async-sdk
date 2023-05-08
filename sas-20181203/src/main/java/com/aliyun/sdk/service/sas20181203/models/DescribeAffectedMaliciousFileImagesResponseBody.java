@@ -62,7 +62,7 @@ public class DescribeAffectedMaliciousFileImagesResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * An array consisting of the images that have malicious image samples.
+         * The region ID of the image repository.
          */
         public Builder affectedMaliciousFileImagesResponse(java.util.List < AffectedMaliciousFileImagesResponse> affectedMaliciousFileImagesResponse) {
             this.affectedMaliciousFileImagesResponse = affectedMaliciousFileImagesResponse;
@@ -70,7 +70,7 @@ public class DescribeAffectedMaliciousFileImagesResponseBody extends TeaModel {
         }
 
         /**
-         * The pagination information.
+         * The ID of the container image.
          */
         public Builder pageInfo(PageInfo pageInfo) {
             this.pageInfo = pageInfo;
@@ -78,7 +78,10 @@ public class DescribeAffectedMaliciousFileImagesResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request, which is used to locate and troubleshoot issues.
+         * The ID of the container image.
+         * <p>
+         * 
+         * >  You can call the [ListRepository](~~145293~~) operation to query the IDs of container images from the value of the **InstanceId** response parameter.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -466,7 +469,7 @@ public class DescribeAffectedMaliciousFileImagesResponseBody extends TeaModel {
             private String uuid; 
 
             /**
-             * The ID of the cluster.
+             * ClusterId.
              */
             public Builder clusterId(String clusterId) {
                 this.clusterId = clusterId;
@@ -474,7 +477,7 @@ public class DescribeAffectedMaliciousFileImagesResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the cluster.
+             * ClusterName.
              */
             public Builder clusterName(String clusterName) {
                 this.clusterName = clusterName;
@@ -482,7 +485,7 @@ public class DescribeAffectedMaliciousFileImagesResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the container.
+             * ContainerId.
              */
             public Builder containerId(String containerId) {
                 this.containerId = containerId;
@@ -490,7 +493,7 @@ public class DescribeAffectedMaliciousFileImagesResponseBody extends TeaModel {
             }
 
             /**
-             * The image digest.
+             * The name of the cluster.
              */
             public Builder digest(String digest) {
                 this.digest = digest;
@@ -498,7 +501,7 @@ public class DescribeAffectedMaliciousFileImagesResponseBody extends TeaModel {
             }
 
             /**
-             * The URL to download the malicious image sample.
+             * DownloadUrl.
              */
             public Builder downloadUrl(String downloadUrl) {
                 this.downloadUrl = downloadUrl;
@@ -506,7 +509,7 @@ public class DescribeAffectedMaliciousFileImagesResponseBody extends TeaModel {
             }
 
             /**
-             * The path to the image file.
+             * The number of entries returned per page. Default value: **20**.
              */
             public Builder filePath(String filePath) {
                 this.filePath = filePath;
@@ -514,7 +517,7 @@ public class DescribeAffectedMaliciousFileImagesResponseBody extends TeaModel {
             }
 
             /**
-             * The timestamp of the first scan.
+             * The ID of the container.
              */
             public Builder firstScanTimestamp(Long firstScanTimestamp) {
                 this.firstScanTimestamp = firstScanTimestamp;
@@ -522,7 +525,7 @@ public class DescribeAffectedMaliciousFileImagesResponseBody extends TeaModel {
             }
 
             /**
-             * The text that is highlighted.
+             * HighLight.
              */
             public Builder highLight(String highLight) {
                 this.highLight = highLight;
@@ -530,7 +533,7 @@ public class DescribeAffectedMaliciousFileImagesResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the image.
+             * Image.
              */
             public Builder image(String image) {
                 this.image = image;
@@ -538,7 +541,10 @@ public class DescribeAffectedMaliciousFileImagesResponseBody extends TeaModel {
             }
 
             /**
-             * The UUID of the image.
+             * The namespace to which the image repository belongs.
+             * <p>
+             * 
+             * >  Fuzzy match is supported.
              */
             public Builder imageUuid(String imageUuid) {
                 this.imageUuid = imageUuid;
@@ -570,7 +576,7 @@ public class DescribeAffectedMaliciousFileImagesResponseBody extends TeaModel {
             }
 
             /**
-             * The timestamp of the last scan.
+             * Queries the details of malicious image samples.
              */
             public Builder latestScanTimestamp(Long latestScanTimestamp) {
                 this.latestScanTimestamp = latestScanTimestamp;
@@ -578,7 +584,10 @@ public class DescribeAffectedMaliciousFileImagesResponseBody extends TeaModel {
             }
 
             /**
-             * The timestamp of the last verification.
+             * The ID of the image repository.
+             * <p>
+             * 
+             * >  You can call the [ListRepository](~~145293~~) operation to query the IDs of image repositories from the value of the **RepoId** response parameter.
              */
             public Builder latestVerifyTimestamp(Long latestVerifyTimestamp) {
                 this.latestVerifyTimestamp = latestVerifyTimestamp;
@@ -586,7 +595,7 @@ public class DescribeAffectedMaliciousFileImagesResponseBody extends TeaModel {
             }
 
             /**
-             * The image layer.
+             * The pod.
              */
             public Builder layer(String layer) {
                 this.layer = layer;
@@ -594,12 +603,7 @@ public class DescribeAffectedMaliciousFileImagesResponseBody extends TeaModel {
             }
 
             /**
-             * The severity of the malicious image sample. Valid values:
-             * <p>
-             * 
-             * *   **serious**
-             * *   **suspicious**
-             * *   **remind**
+             * Level.
              */
             public Builder level(String level) {
                 this.level = level;
@@ -607,7 +611,7 @@ public class DescribeAffectedMaliciousFileImagesResponseBody extends TeaModel {
             }
 
             /**
-             * The MD5 hash value of the malicious image sample.
+             * The pod.
              */
             public Builder maliciousMd5(String maliciousMd5) {
                 this.maliciousMd5 = maliciousMd5;
@@ -615,7 +619,7 @@ public class DescribeAffectedMaliciousFileImagesResponseBody extends TeaModel {
             }
 
             /**
-             * The namespace to which the image repository belongs.
+             * The namespace.
              */
             public Builder namespace(String namespace) {
                 this.namespace = namespace;
@@ -623,7 +627,7 @@ public class DescribeAffectedMaliciousFileImagesResponseBody extends TeaModel {
             }
 
             /**
-             * The pod.
+             * Pod.
              */
             public Builder pod(String pod) {
                 this.pod = pod;
@@ -631,7 +635,7 @@ public class DescribeAffectedMaliciousFileImagesResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the image repository.
+             * The ID of the request, which is used to locate and troubleshoot issues.
              */
             public Builder repoId(String repoId) {
                 this.repoId = repoId;
@@ -639,7 +643,7 @@ public class DescribeAffectedMaliciousFileImagesResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the container image.
+             * The timestamp of the last verification.
              */
             public Builder repoInstanceId(String repoInstanceId) {
                 this.repoInstanceId = repoInstanceId;
@@ -647,7 +651,7 @@ public class DescribeAffectedMaliciousFileImagesResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the image repository.
+             * DescribeAffectedMaliciousFileImages
              */
             public Builder repoName(String repoName) {
                 this.repoName = repoName;
@@ -655,7 +659,7 @@ public class DescribeAffectedMaliciousFileImagesResponseBody extends TeaModel {
             }
 
             /**
-             * The region ID of the image repository.
+             * The pagination information.
              */
             public Builder repoRegionId(String repoRegionId) {
                 this.repoRegionId = repoRegionId;
@@ -663,13 +667,10 @@ public class DescribeAffectedMaliciousFileImagesResponseBody extends TeaModel {
             }
 
             /**
-             * The handling status of the malicious image sample. Valid values:
+             * The name of the image repository.
              * <p>
              * 
-             * *   **0**: unhandled
-             * *   **1**: handled
-             * *   **2**: verifying
-             * *   **3**: added to the whitelist
+             * >  Fuzzy match is supported.
              */
             public Builder status(Integer status) {
                 this.status = status;
@@ -677,7 +678,7 @@ public class DescribeAffectedMaliciousFileImagesResponseBody extends TeaModel {
             }
 
             /**
-             * The tag that is added to the image.
+             * The UUID of the image.
              */
             public Builder tag(String tag) {
                 this.tag = tag;
@@ -786,7 +787,7 @@ public class DescribeAffectedMaliciousFileImagesResponseBody extends TeaModel {
             private Integer totalCount; 
 
             /**
-             * The number of images that have malicious image samples returned on the current page.
+             * The URL to download the malicious image sample.
              */
             public Builder count(Integer count) {
                 this.count = count;
@@ -794,7 +795,7 @@ public class DescribeAffectedMaliciousFileImagesResponseBody extends TeaModel {
             }
 
             /**
-             * The page number of the returned page. Pages start from page **1**. Default value: **1**.
+             * The image digest.
              */
             public Builder currentPage(Integer currentPage) {
                 this.currentPage = currentPage;
@@ -802,7 +803,7 @@ public class DescribeAffectedMaliciousFileImagesResponseBody extends TeaModel {
             }
 
             /**
-             * The number of entries returned per page. Default value: **20**.
+             * The tag that is added to the image.
              */
             public Builder pageSize(Integer pageSize) {
                 this.pageSize = pageSize;
@@ -810,7 +811,7 @@ public class DescribeAffectedMaliciousFileImagesResponseBody extends TeaModel {
             }
 
             /**
-             * The total number of images that have malicious image samples.
+             * The types of the assets that you want to scan.
              */
             public Builder totalCount(Integer totalCount) {
                 this.totalCount = totalCount;

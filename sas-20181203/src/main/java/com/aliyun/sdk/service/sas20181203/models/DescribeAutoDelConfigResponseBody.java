@@ -50,7 +50,7 @@ public class DescribeAutoDelConfigResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The number of days during which a detected vulnerability is retained before the vulnerability is automatically deleted.
+         * Days.
          */
         public Builder days(Integer days) {
             this.days = days;
@@ -58,7 +58,7 @@ public class DescribeAutoDelConfigResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request, which is used to locate and troubleshoot issues.
+         * RequestId.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

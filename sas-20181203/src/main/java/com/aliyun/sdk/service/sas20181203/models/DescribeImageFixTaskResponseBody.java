@@ -62,7 +62,7 @@ public class DescribeImageFixTaskResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * An array that consists of the tasks returned.
+         * The tasks returned.
          */
         public Builder buildTasks(java.util.List < BuildTasks> buildTasks) {
             this.buildTasks = buildTasks;
@@ -78,7 +78,7 @@ public class DescribeImageFixTaskResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request, which is used to locate and troubleshoot issues.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -355,7 +355,7 @@ public class DescribeImageFixTaskResponseBody extends TeaModel {
             }
 
             /**
-             * The type of the task. The value is fixed as IMAGE_REPAIR, which indicates a task that fixes image risks.
+             * The type of the task. The value is fixed as IMAGE_REPAIR. The value indicates a task that fixes image risks.
              */
             public Builder taskType(String taskType) {
                 this.taskType = taskType;
@@ -363,7 +363,7 @@ public class DescribeImageFixTaskResponseBody extends TeaModel {
             }
 
             /**
-             * VulAlias.
+             * The alias of the fixed vulnerability.
              */
             public Builder vulAlias(String vulAlias) {
                 this.vulAlias = vulAlias;
@@ -448,7 +448,7 @@ public class DescribeImageFixTaskResponseBody extends TeaModel {
             }
 
             /**
-             * The page number of the returned page. Default value: **1**.
+             * The page number of the returned page. Default value: **1**
              */
             public Builder currentPage(Integer currentPage) {
                 this.currentPage = currentPage;
@@ -456,7 +456,7 @@ public class DescribeImageFixTaskResponseBody extends TeaModel {
             }
 
             /**
-             * The number of entries returned per page. Default value: **20**.
+             * The number of entries returned per page. Default value: **20**
              */
             public Builder pageSize(Integer pageSize) {
                 this.pageSize = pageSize;

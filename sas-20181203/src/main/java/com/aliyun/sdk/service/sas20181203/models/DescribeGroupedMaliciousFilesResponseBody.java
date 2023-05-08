@@ -62,7 +62,7 @@ public class DescribeGroupedMaliciousFilesResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * An array that consists of the malicious image samples.
+         * GroupedMaliciousFileResponse.
          */
         public Builder groupedMaliciousFileResponse(java.util.List < GroupedMaliciousFileResponse> groupedMaliciousFileResponse) {
             this.groupedMaliciousFileResponse = groupedMaliciousFileResponse;
@@ -70,7 +70,7 @@ public class DescribeGroupedMaliciousFilesResponseBody extends TeaModel {
         }
 
         /**
-         * The pagination information.
+         * PageInfo.
          */
         public Builder pageInfo(PageInfo pageInfo) {
             this.pageInfo = pageInfo;
@@ -78,7 +78,7 @@ public class DescribeGroupedMaliciousFilesResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request, which is used to locate and troubleshoot issues.
+         * RequestId.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -190,7 +190,7 @@ public class DescribeGroupedMaliciousFilesResponseBody extends TeaModel {
             private Integer status; 
 
             /**
-             * The timestamp when the first scan was performed. Unit: milliseconds.
+             * FirstScanTimestamp.
              */
             public Builder firstScanTimestamp(Long firstScanTimestamp) {
                 this.firstScanTimestamp = firstScanTimestamp;
@@ -198,7 +198,7 @@ public class DescribeGroupedMaliciousFilesResponseBody extends TeaModel {
             }
 
             /**
-             * The number of affected images.
+             * ImageCount.
              */
             public Builder imageCount(Long imageCount) {
                 this.imageCount = imageCount;
@@ -206,7 +206,7 @@ public class DescribeGroupedMaliciousFilesResponseBody extends TeaModel {
             }
 
             /**
-             * The timestamp when the last scan was performed. Unit: milliseconds.
+             * LatestScanTimestamp.
              */
             public Builder latestScanTimestamp(Long latestScanTimestamp) {
                 this.latestScanTimestamp = latestScanTimestamp;
@@ -214,12 +214,7 @@ public class DescribeGroupedMaliciousFilesResponseBody extends TeaModel {
             }
 
             /**
-             * The severity of the malicious image sample. Valid values:
-             * <p>
-             * 
-             * *   **serious**
-             * *   **suspicious**
-             * *   **remind**
+             * Level.
              */
             public Builder level(String level) {
                 this.level = level;
@@ -227,7 +222,7 @@ public class DescribeGroupedMaliciousFilesResponseBody extends TeaModel {
             }
 
             /**
-             * The MD5 hash value of the malicious image sample.
+             * MaliciousMd5.
              */
             public Builder maliciousMd5(String maliciousMd5) {
                 this.maliciousMd5 = maliciousMd5;
@@ -235,7 +230,7 @@ public class DescribeGroupedMaliciousFilesResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the malicious image sample.
+             * MaliciousName.
              */
             public Builder maliciousName(String maliciousName) {
                 this.maliciousName = maliciousName;
@@ -243,13 +238,7 @@ public class DescribeGroupedMaliciousFilesResponseBody extends TeaModel {
             }
 
             /**
-             * The handling status of the malicious image sample. Valid values:
-             * <p>
-             * 
-             * *   **0**: unhandled
-             * *   **1**: handled
-             * *   **2**: verifying
-             * *   **3**: added to the whitelist
+             * Status.
              */
             public Builder status(Integer status) {
                 this.status = status;
@@ -326,7 +315,7 @@ public class DescribeGroupedMaliciousFilesResponseBody extends TeaModel {
             private Integer totalCount; 
 
             /**
-             * The number of entries returned on the current page.
+             * Count.
              */
             public Builder count(Integer count) {
                 this.count = count;
@@ -334,7 +323,7 @@ public class DescribeGroupedMaliciousFilesResponseBody extends TeaModel {
             }
 
             /**
-             * The page number of the returned page.
+             * CurrentPage.
              */
             public Builder currentPage(Integer currentPage) {
                 this.currentPage = currentPage;
@@ -342,7 +331,7 @@ public class DescribeGroupedMaliciousFilesResponseBody extends TeaModel {
             }
 
             /**
-             * The number of entries returned per page. Default value: **20**.
+             * PageSize.
              */
             public Builder pageSize(Integer pageSize) {
                 this.pageSize = pageSize;
@@ -350,7 +339,7 @@ public class DescribeGroupedMaliciousFilesResponseBody extends TeaModel {
             }
 
             /**
-             * The total number of entries returned.
+             * TotalCount.
              */
             public Builder totalCount(Integer totalCount) {
                 this.totalCount = totalCount;

@@ -74,11 +74,7 @@ public class UpdateJenkinsImageRegistryPersistenceDayResponseBody extends TeaMod
         private Long timeCost; 
 
         /**
-         * Indicates whether the request was successful. Valid values:
-         * <p>
-         * 
-         * *   **true**: The request was successful.
-         * *   **false**: The request failed.
+         * Data.
          */
         public Builder data(Boolean data) {
             this.data = data;
@@ -86,7 +82,7 @@ public class UpdateJenkinsImageRegistryPersistenceDayResponseBody extends TeaMod
         }
 
         /**
-         * The HTTP status code returned.
+         * HttpStatusCode.
          */
         public Builder httpStatusCode(Integer httpStatusCode) {
             this.httpStatusCode = httpStatusCode;
@@ -94,7 +90,7 @@ public class UpdateJenkinsImageRegistryPersistenceDayResponseBody extends TeaMod
         }
 
         /**
-         * The ID of the request, which is used to locate and troubleshoot issues.
+         * RequestId.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -102,7 +98,7 @@ public class UpdateJenkinsImageRegistryPersistenceDayResponseBody extends TeaMod
         }
 
         /**
-         * The time consumed. Unit: seconds.
+         * TimeCost.
          */
         public Builder timeCost(Long timeCost) {
             this.timeCost = timeCost;

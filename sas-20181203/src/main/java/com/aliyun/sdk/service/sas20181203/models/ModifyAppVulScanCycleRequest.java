@@ -54,12 +54,7 @@ public class ModifyAppVulScanCycleRequest extends Request {
         } 
 
         /**
-         * The scan cycle for application vulnerabilities.
-         * <p>
-         * 
-         * *   1week
-         * *   2weeks
-         * *   3days
+         * Cycle.
          */
         public Builder cycle(String cycle) {
             this.putQueryParameter("Cycle", cycle);

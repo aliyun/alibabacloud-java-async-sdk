@@ -50,7 +50,7 @@ public class SasInstallCodeResponseBody extends TeaModel {
         private String data; 
 
         /**
-         * The ID of the request.
+         * RequestId.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -58,7 +58,7 @@ public class SasInstallCodeResponseBody extends TeaModel {
         }
 
         /**
-         * The installation verification code that is used to run the installation command when you manually install the Security Center agent.
+         * data.
          */
         public Builder data(String data) {
             this.data = data;

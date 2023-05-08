@@ -106,7 +106,7 @@ public class CreateHoneypotNodeResponseBody extends TeaModel {
         }
 
         /**
-         * HoneypotNode.
+         * The data returned.
          */
         public Builder honeypotNode(HoneypotNode honeypotNode) {
             this.honeypotNode = honeypotNode;
@@ -182,7 +182,7 @@ public class CreateHoneypotNodeResponseBody extends TeaModel {
             private String nodeId; 
 
             /**
-             * NodeId.
+             * The ID of the management node.
              */
             public Builder nodeId(String nodeId) {
                 this.nodeId = nodeId;

@@ -54,12 +54,7 @@ public class ModifyOpenLogShipperRequest extends Request {
         } 
 
         /**
-         * The ID of the request source. The default value is **aegis**. Valid values:
-         * <p>
-         * - **aegis**: Server Guard
-         * - **sas**: Security Center
-         * 
-         * > If you use Server Guard, set the value to **aegis**. If you use Security Center, set the value to **sas**.
+         * From.
          */
         public Builder from(String from) {
             this.putQueryParameter("From", from);

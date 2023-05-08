@@ -98,7 +98,7 @@ public class ListUuidsByWebPathRequest extends Request {
         } 
 
         /**
-         * The number of the page to return.
+         * CurrentPage.
          */
         public Builder currentPage(Integer currentPage) {
             this.putQueryParameter("CurrentPage", currentPage);
@@ -107,7 +107,7 @@ public class ListUuidsByWebPathRequest extends Request {
         }
 
         /**
-         * The number of entries to return on each page.
+         * PageSize.
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -116,11 +116,7 @@ public class ListUuidsByWebPathRequest extends Request {
         }
 
         /**
-         * The path type of the web directory. Valid values:
-         * <p>
-         * 
-         * *   **def**: automatically identified
-         * *   **customize**: manually added
+         * 类型
          */
         public Builder type(String type) {
             this.putQueryParameter("Type", type);
@@ -129,7 +125,7 @@ public class ListUuidsByWebPathRequest extends Request {
         }
 
         /**
-         * The path to the web directory.
+         * 路径
          */
         public Builder webPath(String webPath) {
             this.putQueryParameter("WebPath", webPath);

@@ -50,7 +50,7 @@ public class ModifyPushAllTaskResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * PushTaskRsp.
+         * The ID of the server group to which the server belongs.
          */
         public Builder pushTaskRsp(PushTaskRsp pushTaskRsp) {
             this.pushTaskRsp = pushTaskRsp;
@@ -58,7 +58,7 @@ public class ModifyPushAllTaskResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * HEALTH_CHECK,OVAL_ENTITY
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -206,7 +206,7 @@ public class ModifyPushAllTaskResponseBody extends TeaModel {
             private String uuid; 
 
             /**
-             * GroupId.
+             * The region in which the server resides.
              */
             public Builder groupId(Long groupId) {
                 this.groupId = groupId;
@@ -222,7 +222,7 @@ public class ModifyPushAllTaskResponseBody extends TeaModel {
             }
 
             /**
-             * InstanceName.
+             * The ID of the server.
              */
             public Builder instanceName(String instanceName) {
                 this.instanceName = instanceName;
@@ -238,7 +238,7 @@ public class ModifyPushAllTaskResponseBody extends TeaModel {
             }
 
             /**
-             * Message.
+             * ModifyPushAllTask
              */
             public Builder message(String message) {
                 this.message = message;
@@ -246,7 +246,7 @@ public class ModifyPushAllTaskResponseBody extends TeaModel {
             }
 
             /**
-             * Online.
+             * Performs security check tasks on servers with a few clicks.
              */
             public Builder online(Boolean online) {
                 this.online = online;
@@ -262,7 +262,7 @@ public class ModifyPushAllTaskResponseBody extends TeaModel {
             }
 
             /**
-             * Region.
+             * 1.2.XX.XX
              */
             public Builder region(String region) {
                 this.region = region;
@@ -270,7 +270,7 @@ public class ModifyPushAllTaskResponseBody extends TeaModel {
             }
 
             /**
-             * Success.
+             * The ID of the request, which is used to locate and troubleshoot issues.
              */
             public Builder success(Boolean success) {
                 this.success = success;
@@ -278,7 +278,13 @@ public class ModifyPushAllTaskResponseBody extends TeaModel {
             }
 
             /**
-             * Uuid.
+             * Indicates whether the Security Center agent is online. Valid values:
+             * <p>
+             * 
+             * *   **true**: yes
+             * *   **false**: no
+             * 
+             * >  If the Security Center agent of the server is offline, Security Center does not protect the server.
              */
             public Builder uuid(String uuid) {
                 this.uuid = uuid;
@@ -319,7 +325,7 @@ public class ModifyPushAllTaskResponseBody extends TeaModel {
             private java.util.List < PushTaskResultList> pushTaskResultList; 
 
             /**
-             * PushTaskResultList.
+             * The UUID of the server.
              */
             public Builder pushTaskResultList(java.util.List < PushTaskResultList> pushTaskResultList) {
                 this.pushTaskResultList = pushTaskResultList;

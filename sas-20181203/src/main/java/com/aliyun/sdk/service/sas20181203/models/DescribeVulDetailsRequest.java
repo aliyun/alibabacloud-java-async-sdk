@@ -99,7 +99,7 @@ public class DescribeVulDetailsRequest extends Request {
         } 
 
         /**
-         * The name in the **vulnerability introduction**.
+         * AliasName.
          */
         public Builder aliasName(String aliasName) {
             this.putQueryParameter("AliasName", aliasName);
@@ -108,11 +108,7 @@ public class DescribeVulDetailsRequest extends Request {
         }
 
         /**
-         * The language of the content within the request and response. Valid values:
-         * <p>
-         * 
-         * *   **zh**: Chinese
-         * *   **en**: English
+         * Lang.
          */
         public Builder lang(String lang) {
             this.putQueryParameter("Lang", lang);
@@ -121,7 +117,7 @@ public class DescribeVulDetailsRequest extends Request {
         }
 
         /**
-         * The name of the vulnerability.
+         * Name.
          */
         public Builder name(String name) {
             this.putQueryParameter("Name", name);
@@ -130,15 +126,7 @@ public class DescribeVulDetailsRequest extends Request {
         }
 
         /**
-         * The type of the vulnerability. Valid values:
-         * <p>
-         * 
-         * *   **cve**: Linux software vulnerability
-         * *   **sys**: Windows system vulnerability
-         * *   **cms**: Web-CMS vulnerability
-         * *   **app**: application vulnerabilitiy
-         * *   **emg**: urgent vulnerability
-         * *   **sca**: vulnerability that is detected based on software component analysis
+         * Type.
          */
         public Builder type(String type) {
             this.putQueryParameter("Type", type);

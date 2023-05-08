@@ -62,7 +62,7 @@ public class ListClientUserDefineRulesResponseBody extends TeaModel {
         private java.util.List < UserDefineRuleList> userDefineRuleList; 
 
         /**
-         * The pagination information.
+         * PageInfo.
          */
         public Builder pageInfo(PageInfo pageInfo) {
             this.pageInfo = pageInfo;
@@ -70,7 +70,7 @@ public class ListClientUserDefineRulesResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request, which is used to locate and troubleshoot issues.
+         * RequestId.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -78,7 +78,7 @@ public class ListClientUserDefineRulesResponseBody extends TeaModel {
         }
 
         /**
-         * An array that consists of the rules.
+         * UserDefineRuleList.
          */
         public Builder userDefineRuleList(java.util.List < UserDefineRuleList> userDefineRuleList) {
             this.userDefineRuleList = userDefineRuleList;
@@ -142,7 +142,7 @@ public class ListClientUserDefineRulesResponseBody extends TeaModel {
             private Integer totalCount; 
 
             /**
-             * The page number of the returned page.
+             * CurrentPage.
              */
             public Builder currentPage(Integer currentPage) {
                 this.currentPage = currentPage;
@@ -150,7 +150,7 @@ public class ListClientUserDefineRulesResponseBody extends TeaModel {
             }
 
             /**
-             * The number of entries returned per page.
+             * PageSize.
              */
             public Builder pageSize(Integer pageSize) {
                 this.pageSize = pageSize;
@@ -158,7 +158,7 @@ public class ListClientUserDefineRulesResponseBody extends TeaModel {
             }
 
             /**
-             * The total number of entries returned.
+             * TotalCount.
              */
             public Builder totalCount(Integer totalCount) {
                 this.totalCount = totalCount;
@@ -259,11 +259,7 @@ public class ListClientUserDefineRulesResponseBody extends TeaModel {
             private Integer type; 
 
             /**
-             * The action of the rule. Valid values:
-             * <p>
-             * 
-             * *   **0**: allow
-             * *   **1**: block
+             * ActionType.
              */
             public Builder actionType(Integer actionType) {
                 this.actionType = actionType;
@@ -271,7 +267,7 @@ public class ListClientUserDefineRulesResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the rule.
+             * Id.
              */
             public Builder id(Long id) {
                 this.id = id;
@@ -279,7 +275,7 @@ public class ListClientUserDefineRulesResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the rule.
+             * Name.
              */
             public Builder name(String name) {
                 this.name = name;
@@ -287,12 +283,7 @@ public class ListClientUserDefineRulesResponseBody extends TeaModel {
             }
 
             /**
-             * The type of the operating system. Valid values:
-             * <p>
-             * 
-             * *   **windows**: Windows
-             * *   **linux**: Linux
-             * *   **all**: all types
+             * Platform.
              */
             public Builder platform(String platform) {
                 this.platform = platform;
@@ -300,7 +291,7 @@ public class ListClientUserDefineRulesResponseBody extends TeaModel {
             }
 
             /**
-             * The switch ID of the rule.
+             * SwitchId.
              */
             public Builder switchId(String switchId) {
                 this.switchId = switchId;
@@ -308,16 +299,7 @@ public class ListClientUserDefineRulesResponseBody extends TeaModel {
             }
 
             /**
-             * The type of the rule. Valid values:
-             * <p>
-             * 
-             * *   **1**: Process hash
-             * *   **2**: Command line
-             * *   **3**: Process Network
-             * *   **4**: File Read and Write
-             * *   **5**: Operation on Registry
-             * *   **6**: Dynamic-link Library Loading
-             * *   **7**: File Renaming
+             * Type.
              */
             public Builder type(Integer type) {
                 this.type = type;

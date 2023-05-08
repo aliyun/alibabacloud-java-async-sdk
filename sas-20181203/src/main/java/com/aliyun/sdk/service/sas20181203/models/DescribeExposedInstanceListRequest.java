@@ -180,7 +180,7 @@ public class DescribeExposedInstanceListRequest extends Request {
         } 
 
         /**
-         * The number of the page to return.
+         * The server component that is exposed on the Internet.
          */
         public Builder currentPage(Integer currentPage) {
             this.putQueryParameter("CurrentPage", currentPage);
@@ -189,7 +189,7 @@ public class DescribeExposedInstanceListRequest extends Request {
         }
 
         /**
-         * The server component that is exposed on the Internet.
+         * The total number of servers that are exposed on the Internet.
          */
         public Builder exposureComponent(String exposureComponent) {
             this.putQueryParameter("ExposureComponent", exposureComponent);
@@ -198,7 +198,10 @@ public class DescribeExposedInstanceListRequest extends Request {
         }
 
         /**
-         * The public IP address of the server.
+         * The ID of the region where the server resides.
+         * <p>
+         * 
+         * >  For more information about the mapping between region IDs and region names, see [Regions and zones](~~40654~~).
          */
         public Builder exposureIp(String exposureIp) {
             this.putQueryParameter("ExposureIp", exposureIp);
@@ -207,7 +210,7 @@ public class DescribeExposedInstanceListRequest extends Request {
         }
 
         /**
-         * The port that is exposed on the Internet.
+         * The public IP address that is exposed on the Internet.
          */
         public Builder exposurePort(String exposurePort) {
             this.putQueryParameter("ExposurePort", exposurePort);
@@ -216,14 +219,41 @@ public class DescribeExposedInstanceListRequest extends Request {
         }
 
         /**
-         * The ID of the server group.
+         * The number of entries to return on each page. Default value: 20. If you leave this parameter empty, 20 entries are returned on each page.
          * <p>
          * 
-         * > You can call the [DescribeAllGroups](~~DescribeAllGroups~~) operation to query the IDs of server groups.
+         * >  We recommend that you do not leave this parameter empty.
          */
         public Builder groupId(Long groupId) {
             this.putQueryParameter("GroupId", groupId);
             this.groupId = groupId;
+            return this;
+        }
+
+        /**
+         * The name of the server.
+         */
+        public Builder healthStatus(Boolean healthStatus) {
+            this.putQueryParameter("HealthStatus", healthStatus);
+            this.healthStatus = healthStatus;
+            return this;
+        }
+
+        /**
+         * The UUID of the server.
+         */
+        public Builder instanceId(String instanceId) {
+            this.putQueryParameter("InstanceId", instanceId);
+            this.instanceId = instanceId;
+            return this;
+        }
+
+        /**
+         * The ID of the server group.
+         */
+        public Builder instanceName(String instanceName) {
+            this.putQueryParameter("InstanceName", instanceName);
+            this.instanceName = instanceName;
             return this;
         }
 
@@ -240,36 +270,6 @@ public class DescribeExposedInstanceListRequest extends Request {
          * 
          * >  Make sure that you have sufficient balance within your account. If you have overdue payments in your account, pay-as-you-go and preemptible instances are stopped or released. For information about how the status of ECS instances changes when you have overdue payments in your account, see [Overdue payments](~~170589~~).
          */
-        public Builder healthStatus(Boolean healthStatus) {
-            this.putQueryParameter("HealthStatus", healthStatus);
-            this.healthStatus = healthStatus;
-            return this;
-        }
-
-        /**
-         * The ID of the server.
-         */
-        public Builder instanceId(String instanceId) {
-            this.putQueryParameter("InstanceId", instanceId);
-            this.instanceId = instanceId;
-            return this;
-        }
-
-        /**
-         * The name of the server.
-         */
-        public Builder instanceName(String instanceName) {
-            this.putQueryParameter("InstanceName", instanceName);
-            this.instanceName = instanceName;
-            return this;
-        }
-
-        /**
-         * The number of entries to return on each page. Default value: 20. If you leave this parameter empty, 20 entries are returned on each page.
-         * <p>
-         * 
-         * >  We recommend that you do not leave this parameter empty.
-         */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
             this.pageSize = pageSize;
@@ -277,11 +277,7 @@ public class DescribeExposedInstanceListRequest extends Request {
         }
 
         /**
-         * Specifies whether the server has vulnerabilities. Valid values:
-         * <p>
-         * 
-         * *   **true**: The server has vulnerabilities.
-         * *   **false**: The server does not have vulnerabilities.
+         * The public IP address of the server.
          */
         public Builder vulStatus(Boolean vulStatus) {
             this.putQueryParameter("VulStatus", vulStatus);

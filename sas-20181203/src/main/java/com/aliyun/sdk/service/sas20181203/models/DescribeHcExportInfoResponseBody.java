@@ -134,7 +134,7 @@ public class DescribeHcExportInfoResponseBody extends TeaModel {
         private Integer totalCount; 
 
         /**
-         * The number of exported entries.
+         * CurrentCount.
          */
         public Builder currentCount(Integer currentCount) {
             this.currentCount = currentCount;
@@ -142,7 +142,7 @@ public class DescribeHcExportInfoResponseBody extends TeaModel {
         }
 
         /**
-         * The name of the exported file.
+         * FileName.
          */
         public Builder fileName(String fileName) {
             this.fileName = fileName;
@@ -150,7 +150,7 @@ public class DescribeHcExportInfoResponseBody extends TeaModel {
         }
 
         /**
-         * The time when the export task was created.
+         * GmtCreate.
          */
         public Builder gmtCreate(Long gmtCreate) {
             this.gmtCreate = gmtCreate;
@@ -158,7 +158,7 @@ public class DescribeHcExportInfoResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the export task.
+         * Id.
          */
         public Builder id(Long id) {
             this.id = id;
@@ -166,7 +166,7 @@ public class DescribeHcExportInfoResponseBody extends TeaModel {
         }
 
         /**
-         * The download URL for the exported file.
+         * Link.
          */
         public Builder link(String link) {
             this.link = link;
@@ -174,7 +174,7 @@ public class DescribeHcExportInfoResponseBody extends TeaModel {
         }
 
         /**
-         * The progress percentage of the export task.
+         * Progress.
          */
         public Builder progress(Integer progress) {
             this.progress = progress;
@@ -182,7 +182,7 @@ public class DescribeHcExportInfoResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request, which is used to locate and troubleshoot issues.
+         * RequestId.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -190,11 +190,7 @@ public class DescribeHcExportInfoResponseBody extends TeaModel {
         }
 
         /**
-         * The status of the export task. Valid values:
-         * <p>
-         * 
-         * *   **exporting**: The task is in progress.
-         * *   **success**: The task is complete.
+         * ResultStatus.
          */
         public Builder resultStatus(String resultStatus) {
             this.resultStatus = resultStatus;
@@ -202,7 +198,7 @@ public class DescribeHcExportInfoResponseBody extends TeaModel {
         }
 
         /**
-         * The total number of exported entries.
+         * TotalCount.
          */
         public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;

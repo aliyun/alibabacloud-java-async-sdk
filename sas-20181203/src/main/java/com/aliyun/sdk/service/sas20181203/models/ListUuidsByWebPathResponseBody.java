@@ -62,7 +62,7 @@ public class ListUuidsByWebPathResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * An array that consists of the protected assets.
+         * List.
          */
         public Builder list(java.util.List < List> list) {
             this.list = list;
@@ -70,7 +70,7 @@ public class ListUuidsByWebPathResponseBody extends TeaModel {
         }
 
         /**
-         * The pagination information.
+         * PageInfo.
          */
         public Builder pageInfo(PageInfo pageInfo) {
             this.pageInfo = pageInfo;
@@ -78,7 +78,7 @@ public class ListUuidsByWebPathResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request, which is used to locate and troubleshoot issues.
+         * RequestId.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -154,7 +154,7 @@ public class ListUuidsByWebPathResponseBody extends TeaModel {
             private String uuid; 
 
             /**
-             * The public IP address of the server.
+             * InternetIp.
              */
             public Builder internetIp(String internetIp) {
                 this.internetIp = internetIp;
@@ -162,7 +162,7 @@ public class ListUuidsByWebPathResponseBody extends TeaModel {
             }
 
             /**
-             * The private IP address of the server.
+             * IntranetIp.
              */
             public Builder intranetIp(String intranetIp) {
                 this.intranetIp = intranetIp;
@@ -170,7 +170,7 @@ public class ListUuidsByWebPathResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the server.
+             * MachineName.
              */
             public Builder machineName(String machineName) {
                 this.machineName = machineName;
@@ -178,7 +178,7 @@ public class ListUuidsByWebPathResponseBody extends TeaModel {
             }
 
             /**
-             * The UUID of the server.
+             * Uuid.
              */
             public Builder uuid(String uuid) {
                 this.uuid = uuid;
@@ -255,7 +255,7 @@ public class ListUuidsByWebPathResponseBody extends TeaModel {
             private Integer totalCount; 
 
             /**
-             * The number of entries returned on the current page.
+             * Count.
              */
             public Builder count(Integer count) {
                 this.count = count;
@@ -263,7 +263,7 @@ public class ListUuidsByWebPathResponseBody extends TeaModel {
             }
 
             /**
-             * The page number of the returned page.
+             * CurrentPage.
              */
             public Builder currentPage(Integer currentPage) {
                 this.currentPage = currentPage;
@@ -271,7 +271,7 @@ public class ListUuidsByWebPathResponseBody extends TeaModel {
             }
 
             /**
-             * The number of entries returned per page.
+             * PageSize.
              */
             public Builder pageSize(Integer pageSize) {
                 this.pageSize = pageSize;
@@ -279,7 +279,7 @@ public class ListUuidsByWebPathResponseBody extends TeaModel {
             }
 
             /**
-             * The total number of entries returned.
+             * TotalCount.
              */
             public Builder totalCount(Integer totalCount) {
                 this.totalCount = totalCount;

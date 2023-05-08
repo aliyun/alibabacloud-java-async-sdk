@@ -69,10 +69,7 @@ public class DeleteHoneypotPresetRequest extends Request {
         } 
 
         /**
-         * The ID of the honeypot template.
-         * <p>
-         * 
-         * >  You can call the [ListHoneypotPreset](~~ListHoneypotPreset~~) operation to query the IDs of honeypot templates.
+         * 蜜罐模板唯一ID
          */
         public Builder honeypotPresetId(String honeypotPresetId) {
             this.putQueryParameter("HoneypotPresetId", honeypotPresetId);
@@ -81,7 +78,10 @@ public class DeleteHoneypotPresetRequest extends Request {
         }
 
         /**
-         * Lang.
+         * 设置请求和接收消息的语言类型，默认为**zh**。取值：
+         * <p>
+         * - **zh**：中文
+         * - **en**：英文
          */
         public Builder lang(String lang) {
             this.putQueryParameter("Lang", lang);

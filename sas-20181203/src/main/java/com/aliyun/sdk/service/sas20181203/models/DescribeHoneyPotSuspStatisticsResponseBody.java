@@ -50,7 +50,7 @@ public class DescribeHoneyPotSuspStatisticsResponseBody extends TeaModel {
         private java.util.List < SuspHoneyPotStatisticsResponse> suspHoneyPotStatisticsResponse; 
 
         /**
-         * The ID of the request, which is used to locate and troubleshoot issues.
+         * RequestId.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -58,7 +58,7 @@ public class DescribeHoneyPotSuspStatisticsResponseBody extends TeaModel {
         }
 
         /**
-         * An array that consists of the top 5 VPCs or assets for which alerts are most frequently generated.
+         * SuspHoneyPotStatisticsResponse.
          */
         public Builder suspHoneyPotStatisticsResponse(java.util.List < SuspHoneyPotStatisticsResponse> suspHoneyPotStatisticsResponse) {
             this.suspHoneyPotStatisticsResponse = suspHoneyPotStatisticsResponse;
@@ -158,7 +158,7 @@ public class DescribeHoneyPotSuspStatisticsResponseBody extends TeaModel {
             private String vpcName; 
 
             /**
-             * The total number of alerts that are generated for the asset.
+             * Count.
              */
             public Builder count(Integer count) {
                 this.count = count;
@@ -166,10 +166,7 @@ public class DescribeHoneyPotSuspStatisticsResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the server.
-             * <p>
-             * 
-             * > This parameter is returned only when **StatisticsKeyType** is set to **uuid**.
+             * InstanceId.
              */
             public Builder instanceId(String instanceId) {
                 this.instanceId = instanceId;
@@ -177,10 +174,7 @@ public class DescribeHoneyPotSuspStatisticsResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the server.
-             * <p>
-             * 
-             * > This parameter is returned only when **StatisticsKeyType** is set to **uuid**.
+             * InstanceName.
              */
             public Builder instanceName(String instanceName) {
                 this.instanceName = instanceName;
@@ -188,11 +182,7 @@ public class DescribeHoneyPotSuspStatisticsResponseBody extends TeaModel {
             }
 
             /**
-             * The type of the asset. Valid values:
-             * <p>
-             * 
-             * *   **vpcInstanceId**: VPC
-             * *   **uuid**: server
+             * Type.
              */
             public Builder type(String type) {
                 this.type = type;
@@ -200,10 +190,7 @@ public class DescribeHoneyPotSuspStatisticsResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the VPC.
-             * <p>
-             * 
-             * > This parameter is returned only when **StatisticsKeyType** is set to **vpcInstanceId**.
+             * VpcId.
              */
             public Builder vpcId(String vpcId) {
                 this.vpcId = vpcId;
@@ -211,10 +198,7 @@ public class DescribeHoneyPotSuspStatisticsResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the VPC.
-             * <p>
-             * 
-             * > This parameter is returned only when **StatisticsKeyType** is set to **vpcInstanceId**.
+             * VpcName.
              */
             public Builder vpcName(String vpcName) {
                 this.vpcName = vpcName;

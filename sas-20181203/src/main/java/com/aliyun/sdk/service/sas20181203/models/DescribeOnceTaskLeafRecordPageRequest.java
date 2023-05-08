@@ -170,7 +170,7 @@ public class DescribeOnceTaskLeafRecordPageRequest extends Request {
         } 
 
         /**
-         * CurrentPage.
+         * The number of the page to return.
          */
         public Builder currentPage(Integer currentPage) {
             this.putQueryParameter("CurrentPage", currentPage);
@@ -179,7 +179,7 @@ public class DescribeOnceTaskLeafRecordPageRequest extends Request {
         }
 
         /**
-         * EndTime.
+         * The end timestamp of the sub-task.
          */
         public Builder endTime(Long endTime) {
             this.putQueryParameter("EndTime", endTime);
@@ -188,7 +188,7 @@ public class DescribeOnceTaskLeafRecordPageRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * The number of entries to return on each page. Default value: 20
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -197,7 +197,7 @@ public class DescribeOnceTaskLeafRecordPageRequest extends Request {
         }
 
         /**
-         * RelateInfo.
+         * Specifies whether extension information is associated.
          */
         public Builder relateInfo(Boolean relateInfo) {
             this.putQueryParameter("RelateInfo", relateInfo);
@@ -206,7 +206,7 @@ public class DescribeOnceTaskLeafRecordPageRequest extends Request {
         }
 
         /**
-         * Source.
+         * The source of the request.
          */
         public Builder source(String source) {
             this.putQueryParameter("Source", source);
@@ -215,7 +215,7 @@ public class DescribeOnceTaskLeafRecordPageRequest extends Request {
         }
 
         /**
-         * StartTime.
+         * The start timestamp of the sub-task.
          */
         public Builder startTime(Long startTime) {
             this.putQueryParameter("StartTime", startTime);
@@ -224,7 +224,7 @@ public class DescribeOnceTaskLeafRecordPageRequest extends Request {
         }
 
         /**
-         * StatusList.
+         * The status information.
          */
         public Builder statusList(java.util.List < String > statusList) {
             this.putQueryParameter("StatusList", statusList);
@@ -233,7 +233,7 @@ public class DescribeOnceTaskLeafRecordPageRequest extends Request {
         }
 
         /**
-         * TaskId.
+         * The ID of the sub-task.
          */
         public Builder taskId(String taskId) {
             this.putQueryParameter("TaskId", taskId);
@@ -242,7 +242,11 @@ public class DescribeOnceTaskLeafRecordPageRequest extends Request {
         }
 
         /**
-         * TaskType.
+         * The type of the sub-task. Valid values:
+         * <p>
+         * 
+         * *   **IMAGE_SCAN**: image scan task
+         * *   **IMAGE_REGISTRY_PULL**: image asset synchronization task
          */
         public Builder taskType(String taskType) {
             this.putQueryParameter("TaskType", taskType);

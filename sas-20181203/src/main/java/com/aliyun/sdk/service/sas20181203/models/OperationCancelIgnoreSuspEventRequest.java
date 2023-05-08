@@ -55,7 +55,7 @@ public class OperationCancelIgnoreSuspEventRequest extends Request {
         } 
 
         /**
-         * The IDs of alert events.
+         * OperationCancelIgnoreSuspEvent
          */
         public Builder securityEventIds(java.util.List < Long > securityEventIds) {
             this.putQueryParameter("SecurityEventIds", securityEventIds);

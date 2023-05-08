@@ -62,7 +62,7 @@ public class DescribePropertyScaDetailResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The pagination information.
+         * 192.168
          */
         public Builder pageInfo(PageInfo pageInfo) {
             this.pageInfo = pageInfo;
@@ -70,7 +70,11 @@ public class DescribePropertyScaDetailResponseBody extends TeaModel {
         }
 
         /**
-         * The details about the asset fingerprints returned.
+         * The listening status of the process. Valid values:
+         * <p>
+         * 
+         * *   **NONE**: not listening
+         * *   **LISTEN**: listening
          */
         public Builder propertys(java.util.List < Propertys> propertys) {
             this.propertys = propertys;
@@ -78,7 +82,7 @@ public class DescribePropertyScaDetailResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request, which is used to locate and troubleshoot issues.
+         * 1641024565
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -154,7 +158,7 @@ public class DescribePropertyScaDetailResponseBody extends TeaModel {
             private Integer totalCount; 
 
             /**
-             * The number of entries returned on the current page.
+             * The name of the server on which the middleware, database, or web service is run.
              */
             public Builder count(Integer count) {
                 this.count = count;
@@ -162,7 +166,7 @@ public class DescribePropertyScaDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The page number of the returned page.
+             * name
              */
             public Builder currentPage(Integer currentPage) {
                 this.currentPage = currentPage;
@@ -170,7 +174,7 @@ public class DescribePropertyScaDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The number of entries returned per page. Default value: **10**.
+             * The public IP address of the server on which the middleware, database, or web service is run.
              */
             public Builder pageSize(Integer pageSize) {
                 this.pageSize = pageSize;
@@ -178,7 +182,10 @@ public class DescribePropertyScaDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The total number of entries returned.
+             * The version of the runtime environment.
+             * <p>
+             * 
+             * >  The value of this parameter can be the Java Development Kit (JDK) version of the runtime environment for a Java process.
              */
             public Builder totalCount(Integer totalCount) {
                 this.totalCount = totalCount;
@@ -543,16 +550,7 @@ public class DescribePropertyScaDetailResponseBody extends TeaModel {
             private String webPath; 
 
             /**
-             * The type of the middleware, database, or web service. Valid values:
-             * <p>
-             * 
-             * *   **system_service**: system service
-             * *   **software_library**: software library
-             * *   **docker_component**: container component
-             * *   **database**: database
-             * *   **web_container**: web container
-             * *   **jar**: JAR package
-             * *   **web_framework**: web framework
+             * The path to the configuration file.
              */
             public Builder bizType(String bizType) {
                 this.bizType = bizType;
@@ -560,16 +558,7 @@ public class DescribePropertyScaDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The display name of the type of the middleware, database, or web service . Valid values:
-             * <p>
-             * 
-             * *   System service
-             * *   Software library
-             * *   Container component
-             * *   Database
-             * *   Web container
-             * *   JAR package
-             * *   Web framework
+             * The UUID of the server on which the middleware, database, or web service is run.
              */
             public Builder bizTypeDispaly(String bizTypeDispaly) {
                 this.bizTypeDispaly = bizTypeDispaly;
@@ -577,7 +566,7 @@ public class DescribePropertyScaDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The command line of the process.
+             * The latest collection timestamp, which indicates the last timestamp when Security Center collected the information about the middleware, database, or web service. Unit: milliseconds.
              */
             public Builder cmdline(String cmdline) {
                 this.cmdline = cmdline;
@@ -585,7 +574,7 @@ public class DescribePropertyScaDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The path to the configuration file.
+             * The name of the user who runs the process.
              */
             public Builder configPath(String configPath) {
                 this.configPath = configPath;
@@ -593,7 +582,7 @@ public class DescribePropertyScaDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the container.
+             * uuid-02ebabe7-1c19-ab****
              */
             public Builder containerName(String containerName) {
                 this.containerName = containerName;
@@ -601,7 +590,7 @@ public class DescribePropertyScaDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The latest collection timestamp, which indicates the last timestamp when Security Center collected the information about the middleware, database, or web service. Unit: milliseconds.
+             * 756
              */
             public Builder createTimestamp(Long createTimestamp) {
                 this.createTimestamp = createTimestamp;
@@ -609,7 +598,10 @@ public class DescribePropertyScaDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the image.
+             * The search condition, such as a server name or a server IP address.
+             * <p>
+             * 
+             * >  Fuzzy match is supported.
              */
             public Builder imageName(String imageName) {
                 this.imageName = imageName;
@@ -617,7 +609,7 @@ public class DescribePropertyScaDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the server on which the middleware, database, or web service is run.
+             * version
              */
             public Builder instanceId(String instanceId) {
                 this.instanceId = instanceId;
@@ -625,7 +617,7 @@ public class DescribePropertyScaDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the server on which the middleware, database, or web service is run.
+             * The name of the container.
              */
             public Builder instanceName(String instanceName) {
                 this.instanceName = instanceName;
@@ -633,7 +625,7 @@ public class DescribePropertyScaDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The public IP address of the server on which the middleware, database, or web service is run.
+             * The total number of entries returned.
              */
             public Builder internetIp(String internetIp) {
                 this.internetIp = internetIp;
@@ -641,7 +633,7 @@ public class DescribePropertyScaDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The private IP address of the server on which the middleware, database, or web service is run.
+             * 1.0.2k
              */
             public Builder intranetIp(String intranetIp) {
                 this.intranetIp = intranetIp;
@@ -649,7 +641,7 @@ public class DescribePropertyScaDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The public IP address of the server on which the middleware, database, or web service is run.
+             * openssl
              */
             public Builder ip(String ip) {
                 this.ip = ip;
@@ -657,7 +649,7 @@ public class DescribePropertyScaDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The IP address that the process monitors.
+             * 68
              */
             public Builder listenIp(String listenIp) {
                 this.listenIp = listenIp;
@@ -665,11 +657,7 @@ public class DescribePropertyScaDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The protocol of the traffic on which the process listens. Valid values:
-             * <p>
-             * 
-             * *   **UDP**
-             * *   **TCP**
+             * The PID.
              */
             public Builder listenProtocol(String listenProtocol) {
                 this.listenProtocol = listenProtocol;
@@ -677,11 +665,13 @@ public class DescribePropertyScaDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The listening status of the process. Valid values:
+             * The type of the subquery. Valid values:
              * <p>
              * 
-             * *   **NONE**: not listening
-             * *   **LISTEN**: listening
+             * *   **port**
+             * *   **pid**
+             * *   **version**
+             * *   **user**
              */
             public Builder listenStatus(String listenStatus) {
                 this.listenStatus = listenStatus;
@@ -689,7 +679,7 @@ public class DescribePropertyScaDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the middleware, database, or web service.
+             * The version verification information about the middleware, database, or web service.
              */
             public Builder name(String name) {
                 this.name = name;
@@ -697,7 +687,7 @@ public class DescribePropertyScaDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The path of the middleware, database, or web service.
+             * The version of the middleware, database, or web service.
              */
             public Builder path(String path) {
                 this.path = path;
@@ -705,7 +695,7 @@ public class DescribePropertyScaDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The PID.
+             * The command line of the process.
              */
             public Builder pid(String pid) {
                 this.pid = pid;
@@ -713,7 +703,7 @@ public class DescribePropertyScaDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The port of the middleware, database, or web service.
+             * 1
              */
             public Builder port(String port) {
                 this.port = port;
@@ -729,7 +719,7 @@ public class DescribePropertyScaDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The timestamp when the process starts. Unit: milliseconds.
+             * The user who runs the process.
              */
             public Builder processStarted(Long processStarted) {
                 this.processStarted = processStarted;
@@ -737,7 +727,7 @@ public class DescribePropertyScaDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the user who runs the process.
+             * The port that the process monitors.
              */
             public Builder processUser(String processUser) {
                 this.processUser = processUser;
@@ -745,7 +735,7 @@ public class DescribePropertyScaDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The version verification information about the middleware, database, or web service.
+             * The type of the middleware, database, or web service.
              */
             public Builder proof(String proof) {
                 this.proof = proof;
@@ -753,10 +743,7 @@ public class DescribePropertyScaDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The version of the runtime environment.
-             * <p>
-             * 
-             * >  The value of this parameter can be the Java Development Kit (JDK) version of the runtime environment for a Java process.
+             * open
              */
             public Builder runtimeEnvVersion(String runtimeEnvVersion) {
                 this.runtimeEnvVersion = runtimeEnvVersion;
@@ -764,7 +751,7 @@ public class DescribePropertyScaDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The type of the middleware, database, or web service.
+             * The name of the asset fingerprint that you want to query.
              */
             public Builder type(String type) {
                 this.type = type;
@@ -772,7 +759,11 @@ public class DescribePropertyScaDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The UUID of the server on which the middleware, database, or web service is run.
+             * The protocol of the traffic on which the process listens. Valid values:
+             * <p>
+             * 
+             * *   **UDP**
+             * *   **TCP**
              */
             public Builder uuid(String uuid) {
                 this.uuid = uuid;
@@ -780,7 +771,16 @@ public class DescribePropertyScaDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The version of the middleware, database, or web service.
+             * The type of the middleware, database, or web service that you want to query. Valid values:
+             * <p>
+             * 
+             * *   **system_service**: system service
+             * *   **software_library**: software library
+             * *   **docker_component**: container component
+             * *   **database**: database
+             * *   **web_container**: web container
+             * *   **jar**: JAR package
+             * *   **web_framework**: web framework
              */
             public Builder version(String version) {
                 this.version = version;
@@ -788,7 +788,7 @@ public class DescribePropertyScaDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The web directory.
+             * zh
              */
             public Builder webPath(String webPath) {
                 this.webPath = webPath;

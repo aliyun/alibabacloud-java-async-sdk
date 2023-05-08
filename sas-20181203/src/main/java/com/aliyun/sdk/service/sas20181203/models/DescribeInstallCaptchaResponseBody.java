@@ -62,7 +62,7 @@ public class DescribeInstallCaptchaResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The installation verification code for you to manually install the Security Center agent.
+         * Queries the verification code for you to manually install the Security Center agent.
          */
         public Builder captchaCode(String captchaCode) {
             this.captchaCode = captchaCode;
@@ -70,10 +70,7 @@ public class DescribeInstallCaptchaResponseBody extends TeaModel {
         }
 
         /**
-         * The validity period of the installation verification code.
-         * <p>
-         * 
-         * >  The installation verification code is valid only within the validity period. An expired installation verification code cannot be used to install the agent.
+         * The source IP address of the request.
          */
         public Builder deadline(String deadline) {
             this.deadline = deadline;
@@ -81,7 +78,7 @@ public class DescribeInstallCaptchaResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * 192.168.XX.XX
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

@@ -50,7 +50,7 @@ public class CreateFileDetectResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The identifier of the file.
+         * HashKey.
          */
         public Builder hashKey(String hashKey) {
             this.hashKey = hashKey;
@@ -58,7 +58,7 @@ public class CreateFileDetectResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request, which is used to locate and troubleshoot issues.
+         * RequestId.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

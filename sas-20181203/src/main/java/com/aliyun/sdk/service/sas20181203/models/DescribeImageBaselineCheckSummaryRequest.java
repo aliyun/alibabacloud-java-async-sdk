@@ -152,45 +152,11 @@ public class DescribeImageBaselineCheckSummaryRequest extends Request {
         } 
 
         /**
-         * The ID of the container cluster.
-         * <p>
-         * 
-         * >  You can call the [DescribeGroupedContainerInstances](~~DescribeGroupedContainerInstances~~) operation to query the IDs of container clusters.
+         * The number of images on which **low** baseline risks are detected.
          */
         public Builder clusterId(String clusterId) {
             this.putQueryParameter("ClusterId", clusterId);
             this.clusterId = clusterId;
-            return this;
-        }
-
-        /**
-         * The search condition for the image baseline.
-         */
-        public Builder criteria(String criteria) {
-            this.putQueryParameter("Criteria", criteria);
-            this.criteria = criteria;
-            return this;
-        }
-
-        /**
-         * The type of the search condition. Valid values:
-         * <p>
-         * 
-         * *   **BaselineNameAlias**: baseline name
-         * *   **BaselineClassAlias**: baseline category
-         */
-        public Builder criteriaType(String criteriaType) {
-            this.putQueryParameter("CriteriaType", criteriaType);
-            this.criteriaType = criteriaType;
-            return this;
-        }
-
-        /**
-         * The number of the page to return. Pages start from page **1**. Default value: **1**.
-         */
-        public Builder currentPage(Integer currentPage) {
-            this.putQueryParameter("CurrentPage", currentPage);
-            this.currentPage = currentPage;
             return this;
         }
 
@@ -201,18 +167,9 @@ public class DescribeImageBaselineCheckSummaryRequest extends Request {
          * *   **zh**: Chinese
          * *   **en**: English
          */
-        public Builder lang(String lang) {
-            this.putQueryParameter("Lang", lang);
-            this.lang = lang;
-            return this;
-        }
-
-        /**
-         * The number of entries to return on each page. Default value: **20**.
-         */
-        public Builder pageSize(Integer pageSize) {
-            this.putQueryParameter("PageSize", pageSize);
-            this.pageSize = pageSize;
+        public Builder criteria(String criteria) {
+            this.putQueryParameter("Criteria", criteria);
+            this.criteria = criteria;
             return this;
         }
 
@@ -224,6 +181,42 @@ public class DescribeImageBaselineCheckSummaryRequest extends Request {
          * *   **medium**
          * *   **low**
          */
+        public Builder criteriaType(String criteriaType) {
+            this.putQueryParameter("CriteriaType", criteriaType);
+            this.criteriaType = criteriaType;
+            return this;
+        }
+
+        /**
+         * The number of images on which **medium** baseline risks are detected.
+         */
+        public Builder currentPage(Integer currentPage) {
+            this.putQueryParameter("CurrentPage", currentPage);
+            this.currentPage = currentPage;
+            return this;
+        }
+
+        /**
+         * An array that consists of the check results of image baselines.
+         */
+        public Builder lang(String lang) {
+            this.putQueryParameter("Lang", lang);
+            this.lang = lang;
+            return this;
+        }
+
+        /**
+         * The timestamp when the last scan was performed. Unit: milliseconds.
+         */
+        public Builder pageSize(Integer pageSize) {
+            this.putQueryParameter("PageSize", pageSize);
+            this.pageSize = pageSize;
+            return this;
+        }
+
+        /**
+         * The number of the page to return. Pages start from page **1**. Default value: **1**.
+         */
         public Builder riskLevel(String riskLevel) {
             this.putQueryParameter("RiskLevel", riskLevel);
             this.riskLevel = riskLevel;
@@ -231,7 +224,7 @@ public class DescribeImageBaselineCheckSummaryRequest extends Request {
         }
 
         /**
-         * The types of the assets that you want to scan.
+         * The keyword of the baseline category.
          */
         public Builder scanRange(java.util.List < String > scanRange) {
             this.putQueryParameter("ScanRange", scanRange);

@@ -82,7 +82,7 @@ public class DescribeVulCheckTaskStatusDetailRequest extends Request {
         } 
 
         /**
-         * The IDs of tasks.
+         * TaskIds.
          */
         public Builder taskIds(java.util.List < String > taskIds) {
             this.putQueryParameter("TaskIds", taskIds);
@@ -91,7 +91,7 @@ public class DescribeVulCheckTaskStatusDetailRequest extends Request {
         }
 
         /**
-         * The types of the vulnerabilities that are detected by the tasks.
+         * Types.
          */
         public Builder types(java.util.List < String > types) {
             this.putQueryParameter("Types", types);
@@ -100,7 +100,7 @@ public class DescribeVulCheckTaskStatusDetailRequest extends Request {
         }
 
         /**
-         * The UUID of the server.
+         * Uuid.
          */
         public Builder uuid(String uuid) {
             this.putQueryParameter("Uuid", uuid);

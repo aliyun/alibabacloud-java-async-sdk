@@ -55,7 +55,7 @@ public class GetImageScanNumInPeriodRequest extends Request {
         } 
 
         /**
-         * The number of days.
+         * PastDay.
          */
         public Builder pastDay(String pastDay) {
             this.putQueryParameter("PastDay", pastDay);

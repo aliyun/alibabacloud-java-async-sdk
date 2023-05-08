@@ -62,7 +62,7 @@ public class ListCheckItemWarningSummaryResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * An array that consists of the risk statistics of check items.
+         * The data returned.
          */
         public Builder list(java.util.List < List> list) {
             this.list = list;
@@ -70,7 +70,7 @@ public class ListCheckItemWarningSummaryResponseBody extends TeaModel {
         }
 
         /**
-         * The pagination information.
+         * The number of servers that are affected by the check item.
          */
         public Builder pageInfo(PageInfo pageInfo) {
             this.pageInfo = pageInfo;
@@ -78,7 +78,7 @@ public class ListCheckItemWarningSummaryResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request, which is used to locate and troubleshoot issues.
+         * The number of entries returned on the current page.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -110,6 +110,9 @@ public class ListCheckItemWarningSummaryResponseBody extends TeaModel {
         @NameInMap("CheckType")
         private String checkType;
 
+        @NameInMap("ContainerCheckItem")
+        private Boolean containerCheckItem;
+
         @NameInMap("Description")
         private String description;
 
@@ -129,6 +132,7 @@ public class ListCheckItemWarningSummaryResponseBody extends TeaModel {
             this.checkItem = builder.checkItem;
             this.checkLevel = builder.checkLevel;
             this.checkType = builder.checkType;
+            this.containerCheckItem = builder.containerCheckItem;
             this.description = builder.description;
             this.riskType = builder.riskType;
             this.status = builder.status;
@@ -186,6 +190,13 @@ public class ListCheckItemWarningSummaryResponseBody extends TeaModel {
         }
 
         /**
+         * @return containerCheckItem
+         */
+        public Boolean getContainerCheckItem() {
+            return this.containerCheckItem;
+        }
+
+        /**
          * @return description
          */
         public String getDescription() {
@@ -220,13 +231,14 @@ public class ListCheckItemWarningSummaryResponseBody extends TeaModel {
             private String checkItem; 
             private String checkLevel; 
             private String checkType; 
+            private Boolean containerCheckItem; 
             private String description; 
             private String riskType; 
             private Integer status; 
             private Integer warningMachineCount; 
 
             /**
-             * The suggestion on the check item.
+             * The type of the check item.
              */
             public Builder advice(String advice) {
                 this.advice = advice;
@@ -234,7 +246,7 @@ public class ListCheckItemWarningSummaryResponseBody extends TeaModel {
             }
 
             /**
-             * The alias of the baseline type.
+             * The type of the baseline.
              */
             public Builder alias(String alias) {
                 this.alias = alias;
@@ -242,7 +254,7 @@ public class ListCheckItemWarningSummaryResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the check item.
+             * The alias of the baseline type.
              */
             public Builder checkId(Long checkId) {
                 this.checkId = checkId;
@@ -250,10 +262,18 @@ public class ListCheckItemWarningSummaryResponseBody extends TeaModel {
             }
 
             /**
-             * The description of the check item.
+             * The ID of the check item.
              */
             public Builder checkItem(String checkItem) {
                 this.checkItem = checkItem;
+                return this;
+            }
+
+            /**
+             * The description of the check item.
+             */
+            public Builder checkLevel(String checkLevel) {
+                this.checkLevel = checkLevel;
                 return this;
             }
 
@@ -264,21 +284,21 @@ public class ListCheckItemWarningSummaryResponseBody extends TeaModel {
              * *  **medium**
              * *   **low**
              */
-            public Builder checkLevel(String checkLevel) {
-                this.checkLevel = checkLevel;
-                return this;
-            }
-
-            /**
-             * The type of the check item.
-             */
             public Builder checkType(String checkType) {
                 this.checkType = checkType;
                 return this;
             }
 
             /**
-             * The description of the check item.
+             * ContainerCheckItem.
+             */
+            public Builder containerCheckItem(Boolean containerCheckItem) {
+                this.containerCheckItem = containerCheckItem;
+                return this;
+            }
+
+            /**
+             * The suggestion on the check item.
              */
             public Builder description(String description) {
                 this.description = description;
@@ -286,10 +306,18 @@ public class ListCheckItemWarningSummaryResponseBody extends TeaModel {
             }
 
             /**
-             * The type of the baseline.
+             * The risk statistics of the check item.
              */
             public Builder riskType(String riskType) {
                 this.riskType = riskType;
+                return this;
+            }
+
+            /**
+             * The description of the check item.
+             */
+            public Builder status(Integer status) {
+                this.status = status;
                 return this;
             }
 
@@ -299,14 +327,6 @@ public class ListCheckItemWarningSummaryResponseBody extends TeaModel {
              * *  **1**: failed
              * 
              * *  **3**: passed
-             */
-            public Builder status(Integer status) {
-                this.status = status;
-                return this;
-            }
-
-            /**
-             * The number of servers that are affected by the check item.
              */
             public Builder warningMachineCount(Integer warningMachineCount) {
                 this.warningMachineCount = warningMachineCount;
@@ -383,7 +403,7 @@ public class ListCheckItemWarningSummaryResponseBody extends TeaModel {
             private Integer totalCount; 
 
             /**
-             * The number of entries returned on the current page.
+             * The total number of entries returned.
              */
             public Builder count(Integer count) {
                 this.count = count;
@@ -391,7 +411,7 @@ public class ListCheckItemWarningSummaryResponseBody extends TeaModel {
             }
 
             /**
-             * The page number of the returned page.
+             * The pagination information.
              */
             public Builder currentPage(Integer currentPage) {
                 this.currentPage = currentPage;
@@ -399,7 +419,7 @@ public class ListCheckItemWarningSummaryResponseBody extends TeaModel {
             }
 
             /**
-             * The number of entries returned per page.
+             * The page number of the returned page.
              */
             public Builder pageSize(Integer pageSize) {
                 this.pageSize = pageSize;
@@ -407,7 +427,7 @@ public class ListCheckItemWarningSummaryResponseBody extends TeaModel {
             }
 
             /**
-             * The total number of entries returned.
+             * The number of entries returned per page.
              */
             public Builder totalCount(Integer totalCount) {
                 this.totalCount = totalCount;

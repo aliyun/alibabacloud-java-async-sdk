@@ -110,26 +110,11 @@ public class AddInstallCodeRequest extends Request {
         } 
 
         /**
-         * The validity period of the installation command. The value is a 13-digit timestamp.
-         * <p>
-         * 
-         * >  The installation command is valid only within the validity period. An expired installation command cannot be used to install the Security Center agent.
+         * 6134
          */
         public Builder expiredDate(Long expiredDate) {
             this.putQueryParameter("ExpiredDate", expiredDate);
             this.expiredDate = expiredDate;
-            return this;
-        }
-
-        /**
-         * The ID of the asset group to which the you want to add the asset.
-         * <p>
-         * 
-         * >  You can call the [DescribeAllGroups](~~describeallgroups~~) operation to query the IDs of asset groups.
-         */
-        public Builder groupId(Long groupId) {
-            this.putQueryParameter("GroupId", groupId);
-            this.groupId = groupId;
             return this;
         }
 
@@ -140,9 +125,9 @@ public class AddInstallCodeRequest extends Request {
          * *   **false**: does not create an image.
          * *   **true**: creates an image.
          */
-        public Builder onlyImage(Boolean onlyImage) {
-            this.putQueryParameter("OnlyImage", onlyImage);
-            this.onlyImage = onlyImage;
+        public Builder groupId(Long groupId) {
+            this.putQueryParameter("GroupId", groupId);
+            this.groupId = groupId;
             return this;
         }
 
@@ -154,6 +139,15 @@ public class AddInstallCodeRequest extends Request {
          * *   **windows**
          * *   **windows-2003**
          */
+        public Builder onlyImage(Boolean onlyImage) {
+            this.putQueryParameter("OnlyImage", onlyImage);
+            this.onlyImage = onlyImage;
+            return this;
+        }
+
+        /**
+         * The ID of the request, which is used to locate and troubleshoot issues.
+         */
         public Builder os(String os) {
             this.putQueryParameter("Os", os);
             this.os = os;
@@ -161,10 +155,10 @@ public class AddInstallCodeRequest extends Request {
         }
 
         /**
-         * The name of the service provider for the asset. Default value: **ALIYUN**.
+         * The ID of the asset group to which the you want to add the asset.
          * <p>
          * 
-         * >  You can call the [DescribeVendorList](~~DescribeVendorList~~) operation to query the names of service providers.
+         * >  You can call the [DescribeAllGroups](~~describeallgroups~~) operation to query the IDs of asset groups.
          */
         public Builder vendorName(String vendorName) {
             this.putQueryParameter("VendorName", vendorName);

@@ -62,7 +62,11 @@ public class DescribePropertyUserDetailResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The pagination information.
+         * Indicates whether the password is locked. Valid values:
+         * <p>
+         * 
+         * *   **0**: yes
+         * *   **1**: no
          */
         public Builder pageInfo(PageInfo pageInfo) {
             this.pageInfo = pageInfo;
@@ -70,7 +74,7 @@ public class DescribePropertyUserDetailResponseBody extends TeaModel {
         }
 
         /**
-         * The details of asset fingerprints for the account.
+         * The timestamp of the last logon to the account. Unit: milliseconds.
          */
         public Builder propertys(java.util.List < Propertys> propertys) {
             this.propertys = propertys;
@@ -78,7 +82,7 @@ public class DescribePropertyUserDetailResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request, which is used to locate and troubleshoot issues.
+         * The date on which the password of the account expires.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -154,7 +158,11 @@ public class DescribePropertyUserDetailResponseBody extends TeaModel {
             private Integer totalCount; 
 
             /**
-             * The number of entries returned on the current page.
+             * Specifies whether the account has root permissions. Valid values:
+             * <p>
+             * 
+             * *   **0**: no
+             * *   **1**: yes
              */
             public Builder count(Integer count) {
                 this.count = count;
@@ -162,7 +170,7 @@ public class DescribePropertyUserDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The page number of the returned page.
+             * The timestamp of the last logoff from the account. Unit: milliseconds.
              */
             public Builder currentPage(Integer currentPage) {
                 this.currentPage = currentPage;
@@ -170,7 +178,7 @@ public class DescribePropertyUserDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The number of entries returned per page. Default value: **10**.
+             * The name of the account to which the server belongs.
              */
             public Builder pageSize(Integer pageSize) {
                 this.pageSize = pageSize;
@@ -178,7 +186,7 @@ public class DescribePropertyUserDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The total number of entries returned.
+             * The name of the account.
              */
             public Builder totalCount(Integer totalCount) {
                 this.totalCount = totalCount;
@@ -471,7 +479,11 @@ public class DescribePropertyUserDetailResponseBody extends TeaModel {
             private String uuid; 
 
             /**
-             * The date on which the account expires.
+             * Indicates whether the account is an interactive logon account. Valid values:
+             * <p>
+             * 
+             * *   **0**: no
+             * *   **1**: yes
              */
             public Builder accountsExpirationDate(String accountsExpirationDate) {
                 this.accountsExpirationDate = accountsExpirationDate;
@@ -479,7 +491,7 @@ public class DescribePropertyUserDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The timestamp at which the last asset fingerprint collection is performed. Unit: milliseconds.
+             * The last logon time of the account.
              */
             public Builder createTimestamp(Long createTimestamp) {
                 this.createTimestamp = createTimestamp;
@@ -487,7 +499,7 @@ public class DescribePropertyUserDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The details of the user groups to which the account belongs.
+             * Queries the asset fingerprints for an account to which a server belongs.
              */
             public Builder groupNames(java.util.List < String > groupNames) {
                 this.groupNames = groupNames;
@@ -495,7 +507,7 @@ public class DescribePropertyUserDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the server.
+             * The UUID of the server.
              */
             public Builder instanceId(String instanceId) {
                 this.instanceId = instanceId;
@@ -503,7 +515,7 @@ public class DescribePropertyUserDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the server.
+             * The ID of the request, which is used to locate and troubleshoot issues.
              */
             public Builder instanceName(String instanceName) {
                 this.instanceName = instanceName;
@@ -511,7 +523,7 @@ public class DescribePropertyUserDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The public IP address of the server.
+             * The ID of the server.
              */
             public Builder internetIp(String internetIp) {
                 this.internetIp = internetIp;
@@ -519,7 +531,7 @@ public class DescribePropertyUserDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The private IP address of the server.
+             * The number of entries returned per page. Default value: **10**.
              */
             public Builder intranetIp(String intranetIp) {
                 this.intranetIp = intranetIp;
@@ -527,7 +539,7 @@ public class DescribePropertyUserDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The IP addresses of the server.
+             * The timestamp of the last logon to the account. Unit: milliseconds.
              */
             public Builder ip(String ip) {
                 this.ip = ip;
@@ -535,11 +547,7 @@ public class DescribePropertyUserDetailResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether the account is an interactive logon account. Valid values:
-             * <p>
-             * 
-             * *   **0**: no
-             * *   **1**: yes
+             * IsCouldLogin.
              */
             public Builder isCouldLogin(Integer isCouldLogin) {
                 this.isCouldLogin = isCouldLogin;
@@ -547,11 +555,7 @@ public class DescribePropertyUserDetailResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether the password expires. Valid values:
-             * <p>
-             * 
-             * *   **0**: yes
-             * *   **1**: no
+             * IsPasswdExpired.
              */
             public Builder isPasswdExpired(Integer isPasswdExpired) {
                 this.isPasswdExpired = isPasswdExpired;
@@ -559,11 +563,7 @@ public class DescribePropertyUserDetailResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether the password is locked. Valid values:
-             * <p>
-             * 
-             * *   **0**: yes
-             * *   **1**: no
+             * IsPasswdLocked.
              */
             public Builder isPasswdLocked(Integer isPasswdLocked) {
                 this.isPasswdLocked = isPasswdLocked;
@@ -571,11 +571,7 @@ public class DescribePropertyUserDetailResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether the account has root permissions. Valid values:
-             * <p>
-             * 
-             * *   **0**: no
-             * *   **1**: yes
+             * The IP addresses of the server.
              */
             public Builder isRoot(String isRoot) {
                 this.isRoot = isRoot;
@@ -583,14 +579,50 @@ public class DescribePropertyUserDetailResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether the account is a sudo account. Valid values:
-             * <p>
-             * 
-             * *   **0**: no
-             * *   **1**: yes
+             * IsSudoer.
              */
             public Builder isSudoer(Integer isSudoer) {
                 this.isSudoer = isSudoer;
+                return this;
+            }
+
+            /**
+             * IsUserExpired.
+             */
+            public Builder isUserExpired(Integer isUserExpired) {
+                this.isUserExpired = isUserExpired;
+                return this;
+            }
+
+            /**
+             * The pagination information.
+             */
+            public Builder lastLoginIp(String lastLoginIp) {
+                this.lastLoginIp = lastLoginIp;
+                return this;
+            }
+
+            /**
+             * Specifies whether the fuzzy search by account name is supported. If you want to use fuzzy search, set the parameter to **1**. If you set the parameter to a different value or leave the parameter empty, fuzzy search is not supported.
+             */
+            public Builder lastLoginTime(String lastLoginTime) {
+                this.lastLoginTime = lastLoginTime;
+                return this;
+            }
+
+            /**
+             * LastLoginTimeDt.
+             */
+            public Builder lastLoginTimeDt(Long lastLoginTimeDt) {
+                this.lastLoginTimeDt = lastLoginTimeDt;
+                return this;
+            }
+
+            /**
+             * The source IP address of the last logon to the account.
+             */
+            public Builder lastLoginTimestamp(Long lastLoginTimestamp) {
+                this.lastLoginTimestamp = lastLoginTimestamp;
                 return this;
             }
 
@@ -600,46 +632,6 @@ public class DescribePropertyUserDetailResponseBody extends TeaModel {
              * 
              * *   **0**: yes
              * *   **1**: no
-             */
-            public Builder isUserExpired(Integer isUserExpired) {
-                this.isUserExpired = isUserExpired;
-                return this;
-            }
-
-            /**
-             * The source IP address of the last logon to the account.
-             */
-            public Builder lastLoginIp(String lastLoginIp) {
-                this.lastLoginIp = lastLoginIp;
-                return this;
-            }
-
-            /**
-             * The last logon time of the account.
-             */
-            public Builder lastLoginTime(String lastLoginTime) {
-                this.lastLoginTime = lastLoginTime;
-                return this;
-            }
-
-            /**
-             * The timestamp of the last logon to the account. Unit: milliseconds.
-             */
-            public Builder lastLoginTimeDt(Long lastLoginTimeDt) {
-                this.lastLoginTimeDt = lastLoginTimeDt;
-                return this;
-            }
-
-            /**
-             * The timestamp of the last logon to the account. Unit: milliseconds.
-             */
-            public Builder lastLoginTimestamp(Long lastLoginTimestamp) {
-                this.lastLoginTimestamp = lastLoginTimestamp;
-                return this;
-            }
-
-            /**
-             * The date on which the password of the account expires.
              */
             public Builder passwordExpirationDate(String passwordExpirationDate) {
                 this.passwordExpirationDate = passwordExpirationDate;
@@ -655,7 +647,7 @@ public class DescribePropertyUserDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the account.
+             * The name of the server.
              */
             public Builder user(String user) {
                 this.user = user;

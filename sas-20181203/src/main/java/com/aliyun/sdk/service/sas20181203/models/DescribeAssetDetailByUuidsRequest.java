@@ -69,11 +69,7 @@ public class DescribeAssetDetailByUuidsRequest extends Request {
         } 
 
         /**
-         * The language of the content within the request and response. Default value: **zh**. Valid values:
-         * <p>
-         * 
-         * *   **zh**: Chinese
-         * *   **en**: English
+         * Lang.
          */
         public Builder lang(String lang) {
             this.putQueryParameter("Lang", lang);
@@ -82,7 +78,7 @@ public class DescribeAssetDetailByUuidsRequest extends Request {
         }
 
         /**
-         * The UUIDs of the ECS instances. Separate multiple UUIDs with commas (,).
+         * Uuids.
          */
         public Builder uuids(String uuids) {
             this.putQueryParameter("Uuids", uuids);

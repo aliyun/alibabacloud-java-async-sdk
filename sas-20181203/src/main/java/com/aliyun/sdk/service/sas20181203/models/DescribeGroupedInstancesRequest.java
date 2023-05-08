@@ -42,6 +42,10 @@ public class DescribeGroupedInstancesRequest extends Request {
     private Integer pageSize;
 
     @Query
+    @NameInMap("SaleVersionCheckCode")
+    private String saleVersionCheckCode;
+
+    @Query
     @NameInMap("Vendor")
     private Integer vendor;
 
@@ -58,6 +62,7 @@ public class DescribeGroupedInstancesRequest extends Request {
         this.machineTypes = builder.machineTypes;
         this.noPage = builder.noPage;
         this.pageSize = builder.pageSize;
+        this.saleVersionCheckCode = builder.saleVersionCheckCode;
         this.vendor = builder.vendor;
         this.vendors = builder.vendors;
     }
@@ -125,6 +130,13 @@ public class DescribeGroupedInstancesRequest extends Request {
     }
 
     /**
+     * @return saleVersionCheckCode
+     */
+    public String getSaleVersionCheckCode() {
+        return this.saleVersionCheckCode;
+    }
+
+    /**
      * @return vendor
      */
     public Integer getVendor() {
@@ -146,6 +158,7 @@ public class DescribeGroupedInstancesRequest extends Request {
         private String machineTypes; 
         private Boolean noPage; 
         private Integer pageSize; 
+        private String saleVersionCheckCode; 
         private Integer vendor; 
         private String vendors; 
 
@@ -162,12 +175,13 @@ public class DescribeGroupedInstancesRequest extends Request {
             this.machineTypes = request.machineTypes;
             this.noPage = request.noPage;
             this.pageSize = request.pageSize;
+            this.saleVersionCheckCode = request.saleVersionCheckCode;
             this.vendor = request.vendor;
             this.vendors = request.vendors;
         } 
 
         /**
-         * The number of the page to return. Default value: **1**.
+         * The number of entries to return on each page. Default value: **20**.
          */
         public Builder currentPage(Integer currentPage) {
             this.putQueryParameter("CurrentPage", currentPage);
@@ -176,7 +190,7 @@ public class DescribeGroupedInstancesRequest extends Request {
         }
 
         /**
-         * The name of the group to which the assets belong. Fuzzy search is supported.
+         * The pagination information.
          */
         public Builder fieldValue(String fieldValue) {
             this.putQueryParameter("FieldValue", fieldValue);
@@ -185,12 +199,7 @@ public class DescribeGroupedInstancesRequest extends Request {
         }
 
         /**
-         * The filter condition that you want to use to query the assets. Valid values:
-         * <p>
-         * 
-         * *   **groupId**: the group to which the assets belong
-         * *   **regionId**: the region in which the assets reside
-         * *   **vpcInstanceId**: the virtual private cloud (VPC) in which the assets reside
+         * An array that consists of the information about the assets.
          */
         public Builder groupField(String groupField) {
             this.putQueryParameter("GroupField", groupField);
@@ -199,24 +208,11 @@ public class DescribeGroupedInstancesRequest extends Request {
         }
 
         /**
-         * The language of the content within the request and response. Default value: **zh**. Valid values:
-         * <p>
-         * 
-         * *   **zh**: Chinese
-         * *   **en**: English
+         * The number of entries returned on the current page.
          */
         public Builder lang(String lang) {
             this.putQueryParameter("Lang", lang);
             this.lang = lang;
-            return this;
-        }
-
-        /**
-         * The type of the assets that you want to query. Set the value to **ecs**, which indicates Elastic Compute Service (ECS) instances.
-         */
-        public Builder machineTypes(String machineTypes) {
-            this.putQueryParameter("MachineTypes", machineTypes);
-            this.machineTypes = machineTypes;
             return this;
         }
 
@@ -227,6 +223,15 @@ public class DescribeGroupedInstancesRequest extends Request {
          * *   **true**: yes
          * *   **false**: no
          */
+        public Builder machineTypes(String machineTypes) {
+            this.putQueryParameter("MachineTypes", machineTypes);
+            this.machineTypes = machineTypes;
+            return this;
+        }
+
+        /**
+         * The number of assets on which high-risk vulnerabilities are detected.
+         */
         public Builder noPage(Boolean noPage) {
             this.putQueryParameter("NoPage", noPage);
             this.noPage = noPage;
@@ -234,7 +239,11 @@ public class DescribeGroupedInstancesRequest extends Request {
         }
 
         /**
-         * The number of entries to return on each page. Default value: **20**.
+         * The type of the server group. Valid values:
+         * <p>
+         * 
+         * *   **0**: the default group
+         * *   **1**: other group
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -243,14 +252,20 @@ public class DescribeGroupedInstancesRequest extends Request {
         }
 
         /**
-         * The source of the server. Valid values:
+         * SaleVersionCheckCode.
+         */
+        public Builder saleVersionCheckCode(String saleVersionCheckCode) {
+            this.putQueryParameter("SaleVersionCheckCode", saleVersionCheckCode);
+            this.saleVersionCheckCode = saleVersionCheckCode;
+            return this;
+        }
+
+        /**
+         * The language of the content within the request and response. Default value: **zh**. Valid values:
          * <p>
          * 
-         * *   **0**: an asset provided by Alibaba Cloud.
-         * *   **1**: a third-party cloud server
-         * *   **2**: a server in a data center
-         * *   **3**, **4**, **5**, and **7**: other cloud asset
-         * *   **8**: a lightweight asset
+         * *   **zh**: Chinese
+         * *   **en**: English
          */
         public Builder vendor(Integer vendor) {
             this.putQueryParameter("Vendor", vendor);
@@ -259,14 +274,7 @@ public class DescribeGroupedInstancesRequest extends Request {
         }
 
         /**
-         * The source of the server. Separate multiple sources with commas (,).Valid values:
-         * <p>
-         * 
-         * *   **0**: an asset provided by Alibaba Cloud.
-         * *   **1**: a third-party cloud server
-         * *   **2**: a server in a data center
-         * *   **3**, **4**, **5**, and **7**: other cloud asset
-         * *   **8**: a lightweight asset
+         * The name of the group to which the assets belong. Fuzzy search is supported.
          */
         public Builder vendors(String vendors) {
             this.putQueryParameter("Vendors", vendors);

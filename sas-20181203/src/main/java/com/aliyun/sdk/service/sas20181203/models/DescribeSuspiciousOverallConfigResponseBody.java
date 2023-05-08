@@ -50,7 +50,7 @@ public class DescribeSuspiciousOverallConfigResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The configuration.
+         * OverallConfig.
          */
         public Builder overallConfig(OverallConfig overallConfig) {
             this.overallConfig = overallConfig;
@@ -58,7 +58,7 @@ public class DescribeSuspiciousOverallConfigResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request, which is used to locate and troubleshoot issues.
+         * RequestId.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -110,11 +110,7 @@ public class DescribeSuspiciousOverallConfigResponseBody extends TeaModel {
             private String type; 
 
             /**
-             * The status of the feature. Valid values:
-             * <p>
-             * 
-             * *   **off**: disabled
-             * *   **on**: enabled
+             * Config.
              */
             public Builder config(String config) {
                 this.config = config;
@@ -122,15 +118,7 @@ public class DescribeSuspiciousOverallConfigResponseBody extends TeaModel {
             }
 
             /**
-             * The type of the feature. Valid values:
-             * <p>
-             * 
-             * *   **auto_breaking**: Anti-Virus
-             * *   **ransomware_breaking**: Anti-ransomware (Bait Capture)
-             * *   **webshell\_cloud_breaking**: Webshell Protection
-             * *   **alinet**: Behavior prevention
-             * *   **k8s\_log_analysis**: K8s Threat Detection
-             * *   **alisecguard**: Defense mode for Client Protection
+             * Type.
              */
             public Builder type(String type) {
                 this.type = type;

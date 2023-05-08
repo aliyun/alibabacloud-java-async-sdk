@@ -74,7 +74,14 @@ public class ListPluginForUuidResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * An array that consists of the information about the plug-ins.
+         * The type of the plug-in. Valid values:
+         * <p>
+         * 
+         * *   **auto_breaking**: antivirus
+         * *   **ransomware_breaking**: anti-ransomware (bait capture)
+         * *   **webshell_cloud_breaking**: webshell prevention
+         * *   **alisecguard**: client protection
+         * *   **alinet**: malicious behavior defense
          */
         public Builder aegisUuidTargetPluginConfigList(java.util.List < AegisUuidTargetPluginConfigList> aegisUuidTargetPluginConfigList) {
             this.aegisUuidTargetPluginConfigList = aegisUuidTargetPluginConfigList;
@@ -82,7 +89,7 @@ public class ListPluginForUuidResponseBody extends TeaModel {
         }
 
         /**
-         * The status code returned. The status code **200** indicates that the request was successful. Other status codes indicate that the request failed. You can identify the cause of the failure based on the status code.
+         * Code.
          */
         public Builder code(Integer code) {
             this.code = code;
@@ -90,7 +97,7 @@ public class ListPluginForUuidResponseBody extends TeaModel {
         }
 
         /**
-         * The error message returned.
+         * Message.
          */
         public Builder message(String message) {
             this.message = message;
@@ -98,7 +105,7 @@ public class ListPluginForUuidResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request, which is used to locate and troubleshoot issues.
+         * The status code returned. The status code **200** indicates that the request was successful. Other status codes indicate that the request failed. You can identify the cause of the failure based on the status code.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -174,11 +181,12 @@ public class ListPluginForUuidResponseBody extends TeaModel {
             private String type; 
 
             /**
-             * Indicates whether the plug-in is enabled. Valid values:
+             * The name of the plug-in. Valid values:
              * <p>
              * 
-             * *   **true**: yes
-             * *   **false**: no
+             * *   **alihips**: trojan-specific prevention
+             * *   **alisecguard**: attack-specific prevention
+             * *   **alinet**: defense against attacks on servers
              */
             public Builder config(Boolean config) {
                 this.config = config;
@@ -186,13 +194,7 @@ public class ListPluginForUuidResponseBody extends TeaModel {
             }
 
             /**
-             * The message that indicates whether you are authorized to install the plug-in on your server or whether the plug-in is installed on your server. Valid values:
-             * <p>
-             * 
-             * *   **authorized**: authorized
-             * *   **unauthorized**: unauthorized
-             * *   **unbind**: not installed
-             * *   **nonsupport**: not supported
+             * Queries the information about plug-ins on a server.
              */
             public Builder msg(String msg) {
                 this.msg = msg;
@@ -200,11 +202,7 @@ public class ListPluginForUuidResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether the plug-in is globally configured. Valid values:
-             * <p>
-             * 
-             * *   **true**: yes
-             * *   **false**: no
+             * ListPluginForUuid
              */
             public Builder overallConfig(Boolean overallConfig) {
                 this.overallConfig = overallConfig;
@@ -212,12 +210,7 @@ public class ListPluginForUuidResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the plug-in. Valid values:
-             * <p>
-             * 
-             * *   **alihips**: trojan-specific prevention
-             * *   **alisecguard**: attack-specific prevention
-             * *   **alinet**: defense against attacks on servers
+             * The ID of the request, which is used to locate and troubleshoot issues.
              */
             public Builder type(String type) {
                 this.type = type;
@@ -318,7 +311,7 @@ public class ListPluginForUuidResponseBody extends TeaModel {
             private String pluginVersion; 
 
             /**
-             * An array that consists of the configurations of plug-ins.
+             * The information about the plug-in.
              */
             public Builder aegisSuspiciousConfigList(java.util.List < AegisSuspiciousConfigList> aegisSuspiciousConfigList) {
                 this.aegisSuspiciousConfigList = aegisSuspiciousConfigList;
@@ -334,12 +327,10 @@ public class ListPluginForUuidResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the plug-in. Valid values:
+             * The UUID of the server.
              * <p>
              * 
-             * *   **alihips**: trojan-specific prevention
-             * *   **alisecguard**: attack-specific prevention
-             * *   **alinet**: defense against attacks on servers
+             * >  You can call the [DescribeCloudCenterInstances](~~DescribeCloudCenterInstances~~) operation to query the UUIDs of servers.
              */
             public Builder pluginName(String pluginName) {
                 this.pluginName = pluginName;
@@ -347,11 +338,7 @@ public class ListPluginForUuidResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether the plug-in is installed. Valid values:
-             * <p>
-             * 
-             * *   **true**: yes
-             * *   **false**: no
+             * The version of the plug-in.
              */
             public Builder pluginOnlineInstalled(Boolean pluginOnlineInstalled) {
                 this.pluginOnlineInstalled = pluginOnlineInstalled;
@@ -359,11 +346,7 @@ public class ListPluginForUuidResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether the plug-in is online. Valid values:
-             * <p>
-             * 
-             * *   **true**: yes
-             * *   **false**: no
+             * An array that consists of the configurations of plug-ins.
              */
             public Builder pluginOnlineStatus(Boolean pluginOnlineStatus) {
                 this.pluginOnlineStatus = pluginOnlineStatus;
@@ -371,7 +354,11 @@ public class ListPluginForUuidResponseBody extends TeaModel {
             }
 
             /**
-             * The version of the plug-in.
+             * Indicates whether the plug-in is enabled. Valid values:
+             * <p>
+             * 
+             * *   **true**: yes
+             * *   **false**: no
              */
             public Builder pluginVersion(String pluginVersion) {
                 this.pluginVersion = pluginVersion;

@@ -68,10 +68,7 @@ public class DeleteVulWhitelistRequest extends Request {
         } 
 
         /**
-         * The ID of the whitelist.
-         * <p>
-         * 
-         * >  To delete a vulnerability whitelist, you must provide the ID of the whitelist. You can call the [DescribeVulWhitelist](~~DescribeVulWhitelist~~) operation to query the IDs of whitelists.
+         * Id.
          */
         public Builder id(String id) {
             this.putQueryParameter("Id", id);
@@ -80,20 +77,7 @@ public class DeleteVulWhitelistRequest extends Request {
         }
 
         /**
-         * The information about the whitelist. The value is a JSON string that contains the following fields:
-         * <p>
-         * 
-         * *   **Name**: the name of the vulnerability.
-         * 
-         * *   **Type**: the type of the vulnerability. Valid values:
-         * 
-         *     *   **cve**: Linux software vulnerability
-         *     *   **sys**: Windows system vulnerability
-         *     *   **cms**: Web-CMS vulnerability
-         *     *   **app**: application vulnerability
-         *     *   **emg**: urgent vulnerability
-         * 
-         * *   **AliasName**: the alias of the vulnerability.
+         * Whitelist.
          */
         public Builder whitelist(String whitelist) {
             this.putQueryParameter("Whitelist", whitelist);

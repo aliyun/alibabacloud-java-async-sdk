@@ -74,7 +74,7 @@ public class ModifyStrategyResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * The HTTP status code returned.
+         * HttpStatusCode.
          */
         public Builder httpStatusCode(Integer httpStatusCode) {
             this.httpStatusCode = httpStatusCode;
@@ -82,7 +82,7 @@ public class ModifyStrategyResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request, which is used to locate and troubleshoot issues.
+         * RequestId.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -90,7 +90,7 @@ public class ModifyStrategyResponseBody extends TeaModel {
         }
 
         /**
-         * The result returned.
+         * Result.
          */
         public Builder result(Result result) {
             this.result = result;
@@ -98,11 +98,7 @@ public class ModifyStrategyResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether the request was successful. Valid values:
-         * <p>
-         * 
-         * *   **true**: The request was successful.
-         * *   **false**: The request failed.
+         * Success.
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -142,7 +138,7 @@ public class ModifyStrategyResponseBody extends TeaModel {
             private Integer strategyId; 
 
             /**
-             * The ID of the baseline check policy.
+             * StrategyId.
              */
             public Builder strategyId(Integer strategyId) {
                 this.strategyId = strategyId;

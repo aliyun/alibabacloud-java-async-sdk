@@ -50,7 +50,12 @@ public class DescribeSuspEventUserSettingResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * LevelsOn.
+         * An array that consists of the risk levels of alert notifications. Valid values:
+         * <p>
+         * 
+         * *   **remind**
+         * *   **suspicious**
+         * *   **serious**
          */
         public Builder levelsOn(java.util.List < String > levelsOn) {
             this.levelsOn = levelsOn;
@@ -58,7 +63,7 @@ public class DescribeSuspEventUserSettingResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

@@ -82,19 +82,7 @@ public class OperateImageVulRequest extends Request {
         } 
 
         /**
-         * The information about the vulnerability. The value of this parameter is in the JSON format and contains the following fields:
-         * <p>
-         * 
-         * *   namespace: the namespace of the image
-         * *   repoName: the name of the Container Registry repository
-         * *   regionId: the region ID
-         * *   instanceId: the ID of the Container Registry instance
-         * *   repoId: the name of the repository
-         * *   tag: the tad added to the image
-         * *   digest: the digest of the image
-         * *   newTag: the tag added to the image after the vulnerability is fixed
-         * *   uuid: the UUID of the image
-         * *   ids: the IDs of the vulnerability primary keys
+         * Info.
          */
         public Builder info(String info) {
             this.putQueryParameter("Info", info);
@@ -103,7 +91,7 @@ public class OperateImageVulRequest extends Request {
         }
 
         /**
-         * If you want to fix the vulnerability, set the value to vul_fix.
+         * OperateType.
          */
         public Builder operateType(String operateType) {
             this.putQueryParameter("OperateType", operateType);
@@ -112,7 +100,7 @@ public class OperateImageVulRequest extends Request {
         }
 
         /**
-         * The type of the vulnerability. Set the value to cve.
+         * Type.
          */
         public Builder type(String type) {
             this.putQueryParameter("Type", type);

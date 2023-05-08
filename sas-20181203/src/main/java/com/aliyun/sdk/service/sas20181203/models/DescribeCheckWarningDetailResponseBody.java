@@ -122,7 +122,7 @@ public class DescribeCheckWarningDetailResponseBody extends TeaModel {
         private String type; 
 
         /**
-         * The suggestion for the management of the risk item.
+         * Queries the details about a specified check item.
          */
         public Builder advice(String advice) {
             this.advice = advice;
@@ -130,7 +130,7 @@ public class DescribeCheckWarningDetailResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the check item.
+         * CheckId.
          */
         public Builder checkId(Long checkId) {
             this.checkId = checkId;
@@ -138,7 +138,7 @@ public class DescribeCheckWarningDetailResponseBody extends TeaModel {
         }
 
         /**
-         * The additional information about the risk item.
+         * Description.
          */
         public Builder description(String description) {
             this.description = description;
@@ -146,7 +146,7 @@ public class DescribeCheckWarningDetailResponseBody extends TeaModel {
         }
 
         /**
-         * The name of the check item.
+         * Item.
          */
         public Builder item(String item) {
             this.item = item;
@@ -154,12 +154,7 @@ public class DescribeCheckWarningDetailResponseBody extends TeaModel {
         }
 
         /**
-         * The risk level of the check item. Valid values:
-         * <p>
-         * 
-         * *   **high**: The item is a high-risk item and is highlighted in red.
-         * *   **medium**: The item is a medium-risk item and is highlighted in orange.
-         * *   **low**: The item is a low-risk item and is highlighted in gray.
+         * Level.
          */
         public Builder level(String level) {
             this.level = level;
@@ -167,7 +162,7 @@ public class DescribeCheckWarningDetailResponseBody extends TeaModel {
         }
 
         /**
-         * The prompt for the risk item.
+         * Prompt.
          */
         public Builder prompt(String prompt) {
             this.prompt = prompt;
@@ -175,7 +170,7 @@ public class DescribeCheckWarningDetailResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request, which is used to locate and troubleshoot issues.
+         * RequestId.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -183,7 +178,7 @@ public class DescribeCheckWarningDetailResponseBody extends TeaModel {
         }
 
         /**
-         * The type of the check item. Valid values:
+         * DescribeCheckWarningDetail
          */
         public Builder type(String type) {
             this.type = type;

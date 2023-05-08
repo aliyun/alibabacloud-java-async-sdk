@@ -62,7 +62,7 @@ public class GetAssetsPropertyItemResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The pagination information.
+         * PageInfo.
          */
         public Builder pageInfo(PageInfo pageInfo) {
             this.pageInfo = pageInfo;
@@ -70,7 +70,7 @@ public class GetAssetsPropertyItemResponseBody extends TeaModel {
         }
 
         /**
-         * An array that consists of the aggregation information about asset fingerprints.
+         * PropertyItems.
          */
         public Builder propertyItems(java.util.List < PropertyItems> propertyItems) {
             this.propertyItems = propertyItems;
@@ -78,7 +78,7 @@ public class GetAssetsPropertyItemResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request, which is used to locate and troubleshoot issues.
+         * RequestId.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -154,7 +154,7 @@ public class GetAssetsPropertyItemResponseBody extends TeaModel {
             private Integer totalCount; 
 
             /**
-             * The number of entries returned on the current page.
+             * Count.
              */
             public Builder count(Integer count) {
                 this.count = count;
@@ -162,7 +162,7 @@ public class GetAssetsPropertyItemResponseBody extends TeaModel {
             }
 
             /**
-             * The page number of the returned page.
+             * CurrentPage.
              */
             public Builder currentPage(Integer currentPage) {
                 this.currentPage = currentPage;
@@ -170,7 +170,7 @@ public class GetAssetsPropertyItemResponseBody extends TeaModel {
             }
 
             /**
-             * The number of entries returned per page.
+             * PageSize.
              */
             public Builder pageSize(Integer pageSize) {
                 this.pageSize = pageSize;
@@ -178,7 +178,7 @@ public class GetAssetsPropertyItemResponseBody extends TeaModel {
             }
 
             /**
-             * The total number of entries returned.
+             * TotalCount.
              */
             public Builder totalCount(Integer totalCount) {
                 this.totalCount = totalCount;
@@ -255,7 +255,7 @@ public class GetAssetsPropertyItemResponseBody extends TeaModel {
             private String path; 
 
             /**
-             * The number of servers related to the asset fingerprints.
+             * Count.
              */
             public Builder count(Integer count) {
                 this.count = count;
@@ -263,10 +263,7 @@ public class GetAssetsPropertyItemResponseBody extends TeaModel {
             }
 
             /**
-             * The domain name.
-             * <p>
-             * 
-             * >  This parameter is returned only when **Biz** is set to **web_server**.
+             * Domain.
              */
             public Builder domain(String domain) {
                 this.domain = domain;
@@ -274,10 +271,7 @@ public class GetAssetsPropertyItemResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the module.
-             * <p>
-             * 
-             * >  This parameter is returned only when **Biz** is set to **lkm**.
+             * ModuleName.
              */
             public Builder moduleName(String moduleName) {
                 this.moduleName = moduleName;
@@ -285,10 +279,7 @@ public class GetAssetsPropertyItemResponseBody extends TeaModel {
             }
 
             /**
-             * The path to the startup item.
-             * <p>
-             * 
-             * >  This parameter is returned only when **Biz** is set to **autorun**.
+             * Path.
              */
             public Builder path(String path) {
                 this.path = path;

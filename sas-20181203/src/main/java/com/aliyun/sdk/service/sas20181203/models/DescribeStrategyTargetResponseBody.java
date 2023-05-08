@@ -50,7 +50,7 @@ public class DescribeStrategyTargetResponseBody extends TeaModel {
         private java.util.List < StrategyTargets> strategyTargets; 
 
         /**
-         * The ID of the request, which is used to locate and troubleshoot issues.
+         * RequestId.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -58,7 +58,7 @@ public class DescribeStrategyTargetResponseBody extends TeaModel {
         }
 
         /**
-         * An array consisting of the assets to which the baseline check policy is applied.
+         * StrategyTargets.
          */
         public Builder strategyTargets(java.util.List < StrategyTargets> strategyTargets) {
             this.strategyTargets = strategyTargets;
@@ -134,7 +134,7 @@ public class DescribeStrategyTargetResponseBody extends TeaModel {
             private String targetType; 
 
             /**
-             * The number of the assets that belong to the asset group.
+             * BindUuidCount.
              */
             public Builder bindUuidCount(Integer bindUuidCount) {
                 this.bindUuidCount = bindUuidCount;
@@ -142,11 +142,7 @@ public class DescribeStrategyTargetResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether the baseline check policy is applied to the asset group. Valid values:
-             * <p>
-             * 
-             * *   **add**: yes
-             * *   **del**: no
+             * Flag.
              */
             public Builder flag(String flag) {
                 this.flag = flag;
@@ -154,7 +150,7 @@ public class DescribeStrategyTargetResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the asset group to which the assets belong or the UUID of the asset.
+             * Target.
              */
             public Builder target(String target) {
                 this.target = target;
@@ -162,11 +158,7 @@ public class DescribeStrategyTargetResponseBody extends TeaModel {
             }
 
             /**
-             * The method that is used to add the assets to the baseline check policy. Valid values:
-             * <p>
-             * 
-             * *   **groupId**: the ID of the asset group
-             * *   **uuid**: the UUID of the asset
+             * TargetType.
              */
             public Builder targetType(String targetType) {
                 this.targetType = targetType;

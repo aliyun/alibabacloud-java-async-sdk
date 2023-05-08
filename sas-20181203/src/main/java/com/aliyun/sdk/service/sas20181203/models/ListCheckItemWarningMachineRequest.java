@@ -182,7 +182,7 @@ public class ListCheckItemWarningMachineRequest extends Request {
         } 
 
         /**
-         * The ID of the check item.
+         * 检查项id
          */
         public Builder checkId(Long checkId) {
             this.putQueryParameter("CheckId", checkId);
@@ -191,7 +191,7 @@ public class ListCheckItemWarningMachineRequest extends Request {
         }
 
         /**
-         * The name of the field that is used to query containers.
+         * 容器安全查询参数名称
          */
         public Builder containerFieldName(String containerFieldName) {
             this.putQueryParameter("ContainerFieldName", containerFieldName);
@@ -200,7 +200,7 @@ public class ListCheckItemWarningMachineRequest extends Request {
         }
 
         /**
-         * The value of the field that is used to query containers.
+         * 容器安全查询值
          */
         public Builder containerFieldValue(String containerFieldValue) {
             this.putQueryParameter("ContainerFieldValue", containerFieldValue);
@@ -209,7 +209,7 @@ public class ListCheckItemWarningMachineRequest extends Request {
         }
 
         /**
-         * The number of the page to return. Pages start from page **1**. Default value: **1**.
+         * CurrentPage.
          */
         public Builder currentPage(Integer currentPage) {
             this.putQueryParameter("CurrentPage", currentPage);
@@ -218,10 +218,7 @@ public class ListCheckItemWarningMachineRequest extends Request {
         }
 
         /**
-         * The ID of the asset group.
-         * <p>
-         * 
-         * > You can call the [DescribeAllGroups](~~130972~~) operation to query the ID of the asset group.
+         * GroupId.
          */
         public Builder groupId(Long groupId) {
             this.putQueryParameter("GroupId", groupId);
@@ -230,11 +227,7 @@ public class ListCheckItemWarningMachineRequest extends Request {
         }
 
         /**
-         * The language of the content within the request and response. Default value: **zh**. Valid values:
-         * <p>
-         * 
-         * *   **zh**: Chinese
-         * *   **en**: English
+         * Lang.
          */
         public Builder lang(String lang) {
             this.putQueryParameter("Lang", lang);
@@ -243,10 +236,7 @@ public class ListCheckItemWarningMachineRequest extends Request {
         }
 
         /**
-         * The number of entries to return on each page. Default value: 20. If you leave this parameter empty, 20 entries are returned on each page.
-         * <p>
-         * 
-         * > We recommend that you do not leave this parameter empty.
+         * PageSize.
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -255,7 +245,7 @@ public class ListCheckItemWarningMachineRequest extends Request {
         }
 
         /**
-         * The keyword that is used to query servers in fuzzy match mode.
+         * 机器模糊匹配
          */
         public Builder remark(String remark) {
             this.putQueryParameter("Remark", remark);
@@ -264,7 +254,7 @@ public class ListCheckItemWarningMachineRequest extends Request {
         }
 
         /**
-         * The type of the check item.
+         * 检查项所属类别
          */
         public Builder riskType(String riskType) {
             this.putQueryParameter("RiskType", riskType);
@@ -273,20 +263,7 @@ public class ListCheckItemWarningMachineRequest extends Request {
         }
 
         /**
-         * The status of the check item.
-         * <p>
-         * 
-         * > Valid values:
-         * 
-         * *   1: failed
-         * 
-         * *   2: verifying
-         * 
-         * *   3: passed
-         * 
-         * *   6: ignored
-         * 
-         * *   7: fixing
+         * 检查项状态
          */
         public Builder status(Integer status) {
             this.putQueryParameter("Status", status);

@@ -98,7 +98,7 @@ public class GetOnceTaskResultInfoResponseBody extends TeaModel {
         private Integer totalCount; 
 
         /**
-         * The execution time of the task.
+         * The information about the task.
          */
         public Builder collectTime(Long collectTime) {
             this.collectTime = collectTime;
@@ -106,7 +106,7 @@ public class GetOnceTaskResultInfoResponseBody extends TeaModel {
         }
 
         /**
-         * The number of tasks that were completed.
+         * FinishCount.
          */
         public Builder finishCount(Integer finishCount) {
             this.finishCount = finishCount;
@@ -114,7 +114,13 @@ public class GetOnceTaskResultInfoResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request, which is used to locate and troubleshoot issues.
+         * The status of the task. Valid values:
+         * <p>
+         * 
+         * *   **INIT**: The task is not started.
+         * *   **START**: The task is started.
+         * *   **SUCCESS**: The task is complete.
+         * *   **TIMEOUT**: The task times out.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -122,7 +128,7 @@ public class GetOnceTaskResultInfoResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the scan task.
+         * TaskId.
          */
         public Builder taskId(Long taskId) {
             this.taskId = taskId;
@@ -130,7 +136,7 @@ public class GetOnceTaskResultInfoResponseBody extends TeaModel {
         }
 
         /**
-         * The information about the task.
+         * TaskInfo.
          */
         public Builder taskInfo(TaskInfo taskInfo) {
             this.taskInfo = taskInfo;
@@ -138,7 +144,7 @@ public class GetOnceTaskResultInfoResponseBody extends TeaModel {
         }
 
         /**
-         * The total number of entries returned.
+         * TotalCount.
          */
         public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;
@@ -178,13 +184,7 @@ public class GetOnceTaskResultInfoResponseBody extends TeaModel {
             private String status; 
 
             /**
-             * The status of the task. Valid values:
-             * <p>
-             * 
-             * *   **INIT**: The task is not started.
-             * *   **START**: The task is started.
-             * *   **SUCCESS**: The task is complete.
-             * *   **TIMEOUT**: The task times out.
+             * Status.
              */
             public Builder status(String status) {
                 this.status = status;

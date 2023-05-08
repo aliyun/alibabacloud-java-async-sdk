@@ -98,7 +98,7 @@ public class DescribeWebPathResponseBody extends TeaModel {
         private Integer totalCount; 
 
         /**
-         * An array that consists of the paths to the web directories.
+         * ConfigList.
          */
         public Builder configList(java.util.List < ConfigList> configList) {
             this.configList = configList;
@@ -106,7 +106,7 @@ public class DescribeWebPathResponseBody extends TeaModel {
         }
 
         /**
-         * The number of entries returned on the current page.
+         * Count.
          */
         public Builder count(Integer count) {
             this.count = count;
@@ -114,7 +114,7 @@ public class DescribeWebPathResponseBody extends TeaModel {
         }
 
         /**
-         * The page number of the returned page.
+         * CurrentPage.
          */
         public Builder currentPage(Integer currentPage) {
             this.currentPage = currentPage;
@@ -122,7 +122,7 @@ public class DescribeWebPathResponseBody extends TeaModel {
         }
 
         /**
-         * The number of entries returned per page.
+         * PageSize.
          */
         public Builder pageSize(Integer pageSize) {
             this.pageSize = pageSize;
@@ -130,7 +130,7 @@ public class DescribeWebPathResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request, which is used to locate and troubleshoot issues.
+         * RequestId.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -138,7 +138,7 @@ public class DescribeWebPathResponseBody extends TeaModel {
         }
 
         /**
-         * The total number of entries returned.
+         * TotalCount.
          */
         public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;
@@ -190,7 +190,7 @@ public class DescribeWebPathResponseBody extends TeaModel {
             private String targetType; 
 
             /**
-             * The object.
+             * Target.
              */
             public Builder target(String target) {
                 this.target = target;
@@ -198,10 +198,7 @@ public class DescribeWebPathResponseBody extends TeaModel {
             }
 
             /**
-             * The object type. Valid values:
-             * <p>
-             * 
-             * *   **uuid**
+             * TargetType.
              */
             public Builder targetType(String targetType) {
                 this.targetType = targetType;
@@ -266,7 +263,7 @@ public class DescribeWebPathResponseBody extends TeaModel {
             private String webPathType; 
 
             /**
-             * An array consisting of the servers on which the web directories are scanned.
+             * TargetList.
              */
             public Builder targetList(java.util.List < TargetList> targetList) {
                 this.targetList = targetList;
@@ -274,7 +271,7 @@ public class DescribeWebPathResponseBody extends TeaModel {
             }
 
             /**
-             * The path to the web directory.
+             * WebPath.
              */
             public Builder webPath(String webPath) {
                 this.webPath = webPath;
@@ -282,11 +279,7 @@ public class DescribeWebPathResponseBody extends TeaModel {
             }
 
             /**
-             * The path type of the web directory. Valid values:
-             * <p>
-             * 
-             * *   **def**: automatically identified
-             * *   **customize**: manually added
+             * WebPathType.
              */
             public Builder webPathType(String webPathType) {
                 this.webPathType = webPathType;

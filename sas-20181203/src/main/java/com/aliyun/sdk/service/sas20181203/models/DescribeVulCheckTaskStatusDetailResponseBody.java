@@ -62,7 +62,7 @@ public class DescribeVulCheckTaskStatusDetailResponseBody extends TeaModel {
         private Integer totalCount; 
 
         /**
-         * The ID of the request.
+         * RequestId.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -70,7 +70,7 @@ public class DescribeVulCheckTaskStatusDetailResponseBody extends TeaModel {
         }
 
         /**
-         * An array that consists of the status information about the vulnerability scan tasks on the server.
+         * TaskStatuses.
          */
         public Builder taskStatuses(java.util.List < TaskStatuses> taskStatuses) {
             this.taskStatuses = taskStatuses;
@@ -78,7 +78,7 @@ public class DescribeVulCheckTaskStatusDetailResponseBody extends TeaModel {
         }
 
         /**
-         * The total number of vulnerability scan tasks on the server.
+         * TotalCount.
          */
         public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;
@@ -142,7 +142,7 @@ public class DescribeVulCheckTaskStatusDetailResponseBody extends TeaModel {
             private String type; 
 
             /**
-             * The error code returned.
+             * Code.
              */
             public Builder code(String code) {
                 this.code = code;
@@ -150,14 +150,7 @@ public class DescribeVulCheckTaskStatusDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The status of the subtask. Valid values:
-             * <p>
-             * 
-             * *   **0**: unhandled
-             * *   **1**: collecting
-             * *   **2**: collected
-             * *   **3**: matching
-             * *   **4**: complete
+             * Status.
              */
             public Builder status(String status) {
                 this.status = status;
@@ -165,13 +158,7 @@ public class DescribeVulCheckTaskStatusDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The type of the vulnerability. Valid values:
-             * <p>
-             * 
-             * *   **cve**: Linux software vulnerability
-             * *   **sys**: Windows system vulnerability
-             * *   **cms**: Web-CMS vulnerability
-             * *   **sca**: vulnerability that is detected based on software component analysis
+             * Type.
              */
             public Builder type(String type) {
                 this.type = type;
@@ -224,7 +211,7 @@ public class DescribeVulCheckTaskStatusDetailResponseBody extends TeaModel {
             private java.util.List < TaskStatusList> taskStatusList; 
 
             /**
-             * The ID of the main task.
+             * TaskId.
              */
             public Builder taskId(String taskId) {
                 this.taskId = taskId;
@@ -232,7 +219,7 @@ public class DescribeVulCheckTaskStatusDetailResponseBody extends TeaModel {
             }
 
             /**
-             * An array that consists of status information about the vulnerability scan subtask.
+             * TaskStatusList.
              */
             public Builder taskStatusList(java.util.List < TaskStatusList> taskStatusList) {
                 this.taskStatusList = taskStatusList;

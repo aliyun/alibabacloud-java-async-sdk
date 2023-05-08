@@ -99,12 +99,7 @@ public class DescribeFrontVulPatchListRequest extends Request {
         } 
 
         /**
-         * The information about the Windows system vulnerability. The value is a JSON string that contains the following fields:
-         * <p>
-         * 
-         * *   **name**: the name of the vulnerability.
-         * *   **uuid**: the UUID of the server on which the vulnerability is detected.
-         * *   **tag**: the tag that is added to the vulnerability. Set this field to **system**, which indicates Windows system vulnerabilities.
+         * Info.
          */
         public Builder info(String info) {
             this.putQueryParameter("Info", info);
@@ -113,11 +108,7 @@ public class DescribeFrontVulPatchListRequest extends Request {
         }
 
         /**
-         * The language of the content within the request and response. Default value: **zh**. Valid values:
-         * <p>
-         * 
-         * *   **zh**: Chinese
-         * *   **en**: English
+         * Lang.
          */
         public Builder lang(String lang) {
             this.putQueryParameter("Lang", lang);
@@ -126,7 +117,7 @@ public class DescribeFrontVulPatchListRequest extends Request {
         }
 
         /**
-         * The operation that you want to perform on the vulnerability. Set the value to **vul_fix**, which indicates vulnerability fixing.
+         * OperateType.
          */
         public Builder operateType(String operateType) {
             this.putQueryParameter("OperateType", operateType);
@@ -135,7 +126,7 @@ public class DescribeFrontVulPatchListRequest extends Request {
         }
 
         /**
-         * The type of the vulnerability. Set the value to **sys**, which indicates Windows system vulnerabilities.
+         * Type.
          */
         public Builder type(String type) {
             this.putQueryParameter("Type", type);

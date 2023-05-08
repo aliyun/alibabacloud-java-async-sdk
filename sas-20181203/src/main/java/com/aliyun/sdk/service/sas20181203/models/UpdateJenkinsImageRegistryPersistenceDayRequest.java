@@ -82,7 +82,7 @@ public class UpdateJenkinsImageRegistryPersistenceDayRequest extends Request {
         } 
 
         /**
-         * The retention period. Unit: days.
+         * 保留周期
          */
         public Builder persistenceDay(Integer persistenceDay) {
             this.putBodyParameter("PersistenceDay", persistenceDay);
@@ -91,10 +91,7 @@ public class UpdateJenkinsImageRegistryPersistenceDayRequest extends Request {
         }
 
         /**
-         * The ID of the image repository.
-         * <p>
-         * 
-         * > You can call the [PageImageRegistry](~~PageImageRegistry~~) operation to query the IDs of image repositories.
+         * 镜像仓id
          */
         public Builder registryId(Long registryId) {
             this.putBodyParameter("RegistryId", registryId);
@@ -103,7 +100,7 @@ public class UpdateJenkinsImageRegistryPersistenceDayRequest extends Request {
         }
 
         /**
-         * The source IP address of the request.
+         * SourceIp.
          */
         public Builder sourceIp(String sourceIp) {
             this.putQueryParameter("SourceIp", sourceIp);

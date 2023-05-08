@@ -55,7 +55,7 @@ public class DescribeImageLatestScanTaskRequest extends Request {
         } 
 
         /**
-         * The digest value of the image.
+         * Digest.
          */
         public Builder digest(String digest) {
             this.putQueryParameter("Digest", digest);

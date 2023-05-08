@@ -62,7 +62,7 @@ public class DescribeBackupPoliciesResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The pagination information.
+         * The number of entries returned on the current page.
          */
         public Builder pageInfo(PageInfo pageInfo) {
             this.pageInfo = pageInfo;
@@ -70,7 +70,37 @@ public class DescribeBackupPoliciesResponseBody extends TeaModel {
         }
 
         /**
-         * An array that consists of the anti-ransomware policies returned.
+         * The configurations of the anti-ransomware policy. The value of this parameter is in the JSON format and contains the following fields:
+         * <p>
+         * 
+         * *   **IsDefault**: the type of the anti-ransomware policy. Valid values:
+         * 
+         *     *   **1**: recommended policy
+         *     *   **0**: custom policy
+         * 
+         * *   **Include**: the format of the files that are protected. If the value of this field is \[], all formats of files are protected.
+         * 
+         * *   **Source**: the directory that is protected. If the value of this field is \[], all directories are protected.
+         * 
+         * *   **ExcludeSystemPath**: indicates whether a specified directory is excluded from the anti-ransomware policy. If the value of this field is **true**, the directory is excluded. If this field is left empty, no directories are excluded.
+         * 
+         * *   **Exclude**: the directory that is excluded from the anti-ransomware policy. If no directory is specified, the value of this field is \[].
+         * 
+         * *   **Schedule**: the start time and interval of a data backup task. A start time that begins during off-peak hours but does not start on the hour is recommended. Examples:
+         * 
+         *     *   If the value of this field is I|1583216092|P21D, the data backup task starts from 2020-03-03 14:14:52, and the task is run at an interval of three weeks.
+         *     *   If the value of this field is I|1583216092|PT24H, the data backup task starts from 2020-03-03 14:14:52, and the task is run at an interval of 24 hours.
+         * 
+         * *   **Retention**: the period during which backup data is retained. Unit: days. If the value of this field is 7, backup data is retained for a week. If the value of this field is 365, backup data is retained for a year. If the value of this field is -1, backup data is permanently retained.
+         * 
+         * *   **SpeedLimiter**: the limit on the network bandwidth for data backup tasks. If the value of this field is 0:24:30720, the maximum bandwidth for a data backup task is 30 MB/s from 00:00 to 24:00.
+         * 
+         * *   **UseVss**: indicates whether the VSS feature is enabled. The feature is available only for Windows servers. Valid values:
+         * 
+         *     *   **true**: yes
+         *     *   **false**: no
+         * 
+         * >  The VSS feature is available only if you create the anti-ransomware policy for Windows servers. After you enable the feature, the number of backup failures due to running processes is significantly reduced. We recommend that you enable the VSS feature. After you enable the feature, the data of disks that are in the exFAT and FAT32 formats cannot be backed up.
          */
         public Builder policies(java.util.List < Policies> policies) {
             this.policies = policies;
@@ -78,7 +108,7 @@ public class DescribeBackupPoliciesResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request, which is used to locate and troubleshoot issues.
+         * The total number of anti-ransomware policies returned.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -154,7 +184,11 @@ public class DescribeBackupPoliciesResponseBody extends TeaModel {
             private Integer totalCount; 
 
             /**
-             * The number of entries returned on the current page.
+             * The version of the anti-ransomware policy. Valid values:
+             * <p>
+             * 
+             * *   1.0.0
+             * *   2.0.0
              */
             public Builder count(Integer count) {
                 this.count = count;
@@ -162,7 +196,7 @@ public class DescribeBackupPoliciesResponseBody extends TeaModel {
             }
 
             /**
-             * The page number of the returned page.
+             * An array that consists of the anti-ransomware policies returned.
              */
             public Builder currentPage(Integer currentPage) {
                 this.currentPage = currentPage;
@@ -170,7 +204,7 @@ public class DescribeBackupPoliciesResponseBody extends TeaModel {
             }
 
             /**
-             * The number of entries returned per page. Default value: 10.
+             * The number of the servers on which the anti-ransomware agent is in an abnormal state.
              */
             public Builder pageSize(Integer pageSize) {
                 this.pageSize = pageSize;
@@ -178,7 +212,12 @@ public class DescribeBackupPoliciesResponseBody extends TeaModel {
             }
 
             /**
-             * The total number of anti-ransomware policies returned.
+             * The status of the anti-ransomware policy. Valid values:
+             * <p>
+             * 
+             * *   **enabled**: The anti-ransomware policy is manually enabled.
+             * *   **disabled**: The anti-ransomware policy is manually disabled. After an anti-ransomware policy is disabled, the data backup task that is running based on the policy stops.
+             * *   **closed**: The anti-ransomware policy automatically stops because the anti-ransomware capacity is insufficient.
              */
             public Builder totalCount(Integer totalCount) {
                 this.totalCount = totalCount;
@@ -411,7 +450,13 @@ public class DescribeBackupPoliciesResponseBody extends TeaModel {
             private java.util.List < String > uuidList; 
 
             /**
-             * The number of the servers on which the anti-ransomware agent is in an abnormal state.
+             * The upgrade status of the anti-ransomware policy. Valid values:
+             * <p>
+             * 
+             * *   **NotUpgraded**
+             * *   **Upgrading**
+             * *   **UpgradeFailed**
+             * *   **UpgradeSuccess**
              */
             public Builder clientErrorCount(Integer clientErrorCount) {
                 this.clientErrorCount = clientErrorCount;
@@ -419,10 +464,50 @@ public class DescribeBackupPoliciesResponseBody extends TeaModel {
             }
 
             /**
-             * The UUIDs of the servers on which the anti-ransomware agent is in an **abnormal** state.
+             * The UUIDs of the servers to which the anti-ransomware policy is applied.
              */
             public Builder clientErrorUuidList(java.util.List < String > clientErrorUuidList) {
                 this.clientErrorUuidList = clientErrorUuidList;
+                return this;
+            }
+
+            /**
+             * The UUIDs of the servers on which the anti-ransomware agent is in an **abnormal** state.
+             */
+            public Builder clientStatus(String clientStatus) {
+                this.clientStatus = clientStatus;
+                return this;
+            }
+
+            /**
+             * The UUIDs that are returned based on the value of the MachineRemark request parameter.
+             */
+            public Builder healthClientCount(Integer healthClientCount) {
+                this.healthClientCount = healthClientCount;
+                return this;
+            }
+
+            /**
+             * The total number of anti-ransomware policies returned.
+             */
+            public Builder healthClientUuidList(java.util.List < String > healthClientUuidList) {
+                this.healthClientUuidList = healthClientUuidList;
+                return this;
+            }
+
+            /**
+             * The UUIDs that are returned based on the value of the MachineRemark request parameter.
+             */
+            public Builder id(Long id) {
+                this.id = id;
+                return this;
+            }
+
+            /**
+             * The UUIDs of the servers on which the anti-ransomware agent is in an **abnormal** state.
+             */
+            public Builder name(String name) {
+                this.name = name;
                 return this;
             }
 
@@ -433,83 +518,13 @@ public class DescribeBackupPoliciesResponseBody extends TeaModel {
              * *   **running**: normal
              * *   **exception**: abnormal
              */
-            public Builder clientStatus(String clientStatus) {
-                this.clientStatus = clientStatus;
-                return this;
-            }
-
-            /**
-             * The number of the servers on which the anti-ransomware agent is in a normal state.
-             */
-            public Builder healthClientCount(Integer healthClientCount) {
-                this.healthClientCount = healthClientCount;
-                return this;
-            }
-
-            /**
-             * The UUIDs of the servers on which the anti-ransomware agent is in a **normal** state.
-             */
-            public Builder healthClientUuidList(java.util.List < String > healthClientUuidList) {
-                this.healthClientUuidList = healthClientUuidList;
-                return this;
-            }
-
-            /**
-             * The ID of the anti-ransomware policy.
-             */
-            public Builder id(Long id) {
-                this.id = id;
-                return this;
-            }
-
-            /**
-             * The name of the anti-ransomware policy.
-             */
-            public Builder name(String name) {
-                this.name = name;
-                return this;
-            }
-
-            /**
-             * The configurations of the anti-ransomware policy. The value of this parameter is in the JSON format and contains the following fields:
-             * <p>
-             * 
-             * *   **IsDefault**: the type of the anti-ransomware policy. Valid values:
-             * 
-             *     *   **1**: recommended policy
-             *     *   **0**: custom policy
-             * 
-             * *   **Include**: the format of the files that are protected. If the value of this field is \[], all formats of files are protected.
-             * 
-             * *   **Source**: the directory that is protected. If the value of this field is \[], all directories are protected.
-             * 
-             * *   **ExcludeSystemPath**: indicates whether a specified directory is excluded from the anti-ransomware policy. If the value of this field is **true**, the directory is excluded. If this field is left empty, no directories are excluded.
-             * 
-             * *   **Exclude**: the directory that is excluded from the anti-ransomware policy. If no directory is specified, the value of this field is \[].
-             * 
-             * *   **Schedule**: the start time and interval of a data backup task. A start time that begins during off-peak hours but does not start on the hour is recommended. Examples:
-             * 
-             *     *   If the value of this field is I|1583216092|P21D, the data backup task starts from 2020-03-03 14:14:52, and the task is run at an interval of three weeks.
-             *     *   If the value of this field is I|1583216092|PT24H, the data backup task starts from 2020-03-03 14:14:52, and the task is run at an interval of 24 hours.
-             * 
-             * *   **Retention**: the period during which backup data is retained. Unit: days. If the value of this field is 7, backup data is retained for a week. If the value of this field is 365, backup data is retained for a year. If the value of this field is -1, backup data is permanently retained.
-             * 
-             * *   **SpeedLimiter**: the limit on the network bandwidth for data backup tasks. If the value of this field is 0:24:30720, the maximum bandwidth for a data backup task is 30 MB/s from 00:00 to 24:00.
-             * 
-             * *   **UseVss**: indicates whether the VSS feature is enabled. The feature is available only for Windows servers. Valid values:
-             * 
-             *     *   **true**: yes
-             *     *   **false**: no
-             * 
-             * >  The VSS feature is available only if you create the anti-ransomware policy for Windows servers. After you enable the feature, the number of backup failures due to running processes is significantly reduced. We recommend that you enable the VSS feature. After you enable the feature, the data of disks that are in the exFAT and FAT32 formats cannot be backed up.
-             */
             public Builder policy(String policy) {
                 this.policy = policy;
                 return this;
             }
 
             /**
-             * The ID of the region that you specified for data backup when you installed the anti-ransomware agent for the server not deployed on Alibaba Cloud.
+             * The ID of the anti-ransomware policy.
              */
             public Builder policyRegionId(String policyRegionId) {
                 this.policyRegionId = policyRegionId;
@@ -517,11 +532,7 @@ public class DescribeBackupPoliciesResponseBody extends TeaModel {
             }
 
             /**
-             * The version of the anti-ransomware policy. Valid values:
-             * <p>
-             * 
-             * *   1.0.0
-             * *   2.0.0
+             * The ID of the region that you specified for data backup when you installed the anti-ransomware agent for the server not deployed on Alibaba Cloud.
              */
             public Builder policyVersion(String policyVersion) {
                 this.policyVersion = policyVersion;
@@ -529,10 +540,26 @@ public class DescribeBackupPoliciesResponseBody extends TeaModel {
             }
 
             /**
-             * The UUIDs that are returned based on the value of the MachineRemark request parameter.
+             * The UUIDs of the servers on which data backup is exceptional.
              */
             public Builder remarkedUuidList(java.util.List < String > remarkedUuidList) {
                 this.remarkedUuidList = remarkedUuidList;
+                return this;
+            }
+
+            /**
+             * The UUIDs of the servers on which the anti-ransomware agent is in a **normal** state.
+             */
+            public Builder serverType(String serverType) {
+                this.serverType = serverType;
+                return this;
+            }
+
+            /**
+             * The number of the servers on which the anti-ransomware agent is in a normal state.
+             */
+            public Builder serviceErrorCount(Integer serviceErrorCount) {
+                this.serviceErrorCount = serviceErrorCount;
                 return this;
             }
 
@@ -544,34 +571,13 @@ public class DescribeBackupPoliciesResponseBody extends TeaModel {
              * *   **ALIYUN**: Elastic Compute Service (ECS) instance
              * *   **TRIPARTITE**: simple application server
              */
-            public Builder serverType(String serverType) {
-                this.serverType = serverType;
-                return this;
-            }
-
-            /**
-             * The number of servers on which data backup is exceptional.
-             */
-            public Builder serviceErrorCount(Integer serviceErrorCount) {
-                this.serviceErrorCount = serviceErrorCount;
-                return this;
-            }
-
-            /**
-             * The UUIDs of the servers on which data backup is exceptional.
-             */
             public Builder serviceErrorUuidList(java.util.List < String > serviceErrorUuidList) {
                 this.serviceErrorUuidList = serviceErrorUuidList;
                 return this;
             }
 
             /**
-             * The status of the anti-ransomware policy. Valid values:
-             * <p>
-             * 
-             * *   **enabled**: The anti-ransomware policy is manually enabled.
-             * *   **disabled**: The anti-ransomware policy is manually disabled. After an anti-ransomware policy is disabled, the data backup task that is running based on the policy stops.
-             * *   **closed**: The anti-ransomware policy automatically stops because the anti-ransomware capacity is insufficient.
+             * The number of servers on which data backup is exceptional.
              */
             public Builder status(String status) {
                 this.status = status;
@@ -579,13 +585,7 @@ public class DescribeBackupPoliciesResponseBody extends TeaModel {
             }
 
             /**
-             * The upgrade status of the anti-ransomware policy. Valid values:
-             * <p>
-             * 
-             * *   **NotUpgraded**
-             * *   **Upgrading**
-             * *   **UpgradeFailed**
-             * *   **UpgradeSuccess**
+             * The name of the anti-ransomware policy.
              */
             public Builder upgradeStatus(String upgradeStatus) {
                 this.upgradeStatus = upgradeStatus;
@@ -593,7 +593,7 @@ public class DescribeBackupPoliciesResponseBody extends TeaModel {
             }
 
             /**
-             * The UUIDs of the servers to which the anti-ransomware policy is applied.
+             * The UUIDs of the servers on which the anti-ransomware agent is in a **normal** state.
              */
             public Builder uuidList(java.util.List < String > uuidList) {
                 this.uuidList = uuidList;

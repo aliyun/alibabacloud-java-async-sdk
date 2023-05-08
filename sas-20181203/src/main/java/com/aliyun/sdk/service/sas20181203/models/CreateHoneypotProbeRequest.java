@@ -197,11 +197,7 @@ public class CreateHoneypotProbeRequest extends Request {
         } 
 
         /**
-         * Specifies whether to enable Address Resolution Protocol (ARP) spoofing. Valid values:
-         * <p>
-         * 
-         * *   **true**: yes
-         * *   **false**: no
+         * 检查类型 arp
          */
         public Builder arp(Boolean arp) {
             this.putQueryParameter("Arp", arp);
@@ -210,7 +206,7 @@ public class CreateHoneypotProbeRequest extends Request {
         }
 
         /**
-         * The ID of the business group.
+         * 业务分组
          */
         public Builder businessGroupId(String businessGroupId) {
             this.putQueryParameter("BusinessGroupId", businessGroupId);
@@ -219,10 +215,7 @@ public class CreateHoneypotProbeRequest extends Request {
         }
 
         /**
-         * The ID of the management node.
-         * <p>
-         * 
-         * >  You can call the [ListHoneypotNode](~~ListHoneypotNode~~) operation to query the IDs of management nodes.
+         * 管理节点id
          */
         public Builder controlNodeId(String controlNodeId) {
             this.putQueryParameter("ControlNodeId", controlNodeId);
@@ -231,7 +224,7 @@ public class CreateHoneypotProbeRequest extends Request {
         }
 
         /**
-         * The name of the probe.
+         * 探针名称
          */
         public Builder displayName(String displayName) {
             this.putQueryParameter("DisplayName", displayName);
@@ -240,7 +233,7 @@ public class CreateHoneypotProbeRequest extends Request {
         }
 
         /**
-         * The honeypot configurations.
+         * 蜜罐绑定信息
          */
         public Builder honeypotBindList(java.util.List < HoneypotBindList> honeypotBindList) {
             this.putQueryParameter("HoneypotBindList", honeypotBindList);
@@ -249,11 +242,7 @@ public class CreateHoneypotProbeRequest extends Request {
         }
 
         /**
-         * Specifies whether to enable ping scan. Valid values:
-         * <p>
-         * 
-         * *   **false**: yes
-         * *   **false**: no
+         * 检测类型 ping
          */
         public Builder ping(Boolean ping) {
             this.putQueryParameter("Ping", ping);
@@ -262,11 +251,7 @@ public class CreateHoneypotProbeRequest extends Request {
         }
 
         /**
-         * The type of the probe. Valid values:
-         * <p>
-         * 
-         * *   **host_probe**: host probe
-         * *   **vpc_black_hole_probe**: virtual private cloud (VPC) probe
+         * 探针类型 主机探针 VPC黑洞探针
          */
         public Builder probeType(String probeType) {
             this.putQueryParameter("ProbeType", probeType);
@@ -275,7 +260,7 @@ public class CreateHoneypotProbeRequest extends Request {
         }
 
         /**
-         * The version of the probe.
+         * 探针版本
          */
         public Builder probeVersion(String probeVersion) {
             this.putQueryParameter("ProbeVersion", probeVersion);
@@ -284,7 +269,7 @@ public class CreateHoneypotProbeRequest extends Request {
         }
 
         /**
-         * The IP address of the proxy.
+         * ProxyIp.
          */
         public Builder proxyIp(String proxyIp) {
             this.putQueryParameter("ProxyIp", proxyIp);
@@ -293,10 +278,7 @@ public class CreateHoneypotProbeRequest extends Request {
         }
 
         /**
-         * The UUID of the instance.
-         * <p>
-         * 
-         * >  If **ProbeType** is set to **host_probe**, this parameter is required.
+         * 实例
          */
         public Builder uuid(String uuid) {
             this.putQueryParameter("Uuid", uuid);
@@ -305,10 +287,7 @@ public class CreateHoneypotProbeRequest extends Request {
         }
 
         /**
-         * The ID of the VPC.
-         * <p>
-         * 
-         * >  If **ProbeType** is set to **vpc_black_hole_probe**, this parameter is required. You can call the DescribeVpcHoneyPotList operation to query the IDs of VPCs.
+         * vpcId
          */
         public Builder vpcId(String vpcId) {
             this.putQueryParameter("VpcId", vpcId);
@@ -398,11 +377,7 @@ public class CreateHoneypotProbeRequest extends Request {
             private Integer targetPort; 
 
             /**
-             * Specifies whether to bind a port. Valid values:
-             * <p>
-             * 
-             * *   **true**: yes
-             * *   **false**: no
+             * BindPort.
              */
             public Builder bindPort(Boolean bindPort) {
                 this.bindPort = bindPort;
@@ -410,7 +385,7 @@ public class CreateHoneypotProbeRequest extends Request {
             }
 
             /**
-             * The end of the port range.
+             * EndPort.
              */
             public Builder endPort(Integer endPort) {
                 this.endPort = endPort;
@@ -418,11 +393,7 @@ public class CreateHoneypotProbeRequest extends Request {
             }
 
             /**
-             * Specifies whether the port is fixed. Valid values:
-             * <p>
-             * 
-             * *   **0**: no
-             * *   **1**: yes
+             * Fixed.
              */
             public Builder fixed(Boolean fixed) {
                 this.fixed = fixed;
@@ -430,7 +401,7 @@ public class CreateHoneypotProbeRequest extends Request {
             }
 
             /**
-             * The start of the port range.
+             * StartPort.
              */
             public Builder startPort(Integer startPort) {
                 this.startPort = startPort;
@@ -438,10 +409,7 @@ public class CreateHoneypotProbeRequest extends Request {
             }
 
             /**
-             * The destination port.
-             * <p>
-             * 
-             * >  If **HoneypotId** is specified, this parameter is required.
+             * TargetPort.
              */
             public Builder targetPort(Integer targetPort) {
                 this.targetPort = targetPort;
@@ -494,7 +462,7 @@ public class CreateHoneypotProbeRequest extends Request {
             private String honeypotId; 
 
             /**
-             * The listener ports.
+             * BindPortList.
              */
             public Builder bindPortList(java.util.List < BindPortList> bindPortList) {
                 this.bindPortList = bindPortList;
@@ -502,10 +470,7 @@ public class CreateHoneypotProbeRequest extends Request {
             }
 
             /**
-             * The ID of the honeypot.
-             * <p>
-             * 
-             * >  You can call the [ListHoneypot](~~ListHoneypot~~) operation to query the IDs of honeypots.
+             * HoneypotId.
              */
             public Builder honeypotId(String honeypotId) {
                 this.honeypotId = honeypotId;

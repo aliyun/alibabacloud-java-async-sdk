@@ -50,7 +50,7 @@ public class CreateAntiBruteForceRuleResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The information about the defense rule.
+         * CreateAntiBruteForceRule.
          */
         public Builder createAntiBruteForceRule(CreateAntiBruteForceRule createAntiBruteForceRule) {
             this.createAntiBruteForceRule = createAntiBruteForceRule;
@@ -58,7 +58,7 @@ public class CreateAntiBruteForceRuleResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request, which is used to locate and troubleshoot issues.
+         * RequestId.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -98,7 +98,7 @@ public class CreateAntiBruteForceRuleResponseBody extends TeaModel {
             private Long ruleId; 
 
             /**
-             * The ID of the defense rule.
+             * RuleId.
              */
             public Builder ruleId(Long ruleId) {
                 this.ruleId = ruleId;

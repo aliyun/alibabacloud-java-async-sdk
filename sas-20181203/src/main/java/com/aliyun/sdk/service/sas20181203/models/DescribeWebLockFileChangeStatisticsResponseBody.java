@@ -86,7 +86,7 @@ public class DescribeWebLockFileChangeStatisticsResponseBody extends TeaModel {
         private Integer totalCount; 
 
         /**
-         * The page number of the returned page.
+         * CurrentPage.
          */
         public Builder currentPage(Integer currentPage) {
             this.currentPage = currentPage;
@@ -94,7 +94,7 @@ public class DescribeWebLockFileChangeStatisticsResponseBody extends TeaModel {
         }
 
         /**
-         * An array consisting of the files that are changed.
+         * List.
          */
         public Builder list(java.util.List < List> list) {
             this.list = list;
@@ -102,7 +102,7 @@ public class DescribeWebLockFileChangeStatisticsResponseBody extends TeaModel {
         }
 
         /**
-         * The number of entries returned per page.
+         * PageSize.
          */
         public Builder pageSize(Integer pageSize) {
             this.pageSize = pageSize;
@@ -110,7 +110,7 @@ public class DescribeWebLockFileChangeStatisticsResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request, which is used to locate and troubleshoot issues.
+         * RequestId.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -118,7 +118,7 @@ public class DescribeWebLockFileChangeStatisticsResponseBody extends TeaModel {
         }
 
         /**
-         * The total number of files that are attempted to change.
+         * TotalCount.
          */
         public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;
@@ -170,7 +170,7 @@ public class DescribeWebLockFileChangeStatisticsResponseBody extends TeaModel {
             private String file; 
 
             /**
-             * The number of attempts.
+             * Count.
              */
             public Builder count(Integer count) {
                 this.count = count;
@@ -178,7 +178,7 @@ public class DescribeWebLockFileChangeStatisticsResponseBody extends TeaModel {
             }
 
             /**
-             * The file path.
+             * File.
              */
             public Builder file(String file) {
                 this.file = file;

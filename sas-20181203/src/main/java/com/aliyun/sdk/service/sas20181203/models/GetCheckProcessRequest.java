@@ -54,10 +54,7 @@ public class GetCheckProcessRequest extends Request {
         } 
 
         /**
-         * The ID of the task.
-         * <p>
-         * 
-         * > You can call the [SubmitCheck](~~SubmitCheck~~) operation to query the ID.
+         * TaskId.
          */
         public Builder taskId(String taskId) {
             this.putQueryParameter("TaskId", taskId);

@@ -112,7 +112,7 @@ public class DescribeBackupPoliciesRequest extends Request {
         } 
 
         /**
-         * The number of the page to return. Default value: 1.
+         * The number of entries returned per page. Default value: 10.
          */
         public Builder currentPage(Integer currentPage) {
             this.putQueryParameter("CurrentPage", currentPage);
@@ -121,7 +121,7 @@ public class DescribeBackupPoliciesRequest extends Request {
         }
 
         /**
-         * The information that you want to use to identify the servers protected by the anti-ransomware policy. You can enter the IP address or ID of a server.
+         * The ID of the request, which is used to locate and troubleshoot issues.
          */
         public Builder machineRemark(String machineRemark) {
             this.putQueryParameter("MachineRemark", machineRemark);
@@ -130,7 +130,7 @@ public class DescribeBackupPoliciesRequest extends Request {
         }
 
         /**
-         * The name of the anti-ransomware policy that you want to query.
+         * The number of the page to return. Default value: 1.
          */
         public Builder name(String name) {
             this.putQueryParameter("Name", name);
@@ -139,7 +139,7 @@ public class DescribeBackupPoliciesRequest extends Request {
         }
 
         /**
-         * The number of entries to return on each page. Default value: 10.
+         * The page number of the returned page.
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -148,12 +148,7 @@ public class DescribeBackupPoliciesRequest extends Request {
         }
 
         /**
-         * The status of the anti-ransomware policy. Valid values:
-         * <p>
-         * 
-         * *   **enabled**: The anti-ransomware policy is manually enabled.
-         * *   **disabled**: The anti-ransomware policy is manually disabled. After an anti-ransomware policy is disabled, the data backup task that is running based on the policy stops.
-         * *   **closed**: The anti-ransomware policy automatically stops because the anti-ransomware capacity is insufficient.
+         * The pagination information.
          */
         public Builder status(String status) {
             this.putQueryParameter("Status", status);

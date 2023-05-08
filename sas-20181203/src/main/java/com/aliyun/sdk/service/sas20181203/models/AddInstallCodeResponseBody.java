@@ -38,7 +38,10 @@ public class AddInstallCodeResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The ID of the request, which is used to locate and troubleshoot issues.
+         * The validity period of the installation command. The value is a 13-digit timestamp.
+         * <p>
+         * 
+         * >  The installation command is valid only within the validity period. An expired installation command cannot be used to install the Security Center agent.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

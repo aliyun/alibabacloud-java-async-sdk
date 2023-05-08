@@ -55,10 +55,7 @@ public class DescribeWarningExportInfoRequest extends Request {
         } 
 
         /**
-         * The ID of the export task.
-         * <p>
-         * 
-         * >  You can can call the [ExportWarning](~~ExportWarning~~) operation to query the IDs of export tasks.
+         * The name of the exported Excel file.
          */
         public Builder exportId(Long exportId) {
             this.putQueryParameter("ExportId", exportId);

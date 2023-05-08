@@ -69,7 +69,11 @@ public class DeleteHoneypotProbeRequest extends Request {
         } 
 
         /**
-         * Lang.
+         * 设置请求和接收消息的语言类型，默认为**zh**。取值：
+         * <p>
+         * 
+         * - **zh**：中文
+         * - **en**：英文
          */
         public Builder lang(String lang) {
             this.putQueryParameter("Lang", lang);
@@ -78,10 +82,7 @@ public class DeleteHoneypotProbeRequest extends Request {
         }
 
         /**
-         * The ID of the probe.
-         * <p>
-         * 
-         * >  You can call the [ListHoneypotProbe](~~ListHoneypotProbe~~) operation to query the IDs of probes.
+         * 探针id
          */
         public Builder probeId(String probeId) {
             this.putQueryParameter("ProbeId", probeId);

@@ -138,14 +138,12 @@ public class DescribeClientConfSetupResponseBody extends TeaModel {
             }
 
             /**
-             * The value of the tag:
+             * The value of the tag. Valid values:
              * <p>
              * 
-             * - advanced
-             * 
-             * - basic
-             * 
-             * - major
+             * *   major
+             * *   advanced
+             * *   basic
              */
             public Builder strategyTagValue(String strategyTagValue) {
                 this.strategyTagValue = strategyTagValue;

@@ -69,7 +69,7 @@ public class ListPluginForUuidRequest extends Request {
         } 
 
         /**
-         * The plug-in types.
+         * An array that consists of the information about the plug-ins.
          */
         public Builder types(java.util.List < String > types) {
             String typesShrink = shrink(types, "Types", "simple");
@@ -79,10 +79,7 @@ public class ListPluginForUuidRequest extends Request {
         }
 
         /**
-         * The UUID of the server.
-         * <p>
-         * 
-         * >  You can call the [DescribeCloudCenterInstances](~~DescribeCloudCenterInstances~~) operation to query the UUIDs of servers.
+         * The configurations of the plug-in.
          */
         public Builder uuid(String uuid) {
             this.putQueryParameter("Uuid", uuid);

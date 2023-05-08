@@ -62,7 +62,7 @@ public class DescribeBruteForceRecordsResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * An array that consists of the IP addresses.
+         * MachineList.
          */
         public Builder machineList(java.util.List < MachineList> machineList) {
             this.machineList = machineList;
@@ -70,7 +70,7 @@ public class DescribeBruteForceRecordsResponseBody extends TeaModel {
         }
 
         /**
-         * The pagination information.
+         * PageInfo.
          */
         public Builder pageInfo(PageInfo pageInfo) {
             this.pageInfo = pageInfo;
@@ -78,7 +78,7 @@ public class DescribeBruteForceRecordsResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request, which is used to locate and troubleshoot issues.
+         * RequestId.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -92,11 +92,17 @@ public class DescribeBruteForceRecordsResponseBody extends TeaModel {
     } 
 
     public static class MachineList extends TeaModel {
+        @NameInMap("AliNetOnline")
+        private Boolean aliNetOnline;
+
         @NameInMap("BlockExpireDate")
         private Long blockExpireDate;
 
         @NameInMap("BlockIp")
         private String blockIp;
+
+        @NameInMap("BlockType")
+        private String blockType;
 
         @NameInMap("ErrorCode")
         private String errorCode;
@@ -129,8 +135,10 @@ public class DescribeBruteForceRecordsResponseBody extends TeaModel {
         private String uuid;
 
         private MachineList(Builder builder) {
+            this.aliNetOnline = builder.aliNetOnline;
             this.blockExpireDate = builder.blockExpireDate;
             this.blockIp = builder.blockIp;
+            this.blockType = builder.blockType;
             this.errorCode = builder.errorCode;
             this.id = builder.id;
             this.instanceName = builder.instanceName;
@@ -152,6 +160,13 @@ public class DescribeBruteForceRecordsResponseBody extends TeaModel {
         }
 
         /**
+         * @return aliNetOnline
+         */
+        public Boolean getAliNetOnline() {
+            return this.aliNetOnline;
+        }
+
+        /**
          * @return blockExpireDate
          */
         public Long getBlockExpireDate() {
@@ -163,6 +178,13 @@ public class DescribeBruteForceRecordsResponseBody extends TeaModel {
          */
         public String getBlockIp() {
             return this.blockIp;
+        }
+
+        /**
+         * @return blockType
+         */
+        public String getBlockType() {
+            return this.blockType;
         }
 
         /**
@@ -236,8 +258,10 @@ public class DescribeBruteForceRecordsResponseBody extends TeaModel {
         }
 
         public static final class Builder {
+            private Boolean aliNetOnline; 
             private Long blockExpireDate; 
             private String blockIp; 
+            private String blockType; 
             private String errorCode; 
             private Long id; 
             private String instanceName; 
@@ -250,7 +274,15 @@ public class DescribeBruteForceRecordsResponseBody extends TeaModel {
             private String uuid; 
 
             /**
-             * The timestamp when the block action on the IP address becomes invalid.
+             * AliNetOnline.
+             */
+            public Builder aliNetOnline(Boolean aliNetOnline) {
+                this.aliNetOnline = aliNetOnline;
+                return this;
+            }
+
+            /**
+             * BlockExpireDate.
              */
             public Builder blockExpireDate(Long blockExpireDate) {
                 this.blockExpireDate = blockExpireDate;
@@ -258,7 +290,7 @@ public class DescribeBruteForceRecordsResponseBody extends TeaModel {
             }
 
             /**
-             * The blocked IP address.
+             * BlockIp.
              */
             public Builder blockIp(String blockIp) {
                 this.blockIp = blockIp;
@@ -266,7 +298,15 @@ public class DescribeBruteForceRecordsResponseBody extends TeaModel {
             }
 
             /**
-             * The error code returned when the defense rule fails to block the IP address.
+             * BlockType.
+             */
+            public Builder blockType(String blockType) {
+                this.blockType = blockType;
+                return this;
+            }
+
+            /**
+             * ErrorCode.
              */
             public Builder errorCode(String errorCode) {
                 this.errorCode = errorCode;
@@ -274,7 +314,7 @@ public class DescribeBruteForceRecordsResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the primary key in the table of records on the blocked IP address.
+             * Id.
              */
             public Builder id(Long id) {
                 this.id = id;
@@ -282,7 +322,7 @@ public class DescribeBruteForceRecordsResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the server.
+             * InstanceName.
              */
             public Builder instanceName(String instanceName) {
                 this.instanceName = instanceName;
@@ -290,7 +330,7 @@ public class DescribeBruteForceRecordsResponseBody extends TeaModel {
             }
 
             /**
-             * The public IP address.
+             * InternetIp.
              */
             public Builder internetIp(String internetIp) {
                 this.internetIp = internetIp;
@@ -298,7 +338,7 @@ public class DescribeBruteForceRecordsResponseBody extends TeaModel {
             }
 
             /**
-             * The private IP address.
+             * IntranetIp.
              */
             public Builder intranetIp(String intranetIp) {
                 this.intranetIp = intranetIp;
@@ -306,7 +346,7 @@ public class DescribeBruteForceRecordsResponseBody extends TeaModel {
             }
 
             /**
-             * The port that is attacked.
+             * Port.
              */
             public Builder port(String port) {
                 this.port = port;
@@ -314,7 +354,7 @@ public class DescribeBruteForceRecordsResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the defense rule.
+             * RuleName.
              */
             public Builder ruleName(String ruleName) {
                 this.ruleName = ruleName;
@@ -322,11 +362,7 @@ public class DescribeBruteForceRecordsResponseBody extends TeaModel {
             }
 
             /**
-             * The type of the defense rule. Valid values:
-             * <p>
-             * 
-             * *   **userRule**: custom rule
-             * *   **blinkRule**: system rule
+             * Source.
              */
             public Builder source(String source) {
                 this.source = source;
@@ -334,12 +370,7 @@ public class DescribeBruteForceRecordsResponseBody extends TeaModel {
             }
 
             /**
-             * The status of the defense rule. Valid values:
-             * <p>
-             * 
-             * *   **0**: invalid
-             * *   **1**: enabled
-             * *   **2**: failed
+             * Status.
              */
             public Builder status(Integer status) {
                 this.status = status;
@@ -347,7 +378,7 @@ public class DescribeBruteForceRecordsResponseBody extends TeaModel {
             }
 
             /**
-             * The UUID of the server on which access from the IP address is blocked.
+             * Uuid.
              */
             public Builder uuid(String uuid) {
                 this.uuid = uuid;
@@ -424,7 +455,7 @@ public class DescribeBruteForceRecordsResponseBody extends TeaModel {
             private Integer totalCount; 
 
             /**
-             * The number of entries returned on the current page.
+             * Count.
              */
             public Builder count(Integer count) {
                 this.count = count;
@@ -432,7 +463,7 @@ public class DescribeBruteForceRecordsResponseBody extends TeaModel {
             }
 
             /**
-             * The page number of the returned page.
+             * CurrentPage.
              */
             public Builder currentPage(Integer currentPage) {
                 this.currentPage = currentPage;
@@ -440,7 +471,7 @@ public class DescribeBruteForceRecordsResponseBody extends TeaModel {
             }
 
             /**
-             * The number of entries returned per page. Default value: **20**.
+             * PageSize.
              */
             public Builder pageSize(Integer pageSize) {
                 this.pageSize = pageSize;
@@ -448,7 +479,7 @@ public class DescribeBruteForceRecordsResponseBody extends TeaModel {
             }
 
             /**
-             * The total number of entries returned.
+             * TotalCount.
              */
             public Builder totalCount(Integer totalCount) {
                 this.totalCount = totalCount;

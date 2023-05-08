@@ -50,7 +50,7 @@ public class ListRuleTargetAllResponseBody extends TeaModel {
         private java.util.List < RuleTargetList> ruleTargetList; 
 
         /**
-         * The ID of the request, which is used to locate and troubleshoot issues.
+         * RequestId.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -58,7 +58,7 @@ public class ListRuleTargetAllResponseBody extends TeaModel {
         }
 
         /**
-         * An array that consists of the network objects.
+         * RuleTargetList.
          */
         public Builder ruleTargetList(java.util.List < RuleTargetList> ruleTargetList) {
             this.ruleTargetList = ruleTargetList;
@@ -122,7 +122,7 @@ public class ListRuleTargetAllResponseBody extends TeaModel {
             private String targetType; 
 
             /**
-             * The ID of the network object.
+             * TargetId.
              */
             public Builder targetId(Long targetId) {
                 this.targetId = targetId;
@@ -130,7 +130,7 @@ public class ListRuleTargetAllResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the network object.
+             * TargetName.
              */
             public Builder targetName(String targetName) {
                 this.targetName = targetName;
@@ -138,10 +138,7 @@ public class ListRuleTargetAllResponseBody extends TeaModel {
             }
 
             /**
-             * The type of the network object. Valid values:
-             * <p>
-             * 
-             * *   IMAGE
+             * TargetType.
              */
             public Builder targetType(String targetType) {
                 this.targetType = targetType;

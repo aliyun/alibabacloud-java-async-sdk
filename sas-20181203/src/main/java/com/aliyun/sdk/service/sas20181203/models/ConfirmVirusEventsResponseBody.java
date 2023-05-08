@@ -50,7 +50,7 @@ public class ConfirmVirusEventsResponseBody extends TeaModel {
         private Boolean result; 
 
         /**
-         * The ID of the request.
+         * RequestId.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -58,11 +58,7 @@ public class ConfirmVirusEventsResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether the request was successful. Valid values:
-         * <p>
-         * 
-         * *   true: The request was successful.
-         * *   false: The request failed.
+         * Result.
          */
         public Builder result(Boolean result) {
             this.result = result;

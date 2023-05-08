@@ -110,13 +110,7 @@ public class ListClusterInterceptionConfigRequest extends Request {
         } 
 
         /**
-         * The status of the container firewall feature. Valid values:
-         * <p>
-         * 
-         * *   **-1**: unknown
-         * *   **0**: abnormal
-         * *   **1**: normal
-         * *   **2**: normal to be confirmed
+         * ClusterCNNFStatus.
          */
         public Builder clusterCNNFStatus(Integer clusterCNNFStatus) {
             this.putQueryParameter("ClusterCNNFStatus", clusterCNNFStatus);
@@ -125,10 +119,7 @@ public class ListClusterInterceptionConfigRequest extends Request {
         }
 
         /**
-         * The ID of the cluster.
-         * <p>
-         * 
-         * > You can call the [DescribeContainerInstances](~~DescribeContainerInstances~~) operation to query the IDs of clusters.
+         * ClusterId.
          */
         public Builder clusterId(String clusterId) {
             this.putQueryParameter("ClusterId", clusterId);
@@ -137,7 +128,7 @@ public class ListClusterInterceptionConfigRequest extends Request {
         }
 
         /**
-         * The name of the cluster.
+         * ClusterName.
          */
         public Builder clusterName(String clusterName) {
             this.putQueryParameter("ClusterName", clusterName);
@@ -146,7 +137,7 @@ public class ListClusterInterceptionConfigRequest extends Request {
         }
 
         /**
-         * The number of the page to return. Default value: 1.
+         * CurrentPage.
          */
         public Builder currentPage(Integer currentPage) {
             this.putQueryParameter("CurrentPage", currentPage);
@@ -155,7 +146,7 @@ public class ListClusterInterceptionConfigRequest extends Request {
         }
 
         /**
-         * The number of entries to return on each page. Default value: 20.
+         * PageSize.
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);

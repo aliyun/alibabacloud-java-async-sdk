@@ -98,7 +98,7 @@ public class OperationCancelIgnoreSuspEventResponseBody extends TeaModel {
         private Long timeCost; 
 
         /**
-         * The status code returned. The status code **200** indicates that the request was is successful. Other status codes indicate that the request fails. You can identify the cause of the failure based on the status code.
+         * Code.
          */
         public Builder code(String code) {
             this.code = code;
@@ -106,7 +106,7 @@ public class OperationCancelIgnoreSuspEventResponseBody extends TeaModel {
         }
 
         /**
-         * The HTTP status code.
+         * HttpStatusCode.
          */
         public Builder httpStatusCode(Integer httpStatusCode) {
             this.httpStatusCode = httpStatusCode;
@@ -114,7 +114,7 @@ public class OperationCancelIgnoreSuspEventResponseBody extends TeaModel {
         }
 
         /**
-         * The error message returned.
+         * Message.
          */
         public Builder message(String message) {
             this.message = message;
@@ -122,7 +122,7 @@ public class OperationCancelIgnoreSuspEventResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * RequestId.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -130,11 +130,7 @@ public class OperationCancelIgnoreSuspEventResponseBody extends TeaModel {
         }
 
         /**
-         * The handling result of an exception. Valid values:
-         * <p>
-         * 
-         * *   **true**: successful
-         * *   **false**: failed
+         * Success.
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -142,7 +138,7 @@ public class OperationCancelIgnoreSuspEventResponseBody extends TeaModel {
         }
 
         /**
-         * The time consumed for the request. Unit: seconds.
+         * TimeCost.
          */
         public Builder timeCost(Long timeCost) {
             this.timeCost = timeCost;

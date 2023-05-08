@@ -98,7 +98,7 @@ public class ModifyInstanceAntiBruteForceRuleRequest extends Request {
         } 
 
         /**
-         * The ID of the defense rule.
+         * NewRuleId.
          */
         public Builder newRuleId(Long newRuleId) {
             this.putQueryParameter("NewRuleId", newRuleId);
@@ -116,7 +116,7 @@ public class ModifyInstanceAntiBruteForceRuleRequest extends Request {
         }
 
         /**
-         * The source IP address of the request.
+         * SourceIp.
          */
         public Builder sourceIp(String sourceIp) {
             this.putQueryParameter("SourceIp", sourceIp);
@@ -125,7 +125,7 @@ public class ModifyInstanceAntiBruteForceRuleRequest extends Request {
         }
 
         /**
-         * The UUID of the server for which you want to modify the defense rule. You can call the [DescribeCloudCenterInstances](~~DescribeCloudCenterInstances~~) operation to query the UUIDs of servers.
+         * Uuid.
          */
         public Builder uuid(String uuid) {
             this.putQueryParameter("Uuid", uuid);

@@ -62,7 +62,7 @@ public class ListPodRiskResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The pagination information.
+         * PageInfo.
          */
         public Builder pageInfo(PageInfo pageInfo) {
             this.pageInfo = pageInfo;
@@ -70,7 +70,7 @@ public class ListPodRiskResponseBody extends TeaModel {
         }
 
         /**
-         * An array that consists of the risks.
+         * PodRiskList.
          */
         public Builder podRiskList(java.util.List < PodRiskList> podRiskList) {
             this.podRiskList = podRiskList;
@@ -78,7 +78,7 @@ public class ListPodRiskResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request, which is used to locate and troubleshoot issues.
+         * Id of the request
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -154,7 +154,7 @@ public class ListPodRiskResponseBody extends TeaModel {
             private Integer totalCount; 
 
             /**
-             * The number of entries returned on the current page.
+             * Count.
              */
             public Builder count(Integer count) {
                 this.count = count;
@@ -162,7 +162,7 @@ public class ListPodRiskResponseBody extends TeaModel {
             }
 
             /**
-             * The page number of the returned page.
+             * CurrentPage.
              */
             public Builder currentPage(Integer currentPage) {
                 this.currentPage = currentPage;
@@ -170,7 +170,7 @@ public class ListPodRiskResponseBody extends TeaModel {
             }
 
             /**
-             * The number of entries returned per page.
+             * PageSize.
              */
             public Builder pageSize(Integer pageSize) {
                 this.pageSize = pageSize;
@@ -178,7 +178,7 @@ public class ListPodRiskResponseBody extends TeaModel {
             }
 
             /**
-             * The total number of entries returned.
+             * TotalCount.
              */
             public Builder totalCount(Integer totalCount) {
                 this.totalCount = totalCount;
@@ -339,7 +339,7 @@ public class ListPodRiskResponseBody extends TeaModel {
             private Integer vulCount; 
 
             /**
-             * The number of alerts that are generated for the pod.
+             * AlarmCount.
              */
             public Builder alarmCount(Integer alarmCount) {
                 this.alarmCount = alarmCount;
@@ -347,7 +347,7 @@ public class ListPodRiskResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the container cluster.
+             * ClusterId.
              */
             public Builder clusterId(String clusterId) {
                 this.clusterId = clusterId;
@@ -355,7 +355,7 @@ public class ListPodRiskResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the cluster.
+             * ClusterName.
              */
             public Builder clusterName(String clusterName) {
                 this.clusterName = clusterName;
@@ -363,7 +363,7 @@ public class ListPodRiskResponseBody extends TeaModel {
             }
 
             /**
-             * The timestamp when the pod was created. Unit: milliseconds.
+             * CreateTime.
              */
             public Builder createTime(Long createTime) {
                 this.createTime = createTime;
@@ -371,7 +371,7 @@ public class ListPodRiskResponseBody extends TeaModel {
             }
 
             /**
-             * The number of baseline risk items that are detected in the pod.
+             * HcCount.
              */
             public Builder hcCount(Integer hcCount) {
                 this.hcCount = hcCount;
@@ -379,7 +379,7 @@ public class ListPodRiskResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the node.
+             * InstanceId.
              */
             public Builder instanceId(String instanceId) {
                 this.instanceId = instanceId;
@@ -387,7 +387,7 @@ public class ListPodRiskResponseBody extends TeaModel {
             }
 
             /**
-             * The namespace of the Kubernetes cluster.
+             * Namespace.
              */
             public Builder namespace(String namespace) {
                 this.namespace = namespace;
@@ -395,7 +395,7 @@ public class ListPodRiskResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the node.
+             * NodeName.
              */
             public Builder nodeName(String nodeName) {
                 this.nodeName = nodeName;
@@ -403,7 +403,7 @@ public class ListPodRiskResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the pod.
+             * Pod.
              */
             public Builder pod(String pod) {
                 this.pod = pod;
@@ -411,7 +411,7 @@ public class ListPodRiskResponseBody extends TeaModel {
             }
 
             /**
-             * The IP address of the pod.
+             * PodIp.
              */
             public Builder podIp(String podIp) {
                 this.podIp = podIp;
@@ -419,7 +419,7 @@ public class ListPodRiskResponseBody extends TeaModel {
             }
 
             /**
-             * The number of vulnerabilities that are detected in the pod.
+             * VulCount.
              */
             public Builder vulCount(Integer vulCount) {
                 this.vulCount = vulCount;

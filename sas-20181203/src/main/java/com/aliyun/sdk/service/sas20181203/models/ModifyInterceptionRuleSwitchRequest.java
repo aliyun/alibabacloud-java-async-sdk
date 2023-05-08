@@ -82,10 +82,7 @@ public class ModifyInterceptionRuleSwitchRequest extends Request {
         } 
 
         /**
-         * The ID of the cluster.
-         * <p>
-         * 
-         * > You can call the [DescribeGroupedContainerInstances](~~DescribeGroupedContainerInstances~~) operation to query the IDs of clusters.
+         * ClusterId.
          */
         public Builder clusterId(String clusterId) {
             this.putQueryParameter("ClusterId", clusterId);
@@ -94,10 +91,7 @@ public class ModifyInterceptionRuleSwitchRequest extends Request {
         }
 
         /**
-         * The IDs of the rules whose status you want to change. Separate multiple IDs with commas (,).
-         * <p>
-         * 
-         * > You can call the [ListInterceptionRulePage](~~182997~~) operation to query the IDs of rules.
+         * RuleIds.
          */
         public Builder ruleIds(String ruleIds) {
             this.putQueryParameter("RuleIds", ruleIds);
@@ -106,11 +100,7 @@ public class ModifyInterceptionRuleSwitchRequest extends Request {
         }
 
         /**
-         * Specifies whether the rule is enabled. Valid values:
-         * <p>
-         * 
-         * *   **1**: enabled
-         * *   **0**: disabled
+         * RuleSwitch.
          */
         public Builder ruleSwitch(Integer ruleSwitch) {
             this.putQueryParameter("RuleSwitch", ruleSwitch);

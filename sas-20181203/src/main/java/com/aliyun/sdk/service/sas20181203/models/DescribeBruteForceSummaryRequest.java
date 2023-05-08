@@ -77,7 +77,7 @@ public class DescribeBruteForceSummaryRequest extends Request {
         }
 
         /**
-         * The source IP address of the request.
+         * DescribeBruteForceSummary
          */
         public Builder sourceIp(String sourceIp) {
             this.putQueryParameter("SourceIp", sourceIp);

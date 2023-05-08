@@ -134,7 +134,7 @@ public class DescribeGroupStructResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The parent node of the group.
+         * GroupFather.
          */
         public Builder groupFather(Integer groupFather) {
             this.groupFather = groupFather;
@@ -142,11 +142,7 @@ public class DescribeGroupStructResponseBody extends TeaModel {
         }
 
         /**
-         * The type of the server group. Valid values:
-         * <p>
-         * 
-         * *   **0**: the default group
-         * *   **1**: other groups
+         * GroupFlag.
          */
         public Builder groupFlag(Integer groupFlag) {
             this.groupFlag = groupFlag;
@@ -154,7 +150,7 @@ public class DescribeGroupStructResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the server group.
+         * GroupId.
          */
         public Builder groupId(Long groupId) {
             this.groupId = groupId;
@@ -162,7 +158,7 @@ public class DescribeGroupStructResponseBody extends TeaModel {
         }
 
         /**
-         * The sequence number.
+         * GroupIndex.
          */
         public Builder groupIndex(Integer groupIndex) {
             this.groupIndex = groupIndex;
@@ -170,7 +166,7 @@ public class DescribeGroupStructResponseBody extends TeaModel {
         }
 
         /**
-         * The level of the application group.
+         * GroupLevel.
          */
         public Builder groupLevel(Integer groupLevel) {
             this.groupLevel = groupLevel;
@@ -178,7 +174,7 @@ public class DescribeGroupStructResponseBody extends TeaModel {
         }
 
         /**
-         * The name of the server group.
+         * GroupName.
          */
         public Builder groupName(String groupName) {
             this.groupName = groupName;
@@ -186,7 +182,7 @@ public class DescribeGroupStructResponseBody extends TeaModel {
         }
 
         /**
-         * An array that consists of child groups.
+         * Groups.
          */
         public Builder groups(java.util.List < String > groups) {
             this.groups = groups;
@@ -194,7 +190,7 @@ public class DescribeGroupStructResponseBody extends TeaModel {
         }
 
         /**
-         * The number of servers in the group.
+         * MachineNum.
          */
         public Builder machineNum(Integer machineNum) {
             this.machineNum = machineNum;
@@ -202,7 +198,7 @@ public class DescribeGroupStructResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request, which is used to locate and troubleshoot issues.
+         * RequestId.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

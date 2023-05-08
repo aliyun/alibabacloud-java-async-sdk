@@ -96,7 +96,7 @@ public class ListHoneypotNodeRequest extends Request {
         } 
 
         /**
-         * The number of the page to return.
+         * The allowed CIDR block.
          */
         public Builder currentPage(Integer currentPage) {
             this.putQueryParameter("CurrentPage", currentPage);
@@ -105,7 +105,7 @@ public class ListHoneypotNodeRequest extends Request {
         }
 
         /**
-         * The ID of the management node.
+         * The status code returned. The status code **200** indicates that the request was successful. Other status codes indicate that the request failed. You can identify the cause of the failure based on the status code.
          */
         public Builder nodeId(String nodeId) {
             this.putQueryParameter("NodeId", nodeId);
@@ -123,7 +123,7 @@ public class ListHoneypotNodeRequest extends Request {
         }
 
         /**
-         * The number of entries to return on each page.
+         * The time when the management node was created.
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);

@@ -62,7 +62,7 @@ public class DescribeOnceTaskLeafRecordPageResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * OnceTasks.
+         * The sub-tasks returned.
          */
         public Builder onceTasks(java.util.List < OnceTasks> onceTasks) {
             this.onceTasks = onceTasks;
@@ -70,7 +70,7 @@ public class DescribeOnceTaskLeafRecordPageResponseBody extends TeaModel {
         }
 
         /**
-         * PageInfo.
+         * The pagination information.
          */
         public Builder pageInfo(PageInfo pageInfo) {
             this.pageInfo = pageInfo;
@@ -78,7 +78,7 @@ public class DescribeOnceTaskLeafRecordPageResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -286,7 +286,7 @@ public class DescribeOnceTaskLeafRecordPageResponseBody extends TeaModel {
             private String tag; 
 
             /**
-             * AppName.
+             * The name of the application.
              */
             public Builder appName(String appName) {
                 this.appName = appName;
@@ -294,7 +294,7 @@ public class DescribeOnceTaskLeafRecordPageResponseBody extends TeaModel {
             }
 
             /**
-             * ClusterId.
+             * The ID of the cluster.
              */
             public Builder clusterId(String clusterId) {
                 this.clusterId = clusterId;
@@ -302,7 +302,7 @@ public class DescribeOnceTaskLeafRecordPageResponseBody extends TeaModel {
             }
 
             /**
-             * ClusterName.
+             * The name of the cluster.
              */
             public Builder clusterName(String clusterName) {
                 this.clusterName = clusterName;
@@ -310,7 +310,7 @@ public class DescribeOnceTaskLeafRecordPageResponseBody extends TeaModel {
             }
 
             /**
-             * Digest.
+             * The digest of the image.
              */
             public Builder digest(String digest) {
                 this.digest = digest;
@@ -318,7 +318,7 @@ public class DescribeOnceTaskLeafRecordPageResponseBody extends TeaModel {
             }
 
             /**
-             * Image.
+             * The image of the container.
              */
             public Builder image(String image) {
                 this.image = image;
@@ -326,7 +326,7 @@ public class DescribeOnceTaskLeafRecordPageResponseBody extends TeaModel {
             }
 
             /**
-             * NodeInstanceId.
+             * The ID of the instance.
              */
             public Builder nodeInstanceId(String nodeInstanceId) {
                 this.nodeInstanceId = nodeInstanceId;
@@ -334,7 +334,7 @@ public class DescribeOnceTaskLeafRecordPageResponseBody extends TeaModel {
             }
 
             /**
-             * NodeIp.
+             * The IP address of the node.
              */
             public Builder nodeIp(String nodeIp) {
                 this.nodeIp = nodeIp;
@@ -342,7 +342,7 @@ public class DescribeOnceTaskLeafRecordPageResponseBody extends TeaModel {
             }
 
             /**
-             * NodeName.
+             * The name of the node.
              */
             public Builder nodeName(String nodeName) {
                 this.nodeName = nodeName;
@@ -350,7 +350,7 @@ public class DescribeOnceTaskLeafRecordPageResponseBody extends TeaModel {
             }
 
             /**
-             * Pod.
+             * The pod of the image.
              */
             public Builder pod(String pod) {
                 this.pod = pod;
@@ -358,7 +358,7 @@ public class DescribeOnceTaskLeafRecordPageResponseBody extends TeaModel {
             }
 
             /**
-             * RegionId.
+             * The region of the server image.
              */
             public Builder regionId(String regionId) {
                 this.regionId = regionId;
@@ -366,7 +366,7 @@ public class DescribeOnceTaskLeafRecordPageResponseBody extends TeaModel {
             }
 
             /**
-             * RepoId.
+             * The ID of the image repository.
              */
             public Builder repoId(String repoId) {
                 this.repoId = repoId;
@@ -374,7 +374,7 @@ public class DescribeOnceTaskLeafRecordPageResponseBody extends TeaModel {
             }
 
             /**
-             * RepoName.
+             * The name of the image repository.
              */
             public Builder repoName(String repoName) {
                 this.repoName = repoName;
@@ -382,7 +382,7 @@ public class DescribeOnceTaskLeafRecordPageResponseBody extends TeaModel {
             }
 
             /**
-             * RepoNamespace.
+             * The name of the namespace to which the image repository belongs.
              */
             public Builder repoNamespace(String repoNamespace) {
                 this.repoNamespace = repoNamespace;
@@ -390,7 +390,7 @@ public class DescribeOnceTaskLeafRecordPageResponseBody extends TeaModel {
             }
 
             /**
-             * RepoRegionId.
+             * The region ID of the image repository.
              */
             public Builder repoRegionId(String repoRegionId) {
                 this.repoRegionId = repoRegionId;
@@ -398,7 +398,7 @@ public class DescribeOnceTaskLeafRecordPageResponseBody extends TeaModel {
             }
 
             /**
-             * Tag.
+             * The tag that is added to the image.
              */
             public Builder tag(String tag) {
                 this.tag = tag;
@@ -619,7 +619,7 @@ public class DescribeOnceTaskLeafRecordPageResponseBody extends TeaModel {
             private String totalCount; 
 
             /**
-             * EndTime.
+             * The time when the sub-task ends.
              */
             public Builder endTime(Long endTime) {
                 this.endTime = endTime;
@@ -627,7 +627,11 @@ public class DescribeOnceTaskLeafRecordPageResponseBody extends TeaModel {
             }
 
             /**
-             * Finish.
+             * Indicates whether the sub-task is complete.
+             * <p>
+             * 
+             * *   **0**: no
+             * *   **1**: yes
              */
             public Builder finish(Integer finish) {
                 this.finish = finish;
@@ -635,7 +639,7 @@ public class DescribeOnceTaskLeafRecordPageResponseBody extends TeaModel {
             }
 
             /**
-             * FinishCount.
+             * The number of assets that are scanned.
              */
             public Builder finishCount(String finishCount) {
                 this.finishCount = finishCount;
@@ -643,7 +647,7 @@ public class DescribeOnceTaskLeafRecordPageResponseBody extends TeaModel {
             }
 
             /**
-             * Progress.
+             * The progress percentage of the sub-task.
              */
             public Builder progress(Long progress) {
                 this.progress = progress;
@@ -651,7 +655,7 @@ public class DescribeOnceTaskLeafRecordPageResponseBody extends TeaModel {
             }
 
             /**
-             * RealRunTime.
+             * The execution duration of the sub-task.
              */
             public Builder realRunTime(Long realRunTime) {
                 this.realRunTime = realRunTime;
@@ -659,7 +663,7 @@ public class DescribeOnceTaskLeafRecordPageResponseBody extends TeaModel {
             }
 
             /**
-             * ResultInfo.
+             * The execution result of the task.
              */
             public Builder resultInfo(String resultInfo) {
                 this.resultInfo = resultInfo;
@@ -667,7 +671,7 @@ public class DescribeOnceTaskLeafRecordPageResponseBody extends TeaModel {
             }
 
             /**
-             * StartTime.
+             * The time when the sub-task starts.
              */
             public Builder startTime(Long startTime) {
                 this.startTime = startTime;
@@ -675,7 +679,7 @@ public class DescribeOnceTaskLeafRecordPageResponseBody extends TeaModel {
             }
 
             /**
-             * Status.
+             * The status information.
              */
             public Builder status(String status) {
                 this.status = status;
@@ -683,7 +687,13 @@ public class DescribeOnceTaskLeafRecordPageResponseBody extends TeaModel {
             }
 
             /**
-             * StatusText.
+             * The status of the sub-task. Valid values:
+             * <p>
+             * 
+             * *   **INIT**: The sub-task is not started.
+             * *   **START**: The sub-task is started.
+             * *   **SUCCESS**: The sub-task is complete.
+             * *   **TIMEOUT**: The sub-task timed out.
              */
             public Builder statusText(String statusText) {
                 this.statusText = statusText;
@@ -691,7 +701,7 @@ public class DescribeOnceTaskLeafRecordPageResponseBody extends TeaModel {
             }
 
             /**
-             * Target.
+             * The objective of the sub-task.
              */
             public Builder target(String target) {
                 this.target = target;
@@ -699,7 +709,11 @@ public class DescribeOnceTaskLeafRecordPageResponseBody extends TeaModel {
             }
 
             /**
-             * TargetType.
+             * The type of the asset on which the sub-task is performed.
+             * <p>
+             * 
+             * *   **IMAGE_REPO**: image repository
+             * *   **IMAGE**: image
              */
             public Builder targetType(String targetType) {
                 this.targetType = targetType;
@@ -707,7 +721,7 @@ public class DescribeOnceTaskLeafRecordPageResponseBody extends TeaModel {
             }
 
             /**
-             * TaskId.
+             * The sub-task ID.
              */
             public Builder taskId(String taskId) {
                 this.taskId = taskId;
@@ -715,7 +729,7 @@ public class DescribeOnceTaskLeafRecordPageResponseBody extends TeaModel {
             }
 
             /**
-             * TaskImageInfo.
+             * The information about the image scan.
              */
             public Builder taskImageInfo(TaskImageInfo taskImageInfo) {
                 this.taskImageInfo = taskImageInfo;
@@ -723,7 +737,7 @@ public class DescribeOnceTaskLeafRecordPageResponseBody extends TeaModel {
             }
 
             /**
-             * TaskName.
+             * The name of the sub-task.
              */
             public Builder taskName(String taskName) {
                 this.taskName = taskName;
@@ -731,7 +745,7 @@ public class DescribeOnceTaskLeafRecordPageResponseBody extends TeaModel {
             }
 
             /**
-             * TaskType.
+             * The type of the sub-task.
              */
             public Builder taskType(String taskType) {
                 this.taskType = taskType;
@@ -739,7 +753,7 @@ public class DescribeOnceTaskLeafRecordPageResponseBody extends TeaModel {
             }
 
             /**
-             * TotalCount.
+             * The total number of entries returned.
              */
             public Builder totalCount(String totalCount) {
                 this.totalCount = totalCount;
@@ -816,7 +830,7 @@ public class DescribeOnceTaskLeafRecordPageResponseBody extends TeaModel {
             private Integer totalCount; 
 
             /**
-             * Count.
+             * The number of entries returned on the current page.
              */
             public Builder count(Integer count) {
                 this.count = count;
@@ -824,7 +838,7 @@ public class DescribeOnceTaskLeafRecordPageResponseBody extends TeaModel {
             }
 
             /**
-             * CurrentPage.
+             * The page number of the returned page.
              */
             public Builder currentPage(Integer currentPage) {
                 this.currentPage = currentPage;
@@ -832,7 +846,7 @@ public class DescribeOnceTaskLeafRecordPageResponseBody extends TeaModel {
             }
 
             /**
-             * PageSize.
+             * The number of entries returned per page.
              */
             public Builder pageSize(Integer pageSize) {
                 this.pageSize = pageSize;
@@ -840,7 +854,7 @@ public class DescribeOnceTaskLeafRecordPageResponseBody extends TeaModel {
             }
 
             /**
-             * TotalCount.
+             * The total number of entries returned.
              */
             public Builder totalCount(Integer totalCount) {
                 this.totalCount = totalCount;

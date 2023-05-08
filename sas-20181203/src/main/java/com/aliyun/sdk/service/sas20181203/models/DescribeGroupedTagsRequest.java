@@ -54,11 +54,7 @@ public class DescribeGroupedTagsRequest extends Request {
         } 
 
         /**
-         * The type of the asset to query. If you do not specify this parameter, the tags of all asset types are queried. Valid values:
-         * <p>
-         * 
-         * *   **ecs**: server
-         * *   **cloud_product**: Alibaba Cloud service
+         * ecs
          */
         public Builder machineTypes(String machineTypes) {
             this.putQueryParameter("MachineTypes", machineTypes);

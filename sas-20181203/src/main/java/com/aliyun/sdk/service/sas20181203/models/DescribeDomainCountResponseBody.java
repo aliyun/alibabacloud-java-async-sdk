@@ -74,7 +74,7 @@ public class DescribeDomainCountResponseBody extends TeaModel {
         private Integer totalDomainsCount; 
 
         /**
-         * The ID of the request, which is used to locate and troubleshoot issues.
+         * RequestId.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -82,7 +82,7 @@ public class DescribeDomainCountResponseBody extends TeaModel {
         }
 
         /**
-         * The number of root domains.
+         * RootDomainsCount.
          */
         public Builder rootDomainsCount(Integer rootDomainsCount) {
             this.rootDomainsCount = rootDomainsCount;
@@ -90,7 +90,7 @@ public class DescribeDomainCountResponseBody extends TeaModel {
         }
 
         /**
-         * The number of subdomains.
+         * SubDomainsCount.
          */
         public Builder subDomainsCount(Integer subDomainsCount) {
             this.subDomainsCount = subDomainsCount;
@@ -98,7 +98,7 @@ public class DescribeDomainCountResponseBody extends TeaModel {
         }
 
         /**
-         * The total number of entries returned.
+         * TotalDomainsCount.
          */
         public Builder totalDomainsCount(Integer totalDomainsCount) {
             this.totalDomainsCount = totalDomainsCount;

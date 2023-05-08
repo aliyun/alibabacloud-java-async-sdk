@@ -82,11 +82,7 @@ public class ModifyWebPathRequest extends Request {
         } 
 
         /**
-         * The configuration of the web directory. The value of this parameter is in the JSON format and contains the following fields:
-         * <p>
-         * 
-         * *   **webPathType**: the type of the web directory
-         * *   **webPath**: the web directory
+         * Config.
          */
         public Builder config(String config) {
             this.putQueryParameter("Config", config);
@@ -95,12 +91,7 @@ public class ModifyWebPathRequest extends Request {
         }
 
         /**
-         * The protected asset to which the web directory belongs. The value of this parameter is in the JSON format and contains the following fields:
-         * <p>
-         * 
-         * *   **target**: the protected asset.
-         * *   **targetType**: the type of the asset. Set the value to uuid.
-         * *   **flag**: the type of the operation.
+         * Target.
          */
         public Builder target(String target) {
             this.putQueryParameter("Target", target);
@@ -109,7 +100,7 @@ public class ModifyWebPathRequest extends Request {
         }
 
         /**
-         * The type of the configuration item. Set the value to **web_path**.
+         * Type.
          */
         public Builder type(String type) {
             this.putQueryParameter("Type", type);

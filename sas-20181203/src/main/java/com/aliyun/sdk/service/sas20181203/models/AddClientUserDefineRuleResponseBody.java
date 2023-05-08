@@ -50,7 +50,7 @@ public class AddClientUserDefineRuleResponseBody extends TeaModel {
         private UserDefineRuleAddResult userDefineRuleAddResult; 
 
         /**
-         * The ID of the request.
+         * RequestId.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -58,7 +58,7 @@ public class AddClientUserDefineRuleResponseBody extends TeaModel {
         }
 
         /**
-         * The identifier of the custom defense rule.
+         * UserDefineRuleAddResult.
          */
         public Builder userDefineRuleAddResult(UserDefineRuleAddResult userDefineRuleAddResult) {
             this.userDefineRuleAddResult = userDefineRuleAddResult;
@@ -122,7 +122,7 @@ public class AddClientUserDefineRuleResponseBody extends TeaModel {
             private String switchId; 
 
             /**
-             * The ID of the rule.
+             * Id.
              */
             public Builder id(Long id) {
                 this.id = id;
@@ -130,12 +130,7 @@ public class AddClientUserDefineRuleResponseBody extends TeaModel {
             }
 
             /**
-             * The type of the operating system. Valid values:
-             * <p>
-             * 
-             * *   **windows**: Windows
-             * *   **linux**: Linux
-             * *   **all**: all types
+             * Platform.
              */
             public Builder platform(String platform) {
                 this.platform = platform;
@@ -143,7 +138,7 @@ public class AddClientUserDefineRuleResponseBody extends TeaModel {
             }
 
             /**
-             * The switch ID of the custom defense rule.
+             * SwitchId.
              */
             public Builder switchId(String switchId) {
                 this.switchId = switchId;

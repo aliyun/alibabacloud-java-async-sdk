@@ -126,10 +126,7 @@ public class IgnoreHcCheckWarningsRequest extends Request {
         } 
 
         /**
-         * The ID of the check item.
-         * <p>
-         * 
-         * >  You can call the [DescribeCheckWarnings](~~DescribeCheckWarnings~~) operation to query the IDs of check items.
+         * CheckIds.
          */
         public Builder checkIds(String checkIds) {
             this.putQueryParameter("CheckIds", checkIds);
@@ -138,10 +135,7 @@ public class IgnoreHcCheckWarningsRequest extends Request {
         }
 
         /**
-         * The ID of the alert that is triggered by the check item. Separate multiple IDs with commas (,).
-         * <p>
-         * 
-         * >  You can call the [DescribeCheckWarnings](~~DescribeCheckWarnings~~) operation to query the IDs of alerts that are triggered by check items.
+         * CheckWarningIds.
          */
         public Builder checkWarningIds(String checkWarningIds) {
             this.putQueryParameter("CheckWarningIds", checkWarningIds);
@@ -150,7 +144,7 @@ public class IgnoreHcCheckWarningsRequest extends Request {
         }
 
         /**
-         * The reason for the current operation.
+         * Reason.
          */
         public Builder reason(String reason) {
             this.putQueryParameter("Reason", reason);
@@ -159,10 +153,7 @@ public class IgnoreHcCheckWarningsRequest extends Request {
         }
 
         /**
-         * The ID of the risk item that you want to ignore or cancel ignoring.
-         * <p>
-         * 
-         * >  You can call the [DescribeCheckWarningSummary](~~DescribeCheckWarningSummary~~) operation to query the IDs of risk items.
+         * RiskId.
          */
         public Builder riskId(String riskId) {
             this.putQueryParameter("RiskId", riskId);
@@ -171,7 +162,7 @@ public class IgnoreHcCheckWarningsRequest extends Request {
         }
 
         /**
-         * The source IP address of the request.
+         * SourceIp.
          */
         public Builder sourceIp(String sourceIp) {
             this.putQueryParameter("SourceIp", sourceIp);
@@ -180,11 +171,7 @@ public class IgnoreHcCheckWarningsRequest extends Request {
         }
 
         /**
-         * The type of the operation that you want to perform. Valid values:
-         * <p>
-         * 
-         * *   **1**: ignores a risk item
-         * *   **2**: cancels ignoring a risk item
+         * Type.
          */
         public Builder type(Long type) {
             this.putQueryParameter("Type", type);

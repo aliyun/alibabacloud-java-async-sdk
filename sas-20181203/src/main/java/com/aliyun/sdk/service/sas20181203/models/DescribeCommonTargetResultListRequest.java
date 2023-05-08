@@ -69,7 +69,7 @@ public class DescribeCommonTargetResultListRequest extends Request {
         } 
 
         /**
-         * The source IP address of the request.
+         * SourceIp.
          */
         public Builder sourceIp(String sourceIp) {
             this.putQueryParameter("SourceIp", sourceIp);
@@ -78,13 +78,7 @@ public class DescribeCommonTargetResultListRequest extends Request {
         }
 
         /**
-         * The type of the configuration item. Valid values:
-         * <p>
-         * 
-         * *   **webshell_timescan**: webshell detection and removal
-         * *   **aliscriptengine**: in-depth detection engine
-         * *   **alidetect**: installation scope of local file detection
-         * *   **alidetect-scan-enable**: detection scope of local file detection
+         * Type.
          */
         public Builder type(String type) {
             this.putQueryParameter("Type", type);

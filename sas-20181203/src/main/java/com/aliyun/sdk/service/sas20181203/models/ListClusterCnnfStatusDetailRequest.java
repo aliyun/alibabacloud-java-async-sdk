@@ -54,7 +54,7 @@ public class ListClusterCnnfStatusDetailRequest extends Request {
         } 
 
         /**
-         * An array that consists of the ID of the cluster.
+         * An array that consists of the protection status of the container firewall.
          */
         public Builder clusterIds(java.util.List < String > clusterIds) {
             this.putQueryParameter("ClusterIds", clusterIds);

@@ -62,7 +62,7 @@ public class DescribeVulTargetConfigResponseBody extends TeaModel {
         private Integer totalCount; 
 
         /**
-         * The ID of the request.
+         * RequestId.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -70,7 +70,7 @@ public class DescribeVulTargetConfigResponseBody extends TeaModel {
         }
 
         /**
-         * An array that consists of the configurations.
+         * TargetConfigs.
          */
         public Builder targetConfigs(java.util.List < TargetConfigs> targetConfigs) {
             this.targetConfigs = targetConfigs;
@@ -78,7 +78,7 @@ public class DescribeVulTargetConfigResponseBody extends TeaModel {
         }
 
         /**
-         * The total number of entries returned.
+         * TotalCount.
          */
         public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;
@@ -142,11 +142,7 @@ public class DescribeVulTargetConfigResponseBody extends TeaModel {
             private String type; 
 
             /**
-             * Indicates whether the vulnerability scan feature is enabled for the server.
-             * <p>
-             * 
-             * *   **off**: disabled
-             * *   **on**: enabled
+             * Config.
              */
             public Builder config(String config) {
                 this.config = config;
@@ -154,11 +150,7 @@ public class DescribeVulTargetConfigResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether the vulnerability scan feature is enabled for all servers. Valid values:
-             * <p>
-             * 
-             * *   **off**: disabled
-             * *   **on**: enabled
+             * OverAllConfig.
              */
             public Builder overAllConfig(String overAllConfig) {
                 this.overAllConfig = overAllConfig;
@@ -166,13 +158,7 @@ public class DescribeVulTargetConfigResponseBody extends TeaModel {
             }
 
             /**
-             * The type of the vulnerability. Valid values:
-             * <p>
-             * 
-             * *   **cve**: Linux software vulnerability
-             * *   **sys**: Windows system vulnerability
-             * *   **cms**: Web-CMS vulnerability
-             * *   **emg**: urgent vulnerability
+             * Type.
              */
             public Builder type(String type) {
                 this.type = type;

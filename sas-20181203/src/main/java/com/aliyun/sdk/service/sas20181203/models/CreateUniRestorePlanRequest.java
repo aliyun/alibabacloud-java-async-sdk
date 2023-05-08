@@ -140,7 +140,7 @@ public class CreateUniRestorePlanRequest extends Request {
         } 
 
         /**
-         * The name of the database.
+         * Database.
          */
         public Builder database(String database) {
             this.putQueryParameter("Database", database);
@@ -149,10 +149,7 @@ public class CreateUniRestorePlanRequest extends Request {
         }
 
         /**
-         * The UUID of the Hybrid Backup Recovery (HBR) agent that is used to restore the data of the database on your server.
-         * <p>
-         * 
-         * >  You can call the [DescribeUniBackupDatabase](~~DescribeUniBackupDatabase~~) operation to query the UUID.
+         * InstanceUuid.
          */
         public Builder instanceUuid(String instanceUuid) {
             this.putQueryParameter("InstanceUuid", instanceUuid);
@@ -161,10 +158,7 @@ public class CreateUniRestorePlanRequest extends Request {
         }
 
         /**
-         * The ID of the anti-ransomware policy.
-         * <p>
-         * 
-         * >  You can call the [DescribeUniBackupPolicies](~~DescribeUniBackupPolicies~~) operation to query the ID.
+         * PolicyId.
          */
         public Builder policyId(Long policyId) {
             this.putQueryParameter("PolicyId", policyId);
@@ -173,10 +167,7 @@ public class CreateUniRestorePlanRequest extends Request {
         }
 
         /**
-         * The identifier of the point in time for restoration in the backup version that you want to use. The database is an Oracle database.****
-         * <p>
-         * 
-         * >  You can call the [DescribeUniRecoverableList](~~DescribeUniRecoverableList~~) operation to query the value.
+         * ResetScn.
          */
         public Builder resetScn(String resetScn) {
             this.putQueryParameter("ResetScn", resetScn);
@@ -185,10 +176,7 @@ public class CreateUniRestorePlanRequest extends Request {
         }
 
         /**
-         * The point in time for restoration in the backup version that you want to use. The database is an Oracle database.****
-         * <p>
-         * 
-         * >  You can call the [DescribeUniRecoverableList](~~DescribeUniRecoverableList~~) operation to query the value.
+         * ResetTime.
          */
         public Builder resetTime(String resetTime) {
             this.putQueryParameter("ResetTime", resetTime);
@@ -197,13 +185,7 @@ public class CreateUniRestorePlanRequest extends Request {
         }
 
         /**
-         * The information about the database. This parameter is available when the database is a Microsoft SQL Server (MSSQL) database. The value is a JSON string. Valid values:
-         * <p>
-         * 
-         * *   **name**: the name of the database
-         * *   **files**: the path to the database files
-         * 
-         * >  You can call the [DescribeUniRecoverableList](~~DescribeUniRecoverableList~~) operation to query the information.
+         * RestoreInfo.
          */
         public Builder restoreInfo(String restoreInfo) {
             this.putQueryParameter("RestoreInfo", restoreInfo);
@@ -212,10 +194,7 @@ public class CreateUniRestorePlanRequest extends Request {
         }
 
         /**
-         * The point in time to which you want to restore data.
-         * <p>
-         * 
-         * >  You can call the [DescribeRestorePlans](~~DescribeRestorePlans~~) operation to query the point in time.
+         * TimePoint.
          */
         public Builder timePoint(Long timePoint) {
             this.putQueryParameter("TimePoint", timePoint);

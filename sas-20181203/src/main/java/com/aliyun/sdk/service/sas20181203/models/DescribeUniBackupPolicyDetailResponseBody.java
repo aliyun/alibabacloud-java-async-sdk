@@ -50,7 +50,7 @@ public class DescribeUniBackupPolicyDetailResponseBody extends TeaModel {
         private UniBackupPolicyDTO uniBackupPolicyDTO; 
 
         /**
-         * The ID of the request, which is used to locate and troubleshoot issues.
+         * The data returned.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -58,7 +58,7 @@ public class DescribeUniBackupPolicyDetailResponseBody extends TeaModel {
         }
 
         /**
-         * The details of the anti-ransomware policy.
+         * The ID of the request, which is used to locate and troubleshoot issues.
          */
         public Builder uniBackupPolicyDTO(UniBackupPolicyDTO uniBackupPolicyDTO) {
             this.uniBackupPolicyDTO = uniBackupPolicyDTO;
@@ -134,18 +134,10 @@ public class DescribeUniBackupPolicyDetailResponseBody extends TeaModel {
             private String startTime; 
 
             /**
-             * An array that consists of the days of a week on which the backup is performed.
+             * The interval of backup tasks.
              */
             public Builder days(java.util.List < String > days) {
                 this.days = days;
-                return this;
-            }
-
-            /**
-             * The interval of backup tasks.
-             */
-            public Builder interval(Integer interval) {
-                this.interval = interval;
                 return this;
             }
 
@@ -157,13 +149,21 @@ public class DescribeUniBackupPolicyDetailResponseBody extends TeaModel {
              * *   **daily**: day
              * *   **weekly**: week
              */
+            public Builder interval(Integer interval) {
+                this.interval = interval;
+                return this;
+            }
+
+            /**
+             * The time when the full backup started. The time is in the HH:mm:ss format.
+             */
             public Builder planType(String planType) {
                 this.planType = planType;
                 return this;
             }
 
             /**
-             * The time when the full backup started. The time is in the HH:mm:ss format.
+             * The details of the policy for full backup.
              */
             public Builder startTime(String startTime) {
                 this.startTime = startTime;
@@ -240,18 +240,10 @@ public class DescribeUniBackupPolicyDetailResponseBody extends TeaModel {
             private String startTime; 
 
             /**
-             * An array that consists of the days of a week on which the backup is performed.
+             * The interval of backup tasks.
              */
             public Builder days(java.util.List < String > days) {
                 this.days = days;
-                return this;
-            }
-
-            /**
-             * The interval of backup tasks.
-             */
-            public Builder interval(Integer interval) {
-                this.interval = interval;
                 return this;
             }
 
@@ -263,13 +255,21 @@ public class DescribeUniBackupPolicyDetailResponseBody extends TeaModel {
              * *   **daily**: day
              * *   **weekly**: week
              */
+            public Builder interval(Integer interval) {
+                this.interval = interval;
+                return this;
+            }
+
+            /**
+             * The time when the incremental backup started. The time is in the HH:mm:ss format.
+             */
             public Builder planType(String planType) {
                 this.planType = planType;
                 return this;
             }
 
             /**
-             * The time when the incremental backup started. The time is in the HH:mm:ss format.
+             * The details of the policy for incremental backup.
              */
             public Builder startTime(String startTime) {
                 this.startTime = startTime;
@@ -442,14 +442,6 @@ public class DescribeUniBackupPolicyDetailResponseBody extends TeaModel {
             private Long speedLimiter; 
 
             /**
-             * The name of the database account.
-             */
-            public Builder accountName(String accountName) {
-                this.accountName = accountName;
-                return this;
-            }
-
-            /**
              * The status of the database client. Valid values:
              * <p>
              * 
@@ -458,69 +450,16 @@ public class DescribeUniBackupPolicyDetailResponseBody extends TeaModel {
              * *   **INSTALL_FAILED**: installation failed
              * *   **UNINSTALL_FAILED**: uninstallation failed
              */
-            public Builder agentStatus(String agentStatus) {
-                this.agentStatus = agentStatus;
-                return this;
-            }
-
-            /**
-             * The type of the database. Valid values:
-             * <p>
-             * 
-             * *   **MYSQL**
-             * *   **MSSQL**
-             * *   **Oracle**
-             */
-            public Builder databaseType(String databaseType) {
-                this.databaseType = databaseType;
-                return this;
-            }
-
-            /**
-             * The details of the policy for full backup.
-             */
-            public Builder fullPlan(FullPlan fullPlan) {
-                this.fullPlan = fullPlan;
-                return this;
-            }
-
-            /**
-             * The details of the policy for incremental backup.
-             */
-            public Builder incPlan(IncPlan incPlan) {
-                this.incPlan = incPlan;
-                return this;
-            }
-
-            /**
-             * The ID of the server.
-             */
-            public Builder instanceId(String instanceId) {
-                this.instanceId = instanceId;
-                return this;
-            }
-
-            /**
-             * The name of the server.
-             */
-            public Builder instanceName(String instanceName) {
-                this.instanceName = instanceName;
+            public Builder accountName(String accountName) {
+                this.accountName = accountName;
                 return this;
             }
 
             /**
              * The ID of the anti-ransomware policy.
              */
-            public Builder policyId(Long policyId) {
-                this.policyId = policyId;
-                return this;
-            }
-
-            /**
-             * The name of the anti-ransomware policy.
-             */
-            public Builder policyName(String policyName) {
-                this.policyName = policyName;
+            public Builder agentStatus(String agentStatus) {
+                this.agentStatus = agentStatus;
                 return this;
             }
 
@@ -533,13 +472,83 @@ public class DescribeUniBackupPolicyDetailResponseBody extends TeaModel {
              * *   **closing**: disabled
              * *   **deleting**: deleting
              */
+            public Builder databaseType(String databaseType) {
+                this.databaseType = databaseType;
+                return this;
+            }
+
+            /**
+             * The name of the database account.
+             */
+            public Builder fullPlan(FullPlan fullPlan) {
+                this.fullPlan = fullPlan;
+                return this;
+            }
+
+            /**
+             * The day of a week on which the backup is performed. Valid values:
+             * <p>
+             * 
+             * *   **0**: Sunday
+             * *   **1**: Monday
+             * *   **2**: Tuesday
+             * *   **3**: Wednesday
+             * *   **4**: Thursday
+             * *   **5**: Friday
+             * *   **6**: Saturday
+             */
+            public Builder incPlan(IncPlan incPlan) {
+                this.incPlan = incPlan;
+                return this;
+            }
+
+            /**
+             * The name of the anti-ransomware policy.
+             */
+            public Builder instanceId(String instanceId) {
+                this.instanceId = instanceId;
+                return this;
+            }
+
+            /**
+             * The type of the database. Valid values:
+             * <p>
+             * 
+             * *   **MYSQL**
+             * *   **MSSQL**
+             * *   **Oracle**
+             */
+            public Builder instanceName(String instanceName) {
+                this.instanceName = instanceName;
+                return this;
+            }
+
+            /**
+             * The ID of the server.
+             */
+            public Builder policyId(Long policyId) {
+                this.policyId = policyId;
+                return this;
+            }
+
+            /**
+             * The maximum network bandwidth that is allowed during data backup. Unit: bytes.
+             */
+            public Builder policyName(String policyName) {
+                this.policyName = policyName;
+                return this;
+            }
+
+            /**
+             * The details of the anti-ransomware policy.
+             */
             public Builder policyStatus(String policyStatus) {
                 this.policyStatus = policyStatus;
                 return this;
             }
 
             /**
-             * The retention period of the backup snapshot.
+             * The name of the server.
              */
             public Builder retention(Integer retention) {
                 this.retention = retention;
@@ -547,7 +556,7 @@ public class DescribeUniBackupPolicyDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The maximum network bandwidth that is allowed during data backup. Unit: bytes.
+             * The retention period of the backup snapshot.
              */
             public Builder speedLimiter(Long speedLimiter) {
                 this.speedLimiter = speedLimiter;

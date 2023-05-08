@@ -97,10 +97,7 @@ public class ModifyVulWhitelistTargetRequest extends Request {
         } 
 
         /**
-         * The ID of the whitelist.
-         * <p>
-         * 
-         * >  You can call the [DescribeVulWhitelist](~~DescribeVulWhitelist~~) operation to query the IDs of whitelists.
+         * Id.
          */
         public Builder id(Long id) {
             this.putQueryParameter("Id", id);
@@ -109,7 +106,7 @@ public class ModifyVulWhitelistTargetRequest extends Request {
         }
 
         /**
-         * The reason why you add the server to the whitelist.
+         * Reason.
          */
         public Builder reason(String reason) {
             this.putQueryParameter("Reason", reason);
@@ -118,7 +115,7 @@ public class ModifyVulWhitelistTargetRequest extends Request {
         }
 
         /**
-         * The source IP address of the request.
+         * SourceIp.
          */
         public Builder sourceIp(String sourceIp) {
             this.putQueryParameter("SourceIp", sourceIp);
@@ -127,19 +124,7 @@ public class ModifyVulWhitelistTargetRequest extends Request {
         }
 
         /**
-         * The applicable scope of the whitelist. The value of this parameter is in the JSON format and contains the following fields:
-         * <p>
-         * 
-         * *   **type**: the type of the applicable scope. Valid values:
-         * 
-         *     *   **GroupId**: the ID of a server group
-         *     *   **Uuid**: the UUID of a server
-         * 
-         * *   **uuids**: the UUIDs of servers
-         * 
-         * *   **groupIds**: the IDs of server groups
-         * 
-         * >  If you leave this parameter empty, all servers are added to the whitelist. If you set the **type** field to **GroupId**, you must also specify the **groupIds** field. If you set the **type** field to **Uuid**, you must also specify the **uuids** field.
+         * TargetInfo.
          */
         public Builder targetInfo(String targetInfo) {
             this.putQueryParameter("TargetInfo", targetInfo);

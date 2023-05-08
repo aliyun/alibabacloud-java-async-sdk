@@ -227,11 +227,7 @@ public class ModifyWebLockUpdateConfigRequest extends Request {
         } 
 
         /**
-         * The prevention mode. Valid values:
-         * <p>
-         * 
-         * *   **block**: Interception Mode
-         * *   **audit**: Alert Mode
+         * DefenceMode.
          */
         public Builder defenceMode(String defenceMode) {
             this.putQueryParameter("DefenceMode", defenceMode);
@@ -240,7 +236,7 @@ public class ModifyWebLockUpdateConfigRequest extends Request {
         }
 
         /**
-         * The directory for which you want to enable web tamper proofing.
+         * Dir.
          */
         public Builder dir(String dir) {
             this.putQueryParameter("Dir", dir);
@@ -249,10 +245,7 @@ public class ModifyWebLockUpdateConfigRequest extends Request {
         }
 
         /**
-         * The directory for which you want to disable web tamper proofing.
-         * <p>
-         * 
-         * > If you set **Mode** to **blacklist**, you must specify this parameter.
+         * ExclusiveDir.
          */
         public Builder exclusiveDir(String exclusiveDir) {
             this.putQueryParameter("ExclusiveDir", exclusiveDir);
@@ -261,10 +254,7 @@ public class ModifyWebLockUpdateConfigRequest extends Request {
         }
 
         /**
-         * The file for which you want to disable web tamper proofing.
-         * <p>
-         * 
-         * > If you set **Mode** to **blacklist**, you must specify this parameter.
+         * ExclusiveFile.
          */
         public Builder exclusiveFile(String exclusiveFile) {
             this.putQueryParameter("ExclusiveFile", exclusiveFile);
@@ -273,25 +263,7 @@ public class ModifyWebLockUpdateConfigRequest extends Request {
         }
 
         /**
-         * The type of the file for which you want to disable web tamper proofing. Separate multiple types with semicolons (;). Valid values:
-         * <p>
-         * 
-         * *   php
-         * *   jsp
-         * *   asp
-         * *   aspx
-         * *   js
-         * *   cgi
-         * *   html
-         * *   htm
-         * *   xml
-         * *   shtml
-         * *   shtm
-         * *   jpg
-         * *   gif
-         * *   png
-         * 
-         * > If you set **Mode** to **blacklist**, you must specify this parameter.
+         * ExclusiveFileType.
          */
         public Builder exclusiveFileType(String exclusiveFileType) {
             this.putQueryParameter("ExclusiveFileType", exclusiveFileType);
@@ -300,10 +272,7 @@ public class ModifyWebLockUpdateConfigRequest extends Request {
         }
 
         /**
-         * The ID of the protected directory for which you want to change the status of web tamper proofing.
-         * <p>
-         * 
-         * > You can call the [DescribeWebLockConfigList](~~DescribeWebLockConfigList~~) operation to query the IDs of protected directories.
+         * Id.
          */
         public Builder id(Integer id) {
             this.putQueryParameter("Id", id);
@@ -312,10 +281,7 @@ public class ModifyWebLockUpdateConfigRequest extends Request {
         }
 
         /**
-         * The file for which you want to enable web tamper proofing.
-         * <p>
-         * 
-         * > If you set **Mode** to **whitelist**, you must specify this parameter.
+         * InclusiveFile.
          */
         public Builder inclusiveFile(String inclusiveFile) {
             this.putQueryParameter("InclusiveFile", inclusiveFile);
@@ -324,25 +290,7 @@ public class ModifyWebLockUpdateConfigRequest extends Request {
         }
 
         /**
-         * The type of the file for which you want to enable web tamper proofing. Separate multiple types with semicolons (;). Valid values:
-         * <p>
-         * 
-         * *   php
-         * *   jsp
-         * *   asp
-         * *   aspx
-         * *   js
-         * *   cgi
-         * *   html
-         * *   htm
-         * *   xml
-         * *   shtml
-         * *   shtm
-         * *   jpg
-         * *   gif
-         * *   png
-         * 
-         * > If you set **Mode** to **whitelist**, you must specify this parameter.
+         * InclusiveFileType.
          */
         public Builder inclusiveFileType(String inclusiveFileType) {
             this.putQueryParameter("InclusiveFileType", inclusiveFileType);
@@ -351,11 +299,7 @@ public class ModifyWebLockUpdateConfigRequest extends Request {
         }
 
         /**
-         * The language of the content within the request and response. Valid values:
-         * <p>
-         * 
-         * *   **zh**: Chinese
-         * *   **en**: English
+         * Lang.
          */
         public Builder lang(String lang) {
             this.putQueryParameter("Lang", lang);
@@ -364,12 +308,7 @@ public class ModifyWebLockUpdateConfigRequest extends Request {
         }
 
         /**
-         * The local path to the backup files of the protected directory.\
-         * <p>
-         * The directory format of a Linux server is different from that of a Windows server. You must enter the directory in the required format based on your operating system. Examples:
-         * 
-         * *   Linux server: /usr/local/aegis/bak
-         * *   Windows server: C:\Program Files (x86)\Alibaba\Aegis\bak
+         * LocalBackupDir.
          */
         public Builder localBackupDir(String localBackupDir) {
             this.putQueryParameter("LocalBackupDir", localBackupDir);
@@ -378,11 +317,7 @@ public class ModifyWebLockUpdateConfigRequest extends Request {
         }
 
         /**
-         * The protection mode of web tamper proofing. Valid values:
-         * <p>
-         * 
-         * *   **whitelist**: In this mode, web tamper proofing is enabled for the specified directories and file types.
-         * *   **blacklist**: In this mode, web tamper proofing is enabled for the unspecified subdirectories, file types, and files in the protected directory.
+         * Mode.
          */
         public Builder mode(String mode) {
             this.putQueryParameter("Mode", mode);
@@ -391,7 +326,7 @@ public class ModifyWebLockUpdateConfigRequest extends Request {
         }
 
         /**
-         * The source IP address of the request.
+         * SourceIp.
          */
         public Builder sourceIp(String sourceIp) {
             this.putQueryParameter("SourceIp", sourceIp);
@@ -400,10 +335,7 @@ public class ModifyWebLockUpdateConfigRequest extends Request {
         }
 
         /**
-         * The UUID of the server on which the protected directory is located.
-         * <p>
-         * 
-         * > You can call the [DescribeCloudCenterInstances](~~DescribeCloudCenterInstances~~) operation to query the UUIDs of servers.
+         * Uuid.
          */
         public Builder uuid(String uuid) {
             this.putQueryParameter("Uuid", uuid);

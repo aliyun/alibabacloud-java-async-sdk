@@ -86,7 +86,7 @@ public class GetCheckDetailResponseBody extends TeaModel {
         private Solution solution; 
 
         /**
-         * The help information about the check item.
+         * AssistInfo.
          */
         public Builder assistInfo(AssistInfo assistInfo) {
             this.assistInfo = assistInfo;
@@ -102,7 +102,7 @@ public class GetCheckDetailResponseBody extends TeaModel {
         }
 
         /**
-         * The description of the check item.
+         * Description.
          */
         public Builder description(Description description) {
             this.description = description;
@@ -110,7 +110,7 @@ public class GetCheckDetailResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request, which is used to locate and troubleshoot issues.
+         * RequestId.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -118,7 +118,7 @@ public class GetCheckDetailResponseBody extends TeaModel {
         }
 
         /**
-         * The solution to handle the risk item.
+         * Solution.
          */
         public Builder solution(Solution solution) {
             this.solution = solution;
@@ -182,7 +182,7 @@ public class GetCheckDetailResponseBody extends TeaModel {
             private String value; 
 
             /**
-             * The link to the help information about the risk item when the Type parameter is set to link.
+             * Link.
              */
             public Builder link(String link) {
                 this.link = link;
@@ -190,11 +190,7 @@ public class GetCheckDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The type of the help information about the risk item. Valid values:
-             * <p>
-             * 
-             * *   **text**
-             * *   **link**
+             * Type.
              */
             public Builder type(String type) {
                 this.type = type;
@@ -202,7 +198,7 @@ public class GetCheckDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The content in the help information about the risk item when the Type parameter is set to text.
+             * Value.
              */
             public Builder value(String value) {
                 this.value = value;
@@ -323,7 +319,7 @@ public class GetCheckDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The content in the help information about the risk item when the Type parameter is set to text.
+             * Value.
              */
             public Builder value(String value) {
                 this.value = value;
@@ -388,7 +384,7 @@ public class GetCheckDetailResponseBody extends TeaModel {
             private String value; 
 
             /**
-             * The link to the description of the check item.
+             * Link.
              */
             public Builder link(String link) {
                 this.link = link;
@@ -396,7 +392,7 @@ public class GetCheckDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The type of the description of the check item. The value is fixed as text.
+             * Type.
              */
             public Builder type(String type) {
                 this.type = type;
@@ -404,7 +400,7 @@ public class GetCheckDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The content in the description of the check item.
+             * Value.
              */
             public Builder value(String value) {
                 this.value = value;
@@ -469,7 +465,7 @@ public class GetCheckDetailResponseBody extends TeaModel {
             private String value; 
 
             /**
-             * The link to the solution to handle the risk item when the Type parameter is set to link.
+             * Link.
              */
             public Builder link(String link) {
                 this.link = link;
@@ -477,11 +473,7 @@ public class GetCheckDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The type of the solution to handle to the risk item. Valid values:
-             * <p>
-             * 
-             * *   **text**
-             * *   **link**
+             * Type.
              */
             public Builder type(String type) {
                 this.type = type;
@@ -489,7 +481,7 @@ public class GetCheckDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The content of the solution to handle the risk item when the Type parameter is set to text.
+             * Value.
              */
             public Builder value(String value) {
                 this.value = value;

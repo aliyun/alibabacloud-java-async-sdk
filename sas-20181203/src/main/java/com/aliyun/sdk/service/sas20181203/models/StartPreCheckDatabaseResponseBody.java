@@ -50,7 +50,7 @@ public class StartPreCheckDatabaseResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The ID of the database precheck task.
+         * CreateMark.
          */
         public Builder createMark(String createMark) {
             this.createMark = createMark;
@@ -58,7 +58,7 @@ public class StartPreCheckDatabaseResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request, which is used to locate and troubleshoot issues.
+         * RequestId.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

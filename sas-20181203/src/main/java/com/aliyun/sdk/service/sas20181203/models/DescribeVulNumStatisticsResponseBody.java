@@ -182,7 +182,7 @@ public class DescribeVulNumStatisticsResponseBody extends TeaModel {
         private Integer vulNntfSum; 
 
         /**
-         * The number of application vulnerabilities that are detected on the asset by using a web scanner.
+         * AppCnt.
          */
         public Builder appCnt(Integer appCnt) {
             this.appCnt = appCnt;
@@ -190,7 +190,7 @@ public class DescribeVulNumStatisticsResponseBody extends TeaModel {
         }
 
         /**
-         * The number of application vulnerabilities that are detected on the asset by using a web scanner.
+         * AppNum.
          */
         public Builder appNum(Integer appNum) {
             this.appNum = appNum;
@@ -198,7 +198,7 @@ public class DescribeVulNumStatisticsResponseBody extends TeaModel {
         }
 
         /**
-         * The number of Web-CMS vulnerabilities that are handled.
+         * CmsDealedTotalNum.
          */
         public Builder cmsDealedTotalNum(Integer cmsDealedTotalNum) {
             this.cmsDealedTotalNum = cmsDealedTotalNum;
@@ -206,7 +206,7 @@ public class DescribeVulNumStatisticsResponseBody extends TeaModel {
         }
 
         /**
-         * The number of Web-CMS vulnerabilities that are detected on the asset.
+         * CmsNum.
          */
         public Builder cmsNum(Integer cmsNum) {
             this.cmsNum = cmsNum;
@@ -214,7 +214,7 @@ public class DescribeVulNumStatisticsResponseBody extends TeaModel {
         }
 
         /**
-         * The number of Linux software vulnerabilities that are detected on the asset.
+         * CveNum.
          */
         public Builder cveNum(Integer cveNum) {
             this.cveNum = cveNum;
@@ -222,7 +222,7 @@ public class DescribeVulNumStatisticsResponseBody extends TeaModel {
         }
 
         /**
-         * The number of urgent vulnerabilities that are detected on the asset.
+         * EmgNum.
          */
         public Builder emgNum(Integer emgNum) {
             this.emgNum = emgNum;
@@ -230,7 +230,7 @@ public class DescribeVulNumStatisticsResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * RequestId.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -238,7 +238,7 @@ public class DescribeVulNumStatisticsResponseBody extends TeaModel {
         }
 
         /**
-         * The number of middleware vulnerabilities that are detected on the asset.
+         * ScaNum.
          */
         public Builder scaNum(Integer scaNum) {
             this.scaNum = scaNum;
@@ -246,7 +246,7 @@ public class DescribeVulNumStatisticsResponseBody extends TeaModel {
         }
 
         /**
-         * The number of Windows system vulnerabilities that are detected on the asset.
+         * SysNum.
          */
         public Builder sysNum(Integer sysNum) {
             this.sysNum = sysNum;
@@ -254,7 +254,7 @@ public class DescribeVulNumStatisticsResponseBody extends TeaModel {
         }
 
         /**
-         * The number of vulnerabilities that have the high priority.
+         * VulAsapSum.
          */
         public Builder vulAsapSum(Integer vulAsapSum) {
             this.vulAsapSum = vulAsapSum;
@@ -262,7 +262,7 @@ public class DescribeVulNumStatisticsResponseBody extends TeaModel {
         }
 
         /**
-         * The number of vulnerabilities that are handled.
+         * VulDealedTotalNum.
          */
         public Builder vulDealedTotalNum(Integer vulDealedTotalNum) {
             this.vulDealedTotalNum = vulDealedTotalNum;
@@ -270,7 +270,7 @@ public class DescribeVulNumStatisticsResponseBody extends TeaModel {
         }
 
         /**
-         * The number of vulnerabilities that have the medium priority.
+         * VulLaterSum.
          */
         public Builder vulLaterSum(Integer vulLaterSum) {
             this.vulLaterSum = vulLaterSum;
@@ -278,7 +278,7 @@ public class DescribeVulNumStatisticsResponseBody extends TeaModel {
         }
 
         /**
-         * The number of vulnerabilities that have the low priority.
+         * VulNntfSum.
          */
         public Builder vulNntfSum(Integer vulNntfSum) {
             this.vulNntfSum = vulNntfSum;

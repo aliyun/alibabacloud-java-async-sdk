@@ -138,7 +138,7 @@ public class ListHoneypotPresetRequest extends Request {
         } 
 
         /**
-         * The number of the page to return. Default value: **1**.
+         * CurrentPage.
          */
         public Builder currentPage(Integer currentPage) {
             this.putQueryParameter("CurrentPage", currentPage);
@@ -147,7 +147,7 @@ public class ListHoneypotPresetRequest extends Request {
         }
 
         /**
-         * The name of the honeypot image.
+         * 蜜罐镜像名称
          */
         public Builder honeypotImageName(String honeypotImageName) {
             this.putQueryParameter("HoneypotImageName", honeypotImageName);
@@ -156,11 +156,7 @@ public class ListHoneypotPresetRequest extends Request {
         }
 
         /**
-         * The language of the content within the request and response. Valid values:
-         * <p>
-         * 
-         * *   **zh**: Chinese
-         * *   **en**: English
+         * Lang.
          */
         public Builder lang(String lang) {
             this.putQueryParameter("Lang", lang);
@@ -169,7 +165,7 @@ public class ListHoneypotPresetRequest extends Request {
         }
 
         /**
-         * The ID of the management node to which the honeypot is deployed.
+         * 蜜罐管理节点唯一ID
          */
         public Builder nodeId(String nodeId) {
             this.putQueryParameter("NodeId", nodeId);
@@ -178,7 +174,7 @@ public class ListHoneypotPresetRequest extends Request {
         }
 
         /**
-         * The name of the management node to which the honeypot is deployed.
+         * 蜜罐管理节点名称
          */
         public Builder nodeName(String nodeName) {
             this.putQueryParameter("NodeName", nodeName);
@@ -187,10 +183,7 @@ public class ListHoneypotPresetRequest extends Request {
         }
 
         /**
-         * The number of entries to return on each page. Default value: 20. If you leave this parameter empty, 20 entries are returned on each page.
-         * <p>
-         * 
-         * >  We recommend that you do not leave this parameter empty.
+         * PageSize.
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -199,7 +192,7 @@ public class ListHoneypotPresetRequest extends Request {
         }
 
         /**
-         * The custom name of the honeypot template.
+         * 蜜罐模板自定义名称
          */
         public Builder presetName(String presetName) {
             this.putQueryParameter("PresetName", presetName);

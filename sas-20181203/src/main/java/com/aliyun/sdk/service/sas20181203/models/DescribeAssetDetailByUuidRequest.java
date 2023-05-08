@@ -83,11 +83,7 @@ public class DescribeAssetDetailByUuidRequest extends Request {
         } 
 
         /**
-         * The language of the content within the request and response. Default value: **zh**. Valid values:
-         * <p>
-         * 
-         * *   **zh**: Chinese
-         * *   **en**: English
+         * The operating system version of the server.
          */
         public Builder lang(String lang) {
             this.putQueryParameter("Lang", lang);
@@ -96,7 +92,7 @@ public class DescribeAssetDetailByUuidRequest extends Request {
         }
 
         /**
-         * The source IP address of the request.
+         * The details of the CPU.
          */
         public Builder sourceIp(String sourceIp) {
             this.putQueryParameter("SourceIp", sourceIp);
@@ -105,10 +101,7 @@ public class DescribeAssetDetailByUuidRequest extends Request {
         }
 
         /**
-         * The UUID of the server to query.
-         * <p>
-         * 
-         * >  You can call the [DescribeCloudCenterInstances](~~DescribeCloudCenterInstances~~) operation to query the UUIDs of servers.
+         * The public IP address of the server.
          */
         public Builder uuid(String uuid) {
             this.putQueryParameter("Uuid", uuid);

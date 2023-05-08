@@ -158,7 +158,13 @@ public class DescribeSuspEventExportInfoResponseBody extends TeaModel {
         private String type; 
 
         /**
-         * ExportStatus.
+         * The handling status for the exception. Valid values:
+         * <p>
+         * 
+         * *   **processing**: in progress
+         * *   **success**: successful
+         * *   **failed**: failed
+         * *   **pending**: pending
          */
         public Builder exportStatus(String exportStatus) {
             this.exportStatus = exportStatus;
@@ -166,7 +172,7 @@ public class DescribeSuspEventExportInfoResponseBody extends TeaModel {
         }
 
         /**
-         * FileName.
+         * The name of the exported file.
          */
         public Builder fileName(String fileName) {
             this.fileName = fileName;
@@ -174,7 +180,7 @@ public class DescribeSuspEventExportInfoResponseBody extends TeaModel {
         }
 
         /**
-         * GmtCreate.
+         * The time when the export task was created.
          */
         public Builder gmtCreate(Long gmtCreate) {
             this.gmtCreate = gmtCreate;
@@ -182,7 +188,7 @@ public class DescribeSuspEventExportInfoResponseBody extends TeaModel {
         }
 
         /**
-         * GmtModified.
+         * The time when the export task was modified.
          */
         public Builder gmtModified(Long gmtModified) {
             this.gmtModified = gmtModified;
@@ -190,7 +196,7 @@ public class DescribeSuspEventExportInfoResponseBody extends TeaModel {
         }
 
         /**
-         * Id.
+         * The ID of the export task.
          */
         public Builder id(Integer id) {
             this.id = id;
@@ -198,7 +204,7 @@ public class DescribeSuspEventExportInfoResponseBody extends TeaModel {
         }
 
         /**
-         * Link.
+         * The URL at which you can download the exported Excel file.
          */
         public Builder link(String link) {
             this.link = link;
@@ -206,7 +212,7 @@ public class DescribeSuspEventExportInfoResponseBody extends TeaModel {
         }
 
         /**
-         * Progress.
+         * The progress percentage of the export task.
          */
         public Builder progress(Integer progress) {
             this.progress = progress;
@@ -214,7 +220,7 @@ public class DescribeSuspEventExportInfoResponseBody extends TeaModel {
         }
 
         /**
-         * Properties.
+         * The exported parameters of exceptions.
          */
         public Builder properties(String properties) {
             this.properties = properties;
@@ -222,7 +228,7 @@ public class DescribeSuspEventExportInfoResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -230,7 +236,7 @@ public class DescribeSuspEventExportInfoResponseBody extends TeaModel {
         }
 
         /**
-         * TotalCount.
+         * The total number of exceptions exported.
          */
         public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;
@@ -238,7 +244,7 @@ public class DescribeSuspEventExportInfoResponseBody extends TeaModel {
         }
 
         /**
-         * Type.
+         * The type of the export task. The value is fixed as suspiciousEvent.
          */
         public Builder type(String type) {
             this.type = type;

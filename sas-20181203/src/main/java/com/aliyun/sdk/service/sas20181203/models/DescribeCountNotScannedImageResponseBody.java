@@ -50,7 +50,7 @@ public class DescribeCountNotScannedImageResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The number of images that are not scanned.
+         * NotScannedCnt.
          */
         public Builder notScannedCnt(Integer notScannedCnt) {
             this.notScannedCnt = notScannedCnt;
@@ -58,7 +58,7 @@ public class DescribeCountNotScannedImageResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request, which is used to locate and troubleshoot issues.
+         * RequestId.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

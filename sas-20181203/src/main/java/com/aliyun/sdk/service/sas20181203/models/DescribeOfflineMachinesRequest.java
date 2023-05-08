@@ -152,7 +152,7 @@ public class DescribeOfflineMachinesRequest extends Request {
         } 
 
         /**
-         * The number of the page to return. Default value: **1**.
+         * CurrentPage.
          */
         public Builder currentPage(Integer currentPage) {
             this.putQueryParameter("CurrentPage", currentPage);
@@ -161,10 +161,7 @@ public class DescribeOfflineMachinesRequest extends Request {
         }
 
         /**
-         * The operating system of the server.
-         * <p>
-         * 
-         * >  The value of this parameter is the value of the Values parameter that is returned by calling the [DescribeCriteria](~~DescribeCriteria~~) operation. If the value of the **Name** parameter in the response is **osType**, the value of the **Values** parameter indicates an operating system.
+         * Os.
          */
         public Builder os(String os) {
             this.putQueryParameter("Os", os);
@@ -173,7 +170,7 @@ public class DescribeOfflineMachinesRequest extends Request {
         }
 
         /**
-         * The number of entries to return on each page. Default value: **5**.
+         * PageSize.
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -182,10 +179,7 @@ public class DescribeOfflineMachinesRequest extends Request {
         }
 
         /**
-         * The region in which the server resides.
-         * <p>
-         * 
-         * >  The value of this parameter is the value of the Values parameter that is returned by calling the [DescribeCriteria](~~DescribeCriteria~~) operation. If the value of the **Name** parameter in the response is **regionId**, the value of the **Values** parameter indicates a region ID.
+         * RegionIdStr.
          */
         public Builder regionIdStr(String regionIdStr) {
             this.putQueryParameter("RegionIdStr", regionIdStr);
@@ -194,10 +188,7 @@ public class DescribeOfflineMachinesRequest extends Request {
         }
 
         /**
-         * The region in which the server resides.
-         * <p>
-         * 
-         * >  The value of this parameter is the value of the Values parameter that is returned by calling the [DescribeCriteria](~~DescribeCriteria~~) operation. If the value of the **Name** parameter in the response is **regionId**, the value of the **Values** parameter indicates a region ID.
+         * RegionNo.
          */
         public Builder regionNo(String regionNo) {
             this.putQueryParameter("RegionNo", regionNo);
@@ -206,7 +197,7 @@ public class DescribeOfflineMachinesRequest extends Request {
         }
 
         /**
-         * The information about the server that you want to query. The value can be the name or the public IP address of the server.
+         * Remark.
          */
         public Builder remark(String remark) {
             this.putQueryParameter("Remark", remark);
@@ -215,7 +206,7 @@ public class DescribeOfflineMachinesRequest extends Request {
         }
 
         /**
-         * The source IP address of the request.
+         * SourceIp.
          */
         public Builder sourceIp(String sourceIp) {
             this.putQueryParameter("SourceIp", sourceIp);
@@ -224,14 +215,7 @@ public class DescribeOfflineMachinesRequest extends Request {
         }
 
         /**
-         * The source of the server. Valid values:
-         * <p>
-         * 
-         * *   **0**: an asset provided by Alibaba Cloud.
-         * *   **1**: a third-party cloud server
-         * *   **2**: a server in a data center
-         * *   **3**, **4**, **5**, and **7**: other cloud asset
-         * *   **8**: a lightweight asset
+         * Vendor.
          */
         public Builder vendor(Integer vendor) {
             this.putQueryParameter("Vendor", vendor);

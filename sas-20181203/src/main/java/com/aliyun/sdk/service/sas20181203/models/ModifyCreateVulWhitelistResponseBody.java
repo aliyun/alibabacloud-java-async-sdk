@@ -50,7 +50,7 @@ public class ModifyCreateVulWhitelistResponseBody extends TeaModel {
         private java.util.List < VulWhitelistList> vulWhitelistList; 
 
         /**
-         * The ID of the request, which is used to locate and troubleshoot issues.
+         * RequestId.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -58,7 +58,7 @@ public class ModifyCreateVulWhitelistResponseBody extends TeaModel {
         }
 
         /**
-         * An array that consists of the information about the whitelist.
+         * VulWhitelistList.
          */
         public Builder vulWhitelistList(java.util.List < VulWhitelistList> vulWhitelistList) {
             this.vulWhitelistList = vulWhitelistList;
@@ -98,7 +98,7 @@ public class ModifyCreateVulWhitelistResponseBody extends TeaModel {
             private Long id; 
 
             /**
-             * The ID of the whitelist.
+             * Id.
              */
             public Builder id(Long id) {
                 this.id = id;

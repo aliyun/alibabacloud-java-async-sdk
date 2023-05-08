@@ -74,11 +74,7 @@ public class DescribeCheckEcsWarningsResponseBody extends TeaModel {
         private String weakPasswordCount; 
 
         /**
-         * Indicates whether you use the free trial of Security Center. Valid values:
-         * <p>
-         * 
-         * *   **0**: no
-         * *   **1**: yes
+         * CanTry.
          */
         public Builder canTry(String canTry) {
             this.canTry = canTry;
@@ -86,7 +82,7 @@ public class DescribeCheckEcsWarningsResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * RequestId.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -94,15 +90,7 @@ public class DescribeCheckEcsWarningsResponseBody extends TeaModel {
         }
 
         /**
-         * The edition of Security Center that you use. Valid values:
-         * <p>
-         * 
-         * *   **1**: Basic edition
-         * *   **2** or **3**: Enterprise edition
-         * *   **5**: Advanced edition
-         * *   **6**: Anti-virus edition
-         * 
-         * >  Both the value 2 and the value 3 indicate the Enterprise edition.
+         * SasVersion.
          */
         public Builder sasVersion(String sasVersion) {
             this.sasVersion = sasVersion;
@@ -110,7 +98,7 @@ public class DescribeCheckEcsWarningsResponseBody extends TeaModel {
         }
 
         /**
-         * The number of weak passwords that can cause high risks to your assets.
+         * WeakPasswordCount.
          */
         public Builder weakPasswordCount(String weakPasswordCount) {
             this.weakPasswordCount = weakPasswordCount;

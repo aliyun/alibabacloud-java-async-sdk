@@ -118,7 +118,7 @@ public class ListHoneypotResponseBody extends TeaModel {
         }
 
         /**
-         * The HTTP status code.
+         * The HTTP status code returned.
          */
         public Builder httpStatusCode(Integer httpStatusCode) {
             this.httpStatusCode = httpStatusCode;
@@ -126,7 +126,7 @@ public class ListHoneypotResponseBody extends TeaModel {
         }
 
         /**
-         * The information about the honeypot.
+         * An array that consists of the information about the honeypots.
          */
         public Builder list(java.util.List < List> list) {
             this.list = list;
@@ -314,7 +314,7 @@ public class ListHoneypotResponseBody extends TeaModel {
             }
 
             /**
-             * The display name of the image that is used for the honeypot.
+             * The display name of the honeypot image.
              */
             public Builder honeypotImageDisplayName(String honeypotImageDisplayName) {
                 this.honeypotImageDisplayName = honeypotImageDisplayName;
@@ -322,7 +322,7 @@ public class ListHoneypotResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the image that is used for the honeypot.
+             * The ID of the honeypot image.
              */
             public Builder honeypotImageId(String honeypotImageId) {
                 this.honeypotImageId = honeypotImageId;
@@ -330,7 +330,7 @@ public class ListHoneypotResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the image that is used for the honeypot.
+             * The name of the honeypot image.
              */
             public Builder honeypotImageName(String honeypotImageName) {
                 this.honeypotImageName = honeypotImageName;
@@ -354,7 +354,7 @@ public class ListHoneypotResponseBody extends TeaModel {
             }
 
             /**
-             * The custom ID of the honeypot.
+             * The ID of the custom configuration for the honeypot.
              */
             public Builder presetId(String presetId) {
                 this.presetId = presetId;

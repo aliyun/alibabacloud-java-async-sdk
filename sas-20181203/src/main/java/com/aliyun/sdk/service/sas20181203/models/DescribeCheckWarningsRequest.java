@@ -21,6 +21,10 @@ public class DescribeCheckWarningsRequest extends Request {
     private String checkType;
 
     @Query
+    @NameInMap("ContainerName")
+    private String containerName;
+
+    @Query
     @NameInMap("CurrentPage")
     private Integer currentPage;
 
@@ -54,6 +58,7 @@ public class DescribeCheckWarningsRequest extends Request {
         super(builder);
         this.checkId = builder.checkId;
         this.checkType = builder.checkType;
+        this.containerName = builder.containerName;
         this.currentPage = builder.currentPage;
         this.lang = builder.lang;
         this.pageSize = builder.pageSize;
@@ -88,6 +93,13 @@ public class DescribeCheckWarningsRequest extends Request {
      */
     public String getCheckType() {
         return this.checkType;
+    }
+
+    /**
+     * @return containerName
+     */
+    public String getContainerName() {
+        return this.containerName;
     }
 
     /**
@@ -142,6 +154,7 @@ public class DescribeCheckWarningsRequest extends Request {
     public static final class Builder extends Request.Builder<DescribeCheckWarningsRequest, Builder> {
         private Long checkId; 
         private String checkType; 
+        private String containerName; 
         private Integer currentPage; 
         private String lang; 
         private Integer pageSize; 
@@ -158,6 +171,7 @@ public class DescribeCheckWarningsRequest extends Request {
             super(request);
             this.checkId = request.checkId;
             this.checkType = request.checkType;
+            this.containerName = request.containerName;
             this.currentPage = request.currentPage;
             this.lang = request.lang;
             this.pageSize = request.pageSize;
@@ -192,6 +206,15 @@ public class DescribeCheckWarningsRequest extends Request {
         public Builder checkType(String checkType) {
             this.putQueryParameter("CheckType", checkType);
             this.checkType = checkType;
+            return this;
+        }
+
+        /**
+         * The name of container.
+         */
+        public Builder containerName(String containerName) {
+            this.putQueryParameter("ContainerName", containerName);
+            this.containerName = containerName;
             return this;
         }
 

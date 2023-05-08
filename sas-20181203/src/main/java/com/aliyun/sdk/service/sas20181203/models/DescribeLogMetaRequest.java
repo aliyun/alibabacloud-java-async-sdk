@@ -82,13 +82,7 @@ public class DescribeLogMetaRequest extends Request {
         } 
 
         /**
-         * The ID of the request source. Default value: **aegis**. Valid values:
-         * <p>
-         * 
-         * *   **aegis**: Server Guard
-         * *   **sas**: Security Center
-         * 
-         * >  If you use Server Guard, set the value to **aegis**. If you use Security Center, set the value to **sas**.
+         * The topic of logs that are delivered.
          */
         public Builder from(String from) {
             this.putQueryParameter("From", from);
@@ -97,11 +91,12 @@ public class DescribeLogMetaRequest extends Request {
         }
 
         /**
-         * The language of the content within the request and response. Default value: **zh**. Valid values:
+         * The category of logs. Valid values:
          * <p>
          * 
-         * *   **zh**: Chinese
-         * *   **en**: English
+         * *   **host**: host logs
+         * *   **network**: network logs
+         * *   **security**: security logs
          */
         public Builder lang(String lang) {
             this.putQueryParameter("Lang", lang);
@@ -110,7 +105,13 @@ public class DescribeLogMetaRequest extends Request {
         }
 
         /**
-         * The source IP address of the request.
+         * The ID of the request source. Default value: **aegis**. Valid values:
+         * <p>
+         * 
+         * *   **aegis**: Server Guard
+         * *   **sas**: Security Center
+         * 
+         * >  If you use Server Guard, set the value to **aegis**. If you use Security Center, set the value to **sas**.
          */
         public Builder sourceIp(String sourceIp) {
             this.putQueryParameter("SourceIp", sourceIp);

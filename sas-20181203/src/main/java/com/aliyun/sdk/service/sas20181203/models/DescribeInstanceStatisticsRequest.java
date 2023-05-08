@@ -98,7 +98,7 @@ public class DescribeInstanceStatisticsRequest extends Request {
         } 
 
         /**
-         * The source of the request. Set the value to **sas**, which indicates that the request is sent from Security Center.
+         * From.
          */
         public Builder from(String from) {
             this.putQueryParameter("From", from);
@@ -107,11 +107,7 @@ public class DescribeInstanceStatisticsRequest extends Request {
         }
 
         /**
-         * The language of the content within the request and response. Default value: **zh**. Valid values:
-         * <p>
-         * 
-         * *   **zh**: Chinese
-         * *   **en**: English
+         * Lang.
          */
         public Builder lang(String lang) {
             this.putQueryParameter("Lang", lang);
@@ -120,7 +116,7 @@ public class DescribeInstanceStatisticsRequest extends Request {
         }
 
         /**
-         * The source IP address of the request.
+         * SourceIp.
          */
         public Builder sourceIp(String sourceIp) {
             this.putQueryParameter("SourceIp", sourceIp);
@@ -129,7 +125,7 @@ public class DescribeInstanceStatisticsRequest extends Request {
         }
 
         /**
-         * The UUIDs of the assets to query. Separate multiple UUIDs with commas (,). You can call the [DescribeCloudCenterInstances](~~DescribeCloudCenterInstances~~) operation to query the UUIDs of assets.
+         * Uuid.
          */
         public Builder uuid(String uuid) {
             this.putQueryParameter("Uuid", uuid);

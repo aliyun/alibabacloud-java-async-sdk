@@ -70,7 +70,7 @@ public class DescribeExcludeSystemPathRequest extends Request {
         } 
 
         /**
-         * The number of the page to return. Default value: 1.
+         * CurrentPage.
          */
         public Builder currentPage(Integer currentPage) {
             this.putQueryParameter("CurrentPage", currentPage);
@@ -79,7 +79,7 @@ public class DescribeExcludeSystemPathRequest extends Request {
         }
 
         /**
-         * The number of entries to return on each page.
+         * PageSize.
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);

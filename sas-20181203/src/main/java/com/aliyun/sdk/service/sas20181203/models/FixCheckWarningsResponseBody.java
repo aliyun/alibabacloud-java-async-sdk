@@ -50,7 +50,7 @@ public class FixCheckWarningsResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The ID of the baseline risk item that has been fixed by using the Batch Repair feature.
+         * FixCheckWarnings
          */
         public Builder batchId(Long batchId) {
             this.batchId = batchId;
@@ -58,7 +58,7 @@ public class FixCheckWarningsResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * RequestId.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

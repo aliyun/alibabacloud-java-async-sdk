@@ -170,7 +170,7 @@ public class DescribePropertyCountResponseBody extends TeaModel {
         private Integer webserver; 
 
         /**
-         * The number of startup items.
+         * Autorun.
          */
         public Builder autorun(Integer autorun) {
             this.autorun = autorun;
@@ -178,7 +178,7 @@ public class DescribePropertyCountResponseBody extends TeaModel {
         }
 
         /**
-         * The number of scheduled tasks.
+         * The number of middleware assets.
          */
         public Builder cron(Integer cron) {
             this.cron = cron;
@@ -186,7 +186,7 @@ public class DescribePropertyCountResponseBody extends TeaModel {
         }
 
         /**
-         * The number of databases.
+         * DescribePropertyCount
          */
         public Builder database(Integer database) {
             this.database = database;
@@ -194,7 +194,7 @@ public class DescribePropertyCountResponseBody extends TeaModel {
         }
 
         /**
-         * The number of kernel modules.
+         * Lkm.
          */
         public Builder lkm(Integer lkm) {
             this.lkm = lkm;
@@ -202,7 +202,7 @@ public class DescribePropertyCountResponseBody extends TeaModel {
         }
 
         /**
-         * The number of ports.
+         * The ID of the request, which is used to locate and troubleshoot issues.
          */
         public Builder port(Integer port) {
             this.port = port;
@@ -210,7 +210,7 @@ public class DescribePropertyCountResponseBody extends TeaModel {
         }
 
         /**
-         * The number of processes.
+         * The number of accounts.
          */
         public Builder process(Integer process) {
             this.process = process;
@@ -218,7 +218,7 @@ public class DescribePropertyCountResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request, which is used to locate and troubleshoot issues.
+         * The number of processes.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -226,7 +226,7 @@ public class DescribePropertyCountResponseBody extends TeaModel {
         }
 
         /**
-         * The number of middleware assets.
+         * port,process
          */
         public Builder sca(Integer sca) {
             this.sca = sca;
@@ -234,7 +234,7 @@ public class DescribePropertyCountResponseBody extends TeaModel {
         }
 
         /**
-         * The number of software assets.
+         * The number of web services.
          */
         public Builder software(Integer software) {
             this.software = software;
@@ -242,7 +242,7 @@ public class DescribePropertyCountResponseBody extends TeaModel {
         }
 
         /**
-         * The number of accounts.
+         * The number of websites.
          */
         public Builder user(Integer user) {
             this.user = user;
@@ -250,7 +250,7 @@ public class DescribePropertyCountResponseBody extends TeaModel {
         }
 
         /**
-         * The number of websites.
+         * Queries the statistics of asset fingerprints. The assets include processes, ports, software, accounts, middleware, websites, web services, scheduled tasks, startup items, and databases.
          */
         public Builder web(Integer web) {
             this.web = web;
@@ -258,7 +258,7 @@ public class DescribePropertyCountResponseBody extends TeaModel {
         }
 
         /**
-         * The number of web services.
+         * Webserver.
          */
         public Builder webserver(Integer webserver) {
             this.webserver = webserver;

@@ -62,7 +62,7 @@ public class DescribeInstanceRebootStatusResponseBody extends TeaModel {
         private Integer totalCount; 
 
         /**
-         * An array that consists of the status information about the servers that you restart.
+         * RebootStatuses.
          */
         public Builder rebootStatuses(java.util.List < RebootStatuses> rebootStatuses) {
             this.rebootStatuses = rebootStatuses;
@@ -70,7 +70,7 @@ public class DescribeInstanceRebootStatusResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request, which is used to locate and troubleshoot issues.
+         * RequestId.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -78,7 +78,7 @@ public class DescribeInstanceRebootStatusResponseBody extends TeaModel {
         }
 
         /**
-         * The total number of entries returned.
+         * DescribeInstanceRebootStatus
          */
         public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;
@@ -154,12 +154,7 @@ public class DescribeInstanceRebootStatusResponseBody extends TeaModel {
             private String uuid; 
 
             /**
-             * The error code that is returned when the server failed to be restarted. Valid values:
-             * <p>
-             * 
-             * *   **10001**: The restart command failed to be sent.
-             * *   **10002**: The restart operation failed.
-             * *   **10003**: A timeout error occurs.
+             * Code.
              */
             public Builder code(String code) {
                 this.code = code;
@@ -167,7 +162,7 @@ public class DescribeInstanceRebootStatusResponseBody extends TeaModel {
             }
 
             /**
-             * The message that is returned when the server failed to be restarted.
+             * Msg.
              */
             public Builder msg(String msg) {
                 this.msg = msg;
@@ -175,12 +170,7 @@ public class DescribeInstanceRebootStatusResponseBody extends TeaModel {
             }
 
             /**
-             * The status of the server. Valid values:
-             * <p>
-             * 
-             * *   **0**: The server is being restarted.
-             * *   **1**: The server is restarted.
-             * *   **2**: The server failed to be restarted.
+             * RebootStatus.
              */
             public Builder rebootStatus(Integer rebootStatus) {
                 this.rebootStatus = rebootStatus;
@@ -188,7 +178,7 @@ public class DescribeInstanceRebootStatusResponseBody extends TeaModel {
             }
 
             /**
-             * The UUID of the server.
+             * Uuid.
              */
             public Builder uuid(String uuid) {
                 this.uuid = uuid;

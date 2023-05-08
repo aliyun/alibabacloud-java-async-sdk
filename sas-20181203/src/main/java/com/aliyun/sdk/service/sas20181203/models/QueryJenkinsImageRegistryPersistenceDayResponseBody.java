@@ -74,7 +74,7 @@ public class QueryJenkinsImageRegistryPersistenceDayResponseBody extends TeaMode
         private Long timeCost; 
 
         /**
-         * The retention period. Unit: days.
+         * Data.
          */
         public Builder data(Integer data) {
             this.data = data;
@@ -82,7 +82,7 @@ public class QueryJenkinsImageRegistryPersistenceDayResponseBody extends TeaMode
         }
 
         /**
-         * The HTTP status code returned.
+         * HttpStatusCode.
          */
         public Builder httpStatusCode(Integer httpStatusCode) {
             this.httpStatusCode = httpStatusCode;
@@ -90,7 +90,7 @@ public class QueryJenkinsImageRegistryPersistenceDayResponseBody extends TeaMode
         }
 
         /**
-         * The ID of the request, which is used to locate and troubleshoot issues.
+         * RequestId.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -98,7 +98,7 @@ public class QueryJenkinsImageRegistryPersistenceDayResponseBody extends TeaMode
         }
 
         /**
-         * The time consumed. Unit: seconds.
+         * TimeCost.
          */
         public Builder timeCost(Long timeCost) {
             this.timeCost = timeCost;

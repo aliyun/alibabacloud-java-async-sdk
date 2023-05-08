@@ -50,7 +50,7 @@ public class DescribeContainerTagsResponseBody extends TeaModel {
         private java.util.List < String > tagValues; 
 
         /**
-         * The ID of the request, which is used to locate and troubleshoot issues.
+         * RequestId.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -58,7 +58,7 @@ public class DescribeContainerTagsResponseBody extends TeaModel {
         }
 
         /**
-         * An array that consists of the attributes of container assets.
+         * TagValues.
          */
         public Builder tagValues(java.util.List < String > tagValues) {
             this.tagValues = tagValues;

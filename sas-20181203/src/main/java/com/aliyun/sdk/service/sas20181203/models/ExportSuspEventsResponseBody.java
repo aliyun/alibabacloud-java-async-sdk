@@ -62,7 +62,7 @@ public class ExportSuspEventsResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * FileName.
+         * The name of the exported file.
          */
         public Builder fileName(String fileName) {
             this.fileName = fileName;
@@ -70,7 +70,7 @@ public class ExportSuspEventsResponseBody extends TeaModel {
         }
 
         /**
-         * Id.
+         * The ID of the export record.
          */
         public Builder id(Integer id) {
             this.id = id;
@@ -78,7 +78,7 @@ public class ExportSuspEventsResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

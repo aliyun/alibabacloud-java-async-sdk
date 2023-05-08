@@ -50,7 +50,7 @@ public class DescribeContainerCriteriaResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * An array that consists of information about the filter condition.
+         * CriteriaList.
          */
         public Builder criteriaList(java.util.List < CriteriaList> criteriaList) {
             this.criteriaList = criteriaList;
@@ -58,7 +58,7 @@ public class DescribeContainerCriteriaResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request, which is used to locate and troubleshoot issues.
+         * RequestId.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -122,28 +122,7 @@ public class DescribeContainerCriteriaResponseBody extends TeaModel {
             private String values; 
 
             /**
-             * The name of the filter condition.
-             * <p>
-             * 
-             * *   **instanceId**: the ID of the container.
-             * *   **clusterId**: the ID of the cluster.
-             * *   **regionId**: the region of the container.
-             * *   **clusterName**: the name of the cluster.
-             * *   **image**: the name of the image.
-             * *   **imageRepoName**: the name of the image repository.
-             * *   **imageRepoNamespace**: the namespace of the image repository.
-             * *   **imageRepoTag**: the tag of the image repository.
-             * *   **imageDigest**: the image digest.
-             * *   **ClusterType**: the type of the cluster.
-             * *   **hostIp**: the public IP address.
-             * *   **pod**: the pod.
-             * *   **podIp**: the IP address of the pod.
-             * *   **containerId**: the ID of the container.
-             * *   **vulStatus**: indicates whether vulnerabilities exist in the container.
-             * *   **alarmStatus**: indicates whether alerts are generated for the container.
-             * *   **riskStatus**: indicates whether risks exist in the container.
-             * *   **riskLevel**: the risk level of the container.
-             * *   **containerScope**: the type of the container.
+             * Name.
              */
             public Builder name(String name) {
                 this.name = name;
@@ -151,11 +130,7 @@ public class DescribeContainerCriteriaResponseBody extends TeaModel {
             }
 
             /**
-             * The type of the filter condition. Valid values:
-             * <p>
-             * 
-             * *   **input**: The filter condition needs to be specified.
-             * *   **select**: The filter condition is an option that can be selected from the drop-down list.
+             * Type.
              */
             public Builder type(String type) {
                 this.type = type;
@@ -163,10 +138,7 @@ public class DescribeContainerCriteriaResponseBody extends TeaModel {
             }
 
             /**
-             * The value of the filter condition. This parameter is returned only when the value of **Type** is **select**.
-             * <p>
-             * 
-             * > If the value of **Type** is **input**, the value of this parameter is an empty string.
+             * Values.
              */
             public Builder values(String values) {
                 this.values = values;

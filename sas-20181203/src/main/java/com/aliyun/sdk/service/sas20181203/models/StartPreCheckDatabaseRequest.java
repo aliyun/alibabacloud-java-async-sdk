@@ -85,12 +85,7 @@ public class StartPreCheckDatabaseRequest extends Request {
         } 
 
         /**
-         * The type of the database. Valid values:
-         * <p>
-         * 
-         * *   **MYSQL**
-         * *   **MSSQL**
-         * *   **Oracle**
+         * DatabaseType.
          */
         public Builder databaseType(String databaseType) {
             this.putQueryParameter("DatabaseType", databaseType);
@@ -99,10 +94,7 @@ public class StartPreCheckDatabaseRequest extends Request {
         }
 
         /**
-         * The UUID of the agent that is used to back up the data of the database.
-         * <p>
-         * 
-         * > You can call the [DescribeUniBackupDatabase](~~DescribeUniBackupDatabase~~) operation to query the UUID.
+         * InstanceUuid.
          */
         public Builder instanceUuid(String instanceUuid) {
             this.putQueryParameter("InstanceUuid", instanceUuid);
@@ -111,7 +103,7 @@ public class StartPreCheckDatabaseRequest extends Request {
         }
 
         /**
-         * The region ID of the server that hosts the database.
+         * UniRegionId.
          */
         public Builder uniRegionId(String uniRegionId) {
             this.putQueryParameter("UniRegionId", uniRegionId);

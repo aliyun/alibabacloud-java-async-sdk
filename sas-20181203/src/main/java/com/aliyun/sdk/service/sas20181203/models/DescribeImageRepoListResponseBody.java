@@ -98,7 +98,7 @@ public class DescribeImageRepoListResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The number of image repositories that are added to Security Center.
+         * An array that consists of the information about image repositories.
          */
         public Builder addTargetCount(Integer addTargetCount) {
             this.addTargetCount = addTargetCount;
@@ -106,7 +106,7 @@ public class DescribeImageRepoListResponseBody extends TeaModel {
         }
 
         /**
-         * The total number of image repositories.
+         * The number of the page to return. Default value: **1**.
          */
         public Builder allTargetCount(Integer allTargetCount) {
             this.allTargetCount = allTargetCount;
@@ -114,7 +114,10 @@ public class DescribeImageRepoListResponseBody extends TeaModel {
         }
 
         /**
-         * The number of excluded image repositories.
+         * The condition by which the feature is applied. Valid values:
+         * <p>
+         * 
+         * *   **image_repo**: the ID of the image repository
          */
         public Builder delTargetCount(Integer delTargetCount) {
             this.delTargetCount = delTargetCount;
@@ -122,7 +125,7 @@ public class DescribeImageRepoListResponseBody extends TeaModel {
         }
 
         /**
-         * An array that consists of the information about image repositories.
+         * DescribeImageRepoList
          */
         public Builder imageRepoList(java.util.List < ImageRepoList> imageRepoList) {
             this.imageRepoList = imageRepoList;
@@ -130,7 +133,7 @@ public class DescribeImageRepoListResponseBody extends TeaModel {
         }
 
         /**
-         * The pagination information.
+         * The number of entries returned per page.
          */
         public Builder pageInfo(PageInfo pageInfo) {
             this.pageInfo = pageInfo;
@@ -138,7 +141,7 @@ public class DescribeImageRepoListResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request, which is used to locate and troubleshoot issues.
+         * The number of image repositories that are added to Security Center.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -202,11 +205,7 @@ public class DescribeImageRepoListResponseBody extends TeaModel {
             private String repoNamespace; 
 
             /**
-             * Indicates whether the feature takes effect on the image repository. Valid values:
-             * <p>
-             * 
-             * *   **add**: yes
-             * *   **del**: no
+             * Flag.
              */
             public Builder flag(String flag) {
                 this.flag = flag;
@@ -214,7 +213,7 @@ public class DescribeImageRepoListResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the image repository.
+             * RepoName.
              */
             public Builder repoName(String repoName) {
                 this.repoName = repoName;
@@ -222,7 +221,7 @@ public class DescribeImageRepoListResponseBody extends TeaModel {
             }
 
             /**
-             * The namespace to which the image repository belongs.
+             * RepoNamespace.
              */
             public Builder repoNamespace(String repoNamespace) {
                 this.repoNamespace = repoNamespace;
@@ -299,7 +298,7 @@ public class DescribeImageRepoListResponseBody extends TeaModel {
             private Integer totalCount; 
 
             /**
-             * The number of entries returned on the current page.
+             * Queries the statistics and configurations of the feature that protects images.
              */
             public Builder count(Integer count) {
                 this.count = count;
@@ -307,7 +306,7 @@ public class DescribeImageRepoListResponseBody extends TeaModel {
             }
 
             /**
-             * The page number of the returned page.
+             * The namespace to which the image repository belongs.
              */
             public Builder currentPage(Integer currentPage) {
                 this.currentPage = currentPage;
@@ -315,7 +314,7 @@ public class DescribeImageRepoListResponseBody extends TeaModel {
             }
 
             /**
-             * The number of entries returned per page.
+             * The ID of the request, which is used to locate and troubleshoot issues.
              */
             public Builder pageSize(Integer pageSize) {
                 this.pageSize = pageSize;
@@ -323,7 +322,7 @@ public class DescribeImageRepoListResponseBody extends TeaModel {
             }
 
             /**
-             * The total number of image repositories.
+             * The name of the image repository.
              */
             public Builder totalCount(Integer totalCount) {
                 this.totalCount = totalCount;

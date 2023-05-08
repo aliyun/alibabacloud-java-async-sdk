@@ -106,10 +106,7 @@ public class CreateSimilarSecurityEventsQueryTaskRequest extends Request {
         }
 
         /**
-         * The ID of the alert event.
-         * <p>
-         * 
-         * >  You must specify at least one of the SecurityEventId and SimilarEventScenarioCode parameters.
+         * SecurityEventId.
          */
         public Builder securityEventId(Long securityEventId) {
             this.putQueryParameter("SecurityEventId", securityEventId);
@@ -118,10 +115,7 @@ public class CreateSimilarSecurityEventsQueryTaskRequest extends Request {
         }
 
         /**
-         * The codes of alert events that are triggered by the same rule or of the same alert type.
-         * <p>
-         * 
-         * >  You must specify at least one of the SecurityEventId and SimilarEventScenarioCode parameters.
+         * SimilarEventScenarioCode.
          */
         public Builder similarEventScenarioCode(String similarEventScenarioCode) {
             this.putQueryParameter("SimilarEventScenarioCode", similarEventScenarioCode);
@@ -130,7 +124,7 @@ public class CreateSimilarSecurityEventsQueryTaskRequest extends Request {
         }
 
         /**
-         * The source IP address of the request.
+         * CreateSimilarSecurityEventsQueryTask
          */
         public Builder sourceIp(String sourceIp) {
             this.putQueryParameter("SourceIp", sourceIp);

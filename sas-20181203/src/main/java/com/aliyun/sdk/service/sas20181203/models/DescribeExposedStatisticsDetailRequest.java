@@ -111,11 +111,20 @@ public class DescribeExposedStatisticsDetailRequest extends Request {
         } 
 
         /**
-         * The number of the page to return.
+         * The number of entries returned on the current page.
          */
         public Builder currentPage(Integer currentPage) {
             this.putQueryParameter("CurrentPage", currentPage);
             this.currentPage = currentPage;
+            return this;
+        }
+
+        /**
+         * The ID of the gateway asset. This parameter is required when the **StatisticsType** parameter is set to **exposureType**.
+         */
+        public Builder pageSize(Integer pageSize) {
+            this.putQueryParameter("PageSize", pageSize);
+            this.pageSize = pageSize;
             return this;
         }
 
@@ -125,21 +134,6 @@ public class DescribeExposedStatisticsDetailRequest extends Request {
          * 
          * >  We recommend that you do not leave this parameter empty.
          */
-        public Builder pageSize(Integer pageSize) {
-            this.putQueryParameter("PageSize", pageSize);
-            this.pageSize = pageSize;
-            return this;
-        }
-
-        /**
-         * The type of the exposed asset. Valid values:
-         * <p>
-         * 
-         * *   **exposureType**: gateway assets
-         * *   **exposurePort**: ports
-         * *   **exposureComponent**: system components
-         * *   **exposureIp**: IP addresses
-         */
         public Builder statisticsType(String statisticsType) {
             this.putQueryParameter("StatisticsType", statisticsType);
             this.statisticsType = statisticsType;
@@ -147,11 +141,7 @@ public class DescribeExposedStatisticsDetailRequest extends Request {
         }
 
         /**
-         * The type of the gateway asset. This parameter is required when the **StatisticsType** parameter is set to **exposureType**. Valid values:
-         * <p>
-         * 
-         * *   **SLB**: the public IP address of a Server Load Balancer (SLB) instance
-         * *   **DNAT**: the NAT gateway that connects to the Internet by using the DNAT feature
+         * The system component that is exposed on the Internet.
          */
         public Builder statisticsTypeGatewayType(String statisticsTypeGatewayType) {
             this.putQueryParameter("StatisticsTypeGatewayType", statisticsTypeGatewayType);
@@ -160,7 +150,7 @@ public class DescribeExposedStatisticsDetailRequest extends Request {
         }
 
         /**
-         * The ID of the gateway asset. This parameter is required when the **StatisticsType** parameter is set to **exposureType**.
+         * The pagination information.
          */
         public Builder statisticsTypeInstanceValue(String statisticsTypeInstanceValue) {
             this.putQueryParameter("StatisticsTypeInstanceValue", statisticsTypeInstanceValue);

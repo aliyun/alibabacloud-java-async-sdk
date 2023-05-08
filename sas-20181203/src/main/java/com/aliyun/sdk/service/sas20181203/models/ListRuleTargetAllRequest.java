@@ -55,10 +55,7 @@ public class ListRuleTargetAllRequest extends Request {
         } 
 
         /**
-         * The ID of the container cluster.
-         * <p>
-         * 
-         * > You can call the [DescribeGroupedContainerInstances](~~182997~~) operation to query the IDs of container clusters.
+         * ClusterId.
          */
         public Builder clusterId(String clusterId) {
             this.putQueryParameter("ClusterId", clusterId);

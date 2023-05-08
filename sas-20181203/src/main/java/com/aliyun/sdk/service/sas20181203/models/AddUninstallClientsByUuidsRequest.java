@@ -111,7 +111,7 @@ public class AddUninstallClientsByUuidsRequest extends Request {
         } 
 
         /**
-         * The method name. Default value: init.
+         * CallMethod.
          */
         public Builder callMethod(String callMethod) {
             this.putQueryParameter("CallMethod", callMethod);
@@ -120,7 +120,7 @@ public class AddUninstallClientsByUuidsRequest extends Request {
         }
 
         /**
-         * The feedback.
+         * Feedback.
          */
         public Builder feedback(String feedback) {
             this.putQueryParameter("Feedback", feedback);
@@ -129,7 +129,7 @@ public class AddUninstallClientsByUuidsRequest extends Request {
         }
 
         /**
-         * The region in which the server resides.
+         * Region.
          */
         public Builder region(String region) {
             this.putQueryParameter("Region", region);
@@ -138,7 +138,7 @@ public class AddUninstallClientsByUuidsRequest extends Request {
         }
 
         /**
-         * The source IP address of the request. You do not need to specify this parameter. It is automatically obtained by the system.
+         * SourceIp.
          */
         public Builder sourceIp(String sourceIp) {
             this.putQueryParameter("SourceIp", sourceIp);
@@ -147,10 +147,7 @@ public class AddUninstallClientsByUuidsRequest extends Request {
         }
 
         /**
-         * The UUID of the server that you want to unbind. Separate multiple UUIDs with commas (,).
-         * <p>
-         * 
-         * >  You can call the [DescribeCloudCenterInstances](~~141932~~) operation to query the UUIDs of servers.
+         * Uuids.
          */
         public Builder uuids(String uuids) {
             this.putQueryParameter("Uuids", uuids);

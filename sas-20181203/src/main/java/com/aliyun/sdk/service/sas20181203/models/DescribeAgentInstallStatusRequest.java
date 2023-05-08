@@ -83,7 +83,7 @@ public class DescribeAgentInstallStatusRequest extends Request {
         } 
 
         /**
-         * The language of the content within the request and response. Valid values:
+         * The language of the content within the request and response. Valid value:
          * <p>
          * 
          * *   **zh**: Chinese

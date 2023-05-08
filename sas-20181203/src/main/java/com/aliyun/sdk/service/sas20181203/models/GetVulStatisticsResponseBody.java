@@ -74,7 +74,7 @@ public class GetVulStatisticsResponseBody extends TeaModel {
         private Integer vulNntfSum; 
 
         /**
-         * The ID of the request, which is used to locate and troubleshoot issues.
+         * RequestId.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -82,7 +82,7 @@ public class GetVulStatisticsResponseBody extends TeaModel {
         }
 
         /**
-         * The number of vulnerabilities that have the high priority.
+         * VulAsapSum.
          */
         public Builder vulAsapSum(Integer vulAsapSum) {
             this.vulAsapSum = vulAsapSum;
@@ -90,7 +90,7 @@ public class GetVulStatisticsResponseBody extends TeaModel {
         }
 
         /**
-         * The number of vulnerabilities that have the medium priority.
+         * VulLaterSum.
          */
         public Builder vulLaterSum(Integer vulLaterSum) {
             this.vulLaterSum = vulLaterSum;
@@ -98,7 +98,7 @@ public class GetVulStatisticsResponseBody extends TeaModel {
         }
 
         /**
-         * The number of vulnerabilities that have the low priority.
+         * VulNntfSum.
          */
         public Builder vulNntfSum(Integer vulNntfSum) {
             this.vulNntfSum = vulNntfSum;

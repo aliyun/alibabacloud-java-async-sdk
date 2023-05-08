@@ -110,7 +110,7 @@ public class DescribeImageSensitiveFileByKeyResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * The status code returned. If the 200 status code is returned, the request was successful.
+         * Code.
          */
         public Builder code(String code) {
             this.code = code;
@@ -118,7 +118,7 @@ public class DescribeImageSensitiveFileByKeyResponseBody extends TeaModel {
         }
 
         /**
-         * The HTTP status code returned.
+         * HttpStatusCode.
          */
         public Builder httpStatusCode(Integer httpStatusCode) {
             this.httpStatusCode = httpStatusCode;
@@ -126,7 +126,7 @@ public class DescribeImageSensitiveFileByKeyResponseBody extends TeaModel {
         }
 
         /**
-         * The error message returned.
+         * Message.
          */
         public Builder message(String message) {
             this.message = message;
@@ -134,7 +134,12 @@ public class DescribeImageSensitiveFileByKeyResponseBody extends TeaModel {
         }
 
         /**
-         * The pagination information.
+         * The risk level of the sensitive file. Valid values:
+         * <p>
+         * 
+         * *   **high**
+         * *   **medium**
+         * *   **low**
          */
         public Builder pageInfo(PageInfo pageInfo) {
             this.pageInfo = pageInfo;
@@ -142,7 +147,7 @@ public class DescribeImageSensitiveFileByKeyResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request, which is used to locate and troubleshoot issues.
+         * RequestId.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -158,11 +163,7 @@ public class DescribeImageSensitiveFileByKeyResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether the request was successful. Valid values:
-         * <p>
-         * 
-         * *   **true**: The request was successful.
-         * *   **false**: The request failed.
+         * Success.
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -250,7 +251,7 @@ public class DescribeImageSensitiveFileByKeyResponseBody extends TeaModel {
             private Integer totalCount; 
 
             /**
-             * The number of entries returned on the current page.
+             * Count.
              */
             public Builder count(Integer count) {
                 this.count = count;
@@ -258,7 +259,7 @@ public class DescribeImageSensitiveFileByKeyResponseBody extends TeaModel {
             }
 
             /**
-             * The page number of the returned page.
+             * The ID of the request, which is used to locate and troubleshoot issues.
              */
             public Builder currentPage(Integer currentPage) {
                 this.currentPage = currentPage;
@@ -266,7 +267,7 @@ public class DescribeImageSensitiveFileByKeyResponseBody extends TeaModel {
             }
 
             /**
-             * The key of the last data entry.
+             * LastRowKey.
              */
             public Builder lastRowKey(String lastRowKey) {
                 this.lastRowKey = lastRowKey;
@@ -274,7 +275,7 @@ public class DescribeImageSensitiveFileByKeyResponseBody extends TeaModel {
             }
 
             /**
-             * The number of entries returned per page.
+             * Queries the sensitive files in an image.
              */
             public Builder pageSize(Integer pageSize) {
                 this.pageSize = pageSize;
@@ -282,7 +283,7 @@ public class DescribeImageSensitiveFileByKeyResponseBody extends TeaModel {
             }
 
             /**
-             * The total number of entries returned.
+             * DescribeImageSensitiveFileByKey
              */
             public Builder totalCount(Integer totalCount) {
                 this.totalCount = totalCount;
@@ -419,7 +420,7 @@ public class DescribeImageSensitiveFileByKeyResponseBody extends TeaModel {
             private String sensitiveFileName; 
 
             /**
-             * The suggestion.
+             * The timestamp when the first scan was performed. Unit: milliseconds.
              */
             public Builder advice(String advice) {
                 this.advice = advice;
@@ -427,55 +428,10 @@ public class DescribeImageSensitiveFileByKeyResponseBody extends TeaModel {
             }
 
             /**
-             * The file path.
+             * The UUID of the image.
              */
             public Builder filePath(String filePath) {
                 this.filePath = filePath;
-                return this;
-            }
-
-            /**
-             * The timestamp when the first scan was performed. Unit: milliseconds.
-             */
-            public Builder firstScanTime(Long firstScanTime) {
-                this.firstScanTime = firstScanTime;
-                return this;
-            }
-
-            /**
-             * The timestamp when the last scan was performed. Unit: milliseconds.
-             */
-            public Builder lastScanTime(Long lastScanTime) {
-                this.lastScanTime = lastScanTime;
-                return this;
-            }
-
-            /**
-             * The digest of the image layer.
-             */
-            public Builder layerDigest(String layerDigest) {
-                this.layerDigest = layerDigest;
-                return this;
-            }
-
-            /**
-             * The sensitive content.
-             */
-            public Builder promt(String promt) {
-                this.promt = promt;
-                return this;
-            }
-
-            /**
-             * The risk level of the sensitive file. Valid values:
-             * <p>
-             * 
-             * *   **high**
-             * *   **medium**
-             * *   **low**
-             */
-            public Builder riskLevel(String riskLevel) {
-                this.riskLevel = riskLevel;
                 return this;
             }
 
@@ -485,116 +441,164 @@ public class DescribeImageSensitiveFileByKeyResponseBody extends TeaModel {
              * 
              * *   **npm_token**: NPM Token
              * *   **ftp_cfg**: FTP Config
-             * *   **google\_oauth_key**: Google OAuth Key
+             * *   **google_oauth_key**: Google OAuth Key
              * *   **planetscale_passwd**: Planetscale password
-             * *   **github\_ssh_key**: Github SSH Key
-             * *   **msbuild\_publish_profile**: MSBuild publish profile
-             * *   **fastly\_cdn_token**: Fastly CDN Token
-             * *   **ssh\_private_key**: SSH Private Key
+             * *   **github_ssh_key**: Github SSH Key
+             * *   **msbuild_publish_profile**: MSBuild publish profile
+             * *   **fastly_cdn_token**: Fastly CDN Token
+             * *   **ssh_private_key**: SSH Private Key
              * *   **aws_cli**: AWS CLI Credentials
-             * *   **cpanel\_proftpd**: cPanel ProFTPd Credential
+             * *   **cpanel_proftpd**: cPanel ProFTPd Credential
              * *   **postgresql_passwd**: PostgreSQl Passwd
-             * *   **discord\_client_cred**: Discord Client Credential
+             * *   **discord_client_cred**: Discord Client Credential
              * *   **rails_database**: Rails Database Config
-             * *   **aws\_access_key**: AWS Access Key
+             * *   **aws_access_key**: AWS Access Key
              * *   **esmtp_cfg**: ESMTP Config
-             * *   **docker\_registry_cfg**: Docker Registry Config
+             * *   **docker_registry_cfg**: Docker Registry Config
              * *   **pem**: PEM
              * *   **common_cred**: Common Credential
              * *   **sftp_cfg**: SFTP Config
              * *   **grafana_token**: Grafana Token
              * *   **slack_token**: Slack Token
-             * *   **ec\_private_key**: EC Private Key
+             * *   **ec_private_key**: EC Private Key
              * *   **pypi_token**: PyPI Token
              * *   **finicity_token**: Finicity Token
-             * *   **k8s\_client_key**: Kubernetes Client Key
+             * *   **k8s_client_key**: Kubernetes Client Key
              * *   **git_cfg**: Git Config
              * *   **django_key**: Django Key
              * *   **jenkins_ssh**: Jenkins SSH Config
-             * *   **openssh\_private_key**: OPENSSH Private Key
+             * *   **openssh_private_key**: OPENSSH Private Key
              * *   **square_oauth**: Square OAuth Token
              * *   **typeform_token**: Typeform Token
-             * *   **common\_database_cfg**: Common Database Config
-             * *   **wordpress\_database_cfg**: Wordpress Database Config
-             * *   **googlecloud\_api_key**: Google Cloud API Key
+             * *   **common_database_cfg**: Common Database Config
+             * *   **wordpress_database_cfg**: Wordpress Database Config
+             * *   **googlecloud_api_key**: Google Cloud API Key
              * *   **vscode_sftp**: VSCode SFTP Config
              * *   **apache_htpasswd**: Apache htpasswd
              * *   **planetscale_token**: Planetscale Token
-             * *   **contentful\_preview_token**: Contentful Preview Token
-             * *   **php\_database_cfg**: PHP Database Config
-             * *   **atom\_remote_sync**: Atom Remote Sync Config
-             * *   **aws\_session_token**: AWS Session Token
-             * *   **atom\_sftp_cfg**: Atom SFTP Config
-             * *   **asana\_client\_private_key**: Asana Client Private Key
+             * *   **contentful_preview_token**: Contentful Preview Token
+             * *   **php_database_cfg**: PHP Database Config
+             * *   **atom_remote_sync**: Atom Remote Sync Config
+             * *   **aws_session_token**: AWS Session Token
+             * *   **atom_sftp_cfg**: Atom SFTP Config
+             * *   **asana_client_private_key**: Asana Client Private Key
              * *   **tencentcloud_ak**: Tencent Cloud SecretId
-             * *   **rsa\_private_key**: RSA Private Key
-             * *   **github\_personal_token**: Github Personal Token
+             * *   **rsa_private_key**: RSA Private Key
+             * *   **github_personal_token**: Github Personal Token
              * *   **pgp**: PGP
              * *   **stripe_skpk**: Stripe Secret Key
              * *   **square_token**: Square Token
              * *   **rails_carrierwave**: Rails Carrierwave Credential
-             * *   **dbeaver\_database_cfg**: DBeaver Database Config
+             * *   **dbeaver_database_cfg**: DBeaver Database Config
              * *   **robomongo_cred**: Robomongo Credential
-             * *   **github\_oauth_token**: Github OAuth Token
+             * *   **github_oauth_token**: Github OAuth Token
              * *   **pulumi_token**: Pulumi Token
              * *   **ventrilo_voip**: Ventrilo VoIP Server Config
-             * *   **macos_keychain**: macOS Keychain
-             * *   **amazon\_mws_token**: Amazon MWS Token
+             * *   **macos_keychain**: MacOS Keychain
+             * *   **amazon_mws_token**: Amazon MWS Token
              * *   **dynatrace_token**: Dynatrace Token
              * *   **java_keystore**: Java Keystore
              * *   **microsoft_sdf**: Microsoft SDF
-             * *   **kubernetes\_dashboard_cred**: Kubernetes Dashboard User Credential
+             * *   **kubernetes_dashboard_cred**: Kubernetes Dashboard User Credential
              * *   **atlassian_token**: Atlassian Token
              * *   **rdp**: RDP
              * *   **mailgun_key**: Mailgun Webhook Signing Key
-             * *   **mailchimp\_api_key**: Mailchimp API Key
+             * *   **mailchimp_api_key**: Mailchimp API Key
              * *   **netrc_cfg**: .netrc config
              * *   **openvpn_cfg**: OpenVPN Config
-             * *   **github\_refresh_token**: Github Refresh Token
+             * *   **github_refresh_token**: Github Refresh Token
              * *   **salesforce**: Salesforce Credential
              * *   **sendinblue**: Sendinblue Token
-             * *   **pkcs\_private_key**: PKCS Private Key
+             * *   **pkcs_private_key**: PKCS Private Key
              * *   **rubyonrails_passwd**: Ruby on Rails Passwd
              * *   **filezilla_ftp**: FileZilla FTP Config
              * *   **databricks_token**: Databricks Token
-             * *   **gitLab\_personal_token**: GitLab Personal Token
-             * *   **rails\_master_key**: Rails Master Key
+             * *   **gitLab_personal_token**: GitLab Personal Token
+             * *   **rails_master_key**: Rails Master Key
              * *   **sqlite**: SQLite3/SQLite Database
              * *   **firefox_logins**: Firefox Login Config
-             * *   **mailgun\_private_token**: Mailgun Private Token
+             * *   **mailgun_private_token**: Mailgun Private Token
              * *   **joomla_cfg**: Joomla Config
-             * *   **hashicorp\_terraform_token**: Hashicorp Terraform Token
+             * *   **hashicorp_terraform_token**: Hashicorp Terraform Token
              * *   **jetbrains_ides**: Jetbrains IDEs Config
-             * *   **heroku\_api_key**: Heroku API key
+             * *   **heroku_api_key**: Heroku API key
              * *   **messagebird_token**: MessageBird Token
-             * *   **github\_app_token**: Github App Token
-             * *   **hashicorp\_vault_token**: Hashicorp Vault Token
-             * *   **pgp\_private_key**: PGP Private Key
+             * *   **github_app_token**: Github App Token
+             * *   **hashicorp_vault_token**: Hashicorp Vault Token
+             * *   **pgp_private_key**: PGP Private Key
              * *   **sshpasswd**: SSH password
              * *   **huaweicloud_ak**: Huaei Cloud Access Key
              * *   **aws_s3cmd**: AWS S3cmd Config
              * *   **php_config**: php Config
-             * *   **common\_private_key**: Common Private Key Type
+             * *   **common_private_key**: Common Private Key Type
              * *   **microsoft_mdf**: Microsoft MDF
              * *   **mediawiki_cfg**: MediaWiki Config
              * *   **jenkins_cred**: Jenkins Credential
              * *   **rubygems_cred**: Rubygems Credential
              * *   **clojars_token**: Clojars Token
-             * *   **phoenix\_web_passwd**: Phoenix Web Credential
-             * *   **puttygen\_private_key**: PuTTYgen Private Key
-             * *   **google\_oauth_token**: Google Oauth Token
+             * *   **phoenix_web_passwd**: Phoenix Web Credential
+             * *   **puttygen_private_key**: PuTTYgen Private Key
+             * *   **google_oauth_token**: Google Oauth Token
              * *   **rubyonrails_cfg**: Ruby On Rails Database Config
-             * *   **lob\_api_key**: Lob API Key
+             * *   **lob_api_key**: Lob API Key
              * *   **pkcs_cred**: PKCS#12
-             * *   **otr\_private_key**: OTR Private Key
-             * *   **contentful\_delivery_token**: Contentful Delivery Token
-             * *   **digital\_ocean_tugboat**: Digital Ocean Tugboat Config
-             * *   **dsa\_private_key**: DSA Private Key
-             * *   **rails\_app_token**: Rails App Token
+             * *   **otr_private_key**: OTR Private Key
+             * *   **contentful_delivery_token**: Contentful Delivery Token
+             * *   **digital_ocean_tugboat**: Digital Ocean Tugboat Config
+             * *   **dsa_private_key**: DSA Private Key
+             * *   **rails_app_token**: Rails App Token
              * *   **git_cred**: Git User Credential
-             * *   **newrelic\_api_key**: New Relic User API Key
+             * *   **newrelic_api_key**: New Relic User API Key
              * *   **github_hub**: Github Token
              * *   **rubygem**: Rubygem Token
+             */
+            public Builder firstScanTime(Long firstScanTime) {
+                this.firstScanTime = firstScanTime;
+                return this;
+            }
+
+            /**
+             * The language of the content within the request and response. Default value: **zh**. Valid values:
+             * <p>
+             * 
+             * *   **zh**: Chinese
+             * *   **en**: English
+             */
+            public Builder lastScanTime(Long lastScanTime) {
+                this.lastScanTime = lastScanTime;
+                return this;
+            }
+
+            /**
+             * The type of the asset that you want to scan. Valid values:
+             * <p>
+             * 
+             * *   **image**
+             * *   **container**
+             */
+            public Builder layerDigest(String layerDigest) {
+                this.layerDigest = layerDigest;
+                return this;
+            }
+
+            /**
+             * The number of entries returned on the current page.
+             */
+            public Builder promt(String promt) {
+                this.promt = promt;
+                return this;
+            }
+
+            /**
+             * The suggestion.
+             */
+            public Builder riskLevel(String riskLevel) {
+                this.riskLevel = riskLevel;
+                return this;
+            }
+
+            /**
+             * The pagination information.
              */
             public Builder sensitiveFileKey(String sensitiveFileKey) {
                 this.sensitiveFileKey = sensitiveFileKey;

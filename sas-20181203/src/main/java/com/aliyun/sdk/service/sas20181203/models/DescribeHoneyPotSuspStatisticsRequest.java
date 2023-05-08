@@ -99,7 +99,7 @@ public class DescribeHoneyPotSuspStatisticsRequest extends Request {
         } 
 
         /**
-         * The source of the request. Set the value to **honeypot**.
+         * From.
          */
         public Builder from(String from) {
             this.putQueryParameter("From", from);
@@ -117,7 +117,7 @@ public class DescribeHoneyPotSuspStatisticsRequest extends Request {
         }
 
         /**
-         * The time range of the data to query. Unit: days.
+         * StatisticsDays.
          */
         public Builder statisticsDays(Integer statisticsDays) {
             this.putQueryParameter("StatisticsDays", statisticsDays);
@@ -126,11 +126,7 @@ public class DescribeHoneyPotSuspStatisticsRequest extends Request {
         }
 
         /**
-         * The type of the asset to query. Valid values:
-         * <p>
-         * 
-         * *   **vpcInstanceId**: VPC
-         * *   **uuid**: server
+         * StatisticsKeyType.
          */
         public Builder statisticsKeyType(String statisticsKeyType) {
             this.putQueryParameter("StatisticsKeyType", statisticsKeyType);

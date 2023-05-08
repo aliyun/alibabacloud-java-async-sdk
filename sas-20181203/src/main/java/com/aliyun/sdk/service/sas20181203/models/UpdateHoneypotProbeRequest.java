@@ -125,7 +125,7 @@ public class UpdateHoneypotProbeRequest extends Request {
         } 
 
         /**
-         * Specifies whether address resolution protocol (ARP) is enabled for the check type.
+         * 检查类型 arp
          */
         public Builder arp(Boolean arp) {
             this.putQueryParameter("Arp", arp);
@@ -134,7 +134,7 @@ public class UpdateHoneypotProbeRequest extends Request {
         }
 
         /**
-         * The name of the probe.
+         * 探针名称
          */
         public Builder displayName(String displayName) {
             this.putQueryParameter("DisplayName", displayName);
@@ -152,7 +152,7 @@ public class UpdateHoneypotProbeRequest extends Request {
         }
 
         /**
-         * Specifies whether ping is enabled for the check type.
+         * 检测类型 ping
          */
         public Builder ping(Boolean ping) {
             this.putQueryParameter("Ping", ping);
@@ -161,10 +161,7 @@ public class UpdateHoneypotProbeRequest extends Request {
         }
 
         /**
-         * The ID of the probe.
-         * <p>
-         * 
-         * > You can call the [ListHoneypotProbe](~~ListHoneypotProbe~~) operation to query the IDs of probes.
+         * 探针id
          */
         public Builder probeId(String probeId) {
             this.putQueryParameter("ProbeId", probeId);
@@ -173,7 +170,7 @@ public class UpdateHoneypotProbeRequest extends Request {
         }
 
         /**
-         * The IP addresses that are monitored.
+         * ServiceIpList.
          */
         public Builder serviceIpList(java.util.List < String > serviceIpList) {
             this.putQueryParameter("ServiceIpList", serviceIpList);

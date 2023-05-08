@@ -263,7 +263,7 @@ public class ListCheckResultRequest extends Request {
         }
 
         /**
-         * The asset types of cloud services. Valid values:
+         * The asset type of the cloud service. Valid values:
          * <p>
          * 
          * *   **ECS**: Elastic Compute Service (ECS)
@@ -397,7 +397,7 @@ public class ListCheckResultRequest extends Request {
         }
 
         /**
-         * The cloud service providers. Valid values:
+         * The cloud service provider. Valid values:
          * <p>
          * 
          * *   **ALIYUN**: Alibaba Cloud

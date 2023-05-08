@@ -98,7 +98,7 @@ public class DescribeDomainDetailResponseBody extends TeaModel {
         private Integer vulCount; 
 
         /**
-         * The total number of alerts in your website assets.
+         * 1.2.XX.XX
          */
         public Builder alarmCount(Integer alarmCount) {
             this.alarmCount = alarmCount;
@@ -106,7 +106,7 @@ public class DescribeDomainDetailResponseBody extends TeaModel {
         }
 
         /**
-         * The domain name.
+         * The total number of alerts in your website assets.
          */
         public Builder domain(String domain) {
             this.domain = domain;
@@ -114,7 +114,7 @@ public class DescribeDomainDetailResponseBody extends TeaModel {
         }
 
         /**
-         * An array that consists of the details about the domain asset.
+         * DescribeDomainDetail
          */
         public Builder domainDetailItems(java.util.List < DomainDetailItems> domainDetailItems) {
             this.domainDetailItems = domainDetailItems;
@@ -122,7 +122,7 @@ public class DescribeDomainDetailResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request, which is used to locate and troubleshoot issues.
+         * The instance UUID of the domain asset.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -130,7 +130,7 @@ public class DescribeDomainDetailResponseBody extends TeaModel {
         }
 
         /**
-         * The name of the root domain that corresponds to the domain.
+         * Queries the details of domain assets within your Alibaba Cloud account.
          */
         public Builder rootDomain(String rootDomain) {
             this.rootDomain = rootDomain;
@@ -138,7 +138,7 @@ public class DescribeDomainDetailResponseBody extends TeaModel {
         }
 
         /**
-         * The total number of vulnerabilities in your website assets.
+         * The ID of the request, which is used to locate and troubleshoot issues.
          */
         public Builder vulCount(Integer vulCount) {
             this.vulCount = vulCount;
@@ -238,14 +238,7 @@ public class DescribeDomainDetailResponseBody extends TeaModel {
             private String uuid; 
 
             /**
-             * The type of the domain asset. Valid values:
-             * <p>
-             * 
-             * *   **0**: an Elastic Compute Service (ECS) instance
-             * *   **1**: a Server Load Balancer (SLB) instance
-             * *   **2**: a Network Address Translation (NAT) gateway
-             * *   **3**: an ApsaraDB RDS instance
-             * *   **4**: an ApsaraDB for MongoDB instance
+             * AssetType.
              */
             public Builder assetType(String assetType) {
                 this.assetType = assetType;
@@ -253,7 +246,7 @@ public class DescribeDomainDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The instance ID of the asset.
+             * InstanceId.
              */
             public Builder instanceId(String instanceId) {
                 this.instanceId = instanceId;
@@ -261,7 +254,7 @@ public class DescribeDomainDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the asset.
+             * InstanceName.
              */
             public Builder instanceName(String instanceName) {
                 this.instanceName = instanceName;
@@ -269,7 +262,7 @@ public class DescribeDomainDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The public IP address of the asset.
+             * InternetIp.
              */
             public Builder internetIp(String internetIp) {
                 this.internetIp = internetIp;
@@ -277,7 +270,7 @@ public class DescribeDomainDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The private IP address of the asset.
+             * IntranetIp.
              */
             public Builder intranetIp(String intranetIp) {
                 this.intranetIp = intranetIp;
@@ -285,7 +278,7 @@ public class DescribeDomainDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The instance UUID of the domain asset.
+             * Uuid.
              */
             public Builder uuid(String uuid) {
                 this.uuid = uuid;

@@ -62,7 +62,7 @@ public class DescribeImageBaselineCheckResultResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * An array that consists of the check results of image baselines.
+         * BaselineResult.
          */
         public Builder baselineResult(java.util.List < BaselineResult> baselineResult) {
             this.baselineResult = baselineResult;
@@ -70,7 +70,7 @@ public class DescribeImageBaselineCheckResultResponseBody extends TeaModel {
         }
 
         /**
-         * The pagination information.
+         * PageInfo.
          */
         public Builder pageInfo(PageInfo pageInfo) {
             this.pageInfo = pageInfo;
@@ -78,7 +78,7 @@ public class DescribeImageBaselineCheckResultResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * RequestId.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -238,7 +238,7 @@ public class DescribeImageBaselineCheckResultResponseBody extends TeaModel {
             private Integer status; 
 
             /**
-             * The key of the type for the image baseline.
+             * BaselineClassAlias.
              */
             public Builder baselineClassAlias(String baselineClassAlias) {
                 this.baselineClassAlias = baselineClassAlias;
@@ -246,7 +246,7 @@ public class DescribeImageBaselineCheckResultResponseBody extends TeaModel {
             }
 
             /**
-             * The number of check items.
+             * BaselineItemCount.
              */
             public Builder baselineItemCount(Integer baselineItemCount) {
                 this.baselineItemCount = baselineItemCount;
@@ -254,7 +254,7 @@ public class DescribeImageBaselineCheckResultResponseBody extends TeaModel {
             }
 
             /**
-             * The alias of the image baseline.
+             * BaselineNameAlias.
              */
             public Builder baselineNameAlias(String baselineNameAlias) {
                 this.baselineNameAlias = baselineNameAlias;
@@ -262,7 +262,7 @@ public class DescribeImageBaselineCheckResultResponseBody extends TeaModel {
             }
 
             /**
-             * The key of the image baseline.
+             * BaselineNameKey.
              */
             public Builder baselineNameKey(String baselineNameKey) {
                 this.baselineNameKey = baselineNameKey;
@@ -270,12 +270,7 @@ public class DescribeImageBaselineCheckResultResponseBody extends TeaModel {
             }
 
             /**
-             * The severity of the image baseline. Valid values:
-             * <p>
-             * 
-             * *   **high**
-             * *   **medium**
-             * *   **low**
+             * BaselineNameLevel.
              */
             public Builder baselineNameLevel(String baselineNameLevel) {
                 this.baselineNameLevel = baselineNameLevel;
@@ -283,7 +278,7 @@ public class DescribeImageBaselineCheckResultResponseBody extends TeaModel {
             }
 
             /**
-             * The timestamp when the first scan was performed. Unit: milliseconds.
+             * FirstScanTime.
              */
             public Builder firstScanTime(Long firstScanTime) {
                 this.firstScanTime = firstScanTime;
@@ -291,7 +286,7 @@ public class DescribeImageBaselineCheckResultResponseBody extends TeaModel {
             }
 
             /**
-             * The number of high-risk images that are affected.
+             * HighRiskItemCount.
              */
             public Builder highRiskItemCount(Integer highRiskItemCount) {
                 this.highRiskItemCount = highRiskItemCount;
@@ -299,7 +294,7 @@ public class DescribeImageBaselineCheckResultResponseBody extends TeaModel {
             }
 
             /**
-             * The timestamp when the last scan was performed. Unit: milliseconds.
+             * LastScanTime.
              */
             public Builder lastScanTime(Long lastScanTime) {
                 this.lastScanTime = lastScanTime;
@@ -307,7 +302,7 @@ public class DescribeImageBaselineCheckResultResponseBody extends TeaModel {
             }
 
             /**
-             * The number of low-risk images that are affected.
+             * LowRiskItemCount.
              */
             public Builder lowRiskItemCount(Integer lowRiskItemCount) {
                 this.lowRiskItemCount = lowRiskItemCount;
@@ -315,7 +310,7 @@ public class DescribeImageBaselineCheckResultResponseBody extends TeaModel {
             }
 
             /**
-             * The number of medium-risk images that are affected.
+             * MiddleRiskItemCount.
              */
             public Builder middleRiskItemCount(Integer middleRiskItemCount) {
                 this.middleRiskItemCount = middleRiskItemCount;
@@ -323,11 +318,7 @@ public class DescribeImageBaselineCheckResultResponseBody extends TeaModel {
             }
 
             /**
-             * The status of the baseline risks. Valid values:
-             * <p>
-             * 
-             * *   **0**: unfixed
-             * *   **1**: fixed
+             * Status.
              */
             public Builder status(Integer status) {
                 this.status = status;
@@ -404,7 +395,7 @@ public class DescribeImageBaselineCheckResultResponseBody extends TeaModel {
             private Integer totalCount; 
 
             /**
-             * The number of entries returned on the current page.
+             * Count.
              */
             public Builder count(Integer count) {
                 this.count = count;
@@ -412,7 +403,7 @@ public class DescribeImageBaselineCheckResultResponseBody extends TeaModel {
             }
 
             /**
-             * The page number of the returned page.
+             * CurrentPage.
              */
             public Builder currentPage(Integer currentPage) {
                 this.currentPage = currentPage;
@@ -420,7 +411,7 @@ public class DescribeImageBaselineCheckResultResponseBody extends TeaModel {
             }
 
             /**
-             * The number of entries returned per page.
+             * PageSize.
              */
             public Builder pageSize(Integer pageSize) {
                 this.pageSize = pageSize;
@@ -428,7 +419,7 @@ public class DescribeImageBaselineCheckResultResponseBody extends TeaModel {
             }
 
             /**
-             * The total number of entries returned.
+             * TotalCount.
              */
             public Builder totalCount(Integer totalCount) {
                 this.totalCount = totalCount;

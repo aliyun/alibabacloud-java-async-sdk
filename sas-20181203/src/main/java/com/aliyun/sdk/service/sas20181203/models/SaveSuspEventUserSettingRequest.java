@@ -68,7 +68,7 @@ public class SaveSuspEventUserSettingRequest extends Request {
         } 
 
         /**
-         * From.
+         * The data source of the exception. Set the value to sas.
          */
         public Builder from(String from) {
             this.putQueryParameter("From", from);
@@ -77,7 +77,12 @@ public class SaveSuspEventUserSettingRequest extends Request {
         }
 
         /**
-         * LevelsOn.
+         * The severities of alert notifications. Valid values:
+         * <p>
+         * 
+         * *   **remind**
+         * *   **suspicious**
+         * *   **serious**
          */
         public Builder levelsOn(String levelsOn) {
             this.putQueryParameter("LevelsOn", levelsOn);

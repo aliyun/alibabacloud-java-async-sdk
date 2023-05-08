@@ -55,9 +55,7 @@ public class DescribeBackupClientsRequest extends Request {
         } 
 
         /**
-         * The region in which the anti-ransomware feature is supported.
-         * <p>
-         * > You can call the [DescribeSupportRegion](~~DescribeSupportRegion~~) operation to query the regions in which the anti-ransomware feature is supported.
+         * The ID of the request, which is used to locate and troubleshoot issues.
          */
         public Builder supportRegionId(String supportRegionId) {
             this.putQueryParameter("SupportRegionId", supportRegionId);

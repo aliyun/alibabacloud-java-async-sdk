@@ -50,7 +50,7 @@ public class VerifyCheckInstanceResultResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The data returned.
+         * Data.
          */
         public Builder data(Data data) {
             this.data = data;
@@ -58,7 +58,7 @@ public class VerifyCheckInstanceResultResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request, which is used to locate and troubleshoot issues.
+         * RequestId.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -110,7 +110,7 @@ public class VerifyCheckInstanceResultResponseBody extends TeaModel {
             private String operateCode; 
 
             /**
-             * An array consisting of instances that failed the check.
+             * FailInstances.
              */
             public Builder failInstances(java.util.List < String > failInstances) {
                 this.failInstances = failInstances;
@@ -118,11 +118,7 @@ public class VerifyCheckInstanceResultResponseBody extends TeaModel {
             }
 
             /**
-             * The operation code of the task that checks the configurations of cloud services. Valid values:
-             * <p>
-             * 
-             * *   **Throttling**
-             * *   **ActionTrialUnauthorized**
+             * OperateCode.
              */
             public Builder operateCode(String operateCode) {
                 this.operateCode = operateCode;

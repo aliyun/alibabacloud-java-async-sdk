@@ -82,7 +82,7 @@ public class DescribeSuspEventUserSettingRequest extends Request {
         } 
 
         /**
-         * From.
+         * The ID of the request source. Set the value to **sas**.
          */
         public Builder from(String from) {
             this.putQueryParameter("From", from);
@@ -91,7 +91,7 @@ public class DescribeSuspEventUserSettingRequest extends Request {
         }
 
         /**
-         * Id.
+         * The ID. You do not need to specify this parameter.
          */
         public Builder id(Integer id) {
             this.putQueryParameter("Id", id);
@@ -100,7 +100,7 @@ public class DescribeSuspEventUserSettingRequest extends Request {
         }
 
         /**
-         * SourceIp.
+         * The IP address of the request. You do not need to specify this parameter.
          */
         public Builder sourceIp(String sourceIp) {
             this.putQueryParameter("SourceIp", sourceIp);

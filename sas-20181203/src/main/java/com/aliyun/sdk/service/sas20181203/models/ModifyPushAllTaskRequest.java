@@ -84,7 +84,7 @@ public class ModifyPushAllTaskRequest extends Request {
         } 
 
         /**
-         * SourceIp.
+         * The source IP address of the request.
          */
         public Builder sourceIp(String sourceIp) {
             this.putQueryParameter("SourceIp", sourceIp);
@@ -93,7 +93,7 @@ public class ModifyPushAllTaskRequest extends Request {
         }
 
         /**
-         * Tasks.
+         * The UUIDs of servers on which you want to perform security check tasks. Separate multiple UUIDs with commas (,).
          */
         public Builder tasks(String tasks) {
             this.putQueryParameter("Tasks", tasks);
@@ -102,7 +102,7 @@ public class ModifyPushAllTaskRequest extends Request {
         }
 
         /**
-         * Uuids.
+         * The message that describes the security check failure.
          */
         public Builder uuids(String uuids) {
             this.putQueryParameter("Uuids", uuids);

@@ -113,18 +113,7 @@ public class FixCheckWarningsRequest extends Request {
         } 
 
         /**
-         * The parameters for the baseline risk item that you want to fix.
-         * <p>
-         * 
-         * *   **checkId**: the ID of the check item that corresponds to the baseline risk item.
-         * 
-         * *   **rules**: an array that consists of the rules applied to fixes.
-         * 
-         *     *   **value**: specifies whether a fix method is selected. Valid values: **0** and **1**. The value 0 indicates that no fix method is selected and the value 1 indicates that a fix method is selected.
-         *     *   **ruleId**: the ID of the fix method.
-         *     *   **paramList**: an array that consists of the details about the fix method.\
-         *         • **paramName**: the name of the fix method.\
-         *         • **value**: the value of the fix method.
+         * 165.225.XX.XX
          */
         public Builder checkParams(String checkParams) {
             this.putQueryParameter("CheckParams", checkParams);
@@ -133,11 +122,7 @@ public class FixCheckWarningsRequest extends Request {
         }
 
         /**
-         * The language of the content within the request and response. Valid values:
-         * <p>
-         * 
-         * *   **zh**: Chinese
-         * *   **en**: English
+         * The ID of the request.
          */
         public Builder lang(String lang) {
             this.putQueryParameter("Lang", lang);
@@ -146,10 +131,7 @@ public class FixCheckWarningsRequest extends Request {
         }
 
         /**
-         * The ID of the baseline risk item.
-         * <p>
-         * 
-         * >  To query specified baseline risk items and the check items of a specified server, you must provide the IDs of the baseline risk items. You can call the [DescribeCheckWarningSummary](~~DescribeCheckWarningSummary~~) operation to query the IDs.
+         * The source IP address of the request.
          */
         public Builder riskId(Long riskId) {
             this.putQueryParameter("RiskId", riskId);
@@ -158,7 +140,7 @@ public class FixCheckWarningsRequest extends Request {
         }
 
         /**
-         * The source IP address of the request.
+         * The UUID of the asset for which you want to fix the baseline risk item. You can call the [DescribeWarningMachines](~~DescribeWarningMachines~~) operation to query the UUIDs of assets.
          */
         public Builder sourceIp(String sourceIp) {
             this.putQueryParameter("SourceIp", sourceIp);
@@ -167,7 +149,7 @@ public class FixCheckWarningsRequest extends Request {
         }
 
         /**
-         * The UUID of the asset for which you want to fix the baseline risk item. You can call the [DescribeWarningMachines](~~DescribeWarningMachines~~) operation to query the UUIDs of assets.
+         * Fixes a baseline risk item.
          */
         public Builder uuids(String uuids) {
             this.putQueryParameter("Uuids", uuids);

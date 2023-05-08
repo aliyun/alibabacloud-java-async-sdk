@@ -173,7 +173,7 @@ public class DescribeAgentInstallStatusResponseBody extends TeaModel {
             }
 
             /**
-             * The installation result. Valid values:
+             * The installation result. Valid value:
              * <p>
              * 
              * *   **-1**: not installed

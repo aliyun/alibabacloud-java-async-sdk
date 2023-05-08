@@ -68,11 +68,7 @@ public class DescribeSummaryInfoRequest extends Request {
         } 
 
         /**
-         * The language of the content within the request and response. Valid values:
-         * <p>
-         * 
-         * *   **zh**: Chinese
-         * *   **en**: English
+         * 192.168.XX.XX
          */
         public Builder lang(String lang) {
             this.putQueryParameter("Lang", lang);

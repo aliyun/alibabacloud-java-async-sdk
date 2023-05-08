@@ -50,7 +50,7 @@ public class DescribeCloudProductFieldStatisticsResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The statistics of cloud services.
+         * GroupedFields.
          */
         public Builder groupedFields(GroupedFields groupedFields) {
             this.groupedFields = groupedFields;
@@ -58,7 +58,7 @@ public class DescribeCloudProductFieldStatisticsResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request, which is used to locate and troubleshoot issues.
+         * RequestId.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -122,14 +122,7 @@ public class DescribeCloudProductFieldStatisticsResponseBody extends TeaModel {
             private Integer riskInstanceCount; 
 
             /**
-             * The statistics of the numbers of assets of different types. **MachineType** indicates the type of the assets. **Count** indicates the number of assets that belong to the type.
-             * <p>
-             * Valid values of **MachineType**:
-             * 
-             * *   **1**: a Server Load Balancer (SLB) instance
-             * *   **2**: a Network Address Translation (NAT) gateway
-             * *   **3**: an ApsaraDB RDS instance
-             * *   **4**: an ApsaraDB for MongoDB instance
+             * CategoryCount.
              */
             public Builder categoryCount(String categoryCount) {
                 this.categoryCount = categoryCount;
@@ -137,7 +130,7 @@ public class DescribeCloudProductFieldStatisticsResponseBody extends TeaModel {
             }
 
             /**
-             * The total number of cloud services that are protected by Security Center.
+             * InstanceCount.
              */
             public Builder instanceCount(Integer instanceCount) {
                 this.instanceCount = instanceCount;
@@ -145,7 +138,7 @@ public class DescribeCloudProductFieldStatisticsResponseBody extends TeaModel {
             }
 
             /**
-             * The number of cloud services that are at risk.
+             * RiskInstanceCount.
              */
             public Builder riskInstanceCount(Integer riskInstanceCount) {
                 this.riskInstanceCount = riskInstanceCount;

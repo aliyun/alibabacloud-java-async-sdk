@@ -62,7 +62,7 @@ public class FindContainerNetworkConnectResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The information about the network connections.
+         * Connects.
          */
         public Builder connects(java.util.List < Connects> connects) {
             this.connects = connects;
@@ -70,7 +70,7 @@ public class FindContainerNetworkConnectResponseBody extends TeaModel {
         }
 
         /**
-         * The pagination information.
+         * PageInfo.
          */
         public Builder pageInfo(PageInfo pageInfo) {
             this.pageInfo = pageInfo;
@@ -78,7 +78,7 @@ public class FindContainerNetworkConnectResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request, which is used to locate and troubleshoot issues.
+         * Id of the request
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -118,7 +118,7 @@ public class FindContainerNetworkConnectResponseBody extends TeaModel {
             private String containerId; 
 
             /**
-             * The ID of the destination container.
+             * ContainerId.
              */
             public Builder containerId(String containerId) {
                 this.containerId = containerId;
@@ -159,7 +159,7 @@ public class FindContainerNetworkConnectResponseBody extends TeaModel {
             private String containerId; 
 
             /**
-             * The ID of the source container.
+             * ContainerId.
              */
             public Builder containerId(String containerId) {
                 this.containerId = containerId;
@@ -296,10 +296,7 @@ public class FindContainerNetworkConnectResponseBody extends TeaModel {
             private String srcPort; 
 
             /**
-             * The information about the destination container.
-             * <p>
-             * 
-             * >  This parameter is not supported.
+             * DstContainer.
              */
             public Builder dstContainer(DstContainer dstContainer) {
                 this.dstContainer = dstContainer;
@@ -307,7 +304,7 @@ public class FindContainerNetworkConnectResponseBody extends TeaModel {
             }
 
             /**
-             * The destination IP address.
+             * DstIp.
              */
             public Builder dstIp(String dstIp) {
                 this.dstIp = dstIp;
@@ -315,7 +312,7 @@ public class FindContainerNetworkConnectResponseBody extends TeaModel {
             }
 
             /**
-             * The destination port.
+             * DstPort.
              */
             public Builder dstPort(String dstPort) {
                 this.dstPort = dstPort;
@@ -323,7 +320,7 @@ public class FindContainerNetworkConnectResponseBody extends TeaModel {
             }
 
             /**
-             * The timestamp when the connection was first established.
+             * FirstTime.
              */
             public Builder firstTime(Long firstTime) {
                 this.firstTime = firstTime;
@@ -331,7 +328,7 @@ public class FindContainerNetworkConnectResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the network connection.
+             * Id.
              */
             public Builder id(Long id) {
                 this.id = id;
@@ -339,7 +336,7 @@ public class FindContainerNetworkConnectResponseBody extends TeaModel {
             }
 
             /**
-             * The timestamp when the connection was last established.
+             * LastTime.
              */
             public Builder lastTime(Long lastTime) {
                 this.lastTime = lastTime;
@@ -347,10 +344,7 @@ public class FindContainerNetworkConnectResponseBody extends TeaModel {
             }
 
             /**
-             * The information about the source container.
-             * <p>
-             * 
-             * >  This parameter is not supported.
+             * SrcContainer.
              */
             public Builder srcContainer(SrcContainer srcContainer) {
                 this.srcContainer = srcContainer;
@@ -358,7 +352,7 @@ public class FindContainerNetworkConnectResponseBody extends TeaModel {
             }
 
             /**
-             * The source IP address.
+             * SrcIp.
              */
             public Builder srcIp(String srcIp) {
                 this.srcIp = srcIp;
@@ -366,7 +360,7 @@ public class FindContainerNetworkConnectResponseBody extends TeaModel {
             }
 
             /**
-             * The source port.
+             * SrcPort.
              */
             public Builder srcPort(String srcPort) {
                 this.srcPort = srcPort;
@@ -443,7 +437,7 @@ public class FindContainerNetworkConnectResponseBody extends TeaModel {
             private Long totalCount; 
 
             /**
-             * The number of entries returned on the current page.
+             * Count.
              */
             public Builder count(Long count) {
                 this.count = count;
@@ -451,7 +445,7 @@ public class FindContainerNetworkConnectResponseBody extends TeaModel {
             }
 
             /**
-             * The page number of the returned page.
+             * CurrentPage.
              */
             public Builder currentPage(Long currentPage) {
                 this.currentPage = currentPage;
@@ -459,7 +453,7 @@ public class FindContainerNetworkConnectResponseBody extends TeaModel {
             }
 
             /**
-             * The number of entries returned per page. Default value: **20**.
+             * PageSize.
              */
             public Builder pageSize(Long pageSize) {
                 this.pageSize = pageSize;
@@ -467,7 +461,7 @@ public class FindContainerNetworkConnectResponseBody extends TeaModel {
             }
 
             /**
-             * The total number of entries returned.
+             * TotalCount.
              */
             public Builder totalCount(Long totalCount) {
                 this.totalCount = totalCount;

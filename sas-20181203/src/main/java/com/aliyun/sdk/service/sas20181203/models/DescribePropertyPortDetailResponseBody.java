@@ -62,7 +62,7 @@ public class DescribePropertyPortDetailResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The pagination information.
+         * 192.168.XX.XX
          */
         public Builder pageInfo(PageInfo pageInfo) {
             this.pageInfo = pageInfo;
@@ -70,7 +70,7 @@ public class DescribePropertyPortDetailResponseBody extends TeaModel {
         }
 
         /**
-         * An array that consists of the fingerprints of the ports.
+         * Specifies whether fuzzy search by port number is supported. If you want to use fuzzy search, set the parameter to **1**. If you set the parameter to a different value or leave the parameter empty, fuzzy search is not supported.
          */
         public Builder propertys(java.util.List < Propertys> propertys) {
             this.propertys = propertys;
@@ -78,7 +78,7 @@ public class DescribePropertyPortDetailResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request, which is used to locate and troubleshoot issues.
+         * 0.0.XX.XX
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -154,7 +154,7 @@ public class DescribePropertyPortDetailResponseBody extends TeaModel {
             private Integer totalCount; 
 
             /**
-             * The number of entries returned on the current page.
+             * The UUID of the server.
              */
             public Builder count(Integer count) {
                 this.count = count;
@@ -162,7 +162,7 @@ public class DescribePropertyPortDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The page number of the returned page.
+             * An array that consists of the fingerprints of the ports.
              */
             public Builder currentPage(Integer currentPage) {
                 this.currentPage = currentPage;
@@ -170,7 +170,7 @@ public class DescribePropertyPortDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The number of entries returned per page. Default value: **10**.
+             * The ID of the server process that listens on the port.
              */
             public Builder pageSize(Integer pageSize) {
                 this.pageSize = pageSize;
@@ -178,7 +178,7 @@ public class DescribePropertyPortDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The total number of entries returned.
+             * The name of the server process.
              */
             public Builder totalCount(Integer totalCount) {
                 this.totalCount = totalCount;
@@ -351,7 +351,7 @@ public class DescribePropertyPortDetailResponseBody extends TeaModel {
             private String uuid; 
 
             /**
-             * The IP address that is bound to the listening port.
+             * The pagination information.
              */
             public Builder bindIp(String bindIp) {
                 this.bindIp = bindIp;
@@ -359,7 +359,7 @@ public class DescribePropertyPortDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The timestamp of the last fingerprint collection. Unit: milliseconds.
+             * Queries the fingerprints of ports on a specified server.
              */
             public Builder createTimestamp(Long createTimestamp) {
                 this.createTimestamp = createTimestamp;
@@ -367,7 +367,7 @@ public class DescribePropertyPortDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the server.
+             * The IP address of the network interface controller (NIC) that is bound to the listening port.
              */
             public Builder instanceId(String instanceId) {
                 this.instanceId = instanceId;
@@ -375,7 +375,7 @@ public class DescribePropertyPortDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the server.
+             * The UUID of the server.
              */
             public Builder instanceName(String instanceName) {
                 this.instanceName = instanceName;
@@ -383,7 +383,7 @@ public class DescribePropertyPortDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The public IP address of the server.
+             * The number of entries returned on the current page.
              */
             public Builder internetIp(String internetIp) {
                 this.internetIp = internetIp;
@@ -391,7 +391,7 @@ public class DescribePropertyPortDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The private IP address of the server.
+             * The number of the page to return. Default value: **1**.
              */
             public Builder intranetIp(String intranetIp) {
                 this.intranetIp = intranetIp;
@@ -399,7 +399,7 @@ public class DescribePropertyPortDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The IP address of the network interface controller (NIC) that is bound to the listening port.
+             * The ID of the server.
              */
             public Builder ip(String ip) {
                 this.ip = ip;
@@ -407,7 +407,7 @@ public class DescribePropertyPortDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the server process that listens on the port.
+             * 10
              */
             public Builder pid(String pid) {
                 this.pid = pid;
@@ -415,7 +415,7 @@ public class DescribePropertyPortDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The listening port.
+             * The name of the server.
              */
             public Builder port(String port) {
                 this.port = port;
@@ -423,7 +423,7 @@ public class DescribePropertyPortDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the server process.
+             * sshd
              */
             public Builder procName(String procName) {
                 this.procName = procName;
@@ -431,7 +431,7 @@ public class DescribePropertyPortDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The network protocol that is used by the listening port.
+             * The ID of the request, which is used to locate and troubleshoot issues.
              */
             public Builder proto(String proto) {
                 this.proto = proto;
@@ -439,7 +439,7 @@ public class DescribePropertyPortDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The UUID of the server.
+             * The number of entries returned per page. Default value: **10**.
              */
             public Builder uuid(String uuid) {
                 this.uuid = uuid;

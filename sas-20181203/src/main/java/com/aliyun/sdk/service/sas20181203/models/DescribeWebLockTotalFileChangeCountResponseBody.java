@@ -50,7 +50,7 @@ public class DescribeWebLockTotalFileChangeCountResponseBody extends TeaModel {
         private Long totalCount; 
 
         /**
-         * The ID of the request, which is used to locate and troubleshoot issues.
+         * RequestId.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -58,7 +58,7 @@ public class DescribeWebLockTotalFileChangeCountResponseBody extends TeaModel {
         }
 
         /**
-         * The number of times that the files protected by web tamper proofing are changed.
+         * TotalCount.
          */
         public Builder totalCount(Long totalCount) {
             this.totalCount = totalCount;

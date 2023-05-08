@@ -54,13 +54,7 @@ public class DescribePropertyUsageNewestRequest extends Request {
         } 
 
         /**
-         * The type of the accounts.
-         * <p>
-         * 
-         * Valid values:
-         * 
-         * *   user
-         * *   system
+         * Type.
          */
         public Builder type(String type) {
             this.putQueryParameter("Type", type);

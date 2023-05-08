@@ -62,7 +62,7 @@ public class DescribePropertyTypeScaItemResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The pagination information.
+         * PageInfo.
          */
         public Builder pageInfo(PageInfo pageInfo) {
             this.pageInfo = pageInfo;
@@ -70,7 +70,7 @@ public class DescribePropertyTypeScaItemResponseBody extends TeaModel {
         }
 
         /**
-         * An array that consists of the middleware types.
+         * PropertyTypeItems.
          */
         public Builder propertyTypeItems(java.util.List < PropertyTypeItems> propertyTypeItems) {
             this.propertyTypeItems = propertyTypeItems;
@@ -78,7 +78,7 @@ public class DescribePropertyTypeScaItemResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request, which is used to locate and troubleshoot issues.
+         * RequestId.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -154,7 +154,7 @@ public class DescribePropertyTypeScaItemResponseBody extends TeaModel {
             private Integer totalCount; 
 
             /**
-             * The number of entries returned on the current page.
+             * Count.
              */
             public Builder count(Integer count) {
                 this.count = count;
@@ -162,7 +162,7 @@ public class DescribePropertyTypeScaItemResponseBody extends TeaModel {
             }
 
             /**
-             * The page number of the returned page.
+             * CurrentPage.
              */
             public Builder currentPage(Integer currentPage) {
                 this.currentPage = currentPage;
@@ -170,7 +170,7 @@ public class DescribePropertyTypeScaItemResponseBody extends TeaModel {
             }
 
             /**
-             * The number of entries returned per page.
+             * PageSize.
              */
             public Builder pageSize(Integer pageSize) {
                 this.pageSize = pageSize;
@@ -178,7 +178,7 @@ public class DescribePropertyTypeScaItemResponseBody extends TeaModel {
             }
 
             /**
-             * The total number of entries returned.
+             * TotalCount.
              */
             public Builder totalCount(Integer totalCount) {
                 this.totalCount = totalCount;
@@ -231,7 +231,7 @@ public class DescribePropertyTypeScaItemResponseBody extends TeaModel {
             private String type; 
 
             /**
-             * The name of the middleware type.
+             * Name.
              */
             public Builder name(String name) {
                 this.name = name;
@@ -239,16 +239,7 @@ public class DescribePropertyTypeScaItemResponseBody extends TeaModel {
             }
 
             /**
-             * The middleware type. Valid values:
-             * <p>
-             * 
-             * *   **system_service**: system service
-             * *   **software_library**: software library
-             * *   **docker_component**: container component
-             * *   **database**: database
-             * *   **web_container**: web container
-             * *   **jar**: JAR package
-             * *   **web_framework**: web framework
+             * Type.
              */
             public Builder type(String type) {
                 this.type = type;

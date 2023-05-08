@@ -127,16 +127,7 @@ public class ModifySecurityCheckScheduleConfigRequest extends Request {
         } 
 
         /**
-         * The days on which the automatic configuration check runs. You can specify multiple days. Separate multiple days with commas (,). Valid values:
-         * <p>
-         * 
-         * *   **1**: Monday
-         * *   **2**: Tuesday
-         * *   **3**: Wednesday
-         * *   **4**: Thursday
-         * *   **5**: Friday
-         * *   **6**: Saturday
-         * *   **7**: Sunday
+         * DaysOfWeek.
          */
         public Builder daysOfWeek(String daysOfWeek) {
             this.putQueryParameter("DaysOfWeek", daysOfWeek);
@@ -145,13 +136,7 @@ public class ModifySecurityCheckScheduleConfigRequest extends Request {
         }
 
         /**
-         * The time period during which the automatic configuration check ends. Valid values:
-         * <p>
-         * 
-         * *   **0**: 00:00 to 06:00
-         * *   **6**: 06:00 to 12:00
-         * *   **12**: 12:00 to 18:00
-         * *   **18**: 18:00 to 24:00
+         * EndTime.
          */
         public Builder endTime(Integer endTime) {
             this.putQueryParameter("EndTime", endTime);
@@ -160,11 +145,7 @@ public class ModifySecurityCheckScheduleConfigRequest extends Request {
         }
 
         /**
-         * The language of the content within the request and response. Default value: **zh**. Valid values:
-         * <p>
-         * 
-         * *   **zh**: Chinese
-         * *   **en**: English
+         * Lang.
          */
         public Builder lang(String lang) {
             this.putQueryParameter("Lang", lang);
@@ -182,7 +163,7 @@ public class ModifySecurityCheckScheduleConfigRequest extends Request {
         }
 
         /**
-         * The source IP address of the request.
+         * SourceIp.
          */
         public Builder sourceIp(String sourceIp) {
             this.putQueryParameter("SourceIp", sourceIp);
@@ -191,13 +172,7 @@ public class ModifySecurityCheckScheduleConfigRequest extends Request {
         }
 
         /**
-         * The time period during which the automatic configuration check starts. Valid values:
-         * <p>
-         * 
-         * *   **0**: 00:00 to 06:00
-         * *   **6**: 06:00 to 12:00
-         * *   **12**: 12:00 to 18:00
-         * *   **18**: 18:00 to 24:00
+         * StartTime.
          */
         public Builder startTime(Integer startTime) {
             this.putQueryParameter("StartTime", startTime);
