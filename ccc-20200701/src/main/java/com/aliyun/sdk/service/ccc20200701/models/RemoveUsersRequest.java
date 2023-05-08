@@ -13,6 +13,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class RemoveUsersRequest extends Request {
     @Query
+    @NameInMap("Force")
+    private Boolean force;
+
+    @Query
     @NameInMap("InstanceId")
     @Validation(required = true)
     private String instanceId;
@@ -24,6 +28,7 @@ public class RemoveUsersRequest extends Request {
 
     private RemoveUsersRequest(Builder builder) {
         super(builder);
+        this.force = builder.force;
         this.instanceId = builder.instanceId;
         this.userIdList = builder.userIdList;
     }
@@ -42,6 +47,13 @@ public class RemoveUsersRequest extends Request {
     }
 
     /**
+     * @return force
+     */
+    public Boolean getForce() {
+        return this.force;
+    }
+
+    /**
      * @return instanceId
      */
     public String getInstanceId() {
@@ -56,6 +68,7 @@ public class RemoveUsersRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<RemoveUsersRequest, Builder> {
+        private Boolean force; 
         private String instanceId; 
         private String userIdList; 
 
@@ -65,9 +78,19 @@ public class RemoveUsersRequest extends Request {
 
         private Builder(RemoveUsersRequest request) {
             super(request);
+            this.force = request.force;
             this.instanceId = request.instanceId;
             this.userIdList = request.userIdList;
         } 
+
+        /**
+         * Force.
+         */
+        public Builder force(Boolean force) {
+            this.putQueryParameter("Force", force);
+            this.force = force;
+            return this;
+        }
 
         /**
          * InstanceId.

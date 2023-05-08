@@ -7,11 +7,11 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
- * {@link BridgeRtcCallResponseBody} extends {@link TeaModel}
+ * {@link GetEarlyMediaRecordingResponseBody} extends {@link TeaModel}
  *
- * <p>BridgeRtcCallResponseBody</p>
+ * <p>GetEarlyMediaRecordingResponseBody</p>
  */
-public class BridgeRtcCallResponseBody extends TeaModel {
+public class GetEarlyMediaRecordingResponseBody extends TeaModel {
     @NameInMap("Code")
     private String code;
 
@@ -24,18 +24,14 @@ public class BridgeRtcCallResponseBody extends TeaModel {
     @NameInMap("Message")
     private String message;
 
-    @NameInMap("Params")
-    private java.util.List < String > params;
-
     @NameInMap("RequestId")
     private String requestId;
 
-    private BridgeRtcCallResponseBody(Builder builder) {
+    private GetEarlyMediaRecordingResponseBody(Builder builder) {
         this.code = builder.code;
         this.data = builder.data;
         this.httpStatusCode = builder.httpStatusCode;
         this.message = builder.message;
-        this.params = builder.params;
         this.requestId = builder.requestId;
     }
 
@@ -43,7 +39,7 @@ public class BridgeRtcCallResponseBody extends TeaModel {
         return new Builder();
     }
 
-    public static BridgeRtcCallResponseBody create() {
+    public static GetEarlyMediaRecordingResponseBody create() {
         return builder().build();
     }
 
@@ -76,13 +72,6 @@ public class BridgeRtcCallResponseBody extends TeaModel {
     }
 
     /**
-     * @return params
-     */
-    public java.util.List < String > getParams() {
-        return this.params;
-    }
-
-    /**
      * @return requestId
      */
     public String getRequestId() {
@@ -94,7 +83,6 @@ public class BridgeRtcCallResponseBody extends TeaModel {
         private Data data; 
         private Integer httpStatusCode; 
         private String message; 
-        private java.util.List < String > params; 
         private String requestId; 
 
         /**
@@ -130,14 +118,6 @@ public class BridgeRtcCallResponseBody extends TeaModel {
         }
 
         /**
-         * Params.
-         */
-        public Builder params(java.util.List < String > params) {
-            this.params = params;
-            return this;
-        }
-
-        /**
          * RequestId.
          */
         public Builder requestId(String requestId) {
@@ -145,26 +125,22 @@ public class BridgeRtcCallResponseBody extends TeaModel {
             return this;
         }
 
-        public BridgeRtcCallResponseBody build() {
-            return new BridgeRtcCallResponseBody(this);
+        public GetEarlyMediaRecordingResponseBody build() {
+            return new GetEarlyMediaRecordingResponseBody(this);
         } 
 
     } 
 
     public static class Data extends TeaModel {
-        @NameInMap("InstanceId")
-        private String instanceId;
+        @NameInMap("FileName")
+        private String fileName;
 
-        @NameInMap("JobId")
-        private String jobId;
-
-        @NameInMap("TokenInfo")
-        private String tokenInfo;
+        @NameInMap("FileUrl")
+        private String fileUrl;
 
         private Data(Builder builder) {
-            this.instanceId = builder.instanceId;
-            this.jobId = builder.jobId;
-            this.tokenInfo = builder.tokenInfo;
+            this.fileName = builder.fileName;
+            this.fileUrl = builder.fileUrl;
         }
 
         public static Builder builder() {
@@ -176,52 +152,36 @@ public class BridgeRtcCallResponseBody extends TeaModel {
         }
 
         /**
-         * @return instanceId
+         * @return fileName
          */
-        public String getInstanceId() {
-            return this.instanceId;
+        public String getFileName() {
+            return this.fileName;
         }
 
         /**
-         * @return jobId
+         * @return fileUrl
          */
-        public String getJobId() {
-            return this.jobId;
-        }
-
-        /**
-         * @return tokenInfo
-         */
-        public String getTokenInfo() {
-            return this.tokenInfo;
+        public String getFileUrl() {
+            return this.fileUrl;
         }
 
         public static final class Builder {
-            private String instanceId; 
-            private String jobId; 
-            private String tokenInfo; 
+            private String fileName; 
+            private String fileUrl; 
 
             /**
-             * InstanceId.
+             * FileName.
              */
-            public Builder instanceId(String instanceId) {
-                this.instanceId = instanceId;
+            public Builder fileName(String fileName) {
+                this.fileName = fileName;
                 return this;
             }
 
             /**
-             * JobId.
+             * FileUrl.
              */
-            public Builder jobId(String jobId) {
-                this.jobId = jobId;
-                return this;
-            }
-
-            /**
-             * TokenInfo.
-             */
-            public Builder tokenInfo(String tokenInfo) {
-                this.tokenInfo = tokenInfo;
+            public Builder fileUrl(String fileUrl) {
+                this.fileUrl = fileUrl;
                 return this;
             }
 

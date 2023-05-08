@@ -225,6 +225,9 @@ public class ListCallDetailRecordsResponseBody extends TeaModel {
         @NameInMap("StartTime")
         private Long startTime;
 
+        @NameInMap("TalkTime")
+        private Long talkTime;
+
         @NameInMap("WaitTime")
         private Long waitTime;
 
@@ -260,6 +263,7 @@ public class ListCallDetailRecordsResponseBody extends TeaModel {
             this.skillGroupIds = builder.skillGroupIds;
             this.skillGroupNames = builder.skillGroupNames;
             this.startTime = builder.startTime;
+            this.talkTime = builder.talkTime;
             this.waitTime = builder.waitTime;
         }
 
@@ -489,6 +493,13 @@ public class ListCallDetailRecordsResponseBody extends TeaModel {
         }
 
         /**
+         * @return talkTime
+         */
+        public Long getTalkTime() {
+            return this.talkTime;
+        }
+
+        /**
          * @return waitTime
          */
         public Long getWaitTime() {
@@ -527,6 +538,7 @@ public class ListCallDetailRecordsResponseBody extends TeaModel {
             private String skillGroupIds; 
             private String skillGroupNames; 
             private Long startTime; 
+            private Long talkTime; 
             private Long waitTime; 
 
             /**
@@ -774,6 +786,14 @@ public class ListCallDetailRecordsResponseBody extends TeaModel {
              */
             public Builder startTime(Long startTime) {
                 this.startTime = startTime;
+                return this;
+            }
+
+            /**
+             * TalkTime.
+             */
+            public Builder talkTime(Long talkTime) {
+                this.talkTime = talkTime;
                 return this;
             }
 

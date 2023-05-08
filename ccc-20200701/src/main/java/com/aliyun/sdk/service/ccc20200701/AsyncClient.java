@@ -36,6 +36,8 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<AnswerCallResponse> answerCall(AnswerCallRequest request);
 
+    CompletableFuture<AppendCasesResponse> appendCases(AppendCasesRequest request);
+
     CompletableFuture<AssignUsersResponse> assignUsers(AssignUsersRequest request);
 
     CompletableFuture<BargeInCallResponse> bargeInCall(BargeInCallRequest request);
@@ -107,6 +109,8 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<GetDataChannelCredentialsResponse> getDataChannelCredentials(GetDataChannelCredentialsRequest request);
 
     CompletableFuture<GetDoNotCallFileUploadParametersResponse> getDoNotCallFileUploadParameters(GetDoNotCallFileUploadParametersRequest request);
+
+    CompletableFuture<GetEarlyMediaRecordingResponse> getEarlyMediaRecording(GetEarlyMediaRecordingRequest request);
 
     CompletableFuture<GetHistoricalCallerReportResponse> getHistoricalCallerReport(GetHistoricalCallerReportRequest request);
 

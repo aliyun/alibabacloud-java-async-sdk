@@ -13,6 +13,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class InitiateAttendedTransferRequest extends Request {
     @Query
+    @NameInMap("CallPriority")
+    private Integer callPriority;
+
+    @Query
     @NameInMap("DeviceId")
     @Validation(required = true)
     private String deviceId;
@@ -26,6 +30,14 @@ public class InitiateAttendedTransferRequest extends Request {
     @NameInMap("JobId")
     @Validation(required = true)
     private String jobId;
+
+    @Query
+    @NameInMap("StrategyName")
+    private String strategyName;
+
+    @Query
+    @NameInMap("StrategyParams")
+    private String strategyParams;
 
     @Query
     @NameInMap("TimeoutSeconds")
@@ -46,9 +58,12 @@ public class InitiateAttendedTransferRequest extends Request {
 
     private InitiateAttendedTransferRequest(Builder builder) {
         super(builder);
+        this.callPriority = builder.callPriority;
         this.deviceId = builder.deviceId;
         this.instanceId = builder.instanceId;
         this.jobId = builder.jobId;
+        this.strategyName = builder.strategyName;
+        this.strategyParams = builder.strategyParams;
         this.timeoutSeconds = builder.timeoutSeconds;
         this.transferee = builder.transferee;
         this.transferor = builder.transferor;
@@ -66,6 +81,13 @@ public class InitiateAttendedTransferRequest extends Request {
     @Override
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return callPriority
+     */
+    public Integer getCallPriority() {
+        return this.callPriority;
     }
 
     /**
@@ -87,6 +109,20 @@ public class InitiateAttendedTransferRequest extends Request {
      */
     public String getJobId() {
         return this.jobId;
+    }
+
+    /**
+     * @return strategyName
+     */
+    public String getStrategyName() {
+        return this.strategyName;
+    }
+
+    /**
+     * @return strategyParams
+     */
+    public String getStrategyParams() {
+        return this.strategyParams;
     }
 
     /**
@@ -118,9 +154,12 @@ public class InitiateAttendedTransferRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<InitiateAttendedTransferRequest, Builder> {
+        private Integer callPriority; 
         private String deviceId; 
         private String instanceId; 
         private String jobId; 
+        private String strategyName; 
+        private String strategyParams; 
         private Integer timeoutSeconds; 
         private String transferee; 
         private String transferor; 
@@ -132,14 +171,26 @@ public class InitiateAttendedTransferRequest extends Request {
 
         private Builder(InitiateAttendedTransferRequest request) {
             super(request);
+            this.callPriority = request.callPriority;
             this.deviceId = request.deviceId;
             this.instanceId = request.instanceId;
             this.jobId = request.jobId;
+            this.strategyName = request.strategyName;
+            this.strategyParams = request.strategyParams;
             this.timeoutSeconds = request.timeoutSeconds;
             this.transferee = request.transferee;
             this.transferor = request.transferor;
             this.userId = request.userId;
         } 
+
+        /**
+         * CallPriority.
+         */
+        public Builder callPriority(Integer callPriority) {
+            this.putQueryParameter("CallPriority", callPriority);
+            this.callPriority = callPriority;
+            return this;
+        }
 
         /**
          * DeviceId.
@@ -165,6 +216,24 @@ public class InitiateAttendedTransferRequest extends Request {
         public Builder jobId(String jobId) {
             this.putQueryParameter("JobId", jobId);
             this.jobId = jobId;
+            return this;
+        }
+
+        /**
+         * StrategyName.
+         */
+        public Builder strategyName(String strategyName) {
+            this.putQueryParameter("StrategyName", strategyName);
+            this.strategyName = strategyName;
+            return this;
+        }
+
+        /**
+         * StrategyParams.
+         */
+        public Builder strategyParams(String strategyParams) {
+            this.putQueryParameter("StrategyParams", strategyParams);
+            this.strategyParams = strategyParams;
             return this;
         }
 

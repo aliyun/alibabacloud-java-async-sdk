@@ -21,6 +21,10 @@ public class ModifyUserRequest extends Request {
     private String displayName;
 
     @Query
+    @NameInMap("Force")
+    private Boolean force;
+
+    @Query
     @NameInMap("InstanceId")
     @Validation(required = true)
     private String instanceId;
@@ -47,6 +51,7 @@ public class ModifyUserRequest extends Request {
         super(builder);
         this.displayId = builder.displayId;
         this.displayName = builder.displayName;
+        this.force = builder.force;
         this.instanceId = builder.instanceId;
         this.mobile = builder.mobile;
         this.roleId = builder.roleId;
@@ -79,6 +84,13 @@ public class ModifyUserRequest extends Request {
      */
     public String getDisplayName() {
         return this.displayName;
+    }
+
+    /**
+     * @return force
+     */
+    public Boolean getForce() {
+        return this.force;
     }
 
     /**
@@ -119,6 +131,7 @@ public class ModifyUserRequest extends Request {
     public static final class Builder extends Request.Builder<ModifyUserRequest, Builder> {
         private String displayId; 
         private String displayName; 
+        private Boolean force; 
         private String instanceId; 
         private String mobile; 
         private String roleId; 
@@ -133,6 +146,7 @@ public class ModifyUserRequest extends Request {
             super(request);
             this.displayId = request.displayId;
             this.displayName = request.displayName;
+            this.force = request.force;
             this.instanceId = request.instanceId;
             this.mobile = request.mobile;
             this.roleId = request.roleId;
@@ -155,6 +169,15 @@ public class ModifyUserRequest extends Request {
         public Builder displayName(String displayName) {
             this.putQueryParameter("DisplayName", displayName);
             this.displayName = displayName;
+            return this;
+        }
+
+        /**
+         * Force.
+         */
+        public Builder force(Boolean force) {
+            this.putQueryParameter("Force", force);
+            this.force = force;
             return this;
         }
 

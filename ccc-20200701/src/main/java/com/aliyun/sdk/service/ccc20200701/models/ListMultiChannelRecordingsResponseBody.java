@@ -131,6 +131,67 @@ public class ListMultiChannelRecordingsResponseBody extends TeaModel {
 
     } 
 
+    public static class HoldTimeSegments extends TeaModel {
+        @NameInMap("EndTime")
+        private Long endTime;
+
+        @NameInMap("StartTime")
+        private Long startTime;
+
+        private HoldTimeSegments(Builder builder) {
+            this.endTime = builder.endTime;
+            this.startTime = builder.startTime;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static HoldTimeSegments create() {
+            return builder().build();
+        }
+
+        /**
+         * @return endTime
+         */
+        public Long getEndTime() {
+            return this.endTime;
+        }
+
+        /**
+         * @return startTime
+         */
+        public Long getStartTime() {
+            return this.startTime;
+        }
+
+        public static final class Builder {
+            private Long endTime; 
+            private Long startTime; 
+
+            /**
+             * EndTime.
+             */
+            public Builder endTime(Long endTime) {
+                this.endTime = endTime;
+                return this;
+            }
+
+            /**
+             * StartTime.
+             */
+            public Builder startTime(Long startTime) {
+                this.startTime = startTime;
+                return this;
+            }
+
+            public HoldTimeSegments build() {
+                return new HoldTimeSegments(this);
+            } 
+
+        } 
+
+    }
     public static class Data extends TeaModel {
         @NameInMap("AgentChannelId")
         private String agentChannelId;
@@ -153,6 +214,9 @@ public class ListMultiChannelRecordingsResponseBody extends TeaModel {
         @NameInMap("FileUrl")
         private String fileUrl;
 
+        @NameInMap("HoldTimeSegments")
+        private java.util.List < HoldTimeSegments> holdTimeSegments;
+
         @NameInMap("RamId")
         private String ramId;
 
@@ -170,6 +234,7 @@ public class ListMultiChannelRecordingsResponseBody extends TeaModel {
             this.duration = builder.duration;
             this.fileName = builder.fileName;
             this.fileUrl = builder.fileUrl;
+            this.holdTimeSegments = builder.holdTimeSegments;
             this.ramId = builder.ramId;
             this.skillGroupId = builder.skillGroupId;
             this.startTime = builder.startTime;
@@ -233,6 +298,13 @@ public class ListMultiChannelRecordingsResponseBody extends TeaModel {
         }
 
         /**
+         * @return holdTimeSegments
+         */
+        public java.util.List < HoldTimeSegments> getHoldTimeSegments() {
+            return this.holdTimeSegments;
+        }
+
+        /**
          * @return ramId
          */
         public String getRamId() {
@@ -261,6 +333,7 @@ public class ListMultiChannelRecordingsResponseBody extends TeaModel {
             private String duration; 
             private String fileName; 
             private String fileUrl; 
+            private java.util.List < HoldTimeSegments> holdTimeSegments; 
             private String ramId; 
             private String skillGroupId; 
             private Long startTime; 
@@ -318,6 +391,14 @@ public class ListMultiChannelRecordingsResponseBody extends TeaModel {
              */
             public Builder fileUrl(String fileUrl) {
                 this.fileUrl = fileUrl;
+                return this;
+            }
+
+            /**
+             * HoldTimeSegments.
+             */
+            public Builder holdTimeSegments(java.util.List < HoldTimeSegments> holdTimeSegments) {
+                this.holdTimeSegments = holdTimeSegments;
                 return this;
             }
 
