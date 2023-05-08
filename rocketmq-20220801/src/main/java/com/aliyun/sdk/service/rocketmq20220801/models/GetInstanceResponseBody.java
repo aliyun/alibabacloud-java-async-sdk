@@ -583,7 +583,7 @@ public class GetInstanceResponseBody extends TeaModel {
         private String endpointUrl;
 
         @NameInMap("ipWhitelist")
-        private String ipWhitelist;
+        private java.util.List < String > ipWhitelist;
 
         private Endpoints(Builder builder) {
             this.endpointType = builder.endpointType;
@@ -616,14 +616,14 @@ public class GetInstanceResponseBody extends TeaModel {
         /**
          * @return ipWhitelist
          */
-        public String getIpWhitelist() {
+        public java.util.List < String > getIpWhitelist() {
             return this.ipWhitelist;
         }
 
         public static final class Builder {
             private String endpointType; 
             private String endpointUrl; 
-            private String ipWhitelist; 
+            private java.util.List < String > ipWhitelist; 
 
             /**
              * 接入点类型
@@ -642,9 +642,9 @@ public class GetInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * 公网IP白名单，建议使用公网信息中的白名单字段
+             * ipWhitelist.
              */
-            public Builder ipWhitelist(String ipWhitelist) {
+            public Builder ipWhitelist(java.util.List < String > ipWhitelist) {
                 this.ipWhitelist = ipWhitelist;
                 return this;
             }
@@ -1020,6 +1020,87 @@ public class GetInstanceResponseBody extends TeaModel {
         } 
 
     }
+    public static class Software extends TeaModel {
+        @NameInMap("maintainTime")
+        private String maintainTime;
+
+        @NameInMap("softwareVersion")
+        private String softwareVersion;
+
+        @NameInMap("upgradeMethod")
+        private String upgradeMethod;
+
+        private Software(Builder builder) {
+            this.maintainTime = builder.maintainTime;
+            this.softwareVersion = builder.softwareVersion;
+            this.upgradeMethod = builder.upgradeMethod;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static Software create() {
+            return builder().build();
+        }
+
+        /**
+         * @return maintainTime
+         */
+        public String getMaintainTime() {
+            return this.maintainTime;
+        }
+
+        /**
+         * @return softwareVersion
+         */
+        public String getSoftwareVersion() {
+            return this.softwareVersion;
+        }
+
+        /**
+         * @return upgradeMethod
+         */
+        public String getUpgradeMethod() {
+            return this.upgradeMethod;
+        }
+
+        public static final class Builder {
+            private String maintainTime; 
+            private String softwareVersion; 
+            private String upgradeMethod; 
+
+            /**
+             * maintainTime.
+             */
+            public Builder maintainTime(String maintainTime) {
+                this.maintainTime = maintainTime;
+                return this;
+            }
+
+            /**
+             * softwareVersion.
+             */
+            public Builder softwareVersion(String softwareVersion) {
+                this.softwareVersion = softwareVersion;
+                return this;
+            }
+
+            /**
+             * upgradeMethod.
+             */
+            public Builder upgradeMethod(String upgradeMethod) {
+                this.upgradeMethod = upgradeMethod;
+                return this;
+            }
+
+            public Software build() {
+                return new Software(this);
+            } 
+
+        } 
+
+    }
     public static class Data extends TeaModel {
         @NameInMap("accountInfo")
         private AccountInfo accountInfo;
@@ -1041,6 +1122,9 @@ public class GetInstanceResponseBody extends TeaModel {
 
         @NameInMap("extConfig")
         private ExtConfig extConfig;
+
+        @NameInMap("groupCount")
+        private Long groupCount;
 
         @NameInMap("instanceId")
         private String instanceId;
@@ -1078,6 +1162,9 @@ public class GetInstanceResponseBody extends TeaModel {
         @NameInMap("serviceCode")
         private String serviceCode;
 
+        @NameInMap("software")
+        private Software software;
+
         @NameInMap("startTime")
         private String startTime;
 
@@ -1086,6 +1173,9 @@ public class GetInstanceResponseBody extends TeaModel {
 
         @NameInMap("subSeriesCode")
         private String subSeriesCode;
+
+        @NameInMap("topicCount")
+        private Long topicCount;
 
         @NameInMap("updateTime")
         private String updateTime;
@@ -1101,6 +1191,7 @@ public class GetInstanceResponseBody extends TeaModel {
             this.createTime = builder.createTime;
             this.expireTime = builder.expireTime;
             this.extConfig = builder.extConfig;
+            this.groupCount = builder.groupCount;
             this.instanceId = builder.instanceId;
             this.instanceName = builder.instanceName;
             this.instanceQuotas = builder.instanceQuotas;
@@ -1113,9 +1204,11 @@ public class GetInstanceResponseBody extends TeaModel {
             this.resourceGroupId = builder.resourceGroupId;
             this.seriesCode = builder.seriesCode;
             this.serviceCode = builder.serviceCode;
+            this.software = builder.software;
             this.startTime = builder.startTime;
             this.status = builder.status;
             this.subSeriesCode = builder.subSeriesCode;
+            this.topicCount = builder.topicCount;
             this.updateTime = builder.updateTime;
             this.userId = builder.userId;
         }
@@ -1175,6 +1268,13 @@ public class GetInstanceResponseBody extends TeaModel {
          */
         public ExtConfig getExtConfig() {
             return this.extConfig;
+        }
+
+        /**
+         * @return groupCount
+         */
+        public Long getGroupCount() {
+            return this.groupCount;
         }
 
         /**
@@ -1262,6 +1362,13 @@ public class GetInstanceResponseBody extends TeaModel {
         }
 
         /**
+         * @return software
+         */
+        public Software getSoftware() {
+            return this.software;
+        }
+
+        /**
          * @return startTime
          */
         public String getStartTime() {
@@ -1280,6 +1387,13 @@ public class GetInstanceResponseBody extends TeaModel {
          */
         public String getSubSeriesCode() {
             return this.subSeriesCode;
+        }
+
+        /**
+         * @return topicCount
+         */
+        public Long getTopicCount() {
+            return this.topicCount;
         }
 
         /**
@@ -1304,6 +1418,7 @@ public class GetInstanceResponseBody extends TeaModel {
             private String createTime; 
             private String expireTime; 
             private ExtConfig extConfig; 
+            private Long groupCount; 
             private String instanceId; 
             private String instanceName; 
             private java.util.List < InstanceQuotas> instanceQuotas; 
@@ -1316,9 +1431,11 @@ public class GetInstanceResponseBody extends TeaModel {
             private String resourceGroupId; 
             private String seriesCode; 
             private String serviceCode; 
+            private Software software; 
             private String startTime; 
             private String status; 
             private String subSeriesCode; 
+            private Long topicCount; 
             private String updateTime; 
             private String userId; 
 
@@ -1375,6 +1492,14 @@ public class GetInstanceResponseBody extends TeaModel {
              */
             public Builder extConfig(ExtConfig extConfig) {
                 this.extConfig = extConfig;
+                return this;
+            }
+
+            /**
+             * groupCount.
+             */
+            public Builder groupCount(Long groupCount) {
+                this.groupCount = groupCount;
                 return this;
             }
 
@@ -1475,6 +1600,14 @@ public class GetInstanceResponseBody extends TeaModel {
             }
 
             /**
+             * software.
+             */
+            public Builder software(Software software) {
+                this.software = software;
+                return this;
+            }
+
+            /**
              * 开服时间
              */
             public Builder startTime(String startTime) {
@@ -1495,6 +1628,14 @@ public class GetInstanceResponseBody extends TeaModel {
              */
             public Builder subSeriesCode(String subSeriesCode) {
                 this.subSeriesCode = subSeriesCode;
+                return this;
+            }
+
+            /**
+             * topicCount.
+             */
+            public Builder topicCount(Long topicCount) {
+                this.topicCount = topicCount;
                 return this;
             }
 
