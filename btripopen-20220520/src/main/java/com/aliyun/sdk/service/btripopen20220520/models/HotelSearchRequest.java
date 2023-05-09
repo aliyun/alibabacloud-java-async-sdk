@@ -36,7 +36,6 @@ public class HotelSearchRequest extends Request {
 
     @Query
     @NameInMap("city_code")
-    @Validation(required = true)
     private String cityCode;
 
     @Query

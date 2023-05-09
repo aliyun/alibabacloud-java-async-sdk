@@ -126,6 +126,8 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<HotelBillSettlementQueryResponse> hotelBillSettlementQuery(HotelBillSettlementQueryRequest request);
 
+    CompletableFuture<HotelCityCodeListResponse> hotelCityCodeList(HotelCityCodeListRequest request);
+
     CompletableFuture<HotelExceedApplyQueryResponse> hotelExceedApplyQuery(HotelExceedApplyQueryRequest request);
 
     CompletableFuture<HotelGoodsQueryResponse> hotelGoodsQuery(HotelGoodsQueryRequest request);
