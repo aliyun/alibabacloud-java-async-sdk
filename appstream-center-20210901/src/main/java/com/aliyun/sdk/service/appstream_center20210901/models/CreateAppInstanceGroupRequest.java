@@ -81,9 +81,17 @@ public class CreateAppInstanceGroupRequest extends Request {
     private RuntimePolicy runtimePolicy;
 
     @Body
+    @NameInMap("SecurityPolicy")
+    private SecurityPolicy securityPolicy;
+
+    @Body
     @NameInMap("SessionTimeout")
     @Validation(required = true, maximum = 300)
     private Integer sessionTimeout;
+
+    @Body
+    @NameInMap("StoragePolicy")
+    private StoragePolicy storagePolicy;
 
     @Body
     @NameInMap("UserInfo")
@@ -110,7 +118,9 @@ public class CreateAppInstanceGroupRequest extends Request {
         this.productType = builder.productType;
         this.promotionId = builder.promotionId;
         this.runtimePolicy = builder.runtimePolicy;
+        this.securityPolicy = builder.securityPolicy;
         this.sessionTimeout = builder.sessionTimeout;
+        this.storagePolicy = builder.storagePolicy;
         this.userInfo = builder.userInfo;
         this.users = builder.users;
     }
@@ -234,10 +244,24 @@ public class CreateAppInstanceGroupRequest extends Request {
     }
 
     /**
+     * @return securityPolicy
+     */
+    public SecurityPolicy getSecurityPolicy() {
+        return this.securityPolicy;
+    }
+
+    /**
      * @return sessionTimeout
      */
     public Integer getSessionTimeout() {
         return this.sessionTimeout;
+    }
+
+    /**
+     * @return storagePolicy
+     */
+    public StoragePolicy getStoragePolicy() {
+        return this.storagePolicy;
     }
 
     /**
@@ -270,7 +294,9 @@ public class CreateAppInstanceGroupRequest extends Request {
         private String productType; 
         private String promotionId; 
         private RuntimePolicy runtimePolicy; 
+        private SecurityPolicy securityPolicy; 
         private Integer sessionTimeout; 
+        private StoragePolicy storagePolicy; 
         private UserInfo userInfo; 
         private java.util.List < String > users; 
 
@@ -295,7 +321,9 @@ public class CreateAppInstanceGroupRequest extends Request {
             this.productType = request.productType;
             this.promotionId = request.promotionId;
             this.runtimePolicy = request.runtimePolicy;
+            this.securityPolicy = request.securityPolicy;
             this.sessionTimeout = request.sessionTimeout;
+            this.storagePolicy = request.storagePolicy;
             this.userInfo = request.userInfo;
             this.users = request.users;
         } 
@@ -439,11 +467,31 @@ public class CreateAppInstanceGroupRequest extends Request {
         }
 
         /**
+         * SecurityPolicy.
+         */
+        public Builder securityPolicy(SecurityPolicy securityPolicy) {
+            String securityPolicyShrink = shrink(securityPolicy, "SecurityPolicy", "json");
+            this.putBodyParameter("SecurityPolicy", securityPolicyShrink);
+            this.securityPolicy = securityPolicy;
+            return this;
+        }
+
+        /**
          * SessionTimeout.
          */
         public Builder sessionTimeout(Integer sessionTimeout) {
             this.putBodyParameter("SessionTimeout", sessionTimeout);
             this.sessionTimeout = sessionTimeout;
+            return this;
+        }
+
+        /**
+         * StoragePolicy.
+         */
+        public Builder storagePolicy(StoragePolicy storagePolicy) {
+            String storagePolicyShrink = shrink(storagePolicy, "StoragePolicy", "json");
+            this.putBodyParameter("StoragePolicy", storagePolicyShrink);
+            this.storagePolicy = storagePolicy;
             return this;
         }
 
@@ -535,6 +583,9 @@ public class CreateAppInstanceGroupRequest extends Request {
 
     }
     public static class Network extends TeaModel {
+        @NameInMap("IpExpireMinutes")
+        private Integer ipExpireMinutes;
+
         @NameInMap("Routes")
         private java.util.List < Routes> routes;
 
@@ -542,6 +593,7 @@ public class CreateAppInstanceGroupRequest extends Request {
         private String strategyType;
 
         private Network(Builder builder) {
+            this.ipExpireMinutes = builder.ipExpireMinutes;
             this.routes = builder.routes;
             this.strategyType = builder.strategyType;
         }
@@ -552,6 +604,13 @@ public class CreateAppInstanceGroupRequest extends Request {
 
         public static Network create() {
             return builder().build();
+        }
+
+        /**
+         * @return ipExpireMinutes
+         */
+        public Integer getIpExpireMinutes() {
+            return this.ipExpireMinutes;
         }
 
         /**
@@ -569,8 +628,17 @@ public class CreateAppInstanceGroupRequest extends Request {
         }
 
         public static final class Builder {
+            private Integer ipExpireMinutes; 
             private java.util.List < Routes> routes; 
             private String strategyType; 
+
+            /**
+             * IpExpireMinutes.
+             */
+            public Builder ipExpireMinutes(Integer ipExpireMinutes) {
+                this.ipExpireMinutes = ipExpireMinutes;
+                return this;
+            }
 
             /**
              * Routes.
@@ -1019,10 +1087,14 @@ public class CreateAppInstanceGroupRequest extends Request {
 
     }
     public static class RuntimePolicy extends TeaModel {
+        @NameInMap("DebugMode")
+        private String debugMode;
+
         @NameInMap("SessionType")
         private String sessionType;
 
         private RuntimePolicy(Builder builder) {
+            this.debugMode = builder.debugMode;
             this.sessionType = builder.sessionType;
         }
 
@@ -1035,6 +1107,13 @@ public class CreateAppInstanceGroupRequest extends Request {
         }
 
         /**
+         * @return debugMode
+         */
+        public String getDebugMode() {
+            return this.debugMode;
+        }
+
+        /**
          * @return sessionType
          */
         public String getSessionType() {
@@ -1042,10 +1121,19 @@ public class CreateAppInstanceGroupRequest extends Request {
         }
 
         public static final class Builder {
+            private String debugMode; 
             private String sessionType; 
 
             /**
-             * SessionType.
+             * DebugMode.
+             */
+            public Builder debugMode(String debugMode) {
+                this.debugMode = debugMode;
+                return this;
+            }
+
+            /**
+             * 会话类型。
              */
             public Builder sessionType(String sessionType) {
                 this.sessionType = sessionType;
@@ -1054,6 +1142,108 @@ public class CreateAppInstanceGroupRequest extends Request {
 
             public RuntimePolicy build() {
                 return new RuntimePolicy(this);
+            } 
+
+        } 
+
+    }
+    public static class SecurityPolicy extends TeaModel {
+        @NameInMap("ResetAfterUnbind")
+        private Boolean resetAfterUnbind;
+
+        @NameInMap("SkipUserAuthCheck")
+        private Boolean skipUserAuthCheck;
+
+        private SecurityPolicy(Builder builder) {
+            this.resetAfterUnbind = builder.resetAfterUnbind;
+            this.skipUserAuthCheck = builder.skipUserAuthCheck;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static SecurityPolicy create() {
+            return builder().build();
+        }
+
+        /**
+         * @return resetAfterUnbind
+         */
+        public Boolean getResetAfterUnbind() {
+            return this.resetAfterUnbind;
+        }
+
+        /**
+         * @return skipUserAuthCheck
+         */
+        public Boolean getSkipUserAuthCheck() {
+            return this.skipUserAuthCheck;
+        }
+
+        public static final class Builder {
+            private Boolean resetAfterUnbind; 
+            private Boolean skipUserAuthCheck; 
+
+            /**
+             * ResetAfterUnbind.
+             */
+            public Builder resetAfterUnbind(Boolean resetAfterUnbind) {
+                this.resetAfterUnbind = resetAfterUnbind;
+                return this;
+            }
+
+            /**
+             * SkipUserAuthCheck.
+             */
+            public Builder skipUserAuthCheck(Boolean skipUserAuthCheck) {
+                this.skipUserAuthCheck = skipUserAuthCheck;
+                return this;
+            }
+
+            public SecurityPolicy build() {
+                return new SecurityPolicy(this);
+            } 
+
+        } 
+
+    }
+    public static class StoragePolicy extends TeaModel {
+        @NameInMap("StorageTypeList")
+        private java.util.List < String > storageTypeList;
+
+        private StoragePolicy(Builder builder) {
+            this.storageTypeList = builder.storageTypeList;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static StoragePolicy create() {
+            return builder().build();
+        }
+
+        /**
+         * @return storageTypeList
+         */
+        public java.util.List < String > getStorageTypeList() {
+            return this.storageTypeList;
+        }
+
+        public static final class Builder {
+            private java.util.List < String > storageTypeList; 
+
+            /**
+             * StorageTypeList.
+             */
+            public Builder storageTypeList(java.util.List < String > storageTypeList) {
+                this.storageTypeList = storageTypeList;
+                return this;
+            }
+
+            public StoragePolicy build() {
+                return new StoragePolicy(this);
             } 
 
         } 

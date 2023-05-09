@@ -131,12 +131,76 @@ public class ListAppInstancesResponseBody extends TeaModel {
 
     } 
 
+    public static class BindInfo extends TeaModel {
+        @NameInMap("EndUserId")
+        private String endUserId;
+
+        @NameInMap("UsageDuration")
+        private Long usageDuration;
+
+        private BindInfo(Builder builder) {
+            this.endUserId = builder.endUserId;
+            this.usageDuration = builder.usageDuration;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static BindInfo create() {
+            return builder().build();
+        }
+
+        /**
+         * @return endUserId
+         */
+        public String getEndUserId() {
+            return this.endUserId;
+        }
+
+        /**
+         * @return usageDuration
+         */
+        public Long getUsageDuration() {
+            return this.usageDuration;
+        }
+
+        public static final class Builder {
+            private String endUserId; 
+            private Long usageDuration; 
+
+            /**
+             * EndUserId.
+             */
+            public Builder endUserId(String endUserId) {
+                this.endUserId = endUserId;
+                return this;
+            }
+
+            /**
+             * UsageDuration.
+             */
+            public Builder usageDuration(Long usageDuration) {
+                this.usageDuration = usageDuration;
+                return this;
+            }
+
+            public BindInfo build() {
+                return new BindInfo(this);
+            } 
+
+        } 
+
+    }
     public static class AppInstanceModels extends TeaModel {
         @NameInMap("AppInstanceGroupId")
         private String appInstanceGroupId;
 
         @NameInMap("AppInstanceId")
         private String appInstanceId;
+
+        @NameInMap("BindInfo")
+        private BindInfo bindInfo;
 
         @NameInMap("GmtCreate")
         private String gmtCreate;
@@ -156,6 +220,7 @@ public class ListAppInstancesResponseBody extends TeaModel {
         private AppInstanceModels(Builder builder) {
             this.appInstanceGroupId = builder.appInstanceGroupId;
             this.appInstanceId = builder.appInstanceId;
+            this.bindInfo = builder.bindInfo;
             this.gmtCreate = builder.gmtCreate;
             this.gmtModified = builder.gmtModified;
             this.mainEthPublicIp = builder.mainEthPublicIp;
@@ -183,6 +248,13 @@ public class ListAppInstancesResponseBody extends TeaModel {
          */
         public String getAppInstanceId() {
             return this.appInstanceId;
+        }
+
+        /**
+         * @return bindInfo
+         */
+        public BindInfo getBindInfo() {
+            return this.bindInfo;
         }
 
         /**
@@ -223,6 +295,7 @@ public class ListAppInstancesResponseBody extends TeaModel {
         public static final class Builder {
             private String appInstanceGroupId; 
             private String appInstanceId; 
+            private BindInfo bindInfo; 
             private String gmtCreate; 
             private String gmtModified; 
             private String mainEthPublicIp; 
@@ -242,6 +315,14 @@ public class ListAppInstancesResponseBody extends TeaModel {
              */
             public Builder appInstanceId(String appInstanceId) {
                 this.appInstanceId = appInstanceId;
+                return this;
+            }
+
+            /**
+             * BindInfo.
+             */
+            public Builder bindInfo(BindInfo bindInfo) {
+                this.bindInfo = bindInfo;
                 return this;
             }
 

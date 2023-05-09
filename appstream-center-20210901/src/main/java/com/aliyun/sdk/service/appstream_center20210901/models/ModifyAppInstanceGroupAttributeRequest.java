@@ -30,10 +30,18 @@ public class ModifyAppInstanceGroupAttributeRequest extends Request {
     @Validation(required = true)
     private String productType;
 
+    @Body
+    @NameInMap("SecurityPolicy")
+    private SecurityPolicy securityPolicy;
+
     @Query
     @NameInMap("SessionTimeout")
     @Validation(maximum = 300)
     private Integer sessionTimeout;
+
+    @Body
+    @NameInMap("StoragePolicy")
+    private StoragePolicy storagePolicy;
 
     private ModifyAppInstanceGroupAttributeRequest(Builder builder) {
         super(builder);
@@ -41,7 +49,9 @@ public class ModifyAppInstanceGroupAttributeRequest extends Request {
         this.appInstanceGroupName = builder.appInstanceGroupName;
         this.nodePool = builder.nodePool;
         this.productType = builder.productType;
+        this.securityPolicy = builder.securityPolicy;
         this.sessionTimeout = builder.sessionTimeout;
+        this.storagePolicy = builder.storagePolicy;
     }
 
     public static Builder builder() {
@@ -86,10 +96,24 @@ public class ModifyAppInstanceGroupAttributeRequest extends Request {
     }
 
     /**
+     * @return securityPolicy
+     */
+    public SecurityPolicy getSecurityPolicy() {
+        return this.securityPolicy;
+    }
+
+    /**
      * @return sessionTimeout
      */
     public Integer getSessionTimeout() {
         return this.sessionTimeout;
+    }
+
+    /**
+     * @return storagePolicy
+     */
+    public StoragePolicy getStoragePolicy() {
+        return this.storagePolicy;
     }
 
     public static final class Builder extends Request.Builder<ModifyAppInstanceGroupAttributeRequest, Builder> {
@@ -97,7 +121,9 @@ public class ModifyAppInstanceGroupAttributeRequest extends Request {
         private String appInstanceGroupName; 
         private NodePool nodePool; 
         private String productType; 
+        private SecurityPolicy securityPolicy; 
         private Integer sessionTimeout; 
+        private StoragePolicy storagePolicy; 
 
         private Builder() {
             super();
@@ -109,7 +135,9 @@ public class ModifyAppInstanceGroupAttributeRequest extends Request {
             this.appInstanceGroupName = request.appInstanceGroupName;
             this.nodePool = request.nodePool;
             this.productType = request.productType;
+            this.securityPolicy = request.securityPolicy;
             this.sessionTimeout = request.sessionTimeout;
+            this.storagePolicy = request.storagePolicy;
         } 
 
         /**
@@ -150,11 +178,31 @@ public class ModifyAppInstanceGroupAttributeRequest extends Request {
         }
 
         /**
+         * SecurityPolicy.
+         */
+        public Builder securityPolicy(SecurityPolicy securityPolicy) {
+            String securityPolicyShrink = shrink(securityPolicy, "SecurityPolicy", "json");
+            this.putBodyParameter("SecurityPolicy", securityPolicyShrink);
+            this.securityPolicy = securityPolicy;
+            return this;
+        }
+
+        /**
          * SessionTimeout.
          */
         public Builder sessionTimeout(Integer sessionTimeout) {
             this.putQueryParameter("SessionTimeout", sessionTimeout);
             this.sessionTimeout = sessionTimeout;
+            return this;
+        }
+
+        /**
+         * StoragePolicy.
+         */
+        public Builder storagePolicy(StoragePolicy storagePolicy) {
+            String storagePolicyShrink = shrink(storagePolicy, "StoragePolicy", "json");
+            this.putBodyParameter("StoragePolicy", storagePolicyShrink);
+            this.storagePolicy = storagePolicy;
             return this;
         }
 
@@ -221,6 +269,108 @@ public class ModifyAppInstanceGroupAttributeRequest extends Request {
 
             public NodePool build() {
                 return new NodePool(this);
+            } 
+
+        } 
+
+    }
+    public static class SecurityPolicy extends TeaModel {
+        @NameInMap("ResetAfterUnbind")
+        private Boolean resetAfterUnbind;
+
+        @NameInMap("SkipUserAuthCheck")
+        private Boolean skipUserAuthCheck;
+
+        private SecurityPolicy(Builder builder) {
+            this.resetAfterUnbind = builder.resetAfterUnbind;
+            this.skipUserAuthCheck = builder.skipUserAuthCheck;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static SecurityPolicy create() {
+            return builder().build();
+        }
+
+        /**
+         * @return resetAfterUnbind
+         */
+        public Boolean getResetAfterUnbind() {
+            return this.resetAfterUnbind;
+        }
+
+        /**
+         * @return skipUserAuthCheck
+         */
+        public Boolean getSkipUserAuthCheck() {
+            return this.skipUserAuthCheck;
+        }
+
+        public static final class Builder {
+            private Boolean resetAfterUnbind; 
+            private Boolean skipUserAuthCheck; 
+
+            /**
+             * ResetAfterUnbind.
+             */
+            public Builder resetAfterUnbind(Boolean resetAfterUnbind) {
+                this.resetAfterUnbind = resetAfterUnbind;
+                return this;
+            }
+
+            /**
+             * SkipUserAuthCheck.
+             */
+            public Builder skipUserAuthCheck(Boolean skipUserAuthCheck) {
+                this.skipUserAuthCheck = skipUserAuthCheck;
+                return this;
+            }
+
+            public SecurityPolicy build() {
+                return new SecurityPolicy(this);
+            } 
+
+        } 
+
+    }
+    public static class StoragePolicy extends TeaModel {
+        @NameInMap("StorageTypeList")
+        private java.util.List < String > storageTypeList;
+
+        private StoragePolicy(Builder builder) {
+            this.storageTypeList = builder.storageTypeList;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static StoragePolicy create() {
+            return builder().build();
+        }
+
+        /**
+         * @return storageTypeList
+         */
+        public java.util.List < String > getStorageTypeList() {
+            return this.storageTypeList;
+        }
+
+        public static final class Builder {
+            private java.util.List < String > storageTypeList; 
+
+            /**
+             * StorageTypeList.
+             */
+            public Builder storageTypeList(java.util.List < String > storageTypeList) {
+                this.storageTypeList = storageTypeList;
+                return this;
+            }
+
+            public StoragePolicy build() {
+                return new StoragePolicy(this);
             } 
 
         } 

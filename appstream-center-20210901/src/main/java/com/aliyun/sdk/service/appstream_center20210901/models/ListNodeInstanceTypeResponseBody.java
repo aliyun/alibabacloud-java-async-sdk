@@ -258,7 +258,7 @@ public class ListNodeInstanceTypeResponseBody extends TeaModel {
             }
 
             /**
-             * GpuMemory.
+             * 显卡内存大小，单位为MB。
              */
             public Builder gpuMemory(Long gpuMemory) {
                 this.gpuMemory = gpuMemory;
@@ -266,7 +266,14 @@ public class ListNodeInstanceTypeResponseBody extends TeaModel {
             }
 
             /**
-             * MaxCapacity.
+             * 最大并发会话数，即单个资源可同时连接的会话数。如果同时连接的会话数过多，可能导致应用的使用体验下降。取值范围因资源规格不同而不同。各资源规格对应的取值范围分别是：
+             * <p>
+             * 
+             * - appstreaming.general.4c8g：1\~2；
+             * - appstreaming.general.8c16g：1\~4；
+             * - appstreaming.vgpu.8c16g.4g：1\~4；
+             * - appstreaming.vgpu.8c31g.16g：1\~4；
+             * - appstreaming.vgpu.14c93g.12g：1\~6；
              */
             public Builder maxCapacity(Integer maxCapacity) {
                 this.maxCapacity = maxCapacity;
@@ -298,7 +305,7 @@ public class ListNodeInstanceTypeResponseBody extends TeaModel {
             }
 
             /**
-             * NodeTypeName.
+             * 资源规格名称。
              */
             public Builder nodeTypeName(String nodeTypeName) {
                 this.nodeTypeName = nodeTypeName;

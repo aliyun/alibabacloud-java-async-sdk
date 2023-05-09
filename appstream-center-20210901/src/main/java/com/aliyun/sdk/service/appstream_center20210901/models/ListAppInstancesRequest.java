@@ -21,6 +21,14 @@ public class ListAppInstancesRequest extends Request {
     @NameInMap("AppInstanceId")
     private String appInstanceId;
 
+    @Body
+    @NameInMap("AppInstanceIdList")
+    private java.util.List < String > appInstanceIdList;
+
+    @Query
+    @NameInMap("IncludeDeleted")
+    private Boolean includeDeleted;
+
     @Query
     @NameInMap("PageNumber")
     private Integer pageNumber;
@@ -38,6 +46,8 @@ public class ListAppInstancesRequest extends Request {
         super(builder);
         this.appInstanceGroupId = builder.appInstanceGroupId;
         this.appInstanceId = builder.appInstanceId;
+        this.appInstanceIdList = builder.appInstanceIdList;
+        this.includeDeleted = builder.includeDeleted;
         this.pageNumber = builder.pageNumber;
         this.pageSize = builder.pageSize;
         this.status = builder.status;
@@ -71,6 +81,20 @@ public class ListAppInstancesRequest extends Request {
     }
 
     /**
+     * @return appInstanceIdList
+     */
+    public java.util.List < String > getAppInstanceIdList() {
+        return this.appInstanceIdList;
+    }
+
+    /**
+     * @return includeDeleted
+     */
+    public Boolean getIncludeDeleted() {
+        return this.includeDeleted;
+    }
+
+    /**
      * @return pageNumber
      */
     public Integer getPageNumber() {
@@ -94,6 +118,8 @@ public class ListAppInstancesRequest extends Request {
     public static final class Builder extends Request.Builder<ListAppInstancesRequest, Builder> {
         private String appInstanceGroupId; 
         private String appInstanceId; 
+        private java.util.List < String > appInstanceIdList; 
+        private Boolean includeDeleted; 
         private Integer pageNumber; 
         private Integer pageSize; 
         private java.util.List < String > status; 
@@ -106,6 +132,8 @@ public class ListAppInstancesRequest extends Request {
             super(request);
             this.appInstanceGroupId = request.appInstanceGroupId;
             this.appInstanceId = request.appInstanceId;
+            this.appInstanceIdList = request.appInstanceIdList;
+            this.includeDeleted = request.includeDeleted;
             this.pageNumber = request.pageNumber;
             this.pageSize = request.pageSize;
             this.status = request.status;
@@ -126,6 +154,24 @@ public class ListAppInstancesRequest extends Request {
         public Builder appInstanceId(String appInstanceId) {
             this.putQueryParameter("AppInstanceId", appInstanceId);
             this.appInstanceId = appInstanceId;
+            return this;
+        }
+
+        /**
+         * AppInstanceIdList.
+         */
+        public Builder appInstanceIdList(java.util.List < String > appInstanceIdList) {
+            this.putBodyParameter("AppInstanceIdList", appInstanceIdList);
+            this.appInstanceIdList = appInstanceIdList;
+            return this;
+        }
+
+        /**
+         * IncludeDeleted.
+         */
+        public Builder includeDeleted(Boolean includeDeleted) {
+            this.putQueryParameter("IncludeDeleted", includeDeleted);
+            this.includeDeleted = includeDeleted;
             return this;
         }
 

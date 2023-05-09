@@ -811,6 +811,9 @@ public class GetAppInstanceGroupResponseBody extends TeaModel {
         @NameInMap("SessionTimeout")
         private String sessionTimeout;
 
+        @NameInMap("SkipUserAuthCheck")
+        private Boolean skipUserAuthCheck;
+
         @NameInMap("SpecId")
         private String specId;
 
@@ -836,6 +839,7 @@ public class GetAppInstanceGroupResponseBody extends TeaModel {
             this.regionId = builder.regionId;
             this.resourceStatus = builder.resourceStatus;
             this.sessionTimeout = builder.sessionTimeout;
+            this.skipUserAuthCheck = builder.skipUserAuthCheck;
             this.specId = builder.specId;
             this.status = builder.status;
         }
@@ -975,6 +979,13 @@ public class GetAppInstanceGroupResponseBody extends TeaModel {
         }
 
         /**
+         * @return skipUserAuthCheck
+         */
+        public Boolean getSkipUserAuthCheck() {
+            return this.skipUserAuthCheck;
+        }
+
+        /**
          * @return specId
          */
         public String getSpecId() {
@@ -1007,6 +1018,7 @@ public class GetAppInstanceGroupResponseBody extends TeaModel {
             private String regionId; 
             private String resourceStatus; 
             private String sessionTimeout; 
+            private Boolean skipUserAuthCheck; 
             private String specId; 
             private String status; 
 
@@ -1151,6 +1163,14 @@ public class GetAppInstanceGroupResponseBody extends TeaModel {
              */
             public Builder sessionTimeout(String sessionTimeout) {
                 this.sessionTimeout = sessionTimeout;
+                return this;
+            }
+
+            /**
+             * SkipUserAuthCheck.
+             */
+            public Builder skipUserAuthCheck(Boolean skipUserAuthCheck) {
+                this.skipUserAuthCheck = skipUserAuthCheck;
                 return this;
             }
 

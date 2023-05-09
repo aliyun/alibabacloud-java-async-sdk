@@ -206,7 +206,7 @@ public class ListAppInstanceGroupResponseBody extends TeaModel {
             private String appVersionName; 
 
             /**
-             * AppIcon.
+             * 应用图标。
              */
             public Builder appIcon(String appIcon) {
                 this.appIcon = appIcon;
@@ -230,7 +230,7 @@ public class ListAppInstanceGroupResponseBody extends TeaModel {
             }
 
             /**
-             * AppVersion.
+             * 应用版本。
              */
             public Builder appVersion(String appVersion) {
                 this.appVersion = appVersion;
@@ -238,7 +238,7 @@ public class ListAppInstanceGroupResponseBody extends TeaModel {
             }
 
             /**
-             * AppVersionName.
+             * 应用版本名称。
              */
             public Builder appVersionName(String appVersionName) {
                 this.appVersionName = appVersionName;
@@ -931,6 +931,9 @@ public class ListAppInstanceGroupResponseBody extends TeaModel {
         @NameInMap("SessionTimeout")
         private String sessionTimeout;
 
+        @NameInMap("SkipUserAuthCheck")
+        private Boolean skipUserAuthCheck;
+
         @NameInMap("SpecId")
         private String specId;
 
@@ -956,6 +959,7 @@ public class ListAppInstanceGroupResponseBody extends TeaModel {
             this.regionId = builder.regionId;
             this.resourceStatus = builder.resourceStatus;
             this.sessionTimeout = builder.sessionTimeout;
+            this.skipUserAuthCheck = builder.skipUserAuthCheck;
             this.specId = builder.specId;
             this.status = builder.status;
         }
@@ -1095,6 +1099,13 @@ public class ListAppInstanceGroupResponseBody extends TeaModel {
         }
 
         /**
+         * @return skipUserAuthCheck
+         */
+        public Boolean getSkipUserAuthCheck() {
+            return this.skipUserAuthCheck;
+        }
+
+        /**
          * @return specId
          */
         public String getSpecId() {
@@ -1127,6 +1138,7 @@ public class ListAppInstanceGroupResponseBody extends TeaModel {
             private String regionId; 
             private String resourceStatus; 
             private String sessionTimeout; 
+            private Boolean skipUserAuthCheck; 
             private String specId; 
             private String status; 
 
@@ -1171,7 +1183,7 @@ public class ListAppInstanceGroupResponseBody extends TeaModel {
             }
 
             /**
-             * AppPolicyId.
+             * 策略ID。
              */
             public Builder appPolicyId(String appPolicyId) {
                 this.appPolicyId = appPolicyId;
@@ -1187,7 +1199,7 @@ public class ListAppInstanceGroupResponseBody extends TeaModel {
             }
 
             /**
-             * ChargeResourceMode.
+             * 售卖模式。
              */
             public Builder chargeResourceMode(String chargeResourceMode) {
                 this.chargeResourceMode = chargeResourceMode;
@@ -1271,6 +1283,14 @@ public class ListAppInstanceGroupResponseBody extends TeaModel {
              */
             public Builder sessionTimeout(String sessionTimeout) {
                 this.sessionTimeout = sessionTimeout;
+                return this;
+            }
+
+            /**
+             * SkipUserAuthCheck.
+             */
+            public Builder skipUserAuthCheck(Boolean skipUserAuthCheck) {
+                this.skipUserAuthCheck = skipUserAuthCheck;
                 return this;
             }
 

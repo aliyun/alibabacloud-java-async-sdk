@@ -141,7 +141,7 @@ public class ListNodeInstanceTypeRequest extends Request {
         } 
 
         /**
-         * BizRegionId.
+         * 资源所属的地域ID。关于支持的地域详情，请参见[使用限制](~~426036~~)。
          */
         public Builder bizRegionId(String bizRegionId) {
             this.putQueryParameter("BizRegionId", bizRegionId);
@@ -150,7 +150,7 @@ public class ListNodeInstanceTypeRequest extends Request {
         }
 
         /**
-         * Language.
+         * 语言类型。
          */
         public Builder language(String language) {
             this.putQueryParameter("Language", language);
@@ -168,7 +168,7 @@ public class ListNodeInstanceTypeRequest extends Request {
         }
 
         /**
-         * OsType.
+         * 支持的操作系统类型。
          */
         public Builder osType(String osType) {
             this.putQueryParameter("OsType", osType);
