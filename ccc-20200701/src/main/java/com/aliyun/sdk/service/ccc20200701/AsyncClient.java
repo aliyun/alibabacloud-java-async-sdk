@@ -144,6 +144,8 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<GetUserResponse> getUser(GetUserRequest request);
 
+    CompletableFuture<GetVideoResponse> getVideo(GetVideoRequest request);
+
     CompletableFuture<GetVoicemailRecordingResponse> getVoicemailRecording(GetVoicemailRecordingRequest request);
 
     CompletableFuture<HoldCallResponse> holdCall(HoldCallRequest request);
