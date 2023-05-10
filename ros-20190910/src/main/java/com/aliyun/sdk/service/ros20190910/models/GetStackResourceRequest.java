@@ -127,12 +127,7 @@ public class GetStackResourceRequest extends Request {
         } 
 
         /**
-         * The client token that is used to ensure the idempotence of the request. You can use the client to generate the value, but you must make sure that it is unique among different requests.
-         * <p>
-         * 
-         * The token can be up to 64 characters in length, and can contain letters, digits, hyphens (-), and underscores (\_).
-         * 
-         * For more information, see [Ensure idempotence](~~134212~~).
+         * The logical ID of the resource defined in the template.
          */
         public Builder clientToken(String clientToken) {
             this.putQueryParameter("ClientToken", clientToken);
@@ -141,7 +136,23 @@ public class GetStackResourceRequest extends Request {
         }
 
         /**
-         * The logical ID of the resource defined in the template.
+         * The status of the resource. Valid values:
+         * <p>
+         * 
+         * *   CREATE_COMPLETE
+         * *   CREATE_FAILED
+         * *   CREATE_IN_PROGRESS
+         * *   UPDATE_IN_PROGRESS
+         * *   UPDATE_FAILED
+         * *   UPDATE_COMPLETE
+         * *   DELETE_IN_PROGRESS
+         * *   DELETE_FAILED
+         * *   CHECK_IN_PROGRESS
+         * *   CHECK_FAILED
+         * *   CHECK_COMPLETE
+         * *   IMPORT_IN_PROGRESS
+         * *   IMPORT_FAILED
+         * *   IMPORT_COMPLETE
          */
         public Builder logicalResourceId(String logicalResourceId) {
             this.putQueryParameter("LogicalResourceId", logicalResourceId);
@@ -150,7 +161,7 @@ public class GetStackResourceRequest extends Request {
         }
 
         /**
-         * The ID of the region to which the stack belongs. You can call the [DescribeRegions](~~131035~~) operation to query the most recent region list.
+         * The name of resource property N that you want to query.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -159,11 +170,23 @@ public class GetStackResourceRequest extends Request {
         }
 
         /**
-         * The name of resource property N that you want to query.
+         * The description of the resource.
          */
         public Builder resourceAttributes(java.util.List < String > resourceAttributes) {
             this.putQueryParameter("ResourceAttributes", resourceAttributes);
             this.resourceAttributes = resourceAttributes;
+            return this;
+        }
+
+        /**
+         * The name of resource property N that you want to query.
+         * <p>
+         * 
+         * >  Maximum value of N: 20.
+         */
+        public Builder showResourceAttributes(Boolean showResourceAttributes) {
+            this.putQueryParameter("ShowResourceAttributes", showResourceAttributes);
+            this.showResourceAttributes = showResourceAttributes;
             return this;
         }
 
@@ -173,15 +196,6 @@ public class GetStackResourceRequest extends Request {
          * 
          * *   true
          * *   false
-         */
-        public Builder showResourceAttributes(Boolean showResourceAttributes) {
-            this.putQueryParameter("ShowResourceAttributes", showResourceAttributes);
-            this.showResourceAttributes = showResourceAttributes;
-            return this;
-        }
-
-        /**
-         * The ID of the stack.
          */
         public Builder stackId(String stackId) {
             this.putQueryParameter("StackId", stackId);

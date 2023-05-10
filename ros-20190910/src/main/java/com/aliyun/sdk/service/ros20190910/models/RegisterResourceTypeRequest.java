@@ -7,18 +7,28 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
- * {@link ValidateTemplateRequest} extends {@link RequestModel}
+ * {@link RegisterResourceTypeRequest} extends {@link RequestModel}
  *
- * <p>ValidateTemplateRequest</p>
+ * <p>RegisterResourceTypeRequest</p>
  */
-public class ValidateTemplateRequest extends Request {
+public class RegisterResourceTypeRequest extends Request {
     @Query
     @NameInMap("ClientToken")
     private String clientToken;
 
     @Query
-    @NameInMap("RegionId")
-    private String regionId;
+    @NameInMap("Description")
+    private String description;
+
+    @Query
+    @NameInMap("EntityType")
+    @Validation(required = true)
+    private String entityType;
+
+    @Query
+    @NameInMap("ResourceType")
+    @Validation(required = true)
+    private String resourceType;
 
     @Body
     @NameInMap("TemplateBody")
@@ -28,24 +38,21 @@ public class ValidateTemplateRequest extends Request {
     @NameInMap("TemplateURL")
     private String templateURL;
 
-    @Query
-    @NameInMap("ValidationOption")
-    private String validationOption;
-
-    private ValidateTemplateRequest(Builder builder) {
+    private RegisterResourceTypeRequest(Builder builder) {
         super(builder);
         this.clientToken = builder.clientToken;
-        this.regionId = builder.regionId;
+        this.description = builder.description;
+        this.entityType = builder.entityType;
+        this.resourceType = builder.resourceType;
         this.templateBody = builder.templateBody;
         this.templateURL = builder.templateURL;
-        this.validationOption = builder.validationOption;
     }
 
     public static Builder builder() {
         return new Builder();
     }
 
-    public static ValidateTemplateRequest create() {
+    public static RegisterResourceTypeRequest create() {
         return builder().build();
     }
 
@@ -62,10 +69,24 @@ public class ValidateTemplateRequest extends Request {
     }
 
     /**
-     * @return regionId
+     * @return description
      */
-    public String getRegionId() {
-        return this.regionId;
+    public String getDescription() {
+        return this.description;
+    }
+
+    /**
+     * @return entityType
+     */
+    public String getEntityType() {
+        return this.entityType;
+    }
+
+    /**
+     * @return resourceType
+     */
+    public String getResourceType() {
+        return this.resourceType;
     }
 
     /**
@@ -82,35 +103,30 @@ public class ValidateTemplateRequest extends Request {
         return this.templateURL;
     }
 
-    /**
-     * @return validationOption
-     */
-    public String getValidationOption() {
-        return this.validationOption;
-    }
-
-    public static final class Builder extends Request.Builder<ValidateTemplateRequest, Builder> {
+    public static final class Builder extends Request.Builder<RegisterResourceTypeRequest, Builder> {
         private String clientToken; 
-        private String regionId; 
+        private String description; 
+        private String entityType; 
+        private String resourceType; 
         private String templateBody; 
         private String templateURL; 
-        private String validationOption; 
 
         private Builder() {
             super();
         } 
 
-        private Builder(ValidateTemplateRequest request) {
+        private Builder(RegisterResourceTypeRequest request) {
             super(request);
             this.clientToken = request.clientToken;
-            this.regionId = request.regionId;
+            this.description = request.description;
+            this.entityType = request.entityType;
+            this.resourceType = request.resourceType;
             this.templateBody = request.templateBody;
             this.templateURL = request.templateURL;
-            this.validationOption = request.validationOption;
         } 
 
         /**
-         * The regular resource types.
+         * ClientToken.
          */
         public Builder clientToken(String clientToken) {
             this.putQueryParameter("ClientToken", clientToken);
@@ -119,11 +135,29 @@ public class ValidateTemplateRequest extends Request {
         }
 
         /**
-         * The description of the output item.
+         * Description.
          */
-        public Builder regionId(String regionId) {
-            this.putQueryParameter("RegionId", regionId);
-            this.regionId = regionId;
+        public Builder description(String description) {
+            this.putQueryParameter("Description", description);
+            this.description = description;
+            return this;
+        }
+
+        /**
+         * EntityType.
+         */
+        public Builder entityType(String entityType) {
+            this.putQueryParameter("EntityType", entityType);
+            this.entityType = entityType;
+            return this;
+        }
+
+        /**
+         * ResourceType.
+         */
+        public Builder resourceType(String resourceType) {
+            this.putQueryParameter("ResourceType", resourceType);
+            this.resourceType = resourceType;
             return this;
         }
 
@@ -137,7 +171,7 @@ public class ValidateTemplateRequest extends Request {
         }
 
         /**
-         * The name of the output item.
+         * TemplateURL.
          */
         public Builder templateURL(String templateURL) {
             this.putQueryParameter("TemplateURL", templateURL);
@@ -145,18 +179,9 @@ public class ValidateTemplateRequest extends Request {
             return this;
         }
 
-        /**
-         * The DataSource resource types.
-         */
-        public Builder validationOption(String validationOption) {
-            this.putQueryParameter("ValidationOption", validationOption);
-            this.validationOption = validationOption;
-            return this;
-        }
-
         @Override
-        public ValidateTemplateRequest build() {
-            return new ValidateTemplateRequest(this);
+        public RegisterResourceTypeRequest build() {
+            return new RegisterResourceTypeRequest(this);
         } 
 
     } 

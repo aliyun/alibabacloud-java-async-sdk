@@ -70,13 +70,7 @@ public class GetFeatureDetailsRequest extends Request {
         } 
 
         /**
-         * The one or more features that you want to query. Valid values:
-         * <p>
-         * 
-         * *   Terraform: the Terraform hosting feature.
-         * *   ResourceCleaner: the resource cleaner feature. You can use ALIYUN::ROS::ResourceCleaner to create a resource cleaner.
-         * *   TemplateScratch: the scenario feature.
-         * *   All: all features that are supported by ROS.
+         * The resource types that support the scenario feature.
          */
         public Builder feature(String feature) {
             this.putQueryParameter("Feature", feature);
@@ -85,7 +79,7 @@ public class GetFeatureDetailsRequest extends Request {
         }
 
         /**
-         * The region ID of the stack. You can call the [DescribeRegions](~~131035~~) operation to query the most recent region list.
+         * The resource types that support the system tag `acs:ros:stackId`.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);

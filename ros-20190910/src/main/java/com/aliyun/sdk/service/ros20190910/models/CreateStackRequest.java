@@ -350,10 +350,7 @@ public class CreateStackRequest extends Request {
         } 
 
         /**
-         * The client token that is used to ensure the idempotence of the request. You can use the client to generate the value, but you must make sure that the value is unique among different requests. The token can be up to 64 characters in length, and can contain letters, digits, hyphens (-), and underscores (\_).
-         * <p>
-         * 
-         * For more information, see [Ensure idempotence](~~134212~~).
+         * ClientToken.
          */
         public Builder clientToken(String clientToken) {
             this.putQueryParameter("ClientToken", clientToken);
@@ -362,12 +359,7 @@ public class CreateStackRequest extends Request {
         }
 
         /**
-         * The option for the stack after you create the stack. Default value: KeepStackOnCreationComplete. Valid values:
-         * <p>
-         * 
-         * *   KeepStackOnCreationComplete: retains the stack and its resources after the stack is created. In this case, your stack quota in ROS is consumed.
-         * *   AbandonStackOnCreationComplete: deletes the stack, but retains its resources after the stack is created. In this case, your stack quota in ROS is not consumed. If the stack fails to be created, the stack is retained.
-         * *   AbandonStackOnCreationRollbackComplete: deletes the stack when its resources are rolled back after the stack fails to be created. In this case, your stack quota in ROS is not consumed. In other rollback scenarios, the stack is retained.
+         * CreateOption.
          */
         public Builder createOption(String createOption) {
             this.putQueryParameter("CreateOption", createOption);
@@ -376,7 +368,7 @@ public class CreateStackRequest extends Request {
         }
 
         /**
-         * CreateOptions.
+         * 创建选项列表。
          */
         public Builder createOptions(java.util.List < String > createOptions) {
             this.putQueryParameter("CreateOptions", createOptions);
@@ -385,13 +377,7 @@ public class CreateStackRequest extends Request {
         }
 
         /**
-         * Specifies whether to enable deletion protection for the stack. Default value: Disabled. Valid values:
-         * <p>
-         * 
-         * *   Enabled: enables deletion protection.
-         * *   Disabled: disables deletion protection. You can delete the stack by using the ROS console or by calling the DeleteStack operation.
-         * 
-         * >  The DeletionProtection parameter that you specify for the root stack applies to its nested stacks.
+         * DeletionProtection.
          */
         public Builder deletionProtection(String deletionProtection) {
             this.putQueryParameter("DeletionProtection", deletionProtection);
@@ -400,13 +386,7 @@ public class CreateStackRequest extends Request {
         }
 
         /**
-         * Specifies whether to disable rollback for the resources when the stack fails to be created.
-         * <p>
-         * 
-         * Default value: false. Valid values:
-         * 
-         * *   true
-         * *   false
+         * DisableRollback.
          */
         public Builder disableRollback(Boolean disableRollback) {
             this.putQueryParameter("DisableRollback", disableRollback);
@@ -415,7 +395,7 @@ public class CreateStackRequest extends Request {
         }
 
         /**
-         * The callback URL that is used to receive stack event N.
+         * NotificationURLs.
          */
         public Builder notificationURLs(java.util.List < String > notificationURLs) {
             this.putQueryParameter("NotificationURLs", notificationURLs);
@@ -424,14 +404,7 @@ public class CreateStackRequest extends Request {
         }
 
         /**
-         * The maximum number of concurrent operations that can be performed on resources.
-         * <p>
-         * 
-         * By default, this parameter is empty. You can set this parameter to an integer that is greater than or equal to 0.
-         * 
-         * > 
-         * *   If you set this parameter to an integer that is greater than 0, the integer is used. If you set this parameter to 0 or leave this parameter empty, no limit is imposed on ROS stacks. However, the default value in Terraform is used for Terraform stacks. In most cases, the default value in Terraform is 10.
-         * *   If you set this parameter to a specific value, ROS associates the value with the stack. The value affects subsequent operations on the stack, such as an update operation.
+         * Parallelism.
          */
         public Builder parallelism(Long parallelism) {
             this.putQueryParameter("Parallelism", parallelism);
@@ -440,7 +413,7 @@ public class CreateStackRequest extends Request {
         }
 
         /**
-         * The parameters.
+         * Parameters.
          */
         public Builder parameters(java.util.List < Parameters> parameters) {
             this.putQueryParameter("Parameters", parameters);
@@ -449,14 +422,7 @@ public class CreateStackRequest extends Request {
         }
 
         /**
-         * The name of the RAM role. ROS assumes the RAM role to create the stack and uses credentials of the role to call the APIs of Alibaba Cloud services.
-         * <p>
-         * 
-         * ROS assumes the RAM role to perform operations on the stack. If you have permissions to perform operations on the stack but do not have permissions to use the RAM role, ROS still assumes the RAM role. You must make sure that the least privileges are granted to the RAM role.
-         * 
-         * If you do not specify this parameter, ROS assumes the existing role that is associated with the stack. If no roles are available, ROS uses a temporary credential that is generated from the credentials of your account.
-         * 
-         * The name can be up to 64 characters in length.
+         * RamRoleName.
          */
         public Builder ramRoleName(String ramRoleName) {
             this.putQueryParameter("RamRoleName", ramRoleName);
@@ -465,7 +431,7 @@ public class CreateStackRequest extends Request {
         }
 
         /**
-         * The region ID of the stack. You can call the [DescribeRegions](~~131035~~) operation to query the most recent region list.
+         * RegionId.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -474,10 +440,7 @@ public class CreateStackRequest extends Request {
         }
 
         /**
-         * The ID of the resource group. If you do not specify this parameter, the stack is added to the default resource group.
-         * <p>
-         * 
-         * For more information about resource groups, see the "Resource Group" section of the [What is Resource Management?](~~94475~~) topic.
+         * ResourceGroupId.
          */
         public Builder resourceGroupId(String resourceGroupId) {
             this.putQueryParameter("ResourceGroupId", resourceGroupId);
@@ -486,10 +449,7 @@ public class CreateStackRequest extends Request {
         }
 
         /**
-         * The name of the stack.
-         * <p>
-         * 
-         * The name can be up to 255 characters in length, and can contain digits, letters, hyphens (-), and underscores (\_). The name must start with a letter.
+         * StackName.
          */
         public Builder stackName(String stackName) {
             this.putQueryParameter("StackName", stackName);
@@ -498,10 +458,7 @@ public class CreateStackRequest extends Request {
         }
 
         /**
-         * The structure that contains the stack policy body. The stack policy body must be 1 to 16,384 bytes in length.
-         * <p>
-         * 
-         * >  You can specify only one of the StackPolicyBody and StackPolicyURL parameters.
+         * StackPolicyBody.
          */
         public Builder stackPolicyBody(String stackPolicyBody) {
             this.putQueryParameter("StackPolicyBody", stackPolicyBody);
@@ -510,12 +467,7 @@ public class CreateStackRequest extends Request {
         }
 
         /**
-         * The URL of the file that contains the stack policy. The URL must point to a policy that is located on an HTTP or HTTPS web server or in an Object Storage Service (OSS) bucket, such as oss://ros/stack-policy/demo or oss://ros/stack-policy/demo?RegionId=cn-hangzhou. The policy file can be up to 16,384 bytes in length. If you do not specify the region ID of the OSS bucket, the value of the RegionId parameter is used.
-         * <p>
-         * 
-         * >  You can specify only one of the StackPolicyBody and StackPolicyURL parameters.
-         * 
-         * The URL can be up to 1,350 bytes in length.
+         * StackPolicyURL.
          */
         public Builder stackPolicyURL(String stackPolicyURL) {
             this.putQueryParameter("StackPolicyURL", stackPolicyURL);
@@ -524,7 +476,7 @@ public class CreateStackRequest extends Request {
         }
 
         /**
-         * The tags.
+         * Tags.
          */
         public Builder tags(java.util.List < Tags> tags) {
             this.putQueryParameter("Tags", tags);
@@ -533,10 +485,7 @@ public class CreateStackRequest extends Request {
         }
 
         /**
-         * The structure that contains the template body. The template body must be 1 to 524,288 bytes in length. If the length of the template body exceeds the upper limit, we recommend that you add parameters to the HTTP POST request body to prevent request failures caused by excessively long URLs.
-         * <p>
-         * 
-         * >  You must specify only one of the following parameters: TemplateBody, TemplateURL, TemplateId, and TemplateScratchId.
+         * TemplateBody.
          */
         public Builder templateBody(String templateBody) {
             this.putQueryParameter("TemplateBody", templateBody);
@@ -545,10 +494,7 @@ public class CreateStackRequest extends Request {
         }
 
         /**
-         * The ID of the template. This parameter applies to shared templates and private templates.
-         * <p>
-         * 
-         * >  You must specify only one of the following parameters: TemplateBody, TemplateURL, TemplateId, and TemplateScratchId.
+         * TemplateId.
          */
         public Builder templateId(String templateId) {
             this.putQueryParameter("TemplateId", templateId);
@@ -557,12 +503,7 @@ public class CreateStackRequest extends Request {
         }
 
         /**
-         * The ID of the scenario.
-         * <p>
-         * 
-         * For more information about how to query the IDs of scenarios, see [ListTemplateScratches](~~363050~~).
-         * 
-         * >  You must specify only one of the following parameters: TemplateBody, TemplateURL, TemplateId, and TemplateScratchId.
+         * TemplateScratchId.
          */
         public Builder templateScratchId(String templateScratchId) {
             this.putQueryParameter("TemplateScratchId", templateScratchId);
@@ -571,10 +512,7 @@ public class CreateStackRequest extends Request {
         }
 
         /**
-         * The region ID of the scenario. The default value is the same as the value of the RegionId parameter.
-         * <p>
-         * 
-         * You can call the [DescribeRegions](~~131035~~) operation to query the most recent region list.
+         * TemplateScratchRegionId.
          */
         public Builder templateScratchRegionId(String templateScratchRegionId) {
             this.putQueryParameter("TemplateScratchRegionId", templateScratchRegionId);
@@ -583,10 +521,7 @@ public class CreateStackRequest extends Request {
         }
 
         /**
-         * The URL of the file that contains the template body. The URL must point to a template that is located on an HTTP or HTTPS web server or in an OSS bucket, such as oss://ros/stack-policy/demo or oss://ros/stack-policy/demo?RegionId=cn-hangzhou. The template body can be up to 524,288 bytes in length. If you do not specify the region ID of the OSS bucket, the value of the RegionId parameter is used.
-         * <p>
-         * 
-         * >  You must specify only one of the following parameters: TemplateBody, TemplateURL, TemplateId, and TemplateScratchId.
+         * TemplateURL.
          */
         public Builder templateURL(String templateURL) {
             this.putQueryParameter("TemplateURL", templateURL);
@@ -595,7 +530,7 @@ public class CreateStackRequest extends Request {
         }
 
         /**
-         * The version of the template. This parameter takes effect only when the TemplateId parameter is specified.
+         * TemplateVersion.
          */
         public Builder templateVersion(String templateVersion) {
             this.putQueryParameter("TemplateVersion", templateVersion);
@@ -604,12 +539,7 @@ public class CreateStackRequest extends Request {
         }
 
         /**
-         * The timeout period that is allowed to create the stack.
-         * <p>
-         * 
-         * *   Default value: 60.
-         * *   Unit: minutes.
-         * *   Valid values: 10 to 1440.
+         * TimeoutInMinutes.
          */
         public Builder timeoutInMinutes(Long timeoutInMinutes) {
             this.putQueryParameter("TimeoutInMinutes", timeoutInMinutes);
@@ -665,14 +595,7 @@ public class CreateStackRequest extends Request {
             private String parameterValue; 
 
             /**
-             * The name of parameter N that is defined in the template. If you do not specify the name and value of a parameter, ROS uses the default name and value in the template.
-             * <p>
-             * 
-             * Maximum value of N: 200.
-             * 
-             * The name must be 1 to 128 characters in length, and cannot contain `http://` or `https://`. The name cannot start with `aliyun` or `acs:`.
-             * 
-             * >  The Parameters parameter is optional. If you specify Parameters, you must specify both Parameters.N.ParameterKey and Parameters.N.ParameterValue.
+             * ParameterKey.
              */
             public Builder parameterKey(String parameterKey) {
                 this.parameterKey = parameterKey;
@@ -680,14 +603,7 @@ public class CreateStackRequest extends Request {
             }
 
             /**
-             * The value of parameter N that is defined in the template.
-             * <p>
-             * 
-             * Maximum value of N: 200.
-             * 
-             * The value can be up to 128 characters in length, and cannot contain `http://` or `https://`. The value cannot start with `aliyun` or `acs:`.
-             * 
-             * >  The Parameters parameter is optional. If you specify Parameters, you must specify both Parameters.N.ParameterKey and Parameters.N.ParameterValue.
+             * ParameterValue.
              */
             public Builder parameterValue(String parameterValue) {
                 this.parameterValue = parameterValue;
@@ -741,14 +657,7 @@ public class CreateStackRequest extends Request {
             private String value; 
 
             /**
-             * The key of tag N that you want to add to the stack.
-             * <p>
-             * 
-             * Valid values of N: 1 to 20.
-             * 
-             * > 
-             * *   The Tags parameter is optional. If you specify the Tags parameter, you must specify the Tags.N.Key parameter.
-             * *   The tag of a stack is propagated to each stack resource that supports the tag feature. For more information, see [Propagate tags](~~201421~~).
+             * Key.
              */
             public Builder key(String key) {
                 this.key = key;
@@ -756,12 +665,7 @@ public class CreateStackRequest extends Request {
             }
 
             /**
-             * The value of tag N that you want to add to the stack.
-             * <p>
-             * 
-             * Valid values of N: 1 to 20.
-             * 
-             * >  The tag of a stack is propagated to each stack resource that supports the tag feature. For more information, see [Propagate tags](~~201421~~).
+             * Value.
              */
             public Builder value(String value) {
                 this.value = value;

@@ -223,7 +223,7 @@ public class ListStacksRequest extends Request {
         } 
 
         /**
-         * EndTime.
+         * The reason why the stack is in its current state.
          */
         public Builder endTime(String endTime) {
             this.putQueryParameter("EndTime", endTime);
@@ -232,12 +232,7 @@ public class ListStacksRequest extends Request {
         }
 
         /**
-         * The number of the page to return.
-         * <p>
-         * 
-         * Pages start from page 1.
-         * 
-         * Default value: 1.
+         * The tags.
          */
         public Builder pageNumber(Long pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -246,12 +241,39 @@ public class ListStacksRequest extends Request {
         }
 
         /**
-         * The number of entries to return on each page.
+         * The state N of the stack. Valid values:
          * <p>
          * 
-         * Maximum value: 50.
-         * 
-         * Default value: 10.
+         * *   CREATE_IN_PROGRESS: The stack is being created.
+         * *   CREATE_FAILED: The stack fails to be created.
+         * *   CREATE_COMPLETE: The stack is created.
+         * *   UPDATE_IN_PROGRESS: The stack is being updated.
+         * *   UPDATE_FAILED: The stack fails to be updated.
+         * *   UPDATE_COMPLETE: The stack is updated.
+         * *   DELETE_IN_PROGRESS: The stack is being deleted.
+         * *   DELETE_FAILED: The stack fails to be deleted.
+         * *   CREATE_ROLLBACK_IN_PROGRESS: The resources are being rolled back after the stack fails to be created.
+         * *   CREATE_ROLLBACK_FAILED: The resources fail to be rolled back after the stack fails to be created.
+         * *   CREATE_ROLLBACK_COMPLETE: The resources are rolled back after the stack fails to be created.
+         * *   ROLLBACK_IN_PROGRESS: The resources of the stack are being rolled back.
+         * *   ROLLBACK_FAILED: The resources of the stack fail to be rolled back.
+         * *   ROLLBACK_COMPLETE: The resources of the stack are rolled back.
+         * *   CHECK_IN_PROGRESS: The stack is being validated.
+         * *   CHECK_FAILED: The stack fails to be validated.
+         * *   CHECK_COMPLETE: The stack is validated.
+         * *   REVIEW_IN_PROGRESS: The stack is being reviewed.
+         * *   IMPORT_CREATE_IN_PROGRESS: The stack is being created by using imported resources.
+         * *   IMPORT_CREATE_FAILED: The stack fails to be created by using imported resources.
+         * *   IMPORT_CREATE_COMPLETE: The stack is created by using imported resources.
+         * *   IMPORT_CREATE_ROLLBACK_IN_PROGRESS: The resources are being rolled back after the stack fails to be created by using imported resources.
+         * *   IMPORT_CREATE_ROLLBACK_FAILED: The resources fail to be rolled back after the stack fails to be created by using imported resources.
+         * *   IMPORT_CREATE_ROLLBACK_COMPLETE: The resources are rolled back after the stack fails to be created by using imported resources.
+         * *   IMPORT_UPDATE_IN_PROGRESS: The stack is being updated by using imported resources.
+         * *   IMPORT_UPDATE_FAILED: The stack fails to be updated by using imported resources.
+         * *   IMPORT_UPDATE_COMPLETE: The stack is updated by using imported resources.
+         * *   IMPORT_UPDATE_ROLLBACK_IN_PROGRESS: The resources are being rolled back after the stack fails to be updated by using imported resources.
+         * *   IMPORT_UPDATE_ROLLBACK_FAILED: The resources fail to be rolled back after the stack fails to be updated by using imported resources.
+         * *   IMPORT_UPDATE_ROLLBACK_COMPLETE: The resources are rolled back after the stack fails to be updated by using imported resources.
          */
         public Builder pageSize(Long pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -260,7 +282,7 @@ public class ListStacksRequest extends Request {
         }
 
         /**
-         * The ID of the parent stack.
+         * The name of stack N.
          */
         public Builder parentStackId(String parentStackId) {
             this.putQueryParameter("ParentStackId", parentStackId);
@@ -269,11 +291,81 @@ public class ListStacksRequest extends Request {
         }
 
         /**
-         * The region ID of the stack. You can call the [DescribeRegions](~~131035~~) operation to query the most recent region list.
+         * The name of stack N.
+         * <p>
+         * 
+         * The name can be up to 255 characters in length, and can contain digits, letters, hyphens (-), and underscores (\_). The name must start with a digit or letter. You can use the wildcard character (∗) for fuzzy search.
+         * 
+         * Valid values of N: 1 to 5.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
             this.regionId = regionId;
+            return this;
+        }
+
+        /**
+         * The list of stacks.
+         */
+        public Builder resourceGroupId(String resourceGroupId) {
+            this.putQueryParameter("ResourceGroupId", resourceGroupId);
+            this.resourceGroupId = resourceGroupId;
+            return this;
+        }
+
+        /**
+         * The key of tag N of the stack.
+         * <p>
+         * 
+         * Valid values of N: 1 to 20.
+         */
+        public Builder showNestedStack(Boolean showNestedStack) {
+            this.putQueryParameter("ShowNestedStack", showNestedStack);
+            this.showNestedStack = showNestedStack;
+            return this;
+        }
+
+        /**
+         * The value of tag N of the stack.
+         * <p>
+         * 
+         * Valid values of N: 1 to 20.
+         */
+        public Builder stackId(String stackId) {
+            this.putQueryParameter("StackId", stackId);
+            this.stackId = stackId;
+            return this;
+        }
+
+        /**
+         * The state of the stack.
+         */
+        public Builder stackIds(java.util.List < String > stackIds) {
+            this.putQueryParameter("StackIds", stackIds);
+            this.stackIds = stackIds;
+            return this;
+        }
+
+        /**
+         * The ID of stack N.
+         * <p>
+         * 
+         * You can specify one or more IDs to query one or more stacks at the same time.
+         * 
+         * Valid values of N: 1 to 10.
+         */
+        public Builder stackName(java.util.List < String > stackName) {
+            this.putQueryParameter("StackName", stackName);
+            this.stackName = stackName;
+            return this;
+        }
+
+        /**
+         * The time when the last successful drift detection was performed on the stack.
+         */
+        public Builder startTime(String startTime) {
+            this.putQueryParameter("StartTime", startTime);
+            this.startTime = startTime;
             return this;
         }
 
@@ -283,67 +375,6 @@ public class ListStacksRequest extends Request {
          * 
          * For more information about resource groups, see the "Resource Group" section of the [What is Resource Management?](~~94475~~) topic.
          */
-        public Builder resourceGroupId(String resourceGroupId) {
-            this.putQueryParameter("ResourceGroupId", resourceGroupId);
-            this.resourceGroupId = resourceGroupId;
-            return this;
-        }
-
-        /**
-         * Specifies whether to return nested stacks. Default value: false. Valid values:
-         * <p>
-         * 
-         * *   true
-         * 
-         * *   false
-         * 
-         * > If the ParentStackId parameter is specified, you must set the ShowNestedStack parameter to true.
-         */
-        public Builder showNestedStack(Boolean showNestedStack) {
-            this.putQueryParameter("ShowNestedStack", showNestedStack);
-            this.showNestedStack = showNestedStack;
-            return this;
-        }
-
-        /**
-         * The ID of the stack. If you want to query the basic information about the stack, you can use this parameter and do not need to call the GetStack operation.
-         */
-        public Builder stackId(String stackId) {
-            this.putQueryParameter("StackId", stackId);
-            this.stackId = stackId;
-            return this;
-        }
-
-        /**
-         * The ID of stack N.
-         */
-        public Builder stackIds(java.util.List < String > stackIds) {
-            this.putQueryParameter("StackIds", stackIds);
-            this.stackIds = stackIds;
-            return this;
-        }
-
-        /**
-         * The name of stack N.
-         */
-        public Builder stackName(java.util.List < String > stackName) {
-            this.putQueryParameter("StackName", stackName);
-            this.stackName = stackName;
-            return this;
-        }
-
-        /**
-         * StartTime.
-         */
-        public Builder startTime(String startTime) {
-            this.putQueryParameter("StartTime", startTime);
-            this.startTime = startTime;
-            return this;
-        }
-
-        /**
-         * The state N of the stack.
-         */
         public Builder status(java.util.List < String > status) {
             this.putQueryParameter("Status", status);
             this.status = status;
@@ -351,7 +382,12 @@ public class ListStacksRequest extends Request {
         }
 
         /**
-         * The tags.
+         * The number of entries returned per page.
+         * <p>
+         * 
+         * Maximum value: 50.
+         * 
+         * Default value: 10.
          */
         public Builder tag(java.util.List < Tag> tag) {
             this.putQueryParameter("Tag", tag);
@@ -405,10 +441,7 @@ public class ListStacksRequest extends Request {
             private String value; 
 
             /**
-             * The key of tag N of the stack.
-             * <p>
-             * 
-             * Valid values of N: 1 to 20.
+             * The ID of the request.
              */
             public Builder key(String key) {
                 this.key = key;
@@ -416,10 +449,7 @@ public class ListStacksRequest extends Request {
             }
 
             /**
-             * The value of tag N of the stack.
-             * <p>
-             * 
-             * Valid values of N: 1 to 20.
+             * The page number of the returned page.
              */
             public Builder value(String value) {
                 this.value = value;

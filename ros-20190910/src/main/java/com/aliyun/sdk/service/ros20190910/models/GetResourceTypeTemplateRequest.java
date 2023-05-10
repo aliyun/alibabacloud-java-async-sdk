@@ -17,9 +17,14 @@ public class GetResourceTypeTemplateRequest extends Request {
     @Validation(required = true)
     private String resourceType;
 
+    @Query
+    @NameInMap("VersionId")
+    private String versionId;
+
     private GetResourceTypeTemplateRequest(Builder builder) {
         super(builder);
         this.resourceType = builder.resourceType;
+        this.versionId = builder.versionId;
     }
 
     public static Builder builder() {
@@ -42,8 +47,16 @@ public class GetResourceTypeTemplateRequest extends Request {
         return this.resourceType;
     }
 
+    /**
+     * @return versionId
+     */
+    public String getVersionId() {
+        return this.versionId;
+    }
+
     public static final class Builder extends Request.Builder<GetResourceTypeTemplateRequest, Builder> {
         private String resourceType; 
+        private String versionId; 
 
         private Builder() {
             super();
@@ -52,17 +65,24 @@ public class GetResourceTypeTemplateRequest extends Request {
         private Builder(GetResourceTypeTemplateRequest request) {
             super(request);
             this.resourceType = request.resourceType;
+            this.versionId = request.versionId;
         } 
 
         /**
-         * The resource type.
-         * <p>
-         * 
-         * You can call the [ListResourceTypes](~~133957~~) operation to query the resource type.
+         * ResourceType.
          */
         public Builder resourceType(String resourceType) {
             this.putQueryParameter("ResourceType", resourceType);
             this.resourceType = resourceType;
+            return this;
+        }
+
+        /**
+         * VersionId.
+         */
+        public Builder versionId(String versionId) {
+            this.putQueryParameter("VersionId", versionId);
+            this.versionId = versionId;
             return this;
         }
 

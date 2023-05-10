@@ -7,31 +7,27 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
- * {@link ListResourceTypesResponseBody} extends {@link TeaModel}
+ * {@link ListResourceTypeVersionsResponseBody} extends {@link TeaModel}
  *
- * <p>ListResourceTypesResponseBody</p>
+ * <p>ListResourceTypeVersionsResponseBody</p>
  */
-public class ListResourceTypesResponseBody extends TeaModel {
+public class ListResourceTypeVersionsResponseBody extends TeaModel {
     @NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("ResourceTypeSummaries")
-    private java.util.List < ResourceTypeSummaries> resourceTypeSummaries;
+    @NameInMap("ResourceTypeVersions")
+    private java.util.List < ResourceTypeVersions> resourceTypeVersions;
 
-    @NameInMap("ResourceTypes")
-    private java.util.List < String > resourceTypes;
-
-    private ListResourceTypesResponseBody(Builder builder) {
+    private ListResourceTypeVersionsResponseBody(Builder builder) {
         this.requestId = builder.requestId;
-        this.resourceTypeSummaries = builder.resourceTypeSummaries;
-        this.resourceTypes = builder.resourceTypes;
+        this.resourceTypeVersions = builder.resourceTypeVersions;
     }
 
     public static Builder builder() {
         return new Builder();
     }
 
-    public static ListResourceTypesResponseBody create() {
+    public static ListResourceTypeVersionsResponseBody create() {
         return builder().build();
     }
 
@@ -43,23 +39,15 @@ public class ListResourceTypesResponseBody extends TeaModel {
     }
 
     /**
-     * @return resourceTypeSummaries
+     * @return resourceTypeVersions
      */
-    public java.util.List < ResourceTypeSummaries> getResourceTypeSummaries() {
-        return this.resourceTypeSummaries;
-    }
-
-    /**
-     * @return resourceTypes
-     */
-    public java.util.List < String > getResourceTypes() {
-        return this.resourceTypes;
+    public java.util.List < ResourceTypeVersions> getResourceTypeVersions() {
+        return this.resourceTypeVersions;
     }
 
     public static final class Builder {
         private String requestId; 
-        private java.util.List < ResourceTypeSummaries> resourceTypeSummaries; 
-        private java.util.List < String > resourceTypes; 
+        private java.util.List < ResourceTypeVersions> resourceTypeVersions; 
 
         /**
          * RequestId.
@@ -70,33 +58,22 @@ public class ListResourceTypesResponseBody extends TeaModel {
         }
 
         /**
-         * ResourceTypeSummaries.
+         * ResourceTypeVersions.
          */
-        public Builder resourceTypeSummaries(java.util.List < ResourceTypeSummaries> resourceTypeSummaries) {
-            this.resourceTypeSummaries = resourceTypeSummaries;
+        public Builder resourceTypeVersions(java.util.List < ResourceTypeVersions> resourceTypeVersions) {
+            this.resourceTypeVersions = resourceTypeVersions;
             return this;
         }
 
-        /**
-         * The array of resource types.
-         */
-        public Builder resourceTypes(java.util.List < String > resourceTypes) {
-            this.resourceTypes = resourceTypes;
-            return this;
-        }
-
-        public ListResourceTypesResponseBody build() {
-            return new ListResourceTypesResponseBody(this);
+        public ListResourceTypeVersionsResponseBody build() {
+            return new ListResourceTypeVersionsResponseBody(this);
         } 
 
     } 
 
-    public static class ResourceTypeSummaries extends TeaModel {
+    public static class ResourceTypeVersions extends TeaModel {
         @NameInMap("CreateTime")
         private String createTime;
-
-        @NameInMap("DefaultVersionId")
-        private String defaultVersionId;
 
         @NameInMap("Description")
         private String description;
@@ -104,8 +81,8 @@ public class ListResourceTypesResponseBody extends TeaModel {
         @NameInMap("EntityType")
         private String entityType;
 
-        @NameInMap("LatestVersionId")
-        private String latestVersionId;
+        @NameInMap("IsDefaultVersion")
+        private Boolean isDefaultVersion;
 
         @NameInMap("Provider")
         private String provider;
@@ -113,29 +90,28 @@ public class ListResourceTypesResponseBody extends TeaModel {
         @NameInMap("ResourceType")
         private String resourceType;
 
-        @NameInMap("TotalVersionCount")
-        private Integer totalVersionCount;
-
         @NameInMap("UpdateTime")
         private String updateTime;
 
-        private ResourceTypeSummaries(Builder builder) {
+        @NameInMap("VersionId")
+        private String versionId;
+
+        private ResourceTypeVersions(Builder builder) {
             this.createTime = builder.createTime;
-            this.defaultVersionId = builder.defaultVersionId;
             this.description = builder.description;
             this.entityType = builder.entityType;
-            this.latestVersionId = builder.latestVersionId;
+            this.isDefaultVersion = builder.isDefaultVersion;
             this.provider = builder.provider;
             this.resourceType = builder.resourceType;
-            this.totalVersionCount = builder.totalVersionCount;
             this.updateTime = builder.updateTime;
+            this.versionId = builder.versionId;
         }
 
         public static Builder builder() {
             return new Builder();
         }
 
-        public static ResourceTypeSummaries create() {
+        public static ResourceTypeVersions create() {
             return builder().build();
         }
 
@@ -144,13 +120,6 @@ public class ListResourceTypesResponseBody extends TeaModel {
          */
         public String getCreateTime() {
             return this.createTime;
-        }
-
-        /**
-         * @return defaultVersionId
-         */
-        public String getDefaultVersionId() {
-            return this.defaultVersionId;
         }
 
         /**
@@ -168,10 +137,10 @@ public class ListResourceTypesResponseBody extends TeaModel {
         }
 
         /**
-         * @return latestVersionId
+         * @return isDefaultVersion
          */
-        public String getLatestVersionId() {
-            return this.latestVersionId;
+        public Boolean getIsDefaultVersion() {
+            return this.isDefaultVersion;
         }
 
         /**
@@ -189,43 +158,34 @@ public class ListResourceTypesResponseBody extends TeaModel {
         }
 
         /**
-         * @return totalVersionCount
-         */
-        public Integer getTotalVersionCount() {
-            return this.totalVersionCount;
-        }
-
-        /**
          * @return updateTime
          */
         public String getUpdateTime() {
             return this.updateTime;
         }
 
+        /**
+         * @return versionId
+         */
+        public String getVersionId() {
+            return this.versionId;
+        }
+
         public static final class Builder {
             private String createTime; 
-            private String defaultVersionId; 
             private String description; 
             private String entityType; 
-            private String latestVersionId; 
+            private Boolean isDefaultVersion; 
             private String provider; 
             private String resourceType; 
-            private Integer totalVersionCount; 
             private String updateTime; 
+            private String versionId; 
 
             /**
              * CreateTime.
              */
             public Builder createTime(String createTime) {
                 this.createTime = createTime;
-                return this;
-            }
-
-            /**
-             * DefaultVersionId.
-             */
-            public Builder defaultVersionId(String defaultVersionId) {
-                this.defaultVersionId = defaultVersionId;
                 return this;
             }
 
@@ -246,10 +206,10 @@ public class ListResourceTypesResponseBody extends TeaModel {
             }
 
             /**
-             * LatestVersionId.
+             * IsDefaultVersion.
              */
-            public Builder latestVersionId(String latestVersionId) {
-                this.latestVersionId = latestVersionId;
+            public Builder isDefaultVersion(Boolean isDefaultVersion) {
+                this.isDefaultVersion = isDefaultVersion;
                 return this;
             }
 
@@ -270,14 +230,6 @@ public class ListResourceTypesResponseBody extends TeaModel {
             }
 
             /**
-             * TotalVersionCount.
-             */
-            public Builder totalVersionCount(Integer totalVersionCount) {
-                this.totalVersionCount = totalVersionCount;
-                return this;
-            }
-
-            /**
              * UpdateTime.
              */
             public Builder updateTime(String updateTime) {
@@ -285,8 +237,16 @@ public class ListResourceTypesResponseBody extends TeaModel {
                 return this;
             }
 
-            public ResourceTypeSummaries build() {
-                return new ResourceTypeSummaries(this);
+            /**
+             * VersionId.
+             */
+            public Builder versionId(String versionId) {
+                this.versionId = versionId;
+                return this;
+            }
+
+            public ResourceTypeVersions build() {
+                return new ResourceTypeVersions(this);
             } 
 
         } 

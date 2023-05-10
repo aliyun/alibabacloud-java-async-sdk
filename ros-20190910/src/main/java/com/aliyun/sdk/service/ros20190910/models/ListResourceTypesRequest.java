@@ -16,9 +16,19 @@ public class ListResourceTypesRequest extends Request {
     @NameInMap("EntityType")
     private String entityType;
 
+    @Query
+    @NameInMap("Provider")
+    private String provider;
+
+    @Query
+    @NameInMap("ResourceType")
+    private String resourceType;
+
     private ListResourceTypesRequest(Builder builder) {
         super(builder);
         this.entityType = builder.entityType;
+        this.provider = builder.provider;
+        this.resourceType = builder.resourceType;
     }
 
     public static Builder builder() {
@@ -41,8 +51,24 @@ public class ListResourceTypesRequest extends Request {
         return this.entityType;
     }
 
+    /**
+     * @return provider
+     */
+    public String getProvider() {
+        return this.provider;
+    }
+
+    /**
+     * @return resourceType
+     */
+    public String getResourceType() {
+        return this.resourceType;
+    }
+
     public static final class Builder extends Request.Builder<ListResourceTypesRequest, Builder> {
         private String entityType; 
+        private String provider; 
+        private String resourceType; 
 
         private Builder() {
             super();
@@ -51,19 +77,34 @@ public class ListResourceTypesRequest extends Request {
         private Builder(ListResourceTypesRequest request) {
             super(request);
             this.entityType = request.entityType;
+            this.provider = request.provider;
+            this.resourceType = request.resourceType;
         } 
 
         /**
-         * The entity type. Valid values:
-         * <p>
-         * 
-         * *   All: all resource types.
-         * *   Resource: resources other than DataSource resources. For more information, see [Resources](~~28863~~).
-         * *   DataSource: DataSource resources.
+         * The array of resource types.
          */
         public Builder entityType(String entityType) {
             this.putQueryParameter("EntityType", entityType);
             this.entityType = entityType;
+            return this;
+        }
+
+        /**
+         * Provider.
+         */
+        public Builder provider(String provider) {
+            this.putQueryParameter("Provider", provider);
+            this.provider = provider;
+            return this;
+        }
+
+        /**
+         * ResourceType.
+         */
+        public Builder resourceType(String resourceType) {
+            this.putQueryParameter("ResourceType", resourceType);
+            this.resourceType = resourceType;
             return this;
         }
 

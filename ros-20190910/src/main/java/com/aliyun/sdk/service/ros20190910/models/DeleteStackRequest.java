@@ -135,6 +135,24 @@ public class DeleteStackRequest extends Request {
         }
 
         /**
+         * The name of resource N that you want to retain.
+         */
+        public Builder ramRoleName(String ramRoleName) {
+            this.putQueryParameter("RamRoleName", ramRoleName);
+            this.ramRoleName = ramRoleName;
+            return this;
+        }
+
+        /**
+         * The name of resource N that you want to retain.
+         */
+        public Builder regionId(String regionId) {
+            this.putQueryParameter("RegionId", regionId);
+            this.regionId = regionId;
+            return this;
+        }
+
+        /**
          * The name of the RAM role. Resource Orchestration Service (ROS) assumes the RAM role to create the stack and uses credentials of the role to call the APIs of Alibaba Cloud services.
          * <p>
          * 
@@ -144,30 +162,6 @@ public class DeleteStackRequest extends Request {
          * 
          * The name of the RAM role can be up to 64 bytes in length.
          */
-        public Builder ramRoleName(String ramRoleName) {
-            this.putQueryParameter("RamRoleName", ramRoleName);
-            this.ramRoleName = ramRoleName;
-            return this;
-        }
-
-        /**
-         * The region ID of the stack. You can call the [DescribeRegions](~~131035~~) operation to query the most recent region list.
-         */
-        public Builder regionId(String regionId) {
-            this.putQueryParameter("RegionId", regionId);
-            this.regionId = regionId;
-            return this;
-        }
-
-        /**
-         * Specifies whether to retain all resources in the stack.
-         * <p>
-         * 
-         * Default value: false. Valid values:
-         * 
-         * *   true
-         * *   false
-         */
         public Builder retainAllResources(Boolean retainAllResources) {
             this.putQueryParameter("RetainAllResources", retainAllResources);
             this.retainAllResources = retainAllResources;
@@ -175,7 +169,7 @@ public class DeleteStackRequest extends Request {
         }
 
         /**
-         * The name of resource N that you want to retain.
+         * The ID of the request.
          */
         public Builder retainResources(java.util.List < String > retainResources) {
             this.putQueryParameter("RetainResources", retainResources);
@@ -184,7 +178,7 @@ public class DeleteStackRequest extends Request {
         }
 
         /**
-         * The ID of the stack.
+         * The region ID of the stack. You can call the [DescribeRegions](~~131035~~) operation to query the most recent region list.
          */
         public Builder stackId(String stackId) {
             this.putQueryParameter("StackId", stackId);

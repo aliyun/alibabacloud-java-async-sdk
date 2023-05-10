@@ -18,9 +18,13 @@ public class GetResourceTypeTemplateResponseBody extends TeaModel {
     @NameInMap("TemplateBody")
     private java.util.Map < String, ? > templateBody;
 
+    @NameInMap("TemplateContent")
+    private String templateContent;
+
     private GetResourceTypeTemplateResponseBody(Builder builder) {
         this.requestId = builder.requestId;
         this.templateBody = builder.templateBody;
+        this.templateContent = builder.templateContent;
     }
 
     public static Builder builder() {
@@ -45,12 +49,20 @@ public class GetResourceTypeTemplateResponseBody extends TeaModel {
         return this.templateBody;
     }
 
+    /**
+     * @return templateContent
+     */
+    public String getTemplateContent() {
+        return this.templateContent;
+    }
+
     public static final class Builder {
         private String requestId; 
         private java.util.Map < String, ? > templateBody; 
+        private String templateContent; 
 
         /**
-         * The ID of the request.
+         * RequestId.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -58,15 +70,18 @@ public class GetResourceTypeTemplateResponseBody extends TeaModel {
         }
 
         /**
-         * The structure that contains the template body.
-         * <p>
-         * 
-         * The template body must be 1 to 51,200 bytes in length.
-         * 
-         * For more information, see [Template syntax](~~28857~~).
+         * TemplateBody.
          */
         public Builder templateBody(java.util.Map < String, ? > templateBody) {
             this.templateBody = templateBody;
+            return this;
+        }
+
+        /**
+         * TemplateContent.
+         */
+        public Builder templateContent(String templateContent) {
+            this.templateContent = templateContent;
             return this;
         }
 

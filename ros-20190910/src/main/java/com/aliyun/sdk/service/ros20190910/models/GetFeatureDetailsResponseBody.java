@@ -118,7 +118,7 @@ public class GetFeatureDetailsResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * The resource types that support the system tag `acs:ros:stackId`.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -126,7 +126,7 @@ public class GetFeatureDetailsResponseBody extends TeaModel {
         }
 
         /**
-         * Details of the resource cleaner feature.
+         * The names of properties that are supported by the resource type.
          */
         public Builder resourceCleaner(ResourceCleaner resourceCleaner) {
             this.resourceCleaner = resourceCleaner;
@@ -142,7 +142,7 @@ public class GetFeatureDetailsResponseBody extends TeaModel {
         }
 
         /**
-         * Details of the template parameter constraint feature.
+         * TemplateParameterConstraints.
          */
         public Builder templateParameterConstraints(TemplateParameterConstraints templateParameterConstraints) {
             this.templateParameterConstraints = templateParameterConstraints;
@@ -150,7 +150,7 @@ public class GetFeatureDetailsResponseBody extends TeaModel {
         }
 
         /**
-         * Details of the scenario feature.
+         * The names of the side effects. The StopInstance value indicates that an instance that is related to the specified resource is stopped.
          */
         public Builder templateScratch(TemplateScratch templateScratch) {
             this.templateScratch = templateScratch;
@@ -158,7 +158,7 @@ public class GetFeatureDetailsResponseBody extends TeaModel {
         }
 
         /**
-         * Details of the Terraform hosting feature.
+         * The resource types that support the custom tag feature.
          */
         public Builder terraform(Terraform terraform) {
             this.terraform = terraform;
@@ -263,7 +263,7 @@ public class GetFeatureDetailsResponseBody extends TeaModel {
             private java.util.List < String > supportedFilters; 
 
             /**
-             * The resource type that can be cleaned up.
+             * ResourceType.
              */
             public Builder resourceType(String resourceType) {
                 this.resourceType = resourceType;
@@ -271,7 +271,7 @@ public class GetFeatureDetailsResponseBody extends TeaModel {
             }
 
             /**
-             * The names of the side effects. The StopInstance value indicates that an instance that is related to the specified resource is stopped.
+             * SideEffects.
              */
             public Builder sideEffects(java.util.List < String > sideEffects) {
                 this.sideEffects = sideEffects;
@@ -279,15 +279,7 @@ public class GetFeatureDetailsResponseBody extends TeaModel {
             }
 
             /**
-             * The filters that are used to filter resources. Valid values:
-             * <p>
-             * 
-             * *   RegionId: the ID of the region.
-             * *   ResourceId: the ID of the resource.
-             * *   ResourceName: the name of the resource.
-             * *   Tags: the tags of the resource.
-             * *   ResourceGroupId: the ID of the resource group.
-             * *   DeletionProtection: the deletion protection feature.
+             * SupportedFilters.
              */
             public Builder supportedFilters(java.util.List < String > supportedFilters) {
                 this.supportedFilters = supportedFilters;
@@ -328,7 +320,7 @@ public class GetFeatureDetailsResponseBody extends TeaModel {
             private java.util.List < SupportedResourceTypes> supportedResourceTypes; 
 
             /**
-             * The resource types that can be cleaned up.
+             * SupportedResourceTypes.
              */
             public Builder supportedResourceTypes(java.util.List < SupportedResourceTypes> supportedResourceTypes) {
                 this.supportedResourceTypes = supportedResourceTypes;
@@ -389,7 +381,7 @@ public class GetFeatureDetailsResponseBody extends TeaModel {
             }
 
             /**
-             * The resource type that can be cleaned up.
+             * ResourceType.
              */
             public Builder resourceType(String resourceType) {
                 this.resourceType = resourceType;
@@ -430,7 +422,7 @@ public class GetFeatureDetailsResponseBody extends TeaModel {
             private java.util.List < ResourceImportSupportedResourceTypes> supportedResourceTypes; 
 
             /**
-             * The resource types that can be cleaned up.
+             * SupportedResourceTypes.
              */
             public Builder supportedResourceTypes(java.util.List < ResourceImportSupportedResourceTypes> supportedResourceTypes) {
                 this.supportedResourceTypes = supportedResourceTypes;
@@ -483,7 +475,7 @@ public class GetFeatureDetailsResponseBody extends TeaModel {
             private String resourceType; 
 
             /**
-             * The names of properties that are supported by the resource type.
+             * Properties.
              */
             public Builder properties(java.util.List < String > properties) {
                 this.properties = properties;
@@ -491,7 +483,7 @@ public class GetFeatureDetailsResponseBody extends TeaModel {
             }
 
             /**
-             * The resource type.
+             * ResourceType.
              */
             public Builder resourceType(String resourceType) {
                 this.resourceType = resourceType;
@@ -532,7 +524,7 @@ public class GetFeatureDetailsResponseBody extends TeaModel {
             private java.util.List < TemplateParameterConstraintsSupportedResourceTypes> supportedResourceTypes; 
 
             /**
-             * The resource types that support the template parameter constraint feature.
+             * SupportedResourceTypes.
              */
             public Builder supportedResourceTypes(java.util.List < TemplateParameterConstraintsSupportedResourceTypes> supportedResourceTypes) {
                 this.supportedResourceTypes = supportedResourceTypes;
@@ -621,7 +613,7 @@ public class GetFeatureDetailsResponseBody extends TeaModel {
             private Boolean sourceTagSupported; 
 
             /**
-             * The resource type.
+             * Details of the template parameter constraint feature.
              */
             public Builder resourceType(String resourceType) {
                 this.resourceType = resourceType;
@@ -629,11 +621,7 @@ public class GetFeatureDetailsResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether the resource scope can be specified by resource group. Valid values:
-             * <p>
-             * 
-             * - true
-             * - false
+             * The resource type.
              */
             public Builder sourceResourceGroupSupported(Boolean sourceResourceGroupSupported) {
                 this.sourceResourceGroupSupported = sourceResourceGroupSupported;
@@ -641,11 +629,7 @@ public class GetFeatureDetailsResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether the resource scope can be specified by tag, resource group, or resource. Valid values:
-             * <p>
-             * 
-             * - true
-             * - false
+             * The resource types that support the template parameter constraint feature.
              */
             public Builder sourceResourcesSupported(Boolean sourceResourcesSupported) {
                 this.sourceResourcesSupported = sourceResourcesSupported;
@@ -653,11 +637,7 @@ public class GetFeatureDetailsResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether the resource scope can be specified by resource. Valid values:
-             * <p>
-             * 
-             * - true
-             * - false
+             * The names of properties that are supported by the resource type.
              */
             public Builder sourceSupported(Boolean sourceSupported) {
                 this.sourceSupported = sourceSupported;
@@ -665,11 +645,7 @@ public class GetFeatureDetailsResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether the resource scope can be specified by tag. Valid values:
-             * <p>
-             * 
-             * - true
-             * - false
+             * The resource types that support the template parameter constraint feature.
              */
             public Builder sourceTagSupported(Boolean sourceTagSupported) {
                 this.sourceTagSupported = sourceTagSupported;
@@ -710,7 +686,7 @@ public class GetFeatureDetailsResponseBody extends TeaModel {
             private java.util.List < TemplateScratchSupportedResourceTypes> supportedResourceTypes; 
 
             /**
-             * The resource types that support the scenario feature.
+             * The names of the side effects. The StopInstance value indicates that an instance that is related to the specified resource is stopped.
              */
             public Builder supportedResourceTypes(java.util.List < TemplateScratchSupportedResourceTypes> supportedResourceTypes) {
                 this.supportedResourceTypes = supportedResourceTypes;
@@ -751,7 +727,15 @@ public class GetFeatureDetailsResponseBody extends TeaModel {
             private java.util.List < String > deleteStack; 
 
             /**
-             * The resource types that support the risk check performed to detect risks caused by a stack deletion operation.
+             * The filters that are used to filter resources. Valid values:
+             * <p>
+             * 
+             * *   RegionId: the ID of the region.
+             * *   ResourceId: the ID of the resource.
+             * *   ResourceName: the name of the resource.
+             * *   Tags: the tags of the resource.
+             * *   ResourceGroupId: the ID of the resource group.
+             * *   DeletionProtection: the deletion protection feature.
              */
             public Builder deleteStack(java.util.List < String > deleteStack) {
                 this.deleteStack = deleteStack;
@@ -840,7 +824,11 @@ public class GetFeatureDetailsResponseBody extends TeaModel {
             private java.util.List < String > systemTag; 
 
             /**
-             * The resource types that support the custom tag feature.
+             * Indicates whether the resource scope can be specified by tag, resource group, or resource. Valid values:
+             * <p>
+             * 
+             * - true
+             * - false
              */
             public Builder customTag(java.util.List < String > customTag) {
                 this.customTag = customTag;
@@ -848,7 +836,11 @@ public class GetFeatureDetailsResponseBody extends TeaModel {
             }
 
             /**
-             * The resource types that support the price inquiry feature.
+             * Indicates whether the resource scope can be specified by resource group. Valid values:
+             * <p>
+             * 
+             * - true
+             * - false
              */
             public Builder estimateCost(java.util.List < String > estimateCost) {
                 this.estimateCost = estimateCost;
@@ -856,7 +848,7 @@ public class GetFeatureDetailsResponseBody extends TeaModel {
             }
 
             /**
-             * The resource types that support the resource group feature.
+             * Details of the resource cleaner feature.
              */
             public Builder resourceGroup(java.util.List < String > resourceGroup) {
                 this.resourceGroup = resourceGroup;
@@ -864,7 +856,7 @@ public class GetFeatureDetailsResponseBody extends TeaModel {
             }
 
             /**
-             * The resource type that support the risk check feature.
+             * The resource type that can be cleaned up.
              */
             public Builder stackOperationRisk(StackOperationRisk stackOperationRisk) {
                 this.stackOperationRisk = stackOperationRisk;
@@ -872,7 +864,7 @@ public class GetFeatureDetailsResponseBody extends TeaModel {
             }
 
             /**
-             * The resource types that support the system tag `acs:ros:stackId`.
+             * The resource types that support the scenario feature.
              */
             public Builder systemTag(java.util.List < String > systemTag) {
                 this.systemTag = systemTag;
@@ -925,7 +917,7 @@ public class GetFeatureDetailsResponseBody extends TeaModel {
             private java.util.List < String > supportedVersions; 
 
             /**
-             * The name of the provider.
+             * The resource types that support the price inquiry feature.
              */
             public Builder providerName(String providerName) {
                 this.providerName = providerName;
@@ -933,7 +925,7 @@ public class GetFeatureDetailsResponseBody extends TeaModel {
             }
 
             /**
-             * The versions of the provider.
+             * The resource types that support the resource group feature.
              */
             public Builder supportedVersions(java.util.List < String > supportedVersions) {
                 this.supportedVersions = supportedVersions;
@@ -1010,7 +1002,7 @@ public class GetFeatureDetailsResponseBody extends TeaModel {
             private java.util.List < String > updateAllowedTransforms; 
 
             /**
-             * The names and versions of the providers that correspond to the Terraform versions.
+             * The resource types that support the price inquiry feature.
              */
             public Builder providerVersions(java.util.List < ProviderVersions> providerVersions) {
                 this.providerVersions = providerVersions;
@@ -1018,7 +1010,7 @@ public class GetFeatureDetailsResponseBody extends TeaModel {
             }
 
             /**
-             * The Terraform version.
+             * The resource type that support the risk check feature.
              */
             public Builder terraformVersion(String terraformVersion) {
                 this.terraformVersion = terraformVersion;
@@ -1026,7 +1018,7 @@ public class GetFeatureDetailsResponseBody extends TeaModel {
             }
 
             /**
-             * The Terraform version that is supported by ROS. The parameter value is the same as the value of the Transform parameter in a Terraform template.
+             * The resource types that support the risk check performed to detect risks caused by a stack deletion operation.
              */
             public Builder transform(String transform) {
                 this.transform = transform;
@@ -1034,7 +1026,7 @@ public class GetFeatureDetailsResponseBody extends TeaModel {
             }
 
             /**
-             * The versions to which Terraform can be updated in ROS.
+             * The resource types that support the risk check performed to detect risks caused by a stack deletion operation.
              */
             public Builder updateAllowedTransforms(java.util.List < String > updateAllowedTransforms) {
                 this.updateAllowedTransforms = updateAllowedTransforms;
@@ -1095,7 +1087,7 @@ public class GetFeatureDetailsResponseBody extends TeaModel {
             }
 
             /**
-             * The Terraform versions.
+             * The resource types that support the custom tag feature.
              */
             public Builder supportedVersions(java.util.List < SupportedVersions> supportedVersions) {
                 this.supportedVersions = supportedVersions;

@@ -50,7 +50,25 @@ public class ListStackResourcesResponseBody extends TeaModel {
         private java.util.List < Resources> resources; 
 
         /**
-         * The ID of the request.
+         * The status of the resource. Valid values:
+         * <p>
+         * 
+         * *   INIT_COMPLETE: The resource is in the pending creation state.
+         * *   CREATE_COMPLETE: The resource is created.
+         * *   CREATE_FAILED: The resource fails to be created.
+         * *   CREATE_IN_PROGRESS: The resource is being created.
+         * *   UPDATE_IN_PROGRESS: The resource is being updated.
+         * *   UPDATE_FAILED: The resource fails to be updated.
+         * *   UPDATE_COMPLETE: The resource is updated.
+         * *   DELETE_IN_PROGRESS: The resource is being deleted.
+         * *   DELETE_FAILED: The resource fails to be deleted.
+         * *   DELETE_COMPLETE: The resource is deleted.
+         * *   CHECK_IN_PROGRESS: The resource is being validated.
+         * *   CHECK_FAILED: The resource fails to be validated.
+         * *   CHECK_COMPLETE: The resource is validated.
+         * *   IMPORT_IN_PROGRESS: The resource is being imported.
+         * *   IMPORT_FAILED: The resource fails to be imported.
+         * *   IMPORT_COMPLETE: The resource is imported.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -58,7 +76,7 @@ public class ListStackResourcesResponseBody extends TeaModel {
         }
 
         /**
-         * Details about resources.
+         * The logical ID of the resource. The logical ID is the resource name that is defined in the template.
          */
         public Builder resources(java.util.List < Resources> resources) {
             this.resources = resources;
@@ -71,6 +89,67 @@ public class ListStackResourcesResponseBody extends TeaModel {
 
     } 
 
+    public static class ModuleInfo extends TeaModel {
+        @NameInMap("LogicalIdHierarchy")
+        private String logicalIdHierarchy;
+
+        @NameInMap("TypeHierarchy")
+        private String typeHierarchy;
+
+        private ModuleInfo(Builder builder) {
+            this.logicalIdHierarchy = builder.logicalIdHierarchy;
+            this.typeHierarchy = builder.typeHierarchy;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static ModuleInfo create() {
+            return builder().build();
+        }
+
+        /**
+         * @return logicalIdHierarchy
+         */
+        public String getLogicalIdHierarchy() {
+            return this.logicalIdHierarchy;
+        }
+
+        /**
+         * @return typeHierarchy
+         */
+        public String getTypeHierarchy() {
+            return this.typeHierarchy;
+        }
+
+        public static final class Builder {
+            private String logicalIdHierarchy; 
+            private String typeHierarchy; 
+
+            /**
+             * LogicalIdHierarchy.
+             */
+            public Builder logicalIdHierarchy(String logicalIdHierarchy) {
+                this.logicalIdHierarchy = logicalIdHierarchy;
+                return this;
+            }
+
+            /**
+             * TypeHierarchy.
+             */
+            public Builder typeHierarchy(String typeHierarchy) {
+                this.typeHierarchy = typeHierarchy;
+                return this;
+            }
+
+            public ModuleInfo build() {
+                return new ModuleInfo(this);
+            } 
+
+        } 
+
+    }
     public static class Resources extends TeaModel {
         @NameInMap("CreateTime")
         private String createTime;
@@ -80,6 +159,9 @@ public class ListStackResourcesResponseBody extends TeaModel {
 
         @NameInMap("LogicalResourceId")
         private String logicalResourceId;
+
+        @NameInMap("ModuleInfo")
+        private ModuleInfo moduleInfo;
 
         @NameInMap("PhysicalResourceId")
         private String physicalResourceId;
@@ -109,6 +191,7 @@ public class ListStackResourcesResponseBody extends TeaModel {
             this.createTime = builder.createTime;
             this.driftDetectionTime = builder.driftDetectionTime;
             this.logicalResourceId = builder.logicalResourceId;
+            this.moduleInfo = builder.moduleInfo;
             this.physicalResourceId = builder.physicalResourceId;
             this.resourceDriftStatus = builder.resourceDriftStatus;
             this.resourceType = builder.resourceType;
@@ -146,6 +229,13 @@ public class ListStackResourcesResponseBody extends TeaModel {
          */
         public String getLogicalResourceId() {
             return this.logicalResourceId;
+        }
+
+        /**
+         * @return moduleInfo
+         */
+        public ModuleInfo getModuleInfo() {
+            return this.moduleInfo;
         }
 
         /**
@@ -208,6 +298,7 @@ public class ListStackResourcesResponseBody extends TeaModel {
             private String createTime; 
             private String driftDetectionTime; 
             private String logicalResourceId; 
+            private ModuleInfo moduleInfo; 
             private String physicalResourceId; 
             private String resourceDriftStatus; 
             private String resourceType; 
@@ -218,34 +309,10 @@ public class ListStackResourcesResponseBody extends TeaModel {
             private String updateTime; 
 
             /**
-             * The time when the resource was created. The time follows the ISO 8601 standard in the YYYY-MM-DDThh:mm:ss format. The time is displayed in UTC.
+             * CreateTime.
              */
             public Builder createTime(String createTime) {
                 this.createTime = createTime;
-                return this;
-            }
-
-            /**
-             * The most recent point in time when a successful drift detection operation was performed.
-             */
-            public Builder driftDetectionTime(String driftDetectionTime) {
-                this.driftDetectionTime = driftDetectionTime;
-                return this;
-            }
-
-            /**
-             * The logical ID of the resource. The logical ID is the resource name that is defined in the template.
-             */
-            public Builder logicalResourceId(String logicalResourceId) {
-                this.logicalResourceId = logicalResourceId;
-                return this;
-            }
-
-            /**
-             * The physical ID of the resource.
-             */
-            public Builder physicalResourceId(String physicalResourceId) {
-                this.physicalResourceId = physicalResourceId;
                 return this;
             }
 
@@ -258,13 +325,45 @@ public class ListStackResourcesResponseBody extends TeaModel {
              * *   NOT_CHECKED: ROS did not check whether the actual configuration of the resource differs from its expected template configuration.
              * *   IN_SYNC: The actual configuration of the resource matches its expected template configuration.
              */
+            public Builder driftDetectionTime(String driftDetectionTime) {
+                this.driftDetectionTime = driftDetectionTime;
+                return this;
+            }
+
+            /**
+             * The ID of the stack.
+             */
+            public Builder logicalResourceId(String logicalResourceId) {
+                this.logicalResourceId = logicalResourceId;
+                return this;
+            }
+
+            /**
+             * ModuleInfo.
+             */
+            public Builder moduleInfo(ModuleInfo moduleInfo) {
+                this.moduleInfo = moduleInfo;
+                return this;
+            }
+
+            /**
+             * The type of the resource.
+             */
+            public Builder physicalResourceId(String physicalResourceId) {
+                this.physicalResourceId = physicalResourceId;
+                return this;
+            }
+
+            /**
+             * The time when the resource was created. The time follows the ISO 8601 standard in the YYYY-MM-DDThh:mm:ss format. The time is displayed in UTC.
+             */
             public Builder resourceDriftStatus(String resourceDriftStatus) {
                 this.resourceDriftStatus = resourceDriftStatus;
                 return this;
             }
 
             /**
-             * The type of the resource.
+             * The reason why the resource is in a specific state.
              */
             public Builder resourceType(String resourceType) {
                 this.resourceType = resourceType;
@@ -272,10 +371,26 @@ public class ListStackResourcesResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the stack.
+             * The most recent point in time when a successful drift detection operation was performed.
              */
             public Builder stackId(String stackId) {
                 this.stackId = stackId;
+                return this;
+            }
+
+            /**
+             * StackName.
+             */
+            public Builder stackName(String stackName) {
+                this.stackName = stackName;
+                return this;
+            }
+
+            /**
+             * The time when the resource was updated. The time follows the ISO 8601 standard in the YYYY-MM-DDThh:mm:ss format. The time is displayed in UTC.
+             */
+            public Builder status(String status) {
+                this.status = status;
                 return this;
             }
 
@@ -285,47 +400,13 @@ public class ListStackResourcesResponseBody extends TeaModel {
              * 
              * The name can be up to 255 characters in length, and can contain digits, letters, hyphens (-), and underscores (\_). The name must start with a digit or letter.
              */
-            public Builder stackName(String stackName) {
-                this.stackName = stackName;
-                return this;
-            }
-
-            /**
-             * The status of the resource. Valid values:
-             * <p>
-             * 
-             * *   INIT_COMPLETE: The resource is in the pending creation state.
-             * *   CREATE_COMPLETE: The resource is created.
-             * *   CREATE_FAILED: The resource fails to be created.
-             * *   CREATE_IN_PROGRESS: The resource is being created.
-             * *   UPDATE_IN_PROGRESS: The resource is being updated.
-             * *   UPDATE_FAILED: The resource fails to be updated.
-             * *   UPDATE_COMPLETE: The resource is updated.
-             * *   DELETE_IN_PROGRESS: The resource is being deleted.
-             * *   DELETE_FAILED: The resource fails to be deleted.
-             * *   DELETE_COMPLETE: The resource is deleted.
-             * *   CHECK_IN_PROGRESS: The resource is being validated.
-             * *   CHECK_FAILED: The resource fails to be validated.
-             * *   CHECK_COMPLETE: The resource is validated.
-             * *   IMPORT_IN_PROGRESS: The resource is being imported.
-             * *   IMPORT_FAILED: The resource fails to be imported.
-             * *   IMPORT_COMPLETE: The resource is imported.
-             */
-            public Builder status(String status) {
-                this.status = status;
-                return this;
-            }
-
-            /**
-             * The reason why the resource is in a specific state.
-             */
             public Builder statusReason(String statusReason) {
                 this.statusReason = statusReason;
                 return this;
             }
 
             /**
-             * The time when the resource was updated. The time follows the ISO 8601 standard in the YYYY-MM-DDThh:mm:ss format. The time is displayed in UTC.
+             * The physical ID of the resource.
              */
             public Builder updateTime(String updateTime) {
                 this.updateTime = updateTime;

@@ -7,11 +7,11 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
- * {@link GetResourceTypeRequest} extends {@link RequestModel}
+ * {@link DeregisterResourceTypeRequest} extends {@link RequestModel}
  *
- * <p>GetResourceTypeRequest</p>
+ * <p>DeregisterResourceTypeRequest</p>
  */
-public class GetResourceTypeRequest extends Request {
+public class DeregisterResourceTypeRequest extends Request {
     @Query
     @NameInMap("ResourceType")
     @Validation(required = true)
@@ -21,7 +21,7 @@ public class GetResourceTypeRequest extends Request {
     @NameInMap("VersionId")
     private String versionId;
 
-    private GetResourceTypeRequest(Builder builder) {
+    private DeregisterResourceTypeRequest(Builder builder) {
         super(builder);
         this.resourceType = builder.resourceType;
         this.versionId = builder.versionId;
@@ -31,7 +31,7 @@ public class GetResourceTypeRequest extends Request {
         return new Builder();
     }
 
-    public static GetResourceTypeRequest create() {
+    public static DeregisterResourceTypeRequest create() {
         return builder().build();
     }
 
@@ -54,7 +54,7 @@ public class GetResourceTypeRequest extends Request {
         return this.versionId;
     }
 
-    public static final class Builder extends Request.Builder<GetResourceTypeRequest, Builder> {
+    public static final class Builder extends Request.Builder<DeregisterResourceTypeRequest, Builder> {
         private String resourceType; 
         private String versionId; 
 
@@ -62,14 +62,14 @@ public class GetResourceTypeRequest extends Request {
             super();
         } 
 
-        private Builder(GetResourceTypeRequest request) {
+        private Builder(DeregisterResourceTypeRequest request) {
             super(request);
             this.resourceType = request.resourceType;
             this.versionId = request.versionId;
         } 
 
         /**
-         * The attributes of the resource.
+         * ResourceType.
          */
         public Builder resourceType(String resourceType) {
             this.putQueryParameter("ResourceType", resourceType);
@@ -87,8 +87,8 @@ public class GetResourceTypeRequest extends Request {
         }
 
         @Override
-        public GetResourceTypeRequest build() {
-            return new GetResourceTypeRequest(this);
+        public DeregisterResourceTypeRequest build() {
+            return new DeregisterResourceTypeRequest(this);
         } 
 
     } 

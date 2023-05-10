@@ -7,15 +7,15 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
- * {@link DeleteStackResponseBody} extends {@link TeaModel}
+ * {@link SetResourceTypeResponseBody} extends {@link TeaModel}
  *
- * <p>DeleteStackResponseBody</p>
+ * <p>SetResourceTypeResponseBody</p>
  */
-public class DeleteStackResponseBody extends TeaModel {
+public class SetResourceTypeResponseBody extends TeaModel {
     @NameInMap("RequestId")
     private String requestId;
 
-    private DeleteStackResponseBody(Builder builder) {
+    private SetResourceTypeResponseBody(Builder builder) {
         this.requestId = builder.requestId;
     }
 
@@ -23,7 +23,7 @@ public class DeleteStackResponseBody extends TeaModel {
         return new Builder();
     }
 
-    public static DeleteStackResponseBody create() {
+    public static SetResourceTypeResponseBody create() {
         return builder().build();
     }
 
@@ -45,8 +45,8 @@ public class DeleteStackResponseBody extends TeaModel {
             return this;
         }
 
-        public DeleteStackResponseBody build() {
-            return new DeleteStackResponseBody(this);
+        public SetResourceTypeResponseBody build() {
+            return new SetResourceTypeResponseBody(this);
         } 
 
     } 

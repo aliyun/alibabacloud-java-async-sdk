@@ -195,58 +195,11 @@ public class ListStackOperationRisksRequest extends Request {
         } 
 
         /**
-         * The client token that is used to ensure the idempotence of the request. You can use the client to generate the value, but you must make sure that the value is unique among different requests.
-         * <p>
-         * 
-         * The token can be up to 64 characters in length, and can contain letters, digits, hyphens (-), and underscores (\_).
-         * 
-         * For more information, see [Ensure idempotence](~~134212~~).
+         * The resource N that you want to retain in the stack.
          */
         public Builder clientToken(String clientToken) {
             this.putQueryParameter("ClientToken", clientToken);
             this.clientToken = clientToken;
-            return this;
-        }
-
-        /**
-         * The type of the operation of which you want to detect risks.
-         * <p>
-         * 
-         * Valid values:
-         * 
-         * *   DeleteStack: detects high risks that may arise in resources when you delete a stack.
-         * *   CreateStack: detect risks of creation failure that may arise when you create a stack. In this case, ROS allows you to detect only the required permissions that are not granted to the Alibaba Cloud account of the caller.
-         */
-        public Builder operationType(String operationType) {
-            this.putQueryParameter("OperationType", operationType);
-            this.operationType = operationType;
-            return this;
-        }
-
-        /**
-         * The name of the RAM role.
-         * <p>
-         * 
-         * *   If you specify a RAM role, ROS creates stacks based on the permissions that are granted to the RAM role and uses the credentials of the RAM role to call the API operations of Alibaba Cloud services.
-         * *   If you do not specify a RAM role, ROS creates stacks based on the permissions of your Alibaba Cloud account.
-         * 
-         * The name of the RAM role can be up to 64 bytes in length.
-         */
-        public Builder ramRoleName(String ramRoleName) {
-            this.putQueryParameter("RamRoleName", ramRoleName);
-            this.ramRoleName = ramRoleName;
-            return this;
-        }
-
-        /**
-         * The region ID of the stack.
-         * <p>
-         * 
-         * You can call the [DescribeRegions](~~131035~~) operation to query the most recent region list.
-         */
-        public Builder regionId(String regionId) {
-            this.putQueryParameter("RegionId", regionId);
-            this.regionId = regionId;
             return this;
         }
 
@@ -261,27 +214,32 @@ public class ListStackOperationRisksRequest extends Request {
          * 
          * >  This parameter takes effect when the OperationType parameter is set to DeleteStack.
          */
-        public Builder retainAllResources(Boolean retainAllResources) {
-            this.putQueryParameter("RetainAllResources", retainAllResources);
-            this.retainAllResources = retainAllResources;
+        public Builder operationType(String operationType) {
+            this.putQueryParameter("OperationType", operationType);
+            this.operationType = operationType;
             return this;
         }
 
         /**
          * The resource N that you want to retain in the stack.
          */
-        public Builder retainResources(java.util.List < String > retainResources) {
-            this.putQueryParameter("RetainResources", retainResources);
-            this.retainResources = retainResources;
+        public Builder ramRoleName(String ramRoleName) {
+            this.putQueryParameter("RamRoleName", ramRoleName);
+            this.ramRoleName = ramRoleName;
             return this;
         }
 
         /**
-         * The ID of the stack.
+         * The client token that is used to ensure the idempotence of the request. You can use the client to generate the value, but you must make sure that the value is unique among different requests.
+         * <p>
+         * 
+         * The token can be up to 64 characters in length, and can contain letters, digits, hyphens (-), and underscores (\_).
+         * 
+         * For more information, see [Ensure idempotence](~~134212~~).
          */
-        public Builder stackId(String stackId) {
-            this.putQueryParameter("StackId", stackId);
-            this.stackId = stackId;
+        public Builder regionId(String regionId) {
+            this.putQueryParameter("RegionId", regionId);
+            this.regionId = regionId;
             return this;
         }
 
@@ -291,21 +249,9 @@ public class ListStackOperationRisksRequest extends Request {
          * 
          * >  You must specify only one of the following parameters: TemplateBody, TemplateURL, TemplateId, and TemplateScratchId.
          */
-        public Builder templateBody(String templateBody) {
-            this.putQueryParameter("TemplateBody", templateBody);
-            this.templateBody = templateBody;
-            return this;
-        }
-
-        /**
-         * The ID of the template. This parameter applies to shared and private templates.
-         * <p>
-         * 
-         * >  You must specify only one of the following parameters: TemplateBody, TemplateURL, TemplateId, and TemplateScratchId.
-         */
-        public Builder templateId(String templateId) {
-            this.putQueryParameter("TemplateId", templateId);
-            this.templateId = templateId;
+        public Builder retainAllResources(Boolean retainAllResources) {
+            this.putQueryParameter("RetainAllResources", retainAllResources);
+            this.retainAllResources = retainAllResources;
             return this;
         }
 
@@ -315,9 +261,24 @@ public class ListStackOperationRisksRequest extends Request {
          * 
          * >  You must specify only one of the following parameters: TemplateBody, TemplateURL, TemplateId, and TemplateScratchId.
          */
-        public Builder templateURL(String templateURL) {
-            this.putQueryParameter("TemplateURL", templateURL);
-            this.templateURL = templateURL;
+        public Builder retainResources(java.util.List < String > retainResources) {
+            this.putQueryParameter("RetainResources", retainResources);
+            this.retainResources = retainResources;
+            return this;
+        }
+
+        /**
+         * The name of the RAM role.
+         * <p>
+         * 
+         * *   If you specify a RAM role, ROS creates stacks based on the permissions that are granted to the RAM role and uses the credentials of the RAM role to call the API operations of Alibaba Cloud services.
+         * *   If you do not specify a RAM role, ROS creates stacks based on the permissions of your Alibaba Cloud account.
+         * 
+         * The name of the RAM role can be up to 64 bytes in length.
+         */
+        public Builder stackId(String stackId) {
+            this.putQueryParameter("StackId", stackId);
+            this.stackId = stackId;
             return this;
         }
 
@@ -326,6 +287,33 @@ public class ListStackOperationRisksRequest extends Request {
          * <p>
          * 
          * >  This parameter takes effect only when the TemplateId parameter is specified.
+         */
+        public Builder templateBody(String templateBody) {
+            this.putQueryParameter("TemplateBody", templateBody);
+            this.templateBody = templateBody;
+            return this;
+        }
+
+        /**
+         * The resources that are at risk.
+         */
+        public Builder templateId(String templateId) {
+            this.putQueryParameter("TemplateId", templateId);
+            this.templateId = templateId;
+            return this;
+        }
+
+        /**
+         * The ID of the request.
+         */
+        public Builder templateURL(String templateURL) {
+            this.putQueryParameter("TemplateURL", templateURL);
+            this.templateURL = templateURL;
+            return this;
+        }
+
+        /**
+         * The logical ID of the resource. The logical ID is the resource name that is defined in the template.
          */
         public Builder templateVersion(String templateVersion) {
             this.putQueryParameter("TemplateVersion", templateVersion);

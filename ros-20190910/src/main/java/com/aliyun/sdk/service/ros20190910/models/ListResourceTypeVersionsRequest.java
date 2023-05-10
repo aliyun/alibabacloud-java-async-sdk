@@ -7,31 +7,26 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
- * {@link GetResourceTypeRequest} extends {@link RequestModel}
+ * {@link ListResourceTypeVersionsRequest} extends {@link RequestModel}
  *
- * <p>GetResourceTypeRequest</p>
+ * <p>ListResourceTypeVersionsRequest</p>
  */
-public class GetResourceTypeRequest extends Request {
+public class ListResourceTypeVersionsRequest extends Request {
     @Query
     @NameInMap("ResourceType")
     @Validation(required = true)
     private String resourceType;
 
-    @Query
-    @NameInMap("VersionId")
-    private String versionId;
-
-    private GetResourceTypeRequest(Builder builder) {
+    private ListResourceTypeVersionsRequest(Builder builder) {
         super(builder);
         this.resourceType = builder.resourceType;
-        this.versionId = builder.versionId;
     }
 
     public static Builder builder() {
         return new Builder();
     }
 
-    public static GetResourceTypeRequest create() {
+    public static ListResourceTypeVersionsRequest create() {
         return builder().build();
     }
 
@@ -47,29 +42,20 @@ public class GetResourceTypeRequest extends Request {
         return this.resourceType;
     }
 
-    /**
-     * @return versionId
-     */
-    public String getVersionId() {
-        return this.versionId;
-    }
-
-    public static final class Builder extends Request.Builder<GetResourceTypeRequest, Builder> {
+    public static final class Builder extends Request.Builder<ListResourceTypeVersionsRequest, Builder> {
         private String resourceType; 
-        private String versionId; 
 
         private Builder() {
             super();
         } 
 
-        private Builder(GetResourceTypeRequest request) {
+        private Builder(ListResourceTypeVersionsRequest request) {
             super(request);
             this.resourceType = request.resourceType;
-            this.versionId = request.versionId;
         } 
 
         /**
-         * The attributes of the resource.
+         * ResourceType.
          */
         public Builder resourceType(String resourceType) {
             this.putQueryParameter("ResourceType", resourceType);
@@ -77,18 +63,9 @@ public class GetResourceTypeRequest extends Request {
             return this;
         }
 
-        /**
-         * VersionId.
-         */
-        public Builder versionId(String versionId) {
-            this.putQueryParameter("VersionId", versionId);
-            this.versionId = versionId;
-            return this;
-        }
-
         @Override
-        public GetResourceTypeRequest build() {
-            return new GetResourceTypeRequest(this);
+        public ListResourceTypeVersionsRequest build() {
+            return new ListResourceTypeVersionsRequest(this);
         } 
 
     } 

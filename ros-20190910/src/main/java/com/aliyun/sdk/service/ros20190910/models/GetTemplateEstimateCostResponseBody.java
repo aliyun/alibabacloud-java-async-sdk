@@ -50,7 +50,7 @@ public class GetTemplateEstimateCostResponseBody extends TeaModel {
         private java.util.Map < String, ? > resources; 
 
         /**
-         * The ID of the request.
+         * RequestId.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -58,7 +58,7 @@ public class GetTemplateEstimateCostResponseBody extends TeaModel {
         }
 
         /**
-         * Details of the resource.
+         * Resources.
          */
         public Builder resources(java.util.Map < String, ? > resources) {
             this.resources = resources;

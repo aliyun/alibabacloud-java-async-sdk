@@ -7,19 +7,19 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
- * {@link UpdateStackGroupResponseBody} extends {@link TeaModel}
+ * {@link RegisterResourceTypeResponseBody} extends {@link TeaModel}
  *
- * <p>UpdateStackGroupResponseBody</p>
+ * <p>RegisterResourceTypeResponseBody</p>
  */
-public class UpdateStackGroupResponseBody extends TeaModel {
-    @NameInMap("OperationId")
-    private String operationId;
+public class RegisterResourceTypeResponseBody extends TeaModel {
+    @NameInMap("RegistrationId")
+    private String registrationId;
 
     @NameInMap("RequestId")
     private String requestId;
 
-    private UpdateStackGroupResponseBody(Builder builder) {
-        this.operationId = builder.operationId;
+    private RegisterResourceTypeResponseBody(Builder builder) {
+        this.registrationId = builder.registrationId;
         this.requestId = builder.requestId;
     }
 
@@ -27,15 +27,15 @@ public class UpdateStackGroupResponseBody extends TeaModel {
         return new Builder();
     }
 
-    public static UpdateStackGroupResponseBody create() {
+    public static RegisterResourceTypeResponseBody create() {
         return builder().build();
     }
 
     /**
-     * @return operationId
+     * @return registrationId
      */
-    public String getOperationId() {
-        return this.operationId;
+    public String getRegistrationId() {
+        return this.registrationId;
     }
 
     /**
@@ -46,14 +46,14 @@ public class UpdateStackGroupResponseBody extends TeaModel {
     }
 
     public static final class Builder {
-        private String operationId; 
+        private String registrationId; 
         private String requestId; 
 
         /**
-         * OperationId.
+         * RegistrationId.
          */
-        public Builder operationId(String operationId) {
-            this.operationId = operationId;
+        public Builder registrationId(String registrationId) {
+            this.registrationId = registrationId;
             return this;
         }
 
@@ -65,8 +65,8 @@ public class UpdateStackGroupResponseBody extends TeaModel {
             return this;
         }
 
-        public UpdateStackGroupResponseBody build() {
-            return new UpdateStackGroupResponseBody(this);
+        public RegisterResourceTypeResponseBody build() {
+            return new RegisterResourceTypeResponseBody(this);
         } 
 
     } 

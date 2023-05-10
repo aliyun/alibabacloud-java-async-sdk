@@ -112,12 +112,7 @@ public class ListStackResourceDriftsRequest extends Request {
         } 
 
         /**
-         * The maximum number of results to be returned with a single call when the NextToken parameter is used for the query.
-         * <p>
-         * 
-         * Valid values: 1 to 100.
-         * 
-         * Default value: 50.
+         * The type of the resource.
          */
         public Builder maxResults(Long maxResults) {
             this.putQueryParameter("MaxResults", maxResults);
@@ -126,7 +121,7 @@ public class ListStackResourceDriftsRequest extends Request {
         }
 
         /**
-         * The query token. Set this parameter to the NextToken value returned in the last API call.
+         * The resource properties as defined in the template, in JSON format.
          */
         public Builder nextToken(String nextToken) {
             this.putQueryParameter("NextToken", nextToken);
@@ -135,7 +130,7 @@ public class ListStackResourceDriftsRequest extends Request {
         }
 
         /**
-         * The region ID of the stack. You can call the [DescribeRegions](~~131035~~) operation to query the most recent region list.
+         * The time when the resource drift detection operation was initiated.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -144,7 +139,13 @@ public class ListStackResourceDriftsRequest extends Request {
         }
 
         /**
-         * The drift status of the resource.
+         * The drift status of the resource. Valid values:
+         * <p>
+         * 
+         * *   DELETED: The actual configuration of the resource differs from its expected template configuration because the resource had been deleted.
+         * *   MODIFIED: The actual configuration of the resource differs from its expected template configuration.
+         * *   NOT_CHECKED: ROS has not checked whether the actual configuration of the resource differs from its expected template configuration.
+         * *   IN_SYNC: The actual configuration of the resource matches its expected template configuration.
          */
         public Builder resourceDriftStatus(java.util.List < String > resourceDriftStatus) {
             this.putQueryParameter("ResourceDriftStatus", resourceDriftStatus);
@@ -153,7 +154,7 @@ public class ListStackResourceDriftsRequest extends Request {
         }
 
         /**
-         * The ID of the stack.
+         * The physical ID of the resource.
          */
         public Builder stackId(String stackId) {
             this.putQueryParameter("StackId", stackId);

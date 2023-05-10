@@ -7,11 +7,19 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
- * {@link GetResourceTypeRequest} extends {@link RequestModel}
+ * {@link SetResourceTypeRequest} extends {@link RequestModel}
  *
- * <p>GetResourceTypeRequest</p>
+ * <p>SetResourceTypeRequest</p>
  */
-public class GetResourceTypeRequest extends Request {
+public class SetResourceTypeRequest extends Request {
+    @Query
+    @NameInMap("DefaultVersionId")
+    private String defaultVersionId;
+
+    @Query
+    @NameInMap("Description")
+    private String description;
+
     @Query
     @NameInMap("ResourceType")
     @Validation(required = true)
@@ -21,8 +29,10 @@ public class GetResourceTypeRequest extends Request {
     @NameInMap("VersionId")
     private String versionId;
 
-    private GetResourceTypeRequest(Builder builder) {
+    private SetResourceTypeRequest(Builder builder) {
         super(builder);
+        this.defaultVersionId = builder.defaultVersionId;
+        this.description = builder.description;
         this.resourceType = builder.resourceType;
         this.versionId = builder.versionId;
     }
@@ -31,13 +41,27 @@ public class GetResourceTypeRequest extends Request {
         return new Builder();
     }
 
-    public static GetResourceTypeRequest create() {
+    public static SetResourceTypeRequest create() {
         return builder().build();
     }
 
     @Override
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return defaultVersionId
+     */
+    public String getDefaultVersionId() {
+        return this.defaultVersionId;
+    }
+
+    /**
+     * @return description
+     */
+    public String getDescription() {
+        return this.description;
     }
 
     /**
@@ -54,7 +78,9 @@ public class GetResourceTypeRequest extends Request {
         return this.versionId;
     }
 
-    public static final class Builder extends Request.Builder<GetResourceTypeRequest, Builder> {
+    public static final class Builder extends Request.Builder<SetResourceTypeRequest, Builder> {
+        private String defaultVersionId; 
+        private String description; 
         private String resourceType; 
         private String versionId; 
 
@@ -62,14 +88,34 @@ public class GetResourceTypeRequest extends Request {
             super();
         } 
 
-        private Builder(GetResourceTypeRequest request) {
+        private Builder(SetResourceTypeRequest request) {
             super(request);
+            this.defaultVersionId = request.defaultVersionId;
+            this.description = request.description;
             this.resourceType = request.resourceType;
             this.versionId = request.versionId;
         } 
 
         /**
-         * The attributes of the resource.
+         * DefaultVersionId.
+         */
+        public Builder defaultVersionId(String defaultVersionId) {
+            this.putQueryParameter("DefaultVersionId", defaultVersionId);
+            this.defaultVersionId = defaultVersionId;
+            return this;
+        }
+
+        /**
+         * Description.
+         */
+        public Builder description(String description) {
+            this.putQueryParameter("Description", description);
+            this.description = description;
+            return this;
+        }
+
+        /**
+         * ResourceType.
          */
         public Builder resourceType(String resourceType) {
             this.putQueryParameter("ResourceType", resourceType);
@@ -87,8 +133,8 @@ public class GetResourceTypeRequest extends Request {
         }
 
         @Override
-        public GetResourceTypeRequest build() {
-            return new GetResourceTypeRequest(this);
+        public SetResourceTypeRequest build() {
+            return new SetResourceTypeRequest(this);
         } 
 
     } 
