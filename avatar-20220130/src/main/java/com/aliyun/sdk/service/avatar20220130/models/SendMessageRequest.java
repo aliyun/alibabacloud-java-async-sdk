@@ -13,6 +13,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class SendMessageRequest extends Request {
     @Query
+    @NameInMap("Feedback")
+    private Boolean feedback;
+
+    @Query
     @NameInMap("SessionId")
     private String sessionId;
 
@@ -30,6 +34,7 @@ public class SendMessageRequest extends Request {
 
     private SendMessageRequest(Builder builder) {
         super(builder);
+        this.feedback = builder.feedback;
         this.sessionId = builder.sessionId;
         this.tenantId = builder.tenantId;
         this.textRequest = builder.textRequest;
@@ -47,6 +52,13 @@ public class SendMessageRequest extends Request {
     @Override
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return feedback
+     */
+    public Boolean getFeedback() {
+        return this.feedback;
     }
 
     /**
@@ -78,6 +90,7 @@ public class SendMessageRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<SendMessageRequest, Builder> {
+        private Boolean feedback; 
         private String sessionId; 
         private Long tenantId; 
         private TextRequest textRequest; 
@@ -89,11 +102,21 @@ public class SendMessageRequest extends Request {
 
         private Builder(SendMessageRequest request) {
             super(request);
+            this.feedback = request.feedback;
             this.sessionId = request.sessionId;
             this.tenantId = request.tenantId;
             this.textRequest = request.textRequest;
             this.VAMLRequest = request.VAMLRequest;
         } 
+
+        /**
+         * Feedback.
+         */
+        public Builder feedback(Boolean feedback) {
+            this.putQueryParameter("Feedback", feedback);
+            this.feedback = feedback;
+            return this;
+        }
 
         /**
          * SessionId.
