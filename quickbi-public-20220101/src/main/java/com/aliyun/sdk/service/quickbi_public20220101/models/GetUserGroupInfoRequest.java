@@ -55,7 +55,7 @@ public class GetUserGroupInfoRequest extends Request {
         } 
 
         /**
-         * Keyword.
+         * The ID of the user group.
          */
         public Builder keyword(String keyword) {
             this.putQueryParameter("Keyword", keyword);

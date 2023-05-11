@@ -18,8 +18,18 @@ public interface AsyncClient extends SdkAutoCloseable {
         return builder().build();
     }
 
+    /**
+      * Indicates whether the request is successful. Valid values:
+      * *   true: The request was successful.
+      * *   false: The request failed.
+      *
+     */
     CompletableFuture<AddDataLevelPermissionRuleUsersResponse> addDataLevelPermissionRuleUsers(AddDataLevelPermissionRuleUsersRequest request);
 
+    /**
+      * ROW_LEVEL
+      *
+     */
     CompletableFuture<AddDataLevelPermissionWhiteListResponse> addDataLevelPermissionWhiteList(AddDataLevelPermissionWhiteListRequest request);
 
     CompletableFuture<AddShareReportResponse> addShareReport(AddShareReportRequest request);
@@ -35,6 +45,8 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<AddUserToWorkspaceResponse> addUserToWorkspace(AddUserToWorkspaceRequest request);
 
     CompletableFuture<AddWorkspaceUsersResponse> addWorkspaceUsers(AddWorkspaceUsersRequest request);
+
+    CompletableFuture<AllotDatasetAccelerationTaskResponse> allotDatasetAccelerationTask(AllotDatasetAccelerationTaskRequest request);
 
     CompletableFuture<AuthorizeMenuResponse> authorizeMenu(AuthorizeMenuRequest request);
 
@@ -56,8 +68,16 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<DelayTicketExpireTimeResponse> delayTicketExpireTime(DelayTicketExpireTimeRequest request);
 
+    /**
+      * {"ruleId":"a5bb24da-***-a891683e14da","cubeId":"7c7223ae-***-3c744528014b","delModel":{"userGroups":["0d5fb19b-***-1248fc27ca51","3d2c23d4-***-f6390f325c2d"],"users":["4334***358","Huang***3fa822"]}}
+      *
+     */
     CompletableFuture<DeleteDataLevelPermissionRuleUsersResponse> deleteDataLevelPermissionRuleUsers(DeleteDataLevelPermissionRuleUsersRequest request);
 
+    /**
+      * The ID of the training dataset that you want to remove from the specified custom linguistic model.
+      *
+     */
     CompletableFuture<DeleteDataLevelRuleConfigResponse> deleteDataLevelRuleConfig(DeleteDataLevelRuleConfigRequest request);
 
     CompletableFuture<DeleteTicketResponse> deleteTicket(DeleteTicketRequest request);
@@ -76,10 +96,16 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<GetUserGroupInfoResponse> getUserGroupInfo(GetUserGroupInfoRequest request);
 
+    CompletableFuture<ListApiDatasourceResponse> listApiDatasource(ListApiDatasourceRequest request);
+
     CompletableFuture<ListByUserGroupIdResponse> listByUserGroupId(ListByUserGroupIdRequest request);
 
     CompletableFuture<ListCollectionsResponse> listCollections(ListCollectionsRequest request);
 
+    /**
+      * > : You can only Quick BI the new row-column permission model. If you are still using the old row-column permission model, migrate to the new row-column permission model before you call this operation. To migrate row-level permissions to the new row-level permission model, perform the following steps: Choose Organizations> Security Configurations> Upgrade Row-Level Permissions. On the Upgrade Row-Level Permissions page, click **Upgrade**.
+      *
+     */
     CompletableFuture<ListCubeDataLevelPermissionConfigResponse> listCubeDataLevelPermissionConfig(ListCubeDataLevelPermissionConfigRequest request);
 
     CompletableFuture<ListDataLevelPermissionWhiteListResponse> listDataLevelPermissionWhiteList(ListDataLevelPermissionWhiteListRequest request);
@@ -96,8 +122,20 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<ListUserGroupsByUserIdResponse> listUserGroupsByUserId(ListUserGroupsByUserIdRequest request);
 
+    CompletableFuture<ModifyApiDatasourceParametersResponse> modifyApiDatasourceParameters(ModifyApiDatasourceParametersRequest request);
+
+    /**
+      * f4cc43bc3***
+      *
+     */
     CompletableFuture<QueryDataServiceResponse> queryDataService(QueryDataServiceRequest request);
 
+    /**
+      * The execution result of the interface is returned. Valid values:
+      * *   true: The request was successful.
+      * *   false: The request fails.
+      *
+     */
     CompletableFuture<QueryDatasetDetailInfoResponse> queryDatasetDetailInfo(QueryDatasetDetailInfoRequest request);
 
     CompletableFuture<QueryDatasetInfoResponse> queryDatasetInfo(QueryDatasetInfoRequest request);
@@ -152,10 +190,26 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<SetDataLevelPermissionExtraConfigResponse> setDataLevelPermissionExtraConfig(SetDataLevelPermissionExtraConfigRequest request);
 
+    /**
+      * Indicates whether the request is successful. Valid values:
+      * *   true: The request was successful.
+      * *   false: The request failed.
+      *
+     */
     CompletableFuture<SetDataLevelPermissionRuleConfigResponse> setDataLevelPermissionRuleConfig(SetDataLevelPermissionRuleConfigRequest request);
 
+    /**
+      * > : You can only Quick BI the new row-column permission model. If you are still using the old row-column permission model, migrate to the new row-column permission model before you call this operation. To migrate row-level permissions to the new row-level permission model, perform the following steps: Choose Organizations> Security Configurations> Upgrade Row-Level Permissions. On the Upgrade Row-Level Permissions page, click **Upgrade**.
+      *
+     */
     CompletableFuture<SetDataLevelPermissionWhiteListResponse> setDataLevelPermissionWhiteList(SetDataLevelPermissionWhiteListRequest request);
 
+    /**
+      * The execution result of the interface. Valid values:
+      * *   true: The request was successful.
+      * *   false: The request failed.
+      *
+     */
     CompletableFuture<UpdateDataLevelPermissionStatusResponse> updateDataLevelPermissionStatus(UpdateDataLevelPermissionStatusRequest request);
 
     CompletableFuture<UpdateEmbeddedStatusResponse> updateEmbeddedStatus(UpdateEmbeddedStatusRequest request);

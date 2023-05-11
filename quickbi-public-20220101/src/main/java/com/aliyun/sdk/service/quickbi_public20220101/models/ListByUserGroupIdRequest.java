@@ -55,7 +55,7 @@ public class ListByUserGroupIdRequest extends Request {
         } 
 
         /**
-         * UserGroupIds.
+         * The ID of the user group that you want to query. Separate multiple user groups with commas (,).
          */
         public Builder userGroupIds(String userGroupIds) {
             this.putQueryParameter("UserGroupIds", userGroupIds);

@@ -125,7 +125,7 @@ public class QueryDatasetListRequest extends Request {
         } 
 
         /**
-         * DirectoryId.
+         * The ID of the request.
          */
         public Builder directoryId(String directoryId) {
             this.putQueryParameter("DirectoryId", directoryId);
@@ -134,7 +134,7 @@ public class QueryDatasetListRequest extends Request {
         }
 
         /**
-         * Keyword.
+         * Information about the directory where the dataset is located
          */
         public Builder keyword(String keyword) {
             this.putQueryParameter("Keyword", keyword);
@@ -143,7 +143,7 @@ public class QueryDatasetListRequest extends Request {
         }
 
         /**
-         * PageNum.
+         * The ID of the workspace.
          */
         public Builder pageNum(Integer pageNum) {
             this.putQueryParameter("PageNum", pageNum);
@@ -152,7 +152,10 @@ public class QueryDatasetListRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * Specifies the directory ID.
+         * <p>
+         * 
+         * *   If this field is not empty, all datasets in the directory are obtained.
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -161,7 +164,7 @@ public class QueryDatasetListRequest extends Request {
         }
 
         /**
-         * WithChildren.
+         * The total number of pages returned.
          */
         public Builder withChildren(Boolean withChildren) {
             this.putQueryParameter("WithChildren", withChildren);
@@ -170,7 +173,7 @@ public class QueryDatasetListRequest extends Request {
         }
 
         /**
-         * WorkspaceId.
+         * The name of the data source.
          */
         public Builder workspaceId(String workspaceId) {
             this.putQueryParameter("WorkspaceId", workspaceId);

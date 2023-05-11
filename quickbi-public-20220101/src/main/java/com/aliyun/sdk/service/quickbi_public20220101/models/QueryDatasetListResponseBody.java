@@ -62,7 +62,7 @@ public class QueryDatasetListResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * RequestId.
+         * The keyword used to search for the dataset name.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -70,7 +70,7 @@ public class QueryDatasetListResponseBody extends TeaModel {
         }
 
         /**
-         * Result.
+         * Test dataset
          */
         public Builder result(Result result) {
             this.result = result;
@@ -78,7 +78,11 @@ public class QueryDatasetListResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * Whether to recursively wrap the dataset in the subdirectory. Valid values:
+         * <p>
+         * 
+         * *   true: returns datasets in all recursive subdirectories in the directoryId directory.
+         * *   false: Only datasets in the directory specified by directoryId are returned, excluding subdirectories.
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -142,7 +146,7 @@ public class QueryDatasetListResponseBody extends TeaModel {
             private String dsType; 
 
             /**
-             * DsId.
+             * The ID of the training dataset that you want to remove from the specified custom linguistic model.
              */
             public Builder dsId(String dsId) {
                 this.dsId = dsId;
@@ -150,7 +154,7 @@ public class QueryDatasetListResponseBody extends TeaModel {
             }
 
             /**
-             * DsName.
+             * The time when the scaling group was modified.
              */
             public Builder dsName(String dsName) {
                 this.dsName = dsName;
@@ -158,7 +162,7 @@ public class QueryDatasetListResponseBody extends TeaModel {
             }
 
             /**
-             * DsType.
+             * The user ID of the dataset owner in the Quick BI.
              */
             public Builder dsType(String dsType) {
                 this.dsType = dsType;
@@ -235,7 +239,7 @@ public class QueryDatasetListResponseBody extends TeaModel {
             private String pathName; 
 
             /**
-             * Id.
+             * The ID of the directory path.
              */
             public Builder id(String id) {
                 this.id = id;
@@ -243,7 +247,7 @@ public class QueryDatasetListResponseBody extends TeaModel {
             }
 
             /**
-             * Name.
+             * The ID of the data source.
              */
             public Builder name(String name) {
                 this.name = name;
@@ -251,7 +255,7 @@ public class QueryDatasetListResponseBody extends TeaModel {
             }
 
             /**
-             * PathId.
+             * The type of the data source.
              */
             public Builder pathId(String pathId) {
                 this.pathId = pathId;
@@ -259,7 +263,7 @@ public class QueryDatasetListResponseBody extends TeaModel {
             }
 
             /**
-             * PathName.
+             * The name of the data source.
              */
             public Builder pathName(String pathName) {
                 this.pathName = pathName;
@@ -432,7 +436,7 @@ public class QueryDatasetListResponseBody extends TeaModel {
             private String workspaceName; 
 
             /**
-             * CreateTime.
+             * The details of the dataset list.
              */
             public Builder createTime(String createTime) {
                 this.createTime = createTime;
@@ -440,7 +444,7 @@ public class QueryDatasetListResponseBody extends TeaModel {
             }
 
             /**
-             * DataSource.
+             * Test Space
              */
             public Builder dataSource(DataSource dataSource) {
                 this.dataSource = dataSource;
@@ -448,7 +452,7 @@ public class QueryDatasetListResponseBody extends TeaModel {
             }
 
             /**
-             * DatasetId.
+             * The name of the workspace.
              */
             public Builder datasetId(String datasetId) {
                 this.datasetId = datasetId;
@@ -456,7 +460,7 @@ public class QueryDatasetListResponseBody extends TeaModel {
             }
 
             /**
-             * DatasetName.
+             * Tom
              */
             public Builder datasetName(String datasetName) {
                 this.datasetName = datasetName;
@@ -464,7 +468,7 @@ public class QueryDatasetListResponseBody extends TeaModel {
             }
 
             /**
-             * Description.
+             * The number of rows per page set when the interface is requested.
              */
             public Builder description(String description) {
                 this.description = description;
@@ -472,7 +476,7 @@ public class QueryDatasetListResponseBody extends TeaModel {
             }
 
             /**
-             * Directory.
+             * The information about the data source to which the dataset belongs.
              */
             public Builder directory(Directory directory) {
                 this.directory = directory;
@@ -480,7 +484,7 @@ public class QueryDatasetListResponseBody extends TeaModel {
             }
 
             /**
-             * ModifyTime.
+             * The nickname of the dataset owner.
              */
             public Builder modifyTime(String modifyTime) {
                 this.modifyTime = modifyTime;
@@ -488,7 +492,7 @@ public class QueryDatasetListResponseBody extends TeaModel {
             }
 
             /**
-             * OwnerId.
+             * The creation time.
              */
             public Builder ownerId(String ownerId) {
                 this.ownerId = ownerId;
@@ -496,7 +500,11 @@ public class QueryDatasetListResponseBody extends TeaModel {
             }
 
             /**
-             * OwnerName.
+             * Whether to enable row-level permissions. Valid values:
+             * <p>
+             * 
+             * *   true: The VIP Netty channel is enabled.
+             * *   false: The incremental log backup feature is disabled.
              */
             public Builder ownerName(String ownerName) {
                 this.ownerName = ownerName;
@@ -504,7 +512,7 @@ public class QueryDatasetListResponseBody extends TeaModel {
             }
 
             /**
-             * RowLevel.
+             * The total number of pages returned.
              */
             public Builder rowLevel(Boolean rowLevel) {
                 this.rowLevel = rowLevel;
@@ -512,7 +520,7 @@ public class QueryDatasetListResponseBody extends TeaModel {
             }
 
             /**
-             * WorkspaceId.
+             * The page number of the returned page.
              */
             public Builder workspaceId(String workspaceId) {
                 this.workspaceId = workspaceId;
@@ -520,7 +528,7 @@ public class QueryDatasetListResponseBody extends TeaModel {
             }
 
             /**
-             * WorkspaceName.
+             * The description of the dataset.
              */
             public Builder workspaceName(String workspaceName) {
                 this.workspaceName = workspaceName;
@@ -609,7 +617,7 @@ public class QueryDatasetListResponseBody extends TeaModel {
             private Integer totalPages; 
 
             /**
-             * Data.
+             * Returns the pagination results of the dataset list. The detailed information of the dataset list is stored in the response parameter Data.
              */
             public Builder data(java.util.List < Data> data) {
                 this.data = data;
@@ -617,7 +625,11 @@ public class QueryDatasetListResponseBody extends TeaModel {
             }
 
             /**
-             * PageNum.
+             * The number of rows per page in a paged query.
+             * <p>
+             * 
+             * *   Default value: 10.
+             * *   Maximum value: 1,000.
              */
             public Builder pageNum(Integer pageNum) {
                 this.pageNum = pageNum;
@@ -625,7 +637,11 @@ public class QueryDatasetListResponseBody extends TeaModel {
             }
 
             /**
-             * PageSize.
+             * Indicates whether the request is successful. Valid values:
+             * <p>
+             * 
+             * *   true: The request was successful.
+             * *   false: The request failed.
              */
             public Builder pageSize(Integer pageSize) {
                 this.pageSize = pageSize;
@@ -633,7 +649,7 @@ public class QueryDatasetListResponseBody extends TeaModel {
             }
 
             /**
-             * TotalNum.
+             * The ID of the request.
              */
             public Builder totalNum(Integer totalNum) {
                 this.totalNum = totalNum;
@@ -641,7 +657,11 @@ public class QueryDatasetListResponseBody extends TeaModel {
             }
 
             /**
-             * TotalPages.
+             * Current page number for dataset list:
+             * <p>
+             * 
+             * *   Pages start from page 1.
+             * *   Default value: 1.
              */
             public Builder totalPages(Integer totalPages) {
                 this.totalPages = totalPages;

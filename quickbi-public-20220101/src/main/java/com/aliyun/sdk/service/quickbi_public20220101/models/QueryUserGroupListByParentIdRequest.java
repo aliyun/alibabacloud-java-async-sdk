@@ -55,7 +55,11 @@ public class QueryUserGroupListByParentIdRequest extends Request {
         } 
 
         /**
-         * ParentUserGroupId.
+         * The ID of the parent user group.
+         * <p>
+         * 
+         * *   If you enter the ID of the parent user group, you can obtain the information of the child user group under this ID.
+         * *   If you enter -1, you can obtain the sub-user group information under the root directory.
          */
         public Builder parentUserGroupId(String parentUserGroupId) {
             this.putQueryParameter("ParentUserGroupId", parentUserGroupId);

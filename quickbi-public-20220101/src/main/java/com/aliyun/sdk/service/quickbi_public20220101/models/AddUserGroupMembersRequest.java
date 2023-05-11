@@ -70,7 +70,7 @@ public class AddUserGroupMembersRequest extends Request {
         } 
 
         /**
-         * UserGroupIds.
+         * The IDs of the user groups. Separate the IDs with commas (,). Example: aGroupId,bGroupId,cGroupIds
          */
         public Builder userGroupIds(String userGroupIds) {
             this.putQueryParameter("UserGroupIds", userGroupIds);
@@ -79,7 +79,7 @@ public class AddUserGroupMembersRequest extends Request {
         }
 
         /**
-         * UserId.
+         * The user ID of the Quick BI.
          */
         public Builder userId(String userId) {
             this.putQueryParameter("UserId", userId);

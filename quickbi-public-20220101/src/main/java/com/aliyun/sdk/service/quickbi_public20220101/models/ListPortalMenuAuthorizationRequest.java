@@ -55,7 +55,7 @@ public class ListPortalMenuAuthorizationRequest extends Request {
         } 
 
         /**
-         * DataPortalId.
+         * The ID of the BI portal.
          */
         public Builder dataPortalId(String dataPortalId) {
             this.putQueryParameter("DataPortalId", dataPortalId);

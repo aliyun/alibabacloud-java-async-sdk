@@ -62,7 +62,7 @@ public class CreateUserGroupResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -70,7 +70,7 @@ public class CreateUserGroupResponseBody extends TeaModel {
         }
 
         /**
-         * Result.
+         * The ID of the added user group is returned. An empty string \"\" is returned if the add fails.
          */
         public Builder result(String result) {
             this.result = result;
@@ -78,7 +78,11 @@ public class CreateUserGroupResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * Indicates whether the request is successful. Valid values:
+         * <p>
+         * 
+         * *   true: The request was successful.
+         * *   false: The request failed.
          */
         public Builder success(Boolean success) {
             this.success = success;

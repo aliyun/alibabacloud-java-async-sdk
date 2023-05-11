@@ -55,7 +55,16 @@ public class QueryShareListRequest extends Request {
         } 
 
         /**
-         * ReportId.
+         * The type of work being shared. Valid values:
+         * <p>
+         * 
+         * *   product: BI portal
+         * *   dashboard: dashboard
+         * *   worksheet: workbook
+         * *   dashboardOfflineQuery: self-service data retrieval
+         * *   Analysis: Ad hoc analysis
+         * *   DATAFORM
+         * *   SCREEN: Data dashboard
          */
         public Builder reportId(String reportId) {
             this.putQueryParameter("ReportId", reportId);

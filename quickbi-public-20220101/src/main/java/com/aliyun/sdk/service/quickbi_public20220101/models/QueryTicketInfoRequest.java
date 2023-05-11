@@ -55,7 +55,7 @@ public class QueryTicketInfoRequest extends Request {
         } 
 
         /**
-         * Ticket.
+         * Obtains the details of a specified ticket for a report that is not embedded in the report.
          */
         public Builder ticket(String ticket) {
             this.putQueryParameter("Ticket", ticket);

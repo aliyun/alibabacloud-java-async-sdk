@@ -55,7 +55,7 @@ public class ListUserGroupsByUserIdRequest extends Request {
         } 
 
         /**
-         * UserId.
+         * The ID of the user group.
          */
         public Builder userId(String userId) {
             this.putQueryParameter("UserId", userId);

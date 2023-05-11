@@ -62,7 +62,7 @@ public class ListPortalMenusResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -70,7 +70,29 @@ public class ListPortalMenusResponseBody extends TeaModel {
         }
 
         /**
-         * Result.
+         * A JSON string that levels the details of the portal menu list. Valid values:
+         * <p>
+         * 
+         * *   menuType: the type of the menu.
+         * 
+         *     *   0: dashboard
+         *     *   1: outer chain
+         *     *   2: workbook
+         *     *   4: directory folder
+         *     *   5: form filling
+         *     *   6: self-service data retrieval
+         * 
+         * *   menuId: menu ID
+         * 
+         * *   uri: ID or URL of the resource associated with the menu
+         * 
+         * *   showOnlyWithAccess: Authorized Only Visible
+         * 
+         * *   menuName: menu display name
+         * 
+         * *   dependentPermisson: whether the report resource associated with the menu has permissions
+         * 
+         * *   children: submenu
          */
         public Builder result(String result) {
             this.result = result;
@@ -78,7 +100,11 @@ public class ListPortalMenusResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * Indicates whether the request is successful. Valid values:
+         * <p>
+         * 
+         * *   true: The request was successful.
+         * *   false: The request failed.
          */
         public Builder success(Boolean success) {
             this.success = success;

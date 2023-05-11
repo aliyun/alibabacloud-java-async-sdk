@@ -62,7 +62,7 @@ public class QueryDataServiceResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * RequestId.
+         * The list of parameter names of the returned parameters. The value is a string of the List type.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -70,7 +70,11 @@ public class QueryDataServiceResponseBody extends TeaModel {
         }
 
         /**
-         * Result.
+         * Indicates whether the request is successful. Valid values:
+         * <p>
+         * 
+         * *   true: The request was successful.
+         * *   false: The request failed.
          */
         public Builder result(Result result) {
             this.result = result;
@@ -78,7 +82,7 @@ public class QueryDataServiceResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * { "area": \["East China", "North China"], "shopping_date": "2019Q1", }
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -178,7 +182,7 @@ public class QueryDataServiceResponseBody extends TeaModel {
             private String type; 
 
             /**
-             * Aggregator.
+             * The field name, which corresponds to the physical table field name.
              */
             public Builder aggregator(String aggregator) {
                 this.aggregator = aggregator;
@@ -186,7 +190,11 @@ public class QueryDataServiceResponseBody extends TeaModel {
             }
 
             /**
-             * Column.
+             * The granularity of the dimension field. This field is returned only when the requested field is a date dimension or a geographical dimension. Valid values:
+             * <p>
+             * 
+             * *   Date granularity: yearRegion (year), monthRegion (month), weekRegion (week), dayRegion (day), hourRegion (hour), minRegion (minute), secRegion (second)
+             * *   Geographic information granularity: COUNTRY (international level), PROVINCE (provincial level), CITY (municipal level), XIAN (district /county), and REGION (regional level)
              */
             public Builder column(String column) {
                 this.column = column;
@@ -194,7 +202,7 @@ public class QueryDataServiceResponseBody extends TeaModel {
             }
 
             /**
-             * DataType.
+             * The column header.
              */
             public Builder dataType(String dataType) {
                 this.dataType = dataType;
@@ -202,7 +210,7 @@ public class QueryDataServiceResponseBody extends TeaModel {
             }
 
             /**
-             * Granularity.
+             * The field type, which is used to distinguish whether the field type is a dimension or a measure.
              */
             public Builder granularity(String granularity) {
                 this.granularity = granularity;
@@ -210,7 +218,7 @@ public class QueryDataServiceResponseBody extends TeaModel {
             }
 
             /**
-             * Label.
+             * The data type of the field. generally have number, string, date, datetime, time, and geographic.
              */
             public Builder label(String label) {
                 this.label = label;
@@ -218,7 +226,7 @@ public class QueryDataServiceResponseBody extends TeaModel {
             }
 
             /**
-             * Type.
+             * SELECT COMPANY_T\_1\_.\"area\" AS D_AREA\_2\_, COMPANY_T\_1\_.\"city\" AS D_CITY\_3\_, SUM(COMPANY_T\_1\_.\"profit_amt\") AS D_PROFIT\_4\_ FROM \"quickbi_test\".\"company_sales_record_copy\" AS COMPANY_T\_1\_ WHERE COMPANY_T\_1\_.\"area\" LIKE \"% China East %\" GROUP BY COMPANY_T\_1\_.\"area\", COMPANY_T\_1\_.\"city\" HAVING SUM(COMPANY_T\_1\_.\"order_amt\") > 1 LIMIT 0,10
              */
             public Builder type(String type) {
                 this.type = type;
@@ -283,7 +291,7 @@ public class QueryDataServiceResponseBody extends TeaModel {
             private java.util.List < java.util.Map<String, ?>> values; 
 
             /**
-             * Headers.
+             * The SQL of the request query.
              */
             public Builder headers(java.util.List < Headers> headers) {
                 this.headers = headers;
@@ -291,7 +299,7 @@ public class QueryDataServiceResponseBody extends TeaModel {
             }
 
             /**
-             * Sql.
+             * The ID of the request.
              */
             public Builder sql(String sql) {
                 this.sql = sql;
@@ -299,7 +307,7 @@ public class QueryDataServiceResponseBody extends TeaModel {
             }
 
             /**
-             * Values.
+             * Physical Field Name
              */
             public Builder values(java.util.List < java.util.Map<String, ?>> values) {
                 this.values = values;

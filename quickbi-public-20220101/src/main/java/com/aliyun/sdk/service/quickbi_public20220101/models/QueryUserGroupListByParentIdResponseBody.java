@@ -62,7 +62,7 @@ public class QueryUserGroupListByParentIdResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -70,7 +70,7 @@ public class QueryUserGroupListByParentIdResponseBody extends TeaModel {
         }
 
         /**
-         * Result.
+         * The information about the sub-user group.
          */
         public Builder result(java.util.List < Result> result) {
             this.result = result;
@@ -78,7 +78,11 @@ public class QueryUserGroupListByParentIdResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * Indicates whether the request is successful. Valid values:
+         * <p>
+         * 
+         * *   true: The request was successful.
+         * *   false: The request failed.
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -214,7 +218,7 @@ public class QueryUserGroupListByParentIdResponseBody extends TeaModel {
             private String userGroupName; 
 
             /**
-             * CreateTime.
+             * The time when the sub-user group was created.
              */
             public Builder createTime(String createTime) {
                 this.createTime = createTime;
@@ -222,7 +226,7 @@ public class QueryUserGroupListByParentIdResponseBody extends TeaModel {
             }
 
             /**
-             * CreateUser.
+             * The creator of the sub-user group. The UserID of the Quick BI is used instead of the UID of Alibaba Cloud.
              */
             public Builder createUser(String createUser) {
                 this.createUser = createUser;
@@ -230,7 +234,7 @@ public class QueryUserGroupListByParentIdResponseBody extends TeaModel {
             }
 
             /**
-             * IdentifiedPath.
+             * Directory level of the sub-user group.
              */
             public Builder identifiedPath(String identifiedPath) {
                 this.identifiedPath = identifiedPath;
@@ -238,7 +242,7 @@ public class QueryUserGroupListByParentIdResponseBody extends TeaModel {
             }
 
             /**
-             * ModifiedTime.
+             * The time when the sub-user group was last modified.
              */
             public Builder modifiedTime(String modifiedTime) {
                 this.modifiedTime = modifiedTime;
@@ -246,7 +250,7 @@ public class QueryUserGroupListByParentIdResponseBody extends TeaModel {
             }
 
             /**
-             * ModifyUser.
+             * The user who modified the subgroup. The UserID of the Quick BI is used instead of the UID of Alibaba Cloud.
              */
             public Builder modifyUser(String modifyUser) {
                 this.modifyUser = modifyUser;
@@ -254,7 +258,7 @@ public class QueryUserGroupListByParentIdResponseBody extends TeaModel {
             }
 
             /**
-             * ParentUserGroupId.
+             * The ID of the parent user group.
              */
             public Builder parentUserGroupId(String parentUserGroupId) {
                 this.parentUserGroupId = parentUserGroupId;
@@ -262,7 +266,7 @@ public class QueryUserGroupListByParentIdResponseBody extends TeaModel {
             }
 
             /**
-             * UserGroupDescription.
+             * The description of the sub-user group.
              */
             public Builder userGroupDescription(String userGroupDescription) {
                 this.userGroupDescription = userGroupDescription;
@@ -270,7 +274,7 @@ public class QueryUserGroupListByParentIdResponseBody extends TeaModel {
             }
 
             /**
-             * UserGroupId.
+             * The ID of the sub-user group.
              */
             public Builder userGroupId(String userGroupId) {
                 this.userGroupId = userGroupId;
@@ -278,7 +282,7 @@ public class QueryUserGroupListByParentIdResponseBody extends TeaModel {
             }
 
             /**
-             * UserGroupName.
+             * The name of the sub-user group.
              */
             public Builder userGroupName(String userGroupName) {
                 this.userGroupName = userGroupName;

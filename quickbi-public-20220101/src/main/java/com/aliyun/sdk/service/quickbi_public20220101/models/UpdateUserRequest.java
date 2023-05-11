@@ -112,7 +112,11 @@ public class UpdateUserRequest extends Request {
         } 
 
         /**
-         * AdminUser.
+         * Indicates whether the organization administrator. Valid values:
+         * <p>
+         * 
+         * *   true
+         * *   false
          */
         public Builder adminUser(Boolean adminUser) {
             this.putQueryParameter("AdminUser", adminUser);
@@ -121,7 +125,11 @@ public class UpdateUserRequest extends Request {
         }
 
         /**
-         * AuthAdminUser.
+         * Indicate whether the RAM user is a permission administrator. Valid values:
+         * <p>
+         * 
+         * *   true
+         * *   false
          */
         public Builder authAdminUser(Boolean authAdminUser) {
             this.putQueryParameter("AuthAdminUser", authAdminUser);
@@ -130,7 +138,11 @@ public class UpdateUserRequest extends Request {
         }
 
         /**
-         * NickName.
+         * The nickname of the account.
+         * <p>
+         * 
+         * *   Format check: The value can be up to 50 characters in length.
+         * *   Special format verification: Chinese and English digits\_ \ / | () ] \[
          */
         public Builder nickName(String nickName) {
             this.putQueryParameter("NickName", nickName);
@@ -139,7 +151,7 @@ public class UpdateUserRequest extends Request {
         }
 
         /**
-         * UserId.
+         * The ID of the user to be updated. The user ID is the UserID of the Quick BI, not the UID of Alibaba Cloud.
          */
         public Builder userId(String userId) {
             this.putQueryParameter("UserId", userId);
@@ -148,7 +160,12 @@ public class UpdateUserRequest extends Request {
         }
 
         /**
-         * UserType.
+         * The role type of the organization member. Valid values:
+         * <p>
+         * 
+         * *   1 : developer
+         * *   2 : visitors
+         * *   3 : Analyst
          */
         public Builder userType(Integer userType) {
             this.putQueryParameter("UserType", userType);

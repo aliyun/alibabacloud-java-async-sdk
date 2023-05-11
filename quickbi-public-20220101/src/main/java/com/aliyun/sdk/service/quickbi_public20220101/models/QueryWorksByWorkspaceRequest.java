@@ -127,7 +127,10 @@ public class QueryWorksByWorkspaceRequest extends Request {
         } 
 
         /**
-         * PageNum.
+         * The page number of the returned page.
+         * <p>
+         * 
+         * *   Default value: 1.
          */
         public Builder pageNum(Integer pageNum) {
             this.putQueryParameter("PageNum", pageNum);
@@ -136,7 +139,10 @@ public class QueryWorksByWorkspaceRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * The number of entries returned per page.
+         * <p>
+         * 
+         * *   Default value: 10.
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -145,7 +151,13 @@ public class QueryWorksByWorkspaceRequest extends Request {
         }
 
         /**
-         * Status.
+         * The status of the work. Valid values:
+         * <p>
+         * 
+         * *   0: unpublished
+         * *   1: published
+         * *   2: modified but not published
+         * *   3: unpublished
          */
         public Builder status(Integer status) {
             this.putQueryParameter("Status", status);
@@ -154,7 +166,11 @@ public class QueryWorksByWorkspaceRequest extends Request {
         }
 
         /**
-         * ThirdPartAuthFlag.
+         * Third-party embedding status. Valid values:
+         * <p>
+         * 
+         * *   0: The embed service is not enabled.
+         * *   1: Embed is enabled.
          */
         public Builder thirdPartAuthFlag(Integer thirdPartAuthFlag) {
             this.putQueryParameter("ThirdPartAuthFlag", thirdPartAuthFlag);
@@ -163,7 +179,13 @@ public class QueryWorksByWorkspaceRequest extends Request {
         }
 
         /**
-         * WorksType.
+         * The type of the work. Valid values:
+         * <p>
+         * 
+         * *   DATAPRODUCT: BI portal
+         * *   PAGE: Dashboard
+         * *   FULLPAGE: full-screen dashboards
+         * *   REPORT: workbook
          */
         public Builder worksType(String worksType) {
             this.putQueryParameter("WorksType", worksType);
@@ -172,7 +194,7 @@ public class QueryWorksByWorkspaceRequest extends Request {
         }
 
         /**
-         * WorkspaceId.
+         * The ID of the workspace.
          */
         public Builder workspaceId(String workspaceId) {
             this.putQueryParameter("WorkspaceId", workspaceId);

@@ -70,7 +70,11 @@ public class AddUserGroupMemberRequest extends Request {
         } 
 
         /**
-         * UserGroupId.
+         * The result of adding members to a user group is returned. Valid values:
+         * <p>
+         * 
+         * *   true: The task is added.
+         * *   false: The tag failed to be added.
          */
         public Builder userGroupId(String userGroupId) {
             this.putQueryParameter("UserGroupId", userGroupId);
@@ -79,7 +83,11 @@ public class AddUserGroupMemberRequest extends Request {
         }
 
         /**
-         * UserIdList.
+         * Indicates whether the request is successful. Valid values:
+         * <p>
+         * 
+         * *   true: The request was successful.
+         * *   false: The request failed.
          */
         public Builder userIdList(String userIdList) {
             this.putQueryParameter("UserIdList", userIdList);

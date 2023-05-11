@@ -62,7 +62,7 @@ public class QueryReadableResourcesListByUserIdResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -70,7 +70,7 @@ public class QueryReadableResourcesListByUserIdResponseBody extends TeaModel {
         }
 
         /**
-         * Result.
+         * The list of works that the user has permission to view.
          */
         public Builder result(java.util.List < Result> result) {
             this.result = result;
@@ -78,7 +78,11 @@ public class QueryReadableResourcesListByUserIdResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * Indicates whether the request is successful. Valid values:
+         * <p>
+         * 
+         * *   true: The request was successful.
+         * *   false: The request failed.
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -387,7 +391,7 @@ public class QueryReadableResourcesListByUserIdResponseBody extends TeaModel {
             private String workspaceName; 
 
             /**
-             * CreateTime.
+             * The timestamp of the creation time in milliseconds.
              */
             public Builder createTime(String createTime) {
                 this.createTime = createTime;
@@ -395,7 +399,7 @@ public class QueryReadableResourcesListByUserIdResponseBody extends TeaModel {
             }
 
             /**
-             * Description.
+             * Remarks on the work.
              */
             public Builder description(String description) {
                 this.description = description;
@@ -411,7 +415,7 @@ public class QueryReadableResourcesListByUserIdResponseBody extends TeaModel {
             }
 
             /**
-             * ModifyName.
+             * The name of the Alibaba Cloud account to which the modifier belongs.
              */
             public Builder modifyName(String modifyName) {
                 this.modifyName = modifyName;
@@ -427,7 +431,7 @@ public class QueryReadableResourcesListByUserIdResponseBody extends TeaModel {
             }
 
             /**
-             * OwnerId.
+             * The Quick BI UserID of the work owner.
              */
             public Builder ownerId(String ownerId) {
                 this.ownerId = ownerId;
@@ -435,7 +439,7 @@ public class QueryReadableResourcesListByUserIdResponseBody extends TeaModel {
             }
 
             /**
-             * OwnerName.
+             * The Alibaba Cloud account name of the owner.
              */
             public Builder ownerName(String ownerName) {
                 this.ownerName = ownerName;
@@ -443,7 +447,18 @@ public class QueryReadableResourcesListByUserIdResponseBody extends TeaModel {
             }
 
             /**
-             * SecurityLevel.
+             * Security policies for collaborative authorization of works. Valid values:
+             * <p>
+             * 
+             * *   0: private
+             * *   12: Authorize specified members
+             * *   1 or 11: Authorize all workspace members
+             * 
+             * > 
+             * 
+             * *   If you use legacy permissions, the return value is 1.
+             * 
+             * *   If you use the new permissions, the return value is 11.
              */
             public Builder securityLevel(String securityLevel) {
                 this.securityLevel = securityLevel;
@@ -451,7 +466,13 @@ public class QueryReadableResourcesListByUserIdResponseBody extends TeaModel {
             }
 
             /**
-             * Status.
+             * The status of the report. Valid values:
+             * <p>
+             * 
+             * *   0: unpublished
+             * *   1: published
+             * *   2: modified but not published
+             * *   3: unpublished
              */
             public Builder status(Integer status) {
                 this.status = status;
@@ -459,7 +480,11 @@ public class QueryReadableResourcesListByUserIdResponseBody extends TeaModel {
             }
 
             /**
-             * ThirdPartAuthFlag.
+             * Third-party embedding status. Valid values:
+             * <p>
+             * 
+             * *   0: The embed service is not enabled.
+             * *   1: Embed is enabled.
              */
             public Builder thirdPartAuthFlag(Integer thirdPartAuthFlag) {
                 this.thirdPartAuthFlag = thirdPartAuthFlag;
@@ -467,7 +492,7 @@ public class QueryReadableResourcesListByUserIdResponseBody extends TeaModel {
             }
 
             /**
-             * WorkName.
+             * The name of the work.
              */
             public Builder workName(String workName) {
                 this.workName = workName;
@@ -475,7 +500,13 @@ public class QueryReadableResourcesListByUserIdResponseBody extends TeaModel {
             }
 
             /**
-             * WorkType.
+             * The type of the work. Valid values:
+             * <p>
+             * 
+             * *   DATAPRODUCT: BI portal
+             * *   PAGE: Dashboard
+             * *   FULLPAGE: full-screen dashboards
+             * *   REPORT: workbook
              */
             public Builder workType(String workType) {
                 this.workType = workType;
@@ -483,7 +514,7 @@ public class QueryReadableResourcesListByUserIdResponseBody extends TeaModel {
             }
 
             /**
-             * WorksId.
+             * The ID of the work.
              */
             public Builder worksId(String worksId) {
                 this.worksId = worksId;
@@ -491,7 +522,7 @@ public class QueryReadableResourcesListByUserIdResponseBody extends TeaModel {
             }
 
             /**
-             * WorkspaceId.
+             * The ID of the workspace to which the work belongs.
              */
             public Builder workspaceId(String workspaceId) {
                 this.workspaceId = workspaceId;
@@ -499,7 +530,7 @@ public class QueryReadableResourcesListByUserIdResponseBody extends TeaModel {
             }
 
             /**
-             * WorkspaceName.
+             * The name of the workspace to which the work belongs.
              */
             public Builder workspaceName(String workspaceName) {
                 this.workspaceName = workspaceName;

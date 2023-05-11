@@ -55,7 +55,7 @@ public class DeleteTicketRequest extends Request {
         } 
 
         /**
-         * Ticket.
+         * Deletes a specified ticket from an embedded report.
          */
         public Builder ticket(String ticket) {
             this.putQueryParameter("Ticket", ticket);

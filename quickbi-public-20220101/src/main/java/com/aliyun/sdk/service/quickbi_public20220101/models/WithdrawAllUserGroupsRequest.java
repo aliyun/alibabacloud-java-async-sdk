@@ -55,7 +55,7 @@ public class WithdrawAllUserGroupsRequest extends Request {
         } 
 
         /**
-         * UserId.
+         * The ID of the user. The UserID of the Quick BI is used instead of the UID of Alibaba Cloud.
          */
         public Builder userId(String userId) {
             this.putQueryParameter("UserId", userId);

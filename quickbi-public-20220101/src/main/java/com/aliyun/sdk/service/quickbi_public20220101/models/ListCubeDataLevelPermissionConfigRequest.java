@@ -70,7 +70,7 @@ public class ListCubeDataLevelPermissionConfigRequest extends Request {
         } 
 
         /**
-         * CubeId.
+         * The ID of the training dataset that you want to remove from the specified custom linguistic model.
          */
         public Builder cubeId(String cubeId) {
             this.putQueryParameter("CubeId", cubeId);
@@ -79,7 +79,11 @@ public class ListCubeDataLevelPermissionConfigRequest extends Request {
         }
 
         /**
-         * RuleType.
+         * The type of the dataset row and column permission. Valid values:
+         * <p>
+         * 
+         * *   ROW_LEVEL: row-level permissions
+         * *   COLUMN_LEVEL: column-level permissions
          */
         public Builder ruleType(String ruleType) {
             this.putQueryParameter("RuleType", ruleType);

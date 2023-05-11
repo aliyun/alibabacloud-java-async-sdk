@@ -112,7 +112,11 @@ public class AuthorizeMenuRequest extends Request {
         } 
 
         /**
-         * AuthPointsValue.
+         * Authorizes the permissions of the menu. Valid values:
+         * <p>
+         * 
+         * *   1: view
+         * *   3: View + Export (default)
          */
         public Builder authPointsValue(Integer authPointsValue) {
             this.putQueryParameter("AuthPointsValue", authPointsValue);
@@ -121,7 +125,7 @@ public class AuthorizeMenuRequest extends Request {
         }
 
         /**
-         * DataPortalId.
+         * The ID of the BI portal.
          */
         public Builder dataPortalId(String dataPortalId) {
             this.putQueryParameter("DataPortalId", dataPortalId);
@@ -130,7 +134,11 @@ public class AuthorizeMenuRequest extends Request {
         }
 
         /**
-         * MenuIds.
+         * The menu ID of the BI portal leaf node.
+         * <p>
+         * 
+         * *   The directory menu cannot be authorized.
+         * *   You can upload multiple parameters at a time. Separate multiple IDs with commas (,). The maximum number of parameters that can be modified at a time is 100.
          */
         public Builder menuIds(String menuIds) {
             this.putQueryParameter("MenuIds", menuIds);
@@ -139,7 +147,11 @@ public class AuthorizeMenuRequest extends Request {
         }
 
         /**
-         * UserGroupIds.
+         * The IDs of the user groups.
+         * <p>
+         * 
+         * *   You can upload multiple parameters at a time. Separate multiple IDs with commas (,). The maximum number of parameters that can be modified at a time is 200.
+         * *   UserGroupIds and UserIds cannot be empty at the same time
          */
         public Builder userGroupIds(String userGroupIds) {
             this.putQueryParameter("UserGroupIds", userGroupIds);
@@ -148,7 +160,10 @@ public class AuthorizeMenuRequest extends Request {
         }
 
         /**
-         * UserIds.
+         * The IDs of the end users. The UserID of the Quick BI is used instead of the UID of Alibaba Cloud.
+         * <p>
+         * 
+         * *   You can upload multiple parameters at a time. Separate multiple IDs with commas (,). The maximum number of parameters that can be modified at a time is 200.
          */
         public Builder userIds(String userIds) {
             this.putQueryParameter("UserIds", userIds);

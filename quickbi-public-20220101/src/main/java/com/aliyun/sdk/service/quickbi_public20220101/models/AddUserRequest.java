@@ -124,7 +124,7 @@ public class AddUserRequest extends Request {
         }
 
         /**
-         * AdminUser.
+         * Add organization members.
          */
         public Builder adminUser(Boolean adminUser) {
             this.putQueryParameter("AdminUser", adminUser);

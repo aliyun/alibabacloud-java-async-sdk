@@ -83,7 +83,11 @@ public class UpdateUserGroupRequest extends Request {
         } 
 
         /**
-         * UserGroupDescription.
+         * The description of the user group.
+         * <p>
+         * 
+         * *   Format verification: Maximum length 255
+         * *   Special format verification: Chinese and English digits\_ \ / | () ] \[
          */
         public Builder userGroupDescription(String userGroupDescription) {
             this.putQueryParameter("UserGroupDescription", userGroupDescription);
@@ -92,7 +96,7 @@ public class UpdateUserGroupRequest extends Request {
         }
 
         /**
-         * UserGroupId.
+         * The ID of the user group.
          */
         public Builder userGroupId(String userGroupId) {
             this.putQueryParameter("UserGroupId", userGroupId);
@@ -101,7 +105,11 @@ public class UpdateUserGroupRequest extends Request {
         }
 
         /**
-         * UserGroupName.
+         * The name of the user group.
+         * <p>
+         * 
+         * *   Format verification: Maximum length 255
+         * *   Special format verification: Chinese and English digits\_ \ / | () ] \[
          */
         public Builder userGroupName(String userGroupName) {
             this.putQueryParameter("UserGroupName", userGroupName);

@@ -62,7 +62,7 @@ public class ListPortalMenuAuthorizationResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -70,7 +70,7 @@ public class ListPortalMenuAuthorizationResponseBody extends TeaModel {
         }
 
         /**
-         * Result.
+         * The list of authorization details of the portal menu.
          */
         public Builder result(java.util.List < Result> result) {
             this.result = result;
@@ -78,7 +78,11 @@ public class ListPortalMenuAuthorizationResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * Indicates whether the request is successful. Valid values:
+         * <p>
+         * 
+         * *   true: The request was successful.
+         * *   false: The request failed.
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -130,7 +134,7 @@ public class ListPortalMenuAuthorizationResponseBody extends TeaModel {
             private Integer receiverType; 
 
             /**
-             * ReceiverId.
+             * The ID of the authorization object.
              */
             public Builder receiverId(String receiverId) {
                 this.receiverId = receiverId;
@@ -138,7 +142,11 @@ public class ListPortalMenuAuthorizationResponseBody extends TeaModel {
             }
 
             /**
-             * ReceiverType.
+             * The type of the authorization object. Valid values:
+             * <p>
+             * 
+             * *   0: user
+             * *   1: user group
              */
             public Builder receiverType(Integer receiverType) {
                 this.receiverType = receiverType;
@@ -203,7 +211,7 @@ public class ListPortalMenuAuthorizationResponseBody extends TeaModel {
             private Boolean showOnlyWithAccess; 
 
             /**
-             * MenuId.
+             * The menu ID of the BI portal leaf node.
              */
             public Builder menuId(String menuId) {
                 this.menuId = menuId;
@@ -211,7 +219,7 @@ public class ListPortalMenuAuthorizationResponseBody extends TeaModel {
             }
 
             /**
-             * Receivers.
+             * The details of the object to which the menu is authorized.
              */
             public Builder receivers(java.util.List < Receivers> receivers) {
                 this.receivers = receivers;
@@ -219,7 +227,11 @@ public class ListPortalMenuAuthorizationResponseBody extends TeaModel {
             }
 
             /**
-             * ShowOnlyWithAccess.
+             * Whether only authorization is visible. Valid values:
+             * <p>
+             * 
+             * *   true: Only the authorization is visible.
+             * *   false: Both are visible.
              */
             public Builder showOnlyWithAccess(Boolean showOnlyWithAccess) {
                 this.showOnlyWithAccess = showOnlyWithAccess;

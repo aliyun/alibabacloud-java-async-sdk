@@ -55,7 +55,7 @@ public class QueryDatasetInfoRequest extends Request {
         } 
 
         /**
-         * DatasetId.
+         * Queries information about a specified dataset.
          */
         public Builder datasetId(String datasetId) {
             this.putQueryParameter("DatasetId", datasetId);

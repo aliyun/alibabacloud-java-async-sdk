@@ -62,7 +62,7 @@ public class AuthorizeMenuResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -70,7 +70,7 @@ public class AuthorizeMenuResponseBody extends TeaModel {
         }
 
         /**
-         * Result.
+         * The number of authorized menus.
          */
         public Builder result(Integer result) {
             this.result = result;
@@ -78,7 +78,11 @@ public class AuthorizeMenuResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * Indicates whether the request is successful. Valid values:
+         * <p>
+         * 
+         * *   true: The request was successful.
+         * *   false: The request failed.
          */
         public Builder success(Boolean success) {
             this.success = success;

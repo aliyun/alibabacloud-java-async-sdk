@@ -78,7 +78,7 @@ public class ListUserGroupsByUserIdResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * The user group modifier. The UserID of the Quick BI is used instead of the UID of Alibaba Cloud.
          */
         public Builder success(Boolean success) {
             this.success = success;

@@ -62,7 +62,7 @@ public class SetDataLevelPermissionWhiteListResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -70,7 +70,11 @@ public class SetDataLevelPermissionWhiteListResponseBody extends TeaModel {
         }
 
         /**
-         * Result.
+         * The execution result of the interface. Valid values:
+         * <p>
+         * 
+         * *   true: The request was successful.
+         * *   false: The request failed.
          */
         public Builder result(Boolean result) {
             this.result = result;
@@ -78,7 +82,11 @@ public class SetDataLevelPermissionWhiteListResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * Indicates whether the request is successful. Valid values:
+         * <p>
+         * 
+         * *   true: The request was successful.
+         * *   false: The request failed.
          */
         public Builder success(Boolean success) {
             this.success = success;

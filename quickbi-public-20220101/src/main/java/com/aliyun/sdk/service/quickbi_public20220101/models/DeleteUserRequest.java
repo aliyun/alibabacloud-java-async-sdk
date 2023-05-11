@@ -78,7 +78,7 @@ public class DeleteUserRequest extends Request {
         }
 
         /**
-         * UserId.
+         * Deletes a user from a specified organization.
          */
         public Builder userId(String userId) {
             this.putQueryParameter("UserId", userId);

@@ -7,11 +7,11 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
- * {@link WithdrawAllUserGroupsResponseBody} extends {@link TeaModel}
+ * {@link ModifyApiDatasourceParametersResponseBody} extends {@link TeaModel}
  *
- * <p>WithdrawAllUserGroupsResponseBody</p>
+ * <p>ModifyApiDatasourceParametersResponseBody</p>
  */
-public class WithdrawAllUserGroupsResponseBody extends TeaModel {
+public class ModifyApiDatasourceParametersResponseBody extends TeaModel {
     @NameInMap("RequestId")
     private String requestId;
 
@@ -21,7 +21,7 @@ public class WithdrawAllUserGroupsResponseBody extends TeaModel {
     @NameInMap("Success")
     private Boolean success;
 
-    private WithdrawAllUserGroupsResponseBody(Builder builder) {
+    private ModifyApiDatasourceParametersResponseBody(Builder builder) {
         this.requestId = builder.requestId;
         this.result = builder.result;
         this.success = builder.success;
@@ -31,7 +31,7 @@ public class WithdrawAllUserGroupsResponseBody extends TeaModel {
         return new Builder();
     }
 
-    public static WithdrawAllUserGroupsResponseBody create() {
+    public static ModifyApiDatasourceParametersResponseBody create() {
         return builder().build();
     }
 
@@ -62,7 +62,7 @@ public class WithdrawAllUserGroupsResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * The ID of the request.
+         * RequestId.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -70,11 +70,7 @@ public class WithdrawAllUserGroupsResponseBody extends TeaModel {
         }
 
         /**
-         * The execution result of the interface is returned. Valid values:
-         * <p>
-         * 
-         * *   true: The request was successful.
-         * *   false: The request fails.
+         * Result.
          */
         public Builder result(Boolean result) {
             this.result = result;
@@ -82,19 +78,15 @@ public class WithdrawAllUserGroupsResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether the request is successful. Valid values:
-         * <p>
-         * 
-         * *   true: The request was successful.
-         * *   false: The request failed.
+         * Success.
          */
         public Builder success(Boolean success) {
             this.success = success;
             return this;
         }
 
-        public WithdrawAllUserGroupsResponseBody build() {
-            return new WithdrawAllUserGroupsResponseBody(this);
+        public ModifyApiDatasourceParametersResponseBody build() {
+            return new ModifyApiDatasourceParametersResponseBody(this);
         } 
 
     } 

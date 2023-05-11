@@ -62,7 +62,7 @@ public class QueryWorksByOrganizationResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * RequestId.
+         * The details of the list of works.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -70,7 +70,13 @@ public class QueryWorksByOrganizationResponseBody extends TeaModel {
         }
 
         /**
-         * Result.
+         * The status of the report. Valid values:
+         * <p>
+         * 
+         * *   0: unpublished
+         * *   1: published
+         * *   2: modified but not published
+         * *   3: unpublished
          */
         public Builder result(Result result) {
             this.result = result;
@@ -78,7 +84,7 @@ public class QueryWorksByOrganizationResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * The total number of rows in the table.
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -387,7 +393,7 @@ public class QueryWorksByOrganizationResponseBody extends TeaModel {
             private String workspaceName; 
 
             /**
-             * Auth3rdFlag.
+             * The name of the workspace to which the work belongs.
              */
             public Builder auth3rdFlag(Integer auth3rdFlag) {
                 this.auth3rdFlag = auth3rdFlag;
@@ -395,7 +401,7 @@ public class QueryWorksByOrganizationResponseBody extends TeaModel {
             }
 
             /**
-             * Description.
+             * The hierarchical structure of the directory ID to which the directory belongs. Separate the hierarchical structure with a /.
              */
             public Builder description(String description) {
                 this.description = description;
@@ -403,7 +409,7 @@ public class QueryWorksByOrganizationResponseBody extends TeaModel {
             }
 
             /**
-             * Directory.
+             * The ID of the directory.
              */
             public Builder directory(Directory directory) {
                 this.directory = directory;
@@ -411,7 +417,7 @@ public class QueryWorksByOrganizationResponseBody extends TeaModel {
             }
 
             /**
-             * GmtCreate.
+             * Test directory
              */
             public Builder gmtCreate(String gmtCreate) {
                 this.gmtCreate = gmtCreate;
@@ -419,7 +425,7 @@ public class QueryWorksByOrganizationResponseBody extends TeaModel {
             }
 
             /**
-             * GmtModify.
+             * Test Workspace
              */
             public Builder gmtModify(String gmtModify) {
                 this.gmtModify = gmtModify;
@@ -427,7 +433,7 @@ public class QueryWorksByOrganizationResponseBody extends TeaModel {
             }
 
             /**
-             * ModifyName.
+             * Description
              */
             public Builder modifyName(String modifyName) {
                 this.modifyName = modifyName;
@@ -435,7 +441,18 @@ public class QueryWorksByOrganizationResponseBody extends TeaModel {
             }
 
             /**
-             * OwnerId.
+             * Security policies for collaborative authorization of works. Valid values:
+             * <p>
+             * 
+             * *   0: private
+             * *   12: Authorize specified members
+             * *   1 or 11: Authorize all workspace members
+             * 
+             * > 
+             * 
+             * *   If you use legacy permissions, the return value is 1.
+             * 
+             * *   If you use the new permissions, the return value is 11.
              */
             public Builder ownerId(String ownerId) {
                 this.ownerId = ownerId;
@@ -443,7 +460,7 @@ public class QueryWorksByOrganizationResponseBody extends TeaModel {
             }
 
             /**
-             * OwnerName.
+             * The Alibaba Cloud account name of the person who modified the work.
              */
             public Builder ownerName(String ownerName) {
                 this.ownerName = ownerName;
@@ -451,7 +468,7 @@ public class QueryWorksByOrganizationResponseBody extends TeaModel {
             }
 
             /**
-             * SecurityLevel.
+             * The directory to which the work belongs.
              */
             public Builder securityLevel(String securityLevel) {
                 this.securityLevel = securityLevel;
@@ -459,7 +476,7 @@ public class QueryWorksByOrganizationResponseBody extends TeaModel {
             }
 
             /**
-             * Status.
+             * Li Si
              */
             public Builder status(Integer status) {
                 this.status = status;
@@ -467,7 +484,7 @@ public class QueryWorksByOrganizationResponseBody extends TeaModel {
             }
 
             /**
-             * WorkName.
+             * Test directory
              */
             public Builder workName(String workName) {
                 this.workName = workName;
@@ -475,7 +492,7 @@ public class QueryWorksByOrganizationResponseBody extends TeaModel {
             }
 
             /**
-             * WorkType.
+             * The name of the workspace to which the work belongs.
              */
             public Builder workType(String workType) {
                 this.workType = workType;
@@ -483,7 +500,7 @@ public class QueryWorksByOrganizationResponseBody extends TeaModel {
             }
 
             /**
-             * WorksId.
+             * The user ID of the work owner in the Quick BI.
              */
             public Builder worksId(String worksId) {
                 this.worksId = worksId;
@@ -491,7 +508,7 @@ public class QueryWorksByOrganizationResponseBody extends TeaModel {
             }
 
             /**
-             * WorkspaceId.
+             * Test report
              */
             public Builder workspaceId(String workspaceId) {
                 this.workspaceId = workspaceId;
@@ -499,7 +516,7 @@ public class QueryWorksByOrganizationResponseBody extends TeaModel {
             }
 
             /**
-             * WorkspaceName.
+             * The ID of the workspace to which the work belongs.
              */
             public Builder workspaceName(String workspaceName) {
                 this.workspaceName = workspaceName;
@@ -588,7 +605,7 @@ public class QueryWorksByOrganizationResponseBody extends TeaModel {
             private Integer totalPages; 
 
             /**
-             * Data.
+             * The Alibaba Cloud account name of the work owner.
              */
             public Builder data(java.util.List < Data> data) {
                 this.data = data;
@@ -596,7 +613,7 @@ public class QueryWorksByOrganizationResponseBody extends TeaModel {
             }
 
             /**
-             * PageNum.
+             * The timestamp of the modification of the work in milliseconds.
              */
             public Builder pageNum(Integer pageNum) {
                 this.pageNum = pageNum;
@@ -604,7 +621,7 @@ public class QueryWorksByOrganizationResponseBody extends TeaModel {
             }
 
             /**
-             * PageSize.
+             * The ID of the work.
              */
             public Builder pageSize(Integer pageSize) {
                 this.pageSize = pageSize;
@@ -612,7 +629,13 @@ public class QueryWorksByOrganizationResponseBody extends TeaModel {
             }
 
             /**
-             * TotalNum.
+             * The type of the work. Valid values:
+             * <p>
+             * 
+             * *   DATAPRODUCT: BI portal
+             * *   PAGE: Dashboard
+             * *   FULLPAGE: full-screen dashboards
+             * *   REPORT: workbook
              */
             public Builder totalNum(Integer totalNum) {
                 this.totalNum = totalNum;
@@ -620,7 +643,11 @@ public class QueryWorksByOrganizationResponseBody extends TeaModel {
             }
 
             /**
-             * TotalPages.
+             * Third-party embedding status. Valid values:
+             * <p>
+             * 
+             * *   0: The embed service is not enabled.
+             * *   1: Embed is enabled.
              */
             public Builder totalPages(Integer totalPages) {
                 this.totalPages = totalPages;

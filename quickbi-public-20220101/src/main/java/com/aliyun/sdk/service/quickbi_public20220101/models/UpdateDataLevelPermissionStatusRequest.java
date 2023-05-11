@@ -85,7 +85,7 @@ public class UpdateDataLevelPermissionStatusRequest extends Request {
         } 
 
         /**
-         * CubeId.
+         * The ID of the training dataset that you want to remove from the specified custom linguistic model.
          */
         public Builder cubeId(String cubeId) {
             this.putQueryParameter("CubeId", cubeId);

@@ -413,6 +413,9 @@ public class ListRecentViewReportsResponseBody extends TeaModel {
 
     }
     public static class Result extends TeaModel {
+        @NameInMap("Attention")
+        private String attention;
+
         @NameInMap("Data")
         private java.util.List < Data> data;
 
@@ -429,6 +432,7 @@ public class ListRecentViewReportsResponseBody extends TeaModel {
         private Integer totalPages;
 
         private Result(Builder builder) {
+            this.attention = builder.attention;
             this.data = builder.data;
             this.pageNum = builder.pageNum;
             this.pageSize = builder.pageSize;
@@ -442,6 +446,13 @@ public class ListRecentViewReportsResponseBody extends TeaModel {
 
         public static Result create() {
             return builder().build();
+        }
+
+        /**
+         * @return attention
+         */
+        public String getAttention() {
+            return this.attention;
         }
 
         /**
@@ -480,11 +491,20 @@ public class ListRecentViewReportsResponseBody extends TeaModel {
         }
 
         public static final class Builder {
+            private String attention; 
             private java.util.List < Data> data; 
             private Integer pageNum; 
             private Integer pageSize; 
             private Integer totalNum; 
             private Integer totalPages; 
+
+            /**
+             * Attention.
+             */
+            public Builder attention(String attention) {
+                this.attention = attention;
+                return this;
+            }
 
             /**
              * Data.

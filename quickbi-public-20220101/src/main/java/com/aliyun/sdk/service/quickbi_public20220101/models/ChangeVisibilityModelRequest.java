@@ -85,7 +85,7 @@ public class ChangeVisibilityModelRequest extends Request {
         } 
 
         /**
-         * DataPortalId.
+         * The number of menus that are successfully modified.
          */
         public Builder dataPortalId(String dataPortalId) {
             this.putQueryParameter("DataPortalId", dataPortalId);
@@ -94,7 +94,11 @@ public class ChangeVisibilityModelRequest extends Request {
         }
 
         /**
-         * MenuIds.
+         * Indicates whether the request is successful. Valid values:
+         * <p>
+         * 
+         * *   true: The request was successful.
+         * *   false: The request failed.
          */
         public Builder menuIds(String menuIds) {
             this.putQueryParameter("MenuIds", menuIds);

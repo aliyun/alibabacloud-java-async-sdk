@@ -62,7 +62,7 @@ public class ListByUserGroupIdResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -70,7 +70,7 @@ public class ListByUserGroupIdResponseBody extends TeaModel {
         }
 
         /**
-         * Result.
+         * The user group query result is returned.
          */
         public Builder result(Result result) {
             this.result = result;
@@ -78,7 +78,11 @@ public class ListByUserGroupIdResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * Indicates whether the request is successful. Valid values:
+         * <p>
+         * 
+         * *   true: The request was successful.
+         * *   false: The request failed.
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -214,7 +218,7 @@ public class ListByUserGroupIdResponseBody extends TeaModel {
             private String usergroupName; 
 
             /**
-             * CreateTime.
+             * The time when the Secret was created.
              */
             public Builder createTime(String createTime) {
                 this.createTime = createTime;
@@ -222,7 +226,7 @@ public class ListByUserGroupIdResponseBody extends TeaModel {
             }
 
             /**
-             * CreateUser.
+             * The UserID of the creator in the Quick BI.
              */
             public Builder createUser(String createUser) {
                 this.createUser = createUser;
@@ -230,7 +234,7 @@ public class ListByUserGroupIdResponseBody extends TeaModel {
             }
 
             /**
-             * IdentifiedPath.
+             * The path of the user group.
              */
             public Builder identifiedPath(String identifiedPath) {
                 this.identifiedPath = identifiedPath;
@@ -238,7 +242,7 @@ public class ListByUserGroupIdResponseBody extends TeaModel {
             }
 
             /**
-             * ModifiedTime.
+             * The time when the protection policy was last modified.
              */
             public Builder modifiedTime(String modifiedTime) {
                 this.modifiedTime = modifiedTime;
@@ -246,7 +250,7 @@ public class ListByUserGroupIdResponseBody extends TeaModel {
             }
 
             /**
-             * ModifyUser.
+             * The UserID of the modifier in the Quick BI.
              */
             public Builder modifyUser(String modifyUser) {
                 this.modifyUser = modifyUser;
@@ -254,7 +258,7 @@ public class ListByUserGroupIdResponseBody extends TeaModel {
             }
 
             /**
-             * ParentUsergroupId.
+             * The ID of the parent user group.
              */
             public Builder parentUsergroupId(String parentUsergroupId) {
                 this.parentUsergroupId = parentUsergroupId;
@@ -262,7 +266,7 @@ public class ListByUserGroupIdResponseBody extends TeaModel {
             }
 
             /**
-             * UsergroupDesc.
+             * The description of the user group.
              */
             public Builder usergroupDesc(String usergroupDesc) {
                 this.usergroupDesc = usergroupDesc;
@@ -270,7 +274,7 @@ public class ListByUserGroupIdResponseBody extends TeaModel {
             }
 
             /**
-             * UsergroupId.
+             * The ID of the user group.
              */
             public Builder usergroupId(String usergroupId) {
                 this.usergroupId = usergroupId;
@@ -278,7 +282,7 @@ public class ListByUserGroupIdResponseBody extends TeaModel {
             }
 
             /**
-             * UsergroupName.
+             * The name of the user group.
              */
             public Builder usergroupName(String usergroupName) {
                 this.usergroupName = usergroupName;
@@ -339,7 +343,7 @@ public class ListByUserGroupIdResponseBody extends TeaModel {
             }
 
             /**
-             * UserGroupModels.
+             * The details of the user group that was queried.
              */
             public Builder userGroupModels(java.util.List < UserGroupModels> userGroupModels) {
                 this.userGroupModels = userGroupModels;

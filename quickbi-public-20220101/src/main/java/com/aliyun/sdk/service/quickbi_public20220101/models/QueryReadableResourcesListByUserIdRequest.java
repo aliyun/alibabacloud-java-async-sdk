@@ -55,7 +55,7 @@ public class QueryReadableResourcesListByUserIdRequest extends Request {
         } 
 
         /**
-         * UserId.
+         * Quick BI the user ID.
          */
         public Builder userId(String userId) {
             this.putQueryParameter("UserId", userId);

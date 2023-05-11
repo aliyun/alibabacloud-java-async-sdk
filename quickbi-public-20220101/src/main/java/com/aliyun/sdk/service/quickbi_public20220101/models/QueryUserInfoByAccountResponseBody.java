@@ -62,7 +62,7 @@ public class QueryUserInfoByAccountResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -70,7 +70,7 @@ public class QueryUserInfoByAccountResponseBody extends TeaModel {
         }
 
         /**
-         * Result.
+         * The returned organization user information.
          */
         public Builder result(Result result) {
             this.result = result;
@@ -78,7 +78,11 @@ public class QueryUserInfoByAccountResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * Indicates whether the request is successful. Valid values:
+         * <p>
+         * 
+         * *   true: The request was successful.
+         * *   false: The request failed.
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -214,7 +218,7 @@ public class QueryUserInfoByAccountResponseBody extends TeaModel {
             private Integer userType; 
 
             /**
-             * AccountId.
+             * The ID of the Alibaba Cloud account.
              */
             public Builder accountId(String accountId) {
                 this.accountId = accountId;
@@ -222,7 +226,7 @@ public class QueryUserInfoByAccountResponseBody extends TeaModel {
             }
 
             /**
-             * AccountName.
+             * The name of the Alibaba Cloud account that corresponds to the member. (If you use a RAM user, the domain name information that follows @ is removed. For example, if you use a <test@test.com>, test is returned.)
              */
             public Builder accountName(String accountName) {
                 this.accountName = accountName;
@@ -230,7 +234,11 @@ public class QueryUserInfoByAccountResponseBody extends TeaModel {
             }
 
             /**
-             * AdminUser.
+             * Whether you are an administrator of the organization. Valid values:
+             * <p>
+             * 
+             * *   true
+             * *   false
              */
             public Builder adminUser(Boolean adminUser) {
                 this.adminUser = adminUser;
@@ -238,7 +246,11 @@ public class QueryUserInfoByAccountResponseBody extends TeaModel {
             }
 
             /**
-             * AuthAdminUser.
+             * Whether you are a permission administrator. Valid values:
+             * <p>
+             * 
+             * *   true
+             * *   false
              */
             public Builder authAdminUser(Boolean authAdminUser) {
                 this.authAdminUser = authAdminUser;
@@ -246,7 +258,7 @@ public class QueryUserInfoByAccountResponseBody extends TeaModel {
             }
 
             /**
-             * Email.
+             * The email address of the user.
              */
             public Builder email(String email) {
                 this.email = email;
@@ -254,7 +266,7 @@ public class QueryUserInfoByAccountResponseBody extends TeaModel {
             }
 
             /**
-             * NickName.
+             * The nickname of the account.
              */
             public Builder nickName(String nickName) {
                 this.nickName = nickName;
@@ -262,7 +274,7 @@ public class QueryUserInfoByAccountResponseBody extends TeaModel {
             }
 
             /**
-             * Phone.
+             * The phone number of the alert contact.
              */
             public Builder phone(String phone) {
                 this.phone = phone;
@@ -270,7 +282,7 @@ public class QueryUserInfoByAccountResponseBody extends TeaModel {
             }
 
             /**
-             * UserId.
+             * The UserID in the Quick BI.
              */
             public Builder userId(String userId) {
                 this.userId = userId;
@@ -278,7 +290,12 @@ public class QueryUserInfoByAccountResponseBody extends TeaModel {
             }
 
             /**
-             * UserType.
+             * The role type of the organization member. Valid values:
+             * <p>
+             * 
+             * *   1 : developer
+             * *   2 : visitors
+             * *   3 : Analyst
              */
             public Builder userType(Integer userType) {
                 this.userType = userType;

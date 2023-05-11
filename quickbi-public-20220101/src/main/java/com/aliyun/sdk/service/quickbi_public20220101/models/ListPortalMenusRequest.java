@@ -69,7 +69,7 @@ public class ListPortalMenusRequest extends Request {
         } 
 
         /**
-         * DataPortalId.
+         * The ID of the BI portal.
          */
         public Builder dataPortalId(String dataPortalId) {
             this.putQueryParameter("DataPortalId", dataPortalId);
@@ -78,7 +78,7 @@ public class ListPortalMenusRequest extends Request {
         }
 
         /**
-         * UserId.
+         * The user ID in the Quick BI. When passed in, the list displays only the menus that the user has permissions on.
          */
         public Builder userId(String userId) {
             this.putQueryParameter("UserId", userId);

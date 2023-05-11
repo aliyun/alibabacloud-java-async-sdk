@@ -111,7 +111,7 @@ public class AddDataLevelPermissionWhiteListRequest extends Request {
         } 
 
         /**
-         * CubeId.
+         * The ID of the training dataset that you want to remove from the specified custom linguistic model.
          */
         public Builder cubeId(String cubeId) {
             this.putQueryParameter("CubeId", cubeId);
@@ -120,7 +120,11 @@ public class AddDataLevelPermissionWhiteListRequest extends Request {
         }
 
         /**
-         * OperateType.
+         * Operation Type: You can set this parameter to one of the following values.
+         * <p>
+         * 
+         * *   ADD: Add a whitelist
+         * *   DELETE: deletes a whitelist.
          */
         public Builder operateType(String operateType) {
             this.putQueryParameter("OperateType", operateType);
@@ -129,7 +133,11 @@ public class AddDataLevelPermissionWhiteListRequest extends Request {
         }
 
         /**
-         * RuleType.
+         * The type of row-level permissions.
+         * <p>
+         * 
+         * *   ROW_LEVEL: row-level permissions,
+         * *   COLUMN_LEVEL: column-level permissions
          */
         public Builder ruleType(String ruleType) {
             this.putQueryParameter("RuleType", ruleType);
@@ -147,7 +155,11 @@ public class AddDataLevelPermissionWhiteListRequest extends Request {
         }
 
         /**
-         * TargetType.
+         * Modify the type of the whitelist:
+         * <p>
+         * 
+         * *   1: user
+         * *   2: user group
          */
         public Builder targetType(String targetType) {
             this.putQueryParameter("TargetType", targetType);

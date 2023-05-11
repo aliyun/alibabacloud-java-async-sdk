@@ -62,7 +62,11 @@ public class QueryWorksBloodRelationshipResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * RequestId.
+         * Indicates whether the request is successful. Valid values:
+         * <p>
+         * 
+         * *   true: The request was successful.
+         * *   false: The request failed.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -70,7 +74,7 @@ public class QueryWorksBloodRelationshipResponseBody extends TeaModel {
         }
 
         /**
-         * Result.
+         * The ID of the request.
          */
         public Builder result(java.util.List < Result> result) {
             this.result = result;
@@ -78,7 +82,7 @@ public class QueryWorksBloodRelationshipResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * The response.
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -190,7 +194,10 @@ public class QueryWorksBloodRelationshipResponseBody extends TeaModel {
             private String uid; 
 
             /**
-             * 所属位置：
+             * Indices whether the metric. Valid values:
+             * <p>
+             * 
+             * true false
              */
             public Builder areaId(String areaId) {
                 this.areaId = areaId;
@@ -198,7 +205,7 @@ public class QueryWorksBloodRelationshipResponseBody extends TeaModel {
             }
 
             /**
-             * AreaName.
+             * The ID of the owning location.
              */
             public Builder areaName(String areaName) {
                 this.areaName = areaName;
@@ -206,7 +213,7 @@ public class QueryWorksBloodRelationshipResponseBody extends TeaModel {
             }
 
             /**
-             * 字段显示名称
+             * The globally unique PathId.
              */
             public Builder caption(String caption) {
                 this.caption = caption;
@@ -214,7 +221,7 @@ public class QueryWorksBloodRelationshipResponseBody extends TeaModel {
             }
 
             /**
-             * 字段类型
+             * The display name of the field.
              */
             public Builder dataType(String dataType) {
                 this.dataType = dataType;
@@ -222,7 +229,19 @@ public class QueryWorksBloodRelationshipResponseBody extends TeaModel {
             }
 
             /**
-             * 是否是度量
+             * The type of the field. Valid values:
+             * <p>
+             * 
+             * *   string: string type
+             * *   date: a date type that contains only the year, month, and day parts
+             * *   datetime: a common date type
+             * *   time: a date type that contains only hours, minutes, and seconds.
+             * *   number: numeric
+             * *   boolean: Boolean type
+             * *   geographical: geographical location
+             * *   url: string type
+             * *   imageUrl: the type of the image link.
+             * *   multivalue: a multi-value column
              */
             public Builder isMeasure(Boolean isMeasure) {
                 this.isMeasure = isMeasure;
@@ -230,7 +249,7 @@ public class QueryWorksBloodRelationshipResponseBody extends TeaModel {
             }
 
             /**
-             * 全局唯一的PathId。位于cube的level中pathId
+             * The unique ID of the field.
              */
             public Builder pathId(String pathId) {
                 this.pathId = pathId;
@@ -238,7 +257,7 @@ public class QueryWorksBloodRelationshipResponseBody extends TeaModel {
             }
 
             /**
-             * 字段唯一ID。即cube中的name
+             * A list of query parameter reference columns.
              */
             public Builder uid(String uid) {
                 this.uid = uid;
@@ -339,7 +358,7 @@ public class QueryWorksBloodRelationshipResponseBody extends TeaModel {
             private java.util.List < QueryParams> queryParams; 
 
             /**
-             * 组件ID or  sheetId
+             * List of work blood information.
              */
             public Builder componentId(String componentId) {
                 this.componentId = componentId;
@@ -347,7 +366,7 @@ public class QueryWorksBloodRelationshipResponseBody extends TeaModel {
             }
 
             /**
-             * ComponentName.
+             * The ID of the component that you want to modify.
              */
             public Builder componentName(String componentName) {
                 this.componentName = componentName;
@@ -355,7 +374,7 @@ public class QueryWorksBloodRelationshipResponseBody extends TeaModel {
             }
 
             /**
-             * 组件类型
+             * Line
              */
             public Builder componentType(Integer componentType) {
                 this.componentType = componentType;
@@ -363,7 +382,7 @@ public class QueryWorksBloodRelationshipResponseBody extends TeaModel {
             }
 
             /**
-             * ComponentTypeName.
+             * The type of the image component.
              */
             public Builder componentTypeName(String componentTypeName) {
                 this.componentTypeName = componentTypeName;
@@ -371,7 +390,7 @@ public class QueryWorksBloodRelationshipResponseBody extends TeaModel {
             }
 
             /**
-             * 数据集ID
+             * Column (Measure)
              */
             public Builder datasetId(String datasetId) {
                 this.datasetId = datasetId;
@@ -379,7 +398,7 @@ public class QueryWorksBloodRelationshipResponseBody extends TeaModel {
             }
 
             /**
-             * 查询参数引用的列信息
+             * The name of the component type.
              */
             public Builder queryParams(java.util.List < QueryParams> queryParams) {
                 this.queryParams = queryParams;

@@ -55,7 +55,7 @@ public class DeleteUserGroupRequest extends Request {
         } 
 
         /**
-         * UserGroupId.
+         * The ID of the user group.
          */
         public Builder userGroupId(String userGroupId) {
             this.putQueryParameter("UserGroupId", userGroupId);

@@ -112,7 +112,7 @@ public class QueryWorksByOrganizationRequest extends Request {
         } 
 
         /**
-         * PageNum.
+         * The page number of the returned page.
          */
         public Builder pageNum(Integer pageNum) {
             this.putQueryParameter("PageNum", pageNum);
@@ -121,7 +121,7 @@ public class QueryWorksByOrganizationRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * The number of rows per page set when the interface is requested.
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -130,7 +130,7 @@ public class QueryWorksByOrganizationRequest extends Request {
         }
 
         /**
-         * Status.
+         * Returns a list of all works in the organization that meet the requested criteria.
          */
         public Builder status(Integer status) {
             this.putQueryParameter("Status", status);
@@ -139,7 +139,7 @@ public class QueryWorksByOrganizationRequest extends Request {
         }
 
         /**
-         * ThirdPartAuthFlag.
+         * The total number of pages returned.
          */
         public Builder thirdPartAuthFlag(Integer thirdPartAuthFlag) {
             this.putQueryParameter("ThirdPartAuthFlag", thirdPartAuthFlag);
@@ -148,7 +148,7 @@ public class QueryWorksByOrganizationRequest extends Request {
         }
 
         /**
-         * WorksType.
+         * The ID of the request.
          */
         public Builder worksType(String worksType) {
             this.putQueryParameter("WorksType", worksType);

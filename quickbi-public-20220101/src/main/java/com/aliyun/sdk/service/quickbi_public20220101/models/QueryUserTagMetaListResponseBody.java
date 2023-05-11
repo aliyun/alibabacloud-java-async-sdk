@@ -78,7 +78,7 @@ public class QueryUserTagMetaListResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * Queries the metadata list of member tags in an organization.
          */
         public Builder success(Boolean success) {
             this.success = success;

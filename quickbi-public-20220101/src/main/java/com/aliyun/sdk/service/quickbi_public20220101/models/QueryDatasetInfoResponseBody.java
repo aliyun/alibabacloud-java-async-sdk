@@ -62,7 +62,11 @@ public class QueryDatasetInfoResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * RequestId.
+         * Whether the operation is successfully returned. Valid values:
+         * <p>
+         * 
+         * *   true: The call is successful.
+         * *   false: The call fails.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -70,7 +74,7 @@ public class QueryDatasetInfoResponseBody extends TeaModel {
         }
 
         /**
-         * Result.
+         * The ID of the request.
          */
         public Builder result(Result result) {
             this.result = result;
@@ -78,7 +82,7 @@ public class QueryDatasetInfoResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * The unique ID of the dataset.
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -202,7 +206,11 @@ public class QueryDatasetInfoResponseBody extends TeaModel {
             private String uniqueId; 
 
             /**
-             * Caption.
+             * Indicates whether the data source table is valid. Valid values:
+             * <p>
+             * 
+             * *   true: data source table
+             * *   false: custom table
              */
             public Builder caption(String caption) {
                 this.caption = caption;
@@ -210,7 +218,7 @@ public class QueryDatasetInfoResponseBody extends TeaModel {
             }
 
             /**
-             * Customsql.
+             * The display name of the table.
              */
             public Builder customsql(Boolean customsql) {
                 this.customsql = customsql;
@@ -218,7 +226,7 @@ public class QueryDatasetInfoResponseBody extends TeaModel {
             }
 
             /**
-             * DatasourceId.
+             * The name of the table.
              */
             public Builder datasourceId(String datasourceId) {
                 this.datasourceId = datasourceId;
@@ -226,7 +234,7 @@ public class QueryDatasetInfoResponseBody extends TeaModel {
             }
 
             /**
-             * DsType.
+             * The ID of the data source.
              */
             public Builder dsType(String dsType) {
                 this.dsType = dsType;
@@ -234,7 +242,7 @@ public class QueryDatasetInfoResponseBody extends TeaModel {
             }
 
             /**
-             * FactTable.
+             * The unique ID of the table.
              */
             public Builder factTable(Boolean factTable) {
                 this.factTable = factTable;
@@ -242,7 +250,11 @@ public class QueryDatasetInfoResponseBody extends TeaModel {
             }
 
             /**
-             * Sql.
+             * Indicates whether the table is a custom SQL table. Valid values:
+             * <p>
+             * 
+             * *   true: custom SQL table
+             * *   false: non-custom SQL table
              */
             public Builder sql(String sql) {
                 this.sql = sql;
@@ -250,7 +262,7 @@ public class QueryDatasetInfoResponseBody extends TeaModel {
             }
 
             /**
-             * TableName.
+             * The list of tables used by the dataset.
              */
             public Builder tableName(String tableName) {
                 this.tableName = tableName;
@@ -258,7 +270,13 @@ public class QueryDatasetInfoResponseBody extends TeaModel {
             }
 
             /**
-             * UniqueId.
+             * The type of the data source. Valid values:
+             * <p>
+             * 
+             * *   mysql
+             * *   odps
+             * *   oracle
+             * *   ... and other data source types supported by Quick BI
              */
             public Builder uniqueId(String uniqueId) {
                 this.uniqueId = uniqueId;
@@ -395,7 +413,7 @@ public class QueryDatasetInfoResponseBody extends TeaModel {
             private String uid; 
 
             /**
-             * Caption.
+             * The unique ID of the field that is referenced by the group measure. Non-NULL if and only if the metric is a grouping metric.
              */
             public Builder caption(String caption) {
                 this.caption = caption;
@@ -403,7 +421,7 @@ public class QueryDatasetInfoResponseBody extends TeaModel {
             }
 
             /**
-             * DataType.
+             * A list of all dimensions in the dataset.
              */
             public Builder dataType(String dataType) {
                 this.dataType = dataType;
@@ -411,7 +429,7 @@ public class QueryDatasetInfoResponseBody extends TeaModel {
             }
 
             /**
-             * DimensionType.
+             * The actual physical field.
              */
             public Builder dimensionType(String dimensionType) {
                 this.dimensionType = dimensionType;
@@ -419,7 +437,12 @@ public class QueryDatasetInfoResponseBody extends TeaModel {
             }
 
             /**
-             * Expression.
+             * Data type; value:
+             * <p>
+             * 
+             * *   string: character
+             * *   number: a number
+             * *   datetime: time
              */
             public Builder expression(String expression) {
                 this.expression = expression;
@@ -427,7 +450,7 @@ public class QueryDatasetInfoResponseBody extends TeaModel {
             }
 
             /**
-             * FactColumn.
+             * Expression for a calculated dimension; valid only for calculated dimensions.
              */
             public Builder factColumn(String factColumn) {
                 this.factColumn = factColumn;
@@ -435,7 +458,12 @@ public class QueryDatasetInfoResponseBody extends TeaModel {
             }
 
             /**
-             * Granularity.
+             * The type of the dimension. Valid values:
+             * <p>
+             * 
+             * *   standard_dimension: General Dimension
+             * *   calculate_dimension: calculating dimensions
+             * *   group_dimension: grouping dimensions
              */
             public Builder granularity(String granularity) {
                 this.granularity = granularity;
@@ -443,7 +471,7 @@ public class QueryDatasetInfoResponseBody extends TeaModel {
             }
 
             /**
-             * RefUid.
+             * The granularity.
              */
             public Builder refUid(String refUid) {
                 this.refUid = refUid;
@@ -451,7 +479,7 @@ public class QueryDatasetInfoResponseBody extends TeaModel {
             }
 
             /**
-             * TableUniqueId.
+             * The ARN.
              */
             public Builder tableUniqueId(String tableUniqueId) {
                 this.tableUniqueId = tableUniqueId;
@@ -459,7 +487,7 @@ public class QueryDatasetInfoResponseBody extends TeaModel {
             }
 
             /**
-             * Uid.
+             * The display name of the dimension.
              */
             public Builder uid(String uid) {
                 this.uid = uid;
@@ -536,7 +564,7 @@ public class QueryDatasetInfoResponseBody extends TeaModel {
             private String pathName; 
 
             /**
-             * Id.
+             * Test directory
              */
             public Builder id(String id) {
                 this.id = id;
@@ -544,7 +572,7 @@ public class QueryDatasetInfoResponseBody extends TeaModel {
             }
 
             /**
-             * Name.
+             * Test directory
              */
             public Builder name(String name) {
                 this.name = name;
@@ -552,7 +580,7 @@ public class QueryDatasetInfoResponseBody extends TeaModel {
             }
 
             /**
-             * PathId.
+             * The information about the directory to which the dataset belongs.
              */
             public Builder pathId(String pathId) {
                 this.pathId = pathId;
@@ -560,7 +588,7 @@ public class QueryDatasetInfoResponseBody extends TeaModel {
             }
 
             /**
-             * PathName.
+             * The path of the directory ID, for example, aa/bb/cc/dd.
              */
             public Builder pathName(String pathName) {
                 this.pathName = pathName;
@@ -673,7 +701,7 @@ public class QueryDatasetInfoResponseBody extends TeaModel {
             private String uid; 
 
             /**
-             * Caption.
+             * The actual physical field.
              */
             public Builder caption(String caption) {
                 this.caption = caption;
@@ -681,7 +709,7 @@ public class QueryDatasetInfoResponseBody extends TeaModel {
             }
 
             /**
-             * DataType.
+             * A list of all measures for the dataset.
              */
             public Builder dataType(String dataType) {
                 this.dataType = dataType;
@@ -689,7 +717,12 @@ public class QueryDatasetInfoResponseBody extends TeaModel {
             }
 
             /**
-             * Expression.
+             * Data type; value:
+             * <p>
+             * 
+             * *   string: character
+             * *   number: a number
+             * *   datetime: time
              */
             public Builder expression(String expression) {
                 this.expression = expression;
@@ -697,7 +730,11 @@ public class QueryDatasetInfoResponseBody extends TeaModel {
             }
 
             /**
-             * FactColumn.
+             * The type of the measure. Valid values:
+             * <p>
+             * 
+             * *   standard_measure: General Metrics
+             * *   calculate_measure: Calculating Measures
              */
             public Builder factColumn(String factColumn) {
                 this.factColumn = factColumn;
@@ -705,7 +742,7 @@ public class QueryDatasetInfoResponseBody extends TeaModel {
             }
 
             /**
-             * MeasureType.
+             * An expression that calculates a measure; valid only for calculated measures.
              */
             public Builder measureType(String measureType) {
                 this.measureType = measureType;
@@ -713,7 +750,7 @@ public class QueryDatasetInfoResponseBody extends TeaModel {
             }
 
             /**
-             * TableUniqueId.
+             * The display name of the metric.
              */
             public Builder tableUniqueId(String tableUniqueId) {
                 this.tableUniqueId = tableUniqueId;
@@ -721,7 +758,7 @@ public class QueryDatasetInfoResponseBody extends TeaModel {
             }
 
             /**
-             * Uid.
+             * The unique ID of the table to which the table belongs, which corresponds to the UniqueId of the CubeTypeList.
              */
             public Builder uid(String uid) {
                 this.uid = uid;
@@ -954,7 +991,7 @@ public class QueryDatasetInfoResponseBody extends TeaModel {
             private String workspaceName; 
 
             /**
-             * CubeTableList.
+             * The unique ID of the dataset.
              */
             public Builder cubeTableList(java.util.List < CubeTableList> cubeTableList) {
                 this.cubeTableList = cubeTableList;
@@ -962,7 +999,7 @@ public class QueryDatasetInfoResponseBody extends TeaModel {
             }
 
             /**
-             * CustimzeSql.
+             * The unique ID of the workspace to which the dataset belongs.
              */
             public Builder custimzeSql(Boolean custimzeSql) {
                 this.custimzeSql = custimzeSql;
@@ -970,7 +1007,13 @@ public class QueryDatasetInfoResponseBody extends TeaModel {
             }
 
             /**
-             * DatasetId.
+             * The type of the data source. Valid values:
+             * <p>
+             * 
+             * *   mysql
+             * *   odps
+             * *   oracle
+             * *   ... Data source types supported by Quick BI such as
              */
             public Builder datasetId(String datasetId) {
                 this.datasetId = datasetId;
@@ -978,7 +1021,7 @@ public class QueryDatasetInfoResponseBody extends TeaModel {
             }
 
             /**
-             * DatasetName.
+             * The user ID of the dataset owner in the Quick BI.
              */
             public Builder datasetName(String datasetName) {
                 this.datasetName = datasetName;
@@ -986,7 +1029,7 @@ public class QueryDatasetInfoResponseBody extends TeaModel {
             }
 
             /**
-             * DimensionList.
+             * If it is a custom SQL table, this is the specific SQL.
              */
             public Builder dimensionList(java.util.List < DimensionList> dimensionList) {
                 this.dimensionList = dimensionList;
@@ -994,7 +1037,7 @@ public class QueryDatasetInfoResponseBody extends TeaModel {
             }
 
             /**
-             * Directory.
+             * The unique ID of the metric.
              */
             public Builder directory(Directory directory) {
                 this.directory = directory;
@@ -1002,7 +1045,7 @@ public class QueryDatasetInfoResponseBody extends TeaModel {
             }
 
             /**
-             * DsId.
+             * The name of the data source.
              */
             public Builder dsId(String dsId) {
                 this.dsId = dsId;
@@ -1010,7 +1053,7 @@ public class QueryDatasetInfoResponseBody extends TeaModel {
             }
 
             /**
-             * DsName.
+             * The time when the dataset was last modified.
              */
             public Builder dsName(String dsName) {
                 this.dsName = dsName;
@@ -1018,7 +1061,7 @@ public class QueryDatasetInfoResponseBody extends TeaModel {
             }
 
             /**
-             * DsType.
+             * The point in time when the training dataset was created.
              */
             public Builder dsType(String dsType) {
                 this.dsType = dsType;
@@ -1026,7 +1069,11 @@ public class QueryDatasetInfoResponseBody extends TeaModel {
             }
 
             /**
-             * GmtCreate.
+             * Indicates whether to customize SQL statements. Valid values:
+             * <p>
+             * 
+             * *   true
+             * *   false
              */
             public Builder gmtCreate(String gmtCreate) {
                 this.gmtCreate = gmtCreate;
@@ -1034,7 +1081,7 @@ public class QueryDatasetInfoResponseBody extends TeaModel {
             }
 
             /**
-             * GmtModify.
+             * The information about the dataset.
              */
             public Builder gmtModify(String gmtModify) {
                 this.gmtModify = gmtModify;
@@ -1042,7 +1089,7 @@ public class QueryDatasetInfoResponseBody extends TeaModel {
             }
 
             /**
-             * MeasureList.
+             * The unique ID of the table to which the table belongs, which corresponds to the UniqueId of the CubeTypeList.
              */
             public Builder measureList(java.util.List < MeasureList> measureList) {
                 this.measureList = measureList;
@@ -1050,7 +1097,7 @@ public class QueryDatasetInfoResponseBody extends TeaModel {
             }
 
             /**
-             * OwnerId.
+             * Test Space
              */
             public Builder ownerId(String ownerId) {
                 this.ownerId = ownerId;
@@ -1058,7 +1105,7 @@ public class QueryDatasetInfoResponseBody extends TeaModel {
             }
 
             /**
-             * OwnerName.
+             * The unique ID of the data source.
              */
             public Builder ownerName(String ownerName) {
                 this.ownerName = ownerName;
@@ -1066,7 +1113,7 @@ public class QueryDatasetInfoResponseBody extends TeaModel {
             }
 
             /**
-             * RowLevel.
+             * The name of the training dataset.
              */
             public Builder rowLevel(Boolean rowLevel) {
                 this.rowLevel = rowLevel;
@@ -1074,7 +1121,11 @@ public class QueryDatasetInfoResponseBody extends TeaModel {
             }
 
             /**
-             * WorkspaceId.
+             * Whether row-level permissions are enabled. Valid values:
+             * <p>
+             * 
+             * *   true: The VIP Netty channel is enabled.
+             * *   false: The VIP Netty channel is disabled.
              */
             public Builder workspaceId(String workspaceId) {
                 this.workspaceId = workspaceId;
@@ -1082,7 +1133,7 @@ public class QueryDatasetInfoResponseBody extends TeaModel {
             }
 
             /**
-             * WorkspaceName.
+             * Big Baby
              */
             public Builder workspaceName(String workspaceName) {
                 this.workspaceName = workspaceName;

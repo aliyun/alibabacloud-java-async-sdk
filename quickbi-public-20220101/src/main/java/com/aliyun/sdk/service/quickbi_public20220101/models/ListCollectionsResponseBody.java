@@ -62,7 +62,7 @@ public class ListCollectionsResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -78,7 +78,7 @@ public class ListCollectionsResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * The primary key ID of the favorite record.
          */
         public Builder success(Boolean success) {
             this.success = success;

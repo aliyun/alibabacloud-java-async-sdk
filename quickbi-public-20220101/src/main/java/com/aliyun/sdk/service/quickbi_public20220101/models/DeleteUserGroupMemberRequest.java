@@ -70,7 +70,7 @@ public class DeleteUserGroupMemberRequest extends Request {
         } 
 
         /**
-         * UserGroupId.
+         * The ID of the user group.
          */
         public Builder userGroupId(String userGroupId) {
             this.putQueryParameter("UserGroupId", userGroupId);
@@ -79,7 +79,7 @@ public class DeleteUserGroupMemberRequest extends Request {
         }
 
         /**
-         * UserId.
+         * The user ID of the Quick BI.
          */
         public Builder userId(String userId) {
             this.putQueryParameter("UserId", userId);

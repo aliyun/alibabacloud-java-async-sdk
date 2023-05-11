@@ -70,7 +70,11 @@ public class DelayTicketExpireTimeRequest extends Request {
         } 
 
         /**
-         * ExpireTime.
+         * The time to postpone.
+         * <p>
+         * 
+         * *   Unit: minutes. Valid values: 0 to 240. Unit: minutes. Valid values: 4 hours.
+         * *   Expired bills cannot be extended.
          */
         public Builder expireTime(Integer expireTime) {
             this.putQueryParameter("ExpireTime", expireTime);
@@ -79,7 +83,7 @@ public class DelayTicketExpireTimeRequest extends Request {
         }
 
         /**
-         * Ticket.
+         * The value of the third-party embedded ticket, that is, the accessTicket value in the URL.
          */
         public Builder ticket(String ticket) {
             this.putQueryParameter("Ticket", ticket);
