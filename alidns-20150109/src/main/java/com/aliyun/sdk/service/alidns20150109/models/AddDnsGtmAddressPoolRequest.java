@@ -230,7 +230,7 @@ public class AddDnsGtmAddressPoolRequest extends Request {
         } 
 
         /**
-         * The addresses in the address pool.
+         * The address pools.
          */
         public Builder addr(java.util.List < Addr> addr) {
             this.putQueryParameter("Addr", addr);
@@ -239,7 +239,7 @@ public class AddDnsGtmAddressPoolRequest extends Request {
         }
 
         /**
-         * The maximum number of consecutive exceptions detected. If the number of consecutive exceptions detected reaches the maximum number, the application service is deemed abnormal.
+         * The number of consecutive health check failures.
          */
         public Builder evaluationCount(Integer evaluationCount) {
             this.putQueryParameter("EvaluationCount", evaluationCount);
@@ -248,7 +248,7 @@ public class AddDnsGtmAddressPoolRequest extends Request {
         }
 
         /**
-         * The ID of the GTM instance for which you want to create an address pool.
+         * The instance ID.
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -266,7 +266,7 @@ public class AddDnsGtmAddressPoolRequest extends Request {
         }
 
         /**
-         * The monitored nodes.
+         * The city nodes to monitor.
          */
         public Builder ispCityNode(java.util.List < IspCityNode> ispCityNode) {
             this.putQueryParameter("IspCityNode", ispCityNode);
@@ -284,7 +284,7 @@ public class AddDnsGtmAddressPoolRequest extends Request {
         }
 
         /**
-         * The load balancing policy for the address pool. Valid values:
+         * The load balancing policy of the address pool. Valid values:
          * <p>
          * 
          * *   ALL_RR: returns all addresses.
@@ -297,27 +297,27 @@ public class AddDnsGtmAddressPoolRequest extends Request {
         }
 
         /**
-         * The extended information, that is, the parameters required for the protocol. Different protocols require different parameters:
+         * The extended information. The required parameters vary based on the health check protocol.
          * <p>
          * 
          * *   HTTP or HTTPS:
          * 
-         *     *   port: the port to check.
+         *     *   port: the check port.
          * 
-         *     *   host: the host configuration.
+         *     *   host: the host settings.
          * 
-         *     *   path: the health check URL.
+         *     *   path: the URL path.
          * 
-         *     *   code: the status code threshold. If the returned status code is greater than the specified threshold, the application service is deemed abnormal.
+         *     *   code: the return code greater than the specified value.
          * 
          *     *   failureRate: the failure rate.
          * 
-         *     *   sni: specifies whether to enable Server Name Indication (SNI). This parameter is only required for the HTTPS protocol. Valid values:
+         *     *   sni: specifies whether to enable server name indication (SNI). This parameter is available only when Health Check Protocol is set to HTTPS. Valid values:
          * 
          *         *   true: enables SNI.
-         *         *   Other value: disables SNI.
+         *         *   other: disables SNI.
          * 
-         *     *   nodeType: the type of the monitored node when the address pool type is DOMAIN. Valid values:
+         *     *   nodeType: The type of the node to monitor when the address pool type is DOMAIN. Valid values:
          * 
          *         *   IPV4
          *         *   IPV6
@@ -330,18 +330,18 @@ public class AddDnsGtmAddressPoolRequest extends Request {
          * 
          *     *   packetLossRate: the loss rate of ping packets.
          * 
-         *     *   nodeType: the type of the monitored node when the address pool type is DOMAIN. Valid values:
+         *     *   nodeType: the type of the node to monitor when the address pool type is DOMAIN. Valid values:
          * 
          *         *   IPV4
          *         *   IPV6
          * 
          * *   TCP:
          * 
-         *     *   port: the port to check.
+         *     *   port: the check port.
          * 
          *     *   failureRate: the failure rate.
          * 
-         *     *   nodeType: the type of the monitored node when the address pool type is DOMAIN. Valid values:
+         *     *   nodeType: the type of the node to monitor when the address pool type is DOMAIN. Valid values:
          * 
          *         *   IPV4
          *         *   IPV6
@@ -353,11 +353,11 @@ public class AddDnsGtmAddressPoolRequest extends Request {
         }
 
         /**
-         * Specifies whether to enable the health check. If this parameter is set to OPEN, the system validates the health check configuration. If this parameter is set to CLOSE, the health check configuration is discarded. Default value: CLOSE. Valid values:
+         * Specifies whether to enable the health check feature. If you set this parameter to OPEN, the system verifies the health check configurations. If you set this parameter to CLOSE, the system discards the health check configurations. Default value: CLOSE. Valid values:
          * <p>
          * 
-         * *   OPEN: enables the health check.
-         * *   CLOSE: disables the health check.
+         * *   OPEN: enables the health check feature.
+         * *   CLOSE: disables the health check feature.
          */
         public Builder monitorStatus(String monitorStatus) {
             this.putQueryParameter("MonitorStatus", monitorStatus);
@@ -366,7 +366,7 @@ public class AddDnsGtmAddressPoolRequest extends Request {
         }
 
         /**
-         * The name of the address pool that you want to create.
+         * The name of the address pool.
          */
         public Builder name(String name) {
             this.putQueryParameter("Name", name);
@@ -375,7 +375,7 @@ public class AddDnsGtmAddressPoolRequest extends Request {
         }
 
         /**
-         * The protocol used for the health check. Valid values:
+         * The health check protocol. Valid values:
          * <p>
          * 
          * *   HTTP
@@ -390,7 +390,7 @@ public class AddDnsGtmAddressPoolRequest extends Request {
         }
 
         /**
-         * The health check timeout period. Unit: milliseconds.
+         * The period of health check timeout. Unit: milliseconds.
          */
         public Builder timeout(Integer timeout) {
             this.putQueryParameter("Timeout", timeout);
@@ -402,9 +402,9 @@ public class AddDnsGtmAddressPoolRequest extends Request {
          * The type of the address pool. Valid values:
          * <p>
          * 
-         * *   IPV4: IPv4 address
-         * *   IPV6: IPv6 address
-         * *   DOMAIN: domain name
+         * *   IPV4: IPv4 address.
+         * *   IPV6: IPv6 address.
+         * *   DOMAIN: domain name.
          */
         public Builder type(String type) {
             this.putQueryParameter("Type", type);
@@ -497,7 +497,7 @@ public class AddDnsGtmAddressPoolRequest extends Request {
             private String remark; 
 
             /**
-             * The address.
+             * The address in the address pool.
              */
             public Builder addr(String addr) {
                 this.addr = addr;
@@ -505,16 +505,16 @@ public class AddDnsGtmAddressPoolRequest extends Request {
             }
 
             /**
-             * The source region of the address. The value is a JSON string.
+             * The source region of the address, in JSON-formatted string.
              * <p>
              * 
-             * *   lineCode: the line code of the source region of the address.
+             * *   LineCode: the line code of the source region of the address.
              * 
              * *   lineCodeRectifyType: the rectification type of the line code. Default value: AUTO. Valid values:
              * 
-             *     *   NO_NEED: no need for rectification
-             *     *   RECTIFIED: rectified
-             *     *   AUTO: automatic rectification
+             *     *   NO_NEED: no need for rectification.
+             *     *   RECTIFIED: rectified.
+             *     *   AUTO: automatic rectification.
              */
             public Builder attributeInfo(String attributeInfo) {
                 this.attributeInfo = attributeInfo;
@@ -530,12 +530,12 @@ public class AddDnsGtmAddressPoolRequest extends Request {
             }
 
             /**
-             * The mode of the address. Valid values:
+             * The response mode of address resolution. Valid values:
              * <p>
              * 
-             * *   SMART: smart return
-             * *   ONLINE: always online
-             * *   OFFLINE: always offline
+             * *   SMART: smart return.
+             * *   ONLINE: always online.
+             * *   OFFLINE: always offline.
              */
             public Builder mode(String mode) {
                 this.mode = mode;
@@ -543,7 +543,7 @@ public class AddDnsGtmAddressPoolRequest extends Request {
             }
 
             /**
-             * The description of the address.
+             * The additional information about the address.
              */
             public Builder remark(String remark) {
                 this.remark = remark;
@@ -596,7 +596,7 @@ public class AddDnsGtmAddressPoolRequest extends Request {
             private String ispCode; 
 
             /**
-             * The code of the city where the monitored node is deployed.
+             * The code of the city node to monitor.
              */
             public Builder cityCode(String cityCode) {
                 this.cityCode = cityCode;
@@ -604,7 +604,7 @@ public class AddDnsGtmAddressPoolRequest extends Request {
             }
 
             /**
-             * The code of the Internet service provider (ISP) to which the monitored node belongs.
+             * The code of the Internet service provider (ISP) node to monitor.
              */
             public Builder ispCode(String ispCode) {
                 this.ispCode = ispCode;

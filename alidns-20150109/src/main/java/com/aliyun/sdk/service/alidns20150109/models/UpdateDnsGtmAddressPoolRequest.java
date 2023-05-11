@@ -113,7 +113,7 @@ public class UpdateDnsGtmAddressPoolRequest extends Request {
         } 
 
         /**
-         * The addresses in the address pool.
+         * The address pools.
          */
         public Builder addr(java.util.List < Addr> addr) {
             this.putQueryParameter("Addr", addr);
@@ -140,7 +140,7 @@ public class UpdateDnsGtmAddressPoolRequest extends Request {
         }
 
         /**
-         * The load balancing policy for the address pool. Valid values:
+         * The load balancing policy of the address pool. Valid values:
          * <p>
          * 
          * *   ALL_RR: returns all addresses.
@@ -245,7 +245,7 @@ public class UpdateDnsGtmAddressPoolRequest extends Request {
             private String remark; 
 
             /**
-             * The address.
+             * The address in the address pool.
              */
             public Builder addr(String addr) {
                 this.addr = addr;
@@ -253,18 +253,18 @@ public class UpdateDnsGtmAddressPoolRequest extends Request {
             }
 
             /**
-             * The source region of the address. The value is a JSON string.
+             * The source region of the address, in JSON-formatted string.
              * <p>
              * 
-             * *   lineCode: the line code of the source region of the address. This parameter is deprecated, and lineCodes prevails.
+             * *   LineCode: the line code of the source region of the address. The LineCode field is deprecated, and the lineCodes field is used as a substitute.
              * 
-             * *   lineCodes: the line codes of the source regions of the address.
+             * *   LineCodes: the line code list of the source regions of addresses.
              * 
-             * *   lineCodeRectifyType: the rectification type of the line code. Default value: AUTO. Valid values:
+             * *   lineCodeRectifyType: the rectification type of the line codes. Default value: AUTO. Valid values:
              * 
-             *     *   NO_NEED: no need for rectification
-             *     *   RECTIFIED: rectified
-             *     *   AUTO: automatic rectification
+             *     *   NO_NEED: no need for rectification.
+             *     *   RECTIFIED: rectified.
+             *     *   AUTO: automatic rectification.
              */
             public Builder attributeInfo(String attributeInfo) {
                 this.attributeInfo = attributeInfo;
@@ -280,12 +280,12 @@ public class UpdateDnsGtmAddressPoolRequest extends Request {
             }
 
             /**
-             * The mode of the address. Valid values:
+             * The response mode: Valid values:
              * <p>
              * 
-             * *   SMART: smart return
-             * *   ONLINE: always online
-             * *   OFFLINE: always offline
+             * *   SMART: smart return.
+             * *   ONLINE: always online.
+             * *   OFFLINE: always offline.
              */
             public Builder mode(String mode) {
                 this.mode = mode;
@@ -293,7 +293,7 @@ public class UpdateDnsGtmAddressPoolRequest extends Request {
             }
 
             /**
-             * The description of the address.
+             * The additional information about the address.
              */
             public Builder remark(String remark) {
                 this.remark = remark;

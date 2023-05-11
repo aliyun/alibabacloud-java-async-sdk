@@ -98,7 +98,7 @@ public class DescribeDomainNsResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * Indicates whether all the name servers were Alibaba Cloud DNS servers.
+         * AllAliDns.
          */
         public Builder allAliDns(Boolean allAliDns) {
             this.allAliDns = allAliDns;
@@ -106,7 +106,7 @@ public class DescribeDomainNsResponseBody extends TeaModel {
         }
 
         /**
-         * DetectFailedReasonCode.
+         * 检测失败原因编码
          */
         public Builder detectFailedReasonCode(String detectFailedReasonCode) {
             this.detectFailedReasonCode = detectFailedReasonCode;
@@ -114,7 +114,7 @@ public class DescribeDomainNsResponseBody extends TeaModel {
         }
 
         /**
-         * The list of DNS servers for the domain name.
+         * DnsServers.
          */
         public Builder dnsServers(DnsServers dnsServers) {
             this.dnsServers = dnsServers;
@@ -122,7 +122,7 @@ public class DescribeDomainNsResponseBody extends TeaModel {
         }
 
         /**
-         * The list of DNS servers assigned by Alibaba Cloud.
+         * ExpectDnsServers.
          */
         public Builder expectDnsServers(ExpectDnsServers expectDnsServers) {
             this.expectDnsServers = expectDnsServers;
@@ -130,7 +130,7 @@ public class DescribeDomainNsResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether the name servers included Alibaba Cloud DNS servers.
+         * IncludeAliDns.
          */
         public Builder includeAliDns(Boolean includeAliDns) {
             this.includeAliDns = includeAliDns;
@@ -138,7 +138,7 @@ public class DescribeDomainNsResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * RequestId.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

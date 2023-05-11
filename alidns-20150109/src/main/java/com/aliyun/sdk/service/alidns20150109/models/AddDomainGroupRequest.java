@@ -69,7 +69,7 @@ public class AddDomainGroupRequest extends Request {
         } 
 
         /**
-         * The name of the domain name group.
+         * The ID of the request.
          */
         public Builder groupName(String groupName) {
             this.putQueryParameter("GroupName", groupName);
@@ -78,7 +78,7 @@ public class AddDomainGroupRequest extends Request {
         }
 
         /**
-         * The language type.
+         * The name of the domain name group.
          */
         public Builder lang(String lang) {
             this.putQueryParameter("Lang", lang);

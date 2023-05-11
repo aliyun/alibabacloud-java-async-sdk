@@ -296,16 +296,38 @@ public class AddDnsGtmAccessStrategyRequest extends Request {
         }
 
         /**
-         * The type of the primary address pool. Valid values:
+         * The load balancing policy of the primary address pool group. Valid values:
+         * <p>
+         * 
+         * *   ALL_RR: returns all addresses.
+         * *   RATIO: returns addresses by weight.
+         */
+        public Builder defaultAddrPoolType(String defaultAddrPoolType) {
+            this.putQueryParameter("DefaultAddrPoolType", defaultAddrPoolType);
+            this.defaultAddrPoolType = defaultAddrPoolType;
+            return this;
+        }
+
+        /**
+         * The type of the secondary address pool. Valid values:
          * <p>
          * 
          * *   IPV4
          * *   IPV6
          * *   DOMAIN
          */
-        public Builder defaultAddrPoolType(String defaultAddrPoolType) {
-            this.putQueryParameter("DefaultAddrPoolType", defaultAddrPoolType);
-            this.defaultAddrPoolType = defaultAddrPoolType;
+        public Builder defaultLatencyOptimization(String defaultLatencyOptimization) {
+            this.putQueryParameter("DefaultLatencyOptimization", defaultLatencyOptimization);
+            this.defaultLatencyOptimization = defaultLatencyOptimization;
+            return this;
+        }
+
+        /**
+         * The minimum number of available addresses in the primary address pool group.
+         */
+        public Builder defaultLbaStrategy(String defaultLbaStrategy) {
+            this.putQueryParameter("DefaultLbaStrategy", defaultLbaStrategy);
+            this.defaultLbaStrategy = defaultLbaStrategy;
             return this;
         }
 
@@ -316,28 +338,6 @@ public class AddDnsGtmAccessStrategyRequest extends Request {
          * *   OPEN: enable
          * *   CLOSE: disable
          */
-        public Builder defaultLatencyOptimization(String defaultLatencyOptimization) {
-            this.putQueryParameter("DefaultLatencyOptimization", defaultLatencyOptimization);
-            this.defaultLatencyOptimization = defaultLatencyOptimization;
-            return this;
-        }
-
-        /**
-         * The load balancing policy of the primary address pool group. Valid values:
-         * <p>
-         * 
-         * *   ALL_RR: returns all addresses.
-         * *   RATIO: returns addresses by weight.
-         */
-        public Builder defaultLbaStrategy(String defaultLbaStrategy) {
-            this.putQueryParameter("DefaultLbaStrategy", defaultLbaStrategy);
-            this.defaultLbaStrategy = defaultLbaStrategy;
-            return this;
-        }
-
-        /**
-         * The maximum number of addresses returned from the primary address pool group.
-         */
         public Builder defaultMaxReturnAddrNum(Integer defaultMaxReturnAddrNum) {
             this.putQueryParameter("DefaultMaxReturnAddrNum", defaultMaxReturnAddrNum);
             this.defaultMaxReturnAddrNum = defaultMaxReturnAddrNum;
@@ -345,7 +345,7 @@ public class AddDnsGtmAccessStrategyRequest extends Request {
         }
 
         /**
-         * The minimum number of available addresses in the primary address pool group.
+         * The maximum number of addresses returned from the primary address pool group.
          */
         public Builder defaultMinAvailableAddrNum(Integer defaultMinAvailableAddrNum) {
             this.putQueryParameter("DefaultMinAvailableAddrNum", defaultMinAvailableAddrNum);
@@ -363,87 +363,15 @@ public class AddDnsGtmAccessStrategyRequest extends Request {
         }
 
         /**
-         * The type of the secondary address pool. Valid values:
-         * <p>
-         * 
-         * *   IPV4
-         * *   IPV6
-         * *   DOMAIN
-         */
-        public Builder failoverAddrPoolType(String failoverAddrPoolType) {
-            this.putQueryParameter("FailoverAddrPoolType", failoverAddrPoolType);
-            this.failoverAddrPoolType = failoverAddrPoolType;
-            return this;
-        }
-
-        /**
-         * Specifies whether to enable scheduling optimization for latency resolution for the secondary address pool group. Valid values:
-         * <p>
-         * 
-         * *   OPEN: enable
-         * *   CLOSE: disable
-         */
-        public Builder failoverLatencyOptimization(String failoverLatencyOptimization) {
-            this.putQueryParameter("FailoverLatencyOptimization", failoverLatencyOptimization);
-            this.failoverLatencyOptimization = failoverLatencyOptimization;
-            return this;
-        }
-
-        /**
          * The load balancing policy of the secondary address pool group. Valid values:
          * <p>
          * 
          * *   ALL_RR: returns all addresses.
          * *   RATIO: returns addresses by weight.
          */
-        public Builder failoverLbaStrategy(String failoverLbaStrategy) {
-            this.putQueryParameter("FailoverLbaStrategy", failoverLbaStrategy);
-            this.failoverLbaStrategy = failoverLbaStrategy;
-            return this;
-        }
-
-        /**
-         * The maximum number of addresses returned from the secondary address pool group.
-         */
-        public Builder failoverMaxReturnAddrNum(Integer failoverMaxReturnAddrNum) {
-            this.putQueryParameter("FailoverMaxReturnAddrNum", failoverMaxReturnAddrNum);
-            this.failoverMaxReturnAddrNum = failoverMaxReturnAddrNum;
-            return this;
-        }
-
-        /**
-         * The minimum number of available addresses in the secondary address pool group.
-         */
-        public Builder failoverMinAvailableAddrNum(Integer failoverMinAvailableAddrNum) {
-            this.putQueryParameter("FailoverMinAvailableAddrNum", failoverMinAvailableAddrNum);
-            this.failoverMinAvailableAddrNum = failoverMinAvailableAddrNum;
-            return this;
-        }
-
-        /**
-         * The ID of the instance.
-         */
-        public Builder instanceId(String instanceId) {
-            this.putQueryParameter("InstanceId", instanceId);
-            this.instanceId = instanceId;
-            return this;
-        }
-
-        /**
-         * The language to return some response parameters. Default value: en. Valid values: en, zh, and ja.
-         */
-        public Builder lang(String lang) {
-            this.putQueryParameter("Lang", lang);
-            this.lang = lang;
-            return this;
-        }
-
-        /**
-         * The line codes of source regions. For example: `["default", "drpeng"]` indicates Global and Dr. Peng Telecom & Media Group.
-         */
-        public Builder lines(String lines) {
-            this.putQueryParameter("Lines", lines);
-            this.lines = lines;
+        public Builder failoverAddrPoolType(String failoverAddrPoolType) {
+            this.putQueryParameter("FailoverAddrPoolType", failoverAddrPoolType);
+            this.failoverAddrPoolType = failoverAddrPoolType;
             return this;
         }
 
@@ -454,6 +382,78 @@ public class AddDnsGtmAccessStrategyRequest extends Request {
          * *   GEO: geographical location-based
          * *   LATENCY: latency-based
          */
+        public Builder failoverLatencyOptimization(String failoverLatencyOptimization) {
+            this.putQueryParameter("FailoverLatencyOptimization", failoverLatencyOptimization);
+            this.failoverLatencyOptimization = failoverLatencyOptimization;
+            return this;
+        }
+
+        /**
+         * The minimum number of available addresses in the secondary address pool group.
+         */
+        public Builder failoverLbaStrategy(String failoverLbaStrategy) {
+            this.putQueryParameter("FailoverLbaStrategy", failoverLbaStrategy);
+            this.failoverLbaStrategy = failoverLbaStrategy;
+            return this;
+        }
+
+        /**
+         * Specifies whether to enable scheduling optimization for latency resolution for the secondary address pool group. Valid values:
+         * <p>
+         * 
+         * *   OPEN: enable
+         * *   CLOSE: disable
+         */
+        public Builder failoverMaxReturnAddrNum(Integer failoverMaxReturnAddrNum) {
+            this.putQueryParameter("FailoverMaxReturnAddrNum", failoverMaxReturnAddrNum);
+            this.failoverMaxReturnAddrNum = failoverMaxReturnAddrNum;
+            return this;
+        }
+
+        /**
+         * The maximum number of addresses returned from the secondary address pool group.
+         */
+        public Builder failoverMinAvailableAddrNum(Integer failoverMinAvailableAddrNum) {
+            this.putQueryParameter("FailoverMinAvailableAddrNum", failoverMinAvailableAddrNum);
+            this.failoverMinAvailableAddrNum = failoverMinAvailableAddrNum;
+            return this;
+        }
+
+        /**
+         * The name of the access policy.
+         */
+        public Builder instanceId(String instanceId) {
+            this.putQueryParameter("InstanceId", instanceId);
+            this.instanceId = instanceId;
+            return this;
+        }
+
+        /**
+         * The ID of the instance.
+         */
+        public Builder lang(String lang) {
+            this.putQueryParameter("Lang", lang);
+            this.lang = lang;
+            return this;
+        }
+
+        /**
+         * The type of the primary address pool. Valid values:
+         * <p>
+         * 
+         * *   IPV4
+         * *   IPV6
+         * *   DOMAIN
+         */
+        public Builder lines(String lines) {
+            this.putQueryParameter("Lines", lines);
+            this.lines = lines;
+            return this;
+        }
+
+        /**
+         * The weight of the address pool in the primary address pool group.
+         */
         public Builder strategyMode(String strategyMode) {
             this.putQueryParameter("StrategyMode", strategyMode);
             this.strategyMode = strategyMode;
@@ -461,7 +461,7 @@ public class AddDnsGtmAccessStrategyRequest extends Request {
         }
 
         /**
-         * The name of the access policy.
+         * The line codes of source regions. For example: `["default", "drpeng"]` indicates Global and Dr. Peng Telecom & Media Group.
          */
         public Builder strategyName(String strategyName) {
             this.putQueryParameter("StrategyName", strategyName);
@@ -515,7 +515,7 @@ public class AddDnsGtmAccessStrategyRequest extends Request {
             private Integer lbaWeight; 
 
             /**
-             * The ID of the address pool in the primary address pool group.
+             * The weight of the address pool in the secondary address pool group.
              */
             public Builder id(String id) {
                 this.id = id;
@@ -523,7 +523,7 @@ public class AddDnsGtmAccessStrategyRequest extends Request {
             }
 
             /**
-             * The weight of the address pool in the primary address pool group.
+             * The ID of the address pool in the primary address pool group.
              */
             public Builder lbaWeight(Integer lbaWeight) {
                 this.lbaWeight = lbaWeight;
@@ -576,7 +576,7 @@ public class AddDnsGtmAccessStrategyRequest extends Request {
             private Integer lbaWeight; 
 
             /**
-             * The ID of the address pool in the secondary address pool group.
+             * The ID of the access policy.
              */
             public Builder id(String id) {
                 this.id = id;
@@ -584,7 +584,7 @@ public class AddDnsGtmAccessStrategyRequest extends Request {
             }
 
             /**
-             * The weight of the address pool in the secondary address pool group.
+             * The ID of the address pool in the secondary address pool group.
              */
             public Builder lbaWeight(Integer lbaWeight) {
                 this.lbaWeight = lbaWeight;

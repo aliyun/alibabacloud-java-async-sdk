@@ -98,7 +98,7 @@ public class DescribeDnsGtmInstanceStatusResponseBody extends TeaModel {
         private Integer switchToFailoverStrategyNum; 
 
         /**
-         * The number of available addresses.
+         * The number of unavailable address pool groups.
          */
         public Builder addrAvailableNum(Integer addrAvailableNum) {
             this.addrAvailableNum = addrAvailableNum;
@@ -106,7 +106,7 @@ public class DescribeDnsGtmInstanceStatusResponseBody extends TeaModel {
         }
 
         /**
-         * The number of unavailable addresses.
+         * The ID of the request.
          */
         public Builder addrNotAvailableNum(Integer addrNotAvailableNum) {
             this.addrNotAvailableNum = addrNotAvailableNum;
@@ -114,7 +114,7 @@ public class DescribeDnsGtmInstanceStatusResponseBody extends TeaModel {
         }
 
         /**
-         * The number of unavailable address pool groups.
+         * The number of access policies switched to the secondary address pool group.
          */
         public Builder addrPoolGroupNotAvailableNum(Integer addrPoolGroupNotAvailableNum) {
             this.addrPoolGroupNotAvailableNum = addrPoolGroupNotAvailableNum;
@@ -122,7 +122,7 @@ public class DescribeDnsGtmInstanceStatusResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * The number of access policies that are unavailable in the current active address pool group.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -130,7 +130,7 @@ public class DescribeDnsGtmInstanceStatusResponseBody extends TeaModel {
         }
 
         /**
-         * The number of access policies that are unavailable in the current active address pool group.
+         * The number of available addresses.
          */
         public Builder strategyNotAvailableNum(Integer strategyNotAvailableNum) {
             this.strategyNotAvailableNum = strategyNotAvailableNum;
@@ -138,7 +138,7 @@ public class DescribeDnsGtmInstanceStatusResponseBody extends TeaModel {
         }
 
         /**
-         * The number of access policies switched to the secondary address pool group.
+         * SwitchToFailoverStrategyNum.
          */
         public Builder switchToFailoverStrategyNum(Integer switchToFailoverStrategyNum) {
             this.switchToFailoverStrategyNum = switchToFailoverStrategyNum;

@@ -196,10 +196,7 @@ public class DescribeRecordResolveStatisticsSummaryRequest extends Request {
         } 
 
         /**
-         * 排序方向。取值: 
-         * <p>
-         * 递减（默认）: DESC
-         * 递增: ASC
+         * The order in which you want to sort the query results. Valid values: DESC and ASC. DESC is the default value and indicates that the query results are sorted in descending order. ASC indicates that the query results are sorted in ascending order.
          */
         public Builder direction(String direction) {
             this.putQueryParameter("Direction", direction);
@@ -208,7 +205,7 @@ public class DescribeRecordResolveStatisticsSummaryRequest extends Request {
         }
 
         /**
-         * 可选参数，传递具体域名时查询该域名下各子域名的解析量, 不传递时查询用户账号下所有付费域名的解析量列表
+         * The domain name.
          */
         public Builder domainName(String domainName) {
             this.putQueryParameter("DomainName", domainName);
@@ -217,12 +214,10 @@ public class DescribeRecordResolveStatisticsSummaryRequest extends Request {
         }
 
         /**
-         * 指定域名时需要传递
+         * The type of the domain name. The parameter value is not case-sensitive. Valid values:
          * <p>
-         * 域名类型，大小写不敏感。取值: 
          * 
-         * 权威域名(默认): PUBLIC
-         * 缓存加速域名: CACHE
+         * PUBLIC and CACHE. PUBLIC is the default value and indicates an authoritative domain name. CACHE indicates a cache-accelerated domain name.
          */
         public Builder domainType(String domainType) {
             this.putQueryParameter("DomainType", domainType);
@@ -231,7 +226,7 @@ public class DescribeRecordResolveStatisticsSummaryRequest extends Request {
         }
 
         /**
-         * 结束时间，格式yyyy-MM-dd，如：2023-03-13
+         * The end time in the yyyy-MM-dd format, for example, 2023-03-13.
          */
         public Builder endDate(String endDate) {
             this.putQueryParameter("EndDate", endDate);
@@ -240,7 +235,7 @@ public class DescribeRecordResolveStatisticsSummaryRequest extends Request {
         }
 
         /**
-         * 关键字，与SearchMode配合使用
+         * The keyword. The Keyword parameter is used together with the SearchMode parameter.
          */
         public Builder keyword(String keyword) {
             this.putQueryParameter("Keyword", keyword);
@@ -249,7 +244,7 @@ public class DescribeRecordResolveStatisticsSummaryRequest extends Request {
         }
 
         /**
-         * lang，语言：zh、en、ja
+         * The language used. Valid values: zh, en, and ja.
          */
         public Builder lang(String lang) {
             this.putQueryParameter("Lang", lang);
@@ -258,7 +253,7 @@ public class DescribeRecordResolveStatisticsSummaryRequest extends Request {
         }
 
         /**
-         * 当前页数，起始值为1，默认为1。
+         * The number of the page to return. Pages start from page 1. Default value: 1.
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -267,7 +262,7 @@ public class DescribeRecordResolveStatisticsSummaryRequest extends Request {
         }
 
         /**
-         * 分页查询时设置的每页行数，最大值1000，最小值为1。
+         * The number of entries to return on each page. Valid values: 1 to 1000.
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -276,11 +271,10 @@ public class DescribeRecordResolveStatisticsSummaryRequest extends Request {
         }
 
         /**
-         * 关键词的搜索模式。取值：
+         * The search mode of the keyword. Valid values:
          * <p>
          * 
-         * 模糊搜索(默认): LIKE
-         * 精确搜索: EXACT
+         * LIKE (default): fuzzy search. EXACT: exact match.
          */
         public Builder searchMode(String searchMode) {
             this.putQueryParameter("SearchMode", searchMode);
@@ -289,7 +283,7 @@ public class DescribeRecordResolveStatisticsSummaryRequest extends Request {
         }
 
         /**
-         * 开始时间，格式yyyy-MM-dd，如: 2023-03-01
+         * The start time in the yyyy-MM-dd format, for example, 2023-03-01.
          */
         public Builder startDate(String startDate) {
             this.putQueryParameter("StartDate", startDate);
@@ -298,11 +292,16 @@ public class DescribeRecordResolveStatisticsSummaryRequest extends Request {
         }
 
         /**
-         * 查询总解析量阈值，也可查询相应的解析量不大于threshold的数据。例如，可查询出解析量小于100次的域名。
+         * The threshold for the number of resolution requests. You can query the subdomain names at the specified quantity level of resolution requests and query the number of resolution requests for each subdomain name. For example, if you set this parameter to 100, you can obtain data about the subdomain names with less than 100 resolution requests.
          * <p>
-         * 不传或者传小于0的值，查询所有数据
-         * 传0，查询无解析量的数据
-         * 传大于0的值，查询解析量不超过该值的域名
+         * 
+         * If you do not specify this parameter, the data about the subdomain names that have resolution requests is obtained.
+         * 
+         * If you set this parameter to a value less than 0, the data about all subdomain names is obtained.
+         * 
+         * If you set this parameter to 0, the data about the subdomain names that do not have resolution requests is obtained.
+         * 
+         * If you set this parameter to a value greater than 0, the data about the subdomain names whose number of resolution requests is less than or equal to the value of this parameter is obtained.
          */
         public Builder threshold(Long threshold) {
             this.putQueryParameter("Threshold", threshold);

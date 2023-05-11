@@ -99,7 +99,7 @@ public class AddCustomLineRequest extends Request {
         } 
 
         /**
-         * The domain name for which you configure the custom line.
+         * The name of the custom line.
          */
         public Builder domainName(String domainName) {
             this.putQueryParameter("DomainName", domainName);
@@ -117,7 +117,7 @@ public class AddCustomLineRequest extends Request {
         }
 
         /**
-         * The language type.
+         * The domain name for which you configure the custom line.
          */
         public Builder lang(String lang) {
             this.putQueryParameter("Lang", lang);
@@ -126,7 +126,7 @@ public class AddCustomLineRequest extends Request {
         }
 
         /**
-         * The name of the custom line.
+         * The end IP address of the CIDR block.
          */
         public Builder lineName(String lineName) {
             this.putQueryParameter("LineName", lineName);
@@ -180,7 +180,7 @@ public class AddCustomLineRequest extends Request {
             private String startIp; 
 
             /**
-             * The end IP address of the CIDR block.
+             * The start IP address of the CIDR block.
              */
             public Builder endIp(String endIp) {
                 this.endIp = endIp;
@@ -188,7 +188,7 @@ public class AddCustomLineRequest extends Request {
             }
 
             /**
-             * The start IP address of the CIDR block.
+             * The unique ID of the custom line.
              */
             public Builder startIp(String startIp) {
                 this.startIp = startIp;

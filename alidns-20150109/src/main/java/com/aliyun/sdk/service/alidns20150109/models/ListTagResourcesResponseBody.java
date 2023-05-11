@@ -62,7 +62,7 @@ public class ListTagResourcesResponseBody extends TeaModel {
         private java.util.List < TagResources> tagResources; 
 
         /**
-         * The returned value of NextToken is a pagination token, which can be used in the next request to retrieve a new page of results. If the NextToken parameter is empty, no next page exists.
+         * The token used to start the next query. If no value is returned for NextToken, no next queries are sent.
          */
         public Builder nextToken(String nextToken) {
             this.nextToken = nextToken;
@@ -70,7 +70,7 @@ public class ListTagResourcesResponseBody extends TeaModel {
         }
 
         /**
-         * The unique ID of the request.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -78,7 +78,7 @@ public class ListTagResourcesResponseBody extends TeaModel {
         }
 
         /**
-         * Details of the resource and tags, such as the resource ID, the resource type, tag keys, and tag values.
+         * Details of the resource and tags, including the resource ID, the resource type, tag keys, and tag values.
          */
         public Builder tagResources(java.util.List < TagResources> tagResources) {
             this.tagResources = tagResources;
@@ -162,7 +162,7 @@ public class ListTagResourcesResponseBody extends TeaModel {
             }
 
             /**
-             * The type of the resource. The returned parameter value is fixed to DOMAIN.
+             * The type of the resource. Only DOMAIN is returned.
              */
             public Builder resourceType(String resourceType) {
                 this.resourceType = resourceType;

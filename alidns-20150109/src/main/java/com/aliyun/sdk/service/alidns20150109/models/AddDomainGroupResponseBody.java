@@ -62,7 +62,7 @@ public class AddDomainGroupResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The ID of the domain name group.
+         * The name of the domain name group.
          */
         public Builder groupId(String groupId) {
             this.groupId = groupId;
@@ -70,7 +70,7 @@ public class AddDomainGroupResponseBody extends TeaModel {
         }
 
         /**
-         * The name of the domain name group.
+         * GroupName.
          */
         public Builder groupName(String groupName) {
             this.groupName = groupName;
@@ -78,7 +78,7 @@ public class AddDomainGroupResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * The ID of the domain name group.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

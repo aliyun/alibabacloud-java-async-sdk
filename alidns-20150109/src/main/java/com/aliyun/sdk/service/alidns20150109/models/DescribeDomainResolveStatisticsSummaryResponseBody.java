@@ -98,7 +98,7 @@ public class DescribeDomainResolveStatisticsSummaryResponseBody extends TeaModel
         private Integer totalPages; 
 
         /**
-         * PageNumber.
+         * The page number of the returned page.
          */
         public Builder pageNumber(Integer pageNumber) {
             this.pageNumber = pageNumber;
@@ -106,7 +106,7 @@ public class DescribeDomainResolveStatisticsSummaryResponseBody extends TeaModel
         }
 
         /**
-         * PageSize.
+         * The number of entries returned per page.
          */
         public Builder pageSize(Integer pageSize) {
             this.pageSize = pageSize;
@@ -114,7 +114,7 @@ public class DescribeDomainResolveStatisticsSummaryResponseBody extends TeaModel
         }
 
         /**
-         * RequestId
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -122,7 +122,7 @@ public class DescribeDomainResolveStatisticsSummaryResponseBody extends TeaModel
         }
 
         /**
-         * Statistics.
+         * The statistics.
          */
         public Builder statistics(java.util.List < Statistics> statistics) {
             this.statistics = statistics;
@@ -130,7 +130,7 @@ public class DescribeDomainResolveStatisticsSummaryResponseBody extends TeaModel
         }
 
         /**
-         * TotalItems.
+         * The total number of entries returned.
          */
         public Builder totalItems(Integer totalItems) {
             this.totalItems = totalItems;
@@ -138,7 +138,7 @@ public class DescribeDomainResolveStatisticsSummaryResponseBody extends TeaModel
         }
 
         /**
-         * TotalPages.
+         * The total number of pages returned.
          */
         public Builder totalPages(Integer totalPages) {
             this.totalPages = totalPages;
@@ -202,7 +202,7 @@ public class DescribeDomainResolveStatisticsSummaryResponseBody extends TeaModel
             private String domainType; 
 
             /**
-             * Count.
+             * The number of resolution requests.
              */
             public Builder count(String count) {
                 this.count = count;
@@ -210,7 +210,7 @@ public class DescribeDomainResolveStatisticsSummaryResponseBody extends TeaModel
             }
 
             /**
-             * DomainName.
+             * The domain name.
              */
             public Builder domainName(String domainName) {
                 this.domainName = domainName;
@@ -218,7 +218,7 @@ public class DescribeDomainResolveStatisticsSummaryResponseBody extends TeaModel
             }
 
             /**
-             * DomainType.
+             * The instance type. Valid values: PUBLIC and CACHE. PUBLIC indicates an authoritative domain name. CACHE indicates a cache-accelerated domain name.
              */
             public Builder domainType(String domainType) {
                 this.domainType = domainType;
