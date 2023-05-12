@@ -120,6 +120,8 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<FlightSearchListResponse> flightSearchList(FlightSearchListRequest request);
 
+    CompletableFuture<GroupCorpTokenResponse> groupCorpToken(GroupCorpTokenRequest request);
+
     CompletableFuture<GroupDepartSaveResponse> groupDepartSave(GroupDepartSaveRequest request);
 
     CompletableFuture<GroupUserSaveResponse> groupUserSave(GroupUserSaveRequest request);
