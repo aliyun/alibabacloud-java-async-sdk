@@ -50,7 +50,7 @@ public class RebuildDesktopsResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * RebuildDesktops
+         * RebuildResults.
          */
         public Builder rebuildResults(java.util.List < RebuildResults> rebuildResults) {
             this.rebuildResults = rebuildResults;
@@ -58,7 +58,7 @@ public class RebuildDesktopsResponseBody extends TeaModel {
         }
 
         /**
-         * The operation that you want to perform. Set the value to **RebuildDesktops**.
+         * RebuildDesktops
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

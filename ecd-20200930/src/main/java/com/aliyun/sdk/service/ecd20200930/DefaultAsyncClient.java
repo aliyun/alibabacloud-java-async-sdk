@@ -71,6 +71,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+      * You can call this operation to share a specific folder with other users. You can also configure the folder permissions.
+      *
+     */
     @Override
     public CompletableFuture<AddFilePermissionResponse> addFilePermission(AddFilePermissionRequest request) {
         try {
@@ -2406,7 +2410,7 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * The ID of the cloud desktop.
+      * The error message. This parameter is not returned if the value of Code is success.
       *
      */
     @Override

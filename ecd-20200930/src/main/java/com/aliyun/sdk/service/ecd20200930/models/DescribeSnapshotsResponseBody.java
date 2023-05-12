@@ -62,7 +62,7 @@ public class DescribeSnapshotsResponseBody extends TeaModel {
         private java.util.List < Snapshots> snapshots; 
 
         /**
-         * If the NextToken parameter is empty, no next page exists.
+         * Details of the snapshots.
          */
         public Builder nextToken(String nextToken) {
             this.nextToken = nextToken;
@@ -70,7 +70,7 @@ public class DescribeSnapshotsResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * Details of the snapshot.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -78,7 +78,7 @@ public class DescribeSnapshotsResponseBody extends TeaModel {
         }
 
         /**
-         * The queried snapshots.
+         * The time when the snapshot was created. The time follows the [ISO 8601](~~25696~~) standard in the yyyy-MM-ddTHH:mm:ssZ format. The time is displayed in UTC.
          */
         public Builder snapshots(java.util.List < Snapshots> snapshots) {
             this.snapshots = snapshots;
@@ -322,7 +322,11 @@ public class DescribeSnapshotsResponseBody extends TeaModel {
             private String volumeEncryptionKey; 
 
             /**
-             * The time when the snapshot was created. The time follows the [ISO 8601](~~25696~~) standard in the yyyy-MM-ddTHH:mm:ssZ format. The time is displayed in UTC.
+             * The type of snapshot. Valid values:
+             * <p>
+             * 
+             * *   AUTO: auto snapshot
+             * *   USER: manual snapshot
              */
             public Builder creationTime(String creationTime) {
                 this.creationTime = creationTime;
@@ -330,7 +334,7 @@ public class DescribeSnapshotsResponseBody extends TeaModel {
             }
 
             /**
-             * The user that creates the cloud desktop.
+             * Indicates whether disk encryption is enabled.
              */
             public Builder creator(String creator) {
                 this.creator = creator;
@@ -338,7 +342,7 @@ public class DescribeSnapshotsResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the snapshot was deleted. The time follows the [ISO 8601](~~25696~~) standard in the yyyy-mm-ddthh:mm:ssz format. The time is displayed in UTC.
+             * DeletionTime.
              */
             public Builder deletionTime(String deletionTime) {
                 this.deletionTime = deletionTime;
@@ -346,7 +350,10 @@ public class DescribeSnapshotsResponseBody extends TeaModel {
             }
 
             /**
-             * The snapshot description.
+             * The remaining time required to create the snapshot. Unit: seconds.
+             * <p>
+             * 
+             * > If the value of the `Status` parameter is `PROGRESSING` and the value of the `RemainTime` parameter is `-1`, the system is calculating the remaining time required to create the snapshot.
              */
             public Builder description(String description) {
                 this.description = description;
@@ -354,23 +361,7 @@ public class DescribeSnapshotsResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the cloud desktop to which the snapshot belongs.
-             */
-            public Builder desktopId(String desktopId) {
-                this.desktopId = desktopId;
-                return this;
-            }
-
-            /**
-             * The cloud desktop name.
-             */
-            public Builder desktopName(String desktopName) {
-                this.desktopName = desktopName;
-                return this;
-            }
-
-            /**
-             * The cloud desktop state. Valid values:
+             * The state of the cloud desktop. Valid values:
              * <p>
              * 
              * *   Pending: The cloud desktop is pending.
@@ -382,13 +373,33 @@ public class DescribeSnapshotsResponseBody extends TeaModel {
              * *   Expired: The cloud desktop expired.
              * *   Deleted: The cloud desktop is deleted.
              */
+            public Builder desktopId(String desktopId) {
+                this.desktopId = desktopId;
+                return this;
+            }
+
+            /**
+             * The user that creates the snapshot.
+             */
+            public Builder desktopName(String desktopName) {
+                this.desktopName = desktopName;
+                return this;
+            }
+
+            /**
+             * The type of the protocol. Valid values:
+             * <p>
+             * 
+             * *   ASP
+             * *   HDX
+             */
             public Builder desktopStatus(String desktopStatus) {
                 this.desktopStatus = desktopStatus;
                 return this;
             }
 
             /**
-             * The progress of creating the snapshot. Unit: percentage (%).
+             * The ID of the snapshot.
              */
             public Builder progress(String progress) {
                 this.progress = progress;
@@ -396,61 +407,10 @@ public class DescribeSnapshotsResponseBody extends TeaModel {
             }
 
             /**
-             * The protocol. Valid values:
-             * <p>
-             * 
-             * *   ASP
-             * *   HDX
+             * The ID of the Key Management Service (KMS) key that is used when disk encryption is enabled. You can call the [ListKeys](~~28951~~) operation to obtain a list of KMS keys.
              */
             public Builder protocolType(String protocolType) {
                 this.protocolType = protocolType;
-                return this;
-            }
-
-            /**
-             * The remaining time required to create the snapshot. Unit: seconds.
-             * <p>
-             * 
-             * > If the value of the `Status` parameter is `PROGRESSING` and the value of the `RemainTime` parameter is `-1`, the system is calculating the remaining time required to create the snapshot.
-             */
-            public Builder remainTime(Integer remainTime) {
-                this.remainTime = remainTime;
-                return this;
-            }
-
-            /**
-             * The snapshot ID.
-             */
-            public Builder snapshotId(String snapshotId) {
-                this.snapshotId = snapshotId;
-                return this;
-            }
-
-            /**
-             * The snapshot name.
-             */
-            public Builder snapshotName(String snapshotName) {
-                this.snapshotName = snapshotName;
-                return this;
-            }
-
-            /**
-             * The snapshot type. Valid values:
-             * <p>
-             * 
-             * *   AUTO: automatic snapshot
-             * *   USER: manual snapshot
-             */
-            public Builder snapshotType(String snapshotType) {
-                this.snapshotType = snapshotType;
-                return this;
-            }
-
-            /**
-             * The size of the source disk. Unit: GiB.
-             */
-            public Builder sourceDiskSize(String sourceDiskSize) {
-                this.sourceDiskSize = sourceDiskSize;
                 return this;
             }
 
@@ -461,18 +421,53 @@ public class DescribeSnapshotsResponseBody extends TeaModel {
              * *   SYSTEM: system disk
              * *   DATA: data disk
              */
+            public Builder remainTime(Integer remainTime) {
+                this.remainTime = remainTime;
+                return this;
+            }
+
+            /**
+             * The size of the source disk. Unit: GiB.
+             */
+            public Builder snapshotId(String snapshotId) {
+                this.snapshotId = snapshotId;
+                return this;
+            }
+
+            /**
+             * The description of the snapshot.
+             */
+            public Builder snapshotName(String snapshotName) {
+                this.snapshotName = snapshotName;
+                return this;
+            }
+
+            /**
+             * The progress of the snapshot creation. Unit: percentage (%).
+             */
+            public Builder snapshotType(String snapshotType) {
+                this.snapshotType = snapshotType;
+                return this;
+            }
+
+            /**
+             * The ID of the cloud desktop to which the snapshot belongs.
+             */
+            public Builder sourceDiskSize(String sourceDiskSize) {
+                this.sourceDiskSize = sourceDiskSize;
+                return this;
+            }
+
+            /**
+             * The name of the cloud desktop.
+             */
             public Builder sourceDiskType(String sourceDiskType) {
                 this.sourceDiskType = sourceDiskType;
                 return this;
             }
 
             /**
-             * The state of the snapshot. Valid values:
-             * <p>
-             * 
-             * *   PROGRESSING: The snapshot is being created.
-             * *   FAILED: The snapshot failed to be created.
-             * *   ACCOMPLISHED: The snapshot is created.
+             * The name of the snapshot.
              */
             public Builder status(String status) {
                 this.status = status;
@@ -480,7 +475,7 @@ public class DescribeSnapshotsResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether disk encryption is enabled.
+             * The time when the snapshot was deleted. The time follows the [ISO 8601](~~25696~~) standard in the yyyy-mm-ddthh:mm:ssz format. The time is displayed in UTC.
              */
             public Builder volumeEncryptionEnabled(Boolean volumeEncryptionEnabled) {
                 this.volumeEncryptionEnabled = volumeEncryptionEnabled;
@@ -488,7 +483,7 @@ public class DescribeSnapshotsResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the Key Management Service (KMS) key that is used when disk encryption is enabled. You can call the [ListKeys](~~28951~~) operation to obtain a list of KMS keys.
+             * VolumeEncryptionKey.
              */
             public Builder volumeEncryptionKey(String volumeEncryptionKey) {
                 this.volumeEncryptionKey = volumeEncryptionKey;

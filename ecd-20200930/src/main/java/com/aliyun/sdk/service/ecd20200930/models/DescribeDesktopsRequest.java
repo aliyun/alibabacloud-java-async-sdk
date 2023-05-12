@@ -33,6 +33,10 @@ public class DescribeDesktopsRequest extends Request {
     private String desktopStatus;
 
     @Query
+    @NameInMap("DesktopStatusList")
+    private java.util.List < String > desktopStatusList;
+
+    @Query
     @NameInMap("DesktopType")
     private String desktopType;
 
@@ -128,6 +132,7 @@ public class DescribeDesktopsRequest extends Request {
         this.desktopId = builder.desktopId;
         this.desktopName = builder.desktopName;
         this.desktopStatus = builder.desktopStatus;
+        this.desktopStatusList = builder.desktopStatusList;
         this.desktopType = builder.desktopType;
         this.directoryId = builder.directoryId;
         this.endUserId = builder.endUserId;
@@ -198,6 +203,13 @@ public class DescribeDesktopsRequest extends Request {
      */
     public String getDesktopStatus() {
         return this.desktopStatus;
+    }
+
+    /**
+     * @return desktopStatusList
+     */
+    public java.util.List < String > getDesktopStatusList() {
+        return this.desktopStatusList;
     }
 
     /**
@@ -360,6 +372,7 @@ public class DescribeDesktopsRequest extends Request {
         private java.util.List < String > desktopId; 
         private String desktopName; 
         private String desktopStatus; 
+        private java.util.List < String > desktopStatusList; 
         private String desktopType; 
         private String directoryId; 
         private java.util.List < String > endUserId; 
@@ -394,6 +407,7 @@ public class DescribeDesktopsRequest extends Request {
             this.desktopId = request.desktopId;
             this.desktopName = request.desktopName;
             this.desktopStatus = request.desktopStatus;
+            this.desktopStatusList = request.desktopStatusList;
             this.desktopType = request.desktopType;
             this.directoryId = request.directoryId;
             this.endUserId = request.endUserId;
@@ -460,6 +474,15 @@ public class DescribeDesktopsRequest extends Request {
         public Builder desktopStatus(String desktopStatus) {
             this.putQueryParameter("DesktopStatus", desktopStatus);
             this.desktopStatus = desktopStatus;
+            return this;
+        }
+
+        /**
+         * DesktopStatusList.
+         */
+        public Builder desktopStatusList(java.util.List < String > desktopStatusList) {
+            this.putQueryParameter("DesktopStatusList", desktopStatusList);
+            this.desktopStatusList = desktopStatusList;
             return this;
         }
 

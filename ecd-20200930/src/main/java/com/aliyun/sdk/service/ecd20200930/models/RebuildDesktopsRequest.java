@@ -98,7 +98,7 @@ public class RebuildDesktopsRequest extends Request {
         } 
 
         /**
-         * The ID of the new image.
+         * The ID of cloud desktop N. You can specify one or more cloud desktop IDs. Valid values of N: 1 to 20.
          */
         public Builder desktopId(java.util.List < String > desktopId) {
             this.putQueryParameter("DesktopId", desktopId);
@@ -107,7 +107,7 @@ public class RebuildDesktopsRequest extends Request {
         }
 
         /**
-         * The ID of the request.
+         * The operation that you want to perform. Set the value to **RebuildDesktops**.
          */
         public Builder imageId(String imageId) {
             this.putQueryParameter("ImageId", imageId);
@@ -125,7 +125,7 @@ public class RebuildDesktopsRequest extends Request {
         }
 
         /**
-         * The recreation result of the cloud desktop by changing the image. A value of success indicates that the image of the cloud desktop is changed. If the image of the cloud desktop failed to be changed, an error message is returned.
+         * The ID of the new image.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);

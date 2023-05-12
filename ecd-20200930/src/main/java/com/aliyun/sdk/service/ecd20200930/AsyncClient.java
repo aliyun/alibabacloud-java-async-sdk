@@ -26,6 +26,10 @@ public interface AsyncClient extends SdkAutoCloseable {
      */
     CompletableFuture<AddDevicesResponse> addDevices(AddDevicesRequest request);
 
+    /**
+      * You can call this operation to share a specific folder with other users. You can also configure the folder permissions.
+      *
+     */
     CompletableFuture<AddFilePermissionResponse> addFilePermission(AddFilePermissionRequest request);
 
     CompletableFuture<AddUserToDesktopGroupResponse> addUserToDesktopGroup(AddUserToDesktopGroupRequest request);
@@ -513,7 +517,7 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<RebootDesktopsResponse> rebootDesktops(RebootDesktopsRequest request);
 
     /**
-      * The ID of the cloud desktop.
+      * The error message. This parameter is not returned if the value of Code is success.
       *
      */
     CompletableFuture<RebuildDesktopsResponse> rebuildDesktops(RebuildDesktopsRequest request);

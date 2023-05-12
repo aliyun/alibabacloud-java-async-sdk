@@ -50,7 +50,7 @@ public class ListFilePermissionResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * FilePermissions.
+         * The permissions on the shared file.
          */
         public Builder filePermissions(java.util.List < FilePermissionMember > filePermissions) {
             this.filePermissions = filePermissions;
@@ -58,7 +58,7 @@ public class ListFilePermissionResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

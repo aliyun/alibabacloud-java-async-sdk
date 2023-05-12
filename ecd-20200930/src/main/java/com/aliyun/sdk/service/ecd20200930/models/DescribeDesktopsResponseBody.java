@@ -554,6 +554,9 @@ public class DescribeDesktopsResponseBody extends TeaModel {
         @NameInMap("ManagementFlag")
         private String managementFlag;
 
+        @NameInMap("ManagementFlags")
+        private java.util.List < String > managementFlags;
+
         @NameInMap("Memory")
         private Long memory;
 
@@ -666,6 +669,7 @@ public class DescribeDesktopsResponseBody extends TeaModel {
             this.hostName = builder.hostName;
             this.imageId = builder.imageId;
             this.managementFlag = builder.managementFlag;
+            this.managementFlags = builder.managementFlags;
             this.memory = builder.memory;
             this.networkInterfaceId = builder.networkInterfaceId;
             this.networkInterfaceIp = builder.networkInterfaceIp;
@@ -914,6 +918,13 @@ public class DescribeDesktopsResponseBody extends TeaModel {
         }
 
         /**
+         * @return managementFlags
+         */
+        public java.util.List < String > getManagementFlags() {
+            return this.managementFlags;
+        }
+
+        /**
          * @return memory
          */
         public Long getMemory() {
@@ -1133,6 +1144,7 @@ public class DescribeDesktopsResponseBody extends TeaModel {
             private String hostName; 
             private String imageId; 
             private String managementFlag; 
+            private java.util.List < String > managementFlags; 
             private Long memory; 
             private String networkInterfaceId; 
             private String networkInterfaceIp; 
@@ -1398,6 +1410,14 @@ public class DescribeDesktopsResponseBody extends TeaModel {
              */
             public Builder managementFlag(String managementFlag) {
                 this.managementFlag = managementFlag;
+                return this;
+            }
+
+            /**
+             * ManagementFlags.
+             */
+            public Builder managementFlags(java.util.List < String > managementFlags) {
+                this.managementFlags = managementFlags;
                 return this;
             }
 

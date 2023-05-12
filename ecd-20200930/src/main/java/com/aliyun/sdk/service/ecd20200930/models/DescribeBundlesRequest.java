@@ -62,6 +62,10 @@ public class DescribeBundlesRequest extends Request {
     private String nextToken;
 
     @Query
+    @NameInMap("OsType")
+    private String osType;
+
+    @Query
     @NameInMap("ProtocolType")
     private String protocolType;
 
@@ -100,6 +104,7 @@ public class DescribeBundlesRequest extends Request {
         this.maxResults = builder.maxResults;
         this.memorySize = builder.memorySize;
         this.nextToken = builder.nextToken;
+        this.osType = builder.osType;
         this.protocolType = builder.protocolType;
         this.regionId = builder.regionId;
         this.selectedBundle = builder.selectedBundle;
@@ -206,6 +211,13 @@ public class DescribeBundlesRequest extends Request {
     }
 
     /**
+     * @return osType
+     */
+    public String getOsType() {
+        return this.osType;
+    }
+
+    /**
      * @return protocolType
      */
     public String getProtocolType() {
@@ -260,6 +272,7 @@ public class DescribeBundlesRequest extends Request {
         private Integer maxResults; 
         private Integer memorySize; 
         private String nextToken; 
+        private String osType; 
         private String protocolType; 
         private String regionId; 
         private Boolean selectedBundle; 
@@ -285,6 +298,7 @@ public class DescribeBundlesRequest extends Request {
             this.maxResults = request.maxResults;
             this.memorySize = request.memorySize;
             this.nextToken = request.nextToken;
+            this.osType = request.osType;
             this.protocolType = request.protocolType;
             this.regionId = request.regionId;
             this.selectedBundle = request.selectedBundle;
@@ -398,6 +412,15 @@ public class DescribeBundlesRequest extends Request {
         public Builder nextToken(String nextToken) {
             this.putQueryParameter("NextToken", nextToken);
             this.nextToken = nextToken;
+            return this;
+        }
+
+        /**
+         * OsType.
+         */
+        public Builder osType(String osType) {
+            this.putQueryParameter("OsType", osType);
+            this.osType = osType;
             return this;
         }
 
