@@ -118,14 +118,14 @@ public class AddResolverEndpointRequest extends Request {
             super();
         } 
 
-        private Builder(AddResolverEndpointRequest response) {
-            super(response);
-            this.ipConfig = response.ipConfig;
-            this.lang = response.lang;
-            this.name = response.name;
-            this.securityGroupId = response.securityGroupId;
-            this.vpcId = response.vpcId;
-            this.vpcRegionId = response.vpcRegionId;
+        private Builder(AddResolverEndpointRequest request) {
+            super(request);
+            this.ipConfig = request.ipConfig;
+            this.lang = request.lang;
+            this.name = request.name;
+            this.securityGroupId = request.securityGroupId;
+            this.vpcId = request.vpcId;
+            this.vpcRegionId = request.vpcRegionId;
         } 
 
         /**

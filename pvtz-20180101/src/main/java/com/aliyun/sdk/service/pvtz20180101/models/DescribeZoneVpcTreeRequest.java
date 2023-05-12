@@ -61,10 +61,10 @@ public class DescribeZoneVpcTreeRequest extends Request {
             super();
         } 
 
-        private Builder(DescribeZoneVpcTreeRequest response) {
-            super(response);
-            this.lang = response.lang;
-            this.userClientIp = response.userClientIp;
+        private Builder(DescribeZoneVpcTreeRequest request) {
+            super(request);
+            this.lang = request.lang;
+            this.userClientIp = request.userClientIp;
         } 
 
         /**

@@ -88,12 +88,12 @@ public class UpdateResolverEndpointRequest extends Request {
             super();
         } 
 
-        private Builder(UpdateResolverEndpointRequest response) {
-            super(response);
-            this.endpointId = response.endpointId;
-            this.ipConfig = response.ipConfig;
-            this.lang = response.lang;
-            this.name = response.name;
+        private Builder(UpdateResolverEndpointRequest request) {
+            super(request);
+            this.endpointId = request.endpointId;
+            this.ipConfig = request.ipConfig;
+            this.lang = request.lang;
+            this.name = request.name;
         } 
 
         /**

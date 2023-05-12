@@ -89,12 +89,12 @@ public class SetZoneRecordStatusRequest extends Request {
             super();
         } 
 
-        private Builder(SetZoneRecordStatusRequest response) {
-            super(response);
-            this.lang = response.lang;
-            this.recordId = response.recordId;
-            this.status = response.status;
-            this.userClientIp = response.userClientIp;
+        private Builder(SetZoneRecordStatusRequest request) {
+            super(request);
+            this.lang = request.lang;
+            this.recordId = request.recordId;
+            this.status = request.status;
+            this.userClientIp = request.userClientIp;
         } 
 
         /**

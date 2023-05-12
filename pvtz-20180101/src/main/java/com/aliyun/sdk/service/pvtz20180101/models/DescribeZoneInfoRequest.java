@@ -62,10 +62,10 @@ public class DescribeZoneInfoRequest extends Request {
             super();
         } 
 
-        private Builder(DescribeZoneInfoRequest response) {
-            super(response);
-            this.lang = response.lang;
-            this.zoneId = response.zoneId;
+        private Builder(DescribeZoneInfoRequest request) {
+            super(request);
+            this.lang = request.lang;
+            this.zoneId = request.zoneId;
         } 
 
         /**
@@ -78,7 +78,7 @@ public class DescribeZoneInfoRequest extends Request {
         }
 
         /**
-         * ZoneId.
+         * Zone ID。
          */
         public Builder zoneId(String zoneId) {
             this.putQueryParameter("ZoneId", zoneId);

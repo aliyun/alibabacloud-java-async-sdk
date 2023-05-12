@@ -89,12 +89,12 @@ public class DescribeUserVpcAuthorizationsRequest extends Request {
             super();
         } 
 
-        private Builder(DescribeUserVpcAuthorizationsRequest response) {
-            super(response);
-            this.authType = response.authType;
-            this.authorizedUserId = response.authorizedUserId;
-            this.pageNumber = response.pageNumber;
-            this.pageSize = response.pageSize;
+        private Builder(DescribeUserVpcAuthorizationsRequest request) {
+            super(request);
+            this.authType = request.authType;
+            this.authorizedUserId = request.authorizedUserId;
+            this.pageNumber = request.pageNumber;
+            this.pageSize = request.pageSize;
         } 
 
         /**

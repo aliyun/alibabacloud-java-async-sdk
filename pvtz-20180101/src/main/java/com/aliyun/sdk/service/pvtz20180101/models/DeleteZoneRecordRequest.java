@@ -75,11 +75,11 @@ public class DeleteZoneRecordRequest extends Request {
             super();
         } 
 
-        private Builder(DeleteZoneRecordRequest response) {
-            super(response);
-            this.lang = response.lang;
-            this.recordId = response.recordId;
-            this.userClientIp = response.userClientIp;
+        private Builder(DeleteZoneRecordRequest request) {
+            super(request);
+            this.lang = request.lang;
+            this.recordId = request.recordId;
+            this.userClientIp = request.userClientIp;
         } 
 
         /**

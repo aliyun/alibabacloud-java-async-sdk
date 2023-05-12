@@ -74,11 +74,11 @@ public class CheckZoneNameRequest extends Request {
             super();
         } 
 
-        private Builder(CheckZoneNameRequest response) {
-            super(response);
-            this.lang = response.lang;
-            this.userClientIp = response.userClientIp;
-            this.zoneName = response.zoneName;
+        private Builder(CheckZoneNameRequest request) {
+            super(request);
+            this.lang = request.lang;
+            this.userClientIp = request.userClientIp;
+            this.zoneName = request.zoneName;
         } 
 
         /**

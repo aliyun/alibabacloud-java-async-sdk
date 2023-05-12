@@ -90,12 +90,12 @@ public class UpdateSyncEcsHostTaskRequest extends Request {
             super();
         } 
 
-        private Builder(UpdateSyncEcsHostTaskRequest response) {
-            super(response);
-            this.lang = response.lang;
-            this.region = response.region;
-            this.status = response.status;
-            this.zoneId = response.zoneId;
+        private Builder(UpdateSyncEcsHostTaskRequest request) {
+            super(request);
+            this.lang = request.lang;
+            this.region = request.region;
+            this.status = request.status;
+            this.zoneId = request.zoneId;
         } 
 
         /**

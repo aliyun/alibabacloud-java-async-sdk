@@ -88,12 +88,12 @@ public class AddUserVpcAuthorizationRequest extends Request {
             super();
         } 
 
-        private Builder(AddUserVpcAuthorizationRequest response) {
-            super(response);
-            this.authChannel = response.authChannel;
-            this.authCode = response.authCode;
-            this.authType = response.authType;
-            this.authorizedUserId = response.authorizedUserId;
+        private Builder(AddUserVpcAuthorizationRequest request) {
+            super(request);
+            this.authChannel = request.authChannel;
+            this.authCode = request.authCode;
+            this.authType = request.authType;
+            this.authorizedUserId = request.authorizedUserId;
         } 
 
         /**

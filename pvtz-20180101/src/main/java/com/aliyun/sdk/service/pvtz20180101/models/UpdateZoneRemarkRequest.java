@@ -88,12 +88,12 @@ public class UpdateZoneRemarkRequest extends Request {
             super();
         } 
 
-        private Builder(UpdateZoneRemarkRequest response) {
-            super(response);
-            this.lang = response.lang;
-            this.remark = response.remark;
-            this.userClientIp = response.userClientIp;
-            this.zoneId = response.zoneId;
+        private Builder(UpdateZoneRemarkRequest request) {
+            super(request);
+            this.lang = request.lang;
+            this.remark = request.remark;
+            this.userClientIp = request.userClientIp;
+            this.zoneId = request.zoneId;
         } 
 
         /**
@@ -124,7 +124,7 @@ public class UpdateZoneRemarkRequest extends Request {
         }
 
         /**
-         * ZoneId.
+         * Zone ID。
          */
         public Builder zoneId(String zoneId) {
             this.putQueryParameter("ZoneId", zoneId);

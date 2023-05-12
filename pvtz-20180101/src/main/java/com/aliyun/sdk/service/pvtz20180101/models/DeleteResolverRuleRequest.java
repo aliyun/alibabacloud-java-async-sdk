@@ -62,10 +62,10 @@ public class DeleteResolverRuleRequest extends Request {
             super();
         } 
 
-        private Builder(DeleteResolverRuleRequest response) {
-            super(response);
-            this.lang = response.lang;
-            this.ruleId = response.ruleId;
+        private Builder(DeleteResolverRuleRequest request) {
+            super(request);
+            this.lang = request.lang;
+            this.ruleId = request.ruleId;
         } 
 
         /**

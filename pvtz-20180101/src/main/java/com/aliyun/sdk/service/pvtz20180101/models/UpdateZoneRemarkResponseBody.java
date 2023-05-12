@@ -58,7 +58,7 @@ public class UpdateZoneRemarkResponseBody extends TeaModel {
         }
 
         /**
-         * ZoneId.
+         * Zone ID。
          */
         public Builder zoneId(String zoneId) {
             this.zoneId = zoneId;

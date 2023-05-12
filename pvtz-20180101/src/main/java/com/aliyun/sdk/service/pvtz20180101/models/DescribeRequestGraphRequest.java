@@ -141,16 +141,16 @@ public class DescribeRequestGraphRequest extends Request {
             super();
         } 
 
-        private Builder(DescribeRequestGraphRequest response) {
-            super(response);
-            this.bizId = response.bizId;
-            this.bizType = response.bizType;
-            this.endTimestamp = response.endTimestamp;
-            this.lang = response.lang;
-            this.startTimestamp = response.startTimestamp;
-            this.userClientIp = response.userClientIp;
-            this.vpcId = response.vpcId;
-            this.zoneId = response.zoneId;
+        private Builder(DescribeRequestGraphRequest request) {
+            super(request);
+            this.bizId = request.bizId;
+            this.bizType = request.bizType;
+            this.endTimestamp = request.endTimestamp;
+            this.lang = request.lang;
+            this.startTimestamp = request.startTimestamp;
+            this.userClientIp = request.userClientIp;
+            this.vpcId = request.vpcId;
+            this.zoneId = request.zoneId;
         } 
 
         /**
@@ -208,7 +208,7 @@ public class DescribeRequestGraphRequest extends Request {
         }
 
         /**
-         * VpcId.
+         * VPC ID
          */
         public Builder vpcId(String vpcId) {
             this.putQueryParameter("VpcId", vpcId);
@@ -217,7 +217,7 @@ public class DescribeRequestGraphRequest extends Request {
         }
 
         /**
-         * ZoneId.
+         * zone ID
          */
         public Builder zoneId(String zoneId) {
             this.putQueryParameter("ZoneId", zoneId);

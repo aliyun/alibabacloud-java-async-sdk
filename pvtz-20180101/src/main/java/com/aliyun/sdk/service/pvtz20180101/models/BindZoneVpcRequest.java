@@ -88,12 +88,12 @@ public class BindZoneVpcRequest extends Request {
             super();
         } 
 
-        private Builder(BindZoneVpcRequest response) {
-            super(response);
-            this.lang = response.lang;
-            this.userClientIp = response.userClientIp;
-            this.vpcs = response.vpcs;
-            this.zoneId = response.zoneId;
+        private Builder(BindZoneVpcRequest request) {
+            super(request);
+            this.lang = request.lang;
+            this.userClientIp = request.userClientIp;
+            this.vpcs = request.vpcs;
+            this.zoneId = request.zoneId;
         } 
 
         /**
@@ -146,9 +146,13 @@ public class BindZoneVpcRequest extends Request {
         @NameInMap("VpcId")
         private String vpcId;
 
+        @NameInMap("VpcType")
+        private String vpcType;
+
         private Vpcs(Builder builder) {
             this.regionId = builder.regionId;
             this.vpcId = builder.vpcId;
+            this.vpcType = builder.vpcType;
         }
 
         public static Builder builder() {
@@ -173,9 +177,17 @@ public class BindZoneVpcRequest extends Request {
             return this.vpcId;
         }
 
+        /**
+         * @return vpcType
+         */
+        public String getVpcType() {
+            return this.vpcType;
+        }
+
         public static final class Builder {
             private String regionId; 
             private String vpcId; 
+            private String vpcType; 
 
             /**
              * RegionId.
@@ -190,6 +202,14 @@ public class BindZoneVpcRequest extends Request {
              */
             public Builder vpcId(String vpcId) {
                 this.vpcId = vpcId;
+                return this;
+            }
+
+            /**
+             * VpcType.
+             */
+            public Builder vpcType(String vpcType) {
+                this.vpcType = vpcType;
                 return this;
             }
 

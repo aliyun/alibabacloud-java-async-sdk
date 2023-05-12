@@ -76,11 +76,11 @@ public class MoveResourceGroupRequest extends Request {
             super();
         } 
 
-        private Builder(MoveResourceGroupRequest response) {
-            super(response);
-            this.lang = response.lang;
-            this.newResourceGroupId = response.newResourceGroupId;
-            this.resourceId = response.resourceId;
+        private Builder(MoveResourceGroupRequest request) {
+            super(request);
+            this.lang = request.lang;
+            this.newResourceGroupId = request.newResourceGroupId;
+            this.resourceId = request.resourceId;
         } 
 
         /**
@@ -102,7 +102,7 @@ public class MoveResourceGroupRequest extends Request {
         }
 
         /**
-         * ResourceId.
+         * Zone Id。
          */
         public Builder resourceId(String resourceId) {
             this.putQueryParameter("ResourceId", resourceId);

@@ -88,12 +88,12 @@ public class UpdateResolverRuleRequest extends Request {
             super();
         } 
 
-        private Builder(UpdateResolverRuleRequest response) {
-            super(response);
-            this.forwardIp = response.forwardIp;
-            this.lang = response.lang;
-            this.name = response.name;
-            this.ruleId = response.ruleId;
+        private Builder(UpdateResolverRuleRequest request) {
+            super(request);
+            this.forwardIp = request.forwardIp;
+            this.lang = request.lang;
+            this.name = request.name;
+            this.ruleId = request.ruleId;
         } 
 
         /**

@@ -158,17 +158,17 @@ public class AddZoneRecordRequest extends Request {
             super();
         } 
 
-        private Builder(AddZoneRecordRequest response) {
-            super(response);
-            this.lang = response.lang;
-            this.priority = response.priority;
-            this.remark = response.remark;
-            this.rr = response.rr;
-            this.ttl = response.ttl;
-            this.type = response.type;
-            this.userClientIp = response.userClientIp;
-            this.value = response.value;
-            this.zoneId = response.zoneId;
+        private Builder(AddZoneRecordRequest request) {
+            super(request);
+            this.lang = request.lang;
+            this.priority = request.priority;
+            this.remark = request.remark;
+            this.rr = request.rr;
+            this.ttl = request.ttl;
+            this.type = request.type;
+            this.userClientIp = request.userClientIp;
+            this.value = request.value;
+            this.zoneId = request.zoneId;
         } 
 
         /**
@@ -244,7 +244,7 @@ public class AddZoneRecordRequest extends Request {
         }
 
         /**
-         * ZoneId.
+         * Zone ID。
          */
         public Builder zoneId(String zoneId) {
             this.putQueryParameter("ZoneId", zoneId);

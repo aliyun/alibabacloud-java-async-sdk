@@ -117,14 +117,14 @@ public class AddResolverRuleRequest extends Request {
             super();
         } 
 
-        private Builder(AddResolverRuleRequest response) {
-            super(response);
-            this.endpointId = response.endpointId;
-            this.forwardIp = response.forwardIp;
-            this.lang = response.lang;
-            this.name = response.name;
-            this.type = response.type;
-            this.zoneName = response.zoneName;
+        private Builder(AddResolverRuleRequest request) {
+            super(request);
+            this.endpointId = request.endpointId;
+            this.forwardIp = request.forwardIp;
+            this.lang = request.lang;
+            this.name = request.name;
+            this.type = request.type;
+            this.zoneName = request.zoneName;
         } 
 
         /**

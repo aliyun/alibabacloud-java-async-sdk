@@ -62,10 +62,10 @@ public class DescribeSyncEcsHostTaskRequest extends Request {
             super();
         } 
 
-        private Builder(DescribeSyncEcsHostTaskRequest response) {
-            super(response);
-            this.lang = response.lang;
-            this.zoneId = response.zoneId;
+        private Builder(DescribeSyncEcsHostTaskRequest request) {
+            super(request);
+            this.lang = request.lang;
+            this.zoneId = request.zoneId;
         } 
 
         /**

@@ -75,11 +75,11 @@ public class BindResolverRuleVpcRequest extends Request {
             super();
         } 
 
-        private Builder(BindResolverRuleVpcRequest response) {
-            super(response);
-            this.lang = response.lang;
-            this.ruleId = response.ruleId;
-            this.vpc = response.vpc;
+        private Builder(BindResolverRuleVpcRequest request) {
+            super(request);
+            this.lang = request.lang;
+            this.ruleId = request.ruleId;
+            this.vpc = request.vpc;
         } 
 
         /**
@@ -123,9 +123,13 @@ public class BindResolverRuleVpcRequest extends Request {
         @NameInMap("VpcId")
         private String vpcId;
 
+        @NameInMap("VpcType")
+        private String vpcType;
+
         private Vpc(Builder builder) {
             this.regionId = builder.regionId;
             this.vpcId = builder.vpcId;
+            this.vpcType = builder.vpcType;
         }
 
         public static Builder builder() {
@@ -150,9 +154,17 @@ public class BindResolverRuleVpcRequest extends Request {
             return this.vpcId;
         }
 
+        /**
+         * @return vpcType
+         */
+        public String getVpcType() {
+            return this.vpcType;
+        }
+
         public static final class Builder {
             private String regionId; 
             private String vpcId; 
+            private String vpcType; 
 
             /**
              * RegionId.
@@ -163,10 +175,18 @@ public class BindResolverRuleVpcRequest extends Request {
             }
 
             /**
-             * VpcId.
+             * vpcID
              */
             public Builder vpcId(String vpcId) {
                 this.vpcId = vpcId;
+                return this;
+            }
+
+            /**
+             * VpcType.
+             */
+            public Builder vpcType(String vpcType) {
+                this.vpcType = vpcType;
                 return this;
             }
 

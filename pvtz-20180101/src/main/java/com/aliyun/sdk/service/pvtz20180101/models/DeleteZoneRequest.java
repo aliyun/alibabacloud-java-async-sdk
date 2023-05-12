@@ -75,11 +75,11 @@ public class DeleteZoneRequest extends Request {
             super();
         } 
 
-        private Builder(DeleteZoneRequest response) {
-            super(response);
-            this.lang = response.lang;
-            this.userClientIp = response.userClientIp;
-            this.zoneId = response.zoneId;
+        private Builder(DeleteZoneRequest request) {
+            super(request);
+            this.lang = request.lang;
+            this.userClientIp = request.userClientIp;
+            this.zoneId = request.zoneId;
         } 
 
         /**
@@ -101,7 +101,7 @@ public class DeleteZoneRequest extends Request {
         }
 
         /**
-         * ZoneId.
+         * zone ID
          */
         public Builder zoneId(String zoneId) {
             this.putQueryParameter("ZoneId", zoneId);

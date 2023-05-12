@@ -28,12 +28,17 @@ public class DescribeRegionsRequest extends Request {
     @NameInMap("UserClientIp")
     private String userClientIp;
 
+    @Query
+    @NameInMap("VpcType")
+    private String vpcType;
+
     private DescribeRegionsRequest(Builder builder) {
         super(builder);
         this.acceptLanguage = builder.acceptLanguage;
         this.authorizedUserId = builder.authorizedUserId;
         this.lang = builder.lang;
         this.userClientIp = builder.userClientIp;
+        this.vpcType = builder.vpcType;
     }
 
     public static Builder builder() {
@@ -77,22 +82,31 @@ public class DescribeRegionsRequest extends Request {
         return this.userClientIp;
     }
 
+    /**
+     * @return vpcType
+     */
+    public String getVpcType() {
+        return this.vpcType;
+    }
+
     public static final class Builder extends Request.Builder<DescribeRegionsRequest, Builder> {
         private String acceptLanguage; 
         private Long authorizedUserId; 
         private String lang; 
         private String userClientIp; 
+        private String vpcType; 
 
         private Builder() {
             super();
         } 
 
-        private Builder(DescribeRegionsRequest response) {
-            super(response);
-            this.acceptLanguage = response.acceptLanguage;
-            this.authorizedUserId = response.authorizedUserId;
-            this.lang = response.lang;
-            this.userClientIp = response.userClientIp;
+        private Builder(DescribeRegionsRequest request) {
+            super(request);
+            this.acceptLanguage = request.acceptLanguage;
+            this.authorizedUserId = request.authorizedUserId;
+            this.lang = request.lang;
+            this.userClientIp = request.userClientIp;
+            this.vpcType = request.vpcType;
         } 
 
         /**
@@ -128,6 +142,15 @@ public class DescribeRegionsRequest extends Request {
         public Builder userClientIp(String userClientIp) {
             this.putQueryParameter("UserClientIp", userClientIp);
             this.userClientIp = userClientIp;
+            return this;
+        }
+
+        /**
+         * VpcType.
+         */
+        public Builder vpcType(String vpcType) {
+            this.putQueryParameter("VpcType", vpcType);
+            this.vpcType = vpcType;
             return this;
         }
 

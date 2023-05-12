@@ -84,11 +84,15 @@ public class DescribeZoneVpcTreeResponseBody extends TeaModel {
         @NameInMap("VpcName")
         private String vpcName;
 
+        @NameInMap("VpcType")
+        private String vpcType;
+
         private Vpc(Builder builder) {
             this.regionId = builder.regionId;
             this.regionName = builder.regionName;
             this.vpcId = builder.vpcId;
             this.vpcName = builder.vpcName;
+            this.vpcType = builder.vpcType;
         }
 
         public static Builder builder() {
@@ -127,14 +131,22 @@ public class DescribeZoneVpcTreeResponseBody extends TeaModel {
             return this.vpcName;
         }
 
+        /**
+         * @return vpcType
+         */
+        public String getVpcType() {
+            return this.vpcType;
+        }
+
         public static final class Builder {
             private String regionId; 
             private String regionName; 
             private String vpcId; 
             private String vpcName; 
+            private String vpcType; 
 
             /**
-             * RegionId.
+             * region Id
              */
             public Builder regionId(String regionId) {
                 this.regionId = regionId;
@@ -150,7 +162,7 @@ public class DescribeZoneVpcTreeResponseBody extends TeaModel {
             }
 
             /**
-             * VpcId.
+             * vpc id
              */
             public Builder vpcId(String vpcId) {
                 this.vpcId = vpcId;
@@ -162,6 +174,14 @@ public class DescribeZoneVpcTreeResponseBody extends TeaModel {
              */
             public Builder vpcName(String vpcName) {
                 this.vpcName = vpcName;
+                return this;
+            }
+
+            /**
+             * VpcType.
+             */
+            public Builder vpcType(String vpcType) {
+                this.vpcType = vpcType;
                 return this;
             }
 
@@ -436,7 +456,7 @@ public class DescribeZoneVpcTreeResponseBody extends TeaModel {
             }
 
             /**
-             * ZoneId.
+             * Zone id
              */
             public Builder zoneId(String zoneId) {
                 this.zoneId = zoneId;

@@ -88,12 +88,12 @@ public class DescribeTagsRequest extends Request {
             super();
         } 
 
-        private Builder(DescribeTagsRequest response) {
-            super(response);
-            this.lang = response.lang;
-            this.pageNumber = response.pageNumber;
-            this.pageSize = response.pageSize;
-            this.resourceType = response.resourceType;
+        private Builder(DescribeTagsRequest request) {
+            super(request);
+            this.lang = request.lang;
+            this.pageNumber = request.pageNumber;
+            this.pageSize = request.pageSize;
+            this.resourceType = request.resourceType;
         } 
 
         /**

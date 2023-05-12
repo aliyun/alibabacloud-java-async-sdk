@@ -127,12 +127,16 @@ public class DescribeStatisticSummaryResponseBody extends TeaModel {
         @NameInMap("VpcId")
         private String vpcId;
 
+        @NameInMap("VpcType")
+        private String vpcType;
+
         private VpcRequestTop(Builder builder) {
             this.regionId = builder.regionId;
             this.regionName = builder.regionName;
             this.requestCount = builder.requestCount;
             this.tunnelId = builder.tunnelId;
             this.vpcId = builder.vpcId;
+            this.vpcType = builder.vpcType;
         }
 
         public static Builder builder() {
@@ -178,12 +182,20 @@ public class DescribeStatisticSummaryResponseBody extends TeaModel {
             return this.vpcId;
         }
 
+        /**
+         * @return vpcType
+         */
+        public String getVpcType() {
+            return this.vpcType;
+        }
+
         public static final class Builder {
             private String regionId; 
             private String regionName; 
             private Long requestCount; 
             private String tunnelId; 
             private String vpcId; 
+            private String vpcType; 
 
             /**
              * RegionId.
@@ -218,10 +230,18 @@ public class DescribeStatisticSummaryResponseBody extends TeaModel {
             }
 
             /**
-             * VpcId.
+             * VPC ID
              */
             public Builder vpcId(String vpcId) {
                 this.vpcId = vpcId;
+                return this;
+            }
+
+            /**
+             * VpcType.
+             */
+            public Builder vpcType(String vpcType) {
+                this.vpcType = vpcType;
                 return this;
             }
 

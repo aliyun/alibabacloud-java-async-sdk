@@ -102,13 +102,13 @@ public class DescribeResolverEndpointsRequest extends Request {
             super();
         } 
 
-        private Builder(DescribeResolverEndpointsRequest response) {
-            super(response);
-            this.keyword = response.keyword;
-            this.lang = response.lang;
-            this.pageNumber = response.pageNumber;
-            this.pageSize = response.pageSize;
-            this.status = response.status;
+        private Builder(DescribeResolverEndpointsRequest request) {
+            super(request);
+            this.keyword = request.keyword;
+            this.lang = request.lang;
+            this.pageNumber = request.pageNumber;
+            this.pageSize = request.pageSize;
+            this.status = request.status;
         } 
 
         /**

@@ -89,12 +89,12 @@ public class SetProxyPatternRequest extends Request {
             super();
         } 
 
-        private Builder(SetProxyPatternRequest response) {
-            super(response);
-            this.lang = response.lang;
-            this.proxyPattern = response.proxyPattern;
-            this.userClientIp = response.userClientIp;
-            this.zoneId = response.zoneId;
+        private Builder(SetProxyPatternRequest request) {
+            super(request);
+            this.lang = request.lang;
+            this.proxyPattern = request.proxyPattern;
+            this.userClientIp = request.userClientIp;
+            this.zoneId = request.zoneId;
         } 
 
         /**

@@ -145,16 +145,16 @@ public class UpdateZoneRecordRequest extends Request {
             super();
         } 
 
-        private Builder(UpdateZoneRecordRequest response) {
-            super(response);
-            this.lang = response.lang;
-            this.priority = response.priority;
-            this.recordId = response.recordId;
-            this.rr = response.rr;
-            this.ttl = response.ttl;
-            this.type = response.type;
-            this.userClientIp = response.userClientIp;
-            this.value = response.value;
+        private Builder(UpdateZoneRecordRequest request) {
+            super(request);
+            this.lang = request.lang;
+            this.priority = request.priority;
+            this.recordId = request.recordId;
+            this.rr = request.rr;
+            this.ttl = request.ttl;
+            this.type = request.type;
+            this.userClientIp = request.userClientIp;
+            this.value = request.value;
         } 
 
         /**

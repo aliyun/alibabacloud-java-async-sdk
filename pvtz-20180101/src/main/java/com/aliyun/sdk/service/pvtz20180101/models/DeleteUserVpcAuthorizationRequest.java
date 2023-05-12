@@ -62,10 +62,10 @@ public class DeleteUserVpcAuthorizationRequest extends Request {
             super();
         } 
 
-        private Builder(DeleteUserVpcAuthorizationRequest response) {
-            super(response);
-            this.authType = response.authType;
-            this.authorizedUserId = response.authorizedUserId;
+        private Builder(DeleteUserVpcAuthorizationRequest request) {
+            super(request);
+            this.authType = request.authType;
+            this.authorizedUserId = request.authorizedUserId;
         } 
 
         /**

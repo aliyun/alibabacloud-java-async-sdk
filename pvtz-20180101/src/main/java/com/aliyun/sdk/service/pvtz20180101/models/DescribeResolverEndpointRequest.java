@@ -62,10 +62,10 @@ public class DescribeResolverEndpointRequest extends Request {
             super();
         } 
 
-        private Builder(DescribeResolverEndpointRequest response) {
-            super(response);
-            this.endpointId = response.endpointId;
-            this.lang = response.lang;
+        private Builder(DescribeResolverEndpointRequest request) {
+            super(request);
+            this.endpointId = request.endpointId;
+            this.lang = request.lang;
         } 
 
         /**

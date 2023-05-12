@@ -61,10 +61,10 @@ public class DescribeStatisticSummaryRequest extends Request {
             super();
         } 
 
-        private Builder(DescribeStatisticSummaryRequest response) {
-            super(response);
-            this.lang = response.lang;
-            this.userClientIp = response.userClientIp;
+        private Builder(DescribeStatisticSummaryRequest request) {
+            super(request);
+            this.lang = request.lang;
+            this.userClientIp = request.userClientIp;
         } 
 
         /**

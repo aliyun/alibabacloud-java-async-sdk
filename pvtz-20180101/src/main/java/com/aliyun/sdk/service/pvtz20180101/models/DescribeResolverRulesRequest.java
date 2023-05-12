@@ -115,14 +115,14 @@ public class DescribeResolverRulesRequest extends Request {
             super();
         } 
 
-        private Builder(DescribeResolverRulesRequest response) {
-            super(response);
-            this.endpointId = response.endpointId;
-            this.keyword = response.keyword;
-            this.lang = response.lang;
-            this.needDetailAttributes = response.needDetailAttributes;
-            this.pageNumber = response.pageNumber;
-            this.pageSize = response.pageSize;
+        private Builder(DescribeResolverRulesRequest request) {
+            super(request);
+            this.endpointId = request.endpointId;
+            this.keyword = request.keyword;
+            this.lang = request.lang;
+            this.needDetailAttributes = request.needDetailAttributes;
+            this.pageNumber = request.pageNumber;
+            this.pageSize = request.pageSize;
         } 
 
         /**

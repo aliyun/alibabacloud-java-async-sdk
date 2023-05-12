@@ -141,16 +141,16 @@ public class DescribeZoneRecordsRequest extends Request {
             super();
         } 
 
-        private Builder(DescribeZoneRecordsRequest response) {
-            super(response);
-            this.keyword = response.keyword;
-            this.lang = response.lang;
-            this.pageNumber = response.pageNumber;
-            this.pageSize = response.pageSize;
-            this.searchMode = response.searchMode;
-            this.tag = response.tag;
-            this.userClientIp = response.userClientIp;
-            this.zoneId = response.zoneId;
+        private Builder(DescribeZoneRecordsRequest request) {
+            super(request);
+            this.keyword = request.keyword;
+            this.lang = request.lang;
+            this.pageNumber = request.pageNumber;
+            this.pageSize = request.pageSize;
+            this.searchMode = request.searchMode;
+            this.tag = request.tag;
+            this.userClientIp = request.userClientIp;
+            this.zoneId = request.zoneId;
         } 
 
         /**
@@ -217,7 +217,7 @@ public class DescribeZoneRecordsRequest extends Request {
         }
 
         /**
-         * ZoneId.
+         * Zone ID。
          */
         public Builder zoneId(String zoneId) {
             this.putQueryParameter("ZoneId", zoneId);

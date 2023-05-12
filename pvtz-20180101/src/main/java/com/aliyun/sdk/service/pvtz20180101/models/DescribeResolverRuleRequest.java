@@ -62,10 +62,10 @@ public class DescribeResolverRuleRequest extends Request {
             super();
         } 
 
-        private Builder(DescribeResolverRuleRequest response) {
-            super(response);
-            this.lang = response.lang;
-            this.ruleId = response.ruleId;
+        private Builder(DescribeResolverRuleRequest request) {
+            super(request);
+            this.lang = request.lang;
+            this.ruleId = request.ruleId;
         } 
 
         /**

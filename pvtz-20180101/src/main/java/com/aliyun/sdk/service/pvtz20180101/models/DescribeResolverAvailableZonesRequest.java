@@ -75,11 +75,11 @@ public class DescribeResolverAvailableZonesRequest extends Request {
             super();
         } 
 
-        private Builder(DescribeResolverAvailableZonesRequest response) {
-            super(response);
-            this.azId = response.azId;
-            this.lang = response.lang;
-            this.resolverRegionId = response.resolverRegionId;
+        private Builder(DescribeResolverAvailableZonesRequest request) {
+            super(request);
+            this.azId = request.azId;
+            this.lang = request.lang;
+            this.resolverRegionId = request.resolverRegionId;
         } 
 
         /**

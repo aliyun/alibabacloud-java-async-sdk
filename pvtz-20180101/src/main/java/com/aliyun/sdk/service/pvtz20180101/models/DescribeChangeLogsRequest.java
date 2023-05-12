@@ -153,17 +153,17 @@ public class DescribeChangeLogsRequest extends Request {
             super();
         } 
 
-        private Builder(DescribeChangeLogsRequest response) {
-            super(response);
-            this.endTimestamp = response.endTimestamp;
-            this.entityType = response.entityType;
-            this.keyword = response.keyword;
-            this.lang = response.lang;
-            this.pageNumber = response.pageNumber;
-            this.pageSize = response.pageSize;
-            this.startTimestamp = response.startTimestamp;
-            this.userClientIp = response.userClientIp;
-            this.zoneId = response.zoneId;
+        private Builder(DescribeChangeLogsRequest request) {
+            super(request);
+            this.endTimestamp = request.endTimestamp;
+            this.entityType = request.entityType;
+            this.keyword = request.keyword;
+            this.lang = request.lang;
+            this.pageNumber = request.pageNumber;
+            this.pageSize = request.pageSize;
+            this.startTimestamp = request.startTimestamp;
+            this.userClientIp = request.userClientIp;
+            this.zoneId = request.zoneId;
         } 
 
         /**

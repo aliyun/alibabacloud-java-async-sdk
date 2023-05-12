@@ -58,7 +58,7 @@ public class DeleteZoneResponseBody extends TeaModel {
         }
 
         /**
-         * ZoneId.
+         * zone ID
          */
         public Builder zoneId(String zoneId) {
             this.zoneId = zoneId;

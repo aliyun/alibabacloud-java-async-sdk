@@ -75,11 +75,11 @@ public class UpdateRecordRemarkRequest extends Request {
             super();
         } 
 
-        private Builder(UpdateRecordRemarkRequest response) {
-            super(response);
-            this.lang = response.lang;
-            this.recordId = response.recordId;
-            this.remark = response.remark;
+        private Builder(UpdateRecordRemarkRequest request) {
+            super(request);
+            this.lang = request.lang;
+            this.recordId = request.recordId;
+            this.remark = request.remark;
         } 
 
         /**

@@ -179,19 +179,19 @@ public class DescribeZonesRequest extends Request {
             super();
         } 
 
-        private Builder(DescribeZonesRequest response) {
-            super(response);
-            this.keyword = response.keyword;
-            this.lang = response.lang;
-            this.pageNumber = response.pageNumber;
-            this.pageSize = response.pageSize;
-            this.queryRegionId = response.queryRegionId;
-            this.queryVpcId = response.queryVpcId;
-            this.resourceGroupId = response.resourceGroupId;
-            this.resourceTag = response.resourceTag;
-            this.searchMode = response.searchMode;
-            this.zoneTag = response.zoneTag;
-            this.zoneType = response.zoneType;
+        private Builder(DescribeZonesRequest request) {
+            super(request);
+            this.keyword = request.keyword;
+            this.lang = request.lang;
+            this.pageNumber = request.pageNumber;
+            this.pageSize = request.pageSize;
+            this.queryRegionId = request.queryRegionId;
+            this.queryVpcId = request.queryVpcId;
+            this.resourceGroupId = request.resourceGroupId;
+            this.resourceTag = request.resourceTag;
+            this.searchMode = request.searchMode;
+            this.zoneTag = request.zoneTag;
+            this.zoneType = request.zoneType;
         } 
 
         /**
@@ -240,7 +240,7 @@ public class DescribeZonesRequest extends Request {
         }
 
         /**
-         * QueryVpcId.
+         * VPC ID。
          */
         public Builder queryVpcId(String queryVpcId) {
             this.putQueryParameter("QueryVpcId", queryVpcId);

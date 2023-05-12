@@ -113,14 +113,14 @@ public class AddZoneRequest extends Request {
             super();
         } 
 
-        private Builder(AddZoneRequest response) {
-            super(response);
-            this.lang = response.lang;
-            this.proxyPattern = response.proxyPattern;
-            this.resourceGroupId = response.resourceGroupId;
-            this.zoneName = response.zoneName;
-            this.zoneTag = response.zoneTag;
-            this.zoneType = response.zoneType;
+        private Builder(AddZoneRequest request) {
+            super(request);
+            this.lang = request.lang;
+            this.proxyPattern = request.proxyPattern;
+            this.resourceGroupId = request.resourceGroupId;
+            this.zoneName = request.zoneName;
+            this.zoneTag = request.zoneTag;
+            this.zoneType = request.zoneType;
         } 
 
         /**
