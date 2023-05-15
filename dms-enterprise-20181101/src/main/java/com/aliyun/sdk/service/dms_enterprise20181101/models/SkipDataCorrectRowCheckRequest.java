@@ -7,11 +7,11 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
- * {@link GetStructSyncJobDetailRequest} extends {@link RequestModel}
+ * {@link SkipDataCorrectRowCheckRequest} extends {@link RequestModel}
  *
- * <p>GetStructSyncJobDetailRequest</p>
+ * <p>SkipDataCorrectRowCheckRequest</p>
  */
-public class GetStructSyncJobDetailRequest extends Request {
+public class SkipDataCorrectRowCheckRequest extends Request {
     @Host
     @NameInMap("RegionId")
     private String regionId;
@@ -22,14 +22,20 @@ public class GetStructSyncJobDetailRequest extends Request {
     private Long orderId;
 
     @Query
+    @NameInMap("Reason")
+    @Validation(required = true)
+    private String reason;
+
+    @Query
     @NameInMap("Tid")
     @Validation(minimum = 1)
     private Long tid;
 
-    private GetStructSyncJobDetailRequest(Builder builder) {
+    private SkipDataCorrectRowCheckRequest(Builder builder) {
         super(builder);
         this.regionId = builder.regionId;
         this.orderId = builder.orderId;
+        this.reason = builder.reason;
         this.tid = builder.tid;
     }
 
@@ -37,7 +43,7 @@ public class GetStructSyncJobDetailRequest extends Request {
         return new Builder();
     }
 
-    public static GetStructSyncJobDetailRequest create() {
+    public static SkipDataCorrectRowCheckRequest create() {
         return builder().build();
     }
 
@@ -61,25 +67,34 @@ public class GetStructSyncJobDetailRequest extends Request {
     }
 
     /**
+     * @return reason
+     */
+    public String getReason() {
+        return this.reason;
+    }
+
+    /**
      * @return tid
      */
     public Long getTid() {
         return this.tid;
     }
 
-    public static final class Builder extends Request.Builder<GetStructSyncJobDetailRequest, Builder> {
+    public static final class Builder extends Request.Builder<SkipDataCorrectRowCheckRequest, Builder> {
         private String regionId; 
         private Long orderId; 
+        private String reason; 
         private Long tid; 
 
         private Builder() {
             super();
         } 
 
-        private Builder(GetStructSyncJobDetailRequest request) {
+        private Builder(SkipDataCorrectRowCheckRequest request) {
             super(request);
             this.regionId = request.regionId;
             this.orderId = request.orderId;
+            this.reason = request.reason;
             this.tid = request.tid;
         } 
 
@@ -93,7 +108,7 @@ public class GetStructSyncJobDetailRequest extends Request {
         }
 
         /**
-         * The ticket ID.
+         * OrderId.
          */
         public Builder orderId(Long orderId) {
             this.putQueryParameter("OrderId", orderId);
@@ -102,10 +117,16 @@ public class GetStructSyncJobDetailRequest extends Request {
         }
 
         /**
-         * The tenant ID.
-         * <p>
-         * 
-         * > To view the tenant ID, move the pointer over the profile picture in the upper-right corner of the Data Management (DMS) console. For more information, see [Manage DMS tenants](~~181330~~).
+         * Reason.
+         */
+        public Builder reason(String reason) {
+            this.putQueryParameter("Reason", reason);
+            this.reason = reason;
+            return this;
+        }
+
+        /**
+         * Tid.
          */
         public Builder tid(Long tid) {
             this.putQueryParameter("Tid", tid);
@@ -114,8 +135,8 @@ public class GetStructSyncJobDetailRequest extends Request {
         }
 
         @Override
-        public GetStructSyncJobDetailRequest build() {
-            return new GetStructSyncJobDetailRequest(this);
+        public SkipDataCorrectRowCheckRequest build() {
+            return new SkipDataCorrectRowCheckRequest(this);
         } 
 
     } 

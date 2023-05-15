@@ -108,7 +108,7 @@ public class UpdateTaskFlowEdgesRequest extends Request {
         }
 
         /**
-         * $.parameters[3].schema.example
+         * The task flow ID. You can call the [ListTaskFlow](~~424565~~) or [ListLhTaskFlowAndScenario](~~426672~~) operation to query the task flow ID.
          */
         public Builder dagId(Long dagId) {
             this.putQueryParameter("DagId", dagId);
@@ -117,7 +117,7 @@ public class UpdateTaskFlowEdgesRequest extends Request {
         }
 
         /**
-         * $.parameters[3].schema.enumValueTitles
+         * The list of updated task flow edges.
          */
         public Builder edges(java.util.List < Edges> edges) {
             String edgesShrink = shrink(edges, "Edges", "json");
@@ -127,7 +127,10 @@ public class UpdateTaskFlowEdgesRequest extends Request {
         }
 
         /**
-         * $.parameters[3].schema.description
+         * The tenant ID.
+         * <p>
+         * 
+         * > To view the tenant ID, move the pointer over the profile picture in the upper-right corner of the Data Management (DMS) console. For more information, see [Manage DMS tenants](~~181330~~).
          */
         public Builder tid(Long tid) {
             this.putQueryParameter("Tid", tid);
@@ -196,7 +199,7 @@ public class UpdateTaskFlowEdgesRequest extends Request {
             private Long nodeFrom; 
 
             /**
-             * $.parameters[2].schema.description
+             * The ID of the task flow edge.
              */
             public Builder id(Long id) {
                 this.id = id;
@@ -204,7 +207,7 @@ public class UpdateTaskFlowEdgesRequest extends Request {
             }
 
             /**
-             * $.parameters[2].schema.example
+             * The ID of the end node of the edge.
              */
             public Builder nodeEnd(Long nodeEnd) {
                 this.nodeEnd = nodeEnd;
@@ -212,7 +215,7 @@ public class UpdateTaskFlowEdgesRequest extends Request {
             }
 
             /**
-             * $.parameters[2].schema.enumValueTitles
+             * The ID of the start node of the edge.
              */
             public Builder nodeFrom(Long nodeFrom) {
                 this.nodeFrom = nodeFrom;

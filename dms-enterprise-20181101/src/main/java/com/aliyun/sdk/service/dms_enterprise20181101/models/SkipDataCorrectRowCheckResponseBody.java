@@ -7,11 +7,11 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
- * {@link ExecuteStructSyncResponseBody} extends {@link TeaModel}
+ * {@link SkipDataCorrectRowCheckResponseBody} extends {@link TeaModel}
  *
- * <p>ExecuteStructSyncResponseBody</p>
+ * <p>SkipDataCorrectRowCheckResponseBody</p>
  */
-public class ExecuteStructSyncResponseBody extends TeaModel {
+public class SkipDataCorrectRowCheckResponseBody extends TeaModel {
     @NameInMap("ErrorCode")
     private String errorCode;
 
@@ -24,7 +24,7 @@ public class ExecuteStructSyncResponseBody extends TeaModel {
     @NameInMap("Success")
     private Boolean success;
 
-    private ExecuteStructSyncResponseBody(Builder builder) {
+    private SkipDataCorrectRowCheckResponseBody(Builder builder) {
         this.errorCode = builder.errorCode;
         this.errorMessage = builder.errorMessage;
         this.requestId = builder.requestId;
@@ -35,7 +35,7 @@ public class ExecuteStructSyncResponseBody extends TeaModel {
         return new Builder();
     }
 
-    public static ExecuteStructSyncResponseBody create() {
+    public static SkipDataCorrectRowCheckResponseBody create() {
         return builder().build();
     }
 
@@ -74,7 +74,7 @@ public class ExecuteStructSyncResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * The error code.
+         * ErrorCode.
          */
         public Builder errorCode(String errorCode) {
             this.errorCode = errorCode;
@@ -82,7 +82,7 @@ public class ExecuteStructSyncResponseBody extends TeaModel {
         }
 
         /**
-         * The error message.
+         * ErrorMessage.
          */
         public Builder errorMessage(String errorMessage) {
             this.errorMessage = errorMessage;
@@ -90,7 +90,7 @@ public class ExecuteStructSyncResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * Id of the request
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -98,15 +98,15 @@ public class ExecuteStructSyncResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether the request was successful.
+         * Success.
          */
         public Builder success(Boolean success) {
             this.success = success;
             return this;
         }
 
-        public ExecuteStructSyncResponseBody build() {
-            return new ExecuteStructSyncResponseBody(this);
+        public SkipDataCorrectRowCheckResponseBody build() {
+            return new SkipDataCorrectRowCheckResponseBody(this);
         } 
 
     } 

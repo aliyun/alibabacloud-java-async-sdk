@@ -198,6 +198,11 @@ public interface AsyncClient extends SdkAutoCloseable {
      */
     CompletableFuture<ExecuteScriptResponse> executeScript(ExecuteScriptRequest request);
 
+    /**
+      * If the security rules of an instance indicate that a ticket must be approved before you perform schema synchronization, you can call the [SubmitStructSyncOrderApproval](~~206166~~) operation to submit the ticket for approval.
+      * >  You can call the [GetStructSyncJobDetail](~~206160~~) operation to query whether you need to submit a ticket for approval.
+      *
+     */
     CompletableFuture<ExecuteStructSyncResponse> executeStructSync(ExecuteStructSyncRequest request);
 
     CompletableFuture<GetApprovalDetailResponse> getApprovalDetail(GetApprovalDetailRequest request);
@@ -537,6 +542,8 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<SetOwnersResponse> setOwners(SetOwnersRequest request);
 
+    CompletableFuture<SkipDataCorrectRowCheckResponse> skipDataCorrectRowCheck(SkipDataCorrectRowCheckRequest request);
+
     CompletableFuture<StopTaskFlowInstanceResponse> stopTaskFlowInstance(StopTaskFlowInstanceRequest request);
 
     CompletableFuture<SubmitOrderApprovalResponse> submitOrderApproval(SubmitOrderApprovalRequest request);
@@ -578,9 +585,11 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<UpdateTaskFlowCooperatorsResponse> updateTaskFlowCooperators(UpdateTaskFlowCooperatorsRequest request);
 
     /**
-      * Indicates whether the request was successful. Valid values:
-      * *   **true**: The request was successful.
-      * *   **false**: The request failed.
+      * ###
+      * The edges can be updated only when the following conditions are met:
+      * 1.  The specified edge exists in the directed acyclic graph (DAG) of the task flow specified by DagId.
+      * 2.  The specified edge nodes exist in the DAG of the task flow specified by DagId.
+      * 3.  After the update, rings do not exist in the DAG.
       *
      */
     CompletableFuture<UpdateTaskFlowEdgesResponse> updateTaskFlowEdges(UpdateTaskFlowEdgesRequest request);

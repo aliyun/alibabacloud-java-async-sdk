@@ -831,6 +831,11 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+      * If the security rules of an instance indicate that a ticket must be approved before you perform schema synchronization, you can call the [SubmitStructSyncOrderApproval](~~206166~~) operation to submit the ticket for approval.
+      * >  You can call the [GetStructSyncJobDetail](~~206160~~) operation to query whether you need to submit a ticket for approval.
+      *
+     */
     @Override
     public CompletableFuture<ExecuteStructSyncResponse> executeStructSync(ExecuteStructSyncRequest request) {
         try {
@@ -2695,6 +2700,20 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     @Override
+    public CompletableFuture<SkipDataCorrectRowCheckResponse> skipDataCorrectRowCheck(SkipDataCorrectRowCheckRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("SkipDataCorrectRowCheck").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(SkipDataCorrectRowCheckResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<SkipDataCorrectRowCheckResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    @Override
     public CompletableFuture<StopTaskFlowInstanceResponse> stopTaskFlowInstance(StopTaskFlowInstanceRequest request) {
         try {
             this.handler.validateRequestModel(request);
@@ -2903,9 +2922,11 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * Indicates whether the request was successful. Valid values:
-      * *   **true**: The request was successful.
-      * *   **false**: The request failed.
+      * ###
+      * The edges can be updated only when the following conditions are met:
+      * 1.  The specified edge exists in the directed acyclic graph (DAG) of the task flow specified by DagId.
+      * 2.  The specified edge nodes exist in the DAG of the task flow specified by DagId.
+      * 3.  After the update, rings do not exist in the DAG.
       *
      */
     @Override
