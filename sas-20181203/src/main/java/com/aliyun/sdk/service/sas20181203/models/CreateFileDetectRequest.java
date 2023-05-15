@@ -13,13 +13,16 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class CreateFileDetectRequest extends Request {
     @Query
+    @NameInMap("DownloadUrl")
+    private String downloadUrl;
+
+    @Query
     @NameInMap("HashKey")
     @Validation(required = true)
     private String hashKey;
 
     @Query
     @NameInMap("OssKey")
-    @Validation(required = true)
     private String ossKey;
 
     @Query
@@ -33,6 +36,7 @@ public class CreateFileDetectRequest extends Request {
 
     private CreateFileDetectRequest(Builder builder) {
         super(builder);
+        this.downloadUrl = builder.downloadUrl;
         this.hashKey = builder.hashKey;
         this.ossKey = builder.ossKey;
         this.sourceIp = builder.sourceIp;
@@ -50,6 +54,13 @@ public class CreateFileDetectRequest extends Request {
     @Override
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return downloadUrl
+     */
+    public String getDownloadUrl() {
+        return this.downloadUrl;
     }
 
     /**
@@ -81,6 +92,7 @@ public class CreateFileDetectRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<CreateFileDetectRequest, Builder> {
+        private String downloadUrl; 
         private String hashKey; 
         private String ossKey; 
         private String sourceIp; 
@@ -92,11 +104,21 @@ public class CreateFileDetectRequest extends Request {
 
         private Builder(CreateFileDetectRequest request) {
             super(request);
+            this.downloadUrl = request.downloadUrl;
             this.hashKey = request.hashKey;
             this.ossKey = request.ossKey;
             this.sourceIp = request.sourceIp;
             this.type = request.type;
         } 
+
+        /**
+         * DownloadUrl.
+         */
+        public Builder downloadUrl(String downloadUrl) {
+            this.putQueryParameter("DownloadUrl", downloadUrl);
+            this.downloadUrl = downloadUrl;
+            return this;
+        }
 
         /**
          * HashKey.

@@ -86,7 +86,7 @@ public class DescribeVulTargetStatisticsResponseBody extends TeaModel {
         private Integer totalCount; 
 
         /**
-         * The page number of the returned page.
+         * The ID of the request.
          */
         public Builder currentPage(Integer currentPage) {
             this.currentPage = currentPage;
@@ -94,7 +94,7 @@ public class DescribeVulTargetStatisticsResponseBody extends TeaModel {
         }
 
         /**
-         * The number of entries returned per page.
+         * The total number of entries returned.
          */
         public Builder pageSize(Integer pageSize) {
             this.pageSize = pageSize;
@@ -102,7 +102,7 @@ public class DescribeVulTargetStatisticsResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * The number of entries returned per page.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -110,7 +110,7 @@ public class DescribeVulTargetStatisticsResponseBody extends TeaModel {
         }
 
         /**
-         * An array that consists of the configurations of the vulnerability scan feature.
+         * The configurations of the vulnerability scan feature.
          */
         public Builder targetStats(java.util.List < TargetStats> targetStats) {
             this.targetStats = targetStats;
@@ -118,7 +118,7 @@ public class DescribeVulTargetStatisticsResponseBody extends TeaModel {
         }
 
         /**
-         * The total number of entries returned.
+         * An array that consists of the configurations of the vulnerability scan feature.
          */
         public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;
@@ -182,22 +182,10 @@ public class DescribeVulTargetStatisticsResponseBody extends TeaModel {
             private String targetType; 
 
             /**
-             * Indicates whether the configurations are applied to the server. Valid values:
-             * <p>
-             * 
-             * *   **add**: yes
-             * *   **del**: no
+             * The group ID or UUID of the server to which the configurations are applied.
              */
             public Builder flag(String flag) {
                 this.flag = flag;
-                return this;
-            }
-
-            /**
-             * The group ID or UUID of the server to which the configurations are applied.
-             */
-            public Builder target(String target) {
-                this.target = target;
                 return this;
             }
 
@@ -207,6 +195,14 @@ public class DescribeVulTargetStatisticsResponseBody extends TeaModel {
              * 
              * *   **uuid**: the UUID of the server
              * *   **groupId**: the ID of the server group
+             */
+            public Builder target(String target) {
+                this.target = target;
+                return this;
+            }
+
+            /**
+             * TargetType.
              */
             public Builder targetType(String targetType) {
                 this.targetType = targetType;
@@ -283,7 +279,7 @@ public class DescribeVulTargetStatisticsResponseBody extends TeaModel {
             private String vulType; 
 
             /**
-             * An array that consists of available servers.
+             * The information about the server.
              */
             public Builder targets(java.util.List < Targets> targets) {
                 this.targets = targets;
@@ -291,7 +287,7 @@ public class DescribeVulTargetStatisticsResponseBody extends TeaModel {
             }
 
             /**
-             * The total number of servers.
+             * The number of servers to which the configurations are applied.
              */
             public Builder totalCount(Integer totalCount) {
                 this.totalCount = totalCount;
@@ -299,7 +295,7 @@ public class DescribeVulTargetStatisticsResponseBody extends TeaModel {
             }
 
             /**
-             * The number of servers to which the configurations are applied.
+             * An array that consists of available servers.
              */
             public Builder uuidCount(Integer uuidCount) {
                 this.uuidCount = uuidCount;
@@ -307,13 +303,7 @@ public class DescribeVulTargetStatisticsResponseBody extends TeaModel {
             }
 
             /**
-             * The type of the vulnerabilities. Valid values:
-             * <p>
-             * 
-             * *   cve: Linux software vulnerabilities
-             * *   sys: Windows system vulnerabilities
-             * *   cms: Web-CMS vulnerabilities
-             * *   emg: urgent vulnerabilities
+             * The total number of servers.
              */
             public Builder vulType(String vulType) {
                 this.vulType = vulType;

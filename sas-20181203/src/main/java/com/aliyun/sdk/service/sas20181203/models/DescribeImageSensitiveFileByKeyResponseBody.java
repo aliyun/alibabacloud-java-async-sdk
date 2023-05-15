@@ -110,7 +110,7 @@ public class DescribeImageSensitiveFileByKeyResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * Code.
+         * The status code returned. If the 200 status code is returned, the request was successful.
          */
         public Builder code(String code) {
             this.code = code;
@@ -118,7 +118,7 @@ public class DescribeImageSensitiveFileByKeyResponseBody extends TeaModel {
         }
 
         /**
-         * HttpStatusCode.
+         * The HTTP status code returned.
          */
         public Builder httpStatusCode(Integer httpStatusCode) {
             this.httpStatusCode = httpStatusCode;
@@ -126,7 +126,7 @@ public class DescribeImageSensitiveFileByKeyResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * The error message returned.
          */
         public Builder message(String message) {
             this.message = message;
@@ -134,12 +134,7 @@ public class DescribeImageSensitiveFileByKeyResponseBody extends TeaModel {
         }
 
         /**
-         * The risk level of the sensitive file. Valid values:
-         * <p>
-         * 
-         * *   **high**
-         * *   **medium**
-         * *   **low**
+         * The pagination information.
          */
         public Builder pageInfo(PageInfo pageInfo) {
             this.pageInfo = pageInfo;
@@ -147,7 +142,7 @@ public class DescribeImageSensitiveFileByKeyResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request, which is used to locate and troubleshoot issues.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -163,7 +158,11 @@ public class DescribeImageSensitiveFileByKeyResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * Indicates whether the request was successful. Valid values:
+         * <p>
+         * 
+         * *   **true**: The request was successful.
+         * *   **false**: The request failed.
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -251,7 +250,7 @@ public class DescribeImageSensitiveFileByKeyResponseBody extends TeaModel {
             private Integer totalCount; 
 
             /**
-             * Count.
+             * The number of entries returned on the current page.
              */
             public Builder count(Integer count) {
                 this.count = count;
@@ -259,7 +258,7 @@ public class DescribeImageSensitiveFileByKeyResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the request, which is used to locate and troubleshoot issues.
+             * The page number of the returned page.
              */
             public Builder currentPage(Integer currentPage) {
                 this.currentPage = currentPage;
@@ -267,7 +266,7 @@ public class DescribeImageSensitiveFileByKeyResponseBody extends TeaModel {
             }
 
             /**
-             * LastRowKey.
+             * The key of the last data entry.
              */
             public Builder lastRowKey(String lastRowKey) {
                 this.lastRowKey = lastRowKey;
@@ -275,7 +274,7 @@ public class DescribeImageSensitiveFileByKeyResponseBody extends TeaModel {
             }
 
             /**
-             * Queries the sensitive files in an image.
+             * The number of entries returned per page.
              */
             public Builder pageSize(Integer pageSize) {
                 this.pageSize = pageSize;
@@ -283,7 +282,7 @@ public class DescribeImageSensitiveFileByKeyResponseBody extends TeaModel {
             }
 
             /**
-             * DescribeImageSensitiveFileByKey
+             * The total number of entries returned.
              */
             public Builder totalCount(Integer totalCount) {
                 this.totalCount = totalCount;
@@ -420,7 +419,7 @@ public class DescribeImageSensitiveFileByKeyResponseBody extends TeaModel {
             private String sensitiveFileName; 
 
             /**
-             * The timestamp when the first scan was performed. Unit: milliseconds.
+             * The suggestion.
              */
             public Builder advice(String advice) {
                 this.advice = advice;
@@ -428,10 +427,55 @@ public class DescribeImageSensitiveFileByKeyResponseBody extends TeaModel {
             }
 
             /**
-             * The UUID of the image.
+             * The file path.
              */
             public Builder filePath(String filePath) {
                 this.filePath = filePath;
+                return this;
+            }
+
+            /**
+             * The timestamp when the first scan was performed. Unit: milliseconds.
+             */
+            public Builder firstScanTime(Long firstScanTime) {
+                this.firstScanTime = firstScanTime;
+                return this;
+            }
+
+            /**
+             * The timestamp when the last scan was performed. Unit: milliseconds.
+             */
+            public Builder lastScanTime(Long lastScanTime) {
+                this.lastScanTime = lastScanTime;
+                return this;
+            }
+
+            /**
+             * The digest of the image layer.
+             */
+            public Builder layerDigest(String layerDigest) {
+                this.layerDigest = layerDigest;
+                return this;
+            }
+
+            /**
+             * The sensitive content.
+             */
+            public Builder promt(String promt) {
+                this.promt = promt;
+                return this;
+            }
+
+            /**
+             * The risk level of the sensitive file. Valid values:
+             * <p>
+             * 
+             * *   **high**
+             * *   **medium**
+             * *   **low**
+             */
+            public Builder riskLevel(String riskLevel) {
+                this.riskLevel = riskLevel;
                 return this;
             }
 
@@ -494,7 +538,7 @@ public class DescribeImageSensitiveFileByKeyResponseBody extends TeaModel {
              * *   **github_oauth_token**: Github OAuth Token
              * *   **pulumi_token**: Pulumi Token
              * *   **ventrilo_voip**: Ventrilo VoIP Server Config
-             * *   **macos_keychain**: MacOS Keychain
+             * *   **macos_keychain**: macOS Keychain
              * *   **amazon_mws_token**: Amazon MWS Token
              * *   **dynatrace_token**: Dynatrace Token
              * *   **java_keystore**: Java Keystore
@@ -551,54 +595,6 @@ public class DescribeImageSensitiveFileByKeyResponseBody extends TeaModel {
              * *   **newrelic_api_key**: New Relic User API Key
              * *   **github_hub**: Github Token
              * *   **rubygem**: Rubygem Token
-             */
-            public Builder firstScanTime(Long firstScanTime) {
-                this.firstScanTime = firstScanTime;
-                return this;
-            }
-
-            /**
-             * The language of the content within the request and response. Default value: **zh**. Valid values:
-             * <p>
-             * 
-             * *   **zh**: Chinese
-             * *   **en**: English
-             */
-            public Builder lastScanTime(Long lastScanTime) {
-                this.lastScanTime = lastScanTime;
-                return this;
-            }
-
-            /**
-             * The type of the asset that you want to scan. Valid values:
-             * <p>
-             * 
-             * *   **image**
-             * *   **container**
-             */
-            public Builder layerDigest(String layerDigest) {
-                this.layerDigest = layerDigest;
-                return this;
-            }
-
-            /**
-             * The number of entries returned on the current page.
-             */
-            public Builder promt(String promt) {
-                this.promt = promt;
-                return this;
-            }
-
-            /**
-             * The suggestion.
-             */
-            public Builder riskLevel(String riskLevel) {
-                this.riskLevel = riskLevel;
-                return this;
-            }
-
-            /**
-             * The pagination information.
              */
             public Builder sensitiveFileKey(String sensitiveFileKey) {
                 this.sensitiveFileKey = sensitiveFileKey;

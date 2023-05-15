@@ -86,7 +86,7 @@ public class DescribeGroupedVulResponseBody extends TeaModel {
         private Integer totalCount; 
 
         /**
-         * CurrentPage.
+         * The number of entries to return on each page. Default value: 10.
          */
         public Builder currentPage(Integer currentPage) {
             this.currentPage = currentPage;
@@ -94,7 +94,7 @@ public class DescribeGroupedVulResponseBody extends TeaModel {
         }
 
         /**
-         * GroupedVulItems.
+         * The data returned.
          */
         public Builder groupedVulItems(java.util.List < GroupedVulItems> groupedVulItems) {
             this.groupedVulItems = groupedVulItems;
@@ -102,7 +102,15 @@ public class DescribeGroupedVulResponseBody extends TeaModel {
         }
 
         /**
-         * PageSize.
+         * The tag that is used to search for the vulnerabilities. Valid values:
+         * <p>
+         * 
+         * *   Restart required
+         * *   Remote exploitation
+         * *   Exploit exists
+         * *   Exploitable
+         * *   Privilege escalation
+         * *   Code execution
          */
         public Builder pageSize(Integer pageSize) {
             this.pageSize = pageSize;
@@ -110,7 +118,7 @@ public class DescribeGroupedVulResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the asset group.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -118,7 +126,10 @@ public class DescribeGroupedVulResponseBody extends TeaModel {
         }
 
         /**
-         * TotalCount.
+         * The types of the vulnerabilities.
+         * <p>
+         * 
+         * > This parameter is valid only for application vulnerabilities and vulnerabilities that are detected based on software component analysis.
          */
         public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;
@@ -278,7 +289,7 @@ public class DescribeGroupedVulResponseBody extends TeaModel {
             private String type; 
 
             /**
-             * AliasName.
+             * The number of handled vulnerabilities.
              */
             public Builder aliasName(String aliasName) {
                 this.aliasName = aliasName;
@@ -286,7 +297,15 @@ public class DescribeGroupedVulResponseBody extends TeaModel {
             }
 
             /**
-             * AsapCount.
+             * The tag that is added to the vulnerability. Valid values:
+             * <p>
+             * 
+             * *   Restart required
+             * *   Remote exploitation
+             * *   Exploit exists
+             * *   Exploitable
+             * *   Privilege escalation
+             * *   Code execution
              */
             public Builder asapCount(Integer asapCount) {
                 this.asapCount = asapCount;
@@ -294,7 +313,7 @@ public class DescribeGroupedVulResponseBody extends TeaModel {
             }
 
             /**
-             * GmtLast.
+             * An array that consists of the details about the vulnerability.
              */
             public Builder gmtLast(Long gmtLast) {
                 this.gmtLast = gmtLast;
@@ -302,7 +321,7 @@ public class DescribeGroupedVulResponseBody extends TeaModel {
             }
 
             /**
-             * HandledCount.
+             * The total number of entries returned.
              */
             public Builder handledCount(Integer handledCount) {
                 this.handledCount = handledCount;
@@ -310,7 +329,7 @@ public class DescribeGroupedVulResponseBody extends TeaModel {
             }
 
             /**
-             * LaterCount.
+             * The number of vulnerabilities that have the **low** priority.
              */
             public Builder laterCount(Integer laterCount) {
                 this.laterCount = laterCount;
@@ -318,7 +337,7 @@ public class DescribeGroupedVulResponseBody extends TeaModel {
             }
 
             /**
-             * Name.
+             * The timestamp when the vulnerability was last detected. Unit: milliseconds.
              */
             public Builder name(String name) {
                 this.name = name;
@@ -326,7 +345,7 @@ public class DescribeGroupedVulResponseBody extends TeaModel {
             }
 
             /**
-             * NntfCount.
+             * The ID of the request, which is used to locate and troubleshoot issues.
              */
             public Builder nntfCount(Integer nntfCount) {
                 this.nntfCount = nntfCount;
@@ -334,11 +353,7 @@ public class DescribeGroupedVulResponseBody extends TeaModel {
             }
 
             /**
-             * 支持RASP实时防护，取值：
-             * <p>
-             * - **0**：不支持
-             * - **1**：支持
-             * > 无该属性也表示不支持。
+             * The number of entries returned per page. Default value: 10.
              */
             public Builder raspDefend(Integer raspDefend) {
                 this.raspDefend = raspDefend;
@@ -346,7 +361,15 @@ public class DescribeGroupedVulResponseBody extends TeaModel {
             }
 
             /**
-             * Tags.
+             * The type of the vulnerability. Valid values:
+             * <p>
+             * 
+             * *   **cve**: Linux software vulnerability
+             * *   **sys**: Windows system vulnerability
+             * *   **cms**: Web-CMS vulnerability
+             * *   **app**: application vulnerability
+             * *   **emg**: urgent vulnerability
+             * *   **sca**: vulnerability that is detected based on software component analysis
              */
             public Builder tags(String tags) {
                 this.tags = tags;
@@ -354,7 +377,7 @@ public class DescribeGroupedVulResponseBody extends TeaModel {
             }
 
             /**
-             * TotalFixCount.
+             * gmtLast
              */
             public Builder totalFixCount(Long totalFixCount) {
                 this.totalFixCount = totalFixCount;
@@ -362,7 +385,7 @@ public class DescribeGroupedVulResponseBody extends TeaModel {
             }
 
             /**
-             * Type.
+             * The page number of the returned page.
              */
             public Builder type(String type) {
                 this.type = type;

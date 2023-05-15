@@ -106,6 +106,8 @@ public interface AsyncClient extends SdkAutoCloseable {
      */
     CompletableFuture<CreateOrUpdateAssetGroupResponse> createOrUpdateAssetGroup(CreateOrUpdateAssetGroupRequest request);
 
+    CompletableFuture<CreateOrUpdateDingTalkResponse> createOrUpdateDingTalk(CreateOrUpdateDingTalkRequest request);
+
     CompletableFuture<CreateRestoreJobResponse> createRestoreJob(CreateRestoreJobRequest request);
 
     CompletableFuture<CreateServiceLinkedRoleResponse> createServiceLinkedRole(CreateServiceLinkedRoleRequest request);
