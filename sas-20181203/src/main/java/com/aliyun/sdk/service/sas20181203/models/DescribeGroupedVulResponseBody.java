@@ -86,7 +86,7 @@ public class DescribeGroupedVulResponseBody extends TeaModel {
         private Integer totalCount; 
 
         /**
-         * The number of entries to return on each page. Default value: 10.
+         * The page number.
          */
         public Builder currentPage(Integer currentPage) {
             this.currentPage = currentPage;
@@ -94,7 +94,7 @@ public class DescribeGroupedVulResponseBody extends TeaModel {
         }
 
         /**
-         * The data returned.
+         * An array that consists of the details of the vulnerability.
          */
         public Builder groupedVulItems(java.util.List < GroupedVulItems> groupedVulItems) {
             this.groupedVulItems = groupedVulItems;
@@ -102,15 +102,7 @@ public class DescribeGroupedVulResponseBody extends TeaModel {
         }
 
         /**
-         * The tag that is used to search for the vulnerabilities. Valid values:
-         * <p>
-         * 
-         * *   Restart required
-         * *   Remote exploitation
-         * *   Exploit exists
-         * *   Exploitable
-         * *   Privilege escalation
-         * *   Code execution
+         * The number of entries per page. Default value: 10.
          */
         public Builder pageSize(Integer pageSize) {
             this.pageSize = pageSize;
@@ -118,7 +110,7 @@ public class DescribeGroupedVulResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the asset group.
+         * The ID of the request, which is used to locate and troubleshoot issues.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -126,10 +118,7 @@ public class DescribeGroupedVulResponseBody extends TeaModel {
         }
 
         /**
-         * The types of the vulnerabilities.
-         * <p>
-         * 
-         * > This parameter is valid only for application vulnerabilities and vulnerabilities that are detected based on software component analysis.
+         * The total number of entries returned.
          */
         public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;
@@ -289,10 +278,72 @@ public class DescribeGroupedVulResponseBody extends TeaModel {
             private String type; 
 
             /**
-             * The number of handled vulnerabilities.
+             * The alias of the vulnerability.
              */
             public Builder aliasName(String aliasName) {
                 this.aliasName = aliasName;
+                return this;
+            }
+
+            /**
+             * The number of vulnerabilities that have the **high** priority.
+             */
+            public Builder asapCount(Integer asapCount) {
+                this.asapCount = asapCount;
+                return this;
+            }
+
+            /**
+             * The timestamp when the vulnerability was last detected. Unit: milliseconds.
+             */
+            public Builder gmtLast(Long gmtLast) {
+                this.gmtLast = gmtLast;
+                return this;
+            }
+
+            /**
+             * The number of handled vulnerabilities.
+             */
+            public Builder handledCount(Integer handledCount) {
+                this.handledCount = handledCount;
+                return this;
+            }
+
+            /**
+             * The number of vulnerabilities that have the **medium** priority.
+             */
+            public Builder laterCount(Integer laterCount) {
+                this.laterCount = laterCount;
+                return this;
+            }
+
+            /**
+             * The name of the vulnerability.
+             */
+            public Builder name(String name) {
+                this.name = name;
+                return this;
+            }
+
+            /**
+             * The number of vulnerabilities that have the **low** priority.
+             */
+            public Builder nntfCount(Integer nntfCount) {
+                this.nntfCount = nntfCount;
+                return this;
+            }
+
+            /**
+             * Indicates whether the application protection feature is supported.
+             * <p>
+             * 
+             * *   **0**: no
+             * *   **1**: yes
+             * 
+             * > If this parameter is not returned, the application protection feature is not supported.
+             */
+            public Builder raspDefend(Integer raspDefend) {
+                this.raspDefend = raspDefend;
                 return this;
             }
 
@@ -301,62 +352,22 @@ public class DescribeGroupedVulResponseBody extends TeaModel {
              * <p>
              * 
              * *   Restart required
-             * *   Remote exploitation
-             * *   Exploit exists
-             * *   Exploitable
-             * *   Privilege escalation
-             * *   Code execution
+             * *   Remote utilization
+             * *   EXP exists
+             * *   Available
+             * *   Elevation of Privilege
+             * *   Code Execution
              */
-            public Builder asapCount(Integer asapCount) {
-                this.asapCount = asapCount;
+            public Builder tags(String tags) {
+                this.tags = tags;
                 return this;
             }
 
             /**
-             * An array that consists of the details about the vulnerability.
+             * The total number of fixed vulnerabilities.
              */
-            public Builder gmtLast(Long gmtLast) {
-                this.gmtLast = gmtLast;
-                return this;
-            }
-
-            /**
-             * The total number of entries returned.
-             */
-            public Builder handledCount(Integer handledCount) {
-                this.handledCount = handledCount;
-                return this;
-            }
-
-            /**
-             * The number of vulnerabilities that have the **low** priority.
-             */
-            public Builder laterCount(Integer laterCount) {
-                this.laterCount = laterCount;
-                return this;
-            }
-
-            /**
-             * The timestamp when the vulnerability was last detected. Unit: milliseconds.
-             */
-            public Builder name(String name) {
-                this.name = name;
-                return this;
-            }
-
-            /**
-             * The ID of the request, which is used to locate and troubleshoot issues.
-             */
-            public Builder nntfCount(Integer nntfCount) {
-                this.nntfCount = nntfCount;
-                return this;
-            }
-
-            /**
-             * The number of entries returned per page. Default value: 10.
-             */
-            public Builder raspDefend(Integer raspDefend) {
-                this.raspDefend = raspDefend;
+            public Builder totalFixCount(Long totalFixCount) {
+                this.totalFixCount = totalFixCount;
                 return this;
             }
 
@@ -367,25 +378,9 @@ public class DescribeGroupedVulResponseBody extends TeaModel {
              * *   **cve**: Linux software vulnerability
              * *   **sys**: Windows system vulnerability
              * *   **cms**: Web-CMS vulnerability
-             * *   **app**: application vulnerability
-             * *   **emg**: urgent vulnerability
+             * *   **app**: application vulnerabilitiy
+             * *   **emg**: urgent vulnerabilities
              * *   **sca**: vulnerability that is detected based on software component analysis
-             */
-            public Builder tags(String tags) {
-                this.tags = tags;
-                return this;
-            }
-
-            /**
-             * gmtLast
-             */
-            public Builder totalFixCount(Long totalFixCount) {
-                this.totalFixCount = totalFixCount;
-                return this;
-            }
-
-            /**
-             * The page number of the returned page.
              */
             public Builder type(String type) {
                 this.type = type;

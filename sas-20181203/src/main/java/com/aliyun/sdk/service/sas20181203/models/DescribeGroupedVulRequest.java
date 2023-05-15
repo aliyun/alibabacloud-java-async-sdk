@@ -236,7 +236,7 @@ public class DescribeGroupedVulRequest extends Request {
         } 
 
         /**
-         * $.parameters[10].schema.example
+         * The alias of the vulnerability.
          */
         public Builder aliasName(String aliasName) {
             this.putQueryParameter("AliasName", aliasName);
@@ -245,14 +245,94 @@ public class DescribeGroupedVulRequest extends Request {
         }
 
         /**
-         * Specifies whether the vulnerability is handled. Valid values:
+         * The type of the asset on which the vulnerability is detected. Separate multiple types with commas (,). Valid values:
          * <p>
          * 
-         * **y**: handled **n**: The vulnerability is not handled.
+         * *   **ECS**: Elastic Compute Service (ECS) instance
+         * *   **CONTAINER**: container
          */
         public Builder assetType(String assetType) {
             this.putQueryParameter("AssetType", assetType);
             this.assetType = assetType;
+            return this;
+        }
+
+        /**
+         * The type of the vulnerability. This parameter is valid only for application vulnerabilities. Valid values:
+         * <p>
+         * 
+         * *   **sca**: vulnerability that is detected based on software component analysis
+         * *   **app**: application vulnerability
+         */
+        public Builder attachTypes(String attachTypes) {
+            this.putQueryParameter("AttachTypes", attachTypes);
+            this.attachTypes = attachTypes;
+            return this;
+        }
+
+        /**
+         * The key of the condition that is used to query containers. Valid values:
+         * <p>
+         * 
+         * *   **instanceId**: the ID of the asset
+         * *   **appName**: the name of the application
+         * *   **clusterId**: the ID of the cluster
+         * *   **regionId**: the ID of the region
+         * *   **nodeName**: the name of the node
+         * *   **namespace**: the namespace
+         * *   **clusterName**: the name of the cluster
+         * *   **image**: the name of the image
+         * *   **imageRepoName**: the name of the image repository
+         * *   **imageRepoNamespace**: the namespace to which the image repository belongs
+         * *   **imageRepoTag**: the tag that is added to the image
+         * *   **imageDigest**: the digest of the image
+         */
+        public Builder containerFieldName(String containerFieldName) {
+            this.putQueryParameter("ContainerFieldName", containerFieldName);
+            this.containerFieldName = containerFieldName;
+            return this;
+        }
+
+        /**
+         * The number of the page to return. Default value: **1**.
+         */
+        public Builder currentPage(Integer currentPage) {
+            this.putQueryParameter("CurrentPage", currentPage);
+            this.currentPage = currentPage;
+            return this;
+        }
+
+        /**
+         * Specifies whether the vulnerability is handled. Valid values:
+         * <p>
+         * 
+         * **y**: yes **n**: no
+         */
+        public Builder dealed(String dealed) {
+            this.putQueryParameter("Dealed", dealed);
+            this.dealed = dealed;
+            return this;
+        }
+
+        /**
+         * The ID of the asset group.
+         */
+        public Builder groupId(String groupId) {
+            this.putQueryParameter("GroupId", groupId);
+            this.groupId = groupId;
+            return this;
+        }
+
+        /**
+         * The language of the content within the request and response. Default value: **zh**. Valid values:
+         * <p>
+         * 
+         * *   **zh**: Chinese
+         * *   **en**: English
+         */
+        public Builder lang(String lang) {
+            this.putQueryParameter("Lang", lang);
+            this.lang = lang;
             return this;
         }
 
@@ -264,72 +344,6 @@ public class DescribeGroupedVulRequest extends Request {
          * *   **later**: medium
          * *   **nntf**: low
          */
-        public Builder attachTypes(String attachTypes) {
-            this.putQueryParameter("AttachTypes", attachTypes);
-            this.attachTypes = attachTypes;
-            return this;
-        }
-
-        /**
-         * The type of the vulnerability. Valid values:
-         * <p>
-         * 
-         * *   **cve**: Linux software vulnerability
-         * *   **sys**: Windows system vulnerability
-         * *   **cms**: Web-CMS vulnerability
-         * *   **app**: application vulnerability
-         * *   **emg**: urgent vulnerability
-         * *   **sca**: vulnerability that is detected based on software component analysis
-         */
-        public Builder containerFieldName(String containerFieldName) {
-            this.putQueryParameter("ContainerFieldName", containerFieldName);
-            this.containerFieldName = containerFieldName;
-            return this;
-        }
-
-        /**
-         * $.parameters[11].schema.example
-         */
-        public Builder currentPage(Integer currentPage) {
-            this.putQueryParameter("CurrentPage", currentPage);
-            this.currentPage = currentPage;
-            return this;
-        }
-
-        /**
-         * $.parameters[11].schema.description
-         */
-        public Builder dealed(String dealed) {
-            this.putQueryParameter("Dealed", dealed);
-            this.dealed = dealed;
-            return this;
-        }
-
-        /**
-         * The language of the content within the request and response. Default value: **zh**. Valid values:
-         * <p>
-         * 
-         * *   **zh**: Chinese
-         * *   **en**: English
-         */
-        public Builder groupId(String groupId) {
-            this.putQueryParameter("GroupId", groupId);
-            this.groupId = groupId;
-            return this;
-        }
-
-        /**
-         * Code Execution
-         */
-        public Builder lang(String lang) {
-            this.putQueryParameter("Lang", lang);
-            this.lang = lang;
-            return this;
-        }
-
-        /**
-         * $.parameters[10].schema.enumValueTitles
-         */
         public Builder necessity(String necessity) {
             this.putQueryParameter("Necessity", necessity);
             this.necessity = necessity;
@@ -337,7 +351,7 @@ public class DescribeGroupedVulRequest extends Request {
         }
 
         /**
-         * $.parameters[11].schema.enumValueTitles
+         * The number of entries per page. Default value: 10.
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -346,7 +360,15 @@ public class DescribeGroupedVulRequest extends Request {
         }
 
         /**
-         * The alias of the vulnerability.
+         * The tag that is used to filter vulnerabilities. Valid values:
+         * <p>
+         * 
+         * *   Restart required
+         * *   Remote utilization
+         * *   EXP exists
+         * *   Available
+         * *   Elevation of Privilege
+         * *   Code Execution
          */
         public Builder searchTags(String searchTags) {
             this.putQueryParameter("SearchTags", searchTags);
@@ -355,7 +377,11 @@ public class DescribeGroupedVulRequest extends Request {
         }
 
         /**
-         * The UUID of the server. Separate multiple UUIDs with commas (,).
+         * The query type for containers. Valid values:
+         * <p>
+         * 
+         * *   **containerId**: the ID of the container
+         * *   **uuid**: the ID of the asset
          */
         public Builder targetType(String targetType) {
             this.putQueryParameter("TargetType", targetType);
@@ -364,7 +390,15 @@ public class DescribeGroupedVulRequest extends Request {
         }
 
         /**
-         * Queries vulnerabilities by group.
+         * The type of the vulnerabilities. Valid values:
+         * <p>
+         * 
+         * *   **cve**: Linux software vulnerability
+         * *   **sys**: Windows system vulnerability
+         * *   **cms**: Web-CMS vulnerability
+         * *   **app**: application vulnerability
+         * *   **emg**: urgent vulnerabilities
+         * *   **sca**: vulnerability that is detected based on software component analysis
          */
         public Builder type(String type) {
             this.putQueryParameter("Type", type);
@@ -373,7 +407,7 @@ public class DescribeGroupedVulRequest extends Request {
         }
 
         /**
-         * $.parameters[10].schema.description
+         * The UUID of the server. Separate multiple UUIDs with commas (,).
          */
         public Builder uuids(String uuids) {
             this.putQueryParameter("Uuids", uuids);

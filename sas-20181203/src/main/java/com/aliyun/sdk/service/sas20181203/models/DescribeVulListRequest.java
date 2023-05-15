@@ -314,7 +314,7 @@ public class DescribeVulListRequest extends Request {
         }
 
         /**
-         * The number of entries to return on each page. Default value: **10**.
+         * The number of entries per page. Default value: **10**.
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -337,9 +337,9 @@ public class DescribeVulListRequest extends Request {
          * 
          * *   **cve**: Linux software vulnerability
          * *   **sys**: Windows system vulnerability
-         * *   **cms**: Web-CMS vulnerability
+         * *   **cms**: Web-CMS vulnerability.
          * *   **app**: application vulnerability that is detected by using web scanner
-         * *   **emg**: urgent vulnerability
+         * *   **emg**: urgent vulnerability.
          * *   **sca**: application vulnerability that is detected by using software component analysis
          */
         public Builder type(String type) {
@@ -358,7 +358,7 @@ public class DescribeVulListRequest extends Request {
         }
 
         /**
-         * The IDs of the virtual private clouds (VPCs) in which the vulnerability is detected. Separate multiple IDs with commas (,).
+         * The ID of the virtual private cloud (VPC) in which the vulnerabilities are detected. Separate multiple IDs with commas (,).
          */
         public Builder vpcInstanceIds(String vpcInstanceIds) {
             this.putQueryParameter("VpcInstanceIds", vpcInstanceIds);
