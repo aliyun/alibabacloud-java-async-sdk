@@ -98,7 +98,7 @@ public class GenerateTokenResponseBody extends TeaModel {
         private String tokenType; 
 
         /**
-         * access_token
+         * access_token。
          */
         public Builder accessToken(String accessToken) {
             this.accessToken = accessToken;
@@ -122,7 +122,7 @@ public class GenerateTokenResponseBody extends TeaModel {
         }
 
         /**
-         * id_token
+         * id_token。
          */
         public Builder idToken(String idToken) {
             this.idToken = idToken;
@@ -130,7 +130,7 @@ public class GenerateTokenResponseBody extends TeaModel {
         }
 
         /**
-         * refresh_token
+         * refresh_token。
          */
         public Builder refreshToken(String refreshToken) {
             this.refreshToken = refreshToken;

@@ -33,6 +33,9 @@ public class GetUserResponseBody extends TeaModel {
     @NameInMap("emailVerified")
     private Boolean emailVerified;
 
+    @NameInMap("groups")
+    private java.util.List < Groups> groups;
+
     @NameInMap("instanceId")
     private String instanceId;
 
@@ -89,6 +92,7 @@ public class GetUserResponseBody extends TeaModel {
         this.displayName = builder.displayName;
         this.email = builder.email;
         this.emailVerified = builder.emailVerified;
+        this.groups = builder.groups;
         this.instanceId = builder.instanceId;
         this.lockExpireTime = builder.lockExpireTime;
         this.organizationalUnits = builder.organizationalUnits;
@@ -162,6 +166,13 @@ public class GetUserResponseBody extends TeaModel {
      */
     public Boolean getEmailVerified() {
         return this.emailVerified;
+    }
+
+    /**
+     * @return groups
+     */
+    public java.util.List < Groups> getGroups() {
+        return this.groups;
     }
 
     /**
@@ -284,6 +295,7 @@ public class GetUserResponseBody extends TeaModel {
         private String displayName; 
         private String email; 
         private Boolean emailVerified; 
+        private java.util.List < Groups> groups; 
         private String instanceId; 
         private Long lockExpireTime; 
         private java.util.List < OrganizationalUnits> organizationalUnits; 
@@ -354,6 +366,14 @@ public class GetUserResponseBody extends TeaModel {
          */
         public Builder emailVerified(Boolean emailVerified) {
             this.emailVerified = emailVerified;
+            return this;
+        }
+
+        /**
+         * 账户所属组列表
+         */
+        public Builder groups(java.util.List < Groups> groups) {
+            this.groups = groups;
             return this;
         }
 
@@ -547,6 +567,87 @@ public class GetUserResponseBody extends TeaModel {
 
             public CustomFields build() {
                 return new CustomFields(this);
+            } 
+
+        } 
+
+    }
+    public static class Groups extends TeaModel {
+        @NameInMap("description")
+        private String description;
+
+        @NameInMap("groupId")
+        private String groupId;
+
+        @NameInMap("groupName")
+        private String groupName;
+
+        private Groups(Builder builder) {
+            this.description = builder.description;
+            this.groupId = builder.groupId;
+            this.groupName = builder.groupName;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static Groups create() {
+            return builder().build();
+        }
+
+        /**
+         * @return description
+         */
+        public String getDescription() {
+            return this.description;
+        }
+
+        /**
+         * @return groupId
+         */
+        public String getGroupId() {
+            return this.groupId;
+        }
+
+        /**
+         * @return groupName
+         */
+        public String getGroupName() {
+            return this.groupName;
+        }
+
+        public static final class Builder {
+            private String description; 
+            private String groupId; 
+            private String groupName; 
+
+            /**
+             * 组描述。
+             */
+            public Builder description(String description) {
+                this.description = description;
+                return this;
+            }
+
+            /**
+             * 组ID。
+             */
+            public Builder groupId(String groupId) {
+                this.groupId = groupId;
+                return this;
+            }
+
+            /**
+             * 组名称。
+             */
+            public Builder groupName(String groupName) {
+                this.groupName = groupName;
+                return this;
+            }
+
+            public Groups build() {
+                return new Groups(this);
             } 
 
         } 

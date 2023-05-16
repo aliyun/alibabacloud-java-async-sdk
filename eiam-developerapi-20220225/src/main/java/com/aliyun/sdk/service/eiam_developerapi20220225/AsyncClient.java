@@ -18,6 +18,8 @@ public interface AsyncClient extends SdkAutoCloseable {
         return builder().build();
     }
 
+    CompletableFuture<AddUserToOrganizationalUnitsResponse> addUserToOrganizationalUnits(AddUserToOrganizationalUnitsRequest request);
+
     CompletableFuture<CreateOrganizationalUnitResponse> createOrganizationalUnit(CreateOrganizationalUnitRequest request);
 
     CompletableFuture<CreateUserResponse> createUser(CreateUserRequest request);
@@ -62,6 +64,12 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<PatchUserResponse> patchUser(PatchUserRequest request);
 
+    CompletableFuture<RemoveUserFromOrganizationalUnitsResponse> removeUserFromOrganizationalUnits(RemoveUserFromOrganizationalUnitsRequest request);
+
     CompletableFuture<RevokeTokenResponse> revokeToken(RevokeTokenRequest request);
+
+    CompletableFuture<SetUserPrimaryOrganizationalUnitResponse> setUserPrimaryOrganizationalUnit(SetUserPrimaryOrganizationalUnitRequest request);
+
+    CompletableFuture<UpdateUserPasswordResponse> updateUserPassword(UpdateUserPasswordRequest request);
 
 }

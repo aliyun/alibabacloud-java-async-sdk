@@ -359,12 +359,17 @@ public class PatchUserRequest extends Request {
         @NameInMap("fieldValue")
         private String fieldValue;
 
+        @NameInMap("operation")
+        private String operation;
+
         @NameInMap("operator")
+        @Deprecated
         private String operator;
 
         private CustomFields(Builder builder) {
             this.fieldName = builder.fieldName;
             this.fieldValue = builder.fieldValue;
+            this.operation = builder.operation;
             this.operator = builder.operator;
         }
 
@@ -391,6 +396,13 @@ public class PatchUserRequest extends Request {
         }
 
         /**
+         * @return operation
+         */
+        public String getOperation() {
+            return this.operation;
+        }
+
+        /**
          * @return operator
          */
         public String getOperator() {
@@ -400,6 +412,7 @@ public class PatchUserRequest extends Request {
         public static final class Builder {
             private String fieldName; 
             private String fieldValue; 
+            private String operation; 
             private String operator; 
 
             /**
@@ -415,6 +428,18 @@ public class PatchUserRequest extends Request {
              */
             public Builder fieldValue(String fieldValue) {
                 this.fieldValue = fieldValue;
+                return this;
+            }
+
+            /**
+             * 字段操作类型，取值可选范围：
+             * <p>
+             * - add：添加。
+             * - replace：替换。若对应扩展字段无设置值，会转换为add操作。
+             * - remove：移除。
+             */
+            public Builder operation(String operation) {
+                this.operation = operation;
                 return this;
             }
 
