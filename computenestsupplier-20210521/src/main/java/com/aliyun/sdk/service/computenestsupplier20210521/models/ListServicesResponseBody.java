@@ -321,6 +321,9 @@ public class ListServicesResponseBody extends TeaModel {
         @NameInMap("RelationType")
         private String relationType;
 
+        @NameInMap("ResourceGroupId")
+        private String resourceGroupId;
+
         @NameInMap("ServiceId")
         private String serviceId;
 
@@ -373,6 +376,7 @@ public class ListServicesResponseBody extends TeaModel {
             this.deployType = builder.deployType;
             this.publishTime = builder.publishTime;
             this.relationType = builder.relationType;
+            this.resourceGroupId = builder.resourceGroupId;
             this.serviceId = builder.serviceId;
             this.serviceInfos = builder.serviceInfos;
             this.serviceType = builder.serviceType;
@@ -458,6 +462,13 @@ public class ListServicesResponseBody extends TeaModel {
          */
         public String getRelationType() {
             return this.relationType;
+        }
+
+        /**
+         * @return resourceGroupId
+         */
+        public String getResourceGroupId() {
+            return this.resourceGroupId;
         }
 
         /**
@@ -568,6 +579,7 @@ public class ListServicesResponseBody extends TeaModel {
             private String deployType; 
             private String publishTime; 
             private String relationType; 
+            private String resourceGroupId; 
             private String serviceId; 
             private java.util.List < ServiceInfos> serviceInfos; 
             private String serviceType; 
@@ -652,6 +664,14 @@ public class ListServicesResponseBody extends TeaModel {
              */
             public Builder relationType(String relationType) {
                 this.relationType = relationType;
+                return this;
+            }
+
+            /**
+             * ResourceGroupId.
+             */
+            public Builder resourceGroupId(String resourceGroupId) {
+                this.resourceGroupId = resourceGroupId;
                 return this;
             }
 

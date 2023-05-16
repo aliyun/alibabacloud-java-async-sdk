@@ -612,6 +612,9 @@ public class GetServiceInstanceResponseBody extends TeaModel {
     } 
 
     public static class ConnectionConfigs extends TeaModel {
+        @NameInMap("ConnectBandwidth")
+        private Integer connectBandwidth;
+
         @NameInMap("DomainName")
         private String domainName;
 
@@ -634,6 +637,7 @@ public class GetServiceInstanceResponseBody extends TeaModel {
         private String vpcId;
 
         private ConnectionConfigs(Builder builder) {
+            this.connectBandwidth = builder.connectBandwidth;
             this.domainName = builder.domainName;
             this.endpointIps = builder.endpointIps;
             this.ingressEndpointStatus = builder.ingressEndpointStatus;
@@ -649,6 +653,13 @@ public class GetServiceInstanceResponseBody extends TeaModel {
 
         public static ConnectionConfigs create() {
             return builder().build();
+        }
+
+        /**
+         * @return connectBandwidth
+         */
+        public Integer getConnectBandwidth() {
+            return this.connectBandwidth;
         }
 
         /**
@@ -701,6 +712,7 @@ public class GetServiceInstanceResponseBody extends TeaModel {
         }
 
         public static final class Builder {
+            private Integer connectBandwidth; 
             private String domainName; 
             private java.util.List < String > endpointIps; 
             private String ingressEndpointStatus; 
@@ -708,6 +720,14 @@ public class GetServiceInstanceResponseBody extends TeaModel {
             private java.util.List < String > securityGroups; 
             private java.util.List < String > vSwitches; 
             private String vpcId; 
+
+            /**
+             * ConnectBandwidth.
+             */
+            public Builder connectBandwidth(Integer connectBandwidth) {
+                this.connectBandwidth = connectBandwidth;
+                return this;
+            }
 
             /**
              * DomainName.
