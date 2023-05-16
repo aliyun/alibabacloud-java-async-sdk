@@ -52,6 +52,8 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<CreateEnsRouteEntryResponse> createEnsRouteEntry(CreateEnsRouteEntryRequest request);
 
+    CompletableFuture<CreateEnsSaleControlResponse> createEnsSaleControl(CreateEnsSaleControlRequest request);
+
     CompletableFuture<CreateEnsServiceResponse> createEnsService(CreateEnsServiceRequest request);
 
     CompletableFuture<CreateEpnInstanceResponse> createEpnInstance(CreateEpnInstanceRequest request);
@@ -101,6 +103,10 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<DeleteDiskResponse> deleteDisk(DeleteDiskRequest request);
 
     CompletableFuture<DeleteEnsRouteEntryResponse> deleteEnsRouteEntry(DeleteEnsRouteEntryRequest request);
+
+    CompletableFuture<DeleteEnsSaleConditionControlResponse> deleteEnsSaleConditionControl(DeleteEnsSaleConditionControlRequest request);
+
+    CompletableFuture<DeleteEnsSaleControlResponse> deleteEnsSaleControl(DeleteEnsSaleControlRequest request);
 
     CompletableFuture<DeleteEpnInstanceResponse> deleteEpnInstance(DeleteEpnInstanceRequest request);
 
@@ -166,6 +172,10 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<DescribeElbAvailableResourceInfoResponse> describeElbAvailableResourceInfo(DescribeElbAvailableResourceInfoRequest request);
 
+    CompletableFuture<DescribeEnsCommodityCodeResponse> describeEnsCommodityCode(DescribeEnsCommodityCodeRequest request);
+
+    CompletableFuture<DescribeEnsCommodityModuleCodeResponse> describeEnsCommodityModuleCode(DescribeEnsCommodityModuleCodeRequest request);
+
     CompletableFuture<DescribeEnsEipAddressesResponse> describeEnsEipAddresses(DescribeEnsEipAddressesRequest request);
 
     CompletableFuture<DescribeEnsNetDistrictResponse> describeEnsNetDistrict(DescribeEnsNetDistrictRequest request);
@@ -187,6 +197,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<DescribeEnsResourceUsageResponse> describeEnsResourceUsage(DescribeEnsResourceUsageRequest request);
 
     CompletableFuture<DescribeEnsRouteEntryListResponse> describeEnsRouteEntryList(DescribeEnsRouteEntryListRequest request);
+
+    CompletableFuture<DescribeEnsSaleControlResponse> describeEnsSaleControl(DescribeEnsSaleControlRequest request);
+
+    CompletableFuture<DescribeEnsSaleControlAvailableResourceResponse> describeEnsSaleControlAvailableResource(DescribeEnsSaleControlAvailableResourceRequest request);
+
+    CompletableFuture<DescribeEnsSaleControlStockResponse> describeEnsSaleControlStock(DescribeEnsSaleControlStockRequest request);
 
     CompletableFuture<DescribeEpnBandWidthDataResponse> describeEpnBandWidthData(DescribeEpnBandWidthDataRequest request);
 
@@ -259,6 +275,8 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<DescribePrePaidInstanceStockResponse> describePrePaidInstanceStock(DescribePrePaidInstanceStockRequest request);
 
     CompletableFuture<DescribePriceResponse> describePrice(DescribePriceRequest request);
+
+    CompletableFuture<DescribeRegionBandwidthQuotaResponse> describeRegionBandwidthQuota(DescribeRegionBandwidthQuotaRequest request);
 
     CompletableFuture<DescribeRegionIspsResponse> describeRegionIsps(DescribeRegionIspsRequest request);
 
@@ -435,6 +453,8 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<UnassignPrivateIpAddressesResponse> unassignPrivateIpAddresses(UnassignPrivateIpAddressesRequest request);
 
     CompletableFuture<UnassociateNetworkAclResponse> unassociateNetworkAcl(UnassociateNetworkAclRequest request);
+
+    CompletableFuture<UpdateEnsSaleControlResponse> updateEnsSaleControl(UpdateEnsSaleControlRequest request);
 
     CompletableFuture<UpgradeAICInstanceImageResponse> upgradeAICInstanceImage(UpgradeAICInstanceImageRequest request);
 

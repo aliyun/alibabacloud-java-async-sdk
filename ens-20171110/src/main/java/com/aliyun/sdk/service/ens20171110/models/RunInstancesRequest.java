@@ -42,6 +42,10 @@ public class RunInstancesRequest extends Request {
     private String imageId;
 
     @Query
+    @NameInMap("InstanceChargeStrategy")
+    private String instanceChargeStrategy;
+
+    @Query
     @NameInMap("InstanceChargeType")
     @Validation(required = true)
     private String instanceChargeType;
@@ -142,6 +146,7 @@ public class RunInstancesRequest extends Request {
         this.ensRegionId = builder.ensRegionId;
         this.hostName = builder.hostName;
         this.imageId = builder.imageId;
+        this.instanceChargeStrategy = builder.instanceChargeStrategy;
         this.instanceChargeType = builder.instanceChargeType;
         this.instanceName = builder.instanceName;
         this.instanceType = builder.instanceType;
@@ -226,6 +231,13 @@ public class RunInstancesRequest extends Request {
      */
     public String getImageId() {
         return this.imageId;
+    }
+
+    /**
+     * @return instanceChargeStrategy
+     */
+    public String getInstanceChargeStrategy() {
+        return this.instanceChargeStrategy;
     }
 
     /**
@@ -390,6 +402,7 @@ public class RunInstancesRequest extends Request {
         private String ensRegionId; 
         private String hostName; 
         private String imageId; 
+        private String instanceChargeStrategy; 
         private String instanceChargeType; 
         private String instanceName; 
         private String instanceType; 
@@ -426,6 +439,7 @@ public class RunInstancesRequest extends Request {
             this.ensRegionId = request.ensRegionId;
             this.hostName = request.hostName;
             this.imageId = request.imageId;
+            this.instanceChargeStrategy = request.instanceChargeStrategy;
             this.instanceChargeType = request.instanceChargeType;
             this.instanceName = request.instanceName;
             this.instanceType = request.instanceType;
@@ -511,6 +525,15 @@ public class RunInstancesRequest extends Request {
         public Builder imageId(String imageId) {
             this.putQueryParameter("ImageId", imageId);
             this.imageId = imageId;
+            return this;
+        }
+
+        /**
+         * InstanceChargeStrategy.
+         */
+        public Builder instanceChargeStrategy(String instanceChargeStrategy) {
+            this.putQueryParameter("InstanceChargeStrategy", instanceChargeStrategy);
+            this.instanceChargeStrategy = instanceChargeStrategy;
             return this;
         }
 

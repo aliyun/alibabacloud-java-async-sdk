@@ -222,6 +222,12 @@ public class DescribeARMServerInstancesResponseBody extends TeaModel {
         @NameInMap("InstanceId")
         private String instanceId;
 
+        @NameInMap("LatestAction")
+        private String latestAction;
+
+        @NameInMap("Name")
+        private String name;
+
         @NameInMap("NetworkAttributes")
         private NetworkAttributes networkAttributes;
 
@@ -241,6 +247,8 @@ public class DescribeARMServerInstancesResponseBody extends TeaModel {
             this.frequency = builder.frequency;
             this.imageId = builder.imageId;
             this.instanceId = builder.instanceId;
+            this.latestAction = builder.latestAction;
+            this.name = builder.name;
             this.networkAttributes = builder.networkAttributes;
             this.resolution = builder.resolution;
             this.spec = builder.spec;
@@ -275,6 +283,20 @@ public class DescribeARMServerInstancesResponseBody extends TeaModel {
          */
         public String getInstanceId() {
             return this.instanceId;
+        }
+
+        /**
+         * @return latestAction
+         */
+        public String getLatestAction() {
+            return this.latestAction;
+        }
+
+        /**
+         * @return name
+         */
+        public String getName() {
+            return this.name;
         }
 
         /**
@@ -316,6 +338,8 @@ public class DescribeARMServerInstancesResponseBody extends TeaModel {
             private Long frequency; 
             private String imageId; 
             private String instanceId; 
+            private String latestAction; 
+            private String name; 
             private NetworkAttributes networkAttributes; 
             private String resolution; 
             private String spec; 
@@ -343,6 +367,22 @@ public class DescribeARMServerInstancesResponseBody extends TeaModel {
              */
             public Builder instanceId(String instanceId) {
                 this.instanceId = instanceId;
+                return this;
+            }
+
+            /**
+             * LatestAction.
+             */
+            public Builder latestAction(String latestAction) {
+                this.latestAction = latestAction;
+                return this;
+            }
+
+            /**
+             * Name.
+             */
+            public Builder name(String name) {
+                this.name = name;
                 return this;
             }
 
@@ -406,8 +446,17 @@ public class DescribeARMServerInstancesResponseBody extends TeaModel {
         @NameInMap("ExpiredTime")
         private String expiredTime;
 
+        @NameInMap("LatestAction")
+        private String latestAction;
+
+        @NameInMap("Name")
+        private String name;
+
         @NameInMap("Namespace")
         private String namespace;
+
+        @NameInMap("PayType")
+        private String payType;
 
         @NameInMap("ServerId")
         private String serverId;
@@ -426,7 +475,10 @@ public class DescribeARMServerInstancesResponseBody extends TeaModel {
             this.creationTime = builder.creationTime;
             this.ensRegionId = builder.ensRegionId;
             this.expiredTime = builder.expiredTime;
+            this.latestAction = builder.latestAction;
+            this.name = builder.name;
             this.namespace = builder.namespace;
+            this.payType = builder.payType;
             this.serverId = builder.serverId;
             this.specName = builder.specName;
             this.state = builder.state;
@@ -470,10 +522,31 @@ public class DescribeARMServerInstancesResponseBody extends TeaModel {
         }
 
         /**
+         * @return latestAction
+         */
+        public String getLatestAction() {
+            return this.latestAction;
+        }
+
+        /**
+         * @return name
+         */
+        public String getName() {
+            return this.name;
+        }
+
+        /**
          * @return namespace
          */
         public String getNamespace() {
             return this.namespace;
+        }
+
+        /**
+         * @return payType
+         */
+        public String getPayType() {
+            return this.payType;
         }
 
         /**
@@ -509,7 +582,10 @@ public class DescribeARMServerInstancesResponseBody extends TeaModel {
             private String creationTime; 
             private String ensRegionId; 
             private String expiredTime; 
+            private String latestAction; 
+            private String name; 
             private String namespace; 
+            private String payType; 
             private String serverId; 
             private String specName; 
             private String state; 
@@ -548,10 +624,34 @@ public class DescribeARMServerInstancesResponseBody extends TeaModel {
             }
 
             /**
+             * LatestAction.
+             */
+            public Builder latestAction(String latestAction) {
+                this.latestAction = latestAction;
+                return this;
+            }
+
+            /**
+             * Name.
+             */
+            public Builder name(String name) {
+                this.name = name;
+                return this;
+            }
+
+            /**
              * Namespace.
              */
             public Builder namespace(String namespace) {
                 this.namespace = namespace;
+                return this;
+            }
+
+            /**
+             * PayType.
+             */
+            public Builder payType(String payType) {
+                this.payType = payType;
                 return this;
             }
 

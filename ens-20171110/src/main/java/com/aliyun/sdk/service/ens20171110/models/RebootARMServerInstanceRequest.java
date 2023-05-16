@@ -14,12 +14,16 @@ import com.aliyun.sdk.gateway.pop.models.*;
 public class RebootARMServerInstanceRequest extends Request {
     @Query
     @NameInMap("ServerId")
-    @Validation(required = true)
     private String serverId;
+
+    @Query
+    @NameInMap("ServerIds")
+    private java.util.List < String > serverIds;
 
     private RebootARMServerInstanceRequest(Builder builder) {
         super(builder);
         this.serverId = builder.serverId;
+        this.serverIds = builder.serverIds;
     }
 
     public static Builder builder() {
@@ -42,8 +46,16 @@ public class RebootARMServerInstanceRequest extends Request {
         return this.serverId;
     }
 
+    /**
+     * @return serverIds
+     */
+    public java.util.List < String > getServerIds() {
+        return this.serverIds;
+    }
+
     public static final class Builder extends Request.Builder<RebootARMServerInstanceRequest, Builder> {
         private String serverId; 
+        private java.util.List < String > serverIds; 
 
         private Builder() {
             super();
@@ -52,6 +64,7 @@ public class RebootARMServerInstanceRequest extends Request {
         private Builder(RebootARMServerInstanceRequest request) {
             super(request);
             this.serverId = request.serverId;
+            this.serverIds = request.serverIds;
         } 
 
         /**
@@ -60,6 +73,16 @@ public class RebootARMServerInstanceRequest extends Request {
         public Builder serverId(String serverId) {
             this.putQueryParameter("ServerId", serverId);
             this.serverId = serverId;
+            return this;
+        }
+
+        /**
+         * ServerIds.
+         */
+        public Builder serverIds(java.util.List < String > serverIds) {
+            String serverIdsShrink = shrink(serverIds, "ServerIds", "json");
+            this.putQueryParameter("ServerIds", serverIdsShrink);
+            this.serverIds = serverIds;
             return this;
         }
 

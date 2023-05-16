@@ -15,12 +15,24 @@ public class DescribeAICImagesResponseBody extends TeaModel {
     @NameInMap("Images")
     private java.util.List < Images> images;
 
+    @NameInMap("PageNumber")
+    private Integer pageNumber;
+
+    @NameInMap("PageSize")
+    private Integer pageSize;
+
     @NameInMap("RequestId")
     private String requestId;
 
+    @NameInMap("TotalCount")
+    private Integer totalCount;
+
     private DescribeAICImagesResponseBody(Builder builder) {
         this.images = builder.images;
+        this.pageNumber = builder.pageNumber;
+        this.pageSize = builder.pageSize;
         this.requestId = builder.requestId;
+        this.totalCount = builder.totalCount;
     }
 
     public static Builder builder() {
@@ -39,15 +51,39 @@ public class DescribeAICImagesResponseBody extends TeaModel {
     }
 
     /**
+     * @return pageNumber
+     */
+    public Integer getPageNumber() {
+        return this.pageNumber;
+    }
+
+    /**
+     * @return pageSize
+     */
+    public Integer getPageSize() {
+        return this.pageSize;
+    }
+
+    /**
      * @return requestId
      */
     public String getRequestId() {
         return this.requestId;
     }
 
+    /**
+     * @return totalCount
+     */
+    public Integer getTotalCount() {
+        return this.totalCount;
+    }
+
     public static final class Builder {
         private java.util.List < Images> images; 
+        private Integer pageNumber; 
+        private Integer pageSize; 
         private String requestId; 
+        private Integer totalCount; 
 
         /**
          * Images.
@@ -58,10 +94,34 @@ public class DescribeAICImagesResponseBody extends TeaModel {
         }
 
         /**
+         * PageNumber.
+         */
+        public Builder pageNumber(Integer pageNumber) {
+            this.pageNumber = pageNumber;
+            return this;
+        }
+
+        /**
+         * PageSize.
+         */
+        public Builder pageSize(Integer pageSize) {
+            this.pageSize = pageSize;
+            return this;
+        }
+
+        /**
          * Id of the request
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
+            return this;
+        }
+
+        /**
+         * TotalCount.
+         */
+        public Builder totalCount(Integer totalCount) {
+            this.totalCount = totalCount;
             return this;
         }
 
@@ -74,6 +134,9 @@ public class DescribeAICImagesResponseBody extends TeaModel {
     public static class Images extends TeaModel {
         @NameInMap("CreationTime")
         private String creationTime;
+
+        @NameInMap("Description")
+        private String description;
 
         @NameInMap("ImageId")
         private String imageId;
@@ -89,6 +152,7 @@ public class DescribeAICImagesResponseBody extends TeaModel {
 
         private Images(Builder builder) {
             this.creationTime = builder.creationTime;
+            this.description = builder.description;
             this.imageId = builder.imageId;
             this.imageUrl = builder.imageUrl;
             this.status = builder.status;
@@ -108,6 +172,13 @@ public class DescribeAICImagesResponseBody extends TeaModel {
          */
         public String getCreationTime() {
             return this.creationTime;
+        }
+
+        /**
+         * @return description
+         */
+        public String getDescription() {
+            return this.description;
         }
 
         /**
@@ -140,6 +211,7 @@ public class DescribeAICImagesResponseBody extends TeaModel {
 
         public static final class Builder {
             private String creationTime; 
+            private String description; 
             private String imageId; 
             private String imageUrl; 
             private String status; 
@@ -150,6 +222,14 @@ public class DescribeAICImagesResponseBody extends TeaModel {
              */
             public Builder creationTime(String creationTime) {
                 this.creationTime = creationTime;
+                return this;
+            }
+
+            /**
+             * Description.
+             */
+            public Builder description(String description) {
+                this.description = description;
                 return this;
             }
 

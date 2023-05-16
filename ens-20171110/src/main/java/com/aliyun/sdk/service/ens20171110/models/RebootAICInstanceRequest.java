@@ -14,17 +14,20 @@ import com.aliyun.sdk.gateway.pop.models.*;
 public class RebootAICInstanceRequest extends Request {
     @Query
     @NameInMap("InstanceId")
-    @Validation(required = true)
     private String instanceId;
 
     @Query
+    @NameInMap("InstanceIds")
+    private java.util.List < String > instanceIds;
+
+    @Query
     @NameInMap("ServerId")
-    @Validation(required = true)
     private String serverId;
 
     private RebootAICInstanceRequest(Builder builder) {
         super(builder);
         this.instanceId = builder.instanceId;
+        this.instanceIds = builder.instanceIds;
         this.serverId = builder.serverId;
     }
 
@@ -49,6 +52,13 @@ public class RebootAICInstanceRequest extends Request {
     }
 
     /**
+     * @return instanceIds
+     */
+    public java.util.List < String > getInstanceIds() {
+        return this.instanceIds;
+    }
+
+    /**
      * @return serverId
      */
     public String getServerId() {
@@ -57,6 +67,7 @@ public class RebootAICInstanceRequest extends Request {
 
     public static final class Builder extends Request.Builder<RebootAICInstanceRequest, Builder> {
         private String instanceId; 
+        private java.util.List < String > instanceIds; 
         private String serverId; 
 
         private Builder() {
@@ -66,6 +77,7 @@ public class RebootAICInstanceRequest extends Request {
         private Builder(RebootAICInstanceRequest request) {
             super(request);
             this.instanceId = request.instanceId;
+            this.instanceIds = request.instanceIds;
             this.serverId = request.serverId;
         } 
 
@@ -75,6 +87,16 @@ public class RebootAICInstanceRequest extends Request {
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
             this.instanceId = instanceId;
+            return this;
+        }
+
+        /**
+         * InstanceIds.
+         */
+        public Builder instanceIds(java.util.List < String > instanceIds) {
+            String instanceIdsShrink = shrink(instanceIds, "InstanceIds", "json");
+            this.putQueryParameter("InstanceIds", instanceIdsShrink);
+            this.instanceIds = instanceIds;
             return this;
         }
 
