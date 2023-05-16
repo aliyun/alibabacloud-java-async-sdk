@@ -311,6 +311,9 @@ public class CarBillSettlementQueryResponseBody extends TeaModel {
         @NameInMap("sub_order_id")
         private String subOrderId;
 
+        @NameInMap("tax_rate")
+        private String taxRate;
+
         @NameInMap("traveler_id")
         private String travelerId;
 
@@ -380,6 +383,7 @@ public class CarBillSettlementQueryResponseBody extends TeaModel {
             this.specialReason = builder.specialReason;
             this.status = builder.status;
             this.subOrderId = builder.subOrderId;
+            this.taxRate = builder.taxRate;
             this.travelerId = builder.travelerId;
             this.travelerJobNo = builder.travelerJobNo;
             this.travelerName = builder.travelerName;
@@ -767,6 +771,13 @@ public class CarBillSettlementQueryResponseBody extends TeaModel {
         }
 
         /**
+         * @return taxRate
+         */
+        public String getTaxRate() {
+            return this.taxRate;
+        }
+
+        /**
          * @return travelerId
          */
         public String getTravelerId() {
@@ -855,6 +866,7 @@ public class CarBillSettlementQueryResponseBody extends TeaModel {
             private String specialReason; 
             private Integer status; 
             private String subOrderId; 
+            private String taxRate; 
             private String travelerId; 
             private String travelerJobNo; 
             private String travelerName; 
@@ -1282,6 +1294,14 @@ public class CarBillSettlementQueryResponseBody extends TeaModel {
              */
             public Builder subOrderId(String subOrderId) {
                 this.subOrderId = subOrderId;
+                return this;
+            }
+
+            /**
+             * 税率
+             */
+            public Builder taxRate(String taxRate) {
+                this.taxRate = taxRate;
                 return this;
             }
 

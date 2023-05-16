@@ -278,6 +278,9 @@ public class TrainBillSettlementQueryResponseBody extends TeaModel {
         @NameInMap("status")
         private Integer status;
 
+        @NameInMap("tax_rate")
+        private String taxRate;
+
         @NameInMap("ticket_no")
         private String ticketNo;
 
@@ -345,6 +348,7 @@ public class TrainBillSettlementQueryResponseBody extends TeaModel {
             this.settlementTime = builder.settlementTime;
             this.settlementType = builder.settlementType;
             this.status = builder.status;
+            this.taxRate = builder.taxRate;
             this.ticketNo = builder.ticketNo;
             this.ticketPrice = builder.ticketPrice;
             this.trainNo = builder.trainNo;
@@ -658,6 +662,13 @@ public class TrainBillSettlementQueryResponseBody extends TeaModel {
         }
 
         /**
+         * @return taxRate
+         */
+        public String getTaxRate() {
+            return this.taxRate;
+        }
+
+        /**
          * @return ticketNo
          */
         public String getTicketNo() {
@@ -756,6 +767,7 @@ public class TrainBillSettlementQueryResponseBody extends TeaModel {
             private String settlementTime; 
             private String settlementType; 
             private Integer status; 
+            private String taxRate; 
             private String ticketNo; 
             private Double ticketPrice; 
             private String trainNo; 
@@ -1098,6 +1110,14 @@ public class TrainBillSettlementQueryResponseBody extends TeaModel {
              */
             public Builder status(Integer status) {
                 this.status = status;
+                return this;
+            }
+
+            /**
+             * 税率
+             */
+            public Builder taxRate(String taxRate) {
+                this.taxRate = taxRate;
                 return this;
             }
 

@@ -350,6 +350,9 @@ public class FlightBillSettlementQueryResponseBody extends TeaModel {
         @NameInMap("status")
         private Integer status;
 
+        @NameInMap("tax_rate")
+        private String taxRate;
+
         @NameInMap("ticket_id")
         private String ticketId;
 
@@ -435,6 +438,7 @@ public class FlightBillSettlementQueryResponseBody extends TeaModel {
             this.settlementTime = builder.settlementTime;
             this.settlementType = builder.settlementType;
             this.status = builder.status;
+            this.taxRate = builder.taxRate;
             this.ticketId = builder.ticketId;
             this.travelerId = builder.travelerId;
             this.travelerJobNo = builder.travelerJobNo;
@@ -914,6 +918,13 @@ public class FlightBillSettlementQueryResponseBody extends TeaModel {
         }
 
         /**
+         * @return taxRate
+         */
+        public String getTaxRate() {
+            return this.taxRate;
+        }
+
+        /**
          * @return ticketId
          */
         public String getTicketId() {
@@ -1022,6 +1033,7 @@ public class FlightBillSettlementQueryResponseBody extends TeaModel {
             private String settlementTime; 
             private String settlementType; 
             private Integer status; 
+            private String taxRate; 
             private String ticketId; 
             private String travelerId; 
             private String travelerJobNo; 
@@ -1554,6 +1566,14 @@ public class FlightBillSettlementQueryResponseBody extends TeaModel {
              */
             public Builder status(Integer status) {
                 this.status = status;
+                return this;
+            }
+
+            /**
+             * 税率
+             */
+            public Builder taxRate(String taxRate) {
+                this.taxRate = taxRate;
                 return this;
             }
 

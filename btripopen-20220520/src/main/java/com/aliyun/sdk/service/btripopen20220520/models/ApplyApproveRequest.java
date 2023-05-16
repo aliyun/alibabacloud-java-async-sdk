@@ -192,7 +192,7 @@ public class ApplyApproveRequest extends Request {
         }
 
         /**
-         * 子企业Id
+         * sub_corp_id.
          */
         public Builder subCorpId(String subCorpId) {
             this.putBodyParameter("sub_corp_id", subCorpId);

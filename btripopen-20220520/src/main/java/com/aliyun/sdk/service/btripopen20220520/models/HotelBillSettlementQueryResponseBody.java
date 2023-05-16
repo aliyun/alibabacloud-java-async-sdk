@@ -299,6 +299,9 @@ public class HotelBillSettlementQueryResponseBody extends TeaModel {
         @NameInMap("status")
         private Integer status;
 
+        @NameInMap("tax_rate")
+        private String taxRate;
+
         @NameInMap("total_nights")
         private Integer totalNights;
 
@@ -364,6 +367,7 @@ public class HotelBillSettlementQueryResponseBody extends TeaModel {
             this.settlementTime = builder.settlementTime;
             this.settlementType = builder.settlementType;
             this.status = builder.status;
+            this.taxRate = builder.taxRate;
             this.totalNights = builder.totalNights;
             this.travelerId = builder.travelerId;
             this.travelerJobNo = builder.travelerJobNo;
@@ -723,6 +727,13 @@ public class HotelBillSettlementQueryResponseBody extends TeaModel {
         }
 
         /**
+         * @return taxRate
+         */
+        public String getTaxRate() {
+            return this.taxRate;
+        }
+
+        /**
          * @return totalNights
          */
         public Integer getTotalNights() {
@@ -807,6 +818,7 @@ public class HotelBillSettlementQueryResponseBody extends TeaModel {
             private String settlementTime; 
             private String settlementType; 
             private Integer status; 
+            private String taxRate; 
             private Integer totalNights; 
             private String travelerId; 
             private String travelerJobNo; 
@@ -1202,6 +1214,14 @@ public class HotelBillSettlementQueryResponseBody extends TeaModel {
              */
             public Builder status(Integer status) {
                 this.status = status;
+                return this;
+            }
+
+            /**
+             * 税率
+             */
+            public Builder taxRate(String taxRate) {
+                this.taxRate = taxRate;
                 return this;
             }
 

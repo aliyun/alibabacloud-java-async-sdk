@@ -373,6 +373,9 @@ public class IeFlightBillSettlementQueryResponseBody extends TeaModel {
         @NameInMap("tax_fee")
         private Double taxFee;
 
+        @NameInMap("tax_rate")
+        private String taxRate;
+
         @NameInMap("ticket_id")
         private String ticketId;
 
@@ -459,6 +462,7 @@ public class IeFlightBillSettlementQueryResponseBody extends TeaModel {
             this.status = builder.status;
             this.subOrderId = builder.subOrderId;
             this.taxFee = builder.taxFee;
+            this.taxRate = builder.taxRate;
             this.ticketId = builder.ticketId;
             this.trade = builder.trade;
             this.travelerId = builder.travelerId;
@@ -945,6 +949,13 @@ public class IeFlightBillSettlementQueryResponseBody extends TeaModel {
         }
 
         /**
+         * @return taxRate
+         */
+        public String getTaxRate() {
+            return this.taxRate;
+        }
+
+        /**
          * @return ticketId
          */
         public String getTicketId() {
@@ -1054,6 +1065,7 @@ public class IeFlightBillSettlementQueryResponseBody extends TeaModel {
             private Integer status; 
             private String subOrderId; 
             private Double taxFee; 
+            private String taxRate; 
             private String ticketId; 
             private String trade; 
             private String travelerId; 
@@ -1594,6 +1606,14 @@ public class IeFlightBillSettlementQueryResponseBody extends TeaModel {
              */
             public Builder taxFee(Double taxFee) {
                 this.taxFee = taxFee;
+                return this;
+            }
+
+            /**
+             * 税率
+             */
+            public Builder taxRate(String taxRate) {
+                this.taxRate = taxRate;
                 return this;
             }
 
