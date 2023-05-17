@@ -13,9 +13,17 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class CreateMeetingTransRequest extends Request {
     @Body
+    @NameInMap("AbilityParams")
+    private java.util.Map < String, ? > abilityParams;
+
+    @Body
     @NameInMap("AppKey")
     @Validation(required = true)
     private String appKey;
+
+    @Body
+    @NameInMap("AsrParams")
+    private java.util.Map < String, ? > asrParams;
 
     @Body
     @NameInMap("AudioBitRate")
@@ -62,6 +70,10 @@ public class CreateMeetingTransRequest extends Request {
     private Boolean docResultEnabled;
 
     @Body
+    @NameInMap("LabParams")
+    private java.util.Map < String, ? > labParams;
+
+    @Body
     @NameInMap("MeetingKey")
     private String meetingKey;
 
@@ -98,6 +110,10 @@ public class CreateMeetingTransRequest extends Request {
     private Boolean realtimeResultWordsEnabled;
 
     @Body
+    @NameInMap("Tags")
+    private java.util.Map < String, ? > tags;
+
+    @Body
     @NameInMap("TranslateActiveResultLevel")
     private Integer translateActiveResultLevel;
 
@@ -115,7 +131,9 @@ public class CreateMeetingTransRequest extends Request {
 
     private CreateMeetingTransRequest(Builder builder) {
         super(builder);
+        this.abilityParams = builder.abilityParams;
         this.appKey = builder.appKey;
+        this.asrParams = builder.asrParams;
         this.audioBitRate = builder.audioBitRate;
         this.audioFormat = builder.audioFormat;
         this.audioLanguage = builder.audioLanguage;
@@ -126,6 +144,7 @@ public class CreateMeetingTransRequest extends Request {
         this.audioSampleRate = builder.audioSampleRate;
         this.audioSegmentsEnabled = builder.audioSegmentsEnabled;
         this.docResultEnabled = builder.docResultEnabled;
+        this.labParams = builder.labParams;
         this.meetingKey = builder.meetingKey;
         this.meetingResultEnabled = builder.meetingResultEnabled;
         this.meetingResultOssBucket = builder.meetingResultOssBucket;
@@ -135,6 +154,7 @@ public class CreateMeetingTransRequest extends Request {
         this.realtimeResultLevel = builder.realtimeResultLevel;
         this.realtimeResultMeetingInfoEnabled = builder.realtimeResultMeetingInfoEnabled;
         this.realtimeResultWordsEnabled = builder.realtimeResultWordsEnabled;
+        this.tags = builder.tags;
         this.translateActiveResultLevel = builder.translateActiveResultLevel;
         this.translateLanguages = builder.translateLanguages;
         this.translateResultEnabled = builder.translateResultEnabled;
@@ -155,10 +175,24 @@ public class CreateMeetingTransRequest extends Request {
     }
 
     /**
+     * @return abilityParams
+     */
+    public java.util.Map < String, ? > getAbilityParams() {
+        return this.abilityParams;
+    }
+
+    /**
      * @return appKey
      */
     public String getAppKey() {
         return this.appKey;
+    }
+
+    /**
+     * @return asrParams
+     */
+    public java.util.Map < String, ? > getAsrParams() {
+        return this.asrParams;
     }
 
     /**
@@ -232,6 +266,13 @@ public class CreateMeetingTransRequest extends Request {
     }
 
     /**
+     * @return labParams
+     */
+    public java.util.Map < String, ? > getLabParams() {
+        return this.labParams;
+    }
+
+    /**
      * @return meetingKey
      */
     public String getMeetingKey() {
@@ -295,6 +336,13 @@ public class CreateMeetingTransRequest extends Request {
     }
 
     /**
+     * @return tags
+     */
+    public java.util.Map < String, ? > getTags() {
+        return this.tags;
+    }
+
+    /**
      * @return translateActiveResultLevel
      */
     public Integer getTranslateActiveResultLevel() {
@@ -323,7 +371,9 @@ public class CreateMeetingTransRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<CreateMeetingTransRequest, Builder> {
+        private java.util.Map < String, ? > abilityParams; 
         private String appKey; 
+        private java.util.Map < String, ? > asrParams; 
         private Integer audioBitRate; 
         private String audioFormat; 
         private String audioLanguage; 
@@ -334,6 +384,7 @@ public class CreateMeetingTransRequest extends Request {
         private Integer audioSampleRate; 
         private Boolean audioSegmentsEnabled; 
         private Boolean docResultEnabled; 
+        private java.util.Map < String, ? > labParams; 
         private String meetingKey; 
         private Boolean meetingResultEnabled; 
         private String meetingResultOssBucket; 
@@ -343,6 +394,7 @@ public class CreateMeetingTransRequest extends Request {
         private Integer realtimeResultLevel; 
         private Boolean realtimeResultMeetingInfoEnabled; 
         private Boolean realtimeResultWordsEnabled; 
+        private java.util.Map < String, ? > tags; 
         private Integer translateActiveResultLevel; 
         private String translateLanguages; 
         private Boolean translateResultEnabled; 
@@ -354,7 +406,9 @@ public class CreateMeetingTransRequest extends Request {
 
         private Builder(CreateMeetingTransRequest request) {
             super(request);
+            this.abilityParams = request.abilityParams;
             this.appKey = request.appKey;
+            this.asrParams = request.asrParams;
             this.audioBitRate = request.audioBitRate;
             this.audioFormat = request.audioFormat;
             this.audioLanguage = request.audioLanguage;
@@ -365,6 +419,7 @@ public class CreateMeetingTransRequest extends Request {
             this.audioSampleRate = request.audioSampleRate;
             this.audioSegmentsEnabled = request.audioSegmentsEnabled;
             this.docResultEnabled = request.docResultEnabled;
+            this.labParams = request.labParams;
             this.meetingKey = request.meetingKey;
             this.meetingResultEnabled = request.meetingResultEnabled;
             this.meetingResultOssBucket = request.meetingResultOssBucket;
@@ -374,6 +429,7 @@ public class CreateMeetingTransRequest extends Request {
             this.realtimeResultLevel = request.realtimeResultLevel;
             this.realtimeResultMeetingInfoEnabled = request.realtimeResultMeetingInfoEnabled;
             this.realtimeResultWordsEnabled = request.realtimeResultWordsEnabled;
+            this.tags = request.tags;
             this.translateActiveResultLevel = request.translateActiveResultLevel;
             this.translateLanguages = request.translateLanguages;
             this.translateResultEnabled = request.translateResultEnabled;
@@ -381,11 +437,29 @@ public class CreateMeetingTransRequest extends Request {
         } 
 
         /**
+         * AbilityParams.
+         */
+        public Builder abilityParams(java.util.Map < String, ? > abilityParams) {
+            this.putBodyParameter("AbilityParams", abilityParams);
+            this.abilityParams = abilityParams;
+            return this;
+        }
+
+        /**
          * 管控台创建的项目AppKey。
          */
         public Builder appKey(String appKey) {
             this.putBodyParameter("AppKey", appKey);
             this.appKey = appKey;
+            return this;
+        }
+
+        /**
+         * AsrParams.
+         */
+        public Builder asrParams(java.util.Map < String, ? > asrParams) {
+            this.putBodyParameter("AsrParams", asrParams);
+            this.asrParams = asrParams;
             return this;
         }
 
@@ -486,6 +560,15 @@ public class CreateMeetingTransRequest extends Request {
         }
 
         /**
+         * LabParams.
+         */
+        public Builder labParams(java.util.Map < String, ? > labParams) {
+            this.putBodyParameter("LabParams", labParams);
+            this.labParams = labParams;
+            return this;
+        }
+
+        /**
          * 用户设置的会议标识，在会中查询或会后结束回调时会原样返回。
          */
         public Builder meetingKey(String meetingKey) {
@@ -571,6 +654,15 @@ public class CreateMeetingTransRequest extends Request {
         public Builder realtimeResultWordsEnabled(Boolean realtimeResultWordsEnabled) {
             this.putBodyParameter("RealtimeResultWordsEnabled", realtimeResultWordsEnabled);
             this.realtimeResultWordsEnabled = realtimeResultWordsEnabled;
+            return this;
+        }
+
+        /**
+         * Tags.
+         */
+        public Builder tags(java.util.Map < String, ? > tags) {
+            this.putBodyParameter("Tags", tags);
+            this.tags = tags;
             return this;
         }
 

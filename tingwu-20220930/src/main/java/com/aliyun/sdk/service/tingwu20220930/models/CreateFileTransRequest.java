@@ -13,9 +13,17 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class CreateFileTransRequest extends Request {
     @Body
+    @NameInMap("AbilityParams")
+    private java.util.Map < String, ? > abilityParams;
+
+    @Body
     @NameInMap("AppKey")
     @Validation(required = true)
     private String appKey;
+
+    @Body
+    @NameInMap("AsrParams")
+    private java.util.Map < String, ? > asrParams;
 
     @Body
     @NameInMap("AudioLanguage")
@@ -24,7 +32,6 @@ public class CreateFileTransRequest extends Request {
 
     @Body
     @NameInMap("AudioOssBucket")
-    @Validation(required = true)
     private String audioOssBucket;
 
     @Body
@@ -53,6 +60,14 @@ public class CreateFileTransRequest extends Request {
     private Boolean audioSegmentsEnabled;
 
     @Body
+    @NameInMap("LabParams")
+    private java.util.Map < String, ? > labParams;
+
+    @Body
+    @NameInMap("Tags")
+    private java.util.Map < String, ? > tags;
+
+    @Body
     @NameInMap("TransKey")
     private String transKey;
 
@@ -68,7 +83,9 @@ public class CreateFileTransRequest extends Request {
 
     private CreateFileTransRequest(Builder builder) {
         super(builder);
+        this.abilityParams = builder.abilityParams;
         this.appKey = builder.appKey;
+        this.asrParams = builder.asrParams;
         this.audioLanguage = builder.audioLanguage;
         this.audioOssBucket = builder.audioOssBucket;
         this.audioOssPath = builder.audioOssPath;
@@ -77,6 +94,8 @@ public class CreateFileTransRequest extends Request {
         this.audioOutputOssPath = builder.audioOutputOssPath;
         this.audioRoleNum = builder.audioRoleNum;
         this.audioSegmentsEnabled = builder.audioSegmentsEnabled;
+        this.labParams = builder.labParams;
+        this.tags = builder.tags;
         this.transKey = builder.transKey;
         this.transResultOssBucket = builder.transResultOssBucket;
         this.transResultOssPath = builder.transResultOssPath;
@@ -96,10 +115,24 @@ public class CreateFileTransRequest extends Request {
     }
 
     /**
+     * @return abilityParams
+     */
+    public java.util.Map < String, ? > getAbilityParams() {
+        return this.abilityParams;
+    }
+
+    /**
      * @return appKey
      */
     public String getAppKey() {
         return this.appKey;
+    }
+
+    /**
+     * @return asrParams
+     */
+    public java.util.Map < String, ? > getAsrParams() {
+        return this.asrParams;
     }
 
     /**
@@ -159,6 +192,20 @@ public class CreateFileTransRequest extends Request {
     }
 
     /**
+     * @return labParams
+     */
+    public java.util.Map < String, ? > getLabParams() {
+        return this.labParams;
+    }
+
+    /**
+     * @return tags
+     */
+    public java.util.Map < String, ? > getTags() {
+        return this.tags;
+    }
+
+    /**
      * @return transKey
      */
     public String getTransKey() {
@@ -180,7 +227,9 @@ public class CreateFileTransRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<CreateFileTransRequest, Builder> {
+        private java.util.Map < String, ? > abilityParams; 
         private String appKey; 
+        private java.util.Map < String, ? > asrParams; 
         private String audioLanguage; 
         private String audioOssBucket; 
         private String audioOssPath; 
@@ -189,6 +238,8 @@ public class CreateFileTransRequest extends Request {
         private String audioOutputOssPath; 
         private String audioRoleNum; 
         private Boolean audioSegmentsEnabled; 
+        private java.util.Map < String, ? > labParams; 
+        private java.util.Map < String, ? > tags; 
         private String transKey; 
         private String transResultOssBucket; 
         private String transResultOssPath; 
@@ -199,7 +250,9 @@ public class CreateFileTransRequest extends Request {
 
         private Builder(CreateFileTransRequest request) {
             super(request);
+            this.abilityParams = request.abilityParams;
             this.appKey = request.appKey;
+            this.asrParams = request.asrParams;
             this.audioLanguage = request.audioLanguage;
             this.audioOssBucket = request.audioOssBucket;
             this.audioOssPath = request.audioOssPath;
@@ -208,10 +261,21 @@ public class CreateFileTransRequest extends Request {
             this.audioOutputOssPath = request.audioOutputOssPath;
             this.audioRoleNum = request.audioRoleNum;
             this.audioSegmentsEnabled = request.audioSegmentsEnabled;
+            this.labParams = request.labParams;
+            this.tags = request.tags;
             this.transKey = request.transKey;
             this.transResultOssBucket = request.transResultOssBucket;
             this.transResultOssPath = request.transResultOssPath;
         } 
+
+        /**
+         * AbilityParams.
+         */
+        public Builder abilityParams(java.util.Map < String, ? > abilityParams) {
+            this.putBodyParameter("AbilityParams", abilityParams);
+            this.abilityParams = abilityParams;
+            return this;
+        }
 
         /**
          * 管控台创建的项目AppKey。
@@ -219,6 +283,15 @@ public class CreateFileTransRequest extends Request {
         public Builder appKey(String appKey) {
             this.putBodyParameter("AppKey", appKey);
             this.appKey = appKey;
+            return this;
+        }
+
+        /**
+         * AsrParams.
+         */
+        public Builder asrParams(java.util.Map < String, ? > asrParams) {
+            this.putBodyParameter("AsrParams", asrParams);
+            this.asrParams = asrParams;
             return this;
         }
 
@@ -246,7 +319,7 @@ public class CreateFileTransRequest extends Request {
         }
 
         /**
-         * 需要转写音频所在的OSS文件路径。
+         * 需要转写音频所在的OSS文件路径或者自定义可下载文件地址（http|https）。如果AudioOssBucket非空，则需要赋值OSS文件路径（/...../*.mp3）；如果AudioOssBucket为空，则需要赋值自定义可下载文件地址（http://……/*.mp3）。
          */
         public Builder audioOssPath(String audioOssPath) {
             this.putBodyParameter("AudioOssPath", audioOssPath);
@@ -300,6 +373,24 @@ public class CreateFileTransRequest extends Request {
         public Builder audioSegmentsEnabled(Boolean audioSegmentsEnabled) {
             this.putBodyParameter("AudioSegmentsEnabled", audioSegmentsEnabled);
             this.audioSegmentsEnabled = audioSegmentsEnabled;
+            return this;
+        }
+
+        /**
+         * LabParams.
+         */
+        public Builder labParams(java.util.Map < String, ? > labParams) {
+            this.putBodyParameter("LabParams", labParams);
+            this.labParams = labParams;
+            return this;
+        }
+
+        /**
+         * Tags.
+         */
+        public Builder tags(java.util.Map < String, ? > tags) {
+            this.putBodyParameter("Tags", tags);
+            this.tags = tags;
             return this;
         }
 
