@@ -182,7 +182,7 @@ public class DescribeBenchmarkTaskResponseBody extends TeaModel {
         private String token; 
 
         /**
-         * 实际可用的压测实例个数。
+         * AvailableAgent.
          */
         public Builder availableAgent(Long availableAgent) {
             this.availableAgent = availableAgent;
@@ -190,7 +190,7 @@ public class DescribeBenchmarkTaskResponseBody extends TeaModel {
         }
 
         /**
-         * 调用者的UID。
+         * 压测任务的状态。
          */
         public Builder callerUid(String callerUid) {
             this.callerUid = callerUid;
@@ -206,7 +206,7 @@ public class DescribeBenchmarkTaskResponseBody extends TeaModel {
         }
 
         /**
-         * 服务对外公开的访问路径。
+         * Endpoint.
          */
         public Builder endpoint(String endpoint) {
             this.endpoint = endpoint;
@@ -214,7 +214,7 @@ public class DescribeBenchmarkTaskResponseBody extends TeaModel {
         }
 
         /**
-         * 当前压测任务的运行进度信息。
+         * Message.
          */
         public Builder message(String message) {
             this.message = message;
@@ -222,7 +222,7 @@ public class DescribeBenchmarkTaskResponseBody extends TeaModel {
         }
 
         /**
-         * 资源拥有者的UID。
+         * ParentUid.
          */
         public Builder parentUid(String parentUid) {
             this.parentUid = parentUid;
@@ -230,7 +230,7 @@ public class DescribeBenchmarkTaskResponseBody extends TeaModel {
         }
 
         /**
-         * 当前压测任务状态产生的原因。
+         * Reason.
          */
         public Builder reason(String reason) {
             this.reason = reason;
@@ -246,7 +246,7 @@ public class DescribeBenchmarkTaskResponseBody extends TeaModel {
         }
 
         /**
-         * 压测的eas服务名。
+         * 访问eas服务的鉴权token。
          */
         public Builder serviceName(String serviceName) {
             this.serviceName = serviceName;
@@ -254,7 +254,7 @@ public class DescribeBenchmarkTaskResponseBody extends TeaModel {
         }
 
         /**
-         * 压测任务的状态。
+         * Status.
          */
         public Builder status(String status) {
             this.status = status;
@@ -270,7 +270,7 @@ public class DescribeBenchmarkTaskResponseBody extends TeaModel {
         }
 
         /**
-         * 压测任务名字。
+         * 当前压测任务状态产生的原因。
          */
         public Builder taskName(String taskName) {
             this.taskName = taskName;
@@ -278,7 +278,7 @@ public class DescribeBenchmarkTaskResponseBody extends TeaModel {
         }
 
         /**
-         * 访问eas服务的鉴权token。
+         * 资源拥有者的UID。
          */
         public Builder token(String token) {
             this.token = token;

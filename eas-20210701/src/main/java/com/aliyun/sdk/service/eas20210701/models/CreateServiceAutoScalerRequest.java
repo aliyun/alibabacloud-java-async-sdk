@@ -23,6 +23,10 @@ public class CreateServiceAutoScalerRequest extends Request {
     private String serviceName;
 
     @Body
+    @NameInMap("behavior")
+    private Behavior behavior;
+
+    @Body
     @NameInMap("max")
     @Validation(required = true)
     private Integer max;
@@ -41,6 +45,7 @@ public class CreateServiceAutoScalerRequest extends Request {
         super(builder);
         this.clusterId = builder.clusterId;
         this.serviceName = builder.serviceName;
+        this.behavior = builder.behavior;
         this.max = builder.max;
         this.min = builder.min;
         this.scaleStrategies = builder.scaleStrategies;
@@ -74,6 +79,13 @@ public class CreateServiceAutoScalerRequest extends Request {
     }
 
     /**
+     * @return behavior
+     */
+    public Behavior getBehavior() {
+        return this.behavior;
+    }
+
+    /**
      * @return max
      */
     public Integer getMax() {
@@ -97,6 +109,7 @@ public class CreateServiceAutoScalerRequest extends Request {
     public static final class Builder extends Request.Builder<CreateServiceAutoScalerRequest, Builder> {
         private String clusterId; 
         private String serviceName; 
+        private Behavior behavior; 
         private Integer max; 
         private Integer min; 
         private java.util.List < ScaleStrategies> scaleStrategies; 
@@ -109,6 +122,7 @@ public class CreateServiceAutoScalerRequest extends Request {
             super(request);
             this.clusterId = request.clusterId;
             this.serviceName = request.serviceName;
+            this.behavior = request.behavior;
             this.max = request.max;
             this.min = request.min;
             this.scaleStrategies = request.scaleStrategies;
@@ -129,6 +143,15 @@ public class CreateServiceAutoScalerRequest extends Request {
         public Builder serviceName(String serviceName) {
             this.putPathParameter("ServiceName", serviceName);
             this.serviceName = serviceName;
+            return this;
+        }
+
+        /**
+         * behavior.
+         */
+        public Builder behavior(Behavior behavior) {
+            this.putBodyParameter("behavior", behavior);
+            this.behavior = behavior;
             return this;
         }
 
@@ -166,6 +189,230 @@ public class CreateServiceAutoScalerRequest extends Request {
 
     } 
 
+    public static class OnZero extends TeaModel {
+        @NameInMap("scaleDownGracePeriodSeconds")
+        private Integer scaleDownGracePeriodSeconds;
+
+        @NameInMap("scaleUpActivationReplicas")
+        private Integer scaleUpActivationReplicas;
+
+        private OnZero(Builder builder) {
+            this.scaleDownGracePeriodSeconds = builder.scaleDownGracePeriodSeconds;
+            this.scaleUpActivationReplicas = builder.scaleUpActivationReplicas;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static OnZero create() {
+            return builder().build();
+        }
+
+        /**
+         * @return scaleDownGracePeriodSeconds
+         */
+        public Integer getScaleDownGracePeriodSeconds() {
+            return this.scaleDownGracePeriodSeconds;
+        }
+
+        /**
+         * @return scaleUpActivationReplicas
+         */
+        public Integer getScaleUpActivationReplicas() {
+            return this.scaleUpActivationReplicas;
+        }
+
+        public static final class Builder {
+            private Integer scaleDownGracePeriodSeconds; 
+            private Integer scaleUpActivationReplicas; 
+
+            /**
+             * scaleDownGracePeriodSeconds.
+             */
+            public Builder scaleDownGracePeriodSeconds(Integer scaleDownGracePeriodSeconds) {
+                this.scaleDownGracePeriodSeconds = scaleDownGracePeriodSeconds;
+                return this;
+            }
+
+            /**
+             * scaleUpActivationReplicas.
+             */
+            public Builder scaleUpActivationReplicas(Integer scaleUpActivationReplicas) {
+                this.scaleUpActivationReplicas = scaleUpActivationReplicas;
+                return this;
+            }
+
+            public OnZero build() {
+                return new OnZero(this);
+            } 
+
+        } 
+
+    }
+    public static class ScaleDown extends TeaModel {
+        @NameInMap("stabilizationWindowSeconds")
+        private Integer stabilizationWindowSeconds;
+
+        private ScaleDown(Builder builder) {
+            this.stabilizationWindowSeconds = builder.stabilizationWindowSeconds;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static ScaleDown create() {
+            return builder().build();
+        }
+
+        /**
+         * @return stabilizationWindowSeconds
+         */
+        public Integer getStabilizationWindowSeconds() {
+            return this.stabilizationWindowSeconds;
+        }
+
+        public static final class Builder {
+            private Integer stabilizationWindowSeconds; 
+
+            /**
+             * stabilizationWindowSeconds.
+             */
+            public Builder stabilizationWindowSeconds(Integer stabilizationWindowSeconds) {
+                this.stabilizationWindowSeconds = stabilizationWindowSeconds;
+                return this;
+            }
+
+            public ScaleDown build() {
+                return new ScaleDown(this);
+            } 
+
+        } 
+
+    }
+    public static class ScaleUp extends TeaModel {
+        @NameInMap("stabilizationWindowSeconds")
+        private Integer stabilizationWindowSeconds;
+
+        private ScaleUp(Builder builder) {
+            this.stabilizationWindowSeconds = builder.stabilizationWindowSeconds;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static ScaleUp create() {
+            return builder().build();
+        }
+
+        /**
+         * @return stabilizationWindowSeconds
+         */
+        public Integer getStabilizationWindowSeconds() {
+            return this.stabilizationWindowSeconds;
+        }
+
+        public static final class Builder {
+            private Integer stabilizationWindowSeconds; 
+
+            /**
+             * stabilizationWindowSeconds.
+             */
+            public Builder stabilizationWindowSeconds(Integer stabilizationWindowSeconds) {
+                this.stabilizationWindowSeconds = stabilizationWindowSeconds;
+                return this;
+            }
+
+            public ScaleUp build() {
+                return new ScaleUp(this);
+            } 
+
+        } 
+
+    }
+    public static class Behavior extends TeaModel {
+        @NameInMap("onZero")
+        private OnZero onZero;
+
+        @NameInMap("scaleDown")
+        private ScaleDown scaleDown;
+
+        @NameInMap("scaleUp")
+        private ScaleUp scaleUp;
+
+        private Behavior(Builder builder) {
+            this.onZero = builder.onZero;
+            this.scaleDown = builder.scaleDown;
+            this.scaleUp = builder.scaleUp;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static Behavior create() {
+            return builder().build();
+        }
+
+        /**
+         * @return onZero
+         */
+        public OnZero getOnZero() {
+            return this.onZero;
+        }
+
+        /**
+         * @return scaleDown
+         */
+        public ScaleDown getScaleDown() {
+            return this.scaleDown;
+        }
+
+        /**
+         * @return scaleUp
+         */
+        public ScaleUp getScaleUp() {
+            return this.scaleUp;
+        }
+
+        public static final class Builder {
+            private OnZero onZero; 
+            private ScaleDown scaleDown; 
+            private ScaleUp scaleUp; 
+
+            /**
+             * onZero.
+             */
+            public Builder onZero(OnZero onZero) {
+                this.onZero = onZero;
+                return this;
+            }
+
+            /**
+             * scaleDown.
+             */
+            public Builder scaleDown(ScaleDown scaleDown) {
+                this.scaleDown = scaleDown;
+                return this;
+            }
+
+            /**
+             * scaleUp.
+             */
+            public Builder scaleUp(ScaleUp scaleUp) {
+                this.scaleUp = scaleUp;
+                return this;
+            }
+
+            public Behavior build() {
+                return new Behavior(this);
+            } 
+
+        } 
+
+    }
     public static class ScaleStrategies extends TeaModel {
         @NameInMap("metricName")
         @Validation(required = true)

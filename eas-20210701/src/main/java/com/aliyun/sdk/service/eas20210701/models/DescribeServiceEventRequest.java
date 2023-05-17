@@ -27,6 +27,14 @@ public class DescribeServiceEventRequest extends Request {
     private String endTime;
 
     @Query
+    @NameInMap("EventType")
+    private String eventType;
+
+    @Query
+    @NameInMap("InstanceName")
+    private String instanceName;
+
+    @Query
     @NameInMap("PageNum")
     private String pageNum;
 
@@ -43,6 +51,8 @@ public class DescribeServiceEventRequest extends Request {
         this.clusterId = builder.clusterId;
         this.serviceName = builder.serviceName;
         this.endTime = builder.endTime;
+        this.eventType = builder.eventType;
+        this.instanceName = builder.instanceName;
         this.pageNum = builder.pageNum;
         this.pageSize = builder.pageSize;
         this.startTime = builder.startTime;
@@ -83,6 +93,20 @@ public class DescribeServiceEventRequest extends Request {
     }
 
     /**
+     * @return eventType
+     */
+    public String getEventType() {
+        return this.eventType;
+    }
+
+    /**
+     * @return instanceName
+     */
+    public String getInstanceName() {
+        return this.instanceName;
+    }
+
+    /**
      * @return pageNum
      */
     public String getPageNum() {
@@ -107,6 +131,8 @@ public class DescribeServiceEventRequest extends Request {
         private String clusterId; 
         private String serviceName; 
         private String endTime; 
+        private String eventType; 
+        private String instanceName; 
         private String pageNum; 
         private String pageSize; 
         private String startTime; 
@@ -120,6 +146,8 @@ public class DescribeServiceEventRequest extends Request {
             this.clusterId = request.clusterId;
             this.serviceName = request.serviceName;
             this.endTime = request.endTime;
+            this.eventType = request.eventType;
+            this.instanceName = request.instanceName;
             this.pageNum = request.pageNum;
             this.pageSize = request.pageSize;
             this.startTime = request.startTime;
@@ -149,6 +177,24 @@ public class DescribeServiceEventRequest extends Request {
         public Builder endTime(String endTime) {
             this.putQueryParameter("EndTime", endTime);
             this.endTime = endTime;
+            return this;
+        }
+
+        /**
+         * EventType.
+         */
+        public Builder eventType(String eventType) {
+            this.putQueryParameter("EventType", eventType);
+            this.eventType = eventType;
+            return this;
+        }
+
+        /**
+         * InstanceName.
+         */
+        public Builder instanceName(String instanceName) {
+            this.putQueryParameter("InstanceName", instanceName);
+            this.instanceName = instanceName;
             return this;
         }
 

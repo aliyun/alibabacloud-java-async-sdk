@@ -86,7 +86,7 @@ public class ListServicesResponseBody extends TeaModel {
         private Integer totalCount; 
 
         /**
-         * 页码。
+         * PageNumber.
          */
         public Builder pageNumber(Integer pageNumber) {
             this.pageNumber = pageNumber;
@@ -94,7 +94,7 @@ public class ListServicesResponseBody extends TeaModel {
         }
 
         /**
-         * 每页显示的服务数。
+         * PageSize.
          */
         public Builder pageSize(Integer pageSize) {
             this.pageSize = pageSize;

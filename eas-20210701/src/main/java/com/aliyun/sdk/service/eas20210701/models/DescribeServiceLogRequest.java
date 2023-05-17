@@ -23,8 +23,16 @@ public class DescribeServiceLogRequest extends Request {
     private String serviceName;
 
     @Query
+    @NameInMap("ContainerName")
+    private String containerName;
+
+    @Query
     @NameInMap("EndTime")
     private String endTime;
+
+    @Query
+    @NameInMap("InstanceName")
+    private String instanceName;
 
     @Query
     @NameInMap("Ip")
@@ -43,6 +51,10 @@ public class DescribeServiceLogRequest extends Request {
     private Long pageSize;
 
     @Query
+    @NameInMap("Previous")
+    private Boolean previous;
+
+    @Query
     @NameInMap("StartTime")
     private String startTime;
 
@@ -50,11 +62,14 @@ public class DescribeServiceLogRequest extends Request {
         super(builder);
         this.clusterId = builder.clusterId;
         this.serviceName = builder.serviceName;
+        this.containerName = builder.containerName;
         this.endTime = builder.endTime;
+        this.instanceName = builder.instanceName;
         this.ip = builder.ip;
         this.keyword = builder.keyword;
         this.pageNum = builder.pageNum;
         this.pageSize = builder.pageSize;
+        this.previous = builder.previous;
         this.startTime = builder.startTime;
     }
 
@@ -86,10 +101,24 @@ public class DescribeServiceLogRequest extends Request {
     }
 
     /**
+     * @return containerName
+     */
+    public String getContainerName() {
+        return this.containerName;
+    }
+
+    /**
      * @return endTime
      */
     public String getEndTime() {
         return this.endTime;
+    }
+
+    /**
+     * @return instanceName
+     */
+    public String getInstanceName() {
+        return this.instanceName;
     }
 
     /**
@@ -121,6 +150,13 @@ public class DescribeServiceLogRequest extends Request {
     }
 
     /**
+     * @return previous
+     */
+    public Boolean getPrevious() {
+        return this.previous;
+    }
+
+    /**
      * @return startTime
      */
     public String getStartTime() {
@@ -130,11 +166,14 @@ public class DescribeServiceLogRequest extends Request {
     public static final class Builder extends Request.Builder<DescribeServiceLogRequest, Builder> {
         private String clusterId; 
         private String serviceName; 
+        private String containerName; 
         private String endTime; 
+        private String instanceName; 
         private String ip; 
         private String keyword; 
         private Long pageNum; 
         private Long pageSize; 
+        private Boolean previous; 
         private String startTime; 
 
         private Builder() {
@@ -145,11 +184,14 @@ public class DescribeServiceLogRequest extends Request {
             super(request);
             this.clusterId = request.clusterId;
             this.serviceName = request.serviceName;
+            this.containerName = request.containerName;
             this.endTime = request.endTime;
+            this.instanceName = request.instanceName;
             this.ip = request.ip;
             this.keyword = request.keyword;
             this.pageNum = request.pageNum;
             this.pageSize = request.pageSize;
+            this.previous = request.previous;
             this.startTime = request.startTime;
         } 
 
@@ -172,11 +214,29 @@ public class DescribeServiceLogRequest extends Request {
         }
 
         /**
+         * 服务实例的容器名称。
+         */
+        public Builder containerName(String containerName) {
+            this.putQueryParameter("ContainerName", containerName);
+            this.containerName = containerName;
+            return this;
+        }
+
+        /**
          * 查询的结束时间
          */
         public Builder endTime(String endTime) {
             this.putQueryParameter("EndTime", endTime);
             this.endTime = endTime;
+            return this;
+        }
+
+        /**
+         * InstanceName.
+         */
+        public Builder instanceName(String instanceName) {
+            this.putQueryParameter("InstanceName", instanceName);
+            this.instanceName = instanceName;
             return this;
         }
 
@@ -213,6 +273,15 @@ public class DescribeServiceLogRequest extends Request {
         public Builder pageSize(Long pageSize) {
             this.putQueryParameter("PageSize", pageSize);
             this.pageSize = pageSize;
+            return this;
+        }
+
+        /**
+         * Previous.
+         */
+        public Builder previous(Boolean previous) {
+            this.putQueryParameter("Previous", previous);
+            this.previous = previous;
             return this;
         }
 

@@ -12,6 +12,9 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>Instance</p>
  */
 public class Instance extends TeaModel {
+    @NameInMap("CurrentAmount")
+    private Float currentAmount;
+
     @NameInMap("HostIP")
     private String hostIP;
 
@@ -27,11 +30,17 @@ public class Instance extends TeaModel {
     @NameInMap("InstancePort")
     private Integer instancePort;
 
+    @NameInMap("IsSpot")
+    private Boolean isSpot;
+
     @NameInMap("LastState")
     private java.util.List < java.util.Map<String, ?>> lastState;
 
     @NameInMap("Namespace")
     private String namespace;
+
+    @NameInMap("OriginalAmount")
+    private Float originalAmount;
 
     @NameInMap("ReadyProcesses")
     private Integer readyProcesses;
@@ -64,13 +73,16 @@ public class Instance extends TeaModel {
     private Integer totalProcesses;
 
     private Instance(Builder builder) {
+        this.currentAmount = builder.currentAmount;
         this.hostIP = builder.hostIP;
         this.hostName = builder.hostName;
         this.innerIP = builder.innerIP;
         this.instanceName = builder.instanceName;
         this.instancePort = builder.instancePort;
+        this.isSpot = builder.isSpot;
         this.lastState = builder.lastState;
         this.namespace = builder.namespace;
+        this.originalAmount = builder.originalAmount;
         this.readyProcesses = builder.readyProcesses;
         this.reason = builder.reason;
         this.resourceType = builder.resourceType;
@@ -89,6 +101,13 @@ public class Instance extends TeaModel {
 
     public static Instance create() {
         return builder().build();
+    }
+
+    /**
+     * @return currentAmount
+     */
+    public Float getCurrentAmount() {
+        return this.currentAmount;
     }
 
     /**
@@ -127,6 +146,13 @@ public class Instance extends TeaModel {
     }
 
     /**
+     * @return isSpot
+     */
+    public Boolean getIsSpot() {
+        return this.isSpot;
+    }
+
+    /**
      * @return lastState
      */
     public java.util.List < java.util.Map<String, ?>> getLastState() {
@@ -138,6 +164,13 @@ public class Instance extends TeaModel {
      */
     public String getNamespace() {
         return this.namespace;
+    }
+
+    /**
+     * @return originalAmount
+     */
+    public Float getOriginalAmount() {
+        return this.originalAmount;
     }
 
     /**
@@ -211,13 +244,16 @@ public class Instance extends TeaModel {
     }
 
     public static final class Builder {
+        private Float currentAmount; 
         private String hostIP; 
         private String hostName; 
         private String innerIP; 
         private String instanceName; 
         private Integer instancePort; 
+        private Boolean isSpot; 
         private java.util.List < java.util.Map<String, ?>> lastState; 
         private String namespace; 
+        private Float originalAmount; 
         private Integer readyProcesses; 
         private String reason; 
         private String resourceType; 
@@ -228,6 +264,14 @@ public class Instance extends TeaModel {
         private String tenantHostIP; 
         private String tenantInstanceIP; 
         private Integer totalProcesses; 
+
+        /**
+         * 竞价实例当前小时价
+         */
+        public Builder currentAmount(Float currentAmount) {
+            this.currentAmount = currentAmount;
+            return this;
+        }
 
         /**
          * 实例所在的宿主机IP
@@ -270,6 +314,14 @@ public class Instance extends TeaModel {
         }
 
         /**
+         * 是否为竞价实例
+         */
+        public Builder isSpot(Boolean isSpot) {
+            this.isSpot = isSpot;
+            return this;
+        }
+
+        /**
          * 实例上一次退出的状态
          */
         public Builder lastState(java.util.List < java.util.Map<String, ?>> lastState) {
@@ -282,6 +334,14 @@ public class Instance extends TeaModel {
          */
         public Builder namespace(String namespace) {
             this.namespace = namespace;
+            return this;
+        }
+
+        /**
+         * 竞价实例折前原价
+         */
+        public Builder originalAmount(Float originalAmount) {
+            this.originalAmount = originalAmount;
             return this;
         }
 

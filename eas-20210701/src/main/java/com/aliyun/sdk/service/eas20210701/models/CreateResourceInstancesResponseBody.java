@@ -12,6 +12,9 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>CreateResourceInstancesResponseBody</p>
  */
 public class CreateResourceInstancesResponseBody extends TeaModel {
+    @NameInMap("InstanceIds")
+    private java.util.List < String > instanceIds;
+
     @NameInMap("Message")
     private String message;
 
@@ -19,6 +22,7 @@ public class CreateResourceInstancesResponseBody extends TeaModel {
     private String requestId;
 
     private CreateResourceInstancesResponseBody(Builder builder) {
+        this.instanceIds = builder.instanceIds;
         this.message = builder.message;
         this.requestId = builder.requestId;
     }
@@ -29,6 +33,13 @@ public class CreateResourceInstancesResponseBody extends TeaModel {
 
     public static CreateResourceInstancesResponseBody create() {
         return builder().build();
+    }
+
+    /**
+     * @return instanceIds
+     */
+    public java.util.List < String > getInstanceIds() {
+        return this.instanceIds;
     }
 
     /**
@@ -46,8 +57,17 @@ public class CreateResourceInstancesResponseBody extends TeaModel {
     }
 
     public static final class Builder {
+        private java.util.List < String > instanceIds; 
         private String message; 
         private String requestId; 
+
+        /**
+         * InstanceIds.
+         */
+        public Builder instanceIds(java.util.List < String > instanceIds) {
+            this.instanceIds = instanceIds;
+            return this;
+        }
 
         /**
          * Message.

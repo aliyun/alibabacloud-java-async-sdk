@@ -70,7 +70,7 @@ public class DescribeBenchmarkTaskRequest extends Request {
         } 
 
         /**
-         * 压测任务所在的区域。
+         * 当前压测任务的运行进度信息。
          */
         public Builder clusterId(String clusterId) {
             this.putPathParameter("ClusterId", clusterId);

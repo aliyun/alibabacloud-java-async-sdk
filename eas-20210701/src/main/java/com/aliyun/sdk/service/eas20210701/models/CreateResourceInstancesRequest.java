@@ -42,8 +42,17 @@ public class CreateResourceInstancesRequest extends Request {
     private String ecsInstanceType;
 
     @Body
+    @NameInMap("SystemDiskSize")
+    @Validation(maximum = 2000, minimum = 200)
+    private Integer systemDiskSize;
+
+    @Body
     @NameInMap("UserData")
     private String userData;
+
+    @Body
+    @NameInMap("Zone")
+    private String zone;
 
     private CreateResourceInstancesRequest(Builder builder) {
         super(builder);
@@ -53,7 +62,9 @@ public class CreateResourceInstancesRequest extends Request {
         this.chargeType = builder.chargeType;
         this.ecsInstanceCount = builder.ecsInstanceCount;
         this.ecsInstanceType = builder.ecsInstanceType;
+        this.systemDiskSize = builder.systemDiskSize;
         this.userData = builder.userData;
+        this.zone = builder.zone;
     }
 
     public static Builder builder() {
@@ -112,10 +123,24 @@ public class CreateResourceInstancesRequest extends Request {
     }
 
     /**
+     * @return systemDiskSize
+     */
+    public Integer getSystemDiskSize() {
+        return this.systemDiskSize;
+    }
+
+    /**
      * @return userData
      */
     public String getUserData() {
         return this.userData;
+    }
+
+    /**
+     * @return zone
+     */
+    public String getZone() {
+        return this.zone;
     }
 
     public static final class Builder extends Request.Builder<CreateResourceInstancesRequest, Builder> {
@@ -125,7 +150,9 @@ public class CreateResourceInstancesRequest extends Request {
         private String chargeType; 
         private Integer ecsInstanceCount; 
         private String ecsInstanceType; 
+        private Integer systemDiskSize; 
         private String userData; 
+        private String zone; 
 
         private Builder() {
             super();
@@ -139,7 +166,9 @@ public class CreateResourceInstancesRequest extends Request {
             this.chargeType = request.chargeType;
             this.ecsInstanceCount = request.ecsInstanceCount;
             this.ecsInstanceType = request.ecsInstanceType;
+            this.systemDiskSize = request.systemDiskSize;
             this.userData = request.userData;
+            this.zone = request.zone;
         } 
 
         /**
@@ -197,11 +226,29 @@ public class CreateResourceInstancesRequest extends Request {
         }
 
         /**
+         * 系统盘大小(200-2000)GB，不传默认为200
+         */
+        public Builder systemDiskSize(Integer systemDiskSize) {
+            this.putBodyParameter("SystemDiskSize", systemDiskSize);
+            this.systemDiskSize = systemDiskSize;
+            return this;
+        }
+
+        /**
          * 用户自这义数据，小于 16KB
          */
         public Builder userData(String userData) {
             this.putBodyParameter("UserData", userData);
             this.userData = userData;
+            return this;
+        }
+
+        /**
+         * Zone.
+         */
+        public Builder zone(String zone) {
+            this.putBodyParameter("Zone", zone);
+            this.zone = zone;
             return this;
         }
 

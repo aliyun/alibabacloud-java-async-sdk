@@ -41,8 +41,24 @@ public class ListServicesRequest extends Request {
     private String parentServiceUid;
 
     @Query
+    @NameInMap("ResourceName")
+    private String resourceName;
+
+    @Query
+    @NameInMap("ServiceName")
+    private String serviceName;
+
+    @Query
+    @NameInMap("ServiceStatus")
+    private String serviceStatus;
+
+    @Query
     @NameInMap("ServiceType")
     private String serviceType;
+
+    @Query
+    @NameInMap("ServiceUid")
+    private String serviceUid;
 
     @Query
     @NameInMap("Sort")
@@ -57,7 +73,11 @@ public class ListServicesRequest extends Request {
         this.pageNumber = builder.pageNumber;
         this.pageSize = builder.pageSize;
         this.parentServiceUid = builder.parentServiceUid;
+        this.resourceName = builder.resourceName;
+        this.serviceName = builder.serviceName;
+        this.serviceStatus = builder.serviceStatus;
         this.serviceType = builder.serviceType;
+        this.serviceUid = builder.serviceUid;
         this.sort = builder.sort;
     }
 
@@ -124,10 +144,38 @@ public class ListServicesRequest extends Request {
     }
 
     /**
+     * @return resourceName
+     */
+    public String getResourceName() {
+        return this.resourceName;
+    }
+
+    /**
+     * @return serviceName
+     */
+    public String getServiceName() {
+        return this.serviceName;
+    }
+
+    /**
+     * @return serviceStatus
+     */
+    public String getServiceStatus() {
+        return this.serviceStatus;
+    }
+
+    /**
      * @return serviceType
      */
     public String getServiceType() {
         return this.serviceType;
+    }
+
+    /**
+     * @return serviceUid
+     */
+    public String getServiceUid() {
+        return this.serviceUid;
     }
 
     /**
@@ -145,7 +193,11 @@ public class ListServicesRequest extends Request {
         private Integer pageNumber; 
         private Integer pageSize; 
         private String parentServiceUid; 
+        private String resourceName; 
+        private String serviceName; 
+        private String serviceStatus; 
         private String serviceType; 
+        private String serviceUid; 
         private String sort; 
 
         private Builder() {
@@ -161,12 +213,71 @@ public class ListServicesRequest extends Request {
             this.pageNumber = request.pageNumber;
             this.pageSize = request.pageSize;
             this.parentServiceUid = request.parentServiceUid;
+            this.resourceName = request.resourceName;
+            this.serviceName = request.serviceName;
+            this.serviceStatus = request.serviceStatus;
             this.serviceType = request.serviceType;
+            this.serviceUid = request.serviceUid;
             this.sort = request.sort;
         } 
 
         /**
-         * 关键字搜索。
+         * {
+         * <p>
+         *   "RequestId": "40325405-579C-4D82-9624-EC2B1779848E",
+         *   "Services": [
+         *     {
+         *       "ServiceId": "200516454695942578",
+         *       "ServiceName": "vipserver",
+         *       "ParentUid": "1628454689805075",
+         *       "CallerUid": "eas",
+         *       "CurrentVersion": 1,
+         *       "Cpu": 1,
+         *       "Gpu": 0,
+         *       "Memory": 900,
+         *       "Image": "registry.cn-zhangjiakou.aliyuncs.com/eas/ndisearch_v1_inner_zhangbei:v0.0.3-20200302145109",
+         *       "Resource": "seccontent_inner_2080ti_5",
+         *       "Namespace": "vipserver",
+         *       "CreateTime": "2019-10-25T10:37:53Z",
+         *       "UpdateTime": "2019-10-30T16:50:59Z",
+         *       "TotalInstance": 1,
+         *       "RunningInstance": 1,
+         *       "PendingInstance": 0,
+         *       "LatestVersion": 1,
+         *       "Status": "Running",
+         *       "Reason": "RUNNING",
+         *       "Message": "Service is now scaling",
+         *       "AccessToken": "",
+         *       "Weight": 0
+         *     },
+         *     {
+         *       "ServiceId": 97097,
+         *       "ServiceName": "a1",
+         *       "CallerUid": "eas",
+         *       "CurrentVersion": 1,
+         *       "Cpu": 1,
+         *       "Gpu": 0,
+         *       "Memory": 900,
+         *       "Image": "registry.cn-hangzhou.aliyuncs.com/eas/pi_imemb_tb:v0.0.1-20191023130701",
+         *       "Resource": "seccontent_inner_b",
+         *       "Namespace": "a1",
+         *       "CreateTime": "2020-05-26T18:03:11Z",
+         *       "UpdateTime": "2020-05-26T18:03:11Z",
+         *       "TotalInstance": 1,
+         *       "RunningInstance": 0,
+         *       "PendingInstance": 1,
+         *       "LatestVersion": 1,
+         *       "Status": "Failed",
+         *       "Reason": "FAILED",
+         *       "Message": "the server could not find the requested resource (post services.meta.k8s.io)",
+         *       "AccessToken": "regression_test_token",
+         *       "Weight": 0
+         *     }
+         *   ],
+         *   "PageNumber": 1,
+         *   "PageSize": 2,
+         *   "TotalCount": 2
+         * }
          */
         public Builder filter(String filter) {
             this.putQueryParameter("Filter", filter);
@@ -175,7 +286,7 @@ public class ListServicesRequest extends Request {
         }
 
         /**
-         * 所属的group。
+         * 服务组名称过滤
          */
         public Builder groupName(String groupName) {
             this.putQueryParameter("GroupName", groupName);
@@ -194,7 +305,7 @@ public class ListServicesRequest extends Request {
         }
 
         /**
-         * 排序顺序，支持升序或将序。
+         * 所属的group。
          */
         public Builder order(String order) {
             this.putQueryParameter("Order", order);
@@ -203,7 +314,7 @@ public class ListServicesRequest extends Request {
         }
 
         /**
-         * 页号。
+         * 376577
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -212,7 +323,7 @@ public class ListServicesRequest extends Request {
         }
 
         /**
-         * 每页大小。
+         * 每页的大小（默认为100）
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -221,7 +332,7 @@ public class ListServicesRequest extends Request {
         }
 
         /**
-         * Band类型服务主服务的UID
+         * ParentServiceUid.
          */
         public Builder parentServiceUid(String parentServiceUid) {
             this.putQueryParameter("ParentServiceUid", parentServiceUid);
@@ -230,7 +341,34 @@ public class ListServicesRequest extends Request {
         }
 
         /**
-         * 服务的类型，例如Async, OfflineTask和Standard等
+         * 服务所属的资源组名称或ID。
+         */
+        public Builder resourceName(String resourceName) {
+            this.putQueryParameter("ResourceName", resourceName);
+            this.resourceName = resourceName;
+            return this;
+        }
+
+        /**
+         * 服务名。
+         */
+        public Builder serviceName(String serviceName) {
+            this.putQueryParameter("ServiceName", serviceName);
+            this.serviceName = serviceName;
+            return this;
+        }
+
+        /**
+         * 服务运行的状态。
+         */
+        public Builder serviceStatus(String serviceStatus) {
+            this.putQueryParameter("ServiceStatus", serviceStatus);
+            this.serviceStatus = serviceStatus;
+            return this;
+        }
+
+        /**
+         * ServiceType.
          */
         public Builder serviceType(String serviceType) {
             this.putQueryParameter("ServiceType", serviceType);
@@ -239,7 +377,16 @@ public class ListServicesRequest extends Request {
         }
 
         /**
-         * 排序字段。
+         * ServiceUid.
+         */
+        public Builder serviceUid(String serviceUid) {
+            this.putQueryParameter("ServiceUid", serviceUid);
+            this.serviceUid = serviceUid;
+            return this;
+        }
+
+        /**
+         * 服务的类型定义。
          */
         public Builder sort(String sort) {
             this.putQueryParameter("Sort", sort);

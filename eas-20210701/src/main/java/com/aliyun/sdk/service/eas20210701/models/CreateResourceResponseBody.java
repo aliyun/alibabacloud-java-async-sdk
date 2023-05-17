@@ -15,6 +15,9 @@ public class CreateResourceResponseBody extends TeaModel {
     @NameInMap("ClusterId")
     private String clusterId;
 
+    @NameInMap("InstanceIds")
+    private java.util.List < String > instanceIds;
+
     @NameInMap("OwnerUid")
     private String ownerUid;
 
@@ -29,6 +32,7 @@ public class CreateResourceResponseBody extends TeaModel {
 
     private CreateResourceResponseBody(Builder builder) {
         this.clusterId = builder.clusterId;
+        this.instanceIds = builder.instanceIds;
         this.ownerUid = builder.ownerUid;
         this.requestId = builder.requestId;
         this.resourceId = builder.resourceId;
@@ -48,6 +52,13 @@ public class CreateResourceResponseBody extends TeaModel {
      */
     public String getClusterId() {
         return this.clusterId;
+    }
+
+    /**
+     * @return instanceIds
+     */
+    public java.util.List < String > getInstanceIds() {
+        return this.instanceIds;
     }
 
     /**
@@ -80,6 +91,7 @@ public class CreateResourceResponseBody extends TeaModel {
 
     public static final class Builder {
         private String clusterId; 
+        private java.util.List < String > instanceIds; 
         private String ownerUid; 
         private String requestId; 
         private String resourceId; 
@@ -90,6 +102,14 @@ public class CreateResourceResponseBody extends TeaModel {
          */
         public Builder clusterId(String clusterId) {
             this.clusterId = clusterId;
+            return this;
+        }
+
+        /**
+         * InstanceIds.
+         */
+        public Builder instanceIds(java.util.List < String > instanceIds) {
+            this.instanceIds = instanceIds;
             return this;
         }
 

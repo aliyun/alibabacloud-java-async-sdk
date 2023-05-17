@@ -51,6 +51,9 @@ public class ResourceInstance extends TeaModel {
     @NameInMap("InstanceStatus")
     private String instanceStatus;
 
+    @NameInMap("InstanceSystemDiskSize")
+    private Integer instanceSystemDiskSize;
+
     @NameInMap("InstanceTenantIp")
     private String instanceTenantIp;
 
@@ -72,6 +75,9 @@ public class ResourceInstance extends TeaModel {
     @NameInMap("Region")
     private String region;
 
+    @NameInMap("ResourceId")
+    private String resourceId;
+
     @NameInMap("Zone")
     private String zone;
 
@@ -89,6 +95,7 @@ public class ResourceInstance extends TeaModel {
         this.instanceMemory = builder.instanceMemory;
         this.instanceName = builder.instanceName;
         this.instanceStatus = builder.instanceStatus;
+        this.instanceSystemDiskSize = builder.instanceSystemDiskSize;
         this.instanceTenantIp = builder.instanceTenantIp;
         this.instanceType = builder.instanceType;
         this.instanceUsedCpu = builder.instanceUsedCpu;
@@ -96,6 +103,7 @@ public class ResourceInstance extends TeaModel {
         this.instanceUsedGpuMemory = builder.instanceUsedGpuMemory;
         this.instanceUsedMemory = builder.instanceUsedMemory;
         this.region = builder.region;
+        this.resourceId = builder.resourceId;
         this.zone = builder.zone;
     }
 
@@ -199,6 +207,13 @@ public class ResourceInstance extends TeaModel {
     }
 
     /**
+     * @return instanceSystemDiskSize
+     */
+    public Integer getInstanceSystemDiskSize() {
+        return this.instanceSystemDiskSize;
+    }
+
+    /**
      * @return instanceTenantIp
      */
     public String getInstanceTenantIp() {
@@ -248,6 +263,13 @@ public class ResourceInstance extends TeaModel {
     }
 
     /**
+     * @return resourceId
+     */
+    public String getResourceId() {
+        return this.resourceId;
+    }
+
+    /**
      * @return zone
      */
     public String getZone() {
@@ -268,6 +290,7 @@ public class ResourceInstance extends TeaModel {
         private String instanceMemory; 
         private String instanceName; 
         private String instanceStatus; 
+        private Integer instanceSystemDiskSize; 
         private String instanceTenantIp; 
         private String instanceType; 
         private Float instanceUsedCpu; 
@@ -275,6 +298,7 @@ public class ResourceInstance extends TeaModel {
         private String instanceUsedGpuMemory; 
         private String instanceUsedMemory; 
         private String region; 
+        private String resourceId; 
         private String zone; 
 
         /**
@@ -382,6 +406,14 @@ public class ResourceInstance extends TeaModel {
         }
 
         /**
+         * 实例的系统盘大小
+         */
+        public Builder instanceSystemDiskSize(Integer instanceSystemDiskSize) {
+            this.instanceSystemDiskSize = instanceSystemDiskSize;
+            return this;
+        }
+
+        /**
          * 实例专属网络IP
          */
         public Builder instanceTenantIp(String instanceTenantIp) {
@@ -434,6 +466,14 @@ public class ResourceInstance extends TeaModel {
          */
         public Builder region(String region) {
             this.region = region;
+            return this;
+        }
+
+        /**
+         * 实例所属资源组ID
+         */
+        public Builder resourceId(String resourceId) {
+            this.resourceId = resourceId;
             return this;
         }
 
