@@ -13,6 +13,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class RecognizePurchaseRecordRequest extends Request {
     @Query
+    @NameInMap("OutputMultiOrders")
+    private Boolean outputMultiOrders;
+
+    @Query
     @NameInMap("Url")
     @Validation(maxLength = 2048)
     private String url;
@@ -23,6 +27,7 @@ public class RecognizePurchaseRecordRequest extends Request {
 
     private RecognizePurchaseRecordRequest(Builder builder) {
         super(builder);
+        this.outputMultiOrders = builder.outputMultiOrders;
         this.url = builder.url;
         this.body = builder.body;
     }
@@ -41,6 +46,13 @@ public class RecognizePurchaseRecordRequest extends Request {
     }
 
     /**
+     * @return outputMultiOrders
+     */
+    public Boolean getOutputMultiOrders() {
+        return this.outputMultiOrders;
+    }
+
+    /**
      * @return url
      */
     public String getUrl() {
@@ -55,6 +67,7 @@ public class RecognizePurchaseRecordRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<RecognizePurchaseRecordRequest, Builder> {
+        private Boolean outputMultiOrders; 
         private String url; 
         private java.io.InputStream body; 
 
@@ -64,9 +77,19 @@ public class RecognizePurchaseRecordRequest extends Request {
 
         private Builder(RecognizePurchaseRecordRequest request) {
             super(request);
+            this.outputMultiOrders = request.outputMultiOrders;
             this.url = request.url;
             this.body = request.body;
         } 
+
+        /**
+         * OutputMultiOrders.
+         */
+        public Builder outputMultiOrders(Boolean outputMultiOrders) {
+            this.putQueryParameter("OutputMultiOrders", outputMultiOrders);
+            this.outputMultiOrders = outputMultiOrders;
+            return this;
+        }
 
         /**
          * 图片链接（长度不超 2048，不支持 base64）
