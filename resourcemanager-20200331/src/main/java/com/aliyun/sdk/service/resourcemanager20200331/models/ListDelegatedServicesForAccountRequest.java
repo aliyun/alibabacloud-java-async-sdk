@@ -55,7 +55,7 @@ public class ListDelegatedServicesForAccountRequest extends Request {
         } 
 
         /**
-         * AccountId.
+         * The ID of the member.
          */
         public Builder accountId(String accountId) {
             this.putQueryParameter("AccountId", accountId);

@@ -97,7 +97,10 @@ public class UpdateControlPolicyRequest extends Request {
         } 
 
         /**
-         * NewDescription.
+         * The new description of the access control policy.
+         * <p>
+         * 
+         * The description must be 1 to 1,024 characters in length. The description can contain letters, digits, underscores (\_), and hyphens (-) and must start with a letter.
          */
         public Builder newDescription(String newDescription) {
             this.putQueryParameter("NewDescription", newDescription);
@@ -106,7 +109,14 @@ public class UpdateControlPolicyRequest extends Request {
         }
 
         /**
-         * NewPolicyDocument.
+         * The new document of the access control policy.
+         * <p>
+         * 
+         * The document can be a maximum of 4,096 characters in length.
+         * 
+         * For more information about the languages of access control policies, see [Languages of access control policies](~~179096~~).
+         * 
+         * For more information about the examples of access control policies, see [Examples of custom access control policies](~~181474~~).
          */
         public Builder newPolicyDocument(String newPolicyDocument) {
             this.putQueryParameter("NewPolicyDocument", newPolicyDocument);
@@ -115,7 +125,10 @@ public class UpdateControlPolicyRequest extends Request {
         }
 
         /**
-         * NewPolicyName.
+         * The new name of the access control policy.
+         * <p>
+         * 
+         * The name must be 1 to 128 characters in length. The name can contain letters, digits, and hyphens (-) and must start with a letter.
          */
         public Builder newPolicyName(String newPolicyName) {
             this.putQueryParameter("NewPolicyName", newPolicyName);
@@ -124,7 +137,7 @@ public class UpdateControlPolicyRequest extends Request {
         }
 
         /**
-         * PolicyId.
+         * The ID of the access control policy.
          */
         public Builder policyId(String policyId) {
             this.putQueryParameter("PolicyId", policyId);

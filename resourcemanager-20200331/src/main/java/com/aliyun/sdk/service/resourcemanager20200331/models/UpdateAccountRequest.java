@@ -83,7 +83,7 @@ public class UpdateAccountRequest extends Request {
         } 
 
         /**
-         * AccountId.
+         * The ID of the Alibaba Cloud account that corresponds to the member.
          */
         public Builder accountId(String accountId) {
             this.putQueryParameter("AccountId", accountId);
@@ -92,7 +92,13 @@ public class UpdateAccountRequest extends Request {
         }
 
         /**
-         * NewAccountType.
+         * The new type of the member. Valid values:
+         * <p>
+         * 
+         * *   ResourceAccount: resource account
+         * *   CloudAccount: cloud account
+         * 
+         * >  You can configure either the `NewDisplayName` or `NewAccountType` parameter.
          */
         public Builder newAccountType(String newAccountType) {
             this.putQueryParameter("NewAccountType", newAccountType);
@@ -101,7 +107,10 @@ public class UpdateAccountRequest extends Request {
         }
 
         /**
-         * NewDisplayName.
+         * The new display name of the member.
+         * <p>
+         * 
+         * >  You can configure either the `NewDisplayName` or `NewAccountType` parameter.
          */
         public Builder newDisplayName(String newDisplayName) {
             this.putQueryParameter("NewDisplayName", newDisplayName);

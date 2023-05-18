@@ -70,7 +70,7 @@ public class PromoteResourceAccountRequest extends Request {
         } 
 
         /**
-         * AccountId.
+         * The ID of the resource account you want to upgrade.
          */
         public Builder accountId(String accountId) {
             this.putQueryParameter("AccountId", accountId);
@@ -79,7 +79,7 @@ public class PromoteResourceAccountRequest extends Request {
         }
 
         /**
-         * Email.
+         * The email address used to log on to the cloud account after the upgrade.
          */
         public Builder email(String email) {
             this.putQueryParameter("Email", email);

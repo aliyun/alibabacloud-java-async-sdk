@@ -86,7 +86,7 @@ public class ListTrustedServiceStatusResponseBody extends TeaModel {
         private Integer totalCount; 
 
         /**
-         * EnabledServicePrincipals.
+         * The trusted services that are enabled.
          */
         public Builder enabledServicePrincipals(EnabledServicePrincipals enabledServicePrincipals) {
             this.enabledServicePrincipals = enabledServicePrincipals;
@@ -94,7 +94,7 @@ public class ListTrustedServiceStatusResponseBody extends TeaModel {
         }
 
         /**
-         * PageNumber.
+         * The page number of the returned page.
          */
         public Builder pageNumber(Integer pageNumber) {
             this.pageNumber = pageNumber;
@@ -102,7 +102,7 @@ public class ListTrustedServiceStatusResponseBody extends TeaModel {
         }
 
         /**
-         * PageSize.
+         * The number of entries returned per page.
          */
         public Builder pageSize(Integer pageSize) {
             this.pageSize = pageSize;
@@ -110,7 +110,7 @@ public class ListTrustedServiceStatusResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -118,7 +118,7 @@ public class ListTrustedServiceStatusResponseBody extends TeaModel {
         }
 
         /**
-         * TotalCount.
+         * The total number of entries returned.
          */
         public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;
@@ -170,7 +170,7 @@ public class ListTrustedServiceStatusResponseBody extends TeaModel {
             private String servicePrincipal; 
 
             /**
-             * EnableTime.
+             * The time when the trusted service was enabled.
              */
             public Builder enableTime(String enableTime) {
                 this.enableTime = enableTime;
@@ -178,7 +178,7 @@ public class ListTrustedServiceStatusResponseBody extends TeaModel {
             }
 
             /**
-             * ServicePrincipal.
+             * The identification of the trusted service.
              */
             public Builder servicePrincipal(String servicePrincipal) {
                 this.servicePrincipal = servicePrincipal;

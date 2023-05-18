@@ -50,7 +50,7 @@ public class CreateServiceLinkedRoleResponseBody extends TeaModel {
         private Role role; 
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -58,7 +58,7 @@ public class CreateServiceLinkedRoleResponseBody extends TeaModel {
         }
 
         /**
-         * Role.
+         * The information about the role.
          */
         public Builder role(Role role) {
             this.role = role;
@@ -182,7 +182,7 @@ public class CreateServiceLinkedRoleResponseBody extends TeaModel {
             private String rolePrincipalName; 
 
             /**
-             * Arn.
+             * The Alibaba Cloud Resource Name (ARN) of the role.
              */
             public Builder arn(String arn) {
                 this.arn = arn;
@@ -190,7 +190,7 @@ public class CreateServiceLinkedRoleResponseBody extends TeaModel {
             }
 
             /**
-             * AssumeRolePolicyDocument.
+             * The document of the trust policy for the role.
              */
             public Builder assumeRolePolicyDocument(String assumeRolePolicyDocument) {
                 this.assumeRolePolicyDocument = assumeRolePolicyDocument;
@@ -198,7 +198,7 @@ public class CreateServiceLinkedRoleResponseBody extends TeaModel {
             }
 
             /**
-             * CreateDate.
+             * The time when the role was created. The time is displayed in UTC.
              */
             public Builder createDate(String createDate) {
                 this.createDate = createDate;
@@ -206,7 +206,7 @@ public class CreateServiceLinkedRoleResponseBody extends TeaModel {
             }
 
             /**
-             * Description.
+             * The description of the role.
              */
             public Builder description(String description) {
                 this.description = description;
@@ -214,7 +214,11 @@ public class CreateServiceLinkedRoleResponseBody extends TeaModel {
             }
 
             /**
-             * IsServiceLinkedRole.
+             * Indicates whether the role is a service-linked role. Valid values:
+             * <p>
+             * 
+             * *   true: The role is a service-linked role.
+             * *   false: The role is not a service-linked role.
              */
             public Builder isServiceLinkedRole(Boolean isServiceLinkedRole) {
                 this.isServiceLinkedRole = isServiceLinkedRole;
@@ -222,7 +226,7 @@ public class CreateServiceLinkedRoleResponseBody extends TeaModel {
             }
 
             /**
-             * RoleId.
+             * The ID of the role.
              */
             public Builder roleId(String roleId) {
                 this.roleId = roleId;
@@ -230,7 +234,7 @@ public class CreateServiceLinkedRoleResponseBody extends TeaModel {
             }
 
             /**
-             * RoleName.
+             * The name of the role.
              */
             public Builder roleName(String roleName) {
                 this.roleName = roleName;
@@ -238,7 +242,7 @@ public class CreateServiceLinkedRoleResponseBody extends TeaModel {
             }
 
             /**
-             * RolePrincipalName.
+             * The role name that uses a domain name as the suffix.
              */
             public Builder rolePrincipalName(String rolePrincipalName) {
                 this.rolePrincipalName = rolePrincipalName;

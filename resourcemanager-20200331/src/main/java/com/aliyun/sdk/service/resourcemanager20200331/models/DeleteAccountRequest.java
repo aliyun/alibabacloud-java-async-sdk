@@ -79,7 +79,11 @@ public class DeleteAccountRequest extends Request {
         }
 
         /**
-         * AccountId.
+         * The type of the deletion. Valid values:
+         * <p>
+         * 
+         * *   0: direct deletion. If the member does not have pay-as-you-go resources that are purchased within the previous 30 days, the system directly deletes the member.
+         * *   1: deletion with a silence period. If the member has pay-as-you-go resources that are purchased within the previous 30 days, the member enters a silence period of 45 days. The system starts to delete the member until the silence period ends. For more information about the silence period, see [What is the silence period for member deletion?](~~446079~~)
          */
         public Builder accountId(String accountId) {
             this.putQueryParameter("AccountId", accountId);

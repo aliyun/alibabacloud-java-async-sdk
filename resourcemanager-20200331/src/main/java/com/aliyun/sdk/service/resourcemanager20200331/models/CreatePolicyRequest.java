@@ -84,7 +84,10 @@ public class CreatePolicyRequest extends Request {
         } 
 
         /**
-         * Description.
+         * The description of the policy.
+         * <p>
+         * 
+         * The description must be 1 to 1,024 characters in length.
          */
         public Builder description(String description) {
             this.putQueryParameter("Description", description);
@@ -93,7 +96,10 @@ public class CreatePolicyRequest extends Request {
         }
 
         /**
-         * PolicyDocument.
+         * The document of the policy.
+         * <p>
+         * 
+         * The document must be 1 to 2,048 characters in length.
          */
         public Builder policyDocument(String policyDocument) {
             this.putQueryParameter("PolicyDocument", policyDocument);
@@ -102,7 +108,10 @@ public class CreatePolicyRequest extends Request {
         }
 
         /**
-         * PolicyName.
+         * The name of the policy.
+         * <p>
+         * 
+         * The name must be 1 to 128 characters in length and can contain letters, digits, and hyphens (-).
          */
         public Builder policyName(String policyName) {
             this.putQueryParameter("PolicyName", policyName);

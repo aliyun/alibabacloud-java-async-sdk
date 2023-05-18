@@ -50,7 +50,7 @@ public class GetAccountDeletionCheckResultResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * AccountDeletionCheckResultInfo.
+         * The result of the deletion check for the member.
          */
         public Builder accountDeletionCheckResultInfo(AccountDeletionCheckResultInfo accountDeletionCheckResultInfo) {
             this.accountDeletionCheckResultInfo = accountDeletionCheckResultInfo;
@@ -58,7 +58,7 @@ public class GetAccountDeletionCheckResultResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -122,7 +122,7 @@ public class GetAccountDeletionCheckResultResponseBody extends TeaModel {
             private String description; 
 
             /**
-             * CheckId.
+             * The ID of the check item.
              */
             public Builder checkId(String checkId) {
                 this.checkId = checkId;
@@ -130,7 +130,7 @@ public class GetAccountDeletionCheckResultResponseBody extends TeaModel {
             }
 
             /**
-             * CheckName.
+             * The name of the cloud service to which the check item belongs.
              */
             public Builder checkName(String checkName) {
                 this.checkName = checkName;
@@ -138,7 +138,7 @@ public class GetAccountDeletionCheckResultResponseBody extends TeaModel {
             }
 
             /**
-             * Description.
+             * The description of the check item.
              */
             public Builder description(String description) {
                 this.description = description;
@@ -203,7 +203,7 @@ public class GetAccountDeletionCheckResultResponseBody extends TeaModel {
             private String description; 
 
             /**
-             * CheckId.
+             * The ID of the check item.
              */
             public Builder checkId(String checkId) {
                 this.checkId = checkId;
@@ -211,7 +211,7 @@ public class GetAccountDeletionCheckResultResponseBody extends TeaModel {
             }
 
             /**
-             * CheckName.
+             * The name of the cloud service to which the check item belongs.
              */
             public Builder checkName(String checkName) {
                 this.checkName = checkName;
@@ -219,7 +219,7 @@ public class GetAccountDeletionCheckResultResponseBody extends TeaModel {
             }
 
             /**
-             * Description.
+             * The description of the check item.
              */
             public Builder description(String description) {
                 this.description = description;
@@ -296,7 +296,10 @@ public class GetAccountDeletionCheckResultResponseBody extends TeaModel {
             private String status; 
 
             /**
-             * AbandonableChecks.
+             * The check items that you can choose to ignore for the member deletion.
+             * <p>
+             * 
+             * >  This parameter may be returned if the value of AllowDelete is true.
              */
             public Builder abandonableChecks(java.util.List < AbandonableChecks> abandonableChecks) {
                 this.abandonableChecks = abandonableChecks;
@@ -304,7 +307,11 @@ public class GetAccountDeletionCheckResultResponseBody extends TeaModel {
             }
 
             /**
-             * AllowDelete.
+             * Indicates whether the member can be deleted. Valid values:
+             * <p>
+             * 
+             * *   true: The member can be deleted.
+             * *   false: The member cannot be deleted.
              */
             public Builder allowDelete(String allowDelete) {
                 this.allowDelete = allowDelete;
@@ -312,7 +319,10 @@ public class GetAccountDeletionCheckResultResponseBody extends TeaModel {
             }
 
             /**
-             * NotAllowReason.
+             * The reasons why the member cannot be deleted.
+             * <p>
+             * 
+             * >  This parameter is returned only if the value of AllowDelete is false.
              */
             public Builder notAllowReason(java.util.List < NotAllowReason> notAllowReason) {
                 this.notAllowReason = notAllowReason;
@@ -320,7 +330,11 @@ public class GetAccountDeletionCheckResultResponseBody extends TeaModel {
             }
 
             /**
-             * Status.
+             * The status of the check. Valid values:
+             * <p>
+             * 
+             * *   PreCheckComplete: The check is complete.
+             * *   PreChecking: The check is in progress.
              */
             public Builder status(String status) {
                 this.status = status;

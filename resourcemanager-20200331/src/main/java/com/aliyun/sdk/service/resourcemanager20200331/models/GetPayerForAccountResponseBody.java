@@ -62,7 +62,7 @@ public class GetPayerForAccountResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * PayerAccountId.
+         * The ID of the settlement account.
          */
         public Builder payerAccountId(String payerAccountId) {
             this.payerAccountId = payerAccountId;
@@ -70,7 +70,7 @@ public class GetPayerForAccountResponseBody extends TeaModel {
         }
 
         /**
-         * PayerAccountName.
+         * The name of the settlement account.
          */
         public Builder payerAccountName(String payerAccountName) {
             this.payerAccountName = payerAccountName;
@@ -78,7 +78,7 @@ public class GetPayerForAccountResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

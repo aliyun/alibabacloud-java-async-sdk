@@ -69,7 +69,14 @@ public class GetControlPolicyRequest extends Request {
         } 
 
         /**
-         * Language.
+         * The language in which you want to return the description of the access control policy. Valid values:
+         * <p>
+         * 
+         * *   zh-CN (default value): Chinese
+         * *   en: English
+         * *   ja: Japanese
+         * 
+         * >  This parameter is valid only for system access control policies.
          */
         public Builder language(String language) {
             this.putQueryParameter("Language", language);
@@ -78,7 +85,7 @@ public class GetControlPolicyRequest extends Request {
         }
 
         /**
-         * PolicyId.
+         * The ID of the access control policy.
          */
         public Builder policyId(String policyId) {
             this.putQueryParameter("PolicyId", policyId);

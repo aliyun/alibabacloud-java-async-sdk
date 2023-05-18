@@ -70,7 +70,7 @@ public class UpdateFolderRequest extends Request {
         } 
 
         /**
-         * FolderId.
+         * The ID of the folder.
          */
         public Builder folderId(String folderId) {
             this.putQueryParameter("FolderId", folderId);
@@ -79,7 +79,10 @@ public class UpdateFolderRequest extends Request {
         }
 
         /**
-         * NewFolderName.
+         * The new name of the folder.
+         * <p>
+         * 
+         * The name must be 1 to 24 characters in length and can contain letters, digits, underscores (\_), periods (.), and hyphens (-).
          */
         public Builder newFolderName(String newFolderName) {
             this.putQueryParameter("NewFolderName", newFolderName);

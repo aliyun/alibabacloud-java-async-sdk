@@ -55,7 +55,10 @@ public class DeleteRoleRequest extends Request {
         } 
 
         /**
-         * RoleName.
+         * The name of the RAM role.
+         * <p>
+         * 
+         * The name must be 1 to 64 characters in length and can contain letters, digits, periods (.), and hyphens (-).
          */
         public Builder roleName(String roleName) {
             this.putQueryParameter("RoleName", roleName);

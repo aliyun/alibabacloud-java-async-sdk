@@ -50,7 +50,7 @@ public class GetFolderResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * Folder.
+         * The information of the folder.
          */
         public Builder folder(Folder folder) {
             this.folder = folder;
@@ -58,7 +58,7 @@ public class GetFolderResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -146,7 +146,7 @@ public class GetFolderResponseBody extends TeaModel {
             private String resourceDirectoryPath; 
 
             /**
-             * CreateTime.
+             * The time when the folder was created.
              */
             public Builder createTime(String createTime) {
                 this.createTime = createTime;
@@ -154,7 +154,7 @@ public class GetFolderResponseBody extends TeaModel {
             }
 
             /**
-             * FolderId.
+             * The ID of the folder.
              */
             public Builder folderId(String folderId) {
                 this.folderId = folderId;
@@ -162,7 +162,7 @@ public class GetFolderResponseBody extends TeaModel {
             }
 
             /**
-             * FolderName.
+             * The name of the folder.
              */
             public Builder folderName(String folderName) {
                 this.folderName = folderName;
@@ -170,7 +170,7 @@ public class GetFolderResponseBody extends TeaModel {
             }
 
             /**
-             * ParentFolderId.
+             * The ID of the parent folder.
              */
             public Builder parentFolderId(String parentFolderId) {
                 this.parentFolderId = parentFolderId;
@@ -178,7 +178,7 @@ public class GetFolderResponseBody extends TeaModel {
             }
 
             /**
-             * ResourceDirectoryPath.
+             * The path of the folder in the resource directory.
              */
             public Builder resourceDirectoryPath(String resourceDirectoryPath) {
                 this.resourceDirectoryPath = resourceDirectoryPath;

@@ -69,7 +69,14 @@ public class ListControlPolicyAttachmentsForTargetRequest extends Request {
         } 
 
         /**
-         * Language.
+         * The language in which you want to return the descriptions of the access control policies. Valid values:
+         * <p>
+         * 
+         * *   zh-CN (default value): Chinese
+         * *   en: English
+         * *   ja: Japanese
+         * 
+         * >  This parameter is valid only for system access control policies.
          */
         public Builder language(String language) {
             this.putQueryParameter("Language", language);
@@ -78,7 +85,12 @@ public class ListControlPolicyAttachmentsForTargetRequest extends Request {
         }
 
         /**
-         * TargetId.
+         * The ID of the object whose access control policies you want to query. Access control policies can be attached to the following objects:
+         * <p>
+         * 
+         * *   Root folder
+         * *   Subfolders of the Root folder
+         * *   Members
          */
         public Builder targetId(String targetId) {
             this.putQueryParameter("TargetId", targetId);

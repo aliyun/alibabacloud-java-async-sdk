@@ -70,7 +70,7 @@ public class SendVerificationCodeForBindSecureMobilePhoneRequest extends Request
         } 
 
         /**
-         * AccountId.
+         * The ID of the resource account.
          */
         public Builder accountId(String accountId) {
             this.putQueryParameter("AccountId", accountId);
@@ -79,7 +79,12 @@ public class SendVerificationCodeForBindSecureMobilePhoneRequest extends Request
         }
 
         /**
-         * SecureMobilePhone.
+         * The mobile phone number that you want to bind to the resource account.
+         * <p>
+         * 
+         * Specify the mobile phone number in the \<Country code>-\<Mobile phone number> format.
+         * 
+         * >  Mobile phone numbers in the `86-<Mobile phone number>` format in the Chinese mainland are not supported.
          */
         public Builder secureMobilePhone(String secureMobilePhone) {
             this.putQueryParameter("SecureMobilePhone", secureMobilePhone);

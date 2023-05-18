@@ -50,7 +50,7 @@ public class DeleteServiceLinkedRoleResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * DeletionTaskId.
+         * The ID of the deletion task.
          */
         public Builder deletionTaskId(String deletionTaskId) {
             this.deletionTaskId = deletionTaskId;
@@ -58,7 +58,7 @@ public class DeleteServiceLinkedRoleResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

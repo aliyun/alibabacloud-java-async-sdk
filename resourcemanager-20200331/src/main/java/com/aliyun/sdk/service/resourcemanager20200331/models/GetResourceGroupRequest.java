@@ -69,7 +69,7 @@ public class GetResourceGroupRequest extends Request {
         } 
 
         /**
-         * IncludeTags.
+         * The ID of the request.
          */
         public Builder includeTags(Boolean includeTags) {
             this.putQueryParameter("IncludeTags", includeTags);
@@ -78,7 +78,11 @@ public class GetResourceGroupRequest extends Request {
         }
 
         /**
-         * ResourceGroupId.
+         * Specifies whether to return the information of tags. Valid values:
+         * <p>
+         * 
+         * *   false (default value)
+         * *   true
          */
         public Builder resourceGroupId(String resourceGroupId) {
             this.putQueryParameter("ResourceGroupId", resourceGroupId);

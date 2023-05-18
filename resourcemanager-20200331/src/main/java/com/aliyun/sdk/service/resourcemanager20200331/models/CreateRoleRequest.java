@@ -98,7 +98,10 @@ public class CreateRoleRequest extends Request {
         } 
 
         /**
-         * AssumeRolePolicyDocument.
+         * The document of the policy that specifies one or more trusted entities to assume the RAM role. The trusted entities can be Alibaba Cloud accounts, Alibaba Cloud services, or identity providers (IdPs).
+         * <p>
+         * 
+         * >  RAM users cannot assume the RAM roles of trusted Alibaba Cloud services.
          */
         public Builder assumeRolePolicyDocument(String assumeRolePolicyDocument) {
             this.putQueryParameter("AssumeRolePolicyDocument", assumeRolePolicyDocument);
@@ -107,7 +110,10 @@ public class CreateRoleRequest extends Request {
         }
 
         /**
-         * Description.
+         * The description of the RAM role.
+         * <p>
+         * 
+         * The description must be 1 to 1,024 characters in length.
          */
         public Builder description(String description) {
             this.putQueryParameter("Description", description);
@@ -116,7 +122,12 @@ public class CreateRoleRequest extends Request {
         }
 
         /**
-         * MaxSessionDuration.
+         * The maximum session duration of the RAM role.
+         * <p>
+         * 
+         * Unit: seconds. Valid values: 3600 to 43200. Default value: 3600.
+         * 
+         * If you do not specify this parameter, the default value is used.
          */
         public Builder maxSessionDuration(Long maxSessionDuration) {
             this.putQueryParameter("MaxSessionDuration", maxSessionDuration);
@@ -125,7 +136,10 @@ public class CreateRoleRequest extends Request {
         }
 
         /**
-         * RoleName.
+         * The name of the RAM role.
+         * <p>
+         * 
+         * The name must be 1 to 64 characters in length and can contain letters, digits, periods (.), and hyphens (-).
          */
         public Builder roleName(String roleName) {
             this.putQueryParameter("RoleName", roleName);

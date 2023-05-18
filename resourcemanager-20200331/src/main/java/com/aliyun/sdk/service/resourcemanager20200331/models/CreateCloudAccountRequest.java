@@ -98,7 +98,12 @@ public class CreateCloudAccountRequest extends Request {
         } 
 
         /**
-         * DisplayName.
+         * The display name of the member account.
+         * <p>
+         * 
+         * The name must be 2 to 50 characters in length and can contain letters, digits, underscores (\_), periods (.), and hyphens (-).
+         * 
+         * The name must be unique in the current resource directory.
          */
         public Builder displayName(String displayName) {
             this.putQueryParameter("DisplayName", displayName);
@@ -107,7 +112,7 @@ public class CreateCloudAccountRequest extends Request {
         }
 
         /**
-         * Email.
+         * The email address used to log on to the cloud account.
          */
         public Builder email(String email) {
             this.putQueryParameter("Email", email);
@@ -116,7 +121,7 @@ public class CreateCloudAccountRequest extends Request {
         }
 
         /**
-         * ParentFolderId.
+         * The ID of the parent folder.
          */
         public Builder parentFolderId(String parentFolderId) {
             this.putQueryParameter("ParentFolderId", parentFolderId);
@@ -125,7 +130,7 @@ public class CreateCloudAccountRequest extends Request {
         }
 
         /**
-         * PayerAccountId.
+         * The ID of the settlement account. If you do not specify this parameter, the current account is used for settlement.
          */
         public Builder payerAccountId(String payerAccountId) {
             this.putQueryParameter("PayerAccountId", payerAccountId);

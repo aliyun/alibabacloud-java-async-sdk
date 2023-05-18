@@ -55,7 +55,7 @@ public class GetPayerForAccountRequest extends Request {
         } 
 
         /**
-         * AccountId.
+         * The ID of the account.
          */
         public Builder accountId(String accountId) {
             this.putQueryParameter("AccountId", accountId);

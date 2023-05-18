@@ -83,7 +83,12 @@ public class CreateServiceLinkedRoleRequest extends Request {
         } 
 
         /**
-         * CustomSuffix.
+         * The suffix of the role name.
+         * <p>
+         * 
+         * The role name (including its suffix) must be 1 to 64 characters in length and can contain letters, digits, periods (.), and hyphens (-).
+         * 
+         * For example, if the suffix is `Example`, the role name is `ServiceLinkedRoleName_Example`.
          */
         public Builder customSuffix(String customSuffix) {
             this.putQueryParameter("CustomSuffix", customSuffix);
@@ -92,7 +97,12 @@ public class CreateServiceLinkedRoleRequest extends Request {
         }
 
         /**
-         * Description.
+         * The description of the service-linked role.
+         * <p>
+         * 
+         * You must configure this parameter for service-linked roles that support custom suffixes. Otherwise, the preset value is used and cannot be modified.
+         * 
+         * The description must be 1 to 1,024 characters in length.
          */
         public Builder description(String description) {
             this.putQueryParameter("Description", description);
@@ -101,7 +111,10 @@ public class CreateServiceLinkedRoleRequest extends Request {
         }
 
         /**
-         * ServiceName.
+         * The name of the service.
+         * <p>
+         * 
+         * For more information about the service name, see [Alibaba Cloud services that support service-linked roles](~~461722~~).
          */
         public Builder serviceName(String serviceName) {
             this.putQueryParameter("ServiceName", serviceName);

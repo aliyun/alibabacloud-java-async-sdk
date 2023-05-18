@@ -85,7 +85,10 @@ public class GetPolicyVersionRequest extends Request {
         } 
 
         /**
-         * PolicyName.
+         * The name of the policy.
+         * <p>
+         * 
+         * The name must be 1 to 128 characters in length and can contain letters, digits, and hyphens (-).
          */
         public Builder policyName(String policyName) {
             this.putQueryParameter("PolicyName", policyName);
@@ -94,7 +97,11 @@ public class GetPolicyVersionRequest extends Request {
         }
 
         /**
-         * PolicyType.
+         * The type of the policy. Valid values:
+         * <p>
+         * 
+         * *   Custom: custom policy
+         * *   System: system policy
          */
         public Builder policyType(String policyType) {
             this.putQueryParameter("PolicyType", policyType);
@@ -103,7 +110,7 @@ public class GetPolicyVersionRequest extends Request {
         }
 
         /**
-         * VersionId.
+         * The ID of the policy version.
          */
         public Builder versionId(String versionId) {
             this.putQueryParameter("VersionId", versionId);

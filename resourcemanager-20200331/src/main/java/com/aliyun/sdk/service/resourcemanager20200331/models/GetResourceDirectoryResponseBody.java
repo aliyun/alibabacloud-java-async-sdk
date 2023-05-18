@@ -50,7 +50,7 @@ public class GetResourceDirectoryResponseBody extends TeaModel {
         private ResourceDirectory resourceDirectory; 
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -58,7 +58,7 @@ public class GetResourceDirectoryResponseBody extends TeaModel {
         }
 
         /**
-         * ResourceDirectory.
+         * The information of the resource directory.
          */
         public Builder resourceDirectory(ResourceDirectory resourceDirectory) {
             this.resourceDirectory = resourceDirectory;
@@ -182,7 +182,13 @@ public class GetResourceDirectoryResponseBody extends TeaModel {
             private String rootFolderId; 
 
             /**
-             * ControlPolicyStatus.
+             * The status of the Control Policy feature. Valid values:
+             * <p>
+             * 
+             * *   Enabled: The feature is enabled.
+             * *   PendingEnable: The feature is being enabled.
+             * *   Disabled: The feature is disabled.
+             * *   PendingDisable: The feature is being disabled.
              */
             public Builder controlPolicyStatus(String controlPolicyStatus) {
                 this.controlPolicyStatus = controlPolicyStatus;
@@ -190,7 +196,7 @@ public class GetResourceDirectoryResponseBody extends TeaModel {
             }
 
             /**
-             * CreateTime.
+             * The time when the resource directory was enabled.
              */
             public Builder createTime(String createTime) {
                 this.createTime = createTime;
@@ -198,7 +204,7 @@ public class GetResourceDirectoryResponseBody extends TeaModel {
             }
 
             /**
-             * IdentityInformation.
+             * The real-name verification information.
              */
             public Builder identityInformation(String identityInformation) {
                 this.identityInformation = identityInformation;
@@ -206,7 +212,7 @@ public class GetResourceDirectoryResponseBody extends TeaModel {
             }
 
             /**
-             * MasterAccountId.
+             * The ID of the management account.
              */
             public Builder masterAccountId(String masterAccountId) {
                 this.masterAccountId = masterAccountId;
@@ -214,7 +220,7 @@ public class GetResourceDirectoryResponseBody extends TeaModel {
             }
 
             /**
-             * MasterAccountName.
+             * The name of the management account.
              */
             public Builder masterAccountName(String masterAccountName) {
                 this.masterAccountName = masterAccountName;
@@ -222,7 +228,11 @@ public class GetResourceDirectoryResponseBody extends TeaModel {
             }
 
             /**
-             * MemberDeletionStatus.
+             * The status of the member deletion feature. Valid values:
+             * <p>
+             * 
+             * *   Enabled: The feature is enabled. You can call the [DeleteAccount](~~311546~~) operation to delete members of the resource account type.
+             * *   Disabled: The feature is disabled. You cannot delete members of the resource account type.
              */
             public Builder memberDeletionStatus(String memberDeletionStatus) {
                 this.memberDeletionStatus = memberDeletionStatus;
@@ -230,7 +240,7 @@ public class GetResourceDirectoryResponseBody extends TeaModel {
             }
 
             /**
-             * ResourceDirectoryId.
+             * The ID of the resource directory.
              */
             public Builder resourceDirectoryId(String resourceDirectoryId) {
                 this.resourceDirectoryId = resourceDirectoryId;
@@ -238,7 +248,7 @@ public class GetResourceDirectoryResponseBody extends TeaModel {
             }
 
             /**
-             * RootFolderId.
+             * The ID of the Root folder.
              */
             public Builder rootFolderId(String rootFolderId) {
                 this.rootFolderId = rootFolderId;

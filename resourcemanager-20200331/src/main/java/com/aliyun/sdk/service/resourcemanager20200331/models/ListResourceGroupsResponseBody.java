@@ -86,7 +86,7 @@ public class ListResourceGroupsResponseBody extends TeaModel {
         private Integer totalCount; 
 
         /**
-         * PageNumber.
+         * The page number of the returned page.
          */
         public Builder pageNumber(Integer pageNumber) {
             this.pageNumber = pageNumber;
@@ -94,7 +94,7 @@ public class ListResourceGroupsResponseBody extends TeaModel {
         }
 
         /**
-         * PageSize.
+         * The number of entries returned per page.
          */
         public Builder pageSize(Integer pageSize) {
             this.pageSize = pageSize;
@@ -102,7 +102,7 @@ public class ListResourceGroupsResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -110,7 +110,7 @@ public class ListResourceGroupsResponseBody extends TeaModel {
         }
 
         /**
-         * ResourceGroups.
+         * The information of the resource groups.
          */
         public Builder resourceGroups(ResourceGroups resourceGroups) {
             this.resourceGroups = resourceGroups;
@@ -118,7 +118,7 @@ public class ListResourceGroupsResponseBody extends TeaModel {
         }
 
         /**
-         * TotalCount.
+         * The total number of entries returned.
          */
         public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;
@@ -170,7 +170,7 @@ public class ListResourceGroupsResponseBody extends TeaModel {
             private String tagValue; 
 
             /**
-             * TagKey.
+             * The tag key.
              */
             public Builder tagKey(String tagKey) {
                 this.tagKey = tagKey;
@@ -178,7 +178,7 @@ public class ListResourceGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * TagValue.
+             * The tag value.
              */
             public Builder tagValue(String tagValue) {
                 this.tagValue = tagValue;
@@ -332,7 +332,7 @@ public class ListResourceGroupsResponseBody extends TeaModel {
             private Tags tags; 
 
             /**
-             * AccountId.
+             * The ID of the Alibaba Cloud account to which the resource group belongs.
              */
             public Builder accountId(String accountId) {
                 this.accountId = accountId;
@@ -340,7 +340,7 @@ public class ListResourceGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * CreateDate.
+             * The time when the resource group was created. The time is displayed in UTC.
              */
             public Builder createDate(String createDate) {
                 this.createDate = createDate;
@@ -348,7 +348,7 @@ public class ListResourceGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * DisplayName.
+             * The display name of the resource group.
              */
             public Builder displayName(String displayName) {
                 this.displayName = displayName;
@@ -356,7 +356,7 @@ public class ListResourceGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * Id.
+             * The ID of the resource group.
              */
             public Builder id(String id) {
                 this.id = id;
@@ -364,7 +364,7 @@ public class ListResourceGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * Name.
+             * The identifier of the resource group.
              */
             public Builder name(String name) {
                 this.name = name;
@@ -372,7 +372,12 @@ public class ListResourceGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * Status.
+             * The status of the resource group. Valid values:
+             * <p>
+             * 
+             * *   Creating: The resource group is being created.
+             * *   OK: The resource group is created.
+             * *   PendingDelete: The resource group is waiting to be deleted.
              */
             public Builder status(String status) {
                 this.status = status;
@@ -380,7 +385,7 @@ public class ListResourceGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * Tags.
+             * The tags that are added to the resource group.
              */
             public Builder tags(Tags tags) {
                 this.tags = tags;

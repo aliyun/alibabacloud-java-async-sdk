@@ -50,7 +50,7 @@ public class GetRoleResponseBody extends TeaModel {
         private Role role; 
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -58,7 +58,7 @@ public class GetRoleResponseBody extends TeaModel {
         }
 
         /**
-         * Role.
+         * The information of the RAM role.
          */
         public Builder role(Role role) {
             this.role = role;
@@ -110,7 +110,7 @@ public class GetRoleResponseBody extends TeaModel {
             private String deletionTaskId; 
 
             /**
-             * CreateDate.
+             * The time when the deletion task was created.
              */
             public Builder createDate(String createDate) {
                 this.createDate = createDate;
@@ -118,7 +118,7 @@ public class GetRoleResponseBody extends TeaModel {
             }
 
             /**
-             * DeletionTaskId.
+             * The ID of the deletion task.
              */
             public Builder deletionTaskId(String deletionTaskId) {
                 this.deletionTaskId = deletionTaskId;
@@ -279,7 +279,7 @@ public class GetRoleResponseBody extends TeaModel {
             private String updateDate; 
 
             /**
-             * Arn.
+             * The Alibaba Cloud Resource Name (ARN) of the RAM role.
              */
             public Builder arn(String arn) {
                 this.arn = arn;
@@ -287,7 +287,7 @@ public class GetRoleResponseBody extends TeaModel {
             }
 
             /**
-             * AssumeRolePolicyDocument.
+             * The document of the policy that specifies the trusted entity to assume the RAM role.
              */
             public Builder assumeRolePolicyDocument(String assumeRolePolicyDocument) {
                 this.assumeRolePolicyDocument = assumeRolePolicyDocument;
@@ -295,7 +295,7 @@ public class GetRoleResponseBody extends TeaModel {
             }
 
             /**
-             * CreateDate.
+             * The time when the RAM role was created.
              */
             public Builder createDate(String createDate) {
                 this.createDate = createDate;
@@ -303,7 +303,7 @@ public class GetRoleResponseBody extends TeaModel {
             }
 
             /**
-             * Description.
+             * The description of the RAM role.
              */
             public Builder description(String description) {
                 this.description = description;
@@ -311,7 +311,7 @@ public class GetRoleResponseBody extends TeaModel {
             }
 
             /**
-             * IsServiceLinkedRole.
+             * Indicates whether the RAM role is a service linked role.
              */
             public Builder isServiceLinkedRole(Boolean isServiceLinkedRole) {
                 this.isServiceLinkedRole = isServiceLinkedRole;
@@ -319,7 +319,7 @@ public class GetRoleResponseBody extends TeaModel {
             }
 
             /**
-             * LatestDeletionTask.
+             * The information of the most recent deletion task.
              */
             public Builder latestDeletionTask(LatestDeletionTask latestDeletionTask) {
                 this.latestDeletionTask = latestDeletionTask;
@@ -327,7 +327,7 @@ public class GetRoleResponseBody extends TeaModel {
             }
 
             /**
-             * MaxSessionDuration.
+             * The maximum session duration of the RAM role.
              */
             public Builder maxSessionDuration(Long maxSessionDuration) {
                 this.maxSessionDuration = maxSessionDuration;
@@ -335,7 +335,7 @@ public class GetRoleResponseBody extends TeaModel {
             }
 
             /**
-             * RoleId.
+             * The ID of the RAM role.
              */
             public Builder roleId(String roleId) {
                 this.roleId = roleId;
@@ -343,7 +343,7 @@ public class GetRoleResponseBody extends TeaModel {
             }
 
             /**
-             * RoleName.
+             * The name of the RAM role.
              */
             public Builder roleName(String roleName) {
                 this.roleName = roleName;
@@ -351,7 +351,7 @@ public class GetRoleResponseBody extends TeaModel {
             }
 
             /**
-             * RolePrincipalName.
+             * The name of the RAM role after authorization.
              */
             public Builder rolePrincipalName(String rolePrincipalName) {
                 this.rolePrincipalName = rolePrincipalName;
@@ -359,7 +359,7 @@ public class GetRoleResponseBody extends TeaModel {
             }
 
             /**
-             * UpdateDate.
+             * The time when the RAM role was updated.
              */
             public Builder updateDate(String updateDate) {
                 this.updateDate = updateDate;

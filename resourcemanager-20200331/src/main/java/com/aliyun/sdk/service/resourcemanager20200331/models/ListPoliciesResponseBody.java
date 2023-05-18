@@ -86,7 +86,7 @@ public class ListPoliciesResponseBody extends TeaModel {
         private Integer totalCount; 
 
         /**
-         * PageNumber.
+         * The page number of the returned page.
          */
         public Builder pageNumber(Integer pageNumber) {
             this.pageNumber = pageNumber;
@@ -94,7 +94,7 @@ public class ListPoliciesResponseBody extends TeaModel {
         }
 
         /**
-         * PageSize.
+         * The number of entries returned per page.
          */
         public Builder pageSize(Integer pageSize) {
             this.pageSize = pageSize;
@@ -102,7 +102,7 @@ public class ListPoliciesResponseBody extends TeaModel {
         }
 
         /**
-         * Policies.
+         * The information of the policies.
          */
         public Builder policies(Policies policies) {
             this.policies = policies;
@@ -110,7 +110,7 @@ public class ListPoliciesResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -118,7 +118,7 @@ public class ListPoliciesResponseBody extends TeaModel {
         }
 
         /**
-         * TotalCount.
+         * The total number of returned entries.
          */
         public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;
@@ -230,7 +230,7 @@ public class ListPoliciesResponseBody extends TeaModel {
             private String updateDate; 
 
             /**
-             * AttachmentCount.
+             * The number of times the policy is referenced.
              */
             public Builder attachmentCount(Integer attachmentCount) {
                 this.attachmentCount = attachmentCount;
@@ -238,7 +238,7 @@ public class ListPoliciesResponseBody extends TeaModel {
             }
 
             /**
-             * CreateDate.
+             * The time when the policy was created.
              */
             public Builder createDate(String createDate) {
                 this.createDate = createDate;
@@ -246,7 +246,7 @@ public class ListPoliciesResponseBody extends TeaModel {
             }
 
             /**
-             * DefaultVersion.
+             * The default version of the policy.
              */
             public Builder defaultVersion(String defaultVersion) {
                 this.defaultVersion = defaultVersion;
@@ -254,7 +254,7 @@ public class ListPoliciesResponseBody extends TeaModel {
             }
 
             /**
-             * Description.
+             * The description of the policy.
              */
             public Builder description(String description) {
                 this.description = description;
@@ -262,7 +262,7 @@ public class ListPoliciesResponseBody extends TeaModel {
             }
 
             /**
-             * PolicyName.
+             * The name of the policy.
              */
             public Builder policyName(String policyName) {
                 this.policyName = policyName;
@@ -270,7 +270,11 @@ public class ListPoliciesResponseBody extends TeaModel {
             }
 
             /**
-             * PolicyType.
+             * The type of the policy. Valid values:
+             * <p>
+             * 
+             * *   Custom: custom policy
+             * *   System: system policy
              */
             public Builder policyType(String policyType) {
                 this.policyType = policyType;
@@ -278,7 +282,7 @@ public class ListPoliciesResponseBody extends TeaModel {
             }
 
             /**
-             * UpdateDate.
+             * The time when the policy was updated.
              */
             public Builder updateDate(String updateDate) {
                 this.updateDate = updateDate;

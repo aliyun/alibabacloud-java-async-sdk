@@ -55,7 +55,10 @@ public class DeleteResourceGroupRequest extends Request {
         } 
 
         /**
-         * ResourceGroupId.
+         * The ID of the resource group.
+         * <p>
+         * 
+         * You can call the [ListResourceGroups](~~158855~~) operation to obtain the ID.
          */
         public Builder resourceGroupId(String resourceGroupId) {
             this.putQueryParameter("ResourceGroupId", resourceGroupId);

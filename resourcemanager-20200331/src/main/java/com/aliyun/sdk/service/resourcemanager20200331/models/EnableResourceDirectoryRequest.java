@@ -97,7 +97,11 @@ public class EnableResourceDirectoryRequest extends Request {
         } 
 
         /**
-         * EnableMode.
+         * The mode in which you enable a resource directory. Valid values:
+         * <p>
+         * 
+         * *   CurrentAccount: indicates that the current account is used to enable a resource directory.
+         * *   NewManagementAccount: indicates that a newly created account is used to enable a resource directory. If you select this mode, you must configure the `MAName`, `MASecureMobilePhone`, and `VerificationCode` parameters.
          */
         public Builder enableMode(String enableMode) {
             this.putQueryParameter("EnableMode", enableMode);
@@ -106,7 +110,10 @@ public class EnableResourceDirectoryRequest extends Request {
         }
 
         /**
-         * MAName.
+         * The name of the newly created account.
+         * <p>
+         * 
+         * Specify the name in the `<Prefix>@rdadmin.aliyunid.com` format. The prefix can contain letters, digits, and special characters but cannot contain consecutive special characters. The prefix must start with a letter or digit and end with a letter or digit. Valid special characters include underscores (\_), periods (.), and hyphens (-). The prefix must be 2 to 50 characters in length.
          */
         public Builder MAName(String MAName) {
             this.putQueryParameter("MAName", MAName);
@@ -115,7 +122,14 @@ public class EnableResourceDirectoryRequest extends Request {
         }
 
         /**
-         * MASecureMobilePhone.
+         * The mobile phone number that is bound to the newly created account.
+         * <p>
+         * 
+         * If you leave this parameter empty, the mobile phone number that is bound to the current account is used. The mobile phone number you specify must be the same as the mobile phone number that you specify when you call the [SendVerificationCodeForEnableRD](~~364248~~) operation to obtain a verification code.
+         * 
+         * Specify the mobile phone number in the `<Country code>-<Mobile phone number>` format.
+         * 
+         * >  Mobile phone numbers in the `86-<Mobile phone number>` format in the Chinese mainland are not supported.
          */
         public Builder MASecureMobilePhone(String MASecureMobilePhone) {
             this.putQueryParameter("MASecureMobilePhone", MASecureMobilePhone);
@@ -124,7 +138,10 @@ public class EnableResourceDirectoryRequest extends Request {
         }
 
         /**
-         * VerificationCode.
+         * The verification code.
+         * <p>
+         * 
+         * You can call the [SendVerificationCodeForEnableRD](~~364248~~) operation to obtain the verification code.
          */
         public Builder verificationCode(String verificationCode) {
             this.putQueryParameter("VerificationCode", verificationCode);

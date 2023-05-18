@@ -50,7 +50,7 @@ public class ListAncestorsResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * Folders.
+         * The information of the folders.
          */
         public Builder folders(Folders folders) {
             this.folders = folders;
@@ -58,7 +58,7 @@ public class ListAncestorsResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -122,7 +122,7 @@ public class ListAncestorsResponseBody extends TeaModel {
             private String folderName; 
 
             /**
-             * CreateTime.
+             * The time when the folder was created.
              */
             public Builder createTime(String createTime) {
                 this.createTime = createTime;
@@ -130,7 +130,7 @@ public class ListAncestorsResponseBody extends TeaModel {
             }
 
             /**
-             * FolderId.
+             * The ID of the folder.
              */
             public Builder folderId(String folderId) {
                 this.folderId = folderId;
@@ -138,7 +138,7 @@ public class ListAncestorsResponseBody extends TeaModel {
             }
 
             /**
-             * FolderName.
+             * The name of the folder.
              */
             public Builder folderName(String folderName) {
                 this.folderName = folderName;

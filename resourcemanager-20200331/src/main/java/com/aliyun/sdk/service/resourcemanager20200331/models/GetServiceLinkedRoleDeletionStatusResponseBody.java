@@ -62,7 +62,7 @@ public class GetServiceLinkedRoleDeletionStatusResponseBody extends TeaModel {
         private String status; 
 
         /**
-         * Reason.
+         * The reason why the deletion task failed.
          */
         public Builder reason(Reason reason) {
             this.reason = reason;
@@ -70,7 +70,7 @@ public class GetServiceLinkedRoleDeletionStatusResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -78,7 +78,14 @@ public class GetServiceLinkedRoleDeletionStatusResponseBody extends TeaModel {
         }
 
         /**
-         * Status.
+         * The status of the task.
+         * <p>
+         * 
+         * - SUCCEEDED
+         * - IN_PROGRESS
+         * - FAILED
+         * - NOT_STARTED
+         * - INTERNAL_ERROR
          */
         public Builder status(String status) {
             this.status = status;
@@ -171,7 +178,7 @@ public class GetServiceLinkedRoleDeletionStatusResponseBody extends TeaModel {
             private Resources resources; 
 
             /**
-             * Region.
+             * The IDs of the regions in which the resources are to be queried.
              */
             public Builder region(String region) {
                 this.region = region;
@@ -179,7 +186,7 @@ public class GetServiceLinkedRoleDeletionStatusResponseBody extends TeaModel {
             }
 
             /**
-             * Resources.
+             * The returned resources.
              */
             public Builder resources(Resources resources) {
                 this.resources = resources;
@@ -273,7 +280,7 @@ public class GetServiceLinkedRoleDeletionStatusResponseBody extends TeaModel {
             private RoleUsages roleUsages; 
 
             /**
-             * Message.
+             * Failure information.
              */
             public Builder message(String message) {
                 this.message = message;
@@ -281,7 +288,7 @@ public class GetServiceLinkedRoleDeletionStatusResponseBody extends TeaModel {
             }
 
             /**
-             * RoleUsages.
+             * Use resource information of the service linked role.
              */
             public Builder roleUsages(RoleUsages roleUsages) {
                 this.roleUsages = roleUsages;

@@ -152,7 +152,12 @@ public class ListPolicyAttachmentsRequest extends Request {
         } 
 
         /**
-         * Language.
+         * The language that is used to return the description of the system policy. Valid values:
+         * <p>
+         * 
+         * *   en: English
+         * *   zh-CN: Chinese
+         * *   ja: Japanese
          */
         public Builder language(String language) {
             this.putQueryParameter("Language", language);
@@ -161,7 +166,10 @@ public class ListPolicyAttachmentsRequest extends Request {
         }
 
         /**
-         * PageNumber.
+         * The number of the page to return.
+         * <p>
+         * 
+         * Pages start from page 1. Default value: 1.
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -170,7 +178,10 @@ public class ListPolicyAttachmentsRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * The number of entries to return on each page.
+         * <p>
+         * 
+         * Valid values: 1 to 100. Default value: 10.
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -179,7 +190,10 @@ public class ListPolicyAttachmentsRequest extends Request {
         }
 
         /**
-         * PolicyName.
+         * The name of the policy.
+         * <p>
+         * 
+         * The name must be 1 to 128 characters in length and can contain letters, digits, and hyphens (-).
          */
         public Builder policyName(String policyName) {
             this.putQueryParameter("PolicyName", policyName);
@@ -188,7 +202,11 @@ public class ListPolicyAttachmentsRequest extends Request {
         }
 
         /**
-         * PolicyType.
+         * The type of the policy. If you do not specify this parameter, the system lists all types of policies. Valid values:
+         * <p>
+         * 
+         * *   Custom: custom policy
+         * *   System: system policy
          */
         public Builder policyType(String policyType) {
             this.putQueryParameter("PolicyType", policyType);
@@ -197,7 +215,7 @@ public class ListPolicyAttachmentsRequest extends Request {
         }
 
         /**
-         * PrincipalName.
+         * The name of the object to which the policy is attached.
          */
         public Builder principalName(String principalName) {
             this.putQueryParameter("PrincipalName", principalName);
@@ -206,7 +224,12 @@ public class ListPolicyAttachmentsRequest extends Request {
         }
 
         /**
-         * PrincipalType.
+         * The type of the object to which the policy is attached. If you do not specify this parameter, the system lists all types of objects. Valid values:
+         * <p>
+         * 
+         * *   IMSUser: RAM user
+         * *   IMSGroup: RAM user group
+         * *   ServiceRole: RAM role
          */
         public Builder principalType(String principalType) {
             this.putQueryParameter("PrincipalType", principalType);
@@ -215,7 +238,7 @@ public class ListPolicyAttachmentsRequest extends Request {
         }
 
         /**
-         * ResourceGroupId.
+         * The ID of the resource group or the ID of the Alibaba Cloud account to which the resource group belongs. If you do not specify this parameter, the system lists all policy attachment records under the current account.
          */
         public Builder resourceGroupId(String resourceGroupId) {
             this.putQueryParameter("ResourceGroupId", resourceGroupId);

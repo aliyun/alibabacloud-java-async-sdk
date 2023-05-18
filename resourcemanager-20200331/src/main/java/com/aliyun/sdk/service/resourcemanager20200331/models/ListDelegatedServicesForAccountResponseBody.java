@@ -50,7 +50,10 @@ public class ListDelegatedServicesForAccountResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * DelegatedServices.
+         * The trusted services.
+         * <p>
+         * 
+         * >  If the value of this parameter is empty, the member is not specified as a delegated administrator account.
          */
         public Builder delegatedServices(DelegatedServices delegatedServices) {
             this.delegatedServices = delegatedServices;
@@ -58,7 +61,7 @@ public class ListDelegatedServicesForAccountResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -122,7 +125,7 @@ public class ListDelegatedServicesForAccountResponseBody extends TeaModel {
             private String status; 
 
             /**
-             * DelegationEnabledTime.
+             * The time when the member was specified as a delegated administrator account of the trusted service.
              */
             public Builder delegationEnabledTime(String delegationEnabledTime) {
                 this.delegationEnabledTime = delegationEnabledTime;
@@ -130,7 +133,7 @@ public class ListDelegatedServicesForAccountResponseBody extends TeaModel {
             }
 
             /**
-             * ServicePrincipal.
+             * The identification of the trusted service.
              */
             public Builder servicePrincipal(String servicePrincipal) {
                 this.servicePrincipal = servicePrincipal;
@@ -138,7 +141,11 @@ public class ListDelegatedServicesForAccountResponseBody extends TeaModel {
             }
 
             /**
-             * Status.
+             * The status of the trusted service. Valid values:
+             * <p>
+             * 
+             * *   ENABLED: enabled
+             * *   DISABLED: disabled
              */
             public Builder status(String status) {
                 this.status = status;

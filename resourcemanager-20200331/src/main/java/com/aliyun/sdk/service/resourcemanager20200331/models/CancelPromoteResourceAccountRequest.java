@@ -55,7 +55,7 @@ public class CancelPromoteResourceAccountRequest extends Request {
         } 
 
         /**
-         * RecordId.
+         * The account record ID.
          */
         public Builder recordId(String recordId) {
             this.putQueryParameter("RecordId", recordId);

@@ -96,7 +96,12 @@ public class ListPoliciesRequest extends Request {
         } 
 
         /**
-         * Language.
+         * The language that is used to return the description of the system policy. Valid values:
+         * <p>
+         * 
+         * *   en: English
+         * *   zh-CN: Chinese
+         * *   ja: Japanese
          */
         public Builder language(String language) {
             this.putQueryParameter("Language", language);
@@ -105,7 +110,10 @@ public class ListPoliciesRequest extends Request {
         }
 
         /**
-         * PageNumber.
+         * The number of the page to return.
+         * <p>
+         * 
+         * Pages start from page 1. Default value: 1.
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -114,7 +122,10 @@ public class ListPoliciesRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * The number of entries to return on each page.
+         * <p>
+         * 
+         * Valid values: 1 to 100. Default value: 10.
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -123,7 +134,11 @@ public class ListPoliciesRequest extends Request {
         }
 
         /**
-         * PolicyType.
+         * The type of the policy. If you do not specify this parameter, the system lists all types of policies. Valid values:
+         * <p>
+         * 
+         * *   Custom: custom policy
+         * *   System: system policy
          */
         public Builder policyType(String policyType) {
             this.putQueryParameter("PolicyType", policyType);

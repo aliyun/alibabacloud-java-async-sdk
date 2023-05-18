@@ -115,7 +115,10 @@ public class DetachPolicyRequest extends Request {
         } 
 
         /**
-         * PolicyName.
+         * The name of the policy.
+         * <p>
+         * 
+         * The name must be 1 to 128 characters in length and can contain letters, digits, and hyphens (-).
          */
         public Builder policyName(String policyName) {
             this.putQueryParameter("PolicyName", policyName);
@@ -124,7 +127,11 @@ public class DetachPolicyRequest extends Request {
         }
 
         /**
-         * PolicyType.
+         * The type of the policy. Valid values:
+         * <p>
+         * 
+         * *   Custom: custom policy
+         * *   System: system policy
          */
         public Builder policyType(String policyType) {
             this.putQueryParameter("PolicyType", policyType);
@@ -133,7 +140,7 @@ public class DetachPolicyRequest extends Request {
         }
 
         /**
-         * PrincipalName.
+         * The name of the object to which the policy is attached.
          */
         public Builder principalName(String principalName) {
             this.putQueryParameter("PrincipalName", principalName);
@@ -142,7 +149,12 @@ public class DetachPolicyRequest extends Request {
         }
 
         /**
-         * PrincipalType.
+         * The type of the object to which the policy is attached. Valid values:
+         * <p>
+         * 
+         * *   IMSUser: RAM user
+         * *   IMSGroup: RAM user group
+         * *   ServiceRole: RAM role
          */
         public Builder principalType(String principalType) {
             this.putQueryParameter("PrincipalType", principalType);
@@ -151,7 +163,10 @@ public class DetachPolicyRequest extends Request {
         }
 
         /**
-         * ResourceGroupId.
+         * The ID of the resource group or the ID of the Alibaba Cloud account to which the resource group belongs.
+         * <p>
+         * 
+         * This parameter specifies the resource group or Alibaba Cloud account for which you want to revoke permissions.
          */
         public Builder resourceGroupId(String resourceGroupId) {
             this.putQueryParameter("ResourceGroupId", resourceGroupId);

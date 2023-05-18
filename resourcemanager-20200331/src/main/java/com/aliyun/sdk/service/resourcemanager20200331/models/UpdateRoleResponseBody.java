@@ -50,7 +50,7 @@ public class UpdateRoleResponseBody extends TeaModel {
         private Role role; 
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -58,7 +58,7 @@ public class UpdateRoleResponseBody extends TeaModel {
         }
 
         /**
-         * Role.
+         * The information of the RAM role.
          */
         public Builder role(Role role) {
             this.role = role;
@@ -194,7 +194,7 @@ public class UpdateRoleResponseBody extends TeaModel {
             private String updateDate; 
 
             /**
-             * Arn.
+             * The Alibaba Cloud Resource Name (ARN) of the RAM role.
              */
             public Builder arn(String arn) {
                 this.arn = arn;
@@ -202,7 +202,7 @@ public class UpdateRoleResponseBody extends TeaModel {
             }
 
             /**
-             * AssumeRolePolicyDocument.
+             * The document of the policy that specifies the trusted entity to assume the RAM role.
              */
             public Builder assumeRolePolicyDocument(String assumeRolePolicyDocument) {
                 this.assumeRolePolicyDocument = assumeRolePolicyDocument;
@@ -210,7 +210,7 @@ public class UpdateRoleResponseBody extends TeaModel {
             }
 
             /**
-             * CreateDate.
+             * The time when the RAM role was created.
              */
             public Builder createDate(String createDate) {
                 this.createDate = createDate;
@@ -218,7 +218,7 @@ public class UpdateRoleResponseBody extends TeaModel {
             }
 
             /**
-             * Description.
+             * The description of the RAM role.
              */
             public Builder description(String description) {
                 this.description = description;
@@ -226,7 +226,7 @@ public class UpdateRoleResponseBody extends TeaModel {
             }
 
             /**
-             * MaxSessionDuration.
+             * The maximum session duration of the RAM role.
              */
             public Builder maxSessionDuration(Long maxSessionDuration) {
                 this.maxSessionDuration = maxSessionDuration;
@@ -234,7 +234,7 @@ public class UpdateRoleResponseBody extends TeaModel {
             }
 
             /**
-             * RoleId.
+             * The ID of the RAM role.
              */
             public Builder roleId(String roleId) {
                 this.roleId = roleId;
@@ -242,7 +242,7 @@ public class UpdateRoleResponseBody extends TeaModel {
             }
 
             /**
-             * RoleName.
+             * The name of the RAM role.
              */
             public Builder roleName(String roleName) {
                 this.roleName = roleName;
@@ -250,7 +250,7 @@ public class UpdateRoleResponseBody extends TeaModel {
             }
 
             /**
-             * RolePrincipalName.
+             * The name of the RAM role after authorization.
              */
             public Builder rolePrincipalName(String rolePrincipalName) {
                 this.rolePrincipalName = rolePrincipalName;
@@ -258,7 +258,7 @@ public class UpdateRoleResponseBody extends TeaModel {
             }
 
             /**
-             * UpdateDate.
+             * The time when the RAM role was updated.
              */
             public Builder updateDate(String updateDate) {
                 this.updateDate = updateDate;

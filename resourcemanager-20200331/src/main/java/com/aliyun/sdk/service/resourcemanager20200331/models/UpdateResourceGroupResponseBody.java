@@ -50,7 +50,7 @@ public class UpdateResourceGroupResponseBody extends TeaModel {
         private ResourceGroup resourceGroup; 
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -58,7 +58,7 @@ public class UpdateResourceGroupResponseBody extends TeaModel {
         }
 
         /**
-         * ResourceGroup.
+         * The information of the resource group.
          */
         public Builder resourceGroup(ResourceGroup resourceGroup) {
             this.resourceGroup = resourceGroup;
@@ -146,7 +146,7 @@ public class UpdateResourceGroupResponseBody extends TeaModel {
             private String name; 
 
             /**
-             * AccountId.
+             * The ID of the Alibaba Cloud account to which the resource group belongs.
              */
             public Builder accountId(String accountId) {
                 this.accountId = accountId;
@@ -154,7 +154,7 @@ public class UpdateResourceGroupResponseBody extends TeaModel {
             }
 
             /**
-             * CreateDate.
+             * The time when the resource group was created. The time is displayed in UTC.
              */
             public Builder createDate(String createDate) {
                 this.createDate = createDate;
@@ -162,7 +162,7 @@ public class UpdateResourceGroupResponseBody extends TeaModel {
             }
 
             /**
-             * DisplayName.
+             * The display name of the resource group.
              */
             public Builder displayName(String displayName) {
                 this.displayName = displayName;
@@ -170,7 +170,7 @@ public class UpdateResourceGroupResponseBody extends TeaModel {
             }
 
             /**
-             * Id.
+             * The ID of the resource group.
              */
             public Builder id(String id) {
                 this.id = id;
@@ -178,7 +178,7 @@ public class UpdateResourceGroupResponseBody extends TeaModel {
             }
 
             /**
-             * Name.
+             * The unique identifier of the resource group.
              */
             public Builder name(String name) {
                 this.name = name;

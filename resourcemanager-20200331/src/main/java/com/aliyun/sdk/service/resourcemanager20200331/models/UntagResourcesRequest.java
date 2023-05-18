@@ -97,7 +97,11 @@ public class UntagResourcesRequest extends Request {
         } 
 
         /**
-         * All.
+         * Specifies whether to remove all tags from the specified resource groups or members. Valid values:
+         * <p>
+         * 
+         * *   false (default value)
+         * *   true
          */
         public Builder all(Boolean all) {
             this.putQueryParameter("All", all);
@@ -115,7 +119,13 @@ public class UntagResourcesRequest extends Request {
         }
 
         /**
-         * ResourceType.
+         * The type of the objects from which you want to remove tags. Valid values:
+         * <p>
+         * 
+         * *   ResourceGroup: resource group. This is the default value.
+         * *   Account: member.
+         * 
+         * >  This parameter is required if you remove tags from members in a resource directory.
          */
         public Builder resourceType(String resourceType) {
             this.putQueryParameter("ResourceType", resourceType);

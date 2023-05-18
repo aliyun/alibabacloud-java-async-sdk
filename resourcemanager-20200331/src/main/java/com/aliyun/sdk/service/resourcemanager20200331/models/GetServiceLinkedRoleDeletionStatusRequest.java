@@ -54,7 +54,7 @@ public class GetServiceLinkedRoleDeletionStatusRequest extends Request {
         } 
 
         /**
-         * DeletionTaskId.
+         * The ID of the deletion task.
          */
         public Builder deletionTaskId(String deletionTaskId) {
             this.putQueryParameter("DeletionTaskId", deletionTaskId);

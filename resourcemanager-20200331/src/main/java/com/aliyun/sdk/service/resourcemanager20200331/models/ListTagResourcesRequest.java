@@ -110,7 +110,10 @@ public class ListTagResourcesRequest extends Request {
         } 
 
         /**
-         * MaxResults.
+         * The number of entries to return on each page.
+         * <p>
+         * 
+         * Valid values: 1 to 100. Default value: 10.
          */
         public Builder maxResults(Integer maxResults) {
             this.putQueryParameter("MaxResults", maxResults);
@@ -119,7 +122,7 @@ public class ListTagResourcesRequest extends Request {
         }
 
         /**
-         * NextToken.
+         * The token that is used to start the next query.
          */
         public Builder nextToken(String nextToken) {
             this.putQueryParameter("NextToken", nextToken);
@@ -137,7 +140,11 @@ public class ListTagResourcesRequest extends Request {
         }
 
         /**
-         * ResourceType.
+         * The type of the objects whose tags you want to query. This parameter specifies a filter condition for the query. Valid values:
+         * <p>
+         * 
+         * *   ResourceGroup: resource group. This is the default value.
+         * *   Account: member.
          */
         public Builder resourceType(String resourceType) {
             this.putQueryParameter("ResourceType", resourceType);
@@ -200,7 +207,7 @@ public class ListTagResourcesRequest extends Request {
             private String value; 
 
             /**
-             * Key.
+             * A tag key.
              */
             public Builder key(String key) {
                 this.key = key;
@@ -208,7 +215,7 @@ public class ListTagResourcesRequest extends Request {
             }
 
             /**
-             * Value.
+             * A tag value.
              */
             public Builder value(String value) {
                 this.value = value;

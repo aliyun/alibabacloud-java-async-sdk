@@ -97,7 +97,7 @@ public class UpdateRoleRequest extends Request {
         } 
 
         /**
-         * NewAssumeRolePolicyDocument.
+         * The document of the policy that specifies the trusted entity to assume the RAM role.
          */
         public Builder newAssumeRolePolicyDocument(String newAssumeRolePolicyDocument) {
             this.putQueryParameter("NewAssumeRolePolicyDocument", newAssumeRolePolicyDocument);
@@ -106,7 +106,10 @@ public class UpdateRoleRequest extends Request {
         }
 
         /**
-         * NewDescription.
+         * The description of the RAM role.
+         * <p>
+         * 
+         * The description must be 1 to 1,024 characters in length.
          */
         public Builder newDescription(String newDescription) {
             this.putQueryParameter("NewDescription", newDescription);
@@ -115,7 +118,12 @@ public class UpdateRoleRequest extends Request {
         }
 
         /**
-         * NewMaxSessionDuration.
+         * The maximum session duration of the RAM role.
+         * <p>
+         * 
+         * Unit: seconds. Valid values: 3600 to 43200. Default value: 3600.
+         * 
+         * If you do not specify this parameter, the default value is used.
          */
         public Builder newMaxSessionDuration(Long newMaxSessionDuration) {
             this.putQueryParameter("NewMaxSessionDuration", newMaxSessionDuration);
@@ -124,7 +132,10 @@ public class UpdateRoleRequest extends Request {
         }
 
         /**
-         * RoleName.
+         * The name of the RAM role.
+         * <p>
+         * 
+         * The name must be 1 to 64 characters in length and can contain letters, digits, periods (.),and hyphens (-).
          */
         public Builder roleName(String roleName) {
             this.putQueryParameter("RoleName", roleName);

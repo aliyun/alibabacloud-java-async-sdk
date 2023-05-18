@@ -166,7 +166,10 @@ public class ListResourceGroupsRequest extends Request {
         } 
 
         /**
-         * DisplayName.
+         * The display name of the resource group. This parameter specifies a filter condition for the query. Fuzzy match is supported.
+         * <p>
+         * 
+         * The display name can be a maximum of 50 characters in length.
          */
         public Builder displayName(String displayName) {
             this.putQueryParameter("DisplayName", displayName);
@@ -175,7 +178,13 @@ public class ListResourceGroupsRequest extends Request {
         }
 
         /**
-         * IncludeTags.
+         * Specifies whether to return the information of tags. Valid values:
+         * <p>
+         * 
+         * *   false (default value)
+         * *   true
+         * 
+         * >  If you configure the Tag parameter, the system returns the information of tags regardless of the setting of the `IncludeTags` parameter.
          */
         public Builder includeTags(Boolean includeTags) {
             this.putQueryParameter("IncludeTags", includeTags);
@@ -184,7 +193,10 @@ public class ListResourceGroupsRequest extends Request {
         }
 
         /**
-         * Name.
+         * The identifier of the resource group. This parameter specifies a filter condition for the query. Fuzzy match is supported.
+         * <p>
+         * 
+         * The identifier can be a maximum of 50 characters in length and can contain letters, digits, and hyphens (-).
          */
         public Builder name(String name) {
             this.putQueryParameter("Name", name);
@@ -193,7 +205,10 @@ public class ListResourceGroupsRequest extends Request {
         }
 
         /**
-         * PageNumber.
+         * The number of the page to return.
+         * <p>
+         * 
+         * Pages start from page 1. Default value: 1.
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -202,7 +217,10 @@ public class ListResourceGroupsRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * The number of entries to return on each page.
+         * <p>
+         * 
+         * Valid values: 1 to 100. Default value: 10.
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -211,7 +229,12 @@ public class ListResourceGroupsRequest extends Request {
         }
 
         /**
-         * ResourceGroupId.
+         * The ID of the resource group. This parameter specifies a filter condition for the query.
+         * <p>
+         * 
+         * The ID can be a maximum of 18 characters in length and must start with `rg-`.
+         * 
+         * >  This parameter is incorporated into the `ResourceGroupIds` parameter. If you configure both the `ResourceGroupId` and `ResourceGroupIds` parameters, the value of the `ResourceGroupIds` parameter prevails.
          */
         public Builder resourceGroupId(String resourceGroupId) {
             this.putQueryParameter("ResourceGroupId", resourceGroupId);
@@ -220,7 +243,12 @@ public class ListResourceGroupsRequest extends Request {
         }
 
         /**
-         * ResourceGroupIds.
+         * The IDs of the resource groups. This parameter specifies a filter condition for the query.
+         * <p>
+         * 
+         * You can specify a maximum of 100 resource group IDs.
+         * 
+         * >  If you configure both the `ResourceGroupId` and `ResourceGroupIds` parameters, the value of the `ResourceGroupIds` parameter prevails.
          */
         public Builder resourceGroupIds(java.util.List < String > resourceGroupIds) {
             this.putQueryParameter("ResourceGroupIds", resourceGroupIds);
@@ -229,7 +257,12 @@ public class ListResourceGroupsRequest extends Request {
         }
 
         /**
-         * Status.
+         * The status of the resource group. This parameter specifies a filter condition for the query. Valid values:
+         * <p>
+         * 
+         * *   Creating: The resource group is being created.
+         * *   OK: The resource group is created.
+         * *   PendingDelete: The resource group is waiting to be deleted.
          */
         public Builder status(String status) {
             this.putQueryParameter("Status", status);
@@ -238,7 +271,7 @@ public class ListResourceGroupsRequest extends Request {
         }
 
         /**
-         * Tag.
+         * The tag. This parameter specifies a filter condition for the query.
          */
         public Builder tag(java.util.List < Tag> tag) {
             this.putQueryParameter("Tag", tag);
@@ -292,7 +325,7 @@ public class ListResourceGroupsRequest extends Request {
             private String value; 
 
             /**
-             * Key.
+             * The tag key.
              */
             public Builder key(String key) {
                 this.key = key;
@@ -300,7 +333,7 @@ public class ListResourceGroupsRequest extends Request {
             }
 
             /**
-             * Value.
+             * The tag value.
              */
             public Builder value(String value) {
                 this.value = value;

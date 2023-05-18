@@ -50,7 +50,7 @@ public class GetPolicyResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * Policy.
+         * The information of the policy.
          */
         public Builder policy(Policy policy) {
             this.policy = policy;
@@ -58,7 +58,7 @@ public class GetPolicyResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -182,7 +182,7 @@ public class GetPolicyResponseBody extends TeaModel {
             private String updateDate; 
 
             /**
-             * AttachmentCount.
+             * The number of times the policy is referenced.
              */
             public Builder attachmentCount(Integer attachmentCount) {
                 this.attachmentCount = attachmentCount;
@@ -190,7 +190,7 @@ public class GetPolicyResponseBody extends TeaModel {
             }
 
             /**
-             * CreateDate.
+             * The time when the policy was created.
              */
             public Builder createDate(String createDate) {
                 this.createDate = createDate;
@@ -198,7 +198,7 @@ public class GetPolicyResponseBody extends TeaModel {
             }
 
             /**
-             * DefaultVersion.
+             * The default version of the policy.
              */
             public Builder defaultVersion(String defaultVersion) {
                 this.defaultVersion = defaultVersion;
@@ -206,7 +206,7 @@ public class GetPolicyResponseBody extends TeaModel {
             }
 
             /**
-             * Description.
+             * The description of the policy.
              */
             public Builder description(String description) {
                 this.description = description;
@@ -214,7 +214,7 @@ public class GetPolicyResponseBody extends TeaModel {
             }
 
             /**
-             * PolicyDocument.
+             * The document of the policy.
              */
             public Builder policyDocument(String policyDocument) {
                 this.policyDocument = policyDocument;
@@ -222,7 +222,7 @@ public class GetPolicyResponseBody extends TeaModel {
             }
 
             /**
-             * PolicyName.
+             * The name of the policy.
              */
             public Builder policyName(String policyName) {
                 this.policyName = policyName;
@@ -230,7 +230,11 @@ public class GetPolicyResponseBody extends TeaModel {
             }
 
             /**
-             * PolicyType.
+             * The type of the policy. Valid values:
+             * <p>
+             * 
+             * *   Custom: custom policy
+             * *   System: system policy
              */
             public Builder policyType(String policyType) {
                 this.policyType = policyType;
@@ -238,7 +242,7 @@ public class GetPolicyResponseBody extends TeaModel {
             }
 
             /**
-             * UpdateDate.
+             * The time when the policy was updated.
              */
             public Builder updateDate(String updateDate) {
                 this.updateDate = updateDate;

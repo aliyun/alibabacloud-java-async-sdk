@@ -50,7 +50,7 @@ public class CreatePolicyResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * Policy.
+         * The information of the policy.
          */
         public Builder policy(Policy policy) {
             this.policy = policy;
@@ -58,7 +58,7 @@ public class CreatePolicyResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -146,7 +146,7 @@ public class CreatePolicyResponseBody extends TeaModel {
             private String policyType; 
 
             /**
-             * CreateDate.
+             * The time when the policy was created.
              */
             public Builder createDate(String createDate) {
                 this.createDate = createDate;
@@ -154,7 +154,7 @@ public class CreatePolicyResponseBody extends TeaModel {
             }
 
             /**
-             * DefaultVersion.
+             * The version number of the policy. Default value: v1.
              */
             public Builder defaultVersion(String defaultVersion) {
                 this.defaultVersion = defaultVersion;
@@ -162,7 +162,7 @@ public class CreatePolicyResponseBody extends TeaModel {
             }
 
             /**
-             * Description.
+             * The description of the policy.
              */
             public Builder description(String description) {
                 this.description = description;
@@ -170,7 +170,7 @@ public class CreatePolicyResponseBody extends TeaModel {
             }
 
             /**
-             * PolicyName.
+             * The name of the policy.
              */
             public Builder policyName(String policyName) {
                 this.policyName = policyName;
@@ -178,7 +178,11 @@ public class CreatePolicyResponseBody extends TeaModel {
             }
 
             /**
-             * PolicyType.
+             * The type of the policy. Valid values:
+             * <p>
+             * 
+             * *   Custom: custom policy
+             * *   System: system policy
              */
             public Builder policyType(String policyType) {
                 this.policyType = policyType;

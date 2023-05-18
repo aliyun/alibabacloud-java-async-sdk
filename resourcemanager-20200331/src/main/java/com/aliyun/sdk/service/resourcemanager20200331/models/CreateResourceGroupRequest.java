@@ -70,7 +70,7 @@ public class CreateResourceGroupRequest extends Request {
         } 
 
         /**
-         * DisplayName.
+         * The ID of the request.
          */
         public Builder displayName(String displayName) {
             this.putQueryParameter("DisplayName", displayName);
@@ -79,7 +79,10 @@ public class CreateResourceGroupRequest extends Request {
         }
 
         /**
-         * Name.
+         * The display name of the resource group.
+         * <p>
+         * 
+         * The name must be 1 to 50 characters in length.
          */
         public Builder name(String name) {
             this.putQueryParameter("Name", name);

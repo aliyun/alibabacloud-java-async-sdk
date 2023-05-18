@@ -55,7 +55,7 @@ public class DeleteServiceLinkedRoleRequest extends Request {
         } 
 
         /**
-         * RoleName.
+         * The name of the role.
          */
         public Builder roleName(String roleName) {
             this.putQueryParameter("RoleName", roleName);

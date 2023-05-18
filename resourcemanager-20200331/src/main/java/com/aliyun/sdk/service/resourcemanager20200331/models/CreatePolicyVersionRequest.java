@@ -84,7 +84,10 @@ public class CreatePolicyVersionRequest extends Request {
         } 
 
         /**
-         * PolicyDocument.
+         * The document of the policy.
+         * <p>
+         * 
+         * The document must be 1 to 2,048 characters in length.
          */
         public Builder policyDocument(String policyDocument) {
             this.putQueryParameter("PolicyDocument", policyDocument);
@@ -93,7 +96,10 @@ public class CreatePolicyVersionRequest extends Request {
         }
 
         /**
-         * PolicyName.
+         * The name of the policy.
+         * <p>
+         * 
+         * The name must be 1 to 128 characters in length and can contain letters, digits, and hyphens (-).
          */
         public Builder policyName(String policyName) {
             this.putQueryParameter("PolicyName", policyName);
@@ -102,7 +108,13 @@ public class CreatePolicyVersionRequest extends Request {
         }
 
         /**
-         * SetAsDefault.
+         * Specifies whether to set the policy version as the default version. Valid values:
+         * <p>
+         * 
+         * *   false: The policy version is not set as the default version.
+         * *   true: The policy version is set as the default version.
+         * 
+         * Default value: false.
          */
         public Builder setAsDefault(Boolean setAsDefault) {
             this.putQueryParameter("SetAsDefault", setAsDefault);

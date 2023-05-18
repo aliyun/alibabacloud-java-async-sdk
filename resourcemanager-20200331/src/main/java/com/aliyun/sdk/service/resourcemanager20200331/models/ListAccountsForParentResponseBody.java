@@ -86,7 +86,7 @@ public class ListAccountsForParentResponseBody extends TeaModel {
         private Integer totalCount; 
 
         /**
-         * Accounts.
+         * The information of the members.
          */
         public Builder accounts(Accounts accounts) {
             this.accounts = accounts;
@@ -94,7 +94,7 @@ public class ListAccountsForParentResponseBody extends TeaModel {
         }
 
         /**
-         * PageNumber.
+         * The page number of the returned page.
          */
         public Builder pageNumber(Integer pageNumber) {
             this.pageNumber = pageNumber;
@@ -102,7 +102,7 @@ public class ListAccountsForParentResponseBody extends TeaModel {
         }
 
         /**
-         * PageSize.
+         * The number of entries returned per page.
          */
         public Builder pageSize(Integer pageSize) {
             this.pageSize = pageSize;
@@ -110,7 +110,7 @@ public class ListAccountsForParentResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -118,7 +118,7 @@ public class ListAccountsForParentResponseBody extends TeaModel {
         }
 
         /**
-         * TotalCount.
+         * The total number of entries returned.
          */
         public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;
@@ -170,7 +170,7 @@ public class ListAccountsForParentResponseBody extends TeaModel {
             private String value; 
 
             /**
-             * Key.
+             * A tag key.
              */
             public Builder key(String key) {
                 this.key = key;
@@ -178,7 +178,7 @@ public class ListAccountsForParentResponseBody extends TeaModel {
             }
 
             /**
-             * Value.
+             * A tag value.
              */
             public Builder value(String value) {
                 this.value = value;
@@ -368,7 +368,7 @@ public class ListAccountsForParentResponseBody extends TeaModel {
             private String type; 
 
             /**
-             * AccountId.
+             * The Alibaba Cloud account ID of the member.
              */
             public Builder accountId(String accountId) {
                 this.accountId = accountId;
@@ -376,7 +376,7 @@ public class ListAccountsForParentResponseBody extends TeaModel {
             }
 
             /**
-             * DisplayName.
+             * The display name of the member.
              */
             public Builder displayName(String displayName) {
                 this.displayName = displayName;
@@ -384,7 +384,7 @@ public class ListAccountsForParentResponseBody extends TeaModel {
             }
 
             /**
-             * FolderId.
+             * The ID of the folder.
              */
             public Builder folderId(String folderId) {
                 this.folderId = folderId;
@@ -392,7 +392,11 @@ public class ListAccountsForParentResponseBody extends TeaModel {
             }
 
             /**
-             * JoinMethod.
+             * The way in which the member joins the resource directory.
+             * <p>
+             * 
+             * *   invited: The member is invited to join the resource directory.
+             * *   created: The member is directly created in the resource directory.
              */
             public Builder joinMethod(String joinMethod) {
                 this.joinMethod = joinMethod;
@@ -400,7 +404,7 @@ public class ListAccountsForParentResponseBody extends TeaModel {
             }
 
             /**
-             * JoinTime.
+             * The time when the member joined the resource directory. The time is displayed in UTC.
              */
             public Builder joinTime(String joinTime) {
                 this.joinTime = joinTime;
@@ -408,7 +412,7 @@ public class ListAccountsForParentResponseBody extends TeaModel {
             }
 
             /**
-             * ModifyTime.
+             * The time when the member was modified. The time is displayed in UTC.
              */
             public Builder modifyTime(String modifyTime) {
                 this.modifyTime = modifyTime;
@@ -416,7 +420,7 @@ public class ListAccountsForParentResponseBody extends TeaModel {
             }
 
             /**
-             * ResourceDirectoryId.
+             * The ID of the resource directory.
              */
             public Builder resourceDirectoryId(String resourceDirectoryId) {
                 this.resourceDirectoryId = resourceDirectoryId;
@@ -424,7 +428,16 @@ public class ListAccountsForParentResponseBody extends TeaModel {
             }
 
             /**
-             * Status.
+             * The status of the member. Valid values:
+             * <p>
+             * 
+             * *   CreateSuccess: The member is created.
+             * *   PromoteVerifying: The upgrade of the member is being confirmed.
+             * *   PromoteFailed: The upgrade of the member fails.
+             * *   PromoteExpired: The upgrade of the member expires.
+             * *   PromoteCancelled: The upgrade of the member is canceled.
+             * *   PromoteSuccess: The member is upgraded.
+             * *   InviteSuccess: The member accepts the invitation.
              */
             public Builder status(String status) {
                 this.status = status;
@@ -432,7 +445,7 @@ public class ListAccountsForParentResponseBody extends TeaModel {
             }
 
             /**
-             * Tags.
+             * The tags that are added to the member.
              */
             public Builder tags(Tags tags) {
                 this.tags = tags;
@@ -440,7 +453,11 @@ public class ListAccountsForParentResponseBody extends TeaModel {
             }
 
             /**
-             * Type.
+             * The type of the member.
+             * <p>
+             * 
+             * *   CloudAccount: cloud account
+             * *   ResourceAccount: resource account
              */
             public Builder type(String type) {
                 this.type = type;

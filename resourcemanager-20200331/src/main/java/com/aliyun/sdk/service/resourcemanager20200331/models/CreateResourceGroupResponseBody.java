@@ -50,7 +50,7 @@ public class CreateResourceGroupResponseBody extends TeaModel {
         private ResourceGroup resourceGroup; 
 
         /**
-         * RequestId.
+         * The information of the resource group.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -58,7 +58,7 @@ public class CreateResourceGroupResponseBody extends TeaModel {
         }
 
         /**
-         * ResourceGroup.
+         * The display name of the resource group.
          */
         public Builder resourceGroup(ResourceGroup resourceGroup) {
             this.resourceGroup = resourceGroup;
@@ -110,7 +110,7 @@ public class CreateResourceGroupResponseBody extends TeaModel {
             private String status; 
 
             /**
-             * RegionId.
+             * The ID of the Alibaba Cloud account to which the resource group belongs.
              */
             public Builder regionId(String regionId) {
                 this.regionId = regionId;
@@ -118,7 +118,7 @@ public class CreateResourceGroupResponseBody extends TeaModel {
             }
 
             /**
-             * Status.
+             * The region ID.
              */
             public Builder status(String status) {
                 this.status = status;
@@ -272,7 +272,7 @@ public class CreateResourceGroupResponseBody extends TeaModel {
             private String status; 
 
             /**
-             * AccountId.
+             * The unique identifier of the resource group.
              */
             public Builder accountId(String accountId) {
                 this.accountId = accountId;
@@ -280,7 +280,7 @@ public class CreateResourceGroupResponseBody extends TeaModel {
             }
 
             /**
-             * CreateDate.
+             * The ID of the resource group.
              */
             public Builder createDate(String createDate) {
                 this.createDate = createDate;
@@ -288,7 +288,11 @@ public class CreateResourceGroupResponseBody extends TeaModel {
             }
 
             /**
-             * DisplayName.
+             * The status of the resource group. Valid values:
+             * <p>
+             * 
+             * *   Creating: The resource group is being created.
+             * *   OK: The resource group is created.
              */
             public Builder displayName(String displayName) {
                 this.displayName = displayName;
@@ -304,7 +308,7 @@ public class CreateResourceGroupResponseBody extends TeaModel {
             }
 
             /**
-             * Name.
+             * The time when the resource group was created. The time is displayed in UTC.
              */
             public Builder name(String name) {
                 this.name = name;
@@ -312,7 +316,11 @@ public class CreateResourceGroupResponseBody extends TeaModel {
             }
 
             /**
-             * RegionStatuses.
+             * The status of the resource group. Valid values:
+             * <p>
+             * 
+             * *   Creating: The resource group is being created.
+             * *   OK: The resource group is created.
              */
             public Builder regionStatuses(RegionStatuses regionStatuses) {
                 this.regionStatuses = regionStatuses;
@@ -320,7 +328,7 @@ public class CreateResourceGroupResponseBody extends TeaModel {
             }
 
             /**
-             * Status.
+             * The status of the resource group in all regions.
              */
             public Builder status(String status) {
                 this.status = status;

@@ -50,7 +50,7 @@ public class ResendCreateCloudAccountEmailResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * Account.
+         * The information of the member account.
          */
         public Builder account(Account account) {
             this.account = account;
@@ -58,7 +58,7 @@ public class ResendCreateCloudAccountEmailResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -218,7 +218,7 @@ public class ResendCreateCloudAccountEmailResponseBody extends TeaModel {
             private String type; 
 
             /**
-             * AccountId.
+             * The ID of the account.
              */
             public Builder accountId(String accountId) {
                 this.accountId = accountId;
@@ -226,7 +226,7 @@ public class ResendCreateCloudAccountEmailResponseBody extends TeaModel {
             }
 
             /**
-             * AccountName.
+             * The name of the account.
              */
             public Builder accountName(String accountName) {
                 this.accountName = accountName;
@@ -234,7 +234,7 @@ public class ResendCreateCloudAccountEmailResponseBody extends TeaModel {
             }
 
             /**
-             * DisplayName.
+             * The display name of the member account.
              */
             public Builder displayName(String displayName) {
                 this.displayName = displayName;
@@ -242,7 +242,7 @@ public class ResendCreateCloudAccountEmailResponseBody extends TeaModel {
             }
 
             /**
-             * FolderId.
+             * The ID of the folder.
              */
             public Builder folderId(String folderId) {
                 this.folderId = folderId;
@@ -250,7 +250,11 @@ public class ResendCreateCloudAccountEmailResponseBody extends TeaModel {
             }
 
             /**
-             * JoinMethod.
+             * The way in which the member account joined the resource directory. Valid values:
+             * <p>
+             * 
+             * *   invited: The member account is invited to join the resource directory.
+             * *   created: The member account is directly created in the resource directory.
              */
             public Builder joinMethod(String joinMethod) {
                 this.joinMethod = joinMethod;
@@ -258,7 +262,7 @@ public class ResendCreateCloudAccountEmailResponseBody extends TeaModel {
             }
 
             /**
-             * JoinTime.
+             * The time when the member account joined the resource directory.
              */
             public Builder joinTime(String joinTime) {
                 this.joinTime = joinTime;
@@ -266,7 +270,7 @@ public class ResendCreateCloudAccountEmailResponseBody extends TeaModel {
             }
 
             /**
-             * ModifyTime.
+             * The time when the member account was modified.
              */
             public Builder modifyTime(String modifyTime) {
                 this.modifyTime = modifyTime;
@@ -274,7 +278,7 @@ public class ResendCreateCloudAccountEmailResponseBody extends TeaModel {
             }
 
             /**
-             * RecordId.
+             * The account record ID.
              */
             public Builder recordId(String recordId) {
                 this.recordId = recordId;
@@ -282,7 +286,7 @@ public class ResendCreateCloudAccountEmailResponseBody extends TeaModel {
             }
 
             /**
-             * ResourceDirectoryId.
+             * The ID of the resource directory.
              */
             public Builder resourceDirectoryId(String resourceDirectoryId) {
                 this.resourceDirectoryId = resourceDirectoryId;
@@ -290,7 +294,21 @@ public class ResendCreateCloudAccountEmailResponseBody extends TeaModel {
             }
 
             /**
-             * Status.
+             * The status of the member account. Valid values:
+             * <p>
+             * 
+             * *   CreateSuccess: The member account is created.
+             * *   CreateVerifying: The creation of the member account is under confirmation.
+             * *   CreateFailed: The member account failed to be created.
+             * *   CreateExpired: The creation of the member account expired.
+             * *   CreateCancelled: The creation of the member account is canceled.
+             * *   PromoteVerifying: The upgrade of the member account is under confirmation.
+             * *   PromoteFailed: The member account failed to be upgraded.
+             * *   PromoteExpired: The upgrade of the member account expired.
+             * *   PromoteCancelled: The upgrade of the member account is canceled.
+             * *   PromoteSuccess: The member account is upgraded.
+             * *   InviteSuccess: The owner of the member account accepted the invitation.
+             * *   Removed: The member account is removed from the resource directory.
              */
             public Builder status(String status) {
                 this.status = status;
@@ -298,7 +316,7 @@ public class ResendCreateCloudAccountEmailResponseBody extends TeaModel {
             }
 
             /**
-             * Type.
+             * The type of the member account. The value CloudAccount indicates that the member account is a cloud account.
              */
             public Builder type(String type) {
                 this.type = type;

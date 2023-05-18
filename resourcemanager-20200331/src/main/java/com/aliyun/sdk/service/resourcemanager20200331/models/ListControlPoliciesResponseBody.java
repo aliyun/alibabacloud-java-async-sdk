@@ -86,7 +86,7 @@ public class ListControlPoliciesResponseBody extends TeaModel {
         private Integer totalCount; 
 
         /**
-         * ControlPolicies.
+         * The access control policies.
          */
         public Builder controlPolicies(ControlPolicies controlPolicies) {
             this.controlPolicies = controlPolicies;
@@ -94,7 +94,7 @@ public class ListControlPoliciesResponseBody extends TeaModel {
         }
 
         /**
-         * PageNumber.
+         * The number of the returned page.
          */
         public Builder pageNumber(Integer pageNumber) {
             this.pageNumber = pageNumber;
@@ -102,7 +102,7 @@ public class ListControlPoliciesResponseBody extends TeaModel {
         }
 
         /**
-         * PageSize.
+         * The number of entries returned per page.
          */
         public Builder pageSize(Integer pageSize) {
             this.pageSize = pageSize;
@@ -110,7 +110,7 @@ public class ListControlPoliciesResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -118,7 +118,7 @@ public class ListControlPoliciesResponseBody extends TeaModel {
         }
 
         /**
-         * TotalCount.
+         * The number of access control policies.
          */
         public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;
@@ -242,7 +242,7 @@ public class ListControlPoliciesResponseBody extends TeaModel {
             private String updateDate; 
 
             /**
-             * AttachmentCount.
+             * The number of times that the access control policy is referenced.
              */
             public Builder attachmentCount(String attachmentCount) {
                 this.attachmentCount = attachmentCount;
@@ -250,7 +250,7 @@ public class ListControlPoliciesResponseBody extends TeaModel {
             }
 
             /**
-             * CreateDate.
+             * The time when the access control policy was created.
              */
             public Builder createDate(String createDate) {
                 this.createDate = createDate;
@@ -258,7 +258,7 @@ public class ListControlPoliciesResponseBody extends TeaModel {
             }
 
             /**
-             * Description.
+             * The description of the access control policy.
              */
             public Builder description(String description) {
                 this.description = description;
@@ -266,7 +266,11 @@ public class ListControlPoliciesResponseBody extends TeaModel {
             }
 
             /**
-             * EffectScope.
+             * The effective scope of the access control policy. Valid values:
+             * <p>
+             * 
+             * - All: The access control policy is in effect for Alibaba Cloud accounts, RAM users, and RAM roles.
+             * - RAM: The access control policy is in effect only for RAM users and RAM roles.
              */
             public Builder effectScope(String effectScope) {
                 this.effectScope = effectScope;
@@ -274,7 +278,7 @@ public class ListControlPoliciesResponseBody extends TeaModel {
             }
 
             /**
-             * PolicyId.
+             * The ID of the access control policy.
              */
             public Builder policyId(String policyId) {
                 this.policyId = policyId;
@@ -282,7 +286,7 @@ public class ListControlPoliciesResponseBody extends TeaModel {
             }
 
             /**
-             * PolicyName.
+             * The name of the access control policy.
              */
             public Builder policyName(String policyName) {
                 this.policyName = policyName;
@@ -290,7 +294,11 @@ public class ListControlPoliciesResponseBody extends TeaModel {
             }
 
             /**
-             * PolicyType.
+             * The type of the access control policy. Valid values:
+             * <p>
+             * 
+             * - System: system access control policy
+             * - Custom: custom access control policy
              */
             public Builder policyType(String policyType) {
                 this.policyType = policyType;
@@ -298,7 +306,7 @@ public class ListControlPoliciesResponseBody extends TeaModel {
             }
 
             /**
-             * UpdateDate.
+             * The time when the access control policy was updated.
              */
             public Builder updateDate(String updateDate) {
                 this.updateDate = updateDate;

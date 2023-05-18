@@ -70,7 +70,7 @@ public class MoveResourcesRequest extends Request {
         } 
 
         /**
-         * ResourceGroupId.
+         * The ID of the resource group to which you want to move the resources.
          */
         public Builder resourceGroupId(String resourceGroupId) {
             this.putQueryParameter("ResourceGroupId", resourceGroupId);
@@ -79,7 +79,10 @@ public class MoveResourcesRequest extends Request {
         }
 
         /**
-         * Resources.
+         * The resources that you want to move.
+         * <p>
+         * 
+         * >  You can move a maximum of 10 resources at a time. If you want to move more than 10 resources, move them in batches.
          */
         public Builder resources(java.util.List < Resources> resources) {
             this.putQueryParameter("Resources", resources);
@@ -157,7 +160,7 @@ public class MoveResourcesRequest extends Request {
             private String service; 
 
             /**
-             * RegionId.
+             * The region ID of the resource.
              */
             public Builder regionId(String regionId) {
                 this.regionId = regionId;
@@ -165,7 +168,7 @@ public class MoveResourcesRequest extends Request {
             }
 
             /**
-             * ResourceId.
+             * The ID of the resource.
              */
             public Builder resourceId(String resourceId) {
                 this.resourceId = resourceId;
@@ -173,7 +176,7 @@ public class MoveResourcesRequest extends Request {
             }
 
             /**
-             * ResourceType.
+             * The type of the resource.
              */
             public Builder resourceType(String resourceType) {
                 this.resourceType = resourceType;
@@ -181,7 +184,7 @@ public class MoveResourcesRequest extends Request {
             }
 
             /**
-             * Service.
+             * The ID of the Alibaba Cloud service to which the resource belongs.
              */
             public Builder service(String service) {
                 this.service = service;

@@ -86,7 +86,7 @@ public class ListDelegatedAdministratorsResponseBody extends TeaModel {
         private Long totalCount; 
 
         /**
-         * Accounts.
+         * The information of the delegated administrator accounts.
          */
         public Builder accounts(Accounts accounts) {
             this.accounts = accounts;
@@ -94,7 +94,7 @@ public class ListDelegatedAdministratorsResponseBody extends TeaModel {
         }
 
         /**
-         * PageNumber.
+         * The page number of the returned page.
          */
         public Builder pageNumber(Long pageNumber) {
             this.pageNumber = pageNumber;
@@ -102,7 +102,7 @@ public class ListDelegatedAdministratorsResponseBody extends TeaModel {
         }
 
         /**
-         * PageSize.
+         * The number of entries returned per page.
          */
         public Builder pageSize(Long pageSize) {
             this.pageSize = pageSize;
@@ -110,7 +110,7 @@ public class ListDelegatedAdministratorsResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -118,7 +118,7 @@ public class ListDelegatedAdministratorsResponseBody extends TeaModel {
         }
 
         /**
-         * TotalCount.
+         * The total number of entries returned.
          */
         public Builder totalCount(Long totalCount) {
             this.totalCount = totalCount;
@@ -206,7 +206,7 @@ public class ListDelegatedAdministratorsResponseBody extends TeaModel {
             private String servicePrincipal; 
 
             /**
-             * AccountId.
+             * The ID of the member.
              */
             public Builder accountId(String accountId) {
                 this.accountId = accountId;
@@ -214,7 +214,7 @@ public class ListDelegatedAdministratorsResponseBody extends TeaModel {
             }
 
             /**
-             * DelegationEnabledTime.
+             * The time when the member was specified as a delegated administrator account.
              */
             public Builder delegationEnabledTime(String delegationEnabledTime) {
                 this.delegationEnabledTime = delegationEnabledTime;
@@ -222,7 +222,7 @@ public class ListDelegatedAdministratorsResponseBody extends TeaModel {
             }
 
             /**
-             * DisplayName.
+             * The display name of the member.
              */
             public Builder displayName(String displayName) {
                 this.displayName = displayName;
@@ -230,7 +230,11 @@ public class ListDelegatedAdministratorsResponseBody extends TeaModel {
             }
 
             /**
-             * JoinMethod.
+             * The way in which the member joins the resource directory. Valid values:
+             * <p>
+             * 
+             * *   invited: The member is invited to join the resource directory.
+             * *   created: The member is directly created in the resource directory.
              */
             public Builder joinMethod(String joinMethod) {
                 this.joinMethod = joinMethod;
@@ -238,7 +242,7 @@ public class ListDelegatedAdministratorsResponseBody extends TeaModel {
             }
 
             /**
-             * ServicePrincipal.
+             * The identifier of the trusted service.
              */
             public Builder servicePrincipal(String servicePrincipal) {
                 this.servicePrincipal = servicePrincipal;

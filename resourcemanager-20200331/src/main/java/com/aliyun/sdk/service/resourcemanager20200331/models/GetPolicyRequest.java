@@ -84,7 +84,12 @@ public class GetPolicyRequest extends Request {
         } 
 
         /**
-         * Language.
+         * The language that is used to return the description of the system policy. Valid values:
+         * <p>
+         * 
+         * *   en: English
+         * *   zh-CN: Chinese
+         * *   ja: Japanese
          */
         public Builder language(String language) {
             this.putQueryParameter("Language", language);
@@ -93,7 +98,10 @@ public class GetPolicyRequest extends Request {
         }
 
         /**
-         * PolicyName.
+         * The name of the policy.
+         * <p>
+         * 
+         * The name must be 1 to 128 characters in length and can contain letters, digits, and hyphens (-).
          */
         public Builder policyName(String policyName) {
             this.putQueryParameter("PolicyName", policyName);
@@ -102,7 +110,11 @@ public class GetPolicyRequest extends Request {
         }
 
         /**
-         * PolicyType.
+         * The type of the policy. Valid values:
+         * <p>
+         * 
+         * *   Custom: custom policy
+         * *   System: system policy
          */
         public Builder policyType(String policyType) {
             this.putQueryParameter("PolicyType", policyType);

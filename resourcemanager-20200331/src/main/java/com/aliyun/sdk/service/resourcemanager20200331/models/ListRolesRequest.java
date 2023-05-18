@@ -82,7 +82,12 @@ public class ListRolesRequest extends Request {
         } 
 
         /**
-         * Language.
+         * The language that is used to return the descriptions of the RAM roles. Valid values:
+         * <p>
+         * 
+         * *   en: English
+         * *   zh-CN: Chinese
+         * *   ja: Japanese
          */
         public Builder language(String language) {
             this.putQueryParameter("Language", language);
@@ -91,7 +96,10 @@ public class ListRolesRequest extends Request {
         }
 
         /**
-         * PageNumber.
+         * The number of the page to return.
+         * <p>
+         * 
+         * Pages start from page 1. Default value: 1.
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -100,7 +108,10 @@ public class ListRolesRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * The number of entries to return on each page.
+         * <p>
+         * 
+         * Valid values: 1 to 100. Default value: 10.
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);

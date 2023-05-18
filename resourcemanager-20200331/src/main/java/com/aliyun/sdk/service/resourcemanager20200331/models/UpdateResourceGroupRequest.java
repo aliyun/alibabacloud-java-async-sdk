@@ -70,7 +70,10 @@ public class UpdateResourceGroupRequest extends Request {
         } 
 
         /**
-         * NewDisplayName.
+         * The display name of the resource group.
+         * <p>
+         * 
+         * The name must be 1 to 50 characters in length.
          */
         public Builder newDisplayName(String newDisplayName) {
             this.putQueryParameter("NewDisplayName", newDisplayName);
@@ -79,7 +82,10 @@ public class UpdateResourceGroupRequest extends Request {
         }
 
         /**
-         * ResourceGroupId.
+         * The ID of the resource group.
+         * <p>
+         * 
+         * You can call the [ListResourceGroups](~~158855~~) operation to obtain the ID.
          */
         public Builder resourceGroupId(String resourceGroupId) {
             this.putQueryParameter("ResourceGroupId", resourceGroupId);

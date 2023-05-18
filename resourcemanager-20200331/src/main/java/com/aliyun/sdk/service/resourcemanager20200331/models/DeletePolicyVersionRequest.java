@@ -70,7 +70,10 @@ public class DeletePolicyVersionRequest extends Request {
         } 
 
         /**
-         * PolicyName.
+         * The name of the policy.
+         * <p>
+         * 
+         * The name must be 1 to 128 characters in length and can contain letters, digits, and hyphens (-).
          */
         public Builder policyName(String policyName) {
             this.putQueryParameter("PolicyName", policyName);
@@ -79,7 +82,10 @@ public class DeletePolicyVersionRequest extends Request {
         }
 
         /**
-         * VersionId.
+         * The ID of the policy version.
+         * <p>
+         * 
+         * You can call the [ListPolicyVersions](~~159982~~) operation to query the ID.
          */
         public Builder versionId(String versionId) {
             this.putQueryParameter("VersionId", versionId);

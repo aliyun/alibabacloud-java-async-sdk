@@ -19,10 +19,12 @@ public class BindSecureMobilePhoneRequest extends Request {
 
     @Query
     @NameInMap("SecureMobilePhone")
+    @Validation(required = true)
     private String secureMobilePhone;
 
     @Query
     @NameInMap("VerificationCode")
+    @Validation(required = true)
     private String verificationCode;
 
     private BindSecureMobilePhoneRequest(Builder builder) {
@@ -83,7 +85,7 @@ public class BindSecureMobilePhoneRequest extends Request {
         } 
 
         /**
-         * AccountId.
+         * The Alibaba Cloud account ID of the member.
          */
         public Builder accountId(String accountId) {
             this.putQueryParameter("AccountId", accountId);
@@ -92,7 +94,14 @@ public class BindSecureMobilePhoneRequest extends Request {
         }
 
         /**
-         * SecureMobilePhone.
+         * The mobile phone number that you want to bind to the member for security purposes.
+         * <p>
+         * 
+         * The mobile phone number you specify must be the same as the mobile phone number that you specify when you call the [SendVerificationCodeForBindSecureMobilePhone](~~372556~~) operation to obtain a verification code.
+         * 
+         * Specify the mobile phone number in the \<Country code>-\<Mobile phone number> format.
+         * 
+         * >  Mobile phone numbers in the `86-<Mobile phone number>` format in the Chinese mainland are not supported.
          */
         public Builder secureMobilePhone(String secureMobilePhone) {
             this.putQueryParameter("SecureMobilePhone", secureMobilePhone);
@@ -101,7 +110,10 @@ public class BindSecureMobilePhoneRequest extends Request {
         }
 
         /**
-         * VerificationCode.
+         * The verification code.
+         * <p>
+         * 
+         * You can call the [SendVerificationCodeForBindSecureMobilePhone](~~372556~~) operation to obtain the verification code.
          */
         public Builder verificationCode(String verificationCode) {
             this.putQueryParameter("VerificationCode", verificationCode);

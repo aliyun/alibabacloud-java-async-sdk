@@ -50,7 +50,7 @@ public class DeleteResourceGroupResponseBody extends TeaModel {
         private ResourceGroup resourceGroup; 
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -58,7 +58,7 @@ public class DeleteResourceGroupResponseBody extends TeaModel {
         }
 
         /**
-         * ResourceGroup.
+         * The information of the resource group.
          */
         public Builder resourceGroup(ResourceGroup resourceGroup) {
             this.resourceGroup = resourceGroup;
@@ -110,7 +110,7 @@ public class DeleteResourceGroupResponseBody extends TeaModel {
             private String status; 
 
             /**
-             * RegionId.
+             * The region ID.
              */
             public Builder regionId(String regionId) {
                 this.regionId = regionId;
@@ -118,7 +118,13 @@ public class DeleteResourceGroupResponseBody extends TeaModel {
             }
 
             /**
-             * Status.
+             * The status of the resource group. Valid values:
+             * <p>
+             * 
+             * *   Creating: The resource group is being created.
+             * *   OK: The resource group is created.
+             * *   PendingDelete: The resource group is waiting to be deleted.
+             * *   Deleting: The resource group is being deleted.
              */
             public Builder status(String status) {
                 this.status = status;
@@ -272,7 +278,7 @@ public class DeleteResourceGroupResponseBody extends TeaModel {
             private String status; 
 
             /**
-             * AccountId.
+             * The ID of the Alibaba Cloud account to which the resource group belongs.
              */
             public Builder accountId(String accountId) {
                 this.accountId = accountId;
@@ -280,7 +286,7 @@ public class DeleteResourceGroupResponseBody extends TeaModel {
             }
 
             /**
-             * CreateDate.
+             * The time when the resource group was created. The time is displayed in UTC.
              */
             public Builder createDate(String createDate) {
                 this.createDate = createDate;
@@ -288,7 +294,7 @@ public class DeleteResourceGroupResponseBody extends TeaModel {
             }
 
             /**
-             * DisplayName.
+             * The display name of the resource group.
              */
             public Builder displayName(String displayName) {
                 this.displayName = displayName;
@@ -296,7 +302,7 @@ public class DeleteResourceGroupResponseBody extends TeaModel {
             }
 
             /**
-             * Id.
+             * The ID of the resource group.
              */
             public Builder id(String id) {
                 this.id = id;
@@ -304,7 +310,7 @@ public class DeleteResourceGroupResponseBody extends TeaModel {
             }
 
             /**
-             * Name.
+             * The unique identifier of the resource group.
              */
             public Builder name(String name) {
                 this.name = name;
@@ -312,7 +318,7 @@ public class DeleteResourceGroupResponseBody extends TeaModel {
             }
 
             /**
-             * RegionStatuses.
+             * The status of the resource group in all regions.
              */
             public Builder regionStatuses(RegionStatuses regionStatuses) {
                 this.regionStatuses = regionStatuses;
@@ -320,7 +326,12 @@ public class DeleteResourceGroupResponseBody extends TeaModel {
             }
 
             /**
-             * Status.
+             * The status of the resource group. Valid values:
+             * <p>
+             * 
+             * *   Creating: The resource group is being created.
+             * *   OK: The resource group is created.
+             * *   PendingDelete: The resource group is waiting to be deleted.
              */
             public Builder status(String status) {
                 this.status = status;

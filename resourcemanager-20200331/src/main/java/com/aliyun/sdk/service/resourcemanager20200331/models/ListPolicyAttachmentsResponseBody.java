@@ -86,7 +86,7 @@ public class ListPolicyAttachmentsResponseBody extends TeaModel {
         private Integer totalCount; 
 
         /**
-         * PageNumber.
+         * The page number of the returned page.
          */
         public Builder pageNumber(Integer pageNumber) {
             this.pageNumber = pageNumber;
@@ -94,7 +94,7 @@ public class ListPolicyAttachmentsResponseBody extends TeaModel {
         }
 
         /**
-         * PageSize.
+         * The number of entries returned per page.
          */
         public Builder pageSize(Integer pageSize) {
             this.pageSize = pageSize;
@@ -102,7 +102,7 @@ public class ListPolicyAttachmentsResponseBody extends TeaModel {
         }
 
         /**
-         * PolicyAttachments.
+         * The policy attachment records.
          */
         public Builder policyAttachments(PolicyAttachments policyAttachments) {
             this.policyAttachments = policyAttachments;
@@ -110,7 +110,7 @@ public class ListPolicyAttachmentsResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -118,7 +118,7 @@ public class ListPolicyAttachmentsResponseBody extends TeaModel {
         }
 
         /**
-         * TotalCount.
+         * The total number of returned entries.
          */
         public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;
@@ -230,7 +230,7 @@ public class ListPolicyAttachmentsResponseBody extends TeaModel {
             private String resourceGroupId; 
 
             /**
-             * AttachDate.
+             * The time when the policy was attached.
              */
             public Builder attachDate(String attachDate) {
                 this.attachDate = attachDate;
@@ -238,7 +238,7 @@ public class ListPolicyAttachmentsResponseBody extends TeaModel {
             }
 
             /**
-             * Description.
+             * The description of the policy.
              */
             public Builder description(String description) {
                 this.description = description;
@@ -246,7 +246,7 @@ public class ListPolicyAttachmentsResponseBody extends TeaModel {
             }
 
             /**
-             * PolicyName.
+             * The name of the policy.
              */
             public Builder policyName(String policyName) {
                 this.policyName = policyName;
@@ -254,7 +254,11 @@ public class ListPolicyAttachmentsResponseBody extends TeaModel {
             }
 
             /**
-             * PolicyType.
+             * The type of the policy. Valid values:
+             * <p>
+             * 
+             * *   Custom: custom policy
+             * *   System: system policy
              */
             public Builder policyType(String policyType) {
                 this.policyType = policyType;
@@ -262,7 +266,7 @@ public class ListPolicyAttachmentsResponseBody extends TeaModel {
             }
 
             /**
-             * PrincipalName.
+             * The name of the object to which the policy is attached.
              */
             public Builder principalName(String principalName) {
                 this.principalName = principalName;
@@ -270,7 +274,12 @@ public class ListPolicyAttachmentsResponseBody extends TeaModel {
             }
 
             /**
-             * PrincipalType.
+             * The type of the object to which the policy is attached. Valid values:
+             * <p>
+             * 
+             * *   IMSUser: RAM user
+             * *   IMSGroup: RAM user group
+             * *   ServiceRole: RAM role
              */
             public Builder principalType(String principalType) {
                 this.principalType = principalType;
@@ -278,7 +287,7 @@ public class ListPolicyAttachmentsResponseBody extends TeaModel {
             }
 
             /**
-             * ResourceGroupId.
+             * The ID of the resource group or the ID of the Alibaba Cloud account to which the resource group belongs.
              */
             public Builder resourceGroupId(String resourceGroupId) {
                 this.resourceGroupId = resourceGroupId;

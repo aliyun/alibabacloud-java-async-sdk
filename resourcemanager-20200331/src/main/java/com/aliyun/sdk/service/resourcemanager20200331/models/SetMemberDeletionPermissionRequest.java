@@ -55,7 +55,11 @@ public class SetMemberDeletionPermissionRequest extends Request {
         } 
 
         /**
-         * Status.
+         * Specifies whether to enable the member deletion feature. Valid values:
+         * <p>
+         * 
+         * *   Enabled: enables the member deletion feature
+         * *   Disabled: disables the member deletion feature
          */
         public Builder status(String status) {
             this.putQueryParameter("Status", status);

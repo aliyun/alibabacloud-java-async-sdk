@@ -50,7 +50,7 @@ public class MoveResourcesResponseBody extends TeaModel {
         private java.util.List < Responses> responses; 
 
         /**
-         * Id of the request
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -58,7 +58,7 @@ public class MoveResourcesResponseBody extends TeaModel {
         }
 
         /**
-         * Responses.
+         * The returned results.
          */
         public Builder responses(java.util.List < Responses> responses) {
             this.responses = responses;
@@ -182,7 +182,10 @@ public class MoveResourcesResponseBody extends TeaModel {
             private String status; 
 
             /**
-             * ErrorCode.
+             * The error code returned.
+             * <p>
+             * 
+             * >  This parameter is returned if the resource failed to be moved.
              */
             public Builder errorCode(String errorCode) {
                 this.errorCode = errorCode;
@@ -190,7 +193,10 @@ public class MoveResourcesResponseBody extends TeaModel {
             }
 
             /**
-             * ErrorMsg.
+             * The error message returned.
+             * <p>
+             * 
+             * >  This parameter is returned if the resource failed to be moved.
              */
             public Builder errorMsg(String errorMsg) {
                 this.errorMsg = errorMsg;
@@ -198,7 +204,7 @@ public class MoveResourcesResponseBody extends TeaModel {
             }
 
             /**
-             * RegionId.
+             * The region ID of the resource.
              */
             public Builder regionId(String regionId) {
                 this.regionId = regionId;
@@ -206,7 +212,7 @@ public class MoveResourcesResponseBody extends TeaModel {
             }
 
             /**
-             * Id of the request
+             * The ID of the request.
              */
             public Builder requestId(String requestId) {
                 this.requestId = requestId;
@@ -214,7 +220,7 @@ public class MoveResourcesResponseBody extends TeaModel {
             }
 
             /**
-             * ResourceId.
+             * The ID of the resource.
              */
             public Builder resourceId(String resourceId) {
                 this.resourceId = resourceId;
@@ -222,7 +228,7 @@ public class MoveResourcesResponseBody extends TeaModel {
             }
 
             /**
-             * ResourceType.
+             * The type of the resource.
              */
             public Builder resourceType(String resourceType) {
                 this.resourceType = resourceType;
@@ -230,7 +236,7 @@ public class MoveResourcesResponseBody extends TeaModel {
             }
 
             /**
-             * Service.
+             * The ID of the Alibaba Cloud service.
              */
             public Builder service(String service) {
                 this.service = service;
@@ -238,7 +244,11 @@ public class MoveResourcesResponseBody extends TeaModel {
             }
 
             /**
-             * Status.
+             * The status of the move task. Valid values:
+             * <p>
+             * 
+             * *   SUCCESS
+             * *   FAIL
              */
             public Builder status(String status) {
                 this.status = status;
