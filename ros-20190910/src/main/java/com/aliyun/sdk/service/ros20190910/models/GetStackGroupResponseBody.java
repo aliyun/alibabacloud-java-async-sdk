@@ -50,7 +50,7 @@ public class GetStackGroupResponseBody extends TeaModel {
         private StackGroup stackGroup; 
 
         /**
-         * The ID of the stack group.
+         * The details of the stack group.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -58,13 +58,7 @@ public class GetStackGroupResponseBody extends TeaModel {
         }
 
         /**
-         * The status of the stack group.
-         * <p>
-         * 
-         * Valid values:
-         * 
-         * *   ACTIVE
-         * *   DELETED
+         * The ID of the stack group.
          */
         public Builder stackGroup(StackGroup stackGroup) {
             this.stackGroup = stackGroup;
@@ -116,10 +110,15 @@ public class GetStackGroupResponseBody extends TeaModel {
             private Boolean retainStacksOnAccountRemoval; 
 
             /**
-             * The folder IDs of the resource directory. This parameter is used to deploy stack instances within all the accounts in the folders.
+             * Indicates whether stacks in the member account are retained when the member account is deleted from the folder.
              * <p>
              * 
-             * >  This parameter is returned only when the PermissionModel parameter is set to SERVICE_MANAGED.
+             * Valid values:
+             * 
+             * *   true: The stacks are retained.
+             * *   false: The stacks are deleted.
+             * 
+             * >  This parameter is returned only when the Enabled parameter is set to true.
              */
             public Builder enabled(Boolean enabled) {
                 this.enabled = enabled;
@@ -183,7 +182,7 @@ public class GetStackGroupResponseBody extends TeaModel {
             private String parameterValue; 
 
             /**
-             * The description of the stack group.
+             * The value of the parameter.
              */
             public Builder parameterKey(String parameterKey) {
                 this.parameterKey = parameterKey;
@@ -191,7 +190,7 @@ public class GetStackGroupResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the stack group.
+             * The description of the stack group.
              */
             public Builder parameterValue(String parameterValue) {
                 this.parameterValue = parameterValue;
@@ -328,42 +327,10 @@ public class GetStackGroupResponseBody extends TeaModel {
             private Integer totalStackInstancesCount; 
 
             /**
-             * The ID of the resource group. This parameter is specified when you create the stack group.
+             * The number of stack instances that have drifted.
              */
             public Builder cancelledStackInstancesCount(Integer cancelledStackInstancesCount) {
                 this.cancelledStackInstancesCount = cancelledStackInstancesCount;
-                return this;
-            }
-
-            /**
-             * The number of stack instances on which drift detection was being performed.
-             */
-            public Builder driftDetectionStatus(String driftDetectionStatus) {
-                this.driftDetectionStatus = driftDetectionStatus;
-                return this;
-            }
-
-            /**
-             * The number of stack instances that failed drift detection.
-             */
-            public Builder driftDetectionTime(String driftDetectionTime) {
-                this.driftDetectionTime = driftDetectionTime;
-                return this;
-            }
-
-            /**
-             * The permission model.
-             * <p>
-             * 
-             * Valid values:
-             * 
-             * *   SELF_MANAGED: the self-managed permission model
-             * *   SERVICE_MANAGED: the service-managed permission model
-             * 
-             * >  For more information about the permission models of stack groups, see [Overview](~~154578~~).
-             */
-            public Builder driftedStackInstancesCount(Integer driftedStackInstancesCount) {
-                this.driftedStackInstancesCount = driftedStackInstancesCount;
                 return this;
             }
 
@@ -377,32 +344,24 @@ public class GetStackGroupResponseBody extends TeaModel {
              * *   NOT_CHECKED: No drift detection is completed on the stack group.
              * *   IN_SYNC: All the stack instances in the stack group are being synchronized.
              */
-            public Builder failedStackInstancesCount(Integer failedStackInstancesCount) {
-                this.failedStackInstancesCount = failedStackInstancesCount;
+            public Builder driftDetectionStatus(String driftDetectionStatus) {
+                this.driftDetectionStatus = driftDetectionStatus;
                 return this;
             }
 
             /**
-             * The number of stack instances for which drift detection was canceled.
+             * The number of stack instances.
              */
-            public Builder inProgressStackInstancesCount(Integer inProgressStackInstancesCount) {
-                this.inProgressStackInstancesCount = inProgressStackInstancesCount;
+            public Builder driftDetectionTime(String driftDetectionTime) {
+                this.driftDetectionTime = driftDetectionTime;
                 return this;
             }
 
             /**
-             * The number of stack instances that have drifted.
+             * The ID of the resource group. This parameter is specified when you create the stack group.
              */
-            public Builder inSyncStackInstancesCount(Integer inSyncStackInstancesCount) {
-                this.inSyncStackInstancesCount = inSyncStackInstancesCount;
-                return this;
-            }
-
-            /**
-             * The number of stack instances that were being synchronized.
-             */
-            public Builder stackGroupDriftStatus(String stackGroupDriftStatus) {
-                this.stackGroupDriftStatus = stackGroupDriftStatus;
+            public Builder driftedStackInstancesCount(Integer driftedStackInstancesCount) {
+                this.driftedStackInstancesCount = driftedStackInstancesCount;
                 return this;
             }
 
@@ -417,6 +376,38 @@ public class GetStackGroupResponseBody extends TeaModel {
              * *   PARTIAL_SUCCESS: Drift detection is performed. The number of stack instances that failed the drift detection does not exceed the specified threshold.
              * *   IN_PROGRESS: Drift detection is being performed on the stack group.
              * *   STOPPED: Drift detection is canceled for the stack group.
+             */
+            public Builder failedStackInstancesCount(Integer failedStackInstancesCount) {
+                this.failedStackInstancesCount = failedStackInstancesCount;
+                return this;
+            }
+
+            /**
+             * The number of stack instances that were being synchronized.
+             */
+            public Builder inProgressStackInstancesCount(Integer inProgressStackInstancesCount) {
+                this.inProgressStackInstancesCount = inProgressStackInstancesCount;
+                return this;
+            }
+
+            /**
+             * The number of stack instances for which drift detection was canceled.
+             */
+            public Builder inSyncStackInstancesCount(Integer inSyncStackInstancesCount) {
+                this.inSyncStackInstancesCount = inSyncStackInstancesCount;
+                return this;
+            }
+
+            /**
+             * The number of stack instances on which drift detection was being performed.
+             */
+            public Builder stackGroupDriftStatus(String stackGroupDriftStatus) {
+                this.stackGroupDriftStatus = stackGroupDriftStatus;
+                return this;
+            }
+
+            /**
+             * The number of stack instances that failed drift detection.
              */
             public Builder totalStackInstancesCount(Integer totalStackInstancesCount) {
                 this.totalStackInstancesCount = totalStackInstancesCount;
@@ -613,50 +604,10 @@ public class GetStackGroupResponseBody extends TeaModel {
             private String templateContent; 
 
             /**
-             * The key of the parameter.
+             * The parameters of the stack group.
              */
             public Builder administrationRoleName(String administrationRoleName) {
                 this.administrationRoleName = administrationRoleName;
-                return this;
-            }
-
-            /**
-             * Indicates whether stacks in the member account are retained when the member account is deleted from the folder.
-             * <p>
-             * 
-             * Valid values:
-             * 
-             * *   true: The stacks are retained.
-             * *   false: The stacks are deleted.
-             * 
-             * >  This parameter is returned only when the Enabled parameter is set to true.
-             */
-            public Builder autoDeployment(AutoDeployment autoDeployment) {
-                this.autoDeployment = autoDeployment;
-                return this;
-            }
-
-            /**
-             * The name of the RAM role that is specified for the execution account when you create the self-managed stack group. The administrator role AliyunROSStackGroupAdministrationRole assumes the execution role. If this parameter is not specified, the default value AliyunROSStackGroupExecutionRole is returned.
-             */
-            public Builder description(String description) {
-                this.description = description;
-                return this;
-            }
-
-            /**
-             * The details of the last drift detection that was performed on the stack group.
-             */
-            public Builder executionRoleName(String executionRoleName) {
-                this.executionRoleName = executionRoleName;
-                return this;
-            }
-
-            /**
-             * The value of the parameter.
-             */
-            public Builder parameters(java.util.List < Parameters> parameters) {
-                this.parameters = parameters;
                 return this;
             }
 
@@ -669,16 +620,32 @@ public class GetStackGroupResponseBody extends TeaModel {
              * *   true: Automatic deployment is enabled. If a member account is added to the folder to which the stack group belongs after automatic deployment is enabled, the stack group deploys its stack instances in the specified region where the added account is deployed. If the account is deleted from the folder, the stack instances in the specified region are deleted from the stack group.
              * *   false: Automatic deployment is disabled. After automatic deployment is disabled, the stack instances remain unchanged when the member account in the folder is changed.
              */
-            public Builder permissionModel(String permissionModel) {
-                this.permissionModel = permissionModel;
+            public Builder autoDeployment(AutoDeployment autoDeployment) {
+                this.autoDeployment = autoDeployment;
                 return this;
             }
 
             /**
-             * RdFolderIds.
+             * The name of the stack group.
              */
-            public Builder rdFolderIds(java.util.List < String > rdFolderIds) {
-                this.rdFolderIds = rdFolderIds;
+            public Builder description(String description) {
+                this.description = description;
+                return this;
+            }
+
+            /**
+             * The template body.
+             */
+            public Builder executionRoleName(String executionRoleName) {
+                this.executionRoleName = executionRoleName;
+                return this;
+            }
+
+            /**
+             * The key of the parameter.
+             */
+            public Builder parameters(java.util.List < Parameters> parameters) {
+                this.parameters = parameters;
                 return this;
             }
 
@@ -688,13 +655,40 @@ public class GetStackGroupResponseBody extends TeaModel {
              * 
              * >  This parameter is returned only when the PermissionModel parameter is set to SERVICE_MANAGED.
              */
+            public Builder permissionModel(String permissionModel) {
+                this.permissionModel = permissionModel;
+                return this;
+            }
+
+            /**
+             * The folder IDs of the resource directory. This parameter is used to deploy stack instances within all the accounts in the folders.
+             * <p>
+             * 
+             * >  This parameter is returned only when the PermissionModel parameter is set to SERVICE_MANAGED.
+             */
+            public Builder rdFolderIds(java.util.List < String > rdFolderIds) {
+                this.rdFolderIds = rdFolderIds;
+                return this;
+            }
+
+            /**
+             * The permission model.
+             * <p>
+             * 
+             * Valid values:
+             * 
+             * *   SELF_MANAGED: the self-managed permission model
+             * *   SERVICE_MANAGED: the service-managed permission model
+             * 
+             * >  For more information about the permission models of stack groups, see [Overview](~~154578~~).
+             */
             public Builder resourceGroupId(String resourceGroupId) {
                 this.resourceGroupId = resourceGroupId;
                 return this;
             }
 
             /**
-             * The number of stack instances.
+             * The time when drift detection was performed on the stack group.
              */
             public Builder stackGroupDriftDetectionDetail(StackGroupDriftDetectionDetail stackGroupDriftDetectionDetail) {
                 this.stackGroupDriftDetectionDetail = stackGroupDriftDetectionDetail;
@@ -702,7 +696,13 @@ public class GetStackGroupResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the RAM role that is specified for the administrator account in Resource Orchestration Service (ROS) when you create the self-managed stack group. If this parameter is not specified, the default value AliyunROSStackGroupAdministrationRole is returned.
+             * The status of the stack group.
+             * <p>
+             * 
+             * Valid values:
+             * 
+             * *   ACTIVE
+             * *   DELETED
              */
             public Builder stackGroupId(String stackGroupId) {
                 this.stackGroupId = stackGroupId;
@@ -710,7 +710,7 @@ public class GetStackGroupResponseBody extends TeaModel {
             }
 
             /**
-             * The template body.
+             * The name of the RAM role that is specified for the execution account when you create the self-managed stack group. The administrator role AliyunROSStackGroupAdministrationRole assumes the execution role. If this parameter is not specified, the default value AliyunROSStackGroupExecutionRole is returned.
              */
             public Builder stackGroupName(String stackGroupName) {
                 this.stackGroupName = stackGroupName;
@@ -718,7 +718,7 @@ public class GetStackGroupResponseBody extends TeaModel {
             }
 
             /**
-             * The parameters of the stack group.
+             * The name of the RAM role that is specified for the administrator account in Resource Orchestration Service (ROS) when you create the self-managed stack group. If this parameter is not specified, the default value AliyunROSStackGroupAdministrationRole is returned.
              */
             public Builder status(String status) {
                 this.status = status;
@@ -726,7 +726,7 @@ public class GetStackGroupResponseBody extends TeaModel {
             }
 
             /**
-             * The time when drift detection was performed on the stack group.
+             * The details of the last drift detection that was performed on the stack group.
              */
             public Builder templateBody(String templateBody) {
                 this.templateBody = templateBody;

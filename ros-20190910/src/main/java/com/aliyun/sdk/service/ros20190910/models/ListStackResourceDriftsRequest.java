@@ -112,7 +112,7 @@ public class ListStackResourceDriftsRequest extends Request {
         } 
 
         /**
-         * The type of the resource.
+         * The time when the resource drift detection operation was initiated.
          */
         public Builder maxResults(Long maxResults) {
             this.putQueryParameter("MaxResults", maxResults);
@@ -121,7 +121,7 @@ public class ListStackResourceDriftsRequest extends Request {
         }
 
         /**
-         * The resource properties as defined in the template, in JSON format.
+         * The type of the resource.
          */
         public Builder nextToken(String nextToken) {
             this.putQueryParameter("NextToken", nextToken);
@@ -130,7 +130,7 @@ public class ListStackResourceDriftsRequest extends Request {
         }
 
         /**
-         * The time when the resource drift detection operation was initiated.
+         * The physical ID of the resource.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -139,13 +139,7 @@ public class ListStackResourceDriftsRequest extends Request {
         }
 
         /**
-         * The drift status of the resource. Valid values:
-         * <p>
-         * 
-         * *   DELETED: The actual configuration of the resource differs from its expected template configuration because the resource had been deleted.
-         * *   MODIFIED: The actual configuration of the resource differs from its expected template configuration.
-         * *   NOT_CHECKED: ROS has not checked whether the actual configuration of the resource differs from its expected template configuration.
-         * *   IN_SYNC: The actual configuration of the resource matches its expected template configuration.
+         * The resource properties as defined in the template, in JSON format.
          */
         public Builder resourceDriftStatus(java.util.List < String > resourceDriftStatus) {
             this.putQueryParameter("ResourceDriftStatus", resourceDriftStatus);
@@ -154,7 +148,7 @@ public class ListStackResourceDriftsRequest extends Request {
         }
 
         /**
-         * The physical ID of the resource.
+         * The ID of the stack.
          */
         public Builder stackId(String stackId) {
             this.putQueryParameter("StackId", stackId);

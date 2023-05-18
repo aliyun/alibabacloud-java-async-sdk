@@ -218,7 +218,7 @@ public class GetResourceTypeResponseBody extends TeaModel {
         private String updateTime; 
 
         /**
-         * The properties of the resource.
+         * The type of the resource.
          */
         public Builder attributes(java.util.Map < String, ? > attributes) {
             this.attributes = attributes;
@@ -274,11 +274,11 @@ public class GetResourceTypeResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether the resource supports scratch detection. Default value: false. Valid values:
+         * Indicates whether the resource supports drift detection. Default value: false. Valid values:
          * <p>
          * 
-         * *   true: Scratch detection is supported.
-         * *   false: Scratch detection is not supported.
+         * *   true: Drift detection is supported.
+         * *   false: Drift detection is not supported.
          */
         public Builder properties(java.util.Map < String, ? > properties) {
             this.properties = properties;
@@ -294,7 +294,7 @@ public class GetResourceTypeResponseBody extends TeaModel {
         }
 
         /**
-         * The type of the resource.
+         * The attributes of the resource.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -302,14 +302,22 @@ public class GetResourceTypeResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether the resource supports drift detection. Default value: false. Valid values:
-         * <p>
-         * 
-         * *   true: Drift detection is supported.
-         * *   false: Drift detection is not supported.
+         * The properties of the resource.
          */
         public Builder resourceType(String resourceType) {
             this.resourceType = resourceType;
+            return this;
+        }
+
+        /**
+         * Indicates whether the resource supports scratch detection. Default value: false. Valid values:
+         * <p>
+         * 
+         * *   true: Scratch detection is supported.
+         * *   false: Scratch detection is not supported.
+         */
+        public Builder supportDriftDetection(Boolean supportDriftDetection) {
+            this.supportDriftDetection = supportDriftDetection;
             return this;
         }
 
@@ -319,14 +327,6 @@ public class GetResourceTypeResponseBody extends TeaModel {
          * 
          * *   Resource: resources other than DataSource resources. For more information, see [Resources](~~28863~~).
          * *   DataSource: DataSource resources.
-         */
-        public Builder supportDriftDetection(Boolean supportDriftDetection) {
-            this.supportDriftDetection = supportDriftDetection;
-            return this;
-        }
-
-        /**
-         * SupportScratchDetection.
          */
         public Builder supportScratchDetection(Boolean supportScratchDetection) {
             this.supportScratchDetection = supportScratchDetection;

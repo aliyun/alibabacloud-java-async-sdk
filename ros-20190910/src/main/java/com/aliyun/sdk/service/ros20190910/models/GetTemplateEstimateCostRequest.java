@@ -26,6 +26,10 @@ public class GetTemplateEstimateCostRequest extends Request {
     private String regionId;
 
     @Query
+    @NameInMap("StackId")
+    private String stackId;
+
+    @Query
     @NameInMap("TemplateBody")
     private String templateBody;
 
@@ -54,6 +58,7 @@ public class GetTemplateEstimateCostRequest extends Request {
         this.clientToken = builder.clientToken;
         this.parameters = builder.parameters;
         this.regionId = builder.regionId;
+        this.stackId = builder.stackId;
         this.templateBody = builder.templateBody;
         this.templateId = builder.templateId;
         this.templateScratchId = builder.templateScratchId;
@@ -94,6 +99,13 @@ public class GetTemplateEstimateCostRequest extends Request {
      */
     public String getRegionId() {
         return this.regionId;
+    }
+
+    /**
+     * @return stackId
+     */
+    public String getStackId() {
+        return this.stackId;
     }
 
     /**
@@ -142,6 +154,7 @@ public class GetTemplateEstimateCostRequest extends Request {
         private String clientToken; 
         private java.util.List < Parameters> parameters; 
         private String regionId; 
+        private String stackId; 
         private String templateBody; 
         private String templateId; 
         private String templateScratchId; 
@@ -158,6 +171,7 @@ public class GetTemplateEstimateCostRequest extends Request {
             this.clientToken = request.clientToken;
             this.parameters = request.parameters;
             this.regionId = request.regionId;
+            this.stackId = request.stackId;
             this.templateBody = request.templateBody;
             this.templateId = request.templateId;
             this.templateScratchId = request.templateScratchId;
@@ -206,6 +220,15 @@ public class GetTemplateEstimateCostRequest extends Request {
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
             this.regionId = regionId;
+            return this;
+        }
+
+        /**
+         * StackId.
+         */
+        public Builder stackId(String stackId) {
+            this.putQueryParameter("StackId", stackId);
+            this.stackId = stackId;
             return this;
         }
 

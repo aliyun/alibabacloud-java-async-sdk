@@ -78,7 +78,7 @@ public class ListStackResourceDriftsResponseBody extends TeaModel {
         }
 
         /**
-         * The actual value of the resource property.
+         * The property differences of the resource.
          */
         public Builder resourceDrifts(java.util.List < ResourceDrifts> resourceDrifts) {
             this.resourceDrifts = resourceDrifts;
@@ -231,7 +231,7 @@ public class ListStackResourceDriftsResponseBody extends TeaModel {
             }
 
             /**
-             * ExpectedValue.
+             * ListStackResourceDrifts
              */
             public Builder expectedValue(String expectedValue) {
                 this.expectedValue = expectedValue;
@@ -239,7 +239,7 @@ public class ListStackResourceDriftsResponseBody extends TeaModel {
             }
 
             /**
-             * ListStackResourceDrifts
+             * __null__
              */
             public Builder propertyPath(String propertyPath) {
                 this.propertyPath = propertyPath;
@@ -396,7 +396,7 @@ public class ListStackResourceDriftsResponseBody extends TeaModel {
             }
 
             /**
-             * The actual resource properties in JSON format.
+             * The expected value of the resource property as defined in the template.
              */
             public Builder driftDetectionTime(String driftDetectionTime) {
                 this.driftDetectionTime = driftDetectionTime;
@@ -404,7 +404,7 @@ public class ListStackResourceDriftsResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the request.
+             * The query token value returned in this call.
              */
             public Builder expectedProperties(String expectedProperties) {
                 this.expectedProperties = expectedProperties;
@@ -412,12 +412,7 @@ public class ListStackResourceDriftsResponseBody extends TeaModel {
             }
 
             /**
-             * The drift type of the resource property. Valid values:
-             * <p>
-             * 
-             * *   ADD: The value has been added to a resource property whose data type was Array or List.
-             * *   REMOVE: The property has been deleted from the current resource configuration.
-             * *   NOT_EQUAL: The current property value differs from the expected value defined in the stack template.
+             * The actual value of the resource property.
              */
             public Builder logicalResourceId(String logicalResourceId) {
                 this.logicalResourceId = logicalResourceId;
@@ -433,7 +428,7 @@ public class ListStackResourceDriftsResponseBody extends TeaModel {
             }
 
             /**
-             * The expected value of the resource property as defined in the template.
+             * The path of the resource property.
              */
             public Builder physicalResourceId(String physicalResourceId) {
                 this.physicalResourceId = physicalResourceId;
@@ -441,7 +436,7 @@ public class ListStackResourceDriftsResponseBody extends TeaModel {
             }
 
             /**
-             * __null__
+             * http://ros.aliyun-inc.com:8080/V2/ListStackResourceDrifts
              */
             public Builder propertyDifferences(java.util.List < PropertyDifferences> propertyDifferences) {
                 this.propertyDifferences = propertyDifferences;
@@ -449,7 +444,7 @@ public class ListStackResourceDriftsResponseBody extends TeaModel {
             }
 
             /**
-             * http://ros.aliyun-inc.com:8080/V2/ListStackResourceDrifts
+             * The ID of the request.
              */
             public Builder resourceDriftStatus(String resourceDriftStatus) {
                 this.resourceDriftStatus = resourceDriftStatus;
@@ -457,7 +452,7 @@ public class ListStackResourceDriftsResponseBody extends TeaModel {
             }
 
             /**
-             * The query token value returned in this call.
+             * The actual resource properties in JSON format.
              */
             public Builder resourceType(String resourceType) {
                 this.resourceType = resourceType;
@@ -465,7 +460,12 @@ public class ListStackResourceDriftsResponseBody extends TeaModel {
             }
 
             /**
-             * The path of the resource property.
+             * The drift type of the resource property. Valid values:
+             * <p>
+             * 
+             * *   ADD: The value has been added to a resource property whose data type was Array or List.
+             * *   REMOVE: The property has been deleted from the current resource configuration.
+             * *   NOT_EQUAL: The current property value differs from the expected value defined in the stack template.
              */
             public Builder stackId(String stackId) {
                 this.stackId = stackId;

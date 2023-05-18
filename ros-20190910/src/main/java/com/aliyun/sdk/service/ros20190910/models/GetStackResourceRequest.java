@@ -127,11 +127,36 @@ public class GetStackResourceRequest extends Request {
         } 
 
         /**
-         * The logical ID of the resource defined in the template.
+         * Specifies whether to query the resource properties. Valid values:
+         * <p>
+         * 
+         * *   true
+         * *   false
          */
         public Builder clientToken(String clientToken) {
             this.putQueryParameter("ClientToken", clientToken);
             this.clientToken = clientToken;
+            return this;
+        }
+
+        /**
+         * The name of resource property N that you want to query.
+         * <p>
+         * 
+         * >  Maximum value of N: 20.
+         */
+        public Builder logicalResourceId(String logicalResourceId) {
+            this.putQueryParameter("LogicalResourceId", logicalResourceId);
+            this.logicalResourceId = logicalResourceId;
+            return this;
+        }
+
+        /**
+         * The logical ID of the resource defined in the template.
+         */
+        public Builder regionId(String regionId) {
+            this.putQueryParameter("RegionId", regionId);
+            this.regionId = regionId;
             return this;
         }
 
@@ -154,24 +179,6 @@ public class GetStackResourceRequest extends Request {
          * *   IMPORT_FAILED
          * *   IMPORT_COMPLETE
          */
-        public Builder logicalResourceId(String logicalResourceId) {
-            this.putQueryParameter("LogicalResourceId", logicalResourceId);
-            this.logicalResourceId = logicalResourceId;
-            return this;
-        }
-
-        /**
-         * The name of resource property N that you want to query.
-         */
-        public Builder regionId(String regionId) {
-            this.putQueryParameter("RegionId", regionId);
-            this.regionId = regionId;
-            return this;
-        }
-
-        /**
-         * The description of the resource.
-         */
         public Builder resourceAttributes(java.util.List < String > resourceAttributes) {
             this.putQueryParameter("ResourceAttributes", resourceAttributes);
             this.resourceAttributes = resourceAttributes;
@@ -180,9 +187,6 @@ public class GetStackResourceRequest extends Request {
 
         /**
          * The name of resource property N that you want to query.
-         * <p>
-         * 
-         * >  Maximum value of N: 20.
          */
         public Builder showResourceAttributes(Boolean showResourceAttributes) {
             this.putQueryParameter("ShowResourceAttributes", showResourceAttributes);
@@ -191,11 +195,7 @@ public class GetStackResourceRequest extends Request {
         }
 
         /**
-         * Specifies whether to query the resource properties. Valid values:
-         * <p>
-         * 
-         * *   true
-         * *   false
+         * The ID of the region to which the stack belongs. You can call the [DescribeRegions](~~131035~~) operation to query the most recent region list.
          */
         public Builder stackId(String stackId) {
             this.putQueryParameter("StackId", stackId);

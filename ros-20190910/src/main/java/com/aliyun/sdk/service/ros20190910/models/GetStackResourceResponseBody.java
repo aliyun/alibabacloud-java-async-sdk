@@ -218,7 +218,7 @@ public class GetStackResourceResponseBody extends TeaModel {
         private String updateTime; 
 
         /**
-         * The list of the resource properties.
+         * The resource type.
          */
         public Builder createTime(String createTime) {
             this.createTime = createTime;
@@ -226,7 +226,7 @@ public class GetStackResourceResponseBody extends TeaModel {
         }
 
         /**
-         * The physical ID of the resource.
+         * The reason why the resource is in its current state.
          */
         public Builder description(String description) {
             this.description = description;
@@ -234,7 +234,7 @@ public class GetStackResourceResponseBody extends TeaModel {
         }
 
         /**
-         * DriftDetectionTime.
+         * The ID of the stack.
          */
         public Builder driftDetectionTime(String driftDetectionTime) {
             this.driftDetectionTime = driftDetectionTime;
@@ -242,7 +242,10 @@ public class GetStackResourceResponseBody extends TeaModel {
         }
 
         /**
-         * The time when the last successful drift detection was performed on the stack.
+         * The time when the resource was updated.
+         * <p>
+         * 
+         * The time follows the ISO 8601 standard in the YYYY-MM-DDThh:mm:ss format. The time is displayed in UTC.
          */
         public Builder logicalResourceId(String logicalResourceId) {
             this.logicalResourceId = logicalResourceId;
@@ -250,7 +253,7 @@ public class GetStackResourceResponseBody extends TeaModel {
         }
 
         /**
-         * The logical ID of the resource defined in the template.
+         * The list of the resource properties.
          */
         public Builder metadata(java.util.Map < String, ? > metadata) {
             this.metadata = metadata;
@@ -266,7 +269,7 @@ public class GetStackResourceResponseBody extends TeaModel {
         }
 
         /**
-         * The resource type.
+         * The metadata.
          */
         public Builder physicalResourceId(String physicalResourceId) {
             this.physicalResourceId = physicalResourceId;
@@ -274,35 +277,10 @@ public class GetStackResourceResponseBody extends TeaModel {
         }
 
         /**
-         * The time when the resource was created.
-         * <p>
-         * 
-         * The time follows the ISO 8601 standard in the YYYY-MM-DDThh:mm:ss format. The time is displayed in UTC.
+         * The physical ID of the resource.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
-            return this;
-        }
-
-        /**
-         * The time when the resource was updated.
-         * <p>
-         * 
-         * The time follows the ISO 8601 standard in the YYYY-MM-DDThh:mm:ss format. The time is displayed in UTC.
-         */
-        public Builder resourceAttributes(java.util.List < java.util.Map<String, ?>> resourceAttributes) {
-            this.resourceAttributes = resourceAttributes;
-            return this;
-        }
-
-        /**
-         * The name of the stack.
-         * <p>
-         * 
-         * The name can be up to 255 characters in length, and can contain digits, letters, hyphens (-), and underscores (\_). The name must start with a digit or letter.
-         */
-        public Builder resourceDriftStatus(String resourceDriftStatus) {
-            this.resourceDriftStatus = resourceDriftStatus;
             return this;
         }
 
@@ -314,6 +292,22 @@ public class GetStackResourceResponseBody extends TeaModel {
          * *   MODIFIED: The actual configuration of the resource differs from its expected template configuration.
          * *   NOT_CHECKED: ROS has not checked whether the actual configuration of the resource differs from its expected template configuration.
          * *   IN_SYNC: The actual configuration of the resource matches its expected template configuration.
+         */
+        public Builder resourceAttributes(java.util.List < java.util.Map<String, ?>> resourceAttributes) {
+            this.resourceAttributes = resourceAttributes;
+            return this;
+        }
+
+        /**
+         * The time when the last successful drift detection was performed on the stack.
+         */
+        public Builder resourceDriftStatus(String resourceDriftStatus) {
+            this.resourceDriftStatus = resourceDriftStatus;
+            return this;
+        }
+
+        /**
+         * The logical ID of the resource defined in the template.
          */
         public Builder resourceType(String resourceType) {
             this.resourceType = resourceType;
@@ -337,7 +331,7 @@ public class GetStackResourceResponseBody extends TeaModel {
         }
 
         /**
-         * The reason why the resource is in its current state.
+         * The ID of the request.
          */
         public Builder status(String status) {
             this.status = status;
@@ -345,7 +339,10 @@ public class GetStackResourceResponseBody extends TeaModel {
         }
 
         /**
-         * The metadata.
+         * The time when the resource was created.
+         * <p>
+         * 
+         * The time follows the ISO 8601 standard in the YYYY-MM-DDThh:mm:ss format. The time is displayed in UTC.
          */
         public Builder statusReason(String statusReason) {
             this.statusReason = statusReason;
@@ -353,7 +350,10 @@ public class GetStackResourceResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the stack.
+         * The name of the stack.
+         * <p>
+         * 
+         * The name can be up to 255 characters in length, and can contain digits, letters, hyphens (-), and underscores (\_). The name must start with a digit or letter.
          */
         public Builder updateTime(String updateTime) {
             this.updateTime = updateTime;

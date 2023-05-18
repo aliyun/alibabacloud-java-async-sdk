@@ -39,6 +39,9 @@ public class GetStackResponseBody extends TeaModel {
     @NameInMap("OperationInfo")
     private OperationInfo operationInfo;
 
+    @NameInMap("OrderIds")
+    private java.util.List < String > orderIds;
+
     @NameInMap("Outputs")
     private java.util.List < java.util.Map<String, ?>> outputs;
 
@@ -124,6 +127,7 @@ public class GetStackResponseBody extends TeaModel {
         this.log = builder.log;
         this.notificationURLs = builder.notificationURLs;
         this.operationInfo = builder.operationInfo;
+        this.orderIds = builder.orderIds;
         this.outputs = builder.outputs;
         this.parameters = builder.parameters;
         this.parentStackId = builder.parentStackId;
@@ -220,6 +224,13 @@ public class GetStackResponseBody extends TeaModel {
      */
     public OperationInfo getOperationInfo() {
         return this.operationInfo;
+    }
+
+    /**
+     * @return orderIds
+     */
+    public java.util.List < String > getOrderIds() {
+        return this.orderIds;
     }
 
     /**
@@ -407,6 +418,7 @@ public class GetStackResponseBody extends TeaModel {
         private Log log; 
         private java.util.List < String > notificationURLs; 
         private OperationInfo operationInfo; 
+        private java.util.List < String > orderIds; 
         private java.util.List < java.util.Map<String, ?>> outputs; 
         private java.util.List < Parameters> parameters; 
         private String parentStackId; 
@@ -515,6 +527,14 @@ public class GetStackResponseBody extends TeaModel {
          */
         public Builder operationInfo(OperationInfo operationInfo) {
             this.operationInfo = operationInfo;
+            return this;
+        }
+
+        /**
+         * OrderIds.
+         */
+        public Builder orderIds(java.util.List < String > orderIds) {
+            this.orderIds = orderIds;
             return this;
         }
 

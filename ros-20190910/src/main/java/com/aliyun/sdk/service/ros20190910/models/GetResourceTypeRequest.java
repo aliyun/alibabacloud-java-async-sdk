@@ -69,7 +69,7 @@ public class GetResourceTypeRequest extends Request {
         } 
 
         /**
-         * The attributes of the resource.
+         * The ID of the request.
          */
         public Builder resourceType(String resourceType) {
             this.putQueryParameter("ResourceType", resourceType);

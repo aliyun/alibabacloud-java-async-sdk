@@ -70,7 +70,7 @@ public class ListStackResourcesRequest extends Request {
         } 
 
         /**
-         * Details about resources.
+         * The ID of the request.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -79,7 +79,7 @@ public class ListStackResourcesRequest extends Request {
         }
 
         /**
-         * The ID of the request.
+         * The ID of the region to which the stack belongs. You can call the [DescribeRegions](~~131035~~) operation to query the most recent region list.
          */
         public Builder stackId(String stackId) {
             this.putQueryParameter("StackId", stackId);
