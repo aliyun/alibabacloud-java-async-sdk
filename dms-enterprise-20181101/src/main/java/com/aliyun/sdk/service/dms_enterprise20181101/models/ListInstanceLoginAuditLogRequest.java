@@ -165,7 +165,10 @@ public class ListInstanceLoginAuditLogRequest extends Request {
         }
 
         /**
-         * The ID of the tenant. You can call the [GetUserActiveTenant](~~198073~~) operation to query the tenant ID.
+         * The end of the time range to query.
+         * <p>
+         * 
+         * >  The end time supports fuzzy match. Specify the time in the YYYY-MM-DD hh:mm:ss format. We recommend that you use the StartTime and EndTime parameters to specify a time range that does not exceed one day. This way, the returned entries can be displayed by page to increase query efficiency.
          */
         public Builder endTime(String endTime) {
             this.putQueryParameter("EndTime", endTime);
@@ -174,7 +177,7 @@ public class ListInstanceLoginAuditLogRequest extends Request {
         }
 
         /**
-         * The error code returned.
+         * The alias of the user.
          */
         public Builder opUserName(String opUserName) {
             this.putQueryParameter("OpUserName", opUserName);
@@ -183,7 +186,7 @@ public class ListInstanceLoginAuditLogRequest extends Request {
         }
 
         /**
-         * The logon records of the instance.
+         * The number of the page to return.
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -192,20 +195,11 @@ public class ListInstanceLoginAuditLogRequest extends Request {
         }
 
         /**
-         * The alias of the user.
+         * The number of entries to return on each page. Maximum value: 100.
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
             this.pageSize = pageSize;
-            return this;
-        }
-
-        /**
-         * The ID of the instance.
-         */
-        public Builder searchName(String searchName) {
-            this.putQueryParameter("SearchName", searchName);
-            this.searchName = searchName;
             return this;
         }
 
@@ -215,6 +209,18 @@ public class ListInstanceLoginAuditLogRequest extends Request {
          * 
          * >  If SQL statements are executed at the instance level, you can set this parameter to an instance name. If SQL statements are executed at the database level, you can set this parameter to a database name.
          */
+        public Builder searchName(String searchName) {
+            this.putQueryParameter("SearchName", searchName);
+            this.searchName = searchName;
+            return this;
+        }
+
+        /**
+         * The beginning of the time range to query.
+         * <p>
+         * 
+         * >  The start time supports fuzzy match. Specify the time in the YYYY-MM-DD hh:mm:ss format.
+         */
         public Builder startTime(String startTime) {
             this.putQueryParameter("StartTime", startTime);
             this.startTime = startTime;
@@ -222,7 +228,7 @@ public class ListInstanceLoginAuditLogRequest extends Request {
         }
 
         /**
-         * The operation that you want to perform. Set the value to **ListInstanceLoginAuditLog**.
+         * The ID of the tenant. You can call the [GetUserActiveTenant](~~198073~~) operation to query the tenant ID.
          */
         public Builder tid(Long tid) {
             this.putQueryParameter("Tid", tid);

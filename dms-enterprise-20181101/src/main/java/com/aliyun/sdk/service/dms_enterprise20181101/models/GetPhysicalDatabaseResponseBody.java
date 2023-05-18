@@ -86,7 +86,7 @@ public class GetPhysicalDatabaseResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * The information about the physical database.
+         * Database.
          */
         public Builder database(Database database) {
             this.database = database;
@@ -94,7 +94,7 @@ public class GetPhysicalDatabaseResponseBody extends TeaModel {
         }
 
         /**
-         * The error code returned if the request failed.
+         * ErrorCode.
          */
         public Builder errorCode(String errorCode) {
             this.errorCode = errorCode;
@@ -102,7 +102,7 @@ public class GetPhysicalDatabaseResponseBody extends TeaModel {
         }
 
         /**
-         * The error message returned if the request failed.
+         * ErrorMessage.
          */
         public Builder errorMessage(String errorMessage) {
             this.errorMessage = errorMessage;
@@ -110,7 +110,7 @@ public class GetPhysicalDatabaseResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * RequestId.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -118,7 +118,7 @@ public class GetPhysicalDatabaseResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether the request is successful.
+         * Success.
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -238,6 +238,9 @@ public class GetPhysicalDatabaseResponseBody extends TeaModel {
         @NameInMap("Host")
         private String host;
 
+        @NameInMap("InstanceAlias")
+        private String instanceAlias;
+
         @NameInMap("InstanceId")
         private String instanceId;
 
@@ -271,6 +274,7 @@ public class GetPhysicalDatabaseResponseBody extends TeaModel {
             this.encoding = builder.encoding;
             this.envType = builder.envType;
             this.host = builder.host;
+            this.instanceAlias = builder.instanceAlias;
             this.instanceId = builder.instanceId;
             this.ownerIdList = builder.ownerIdList;
             this.ownerNameList = builder.ownerNameList;
@@ -346,6 +350,13 @@ public class GetPhysicalDatabaseResponseBody extends TeaModel {
         }
 
         /**
+         * @return instanceAlias
+         */
+        public String getInstanceAlias() {
+            return this.instanceAlias;
+        }
+
+        /**
          * @return instanceId
          */
         public String getInstanceId() {
@@ -410,6 +421,7 @@ public class GetPhysicalDatabaseResponseBody extends TeaModel {
             private String encoding; 
             private String envType; 
             private String host; 
+            private String instanceAlias; 
             private String instanceId; 
             private OwnerIdList ownerIdList; 
             private OwnerNameList ownerNameList; 
@@ -420,10 +432,7 @@ public class GetPhysicalDatabaseResponseBody extends TeaModel {
             private String state; 
 
             /**
-             * The name of the catalog to which the database belongs.
-             * <p>
-             * 
-             * > : If the database is a PostgreSQL database, the name of the database is displayed.
+             * CatalogName.
              */
             public Builder catalogName(String catalogName) {
                 this.catalogName = catalogName;
@@ -431,7 +440,7 @@ public class GetPhysicalDatabaseResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the physical database.
+             * DatabaseId.
              */
             public Builder databaseId(String databaseId) {
                 this.databaseId = databaseId;
@@ -439,7 +448,7 @@ public class GetPhysicalDatabaseResponseBody extends TeaModel {
             }
 
             /**
-             * The type of the database engine.
+             * DbType.
              */
             public Builder dbType(String dbType) {
                 this.dbType = dbType;
@@ -447,7 +456,7 @@ public class GetPhysicalDatabaseResponseBody extends TeaModel {
             }
 
             /**
-             * The user ID of the DBA in the destination database.
+             * DbaId.
              */
             public Builder dbaId(String dbaId) {
                 this.dbaId = dbaId;
@@ -455,7 +464,7 @@ public class GetPhysicalDatabaseResponseBody extends TeaModel {
             }
 
             /**
-             * The nickname of the database administrator (DBA) in the destination database.
+             * DbaName.
              */
             public Builder dbaName(String dbaName) {
                 this.dbaName = dbaName;
@@ -463,7 +472,7 @@ public class GetPhysicalDatabaseResponseBody extends TeaModel {
             }
 
             /**
-             * The encoding format of the database.
+             * Encoding.
              */
             public Builder encoding(String encoding) {
                 this.encoding = encoding;
@@ -471,7 +480,7 @@ public class GetPhysicalDatabaseResponseBody extends TeaModel {
             }
 
             /**
-             * The type of the environment to which the database belongs. For more information, see [Change the environment type of an instance](~~163309~~).
+             * EnvType.
              */
             public Builder envType(String envType) {
                 this.envType = envType;
@@ -479,7 +488,7 @@ public class GetPhysicalDatabaseResponseBody extends TeaModel {
             }
 
             /**
-             * The endpoint that is used to connect to the database.
+             * Host.
              */
             public Builder host(String host) {
                 this.host = host;
@@ -487,7 +496,15 @@ public class GetPhysicalDatabaseResponseBody extends TeaModel {
             }
 
             /**
-             * The instance ID of the destination database.
+             * InstanceAlias.
+             */
+            public Builder instanceAlias(String instanceAlias) {
+                this.instanceAlias = instanceAlias;
+                return this;
+            }
+
+            /**
+             * InstanceId.
              */
             public Builder instanceId(String instanceId) {
                 this.instanceId = instanceId;
@@ -495,7 +512,7 @@ public class GetPhysicalDatabaseResponseBody extends TeaModel {
             }
 
             /**
-             * The user IDs of the database owners.
+             * OwnerIdList.
              */
             public Builder ownerIdList(OwnerIdList ownerIdList) {
                 this.ownerIdList = ownerIdList;
@@ -503,7 +520,7 @@ public class GetPhysicalDatabaseResponseBody extends TeaModel {
             }
 
             /**
-             * The nicknames of the database owners.
+             * OwnerNameList.
              */
             public Builder ownerNameList(OwnerNameList ownerNameList) {
                 this.ownerNameList = ownerNameList;
@@ -511,7 +528,7 @@ public class GetPhysicalDatabaseResponseBody extends TeaModel {
             }
 
             /**
-             * The port that is used to connect to the database.
+             * Port.
              */
             public Builder port(Integer port) {
                 this.port = port;
@@ -519,10 +536,7 @@ public class GetPhysicalDatabaseResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the database.
-             * <p>
-             * 
-             * > : If the database is a PostgreSQL database, the name of the mode is displayed.
+             * SchemaName.
              */
             public Builder schemaName(String schemaName) {
                 this.schemaName = schemaName;
@@ -530,7 +544,7 @@ public class GetPhysicalDatabaseResponseBody extends TeaModel {
             }
 
             /**
-             * The name that is used for searching the database.
+             * SearchName.
              */
             public Builder searchName(String searchName) {
                 this.searchName = searchName;
@@ -538,10 +552,7 @@ public class GetPhysicalDatabaseResponseBody extends TeaModel {
             }
 
             /**
-             * The system ID (SID) of the database.
-             * <p>
-             * 
-             * > : The value of the parameter is returned only for Oracle databases.
+             * Sid.
              */
             public Builder sid(String sid) {
                 this.sid = sid;
@@ -549,13 +560,7 @@ public class GetPhysicalDatabaseResponseBody extends TeaModel {
             }
 
             /**
-             * The state of the database. Valid values:
-             * <p>
-             * 
-             * *   **NORMAL**: The database is normal.
-             * *   **DISABLE**: The database is disabled.
-             * *   **OFFLINE**: The database is unpublished.
-             * *   **NOT_EXIST**: The database does not exist.
+             * State.
              */
             public Builder state(String state) {
                 this.state = state;

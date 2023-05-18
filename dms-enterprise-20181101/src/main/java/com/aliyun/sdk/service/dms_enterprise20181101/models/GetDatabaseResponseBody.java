@@ -238,6 +238,9 @@ public class GetDatabaseResponseBody extends TeaModel {
         @NameInMap("Host")
         private String host;
 
+        @NameInMap("InstanceAlias")
+        private String instanceAlias;
+
         @NameInMap("InstanceId")
         private String instanceId;
 
@@ -271,6 +274,7 @@ public class GetDatabaseResponseBody extends TeaModel {
             this.encoding = builder.encoding;
             this.envType = builder.envType;
             this.host = builder.host;
+            this.instanceAlias = builder.instanceAlias;
             this.instanceId = builder.instanceId;
             this.ownerIdList = builder.ownerIdList;
             this.ownerNameList = builder.ownerNameList;
@@ -346,6 +350,13 @@ public class GetDatabaseResponseBody extends TeaModel {
         }
 
         /**
+         * @return instanceAlias
+         */
+        public String getInstanceAlias() {
+            return this.instanceAlias;
+        }
+
+        /**
          * @return instanceId
          */
         public String getInstanceId() {
@@ -410,6 +421,7 @@ public class GetDatabaseResponseBody extends TeaModel {
             private String encoding; 
             private String envType; 
             private String host; 
+            private String instanceAlias; 
             private String instanceId; 
             private OwnerIdList ownerIdList; 
             private OwnerNameList ownerNameList; 
@@ -483,6 +495,14 @@ public class GetDatabaseResponseBody extends TeaModel {
              */
             public Builder host(String host) {
                 this.host = host;
+                return this;
+            }
+
+            /**
+             * InstanceAlias.
+             */
+            public Builder instanceAlias(String instanceAlias) {
+                this.instanceAlias = instanceAlias;
                 return this;
             }
 

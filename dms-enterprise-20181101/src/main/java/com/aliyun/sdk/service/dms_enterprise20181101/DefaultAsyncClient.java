@@ -1330,6 +1330,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+      * You can call this operation to query the information about tickets that apply for permissions on databases, tables, and sensitive columns.
+      *
+     */
     @Override
     public CompletableFuture<GetPermApplyOrderDetailResponse> getPermApplyOrderDetail(GetPermApplyOrderDetailRequest request) {
         try {

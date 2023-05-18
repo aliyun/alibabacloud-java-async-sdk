@@ -93,7 +93,7 @@ public class GetPhysicalDatabaseRequest extends Request {
         }
 
         /**
-         * The ID of the physical database. You can call the [SearchDatabase](~~141876~~) operation to obtain the ID.
+         * DbId.
          */
         public Builder dbId(Long dbId) {
             this.putQueryParameter("DbId", dbId);
@@ -102,7 +102,7 @@ public class GetPhysicalDatabaseRequest extends Request {
         }
 
         /**
-         * The ID of the tenant. You can call the [GetUserActiveTenant](~~198073~~) operation to query the ID of the tenant.
+         * Tid.
          */
         public Builder tid(Long tid) {
             this.putQueryParameter("Tid", tid);

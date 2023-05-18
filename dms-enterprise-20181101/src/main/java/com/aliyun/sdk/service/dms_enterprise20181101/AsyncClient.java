@@ -301,6 +301,10 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<GetOwnerApplyOrderDetailResponse> getOwnerApplyOrderDetail(GetOwnerApplyOrderDetailRequest request);
 
+    /**
+      * You can call this operation to query the information about tickets that apply for permissions on databases, tables, and sensitive columns.
+      *
+     */
     CompletableFuture<GetPermApplyOrderDetailResponse> getPermApplyOrderDetail(GetPermApplyOrderDetailRequest request);
 
     CompletableFuture<GetPhysicalDatabaseResponse> getPhysicalDatabase(GetPhysicalDatabaseRequest request);
