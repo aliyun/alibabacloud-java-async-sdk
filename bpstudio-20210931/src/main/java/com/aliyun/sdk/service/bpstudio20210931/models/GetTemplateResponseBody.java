@@ -74,7 +74,7 @@ public class GetTemplateResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The HTTP status code.
+         * Code.
          */
         public Builder code(Integer code) {
             this.code = code;
@@ -82,7 +82,7 @@ public class GetTemplateResponseBody extends TeaModel {
         }
 
         /**
-         * The details of the template.
+         * Data.
          */
         public Builder data(Data data) {
             this.data = data;
@@ -90,7 +90,7 @@ public class GetTemplateResponseBody extends TeaModel {
         }
 
         /**
-         * The returned message.
+         * Message.
          */
         public Builder message(String message) {
             this.message = message;
@@ -98,7 +98,7 @@ public class GetTemplateResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * RequestId.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -323,7 +323,7 @@ public class GetTemplateResponseBody extends TeaModel {
             private java.util.List < Variables> variables; 
 
             /**
-             * The time when the template was created.
+             * CreateTime.
              */
             public Builder createTime(String createTime) {
                 this.createTime = createTime;
@@ -331,7 +331,7 @@ public class GetTemplateResponseBody extends TeaModel {
             }
 
             /**
-             * The description of the template.
+             * Description.
              */
             public Builder description(String description) {
                 this.description = description;
@@ -339,7 +339,7 @@ public class GetTemplateResponseBody extends TeaModel {
             }
 
             /**
-             * The URL of the architecture image.
+             * ImageURL.
              */
             public Builder imageURL(String imageURL) {
                 this.imageURL = imageURL;
@@ -347,7 +347,7 @@ public class GetTemplateResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the template.
+             * Name.
              */
             public Builder name(String name) {
                 this.name = name;
@@ -355,7 +355,7 @@ public class GetTemplateResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the resource group.
+             * ResourceGroupId.
              */
             public Builder resourceGroupId(String resourceGroupId) {
                 this.resourceGroupId = resourceGroupId;
@@ -363,7 +363,7 @@ public class GetTemplateResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the template.
+             * TemplateId.
              */
             public Builder templateId(String templateId) {
                 this.templateId = templateId;
@@ -371,7 +371,7 @@ public class GetTemplateResponseBody extends TeaModel {
             }
 
             /**
-             * The URL of the architecture image file.
+             * TopoURL.
              */
             public Builder topoURL(String topoURL) {
                 this.topoURL = topoURL;

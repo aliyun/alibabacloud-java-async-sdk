@@ -74,7 +74,7 @@ public class GetApplicationResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The HTTP status code.
+         * The deployment result.
          */
         public Builder code(Integer code) {
             this.code = code;
@@ -82,7 +82,7 @@ public class GetApplicationResponseBody extends TeaModel {
         }
 
         /**
-         * The details of the application.
+         * The ID of the resource group.
          */
         public Builder data(Data data) {
             this.data = data;
@@ -90,7 +90,33 @@ public class GetApplicationResponseBody extends TeaModel {
         }
 
         /**
-         * The message returned for the request.
+         * Possible application states:
+         * <p>
+         * 
+         * *   Creating: The application is being created.
+         * *   Modified: The application has been modified.
+         * *   Verifying: The application is being verified.
+         * *   Verified_Failure: The application failed to pass the verification.
+         * *   Verified_Success: The application has passed the verification.
+         * *   Valuating: Fees are being calculated for the application.
+         * *   Valuating_Failure: Fees failed to be calculated for the application.
+         * *   Valuating_Success: Fees are calculated for the application.
+         * *   Deploying: The application is being deployed.
+         * *   Deployed_Failure: The application failed to be deployed.
+         * *   Partially_Deployed_Success: Some resources of the application are deployed.
+         * *   Deployed_Success: The application is deployed.
+         * *   Destroying: The application is being released.
+         * *   Delayed_Destroy: The application release is delayed.
+         * *   Destroyed_Failure: The application failed to be released.
+         * *   Partially_Destroyed_Success: Some resources of the application are released.
+         * *   Destroyed_Success: The application is released.
+         * *   Revised: The application architecture is adjusted.
+         * *   Verifying_In_Revision: The application resources are being verified during architecture adjustment.
+         * *   Verified_Failure_In_Revision: The application resources failed to pass the verification during architecture adjustment.
+         * *   Verified_Success_In_Revision: The application resources are verified during architecture adjustment.
+         * *   Valuating_In_Revision: Fees are being calculated for the application during architecture adjustment.
+         * *   Valuating_Failure_In_Revision: Fees failed to be calculated for the application during architecture adjustment.
+         * *   Valuating_Success_In_Revision: Fees are calculated for the application during architecture adjustment.
          */
         public Builder message(String message) {
             this.message = message;
@@ -98,7 +124,7 @@ public class GetApplicationResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * The ID of the application.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -210,7 +236,7 @@ public class GetApplicationResponseBody extends TeaModel {
             private String specification; 
 
             /**
-             * The resource tag.
+             * The message returned for verification.
              */
             public Builder lifecycle(String lifecycle) {
                 this.lifecycle = lifecycle;
@@ -218,7 +244,7 @@ public class GetApplicationResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the region.
+             * The verification results returned.
              */
             public Builder region(String region) {
                 this.region = region;
@@ -226,7 +252,7 @@ public class GetApplicationResponseBody extends TeaModel {
             }
 
             /**
-             * The message returned for verification.
+             * The name of the instance.
              */
             public Builder remark(String remark) {
                 this.remark = remark;
@@ -234,7 +260,7 @@ public class GetApplicationResponseBody extends TeaModel {
             }
 
             /**
-             * The service code.
+             * The error message that is returned when a price query fails.
              */
             public Builder resourceCode(String resourceCode) {
                 this.resourceCode = resourceCode;
@@ -242,7 +268,7 @@ public class GetApplicationResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the instance.
+             * ECS instance sold out
              */
             public Builder resourceName(String resourceName) {
                 this.resourceName = resourceName;
@@ -250,7 +276,7 @@ public class GetApplicationResponseBody extends TeaModel {
             }
 
             /**
-             * The verification result.
+             * The service code.
              */
             public Builder result(String result) {
                 this.result = result;
@@ -258,7 +284,7 @@ public class GetApplicationResponseBody extends TeaModel {
             }
 
             /**
-             * The resource specification.
+             * The verification result.
              */
             public Builder specification(String specification) {
                 this.specification = specification;
@@ -443,7 +469,7 @@ public class GetApplicationResponseBody extends TeaModel {
             private String specification; 
 
             /**
-             * The billing method.
+             * The price unit.
              */
             public Builder chargeType(String chargeType) {
                 this.chargeType = chargeType;
@@ -451,7 +477,7 @@ public class GetApplicationResponseBody extends TeaModel {
             }
 
             /**
-             * The quantity.
+             * The original price.
              */
             public Builder count(Long count) {
                 this.count = count;
@@ -459,7 +485,7 @@ public class GetApplicationResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the instance.
+             * The ID of the resource group to which the application belongs.
              */
             public Builder instanceName(String instanceName) {
                 this.instanceName = instanceName;
@@ -467,7 +493,7 @@ public class GetApplicationResponseBody extends TeaModel {
             }
 
             /**
-             * The resource tag.
+             * The ID of the region.
              */
             public Builder lifecycle(String lifecycle) {
                 this.lifecycle = lifecycle;
@@ -475,7 +501,7 @@ public class GetApplicationResponseBody extends TeaModel {
             }
 
             /**
-             * The unit price.
+             * The service code.
              */
             public Builder onePrice(Float onePrice) {
                 this.onePrice = onePrice;
@@ -483,7 +509,7 @@ public class GetApplicationResponseBody extends TeaModel {
             }
 
             /**
-             * The original price.
+             * The billing results.
              */
             public Builder originalPrice(Float originalPrice) {
                 this.originalPrice = originalPrice;
@@ -491,7 +517,7 @@ public class GetApplicationResponseBody extends TeaModel {
             }
 
             /**
-             * The service duration.
+             * The name of the instance.
              */
             public Builder period(Float period) {
                 this.period = period;
@@ -499,7 +525,7 @@ public class GetApplicationResponseBody extends TeaModel {
             }
 
             /**
-             * The total price.
+             * The quantity.
              */
             public Builder price(Float price) {
                 this.price = price;
@@ -507,7 +533,7 @@ public class GetApplicationResponseBody extends TeaModel {
             }
 
             /**
-             * The price unit.
+             * The unit price.
              */
             public Builder priceUnit(String priceUnit) {
                 this.priceUnit = priceUnit;
@@ -515,7 +541,7 @@ public class GetApplicationResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the region.
+             * USD/Hour
              */
             public Builder region(String region) {
                 this.region = region;
@@ -523,7 +549,7 @@ public class GetApplicationResponseBody extends TeaModel {
             }
 
             /**
-             * The error message that is returned when a price query fails.
+             * The instance type.
              */
             public Builder remark(String remark) {
                 this.remark = remark;
@@ -531,7 +557,7 @@ public class GetApplicationResponseBody extends TeaModel {
             }
 
             /**
-             * The service code.
+             * The time when the application was created.
              */
             public Builder resourceCode(String resourceCode) {
                 this.resourceCode = resourceCode;
@@ -539,7 +565,7 @@ public class GetApplicationResponseBody extends TeaModel {
             }
 
             /**
-             * The instance type.
+             * The total price.
              */
             public Builder specification(String specification) {
                 this.specification = specification;
@@ -664,7 +690,7 @@ public class GetApplicationResponseBody extends TeaModel {
             private String status; 
 
             /**
-             * The billing method.
+             * The service code.
              */
             public Builder chargeType(String chargeType) {
                 this.chargeType = chargeType;
@@ -672,7 +698,7 @@ public class GetApplicationResponseBody extends TeaModel {
             }
 
             /**
-             * The resource tag.
+             * The billing method.
              */
             public Builder lifecycle(String lifecycle) {
                 this.lifecycle = lifecycle;
@@ -680,7 +706,7 @@ public class GetApplicationResponseBody extends TeaModel {
             }
 
             /**
-             * The deployment result.
+             * The ID of the instance.
              */
             public Builder remark(String remark) {
                 this.remark = remark;
@@ -688,7 +714,7 @@ public class GetApplicationResponseBody extends TeaModel {
             }
 
             /**
-             * The service code.
+             * The status of the application.
              */
             public Builder resourceCode(String resourceCode) {
                 this.resourceCode = resourceCode;
@@ -696,7 +722,7 @@ public class GetApplicationResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the instance.
+             * The resource deployment result.
              */
             public Builder resourceId(String resourceId) {
                 this.resourceId = resourceId;
@@ -704,7 +730,7 @@ public class GetApplicationResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the instance.
+             * The resources.
              */
             public Builder resourceName(String resourceName) {
                 this.resourceName = resourceName;
@@ -712,7 +738,7 @@ public class GetApplicationResponseBody extends TeaModel {
             }
 
             /**
-             * The resource type.
+             * The name of the instance.
              */
             public Builder resourceType(String resourceType) {
                 this.resourceType = resourceType;
@@ -720,7 +746,7 @@ public class GetApplicationResponseBody extends TeaModel {
             }
 
             /**
-             * The resource deployment result.
+             * The resource tag.
              */
             public Builder status(String status) {
                 this.status = status;
@@ -905,7 +931,7 @@ public class GetApplicationResponseBody extends TeaModel {
             private String topoURL; 
 
             /**
-             * The ID of the application.
+             * The description of the application.
              */
             public Builder applicationId(String applicationId) {
                 this.applicationId = applicationId;
@@ -913,7 +939,7 @@ public class GetApplicationResponseBody extends TeaModel {
             }
 
             /**
-             * The verification results returned.
+             * The resource tag.
              */
             public Builder checklist(java.util.List < Checklist> checklist) {
                 this.checklist = checklist;
@@ -921,7 +947,7 @@ public class GetApplicationResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the application was created.
+             * The URL of the application topology image.
              */
             public Builder createTime(String createTime) {
                 this.createTime = createTime;
@@ -929,7 +955,7 @@ public class GetApplicationResponseBody extends TeaModel {
             }
 
             /**
-             * The description of the application.
+             * The message returned for the request.
              */
             public Builder description(String description) {
                 this.description = description;
@@ -937,7 +963,7 @@ public class GetApplicationResponseBody extends TeaModel {
             }
 
             /**
-             * The message returned for deployment.
+             * The resource type.
              */
             public Builder error(String error) {
                 this.error = error;
@@ -945,7 +971,7 @@ public class GetApplicationResponseBody extends TeaModel {
             }
 
             /**
-             * The URL of the image in the database.
+             * The ID of the request.
              */
             public Builder imageURL(String imageURL) {
                 this.imageURL = imageURL;
@@ -953,7 +979,7 @@ public class GetApplicationResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the application.
+             * The URL of the image in the database.
              */
             public Builder name(String name) {
                 this.name = name;
@@ -961,7 +987,7 @@ public class GetApplicationResponseBody extends TeaModel {
             }
 
             /**
-             * The billing results.
+             * The ID of the template associated with the application.
              */
             public Builder priceList(java.util.List < PriceList> priceList) {
                 this.priceList = priceList;
@@ -969,7 +995,7 @@ public class GetApplicationResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the resource group to which the application belongs.
+             * 1411182597819805/topo-MCEXDI5EL2OM10NY.json
              */
             public Builder resourceGroupId(String resourceGroupId) {
                 this.resourceGroupId = resourceGroupId;
@@ -977,7 +1003,7 @@ public class GetApplicationResponseBody extends TeaModel {
             }
 
             /**
-             * The resources.
+             * The resource specification.
              */
             public Builder resourceList(java.util.List < ResourceList> resourceList) {
                 this.resourceList = resourceList;
@@ -985,7 +1011,7 @@ public class GetApplicationResponseBody extends TeaModel {
             }
 
             /**
-             * The status of the application.
+             * Verification passed
              */
             public Builder status(String status) {
                 this.status = status;
@@ -993,7 +1019,7 @@ public class GetApplicationResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the template associated with the application.
+             * CADT application
              */
             public Builder templateId(String templateId) {
                 this.templateId = templateId;
@@ -1001,7 +1027,7 @@ public class GetApplicationResponseBody extends TeaModel {
             }
 
             /**
-             * The URL of the application topology image.
+             * The ID of the application.
              */
             public Builder topoURL(String topoURL) {
                 this.topoURL = topoURL;

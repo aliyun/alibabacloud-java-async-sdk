@@ -16,7 +16,7 @@ public class ExecuteOperationASyncResponseBody extends TeaModel {
     private Integer code;
 
     @NameInMap("Data")
-    private java.util.Map < String, String > data;
+    private String data;
 
     @NameInMap("Message")
     private String message;
@@ -49,7 +49,7 @@ public class ExecuteOperationASyncResponseBody extends TeaModel {
     /**
      * @return data
      */
-    public java.util.Map < String, String > getData() {
+    public String getData() {
         return this.data;
     }
 
@@ -69,12 +69,12 @@ public class ExecuteOperationASyncResponseBody extends TeaModel {
 
     public static final class Builder {
         private Integer code; 
-        private java.util.Map < String, String > data; 
+        private String data; 
         private String message; 
         private String requestId; 
 
         /**
-         * The HTTP status code. A value of 200 indicates that the request is successful, and other values indicate that the request fails.
+         * 结果码，200代表成功；其它代表失败。
          */
         public Builder code(Integer code) {
             this.code = code;
@@ -82,15 +82,15 @@ public class ExecuteOperationASyncResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the operation.
+         * 异步操作任务ID
          */
-        public Builder data(java.util.Map < String, String > data) {
+        public Builder data(String data) {
             this.data = data;
             return this;
         }
 
         /**
-         * The error message.
+         * 错误信息
          */
         public Builder message(String message) {
             this.message = message;
@@ -98,7 +98,7 @@ public class ExecuteOperationASyncResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * 请求ID
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

@@ -127,7 +127,7 @@ public class ListApplicationRequest extends Request {
         } 
 
         /**
-         * The keyword in the application name.
+         * Keyword.
          */
         public Builder keyword(String keyword) {
             this.putBodyParameter("Keyword", keyword);
@@ -136,7 +136,7 @@ public class ListApplicationRequest extends Request {
         }
 
         /**
-         * The number of entries to return on each page.
+         * The HTTP status code.
          */
         public Builder maxResults(Integer maxResults) {
             this.putBodyParameter("MaxResults", maxResults);
@@ -145,7 +145,7 @@ public class ListApplicationRequest extends Request {
         }
 
         /**
-         * The number of the page to return.
+         * The ID of the resource group to which the application belongs.
          */
         public Builder nextToken(Integer nextToken) {
             this.putBodyParameter("NextToken", nextToken);
@@ -154,7 +154,7 @@ public class ListApplicationRequest extends Request {
         }
 
         /**
-         * The field by which the list is sorted. Valid values: 1 and 2. The value 1 specifies that the list is sorted in descending order of application update time, and the value 2 specifies that the list is sorted in descending order of application creation time.
+         * 排序字段
          */
         public Builder orderType(Long orderType) {
             this.putBodyParameter("OrderType", orderType);
@@ -163,7 +163,7 @@ public class ListApplicationRequest extends Request {
         }
 
         /**
-         * The ID of the resource group.
+         * ResourceGroupId.
          */
         public Builder resourceGroupId(String resourceGroupId) {
             this.putBodyParameter("ResourceGroupId", resourceGroupId);
@@ -172,7 +172,7 @@ public class ListApplicationRequest extends Request {
         }
 
         /**
-         * The status of the application.
+         * 应用的状态
          */
         public Builder status(String status) {
             this.putBodyParameter("Status", status);

@@ -14,14 +14,17 @@ import com.aliyun.sdk.gateway.pop.models.*;
 public class ChangeResourceGroupRequest extends Request {
     @Body
     @NameInMap("NewResourceGroupId")
+    @Validation(required = true)
     private String newResourceGroupId;
 
     @Body
     @NameInMap("ResourceId")
+    @Validation(required = true)
     private String resourceId;
 
     @Body
     @NameInMap("ResourceType")
+    @Validation(required = true)
     private String resourceType;
 
     private ChangeResourceGroupRequest(Builder builder) {

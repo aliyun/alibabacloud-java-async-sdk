@@ -83,7 +83,7 @@ public class GetTemplateRequest extends Request {
         } 
 
         /**
-         * The region in which the template resides.
+         * Region.
          */
         public Builder region(String region) {
             this.putBodyParameter("Region", region);
@@ -92,7 +92,7 @@ public class GetTemplateRequest extends Request {
         }
 
         /**
-         * The ID of the resource group.
+         * ResourceGroupId.
          */
         public Builder resourceGroupId(String resourceGroupId) {
             this.putBodyParameter("ResourceGroupId", resourceGroupId);
@@ -101,7 +101,7 @@ public class GetTemplateRequest extends Request {
         }
 
         /**
-         * The ID of the template.
+         * TemplateId.
          */
         public Builder templateId(String templateId) {
             this.putBodyParameter("TemplateId", templateId);
