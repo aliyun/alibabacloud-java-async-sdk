@@ -50,7 +50,7 @@ public class DescribePoliciesResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * Policies.
+         * A list of policies.
          */
         public Builder policies(java.util.List < Policies> policies) {
             this.policies = policies;
@@ -58,7 +58,7 @@ public class DescribePoliciesResponseBody extends TeaModel {
         }
 
         /**
-         * Id of the request
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -110,7 +110,7 @@ public class DescribePoliciesResponseBody extends TeaModel {
             private java.util.List < String > names; 
 
             /**
-             * Category.
+             * The policy type.
              */
             public Builder category(String category) {
                 this.category = category;
@@ -118,7 +118,7 @@ public class DescribePoliciesResponseBody extends TeaModel {
             }
 
             /**
-             * Names.
+             * The names of the policies of each policy type.
              */
             public Builder names(java.util.List < String > names) {
                 this.names = names;

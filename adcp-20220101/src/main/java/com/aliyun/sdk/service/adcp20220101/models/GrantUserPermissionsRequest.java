@@ -98,6 +98,9 @@ public class GrantUserPermissionsRequest extends Request {
         @NameInMap("ClusterId")
         private String clusterId;
 
+        @NameInMap("IsRamRole")
+        private Boolean isRamRole;
+
         @NameInMap("Namespace")
         private String namespace;
 
@@ -111,6 +114,7 @@ public class GrantUserPermissionsRequest extends Request {
 
         private Permissions(Builder builder) {
             this.clusterId = builder.clusterId;
+            this.isRamRole = builder.isRamRole;
             this.namespace = builder.namespace;
             this.roleName = builder.roleName;
             this.roleType = builder.roleType;
@@ -129,6 +133,13 @@ public class GrantUserPermissionsRequest extends Request {
          */
         public String getClusterId() {
             return this.clusterId;
+        }
+
+        /**
+         * @return isRamRole
+         */
+        public Boolean getIsRamRole() {
+            return this.isRamRole;
         }
 
         /**
@@ -154,6 +165,7 @@ public class GrantUserPermissionsRequest extends Request {
 
         public static final class Builder {
             private String clusterId; 
+            private Boolean isRamRole; 
             private String namespace; 
             private String roleName; 
             private String roleType; 
@@ -163,6 +175,14 @@ public class GrantUserPermissionsRequest extends Request {
              */
             public Builder clusterId(String clusterId) {
                 this.clusterId = clusterId;
+                return this;
+            }
+
+            /**
+             * IsRamRole.
+             */
+            public Builder isRamRole(Boolean isRamRole) {
+                this.isRamRole = isRamRole;
                 return this;
             }
 

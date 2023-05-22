@@ -50,7 +50,7 @@ public class DescribeManagedClustersResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * Information about the master instance.
+         * The status of the associated clusters. Valid values: - initial: The associated clusters are being initialized. - failed: The associated clustersfailed to be created. - running: The associated clusters are running. - inactive: The associated clusters are inactive. - deleting: The associated clusters are being deleted. - deleted: The associated clusters are deleted.
          */
         public Builder clusters(java.util.List < Clusters> clusters) {
             this.clusters = clusters;
@@ -58,7 +58,7 @@ public class DescribeManagedClustersResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * VPC ID
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -254,7 +254,7 @@ public class DescribeManagedClustersResponseBody extends TeaModel {
             private String vpcID; 
 
             /**
-             * The ID of the master instance.
+             * Information about the master instance.
              */
             public Builder clusterID(String clusterID) {
                 this.clusterID = clusterID;
@@ -262,7 +262,7 @@ public class DescribeManagedClustersResponseBody extends TeaModel {
             }
 
             /**
-             * The specification of the master instance. Valid values: - ack.pro.small: ACK Pro.
+             * The ID of the master instance.
              */
             public Builder clusterSpec(String clusterSpec) {
                 this.clusterSpec = clusterSpec;
@@ -270,7 +270,7 @@ public class DescribeManagedClustersResponseBody extends TeaModel {
             }
 
             /**
-             * The type of the master instance.
+             * The time when the master instance was created.
              */
             public Builder clusterType(String clusterType) {
                 this.clusterType = clusterType;
@@ -278,7 +278,7 @@ public class DescribeManagedClustersResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the master instance was created.
+             * The ID of the master instance.
              */
             public Builder created(String created) {
                 this.created = created;
@@ -286,7 +286,7 @@ public class DescribeManagedClustersResponseBody extends TeaModel {
             }
 
             /**
-             * The current Kubernetes version of the master instance.
+             * The name of the master instance.
              */
             public Builder currentVersion(String currentVersion) {
                 this.currentVersion = currentVersion;
@@ -294,7 +294,7 @@ public class DescribeManagedClustersResponseBody extends TeaModel {
             }
 
             /**
-             * The original Kubernetes version of the master instance.
+             * The specification of the master instance. Valid values: - ack.pro.small: ACK Pro.
              */
             public Builder initVersion(String initVersion) {
                 this.initVersion = initVersion;
@@ -302,7 +302,7 @@ public class DescribeManagedClustersResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the master instance.
+             * The status information.
              */
             public Builder name(String name) {
                 this.name = name;
@@ -310,7 +310,7 @@ public class DescribeManagedClustersResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the master instance.
+             * The ID of the request.
              */
             public Builder profile(String profile) {
                 this.profile = profile;
@@ -318,7 +318,7 @@ public class DescribeManagedClustersResponseBody extends TeaModel {
             }
 
             /**
-             * The region in which the master instance resides.
+             * The ID of the master instance.
              */
             public Builder region(String region) {
                 this.region = region;
@@ -326,7 +326,7 @@ public class DescribeManagedClustersResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the resource group.
+             * The name of the master instance.
              */
             public Builder resourceGroupId(String resourceGroupId) {
                 this.resourceGroupId = resourceGroupId;
@@ -334,7 +334,7 @@ public class DescribeManagedClustersResponseBody extends TeaModel {
             }
 
             /**
-             * The status of the associated clusters. Valid values: - initial: The associated clusters are being initialized. - failed: The associated clustersfailed to be created. - running: The associated clusters are running. - inactive: The associated clusters are inactive. - deleting: The associated clusters are being deleted. - deleted: The associated clusters are deleted.
+             * The current Kubernetes version of the master instance.
              */
             public Builder state(String state) {
                 this.state = state;
@@ -342,7 +342,7 @@ public class DescribeManagedClustersResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the master instance was updated.
+             * The ID of the vSwitch.
              */
             public Builder updated(String updated) {
                 this.updated = updated;
@@ -350,7 +350,7 @@ public class DescribeManagedClustersResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the vSwitch.
+             * The original Kubernetes version of the master instance.
              */
             public Builder vSwitchID(String vSwitchID) {
                 this.vSwitchID = vSwitchID;
@@ -358,7 +358,7 @@ public class DescribeManagedClustersResponseBody extends TeaModel {
             }
 
             /**
-             * VPC ID.
+             * The status of the association between the clusters and the master instance. Valid values: - Installing: The clusters are being associated with the master instance. - Successed: The clusters are associated with the master instance. - Failed: The clusters failed to be associated with the master instance. - Deleting: The clusters are being disassociated from the master instance. - Deleted: The clusters are disassociated from the master instance.
              */
             public Builder vpcID(String vpcID) {
                 this.vpcID = vpcID;
@@ -399,7 +399,7 @@ public class DescribeManagedClustersResponseBody extends TeaModel {
             private Boolean inMesh; 
 
             /**
-             * Indicates whether the clusters are associated with ASM instances. Valid values: - true: The clusters are associated with ASM instances. - false: The clusters are not associated with ASM instances.
+             * InMesh.
              */
             public Builder inMesh(Boolean inMesh) {
                 this.inMesh = inMesh;
@@ -452,7 +452,7 @@ public class DescribeManagedClustersResponseBody extends TeaModel {
             private String state; 
 
             /**
-             * The status information.
+             * Query the clusters that are associated with a master instance.
              */
             public Builder message(String message) {
                 this.message = message;
@@ -460,7 +460,7 @@ public class DescribeManagedClustersResponseBody extends TeaModel {
             }
 
             /**
-             * The status of the association between the clusters and the master instance. Valid values: - Installing: The clusters are being associated with the master instance. - Successed: The clusters are associated with the master instance. - Failed: The clusters failed to be associated with the master instance. - Deleting: The clusters are being disassociated from the master instance. - Deleted: The clusters are disassociated from the master instance.
+             * You can call the DescribeManagedClusters operation to query the clusters that are associated with a master instance.
              */
             public Builder state(String state) {
                 this.state = state;
@@ -533,7 +533,7 @@ public class DescribeManagedClustersResponseBody extends TeaModel {
             }
 
             /**
-             * The status of the association between the clusters and Service Mesh (ASM).
+             * Zhishi
              */
             public Builder meshStatus(MeshStatus meshStatus) {
                 this.meshStatus = meshStatus;
@@ -541,7 +541,7 @@ public class DescribeManagedClustersResponseBody extends TeaModel {
             }
 
             /**
-             * The status of the association between the clusters and the master instance.
+             * Example 1
              */
             public Builder status(Status status) {
                 this.status = status;

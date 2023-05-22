@@ -18,6 +18,10 @@ public class GrantUserPermissionRequest extends Request {
     private String clusterId;
 
     @Query
+    @NameInMap("IsRamRole")
+    private Boolean isRamRole;
+
+    @Query
     @NameInMap("Namespace")
     private String namespace;
 
@@ -39,6 +43,7 @@ public class GrantUserPermissionRequest extends Request {
     private GrantUserPermissionRequest(Builder builder) {
         super(builder);
         this.clusterId = builder.clusterId;
+        this.isRamRole = builder.isRamRole;
         this.namespace = builder.namespace;
         this.roleName = builder.roleName;
         this.roleType = builder.roleType;
@@ -63,6 +68,13 @@ public class GrantUserPermissionRequest extends Request {
      */
     public String getClusterId() {
         return this.clusterId;
+    }
+
+    /**
+     * @return isRamRole
+     */
+    public Boolean getIsRamRole() {
+        return this.isRamRole;
     }
 
     /**
@@ -95,6 +107,7 @@ public class GrantUserPermissionRequest extends Request {
 
     public static final class Builder extends Request.Builder<GrantUserPermissionRequest, Builder> {
         private String clusterId; 
+        private Boolean isRamRole; 
         private String namespace; 
         private String roleName; 
         private String roleType; 
@@ -107,6 +120,7 @@ public class GrantUserPermissionRequest extends Request {
         private Builder(GrantUserPermissionRequest request) {
             super(request);
             this.clusterId = request.clusterId;
+            this.isRamRole = request.isRamRole;
             this.namespace = request.namespace;
             this.roleName = request.roleName;
             this.roleType = request.roleType;
@@ -119,6 +133,15 @@ public class GrantUserPermissionRequest extends Request {
         public Builder clusterId(String clusterId) {
             this.putQueryParameter("ClusterId", clusterId);
             this.clusterId = clusterId;
+            return this;
+        }
+
+        /**
+         * IsRamRole.
+         */
+        public Builder isRamRole(Boolean isRamRole) {
+            this.putQueryParameter("IsRamRole", isRamRole);
+            this.isRamRole = isRamRole;
             return this;
         }
 

@@ -54,7 +54,7 @@ public class DescribePolicyDetailsRequest extends Request {
         } 
 
         /**
-         * PolicyName.
+         * The name of the policy.
          */
         public Builder policyName(String policyName) {
             this.putQueryParameter("PolicyName", policyName);

@@ -50,7 +50,7 @@ public class DescribePolicyInstancesResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * Policies.
+         * A list of policy instances.
          */
         public Builder policies(java.util.List < Policies> policies) {
             this.policies = policies;
@@ -58,7 +58,7 @@ public class DescribePolicyInstancesResponseBody extends TeaModel {
         }
 
         /**
-         * Id of the request
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -206,7 +206,7 @@ public class DescribePolicyInstancesResponseBody extends TeaModel {
             private Long totalViolations; 
 
             /**
-             * ClusterId.
+             * The ID of the associated cluster.
              */
             public Builder clusterId(String clusterId) {
                 this.clusterId = clusterId;
@@ -214,7 +214,7 @@ public class DescribePolicyInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * InstanceName.
+             * The name of the policy instance.
              */
             public Builder instanceName(String instanceName) {
                 this.instanceName = instanceName;
@@ -222,7 +222,11 @@ public class DescribePolicyInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * PolicyAction.
+             * The action of the policy. Valid values:
+             * <p>
+             * 
+             * *   deny: blocks deployments that match the policy.
+             * *   warn: generates alerts for deployments that match the policy.
              */
             public Builder policyAction(String policyAction) {
                 this.policyAction = policyAction;
@@ -230,7 +234,7 @@ public class DescribePolicyInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * PolicyCategory.
+             * The type of the policy.
              */
             public Builder policyCategory(String policyCategory) {
                 this.policyCategory = policyCategory;
@@ -238,7 +242,7 @@ public class DescribePolicyInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * PolicyDescription.
+             * The description of the policy.
              */
             public Builder policyDescription(String policyDescription) {
                 this.policyDescription = policyDescription;
@@ -246,7 +250,7 @@ public class DescribePolicyInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * PolicyName.
+             * The name of the policy.
              */
             public Builder policyName(String policyName) {
                 this.policyName = policyName;
@@ -254,7 +258,7 @@ public class DescribePolicyInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * PolicyParameters.
+             * The parameters of the policy instance.
              */
             public Builder policyParameters(java.util.Map < String, String > policyParameters) {
                 this.policyParameters = policyParameters;
@@ -262,7 +266,12 @@ public class DescribePolicyInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * PolicyScope.
+             * The applicable scope of the policy instance.
+             * <p>
+             * 
+             * A value of \* indicates all namespaces. This is the default value.
+             * 
+             * Multiple namespaces are separated by commas (,).
              */
             public Builder policyScope(String policyScope) {
                 this.policyScope = policyScope;
@@ -270,7 +279,7 @@ public class DescribePolicyInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * PolicySeverity.
+             * The severity level of the policy.
              */
             public Builder policySeverity(String policySeverity) {
                 this.policySeverity = policySeverity;
@@ -278,7 +287,7 @@ public class DescribePolicyInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * TotalViolations.
+             * The total number of deployments that match the policy in the associated cluster, including the deployments that are blocked and the deployments that have triggered alerting.
              */
             public Builder totalViolations(Long totalViolations) {
                 this.totalViolations = totalViolations;

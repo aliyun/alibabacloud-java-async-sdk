@@ -114,7 +114,7 @@ public class DeployPolicyInstanceRequest extends Request {
         } 
 
         /**
-         * ClusterId.
+         * The ID of the master instance.
          */
         public Builder clusterId(String clusterId) {
             this.putQueryParameter("ClusterId", clusterId);
@@ -123,7 +123,7 @@ public class DeployPolicyInstanceRequest extends Request {
         }
 
         /**
-         * ClusterIds.
+         * An array of JSON strings. The JSON strings in the array indicate the IDs of the associated clusters in which the policy instance is deployed.
          */
         public Builder clusterIds(java.util.List < String > clusterIds) {
             String clusterIdsShrink = shrink(clusterIds, "ClusterIds", "json");
@@ -133,7 +133,7 @@ public class DeployPolicyInstanceRequest extends Request {
         }
 
         /**
-         * Namespaces.
+         * A list of namespaces.
          */
         public Builder namespaces(java.util.List < String > namespaces) {
             String namespacesShrink = shrink(namespaces, "Namespaces", "json");
@@ -143,7 +143,11 @@ public class DeployPolicyInstanceRequest extends Request {
         }
 
         /**
-         * PolicyAction.
+         * The action of the policy. Valid values:
+         * <p>
+         * 
+         * *   deny: blocks deployments that match the policy.
+         * *   warn: generates alerts for deployments that match the policy.
          */
         public Builder policyAction(String policyAction) {
             this.putQueryParameter("PolicyAction", policyAction);
@@ -152,7 +156,7 @@ public class DeployPolicyInstanceRequest extends Request {
         }
 
         /**
-         * PolicyName.
+         * The name of the policy.
          */
         public Builder policyName(String policyName) {
             this.putQueryParameter("PolicyName", policyName);

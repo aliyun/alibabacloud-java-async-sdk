@@ -54,13 +54,7 @@ public class DescribeHubClustersRequest extends Request {
         } 
 
         /**
-         * The scenario where master instances are used. Valid values:
-         * <p>
-         * 
-         * *   `Default`: standard scenarios.
-         * *   `XFlow`: workflow scenarios.
-         * 
-         * Default value: `Default`.
+         * Profile.
          */
         public Builder profile(String profile) {
             this.putQueryParameter("Profile", profile);

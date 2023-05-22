@@ -74,7 +74,7 @@ public class DetachClusterFromHubResponseBody extends TeaModel {
         private String taskId; 
 
         /**
-         * The ID of the master instance.
+         * Zhishi
          */
         public Builder clusterId(String clusterId) {
             this.clusterId = clusterId;
@@ -82,7 +82,7 @@ public class DetachClusterFromHubResponseBody extends TeaModel {
         }
 
         /**
-         * The IDs of the clusters that are disassociated from the master instance.
+         * ManagedClusterIds.
          */
         public Builder managedClusterIds(java.util.List < String > managedClusterIds) {
             this.managedClusterIds = managedClusterIds;
@@ -90,7 +90,7 @@ public class DetachClusterFromHubResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * You can call the DetachClusterFromHub operation to disassociate clusters from a master instance.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -98,7 +98,7 @@ public class DetachClusterFromHubResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the task.
+         * TaskId.
          */
         public Builder taskId(String taskId) {
             this.taskId = taskId;

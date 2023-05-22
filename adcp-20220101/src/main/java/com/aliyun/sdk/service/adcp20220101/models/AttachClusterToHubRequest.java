@@ -84,7 +84,7 @@ public class AttachClusterToHubRequest extends Request {
         } 
 
         /**
-         * Specifies whether to associate the clusters with Service Mesh (ASM) instances. Valid values:
+         * The operation that you want to perform. Set the value to **AttachClusterToHub**.
          */
         public Builder attachToMesh(Boolean attachToMesh) {
             this.putQueryParameter("AttachToMesh", attachToMesh);
@@ -93,7 +93,7 @@ public class AttachClusterToHubRequest extends Request {
         }
 
         /**
-         * The ID of the master instance.
+         * The ID of the task.
          */
         public Builder clusterId(String clusterId) {
             this.putQueryParameter("ClusterId", clusterId);
@@ -102,7 +102,7 @@ public class AttachClusterToHubRequest extends Request {
         }
 
         /**
-         * A JSON string that can be parsed into a string array. The string specifies the clusters that you want to associate with the master instance.
+         * The ID of the request.
          */
         public Builder clusterIds(String clusterIds) {
             this.putBodyParameter("ClusterIds", clusterIds);

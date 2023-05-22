@@ -50,7 +50,7 @@ public class DescribePolicyDetailsResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * Policy.
+         * Detailed information about the policy.
          */
         public Builder policy(Policy policy) {
             this.policy = policy;
@@ -58,7 +58,7 @@ public class DescribePolicyDetailsResponseBody extends TeaModel {
         }
 
         /**
-         * Id of the request
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -194,7 +194,11 @@ public class DescribePolicyDetailsResponseBody extends TeaModel {
             private String updated; 
 
             /**
-             * Action.
+             * The action of the policy. Valid values:
+             * <p>
+             * 
+             * *   enforce: blocks deployments that match the policy.
+             * *   inform: generates alerts for deployments that match the policy.
              */
             public Builder action(String action) {
                 this.action = action;
@@ -202,7 +206,7 @@ public class DescribePolicyDetailsResponseBody extends TeaModel {
             }
 
             /**
-             * Category.
+             * The type of the policy.
              */
             public Builder category(String category) {
                 this.category = category;
@@ -210,7 +214,7 @@ public class DescribePolicyDetailsResponseBody extends TeaModel {
             }
 
             /**
-             * Created.
+             * The time when the policy was created.
              */
             public Builder created(String created) {
                 this.created = created;
@@ -218,7 +222,7 @@ public class DescribePolicyDetailsResponseBody extends TeaModel {
             }
 
             /**
-             * Description.
+             * The description of the policy.
              */
             public Builder description(String description) {
                 this.description = description;
@@ -226,7 +230,7 @@ public class DescribePolicyDetailsResponseBody extends TeaModel {
             }
 
             /**
-             * Name.
+             * The name of the policy.
              */
             public Builder name(String name) {
                 this.name = name;
@@ -234,7 +238,11 @@ public class DescribePolicyDetailsResponseBody extends TeaModel {
             }
 
             /**
-             * NoConfig.
+             * Indicates whether parameters are required. Valid values:
+             * <p>
+             * 
+             * *   0: Parameters are required.
+             * *   1: Parameters are optional.
              */
             public Builder noConfig(Integer noConfig) {
                 this.noConfig = noConfig;
@@ -242,7 +250,7 @@ public class DescribePolicyDetailsResponseBody extends TeaModel {
             }
 
             /**
-             * Severity.
+             * The severity level of the policy.
              */
             public Builder severity(String severity) {
                 this.severity = severity;
@@ -250,7 +258,7 @@ public class DescribePolicyDetailsResponseBody extends TeaModel {
             }
 
             /**
-             * Template.
+             * The content of the policy.
              */
             public Builder template(String template) {
                 this.template = template;
@@ -258,7 +266,7 @@ public class DescribePolicyDetailsResponseBody extends TeaModel {
             }
 
             /**
-             * Updated.
+             * The time when the policy was last updated.
              */
             public Builder updated(String updated) {
                 this.updated = updated;

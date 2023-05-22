@@ -74,7 +74,7 @@ public class AttachClusterToHubResponseBody extends TeaModel {
         private String taskId; 
 
         /**
-         * The ID of the master instance.
+         * You can call the AttachClusterToHub operation to associate an Container Service for Kubernetes (ACK) cluster with a master instance of ACK One.
          */
         public Builder clusterId(String clusterId) {
             this.clusterId = clusterId;
@@ -82,7 +82,7 @@ public class AttachClusterToHubResponseBody extends TeaModel {
         }
 
         /**
-         * A list of the IDs of the clusters that you want to associate with the master instance.
+         * Zhishi
          */
         public Builder managedClusterIds(java.util.List < String > managedClusterIds) {
             this.managedClusterIds = managedClusterIds;
@@ -90,7 +90,7 @@ public class AttachClusterToHubResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * Example 1
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -98,7 +98,7 @@ public class AttachClusterToHubResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the task.
+         * TaskId.
          */
         public Builder taskId(String taskId) {
             this.taskId = taskId;

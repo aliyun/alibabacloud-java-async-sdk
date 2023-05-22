@@ -55,7 +55,7 @@ public class DescribeManagedClustersRequest extends Request {
         } 
 
         /**
-         * The ID of the master instance.
+         * The status of the association between the clusters and Service Mesh (ASM).
          */
         public Builder clusterId(String clusterId) {
             this.putQueryParameter("ClusterId", clusterId);

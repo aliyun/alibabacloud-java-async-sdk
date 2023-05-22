@@ -84,7 +84,7 @@ public class DetachClusterFromHubRequest extends Request {
         } 
 
         /**
-         * The ID of the master instance.
+         * The ID of the request.
          */
         public Builder clusterId(String clusterId) {
             this.putQueryParameter("ClusterId", clusterId);
@@ -93,7 +93,7 @@ public class DetachClusterFromHubRequest extends Request {
         }
 
         /**
-         * A JSON string that can be parsed into a string array. The string specifies the clusters that you want to disassociate from the master instance.
+         * The operation that you want to perform. Set the value to **DetachClusterFromHub**.
          */
         public Builder clusterIds(String clusterIds) {
             this.putBodyParameter("ClusterIds", clusterIds);
@@ -102,7 +102,7 @@ public class DetachClusterFromHubRequest extends Request {
         }
 
         /**
-         * Specifies whether to only disassociate the clusters from Service Mesh (ASM) instances. Valid values: - true: only disassociates the clusters from ASM instances. - false: disassociates the clusters from the master instance and ASM instances.
+         * Example 1
          */
         public Builder detachFromMesh(Boolean detachFromMesh) {
             this.putQueryParameter("DetachFromMesh", detachFromMesh);
