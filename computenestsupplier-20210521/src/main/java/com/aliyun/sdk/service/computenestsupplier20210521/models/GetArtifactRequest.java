@@ -14,8 +14,11 @@ import com.aliyun.sdk.gateway.pop.models.*;
 public class GetArtifactRequest extends Request {
     @Query
     @NameInMap("ArtifactId")
-    @Validation(required = true)
     private String artifactId;
+
+    @Query
+    @NameInMap("ArtifactName")
+    private String artifactName;
 
     @Query
     @NameInMap("ArtifactVersion")
@@ -24,6 +27,7 @@ public class GetArtifactRequest extends Request {
     private GetArtifactRequest(Builder builder) {
         super(builder);
         this.artifactId = builder.artifactId;
+        this.artifactName = builder.artifactName;
         this.artifactVersion = builder.artifactVersion;
     }
 
@@ -48,6 +52,13 @@ public class GetArtifactRequest extends Request {
     }
 
     /**
+     * @return artifactName
+     */
+    public String getArtifactName() {
+        return this.artifactName;
+    }
+
+    /**
      * @return artifactVersion
      */
     public String getArtifactVersion() {
@@ -56,6 +67,7 @@ public class GetArtifactRequest extends Request {
 
     public static final class Builder extends Request.Builder<GetArtifactRequest, Builder> {
         private String artifactId; 
+        private String artifactName; 
         private String artifactVersion; 
 
         private Builder() {
@@ -65,6 +77,7 @@ public class GetArtifactRequest extends Request {
         private Builder(GetArtifactRequest request) {
             super(request);
             this.artifactId = request.artifactId;
+            this.artifactName = request.artifactName;
             this.artifactVersion = request.artifactVersion;
         } 
 
@@ -74,6 +87,15 @@ public class GetArtifactRequest extends Request {
         public Builder artifactId(String artifactId) {
             this.putQueryParameter("ArtifactId", artifactId);
             this.artifactId = artifactId;
+            return this;
+        }
+
+        /**
+         * ArtifactName.
+         */
+        public Builder artifactName(String artifactName) {
+            this.putQueryParameter("ArtifactName", artifactName);
+            this.artifactName = artifactName;
             return this;
         }
 
