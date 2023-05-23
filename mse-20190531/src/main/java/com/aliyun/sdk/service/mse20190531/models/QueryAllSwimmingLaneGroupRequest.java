@@ -69,11 +69,7 @@ public class QueryAllSwimmingLaneGroupRequest extends Request {
         } 
 
         /**
-         * The language of the response. Valid values:
-         * <p>
-         * 
-         * *   zh: Chinese
-         * *   en: English
+         * system error
          */
         public Builder acceptLanguage(String acceptLanguage) {
             this.putQueryParameter("AcceptLanguage", acceptLanguage);

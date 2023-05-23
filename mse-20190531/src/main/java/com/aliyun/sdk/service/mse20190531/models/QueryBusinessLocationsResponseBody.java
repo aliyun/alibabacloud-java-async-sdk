@@ -86,7 +86,7 @@ public class QueryBusinessLocationsResponseBody extends TeaModel {
         private String success; 
 
         /**
-         * The details of the data.
+         * Data.
          */
         public Builder data(java.util.List < Data> data) {
             this.data = data;
@@ -94,7 +94,7 @@ public class QueryBusinessLocationsResponseBody extends TeaModel {
         }
 
         /**
-         * The error code returned if the request failed.
+         * ErrorCode.
          */
         public Builder errorCode(String errorCode) {
             this.errorCode = errorCode;
@@ -102,7 +102,7 @@ public class QueryBusinessLocationsResponseBody extends TeaModel {
         }
 
         /**
-         * The message returned.
+         * Message.
          */
         public Builder message(String message) {
             this.message = message;
@@ -110,7 +110,7 @@ public class QueryBusinessLocationsResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * RequestId.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -118,7 +118,7 @@ public class QueryBusinessLocationsResponseBody extends TeaModel {
         }
 
         /**
-         * The result of the request.
+         * Success.
          */
         public Builder success(String success) {
             this.success = success;
@@ -302,7 +302,7 @@ public class QueryBusinessLocationsResponseBody extends TeaModel {
             private String type; 
 
             /**
-             * The Chinese name of the region.
+             * CnName.
              */
             public Builder cnName(String cnName) {
                 this.cnName = cnName;
@@ -310,7 +310,7 @@ public class QueryBusinessLocationsResponseBody extends TeaModel {
             }
 
             /**
-             * The description.
+             * Description.
              */
             public Builder description(String description) {
                 this.description = description;
@@ -318,7 +318,7 @@ public class QueryBusinessLocationsResponseBody extends TeaModel {
             }
 
             /**
-             * The Chinese name of the district.
+             * DistrictCnName.
              */
             public Builder districtCnName(String districtCnName) {
                 this.districtCnName = districtCnName;
@@ -326,7 +326,7 @@ public class QueryBusinessLocationsResponseBody extends TeaModel {
             }
 
             /**
-             * The English name of the district.
+             * DistrictEnName.
              */
             public Builder districtEnName(String districtEnName) {
                 this.districtEnName = districtEnName;
@@ -334,7 +334,7 @@ public class QueryBusinessLocationsResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the region.
+             * DistrictId.
              */
             public Builder districtId(String districtId) {
                 this.districtId = districtId;
@@ -342,7 +342,7 @@ public class QueryBusinessLocationsResponseBody extends TeaModel {
             }
 
             /**
-             * The ordering information of the district.
+             * DistrictOrdering.
              */
             public Builder districtOrdering(Integer districtOrdering) {
                 this.districtOrdering = districtOrdering;
@@ -350,7 +350,7 @@ public class QueryBusinessLocationsResponseBody extends TeaModel {
             }
 
             /**
-             * The display name of the district.
+             * DistrictShowName.
              */
             public Builder districtShowName(String districtShowName) {
                 this.districtShowName = districtShowName;
@@ -358,7 +358,7 @@ public class QueryBusinessLocationsResponseBody extends TeaModel {
             }
 
             /**
-             * The complete description of the region.
+             * EnDescription.
              */
             public Builder enDescription(String enDescription) {
                 this.enDescription = enDescription;
@@ -366,7 +366,7 @@ public class QueryBusinessLocationsResponseBody extends TeaModel {
             }
 
             /**
-             * The English name of the region.
+             * EnName.
              */
             public Builder enName(String enName) {
                 this.enName = enName;
@@ -374,7 +374,7 @@ public class QueryBusinessLocationsResponseBody extends TeaModel {
             }
 
             /**
-             * The name.
+             * Name.
              */
             public Builder name(String name) {
                 this.name = name;
@@ -382,7 +382,7 @@ public class QueryBusinessLocationsResponseBody extends TeaModel {
             }
 
             /**
-             * The ordering information.
+             * Ordering.
              */
             public Builder ordering(Integer ordering) {
                 this.ordering = ordering;
@@ -390,7 +390,7 @@ public class QueryBusinessLocationsResponseBody extends TeaModel {
             }
 
             /**
-             * The display name.
+             * ShowName.
              */
             public Builder showName(String showName) {
                 this.showName = showName;
@@ -398,7 +398,7 @@ public class QueryBusinessLocationsResponseBody extends TeaModel {
             }
 
             /**
-             * The type.
+             * Type.
              */
             public Builder type(String type) {
                 this.type = type;

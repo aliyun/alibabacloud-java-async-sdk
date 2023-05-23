@@ -98,7 +98,7 @@ public class GetServiceListResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * The status code returned.
+         * Code.
          */
         public Builder code(Integer code) {
             this.code = code;
@@ -106,7 +106,7 @@ public class GetServiceListResponseBody extends TeaModel {
         }
 
         /**
-         * The data entries returned.
+         * Data.
          */
         public Builder data(java.util.List < Data> data) {
             this.data = data;
@@ -114,7 +114,7 @@ public class GetServiceListResponseBody extends TeaModel {
         }
 
         /**
-         * The HTTP status code returned.
+         * HttpStatusCode.
          */
         public Builder httpStatusCode(Integer httpStatusCode) {
             this.httpStatusCode = httpStatusCode;
@@ -122,7 +122,7 @@ public class GetServiceListResponseBody extends TeaModel {
         }
 
         /**
-         * The message returned.
+         * Message.
          */
         public Builder message(String message) {
             this.message = message;
@@ -130,7 +130,7 @@ public class GetServiceListResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * RequestId.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -138,7 +138,7 @@ public class GetServiceListResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether the request was successful.
+         * Success.
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -238,7 +238,7 @@ public class GetServiceListResponseBody extends TeaModel {
             private String returnType; 
 
             /**
-             * The controller of the method.
+             * MethodController.
              */
             public Builder methodController(String methodController) {
                 this.methodController = methodController;
@@ -246,7 +246,7 @@ public class GetServiceListResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the method.
+             * Name.
              */
             public Builder name(String name) {
                 this.name = name;
@@ -254,7 +254,7 @@ public class GetServiceListResponseBody extends TeaModel {
             }
 
             /**
-             * The data types of the parameters.
+             * ParameterTypes.
              */
             public Builder parameterTypes(java.util.List < String > parameterTypes) {
                 this.parameterTypes = parameterTypes;
@@ -262,7 +262,7 @@ public class GetServiceListResponseBody extends TeaModel {
             }
 
             /**
-             * The paths.
+             * Paths.
              */
             public Builder paths(java.util.List < String > paths) {
                 this.paths = paths;
@@ -270,7 +270,7 @@ public class GetServiceListResponseBody extends TeaModel {
             }
 
             /**
-             * The methods.
+             * RequestMethods.
              */
             public Builder requestMethods(java.util.List < String > requestMethods) {
                 this.requestMethods = requestMethods;
@@ -278,7 +278,7 @@ public class GetServiceListResponseBody extends TeaModel {
             }
 
             /**
-             * The type of the return value.
+             * ReturnType.
              */
             public Builder returnType(String returnType) {
                 this.returnType = returnType;
@@ -427,7 +427,7 @@ public class GetServiceListResponseBody extends TeaModel {
             private String version; 
 
             /**
-             * The name of the Dubbo application.
+             * DubboApplicationName.
              */
             public Builder dubboApplicationName(String dubboApplicationName) {
                 this.dubboApplicationName = dubboApplicationName;
@@ -435,7 +435,7 @@ public class GetServiceListResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the application.
+             * EdasAppName.
              */
             public Builder edasAppName(String edasAppName) {
                 this.edasAppName = edasAppName;
@@ -443,7 +443,7 @@ public class GetServiceListResponseBody extends TeaModel {
             }
 
             /**
-             * The group.
+             * Group.
              */
             public Builder group(String group) {
                 this.group = group;
@@ -451,7 +451,7 @@ public class GetServiceListResponseBody extends TeaModel {
             }
 
             /**
-             * The metadata.
+             * Metadata.
              */
             public Builder metadata(java.util.Map < String, ? > metadata) {
                 this.metadata = metadata;
@@ -459,7 +459,7 @@ public class GetServiceListResponseBody extends TeaModel {
             }
 
             /**
-             * The methods.
+             * Methods.
              */
             public Builder methods(java.util.List < Methods> methods) {
                 this.methods = methods;
@@ -467,7 +467,7 @@ public class GetServiceListResponseBody extends TeaModel {
             }
 
             /**
-             * The type of the service registry.
+             * RegistryType.
              */
             public Builder registryType(String registryType) {
                 this.registryType = registryType;
@@ -475,7 +475,7 @@ public class GetServiceListResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the service.
+             * ServiceName.
              */
             public Builder serviceName(String serviceName) {
                 this.serviceName = serviceName;
@@ -483,7 +483,7 @@ public class GetServiceListResponseBody extends TeaModel {
             }
 
             /**
-             * The type of the service.
+             * ServiceType.
              */
             public Builder serviceType(String serviceType) {
                 this.serviceType = serviceType;
@@ -491,7 +491,7 @@ public class GetServiceListResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the Spring application.
+             * SpringApplicationName.
              */
             public Builder springApplicationName(String springApplicationName) {
                 this.springApplicationName = springApplicationName;
@@ -499,7 +499,7 @@ public class GetServiceListResponseBody extends TeaModel {
             }
 
             /**
-             * The version information.
+             * Version.
              */
             public Builder version(String version) {
                 this.version = version;

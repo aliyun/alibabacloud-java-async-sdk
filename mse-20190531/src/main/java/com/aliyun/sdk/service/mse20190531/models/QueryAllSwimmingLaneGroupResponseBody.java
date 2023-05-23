@@ -122,7 +122,11 @@ public class QueryAllSwimmingLaneGroupResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * The status code. A value of 200 is returned if the request is successful.
+         * Indicates whether the request was successful. Valid values:
+         * <p>
+         * 
+         * *   `true`: The request was successful.
+         * *   `false`: The request failed.
          */
         public Builder code(Integer code) {
             this.code = code;
@@ -130,7 +134,7 @@ public class QueryAllSwimmingLaneGroupResponseBody extends TeaModel {
         }
 
         /**
-         * The details of the data.
+         * The dynamic part in the error message.
          */
         public Builder data(java.util.List < Data> data) {
             this.data = data;
@@ -138,7 +142,7 @@ public class QueryAllSwimmingLaneGroupResponseBody extends TeaModel {
         }
 
         /**
-         * The dynamic part in the error message.
+         * The request was successfully processed.
          */
         public Builder dynamicMessage(String dynamicMessage) {
             this.dynamicMessage = dynamicMessage;
@@ -146,7 +150,7 @@ public class QueryAllSwimmingLaneGroupResponseBody extends TeaModel {
         }
 
         /**
-         * The error code returned if the request failed.
+         * The status code. A value of 200 is returned if the request is successful.
          */
         public Builder errorCode(String errorCode) {
             this.errorCode = errorCode;
@@ -154,7 +158,7 @@ public class QueryAllSwimmingLaneGroupResponseBody extends TeaModel {
         }
 
         /**
-         * The HTTP status code returned.
+         * The error code returned if the request failed.
          */
         public Builder httpStatusCode(Integer httpStatusCode) {
             this.httpStatusCode = httpStatusCode;
@@ -162,11 +166,7 @@ public class QueryAllSwimmingLaneGroupResponseBody extends TeaModel {
         }
 
         /**
-         * The message returned.
-         * <p>
-         * 
-         * *   If the request is successful, a success message is returned.
-         * *   If the request fails, an error message is returned.
+         * The HTTP status code returned.
          */
         public Builder message(String message) {
             this.message = message;
@@ -174,7 +174,7 @@ public class QueryAllSwimmingLaneGroupResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * RestResult
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -182,11 +182,7 @@ public class QueryAllSwimmingLaneGroupResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether the request was successful. Valid values:
-         * <p>
-         * 
-         * *   `true`: The request was successful.
-         * *   `false`: The request failed.
+         * The ID of the request.
          */
         public Builder success(Boolean success) {
             this.success = success;

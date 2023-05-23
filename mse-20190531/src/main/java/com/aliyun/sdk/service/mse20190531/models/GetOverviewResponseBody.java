@@ -98,7 +98,7 @@ public class GetOverviewResponseBody extends TeaModel {
         private String success; 
 
         /**
-         * The response code returned.
+         * clusterNotFound
          */
         public Builder code(Integer code) {
             this.code = code;
@@ -106,7 +106,7 @@ public class GetOverviewResponseBody extends TeaModel {
         }
 
         /**
-         * The details of the data.
+         * mse-200-021
          */
         public Builder data(String data) {
             this.data = data;
@@ -114,7 +114,7 @@ public class GetOverviewResponseBody extends TeaModel {
         }
 
         /**
-         * The HTTP status code returned.
+         * mse-100-001
          */
         public Builder httpStatusCode(Integer httpStatusCode) {
             this.httpStatusCode = httpStatusCode;
@@ -122,7 +122,7 @@ public class GetOverviewResponseBody extends TeaModel {
         }
 
         /**
-         * The message returned.
+         * illegalRequest
          */
         public Builder message(String message) {
             this.message = message;
@@ -130,7 +130,7 @@ public class GetOverviewResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * You are not authorized to perform this operation.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -138,11 +138,7 @@ public class GetOverviewResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether the request was successful. Valid values:
-         * <p>
-         * 
-         * *   `true`: The request was successful.
-         * *   `false`: The request failed.
+         * cluster not found
          */
         public Builder success(String success) {
             this.success = success;

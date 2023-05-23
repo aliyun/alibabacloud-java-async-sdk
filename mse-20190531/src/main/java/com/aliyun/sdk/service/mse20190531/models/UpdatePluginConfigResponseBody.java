@@ -122,7 +122,7 @@ public class UpdatePluginConfigResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * The status code returned.
+         * code仅仅用来和success同步
          */
         public Builder code(Integer code) {
             this.code = code;
@@ -130,7 +130,7 @@ public class UpdatePluginConfigResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the plug-in configuration.
+         * Data.
          */
         public Builder data(Long data) {
             this.data = data;
@@ -138,7 +138,7 @@ public class UpdatePluginConfigResponseBody extends TeaModel {
         }
 
         /**
-         * The dynamic part in the error message.
+         * 动态错误信息中的占位符
          */
         public Builder dynamicMessage(String dynamicMessage) {
             this.dynamicMessage = dynamicMessage;
@@ -146,7 +146,7 @@ public class UpdatePluginConfigResponseBody extends TeaModel {
         }
 
         /**
-         * The error code returned if the request failed.
+         * ErrorCode.
          */
         public Builder errorCode(String errorCode) {
             this.errorCode = errorCode;
@@ -154,7 +154,7 @@ public class UpdatePluginConfigResponseBody extends TeaModel {
         }
 
         /**
-         * The HTTP status code returned.
+         * HttpStatusCode.
          */
         public Builder httpStatusCode(Integer httpStatusCode) {
             this.httpStatusCode = httpStatusCode;
@@ -162,7 +162,7 @@ public class UpdatePluginConfigResponseBody extends TeaModel {
         }
 
         /**
-         * The message returned.
+         * Message.
          */
         public Builder message(String message) {
             this.message = message;
@@ -170,7 +170,7 @@ public class UpdatePluginConfigResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * RequestId.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -178,7 +178,7 @@ public class UpdatePluginConfigResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether the request is successful.
+         * Success.
          */
         public Builder success(Boolean success) {
             this.success = success;

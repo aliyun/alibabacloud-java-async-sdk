@@ -216,11 +216,7 @@ public class CreateNacosInstanceRequest extends Request {
         } 
 
         /**
-         * The language of the response. Valid values:
-         * <p>
-         * 
-         * *   zh: Chinese
-         * *   en: English
+         * 返回结果显示的语言。取值：zh（默认值）：中文，en：英文
          */
         public Builder acceptLanguage(String acceptLanguage) {
             this.putQueryParameter("AcceptLanguage", acceptLanguage);
@@ -229,7 +225,7 @@ public class CreateNacosInstanceRequest extends Request {
         }
 
         /**
-         * The name of the Nacos instance.
+         * Nacos集群名
          */
         public Builder clusterName(String clusterName) {
             this.putQueryParameter("ClusterName", clusterName);
@@ -238,7 +234,7 @@ public class CreateNacosInstanceRequest extends Request {
         }
 
         /**
-         * Specifies whether to enable the service for the instance.
+         * 服务禁用标志
          */
         public Builder enabled(Boolean enabled) {
             this.putQueryParameter("Enabled", enabled);
@@ -247,7 +243,7 @@ public class CreateNacosInstanceRequest extends Request {
         }
 
         /**
-         * Specifies whether to mark the instance as a temporary node.
+         * 临时节点标志
          */
         public Builder ephemeral(Boolean ephemeral) {
             this.putQueryParameter("Ephemeral", ephemeral);
@@ -256,7 +252,7 @@ public class CreateNacosInstanceRequest extends Request {
         }
 
         /**
-         * The name of the group.
+         * 分组名
          */
         public Builder groupName(String groupName) {
             this.putQueryParameter("GroupName", groupName);
@@ -265,7 +261,7 @@ public class CreateNacosInstanceRequest extends Request {
         }
 
         /**
-         * The ID of the instance.
+         * 实例id
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -274,7 +270,7 @@ public class CreateNacosInstanceRequest extends Request {
         }
 
         /**
-         * The IP address of the Nacos instance.
+         * Nacos实例ip
          */
         public Builder ip(String ip) {
             this.putQueryParameter("Ip", ip);
@@ -283,7 +279,7 @@ public class CreateNacosInstanceRequest extends Request {
         }
 
         /**
-         * The metadata of the instance.
+         * 节点元数据
          */
         public Builder metadata(String metadata) {
             this.putBodyParameter("Metadata", metadata);
@@ -292,7 +288,7 @@ public class CreateNacosInstanceRequest extends Request {
         }
 
         /**
-         * The ID of the namespace.
+         * 命名空间id
          */
         public Builder namespaceId(String namespaceId) {
             this.putQueryParameter("NamespaceId", namespaceId);
@@ -301,7 +297,7 @@ public class CreateNacosInstanceRequest extends Request {
         }
 
         /**
-         * The port of the Nacos instance.
+         * Nacos实例端口
          */
         public Builder port(Integer port) {
             this.putQueryParameter("Port", port);
@@ -310,7 +306,7 @@ public class CreateNacosInstanceRequest extends Request {
         }
 
         /**
-         * The name of the service.
+         * 服务名
          */
         public Builder serviceName(String serviceName) {
             this.putQueryParameter("ServiceName", serviceName);
@@ -319,7 +315,7 @@ public class CreateNacosInstanceRequest extends Request {
         }
 
         /**
-         * The weight. Valid values: 0 to 10000. The value must be an integer. A larger value indicates a higher frequency at which the instance is accessed.
+         * 权重
          */
         public Builder weight(String weight) {
             this.putQueryParameter("Weight", weight);

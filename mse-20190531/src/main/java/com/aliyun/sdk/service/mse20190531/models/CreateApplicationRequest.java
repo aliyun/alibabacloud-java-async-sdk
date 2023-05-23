@@ -27,6 +27,7 @@ public class CreateApplicationRequest extends Request {
 
     @Query
     @NameInMap("Namespace")
+    @Validation(maxLength = 64)
     private String namespace;
 
     @Query
@@ -154,11 +155,7 @@ public class CreateApplicationRequest extends Request {
         } 
 
         /**
-         * The language of the response. Valid values:
-         * <p>
-         * 
-         * *   zh: Chinese
-         * *   en: English
+         * 返回结果显示的语言。取值：zh（默认值）：中文，en：英文
          */
         public Builder acceptLanguage(String acceptLanguage) {
             this.putQueryParameter("AcceptLanguage", acceptLanguage);
@@ -167,7 +164,7 @@ public class CreateApplicationRequest extends Request {
         }
 
         /**
-         * The name of the application.
+         * 应用名。
          */
         public Builder appName(String appName) {
             this.putQueryParameter("AppName", appName);
@@ -176,7 +173,7 @@ public class CreateApplicationRequest extends Request {
         }
 
         /**
-         * The programming language of the application.
+         * Language.
          */
         public Builder language(String language) {
             this.putQueryParameter("Language", language);
@@ -185,7 +182,7 @@ public class CreateApplicationRequest extends Request {
         }
 
         /**
-         * Namespace.
+         * 应用所属的MSE命名空间。
          */
         public Builder namespace(String namespace) {
             this.putQueryParameter("Namespace", namespace);
@@ -194,7 +191,7 @@ public class CreateApplicationRequest extends Request {
         }
 
         /**
-         * The region to which the application belongs.
+         * 地域。
          */
         public Builder region(String region) {
             this.putQueryParameter("Region", region);
@@ -203,7 +200,7 @@ public class CreateApplicationRequest extends Request {
         }
 
         /**
-         * Specifies whether to enable the Sentinel-compatible mode.
+         * SentinelEnable.
          */
         public Builder sentinelEnable(String sentinelEnable) {
             this.putQueryParameter("SentinelEnable", sentinelEnable);
@@ -212,7 +209,7 @@ public class CreateApplicationRequest extends Request {
         }
 
         /**
-         * The service where the application is deployed. A value of ACK indicates Container Service for Kubernetes.
+         * Source.
          */
         public Builder source(String source) {
             this.putQueryParameter("Source", source);
@@ -221,7 +218,7 @@ public class CreateApplicationRequest extends Request {
         }
 
         /**
-         * Specifies whether to enable switching.
+         * SwitchEnable.
          */
         public Builder switchEnable(String switchEnable) {
             this.putQueryParameter("SwitchEnable", switchEnable);

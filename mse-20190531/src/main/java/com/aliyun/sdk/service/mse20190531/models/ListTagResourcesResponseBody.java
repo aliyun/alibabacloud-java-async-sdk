@@ -98,7 +98,7 @@ public class ListTagResourcesResponseBody extends TeaModel {
         private TagResources tagResources; 
 
         /**
-         * The error code returned if the request failed.
+         * ErrorCode.
          */
         public Builder errorCode(String errorCode) {
             this.errorCode = errorCode;
@@ -106,7 +106,7 @@ public class ListTagResourcesResponseBody extends TeaModel {
         }
 
         /**
-         * The message returned.
+         * Message.
          */
         public Builder message(String message) {
             this.message = message;
@@ -114,7 +114,7 @@ public class ListTagResourcesResponseBody extends TeaModel {
         }
 
         /**
-         * The token that is required for the next query. If the NextToken parameter is empty, no subsequent query is required.
+         * 下一个查询开始Token，NextToken为空说明没有下一个
          */
         public Builder nextToken(String nextToken) {
             this.nextToken = nextToken;
@@ -122,7 +122,7 @@ public class ListTagResourcesResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * RequestId.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -130,11 +130,7 @@ public class ListTagResourcesResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether the request was successful. Valid values:
-         * <p>
-         * 
-         * *   `true`: The request was successful.
-         * *   `false`: The request failed.
+         * Success.
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -142,7 +138,7 @@ public class ListTagResourcesResponseBody extends TeaModel {
         }
 
         /**
-         * The list of resources.
+         * 资源列表
          */
         public Builder tagResources(TagResources tagResources) {
             this.tagResources = tagResources;
@@ -218,7 +214,7 @@ public class ListTagResourcesResponseBody extends TeaModel {
             private String tagValue; 
 
             /**
-             * The ID of a resource.
+             * 资源ID
              */
             public Builder resourceId(String resourceId) {
                 this.resourceId = resourceId;
@@ -226,7 +222,7 @@ public class ListTagResourcesResponseBody extends TeaModel {
             }
 
             /**
-             * The type of a resource.
+             * 资源类型
              */
             public Builder resourceType(String resourceType) {
                 this.resourceType = resourceType;
@@ -234,7 +230,7 @@ public class ListTagResourcesResponseBody extends TeaModel {
             }
 
             /**
-             * The key of a tag.
+             * 标签键
              */
             public Builder tagKey(String tagKey) {
                 this.tagKey = tagKey;
@@ -242,7 +238,7 @@ public class ListTagResourcesResponseBody extends TeaModel {
             }
 
             /**
-             * The value of a tag.
+             * 标签值
              */
             public Builder tagValue(String tagValue) {
                 this.tagValue = tagValue;

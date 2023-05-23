@@ -110,11 +110,7 @@ public class UpdateGatewayRouteRetryRequest extends Request {
         } 
 
         /**
-         * The language of the response. Valid values:
-         * <p>
-         * 
-         * *   zh: Chinese
-         * *   en: English
+         * 返回结果显示的语言。取值：zh（默认值）：中文，en：英文
          */
         public Builder acceptLanguage(String acceptLanguage) {
             this.putQueryParameter("AcceptLanguage", acceptLanguage);
@@ -123,7 +119,7 @@ public class UpdateGatewayRouteRetryRequest extends Request {
         }
 
         /**
-         * The ID of the gateway.
+         * GatewayId.
          */
         public Builder gatewayId(Long gatewayId) {
             this.putQueryParameter("GatewayId", gatewayId);
@@ -132,7 +128,7 @@ public class UpdateGatewayRouteRetryRequest extends Request {
         }
 
         /**
-         * The unique ID of the gateway.
+         * GatewayUniqueId.
          */
         public Builder gatewayUniqueId(String gatewayUniqueId) {
             this.putQueryParameter("GatewayUniqueId", gatewayUniqueId);
@@ -141,7 +137,7 @@ public class UpdateGatewayRouteRetryRequest extends Request {
         }
 
         /**
-         * The ID of the associated record.
+         * Id.
          */
         public Builder id(Long id) {
             this.putQueryParameter("Id", id);
@@ -150,7 +146,7 @@ public class UpdateGatewayRouteRetryRequest extends Request {
         }
 
         /**
-         * The information about the retry policy.
+         * RetryJSON.
          */
         public Builder retryJSON(RetryJSON retryJSON) {
             String retryJSONShrink = shrink(retryJSON, "RetryJSON", "json");
@@ -229,7 +225,7 @@ public class UpdateGatewayRouteRetryRequest extends Request {
             private String status; 
 
             /**
-             * The number of retries.
+             * Attempts.
              */
             public Builder attempts(Integer attempts) {
                 this.attempts = attempts;
@@ -237,7 +233,7 @@ public class UpdateGatewayRouteRetryRequest extends Request {
             }
 
             /**
-             * The HTTP status codes.
+             * HttpCodes.
              */
             public Builder httpCodes(java.util.List < String > httpCodes) {
                 this.httpCodes = httpCodes;
@@ -245,7 +241,7 @@ public class UpdateGatewayRouteRetryRequest extends Request {
             }
 
             /**
-             * The retry conditions.
+             * RetryOn.
              */
             public Builder retryOn(java.util.List < String > retryOn) {
                 this.retryOn = retryOn;
@@ -253,7 +249,7 @@ public class UpdateGatewayRouteRetryRequest extends Request {
             }
 
             /**
-             * The status of the policy.
+             * Status.
              */
             public Builder status(String status) {
                 this.status = status;

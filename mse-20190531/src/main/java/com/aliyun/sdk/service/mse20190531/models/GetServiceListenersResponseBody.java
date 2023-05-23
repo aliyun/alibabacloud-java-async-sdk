@@ -134,7 +134,7 @@ public class GetServiceListenersResponseBody extends TeaModel {
         private Integer totalCount; 
 
         /**
-         * The returned data.
+         * Data.
          */
         public Builder data(java.util.List < Data> data) {
             this.data = data;
@@ -142,7 +142,7 @@ public class GetServiceListenersResponseBody extends TeaModel {
         }
 
         /**
-         * The error code returned if the request failed.
+         * ErrorCode.
          */
         public Builder errorCode(String errorCode) {
             this.errorCode = errorCode;
@@ -150,7 +150,7 @@ public class GetServiceListenersResponseBody extends TeaModel {
         }
 
         /**
-         * The HTTP status code returned.
+         * HttpCode.
          */
         public Builder httpCode(String httpCode) {
             this.httpCode = httpCode;
@@ -158,11 +158,7 @@ public class GetServiceListenersResponseBody extends TeaModel {
         }
 
         /**
-         * The message returned.
-         * <p>
-         * 
-         * *   If the request is successful, a success message is returned.
-         * *   If the request fails, an error message is returned.
+         * Message.
          */
         public Builder message(String message) {
             this.message = message;
@@ -170,7 +166,7 @@ public class GetServiceListenersResponseBody extends TeaModel {
         }
 
         /**
-         * The page number of the returned page.
+         * 实例列表的页码
          */
         public Builder pageNumber(Integer pageNumber) {
             this.pageNumber = pageNumber;
@@ -178,7 +174,7 @@ public class GetServiceListenersResponseBody extends TeaModel {
         }
 
         /**
-         * The number of entries returned per page.
+         * 输入时设置的每页行数
          */
         public Builder pageSize(Integer pageSize) {
             this.pageSize = pageSize;
@@ -186,7 +182,7 @@ public class GetServiceListenersResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * RequestId.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -194,11 +190,7 @@ public class GetServiceListenersResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether the request was successful. Valid values:
-         * <p>
-         * 
-         * *   `true`: The request was successful.
-         * *   `false`: The request failed.
+         * Success.
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -206,7 +198,7 @@ public class GetServiceListenersResponseBody extends TeaModel {
         }
 
         /**
-         * The number of listeners that are queried.
+         * 查询到的实例总数
          */
         public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;
@@ -330,7 +322,7 @@ public class GetServiceListenersResponseBody extends TeaModel {
             private String serviceName; 
 
             /**
-             * The address of the listener.
+             * 地址
              */
             public Builder addr(String addr) {
                 this.addr = addr;
@@ -338,7 +330,7 @@ public class GetServiceListenersResponseBody extends TeaModel {
             }
 
             /**
-             * The listener client version.
+             * 客户端版本
              */
             public Builder agent(String agent) {
                 this.agent = agent;
@@ -346,7 +338,7 @@ public class GetServiceListenersResponseBody extends TeaModel {
             }
 
             /**
-             * The application name of the listener.
+             * 应用
              */
             public Builder app(String app) {
                 this.app = app;
@@ -354,7 +346,7 @@ public class GetServiceListenersResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the cluster to which the monitored service belongs.
+             * 集群名称
              */
             public Builder cluster(String cluster) {
                 this.cluster = cluster;
@@ -362,7 +354,7 @@ public class GetServiceListenersResponseBody extends TeaModel {
             }
 
             /**
-             * The IP address of the monitored service.
+             * ip地址
              */
             public Builder ip(String ip) {
                 this.ip = ip;
@@ -370,7 +362,7 @@ public class GetServiceListenersResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the namespace.
+             * 命名空间id
              */
             public Builder namespaceId(String namespaceId) {
                 this.namespaceId = namespaceId;
@@ -378,7 +370,7 @@ public class GetServiceListenersResponseBody extends TeaModel {
             }
 
             /**
-             * The port number of the monitored service.
+             * 端口号
              */
             public Builder port(String port) {
                 this.port = port;
@@ -386,7 +378,7 @@ public class GetServiceListenersResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the monitored service.
+             * 服务名称
              */
             public Builder serviceName(String serviceName) {
                 this.serviceName = serviceName;

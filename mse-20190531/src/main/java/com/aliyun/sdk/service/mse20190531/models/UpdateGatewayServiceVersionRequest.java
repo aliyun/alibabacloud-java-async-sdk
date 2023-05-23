@@ -96,11 +96,7 @@ public class UpdateGatewayServiceVersionRequest extends Request {
         } 
 
         /**
-         * The language of the response. Valid values:
-         * <p>
-         * 
-         * *   zh: Chinese
-         * *   en: English
+         * 返回结果显示的语言。取值：zh（默认值）：中文，en：英文
          */
         public Builder acceptLanguage(String acceptLanguage) {
             this.putQueryParameter("AcceptLanguage", acceptLanguage);
@@ -109,7 +105,7 @@ public class UpdateGatewayServiceVersionRequest extends Request {
         }
 
         /**
-         * The unique ID of the gateway.
+         * GatewayUniqueId.
          */
         public Builder gatewayUniqueId(String gatewayUniqueId) {
             this.putQueryParameter("GatewayUniqueId", gatewayUniqueId);
@@ -118,7 +114,7 @@ public class UpdateGatewayServiceVersionRequest extends Request {
         }
 
         /**
-         * The ID of the service.
+         * ServiceId.
          */
         public Builder serviceId(Long serviceId) {
             this.putQueryParameter("ServiceId", serviceId);
@@ -127,7 +123,7 @@ public class UpdateGatewayServiceVersionRequest extends Request {
         }
 
         /**
-         * The version of the service.
+         * ServiceVersion.
          */
         public Builder serviceVersion(String serviceVersion) {
             this.putQueryParameter("ServiceVersion", serviceVersion);

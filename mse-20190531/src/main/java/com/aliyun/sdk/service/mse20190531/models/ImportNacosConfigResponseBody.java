@@ -122,7 +122,7 @@ public class ImportNacosConfigResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * The code returned.
+         * mse-200-021
          */
         public Builder code(Integer code) {
             this.code = code;
@@ -130,7 +130,7 @@ public class ImportNacosConfigResponseBody extends TeaModel {
         }
 
         /**
-         * The details of the data.
+         * systemError
          */
         public Builder data(Data data) {
             this.data = data;
@@ -138,10 +138,7 @@ public class ImportNacosConfigResponseBody extends TeaModel {
         }
 
         /**
-         * The dynamic part in the error message. This parameter is used to replace **%s** in the **ErrMessage** parameter.
-         * <p>
-         * 
-         * > If the return value of the **ErrMessage** parameter is **The Value of Input Parameter %s is not valid** and the return value of the **DynamicMessage** parameter is **DtsJobId**, the specified **DtsJobId** parameter is invalid.
+         * mse-100-001
          */
         public Builder dynamicMessage(String dynamicMessage) {
             this.dynamicMessage = dynamicMessage;
@@ -149,7 +146,7 @@ public class ImportNacosConfigResponseBody extends TeaModel {
         }
 
         /**
-         * The error code returned if the request failed.
+         * illegal request:%s
          */
         public Builder errorCode(String errorCode) {
             this.errorCode = errorCode;
@@ -157,7 +154,7 @@ public class ImportNacosConfigResponseBody extends TeaModel {
         }
 
         /**
-         * The HTTP status code returned.
+         * duplicated cluster alias name
          */
         public Builder httpStatusCode(Integer httpStatusCode) {
             this.httpStatusCode = httpStatusCode;
@@ -165,7 +162,7 @@ public class ImportNacosConfigResponseBody extends TeaModel {
         }
 
         /**
-         * The message returned.
+         * clusterNotFound
          */
         public Builder message(String message) {
             this.message = message;
@@ -173,7 +170,7 @@ public class ImportNacosConfigResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * mse-100-007
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -181,11 +178,7 @@ public class ImportNacosConfigResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether the request was successful. Valid values:
-         * <p>
-         * 
-         * *   `true`: The request was successful.
-         * *   `false`: The request failed.
+         * illegalRequest
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -237,7 +230,7 @@ public class ImportNacosConfigResponseBody extends TeaModel {
             private String group; 
 
             /**
-             * The ID of the data.
+             * The ID of the request.
              */
             public Builder dataId(String dataId) {
                 this.dataId = dataId;
@@ -245,7 +238,11 @@ public class ImportNacosConfigResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the group.
+             * Indicates whether the request was successful. Valid values:
+             * <p>
+             * 
+             * *   `true`: The request was successful.
+             * *   `false`: The request failed.
              */
             public Builder group(String group) {
                 this.group = group;
@@ -298,7 +295,7 @@ public class ImportNacosConfigResponseBody extends TeaModel {
             private String group; 
 
             /**
-             * The ID of the data.
+             * The URL that is used to download the configuration file.
              */
             public Builder dataId(String dataId) {
                 this.dataId = dataId;
@@ -306,7 +303,11 @@ public class ImportNacosConfigResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the group.
+             * The language of the response. Valid values:
+             * <p>
+             * 
+             * *   zh: Chinese
+             * *   en: English
              */
             public Builder group(String group) {
                 this.group = group;
@@ -383,7 +384,7 @@ public class ImportNacosConfigResponseBody extends TeaModel {
             private Integer succCount; 
 
             /**
-             * The information about configurations that are failed to be imported.
+             * The data structure.
              */
             public Builder failData(java.util.List < FailData> failData) {
                 this.failData = failData;
@@ -391,7 +392,7 @@ public class ImportNacosConfigResponseBody extends TeaModel {
             }
 
             /**
-             * The number of configurations that are skipped.
+             * The ID of the instance.
              */
             public Builder skipCount(Integer skipCount) {
                 this.skipCount = skipCount;
@@ -399,7 +400,7 @@ public class ImportNacosConfigResponseBody extends TeaModel {
             }
 
             /**
-             * The information about skipped configurations.
+             * The ID of the namespace.
              */
             public Builder skipData(java.util.List < SkipData> skipData) {
                 this.skipData = skipData;
@@ -407,7 +408,7 @@ public class ImportNacosConfigResponseBody extends TeaModel {
             }
 
             /**
-             * The number of configurations that are imported.
+             * system error
              */
             public Builder succCount(Integer succCount) {
                 this.succCount = succCount;

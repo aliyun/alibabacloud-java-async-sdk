@@ -134,7 +134,7 @@ public class ListEurekaInstancesResponseBody extends TeaModel {
         private Integer totalCount; 
 
         /**
-         * The details of the data.
+         * Data.
          */
         public Builder data(java.util.List < Data> data) {
             this.data = data;
@@ -142,7 +142,7 @@ public class ListEurekaInstancesResponseBody extends TeaModel {
         }
 
         /**
-         * The error code returned if the request failed.
+         * ErrorCode.
          */
         public Builder errorCode(String errorCode) {
             this.errorCode = errorCode;
@@ -150,7 +150,7 @@ public class ListEurekaInstancesResponseBody extends TeaModel {
         }
 
         /**
-         * The HTTP status code returned.
+         * HttpCode.
          */
         public Builder httpCode(String httpCode) {
             this.httpCode = httpCode;
@@ -158,7 +158,7 @@ public class ListEurekaInstancesResponseBody extends TeaModel {
         }
 
         /**
-         * The message returned.
+         * Message.
          */
         public Builder message(String message) {
             this.message = message;
@@ -166,7 +166,7 @@ public class ListEurekaInstancesResponseBody extends TeaModel {
         }
 
         /**
-         * The page number of the returned page.
+         * PageNumber.
          */
         public Builder pageNumber(Integer pageNumber) {
             this.pageNumber = pageNumber;
@@ -174,7 +174,7 @@ public class ListEurekaInstancesResponseBody extends TeaModel {
         }
 
         /**
-         * The number of entries returned per page.
+         * PageSize.
          */
         public Builder pageSize(Integer pageSize) {
             this.pageSize = pageSize;
@@ -182,7 +182,7 @@ public class ListEurekaInstancesResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * RequestId.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -190,11 +190,7 @@ public class ListEurekaInstancesResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether the request was successful. Valid values:
-         * <p>
-         * 
-         * *   `true`: The request was successful.
-         * *   `false`: The request failed.
+         * Success.
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -202,7 +198,7 @@ public class ListEurekaInstancesResponseBody extends TeaModel {
         }
 
         /**
-         * The total number of returned instances.
+         * TotalCount.
          */
         public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;
@@ -398,7 +394,7 @@ public class ListEurekaInstancesResponseBody extends TeaModel {
             private String vipAddress; 
 
             /**
-             * The name of the application.
+             * App.
              */
             public Builder app(String app) {
                 this.app = app;
@@ -406,9 +402,7 @@ public class ListEurekaInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * The timeout period of the instance.\
-             * <p>
-             * After the specified timeout period expires, the service is unavailable by default and is deleted.
+             * DurationInSecs.
              */
             public Builder durationInSecs(Integer durationInSecs) {
                 this.durationInSecs = durationInSecs;
@@ -416,7 +410,7 @@ public class ListEurekaInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * The URL of the homepage.
+             * HomePageUrl.
              */
             public Builder homePageUrl(String homePageUrl) {
                 this.homePageUrl = homePageUrl;
@@ -424,7 +418,7 @@ public class ListEurekaInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * The hostname.
+             * HostName.
              */
             public Builder hostName(String hostName) {
                 this.hostName = hostName;
@@ -432,7 +426,7 @@ public class ListEurekaInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the instance.
+             * InstanceId.
              */
             public Builder instanceId(String instanceId) {
                 this.instanceId = instanceId;
@@ -440,7 +434,7 @@ public class ListEurekaInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * The IP address.
+             * IpAddr.
              */
             public Builder ipAddr(String ipAddr) {
                 this.ipAddr = ipAddr;
@@ -448,7 +442,7 @@ public class ListEurekaInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the instance was last modified.
+             * LastDirtyTimestamp.
              */
             public Builder lastDirtyTimestamp(Long lastDirtyTimestamp) {
                 this.lastDirtyTimestamp = lastDirtyTimestamp;
@@ -456,7 +450,7 @@ public class ListEurekaInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the instance heartbeat was last checked.
+             * LastUpdatedTimestamp.
              */
             public Builder lastUpdatedTimestamp(Long lastUpdatedTimestamp) {
                 this.lastUpdatedTimestamp = lastUpdatedTimestamp;
@@ -464,7 +458,7 @@ public class ListEurekaInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * The metadata.
+             * Metadata.
              */
             public Builder metadata(java.util.Map < String, ? > metadata) {
                 this.metadata = metadata;
@@ -472,7 +466,7 @@ public class ListEurekaInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * The service port number.
+             * Port.
              */
             public Builder port(Integer port) {
                 this.port = port;
@@ -480,9 +474,7 @@ public class ListEurekaInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * The maximum interval between two heartbeat checks after a heartbeat check times out.\
-             * <p>
-             * Default value: 10.
+             * RenewalIntervalInSecs.
              */
             public Builder renewalIntervalInSecs(Integer renewalIntervalInSecs) {
                 this.renewalIntervalInSecs = renewalIntervalInSecs;
@@ -490,7 +482,7 @@ public class ListEurekaInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * The security port.
+             * SecurePort.
              */
             public Builder securePort(Integer securePort) {
                 this.securePort = securePort;
@@ -498,7 +490,7 @@ public class ListEurekaInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * The number of service providers. The value is in the following format: Number of healthy instances/Total number of instances.
+             * Status.
              */
             public Builder status(String status) {
                 this.status = status;
@@ -506,7 +498,7 @@ public class ListEurekaInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * The virtual IP address (VIP).
+             * VipAddress.
              */
             public Builder vipAddress(String vipAddress) {
                 this.vipAddress = vipAddress;

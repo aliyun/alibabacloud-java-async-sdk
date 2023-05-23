@@ -110,7 +110,7 @@ public class FetchLosslessRuleListResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * The response code returned.
+         * code仅仅用来和success同步
          */
         public Builder code(Integer code) {
             this.code = code;
@@ -118,7 +118,7 @@ public class FetchLosslessRuleListResponseBody extends TeaModel {
         }
 
         /**
-         * The response.
+         * Data.
          */
         public Builder data(Data data) {
             this.data = data;
@@ -142,7 +142,7 @@ public class FetchLosslessRuleListResponseBody extends TeaModel {
         }
 
         /**
-         * The message returned.
+         * Message.
          */
         public Builder message(String message) {
             this.message = message;
@@ -150,7 +150,7 @@ public class FetchLosslessRuleListResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * RequestId.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -158,11 +158,7 @@ public class FetchLosslessRuleListResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether the request was successful. Valid values:
-         * <p>
-         * 
-         * *   `true`: The request was successful.
-         * *   `false`: The request failed.
+         * Success.
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -322,7 +318,7 @@ public class FetchLosslessRuleListResponseBody extends TeaModel {
             private Integer warmupTime; 
 
             /**
-             * Indicates whether delayed registration is enabled.
+             * microservices lifecycle aligns to k8s\"s or NOT
              */
             public Builder aligned(Boolean aligned) {
                 this.aligned = aligned;
@@ -330,7 +326,7 @@ public class FetchLosslessRuleListResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the application.
+             * appId
              */
             public Builder appId(String appId) {
                 this.appId = appId;
@@ -338,7 +334,7 @@ public class FetchLosslessRuleListResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the application.
+             * appName
              */
             public Builder appName(String appName) {
                 this.appName = appName;
@@ -346,7 +342,7 @@ public class FetchLosslessRuleListResponseBody extends TeaModel {
             }
 
             /**
-             * The number of instances.
+             * instance\"s count of app
              */
             public Builder count(Integer count) {
                 this.count = count;
@@ -354,7 +350,7 @@ public class FetchLosslessRuleListResponseBody extends TeaModel {
             }
 
             /**
-             * The registration latency.
+             * DelayTime.
              */
             public Builder delayTime(Integer delayTime) {
                 this.delayTime = delayTime;
@@ -362,11 +358,7 @@ public class FetchLosslessRuleListResponseBody extends TeaModel {
             }
 
             /**
-             * The status. Valid values:
-             * <p>
-             * 
-             * *   `true`: enabled.
-             * *   `false`: disabled.
+             * rule is open or close
              */
             public Builder enable(Boolean enable) {
                 this.enable = enable;
@@ -374,7 +366,7 @@ public class FetchLosslessRuleListResponseBody extends TeaModel {
             }
 
             /**
-             * The slope of the prefetching curve.
+             * warmup function type, 2 means f(x)=x^2
              */
             public Builder funcType(Integer funcType) {
                 this.funcType = funcType;
@@ -382,7 +374,7 @@ public class FetchLosslessRuleListResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether the graceful start and shutdown feature is enabled.
+             * show lossLess offline&online detail
              */
             public Builder lossLessDetail(Boolean lossLessDetail) {
                 this.lossLessDetail = lossLessDetail;
@@ -390,7 +382,7 @@ public class FetchLosslessRuleListResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether notification is enabled.
+             * enable lossLess offline active notification
              */
             public Builder notice(Boolean notice) {
                 this.notice = notice;
@@ -398,7 +390,7 @@ public class FetchLosslessRuleListResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether service prefetching is associated.
+             * K8s\"s HPA is related to warmup or NOT
              */
             public Builder related(Boolean related) {
                 this.related = related;
@@ -406,7 +398,7 @@ public class FetchLosslessRuleListResponseBody extends TeaModel {
             }
 
             /**
-             * The prefetching duration.
+             * WarmupTime.
              */
             public Builder warmupTime(Integer warmupTime) {
                 this.warmupTime = warmupTime;
@@ -483,7 +475,7 @@ public class FetchLosslessRuleListResponseBody extends TeaModel {
             private Integer totalSize; 
 
             /**
-             * The number of the returned page.
+             * PageNumber.
              */
             public Builder pageNumber(Integer pageNumber) {
                 this.pageNumber = pageNumber;
@@ -491,7 +483,7 @@ public class FetchLosslessRuleListResponseBody extends TeaModel {
             }
 
             /**
-             * The number of entries returned per page.
+             * PageSize.
              */
             public Builder pageSize(Integer pageSize) {
                 this.pageSize = pageSize;
@@ -499,7 +491,7 @@ public class FetchLosslessRuleListResponseBody extends TeaModel {
             }
 
             /**
-             * The data returned.
+             * Results.
              */
             public Builder results(java.util.List < Results> results) {
                 this.results = results;
@@ -507,7 +499,7 @@ public class FetchLosslessRuleListResponseBody extends TeaModel {
             }
 
             /**
-             * The total number of entries returned.
+             * TotalSize.
              */
             public Builder totalSize(Integer totalSize) {
                 this.totalSize = totalSize;

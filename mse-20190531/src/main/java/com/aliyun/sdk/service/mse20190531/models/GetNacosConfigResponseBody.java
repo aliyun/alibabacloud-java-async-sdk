@@ -86,7 +86,7 @@ public class GetNacosConfigResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * The configuration information.
+         * The name of the application.
          */
         public Builder configuration(Configuration configuration) {
             this.configuration = configuration;
@@ -94,7 +94,7 @@ public class GetNacosConfigResponseBody extends TeaModel {
         }
 
         /**
-         * The error code returned if the request failed.
+         * mse-200-105
          */
         public Builder errorCode(String errorCode) {
             this.errorCode = errorCode;
@@ -102,7 +102,7 @@ public class GetNacosConfigResponseBody extends TeaModel {
         }
 
         /**
-         * The message returned.
+         * The configuration information.
          */
         public Builder message(String message) {
             this.message = message;
@@ -110,7 +110,7 @@ public class GetNacosConfigResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * The format of the configuration.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -118,11 +118,7 @@ public class GetNacosConfigResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether the request was successful. Valid values:
-         * <p>
-         * 
-         * *   `true`: The request was successful.
-         * *   `false`: The request failed.
+         * duplicatedClusterAliasName
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -270,7 +266,7 @@ public class GetNacosConfigResponseBody extends TeaModel {
             private String type; 
 
             /**
-             * The name of the application.
+             * The message digest of the configuration.
              */
             public Builder appName(String appName) {
                 this.appName = appName;
@@ -278,7 +274,7 @@ public class GetNacosConfigResponseBody extends TeaModel {
             }
 
             /**
-             * The list of IP addresses where the beta release of the configuration is performed.
+             * The error code returned if the request failed.
              */
             public Builder betaIps(String betaIps) {
                 this.betaIps = betaIps;
@@ -286,7 +282,7 @@ public class GetNacosConfigResponseBody extends TeaModel {
             }
 
             /**
-             * The content of the configuration.
+             * The description of the configuration.
              */
             public Builder content(String content) {
                 this.content = content;
@@ -294,7 +290,7 @@ public class GetNacosConfigResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the configuration.
+             * The name of the configuration group.
              */
             public Builder dataId(String dataId) {
                 this.dataId = dataId;
@@ -302,7 +298,7 @@ public class GetNacosConfigResponseBody extends TeaModel {
             }
 
             /**
-             * The description of the configuration.
+             * The encryption key.
              */
             public Builder desc(String desc) {
                 this.desc = desc;
@@ -310,7 +306,7 @@ public class GetNacosConfigResponseBody extends TeaModel {
             }
 
             /**
-             * The encryption key.
+             * 1.1.XX.XX, 2.2.XX.XX
              */
             public Builder encryptedDataKey(String encryptedDataKey) {
                 this.encryptedDataKey = encryptedDataKey;
@@ -318,7 +314,7 @@ public class GetNacosConfigResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the configuration group.
+             * For testing
              */
             public Builder group(String group) {
                 this.group = group;
@@ -326,7 +322,7 @@ public class GetNacosConfigResponseBody extends TeaModel {
             }
 
             /**
-             * The message digest of the configuration.
+             * The content of the configuration.
              */
             public Builder md5(String md5) {
                 this.md5 = md5;
@@ -334,7 +330,7 @@ public class GetNacosConfigResponseBody extends TeaModel {
             }
 
             /**
-             * The tags of the configuration.
+             * The ID of the configuration.
              */
             public Builder tags(String tags) {
                 this.tags = tags;
@@ -342,7 +338,7 @@ public class GetNacosConfigResponseBody extends TeaModel {
             }
 
             /**
-             * The format of the configuration.
+             * The tags of the configuration.
              */
             public Builder type(String type) {
                 this.type = type;

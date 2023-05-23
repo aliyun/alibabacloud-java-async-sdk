@@ -170,11 +170,7 @@ public class UpdateNacosClusterRequest extends Request {
         } 
 
         /**
-         * The language of the response. Valid values:
-         * <p>
-         * 
-         * *   zh: Chinese
-         * *   en: English
+         * system error
          */
         public Builder acceptLanguage(String acceptLanguage) {
             this.putQueryParameter("AcceptLanguage", acceptLanguage);
@@ -183,7 +179,7 @@ public class UpdateNacosClusterRequest extends Request {
         }
 
         /**
-         * The port used for health checks.
+         * cluster not found
          */
         public Builder checkPort(Integer checkPort) {
             this.putQueryParameter("CheckPort", checkPort);
@@ -192,7 +188,7 @@ public class UpdateNacosClusterRequest extends Request {
         }
 
         /**
-         * The name of the Nacos cluster.
+         * clusterNotFound
          */
         public Builder clusterName(String clusterName) {
             this.putQueryParameter("ClusterName", clusterName);
@@ -201,7 +197,7 @@ public class UpdateNacosClusterRequest extends Request {
         }
 
         /**
-         * The name of the group.
+         * illegal request:%s
          */
         public Builder groupName(String groupName) {
             this.putQueryParameter("GroupName", groupName);
@@ -210,7 +206,7 @@ public class UpdateNacosClusterRequest extends Request {
         }
 
         /**
-         * The type of the health check.
+         * systemError
          */
         public Builder healthChecker(String healthChecker) {
             this.putQueryParameter("HealthChecker", healthChecker);
@@ -219,7 +215,7 @@ public class UpdateNacosClusterRequest extends Request {
         }
 
         /**
-         * The ID of the instance.
+         * mse-100-007
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -228,7 +224,7 @@ public class UpdateNacosClusterRequest extends Request {
         }
 
         /**
-         * The ID of the namespace.
+         * mse-200-021
          */
         public Builder namespaceId(String namespaceId) {
             this.putQueryParameter("NamespaceId", namespaceId);
@@ -237,7 +233,7 @@ public class UpdateNacosClusterRequest extends Request {
         }
 
         /**
-         * The name of the service.
+         * illegalRequest
          */
         public Builder serviceName(String serviceName) {
             this.putQueryParameter("ServiceName", serviceName);
@@ -246,7 +242,7 @@ public class UpdateNacosClusterRequest extends Request {
         }
 
         /**
-         * Specifies whether to use the port of the instance for a health check.
+         * mse-100-001
          */
         public Builder useInstancePortForCheck(Boolean useInstancePortForCheck) {
             this.putQueryParameter("UseInstancePortForCheck", useInstancePortForCheck);

@@ -96,11 +96,7 @@ public class ListClusterTypesRequest extends Request {
         } 
 
         /**
-         * The language of the response. Valid values:
-         * <p>
-         * 
-         * *   zh: Chinese
-         * *   en: English
+         * mse-100-007
          */
         public Builder acceptLanguage(String acceptLanguage) {
             this.putQueryParameter("AcceptLanguage", acceptLanguage);
@@ -109,11 +105,7 @@ public class ListClusterTypesRequest extends Request {
         }
 
         /**
-         * The network type. Valid values:
-         * <p>
-         * 
-         * *   slb
-         * *   eni
+         * duplicatedClusterAliasName
          */
         public Builder connectType(String connectType) {
             this.putQueryParameter("ConnectType", connectType);
@@ -122,11 +114,7 @@ public class ListClusterTypesRequest extends Request {
         }
 
         /**
-         * The edition of the MSE instance that you want to purchase.
-         * <p>
-         * 
-         * *   mse_pro: Professional Edition
-         * *   mse_dev: Developer Edition
+         * duplicated cluster alias name
          */
         public Builder mseVersion(String mseVersion) {
             this.putQueryParameter("MseVersion", mseVersion);
@@ -135,7 +123,7 @@ public class ListClusterTypesRequest extends Request {
         }
 
         /**
-         * The ID of the region in which the instance resides. The region is supported by Microservices Engine (MSE).
+         * mse-200-105
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);

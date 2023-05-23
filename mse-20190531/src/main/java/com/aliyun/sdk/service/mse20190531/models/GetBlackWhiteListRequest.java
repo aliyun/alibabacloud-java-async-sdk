@@ -110,11 +110,7 @@ public class GetBlackWhiteListRequest extends Request {
         } 
 
         /**
-         * The language of the response. Valid values:
-         * <p>
-         * 
-         * *   zh: Chinese
-         * *   en: English
+         * 返回结果显示的语言。取值：zh（默认值）：中文，en：英文
          */
         public Builder acceptLanguage(String acceptLanguage) {
             this.putQueryParameter("AcceptLanguage", acceptLanguage);
@@ -123,7 +119,7 @@ public class GetBlackWhiteListRequest extends Request {
         }
 
         /**
-         * The unique ID of the gateway.
+         * GatewayUniqueId.
          */
         public Builder gatewayUniqueId(String gatewayUniqueId) {
             this.putQueryParameter("GatewayUniqueId", gatewayUniqueId);
@@ -132,7 +128,7 @@ public class GetBlackWhiteListRequest extends Request {
         }
 
         /**
-         * Specifies whether to enable the whitelist.
+         * IsWhite.
          */
         public Builder isWhite(Boolean isWhite) {
             this.putQueryParameter("IsWhite", isWhite);
@@ -141,7 +137,7 @@ public class GetBlackWhiteListRequest extends Request {
         }
 
         /**
-         * The type of the resource.
+         * ResourceType.
          */
         public Builder resourceType(String resourceType) {
             this.putQueryParameter("ResourceType", resourceType);
@@ -150,7 +146,7 @@ public class GetBlackWhiteListRequest extends Request {
         }
 
         /**
-         * The type.
+         * Type.
          */
         public Builder type(String type) {
             this.putQueryParameter("Type", type);

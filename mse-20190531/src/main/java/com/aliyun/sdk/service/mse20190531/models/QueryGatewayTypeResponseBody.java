@@ -98,7 +98,7 @@ public class QueryGatewayTypeResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * The status code returned. The value 200 indicates that the request was successful. Other values indicate that the request failed.
+         * Code.
          */
         public Builder code(Integer code) {
             this.code = code;
@@ -106,7 +106,7 @@ public class QueryGatewayTypeResponseBody extends TeaModel {
         }
 
         /**
-         * The information about the gateway type. The data type of this parameter is List.
+         * Data.
          */
         public Builder data(java.util.List < String > data) {
             this.data = data;
@@ -114,7 +114,7 @@ public class QueryGatewayTypeResponseBody extends TeaModel {
         }
 
         /**
-         * The HTTP status code returned.
+         * HttpStatusCode.
          */
         public Builder httpStatusCode(Integer httpStatusCode) {
             this.httpStatusCode = httpStatusCode;
@@ -122,7 +122,7 @@ public class QueryGatewayTypeResponseBody extends TeaModel {
         }
 
         /**
-         * The message returned. If the request is successful, a success message is returned. If the request fails, an error message is returned.
+         * Message.
          */
         public Builder message(String message) {
             this.message = message;
@@ -130,7 +130,7 @@ public class QueryGatewayTypeResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * Id of the request
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -138,11 +138,7 @@ public class QueryGatewayTypeResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether the request was successful. Valid values:
-         * <p>
-         * 
-         * *   `true`: The request was successful.
-         * *   `false`: The request failed.
+         * Success.
          */
         public Builder success(Boolean success) {
             this.success = success;

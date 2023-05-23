@@ -110,11 +110,7 @@ public class ListMigrationTaskRequest extends Request {
         } 
 
         /**
-         * The language of the response. Valid values:
-         * <p>
-         * 
-         * *   zh: Chinese
-         * *   en: English
+         * illegalRequest
          */
         public Builder acceptLanguage(String acceptLanguage) {
             this.putQueryParameter("AcceptLanguage", acceptLanguage);
@@ -123,7 +119,7 @@ public class ListMigrationTaskRequest extends Request {
         }
 
         /**
-         * The name of the source instance.
+         * duplicatedClusterAliasName
          */
         public Builder originInstanceName(String originInstanceName) {
             this.putQueryParameter("OriginInstanceName", originInstanceName);
@@ -132,7 +128,7 @@ public class ListMigrationTaskRequest extends Request {
         }
 
         /**
-         * The number of the page to return.
+         * mse-100-007
          */
         public Builder pageNum(Long pageNum) {
             this.putQueryParameter("PageNum", pageNum);
@@ -141,7 +137,7 @@ public class ListMigrationTaskRequest extends Request {
         }
 
         /**
-         * The number of entries to return on each page.
+         * duplicated cluster alias name
          */
         public Builder pageSize(Long pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -150,7 +146,7 @@ public class ListMigrationTaskRequest extends Request {
         }
 
         /**
-         * The extended request parameters in the JSON format.
+         * mse-200-105
          */
         public Builder requestPars(String requestPars) {
             this.putQueryParameter("RequestPars", requestPars);

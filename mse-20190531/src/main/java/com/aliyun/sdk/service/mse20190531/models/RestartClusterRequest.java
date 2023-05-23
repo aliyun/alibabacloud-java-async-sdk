@@ -110,11 +110,7 @@ public class RestartClusterRequest extends Request {
         } 
 
         /**
-         * The language of the response. Valid values:
-         * <p>
-         * 
-         * *   zh: Chinese
-         * *   en: English
+         * 返回结果显示的语言。取值：zh（默认值）：中文，en：英文
          */
         public Builder acceptLanguage(String acceptLanguage) {
             this.putQueryParameter("AcceptLanguage", acceptLanguage);
@@ -123,7 +119,7 @@ public class RestartClusterRequest extends Request {
         }
 
         /**
-         * The ID of the cluster.
+         * ClusterId.
          */
         public Builder clusterId(String clusterId) {
             this.putQueryParameter("ClusterId", clusterId);
@@ -132,7 +128,7 @@ public class RestartClusterRequest extends Request {
         }
 
         /**
-         * The ID of the instance.
+         * InstanceId.
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -141,10 +137,7 @@ public class RestartClusterRequest extends Request {
         }
 
         /**
-         * The names of pods. You can specify the names of multiple pods at a time. Separate multiple pod names with commas (,). Example: mse-a8aba010-1629719288255-reg-center-0-1,mse-a8aba010-1629719288255-reg-center-0-2.
-         * <p>
-         * 
-         * The specified pods must belong to the current cluster and be associated with the specified instance. Otherwise, a restart exception occurs.
+         * PodNameList.
          */
         public Builder podNameList(String podNameList) {
             this.putQueryParameter("PodNameList", podNameList);
@@ -153,7 +146,7 @@ public class RestartClusterRequest extends Request {
         }
 
         /**
-         * The extended request parameters in the JSON format.
+         * RequestPars.
          */
         public Builder requestPars(String requestPars) {
             this.putQueryParameter("RequestPars", requestPars);

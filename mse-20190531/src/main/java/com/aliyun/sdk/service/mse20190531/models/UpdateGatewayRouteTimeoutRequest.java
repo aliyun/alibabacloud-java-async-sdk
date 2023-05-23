@@ -110,11 +110,7 @@ public class UpdateGatewayRouteTimeoutRequest extends Request {
         } 
 
         /**
-         * The language of the response. Valid values:
-         * <p>
-         * 
-         * *   zh: Chinese
-         * *   en: English
+         * 返回结果显示的语言。取值：zh（默认值）：中文，en：英文
          */
         public Builder acceptLanguage(String acceptLanguage) {
             this.putQueryParameter("AcceptLanguage", acceptLanguage);
@@ -123,7 +119,7 @@ public class UpdateGatewayRouteTimeoutRequest extends Request {
         }
 
         /**
-         * The ID of the gateway.
+         * GatewayId.
          */
         public Builder gatewayId(Long gatewayId) {
             this.putQueryParameter("GatewayId", gatewayId);
@@ -132,7 +128,7 @@ public class UpdateGatewayRouteTimeoutRequest extends Request {
         }
 
         /**
-         * The unique ID of the gateway.
+         * GatewayUniqueId.
          */
         public Builder gatewayUniqueId(String gatewayUniqueId) {
             this.putQueryParameter("GatewayUniqueId", gatewayUniqueId);
@@ -141,7 +137,7 @@ public class UpdateGatewayRouteTimeoutRequest extends Request {
         }
 
         /**
-         * The ID of the associated record.
+         * Id.
          */
         public Builder id(Long id) {
             this.putQueryParameter("Id", id);
@@ -150,7 +146,7 @@ public class UpdateGatewayRouteTimeoutRequest extends Request {
         }
 
         /**
-         * The timeout period.
+         * TimeoutJSON.
          */
         public Builder timeoutJSON(TimeoutJSON timeoutJSON) {
             String timeoutJSONShrink = shrink(timeoutJSON, "TimeoutJSON", "json");
@@ -217,7 +213,7 @@ public class UpdateGatewayRouteTimeoutRequest extends Request {
             private Integer unitNum; 
 
             /**
-             * The status of the policy.
+             * Status.
              */
             public Builder status(String status) {
                 this.status = status;
@@ -225,7 +221,7 @@ public class UpdateGatewayRouteTimeoutRequest extends Request {
             }
 
             /**
-             * The unit of time. A value of s indicates seconds.
+             * TimeUnit.
              */
             public Builder timeUnit(String timeUnit) {
                 this.timeUnit = timeUnit;
@@ -233,7 +229,7 @@ public class UpdateGatewayRouteTimeoutRequest extends Request {
             }
 
             /**
-             * The value of the timeout period.
+             * UnitNum.
              */
             public Builder unitNum(Integer unitNum) {
                 this.unitNum = unitNum;

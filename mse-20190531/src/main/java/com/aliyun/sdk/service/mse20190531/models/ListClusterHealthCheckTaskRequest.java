@@ -124,11 +124,7 @@ public class ListClusterHealthCheckTaskRequest extends Request {
         } 
 
         /**
-         * The language of the response. Valid values:
-         * <p>
-         * 
-         * *   zh: Chinese
-         * *   en: English
+         * mse-200-021
          */
         public Builder acceptLanguage(String acceptLanguage) {
             this.putQueryParameter("AcceptLanguage", acceptLanguage);
@@ -137,7 +133,7 @@ public class ListClusterHealthCheckTaskRequest extends Request {
         }
 
         /**
-         * The instance ID.
+         * duplicatedClusterAliasName
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -146,7 +142,7 @@ public class ListClusterHealthCheckTaskRequest extends Request {
         }
 
         /**
-         * The number of the page to return.
+         * duplicated cluster alias name
          */
         public Builder pageNum(Integer pageNum) {
             this.putQueryParameter("PageNum", pageNum);
@@ -155,7 +151,7 @@ public class ListClusterHealthCheckTaskRequest extends Request {
         }
 
         /**
-         * The number of entries to return on each page.
+         * mse-100-007
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -164,7 +160,7 @@ public class ListClusterHealthCheckTaskRequest extends Request {
         }
 
         /**
-         * The region in which the instance resides.
+         * illegalRequest
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -173,7 +169,7 @@ public class ListClusterHealthCheckTaskRequest extends Request {
         }
 
         /**
-         * The extended request parameters in the JSON format.
+         * illegal request:%s
          */
         public Builder requestPars(String requestPars) {
             this.putQueryParameter("RequestPars", requestPars);

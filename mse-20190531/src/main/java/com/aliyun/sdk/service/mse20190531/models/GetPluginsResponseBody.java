@@ -134,7 +134,7 @@ public class GetPluginsResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * Code.
+         * The name of the plug-in.
          */
         public Builder code(Integer code) {
             this.code = code;
@@ -142,7 +142,7 @@ public class GetPluginsResponseBody extends TeaModel {
         }
 
         /**
-         * The data entries returned.
+         * The error code returned if the request failed.
          */
         public Builder data(java.util.List < Data> data) {
             this.data = data;
@@ -150,7 +150,7 @@ public class GetPluginsResponseBody extends TeaModel {
         }
 
         /**
-         * The dynamic part in the error message.
+         * Indicates whether the request was successful.
          */
         public Builder dynamicCode(String dynamicCode) {
             this.dynamicCode = dynamicCode;
@@ -158,7 +158,7 @@ public class GetPluginsResponseBody extends TeaModel {
         }
 
         /**
-         * The dynamic error message.
+         * The returned code.
          */
         public Builder dynamicMessage(String dynamicMessage) {
             this.dynamicMessage = dynamicMessage;
@@ -166,7 +166,10 @@ public class GetPluginsResponseBody extends TeaModel {
         }
 
         /**
-         * The error code returned if the request failed.
+         * The language of the response. Valid values:
+         * <p>
+         * 
+         * zh: Chinese en: English
          */
         public Builder errorCode(String errorCode) {
             this.errorCode = errorCode;
@@ -174,7 +177,7 @@ public class GetPluginsResponseBody extends TeaModel {
         }
 
         /**
-         * The HTTP status code returned.
+         * The data returned.
          */
         public Builder httpStatusCode(Integer httpStatusCode) {
             this.httpStatusCode = httpStatusCode;
@@ -182,7 +185,7 @@ public class GetPluginsResponseBody extends TeaModel {
         }
 
         /**
-         * The message returned.
+         * The ID of the request.
          */
         public Builder message(String message) {
             this.message = message;
@@ -190,7 +193,15 @@ public class GetPluginsResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * The type of the plug-in. Valid values:
+         * <p>
+         * 
+         * *   0: custom
+         * *   1: permission authorization
+         * *   2: security protection
+         * *   3: transmission protocol
+         * *   4: traffic control
+         * *   5: traffic observation
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -198,7 +209,7 @@ public class GetPluginsResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether the request was successful.
+         * Specifies whether to enable the plug-in.
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -418,20 +429,7 @@ public class GetPluginsResponseBody extends TeaModel {
             private Integer wasmLang; 
 
             /**
-             * The type of the plug-in. Valid values:
-             * <p>
-             * 
-             * 0: custom
-             * 
-             * 1: permission authorization
-             * 
-             * 2: security protection
-             * 
-             * 3: transmission protocol
-             * 
-             * 4: traffic control
-             * 
-             * 5: traffic observation
+             * The dynamic error message.
              */
             public Builder category(Integer category) {
                 this.category = category;
@@ -439,7 +437,7 @@ public class GetPluginsResponseBody extends TeaModel {
             }
 
             /**
-             * The information about the plug-in configuration used for checking.
+             * The version of the plug-in.
              */
             public Builder configCheck(String configCheck) {
                 this.configCheck = configCheck;
@@ -447,7 +445,7 @@ public class GetPluginsResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the plug-in.
+             * The message returned.
              */
             public Builder id(Long id) {
                 this.id = id;
@@ -471,7 +469,7 @@ public class GetPluginsResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the plug-in.
+             * The data entries returned.
              */
             public Builder name(String name) {
                 this.name = name;
@@ -487,6 +485,43 @@ public class GetPluginsResponseBody extends TeaModel {
             }
 
             /**
+             * The type of the plug-in. Valid values:
+             * <p>
+             * 
+             * 0: custom
+             * 
+             * 1: permission authorization
+             * 
+             * 2: security protection
+             * 
+             * 3: transmission protocol
+             * 
+             * 4: traffic control
+             * 
+             * 5: traffic observation
+             */
+            public Builder phase(Integer phase) {
+                this.phase = phase;
+                return this;
+            }
+
+            /**
+             * The dynamic part in the error message.
+             */
+            public Builder primaryUser(String primaryUser) {
+                this.primaryUser = primaryUser;
+                return this;
+            }
+
+            /**
+             * The name of the plug-in.
+             */
+            public Builder priority(Integer priority) {
+                this.priority = priority;
+                return this;
+            }
+
+            /**
              * The execution stage of the plug-in.
              * <p>
              * 
@@ -495,41 +530,13 @@ public class GetPluginsResponseBody extends TeaModel {
              * *   2: authentication stage
              * *   3: statistics stage
              */
-            public Builder phase(Integer phase) {
-                this.phase = phase;
-                return this;
-            }
-
-            /**
-             * The ID of the creator.
-             */
-            public Builder primaryUser(String primaryUser) {
-                this.primaryUser = primaryUser;
-                return this;
-            }
-
-            /**
-             * The execution priority of the plug-in. A larger value indicates a higher priority.
-             */
-            public Builder priority(Integer priority) {
-                this.priority = priority;
-                return this;
-            }
-
-            /**
-             * The publish status.
-             */
             public Builder publishState(Integer publishState) {
                 this.publishState = publishState;
                 return this;
             }
 
             /**
-             * Indicates whether the plug-in is enabled.
-             * <p>
-             * 
-             * *   0: disabled
-             * *   1: enabled
+             * The information about the plug-in configuration used for checking.
              */
             public Builder status(String status) {
                 this.status = status;
@@ -537,7 +544,7 @@ public class GetPluginsResponseBody extends TeaModel {
             }
 
             /**
-             * The summary of the plug-in.
+             * The ID of the plug-in.
              */
             public Builder summary(String summary) {
                 this.summary = summary;
@@ -545,7 +552,7 @@ public class GetPluginsResponseBody extends TeaModel {
             }
 
             /**
-             * The version of the plug-in.
+             * The information about the plug-in.
              */
             public Builder version(String version) {
                 this.version = version;
@@ -553,7 +560,7 @@ public class GetPluginsResponseBody extends TeaModel {
             }
 
             /**
-             * The URL of the Object Storage Service (OSS) bucket that stores the WebAssembly plug-in.
+             * The execution priority of the plug-in. A larger value indicates a higher priority.
              */
             public Builder wasmFile(String wasmFile) {
                 this.wasmFile = wasmFile;
@@ -561,14 +568,7 @@ public class GetPluginsResponseBody extends TeaModel {
             }
 
             /**
-             * The WebAssembly language. Valid values:
-             * <p>
-             * 
-             * *   0: C++
-             * *   1: TinyGo
-             * *   2: Rust
-             * *   3: AssemblyScript
-             * *   4: Zig
+             * This is a plug-in.
              */
             public Builder wasmLang(Integer wasmLang) {
                 this.wasmLang = wasmLang;

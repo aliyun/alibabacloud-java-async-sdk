@@ -194,15 +194,20 @@ public class UpdateMigrationTaskRequest extends Request {
         } 
 
         /**
-         * The language of the response. Valid values:
-         * <p>
-         * 
-         * *   zh: Chinese
-         * *   en: English
+         * The data structure.
          */
         public Builder acceptLanguage(String acceptLanguage) {
             this.putQueryParameter("AcceptLanguage", acceptLanguage);
             this.acceptLanguage = acceptLanguage;
+            return this;
+        }
+
+        /**
+         * The address of the source instance node.
+         */
+        public Builder clusterType(String clusterType) {
+            this.putQueryParameter("ClusterType", clusterType);
+            this.clusterType = clusterType;
             return this;
         }
 
@@ -214,15 +219,6 @@ public class UpdateMigrationTaskRequest extends Request {
          * *   ZooKeeper
          * *   Eureka
          */
-        public Builder clusterType(String clusterType) {
-            this.putQueryParameter("ClusterType", clusterType);
-            this.clusterType = clusterType;
-            return this;
-        }
-
-        /**
-         * The ID of the task.
-         */
         public Builder id(String id) {
             this.putQueryParameter("Id", id);
             this.id = id;
@@ -230,7 +226,7 @@ public class UpdateMigrationTaskRequest extends Request {
         }
 
         /**
-         * The address of the source instance node.
+         * The name of the source instance.
          */
         public Builder originInstanceAddress(String originInstanceAddress) {
             this.putQueryParameter("OriginInstanceAddress", originInstanceAddress);
@@ -239,7 +235,7 @@ public class UpdateMigrationTaskRequest extends Request {
         }
 
         /**
-         * The name of the source instance.
+         * Source instance
          */
         public Builder originInstanceName(String originInstanceName) {
             this.putQueryParameter("OriginInstanceName", originInstanceName);
@@ -248,7 +244,7 @@ public class UpdateMigrationTaskRequest extends Request {
         }
 
         /**
-         * The list of namespaces. This parameter is optional if you want to migrate applications from a Nacos instance.
+         * The ID of the destination instance.
          */
         public Builder originInstanceNamespace(String originInstanceNamespace) {
             this.putQueryParameter("OriginInstanceNamespace", originInstanceNamespace);
@@ -257,7 +253,7 @@ public class UpdateMigrationTaskRequest extends Request {
         }
 
         /**
-         * The description.
+         * This is a description.
          */
         public Builder projectDesc(String projectDesc) {
             this.putQueryParameter("ProjectDesc", projectDesc);
@@ -266,7 +262,7 @@ public class UpdateMigrationTaskRequest extends Request {
         }
 
         /**
-         * The extended request parameters in the JSON format.
+         * The ID of the task.
          */
         public Builder requestPars(String requestPars) {
             this.putQueryParameter("RequestPars", requestPars);
@@ -275,7 +271,7 @@ public class UpdateMigrationTaskRequest extends Request {
         }
 
         /**
-         * The name of the destination instance.
+         * Destination instance
          */
         public Builder targetClusterName(String targetClusterName) {
             this.putQueryParameter("TargetClusterName", targetClusterName);
@@ -284,7 +280,7 @@ public class UpdateMigrationTaskRequest extends Request {
         }
 
         /**
-         * The URL of the destination instance.
+         * The description.
          */
         public Builder targetClusterUrl(String targetClusterUrl) {
             this.putQueryParameter("TargetClusterUrl", targetClusterUrl);
@@ -293,7 +289,7 @@ public class UpdateMigrationTaskRequest extends Request {
         }
 
         /**
-         * The ID of the destination instance.
+         * The name of the destination instance.
          */
         public Builder targetInstanceId(String targetInstanceId) {
             this.putQueryParameter("TargetInstanceId", targetInstanceId);

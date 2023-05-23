@@ -98,7 +98,7 @@ public class ListGatewayResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * The return value.
+         * Code.
          */
         public Builder code(Integer code) {
             this.code = code;
@@ -106,7 +106,7 @@ public class ListGatewayResponseBody extends TeaModel {
         }
 
         /**
-         * The returned data.
+         * Data.
          */
         public Builder data(Data data) {
             this.data = data;
@@ -114,7 +114,7 @@ public class ListGatewayResponseBody extends TeaModel {
         }
 
         /**
-         * The HTTP status code returned.
+         * HttpStatusCode.
          */
         public Builder httpStatusCode(Integer httpStatusCode) {
             this.httpStatusCode = httpStatusCode;
@@ -122,7 +122,7 @@ public class ListGatewayResponseBody extends TeaModel {
         }
 
         /**
-         * The message returned.
+         * Message.
          */
         public Builder message(String message) {
             this.message = message;
@@ -130,7 +130,7 @@ public class ListGatewayResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * Id of the request
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -138,11 +138,7 @@ public class ListGatewayResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether the request was successful. Valid values:
-         * <p>
-         * 
-         * *   `true`: The request was successful.
-         * *   `false`: The request failed.
+         * Success.
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -155,6 +151,188 @@ public class ListGatewayResponseBody extends TeaModel {
 
     } 
 
+    public static class TimePolicyList extends TeaModel {
+        @NameInMap("DesiredReplica")
+        private Integer desiredReplica;
+
+        @NameInMap("EndTime")
+        private String endTime;
+
+        @NameInMap("StartTime")
+        private String startTime;
+
+        private TimePolicyList(Builder builder) {
+            this.desiredReplica = builder.desiredReplica;
+            this.endTime = builder.endTime;
+            this.startTime = builder.startTime;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static TimePolicyList create() {
+            return builder().build();
+        }
+
+        /**
+         * @return desiredReplica
+         */
+        public Integer getDesiredReplica() {
+            return this.desiredReplica;
+        }
+
+        /**
+         * @return endTime
+         */
+        public String getEndTime() {
+            return this.endTime;
+        }
+
+        /**
+         * @return startTime
+         */
+        public String getStartTime() {
+            return this.startTime;
+        }
+
+        public static final class Builder {
+            private Integer desiredReplica; 
+            private String endTime; 
+            private String startTime; 
+
+            /**
+             * DesiredReplica.
+             */
+            public Builder desiredReplica(Integer desiredReplica) {
+                this.desiredReplica = desiredReplica;
+                return this;
+            }
+
+            /**
+             * EndTime.
+             */
+            public Builder endTime(String endTime) {
+                this.endTime = endTime;
+                return this;
+            }
+
+            /**
+             * StartTime.
+             */
+            public Builder startTime(String startTime) {
+                this.startTime = startTime;
+                return this;
+            }
+
+            public TimePolicyList build() {
+                return new TimePolicyList(this);
+            } 
+
+        } 
+
+    }
+    public static class ElasticPolicy extends TeaModel {
+        @NameInMap("Elastic")
+        private Boolean elastic;
+
+        @NameInMap("ElasticType")
+        private String elasticType;
+
+        @NameInMap("MaxReplica")
+        private Integer maxReplica;
+
+        @NameInMap("TimePolicyList")
+        private java.util.List < TimePolicyList> timePolicyList;
+
+        private ElasticPolicy(Builder builder) {
+            this.elastic = builder.elastic;
+            this.elasticType = builder.elasticType;
+            this.maxReplica = builder.maxReplica;
+            this.timePolicyList = builder.timePolicyList;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static ElasticPolicy create() {
+            return builder().build();
+        }
+
+        /**
+         * @return elastic
+         */
+        public Boolean getElastic() {
+            return this.elastic;
+        }
+
+        /**
+         * @return elasticType
+         */
+        public String getElasticType() {
+            return this.elasticType;
+        }
+
+        /**
+         * @return maxReplica
+         */
+        public Integer getMaxReplica() {
+            return this.maxReplica;
+        }
+
+        /**
+         * @return timePolicyList
+         */
+        public java.util.List < TimePolicyList> getTimePolicyList() {
+            return this.timePolicyList;
+        }
+
+        public static final class Builder {
+            private Boolean elastic; 
+            private String elasticType; 
+            private Integer maxReplica; 
+            private java.util.List < TimePolicyList> timePolicyList; 
+
+            /**
+             * Elastic.
+             */
+            public Builder elastic(Boolean elastic) {
+                this.elastic = elastic;
+                return this;
+            }
+
+            /**
+             * ElasticType.
+             */
+            public Builder elasticType(String elasticType) {
+                this.elasticType = elasticType;
+                return this;
+            }
+
+            /**
+             * MaxReplica.
+             */
+            public Builder maxReplica(Integer maxReplica) {
+                this.maxReplica = maxReplica;
+                return this;
+            }
+
+            /**
+             * TimePolicyList.
+             */
+            public Builder timePolicyList(java.util.List < TimePolicyList> timePolicyList) {
+                this.timePolicyList = timePolicyList;
+                return this;
+            }
+
+            public ElasticPolicy build() {
+                return new ElasticPolicy(this);
+            } 
+
+        } 
+
+    }
     public static class InitConfig extends TeaModel {
         @NameInMap("EnableWaf")
         private Boolean enableWaf;
@@ -194,7 +372,7 @@ public class ListGatewayResponseBody extends TeaModel {
             private Boolean supportWaf; 
 
             /**
-             * Indicates whether Web Application Firewall (WAF) is enabled.
+             * EnableWaf.
              */
             public Builder enableWaf(Boolean enableWaf) {
                 this.enableWaf = enableWaf;
@@ -202,7 +380,7 @@ public class ListGatewayResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether WAF is supported.
+             * SupportWaf.
              */
             public Builder supportWaf(Boolean supportWaf) {
                 this.supportWaf = supportWaf;
@@ -339,7 +517,7 @@ public class ListGatewayResponseBody extends TeaModel {
             private String type; 
 
             /**
-             * The mode of the SLB instance.
+             * GatewaySlbMode.
              */
             public Builder gatewaySlbMode(String gatewaySlbMode) {
                 this.gatewaySlbMode = gatewaySlbMode;
@@ -347,7 +525,7 @@ public class ListGatewayResponseBody extends TeaModel {
             }
 
             /**
-             * The status of the SLB instance.
+             * GatewaySlbStatus.
              */
             public Builder gatewaySlbStatus(String gatewaySlbStatus) {
                 this.gatewaySlbStatus = gatewaySlbStatus;
@@ -355,7 +533,7 @@ public class ListGatewayResponseBody extends TeaModel {
             }
 
             /**
-             * The traffic of the gateway.
+             * InternetNetworkFlow.
              */
             public Builder internetNetworkFlow(String internetNetworkFlow) {
                 this.internetNetworkFlow = internetNetworkFlow;
@@ -363,7 +541,7 @@ public class ListGatewayResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the SLB instance.
+             * SlbId.
              */
             public Builder slbId(String slbId) {
                 this.slbId = slbId;
@@ -371,7 +549,7 @@ public class ListGatewayResponseBody extends TeaModel {
             }
 
             /**
-             * The IP address of the SLB instance.
+             * SlbIp.
              */
             public Builder slbIp(String slbIp) {
                 this.slbIp = slbIp;
@@ -379,7 +557,7 @@ public class ListGatewayResponseBody extends TeaModel {
             }
 
             /**
-             * The port number of the SLB instance.
+             * SlbPort.
              */
             public Builder slbPort(String slbPort) {
                 this.slbPort = slbPort;
@@ -387,7 +565,7 @@ public class ListGatewayResponseBody extends TeaModel {
             }
 
             /**
-             * The specifications of the SLB instance.
+             * SlbSpec.
              */
             public Builder slbSpec(String slbSpec) {
                 this.slbSpec = slbSpec;
@@ -395,7 +573,7 @@ public class ListGatewayResponseBody extends TeaModel {
             }
 
             /**
-             * The description of the status.
+             * StatusDesc.
              */
             public Builder statusDesc(String statusDesc) {
                 this.statusDesc = statusDesc;
@@ -403,7 +581,7 @@ public class ListGatewayResponseBody extends TeaModel {
             }
 
             /**
-             * The type.
+             * Type.
              */
             public Builder type(String type) {
                 this.type = type;
@@ -528,7 +706,7 @@ public class ListGatewayResponseBody extends TeaModel {
             private String type; 
 
             /**
-             * The mode of the SLB instance.
+             * GatewaySlbMode.
              */
             public Builder gatewaySlbMode(String gatewaySlbMode) {
                 this.gatewaySlbMode = gatewaySlbMode;
@@ -536,7 +714,7 @@ public class ListGatewayResponseBody extends TeaModel {
             }
 
             /**
-             * The status of the SLB instance.
+             * GatewaySlbStatus.
              */
             public Builder gatewaySlbStatus(String gatewaySlbStatus) {
                 this.gatewaySlbStatus = gatewaySlbStatus;
@@ -544,7 +722,7 @@ public class ListGatewayResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the SLB instance.
+             * SlbId.
              */
             public Builder slbId(String slbId) {
                 this.slbId = slbId;
@@ -552,7 +730,7 @@ public class ListGatewayResponseBody extends TeaModel {
             }
 
             /**
-             * The IP address of the SLB instance.
+             * SlbIp.
              */
             public Builder slbIp(String slbIp) {
                 this.slbIp = slbIp;
@@ -560,7 +738,7 @@ public class ListGatewayResponseBody extends TeaModel {
             }
 
             /**
-             * The port number of the SLB instance.
+             * SlbPort.
              */
             public Builder slbPort(String slbPort) {
                 this.slbPort = slbPort;
@@ -568,7 +746,7 @@ public class ListGatewayResponseBody extends TeaModel {
             }
 
             /**
-             * The specifications of the SLB instance.
+             * SlbSpec.
              */
             public Builder slbSpec(String slbSpec) {
                 this.slbSpec = slbSpec;
@@ -576,7 +754,7 @@ public class ListGatewayResponseBody extends TeaModel {
             }
 
             /**
-             * The description of the status.
+             * StatusDesc.
              */
             public Builder statusDesc(String statusDesc) {
                 this.statusDesc = statusDesc;
@@ -584,7 +762,7 @@ public class ListGatewayResponseBody extends TeaModel {
             }
 
             /**
-             * The type.
+             * Type.
              */
             public Builder type(String type) {
                 this.type = type;
@@ -613,6 +791,21 @@ public class ListGatewayResponseBody extends TeaModel {
 
         @NameInMap("CurrentVersion")
         private String currentVersion;
+
+        @NameInMap("Elastic")
+        private Boolean elastic;
+
+        @NameInMap("ElasticInstanceId")
+        private String elasticInstanceId;
+
+        @NameInMap("ElasticPolicy")
+        private ElasticPolicy elasticPolicy;
+
+        @NameInMap("ElasticReplica")
+        private Integer elasticReplica;
+
+        @NameInMap("ElasticType")
+        private String elasticType;
 
         @NameInMap("EndDate")
         private String endDate;
@@ -689,6 +882,9 @@ public class ListGatewayResponseBody extends TeaModel {
         @NameInMap("Tag")
         private String tag;
 
+        @NameInMap("TotalReplica")
+        private Integer totalReplica;
+
         @NameInMap("Upgrade")
         private Boolean upgrade;
 
@@ -701,6 +897,11 @@ public class ListGatewayResponseBody extends TeaModel {
             this.armsOn = builder.armsOn;
             this.chargeType = builder.chargeType;
             this.currentVersion = builder.currentVersion;
+            this.elastic = builder.elastic;
+            this.elasticInstanceId = builder.elasticInstanceId;
+            this.elasticPolicy = builder.elasticPolicy;
+            this.elasticReplica = builder.elasticReplica;
+            this.elasticType = builder.elasticType;
             this.endDate = builder.endDate;
             this.gatewayType = builder.gatewayType;
             this.gatewayUniqueId = builder.gatewayUniqueId;
@@ -726,6 +927,7 @@ public class ListGatewayResponseBody extends TeaModel {
             this.statusDesc = builder.statusDesc;
             this.supportWasm = builder.supportWasm;
             this.tag = builder.tag;
+            this.totalReplica = builder.totalReplica;
             this.upgrade = builder.upgrade;
             this.vswitch2 = builder.vswitch2;
         }
@@ -771,6 +973,41 @@ public class ListGatewayResponseBody extends TeaModel {
          */
         public String getCurrentVersion() {
             return this.currentVersion;
+        }
+
+        /**
+         * @return elastic
+         */
+        public Boolean getElastic() {
+            return this.elastic;
+        }
+
+        /**
+         * @return elasticInstanceId
+         */
+        public String getElasticInstanceId() {
+            return this.elasticInstanceId;
+        }
+
+        /**
+         * @return elasticPolicy
+         */
+        public ElasticPolicy getElasticPolicy() {
+            return this.elasticPolicy;
+        }
+
+        /**
+         * @return elasticReplica
+         */
+        public Integer getElasticReplica() {
+            return this.elasticReplica;
+        }
+
+        /**
+         * @return elasticType
+         */
+        public String getElasticType() {
+            return this.elasticType;
         }
 
         /**
@@ -949,6 +1186,13 @@ public class ListGatewayResponseBody extends TeaModel {
         }
 
         /**
+         * @return totalReplica
+         */
+        public Integer getTotalReplica() {
+            return this.totalReplica;
+        }
+
+        /**
          * @return upgrade
          */
         public Boolean getUpgrade() {
@@ -968,6 +1212,11 @@ public class ListGatewayResponseBody extends TeaModel {
             private Boolean armsOn; 
             private String chargeType; 
             private String currentVersion; 
+            private Boolean elastic; 
+            private String elasticInstanceId; 
+            private ElasticPolicy elasticPolicy; 
+            private Integer elasticReplica; 
+            private String elasticType; 
             private String endDate; 
             private String gatewayType; 
             private String gatewayUniqueId; 
@@ -993,11 +1242,12 @@ public class ListGatewayResponseBody extends TeaModel {
             private String statusDesc; 
             private Boolean supportWasm; 
             private String tag; 
+            private Integer totalReplica; 
             private Boolean upgrade; 
             private String vswitch2; 
 
             /**
-             * Indicates whether Application High Availability Service (AHAS) is activated.
+             * AhasOn.
              */
             public Builder ahasOn(Boolean ahasOn) {
                 this.ahasOn = ahasOn;
@@ -1005,7 +1255,7 @@ public class ListGatewayResponseBody extends TeaModel {
             }
 
             /**
-             * The version of the application.
+             * AppVersion.
              */
             public Builder appVersion(String appVersion) {
                 this.appVersion = appVersion;
@@ -1013,7 +1263,7 @@ public class ListGatewayResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether Application Real-Time Monitoring Service (ARMS) is activated.
+             * ArmsOn.
              */
             public Builder armsOn(Boolean armsOn) {
                 this.armsOn = armsOn;
@@ -1021,7 +1271,7 @@ public class ListGatewayResponseBody extends TeaModel {
             }
 
             /**
-             * The billing method.
+             * ChargeType.
              */
             public Builder chargeType(String chargeType) {
                 this.chargeType = chargeType;
@@ -1029,7 +1279,7 @@ public class ListGatewayResponseBody extends TeaModel {
             }
 
             /**
-             * The current version of the gateway.
+             * CurrentVersion.
              */
             public Builder currentVersion(String currentVersion) {
                 this.currentVersion = currentVersion;
@@ -1037,7 +1287,47 @@ public class ListGatewayResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the subscription gateway expires.
+             * Elastic.
+             */
+            public Builder elastic(Boolean elastic) {
+                this.elastic = elastic;
+                return this;
+            }
+
+            /**
+             * ElasticInstanceId.
+             */
+            public Builder elasticInstanceId(String elasticInstanceId) {
+                this.elasticInstanceId = elasticInstanceId;
+                return this;
+            }
+
+            /**
+             * ElasticPolicy.
+             */
+            public Builder elasticPolicy(ElasticPolicy elasticPolicy) {
+                this.elasticPolicy = elasticPolicy;
+                return this;
+            }
+
+            /**
+             * ElasticReplica.
+             */
+            public Builder elasticReplica(Integer elasticReplica) {
+                this.elasticReplica = elasticReplica;
+                return this;
+            }
+
+            /**
+             * ElasticType.
+             */
+            public Builder elasticType(String elasticType) {
+                this.elasticType = elasticType;
+                return this;
+            }
+
+            /**
+             * EndDate.
              */
             public Builder endDate(String endDate) {
                 this.endDate = endDate;
@@ -1045,7 +1335,7 @@ public class ListGatewayResponseBody extends TeaModel {
             }
 
             /**
-             * The type of the gateway.
+             * GatewayType.
              */
             public Builder gatewayType(String gatewayType) {
                 this.gatewayType = gatewayType;
@@ -1053,7 +1343,7 @@ public class ListGatewayResponseBody extends TeaModel {
             }
 
             /**
-             * The unique ID of the gateway.
+             * GatewayUniqueId.
              */
             public Builder gatewayUniqueId(String gatewayUniqueId) {
                 this.gatewayUniqueId = gatewayUniqueId;
@@ -1061,7 +1351,7 @@ public class ListGatewayResponseBody extends TeaModel {
             }
 
             /**
-             * The version of the gateway.
+             * GatewayVersion.
              */
             public Builder gatewayVersion(String gatewayVersion) {
                 this.gatewayVersion = gatewayVersion;
@@ -1069,7 +1359,7 @@ public class ListGatewayResponseBody extends TeaModel {
             }
 
             /**
-             * The creation time.
+             * GmtCreate.
              */
             public Builder gmtCreate(String gmtCreate) {
                 this.gmtCreate = gmtCreate;
@@ -1077,7 +1367,7 @@ public class ListGatewayResponseBody extends TeaModel {
             }
 
             /**
-             * The modification time.
+             * GmtModified.
              */
             public Builder gmtModified(String gmtModified) {
                 this.gmtModified = gmtModified;
@@ -1085,7 +1375,7 @@ public class ListGatewayResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the gateway.
+             * Id.
              */
             public Builder id(Long id) {
                 this.id = id;
@@ -1093,7 +1383,7 @@ public class ListGatewayResponseBody extends TeaModel {
             }
 
             /**
-             * The configurations.
+             * InitConfig.
              */
             public Builder initConfig(InitConfig initConfig) {
                 this.initConfig = initConfig;
@@ -1101,7 +1391,7 @@ public class ListGatewayResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the instance.
+             * InstanceId.
              */
             public Builder instanceId(String instanceId) {
                 this.instanceId = instanceId;
@@ -1109,7 +1399,7 @@ public class ListGatewayResponseBody extends TeaModel {
             }
 
             /**
-             * The details of the Internet-facing SLB instances.
+             * InternetSlb.
              */
             public Builder internetSlb(java.util.List < InternetSlb> internetSlb) {
                 this.internetSlb = internetSlb;
@@ -1117,7 +1407,7 @@ public class ListGatewayResponseBody extends TeaModel {
             }
 
             /**
-             * The latest version of the gateway.
+             * LatestVersion.
              */
             public Builder latestVersion(String latestVersion) {
                 this.latestVersion = latestVersion;
@@ -1125,7 +1415,7 @@ public class ListGatewayResponseBody extends TeaModel {
             }
 
             /**
-             * The tag of the instance.
+             * MseTag.
              */
             public Builder mseTag(String mseTag) {
                 this.mseTag = mseTag;
@@ -1133,7 +1423,7 @@ public class ListGatewayResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether the gateway can be forcefully updated.
+             * MustUpgrade.
              */
             public Builder mustUpgrade(Boolean mustUpgrade) {
                 this.mustUpgrade = mustUpgrade;
@@ -1141,7 +1431,7 @@ public class ListGatewayResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the gateway.
+             * Name.
              */
             public Builder name(String name) {
                 this.name = name;
@@ -1149,7 +1439,7 @@ public class ListGatewayResponseBody extends TeaModel {
             }
 
             /**
-             * The information about the user.
+             * PrimaryUser.
              */
             public Builder primaryUser(String primaryUser) {
                 this.primaryUser = primaryUser;
@@ -1157,7 +1447,7 @@ public class ListGatewayResponseBody extends TeaModel {
             }
 
             /**
-             * The region ID.
+             * Region.
              */
             public Builder region(String region) {
                 this.region = region;
@@ -1165,7 +1455,7 @@ public class ListGatewayResponseBody extends TeaModel {
             }
 
             /**
-             * The number of replicas.
+             * Replica.
              */
             public Builder replica(Integer replica) {
                 this.replica = replica;
@@ -1173,7 +1463,7 @@ public class ListGatewayResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the resource group.
+             * ResourceGroupId.
              */
             public Builder resourceGroupId(String resourceGroupId) {
                 this.resourceGroupId = resourceGroupId;
@@ -1181,7 +1471,7 @@ public class ListGatewayResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether rollbacks are allowed.
+             * RollBack.
              */
             public Builder rollBack(Boolean rollBack) {
                 this.rollBack = rollBack;
@@ -1189,7 +1479,7 @@ public class ListGatewayResponseBody extends TeaModel {
             }
 
             /**
-             * The details of the Server Load Balancer (SLB) instances.
+             * Slb.
              */
             public Builder slb(java.util.List < Slb> slb) {
                 this.slb = slb;
@@ -1197,7 +1487,7 @@ public class ListGatewayResponseBody extends TeaModel {
             }
 
             /**
-             * The specifications of the gateway.
+             * Spec.
              */
             public Builder spec(String spec) {
                 this.spec = spec;
@@ -1205,21 +1495,7 @@ public class ListGatewayResponseBody extends TeaModel {
             }
 
             /**
-             * The gateway status.
-             * <p>
-             * 
-             * *   0: The gateway is being created.
-             * *   1: The gateway fails to be created.
-             * *   2: The gateway is running.
-             * *   3: The gateway is changing.
-             * *   4: The gateway is scaling down.
-             * *   6: The gateway is scaling up.
-             * *   8: The gateway is being deleted.
-             * *   9: The gateway is suspended and to be released.
-             * *   10: The gateway is restarting.
-             * *   11: The gateway is being rebuilt.
-             * *   12: The gateway is updating.
-             * *   13: The gateway fails to be updated.
+             * Status.
              */
             public Builder status(Integer status) {
                 this.status = status;
@@ -1227,7 +1503,7 @@ public class ListGatewayResponseBody extends TeaModel {
             }
 
             /**
-             * The description of the status.
+             * StatusDesc.
              */
             public Builder statusDesc(String statusDesc) {
                 this.statusDesc = statusDesc;
@@ -1235,7 +1511,7 @@ public class ListGatewayResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether WebAssembly (Wasm) is supported.
+             * SupportWasm.
              */
             public Builder supportWasm(Boolean supportWasm) {
                 this.supportWasm = supportWasm;
@@ -1243,7 +1519,7 @@ public class ListGatewayResponseBody extends TeaModel {
             }
 
             /**
-             * The tag.
+             * Tag.
              */
             public Builder tag(String tag) {
                 this.tag = tag;
@@ -1251,7 +1527,15 @@ public class ListGatewayResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether the gateway can be updated.
+             * TotalReplica.
+             */
+            public Builder totalReplica(Integer totalReplica) {
+                this.totalReplica = totalReplica;
+                return this;
+            }
+
+            /**
+             * Upgrade.
              */
             public Builder upgrade(Boolean upgrade) {
                 this.upgrade = upgrade;
@@ -1259,7 +1543,7 @@ public class ListGatewayResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the secondary vSwitch.
+             * Vswitch2.
              */
             public Builder vswitch2(String vswitch2) {
                 this.vswitch2 = vswitch2;
@@ -1336,7 +1620,7 @@ public class ListGatewayResponseBody extends TeaModel {
             private Long totalSize; 
 
             /**
-             * The page number of the returned page.
+             * PageNumber.
              */
             public Builder pageNumber(Integer pageNumber) {
                 this.pageNumber = pageNumber;
@@ -1344,7 +1628,7 @@ public class ListGatewayResponseBody extends TeaModel {
             }
 
             /**
-             * The number of entries returned per page.
+             * PageSize.
              */
             public Builder pageSize(Integer pageSize) {
                 this.pageSize = pageSize;
@@ -1352,7 +1636,7 @@ public class ListGatewayResponseBody extends TeaModel {
             }
 
             /**
-             * The data entries returned.
+             * Result.
              */
             public Builder result(java.util.List < Result> result) {
                 this.result = result;
@@ -1360,7 +1644,7 @@ public class ListGatewayResponseBody extends TeaModel {
             }
 
             /**
-             * The total number of entries returned.
+             * TotalSize.
              */
             public Builder totalSize(Long totalSize) {
                 this.totalSize = totalSize;

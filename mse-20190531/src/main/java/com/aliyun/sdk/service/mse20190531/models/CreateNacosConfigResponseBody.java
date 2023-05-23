@@ -98,42 +98,10 @@ public class CreateNacosConfigResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * The code returned.
+         * mse-200-105
          */
         public Builder code(String code) {
             this.code = code;
-            return this;
-        }
-
-        /**
-         * The error code returned if the request failed.
-         */
-        public Builder errorCode(String errorCode) {
-            this.errorCode = errorCode;
-            return this;
-        }
-
-        /**
-         * The HTTP status code returned.
-         */
-        public Builder httpCode(String httpCode) {
-            this.httpCode = httpCode;
-            return this;
-        }
-
-        /**
-         * The message returned.
-         */
-        public Builder message(String message) {
-            this.message = message;
-            return this;
-        }
-
-        /**
-         * The ID of the request.
-         */
-        public Builder requestId(String requestId) {
-            this.requestId = requestId;
             return this;
         }
 
@@ -143,6 +111,38 @@ public class CreateNacosConfigResponseBody extends TeaModel {
          * 
          * *   `true`: The request was successful.
          * *   `false`: The request failed.
+         */
+        public Builder errorCode(String errorCode) {
+            this.errorCode = errorCode;
+            return this;
+        }
+
+        /**
+         * The error message returned.
+         */
+        public Builder httpCode(String httpCode) {
+            this.httpCode = httpCode;
+            return this;
+        }
+
+        /**
+         * The error code returned if the request failed.
+         */
+        public Builder message(String message) {
+            this.message = message;
+            return this;
+        }
+
+        /**
+         * The request was successfully processed.
+         */
+        public Builder requestId(String requestId) {
+            this.requestId = requestId;
+            return this;
+        }
+
+        /**
+         * duplicatedClusterAliasName
          */
         public Builder success(Boolean success) {
             this.success = success;

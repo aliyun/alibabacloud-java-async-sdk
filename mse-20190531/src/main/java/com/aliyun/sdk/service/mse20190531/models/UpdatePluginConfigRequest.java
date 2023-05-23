@@ -182,10 +182,7 @@ public class UpdatePluginConfigRequest extends Request {
         } 
 
         /**
-         * The language of the response. Valid values:
-         * <p>
-         * 
-         * zh: Chinese en: English
+         * systemError
          */
         public Builder acceptLanguage(String acceptLanguage) {
             this.putQueryParameter("AcceptLanguage", acceptLanguage);
@@ -194,7 +191,7 @@ public class UpdatePluginConfigRequest extends Request {
         }
 
         /**
-         * The plug-in configuration.
+         * illegal request:%s
          */
         public Builder config(String config) {
             this.putQueryParameter("Config", config);
@@ -203,12 +200,7 @@ public class UpdatePluginConfigRequest extends Request {
         }
 
         /**
-         * The application scope of the plug-in.
-         * <p>
-         * 
-         * *   0: global
-         * *   1: route
-         * *   2: domain name
+         * clusterNotFound
          */
         public Builder configLevel(Integer configLevel) {
             this.putQueryParameter("ConfigLevel", configLevel);
@@ -217,7 +209,7 @@ public class UpdatePluginConfigRequest extends Request {
         }
 
         /**
-         * Specifies whether to enable the plug-in.
+         * illegalRequest
          */
         public Builder enable(Boolean enable) {
             this.putQueryParameter("Enable", enable);
@@ -226,7 +218,7 @@ public class UpdatePluginConfigRequest extends Request {
         }
 
         /**
-         * The ID of the gateway.
+         * duplicatedClusterAliasName
          */
         public Builder gatewayId(Long gatewayId) {
             this.putQueryParameter("GatewayId", gatewayId);
@@ -235,7 +227,7 @@ public class UpdatePluginConfigRequest extends Request {
         }
 
         /**
-         * The unique ID of the gateway.
+         * duplicated cluster alias name
          */
         public Builder gatewayUniqueId(String gatewayUniqueId) {
             this.putQueryParameter("GatewayUniqueId", gatewayUniqueId);
@@ -244,7 +236,7 @@ public class UpdatePluginConfigRequest extends Request {
         }
 
         /**
-         * The creation time.
+         * cluster not found
          */
         public Builder gmtCreate(String gmtCreate) {
             this.putQueryParameter("GmtCreate", gmtCreate);
@@ -253,7 +245,7 @@ public class UpdatePluginConfigRequest extends Request {
         }
 
         /**
-         * The update time.
+         * mse-100-001
          */
         public Builder gmtModified(String gmtModified) {
             this.putQueryParameter("GmtModified", gmtModified);
@@ -262,7 +254,7 @@ public class UpdatePluginConfigRequest extends Request {
         }
 
         /**
-         * The ID of the plug-in configuration.
+         * mse-200-105
          */
         public Builder id(Long id) {
             this.putQueryParameter("Id", id);
@@ -271,7 +263,7 @@ public class UpdatePluginConfigRequest extends Request {
         }
 
         /**
-         * The ID of the gateway plug-in.
+         * mse-100-007
          */
         public Builder pluginId(Long pluginId) {
             this.putQueryParameter("PluginId", pluginId);

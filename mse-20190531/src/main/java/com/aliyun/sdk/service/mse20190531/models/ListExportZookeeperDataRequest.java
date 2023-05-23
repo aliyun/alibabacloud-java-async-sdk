@@ -96,7 +96,7 @@ public class ListExportZookeeperDataRequest extends Request {
         } 
 
         /**
-         * 返回结果显示的语言。取值：zh-CN（默认值）：中文，en-US：英文
+         * mse-100-007
          */
         public Builder acceptLanguage(String acceptLanguage) {
             this.putQueryParameter("AcceptLanguage", acceptLanguage);
@@ -105,7 +105,7 @@ public class ListExportZookeeperDataRequest extends Request {
         }
 
         /**
-         * InstanceId.
+         * mse-200-105
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -114,7 +114,7 @@ public class ListExportZookeeperDataRequest extends Request {
         }
 
         /**
-         * PageNumber.
+         * duplicatedClusterAliasName
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -123,7 +123,7 @@ public class ListExportZookeeperDataRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * duplicated cluster alias name
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);

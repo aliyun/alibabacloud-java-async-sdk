@@ -98,7 +98,7 @@ public class CreateClusterResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * The error code returned if the request failed.
+         * duplicatedClusterAliasName
          */
         public Builder errorCode(String errorCode) {
             this.errorCode = errorCode;
@@ -106,7 +106,7 @@ public class CreateClusterResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the instance.
+         * mse-200-105
          */
         public Builder instanceId(String instanceId) {
             this.instanceId = instanceId;
@@ -114,7 +114,7 @@ public class CreateClusterResponseBody extends TeaModel {
         }
 
         /**
-         * The message returned.
+         * The ID of the order.
          */
         public Builder message(String message) {
             this.message = message;
@@ -122,7 +122,7 @@ public class CreateClusterResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the order.
+         * duplicated cluster alias name
          */
         public Builder orderId(String orderId) {
             this.orderId = orderId;
@@ -130,7 +130,7 @@ public class CreateClusterResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * The error code returned if the request failed.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -138,11 +138,7 @@ public class CreateClusterResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether the request was successful. Valid values:
-         * <p>
-         * 
-         * *   `true`: The request was successful.
-         * *   `false`: The request failed.
+         * mse-100-007
          */
         public Builder success(Boolean success) {
             this.success = success;

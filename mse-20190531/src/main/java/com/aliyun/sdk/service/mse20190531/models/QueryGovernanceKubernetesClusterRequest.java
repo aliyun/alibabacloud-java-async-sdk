@@ -112,11 +112,7 @@ public class QueryGovernanceKubernetesClusterRequest extends Request {
         } 
 
         /**
-         * The language of the response. Valid values:
-         * <p>
-         * 
-         * *   zh: Chinese
-         * *   en: English
+         * system error
          */
         public Builder acceptLanguage(String acceptLanguage) {
             this.putQueryParameter("AcceptLanguage", acceptLanguage);
@@ -125,7 +121,7 @@ public class QueryGovernanceKubernetesClusterRequest extends Request {
         }
 
         /**
-         * The ID of the Kubernetes cluster.
+         * cluster not found
          */
         public Builder clusterId(String clusterId) {
             this.putQueryParameter("ClusterId", clusterId);
@@ -134,7 +130,7 @@ public class QueryGovernanceKubernetesClusterRequest extends Request {
         }
 
         /**
-         * The name of the Kubernetes cluster.
+         * clusterNotFound
          */
         public Builder clusterName(String clusterName) {
             this.putQueryParameter("ClusterName", clusterName);
@@ -143,7 +139,7 @@ public class QueryGovernanceKubernetesClusterRequest extends Request {
         }
 
         /**
-         * The page number of the page to return.
+         * mse-100-001
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -152,7 +148,7 @@ public class QueryGovernanceKubernetesClusterRequest extends Request {
         }
 
         /**
-         * The number of entries to return on each page.
+         * systemError
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);

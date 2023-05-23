@@ -98,7 +98,7 @@ public class ListGatewaySlbResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * The status code returned.
+         * Code.
          */
         public Builder code(Integer code) {
             this.code = code;
@@ -106,7 +106,7 @@ public class ListGatewaySlbResponseBody extends TeaModel {
         }
 
         /**
-         * The data entries returned.
+         * Data.
          */
         public Builder data(java.util.List < Data> data) {
             this.data = data;
@@ -114,7 +114,7 @@ public class ListGatewaySlbResponseBody extends TeaModel {
         }
 
         /**
-         * The HTTP status code returned.
+         * HttpStatusCode.
          */
         public Builder httpStatusCode(Integer httpStatusCode) {
             this.httpStatusCode = httpStatusCode;
@@ -122,7 +122,7 @@ public class ListGatewaySlbResponseBody extends TeaModel {
         }
 
         /**
-         * The message returned.
+         * Message.
          */
         public Builder message(String message) {
             this.message = message;
@@ -130,7 +130,7 @@ public class ListGatewaySlbResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * Id of the request
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -138,11 +138,7 @@ public class ListGatewaySlbResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether the request was successful. Valid values:
-         * <p>
-         * 
-         * *   `true`: The request was successful.
-         * *   `false`: The request failed.
+         * Success.
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -155,6 +151,107 @@ public class ListGatewaySlbResponseBody extends TeaModel {
 
     } 
 
+    public static class VServiceList extends TeaModel {
+        @NameInMap("Port")
+        private String port;
+
+        @NameInMap("Protocol")
+        private String protocol;
+
+        @NameInMap("VServerGroupId")
+        private String vServerGroupId;
+
+        @NameInMap("VServerGroupName")
+        private String vServerGroupName;
+
+        private VServiceList(Builder builder) {
+            this.port = builder.port;
+            this.protocol = builder.protocol;
+            this.vServerGroupId = builder.vServerGroupId;
+            this.vServerGroupName = builder.vServerGroupName;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static VServiceList create() {
+            return builder().build();
+        }
+
+        /**
+         * @return port
+         */
+        public String getPort() {
+            return this.port;
+        }
+
+        /**
+         * @return protocol
+         */
+        public String getProtocol() {
+            return this.protocol;
+        }
+
+        /**
+         * @return vServerGroupId
+         */
+        public String getVServerGroupId() {
+            return this.vServerGroupId;
+        }
+
+        /**
+         * @return vServerGroupName
+         */
+        public String getVServerGroupName() {
+            return this.vServerGroupName;
+        }
+
+        public static final class Builder {
+            private String port; 
+            private String protocol; 
+            private String vServerGroupId; 
+            private String vServerGroupName; 
+
+            /**
+             * Port.
+             */
+            public Builder port(String port) {
+                this.port = port;
+                return this;
+            }
+
+            /**
+             * Protocol.
+             */
+            public Builder protocol(String protocol) {
+                this.protocol = protocol;
+                return this;
+            }
+
+            /**
+             * VServerGroupId.
+             */
+            public Builder vServerGroupId(String vServerGroupId) {
+                this.vServerGroupId = vServerGroupId;
+                return this;
+            }
+
+            /**
+             * VServerGroupName.
+             */
+            public Builder vServerGroupName(String vServerGroupName) {
+                this.vServerGroupName = vServerGroupName;
+                return this;
+            }
+
+            public VServiceList build() {
+                return new VServiceList(this);
+            } 
+
+        } 
+
+    }
     public static class Data extends TeaModel {
         @NameInMap("EditEnable")
         private Boolean editEnable;
@@ -204,6 +301,12 @@ public class ListGatewaySlbResponseBody extends TeaModel {
         @NameInMap("VServerGroupId")
         private String vServerGroupId;
 
+        @NameInMap("VServiceList")
+        private java.util.List < VServiceList> vServiceList;
+
+        @NameInMap("VsMetaInfo")
+        private String vsMetaInfo;
+
         private Data(Builder builder) {
             this.editEnable = builder.editEnable;
             this.gatewayId = builder.gatewayId;
@@ -221,6 +324,8 @@ public class ListGatewaySlbResponseBody extends TeaModel {
             this.statusDesc = builder.statusDesc;
             this.type = builder.type;
             this.vServerGroupId = builder.vServerGroupId;
+            this.vServiceList = builder.vServiceList;
+            this.vsMetaInfo = builder.vsMetaInfo;
         }
 
         public static Builder builder() {
@@ -343,6 +448,20 @@ public class ListGatewaySlbResponseBody extends TeaModel {
             return this.vServerGroupId;
         }
 
+        /**
+         * @return vServiceList
+         */
+        public java.util.List < VServiceList> getVServiceList() {
+            return this.vServiceList;
+        }
+
+        /**
+         * @return vsMetaInfo
+         */
+        public String getVsMetaInfo() {
+            return this.vsMetaInfo;
+        }
+
         public static final class Builder {
             private Boolean editEnable; 
             private String gatewayId; 
@@ -360,9 +479,11 @@ public class ListGatewaySlbResponseBody extends TeaModel {
             private String statusDesc; 
             private String type; 
             private String vServerGroupId; 
+            private java.util.List < VServiceList> vServiceList; 
+            private String vsMetaInfo; 
 
             /**
-             * Indicates whether the edit operation is supported.
+             * EditEnable.
              */
             public Builder editEnable(Boolean editEnable) {
                 this.editEnable = editEnable;
@@ -370,7 +491,7 @@ public class ListGatewaySlbResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the gateway.
+             * GatewayId.
              */
             public Builder gatewayId(String gatewayId) {
                 this.gatewayId = gatewayId;
@@ -378,7 +499,7 @@ public class ListGatewaySlbResponseBody extends TeaModel {
             }
 
             /**
-             * The mode of the SLB instance.
+             * GatewaySlbMode.
              */
             public Builder gatewaySlbMode(String gatewaySlbMode) {
                 this.gatewaySlbMode = gatewaySlbMode;
@@ -386,7 +507,7 @@ public class ListGatewaySlbResponseBody extends TeaModel {
             }
 
             /**
-             * The association status.
+             * GatewaySlbStatus.
              */
             public Builder gatewaySlbStatus(String gatewaySlbStatus) {
                 this.gatewaySlbStatus = gatewaySlbStatus;
@@ -394,7 +515,7 @@ public class ListGatewaySlbResponseBody extends TeaModel {
             }
 
             /**
-             * The creation time.
+             * GmtCreate.
              */
             public Builder gmtCreate(String gmtCreate) {
                 this.gmtCreate = gmtCreate;
@@ -402,7 +523,7 @@ public class ListGatewaySlbResponseBody extends TeaModel {
             }
 
             /**
-             * The port number of the HTTP virtual service group.
+             * HttpPort.
              */
             public Builder httpPort(Integer httpPort) {
                 this.httpPort = httpPort;
@@ -410,7 +531,7 @@ public class ListGatewaySlbResponseBody extends TeaModel {
             }
 
             /**
-             * The port number of the HTTPS virtual service group.
+             * HttpsPort.
              */
             public Builder httpsPort(Integer httpsPort) {
                 this.httpsPort = httpsPort;
@@ -418,7 +539,7 @@ public class ListGatewaySlbResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the HTTPS virtual service group.
+             * HttpsVServerGroupId.
              */
             public Builder httpsVServerGroupId(String httpsVServerGroupId) {
                 this.httpsVServerGroupId = httpsVServerGroupId;
@@ -426,7 +547,7 @@ public class ListGatewaySlbResponseBody extends TeaModel {
             }
 
             /**
-             * ID
+             * Id.
              */
             public Builder id(String id) {
                 this.id = id;
@@ -434,7 +555,7 @@ public class ListGatewaySlbResponseBody extends TeaModel {
             }
 
             /**
-             * The service weight.
+             * ServiceWeight.
              */
             public Builder serviceWeight(Integer serviceWeight) {
                 this.serviceWeight = serviceWeight;
@@ -442,7 +563,7 @@ public class ListGatewaySlbResponseBody extends TeaModel {
             }
 
             /**
-             * SLB ID
+             * SlbId.
              */
             public Builder slbId(String slbId) {
                 this.slbId = slbId;
@@ -450,7 +571,7 @@ public class ListGatewaySlbResponseBody extends TeaModel {
             }
 
             /**
-             * SLB IP
+             * SlbIp.
              */
             public Builder slbIp(String slbIp) {
                 this.slbIp = slbIp;
@@ -458,7 +579,7 @@ public class ListGatewaySlbResponseBody extends TeaModel {
             }
 
             /**
-             * The port number of the SLB instance.
+             * SlbPort.
              */
             public Builder slbPort(String slbPort) {
                 this.slbPort = slbPort;
@@ -466,7 +587,7 @@ public class ListGatewaySlbResponseBody extends TeaModel {
             }
 
             /**
-             * The description of the status.
+             * StatusDesc.
              */
             public Builder statusDesc(String statusDesc) {
                 this.statusDesc = statusDesc;
@@ -474,7 +595,7 @@ public class ListGatewaySlbResponseBody extends TeaModel {
             }
 
             /**
-             * The type.
+             * Type.
              */
             public Builder type(String type) {
                 this.type = type;
@@ -482,10 +603,26 @@ public class ListGatewaySlbResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the HTTP virtual service group.
+             * VServerGroupId.
              */
             public Builder vServerGroupId(String vServerGroupId) {
                 this.vServerGroupId = vServerGroupId;
+                return this;
+            }
+
+            /**
+             * VServiceList.
+             */
+            public Builder vServiceList(java.util.List < VServiceList> vServiceList) {
+                this.vServiceList = vServiceList;
+                return this;
+            }
+
+            /**
+             * VsMetaInfo.
+             */
+            public Builder vsMetaInfo(String vsMetaInfo) {
+                this.vsMetaInfo = vsMetaInfo;
                 return this;
             }
 

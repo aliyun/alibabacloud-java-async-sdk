@@ -96,11 +96,7 @@ public class UpdateGatewayRouteWafStatusRequest extends Request {
         } 
 
         /**
-         * The language of the response. Valid values:
-         * <p>
-         * 
-         * *   zh: Chinese
-         * *   en: English
+         * duplicatedClusterAliasName
          */
         public Builder acceptLanguage(String acceptLanguage) {
             this.putQueryParameter("AcceptLanguage", acceptLanguage);
@@ -109,7 +105,7 @@ public class UpdateGatewayRouteWafStatusRequest extends Request {
         }
 
         /**
-         * Specifies whether to activate Web Application Firewall (WAF).
+         * duplicated cluster alias name
          */
         public Builder enableWaf(Boolean enableWaf) {
             this.putQueryParameter("EnableWaf", enableWaf);
@@ -118,7 +114,7 @@ public class UpdateGatewayRouteWafStatusRequest extends Request {
         }
 
         /**
-         * The unique ID of the gateway.
+         * mse-200-105
          */
         public Builder gatewayUniqueId(String gatewayUniqueId) {
             this.putQueryParameter("GatewayUniqueId", gatewayUniqueId);
@@ -127,7 +123,7 @@ public class UpdateGatewayRouteWafStatusRequest extends Request {
         }
 
         /**
-         * The ID of the route.
+         * code
          */
         public Builder routeId(Long routeId) {
             this.putQueryParameter("RouteId", routeId);

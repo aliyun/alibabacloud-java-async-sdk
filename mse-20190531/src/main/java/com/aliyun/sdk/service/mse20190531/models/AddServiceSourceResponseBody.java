@@ -98,7 +98,7 @@ public class AddServiceSourceResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * The return value.
+         * The address.
          */
         public Builder code(Integer code) {
             this.code = code;
@@ -106,7 +106,7 @@ public class AddServiceSourceResponseBody extends TeaModel {
         }
 
         /**
-         * The returned data.
+         * The return value.
          */
         public Builder data(Long data) {
             this.data = data;
@@ -114,7 +114,7 @@ public class AddServiceSourceResponseBody extends TeaModel {
         }
 
         /**
-         * The HTTP status code returned.
+         * The namespace whose resources you want to monitor.
          */
         public Builder httpStatusCode(Integer httpStatusCode) {
             this.httpStatusCode = httpStatusCode;
@@ -122,7 +122,7 @@ public class AddServiceSourceResponseBody extends TeaModel {
         }
 
         /**
-         * The message returned.
+         * Specifies whether to update the Ingress status.
          */
         public Builder message(String message) {
             this.message = message;
@@ -130,7 +130,7 @@ public class AddServiceSourceResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * The root path of the service.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -138,11 +138,7 @@ public class AddServiceSourceResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether the request was successful. Valid values:
-         * <p>
-         * 
-         * *   true: The request was successful.
-         * *   false: The request failed.
+         * The list of service groups.
          */
         public Builder success(Boolean success) {
             this.success = success;

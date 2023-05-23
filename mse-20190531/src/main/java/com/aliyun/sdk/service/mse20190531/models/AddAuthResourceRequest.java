@@ -152,11 +152,7 @@ public class AddAuthResourceRequest extends Request {
         } 
 
         /**
-         * The language of the response. Valid values:
-         * <p>
-         * 
-         * *   zh: Chinese
-         * *   en: English
+         * 返回结果显示的语言。取值：zh（默认值）：中文，en：英文
          */
         public Builder acceptLanguage(String acceptLanguage) {
             this.putQueryParameter("AcceptLanguage", acceptLanguage);
@@ -165,7 +161,7 @@ public class AddAuthResourceRequest extends Request {
         }
 
         /**
-         * The ID of the authorization record.
+         * AuthId.
          */
         public Builder authId(Long authId) {
             this.putQueryParameter("AuthId", authId);
@@ -184,7 +180,7 @@ public class AddAuthResourceRequest extends Request {
         }
 
         /**
-         * The domain ID.
+         * DomainId.
          */
         public Builder domainId(Long domainId) {
             this.putQueryParameter("DomainId", domainId);
@@ -193,7 +189,7 @@ public class AddAuthResourceRequest extends Request {
         }
 
         /**
-         * The unique ID of the gateway.
+         * GatewayUniqueId.
          */
         public Builder gatewayUniqueId(String gatewayUniqueId) {
             this.putQueryParameter("GatewayUniqueId", gatewayUniqueId);
@@ -211,12 +207,7 @@ public class AddAuthResourceRequest extends Request {
         }
 
         /**
-         * The matching type.
-         * <p>
-         * 
-         * *   exact: exact matching
-         * *   prefix: prefix matching
-         * *   regex: regular expression matching
+         * MatchType.
          */
         public Builder matchType(String matchType) {
             this.putQueryParameter("MatchType", matchType);
@@ -225,7 +216,7 @@ public class AddAuthResourceRequest extends Request {
         }
 
         /**
-         * The path.
+         * Path.
          */
         public Builder path(String path) {
             this.putQueryParameter("Path", path);

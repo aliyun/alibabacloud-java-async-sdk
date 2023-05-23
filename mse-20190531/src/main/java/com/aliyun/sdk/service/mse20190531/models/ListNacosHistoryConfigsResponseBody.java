@@ -134,7 +134,7 @@ public class ListNacosHistoryConfigsResponseBody extends TeaModel {
         private Integer totalCount; 
 
         /**
-         * The error code returned if the request failed.
+         * ErrorCode.
          */
         public Builder errorCode(String errorCode) {
             this.errorCode = errorCode;
@@ -142,7 +142,7 @@ public class ListNacosHistoryConfigsResponseBody extends TeaModel {
         }
 
         /**
-         * The configuration items.
+         * HistoryItems.
          */
         public Builder historyItems(java.util.List < HistoryItems> historyItems) {
             this.historyItems = historyItems;
@@ -150,7 +150,7 @@ public class ListNacosHistoryConfigsResponseBody extends TeaModel {
         }
 
         /**
-         * The HTTP status code returned.
+         * HttpCode.
          */
         public Builder httpCode(String httpCode) {
             this.httpCode = httpCode;
@@ -158,7 +158,7 @@ public class ListNacosHistoryConfigsResponseBody extends TeaModel {
         }
 
         /**
-         * The message returned.
+         * Message.
          */
         public Builder message(String message) {
             this.message = message;
@@ -166,7 +166,7 @@ public class ListNacosHistoryConfigsResponseBody extends TeaModel {
         }
 
         /**
-         * The page number of the returned page.
+         * PageNumber.
          */
         public Builder pageNumber(Integer pageNumber) {
             this.pageNumber = pageNumber;
@@ -174,7 +174,7 @@ public class ListNacosHistoryConfigsResponseBody extends TeaModel {
         }
 
         /**
-         * The number of entries returned per page.
+         * PageSize.
          */
         public Builder pageSize(Integer pageSize) {
             this.pageSize = pageSize;
@@ -182,7 +182,7 @@ public class ListNacosHistoryConfigsResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * RequestId.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -190,11 +190,7 @@ public class ListNacosHistoryConfigsResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether the request was successful. Valid values:
-         * <p>
-         * 
-         * *   `true`: The request was successful.
-         * *   `false`: The request failed.
+         * Success.
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -202,7 +198,7 @@ public class ListNacosHistoryConfigsResponseBody extends TeaModel {
         }
 
         /**
-         * The total number of entries returned.
+         * TotalCount.
          */
         public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;
@@ -302,7 +298,7 @@ public class ListNacosHistoryConfigsResponseBody extends TeaModel {
             private String opType; 
 
             /**
-             * The application tag.
+             * AppName.
              */
             public Builder appName(String appName) {
                 this.appName = appName;
@@ -310,7 +306,7 @@ public class ListNacosHistoryConfigsResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the data.
+             * DataId.
              */
             public Builder dataId(String dataId) {
                 this.dataId = dataId;
@@ -318,7 +314,7 @@ public class ListNacosHistoryConfigsResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the group.
+             * Group.
              */
             public Builder group(String group) {
                 this.group = group;
@@ -326,7 +322,7 @@ public class ListNacosHistoryConfigsResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the configuration.
+             * Id.
              */
             public Builder id(Long id) {
                 this.id = id;
@@ -334,7 +330,7 @@ public class ListNacosHistoryConfigsResponseBody extends TeaModel {
             }
 
             /**
-             * The timestamp when the configuration was last modified.
+             * LastModifiedTime.
              */
             public Builder lastModifiedTime(Long lastModifiedTime) {
                 this.lastModifiedTime = lastModifiedTime;
@@ -342,7 +338,7 @@ public class ListNacosHistoryConfigsResponseBody extends TeaModel {
             }
 
             /**
-             * The format of the configuration file.
+             * OpType.
              */
             public Builder opType(String opType) {
                 this.opType = opType;

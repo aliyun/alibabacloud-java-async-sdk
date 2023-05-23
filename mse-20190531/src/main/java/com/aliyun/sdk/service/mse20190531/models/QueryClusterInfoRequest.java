@@ -138,11 +138,7 @@ public class QueryClusterInfoRequest extends Request {
         } 
 
         /**
-         * The language of the response. Valid values:
-         * <p>
-         * 
-         * *   zh: Chinese
-         * *   en: English
+         * clusterNotFound
          */
         public Builder acceptLanguage(String acceptLanguage) {
             this.putQueryParameter("AcceptLanguage", acceptLanguage);
@@ -151,7 +147,7 @@ public class QueryClusterInfoRequest extends Request {
         }
 
         /**
-         * Specifies whether to query the configuration of a public IP address whitelist.
+         * illegalRequest
          */
         public Builder aclSwitch(Boolean aclSwitch) {
             this.putQueryParameter("AclSwitch", aclSwitch);
@@ -160,7 +156,7 @@ public class QueryClusterInfoRequest extends Request {
         }
 
         /**
-         * The ID of the cluster.
+         * duplicatedClusterAliasName
          */
         public Builder clusterId(String clusterId) {
             this.putQueryParameter("ClusterId", clusterId);
@@ -169,7 +165,7 @@ public class QueryClusterInfoRequest extends Request {
         }
 
         /**
-         * The ID of the instance.
+         * duplicated cluster alias name
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -178,7 +174,7 @@ public class QueryClusterInfoRequest extends Request {
         }
 
         /**
-         * The ID of the order.
+         * mse-100-007
          */
         public Builder orderId(String orderId) {
             this.putQueryParameter("OrderId", orderId);
@@ -187,7 +183,7 @@ public class QueryClusterInfoRequest extends Request {
         }
 
         /**
-         * The region ID.
+         * illegal request:%s
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -196,7 +192,7 @@ public class QueryClusterInfoRequest extends Request {
         }
 
         /**
-         * The extended request parameters in the JSON format.
+         * mse-200-021
          */
         public Builder requestPars(String requestPars) {
             this.putQueryParameter("RequestPars", requestPars);

@@ -82,11 +82,7 @@ public class DeleteGatewayRequest extends Request {
         } 
 
         /**
-         * The language of the response. Valid values:
-         * <p>
-         * 
-         * *   zh: Chinese
-         * *   en: English
+         * system error
          */
         public Builder acceptLanguage(String acceptLanguage) {
             this.putQueryParameter("AcceptLanguage", acceptLanguage);
@@ -95,7 +91,7 @@ public class DeleteGatewayRequest extends Request {
         }
 
         /**
-         * Specifies whether to delete the SLB instance purchased for the gateway when you delete the gateway.
+         * mse-100-001
          */
         public Builder deleteSlb(Boolean deleteSlb) {
             this.putQueryParameter("DeleteSlb", deleteSlb);
@@ -104,7 +100,7 @@ public class DeleteGatewayRequest extends Request {
         }
 
         /**
-         * The unique ID of the gateway.
+         * systemError
          */
         public Builder gatewayUniqueId(String gatewayUniqueId) {
             this.putQueryParameter("GatewayUniqueId", gatewayUniqueId);

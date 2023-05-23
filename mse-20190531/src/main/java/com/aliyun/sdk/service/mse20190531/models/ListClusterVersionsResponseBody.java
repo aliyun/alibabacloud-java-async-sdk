@@ -122,7 +122,7 @@ public class ListClusterVersionsResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * The response code returned.
+         * cluster not found
          */
         public Builder code(Integer code) {
             this.code = code;
@@ -130,7 +130,7 @@ public class ListClusterVersionsResponseBody extends TeaModel {
         }
 
         /**
-         * The details of the data.
+         * Data.
          */
         public Builder data(java.util.List < Data> data) {
             this.data = data;
@@ -138,7 +138,7 @@ public class ListClusterVersionsResponseBody extends TeaModel {
         }
 
         /**
-         * The dynamic part in the error message.
+         * system error
          */
         public Builder dynamicMessage(String dynamicMessage) {
             this.dynamicMessage = dynamicMessage;
@@ -146,7 +146,7 @@ public class ListClusterVersionsResponseBody extends TeaModel {
         }
 
         /**
-         * The error code returned if the request failed.
+         * clusterNotFound
          */
         public Builder errorCode(String errorCode) {
             this.errorCode = errorCode;
@@ -154,7 +154,7 @@ public class ListClusterVersionsResponseBody extends TeaModel {
         }
 
         /**
-         * The HTTP status code returned.
+         * illegalRequest
          */
         public Builder httpStatusCode(Integer httpStatusCode) {
             this.httpStatusCode = httpStatusCode;
@@ -162,7 +162,7 @@ public class ListClusterVersionsResponseBody extends TeaModel {
         }
 
         /**
-         * The message returned.
+         * mse-100-001
          */
         public Builder message(String message) {
             this.message = message;
@@ -170,7 +170,7 @@ public class ListClusterVersionsResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * illegal request:%s
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -178,11 +178,7 @@ public class ListClusterVersionsResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether the request was successful. Valid values:
-         * <p>
-         * 
-         * *   `true`: The request was successful.
-         * *   `false`: The request failed.
+         * mse-200-021
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -246,7 +242,7 @@ public class ListClusterVersionsResponseBody extends TeaModel {
             private String showName; 
 
             /**
-             * The type of the instance.
+             * ClusterType.
              */
             public Builder clusterType(String clusterType) {
                 this.clusterType = clusterType;
@@ -254,7 +250,7 @@ public class ListClusterVersionsResponseBody extends TeaModel {
             }
 
             /**
-             * The code of the instance type.
+             * cluster not found
              */
             public Builder code(String code) {
                 this.code = code;
@@ -262,7 +258,7 @@ public class ListClusterVersionsResponseBody extends TeaModel {
             }
 
             /**
-             * The version of the instance.
+             * ShowName.
              */
             public Builder showName(String showName) {
                 this.showName = showName;

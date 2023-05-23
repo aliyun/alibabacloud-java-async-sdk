@@ -68,11 +68,7 @@ public class PutClusterHealthCheckTaskRequest extends Request {
         } 
 
         /**
-         * The language of the response. Valid values:
-         * <p>
-         * 
-         * *   zh: Chinese
-         * *   en: English
+         * RestResult
          */
         public Builder acceptLanguage(String acceptLanguage) {
             this.putQueryParameter("AcceptLanguage", acceptLanguage);
@@ -81,7 +77,11 @@ public class PutClusterHealthCheckTaskRequest extends Request {
         }
 
         /**
-         * The ID of the instance.
+         * The language of the response. Valid values:
+         * <p>
+         * 
+         * *   zh: Chinese
+         * *   en: English
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);

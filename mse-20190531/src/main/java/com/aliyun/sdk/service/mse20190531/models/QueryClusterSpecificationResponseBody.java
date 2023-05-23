@@ -110,7 +110,7 @@ public class QueryClusterSpecificationResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * The return value.
+         * Code.
          */
         public Builder code(Integer code) {
             this.code = code;
@@ -118,7 +118,7 @@ public class QueryClusterSpecificationResponseBody extends TeaModel {
         }
 
         /**
-         * The details of the data.
+         * Data.
          */
         public Builder data(java.util.List < Data> data) {
             this.data = data;
@@ -126,7 +126,7 @@ public class QueryClusterSpecificationResponseBody extends TeaModel {
         }
 
         /**
-         * The error code returned if the request failed.
+         * ErrorCode.
          */
         public Builder errorCode(String errorCode) {
             this.errorCode = errorCode;
@@ -134,7 +134,7 @@ public class QueryClusterSpecificationResponseBody extends TeaModel {
         }
 
         /**
-         * The HTTP status code returned.
+         * HttpStatusCode.
          */
         public Builder httpStatusCode(Integer httpStatusCode) {
             this.httpStatusCode = httpStatusCode;
@@ -142,7 +142,7 @@ public class QueryClusterSpecificationResponseBody extends TeaModel {
         }
 
         /**
-         * The message returned.
+         * Message.
          */
         public Builder message(String message) {
             this.message = message;
@@ -150,7 +150,7 @@ public class QueryClusterSpecificationResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * RequestId.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -158,11 +158,7 @@ public class QueryClusterSpecificationResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether the request was successful. Valid values:
-         * <p>
-         * 
-         * *   `true`: The request was successful.
-         * *   `false`: The request failed.
+         * Success.
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -226,7 +222,7 @@ public class QueryClusterSpecificationResponseBody extends TeaModel {
             private String memoryCapacity; 
 
             /**
-             * The engine specifications that can be used.
+             * ClusterSpecificationName.
              */
             public Builder clusterSpecificationName(String clusterSpecificationName) {
                 this.clusterSpecificationName = clusterSpecificationName;
@@ -234,7 +230,7 @@ public class QueryClusterSpecificationResponseBody extends TeaModel {
             }
 
             /**
-             * The number of vCPUs in the specifications.
+             * CpuCapacity.
              */
             public Builder cpuCapacity(String cpuCapacity) {
                 this.cpuCapacity = cpuCapacity;
@@ -242,7 +238,7 @@ public class QueryClusterSpecificationResponseBody extends TeaModel {
             }
 
             /**
-             * The memory size in the specifications. Unit: GB.
+             * MemoryCapacity.
              */
             public Builder memoryCapacity(String memoryCapacity) {
                 this.memoryCapacity = memoryCapacity;

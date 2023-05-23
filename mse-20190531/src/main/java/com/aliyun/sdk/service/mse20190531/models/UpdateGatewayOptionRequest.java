@@ -96,11 +96,7 @@ public class UpdateGatewayOptionRequest extends Request {
         } 
 
         /**
-         * The language of the response. Valid values:
-         * <p>
-         * 
-         * *   zh: Chinese
-         * *   en: English
+         * 返回结果显示的语言。取值：zh（默认值）：中文，en：英文
          */
         public Builder acceptLanguage(String acceptLanguage) {
             this.putQueryParameter("AcceptLanguage", acceptLanguage);
@@ -109,7 +105,7 @@ public class UpdateGatewayOptionRequest extends Request {
         }
 
         /**
-         * The ID of the gateway.
+         * GatewayId.
          */
         public Builder gatewayId(Long gatewayId) {
             this.putQueryParameter("GatewayId", gatewayId);
@@ -118,14 +114,7 @@ public class UpdateGatewayOptionRequest extends Request {
         }
 
         /**
-         * The detailed configurations of the gateway.
-         * <p>
-         * 
-         * *   **TraceDetails**: the sampling description of Tracing Analysis. Content: TraceEnabled specifies whether to activate Tracing Analysis. Sample specifies the sampling rate of Tracing Analysis.
-         * *   **LogConfigDetails**: the description of Log Service. Content: LogEnabled specifies whether to activate Log Service. ProjectName specifies the Log Service project to which logs are delivered. LogStoreName specifies the name of the Logstore.
-         * *   **EnableHardwareAcceleration**: specifies whether to enable hardware acceleration.
-         * *   **DisableHttp2Alpn**: specifies whether to disable the HTTP/2 protocol.
-         * *   **EnableWaf**: specifies whether to activate Web Application Firewall (WAF).
+         * GatewayOption.
          */
         public Builder gatewayOption(GatewayOption gatewayOption) {
             String gatewayOptionShrink = shrink(gatewayOption, "GatewayOption", "json");
@@ -135,7 +124,7 @@ public class UpdateGatewayOptionRequest extends Request {
         }
 
         /**
-         * The unique ID of the gateway.
+         * GatewayUniqueId.
          */
         public Builder gatewayUniqueId(String gatewayUniqueId) {
             this.putQueryParameter("GatewayUniqueId", gatewayUniqueId);

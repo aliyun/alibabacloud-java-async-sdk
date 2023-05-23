@@ -156,11 +156,7 @@ public class UpdateMessageQueueRouteRequest extends Request {
         } 
 
         /**
-         * The language of the response. Valid values:
-         * <p>
-         * 
-         * *   zh: Chinese
-         * *   en: English
+         * 返回结果显示的语言。取值：zh（默认值）：中文，en：英文
          */
         public Builder acceptLanguage(String acceptLanguage) {
             this.putQueryParameter("AcceptLanguage", acceptLanguage);
@@ -169,7 +165,7 @@ public class UpdateMessageQueueRouteRequest extends Request {
         }
 
         /**
-         * The ID of the application.
+         * AppId.
          */
         public Builder appId(String appId) {
             this.putQueryParameter("AppId", appId);
@@ -187,11 +183,7 @@ public class UpdateMessageQueueRouteRequest extends Request {
         }
 
         /**
-         * Specifies whether the canary release for messaging feature is enabled for the application. Valid values:
-         * <p>
-         * 
-         * *   `true`: enabled
-         * *   `false`: disabled
+         * Enable.
          */
         public Builder enable(Boolean enable) {
             this.putQueryParameter("Enable", enable);
@@ -200,7 +192,7 @@ public class UpdateMessageQueueRouteRequest extends Request {
         }
 
         /**
-         * The side for message filtering when the canary release for messaging feature is enabled.
+         * FilterSide.
          */
         public Builder filterSide(String filterSide) {
             this.putQueryParameter("FilterSide", filterSide);
@@ -218,7 +210,7 @@ public class UpdateMessageQueueRouteRequest extends Request {
         }
 
         /**
-         * The region ID.
+         * Region.
          */
         public Builder region(String region) {
             this.putQueryParameter("Region", region);
@@ -227,7 +219,7 @@ public class UpdateMessageQueueRouteRequest extends Request {
         }
 
         /**
-         * The tag that is negligible for the untagged environment of the application.
+         * Tags.
          */
         public Builder tags(java.util.List < String > tags) {
             String tagsShrink = shrink(tags, "Tags", "json");

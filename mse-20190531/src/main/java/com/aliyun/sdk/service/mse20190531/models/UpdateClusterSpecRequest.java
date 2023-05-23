@@ -125,11 +125,7 @@ public class UpdateClusterSpecRequest extends Request {
         } 
 
         /**
-         * The language of the response. Valid values:
-         * <p>
-         * 
-         * *   zh: Chinese
-         * *   en: English
+         * system error
          */
         public Builder acceptLanguage(String acceptLanguage) {
             this.putQueryParameter("AcceptLanguage", acceptLanguage);
@@ -138,7 +134,7 @@ public class UpdateClusterSpecRequest extends Request {
         }
 
         /**
-         * The ID of the cluster.
+         * mse-200-021
          */
         public Builder clusterId(String clusterId) {
             this.putQueryParameter("ClusterId", clusterId);
@@ -147,7 +143,7 @@ public class UpdateClusterSpecRequest extends Request {
         }
 
         /**
-         * The destination engine specifications.
+         * mse-100-001
          */
         public Builder clusterSpecification(String clusterSpecification) {
             this.putQueryParameter("ClusterSpecification", clusterSpecification);
@@ -156,7 +152,7 @@ public class UpdateClusterSpecRequest extends Request {
         }
 
         /**
-         * The number of destination nodes.
+         * cluster not found
          */
         public Builder instanceCount(Integer instanceCount) {
             this.putQueryParameter("InstanceCount", instanceCount);
@@ -165,7 +161,7 @@ public class UpdateClusterSpecRequest extends Request {
         }
 
         /**
-         * The ID of the instance
+         * clusterNotFound
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -174,7 +170,7 @@ public class UpdateClusterSpecRequest extends Request {
         }
 
         /**
-         * The MSE version.
+         * systemError
          */
         public Builder mseVersion(String mseVersion) {
             this.putQueryParameter("MseVersion", mseVersion);

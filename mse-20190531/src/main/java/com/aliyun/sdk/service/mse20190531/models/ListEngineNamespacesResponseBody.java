@@ -134,7 +134,12 @@ public class ListEngineNamespacesResponseBody extends TeaModel {
         private Integer totalCount; 
 
         /**
-         * The details of the data.
+         * The type of the namespace. Valid values:
+         * <p>
+         * 
+         * *   `0`: global configuration
+         * *   `1`: default namespace
+         * *   `2`: custom namespace
          */
         public Builder data(java.util.List < Data> data) {
             this.data = data;
@@ -142,7 +147,7 @@ public class ListEngineNamespacesResponseBody extends TeaModel {
         }
 
         /**
-         * The error code returned if the request failed.
+         * mse-200-105
          */
         public Builder errorCode(String errorCode) {
             this.errorCode = errorCode;
@@ -150,7 +155,7 @@ public class ListEngineNamespacesResponseBody extends TeaModel {
         }
 
         /**
-         * The HTTP status code.
+         * The ID of the request.
          */
         public Builder httpCode(String httpCode) {
             this.httpCode = httpCode;
@@ -158,7 +163,7 @@ public class ListEngineNamespacesResponseBody extends TeaModel {
         }
 
         /**
-         * The message returned.
+         * The number of entries returned per page.
          */
         public Builder message(String message) {
             this.message = message;
@@ -166,7 +171,7 @@ public class ListEngineNamespacesResponseBody extends TeaModel {
         }
 
         /**
-         * The page number of the returned page.
+         * The details of the data.
          */
         public Builder pageNumber(Integer pageNumber) {
             this.pageNumber = pageNumber;
@@ -174,7 +179,7 @@ public class ListEngineNamespacesResponseBody extends TeaModel {
         }
 
         /**
-         * The number of entries returned per page.
+         * The details of the data.
          */
         public Builder pageSize(Integer pageSize) {
             this.pageSize = pageSize;
@@ -182,7 +187,7 @@ public class ListEngineNamespacesResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * The request was successfully processed.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -190,11 +195,7 @@ public class ListEngineNamespacesResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether the request was successful. Valid values:
-         * <p>
-         * 
-         * *   `true`: The request was successful.
-         * *   `false`: The request failed.
+         * duplicatedClusterAliasName
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -202,7 +203,7 @@ public class ListEngineNamespacesResponseBody extends TeaModel {
         }
 
         /**
-         * The total number of returned instances.
+         * The message returned.
          */
         public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;
@@ -326,7 +327,7 @@ public class ListEngineNamespacesResponseBody extends TeaModel {
             private Integer type; 
 
             /**
-             * The quota value.
+             * The source from which the namespace was created.
              */
             public Builder configCount(Integer configCount) {
                 this.configCount = configCount;
@@ -334,7 +335,7 @@ public class ListEngineNamespacesResponseBody extends TeaModel {
             }
 
             /**
-             * The namespace.
+             * The quota value.
              */
             public Builder namespace(String namespace) {
                 this.namespace = namespace;
@@ -342,7 +343,7 @@ public class ListEngineNamespacesResponseBody extends TeaModel {
             }
 
             /**
-             * The description of the namespace.
+             * The number of active services.
              */
             public Builder namespaceDesc(String namespaceDesc) {
                 this.namespaceDesc = namespaceDesc;
@@ -350,7 +351,7 @@ public class ListEngineNamespacesResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the namespace.
+             * The namespace.
              */
             public Builder namespaceShowName(String namespaceShowName) {
                 this.namespaceShowName = namespaceShowName;
@@ -358,7 +359,7 @@ public class ListEngineNamespacesResponseBody extends TeaModel {
             }
 
             /**
-             * The quotas.
+             * The description of the namespace.
              */
             public Builder quota(Integer quota) {
                 this.quota = quota;
@@ -366,7 +367,7 @@ public class ListEngineNamespacesResponseBody extends TeaModel {
             }
 
             /**
-             * The number of active services.
+             * The error code returned if the request failed.
              */
             public Builder serviceCount(String serviceCount) {
                 this.serviceCount = serviceCount;
@@ -374,7 +375,11 @@ public class ListEngineNamespacesResponseBody extends TeaModel {
             }
 
             /**
-             * The source from which the namespace was created.
+             * Indicates whether the request was successful. Valid values:
+             * <p>
+             * 
+             * *   `true`: The request was successful.
+             * *   `false`: The request failed.
              */
             public Builder sourceType(String sourceType) {
                 this.sourceType = sourceType;
@@ -382,12 +387,7 @@ public class ListEngineNamespacesResponseBody extends TeaModel {
             }
 
             /**
-             * The type of the namespace. Valid values:
-             * <p>
-             * 
-             * *   `0`: global configuration
-             * *   `1`: default namespace
-             * *   `2`: custom namespace
+             * The quota.
              */
             public Builder type(Integer type) {
                 this.type = type;

@@ -127,11 +127,7 @@ public class ListListenersByConfigRequest extends Request {
         } 
 
         /**
-         * The language of the response. Valid values:
-         * <p>
-         * 
-         * *   zh: Chinese
-         * *   en: English
+         * mse-200-021
          */
         public Builder acceptLanguage(String acceptLanguage) {
             this.putQueryParameter("AcceptLanguage", acceptLanguage);
@@ -140,7 +136,7 @@ public class ListListenersByConfigRequest extends Request {
         }
 
         /**
-         * The ID of the data.
+         * mse-100-007
          */
         public Builder dataId(String dataId) {
             this.putQueryParameter("DataId", dataId);
@@ -149,7 +145,7 @@ public class ListListenersByConfigRequest extends Request {
         }
 
         /**
-         * The group.
+         * illegalRequest
          */
         public Builder group(String group) {
             this.putQueryParameter("Group", group);
@@ -158,7 +154,7 @@ public class ListListenersByConfigRequest extends Request {
         }
 
         /**
-         * The ID of the instance.
+         * duplicated cluster alias name
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -167,7 +163,7 @@ public class ListListenersByConfigRequest extends Request {
         }
 
         /**
-         * The ID of the namespace.
+         * illegal request:%s
          */
         public Builder namespaceId(String namespaceId) {
             this.putQueryParameter("NamespaceId", namespaceId);
@@ -176,7 +172,7 @@ public class ListListenersByConfigRequest extends Request {
         }
 
         /**
-         * The extended request parameters in the JSON format.
+         * mse-200-105
          */
         public Builder requestPars(String requestPars) {
             this.putQueryParameter("RequestPars", requestPars);

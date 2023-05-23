@@ -96,11 +96,7 @@ public class UpdateClusterRequest extends Request {
         } 
 
         /**
-         * The language of the response. Valid values:
-         * <p>
-         * 
-         * *   zh: Chinese
-         * *   en: English
+         * 返回结果显示的语言。取值：zh（默认值）：中文，en：英文
          */
         public Builder acceptLanguage(String acceptLanguage) {
             this.putQueryParameter("AcceptLanguage", acceptLanguage);
@@ -109,7 +105,7 @@ public class UpdateClusterRequest extends Request {
         }
 
         /**
-         * The alias of the instance.
+         * ClusterAliasName.
          */
         public Builder clusterAliasName(String clusterAliasName) {
             this.putQueryParameter("ClusterAliasName", clusterAliasName);
@@ -118,7 +114,7 @@ public class UpdateClusterRequest extends Request {
         }
 
         /**
-         * The ID of the instance.
+         * InstanceId.
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -127,7 +123,7 @@ public class UpdateClusterRequest extends Request {
         }
 
         /**
-         * The extended request parameters in the JSON format.
+         * RequestPars.
          */
         public Builder requestPars(String requestPars) {
             this.putQueryParameter("RequestPars", requestPars);

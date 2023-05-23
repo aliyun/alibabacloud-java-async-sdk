@@ -12,6 +12,9 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DeleteNamespaceResponseBody</p>
  */
 public class DeleteNamespaceResponseBody extends TeaModel {
+    @NameInMap("ErrorCode")
+    private String errorCode;
+
     @NameInMap("HttpStatusCode")
     private Integer httpStatusCode;
 
@@ -25,6 +28,7 @@ public class DeleteNamespaceResponseBody extends TeaModel {
     private Boolean success;
 
     private DeleteNamespaceResponseBody(Builder builder) {
+        this.errorCode = builder.errorCode;
         this.httpStatusCode = builder.httpStatusCode;
         this.message = builder.message;
         this.requestId = builder.requestId;
@@ -37,6 +41,13 @@ public class DeleteNamespaceResponseBody extends TeaModel {
 
     public static DeleteNamespaceResponseBody create() {
         return builder().build();
+    }
+
+    /**
+     * @return errorCode
+     */
+    public String getErrorCode() {
+        return this.errorCode;
     }
 
     /**
@@ -68,10 +79,19 @@ public class DeleteNamespaceResponseBody extends TeaModel {
     }
 
     public static final class Builder {
+        private String errorCode; 
         private Integer httpStatusCode; 
         private String message; 
         private String requestId; 
         private Boolean success; 
+
+        /**
+         * 错误码。
+         */
+        public Builder errorCode(String errorCode) {
+            this.errorCode = errorCode;
+            return this;
+        }
 
         /**
          * HTTP状态码

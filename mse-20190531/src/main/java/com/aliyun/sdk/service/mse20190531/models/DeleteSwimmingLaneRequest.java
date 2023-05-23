@@ -84,11 +84,7 @@ public class DeleteSwimmingLaneRequest extends Request {
         } 
 
         /**
-         * The language of the response. Valid values:
-         * <p>
-         * 
-         * *   zh: Chinese
-         * *   en: English
+         * cluster not found
          */
         public Builder acceptLanguage(String acceptLanguage) {
             this.putQueryParameter("AcceptLanguage", acceptLanguage);
@@ -97,7 +93,7 @@ public class DeleteSwimmingLaneRequest extends Request {
         }
 
         /**
-         * The ID of the lane.
+         * clusterNotFound
          */
         public Builder laneId(Long laneId) {
             this.putQueryParameter("LaneId", laneId);

@@ -82,11 +82,7 @@ public class GetGatewayRouteDetailRequest extends Request {
         } 
 
         /**
-         * The language of the response. Valid values:
-         * <p>
-         * 
-         * *   zh: Chinese
-         * *   en: English
+         * 返回结果显示的语言。取值：zh（默认值）：中文，en：英文
          */
         public Builder acceptLanguage(String acceptLanguage) {
             this.putQueryParameter("AcceptLanguage", acceptLanguage);
@@ -95,7 +91,7 @@ public class GetGatewayRouteDetailRequest extends Request {
         }
 
         /**
-         * The unique ID of the gateway.
+         * GatewayUniqueId.
          */
         public Builder gatewayUniqueId(String gatewayUniqueId) {
             this.putQueryParameter("GatewayUniqueId", gatewayUniqueId);
@@ -104,7 +100,7 @@ public class GetGatewayRouteDetailRequest extends Request {
         }
 
         /**
-         * The ID of the route.
+         * RouteId.
          */
         public Builder routeId(Long routeId) {
             this.putQueryParameter("RouteId", routeId);

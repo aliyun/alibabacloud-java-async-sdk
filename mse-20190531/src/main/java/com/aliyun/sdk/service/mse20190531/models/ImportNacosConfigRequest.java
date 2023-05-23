@@ -112,11 +112,7 @@ public class ImportNacosConfigRequest extends Request {
         } 
 
         /**
-         * The language of the response. Valid values:
-         * <p>
-         * 
-         * *   zh: Chinese
-         * *   en: English
+         * mse-200-105
          */
         public Builder acceptLanguage(String acceptLanguage) {
             this.putQueryParameter("AcceptLanguage", acceptLanguage);
@@ -125,7 +121,7 @@ public class ImportNacosConfigRequest extends Request {
         }
 
         /**
-         * The URL that is used to download the configuration file.
+         * > The operation is not provided in Nacos SDKs. For information about Nacos SDKs, see the [official documentation](https://nacos.io/zh-cn/docs/sdk.html).
          */
         public Builder fileUrl(String fileUrl) {
             this.putQueryParameter("FileUrl", fileUrl);
@@ -134,7 +130,7 @@ public class ImportNacosConfigRequest extends Request {
         }
 
         /**
-         * The ID of the instance.
+         * The ID of the request.
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -143,7 +139,7 @@ public class ImportNacosConfigRequest extends Request {
         }
 
         /**
-         * The ID of the namespace.
+         * mse_prepaid_public_cn-****
          */
         public Builder namespaceId(String namespaceId) {
             this.putQueryParameter("NamespaceId", namespaceId);
@@ -152,7 +148,7 @@ public class ImportNacosConfigRequest extends Request {
         }
 
         /**
-         * The policy.
+         * Imports Nacos configurations as a file.
          */
         public Builder policy(String policy) {
             this.putQueryParameter("Policy", policy);

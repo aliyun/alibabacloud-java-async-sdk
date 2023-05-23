@@ -84,10 +84,7 @@ public class GetPluginConfigRequest extends Request {
         } 
 
         /**
-         * The language of the response. Valid values:
-         * <p>
-         * 
-         * zh: Chinese en: English
+         * The name of the plug-in.
          */
         public Builder acceptLanguage(String acceptLanguage) {
             this.putQueryParameter("AcceptLanguage", acceptLanguage);
@@ -96,7 +93,7 @@ public class GetPluginConfigRequest extends Request {
         }
 
         /**
-         * The unique ID of the gateway.
+         * The type.
          */
         public Builder gatewayUniqueId(String gatewayUniqueId) {
             this.putQueryParameter("GatewayUniqueId", gatewayUniqueId);
@@ -105,7 +102,20 @@ public class GetPluginConfigRequest extends Request {
         }
 
         /**
-         * The ID of the gateway plug-in.
+         * The category of the plug-in.
+         * <p>
+         * 
+         * 0: custom
+         * 
+         * 1: permission authorization
+         * 
+         * 2: security protection
+         * 
+         * 3: transmission protocol
+         * 
+         * 4: traffic control
+         * 
+         * 5: traffic observation
          */
         public Builder pluginId(Long pluginId) {
             this.putQueryParameter("PluginId", pluginId);

@@ -28,7 +28,7 @@ public class CreateOrUpdateSwimmingLaneRequest extends Request {
     @NameInMap("EntryRule")
     private String entryRule;
 
-    @Query
+    @Body
     @NameInMap("EntryRules")
     private java.util.List < EntryRules> entryRules;
 
@@ -37,24 +37,12 @@ public class CreateOrUpdateSwimmingLaneRequest extends Request {
     private GatewaySwimmingLaneRouteJson gatewaySwimmingLaneRouteJson;
 
     @Query
-    @NameInMap("GmtCreate")
-    private String gmtCreate;
-
-    @Query
-    @NameInMap("GmtModified")
-    private String gmtModified;
-
-    @Query
     @NameInMap("GroupId")
     private Long groupId;
 
     @Query
     @NameInMap("Id")
     private Long id;
-
-    @Query
-    @NameInMap("LicenseKey")
-    private String licenseKey;
 
     @Query
     @NameInMap("Name")
@@ -71,20 +59,8 @@ public class CreateOrUpdateSwimmingLaneRequest extends Request {
     private String regionId;
 
     @Query
-    @NameInMap("Source")
-    private String source;
-
-    @Query
-    @NameInMap("Status")
-    private Integer status;
-
-    @Query
     @NameInMap("Tag")
     private String tag;
-
-    @Query
-    @NameInMap("UserId")
-    private String userId;
 
     private CreateOrUpdateSwimmingLaneRequest(Builder builder) {
         super(builder);
@@ -94,18 +70,12 @@ public class CreateOrUpdateSwimmingLaneRequest extends Request {
         this.entryRule = builder.entryRule;
         this.entryRules = builder.entryRules;
         this.gatewaySwimmingLaneRouteJson = builder.gatewaySwimmingLaneRouteJson;
-        this.gmtCreate = builder.gmtCreate;
-        this.gmtModified = builder.gmtModified;
         this.groupId = builder.groupId;
         this.id = builder.id;
-        this.licenseKey = builder.licenseKey;
         this.name = builder.name;
         this.namespace = builder.namespace;
         this.regionId = builder.regionId;
-        this.source = builder.source;
-        this.status = builder.status;
         this.tag = builder.tag;
-        this.userId = builder.userId;
     }
 
     public static Builder builder() {
@@ -164,20 +134,6 @@ public class CreateOrUpdateSwimmingLaneRequest extends Request {
     }
 
     /**
-     * @return gmtCreate
-     */
-    public String getGmtCreate() {
-        return this.gmtCreate;
-    }
-
-    /**
-     * @return gmtModified
-     */
-    public String getGmtModified() {
-        return this.gmtModified;
-    }
-
-    /**
      * @return groupId
      */
     public Long getGroupId() {
@@ -189,13 +145,6 @@ public class CreateOrUpdateSwimmingLaneRequest extends Request {
      */
     public Long getId() {
         return this.id;
-    }
-
-    /**
-     * @return licenseKey
-     */
-    public String getLicenseKey() {
-        return this.licenseKey;
     }
 
     /**
@@ -220,31 +169,10 @@ public class CreateOrUpdateSwimmingLaneRequest extends Request {
     }
 
     /**
-     * @return source
-     */
-    public String getSource() {
-        return this.source;
-    }
-
-    /**
-     * @return status
-     */
-    public Integer getStatus() {
-        return this.status;
-    }
-
-    /**
      * @return tag
      */
     public String getTag() {
         return this.tag;
-    }
-
-    /**
-     * @return userId
-     */
-    public String getUserId() {
-        return this.userId;
     }
 
     public static final class Builder extends Request.Builder<CreateOrUpdateSwimmingLaneRequest, Builder> {
@@ -254,18 +182,12 @@ public class CreateOrUpdateSwimmingLaneRequest extends Request {
         private String entryRule; 
         private java.util.List < EntryRules> entryRules; 
         private GatewaySwimmingLaneRouteJson gatewaySwimmingLaneRouteJson; 
-        private String gmtCreate; 
-        private String gmtModified; 
         private Long groupId; 
         private Long id; 
-        private String licenseKey; 
         private String name; 
         private String namespace; 
         private String regionId; 
-        private String source; 
-        private Integer status; 
         private String tag; 
-        private String userId; 
 
         private Builder() {
             super();
@@ -279,28 +201,16 @@ public class CreateOrUpdateSwimmingLaneRequest extends Request {
             this.entryRule = request.entryRule;
             this.entryRules = request.entryRules;
             this.gatewaySwimmingLaneRouteJson = request.gatewaySwimmingLaneRouteJson;
-            this.gmtCreate = request.gmtCreate;
-            this.gmtModified = request.gmtModified;
             this.groupId = request.groupId;
             this.id = request.id;
-            this.licenseKey = request.licenseKey;
             this.name = request.name;
             this.namespace = request.namespace;
             this.regionId = request.regionId;
-            this.source = request.source;
-            this.status = request.status;
             this.tag = request.tag;
-            this.userId = request.userId;
         } 
 
         /**
-         * The language of the response. Valid values:****
-         * <p>
-         * 
-         * *   **zh-CN**: Chinese
-         * *   **en-US**: English.
-         * 
-         * > Default value: **zh-CN**.
+         * 返回结果显示的语言。取值：zh（默认值）：中文，en：英文
          */
         public Builder acceptLanguage(String acceptLanguage) {
             this.putQueryParameter("AcceptLanguage", acceptLanguage);
@@ -309,7 +219,7 @@ public class CreateOrUpdateSwimmingLaneRequest extends Request {
         }
 
         /**
-         * Specifies whether to enable a lane.
+         * 是否开启。
          */
         public Builder enable(Boolean enable) {
             this.putQueryParameter("Enable", enable);
@@ -318,7 +228,7 @@ public class CreateOrUpdateSwimmingLaneRequest extends Request {
         }
 
         /**
-         * Specifies whether to set a routing rule for the lane. If an Ingress gateway is used, this parameter is not required.
+         * 是否开启规则
          */
         public Builder enableRules(Boolean enableRules) {
             this.putQueryParameter("EnableRules", enableRules);
@@ -327,7 +237,7 @@ public class CreateOrUpdateSwimmingLaneRequest extends Request {
         }
 
         /**
-         * The JSON string.
+         * json string
          */
         public Builder entryRule(String entryRule) {
             this.putQueryParameter("EntryRule", entryRule);
@@ -336,10 +246,10 @@ public class CreateOrUpdateSwimmingLaneRequest extends Request {
         }
 
         /**
-         * The lane.
+         * SwimmingLane
          */
         public Builder entryRules(java.util.List < EntryRules> entryRules) {
-            this.putQueryParameter("EntryRules", entryRules);
+            this.putBodyParameter("EntryRules", entryRules);
             this.entryRules = entryRules;
             return this;
         }
@@ -355,25 +265,7 @@ public class CreateOrUpdateSwimmingLaneRequest extends Request {
         }
 
         /**
-         * The creation time.
-         */
-        public Builder gmtCreate(String gmtCreate) {
-            this.putQueryParameter("GmtCreate", gmtCreate);
-            this.gmtCreate = gmtCreate;
-            return this;
-        }
-
-        /**
-         * The update time.
-         */
-        public Builder gmtModified(String gmtModified) {
-            this.putQueryParameter("GmtModified", gmtModified);
-            this.gmtModified = gmtModified;
-            return this;
-        }
-
-        /**
-         * The group to which the lane belongs.
+         * 所属泳道组
          */
         public Builder groupId(Long groupId) {
             this.putQueryParameter("GroupId", groupId);
@@ -382,7 +274,7 @@ public class CreateOrUpdateSwimmingLaneRequest extends Request {
         }
 
         /**
-         * The ID of the primary key. A value -1 specifies a request that is used to create a lane. A value greater than 0 specifies a request that is used to modify a lane.
+         * 泳道Id。如果没有则为新增
          */
         public Builder id(Long id) {
             this.putQueryParameter("Id", id);
@@ -391,16 +283,7 @@ public class CreateOrUpdateSwimmingLaneRequest extends Request {
         }
 
         /**
-         * The license key in use.
-         */
-        public Builder licenseKey(String licenseKey) {
-            this.putQueryParameter("LicenseKey", licenseKey);
-            this.licenseKey = licenseKey;
-            return this;
-        }
-
-        /**
-         * The name of the lane.
+         * 名称
          */
         public Builder name(String name) {
             this.putQueryParameter("Name", name);
@@ -418,7 +301,7 @@ public class CreateOrUpdateSwimmingLaneRequest extends Request {
         }
 
         /**
-         * The region ID.
+         * region
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -427,38 +310,11 @@ public class CreateOrUpdateSwimmingLaneRequest extends Request {
         }
 
         /**
-         * The service source. Valid value: edasmsc.
-         */
-        public Builder source(String source) {
-            this.putQueryParameter("Source", source);
-            this.source = source;
-            return this;
-        }
-
-        /**
-         * The value 0 indicates that the lane is disabled.
-         */
-        public Builder status(Integer status) {
-            this.putQueryParameter("Status", status);
-            this.status = status;
-            return this;
-        }
-
-        /**
-         * The tag.
+         * 匹配到后的目标机器标签
          */
         public Builder tag(String tag) {
             this.putQueryParameter("Tag", tag);
             this.tag = tag;
-            return this;
-        }
-
-        /**
-         * The Alibaba Cloud account. The format is a number, such as 136246975637\*\*\*\*. You can leave this parameter empty.
-         */
-        public Builder userId(String userId) {
-            this.putQueryParameter("UserId", userId);
-            this.userId = userId;
             return this;
         }
 
@@ -604,7 +460,7 @@ public class CreateOrUpdateSwimmingLaneRequest extends Request {
             private String value; 
 
             /**
-             * The expression. =, >, <, >=, <=
+             * 匹配符
              */
             public Builder cond(String cond) {
                 this.cond = cond;
@@ -612,7 +468,7 @@ public class CreateOrUpdateSwimmingLaneRequest extends Request {
             }
 
             /**
-             * The base value used for the rawvalue operator.
+             * 数值
              */
             public Builder datum(String datum) {
                 this.datum = datum;
@@ -620,7 +476,7 @@ public class CreateOrUpdateSwimmingLaneRequest extends Request {
             }
 
             /**
-             * The divisor used for the mod operator.
+             * 除数
              */
             public Builder divisor(Integer divisor) {
                 this.divisor = divisor;
@@ -628,7 +484,7 @@ public class CreateOrUpdateSwimmingLaneRequest extends Request {
             }
 
             /**
-             * The name of the rule. This parameter corresponds to the key of the Type parameter.
+             * 名称
              */
             public Builder name(String name) {
                 this.name = name;
@@ -636,7 +492,7 @@ public class CreateOrUpdateSwimmingLaneRequest extends Request {
             }
 
             /**
-             * The list of names.
+             * 匹配列表
              */
             public Builder nameList(java.util.List < String > nameList) {
                 this.nameList = nameList;
@@ -644,7 +500,7 @@ public class CreateOrUpdateSwimmingLaneRequest extends Request {
             }
 
             /**
-             * The operator type. Valid values: mod, list, rawvalue, and rate.
+             * 操作符
              */
             public Builder operator(String operator) {
                 this.operator = operator;
@@ -652,7 +508,7 @@ public class CreateOrUpdateSwimmingLaneRequest extends Request {
             }
 
             /**
-             * The rate.
+             * 百分比
              */
             public Builder rate(Integer rate) {
                 this.rate = rate;
@@ -660,7 +516,7 @@ public class CreateOrUpdateSwimmingLaneRequest extends Request {
             }
 
             /**
-             * The remainder used for the mod operator.
+             * 余数
              */
             public Builder remainder(Integer remainder) {
                 this.remainder = remainder;
@@ -668,7 +524,7 @@ public class CreateOrUpdateSwimmingLaneRequest extends Request {
             }
 
             /**
-             * The type of the rule. Valid values: cookie, param, and header.
+             * 匹配类型
              */
             public Builder type(String type) {
                 this.type = type;
@@ -676,7 +532,7 @@ public class CreateOrUpdateSwimmingLaneRequest extends Request {
             }
 
             /**
-             * The content of the rule.
+             * 值
              */
             public Builder value(String value) {
                 this.value = value;
@@ -694,12 +550,6 @@ public class CreateOrUpdateSwimmingLaneRequest extends Request {
         @NameInMap("Condition")
         private String condition;
 
-        @NameInMap("Enable")
-        private Boolean enable;
-
-        @NameInMap("Path")
-        private String path;
-
         @NameInMap("Paths")
         private java.util.List < String > paths;
 
@@ -711,8 +561,6 @@ public class CreateOrUpdateSwimmingLaneRequest extends Request {
 
         private EntryRules(Builder builder) {
             this.condition = builder.condition;
-            this.enable = builder.enable;
-            this.path = builder.path;
             this.paths = builder.paths;
             this.priority = builder.priority;
             this.restItems = builder.restItems;
@@ -731,20 +579,6 @@ public class CreateOrUpdateSwimmingLaneRequest extends Request {
          */
         public String getCondition() {
             return this.condition;
-        }
-
-        /**
-         * @return enable
-         */
-        public Boolean getEnable() {
-            return this.enable;
-        }
-
-        /**
-         * @return path
-         */
-        public String getPath() {
-            return this.path;
         }
 
         /**
@@ -770,14 +604,12 @@ public class CreateOrUpdateSwimmingLaneRequest extends Request {
 
         public static final class Builder {
             private String condition; 
-            private Boolean enable; 
-            private String path; 
             private java.util.List < String > paths; 
             private Integer priority; 
             private java.util.List < RestItems> restItems; 
 
             /**
-             * The common parameters in the JSON format.
+             * 指示RestItems如何组合成最终的条件
              */
             public Builder condition(String condition) {
                 this.condition = condition;
@@ -785,27 +617,7 @@ public class CreateOrUpdateSwimmingLaneRequest extends Request {
             }
 
             /**
-             * Specifies whether to enable the rule. Valid values:
-             * <p>
-             * 
-             * *   `true`: enables the rule.
-             * *   `false`: disables the rule.
-             */
-            public Builder enable(Boolean enable) {
-                this.enable = enable;
-                return this;
-            }
-
-            /**
-             * The path.
-             */
-            public Builder path(String path) {
-                this.path = path;
-                return this;
-            }
-
-            /**
-             * The list of paths.
+             * 路径列表
              */
             public Builder paths(java.util.List < String > paths) {
                 this.paths = paths;
@@ -813,7 +625,7 @@ public class CreateOrUpdateSwimmingLaneRequest extends Request {
             }
 
             /**
-             * The priority. A smaller value of this parameter indicates a higher priority.
+             * 优先级
              */
             public Builder priority(Integer priority) {
                 this.priority = priority;
@@ -821,7 +633,7 @@ public class CreateOrUpdateSwimmingLaneRequest extends Request {
             }
 
             /**
-             * The information about the rule for the REST method.
+             * 匹配列表
              */
             public Builder restItems(java.util.List < RestItems> restItems) {
                 this.restItems = restItems;
@@ -898,7 +710,7 @@ public class CreateOrUpdateSwimmingLaneRequest extends Request {
             private String value; 
 
             /**
-             * The expression. =, >, <, >=, <=
+             * 匹配符
              */
             public Builder cond(String cond) {
                 this.cond = cond;
@@ -906,7 +718,7 @@ public class CreateOrUpdateSwimmingLaneRequest extends Request {
             }
 
             /**
-             * The name of the rule. This parameter corresponds to the key of the Type parameter.
+             * 名称
              */
             public Builder name(String name) {
                 this.name = name;
@@ -914,7 +726,7 @@ public class CreateOrUpdateSwimmingLaneRequest extends Request {
             }
 
             /**
-             * The type of the rule. Valid values: cookie, param, and header.
+             * 匹配类型
              */
             public Builder type(String type) {
                 this.type = type;
@@ -922,7 +734,7 @@ public class CreateOrUpdateSwimmingLaneRequest extends Request {
             }
 
             /**
-             * The content of the rule.
+             * 值
              */
             public Builder value(String value) {
                 this.value = value;

@@ -124,11 +124,7 @@ public class ListGatewayServiceRequest extends Request {
         } 
 
         /**
-         * The language of the response. Valid values:
-         * <p>
-         * 
-         * *   zh: Chinese
-         * *   en: English
+         * system error
          */
         public Builder acceptLanguage(String acceptLanguage) {
             this.putQueryParameter("AcceptLanguage", acceptLanguage);
@@ -137,7 +133,7 @@ public class ListGatewayServiceRequest extends Request {
         }
 
         /**
-         * Specifies whether to enable sorting.
+         * mse-100-007
          */
         public Builder descSort(Boolean descSort) {
             this.putQueryParameter("DescSort", descSort);
@@ -146,7 +142,7 @@ public class ListGatewayServiceRequest extends Request {
         }
 
         /**
-         * The parameters that specify filter conditions, which are in the format of {"key1":"value1"}.
+         * illegalRequest
          */
         public Builder filterParams(FilterParams filterParams) {
             String filterParamsShrink = shrink(filterParams, "FilterParams", "json");
@@ -156,7 +152,7 @@ public class ListGatewayServiceRequest extends Request {
         }
 
         /**
-         * The item based on which entries are sorted.
+         * duplicated cluster alias name
          */
         public Builder orderItem(String orderItem) {
             this.putQueryParameter("OrderItem", orderItem);
@@ -165,7 +161,7 @@ public class ListGatewayServiceRequest extends Request {
         }
 
         /**
-         * The number of the page to return.
+         * mse-200-105
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -174,7 +170,7 @@ public class ListGatewayServiceRequest extends Request {
         }
 
         /**
-         * The number of entries to return on each page.
+         * duplicatedClusterAliasName
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -276,7 +272,7 @@ public class ListGatewayServiceRequest extends Request {
             private String sourceType; 
 
             /**
-             * The unique ID of the gateway.
+             * mse-100-001
              */
             public Builder gatewayUniqueId(String gatewayUniqueId) {
                 this.gatewayUniqueId = gatewayUniqueId;
@@ -284,7 +280,7 @@ public class ListGatewayServiceRequest extends Request {
             }
 
             /**
-             * The group.
+             * cluster not found
              */
             public Builder groupName(String groupName) {
                 this.groupName = groupName;
@@ -292,7 +288,7 @@ public class ListGatewayServiceRequest extends Request {
             }
 
             /**
-             * The name of the service.
+             * illegal request:%s
              */
             public Builder name(String name) {
                 this.name = name;
@@ -300,7 +296,7 @@ public class ListGatewayServiceRequest extends Request {
             }
 
             /**
-             * The namespace.
+             * clusterNotFound
              */
             public Builder namespace(String namespace) {
                 this.namespace = namespace;
@@ -308,14 +304,7 @@ public class ListGatewayServiceRequest extends Request {
             }
 
             /**
-             * The protocol of the service.
-             * <p>
-             * 
-             * *   HTTP
-             * *   HTTPS
-             * *   HTTP2
-             * *   GRPC
-             * *   DUBBO
+             * systemError
              */
             public Builder serviceProtocol(String serviceProtocol) {
                 this.serviceProtocol = serviceProtocol;
@@ -323,7 +312,7 @@ public class ListGatewayServiceRequest extends Request {
             }
 
             /**
-             * The source type.
+             * mse-200-021
              */
             public Builder sourceType(String sourceType) {
                 this.sourceType = sourceType;

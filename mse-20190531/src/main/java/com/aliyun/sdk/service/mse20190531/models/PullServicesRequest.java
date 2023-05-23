@@ -96,11 +96,7 @@ public class PullServicesRequest extends Request {
         } 
 
         /**
-         * The language of the response. Valid values:
-         * <p>
-         * 
-         * *   zh: Chinese
-         * *   en: English
+         * The message returned.
          */
         public Builder acceptLanguage(String acceptLanguage) {
             this.putQueryParameter("AcceptLanguage", acceptLanguage);
@@ -109,7 +105,7 @@ public class PullServicesRequest extends Request {
         }
 
         /**
-         * The unique ID of the gateway.
+         * The type of the service source.
          */
         public Builder gatewayUniqueId(String gatewayUniqueId) {
             this.putQueryParameter("GatewayUniqueId", gatewayUniqueId);
@@ -118,7 +114,7 @@ public class PullServicesRequest extends Request {
         }
 
         /**
-         * The namespace.
+         * The data structure.
          */
         public Builder namespace(String namespace) {
             this.putQueryParameter("Namespace", namespace);
@@ -127,7 +123,7 @@ public class PullServicesRequest extends Request {
         }
 
         /**
-         * The type of the service source.
+         * The ID of the service source.
          */
         public Builder sourceType(String sourceType) {
             this.putQueryParameter("SourceType", sourceType);

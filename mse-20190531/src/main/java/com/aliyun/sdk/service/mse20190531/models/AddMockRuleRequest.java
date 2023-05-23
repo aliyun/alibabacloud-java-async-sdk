@@ -215,11 +215,7 @@ public class AddMockRuleRequest extends Request {
         } 
 
         /**
-         * The language of the response. Valid values:
-         * <p>
-         * 
-         * *   zh: Chinese
-         * *   en: English
+         * 返回结果显示的语言。取值：zh（默认值）：中文，en：英文
          */
         public Builder acceptLanguage(String acceptLanguage) {
             this.putQueryParameter("AcceptLanguage", acceptLanguage);
@@ -228,7 +224,7 @@ public class AddMockRuleRequest extends Request {
         }
 
         /**
-         * The ID of the custom application.
+         * ConsumerAppIds.
          */
         public Builder consumerAppIds(String consumerAppIds) {
             this.putQueryParameter("ConsumerAppIds", consumerAppIds);
@@ -237,7 +233,7 @@ public class AddMockRuleRequest extends Request {
         }
 
         /**
-         * The items in the recycle bin.
+         * DubboMockItems.
          */
         public Builder dubboMockItems(String dubboMockItems) {
             this.putQueryParameter("DubboMockItems", dubboMockItems);
@@ -246,11 +242,7 @@ public class AddMockRuleRequest extends Request {
         }
 
         /**
-         * Specifies whether to enable the alert rule. Valid values:
-         * <p>
-         * 
-         * *   `true`: enables the alert rule.
-         * *   `false`: disables the alert rule.
+         * Enable.
          */
         public Builder enable(Boolean enable) {
             this.putQueryParameter("Enable", enable);
@@ -259,7 +251,7 @@ public class AddMockRuleRequest extends Request {
         }
 
         /**
-         * The description.
+         * ExtraJson.
          */
         public Builder extraJson(String extraJson) {
             this.putQueryParameter("ExtraJson", extraJson);
@@ -268,13 +260,7 @@ public class AddMockRuleRequest extends Request {
         }
 
         /**
-         * The response time (RT) threshold of slow calls. Valid values:
-         * <p>
-         * 
-         * *   \- 15: 15 ms
-         * *   \- 30: 30 ms
-         * *   \- 60: 60 ms
-         * *   \- 120: 120 ms
+         * MockType.
          */
         public Builder mockType(Long mockType) {
             this.putQueryParameter("MockType", mockType);
@@ -283,7 +269,7 @@ public class AddMockRuleRequest extends Request {
         }
 
         /**
-         * The name of the rule.
+         * Name.
          */
         public Builder name(String name) {
             this.putQueryParameter("Name", name);
@@ -292,7 +278,7 @@ public class AddMockRuleRequest extends Request {
         }
 
         /**
-         * The ID of the service provider application.
+         * ProviderAppId.
          */
         public Builder providerAppId(String providerAppId) {
             this.putQueryParameter("ProviderAppId", providerAppId);
@@ -301,7 +287,7 @@ public class AddMockRuleRequest extends Request {
         }
 
         /**
-         * The name of the service provider application.
+         * ProviderAppName.
          */
         public Builder providerAppName(String providerAppName) {
             this.putQueryParameter("ProviderAppName", providerAppName);
@@ -310,7 +296,7 @@ public class AddMockRuleRequest extends Request {
         }
 
         /**
-         * The ID of the region.
+         * Region.
          */
         public Builder region(String region) {
             this.putQueryParameter("Region", region);
@@ -319,7 +305,7 @@ public class AddMockRuleRequest extends Request {
         }
 
         /**
-         * The input parameters. The JSON format is supported.
+         * ScMockItems.
          */
         public Builder scMockItems(String scMockItems) {
             this.putQueryParameter("ScMockItems", scMockItems);
@@ -328,7 +314,7 @@ public class AddMockRuleRequest extends Request {
         }
 
         /**
-         * The rule source.
+         * Source.
          */
         public Builder source(String source) {
             this.putQueryParameter("Source", source);

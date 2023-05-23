@@ -113,11 +113,7 @@ public class DeleteNacosServiceRequest extends Request {
         } 
 
         /**
-         * The language of the response. Valid values:
-         * <p>
-         * 
-         * *   zh: Chinese
-         * *   en: English
+         * The ID of the instance.
          */
         public Builder acceptLanguage(String acceptLanguage) {
             this.putQueryParameter("AcceptLanguage", acceptLanguage);
@@ -126,7 +122,7 @@ public class DeleteNacosServiceRequest extends Request {
         }
 
         /**
-         * The name of the group.
+         * systemError
          */
         public Builder groupName(String groupName) {
             this.putQueryParameter("GroupName", groupName);
@@ -135,7 +131,7 @@ public class DeleteNacosServiceRequest extends Request {
         }
 
         /**
-         * The ID of the instance.
+         * cluster not found
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -144,7 +140,7 @@ public class DeleteNacosServiceRequest extends Request {
         }
 
         /**
-         * The ID of the namespace.
+         * system error
          */
         public Builder namespaceId(String namespaceId) {
             this.putQueryParameter("NamespaceId", namespaceId);
@@ -153,7 +149,7 @@ public class DeleteNacosServiceRequest extends Request {
         }
 
         /**
-         * The name of the service.
+         * mse-100-001
          */
         public Builder serviceName(String serviceName) {
             this.putQueryParameter("ServiceName", serviceName);

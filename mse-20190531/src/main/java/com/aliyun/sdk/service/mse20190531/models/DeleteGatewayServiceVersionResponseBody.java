@@ -98,7 +98,7 @@ public class DeleteGatewayServiceVersionResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * The response code returned.
+         * Code.
          */
         public Builder code(Integer code) {
             this.code = code;
@@ -106,7 +106,7 @@ public class DeleteGatewayServiceVersionResponseBody extends TeaModel {
         }
 
         /**
-         * The returned data.
+         * Data.
          */
         public Builder data(Long data) {
             this.data = data;
@@ -114,7 +114,7 @@ public class DeleteGatewayServiceVersionResponseBody extends TeaModel {
         }
 
         /**
-         * The HTTP status code returned.
+         * HttpStatusCode.
          */
         public Builder httpStatusCode(Integer httpStatusCode) {
             this.httpStatusCode = httpStatusCode;
@@ -122,11 +122,7 @@ public class DeleteGatewayServiceVersionResponseBody extends TeaModel {
         }
 
         /**
-         * The message returned.
-         * <p>
-         * 
-         * *   If the request is successful, a success message is returned.
-         * *   If the request fails, an error message is returned, such as the "TaskId not found" message.
+         * Message.
          */
         public Builder message(String message) {
             this.message = message;
@@ -134,7 +130,7 @@ public class DeleteGatewayServiceVersionResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * Id of the request
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -142,11 +138,7 @@ public class DeleteGatewayServiceVersionResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether the request was successful. Valid values:
-         * <p>
-         * 
-         * *   `true`: The request was successful.
-         * *   `false`: The request failed.
+         * Success.
          */
         public Builder success(Boolean success) {
             this.success = success;

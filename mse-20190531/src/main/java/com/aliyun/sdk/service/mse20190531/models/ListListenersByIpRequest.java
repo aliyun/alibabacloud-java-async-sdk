@@ -112,11 +112,7 @@ public class ListListenersByIpRequest extends Request {
         } 
 
         /**
-         * The language of the response. Valid values:
-         * <p>
-         * 
-         * *   zh: Chinese
-         * *   en: English
+         * system error
          */
         public Builder acceptLanguage(String acceptLanguage) {
             this.putQueryParameter("AcceptLanguage", acceptLanguage);
@@ -125,7 +121,7 @@ public class ListListenersByIpRequest extends Request {
         }
 
         /**
-         * The ID of the instance.
+         * cluster not found
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -134,7 +130,7 @@ public class ListListenersByIpRequest extends Request {
         }
 
         /**
-         * The IP address of the listener.
+         * mse-100-001
          */
         public Builder ip(String ip) {
             this.putQueryParameter("Ip", ip);
@@ -143,7 +139,7 @@ public class ListListenersByIpRequest extends Request {
         }
 
         /**
-         * The ID of the namespace.
+         * systemError
          */
         public Builder namespaceId(String namespaceId) {
             this.putQueryParameter("NamespaceId", namespaceId);
@@ -152,7 +148,7 @@ public class ListListenersByIpRequest extends Request {
         }
 
         /**
-         * The extended request parameters in the JSON format.
+         * clusterNotFound
          */
         public Builder requestPars(String requestPars) {
             this.putQueryParameter("RequestPars", requestPars);

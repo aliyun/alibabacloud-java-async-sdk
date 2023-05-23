@@ -86,7 +86,7 @@ public class UpdateEngineNamespaceResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * The details of the data.
+         * Data.
          */
         public Builder data(Data data) {
             this.data = data;
@@ -94,7 +94,7 @@ public class UpdateEngineNamespaceResponseBody extends TeaModel {
         }
 
         /**
-         * The error code returned if the request failed.
+         * ErrorCode.
          */
         public Builder errorCode(String errorCode) {
             this.errorCode = errorCode;
@@ -102,7 +102,7 @@ public class UpdateEngineNamespaceResponseBody extends TeaModel {
         }
 
         /**
-         * The message returned.
+         * Message.
          */
         public Builder message(String message) {
             this.message = message;
@@ -110,7 +110,7 @@ public class UpdateEngineNamespaceResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * RequestId.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -118,11 +118,7 @@ public class UpdateEngineNamespaceResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether the request was successful. Valid values:
-         * <p>
-         * 
-         * *   `true`: The request was successful.
-         * *   `false`: The request failed.
+         * Success.
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -222,7 +218,7 @@ public class UpdateEngineNamespaceResponseBody extends TeaModel {
             private Integer type; 
 
             /**
-             * The quota value.
+             * ConfigCount.
              */
             public Builder configCount(Integer configCount) {
                 this.configCount = configCount;
@@ -230,7 +226,7 @@ public class UpdateEngineNamespaceResponseBody extends TeaModel {
             }
 
             /**
-             * The namespace.
+             * Namespace.
              */
             public Builder namespace(String namespace) {
                 this.namespace = namespace;
@@ -238,7 +234,7 @@ public class UpdateEngineNamespaceResponseBody extends TeaModel {
             }
 
             /**
-             * The description of the namespace.
+             * NamespaceDesc.
              */
             public Builder namespaceDesc(String namespaceDesc) {
                 this.namespaceDesc = namespaceDesc;
@@ -246,7 +242,7 @@ public class UpdateEngineNamespaceResponseBody extends TeaModel {
             }
 
             /**
-             * The display name of the namespace.
+             * NamespaceShowName.
              */
             public Builder namespaceShowName(String namespaceShowName) {
                 this.namespaceShowName = namespaceShowName;
@@ -254,7 +250,7 @@ public class UpdateEngineNamespaceResponseBody extends TeaModel {
             }
 
             /**
-             * The quota of configurations.
+             * Quota.
              */
             public Builder quota(Integer quota) {
                 this.quota = quota;
@@ -262,12 +258,7 @@ public class UpdateEngineNamespaceResponseBody extends TeaModel {
             }
 
             /**
-             * The type of the namespace. Valid values:
-             * <p>
-             * 
-             * *   `0`: global configuration
-             * *   `1`: default namespace
-             * *   `2`: custom namespace
+             * Type.
              */
             public Builder type(Integer type) {
                 this.type = type;

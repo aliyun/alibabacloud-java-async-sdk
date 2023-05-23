@@ -98,7 +98,7 @@ public class GetAppMessageQueueRouteResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * The response code returned.
+         * Code.
          */
         public Builder code(Integer code) {
             this.code = code;
@@ -106,7 +106,7 @@ public class GetAppMessageQueueRouteResponseBody extends TeaModel {
         }
 
         /**
-         * The returned data.
+         * Data.
          */
         public Builder data(Data data) {
             this.data = data;
@@ -114,7 +114,7 @@ public class GetAppMessageQueueRouteResponseBody extends TeaModel {
         }
 
         /**
-         * The HTTP status code returned.
+         * HttpStatusCode.
          */
         public Builder httpStatusCode(Integer httpStatusCode) {
             this.httpStatusCode = httpStatusCode;
@@ -122,11 +122,7 @@ public class GetAppMessageQueueRouteResponseBody extends TeaModel {
         }
 
         /**
-         * The message returned.
-         * <p>
-         * 
-         * *   If the request is successful, a success message is returned.
-         * *   If the request fails, an error message is returned.
+         * Message.
          */
         public Builder message(String message) {
             this.message = message;
@@ -134,7 +130,7 @@ public class GetAppMessageQueueRouteResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * RequestId.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -142,7 +138,7 @@ public class GetAppMessageQueueRouteResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether the request was successful. Valid values: true and false. The value true indicates that the request was successful. The value false indicates that the request failed.
+         * Success.
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -230,7 +226,7 @@ public class GetAppMessageQueueRouteResponseBody extends TeaModel {
             private java.util.List < String > tags; 
 
             /**
-             * The ID of the application.
+             * AppId.
              */
             public Builder appId(String appId) {
                 this.appId = appId;
@@ -238,11 +234,7 @@ public class GetAppMessageQueueRouteResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether the canary release for messaging feature is enabled.
-             * <p>
-             * 
-             * *   `true`: enabled
-             * *   `false`: disabled
+             * Enable.
              */
             public Builder enable(Boolean enable) {
                 this.enable = enable;
@@ -250,7 +242,7 @@ public class GetAppMessageQueueRouteResponseBody extends TeaModel {
             }
 
             /**
-             * The side for message filtering when the canary release for messaging feature is enabled.
+             * FilterSide.
              */
             public Builder filterSide(String filterSide) {
                 this.filterSide = filterSide;
@@ -258,7 +250,7 @@ public class GetAppMessageQueueRouteResponseBody extends TeaModel {
             }
 
             /**
-             * The region ID.
+             * Region.
              */
             public Builder region(String region) {
                 this.region = region;
@@ -266,7 +258,7 @@ public class GetAppMessageQueueRouteResponseBody extends TeaModel {
             }
 
             /**
-             * The tags used to ignore message consumption for nodes in untagged environments.
+             * Tags.
              */
             public Builder tags(java.util.List < String > tags) {
                 this.tags = tags;

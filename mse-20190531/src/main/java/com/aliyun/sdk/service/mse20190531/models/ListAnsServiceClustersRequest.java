@@ -47,10 +47,6 @@ public class ListAnsServiceClustersRequest extends Request {
     private Integer pageSize;
 
     @Query
-    @NameInMap("RequestPars")
-    private String requestPars;
-
-    @Query
     @NameInMap("ServiceName")
     private String serviceName;
 
@@ -64,7 +60,6 @@ public class ListAnsServiceClustersRequest extends Request {
         this.namespaceId = builder.namespaceId;
         this.pageNum = builder.pageNum;
         this.pageSize = builder.pageSize;
-        this.requestPars = builder.requestPars;
         this.serviceName = builder.serviceName;
     }
 
@@ -138,13 +133,6 @@ public class ListAnsServiceClustersRequest extends Request {
     }
 
     /**
-     * @return requestPars
-     */
-    public String getRequestPars() {
-        return this.requestPars;
-    }
-
-    /**
      * @return serviceName
      */
     public String getServiceName() {
@@ -160,7 +148,6 @@ public class ListAnsServiceClustersRequest extends Request {
         private String namespaceId; 
         private Integer pageNum; 
         private Integer pageSize; 
-        private String requestPars; 
         private String serviceName; 
 
         private Builder() {
@@ -177,16 +164,11 @@ public class ListAnsServiceClustersRequest extends Request {
             this.namespaceId = request.namespaceId;
             this.pageNum = request.pageNum;
             this.pageSize = request.pageSize;
-            this.requestPars = request.requestPars;
             this.serviceName = request.serviceName;
         } 
 
         /**
-         * The language of the response. Valid values:
-         * <p>
-         * 
-         * *   zh: Chinese
-         * *   en: English
+         * 返回结果显示的语言。取值：zh（默认值）：中文，en：英文
          */
         public Builder acceptLanguage(String acceptLanguage) {
             this.putQueryParameter("AcceptLanguage", acceptLanguage);
@@ -195,10 +177,7 @@ public class ListAnsServiceClustersRequest extends Request {
         }
 
         /**
-         * The ID of the MSE cluster.
-         * <p>
-         * 
-         * > The MSE cluster is different from the cluster of the Nacos service.
+         * ClusterId.
          */
         public Builder clusterId(String clusterId) {
             this.putQueryParameter("ClusterId", clusterId);
@@ -207,7 +186,7 @@ public class ListAnsServiceClustersRequest extends Request {
         }
 
         /**
-         * The alias of the cluster.
+         * ClusterName.
          */
         public Builder clusterName(String clusterName) {
             this.putQueryParameter("ClusterName", clusterName);
@@ -216,7 +195,7 @@ public class ListAnsServiceClustersRequest extends Request {
         }
 
         /**
-         * The name of the group.
+         * GroupName.
          */
         public Builder groupName(String groupName) {
             this.putQueryParameter("GroupName", groupName);
@@ -225,7 +204,7 @@ public class ListAnsServiceClustersRequest extends Request {
         }
 
         /**
-         * The ID of the instance.
+         * InstanceId.
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -234,7 +213,7 @@ public class ListAnsServiceClustersRequest extends Request {
         }
 
         /**
-         * The ID of the namespace.
+         * NamespaceId.
          */
         public Builder namespaceId(String namespaceId) {
             this.putQueryParameter("NamespaceId", namespaceId);
@@ -243,7 +222,7 @@ public class ListAnsServiceClustersRequest extends Request {
         }
 
         /**
-         * The number of the page to return.
+         * PageNum.
          */
         public Builder pageNum(Integer pageNum) {
             this.putQueryParameter("PageNum", pageNum);
@@ -252,7 +231,7 @@ public class ListAnsServiceClustersRequest extends Request {
         }
 
         /**
-         * The number of entries to return on each page.
+         * PageSize.
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -261,16 +240,7 @@ public class ListAnsServiceClustersRequest extends Request {
         }
 
         /**
-         * The extended request parameters in the JSON format.
-         */
-        public Builder requestPars(String requestPars) {
-            this.putQueryParameter("RequestPars", requestPars);
-            this.requestPars = requestPars;
-            return this;
-        }
-
-        /**
-         * The name of the service.
+         * ServiceName.
          */
         public Builder serviceName(String serviceName) {
             this.putQueryParameter("ServiceName", serviceName);

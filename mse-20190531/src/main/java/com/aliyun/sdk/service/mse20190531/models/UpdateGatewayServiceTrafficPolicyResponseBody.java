@@ -98,7 +98,7 @@ public class UpdateGatewayServiceTrafficPolicyResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * The status code returned.
+         * The ID of the request.
          */
         public Builder code(Integer code) {
             this.code = code;
@@ -106,7 +106,7 @@ public class UpdateGatewayServiceTrafficPolicyResponseBody extends TeaModel {
         }
 
         /**
-         * The details of the data.
+         * The message returned.
          */
         public Builder data(GatewayService data) {
             this.data = data;
@@ -114,7 +114,7 @@ public class UpdateGatewayServiceTrafficPolicyResponseBody extends TeaModel {
         }
 
         /**
-         * The HTTP status code returned.
+         * The unique ID of the gateway.
          */
         public Builder httpStatusCode(Integer httpStatusCode) {
             this.httpStatusCode = httpStatusCode;
@@ -122,7 +122,11 @@ public class UpdateGatewayServiceTrafficPolicyResponseBody extends TeaModel {
         }
 
         /**
-         * The message returned.
+         * The language of the response. Valid values:
+         * <p>
+         * 
+         * *   **zh-CN**: Chinese
+         * *   **en-US**: English.
          */
         public Builder message(String message) {
             this.message = message;
@@ -130,7 +134,7 @@ public class UpdateGatewayServiceTrafficPolicyResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * The traffic policy of the gateway.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -138,11 +142,7 @@ public class UpdateGatewayServiceTrafficPolicyResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether the request was successful.
-         * <p>
-         * 
-         * *   **true**: The request was successful.
-         * *   **false**: The request failed.
+         * The HTTP status code returned.
          */
         public Builder success(Boolean success) {
             this.success = success;

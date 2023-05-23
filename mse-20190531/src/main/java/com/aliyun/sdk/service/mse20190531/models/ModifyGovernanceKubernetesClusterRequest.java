@@ -99,11 +99,7 @@ public class ModifyGovernanceKubernetesClusterRequest extends Request {
         } 
 
         /**
-         * The language of the response. Valid values:
-         * <p>
-         * 
-         * *   zh: Chinese
-         * *   en: English
+         * 返回结果显示的语言。取值：zh（默认值）：中文，en：英文
          */
         public Builder acceptLanguage(String acceptLanguage) {
             this.putQueryParameter("AcceptLanguage", acceptLanguage);
@@ -112,7 +108,7 @@ public class ModifyGovernanceKubernetesClusterRequest extends Request {
         }
 
         /**
-         * The ID of the instance.
+         * ClusterId.
          */
         public Builder clusterId(String clusterId) {
             this.putQueryParameter("ClusterId", clusterId);
@@ -121,7 +117,7 @@ public class ModifyGovernanceKubernetesClusterRequest extends Request {
         }
 
         /**
-         * The information about the namespaces of the cluster.
+         * NamespaceInfos.
          */
         public Builder namespaceInfos(String namespaceInfos) {
             this.putQueryParameter("NamespaceInfos", namespaceInfos);
@@ -130,7 +126,7 @@ public class ModifyGovernanceKubernetesClusterRequest extends Request {
         }
 
         /**
-         * The region in which the cluster resides.
+         * RegionId.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);

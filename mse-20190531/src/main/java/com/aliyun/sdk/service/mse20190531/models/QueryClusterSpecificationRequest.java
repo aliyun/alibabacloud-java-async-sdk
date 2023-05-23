@@ -82,11 +82,7 @@ public class QueryClusterSpecificationRequest extends Request {
         } 
 
         /**
-         * The language of the response. Valid values:
-         * <p>
-         * 
-         * *   zh: Chinese
-         * *   en: English
+         * 返回结果显示的语言。取值：zh（默认值）：中文，en：英文
          */
         public Builder acceptLanguage(String acceptLanguage) {
             this.putQueryParameter("AcceptLanguage", acceptLanguage);
@@ -95,11 +91,7 @@ public class QueryClusterSpecificationRequest extends Request {
         }
 
         /**
-         * The network type. Valid values:
-         * <p>
-         * 
-         * *   slb
-         * *   eni
+         * 网络连接类型
          */
         public Builder connectType(String connectType) {
             this.putQueryParameter("ConnectType", connectType);
@@ -108,11 +100,7 @@ public class QueryClusterSpecificationRequest extends Request {
         }
 
         /**
-         * The edition of the MSE instance that you want to purchase.
-         * <p>
-         * 
-         * *   mse_pro: Professional Edition
-         * *   mse_dev: Developer Edition
+         * MseVersion.
          */
         public Builder mseVersion(String mseVersion) {
             this.putQueryParameter("MseVersion", mseVersion);

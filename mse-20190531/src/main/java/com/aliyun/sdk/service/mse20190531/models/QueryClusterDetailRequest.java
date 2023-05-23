@@ -96,11 +96,7 @@ public class QueryClusterDetailRequest extends Request {
         } 
 
         /**
-         * The language of the response. Valid values:
-         * <p>
-         * 
-         * *   zh: Chinese
-         * *   en: English
+         * 返回结果显示的语言。取值：zh（默认值）：中文，en：英文
          */
         public Builder acceptLanguage(String acceptLanguage) {
             this.putQueryParameter("AcceptLanguage", acceptLanguage);
@@ -109,7 +105,7 @@ public class QueryClusterDetailRequest extends Request {
         }
 
         /**
-         * Specifies whether to query access control lists (ACLs).
+         * AclSwitch.
          */
         public Builder aclSwitch(Boolean aclSwitch) {
             this.putQueryParameter("AclSwitch", aclSwitch);
@@ -118,7 +114,7 @@ public class QueryClusterDetailRequest extends Request {
         }
 
         /**
-         * The ID of the instance.
+         * InstanceId.
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -127,7 +123,7 @@ public class QueryClusterDetailRequest extends Request {
         }
 
         /**
-         * The ID of the order.
+         * OrderId.
          */
         public Builder orderId(String orderId) {
             this.putQueryParameter("OrderId", orderId);

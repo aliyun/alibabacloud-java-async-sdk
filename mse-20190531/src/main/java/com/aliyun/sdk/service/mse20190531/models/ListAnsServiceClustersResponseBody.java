@@ -86,7 +86,7 @@ public class ListAnsServiceClustersResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * The details of the data.
+         * Data.
          */
         public Builder data(Data data) {
             this.data = data;
@@ -94,7 +94,7 @@ public class ListAnsServiceClustersResponseBody extends TeaModel {
         }
 
         /**
-         * The error code returned if the request failed.
+         * ErrorCode.
          */
         public Builder errorCode(String errorCode) {
             this.errorCode = errorCode;
@@ -102,7 +102,7 @@ public class ListAnsServiceClustersResponseBody extends TeaModel {
         }
 
         /**
-         * The message returned.
+         * Message.
          */
         public Builder message(String message) {
             this.message = message;
@@ -110,7 +110,7 @@ public class ListAnsServiceClustersResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * RequestId.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -118,11 +118,7 @@ public class ListAnsServiceClustersResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether the request was successful. Valid values:
-         * <p>
-         * 
-         * *   `true`: The request was successful.
-         * *   `false`: The request failed.
+         * Success.
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -135,6 +131,207 @@ public class ListAnsServiceClustersResponseBody extends TeaModel {
 
     } 
 
+    public static class AppDetail extends TeaModel {
+        @NameInMap("AppId")
+        private String appId;
+
+        @NameInMap("AppName")
+        private String appName;
+
+        @NameInMap("CheckInternal")
+        private Integer checkInternal;
+
+        @NameInMap("CheckPath")
+        private String checkPath;
+
+        @NameInMap("CheckTimeout")
+        private Integer checkTimeout;
+
+        @NameInMap("CheckType")
+        private String checkType;
+
+        @NameInMap("HealthyCheckTimes")
+        private Integer healthyCheckTimes;
+
+        @NameInMap("Port")
+        private Integer port;
+
+        @NameInMap("UnhealthyCheckTimes")
+        private Integer unhealthyCheckTimes;
+
+        private AppDetail(Builder builder) {
+            this.appId = builder.appId;
+            this.appName = builder.appName;
+            this.checkInternal = builder.checkInternal;
+            this.checkPath = builder.checkPath;
+            this.checkTimeout = builder.checkTimeout;
+            this.checkType = builder.checkType;
+            this.healthyCheckTimes = builder.healthyCheckTimes;
+            this.port = builder.port;
+            this.unhealthyCheckTimes = builder.unhealthyCheckTimes;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static AppDetail create() {
+            return builder().build();
+        }
+
+        /**
+         * @return appId
+         */
+        public String getAppId() {
+            return this.appId;
+        }
+
+        /**
+         * @return appName
+         */
+        public String getAppName() {
+            return this.appName;
+        }
+
+        /**
+         * @return checkInternal
+         */
+        public Integer getCheckInternal() {
+            return this.checkInternal;
+        }
+
+        /**
+         * @return checkPath
+         */
+        public String getCheckPath() {
+            return this.checkPath;
+        }
+
+        /**
+         * @return checkTimeout
+         */
+        public Integer getCheckTimeout() {
+            return this.checkTimeout;
+        }
+
+        /**
+         * @return checkType
+         */
+        public String getCheckType() {
+            return this.checkType;
+        }
+
+        /**
+         * @return healthyCheckTimes
+         */
+        public Integer getHealthyCheckTimes() {
+            return this.healthyCheckTimes;
+        }
+
+        /**
+         * @return port
+         */
+        public Integer getPort() {
+            return this.port;
+        }
+
+        /**
+         * @return unhealthyCheckTimes
+         */
+        public Integer getUnhealthyCheckTimes() {
+            return this.unhealthyCheckTimes;
+        }
+
+        public static final class Builder {
+            private String appId; 
+            private String appName; 
+            private Integer checkInternal; 
+            private String checkPath; 
+            private Integer checkTimeout; 
+            private String checkType; 
+            private Integer healthyCheckTimes; 
+            private Integer port; 
+            private Integer unhealthyCheckTimes; 
+
+            /**
+             * AppId.
+             */
+            public Builder appId(String appId) {
+                this.appId = appId;
+                return this;
+            }
+
+            /**
+             * AppName.
+             */
+            public Builder appName(String appName) {
+                this.appName = appName;
+                return this;
+            }
+
+            /**
+             * CheckInternal.
+             */
+            public Builder checkInternal(Integer checkInternal) {
+                this.checkInternal = checkInternal;
+                return this;
+            }
+
+            /**
+             * CheckPath.
+             */
+            public Builder checkPath(String checkPath) {
+                this.checkPath = checkPath;
+                return this;
+            }
+
+            /**
+             * CheckTimeout.
+             */
+            public Builder checkTimeout(Integer checkTimeout) {
+                this.checkTimeout = checkTimeout;
+                return this;
+            }
+
+            /**
+             * CheckType.
+             */
+            public Builder checkType(String checkType) {
+                this.checkType = checkType;
+                return this;
+            }
+
+            /**
+             * HealthyCheckTimes.
+             */
+            public Builder healthyCheckTimes(Integer healthyCheckTimes) {
+                this.healthyCheckTimes = healthyCheckTimes;
+                return this;
+            }
+
+            /**
+             * Port.
+             */
+            public Builder port(Integer port) {
+                this.port = port;
+                return this;
+            }
+
+            /**
+             * UnhealthyCheckTimes.
+             */
+            public Builder unhealthyCheckTimes(Integer unhealthyCheckTimes) {
+                this.unhealthyCheckTimes = unhealthyCheckTimes;
+                return this;
+            }
+
+            public AppDetail build() {
+                return new AppDetail(this);
+            } 
+
+        } 
+
+    }
     public static class Clusters extends TeaModel {
         @NameInMap("DefaultCheckPort")
         private Integer defaultCheckPort;
@@ -234,7 +431,7 @@ public class ListAnsServiceClustersResponseBody extends TeaModel {
             private Boolean useIPPort4Check; 
 
             /**
-             * The default port used for a health check.
+             * DefaultCheckPort.
              */
             public Builder defaultCheckPort(Integer defaultCheckPort) {
                 this.defaultCheckPort = defaultCheckPort;
@@ -242,7 +439,7 @@ public class ListAnsServiceClustersResponseBody extends TeaModel {
             }
 
             /**
-             * The default port.
+             * DefaultPort.
              */
             public Builder defaultPort(Integer defaultPort) {
                 this.defaultPort = defaultPort;
@@ -250,7 +447,7 @@ public class ListAnsServiceClustersResponseBody extends TeaModel {
             }
 
             /**
-             * The type of health check.
+             * HealthCheckerType.
              */
             public Builder healthCheckerType(String healthCheckerType) {
                 this.healthCheckerType = healthCheckerType;
@@ -258,7 +455,7 @@ public class ListAnsServiceClustersResponseBody extends TeaModel {
             }
 
             /**
-             * The metadata of the cluster.
+             * Metadata.
              */
             public Builder metadata(java.util.Map < String, ? > metadata) {
                 this.metadata = metadata;
@@ -266,7 +463,7 @@ public class ListAnsServiceClustersResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the cluster.
+             * Name.
              */
             public Builder name(String name) {
                 this.name = name;
@@ -274,7 +471,7 @@ public class ListAnsServiceClustersResponseBody extends TeaModel {
             }
 
             /**
-             * The full name of the service.
+             * ServiceName.
              */
             public Builder serviceName(String serviceName) {
                 this.serviceName = serviceName;
@@ -282,7 +479,7 @@ public class ListAnsServiceClustersResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether an end-to-end health check is initiated by the server. This parameter is valid only if the service is a temporary service.
+             * UseIPPort4Check.
              */
             public Builder useIPPort4Check(Boolean useIPPort4Check) {
                 this.useIPPort4Check = useIPPort4Check;
@@ -297,6 +494,9 @@ public class ListAnsServiceClustersResponseBody extends TeaModel {
 
     }
     public static class Data extends TeaModel {
+        @NameInMap("AppDetail")
+        private AppDetail appDetail;
+
         @NameInMap("Clusters")
         private java.util.List < Clusters> clusters;
 
@@ -318,7 +518,11 @@ public class ListAnsServiceClustersResponseBody extends TeaModel {
         @NameInMap("SelectorType")
         private String selectorType;
 
+        @NameInMap("Source")
+        private String source;
+
         private Data(Builder builder) {
+            this.appDetail = builder.appDetail;
             this.clusters = builder.clusters;
             this.ephemeral = builder.ephemeral;
             this.groupName = builder.groupName;
@@ -326,6 +530,7 @@ public class ListAnsServiceClustersResponseBody extends TeaModel {
             this.name = builder.name;
             this.protectThreshold = builder.protectThreshold;
             this.selectorType = builder.selectorType;
+            this.source = builder.source;
         }
 
         public static Builder builder() {
@@ -334,6 +539,13 @@ public class ListAnsServiceClustersResponseBody extends TeaModel {
 
         public static Data create() {
             return builder().build();
+        }
+
+        /**
+         * @return appDetail
+         */
+        public AppDetail getAppDetail() {
+            return this.appDetail;
         }
 
         /**
@@ -385,7 +597,15 @@ public class ListAnsServiceClustersResponseBody extends TeaModel {
             return this.selectorType;
         }
 
+        /**
+         * @return source
+         */
+        public String getSource() {
+            return this.source;
+        }
+
         public static final class Builder {
+            private AppDetail appDetail; 
             private java.util.List < Clusters> clusters; 
             private Boolean ephemeral; 
             private String groupName; 
@@ -393,9 +613,18 @@ public class ListAnsServiceClustersResponseBody extends TeaModel {
             private String name; 
             private Float protectThreshold; 
             private String selectorType; 
+            private String source; 
 
             /**
-             * The information about the clusters.
+             * AppDetail.
+             */
+            public Builder appDetail(AppDetail appDetail) {
+                this.appDetail = appDetail;
+                return this;
+            }
+
+            /**
+             * Clusters.
              */
             public Builder clusters(java.util.List < Clusters> clusters) {
                 this.clusters = clusters;
@@ -403,11 +632,7 @@ public class ListAnsServiceClustersResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether the service is a temporary service. Valid values:
-             * <p>
-             * 
-             * *   `true`: yes
-             * *   `false`: no
+             * Ephemeral.
              */
             public Builder ephemeral(Boolean ephemeral) {
                 this.ephemeral = ephemeral;
@@ -415,7 +640,7 @@ public class ListAnsServiceClustersResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the contact group.
+             * GroupName.
              */
             public Builder groupName(String groupName) {
                 this.groupName = groupName;
@@ -423,7 +648,7 @@ public class ListAnsServiceClustersResponseBody extends TeaModel {
             }
 
             /**
-             * The metadata of the service.
+             * Metadata.
              */
             public Builder metadata(java.util.Map < String, ? > metadata) {
                 this.metadata = metadata;
@@ -431,7 +656,7 @@ public class ListAnsServiceClustersResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the service.
+             * Name.
              */
             public Builder name(String name) {
                 this.name = name;
@@ -439,7 +664,7 @@ public class ListAnsServiceClustersResponseBody extends TeaModel {
             }
 
             /**
-             * The protection threshold.
+             * ProtectThreshold.
              */
             public Builder protectThreshold(Float protectThreshold) {
                 this.protectThreshold = protectThreshold;
@@ -447,10 +672,18 @@ public class ListAnsServiceClustersResponseBody extends TeaModel {
             }
 
             /**
-             * The election mode.
+             * SelectorType.
              */
             public Builder selectorType(String selectorType) {
                 this.selectorType = selectorType;
+                return this;
+            }
+
+            /**
+             * Source.
+             */
+            public Builder source(String source) {
+                this.source = source;
                 return this;
             }
 

@@ -98,7 +98,11 @@ public class AddSecurityGroupRuleResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * The status code returned.
+         * The language of the response. Valid values:
+         * <p>
+         * 
+         * *   zh: Chinese
+         * *   en: English
          */
         public Builder code(Integer code) {
             this.code = code;
@@ -106,7 +110,7 @@ public class AddSecurityGroupRuleResponseBody extends TeaModel {
         }
 
         /**
-         * The returned data.
+         * The ID of the request.
          */
         public Builder data(String data) {
             this.data = data;
@@ -114,7 +118,7 @@ public class AddSecurityGroupRuleResponseBody extends TeaModel {
         }
 
         /**
-         * The HTTP status code returned.
+         * The ID of the gateway.
          */
         public Builder httpStatusCode(Integer httpStatusCode) {
             this.httpStatusCode = httpStatusCode;
@@ -122,7 +126,7 @@ public class AddSecurityGroupRuleResponseBody extends TeaModel {
         }
 
         /**
-         * The message returned.
+         * The description.
          */
         public Builder message(String message) {
             this.message = message;
@@ -130,7 +134,7 @@ public class AddSecurityGroupRuleResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * The range of port numbers.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -138,11 +142,7 @@ public class AddSecurityGroupRuleResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether the request was successful. Valid values:
-         * <p>
-         * 
-         * *   `true`: The request was successful.
-         * *   `false`: The request failed.
+         * The schema of the response.
          */
         public Builder success(Boolean success) {
             this.success = success;

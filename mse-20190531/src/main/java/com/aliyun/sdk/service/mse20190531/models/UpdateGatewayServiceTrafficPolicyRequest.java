@@ -111,11 +111,7 @@ public class UpdateGatewayServiceTrafficPolicyRequest extends Request {
         } 
 
         /**
-         * The language of the response. Valid values:
-         * <p>
-         * 
-         * *   **zh-CN**: Chinese. This is the default value.
-         * *   **en-US**: English
+         * The ID of the gateway.
          */
         public Builder acceptLanguage(String acceptLanguage) {
             this.putQueryParameter("AcceptLanguage", acceptLanguage);
@@ -124,7 +120,7 @@ public class UpdateGatewayServiceTrafficPolicyRequest extends Request {
         }
 
         /**
-         * The ID of the gateway.
+         * cluster not found
          */
         public Builder gatewayId(Long gatewayId) {
             this.putQueryParameter("GatewayId", gatewayId);
@@ -133,7 +129,7 @@ public class UpdateGatewayServiceTrafficPolicyRequest extends Request {
         }
 
         /**
-         * The traffic policy of the service.
+         * systemError
          */
         public Builder gatewayTrafficPolicy(TrafficPolicy gatewayTrafficPolicy) {
             String gatewayTrafficPolicyShrink = shrink(gatewayTrafficPolicy, "GatewayTrafficPolicy", "json");
@@ -143,7 +139,7 @@ public class UpdateGatewayServiceTrafficPolicyRequest extends Request {
         }
 
         /**
-         * The unique ID of the gateway.
+         * system error
          */
         public Builder gatewayUniqueId(String gatewayUniqueId) {
             this.putQueryParameter("GatewayUniqueId", gatewayUniqueId);
@@ -152,7 +148,7 @@ public class UpdateGatewayServiceTrafficPolicyRequest extends Request {
         }
 
         /**
-         * The ID of the service.
+         * mse-100-001
          */
         public Builder serviceId(Long serviceId) {
             this.putQueryParameter("ServiceId", serviceId);

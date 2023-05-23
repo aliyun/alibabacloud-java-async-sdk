@@ -98,7 +98,7 @@ public class DeleteSecurityGroupRuleResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * The status code returned.
+         * Code.
          */
         public Builder code(Integer code) {
             this.code = code;
@@ -106,7 +106,7 @@ public class DeleteSecurityGroupRuleResponseBody extends TeaModel {
         }
 
         /**
-         * The returned data.
+         * Data.
          */
         public Builder data(Data data) {
             this.data = data;
@@ -114,7 +114,7 @@ public class DeleteSecurityGroupRuleResponseBody extends TeaModel {
         }
 
         /**
-         * The HTTP status code returned.
+         * HttpStatusCode.
          */
         public Builder httpStatusCode(Integer httpStatusCode) {
             this.httpStatusCode = httpStatusCode;
@@ -122,7 +122,7 @@ public class DeleteSecurityGroupRuleResponseBody extends TeaModel {
         }
 
         /**
-         * The message returned.
+         * Message.
          */
         public Builder message(String message) {
             this.message = message;
@@ -130,7 +130,7 @@ public class DeleteSecurityGroupRuleResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * Id of the request
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -138,11 +138,7 @@ public class DeleteSecurityGroupRuleResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether the request was successful. Valid values:
-         * <p>
-         * 
-         * *   `true`: The request was successful.
-         * *   `false`: The request failed.
+         * Success.
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -278,7 +274,7 @@ public class DeleteSecurityGroupRuleResponseBody extends TeaModel {
             private String securityGroupId; 
 
             /**
-             * The description.
+             * Description.
              */
             public Builder description(String description) {
                 this.description = description;
@@ -286,7 +282,7 @@ public class DeleteSecurityGroupRuleResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the gateway.
+             * GatewayId.
              */
             public Builder gatewayId(Long gatewayId) {
                 this.gatewayId = gatewayId;
@@ -294,7 +290,7 @@ public class DeleteSecurityGroupRuleResponseBody extends TeaModel {
             }
 
             /**
-             * The unique ID of the gateway.
+             * GatewayUniqueId.
              */
             public Builder gatewayUniqueId(String gatewayUniqueId) {
                 this.gatewayUniqueId = gatewayUniqueId;
@@ -302,7 +298,7 @@ public class DeleteSecurityGroupRuleResponseBody extends TeaModel {
             }
 
             /**
-             * The creation time.
+             * GmtCreate.
              */
             public Builder gmtCreate(String gmtCreate) {
                 this.gmtCreate = gmtCreate;
@@ -310,7 +306,7 @@ public class DeleteSecurityGroupRuleResponseBody extends TeaModel {
             }
 
             /**
-             * The modification time.
+             * GmtModified.
              */
             public Builder gmtModified(String gmtModified) {
                 this.gmtModified = gmtModified;
@@ -318,7 +314,7 @@ public class DeleteSecurityGroupRuleResponseBody extends TeaModel {
             }
 
             /**
-             * The ID.
+             * Id.
              */
             public Builder id(Long id) {
                 this.id = id;
@@ -326,14 +322,7 @@ public class DeleteSecurityGroupRuleResponseBody extends TeaModel {
             }
 
             /**
-             * The transport layer protocol. The value of this parameter is case-insensitive. Valid values:
-             * <p>
-             * 
-             * *   icmp
-             * *   gre
-             * *   tcp
-             * *   udp
-             * *   all: All protocols are supported.
+             * IpProtocol.
              */
             public Builder ipProtocol(String ipProtocol) {
                 this.ipProtocol = ipProtocol;
@@ -341,13 +330,7 @@ public class DeleteSecurityGroupRuleResponseBody extends TeaModel {
             }
 
             /**
-             * The range of ports for the transport layer protocol in the destination security group. Valid values:
-             * <p>
-             * 
-             * *   When the IpProtocol parameter is set to tcp or udp, the port number range is 1 to 65535. The start port number and the end port number are separated by a forward slash (/). Example: 1/200.
-             * *   If the IpProtocol parameter is set to icmp, the port number range is -1/-1, which indicates all ports.
-             * *   If the IpProtocol parameter is set to gre, the port number range is -1/-1, which indicates all ports.
-             * *   If the IpProtocol parameter is set to all, the port number range is -1/-1, which indicates all ports.
+             * PortRange.
              */
             public Builder portRange(String portRange) {
                 this.portRange = portRange;
@@ -355,7 +338,7 @@ public class DeleteSecurityGroupRuleResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the security group.
+             * SecurityGroupId.
              */
             public Builder securityGroupId(String securityGroupId) {
                 this.securityGroupId = securityGroupId;

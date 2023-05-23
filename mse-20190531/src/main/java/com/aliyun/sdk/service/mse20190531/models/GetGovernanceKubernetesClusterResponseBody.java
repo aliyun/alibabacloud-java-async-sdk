@@ -98,7 +98,7 @@ public class GetGovernanceKubernetesClusterResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * The response code returned.
+         * Code.
          */
         public Builder code(Integer code) {
             this.code = code;
@@ -106,7 +106,7 @@ public class GetGovernanceKubernetesClusterResponseBody extends TeaModel {
         }
 
         /**
-         * The details of the data.
+         * Data.
          */
         public Builder data(Data data) {
             this.data = data;
@@ -114,7 +114,7 @@ public class GetGovernanceKubernetesClusterResponseBody extends TeaModel {
         }
 
         /**
-         * The HTTP status code returned.
+         * HttpStatusCode.
          */
         public Builder httpStatusCode(Integer httpStatusCode) {
             this.httpStatusCode = httpStatusCode;
@@ -122,7 +122,7 @@ public class GetGovernanceKubernetesClusterResponseBody extends TeaModel {
         }
 
         /**
-         * The message returned.
+         * Message.
          */
         public Builder message(String message) {
             this.message = message;
@@ -130,7 +130,7 @@ public class GetGovernanceKubernetesClusterResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * RequestId.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -138,11 +138,7 @@ public class GetGovernanceKubernetesClusterResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether the request was successful. Valid values:
-         * <p>
-         * 
-         * *   `true`: The request was successful.
-         * *   `false`: The request failed.
+         * Success.
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -194,7 +190,7 @@ public class GetGovernanceKubernetesClusterResponseBody extends TeaModel {
             private String tags; 
 
             /**
-             * The name.
+             * Name.
              */
             public Builder name(String name) {
                 this.name = name;
@@ -202,7 +198,7 @@ public class GetGovernanceKubernetesClusterResponseBody extends TeaModel {
             }
 
             /**
-             * The tags.
+             * Tags.
              */
             public Builder tags(String tags) {
                 this.tags = tags;
@@ -327,7 +323,7 @@ public class GetGovernanceKubernetesClusterResponseBody extends TeaModel {
             private String updateTime; 
 
             /**
-             * The ID of the instance.
+             * ClusterId.
              */
             public Builder clusterId(String clusterId) {
                 this.clusterId = clusterId;
@@ -335,7 +331,7 @@ public class GetGovernanceKubernetesClusterResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the instance.
+             * ClusterName.
              */
             public Builder clusterName(String clusterName) {
                 this.clusterName = clusterName;
@@ -343,7 +339,7 @@ public class GetGovernanceKubernetesClusterResponseBody extends TeaModel {
             }
 
             /**
-             * The version of Kubernetes.
+             * K8sVersion.
              */
             public Builder k8sVersion(String k8sVersion) {
                 this.k8sVersion = k8sVersion;
@@ -351,7 +347,7 @@ public class GetGovernanceKubernetesClusterResponseBody extends TeaModel {
             }
 
             /**
-             * The information of the namespace.
+             * NamespaceInfos.
              */
             public Builder namespaceInfos(String namespaceInfos) {
                 this.namespaceInfos = namespaceInfos;
@@ -359,7 +355,7 @@ public class GetGovernanceKubernetesClusterResponseBody extends TeaModel {
             }
 
             /**
-             * The list of namespaces.
+             * Namespaces.
              */
             public Builder namespaces(java.util.List < Namespaces> namespaces) {
                 this.namespaces = namespaces;
@@ -367,7 +363,7 @@ public class GetGovernanceKubernetesClusterResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the ack-onepilot component was started.
+             * PilotStartTime.
              */
             public Builder pilotStartTime(String pilotStartTime) {
                 this.pilotStartTime = pilotStartTime;
@@ -375,7 +371,7 @@ public class GetGovernanceKubernetesClusterResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the region in which the instance resides. The region is supported by MSE.
+             * Region.
              */
             public Builder region(String region) {
                 this.region = region;
@@ -383,7 +379,7 @@ public class GetGovernanceKubernetesClusterResponseBody extends TeaModel {
             }
 
             /**
-             * The time of the last modification.
+             * UpdateTime.
              */
             public Builder updateTime(String updateTime) {
                 this.updateTime = updateTime;

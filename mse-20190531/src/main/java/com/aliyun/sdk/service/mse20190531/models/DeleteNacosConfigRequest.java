@@ -127,11 +127,7 @@ public class DeleteNacosConfigRequest extends Request {
         } 
 
         /**
-         * The language of the response. Valid values:
-         * <p>
-         * 
-         * *   zh: Chinese
-         * *   en: English
+         * 返回结果显示的语言。取值：zh（默认值）：中文，en：英文
          */
         public Builder acceptLanguage(String acceptLanguage) {
             this.putQueryParameter("AcceptLanguage", acceptLanguage);
@@ -140,11 +136,7 @@ public class DeleteNacosConfigRequest extends Request {
         }
 
         /**
-         * Specifies whether to perform a beta release. Valid values:
-         * <p>
-         * 
-         * *   `true`: yes
-         * *   `false`: no
+         * Beta.
          */
         public Builder beta(Boolean beta) {
             this.putQueryParameter("Beta", beta);
@@ -153,7 +145,7 @@ public class DeleteNacosConfigRequest extends Request {
         }
 
         /**
-         * The ID of the configuration.
+         * DataId.
          */
         public Builder dataId(String dataId) {
             this.putQueryParameter("DataId", dataId);
@@ -162,7 +154,7 @@ public class DeleteNacosConfigRequest extends Request {
         }
 
         /**
-         * The type of the group.
+         * Group.
          */
         public Builder group(String group) {
             this.putQueryParameter("Group", group);
@@ -171,7 +163,7 @@ public class DeleteNacosConfigRequest extends Request {
         }
 
         /**
-         * The ID of the instance
+         * InstanceId.
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -180,7 +172,7 @@ public class DeleteNacosConfigRequest extends Request {
         }
 
         /**
-         * The ID of the namespace.
+         * NamespaceId.
          */
         public Builder namespaceId(String namespaceId) {
             this.putQueryParameter("NamespaceId", namespaceId);

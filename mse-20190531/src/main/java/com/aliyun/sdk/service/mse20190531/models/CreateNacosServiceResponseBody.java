@@ -98,42 +98,10 @@ public class CreateNacosServiceResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * The response code returned.
+         * The returned message.
          */
         public Builder code(Integer code) {
             this.code = code;
-            return this;
-        }
-
-        /**
-         * The data of the node.
-         */
-        public Builder data(String data) {
-            this.data = data;
-            return this;
-        }
-
-        /**
-         * The HTTP status code returned.
-         */
-        public Builder httpStatusCode(Integer httpStatusCode) {
-            this.httpStatusCode = httpStatusCode;
-            return this;
-        }
-
-        /**
-         * The message returned.
-         */
-        public Builder message(String message) {
-            this.message = message;
-            return this;
-        }
-
-        /**
-         * The ID of the request.
-         */
-        public Builder requestId(String requestId) {
-            this.requestId = requestId;
             return this;
         }
 
@@ -143,6 +111,38 @@ public class CreateNacosServiceResponseBody extends TeaModel {
          * 
          * *   `true`: The request was successful.
          * *   `false`: The request failed.
+         */
+        public Builder data(String data) {
+            this.data = data;
+            return this;
+        }
+
+        /**
+         * The response code returned.
+         */
+        public Builder httpStatusCode(Integer httpStatusCode) {
+            this.httpStatusCode = httpStatusCode;
+            return this;
+        }
+
+        /**
+         * duplicatedClusterAliasName
+         */
+        public Builder message(String message) {
+            this.message = message;
+            return this;
+        }
+
+        /**
+         * The data of the node.
+         */
+        public Builder requestId(String requestId) {
+            this.requestId = requestId;
+            return this;
+        }
+
+        /**
+         * mse-200-105
          */
         public Builder success(Boolean success) {
             this.success = success;

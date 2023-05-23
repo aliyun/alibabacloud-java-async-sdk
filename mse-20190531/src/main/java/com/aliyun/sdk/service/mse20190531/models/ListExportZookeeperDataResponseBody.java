@@ -118,7 +118,7 @@ public class ListExportZookeeperDataResponseBody extends TeaModel {
         }
 
         /**
-         * DynamicMessage.
+         * cluster not found
          */
         public Builder dynamicMessage(String dynamicMessage) {
             this.dynamicMessage = dynamicMessage;
@@ -126,7 +126,7 @@ public class ListExportZookeeperDataResponseBody extends TeaModel {
         }
 
         /**
-         * ErrorCode.
+         * systemError
          */
         public Builder errorCode(String errorCode) {
             this.errorCode = errorCode;
@@ -134,7 +134,7 @@ public class ListExportZookeeperDataResponseBody extends TeaModel {
         }
 
         /**
-         * HttpStatusCode.
+         * system error
          */
         public Builder httpStatusCode(String httpStatusCode) {
             this.httpStatusCode = httpStatusCode;
@@ -142,7 +142,7 @@ public class ListExportZookeeperDataResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * mse-200-021
          */
         public Builder message(String message) {
             this.message = message;
@@ -150,7 +150,7 @@ public class ListExportZookeeperDataResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * mse-100-001
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -158,7 +158,7 @@ public class ListExportZookeeperDataResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * illegal request:%s
          */
         public Builder success(Boolean success) {
             this.success = success;

@@ -98,7 +98,7 @@ public class QuerySlbSpecResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * The return value.
+         * Code.
          */
         public Builder code(Integer code) {
             this.code = code;
@@ -106,7 +106,7 @@ public class QuerySlbSpecResponseBody extends TeaModel {
         }
 
         /**
-         * The data entries returned.
+         * Data.
          */
         public Builder data(java.util.List < Data> data) {
             this.data = data;
@@ -114,7 +114,7 @@ public class QuerySlbSpecResponseBody extends TeaModel {
         }
 
         /**
-         * The HTTP status code returned.
+         * HttpStatusCode.
          */
         public Builder httpStatusCode(Integer httpStatusCode) {
             this.httpStatusCode = httpStatusCode;
@@ -122,7 +122,7 @@ public class QuerySlbSpecResponseBody extends TeaModel {
         }
 
         /**
-         * The message returned. If the request is successful, a success message is returned. If the request fails, an error message is returned.
+         * Message.
          */
         public Builder message(String message) {
             this.message = message;
@@ -130,7 +130,7 @@ public class QuerySlbSpecResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * Id of the request
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -138,11 +138,7 @@ public class QuerySlbSpecResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether the request was successful. Valid values:
-         * <p>
-         * 
-         * *   `true`: The request was successful.
-         * *   `false`: The request failed.
+         * Success.
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -242,7 +238,7 @@ public class QuerySlbSpecResponseBody extends TeaModel {
             private String spec; 
 
             /**
-             * The ID of the returned data.
+             * Id.
              */
             public Builder id(Integer id) {
                 this.id = id;
@@ -250,7 +246,7 @@ public class QuerySlbSpecResponseBody extends TeaModel {
             }
 
             /**
-             * The maximum number of connections.
+             * MaxConnection.
              */
             public Builder maxConnection(String maxConnection) {
                 this.maxConnection = maxConnection;
@@ -258,7 +254,7 @@ public class QuerySlbSpecResponseBody extends TeaModel {
             }
 
             /**
-             * The name.
+             * Name.
              */
             public Builder name(String name) {
                 this.name = name;
@@ -266,7 +262,7 @@ public class QuerySlbSpecResponseBody extends TeaModel {
             }
 
             /**
-             * The maximum connections per second (CPS).
+             * NewConnectionPerSecond.
              */
             public Builder newConnectionPerSecond(String newConnectionPerSecond) {
                 this.newConnectionPerSecond = newConnectionPerSecond;
@@ -274,7 +270,7 @@ public class QuerySlbSpecResponseBody extends TeaModel {
             }
 
             /**
-             * The number of queries per second (QPS).
+             * Qps.
              */
             public Builder qps(String qps) {
                 this.qps = qps;
@@ -282,7 +278,7 @@ public class QuerySlbSpecResponseBody extends TeaModel {
             }
 
             /**
-             * The specifications.
+             * Spec.
              */
             public Builder spec(String spec) {
                 this.spec = spec;

@@ -113,11 +113,7 @@ public class AddSecurityGroupRuleRequest extends Request {
         } 
 
         /**
-         * The language of the response. Valid values:
-         * <p>
-         * 
-         * *   zh: Chinese
-         * *   en: English
+         * system error
          */
         public Builder acceptLanguage(String acceptLanguage) {
             this.putQueryParameter("AcceptLanguage", acceptLanguage);
@@ -126,7 +122,7 @@ public class AddSecurityGroupRuleRequest extends Request {
         }
 
         /**
-         * The description.
+         * systemError
          */
         public Builder description(String description) {
             this.putQueryParameter("Description", description);
@@ -135,7 +131,7 @@ public class AddSecurityGroupRuleRequest extends Request {
         }
 
         /**
-         * The ID of the gateway.
+         * mse-100-001
          */
         public Builder gatewayUniqueId(String gatewayUniqueId) {
             this.putQueryParameter("GatewayUniqueId", gatewayUniqueId);
@@ -144,7 +140,7 @@ public class AddSecurityGroupRuleRequest extends Request {
         }
 
         /**
-         * The range of port numbers.
+         * cluster not found
          */
         public Builder portRange(String portRange) {
             this.putQueryParameter("PortRange", portRange);
@@ -153,7 +149,7 @@ public class AddSecurityGroupRuleRequest extends Request {
         }
 
         /**
-         * The ID of the security group.
+         * clusterNotFound
          */
         public Builder securityGroupId(String securityGroupId) {
             this.putQueryParameter("SecurityGroupId", securityGroupId);

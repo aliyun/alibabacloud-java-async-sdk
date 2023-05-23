@@ -122,7 +122,7 @@ public class ListClusterTypesResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * The status code returned.
+         * mse-100-001
          */
         public Builder code(Integer code) {
             this.code = code;
@@ -130,7 +130,7 @@ public class ListClusterTypesResponseBody extends TeaModel {
         }
 
         /**
-         * The data entries returned.
+         * Data.
          */
         public Builder data(java.util.List < Data> data) {
             this.data = data;
@@ -138,10 +138,7 @@ public class ListClusterTypesResponseBody extends TeaModel {
         }
 
         /**
-         * The dynamic part in the error message. This parameter is used to replace the \*\*%s\*\* variable in the **ErrMessage** parameter.
-         * <p>
-         * 
-         * > If the return value of the **ErrMessage** parameter is **The Value of Input Parameter %s is not valid** and the return value of the **DynamicMessage** parameter is **DtsJobId**, the specified **DtsJobId** parameter is invalid.
+         * DynamicMessage.
          */
         public Builder dynamicMessage(String dynamicMessage) {
             this.dynamicMessage = dynamicMessage;
@@ -149,7 +146,7 @@ public class ListClusterTypesResponseBody extends TeaModel {
         }
 
         /**
-         * The error code returned if the request failed.
+         * cluster not found
          */
         public Builder errorCode(String errorCode) {
             this.errorCode = errorCode;
@@ -157,7 +154,7 @@ public class ListClusterTypesResponseBody extends TeaModel {
         }
 
         /**
-         * The HTTP status code returned.
+         * illegal request:%s
          */
         public Builder httpStatusCode(Integer httpStatusCode) {
             this.httpStatusCode = httpStatusCode;
@@ -165,7 +162,7 @@ public class ListClusterTypesResponseBody extends TeaModel {
         }
 
         /**
-         * The message returned.
+         * systemError
          */
         public Builder message(String message) {
             this.message = message;
@@ -173,7 +170,7 @@ public class ListClusterTypesResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * mse-200-021
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -181,11 +178,7 @@ public class ListClusterTypesResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether the request was successful. Valid values:
-         * <p>
-         * 
-         * *   `true`: The request was successful.
-         * *   `false`: The request failed.
+         * clusterNotFound
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -225,7 +218,7 @@ public class ListClusterTypesResponseBody extends TeaModel {
             private String showName; 
 
             /**
-             * The type of the MSE engine that can be activated.
+             * ShowName.
              */
             public Builder showName(String showName) {
                 this.showName = showName;

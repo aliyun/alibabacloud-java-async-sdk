@@ -40,6 +40,20 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     @Override
+    public CompletableFuture<AddAuthPolicyResponse> addAuthPolicy(AddAuthPolicyRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("AddAuthPolicy").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(AddAuthPolicyResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<AddAuthPolicyResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    @Override
     public CompletableFuture<AddAuthResourceResponse> addAuthResource(AddAuthResourceRequest request) {
         try {
             this.handler.validateRequestModel(request);
@@ -249,10 +263,6 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
-    /**
-      * > The operation is not provided in Nacos SDKs. For information about Nacos SDKs, see the [official documentation](https://nacos.io/zh-cn/docs/sdk.html).
-      *
-     */
     @Override
     public CompletableFuture<CloneNacosConfigResponse> cloneNacosConfig(CloneNacosConfigRequest request) {
         try {
@@ -281,9 +291,24 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    @Override
+    public CompletableFuture<CreateCircuitBreakerRuleResponse> createCircuitBreakerRule(CreateCircuitBreakerRuleRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("CreateCircuitBreakerRule").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(CreateCircuitBreakerRuleResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<CreateCircuitBreakerRuleResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
     /**
-      * Before you call this API operation, you must make sure that you fully understand the billing methods and pricing of MSE.
+      * mse-200-105
       *
+     * @tags cluster
      */
     @Override
     public CompletableFuture<CreateClusterResponse> createCluster(CreateClusterRequest request) {
@@ -313,9 +338,24 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    @Override
+    public CompletableFuture<CreateFlowRuleResponse> createFlowRule(CreateFlowRuleRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("CreateFlowRule").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(CreateFlowRuleResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<CreateFlowRuleResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
     /**
-      * @deprecated : CreateMseServiceApplication is deprecated, please use mse::2019-05-31::CreateApplication instead.
+      * @deprecated
       *
+     * @tags msc
      */
     @Override
     public CompletableFuture<CreateMseServiceApplicationResponse> createMseServiceApplication(CreateMseServiceApplicationRequest request) {
@@ -332,8 +372,9 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * > The operation is not provided in Nacos SDKs. For information about Nacos SDKs, see the [official documentation](https://nacos.io/zh-cn/docs/sdk.html).
+      * mse-200-105
       *
+     * @tags cluster
      */
     @Override
     public CompletableFuture<CreateNacosConfigResponse> createNacosConfig(CreateNacosConfigRequest request) {
@@ -349,10 +390,6 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
-    /**
-      * > The operation is not provided in Nacos SDKs. For information about Nacos SDKs, see the [official documentation](https://nacos.io/zh-cn/docs/sdk.html).
-      *
-     */
     @Override
     public CompletableFuture<CreateNacosInstanceResponse> createNacosInstance(CreateNacosInstanceRequest request) {
         try {
@@ -368,8 +405,9 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * > The operation is not provided in Nacos SDKs. For information about Nacos SDKs, see the [official documentation](https://nacos.io/zh-cn/docs/sdk.html).
+      * mse-200-105
       *
+     * @tags cluster
      */
     @Override
     public CompletableFuture<CreateNacosServiceResponse> createNacosService(CreateNacosServiceRequest request) {
@@ -389,7 +427,7 @@ public final class DefaultAsyncClient implements AsyncClient {
     public CompletableFuture<CreateOrUpdateSwimmingLaneResponse> createOrUpdateSwimmingLane(CreateOrUpdateSwimmingLaneRequest request) {
         try {
             this.handler.validateRequestModel(request);
-            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("CreateOrUpdateSwimmingLane").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("CreateOrUpdateSwimmingLane").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(true).setReqBodyType(BodyType.FORM).formModel(request);
             ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(CreateOrUpdateSwimmingLaneResponse.create());
             return this.handler.execute(params);
         } catch (Exception e) {
@@ -595,10 +633,6 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
-    /**
-      * > The operation is not provided in Nacos SDKs. For information about Nacos SDKs, see the [official documentation](https://nacos.io/zh-cn/docs/sdk.html).
-      *
-     */
     @Override
     public CompletableFuture<DeleteNacosConfigResponse> deleteNacosConfig(DeleteNacosConfigRequest request) {
         try {
@@ -614,8 +648,9 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * > The operation is not provided in Nacos SDKs. For information about Nacos SDKs, see the [official documentation](https://nacos.io/zh-cn/docs/sdk.html).
+      * mse-200-105
       *
+     * @tags cluster
      */
     @Override
     public CompletableFuture<DeleteNacosConfigsResponse> deleteNacosConfigs(DeleteNacosConfigsRequest request) {
@@ -632,8 +667,9 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * > The operation is not provided in Nacos SDKs. For information about Nacos SDKs, see the [official documentation](https://nacos.io/zh-cn/docs/sdk.html).
+      * The port of the Nacos instance.
       *
+     * @tags cluster
      */
     @Override
     public CompletableFuture<DeleteNacosInstanceResponse> deleteNacosInstance(DeleteNacosInstanceRequest request) {
@@ -650,8 +686,11 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * > The operation is not provided in Nacos SDKs. For information about Nacos SDKs, see the [official documentation](https://nacos.io/zh-cn/docs/sdk.html).
+      * The language of the response. Valid values:
+      * *   zh: Chinese
+      * *   en: English
       *
+     * @tags cluster
      */
     @Override
     public CompletableFuture<DeleteNacosServiceResponse> deleteNacosService(DeleteNacosServiceRequest request) {
@@ -752,8 +791,9 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * > The operation is not provided in Nacos SDKs. For information about Nacos SDKs, see the [official documentation](https://nacos.io/zh-cn/docs/sdk.html).
+      * The tag of the application.
       *
+     * @tags cluster
      */
     @Override
     public CompletableFuture<ExportNacosConfigResponse> exportNacosConfig(ExportNacosConfigRequest request) {
@@ -770,7 +810,7 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * Only one task can run at a time.
+      * Initiates a task to export ZooKeeper data.
       *
      */
     @Override
@@ -788,7 +828,7 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * You can call this operation to query the rules for graceful start and shutdown.
+      * The returned data.
       *
      * @tags msc
      */
@@ -989,8 +1029,9 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * > The operation is not provided in Nacos SDKs. For information about Nacos SDKs, see the [official documentation](https://nacos.io/zh-cn/docs/sdk.html).
+      * The HTTP status code returned.
       *
+     * @tags cluster
      */
     @Override
     public CompletableFuture<GetImportFileUrlResponse> getImportFileUrl(GetImportFileUrlRequest request) {
@@ -1015,6 +1056,20 @@ public final class DefaultAsyncClient implements AsyncClient {
             return this.handler.execute(params);
         } catch (Exception e) {
             CompletableFuture<GetKubernetesSourceResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    @Override
+    public CompletableFuture<GetLosslessRuleByAppResponse> getLosslessRuleByApp(GetLosslessRuleByAppRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("GetLosslessRuleByApp").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(GetLosslessRuleByAppResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<GetLosslessRuleByAppResponse> future = new CompletableFuture<>();
             future.completeExceptionally(e);
             return future;
         }
@@ -1049,8 +1104,9 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * > The operation is not provided in Nacos SDKs. For information about Nacos SDKs, see the [official documentation](https://nacos.io/zh-cn/docs/sdk.html).
+      * mse-200-105
       *
+     * @tags cluster
      */
     @Override
     public CompletableFuture<GetNacosConfigResponse> getNacosConfig(GetNacosConfigRequest request) {
@@ -1066,10 +1122,6 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
-    /**
-      * > The operation is not provided in Nacos SDKs. For information about Nacos SDKs, see the [official documentation](https://nacos.io/zh-cn/docs/sdk.html).
-      *
-     */
     @Override
     public CompletableFuture<GetNacosHistoryConfigResponse> getNacosHistoryConfig(GetNacosHistoryConfigRequest request) {
         try {
@@ -1085,7 +1137,7 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * You can call the GetOverview operation to query overview information about service governance.
+      * mse-100-001
       *
      * @tags msc
      */
@@ -1188,8 +1240,9 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * > The operation is not provided in Nacos SDKs. For information about Nacos SDKs, see the [official documentation](https://nacos.io/zh-cn/docs/sdk.html).
+      * The details of the data.
       *
+     * @tags cluster
      */
     @Override
     public CompletableFuture<ImportNacosConfigResponse> importNacosConfig(ImportNacosConfigRequest request) {
@@ -1220,7 +1273,6 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * **
       * **Danger** This operation clears existing data. Exercise caution when you call this API operation.
       *
      */
@@ -1239,7 +1291,7 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * > The operation is not provided in Nacos SDKs. For information about Nacos SDKs, see the [official documentation](https://nacos.io/zh-cn/docs/sdk.html).
+      * The heartbeat interval of the instance. Unit: seconds.
       *
      */
     @Override
@@ -1257,36 +1309,19 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * > The operation is not provided in Nacos SDKs. For information about Nacos SDKs, see the [official documentation](https://nacos.io/zh-cn/docs/sdk.html).
+      * Heartbeat Reporting
       *
+     * @tags cluster
      */
     @Override
     public CompletableFuture<ListAnsServiceClustersResponse> listAnsServiceClusters(ListAnsServiceClustersRequest request) {
         try {
             this.handler.validateRequestModel(request);
-            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("ListAnsServiceClusters").setMethod(HttpMethod.GET).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("ListAnsServiceClusters").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
             ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(ListAnsServiceClustersResponse.create());
             return this.handler.execute(params);
         } catch (Exception e) {
             CompletableFuture<ListAnsServiceClustersResponse> future = new CompletableFuture<>();
-            future.completeExceptionally(e);
-            return future;
-        }
-    }
-
-    /**
-      * > The operation is not provided in Nacos SDKs. For information about Nacos SDKs, see the [official documentation](https://nacos.io/zh-cn/docs/sdk.html).
-      *
-     */
-    @Override
-    public CompletableFuture<ListAnsServicesResponse> listAnsServices(ListAnsServicesRequest request) {
-        try {
-            this.handler.validateRequestModel(request);
-            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("ListAnsServices").setMethod(HttpMethod.GET).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
-            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(ListAnsServicesResponse.create());
-            return this.handler.execute(params);
-        } catch (Exception e) {
-            CompletableFuture<ListAnsServicesResponse> future = new CompletableFuture<>();
             future.completeExceptionally(e);
             return future;
         }
@@ -1315,6 +1350,34 @@ public final class DefaultAsyncClient implements AsyncClient {
             return this.handler.execute(params);
         } catch (Exception e) {
             CompletableFuture<ListApplicationsWithTagRulesResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    @Override
+    public CompletableFuture<ListAuthPolicyResponse> listAuthPolicy(ListAuthPolicyRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("ListAuthPolicy").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(ListAuthPolicyResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<ListAuthPolicyResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    @Override
+    public CompletableFuture<ListCircuitBreakerRulesResponse> listCircuitBreakerRules(ListCircuitBreakerRulesRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("ListCircuitBreakerRules").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(ListCircuitBreakerRulesResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<ListCircuitBreakerRulesResponse> future = new CompletableFuture<>();
             future.completeExceptionally(e);
             return future;
         }
@@ -1380,7 +1443,7 @@ public final class DefaultAsyncClient implements AsyncClient {
     public CompletableFuture<ListClustersResponse> listClusters(ListClustersRequest request) {
         try {
             this.handler.validateRequestModel(request);
-            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("ListClusters").setMethod(HttpMethod.GET).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("ListClusters").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
             ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(ListClustersResponse.create());
             return this.handler.execute(params);
         } catch (Exception e) {
@@ -1394,7 +1457,7 @@ public final class DefaultAsyncClient implements AsyncClient {
     public CompletableFuture<ListConfigTrackResponse> listConfigTrack(ListConfigTrackRequest request) {
         try {
             this.handler.validateRequestModel(request);
-            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("ListConfigTrack").setMethod(HttpMethod.GET).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("ListConfigTrack").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
             ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(ListConfigTrackResponse.create());
             return this.handler.execute(params);
         } catch (Exception e) {
@@ -1408,7 +1471,7 @@ public final class DefaultAsyncClient implements AsyncClient {
     public CompletableFuture<ListEngineNamespacesResponse> listEngineNamespaces(ListEngineNamespacesRequest request) {
         try {
             this.handler.validateRequestModel(request);
-            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("ListEngineNamespaces").setMethod(HttpMethod.GET).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("ListEngineNamespaces").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
             ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(ListEngineNamespacesResponse.create());
             return this.handler.execute(params);
         } catch (Exception e) {
@@ -1455,6 +1518,20 @@ public final class DefaultAsyncClient implements AsyncClient {
             return this.handler.execute(params);
         } catch (Exception e) {
             CompletableFuture<ListExportZookeeperDataResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    @Override
+    public CompletableFuture<ListFlowRulesResponse> listFlowRules(ListFlowRulesRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("ListFlowRules").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(ListFlowRulesResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<ListFlowRulesResponse> future = new CompletableFuture<>();
             future.completeExceptionally(e);
             return future;
         }
@@ -1587,7 +1664,7 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * > The operation is not provided in Nacos SDKs. For information about Nacos SDKs, see the [official documentation](https://nacos.io/zh-cn/docs/sdk.html).
+      * The HTTP status code returned.
       *
      */
     @Override
@@ -1605,7 +1682,7 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * > The operation is not provided in Nacos SDKs. For information about Nacos SDKs, see the [official documentation](https://nacos.io/zh-cn/docs/sdk.html).
+      * The group.
       *
      */
     @Override
@@ -1637,8 +1714,9 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * > The operation is not provided in Nacos SDKs. For information about Nacos SDKs, see the [official documentation](https://nacos.io/zh-cn/docs/sdk.html).
+      * The number of the page to return.
       *
+     * @tags cluster
      */
     @Override
     public CompletableFuture<ListNacosConfigsResponse> listNacosConfigs(ListNacosConfigsRequest request) {
@@ -1655,8 +1733,9 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * > The operation is not provided in Nacos SDKs. For information about Nacos SDKs, see the [official documentation](https://nacos.io/zh-cn/docs/sdk.html).
+      * The message returned.
       *
+     * @tags cluster
      */
     @Override
     public CompletableFuture<ListNacosHistoryConfigsResponse> listNacosHistoryConfigs(ListNacosHistoryConfigsRequest request) {
@@ -1774,7 +1853,7 @@ public final class DefaultAsyncClient implements AsyncClient {
     public CompletableFuture<ListZnodeChildrenResponse> listZnodeChildren(ListZnodeChildrenRequest request) {
         try {
             this.handler.validateRequestModel(request);
-            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("ListZnodeChildren").setMethod(HttpMethod.GET).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("ListZnodeChildren").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
             ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(ListZnodeChildrenResponse.create());
             return this.handler.execute(params);
         } catch (Exception e) {
@@ -1970,7 +2049,7 @@ public final class DefaultAsyncClient implements AsyncClient {
     public CompletableFuture<QueryConfigResponse> queryConfig(QueryConfigRequest request) {
         try {
             this.handler.validateRequestModel(request);
-            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("QueryConfig").setMethod(HttpMethod.GET).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("QueryConfig").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
             ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(QueryConfigResponse.create());
             return this.handler.execute(params);
         } catch (Exception e) {
@@ -2040,7 +2119,7 @@ public final class DefaultAsyncClient implements AsyncClient {
     public CompletableFuture<QueryMonitorResponse> queryMonitor(QueryMonitorRequest request) {
         try {
             this.handler.validateRequestModel(request);
-            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("QueryMonitor").setMethod(HttpMethod.GET).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("QueryMonitor").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
             ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(QueryMonitorResponse.create());
             return this.handler.execute(params);
         } catch (Exception e) {
@@ -2101,6 +2180,34 @@ public final class DefaultAsyncClient implements AsyncClient {
             return this.handler.execute(params);
         } catch (Exception e) {
             CompletableFuture<QueryZnodeDetailResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    @Override
+    public CompletableFuture<RemoveApplicationResponse> removeApplication(RemoveApplicationRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("RemoveApplication").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(RemoveApplicationResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<RemoveApplicationResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    @Override
+    public CompletableFuture<RemoveAuthPolicyResponse> removeAuthPolicy(RemoveAuthPolicyRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("RemoveAuthPolicy").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(RemoveAuthPolicyResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<RemoveAuthPolicyResponse> future = new CompletableFuture<>();
             future.completeExceptionally(e);
             return future;
         }
@@ -2191,6 +2298,20 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     @Override
+    public CompletableFuture<UpdateAuthPolicyResponse> updateAuthPolicy(UpdateAuthPolicyRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("UpdateAuthPolicy").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(UpdateAuthPolicyResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<UpdateAuthPolicyResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    @Override
     public CompletableFuture<UpdateBlackWhiteListResponse> updateBlackWhiteList(UpdateBlackWhiteListRequest request) {
         try {
             this.handler.validateRequestModel(request);
@@ -2199,6 +2320,20 @@ public final class DefaultAsyncClient implements AsyncClient {
             return this.handler.execute(params);
         } catch (Exception e) {
             CompletableFuture<UpdateBlackWhiteListResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    @Override
+    public CompletableFuture<UpdateCircuitBreakerRuleResponse> updateCircuitBreakerRule(UpdateCircuitBreakerRuleRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("UpdateCircuitBreakerRule").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(UpdateCircuitBreakerRuleResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<UpdateCircuitBreakerRuleResponse> future = new CompletableFuture<>();
             future.completeExceptionally(e);
             return future;
         }
@@ -2219,7 +2354,7 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * You can call this operation to update the number or specifications of nodes in a pay-as-you-go MSE instance. You are charged when you add nodes or upgrade node specifications. For more information, see \\[Pricing] (`~~1806469~~`).
+      * MSE_SC_2_4_200_c
       *
      */
     @Override
@@ -2259,6 +2394,20 @@ public final class DefaultAsyncClient implements AsyncClient {
             return this.handler.execute(params);
         } catch (Exception e) {
             CompletableFuture<UpdateEngineNamespaceResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    @Override
+    public CompletableFuture<UpdateFlowRuleResponse> updateFlowRule(UpdateFlowRuleRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("UpdateFlowRule").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(UpdateFlowRuleResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<UpdateFlowRuleResponse> future = new CompletableFuture<>();
             future.completeExceptionally(e);
             return future;
         }
@@ -2503,7 +2652,7 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * You can call this operation to update the number or specifications of nodes in a pay-as-you-go cloud-native gateway. You are charged when you add nodes or upgrade node specifications. For more information, see [Pricing](~~250950~~).
+      * system error
       *
      * @tags gateway
      */
@@ -2578,7 +2727,7 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * > The operation is not provided in Nacos SDKs. For information about Nacos SDKs, see the [official documentation](https://nacos.io/zh-cn/docs/sdk.html).
+      * attribute1=1221111\\r\\nattribute2=Chinese\\r\\nattribute3=abc11\\r\\nattribute4=1.00111
       *
      */
     @Override
@@ -2595,10 +2744,6 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
-    /**
-      * > The operation is not provided in Nacos SDKs. For information about Nacos SDKs, see the [official documentation](https://nacos.io/zh-cn/docs/sdk.html).
-      *
-     */
     @Override
     public CompletableFuture<UpdateNacosInstanceResponse> updateNacosInstance(UpdateNacosInstanceRequest request) {
         try {
@@ -2614,7 +2759,7 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * > The operation is not provided in Nacos SDKs. For information about Nacos SDKs, see the [official documentation](https://nacos.io/zh-cn/docs/sdk.html).
+      * 5e3ee449-b5c0-4aee-b857-32c0acbebf26
       *
      */
     @Override

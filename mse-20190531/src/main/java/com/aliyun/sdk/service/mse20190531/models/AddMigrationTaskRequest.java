@@ -180,11 +180,7 @@ public class AddMigrationTaskRequest extends Request {
         } 
 
         /**
-         * The language of the response. Valid values:
-         * <p>
-         * 
-         * *   zh: Chinese
-         * *   en: English
+         * 返回结果显示的语言。取值：zh（默认值）：中文，en：英文
          */
         public Builder acceptLanguage(String acceptLanguage) {
             this.putQueryParameter("AcceptLanguage", acceptLanguage);
@@ -193,12 +189,7 @@ public class AddMigrationTaskRequest extends Request {
         }
 
         /**
-         * The type of the instance.
-         * <p>
-         * 
-         * *   Nacos-Ans
-         * *   ZooKeeper
-         * *   Eureka
+         * clusterNotFound
          */
         public Builder clusterType(String clusterType) {
             this.putQueryParameter("ClusterType", clusterType);
@@ -207,7 +198,7 @@ public class AddMigrationTaskRequest extends Request {
         }
 
         /**
-         * The source instance node address.
+         * cluster not found
          */
         public Builder originInstanceAddress(String originInstanceAddress) {
             this.putQueryParameter("OriginInstanceAddress", originInstanceAddress);
@@ -216,7 +207,7 @@ public class AddMigrationTaskRequest extends Request {
         }
 
         /**
-         * The name of the source instance.
+         * mse-100-001
          */
         public Builder originInstanceName(String originInstanceName) {
             this.putQueryParameter("OriginInstanceName", originInstanceName);
@@ -225,7 +216,7 @@ public class AddMigrationTaskRequest extends Request {
         }
 
         /**
-         * The list of namespaces. This parameter is optional if the source instance is a Nacos instance.
+         * system error
          */
         public Builder originInstanceNamespace(String originInstanceNamespace) {
             this.putQueryParameter("OriginInstanceNamespace", originInstanceNamespace);
@@ -234,7 +225,7 @@ public class AddMigrationTaskRequest extends Request {
         }
 
         /**
-         * The description.
+         * ProjectDesc.
          */
         public Builder projectDesc(String projectDesc) {
             this.putQueryParameter("ProjectDesc", projectDesc);
@@ -243,7 +234,7 @@ public class AddMigrationTaskRequest extends Request {
         }
 
         /**
-         * The extended request parameters in the JSON format.
+         * mse-200-021
          */
         public Builder requestPars(String requestPars) {
             this.putQueryParameter("RequestPars", requestPars);
@@ -252,7 +243,7 @@ public class AddMigrationTaskRequest extends Request {
         }
 
         /**
-         * The name of the destination instance.
+         * TargetClusterName.
          */
         public Builder targetClusterName(String targetClusterName) {
             this.putQueryParameter("TargetClusterName", targetClusterName);
@@ -261,7 +252,7 @@ public class AddMigrationTaskRequest extends Request {
         }
 
         /**
-         * The URL of the destination instance.
+         * TargetClusterUrl.
          */
         public Builder targetClusterUrl(String targetClusterUrl) {
             this.putQueryParameter("TargetClusterUrl", targetClusterUrl);
@@ -270,7 +261,7 @@ public class AddMigrationTaskRequest extends Request {
         }
 
         /**
-         * The ID of the destination instance.
+         * TargetInstanceId.
          */
         public Builder targetInstanceId(String targetInstanceId) {
             this.putQueryParameter("TargetInstanceId", targetInstanceId);

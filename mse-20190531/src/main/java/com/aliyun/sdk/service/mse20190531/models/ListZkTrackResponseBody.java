@@ -134,7 +134,7 @@ public class ListZkTrackResponseBody extends TeaModel {
         private java.util.List < Traces> traces; 
 
         /**
-         * The error code returned.
+         * ErrorCode.
          */
         public Builder errorCode(String errorCode) {
             this.errorCode = errorCode;
@@ -142,7 +142,7 @@ public class ListZkTrackResponseBody extends TeaModel {
         }
 
         /**
-         * The HTTP status code returned.
+         * system error
          */
         public Builder httpCode(String httpCode) {
             this.httpCode = httpCode;
@@ -150,7 +150,7 @@ public class ListZkTrackResponseBody extends TeaModel {
         }
 
         /**
-         * The message returned.
+         * Message.
          */
         public Builder message(String message) {
             this.message = message;
@@ -158,7 +158,7 @@ public class ListZkTrackResponseBody extends TeaModel {
         }
 
         /**
-         * The page number of the returned page.
+         * PageNumber.
          */
         public Builder pageNumber(Long pageNumber) {
             this.pageNumber = pageNumber;
@@ -166,7 +166,7 @@ public class ListZkTrackResponseBody extends TeaModel {
         }
 
         /**
-         * The number of entries returned per page.
+         * PageSize.
          */
         public Builder pageSize(Long pageSize) {
             this.pageSize = pageSize;
@@ -174,7 +174,7 @@ public class ListZkTrackResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * RequestId.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -182,11 +182,7 @@ public class ListZkTrackResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether the request was successful. Valid values:
-         * <p>
-         * 
-         * *   true: The request was successful.
-         * *   false: The request failed.
+         * Success.
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -194,7 +190,7 @@ public class ListZkTrackResponseBody extends TeaModel {
         }
 
         /**
-         * The total number of entries returned.
+         * TotalCount.
          */
         public Builder totalCount(Long totalCount) {
             this.totalCount = totalCount;
@@ -202,7 +198,7 @@ public class ListZkTrackResponseBody extends TeaModel {
         }
 
         /**
-         * The track data.
+         * Traces.
          */
         public Builder traces(java.util.List < Traces> traces) {
             this.traces = traces;
@@ -398,7 +394,7 @@ public class ListZkTrackResponseBody extends TeaModel {
             private Boolean watch; 
 
             /**
-             * The access control list (ACL).
+             * Acl.
              */
             public Builder acl(String acl) {
                 this.acl = acl;
@@ -406,11 +402,7 @@ public class ListZkTrackResponseBody extends TeaModel {
             }
 
             /**
-             * The data type. Valid values:
-             * <p>
-             * 
-             * *   persist
-             * *   ephemeral
+             * 数据类型：persist、ephemeral
              */
             public Builder dataType(String dataType) {
                 this.dataType = dataType;
@@ -418,13 +410,13 @@ public class ListZkTrackResponseBody extends TeaModel {
             }
 
             /**
-             * The type of the event. For tracks of the Notify type:
+             * 事件类型
              * <p>
-             * 
-             * *   NodeCreated
-             * *   NodeDeleted
-             * *   NodeDataChanged
-             * *   NodeChildrenChanged
+             * 对于notify：
+             *   ○ NodeCreated
+             *   ○ NodeDeleted
+             *   ○ NodeDataChanged
+             *   ○ NodeChildrenChanged
              */
             public Builder eventType(String eventType) {
                 this.eventType = eventType;
@@ -432,7 +424,7 @@ public class ListZkTrackResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether the transaction ended.
+             * Finished.
              */
             public Builder finished(Boolean finished) {
                 this.finished = finished;
@@ -440,7 +432,7 @@ public class ListZkTrackResponseBody extends TeaModel {
             }
 
             /**
-             * The logging time.
+             * LogDate.
              */
             public Builder logDate(String logDate) {
                 this.logDate = logDate;
@@ -448,7 +440,7 @@ public class ListZkTrackResponseBody extends TeaModel {
             }
 
             /**
-             * The transaction size.
+             * MultiSize.
              */
             public Builder multiSize(Long multiSize) {
                 this.multiSize = multiSize;
@@ -456,20 +448,18 @@ public class ListZkTrackResponseBody extends TeaModel {
             }
 
             /**
-             * The operation type. For tracks of the Push type:
+             * 操作类型
              * <p>
-             * 
-             * *   Create
-             * *   Update
-             * *   Delete
-             * *   SetAcl
-             * *   Multi
-             * 
-             * For tracks of the Pull type:
-             * 
-             * *   GetData
-             * *   GetChild
-             * *   GetStat
+             * 对于Push
+             *   ○ Create
+             *   ○ Update
+             *   ○ Delete
+             *   ○ SetAcl
+             *   ○ Multi
+             * 对于Pull
+             *   ○ GetData
+             *   ○ GetChild
+             *   ○ GetStat
              */
             public Builder opType(String opType) {
                 this.opType = opType;
@@ -477,7 +467,7 @@ public class ListZkTrackResponseBody extends TeaModel {
             }
 
             /**
-             * The path.
+             * Path.
              */
             public Builder path(String path) {
                 this.path = path;
@@ -485,7 +475,7 @@ public class ListZkTrackResponseBody extends TeaModel {
             }
 
             /**
-             * The result.
+             * Result.
              */
             public Builder result(String result) {
                 this.result = result;
@@ -493,7 +483,7 @@ public class ListZkTrackResponseBody extends TeaModel {
             }
 
             /**
-             * The session ID.
+             * SessionId.
              */
             public Builder sessionId(String sessionId) {
                 this.sessionId = sessionId;
@@ -501,7 +491,7 @@ public class ListZkTrackResponseBody extends TeaModel {
             }
 
             /**
-             * The timestamp (not available).
+             * Timestamp.
              */
             public Builder timestamp(String timestamp) {
                 this.timestamp = timestamp;
@@ -509,12 +499,7 @@ public class ListZkTrackResponseBody extends TeaModel {
             }
 
             /**
-             * The type of the track. Valid values:
-             * <p>
-             * 
-             * *   Push
-             * *   Pull
-             * *   Notify
+             * 轨迹类型：push、pull、notify
              */
             public Builder traceType(String traceType) {
                 this.traceType = traceType;
@@ -522,7 +507,7 @@ public class ListZkTrackResponseBody extends TeaModel {
             }
 
             /**
-             * The time to live (TTL).
+             * Ttl.
              */
             public Builder ttl(Long ttl) {
                 this.ttl = ttl;
@@ -530,7 +515,7 @@ public class ListZkTrackResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether to enable the monitoring feature.
+             * 监听
              */
             public Builder watch(Boolean watch) {
                 this.watch = watch;

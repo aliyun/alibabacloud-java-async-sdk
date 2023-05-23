@@ -134,7 +134,7 @@ public class GetPluginConfigResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * Code.
+         * The description of the README file.
          */
         public Builder code(Integer code) {
             this.code = code;
@@ -142,7 +142,7 @@ public class GetPluginConfigResponseBody extends TeaModel {
         }
 
         /**
-         * The returned data.
+         * The mode.
          */
         public Builder data(Data data) {
             this.data = data;
@@ -150,7 +150,7 @@ public class GetPluginConfigResponseBody extends TeaModel {
         }
 
         /**
-         * The dynamic error code.
+         * The information about the plug-in configuration used for checking.
          */
         public Builder dynamicCode(String dynamicCode) {
             this.dynamicCode = dynamicCode;
@@ -158,7 +158,7 @@ public class GetPluginConfigResponseBody extends TeaModel {
         }
 
         /**
-         * The dynamic error message.
+         * \# The configuration includes the fields required for checking, such as name, age, and friends. Sample configuration: name: John age: 18 friends: - David - Anne
          */
         public Builder dynamicMessage(String dynamicMessage) {
             this.dynamicMessage = dynamicMessage;
@@ -166,7 +166,7 @@ public class GetPluginConfigResponseBody extends TeaModel {
         }
 
         /**
-         * The error code returned if the request failed.
+         * The description of the README file that is edited in English.
          */
         public Builder errorCode(String errorCode) {
             this.errorCode = errorCode;
@@ -174,7 +174,16 @@ public class GetPluginConfigResponseBody extends TeaModel {
         }
 
         /**
-         * The HTTP status code returned.
+         * The execution stage of the plug-in.
+         * <p>
+         * 
+         * 0: default stage
+         * 
+         * 1: authorization stage
+         * 
+         * 2: authentication stage
+         * 
+         * 3: statistics stage
          */
         public Builder httpStatusCode(Integer httpStatusCode) {
             this.httpStatusCode = httpStatusCode;
@@ -182,7 +191,7 @@ public class GetPluginConfigResponseBody extends TeaModel {
         }
 
         /**
-         * The message returned.
+         * The execution priority of the plug-in. A larger value indicates a higher priority.
          */
         public Builder message(String message) {
             this.message = message;
@@ -190,7 +199,7 @@ public class GetPluginConfigResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * The summary of the plug-in.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -198,7 +207,7 @@ public class GetPluginConfigResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether the request was successful.
+         * This is a plug-in.
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -334,7 +343,7 @@ public class GetPluginConfigResponseBody extends TeaModel {
             private Long pluginId; 
 
             /**
-             * The plug-in configuration.
+             * The ID of the gateway.
              */
             public Builder config(String config) {
                 this.config = config;
@@ -342,14 +351,7 @@ public class GetPluginConfigResponseBody extends TeaModel {
             }
 
             /**
-             * The application scope of the plug-in.
-             * <p>
-             * 
-             * 0: global
-             * 
-             * 1: domain names
-             * 
-             * 2: routes
+             * The dynamic error message.
              */
             public Builder configLevel(Integer configLevel) {
                 this.configLevel = configLevel;
@@ -357,7 +359,7 @@ public class GetPluginConfigResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether the plug-in is enabled.
+             * This is a plug-in.
              */
             public Builder enable(Boolean enable) {
                 this.enable = enable;
@@ -365,7 +367,7 @@ public class GetPluginConfigResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the gateway.
+             * The description of the README file.
              */
             public Builder gatewayId(Long gatewayId) {
                 this.gatewayId = gatewayId;
@@ -373,7 +375,7 @@ public class GetPluginConfigResponseBody extends TeaModel {
             }
 
             /**
-             * The unique ID of the gateway.
+             * \# The configuration includes the fields required for checking, such as name, age, and friends. Sample configuration: name: John age: 18 friends: - David - Anne
              */
             public Builder gatewayUniqueId(String gatewayUniqueId) {
                 this.gatewayUniqueId = gatewayUniqueId;
@@ -381,7 +383,7 @@ public class GetPluginConfigResponseBody extends TeaModel {
             }
 
             /**
-             * The creation time.
+             * The mode.
              */
             public Builder gmtCreate(String gmtCreate) {
                 this.gmtCreate = gmtCreate;
@@ -389,7 +391,7 @@ public class GetPluginConfigResponseBody extends TeaModel {
             }
 
             /**
-             * The update time.
+             * The dynamic error code.
              */
             public Builder gmtModified(String gmtModified) {
                 this.gmtModified = gmtModified;
@@ -397,7 +399,7 @@ public class GetPluginConfigResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the plug-in configuration.
+             * The error code returned if the request failed.
              */
             public Builder id(Long id) {
                 this.id = id;
@@ -405,7 +407,7 @@ public class GetPluginConfigResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the gateway plug-in.
+             * The message returned.
              */
             public Builder pluginId(Long pluginId) {
                 this.pluginId = pluginId;
@@ -662,132 +664,6 @@ public class GetPluginConfigResponseBody extends TeaModel {
             private Integer wasmLang; 
 
             /**
-             * The category of the plug-in.
-             * <p>
-             * 
-             * 0: custom
-             * 
-             * 1: permission authorization
-             * 
-             * 2: security protection
-             * 
-             * 3: transmission protocol
-             * 
-             * 4: traffic control
-             * 
-             * 5: traffic observation
-             */
-            public Builder category(Integer category) {
-                this.category = category;
-                return this;
-            }
-
-            /**
-             * The information about the plug-in configuration used for checking.
-             */
-            public Builder configCheck(String configCheck) {
-                this.configCheck = configCheck;
-                return this;
-            }
-
-            /**
-             * The list of gateway plug-in configurations.
-             */
-            public Builder gatewayConfigList(java.util.List < GatewayConfigList> gatewayConfigList) {
-                this.gatewayConfigList = gatewayConfigList;
-                return this;
-            }
-
-            /**
-             * The ID of the plug-in.
-             */
-            public Builder id(Long id) {
-                this.id = id;
-                return this;
-            }
-
-            /**
-             * The name of the image.
-             */
-            public Builder imageName(String imageName) {
-                this.imageName = imageName;
-                return this;
-            }
-
-            /**
-             * The mode.
-             */
-            public Builder mode(Integer mode) {
-                this.mode = mode;
-                return this;
-            }
-
-            /**
-             * The name of the plug-in.
-             */
-            public Builder name(String name) {
-                this.name = name;
-                return this;
-            }
-
-            /**
-             * The execution stage of the plug-in.
-             * <p>
-             * 
-             * 0: default stage
-             * 
-             * 1: authorization stage
-             * 
-             * 2: authentication stage
-             * 
-             * 3: statistics stage
-             */
-            public Builder phase(Integer phase) {
-                this.phase = phase;
-                return this;
-            }
-
-            /**
-             * The ID of the creator.
-             */
-            public Builder primaryUser(String primaryUser) {
-                this.primaryUser = primaryUser;
-                return this;
-            }
-
-            /**
-             * The execution priority of the plug-in. A larger value indicates a higher priority.
-             */
-            public Builder priority(Integer priority) {
-                this.priority = priority;
-                return this;
-            }
-
-            /**
-             * The publish status.
-             */
-            public Builder publishState(Integer publishState) {
-                this.publishState = publishState;
-                return this;
-            }
-
-            /**
-             * The description of the README file.
-             */
-            public Builder readme(String readme) {
-                this.readme = readme;
-                return this;
-            }
-
-            /**
-             * The description of the README file that is edited in English.
-             */
-            public Builder readmeEn(String readmeEn) {
-                this.readmeEn = readmeEn;
-                return this;
-            }
-
-            /**
              * Indicates whether the plug-in is enabled.
              * <p>
              * 
@@ -795,40 +671,24 @@ public class GetPluginConfigResponseBody extends TeaModel {
              * 
              * 1: enabled
              */
-            public Builder status(String status) {
-                this.status = status;
+            public Builder category(Integer category) {
+                this.category = category;
                 return this;
             }
 
             /**
-             * The summary of the plug-in.
+             * \# The configuration includes the fields required for checking, such as name, age, and friends. Sample configuration: name: John age: 18 friends: - David - Anne
              */
-            public Builder summary(String summary) {
-                this.summary = summary;
-                return this;
-            }
-
-            /**
-             * The type.
-             */
-            public Builder type(Integer type) {
-                this.type = type;
+            public Builder configCheck(String configCheck) {
+                this.configCheck = configCheck;
                 return this;
             }
 
             /**
              * The version of the plug-in.
              */
-            public Builder version(String version) {
-                this.version = version;
-                return this;
-            }
-
-            /**
-             * VersionJson.
-             */
-            public Builder versionJson(String versionJson) {
-                this.versionJson = versionJson;
+            public Builder gatewayConfigList(java.util.List < GatewayConfigList> gatewayConfigList) {
+                this.gatewayConfigList = gatewayConfigList;
                 return this;
             }
 
@@ -845,6 +705,126 @@ public class GetPluginConfigResponseBody extends TeaModel {
              * 3: AssemblyScript
              * 
              * 4: Zig
+             */
+            public Builder id(Long id) {
+                this.id = id;
+                return this;
+            }
+
+            /**
+             * The unique ID of the gateway.
+             */
+            public Builder imageName(String imageName) {
+                this.imageName = imageName;
+                return this;
+            }
+
+            /**
+             * The creation time.
+             */
+            public Builder mode(Integer mode) {
+                this.mode = mode;
+                return this;
+            }
+
+            /**
+             * The list of gateway plug-in configurations.
+             */
+            public Builder name(String name) {
+                this.name = name;
+                return this;
+            }
+
+            /**
+             * Indicates whether the plug-in is enabled.
+             */
+            public Builder phase(Integer phase) {
+                this.phase = phase;
+                return this;
+            }
+
+            /**
+             * The name of the image.
+             */
+            public Builder primaryUser(String primaryUser) {
+                this.primaryUser = primaryUser;
+                return this;
+            }
+
+            /**
+             * The plug-in configuration.
+             */
+            public Builder priority(Integer priority) {
+                this.priority = priority;
+                return this;
+            }
+
+            /**
+             * Indicates whether the request was successful.
+             */
+            public Builder publishState(Integer publishState) {
+                this.publishState = publishState;
+                return this;
+            }
+
+            /**
+             * The unique ID of the gateway.
+             */
+            public Builder readme(String readme) {
+                this.readme = readme;
+                return this;
+            }
+
+            /**
+             * The ID of the gateway plug-in.
+             */
+            public Builder readmeEn(String readmeEn) {
+                this.readmeEn = readmeEn;
+                return this;
+            }
+
+            /**
+             * The information about the plug-in configuration used for checking.
+             */
+            public Builder status(String status) {
+                this.status = status;
+                return this;
+            }
+
+            /**
+             * The ID of the plug-in configuration.
+             */
+            public Builder summary(String summary) {
+                this.summary = summary;
+                return this;
+            }
+
+            /**
+             * The publish status.
+             */
+            public Builder type(Integer type) {
+                this.type = type;
+                return this;
+            }
+
+            /**
+             * The data object.
+             */
+            public Builder version(String version) {
+                this.version = version;
+                return this;
+            }
+
+            /**
+             * VersionJson.
+             */
+            public Builder versionJson(String versionJson) {
+                this.versionJson = versionJson;
+                return this;
+            }
+
+            /**
+             * The update time.
              */
             public Builder wasmLang(Integer wasmLang) {
                 this.wasmLang = wasmLang;

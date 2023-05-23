@@ -96,11 +96,7 @@ public class AddSSLCertRequest extends Request {
         } 
 
         /**
-         * The language of the response. Valid values:
-         * <p>
-         * 
-         * *   zh: Chinese
-         * *   en: English
+         * 返回结果显示的语言。取值：zh（默认值）：中文，en：英文
          */
         public Builder acceptLanguage(String acceptLanguage) {
             this.putQueryParameter("AcceptLanguage", acceptLanguage);
@@ -109,7 +105,7 @@ public class AddSSLCertRequest extends Request {
         }
 
         /**
-         * The ID of the certificate.
+         * CertIdentifier.
          */
         public Builder certIdentifier(String certIdentifier) {
             this.putQueryParameter("CertIdentifier", certIdentifier);
@@ -118,7 +114,7 @@ public class AddSSLCertRequest extends Request {
         }
 
         /**
-         * The domain ID.
+         * DomainId.
          */
         public Builder domainId(Long domainId) {
             this.putQueryParameter("DomainId", domainId);
@@ -127,7 +123,7 @@ public class AddSSLCertRequest extends Request {
         }
 
         /**
-         * The unique ID of the gateway.
+         * GatewayUniqueId.
          */
         public Builder gatewayUniqueId(String gatewayUniqueId) {
             this.putQueryParameter("GatewayUniqueId", gatewayUniqueId);

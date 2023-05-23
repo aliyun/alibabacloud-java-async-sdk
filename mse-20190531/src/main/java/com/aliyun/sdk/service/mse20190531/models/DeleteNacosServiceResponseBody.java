@@ -98,7 +98,7 @@ public class DeleteNacosServiceResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * The response code returned.
+         * The HTTP status code returned.
          */
         public Builder code(Integer code) {
             this.code = code;
@@ -106,7 +106,7 @@ public class DeleteNacosServiceResponseBody extends TeaModel {
         }
 
         /**
-         * The deletion result.
+         * The returned message.
          */
         public Builder data(String data) {
             this.data = data;
@@ -114,7 +114,7 @@ public class DeleteNacosServiceResponseBody extends TeaModel {
         }
 
         /**
-         * The HTTP status code returned.
+         * The name of the group.
          */
         public Builder httpStatusCode(Integer httpStatusCode) {
             this.httpStatusCode = httpStatusCode;
@@ -122,7 +122,11 @@ public class DeleteNacosServiceResponseBody extends TeaModel {
         }
 
         /**
-         * The returned message.
+         * The language of the response. Valid values:
+         * <p>
+         * 
+         * *   zh: Chinese
+         * *   en: English
          */
         public Builder message(String message) {
             this.message = message;
@@ -130,7 +134,7 @@ public class DeleteNacosServiceResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * The ID of the namespace.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -138,11 +142,7 @@ public class DeleteNacosServiceResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether the request was successful. Valid values:
-         * <p>
-         * 
-         * *   `true`: The request was successful.
-         * *   `false`: The request failed.
+         * The ID of the request.
          */
         public Builder success(Boolean success) {
             this.success = success;

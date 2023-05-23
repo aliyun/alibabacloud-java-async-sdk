@@ -127,15 +127,29 @@ public class GetNacosConfigRequest extends Request {
         } 
 
         /**
-         * The language of the response. Valid values:
-         * <p>
-         * 
-         * *   zh: Chinese
-         * *   en: English
+         * The message returned.
          */
         public Builder acceptLanguage(String acceptLanguage) {
             this.putQueryParameter("AcceptLanguage", acceptLanguage);
             this.acceptLanguage = acceptLanguage;
+            return this;
+        }
+
+        /**
+         * The data structure.
+         */
+        public Builder beta(Boolean beta) {
+            this.putQueryParameter("Beta", beta);
+            this.beta = beta;
+            return this;
+        }
+
+        /**
+         * The ID of the namespace.
+         */
+        public Builder dataId(String dataId) {
+            this.putQueryParameter("DataId", dataId);
+            this.dataId = dataId;
             return this;
         }
 
@@ -146,24 +160,6 @@ public class GetNacosConfigRequest extends Request {
          * *   `true`: yes
          * *   `false`: no
          */
-        public Builder beta(Boolean beta) {
-            this.putQueryParameter("Beta", beta);
-            this.beta = beta;
-            return this;
-        }
-
-        /**
-         * The ID of the data.
-         */
-        public Builder dataId(String dataId) {
-            this.putQueryParameter("DataId", dataId);
-            this.dataId = dataId;
-            return this;
-        }
-
-        /**
-         * The name of the configuration group.
-         */
         public Builder group(String group) {
             this.putQueryParameter("Group", group);
             this.group = group;
@@ -171,7 +167,7 @@ public class GetNacosConfigRequest extends Request {
         }
 
         /**
-         * The ID of the instance.
+         * The name of the configuration group.
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -180,7 +176,11 @@ public class GetNacosConfigRequest extends Request {
         }
 
         /**
-         * The ID of the namespace.
+         * The language of the response. Valid values:
+         * <p>
+         * 
+         * *   zh: Chinese
+         * *   en: English
          */
         public Builder namespaceId(String namespaceId) {
             this.putQueryParameter("NamespaceId", namespaceId);

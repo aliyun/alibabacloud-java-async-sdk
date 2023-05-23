@@ -110,7 +110,7 @@ public class ModifyLosslessRuleResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * code仅仅用来和success同步
+         * 响应码。
          */
         public Builder code(Integer code) {
             this.code = code;
@@ -118,7 +118,7 @@ public class ModifyLosslessRuleResponseBody extends TeaModel {
         }
 
         /**
-         * Data.
+         * 返回数据。
          */
         public Builder data(Object data) {
             this.data = data;
@@ -126,7 +126,7 @@ public class ModifyLosslessRuleResponseBody extends TeaModel {
         }
 
         /**
-         * The error code returned if the request failed.
+         * mse-100-007
          */
         public Builder errorCode(String errorCode) {
             this.errorCode = errorCode;
@@ -134,7 +134,7 @@ public class ModifyLosslessRuleResponseBody extends TeaModel {
         }
 
         /**
-         * HttpStatusCode.
+         * HTTP状态码。
          */
         public Builder httpStatusCode(Integer httpStatusCode) {
             this.httpStatusCode = httpStatusCode;
@@ -142,7 +142,7 @@ public class ModifyLosslessRuleResponseBody extends TeaModel {
         }
 
         /**
-         * The message returned.
+         * illegalRequest
          */
         public Builder message(String message) {
             this.message = message;
@@ -150,7 +150,7 @@ public class ModifyLosslessRuleResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * mse-200-105
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -158,11 +158,7 @@ public class ModifyLosslessRuleResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether the request was successful. Valid values:
-         * <p>
-         * 
-         * *   `true`: The request was successful.
-         * *   `false`: The request failed.
+         * duplicated cluster alias name
          */
         public Builder success(Boolean success) {
             this.success = success;

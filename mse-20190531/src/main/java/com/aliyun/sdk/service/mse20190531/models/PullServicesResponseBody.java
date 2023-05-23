@@ -98,7 +98,7 @@ public class PullServicesResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * The response code returned.
+         * zh
          */
         public Builder code(Integer code) {
             this.code = code;
@@ -114,7 +114,7 @@ public class PullServicesResponseBody extends TeaModel {
         }
 
         /**
-         * The HTTP status code.
+         * The namespace.
          */
         public Builder httpStatusCode(Integer httpStatusCode) {
             this.httpStatusCode = httpStatusCode;
@@ -122,7 +122,7 @@ public class PullServicesResponseBody extends TeaModel {
         }
 
         /**
-         * The message returned.
+         * The name of the service.
          */
         public Builder message(String message) {
             this.message = message;
@@ -130,7 +130,7 @@ public class PullServicesResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * public
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -138,11 +138,7 @@ public class PullServicesResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether the request was successful. Valid values:
-         * <p>
-         * 
-         * *   `true`: The request was successful.
-         * *   `false`: The request failed.
+         * The name of the group.
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -230,7 +226,7 @@ public class PullServicesResponseBody extends TeaModel {
             private String sourceType; 
 
             /**
-             * The name of the group.
+             * mse-100-007
              */
             public Builder groupName(String groupName) {
                 this.groupName = groupName;
@@ -238,7 +234,7 @@ public class PullServicesResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the service.
+             * duplicatedClusterAliasName
              */
             public Builder name(String name) {
                 this.name = name;
@@ -246,7 +242,7 @@ public class PullServicesResponseBody extends TeaModel {
             }
 
             /**
-             * The namespace.
+             * duplicated cluster alias name
              */
             public Builder namespace(String namespace) {
                 this.namespace = namespace;
@@ -254,7 +250,7 @@ public class PullServicesResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the service source.
+             * illegalRequest
              */
             public Builder sourceId(String sourceId) {
                 this.sourceId = sourceId;
@@ -262,7 +258,7 @@ public class PullServicesResponseBody extends TeaModel {
             }
 
             /**
-             * The type of the service source.
+             * illegal request:%s
              */
             public Builder sourceType(String sourceType) {
                 this.sourceType = sourceType;
@@ -339,7 +335,7 @@ public class PullServicesResponseBody extends TeaModel {
             private java.util.List < Services> services; 
 
             /**
-             * The name of the group.
+             * K8s
              */
             public Builder groupName(String groupName) {
                 this.groupName = groupName;
@@ -347,7 +343,7 @@ public class PullServicesResponseBody extends TeaModel {
             }
 
             /**
-             * The namespace.
+             * The ID of the request.
              */
             public Builder namespace(String namespace) {
                 this.namespace = namespace;
@@ -355,7 +351,7 @@ public class PullServicesResponseBody extends TeaModel {
             }
 
             /**
-             * The alias of the namespace.
+             * mse-200-021
              */
             public Builder namespaceShowName(String namespaceShowName) {
                 this.namespaceShowName = namespaceShowName;
@@ -363,7 +359,7 @@ public class PullServicesResponseBody extends TeaModel {
             }
 
             /**
-             * The information about services.
+             * Queries all the microservices of a service source.
              */
             public Builder services(java.util.List < Services> services) {
                 this.services = services;

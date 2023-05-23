@@ -98,7 +98,7 @@ public class GetGatewayDomainDetailResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * The status code returned.
+         * Code.
          */
         public Builder code(Integer code) {
             this.code = code;
@@ -106,7 +106,7 @@ public class GetGatewayDomainDetailResponseBody extends TeaModel {
         }
 
         /**
-         * The returned data.
+         * Data.
          */
         public Builder data(Data data) {
             this.data = data;
@@ -114,7 +114,7 @@ public class GetGatewayDomainDetailResponseBody extends TeaModel {
         }
 
         /**
-         * The HTTP status code returned.
+         * HttpStatusCode.
          */
         public Builder httpStatusCode(Integer httpStatusCode) {
             this.httpStatusCode = httpStatusCode;
@@ -122,7 +122,7 @@ public class GetGatewayDomainDetailResponseBody extends TeaModel {
         }
 
         /**
-         * The message returned.
+         * Message.
          */
         public Builder message(String message) {
             this.message = message;
@@ -130,7 +130,7 @@ public class GetGatewayDomainDetailResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * Id of the request
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -138,11 +138,7 @@ public class GetGatewayDomainDetailResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether the request was successful. Valid values:
-         * <p>
-         * 
-         * *   `true`: The request was successful.
-         * *   `false`: The request failed.
+         * Success.
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -422,7 +418,7 @@ public class GetGatewayDomainDetailResponseBody extends TeaModel {
             private String tlsMin; 
 
             /**
-             * The start time.
+             * AfterDate.
              */
             public Builder afterDate(Long afterDate) {
                 this.afterDate = afterDate;
@@ -430,7 +426,7 @@ public class GetGatewayDomainDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The algorithm.
+             * Algorithm.
              */
             public Builder algorithm(String algorithm) {
                 this.algorithm = algorithm;
@@ -438,7 +434,7 @@ public class GetGatewayDomainDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The expiration time.
+             * BeforeDate.
              */
             public Builder beforeDate(Long beforeDate) {
                 this.beforeDate = beforeDate;
@@ -446,7 +442,7 @@ public class GetGatewayDomainDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the certificate.
+             * CertIdentifier.
              */
             public Builder certIdentifier(String certIdentifier) {
                 this.certIdentifier = certIdentifier;
@@ -454,7 +450,7 @@ public class GetGatewayDomainDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the certificate.
+             * CertName.
              */
             public Builder certName(String certName) {
                 this.certName = certName;
@@ -462,7 +458,7 @@ public class GetGatewayDomainDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The public domain name.
+             * CommonName.
              */
             public Builder commonName(String commonName) {
                 this.commonName = commonName;
@@ -470,7 +466,7 @@ public class GetGatewayDomainDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the gateway.
+             * GatewayId.
              */
             public Builder gatewayId(Long gatewayId) {
                 this.gatewayId = gatewayId;
@@ -478,7 +474,7 @@ public class GetGatewayDomainDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The unique ID of the gateway.
+             * GatewayUniqueId.
              */
             public Builder gatewayUniqueId(String gatewayUniqueId) {
                 this.gatewayUniqueId = gatewayUniqueId;
@@ -486,7 +482,7 @@ public class GetGatewayDomainDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The start time.
+             * GmtAfter.
              */
             public Builder gmtAfter(String gmtAfter) {
                 this.gmtAfter = gmtAfter;
@@ -494,7 +490,7 @@ public class GetGatewayDomainDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The expiration time.
+             * GmtBefore.
              */
             public Builder gmtBefore(String gmtBefore) {
                 this.gmtBefore = gmtBefore;
@@ -502,7 +498,7 @@ public class GetGatewayDomainDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The creation time.
+             * GmtCreate.
              */
             public Builder gmtCreate(String gmtCreate) {
                 this.gmtCreate = gmtCreate;
@@ -510,7 +506,7 @@ public class GetGatewayDomainDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The update time.
+             * GmtModified.
              */
             public Builder gmtModified(String gmtModified) {
                 this.gmtModified = gmtModified;
@@ -518,12 +514,7 @@ public class GetGatewayDomainDetailResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether `HTTP/2` is enabled.
-             * <p>
-             * 
-             * *   `open`: `HTTP/2` is enabled.
-             * *   `close`: `HTTP/2` is disabled.
-             * *   `globalConfig`: Global configurations are used.
+             * Http2.
              */
             public Builder http2(String http2) {
                 this.http2 = http2;
@@ -531,7 +522,7 @@ public class GetGatewayDomainDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The ID.
+             * Id.
              */
             public Builder id(Long id) {
                 this.id = id;
@@ -539,7 +530,7 @@ public class GetGatewayDomainDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The issuer.
+             * Issuer.
              */
             public Builder issuer(String issuer) {
                 this.issuer = issuer;
@@ -547,7 +538,7 @@ public class GetGatewayDomainDetailResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether HTTPS is forcibly used.
+             * MustHttps.
              */
             public Builder mustHttps(Boolean mustHttps) {
                 this.mustHttps = mustHttps;
@@ -555,7 +546,7 @@ public class GetGatewayDomainDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The domain name.
+             * Name.
              */
             public Builder name(String name) {
                 this.name = name;
@@ -563,7 +554,7 @@ public class GetGatewayDomainDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The protocol of the gateway.
+             * Protocol.
              */
             public Builder protocol(String protocol) {
                 this.protocol = protocol;
@@ -571,7 +562,7 @@ public class GetGatewayDomainDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the extended field.
+             * Sans.
              */
             public Builder sans(String sans) {
                 this.sans = sans;
@@ -579,7 +570,7 @@ public class GetGatewayDomainDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The maximum version of Transport Layer Security (TLS).
+             * TlsMax.
              */
             public Builder tlsMax(String tlsMax) {
                 this.tlsMax = tlsMax;
@@ -587,7 +578,7 @@ public class GetGatewayDomainDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The minimum version of TLS.
+             * TlsMin.
              */
             public Builder tlsMin(String tlsMin) {
                 this.tlsMin = tlsMin;

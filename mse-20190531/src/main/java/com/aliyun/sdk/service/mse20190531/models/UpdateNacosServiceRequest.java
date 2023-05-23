@@ -139,11 +139,7 @@ public class UpdateNacosServiceRequest extends Request {
         } 
 
         /**
-         * The language of the response. Valid values:
-         * <p>
-         * 
-         * *   zh: Chinese
-         * *   en: English
+         * system error
          */
         public Builder acceptLanguage(String acceptLanguage) {
             this.putQueryParameter("AcceptLanguage", acceptLanguage);
@@ -152,10 +148,7 @@ public class UpdateNacosServiceRequest extends Request {
         }
 
         /**
-         * The ID of the cluster.
-         * <p>
-         * 
-         * > This operation contains both the InstanceId and ClusterId parameters. You must specify one of them.
+         * systemError
          */
         public Builder clusterId(String clusterId) {
             this.putQueryParameter("ClusterId", clusterId);
@@ -164,7 +157,7 @@ public class UpdateNacosServiceRequest extends Request {
         }
 
         /**
-         * The name of the group.
+         * clusterNotFound
          */
         public Builder groupName(String groupName) {
             this.putQueryParameter("GroupName", groupName);
@@ -173,10 +166,7 @@ public class UpdateNacosServiceRequest extends Request {
         }
 
         /**
-         * The ID of the instance.
-         * <p>
-         * 
-         * > This operation contains both the InstanceId and ClusterId parameters. You must specify one of them.
+         * illegal request:%s
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -185,7 +175,7 @@ public class UpdateNacosServiceRequest extends Request {
         }
 
         /**
-         * The ID of the namespace.
+         * cluster not found
          */
         public Builder namespaceId(String namespaceId) {
             this.putQueryParameter("NamespaceId", namespaceId);
@@ -194,7 +184,7 @@ public class UpdateNacosServiceRequest extends Request {
         }
 
         /**
-         * The protection threshold.
+         * mse-100-001
          */
         public Builder protectThreshold(String protectThreshold) {
             this.putQueryParameter("ProtectThreshold", protectThreshold);
@@ -203,7 +193,7 @@ public class UpdateNacosServiceRequest extends Request {
         }
 
         /**
-         * The name of the service.
+         * mse-200-021
          */
         public Builder serviceName(String serviceName) {
             this.putQueryParameter("ServiceName", serviceName);

@@ -98,7 +98,7 @@ public class GetMseSourceResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * The response code returned.
+         * Code.
          */
         public Builder code(Integer code) {
             this.code = code;
@@ -106,7 +106,7 @@ public class GetMseSourceResponseBody extends TeaModel {
         }
 
         /**
-         * The data structure.
+         * Data.
          */
         public Builder data(java.util.List < Data> data) {
             this.data = data;
@@ -114,7 +114,7 @@ public class GetMseSourceResponseBody extends TeaModel {
         }
 
         /**
-         * The HTTP status code returned.
+         * The ID of cluster.
          */
         public Builder httpStatusCode(Integer httpStatusCode) {
             this.httpStatusCode = httpStatusCode;
@@ -122,11 +122,7 @@ public class GetMseSourceResponseBody extends TeaModel {
         }
 
         /**
-         * The message returned.
-         * <p>
-         * 
-         * *   If the request is successful, a success message is returned.
-         * *   If the request fails, an error message is returned, such as the "TaskId not found" message.
+         * Message.
          */
         public Builder message(String message) {
             this.message = message;
@@ -134,7 +130,7 @@ public class GetMseSourceResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * The name.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -142,11 +138,7 @@ public class GetMseSourceResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether the request was successful. Valid values:
-         * <p>
-         * 
-         * *   `true`: The request was successful.
-         * *   `false`: The request failed.
+         * Success.
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -234,7 +226,7 @@ public class GetMseSourceResponseBody extends TeaModel {
             private String type; 
 
             /**
-             * The endpoint of the instance.
+             * Address.
              */
             public Builder address(String address) {
                 this.address = address;
@@ -242,7 +234,7 @@ public class GetMseSourceResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of cluster.
+             * ClusterId.
              */
             public Builder clusterId(String clusterId) {
                 this.clusterId = clusterId;
@@ -250,7 +242,7 @@ public class GetMseSourceResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the instance.
+             * InstanceId.
              */
             public Builder instanceId(String instanceId) {
                 this.instanceId = instanceId;
@@ -258,7 +250,7 @@ public class GetMseSourceResponseBody extends TeaModel {
             }
 
             /**
-             * The name.
+             * Name.
              */
             public Builder name(String name) {
                 this.name = name;
@@ -266,7 +258,7 @@ public class GetMseSourceResponseBody extends TeaModel {
             }
 
             /**
-             * The type.
+             * Type.
              */
             public Builder type(String type) {
                 this.type = type;

@@ -69,11 +69,7 @@ public class GetImageRequest extends Request {
         } 
 
         /**
-         * The language of the response. Valid values:
-         * <p>
-         * 
-         * *   zh: Chinese
-         * *   en: English
+         * 返回结果显示的语言。取值：zh（默认值）：中文，en：英文
          */
         public Builder acceptLanguage(String acceptLanguage) {
             this.putQueryParameter("AcceptLanguage", acceptLanguage);
@@ -82,7 +78,7 @@ public class GetImageRequest extends Request {
         }
 
         /**
-         * The version number of the current instance.
+         * 集群版本
          */
         public Builder versionCode(String versionCode) {
             this.putQueryParameter("VersionCode", versionCode);

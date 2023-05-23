@@ -98,7 +98,7 @@ public class UpdateGatewayRouteWafStatusResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * The status code returned. A value of 200 indicates that the request is successful.
+         * clusterNotFound
          */
         public Builder code(Integer code) {
             this.code = code;
@@ -106,7 +106,7 @@ public class UpdateGatewayRouteWafStatusResponseBody extends TeaModel {
         }
 
         /**
-         * The data returned.
+         * mse-100-001
          */
         public Builder data(Data data) {
             this.data = data;
@@ -114,7 +114,7 @@ public class UpdateGatewayRouteWafStatusResponseBody extends TeaModel {
         }
 
         /**
-         * The HTTP status code returned.
+         * illegal request:%s
          */
         public Builder httpStatusCode(Integer httpStatusCode) {
             this.httpStatusCode = httpStatusCode;
@@ -122,7 +122,7 @@ public class UpdateGatewayRouteWafStatusResponseBody extends TeaModel {
         }
 
         /**
-         * The message returned.
+         * mse-200-021
          */
         public Builder message(String message) {
             this.message = message;
@@ -130,7 +130,7 @@ public class UpdateGatewayRouteWafStatusResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * illegalRequest
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -138,11 +138,7 @@ public class UpdateGatewayRouteWafStatusResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether the request was successful. Valid values:
-         * <p>
-         * 
-         * *   `true`: The request was successful.
-         * *   `false`: The request failed.
+         * cluster not found
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -266,7 +262,7 @@ public class UpdateGatewayRouteWafStatusResponseBody extends TeaModel {
             private Long unitNum; 
 
             /**
-             * The credentials allowed.
+             * AllowCredentials.
              */
             public Builder allowCredentials(Boolean allowCredentials) {
                 this.allowCredentials = allowCredentials;
@@ -274,7 +270,7 @@ public class UpdateGatewayRouteWafStatusResponseBody extends TeaModel {
             }
 
             /**
-             * The headers allowed.
+             * AllowHeaders.
              */
             public Builder allowHeaders(String allowHeaders) {
                 this.allowHeaders = allowHeaders;
@@ -282,7 +278,7 @@ public class UpdateGatewayRouteWafStatusResponseBody extends TeaModel {
             }
 
             /**
-             * The methods allowed.
+             * AllowMethods.
              */
             public Builder allowMethods(String allowMethods) {
                 this.allowMethods = allowMethods;
@@ -290,7 +286,7 @@ public class UpdateGatewayRouteWafStatusResponseBody extends TeaModel {
             }
 
             /**
-             * The origins allowed.
+             * AllowOrigins.
              */
             public Builder allowOrigins(String allowOrigins) {
                 this.allowOrigins = allowOrigins;
@@ -298,7 +294,7 @@ public class UpdateGatewayRouteWafStatusResponseBody extends TeaModel {
             }
 
             /**
-             * The response headers.
+             * ExposeHeaders.
              */
             public Builder exposeHeaders(String exposeHeaders) {
                 this.exposeHeaders = exposeHeaders;
@@ -306,7 +302,7 @@ public class UpdateGatewayRouteWafStatusResponseBody extends TeaModel {
             }
 
             /**
-             * The status.
+             * Status.
              */
             public Builder status(String status) {
                 this.status = status;
@@ -314,7 +310,7 @@ public class UpdateGatewayRouteWafStatusResponseBody extends TeaModel {
             }
 
             /**
-             * The time unit.
+             * TimeUnit.
              */
             public Builder timeUnit(String timeUnit) {
                 this.timeUnit = timeUnit;
@@ -322,7 +318,7 @@ public class UpdateGatewayRouteWafStatusResponseBody extends TeaModel {
             }
 
             /**
-             * The unit number.
+             * UnitNum.
              */
             public Builder unitNum(Long unitNum) {
                 this.unitNum = unitNum;
@@ -375,7 +371,7 @@ public class UpdateGatewayRouteWafStatusResponseBody extends TeaModel {
             private Integer code; 
 
             /**
-             * The mock return value.
+             * Body.
              */
             public Builder body(String body) {
                 this.body = body;
@@ -383,7 +379,7 @@ public class UpdateGatewayRouteWafStatusResponseBody extends TeaModel {
             }
 
             /**
-             * The status code returned.
+             * clusterNotFound
              */
             public Builder code(Integer code) {
                 this.code = code;
@@ -484,7 +480,7 @@ public class UpdateGatewayRouteWafStatusResponseBody extends TeaModel {
             private String substitution; 
 
             /**
-             * The domain name.
+             * Host.
              */
             public Builder host(String host) {
                 this.host = host;
@@ -492,7 +488,7 @@ public class UpdateGatewayRouteWafStatusResponseBody extends TeaModel {
             }
 
             /**
-             * The HTTP request path.
+             * Path.
              */
             public Builder path(String path) {
                 this.path = path;
@@ -500,7 +496,7 @@ public class UpdateGatewayRouteWafStatusResponseBody extends TeaModel {
             }
 
             /**
-             * The path type of the HTTP request.
+             * PathType.
              */
             public Builder pathType(String pathType) {
                 this.pathType = pathType;
@@ -508,7 +504,7 @@ public class UpdateGatewayRouteWafStatusResponseBody extends TeaModel {
             }
 
             /**
-             * The matching pattern.
+             * Pattern.
              */
             public Builder pattern(String pattern) {
                 this.pattern = pattern;
@@ -516,7 +512,7 @@ public class UpdateGatewayRouteWafStatusResponseBody extends TeaModel {
             }
 
             /**
-             * The HTTP status.
+             * Status.
              */
             public Builder status(String status) {
                 this.status = status;
@@ -524,7 +520,7 @@ public class UpdateGatewayRouteWafStatusResponseBody extends TeaModel {
             }
 
             /**
-             * The replacement.
+             * Substitution.
              */
             public Builder substitution(String substitution) {
                 this.substitution = substitution;
@@ -601,7 +597,7 @@ public class UpdateGatewayRouteWafStatusResponseBody extends TeaModel {
             private String value; 
 
             /**
-             * The request or response.
+             * DirectionType.
              */
             public Builder directionType(String directionType) {
                 this.directionType = directionType;
@@ -609,7 +605,7 @@ public class UpdateGatewayRouteWafStatusResponseBody extends TeaModel {
             }
 
             /**
-             * The header key.
+             * Key.
              */
             public Builder key(String key) {
                 this.key = key;
@@ -617,7 +613,7 @@ public class UpdateGatewayRouteWafStatusResponseBody extends TeaModel {
             }
 
             /**
-             * The operation type.
+             * OpType.
              */
             public Builder opType(String opType) {
                 this.opType = opType;
@@ -625,7 +621,7 @@ public class UpdateGatewayRouteWafStatusResponseBody extends TeaModel {
             }
 
             /**
-             * The header value.
+             * Value.
              */
             public Builder value(String value) {
                 this.value = value;
@@ -678,7 +674,7 @@ public class UpdateGatewayRouteWafStatusResponseBody extends TeaModel {
             private String status; 
 
             /**
-             * The policy.
+             * HeaderOpItems.
              */
             public Builder headerOpItems(java.util.List < HeaderOpItems> headerOpItems) {
                 this.headerOpItems = headerOpItems;
@@ -686,7 +682,7 @@ public class UpdateGatewayRouteWafStatusResponseBody extends TeaModel {
             }
 
             /**
-             * The status.
+             * Status.
              */
             public Builder status(String status) {
                 this.status = status;
@@ -751,7 +747,7 @@ public class UpdateGatewayRouteWafStatusResponseBody extends TeaModel {
             private String path; 
 
             /**
-             * The response code returned.
+             * clusterNotFound
              */
             public Builder code(Integer code) {
                 this.code = code;
@@ -759,7 +755,7 @@ public class UpdateGatewayRouteWafStatusResponseBody extends TeaModel {
             }
 
             /**
-             * The hostname.
+             * Host.
              */
             public Builder host(String host) {
                 this.host = host;
@@ -767,7 +763,7 @@ public class UpdateGatewayRouteWafStatusResponseBody extends TeaModel {
             }
 
             /**
-             * The path.
+             * Path.
              */
             public Builder path(String path) {
                 this.path = path;
@@ -844,7 +840,7 @@ public class UpdateGatewayRouteWafStatusResponseBody extends TeaModel {
             private String status; 
 
             /**
-             * The number of retries allowed for a request.
+             * Attempts.
              */
             public Builder attempts(Integer attempts) {
                 this.attempts = attempts;
@@ -852,7 +848,7 @@ public class UpdateGatewayRouteWafStatusResponseBody extends TeaModel {
             }
 
             /**
-             * The HTTP status codes.
+             * HttpCodes.
              */
             public Builder httpCodes(java.util.List < String > httpCodes) {
                 this.httpCodes = httpCodes;
@@ -860,7 +856,7 @@ public class UpdateGatewayRouteWafStatusResponseBody extends TeaModel {
             }
 
             /**
-             * The retry condition.
+             * RetryOn.
              */
             public Builder retryOn(java.util.List < String > retryOn) {
                 this.retryOn = retryOn;
@@ -868,7 +864,7 @@ public class UpdateGatewayRouteWafStatusResponseBody extends TeaModel {
             }
 
             /**
-             * The retry status.
+             * Status.
              */
             public Builder status(String status) {
                 this.status = status;
@@ -933,7 +929,7 @@ public class UpdateGatewayRouteWafStatusResponseBody extends TeaModel {
             private String value; 
 
             /**
-             * The key of the request header.
+             * Key.
              */
             public Builder key(String key) {
                 this.key = key;
@@ -941,7 +937,7 @@ public class UpdateGatewayRouteWafStatusResponseBody extends TeaModel {
             }
 
             /**
-             * The matching type.
+             * Type.
              */
             public Builder type(String type) {
                 this.type = type;
@@ -949,7 +945,7 @@ public class UpdateGatewayRouteWafStatusResponseBody extends TeaModel {
             }
 
             /**
-             * The value of the request header.
+             * Value.
              */
             public Builder value(String value) {
                 this.value = value;
@@ -1014,7 +1010,7 @@ public class UpdateGatewayRouteWafStatusResponseBody extends TeaModel {
             private String type; 
 
             /**
-             * Indicates whether case sensitivity is ignored.
+             * IgnoreCase.
              */
             public Builder ignoreCase(Boolean ignoreCase) {
                 this.ignoreCase = ignoreCase;
@@ -1022,7 +1018,7 @@ public class UpdateGatewayRouteWafStatusResponseBody extends TeaModel {
             }
 
             /**
-             * The path.
+             * Path.
              */
             public Builder path(String path) {
                 this.path = path;
@@ -1030,7 +1026,7 @@ public class UpdateGatewayRouteWafStatusResponseBody extends TeaModel {
             }
 
             /**
-             * The matching type.
+             * Type.
              */
             public Builder type(String type) {
                 this.type = type;
@@ -1095,7 +1091,7 @@ public class UpdateGatewayRouteWafStatusResponseBody extends TeaModel {
             private String value; 
 
             /**
-             * The name of the parameter.
+             * Key.
              */
             public Builder key(String key) {
                 this.key = key;
@@ -1103,7 +1099,7 @@ public class UpdateGatewayRouteWafStatusResponseBody extends TeaModel {
             }
 
             /**
-             * The type.
+             * Type.
              */
             public Builder type(String type) {
                 this.type = type;
@@ -1111,7 +1107,7 @@ public class UpdateGatewayRouteWafStatusResponseBody extends TeaModel {
             }
 
             /**
-             * The value of the parameter.
+             * Value.
              */
             public Builder value(String value) {
                 this.value = value;
@@ -1188,7 +1184,7 @@ public class UpdateGatewayRouteWafStatusResponseBody extends TeaModel {
             private java.util.List < QueryPredicates> queryPredicates; 
 
             /**
-             * The information about matching based on request headers.
+             * HeaderPredicates.
              */
             public Builder headerPredicates(java.util.List < HeaderPredicates> headerPredicates) {
                 this.headerPredicates = headerPredicates;
@@ -1196,7 +1192,7 @@ public class UpdateGatewayRouteWafStatusResponseBody extends TeaModel {
             }
 
             /**
-             * The information about method matching.
+             * MethodPredicates.
              */
             public Builder methodPredicates(java.util.List < String > methodPredicates) {
                 this.methodPredicates = methodPredicates;
@@ -1204,7 +1200,7 @@ public class UpdateGatewayRouteWafStatusResponseBody extends TeaModel {
             }
 
             /**
-             * The information about route matching.
+             * PathPredicates.
              */
             public Builder pathPredicates(PathPredicates pathPredicates) {
                 this.pathPredicates = pathPredicates;
@@ -1212,7 +1208,7 @@ public class UpdateGatewayRouteWafStatusResponseBody extends TeaModel {
             }
 
             /**
-             * The information about parameter matching.
+             * QueryPredicates.
              */
             public Builder queryPredicates(java.util.List < QueryPredicates> queryPredicates) {
                 this.queryPredicates = queryPredicates;
@@ -1337,7 +1333,7 @@ public class UpdateGatewayRouteWafStatusResponseBody extends TeaModel {
             private String version; 
 
             /**
-             * The name of the group to which the service belongs.
+             * GroupName.
              */
             public Builder groupName(String groupName) {
                 this.groupName = groupName;
@@ -1345,7 +1341,7 @@ public class UpdateGatewayRouteWafStatusResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the service.
+             * Name.
              */
             public Builder name(String name) {
                 this.name = name;
@@ -1353,7 +1349,7 @@ public class UpdateGatewayRouteWafStatusResponseBody extends TeaModel {
             }
 
             /**
-             * The namespace.
+             * Namespace.
              */
             public Builder namespace(String namespace) {
                 this.namespace = namespace;
@@ -1361,7 +1357,7 @@ public class UpdateGatewayRouteWafStatusResponseBody extends TeaModel {
             }
 
             /**
-             * The weight.
+             * Percent.
              */
             public Builder percent(Integer percent) {
                 this.percent = percent;
@@ -1369,7 +1365,7 @@ public class UpdateGatewayRouteWafStatusResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the service.
+             * ServiceId.
              */
             public Builder serviceId(Long serviceId) {
                 this.serviceId = serviceId;
@@ -1377,7 +1373,7 @@ public class UpdateGatewayRouteWafStatusResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the service.
+             * ServiceName.
              */
             public Builder serviceName(String serviceName) {
                 this.serviceName = serviceName;
@@ -1385,7 +1381,7 @@ public class UpdateGatewayRouteWafStatusResponseBody extends TeaModel {
             }
 
             /**
-             * The source type.
+             * SourceType.
              */
             public Builder sourceType(String sourceType) {
                 this.sourceType = sourceType;
@@ -1393,7 +1389,7 @@ public class UpdateGatewayRouteWafStatusResponseBody extends TeaModel {
             }
 
             /**
-             * The version of the service.
+             * Version.
              */
             public Builder version(String version) {
                 this.version = version;
@@ -1458,7 +1454,7 @@ public class UpdateGatewayRouteWafStatusResponseBody extends TeaModel {
             private Integer unitNum; 
 
             /**
-             * The status.
+             * Status.
              */
             public Builder status(String status) {
                 this.status = status;
@@ -1466,7 +1462,7 @@ public class UpdateGatewayRouteWafStatusResponseBody extends TeaModel {
             }
 
             /**
-             * The time unit.
+             * TimeUnit.
              */
             public Builder timeUnit(String timeUnit) {
                 this.timeUnit = timeUnit;
@@ -1474,7 +1470,7 @@ public class UpdateGatewayRouteWafStatusResponseBody extends TeaModel {
             }
 
             /**
-             * The unit number.
+             * UnitNum.
              */
             public Builder unitNum(Integer unitNum) {
                 this.unitNum = unitNum;
@@ -1827,7 +1823,7 @@ public class UpdateGatewayRouteWafStatusResponseBody extends TeaModel {
             private Timeout timeout; 
 
             /**
-             * The configuration for cross-origin resource sharing (CORS).
+             * Cors.
              */
             public Builder cors(Cors cors) {
                 this.cors = cors;
@@ -1835,7 +1831,7 @@ public class UpdateGatewayRouteWafStatusResponseBody extends TeaModel {
             }
 
             /**
-             * The default service ID.
+             * DefaultServiceId.
              */
             public Builder defaultServiceId(Long defaultServiceId) {
                 this.defaultServiceId = defaultServiceId;
@@ -1843,7 +1839,7 @@ public class UpdateGatewayRouteWafStatusResponseBody extends TeaModel {
             }
 
             /**
-             * The default service name.
+             * DefaultServiceName.
              */
             public Builder defaultServiceName(String defaultServiceName) {
                 this.defaultServiceName = defaultServiceName;
@@ -1851,7 +1847,7 @@ public class UpdateGatewayRouteWafStatusResponseBody extends TeaModel {
             }
 
             /**
-             * The destination service type.
+             * DestinationType.
              */
             public Builder destinationType(String destinationType) {
                 this.destinationType = destinationType;
@@ -1859,7 +1855,7 @@ public class UpdateGatewayRouteWafStatusResponseBody extends TeaModel {
             }
 
             /**
-             * The information about service mocking.
+             * DirectResponse.
              */
             public Builder directResponse(DirectResponse directResponse) {
                 this.directResponse = directResponse;
@@ -1867,7 +1863,7 @@ public class UpdateGatewayRouteWafStatusResponseBody extends TeaModel {
             }
 
             /**
-             * The domain ID.
+             * DomainId.
              */
             public Builder domainId(Long domainId) {
                 this.domainId = domainId;
@@ -1875,7 +1871,7 @@ public class UpdateGatewayRouteWafStatusResponseBody extends TeaModel {
             }
 
             /**
-             * The IDs of domains.
+             * DomainIdList.
              */
             public Builder domainIdList(java.util.List < Long > domainIdList) {
                 this.domainIdList = domainIdList;
@@ -1883,7 +1879,7 @@ public class UpdateGatewayRouteWafStatusResponseBody extends TeaModel {
             }
 
             /**
-             * The domain name.
+             * DomainName.
              */
             public Builder domainName(String domainName) {
                 this.domainName = domainName;
@@ -1891,7 +1887,7 @@ public class UpdateGatewayRouteWafStatusResponseBody extends TeaModel {
             }
 
             /**
-             * The names of domains.
+             * DomainNameList.
              */
             public Builder domainNameList(java.util.List < String > domainNameList) {
                 this.domainNameList = domainNameList;
@@ -1899,7 +1895,7 @@ public class UpdateGatewayRouteWafStatusResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether WAF is activated.
+             * EnableWaf.
              */
             public Builder enableWaf(Boolean enableWaf) {
                 this.enableWaf = enableWaf;
@@ -1907,7 +1903,7 @@ public class UpdateGatewayRouteWafStatusResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the gateway.
+             * GatewayId.
              */
             public Builder gatewayId(Long gatewayId) {
                 this.gatewayId = gatewayId;
@@ -1915,7 +1911,7 @@ public class UpdateGatewayRouteWafStatusResponseBody extends TeaModel {
             }
 
             /**
-             * The unique ID of the gateway.
+             * GatewayUniqueId.
              */
             public Builder gatewayUniqueId(String gatewayUniqueId) {
                 this.gatewayUniqueId = gatewayUniqueId;
@@ -1923,7 +1919,7 @@ public class UpdateGatewayRouteWafStatusResponseBody extends TeaModel {
             }
 
             /**
-             * The creation time.
+             * GmtCreate.
              */
             public Builder gmtCreate(String gmtCreate) {
                 this.gmtCreate = gmtCreate;
@@ -1931,7 +1927,7 @@ public class UpdateGatewayRouteWafStatusResponseBody extends TeaModel {
             }
 
             /**
-             * The update time.
+             * GmtModified.
              */
             public Builder gmtModified(String gmtModified) {
                 this.gmtModified = gmtModified;
@@ -1939,7 +1935,7 @@ public class UpdateGatewayRouteWafStatusResponseBody extends TeaModel {
             }
 
             /**
-             * The information about the rewrite policy.
+             * HTTPRewrite.
              */
             public Builder HTTPRewrite(HTTPRewrite HTTPRewrite) {
                 this.HTTPRewrite = HTTPRewrite;
@@ -1947,7 +1943,7 @@ public class UpdateGatewayRouteWafStatusResponseBody extends TeaModel {
             }
 
             /**
-             * The header settings.
+             * HeaderOp.
              */
             public Builder headerOp(HeaderOp headerOp) {
                 this.headerOp = headerOp;
@@ -1955,7 +1951,7 @@ public class UpdateGatewayRouteWafStatusResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the route.
+             * systemError
              */
             public Builder id(Long id) {
                 this.id = id;
@@ -1963,7 +1959,7 @@ public class UpdateGatewayRouteWafStatusResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the route.
+             * system error
              */
             public Builder name(String name) {
                 this.name = name;
@@ -1971,7 +1967,7 @@ public class UpdateGatewayRouteWafStatusResponseBody extends TeaModel {
             }
 
             /**
-             * The matching rule.
+             * Predicates.
              */
             public Builder predicates(String predicates) {
                 this.predicates = predicates;
@@ -1979,7 +1975,7 @@ public class UpdateGatewayRouteWafStatusResponseBody extends TeaModel {
             }
 
             /**
-             * The configuration of the redirection.
+             * Redirect.
              */
             public Builder redirect(Redirect redirect) {
                 this.redirect = redirect;
@@ -1987,7 +1983,7 @@ public class UpdateGatewayRouteWafStatusResponseBody extends TeaModel {
             }
 
             /**
-             * The retry configuration.
+             * Retry.
              */
             public Builder retry(Retry retry) {
                 this.retry = retry;
@@ -1995,7 +1991,7 @@ public class UpdateGatewayRouteWafStatusResponseBody extends TeaModel {
             }
 
             /**
-             * The sequence number of the route.
+             * RouteOrder.
              */
             public Builder routeOrder(Integer routeOrder) {
                 this.routeOrder = routeOrder;
@@ -2003,7 +1999,7 @@ public class UpdateGatewayRouteWafStatusResponseBody extends TeaModel {
             }
 
             /**
-             * The information about route matching.
+             * RoutePredicates.
              */
             public Builder routePredicates(RoutePredicates routePredicates) {
                 this.routePredicates = routePredicates;
@@ -2011,7 +2007,7 @@ public class UpdateGatewayRouteWafStatusResponseBody extends TeaModel {
             }
 
             /**
-             * The information about services.
+             * RouteServices.
              */
             public Builder routeServices(java.util.List < RouteServices> routeServices) {
                 this.routeServices = routeServices;
@@ -2019,7 +2015,7 @@ public class UpdateGatewayRouteWafStatusResponseBody extends TeaModel {
             }
 
             /**
-             * The information about services.
+             * Services.
              */
             public Builder services(String services) {
                 this.services = services;
@@ -2027,7 +2023,7 @@ public class UpdateGatewayRouteWafStatusResponseBody extends TeaModel {
             }
 
             /**
-             * The status of the route.
+             * Status.
              */
             public Builder status(Integer status) {
                 this.status = status;
@@ -2035,7 +2031,7 @@ public class UpdateGatewayRouteWafStatusResponseBody extends TeaModel {
             }
 
             /**
-             * The timeout configuration.
+             * Timeout.
              */
             public Builder timeout(Timeout timeout) {
                 this.timeout = timeout;

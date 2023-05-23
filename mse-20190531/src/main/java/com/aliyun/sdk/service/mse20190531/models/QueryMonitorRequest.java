@@ -141,11 +141,7 @@ public class QueryMonitorRequest extends Request {
         } 
 
         /**
-         * The language of the response. Valid values:
-         * <p>
-         * 
-         * *   zh: Chinese
-         * *   en: English
+         * The message returned.
          */
         public Builder acceptLanguage(String acceptLanguage) {
             this.putQueryParameter("AcceptLanguage", acceptLanguage);
@@ -154,7 +150,7 @@ public class QueryMonitorRequest extends Request {
         }
 
         /**
-         * The timestamp when the monitoring ends.
+         * The ID of the instance.
          */
         public Builder endTime(Long endTime) {
             this.putQueryParameter("EndTime", endTime);
@@ -163,7 +159,7 @@ public class QueryMonitorRequest extends Request {
         }
 
         /**
-         * The ID of the instance.
+         * The data structure.
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -172,35 +168,7 @@ public class QueryMonitorRequest extends Request {
         }
 
         /**
-         * The metric type. The following metric types are supported:
-         * <p>
-         * 
-         * \[Basic system metrics]
-         * 
-         * *   cpuUsage
-         * *   memoryUsage
-         * *   diskUsage
-         * *   gcCount
-         * *   gcTime
-         * 
-         * \[Nacos registry]
-         * 
-         * *   serviceCount
-         * *   writeCostTime
-         * *   readCostTime
-         * *   TPS regCenterTps
-         * *   QPS regCenterQps
-         * 
-         * \[Nacos configuration center]
-         * 
-         * *   publish
-         * *   getConfig
-         * 
-         * \[zookeeper]
-         * 
-         * *   TPS zk_TpsCount
-         * *   QPS zk_QpsCount
-         * *   zookeeper_AvgRequestLatency
+         * The timestamp when the monitoring ends.
          */
         public Builder monitorType(String monitorType) {
             this.putQueryParameter("MonitorType", monitorType);
@@ -209,7 +177,7 @@ public class QueryMonitorRequest extends Request {
         }
 
         /**
-         * The extended request parameters in the JSON format.
+         * The timestamp when the monitoring starts.
          */
         public Builder requestPars(String requestPars) {
             this.putQueryParameter("RequestPars", requestPars);
@@ -218,7 +186,7 @@ public class QueryMonitorRequest extends Request {
         }
 
         /**
-         * The timestamp when the monitoring starts.
+         * The interval between data points. Unit: seconds.
          */
         public Builder startTime(Long startTime) {
             this.putQueryParameter("StartTime", startTime);
@@ -227,7 +195,11 @@ public class QueryMonitorRequest extends Request {
         }
 
         /**
-         * The interval between data points. Unit: seconds.
+         * The language of the response. Valid values:
+         * <p>
+         * 
+         * *   zh: Chinese
+         * *   en: English
          */
         public Builder step(Long step) {
             this.putQueryParameter("Step", step);

@@ -122,7 +122,7 @@ public class GetImportFileUrlResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * The response code returned.
+         * Code.
          */
         public Builder code(Integer code) {
             this.code = code;
@@ -130,7 +130,7 @@ public class GetImportFileUrlResponseBody extends TeaModel {
         }
 
         /**
-         * The details of the data.
+         * Data.
          */
         public Builder data(Data data) {
             this.data = data;
@@ -138,10 +138,7 @@ public class GetImportFileUrlResponseBody extends TeaModel {
         }
 
         /**
-         * The dynamic part in the error message. This parameter is used to replace the \*\*%s\*\* variable in the **ErrMessage** parameter.
-         * <p>
-         * 
-         * >  If the return value of the **ErrMessage** parameter is **The Value of Input Parameter %s is not valid** and the return value of the **DynamicMessage** parameter is **DtsJobId**, the specified **DtsJobId** parameter is invalid.
+         * DynamicMessage.
          */
         public Builder dynamicMessage(String dynamicMessage) {
             this.dynamicMessage = dynamicMessage;
@@ -149,7 +146,7 @@ public class GetImportFileUrlResponseBody extends TeaModel {
         }
 
         /**
-         * The error code returned if the request failed.
+         * ErrorCode.
          */
         public Builder errorCode(String errorCode) {
             this.errorCode = errorCode;
@@ -157,7 +154,7 @@ public class GetImportFileUrlResponseBody extends TeaModel {
         }
 
         /**
-         * The HTTP status code returned.
+         * HttpStatusCode.
          */
         public Builder httpStatusCode(Integer httpStatusCode) {
             this.httpStatusCode = httpStatusCode;
@@ -165,7 +162,7 @@ public class GetImportFileUrlResponseBody extends TeaModel {
         }
 
         /**
-         * The error message returned.
+         * Message.
          */
         public Builder message(String message) {
             this.message = message;
@@ -173,7 +170,7 @@ public class GetImportFileUrlResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * RequestId.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -181,11 +178,7 @@ public class GetImportFileUrlResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether the request was successful. Valid values:
-         * <p>
-         * 
-         * *   `true`: The request was successful.
-         * *   `false`: The request failed.
+         * Success.
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -225,7 +218,7 @@ public class GetImportFileUrlResponseBody extends TeaModel {
             private String url; 
 
             /**
-             * The URL that is used to upload the configuration file.
+             * Url.
              */
             public Builder url(String url) {
                 this.url = url;

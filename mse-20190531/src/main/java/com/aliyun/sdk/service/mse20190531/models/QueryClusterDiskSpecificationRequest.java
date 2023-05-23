@@ -68,11 +68,7 @@ public class QueryClusterDiskSpecificationRequest extends Request {
         } 
 
         /**
-         * The language of the response. Valid values:
-         * <p>
-         * 
-         * *   zh: Chinese
-         * *   en: English
+         * 返回结果显示的语言。取值：zh（默认值）：中文，en：英文
          */
         public Builder acceptLanguage(String acceptLanguage) {
             this.putQueryParameter("AcceptLanguage", acceptLanguage);
@@ -81,7 +77,7 @@ public class QueryClusterDiskSpecificationRequest extends Request {
         }
 
         /**
-         * The type of the instance. Valid values: ZooKeeper, Nacos-Ans, and Eureka.
+         * ClusterType.
          */
         public Builder clusterType(String clusterType) {
             this.putQueryParameter("ClusterType", clusterType);

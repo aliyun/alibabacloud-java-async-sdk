@@ -114,11 +114,7 @@ public class GetAppMessageQueueRouteRequest extends Request {
         } 
 
         /**
-         * The language of the response. Valid values:
-         * <p>
-         * 
-         * *   zh: Chinese
-         * *   en: English
+         * 返回结果显示的语言。取值：zh（默认值）：中文，en：英文
          */
         public Builder acceptLanguage(String acceptLanguage) {
             this.putQueryParameter("AcceptLanguage", acceptLanguage);
@@ -127,7 +123,7 @@ public class GetAppMessageQueueRouteRequest extends Request {
         }
 
         /**
-         * The ID of the application.
+         * AppId.
          */
         public Builder appId(String appId) {
             this.putQueryParameter("AppId", appId);
@@ -154,14 +150,7 @@ public class GetAppMessageQueueRouteRequest extends Request {
         }
 
         /**
-         * The region where the instance resides. Examples:
-         * <p>
-         * 
-         * *   `cn-hangzhou`: China (Hangzhou)
-         * *   `cn-beijing`: China (Beijing)
-         * *   `cn-shanghai`: China (Shanghai)
-         * *   `cn-zhangjiakou`: China (Zhangjiakou)
-         * *   `cn-shenzhen`: China (Shenzhen)
+         * Region.
          */
         public Builder region(String region) {
             this.putQueryParameter("Region", region);

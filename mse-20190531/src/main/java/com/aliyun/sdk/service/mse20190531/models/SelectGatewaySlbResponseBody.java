@@ -98,7 +98,7 @@ public class SelectGatewaySlbResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * The status code returned.
+         * Code.
          */
         public Builder code(Integer code) {
             this.code = code;
@@ -106,7 +106,7 @@ public class SelectGatewaySlbResponseBody extends TeaModel {
         }
 
         /**
-         * The data structure.
+         * Data.
          */
         public Builder data(java.util.List < Data> data) {
             this.data = data;
@@ -114,7 +114,7 @@ public class SelectGatewaySlbResponseBody extends TeaModel {
         }
 
         /**
-         * The HTTP status code returned.
+         * HttpStatusCode.
          */
         public Builder httpStatusCode(Integer httpStatusCode) {
             this.httpStatusCode = httpStatusCode;
@@ -122,7 +122,7 @@ public class SelectGatewaySlbResponseBody extends TeaModel {
         }
 
         /**
-         * The message returned.
+         * Message.
          */
         public Builder message(String message) {
             this.message = message;
@@ -130,7 +130,7 @@ public class SelectGatewaySlbResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * Id of the request
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -138,11 +138,7 @@ public class SelectGatewaySlbResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether the request was successful. Valid values:
-         * <p>
-         * 
-         * *   `true`: The request was successful.
-         * *   `false`: The request failed.
+         * Success.
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -194,7 +190,7 @@ public class SelectGatewaySlbResponseBody extends TeaModel {
             private String slbName; 
 
             /**
-             * The ID of the SLB instance.
+             * SlbId.
              */
             public Builder slbId(String slbId) {
                 this.slbId = slbId;
@@ -202,7 +198,7 @@ public class SelectGatewaySlbResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the SLB instance.
+             * SlbName.
              */
             public Builder slbName(String slbName) {
                 this.slbName = slbName;

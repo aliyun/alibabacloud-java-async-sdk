@@ -68,11 +68,7 @@ public class ListEngineNamespacesRequest extends Request {
         } 
 
         /**
-         * The language of the response. Valid values:
-         * <p>
-         * 
-         * *   zh: Chinese
-         * *   en: English
+         * The HTTP status code.
          */
         public Builder acceptLanguage(String acceptLanguage) {
             this.putQueryParameter("AcceptLanguage", acceptLanguage);
@@ -81,7 +77,7 @@ public class ListEngineNamespacesRequest extends Request {
         }
 
         /**
-         * The ID of the instance.
+         * The data structure.
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);

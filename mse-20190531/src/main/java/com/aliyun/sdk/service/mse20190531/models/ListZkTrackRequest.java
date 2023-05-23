@@ -185,11 +185,7 @@ public class ListZkTrackRequest extends Request {
         } 
 
         /**
-         * The language of the response. Valid values:
-         * <p>
-         * 
-         * *   zh: Chinese
-         * *   en: English
+         * mse-100-001
          */
         public Builder acceptLanguage(String acceptLanguage) {
             this.putQueryParameter("AcceptLanguage", acceptLanguage);
@@ -198,7 +194,7 @@ public class ListZkTrackRequest extends Request {
         }
 
         /**
-         * The end timestamp. Unit: seconds.
+         * illegal request:%s
          */
         public Builder endTs(Long endTs) {
             this.putQueryParameter("EndTs", endTs);
@@ -207,7 +203,7 @@ public class ListZkTrackRequest extends Request {
         }
 
         /**
-         * The instance ID.
+         * duplicatedClusterAliasName
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -216,7 +212,7 @@ public class ListZkTrackRequest extends Request {
         }
 
         /**
-         * The number of the page to return.
+         * clusterNotFound
          */
         public Builder pageNum(Long pageNum) {
             this.putQueryParameter("PageNum", pageNum);
@@ -225,7 +221,7 @@ public class ListZkTrackRequest extends Request {
         }
 
         /**
-         * The number of entries to return on each page.
+         * mse-200-021
          */
         public Builder pageSize(Long pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -234,7 +230,7 @@ public class ListZkTrackRequest extends Request {
         }
 
         /**
-         * The path.
+         * duplicated cluster alias name
          */
         public Builder path(String path) {
             this.putQueryParameter("Path", path);
@@ -243,7 +239,7 @@ public class ListZkTrackRequest extends Request {
         }
 
         /**
-         * The request parameters.
+         * mse-200-105
          */
         public Builder requestPars(String requestPars) {
             this.putQueryParameter("RequestPars", requestPars);
@@ -252,7 +248,7 @@ public class ListZkTrackRequest extends Request {
         }
 
         /**
-         * Specifies whether to enable reverse ordering.
+         * cluster not found
          */
         public Builder reverse(Boolean reverse) {
             this.putQueryParameter("Reverse", reverse);
@@ -261,7 +257,7 @@ public class ListZkTrackRequest extends Request {
         }
 
         /**
-         * The session ID.
+         * mse-100-007
          */
         public Builder sessionId(String sessionId) {
             this.putQueryParameter("SessionId", sessionId);
@@ -270,7 +266,7 @@ public class ListZkTrackRequest extends Request {
         }
 
         /**
-         * The start timestamp. Unit: seconds.
+         * illegalRequest
          */
         public Builder startTs(Long startTs) {
             this.putQueryParameter("StartTs", startTs);

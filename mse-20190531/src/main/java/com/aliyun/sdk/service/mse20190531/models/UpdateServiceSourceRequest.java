@@ -180,11 +180,7 @@ public class UpdateServiceSourceRequest extends Request {
         } 
 
         /**
-         * The language of the response. Valid values:
-         * <p>
-         * 
-         * *   zh: Chinese
-         * *   en: English
+         * 返回结果显示的语言。取值：zh（默认值）：中文，en：英文
          */
         public Builder acceptLanguage(String acceptLanguage) {
             this.putQueryParameter("AcceptLanguage", acceptLanguage);
@@ -193,7 +189,7 @@ public class UpdateServiceSourceRequest extends Request {
         }
 
         /**
-         * The address.
+         * Address.
          */
         public Builder address(String address) {
             this.putQueryParameter("Address", address);
@@ -202,7 +198,7 @@ public class UpdateServiceSourceRequest extends Request {
         }
 
         /**
-         * The ID of the gateway.
+         * GatewayId.
          */
         public Builder gatewayId(Long gatewayId) {
             this.putQueryParameter("GatewayId", gatewayId);
@@ -211,7 +207,7 @@ public class UpdateServiceSourceRequest extends Request {
         }
 
         /**
-         * The unique ID of the gateway.
+         * GatewayUniqueId.
          */
         public Builder gatewayUniqueId(String gatewayUniqueId) {
             this.putQueryParameter("GatewayUniqueId", gatewayUniqueId);
@@ -220,7 +216,7 @@ public class UpdateServiceSourceRequest extends Request {
         }
 
         /**
-         * The ID of the service source.
+         * Id.
          */
         public Builder id(Long id) {
             this.putQueryParameter("Id", id);
@@ -229,7 +225,7 @@ public class UpdateServiceSourceRequest extends Request {
         }
 
         /**
-         * The configurations of Ingress resources.
+         * IngressOptionsRequest.
          */
         public Builder ingressOptionsRequest(IngressOptionsRequest ingressOptionsRequest) {
             String ingressOptionsRequestShrink = shrink(ingressOptionsRequest, "IngressOptionsRequest", "json");
@@ -239,7 +235,7 @@ public class UpdateServiceSourceRequest extends Request {
         }
 
         /**
-         * The name.
+         * Name.
          */
         public Builder name(String name) {
             this.putQueryParameter("Name", name);
@@ -248,7 +244,7 @@ public class UpdateServiceSourceRequest extends Request {
         }
 
         /**
-         * An array of service root paths.
+         * PathList.
          */
         public Builder pathList(java.util.List < String > pathList) {
             String pathListShrink = shrink(pathList, "PathList", "json");
@@ -258,11 +254,7 @@ public class UpdateServiceSourceRequest extends Request {
         }
 
         /**
-         * The service source. Valid values:
-         * <p>
-         * 
-         * *   K8S: ACK cluster
-         * *   MSE: Nacos instance
+         * Source.
          */
         public Builder source(String source) {
             this.putQueryParameter("Source", source);
@@ -271,11 +263,7 @@ public class UpdateServiceSourceRequest extends Request {
         }
 
         /**
-         * The type of the service source. Valid values:
-         * <p>
-         * 
-         * *   K8S: ACK cluster
-         * *   NACOS: Nacos instance
+         * Type.
          */
         public Builder type(String type) {
             this.putQueryParameter("Type", type);
@@ -353,7 +341,7 @@ public class UpdateServiceSourceRequest extends Request {
             private String watchNamespace; 
 
             /**
-             * Specifies whether to enable Ingress.
+             * EnableIngress.
              */
             public Builder enableIngress(Boolean enableIngress) {
                 this.enableIngress = enableIngress;
@@ -361,7 +349,7 @@ public class UpdateServiceSourceRequest extends Request {
             }
 
             /**
-             * Specifies whether to update the Ingress status.
+             * EnableStatus.
              */
             public Builder enableStatus(Boolean enableStatus) {
                 this.enableStatus = enableStatus;
@@ -369,7 +357,7 @@ public class UpdateServiceSourceRequest extends Request {
             }
 
             /**
-             * Specifies whether to monitor Ingress classes.
+             * IngressClass.
              */
             public Builder ingressClass(String ingressClass) {
                 this.ingressClass = ingressClass;
@@ -377,7 +365,7 @@ public class UpdateServiceSourceRequest extends Request {
             }
 
             /**
-             * The namespace whose resources you want to monitor.
+             * WatchNamespace.
              */
             public Builder watchNamespace(String watchNamespace) {
                 this.watchNamespace = watchNamespace;

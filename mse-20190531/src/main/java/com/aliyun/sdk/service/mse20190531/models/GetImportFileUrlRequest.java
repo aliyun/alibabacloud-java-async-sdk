@@ -97,11 +97,7 @@ public class GetImportFileUrlRequest extends Request {
         } 
 
         /**
-         * The language of the response. Valid values:
-         * <p>
-         * 
-         * *   zh: Chinese
-         * *   en: English
+         * The error code returned if the request failed.
          */
         public Builder acceptLanguage(String acceptLanguage) {
             this.putQueryParameter("AcceptLanguage", acceptLanguage);
@@ -110,7 +106,7 @@ public class GetImportFileUrlRequest extends Request {
         }
 
         /**
-         * The file type.
+         * ContentType.
          */
         public Builder contentType(String contentType) {
             this.putQueryParameter("ContentType", contentType);
@@ -119,7 +115,7 @@ public class GetImportFileUrlRequest extends Request {
         }
 
         /**
-         * The ID of the instance.
+         * InstanceId.
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -128,7 +124,7 @@ public class GetImportFileUrlRequest extends Request {
         }
 
         /**
-         * The ID of the namespace.
+         * NamespaceId.
          */
         public Builder namespaceId(String namespaceId) {
             this.putQueryParameter("NamespaceId", namespaceId);

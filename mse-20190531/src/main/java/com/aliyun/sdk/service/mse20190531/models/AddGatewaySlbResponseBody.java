@@ -98,46 +98,10 @@ public class AddGatewaySlbResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * The response code returned.
+         * The request is successfully processed.
          */
         public Builder code(Integer code) {
             this.code = code;
-            return this;
-        }
-
-        /**
-         * The data returned.
-         */
-        public Builder data(String data) {
-            this.data = data;
-            return this;
-        }
-
-        /**
-         * The HTTP status code returned.
-         */
-        public Builder httpStatusCode(Integer httpStatusCode) {
-            this.httpStatusCode = httpStatusCode;
-            return this;
-        }
-
-        /**
-         * The message returned.
-         * <p>
-         * 
-         * *   If the request is successful, a success message is returned.
-         * *   If the request fails, an error message is returned.
-         */
-        public Builder message(String message) {
-            this.message = message;
-            return this;
-        }
-
-        /**
-         * The ID of the request.
-         */
-        public Builder requestId(String requestId) {
-            this.requestId = requestId;
             return this;
         }
 
@@ -147,6 +111,38 @@ public class AddGatewaySlbResponseBody extends TeaModel {
          * 
          * *   `true`: The request was successful.
          * *   `false`: The request failed.
+         */
+        public Builder data(String data) {
+            this.data = data;
+            return this;
+        }
+
+        /**
+         * The ID of the request.
+         */
+        public Builder httpStatusCode(Integer httpStatusCode) {
+            this.httpStatusCode = httpStatusCode;
+            return this;
+        }
+
+        /**
+         * The HTTP status code returned.
+         */
+        public Builder message(String message) {
+            this.message = message;
+            return this;
+        }
+
+        /**
+         * Schema of Response
+         */
+        public Builder requestId(String requestId) {
+            this.requestId = requestId;
+            return this;
+        }
+
+        /**
+         * The response code returned.
          */
         public Builder success(Boolean success) {
             this.success = success;

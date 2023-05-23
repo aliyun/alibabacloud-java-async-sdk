@@ -171,11 +171,7 @@ public class ApplyTagPoliciesRequest extends Request {
         } 
 
         /**
-         * The language of the response. Valid values:
-         * <p>
-         * 
-         * *   zh: Chinese
-         * *   en: English
+         * 返回结果显示的语言。取值：zh（默认值）：中文，en：英文
          */
         public Builder acceptLanguage(String acceptLanguage) {
             this.putQueryParameter("AcceptLanguage", acceptLanguage);
@@ -184,7 +180,7 @@ public class ApplyTagPoliciesRequest extends Request {
         }
 
         /**
-         * The ID of the application.
+         * AppId.
          */
         public Builder appId(String appId) {
             this.putQueryParameter("AppId", appId);
@@ -202,7 +198,7 @@ public class ApplyTagPoliciesRequest extends Request {
         }
 
         /**
-         * Specifies whether to enable the routing rule.
+         * Enable.
          */
         public Builder enable(Boolean enable) {
             this.putQueryParameter("Enable", enable);
@@ -220,7 +216,7 @@ public class ApplyTagPoliciesRequest extends Request {
         }
 
         /**
-         * Optional. The ID of the namespace.
+         * NamespaceId.
          */
         public Builder namespaceId(String namespaceId) {
             this.putQueryParameter("NamespaceId", namespaceId);
@@ -229,7 +225,7 @@ public class ApplyTagPoliciesRequest extends Request {
         }
 
         /**
-         * The region ID.
+         * Region.
          */
         public Builder region(String region) {
             this.putQueryParameter("Region", region);
@@ -238,7 +234,7 @@ public class ApplyTagPoliciesRequest extends Request {
         }
 
         /**
-         * The details of the routing rule.
+         * Rules.
          */
         public Builder rules(String rules) {
             this.putQueryParameter("Rules", rules);
@@ -247,7 +243,7 @@ public class ApplyTagPoliciesRequest extends Request {
         }
 
         /**
-         * The service source.
+         * Source.
          */
         public Builder source(String source) {
             this.putQueryParameter("Source", source);

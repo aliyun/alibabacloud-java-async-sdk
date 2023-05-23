@@ -98,7 +98,7 @@ public class ListSecurityGroupRuleResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * The status code returned.
+         * Code.
          */
         public Builder code(Integer code) {
             this.code = code;
@@ -106,7 +106,7 @@ public class ListSecurityGroupRuleResponseBody extends TeaModel {
         }
 
         /**
-         * The returned data.
+         * Data.
          */
         public Builder data(java.util.List < Data> data) {
             this.data = data;
@@ -114,7 +114,7 @@ public class ListSecurityGroupRuleResponseBody extends TeaModel {
         }
 
         /**
-         * The HTTP status code returned.
+         * HttpStatusCode.
          */
         public Builder httpStatusCode(Integer httpStatusCode) {
             this.httpStatusCode = httpStatusCode;
@@ -122,7 +122,7 @@ public class ListSecurityGroupRuleResponseBody extends TeaModel {
         }
 
         /**
-         * The message returned.
+         * Message.
          */
         public Builder message(String message) {
             this.message = message;
@@ -130,7 +130,7 @@ public class ListSecurityGroupRuleResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * Id of the request
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -138,11 +138,7 @@ public class ListSecurityGroupRuleResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether the request was successful. Valid values:
-         * <p>
-         * 
-         * *   `true`: The request was successful.
-         * *   `false`: The request failed.
+         * Success.
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -278,7 +274,7 @@ public class ListSecurityGroupRuleResponseBody extends TeaModel {
             private String securityGroupId; 
 
             /**
-             * The description of the rule.
+             * Description.
              */
             public Builder description(String description) {
                 this.description = description;
@@ -286,7 +282,7 @@ public class ListSecurityGroupRuleResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the gateway.
+             * GatewayId.
              */
             public Builder gatewayId(Long gatewayId) {
                 this.gatewayId = gatewayId;
@@ -294,7 +290,7 @@ public class ListSecurityGroupRuleResponseBody extends TeaModel {
             }
 
             /**
-             * The unique ID of the gateway.
+             * GatewayUniqueId.
              */
             public Builder gatewayUniqueId(String gatewayUniqueId) {
                 this.gatewayUniqueId = gatewayUniqueId;
@@ -302,7 +298,7 @@ public class ListSecurityGroupRuleResponseBody extends TeaModel {
             }
 
             /**
-             * The creation time.
+             * GmtCreate.
              */
             public Builder gmtCreate(String gmtCreate) {
                 this.gmtCreate = gmtCreate;
@@ -310,7 +306,7 @@ public class ListSecurityGroupRuleResponseBody extends TeaModel {
             }
 
             /**
-             * The last modification time.
+             * GmtModified.
              */
             public Builder gmtModified(String gmtModified) {
                 this.gmtModified = gmtModified;
@@ -318,7 +314,7 @@ public class ListSecurityGroupRuleResponseBody extends TeaModel {
             }
 
             /**
-             * The ID.
+             * Id.
              */
             public Builder id(String id) {
                 this.id = id;
@@ -326,7 +322,7 @@ public class ListSecurityGroupRuleResponseBody extends TeaModel {
             }
 
             /**
-             * The protocol type.
+             * IpProtocol.
              */
             public Builder ipProtocol(String ipProtocol) {
                 this.ipProtocol = ipProtocol;
@@ -334,7 +330,7 @@ public class ListSecurityGroupRuleResponseBody extends TeaModel {
             }
 
             /**
-             * The port range.
+             * PortRange.
              */
             public Builder portRange(String portRange) {
                 this.portRange = portRange;
@@ -342,7 +338,7 @@ public class ListSecurityGroupRuleResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the security group.
+             * SecurityGroupId.
              */
             public Builder securityGroupId(String securityGroupId) {
                 this.securityGroupId = securityGroupId;

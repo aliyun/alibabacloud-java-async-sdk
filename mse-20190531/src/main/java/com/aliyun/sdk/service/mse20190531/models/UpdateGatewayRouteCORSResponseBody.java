@@ -98,7 +98,7 @@ public class UpdateGatewayRouteCORSResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * The status code returned.
+         * Code.
          */
         public Builder code(Integer code) {
             this.code = code;
@@ -106,7 +106,7 @@ public class UpdateGatewayRouteCORSResponseBody extends TeaModel {
         }
 
         /**
-         * The data structure.
+         * Data.
          */
         public Builder data(Long data) {
             this.data = data;
@@ -114,7 +114,7 @@ public class UpdateGatewayRouteCORSResponseBody extends TeaModel {
         }
 
         /**
-         * The HTTP status code returned.
+         * HttpStatusCode.
          */
         public Builder httpStatusCode(Integer httpStatusCode) {
             this.httpStatusCode = httpStatusCode;
@@ -122,7 +122,7 @@ public class UpdateGatewayRouteCORSResponseBody extends TeaModel {
         }
 
         /**
-         * The error message.
+         * Message.
          */
         public Builder message(String message) {
             this.message = message;
@@ -138,11 +138,7 @@ public class UpdateGatewayRouteCORSResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether the request was successful. Valid values:
-         * <p>
-         * 
-         * *   `true`: The request was successful.
-         * *   `false`: The request failed.
+         * Success.
          */
         public Builder success(Boolean success) {
             this.success = success;

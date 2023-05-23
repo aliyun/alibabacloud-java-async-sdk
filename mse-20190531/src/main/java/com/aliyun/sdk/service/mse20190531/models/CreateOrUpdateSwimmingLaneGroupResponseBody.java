@@ -18,9 +18,6 @@ public class CreateOrUpdateSwimmingLaneGroupResponseBody extends TeaModel {
     @NameInMap("Data")
     private Data data;
 
-    @NameInMap("DynamicMessage")
-    private String dynamicMessage;
-
     @NameInMap("ErrorCode")
     private String errorCode;
 
@@ -39,7 +36,6 @@ public class CreateOrUpdateSwimmingLaneGroupResponseBody extends TeaModel {
     private CreateOrUpdateSwimmingLaneGroupResponseBody(Builder builder) {
         this.code = builder.code;
         this.data = builder.data;
-        this.dynamicMessage = builder.dynamicMessage;
         this.errorCode = builder.errorCode;
         this.httpStatusCode = builder.httpStatusCode;
         this.message = builder.message;
@@ -67,13 +63,6 @@ public class CreateOrUpdateSwimmingLaneGroupResponseBody extends TeaModel {
      */
     public Data getData() {
         return this.data;
-    }
-
-    /**
-     * @return dynamicMessage
-     */
-    public String getDynamicMessage() {
-        return this.dynamicMessage;
     }
 
     /**
@@ -114,7 +103,6 @@ public class CreateOrUpdateSwimmingLaneGroupResponseBody extends TeaModel {
     public static final class Builder {
         private Integer code; 
         private Data data; 
-        private String dynamicMessage; 
         private String errorCode; 
         private Integer httpStatusCode; 
         private String message; 
@@ -122,7 +110,7 @@ public class CreateOrUpdateSwimmingLaneGroupResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * The status code. The value 200 is returned if the request is successful.
+         * code仅仅用来和success同步
          */
         public Builder code(Integer code) {
             this.code = code;
@@ -130,7 +118,7 @@ public class CreateOrUpdateSwimmingLaneGroupResponseBody extends TeaModel {
         }
 
         /**
-         * The details of the data.
+         * Data.
          */
         public Builder data(Data data) {
             this.data = data;
@@ -138,15 +126,7 @@ public class CreateOrUpdateSwimmingLaneGroupResponseBody extends TeaModel {
         }
 
         /**
-         * The dynamic part in the error message.
-         */
-        public Builder dynamicMessage(String dynamicMessage) {
-            this.dynamicMessage = dynamicMessage;
-            return this;
-        }
-
-        /**
-         * The error code returned if the request failed.
+         * ErrorCode.
          */
         public Builder errorCode(String errorCode) {
             this.errorCode = errorCode;
@@ -154,7 +134,7 @@ public class CreateOrUpdateSwimmingLaneGroupResponseBody extends TeaModel {
         }
 
         /**
-         * The HTTP status code returned.
+         * HttpStatusCode.
          */
         public Builder httpStatusCode(Integer httpStatusCode) {
             this.httpStatusCode = httpStatusCode;
@@ -162,7 +142,7 @@ public class CreateOrUpdateSwimmingLaneGroupResponseBody extends TeaModel {
         }
 
         /**
-         * The message returned.
+         * Message.
          */
         public Builder message(String message) {
             this.message = message;
@@ -170,7 +150,7 @@ public class CreateOrUpdateSwimmingLaneGroupResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * RequestId.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -178,10 +158,7 @@ public class CreateOrUpdateSwimmingLaneGroupResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether the request was successful. Valid values:
-         * <p>
-         * 
-         * true: The request was successful. false: The request failed.
+         * Success.
          */
         public Builder success(Boolean success) {
             this.success = success;

@@ -33,20 +33,8 @@ public class CreateOrUpdateSwimmingLaneGroupRequest extends Request {
     private String entryApp;
 
     @Query
-    @NameInMap("GmtCreate")
-    private String gmtCreate;
-
-    @Query
-    @NameInMap("GmtModified")
-    private String gmtModified;
-
-    @Query
     @NameInMap("Id")
     private Long id;
-
-    @Query
-    @NameInMap("LicenseKey")
-    private String licenseKey;
 
     @Query
     @NameInMap("MessageQueueFilterSide")
@@ -75,16 +63,8 @@ public class CreateOrUpdateSwimmingLaneGroupRequest extends Request {
     private String region;
 
     @Query
-    @NameInMap("Source")
-    private String source;
-
-    @Query
     @NameInMap("Status")
     private Integer status;
-
-    @Query
-    @NameInMap("UserId")
-    private String userId;
 
     private CreateOrUpdateSwimmingLaneGroupRequest(Builder builder) {
         super(builder);
@@ -93,19 +73,14 @@ public class CreateOrUpdateSwimmingLaneGroupRequest extends Request {
         this.dbGrayEnable = builder.dbGrayEnable;
         this.enable = builder.enable;
         this.entryApp = builder.entryApp;
-        this.gmtCreate = builder.gmtCreate;
-        this.gmtModified = builder.gmtModified;
         this.id = builder.id;
-        this.licenseKey = builder.licenseKey;
         this.messageQueueFilterSide = builder.messageQueueFilterSide;
         this.messageQueueGrayEnable = builder.messageQueueGrayEnable;
         this.name = builder.name;
         this.namespace = builder.namespace;
         this.recordCanaryDetail = builder.recordCanaryDetail;
         this.region = builder.region;
-        this.source = builder.source;
         this.status = builder.status;
-        this.userId = builder.userId;
     }
 
     public static Builder builder() {
@@ -157,31 +132,10 @@ public class CreateOrUpdateSwimmingLaneGroupRequest extends Request {
     }
 
     /**
-     * @return gmtCreate
-     */
-    public String getGmtCreate() {
-        return this.gmtCreate;
-    }
-
-    /**
-     * @return gmtModified
-     */
-    public String getGmtModified() {
-        return this.gmtModified;
-    }
-
-    /**
      * @return id
      */
     public Long getId() {
         return this.id;
-    }
-
-    /**
-     * @return licenseKey
-     */
-    public String getLicenseKey() {
-        return this.licenseKey;
     }
 
     /**
@@ -227,24 +181,10 @@ public class CreateOrUpdateSwimmingLaneGroupRequest extends Request {
     }
 
     /**
-     * @return source
-     */
-    public String getSource() {
-        return this.source;
-    }
-
-    /**
      * @return status
      */
     public Integer getStatus() {
         return this.status;
-    }
-
-    /**
-     * @return userId
-     */
-    public String getUserId() {
-        return this.userId;
     }
 
     public static final class Builder extends Request.Builder<CreateOrUpdateSwimmingLaneGroupRequest, Builder> {
@@ -253,19 +193,14 @@ public class CreateOrUpdateSwimmingLaneGroupRequest extends Request {
         private Boolean dbGrayEnable; 
         private Boolean enable; 
         private String entryApp; 
-        private String gmtCreate; 
-        private String gmtModified; 
         private Long id; 
-        private String licenseKey; 
         private String messageQueueFilterSide; 
         private Boolean messageQueueGrayEnable; 
         private String name; 
         private String namespace; 
         private Boolean recordCanaryDetail; 
         private String region; 
-        private String source; 
         private Integer status; 
-        private String userId; 
 
         private Builder() {
             super();
@@ -278,27 +213,18 @@ public class CreateOrUpdateSwimmingLaneGroupRequest extends Request {
             this.dbGrayEnable = request.dbGrayEnable;
             this.enable = request.enable;
             this.entryApp = request.entryApp;
-            this.gmtCreate = request.gmtCreate;
-            this.gmtModified = request.gmtModified;
             this.id = request.id;
-            this.licenseKey = request.licenseKey;
             this.messageQueueFilterSide = request.messageQueueFilterSide;
             this.messageQueueGrayEnable = request.messageQueueGrayEnable;
             this.name = request.name;
             this.namespace = request.namespace;
             this.recordCanaryDetail = request.recordCanaryDetail;
             this.region = request.region;
-            this.source = request.source;
             this.status = request.status;
-            this.userId = request.userId;
         } 
 
         /**
-         * The language of the response. Valid values:
-         * <p>
-         * 
-         * *   zh: Chinese
-         * *   en: English
+         * 返回结果显示的语言。取值：zh（默认值）：中文，en：英文
          */
         public Builder acceptLanguage(String acceptLanguage) {
             this.putQueryParameter("AcceptLanguage", acceptLanguage);
@@ -307,7 +233,7 @@ public class CreateOrUpdateSwimmingLaneGroupRequest extends Request {
         }
 
         /**
-         * The IDs of applications. Separate application IDs with commas (,).
+         * 应用集合。以 "," 分割应用 id
          */
         public Builder appIds(String appIds) {
             this.putQueryParameter("AppIds", appIds);
@@ -316,7 +242,7 @@ public class CreateOrUpdateSwimmingLaneGroupRequest extends Request {
         }
 
         /**
-         * Specifies whether to enable database canary release.
+         * 是否开启数据库灰度
          */
         public Builder dbGrayEnable(Boolean dbGrayEnable) {
             this.putQueryParameter("DbGrayEnable", dbGrayEnable);
@@ -325,7 +251,7 @@ public class CreateOrUpdateSwimmingLaneGroupRequest extends Request {
         }
 
         /**
-         * Specifies whether to enable a lane group.
+         * 是否开启。
          */
         public Builder enable(Boolean enable) {
             this.putQueryParameter("Enable", enable);
@@ -334,7 +260,7 @@ public class CreateOrUpdateSwimmingLaneGroupRequest extends Request {
         }
 
         /**
-         * The ingress application.
+         * 入口应用。格式 "来源系统:id"，比如 EDAS:UUID 或者 CSB:UUID
          */
         public Builder entryApp(String entryApp) {
             this.putQueryParameter("EntryApp", entryApp);
@@ -343,25 +269,7 @@ public class CreateOrUpdateSwimmingLaneGroupRequest extends Request {
         }
 
         /**
-         * The creation time.
-         */
-        public Builder gmtCreate(String gmtCreate) {
-            this.putQueryParameter("GmtCreate", gmtCreate);
-            this.gmtCreate = gmtCreate;
-            return this;
-        }
-
-        /**
-         * The update time.
-         */
-        public Builder gmtModified(String gmtModified) {
-            this.putQueryParameter("GmtModified", gmtModified);
-            this.gmtModified = gmtModified;
-            return this;
-        }
-
-        /**
-         * The ID of the primary key. The primary key is auto-increment.
+         * 主键ID。由SP生成(数据库自增主键)。
          */
         public Builder id(Long id) {
             this.putQueryParameter("Id", id);
@@ -370,16 +278,7 @@ public class CreateOrUpdateSwimmingLaneGroupRequest extends Request {
         }
 
         /**
-         * The license key in use.
-         */
-        public Builder licenseKey(String licenseKey) {
-            this.putQueryParameter("LicenseKey", licenseKey);
-            this.licenseKey = licenseKey;
-            return this;
-        }
-
-        /**
-         * The side for message filtering when the canary release for messaging feature is enabled.
+         * 消息灰度过滤侧
          */
         public Builder messageQueueFilterSide(String messageQueueFilterSide) {
             this.putQueryParameter("MessageQueueFilterSide", messageQueueFilterSide);
@@ -388,7 +287,7 @@ public class CreateOrUpdateSwimmingLaneGroupRequest extends Request {
         }
 
         /**
-         * Specifies whether to enable canary release for messaging.
+         * 是否开启消息灰度
          */
         public Builder messageQueueGrayEnable(Boolean messageQueueGrayEnable) {
             this.putQueryParameter("MessageQueueGrayEnable", messageQueueGrayEnable);
@@ -397,7 +296,7 @@ public class CreateOrUpdateSwimmingLaneGroupRequest extends Request {
         }
 
         /**
-         * The name.
+         * 名称
          */
         public Builder name(String name) {
             this.putQueryParameter("Name", name);
@@ -415,7 +314,7 @@ public class CreateOrUpdateSwimmingLaneGroupRequest extends Request {
         }
 
         /**
-         * 是否开启记录请求详情
+         * 是否开启记录请求详情。
          */
         public Builder recordCanaryDetail(Boolean recordCanaryDetail) {
             this.putQueryParameter("RecordCanaryDetail", recordCanaryDetail);
@@ -424,7 +323,7 @@ public class CreateOrUpdateSwimmingLaneGroupRequest extends Request {
         }
 
         /**
-         * The region ID.
+         * region
          */
         public Builder region(String region) {
             this.putQueryParameter("Region", region);
@@ -433,29 +332,11 @@ public class CreateOrUpdateSwimmingLaneGroupRequest extends Request {
         }
 
         /**
-         * The service source. Valid value: edasmsc.
-         */
-        public Builder source(String source) {
-            this.putQueryParameter("Source", source);
-            this.source = source;
-            return this;
-        }
-
-        /**
-         * The status of the lane group. The value 0 specifies that the lane group is disabled. The value 1 specifies that the lane group is enabled.
+         * 0 未生效
          */
         public Builder status(Integer status) {
             this.putQueryParameter("Status", status);
             this.status = status;
-            return this;
-        }
-
-        /**
-         * The Alibaba Cloud account. The value is a number, such as 136246\*\*\*\*\*\*809. You can leave this parameter empty.
-         */
-        public Builder userId(String userId) {
-            this.putQueryParameter("UserId", userId);
-            this.userId = userId;
             return this;
         }
 

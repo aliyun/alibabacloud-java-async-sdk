@@ -98,7 +98,7 @@ public class UpdateNacosServiceResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * The response code returned.
+         * The protection threshold.
          */
         public Builder code(Integer code) {
             this.code = code;
@@ -106,7 +106,7 @@ public class UpdateNacosServiceResponseBody extends TeaModel {
         }
 
         /**
-         * The details of the data.
+         * The ID of the namespace.
          */
         public Builder data(String data) {
             this.data = data;
@@ -114,7 +114,7 @@ public class UpdateNacosServiceResponseBody extends TeaModel {
         }
 
         /**
-         * The HTTP status code returned.
+         * The name of the group.
          */
         public Builder httpStatusCode(Integer httpStatusCode) {
             this.httpStatusCode = httpStatusCode;
@@ -122,7 +122,11 @@ public class UpdateNacosServiceResponseBody extends TeaModel {
         }
 
         /**
-         * The returned message.
+         * The language of the response. Valid values:
+         * <p>
+         * 
+         * *   zh: Chinese
+         * *   en: English
          */
         public Builder message(String message) {
             this.message = message;
@@ -130,7 +134,7 @@ public class UpdateNacosServiceResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * The name of the service.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -138,11 +142,10 @@ public class UpdateNacosServiceResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether the request was successful. Valid values:
+         * The ID of the cluster.
          * <p>
          * 
-         * *   `true`: The request was successful.
-         * *   `false`: The request failed.
+         * > This operation contains both the InstanceId and ClusterId parameters. You must specify one of them.
          */
         public Builder success(Boolean success) {
             this.success = success;

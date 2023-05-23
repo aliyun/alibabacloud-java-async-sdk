@@ -22,6 +22,10 @@ public class GetKubernetesSourceRequest extends Request {
     private String gatewayUniqueId;
 
     @Query
+    @NameInMap("IsAll")
+    private Boolean isAll;
+
+    @Query
     @NameInMap("VpcId")
     private String vpcId;
 
@@ -29,6 +33,7 @@ public class GetKubernetesSourceRequest extends Request {
         super(builder);
         this.acceptLanguage = builder.acceptLanguage;
         this.gatewayUniqueId = builder.gatewayUniqueId;
+        this.isAll = builder.isAll;
         this.vpcId = builder.vpcId;
     }
 
@@ -60,6 +65,13 @@ public class GetKubernetesSourceRequest extends Request {
     }
 
     /**
+     * @return isAll
+     */
+    public Boolean getIsAll() {
+        return this.isAll;
+    }
+
+    /**
      * @return vpcId
      */
     public String getVpcId() {
@@ -69,6 +81,7 @@ public class GetKubernetesSourceRequest extends Request {
     public static final class Builder extends Request.Builder<GetKubernetesSourceRequest, Builder> {
         private String acceptLanguage; 
         private String gatewayUniqueId; 
+        private Boolean isAll; 
         private String vpcId; 
 
         private Builder() {
@@ -79,15 +92,12 @@ public class GetKubernetesSourceRequest extends Request {
             super(request);
             this.acceptLanguage = request.acceptLanguage;
             this.gatewayUniqueId = request.gatewayUniqueId;
+            this.isAll = request.isAll;
             this.vpcId = request.vpcId;
         } 
 
         /**
-         * The language of the response. Valid values:
-         * <p>
-         * 
-         * *   zh: Chinese
-         * *   en: English
+         * 返回结果显示的语言。取值：zh（默认值）：中文，en：英文
          */
         public Builder acceptLanguage(String acceptLanguage) {
             this.putQueryParameter("AcceptLanguage", acceptLanguage);
@@ -96,7 +106,7 @@ public class GetKubernetesSourceRequest extends Request {
         }
 
         /**
-         * The unique ID of the gateway.
+         * GatewayUniqueId.
          */
         public Builder gatewayUniqueId(String gatewayUniqueId) {
             this.putQueryParameter("GatewayUniqueId", gatewayUniqueId);
@@ -105,7 +115,16 @@ public class GetKubernetesSourceRequest extends Request {
         }
 
         /**
-         * The ID of the virtual private cloud (VPC).
+         * IsAll.
+         */
+        public Builder isAll(Boolean isAll) {
+            this.putQueryParameter("IsAll", isAll);
+            this.isAll = isAll;
+            return this;
+        }
+
+        /**
+         * VpcId.
          */
         public Builder vpcId(String vpcId) {
             this.putQueryParameter("VpcId", vpcId);

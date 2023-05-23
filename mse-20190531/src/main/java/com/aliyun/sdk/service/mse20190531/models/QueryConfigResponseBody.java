@@ -98,7 +98,7 @@ public class QueryConfigResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * The status code returned.
+         * Code.
          */
         public Builder code(Integer code) {
             this.code = code;
@@ -106,7 +106,7 @@ public class QueryConfigResponseBody extends TeaModel {
         }
 
         /**
-         * The details of the data.
+         * Data.
          */
         public Builder data(Data data) {
             this.data = data;
@@ -114,7 +114,7 @@ public class QueryConfigResponseBody extends TeaModel {
         }
 
         /**
-         * The HTTP status code returned.
+         * HttpStatusCode.
          */
         public Builder httpStatusCode(Integer httpStatusCode) {
             this.httpStatusCode = httpStatusCode;
@@ -122,7 +122,7 @@ public class QueryConfigResponseBody extends TeaModel {
         }
 
         /**
-         * The message returned.
+         * Message.
          */
         public Builder message(String message) {
             this.message = message;
@@ -130,7 +130,7 @@ public class QueryConfigResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * RequestId.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -138,11 +138,7 @@ public class QueryConfigResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether the request was successful. Valid values:
-         * <p>
-         * 
-         * *   `true`: The request was successful.
-         * *   `false`: The request failed.
+         * Success.
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -182,7 +178,7 @@ public class QueryConfigResponseBody extends TeaModel {
             private Boolean emptyProtect; 
 
             /**
-             * Indicates whether empty list protection is enabled.
+             * emptyProtect.
              */
             public Builder emptyProtect(Boolean emptyProtect) {
                 this.emptyProtect = emptyProtect;
@@ -278,6 +274,9 @@ public class QueryConfigResponseBody extends TeaModel {
         @NameInMap("SyncLimit")
         private String syncLimit;
 
+        @NameInMap("TLSEnabled")
+        private Boolean TLSEnabled;
+
         @NameInMap("TickTime")
         private String tickTime;
 
@@ -312,6 +311,7 @@ public class QueryConfigResponseBody extends TeaModel {
             this.restartFlag = builder.restartFlag;
             this.snapshotCount = builder.snapshotCount;
             this.syncLimit = builder.syncLimit;
+            this.TLSEnabled = builder.TLSEnabled;
             this.tickTime = builder.tickTime;
             this.userName = builder.userName;
         }
@@ -514,6 +514,13 @@ public class QueryConfigResponseBody extends TeaModel {
         }
 
         /**
+         * @return TLSEnabled
+         */
+        public Boolean getTLSEnabled() {
+            return this.TLSEnabled;
+        }
+
+        /**
          * @return tickTime
          */
         public String getTickTime() {
@@ -555,11 +562,12 @@ public class QueryConfigResponseBody extends TeaModel {
             private Boolean restartFlag; 
             private String snapshotCount; 
             private String syncLimit; 
+            private Boolean TLSEnabled; 
             private String tickTime; 
             private String userName; 
 
             /**
-             * A reserved parameter.
+             * AutopurgePurgeInterval.
              */
             public Builder autopurgePurgeInterval(String autopurgePurgeInterval) {
                 this.autopurgePurgeInterval = autopurgePurgeInterval;
@@ -567,7 +575,7 @@ public class QueryConfigResponseBody extends TeaModel {
             }
 
             /**
-             * A reserved parameter.
+             * AutopurgeSnapRetainCount.
              */
             public Builder autopurgeSnapRetainCount(String autopurgeSnapRetainCount) {
                 this.autopurgeSnapRetainCount = autopurgeSnapRetainCount;
@@ -575,7 +583,7 @@ public class QueryConfigResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the instance.
+             * ClusterName.
              */
             public Builder clusterName(String clusterName) {
                 this.clusterName = clusterName;
@@ -583,11 +591,7 @@ public class QueryConfigResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether RAM authorization of a configuration center is enabled. This parameter is valid for Nacos instances. Valid values:
-             * <p>
-             * 
-             * *   `true`: enabled
-             * *   `false`: disabled
+             * ConfigAuthEnabled.
              */
             public Builder configAuthEnabled(Boolean configAuthEnabled) {
                 this.configAuthEnabled = configAuthEnabled;
@@ -595,11 +599,7 @@ public class QueryConfigResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether RAM authorization is supported by a configuration center of the instance. This parameter is valid for Nacos instances. Valid values:
-             * <p>
-             * 
-             * *   `true`: supported
-             * *   `false`: not supported
+             * ConfigAuthSupported.
              */
             public Builder configAuthSupported(Boolean configAuthSupported) {
                 this.configAuthSupported = configAuthSupported;
@@ -607,7 +607,7 @@ public class QueryConfigResponseBody extends TeaModel {
             }
 
             /**
-             * The maximum size of a configuration. Unit: KB.
+             * ConfigContentLimit.
              */
             public Builder configContentLimit(Long configContentLimit) {
                 this.configContentLimit = configContentLimit;
@@ -615,11 +615,7 @@ public class QueryConfigResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether configuration encryption of a configuration center is enabled by the instance. This parameter is valid for Nacos instances. Valid values:
-             * <p>
-             * 
-             * *   `true`: enabled
-             * *   `false`: disabled
+             * ConfigSecretEnabled.
              */
             public Builder configSecretEnabled(Boolean configSecretEnabled) {
                 this.configSecretEnabled = configSecretEnabled;
@@ -627,11 +623,7 @@ public class QueryConfigResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether configuration encryption of a configuration center is supported by the instance. This parameter is valid for Nacos instances. Valid values:
-             * <p>
-             * 
-             * *   `true`: supported
-             * *   `false`: not supported
+             * ConfigSecretSupported.
              */
             public Builder configSecretSupported(Boolean configSecretSupported) {
                 this.configSecretSupported = configSecretSupported;
@@ -647,7 +639,7 @@ public class QueryConfigResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether the time to live (TTL) configuration is enabled. This parameter is valid for ZooKeeper instances.
+             * ExtendedTypesEnable.
              */
             public Builder extendedTypesEnable(Boolean extendedTypesEnable) {
                 this.extendedTypesEnable = extendedTypesEnable;
@@ -655,7 +647,7 @@ public class QueryConfigResponseBody extends TeaModel {
             }
 
             /**
-             * The maximum connection duration of the instance. Unit: seconds. This parameter is valid for ZooKeeper instances.
+             * InitLimit.
              */
             public Builder initLimit(String initLimit) {
                 this.initLimit = initLimit;
@@ -663,7 +655,7 @@ public class QueryConfigResponseBody extends TeaModel {
             }
 
             /**
-             * The maximum amount of data on each node. This parameter is valid for ZooKeeper instances. Unit: bytes.
+             * JuteMaxbuffer.
              */
             public Builder juteMaxbuffer(String juteMaxbuffer) {
                 this.juteMaxbuffer = juteMaxbuffer;
@@ -671,7 +663,7 @@ public class QueryConfigResponseBody extends TeaModel {
             }
 
             /**
-             * A reserved parameter.
+             * JvmFlagsCustom.
              */
             public Builder jvmFlagsCustom(String jvmFlagsCustom) {
                 this.jvmFlagsCustom = jvmFlagsCustom;
@@ -679,11 +671,7 @@ public class QueryConfigResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether Mesh Configuration Protocol (MCP) is enabled. This parameter is valid for Nacos instances. Valid values:
-             * <p>
-             * 
-             * *   `true`: enabled
-             * *   `false`: disabled
+             * MCPEnabled.
              */
             public Builder MCPEnabled(Boolean MCPEnabled) {
                 this.MCPEnabled = MCPEnabled;
@@ -691,11 +679,7 @@ public class QueryConfigResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether MCP is supported. This parameter is valid for Nacos instances. Valid values:
-             * <p>
-             * 
-             * *   `true`: supported
-             * *   `false`: not supported
+             * MCPSupported.
              */
             public Builder MCPSupported(Boolean MCPSupported) {
                 this.MCPSupported = MCPSupported;
@@ -703,9 +687,7 @@ public class QueryConfigResponseBody extends TeaModel {
             }
 
             /**
-             * The number of connections between a client and a server. This parameter is valid for ZooKeeper instances.\
-             * <p>
-             * If this parameter is set to 0, no limits are imposed on the number of connections.
+             * MaxClientCnxns.
              */
             public Builder maxClientCnxns(String maxClientCnxns) {
                 this.maxClientCnxns = maxClientCnxns;
@@ -713,7 +695,7 @@ public class QueryConfigResponseBody extends TeaModel {
             }
 
             /**
-             * The maximum timeout period. This parameter is valid for ZooKeeper instances.
+             * 最大超时时间
              */
             public Builder maxSessionTimeout(String maxSessionTimeout) {
                 this.maxSessionTimeout = maxSessionTimeout;
@@ -721,7 +703,7 @@ public class QueryConfigResponseBody extends TeaModel {
             }
 
             /**
-             * The minimum timeout period. This parameter is valid for ZooKeeper instances.
+             * 最小超时时间
              */
             public Builder minSessionTimeout(String minSessionTimeout) {
                 this.minSessionTimeout = minSessionTimeout;
@@ -729,7 +711,7 @@ public class QueryConfigResponseBody extends TeaModel {
             }
 
             /**
-             * The runtime configuration of the Nacos instance.
+             * NacosRunningEnv.
              */
             public Builder nacosRunningEnv(NacosRunningEnv nacosRunningEnv) {
                 this.nacosRunningEnv = nacosRunningEnv;
@@ -737,11 +719,7 @@ public class QueryConfigResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether RAM authorization of a registry is enabled. This parameter is valid for Nacos instances. Valid values:
-             * <p>
-             * 
-             * *   `true`: enabled
-             * *   `false`: disabled
+             * NamingAuthEnabled.
              */
             public Builder namingAuthEnabled(Boolean namingAuthEnabled) {
                 this.namingAuthEnabled = namingAuthEnabled;
@@ -749,11 +727,7 @@ public class QueryConfigResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether RAM authorization of services is supported by the instance. This parameter is valid for Nacos instances. Valid values:
-             * <p>
-             * 
-             * *   `true`: supported
-             * *   `false`: not supported
+             * NamingAuthSupported.
              */
             public Builder namingAuthSupported(Boolean namingAuthSupported) {
                 this.namingAuthSupported = namingAuthSupported;
@@ -761,11 +735,7 @@ public class QueryConfigResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether service creation is supported for the instance. This parameter is valid for Nacos instances. Valid values:
-             * <p>
-             * 
-             * *   `true`: supported
-             * *   `false`: not supported
+             * NamingCreateServiceSupported.
              */
             public Builder namingCreateServiceSupported(Boolean namingCreateServiceSupported) {
                 this.namingCreateServiceSupported = namingCreateServiceSupported;
@@ -773,11 +743,7 @@ public class QueryConfigResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether super permissions are enabled. This parameter is valid for ZooKeeper instances. Valid values:
-             * <p>
-             * 
-             * *   `true`: enabled
-             * *   `false`: disabled
+             * OpenSuperAcl.
              */
             public Builder openSuperAcl(Boolean openSuperAcl) {
                 this.openSuperAcl = openSuperAcl;
@@ -785,7 +751,7 @@ public class QueryConfigResponseBody extends TeaModel {
             }
 
             /**
-             * The user password. This parameter is valid only if OpenSuperAcl is set to true.
+             * PassWord.
              */
             public Builder passWord(String passWord) {
                 this.passWord = passWord;
@@ -793,11 +759,7 @@ public class QueryConfigResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether the instance was restarted and new configurations have taken effect. Valid values:
-             * <p>
-             * 
-             * *   `true`: The restart was successful.
-             * *   `false`: The restart failed.
+             * RestartFlag.
              */
             public Builder restartFlag(Boolean restartFlag) {
                 this.restartFlag = restartFlag;
@@ -805,7 +767,7 @@ public class QueryConfigResponseBody extends TeaModel {
             }
 
             /**
-             * The frequency for generating snapshots. This parameter is valid for ZooKeeper instances.
+             * SnapshotCount.
              */
             public Builder snapshotCount(String snapshotCount) {
                 this.snapshotCount = snapshotCount;
@@ -813,7 +775,7 @@ public class QueryConfigResponseBody extends TeaModel {
             }
 
             /**
-             * The connection timeout period of the instance. This parameter is valid for ZooKeeper instances. Unit: seconds.
+             * SyncLimit.
              */
             public Builder syncLimit(String syncLimit) {
                 this.syncLimit = syncLimit;
@@ -821,7 +783,15 @@ public class QueryConfigResponseBody extends TeaModel {
             }
 
             /**
-             * The time unit of the engine. This parameter is valid for ZooKeeper instances. Default value: 2000. Unit: milliseconds.
+             * TLSEnabled.
+             */
+            public Builder TLSEnabled(Boolean TLSEnabled) {
+                this.TLSEnabled = TLSEnabled;
+                return this;
+            }
+
+            /**
+             * TickTime.
              */
             public Builder tickTime(String tickTime) {
                 this.tickTime = tickTime;
@@ -829,7 +799,7 @@ public class QueryConfigResponseBody extends TeaModel {
             }
 
             /**
-             * The username. This parameter is valid only if OpenSuperAcl is set to true.
+             * UserName.
              */
             public Builder userName(String userName) {
                 this.userName = userName;

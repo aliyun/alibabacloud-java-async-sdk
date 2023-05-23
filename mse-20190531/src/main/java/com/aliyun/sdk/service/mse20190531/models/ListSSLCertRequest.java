@@ -68,11 +68,7 @@ public class ListSSLCertRequest extends Request {
         } 
 
         /**
-         * The language of the response. Valid values:
-         * <p>
-         * 
-         * *   zh: Chinese
-         * *   en: English
+         * The returned data.
          */
         public Builder acceptLanguage(String acceptLanguage) {
             this.putQueryParameter("AcceptLanguage", acceptLanguage);
@@ -81,7 +77,7 @@ public class ListSSLCertRequest extends Request {
         }
 
         /**
-         * The unique ID of the gateway.
+         * The expiration time.
          */
         public Builder gatewayUniqueId(String gatewayUniqueId) {
             this.putQueryParameter("GatewayUniqueId", gatewayUniqueId);

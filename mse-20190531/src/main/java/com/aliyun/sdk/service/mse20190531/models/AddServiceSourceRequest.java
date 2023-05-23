@@ -166,12 +166,7 @@ public class AddServiceSourceRequest extends Request {
         } 
 
         /**
-         * The language in which the returned information is displayed. Valid values:
-         * <p>
-         * 
-         * *   zh-CN: Chinese. This is the default value.
-         * *   en-US: English.
-         * *   ja: Japanese.
+         * Specifies whether to monitor Ingress classes.
          */
         public Builder acceptLanguage(String acceptLanguage) {
             this.putQueryParameter("AcceptLanguage", acceptLanguage);
@@ -180,7 +175,12 @@ public class AddServiceSourceRequest extends Request {
         }
 
         /**
-         * The address.
+         * The language in which the returned information is displayed. Valid values:
+         * <p>
+         * 
+         * *   zh-CN: Chinese. This is the default value.
+         * *   en-US: English.
+         * *   ja: Japanese.
          */
         public Builder address(String address) {
             this.putQueryParameter("Address", address);
@@ -189,7 +189,7 @@ public class AddServiceSourceRequest extends Request {
         }
 
         /**
-         * The unique ID of the gateway.
+         * The ID of the request.
          */
         public Builder gatewayUniqueId(String gatewayUniqueId) {
             this.putQueryParameter("GatewayUniqueId", gatewayUniqueId);
@@ -198,7 +198,11 @@ public class AddServiceSourceRequest extends Request {
         }
 
         /**
-         * The list of service groups.
+         * Indicates whether the request was successful. Valid values:
+         * <p>
+         * 
+         * *   true: The request was successful.
+         * *   false: The request failed.
          */
         public Builder groupList(java.util.List < String > groupList) {
             String groupListShrink = shrink(groupList, "GroupList", "json");
@@ -208,7 +212,7 @@ public class AddServiceSourceRequest extends Request {
         }
 
         /**
-         * The configurations of Ingress resources.
+         * The HTTP status code returned.
          */
         public Builder ingressOptionsRequest(IngressOptionsRequest ingressOptionsRequest) {
             String ingressOptionsRequestShrink = shrink(ingressOptionsRequest, "IngressOptionsRequest", "json");
@@ -218,13 +222,7 @@ public class AddServiceSourceRequest extends Request {
         }
 
         /**
-         * The name.
-         * <p>
-         * 
-         * > The parameter definition varies based on the source type.
-         * 
-         * *   If Type is set to K8S, this parameter specifies the name of the Kubernetes cluster.
-         * *   If Type is set to NACOS, this parameter specifies the ID of the instance.
+         * The data structure.
          */
         public Builder name(String name) {
             this.putQueryParameter("Name", name);
@@ -243,11 +241,7 @@ public class AddServiceSourceRequest extends Request {
         }
 
         /**
-         * The service source. Valid values:
-         * <p>
-         * 
-         * *   K8S: Kubernetes cluster
-         * *   MSE: Nacos instance
+         * The root path of the service.
          */
         public Builder source(String source) {
             this.putQueryParameter("Source", source);
@@ -256,11 +250,7 @@ public class AddServiceSourceRequest extends Request {
         }
 
         /**
-         * The type of the service source. Valid values:
-         * <p>
-         * 
-         * *   K8S: Kubernetes cluster
-         * *   NACOS: Nacos instance
+         * An array of service root paths.
          */
         public Builder type(String type) {
             this.putQueryParameter("Type", type);
@@ -338,7 +328,7 @@ public class AddServiceSourceRequest extends Request {
             private String watchNamespace; 
 
             /**
-             * Specifies whether to enable Ingress.
+             * The message returned.
              */
             public Builder enableIngress(Boolean enableIngress) {
                 this.enableIngress = enableIngress;
@@ -346,7 +336,7 @@ public class AddServiceSourceRequest extends Request {
             }
 
             /**
-             * Specifies whether to update the Ingress status.
+             * The returned data.
              */
             public Builder enableStatus(Boolean enableStatus) {
                 this.enableStatus = enableStatus;
@@ -354,7 +344,7 @@ public class AddServiceSourceRequest extends Request {
             }
 
             /**
-             * Specifies whether to monitor Ingress classes.
+             * The return value.
              */
             public Builder ingressClass(String ingressClass) {
                 this.ingressClass = ingressClass;
@@ -362,7 +352,11 @@ public class AddServiceSourceRequest extends Request {
             }
 
             /**
-             * The namespace whose resources you want to monitor.
+             * Indicates whether the request was successful. Valid values:
+             * <p>
+             * 
+             * *   true: The request was successful.
+             * *   false: The request failed.
              */
             public Builder watchNamespace(String watchNamespace) {
                 this.watchNamespace = watchNamespace;

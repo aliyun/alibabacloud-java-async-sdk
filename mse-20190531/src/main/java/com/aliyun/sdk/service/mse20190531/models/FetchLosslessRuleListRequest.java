@@ -141,12 +141,7 @@ public class FetchLosslessRuleListRequest extends Request {
         } 
 
         /**
-         * The language of the response. In compliance with [RFC 7231](https://tools.ietf.org/html/rfc7231), the backend service must return a response based on the language used by the user.
-         * <p>
-         * 
-         * *   By default, this parameter is left empty.
-         * *   zh-CN: Chinese
-         * *   en-US: English
+         * 返回结果显示的语言。取值：zh（默认值）：中文，en：英文
          */
         public Builder acceptLanguage(String acceptLanguage) {
             this.putQueryParameter("AcceptLanguage", acceptLanguage);
@@ -155,7 +150,7 @@ public class FetchLosslessRuleListRequest extends Request {
         }
 
         /**
-         * The ID of the application.
+         * appId
          */
         public Builder appId(String appId) {
             this.putQueryParameter("AppId", appId);
@@ -164,7 +159,7 @@ public class FetchLosslessRuleListRequest extends Request {
         }
 
         /**
-         * The name of the application.
+         * Key word of search lossless list
          */
         public Builder appName(String appName) {
             this.putQueryParameter("AppName", appName);
@@ -173,7 +168,7 @@ public class FetchLosslessRuleListRequest extends Request {
         }
 
         /**
-         * The namespace.
+         * Namespace.
          */
         public Builder namespace(String namespace) {
             this.putQueryParameter("Namespace", namespace);
@@ -182,7 +177,7 @@ public class FetchLosslessRuleListRequest extends Request {
         }
 
         /**
-         * The number of the page to return.
+         * current
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -191,7 +186,7 @@ public class FetchLosslessRuleListRequest extends Request {
         }
 
         /**
-         * The number of entries to return on each page. Default value: 10
+         * limit
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -200,7 +195,7 @@ public class FetchLosslessRuleListRequest extends Request {
         }
 
         /**
-         * The ID of the region.
+         * region id, such as cn-hangzhou
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);

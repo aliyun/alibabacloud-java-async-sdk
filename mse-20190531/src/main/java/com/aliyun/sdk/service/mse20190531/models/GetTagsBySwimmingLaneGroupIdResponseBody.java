@@ -12,20 +12,11 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>GetTagsBySwimmingLaneGroupIdResponseBody</p>
  */
 public class GetTagsBySwimmingLaneGroupIdResponseBody extends TeaModel {
-    @NameInMap("Code")
-    private Integer code;
-
     @NameInMap("Data")
-    private Object data;
-
-    @NameInMap("DynamicMessage")
-    private String dynamicMessage;
+    private java.util.List < String > data;
 
     @NameInMap("ErrorCode")
     private String errorCode;
-
-    @NameInMap("HttpStatusCode")
-    private Integer httpStatusCode;
 
     @NameInMap("Message")
     private String message;
@@ -37,11 +28,8 @@ public class GetTagsBySwimmingLaneGroupIdResponseBody extends TeaModel {
     private Boolean success;
 
     private GetTagsBySwimmingLaneGroupIdResponseBody(Builder builder) {
-        this.code = builder.code;
         this.data = builder.data;
-        this.dynamicMessage = builder.dynamicMessage;
         this.errorCode = builder.errorCode;
-        this.httpStatusCode = builder.httpStatusCode;
         this.message = builder.message;
         this.requestId = builder.requestId;
         this.success = builder.success;
@@ -56,24 +44,10 @@ public class GetTagsBySwimmingLaneGroupIdResponseBody extends TeaModel {
     }
 
     /**
-     * @return code
-     */
-    public Integer getCode() {
-        return this.code;
-    }
-
-    /**
      * @return data
      */
-    public Object getData() {
+    public java.util.List < String > getData() {
         return this.data;
-    }
-
-    /**
-     * @return dynamicMessage
-     */
-    public String getDynamicMessage() {
-        return this.dynamicMessage;
     }
 
     /**
@@ -81,13 +55,6 @@ public class GetTagsBySwimmingLaneGroupIdResponseBody extends TeaModel {
      */
     public String getErrorCode() {
         return this.errorCode;
-    }
-
-    /**
-     * @return httpStatusCode
-     */
-    public Integer getHttpStatusCode() {
-        return this.httpStatusCode;
     }
 
     /**
@@ -112,41 +79,22 @@ public class GetTagsBySwimmingLaneGroupIdResponseBody extends TeaModel {
     }
 
     public static final class Builder {
-        private Integer code; 
-        private Object data; 
-        private String dynamicMessage; 
+        private java.util.List < String > data; 
         private String errorCode; 
-        private Integer httpStatusCode; 
         private String message; 
         private String requestId; 
         private Boolean success; 
 
         /**
-         * The status code. A value of 200 is returned if the request is successful.
+         * Data.
          */
-        public Builder code(Integer code) {
-            this.code = code;
-            return this;
-        }
-
-        /**
-         * The details of the data.
-         */
-        public Builder data(Object data) {
+        public Builder data(java.util.List < String > data) {
             this.data = data;
             return this;
         }
 
         /**
-         * The dynamic part in the error message.
-         */
-        public Builder dynamicMessage(String dynamicMessage) {
-            this.dynamicMessage = dynamicMessage;
-            return this;
-        }
-
-        /**
-         * The error code returned if the request failed.
+         * ErrorCode.
          */
         public Builder errorCode(String errorCode) {
             this.errorCode = errorCode;
@@ -154,15 +102,7 @@ public class GetTagsBySwimmingLaneGroupIdResponseBody extends TeaModel {
         }
 
         /**
-         * The HTTP status code returned.
-         */
-        public Builder httpStatusCode(Integer httpStatusCode) {
-            this.httpStatusCode = httpStatusCode;
-            return this;
-        }
-
-        /**
-         * The message returned.
+         * Message.
          */
         public Builder message(String message) {
             this.message = message;
@@ -170,7 +110,7 @@ public class GetTagsBySwimmingLaneGroupIdResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * RequestId.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -178,11 +118,7 @@ public class GetTagsBySwimmingLaneGroupIdResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether the request was successful. Valid values:
-         * <p>
-         * 
-         * *   `true`: The request was successful.
-         * *   `false`: The request failed.
+         * Success.
          */
         public Builder success(Boolean success) {
             this.success = success;

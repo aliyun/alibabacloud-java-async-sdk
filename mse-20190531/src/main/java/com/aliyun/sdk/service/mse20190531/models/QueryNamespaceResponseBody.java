@@ -15,6 +15,9 @@ public class QueryNamespaceResponseBody extends TeaModel {
     @NameInMap("Data")
     private java.util.List < Data> data;
 
+    @NameInMap("ErrorCode")
+    private String errorCode;
+
     @NameInMap("HttpStatusCode")
     private Integer httpStatusCode;
 
@@ -29,6 +32,7 @@ public class QueryNamespaceResponseBody extends TeaModel {
 
     private QueryNamespaceResponseBody(Builder builder) {
         this.data = builder.data;
+        this.errorCode = builder.errorCode;
         this.httpStatusCode = builder.httpStatusCode;
         this.message = builder.message;
         this.requestId = builder.requestId;
@@ -48,6 +52,13 @@ public class QueryNamespaceResponseBody extends TeaModel {
      */
     public java.util.List < Data> getData() {
         return this.data;
+    }
+
+    /**
+     * @return errorCode
+     */
+    public String getErrorCode() {
+        return this.errorCode;
     }
 
     /**
@@ -80,6 +91,7 @@ public class QueryNamespaceResponseBody extends TeaModel {
 
     public static final class Builder {
         private java.util.List < Data> data; 
+        private String errorCode; 
         private Integer httpStatusCode; 
         private String message; 
         private String requestId; 
@@ -94,7 +106,15 @@ public class QueryNamespaceResponseBody extends TeaModel {
         }
 
         /**
-         * HttpStatusCode
+         * 错误码。
+         */
+        public Builder errorCode(String errorCode) {
+            this.errorCode = errorCode;
+            return this;
+        }
+
+        /**
+         * HttpStatusCode。
          */
         public Builder httpStatusCode(Integer httpStatusCode) {
             this.httpStatusCode = httpStatusCode;

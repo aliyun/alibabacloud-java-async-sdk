@@ -125,7 +125,7 @@ public class GetServiceListRequest extends Request {
         } 
 
         /**
-         * The language of the response.
+         * 返回结果显示的语言。取值：zh（默认值）：中文，en：英文
          */
         public Builder acceptLanguage(String acceptLanguage) {
             this.putQueryParameter("AcceptLanguage", acceptLanguage);
@@ -134,7 +134,7 @@ public class GetServiceListRequest extends Request {
         }
 
         /**
-         * The ID of the application.
+         * AppId.
          */
         public Builder appId(String appId) {
             this.putQueryParameter("AppId", appId);
@@ -143,7 +143,7 @@ public class GetServiceListRequest extends Request {
         }
 
         /**
-         * The IP address.
+         * Ip.
          */
         public Builder ip(String ip) {
             this.putQueryParameter("Ip", ip);
@@ -152,7 +152,7 @@ public class GetServiceListRequest extends Request {
         }
 
         /**
-         * The ID of the region.
+         * Region.
          */
         public Builder region(String region) {
             this.putQueryParameter("Region", region);
@@ -161,7 +161,7 @@ public class GetServiceListRequest extends Request {
         }
 
         /**
-         * The name of the service.
+         * ServiceName.
          */
         public Builder serviceName(String serviceName) {
             this.putQueryParameter("ServiceName", serviceName);
@@ -170,7 +170,7 @@ public class GetServiceListRequest extends Request {
         }
 
         /**
-         * The type of the framework.
+         * ServiceType.
          */
         public Builder serviceType(String serviceType) {
             this.putQueryParameter("ServiceType", serviceType);

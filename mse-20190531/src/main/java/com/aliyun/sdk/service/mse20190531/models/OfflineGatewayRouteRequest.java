@@ -82,11 +82,7 @@ public class OfflineGatewayRouteRequest extends Request {
         } 
 
         /**
-         * The language of the response. Valid values:
-         * <p>
-         * 
-         * *   zh: Chinese
-         * *   en: English
+         * duplicatedClusterAliasName
          */
         public Builder acceptLanguage(String acceptLanguage) {
             this.putQueryParameter("AcceptLanguage", acceptLanguage);
@@ -95,7 +91,7 @@ public class OfflineGatewayRouteRequest extends Request {
         }
 
         /**
-         * The unique ID of the gateway.
+         * mse-200-105
          */
         public Builder gatewayUniqueId(String gatewayUniqueId) {
             this.putQueryParameter("GatewayUniqueId", gatewayUniqueId);
@@ -104,7 +100,7 @@ public class OfflineGatewayRouteRequest extends Request {
         }
 
         /**
-         * The ID of the route.
+         * code
          */
         public Builder routeId(String routeId) {
             this.putQueryParameter("RouteId", routeId);

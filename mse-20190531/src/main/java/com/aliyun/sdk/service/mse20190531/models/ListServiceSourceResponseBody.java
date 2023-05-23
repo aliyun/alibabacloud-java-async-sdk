@@ -98,7 +98,7 @@ public class ListServiceSourceResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * The response code returned.
+         * mse-200-021
          */
         public Builder code(Integer code) {
             this.code = code;
@@ -106,7 +106,7 @@ public class ListServiceSourceResponseBody extends TeaModel {
         }
 
         /**
-         * The returned data.
+         * cluster not found
          */
         public Builder data(java.util.List < Data> data) {
             this.data = data;
@@ -114,7 +114,7 @@ public class ListServiceSourceResponseBody extends TeaModel {
         }
 
         /**
-         * The HTTP status code returned.
+         * illegalRequest
          */
         public Builder httpStatusCode(Integer httpStatusCode) {
             this.httpStatusCode = httpStatusCode;
@@ -122,7 +122,7 @@ public class ListServiceSourceResponseBody extends TeaModel {
         }
 
         /**
-         * The error message returned if the request failed.
+         * illegal request:%s
          */
         public Builder message(String message) {
             this.message = message;
@@ -130,7 +130,7 @@ public class ListServiceSourceResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * mse-100-007
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -138,11 +138,7 @@ public class ListServiceSourceResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether the request was successful. Valid values:
-         * <p>
-         * 
-         * *   `true`: The request was successful.
-         * *   `false`: The request failed.
+         * clusterNotFound
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -218,7 +214,7 @@ public class ListServiceSourceResponseBody extends TeaModel {
             private String watchNamespace; 
 
             /**
-             * Indicates whether Ingress is enabled.
+             * EnableIngress.
              */
             public Builder enableIngress(Boolean enableIngress) {
                 this.enableIngress = enableIngress;
@@ -226,7 +222,7 @@ public class ListServiceSourceResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether the Ingress status is updated.
+             * EnableStatus.
              */
             public Builder enableStatus(Boolean enableStatus) {
                 this.enableStatus = enableStatus;
@@ -234,7 +230,7 @@ public class ListServiceSourceResponseBody extends TeaModel {
             }
 
             /**
-             * The Ingress class.
+             * IngressClass.
              */
             public Builder ingressClass(String ingressClass) {
                 this.ingressClass = ingressClass;
@@ -242,7 +238,7 @@ public class ListServiceSourceResponseBody extends TeaModel {
             }
 
             /**
-             * The namespace that you want to monitor.
+             * WatchNamespace.
              */
             public Builder watchNamespace(String watchNamespace) {
                 this.watchNamespace = watchNamespace;
@@ -439,7 +435,7 @@ public class ListServiceSourceResponseBody extends TeaModel {
             private String type; 
 
             /**
-             * The ID of the Container Service for Kubernetes (ACK) cluster or the endpoint of the Microservices Engine (MSE) registry.
+             * Address.
              */
             public Builder address(String address) {
                 this.address = address;
@@ -447,7 +443,7 @@ public class ListServiceSourceResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether the service source is associated with the gateway. The value 1 indicates that the service source is associated with the gateway.
+             * BindingWithGateway.
              */
             public Builder bindingWithGateway(Integer bindingWithGateway) {
                 this.bindingWithGateway = bindingWithGateway;
@@ -455,7 +451,7 @@ public class ListServiceSourceResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the gateway.
+             * GatewayId.
              */
             public Builder gatewayId(Long gatewayId) {
                 this.gatewayId = gatewayId;
@@ -463,7 +459,7 @@ public class ListServiceSourceResponseBody extends TeaModel {
             }
 
             /**
-             * The unique ID of the gateway.
+             * GatewayUniqueId.
              */
             public Builder gatewayUniqueId(String gatewayUniqueId) {
                 this.gatewayUniqueId = gatewayUniqueId;
@@ -471,7 +467,7 @@ public class ListServiceSourceResponseBody extends TeaModel {
             }
 
             /**
-             * The creation time.
+             * GmtCreate.
              */
             public Builder gmtCreate(String gmtCreate) {
                 this.gmtCreate = gmtCreate;
@@ -479,7 +475,7 @@ public class ListServiceSourceResponseBody extends TeaModel {
             }
 
             /**
-             * The update time.
+             * GmtModified.
              */
             public Builder gmtModified(String gmtModified) {
                 this.gmtModified = gmtModified;
@@ -487,7 +483,7 @@ public class ListServiceSourceResponseBody extends TeaModel {
             }
 
             /**
-             * The array of service groups.
+             * GroupList.
              */
             public Builder groupList(java.util.List < String > groupList) {
                 this.groupList = groupList;
@@ -495,7 +491,7 @@ public class ListServiceSourceResponseBody extends TeaModel {
             }
 
             /**
-             * The ID.
+             * systemError
              */
             public Builder id(Long id) {
                 this.id = id;
@@ -503,7 +499,7 @@ public class ListServiceSourceResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether Ingress is supported for applications.
+             * IngressOptions.
              */
             public Builder ingressOptions(IngressOptions ingressOptions) {
                 this.ingressOptions = ingressOptions;
@@ -511,7 +507,7 @@ public class ListServiceSourceResponseBody extends TeaModel {
             }
 
             /**
-             * The name.
+             * system error
              */
             public Builder name(String name) {
                 this.name = name;
@@ -519,7 +515,7 @@ public class ListServiceSourceResponseBody extends TeaModel {
             }
 
             /**
-             * The array of root paths of service lists.
+             * PathList.
              */
             public Builder pathList(java.util.List < String > pathList) {
                 this.pathList = pathList;
@@ -527,7 +523,7 @@ public class ListServiceSourceResponseBody extends TeaModel {
             }
 
             /**
-             * The type of the service source.
+             * Source.
              */
             public Builder source(String source) {
                 this.source = source;
@@ -535,7 +531,7 @@ public class ListServiceSourceResponseBody extends TeaModel {
             }
 
             /**
-             * The unique ID of the service source.
+             * SourceUniqueId.
              */
             public Builder sourceUniqueId(String sourceUniqueId) {
                 this.sourceUniqueId = sourceUniqueId;
@@ -543,7 +539,7 @@ public class ListServiceSourceResponseBody extends TeaModel {
             }
 
             /**
-             * The type.
+             * Type.
              */
             public Builder type(String type) {
                 this.type = type;

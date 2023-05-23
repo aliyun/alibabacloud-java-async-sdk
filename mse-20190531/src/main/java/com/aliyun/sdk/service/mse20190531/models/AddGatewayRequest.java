@@ -17,6 +17,10 @@ public class AddGatewayRequest extends Request {
     private String acceptLanguage;
 
     @Query
+    @NameInMap("ChargeType")
+    private String chargeType;
+
+    @Query
     @NameInMap("EnableHardwareAcceleration")
     private Boolean enableHardwareAcceleration;
 
@@ -73,7 +77,6 @@ public class AddGatewayRequest extends Request {
 
     @Query
     @NameInMap("VSwitchId")
-    @Validation(required = true)
     private String vSwitchId;
 
     @Query
@@ -89,9 +92,14 @@ public class AddGatewayRequest extends Request {
     @NameInMap("XtraceRatio")
     private String xtraceRatio;
 
+    @Query
+    @NameInMap("ZoneInfo")
+    private java.util.List < ZoneInfo> zoneInfo;
+
     private AddGatewayRequest(Builder builder) {
         super(builder);
         this.acceptLanguage = builder.acceptLanguage;
+        this.chargeType = builder.chargeType;
         this.enableHardwareAcceleration = builder.enableHardwareAcceleration;
         this.enableSls = builder.enableSls;
         this.enableXtrace = builder.enableXtrace;
@@ -109,6 +117,7 @@ public class AddGatewayRequest extends Request {
         this.vSwitchId2 = builder.vSwitchId2;
         this.vpc = builder.vpc;
         this.xtraceRatio = builder.xtraceRatio;
+        this.zoneInfo = builder.zoneInfo;
     }
 
     public static Builder builder() {
@@ -129,6 +138,13 @@ public class AddGatewayRequest extends Request {
      */
     public String getAcceptLanguage() {
         return this.acceptLanguage;
+    }
+
+    /**
+     * @return chargeType
+     */
+    public String getChargeType() {
+        return this.chargeType;
     }
 
     /**
@@ -250,8 +266,16 @@ public class AddGatewayRequest extends Request {
         return this.xtraceRatio;
     }
 
+    /**
+     * @return zoneInfo
+     */
+    public java.util.List < ZoneInfo> getZoneInfo() {
+        return this.zoneInfo;
+    }
+
     public static final class Builder extends Request.Builder<AddGatewayRequest, Builder> {
         private String acceptLanguage; 
+        private String chargeType; 
         private Boolean enableHardwareAcceleration; 
         private Boolean enableSls; 
         private Boolean enableXtrace; 
@@ -269,6 +293,7 @@ public class AddGatewayRequest extends Request {
         private String vSwitchId2; 
         private String vpc; 
         private String xtraceRatio; 
+        private java.util.List < ZoneInfo> zoneInfo; 
 
         private Builder() {
             super();
@@ -277,6 +302,7 @@ public class AddGatewayRequest extends Request {
         private Builder(AddGatewayRequest request) {
             super(request);
             this.acceptLanguage = request.acceptLanguage;
+            this.chargeType = request.chargeType;
             this.enableHardwareAcceleration = request.enableHardwareAcceleration;
             this.enableSls = request.enableSls;
             this.enableXtrace = request.enableXtrace;
@@ -294,14 +320,11 @@ public class AddGatewayRequest extends Request {
             this.vSwitchId2 = request.vSwitchId2;
             this.vpc = request.vpc;
             this.xtraceRatio = request.xtraceRatio;
+            this.zoneInfo = request.zoneInfo;
         } 
 
         /**
-         * The language of the response. Valid values:
-         * <p>
-         * 
-         * *   zh: Chinese
-         * *   en: English
+         * 返回结果显示的语言。取值：zh（默认值）：中文，en：英文
          */
         public Builder acceptLanguage(String acceptLanguage) {
             this.putQueryParameter("AcceptLanguage", acceptLanguage);
@@ -310,7 +333,16 @@ public class AddGatewayRequest extends Request {
         }
 
         /**
-         * Specifies whether to enable hardware acceleration.
+         * ChargeType.
+         */
+        public Builder chargeType(String chargeType) {
+            this.putQueryParameter("ChargeType", chargeType);
+            this.chargeType = chargeType;
+            return this;
+        }
+
+        /**
+         * 是否开启硬件加速
          */
         public Builder enableHardwareAcceleration(Boolean enableHardwareAcceleration) {
             this.putQueryParameter("EnableHardwareAcceleration", enableHardwareAcceleration);
@@ -319,7 +351,7 @@ public class AddGatewayRequest extends Request {
         }
 
         /**
-         * Specifies whether to activate Log Service.
+         * 是否开启SLS日志投递
          */
         public Builder enableSls(Boolean enableSls) {
             this.putQueryParameter("EnableSls", enableSls);
@@ -328,7 +360,7 @@ public class AddGatewayRequest extends Request {
         }
 
         /**
-         * Specifies whether to activate Tracing Analysis.
+         * 是否开启xtrace
          */
         public Builder enableXtrace(Boolean enableXtrace) {
             this.putQueryParameter("EnableXtrace", enableXtrace);
@@ -337,7 +369,7 @@ public class AddGatewayRequest extends Request {
         }
 
         /**
-         * Specifies whether to use an advanced security group.
+         * 是否企业安全组类型
          */
         public Builder enterpriseSecurityGroup(Boolean enterpriseSecurityGroup) {
             this.putQueryParameter("EnterpriseSecurityGroup", enterpriseSecurityGroup);
@@ -346,15 +378,7 @@ public class AddGatewayRequest extends Request {
         }
 
         /**
-         * The specifications of the Internet-facing SLB instance. Valid values:
-         * <p>
-         * 
-         * *   slb.s1.small
-         * *   slb.s2.small
-         * *   slb.s2.medium
-         * *   slb.s3.small
-         * *   slb.s3.medium
-         * *   slb.s3.large
+         * 外网SLB规格
          */
         public Builder internetSlbSpec(String internetSlbSpec) {
             this.putQueryParameter("InternetSlbSpec", internetSlbSpec);
@@ -363,7 +387,7 @@ public class AddGatewayRequest extends Request {
         }
 
         /**
-         * The name of the gateway.
+         * illegal request:%s
          */
         public Builder name(String name) {
             this.putQueryParameter("Name", name);
@@ -372,7 +396,7 @@ public class AddGatewayRequest extends Request {
         }
 
         /**
-         * The ID of the region.
+         * mse-200-021
          */
         public Builder region(String region) {
             this.putQueryParameter("Region", region);
@@ -381,7 +405,7 @@ public class AddGatewayRequest extends Request {
         }
 
         /**
-         * The number of nodes.
+         * system error
          */
         public Builder replica(Integer replica) {
             this.putQueryParameter("Replica", replica);
@@ -390,7 +414,7 @@ public class AddGatewayRequest extends Request {
         }
 
         /**
-         * RequestPars.
+         * 扩展字段。
          */
         public Builder requestPars(String requestPars) {
             this.putQueryParameter("RequestPars", requestPars);
@@ -399,7 +423,7 @@ public class AddGatewayRequest extends Request {
         }
 
         /**
-         * The ID of the resource group.
+         * ResourceGroupId.
          */
         public Builder resourceGroupId(String resourceGroupId) {
             this.putQueryParameter("ResourceGroupId", resourceGroupId);
@@ -408,15 +432,7 @@ public class AddGatewayRequest extends Request {
         }
 
         /**
-         * The specifications of the internal-facing Server Load Balancer (SLB) instance. Valid values:
-         * <p>
-         * 
-         * *   slb.s1.small
-         * *   slb.s2.small
-         * *   slb.s2.medium
-         * *   slb.s3.small
-         * *   slb.s3.medium
-         * *   slb.s3.large
+         * clusterNotFound
          */
         public Builder slbSpec(String slbSpec) {
             this.putQueryParameter("SlbSpec", slbSpec);
@@ -425,13 +441,7 @@ public class AddGatewayRequest extends Request {
         }
 
         /**
-         * The node specifications. Valid values:
-         * <p>
-         * 
-         * *   MSE_GTW\_16\_32\_200\_c(16C32G)
-         * *   MSE_GTW\_2\_4\_200\_c(2C4G)
-         * *   MSE_GTW\_4\_8\_200\_c(4C8G)
-         * *   MSE_GTW\_8\_16\_200\_c(8C16G)
+         * systemError
          */
         public Builder spec(String spec) {
             this.putQueryParameter("Spec", spec);
@@ -440,7 +450,7 @@ public class AddGatewayRequest extends Request {
         }
 
         /**
-         * The tag of the gateway.
+         * 标签列表，最多包含20个子项
          */
         public Builder tag(java.util.List < Tag> tag) {
             this.putQueryParameter("Tag", tag);
@@ -449,7 +459,7 @@ public class AddGatewayRequest extends Request {
         }
 
         /**
-         * The ID of the primary vSwitch.
+         * mse-100-001
          */
         public Builder vSwitchId(String vSwitchId) {
             this.putQueryParameter("VSwitchId", vSwitchId);
@@ -458,7 +468,7 @@ public class AddGatewayRequest extends Request {
         }
 
         /**
-         * The ID of the secondary vSwitch.
+         * 备交换机ID
          */
         public Builder vSwitchId2(String vSwitchId2) {
             this.putQueryParameter("VSwitchId2", vSwitchId2);
@@ -467,7 +477,7 @@ public class AddGatewayRequest extends Request {
         }
 
         /**
-         * The ID of the virtual private cloud (VPC).
+         * cluster not found
          */
         public Builder vpc(String vpc) {
             this.putQueryParameter("Vpc", vpc);
@@ -476,11 +486,21 @@ public class AddGatewayRequest extends Request {
         }
 
         /**
-         * The sampling rate of Tracing Analysis. Valid values: \[1,100].
+         * xtrace采样率，取值[0,100]
          */
         public Builder xtraceRatio(String xtraceRatio) {
             this.putQueryParameter("XtraceRatio", xtraceRatio);
             this.xtraceRatio = xtraceRatio;
+            return this;
+        }
+
+        /**
+         * ZoneInfo.
+         */
+        public Builder zoneInfo(java.util.List < ZoneInfo> zoneInfo) {
+            String zoneInfoShrink = shrink(zoneInfo, "ZoneInfo", "json");
+            this.putQueryParameter("ZoneInfo", zoneInfoShrink);
+            this.zoneInfo = zoneInfo;
             return this;
         }
 
@@ -530,7 +550,7 @@ public class AddGatewayRequest extends Request {
             private String value; 
 
             /**
-             * The key of the tag.
+             * 标签键
              */
             public Builder key(String key) {
                 this.key = key;
@@ -538,7 +558,7 @@ public class AddGatewayRequest extends Request {
             }
 
             /**
-             * The value of the tag.
+             * 标签值
              */
             public Builder value(String value) {
                 this.value = value;
@@ -547,6 +567,67 @@ public class AddGatewayRequest extends Request {
 
             public Tag build() {
                 return new Tag(this);
+            } 
+
+        } 
+
+    }
+    public static class ZoneInfo extends TeaModel {
+        @NameInMap("VSwitchId")
+        private String vSwitchId;
+
+        @NameInMap("ZoneId")
+        private String zoneId;
+
+        private ZoneInfo(Builder builder) {
+            this.vSwitchId = builder.vSwitchId;
+            this.zoneId = builder.zoneId;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static ZoneInfo create() {
+            return builder().build();
+        }
+
+        /**
+         * @return vSwitchId
+         */
+        public String getVSwitchId() {
+            return this.vSwitchId;
+        }
+
+        /**
+         * @return zoneId
+         */
+        public String getZoneId() {
+            return this.zoneId;
+        }
+
+        public static final class Builder {
+            private String vSwitchId; 
+            private String zoneId; 
+
+            /**
+             * mse-100-001
+             */
+            public Builder vSwitchId(String vSwitchId) {
+                this.vSwitchId = vSwitchId;
+                return this;
+            }
+
+            /**
+             * ZoneId.
+             */
+            public Builder zoneId(String zoneId) {
+                this.zoneId = zoneId;
+                return this;
+            }
+
+            public ZoneInfo build() {
+                return new ZoneInfo(this);
             } 
 
         } 

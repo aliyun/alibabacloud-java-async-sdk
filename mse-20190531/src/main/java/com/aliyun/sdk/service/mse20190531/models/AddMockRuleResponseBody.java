@@ -98,7 +98,7 @@ public class AddMockRuleResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * The status code returned.
+         * Code.
          */
         public Builder code(Integer code) {
             this.code = code;
@@ -106,7 +106,7 @@ public class AddMockRuleResponseBody extends TeaModel {
         }
 
         /**
-         * The details of the data.
+         * Data.
          */
         public Builder data(Data data) {
             this.data = data;
@@ -114,7 +114,7 @@ public class AddMockRuleResponseBody extends TeaModel {
         }
 
         /**
-         * The HTTP status code returned.
+         * HttpStatusCode.
          */
         public Builder httpStatusCode(Integer httpStatusCode) {
             this.httpStatusCode = httpStatusCode;
@@ -122,7 +122,7 @@ public class AddMockRuleResponseBody extends TeaModel {
         }
 
         /**
-         * The message returned.
+         * Message.
          */
         public Builder message(String message) {
             this.message = message;
@@ -130,7 +130,7 @@ public class AddMockRuleResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * RequestId.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -138,11 +138,7 @@ public class AddMockRuleResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether the request was successful. Valid values:
-         * <p>
-         * 
-         * *   `true`: The request was successful.
-         * *   `false`: The request failed.
+         * Success.
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -338,7 +334,7 @@ public class AddMockRuleResponseBody extends TeaModel {
             private String source; 
 
             /**
-             * The ID of the Alibaba Cloud account.
+             * AccountId.
              */
             public Builder accountId(String accountId) {
                 this.accountId = accountId;
@@ -346,7 +342,7 @@ public class AddMockRuleResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the consumer application.
+             * ConsumerAppId.
              */
             public Builder consumerAppId(String consumerAppId) {
                 this.consumerAppId = consumerAppId;
@@ -354,7 +350,7 @@ public class AddMockRuleResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the consumer application.
+             * ConsumerAppName.
              */
             public Builder consumerAppName(String consumerAppName) {
                 this.consumerAppName = consumerAppName;
@@ -362,11 +358,7 @@ public class AddMockRuleResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether the mock rule is enabled.
-             * <p>
-             * 
-             * *   `true`: enabled
-             * *   `false`: disabled
+             * Enable.
              */
             public Builder enable(Boolean enable) {
                 this.enable = enable;
@@ -374,7 +366,7 @@ public class AddMockRuleResponseBody extends TeaModel {
             }
 
             /**
-             * The description.
+             * ExtraJson.
              */
             public Builder extraJson(String extraJson) {
                 this.extraJson = extraJson;
@@ -382,7 +374,7 @@ public class AddMockRuleResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the rule.
+             * Id.
              */
             public Builder id(Long id) {
                 this.id = id;
@@ -390,11 +382,7 @@ public class AddMockRuleResponseBody extends TeaModel {
             }
 
             /**
-             * The mock type. Valid values:
-             * <p>
-             * 
-             * *   \- `[unk]0[unk]`: desktop client
-             * *   \- `[unk]1[unk]`: mobile client
+             * MockType.
              */
             public Builder mockType(Long mockType) {
                 this.mockType = mockType;
@@ -402,7 +390,7 @@ public class AddMockRuleResponseBody extends TeaModel {
             }
 
             /**
-             * The name.
+             * Name.
              */
             public Builder name(String name) {
                 this.name = name;
@@ -410,7 +398,7 @@ public class AddMockRuleResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the namespace.
+             * NamespaceId.
              */
             public Builder namespaceId(String namespaceId) {
                 this.namespaceId = namespaceId;
@@ -418,7 +406,7 @@ public class AddMockRuleResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the service provider application.
+             * ProviderAppId.
              */
             public Builder providerAppId(String providerAppId) {
                 this.providerAppId = providerAppId;
@@ -426,7 +414,7 @@ public class AddMockRuleResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the service provider application.
+             * ProviderAppName.
              */
             public Builder providerAppName(String providerAppName) {
                 this.providerAppName = providerAppName;
@@ -434,7 +422,7 @@ public class AddMockRuleResponseBody extends TeaModel {
             }
 
             /**
-             * The region ID.
+             * Region.
              */
             public Builder region(String region) {
                 this.region = region;
@@ -442,7 +430,7 @@ public class AddMockRuleResponseBody extends TeaModel {
             }
 
             /**
-             * The HTTP mock rule.
+             * ScMockItemJson.
              */
             public Builder scMockItemJson(String scMockItemJson) {
                 this.scMockItemJson = scMockItemJson;
@@ -450,7 +438,7 @@ public class AddMockRuleResponseBody extends TeaModel {
             }
 
             /**
-             * The service source.
+             * Source.
              */
             public Builder source(String source) {
                 this.source = source;

@@ -7,26 +7,26 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
- * {@link ListAnsServicesResponse} extends {@link TeaModel}
+ * {@link RemoveAuthPolicyResponse} extends {@link TeaModel}
  *
- * <p>ListAnsServicesResponse</p>
+ * <p>RemoveAuthPolicyResponse</p>
  */
-public class ListAnsServicesResponse extends Response {
+public class RemoveAuthPolicyResponse extends Response {
     @NameInMap("headers")
     @Validation(required = true)
     private java.util.Map < String, String > headers;
 
     @NameInMap("body")
     @Validation(required = true)
-    private ListAnsServicesResponseBody body;
+    private RemoveAuthPolicyResponseBody body;
 
-    private ListAnsServicesResponse(BuilderImpl builder) {
+    private RemoveAuthPolicyResponse(BuilderImpl builder) {
         super(builder);
         this.headers = builder.headers;
         this.body = builder.body;
     }
 
-    public static ListAnsServicesResponse create() {
+    public static RemoveAuthPolicyResponse create() {
         return new BuilderImpl().build();
     }
 
@@ -45,32 +45,32 @@ public class ListAnsServicesResponse extends Response {
     /**
      * @return body
      */
-    public ListAnsServicesResponseBody getBody() {
+    public RemoveAuthPolicyResponseBody getBody() {
         return this.body;
     }
 
-    public interface Builder extends Response.Builder<ListAnsServicesResponse, Builder> {
+    public interface Builder extends Response.Builder<RemoveAuthPolicyResponse, Builder> {
 
         Builder headers(java.util.Map < String, String > headers);
 
-        Builder body(ListAnsServicesResponseBody body);
+        Builder body(RemoveAuthPolicyResponseBody body);
 
         @Override
-        ListAnsServicesResponse build();
+        RemoveAuthPolicyResponse build();
 
     } 
 
     private static final class BuilderImpl
-            extends Response.BuilderImpl<ListAnsServicesResponse, Builder>
+            extends Response.BuilderImpl<RemoveAuthPolicyResponse, Builder>
             implements Builder {
         private java.util.Map < String, String > headers; 
-        private ListAnsServicesResponseBody body; 
+        private RemoveAuthPolicyResponseBody body; 
 
         private BuilderImpl() {
             super();
         } 
 
-        private BuilderImpl(ListAnsServicesResponse response) {
+        private BuilderImpl(RemoveAuthPolicyResponse response) {
             super(response);
             this.headers = response.headers;
             this.body = response.body;
@@ -89,14 +89,14 @@ public class ListAnsServicesResponse extends Response {
          * body.
          */
         @Override
-        public Builder body(ListAnsServicesResponseBody body) {
+        public Builder body(RemoveAuthPolicyResponseBody body) {
             this.body = body;
             return this;
         }
 
         @Override
-        public ListAnsServicesResponse build() {
-            return new ListAnsServicesResponse(this);
+        public RemoveAuthPolicyResponse build() {
+            return new RemoveAuthPolicyResponse(this);
         } 
 
     } 

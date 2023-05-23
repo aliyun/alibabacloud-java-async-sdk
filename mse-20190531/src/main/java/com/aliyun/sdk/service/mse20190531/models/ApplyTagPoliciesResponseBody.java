@@ -98,7 +98,7 @@ public class ApplyTagPoliciesResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * The status code returned.
+         * Code.
          */
         public Builder code(Integer code) {
             this.code = code;
@@ -106,7 +106,7 @@ public class ApplyTagPoliciesResponseBody extends TeaModel {
         }
 
         /**
-         * The details of the data.
+         * Data.
          */
         public Builder data(java.util.List < Data> data) {
             this.data = data;
@@ -114,7 +114,7 @@ public class ApplyTagPoliciesResponseBody extends TeaModel {
         }
 
         /**
-         * The HTTP status code returned.
+         * HttpStatusCode.
          */
         public Builder httpStatusCode(Integer httpStatusCode) {
             this.httpStatusCode = httpStatusCode;
@@ -122,7 +122,7 @@ public class ApplyTagPoliciesResponseBody extends TeaModel {
         }
 
         /**
-         * The message returned.
+         * Message.
          */
         public Builder message(String message) {
             this.message = message;
@@ -130,7 +130,7 @@ public class ApplyTagPoliciesResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * RequestId.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -138,7 +138,7 @@ public class ApplyTagPoliciesResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether the request is successful.
+         * Success.
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -286,7 +286,7 @@ public class ApplyTagPoliciesResponseBody extends TeaModel {
             private String tag; 
 
             /**
-             * Indicates whether the field is the primary key.
+             * CarryData.
              */
             public Builder carryData(Boolean carryData) {
                 this.carryData = carryData;
@@ -294,11 +294,7 @@ public class ApplyTagPoliciesResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether the routing rule is enabled.
-             * <p>
-             * 
-             * *   `true`: enabled
-             * *   `false`: disabled
+             * Enable.
              */
             public Builder enable(Boolean enable) {
                 this.enable = enable;
@@ -306,7 +302,7 @@ public class ApplyTagPoliciesResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the primary key.
+             * Id.
              */
             public Builder id(Long id) {
                 this.id = id;
@@ -314,7 +310,7 @@ public class ApplyTagPoliciesResponseBody extends TeaModel {
             }
 
             /**
-             * The number of instances.
+             * InstanceNum.
              */
             public Builder instanceNum(Integer instanceNum) {
                 this.instanceNum = instanceNum;
@@ -322,7 +318,7 @@ public class ApplyTagPoliciesResponseBody extends TeaModel {
             }
 
             /**
-             * The policy name.
+             * Name.
              */
             public Builder name(String name) {
                 this.name = name;
@@ -330,7 +326,7 @@ public class ApplyTagPoliciesResponseBody extends TeaModel {
             }
 
             /**
-             * The rate.
+             * Rate.
              */
             public Builder rate(Integer rate) {
                 this.rate = rate;
@@ -338,7 +334,7 @@ public class ApplyTagPoliciesResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether the routing rule is deleted.
+             * Remove.
              */
             public Builder remove(Boolean remove) {
                 this.remove = remove;
@@ -346,7 +342,7 @@ public class ApplyTagPoliciesResponseBody extends TeaModel {
             }
 
             /**
-             * The details of the routing rule.
+             * Rules.
              */
             public Builder rules(String rules) {
                 this.rules = rules;
@@ -354,7 +350,7 @@ public class ApplyTagPoliciesResponseBody extends TeaModel {
             }
 
             /**
-             * The status.
+             * Status.
              */
             public Builder status(Integer status) {
                 this.status = status;
@@ -362,7 +358,7 @@ public class ApplyTagPoliciesResponseBody extends TeaModel {
             }
 
             /**
-             * The tag.
+             * Tag.
              */
             public Builder tag(String tag) {
                 this.tag = tag;

@@ -139,11 +139,7 @@ public class ExportNacosConfigRequest extends Request {
         } 
 
         /**
-         * The language of the response. Valid values:
-         * <p>
-         * 
-         * *   zh: Chinese
-         * *   en: English
+         * clusterNotFound
          */
         public Builder acceptLanguage(String acceptLanguage) {
             this.putQueryParameter("AcceptLanguage", acceptLanguage);
@@ -152,7 +148,7 @@ public class ExportNacosConfigRequest extends Request {
         }
 
         /**
-         * The tag of the application.
+         * mse-200-021
          */
         public Builder appName(String appName) {
             this.putQueryParameter("AppName", appName);
@@ -161,13 +157,7 @@ public class ExportNacosConfigRequest extends Request {
         }
 
         /**
-         * The ID of the data that you want to export.
-         * <p>
-         * 
-         * > 
-         * 
-         * *   Multiple export methods are supported.
-         * *   If you want to export a single configuration, you must leave the Ids parameter empty and specify the DataID and Group parameters.
+         * illegalRequest
          */
         public Builder dataId(String dataId) {
             this.putQueryParameter("DataId", dataId);
@@ -176,7 +166,7 @@ public class ExportNacosConfigRequest extends Request {
         }
 
         /**
-         * The name of the configuration group.
+         * illegal request:%s
          */
         public Builder group(String group) {
             this.putQueryParameter("Group", group);
@@ -185,10 +175,7 @@ public class ExportNacosConfigRequest extends Request {
         }
 
         /**
-         * The ID of the primary key of a configuration item.
-         * <p>
-         * 
-         * >  - Multiple export methods are supported. You must specify this parameter if you want to export multiple configurations. - You can obtain the value of this parameter by calling the ListNacosConfigs operation. - If you specify this parameter, multiple configurations are exported. The DataId and Group parameters are invalid.
+         * mse-100-007
          */
         public Builder ids(String ids) {
             this.putQueryParameter("Ids", ids);
@@ -197,7 +184,7 @@ public class ExportNacosConfigRequest extends Request {
         }
 
         /**
-         * The ID of the instance.
+         * duplicatedClusterAliasName
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -206,7 +193,7 @@ public class ExportNacosConfigRequest extends Request {
         }
 
         /**
-         * The ID of the namespace.
+         * duplicated cluster alias name
          */
         public Builder namespaceId(String namespaceId) {
             this.putQueryParameter("NamespaceId", namespaceId);

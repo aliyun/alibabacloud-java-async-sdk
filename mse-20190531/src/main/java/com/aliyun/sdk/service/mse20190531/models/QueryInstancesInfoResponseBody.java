@@ -98,7 +98,7 @@ public class QueryInstancesInfoResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * The details of the data.
+         * A reserved parameter.
          */
         public Builder data(java.util.List < Data> data) {
             this.data = data;
@@ -106,7 +106,7 @@ public class QueryInstancesInfoResponseBody extends TeaModel {
         }
 
         /**
-         * The error code returned if the request failed.
+         * The details of the data.
          */
         public Builder errorCode(String errorCode) {
             this.errorCode = errorCode;
@@ -114,7 +114,7 @@ public class QueryInstancesInfoResponseBody extends TeaModel {
         }
 
         /**
-         * The HTTP status code returned.
+         * The details of the data.
          */
         public Builder httpCode(String httpCode) {
             this.httpCode = httpCode;
@@ -122,11 +122,7 @@ public class QueryInstancesInfoResponseBody extends TeaModel {
         }
 
         /**
-         * The message returned.
-         * <p>
-         * 
-         * *   If the request is successful, a success message is returned.
-         * *   If the request fails, an error message is returned.
+         * The ID of the request.
          */
         public Builder message(String message) {
             this.message = message;
@@ -134,7 +130,7 @@ public class QueryInstancesInfoResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * The HTTP status code.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -142,11 +138,7 @@ public class QueryInstancesInfoResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether the request was successful. Valid values:
-         * <p>
-         * 
-         * *   `true`: The request was successful.
-         * *   `false`: The request failed.
+         * The request is successfully processed.
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -282,7 +274,7 @@ public class QueryInstancesInfoResponseBody extends TeaModel {
             private String zone; 
 
             /**
-             * The enabled port.
+             * mse-200-105
              */
             public Builder clientPort(String clientPort) {
                 this.clientPort = clientPort;
@@ -290,7 +282,7 @@ public class QueryInstancesInfoResponseBody extends TeaModel {
             }
 
             /**
-             * The creation time of the TIMESTAMP type.
+             * The zone.
              */
             public Builder creationTimestamp(String creationTimestamp) {
                 this.creationTimestamp = creationTimestamp;
@@ -298,7 +290,7 @@ public class QueryInstancesInfoResponseBody extends TeaModel {
             }
 
             /**
-             * A reserved parameter.
+             * The pod name.
              */
             public Builder healthStatus(String healthStatus) {
                 this.healthStatus = healthStatus;
@@ -306,7 +298,7 @@ public class QueryInstancesInfoResponseBody extends TeaModel {
             }
 
             /**
-             * The public IP address.
+             * The creation time. The value of this parameter is a timestamp.
              */
             public Builder internetIp(String internetIp) {
                 this.internetIp = internetIp;
@@ -314,7 +306,7 @@ public class QueryInstancesInfoResponseBody extends TeaModel {
             }
 
             /**
-             * The IP address of the pod.
+             * The internal IP address.
              */
             public Builder ip(String ip) {
                 this.ip = ip;
@@ -322,7 +314,7 @@ public class QueryInstancesInfoResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the pod.
+             * The public IP address.
              */
             public Builder podName(String podName) {
                 this.podName = podName;
@@ -330,7 +322,7 @@ public class QueryInstancesInfoResponseBody extends TeaModel {
             }
 
             /**
-             * A reserved parameter.
+             * The IP address of the pod.
              */
             public Builder role(String role) {
                 this.role = role;
@@ -338,7 +330,7 @@ public class QueryInstancesInfoResponseBody extends TeaModel {
             }
 
             /**
-             * The internal IP address.
+             * The enabled port.
              */
             public Builder singleTunnelVip(String singleTunnelVip) {
                 this.singleTunnelVip = singleTunnelVip;
@@ -346,7 +338,7 @@ public class QueryInstancesInfoResponseBody extends TeaModel {
             }
 
             /**
-             * The zone.
+             * duplicatedClusterAliasName
              */
             public Builder zone(String zone) {
                 this.zone = zone;

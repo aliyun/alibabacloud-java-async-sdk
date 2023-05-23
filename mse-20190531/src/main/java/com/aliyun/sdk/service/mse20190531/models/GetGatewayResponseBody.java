@@ -98,7 +98,7 @@ public class GetGatewayResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * The status code returned. A value of 200 indicates that the request is successful.
+         * Code.
          */
         public Builder code(Integer code) {
             this.code = code;
@@ -106,7 +106,7 @@ public class GetGatewayResponseBody extends TeaModel {
         }
 
         /**
-         * The information about the gateway.
+         * Data.
          */
         public Builder data(Data data) {
             this.data = data;
@@ -114,7 +114,7 @@ public class GetGatewayResponseBody extends TeaModel {
         }
 
         /**
-         * The HTTP status code returned.
+         * HttpStatusCode.
          */
         public Builder httpStatusCode(Integer httpStatusCode) {
             this.httpStatusCode = httpStatusCode;
@@ -122,7 +122,7 @@ public class GetGatewayResponseBody extends TeaModel {
         }
 
         /**
-         * The message returned.
+         * Message.
          */
         public Builder message(String message) {
             this.message = message;
@@ -130,7 +130,7 @@ public class GetGatewayResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * Id of the request
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -138,11 +138,7 @@ public class GetGatewayResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether the request was successful. Valid values:
-         * <p>
-         * 
-         * *   `true`: The request was successful.
-         * *   `false`: The request failed.
+         * Success.
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -155,6 +151,168 @@ public class GetGatewayResponseBody extends TeaModel {
 
     } 
 
+    public static class TimePolicyList extends TeaModel {
+        @NameInMap("DesiredReplica")
+        private Integer desiredReplica;
+
+        @NameInMap("EndTime")
+        private String endTime;
+
+        @NameInMap("StartTime")
+        private String startTime;
+
+        private TimePolicyList(Builder builder) {
+            this.desiredReplica = builder.desiredReplica;
+            this.endTime = builder.endTime;
+            this.startTime = builder.startTime;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static TimePolicyList create() {
+            return builder().build();
+        }
+
+        /**
+         * @return desiredReplica
+         */
+        public Integer getDesiredReplica() {
+            return this.desiredReplica;
+        }
+
+        /**
+         * @return endTime
+         */
+        public String getEndTime() {
+            return this.endTime;
+        }
+
+        /**
+         * @return startTime
+         */
+        public String getStartTime() {
+            return this.startTime;
+        }
+
+        public static final class Builder {
+            private Integer desiredReplica; 
+            private String endTime; 
+            private String startTime; 
+
+            /**
+             * DesiredReplica.
+             */
+            public Builder desiredReplica(Integer desiredReplica) {
+                this.desiredReplica = desiredReplica;
+                return this;
+            }
+
+            /**
+             * EndTime.
+             */
+            public Builder endTime(String endTime) {
+                this.endTime = endTime;
+                return this;
+            }
+
+            /**
+             * StartTime.
+             */
+            public Builder startTime(String startTime) {
+                this.startTime = startTime;
+                return this;
+            }
+
+            public TimePolicyList build() {
+                return new TimePolicyList(this);
+            } 
+
+        } 
+
+    }
+    public static class ElasticPolicy extends TeaModel {
+        @NameInMap("ElasticType")
+        private String elasticType;
+
+        @NameInMap("MaxReplica")
+        private Integer maxReplica;
+
+        @NameInMap("TimePolicyList")
+        private java.util.List < TimePolicyList> timePolicyList;
+
+        private ElasticPolicy(Builder builder) {
+            this.elasticType = builder.elasticType;
+            this.maxReplica = builder.maxReplica;
+            this.timePolicyList = builder.timePolicyList;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static ElasticPolicy create() {
+            return builder().build();
+        }
+
+        /**
+         * @return elasticType
+         */
+        public String getElasticType() {
+            return this.elasticType;
+        }
+
+        /**
+         * @return maxReplica
+         */
+        public Integer getMaxReplica() {
+            return this.maxReplica;
+        }
+
+        /**
+         * @return timePolicyList
+         */
+        public java.util.List < TimePolicyList> getTimePolicyList() {
+            return this.timePolicyList;
+        }
+
+        public static final class Builder {
+            private String elasticType; 
+            private Integer maxReplica; 
+            private java.util.List < TimePolicyList> timePolicyList; 
+
+            /**
+             * ElasticType.
+             */
+            public Builder elasticType(String elasticType) {
+                this.elasticType = elasticType;
+                return this;
+            }
+
+            /**
+             * MaxReplica.
+             */
+            public Builder maxReplica(Integer maxReplica) {
+                this.maxReplica = maxReplica;
+                return this;
+            }
+
+            /**
+             * TimePolicyList.
+             */
+            public Builder timePolicyList(java.util.List < TimePolicyList> timePolicyList) {
+                this.timePolicyList = timePolicyList;
+                return this;
+            }
+
+            public ElasticPolicy build() {
+                return new ElasticPolicy(this);
+            } 
+
+        } 
+
+    }
     public static class LogConfigDetails extends TeaModel {
         @NameInMap("LogEnabled")
         private Boolean logEnabled;
@@ -206,7 +364,7 @@ public class GetGatewayResponseBody extends TeaModel {
             private String projectName; 
 
             /**
-             * Indicates whether Log Service is activated.
+             * LogEnabled.
              */
             public Builder logEnabled(Boolean logEnabled) {
                 this.logEnabled = logEnabled;
@@ -214,7 +372,7 @@ public class GetGatewayResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the Logstore.
+             * LogStoreName.
              */
             public Builder logStoreName(String logStoreName) {
                 this.logStoreName = logStoreName;
@@ -222,7 +380,7 @@ public class GetGatewayResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the project.
+             * ProjectName.
              */
             public Builder projectName(String projectName) {
                 this.projectName = projectName;
@@ -275,7 +433,7 @@ public class GetGatewayResponseBody extends TeaModel {
             private Boolean traceOn; 
 
             /**
-             * The sampling rate of Tracing Analysis.
+             * Sample.
              */
             public Builder sample(Integer sample) {
                 this.sample = sample;
@@ -283,7 +441,7 @@ public class GetGatewayResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether sampling by using Tracing Analysis is enabled.
+             * TraceOn.
              */
             public Builder traceOn(Boolean traceOn) {
                 this.traceOn = traceOn;
@@ -300,6 +458,18 @@ public class GetGatewayResponseBody extends TeaModel {
     public static class Data extends TeaModel {
         @NameInMap("ChargeType")
         private String chargeType;
+
+        @NameInMap("Elastic")
+        private Boolean elastic;
+
+        @NameInMap("ElasticPolicy")
+        private ElasticPolicy elasticPolicy;
+
+        @NameInMap("ElasticReplica")
+        private Integer elasticReplica;
+
+        @NameInMap("ElasticType")
+        private String elasticType;
 
         @NameInMap("EndDate")
         private String endDate;
@@ -352,6 +522,9 @@ public class GetGatewayResponseBody extends TeaModel {
         @NameInMap("StatusDesc")
         private String statusDesc;
 
+        @NameInMap("TotalReplica")
+        private Integer totalReplica;
+
         @NameInMap("Vpc")
         private String vpc;
 
@@ -366,6 +539,10 @@ public class GetGatewayResponseBody extends TeaModel {
 
         private Data(Builder builder) {
             this.chargeType = builder.chargeType;
+            this.elastic = builder.elastic;
+            this.elasticPolicy = builder.elasticPolicy;
+            this.elasticReplica = builder.elasticReplica;
+            this.elasticType = builder.elasticType;
             this.endDate = builder.endDate;
             this.gatewayUniqueId = builder.gatewayUniqueId;
             this.gmtCreate = builder.gmtCreate;
@@ -383,6 +560,7 @@ public class GetGatewayResponseBody extends TeaModel {
             this.spec = builder.spec;
             this.status = builder.status;
             this.statusDesc = builder.statusDesc;
+            this.totalReplica = builder.totalReplica;
             this.vpc = builder.vpc;
             this.vswitch = builder.vswitch;
             this.vswitch2 = builder.vswitch2;
@@ -402,6 +580,34 @@ public class GetGatewayResponseBody extends TeaModel {
          */
         public String getChargeType() {
             return this.chargeType;
+        }
+
+        /**
+         * @return elastic
+         */
+        public Boolean getElastic() {
+            return this.elastic;
+        }
+
+        /**
+         * @return elasticPolicy
+         */
+        public ElasticPolicy getElasticPolicy() {
+            return this.elasticPolicy;
+        }
+
+        /**
+         * @return elasticReplica
+         */
+        public Integer getElasticReplica() {
+            return this.elasticReplica;
+        }
+
+        /**
+         * @return elasticType
+         */
+        public String getElasticType() {
+            return this.elasticType;
         }
 
         /**
@@ -524,6 +730,13 @@ public class GetGatewayResponseBody extends TeaModel {
         }
 
         /**
+         * @return totalReplica
+         */
+        public Integer getTotalReplica() {
+            return this.totalReplica;
+        }
+
+        /**
          * @return vpc
          */
         public String getVpc() {
@@ -553,6 +766,10 @@ public class GetGatewayResponseBody extends TeaModel {
 
         public static final class Builder {
             private String chargeType; 
+            private Boolean elastic; 
+            private ElasticPolicy elasticPolicy; 
+            private Integer elasticReplica; 
+            private String elasticType; 
             private String endDate; 
             private String gatewayUniqueId; 
             private String gmtCreate; 
@@ -570,13 +787,14 @@ public class GetGatewayResponseBody extends TeaModel {
             private String spec; 
             private Integer status; 
             private String statusDesc; 
+            private Integer totalReplica; 
             private String vpc; 
             private String vswitch; 
             private String vswitch2; 
             private XtraceDetails xtraceDetails; 
 
             /**
-             * The billing method, such as subscription or pay-as-you-go.
+             * ChargeType.
              */
             public Builder chargeType(String chargeType) {
                 this.chargeType = chargeType;
@@ -584,7 +802,39 @@ public class GetGatewayResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the gateway expires.
+             * Elastic.
+             */
+            public Builder elastic(Boolean elastic) {
+                this.elastic = elastic;
+                return this;
+            }
+
+            /**
+             * ElasticPolicy.
+             */
+            public Builder elasticPolicy(ElasticPolicy elasticPolicy) {
+                this.elasticPolicy = elasticPolicy;
+                return this;
+            }
+
+            /**
+             * ElasticReplica.
+             */
+            public Builder elasticReplica(Integer elasticReplica) {
+                this.elasticReplica = elasticReplica;
+                return this;
+            }
+
+            /**
+             * ElasticType.
+             */
+            public Builder elasticType(String elasticType) {
+                this.elasticType = elasticType;
+                return this;
+            }
+
+            /**
+             * EndDate.
              */
             public Builder endDate(String endDate) {
                 this.endDate = endDate;
@@ -592,7 +842,7 @@ public class GetGatewayResponseBody extends TeaModel {
             }
 
             /**
-             * The unique ID of the gateway.
+             * GatewayUniqueId.
              */
             public Builder gatewayUniqueId(String gatewayUniqueId) {
                 this.gatewayUniqueId = gatewayUniqueId;
@@ -600,7 +850,7 @@ public class GetGatewayResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the gateway was created. The time is displayed in GMT. The time is the local time of the region in which the gateway resides.
+             * GmtCreate.
              */
             public Builder gmtCreate(String gmtCreate) {
                 this.gmtCreate = gmtCreate;
@@ -608,7 +858,7 @@ public class GetGatewayResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the gateway was last modified.
+             * GmtModified.
              */
             public Builder gmtModified(String gmtModified) {
                 this.gmtModified = gmtModified;
@@ -616,7 +866,7 @@ public class GetGatewayResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the gateway.
+             * Id.
              */
             public Builder id(Long id) {
                 this.id = id;
@@ -624,7 +874,7 @@ public class GetGatewayResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the instance.
+             * InstanceId.
              */
             public Builder instanceId(String instanceId) {
                 this.instanceId = instanceId;
@@ -632,7 +882,7 @@ public class GetGatewayResponseBody extends TeaModel {
             }
 
             /**
-             * The log configuration.
+             * LogConfigDetails.
              */
             public Builder logConfigDetails(LogConfigDetails logConfigDetails) {
                 this.logConfigDetails = logConfigDetails;
@@ -640,7 +890,7 @@ public class GetGatewayResponseBody extends TeaModel {
             }
 
             /**
-             * The tag of the resource.
+             * MseTag.
              */
             public Builder mseTag(String mseTag) {
                 this.mseTag = mseTag;
@@ -648,7 +898,7 @@ public class GetGatewayResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the gateway.
+             * Name.
              */
             public Builder name(String name) {
                 this.name = name;
@@ -656,7 +906,7 @@ public class GetGatewayResponseBody extends TeaModel {
             }
 
             /**
-             * The Alibaba Cloud account ID of the user who created the gateway.
+             * PrimaryUser.
              */
             public Builder primaryUser(String primaryUser) {
                 this.primaryUser = primaryUser;
@@ -664,7 +914,7 @@ public class GetGatewayResponseBody extends TeaModel {
             }
 
             /**
-             * The region ID.
+             * Region.
              */
             public Builder region(String region) {
                 this.region = region;
@@ -672,7 +922,7 @@ public class GetGatewayResponseBody extends TeaModel {
             }
 
             /**
-             * The number of gateway replicas.
+             * Replica.
              */
             public Builder replica(Integer replica) {
                 this.replica = replica;
@@ -680,7 +930,7 @@ public class GetGatewayResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the resource group.
+             * ResourceGroupId.
              */
             public Builder resourceGroupId(String resourceGroupId) {
                 this.resourceGroupId = resourceGroupId;
@@ -688,7 +938,7 @@ public class GetGatewayResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the security group.
+             * SecurityGroup.
              */
             public Builder securityGroup(String securityGroup) {
                 this.securityGroup = securityGroup;
@@ -696,7 +946,7 @@ public class GetGatewayResponseBody extends TeaModel {
             }
 
             /**
-             * The specifications of the gateway.
+             * Spec.
              */
             public Builder spec(String spec) {
                 this.spec = spec;
@@ -704,7 +954,7 @@ public class GetGatewayResponseBody extends TeaModel {
             }
 
             /**
-             * The status of the gateway. Valid values: 0: The gateway is being created. 1: The gateway fails to be created. 2: The gateway is running. 3: The gateway is changing. 4: The gateway is scaling down. 6: The gateway is scaling up. 8: The gateway is being deleted. 10: The gateway is restarting. 11: The gateway is being rebuilt. 12: The gateway is updating. 13: The gateway fails to be updated.
+             * Status.
              */
             public Builder status(Integer status) {
                 this.status = status;
@@ -712,7 +962,7 @@ public class GetGatewayResponseBody extends TeaModel {
             }
 
             /**
-             * The description of the status.
+             * StatusDesc.
              */
             public Builder statusDesc(String statusDesc) {
                 this.statusDesc = statusDesc;
@@ -720,7 +970,15 @@ public class GetGatewayResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the VPC.
+             * TotalReplica.
+             */
+            public Builder totalReplica(Integer totalReplica) {
+                this.totalReplica = totalReplica;
+                return this;
+            }
+
+            /**
+             * Vpc.
              */
             public Builder vpc(String vpc) {
                 this.vpc = vpc;
@@ -728,7 +986,7 @@ public class GetGatewayResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the vSwitch.
+             * Vswitch.
              */
             public Builder vswitch(String vswitch) {
                 this.vswitch = vswitch;
@@ -736,7 +994,7 @@ public class GetGatewayResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the secondary vSwitch.
+             * Vswitch2.
              */
             public Builder vswitch2(String vswitch2) {
                 this.vswitch2 = vswitch2;
@@ -744,7 +1002,7 @@ public class GetGatewayResponseBody extends TeaModel {
             }
 
             /**
-             * The details of Tracing Analysis.
+             * XtraceDetails.
              */
             public Builder xtraceDetails(XtraceDetails xtraceDetails) {
                 this.xtraceDetails = xtraceDetails;

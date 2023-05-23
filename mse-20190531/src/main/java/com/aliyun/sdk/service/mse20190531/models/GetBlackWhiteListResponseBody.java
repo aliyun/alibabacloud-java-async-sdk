@@ -98,7 +98,7 @@ public class GetBlackWhiteListResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * The status code returned. A value of 200 indicates that the request is successful.
+         * Code.
          */
         public Builder code(Integer code) {
             this.code = code;
@@ -106,7 +106,7 @@ public class GetBlackWhiteListResponseBody extends TeaModel {
         }
 
         /**
-         * The data of the node.
+         * Data.
          */
         public Builder data(Data data) {
             this.data = data;
@@ -114,7 +114,7 @@ public class GetBlackWhiteListResponseBody extends TeaModel {
         }
 
         /**
-         * The HTTP status code returned.
+         * HttpStatusCode.
          */
         public Builder httpStatusCode(Integer httpStatusCode) {
             this.httpStatusCode = httpStatusCode;
@@ -122,7 +122,7 @@ public class GetBlackWhiteListResponseBody extends TeaModel {
         }
 
         /**
-         * The message returned.
+         * Message.
          */
         public Builder message(String message) {
             this.message = message;
@@ -130,7 +130,7 @@ public class GetBlackWhiteListResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * Id of the request
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -138,11 +138,7 @@ public class GetBlackWhiteListResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether the request was successful. Valid values:
-         * <p>
-         * 
-         * *   `true`: The request was successful.
-         * *   `false`: The request failed.
+         * Success.
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -302,7 +298,7 @@ public class GetBlackWhiteListResponseBody extends TeaModel {
             private String type; 
 
             /**
-             * The content of the blacklist.
+             * Content.
              */
             public Builder content(String content) {
                 this.content = content;
@@ -310,7 +306,7 @@ public class GetBlackWhiteListResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the gateway.
+             * GatewayId.
              */
             public Builder gatewayId(Long gatewayId) {
                 this.gatewayId = gatewayId;
@@ -318,7 +314,7 @@ public class GetBlackWhiteListResponseBody extends TeaModel {
             }
 
             /**
-             * The unique ID of the gateway.
+             * GatewayUniqueId.
              */
             public Builder gatewayUniqueId(String gatewayUniqueId) {
                 this.gatewayUniqueId = gatewayUniqueId;
@@ -326,7 +322,7 @@ public class GetBlackWhiteListResponseBody extends TeaModel {
             }
 
             /**
-             * The creation time.
+             * GmtCreate.
              */
             public Builder gmtCreate(String gmtCreate) {
                 this.gmtCreate = gmtCreate;
@@ -334,7 +330,7 @@ public class GetBlackWhiteListResponseBody extends TeaModel {
             }
 
             /**
-             * The modification time.
+             * GmtModified.
              */
             public Builder gmtModified(String gmtModified) {
                 this.gmtModified = gmtModified;
@@ -342,7 +338,7 @@ public class GetBlackWhiteListResponseBody extends TeaModel {
             }
 
             /**
-             * The ID.
+             * Id.
              */
             public Builder id(Long id) {
                 this.id = id;
@@ -350,7 +346,7 @@ public class GetBlackWhiteListResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether the whitelist is enabled.
+             * IsWhite.
              */
             public Builder isWhite(Boolean isWhite) {
                 this.isWhite = isWhite;
@@ -358,7 +354,7 @@ public class GetBlackWhiteListResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the resource.
+             * ResourceId.
              */
             public Builder resourceId(Long resourceId) {
                 this.resourceId = resourceId;
@@ -366,7 +362,7 @@ public class GetBlackWhiteListResponseBody extends TeaModel {
             }
 
             /**
-             * The type of a resource.
+             * ResourceType.
              */
             public Builder resourceType(String resourceType) {
                 this.resourceType = resourceType;
@@ -374,7 +370,7 @@ public class GetBlackWhiteListResponseBody extends TeaModel {
             }
 
             /**
-             * The status of the blacklist or whitelist.
+             * Status.
              */
             public Builder status(String status) {
                 this.status = status;
@@ -382,7 +378,7 @@ public class GetBlackWhiteListResponseBody extends TeaModel {
             }
 
             /**
-             * The type.
+             * Type.
              */
             public Builder type(String type) {
                 this.type = type;
