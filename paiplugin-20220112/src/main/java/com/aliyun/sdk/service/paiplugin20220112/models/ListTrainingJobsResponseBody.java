@@ -124,6 +124,9 @@ public class ListTrainingJobsResponseBody extends TeaModel {
         @NameInMap("DataPath")
         private String dataPath;
 
+        @NameInMap("HasModelInfo")
+        private Boolean hasModelInfo;
+
         @NameInMap("History")
         private String history;
 
@@ -153,6 +156,7 @@ public class ListTrainingJobsResponseBody extends TeaModel {
             this.campaignId = builder.campaignId;
             this.createdTime = builder.createdTime;
             this.dataPath = builder.dataPath;
+            this.hasModelInfo = builder.hasModelInfo;
             this.history = builder.history;
             this.id = builder.id;
             this.name = builder.name;
@@ -197,6 +201,13 @@ public class ListTrainingJobsResponseBody extends TeaModel {
          */
         public String getDataPath() {
             return this.dataPath;
+        }
+
+        /**
+         * @return hasModelInfo
+         */
+        public Boolean getHasModelInfo() {
+            return this.hasModelInfo;
         }
 
         /**
@@ -260,6 +271,7 @@ public class ListTrainingJobsResponseBody extends TeaModel {
             private String campaignId; 
             private String createdTime; 
             private String dataPath; 
+            private Boolean hasModelInfo; 
             private String history; 
             private String id; 
             private String name; 
@@ -298,6 +310,14 @@ public class ListTrainingJobsResponseBody extends TeaModel {
              */
             public Builder dataPath(String dataPath) {
                 this.dataPath = dataPath;
+                return this;
+            }
+
+            /**
+             * HasModelInfo.
+             */
+            public Builder hasModelInfo(Boolean hasModelInfo) {
+                this.hasModelInfo = hasModelInfo;
                 return this;
             }
 

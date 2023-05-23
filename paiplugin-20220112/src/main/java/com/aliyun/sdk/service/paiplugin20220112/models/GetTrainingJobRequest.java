@@ -54,7 +54,7 @@ public class GetTrainingJobRequest extends Request {
         } 
 
         /**
-         * 训练任务Id，可通过ListTrainingJobs查询账号下的训练任务列表，获取训练任务Id。
+         * 训练任务ID，可通过ListTrainingJobs查询账号下的训练任务列表，获取训练任务ID。
          */
         public Builder id(String id) {
             this.putPathParameter("Id", id);

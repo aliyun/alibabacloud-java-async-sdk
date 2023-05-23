@@ -124,6 +124,9 @@ public class GetTrainingJobResponseBody extends TeaModel {
         @NameInMap("DataPath")
         private String dataPath;
 
+        @NameInMap("HasModelInfo")
+        private Boolean hasModelInfo;
+
         @NameInMap("History")
         private String history;
 
@@ -139,6 +142,9 @@ public class GetTrainingJobResponseBody extends TeaModel {
         @NameInMap("Status")
         private Integer status;
 
+        @NameInMap("TrainingScheduleId")
+        private String trainingScheduleId;
+
         @NameInMap("UpdatedTime")
         private String updatedTime;
 
@@ -150,11 +156,13 @@ public class GetTrainingJobResponseBody extends TeaModel {
             this.campaignId = builder.campaignId;
             this.createdTime = builder.createdTime;
             this.dataPath = builder.dataPath;
+            this.hasModelInfo = builder.hasModelInfo;
             this.history = builder.history;
             this.id = builder.id;
             this.name = builder.name;
             this.remark = builder.remark;
             this.status = builder.status;
+            this.trainingScheduleId = builder.trainingScheduleId;
             this.updatedTime = builder.updatedTime;
             this.userConfig = builder.userConfig;
         }
@@ -196,6 +204,13 @@ public class GetTrainingJobResponseBody extends TeaModel {
         }
 
         /**
+         * @return hasModelInfo
+         */
+        public Boolean getHasModelInfo() {
+            return this.hasModelInfo;
+        }
+
+        /**
          * @return history
          */
         public String getHistory() {
@@ -231,6 +246,13 @@ public class GetTrainingJobResponseBody extends TeaModel {
         }
 
         /**
+         * @return trainingScheduleId
+         */
+        public String getTrainingScheduleId() {
+            return this.trainingScheduleId;
+        }
+
+        /**
          * @return updatedTime
          */
         public String getUpdatedTime() {
@@ -249,16 +271,18 @@ public class GetTrainingJobResponseBody extends TeaModel {
             private String campaignId; 
             private String createdTime; 
             private String dataPath; 
+            private Boolean hasModelInfo; 
             private String history; 
             private String id; 
             private String name; 
             private String remark; 
             private Integer status; 
+            private String trainingScheduleId; 
             private String updatedTime; 
             private String userConfig; 
 
             /**
-             * 关联算法Id。
+             * 关联算法ID。
              */
             public Builder algorithm(String algorithm) {
                 this.algorithm = algorithm;
@@ -266,7 +290,7 @@ public class GetTrainingJobResponseBody extends TeaModel {
             }
 
             /**
-             * 关联运营活动Id。
+             * 关联运营活动ID。
              */
             public Builder campaignId(String campaignId) {
                 this.campaignId = campaignId;
@@ -282,10 +306,18 @@ public class GetTrainingJobResponseBody extends TeaModel {
             }
 
             /**
-             * 训练数据路径。
+             * 训练数据路径，指定路径前需确保已在控制台完成一键授权。
              */
             public Builder dataPath(String dataPath) {
                 this.dataPath = dataPath;
+                return this;
+            }
+
+            /**
+             * HasModelInfo.
+             */
+            public Builder hasModelInfo(Boolean hasModelInfo) {
+                this.hasModelInfo = hasModelInfo;
                 return this;
             }
 
@@ -298,7 +330,7 @@ public class GetTrainingJobResponseBody extends TeaModel {
             }
 
             /**
-             * 训练任务Id。
+             * 训练任务ID。
              */
             public Builder id(String id) {
                 this.id = id;
@@ -323,9 +355,23 @@ public class GetTrainingJobResponseBody extends TeaModel {
 
             /**
              * 训练任务状态。
+             * <p>
+             * - 0: 队列中。
+             * - 1: 已提交。
+             * - 2: 运行中。
+             * - 3: 成功。
+             * - 4: 失败。
              */
             public Builder status(Integer status) {
                 this.status = status;
+                return this;
+            }
+
+            /**
+             * 关联训练计划ID。
+             */
+            public Builder trainingScheduleId(String trainingScheduleId) {
+                this.trainingScheduleId = trainingScheduleId;
                 return this;
             }
 

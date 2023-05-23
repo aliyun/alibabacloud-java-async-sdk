@@ -130,6 +130,9 @@ public class CreateTemplateResponseBody extends TeaModel {
         @NameInMap("Reason")
         private String reason;
 
+        @NameInMap("Signature")
+        private String signature;
+
         @NameInMap("SignatureId")
         private String signatureId;
 
@@ -152,6 +155,7 @@ public class CreateTemplateResponseBody extends TeaModel {
             this.id = builder.id;
             this.name = builder.name;
             this.reason = builder.reason;
+            this.signature = builder.signature;
             this.signatureId = builder.signatureId;
             this.status = builder.status;
             this.templateCode = builder.templateCode;
@@ -210,6 +214,13 @@ public class CreateTemplateResponseBody extends TeaModel {
         }
 
         /**
+         * @return signature
+         */
+        public String getSignature() {
+            return this.signature;
+        }
+
+        /**
          * @return signatureId
          */
         public String getSignatureId() {
@@ -251,6 +262,7 @@ public class CreateTemplateResponseBody extends TeaModel {
             private String id; 
             private String name; 
             private String reason; 
+            private String signature; 
             private String signatureId; 
             private Integer status; 
             private String templateCode; 
@@ -282,7 +294,7 @@ public class CreateTemplateResponseBody extends TeaModel {
             }
 
             /**
-             * 模板Id。
+             * 模板ID。
              */
             public Builder id(String id) {
                 this.id = id;
@@ -290,7 +302,7 @@ public class CreateTemplateResponseBody extends TeaModel {
             }
 
             /**
-             * 签名名称。
+             * 模板名称。
              */
             public Builder name(String name) {
                 this.name = name;
@@ -306,7 +318,15 @@ public class CreateTemplateResponseBody extends TeaModel {
             }
 
             /**
-             * 签名Id。
+             * 签名。
+             */
+            public Builder signature(String signature) {
+                this.signature = signature;
+                return this;
+            }
+
+            /**
+             * 签名ID。
              */
             public Builder signatureId(String signatureId) {
                 this.signatureId = signatureId;

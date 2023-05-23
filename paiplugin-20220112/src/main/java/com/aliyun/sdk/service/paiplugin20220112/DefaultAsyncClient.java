@@ -40,7 +40,8 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-     * 注册运营活动。
+      * 注册运营活动。
+      *
      */
     @Override
     public CompletableFuture<CreateCampaignResponse> createCampaign(CreateCampaignRequest request) {
@@ -57,7 +58,8 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-     * 注册人群。
+      * 注册人群。
+      *
      */
     @Override
     public CompletableFuture<CreateGroupResponse> createGroup(CreateGroupRequest request) {
@@ -74,7 +76,8 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-     * 注册预测任务。
+      * 注册预测任务。
+      *
      */
     @Override
     public CompletableFuture<CreateInferenceJobResponse> createInferenceJob(CreateInferenceJobRequest request) {
@@ -90,9 +93,6 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
-    /**
-     * 注册触达计划。
-     */
     @Override
     public CompletableFuture<CreateScheduleResponse> createSchedule(CreateScheduleRequest request) {
         try {
@@ -107,10 +107,6 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
-    /**
-     * 注册签名。
-    
-     */
     @Override
     public CompletableFuture<CreateSignatureResponse> createSignature(CreateSignatureRequest request) {
         try {
@@ -125,10 +121,6 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
-    /**
-     * 注册模板。
-    
-     */
     @Override
     public CompletableFuture<CreateTemplateResponse> createTemplate(CreateTemplateRequest request) {
         try {
@@ -143,10 +135,6 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
-    /**
-     * 注册训练任务。
-    
-     */
     @Override
     public CompletableFuture<CreateTrainingJobResponse> createTrainingJob(CreateTrainingJobRequest request) {
         try {
@@ -162,8 +150,8 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-     * 删除运营活动
-    
+      * 删除运营活动
+      *
      */
     @Override
     public CompletableFuture<DeleteCampaignResponse> deleteCampaign(DeleteCampaignRequest request) {
@@ -180,8 +168,8 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-     * 删除人群
-    
+      * 删除人群
+      *
      */
     @Override
     public CompletableFuture<DeleteGroupResponse> deleteGroup(DeleteGroupRequest request) {
@@ -198,7 +186,8 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-     * 删除预测任务。
+      * 删除预测任务。
+      *
      */
     @Override
     public CompletableFuture<DeleteInferenceJobResponse> deleteInferenceJob(DeleteInferenceJobRequest request) {
@@ -215,8 +204,8 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-     * 删除触达计划。
-    
+      * 删除触达计划。
+      *
      */
     @Override
     public CompletableFuture<DeleteScheduleResponse> deleteSchedule(DeleteScheduleRequest request) {
@@ -232,10 +221,6 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
-    /**
-     * 删除签名。
-    
-     */
     @Override
     public CompletableFuture<DeleteSignatureResponse> deleteSignature(DeleteSignatureRequest request) {
         try {
@@ -251,8 +236,8 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-     * 删除模板
-    
+      * 删除模板
+      *
      */
     @Override
     public CompletableFuture<DeleteTemplateResponse> deleteTemplate(DeleteTemplateRequest request) {
@@ -269,7 +254,8 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-     * 删除训练任务。
+      * 删除训练任务。
+      *
      */
     @Override
     public CompletableFuture<DeleteTrainingJobResponse> deleteTrainingJob(DeleteTrainingJobRequest request) {
@@ -286,7 +272,8 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-     * 获取算法详情。
+      * 获取算法详情。
+      *
      */
     @Override
     public CompletableFuture<GetAlgorithmResponse> getAlgorithm(GetAlgorithmRequest request) {
@@ -303,7 +290,8 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-     * 获取运营活动详情。
+      * 获取运营活动详情。
+      *
      */
     @Override
     public CompletableFuture<GetCampaignResponse> getCampaign(GetCampaignRequest request) {
@@ -320,7 +308,8 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-     * 获取人群详情。
+      * 获取人群详情。
+      *
      */
     @Override
     public CompletableFuture<GetGroupResponse> getGroup(GetGroupRequest request) {
@@ -337,7 +326,8 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-     * 获取预测任务详情。
+      * 获取预测任务详情。
+      *
      */
     @Override
     public CompletableFuture<GetInferenceJobResponse> getInferenceJob(GetInferenceJobRequest request) {
@@ -354,7 +344,8 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-     * 获取短信配置。
+      * 获取短信配置。
+      *
      */
     @Override
     public CompletableFuture<GetMessageConfigResponse> getMessageConfig(GetMessageConfigRequest request) {
@@ -370,9 +361,6 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
-    /**
-     * 获取触达计划详情。
-     */
     @Override
     public CompletableFuture<GetScheduleResponse> getSchedule(GetScheduleRequest request) {
         try {
@@ -388,7 +376,8 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-     * 获取签名详情。
+      * 获取签名详情。
+      *
      */
     @Override
     public CompletableFuture<GetSignatureResponse> getSignature(GetSignatureRequest request) {
@@ -405,7 +394,8 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-     * 获取模板详情。
+      * 获取模板详情。
+      *
      */
     @Override
     public CompletableFuture<GetTemplateResponse> getTemplate(GetTemplateRequest request) {
@@ -421,9 +411,6 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
-    /**
-     * 获取训练任务详情。
-     */
     @Override
     public CompletableFuture<GetTrainingJobResponse> getTrainingJob(GetTrainingJobRequest request) {
         try {
@@ -439,7 +426,8 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-     * 获取账号状态。
+      * 获取账号状态。
+      *
      */
     @Override
     public CompletableFuture<GetUserResponse> getUser(GetUserRequest request) {
@@ -456,7 +444,8 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-     * 获取算法列表。
+      * 获取算法列表。
+      *
      */
     @Override
     public CompletableFuture<ListAlgorithmsResponse> listAlgorithms(ListAlgorithmsRequest request) {
@@ -473,7 +462,8 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-     * 获取运营活动列表。
+      * 获取运营活动列表。
+      *
      */
     @Override
     public CompletableFuture<ListCampaignsResponse> listCampaigns(ListCampaignsRequest request) {
@@ -490,7 +480,8 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-     * 获取人群列表。
+      * 获取人群列表。
+      *
      */
     @Override
     public CompletableFuture<ListGroupsResponse> listGroups(ListGroupsRequest request) {
@@ -521,9 +512,10 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-     * 获取短信发送统计列表。
-    获取短信发送统计数据，可按指定条件获取分类别详细数据，返回数据按日期顺序排列，发送统计为空的日期默认不返回。
-    发送数据在48小时内会随实际短信发送状态不断更新，最终数据以48小时后数据为准。
+      * 获取短信发送统计列表。
+      * 获取短信发送统计数据，可按指定条件获取分类别详细数据，返回数据按日期顺序排列，发送统计为空的日期默认不返回。
+      * 发送数据在48小时内会随实际短信发送状态不断更新，最终数据以48小时后数据为准。
+      *
      */
     @Override
     public CompletableFuture<ListMessageMetricsResponse> listMessageMetrics(ListMessageMetricsRequest request) {
@@ -540,7 +532,8 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-     * 查询短信发送详情列表。
+      * 查询短信发送详情列表。
+      *
      */
     @Override
     public CompletableFuture<ListMessagesResponse> listMessages(ListMessagesRequest request) {
@@ -556,9 +549,6 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
-    /**
-     * 获取触达计划列表。
-     */
     @Override
     public CompletableFuture<ListSchedulesResponse> listSchedules(ListSchedulesRequest request) {
         try {
@@ -574,7 +564,8 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-     * 获取签名列表。
+      * 获取签名列表。
+      *
      */
     @Override
     public CompletableFuture<ListSignaturesResponse> listSignatures(ListSignaturesRequest request) {
@@ -591,7 +582,8 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-     * 获取模板列表。
+      * 获取模板列表。
+      *
      */
     @Override
     public CompletableFuture<ListTemplatesResponse> listTemplates(ListTemplatesRequest request) {
@@ -636,7 +628,8 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-     * 短信回执。
+      * 短信回执。
+      *
      */
     @Override
     public CompletableFuture<SmsReportResponse> smsReport(SmsReportRequest request) {
@@ -653,7 +646,8 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-     * 短信上行。
+      * 短信上行。
+      *
      */
     @Override
     public CompletableFuture<SmsUpResponse> smsUp(SmsUpRequest request) {
@@ -670,7 +664,8 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-     * 更新运营活动
+      * 更新运营活动
+      *
      */
     @Override
     public CompletableFuture<UpdateCampaignResponse> updateCampaign(UpdateCampaignRequest request) {
@@ -687,8 +682,8 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-     * 更新回执Url。
-    
+      * 更新回执Url。
+      *
      */
     @Override
     public CompletableFuture<UpdateReportUrlResponse> updateReportUrl(UpdateReportUrlRequest request) {
@@ -705,7 +700,8 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-     * 更新上行Url。
+      * 更新上行Url。
+      *
      */
     @Override
     public CompletableFuture<UpdateUploadUrlResponse> updateUploadUrl(UpdateUploadUrlRequest request) {

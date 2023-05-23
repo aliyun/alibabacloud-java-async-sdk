@@ -18,6 +18,7 @@ public class CreateSignatureRequest extends Request {
 
     @Body
     @NameInMap("Name")
+    @Validation(required = true)
     private String name;
 
     private CreateSignatureRequest(Builder builder) {

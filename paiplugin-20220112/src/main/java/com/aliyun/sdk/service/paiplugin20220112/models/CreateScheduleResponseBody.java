@@ -330,7 +330,7 @@ public class CreateScheduleResponseBody extends TeaModel {
             }
 
             /**
-             * 人群Id。
+             * 人群ID。
              */
             public Builder groupId(String groupId) {
                 this.groupId = groupId;
@@ -338,7 +338,7 @@ public class CreateScheduleResponseBody extends TeaModel {
             }
 
             /**
-             * 触达计划Id。
+             * 触达计划ID。
              */
             public Builder id(String id) {
                 this.id = id;
@@ -378,8 +378,7 @@ public class CreateScheduleResponseBody extends TeaModel {
             /**
              * 重复次数。
              * <p>
-             * - -1: 不设终止时间（默认）。
-             * - 0: 不重复。
+             * - 0: 不设终止时间（默认）。
              * - N: 重复N次后终止。
              */
             public Builder repeatTimes(Integer repeatTimes) {
@@ -396,7 +395,7 @@ public class CreateScheduleResponseBody extends TeaModel {
             }
 
             /**
-             * 签名Id，或指定签名。
+             * 签名ID，或指定签名。
              */
             public Builder signatureId(String signatureId) {
                 this.signatureId = signatureId;
@@ -427,7 +426,7 @@ public class CreateScheduleResponseBody extends TeaModel {
             }
 
             /**
-             * 模板Id，或指定模板Code。
+             * 模板ID，或指定模板Code。
              */
             public Builder templateId(String templateId) {
                 this.templateId = templateId;

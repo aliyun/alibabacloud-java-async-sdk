@@ -54,7 +54,7 @@ public class GetScheduleRequest extends Request {
         } 
 
         /**
-         * 触达计划Id，可通过ListSchedules查询账号下的触达计划列表，获取触达计划Id。
+         * 短信触达计划ID，可通过ListSchedules查询账号下的短信触达计划列表，获取短信触达计划ID。
          */
         public Builder id(String id) {
             this.putPathParameter("Id", id);

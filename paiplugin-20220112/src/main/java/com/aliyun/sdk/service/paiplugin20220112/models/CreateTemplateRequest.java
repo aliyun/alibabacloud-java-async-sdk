@@ -151,7 +151,7 @@ public class CreateTemplateRequest extends Request {
         }
 
         /**
-         * 签名名称，同时只能指定签名名称或签名Id其中之一。
+         * 签名名称，同时只能指定签名名称或签名ID其中之一。
          */
         public Builder signature(String signature) {
             this.putBodyParameter("Signature", signature);
@@ -160,7 +160,7 @@ public class CreateTemplateRequest extends Request {
         }
 
         /**
-         * 签名Id，可通过ListSignatures获取审核状态为已通过的签名列表，获取签名Id。
+         * 签名ID，可通过ListSignatures获取审核状态为已通过的签名列表，获取签名ID。
          */
         public Builder signatureId(String signatureId) {
             this.putBodyParameter("SignatureId", signatureId);

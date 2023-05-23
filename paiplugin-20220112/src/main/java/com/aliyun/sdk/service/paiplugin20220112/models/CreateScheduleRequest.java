@@ -13,6 +13,14 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class CreateScheduleRequest extends Request {
     @Body
+    @NameInMap("AISendEndDate")
+    private String AISendEndDate;
+
+    @Body
+    @NameInMap("AISendStartDate")
+    private String AISendStartDate;
+
+    @Body
     @NameInMap("EndTime")
     private Integer endTime;
 
@@ -22,11 +30,17 @@ public class CreateScheduleRequest extends Request {
 
     @Body
     @NameInMap("GroupId")
+    @Validation(required = true)
     private String groupId;
 
     @Body
     @NameInMap("Name")
+    @Validation(required = true)
     private String name;
+
+    @Body
+    @NameInMap("PaymentType")
+    private String paymentType;
 
     @Body
     @NameInMap("RepeatCycle")
@@ -58,10 +72,13 @@ public class CreateScheduleRequest extends Request {
 
     private CreateScheduleRequest(Builder builder) {
         super(builder);
+        this.AISendEndDate = builder.AISendEndDate;
+        this.AISendStartDate = builder.AISendStartDate;
         this.endTime = builder.endTime;
         this.executeTime = builder.executeTime;
         this.groupId = builder.groupId;
         this.name = builder.name;
+        this.paymentType = builder.paymentType;
         this.repeatCycle = builder.repeatCycle;
         this.repeatCycleUnit = builder.repeatCycleUnit;
         this.repeatTimes = builder.repeatTimes;
@@ -82,6 +99,20 @@ public class CreateScheduleRequest extends Request {
     @Override
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return AISendEndDate
+     */
+    public String getAISendEndDate() {
+        return this.AISendEndDate;
+    }
+
+    /**
+     * @return AISendStartDate
+     */
+    public String getAISendStartDate() {
+        return this.AISendStartDate;
     }
 
     /**
@@ -110,6 +141,13 @@ public class CreateScheduleRequest extends Request {
      */
     public String getName() {
         return this.name;
+    }
+
+    /**
+     * @return paymentType
+     */
+    public String getPaymentType() {
+        return this.paymentType;
     }
 
     /**
@@ -162,10 +200,13 @@ public class CreateScheduleRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<CreateScheduleRequest, Builder> {
+        private String AISendEndDate; 
+        private String AISendStartDate; 
         private Integer endTime; 
         private String executeTime; 
         private String groupId; 
         private String name; 
+        private String paymentType; 
         private Integer repeatCycle; 
         private Integer repeatCycleUnit; 
         private Integer repeatTimes; 
@@ -180,10 +221,13 @@ public class CreateScheduleRequest extends Request {
 
         private Builder(CreateScheduleRequest request) {
             super(request);
+            this.AISendEndDate = request.AISendEndDate;
+            this.AISendStartDate = request.AISendStartDate;
             this.endTime = request.endTime;
             this.executeTime = request.executeTime;
             this.groupId = request.groupId;
             this.name = request.name;
+            this.paymentType = request.paymentType;
             this.repeatCycle = request.repeatCycle;
             this.repeatCycleUnit = request.repeatCycleUnit;
             this.repeatTimes = request.repeatTimes;
@@ -192,6 +236,24 @@ public class CreateScheduleRequest extends Request {
             this.templateCode = request.templateCode;
             this.templateId = request.templateId;
         } 
+
+        /**
+         * AISendEndDate.
+         */
+        public Builder AISendEndDate(String AISendEndDate) {
+            this.putBodyParameter("AISendEndDate", AISendEndDate);
+            this.AISendEndDate = AISendEndDate;
+            return this;
+        }
+
+        /**
+         * AISendStartDate.
+         */
+        public Builder AISendStartDate(String AISendStartDate) {
+            this.putBodyParameter("AISendStartDate", AISendStartDate);
+            this.AISendStartDate = AISendStartDate;
+            return this;
+        }
 
         /**
          * 终止时间（UTC+8）。
@@ -212,7 +274,7 @@ public class CreateScheduleRequest extends Request {
         }
 
         /**
-         * 人群Id。
+         * 人群ID。
          */
         public Builder groupId(String groupId) {
             this.putBodyParameter("GroupId", groupId);
@@ -226,6 +288,15 @@ public class CreateScheduleRequest extends Request {
         public Builder name(String name) {
             this.putBodyParameter("Name", name);
             this.name = name;
+            return this;
+        }
+
+        /**
+         * PaymentType.
+         */
+        public Builder paymentType(String paymentType) {
+            this.putBodyParameter("PaymentType", paymentType);
+            this.paymentType = paymentType;
             return this;
         }
 
@@ -256,8 +327,7 @@ public class CreateScheduleRequest extends Request {
         /**
          * 重复次数。
          * <p>
-         * - -1: 不设终止时间（默认）。
-         * - 0: 不重复。
+         * - 0: 不设终止时间（默认）。
          * - N: 重复N次后终止。
          */
         public Builder repeatTimes(Integer repeatTimes) {
@@ -276,7 +346,7 @@ public class CreateScheduleRequest extends Request {
         }
 
         /**
-         * 签名Id，或指定签名。
+         * 签名ID，或指定签名。
          */
         public Builder signatureId(String signatureId) {
             this.putBodyParameter("SignatureId", signatureId);
@@ -294,7 +364,7 @@ public class CreateScheduleRequest extends Request {
         }
 
         /**
-         * 模板Id，或指定模板Code。
+         * 模板ID，或指定模板Code。
          */
         public Builder templateId(String templateId) {
             this.putBodyParameter("TemplateId", templateId);

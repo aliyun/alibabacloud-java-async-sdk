@@ -21,6 +21,10 @@ public class SendMessageRequest extends Request {
     private java.util.List < String > outIds;
 
     @Body
+    @NameInMap("PaymentType")
+    private String paymentType;
+
+    @Body
     @NameInMap("PhoneNumbers")
     private java.util.List < String > phoneNumbers;
 
@@ -56,6 +60,7 @@ public class SendMessageRequest extends Request {
         super(builder);
         this.groupId = builder.groupId;
         this.outIds = builder.outIds;
+        this.paymentType = builder.paymentType;
         this.phoneNumbers = builder.phoneNumbers;
         this.scheduleId = builder.scheduleId;
         this.signName = builder.signName;
@@ -91,6 +96,13 @@ public class SendMessageRequest extends Request {
      */
     public java.util.List < String > getOutIds() {
         return this.outIds;
+    }
+
+    /**
+     * @return paymentType
+     */
+    public String getPaymentType() {
+        return this.paymentType;
     }
 
     /**
@@ -152,6 +164,7 @@ public class SendMessageRequest extends Request {
     public static final class Builder extends Request.Builder<SendMessageRequest, Builder> {
         private String groupId; 
         private java.util.List < String > outIds; 
+        private String paymentType; 
         private java.util.List < String > phoneNumbers; 
         private String scheduleId; 
         private String signName; 
@@ -169,6 +182,7 @@ public class SendMessageRequest extends Request {
             super(request);
             this.groupId = request.groupId;
             this.outIds = request.outIds;
+            this.paymentType = request.paymentType;
             this.phoneNumbers = request.phoneNumbers;
             this.scheduleId = request.scheduleId;
             this.signName = request.signName;
@@ -194,6 +208,15 @@ public class SendMessageRequest extends Request {
         public Builder outIds(java.util.List < String > outIds) {
             this.putBodyParameter("OutIds", outIds);
             this.outIds = outIds;
+            return this;
+        }
+
+        /**
+         * PaymentType.
+         */
+        public Builder paymentType(String paymentType) {
+            this.putBodyParameter("PaymentType", paymentType);
+            this.paymentType = paymentType;
             return this;
         }
 

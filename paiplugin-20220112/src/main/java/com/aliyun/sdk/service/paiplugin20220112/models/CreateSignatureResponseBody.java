@@ -194,7 +194,7 @@ public class CreateSignatureResponseBody extends TeaModel {
             }
 
             /**
-             * 签名Id。
+             * 签名ID。
              */
             public Builder id(String id) {
                 this.id = id;

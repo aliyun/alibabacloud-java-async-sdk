@@ -14,6 +14,7 @@ import com.aliyun.sdk.gateway.pop.models.*;
 public class DeleteSignatureRequest extends Request {
     @Path
     @NameInMap("Id")
+    @Validation(required = true)
     private String id;
 
     private DeleteSignatureRequest(Builder builder) {
@@ -54,7 +55,7 @@ public class DeleteSignatureRequest extends Request {
         } 
 
         /**
-         * 签名Id，可通过ListSignatures查询账号下的签名列表，获取签名Id。
+         * 签名ID，可通过ListSignatures查询账号下的签名列表，获取签名ID。
          */
         public Builder id(String id) {
             this.putPathParameter("Id", id);

@@ -133,6 +133,9 @@ public class GetScheduleResponseBody extends TeaModel {
         @NameInMap("Name")
         private String name;
 
+        @NameInMap("PaymentType")
+        private String paymentType;
+
         @NameInMap("RepeatCycle")
         private Integer repeatCycle;
 
@@ -168,6 +171,7 @@ public class GetScheduleResponseBody extends TeaModel {
             this.history = builder.history;
             this.id = builder.id;
             this.name = builder.name;
+            this.paymentType = builder.paymentType;
             this.repeatCycle = builder.repeatCycle;
             this.repeatCycleUnit = builder.repeatCycleUnit;
             this.repeatTimes = builder.repeatTimes;
@@ -234,6 +238,13 @@ public class GetScheduleResponseBody extends TeaModel {
          */
         public String getName() {
             return this.name;
+        }
+
+        /**
+         * @return paymentType
+         */
+        public String getPaymentType() {
+            return this.paymentType;
         }
 
         /**
@@ -307,6 +318,7 @@ public class GetScheduleResponseBody extends TeaModel {
             private String history; 
             private String id; 
             private String name; 
+            private String paymentType; 
             private Integer repeatCycle; 
             private Integer repeatCycleUnit; 
             private Integer repeatTimes; 
@@ -342,7 +354,7 @@ public class GetScheduleResponseBody extends TeaModel {
             }
 
             /**
-             * 人群Id。
+             * 人群ID。
              */
             public Builder groupId(String groupId) {
                 this.groupId = groupId;
@@ -358,7 +370,7 @@ public class GetScheduleResponseBody extends TeaModel {
             }
 
             /**
-             * 触达计划Id。
+             * 触达计划ID。
              */
             public Builder id(String id) {
                 this.id = id;
@@ -370,6 +382,14 @@ public class GetScheduleResponseBody extends TeaModel {
              */
             public Builder name(String name) {
                 this.name = name;
+                return this;
+            }
+
+            /**
+             * PaymentType.
+             */
+            public Builder paymentType(String paymentType) {
+                this.paymentType = paymentType;
                 return this;
             }
 
@@ -398,8 +418,7 @@ public class GetScheduleResponseBody extends TeaModel {
             /**
              * 重复次数。
              * <p>
-             * - -1: 不设终止时间（默认）。
-             * - 0: 不重复。
+             * - 0: 不设终止时间（默认）。
              * - N: 重复N次后终止。
              */
             public Builder repeatTimes(Integer repeatTimes) {
@@ -416,7 +435,7 @@ public class GetScheduleResponseBody extends TeaModel {
             }
 
             /**
-             * 签名Id，或指定签名。
+             * 签名ID，或指定签名。
              */
             public Builder signatureId(String signatureId) {
                 this.signatureId = signatureId;
@@ -447,7 +466,7 @@ public class GetScheduleResponseBody extends TeaModel {
             }
 
             /**
-             * 模板Id，或指定模板Code。
+             * 模板ID，或指定模板Code。
              */
             public Builder templateId(String templateId) {
                 this.templateId = templateId;

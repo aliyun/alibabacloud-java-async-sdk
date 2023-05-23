@@ -124,7 +124,7 @@ public class CreateTrainingJobRequest extends Request {
         } 
 
         /**
-         * 关联算法Id。
+         * 关联算法ID。
          */
         public Builder algorithm(String algorithm) {
             this.putBodyParameter("Algorithm", algorithm);
@@ -133,7 +133,7 @@ public class CreateTrainingJobRequest extends Request {
         }
 
         /**
-         * 关联运营活动Id。
+         * 关联运营活动ID。
          */
         public Builder campaignId(String campaignId) {
             this.putBodyParameter("CampaignId", campaignId);
@@ -142,7 +142,7 @@ public class CreateTrainingJobRequest extends Request {
         }
 
         /**
-         * 训练数据路径。
+         * 训练数据路径，指定路径前需确保已在控制台完成一键授权。
          */
         public Builder dataPath(String dataPath) {
             this.putBodyParameter("DataPath", dataPath);
