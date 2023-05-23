@@ -42,7 +42,6 @@ public class SubmitTextTo2DAvatarVideoTaskRequest extends Request {
 
     @Query
     @NameInMap("VideoInfo")
-    @Validation(required = true)
     private VideoInfo videoInfo;
 
     private SubmitTextTo2DAvatarVideoTaskRequest(Builder builder) {
@@ -408,11 +407,9 @@ public class SubmitTextTo2DAvatarVideoTaskRequest extends Request {
         private String backgroundImageUrl;
 
         @NameInMap("IsAlpha")
-        @Validation(required = true)
         private Boolean isAlpha;
 
         @NameInMap("IsSubtitles")
-        @Validation(required = true)
         private Boolean isSubtitles;
 
         private VideoInfo(Builder builder) {

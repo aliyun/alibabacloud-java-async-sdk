@@ -238,7 +238,7 @@ public class GetVideoTaskInfoResponseBody extends TeaModel {
             }
 
             /**
-             * WordSubtitlesUrl.
+             * 字粒度的时间戳文件，特定任务支持
              */
             public Builder wordSubtitlesUrl(String wordSubtitlesUrl) {
                 this.wordSubtitlesUrl = wordSubtitlesUrl;
