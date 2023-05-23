@@ -94,7 +94,7 @@ public class DescribeGrantRulesToCenResponseBody extends TeaModel {
         }
 
         /**
-         * The number of entries returned on each page.
+         * The number of entries returned per page.
          */
         public Builder maxResults(Long maxResults) {
             this.maxResults = maxResults;
@@ -102,11 +102,11 @@ public class DescribeGrantRulesToCenResponseBody extends TeaModel {
         }
 
         /**
-         * The token that determines the start point of the query. Valid values:
+         * The returned value of NextToken is a pagination token, which can be used in the next request to retrieve a new page of results. Valid values:
          * <p>
          * 
-         * - If **NextToken** was not returned, it indicates that no additional results exist.
-         * - If **NextToken** was returned in the previous query, specify the value to obtain the next set of results.
+         * *   If **NextToken** is empty, no next page exists.
+         * *   If a value of **NextToken** was returned in the previous query, specify the value to obtain the next set of results.
          */
         public Builder nextToken(String nextToken) {
             this.nextToken = nextToken;
@@ -114,7 +114,7 @@ public class DescribeGrantRulesToCenResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -122,7 +122,7 @@ public class DescribeGrantRulesToCenResponseBody extends TeaModel {
         }
 
         /**
-         * The number of entries returned.
+         * The total number of entries returned.
          */
         public Builder totalCount(Long totalCount) {
             this.totalCount = totalCount;
@@ -234,7 +234,7 @@ public class DescribeGrantRulesToCenResponseBody extends TeaModel {
             private String orderType; 
 
             /**
-             * The ID of the CEN instance.
+             * The CEN instance ID.
              */
             public Builder cenId(String cenId) {
                 this.cenId = cenId;
@@ -250,7 +250,7 @@ public class DescribeGrantRulesToCenResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the network instance.
+             * The network instance ID.
              */
             public Builder childInstanceId(String childInstanceId) {
                 this.childInstanceId = childInstanceId;
@@ -266,7 +266,7 @@ public class DescribeGrantRulesToCenResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the region where the network instance is deployed.
+             * The region ID of the network instance.
              */
             public Builder childInstanceRegionId(String childInstanceRegionId) {
                 this.childInstanceRegionId = childInstanceRegionId;
@@ -277,10 +277,10 @@ public class DescribeGrantRulesToCenResponseBody extends TeaModel {
              * The type of the network instance. Valid values:
              * <p>
              * 
-             * *   **VPC**: VPC
-             * *   **VBR**: VBR
-             * *   **CCN**: CCN instance
-             * *   **VPN**: IPsec-VPN connection
+             * *   **VPC**
+             * *   **VBR**
+             * *   **CCN**
+             * *   **VPN**
              */
             public Builder childInstanceType(String childInstanceType) {
                 this.childInstanceType = childInstanceType;

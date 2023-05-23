@@ -168,7 +168,14 @@ public class DescribeCenRegionDomainRouteEntriesRequest extends Request {
         } 
 
         /**
-         * The ID of the CEN instance.
+         * The status of the routes that you want to query. Valid values:
+         * <p>
+         * 
+         * *   **Active** (default value): active routes
+         * *   **Candidate**: standby routes
+         * *   **Rejected**: rejected routes
+         * *   **Prohibited**: prohibited routes
+         * *   **All**: all routes
          */
         public Builder cenId(String cenId) {
             this.putQueryParameter("CenId", cenId);
@@ -177,10 +184,7 @@ public class DescribeCenRegionDomainRouteEntriesRequest extends Request {
         }
 
         /**
-         * The ID of the region that you want to query.
-         * <p>
-         * 
-         * You can call the [DescribeChildInstanceRegions](~~132080~~) operation to query the most recent region list.
+         * The ID of the CEN instance.
          */
         public Builder cenRegionId(String cenRegionId) {
             this.putQueryParameter("CenRegionId", cenRegionId);
@@ -207,7 +211,7 @@ public class DescribeCenRegionDomainRouteEntriesRequest extends Request {
         }
 
         /**
-         * The number of the page to return. Default value: **1**.
+         * The ID of the region where the route map is applied.
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -216,7 +220,11 @@ public class DescribeCenRegionDomainRouteEntriesRequest extends Request {
         }
 
         /**
-         * The number of entries to return on each page. Default value: **10**. Valid values: **1** to **50**.
+         * Whether the route can be advertised to other regions. Valid values: 
+         * <p>
+         * 
+         * - **Active**: The route can be advertised to other regions.
+         * - **Prohibited**: The route cannot be advertised to other regions.
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -243,14 +251,10 @@ public class DescribeCenRegionDomainRouteEntriesRequest extends Request {
         }
 
         /**
-         * The status of the routes that you want to query. Valid values:
+         * The ID of the region that you want to query.
          * <p>
          * 
-         * *   **Active** (default value): active routes
-         * *   **Candidate**: standby routes
-         * *   **Rejected**: rejected routes
-         * *   **Prohibited**: prohibited routes
-         * *   **All**: all routes
+         * You can call the [DescribeChildInstanceRegions](~~132080~~) operation to query the most recent region list.
          */
         public Builder status(String status) {
             this.putQueryParameter("Status", status);

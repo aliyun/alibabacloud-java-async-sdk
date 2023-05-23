@@ -50,7 +50,7 @@ public class ListTransitRouterCidrResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The CIDR blocks of the transit router.
+         * CidrLists.
          */
         public Builder cidrLists(java.util.List < CidrLists> cidrLists) {
             this.cidrLists = cidrLists;
@@ -58,7 +58,7 @@ public class ListTransitRouterCidrResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * RequestId.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -170,7 +170,7 @@ public class ListTransitRouterCidrResponseBody extends TeaModel {
             private String transitRouterId; 
 
             /**
-             * The CIDR block of the transit router.
+             * Cidr.
              */
             public Builder cidr(String cidr) {
                 this.cidr = cidr;
@@ -178,7 +178,7 @@ public class ListTransitRouterCidrResponseBody extends TeaModel {
             }
 
             /**
-             * The description of the CIDR block.
+             * Description.
              */
             public Builder description(String description) {
                 this.description = description;
@@ -186,10 +186,7 @@ public class ListTransitRouterCidrResponseBody extends TeaModel {
             }
 
             /**
-             * The type of the CIDR block.
-             * <p>
-             * 
-             * The value is set to **IPv4**, which indicates that the CIDR block is of the IPv4 type.
+             * Family.
              */
             public Builder family(String family) {
                 this.family = family;
@@ -197,7 +194,7 @@ public class ListTransitRouterCidrResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the CIDR block.
+             * Name.
              */
             public Builder name(String name) {
                 this.name = name;
@@ -205,16 +202,7 @@ public class ListTransitRouterCidrResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether the system is allowed to automatically add a route to the route table of the transit router.
-             * <p>
-             * 
-             * *   **true**: yes.
-             * 
-             *         A value of true indicates that if you create a private VPN connection and add a route learning policy for the VPC connection, the system automatically adds the following route to the route table of the transit router that is in route learning relationship with the VPN connection:
-             *           A blackhole route whose destination CIDR block is the CIDR block of the transit router. The CIDR block of the transit router refers to the CIDR block from which gateway IP addresses are allocated to IPsec-VPN connections. 
-             *           The blackhole route is advertised only to the route tables of VBRs that are connected to the transit router. 
-             * 
-             * *   **false**: no.
+             * PublishCidrRoute.
              */
             public Builder publishCidrRoute(Boolean publishCidrRoute) {
                 this.publishCidrRoute = publishCidrRoute;
@@ -222,7 +210,7 @@ public class ListTransitRouterCidrResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the CIDR block.
+             * TransitRouterCidrId.
              */
             public Builder transitRouterCidrId(String transitRouterCidrId) {
                 this.transitRouterCidrId = transitRouterCidrId;
@@ -230,7 +218,7 @@ public class ListTransitRouterCidrResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the transit router.
+             * TransitRouterId.
              */
             public Builder transitRouterId(String transitRouterId) {
                 this.transitRouterId = transitRouterId;

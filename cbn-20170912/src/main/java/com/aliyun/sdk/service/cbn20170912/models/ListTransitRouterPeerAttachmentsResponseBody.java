@@ -94,11 +94,11 @@ public class ListTransitRouterPeerAttachmentsResponseBody extends TeaModel {
         }
 
         /**
-         * The token that is used for the next query. Valid values:
+         * The returned value of NextToken is a pagination token, which can be used in the next request to retrieve a new page of results. Valid values:
          * <p>
          * 
-         * *   If the returned value of **NextToken** is empty, it indicates that no next query is to be sent.
-         * *   If the returned value of **NextToken** is not empty, the value indicates the token that is used for the next query.
+         * *   If the **NextToken** parameter is empty, no next page exists.
+         * *   If **NextToken** was returned in the previous query, specify the value to obtain the next set of results.
          */
         public Builder nextToken(String nextToken) {
             this.nextToken = nextToken;
@@ -106,7 +106,7 @@ public class ListTransitRouterPeerAttachmentsResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -114,7 +114,7 @@ public class ListTransitRouterPeerAttachmentsResponseBody extends TeaModel {
         }
 
         /**
-         * The number of entries returned.
+         * The total number of entries returned.
          */
         public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;
@@ -122,7 +122,7 @@ public class ListTransitRouterPeerAttachmentsResponseBody extends TeaModel {
         }
 
         /**
-         * The list of cross-region connections.
+         * The queried inter-region connections.
          */
         public Builder transitRouterAttachments(java.util.List < TransitRouterAttachments> transitRouterAttachments) {
             this.transitRouterAttachments = transitRouterAttachments;
@@ -174,7 +174,7 @@ public class ListTransitRouterPeerAttachmentsResponseBody extends TeaModel {
             private String value; 
 
             /**
-             * The key of tag.
+             * The tag key.
              */
             public Builder key(String key) {
                 this.key = key;
@@ -182,7 +182,7 @@ public class ListTransitRouterPeerAttachmentsResponseBody extends TeaModel {
             }
 
             /**
-             * The value of the tag.
+             * The tag value.
              */
             public Builder value(String value) {
                 this.value = value;
@@ -427,7 +427,7 @@ public class ListTransitRouterPeerAttachmentsResponseBody extends TeaModel {
             private String transitRouterId; 
 
             /**
-             * Indicates whether the local Enterprise Edition transit router automatically advertises routes of the cross-region connection to the peer transit router. Valid values:
+             * Indicates whether the local Enterprise Edition transit router automatically advertises routes of the inter-region connection to the peer transit router. Valid values:
              * <p>
              * 
              * *   **false** (default): no
@@ -439,11 +439,11 @@ public class ListTransitRouterPeerAttachmentsResponseBody extends TeaModel {
             }
 
             /**
-             * The bandwidth value of the cross-region connection. Unit: Mbit/s.
+             * The maximum bandwidth value of the inter-region connection. Unit: Mbit/s.
              * <p>
              * 
-             * *   If **BandwidthType** is set to **BandwidthPackage**, this parameter indicates the bandwidth that is available for the cross-region connection.
-             * *   If **BandwidthType** is set to **DataTransfer**, this parameter indicates the bandwidth limit of the cross-region connection.
+             * *   This parameter specifies the maximum bandwidth value for the inter-region connection if you set **BandwidthType** to **BandwidthPackage**.
+             * *   This parameter specifies the bandwidth throttling threshold for the inter-region connection if you set **BandwidthType** to **DataTransfer**.
              */
             public Builder bandwidth(Integer bandwidth) {
                 this.bandwidth = bandwidth;
@@ -456,7 +456,7 @@ public class ListTransitRouterPeerAttachmentsResponseBody extends TeaModel {
              * 
              * **BandwidthPackage**: allocates bandwidth from a bandwidth plan.
              * 
-             * **DataTransfer**: uses pay-by-data-transfer bandwidth.
+             * **DataTransfer**: bills bandwidth based on the pay-by-data-transfer metering method.
              */
             public Builder bandwidthType(String bandwidthType) {
                 this.bandwidthType = bandwidthType;
@@ -464,7 +464,7 @@ public class ListTransitRouterPeerAttachmentsResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the bandwidth plan that is used to allocate bandwidth to the cross-region connection.
+             * The ID of the bandwidth plan that is used to allocate bandwidth to the inter-region connection.
              */
             public Builder cenBandwidthPackageId(String cenBandwidthPackageId) {
                 this.cenBandwidthPackageId = cenBandwidthPackageId;
@@ -472,7 +472,7 @@ public class ListTransitRouterPeerAttachmentsResponseBody extends TeaModel {
             }
 
             /**
-             * CenId.
+             * The CEN instance ID.
              */
             public Builder cenId(String cenId) {
                 this.cenId = cenId;
@@ -480,10 +480,10 @@ public class ListTransitRouterPeerAttachmentsResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the cross-region connection was created.
+             * The time when the inter-region connection was created.
              * <p>
              * 
-             * The time follows the ISO8601 standard in the `YYYY-MM-ddTHH:mmZ` format. The time is displayed in UTC.
+             * The time follows the ISO8601 standard in the `YYYY-MM-DDThh:mmZ` format. The time is displayed in UTC.
              */
             public Builder creationTime(String creationTime) {
                 this.creationTime = creationTime;
@@ -515,7 +515,7 @@ public class ListTransitRouterPeerAttachmentsResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the region where the peer transit router is deployed.
+             * The region ID of the peer transit router.
              */
             public Builder peerTransitRouterRegionId(String peerTransitRouterRegionId) {
                 this.peerTransitRouterRegionId = peerTransitRouterRegionId;
@@ -523,7 +523,7 @@ public class ListTransitRouterPeerAttachmentsResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the region where the Enterprise Edition transit router is deployed.
+             * The region ID of the Enterprise Edition transit router.
              */
             public Builder regionId(String regionId) {
                 this.regionId = regionId;
@@ -534,7 +534,7 @@ public class ListTransitRouterPeerAttachmentsResponseBody extends TeaModel {
              * The type of the resource to which the transit router is connected. Valid values:
              * <p>
              * 
-             * *   **VPC**: virtual private cloud (VPC)
+             * *   **VPC**: VPC
              * *   **CCN**: Cloud Connect Network (CCN) instance
              * *   **VBR**: virtual border router (VBR)
              * *   **TR**: transit router
@@ -545,13 +545,13 @@ public class ListTransitRouterPeerAttachmentsResponseBody extends TeaModel {
             }
 
             /**
-             * The status of the cross-region connection. Valid values:
+             * The status of the inter-region connection. Valid values:
              * <p>
              * 
-             * *   **Attached**: The local transit router is connected to the peer transit router.
-             * *   **Attaching**: The local transit router is connecting to the peer transit router.
-             * *   **Detaching**: The local transit router is disconnecting from the peer transit router.
-             * *   **Detached**: The local transit router is disconnected from the peer transit router.
+             * *   **Attached**: The inter-region connection is created.
+             * *   **Attaching**: The inter-region connection is being created on the transit router.
+             * *   **Detaching**: The inter-region connection is being deleted from the transit router.
+             * *   **Detached**: The inter-region connection is deleted from the transit router.
              */
             public Builder status(String status) {
                 this.status = status;
@@ -559,7 +559,7 @@ public class ListTransitRouterPeerAttachmentsResponseBody extends TeaModel {
             }
 
             /**
-             * The list of tags.
+             * The tags.
              */
             public Builder tags(java.util.List < Tags> tags) {
                 this.tags = tags;
@@ -567,7 +567,7 @@ public class ListTransitRouterPeerAttachmentsResponseBody extends TeaModel {
             }
 
             /**
-             * The description of the cross-region connection.
+             * The description of the inter-region connection.
              */
             public Builder transitRouterAttachmentDescription(String transitRouterAttachmentDescription) {
                 this.transitRouterAttachmentDescription = transitRouterAttachmentDescription;
@@ -575,7 +575,7 @@ public class ListTransitRouterPeerAttachmentsResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the cross-region connection.
+             * The ID of the inter-region connection.
              */
             public Builder transitRouterAttachmentId(String transitRouterAttachmentId) {
                 this.transitRouterAttachmentId = transitRouterAttachmentId;
@@ -583,7 +583,7 @@ public class ListTransitRouterPeerAttachmentsResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the cross-region connection.
+             * The name of the inter-region connection.
              */
             public Builder transitRouterAttachmentName(String transitRouterAttachmentName) {
                 this.transitRouterAttachmentName = transitRouterAttachmentName;

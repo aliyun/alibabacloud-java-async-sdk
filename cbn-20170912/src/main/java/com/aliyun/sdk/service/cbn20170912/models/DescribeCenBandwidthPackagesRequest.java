@@ -194,7 +194,7 @@ public class DescribeCenBandwidthPackagesRequest extends Request {
         } 
 
         /**
-         * The filter conditions.
+         * The description of the bandwidth plan.
          */
         public Builder filter(java.util.List < Filter> filter) {
             this.putQueryParameter("Filter", filter);
@@ -216,11 +216,14 @@ public class DescribeCenBandwidthPackagesRequest extends Request {
         }
 
         /**
-         * The logical operator between the filter conditions. Valid values:
+         * The ID of the other connected area of the bandwidth plan. Valid values:
          * <p>
          * 
-         * *   **false** (default): **AND** Bandwidth plans that meet all filter conditions are returned.
-         * *   **true**: **OR** Bandwidth plans that meet one of the filter conditions are returned.
+         * *   **china**: Chinese mainland.
+         * *   **asia-pacific**: Asia Pacific
+         * *   **europe**: Europe
+         * *   **australia**: Australia
+         * *   **north-america**: North America
          */
         public Builder isOrKey(Boolean isOrKey) {
             this.putQueryParameter("IsOrKey", isOrKey);
@@ -247,7 +250,10 @@ public class DescribeCenBandwidthPackagesRequest extends Request {
         }
 
         /**
-         * The number of the page to return. Default value: **1**.
+         * Specify a filter value based on the **Key** parameter.
+         * <p>
+         * 
+         * You can specify multiple values for a **filter key**. The logical relation among multiple filter values is **OR**. If a bandwidth package matches one of the values that you specify, the bandwidth package matches the filter condition.
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -256,7 +262,7 @@ public class DescribeCenBandwidthPackagesRequest extends Request {
         }
 
         /**
-         * The number of entries to return on each page. Maximum value: **50**. Default value: **10**.
+         * The ID of the peer region.
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -346,23 +352,7 @@ public class DescribeCenBandwidthPackagesRequest extends Request {
             private java.util.List < String > value; 
 
             /**
-             * The filter condition.
-             * <p>
-             * 
-             * You can use filter conditions to filter the bandwidth plans that you want to query. The following filter conditions are supported:
-             * 
-             * *   **CenId**: CEN instance ID
-             * 
-             * *   **Status**: bandwidth plan status. Valid values:
-             * 
-             *     *   **Idle**: not associated with a CEN instance.
-             *     *   **InUse**: associated with a CEN instance.
-             * 
-             * *   **CenBandwidthPackageId**: bandwidth plan ID
-             * 
-             * *   **Name**: bandwidth plan name
-             * 
-             *     You can specify one or more filter conditions. The maximum value of **N** is **5**.
+             * The operation that you want to perform. Set the value to **DescribeCenBandwidthPackages**.
              */
             public Builder key(String key) {
                 this.key = key;
@@ -370,7 +360,12 @@ public class DescribeCenBandwidthPackagesRequest extends Request {
             }
 
             /**
-             * The values of condition.
+             * The status of the bandwidth plan. Valid values:
+             * <p>
+             * 
+             * *   **Normal**: normal
+             * *   **FinancialLocked**: locked due to overdue payments
+             * *   **SecurityLocked**: locked due to security reasons
              */
             public Builder value(java.util.List < String > value) {
                 this.value = value;
@@ -423,23 +418,7 @@ public class DescribeCenBandwidthPackagesRequest extends Request {
             private String value; 
 
             /**
-             * The filter condition.
-             * <p>
-             * 
-             * You can use filter conditions to filter the bandwidth plans that you want to query. The following filter conditions are supported:
-             * 
-             * *   **CenId**: CEN instance ID
-             * 
-             * *   **Status**: bandwidth plan status. Valid values:
-             * 
-             *     *   **Idle**: not associated with a CEN instance.
-             *     *   **InUse**: associated with a CEN instance.
-             * 
-             * *   **CenBandwidthPackageId**: bandwidth plan ID
-             * 
-             * *   **Name**: bandwidth plan name
-             * 
-             *     You can specify one or more filter conditions. The maximum value of **N** is **5**.
+             * The operation that you want to perform. Set the value to **DescribeCenBandwidthPackages**.
              */
             public Builder key(String key) {
                 this.key = key;
@@ -447,7 +426,12 @@ public class DescribeCenBandwidthPackagesRequest extends Request {
             }
 
             /**
-             * The values of condition.
+             * The status of the bandwidth plan. Valid values:
+             * <p>
+             * 
+             * *   **Normal**: normal
+             * *   **FinancialLocked**: locked due to overdue payments
+             * *   **SecurityLocked**: locked due to security reasons
              */
             public Builder value(String value) {
                 this.value = value;

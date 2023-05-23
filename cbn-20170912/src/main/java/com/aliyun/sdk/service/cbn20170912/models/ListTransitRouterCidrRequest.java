@@ -168,12 +168,7 @@ public class ListTransitRouterCidrRequest extends Request {
         } 
 
         /**
-         * The client token that is used to ensure the idempotence of the request.
-         * <p>
-         * 
-         * You can use the client to generate the value, but you must make sure that it is unique among different requests. The token can contain only ASCII characters.
-         * 
-         * >  If you do not set this parameter, ClientToken is set to the value of RequestId. The value of RequestId may be different for each request.
+         * ClientToken.
          */
         public Builder clientToken(String clientToken) {
             this.putQueryParameter("ClientToken", clientToken);
@@ -182,11 +177,7 @@ public class ListTransitRouterCidrRequest extends Request {
         }
 
         /**
-         * Specifies whether only to precheck the API request. Valid values:
-         * <p>
-         * 
-         * *   **true**: prechecks the request but does not query the CIDR block. The system checks the required parameters, the request format, and the service limits. If the request fails the check, an error message is returned. If the request passes the check, the `DryRunOperation` error code is returned.
-         * *   **false** (default): sends the request. After the request passes the check, the operation is performed.
+         * DryRun.
          */
         public Builder dryRun(Boolean dryRun) {
             this.putQueryParameter("DryRun", dryRun);
@@ -213,10 +204,7 @@ public class ListTransitRouterCidrRequest extends Request {
         }
 
         /**
-         * The ID of the region where the transit router is deployed.
-         * <p>
-         * 
-         * You can call the [DescribeChildInstanceRegions](~~132080~~) operation to query the most recent region list.
+         * RegionId.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -243,7 +231,7 @@ public class ListTransitRouterCidrRequest extends Request {
         }
 
         /**
-         * The ID of the CIDR block.
+         * TransitRouterCidrId.
          */
         public Builder transitRouterCidrId(String transitRouterCidrId) {
             this.putQueryParameter("TransitRouterCidrId", transitRouterCidrId);
@@ -252,7 +240,7 @@ public class ListTransitRouterCidrRequest extends Request {
         }
 
         /**
-         * The ID of the transit router.
+         * TransitRouterId.
          */
         public Builder transitRouterId(String transitRouterId) {
             this.putQueryParameter("TransitRouterId", transitRouterId);

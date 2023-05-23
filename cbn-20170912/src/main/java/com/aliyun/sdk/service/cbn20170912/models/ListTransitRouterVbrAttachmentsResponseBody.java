@@ -86,7 +86,7 @@ public class ListTransitRouterVbrAttachmentsResponseBody extends TeaModel {
         private java.util.List < TransitRouterAttachments> transitRouterAttachments; 
 
         /**
-         * The number of entries returned on each page.
+         * The number of entries returned per page.
          */
         public Builder maxResults(Integer maxResults) {
             this.maxResults = maxResults;
@@ -94,7 +94,7 @@ public class ListTransitRouterVbrAttachmentsResponseBody extends TeaModel {
         }
 
         /**
-         * The token that determines the start point of the query.
+         * The returned value of NextToken is a pagination token, which can be used in the next request to retrieve a new page of results.
          */
         public Builder nextToken(String nextToken) {
             this.nextToken = nextToken;
@@ -102,7 +102,7 @@ public class ListTransitRouterVbrAttachmentsResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -118,7 +118,7 @@ public class ListTransitRouterVbrAttachmentsResponseBody extends TeaModel {
         }
 
         /**
-         * A list of VBR connections.
+         * The queried VBR connections.
          */
         public Builder transitRouterAttachments(java.util.List < TransitRouterAttachments> transitRouterAttachments) {
             this.transitRouterAttachments = transitRouterAttachments;
@@ -375,7 +375,7 @@ public class ListTransitRouterVbrAttachmentsResponseBody extends TeaModel {
             }
 
             /**
-             * CenId.
+             * The ID of the CEN instance.
              */
             public Builder cenId(String cenId) {
                 this.cenId = cenId;
@@ -397,8 +397,8 @@ public class ListTransitRouterVbrAttachmentsResponseBody extends TeaModel {
              * The type of resource to which the transit router is connected. Valid values:
              * <p>
              * 
-             * *   **VPC**: virtual private cloud (VPC)
-             * *   **CCN**: CCN instance
+             * *   **VPC**: VPC
+             * *   **CCN**: Cloud Connect Network (CCN) instance
              * *   **VBR**: VBR
              * *   **TR**: transit router
              */
@@ -462,7 +462,7 @@ public class ListTransitRouterVbrAttachmentsResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the VBR.
+             * The VBR ID.
              */
             public Builder vbrId(String vbrId) {
                 this.vbrId = vbrId;
@@ -478,7 +478,7 @@ public class ListTransitRouterVbrAttachmentsResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the region where the VBR is deployed.
+             * The region ID of the VBR.
              */
             public Builder vbrRegionId(String vbrRegionId) {
                 this.vbrRegionId = vbrRegionId;

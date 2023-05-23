@@ -141,7 +141,7 @@ public class ListGrantVSwitchEnisRequest extends Request {
         } 
 
         /**
-         * The ID of the CEN instance to which the VPC is attached.
+         * CenId.
          */
         public Builder cenId(String cenId) {
             this.putQueryParameter("CenId", cenId);
@@ -186,10 +186,7 @@ public class ListGrantVSwitchEnisRequest extends Request {
         }
 
         /**
-         * The ID of a vSwitch in the VPC.
-         * <p>
-         * 
-         * You can specify only one vSwitch in each call.
+         * VSwitchId.
          */
         public Builder vSwitchId(String vSwitchId) {
             this.putQueryParameter("VSwitchId", vSwitchId);
@@ -198,7 +195,7 @@ public class ListGrantVSwitchEnisRequest extends Request {
         }
 
         /**
-         * The ID of the VPC.
+         * VpcId.
          */
         public Builder vpcId(String vpcId) {
             this.putQueryParameter("VpcId", vpcId);

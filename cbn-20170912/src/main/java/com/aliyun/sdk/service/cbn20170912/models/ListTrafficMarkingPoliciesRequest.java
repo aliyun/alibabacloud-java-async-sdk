@@ -180,7 +180,7 @@ public class ListTrafficMarkingPoliciesRequest extends Request {
         } 
 
         /**
-         * The number of entries to return on each page. Valid values: **1** to **100**. Default value: **20**.
+         * MaxResults.
          */
         public Builder maxResults(Integer maxResults) {
             this.putQueryParameter("MaxResults", maxResults);
@@ -189,11 +189,7 @@ public class ListTrafficMarkingPoliciesRequest extends Request {
         }
 
         /**
-         * The token that determines the start point of the query. Valid values:
-         * <p>
-         * 
-         * *   If this is your first query or no subsequent query is to be sent, ignore this parameter.
-         * *   If a next query is to be sent, set the value to the value of **NextToken** that is returned from the last call.
+         * NextToken.
          */
         public Builder nextToken(String nextToken) {
             this.putQueryParameter("NextToken", nextToken);
@@ -238,10 +234,7 @@ public class ListTrafficMarkingPoliciesRequest extends Request {
         }
 
         /**
-         * The description of the traffic marking policy.
-         * <p>
-         * 
-         * The description must be 2 to 128 characters in length, and can contain letters, digits, underscores (\_), and hyphens (-). The description must start with a letter.
+         * TrafficMarkingPolicyDescription.
          */
         public Builder trafficMarkingPolicyDescription(String trafficMarkingPolicyDescription) {
             this.putQueryParameter("TrafficMarkingPolicyDescription", trafficMarkingPolicyDescription);
@@ -250,7 +243,7 @@ public class ListTrafficMarkingPoliciesRequest extends Request {
         }
 
         /**
-         * The ID of the traffic marking policy.
+         * TrafficMarkingPolicyId.
          */
         public Builder trafficMarkingPolicyId(String trafficMarkingPolicyId) {
             this.putQueryParameter("TrafficMarkingPolicyId", trafficMarkingPolicyId);
@@ -259,10 +252,7 @@ public class ListTrafficMarkingPoliciesRequest extends Request {
         }
 
         /**
-         * The name of the traffic marking policy.
-         * <p>
-         * 
-         * The name must be 2 to 128 characters in length, and can contain letters, digits, underscores (\_), and hyphens (-). The name must start with a letter.
+         * TrafficMarkingPolicyName.
          */
         public Builder trafficMarkingPolicyName(String trafficMarkingPolicyName) {
             this.putQueryParameter("TrafficMarkingPolicyName", trafficMarkingPolicyName);
@@ -271,7 +261,7 @@ public class ListTrafficMarkingPoliciesRequest extends Request {
         }
 
         /**
-         * The ID of the transit router.
+         * TransitRouterId.
          */
         public Builder transitRouterId(String transitRouterId) {
             this.putQueryParameter("TransitRouterId", transitRouterId);

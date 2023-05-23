@@ -196,7 +196,7 @@ public class ListCenChildInstanceRouteEntriesToAttachmentRequest extends Request
         } 
 
         /**
-         * CenId.
+         * The ID of the CEN instance.
          */
         public Builder cenId(String cenId) {
             this.putQueryParameter("CenId", cenId);
@@ -205,7 +205,7 @@ public class ListCenChildInstanceRouteEntriesToAttachmentRequest extends Request
         }
 
         /**
-         * ChildInstanceRouteTableId.
+         * The ID of the route table configured on the network instance.
          */
         public Builder childInstanceRouteTableId(String childInstanceRouteTableId) {
             this.putQueryParameter("ChildInstanceRouteTableId", childInstanceRouteTableId);
@@ -214,7 +214,7 @@ public class ListCenChildInstanceRouteEntriesToAttachmentRequest extends Request
         }
 
         /**
-         * MaxResults.
+         * The number of entries to return on each page. Default value: **20**.
          */
         public Builder maxResults(Integer maxResults) {
             this.putQueryParameter("MaxResults", maxResults);
@@ -223,7 +223,11 @@ public class ListCenChildInstanceRouteEntriesToAttachmentRequest extends Request
         }
 
         /**
-         * NextToken.
+         * The token that determines the start point of the query. Valid values:
+         * <p>
+         * 
+         * *   If this is your first query and no subsequent queries are to be sent, ignore this parameter.
+         * *   If a subsequent query is to be sent, set the parameter to the value of NextToken that is returned from the last call.
          */
         public Builder nextToken(String nextToken) {
             this.putQueryParameter("NextToken", nextToken);
@@ -268,7 +272,7 @@ public class ListCenChildInstanceRouteEntriesToAttachmentRequest extends Request
         }
 
         /**
-         * RouteFilter.
+         * The filter condition for the destination CIDR block.
          */
         public Builder routeFilter(java.util.List < RouteFilter> routeFilter) {
             this.putQueryParameter("RouteFilter", routeFilter);
@@ -277,7 +281,7 @@ public class ListCenChildInstanceRouteEntriesToAttachmentRequest extends Request
         }
 
         /**
-         * ServiceType.
+         * Specifies whether to host the route. If you leave the parameter empty, the route is not hosted. A value of TR specifies that the route is hosted on a transit router.
          */
         public Builder serviceType(String serviceType) {
             this.putQueryParameter("ServiceType", serviceType);
@@ -286,7 +290,7 @@ public class ListCenChildInstanceRouteEntriesToAttachmentRequest extends Request
         }
 
         /**
-         * TransitRouterAttachmentId.
+         * The ID of the network instance connection.
          */
         public Builder transitRouterAttachmentId(String transitRouterAttachmentId) {
             this.putQueryParameter("TransitRouterAttachmentId", transitRouterAttachmentId);
@@ -340,7 +344,10 @@ public class ListCenChildInstanceRouteEntriesToAttachmentRequest extends Request
             private java.util.List < String > value; 
 
             /**
-             * Key.
+             * The match mode of the route.
+             * <p>
+             * 
+             * *   **prefix-exact-match**: exact match.
              */
             public Builder key(String key) {
                 this.key = key;
@@ -348,7 +355,7 @@ public class ListCenChildInstanceRouteEntriesToAttachmentRequest extends Request
             }
 
             /**
-             * Value.
+             * The destination CIDR blocks.
              */
             public Builder value(java.util.List < String > value) {
                 this.value = value;

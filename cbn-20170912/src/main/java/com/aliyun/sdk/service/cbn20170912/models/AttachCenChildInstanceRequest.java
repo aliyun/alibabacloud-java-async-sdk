@@ -215,8 +215,8 @@ public class AttachCenChildInstanceRequest extends Request {
          * The type of the network instance. Valid values:
          * <p>
          * 
-         * *   **VPC**: virtual private cloud (VPC)
-         * *   **VBR**: virtual border router (VBR)
+         * *   **VPC**: VPC
+         * *   **VBR**: VBR
          * *   **CCN**: CCN instance
          */
         public Builder childInstanceType(String childInstanceType) {

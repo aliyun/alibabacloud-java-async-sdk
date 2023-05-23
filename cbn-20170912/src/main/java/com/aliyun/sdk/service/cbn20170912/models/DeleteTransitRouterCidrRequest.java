@@ -169,12 +169,7 @@ public class DeleteTransitRouterCidrRequest extends Request {
         } 
 
         /**
-         * The client token that is used to ensure the idempotence of the request.
-         * <p>
-         * 
-         * You can use the client to generate the value, but you must make sure that it is unique among different requests. ClientToken can contain only ASCII characters.
-         * 
-         * >  If you do not set this parameter, ClientToken is set to the value of RequestId. The value of RequestId for each API request may be different.
+         * The ID of the transit router.
          */
         public Builder clientToken(String clientToken) {
             this.putQueryParameter("ClientToken", clientToken);
@@ -183,11 +178,7 @@ public class DeleteTransitRouterCidrRequest extends Request {
         }
 
         /**
-         * Specifies whether only to precheck the request. Valid values:
-         * <p>
-         * 
-         * *   **true**: prechecks the request but does not delete the CIDR block. The system checks the required parameters, the request format, and the service limits. If the request fails to pass the precheck, an error message is returned. If the request passes the precheck, the `DryRunOperation` error code is returned.
-         * *   **false** (default): sends the request. If the request passes the precheck, the CIDR block is deleted.
+         * The operation that you want to perform. Set the value to **DeleteTransitRouterCidr**.
          */
         public Builder dryRun(Boolean dryRun) {
             this.putQueryParameter("DryRun", dryRun);
@@ -214,10 +205,7 @@ public class DeleteTransitRouterCidrRequest extends Request {
         }
 
         /**
-         * The ID of the region where the transit router is deployed.
-         * <p>
-         * 
-         * You can call the [DescribeChildInstanceRegions](~~132080~~) operation to query the most recent region list.
+         * The ID of the request.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -244,10 +232,10 @@ public class DeleteTransitRouterCidrRequest extends Request {
         }
 
         /**
-         * The ID of the transit router CIDR block.
+         * The ID of the region where the transit router is deployed.
          * <p>
          * 
-         * You can call [ListTransitRouterCidr](~~462772~~) to query the ID of a transit router CIDR block.
+         * You can call the [DescribeChildInstanceRegions](~~132080~~) operation to query the most recent region list.
          */
         public Builder transitRouterCidrId(String transitRouterCidrId) {
             this.putQueryParameter("TransitRouterCidrId", transitRouterCidrId);
@@ -256,7 +244,10 @@ public class DeleteTransitRouterCidrRequest extends Request {
         }
 
         /**
-         * The ID of the transit router.
+         * The ID of the transit router CIDR block.
+         * <p>
+         * 
+         * You can call [ListTransitRouterCidr](~~462772~~) to query the ID of a transit router CIDR block.
          */
         public Builder transitRouterId(String transitRouterId) {
             this.putQueryParameter("TransitRouterId", transitRouterId);

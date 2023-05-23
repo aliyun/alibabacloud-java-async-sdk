@@ -171,7 +171,7 @@ public class RevokeInstanceFromTransitRouterRequest extends Request {
         } 
 
         /**
-         * Enter the ID of the Cloud Enterprise Network (CEN) instance to which the transit router belongs.
+         * Revokes the permissions that a transit router uses to connect to network instances that belong to another Alibaba Cloud account.
          */
         public Builder cenId(String cenId) {
             this.putQueryParameter("CenId", cenId);
@@ -180,7 +180,7 @@ public class RevokeInstanceFromTransitRouterRequest extends Request {
         }
 
         /**
-         * The ID of the Alibaba Cloud account to which the CEN instance belongs.
+         * CenOwnerId.
          */
         public Builder cenOwnerId(Long cenOwnerId) {
             this.putQueryParameter("CenOwnerId", cenOwnerId);
@@ -189,7 +189,7 @@ public class RevokeInstanceFromTransitRouterRequest extends Request {
         }
 
         /**
-         * The ID of the network instance.
+         * InstanceId.
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -198,12 +198,7 @@ public class RevokeInstanceFromTransitRouterRequest extends Request {
         }
 
         /**
-         * The type of the network instance. Valid values:
-         * <p>
-         * 
-         * *   **VPC**: VPC
-         * *   **ExpressConnect**: VBR
-         * *   **VPN**: IPsec-VPN connection
+         * InstanceType.
          */
         public Builder instanceType(String instanceType) {
             this.putQueryParameter("InstanceType", instanceType);
@@ -230,10 +225,7 @@ public class RevokeInstanceFromTransitRouterRequest extends Request {
         }
 
         /**
-         * The ID of the region where the network instance is deployed.
-         * <p>
-         * 
-         * You can call the [DescribeChildInstanceRegions](~~132080~~) operation to query the most recent region list.
+         * RegionId.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);

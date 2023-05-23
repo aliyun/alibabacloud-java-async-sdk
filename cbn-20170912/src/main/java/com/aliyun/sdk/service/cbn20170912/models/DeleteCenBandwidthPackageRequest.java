@@ -111,7 +111,7 @@ public class DeleteCenBandwidthPackageRequest extends Request {
         } 
 
         /**
-         * The ID of the bandwidth plan that you want to delete.
+         * CenBandwidthPackageId.
          */
         public Builder cenBandwidthPackageId(String cenBandwidthPackageId) {
             this.putQueryParameter("CenBandwidthPackageId", cenBandwidthPackageId);

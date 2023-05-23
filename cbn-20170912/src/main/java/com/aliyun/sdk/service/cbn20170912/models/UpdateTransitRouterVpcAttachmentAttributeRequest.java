@@ -13,6 +13,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class UpdateTransitRouterVpcAttachmentAttributeRequest extends Request {
     @Query
+    @NameInMap("AutoPublishRouteEnabled")
+    private Boolean autoPublishRouteEnabled;
+
+    @Query
     @NameInMap("ClientToken")
     private String clientToken;
 
@@ -51,6 +55,7 @@ public class UpdateTransitRouterVpcAttachmentAttributeRequest extends Request {
 
     private UpdateTransitRouterVpcAttachmentAttributeRequest(Builder builder) {
         super(builder);
+        this.autoPublishRouteEnabled = builder.autoPublishRouteEnabled;
         this.clientToken = builder.clientToken;
         this.dryRun = builder.dryRun;
         this.ownerAccount = builder.ownerAccount;
@@ -73,6 +78,13 @@ public class UpdateTransitRouterVpcAttachmentAttributeRequest extends Request {
     @Override
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return autoPublishRouteEnabled
+     */
+    public Boolean getAutoPublishRouteEnabled() {
+        return this.autoPublishRouteEnabled;
     }
 
     /**
@@ -139,6 +151,7 @@ public class UpdateTransitRouterVpcAttachmentAttributeRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<UpdateTransitRouterVpcAttachmentAttributeRequest, Builder> {
+        private Boolean autoPublishRouteEnabled; 
         private String clientToken; 
         private Boolean dryRun; 
         private String ownerAccount; 
@@ -155,6 +168,7 @@ public class UpdateTransitRouterVpcAttachmentAttributeRequest extends Request {
 
         private Builder(UpdateTransitRouterVpcAttachmentAttributeRequest request) {
             super(request);
+            this.autoPublishRouteEnabled = request.autoPublishRouteEnabled;
             this.clientToken = request.clientToken;
             this.dryRun = request.dryRun;
             this.ownerAccount = request.ownerAccount;
@@ -167,10 +181,23 @@ public class UpdateTransitRouterVpcAttachmentAttributeRequest extends Request {
         } 
 
         /**
+         * 是否允许企业版转发路由器自动发布路由到VPC实例。
+         * <p>
+         * 
+         * - **false**（默认值）：否。
+         * - **true**：是。
+         */
+        public Builder autoPublishRouteEnabled(Boolean autoPublishRouteEnabled) {
+            this.putQueryParameter("AutoPublishRouteEnabled", autoPublishRouteEnabled);
+            this.autoPublishRouteEnabled = autoPublishRouteEnabled;
+            return this;
+        }
+
+        /**
          * The client token that is used to ensure the idempotence of the request.
          * <p>
          * 
-         * You can use the client to generate the value, but you must make sure that it is unique among different requests. The client token can contain only ASCII characters.
+         * You can use the client to generate the token, but you must make sure that the token is unique among all requests. The token can contain only ASCII characters.
          * 
          * >  If you do not set this parameter, **ClientToken** is set to the value of **RequestId**. The value of **RequestId** for each API request may be different.
          */

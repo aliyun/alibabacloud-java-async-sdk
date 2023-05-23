@@ -281,10 +281,10 @@ public class CreateCenInterRegionTrafficQosPolicyRequest extends Request {
         }
 
         /**
-         * A list of QoS queues.
+         * The information about the QoS queue.
          * <p>
          * 
-         * Each QoS policy supports up to three queues.
+         * You can call this operation to create at most three QoS queues. To create more queues, you must call the CreateCenInterRegionTrafficQosQueue operation.
          */
         public Builder trafficQosQueues(java.util.List < TrafficQosQueues> trafficQosQueues) {
             this.putQueryParameter("TrafficQosQueues", trafficQosQueues);
@@ -380,7 +380,7 @@ public class CreateCenInterRegionTrafficQosPolicyRequest extends Request {
             private String remainBandwidthPercent; 
 
             /**
-             * The differentiated services code point (DSCP) value that matches the current queue.
+             * The DSCP value that matches the current queue.
              * <p>
              * 
              * Each QoS policy supports up to three queues. You can specify at most 60 DSCP values for each queue. Separate DSCP values with commas (,).
@@ -422,7 +422,7 @@ public class CreateCenInterRegionTrafficQosPolicyRequest extends Request {
              * 
              * Each QoS policy supports up to three queues. You can specify a percentage of bandwidth resources for each queue.
              * 
-             * If you enter **1**, it indicates that the current queue can consume at most 1% of the bandwidth resources.
+             * If you enter **1**, it indicates that the current queue can consume at most \*\*1%\*\* of the bandwidth resources.
              * 
              * >  The sum of the percentage values of all the queues in a QoS policy cannot exceed 100%.
              */

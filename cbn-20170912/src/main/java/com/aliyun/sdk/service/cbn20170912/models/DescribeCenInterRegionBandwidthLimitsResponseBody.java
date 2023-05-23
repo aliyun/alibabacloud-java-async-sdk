@@ -86,7 +86,7 @@ public class DescribeCenInterRegionBandwidthLimitsResponseBody extends TeaModel 
         private Integer totalCount; 
 
         /**
-         * The list of cross-region connections.
+         * The ID of the peer region.
          */
         public Builder cenInterRegionBandwidthLimits(CenInterRegionBandwidthLimits cenInterRegionBandwidthLimits) {
             this.cenInterRegionBandwidthLimits = cenInterRegionBandwidthLimits;
@@ -94,7 +94,7 @@ public class DescribeCenInterRegionBandwidthLimitsResponseBody extends TeaModel 
         }
 
         /**
-         * The page number of the returned page.
+         * The ID of the CEN instance.
          */
         public Builder pageNumber(Integer pageNumber) {
             this.pageNumber = pageNumber;
@@ -102,7 +102,7 @@ public class DescribeCenInterRegionBandwidthLimitsResponseBody extends TeaModel 
         }
 
         /**
-         * The number of entries returned per page.
+         * The number of the page to return. Default value: **1**.
          */
         public Builder pageSize(Integer pageSize) {
             this.pageSize = pageSize;
@@ -110,7 +110,7 @@ public class DescribeCenInterRegionBandwidthLimitsResponseBody extends TeaModel 
         }
 
         /**
-         * The ID of the request.
+         * The bandwidth limit of the cross-region connection. Unit: Mbit/s.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -118,7 +118,7 @@ public class DescribeCenInterRegionBandwidthLimitsResponseBody extends TeaModel 
         }
 
         /**
-         * The total number of entries returned.
+         * The list of cross-region connections.
          */
         public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;
@@ -230,7 +230,7 @@ public class DescribeCenInterRegionBandwidthLimitsResponseBody extends TeaModel 
             private String status; 
 
             /**
-             * The bandwidth limit of the cross-region connection. Unit: Mbit/s.
+             * BandwidthLimit.
              */
             public Builder bandwidthLimit(Long bandwidthLimit) {
                 this.bandwidthLimit = bandwidthLimit;
@@ -238,7 +238,7 @@ public class DescribeCenInterRegionBandwidthLimitsResponseBody extends TeaModel 
             }
 
             /**
-             * The ID of the bandwidth plan.
+             * BandwidthPackageId.
              */
             public Builder bandwidthPackageId(String bandwidthPackageId) {
                 this.bandwidthPackageId = bandwidthPackageId;
@@ -246,7 +246,7 @@ public class DescribeCenInterRegionBandwidthLimitsResponseBody extends TeaModel 
             }
 
             /**
-             * The ID of the CEN instance.
+             * CenId.
              */
             public Builder cenId(String cenId) {
                 this.cenId = cenId;
@@ -254,7 +254,7 @@ public class DescribeCenInterRegionBandwidthLimitsResponseBody extends TeaModel 
             }
 
             /**
-             * The connected areas.
+             * GeographicSpanId.
              */
             public Builder geographicSpanId(String geographicSpanId) {
                 this.geographicSpanId = geographicSpanId;
@@ -262,10 +262,7 @@ public class DescribeCenInterRegionBandwidthLimitsResponseBody extends TeaModel 
             }
 
             /**
-             * The ID of the local region.
-             * <p>
-             * 
-             * You can call the [DescribeChildInstanceRegions](~~132080~~) operation to query the most recent region list.
+             * LocalRegionId.
              */
             public Builder localRegionId(String localRegionId) {
                 this.localRegionId = localRegionId;
@@ -273,7 +270,7 @@ public class DescribeCenInterRegionBandwidthLimitsResponseBody extends TeaModel 
             }
 
             /**
-             * The ID of the peer region.
+             * OppositeRegionId.
              */
             public Builder oppositeRegionId(String oppositeRegionId) {
                 this.oppositeRegionId = oppositeRegionId;
@@ -281,11 +278,7 @@ public class DescribeCenInterRegionBandwidthLimitsResponseBody extends TeaModel 
             }
 
             /**
-             * The status of the bandwidth of the cross-region connection. Valid values:
-             * <p>
-             * 
-             * *   **Active**: The bandwidth limit of the cross-region connection is effective.
-             * *   **Modifying**: The bandwidth limit of the cross-region connection is being changed.
+             * Queries the bandwidth limits of cross-region connections.
              */
             public Builder status(String status) {
                 this.status = status;

@@ -294,7 +294,7 @@ public class ListTransitRouterCidrAllocationRequest extends Request {
         }
 
         /**
-         * The CIDR block that has been allocated to network instances.
+         * The CIDR blocks that have IP addresses allocated to network instances.
          */
         public Builder cidrBlock(String cidrBlock) {
             this.putQueryParameter("CidrBlock", cidrBlock);
@@ -306,7 +306,7 @@ public class ListTransitRouterCidrAllocationRequest extends Request {
          * The client token that is used to ensure the idempotence of the request.
          * <p>
          * 
-         * You can use the client to generate the value, but you must make sure that it is unique among different requests. ClientToken can contain only ASCII characters.
+         * You can use the client to generate the token, but you must make sure that the token is unique among different requests. The client token can contain only ASCII characters.
          * 
          * >  If you do not set this parameter, ClientToken is set to the value of RequestId. The value of RequestId for each API request may be different.
          */
@@ -329,11 +329,11 @@ public class ListTransitRouterCidrAllocationRequest extends Request {
         }
 
         /**
-         * Specifies whether only to precheck the request. Valid values:
+         * Specifies whether to perform a dry run. Valid values:
          * <p>
          * 
-         * *   **true**: prechecks the request but does not query how IP addresses within the CIDR block of a transit router are allocated. The system checks the required parameters, the request format, and the service limits. If the request fails to pass the precheck, an error message is returned. If the request passes the precheck, the `DryRunOperation` error code is returned.
-         * *   **false** (default): sends the request. After the request passes the precheck, allocated IP addresses are queried.
+         * *   **true**: performs a dry run. The system checks the required parameters, request syntax, and limits. If the request fails the dry run, an error message is returned. If the request passes the dry run, the `DryRunOperation` error code is returned.
+         * *   **false** (default): performs a dry run and sends the request.
          */
         public Builder dryRun(Boolean dryRun) {
             this.putQueryParameter("DryRun", dryRun);
@@ -342,14 +342,14 @@ public class ListTransitRouterCidrAllocationRequest extends Request {
         }
 
         /**
-         * The number of entries returned on each page.
+         * The number of entries to return on each page.
          * <p>
          * 
          * *   If you do not set **MaxResults**, it indicates that you do not need to query results in batches. The value of **MaxResults** indicates the total number of entries.
          * 
          * *   If a value is specified for **MaxResults**, it indicates that you need to query results in batches. Valid values: **1** to **100**. We recommend that you set **MaxResults** to **20**.
          * 
-         *     The value of **MaxResults** in the response indicates the number of entries in the current batch.
+         *         The value of **MaxResults** in the response indicates the number of entries in the current batch.
          */
         public Builder maxResults(Integer maxResults) {
             this.putQueryParameter("MaxResults", maxResults);
@@ -362,7 +362,7 @@ public class ListTransitRouterCidrAllocationRequest extends Request {
          * <p>
          * 
          * *   If this is your first query or no subsequent query is to be sent, ignore this parameter.
-         * *   If a subsequent query is to be sent, set the value to the value of **NextToken** that was returned from the last call.
+         * *   If a subsequent query is to be sent, set the value to the value of **NextToken** that is returned from the last call.
          */
         public Builder nextToken(String nextToken) {
             this.putQueryParameter("NextToken", nextToken);
@@ -422,7 +422,7 @@ public class ListTransitRouterCidrAllocationRequest extends Request {
          * The ID of the CIDR block.
          * <p>
          * 
-         * You can call [ListTransitRouterCidr](~~462772~~) to query the ID of a CIDR block.
+         * You can call the [ListTransitRouterCidr](~~462772~~) operation to query the ID of a CIDR block.
          */
         public Builder transitRouterCidrId(String transitRouterCidrId) {
             this.putQueryParameter("TransitRouterCidrId", transitRouterCidrId);

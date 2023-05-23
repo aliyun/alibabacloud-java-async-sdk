@@ -94,10 +94,10 @@ public class ListTransitRouterVpcAttachmentsResponseBody extends TeaModel {
         }
 
         /**
-         * The token that determines the start point of the query. Valid values:
+         * The token that determines the start point of the next query. Valid values:
          * <p>
          * 
-         * *   If **NextToken** was not returned, it indicates that no additional results exist.
+         * *   If **NextToken** is returned, it indicates that no additional results exist.
          * *   If **NextToken** was returned in the previous query, specify the value to obtain the next set of results.
          */
         public Builder nextToken(String nextToken) {
@@ -106,7 +106,7 @@ public class ListTransitRouterVpcAttachmentsResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * The ID of the region.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -122,7 +122,7 @@ public class ListTransitRouterVpcAttachmentsResponseBody extends TeaModel {
         }
 
         /**
-         * A list of VPC connections.
+         * The queried VPC connections.
          */
         public Builder transitRouterAttachments(java.util.List < TransitRouterAttachments> transitRouterAttachments) {
             this.transitRouterAttachments = transitRouterAttachments;
@@ -255,7 +255,7 @@ public class ListTransitRouterVpcAttachmentsResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the vSwitch.
+             * The vSwitch ID of the node.
              */
             public Builder vSwitchId(String vSwitchId) {
                 this.vSwitchId = vSwitchId;
@@ -263,7 +263,7 @@ public class ListTransitRouterVpcAttachmentsResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the zone in which the instance is located.
+             * The zone ID of the instance.
              */
             public Builder zoneId(String zoneId) {
                 this.zoneId = zoneId;
@@ -278,6 +278,9 @@ public class ListTransitRouterVpcAttachmentsResponseBody extends TeaModel {
 
     }
     public static class TransitRouterAttachments extends TeaModel {
+        @NameInMap("AutoPublishRouteEnabled")
+        private Boolean autoPublishRouteEnabled;
+
         @NameInMap("CenId")
         private String cenId;
 
@@ -324,6 +327,7 @@ public class ListTransitRouterVpcAttachmentsResponseBody extends TeaModel {
         private java.util.List < ZoneMappings> zoneMappings;
 
         private TransitRouterAttachments(Builder builder) {
+            this.autoPublishRouteEnabled = builder.autoPublishRouteEnabled;
             this.cenId = builder.cenId;
             this.chargeType = builder.chargeType;
             this.creationTime = builder.creationTime;
@@ -347,6 +351,13 @@ public class ListTransitRouterVpcAttachmentsResponseBody extends TeaModel {
 
         public static TransitRouterAttachments create() {
             return builder().build();
+        }
+
+        /**
+         * @return autoPublishRouteEnabled
+         */
+        public Boolean getAutoPublishRouteEnabled() {
+            return this.autoPublishRouteEnabled;
         }
 
         /**
@@ -455,6 +466,7 @@ public class ListTransitRouterVpcAttachmentsResponseBody extends TeaModel {
         }
 
         public static final class Builder {
+            private Boolean autoPublishRouteEnabled; 
             private String cenId; 
             private String chargeType; 
             private String creationTime; 
@@ -472,7 +484,19 @@ public class ListTransitRouterVpcAttachmentsResponseBody extends TeaModel {
             private java.util.List < ZoneMappings> zoneMappings; 
 
             /**
-             * CenId.
+             * 企业版转发路由器是否自动发布路由到VPC实例。
+             * <p>
+             * 
+             * - **false**（默认值）：否。
+             * - **true**：是。
+             */
+            public Builder autoPublishRouteEnabled(Boolean autoPublishRouteEnabled) {
+                this.autoPublishRouteEnabled = autoPublishRouteEnabled;
+                return this;
+            }
+
+            /**
+             * The ID of the CEN instance.
              */
             public Builder cenId(String cenId) {
                 this.cenId = cenId;
@@ -528,10 +552,10 @@ public class ListTransitRouterVpcAttachmentsResponseBody extends TeaModel {
              * The status of the VPC connection. Valid values:
              * <p>
              * 
-             * *   **Attached**: attached to the transit router.
-             * *   **Attaching**: being attached to the transit router.
-             * *   **Detaching**: being detached from the transit router.
-             * *   **Detached**: detached from the transit router.
+             * *   **Attached**: The VPC connection is created on the transit router.
+             * *   **Attaching**: The VPC connection is being created on the transit router.
+             * *   **Detaching**: The VPC connection is being deleted from the transit router.
+             * *   **Detached**: The VPC connection is deleted from the transit router.
              */
             public Builder status(String status) {
                 this.status = status;

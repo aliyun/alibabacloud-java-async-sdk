@@ -266,9 +266,7 @@ public class UpdateTransitRouterPeerAttachmentAttributeRequest extends Request {
          * The ID of the bandwidth plan that is used to allocate bandwidth to the inter-region connection.
          * <p>
          * 
-         * **
-         * 
-         * If you set **BandwidthType** to DataTransfer, you do not need to set this parameter.
+         * > If you set **BandwidthType** to **DataTransfer**, you do not need to set this parameter.
          */
         public Builder cenBandwidthPackageId(String cenBandwidthPackageId) {
             this.putQueryParameter("CenBandwidthPackageId", cenBandwidthPackageId);
@@ -280,7 +278,7 @@ public class UpdateTransitRouterPeerAttachmentAttributeRequest extends Request {
          * The client token that is used to ensure the idempotence of the request.
          * <p>
          * 
-         * You can use the client to generate the value, but you must ensure that it is unique among all requests. The client token can contain only ASCII characters.
+         * You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters.
          * 
          * >  If you do not set this parameter, **ClientToken** is set to the value of **RequestId**. The value of **RequestId** for each API request may be different.
          */
@@ -291,7 +289,7 @@ public class UpdateTransitRouterPeerAttachmentAttributeRequest extends Request {
         }
 
         /**
-         * Specifies whether to perform a dry run to check information such as the permissions and the instance status. Valid values:
+         * Specifies whether to perform a dry run to check information such as the permissions and the instance status. Default values:
          * <p>
          * 
          * *   **false** (default): performs a dry run and sends the request.

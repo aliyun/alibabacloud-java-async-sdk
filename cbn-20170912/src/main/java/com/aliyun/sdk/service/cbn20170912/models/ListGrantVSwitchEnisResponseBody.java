@@ -62,7 +62,7 @@ public class ListGrantVSwitchEnisResponseBody extends TeaModel {
         private String totalCount; 
 
         /**
-         * The list of ENIs.
+         * GrantVSwitchEnis.
          */
         public Builder grantVSwitchEnis(java.util.List < GrantVSwitchEnis> grantVSwitchEnis) {
             this.grantVSwitchEnis = grantVSwitchEnis;
@@ -70,7 +70,7 @@ public class ListGrantVSwitchEnisResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * RequestId.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -78,7 +78,7 @@ public class ListGrantVSwitchEnisResponseBody extends TeaModel {
         }
 
         /**
-         * The number of entries returned.
+         * TotalCount.
          */
         public Builder totalCount(String totalCount) {
             this.totalCount = totalCount;
@@ -166,7 +166,7 @@ public class ListGrantVSwitchEnisResponseBody extends TeaModel {
             private String vpcId; 
 
             /**
-             * The description of the ENI.
+             * Description.
              */
             public Builder description(String description) {
                 this.description = description;
@@ -174,7 +174,7 @@ public class ListGrantVSwitchEnisResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the ENI.
+             * NetworkInterfaceId.
              */
             public Builder networkInterfaceId(String networkInterfaceId) {
                 this.networkInterfaceId = networkInterfaceId;
@@ -182,13 +182,7 @@ public class ListGrantVSwitchEnisResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether the ENI is created by a transit router. Valid values:
-             * <p>
-             * 
-             * *   **true**: yes
-             * *   **false**: no
-             * 
-             * ENIs that are created by transit routers cannot be used as multicast sources or members.
+             * TransitRouterFlag.
              */
             public Builder transitRouterFlag(Boolean transitRouterFlag) {
                 this.transitRouterFlag = transitRouterFlag;
@@ -196,7 +190,7 @@ public class ListGrantVSwitchEnisResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the vSwitch.
+             * VSwitchId.
              */
             public Builder vSwitchId(String vSwitchId) {
                 this.vSwitchId = vSwitchId;
@@ -204,7 +198,7 @@ public class ListGrantVSwitchEnisResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the VPC.
+             * VpcId.
              */
             public Builder vpcId(String vpcId) {
                 this.vpcId = vpcId;

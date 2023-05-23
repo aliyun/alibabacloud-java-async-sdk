@@ -194,7 +194,7 @@ public class ListTransitRouterVbrAttachmentsRequest extends Request {
         } 
 
         /**
-         * The ID of the CEN instance.
+         * The IDs of the CEN instances.
          */
         public Builder cenId(String cenId) {
             this.putQueryParameter("CenId", cenId);
@@ -212,7 +212,7 @@ public class ListTransitRouterVbrAttachmentsRequest extends Request {
         }
 
         /**
-         * The token that determines the start point of the query.
+         * The pagination token that is used in the next request to retrieve a new page of results.
          */
         public Builder nextToken(String nextToken) {
             this.putQueryParameter("NextToken", nextToken);

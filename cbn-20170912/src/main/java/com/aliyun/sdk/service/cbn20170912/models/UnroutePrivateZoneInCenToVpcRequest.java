@@ -126,10 +126,7 @@ public class UnroutePrivateZoneInCenToVpcRequest extends Request {
         } 
 
         /**
-         * The ID of the region where PrivateZone is accessed.
-         * <p>
-         * 
-         * You can call the [DescribeChildInstanceRegions](~~132080~~) operation to query the most recent region list.
+         * AccessRegionId.
          */
         public Builder accessRegionId(String accessRegionId) {
             this.putQueryParameter("AccessRegionId", accessRegionId);
@@ -138,7 +135,7 @@ public class UnroutePrivateZoneInCenToVpcRequest extends Request {
         }
 
         /**
-         * The ID of the Cloud Enterprise Network (CEN) instance.
+         * CenId.
          */
         public Builder cenId(String cenId) {
             this.putQueryParameter("CenId", cenId);

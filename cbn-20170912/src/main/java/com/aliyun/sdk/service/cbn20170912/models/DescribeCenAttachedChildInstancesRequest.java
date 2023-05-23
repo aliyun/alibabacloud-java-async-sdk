@@ -167,7 +167,7 @@ public class DescribeCenAttachedChildInstancesRequest extends Request {
         } 
 
         /**
-         * The ID of the CEN instance.
+         * CenId.
          */
         public Builder cenId(String cenId) {
             this.putQueryParameter("CenId", cenId);
@@ -176,10 +176,7 @@ public class DescribeCenAttachedChildInstancesRequest extends Request {
         }
 
         /**
-         * The ID of the region where the network instance is deployed.
-         * <p>
-         * 
-         * You can call the [DescribeRegions](~~36063~~) operation to query the most recent region list.
+         * ChildInstanceRegionId.
          */
         public Builder childInstanceRegionId(String childInstanceRegionId) {
             this.putQueryParameter("ChildInstanceRegionId", childInstanceRegionId);
@@ -188,12 +185,7 @@ public class DescribeCenAttachedChildInstancesRequest extends Request {
         }
 
         /**
-         * The type of the network instance. Valid values:
-         * <p>
-         * 
-         * *   **VPC**: virtual private cloud (VPC)
-         * *   **VBR**: virtual border router (VBR)
-         * *   **CCN**: Cloud Connect Network (CCN) instance
+         * ChildInstanceType.
          */
         public Builder childInstanceType(String childInstanceType) {
             this.putQueryParameter("ChildInstanceType", childInstanceType);
@@ -220,7 +212,7 @@ public class DescribeCenAttachedChildInstancesRequest extends Request {
         }
 
         /**
-         * The number of the page to return. Default value: **1**.
+         * PageNumber.
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -229,7 +221,7 @@ public class DescribeCenAttachedChildInstancesRequest extends Request {
         }
 
         /**
-         * The number of entries to return on each page. Default value: **10**. Valid values: **1** to **50**.
+         * PageSize.
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);

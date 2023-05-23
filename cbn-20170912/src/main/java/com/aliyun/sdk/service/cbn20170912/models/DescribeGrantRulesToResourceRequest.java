@@ -170,9 +170,7 @@ public class DescribeGrantRulesToResourceRequest extends Request {
         } 
 
         /**
-         * *   If you do not set **MaxResults**, it indicates that you do not need to query results in batches. The value of **MaxResults** indicates the total number of entries.
-         * <p>
-         * *   If you specify a value for **MaxResults**, it indicates that you need to query results in batches. The value of **MaxResults** indicates the number of entries to return in each batch. Valid values: **1** to **100**. The value of **MaxResults** in the response indicates the number of entries in the current batch. We recommend that you set **MaxResults** to **20**.
+         * The operation that you want to perform. Set the value to **DescribeGrantRulesToResource**.
          */
         public Builder maxResults(Integer maxResults) {
             this.putQueryParameter("MaxResults", maxResults);
@@ -212,12 +210,7 @@ public class DescribeGrantRulesToResourceRequest extends Request {
         }
 
         /**
-         * The type of the network instance. Valid values:
-         * <p>
-         * 
-         * *   **VPC**: virtual private cloud (VPC)
-         * *   **ExpressConnect**: virtual border router (VBR)
-         * *   **VPN**: IPsec-VPN connection
+         * The ID of the CEN instance.
          */
         public Builder productType(String productType) {
             this.putQueryParameter("ProductType", productType);
@@ -226,10 +219,7 @@ public class DescribeGrantRulesToResourceRequest extends Request {
         }
 
         /**
-         * The ID of the region where the network instance is deployed.
-         * <p>
-         * 
-         * You can call the [DescribeChildInstanceRegions](~~132080~~) operation to query the most recent region list.
+         * The ID of the network instance.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -238,7 +228,12 @@ public class DescribeGrantRulesToResourceRequest extends Request {
         }
 
         /**
-         * The ID of the network instance.
+         * The type of the network instance. Valid values:
+         * <p>
+         * 
+         * *   **VPC**: virtual private cloud (VPC)
+         * *   **ExpressConnect**: virtual border router (VBR)
+         * *   **VPN**: IPsec-VPN connection
          */
         public Builder resourceId(String resourceId) {
             this.putQueryParameter("ResourceId", resourceId);

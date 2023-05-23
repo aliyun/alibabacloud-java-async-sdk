@@ -62,11 +62,7 @@ public class ListCenInterRegionTrafficQosQueuesResponseBody extends TeaModel {
         private java.util.List < TrafficQosQueues> trafficQosQueues; 
 
         /**
-         * The token that determines the start point of the query. Valid values:
-         * <p>
-         * 
-         * *   If **NextToken** was not returned, it indicates that no additional results exist.
-         * *   If **NextToken** was returned in the previous query, specify the value to obtain the next set of results.
+         * NextToken.
          */
         public Builder nextToken(String nextToken) {
             this.nextToken = nextToken;
@@ -74,7 +70,7 @@ public class ListCenInterRegionTrafficQosQueuesResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * RequestId.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -82,7 +78,7 @@ public class ListCenInterRegionTrafficQosQueuesResponseBody extends TeaModel {
         }
 
         /**
-         * A list of queues.
+         * TrafficQosQueues.
          */
         public Builder trafficQosQueues(java.util.List < TrafficQosQueues> trafficQosQueues) {
             this.trafficQosQueues = trafficQosQueues;
@@ -218,7 +214,7 @@ public class ListCenInterRegionTrafficQosQueuesResponseBody extends TeaModel {
             private String transitRouterId; 
 
             /**
-             * The differentiated services code point (DSCP) value that matches the current queue.
+             * Dscps.
              */
             public Builder dscps(java.util.List < Integer > dscps) {
                 this.dscps = dscps;
@@ -226,12 +222,7 @@ public class ListCenInterRegionTrafficQosQueuesResponseBody extends TeaModel {
             }
 
             /**
-             * The percentage of bandwidth resources that can be allocated to the current queue.
-             * <p>
-             * 
-             * Each QoS policy supports up to three queues. You can specify a percentage of bandwidth resources for each queue.
-             * 
-             * For example, a value of **1** indicates that 1 percent of bandwidth resources can be allocated to the queue.
+             * RemainBandwidthPercent.
              */
             public Builder remainBandwidthPercent(Integer remainBandwidthPercent) {
                 this.remainBandwidthPercent = remainBandwidthPercent;
@@ -239,10 +230,7 @@ public class ListCenInterRegionTrafficQosQueuesResponseBody extends TeaModel {
             }
 
             /**
-             * The status of the queue. Valid values:
-             * <p>
-             * 
-             * **Creating**: The queue is being created. **Active**: The queue is available. **Deleting**: The queue is being deleted.
+             * Status.
              */
             public Builder status(String status) {
                 this.status = status;
@@ -250,7 +238,7 @@ public class ListCenInterRegionTrafficQosQueuesResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the QoS policy.
+             * TrafficQosPolicyId.
              */
             public Builder trafficQosPolicyId(String trafficQosPolicyId) {
                 this.trafficQosPolicyId = trafficQosPolicyId;
@@ -258,7 +246,7 @@ public class ListCenInterRegionTrafficQosQueuesResponseBody extends TeaModel {
             }
 
             /**
-             * The description of the queue.
+             * TrafficQosQueueDescription.
              */
             public Builder trafficQosQueueDescription(String trafficQosQueueDescription) {
                 this.trafficQosQueueDescription = trafficQosQueueDescription;
@@ -266,7 +254,7 @@ public class ListCenInterRegionTrafficQosQueuesResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the queue.
+             * TrafficQosQueueId.
              */
             public Builder trafficQosQueueId(String trafficQosQueueId) {
                 this.trafficQosQueueId = trafficQosQueueId;
@@ -274,7 +262,7 @@ public class ListCenInterRegionTrafficQosQueuesResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the queue.
+             * TrafficQosQueueName.
              */
             public Builder trafficQosQueueName(String trafficQosQueueName) {
                 this.trafficQosQueueName = trafficQosQueueName;
@@ -282,7 +270,7 @@ public class ListCenInterRegionTrafficQosQueuesResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the inter-region connection.
+             * TransitRouterAttachmentId.
              */
             public Builder transitRouterAttachmentId(String transitRouterAttachmentId) {
                 this.transitRouterAttachmentId = transitRouterAttachmentId;
@@ -290,7 +278,7 @@ public class ListCenInterRegionTrafficQosQueuesResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the transit router.
+             * TransitRouterId.
              */
             public Builder transitRouterId(String transitRouterId) {
                 this.transitRouterId = transitRouterId;

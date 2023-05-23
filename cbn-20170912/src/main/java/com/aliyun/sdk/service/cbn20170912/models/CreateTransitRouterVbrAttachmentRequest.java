@@ -287,7 +287,7 @@ public class CreateTransitRouterVbrAttachmentRequest extends Request {
         }
 
         /**
-         * Specifies whether to perform a dry run to check information such as the permissions and the instance status. Valid values:
+         * Specifies whether to perform a dry run. Default values:
          * <p>
          * 
          * *   **false** (default): performs a dry run and sends the request.
@@ -318,7 +318,7 @@ public class CreateTransitRouterVbrAttachmentRequest extends Request {
         }
 
         /**
-         * The ID of the region where the VBR is deployed.
+         * The region ID of the VBR.
          * <p>
          * 
          * You can call the [DescribeRegions](~~36063~~) operation to query the most recent region list.

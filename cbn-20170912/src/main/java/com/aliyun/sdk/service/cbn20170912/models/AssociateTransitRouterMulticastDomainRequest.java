@@ -168,10 +168,7 @@ public class AssociateTransitRouterMulticastDomainRequest extends Request {
         } 
 
         /**
-         * The client token that is used to ensure the idempotence of the request.
-         * <p>
-         * 
-         * You can use the client to generate the value, but you must make sure that it is unique among all requests. The client token can contain only ASCII characters.
+         * ClientToken.
          */
         public Builder clientToken(String clientToken) {
             this.putQueryParameter("ClientToken", clientToken);
@@ -180,11 +177,7 @@ public class AssociateTransitRouterMulticastDomainRequest extends Request {
         }
 
         /**
-         * Specifies whether only to precheck the API request. Valid values:
-         * <p>
-         * 
-         * *   **true**: prechecks the request but does not associate the vSwitch with the multicast domain. The system checks the required parameters, the request format, and the service limits. If the request fails the check, an error message is returned. If the request passes the check, the `DryRunOperation` error code is returned.
-         * *   **false** (default): sends the request. The vSwitch is associated with the multicast domain after the request passes the precheck.
+         * DryRun.
          */
         public Builder dryRun(Boolean dryRun) {
             this.putQueryParameter("DryRun", dryRun);
@@ -229,7 +222,7 @@ public class AssociateTransitRouterMulticastDomainRequest extends Request {
         }
 
         /**
-         * The ID of the VPC connection.
+         * TransitRouterAttachmentId.
          */
         public Builder transitRouterAttachmentId(String transitRouterAttachmentId) {
             this.putQueryParameter("TransitRouterAttachmentId", transitRouterAttachmentId);
@@ -238,7 +231,7 @@ public class AssociateTransitRouterMulticastDomainRequest extends Request {
         }
 
         /**
-         * The ID of the multicast domain.
+         * TransitRouterMulticastDomainId.
          */
         public Builder transitRouterMulticastDomainId(String transitRouterMulticastDomainId) {
             this.putQueryParameter("TransitRouterMulticastDomainId", transitRouterMulticastDomainId);
@@ -247,10 +240,7 @@ public class AssociateTransitRouterMulticastDomainRequest extends Request {
         }
 
         /**
-         * The vSwitch IDs.
-         * <p>
-         * 
-         * You can specify at most five vSwitch IDs in each call.
+         * VSwitchIds.
          */
         public Builder vSwitchIds(java.util.List < String > vSwitchIds) {
             this.putQueryParameter("VSwitchIds", vSwitchIds);

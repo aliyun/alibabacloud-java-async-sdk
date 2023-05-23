@@ -236,7 +236,7 @@ public class ListTransitRouterVpcAttachmentsRequest extends Request {
         } 
 
         /**
-         * The ID of the CEN instance.
+         * The IDs of the CEN instances.
          */
         public Builder cenId(String cenId) {
             this.putQueryParameter("CenId", cenId);
@@ -257,7 +257,7 @@ public class ListTransitRouterVpcAttachmentsRequest extends Request {
          * The token that determines the start point of the query. Valid values:
          * <p>
          * 
-         * *   If this is your first query and no next queries are to be sent, ignore this parameter.
+         * *   If this is your first query and no subsequent queries are to be sent, ignore this parameter.
          * *   If a subsequent query is to be sent, set the parameter to the value of NextToken that is returned from the last call.
          */
         public Builder nextToken(String nextToken) {
@@ -301,7 +301,7 @@ public class ListTransitRouterVpcAttachmentsRequest extends Request {
          * The region ID of the Enterprise Edition transit router.
          * <p>
          * 
-         * You can call the [DescribeRegions](~~36063~~) operation to obtain the region ID.
+         * You can call the [DescribeRegions](~~36063~~) operation to query the most recent region list.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -331,9 +331,9 @@ public class ListTransitRouterVpcAttachmentsRequest extends Request {
          * Specifies whether the network instance is attached to the CEN instance. Valid values:
          * <p>
          * 
-         * *   **Attaching**: being attached to the transit router.
-         * *   **Attached**: attached to the transit router.
-         * *   **Detaching**: being detached from the transit router.
+         * *   **Attaching**: being attached to the CEN instance.
+         * *   **Attached**: attached to the CEN instance.
+         * *   **Detaching**: being detached from the CEN instance.
          */
         public Builder status(String status) {
             this.putQueryParameter("Status", status);
@@ -426,7 +426,7 @@ public class ListTransitRouterVpcAttachmentsRequest extends Request {
             private String value; 
 
             /**
-             * The key of the tag that you want to add to the Auto Scaling resource.
+             * The tag key.
              * <p>
              * 
              * The tag key cannot be an empty string. The tag key can be up to 64 characters in length and cannot start with `acs:` or `aliyun`. It cannot contain `http://` or `https://`.

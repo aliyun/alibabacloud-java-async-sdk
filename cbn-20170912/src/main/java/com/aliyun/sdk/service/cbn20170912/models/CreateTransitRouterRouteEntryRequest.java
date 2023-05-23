@@ -211,12 +211,7 @@ public class CreateTransitRouterRouteEntryRequest extends Request {
         } 
 
         /**
-         * The client token that is used to ensure the idempotence of the request.
-         * <p>
-         * 
-         * You can use the client to generate the value, but you must make sure that it is unique among all requests. The client token can contain only ASCII characters.
-         * 
-         * >  If you do not set this parameter, **ClientToken** is set to the value of **RequestId**. The value of **RequestId** for each API request may be different.
+         * ClientToken.
          */
         public Builder clientToken(String clientToken) {
             this.putQueryParameter("ClientToken", clientToken);
@@ -225,11 +220,7 @@ public class CreateTransitRouterRouteEntryRequest extends Request {
         }
 
         /**
-         * Specifies whether to perform a dry run. Default values:
-         * <p>
-         * 
-         * *   **false** (default): performs a dry run and sends the request.
-         * *   **true**: performs a dry run. The system checks the required parameters and request syntax. If the request fails the dry run, an error message is returned. If the request passes the dry run, the system returns the ID of the request.
+         * DryRun.
          */
         public Builder dryRun(Boolean dryRun) {
             this.putQueryParameter("DryRun", dryRun);
@@ -274,10 +265,7 @@ public class CreateTransitRouterRouteEntryRequest extends Request {
         }
 
         /**
-         * The description of the route.
-         * <p>
-         * 
-         * The description must be 2 to 256 characters in length, and can contain letters, digits, and the following special characters: , . ; / @ \_ -. You can also leave the description empty.
+         * TransitRouterRouteEntryDescription.
          */
         public Builder transitRouterRouteEntryDescription(String transitRouterRouteEntryDescription) {
             this.putQueryParameter("TransitRouterRouteEntryDescription", transitRouterRouteEntryDescription);
@@ -286,7 +274,7 @@ public class CreateTransitRouterRouteEntryRequest extends Request {
         }
 
         /**
-         * The destination CIDR block of the route.
+         * TransitRouterRouteEntryDestinationCidrBlock.
          */
         public Builder transitRouterRouteEntryDestinationCidrBlock(String transitRouterRouteEntryDestinationCidrBlock) {
             this.putQueryParameter("TransitRouterRouteEntryDestinationCidrBlock", transitRouterRouteEntryDestinationCidrBlock);
@@ -295,10 +283,7 @@ public class CreateTransitRouterRouteEntryRequest extends Request {
         }
 
         /**
-         * The name of the route.
-         * <p>
-         * 
-         * The name must be 0 to 128 characters in length, and can contain letters, digits, and the following special characters: , . ; / @ \_ -.
+         * TransitRouterRouteEntryName.
          */
         public Builder transitRouterRouteEntryName(String transitRouterRouteEntryName) {
             this.putQueryParameter("TransitRouterRouteEntryName", transitRouterRouteEntryName);
@@ -307,7 +292,7 @@ public class CreateTransitRouterRouteEntryRequest extends Request {
         }
 
         /**
-         * The ID of the network instance connection that you want to specify as the next hop.
+         * TransitRouterRouteEntryNextHopId.
          */
         public Builder transitRouterRouteEntryNextHopId(String transitRouterRouteEntryNextHopId) {
             this.putQueryParameter("TransitRouterRouteEntryNextHopId", transitRouterRouteEntryNextHopId);
@@ -316,11 +301,7 @@ public class CreateTransitRouterRouteEntryRequest extends Request {
         }
 
         /**
-         * The type of the next hop. Valid values:
-         * <p>
-         * 
-         * *   **BlackHole**: routes network traffic to a black hole. All packets that match this route are dropped. If you select this option, you do not need to specify the next hop information.
-         * *   **Attachment**: routes network traffic to a network instance connection. If you select this option, you must specify the ID of the network instance connection. All packets that match this route are routed to the specified network instance connection.
+         * TransitRouterRouteEntryNextHopType.
          */
         public Builder transitRouterRouteEntryNextHopType(String transitRouterRouteEntryNextHopType) {
             this.putQueryParameter("TransitRouterRouteEntryNextHopType", transitRouterRouteEntryNextHopType);
@@ -329,7 +310,7 @@ public class CreateTransitRouterRouteEntryRequest extends Request {
         }
 
         /**
-         * The route table IDs of the Enterprise Edition transit router.
+         * TransitRouterRouteTableId.
          */
         public Builder transitRouterRouteTableId(String transitRouterRouteTableId) {
             this.putQueryParameter("TransitRouterRouteTableId", transitRouterRouteTableId);

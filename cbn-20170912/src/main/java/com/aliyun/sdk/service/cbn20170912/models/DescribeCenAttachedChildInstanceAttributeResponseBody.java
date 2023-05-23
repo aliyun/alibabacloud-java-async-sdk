@@ -18,6 +18,9 @@ public class DescribeCenAttachedChildInstanceAttributeResponseBody extends TeaMo
     @NameInMap("ChildInstanceAttachTime")
     private String childInstanceAttachTime;
 
+    @NameInMap("ChildInstanceAttributes")
+    private ChildInstanceAttributes childInstanceAttributes;
+
     @NameInMap("ChildInstanceId")
     private String childInstanceId;
 
@@ -42,6 +45,7 @@ public class DescribeCenAttachedChildInstanceAttributeResponseBody extends TeaMo
     private DescribeCenAttachedChildInstanceAttributeResponseBody(Builder builder) {
         this.cenId = builder.cenId;
         this.childInstanceAttachTime = builder.childInstanceAttachTime;
+        this.childInstanceAttributes = builder.childInstanceAttributes;
         this.childInstanceId = builder.childInstanceId;
         this.childInstanceName = builder.childInstanceName;
         this.childInstanceOwnerId = builder.childInstanceOwnerId;
@@ -71,6 +75,13 @@ public class DescribeCenAttachedChildInstanceAttributeResponseBody extends TeaMo
      */
     public String getChildInstanceAttachTime() {
         return this.childInstanceAttachTime;
+    }
+
+    /**
+     * @return childInstanceAttributes
+     */
+    public ChildInstanceAttributes getChildInstanceAttributes() {
+        return this.childInstanceAttributes;
     }
 
     /**
@@ -125,6 +136,7 @@ public class DescribeCenAttachedChildInstanceAttributeResponseBody extends TeaMo
     public static final class Builder {
         private String cenId; 
         private String childInstanceAttachTime; 
+        private ChildInstanceAttributes childInstanceAttributes; 
         private String childInstanceId; 
         private String childInstanceName; 
         private Long childInstanceOwnerId; 
@@ -134,7 +146,7 @@ public class DescribeCenAttachedChildInstanceAttributeResponseBody extends TeaMo
         private String status; 
 
         /**
-         * The ID of the CEN instance.
+         * CenId.
          */
         public Builder cenId(String cenId) {
             this.cenId = cenId;
@@ -142,10 +154,7 @@ public class DescribeCenAttachedChildInstanceAttributeResponseBody extends TeaMo
         }
 
         /**
-         * The time when the network instance was attached to the CEN instance.
-         * <p>
-         * 
-         * The time follows the ISO8601 standard in the YYYY-MM-DDThh:mmZ format. The time is displayed in UTC.
+         * ChildInstanceAttachTime.
          */
         public Builder childInstanceAttachTime(String childInstanceAttachTime) {
             this.childInstanceAttachTime = childInstanceAttachTime;
@@ -153,7 +162,15 @@ public class DescribeCenAttachedChildInstanceAttributeResponseBody extends TeaMo
         }
 
         /**
-         * The ID of the network instance.
+         * ChildInstanceAttributes.
+         */
+        public Builder childInstanceAttributes(ChildInstanceAttributes childInstanceAttributes) {
+            this.childInstanceAttributes = childInstanceAttributes;
+            return this;
+        }
+
+        /**
+         * ChildInstanceId.
          */
         public Builder childInstanceId(String childInstanceId) {
             this.childInstanceId = childInstanceId;
@@ -161,7 +178,7 @@ public class DescribeCenAttachedChildInstanceAttributeResponseBody extends TeaMo
         }
 
         /**
-         * The name of the network instance.
+         * ChildInstanceName.
          */
         public Builder childInstanceName(String childInstanceName) {
             this.childInstanceName = childInstanceName;
@@ -169,7 +186,7 @@ public class DescribeCenAttachedChildInstanceAttributeResponseBody extends TeaMo
         }
 
         /**
-         * The ID of the Alibaba Cloud account to which the network instance belongs.
+         * ChildInstanceOwnerId.
          */
         public Builder childInstanceOwnerId(Long childInstanceOwnerId) {
             this.childInstanceOwnerId = childInstanceOwnerId;
@@ -177,7 +194,7 @@ public class DescribeCenAttachedChildInstanceAttributeResponseBody extends TeaMo
         }
 
         /**
-         * The ID of the region where the network instance is deployed.
+         * ChildInstanceRegionId.
          */
         public Builder childInstanceRegionId(String childInstanceRegionId) {
             this.childInstanceRegionId = childInstanceRegionId;
@@ -185,12 +202,7 @@ public class DescribeCenAttachedChildInstanceAttributeResponseBody extends TeaMo
         }
 
         /**
-         * The type of the network instance. Valid values:
-         * <p>
-         * 
-         * *   **VPC**: VPC
-         * *   **VBR**: VBR
-         * *   **CCN**: CCN instance
+         * ChildInstanceType.
          */
         public Builder childInstanceType(String childInstanceType) {
             this.childInstanceType = childInstanceType;
@@ -198,7 +210,7 @@ public class DescribeCenAttachedChildInstanceAttributeResponseBody extends TeaMo
         }
 
         /**
-         * The ID of the request.
+         * RequestId.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -206,12 +218,7 @@ public class DescribeCenAttachedChildInstanceAttributeResponseBody extends TeaMo
         }
 
         /**
-         * Indicates whether the network instance is attached to the CEN instance. Valid values:
-         * <p>
-         * 
-         * *   **Attaching**: being attached to the CEN instance.
-         * *   **Attached**: attached to the CEN instance.
-         * *   **Detaching**: being detached from the CEN instance.
+         * Status.
          */
         public Builder status(String status) {
             this.status = status;
@@ -224,4 +231,248 @@ public class DescribeCenAttachedChildInstanceAttributeResponseBody extends TeaMo
 
     } 
 
+    public static class Ipv6CidrBlock extends TeaModel {
+        @NameInMap("Ipv6CidrBlock")
+        private String ipv6CidrBlock;
+
+        @NameInMap("Ipv6Isp")
+        private String ipv6Isp;
+
+        private Ipv6CidrBlock(Builder builder) {
+            this.ipv6CidrBlock = builder.ipv6CidrBlock;
+            this.ipv6Isp = builder.ipv6Isp;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static Ipv6CidrBlock create() {
+            return builder().build();
+        }
+
+        /**
+         * @return ipv6CidrBlock
+         */
+        public String getIpv6CidrBlock() {
+            return this.ipv6CidrBlock;
+        }
+
+        /**
+         * @return ipv6Isp
+         */
+        public String getIpv6Isp() {
+            return this.ipv6Isp;
+        }
+
+        public static final class Builder {
+            private String ipv6CidrBlock; 
+            private String ipv6Isp; 
+
+            /**
+             * Ipv6CidrBlock.
+             */
+            public Builder ipv6CidrBlock(String ipv6CidrBlock) {
+                this.ipv6CidrBlock = ipv6CidrBlock;
+                return this;
+            }
+
+            /**
+             * Ipv6Isp.
+             */
+            public Builder ipv6Isp(String ipv6Isp) {
+                this.ipv6Isp = ipv6Isp;
+                return this;
+            }
+
+            public Ipv6CidrBlock build() {
+                return new Ipv6CidrBlock(this);
+            } 
+
+        } 
+
+    }
+    public static class Ipv6CidrBlocks extends TeaModel {
+        @NameInMap("ipv6CidrBlock")
+        private java.util.List < Ipv6CidrBlock> ipv6CidrBlock;
+
+        private Ipv6CidrBlocks(Builder builder) {
+            this.ipv6CidrBlock = builder.ipv6CidrBlock;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static Ipv6CidrBlocks create() {
+            return builder().build();
+        }
+
+        /**
+         * @return ipv6CidrBlock
+         */
+        public java.util.List < Ipv6CidrBlock> getIpv6CidrBlock() {
+            return this.ipv6CidrBlock;
+        }
+
+        public static final class Builder {
+            private java.util.List < Ipv6CidrBlock> ipv6CidrBlock; 
+
+            /**
+             * ipv6CidrBlock.
+             */
+            public Builder ipv6CidrBlock(java.util.List < Ipv6CidrBlock> ipv6CidrBlock) {
+                this.ipv6CidrBlock = ipv6CidrBlock;
+                return this;
+            }
+
+            public Ipv6CidrBlocks build() {
+                return new Ipv6CidrBlocks(this);
+            } 
+
+        } 
+
+    }
+    public static class SecondaryCidrBlocks extends TeaModel {
+        @NameInMap("secondaryCidrBlock")
+        private java.util.List < String > secondaryCidrBlock;
+
+        private SecondaryCidrBlocks(Builder builder) {
+            this.secondaryCidrBlock = builder.secondaryCidrBlock;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static SecondaryCidrBlocks create() {
+            return builder().build();
+        }
+
+        /**
+         * @return secondaryCidrBlock
+         */
+        public java.util.List < String > getSecondaryCidrBlock() {
+            return this.secondaryCidrBlock;
+        }
+
+        public static final class Builder {
+            private java.util.List < String > secondaryCidrBlock; 
+
+            /**
+             * secondaryCidrBlock.
+             */
+            public Builder secondaryCidrBlock(java.util.List < String > secondaryCidrBlock) {
+                this.secondaryCidrBlock = secondaryCidrBlock;
+                return this;
+            }
+
+            public SecondaryCidrBlocks build() {
+                return new SecondaryCidrBlocks(this);
+            } 
+
+        } 
+
+    }
+    public static class ChildInstanceAttributes extends TeaModel {
+        @NameInMap("CidrBlock")
+        private String cidrBlock;
+
+        @NameInMap("Ipv6CidrBlock")
+        private String ipv6CidrBlock;
+
+        @NameInMap("Ipv6CidrBlocks")
+        private Ipv6CidrBlocks ipv6CidrBlocks;
+
+        @NameInMap("SecondaryCidrBlocks")
+        private SecondaryCidrBlocks secondaryCidrBlocks;
+
+        private ChildInstanceAttributes(Builder builder) {
+            this.cidrBlock = builder.cidrBlock;
+            this.ipv6CidrBlock = builder.ipv6CidrBlock;
+            this.ipv6CidrBlocks = builder.ipv6CidrBlocks;
+            this.secondaryCidrBlocks = builder.secondaryCidrBlocks;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static ChildInstanceAttributes create() {
+            return builder().build();
+        }
+
+        /**
+         * @return cidrBlock
+         */
+        public String getCidrBlock() {
+            return this.cidrBlock;
+        }
+
+        /**
+         * @return ipv6CidrBlock
+         */
+        public String getIpv6CidrBlock() {
+            return this.ipv6CidrBlock;
+        }
+
+        /**
+         * @return ipv6CidrBlocks
+         */
+        public Ipv6CidrBlocks getIpv6CidrBlocks() {
+            return this.ipv6CidrBlocks;
+        }
+
+        /**
+         * @return secondaryCidrBlocks
+         */
+        public SecondaryCidrBlocks getSecondaryCidrBlocks() {
+            return this.secondaryCidrBlocks;
+        }
+
+        public static final class Builder {
+            private String cidrBlock; 
+            private String ipv6CidrBlock; 
+            private Ipv6CidrBlocks ipv6CidrBlocks; 
+            private SecondaryCidrBlocks secondaryCidrBlocks; 
+
+            /**
+             * CidrBlock.
+             */
+            public Builder cidrBlock(String cidrBlock) {
+                this.cidrBlock = cidrBlock;
+                return this;
+            }
+
+            /**
+             * Ipv6CidrBlock.
+             */
+            public Builder ipv6CidrBlock(String ipv6CidrBlock) {
+                this.ipv6CidrBlock = ipv6CidrBlock;
+                return this;
+            }
+
+            /**
+             * Ipv6CidrBlocks.
+             */
+            public Builder ipv6CidrBlocks(Ipv6CidrBlocks ipv6CidrBlocks) {
+                this.ipv6CidrBlocks = ipv6CidrBlocks;
+                return this;
+            }
+
+            /**
+             * SecondaryCidrBlocks.
+             */
+            public Builder secondaryCidrBlocks(SecondaryCidrBlocks secondaryCidrBlocks) {
+                this.secondaryCidrBlocks = secondaryCidrBlocks;
+                return this;
+            }
+
+            public ChildInstanceAttributes build() {
+                return new ChildInstanceAttributes(this);
+            } 
+
+        } 
+
+    }
 }

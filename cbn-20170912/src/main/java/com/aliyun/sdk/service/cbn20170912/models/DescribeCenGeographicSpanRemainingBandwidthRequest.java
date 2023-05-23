@@ -178,7 +178,7 @@ public class DescribeCenGeographicSpanRemainingBandwidthRequest extends Request 
         }
 
         /**
-         * The ID of one of the areas connected by the bandwidth plan. Valid values:
+         * The ID of one of the connected areas of the bandwidth plan. Valid values:
          * <p>
          * 
          * *   **China**: Chinese mainland

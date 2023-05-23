@@ -13,6 +13,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class CreateTransitRouterVpcAttachmentRequest extends Request {
     @Query
+    @NameInMap("AutoPublishRouteEnabled")
+    private Boolean autoPublishRouteEnabled;
+
+    @Query
     @NameInMap("CenId")
     private String cenId;
 
@@ -80,6 +84,7 @@ public class CreateTransitRouterVpcAttachmentRequest extends Request {
 
     private CreateTransitRouterVpcAttachmentRequest(Builder builder) {
         super(builder);
+        this.autoPublishRouteEnabled = builder.autoPublishRouteEnabled;
         this.cenId = builder.cenId;
         this.chargeType = builder.chargeType;
         this.clientToken = builder.clientToken;
@@ -109,6 +114,13 @@ public class CreateTransitRouterVpcAttachmentRequest extends Request {
     @Override
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return autoPublishRouteEnabled
+     */
+    public Boolean getAutoPublishRouteEnabled() {
+        return this.autoPublishRouteEnabled;
     }
 
     /**
@@ -224,6 +236,7 @@ public class CreateTransitRouterVpcAttachmentRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<CreateTransitRouterVpcAttachmentRequest, Builder> {
+        private Boolean autoPublishRouteEnabled; 
         private String cenId; 
         private String chargeType; 
         private String clientToken; 
@@ -247,6 +260,7 @@ public class CreateTransitRouterVpcAttachmentRequest extends Request {
 
         private Builder(CreateTransitRouterVpcAttachmentRequest request) {
             super(request);
+            this.autoPublishRouteEnabled = request.autoPublishRouteEnabled;
             this.cenId = request.cenId;
             this.chargeType = request.chargeType;
             this.clientToken = request.clientToken;
@@ -266,6 +280,19 @@ public class CreateTransitRouterVpcAttachmentRequest extends Request {
         } 
 
         /**
+         * 是否使企业版转发路由器自动发布路由到VPC实例。
+         * <p>
+         * 
+         * - **false**（默认值）：否。
+         * - **true**：是。
+         */
+        public Builder autoPublishRouteEnabled(Boolean autoPublishRouteEnabled) {
+            this.putQueryParameter("AutoPublishRouteEnabled", autoPublishRouteEnabled);
+            this.autoPublishRouteEnabled = autoPublishRouteEnabled;
+            return this;
+        }
+
+        /**
          * The ID of the Cloud Enterprise Network (CEN) instance.
          */
         public Builder cenId(String cenId) {
@@ -275,7 +302,7 @@ public class CreateTransitRouterVpcAttachmentRequest extends Request {
         }
 
         /**
-         * The billing method. Valid values: The default value is **POSTPAY**, which specifies the pay-as-you-go billing method.
+         * The billing method. The default value is **POSTPAY**, which specifies the pay-as-you-go billing method.
          */
         public Builder chargeType(String chargeType) {
             this.putQueryParameter("ChargeType", chargeType);
@@ -298,7 +325,7 @@ public class CreateTransitRouterVpcAttachmentRequest extends Request {
         }
 
         /**
-         * Specifies whether to perform a dry run to check information such as the permissions and the instance status. Valid values:
+         * Specifies whether to perform a dry run. Valid values:
          * <p>
          * 
          * *   **false** (default): performs a dry run and sends the request.
@@ -386,7 +413,7 @@ public class CreateTransitRouterVpcAttachmentRequest extends Request {
          * The name of the VPC connection.
          * <p>
          * 
-         * The name must be 2 to 128 characters in length, and can contain digits, underscores (\_), and hyphens (-). It must start with a letter.
+         * The name must be 2 to 128 characters in length, and can contain letters, digits, underscores (\_), and hyphens (-). It must start with a letter.
          */
         public Builder transitRouterAttachmentName(String transitRouterAttachmentName) {
             this.putQueryParameter("TransitRouterAttachmentName", transitRouterAttachmentName);
@@ -425,10 +452,10 @@ public class CreateTransitRouterVpcAttachmentRequest extends Request {
         }
 
         /**
-         * A vSwitch in a zone of the Enterprise Edition transit router.
+         * A zone that supports Enterprise Edition transit routers.
          * <p>
          * 
-         * You can specify at most 10 vSwitches in each call.
+         * You can specify at most 10 zones.
          */
         public Builder zoneMappings(java.util.List < ZoneMappings> zoneMappings) {
             this.putQueryParameter("ZoneMappings", zoneMappings);
@@ -555,7 +582,7 @@ public class CreateTransitRouterVpcAttachmentRequest extends Request {
             private String zoneId; 
 
             /**
-             * A vSwitch in a zone of the Enterprise Edition transit router.
+             * A vSwitch that is deployed in the zone that supports Enterprise Edition transit routers.
              * <p>
              * 
              * You can specify vSwitches for at most 10 zones in each call.
@@ -566,7 +593,7 @@ public class CreateTransitRouterVpcAttachmentRequest extends Request {
             }
 
             /**
-             * The ID of the zone supported by Enterprise Edition transit routers.
+             * The ID of the zone that supports Enterprise Edition transit routers.
              * <p>
              * 
              * You can call the [DescribeZones](~~36064~~) operation to query the most recent zone list.

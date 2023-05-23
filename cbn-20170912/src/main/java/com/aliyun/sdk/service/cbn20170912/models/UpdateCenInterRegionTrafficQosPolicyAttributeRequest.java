@@ -167,10 +167,7 @@ public class UpdateCenInterRegionTrafficQosPolicyAttributeRequest extends Reques
         } 
 
         /**
-         * The client token that is used to ensure the idempotence of the request.
-         * <p>
-         * 
-         * You can use the client to generate the value, but you must make sure that the value is unique among different requests. The token can contain only ASCII characters and cannot exceed 64 characters in length.
+         * The ID of the request.
          */
         public Builder clientToken(String clientToken) {
             this.putQueryParameter("ClientToken", clientToken);
@@ -179,11 +176,7 @@ public class UpdateCenInterRegionTrafficQosPolicyAttributeRequest extends Reques
         }
 
         /**
-         * Specifies whether to check the request without performing the operation. Valid values:
-         * <p>
-         * 
-         * *   **true**: checks the request but does not modify the name and description of the QoS policy. The system checks whether the required parameters are set, whether the formats of the values are valid, and the service limits. If the request fails the check, an error message is returned. If the request passes the check, the `DryRunOperation` error code is returned.
-         * *   **false** (default): checks the request. If the request passes the check, the name and description of the QoS policy are modified.
+         * The operation that you want to perform. Set the value to **UpdateCenInterRegionTrafficQosPolicyAttribute**.
          */
         public Builder dryRun(Boolean dryRun) {
             this.putQueryParameter("DryRun", dryRun);
@@ -228,10 +221,7 @@ public class UpdateCenInterRegionTrafficQosPolicyAttributeRequest extends Reques
         }
 
         /**
-         * The new description of the QoS policy.
-         * <p>
-         * 
-         * The description must be 2 to 128 characters in length, and can contain letters, digits, underscores (\_), and hyphens (-). The description must start with a letter.
+         * TrafficQosPolicyDescription.
          */
         public Builder trafficQosPolicyDescription(String trafficQosPolicyDescription) {
             this.putQueryParameter("TrafficQosPolicyDescription", trafficQosPolicyDescription);
@@ -240,7 +230,10 @@ public class UpdateCenInterRegionTrafficQosPolicyAttributeRequest extends Reques
         }
 
         /**
-         * The ID of the QoS policy.
+         * The new description of the QoS policy.
+         * <p>
+         * 
+         * The description must be 2 to 128 characters in length, and can contain letters, digits, underscores (\_), and hyphens (-). The description must start with a letter.
          */
         public Builder trafficQosPolicyId(String trafficQosPolicyId) {
             this.putQueryParameter("TrafficQosPolicyId", trafficQosPolicyId);
@@ -249,10 +242,7 @@ public class UpdateCenInterRegionTrafficQosPolicyAttributeRequest extends Reques
         }
 
         /**
-         * The new name of the QoS policy.
-         * <p>
-         * 
-         * The name must be 2 to 128 characters in length, and can contain letters, digits, underscores (\_), and hyphens (-). The name must start with a letter.
+         * TrafficQosPolicyName.
          */
         public Builder trafficQosPolicyName(String trafficQosPolicyName) {
             this.putQueryParameter("TrafficQosPolicyName", trafficQosPolicyName);

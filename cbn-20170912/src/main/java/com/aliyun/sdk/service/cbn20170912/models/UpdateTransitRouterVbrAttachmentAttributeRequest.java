@@ -181,11 +181,7 @@ public class UpdateTransitRouterVbrAttachmentAttributeRequest extends Request {
         } 
 
         /**
-         * Specifies whether to allow the Enterprise Edition transit router to automatically advertise routes to the VBR. Valid values:
-         * <p>
-         * 
-         * *   **true**: yes
-         * *   **false**: no
+         * AutoPublishRouteEnabled.
          */
         public Builder autoPublishRouteEnabled(Boolean autoPublishRouteEnabled) {
             this.putQueryParameter("AutoPublishRouteEnabled", autoPublishRouteEnabled);
@@ -194,12 +190,11 @@ public class UpdateTransitRouterVbrAttachmentAttributeRequest extends Request {
         }
 
         /**
-         * The client token that is used to ensure the idempotence of the request.
+         * Specifies whether to allow the Enterprise Edition transit router to automatically advertise routes to the VBR. Valid values:
          * <p>
          * 
-         * You can use the client to generate the value, but you must make sure that it is unique among different requests. ClientToken can contain only ASCII characters.
-         * 
-         * >  If you do not set this parameter, **ClientToken** is set to the value of **RequestId**. The value of **RequestId** for each API request may be different.
+         * *   **true**: yes
+         * *   **false**: no
          */
         public Builder clientToken(String clientToken) {
             this.putQueryParameter("ClientToken", clientToken);
@@ -208,11 +203,7 @@ public class UpdateTransitRouterVbrAttachmentAttributeRequest extends Request {
         }
 
         /**
-         * Specifies whether to perform a precheck to check information such as the permissions and instance status. Valid values:
-         * <p>
-         * 
-         * *   **false** (default): sends a request. If the request passes the precheck, the name and description of the VBR connection are modified.
-         * *   **true**: sends a request for precheck only. The name and description of the VBR connection are not modified after the request passes the precheck. If you use this value, the system checks the required parameters and the request syntax. If the request fails to pass the precheck, an error message is returned. If the request passes the precheck, the `DryRunOperation` error code is returned.
+         * DryRun.
          */
         public Builder dryRun(Boolean dryRun) {
             this.putQueryParameter("DryRun", dryRun);
@@ -257,10 +248,7 @@ public class UpdateTransitRouterVbrAttachmentAttributeRequest extends Request {
         }
 
         /**
-         * The new description of the VBR connection.
-         * <p>
-         * 
-         * The description must be 2 to 256 characters in length. The description must start with a letter but cannot start with `http://` or `https://`.
+         * TransitRouterAttachmentDescription.
          */
         public Builder transitRouterAttachmentDescription(String transitRouterAttachmentDescription) {
             this.putQueryParameter("TransitRouterAttachmentDescription", transitRouterAttachmentDescription);
@@ -269,7 +257,7 @@ public class UpdateTransitRouterVbrAttachmentAttributeRequest extends Request {
         }
 
         /**
-         * The ID of the VBR connection.
+         * TransitRouterAttachmentId.
          */
         public Builder transitRouterAttachmentId(String transitRouterAttachmentId) {
             this.putQueryParameter("TransitRouterAttachmentId", transitRouterAttachmentId);
@@ -278,10 +266,7 @@ public class UpdateTransitRouterVbrAttachmentAttributeRequest extends Request {
         }
 
         /**
-         * The new name of the VBR connection.
-         * <p>
-         * 
-         * The name must be 2 to 128 characters in length, and can contain letters, digits, underscores (\_), and hyphens (-). The name must start with a letter.
+         * TransitRouterAttachmentName.
          */
         public Builder transitRouterAttachmentName(String transitRouterAttachmentName) {
             this.putQueryParameter("TransitRouterAttachmentName", transitRouterAttachmentName);

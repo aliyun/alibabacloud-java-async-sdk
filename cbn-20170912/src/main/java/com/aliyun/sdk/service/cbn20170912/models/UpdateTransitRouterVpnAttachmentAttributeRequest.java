@@ -181,7 +181,7 @@ public class UpdateTransitRouterVpnAttachmentAttributeRequest extends Request {
         } 
 
         /**
-         * Specifies whether to allow the transit router to automatically advertise routes to the IPsec connection. Valid values:
+         * Specifies whether to allow the transit router to automatically advertise routes to the IPsec-VPN attachment. Valid values:
          * <p>
          * 
          * *   **true**: yes
@@ -197,9 +197,9 @@ public class UpdateTransitRouterVpnAttachmentAttributeRequest extends Request {
          * The client token that is used to ensure the idempotence of the request.
          * <p>
          * 
-         * You can use the client to generate the value, but you must make sure that it is unique among different requests. ClientToken can contain only ASCII characters.
+         * You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters.
          * 
-         * >  If you do not set this parameter, **ClientToken** is set to the value of **RequestId**. The value of **RequestId** may be different for each API request.
+         * >  If you do not set this parameter, **ClientToken** is set to the value of **RequestId**. The value of **RequestId** for each API request may be different.
          */
         public Builder clientToken(String clientToken) {
             this.putQueryParameter("ClientToken", clientToken);
@@ -208,11 +208,11 @@ public class UpdateTransitRouterVpnAttachmentAttributeRequest extends Request {
         }
 
         /**
-         * Specifies whether only to precheck the request. Valid values:
+         * Specifies whether to perform a dry run. Valid values:
          * <p>
          * 
-         * *   **true**: prechecks the request but does not modify the configurations. The system checks the required parameters, request syntax, and limits. If the request fails the precheck, an error message is returned. If the request passes the precheck, the `DryRunOperation` error code is returned.
-         * *   **false** (default): checks the request. If the request passes the check, the configurations are modified.
+         * *   **true**:performs a dry run. The system checks the required parameters, request syntax, and limits. If the request fails the dry run, an error message is returned. If the request passes the dry run, the `DryRunOperation` error code is returned.
+         * *   **false** (default): performs a dry run and sends the request.
          */
         public Builder dryRun(Boolean dryRun) {
             this.putQueryParameter("DryRun", dryRun);
@@ -257,7 +257,7 @@ public class UpdateTransitRouterVpnAttachmentAttributeRequest extends Request {
         }
 
         /**
-         * The new description of the VPN connection.
+         * The new description of the VPN attachment.
          * <p>
          * 
          * The description must be 2 to 256 characters in length. The description must start with a letter but cannot start with `http://` or `https://`.
@@ -269,7 +269,7 @@ public class UpdateTransitRouterVpnAttachmentAttributeRequest extends Request {
         }
 
         /**
-         * The ID of the VPN connection.
+         * The ID of the VPN attachment.
          */
         public Builder transitRouterAttachmentId(String transitRouterAttachmentId) {
             this.putQueryParameter("TransitRouterAttachmentId", transitRouterAttachmentId);
@@ -278,7 +278,7 @@ public class UpdateTransitRouterVpnAttachmentAttributeRequest extends Request {
         }
 
         /**
-         * The name of the VPN connection.
+         * The name of the VPN attachment.
          * <p>
          * 
          * The name must be 2 to 128 characters in length, and can contain letters, digits, underscores (\_), and hyphens (-). It must start with a letter.

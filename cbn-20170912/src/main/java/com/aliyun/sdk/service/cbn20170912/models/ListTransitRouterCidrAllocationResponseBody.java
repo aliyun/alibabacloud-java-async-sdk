@@ -86,7 +86,7 @@ public class ListTransitRouterCidrAllocationResponseBody extends TeaModel {
         private java.util.List < TransitRouterCidrAllocations> transitRouterCidrAllocations; 
 
         /**
-         * The number of entries returned on each page.
+         * The number of entries returned per page.
          * <p>
          * 
          * *   If no value is specified for **MaxResults**, query results are returned in one batch. The value of **MaxResults** indicates the total number of entries.
@@ -98,7 +98,7 @@ public class ListTransitRouterCidrAllocationResponseBody extends TeaModel {
         }
 
         /**
-         * The token that determines the start point of the query. Valid values:
+         * The token that determines the start point of the next query. Valid values:
          * <p>
          * 
          * *   If **NextToken** was not returned, it indicates that no additional results exist.
@@ -126,7 +126,7 @@ public class ListTransitRouterCidrAllocationResponseBody extends TeaModel {
         }
 
         /**
-         * The information about the allocated CIDR blocks.
+         * The information about the CIDR blocks that have IP addresses allocated to network instances.
          */
         public Builder transitRouterCidrAllocations(java.util.List < TransitRouterCidrAllocations> transitRouterCidrAllocations) {
             this.transitRouterCidrAllocations = transitRouterCidrAllocations;
@@ -214,7 +214,7 @@ public class ListTransitRouterCidrAllocationResponseBody extends TeaModel {
             private String transitRouterCidrId; 
 
             /**
-             * The CIDR blocks that have been allocated to network instances.
+             * The CIDR blocks that have IP addresses allocated to network instances.
              */
             public Builder allocatedCidrBlock(String allocatedCidrBlock) {
                 this.allocatedCidrBlock = allocatedCidrBlock;
@@ -238,7 +238,7 @@ public class ListTransitRouterCidrAllocationResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the transit router CIDR block.
+             * The CIDR block of the transit router.
              */
             public Builder cidr(String cidr) {
                 this.cidr = cidr;
@@ -246,7 +246,7 @@ public class ListTransitRouterCidrAllocationResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the transit router CIDR block.
+             * The ID of the CIDR block.
              */
             public Builder transitRouterCidrId(String transitRouterCidrId) {
                 this.transitRouterCidrId = transitRouterCidrId;

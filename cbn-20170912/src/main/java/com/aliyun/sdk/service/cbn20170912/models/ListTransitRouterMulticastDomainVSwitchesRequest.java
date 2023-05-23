@@ -168,7 +168,7 @@ public class ListTransitRouterMulticastDomainVSwitchesRequest extends Request {
         } 
 
         /**
-         * The ID of the Cloud Enterprise Network (CEN) instance.
+         * CenId.
          */
         public Builder cenId(String cenId) {
             this.putQueryParameter("CenId", cenId);
@@ -177,7 +177,7 @@ public class ListTransitRouterMulticastDomainVSwitchesRequest extends Request {
         }
 
         /**
-         * The number of entries to return on each page. Minimum value: **0**. Default value: **20**.
+         * MaxResults.
          */
         public Builder maxResults(Integer maxResults) {
             this.putQueryParameter("MaxResults", maxResults);
@@ -186,11 +186,7 @@ public class ListTransitRouterMulticastDomainVSwitchesRequest extends Request {
         }
 
         /**
-         * The token that determines the start point of the query. Valid values:
-         * <p>
-         * 
-         * *   If this is your first query or no subsequent query is to be sent, ignore this parameter.
-         * *   If a next query is to be sent, set the value to the value of **NextToken** that is returned from the last call.
+         * NextToken.
          */
         public Builder nextToken(String nextToken) {
             this.putQueryParameter("NextToken", nextToken);
@@ -235,7 +231,7 @@ public class ListTransitRouterMulticastDomainVSwitchesRequest extends Request {
         }
 
         /**
-         * The vSwitch IDs.
+         * VSwitchIds.
          */
         public Builder vSwitchIds(java.util.List < String > vSwitchIds) {
             this.putQueryParameter("VSwitchIds", vSwitchIds);
@@ -244,7 +240,7 @@ public class ListTransitRouterMulticastDomainVSwitchesRequest extends Request {
         }
 
         /**
-         * The ID of the VPC.
+         * VpcId.
          */
         public Builder vpcId(String vpcId) {
             this.putQueryParameter("VpcId", vpcId);

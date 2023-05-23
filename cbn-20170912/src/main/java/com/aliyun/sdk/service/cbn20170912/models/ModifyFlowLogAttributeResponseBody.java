@@ -50,7 +50,7 @@ public class ModifyFlowLogAttributeResponseBody extends TeaModel {
         private String success; 
 
         /**
-         * The ID of the request.
+         * RequestId.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -58,11 +58,7 @@ public class ModifyFlowLogAttributeResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether the call is successful.
-         * <p>
-         * 
-         * *   **true**: yes
-         * *   **false**: no
+         * Success.
          */
         public Builder success(String success) {
             this.success = success;

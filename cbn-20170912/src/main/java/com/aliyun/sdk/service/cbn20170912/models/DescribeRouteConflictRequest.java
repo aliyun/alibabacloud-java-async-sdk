@@ -198,7 +198,7 @@ public class DescribeRouteConflictRequest extends Request {
         } 
 
         /**
-         * The ID of the network instance that you want to query.
+         * ChildInstanceId.
          */
         public Builder childInstanceId(String childInstanceId) {
             this.putQueryParameter("ChildInstanceId", childInstanceId);
@@ -207,10 +207,7 @@ public class DescribeRouteConflictRequest extends Request {
         }
 
         /**
-         * The ID of the region where the network instance is deployed.
-         * <p>
-         * 
-         * You can call the [DescribeChildInstanceRegions](~~132080~~) operation to query the most recent region list.
+         * ChildInstanceRegionId.
          */
         public Builder childInstanceRegionId(String childInstanceRegionId) {
             this.putQueryParameter("ChildInstanceRegionId", childInstanceRegionId);
@@ -219,7 +216,7 @@ public class DescribeRouteConflictRequest extends Request {
         }
 
         /**
-         * The ID of the route table that is configured on the network instance.
+         * ChildInstanceRouteTableId.
          */
         public Builder childInstanceRouteTableId(String childInstanceRouteTableId) {
             this.putQueryParameter("ChildInstanceRouteTableId", childInstanceRouteTableId);
@@ -228,12 +225,7 @@ public class DescribeRouteConflictRequest extends Request {
         }
 
         /**
-         * The type of the network instance. Valid values:
-         * <p>
-         * 
-         * *   **VPC**
-         * *   **VBR**
-         * *   **CCN**
+         * ChildInstanceType.
          */
         public Builder childInstanceType(String childInstanceType) {
             this.putQueryParameter("ChildInstanceType", childInstanceType);
@@ -242,7 +234,7 @@ public class DescribeRouteConflictRequest extends Request {
         }
 
         /**
-         * The destination CIDR block of the conflicting route.
+         * DestinationCidrBlock.
          */
         public Builder destinationCidrBlock(String destinationCidrBlock) {
             this.putQueryParameter("DestinationCidrBlock", destinationCidrBlock);
@@ -269,7 +261,7 @@ public class DescribeRouteConflictRequest extends Request {
         }
 
         /**
-         * The number of the page to return. Default value: **1**.
+         * Queries conflicting routes on a network instance.
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -278,7 +270,7 @@ public class DescribeRouteConflictRequest extends Request {
         }
 
         /**
-         * The number of entries to return on each page. Default value: **10**. Valid values: **1** to **50**.
+         * PageSize.
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);

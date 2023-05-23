@@ -38,7 +38,7 @@ public class RemoveTraficMatchRuleFromTrafficMarkingPolicyResponseBody extends T
         private String requestId; 
 
         /**
-         * The ID of the request.
+         * RequestId.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

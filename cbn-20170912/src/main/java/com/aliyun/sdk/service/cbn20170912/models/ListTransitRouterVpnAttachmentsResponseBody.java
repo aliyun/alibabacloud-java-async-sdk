@@ -94,11 +94,11 @@ public class ListTransitRouterVpnAttachmentsResponseBody extends TeaModel {
         }
 
         /**
-         * The token that determines the start point of the query. Valid values:
+         * The token that determines the start point of the next query. Valid values:
          * <p>
          * 
-         * - If **NextToken** was not returned, it indicates that no additional results exist.
-         * - If **NextToken** was returned in the previous query, specify the value to obtain the next set of results.
+         * *   If **NextToken** is not returned, it indicates that no additional results exist.
+         * *   If **NextToken** was returned in the previous query, specify the value to obtain the next set of results.
          */
         public Builder nextToken(String nextToken) {
             this.nextToken = nextToken;
@@ -174,7 +174,7 @@ public class ListTransitRouterVpnAttachmentsResponseBody extends TeaModel {
             private String value; 
 
             /**
-             * The key of tag.
+             * The tag key.
              */
             public Builder key(String key) {
                 this.key = key;
@@ -182,7 +182,7 @@ public class ListTransitRouterVpnAttachmentsResponseBody extends TeaModel {
             }
 
             /**
-             * The value of tag.
+             * The tag value.
              */
             public Builder value(String value) {
                 this.value = value;
@@ -223,10 +223,10 @@ public class ListTransitRouterVpnAttachmentsResponseBody extends TeaModel {
             private String zoneId; 
 
             /**
-             * The zone ID. 
+             * The ID of the zone.
              * <p>
              * 
-             * You can call [DescribeZones](https://www.alibabacloud.com/help/en/virtual-private-cloud/latest/describezones) to query zones by ID.
+             * You can call the [DescribeZones](~~36064~~) operation to query the most recent zone list.
              */
             public Builder zoneId(String zoneId) {
                 this.zoneId = zoneId;
@@ -435,7 +435,7 @@ public class ListTransitRouterVpnAttachmentsResponseBody extends TeaModel {
             private java.util.List < Zones> zones; 
 
             /**
-             * Indicates whether to allow the transit router to automatically advertise routes to the IPsec connection. Valid values:
+             * Specifies whether to allow the transit router to automatically advertise routes to the IPsec-VPN connection. Valid values:
              * <p>
              * 
              * *   **true**: yes
@@ -455,10 +455,10 @@ public class ListTransitRouterVpnAttachmentsResponseBody extends TeaModel {
             }
 
             /**
-             * The billing method of the VPC connection.
+             * The billing method of the VPN attachment.
              * <p>
              * 
-             * Valid value: **POSTPAY**, which is the default value and specifies the pay-as-you-go billing method.
+             * The value is POSTPAY, which is the default value and specifies the pay-as-you-go billing method.
              */
             public Builder chargeType(String chargeType) {
                 this.chargeType = chargeType;
@@ -466,7 +466,7 @@ public class ListTransitRouterVpnAttachmentsResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the VPN attachment was created. 
+             * The time when the VPN attachment was created.
              * <p>
              * 
              * The time follows the ISO8601 standard in the YYYY-MM-DDThh:mmZ format. The time is displayed in UTC.
@@ -477,7 +477,7 @@ public class ListTransitRouterVpnAttachmentsResponseBody extends TeaModel {
             }
 
             /**
-             * The type of resource to which the transit router is connected. 
+             * The type of resource to which the transit router is connected.
              * <p>
              * 
              * Valid value: **VPN**, which indicates that an IPsec-VPN connection is attached to the transit router.
@@ -488,13 +488,13 @@ public class ListTransitRouterVpnAttachmentsResponseBody extends TeaModel {
             }
 
             /**
-             * The status of the VPN attachment. Valid values: 
+             * The status of the VPN attachment. Valid values:
              * <p>
              * 
-             * - **Attached**: The VPC attachment has been created on the transit router.
-             * - **Attaching**: The VPC attachment is being created on the transit router.
-             * - **Detaching**: The VPC attachment is being deleted from the transit router.
-             * - **Detached**: The local transit router is disconnected from the peer transit router.
+             * *   **Attached**: The VPC attachment has been created on the transit router.
+             * *   **Attaching**: The VPN attachment is being created on the transit router.
+             * *   **Detaching**: The VPN attachment is being deleted from the transit router.
+             * *   **Detached**: The VPN attachment is deleted from the transit router.
              */
             public Builder status(String status) {
                 this.status = status;
@@ -502,7 +502,7 @@ public class ListTransitRouterVpnAttachmentsResponseBody extends TeaModel {
             }
 
             /**
-             * The tags.
+             * A list of tags.
              */
             public Builder tags(java.util.List < Tags> tags) {
                 this.tags = tags;
@@ -550,7 +550,7 @@ public class ListTransitRouterVpnAttachmentsResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the Alibaba Cloud account that owns the IPsec-VPN connection.
+             * The ID of the Alibaba Cloud account to which the IPsec-VPN connection belongs.
              */
             public Builder vpnOwnerId(Long vpnOwnerId) {
                 this.vpnOwnerId = vpnOwnerId;
@@ -558,10 +558,10 @@ public class ListTransitRouterVpnAttachmentsResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the region to which the IPsec-VPN connection belongs. 
+             * The ID of the region to which the IPsec-VPN connection belongs.
              * <p>
              * 
-             * You can call the [DescribeRegions](https://www.alibabacloud.com/help/en/virtual-private-cloud/latest/describeregions) operation to query the most recent region list.
+             * You can call the [DescribeRegions](~~36063~~) operation to query the most recent region list.
              */
             public Builder vpnRegionId(String vpnRegionId) {
                 this.vpnRegionId = vpnRegionId;

@@ -154,12 +154,7 @@ public class DeleteTransitRouteTableAggregationRequest extends Request {
         } 
 
         /**
-         * The client token that is used to ensure the idempotence of the request.
-         * <p>
-         * 
-         * You can use the client to generate the value, but you must make sure that the value is unique among different requests. The client token can contain only ASCII characters.
-         * 
-         * >  If you do not set this parameter, ClientToken is set to the value of RequestId. The value of RequestId may be different for each request.
+         * ClientToken.
          */
         public Builder clientToken(String clientToken) {
             this.putQueryParameter("ClientToken", clientToken);
@@ -168,11 +163,7 @@ public class DeleteTransitRouteTableAggregationRequest extends Request {
         }
 
         /**
-         * Specifies whether to perform a dry run. Valid values:
-         * <p>
-         * 
-         * *   **false** (default): performs a dry run and sends the request.
-         * *   **true**: performs a dry run. The system checks the required parameters and the request syntax. If the request fails the dry run, an error message is returned. If the request passes the dry run, the `DryRunOperation` error code is returned.
+         * DryRun.
          */
         public Builder dryRun(Boolean dryRun) {
             this.putQueryParameter("DryRun", dryRun);
@@ -217,7 +208,7 @@ public class DeleteTransitRouteTableAggregationRequest extends Request {
         }
 
         /**
-         * The destination CIDR block of the aggregate route.
+         * TransitRouteTableAggregationCidr.
          */
         public Builder transitRouteTableAggregationCidr(String transitRouteTableAggregationCidr) {
             this.putQueryParameter("TransitRouteTableAggregationCidr", transitRouteTableAggregationCidr);
@@ -226,7 +217,7 @@ public class DeleteTransitRouteTableAggregationRequest extends Request {
         }
 
         /**
-         * The ID of the route table of the Enterprise Edition transit router.
+         * TransitRouteTableId.
          */
         public Builder transitRouteTableId(String transitRouteTableId) {
             this.putQueryParameter("TransitRouteTableId", transitRouteTableId);

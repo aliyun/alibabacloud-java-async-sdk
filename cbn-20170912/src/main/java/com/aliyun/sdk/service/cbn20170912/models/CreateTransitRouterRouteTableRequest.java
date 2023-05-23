@@ -195,12 +195,7 @@ public class CreateTransitRouterRouteTableRequest extends Request {
         } 
 
         /**
-         * The client token that is used to ensure the idempotence of the request.
-         * <p>
-         * 
-         * You can use the client to generate the value, but you must make sure that it is unique among all requests. The client token can contain only ASCII characters.
-         * 
-         * >  If you do not set this parameter, **ClientToken** is set to the value of **RequestId**. The value of **RequestId** for each API request may be different.
+         * ClientToken.
          */
         public Builder clientToken(String clientToken) {
             this.putQueryParameter("ClientToken", clientToken);
@@ -209,11 +204,7 @@ public class CreateTransitRouterRouteTableRequest extends Request {
         }
 
         /**
-         * Specifies whether to perform a dry run. Valid values:
-         * <p>
-         * 
-         * *   **false** (default): performs a dry run and sends the request.
-         * *   **true**: performs a dry run. The system checks the required parameters and the request syntax. If the request fails the dry run, an error message is returned. If the request passes the dry run, the system returns the ID of the request.
+         * DryRun.
          */
         public Builder dryRun(Boolean dryRun) {
             this.putQueryParameter("DryRun", dryRun);
@@ -267,10 +258,7 @@ public class CreateTransitRouterRouteTableRequest extends Request {
         }
 
         /**
-         * The information about the tags.
-         * <p>
-         * 
-         * You can specify at most 20 tags in each call.
+         * Tag.
          */
         public Builder tag(java.util.List < Tag> tag) {
             this.putQueryParameter("Tag", tag);
@@ -279,7 +267,7 @@ public class CreateTransitRouterRouteTableRequest extends Request {
         }
 
         /**
-         * The ID of the Enterprise Edition transit router.
+         * TransitRouterId.
          */
         public Builder transitRouterId(String transitRouterId) {
             this.putQueryParameter("TransitRouterId", transitRouterId);
@@ -288,10 +276,7 @@ public class CreateTransitRouterRouteTableRequest extends Request {
         }
 
         /**
-         * The description of the custom route table.
-         * <p>
-         * 
-         * The description must be 2 to 256 characters in length, and can contain letters, digits, and the following special characters: , . ; / @ \_ -. You can also leave the description empty.
+         * TransitRouterRouteTableDescription.
          */
         public Builder transitRouterRouteTableDescription(String transitRouterRouteTableDescription) {
             this.putQueryParameter("TransitRouterRouteTableDescription", transitRouterRouteTableDescription);
@@ -300,10 +285,7 @@ public class CreateTransitRouterRouteTableRequest extends Request {
         }
 
         /**
-         * The name of the custom route table.
-         * <p>
-         * 
-         * The name must be 0 to 128 characters in length, and can contain letters, digits, and the following special characters: , . ; / @ \_ -.
+         * TransitRouterRouteTableName.
          */
         public Builder transitRouterRouteTableName(String transitRouterRouteTableName) {
             this.putQueryParameter("TransitRouterRouteTableName", transitRouterRouteTableName);
@@ -398,12 +380,7 @@ public class CreateTransitRouterRouteTableRequest extends Request {
             private String value; 
 
             /**
-             * The tag key.
-             * <p>
-             * 
-             * The tag key cannot be an empty string. The tag key can be up to 64 characters in length and cannot start with `acs:` or `aliyun`. It cannot contain `http://` or `https://`.
-             * 
-             * You can specify at most 20 tag keys.
+             * Key.
              */
             public Builder key(String key) {
                 this.key = key;
@@ -411,12 +388,7 @@ public class CreateTransitRouterRouteTableRequest extends Request {
             }
 
             /**
-             * The tag value.
-             * <p>
-             * 
-             * The tag value can be 0 to 128 characters in length, and cannot start with `aliyun` or `acs:`. It cannot contain `http://` or `https://`.
-             * 
-             * Each tag key must have a unique tag value. You can specify at most 20 tag values in each call.
+             * Value.
              */
             public Builder value(String value) {
                 this.value = value;

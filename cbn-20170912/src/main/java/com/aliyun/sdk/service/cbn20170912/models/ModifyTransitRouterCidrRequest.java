@@ -225,7 +225,10 @@ public class ModifyTransitRouterCidrRequest extends Request {
         } 
 
         /**
-         * The new CIDR block of the transit router.
+         * The ID of the region where the transit router is deployed.
+         * <p>
+         * 
+         * You can call the [DescribeChildInstanceRegions](~~132080~~) operation to query the most recent region list.
          */
         public Builder cidr(String cidr) {
             this.putQueryParameter("Cidr", cidr);
@@ -234,12 +237,18 @@ public class ModifyTransitRouterCidrRequest extends Request {
         }
 
         /**
-         * The client token that is used to ensure the idempotence of the request.
+         * Specifies whether to allow the system to automatically add routes that point to the CIDR block to the route table of the transit router.
          * <p>
          * 
-         * You can use the client to generate the value, but you must make sure that it is unique among different requests. ClientToken can contain only ASCII characters.
+         * *   **true**: yes
          * 
-         * >  If you do not set this parameter, ClientToken is set to the value of RequestId. The value of RequestId for each API request may be different.
+         *     A value of true specifies that after you create a private VPN connection and enable route learning for the connection, the system automatically adds a blackhole route to the route table of the transit route to which the VPN connection is attached.
+         * 
+         *     The destination CIDR block of the blackhole route is the CIDR block of the transit router. The CIDR block of the transit router refers to the CIDR block from which gateway IP addresses are allocated to IPsec-VPN connections.
+         * 
+         *     The blackhole route is advertised only to the route table of the virtual border router (VBR) that is connected to the transit router.
+         * 
+         * *   **false**: no
          */
         public Builder clientToken(String clientToken) {
             this.putQueryParameter("ClientToken", clientToken);
@@ -248,10 +257,7 @@ public class ModifyTransitRouterCidrRequest extends Request {
         }
 
         /**
-         * The new description of the transit router CIDR block.
-         * <p>
-         * 
-         * The description must be 1 to 256 characters in length.
+         * The new CIDR block of the transit router.
          */
         public Builder description(String description) {
             this.putQueryParameter("Description", description);
@@ -260,11 +266,7 @@ public class ModifyTransitRouterCidrRequest extends Request {
         }
 
         /**
-         * Specifies whether only to precheck the request. Valid values:
-         * <p>
-         * 
-         * *   **true**: checks the request but does not modify the CIDR block. The system checks the required parameters, the request format, and the service limits. If the request fails to pass the precheck, an error message is returned. If the request passes the precheck, the `DryRunOperation` error code is returned.
-         * *   **false**: sends the request. If the request passes the precheck, the CIDR block of the transit router is modified.
+         * The ID of the request.
          */
         public Builder dryRun(Boolean dryRun) {
             this.putQueryParameter("DryRun", dryRun);
@@ -273,10 +275,10 @@ public class ModifyTransitRouterCidrRequest extends Request {
         }
 
         /**
-         * The new name of the transit router CIDR block.
+         * The ID of the transit router CIDR block.
          * <p>
          * 
-         * The name must be 1 to 128 characters in length.
+         * You can call [ListTransitRouterCidr](~~462772~~) to query the ID of a transit route CIDR block.
          */
         public Builder name(String name) {
             this.putQueryParameter("Name", name);
@@ -303,18 +305,7 @@ public class ModifyTransitRouterCidrRequest extends Request {
         }
 
         /**
-         * Specifies whether to allow the system to automatically add routes that point to the CIDR block to the route table of the transit router.
-         * <p>
-         * 
-         * *   **true**: yes
-         * 
-         *     A value of true specifies that after you create a private VPN connection and enable route learning for the connection, the system automatically adds a blackhole route to the route table of the transit route to which the VPN connection is attached.
-         * 
-         *     The destination CIDR block of the blackhole route is the CIDR block of the transit router. The CIDR block of the transit router refers to the CIDR block from which gateway IP addresses are allocated to IPsec-VPN connections.
-         * 
-         *     The blackhole route is advertised only to the route table of the virtual border router (VBR) that is connected to the transit router.
-         * 
-         * *   **false**: no
+         * The operation that you want to perform. Set the value to **ModifyTransitRouterCidr**.
          */
         public Builder publishCidrRoute(Boolean publishCidrRoute) {
             this.putQueryParameter("PublishCidrRoute", publishCidrRoute);
@@ -323,10 +314,7 @@ public class ModifyTransitRouterCidrRequest extends Request {
         }
 
         /**
-         * The ID of the region where the transit router is deployed.
-         * <p>
-         * 
-         * You can call the [DescribeChildInstanceRegions](~~132080~~) operation to query the most recent region list.
+         * The ID of the transit router.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -353,10 +341,11 @@ public class ModifyTransitRouterCidrRequest extends Request {
         }
 
         /**
-         * The ID of the transit router CIDR block.
+         * Specifies whether only to precheck the request. Valid values:
          * <p>
          * 
-         * You can call [ListTransitRouterCidr](~~462772~~) to query the ID of a transit route CIDR block.
+         * *   **true**: checks the request but does not modify the CIDR block. The system checks the required parameters, the request format, and the service limits. If the request fails to pass the precheck, an error message is returned. If the request passes the precheck, the `DryRunOperation` error code is returned.
+         * *   **false**: sends the request. If the request passes the precheck, the CIDR block of the transit router is modified.
          */
         public Builder transitRouterCidrId(String transitRouterCidrId) {
             this.putQueryParameter("TransitRouterCidrId", transitRouterCidrId);
@@ -365,7 +354,12 @@ public class ModifyTransitRouterCidrRequest extends Request {
         }
 
         /**
-         * The ID of the transit router.
+         * The client token that is used to ensure the idempotence of the request.
+         * <p>
+         * 
+         * You can use the client to generate the value, but you must make sure that it is unique among different requests. ClientToken can contain only ASCII characters.
+         * 
+         * >  If you do not set this parameter, ClientToken is set to the value of RequestId. The value of RequestId for each API request may be different.
          */
         public Builder transitRouterId(String transitRouterId) {
             this.putQueryParameter("TransitRouterId", transitRouterId);

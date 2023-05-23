@@ -141,10 +141,7 @@ public class TempUpgradeCenBandwidthPackageSpecRequest extends Request {
         } 
 
         /**
-         * The maximum bandwidth value to which you want to upgrade the bandwidth plan. Unit: Mbit/s.
-         * <p>
-         * 
-         * Valid values: **2** to **10000**.
+         * Bandwidth.
          */
         public Builder bandwidth(Integer bandwidth) {
             this.putQueryParameter("Bandwidth", bandwidth);
@@ -153,7 +150,7 @@ public class TempUpgradeCenBandwidthPackageSpecRequest extends Request {
         }
 
         /**
-         * The ID of the bandwidth plan.
+         * CenBandwidthPackageId.
          */
         public Builder cenBandwidthPackageId(String cenBandwidthPackageId) {
             this.putQueryParameter("CenBandwidthPackageId", cenBandwidthPackageId);
@@ -162,10 +159,7 @@ public class TempUpgradeCenBandwidthPackageSpecRequest extends Request {
         }
 
         /**
-         * The time when the temporary upgrade ends.
-         * <p>
-         * 
-         * Specify the time in the ISO 8601 standard in the YYYY-MM-DDThh:mm:ssZ format. The time must be in UTC.
+         * EndTime.
          */
         public Builder endTime(String endTime) {
             this.putQueryParameter("EndTime", endTime);

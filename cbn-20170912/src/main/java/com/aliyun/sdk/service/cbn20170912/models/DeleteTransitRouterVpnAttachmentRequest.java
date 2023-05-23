@@ -156,9 +156,9 @@ public class DeleteTransitRouterVpnAttachmentRequest extends Request {
          * The client token that is used to ensure the idempotence of the request.
          * <p>
          * 
-         * You can use the client to generate the value, but you must make sure that it is unique among different requests. ClientToken can contain only ASCII characters.
+         * You can use the client to generate the token, but you must make sure that the token is unique among all requests. The token can contain only ASCII characters.
          * 
-         * >  If you do not set this parameter, **ClientToken** is set to the value of **RequestId**. The value of **RequestId** may be different for each API request.
+         * >  If you do not set this parameter, **ClientToken** is set to the value of **RequestId**. The value of **RequestId** for each API request may be different.
          */
         public Builder clientToken(String clientToken) {
             this.putQueryParameter("ClientToken", clientToken);
@@ -167,11 +167,11 @@ public class DeleteTransitRouterVpnAttachmentRequest extends Request {
         }
 
         /**
-         * Specifies whether only to precheck the request. Valid values:
+         * Specifies whether to perform a dry run. Valid values:
          * <p>
          * 
-         * *   **true**: prechecks the request but does not delete the VPN connection. The system checks the required parameters, request syntax, and limits. If the request fails the precheck, an error message is returned. If the request passes the precheck, the `DryRunOperation` error code is returned.
-         * *   **false** (default): sends the request. After the request passes the precheck, the VPN connection is deleted.
+         * *   **true**: performs a dry run. The system checks the required parameters, request syntax, and limits. If the request fails the dry run, an error message is returned. If the request passes the dry run, the `DryRunOperation` error code is returned.
+         * *   **false** (default): performs a dry run and sends the request.
          */
         public Builder dryRun(Boolean dryRun) {
             this.putQueryParameter("DryRun", dryRun);
@@ -180,7 +180,11 @@ public class DeleteTransitRouterVpnAttachmentRequest extends Request {
         }
 
         /**
-         * Specifies whether to force to delete the a VPN connection for the Enterprise Edition transit router.
+         * Specifies whether to forcefully delete the VPN attachment. Valid values:
+         * <p>
+         * 
+         * *   **false** (default): checks the related resources, such as associated forwarding correlations and route learning policies, before the VPN attachment is deleted. If such a resource exists, the VPN attachment is not deleted and an error message is returned.
+         * *   **true**: deletes the VPN attachment and the related resources.
          */
         public Builder force(Boolean force) {
             this.putQueryParameter("Force", force);
@@ -225,7 +229,7 @@ public class DeleteTransitRouterVpnAttachmentRequest extends Request {
         }
 
         /**
-         * The ID of the VPN connection.
+         * The ID of the VPN attachment.
          */
         public Builder transitRouterAttachmentId(String transitRouterAttachmentId) {
             this.putQueryParameter("TransitRouterAttachmentId", transitRouterAttachmentId);

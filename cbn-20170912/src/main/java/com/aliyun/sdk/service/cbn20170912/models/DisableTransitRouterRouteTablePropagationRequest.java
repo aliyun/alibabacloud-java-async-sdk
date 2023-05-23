@@ -154,12 +154,7 @@ public class DisableTransitRouterRouteTablePropagationRequest extends Request {
         } 
 
         /**
-         * The client token that is used to ensure the idempotence of the request.
-         * <p>
-         * 
-         * You can use the client to generate the value, but you must make sure that it is unique among different requests. The client token can contain only ASCII characters.
-         * 
-         * >  If you do not set this parameter, **ClientToken** is set to the value of **RequestId**. The value of **RequestId** for each API request may be different.
+         * The ID of the request.
          */
         public Builder clientToken(String clientToken) {
             this.putQueryParameter("ClientToken", clientToken);
@@ -168,11 +163,7 @@ public class DisableTransitRouterRouteTablePropagationRequest extends Request {
         }
 
         /**
-         * Specifies whether to perform a dry run to check information such as the permissions and the instance status. Default values:
-         * <p>
-         * 
-         * *   **false** (default): performs a dry run and sends the request.
-         * *   **true**: performs a dry run. The system checks the required parameters and the request syntax. If the request fails the dry run, an error message is returned. If the request passes the dry run, the system returns the ID of the request.
+         * DryRun.
          */
         public Builder dryRun(Boolean dryRun) {
             this.putQueryParameter("DryRun", dryRun);
@@ -217,7 +208,12 @@ public class DisableTransitRouterRouteTablePropagationRequest extends Request {
         }
 
         /**
-         * The ID of the network instance connection.
+         * The client token that is used to ensure the idempotence of the request.
+         * <p>
+         * 
+         * You can use the client to generate the value, but you must make sure that it is unique among different requests. The client token can contain only ASCII characters.
+         * 
+         * >  If you do not set this parameter, **ClientToken** is set to the value of **RequestId**. The value of **RequestId** for each API request may be different.
          */
         public Builder transitRouterAttachmentId(String transitRouterAttachmentId) {
             this.putQueryParameter("TransitRouterAttachmentId", transitRouterAttachmentId);
@@ -226,7 +222,11 @@ public class DisableTransitRouterRouteTablePropagationRequest extends Request {
         }
 
         /**
-         * The ID of the route table of the Enterprise Edition transit router.
+         * Specifies whether to perform a dry run to check information such as the permissions and the instance status. Default values:
+         * <p>
+         * 
+         * *   **false** (default): performs a dry run and sends the request.
+         * *   **true**: performs a dry run. The system checks the required parameters and the request syntax. If the request fails the dry run, an error message is returned. If the request passes the dry run, the system returns the ID of the request.
          */
         public Builder transitRouterRouteTableId(String transitRouterRouteTableId) {
             this.putQueryParameter("TransitRouterRouteTableId", transitRouterRouteTableId);

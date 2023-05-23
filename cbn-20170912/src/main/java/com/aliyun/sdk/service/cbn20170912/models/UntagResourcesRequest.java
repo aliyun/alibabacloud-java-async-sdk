@@ -168,13 +168,7 @@ public class UntagResourcesRequest extends Request {
         } 
 
         /**
-         * Specifies whether to remove all tags. Valid values:
-         * <p>
-         * 
-         * *   **true**: yes
-         * *   **false** (default): no
-         * 
-         * > This parameter is valid only when the **TagKey.N** parameter is empty.
+         * All.
          */
         public Builder all(Boolean all) {
             this.putQueryParameter("All", all);
@@ -201,10 +195,7 @@ public class UntagResourcesRequest extends Request {
         }
 
         /**
-         * The ID of the region where the resource is deployed.
-         * <p>
-         * 
-         * You can ignore this parameter if ResourceType is set to Cen or BandwidthPackage.
+         * RegionId.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -213,7 +204,7 @@ public class UntagResourcesRequest extends Request {
         }
 
         /**
-         * The ID of the resource. Valid values of **N**: **1** to **50**.
+         * ResourceId.
          */
         public Builder resourceId(java.util.List < String > resourceId) {
             this.putQueryParameter("ResourceId", resourceId);
@@ -240,28 +231,7 @@ public class UntagResourcesRequest extends Request {
         }
 
         /**
-         * The resource type. Valid value:
-         * <p>
-         * 
-         * **Cen**: Cloud Enterprise Network (CEN) instance
-         * 
-         * **BandwidthPackage**: bandwidth plan
-         * 
-         * **TransitRouter**: transit router
-         * 
-         * **TransitRouterVpcAttachment**: virtual private cloud (VPC) connection
-         * 
-         * **TransitRouterVbrAttachment**: virtual border router (VBR) connection
-         * 
-         * **TransitRouterPeerAttachment**: inter-region connection
-         * 
-         * **TransitRouterVpnAttachment**: VPN connection
-         * 
-         * **TransitRouterRouteTable**: route table
-         * 
-         * **Flowlog**: flow log
-         * 
-         * **TransitRouterMulticastDomain**: multicast domain
+         * ResourceType.
          */
         public Builder resourceType(String resourceType) {
             this.putQueryParameter("ResourceType", resourceType);
@@ -270,12 +240,7 @@ public class UntagResourcesRequest extends Request {
         }
 
         /**
-         * The tag key.
-         * <p>
-         * 
-         * The tag key cannot exceed 64 characters in length, and cannot start with `aliyun` or `acs:`. It cannot contain `http://` or `https://`.
-         * 
-         * If multiple tag keys are specified, the logical relation among these tag keys is **AND**. Valid values of **N**: **1** to **20**.
+         * TagKey.
          */
         public Builder tagKey(java.util.List < String > tagKey) {
             this.putQueryParameter("TagKey", tagKey);

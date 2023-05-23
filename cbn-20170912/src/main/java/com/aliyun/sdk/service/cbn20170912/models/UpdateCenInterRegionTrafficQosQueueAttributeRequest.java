@@ -195,10 +195,10 @@ public class UpdateCenInterRegionTrafficQosQueueAttributeRequest extends Request
         } 
 
         /**
-         * The client token that is used to ensure the idempotence of the request.
+         * The new name of the queue.
          * <p>
          * 
-         * You can use the client to generate the value, but you must make sure that the value is unique among different requests. The token can contain only ASCII characters and cannot exceed 64 characters in length.
+         * The name must be 2 to 128 characters in length, and can contain letters, digits, underscores (\_), and hyphens (-). The name must start with a letter.
          */
         public Builder clientToken(String clientToken) {
             this.putQueryParameter("ClientToken", clientToken);
@@ -207,11 +207,7 @@ public class UpdateCenInterRegionTrafficQosQueueAttributeRequest extends Request
         }
 
         /**
-         * Specifies whether to check the request without performing the operation. Valid values:
-         * <p>
-         * 
-         * *   **true**: checks the request but does not modify the queue. The system checks whether the required parameters are set, whether the formats of the values are valid, and the service limits. If the request fails the check, an error message is returned. If the request passes the check, the `DryRunOperation` error code is returned.
-         * *   **false** (default): checks the request. If the request passes the check, the queue is modified.
+         * The ID of the request.
          */
         public Builder dryRun(Boolean dryRun) {
             this.putQueryParameter("DryRun", dryRun);
@@ -220,10 +216,7 @@ public class UpdateCenInterRegionTrafficQosQueueAttributeRequest extends Request
         }
 
         /**
-         * The differentiated services code point (DSCP) value of the packets to be matched by the queue. Valid values: **0** to **63**.
-         * <p>
-         * 
-         * You can enter up to 20 DSCP values at a time.
+         * Dscps.
          */
         public Builder dscps(java.util.List < Integer > dscps) {
             this.putQueryParameter("Dscps", dscps);
@@ -262,7 +255,7 @@ public class UpdateCenInterRegionTrafficQosQueueAttributeRequest extends Request
         }
 
         /**
-         * The ID of the queue.
+         * The operation that you want to perform. Set the value to **UpdateCenInterRegionTrafficQosQueueAttribute**.
          */
         public Builder qosQueueId(String qosQueueId) {
             this.putQueryParameter("QosQueueId", qosQueueId);
@@ -271,10 +264,10 @@ public class UpdateCenInterRegionTrafficQosQueueAttributeRequest extends Request
         }
 
         /**
-         * The new name of the queue.
+         * The differentiated services code point (DSCP) value of the packets to be matched by the queue. Valid values: **0** to **63**.
          * <p>
          * 
-         * The name must be 2 to 128 characters in length, and can contain letters, digits, underscores (\_), and hyphens (-). The name must start with a letter.
+         * You can enter up to 20 DSCP values at a time.
          */
         public Builder qosQueueName(String qosQueueName) {
             this.putQueryParameter("QosQueueName", qosQueueName);
@@ -283,10 +276,7 @@ public class UpdateCenInterRegionTrafficQosQueueAttributeRequest extends Request
         }
 
         /**
-         * The percentage of the inter-region bandwidth that can be used by the queue.
-         * <p>
-         * 
-         * Enter a number. You do not need to enter a percent sign (%).
+         * Modifies a queue in a quality of service (QoS) policy.
          */
         public Builder remainBandwidthPercent(String remainBandwidthPercent) {
             this.putQueryParameter("RemainBandwidthPercent", remainBandwidthPercent);

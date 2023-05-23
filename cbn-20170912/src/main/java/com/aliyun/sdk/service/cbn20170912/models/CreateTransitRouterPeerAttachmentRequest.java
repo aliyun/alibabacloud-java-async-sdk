@@ -294,11 +294,7 @@ public class CreateTransitRouterPeerAttachmentRequest extends Request {
         } 
 
         /**
-         * Specifies whether to enable the local Enterprise Edition transit router to automatically advertise the routes of the inter-region connection to the peer transit router. Valid values:
-         * <p>
-         * 
-         * *   **false** (default): no.
-         * *   **true**: yes.
+         * The tags.
          */
         public Builder autoPublishRouteEnabled(Boolean autoPublishRouteEnabled) {
             this.putQueryParameter("AutoPublishRouteEnabled", autoPublishRouteEnabled);
@@ -307,14 +303,12 @@ public class CreateTransitRouterPeerAttachmentRequest extends Request {
         }
 
         /**
-         * The bandwidth value of the inter-region connection. Unit: Mbit/s.
+         * The tag keys of the resources. 
          * <p>
          * 
-         * *   If you set **BandwidthType** to **BandwidthPackage**, this parameter specifies the bandwidth that is available for the inter-region connection.
+         * The tag keys cannot be an empty string. The tag keys can be up to 64 characters in length and cannot start with `acs:` or `aliyun`. It cannot contain `http://` or `https://`.  
          * 
-         * <!---->
-         * 
-         * *   If you set **BandwidthType** to **DataTransfer**, this parameter specifies the bandwidth limit of the inter-region connection.
+         * You can specify at most 20 tag keys.
          */
         public Builder bandwidth(Integer bandwidth) {
             this.putQueryParameter("Bandwidth", bandwidth);
@@ -323,12 +317,7 @@ public class CreateTransitRouterPeerAttachmentRequest extends Request {
         }
 
         /**
-         * The method that is used to allocate bandwidth to the inter-region connection. Valid values:
-         * <p>
-         * 
-         * **BandwidthPackage**: allocates bandwidth from a bandwidth plan.
-         * 
-         * **DataTransfer**: uses pay-by-data-transfer bandwidth.
+         * The ID of the request.
          */
         public Builder bandwidthType(String bandwidthType) {
             this.putQueryParameter("BandwidthType", bandwidthType);
@@ -337,10 +326,12 @@ public class CreateTransitRouterPeerAttachmentRequest extends Request {
         }
 
         /**
-         * The ID of the bandwidth plan that is used to allocate bandwidth to the inter-region connection.
+         * The tag values of the resources. 
          * <p>
          * 
-         * >  If you set **BandwidthType** to **DataTransfer**, you do not need to set this parameter.
+         * The tag values can be 0 to 128 characters in length, and cannot start with `aliyun` or `acs:`. It cannot contain `http://` or `https://`.  
+         * 
+         * Each tag key has a unique tag value. You can specify at most 20 tag values in each call.
          */
         public Builder cenBandwidthPackageId(String cenBandwidthPackageId) {
             this.putQueryParameter("CenBandwidthPackageId", cenBandwidthPackageId);
@@ -349,7 +340,7 @@ public class CreateTransitRouterPeerAttachmentRequest extends Request {
         }
 
         /**
-         * The ID of the Cloud Enterprise Network (CEN) instance.
+         * The ID of the peer transit router.
          */
         public Builder cenId(String cenId) {
             this.putQueryParameter("CenId", cenId);
@@ -358,12 +349,10 @@ public class CreateTransitRouterPeerAttachmentRequest extends Request {
         }
 
         /**
-         * The client token that is used to ensure the idempotence of the request.
+         * The description of the inter-region connection.
          * <p>
          * 
-         * You can use the client to generate the value, but you must make sure that it is unique among different requests. ClientToken can contain only ASCII characters.
-         * 
-         * >  If you do not set this parameter, the system automatically uses **RequestId** as **ClientToken**. The value of **RequestId** of each API request may be different.
+         * The description must be 2 to 256 characters in length. The description must start with a letter but cannot start with `http://` or `https://`.
          */
         public Builder clientToken(String clientToken) {
             this.putQueryParameter("ClientToken", clientToken);
@@ -372,11 +361,7 @@ public class CreateTransitRouterPeerAttachmentRequest extends Request {
         }
 
         /**
-         * Specifies whether to check the request but not perform the operation. The system checks the permissions and the status of the specified instances. Valid values:
-         * <p>
-         * 
-         * *   **false** (default): checks the request. If the request passes the check, the inter-region connection is created.
-         * *   **true**: checks the request but does not perform the operation. The inter-region connection is not created after the request passes the check. If you use this value, the system checks the required parameters and the request syntax. If the request fails to pass the precheck, an error message is returned. If the request passes the check, the system returns the ID of the request.
+         * The ID of the inter-region connection.
          */
         public Builder dryRun(Boolean dryRun) {
             this.putQueryParameter("DryRun", dryRun);
@@ -403,7 +388,11 @@ public class CreateTransitRouterPeerAttachmentRequest extends Request {
         }
 
         /**
-         * The ID of the peer transit router.
+         * Specifies whether to check the request but not perform the operation. The system checks the permissions and the status of the specified instances. Valid values:
+         * <p>
+         * 
+         * *   **false** (default): checks the request. If the request passes the check, the inter-region connection is created.
+         * *   **true**: checks the request but does not perform the operation. The inter-region connection is not created after the request passes the check. If you use this value, the system checks the required parameters and the request syntax. If the request fails to pass the precheck, an error message is returned. If the request passes the check, the system returns the ID of the request.
          */
         public Builder peerTransitRouterId(String peerTransitRouterId) {
             this.putQueryParameter("PeerTransitRouterId", peerTransitRouterId);
@@ -412,7 +401,12 @@ public class CreateTransitRouterPeerAttachmentRequest extends Request {
         }
 
         /**
-         * The ID of the region where the peer transit router is deployed.
+         * The method that is used to allocate bandwidth to the inter-region connection. Valid values:
+         * <p>
+         * 
+         * **BandwidthPackage**: allocates bandwidth from a bandwidth plan.
+         * 
+         * **DataTransfer**: uses pay-by-data-transfer bandwidth.
          */
         public Builder peerTransitRouterRegionId(String peerTransitRouterRegionId) {
             this.putQueryParameter("PeerTransitRouterRegionId", peerTransitRouterRegionId);
@@ -421,10 +415,11 @@ public class CreateTransitRouterPeerAttachmentRequest extends Request {
         }
 
         /**
-         * The ID of the region where the local Enterprise Edition transit router is deployed.
+         * Specifies whether to enable the local Enterprise Edition transit router to automatically advertise the routes of the inter-region connection to the peer transit router. Valid values:
          * <p>
          * 
-         * You can call the [DescribeRegions](~~36063~~) operation to query the most recent region list.
+         * *   **false** (default): no.
+         * *   **true**: yes.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -451,7 +446,7 @@ public class CreateTransitRouterPeerAttachmentRequest extends Request {
         }
 
         /**
-         * The tags.
+         * 614519
          */
         public Builder tag(java.util.List < Tag> tag) {
             this.putQueryParameter("Tag", tag);
@@ -460,10 +455,10 @@ public class CreateTransitRouterPeerAttachmentRequest extends Request {
         }
 
         /**
-         * The description of the inter-region connection.
+         * The ID of the bandwidth plan that is used to allocate bandwidth to the inter-region connection.
          * <p>
          * 
-         * The description must be 2 to 256 characters in length. The description must start with a letter but cannot start with `http://` or `https://`.
+         * >  If you set **BandwidthType** to **DataTransfer**, you do not need to set this parameter.
          */
         public Builder transitRouterAttachmentDescription(String transitRouterAttachmentDescription) {
             this.putQueryParameter("TransitRouterAttachmentDescription", transitRouterAttachmentDescription);
@@ -472,10 +467,14 @@ public class CreateTransitRouterPeerAttachmentRequest extends Request {
         }
 
         /**
-         * The name of the inter-region connection.
+         * The bandwidth value of the inter-region connection. Unit: Mbit/s.
          * <p>
          * 
-         * The name must be 2 to 128 characters in length, and can contain letters, digits, underscores (\_), and hyphens (-). The name must start with a letter.
+         * *   If you set **BandwidthType** to **BandwidthPackage**, this parameter specifies the bandwidth that is available for the inter-region connection.
+         * 
+         * <!---->
+         * 
+         * *   If you set **BandwidthType** to **DataTransfer**, this parameter specifies the bandwidth limit of the inter-region connection.
          */
         public Builder transitRouterAttachmentName(String transitRouterAttachmentName) {
             this.putQueryParameter("TransitRouterAttachmentName", transitRouterAttachmentName);
@@ -484,7 +483,7 @@ public class CreateTransitRouterPeerAttachmentRequest extends Request {
         }
 
         /**
-         * The ID of the local Enterprise Edition transit router.
+         * The ID of the region where the peer transit router is deployed.
          */
         public Builder transitRouterId(String transitRouterId) {
             this.putQueryParameter("TransitRouterId", transitRouterId);
@@ -538,12 +537,7 @@ public class CreateTransitRouterPeerAttachmentRequest extends Request {
             private String value; 
 
             /**
-             * The tag keys of the resources. 
-             * <p>
-             * 
-             * The tag keys cannot be an empty string. The tag keys can be up to 64 characters in length and cannot start with `acs:` or `aliyun`. It cannot contain `http://` or `https://`.  
-             * 
-             * You can specify at most 20 tag keys.
+             * master
              */
             public Builder key(String key) {
                 this.key = key;
@@ -551,12 +545,24 @@ public class CreateTransitRouterPeerAttachmentRequest extends Request {
             }
 
             /**
-             * The tag values of the resources. 
+             * ## Background information
              * <p>
              * 
-             * The tag values can be 0 to 128 characters in length, and cannot start with `aliyun` or `acs:`. It cannot contain `http://` or `https://`.  
+             * By default, 1 Kbit/s of bandwidth is provided for inter-region communication between transit routers. This allows you to test the connectivity of inter-region IPv4 networks. To allow services that are deployed in different regions to communicate with each other, you must create an inter-region connection and allocate bandwidth resources to the connection.  
              * 
-             * Each tag key has a unique tag value. You can specify at most 20 tag values in each call.
+             * Enterprise Edition transit routers allow you to allocate bandwidth resources to inter-region connections by using the following methods: 
+             * 
+             * - **Allocate bandwidth resources from a bandwidth plan**:  You must purchase a bandwidth plan, and then allocate bandwidth resources from the bandwidth plan to inter-region connections. For more information, see [CreateCenBandwidthPackage](https://www.alibabacloud.com/help/en/cloud-enterprise-network/latest/createcenbandwidthpackage).
+             * 
+             * - **Use pay-by-data-transfer bandwidth resources**:  You can set a maximum bandwidth value for an inter-region connection. Then, you are charged for the amount of data transfer over the connection. For more information, see [Cross-region data transfers](https://www.alibabacloud.com/help/en/cloud-data-transmission/latest/cross-region-data-transfers).
+             * 
+             * 
+             * ## Usage notes
+             * 
+             * **CreateTransitRouterPeerAttachment** is an asynchronous operation. After you send a request, the system returns the inter-region connection ID but the operation is still being performed in the system background. You can call **ListTransitRouterPeerAttachments** to query the status of an inter-region connection.  
+             * 
+             * - If an inter-region connection is in the **Attaching** state, the inter-region connection is being created. You can query the inter-region connection but cannot perform other regions.
+             * - If an inter-region connection is in the **Attached** state, the inter-region connection is created.
              */
             public Builder value(String value) {
                 this.value = value;

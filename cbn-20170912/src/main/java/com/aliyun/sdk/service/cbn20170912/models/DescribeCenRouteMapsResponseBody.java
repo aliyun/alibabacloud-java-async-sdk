@@ -86,7 +86,7 @@ public class DescribeCenRouteMapsResponseBody extends TeaModel {
         private Integer totalCount; 
 
         /**
-         * The number of the returned page.
+         * The community set on which actions are performed.
          */
         public Builder pageNumber(Integer pageNumber) {
             this.pageNumber = pageNumber;
@@ -94,7 +94,10 @@ public class DescribeCenRouteMapsResponseBody extends TeaModel {
         }
 
         /**
-         * The number of entries returned per page.
+         * The IDs of the destination route tables to which the routes belong. You can enter at most 32 route table IDs.
+         * <p>
+         * 
+         * >  The destination route table IDs are valid only when the routing policy is applied to scenarios where routes are advertised from the gateway in the current region to route tables in the current region.
          */
         public Builder pageSize(Integer pageSize) {
             this.pageSize = pageSize;
@@ -102,7 +105,7 @@ public class DescribeCenRouteMapsResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * The number of entries to return on each page. Default value: **10**.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -110,7 +113,7 @@ public class DescribeCenRouteMapsResponseBody extends TeaModel {
         }
 
         /**
-         * The information about the routing policy.
+         * The ID of the CEN instance.
          */
         public Builder routeMaps(RouteMaps routeMaps) {
             this.routeMaps = routeMaps;
@@ -118,7 +121,11 @@ public class DescribeCenRouteMapsResponseBody extends TeaModel {
         }
 
         /**
-         * The number of entries returned.
+         * Indicates whether the source network instance IDs are excluded.
+         * <p>
+         * 
+         * *   **false** (default): A route is a match if its source network instance ID is in the list specified by **SourceInstanceIds.N**.
+         * *   **true**: A route is match if its source network instance ID is not in the list specified by **SourceInstanceIds.N**.
          */
         public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;
@@ -1051,11 +1058,7 @@ public class DescribeCenRouteMapsResponseBody extends TeaModel {
             private String transmitDirection; 
 
             /**
-             * The match method that is used to match routes based on the AS path.
-             * <p>
-             * 
-             * *   **Include**: fuzzy match. A route is a match if the AS path of the route overlaps with the AS path specified in the match condition.
-             * *   **Complete**: exact match. A route is a match only if the AS path of the route is the same as the AS path specified in the match condition.
+             * The IDs of the source route tables to which the routes belong.
              */
             public Builder asPathMatchMode(String asPathMatchMode) {
                 this.asPathMatchMode = asPathMatchMode;
@@ -1063,7 +1066,7 @@ public class DescribeCenRouteMapsResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the CEN instance.
+             * The number of entries returned.
              */
             public Builder cenId(String cenId) {
                 this.cenId = cenId;
@@ -1071,10 +1074,136 @@ public class DescribeCenRouteMapsResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the region where the routing policy is applied.
+             * The number of entries returned per page.
              */
             public Builder cenRegionId(String cenRegionId) {
                 this.cenRegionId = cenRegionId;
+                return this;
+            }
+
+            /**
+             * The action performed on a route that meets the match conditions.
+             * <p>
+             * 
+             * *   **Permit**: the route is permitted.
+             * *   **Deny**: the route is denied.
+             */
+            public Builder cidrMatchMode(String cidrMatchMode) {
+                this.cidrMatchMode = cidrMatchMode;
+                return this;
+            }
+
+            /**
+             * The direction in which the routing policy is applied. Valid values:
+             * <p>
+             * 
+             * *   **RegionIn**: Routes are advertised to the gateways in the regions that are connected by the CEN instance.
+             * 
+             *     For example, routes are advertised from network instances deployed in the current region or other regions to the gateway deployed in the current region.
+             * 
+             * *   **RegionOut**: Routes are advertised from the gateways in the regions that are connected by the CEN instance.
+             * 
+             *     For example, routes are advertised from the gateway deployed in the current region to network instances deployed in the current region, or to gateways deployed in other regions.
+             */
+            public Builder communityMatchMode(String communityMatchMode) {
+                this.communityMatchMode = communityMatchMode;
+                return this;
+            }
+
+            /**
+             * The information about the routing policy.
+             */
+            public Builder communityOperateMode(String communityOperateMode) {
+                this.communityOperateMode = communityOperateMode;
+                return this;
+            }
+
+            /**
+             * The AS paths based on which the routes are compared.
+             */
+            public Builder description(String description) {
+                this.description = description;
+                return this;
+            }
+
+            /**
+             * DestinationChildInstanceTypes.
+             */
+            public Builder destinationChildInstanceTypes(DestinationChildInstanceTypes destinationChildInstanceTypes) {
+                this.destinationChildInstanceTypes = destinationChildInstanceTypes;
+                return this;
+            }
+
+            /**
+             * The number of the returned page.
+             */
+            public Builder destinationCidrBlocks(DestinationCidrBlocks destinationCidrBlocks) {
+                this.destinationCidrBlocks = destinationCidrBlocks;
+                return this;
+            }
+
+            /**
+             * DestinationInstanceIds.
+             */
+            public Builder destinationInstanceIds(DestinationInstanceIds destinationInstanceIds) {
+                this.destinationInstanceIds = destinationInstanceIds;
+                return this;
+            }
+
+            /**
+             * The description of the routing policy.
+             */
+            public Builder destinationInstanceIdsReverseMatch(Boolean destinationInstanceIdsReverseMatch) {
+                this.destinationInstanceIdsReverseMatch = destinationInstanceIdsReverseMatch;
+                return this;
+            }
+
+            /**
+             * The types of source network instance to which the routes belong.
+             * <p>
+             * 
+             * *   **VPC**: virtual private cloud (VPC)
+             * *   **VBR**: virtual border router (VBR)
+             * *   **CCN**: Cloud Connect Network (CCN) instance
+             * *   **VPN**: IPsec-VPN connection
+             */
+            public Builder destinationRouteTableIds(DestinationRouteTableIds destinationRouteTableIds) {
+                this.destinationRouteTableIds = destinationRouteTableIds;
+                return this;
+            }
+
+            /**
+             * The ID of the region where the routing policy is applied.
+             * <p>
+             * 
+             * You can call the [DescribeChildInstanceRegions](~~132080~~) operation to query the most recent region list.
+             */
+            public Builder mapResult(String mapResult) {
+                this.mapResult = mapResult;
+                return this;
+            }
+
+            /**
+             * The IDs of the source network instances to which the routes belong.
+             */
+            public Builder matchAddressType(String matchAddressType) {
+                this.matchAddressType = matchAddressType;
+                return this;
+            }
+
+            /**
+             * MatchAsns.
+             */
+            public Builder matchAsns(MatchAsns matchAsns) {
+                this.matchAsns = matchAsns;
+                return this;
+            }
+
+            /**
+             * MatchCommunitySet.
+             */
+            public Builder matchCommunitySet(MatchCommunitySet matchCommunitySet) {
+                this.matchCommunitySet = matchCommunitySet;
                 return this;
             }
 
@@ -1090,20 +1219,119 @@ public class DescribeCenRouteMapsResponseBody extends TeaModel {
              * 
              *     For example, if you set the match condition to 10.10.0.0/16 and exact match is enabled, a route is a match only if the prefix is 10.10.0.0/16.
              */
-            public Builder cidrMatchMode(String cidrMatchMode) {
-                this.cidrMatchMode = cidrMatchMode;
+            public Builder nextPriority(Integer nextPriority) {
+                this.nextPriority = nextPriority;
                 return this;
             }
 
             /**
-             * The match method that is used to match routes based on the community.
+             * OperateCommunitySet.
+             */
+            public Builder operateCommunitySet(OperateCommunitySet operateCommunitySet) {
+                this.operateCommunitySet = operateCommunitySet;
+                return this;
+            }
+
+            /**
+             * The prefixes of the routes.
+             */
+            public Builder preference(Integer preference) {
+                this.preference = preference;
+                return this;
+            }
+
+            /**
+             * PrependAsPath.
+             */
+            public Builder prependAsPath(PrependAsPath prependAsPath) {
+                this.prependAsPath = prependAsPath;
+                return this;
+            }
+
+            /**
+             * The ID of the region where the routing policy is applied.
+             */
+            public Builder priority(Integer priority) {
+                this.priority = priority;
+                return this;
+            }
+
+            /**
+             * The type of IP address to be matched against the match condition. Valid values:
              * <p>
              * 
-             * *   **Include**: fuzzy match. A route is a match if the community of the route overlaps with the community specified in the match condition.
-             * *   **Complete**: exact match. A route is a match only if the community of the route is the same as the community specified in the match condition.
+             * *   **IPv4**: IPv4 addresses
+             * *   **IPv6**: IPv6 addresses
+             * *   If no value is returned, both IPv4 and IPv6 addresses are matched against the match condition.
              */
-            public Builder communityMatchMode(String communityMatchMode) {
-                this.communityMatchMode = communityMatchMode;
+            public Builder routeMapId(String routeMapId) {
+                this.routeMapId = routeMapId;
+                return this;
+            }
+
+            /**
+             * RouteTypes.
+             */
+            public Builder routeTypes(RouteTypes routeTypes) {
+                this.routeTypes = routeTypes;
+                return this;
+            }
+
+            /**
+             * The community set based on which the routes are compared.
+             */
+            public Builder sourceChildInstanceTypes(SourceChildInstanceTypes sourceChildInstanceTypes) {
+                this.sourceChildInstanceTypes = sourceChildInstanceTypes;
+                return this;
+            }
+
+            /**
+             * The direction in which the routing policy is applied.
+             */
+            public Builder sourceInstanceIds(SourceInstanceIds sourceInstanceIds) {
+                this.sourceInstanceIds = sourceInstanceIds;
+                return this;
+            }
+
+            /**
+             * The ID of the routing policy.
+             */
+            public Builder sourceInstanceIdsReverseMatch(Boolean sourceInstanceIdsReverseMatch) {
+                this.sourceInstanceIdsReverseMatch = sourceInstanceIdsReverseMatch;
+                return this;
+            }
+
+            /**
+             * The status of the routing policy. Valid values:
+             * <p>
+             * 
+             * *   **Creating**: The routing policy is being created.
+             * *   **Active**: The routing policy is available.
+             * *   **Deleting**: The routing policy is being deleted.
+             */
+            public Builder sourceRegionIds(SourceRegionIds sourceRegionIds) {
+                this.sourceRegionIds = sourceRegionIds;
+                return this;
+            }
+
+            /**
+             * Queries the routing policies of a Cloud Enterprise Network (CEN) instance.
+             */
+            public Builder sourceRouteTableIds(SourceRouteTableIds sourceRouteTableIds) {
+                this.sourceRouteTableIds = sourceRouteTableIds;
+                return this;
+            }
+
+            /**
+             * The new priority of the route.
+             * <p>
+             * 
+             * A smaller value indicates a higher priority.
+             * 
+             * This parameter indicates the action to be performed when a route meets the match condition.
+             */
+            public Builder status(String status) {
+                this.status = status;
                 return this;
             }
 
@@ -1116,260 +1344,13 @@ public class DescribeCenRouteMapsResponseBody extends TeaModel {
              * 
              * This parameter indicates the action to be performed when a route meets the match condition.
              */
-            public Builder communityOperateMode(String communityOperateMode) {
-                this.communityOperateMode = communityOperateMode;
-                return this;
-            }
-
-            /**
-             * The description of the routing policy.
-             */
-            public Builder description(String description) {
-                this.description = description;
-                return this;
-            }
-
-            /**
-             * The types of destination network instance to which the routes belong.
-             * <p>
-             * 
-             * *   **VPC**: VPC
-             * *   **VBR**: VBR
-             * *   **CCN**: CCN instance
-             * *   **VPN**: IPsec-VPN connection
-             * 
-             * >  The destination network instance types are valid only when the routing policy is applied to scenarios where routes are advertised from the gateway in the current region to network instances in the current region.
-             */
-            public Builder destinationChildInstanceTypes(DestinationChildInstanceTypes destinationChildInstanceTypes) {
-                this.destinationChildInstanceTypes = destinationChildInstanceTypes;
-                return this;
-            }
-
-            /**
-             * The prefixes of the routes.
-             */
-            public Builder destinationCidrBlocks(DestinationCidrBlocks destinationCidrBlocks) {
-                this.destinationCidrBlocks = destinationCidrBlocks;
-                return this;
-            }
-
-            /**
-             * The IDs of the destination network instances to which the routes belong.
-             * <p>
-             * 
-             * >  The destination network instance IDs are valid only when the routing policy is applied to scenarios where routes are advertised from the gateway in the current region to network instances in the current region.
-             */
-            public Builder destinationInstanceIds(DestinationInstanceIds destinationInstanceIds) {
-                this.destinationInstanceIds = destinationInstanceIds;
-                return this;
-            }
-
-            /**
-             * Indicates whether the destination network instance IDs are excluded.
-             * <p>
-             * 
-             * *   **false** (default): A route is a match if its destination network instance ID is in the list specified by **DestinationInstanceIds.N**.
-             * *   **true**: A route is a match if its destination network instance ID is not in the list specified by **DestinationInstanceIds.N**.
-             */
-            public Builder destinationInstanceIdsReverseMatch(Boolean destinationInstanceIdsReverseMatch) {
-                this.destinationInstanceIdsReverseMatch = destinationInstanceIdsReverseMatch;
-                return this;
-            }
-
-            /**
-             * The IDs of the destination route tables to which the routes belong. You can enter at most 32 route table IDs.
-             * <p>
-             * 
-             * >  The destination route table IDs are valid only when the routing policy is applied to scenarios where routes are advertised from the gateway in the current region to route tables in the current region.
-             */
-            public Builder destinationRouteTableIds(DestinationRouteTableIds destinationRouteTableIds) {
-                this.destinationRouteTableIds = destinationRouteTableIds;
-                return this;
-            }
-
-            /**
-             * The action performed on a route that meets the match conditions.
-             * <p>
-             * 
-             * *   **Permit**: the route is permitted.
-             * *   **Deny**: the route is denied.
-             */
-            public Builder mapResult(String mapResult) {
-                this.mapResult = mapResult;
-                return this;
-            }
-
-            /**
-             * The type of IP address to be matched against the match condition. Valid values:
-             * <p>
-             * 
-             * *   **IPv4**: IPv4 addresses
-             * *   **IPv6**: IPv6 addresses
-             * *   If no value is returned, both IPv4 and IPv6 addresses are matched against the match condition.
-             */
-            public Builder matchAddressType(String matchAddressType) {
-                this.matchAddressType = matchAddressType;
-                return this;
-            }
-
-            /**
-             * The AS paths based on which the routes are compared.
-             */
-            public Builder matchAsns(MatchAsns matchAsns) {
-                this.matchAsns = matchAsns;
-                return this;
-            }
-
-            /**
-             * The community set based on which the routes are compared.
-             */
-            public Builder matchCommunitySet(MatchCommunitySet matchCommunitySet) {
-                this.matchCommunitySet = matchCommunitySet;
-                return this;
-            }
-
-            /**
-             * The priority of the routing policy that you want to associate with the current one.
-             */
-            public Builder nextPriority(Integer nextPriority) {
-                this.nextPriority = nextPriority;
-                return this;
-            }
-
-            /**
-             * The community set on which actions are performed.
-             */
-            public Builder operateCommunitySet(OperateCommunitySet operateCommunitySet) {
-                this.operateCommunitySet = operateCommunitySet;
-                return this;
-            }
-
-            /**
-             * The new priority of the route.
-             * <p>
-             * 
-             * A smaller value indicates a higher priority.
-             * 
-             * This parameter indicates the action to be performed when a route meets the match condition.
-             */
-            public Builder preference(Integer preference) {
-                this.preference = preference;
-                return this;
-            }
-
-            /**
-             * The AS paths that are prepended by using an action statement when regional gateways receive or advertise routes.
-             * <p>
-             * 
-             * This parameter indicates the action to be performed when a route meets the match condition.
-             */
-            public Builder prependAsPath(PrependAsPath prependAsPath) {
-                this.prependAsPath = prependAsPath;
-                return this;
-            }
-
-            /**
-             * The priority of the routing policy. A smaller value indicates a higher priority.
-             */
-            public Builder priority(Integer priority) {
-                this.priority = priority;
-                return this;
-            }
-
-            /**
-             * The ID of the routing policy.
-             */
-            public Builder routeMapId(String routeMapId) {
-                this.routeMapId = routeMapId;
-                return this;
-            }
-
-            /**
-             * The types of routes that is compared. Valid values:
-             * <p>
-             * 
-             * *   **System**: system routes that are automatically generated by the system.
-             * *   **Custom**: custom routes that are manually added.
-             * *   **BGP**: routes that are advertised over Border Gateway Protocol (BGP).
-             */
-            public Builder routeTypes(RouteTypes routeTypes) {
-                this.routeTypes = routeTypes;
-                return this;
-            }
-
-            /**
-             * The types of source network instance to which the routes belong.
-             * <p>
-             * 
-             * *   **VPC**: virtual private cloud (VPC)
-             * *   **VBR**: virtual border router (VBR)
-             * *   **CCN**: Cloud Connect Network (CCN) instance
-             * *   **VPN**: IPsec-VPN connection
-             */
-            public Builder sourceChildInstanceTypes(SourceChildInstanceTypes sourceChildInstanceTypes) {
-                this.sourceChildInstanceTypes = sourceChildInstanceTypes;
-                return this;
-            }
-
-            /**
-             * The IDs of the source network instances to which the routes belong.
-             */
-            public Builder sourceInstanceIds(SourceInstanceIds sourceInstanceIds) {
-                this.sourceInstanceIds = sourceInstanceIds;
-                return this;
-            }
-
-            /**
-             * Indicates whether the source network instance IDs are excluded.
-             * <p>
-             * 
-             * *   **false** (default): A route is a match if its source network instance ID is in the list specified by **SourceInstanceIds.N**.
-             * *   **true**: A route is match if its source network instance ID is not in the list specified by **SourceInstanceIds.N**.
-             */
-            public Builder sourceInstanceIdsReverseMatch(Boolean sourceInstanceIdsReverseMatch) {
-                this.sourceInstanceIdsReverseMatch = sourceInstanceIdsReverseMatch;
-                return this;
-            }
-
-            /**
-             * The IDs of the source regions to which the routes belong.
-             */
-            public Builder sourceRegionIds(SourceRegionIds sourceRegionIds) {
-                this.sourceRegionIds = sourceRegionIds;
-                return this;
-            }
-
-            /**
-             * The IDs of the source route tables to which the routes belong.
-             */
-            public Builder sourceRouteTableIds(SourceRouteTableIds sourceRouteTableIds) {
-                this.sourceRouteTableIds = sourceRouteTableIds;
-                return this;
-            }
-
-            /**
-             * The status of the routing policy. Valid values:
-             * <p>
-             * 
-             * *   **Creating**: The routing policy is being created.
-             * *   **Active**: The routing policy is available.
-             * *   **Deleting**: The routing policy is being deleted.
-             */
-            public Builder status(String status) {
-                this.status = status;
-                return this;
-            }
-
-            /**
-             * The route table ID of the transit router with which the routing policy is associated.
-             */
             public Builder transitRouterRouteTableId(String transitRouterRouteTableId) {
                 this.transitRouterRouteTableId = transitRouterRouteTableId;
                 return this;
             }
 
             /**
-             * The direction in which the routing policy is applied.
+             * The ID of the routing policy.
              */
             public Builder transmitDirection(String transmitDirection) {
                 this.transmitDirection = transmitDirection;

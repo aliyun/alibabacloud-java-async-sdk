@@ -50,7 +50,7 @@ public class CreateCenRouteMapResponseBody extends TeaModel {
         private String routeMapId; 
 
         /**
-         * The ID of the request.
+         * RequestId.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -58,7 +58,7 @@ public class CreateCenRouteMapResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the routing policy.
+         * RouteMapId.
          */
         public Builder routeMapId(String routeMapId) {
             this.routeMapId = routeMapId;

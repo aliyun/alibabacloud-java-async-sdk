@@ -62,7 +62,11 @@ public class ListCenChildInstanceRouteEntriesToAttachmentResponseBody extends Te
         private java.util.List < RouteEntry> routeEntry; 
 
         /**
-         * NextToken.
+         * The token that determines the start point of the next query. Valid values:
+         * <p>
+         * 
+         * *   If **NextToken** is not returned, it indicates that no additional results exist.
+         * *   If **NextToken** was returned in the previous query, specify the value to obtain the next set of results.
          */
         public Builder nextToken(String nextToken) {
             this.nextToken = nextToken;
@@ -70,7 +74,7 @@ public class ListCenChildInstanceRouteEntriesToAttachmentResponseBody extends Te
         }
 
         /**
-         * RequestId.
+         * The ID of the region.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -78,7 +82,7 @@ public class ListCenChildInstanceRouteEntriesToAttachmentResponseBody extends Te
         }
 
         /**
-         * RouteEntry.
+         * The detailed information about the route.
          */
         public Builder routeEntry(java.util.List < RouteEntry> routeEntry) {
             this.routeEntry = routeEntry;
@@ -178,7 +182,7 @@ public class ListCenChildInstanceRouteEntriesToAttachmentResponseBody extends Te
             private String transitRouterAttachmentId; 
 
             /**
-             * CenId.
+             * The ID of the CEN instance.
              */
             public Builder cenId(String cenId) {
                 this.cenId = cenId;
@@ -186,7 +190,7 @@ public class ListCenChildInstanceRouteEntriesToAttachmentResponseBody extends Te
             }
 
             /**
-             * ChildInstanceRouteTableId.
+             * The ID of the route table configured on the network instance.
              */
             public Builder childInstanceRouteTableId(String childInstanceRouteTableId) {
                 this.childInstanceRouteTableId = childInstanceRouteTableId;
@@ -194,7 +198,7 @@ public class ListCenChildInstanceRouteEntriesToAttachmentResponseBody extends Te
             }
 
             /**
-             * DestinationCidrBlock.
+             * The destination CIDR block of the route.
              */
             public Builder destinationCidrBlock(String destinationCidrBlock) {
                 this.destinationCidrBlock = destinationCidrBlock;
@@ -202,7 +206,7 @@ public class ListCenChildInstanceRouteEntriesToAttachmentResponseBody extends Te
             }
 
             /**
-             * ServiceType.
+             * Indicates whether the route is hosted. If the parameter is empty, the route is not hosted. A value of TR indicates that the route is hosted on a transit router.
              */
             public Builder serviceType(String serviceType) {
                 this.serviceType = serviceType;
@@ -210,7 +214,12 @@ public class ListCenChildInstanceRouteEntriesToAttachmentResponseBody extends Te
             }
 
             /**
-             * Status.
+             * The status of the route. Valid values:
+             * <p>
+             * 
+             * *   **Available**: The route is available.
+             * *   **Pending**: The route is being configured.
+             * *   **Modifying**: the route is being modified.
              */
             public Builder status(String status) {
                 this.status = status;
@@ -218,7 +227,7 @@ public class ListCenChildInstanceRouteEntriesToAttachmentResponseBody extends Te
             }
 
             /**
-             * TransitRouterAttachmentId.
+             * The ID of the network instance connection.
              */
             public Builder transitRouterAttachmentId(String transitRouterAttachmentId) {
                 this.transitRouterAttachmentId = transitRouterAttachmentId;

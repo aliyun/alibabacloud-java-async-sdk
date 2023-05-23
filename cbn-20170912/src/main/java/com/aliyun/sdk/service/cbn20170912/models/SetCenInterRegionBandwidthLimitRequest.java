@@ -156,7 +156,7 @@ public class SetCenInterRegionBandwidthLimitRequest extends Request {
         } 
 
         /**
-         * The maximum bandwidth value of the inter-region connection. Unit: Mbit/s.
+         * BandwidthLimit.
          */
         public Builder bandwidthLimit(Long bandwidthLimit) {
             this.putQueryParameter("BandwidthLimit", bandwidthLimit);
@@ -165,7 +165,7 @@ public class SetCenInterRegionBandwidthLimitRequest extends Request {
         }
 
         /**
-         * The ID of the CEN instance.
+         * CenId.
          */
         public Builder cenId(String cenId) {
             this.putQueryParameter("CenId", cenId);
@@ -174,10 +174,7 @@ public class SetCenInterRegionBandwidthLimitRequest extends Request {
         }
 
         /**
-         * The ID of the local region.
-         * <p>
-         * 
-         * You can call the [DescribeChildInstanceRegions](~~132080~~) operation to query regions where you can attach network instances to a CEN instance.
+         * LocalRegionId.
          */
         public Builder localRegionId(String localRegionId) {
             this.putQueryParameter("LocalRegionId", localRegionId);
@@ -186,7 +183,7 @@ public class SetCenInterRegionBandwidthLimitRequest extends Request {
         }
 
         /**
-         * The ID of the peer region.
+         * OppositeRegionId.
          */
         public Builder oppositeRegionId(String oppositeRegionId) {
             this.putQueryParameter("OppositeRegionId", oppositeRegionId);

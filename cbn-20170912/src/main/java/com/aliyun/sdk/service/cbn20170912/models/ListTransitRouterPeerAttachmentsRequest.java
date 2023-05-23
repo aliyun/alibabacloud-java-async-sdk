@@ -195,7 +195,7 @@ public class ListTransitRouterPeerAttachmentsRequest extends Request {
         } 
 
         /**
-         * The ID of the CEN instance.
+         * The ID of the Cloud Enterprise Network (CEN) instance.
          */
         public Builder cenId(String cenId) {
             this.putQueryParameter("CenId", cenId);
@@ -204,7 +204,7 @@ public class ListTransitRouterPeerAttachmentsRequest extends Request {
         }
 
         /**
-         * The number of entries to return per page. The default value is **20**. The maximum value is **100**.
+         * The number of entries returned per page. Default value: **20**. Maximum value: **100**.
          */
         public Builder maxResults(Integer maxResults) {
             this.putQueryParameter("MaxResults", maxResults);
@@ -213,11 +213,11 @@ public class ListTransitRouterPeerAttachmentsRequest extends Request {
         }
 
         /**
-         * The token that is used for the next query. Valid values:
+         * The pagination token that is used in the next request to retrieve a new page of results. Valid values:
          * <p>
          * 
-         * *   If this is your first query or no next query is to be sent, ignore this parameter.
-         * *   If a next query is to be sent, set the value to the value of **NextToken** that is returned from the last call.
+         * *   You do not need to specify this parameter for the first request.
+         * *   You must specify the token that is obtained from the previous query as the value of **NextToken**.
          */
         public Builder nextToken(String nextToken) {
             this.putQueryParameter("NextToken", nextToken);
@@ -274,7 +274,10 @@ public class ListTransitRouterPeerAttachmentsRequest extends Request {
         }
 
         /**
-         * The tags.
+         * The information about the tag.
+         * <p>
+         * 
+         * You can specify at most 20 tags in each call.
          */
         public Builder tag(java.util.List < Tag> tag) {
             this.putQueryParameter("Tag", tag);
@@ -283,7 +286,7 @@ public class ListTransitRouterPeerAttachmentsRequest extends Request {
         }
 
         /**
-         * The ID of the cross-region connection.
+         * The ID of the inter-region connection.
          */
         public Builder transitRouterAttachmentId(String transitRouterAttachmentId) {
             this.putQueryParameter("TransitRouterAttachmentId", transitRouterAttachmentId);
@@ -346,10 +349,10 @@ public class ListTransitRouterPeerAttachmentsRequest extends Request {
             private String value; 
 
             /**
-             * The tag keys of the resources. 
+             * The tag key.
              * <p>
              * 
-             * The tag keys cannot be an empty string. The tag keys can be up to 64 characters in length and cannot start with `acs:` or `aliyun`. It cannot contain `http://` or `https://`.  
+             * The tag key cannot be an empty string. The tag key can be up to 64 characters in length and cannot start with `acs:` or `aliyun`. It cannot contain `http://` or `https://`.
              * 
              * You can specify at most 20 tag keys.
              */
@@ -359,12 +362,12 @@ public class ListTransitRouterPeerAttachmentsRequest extends Request {
             }
 
             /**
-             * The tag values of the resources. 
+             * The tag value.
              * <p>
              * 
-             * The tag values can be 0 to 128 characters in length, and cannot start with `aliyun` or `acs:`. It cannot contain `http://` or `https://`.  
+             * The tag value can be 0 to 128 characters in length, and cannot start with `aliyun` or `acs:`. It cannot contain `http://` or `https://`.
              * 
-             * Each tag key has a unique tag value. You can specify at most 20 tag values in each call.
+             * Each tag key must have a unique tag value. You can specify at most 20 tag values in each call.
              */
             public Builder value(String value) {
                 this.value = value;

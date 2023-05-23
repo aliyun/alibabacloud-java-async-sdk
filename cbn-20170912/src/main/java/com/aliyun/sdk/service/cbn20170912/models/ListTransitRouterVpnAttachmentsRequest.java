@@ -212,11 +212,11 @@ public class ListTransitRouterVpnAttachmentsRequest extends Request {
         }
 
         /**
-         * The token that determines the start point of the query. Valid values:
+         * The token that determines the start point of the next query. Valid values:
          * <p>
          * 
-         * - If this is your first query or no subsequent query is to be sent, ignore this parameter.
-         * - If a subsequent query is to be sent, set the parameter to the value of NextToken that is returned from the last call.
+         * *   If this is your first query and no subsequent queries are to be sent, ignore this parameter.
+         * *   If a subsequent query is to be sent, set the parameter to the value of NextToken that is returned from the last call.
          */
         public Builder nextToken(String nextToken) {
             this.putQueryParameter("NextToken", nextToken);
@@ -273,7 +273,10 @@ public class ListTransitRouterVpnAttachmentsRequest extends Request {
         }
 
         /**
-         * The tags of the resources.
+         * The information about the tags that are added to the CEN instance.
+         * <p>
+         * 
+         * You can query at most 20 tags in each call.
          */
         public Builder tag(java.util.List < Tag> tag) {
             this.putQueryParameter("Tag", tag);
@@ -345,10 +348,10 @@ public class ListTransitRouterVpnAttachmentsRequest extends Request {
             private String value; 
 
             /**
-             * The tag keys of the resources. 
+             * The tag key.
              * <p>
              * 
-             * The tag keys cannot be an empty string. The tag keys can be up to 64 characters in length and cannot start with `acs:` or `aliyun`. It cannot contain `http://` or `https://`.  
+             * The tag key cannot be an empty string. The tag key can be up to 64 characters in length and cannot start with `acs:` or `aliyun`. It cannot contain `http://` or `https://`.
              * 
              * You can specify at most 20 tag keys.
              */
@@ -358,12 +361,12 @@ public class ListTransitRouterVpnAttachmentsRequest extends Request {
             }
 
             /**
-             * The tag values of the resources. 
+             * The tag value.
              * <p>
              * 
-             * The tag values can be 0 to 128 characters in length, and cannot start with `aliyun` or `acs:`. It cannot contain `http://` or `https://`.  
+             * The tag value can be 0 to 128 characters in length, and cannot start with `aliyun` or `acs:`. It cannot contain `http://` or `https://`.
              * 
-             * Each tag key has a unique tag value. You can specify at most 20 tag values in each call.
+             * Each tag key must have a unique tag value. You can specify at most 20 tag values in each call.
              */
             public Builder value(String value) {
                 this.value = value;

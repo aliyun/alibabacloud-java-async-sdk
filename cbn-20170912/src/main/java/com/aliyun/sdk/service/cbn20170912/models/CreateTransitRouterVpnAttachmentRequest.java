@@ -280,11 +280,11 @@ public class CreateTransitRouterVpnAttachmentRequest extends Request {
         } 
 
         /**
-         * Specifies whether to allow the transit router to automatically advertise routes to the IPsec-VPN connection. Valid values:
+         * Specifies whether to allow the transit router to automatically advertise routes to the IPsec-VPN attachment. Valid values:
          * <p>
          * 
-         * *   **true** (default): yes.
-         * *   **false**: no.
+         * *   **true** (default): yes
+         * *   **false**: no
          */
         public Builder autoPublishRouteEnabled(Boolean autoPublishRouteEnabled) {
             this.putQueryParameter("AutoPublishRouteEnabled", autoPublishRouteEnabled);
@@ -317,7 +317,7 @@ public class CreateTransitRouterVpnAttachmentRequest extends Request {
          * The client token that is used to ensure the idempotence of the request.
          * <p>
          * 
-         * You can use the client to generate the token, but you must make sure that the token is unique among different requests. The client token can contain only ASCII characters.
+         * You can use the client to generate the token, but you must make sure that the token is unique among all requests. The token can contain only ASCII characters.
          * 
          * >  If you do not set this parameter, **ClientToken** is set to the value of **RequestId**. The value of **RequestId** for each API request may be different.
          */
@@ -389,7 +389,7 @@ public class CreateTransitRouterVpnAttachmentRequest extends Request {
         }
 
         /**
-         * A list of tags.
+         * The tags.
          * <p>
          * 
          * You can specify at most 20 tags in each call.
@@ -434,7 +434,7 @@ public class CreateTransitRouterVpnAttachmentRequest extends Request {
         }
 
         /**
-         * The ID of the IPsec-VPN connection.
+         * The ID of the IPsec-VPN attachment.
          */
         public Builder vpnId(String vpnId) {
             this.putQueryParameter("VpnId", vpnId);
@@ -456,7 +456,7 @@ public class CreateTransitRouterVpnAttachmentRequest extends Request {
         }
 
         /**
-         * The ID of a zone in the current region.
+         * The ID of the zone in the current region.
          * <p>
          * 
          * Resources are deployed in the specified zone.
@@ -516,7 +516,7 @@ public class CreateTransitRouterVpnAttachmentRequest extends Request {
              * The tag key.
              * <p>
              * 
-             * The tag key cannot be an empty string. The tag key can be up to 64 characters in length and cannot start with `acs:` or `aliyun`. It cannot contain `http://` or `https://`.
+             * The tag keys cannot be an empty string. The tag key can be up to 64 characters in length, and cannot start with `acs:` or `aliyun`. It cannot contain `http://` or `https://`.
              * 
              * You can specify at most 20 tag keys.
              */
@@ -573,7 +573,7 @@ public class CreateTransitRouterVpnAttachmentRequest extends Request {
             private String zoneId; 
 
             /**
-             * The ID of the zone in which you want to create the instance.
+             * The zone ID of the read-only instance.
              * <p>
              * 
              * You can call the [ListTransitRouterAvailableResource](~~261356~~) operation to query the most recent zone list.

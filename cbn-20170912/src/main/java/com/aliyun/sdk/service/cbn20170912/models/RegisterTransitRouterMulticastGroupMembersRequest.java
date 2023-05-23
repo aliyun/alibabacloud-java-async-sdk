@@ -196,12 +196,7 @@ public class RegisterTransitRouterMulticastGroupMembersRequest extends Request {
         } 
 
         /**
-         * The client token that is used to ensure the idempotence of the request.
-         * <p>
-         * 
-         * You can use the client to generate the value, but you must make sure that it is unique among all requests. The token can contain only ASCII characters.
-         * 
-         * >  If you do not set this parameter, ClientToken is set to the value of RequestId. The value of RequestId may be different for each request.
+         * ClientToken.
          */
         public Builder clientToken(String clientToken) {
             this.putQueryParameter("ClientToken", clientToken);
@@ -210,11 +205,7 @@ public class RegisterTransitRouterMulticastGroupMembersRequest extends Request {
         }
 
         /**
-         * Specifies whether to perform a dry run. Valid values:
-         * <p>
-         * 
-         * *   **true**: performs a dry run. The system checks the required parameters, request syntax, and limits. If the request fails the dry run, an error message is returned. If the request passes the dry run, the `DryRunOperation` error code is returned.
-         * *   **false** (default): performs a dry run.
+         * DryRun.
          */
         public Builder dryRun(Boolean dryRun) {
             this.putQueryParameter("DryRun", dryRun);
@@ -223,10 +214,7 @@ public class RegisterTransitRouterMulticastGroupMembersRequest extends Request {
         }
 
         /**
-         * The IP address of the multicast group to which the multicast members belong. Valid values: **224.0.0.1** to **239.255.255.254**.
-         * <p>
-         * 
-         * If the multicast group does not exist in the specified multicast domain, the system automatically creates the multicast group in the multicast domain.
+         * GroupIpAddress.
          */
         public Builder groupIpAddress(String groupIpAddress) {
             this.putQueryParameter("GroupIpAddress", groupIpAddress);
@@ -235,7 +223,7 @@ public class RegisterTransitRouterMulticastGroupMembersRequest extends Request {
         }
 
         /**
-         * The IDs of ENIs.
+         * NetworkInterfaceIds.
          */
         public Builder networkInterfaceIds(java.util.List < String > networkInterfaceIds) {
             this.putQueryParameter("NetworkInterfaceIds", networkInterfaceIds);
@@ -262,7 +250,7 @@ public class RegisterTransitRouterMulticastGroupMembersRequest extends Request {
         }
 
         /**
-         * The IDs of the multicast domains that are in different regions.
+         * PeerTransitRouterMulticastDomains.
          */
         public Builder peerTransitRouterMulticastDomains(java.util.List < String > peerTransitRouterMulticastDomains) {
             this.putQueryParameter("PeerTransitRouterMulticastDomains", peerTransitRouterMulticastDomains);
@@ -289,7 +277,7 @@ public class RegisterTransitRouterMulticastGroupMembersRequest extends Request {
         }
 
         /**
-         * The ID of the multicast domain to which the multicast members belong.
+         * TransitRouterMulticastDomainId.
          */
         public Builder transitRouterMulticastDomainId(String transitRouterMulticastDomainId) {
             this.putQueryParameter("TransitRouterMulticastDomainId", transitRouterMulticastDomainId);
@@ -298,11 +286,7 @@ public class RegisterTransitRouterMulticastGroupMembersRequest extends Request {
         }
 
         /**
-         * The ID of the VPC to which the ENI belongs.
-         * <p>
-         * 
-         * *   If the ENI belongs to the current Alibaba Cloud account, ignore this parameter.
-         * *   If the ENI belongs to a different Alibaba Cloud account, you must set this parameter.
+         * VpcId.
          */
         public Builder vpcId(String vpcId) {
             this.putQueryParameter("VpcId", vpcId);

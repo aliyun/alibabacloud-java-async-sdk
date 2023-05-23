@@ -158,7 +158,7 @@ public class WithdrawPublishedRouteEntriesRequest extends Request {
         } 
 
         /**
-         * The ID of the CEN instance.
+         * CenId.
          */
         public Builder cenId(String cenId) {
             this.putQueryParameter("CenId", cenId);
@@ -167,7 +167,7 @@ public class WithdrawPublishedRouteEntriesRequest extends Request {
         }
 
         /**
-         * The ID of the attached network instance.
+         * ChildInstanceId.
          */
         public Builder childInstanceId(String childInstanceId) {
             this.putQueryParameter("ChildInstanceId", childInstanceId);
@@ -176,7 +176,7 @@ public class WithdrawPublishedRouteEntriesRequest extends Request {
         }
 
         /**
-         * The ID of the region where the attached network instance is created.
+         * ChildInstanceRegionId.
          */
         public Builder childInstanceRegionId(String childInstanceRegionId) {
             this.putQueryParameter("ChildInstanceRegionId", childInstanceRegionId);
@@ -185,7 +185,7 @@ public class WithdrawPublishedRouteEntriesRequest extends Request {
         }
 
         /**
-         * The ID of the route table of the attached network instance.
+         * ChildInstanceRouteTableId.
          */
         public Builder childInstanceRouteTableId(String childInstanceRouteTableId) {
             this.putQueryParameter("ChildInstanceRouteTableId", childInstanceRouteTableId);
@@ -194,10 +194,7 @@ public class WithdrawPublishedRouteEntriesRequest extends Request {
         }
 
         /**
-         * The type of the attached network instance.
-         * <p>
-         * 
-         * Set the value to **VPC**, which indicates a virtual private cloud (VPC).
+         * ChildInstanceType.
          */
         public Builder childInstanceType(String childInstanceType) {
             this.putQueryParameter("ChildInstanceType", childInstanceType);
@@ -206,7 +203,7 @@ public class WithdrawPublishedRouteEntriesRequest extends Request {
         }
 
         /**
-         * The destination CIDR block of the route that you want to withdraw.
+         * DestinationCidrBlock.
          */
         public Builder destinationCidrBlock(String destinationCidrBlock) {
             this.putQueryParameter("DestinationCidrBlock", destinationCidrBlock);

@@ -86,7 +86,7 @@ public class DescribeCenVbrHealthCheckResponseBody extends TeaModel {
         private VbrHealthChecks vbrHealthChecks; 
 
         /**
-         * The page number of the returned page.
+         * The health check configuration of the VBR.
          */
         public Builder pageNumber(Integer pageNumber) {
             this.pageNumber = pageNumber;
@@ -94,7 +94,16 @@ public class DescribeCenVbrHealthCheckResponseBody extends TeaModel {
         }
 
         /**
-         * The number of entries returned per page.
+         * Indicates whether probing is enabled. Valid values:
+         * <p>
+         * 
+         * *   **true**: yes
+         * 
+         *     If probing is enabled, the system does not switch to another route when the detected route is not reachable.
+         * 
+         * *   **false**: no
+         * 
+         *     If probing is disabled and a redundant route is specified, the system switches to the redundant route when the detected route is not reachable.
          */
         public Builder pageSize(Integer pageSize) {
             this.pageSize = pageSize;
@@ -102,7 +111,7 @@ public class DescribeCenVbrHealthCheckResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * The ID of the CEN instance.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -110,7 +119,10 @@ public class DescribeCenVbrHealthCheckResponseBody extends TeaModel {
         }
 
         /**
-         * The total number of entries returned.
+         * The ID of the Alibaba Cloud account that owns the VBR.
+         * <p>
+         * 
+         * >  The parameter is required if the VBR and the CEN instance belong to different Alibaba Cloud accounts.
          */
         public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;
@@ -118,7 +130,7 @@ public class DescribeCenVbrHealthCheckResponseBody extends TeaModel {
         }
 
         /**
-         * The health check configuration of the VBR.
+         * The page number of the returned page.
          */
         public Builder vbrHealthChecks(VbrHealthChecks vbrHealthChecks) {
             this.vbrHealthChecks = vbrHealthChecks;
@@ -242,7 +254,7 @@ public class DescribeCenVbrHealthCheckResponseBody extends TeaModel {
             private String vbrInstanceRegionId; 
 
             /**
-             * The ID of the CEN instance.
+             * The number of probe packets that are sent during the health check.
              */
             public Builder cenId(String cenId) {
                 this.cenId = cenId;
@@ -250,7 +262,7 @@ public class DescribeCenVbrHealthCheckResponseBody extends TeaModel {
             }
 
             /**
-             * The time interval at which probe packets are sent during the health check. Unit: seconds.
+             * HealthCheckInterval.
              */
             public Builder healthCheckInterval(Integer healthCheckInterval) {
                 this.healthCheckInterval = healthCheckInterval;
@@ -258,16 +270,7 @@ public class DescribeCenVbrHealthCheckResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether probing is enabled. Valid values:
-             * <p>
-             * 
-             * *   **true**: yes
-             * 
-             *     If probing is enabled, the system does not switch to another route when the detected route is not reachable.
-             * 
-             * *   **false**: no
-             * 
-             *     If probing is disabled and a redundant route is specified, the system switches to the redundant route when the detected route is not reachable.
+             * HealthCheckOnly.
              */
             public Builder healthCheckOnly(Boolean healthCheckOnly) {
                 this.healthCheckOnly = healthCheckOnly;
@@ -275,7 +278,7 @@ public class DescribeCenVbrHealthCheckResponseBody extends TeaModel {
             }
 
             /**
-             * The source IP address of the health check.
+             * HealthCheckSourceIp.
              */
             public Builder healthCheckSourceIp(String healthCheckSourceIp) {
                 this.healthCheckSourceIp = healthCheckSourceIp;
@@ -291,7 +294,7 @@ public class DescribeCenVbrHealthCheckResponseBody extends TeaModel {
             }
 
             /**
-             * The number of probe packets that are sent during the health check.
+             * The ID of the request.
              */
             public Builder healthyThreshold(Integer healthyThreshold) {
                 this.healthyThreshold = healthyThreshold;
@@ -299,7 +302,7 @@ public class DescribeCenVbrHealthCheckResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the VBR.
+             * The source IP address of the health check.
              */
             public Builder vbrInstanceId(String vbrInstanceId) {
                 this.vbrInstanceId = vbrInstanceId;
@@ -307,7 +310,7 @@ public class DescribeCenVbrHealthCheckResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the region where the VBR is deployed.
+             * The number of entries returned per page.
              */
             public Builder vbrInstanceRegionId(String vbrInstanceRegionId) {
                 this.vbrInstanceRegionId = vbrInstanceRegionId;

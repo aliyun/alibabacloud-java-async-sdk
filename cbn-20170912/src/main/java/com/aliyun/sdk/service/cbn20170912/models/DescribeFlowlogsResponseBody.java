@@ -98,7 +98,11 @@ public class DescribeFlowlogsResponseBody extends TeaModel {
         private String totalCount; 
 
         /**
-         * A list of flow logs.
+         * The status of the flow log. Valid values:
+         * <p>
+         * 
+         * *   **Active**: The flow log is enabled.
+         * *   **Inactive**: The flow log is disabled.
          */
         public Builder flowLogs(FlowLogs flowLogs) {
             this.flowLogs = flowLogs;
@@ -106,7 +110,7 @@ public class DescribeFlowlogsResponseBody extends TeaModel {
         }
 
         /**
-         * The page number of the returned page.
+         * The total number of entries returned.
          */
         public Builder pageNumber(String pageNumber) {
             this.pageNumber = pageNumber;
@@ -114,18 +118,10 @@ public class DescribeFlowlogsResponseBody extends TeaModel {
         }
 
         /**
-         * The number of entries returned per page.
+         * The ID of the request.
          */
         public Builder pageSize(String pageSize) {
             this.pageSize = pageSize;
-            return this;
-        }
-
-        /**
-         * The ID of the request.
-         */
-        public Builder requestId(String requestId) {
-            this.requestId = requestId;
             return this;
         }
 
@@ -136,13 +132,21 @@ public class DescribeFlowlogsResponseBody extends TeaModel {
          * *   **true**: yes
          * *   **false**: no
          */
+        public Builder requestId(String requestId) {
+            this.requestId = requestId;
+            return this;
+        }
+
+        /**
+         * The information about the flow log.
+         */
         public Builder success(String success) {
             this.success = success;
             return this;
         }
 
         /**
-         * The total number of entries returned.
+         * A list of flow logs.
          */
         public Builder totalCount(String totalCount) {
             this.totalCount = totalCount;
@@ -194,7 +198,7 @@ public class DescribeFlowlogsResponseBody extends TeaModel {
             private String value; 
 
             /**
-             * The tag key.
+             * Key.
              */
             public Builder key(String key) {
                 this.key = key;
@@ -202,7 +206,7 @@ public class DescribeFlowlogsResponseBody extends TeaModel {
             }
 
             /**
-             * The tag value.
+             * Value.
              */
             public Builder value(String value) {
                 this.value = value;
@@ -416,7 +420,7 @@ public class DescribeFlowlogsResponseBody extends TeaModel {
             private String transitRouterAttachmentId; 
 
             /**
-             * The ID of the CEN instance.
+             * The ID of the region where the flow log is deployed.
              */
             public Builder cenId(String cenId) {
                 this.cenId = cenId;
@@ -424,10 +428,7 @@ public class DescribeFlowlogsResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the flow log was created.
-             * <p>
-             * 
-             * The time follows the ISO 8601 standard in the YYYY-MM-DDThh:mm:ssZ format. The time is displayed in UTC.
+             * The description of the flow log.
              */
             public Builder creationTime(String creationTime) {
                 this.creationTime = creationTime;
@@ -435,7 +436,7 @@ public class DescribeFlowlogsResponseBody extends TeaModel {
             }
 
             /**
-             * The description of the flow log.
+             * The ID of the CEN instance.
              */
             public Builder description(String description) {
                 this.description = description;
@@ -443,7 +444,7 @@ public class DescribeFlowlogsResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the flow log.
+             * The time window for collecting log data. Unit: seconds. Valid values: **60** and **600**. Default value: **600**.
              */
             public Builder flowLogId(String flowLogId) {
                 this.flowLogId = flowLogId;
@@ -451,7 +452,7 @@ public class DescribeFlowlogsResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the flow log.
+             * The name of the project where the flow log is stored.
              */
             public Builder flowLogName(String flowLogName) {
                 this.flowLogName = flowLogName;
@@ -459,7 +460,7 @@ public class DescribeFlowlogsResponseBody extends TeaModel {
             }
 
             /**
-             * The time window for collecting log data. Unit: seconds. Valid values: **60** and **600**. Default value: **600**.
+             * The tag value.
              */
             public Builder interval(Long interval) {
                 this.interval = interval;
@@ -467,7 +468,7 @@ public class DescribeFlowlogsResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the Logstore where the flow log is stored.
+             * The ID of the flow log.
              */
             public Builder logStoreName(String logStoreName) {
                 this.logStoreName = logStoreName;
@@ -475,7 +476,7 @@ public class DescribeFlowlogsResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the project where the flow log is stored.
+             * The name of the Logstore where the flow log is stored.
              */
             public Builder projectName(String projectName) {
                 this.projectName = projectName;
@@ -483,7 +484,7 @@ public class DescribeFlowlogsResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the region where the flow log is deployed.
+             * The ID of the network instance connection.
              */
             public Builder regionId(String regionId) {
                 this.regionId = regionId;
@@ -491,11 +492,7 @@ public class DescribeFlowlogsResponseBody extends TeaModel {
             }
 
             /**
-             * The status of the flow log. Valid values:
-             * <p>
-             * 
-             * *   **Active**: The flow log is enabled.
-             * *   **Inactive**: The flow log is disabled.
+             * The name of the flow log.
              */
             public Builder status(String status) {
                 this.status = status;
@@ -503,7 +500,7 @@ public class DescribeFlowlogsResponseBody extends TeaModel {
             }
 
             /**
-             * A list of tags.
+             * Tags.
              */
             public Builder tags(Tags tags) {
                 this.tags = tags;
@@ -511,7 +508,7 @@ public class DescribeFlowlogsResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the network instance connection.
+             * A list of tags.
              */
             public Builder transitRouterAttachmentId(String transitRouterAttachmentId) {
                 this.transitRouterAttachmentId = transitRouterAttachmentId;

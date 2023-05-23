@@ -38,7 +38,7 @@ public class DisableTransitRouterRouteTablePropagationResponseBody extends TeaMo
         private String requestId; 
 
         /**
-         * The ID of the request.
+         * RequestId.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

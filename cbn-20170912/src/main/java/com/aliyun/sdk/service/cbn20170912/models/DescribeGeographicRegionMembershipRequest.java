@@ -139,14 +139,7 @@ public class DescribeGeographicRegionMembershipRequest extends Request {
         } 
 
         /**
-         * The ID of the area that you want to query. Valid values:
-         * <p>
-         * 
-         * *   **china**: the Chinese mainland
-         * *   **asia-pacific**: Asia Pacific
-         * *   **europe**: Europe
-         * *   **australia**: Australia
-         * *   **north-america**: North America
+         * GeographicRegionId.
          */
         public Builder geographicRegionId(String geographicRegionId) {
             this.putQueryParameter("GeographicRegionId", geographicRegionId);
@@ -173,7 +166,7 @@ public class DescribeGeographicRegionMembershipRequest extends Request {
         }
 
         /**
-         * The number of the page to return. Default value: **1**.
+         * PageNumber.
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -182,7 +175,7 @@ public class DescribeGeographicRegionMembershipRequest extends Request {
         }
 
         /**
-         * The number of entries to return per page. Default value: **10**. Valid values: **1** to **50**.
+         * PageSize.
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);

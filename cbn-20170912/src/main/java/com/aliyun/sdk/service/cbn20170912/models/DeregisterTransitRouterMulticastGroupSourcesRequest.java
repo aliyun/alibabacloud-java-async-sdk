@@ -168,14 +168,20 @@ public class DeregisterTransitRouterMulticastGroupSourcesRequest extends Request
         } 
 
         /**
-         * The client token that is used to ensure the idempotence of the request.
-         * <p>
-         * 
-         * You can use the client to generate the value, but you must make sure that it is unique among different requests. ClientToken can contain only ASCII characters.
+         * The ID of the request.
          */
         public Builder clientToken(String clientToken) {
             this.putQueryParameter("ClientToken", clientToken);
             this.clientToken = clientToken;
+            return this;
+        }
+
+        /**
+         * DryRun.
+         */
+        public Builder dryRun(Boolean dryRun) {
+            this.putQueryParameter("DryRun", dryRun);
+            this.dryRun = dryRun;
             return this;
         }
 
@@ -186,15 +192,6 @@ public class DeregisterTransitRouterMulticastGroupSourcesRequest extends Request
          * *   **true**: only prechecks the API request. The multicast source is not deleted. The system checks the required parameters, the request format, and the service limits. If the request fails to pass the precheck, an error message is returned. If the request passes the precheck, the `DryRunOperation` error code is returned.
          * *   **false** (default): sends the request. After the request passes the precheck, the multicast source is deleted.
          */
-        public Builder dryRun(Boolean dryRun) {
-            this.putQueryParameter("DryRun", dryRun);
-            this.dryRun = dryRun;
-            return this;
-        }
-
-        /**
-         * The IP address of the multicast group to which the multicast source belongs.
-         */
         public Builder groupIpAddress(String groupIpAddress) {
             this.putQueryParameter("GroupIpAddress", groupIpAddress);
             this.groupIpAddress = groupIpAddress;
@@ -202,10 +199,7 @@ public class DeregisterTransitRouterMulticastGroupSourcesRequest extends Request
         }
 
         /**
-         * The IDs of the multicast sources. You can create only one multicast source in a multicast group.
-         * <p>
-         * 
-         * >  This parameter is required.
+         * Deletes a multicast source.
          */
         public Builder networkInterfaceIds(java.util.List < String > networkInterfaceIds) {
             this.putQueryParameter("NetworkInterfaceIds", networkInterfaceIds);
@@ -250,7 +244,7 @@ public class DeregisterTransitRouterMulticastGroupSourcesRequest extends Request
         }
 
         /**
-         * The ID of the multicast group to which the multicast source belongs.
+         * The operation that you want to perform. Set the value to **DeregisterTransitRouterMulticastGroupSources**.
          */
         public Builder transitRouterMulticastDomainId(String transitRouterMulticastDomainId) {
             this.putQueryParameter("TransitRouterMulticastDomainId", transitRouterMulticastDomainId);

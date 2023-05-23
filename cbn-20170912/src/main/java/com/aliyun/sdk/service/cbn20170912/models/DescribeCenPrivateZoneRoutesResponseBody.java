@@ -142,7 +142,7 @@ public class DescribeCenPrivateZoneRoutesResponseBody extends TeaModel {
         }
 
         /**
-         * The configuration details of PrivateZone.
+         * The detailed configuration of PrivateZone.
          */
         public Builder privateZoneInfos(PrivateZoneInfos privateZoneInfos) {
             this.privateZoneInfos = privateZoneInfos;
@@ -250,7 +250,7 @@ public class DescribeCenPrivateZoneRoutesResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the virtual private cloud (VPC) that is associated with PrivateZone.
+             * The ID of the VPC that is associated with PrivateZone.
              */
             public Builder hostVpcId(String hostVpcId) {
                 this.hostVpcId = hostVpcId;

@@ -208,7 +208,7 @@ public class ListCenInterRegionTrafficQosQueuesRequest extends Request {
         } 
 
         /**
-         * The number of entries to return on each page. Valid values: 1 to 100. Default value: 20.
+         * MaxResults.
          */
         public Builder maxResults(Integer maxResults) {
             this.putQueryParameter("MaxResults", maxResults);
@@ -217,11 +217,7 @@ public class ListCenInterRegionTrafficQosQueuesRequest extends Request {
         }
 
         /**
-         * The token that determines the start point of the query.
-         * <p>
-         * 
-         * *   If **NextToken** was not returned in the previous query, it indicates that no additional results exist.
-         * *   If **NextToken** was returned in the previous query, specify the value to obtain the next set of results.
+         * NextToken.
          */
         public Builder nextToken(String nextToken) {
             this.putQueryParameter("NextToken", nextToken);
@@ -266,7 +262,7 @@ public class ListCenInterRegionTrafficQosQueuesRequest extends Request {
         }
 
         /**
-         * The ID of the QoS policy.
+         * TrafficQosPolicyId.
          */
         public Builder trafficQosPolicyId(String trafficQosPolicyId) {
             this.putQueryParameter("TrafficQosPolicyId", trafficQosPolicyId);
@@ -275,7 +271,7 @@ public class ListCenInterRegionTrafficQosQueuesRequest extends Request {
         }
 
         /**
-         * The description of the queue.
+         * TrafficQosQueueDescription.
          */
         public Builder trafficQosQueueDescription(String trafficQosQueueDescription) {
             this.putQueryParameter("TrafficQosQueueDescription", trafficQosQueueDescription);
@@ -284,7 +280,7 @@ public class ListCenInterRegionTrafficQosQueuesRequest extends Request {
         }
 
         /**
-         * The ID of the queue.
+         * TrafficQosQueueId.
          */
         public Builder trafficQosQueueId(String trafficQosQueueId) {
             this.putQueryParameter("TrafficQosQueueId", trafficQosQueueId);
@@ -293,7 +289,7 @@ public class ListCenInterRegionTrafficQosQueuesRequest extends Request {
         }
 
         /**
-         * The name of the queue.
+         * TrafficQosQueueName.
          */
         public Builder trafficQosQueueName(String trafficQosQueueName) {
             this.putQueryParameter("TrafficQosQueueName", trafficQosQueueName);
@@ -302,7 +298,7 @@ public class ListCenInterRegionTrafficQosQueuesRequest extends Request {
         }
 
         /**
-         * The ID of the inter-region connection.
+         * TransitRouterAttachmentId.
          */
         public Builder transitRouterAttachmentId(String transitRouterAttachmentId) {
             this.putQueryParameter("TransitRouterAttachmentId", transitRouterAttachmentId);
@@ -311,7 +307,7 @@ public class ListCenInterRegionTrafficQosQueuesRequest extends Request {
         }
 
         /**
-         * The ID of the transit router.
+         * TransitRouterId.
          */
         public Builder transitRouterId(String transitRouterId) {
             this.putQueryParameter("TransitRouterId", transitRouterId);

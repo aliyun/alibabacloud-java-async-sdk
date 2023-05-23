@@ -296,7 +296,13 @@ public class CreateCenBandwidthPackageRequest extends Request {
         }
 
         /**
-         * AutoRenew.
+         * Specifies whether to enable the auto-renewal feature. Valid values:
+         * <p>
+         * 
+         * *   **true**: enables auto-renewal.
+         * *   **false** (default): disables auto-renewal.
+         * 
+         * > Only subscription bandwidth plans support auto-renewal.
          */
         public Builder autoRenew(Boolean autoRenew) {
             this.putQueryParameter("AutoRenew", autoRenew);
@@ -305,7 +311,7 @@ public class CreateCenBandwidthPackageRequest extends Request {
         }
 
         /**
-         * AutoRenewDuration.
+         * The auto-renewal duration. Unit: months. Valid values: **0** to **2147483647**. Default value: **1**.
          */
         public Builder autoRenewDuration(Integer autoRenewDuration) {
             this.putQueryParameter("AutoRenewDuration", autoRenewDuration);
@@ -323,7 +329,7 @@ public class CreateCenBandwidthPackageRequest extends Request {
         }
 
         /**
-         * The billing method of the bandwidth plan. Valid value: **PREPAY**, which indicates that the billing method is pay-as-you-go.
+         * The billing method of the bandwidth plan. Set the value to **PREPAY**, which indicates that the billing method is pay-as-you-go.
          */
         public Builder bandwidthPackageChargeType(String bandwidthPackageChargeType) {
             this.putQueryParameter("BandwidthPackageChargeType", bandwidthPackageChargeType);
@@ -335,7 +341,7 @@ public class CreateCenBandwidthPackageRequest extends Request {
          * The client token that is used to ensure the idempotence of the request.
          * <p>
          * 
-         * You can use the client to generate a token, but you must make sure that it is unique among different requests. The token can contain only ASCII characters and cannot exceed 64 characters in length.
+         * You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters and cannot exceed 64 characters in length.
          */
         public Builder clientToken(String clientToken) {
             this.putQueryParameter("ClientToken", clientToken);
@@ -421,7 +427,7 @@ public class CreateCenBandwidthPackageRequest extends Request {
          * *   If **PricingCycle** is set to **Month**, set **Period** to a value from **1** to **3** or **6**.
          * *   If **PricingCycle** is set to **Year**, set **Period** to a value from **1** to **3**.
          * 
-         * >  This parameter is required when **BandwidthPackageChargeType** is set to **PREPAY**.
+         * > This parameter is required when **BandwidthPackageChargeType** is set to **PREPAY**.
          */
         public Builder period(Integer period) {
             this.putQueryParameter("Period", period);
@@ -461,7 +467,10 @@ public class CreateCenBandwidthPackageRequest extends Request {
         }
 
         /**
-         * The tags.
+         * The information about the tags.
+         * <p>
+         * 
+         * You can specify at most 20 tags in each call.
          */
         public Builder tag(java.util.List < Tag> tag) {
             this.putQueryParameter("Tag", tag);
@@ -515,10 +524,10 @@ public class CreateCenBandwidthPackageRequest extends Request {
             private String value; 
 
             /**
-             * The tag keys of the resources.
+             * The tag key.
              * <p>
              * 
-             * The tag keys cannot be an empty string. The tag keys can be up to 64 characters in length and cannot start with `acs:` or `aliyun`. It cannot contain `http://` or `https://`.
+             * The tag keys cannot be an empty string. The tag key can be up to 64 characters in length, and cannot start with `acs:` or `aliyun`. It cannot contain `http://` or `https://`.
              * 
              * You can specify at most 20 tag keys.
              */
@@ -528,12 +537,12 @@ public class CreateCenBandwidthPackageRequest extends Request {
             }
 
             /**
-             * The tag values of the resources.
+             * The tag value.
              * <p>
              * 
-             * The tag values can be 0 to 128 characters in length, and cannot start with `aliyun` or `acs:`. It cannot contain `http://` or `https://`.
+             * The tag value can be 0 to 128 characters in length, and cannot start with `aliyun` or `acs:`. It cannot contain `http://` or `https://`.
              * 
-             * Each tag key has a unique tag value. You can specify at most 20 tag values in each call.
+             * Each tag key must have a unique tag value. You can specify at most 20 tag values in each call.
              */
             public Builder value(String value) {
                 this.value = value;

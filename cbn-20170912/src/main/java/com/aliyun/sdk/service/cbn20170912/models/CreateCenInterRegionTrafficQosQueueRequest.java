@@ -197,12 +197,7 @@ public class CreateCenInterRegionTrafficQosQueueRequest extends Request {
         } 
 
         /**
-         * The client token that is used to ensure the idempotence of the request.
-         * <p>
-         * 
-         * You can use the client to generate the value, but you must make sure that it is unique among all requests. The token can contain only ASCII characters.
-         * 
-         * >  If you do not set this parameter, ClientToken is set to the value of RequestId. The value of RequestId may be different for each request.
+         * ClientToken.
          */
         public Builder clientToken(String clientToken) {
             this.putQueryParameter("ClientToken", clientToken);
@@ -211,11 +206,7 @@ public class CreateCenInterRegionTrafficQosQueueRequest extends Request {
         }
 
         /**
-         * Specifies whether to perform a dry run. Valid values:
-         * <p>
-         * 
-         * *   **true**: performs a dry run. The system checks the required parameters, the request format, and the service limits. If the request fails the dry run, an error message is returned. If the request passes the dry run, the `DryRunOperation` error code is returned.
-         * *   **false** (default): performs a dry run and sends the request.
+         * DryRun.
          */
         public Builder dryRun(Boolean dryRun) {
             this.putQueryParameter("DryRun", dryRun);
@@ -224,10 +215,7 @@ public class CreateCenInterRegionTrafficQosQueueRequest extends Request {
         }
 
         /**
-         * The differentiated services code point (DSCP) value that matches the current queue.
-         * <p>
-         * 
-         * You can specify at most 20 DSCP values for a queue in each call. Separate DSCP values with commas (,).
+         * Dscps.
          */
         public Builder dscps(java.util.List < Integer > dscps) {
             this.putQueryParameter("Dscps", dscps);
@@ -254,10 +242,7 @@ public class CreateCenInterRegionTrafficQosQueueRequest extends Request {
         }
 
         /**
-         * The description of the queue.
-         * <p>
-         * 
-         * The description must be 1 to 256 characters in length, and can contain letters, digits, underscores (\_), and hyphens (-). It must start with a letter.
+         * QosQueueDescription.
          */
         public Builder qosQueueDescription(String qosQueueDescription) {
             this.putQueryParameter("QosQueueDescription", qosQueueDescription);
@@ -266,10 +251,7 @@ public class CreateCenInterRegionTrafficQosQueueRequest extends Request {
         }
 
         /**
-         * The name of the queue.
-         * <p>
-         * 
-         * The name must be 2 to 128 characters in length, and can contain letters, digits, hyphens (-), and underscores (\_). It must start with a letter.
+         * QosQueueName.
          */
         public Builder qosQueueName(String qosQueueName) {
             this.putQueryParameter("QosQueueName", qosQueueName);
@@ -278,11 +260,7 @@ public class CreateCenInterRegionTrafficQosQueueRequest extends Request {
         }
 
         /**
-         * The maximum bandwidth of the queue,
-         * <p>
-         * 
-         * *   in percentage. For example, a value of 20 specifies that the queue can occupy at most 20% of the bandwidth allocated to the inter-region connection.
-         * *   The sum of percentage values specified for all queues that belong to the same inter-region connection cannot exceed 100%.
+         * RemainBandwidthPercent.
          */
         public Builder remainBandwidthPercent(String remainBandwidthPercent) {
             this.putQueryParameter("RemainBandwidthPercent", remainBandwidthPercent);
@@ -309,7 +287,7 @@ public class CreateCenInterRegionTrafficQosQueueRequest extends Request {
         }
 
         /**
-         * The ID of the QoS policy.
+         * TrafficQosPolicyId.
          */
         public Builder trafficQosPolicyId(String trafficQosPolicyId) {
             this.putQueryParameter("TrafficQosPolicyId", trafficQosPolicyId);

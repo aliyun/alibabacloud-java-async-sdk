@@ -50,7 +50,7 @@ public class CreateCenInterRegionTrafficQosQueueResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The ID of the queue.
+         * QosQueueId.
          */
         public Builder qosQueueId(String qosQueueId) {
             this.qosQueueId = qosQueueId;
@@ -58,7 +58,7 @@ public class CreateCenInterRegionTrafficQosQueueResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * RequestId.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

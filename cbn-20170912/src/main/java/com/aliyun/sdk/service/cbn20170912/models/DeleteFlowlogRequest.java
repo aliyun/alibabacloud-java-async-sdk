@@ -155,7 +155,7 @@ public class DeleteFlowlogRequest extends Request {
         } 
 
         /**
-         * The ID of the Cloud Enterprise Network (CEN) instance.
+         * CenId.
          */
         public Builder cenId(String cenId) {
             this.putQueryParameter("CenId", cenId);
@@ -164,12 +164,11 @@ public class DeleteFlowlogRequest extends Request {
         }
 
         /**
-         * The client token that is used to ensure the idempotence of the request.
+         * Indicates whether the call is successful.
          * <p>
          * 
-         * You can use the client to generate the value, but you must make sure that it is unique among all requests. The token can only contain ASCII characters.
-         * 
-         * >  If you do not set this parameter, ClientToken is set to the value of RequestId. The value of RequestId for each API request may be different.
+         * *   **true**: yes
+         * *   **false**: no
          */
         public Builder clientToken(String clientToken) {
             this.putQueryParameter("ClientToken", clientToken);
@@ -178,7 +177,7 @@ public class DeleteFlowlogRequest extends Request {
         }
 
         /**
-         * The ID of the flow log.
+         * FlowLogId.
          */
         public Builder flowLogId(String flowLogId) {
             this.putQueryParameter("FlowLogId", flowLogId);
@@ -205,10 +204,7 @@ public class DeleteFlowlogRequest extends Request {
         }
 
         /**
-         * The ID of the region where the flow log is deployed.
-         * <p>
-         * 
-         * You can call the [DescribeChildInstanceRegions](~~132080~~) operation to query the most recent region list.
+         * The ID of the request.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);

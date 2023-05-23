@@ -200,7 +200,7 @@ public class DeleteCenChildInstanceRouteEntryToCenRequest extends Request {
         } 
 
         /**
-         * The ID of the Cloud Enterprise Network (CEN) instance.
+         * The ID of the CEN instance.
          */
         public Builder cenId(String cenId) {
             this.putQueryParameter("CenId", cenId);
@@ -212,7 +212,7 @@ public class DeleteCenChildInstanceRouteEntryToCenRequest extends Request {
          * The ID of the Alibaba Cloud account to which the network instance belongs.
          * <p>
          * 
-         * > If the network instance belongs to another Alibaba Cloud account, this parameter is required.
+         * > If the network instance and the CEN instance belong to different Alibaba Cloud accounts, this parameter is required.
          */
         public Builder childInstanceAliUid(Long childInstanceAliUid) {
             this.putQueryParameter("ChildInstanceAliUid", childInstanceAliUid);
@@ -233,7 +233,7 @@ public class DeleteCenChildInstanceRouteEntryToCenRequest extends Request {
          * The ID of the region where the network instance is deployed.
          * <p>
          * 
-         * You can call the [DescribeRegions](~~36063~~) operation to query the most recent region list.
+         * You can call the [DescribeRegions](~~36063~~) operation to obtain the region ID.
          */
         public Builder childInstanceRegionId(String childInstanceRegionId) {
             this.putQueryParameter("ChildInstanceRegionId", childInstanceRegionId);
@@ -255,7 +255,7 @@ public class DeleteCenChildInstanceRouteEntryToCenRequest extends Request {
         }
 
         /**
-         * The destination CIDR block of the route entry.
+         * The destination CIDR block of the route.
          * <p>
          * 
          * Specify the value of this parameter in CIDR notation. Example: 192.168.10.0/24.

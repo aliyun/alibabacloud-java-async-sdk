@@ -208,7 +208,7 @@ public class ListTransitRouterMulticastDomainsRequest extends Request {
         } 
 
         /**
-         * The ID of the Cloud Enterprise Network (CEN) instance.
+         * The tags of the multicast domain.
          */
         public Builder cenId(String cenId) {
             this.putQueryParameter("CenId", cenId);
@@ -229,7 +229,7 @@ public class ListTransitRouterMulticastDomainsRequest extends Request {
         }
 
         /**
-         * The number of entries to return on each page. Default value: **20**.
+         * The ID of the multicast domain.
          */
         public Builder maxResults(Long maxResults) {
             this.putQueryParameter("MaxResults", maxResults);
@@ -238,11 +238,7 @@ public class ListTransitRouterMulticastDomainsRequest extends Request {
         }
 
         /**
-         * The token that is used for the next query. Valid values:
-         * <p>
-         * 
-         * *   If this is your first query or no next query is to be sent, ignore this parameter.
-         * *   If a next query is to be sent, set the parameter to the value of NextToken that is returned from the last call.
+         * The ID of the request.
          */
         public Builder nextToken(String nextToken) {
             this.putQueryParameter("NextToken", nextToken);
@@ -269,10 +265,7 @@ public class ListTransitRouterMulticastDomainsRequest extends Request {
         }
 
         /**
-         * The ID of the region where the transit router is deployed.
-         * <p>
-         * 
-         * You can call the [DescribeChildInstanceRegions](~~132080~~) operation to query the most recent region list.
+         * The ID of the transit router.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -299,7 +292,7 @@ public class ListTransitRouterMulticastDomainsRequest extends Request {
         }
 
         /**
-         * The tags of the resources.
+         * The information about the multicast domain.
          */
         public Builder tag(java.util.List < Tag> tag) {
             this.putQueryParameter("Tag", tag);
@@ -308,7 +301,7 @@ public class ListTransitRouterMulticastDomainsRequest extends Request {
         }
 
         /**
-         * The ID of the transit router.
+         * The description of the multicast domain.
          */
         public Builder transitRouterId(String transitRouterId) {
             this.putQueryParameter("TransitRouterId", transitRouterId);
@@ -371,12 +364,7 @@ public class ListTransitRouterMulticastDomainsRequest extends Request {
             private String value; 
 
             /**
-             * The tag keys of the resources. 
-             * <p>
-             * 
-             * The tag keys cannot be an empty string. The tag keys can be up to 64 characters in length and cannot start with `acs:` or `aliyun`. It cannot contain `http://` or `https://`.  
-             * 
-             * You can specify at most 20 tag keys.
+             * $.parameters[7].schema.description
              */
             public Builder key(String key) {
                 this.key = key;
@@ -384,12 +372,7 @@ public class ListTransitRouterMulticastDomainsRequest extends Request {
             }
 
             /**
-             * The tag values of the resources. 
-             * <p>
-             * 
-             * The tag values can be 0 to 128 characters in length, and cannot start with `aliyun` or `acs:`. It cannot contain `http://` or `https://`.  
-             * 
-             * Each tag key has a unique tag value. You can specify at most 20 tag values in each call.
+             * $.parameters[7].schema.example
              */
             public Builder value(String value) {
                 this.value = value;

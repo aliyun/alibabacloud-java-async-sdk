@@ -86,7 +86,7 @@ public class ListTransitRouterMulticastDomainVSwitchesResponseBody extends TeaMo
         private java.util.List < String > vSwitchIds; 
 
         /**
-         * The number of entries returned on each page.
+         * MaxResults.
          */
         public Builder maxResults(Integer maxResults) {
             this.maxResults = maxResults;
@@ -94,11 +94,7 @@ public class ListTransitRouterMulticastDomainVSwitchesResponseBody extends TeaMo
         }
 
         /**
-         * The token that determines the start point of the query. Valid values:
-         * <p>
-         * 
-         * *   If **NextToken** was not returned, it indicates that no additional results exist.
-         * *   If **NextToken** was returned in the previous query, specify the value to obtain the next set of results.
+         * NextToken.
          */
         public Builder nextToken(String nextToken) {
             this.nextToken = nextToken;
@@ -106,7 +102,7 @@ public class ListTransitRouterMulticastDomainVSwitchesResponseBody extends TeaMo
         }
 
         /**
-         * The ID of the request.
+         * RequestId.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -114,7 +110,7 @@ public class ListTransitRouterMulticastDomainVSwitchesResponseBody extends TeaMo
         }
 
         /**
-         * The total number of entries returned.
+         * TotalCount.
          */
         public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;
@@ -122,7 +118,7 @@ public class ListTransitRouterMulticastDomainVSwitchesResponseBody extends TeaMo
         }
 
         /**
-         * The vSwitch IDs.
+         * VSwitchIds.
          */
         public Builder vSwitchIds(java.util.List < String > vSwitchIds) {
             this.vSwitchIds = vSwitchIds;

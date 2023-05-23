@@ -139,10 +139,7 @@ public class DeleteTransitRouterMulticastDomainRequest extends Request {
         } 
 
         /**
-         * The client token that is used to ensure the idempotence of the request.
-         * <p>
-         * 
-         * You can use the client to generate the value, but you must make sure that it is unique among all requests. The token can only contain ASCII characters.
+         * ClientToken.
          */
         public Builder clientToken(String clientToken) {
             this.putQueryParameter("ClientToken", clientToken);
@@ -151,11 +148,7 @@ public class DeleteTransitRouterMulticastDomainRequest extends Request {
         }
 
         /**
-         * Specifies whether only to precheck the API request. Valid values:
-         * <p>
-         * 
-         * *   **true**: prechecks the request but does not delete the multicast domain. The system checks the required parameters, the request format, and the service limits. If the request fails the check, an error message is returned. If the request passes the check, the `DryRunOperation` error code is returned.
-         * *   **false** (default): sends the request. After the request passes the precheck, the multicast domain is deleted.
+         * DryRun.
          */
         public Builder dryRun(Boolean dryRun) {
             this.putQueryParameter("DryRun", dryRun);
@@ -200,7 +193,7 @@ public class DeleteTransitRouterMulticastDomainRequest extends Request {
         }
 
         /**
-         * The ID of the multicast domain.
+         * TransitRouterMulticastDomainId.
          */
         public Builder transitRouterMulticastDomainId(String transitRouterMulticastDomainId) {
             this.putQueryParameter("TransitRouterMulticastDomainId", transitRouterMulticastDomainId);
