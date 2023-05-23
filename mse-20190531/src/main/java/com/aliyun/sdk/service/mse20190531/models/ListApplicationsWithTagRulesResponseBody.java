@@ -12,9 +12,6 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ListApplicationsWithTagRulesResponseBody</p>
  */
 public class ListApplicationsWithTagRulesResponseBody extends TeaModel {
-    @NameInMap("Code")
-    private Integer code;
-
     @NameInMap("Data")
     private Data data;
 
@@ -31,7 +28,6 @@ public class ListApplicationsWithTagRulesResponseBody extends TeaModel {
     private Boolean success;
 
     private ListApplicationsWithTagRulesResponseBody(Builder builder) {
-        this.code = builder.code;
         this.data = builder.data;
         this.httpStatusCode = builder.httpStatusCode;
         this.message = builder.message;
@@ -45,13 +41,6 @@ public class ListApplicationsWithTagRulesResponseBody extends TeaModel {
 
     public static ListApplicationsWithTagRulesResponseBody create() {
         return builder().build();
-    }
-
-    /**
-     * @return code
-     */
-    public Integer getCode() {
-        return this.code;
     }
 
     /**
@@ -90,24 +79,11 @@ public class ListApplicationsWithTagRulesResponseBody extends TeaModel {
     }
 
     public static final class Builder {
-        private Integer code; 
         private Data data; 
         private Integer httpStatusCode; 
         private String message; 
         private String requestId; 
         private Boolean success; 
-
-        /**
-         * Indicates whether the alert rule is enabled. Valid value:
-         * <p>
-         * 
-         * *   `true`: enabled.
-         * *   `false`: disabled.
-         */
-        public Builder code(Integer code) {
-            this.code = code;
-            return this;
-        }
 
         /**
          * The name of the application.
