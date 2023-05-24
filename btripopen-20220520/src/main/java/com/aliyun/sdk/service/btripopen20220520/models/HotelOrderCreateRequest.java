@@ -29,7 +29,6 @@ public class HotelOrderCreateRequest extends Request {
 
     @Body
     @NameInMap("contract_email")
-    @Validation(required = true)
     private String contractEmail;
 
     @Body
