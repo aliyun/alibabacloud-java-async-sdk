@@ -86,7 +86,7 @@ public class DescribeAppsResponseBody extends TeaModel {
         private Integer totalCount; 
 
         /**
-         * The name of the app.
+         * The description of the app.
          */
         public Builder apps(Apps apps) {
             this.apps = apps;
@@ -94,7 +94,7 @@ public class DescribeAppsResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * The number of entries returned per page.
          */
         public Builder pageNumber(Integer pageNumber) {
             this.pageNumber = pageNumber;
@@ -102,7 +102,7 @@ public class DescribeAppsResponseBody extends TeaModel {
         }
 
         /**
-         * The total number of returned entries.
+         * The returned app information. It is an array consisting of AppItem data.
          */
         public Builder pageSize(Integer pageSize) {
             this.pageSize = pageSize;
@@ -110,7 +110,7 @@ public class DescribeAppsResponseBody extends TeaModel {
         }
 
         /**
-         * The number of entries returned per page.
+         * The total number of returned entries.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -118,7 +118,7 @@ public class DescribeAppsResponseBody extends TeaModel {
         }
 
         /**
-         * The returned app information. It is an array consisting of AppItem data.
+         * The name of the app.
          */
         public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;
@@ -182,10 +182,7 @@ public class DescribeAppsResponseBody extends TeaModel {
             private String description; 
 
             /**
-             * *   This API is intended for API providers.
-             * <p>
-             * *   API providers can use the app IDs or their Apsara Stack tenant accounts to query app information.
-             * *   Each provider can call this operation for a maximum of 200 times every day in a region.
+             * Queries the apps. App information is returned only to the app owner.
              */
             public Builder appId(Long appId) {
                 this.appId = appId;
@@ -193,7 +190,7 @@ public class DescribeAppsResponseBody extends TeaModel {
             }
 
             /**
-             * The description of the app.
+             * The ID of the app.
              */
             public Builder appName(String appName) {
                 this.appName = appName;
@@ -201,7 +198,10 @@ public class DescribeAppsResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the app.
+             * *   This API is intended for API providers.
+             * <p>
+             * *   API providers can use the app IDs or their Apsara Stack tenant accounts to query app information.
+             * *   Each provider can call this operation for a maximum of 200 times every day in a region.
              */
             public Builder description(String description) {
                 this.description = description;

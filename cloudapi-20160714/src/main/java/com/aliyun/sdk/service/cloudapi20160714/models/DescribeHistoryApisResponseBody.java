@@ -86,7 +86,7 @@ public class DescribeHistoryApisResponseBody extends TeaModel {
         private Integer totalCount; 
 
         /**
-         * The returned API information. It is an array consisting of ApiHisItem data.
+         * ApiHisItems.
          */
         public Builder apiHisItems(ApiHisItems apiHisItems) {
             this.apiHisItems = apiHisItems;
@@ -94,7 +94,7 @@ public class DescribeHistoryApisResponseBody extends TeaModel {
         }
 
         /**
-         * The page number of the returned page.
+         * PageNumber.
          */
         public Builder pageNumber(Integer pageNumber) {
             this.pageNumber = pageNumber;
@@ -102,7 +102,7 @@ public class DescribeHistoryApisResponseBody extends TeaModel {
         }
 
         /**
-         * The number of entries to return on each page. Maximum value: 50. Default value: 10.
+         * PageSize.
          */
         public Builder pageSize(Integer pageSize) {
             this.pageSize = pageSize;
@@ -110,7 +110,7 @@ public class DescribeHistoryApisResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * RequestId.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -118,7 +118,7 @@ public class DescribeHistoryApisResponseBody extends TeaModel {
         }
 
         /**
-         * The total number of returned entries.
+         * TotalCount.
          */
         public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;
@@ -266,7 +266,7 @@ public class DescribeHistoryApisResponseBody extends TeaModel {
             private String status; 
 
             /**
-             * The ID of the API.
+             * ApiId.
              */
             public Builder apiId(String apiId) {
                 this.apiId = apiId;
@@ -274,7 +274,7 @@ public class DescribeHistoryApisResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the API.
+             * ApiName.
              */
             public Builder apiName(String apiName) {
                 this.apiName = apiName;
@@ -282,7 +282,7 @@ public class DescribeHistoryApisResponseBody extends TeaModel {
             }
 
             /**
-             * The publising time (UTC) of the API.
+             * DeployedTime.
              */
             public Builder deployedTime(String deployedTime) {
                 this.deployedTime = deployedTime;
@@ -290,7 +290,7 @@ public class DescribeHistoryApisResponseBody extends TeaModel {
             }
 
             /**
-             * The description of the API.
+             * Description.
              */
             public Builder description(String description) {
                 this.description = description;
@@ -298,7 +298,7 @@ public class DescribeHistoryApisResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the API group.
+             * GroupId.
              */
             public Builder groupId(String groupId) {
                 this.groupId = groupId;
@@ -306,7 +306,7 @@ public class DescribeHistoryApisResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the group to which the API belongs.
+             * GroupName.
              */
             public Builder groupName(String groupName) {
                 this.groupName = groupName;
@@ -314,7 +314,7 @@ public class DescribeHistoryApisResponseBody extends TeaModel {
             }
 
             /**
-             * The historical version of the API definition.
+             * HistoryVersion.
              */
             public Builder historyVersion(String historyVersion) {
                 this.historyVersion = historyVersion;
@@ -322,7 +322,7 @@ public class DescribeHistoryApisResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the region.
+             * RegionId.
              */
             public Builder regionId(String regionId) {
                 this.regionId = regionId;
@@ -330,11 +330,7 @@ public class DescribeHistoryApisResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the runtime environment. Valid values:
-             * <p>
-             * 
-             * *   **RELEASE**
-             * *   **TEST.
+             * StageName.
              */
             public Builder stageName(String stageName) {
                 this.stageName = stageName;
@@ -342,7 +338,7 @@ public class DescribeHistoryApisResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether an API version is effective. Valid values: ONLINE and OFFLINE.
+             * Status.
              */
             public Builder status(String status) {
                 this.status = status;

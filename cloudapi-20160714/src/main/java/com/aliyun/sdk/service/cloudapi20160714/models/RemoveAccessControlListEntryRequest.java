@@ -83,13 +83,7 @@ public class RemoveAccessControlListEntryRequest extends Request {
         } 
 
         /**
-         * Sets the access control list (ACL).
-         * <p>
-         * 
-         * *   entry: the IP addresses or CIDR blocks that you want to add to the ACL. Separate multiple IP addresses or CIDR blocks with commas (,).
-         * *   comment: the description of the ACL.
-         * 
-         * > If the ACL is associated with a listener, you cannot remove all IP addresses from the ACL.
+         * AclEntrys.
          */
         public Builder aclEntrys(String aclEntrys) {
             this.putQueryParameter("AclEntrys", aclEntrys);
@@ -98,7 +92,7 @@ public class RemoveAccessControlListEntryRequest extends Request {
         }
 
         /**
-         * The ID of the access control policy.
+         * AclId.
          */
         public Builder aclId(String aclId) {
             this.putQueryParameter("AclId", aclId);

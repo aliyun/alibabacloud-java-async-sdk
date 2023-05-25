@@ -139,7 +139,7 @@ public class CreateAppRequest extends Request {
         } 
 
         /**
-         * The AppCode of the app.
+         * AppCode.
          */
         public Builder appCode(String appCode) {
             this.putQueryParameter("AppCode", appCode);
@@ -148,7 +148,7 @@ public class CreateAppRequest extends Request {
         }
 
         /**
-         * The app key that is used for calling an API.
+         * AppKey.
          */
         public Builder appKey(String appKey) {
             this.putQueryParameter("AppKey", appKey);
@@ -157,7 +157,7 @@ public class CreateAppRequest extends Request {
         }
 
         /**
-         * The name of the app. The name must be 4 to 26 characters in length. It must start with a letter and can contain letters, digits, and underscores (\_).
+         * AppName.
          */
         public Builder appName(String appName) {
             this.putQueryParameter("AppName", appName);
@@ -166,7 +166,7 @@ public class CreateAppRequest extends Request {
         }
 
         /**
-         * The password of the app.
+         * AppSecret.
          */
         public Builder appSecret(String appSecret) {
             this.putQueryParameter("AppSecret", appSecret);
@@ -175,7 +175,7 @@ public class CreateAppRequest extends Request {
         }
 
         /**
-         * The description of the app. The description can contain a maximum of 180 characters in length.
+         * Description.
          */
         public Builder description(String description) {
             this.putQueryParameter("Description", description);
@@ -193,7 +193,7 @@ public class CreateAppRequest extends Request {
         }
 
         /**
-         * The tag of objects that match the rule. You can specify multiple tags.
+         * Tag.
          */
         public Builder tag(java.util.List < Tag> tag) {
             this.putQueryParameter("Tag", tag);
@@ -247,10 +247,7 @@ public class CreateAppRequest extends Request {
             private String value; 
 
             /**
-             * The key of the tag.
-             * <p>
-             * 
-             * N can be an integer from 1 to 20.``
+             * Key.
              */
             public Builder key(String key) {
                 this.key = key;
@@ -258,10 +255,7 @@ public class CreateAppRequest extends Request {
             }
 
             /**
-             * The value of the tag.
-             * <p>
-             * 
-             * N can be an integer from 1 to 20.`` If the parameter has a value, you must specify a value for the tag key with the same N as tag.N.Key. Otherwise, an error is reported.
+             * Value.
              */
             public Builder value(String value) {
                 this.value = value;

@@ -62,7 +62,7 @@ public class ModifySignatureResponseBody extends TeaModel {
         private String signatureName; 
 
         /**
-         * The ID of the request.
+         * The name of the key.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -70,7 +70,11 @@ public class ModifySignatureResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the key.
+         * *   This API is intended for API providers.
+         * <p>
+         * *   This API operation modifies the name, Key value, and Secret value of an existing signature key.
+         * *   Note that the modification takes effect immediately. If the key has been bound to an API, you must adjust the backend signature verification based on the new key accordingly.
+         * *   The QPS limit on this operation is 50 per user.
          */
         public Builder signatureId(String signatureId) {
             this.signatureId = signatureId;
@@ -78,7 +82,7 @@ public class ModifySignatureResponseBody extends TeaModel {
         }
 
         /**
-         * The name of the key.
+         * Modifies a backend signature key.
          */
         public Builder signatureName(String signatureName) {
             this.signatureName = signatureName;

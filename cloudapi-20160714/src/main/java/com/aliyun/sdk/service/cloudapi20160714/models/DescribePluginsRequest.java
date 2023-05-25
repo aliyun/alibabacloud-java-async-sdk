@@ -139,7 +139,7 @@ public class DescribePluginsRequest extends Request {
         } 
 
         /**
-         * The number of the page to return. Pages start from page 1. Default value: 1.
+         * PageNumber.
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -148,7 +148,7 @@ public class DescribePluginsRequest extends Request {
         }
 
         /**
-         * The number of entries to return on each page. Maximum value: 100. Default value: 10.
+         * PageSize.
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -157,7 +157,7 @@ public class DescribePluginsRequest extends Request {
         }
 
         /**
-         * The ID of the plug-in.
+         * PluginId.
          */
         public Builder pluginId(String pluginId) {
             this.putQueryParameter("PluginId", pluginId);
@@ -166,7 +166,7 @@ public class DescribePluginsRequest extends Request {
         }
 
         /**
-         * The name of the plug-in.
+         * PluginName.
          */
         public Builder pluginName(String pluginName) {
             this.putQueryParameter("PluginName", pluginName);
@@ -175,7 +175,7 @@ public class DescribePluginsRequest extends Request {
         }
 
         /**
-         * The business type of the plug-in.
+         * PluginType.
          */
         public Builder pluginType(String pluginType) {
             this.putQueryParameter("PluginType", pluginType);
@@ -193,7 +193,7 @@ public class DescribePluginsRequest extends Request {
         }
 
         /**
-         * The tag of objects that match the lifecycle rule. You can specify multiple tags.
+         * Tag.
          */
         public Builder tag(java.util.List < Tag> tag) {
             this.putQueryParameter("Tag", tag);
@@ -247,10 +247,7 @@ public class DescribePluginsRequest extends Request {
             private String value; 
 
             /**
-             * The key of the tag.
-             * <p>
-             * 
-             * N can be an integer from 1 to 20.``
+             * Key.
              */
             public Builder key(String key) {
                 this.key = key;
@@ -258,10 +255,7 @@ public class DescribePluginsRequest extends Request {
             }
 
             /**
-             * The value of the tag.
-             * <p>
-             * 
-             * N can be an integer from 1 to 20.``
+             * Value.
              */
             public Builder value(String value) {
                 this.value = value;

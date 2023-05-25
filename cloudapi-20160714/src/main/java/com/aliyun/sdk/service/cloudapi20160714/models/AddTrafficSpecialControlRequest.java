@@ -123,7 +123,7 @@ public class AddTrafficSpecialControlRequest extends Request {
         }
 
         /**
-         * The ID of the app or Alibaba Cloud account. Specify this parameter based on the value of the **SpecialType** parameter. You can view your account ID on the [Account Management](https://account.console.aliyun.com/?spm=a2c4g.11186623.2.15.3f053654YpMPwo#/secure) page.
+         * The ID of the request.
          */
         public Builder specialKey(String specialKey) {
             this.putQueryParameter("SpecialKey", specialKey);
@@ -132,11 +132,7 @@ public class AddTrafficSpecialControlRequest extends Request {
         }
 
         /**
-         * The type of the special throttling policy. Valid values:
-         * <p>
-         * 
-         * *   **APP**
-         * *   **USER**
+         * The special throttling value.
          */
         public Builder specialType(String specialType) {
             this.putQueryParameter("SpecialType", specialType);
@@ -145,7 +141,7 @@ public class AddTrafficSpecialControlRequest extends Request {
         }
 
         /**
-         * The ID of the specified throttling policy.
+         * The ID of the app or Alibaba Cloud account. Specify this parameter based on the value of the **SpecialType** parameter. You can view your account ID on the [Account Management](https://account.console.aliyun.com/?spm=a2c4g.11186623.2.15.3f053654YpMPwo#/secure) page.
          */
         public Builder trafficControlId(String trafficControlId) {
             this.putQueryParameter("TrafficControlId", trafficControlId);
@@ -154,7 +150,10 @@ public class AddTrafficSpecialControlRequest extends Request {
         }
 
         /**
-         * The special throttling value.
+         * *   This API is intended for API providers.
+         * <p>
+         * *   If the input SpecialKey already exists, the previous configuration is overwritten. Use caution when calling this operation.
+         * *   Special throttling policies must be added to an existing throttling policy, and can take effect on all the APIs to which the throttling policy is bound.
          */
         public Builder trafficValue(Integer trafficValue) {
             this.putQueryParameter("TrafficValue", trafficValue);

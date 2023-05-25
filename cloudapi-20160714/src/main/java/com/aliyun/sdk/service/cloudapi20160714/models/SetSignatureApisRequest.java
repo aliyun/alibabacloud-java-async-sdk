@@ -114,12 +114,7 @@ public class SetSignatureApisRequest extends Request {
         } 
 
         /**
-         * The name of the runtime environment. Valid values:
-         * <p>
-         * 
-         * *   **RELEASE**
-         * *   **PRE**
-         * *   **TEST**
+         * The ID of the request.
          */
         public Builder apiIds(String apiIds) {
             this.putQueryParameter("ApiIds", apiIds);
@@ -128,7 +123,12 @@ public class SetSignatureApisRequest extends Request {
         }
 
         /**
-         * The API ID for the specified operation. Separate multiple API IDs with commas (,). A maximum of 100 API IDs can be entered.
+         * The name of the runtime environment. Valid values:
+         * <p>
+         * 
+         * *   **RELEASE**
+         * *   **PRE**
+         * *   **TEST**
          */
         public Builder groupId(String groupId) {
             this.putQueryParameter("GroupId", groupId);
@@ -146,7 +146,7 @@ public class SetSignatureApisRequest extends Request {
         }
 
         /**
-         * The ID of the API group to which the API that you want to manage belongs.
+         * The API ID for the specified operation. Separate multiple API IDs with commas (,). A maximum of 100 API IDs can be entered.
          */
         public Builder signatureId(String signatureId) {
             this.putQueryParameter("SignatureId", signatureId);
@@ -155,7 +155,9 @@ public class SetSignatureApisRequest extends Request {
         }
 
         /**
-         * The ID of the request.
+         * *   This API is intended for API providers.
+         * <p>
+         * *   This operation allows you to bind a signature key to an API. You can bind signature keys for up to 100 APIs at a time.
          */
         public Builder stageName(String stageName) {
             this.putQueryParameter("StageName", stageName);

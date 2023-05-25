@@ -113,11 +113,7 @@ public class RemoveTrafficControlApisRequest extends Request {
         } 
 
         /**
-         * The IDs of the APIs from which you want to unbind a specified throttling policy.
-         * <p>
-         * 
-         * *   If this parameter is not specified, the throttling policy is unbound from all the APIs in the specified environment of the API group.
-         * *   Separate multiple API IDs with commas (,). A maximum of 100 API IDs can be entered.
+         * The ID of the request.
          */
         public Builder apiIds(String apiIds) {
             this.putQueryParameter("ApiIds", apiIds);
@@ -126,7 +122,11 @@ public class RemoveTrafficControlApisRequest extends Request {
         }
 
         /**
-         * The ID of the API group containing the APIs from which you want to unbind a specified throttling policy.
+         * The name of the runtime environment. Valid values:
+         * <p>
+         * 
+         * *   **RELEASE**
+         * *   **TEST**
          */
         public Builder groupId(String groupId) {
             this.putQueryParameter("GroupId", groupId);
@@ -144,11 +144,9 @@ public class RemoveTrafficControlApisRequest extends Request {
         }
 
         /**
-         * The name of the runtime environment. Valid values:
+         * *   This API is intended for API providers.
          * <p>
-         * 
-         * *   **RELEASE**
-         * *   **TEST**
+         * *   This API allows you to unbind a specified throttling policy from up to 100 APIs at a time.
          */
         public Builder stageName(String stageName) {
             this.putQueryParameter("StageName", stageName);
@@ -157,7 +155,11 @@ public class RemoveTrafficControlApisRequest extends Request {
         }
 
         /**
-         * The ID of the throttling policy that you want to unbind from APIs.
+         * The IDs of the APIs from which you want to unbind a specified throttling policy.
+         * <p>
+         * 
+         * *   If this parameter is not specified, the throttling policy is unbound from all the APIs in the specified environment of the API group.
+         * *   Separate multiple API IDs with commas (,). A maximum of 100 API IDs can be entered.
          */
         public Builder trafficControlId(String trafficControlId) {
             this.putQueryParameter("TrafficControlId", trafficControlId);

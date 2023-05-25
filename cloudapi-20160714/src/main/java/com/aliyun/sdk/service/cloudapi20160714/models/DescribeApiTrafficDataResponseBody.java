@@ -62,7 +62,7 @@ public class DescribeApiTrafficDataResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The value corresponding to the monitoring metric.
+         * CallDownloads.
          */
         public Builder callDownloads(CallDownloads callDownloads) {
             this.callDownloads = callDownloads;
@@ -70,7 +70,7 @@ public class DescribeApiTrafficDataResponseBody extends TeaModel {
         }
 
         /**
-         * The value corresponding to the monitoring metric.
+         * CallUploads.
          */
         public Builder callUploads(CallUploads callUploads) {
             this.callUploads = callUploads;
@@ -78,7 +78,7 @@ public class DescribeApiTrafficDataResponseBody extends TeaModel {
         }
 
         /**
-         * The returned uplink traffic data of API calls. It is an array consisting of MonitorItem data.
+         * RequestId.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -130,7 +130,7 @@ public class DescribeApiTrafficDataResponseBody extends TeaModel {
             private String itemValue; 
 
             /**
-             * auditing
+             * ItemTime.
              */
             public Builder itemTime(String itemTime) {
                 this.itemTime = itemTime;
@@ -138,7 +138,7 @@ public class DescribeApiTrafficDataResponseBody extends TeaModel {
             }
 
             /**
-             * The time of the monitoring metric. The time format follows the ISO 8601 standard and UTC time is used. Format: YYYY-MM-DDThh:mm:ssZ
+             * ItemValue.
              */
             public Builder itemValue(String itemValue) {
                 this.itemValue = itemValue;
@@ -232,7 +232,7 @@ public class DescribeApiTrafficDataResponseBody extends TeaModel {
             private String itemValue; 
 
             /**
-             * The returned downlink traffic data of API calls. It is an array consisting of MonitorItem data.
+             * ItemTime.
              */
             public Builder itemTime(String itemTime) {
                 this.itemTime = itemTime;
@@ -240,7 +240,7 @@ public class DescribeApiTrafficDataResponseBody extends TeaModel {
             }
 
             /**
-             * The time of the monitoring metric. The time format follows the ISO 8601 standard and UTC time is used. Format: YYYY-MM-DDThh:mm:ssZ
+             * ItemValue.
              */
             public Builder itemValue(String itemValue) {
                 this.itemValue = itemValue;

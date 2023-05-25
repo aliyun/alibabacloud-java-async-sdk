@@ -38,7 +38,7 @@ public class DeleteIpControlResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The ID of the request.
+         * Deletes an access control list (ACL).
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

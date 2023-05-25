@@ -50,7 +50,7 @@ public class DescribeTrafficControlsByApiResponseBody extends TeaModel {
         private TrafficControlItems trafficControlItems; 
 
         /**
-         * The ID of the request.
+         * The ID of the throttling policy.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -58,7 +58,7 @@ public class DescribeTrafficControlsByApiResponseBody extends TeaModel {
         }
 
         /**
-         * The returned throttling policy information. It is an array consisting of TrafficControlItem data.
+         * The binding time of the policy.
          */
         public Builder trafficControlItems(TrafficControlItems trafficControlItems) {
             this.trafficControlItems = trafficControlItems;
@@ -122,7 +122,7 @@ public class DescribeTrafficControlsByApiResponseBody extends TeaModel {
             private String trafficControlItemName; 
 
             /**
-             * The binding time of the policy.
+             * *   This API is intended for API providers.
              */
             public Builder boundTime(String boundTime) {
                 this.boundTime = boundTime;
@@ -130,7 +130,7 @@ public class DescribeTrafficControlsByApiResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the throttling policy.
+             * The name of the throttling policy.
              */
             public Builder trafficControlItemId(String trafficControlItemId) {
                 this.trafficControlItemId = trafficControlItemId;
@@ -138,7 +138,7 @@ public class DescribeTrafficControlsByApiResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the throttling policy.
+             * Queries the throttling policy that is bound to a specific API.
              */
             public Builder trafficControlItemName(String trafficControlItemName) {
                 this.trafficControlItemName = trafficControlItemName;

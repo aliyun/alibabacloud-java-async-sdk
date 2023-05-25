@@ -50,7 +50,7 @@ public class BatchAbolishApisResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The ID of the request.
+         * OperationId.
          */
         public Builder operationId(String operationId) {
             this.operationId = operationId;
@@ -58,7 +58,7 @@ public class BatchAbolishApisResponseBody extends TeaModel {
         }
 
         /**
-         * auditing
+         * RequestId.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

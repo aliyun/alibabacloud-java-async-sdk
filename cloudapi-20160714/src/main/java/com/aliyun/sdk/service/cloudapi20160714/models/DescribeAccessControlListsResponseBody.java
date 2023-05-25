@@ -86,7 +86,7 @@ public class DescribeAccessControlListsResponseBody extends TeaModel {
         private Integer totalCount; 
 
         /**
-         * The ACLs.
+         * Acls.
          */
         public Builder acls(Acls acls) {
             this.acls = acls;
@@ -94,7 +94,7 @@ public class DescribeAccessControlListsResponseBody extends TeaModel {
         }
 
         /**
-         * The page number of the current page.
+         * PageNumber.
          */
         public Builder pageNumber(Integer pageNumber) {
             this.pageNumber = pageNumber;
@@ -102,7 +102,7 @@ public class DescribeAccessControlListsResponseBody extends TeaModel {
         }
 
         /**
-         * The number of entries returned on each page.
+         * PageSize.
          */
         public Builder pageSize(Integer pageSize) {
             this.pageSize = pageSize;
@@ -110,7 +110,7 @@ public class DescribeAccessControlListsResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * RequestId.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -118,7 +118,7 @@ public class DescribeAccessControlListsResponseBody extends TeaModel {
         }
 
         /**
-         * The total number of entries returned.
+         * TotalCount.
          */
         public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;
@@ -182,7 +182,7 @@ public class DescribeAccessControlListsResponseBody extends TeaModel {
             private String addressIPVersion; 
 
             /**
-             * The ID of the access control policy.
+             * AclId.
              */
             public Builder aclId(String aclId) {
                 this.aclId = aclId;
@@ -190,7 +190,7 @@ public class DescribeAccessControlListsResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the access control policy.
+             * AclName.
              */
             public Builder aclName(String aclName) {
                 this.aclName = aclName;

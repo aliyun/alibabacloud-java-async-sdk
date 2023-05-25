@@ -69,7 +69,7 @@ public class DescribeUpdateBackendTaskRequest extends Request {
         } 
 
         /**
-         * The ID of the task.
+         * OperationUid.
          */
         public Builder operationUid(String operationUid) {
             this.putQueryParameter("OperationUid", operationUid);

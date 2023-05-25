@@ -62,7 +62,7 @@ public class CreatePluginResponseBody extends TeaModel {
         private Boolean tagStatus; 
 
         /**
-         * The ID of the plug-in.
+         * PluginId.
          */
         public Builder pluginId(String pluginId) {
             this.pluginId = pluginId;
@@ -70,7 +70,7 @@ public class CreatePluginResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * RequestId.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -78,7 +78,7 @@ public class CreatePluginResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether the plug-in is successfully marked.
+         * TagStatus.
          */
         public Builder tagStatus(Boolean tagStatus) {
             this.tagStatus = tagStatus;

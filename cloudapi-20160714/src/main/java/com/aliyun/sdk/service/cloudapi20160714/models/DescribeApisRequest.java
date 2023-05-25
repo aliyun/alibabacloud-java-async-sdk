@@ -236,7 +236,7 @@ public class DescribeApisRequest extends Request {
         } 
 
         /**
-         * The ID of the API.
+         * The API ID.
          */
         public Builder apiId(String apiId) {
             this.putQueryParameter("ApiId", apiId);
@@ -245,7 +245,7 @@ public class DescribeApisRequest extends Request {
         }
 
         /**
-         * ApiMethod.
+         * The HTTP method of the API request.
          */
         public Builder apiMethod(String apiMethod) {
             this.putQueryParameter("ApiMethod", apiMethod);
@@ -254,7 +254,7 @@ public class DescribeApisRequest extends Request {
         }
 
         /**
-         * The name of the API operation. The name is used for fuzzy match.
+         * The API name. The name is used for fuzzy match.
          */
         public Builder apiName(String apiName) {
             this.putQueryParameter("ApiName", apiName);
@@ -263,7 +263,7 @@ public class DescribeApisRequest extends Request {
         }
 
         /**
-         * ApiPath.
+         * The request path of the API.
          */
         public Builder apiPath(String apiPath) {
             this.putQueryParameter("ApiPath", apiPath);
@@ -272,7 +272,7 @@ public class DescribeApisRequest extends Request {
         }
 
         /**
-         * The ID of the category.
+         * The category ID.
          */
         public Builder catalogId(String catalogId) {
             this.putQueryParameter("CatalogId", catalogId);
@@ -290,7 +290,7 @@ public class DescribeApisRequest extends Request {
         }
 
         /**
-         * The ID of the API group.
+         * The API group ID.
          */
         public Builder groupId(String groupId) {
             this.putQueryParameter("GroupId", groupId);
@@ -308,7 +308,7 @@ public class DescribeApisRequest extends Request {
         }
 
         /**
-         * The number of entries to return on each page. Maximum value: 100. Default value: 10.
+         * The number of entries to return on each page. Default value: 10.
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -335,7 +335,7 @@ public class DescribeApisRequest extends Request {
         }
 
         /**
-         * The tag of objects that match the rule. You can specify multiple tags.
+         * The tags of objects that match the rule.
          */
         public Builder tag(java.util.List < Tag> tag) {
             this.putQueryParameter("Tag", tag);
@@ -344,7 +344,7 @@ public class DescribeApisRequest extends Request {
         }
 
         /**
-         * UnDeployed.
+         * Specifies whether to filter unpublished APIs.
          */
         public Builder unDeployed(Boolean unDeployed) {
             this.putQueryParameter("UnDeployed", unDeployed);
@@ -353,11 +353,11 @@ public class DescribeApisRequest extends Request {
         }
 
         /**
-         * Specifies whether to make the API public. Valid values:
+         * Specifies whether the API is public. Valid values:
          * <p>
          * 
-         * *   **PUBLIC: Make the API public. If you set this parameter to PUBLIC, this API is displayed on the APIs page for all users after the API is published to the production environment.**
-         * *   **PRIVATE: Make the API private. Private APIs are not displayed in the Alibaba Cloud Marketplace after the API group to which they belong is made available.
+         * *   **PUBLIC**: The API is public. If you publish the definition of a public API to the production environment, the definition is displayed on the APIs page for all users.
+         * *   **PRIVATE**: The API is private. If you publish an API group that contains a private API in Alibaba Cloud Marketplace, the API is not displayed in Alibaba Cloud Marketplace.
          */
         public Builder visibility(String visibility) {
             this.putQueryParameter("Visibility", visibility);
@@ -419,7 +419,7 @@ public class DescribeApisRequest extends Request {
             }
 
             /**
-             * The value of the tag.
+             * The tag value.
              */
             public Builder value(String value) {
                 this.value = value;

@@ -62,7 +62,7 @@ public class CreateAppResponseBody extends TeaModel {
         private Boolean tagStatus; 
 
         /**
-         * The unique ID of the application.
+         * AppId.
          */
         public Builder appId(Long appId) {
             this.appId = appId;
@@ -70,7 +70,7 @@ public class CreateAppResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * RequestId.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -78,7 +78,7 @@ public class CreateAppResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether the tag exists. If the value is **true**, the tag exists. If the value is **false**, the tag does not exist.
+         * TagStatus.
          */
         public Builder tagStatus(Boolean tagStatus) {
             this.tagStatus = tagStatus;

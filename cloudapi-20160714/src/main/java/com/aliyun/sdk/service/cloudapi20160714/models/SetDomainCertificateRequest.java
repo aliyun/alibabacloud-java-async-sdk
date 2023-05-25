@@ -155,7 +155,7 @@ public class SetDomainCertificateRequest extends Request {
         } 
 
         /**
-         * Content of the CA certificate
+         * CaCertificateBody.
          */
         public Builder caCertificateBody(String caCertificateBody) {
             this.putQueryParameter("CaCertificateBody", caCertificateBody);
@@ -164,7 +164,7 @@ public class SetDomainCertificateRequest extends Request {
         }
 
         /**
-         * For more information, see the following request examples
+         * CertificateBody.
          */
         public Builder certificateBody(String certificateBody) {
             this.putQueryParameter("CertificateBody", certificateBody);
@@ -173,7 +173,7 @@ public class SetDomainCertificateRequest extends Request {
         }
 
         /**
-         * The content of the certificate.
+         * CertificateName.
          */
         public Builder certificateName(String certificateName) {
             this.putQueryParameter("CertificateName", certificateName);
@@ -182,7 +182,7 @@ public class SetDomainCertificateRequest extends Request {
         }
 
         /**
-         * For more information, see the following request examples
+         * CertificatePrivateKey.
          */
         public Builder certificatePrivateKey(String certificatePrivateKey) {
             this.putQueryParameter("CertificatePrivateKey", certificatePrivateKey);
@@ -191,7 +191,7 @@ public class SetDomainCertificateRequest extends Request {
         }
 
         /**
-         * The name of the SSL certificate.
+         * DomainName.
          */
         public Builder domainName(String domainName) {
             this.putQueryParameter("DomainName", domainName);
@@ -200,7 +200,7 @@ public class SetDomainCertificateRequest extends Request {
         }
 
         /**
-         * The custom domain name.
+         * GroupId.
          */
         public Builder groupId(String groupId) {
             this.putQueryParameter("GroupId", groupId);
@@ -218,7 +218,7 @@ public class SetDomainCertificateRequest extends Request {
         }
 
         /**
-         * The ID of the request.
+         * SslVerifyDepth.
          */
         public Builder sslVerifyDepth(String sslVerifyDepth) {
             this.putQueryParameter("SslVerifyDepth", sslVerifyDepth);

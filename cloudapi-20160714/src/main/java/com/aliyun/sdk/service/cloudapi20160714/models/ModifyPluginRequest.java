@@ -125,7 +125,7 @@ public class ModifyPluginRequest extends Request {
         } 
 
         /**
-         * The description of the plug-in. The description can contain a maximum of 200 characters in length.
+         * Description.
          */
         public Builder description(String description) {
             this.putQueryParameter("Description", description);
@@ -134,7 +134,7 @@ public class ModifyPluginRequest extends Request {
         }
 
         /**
-         * The statement that is used to modify the plug-in definition.
+         * PluginData.
          */
         public Builder pluginData(String pluginData) {
             this.putQueryParameter("PluginData", pluginData);
@@ -143,7 +143,7 @@ public class ModifyPluginRequest extends Request {
         }
 
         /**
-         * The ID of the plug-in whose information you want to modify.
+         * PluginId.
          */
         public Builder pluginId(String pluginId) {
             this.putQueryParameter("PluginId", pluginId);
@@ -152,7 +152,7 @@ public class ModifyPluginRequest extends Request {
         }
 
         /**
-         * The name of the plug-in. The name must be 4 to 50 characters in length and can contain letters, digits, and underscores (\_). However, it cannot start with an underscore.
+         * PluginName.
          */
         public Builder pluginName(String pluginName) {
             this.putQueryParameter("PluginName", pluginName);
@@ -170,7 +170,7 @@ public class ModifyPluginRequest extends Request {
         }
 
         /**
-         * The tag of objects that match the rule. You can specify multiple tags.
+         * Tag.
          */
         public Builder tag(java.util.List < Tag> tag) {
             this.putQueryParameter("Tag", tag);
@@ -226,10 +226,7 @@ public class ModifyPluginRequest extends Request {
             private String value; 
 
             /**
-             * The key of the tag.
-             * <p>
-             * 
-             * N can be an integer from 1 to 20.``
+             * Key.
              */
             public Builder key(String key) {
                 this.key = key;
@@ -237,10 +234,7 @@ public class ModifyPluginRequest extends Request {
             }
 
             /**
-             * The value of the tag.
-             * <p>
-             * 
-             * N can be an integer from 1 to 20.``
+             * Value.
              */
             public Builder value(String value) {
                 this.value = value;

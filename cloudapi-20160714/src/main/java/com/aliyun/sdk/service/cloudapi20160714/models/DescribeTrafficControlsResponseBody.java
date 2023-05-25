@@ -86,7 +86,7 @@ public class DescribeTrafficControlsResponseBody extends TeaModel {
         private TrafficControls trafficControls; 
 
         /**
-         * The page number of the returned page.
+         * The number of entries returned per page.
          */
         public Builder pageNumber(Integer pageNumber) {
             this.pageNumber = pageNumber;
@@ -94,7 +94,7 @@ public class DescribeTrafficControlsResponseBody extends TeaModel {
         }
 
         /**
-         * The number of entries returned per page.
+         * The returned throttling policy information. It is an array consisting of TrafficControl data.
          */
         public Builder pageSize(Integer pageSize) {
             this.pageSize = pageSize;
@@ -102,7 +102,7 @@ public class DescribeTrafficControlsResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * The total number of returned entries.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -110,7 +110,7 @@ public class DescribeTrafficControlsResponseBody extends TeaModel {
         }
 
         /**
-         * The total number of returned entries.
+         * The default throttling value for each user.
          */
         public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;
@@ -118,7 +118,7 @@ public class DescribeTrafficControlsResponseBody extends TeaModel {
         }
 
         /**
-         * The returned throttling policy information. It is an array consisting of TrafficControl data.
+         * The default throttling value for each API.
          */
         public Builder trafficControls(TrafficControls trafficControls) {
             this.trafficControls = trafficControls;
@@ -170,7 +170,7 @@ public class DescribeTrafficControlsResponseBody extends TeaModel {
             private Integer trafficValue; 
 
             /**
-             * The AppId or user account corresponding to SpecialType.
+             * Queries custom throttling policies and their details. Conditional queries are supported.
              */
             public Builder specialKey(String specialKey) {
                 this.specialKey = specialKey;
@@ -178,7 +178,10 @@ public class DescribeTrafficControlsResponseBody extends TeaModel {
             }
 
             /**
-             * The throttling value.
+             * *   This API is intended for API providers.
+             * <p>
+             * *   This API can be used to query all existing throttling policies (including special throttling policies) and their details.
+             * *   You can specify query conditions. For example, you can query the throttling policies bound to a specified API or in a specified environment.
              */
             public Builder trafficValue(Integer trafficValue) {
                 this.trafficValue = trafficValue;
@@ -272,11 +275,7 @@ public class DescribeTrafficControlsResponseBody extends TeaModel {
             private Specials specials; 
 
             /**
-             * The type of the special throttling policy. Valid values:
-             * <p>
-             * 
-             * *   **APP**
-             * *   **USER**
+             * The throttling value.
              */
             public Builder specialType(String specialType) {
                 this.specialType = specialType;
@@ -284,7 +283,7 @@ public class DescribeTrafficControlsResponseBody extends TeaModel {
             }
 
             /**
-             * The returned information about a special throttling policy. It is an array consisting of Special data.
+             * The AppId or user account corresponding to SpecialType.
              */
             public Builder specials(Specials specials) {
                 this.specials = specials;
@@ -474,7 +473,7 @@ public class DescribeTrafficControlsResponseBody extends TeaModel {
             private Integer userDefault; 
 
             /**
-             * The default throttling value for each API.
+             * The description of the throttling policy.
              */
             public Builder apiDefault(Integer apiDefault) {
                 this.apiDefault = apiDefault;
@@ -482,7 +481,7 @@ public class DescribeTrafficControlsResponseBody extends TeaModel {
             }
 
             /**
-             * The default throttling value for each app.
+             * The creation time (UTC) of the throttling policy.
              */
             public Builder appDefault(Integer appDefault) {
                 this.appDefault = appDefault;
@@ -490,7 +489,11 @@ public class DescribeTrafficControlsResponseBody extends TeaModel {
             }
 
             /**
-             * The creation time (UTC) of the throttling policy.
+             * The type of the special throttling policy. Valid values:
+             * <p>
+             * 
+             * *   **APP**
+             * *   **USER**
              */
             public Builder createdTime(String createdTime) {
                 this.createdTime = createdTime;
@@ -498,42 +501,10 @@ public class DescribeTrafficControlsResponseBody extends TeaModel {
             }
 
             /**
-             * The description of the throttling policy.
+             * The name of the throttling policy.
              */
             public Builder description(String description) {
                 this.description = description;
-                return this;
-            }
-
-            /**
-             * The last modification time (UTC) of the throttling policy.
-             */
-            public Builder modifiedTime(String modifiedTime) {
-                this.modifiedTime = modifiedTime;
-                return this;
-            }
-
-            /**
-             * The returned information about a special throttling policy. It is an array consisting of SpecialPolicy data.
-             */
-            public Builder specialPolicies(SpecialPolicies specialPolicies) {
-                this.specialPolicies = specialPolicies;
-                return this;
-            }
-
-            /**
-             * The ID of the throttling policy.
-             */
-            public Builder trafficControlId(String trafficControlId) {
-                this.trafficControlId = trafficControlId;
-                return this;
-            }
-
-            /**
-             * The name of the throttling policy.
-             */
-            public Builder trafficControlName(String trafficControlName) {
-                this.trafficControlName = trafficControlName;
                 return this;
             }
 
@@ -545,13 +516,45 @@ public class DescribeTrafficControlsResponseBody extends TeaModel {
              * *   HOUR
              * *   DAY
              */
+            public Builder modifiedTime(String modifiedTime) {
+                this.modifiedTime = modifiedTime;
+                return this;
+            }
+
+            /**
+             * The returned information about a special throttling policy. It is an array consisting of Special data.
+             */
+            public Builder specialPolicies(SpecialPolicies specialPolicies) {
+                this.specialPolicies = specialPolicies;
+                return this;
+            }
+
+            /**
+             * The returned information about a special throttling policy. It is an array consisting of SpecialPolicy data.
+             */
+            public Builder trafficControlId(String trafficControlId) {
+                this.trafficControlId = trafficControlId;
+                return this;
+            }
+
+            /**
+             * The ID of the throttling policy.
+             */
+            public Builder trafficControlName(String trafficControlName) {
+                this.trafficControlName = trafficControlName;
+                return this;
+            }
+
+            /**
+             * The default throttling value for each app.
+             */
             public Builder trafficControlUnit(String trafficControlUnit) {
                 this.trafficControlUnit = trafficControlUnit;
                 return this;
             }
 
             /**
-             * The default throttling value for each user.
+             * The last modification time (UTC) of the throttling policy.
              */
             public Builder userDefault(Integer userDefault) {
                 this.userDefault = userDefault;

@@ -83,7 +83,7 @@ public class DeleteMonitorGroupRequest extends Request {
         } 
 
         /**
-         * The ID of the monitoring group.
+         * GroupId.
          */
         public Builder groupId(String groupId) {
             this.putQueryParameter("GroupId", groupId);
@@ -92,7 +92,7 @@ public class DeleteMonitorGroupRequest extends Request {
         }
 
         /**
-         * The ID of the request.
+         * RawMonitorGroupId.
          */
         public Builder rawMonitorGroupId(Long rawMonitorGroupId) {
             this.putQueryParameter("RawMonitorGroupId", rawMonitorGroupId);

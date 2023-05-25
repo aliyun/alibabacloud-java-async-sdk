@@ -83,7 +83,7 @@ public class DeleteApiRequest extends Request {
         } 
 
         /**
-         * The ID of the API.
+         * ApiId.
          */
         public Builder apiId(String apiId) {
             this.putQueryParameter("ApiId", apiId);
@@ -92,7 +92,7 @@ public class DeleteApiRequest extends Request {
         }
 
         /**
-         * The ID of the API group.
+         * GroupId.
          */
         public Builder groupId(String groupId) {
             this.putQueryParameter("GroupId", groupId);

@@ -50,7 +50,7 @@ public class SdkGenerateByGroupResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The download link of the SDK.
+         * DownloadLink.
          */
         public Builder downloadLink(String downloadLink) {
             this.downloadLink = downloadLink;
@@ -58,7 +58,7 @@ public class SdkGenerateByGroupResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * RequestId.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

@@ -126,7 +126,7 @@ public class AttachPluginRequest extends Request {
         } 
 
         /**
-         * The number of the API to be bound.
+         * ApiId.
          */
         public Builder apiId(String apiId) {
             this.putQueryParameter("ApiId", apiId);
@@ -135,7 +135,7 @@ public class AttachPluginRequest extends Request {
         }
 
         /**
-         * The number of the API to be operated. Separate multiple numbers with commas (,). A maximum of 100 numbers can be entered.
+         * ApiIds.
          */
         public Builder apiIds(String apiIds) {
             this.putQueryParameter("ApiIds", apiIds);
@@ -144,7 +144,7 @@ public class AttachPluginRequest extends Request {
         }
 
         /**
-         * The ID of the API group that contains the API to which the plug-in is to be bound.
+         * GroupId.
          */
         public Builder groupId(String groupId) {
             this.putQueryParameter("GroupId", groupId);
@@ -153,7 +153,7 @@ public class AttachPluginRequest extends Request {
         }
 
         /**
-         * The ID of the plug-in to be bound.
+         * PluginId.
          */
         public Builder pluginId(String pluginId) {
             this.putQueryParameter("PluginId", pluginId);
@@ -171,12 +171,7 @@ public class AttachPluginRequest extends Request {
         }
 
         /**
-         * The name of the runtime environment. Valid values:
-         * <p>
-         * 
-         * *   **RELEASE**
-         * *   **PRE: the pre-release environment**
-         * *   **TEST**
+         * StageName.
          */
         public Builder stageName(String stageName) {
             this.putQueryParameter("StageName", stageName);

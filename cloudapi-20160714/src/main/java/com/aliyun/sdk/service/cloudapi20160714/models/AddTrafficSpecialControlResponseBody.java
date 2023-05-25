@@ -38,7 +38,7 @@ public class AddTrafficSpecialControlResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The ID of the request.
+         * Adds a custom special policy to a specified throttling policy.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

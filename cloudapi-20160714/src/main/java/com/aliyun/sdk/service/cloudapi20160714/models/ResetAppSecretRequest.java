@@ -18,6 +18,10 @@ public class ResetAppSecretRequest extends Request {
     private String appKey;
 
     @Query
+    @NameInMap("NewAppKey")
+    private String newAppKey;
+
+    @Query
     @NameInMap("NewAppSecret")
     private String newAppSecret;
 
@@ -28,6 +32,7 @@ public class ResetAppSecretRequest extends Request {
     private ResetAppSecretRequest(Builder builder) {
         super(builder);
         this.appKey = builder.appKey;
+        this.newAppKey = builder.newAppKey;
         this.newAppSecret = builder.newAppSecret;
         this.securityToken = builder.securityToken;
     }
@@ -53,6 +58,13 @@ public class ResetAppSecretRequest extends Request {
     }
 
     /**
+     * @return newAppKey
+     */
+    public String getNewAppKey() {
+        return this.newAppKey;
+    }
+
+    /**
      * @return newAppSecret
      */
     public String getNewAppSecret() {
@@ -68,6 +80,7 @@ public class ResetAppSecretRequest extends Request {
 
     public static final class Builder extends Request.Builder<ResetAppSecretRequest, Builder> {
         private String appKey; 
+        private String newAppKey; 
         private String newAppSecret; 
         private String securityToken; 
 
@@ -78,6 +91,7 @@ public class ResetAppSecretRequest extends Request {
         private Builder(ResetAppSecretRequest request) {
             super(request);
             this.appKey = request.appKey;
+            this.newAppKey = request.newAppKey;
             this.newAppSecret = request.newAppSecret;
             this.securityToken = request.securityToken;
         } 
@@ -88,6 +102,15 @@ public class ResetAppSecretRequest extends Request {
         public Builder appKey(String appKey) {
             this.putQueryParameter("AppKey", appKey);
             this.appKey = appKey;
+            return this;
+        }
+
+        /**
+         * NewAppKey.
+         */
+        public Builder newAppKey(String newAppKey) {
+            this.putQueryParameter("NewAppKey", newAppKey);
+            this.newAppKey = newAppKey;
             return this;
         }
 

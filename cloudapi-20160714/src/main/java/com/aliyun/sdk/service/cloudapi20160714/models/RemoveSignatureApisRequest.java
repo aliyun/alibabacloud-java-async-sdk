@@ -113,11 +113,7 @@ public class RemoveSignatureApisRequest extends Request {
         } 
 
         /**
-         * The name of the runtime environment. Valid values:
-         * <p>
-         * 
-         * *   **RELEASE**
-         * *   **TEST**
+         * The ID of the request.
          */
         public Builder apiIds(String apiIds) {
             this.putQueryParameter("ApiIds", apiIds);
@@ -126,11 +122,11 @@ public class RemoveSignatureApisRequest extends Request {
         }
 
         /**
-         * The IDs of the APIs from which you want to unbind the signature key.
+         * The name of the runtime environment. Valid values:
          * <p>
          * 
-         * *   If this parameter is not specified, the signature key is unbound from all the APIs in the specified environment of the API group.
-         * *   The IDs of the APIs that you want to manage. Separate multiple API IDs with commas (,). A maximum of 100 API IDs can be entered.
+         * *   **RELEASE**
+         * *   **TEST**
          */
         public Builder groupId(String groupId) {
             this.putQueryParameter("GroupId", groupId);
@@ -148,7 +144,11 @@ public class RemoveSignatureApisRequest extends Request {
         }
 
         /**
-         * The ID of the API group to which the API that you want to manage belongs.
+         * The IDs of the APIs from which you want to unbind the signature key.
+         * <p>
+         * 
+         * *   If this parameter is not specified, the signature key is unbound from all the APIs in the specified environment of the API group.
+         * *   The IDs of the APIs that you want to manage. Separate multiple API IDs with commas (,). A maximum of 100 API IDs can be entered.
          */
         public Builder signatureId(String signatureId) {
             this.putQueryParameter("SignatureId", signatureId);
@@ -157,7 +157,9 @@ public class RemoveSignatureApisRequest extends Request {
         }
 
         /**
-         * The ID of the request.
+         * *   This API is intended for API providers.
+         * <p>
+         * *   The operation takes effect immediately. The request sent from API Gateway to the backend service does not contain the signature string. The corresponding verification step can be removed from the backend.
          */
         public Builder stageName(String stageName) {
             this.putQueryParameter("StageName", stageName);

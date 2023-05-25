@@ -98,7 +98,7 @@ public class DescribeAppResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The ID of the app.
+         * AppId.
          */
         public Builder appId(Long appId) {
             this.appId = appId;
@@ -106,7 +106,7 @@ public class DescribeAppResponseBody extends TeaModel {
         }
 
         /**
-         * The name of the app.
+         * AppName.
          */
         public Builder appName(String appName) {
             this.appName = appName;
@@ -114,7 +114,7 @@ public class DescribeAppResponseBody extends TeaModel {
         }
 
         /**
-         * The time when the app was created.
+         * CreatedTime.
          */
         public Builder createdTime(String createdTime) {
             this.createdTime = createdTime;
@@ -122,7 +122,7 @@ public class DescribeAppResponseBody extends TeaModel {
         }
 
         /**
-         * The description of the app.
+         * Description.
          */
         public Builder description(String description) {
             this.description = description;
@@ -130,7 +130,7 @@ public class DescribeAppResponseBody extends TeaModel {
         }
 
         /**
-         * The time when the app was modified.
+         * ModifiedTime.
          */
         public Builder modifiedTime(String modifiedTime) {
             this.modifiedTime = modifiedTime;
@@ -138,7 +138,7 @@ public class DescribeAppResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * RequestId.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

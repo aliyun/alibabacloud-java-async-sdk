@@ -50,7 +50,7 @@ public class DescribeMarketRemainsQuotaResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The ID of the request.
+         * RemainsQuota.
          */
         public Builder remainsQuota(Long remainsQuota) {
             this.remainsQuota = remainsQuota;
@@ -58,7 +58,7 @@ public class DescribeMarketRemainsQuotaResponseBody extends TeaModel {
         }
 
         /**
-         * auditing
+         * RequestId.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

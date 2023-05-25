@@ -69,7 +69,7 @@ public class DeleteDatasetRequest extends Request {
         } 
 
         /**
-         * The ID of the dataset.
+         * DatasetId.
          */
         public Builder datasetId(String datasetId) {
             this.putQueryParameter("DatasetId", datasetId);

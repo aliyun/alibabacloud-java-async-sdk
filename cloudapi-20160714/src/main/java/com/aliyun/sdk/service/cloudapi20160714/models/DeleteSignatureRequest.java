@@ -78,7 +78,11 @@ public class DeleteSignatureRequest extends Request {
         }
 
         /**
-         * The ID of the key to be deleted.
+         * *   This API is intended for API providers.
+         * <p>
+         * *   This API operation deletes an existing backend signature key.
+         * *   You cannot delete a key that is bound to an API. To delete the key, you must unbind it first.
+         * *   The QPS limit on this operation is 50 per user.
          */
         public Builder signatureId(String signatureId) {
             this.putQueryParameter("SignatureId", signatureId);

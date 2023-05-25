@@ -96,7 +96,7 @@ public class DeleteBackendModelRequest extends Request {
         } 
 
         /**
-         * The ID of the backend service.
+         * BackendId.
          */
         public Builder backendId(String backendId) {
             this.putQueryParameter("BackendId", backendId);
@@ -105,7 +105,7 @@ public class DeleteBackendModelRequest extends Request {
         }
 
         /**
-         * The ID of the backend model.
+         * BackendModelId.
          */
         public Builder backendModelId(String backendModelId) {
             this.putQueryParameter("BackendModelId", backendModelId);
@@ -123,12 +123,7 @@ public class DeleteBackendModelRequest extends Request {
         }
 
         /**
-         * The name of the runtime environment. Valid values:
-         * <p>
-         * 
-         * *   **RELEASE**
-         * *   **PRE**
-         * *   **TEST**
+         * StageName.
          */
         public Builder stageName(String stageName) {
             this.putQueryParameter("StageName", stageName);

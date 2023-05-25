@@ -69,7 +69,7 @@ public class DescribeApiGroupVpcWhitelistRequest extends Request {
         } 
 
         /**
-         * The ID of the API group.
+         * GroupId.
          */
         public Builder groupId(String groupId) {
             this.putQueryParameter("GroupId", groupId);

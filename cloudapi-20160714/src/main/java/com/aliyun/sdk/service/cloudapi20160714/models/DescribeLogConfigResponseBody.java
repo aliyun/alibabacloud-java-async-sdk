@@ -50,7 +50,7 @@ public class DescribeLogConfigResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The log data.
+         * LogInfos.
          */
         public Builder logInfos(LogInfos logInfos) {
             this.logInfos = logInfos;
@@ -58,7 +58,7 @@ public class DescribeLogConfigResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * RequestId.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -134,7 +134,7 @@ public class DescribeLogConfigResponseBody extends TeaModel {
             private String slsProject; 
 
             /**
-             * The log type.
+             * LogType.
              */
             public Builder logType(String logType) {
                 this.logType = logType;
@@ -142,7 +142,7 @@ public class DescribeLogConfigResponseBody extends TeaModel {
             }
 
             /**
-             * The region ID of Log Service.
+             * RegionId.
              */
             public Builder regionId(String regionId) {
                 this.regionId = regionId;
@@ -150,7 +150,7 @@ public class DescribeLogConfigResponseBody extends TeaModel {
             }
 
             /**
-             * The log store value of Log Service (SLS).
+             * SlsLogStore.
              */
             public Builder slsLogStore(String slsLogStore) {
                 this.slsLogStore = slsLogStore;
@@ -158,7 +158,7 @@ public class DescribeLogConfigResponseBody extends TeaModel {
             }
 
             /**
-             * The SLS project.
+             * SlsProject.
              */
             public Builder slsProject(String slsProject) {
                 this.slsProject = slsProject;

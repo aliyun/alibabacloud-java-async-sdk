@@ -110,7 +110,7 @@ public class DescribeBackendListRequest extends Request {
         } 
 
         /**
-         * The name of the backend service. You can use \* to perform fuzzy queries.
+         * BackendName.
          */
         public Builder backendName(String backendName) {
             this.putQueryParameter("BackendName", backendName);
@@ -119,7 +119,7 @@ public class DescribeBackendListRequest extends Request {
         }
 
         /**
-         * The type of the backend service.
+         * BackendType.
          */
         public Builder backendType(String backendType) {
             this.putQueryParameter("BackendType", backendType);
@@ -128,7 +128,7 @@ public class DescribeBackendListRequest extends Request {
         }
 
         /**
-         * The number of the current page.
+         * PageNumber.
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -137,7 +137,7 @@ public class DescribeBackendListRequest extends Request {
         }
 
         /**
-         * The number of entries to return on each page.
+         * PageSize.
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);

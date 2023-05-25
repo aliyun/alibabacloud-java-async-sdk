@@ -50,7 +50,12 @@ public class AddIpControlPolicyItemResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The ID of the policy. The ID is unique.
+         * When you call this operation, note that:
+         * <p>
+         * 
+         * *   This operation is intended for API providers.
+         * *   An added policy immediately takes effect on all APIs that are bound to the access control list (ACL).
+         * *   A maximum of 100 policies can be added to an ACL.
          */
         public Builder policyItemId(String policyItemId) {
             this.policyItemId = policyItemId;
@@ -58,7 +63,7 @@ public class AddIpControlPolicyItemResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * Adds a policy to an existing ACL.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

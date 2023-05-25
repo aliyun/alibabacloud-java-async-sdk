@@ -83,7 +83,7 @@ public class DeleteAppRequest extends Request {
         } 
 
         /**
-         * The ID of the application.
+         * AppId.
          */
         public Builder appId(Long appId) {
             this.putQueryParameter("AppId", appId);
@@ -101,7 +101,7 @@ public class DeleteAppRequest extends Request {
         }
 
         /**
-         * The tags. Up to 20 elements are allowed.
+         * Tag.
          */
         public Builder tag(java.util.List < Tag> tag) {
             this.putQueryParameter("Tag", tag);
@@ -156,7 +156,7 @@ public class DeleteAppRequest extends Request {
             private String value; 
 
             /**
-             * The key of the tag.
+             * Key.
              */
             public Builder key(String key) {
                 this.key = key;
@@ -164,7 +164,7 @@ public class DeleteAppRequest extends Request {
             }
 
             /**
-             * The value of the tag.
+             * Value.
              */
             public Builder value(String value) {
                 this.value = value;

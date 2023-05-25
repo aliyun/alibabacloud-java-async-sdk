@@ -111,7 +111,7 @@ public class ModifyAppRequest extends Request {
         } 
 
         /**
-         * The ID of the app.
+         * AppId.
          */
         public Builder appId(Long appId) {
             this.putQueryParameter("AppId", appId);
@@ -120,10 +120,7 @@ public class ModifyAppRequest extends Request {
         }
 
         /**
-         * The value must be 4 to 26 characters in length and can contain letters, digits, and underscores (\_). It must start with a letter.
-         * <p>
-         * 
-         * This parameter is required only when you want to modify the value.
+         * AppName.
          */
         public Builder appName(String appName) {
             this.putQueryParameter("AppName", appName);
@@ -132,10 +129,7 @@ public class ModifyAppRequest extends Request {
         }
 
         /**
-         * The description of the app. The description can contain a maximum of 180 characters in length.
-         * <p>
-         * 
-         * This parameter is required only when you want to modify the value.
+         * Description.
          */
         public Builder description(String description) {
             this.putQueryParameter("Description", description);
@@ -153,7 +147,7 @@ public class ModifyAppRequest extends Request {
         }
 
         /**
-         * The tag of objects that match the rule. You can specify multiple tags.
+         * Tag.
          */
         public Builder tag(java.util.List < Tag> tag) {
             this.putQueryParameter("Tag", tag);
@@ -208,10 +202,7 @@ public class ModifyAppRequest extends Request {
             private String value; 
 
             /**
-             * The value of the tag.
-             * <p>
-             * 
-             * N can be an integer from 1 to 20.``
+             * Key.
              */
             public Builder key(String key) {
                 this.key = key;
@@ -219,10 +210,7 @@ public class ModifyAppRequest extends Request {
             }
 
             /**
-             * The value of the tag.
-             * <p>
-             * 
-             * N can be an integer from 1 to 20.``
+             * Value.
              */
             public Builder value(String value) {
                 this.value = value;

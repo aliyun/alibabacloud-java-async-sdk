@@ -108,12 +108,7 @@ public class TagResourcesRequest extends Request {
         }
 
         /**
-         * The type of the resource. Tags are bound to API groups, plug-ins, and applications. You can use tags to manage cloud resources by group. Valid values:
-         * <p>
-         * 
-         * *   **apiGroup**
-         * *   **plugin**
-         * *   **app**
+         * The operation that you want to perform. Set the value to **TagResources**.
          */
         public Builder resourceType(String resourceType) {
             this.putQueryParameter("ResourceType", resourceType);
@@ -187,10 +182,7 @@ public class TagResourcesRequest extends Request {
             private String value; 
 
             /**
-             * The key of tag N.
-             * <p>
-             * 
-             * Valid values of N: `1 to 20.`
+             * Adds tags to resources.
              */
             public Builder key(String key) {
                 this.key = key;
@@ -198,10 +190,7 @@ public class TagResourcesRequest extends Request {
             }
 
             /**
-             * The value of tag N.
-             * <p>
-             * 
-             * Valid values of N: `1 to 20.`
+             * TagResources
              */
             public Builder value(String value) {
                 this.value = value;

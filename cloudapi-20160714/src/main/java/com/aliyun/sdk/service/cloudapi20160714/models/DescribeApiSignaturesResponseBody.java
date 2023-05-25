@@ -86,7 +86,7 @@ public class DescribeApiSignaturesResponseBody extends TeaModel {
         private Integer totalCount; 
 
         /**
-         * The time when the backend signature key was bound.
+         * The ID of the API.
          */
         public Builder apiSignatures(ApiSignatures apiSignatures) {
             this.apiSignatures = apiSignatures;
@@ -94,7 +94,7 @@ public class DescribeApiSignaturesResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * The number of entries returned per page.
          */
         public Builder pageNumber(Integer pageNumber) {
             this.pageNumber = pageNumber;
@@ -102,7 +102,7 @@ public class DescribeApiSignaturesResponseBody extends TeaModel {
         }
 
         /**
-         * The total number of returned entries.
+         * The returned signature key information. It is an array consisting of ApiSignatureItem data.
          */
         public Builder pageSize(Integer pageSize) {
             this.pageSize = pageSize;
@@ -110,7 +110,7 @@ public class DescribeApiSignaturesResponseBody extends TeaModel {
         }
 
         /**
-         * The number of entries returned per page.
+         * The total number of returned entries.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -118,7 +118,7 @@ public class DescribeApiSignaturesResponseBody extends TeaModel {
         }
 
         /**
-         * The returned signature key information. It is an array consisting of ApiSignatureItem data.
+         * The time when the backend signature key was bound.
          */
         public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;
@@ -206,7 +206,7 @@ public class DescribeApiSignaturesResponseBody extends TeaModel {
             private String signatureName; 
 
             /**
-             * The ID of the backend signature key.
+             * The name of the backend signature key.
              */
             public Builder apiId(String apiId) {
                 this.apiId = apiId;
@@ -214,9 +214,7 @@ public class DescribeApiSignaturesResponseBody extends TeaModel {
             }
 
             /**
-             * *   This API is intended for API providers.
-             * <p>
-             * *   The ApiIds parameter is optional. If this parameter is not specified, all results in the specified environment of an API group are returned.
+             * Queries the backend signature keys that are bound to the APIs of a specified API group in a specified environment.
              */
             public Builder apiName(String apiName) {
                 this.apiName = apiName;
@@ -224,7 +222,7 @@ public class DescribeApiSignaturesResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the API.
+             * The ID of the backend signature key.
              */
             public Builder boundTime(String boundTime) {
                 this.boundTime = boundTime;
@@ -232,7 +230,7 @@ public class DescribeApiSignaturesResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the backend signature key.
+             * The name of the API.
              */
             public Builder signatureId(String signatureId) {
                 this.signatureId = signatureId;
@@ -240,7 +238,9 @@ public class DescribeApiSignaturesResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the API.
+             * *   This API is intended for API providers.
+             * <p>
+             * *   The ApiIds parameter is optional. If this parameter is not specified, all results in the specified environment of an API group are returned.
              */
             public Builder signatureName(String signatureName) {
                 this.signatureName = signatureName;

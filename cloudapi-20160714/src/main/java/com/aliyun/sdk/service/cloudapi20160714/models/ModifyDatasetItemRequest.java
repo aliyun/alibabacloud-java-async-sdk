@@ -112,7 +112,7 @@ public class ModifyDatasetItemRequest extends Request {
         } 
 
         /**
-         * The ID of the dataset.
+         * DatasetId.
          */
         public Builder datasetId(String datasetId) {
             this.putQueryParameter("DatasetId", datasetId);
@@ -121,7 +121,7 @@ public class ModifyDatasetItemRequest extends Request {
         }
 
         /**
-         * The ID of the data entry.
+         * DatasetItemId.
          */
         public Builder datasetItemId(String datasetItemId) {
             this.putQueryParameter("DatasetItemId", datasetItemId);
@@ -130,7 +130,7 @@ public class ModifyDatasetItemRequest extends Request {
         }
 
         /**
-         * The description of the data entry. The description cannot exceed 180 characters in length.
+         * Description.
          */
         public Builder description(String description) {
             this.putQueryParameter("Description", description);
@@ -139,7 +139,7 @@ public class ModifyDatasetItemRequest extends Request {
         }
 
         /**
-         * The time in UTC when the data entry expires. The time is in the **yyyy-MM-ddTHH:mm:ssZ** format.
+         * ExpiredTime.
          */
         public Builder expiredTime(String expiredTime) {
             this.putQueryParameter("ExpiredTime", expiredTime);

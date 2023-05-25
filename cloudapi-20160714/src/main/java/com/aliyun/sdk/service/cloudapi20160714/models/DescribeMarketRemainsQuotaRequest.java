@@ -69,7 +69,7 @@ public class DescribeMarketRemainsQuotaRequest extends Request {
         } 
 
         /**
-         * The remaining quota.
+         * DomainName.
          */
         public Builder domainName(String domainName) {
             this.putQueryParameter("DomainName", domainName);

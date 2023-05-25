@@ -84,7 +84,7 @@ public class CreateDatasetRequest extends Request {
         } 
 
         /**
-         * Dataset Name
+         * DatasetName.
          */
         public Builder datasetName(String datasetName) {
             this.putQueryParameter("DatasetName", datasetName);
@@ -93,12 +93,7 @@ public class CreateDatasetRequest extends Request {
         }
 
         /**
-         * The type of the dataset. Valid values:
-         * <p>
-         * 
-         * *   JWT_BLOCKING: a JSON Web Token (JWT) blacklist
-         * *   IP_WHITELIST_CIDR : an IP address whitelist
-         * *   PARAMETER_ACCESS : parameter-based access control
+         * DatasetType.
          */
         public Builder datasetType(String datasetType) {
             this.putQueryParameter("DatasetType", datasetType);

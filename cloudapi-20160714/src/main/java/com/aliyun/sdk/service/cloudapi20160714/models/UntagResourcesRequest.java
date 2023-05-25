@@ -112,11 +112,7 @@ public class UntagResourcesRequest extends Request {
         } 
 
         /**
-         * Specifies whether to delete all tags. This parameter is valid only when the **TagKey.N**parameter is not specified. Default value: false. Valid values:
-         * <p>
-         * 
-         * *   **true**
-         * *   **false**
+         * The ID of the request.
          */
         public Builder all(Boolean all) {
             this.putQueryParameter("All", all);
@@ -134,12 +130,10 @@ public class UntagResourcesRequest extends Request {
         }
 
         /**
-         * The type of the resource. Tags are bound to API groups, plug-ins, and applications. You can use tags to manage cloud resources by group. Valid values:
+         * The key of tag N.
          * <p>
          * 
-         * *   **apiGroup**
-         * *   **plugin**
-         * *   **app**
+         * Valid values of N: `1 to 20.`
          */
         public Builder resourceType(String resourceType) {
             this.putQueryParameter("ResourceType", resourceType);

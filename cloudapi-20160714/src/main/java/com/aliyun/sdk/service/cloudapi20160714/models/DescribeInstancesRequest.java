@@ -110,7 +110,7 @@ public class DescribeInstancesRequest extends Request {
         } 
 
         /**
-         * Specifies whether tag authorization is enabled.
+         * EnableTagAuthorization.
          */
         public Builder enableTagAuthorization(Boolean enableTagAuthorization) {
             this.putQueryParameter("EnableTagAuthorization", enableTagAuthorization);
@@ -119,7 +119,7 @@ public class DescribeInstancesRequest extends Request {
         }
 
         /**
-         * The ID of the instance. If you do not specify this parameter, all instances are queried.
+         * InstanceId.
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -128,12 +128,7 @@ public class DescribeInstancesRequest extends Request {
         }
 
         /**
-         * The language that is used to return the description of the system policy. Valid values:
-         * <p>
-         * 
-         * *   en: English
-         * *   zh: Chinese
-         * *   ja: Japanese
+         * Language.
          */
         public Builder language(String language) {
             this.putQueryParameter("Language", language);
@@ -151,7 +146,7 @@ public class DescribeInstancesRequest extends Request {
         }
 
         /**
-         * The tags that are bound to the instance.
+         * Tag.
          */
         public Builder tag(java.util.List < Tag> tag) {
             this.putQueryParameter("Tag", tag);
@@ -205,7 +200,7 @@ public class DescribeInstancesRequest extends Request {
             private String value; 
 
             /**
-             * The key of the tag.
+             * Key.
              */
             public Builder key(String key) {
                 this.key = key;
@@ -213,7 +208,7 @@ public class DescribeInstancesRequest extends Request {
             }
 
             /**
-             * The values of the tag.
+             * Value.
              */
             public Builder value(String value) {
                 this.value = value;

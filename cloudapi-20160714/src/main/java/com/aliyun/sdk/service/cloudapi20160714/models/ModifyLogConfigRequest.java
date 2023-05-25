@@ -121,7 +121,7 @@ public class ModifyLogConfigRequest extends Request {
         }
 
         /**
-         * The log type. Valid values: **log** and **survey**.
+         * LogType.
          */
         public Builder logType(String logType) {
             this.putQueryParameter("LogType", logType);
@@ -139,7 +139,7 @@ public class ModifyLogConfigRequest extends Request {
         }
 
         /**
-         * The name of the Logstore in Log Service.
+         * SlsLogStore.
          */
         public Builder slsLogStore(String slsLogStore) {
             this.putQueryParameter("SlsLogStore", slsLogStore);
@@ -148,7 +148,7 @@ public class ModifyLogConfigRequest extends Request {
         }
 
         /**
-         * The name of the Log Service project.
+         * SlsProject.
          */
         public Builder slsProject(String slsProject) {
             this.putQueryParameter("SlsProject", slsProject);

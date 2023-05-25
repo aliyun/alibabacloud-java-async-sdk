@@ -50,7 +50,7 @@ public class DescribeBackendInfoResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The information about the backend service.
+         * BackendInfo.
          */
         public Builder backendInfo(BackendInfo backendInfo) {
             this.backendInfo = backendInfo;
@@ -58,7 +58,7 @@ public class DescribeBackendInfoResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * RequestId.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -134,7 +134,7 @@ public class DescribeBackendInfoResponseBody extends TeaModel {
             private String roleArn; 
 
             /**
-             * The region ID of the event bus in EventBridge.
+             * EventBridgeRegionId.
              */
             public Builder eventBridgeRegionId(String eventBridgeRegionId) {
                 this.eventBridgeRegionId = eventBridgeRegionId;
@@ -142,7 +142,7 @@ public class DescribeBackendInfoResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the event bus.
+             * EventBus.
              */
             public Builder eventBus(String eventBus) {
                 this.eventBus = eventBus;
@@ -150,7 +150,7 @@ public class DescribeBackendInfoResponseBody extends TeaModel {
             }
 
             /**
-             * The event source.
+             * EventSource.
              */
             public Builder eventSource(String eventSource) {
                 this.eventSource = eventSource;
@@ -158,7 +158,7 @@ public class DescribeBackendInfoResponseBody extends TeaModel {
             }
 
             /**
-             * The ARN of the RAM role to be assumed by API Gateway to access EventBridge.
+             * RoleArn.
              */
             public Builder roleArn(String roleArn) {
                 this.roleArn = roleArn;
@@ -283,7 +283,7 @@ public class DescribeBackendInfoResponseBody extends TeaModel {
             private String serviceName; 
 
             /**
-             * The root path of the Function Compute service.
+             * FcBaseUrl.
              */
             public Builder fcBaseUrl(String fcBaseUrl) {
                 this.fcBaseUrl = fcBaseUrl;
@@ -291,7 +291,7 @@ public class DescribeBackendInfoResponseBody extends TeaModel {
             }
 
             /**
-             * The region ID of the Function Compute service.
+             * FcRegionId.
              */
             public Builder fcRegionId(String fcRegionId) {
                 this.fcRegionId = fcRegionId;
@@ -299,7 +299,7 @@ public class DescribeBackendInfoResponseBody extends TeaModel {
             }
 
             /**
-             * The type of the Function Compute service.
+             * FcType.
              */
             public Builder fcType(String fcType) {
                 this.fcType = fcType;
@@ -307,7 +307,7 @@ public class DescribeBackendInfoResponseBody extends TeaModel {
             }
 
             /**
-             * The function name defined in Function Compute.
+             * FunctionName.
              */
             public Builder functionName(String functionName) {
                 this.functionName = functionName;
@@ -315,7 +315,7 @@ public class DescribeBackendInfoResponseBody extends TeaModel {
             }
 
             /**
-             * The backend service path.
+             * OnlyBusinessPath.
              */
             public Builder onlyBusinessPath(Boolean onlyBusinessPath) {
                 this.onlyBusinessPath = onlyBusinessPath;
@@ -323,7 +323,7 @@ public class DescribeBackendInfoResponseBody extends TeaModel {
             }
 
             /**
-             * The alias of the function.
+             * Qualifier.
              */
             public Builder qualifier(String qualifier) {
                 this.qualifier = qualifier;
@@ -331,7 +331,7 @@ public class DescribeBackendInfoResponseBody extends TeaModel {
             }
 
             /**
-             * The Alibaba Cloud Resource Name (ARN) of the RAM role to be assumed by API Gateway to access Function Compute.
+             * RoleArn.
              */
             public Builder roleArn(String roleArn) {
                 this.roleArn = roleArn;
@@ -339,7 +339,7 @@ public class DescribeBackendInfoResponseBody extends TeaModel {
             }
 
             /**
-             * The service name defined in Function Compute.
+             * ServiceName.
              */
             public Builder serviceName(String serviceName) {
                 this.serviceName = serviceName;
@@ -534,7 +534,7 @@ public class DescribeBackendInfoResponseBody extends TeaModel {
             private String ossRegionId; 
 
             /**
-             * The name of the OSS bucket.
+             * BucketName.
              */
             public Builder bucketName(String bucketName) {
                 this.bucketName = bucketName;
@@ -542,7 +542,7 @@ public class DescribeBackendInfoResponseBody extends TeaModel {
             }
 
             /**
-             * The region ID of the Object Storage Service (OSS) bucket.
+             * OssRegionId.
              */
             public Builder ossRegionId(String ossRegionId) {
                 this.ossRegionId = ossRegionId;
@@ -655,7 +655,7 @@ public class DescribeBackendInfoResponseBody extends TeaModel {
             private String vpcTargetHostName; 
 
             /**
-             * The ID of the Elastic Compute Service (ECS) or Server Load Balancer (SLB) instance in the VPC.
+             * InstanceId.
              */
             public Builder instanceId(String instanceId) {
                 this.instanceId = instanceId;
@@ -663,7 +663,7 @@ public class DescribeBackendInfoResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the VPC Configuration.
+             * Name.
              */
             public Builder name(String name) {
                 this.name = name;
@@ -671,7 +671,7 @@ public class DescribeBackendInfoResponseBody extends TeaModel {
             }
 
             /**
-             * The port number that corresponds to the instance.
+             * Port.
              */
             public Builder port(Long port) {
                 this.port = port;
@@ -679,7 +679,7 @@ public class DescribeBackendInfoResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the VPC access authorization.
+             * VpcAccessId.
              */
             public Builder vpcAccessId(String vpcAccessId) {
                 this.vpcAccessId = vpcAccessId;
@@ -687,7 +687,7 @@ public class DescribeBackendInfoResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the VPC.
+             * VpcId.
              */
             public Builder vpcId(String vpcId) {
                 this.vpcId = vpcId;
@@ -695,7 +695,7 @@ public class DescribeBackendInfoResponseBody extends TeaModel {
             }
 
             /**
-             * http/https
+             * VpcScheme.
              */
             public Builder vpcScheme(String vpcScheme) {
                 this.vpcScheme = vpcScheme;
@@ -724,6 +724,9 @@ public class DescribeBackendInfoResponseBody extends TeaModel {
         @NameInMap("FunctionComputeConfig")
         private FunctionComputeConfig functionComputeConfig;
 
+        @NameInMap("HttpTargetHostName")
+        private String httpTargetHostName;
+
         @NameInMap("MockConfig")
         private MockConfig mockConfig;
 
@@ -742,6 +745,7 @@ public class DescribeBackendInfoResponseBody extends TeaModel {
         private BackendConfig(Builder builder) {
             this.eventBridgeConfig = builder.eventBridgeConfig;
             this.functionComputeConfig = builder.functionComputeConfig;
+            this.httpTargetHostName = builder.httpTargetHostName;
             this.mockConfig = builder.mockConfig;
             this.ossConfig = builder.ossConfig;
             this.serviceAddress = builder.serviceAddress;
@@ -769,6 +773,13 @@ public class DescribeBackendInfoResponseBody extends TeaModel {
          */
         public FunctionComputeConfig getFunctionComputeConfig() {
             return this.functionComputeConfig;
+        }
+
+        /**
+         * @return httpTargetHostName
+         */
+        public String getHttpTargetHostName() {
+            return this.httpTargetHostName;
         }
 
         /**
@@ -809,6 +820,7 @@ public class DescribeBackendInfoResponseBody extends TeaModel {
         public static final class Builder {
             private EventBridgeConfig eventBridgeConfig; 
             private FunctionComputeConfig functionComputeConfig; 
+            private String httpTargetHostName; 
             private MockConfig mockConfig; 
             private OssConfig ossConfig; 
             private String serviceAddress; 
@@ -816,7 +828,7 @@ public class DescribeBackendInfoResponseBody extends TeaModel {
             private VpcConfig vpcConfig; 
 
             /**
-             * The information about the backend service that is EventBridge.
+             * EventBridgeConfig.
              */
             public Builder eventBridgeConfig(EventBridgeConfig eventBridgeConfig) {
                 this.eventBridgeConfig = eventBridgeConfig;
@@ -824,10 +836,18 @@ public class DescribeBackendInfoResponseBody extends TeaModel {
             }
 
             /**
-             * The information about the backend service whose type is FC_EVENT or FC_HTTP.
+             * FunctionComputeConfig.
              */
             public Builder functionComputeConfig(FunctionComputeConfig functionComputeConfig) {
                 this.functionComputeConfig = functionComputeConfig;
+                return this;
+            }
+
+            /**
+             * HttpTargetHostName.
+             */
+            public Builder httpTargetHostName(String httpTargetHostName) {
+                this.httpTargetHostName = httpTargetHostName;
                 return this;
             }
 
@@ -840,7 +860,7 @@ public class DescribeBackendInfoResponseBody extends TeaModel {
             }
 
             /**
-             * The information about the backend service whose type is OSS.
+             * OssConfig.
              */
             public Builder ossConfig(OssConfig ossConfig) {
                 this.ossConfig = ossConfig;
@@ -848,7 +868,7 @@ public class DescribeBackendInfoResponseBody extends TeaModel {
             }
 
             /**
-             * The URL of the backend service.
+             * ServiceAddress.
              */
             public Builder serviceAddress(String serviceAddress) {
                 this.serviceAddress = serviceAddress;
@@ -856,7 +876,7 @@ public class DescribeBackendInfoResponseBody extends TeaModel {
             }
 
             /**
-             * The type of the backend service.
+             * Type.
              */
             public Builder type(String type) {
                 this.type = type;
@@ -864,7 +884,7 @@ public class DescribeBackendInfoResponseBody extends TeaModel {
             }
 
             /**
-             * The information about the virtual private cloud (VPC). This parameter is available only for backend services whose type is VPC.
+             * VpcConfig.
              */
             public Builder vpcConfig(VpcConfig vpcConfig) {
                 this.vpcConfig = vpcConfig;
@@ -977,7 +997,7 @@ public class DescribeBackendInfoResponseBody extends TeaModel {
             private String stageName; 
 
             /**
-             * The backend configurations.
+             * BackendConfig.
              */
             public Builder backendConfig(BackendConfig backendConfig) {
                 this.backendConfig = backendConfig;
@@ -985,7 +1005,7 @@ public class DescribeBackendInfoResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the backend service in the environment.
+             * BackendModelId.
              */
             public Builder backendModelId(String backendModelId) {
                 this.backendModelId = backendModelId;
@@ -993,7 +1013,7 @@ public class DescribeBackendInfoResponseBody extends TeaModel {
             }
 
             /**
-             * The description of the backend service.
+             * Description.
              */
             public Builder description(String description) {
                 this.description = description;
@@ -1001,7 +1021,7 @@ public class DescribeBackendInfoResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the backend service was created.
+             * GmtCreate.
              */
             public Builder gmtCreate(String gmtCreate) {
                 this.gmtCreate = gmtCreate;
@@ -1009,7 +1029,7 @@ public class DescribeBackendInfoResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the backend service was modified.
+             * GmtModified.
              */
             public Builder gmtModified(String gmtModified) {
                 this.gmtModified = gmtModified;
@@ -1017,7 +1037,7 @@ public class DescribeBackendInfoResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the environment.
+             * StageModeId.
              */
             public Builder stageModeId(String stageModeId) {
                 this.stageModeId = stageModeId;
@@ -1025,7 +1045,7 @@ public class DescribeBackendInfoResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the environment.
+             * StageName.
              */
             public Builder stageName(String stageName) {
                 this.stageName = stageName;
@@ -1138,7 +1158,7 @@ public class DescribeBackendInfoResponseBody extends TeaModel {
             private String modifiedTime; 
 
             /**
-             * The ID of the backend service.
+             * BackendId.
              */
             public Builder backendId(String backendId) {
                 this.backendId = backendId;
@@ -1146,7 +1166,7 @@ public class DescribeBackendInfoResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the backend service was created.
+             * BackendModels.
              */
             public Builder backendModels(java.util.List < BackendModels> backendModels) {
                 this.backendModels = backendModels;
@@ -1154,7 +1174,7 @@ public class DescribeBackendInfoResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the backend service.
+             * BackendName.
              */
             public Builder backendName(String backendName) {
                 this.backendName = backendName;
@@ -1162,7 +1182,7 @@ public class DescribeBackendInfoResponseBody extends TeaModel {
             }
 
             /**
-             * The type of the backend service.
+             * BackendType.
              */
             public Builder backendType(String backendType) {
                 this.backendType = backendType;
@@ -1170,7 +1190,7 @@ public class DescribeBackendInfoResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the backend service was created.
+             * CreatedTime.
              */
             public Builder createdTime(String createdTime) {
                 this.createdTime = createdTime;
@@ -1178,7 +1198,7 @@ public class DescribeBackendInfoResponseBody extends TeaModel {
             }
 
             /**
-             * The description of the backend service.
+             * Description.
              */
             public Builder description(String description) {
                 this.description = description;
@@ -1186,7 +1206,7 @@ public class DescribeBackendInfoResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the backend service was modified.
+             * ModifiedTime.
              */
             public Builder modifiedTime(String modifiedTime) {
                 this.modifiedTime = modifiedTime;

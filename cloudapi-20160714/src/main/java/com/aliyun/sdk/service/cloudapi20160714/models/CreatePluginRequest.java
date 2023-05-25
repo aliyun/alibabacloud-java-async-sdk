@@ -127,7 +127,7 @@ public class CreatePluginRequest extends Request {
         } 
 
         /**
-         * The description of the plug-in. The description can contain a maximum of 200 characters in length.
+         * Description.
          */
         public Builder description(String description) {
             this.putQueryParameter("Description", description);
@@ -136,7 +136,7 @@ public class CreatePluginRequest extends Request {
         }
 
         /**
-         * The plug-in definition statement, which can be in JSON or YAML format.
+         * PluginData.
          */
         public Builder pluginData(String pluginData) {
             this.putQueryParameter("PluginData", pluginData);
@@ -145,7 +145,7 @@ public class CreatePluginRequest extends Request {
         }
 
         /**
-         * The name of the plug-in. The name must be 4 to 50 characters in length and can contain letters, digits, and underscores (\_). However, it cannot start with an underscore.
+         * PluginName.
          */
         public Builder pluginName(String pluginName) {
             this.putQueryParameter("PluginName", pluginName);
@@ -154,15 +154,7 @@ public class CreatePluginRequest extends Request {
         }
 
         /**
-         * The type of the plug-in. Valid values:
-         * <p>
-         * 
-         * *   **ipControl: IP address-based access control**
-         * *   **trafficControl: throttling**
-         * *   **backendSignature: backend signature**
-         * *   **jwtAuth** :JWT (OpenId Connect) authentication
-         * *   **cors** :cross-origin resource sharing (CORS)
-         * *   **caching**
+         * PluginType.
          */
         public Builder pluginType(String pluginType) {
             this.putQueryParameter("PluginType", pluginType);
@@ -180,7 +172,7 @@ public class CreatePluginRequest extends Request {
         }
 
         /**
-         * The tag of objects that match the rule. You can specify multiple tags.
+         * Tag.
          */
         public Builder tag(java.util.List < Tag> tag) {
             this.putQueryParameter("Tag", tag);
@@ -236,10 +228,7 @@ public class CreatePluginRequest extends Request {
             private String value; 
 
             /**
-             * The key of the tag.
-             * <p>
-             * 
-             * N can be an integer from 1 to 20.``
+             * Key.
              */
             public Builder key(String key) {
                 this.key = key;
@@ -247,10 +236,7 @@ public class CreatePluginRequest extends Request {
             }
 
             /**
-             * The value of the tag.
-             * <p>
-             * 
-             * N can be an integer from 1 to 20.``
+             * Value.
              */
             public Builder value(String value) {
                 this.value = value;

@@ -38,7 +38,7 @@ public class SetTrafficControlApisResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The ID of the request.
+         * Binds a throttling policy to APIs.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

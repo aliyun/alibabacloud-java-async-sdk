@@ -223,7 +223,7 @@ public class ModifyApiGroupRequest extends Request {
         } 
 
         /**
-         * The API group description that you want to specify, which cannot exceed 180 characters. If this parameter is not specified, the group description is not modified.
+         * BasePath.
          */
         public Builder basePath(String basePath) {
             this.putQueryParameter("BasePath", basePath);
@@ -232,7 +232,7 @@ public class ModifyApiGroupRequest extends Request {
         }
 
         /**
-         * The data of custom configuration items.
+         * CompatibleFlags.
          */
         public Builder compatibleFlags(String compatibleFlags) {
             this.putQueryParameter("CompatibleFlags", compatibleFlags);
@@ -241,7 +241,7 @@ public class ModifyApiGroupRequest extends Request {
         }
 
         /**
-         * The list of associated tags. Separate multiple tags with commas (,).
+         * CustomTraceConfig.
          */
         public Builder customTraceConfig(String customTraceConfig) {
             this.putQueryParameter("CustomTraceConfig", customTraceConfig);
@@ -250,7 +250,7 @@ public class ModifyApiGroupRequest extends Request {
         }
 
         /**
-         * Specifies whether to pass headers.
+         * CustomerConfigs.
          */
         public Builder customerConfigs(String customerConfigs) {
             this.putQueryParameter("CustomerConfigs", customerConfigs);
@@ -259,7 +259,7 @@ public class ModifyApiGroupRequest extends Request {
         }
 
         /**
-         * The RPC mode.
+         * DefaultDomain.
          */
         public Builder defaultDomain(String defaultDomain) {
             this.putQueryParameter("DefaultDomain", defaultDomain);
@@ -268,7 +268,7 @@ public class ModifyApiGroupRequest extends Request {
         }
 
         /**
-         * The user log configuration.
+         * Description.
          */
         public Builder description(String description) {
             this.putQueryParameter("Description", description);
@@ -277,7 +277,7 @@ public class ModifyApiGroupRequest extends Request {
         }
 
         /**
-         * The API group name must be globally unique. The name must be 4 to 50 characters in length. It must start with a letter and can contain letters, digits, and underscores (\_). If this parameter is not specified, the group name is not modified.
+         * GroupId.
          */
         public Builder groupId(String groupId) {
             this.putQueryParameter("GroupId", groupId);
@@ -286,7 +286,7 @@ public class ModifyApiGroupRequest extends Request {
         }
 
         /**
-         * The root path of the API.
+         * GroupName.
          */
         public Builder groupName(String groupName) {
             this.putQueryParameter("GroupName", groupName);
@@ -295,7 +295,7 @@ public class ModifyApiGroupRequest extends Request {
         }
 
         /**
-         * The default domain name.
+         * PassthroughHeaders.
          */
         public Builder passthroughHeaders(String passthroughHeaders) {
             this.putQueryParameter("PassthroughHeaders", passthroughHeaders);
@@ -304,7 +304,7 @@ public class ModifyApiGroupRequest extends Request {
         }
 
         /**
-         * The object tags that match the lifecycle rule. You can specify multiple tags.
+         * RpcPattern.
          */
         public Builder rpcPattern(String rpcPattern) {
             this.putQueryParameter("RpcPattern", rpcPattern);
@@ -322,7 +322,7 @@ public class ModifyApiGroupRequest extends Request {
         }
 
         /**
-         * The tags that are attached to the resources.
+         * Tag.
          */
         public Builder tag(java.util.List < Tag> tag) {
             this.putQueryParameter("Tag", tag);
@@ -331,7 +331,7 @@ public class ModifyApiGroupRequest extends Request {
         }
 
         /**
-         * The custom trace configuration.
+         * UserLogConfig.
          */
         public Builder userLogConfig(String userLogConfig) {
             this.putQueryParameter("UserLogConfig", userLogConfig);
@@ -387,7 +387,7 @@ public class ModifyApiGroupRequest extends Request {
             private String value; 
 
             /**
-             * The value of the tag.
+             * Key.
              */
             public Builder key(String key) {
                 this.key = key;
@@ -395,7 +395,7 @@ public class ModifyApiGroupRequest extends Request {
             }
 
             /**
-             * The ID of the request.
+             * Value.
              */
             public Builder value(String value) {
                 this.value = value;

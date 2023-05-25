@@ -84,7 +84,7 @@ public class ModifyApiGroupVpcWhitelistRequest extends Request {
         } 
 
         /**
-         * The ID of the API group.
+         * GroupId.
          */
         public Builder groupId(String groupId) {
             this.putQueryParameter("GroupId", groupId);
@@ -102,7 +102,7 @@ public class ModifyApiGroupVpcWhitelistRequest extends Request {
         }
 
         /**
-         * The ID of the VPC instance.
+         * VpcIds.
          */
         public Builder vpcIds(String vpcIds) {
             this.putQueryParameter("VpcIds", vpcIds);

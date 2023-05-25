@@ -122,7 +122,7 @@ public class DescribePurchasedApiGroupResponseBody extends TeaModel {
         private String status; 
 
         /**
-         * The region where the API group is located.
+         * Description.
          */
         public Builder description(String description) {
             this.description = description;
@@ -130,7 +130,7 @@ public class DescribePurchasedApiGroupResponseBody extends TeaModel {
         }
 
         /**
-         * The list of domain names.
+         * Domains.
          */
         public Builder domains(Domains domains) {
             this.domains = domains;
@@ -138,7 +138,7 @@ public class DescribePurchasedApiGroupResponseBody extends TeaModel {
         }
 
         /**
-         * The name of the API group.
+         * GroupId.
          */
         public Builder groupId(String groupId) {
             this.groupId = groupId;
@@ -146,7 +146,7 @@ public class DescribePurchasedApiGroupResponseBody extends TeaModel {
         }
 
         /**
-         * The description of the API group.
+         * GroupName.
          */
         public Builder groupName(String groupName) {
             this.groupName = groupName;
@@ -154,7 +154,7 @@ public class DescribePurchasedApiGroupResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * PurchasedTime.
          */
         public Builder purchasedTime(String purchasedTime) {
             this.purchasedTime = purchasedTime;
@@ -162,7 +162,7 @@ public class DescribePurchasedApiGroupResponseBody extends TeaModel {
         }
 
         /**
-         * The list of domain names.
+         * RegionId.
          */
         public Builder regionId(String regionId) {
             this.regionId = regionId;
@@ -170,7 +170,7 @@ public class DescribePurchasedApiGroupResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the API group.
+         * RequestId.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -178,7 +178,7 @@ public class DescribePurchasedApiGroupResponseBody extends TeaModel {
         }
 
         /**
-         * The time when the API group was purchased.
+         * Status.
          */
         public Builder status(String status) {
             this.status = status;
@@ -218,7 +218,7 @@ public class DescribePurchasedApiGroupResponseBody extends TeaModel {
             private String domainName; 
 
             /**
-             * auditing
+             * DomainName.
              */
             public Builder domainName(String domainName) {
                 this.domainName = domainName;

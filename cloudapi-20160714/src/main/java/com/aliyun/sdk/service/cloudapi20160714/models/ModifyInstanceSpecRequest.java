@@ -127,7 +127,7 @@ public class ModifyInstanceSpecRequest extends Request {
         } 
 
         /**
-         * The password.
+         * AutoPay.
          */
         public Builder autoPay(Boolean autoPay) {
             this.putQueryParameter("AutoPay", autoPay);
@@ -136,7 +136,7 @@ public class ModifyInstanceSpecRequest extends Request {
         }
 
         /**
-         * The specifications of the instance.
+         * InstanceId.
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -145,13 +145,7 @@ public class ModifyInstanceSpecRequest extends Request {
         }
 
         /**
-         * Specifies whether payment is automatically made during renewal. Valid values:
-         * <p>
-         * 
-         * *   **True**: Automatic payment is enabled. Make sure that your Alibaba Cloud account has adequate balance.
-         * *   **False**: Automatic payment is disabled. You have to manually pay in the console. Log on to the console. In the upper-right corner, choose **Expenses > User Center**. In the left-side navigation pane, click **Orders**. On the page that appears, find your order and complete the payment.
-         * 
-         * Default value: **False**.
+         * InstanceSpec.
          */
         public Builder instanceSpec(String instanceSpec) {
             this.putQueryParameter("InstanceSpec", instanceSpec);
@@ -160,7 +154,7 @@ public class ModifyInstanceSpecRequest extends Request {
         }
 
         /**
-         * Specifies whether to skip the Waiting for Traffic Switchover state. During the upgrade or downgrade, a new outbound IP address may be added to the API Gateway instance. The Waiting for Traffic Switchover state is used to remind users of adding the new outbound IP address to the whitelist. If you set the SkipWaitSwitch parameter to true, the instance does not enter the Waiting for Traffic Switchover state when a new outbound IP address is available. Instead, the system sends internal messages to the user.
+         * ModifyAction.
          */
         public Builder modifyAction(String modifyAction) {
             this.putQueryParameter("ModifyAction", modifyAction);
@@ -169,7 +163,7 @@ public class ModifyInstanceSpecRequest extends Request {
         }
 
         /**
-         * The ID of the request.
+         * SkipWaitSwitch.
          */
         public Builder skipWaitSwitch(Boolean skipWaitSwitch) {
             this.putQueryParameter("SkipWaitSwitch", skipWaitSwitch);
@@ -178,13 +172,7 @@ public class ModifyInstanceSpecRequest extends Request {
         }
 
         /**
-         * Specifies whether to upgrade or downgrade the instance. Valid values:
-         * <p>
-         * 
-         * *   **UPGRADE**
-         * *   **DOWNGRADE**
-         * 
-         * Default value: **UPGRADE**.
+         * Token.
          */
         public Builder token(String token) {
             this.putQueryParameter("Token", token);

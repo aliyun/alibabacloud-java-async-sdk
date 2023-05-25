@@ -142,7 +142,7 @@ public class ImportSwaggerRequest extends Request {
         } 
 
         /**
-         * The Swagger text content.
+         * Data.
          */
         public Builder data(String data) {
             this.putBodyParameter("Data", data);
@@ -151,11 +151,7 @@ public class ImportSwaggerRequest extends Request {
         }
 
         /**
-         * The Swagger text format:
-         * <p>
-         * 
-         * *   json
-         * *   yaml
+         * 382271
          */
         public Builder dataFormat(String dataFormat) {
             this.putQueryParameter("DataFormat", dataFormat);
@@ -164,7 +160,7 @@ public class ImportSwaggerRequest extends Request {
         }
 
         /**
-         * The pre-inspection.
+         * DryRun.
          */
         public Builder dryRun(Boolean dryRun) {
             this.putQueryParameter("DryRun", dryRun);
@@ -173,7 +169,7 @@ public class ImportSwaggerRequest extends Request {
         }
 
         /**
-         * The global conditions.
+         * Creates an API by importing Swagger-compliant data.
          */
         public Builder globalCondition(java.util.Map < String, ? > globalCondition) {
             String globalConditionShrink = shrink(globalCondition, "GlobalCondition", "json");
@@ -183,7 +179,7 @@ public class ImportSwaggerRequest extends Request {
         }
 
         /**
-         * The ID of the API group to which the Swagger is imported.
+         * GroupId.
          */
         public Builder groupId(String groupId) {
             this.putQueryParameter("GroupId", groupId);
@@ -192,10 +188,7 @@ public class ImportSwaggerRequest extends Request {
         }
 
         /**
-         * Specifies whether to overwrite the existing API.
-         * <p>
-         * 
-         * APIs with the same HTTP request type and backend request path are considered the same.
+         * 8e274ec61cf6468e83b68371956831cb
          */
         public Builder overwrite(Boolean overwrite) {
             this.putQueryParameter("Overwrite", overwrite);

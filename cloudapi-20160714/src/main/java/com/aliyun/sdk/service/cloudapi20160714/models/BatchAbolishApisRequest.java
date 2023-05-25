@@ -69,7 +69,7 @@ public class BatchAbolishApisRequest extends Request {
         } 
 
         /**
-         * The ID of the environment.
+         * Api.
          */
         public Builder api(java.util.List < Api> api) {
             this.putQueryParameter("Api", api);
@@ -158,7 +158,7 @@ public class BatchAbolishApisRequest extends Request {
             private String stageName; 
 
             /**
-             * The name of the environment.
+             * ApiUid.
              */
             public Builder apiUid(String apiUid) {
                 this.apiUid = apiUid;
@@ -166,7 +166,7 @@ public class BatchAbolishApisRequest extends Request {
             }
 
             /**
-             * The ID of the API.
+             * GroupId.
              */
             public Builder groupId(String groupId) {
                 this.groupId = groupId;
@@ -174,7 +174,7 @@ public class BatchAbolishApisRequest extends Request {
             }
 
             /**
-             * The ID of the API group.
+             * StageId.
              */
             public Builder stageId(String stageId) {
                 this.stageId = stageId;
@@ -182,7 +182,7 @@ public class BatchAbolishApisRequest extends Request {
             }
 
             /**
-             * The ID of the operation.
+             * StageName.
              */
             public Builder stageName(String stageName) {
                 this.stageName = stageName;

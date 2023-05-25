@@ -97,7 +97,7 @@ public class ListTagResourcesRequest extends Request {
         } 
 
         /**
-         * The token that determines the start point of the query.
+         * NextToken.
          */
         public Builder nextToken(String nextToken) {
             this.putQueryParameter("NextToken", nextToken);
@@ -106,10 +106,7 @@ public class ListTagResourcesRequest extends Request {
         }
 
         /**
-         * The ID of the resource.
-         * <p>
-         * 
-         * Valid values of N: `[1, 50]`.
+         * ResourceId.
          */
         public Builder resourceId(java.util.List < String > resourceId) {
             this.putQueryParameter("ResourceId", resourceId);
@@ -118,15 +115,7 @@ public class ListTagResourcesRequest extends Request {
         }
 
         /**
-         * The type of the resource.
-         * <p>
-         * 
-         * Tags are supported for API groups, plug-ins, and apps. Operations performed on APIs are based on the tags of API groups.
-         * 
-         * *   **apiGroup**
-         * *   **plugin**
-         * *   **app**
-         * *   **api**
+         * ResourceType.
          */
         public Builder resourceType(String resourceType) {
             this.putQueryParameter("ResourceType", resourceType);
@@ -135,7 +124,7 @@ public class ListTagResourcesRequest extends Request {
         }
 
         /**
-         * The tag of objects that match the rule. You can specify multiple tags.
+         * Tag.
          */
         public Builder tag(java.util.List < Tag> tag) {
             this.putQueryParameter("Tag", tag);
@@ -189,10 +178,7 @@ public class ListTagResourcesRequest extends Request {
             private String value; 
 
             /**
-             * The key of the tag.
-             * <p>
-             * 
-             * Valid values of N: `[1, 20]`.
+             * Key.
              */
             public Builder key(String key) {
                 this.key = key;
@@ -200,10 +186,7 @@ public class ListTagResourcesRequest extends Request {
             }
 
             /**
-             * The value of the tag. If the parameter has a value, you must specify a value for the tag key with the same N as **tag.N.Key**. Otherwise, an error is reported.
-             * <p>
-             * 
-             * Valid values of N: `[1, 20]`.
+             * Value.
              */
             public Builder value(String value) {
                 this.value = value;

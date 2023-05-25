@@ -124,7 +124,7 @@ public class CreateBackendModelRequest extends Request {
         } 
 
         /**
-         * The ID of the backend service.
+         * BackendId.
          */
         public Builder backendId(String backendId) {
             this.putQueryParameter("BackendId", backendId);
@@ -133,7 +133,7 @@ public class CreateBackendModelRequest extends Request {
         }
 
         /**
-         * The information about the backend model.
+         * BackendModelData.
          */
         public Builder backendModelData(String backendModelData) {
             this.putQueryParameter("BackendModelData", backendModelData);
@@ -142,7 +142,7 @@ public class CreateBackendModelRequest extends Request {
         }
 
         /**
-         * The type of the backend service.
+         * BackendType.
          */
         public Builder backendType(String backendType) {
             this.putQueryParameter("BackendType", backendType);
@@ -151,7 +151,7 @@ public class CreateBackendModelRequest extends Request {
         }
 
         /**
-         * The description of the backend model.
+         * Description.
          */
         public Builder description(String description) {
             this.putQueryParameter("Description", description);
@@ -169,11 +169,7 @@ public class CreateBackendModelRequest extends Request {
         }
 
         /**
-         * The name of the runtime environment. Valid values:
-         * <p>
-         * 
-         * *   **RELEASE**
-         * *   **TEST**
+         * StageName.
          */
         public Builder stageName(String stageName) {
             this.putQueryParameter("StageName", stageName);

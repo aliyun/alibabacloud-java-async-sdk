@@ -128,7 +128,7 @@ public class DryRunSwaggerRequest extends Request {
         } 
 
         /**
-         * The Swagger text content.
+         * Data.
          */
         public Builder data(String data) {
             this.putBodyParameter("Data", data);
@@ -137,11 +137,7 @@ public class DryRunSwaggerRequest extends Request {
         }
 
         /**
-         * The Swagger text format:
-         * <p>
-         * 
-         * *   json
-         * *   yaml
+         * DataFormat.
          */
         public Builder dataFormat(String dataFormat) {
             this.putQueryParameter("DataFormat", dataFormat);
@@ -150,7 +146,7 @@ public class DryRunSwaggerRequest extends Request {
         }
 
         /**
-         * The global condition.
+         * GlobalCondition.
          */
         public Builder globalCondition(java.util.Map < String, ? > globalCondition) {
             String globalConditionShrink = shrink(globalCondition, "GlobalCondition", "json");
@@ -160,7 +156,7 @@ public class DryRunSwaggerRequest extends Request {
         }
 
         /**
-         * The ID of the API group.
+         * GroupId.
          */
         public Builder groupId(String groupId) {
             this.putQueryParameter("GroupId", groupId);
@@ -169,10 +165,7 @@ public class DryRunSwaggerRequest extends Request {
         }
 
         /**
-         * Specifies whether to overwrite the existing API.
-         * <p>
-         * 
-         * APIs with the same HTTP request type and backend request path are considered the same.
+         * Overwrite.
          */
         public Builder overwrite(Boolean overwrite) {
             this.putQueryParameter("Overwrite", overwrite);

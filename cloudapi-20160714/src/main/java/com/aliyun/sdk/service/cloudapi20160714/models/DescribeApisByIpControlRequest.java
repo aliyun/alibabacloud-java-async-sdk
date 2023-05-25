@@ -98,7 +98,7 @@ public class DescribeApisByIpControlRequest extends Request {
         } 
 
         /**
-         * The ID of the ACL.
+         * The number of the page to return. Pages start from page 1. Default value: 1.
          */
         public Builder ipControlId(String ipControlId) {
             this.putQueryParameter("IpControlId", ipControlId);
@@ -107,7 +107,7 @@ public class DescribeApisByIpControlRequest extends Request {
         }
 
         /**
-         * The number of the page to return. Pages start from page 1. Default value: 1.
+         * The ID of the request.
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -116,7 +116,7 @@ public class DescribeApisByIpControlRequest extends Request {
         }
 
         /**
-         * The number of entries to return on each page. Maximum value: 100. Default value: 10.
+         * The page number of the returned page.
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);

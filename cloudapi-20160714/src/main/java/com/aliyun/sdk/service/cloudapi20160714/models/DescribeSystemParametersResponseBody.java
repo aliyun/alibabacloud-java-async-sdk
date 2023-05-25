@@ -50,7 +50,7 @@ public class DescribeSystemParametersResponseBody extends TeaModel {
         private SystemParams systemParams; 
 
         /**
-         * The ID of the request.
+         * Examples
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -58,7 +58,7 @@ public class DescribeSystemParametersResponseBody extends TeaModel {
         }
 
         /**
-         * The returned information about system parameters. It is an array that consists of SystemParam data.
+         * The description of a parameter.
          */
         public Builder systemParams(SystemParams systemParams) {
             this.systemParams = systemParams;
@@ -134,7 +134,7 @@ public class DescribeSystemParametersResponseBody extends TeaModel {
             private String paramType; 
 
             /**
-             * Examples
+             * Client IP Address
              */
             public Builder demoValue(String demoValue) {
                 this.demoValue = demoValue;
@@ -142,7 +142,7 @@ public class DescribeSystemParametersResponseBody extends TeaModel {
             }
 
             /**
-             * The description of a parameter.
+             * The name of the parameter.
              */
             public Builder description(String description) {
                 this.description = description;
@@ -150,7 +150,9 @@ public class DescribeSystemParametersResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the parameter.
+             * *   This API is intended for API callers.
+             * <p>
+             * *   The response of this API contains the system parameters that are optional in API definitions.
              */
             public Builder paramName(String paramName) {
                 this.paramName = paramName;
@@ -158,7 +160,7 @@ public class DescribeSystemParametersResponseBody extends TeaModel {
             }
 
             /**
-             * The type of the parameter.
+             * Queries the common parameters supported by the system.
              */
             public Builder paramType(String paramType) {
                 this.paramType = paramType;

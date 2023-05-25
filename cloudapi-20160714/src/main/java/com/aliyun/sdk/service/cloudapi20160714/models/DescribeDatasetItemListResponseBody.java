@@ -94,7 +94,7 @@ public class DescribeDatasetItemListResponseBody extends TeaModel {
         }
 
         /**
-         * The page number of the returned page.
+         * PageNumber.
          */
         public Builder pageNumber(Integer pageNumber) {
             this.pageNumber = pageNumber;
@@ -102,7 +102,7 @@ public class DescribeDatasetItemListResponseBody extends TeaModel {
         }
 
         /**
-         * The number of entries returned per page.
+         * PageSize.
          */
         public Builder pageSize(Integer pageSize) {
             this.pageSize = pageSize;
@@ -110,7 +110,7 @@ public class DescribeDatasetItemListResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * RequestId.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -118,7 +118,7 @@ public class DescribeDatasetItemListResponseBody extends TeaModel {
         }
 
         /**
-         * The total number of entries returned.
+         * TotalCount.
          */
         public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;
@@ -230,7 +230,7 @@ public class DescribeDatasetItemListResponseBody extends TeaModel {
             private String value; 
 
             /**
-             * The time when the data entry was created.
+             * CreatedTime.
              */
             public Builder createdTime(String createdTime) {
                 this.createdTime = createdTime;
@@ -238,7 +238,7 @@ public class DescribeDatasetItemListResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the dataset.
+             * DatasetId.
              */
             public Builder datasetId(String datasetId) {
                 this.datasetId = datasetId;
@@ -246,7 +246,7 @@ public class DescribeDatasetItemListResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the data entry.
+             * DatasetItemId.
              */
             public Builder datasetItemId(String datasetItemId) {
                 this.datasetItemId = datasetItemId;
@@ -254,7 +254,7 @@ public class DescribeDatasetItemListResponseBody extends TeaModel {
             }
 
             /**
-             * The description of the data entry.
+             * Description.
              */
             public Builder description(String description) {
                 this.description = description;
@@ -262,7 +262,7 @@ public class DescribeDatasetItemListResponseBody extends TeaModel {
             }
 
             /**
-             * The time in UTC when the data entry expires. The time is in the **yyyy-MM-ddTHH:mm:ssZ** format. If this parameter is empty, the data entry does not expire.
+             * ExpiredTime.
              */
             public Builder expiredTime(String expiredTime) {
                 this.expiredTime = expiredTime;
@@ -270,7 +270,7 @@ public class DescribeDatasetItemListResponseBody extends TeaModel {
             }
 
             /**
-             * The last modification time (UTC) of the data entry.
+             * ModifiedTime.
              */
             public Builder modifiedTime(String modifiedTime) {
                 this.modifiedTime = modifiedTime;
@@ -278,7 +278,7 @@ public class DescribeDatasetItemListResponseBody extends TeaModel {
             }
 
             /**
-             * The value of the data entry.
+             * Value.
              */
             public Builder value(String value) {
                 this.value = value;

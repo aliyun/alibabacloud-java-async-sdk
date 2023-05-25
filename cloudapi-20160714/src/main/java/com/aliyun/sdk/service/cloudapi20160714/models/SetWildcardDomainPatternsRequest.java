@@ -98,7 +98,7 @@ public class SetWildcardDomainPatternsRequest extends Request {
         } 
 
         /**
-         * The wildcard domain name mode.
+         * DomainName.
          */
         public Builder domainName(String domainName) {
             this.putQueryParameter("DomainName", domainName);
@@ -107,7 +107,7 @@ public class SetWildcardDomainPatternsRequest extends Request {
         }
 
         /**
-         * The custom domain name.
+         * GroupId.
          */
         public Builder groupId(String groupId) {
             this.putQueryParameter("GroupId", groupId);
@@ -125,7 +125,7 @@ public class SetWildcardDomainPatternsRequest extends Request {
         }
 
         /**
-         * The ID of the request.
+         * WildcardDomainPatterns.
          */
         public Builder wildcardDomainPatterns(String wildcardDomainPatterns) {
             this.putQueryParameter("WildcardDomainPatterns", wildcardDomainPatterns);

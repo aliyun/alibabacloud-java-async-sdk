@@ -97,7 +97,7 @@ public class DescribeApiDocRequest extends Request {
         } 
 
         /**
-         * The ID of the API.
+         * ApiId.
          */
         public Builder apiId(String apiId) {
             this.putQueryParameter("ApiId", apiId);
@@ -106,7 +106,7 @@ public class DescribeApiDocRequest extends Request {
         }
 
         /**
-         * The ID of the API group.
+         * GroupId.
          */
         public Builder groupId(String groupId) {
             this.putQueryParameter("GroupId", groupId);
@@ -124,13 +124,7 @@ public class DescribeApiDocRequest extends Request {
         }
 
         /**
-         * The name of the runtime environment. Valid values:
-         * <p>
-         * 
-         * *   **RELEASE**
-         * *   **TEST**
-         * 
-         * If this parameter is not specified, the default value is used, which is RELEASE.
+         * StageName.
          */
         public Builder stageName(String stageName) {
             this.putQueryParameter("StageName", stageName);

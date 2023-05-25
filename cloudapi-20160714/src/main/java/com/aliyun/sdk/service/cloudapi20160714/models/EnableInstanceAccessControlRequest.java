@@ -113,7 +113,7 @@ public class EnableInstanceAccessControlRequest extends Request {
         } 
 
         /**
-         * The ID of the access control policy.
+         * AclId.
          */
         public Builder aclId(String aclId) {
             this.putQueryParameter("AclId", aclId);
@@ -122,11 +122,7 @@ public class EnableInstanceAccessControlRequest extends Request {
         }
 
         /**
-         * The type of the access control policy. Valid values:
-         * <p>
-         * 
-         * *   black: blacklist
-         * *   white: whitelist
+         * AclType.
          */
         public Builder aclType(String aclType) {
             this.putQueryParameter("AclType", aclType);
@@ -144,7 +140,7 @@ public class EnableInstanceAccessControlRequest extends Request {
         }
 
         /**
-         * The ID of the instance.
+         * InstanceId.
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);

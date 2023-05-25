@@ -86,7 +86,11 @@ public class DescribeApisByTrafficControlResponseBody extends TeaModel {
         private Integer totalCount; 
 
         /**
-         * The returned API information. It is an array consisting of ApiInfo data.
+         * Indicates whether the API is public. Valid values:
+         * <p>
+         * 
+         * *   **PUBLIC**
+         * *   **PRIVATE**
          */
         public Builder apiInfos(ApiInfos apiInfos) {
             this.apiInfos = apiInfos;
@@ -94,7 +98,7 @@ public class DescribeApisByTrafficControlResponseBody extends TeaModel {
         }
 
         /**
-         * The page number of the returned page.
+         * The number of entries returned per page.
          */
         public Builder pageNumber(Integer pageNumber) {
             this.pageNumber = pageNumber;
@@ -102,7 +106,7 @@ public class DescribeApisByTrafficControlResponseBody extends TeaModel {
         }
 
         /**
-         * The number of entries returned per page.
+         * The returned API information. It is an array consisting of ApiInfo data.
          */
         public Builder pageSize(Integer pageSize) {
             this.pageSize = pageSize;
@@ -110,7 +114,7 @@ public class DescribeApisByTrafficControlResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * The total number of returned entries.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -118,7 +122,7 @@ public class DescribeApisByTrafficControlResponseBody extends TeaModel {
         }
 
         /**
-         * The total number of returned entries.
+         * The binding time of the API.
          */
         public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;
@@ -254,7 +258,7 @@ public class DescribeApisByTrafficControlResponseBody extends TeaModel {
             private String visibility; 
 
             /**
-             * The ID of the API.
+             * Description
              */
             public Builder apiId(String apiId) {
                 this.apiId = apiId;
@@ -262,7 +266,9 @@ public class DescribeApisByTrafficControlResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the API
+             * *   This API is intended for API providers.
+             * <p>
+             * *   You can specify PageNumber to obtain the result on the specified page.
              */
             public Builder apiName(String apiName) {
                 this.apiName = apiName;
@@ -270,7 +276,7 @@ public class DescribeApisByTrafficControlResponseBody extends TeaModel {
             }
 
             /**
-             * The binding time of the API.
+             * The ID of the API.
              */
             public Builder boundTime(String boundTime) {
                 this.boundTime = boundTime;
@@ -278,7 +284,7 @@ public class DescribeApisByTrafficControlResponseBody extends TeaModel {
             }
 
             /**
-             * The description of the API.
+             * The name of the group to which an API belongs.
              */
             public Builder description(String description) {
                 this.description = description;
@@ -286,26 +292,10 @@ public class DescribeApisByTrafficControlResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the API group.
+             * The name of the API
              */
             public Builder groupId(String groupId) {
                 this.groupId = groupId;
-                return this;
-            }
-
-            /**
-             * The name of the group to which an API belongs.
-             */
-            public Builder groupName(String groupName) {
-                this.groupName = groupName;
-                return this;
-            }
-
-            /**
-             * The region where the API is located.
-             */
-            public Builder regionId(String regionId) {
-                this.regionId = regionId;
                 return this;
             }
 
@@ -316,17 +306,29 @@ public class DescribeApisByTrafficControlResponseBody extends TeaModel {
              * *   **RELEASE**
              * *   **TEST**
              */
+            public Builder groupName(String groupName) {
+                this.groupName = groupName;
+                return this;
+            }
+
+            /**
+             * Queries the APIs to which a specified throttling policy is bound.
+             */
+            public Builder regionId(String regionId) {
+                this.regionId = regionId;
+                return this;
+            }
+
+            /**
+             * The region where the API is located.
+             */
             public Builder stageName(String stageName) {
                 this.stageName = stageName;
                 return this;
             }
 
             /**
-             * Indicates whether the API is public. Valid values:
-             * <p>
-             * 
-             * *   **PUBLIC**
-             * *   **PRIVATE**
+             * The description of the API.
              */
             public Builder visibility(String visibility) {
                 this.visibility = visibility;

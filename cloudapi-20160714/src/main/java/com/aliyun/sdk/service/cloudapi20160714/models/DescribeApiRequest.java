@@ -83,7 +83,7 @@ public class DescribeApiRequest extends Request {
         } 
 
         /**
-         * The ID of the API.
+         * Description
          */
         public Builder apiId(String apiId) {
             this.putQueryParameter("ApiId", apiId);
@@ -92,7 +92,7 @@ public class DescribeApiRequest extends Request {
         }
 
         /**
-         * The ID of the API.
+         * System parameters sent by API Gateway to the backend service
          */
         public Builder groupId(String groupId) {
             this.putQueryParameter("GroupId", groupId);

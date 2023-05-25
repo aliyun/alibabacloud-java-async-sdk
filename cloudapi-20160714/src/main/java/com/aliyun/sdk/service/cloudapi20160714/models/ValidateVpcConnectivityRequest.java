@@ -7,20 +7,11 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
- * {@link DisableInstanceAccessControlRequest} extends {@link RequestModel}
+ * {@link ValidateVpcConnectivityRequest} extends {@link RequestModel}
  *
- * <p>DisableInstanceAccessControlRequest</p>
+ * <p>ValidateVpcConnectivityRequest</p>
  */
-public class DisableInstanceAccessControlRequest extends Request {
-    @Query
-    @NameInMap("AclId")
-    @Validation(required = true)
-    private String aclId;
-
-    @Query
-    @NameInMap("AddressIPVersion")
-    private String addressIPVersion;
-
+public class ValidateVpcConnectivityRequest extends Request {
     @Query
     @NameInMap("InstanceId")
     @Validation(required = true)
@@ -30,39 +21,29 @@ public class DisableInstanceAccessControlRequest extends Request {
     @NameInMap("SecurityToken")
     private String securityToken;
 
-    private DisableInstanceAccessControlRequest(Builder builder) {
+    @Query
+    @NameInMap("VpcAccessId")
+    @Validation(required = true)
+    private String vpcAccessId;
+
+    private ValidateVpcConnectivityRequest(Builder builder) {
         super(builder);
-        this.aclId = builder.aclId;
-        this.addressIPVersion = builder.addressIPVersion;
         this.instanceId = builder.instanceId;
         this.securityToken = builder.securityToken;
+        this.vpcAccessId = builder.vpcAccessId;
     }
 
     public static Builder builder() {
         return new Builder();
     }
 
-    public static DisableInstanceAccessControlRequest create() {
+    public static ValidateVpcConnectivityRequest create() {
         return builder().build();
     }
 
     @Override
     public Builder toBuilder() {
         return new Builder(this);
-    }
-
-    /**
-     * @return aclId
-     */
-    public String getAclId() {
-        return this.aclId;
-    }
-
-    /**
-     * @return addressIPVersion
-     */
-    public String getAddressIPVersion() {
-        return this.addressIPVersion;
     }
 
     /**
@@ -79,41 +60,28 @@ public class DisableInstanceAccessControlRequest extends Request {
         return this.securityToken;
     }
 
-    public static final class Builder extends Request.Builder<DisableInstanceAccessControlRequest, Builder> {
-        private String aclId; 
-        private String addressIPVersion; 
+    /**
+     * @return vpcAccessId
+     */
+    public String getVpcAccessId() {
+        return this.vpcAccessId;
+    }
+
+    public static final class Builder extends Request.Builder<ValidateVpcConnectivityRequest, Builder> {
         private String instanceId; 
         private String securityToken; 
+        private String vpcAccessId; 
 
         private Builder() {
             super();
         } 
 
-        private Builder(DisableInstanceAccessControlRequest request) {
+        private Builder(ValidateVpcConnectivityRequest request) {
             super(request);
-            this.aclId = request.aclId;
-            this.addressIPVersion = request.addressIPVersion;
             this.instanceId = request.instanceId;
             this.securityToken = request.securityToken;
+            this.vpcAccessId = request.vpcAccessId;
         } 
-
-        /**
-         * AclId.
-         */
-        public Builder aclId(String aclId) {
-            this.putQueryParameter("AclId", aclId);
-            this.aclId = aclId;
-            return this;
-        }
-
-        /**
-         * AddressIPVersion.
-         */
-        public Builder addressIPVersion(String addressIPVersion) {
-            this.putQueryParameter("AddressIPVersion", addressIPVersion);
-            this.addressIPVersion = addressIPVersion;
-            return this;
-        }
 
         /**
          * InstanceId.
@@ -133,9 +101,18 @@ public class DisableInstanceAccessControlRequest extends Request {
             return this;
         }
 
+        /**
+         * VpcAccessId.
+         */
+        public Builder vpcAccessId(String vpcAccessId) {
+            this.putQueryParameter("VpcAccessId", vpcAccessId);
+            this.vpcAccessId = vpcAccessId;
+            return this;
+        }
+
         @Override
-        public DisableInstanceAccessControlRequest build() {
-            return new DisableInstanceAccessControlRequest(this);
+        public ValidateVpcConnectivityRequest build() {
+            return new ValidateVpcConnectivityRequest(this);
         } 
 
     } 

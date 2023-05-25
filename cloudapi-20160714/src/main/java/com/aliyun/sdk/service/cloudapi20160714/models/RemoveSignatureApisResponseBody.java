@@ -38,9 +38,7 @@ public class RemoveSignatureApisResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * *   This API is intended for API providers.
-         * <p>
-         * *   The operation takes effect immediately. The request sent from API Gateway to the backend service does not contain the signature string. The corresponding verification step can be removed from the backend.
+         * Unbinds a backend signature key from APIs.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

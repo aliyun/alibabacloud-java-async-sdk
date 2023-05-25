@@ -78,7 +78,7 @@ public class DeleteTrafficControlRequest extends Request {
         }
 
         /**
-         * The ID of the throttling policy.
+         * TrafficControlId.
          */
         public Builder trafficControlId(String trafficControlId) {
             this.putQueryParameter("TrafficControlId", trafficControlId);

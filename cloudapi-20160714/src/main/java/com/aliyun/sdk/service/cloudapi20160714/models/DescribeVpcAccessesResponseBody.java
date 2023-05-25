@@ -86,7 +86,7 @@ public class DescribeVpcAccessesResponseBody extends TeaModel {
         private VpcAccessAttributes vpcAccessAttributes; 
 
         /**
-         * The page number of the returned page.
+         * PageNumber.
          */
         public Builder pageNumber(Integer pageNumber) {
             this.pageNumber = pageNumber;
@@ -94,7 +94,7 @@ public class DescribeVpcAccessesResponseBody extends TeaModel {
         }
 
         /**
-         * The number of entries returned per page.
+         * PageSize.
          */
         public Builder pageSize(Integer pageSize) {
             this.pageSize = pageSize;
@@ -102,7 +102,7 @@ public class DescribeVpcAccessesResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * RequestId.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -110,7 +110,7 @@ public class DescribeVpcAccessesResponseBody extends TeaModel {
         }
 
         /**
-         * The total number of returned entries.
+         * TotalCount.
          */
         public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;
@@ -118,7 +118,7 @@ public class DescribeVpcAccessesResponseBody extends TeaModel {
         }
 
         /**
-         * The information about the VPC authorization. The information is an array consisting of VpcAccessAttribute data.
+         * VpcAccessAttributes.
          */
         public Builder vpcAccessAttributes(VpcAccessAttributes vpcAccessAttributes) {
             this.vpcAccessAttributes = vpcAccessAttributes;
@@ -254,7 +254,7 @@ public class DescribeVpcAccessesResponseBody extends TeaModel {
             private String vpcTargetHostName; 
 
             /**
-             * The time when the authorization was created.
+             * VPC授权的创建时间
              */
             public Builder createdTime(String createdTime) {
                 this.createdTime = createdTime;
@@ -262,7 +262,7 @@ public class DescribeVpcAccessesResponseBody extends TeaModel {
             }
 
             /**
-             * The description of the VPC authorization.
+             * VPC授权的描述
              */
             public Builder description(String description) {
                 this.description = description;
@@ -270,7 +270,7 @@ public class DescribeVpcAccessesResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of an ECS or SLB instance in the VPC.
+             * VPC中的后端服务信息
              */
             public Builder instanceId(String instanceId) {
                 this.instanceId = instanceId;
@@ -278,7 +278,7 @@ public class DescribeVpcAccessesResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the authorization.
+             * VPC授权名称
              */
             public Builder name(String name) {
                 this.name = name;
@@ -286,7 +286,7 @@ public class DescribeVpcAccessesResponseBody extends TeaModel {
             }
 
             /**
-             * The port number that corresponds to the instance.
+             * VPC中的后端服务端口
              */
             public Builder port(Integer port) {
                 this.port = port;
@@ -294,7 +294,7 @@ public class DescribeVpcAccessesResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the region.
+             * 地域id
              */
             public Builder regionId(String regionId) {
                 this.regionId = regionId;
@@ -302,7 +302,7 @@ public class DescribeVpcAccessesResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the VPC authorization.
+             * vpc授权ID
              */
             public Builder vpcAccessId(String vpcAccessId) {
                 this.vpcAccessId = vpcAccessId;
@@ -310,7 +310,7 @@ public class DescribeVpcAccessesResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the VPC.
+             * VPC的ID
              */
             public Builder vpcId(String vpcId) {
                 this.vpcId = vpcId;
@@ -318,7 +318,7 @@ public class DescribeVpcAccessesResponseBody extends TeaModel {
             }
 
             /**
-             * The host of the backend service.
+             * VpcTargetHostName.
              */
             public Builder vpcTargetHostName(String vpcTargetHostName) {
                 this.vpcTargetHostName = vpcTargetHostName;

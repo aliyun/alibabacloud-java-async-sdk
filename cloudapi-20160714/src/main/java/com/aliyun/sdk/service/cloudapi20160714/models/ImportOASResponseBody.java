@@ -122,7 +122,7 @@ public class ImportOASResponseBody extends TeaModel {
         private WarningMessages warningMessages; 
 
         /**
-         * The error messages that appear due to the invalid data in the imported file.
+         * ErrorMessages.
          */
         public Builder errorMessages(ErrorMessages errorMessages) {
             this.errorMessages = errorMessages;
@@ -130,7 +130,7 @@ public class ImportOASResponseBody extends TeaModel {
         }
 
         /**
-         * The APIs that failed to pass the precheck.
+         * FailedApis.
          */
         public Builder failedApis(FailedApis failedApis) {
             this.failedApis = failedApis;
@@ -138,7 +138,7 @@ public class ImportOASResponseBody extends TeaModel {
         }
 
         /**
-         * The information about the models that failed to pass the precheck.
+         * FailedModels.
          */
         public Builder failedModels(FailedModels failedModels) {
             this.failedModels = failedModels;
@@ -146,7 +146,7 @@ public class ImportOASResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the asynchronous API import task that was generated during the import operation. This ID is used to query the execution status of the API import task.
+         * OperationId.
          */
         public Builder operationId(String operationId) {
             this.operationId = operationId;
@@ -154,7 +154,7 @@ public class ImportOASResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * RequestId.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -162,7 +162,7 @@ public class ImportOASResponseBody extends TeaModel {
         }
 
         /**
-         * The information about the APIs that have passed the precheck.
+         * SuccessApis.
          */
         public Builder successApis(SuccessApis successApis) {
             this.successApis = successApis;
@@ -170,7 +170,7 @@ public class ImportOASResponseBody extends TeaModel {
         }
 
         /**
-         * The information about the models that have passed the precheck.
+         * SuccessModels.
          */
         public Builder successModels(SuccessModels successModels) {
             this.successModels = successModels;
@@ -178,7 +178,7 @@ public class ImportOASResponseBody extends TeaModel {
         }
 
         /**
-         * The warning messages that appear due to the invalid data in the imported file.
+         * WarningMessages.
          */
         public Builder warningMessages(WarningMessages warningMessages) {
             this.warningMessages = warningMessages;
@@ -283,7 +283,7 @@ public class ImportOASResponseBody extends TeaModel {
             private String path; 
 
             /**
-             * The error message.
+             * ErrorMsg.
              */
             public Builder errorMsg(String errorMsg) {
                 this.errorMsg = errorMsg;
@@ -291,7 +291,7 @@ public class ImportOASResponseBody extends TeaModel {
             }
 
             /**
-             * The HTTP method configured when you created the API.
+             * HttpMethod.
              */
             public Builder httpMethod(String httpMethod) {
                 this.httpMethod = httpMethod;
@@ -299,7 +299,7 @@ public class ImportOASResponseBody extends TeaModel {
             }
 
             /**
-             * The request path configured when you created the API.
+             * Path.
              */
             public Builder path(String path) {
                 this.path = path;
@@ -405,7 +405,7 @@ public class ImportOASResponseBody extends TeaModel {
             private String modelName; 
 
             /**
-             * The error message.
+             * ErrorMsg.
              */
             public Builder errorMsg(String errorMsg) {
                 this.errorMsg = errorMsg;
@@ -413,7 +413,7 @@ public class ImportOASResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the API group.
+             * GroupId.
              */
             public Builder groupId(String groupId) {
                 this.groupId = groupId;
@@ -421,7 +421,7 @@ public class ImportOASResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the model.
+             * ModelName.
              */
             public Builder modelName(String modelName) {
                 this.modelName = modelName;
@@ -539,7 +539,7 @@ public class ImportOASResponseBody extends TeaModel {
             private String path; 
 
             /**
-             * The ID of the API.
+             * ApiId.
              */
             public Builder apiId(String apiId) {
                 this.apiId = apiId;
@@ -547,7 +547,7 @@ public class ImportOASResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates that the operation is CREATE or MODIFY.
+             * ApiOperation.
              */
             public Builder apiOperation(String apiOperation) {
                 this.apiOperation = apiOperation;
@@ -555,7 +555,7 @@ public class ImportOASResponseBody extends TeaModel {
             }
 
             /**
-             * The HTTP method configured when you created the API.
+             * HttpMethod.
              */
             public Builder httpMethod(String httpMethod) {
                 this.httpMethod = httpMethod;
@@ -563,7 +563,7 @@ public class ImportOASResponseBody extends TeaModel {
             }
 
             /**
-             * The request path configured when you created the API.
+             * Path.
              */
             public Builder path(String path) {
                 this.path = path;
@@ -681,7 +681,7 @@ public class ImportOASResponseBody extends TeaModel {
             private String modelUid; 
 
             /**
-             * The ID of the API group.
+             * GroupId.
              */
             public Builder groupId(String groupId) {
                 this.groupId = groupId;
@@ -689,7 +689,7 @@ public class ImportOASResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the model.
+             * ModelName.
              */
             public Builder modelName(String modelName) {
                 this.modelName = modelName;
@@ -697,7 +697,7 @@ public class ImportOASResponseBody extends TeaModel {
             }
 
             /**
-             * The operation of the model. Valid values: CREATE and MODIFY.
+             * ModelOperation.
              */
             public Builder modelOperation(String modelOperation) {
                 this.modelOperation = modelOperation;
@@ -705,7 +705,7 @@ public class ImportOASResponseBody extends TeaModel {
             }
 
             /**
-             * The UID of the model.
+             * ModelUid.
              */
             public Builder modelUid(String modelUid) {
                 this.modelUid = modelUid;

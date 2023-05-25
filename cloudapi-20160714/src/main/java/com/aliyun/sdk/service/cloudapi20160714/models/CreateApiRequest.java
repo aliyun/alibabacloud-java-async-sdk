@@ -445,10 +445,10 @@ public class CreateApiRequest extends Request {
         }
 
         /**
-         * If **AuthType** is set to **APP**, the valid values are:
+         * If the **AuthType** parameter is set to **APP**, the valid values are:
          * <p>
          * 
-         * *   **DEFAULT**: The default value that is used if no other values are passed. This value means that the setting of the group is used.
+         * *   **DEFAULT**: The default value that is used if no other values are passed. This value indicates that the settings of the group are used.
          * *   **DISABLE**: The authentication is disabled.
          * *   **HEADER**: AppCode can be placed in the Header parameter for authentication.
          * *   **HEADER_QUERY**: AppCode can be placed in the Header or Query parameter for authentication.
@@ -701,10 +701,10 @@ public class CreateApiRequest extends Request {
          * The type of the two-way communication API.
          * <p>
          * 
-         * *   **COMMON**: normal APIs
-         * *   **REGISTER**: registered APIs
-         * *   **UNREGISTER**: unregistered APIs
-         * *   **NOTIFY**: downstream notification APIs
+         * *   **COMMON**: common API
+         * *   **REGISTER**: registered API
+         * *   **UNREGISTER**: unregistered API
+         * *   **NOTIFY**: downstream notification API
          */
         public Builder webSocketApiType(String webSocketApiType) {
             this.putQueryParameter("WebSocketApiType", webSocketApiType);

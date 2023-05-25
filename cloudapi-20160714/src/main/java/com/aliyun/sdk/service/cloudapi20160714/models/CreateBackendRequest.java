@@ -112,7 +112,7 @@ public class CreateBackendRequest extends Request {
         } 
 
         /**
-         * The name of the backend service.
+         * BackendName.
          */
         public Builder backendName(String backendName) {
             this.putQueryParameter("BackendName", backendName);
@@ -121,7 +121,7 @@ public class CreateBackendRequest extends Request {
         }
 
         /**
-         * The type of the backend service. Valid values: `HTTP, VPC, FC_EVENT, FC_HTTP, OSS, and MOCK`.
+         * BackendType.
          */
         public Builder backendType(String backendType) {
             this.putQueryParameter("BackendType", backendType);
@@ -130,7 +130,7 @@ public class CreateBackendRequest extends Request {
         }
 
         /**
-         * Specifies whether to create a role associated with EventBridge.
+         * CreateEventBridgeServiceLinkedRole.
          */
         public Builder createEventBridgeServiceLinkedRole(Boolean createEventBridgeServiceLinkedRole) {
             this.putQueryParameter("CreateEventBridgeServiceLinkedRole", createEventBridgeServiceLinkedRole);
@@ -139,7 +139,7 @@ public class CreateBackendRequest extends Request {
         }
 
         /**
-         * The description of the backend service.
+         * Description.
          */
         public Builder description(String description) {
             this.putQueryParameter("Description", description);

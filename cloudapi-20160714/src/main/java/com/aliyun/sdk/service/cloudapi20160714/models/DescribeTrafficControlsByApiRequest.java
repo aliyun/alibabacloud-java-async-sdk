@@ -99,7 +99,7 @@ public class DescribeTrafficControlsByApiRequest extends Request {
         } 
 
         /**
-         * The ID of the API.
+         * The ID of the request.
          */
         public Builder apiId(String apiId) {
             this.putQueryParameter("ApiId", apiId);
@@ -108,7 +108,11 @@ public class DescribeTrafficControlsByApiRequest extends Request {
         }
 
         /**
-         * The ID of the group to which the API to be queried belongs.
+         * The runtime environment of the API. Valid values:
+         * <p>
+         * 
+         * *   **RELEASE**
+         * *   **TEST**
          */
         public Builder groupId(String groupId) {
             this.putQueryParameter("GroupId", groupId);
@@ -126,11 +130,7 @@ public class DescribeTrafficControlsByApiRequest extends Request {
         }
 
         /**
-         * The runtime environment of the API. Valid values:
-         * <p>
-         * 
-         * *   **RELEASE**
-         * *   **TEST**
+         * The returned throttling policy information. It is an array consisting of TrafficControlItem data.
          */
         public Builder stageName(String stageName) {
             this.putQueryParameter("StageName", stageName);

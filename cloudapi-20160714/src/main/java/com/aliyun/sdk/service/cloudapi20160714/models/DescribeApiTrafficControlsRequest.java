@@ -127,7 +127,7 @@ public class DescribeApiTrafficControlsRequest extends Request {
         } 
 
         /**
-         * The number of the page to return. Pages start from page 1. Default value: 1.
+         * The number of entries to return on each page. Maximum value: 100. Default value: 10.
          */
         public Builder apiIds(String apiIds) {
             this.putQueryParameter("ApiIds", apiIds);
@@ -136,7 +136,7 @@ public class DescribeApiTrafficControlsRequest extends Request {
         }
 
         /**
-         * The IDs of APIs that you want to query. Separate multiple API IDs with commas (,). A maximum of 100 API IDs can be entered.
+         * The number of the page to return. Pages start from page 1. Default value: 1.
          */
         public Builder groupId(String groupId) {
             this.putQueryParameter("GroupId", groupId);
@@ -145,7 +145,7 @@ public class DescribeApiTrafficControlsRequest extends Request {
         }
 
         /**
-         * The number of entries to return on each page. Maximum value: 100. Default value: 10.
+         * The page number of the returned page.
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -154,7 +154,7 @@ public class DescribeApiTrafficControlsRequest extends Request {
         }
 
         /**
-         * The page number of the returned page.
+         * The ID of the request.
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -172,7 +172,7 @@ public class DescribeApiTrafficControlsRequest extends Request {
         }
 
         /**
-         * The ID of the API group that you want to query.
+         * The IDs of APIs that you want to query. Separate multiple API IDs with commas (,). A maximum of 100 API IDs can be entered.
          */
         public Builder stageName(String stageName) {
             this.putQueryParameter("StageName", stageName);

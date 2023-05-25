@@ -98,7 +98,7 @@ public class BatchDeployApisRequest extends Request {
         } 
 
         /**
-         * The APIs that you want to operate.
+         * b4f5c342b8bc4ef88ccda0332402e0fa
          */
         public Builder api(java.util.List < Api> api) {
             this.putQueryParameter("Api", api);
@@ -107,7 +107,7 @@ public class BatchDeployApisRequest extends Request {
         }
 
         /**
-         * The description.
+         * 2b35dd68345b472f8051647306a16415
          */
         public Builder description(String description) {
             this.putQueryParameter("Description", description);
@@ -125,12 +125,7 @@ public class BatchDeployApisRequest extends Request {
         }
 
         /**
-         * The name of the runtime environment. Valid values:
-         * <p>
-         * 
-         * *   **RELEASE**
-         * *   **TEST**
-         * *   PRE: the pre-release environment
+         * The description.
          */
         public Builder stageName(String stageName) {
             this.putQueryParameter("StageName", stageName);
@@ -186,7 +181,7 @@ public class BatchDeployApisRequest extends Request {
             private String groupId; 
 
             /**
-             * The ID of the API.
+             * Publishes multiple APIs at a time.
              */
             public Builder apiUid(String apiUid) {
                 this.apiUid = apiUid;
@@ -194,7 +189,7 @@ public class BatchDeployApisRequest extends Request {
             }
 
             /**
-             * The ID of the API group.
+             * The APIs that you want to operate.
              */
             public Builder groupId(String groupId) {
                 this.groupId = groupId;

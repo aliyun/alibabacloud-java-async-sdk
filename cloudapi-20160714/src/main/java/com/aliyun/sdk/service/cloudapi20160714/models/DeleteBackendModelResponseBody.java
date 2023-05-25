@@ -50,7 +50,7 @@ public class DeleteBackendModelResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The ID of the operation.
+         * OperationId.
          */
         public Builder operationId(String operationId) {
             this.operationId = operationId;
@@ -58,7 +58,7 @@ public class DeleteBackendModelResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * RequestId.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

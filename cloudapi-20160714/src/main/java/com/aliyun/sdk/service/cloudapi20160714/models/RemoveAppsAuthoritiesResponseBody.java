@@ -38,7 +38,7 @@ public class RemoveAppsAuthoritiesResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The ID of the request.
+         * Revokes the access permissions on a specified API from multiple applications. In this case, multiple applications map to a single API.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

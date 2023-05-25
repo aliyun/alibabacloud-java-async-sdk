@@ -152,7 +152,7 @@ public class DescribeVpcAccessesRequest extends Request {
         } 
 
         /**
-         * The ID of the instance.
+         * 实例ID
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -161,7 +161,7 @@ public class DescribeVpcAccessesRequest extends Request {
         }
 
         /**
-         * The unique custom name for authorization.
+         * VPC授权名称
          */
         public Builder name(String name) {
             this.putQueryParameter("Name", name);
@@ -170,7 +170,7 @@ public class DescribeVpcAccessesRequest extends Request {
         }
 
         /**
-         * The number of the page to return. Pages start from page 1. Default value: 1.
+         * 当前页码
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -179,7 +179,7 @@ public class DescribeVpcAccessesRequest extends Request {
         }
 
         /**
-         * The number of entries to return on each page. Maximum value: 100. Default value: 10.
+         * 每页展示条目
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -188,7 +188,7 @@ public class DescribeVpcAccessesRequest extends Request {
         }
 
         /**
-         * The service port.
+         * 端口号
          */
         public Builder port(String port) {
             this.putQueryParameter("Port", port);
@@ -206,7 +206,7 @@ public class DescribeVpcAccessesRequest extends Request {
         }
 
         /**
-         * The ID of the VPC authorization.
+         * Vpc授权ID
          */
         public Builder vpcAccessId(String vpcAccessId) {
             this.putQueryParameter("VpcAccessId", vpcAccessId);
@@ -215,7 +215,7 @@ public class DescribeVpcAccessesRequest extends Request {
         }
 
         /**
-         * The ID of the VPC.
+         * Vpc ID
          */
         public Builder vpcId(String vpcId) {
             this.putQueryParameter("VpcId", vpcId);

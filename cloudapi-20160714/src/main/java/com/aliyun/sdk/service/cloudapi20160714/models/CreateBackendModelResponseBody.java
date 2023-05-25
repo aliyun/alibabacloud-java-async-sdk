@@ -50,7 +50,7 @@ public class CreateBackendModelResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The ID of the backend model.
+         * BackendModelId.
          */
         public Builder backendModelId(String backendModelId) {
             this.backendModelId = backendModelId;
@@ -58,7 +58,7 @@ public class CreateBackendModelResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * RequestId.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

@@ -68,7 +68,7 @@ public class DescribeAccessControlListAttributeRequest extends Request {
         } 
 
         /**
-         * The ID of the access control policy.
+         * AclId.
          */
         public Builder aclId(String aclId) {
             this.putQueryParameter("AclId", aclId);

@@ -194,7 +194,7 @@ public class DescribeDeployedApisRequest extends Request {
         } 
 
         /**
-         * The name of the API. The name is used for fuzzy match.
+         * ApiId.
          */
         public Builder apiId(String apiId) {
             this.putQueryParameter("ApiId", apiId);
@@ -212,7 +212,7 @@ public class DescribeDeployedApisRequest extends Request {
         }
 
         /**
-         * The number of the page to return. Pages start from page 1. Default value: 1.
+         * ApiName.
          */
         public Builder apiName(String apiName) {
             this.putQueryParameter("ApiName", apiName);
@@ -230,7 +230,7 @@ public class DescribeDeployedApisRequest extends Request {
         }
 
         /**
-         * The list of tags.
+         * EnableTagAuth.
          */
         public Builder enableTagAuth(Boolean enableTagAuth) {
             this.putQueryParameter("EnableTagAuth", enableTagAuth);
@@ -239,11 +239,7 @@ public class DescribeDeployedApisRequest extends Request {
         }
 
         /**
-         * The name of the runtime environment. Valid values:
-         * <p>
-         * 
-         * *   **RELEASE**
-         * *   **TEST**
+         * GroupId.
          */
         public Builder groupId(String groupId) {
             this.putQueryParameter("GroupId", groupId);
@@ -252,7 +248,7 @@ public class DescribeDeployedApisRequest extends Request {
         }
 
         /**
-         * The number of entries to return on each page. Maximum value: 100. Default value: 10.
+         * PageNumber.
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -261,7 +257,7 @@ public class DescribeDeployedApisRequest extends Request {
         }
 
         /**
-         * Specifies whether to enable tag verification.
+         * PageSize.
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -279,7 +275,7 @@ public class DescribeDeployedApisRequest extends Request {
         }
 
         /**
-         * The ID of the API.
+         * StageName.
          */
         public Builder stageName(String stageName) {
             this.putQueryParameter("StageName", stageName);
@@ -288,7 +284,7 @@ public class DescribeDeployedApisRequest extends Request {
         }
 
         /**
-         * The tag key.
+         * Tag.
          */
         public Builder tag(java.util.List < Tag> tag) {
             this.putQueryParameter("Tag", tag);
@@ -342,7 +338,7 @@ public class DescribeDeployedApisRequest extends Request {
             private String value; 
 
             /**
-             * The tag value.
+             * Key.
              */
             public Builder key(String key) {
                 this.key = key;
@@ -350,7 +346,7 @@ public class DescribeDeployedApisRequest extends Request {
             }
 
             /**
-             * The page number of the returned page.
+             * Value.
              */
             public Builder value(String value) {
                 this.value = value;

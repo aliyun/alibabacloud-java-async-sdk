@@ -38,9 +38,7 @@ public class SetSignatureApisResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * *   This API is intended for API providers.
-         * <p>
-         * *   This operation allows you to bind a signature key to an API. You can bind signature keys for up to 100 APIs at a time.
+         * Binds a signature key to APIs.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

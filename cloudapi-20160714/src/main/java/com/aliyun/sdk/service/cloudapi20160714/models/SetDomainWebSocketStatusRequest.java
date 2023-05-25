@@ -113,7 +113,7 @@ public class SetDomainWebSocketStatusRequest extends Request {
         } 
 
         /**
-         * The ID of the request.
+         * ActionValue.
          */
         public Builder actionValue(String actionValue) {
             this.putQueryParameter("ActionValue", actionValue);
@@ -122,7 +122,7 @@ public class SetDomainWebSocketStatusRequest extends Request {
         }
 
         /**
-         * The action.
+         * DomainName.
          */
         public Builder domainName(String domainName) {
             this.putQueryParameter("DomainName", domainName);
@@ -131,7 +131,7 @@ public class SetDomainWebSocketStatusRequest extends Request {
         }
 
         /**
-         * The custom domain name.
+         * GroupId.
          */
         public Builder groupId(String groupId) {
             this.putQueryParameter("GroupId", groupId);

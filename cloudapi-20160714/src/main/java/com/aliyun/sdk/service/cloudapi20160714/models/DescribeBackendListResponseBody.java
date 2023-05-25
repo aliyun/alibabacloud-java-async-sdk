@@ -86,7 +86,7 @@ public class DescribeBackendListResponseBody extends TeaModel {
         private Integer totalCount; 
 
         /**
-         * The backend services.
+         * BackendInfoList.
          */
         public Builder backendInfoList(java.util.List < BackendInfoList> backendInfoList) {
             this.backendInfoList = backendInfoList;
@@ -94,7 +94,7 @@ public class DescribeBackendListResponseBody extends TeaModel {
         }
 
         /**
-         * The number of the current page.
+         * PageNumber.
          */
         public Builder pageNumber(Integer pageNumber) {
             this.pageNumber = pageNumber;
@@ -102,7 +102,7 @@ public class DescribeBackendListResponseBody extends TeaModel {
         }
 
         /**
-         * The number of entries returned on each page.
+         * PageSize.
          */
         public Builder pageSize(Integer pageSize) {
             this.pageSize = pageSize;
@@ -110,7 +110,7 @@ public class DescribeBackendListResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * RequestId.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -118,7 +118,7 @@ public class DescribeBackendListResponseBody extends TeaModel {
         }
 
         /**
-         * The total number of entries returned.
+         * TotalCount.
          */
         public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;
@@ -218,7 +218,7 @@ public class DescribeBackendListResponseBody extends TeaModel {
             private String modifiedTime; 
 
             /**
-             * The ID of the backend service.
+             * BackendId.
              */
             public Builder backendId(String backendId) {
                 this.backendId = backendId;
@@ -226,7 +226,7 @@ public class DescribeBackendListResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the backend service.
+             * BackendName.
              */
             public Builder backendName(String backendName) {
                 this.backendName = backendName;
@@ -234,7 +234,7 @@ public class DescribeBackendListResponseBody extends TeaModel {
             }
 
             /**
-             * The type of the backend service.
+             * BackendType.
              */
             public Builder backendType(String backendType) {
                 this.backendType = backendType;
@@ -242,7 +242,7 @@ public class DescribeBackendListResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the backend service was created.
+             * CreatedTime.
              */
             public Builder createdTime(String createdTime) {
                 this.createdTime = createdTime;
@@ -250,7 +250,7 @@ public class DescribeBackendListResponseBody extends TeaModel {
             }
 
             /**
-             * The description of the backend service.
+             * Description.
              */
             public Builder description(String description) {
                 this.description = description;
@@ -258,7 +258,7 @@ public class DescribeBackendListResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the backend service was modified.
+             * ModifiedTime.
              */
             public Builder modifiedTime(String modifiedTime) {
                 this.modifiedTime = modifiedTime;

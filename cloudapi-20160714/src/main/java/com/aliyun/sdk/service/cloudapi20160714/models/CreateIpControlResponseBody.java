@@ -50,7 +50,7 @@ public class CreateIpControlResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The ID of the ACL.
+         * IpControlId.
          */
         public Builder ipControlId(String ipControlId) {
             this.ipControlId = ipControlId;
@@ -58,7 +58,7 @@ public class CreateIpControlResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * RequestId.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

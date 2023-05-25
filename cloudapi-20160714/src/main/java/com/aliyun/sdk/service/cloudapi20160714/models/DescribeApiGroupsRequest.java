@@ -166,7 +166,7 @@ public class DescribeApiGroupsRequest extends Request {
         } 
 
         /**
-         * The ID of the instance.
+         * EnableTagAuth.
          */
         public Builder enableTagAuth(Boolean enableTagAuth) {
             this.putQueryParameter("EnableTagAuth", enableTagAuth);
@@ -175,7 +175,7 @@ public class DescribeApiGroupsRequest extends Request {
         }
 
         /**
-         * The keyword that can be specified in the name of the API group.
+         * GroupId.
          */
         public Builder groupId(String groupId) {
             this.putQueryParameter("GroupId", groupId);
@@ -184,7 +184,7 @@ public class DescribeApiGroupsRequest extends Request {
         }
 
         /**
-         * The number of the page to return. Pages start from page 1. Default value: 1.
+         * GroupName.
          */
         public Builder groupName(String groupName) {
             this.putQueryParameter("GroupName", groupName);
@@ -193,11 +193,7 @@ public class DescribeApiGroupsRequest extends Request {
         }
 
         /**
-         * The order. Valid values: asc and desc. Default value: desc.
-         * <p>
-         * 
-         * *   asc: The API groups are displayed in ascending order of modification time.
-         * *   desc: The API groups are displayed in descending order of modification time.
+         * InstanceId.
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -206,7 +202,7 @@ public class DescribeApiGroupsRequest extends Request {
         }
 
         /**
-         * The number of entries to return on each page. Maximum value: 50. Default value: 10.
+         * PageNumber.
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -215,7 +211,7 @@ public class DescribeApiGroupsRequest extends Request {
         }
 
         /**
-         * Specifies whether to enable tag verification.
+         * PageSize.
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -233,7 +229,7 @@ public class DescribeApiGroupsRequest extends Request {
         }
 
         /**
-         * The list of tags.
+         * Sort.
          */
         public Builder sort(String sort) {
             this.putQueryParameter("Sort", sort);
@@ -242,7 +238,7 @@ public class DescribeApiGroupsRequest extends Request {
         }
 
         /**
-         * The key of the tag.
+         * Tag.
          */
         public Builder tag(java.util.List < Tag> tag) {
             this.putQueryParameter("Tag", tag);
@@ -296,7 +292,7 @@ public class DescribeApiGroupsRequest extends Request {
             private String value; 
 
             /**
-             * The value of the tag.
+             * Key.
              */
             public Builder key(String key) {
                 this.key = key;
@@ -304,7 +300,7 @@ public class DescribeApiGroupsRequest extends Request {
             }
 
             /**
-             * The number of pages to return the results on.
+             * Value.
              */
             public Builder value(String value) {
                 this.value = value;

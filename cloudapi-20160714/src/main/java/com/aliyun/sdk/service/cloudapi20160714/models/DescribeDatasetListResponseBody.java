@@ -94,7 +94,7 @@ public class DescribeDatasetListResponseBody extends TeaModel {
         }
 
         /**
-         * The page number of the returned page.
+         * PageNumber.
          */
         public Builder pageNumber(Integer pageNumber) {
             this.pageNumber = pageNumber;
@@ -102,7 +102,7 @@ public class DescribeDatasetListResponseBody extends TeaModel {
         }
 
         /**
-         * The number of entries returned per page.
+         * PageSize.
          */
         public Builder pageSize(Integer pageSize) {
             this.pageSize = pageSize;
@@ -110,7 +110,7 @@ public class DescribeDatasetListResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * RequestId.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -118,7 +118,7 @@ public class DescribeDatasetListResponseBody extends TeaModel {
         }
 
         /**
-         * The total number of returned entries.
+         * TotalCount.
          */
         public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;
@@ -206,7 +206,7 @@ public class DescribeDatasetListResponseBody extends TeaModel {
             private String modifiedTime; 
 
             /**
-             * The creation time (UTC) of the dataset.
+             * CreatedTime.
              */
             public Builder createdTime(String createdTime) {
                 this.createdTime = createdTime;
@@ -214,7 +214,7 @@ public class DescribeDatasetListResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the dataset.
+             * DatasetId.
              */
             public Builder datasetId(String datasetId) {
                 this.datasetId = datasetId;
@@ -222,7 +222,7 @@ public class DescribeDatasetListResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the dataset.
+             * DatasetName.
              */
             public Builder datasetName(String datasetName) {
                 this.datasetName = datasetName;
@@ -230,12 +230,7 @@ public class DescribeDatasetListResponseBody extends TeaModel {
             }
 
             /**
-             * The type of the dataset. Valid values:
-             * <p>
-             * 
-             * *   JWT_BLOCKING: a JSON Web Token (JWT) blacklist
-             * *   IP_WHITELIST_CIDR : an IP address whitelist
-             * *   PARAMETER_ACCESS : parameter-based access control
+             * DatasetType.
              */
             public Builder datasetType(String datasetType) {
                 this.datasetType = datasetType;
@@ -243,7 +238,7 @@ public class DescribeDatasetListResponseBody extends TeaModel {
             }
 
             /**
-             * The last modification time (UTC) of the dataset.
+             * ModifiedTime.
              */
             public Builder modifiedTime(String modifiedTime) {
                 this.modifiedTime = modifiedTime;

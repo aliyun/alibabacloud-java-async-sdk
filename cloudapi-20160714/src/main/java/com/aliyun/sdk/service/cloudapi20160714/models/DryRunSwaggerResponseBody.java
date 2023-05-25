@@ -98,7 +98,7 @@ public class DryRunSwaggerResponseBody extends TeaModel {
         private Success success; 
 
         /**
-         * The APIs that failed to be created based on the Swagger-compliant data imported this time.
+         * Failed.
          */
         public Builder failed(Failed failed) {
             this.failed = failed;
@@ -106,7 +106,7 @@ public class DryRunSwaggerResponseBody extends TeaModel {
         }
 
         /**
-         * The global condition.
+         * GlobalCondition.
          */
         public Builder globalCondition(String globalCondition) {
             this.globalCondition = globalCondition;
@@ -114,7 +114,7 @@ public class DryRunSwaggerResponseBody extends TeaModel {
         }
 
         /**
-         * The models that failed to be imported through the Swagger-compliant data this time.
+         * ModelFailed.
          */
         public Builder modelFailed(ModelFailed modelFailed) {
             this.modelFailed = modelFailed;
@@ -122,7 +122,7 @@ public class DryRunSwaggerResponseBody extends TeaModel {
         }
 
         /**
-         * The models that failed to be imported through the Swagger-compliant data this time.
+         * ModelSuccess.
          */
         public Builder modelSuccess(ModelSuccess modelSuccess) {
             this.modelSuccess = modelSuccess;
@@ -130,7 +130,7 @@ public class DryRunSwaggerResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * RequestId.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -138,7 +138,7 @@ public class DryRunSwaggerResponseBody extends TeaModel {
         }
 
         /**
-         * The APIs that are created based on the Swagger-compliant data imported this time.
+         * Success.
          */
         public Builder success(Success success) {
             this.success = success;
@@ -202,7 +202,7 @@ public class DryRunSwaggerResponseBody extends TeaModel {
             private String path; 
 
             /**
-             * The error message returned when the API is created.
+             * ErrorMsg.
              */
             public Builder errorMsg(String errorMsg) {
                 this.errorMsg = errorMsg;
@@ -210,7 +210,7 @@ public class DryRunSwaggerResponseBody extends TeaModel {
             }
 
             /**
-             * The HTTP method configured when the API is created.
+             * HttpMethod.
              */
             public Builder httpMethod(String httpMethod) {
                 this.httpMethod = httpMethod;
@@ -218,7 +218,7 @@ public class DryRunSwaggerResponseBody extends TeaModel {
             }
 
             /**
-             * The request path configured when the API is created.
+             * Path.
              */
             public Builder path(String path) {
                 this.path = path;
@@ -324,7 +324,7 @@ public class DryRunSwaggerResponseBody extends TeaModel {
             private String modelName; 
 
             /**
-             * The error message.
+             * ErrorMsg.
              */
             public Builder errorMsg(String errorMsg) {
                 this.errorMsg = errorMsg;
@@ -332,7 +332,7 @@ public class DryRunSwaggerResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the API group.
+             * GroupId.
              */
             public Builder groupId(String groupId) {
                 this.groupId = groupId;
@@ -340,7 +340,7 @@ public class DryRunSwaggerResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the model.
+             * ModelName.
              */
             public Builder modelName(String modelName) {
                 this.modelName = modelName;
@@ -458,7 +458,7 @@ public class DryRunSwaggerResponseBody extends TeaModel {
             private String modelUid; 
 
             /**
-             * The ID of the API group.
+             * GroupId.
              */
             public Builder groupId(String groupId) {
                 this.groupId = groupId;
@@ -466,7 +466,7 @@ public class DryRunSwaggerResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the model.
+             * ModelName.
              */
             public Builder modelName(String modelName) {
                 this.modelName = modelName;
@@ -482,7 +482,7 @@ public class DryRunSwaggerResponseBody extends TeaModel {
             }
 
             /**
-             * The UID of the model.
+             * ModelUid.
              */
             public Builder modelUid(String modelUid) {
                 this.modelUid = modelUid;
@@ -612,7 +612,7 @@ public class DryRunSwaggerResponseBody extends TeaModel {
             private String path; 
 
             /**
-             * Specifies whether the operation is CREATE or MODIFY.
+             * ApiOperation.
              */
             public Builder apiOperation(String apiOperation) {
                 this.apiOperation = apiOperation;
@@ -620,7 +620,7 @@ public class DryRunSwaggerResponseBody extends TeaModel {
             }
 
             /**
-             * The API definition that complies with the Swagger specification.
+             * ApiSwagger.
              */
             public Builder apiSwagger(String apiSwagger) {
                 this.apiSwagger = apiSwagger;
@@ -628,7 +628,7 @@ public class DryRunSwaggerResponseBody extends TeaModel {
             }
 
             /**
-             * The UID of the successfully imported API.
+             * ApiUid.
              */
             public Builder apiUid(String apiUid) {
                 this.apiUid = apiUid;
@@ -636,7 +636,7 @@ public class DryRunSwaggerResponseBody extends TeaModel {
             }
 
             /**
-             * The HTTP method configured when the API is created.
+             * HttpMethod.
              */
             public Builder httpMethod(String httpMethod) {
                 this.httpMethod = httpMethod;
@@ -644,7 +644,7 @@ public class DryRunSwaggerResponseBody extends TeaModel {
             }
 
             /**
-             * The request path configured when the API is created.
+             * Path.
              */
             public Builder path(String path) {
                 this.path = path;

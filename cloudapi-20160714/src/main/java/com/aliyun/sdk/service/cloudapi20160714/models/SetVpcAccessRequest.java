@@ -142,7 +142,7 @@ public class SetVpcAccessRequest extends Request {
         } 
 
         /**
-         * The description.
+         * Description.
          */
         public Builder description(String description) {
             this.putQueryParameter("Description", description);
@@ -151,7 +151,7 @@ public class SetVpcAccessRequest extends Request {
         }
 
         /**
-         * The ID of an ECS or SLB instance in the VPC.
+         * InstanceId.
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -160,7 +160,7 @@ public class SetVpcAccessRequest extends Request {
         }
 
         /**
-         * The unique custom name for authorization.
+         * Name.
          */
         public Builder name(String name) {
             this.putQueryParameter("Name", name);
@@ -169,7 +169,7 @@ public class SetVpcAccessRequest extends Request {
         }
 
         /**
-         * The port number that corresponds to the instance.
+         * Port.
          */
         public Builder port(Integer port) {
             this.putQueryParameter("Port", port);
@@ -187,7 +187,7 @@ public class SetVpcAccessRequest extends Request {
         }
 
         /**
-         * The ID of the VPC. The VPC must be an available one that belongs to the same account as the API.
+         * VpcId.
          */
         public Builder vpcId(String vpcId) {
             this.putQueryParameter("VpcId", vpcId);
@@ -196,7 +196,7 @@ public class SetVpcAccessRequest extends Request {
         }
 
         /**
-         * The host of the backend service.
+         * VpcTargetHostName.
          */
         public Builder vpcTargetHostName(String vpcTargetHostName) {
             this.putQueryParameter("VpcTargetHostName", vpcTargetHostName);

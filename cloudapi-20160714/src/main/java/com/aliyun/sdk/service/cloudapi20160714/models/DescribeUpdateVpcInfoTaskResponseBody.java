@@ -50,7 +50,7 @@ public class DescribeUpdateVpcInfoTaskResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The result of the task.
+         * ApiUpdateVpcInfoResults.
          */
         public Builder apiUpdateVpcInfoResults(ApiUpdateVpcInfoResults apiUpdateVpcInfoResults) {
             this.apiUpdateVpcInfoResults = apiUpdateVpcInfoResults;
@@ -58,7 +58,7 @@ public class DescribeUpdateVpcInfoTaskResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * RequestId.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -182,7 +182,7 @@ public class DescribeUpdateVpcInfoTaskResponseBody extends TeaModel {
             private String updateStatus; 
 
             /**
-             * The name of the API.
+             * ApiName.
              */
             public Builder apiName(String apiName) {
                 this.apiName = apiName;
@@ -190,7 +190,7 @@ public class DescribeUpdateVpcInfoTaskResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the API.
+             * ApiUid.
              */
             public Builder apiUid(String apiUid) {
                 this.apiUid = apiUid;
@@ -198,7 +198,7 @@ public class DescribeUpdateVpcInfoTaskResponseBody extends TeaModel {
             }
 
             /**
-             * The error message.
+             * ErrorMsg.
              */
             public Builder errorMsg(String errorMsg) {
                 this.errorMsg = errorMsg;
@@ -206,7 +206,7 @@ public class DescribeUpdateVpcInfoTaskResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the API group.
+             * GroupId.
              */
             public Builder groupId(String groupId) {
                 this.groupId = groupId;
@@ -214,7 +214,7 @@ public class DescribeUpdateVpcInfoTaskResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the API group.
+             * GroupName.
              */
             public Builder groupName(String groupName) {
                 this.groupName = groupName;
@@ -222,7 +222,7 @@ public class DescribeUpdateVpcInfoTaskResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the stage.
+             * StageId.
              */
             public Builder stageId(String stageId) {
                 this.stageId = stageId;
@@ -230,7 +230,7 @@ public class DescribeUpdateVpcInfoTaskResponseBody extends TeaModel {
             }
 
             /**
-             * The environment to which the API is published.
+             * StageName.
              */
             public Builder stageName(String stageName) {
                 this.stageName = stageName;
@@ -238,7 +238,7 @@ public class DescribeUpdateVpcInfoTaskResponseBody extends TeaModel {
             }
 
             /**
-             * The update status.
+             * UpdateStatus.
              */
             public Builder updateStatus(String updateStatus) {
                 this.updateStatus = updateStatus;

@@ -84,7 +84,7 @@ public class DescribeDomainRequest extends Request {
         } 
 
         /**
-         * The private key of the SSL certificate.
+         * The custom domain name.
          */
         public Builder domainName(String domainName) {
             this.putQueryParameter("DomainName", domainName);
@@ -93,7 +93,7 @@ public class DescribeDomainRequest extends Request {
         }
 
         /**
-         * The custom domain name.
+         * The private key of the SSL certificate.
          */
         public Builder groupId(String groupId) {
             this.putQueryParameter("GroupId", groupId);

@@ -112,7 +112,7 @@ public class ModifyModelRequest extends Request {
         } 
 
         /**
-         * The description of the new model definition.
+         * The new definition of the model.
          */
         public Builder description(String description) {
             this.putQueryParameter("Description", description);
@@ -121,7 +121,7 @@ public class ModifyModelRequest extends Request {
         }
 
         /**
-         * The ID of the API group to which the model belongs.
+         * The new name of the model.
          */
         public Builder groupId(String groupId) {
             this.putQueryParameter("GroupId", groupId);
@@ -130,7 +130,7 @@ public class ModifyModelRequest extends Request {
         }
 
         /**
-         * The name of the model.
+         * The description of the new model definition.
          */
         public Builder modelName(String modelName) {
             this.putQueryParameter("ModelName", modelName);
@@ -139,7 +139,7 @@ public class ModifyModelRequest extends Request {
         }
 
         /**
-         * The new name of the model.
+         * The ID of the request.
          */
         public Builder newModelName(String newModelName) {
             this.putQueryParameter("NewModelName", newModelName);
@@ -148,7 +148,7 @@ public class ModifyModelRequest extends Request {
         }
 
         /**
-         * The new definition of the model.
+         * The ID of the API group to which the model belongs.
          */
         public Builder schema(String schema) {
             this.putQueryParameter("Schema", schema);

@@ -86,7 +86,7 @@ public class DescribeIpControlPolicyItemsResponseBody extends TeaModel {
         private Integer totalCount; 
 
         /**
-         * The information about policies. The information is an array of IpControlPolicyItem data.
+         * IpControlPolicyItems.
          */
         public Builder ipControlPolicyItems(IpControlPolicyItems ipControlPolicyItems) {
             this.ipControlPolicyItems = ipControlPolicyItems;
@@ -94,7 +94,7 @@ public class DescribeIpControlPolicyItemsResponseBody extends TeaModel {
         }
 
         /**
-         * The page number of the returned page.
+         * PageNumber.
          */
         public Builder pageNumber(Integer pageNumber) {
             this.pageNumber = pageNumber;
@@ -102,7 +102,7 @@ public class DescribeIpControlPolicyItemsResponseBody extends TeaModel {
         }
 
         /**
-         * The number of entries returned per page.
+         * PageSize.
          */
         public Builder pageSize(Integer pageSize) {
             this.pageSize = pageSize;
@@ -110,7 +110,7 @@ public class DescribeIpControlPolicyItemsResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * RequestId.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -118,7 +118,7 @@ public class DescribeIpControlPolicyItemsResponseBody extends TeaModel {
         }
 
         /**
-         * The total number of returned entries.
+         * TotalCount.
          */
         public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;
@@ -206,7 +206,7 @@ public class DescribeIpControlPolicyItemsResponseBody extends TeaModel {
             private String policyItemId; 
 
             /**
-             * The ID of the application.
+             * AppId.
              */
             public Builder appId(String appId) {
                 this.appId = appId;
@@ -214,7 +214,7 @@ public class DescribeIpControlPolicyItemsResponseBody extends TeaModel {
             }
 
             /**
-             * The IP addresses or CIDR blocks.
+             * CidrIp.
              */
             public Builder cidrIp(String cidrIp) {
                 this.cidrIp = cidrIp;
@@ -222,7 +222,7 @@ public class DescribeIpControlPolicyItemsResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the policy was created. The time is displayed in UTC.
+             * CreateTime.
              */
             public Builder createTime(String createTime) {
                 this.createTime = createTime;
@@ -230,7 +230,7 @@ public class DescribeIpControlPolicyItemsResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the policy was modified. The time is displayed in UTC.
+             * ModifiedTime.
              */
             public Builder modifiedTime(String modifiedTime) {
                 this.modifiedTime = modifiedTime;
@@ -238,7 +238,7 @@ public class DescribeIpControlPolicyItemsResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the policy.
+             * PolicyItemId.
              */
             public Builder policyItemId(String policyItemId) {
                 this.policyItemId = policyItemId;

@@ -38,7 +38,7 @@ public class SetIpControlApisResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The ID of the request.
+         * Creates a binding relationship between specified access control lists (ACLs) and APIs.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

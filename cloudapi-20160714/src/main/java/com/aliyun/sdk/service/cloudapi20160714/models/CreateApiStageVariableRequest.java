@@ -141,7 +141,7 @@ public class CreateApiStageVariableRequest extends Request {
         } 
 
         /**
-         * The ID of the runtime environment.
+         * GroupId.
          */
         public Builder groupId(String groupId) {
             this.putQueryParameter("GroupId", groupId);
@@ -159,7 +159,7 @@ public class CreateApiStageVariableRequest extends Request {
         }
 
         /**
-         * The name of the variable to be added. This parameter is case-sensitive.
+         * StageId.
          */
         public Builder stageId(String stageId) {
             this.putQueryParameter("StageId", stageId);
@@ -177,7 +177,7 @@ public class CreateApiStageVariableRequest extends Request {
         }
 
         /**
-         * The value of the variable.
+         * SupportRoute.
          */
         public Builder supportRoute(Boolean supportRoute) {
             this.putQueryParameter("SupportRoute", supportRoute);
@@ -186,7 +186,7 @@ public class CreateApiStageVariableRequest extends Request {
         }
 
         /**
-         * Specifies whether routing is supported.
+         * VariableName.
          */
         public Builder variableName(String variableName) {
             this.putQueryParameter("VariableName", variableName);
@@ -195,7 +195,7 @@ public class CreateApiStageVariableRequest extends Request {
         }
 
         /**
-         * The ID of the request.
+         * VariableValue.
          */
         public Builder variableValue(String variableValue) {
             this.putQueryParameter("VariableValue", variableValue);

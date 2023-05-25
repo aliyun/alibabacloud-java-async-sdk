@@ -110,7 +110,7 @@ public class DescribeAccessControlListsRequest extends Request {
         } 
 
         /**
-         * The name of the access control policy.
+         * AclName.
          */
         public Builder aclName(String aclName) {
             this.putQueryParameter("AclName", aclName);
@@ -128,7 +128,7 @@ public class DescribeAccessControlListsRequest extends Request {
         }
 
         /**
-         * The page number of the current page.
+         * PageNumber.
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -137,7 +137,7 @@ public class DescribeAccessControlListsRequest extends Request {
         }
 
         /**
-         * The number of entries to return on each page.
+         * PageSize.
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);

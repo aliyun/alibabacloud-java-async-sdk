@@ -84,7 +84,7 @@ public class ModifyDatasetRequest extends Request {
         } 
 
         /**
-         * The ID of the dataset.
+         * DatasetId.
          */
         public Builder datasetId(String datasetId) {
             this.putQueryParameter("DatasetId", datasetId);
@@ -93,7 +93,7 @@ public class ModifyDatasetRequest extends Request {
         }
 
         /**
-         * The name of the dataset.
+         * DatasetName.
          */
         public Builder datasetName(String datasetName) {
             this.putQueryParameter("DatasetName", datasetName);

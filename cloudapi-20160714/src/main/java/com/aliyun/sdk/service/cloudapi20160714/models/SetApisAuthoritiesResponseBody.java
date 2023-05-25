@@ -38,7 +38,7 @@ public class SetApisAuthoritiesResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The ID of the request.
+         * Authorizes a specified app to call multiple APIs.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

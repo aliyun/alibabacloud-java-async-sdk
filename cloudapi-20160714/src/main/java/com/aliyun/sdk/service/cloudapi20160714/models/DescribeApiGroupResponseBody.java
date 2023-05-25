@@ -718,6 +718,12 @@ public class DescribeApiGroupResponseBody extends TeaModel {
         @NameInMap("CertificateName")
         private String certificateName;
 
+        @NameInMap("CertificateValidEnd")
+        private Long certificateValidEnd;
+
+        @NameInMap("CertificateValidStart")
+        private Long certificateValidStart;
+
         @NameInMap("CustomDomainType")
         private String customDomainType;
 
@@ -752,6 +758,8 @@ public class DescribeApiGroupResponseBody extends TeaModel {
             this.bindStageName = builder.bindStageName;
             this.certificateId = builder.certificateId;
             this.certificateName = builder.certificateName;
+            this.certificateValidEnd = builder.certificateValidEnd;
+            this.certificateValidStart = builder.certificateValidStart;
             this.customDomainType = builder.customDomainType;
             this.domainBindingStatus = builder.domainBindingStatus;
             this.domainCNAMEStatus = builder.domainCNAMEStatus;
@@ -791,6 +799,20 @@ public class DescribeApiGroupResponseBody extends TeaModel {
          */
         public String getCertificateName() {
             return this.certificateName;
+        }
+
+        /**
+         * @return certificateValidEnd
+         */
+        public Long getCertificateValidEnd() {
+            return this.certificateValidEnd;
+        }
+
+        /**
+         * @return certificateValidStart
+         */
+        public Long getCertificateValidStart() {
+            return this.certificateValidStart;
         }
 
         /**
@@ -867,6 +889,8 @@ public class DescribeApiGroupResponseBody extends TeaModel {
             private String bindStageName; 
             private String certificateId; 
             private String certificateName; 
+            private Long certificateValidEnd; 
+            private Long certificateValidStart; 
             private String customDomainType; 
             private String domainBindingStatus; 
             private String domainCNAMEStatus; 
@@ -899,6 +923,22 @@ public class DescribeApiGroupResponseBody extends TeaModel {
              */
             public Builder certificateName(String certificateName) {
                 this.certificateName = certificateName;
+                return this;
+            }
+
+            /**
+             * CertificateValidEnd.
+             */
+            public Builder certificateValidEnd(Long certificateValidEnd) {
+                this.certificateValidEnd = certificateValidEnd;
+                return this;
+            }
+
+            /**
+             * CertificateValidStart.
+             */
+            public Builder certificateValidStart(Long certificateValidStart) {
+                this.certificateValidStart = certificateValidStart;
                 return this;
             }
 

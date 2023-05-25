@@ -108,7 +108,9 @@ public class DeleteTrafficSpecialControlRequest extends Request {
         }
 
         /**
-         * The ID of the app or Alibaba Cloud account. You can view your account ID on the [Account Management](https://account.console.aliyun.com/?spm=a2c4g.11186623.2.15.343130a8sDi8cO#/secure) page.
+         * *   This API is intended for API providers.
+         * <p>
+         * *   You can obtain the input parameters required in this operation by calling other APIs.
          */
         public Builder specialKey(String specialKey) {
             this.putQueryParameter("SpecialKey", specialKey);
@@ -117,11 +119,7 @@ public class DeleteTrafficSpecialControlRequest extends Request {
         }
 
         /**
-         * The type of the special throttling policy. Valid values:
-         * <p>
-         * 
-         * *   **APP**
-         * *   **USER**
+         * The ID of the request.
          */
         public Builder specialType(String specialType) {
             this.putQueryParameter("SpecialType", specialType);
@@ -130,7 +128,7 @@ public class DeleteTrafficSpecialControlRequest extends Request {
         }
 
         /**
-         * The ID of the throttling policy.
+         * The ID of the app or Alibaba Cloud account. You can view your account ID on the [Account Management](https://account.console.aliyun.com/?spm=a2c4g.11186623.2.15.343130a8sDi8cO#/secure) page.
          */
         public Builder trafficControlId(String trafficControlId) {
             this.putQueryParameter("TrafficControlId", trafficControlId);

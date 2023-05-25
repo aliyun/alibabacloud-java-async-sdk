@@ -125,7 +125,7 @@ public class CreateApiGroupRequest extends Request {
         } 
 
         /**
-         * The root path of the API.
+         * BasePath.
          */
         public Builder basePath(String basePath) {
             this.putQueryParameter("BasePath", basePath);
@@ -134,7 +134,7 @@ public class CreateApiGroupRequest extends Request {
         }
 
         /**
-         * The description of the API group. The description can be up to 180 characters in length.
+         * Description.
          */
         public Builder description(String description) {
             this.putQueryParameter("Description", description);
@@ -143,7 +143,7 @@ public class CreateApiGroupRequest extends Request {
         }
 
         /**
-         * The name of the API group. The name must be globally unique. The name must be 4 to 50 characters in length. It must start with a letter and can contain letters, digits, and underscores (\_).
+         * GroupName.
          */
         public Builder groupName(String groupName) {
             this.putQueryParameter("GroupName", groupName);
@@ -152,7 +152,7 @@ public class CreateApiGroupRequest extends Request {
         }
 
         /**
-         * The ID of the instance.
+         * InstanceId.
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -170,7 +170,7 @@ public class CreateApiGroupRequest extends Request {
         }
 
         /**
-         * The tag of objects that match the lifecycle rule. You can specify multiple tags.
+         * Tag.
          */
         public Builder tag(java.util.List < Tag> tag) {
             this.putQueryParameter("Tag", tag);
@@ -224,7 +224,7 @@ public class CreateApiGroupRequest extends Request {
             private String value; 
 
             /**
-             * The key of the tag.
+             * Key.
              */
             public Builder key(String key) {
                 this.key = key;
@@ -232,7 +232,7 @@ public class CreateApiGroupRequest extends Request {
             }
 
             /**
-             * The value of the tag.
+             * Value.
              */
             public Builder value(String value) {
                 this.value = value;

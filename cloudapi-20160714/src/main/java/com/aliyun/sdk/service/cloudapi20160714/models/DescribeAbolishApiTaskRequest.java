@@ -69,7 +69,7 @@ public class DescribeAbolishApiTaskRequest extends Request {
         } 
 
         /**
-         * The ID of the request.
+         * OperationUid.
          */
         public Builder operationUid(String operationUid) {
             this.putQueryParameter("OperationUid", operationUid);

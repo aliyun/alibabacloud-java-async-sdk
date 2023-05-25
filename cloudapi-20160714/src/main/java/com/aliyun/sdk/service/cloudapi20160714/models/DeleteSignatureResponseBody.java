@@ -38,7 +38,7 @@ public class DeleteSignatureResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The ID of the request.
+         * Deletes a backend signature key.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

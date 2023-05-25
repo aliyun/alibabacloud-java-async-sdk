@@ -197,7 +197,7 @@ public class ImportOASRequest extends Request {
         }
 
         /**
-         * The name of the backend service.
+         * BackendName.
          */
         public Builder backendName(String backendName) {
             this.putQueryParameter("BackendName", backendName);
@@ -206,7 +206,7 @@ public class ImportOASRequest extends Request {
         }
 
         /**
-         * The OAS-compliant text file or OSS object URL.
+         * Data.
          */
         public Builder data(String data) {
             this.putBodyParameter("Data", data);
@@ -215,7 +215,7 @@ public class ImportOASRequest extends Request {
         }
 
         /**
-         * The ID of the API group.
+         * GroupId.
          */
         public Builder groupId(String groupId) {
             this.putQueryParameter("GroupId", groupId);
@@ -224,7 +224,7 @@ public class ImportOASRequest extends Request {
         }
 
         /**
-         * Specifies whether to ignore alerts.
+         * IgnoreWarning.
          */
         public Builder ignoreWarning(Boolean ignoreWarning) {
             this.putQueryParameter("IgnoreWarning", ignoreWarning);
@@ -233,7 +233,7 @@ public class ImportOASRequest extends Request {
         }
 
         /**
-         * The OAS version.
+         * OASVersion.
          */
         public Builder OASVersion(String OASVersion) {
             this.putQueryParameter("OASVersion", OASVersion);
@@ -242,10 +242,7 @@ public class ImportOASRequest extends Request {
         }
 
         /**
-         * Specifies whether to overwrite an existing API.
-         * <p>
-         * 
-         * If an existing API has the same HTTP request type and backend request path as the API to be imported, the existing API is overwritten.
+         * Overwrite.
          */
         public Builder overwrite(Boolean overwrite) {
             this.putQueryParameter("Overwrite", overwrite);
@@ -254,11 +251,7 @@ public class ImportOASRequest extends Request {
         }
 
         /**
-         * The request mode. Valid values:
-         * <p>
-         * 
-         * *   MAPPING: Parameters are mapped. Unknown parameters are filtered out.
-         * *   PASSTHROUGH: Parameters are passed through.
+         * RequestMode.
          */
         public Builder requestMode(String requestMode) {
             this.putQueryParameter("RequestMode", requestMode);
@@ -276,7 +269,7 @@ public class ImportOASRequest extends Request {
         }
 
         /**
-         * Specifies whether to directly import the API without performing a precheck.
+         * SkipDryRun.
          */
         public Builder skipDryRun(Boolean skipDryRun) {
             this.putQueryParameter("SkipDryRun", skipDryRun);

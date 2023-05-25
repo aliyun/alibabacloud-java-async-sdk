@@ -113,7 +113,7 @@ public class RemoveVpcAccessRequest extends Request {
         } 
 
         /**
-         * The ID of an ECS or SLB instance in the VPC.
+         * InstanceId.
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -122,7 +122,7 @@ public class RemoveVpcAccessRequest extends Request {
         }
 
         /**
-         * Specifies whether batch work is required.
+         * NeedBatchWork.
          */
         public Builder needBatchWork(Boolean needBatchWork) {
             this.putQueryParameter("NeedBatchWork", needBatchWork);
@@ -131,7 +131,7 @@ public class RemoveVpcAccessRequest extends Request {
         }
 
         /**
-         * The port number that corresponds to the instance.
+         * Port.
          */
         public Builder port(Integer port) {
             this.putQueryParameter("Port", port);
@@ -149,7 +149,7 @@ public class RemoveVpcAccessRequest extends Request {
         }
 
         /**
-         * The ID of the VPC.
+         * VpcId.
          */
         public Builder vpcId(String vpcId) {
             this.putQueryParameter("VpcId", vpcId);

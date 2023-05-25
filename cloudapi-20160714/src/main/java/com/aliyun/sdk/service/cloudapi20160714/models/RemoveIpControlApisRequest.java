@@ -113,11 +113,7 @@ public class RemoveIpControlApisRequest extends Request {
         } 
 
         /**
-         * The ID of the API to be managed.
-         * <p>
-         * 
-         * *   If this parameter is not specified, all APIs of the API group are unbound in the specified environment by default.
-         * *   The IDs of the APIs that you want to query. Separate multiple IDs with commas (,). A maximum of 100 IDs can be entered.
+         * The ID of the request.
          */
         public Builder apiIds(String apiIds) {
             this.putQueryParameter("ApiIds", apiIds);
@@ -126,7 +122,11 @@ public class RemoveIpControlApisRequest extends Request {
         }
 
         /**
-         * The ID of the API group containing the API to be managed.
+         * The name of the runtime environment. Valid values:
+         * <p>
+         * 
+         * *   **RELEASE**
+         * *   **TEST**
          */
         public Builder groupId(String groupId) {
             this.putQueryParameter("GroupId", groupId);
@@ -135,7 +135,11 @@ public class RemoveIpControlApisRequest extends Request {
         }
 
         /**
-         * The ID of the ACL.
+         * The ID of the API to be managed.
+         * <p>
+         * 
+         * *   If this parameter is not specified, all APIs of the API group are unbound in the specified environment by default.
+         * *   The IDs of the APIs that you want to query. Separate multiple IDs with commas (,). A maximum of 100 IDs can be entered.
          */
         public Builder ipControlId(String ipControlId) {
             this.putQueryParameter("IpControlId", ipControlId);
@@ -153,11 +157,9 @@ public class RemoveIpControlApisRequest extends Request {
         }
 
         /**
-         * The name of the runtime environment. Valid values:
+         * *   This API is intended for API providers.
          * <p>
-         * 
-         * *   **RELEASE**
-         * *   **TEST**
+         * *   The unbinding takes effect immediately. After the API is unbound from the ACL, the corresponding environment does not have any IP address access control in place for the API.
          */
         public Builder stageName(String stageName) {
             this.putQueryParameter("StageName", stageName);

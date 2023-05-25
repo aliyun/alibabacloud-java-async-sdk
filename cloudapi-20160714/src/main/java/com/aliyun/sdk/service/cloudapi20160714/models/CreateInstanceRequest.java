@@ -240,13 +240,7 @@ public class CreateInstanceRequest extends Request {
         } 
 
         /**
-         * Specifies whether payment is automatically made during renewal. Valid values:
-         * <p>
-         * 
-         * *   **True**: Automatic payment is enabled. Make sure that your Alibaba Cloud account has adequate balance.
-         * *   **False**: Automatic payment is disabled. You have to manually pay in the console. Log on to the console. In the upper-right corner, choose **Expenses > User Center**. In the left-side navigation pane, click **Orders**. On the page that appears, find your order and complete the payment.
-         * 
-         * Default value: **False**.
+         * AutoPay.
          */
         public Builder autoPay(Boolean autoPay) {
             this.putQueryParameter("AutoPay", autoPay);
@@ -255,7 +249,7 @@ public class CreateInstanceRequest extends Request {
         }
 
         /**
-         * The billing method of the instance.
+         * ChargeType.
          */
         public Builder chargeType(String chargeType) {
             this.putQueryParameter("ChargeType", chargeType);
@@ -273,7 +267,7 @@ public class CreateInstanceRequest extends Request {
         }
 
         /**
-         * The HTTPS policy.
+         * HttpsPolicy.
          */
         public Builder httpsPolicy(String httpsPolicy) {
             this.putQueryParameter("HttpsPolicy", httpsPolicy);
@@ -291,7 +285,7 @@ public class CreateInstanceRequest extends Request {
         }
 
         /**
-         * The name of the instance.
+         * InstanceName.
          */
         public Builder instanceName(String instanceName) {
             this.putQueryParameter("InstanceName", instanceName);
@@ -300,7 +294,7 @@ public class CreateInstanceRequest extends Request {
         }
 
         /**
-         * The specifications of the instance.
+         * InstanceSpec.
          */
         public Builder instanceSpec(String instanceSpec) {
             this.putQueryParameter("InstanceSpec", instanceSpec);
@@ -336,7 +330,7 @@ public class CreateInstanceRequest extends Request {
         }
 
         /**
-         * The password.
+         * Token.
          */
         public Builder token(String token) {
             this.putQueryParameter("Token", token);
@@ -354,7 +348,7 @@ public class CreateInstanceRequest extends Request {
         }
 
         /**
-         * The zone.
+         * ZoneId.
          */
         public Builder zoneId(String zoneId) {
             this.putQueryParameter("ZoneId", zoneId);
@@ -526,7 +520,7 @@ public class CreateInstanceRequest extends Request {
             }
 
             /**
-             * The zone.
+             * ZoneId.
              */
             public Builder zoneId(String zoneId) {
                 this.zoneId = zoneId;

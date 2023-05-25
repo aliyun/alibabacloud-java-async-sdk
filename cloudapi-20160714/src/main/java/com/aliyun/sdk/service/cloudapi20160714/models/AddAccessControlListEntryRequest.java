@@ -83,13 +83,7 @@ public class AddAccessControlListEntryRequest extends Request {
         } 
 
         /**
-         * The ACL settings.
-         * <p>
-         * 
-         * *   entry: the entries that you want to add to the ACL. You can add CIDR blocks. Separate multiple CIDR blocks with commas (,).
-         * *   comment: the description of the ACL.
-         * 
-         * > You can add at most 50 IP addresses or CIDR blocks to an ACL in each call. If the IP address or CIDR block that you want to add to an ACL already exists, the IP address or CIDR block is not added. The entries that you add must be CIDR blocks.
+         * AclEntrys.
          */
         public Builder aclEntrys(String aclEntrys) {
             this.putQueryParameter("AclEntrys", aclEntrys);
@@ -98,7 +92,7 @@ public class AddAccessControlListEntryRequest extends Request {
         }
 
         /**
-         * The ID of the access control list (ACL).
+         * AclId.
          */
         public Builder aclId(String aclId) {
             this.putQueryParameter("AclId", aclId);

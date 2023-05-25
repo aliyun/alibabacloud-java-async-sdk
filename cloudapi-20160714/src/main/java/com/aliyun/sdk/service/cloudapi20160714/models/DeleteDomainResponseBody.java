@@ -38,7 +38,7 @@ public class DeleteDomainResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The ID of the request.
+         * Unbinds a custom domain name from a specified API group.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

@@ -86,7 +86,7 @@ public class DescribeModelsResponseBody extends TeaModel {
         private Integer totalCount; 
 
         /**
-         * The returned information about models. It is an array consisting of ModelDetail data.
+         * The ID of the API group to which the model belongs.
          */
         public Builder modelDetails(ModelDetails modelDetails) {
             this.modelDetails = modelDetails;
@@ -94,7 +94,7 @@ public class DescribeModelsResponseBody extends TeaModel {
         }
 
         /**
-         * The page number of the returned page.
+         * The number of entries returned per page.
          */
         public Builder pageNumber(Integer pageNumber) {
             this.pageNumber = pageNumber;
@@ -102,7 +102,7 @@ public class DescribeModelsResponseBody extends TeaModel {
         }
 
         /**
-         * The number of entries returned per page.
+         * The returned information about models. It is an array consisting of ModelDetail data.
          */
         public Builder pageSize(Integer pageSize) {
             this.pageSize = pageSize;
@@ -110,7 +110,7 @@ public class DescribeModelsResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * The total number of returned entries.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -118,7 +118,7 @@ public class DescribeModelsResponseBody extends TeaModel {
         }
 
         /**
-         * The total number of returned entries.
+         * The last modification time of the model.
          */
         public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;
@@ -242,7 +242,7 @@ public class DescribeModelsResponseBody extends TeaModel {
             private String schema; 
 
             /**
-             * The time when the model was created.
+             * The URI of the model.
              */
             public Builder createdTime(String createdTime) {
                 this.createdTime = createdTime;
@@ -250,7 +250,7 @@ public class DescribeModelsResponseBody extends TeaModel {
             }
 
             /**
-             * The definition of the model description.
+             * The name of the model.
              */
             public Builder description(String description) {
                 this.description = description;
@@ -258,7 +258,7 @@ public class DescribeModelsResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the API group to which the model belongs.
+             * The definition of the model.
              */
             public Builder groupId(String groupId) {
                 this.groupId = groupId;
@@ -266,7 +266,7 @@ public class DescribeModelsResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the model.
+             * *   Fuzzy queries are supported.
              */
             public Builder modelId(String modelId) {
                 this.modelId = modelId;
@@ -274,7 +274,7 @@ public class DescribeModelsResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the model.
+             * The ID of the model.
              */
             public Builder modelName(String modelName) {
                 this.modelName = modelName;
@@ -282,7 +282,7 @@ public class DescribeModelsResponseBody extends TeaModel {
             }
 
             /**
-             * The URI of the model.
+             * Obtains the created models of an API group.
              */
             public Builder modelRef(String modelRef) {
                 this.modelRef = modelRef;
@@ -290,7 +290,7 @@ public class DescribeModelsResponseBody extends TeaModel {
             }
 
             /**
-             * The last modification time of the model.
+             * The definition of the model description.
              */
             public Builder modifiedTime(String modifiedTime) {
                 this.modifiedTime = modifiedTime;
@@ -298,7 +298,7 @@ public class DescribeModelsResponseBody extends TeaModel {
             }
 
             /**
-             * The definition of the model.
+             * The time when the model was created.
              */
             public Builder schema(String schema) {
                 this.schema = schema;

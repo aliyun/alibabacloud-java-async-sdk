@@ -111,14 +111,7 @@ public class DescribeApisByBackendRequest extends Request {
         } 
 
         /**
-         * The environment to which the API is published.
-         * <p>
-         * 
-         * *   **RELEASE**
-         * *   **PRE**: the pre-release environment
-         * *   **TEST**
-         * 
-         * If you do not specify this parameter, APIs in the draft state are returned.
+         * BackendId.
          */
         public Builder backendId(String backendId) {
             this.putQueryParameter("BackendId", backendId);
@@ -127,7 +120,7 @@ public class DescribeApisByBackendRequest extends Request {
         }
 
         /**
-         * The number of the current page.
+         * PageNumber.
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -136,7 +129,7 @@ public class DescribeApisByBackendRequest extends Request {
         }
 
         /**
-         * The number of the current page.
+         * PageSize.
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -154,7 +147,7 @@ public class DescribeApisByBackendRequest extends Request {
         }
 
         /**
-         * The number of entries to return on each page.
+         * StageName.
          */
         public Builder stageName(String stageName) {
             this.putQueryParameter("StageName", stageName);

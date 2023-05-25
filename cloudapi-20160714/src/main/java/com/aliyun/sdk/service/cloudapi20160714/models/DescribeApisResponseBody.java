@@ -86,7 +86,7 @@ public class DescribeApisResponseBody extends TeaModel {
         private Integer totalCount; 
 
         /**
-         * The returned API definition. It is an array that consists of ApiSummary data.
+         * The queried API definitions.
          */
         public Builder apiSummarys(ApiSummarys apiSummarys) {
             this.apiSummarys = apiSummarys;
@@ -110,7 +110,7 @@ public class DescribeApisResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -182,7 +182,7 @@ public class DescribeApisResponseBody extends TeaModel {
             private String stageName; 
 
             /**
-             * DeployedStatus.
+             * The deployment status. Valid values: DEPLOYED and NONDEPLOYED.
              */
             public Builder deployedStatus(String deployedStatus) {
                 this.deployedStatus = deployedStatus;
@@ -190,7 +190,7 @@ public class DescribeApisResponseBody extends TeaModel {
             }
 
             /**
-             * EffectiveVersion.
+             * The deployed version.
              */
             public Builder effectiveVersion(String effectiveVersion) {
                 this.effectiveVersion = effectiveVersion;
@@ -198,7 +198,12 @@ public class DescribeApisResponseBody extends TeaModel {
             }
 
             /**
-             * StageName.
+             * Stage Name:
+             * <p>
+             * 
+             * *   **RELEASE**: production environment
+             * *   **PRE**: staging environment
+             * *   **TEST**: test environment
              */
             public Builder stageName(String stageName) {
                 this.stageName = stageName;
@@ -292,7 +297,7 @@ public class DescribeApisResponseBody extends TeaModel {
             private String tagValue; 
 
             /**
-             * TagKey.
+             * The tag key.
              */
             public Builder tagKey(String tagKey) {
                 this.tagKey = tagKey;
@@ -300,7 +305,7 @@ public class DescribeApisResponseBody extends TeaModel {
             }
 
             /**
-             * TagValue.
+             * The tag value.
              */
             public Builder tagValue(String tagValue) {
                 this.tagValue = tagValue;
@@ -526,7 +531,7 @@ public class DescribeApisResponseBody extends TeaModel {
             private String visibility; 
 
             /**
-             * The ID of the API.
+             * The API ID.
              */
             public Builder apiId(String apiId) {
                 this.apiId = apiId;
@@ -534,7 +539,7 @@ public class DescribeApisResponseBody extends TeaModel {
             }
 
             /**
-             * ApiMethod.
+             * The HTTP method of the API request.
              */
             public Builder apiMethod(String apiMethod) {
                 this.apiMethod = apiMethod;
@@ -542,7 +547,7 @@ public class DescribeApisResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the API operation.
+             * The API name.
              */
             public Builder apiName(String apiName) {
                 this.apiName = apiName;
@@ -550,7 +555,7 @@ public class DescribeApisResponseBody extends TeaModel {
             }
 
             /**
-             * ApiPath.
+             * The request path of the API.
              */
             public Builder apiPath(String apiPath) {
                 this.apiPath = apiPath;
@@ -558,7 +563,7 @@ public class DescribeApisResponseBody extends TeaModel {
             }
 
             /**
-             * The creation time (UTC) of the query task.
+             * The time when the API was created. The time is displayed in UTC.
              */
             public Builder createdTime(String createdTime) {
                 this.createdTime = createdTime;
@@ -566,7 +571,7 @@ public class DescribeApisResponseBody extends TeaModel {
             }
 
             /**
-             * DeployedInfos.
+             * The API publishing statuses.
              */
             public Builder deployedInfos(DeployedInfos deployedInfos) {
                 this.deployedInfos = deployedInfos;
@@ -574,7 +579,7 @@ public class DescribeApisResponseBody extends TeaModel {
             }
 
             /**
-             * The description of the API.
+             * The API description.
              */
             public Builder description(String description) {
                 this.description = description;
@@ -582,7 +587,7 @@ public class DescribeApisResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the API group.
+             * The API group ID.
              */
             public Builder groupId(String groupId) {
                 this.groupId = groupId;
@@ -590,7 +595,7 @@ public class DescribeApisResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the group to which the API belongs.
+             * The name of the API group to which the API belongs.
              */
             public Builder groupName(String groupName) {
                 this.groupName = groupName;
@@ -598,7 +603,7 @@ public class DescribeApisResponseBody extends TeaModel {
             }
 
             /**
-             * The modification time (UTC) of the API.
+             * The time when the API was modified. The time is displayed in UTC.
              */
             public Builder modifiedTime(String modifiedTime) {
                 this.modifiedTime = modifiedTime;
@@ -606,7 +611,7 @@ public class DescribeApisResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the region in which the API resides.
+             * The ID of the region to which the API belongs.
              */
             public Builder regionId(String regionId) {
                 this.regionId = regionId;
@@ -614,7 +619,7 @@ public class DescribeApisResponseBody extends TeaModel {
             }
 
             /**
-             * TagList.
+             * The tags that are added to the APIs.
              */
             public Builder tagList(TagList tagList) {
                 this.tagList = tagList;
@@ -625,8 +630,8 @@ public class DescribeApisResponseBody extends TeaModel {
              * Indicates whether the API is public. Valid values:
              * <p>
              * 
-             * *   **PUBLIC**
-             * *   **PRIVATE**
+             * *   **PUBLIC**: The API is public.
+             * *   **PRIVATE**: The API is private.
              */
             public Builder visibility(String visibility) {
                 this.visibility = visibility;

@@ -84,7 +84,7 @@ public class DescribeApiMarketAttributesRequest extends Request {
         } 
 
         /**
-         * The ID of the API.
+         * ApiId.
          */
         public Builder apiId(String apiId) {
             this.putQueryParameter("ApiId", apiId);
@@ -93,7 +93,7 @@ public class DescribeApiMarketAttributesRequest extends Request {
         }
 
         /**
-         * The ID of the API.
+         * GroupId.
          */
         public Builder groupId(String groupId) {
             this.putQueryParameter("GroupId", groupId);

@@ -111,7 +111,7 @@ public class DescribeIpControlPolicyItemsRequest extends Request {
         } 
 
         /**
-         * The ID of the ACL. The ID is unique.
+         * IpControlId.
          */
         public Builder ipControlId(String ipControlId) {
             this.putQueryParameter("IpControlId", ipControlId);
@@ -120,7 +120,7 @@ public class DescribeIpControlPolicyItemsRequest extends Request {
         }
 
         /**
-         * The number of the page to return. Pages start from page 1. Default value: 1.
+         * PageNumber.
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -129,7 +129,7 @@ public class DescribeIpControlPolicyItemsRequest extends Request {
         }
 
         /**
-         * The number of entries to return on each page. Maximum value: 100. Default value: 10.
+         * PageSize.
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -138,7 +138,7 @@ public class DescribeIpControlPolicyItemsRequest extends Request {
         }
 
         /**
-         * The ID of the policy.
+         * PolicyItemId.
          */
         public Builder policyItemId(String policyItemId) {
             this.putQueryParameter("PolicyItemId", policyItemId);

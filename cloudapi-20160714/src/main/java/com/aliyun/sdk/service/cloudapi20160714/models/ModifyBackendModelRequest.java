@@ -138,7 +138,7 @@ public class ModifyBackendModelRequest extends Request {
         } 
 
         /**
-         * The ID of the backend service.
+         * BackendId.
          */
         public Builder backendId(String backendId) {
             this.putQueryParameter("BackendId", backendId);
@@ -147,7 +147,7 @@ public class ModifyBackendModelRequest extends Request {
         }
 
         /**
-         * The information about the backend model.
+         * BackendModelData.
          */
         public Builder backendModelData(String backendModelData) {
             this.putQueryParameter("BackendModelData", backendModelData);
@@ -156,7 +156,7 @@ public class ModifyBackendModelRequest extends Request {
         }
 
         /**
-         * The ID of the backend model.
+         * BackendModelId.
          */
         public Builder backendModelId(String backendModelId) {
             this.putQueryParameter("BackendModelId", backendModelId);
@@ -165,7 +165,7 @@ public class ModifyBackendModelRequest extends Request {
         }
 
         /**
-         * The type of the backend service.
+         * BackendType.
          */
         public Builder backendType(String backendType) {
             this.putQueryParameter("BackendType", backendType);
@@ -174,7 +174,7 @@ public class ModifyBackendModelRequest extends Request {
         }
 
         /**
-         * The definition of the backend model.
+         * Description.
          */
         public Builder description(String description) {
             this.putQueryParameter("Description", description);
@@ -192,12 +192,7 @@ public class ModifyBackendModelRequest extends Request {
         }
 
         /**
-         * The name of the runtime environment. Valid values:
-         * <p>
-         * 
-         * *   **RELEASE**
-         * *   **PRE**
-         * *   **TEST**
+         * StageName.
          */
         public Builder stageName(String stageName) {
             this.putQueryParameter("StageName", stageName);

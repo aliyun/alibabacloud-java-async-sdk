@@ -91,7 +91,7 @@ public class DeleteLogConfigRequest extends Request {
         }
 
         /**
-         * The log type. Valid values: **log** and **survey**.
+         * LogType.
          */
         public Builder logType(String logType) {
             this.putQueryParameter("LogType", logType);
