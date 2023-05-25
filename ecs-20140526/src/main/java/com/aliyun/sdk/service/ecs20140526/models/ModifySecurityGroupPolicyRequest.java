@@ -178,7 +178,7 @@ public class ModifySecurityGroupPolicyRequest extends Request {
         }
 
         /**
-         * The client token that is used to ensure the idempotence of the request. You can use the client to generate the value, but you must make sure that it is unique among different requests. The **ClientToken** value can contain only ASCII characters and cannot exceed 64 characters in length. For more information, see [How to ensure idempotence](~~25693~~).
+         * The client token that is used to ensure the idempotence of the request. You can use the client to generate the token, but you must make sure that the token is unique among different requests. The **token** can contain only ASCII characters and cannot exceed 64 characters in length. For more information, see [How to ensure idempotence](~~25693~~).
          */
         public Builder clientToken(String clientToken) {
             this.putQueryParameter("ClientToken", clientToken);
@@ -193,7 +193,7 @@ public class ModifySecurityGroupPolicyRequest extends Request {
          * *   Accept: All instances in the security group can communicate with each other.
          * *   Drop: All instances in the security group are isolated from each other.
          * 
-         * These values are case-insensitive.
+         * The value of this parameter is not case-sensitive.
          */
         public Builder innerAccessPolicy(String innerAccessPolicy) {
             this.putQueryParameter("InnerAccessPolicy", innerAccessPolicy);

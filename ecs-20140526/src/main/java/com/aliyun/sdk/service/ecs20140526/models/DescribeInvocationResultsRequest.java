@@ -274,11 +274,34 @@ public class DescribeInvocationResultsRequest extends Request {
         }
 
         /**
-         * The ID of the command.
+         * The page number of the page to return.
+         * <p>
+         * 
+         * Pages start from page 1.
+         * 
+         * Default value: 1.
          */
         public Builder commandId(String commandId) {
             this.putQueryParameter("CommandId", commandId);
             this.commandId = commandId;
+            return this;
+        }
+
+        /**
+         * The information about the tag.
+         */
+        public Builder contentEncoding(String contentEncoding) {
+            this.putQueryParameter("ContentEncoding", contentEncoding);
+            this.contentEncoding = contentEncoding;
+            return this;
+        }
+
+        /**
+         * The tags to use for query.
+         */
+        public Builder includeHistory(Boolean includeHistory) {
+            this.putQueryParameter("IncludeHistory", includeHistory);
+            this.includeHistory = includeHistory;
             return this;
         }
 
@@ -291,30 +314,6 @@ public class DescribeInvocationResultsRequest extends Request {
          * 
          * Default value: Base64.
          */
-        public Builder contentEncoding(String contentEncoding) {
-            this.putQueryParameter("ContentEncoding", contentEncoding);
-            this.contentEncoding = contentEncoding;
-            return this;
-        }
-
-        /**
-         * Specifies whether to return the results of historical scheduled executions. Valid values:
-         * <p>
-         * 
-         * *   true: returns the results of historical scheduled executions. When this parameter is set to true, the `InvokeId` parameter must be set to the ID of a scheduled task.
-         * *   false: does not return the results of historical scheduled executions.
-         * 
-         * Default value: false.
-         */
-        public Builder includeHistory(Boolean includeHistory) {
-            this.putQueryParameter("IncludeHistory", includeHistory);
-            this.includeHistory = includeHistory;
-            return this;
-        }
-
-        /**
-         * The ID of the instance.
-         */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
             this.instanceId = instanceId;
@@ -322,7 +321,13 @@ public class DescribeInvocationResultsRequest extends Request {
         }
 
         /**
-         * The ID of the command task. You can call the [DescribeInvocations](~~64840~~) operation to query the command task IDs.
+         * Specifies whether to return the results of historical scheduled executions. Valid values:
+         * <p>
+         * 
+         * *   true: returns the results of historical scheduled executions. When this parameter is set to true, the `InvokeId` parameter must be set to the ID of a scheduled execution.
+         * *   false: does not return the results of historical scheduled executions.
+         * 
+         * Default value: false.
          */
         public Builder invokeId(String invokeId) {
             this.putQueryParameter("InvokeId", invokeId);
@@ -331,15 +336,12 @@ public class DescribeInvocationResultsRequest extends Request {
         }
 
         /**
-         * The execution state of the command. Valid values:
+         * The number of entries to return on each page.
          * <p>
          * 
-         * *   Running
-         * *   Finished
-         * *   Failed
-         * *   Stopped
+         * Maximum value: 50.
          * 
-         * > To ensure compatibility, we recommend that you use the `InvocationStatus` parameter instead of the InvokeRecordStatus parameter.
+         * Default value: 10.
          */
         public Builder invokeRecordStatus(String invokeRecordStatus) {
             this.putQueryParameter("InvokeRecordStatus", invokeRecordStatus);
@@ -366,12 +368,12 @@ public class DescribeInvocationResultsRequest extends Request {
         }
 
         /**
-         * The page number of the page to return.
+         * The key of tag N of the command execution. Valid values of N: 1 to 20. The tag key cannot be an empty string.
          * <p>
          * 
-         * Pages start from page 1.
+         * If a single tag is specified to query resources, up to 1,000 resources with this tag can be returned. If multiple tags are specified to query resources, up to 1,000 resources with all these tags can be returned. To query more than 1,000 resources with specified tags, call the [ListTagResources](~~110425~~) operation.
          * 
-         * Default value: 1.
+         * The tag key can be up to 64 characters in length and cannot start with `acs:` or `aliyun`. It cannot contain `http://` or `https://`.
          */
         public Builder pageNumber(Long pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -380,12 +382,10 @@ public class DescribeInvocationResultsRequest extends Request {
         }
 
         /**
-         * The number of entries to return on each page.
+         * The value of tag N of the command execution. Valid values of N: 1 to 20. The tag value can be an empty string.
          * <p>
          * 
-         * Maximum value: 50.
-         * 
-         * Default value: 10.
+         * It can be up to 128 characters in length and cannot contain `http://` or `https://`.
          */
         public Builder pageSize(Long pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -394,7 +394,7 @@ public class DescribeInvocationResultsRequest extends Request {
         }
 
         /**
-         * The region ID of the command. You can call the [DescribeRegions](~~25609~~) operation to query the most recent region list.
+         * The ID of the command.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -403,7 +403,15 @@ public class DescribeInvocationResultsRequest extends Request {
         }
 
         /**
-         * The ID of the resource group. After you set this parameter, command execution results in the specified resource group are queried.
+         * The execution state of the command. Valid values:
+         * <p>
+         * 
+         * *   Running
+         * *   Finished
+         * *   Failed
+         * *   Stopped
+         * 
+         * > To ensure compatibility, we recommend that you use the `InvocationStatus` parameter instead of the InvokeRecordStatus parameter.
          */
         public Builder resourceGroupId(String resourceGroupId) {
             this.putQueryParameter("ResourceGroupId", resourceGroupId);
@@ -430,7 +438,7 @@ public class DescribeInvocationResultsRequest extends Request {
         }
 
         /**
-         * The list of tags.
+         * The ID of the request.
          */
         public Builder tag(java.util.List < Tag> tag) {
             this.putQueryParameter("Tag", tag);
@@ -484,12 +492,7 @@ public class DescribeInvocationResultsRequest extends Request {
             private String value; 
 
             /**
-             * The key of tag N of the command task. Valid values of N: 1 to 20. The tag key cannot be an empty string.
-             * <p>
-             * 
-             * If a single tag is specified to query resources, up to 1,000 resources that have this tag added can be displayed in the response. If multiple tags are specified to query resources, up to 1,000 resources that have all these tags added can be displayed in the response. To query more than 1,000 resources that have specified tags added, call the [ListTagResources](~~110425~~) operation.
-             * 
-             * The tag key can be up to 64 characters in length and cannot start with `acs:` or `aliyun`. It cannot contain `http://` or `https://`.
+             * The number of entries returned per page.
              */
             public Builder key(String key) {
                 this.key = key;
@@ -497,10 +500,7 @@ public class DescribeInvocationResultsRequest extends Request {
             }
 
             /**
-             * The value of tag N of the command task. Valid values of N: 1 to 20. The tag value can be an empty string.
-             * <p>
-             * 
-             * The tag value can be up to 128 characters in length and cannot contain `http://` or `https://`.
+             * The page number of the returned page.
              */
             public Builder value(String value) {
                 this.value = value;

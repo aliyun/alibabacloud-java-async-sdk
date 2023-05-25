@@ -162,7 +162,7 @@ public class AllocatePublicIpAddressRequest extends Request {
         }
 
         /**
-         * The ID of the instance.
+         * The ID of the instance to which you want to assign a public IP address.
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -171,7 +171,7 @@ public class AllocatePublicIpAddressRequest extends Request {
         }
 
         /**
-         * The public IP address. If you leave this parameter empty, the system randomly assigns a public IP address to the specified instance.
+         * The public IP address. If you leave this parameter empty, the system randomly assigns a public IP address to the instance.
          */
         public Builder ipAddress(String ipAddress) {
             this.putQueryParameter("IpAddress", ipAddress);
@@ -219,7 +219,7 @@ public class AllocatePublicIpAddressRequest extends Request {
          * The virtual LAN (VLAN) ID of the instance.
          * <p>
          * 
-         * > This parameter will be removed in the future. We recommend that you use other parameters to ensure future compatibility.
+         * > This parameter will be removed in the future. To ensure future compatibility, we recommend that you use other parameters.
          */
         public Builder vlanId(String vlanId) {
             this.putQueryParameter("VlanId", vlanId);

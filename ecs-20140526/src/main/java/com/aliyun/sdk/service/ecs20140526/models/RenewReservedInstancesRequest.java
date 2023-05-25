@@ -217,11 +217,11 @@ public class RenewReservedInstancesRequest extends Request {
         }
 
         /**
-         * Specifies whether to enable auto-renewal for the reserved instance. Default value: false. Valid values:
+         * Specifies whether to enable auto-renewal for the reserved instance. Valid values:
          * <p>
          * 
-         * *   true: enables auto-renewal for the reserved instance.
-         * *   false: does not enable auto-renewal for the reserved instance.
+         * *   true
+         * *   false
          * 
          * Default value: false.
          */
@@ -232,7 +232,7 @@ public class RenewReservedInstancesRequest extends Request {
         }
 
         /**
-         * The auto-renewal term of the reserved instance. Unit: months. This parameter takes effect only when AutoRenew is set to true.
+         * The auto-renewal duration. Unit: months. This parameter takes effect only when AutoRenew is set to true.
          * <p>
          * 
          * Valid values: 12 and 36. Default value: 12.
@@ -244,7 +244,7 @@ public class RenewReservedInstancesRequest extends Request {
         }
 
         /**
-         * The client token that is used to ensure the idempotence of the request. You can use the client to generate the value, but you must make sure that it is unique among different requests. The **ClientToken** value can contain only ASCII characters and cannot exceed 64 characters in length. For more information, see [How to ensure idempotence](~~25693~~).
+         * The client token that is used to ensure the idempotence of the request. You can use the client to generate the token, but you must make sure that the token is unique among different requests. The **token** can contain only ASCII characters and cannot exceed 64 characters in length. For more information, see [How to ensure idempotence](~~25693~~).
          */
         public Builder clientToken(String clientToken) {
             this.putQueryParameter("ClientToken", clientToken);
@@ -271,7 +271,7 @@ public class RenewReservedInstancesRequest extends Request {
         }
 
         /**
-         * The term of the reserved instance.
+         * The validity period of the reserved instance.
          * <p>
          * 
          * Valid values: 1 and 3.
@@ -285,12 +285,10 @@ public class RenewReservedInstancesRequest extends Request {
         }
 
         /**
-         * The unit of the term of the reserved instance.
+         * The unit of the validity period of the reserved instance.
          * <p>
          * 
-         * Valid value: Year.
-         * 
-         * Default value: Year.
+         * Set the value to Year.
          */
         public Builder periodUnit(String periodUnit) {
             this.putQueryParameter("PeriodUnit", periodUnit);
@@ -308,7 +306,7 @@ public class RenewReservedInstancesRequest extends Request {
         }
 
         /**
-         * The IDs of reserved instances.
+         * The IDs of the reserved instances.
          */
         public Builder reservedInstanceId(java.util.List < String > reservedInstanceId) {
             this.putQueryParameter("ReservedInstanceId", reservedInstanceId);

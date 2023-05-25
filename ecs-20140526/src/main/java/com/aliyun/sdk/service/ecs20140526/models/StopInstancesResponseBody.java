@@ -50,7 +50,7 @@ public class StopInstancesResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * Details about instance-specific responses, which contain the states of each instance before and after the operation is called and the results of the operation.
+         * Details about the responses returned for the instances, which contain the state of each instance before and after the operation is called, and the results of the operation.
          */
         public Builder instanceResponses(InstanceResponses instanceResponses) {
             this.instanceResponses = instanceResponses;
@@ -58,7 +58,7 @@ public class StopInstancesResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -146,7 +146,7 @@ public class StopInstancesResponseBody extends TeaModel {
             private String previousStatus; 
 
             /**
-             * The error code of the instance operation result. The return value 200 indicates success. For more information, see the "Error codes" section in this topic.
+             * The error code that is returned for the operation on the ECS instance. When a value of 200 is returned, the operation is successful. For more information, see the "Error codes" section in this topic.
              */
             public Builder code(String code) {
                 this.code = code;
@@ -162,7 +162,7 @@ public class StopInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of instance N.
+             * The ECS instance ID.
              */
             public Builder instanceId(String instanceId) {
                 this.instanceId = instanceId;
@@ -170,7 +170,7 @@ public class StopInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * The error message for instance operation. The return value Success indicates operation success. For more information, see the "Error codes" section in this topic.
+             * The error message that is returned for the operation on the ECS instance. When Success is returned, the operation is successful. For more information, see the "Error codes" section in this topic.
              */
             public Builder message(String message) {
                 this.message = message;

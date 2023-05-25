@@ -254,7 +254,7 @@ public class DescribeDiagnosticReportAttributesResponseBody extends TeaModel {
         }
 
         /**
-         * The type of the resource. The ResourceType parameter can only be set to instance, which indicates that only instances are supported.
+         * The resource type. The value of ResourceType can only be instance, which indicates that only instances are supported.
          */
         public Builder resourceType(String resourceType) {
             this.resourceType = resourceType;
@@ -262,7 +262,7 @@ public class DescribeDiagnosticReportAttributesResponseBody extends TeaModel {
         }
 
         /**
-         * The severity level of the diagnostic report. The value of this parameter is determined by the highest severity level of all diagnostic metrics. Valid values:
+         * The severity level of the diagnostic report. The value of this parameter is determined by the metric with the highest severity level among all diagnostic metrics. Valid values:
          * <p>
          * 
          * *   Unknown: The diagnostic has not started, failed to run, or exited unexpectedly without a diagnosis.
@@ -525,7 +525,7 @@ public class DescribeDiagnosticReportAttributesResponseBody extends TeaModel {
             private String status; 
 
             /**
-             * Details about the diagnosed issues.
+             * An array that consists of the details about the diagnosed issues.
              */
             public Builder issues(Issues issues) {
                 this.issues = issues;

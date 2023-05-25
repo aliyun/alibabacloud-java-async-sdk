@@ -190,7 +190,7 @@ public class DescribeNetworkInterfacePermissionsRequest extends Request {
         }
 
         /**
-         * The ID of the ENI. You must specify `NetworkInterfaceId` or `NetworkInterfacePermissionId.N` to determine the query range.
+         * The ID of ENI N. You must specify `NetworkInterfaceId` or `NetworkInterfacePermissionId.N` to determine the query range.
          */
         public Builder networkInterfaceId(String networkInterfaceId) {
             this.putQueryParameter("NetworkInterfaceId", networkInterfaceId);
@@ -226,7 +226,7 @@ public class DescribeNetworkInterfacePermissionsRequest extends Request {
         }
 
         /**
-         * The number of the page to return.
+         * The page number.
          * <p>
          * 
          * Pages start from page 1.
@@ -240,7 +240,7 @@ public class DescribeNetworkInterfacePermissionsRequest extends Request {
         }
 
         /**
-         * The number of entries to return on each page.
+         * The number of entries per page.
          * <p>
          * 
          * Maximum value: 100.

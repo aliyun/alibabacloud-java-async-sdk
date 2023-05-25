@@ -176,7 +176,7 @@ public class ModifySnapshotAttributeRequest extends Request {
         }
 
         /**
-         * The description of the snapshot. The description must be 2 to 256 characters in length and cannot start with http:// or https://.
+         * The description of the snapshot. The description must be 2 to 256 characters in length and cannot start with [http:// or https://](http://https://。).
          */
         public Builder description(String description) {
             this.putQueryParameter("Description", description);
@@ -189,7 +189,7 @@ public class ModifySnapshotAttributeRequest extends Request {
          * <p>
          * 
          * *   true: disables the instant access feature.
-         * *   false: enables the instant access feature.
+         * *   false: does not disable the instant access feature.
          * 
          * Default value: false.
          */
@@ -245,10 +245,10 @@ public class ModifySnapshotAttributeRequest extends Request {
         }
 
         /**
-         * The name of the snapshot. The name must be 2 to 128 characters in length, and can contain letters, digits, colons (:), underscores (\_), and hyphens (-). It must start with a letter and cannot start with http:// or https://.
+         * The name of the snapshot. The name must be 2 to 128 characters in length. The name must start with a letter and cannot start with [http:// or https://. It can contain letters, digits, colons (:), underscores (\_), and hyphens (-).](http://https://。、（:）、（\_）（-）。)
          * <p>
          * 
-         * It cannot start with auto because snapshots whose names start with auto are recognized as automatic snapshots.
+         * The name cannot start with auto because snapshots whose names start with auto are recognized as automatic snapshots.
          */
         public Builder snapshotName(String snapshotName) {
             this.putQueryParameter("SnapshotName", snapshotName);

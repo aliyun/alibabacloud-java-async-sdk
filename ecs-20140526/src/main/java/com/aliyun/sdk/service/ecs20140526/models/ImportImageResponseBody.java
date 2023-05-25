@@ -74,7 +74,7 @@ public class ImportImageResponseBody extends TeaModel {
         private String taskId; 
 
         /**
-         * The ID of the image.
+         * The image ID.
          */
         public Builder imageId(String imageId) {
             this.imageId = imageId;
@@ -82,7 +82,7 @@ public class ImportImageResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the region where the instance resides.
+         * The region ID.
          */
         public Builder regionId(String regionId) {
             this.regionId = regionId;
@@ -90,7 +90,7 @@ public class ImportImageResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -98,7 +98,7 @@ public class ImportImageResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the image import task.
+         * The image import task ID.
          */
         public Builder taskId(String taskId) {
             this.taskId = taskId;

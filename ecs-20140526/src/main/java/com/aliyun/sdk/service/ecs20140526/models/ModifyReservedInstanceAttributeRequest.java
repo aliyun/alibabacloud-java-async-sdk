@@ -154,10 +154,7 @@ public class ModifyReservedInstanceAttributeRequest extends Request {
         } 
 
         /**
-         * The new description of the reserved instance. The description must be 2 to 256 characters in length. It cannot start with `http://` or `https://`.
-         * <p>
-         * 
-         * This parameter is empty by default.
+         * The error code.
          */
         public Builder description(String description) {
             this.putQueryParameter("Description", description);
@@ -184,7 +181,7 @@ public class ModifyReservedInstanceAttributeRequest extends Request {
         }
 
         /**
-         * The region ID of the reserved instance.
+         * The ID of the reserved instance.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -193,7 +190,7 @@ public class ModifyReservedInstanceAttributeRequest extends Request {
         }
 
         /**
-         * The ID of the reserved instance.
+         * The new name of the reserved instance. The name must be 2 to 128 characters in length. It must start with a letter and cannot start with `http://` or `https://`. It can contain letters, digits, colons (:), underscores (\_), and hyphens (-).
          */
         public Builder reservedInstanceId(String reservedInstanceId) {
             this.putQueryParameter("ReservedInstanceId", reservedInstanceId);
@@ -202,7 +199,10 @@ public class ModifyReservedInstanceAttributeRequest extends Request {
         }
 
         /**
-         * The new name of the reserved instance. The name must be 2 to 128 characters in length. It must start with a letter and cannot start with `http://` or `https://`. It can contain letters, digits, colons (:), underscores (\_), and hyphens (-).
+         * The new description of the reserved instance. The description must be 2 to 256 characters in length. It cannot start with `http://` or `https://`.
+         * <p>
+         * 
+         * This parameter is empty by default.
          */
         public Builder reservedInstanceName(String reservedInstanceName) {
             this.putQueryParameter("ReservedInstanceName", reservedInstanceName);

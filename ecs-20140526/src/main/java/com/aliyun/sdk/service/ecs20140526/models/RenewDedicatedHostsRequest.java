@@ -192,7 +192,7 @@ public class RenewDedicatedHostsRequest extends Request {
         }
 
         /**
-         * The client token that is used to ensure the idempotence of the request. You can use the client to generate the value, but you must make sure that the value is unique among different requests. The token can only contain ASCII characters and cannot exceed 64 characters in length. For more information, see [How to ensure idempotence](~~25693~~).
+         * The client token that is used to ensure the idempotence of the request. You can use the client to generate a client token. Make sure that a unique client token is used for each request. The token can contain only ASCII characters and cannot exceed 64 characters in length. For more information, see [How to ensure idempotence?](~~25693~~)
          */
         public Builder clientToken(String clientToken) {
             this.putQueryParameter("ClientToken", clientToken);
@@ -201,7 +201,7 @@ public class RenewDedicatedHostsRequest extends Request {
         }
 
         /**
-         * The IDs of dedicated hosts. You can specify the IDs of up to 100 subscription dedicated hosts. Specify dedicated host IDs as a JSON array and separate the IDs with commas (,). Example: `["dh-xxxxxxxxx", "dh-yyyyyyyyy", ... "dh-zzzzzzzzz"]`.
+         * The IDs of dedicated hosts. You can specify the IDs of up to 100 subscription dedicated hosts. Specify the dedicated host IDs in a JSON array. Example: `["dh-xxxxxxxxx", "dh-yyyyyyyyy", … "dh-zzzzzzzzz"]`. Separate the IDs with commas (,).
          */
         public Builder dedicatedHostIds(String dedicatedHostIds) {
             this.putQueryParameter("DedicatedHostIds", dedicatedHostIds);
@@ -228,10 +228,9 @@ public class RenewDedicatedHostsRequest extends Request {
         }
 
         /**
-         * The renewal duration of the dedicated host. Valid values:
+         * The renewal duration. Valid values:
          * <p>
          * 
-         * *   Valid values when the PeriodUnit parameter is set to Week: 1, 2, 3, and 4.
          * *   Valid values when the PeriodUnit parameter is set to Month: 1, 2, 3, 4, 5, 6, 7, 8, 9, 12, 24, 36, 48, and 60.
          * *   Valid values when the PeriodUnit parameter is set to Year: 1, 2, 3, 4, and 5.
          */
@@ -242,10 +241,9 @@ public class RenewDedicatedHostsRequest extends Request {
         }
 
         /**
-         * The unit of the renewal duration of the dedicated host. Valid values:
+         * The unit of the renewal period. Valid values:
          * <p>
          * 
-         * *   Week
          * *   Month
          * *   Year
          * 

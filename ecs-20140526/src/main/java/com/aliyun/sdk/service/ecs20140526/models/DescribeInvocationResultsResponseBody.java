@@ -50,7 +50,7 @@ public class DescribeInvocationResultsResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * Details of the execution results.
+         * The execution results.
          */
         public Builder invocation(Invocation invocation) {
             this.invocation = invocation;
@@ -58,7 +58,7 @@ public class DescribeInvocationResultsResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * The total number of the commands.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -110,7 +110,7 @@ public class DescribeInvocationResultsResponseBody extends TeaModel {
             private String tagValue; 
 
             /**
-             * The tag key of the command task.
+             * TagKey.
              */
             public Builder tagKey(String tagKey) {
                 this.tagKey = tagKey;
@@ -118,7 +118,7 @@ public class DescribeInvocationResultsResponseBody extends TeaModel {
             }
 
             /**
-             * The tag value of the command task.
+             * TagValue.
              */
             public Builder tagValue(String tagValue) {
                 this.tagValue = tagValue;
@@ -404,7 +404,7 @@ public class DescribeInvocationResultsResponseBody extends TeaModel {
             private String username; 
 
             /**
-             * The ID of the command.
+             * The time when the command stopped being run on the instance. If you called the `StopInvocation` operation to manually stop the execution, the value is the time when you called the operation.
              */
             public Builder commandId(String commandId) {
                 this.commandId = commandId;
@@ -412,7 +412,7 @@ public class DescribeInvocationResultsResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the container.
+             * The value of the tag.
              */
             public Builder containerId(String containerId) {
                 this.containerId = containerId;
@@ -420,7 +420,7 @@ public class DescribeInvocationResultsResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the container.
+             * ContainerName.
              */
             public Builder containerName(String containerName) {
                 this.containerName = containerName;
@@ -428,7 +428,26 @@ public class DescribeInvocationResultsResponseBody extends TeaModel {
             }
 
             /**
-             * The size of the text that is truncated and discarded when the `Output` value exceeds 24 KB in size.
+             * The error message returned when the command is not successfully sent or run. Valid values:
+             * <p>
+             * 
+             * *   If this parameter is empty, the command is run normally.
+             * *   the specified instance does not exists: The specified instance does not exist is released.
+             * *   the instance has released when create task: The instance was released while the command was being run on the instance.
+             * *   the instance is not running when create task: The instance is not in the Running state while the command is being run.
+             * *   the command is not applicable: The command is not applicable to the specified instance.
+             * *   the specified account does not exists: The specified account does not exist.
+             * *   the specified directory does not exists: The specified directory does not exist.
+             * *   the cron job expression is invalid: The cron expression that specifies the execution time is invalid.
+             * *   the aliyun service is not running on the instance: The Cloud Assistance client is not running.
+             * *   the aliyun service in the instance does not response: The Cloud Assistant client is not responding.
+             * *   the aliyun service in the instance is upgrading now: The Cloud Assistant client is being upgraded.
+             * *   the aliyun service in the instance need upgrade: The Cloud Assistant client needs to be upgraded.
+             * *   the command delivery has been timeout: The request to send the command timed out.
+             * *   the command execution has been timeout: The command execution timed out.
+             * *   the command execution got an exception: An exception occurred while the command is being run.
+             * *   the command execution has been interrupted: The command execution was interrupted.
+             * *   the command execution exit code is not zero: The command execution is complete, but the exit code is not 0.
              */
             public Builder dropped(Integer dropped) {
                 this.dropped = dropped;
@@ -436,26 +455,7 @@ public class DescribeInvocationResultsResponseBody extends TeaModel {
             }
 
             /**
-             * The error code returned when the command cannot be sent or run. Valid values:
-             * <p>
-             * 
-             * *   If this parameter is empty, the command is run normally.
-             * *   InstanceNotExists: The instance does not exist or has been released.
-             * *   InstanceReleased: The instance was released while the command was being run.
-             * *   InstanceNotRunning: The instance was not running while the command was being run.
-             * *   CommandNotApplicable: The command is not applicable to the specified instance.
-             * *   AccountNotExists: The specified account does not exist.
-             * *   DirectoryNotExists: The specified directory does not exist.
-             * *   BadCronExpression: The cron expression used to specify a schedule is invalid.
-             * *   ClientNotRunning: The Cloud Assistant client is not running.
-             * *   ClientNotResponse: The Cloud Assistant client does not respond.
-             * *   ClientIsUpgrading: The Cloud Assistant client is being upgraded.
-             * *   ClientNeedUpgrade: The Cloud Assistant client needs to be upgraded.
-             * *   DeliveryTimeout: The request to send the command timed out.
-             * *   ExecutionTimeout: The execution timed out.
-             * *   ExecutionException: An exception occurred while the command was being run.
-             * *   ExecutionInterrupted: The execution was interrupted.
-             * *   ExitCodeNonzero: The execution is complete, but the exit code is not 0.
+             * The name of the user who ran the command on the instance.
              */
             public Builder errorCode(String errorCode) {
                 this.errorCode = errorCode;
@@ -463,29 +463,26 @@ public class DescribeInvocationResultsResponseBody extends TeaModel {
             }
 
             /**
-             * The error message returned when the command cannot be sent or run. Valid values:
-             * <p>
-             * 
-             * *   If this parameter is empty, the command is run normally.
-             * *   the specified instance does not exists
-             * *   the instance has released when create task
-             * *   the instance is not running when create task
-             * *   the command is not applicable
-             * *   the specified account does not exists
-             * *   the specified directory does not exists
-             * *   the cron job expression is invalid
-             * *   the aliyun service is not running on the instance
-             * *   the aliyun service in the instance does not response
-             * *   the aliyun service in the instance is upgrading now
-             * *   the aliyun service in the instance need upgrade
-             * *   the command delivery has been timeout
-             * *   the command execution has been timeout
-             * *   the command execution got an exception
-             * *   the command execution has been interrupted
-             * *   the command execution exit code is not zero
+             * The execution state of the command.
              */
             public Builder errorInfo(String errorInfo) {
                 this.errorInfo = errorInfo;
+                return this;
+            }
+
+            /**
+             * The end time of the execution. If an execution times out, the end time of the execution is subject to the value of the TimedOut parameter specified in the [CreateCommand](~~64844~~) operation.
+             */
+            public Builder exitCode(Long exitCode) {
+                this.exitCode = exitCode;
+                return this;
+            }
+
+            /**
+             * The ID of the container.
+             */
+            public Builder finishedTime(String finishedTime) {
+                this.finishedTime = finishedTime;
                 return this;
             }
 
@@ -496,63 +493,13 @@ public class DescribeInvocationResultsResponseBody extends TeaModel {
              * *   For Linux instances, the value is the exit code of the shell command.
              * *   For Windows instances, the value is the exit code of the batch or PowerShell command.
              */
-            public Builder exitCode(Long exitCode) {
-                this.exitCode = exitCode;
-                return this;
-            }
-
-            /**
-             * The end time of the execution. If an execution times out, the end time of the execution is subject to the value of the TimedOut parameter specified in the [CreateCommand](~~64844~~) operation.
-             */
-            public Builder finishedTime(String finishedTime) {
-                this.finishedTime = finishedTime;
-                return this;
-            }
-
-            /**
-             * The ID of the instance
-             */
             public Builder instanceId(String instanceId) {
                 this.instanceId = instanceId;
                 return this;
             }
 
             /**
-             * The execution state on a single instance. Valid values:
-             * <p>
-             * 
-             * *   Pending: The command is being verified or sent.
-             * 
-             * *   Invalid: The specified command type or parameter is invalid.
-             * 
-             * *   Aborted: The command failed to be sent. To send a command to an instance, make sure that the instance is in the Running state and the command is sent to the instance within 1 minute.
-             * 
-             * *   Running: The command is being run on the instance.
-             * 
-             * *   Success:
-             * 
-             *     *   Command that is set to run only once: The execution is complete, and the exit code is 0.
-             *     *   Command that is set to run on a schedule: The last execution succeeds, the exit code is 0, and the specified cycle ends.
-             * 
-             * *   Failed:
-             * 
-             *     *   Command that is set to run only once: The execution is complete, but the exit code is not 0.
-             *     *   Command that is set to run on a schedule: The last execution is complete, the exit code is not 0, and the specified cycle is about to end.
-             * 
-             * *   Error: The execution cannot proceed due to an exception.
-             * 
-             * *   Timeout: The execution times out.
-             * 
-             * *   Cancelled: The execution is canceled, and the command is not run.
-             * 
-             * *   Stopping: The running command is being stopped.
-             * 
-             * *   Terminated: The command is terminated while it is being run.
-             * 
-             * *   Scheduled:
-             * 
-             *     *   Command that is set to run only once: The command is not applicable.
-             *     *   Command that is set to run on a schedule: The command is waiting to be run.
+             * The command output.
              */
             public Builder invocationStatus(String invocationStatus) {
                 this.invocationStatus = invocationStatus;
@@ -560,7 +507,7 @@ public class DescribeInvocationResultsResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the command task.
+             * The name of the container.
              */
             public Builder invokeId(String invokeId) {
                 this.invokeId = invokeId;
@@ -568,7 +515,7 @@ public class DescribeInvocationResultsResponseBody extends TeaModel {
             }
 
             /**
-             * The execution state of the command.
+             * The tags of the command execution.
              */
             public Builder invokeRecordStatus(String invokeRecordStatus) {
                 this.invokeRecordStatus = invokeRecordStatus;
@@ -576,7 +523,7 @@ public class DescribeInvocationResultsResponseBody extends TeaModel {
             }
 
             /**
-             * The command output.
+             * The time when the command started to be run on the instance.
              */
             public Builder output(String output) {
                 this.output = output;
@@ -584,11 +531,7 @@ public class DescribeInvocationResultsResponseBody extends TeaModel {
             }
 
             /**
-             * The number of times that the command is run on the instance.
-             * <p>
-             * 
-             * *   If the command is set to run only once on the instance, the value is 0 or 1.
-             * *   If the command is set to run on a schedule on the instance, the value is the number of times that the command is run.
+             * The size of the text that is truncated and discarded when the `Output` value exceeds 24 KB in size.
              */
             public Builder repeats(Integer repeats) {
                 this.repeats = repeats;
@@ -596,7 +539,7 @@ public class DescribeInvocationResultsResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the command started to be run on the instance.
+             * The ID of the command execution.
              */
             public Builder startTime(String startTime) {
                 this.startTime = startTime;
@@ -604,7 +547,26 @@ public class DescribeInvocationResultsResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the command stopped being run on the instance. If you call the `StopInvocation` operation to manually stop the execution, the value is the time when you called the operation.
+             * The error code returned when the command cannot be sent or run. Valid values:
+             * <p>
+             * 
+             * *   If this parameter is empty, the command is run normally.
+             * *   InstanceNotExists: The specified instance does not exist is released.
+             * *   InstanceReleased: The instance was released while the command was being run on the instance.
+             * *   InstanceNotRunning: The instance is not in the Running state while the command is being run.
+             * *   CommandNotApplicable: The command is not applicable to the specified instance.
+             * *   AccountNotExists: The specified account does not exist.
+             * *   DirectoryNotExists: The specified directory does not exist.
+             * *   BadCronExpression: The cron expression used to specify the execution time is invalid.
+             * *   ClientNotRunning: The Cloud Assistant client is not running.
+             * *   ClientNotResponse: The Cloud Assistant client is not responding.
+             * *   ClientIsUpgrading: The Cloud Assistant client is being upgraded.
+             * *   ClientNeedUpgrade: The Cloud Assistant client needs to be upgraded.
+             * *   DeliveryTimeout: The request to send the command timed out.
+             * *   ExecutionTimeout: The command execution timed out.
+             * *   ExecutionException: An exception occurred while the command was being run.
+             * *   ExecutionInterrupted: The execution was interrupted.
+             * *   ExitCodeNonzero: The command execution is complete, but the exit code is not 0.
              */
             public Builder stopTime(String stopTime) {
                 this.stopTime = stopTime;
@@ -612,7 +574,7 @@ public class DescribeInvocationResultsResponseBody extends TeaModel {
             }
 
             /**
-             * The tags of the command task.
+             * Tags.
              */
             public Builder tags(Tags tags) {
                 this.tags = tags;
@@ -620,7 +582,7 @@ public class DescribeInvocationResultsResponseBody extends TeaModel {
             }
 
             /**
-             * The username that was used to run the command on the instance.
+             * The information about the tag.
              */
             public Builder username(String username) {
                 this.username = username;
@@ -738,7 +700,7 @@ public class DescribeInvocationResultsResponseBody extends TeaModel {
             private Long totalCount; 
 
             /**
-             * The execution results.
+             * The ID of the instance
              */
             public Builder invocationResults(InvocationResults invocationResults) {
                 this.invocationResults = invocationResults;
@@ -746,7 +708,11 @@ public class DescribeInvocationResultsResponseBody extends TeaModel {
             }
 
             /**
-             * The page number of the returned page.
+             * The number of times that the command is run on the instance.
+             * <p>
+             * 
+             * *   If the command is set to run only once on the instance, the value is 0 or 1.
+             * *   If the command is set to run on a schedule on the instance, the value is the number of times that the command is run.
              */
             public Builder pageNumber(Long pageNumber) {
                 this.pageNumber = pageNumber;
@@ -754,7 +720,41 @@ public class DescribeInvocationResultsResponseBody extends TeaModel {
             }
 
             /**
-             * The number of entries returned per page.
+             * The execution state on a single instance. Valid values:
+             * <p>
+             * 
+             * *   Pending: The command is being verified or sent.
+             * 
+             * *   Invalid: The specified command type or parameter is invalid.
+             * 
+             * *   Aborted: The command failed to be sent. To send a command to an instance, make sure that the instance is in the Running state and the command is sent to the instance within 1 minute.
+             * 
+             * *   Running: The command is being run on the instance.
+             * 
+             * *   Success:
+             * 
+             *     *   Command that is set to run only once: The execution is complete, and the exit code is 0.
+             *     *   Command that is set to run on a schedule: The last execution succeeds, the exit code is 0, and the specified cycle ends.
+             * 
+             * *   Failed:
+             * 
+             *     *   Command that is set to run only once: The execution is complete, but the exit code is not 0.
+             *     *   Command that is set to run on a schedule: The last execution is complete, the exit code is not 0, and the specified cycle is about to end.
+             * 
+             * *   Error: The execution cannot proceed due to an exception.
+             * 
+             * *   Timeout: The execution times out.
+             * 
+             * *   Cancelled: The execution is canceled, and the command is not run.
+             * 
+             * *   Stopping: The running command is being stopped.
+             * 
+             * *   Terminated: The command is terminated while it is being run.
+             * 
+             * *   Scheduled:
+             * 
+             *     *   Command that is set to run only once: The command is not applicable.
+             *     *   Command that is set to run on a schedule: The command is waiting to be run.
              */
             public Builder pageSize(Long pageSize) {
                 this.pageSize = pageSize;
@@ -762,7 +762,7 @@ public class DescribeInvocationResultsResponseBody extends TeaModel {
             }
 
             /**
-             * The total number of the commands.
+             * The ID of the command.
              */
             public Builder totalCount(Long totalCount) {
                 this.totalCount = totalCount;

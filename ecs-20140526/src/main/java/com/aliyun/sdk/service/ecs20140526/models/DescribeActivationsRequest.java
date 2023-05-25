@@ -204,7 +204,12 @@ public class DescribeActivationsRequest extends Request {
         }
 
         /**
-         * The ID of the activation code.
+         * The page number of the page to return.
+         * <p>
+         * 
+         * Pages start from page 1.
+         * 
+         * Default value: 1.
          */
         public Builder activationId(String activationId) {
             this.putQueryParameter("ActivationId", activationId);
@@ -213,7 +218,12 @@ public class DescribeActivationsRequest extends Request {
         }
 
         /**
-         * The default instance name prefix.
+         * The number of entries to return on each page.
+         * <p>
+         * 
+         * Maximum value: 50.
+         * 
+         * Default value: 10.
          */
         public Builder instanceName(String instanceName) {
             this.putQueryParameter("InstanceName", instanceName);
@@ -240,12 +250,7 @@ public class DescribeActivationsRequest extends Request {
         }
 
         /**
-         * The page number of the page to return.
-         * <p>
-         * 
-         * Pages start from page 1.
-         * 
-         * Default value: 1.
+         * An array that consists of the tags of the activation code.
          */
         public Builder pageNumber(Long pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -254,12 +259,7 @@ public class DescribeActivationsRequest extends Request {
         }
 
         /**
-         * The number of entries to return on each page.
-         * <p>
-         * 
-         * Maximum value: 50.
-         * 
-         * Default value: 10.
+         * The information about the tag of the activation code.
          */
         public Builder pageSize(Long pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -268,10 +268,7 @@ public class DescribeActivationsRequest extends Request {
         }
 
         /**
-         * The region ID of the activation code. The following regions are supported: China (Qingdao), China (Beijing), China (Zhangjiakou), China (Hohhot), China (Hangzhou), China (Shanghai), China (Shenzhen), China (Heyuan), and China (Hong Kong).
-         * <p>
-         * 
-         * You can call the [DescribeRegions](~~25609~~) operation to query the most recent region list.
+         * The default instance name prefix.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -298,7 +295,12 @@ public class DescribeActivationsRequest extends Request {
         }
 
         /**
-         * Tag.
+         * The key of tag N of the activation code. Valid values of N: 1 to 20. The tag key cannot be an empty string.
+         * <p>
+         * 
+         * Up to 1,000 resources that have the specified tags can be returned in the response. To query more than 1,000 resources that have the specified tags, call the [ListTagResources](~~110425~~) operation.
+         * 
+         * The tag key is up to 64 characters in length and cannot start with `acs:` or `aliyun`. It cannot contain `http://` or `https://`.
          */
         public Builder tag(java.util.List < Tag> tag) {
             this.putQueryParameter("Tag", tag);
@@ -352,7 +354,7 @@ public class DescribeActivationsRequest extends Request {
             private String value; 
 
             /**
-             * Key.
+             * The number of entries to return on each page.
              */
             public Builder key(String key) {
                 this.key = key;
@@ -360,7 +362,7 @@ public class DescribeActivationsRequest extends Request {
             }
 
             /**
-             * Value.
+             * The ID of the request.
              */
             public Builder value(String value) {
                 this.value = value;

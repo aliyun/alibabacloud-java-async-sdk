@@ -58,7 +58,7 @@ public class DeregisterManagedInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -306,7 +306,7 @@ public class DeregisterManagedInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * The last Cloud Assistant task execution time.
+             * The time when the Cloud Assistant task was last executed.
              */
             public Builder lastInvokedTime(String lastInvokedTime) {
                 this.lastInvokedTime = lastInvokedTime;

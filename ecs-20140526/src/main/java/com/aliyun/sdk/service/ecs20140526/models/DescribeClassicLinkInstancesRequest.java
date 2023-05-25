@@ -176,7 +176,7 @@ public class DescribeClassicLinkInstancesRequest extends Request {
         }
 
         /**
-         * The ID of the instance. You can specify up to 100 instance IDs in a single request. Separate the instance IDs with commas (,).
+         * The instance ID. You can specify up to 100 instance IDs in a single request. Separate the instance IDs with commas (,).
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -194,7 +194,7 @@ public class DescribeClassicLinkInstancesRequest extends Request {
         }
 
         /**
-         * The number of the page to return. Pages start from page 1.
+         * The page number. Pages start from page 1.
          * <p>
          * 
          * Default value: 1.
@@ -206,7 +206,7 @@ public class DescribeClassicLinkInstancesRequest extends Request {
         }
 
         /**
-         * The number of entries to return on each page. Valid values: 1 to 100.
+         * The number of entries per page. Valid values: 1 to 100.
          * <p>
          * 
          * Default value: 10.

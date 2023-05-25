@@ -220,7 +220,7 @@ public class AssignPrivateIpAddressesRequest extends Request {
         }
 
         /**
-         * The client token that is used to ensure the idempotence of the request. You can use the client to generate the value, but you must make sure that the value is unique among different requests. The **ClientToken** value can only contain ASCII characters and cannot exceed 64 characters in length. For more information, see [How to ensure idempotence](~~25693~~).
+         * The client token that is used to ensure the idempotence of the request. You can use the client to generate the token, but you must make sure that the token is unique among different requests. The **token** can contain only ASCII characters and cannot exceed 64 characters in length. For more information, see [How to ensure idempotence](~~25693~~).
          */
         public Builder clientToken(String clientToken) {
             this.putQueryParameter("ClientToken", clientToken);
@@ -238,7 +238,7 @@ public class AssignPrivateIpAddressesRequest extends Request {
         }
 
         /**
-         * > This parameter is in invitational preview and is unavailable to general users.
+         * > This parameter is in invitational preview and is unavailable for general users.
          */
         public Builder ipv4PrefixCount(Integer ipv4PrefixCount) {
             this.putQueryParameter("Ipv4PrefixCount", ipv4PrefixCount);
@@ -247,7 +247,7 @@ public class AssignPrivateIpAddressesRequest extends Request {
         }
 
         /**
-         * The IDs of the ENIs.
+         * The ENI ID.
          */
         public Builder networkInterfaceId(String networkInterfaceId) {
             this.putQueryParameter("NetworkInterfaceId", networkInterfaceId);
@@ -274,11 +274,11 @@ public class AssignPrivateIpAddressesRequest extends Request {
         }
 
         /**
-         * One or more secondary private IP addresses selected from within the CIDR block of the vSwitch that is connected to the ENI. Valid values of N:
+         * One or more secondary private IP addresses that are selected from the CIDR block of the vSwitch that is connected to the ENI. Valid values of the number of secondary private IP addresses:
          * <p>
          * 
-         * *   When the ENI is in the`Available` state, the valid values of N are 1 to 32.
-         * *   When the ENI is in the `InUse` state, the valid values of N are subject to the instance type. For more information, see [Instance families](~~25378~~).
+         * *   When the ENI is in the Available (`Available`) state, the valid values range from 1 to 32.
+         * *   When the ENI is in the InUse (`InUse`) state, the valid values are subject to the instance type. For more information, see [Instance families](~~25378~~).
          * 
          * To assign secondary private IP addresses to the ENI, you cannot specify the `PrivateIpAddress.N` and `SecondaryPrivateIpAddressCount` parameters at the same time.
          */
@@ -316,7 +316,7 @@ public class AssignPrivateIpAddressesRequest extends Request {
         }
 
         /**
-         * The number of private IP addresses to be automatically assigned from within the CIDR block of the vSwitch that is connected to the ENI.
+         * The number of private IP addresses to be automatically assigned from the CIDR block of the vSwitch that is connected to the ENI.
          * <p>
          * 
          * To assign secondary private IP addresses to the ENI, you cannot specify the `PrivateIpAddress.N` and `SecondaryPrivateIpAddressCount` parameters at the same time.

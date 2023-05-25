@@ -195,8 +195,12 @@ public class DescribeImageSharePermissionResponseBody extends TeaModel {
         @NameInMap("AliyunId")
         private String aliyunId;
 
+        @NameInMap("SharedTime")
+        private String sharedTime;
+
         private Account(Builder builder) {
             this.aliyunId = builder.aliyunId;
+            this.sharedTime = builder.sharedTime;
         }
 
         public static Builder builder() {
@@ -214,14 +218,30 @@ public class DescribeImageSharePermissionResponseBody extends TeaModel {
             return this.aliyunId;
         }
 
+        /**
+         * @return sharedTime
+         */
+        public String getSharedTime() {
+            return this.sharedTime;
+        }
+
         public static final class Builder {
             private String aliyunId; 
+            private String sharedTime; 
 
             /**
              * The ID of the Alibaba Cloud account.
              */
             public Builder aliyunId(String aliyunId) {
                 this.aliyunId = aliyunId;
+                return this;
+            }
+
+            /**
+             * SharedTime.
+             */
+            public Builder sharedTime(String sharedTime) {
+                this.sharedTime = sharedTime;
                 return this;
             }
 

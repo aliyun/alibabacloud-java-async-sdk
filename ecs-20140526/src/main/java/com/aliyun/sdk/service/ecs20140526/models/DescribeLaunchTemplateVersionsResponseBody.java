@@ -86,7 +86,7 @@ public class DescribeLaunchTemplateVersionsResponseBody extends TeaModel {
         private Integer totalCount; 
 
         /**
-         * Details about the launch template versions.
+         * Details of the launch template versions.
          */
         public Builder launchTemplateVersionSets(LaunchTemplateVersionSets launchTemplateVersionSets) {
             this.launchTemplateVersionSets = launchTemplateVersionSets;
@@ -298,7 +298,7 @@ public class DescribeLaunchTemplateVersionsResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether to enable the performance burst feature for the data disk. Valid values:
+             * Indicates whether the performance burst feature is enabled. Valid values:
              * <p>
              * 
              * *   true
@@ -337,7 +337,7 @@ public class DescribeLaunchTemplateVersionsResponseBody extends TeaModel {
              * The device name of the data disk.
              * <p>
              * 
-             * > This parameter will be deprecated in the future. To ensure future compatibility, we recommend that you do not use this parameter.
+             * > This parameter will be removed in the future. To ensure future compatibility, we recommend that you do not use this parameter.
              */
             public Builder device(String device) {
                 this.device = device;
@@ -361,13 +361,13 @@ public class DescribeLaunchTemplateVersionsResponseBody extends TeaModel {
             }
 
             /**
-             * The performance level of ESSD to use as the data disk. This parameter is returned only when `Category` is set to cloud_essd. Valid values:
+             * The performance level of the ESSD used as the data disk. This parameter is returned only if `Category` is set to cloud_essd. Valid values:
              * <p>
              * 
-             * *   PL0: A single ESSD can deliver up to 10,000 random read/write IOPS.
-             * *   PL1: A single ESSD can deliver up to 50,000 random read/write IOPS.
+             * *   PL0: A single ESSD can provide up to 10,000 random read/write IOPS.
+             * *   PL1: An ESSD can deliver up to 50,000 random read/write IOPS.
              * *   PL2: A single ESSD can deliver up to 100,000 random read/write IOPS.
-             * *   PL3: A single ESSD can deliver up to 1,000,000 random read/write IOPS.
+             * *   PL3: A single ESSD can deliver up to 1 million random read/write IOPS.
              */
             public Builder performanceLevel(String performanceLevel) {
                 this.performanceLevel = performanceLevel;
@@ -375,12 +375,12 @@ public class DescribeLaunchTemplateVersionsResponseBody extends TeaModel {
             }
 
             /**
-             * The provisioned read/write IOPS of the ESSD AutoPL disk to use as the data disk. Valid values: 0 to min{50,000, 1,000 × Capacity - Baseline IOPS}
+             * The provisioned read/write IOPS of the ESSD AutoPL disk used as the data disk. Valid values: 0 to min{50,000, 1,000 × Capacity - Baseline IOPS}
              * <p>
              * 
              * Baseline IOPS = min{1,800 + 50 × Capacity, 50,000}
              * 
-             * > This parameter is available only if you set the DiskCategory parameter to cloud_auto. For more information, see [ESSD AutoPL disks](~~368372~~) and [Modify the performance configurations of an ESSD AutoPL disk](~~413275~~).
+             * > This parameter is available only if you set the Category parameter to cloud_auto. For more information, see [ESSD AutoPL disks](~~368372~~) and [Modify the performance configurations of an ESSD AutoPL disk](~~413275~~).
              */
             public Builder provisionedIops(Long provisionedIops) {
                 this.provisionedIops = provisionedIops;
@@ -396,7 +396,7 @@ public class DescribeLaunchTemplateVersionsResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the snapshot to use to create the data disk.
+             * The ID of the snapshot used to create the data disk.
              */
             public Builder snapshotId(String snapshotId) {
                 this.snapshotId = snapshotId;
@@ -611,7 +611,7 @@ public class DescribeLaunchTemplateVersionsResponseBody extends TeaModel {
             }
 
             /**
-             * The instance type of the instance.
+             * The instance type.
              */
             public Builder instanceType(String instanceType) {
                 this.instanceType = instanceType;
@@ -647,7 +647,7 @@ public class DescribeLaunchTemplateVersionsResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the security group to which to assign the secondary ENI. The security group and the ENI must belong to the same VPC.
+             * The IDs of the security groups to which the secondary ENI is assigned. The security group and the ENI must belong to the same VPC.
              * <p>
              * 
              * > The SecurityGroupId and SecurityGroupIds parameters are mutually exclusive in the response.
@@ -658,7 +658,7 @@ public class DescribeLaunchTemplateVersionsResponseBody extends TeaModel {
             }
 
             /**
-             * The IDs of the security groups to which to assign the secondary ENI.
+             * The IDs of the security groups to which the secondary ENI is assigned.
              * <p>
              * 
              * > The SecurityGroupId and SecurityGroupIds parameters are mutually exclusive in the response.
@@ -669,7 +669,7 @@ public class DescribeLaunchTemplateVersionsResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the vSwitch to which to connect the secondary ENI.
+             * The ID of the vSwitch to which the ENI is connected.
              */
             public Builder vSwitchId(String vSwitchId) {
                 this.vSwitchId = vSwitchId;
@@ -751,7 +751,7 @@ public class DescribeLaunchTemplateVersionsResponseBody extends TeaModel {
             private java.util.List < String > securityGroupId; 
 
             /**
-             * The ID of the security group to which to assign the secondary ENI. The security group and the ENI must belong to the same VPC.
+             * The IDs of the security groups to which the secondary ENI is assigned. The security group and the ENI must belong to the same VPC.
              * <p>
              * 
              * > The SecurityGroupId and SecurityGroupIds parameters are mutually exclusive in the response.
@@ -807,7 +807,7 @@ public class DescribeLaunchTemplateVersionsResponseBody extends TeaModel {
             private String value; 
 
             /**
-             * The tag key of the instance.
+             * The tag key.
              */
             public Builder key(String key) {
                 this.key = key;
@@ -815,7 +815,7 @@ public class DescribeLaunchTemplateVersionsResponseBody extends TeaModel {
             }
 
             /**
-             * The tag value of the instance.
+             * The tag value.
              */
             public Builder value(String value) {
                 this.value = value;
@@ -1437,7 +1437,7 @@ public class DescribeLaunchTemplateVersionsResponseBody extends TeaModel {
             private String zoneId; 
 
             /**
-             * The automatic release time of the instance.
+             * The automatic release time.
              */
             public Builder autoReleaseTime(String autoReleaseTime) {
                 this.autoReleaseTime = autoReleaseTime;
@@ -1469,7 +1469,7 @@ public class DescribeLaunchTemplateVersionsResponseBody extends TeaModel {
             }
 
             /**
-             * Specifies whether to enable the operating system configuration of the instance.
+             * Indicates whether the operating system configuration is enabled for the instance.
              */
             public Builder enableVmOsConfig(Boolean enableVmOsConfig) {
                 this.enableVmOsConfig = enableVmOsConfig;
@@ -1496,10 +1496,10 @@ public class DescribeLaunchTemplateVersionsResponseBody extends TeaModel {
              * The source of the image. Valid values:
              * <p>
              * 
-             * *   system: public images provided by Alibaba Cloud
-             * *   self: custom images that you create
-             * *   others: shared images from other Alibaba Cloud accounts
-             * *   marketplace: Alibaba Cloud Marketplace images
+             * *   system: a public image of Alibaba Cloud.
+             * *   self: a custom image that you created.
+             * *   others: a shared image from another Alibaba Cloud account.
+             * *   marketplace: an Alibaba Cloud Marketplace image.
              */
             public Builder imageOwnerAlias(String imageOwnerAlias) {
                 this.imageOwnerAlias = imageOwnerAlias;
@@ -1510,8 +1510,8 @@ public class DescribeLaunchTemplateVersionsResponseBody extends TeaModel {
              * The billing method of the instance. Valid values:
              * <p>
              * 
-             * *   PrePaid: subscription
-             * *   PostPaid: pay-as-you-go
+             * *   PrePaid: subscription.
+             * *   PostPaid: pay-as-you-go.
              */
             public Builder instanceChargeType(String instanceChargeType) {
                 this.instanceChargeType = instanceChargeType;
@@ -1519,7 +1519,7 @@ public class DescribeLaunchTemplateVersionsResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the instance.
+             * The instance name.
              */
             public Builder instanceName(String instanceName) {
                 this.instanceName = instanceName;
@@ -1567,7 +1567,7 @@ public class DescribeLaunchTemplateVersionsResponseBody extends TeaModel {
             }
 
             /**
-             * The number of IPv6 addresses to assign to the instance.
+             * The number of IPv6 addresses assigned to the instance.
              */
             public Builder ipv6AddressCount(Integer ipv6AddressCount) {
                 this.ipv6AddressCount = ipv6AddressCount;
@@ -1575,7 +1575,7 @@ public class DescribeLaunchTemplateVersionsResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the key pair. This parameter is empty by default.
+             * The name of the key pair.
              */
             public Builder keyPairName(String keyPairName) {
                 this.keyPairName = keyPairName;
@@ -1594,8 +1594,8 @@ public class DescribeLaunchTemplateVersionsResponseBody extends TeaModel {
              * The network type. Valid values:
              * <p>
              * 
-             * *   classic: classic network
-             * *   vpc: VPC
+             * *   classic
+             * *   vpc
              */
             public Builder networkType(String networkType) {
                 this.networkType = networkType;
@@ -1603,7 +1603,7 @@ public class DescribeLaunchTemplateVersionsResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether to use the password preset in the image.
+             * Indicates whether the preset password of the image is used.
              */
             public Builder passwordInherit(Boolean passwordInherit) {
                 this.passwordInherit = passwordInherit;
@@ -1611,7 +1611,7 @@ public class DescribeLaunchTemplateVersionsResponseBody extends TeaModel {
             }
 
             /**
-             * The subscription duration of the resource.
+             * The subscription period of the resource.
              */
             public Builder period(Integer period) {
                 this.period = period;
@@ -1619,7 +1619,7 @@ public class DescribeLaunchTemplateVersionsResponseBody extends TeaModel {
             }
 
             /**
-             * The private IP address to assign to the instance.
+             * The private IP address assigned to the instance.
              */
             public Builder privateIpAddress(String privateIpAddress) {
                 this.privateIpAddress = privateIpAddress;
@@ -1627,7 +1627,7 @@ public class DescribeLaunchTemplateVersionsResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the instance Resource Access Management (RAM) role.
+             * The name of the RAM role that is assigned to the instance.
              */
             public Builder ramRoleName(String ramRoleName) {
                 this.ramRoleName = ramRoleName;
@@ -1643,7 +1643,7 @@ public class DescribeLaunchTemplateVersionsResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether security hardening is enabled.
+             * Indicates whether security hardening was enabled.
              */
             public Builder securityEnhancementStrategy(String securityEnhancementStrategy) {
                 this.securityEnhancementStrategy = securityEnhancementStrategy;
@@ -1651,7 +1651,7 @@ public class DescribeLaunchTemplateVersionsResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the security group to which to assign the instance.
+             * The ID of the security group to which the instance belongs.
              * <p>
              * 
              * > `The SecurityGroupId` and `SecurityGroupIds` parameters are mutually exclusive in the response.
@@ -1662,7 +1662,7 @@ public class DescribeLaunchTemplateVersionsResponseBody extends TeaModel {
             }
 
             /**
-             * The IDs of the security groups to which to assign the instance.
+             * The IDs of the security groups to which the instance belongs.
              * <p>
              * 
              * > `The SecurityGroupId` and `SecurityGroupIds` parameters are mutually exclusive in the response.
@@ -1673,13 +1673,13 @@ public class DescribeLaunchTemplateVersionsResponseBody extends TeaModel {
             }
 
             /**
-             * The retention period of the preemptible instance. Unit: hours. Valid values: 0, 1, 2, 3, 4, 5, and 6.
+             * The protection period of the preemptible instance. Unit: hours. Valid values: 0, 1, 2, 3, 4, 5, and 6.
              * <p>
              * 
              * Take note of the following items:
              * 
-             * *   The following protection periods are in invitational preview: 2, 3, 4, 5, and 6 hours. If you want to set this parameter to one of these values, submit a ticket.
-             * *   If this parameter is set to 0, no protection period is configured for the preemptible instance.
+             * *   The following protection periods are in invitational preview: 2, 3, 4, 5, and 6 hours. If you want to specify one of these values, submit a ticket.
+             * *   A value of 0 indicates that no protection period is specified for the preemptible instance.
              */
             public Builder spotDuration(Integer spotDuration) {
                 this.spotDuration = spotDuration;
@@ -1698,9 +1698,9 @@ public class DescribeLaunchTemplateVersionsResponseBody extends TeaModel {
              * The bidding policy for the pay-as-you-go instance. Valid values:
              * <p>
              * 
-             * *   NoSpot: The instance is created as a regular pay-as-you-go instance.
-             * *   SpotWithPriceLimit: The instance is created as a preemptible instance with a user-defined maximum hourly price.
-             * *   SpotAsPriceGo: The instance is created as a preemptible instance for which the market price at the time of purchase is automatically used as the bidding price.
+             * *   NoSpot: The instance is a regular pay-as-you-go instance.
+             * *   SpotWithPriceLimit: The instance is a preemptible instance with a user-defined maximum hourly price.
+             * *   SpotAsPriceGo: The instance is a preemptible instance for which the market price at the time of purchase is automatically used as the bid price.
              */
             public Builder spotStrategy(String spotStrategy) {
                 this.spotStrategy = spotStrategy;
@@ -1796,7 +1796,7 @@ public class DescribeLaunchTemplateVersionsResponseBody extends TeaModel {
             }
 
             /**
-             * The tags to add to the instance.
+             * The tags of the instance.
              */
             public Builder tags(Tags tags) {
                 this.tags = tags;
@@ -1812,7 +1812,7 @@ public class DescribeLaunchTemplateVersionsResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the vSwitch to which to connect the instance.
+             * The ID of the vSwitch to which the instance is connected.
              */
             public Builder vSwitchId(String vSwitchId) {
                 this.vSwitchId = vSwitchId;
@@ -1828,7 +1828,7 @@ public class DescribeLaunchTemplateVersionsResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the zone.
+             * The zone ID.
              */
             public Builder zoneId(String zoneId) {
                 this.zoneId = zoneId;
@@ -1965,7 +1965,7 @@ public class DescribeLaunchTemplateVersionsResponseBody extends TeaModel {
             private Long versionNumber; 
 
             /**
-             * The time when the launch template version was created.
+             * The time when the launch template was created.
              */
             public Builder createTime(String createTime) {
                 this.createTime = createTime;
@@ -1973,7 +1973,7 @@ public class DescribeLaunchTemplateVersionsResponseBody extends TeaModel {
             }
 
             /**
-             * The creator of the launch template version.
+             * The creator of the launch template.
              */
             public Builder createdBy(String createdBy) {
                 this.createdBy = createdBy;
@@ -1981,7 +1981,7 @@ public class DescribeLaunchTemplateVersionsResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether the launch template version is the default version.
+             * Indicates whether the launch template is of the default version.
              */
             public Builder defaultVersion(Boolean defaultVersion) {
                 this.defaultVersion = defaultVersion;
@@ -1997,7 +1997,7 @@ public class DescribeLaunchTemplateVersionsResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the template.
+             * The ID of the launch template.
              */
             public Builder launchTemplateId(String launchTemplateId) {
                 this.launchTemplateId = launchTemplateId;
@@ -2005,7 +2005,7 @@ public class DescribeLaunchTemplateVersionsResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the launch template version.
+             * The name of the launch template.
              */
             public Builder launchTemplateName(String launchTemplateName) {
                 this.launchTemplateName = launchTemplateName;
@@ -2013,7 +2013,7 @@ public class DescribeLaunchTemplateVersionsResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the launch template version was modified.
+             * The time when the launch template was modified.
              */
             public Builder modifiedTime(String modifiedTime) {
                 this.modifiedTime = modifiedTime;
@@ -2029,7 +2029,7 @@ public class DescribeLaunchTemplateVersionsResponseBody extends TeaModel {
             }
 
             /**
-             * The number of the launch template version.
+             * The version number of the launch template.
              */
             public Builder versionNumber(Long versionNumber) {
                 this.versionNumber = versionNumber;

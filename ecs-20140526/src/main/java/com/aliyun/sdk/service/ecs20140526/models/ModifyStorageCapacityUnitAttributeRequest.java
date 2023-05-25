@@ -154,7 +154,7 @@ public class ModifyStorageCapacityUnitAttributeRequest extends Request {
         } 
 
         /**
-         * The description of the SCU. It must be 2 to 256 characters in length and cannot start with http:// or https://.
+         * The new description of the SCU. The description must be 2 to 256 characters in length and cannot start with [http:// or https://.](http://https://。)
          */
         public Builder description(String description) {
             this.putQueryParameter("Description", description);
@@ -163,7 +163,7 @@ public class ModifyStorageCapacityUnitAttributeRequest extends Request {
         }
 
         /**
-         * The name of the SCU. It must be 2 to 128 characters in length and can contain letters, digits, colons (:), underscores (\_), and hyphens (-). It must start with a letter but cannot start with http:// or https://.
+         * The new name of the SCU. The name must be 2 to 128 characters in length. It must start with a letter and cannot start with [http:// or https://. It can contain letters, digits, colons (:), underscores (\_), and hyphens (-).](http://https://。、（:）、（\_）（-）。)
          */
         public Builder name(String name) {
             this.putQueryParameter("Name", name);

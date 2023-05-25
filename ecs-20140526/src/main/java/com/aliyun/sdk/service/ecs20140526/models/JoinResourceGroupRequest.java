@@ -202,7 +202,7 @@ public class JoinResourceGroupRequest extends Request {
         }
 
         /**
-         * The ID of the resource group to which you want to assign the resource.
+         * The ID of the resource group to which you want to add the instance.
          */
         public Builder resourceGroupId(String resourceGroupId) {
             this.putQueryParameter("ResourceGroupId", resourceGroupId);
@@ -211,7 +211,7 @@ public class JoinResourceGroupRequest extends Request {
         }
 
         /**
-         * The ID of the resource. The value of this parameter varies based on the resource type. For example, when ResourceType is set to instance, the ResourceId refers to InstanceId.
+         * The ID of the resource. For example, if you set ResourceType to instance, set this parameter to the ID of the instance.
          */
         public Builder resourceId(String resourceId) {
             this.putQueryParameter("ResourceId", resourceId);
@@ -242,7 +242,7 @@ public class JoinResourceGroupRequest extends Request {
          * <p>
          * 
          * *   instance: instance
-         * *   disk: Elastic Block Storage device
+         * *   disk: Elastic Block Storage (EBS) device
          * *   snapshot: snapshot
          * *   image: image
          * *   securitygroup: security group

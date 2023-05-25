@@ -178,7 +178,7 @@ public class DescribeInstanceAttachmentAttributesRequest extends Request {
         }
 
         /**
-         * The IDs of instances. The value can be a JSON array that consists of up to 100 instance IDs. Separate the IDs with commas (,).
+         * The IDs of the instances. The value can be a JSON array that consists of up to 100 instance IDs. Separate the IDs with commas (,).
          */
         public Builder instanceIds(String instanceIds) {
             this.putQueryParameter("InstanceIds", instanceIds);
@@ -205,12 +205,12 @@ public class DescribeInstanceAttachmentAttributesRequest extends Request {
         }
 
         /**
-         * The number of the page to return.
+         * The page number.
          * <p>
          * 
          * Pages start from page 1.
          * 
-         * Default value: 1
+         * Default value: 1.
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -219,7 +219,7 @@ public class DescribeInstanceAttachmentAttributesRequest extends Request {
         }
 
         /**
-         * The number of entries to return on each page.
+         * The number of entries per page.
          * <p>
          * 
          * Maximum value: 100.

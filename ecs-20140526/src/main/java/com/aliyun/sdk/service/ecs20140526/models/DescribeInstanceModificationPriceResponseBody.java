@@ -50,7 +50,7 @@ public class DescribeInstanceModificationPriceResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * Details about the prices and discount rules.
+         * $.parameters[4].schema.enumValueTitles
          */
         public Builder priceInfo(PriceInfo priceInfo) {
             this.priceInfo = priceInfo;
@@ -58,7 +58,7 @@ public class DescribeInstanceModificationPriceResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * $.parameters[4].schema.example
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -134,12 +134,7 @@ public class DescribeInstanceModificationPriceResponseBody extends TeaModel {
             private Float tradePrice; 
 
             /**
-             * The currency unit. 
-             * <p>
-             * 
-             * Alibaba Cloud China site (aliyun.com): CNY. 
-             * 
-             * Alibaba Cloud International site (alibabacloud.com): USD.
+             * Currency.
              */
             public Builder currency(String currency) {
                 this.currency = currency;
@@ -147,7 +142,7 @@ public class DescribeInstanceModificationPriceResponseBody extends TeaModel {
             }
 
             /**
-             * The discount.
+             * WB01405484
              */
             public Builder discountPrice(Float discountPrice) {
                 this.discountPrice = discountPrice;
@@ -155,7 +150,7 @@ public class DescribeInstanceModificationPriceResponseBody extends TeaModel {
             }
 
             /**
-             * The original price.
+             * DescribeInstanceModificationPrice
              */
             public Builder originalPrice(Float originalPrice) {
                 this.originalPrice = originalPrice;
@@ -163,7 +158,7 @@ public class DescribeInstanceModificationPriceResponseBody extends TeaModel {
             }
 
             /**
-             * The transaction price, which is equal to the original price minus the discount.
+             * TradePrice.
              */
             public Builder tradePrice(Float tradePrice) {
                 this.tradePrice = tradePrice;
@@ -216,7 +211,7 @@ public class DescribeInstanceModificationPriceResponseBody extends TeaModel {
             private Long ruleId; 
 
             /**
-             * The description of the promotion rule.
+             * $.parameters[5].schema.example
              */
             public Builder description(String description) {
                 this.description = description;
@@ -224,7 +219,7 @@ public class DescribeInstanceModificationPriceResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the promotion rule.
+             * $.parameters[5].schema.enumValueTitles
              */
             public Builder ruleId(Long ruleId) {
                 this.ruleId = ruleId;
@@ -318,7 +313,7 @@ public class DescribeInstanceModificationPriceResponseBody extends TeaModel {
             private Rules rules; 
 
             /**
-             * The price.
+             * Queries the pricing information about newly attached subscription data disks or about the new instance types when you upgrade the configurations of unexpired subscription Elastic Compute Service (ECS) instances.
              */
             public Builder price(Price price) {
                 this.price = price;
@@ -326,7 +321,7 @@ public class DescribeInstanceModificationPriceResponseBody extends TeaModel {
             }
 
             /**
-             * Details about the promotion rules.
+             * $.parameters[5].schema.description
              */
             public Builder rules(Rules rules) {
                 this.rules = rules;

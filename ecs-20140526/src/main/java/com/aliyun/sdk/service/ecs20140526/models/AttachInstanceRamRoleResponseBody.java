@@ -94,7 +94,7 @@ public class AttachInstanceRamRoleResponseBody extends TeaModel {
         }
 
         /**
-         * The number of the instances to which the instance RAM role failed to be attached.
+         * The number of instances to which the instance RAM role failed to be attached.
          */
         public Builder failCount(Integer failCount) {
             this.failCount = failCount;
@@ -110,7 +110,7 @@ public class AttachInstanceRamRoleResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

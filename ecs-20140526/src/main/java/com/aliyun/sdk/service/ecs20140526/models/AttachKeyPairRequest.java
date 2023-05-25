@@ -150,7 +150,7 @@ public class AttachKeyPairRequest extends Request {
         }
 
         /**
-         * The IDs of instances to which you want to attach the SSH key pair. The value can be a JSON array that consists of up to 50 instance IDs. Separate multiple instance IDs with commas (,).
+         * The IDs of instances to which you want to bind the SSH key pair. The value can be a JSON array that consists of up to 50 instance IDs. Separate multiple instance IDs with commas (,).
          */
         public Builder instanceIds(String instanceIds) {
             this.putQueryParameter("InstanceIds", instanceIds);
@@ -177,7 +177,7 @@ public class AttachKeyPairRequest extends Request {
         }
 
         /**
-         * The region ID of the SSH key pair. You can call the [DescribeRegions](~~25609~~) operation to query the most recent region list.
+         * The region ID of the SSH key pair. You can call the [DescribeRegions](~~25609~~) operation to query the most recent list of regions.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);

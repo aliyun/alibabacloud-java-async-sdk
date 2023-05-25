@@ -330,7 +330,7 @@ public class DescribeInvocationsRequest extends Request {
         }
 
         /**
-         * The ID of the command. You can call the [DescribeCommands](~~64843~~) operation to query all available command IDs.
+         * The command ID. You can call the [DescribeCommands](~~64843~~) operation to query all available command IDs.
          */
         public Builder commandId(String commandId) {
             this.putQueryParameter("CommandId", commandId);
@@ -339,7 +339,7 @@ public class DescribeInvocationsRequest extends Request {
         }
 
         /**
-         * The name of the command.
+         * The command name.
          */
         public Builder commandName(String commandName) {
             this.putQueryParameter("CommandName", commandName);
@@ -348,7 +348,7 @@ public class DescribeInvocationsRequest extends Request {
         }
 
         /**
-         * The type of the command. If this parameter and `InstanceId` are both specified, this parameter does not take effect.
+         * The command type. If this parameter and `InstanceId` are both specified, this parameter does not take effect.
          */
         public Builder commandType(String commandType) {
             this.putQueryParameter("CommandType", commandType);
@@ -378,7 +378,7 @@ public class DescribeInvocationsRequest extends Request {
          * *   true: The command outputs are returned. When this parameter is set to true, you must specify `InvokeId`, `InstanceId`, or both.
          * *   false: The command outputs are not returned.
          * 
-         * Default value: false.
+         * Default value: false
          */
         public Builder includeOutput(Boolean includeOutput) {
             this.putQueryParameter("IncludeOutput", includeOutput);
@@ -387,7 +387,7 @@ public class DescribeInvocationsRequest extends Request {
         }
 
         /**
-         * The ID of the instance. When you specify this parameter, the system queries all the execution records of all the commands that run on the instance.
+         * The ID of instance N. When you specify this parameter, the system queries all the execution records of all the commands that run on the instance.
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -396,7 +396,7 @@ public class DescribeInvocationsRequest extends Request {
         }
 
         /**
-         * The ID of the command task.
+         * The command task ID.
          */
         public Builder invokeId(String invokeId) {
             this.putQueryParameter("InvokeId", invokeId);
@@ -455,10 +455,10 @@ public class DescribeInvocationsRequest extends Request {
         }
 
         /**
-         * The number of the page to return.
+         * The page number of the page to return.
          * <p>
          * 
-         * Page start from page 1.
+         * Page numbers start from 1.
          * 
          * Default value: 1.
          */
@@ -469,7 +469,7 @@ public class DescribeInvocationsRequest extends Request {
         }
 
         /**
-         * The number of entries to return on each page.
+         * The number of entries to return per page.
          * <p>
          * 
          * Maximum value: 50.
@@ -483,7 +483,7 @@ public class DescribeInvocationsRequest extends Request {
         }
 
         /**
-         * The region ID of the command. You can call the [DescribeRegions](~~25609~~) operation to query the most recent region list.
+         * The region ID. You can call the [DescribeRegions](~~25609~~) operation to query the most recent list of regions.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -495,7 +495,7 @@ public class DescribeInvocationsRequest extends Request {
          * The execution mode of the command. Valid values:
          * <p>
          * 
-         * *   Once: The command is immediately run.
+         * *   Once: immediately runs the command.
          * *   Period: The command is run on a schedule.
          * *   NextRebootOnly: The command is automatically run the next time the instance starts.
          * *   EveryReboot: The command is automatically run every time the instance starts.
@@ -536,7 +536,7 @@ public class DescribeInvocationsRequest extends Request {
         }
 
         /**
-         * The tags of the command.
+         * The tags that are added to the command.
          */
         public Builder tag(java.util.List < Tag> tag) {
             this.putQueryParameter("Tag", tag);
@@ -545,10 +545,10 @@ public class DescribeInvocationsRequest extends Request {
         }
 
         /**
-         * Specifies whether to query the commands that are to be automatically run. Valid values:
+         * Specifies whether to query commands that are to be automatically run. Valid values:
          * <p>
          * 
-         * *   true: queries the commands that meet the following requirements: The commands are run by calling the `RunCommand` or `InvokeCommand` operation with `RepeatMode` set to `Period`, `NextRebootOnly`, or `EveryReboot`. The executions of the commands are not canceled and not complete or are not stopped and not complete.
+         * *   true: queries commands that meet the following requirements: The commands are run by calling the `RunCommand` or `InvokeCommand` operation with `RepeatMode` set to `Period`, `NextRebootOnly`, or `EveryReboot`. The executions of the commands are not canceled and not complete or are not stopped and not complete.
          * 
          * *   false: queries commands that meet the following requirements:
          * 
@@ -609,12 +609,12 @@ public class DescribeInvocationsRequest extends Request {
             private String value; 
 
             /**
-             * The key of tag N of the command task. Valid values of N: 1 to 20. The tag key cannot be an empty string.
+             * The key of tag N of the command. You can specify up to 20 tag keys for the command. The tag key cannot be an empty string.
              * <p>
              * 
              * If a single tag is specified to query resources, up to 1,000 resources that have this tag added can be displayed in the response. If multiple tags are specified to query resources, up to 1,000 resources that have all these tags added can be displayed in the response. To query more than 1,000 resources that have specified tags added, call the [ListTagResources](~~110425~~) operation.
              * 
-             * The tag key can be up to 64 characters in length and cannot start with `acs:` or `aliyun`. It cannot contain `http://` or `https://`.
+             * The tag key can be up to 64 characters in length and cannot contain `http://` or `https://`. The tag key cannot start with `acs:` or `aliyun`.
              */
             public Builder key(String key) {
                 this.key = key;
@@ -622,7 +622,7 @@ public class DescribeInvocationsRequest extends Request {
             }
 
             /**
-             * The value of tag N of the command. Valid values of N: 1 to 20. The tag value can be an empty string. The tag value can be up to 128 characters in length and cannot contain `http://` or `https://`.
+             * The value of tag N of the command. You can specify up to 20 tag values for the command. The tag value can be an empty string. It can be up to 128 characters in length and cannot contain `http://` or `https://`.
              */
             public Builder value(String value) {
                 this.value = value;

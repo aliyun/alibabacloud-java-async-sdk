@@ -62,7 +62,10 @@ public class CreateLaunchTemplateVersionResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * LaunchTemplateId.
+         * 启动模板ID。更多信息，请参见[DescribeLaunchTemplates](~~73759~~)。
+         * <p>
+         * 
+         * 使用启动模板创建实例时，您必须指定`LaunchTemplateId`或`LaunchTemplateName`以确定启动模板。
          */
         public Builder launchTemplateId(String launchTemplateId) {
             this.launchTemplateId = launchTemplateId;

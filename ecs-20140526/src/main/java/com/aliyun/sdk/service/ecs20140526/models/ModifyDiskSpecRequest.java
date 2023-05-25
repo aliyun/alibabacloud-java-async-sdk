@@ -204,16 +204,17 @@ public class ModifyDiskSpecRequest extends Request {
         }
 
         /**
-         * The new category of the disk. Valid values:
+         * The new category of the disk. Default value: PL1. Valid values:
          * <p>
          * 
-         * *   cloud_essd: ESSD
-         * *   cloud_ssd: standard SSD
-         * *   cloud_efficiency: ultra disk
+         * *   cloud_essd: ESSD.
+         * *   cloud_auto: ESSD AutoPL disk.
+         * *   cloud_ssd: The system creates an SSD.
+         * *   cloud_efficiency: The system creates an ultra disk.
          * 
          * This parameter is empty by default, which indicates that the disk category is not changed.
          * 
-         * >  The preceding values are listed in descending order of disk performance. The disk cannot be downgraded if it is a subscription disk.
+         * > The preceding values are listed in descending order of disk performance. The performance level of a subscription cloud disk cannot be downgraded.
          */
         public Builder diskCategory(String diskCategory) {
             this.putQueryParameter("DiskCategory", diskCategory);
@@ -222,7 +223,7 @@ public class ModifyDiskSpecRequest extends Request {
         }
 
         /**
-         * The ID of the disk.
+         * The disk ID.
          */
         public Builder diskId(String diskId) {
             this.putQueryParameter("DiskId", diskId);
@@ -231,13 +232,13 @@ public class ModifyDiskSpecRequest extends Request {
         }
 
         /**
-         * Specifies whether to check the validity of the request without actually making the request. Valid values:
+         * Specifies whether to perform only a dry run without performing the actual request. Default value: PL1. Valid values:
          * <p>
          * 
-         * *   true: The validity of the request is checked but the request is not made. Check items include the required parameters, request format, service limits, and available ECS resources. If the check fails, the corresponding error message is returned. If the check succeeds, the `DryRunOperation` error code is returned.
+         * *   true: performs only a dry run. The system checks the required parameters, request syntax, service limits, and available ECS resources. If the request fails the dry run, the corresponding error message is returned. If the check succeeds, the `DryRunOperation` error code is returned.
          * *   false: The validity of the request is checked. If the check succeeds, a 2xx HTTP status code is returned and the request is made.
          * 
-         * Default value: false.
+         * Default value: false
          */
         public Builder dryRun(Boolean dryRun) {
             this.putQueryParameter("DryRun", dryRun);
@@ -264,7 +265,7 @@ public class ModifyDiskSpecRequest extends Request {
         }
 
         /**
-         * PerformanceControlOptions.
+         * 磁盘性能控制参数集合
          */
         public Builder performanceControlOptions(PerformanceControlOptions performanceControlOptions) {
             this.putQueryParameter("PerformanceControlOptions", performanceControlOptions);
@@ -273,15 +274,15 @@ public class ModifyDiskSpecRequest extends Request {
         }
 
         /**
-         * The new performance level of the ESSD. Valid values:
+         * The new performance level of the ESSD. Default value: PL1. Valid values:
          * <p>
          * 
-         * *   PL0: A single ESSD can deliver up to 10,000 random read/write IOPS.
-         * *   PL1: A single ESSD can deliver up to 50,000 random read/write IOPS.
-         * *   PL2: A single ESSD can deliver up to 100,000 random read/write IOPS.
-         * *   PL3: A single ESSD can deliver up to 1,000,000 random read/write IOPS.
+         * *   PL0: An ESSD can deliver up to 10,000 random read/write IOPS.
+         * *   PL1: An ESSD can deliver up to 50,000 random read/write IOPS.
+         * *   PL2: An ESSD can deliver up to 100,000 random read/write IOPS.
+         * *   PL3: An ESSD delivers up to 1,000,000 random read/write IOPS.
          * 
-         * Default value: PL1.
+         * Default value: PL1
          */
         public Builder performanceLevel(String performanceLevel) {
             this.putQueryParameter("PerformanceLevel", performanceLevel);
@@ -290,12 +291,12 @@ public class ModifyDiskSpecRequest extends Request {
         }
 
         /**
-         * 是否修改ESSD AutoPL云盘预配置读写IOPS。取值范围：0~min{50000, 1000*容量-基准性能}。
+         * The provisioned read/write IOPS of the ESSD AutoPL disk. Valid values: 0 to min{50,000, 1,000 × Capacity - Baseline IOPS}
          * <p>
          * 
-         * 基准性能=min{1,800+50*容量, 50,000}
+         * Baseline IOPS = min{1,800 + 50 × Capacity, 50,000}
          * 
-         * > 当DiskCategory取值为cloud_auto时才支持设置该参数。更多信息，请参见[ESSD AutoPL云盘](~~368372~~)和[修改ESSD AutoPL云盘预配置信息](~~413275~~)。
+         * > This parameter is available only if you set DiskCategory to cloud_auto. For more information, see [ESSD AutoPL disks](~~368372~~) and [Modify the performance configurations of an ESSD AutoPL disk](~~413275~~).
          */
         public Builder provisionedIops(Long provisionedIops) {
             this.putQueryParameter("ProvisionedIops", provisionedIops);
@@ -379,7 +380,13 @@ public class ModifyDiskSpecRequest extends Request {
             private Integer throughput; 
 
             /**
-             * IOPS.
+             * 目标云盘IOPS。仅支持修改专属存储集群云盘IOPS。
+             * <p>
+             * 
+             * 取值范围：900~单盘最大IOPS，步长100。
+             * 
+             * 
+             * 更多信息，请参见[云盘性能](~~25382~~)。
              */
             public Builder IOPS(Integer IOPS) {
                 this.IOPS = IOPS;
@@ -387,7 +394,13 @@ public class ModifyDiskSpecRequest extends Request {
             }
 
             /**
-             * Recover.
+             * 重置云盘性能，仅支持专属存储集群云盘。
+             * <p>
+             * 
+             * 设置该参数后，PerformanceControlOptions.IOPS和PerformanceControlOptions.Throughput参数不生效。
+             * 
+             * 
+             * 目前仅支持设置为All（重置云盘IOPS和吞吐量到初始值）。
              */
             public Builder recover(String recover) {
                 this.recover = recover;
@@ -395,7 +408,12 @@ public class ModifyDiskSpecRequest extends Request {
             }
 
             /**
-             * Throughput.
+             * 目标云盘吞吐量，仅支持修改专属存储集群云盘吞吐量，单位MB/s。
+             * <p>
+             * 
+             * 取值范围：60~单盘最大吞吐量。
+             * 
+             * 更多信息，请参见[云盘性能](~~25382~~)。
              */
             public Builder throughput(Integer throughput) {
                 this.throughput = throughput;

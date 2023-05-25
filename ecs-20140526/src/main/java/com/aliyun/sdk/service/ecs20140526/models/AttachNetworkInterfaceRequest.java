@@ -206,7 +206,7 @@ public class AttachNetworkInterfaceRequest extends Request {
         }
 
         /**
-         * The ID of the instance.
+         * The instance ID.
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -215,10 +215,10 @@ public class AttachNetworkInterfaceRequest extends Request {
         }
 
         /**
-         * 网卡指定的物理网卡索引。
+         * The index of the network interface controller (NIC).
          * <p>
          * 
-         * >NetworkCardIndex 取值与实例规格族有关。如果实例规格不支持NetworkCard则不能指定；如果支持，取值请参见[实例规格族](~~25378~~)。
+         * > The value of this parameter varies based on the instance family of the specified instance. If the instance type of the specified instance does not support NICs, leave this parameter empty. If the instance type of the specified instance supports NICs, set this parameter to a valid value. For information about the valid values of this parameter, see [Instance families](~~25378~~).
          */
         public Builder networkCardIndex(Integer networkCardIndex) {
             this.putQueryParameter("NetworkCardIndex", networkCardIndex);
@@ -284,7 +284,7 @@ public class AttachNetworkInterfaceRequest extends Request {
          * The ID of the trunk ENI.
          * <p>
          * 
-         * > This parameter is unavailable for use.
+         * > This parameter is unavailable.
          */
         public Builder trunkNetworkInstanceId(String trunkNetworkInstanceId) {
             this.putQueryParameter("TrunkNetworkInstanceId", trunkNetworkInstanceId);
@@ -293,7 +293,7 @@ public class AttachNetworkInterfaceRequest extends Request {
         }
 
         /**
-         * > This parameter is no longer used.
+         * > This parameter is no longer supported.
          */
         public Builder waitForNetworkConfigurationReady(Boolean waitForNetworkConfigurationReady) {
             this.putQueryParameter("WaitForNetworkConfigurationReady", waitForNetworkConfigurationReady);

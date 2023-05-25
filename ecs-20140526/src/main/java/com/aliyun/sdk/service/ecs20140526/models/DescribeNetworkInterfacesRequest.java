@@ -386,7 +386,7 @@ public class DescribeNetworkInterfacesRequest extends Request {
         }
 
         /**
-         * The ID of the instance to which the ENI is bound.
+         * The ID of the instance to which the ENI is attached.
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -395,7 +395,7 @@ public class DescribeNetworkInterfacesRequest extends Request {
         }
 
         /**
-         * IPv6 address N of the ENI. You can specify multiple IPv6 addresses. Valid values of N: 1 to 100.
+         * An array that consists of the IPv6 address of the ENI. You can specify multiple IPv6 addresses. Valid values of N: 1 to 100.
          */
         public Builder ipv6Address(java.util.List < String > ipv6Address) {
             this.putQueryParameter("Ipv6Address", ipv6Address);
@@ -409,7 +409,7 @@ public class DescribeNetworkInterfacesRequest extends Request {
          * 
          * Default values:
          * 
-         * *   If this parameter is not specified or if this parameter is set to a value smaller than 10, the default value is 10.
+         * *   If this parameter is not specified or if this parameter is set to a value less than 10, the default value is 10.
          * *   If this parameter is set to a value greater than 500, the default value is 500.
          */
         public Builder maxResults(Integer maxResults) {
@@ -419,7 +419,7 @@ public class DescribeNetworkInterfacesRequest extends Request {
         }
 
         /**
-         * The ID of the ENI N. Valid values of N: 1 to 100.
+         * An array that consists of the IDs of the ENIs. You specify multiple ENI IDs. Valid values of N: 1 to 100.
          */
         public Builder networkInterfaceId(java.util.List < String > networkInterfaceId) {
             this.putQueryParameter("NetworkInterfaceId", networkInterfaceId);
@@ -437,7 +437,7 @@ public class DescribeNetworkInterfacesRequest extends Request {
         }
 
         /**
-         * The query token. Set the value to the `NextToken` value returned in the last call to the Describedisks operation.
+         * The query token. Set the value to the `NextToken` value returned in the last call to this operation.
          * <p>
          * 
          * For more information about how to check the responses returned by this operation, see the preceding "Description" section.
@@ -474,7 +474,7 @@ public class DescribeNetworkInterfacesRequest extends Request {
          * 
          * Default value: 1.
          * 
-         * > This parameter will be removed in the future. We recommend that you use the NextToken and MaxResults parameters for a paged query.
+         * > This parameter will be removed in the future. We recommend that you use the NextToken and MaxResults parameters to perform a paged query.
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -508,7 +508,7 @@ public class DescribeNetworkInterfacesRequest extends Request {
         }
 
         /**
-         * Secondary private IPv4 address N of the ENI. Valid values of N: 1 to 100.
+         * An array that consists of the secondary private IPv4 addresses of the ENI. You can specify multiple secondary private IPv4 addresses. Valid values of N: 1 to 100.
          */
         public Builder privateIpAddress(java.util.List < String > privateIpAddress) {
             this.putQueryParameter("PrivateIpAddress", privateIpAddress);
@@ -517,7 +517,7 @@ public class DescribeNetworkInterfacesRequest extends Request {
         }
 
         /**
-         * The region ID of the ENI. You can call the [DescribeRegions](~~25609~~) operation to query the most recent list of regions.
+         * The region ID of the ENI. You can call the [DescribeRegions](~~25609~~) operation to query the most recent region list.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -526,7 +526,7 @@ public class DescribeNetworkInterfacesRequest extends Request {
         }
 
         /**
-         * The ID of the resource group. When you use this property to filter resources, the number of resources that are contained in the specified resource group cannot exceed 1,000.
+         * The ID of the resource group to which the ENI belongs. If this parameter is specified to query resources, up to 1,000 resources that belong to the specified resource group can be returned.
          * <p>
          * 
          * > Resources in the default resource group are displayed in the response regardless of how this parameter is set.
@@ -569,7 +569,7 @@ public class DescribeNetworkInterfacesRequest extends Request {
         }
 
         /**
-         * Indicates whether the user of the ENI is an Alibaba Cloud service or a distributor.
+         * Specifies whether the user of the ENI is an Alibaba Cloud service or a distributor.
          */
         public Builder serviceManaged(Boolean serviceManaged) {
             this.putQueryParameter("ServiceManaged", serviceManaged);
@@ -582,12 +582,12 @@ public class DescribeNetworkInterfacesRequest extends Request {
          * <p>
          * 
          * *   Available: The ENI is available.
-         * *   Attaching: The ENI is being bound to an instance.
-         * *   InUse: The ENI is in use.
-         * *   Detaching: The ENI is being unbound from an instance.
+         * *   Attaching: The ENI is being attached to an instance.
+         * *   InUse: The ENI is attached to an instance.
+         * *   Detaching: The ENI is being detached from an instance.
          * *   Deleting: The ENI is being deleted.
          * 
-         * This parameter is empty by default, which indicates that all states are queried.
+         * This parameter is empty by default, which indicates that ENIs in all states are queried.
          */
         public Builder status(String status) {
             this.putQueryParameter("Status", status);
@@ -596,7 +596,7 @@ public class DescribeNetworkInterfacesRequest extends Request {
         }
 
         /**
-         * The tags of the ENI.
+         * The tags to use for query.
          */
         public Builder tag(java.util.List < Tag> tag) {
             this.putQueryParameter("Tag", tag);
@@ -620,7 +620,7 @@ public class DescribeNetworkInterfacesRequest extends Request {
         }
 
         /**
-         * The ID of the vSwitch to which the ENI belongs.
+         * The ID of the vSwitch with which the ENI is associated.
          */
         public Builder vSwitchId(String vSwitchId) {
             this.putQueryParameter("VSwitchId", vSwitchId);
@@ -694,7 +694,7 @@ public class DescribeNetworkInterfacesRequest extends Request {
              * The value of tag N of the ENI. Valid values of N: 1 to 20.
              * <p>
              * 
-             * Up to 1,000 resources that match the tags specified can be returned in the response. If the total number of resources that match the tags exceed 1,000, we recommend that you call the [ListTagResources](~~110425~~) operation.
+             * If a single tag is specified to query ENIs, up to 1,000 ENIs that have this tag can be returned. If multiple tags are specified to query ENIs, up to 1,000 ENIs that have all these tags can be returned. To query more than 1,000 resources that have specified tags, call the [ListTagResources](~~110425~~) operation.
              */
             public Builder value(String value) {
                 this.value = value;

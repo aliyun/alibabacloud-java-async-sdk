@@ -86,7 +86,7 @@ public class DescribeDedicatedHostsResponseBody extends TeaModel {
         private Integer totalCount; 
 
         /**
-         * Details about the dedicated hosts.
+         * The details of the dedicated hosts.
          */
         public Builder dedicatedHosts(DedicatedHosts dedicatedHosts) {
             this.dedicatedHosts = dedicatedHosts;
@@ -428,7 +428,7 @@ public class DescribeDedicatedHostsResponseBody extends TeaModel {
             private Integer totalVgpus; 
 
             /**
-             * The amount of available space on the local disks. Unit: GiB.
+             * The available space of the local disks. Unit: GiB.
              */
             public Builder availableLocalStorage(Integer availableLocalStorage) {
                 this.availableLocalStorage = availableLocalStorage;
@@ -618,7 +618,7 @@ public class DescribeDedicatedHostsResponseBody extends TeaModel {
             private String socketId; 
 
             /**
-             * The ID of the ECS instance created on the dedicated host.
+             * The ID of the ECS instance that is created on the dedicated host.
              */
             public Builder instanceId(String instanceId) {
                 this.instanceId = instanceId;
@@ -634,7 +634,7 @@ public class DescribeDedicatedHostsResponseBody extends TeaModel {
             }
 
             /**
-             * The instance type of the ECS instance created on the dedicated host.
+             * The instance type of the ECS instance that is created on the dedicated host.
              */
             public Builder instanceType(String instanceType) {
                 this.instanceType = instanceType;
@@ -736,7 +736,7 @@ public class DescribeDedicatedHostsResponseBody extends TeaModel {
             private Integer udpTimeout; 
 
             /**
-             * The timeout period of the UDP session that was established between Server Load Balancer (SLB) and the dedicated host. Unit: seconds. Valid value: 60.
+             * The timeout period of the UDP session that is established between Server Load Balancer (SLB) and the dedicated host. Unit: seconds. Valid value: 60.
              */
             public Builder slbUdpTimeout(Integer slbUdpTimeout) {
                 this.slbUdpTimeout = slbUdpTimeout;
@@ -744,7 +744,7 @@ public class DescribeDedicatedHostsResponseBody extends TeaModel {
             }
 
             /**
-             * The timeout period of the UDP session that was established between a user and an Alibaba Cloud service on the dedicated host. Unit: seconds. Valid value: 60.
+             * The timeout period of the UDP session that is established between a user and an Alibaba Cloud service on the dedicated host. Unit: seconds. Valid value: 60.
              */
             public Builder udpTimeout(Integer udpTimeout) {
                 this.udpTimeout = udpTimeout;
@@ -785,11 +785,11 @@ public class DescribeDedicatedHostsResponseBody extends TeaModel {
             private String lockReason; 
 
             /**
-             * The reason why the dedicated host was locked. Valid values:
+             * The reason why the dedicated host is locked. Valid values:
              * <p>
              * 
-             * - financial: The dedicated host was locked due to overdue payments.
-             * - security: The dedicated host was locked due to security reasons.
+             * *   financial: The dedicated host is locked due to overdue payments.
+             * *   security: The dedicated host is locked due to security reasons.
              */
             public Builder lockReason(String lockReason) {
                 this.lockReason = lockReason;
@@ -1006,7 +1006,7 @@ public class DescribeDedicatedHostsResponseBody extends TeaModel {
             private String tagValue; 
 
             /**
-             * The tag key of the dedicated host.
+             * The key of tag N of the dedicated host.
              */
             public Builder tagKey(String tagKey) {
                 this.tagKey = tagKey;
@@ -1014,7 +1014,7 @@ public class DescribeDedicatedHostsResponseBody extends TeaModel {
             }
 
             /**
-             * The tag value of the dedicated host.
+             * The value of tag N of the dedicated host.
              */
             public Builder tagValue(String tagValue) {
                 this.tagValue = tagValue;
@@ -1480,13 +1480,13 @@ public class DescribeDedicatedHostsResponseBody extends TeaModel {
             private String zoneId; 
 
             /**
-             * The policy used to migrate the instances deployed on the dedicated host when the dedicated host fails. Valid values:
+             * The policy that is used to migrate the instances deployed on the dedicated host when the dedicated host fails. Valid values:
              * <p>
              * 
              * *   Migrate: The instances are migrated to another physical server. Instances that are not in the Stopped state when the dedicated host fails are restarted after migration.
-             * *   Stop: The instances are stopped. If the dedicated host cannot be repaired, the instances are migrated to another physical server and restarted.
+             * *   Stop: The instances are stopped. If the dedicated host cannot be repaired, the instances are migrated to another physical machine and then restarted.
              * 
-             * If the dedicated host has cloud disks attached, the default value is Migrate. If the dedicated host has local disks attached, the default value is Stop.
+             * If cloud disks are attached to the dedicated host, the default value of this parameter is Migrate. If local disks are attched to the dedicated host, the default value of this parameter is Stop.
              */
             public Builder actionOnMaintenance(String actionOnMaintenance) {
                 this.actionOnMaintenance = actionOnMaintenance;
@@ -1494,13 +1494,13 @@ public class DescribeDedicatedHostsResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether the dedicated host was added to the resource pool for automatic deployment. Valid values:
+             * Indicates whether the dedicated host is added to the resource pool for automatic deployment. Valid values:
              * <p>
              * 
-             * *   on: The dedicated host was added to the resource pool for automatic deployment.
-             * *   off: The dedicated host was not added to the resource pool for automatic deployment.
+             * *   on: The dedicated host is added to the resource pool for automatic deployment.
+             * *   off: The dedicated host is not added to the resource pool for automatic deployment.
              * 
-             * For more information about automatic deployment, see the "[Automatic deployment](~~118938~~)" section in the Functions and features topic.
+             * For more information about automatic deployment, see the "Automatic deployment" section in [Functions and features](~~118938~~).
              */
             public Builder autoPlacement(String autoPlacement) {
                 this.autoPlacement = autoPlacement;
@@ -1628,7 +1628,7 @@ public class DescribeDedicatedHostsResponseBody extends TeaModel {
             }
 
             /**
-             * Details about the ECS instances that were created on the dedicated host.
+             * The ECS instances that are created on the dedicated host.
              */
             public Builder instances(Instances instances) {
                 this.instances = instances;
@@ -1652,7 +1652,7 @@ public class DescribeDedicatedHostsResponseBody extends TeaModel {
             }
 
             /**
-             * The reasons why the resources of the dedicated host were locked.
+             * The reasons why the resources of the dedicated host are locked.
              */
             public Builder operationLocks(OperationLocks operationLocks) {
                 this.operationLocks = operationLocks;
@@ -1712,12 +1712,12 @@ public class DescribeDedicatedHostsResponseBody extends TeaModel {
             }
 
             /**
-             * The service state of the dedicated host. Valid values:
+             * The service status of the dedicated host. Valid values:
              * <p>
              * 
-             * *   Available: The dedicated host is running normally.
-             * *   UnderAssessment: The dedicated host is at risk, which may cause issues to ECS instances on the dedicated host.
-             * *   PermanentFailure: The dedicated host has permanent failures and is unusable.
+             * *   Available: The dedicated host is running as expected.
+             * *   UnderAssessment: The dedicated host is available. However, the dedicated host has potential risks that may cause the ECS instances on the dedicated host to fail.
+             * *   PermanentFailure: The dedicated host has permanent failures and cannot be used.
              */
             public Builder status(String status) {
                 this.status = status;
@@ -1725,7 +1725,7 @@ public class DescribeDedicatedHostsResponseBody extends TeaModel {
             }
 
             /**
-             * The custom ECS instance families supported by the dedicated host.
+             * The custom ECS instance families that are supported by the dedicated host.
              */
             public Builder supportedCustomInstanceTypeFamilies(SupportedCustomInstanceTypeFamilies supportedCustomInstanceTypeFamilies) {
                 this.supportedCustomInstanceTypeFamilies = supportedCustomInstanceTypeFamilies;
@@ -1733,7 +1733,7 @@ public class DescribeDedicatedHostsResponseBody extends TeaModel {
             }
 
             /**
-             * The ECS instance families supported by the dedicated host.
+             * The ECS instance families that are supported by the dedicated host.
              */
             public Builder supportedInstanceTypeFamilies(SupportedInstanceTypeFamilies supportedInstanceTypeFamilies) {
                 this.supportedInstanceTypeFamilies = supportedInstanceTypeFamilies;
@@ -1741,7 +1741,7 @@ public class DescribeDedicatedHostsResponseBody extends TeaModel {
             }
 
             /**
-             * The ECS instance types supported by the dedicated host.
+             * The ECS instance types that are supported by the dedicated host.
              */
             public Builder supportedInstanceTypesList(SupportedInstanceTypesList supportedInstanceTypesList) {
                 this.supportedInstanceTypesList = supportedInstanceTypesList;

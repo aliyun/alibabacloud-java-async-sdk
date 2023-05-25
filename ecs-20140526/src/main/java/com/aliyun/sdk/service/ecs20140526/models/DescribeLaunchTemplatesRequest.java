@@ -218,7 +218,7 @@ public class DescribeLaunchTemplatesRequest extends Request {
         }
 
         /**
-         * The IDs of one or more launch templates. You can specify up to 100 launch template IDs.
+         * The IDs of launch templates. You can specify up to 100 launch template IDs. You must specify LaunchTemplateId or LaunchTemplateName to determine a launch template.
          */
         public Builder launchTemplateId(java.util.List < String > launchTemplateId) {
             this.putQueryParameter("LaunchTemplateId", launchTemplateId);
@@ -227,7 +227,7 @@ public class DescribeLaunchTemplatesRequest extends Request {
         }
 
         /**
-         * The names of one or more launch templates. You can specify up to 100 launch template names.
+         * The names of launch templates. You can specify up to 100 launch template names.
          */
         public Builder launchTemplateName(java.util.List < String > launchTemplateName) {
             this.putQueryParameter("LaunchTemplateName", launchTemplateName);
@@ -278,7 +278,7 @@ public class DescribeLaunchTemplatesRequest extends Request {
         }
 
         /**
-         * The region ID of the launch template. You can call the [DescribeRegions](~~25609~~) operation to query the most recent region list.
+         * The region ID. You can call the [DescribeRegions](~~25609~~) operation to query the most recent region list.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -305,10 +305,10 @@ public class DescribeLaunchTemplatesRequest extends Request {
         }
 
         /**
-         * The ID of the resource group to which the launch template belongs. If this parameter is specified to query resources, up to 1,000 resources that belong to the specified resource group can be displayed in the response.
+         * The ID of the resource group to which the launch template belongs. If you specify this parameter to query resources, up to 1,000 resources that belong to the specified resource group can be returned.
          * <p>
          * 
-         * >  Resources in the default resource group are displayed in the response regardless of how this parameter is set.
+         * > Resources in the default resource group are displayed in the response regardless of whether you specify this parameter.
          */
         public Builder templateResourceGroupId(String templateResourceGroupId) {
             this.putQueryParameter("TemplateResourceGroupId", templateResourceGroupId);
@@ -317,7 +317,7 @@ public class DescribeLaunchTemplatesRequest extends Request {
         }
 
         /**
-         * The tags.
+         * The tags of the launch template.
          */
         public Builder templateTag(java.util.List < TemplateTag> templateTag) {
             this.putQueryParameter("TemplateTag", templateTag);
@@ -374,7 +374,7 @@ public class DescribeLaunchTemplatesRequest extends Request {
              * The key of tag N of the launch template. Valid values of N: 1 to 20.
              * <p>
              * 
-             * If a single tag is specified to query resources, up to 1,000 resources that have this tag added can be displayed in the response. If multiple tags are specified to query resources, up to 1,000 resources that have all these tags added can be displayed in the response. To query more than 1,000 resources that have specified tags added, call the [ListTagResources](~~110425~~) operation.
+             * Up to 1,000 resources that match the specified tags can be returned in the response. To query more than 1,000 resources that match the specified tags, call the [ListTagResources](~~110425~~) operation.
              */
             public Builder key(String key) {
                 this.key = key;

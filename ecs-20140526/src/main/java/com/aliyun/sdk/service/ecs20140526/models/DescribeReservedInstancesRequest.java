@@ -309,7 +309,7 @@ public class DescribeReservedInstancesRequest extends Request {
         }
 
         /**
-         * The instance type of the reserved instance. For more information about the valid values, see [Instance families](~~25378~~).
+         * The instance type. For more information, see [Instance families](~~25378~~).
          */
         public Builder instanceType(String instanceType) {
             this.putQueryParameter("InstanceType", instanceType);
@@ -318,7 +318,7 @@ public class DescribeReservedInstancesRequest extends Request {
         }
 
         /**
-         * The instance family of the reserved instance. For more information about the valid values, see [Instance families](~~25378~~).
+         * The instance family. For more information, see [Instance families](~~25378~~).
          */
         public Builder instanceTypeFamily(String instanceTypeFamily) {
             this.putQueryParameter("InstanceTypeFamily", instanceTypeFamily);
@@ -327,10 +327,10 @@ public class DescribeReservedInstancesRequest extends Request {
         }
 
         /**
-         * The reason why the reserved instance is locked. Valid values:
+         * The locked mode of the instance. Valid values:
          * <p>
          * 
-         * *   financial: You have an overdue payment in your account or the reserved instance has expired.
+         * *   financial: Your account has one or more overdue payments or the reserved instance has expired.
          * *   security: The reserved instance is locked for security reasons.
          */
         public Builder lockReason(String lockReason) {
@@ -340,7 +340,7 @@ public class DescribeReservedInstancesRequest extends Request {
         }
 
         /**
-         * The payment option of the reserved instance. Valid values:
+         * The payment option for the reserved instance. Valid values:
          * <p>
          * 
          * *   No Upfront
@@ -372,7 +372,7 @@ public class DescribeReservedInstancesRequest extends Request {
         }
 
         /**
-         * The number of the page to return. Pages start from page 1.
+         * The page number to return. Pages start from page 1.
          * <p>
          * 
          * Default value: 1.
@@ -396,7 +396,7 @@ public class DescribeReservedInstancesRequest extends Request {
         }
 
         /**
-         * The region ID of the reserved instance. You can call the [DescribeRegions](~~25609~~) operation to query the most recent region list.
+         * The region ID of the instance. You can call the [DescribeRegions](~~25609~~) operation to query the most recent region list.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -405,7 +405,7 @@ public class DescribeReservedInstancesRequest extends Request {
         }
 
         /**
-         * ReservedInstanceId.
+         * The IDs of the reserved instances. Valid values of N: 1 to 100.
          */
         public Builder reservedInstanceId(java.util.List < String > reservedInstanceId) {
             this.putQueryParameter("ReservedInstanceId", reservedInstanceId);
@@ -414,7 +414,7 @@ public class DescribeReservedInstancesRequest extends Request {
         }
 
         /**
-         * The name of the reserved instance.
+         * The reserved instance name.
          */
         public Builder reservedInstanceName(String reservedInstanceName) {
             this.putQueryParameter("ReservedInstanceName", reservedInstanceName);
@@ -441,7 +441,7 @@ public class DescribeReservedInstancesRequest extends Request {
         }
 
         /**
-         * The scope of the reserved instance. Valid values:
+         * The scope of reserved instance N. Valid values:
          * <p>
          * 
          * *   Region: regional
@@ -456,7 +456,13 @@ public class DescribeReservedInstancesRequest extends Request {
         }
 
         /**
-         * Status.
+         * The status of reserved instance N. Valid values of N: 1 to 100. Valid values:
+         * <p>
+         * 
+         * *   Creating
+         * *   Active
+         * *   Expired
+         * *   Updating
          */
         public Builder status(java.util.List < String > status) {
             this.putQueryParameter("Status", status);
@@ -465,7 +471,7 @@ public class DescribeReservedInstancesRequest extends Request {
         }
 
         /**
-         * Tag.
+         * The tags list.
          */
         public Builder tag(java.util.List < Tag> tag) {
             this.putQueryParameter("Tag", tag);
@@ -474,7 +480,7 @@ public class DescribeReservedInstancesRequest extends Request {
         }
 
         /**
-         * The zone ID of the reserved instance. This parameter is required when Scope is set to Zone. You can call the [DescribeZones](~~25610~~) operation to query the most recent zone list.
+         * The zone ID of the reserved instance is required when Scope is set to Zone. You can call the [DescribeZones](~~25610~~) operation to query the most recent zone list.
          */
         public Builder zoneId(String zoneId) {
             this.putQueryParameter("ZoneId", zoneId);
@@ -528,10 +534,10 @@ public class DescribeReservedInstancesRequest extends Request {
             private String value; 
 
             /**
-             * The key of tag N of the reserved instance. Valid values of N: 1 to 20. The tag key cannot be an empty string. It can be up to 128 characters in length. It cannot start with aliyun or acs: or contain http:// or https://.
+             * The key of tag N of the reserved instance. Valid values of N: 1 to 20. You cannot specify empty strings as tag keys. The tag key must be 1 to 128 characters in length. It cannot start with acs: or aliyun or contain [http:// or https://.](http://https://。)
              * <p>
              * 
-             * If a single tag is specified to query resources, up to 1,000 resources that are bound with this tag can be displayed in the response. If multiple tags are specified to query resources, up to 1,000 resources that are bound with all these tags can be displayed in the response. To query more than 1,000 resources that are bound with specified tags, call the [ListTagResources](~~110425~~) operation.
+             * Up to 1,000 resources that match the specified tags can be returned in the response. To query more than 1,000 resources that match the specified tags, call the [ListTagResources](~~110425~~) operation.
              */
             public Builder key(String key) {
                 this.key = key;
@@ -539,7 +545,7 @@ public class DescribeReservedInstancesRequest extends Request {
             }
 
             /**
-             * The value of tag N of the reserved instance. Valid values of N: 1 to 20. The tag value can be an empty string. It can be up to 128 characters in length. It cannot start with acs: or contain http:// or https://.
+             * The value of tag N that belongs to the reserved instance. Valid values of N: 1 to 20. The tag value can be an empty string. It can be up to 128 characters in length and cannot start with acs: or contain [http:// or https://.](http://https://。)
              */
             public Builder value(String value) {
                 this.value = value;

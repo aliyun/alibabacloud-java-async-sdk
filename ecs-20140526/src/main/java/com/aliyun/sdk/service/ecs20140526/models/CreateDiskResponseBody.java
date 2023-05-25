@@ -62,7 +62,7 @@ public class CreateDiskResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The ID of the disk.
+         * The cloud disk ID.
          */
         public Builder diskId(String diskId) {
             this.diskId = diskId;
@@ -70,10 +70,10 @@ public class CreateDiskResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the order.
+         * The order ID.
          * <p>
          * 
-         * >  This parameter is returned only when you create a subscription disk.
+         * > The order ID is returned only when you create a subscription disk.
          */
         public Builder orderId(String orderId) {
             this.orderId = orderId;
@@ -81,7 +81,7 @@ public class CreateDiskResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

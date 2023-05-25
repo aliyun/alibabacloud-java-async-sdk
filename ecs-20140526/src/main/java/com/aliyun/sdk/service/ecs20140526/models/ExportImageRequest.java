@@ -192,7 +192,7 @@ public class ExportImageRequest extends Request {
         }
 
         /**
-         * The format in which to export the custom image. Valid values:
+         * The format in which you want to export the custom image. Valid values:
          * <p>
          * 
          * *   raw
@@ -210,7 +210,7 @@ public class ExportImageRequest extends Request {
         }
 
         /**
-         * The ID of the custom image.
+         * The custom image ID.
          */
         public Builder imageId(String imageId) {
             this.putQueryParameter("ImageId", imageId);
@@ -219,7 +219,7 @@ public class ExportImageRequest extends Request {
         }
 
         /**
-         * The OSS bucket to which to export the custom image.
+         * The OSS bucket in which you want to store the exported custom image.
          */
         public Builder OSSBucket(String OSSBucket) {
             this.putQueryParameter("OSSBucket", OSSBucket);
@@ -228,7 +228,7 @@ public class ExportImageRequest extends Request {
         }
 
         /**
-         * The prefix of the object as which to store the custom image in the OSS bucket. The prefix must be 1 to 30 characters in length and can contain digits and letters.
+         * The prefix for the name of the OSS object in which you want to store the exported custom image. The prefix must be 1 to 30 characters in length and can contain digits and letters.
          */
         public Builder OSSPrefix(String OSSPrefix) {
             this.putQueryParameter("OSSPrefix", OSSPrefix);
@@ -273,7 +273,7 @@ public class ExportImageRequest extends Request {
         }
 
         /**
-         * The name of the RAM role to use to export the custom image.
+         * The name of the RAM role that you want to use to export the custom image.
          */
         public Builder roleName(String roleName) {
             this.putQueryParameter("RoleName", roleName);

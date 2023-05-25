@@ -190,7 +190,7 @@ public class DescribeCloudAssistantStatusRequest extends Request {
         }
 
         /**
-         * The IDs of instances.
+         * The IDs of instances to be queried.
          */
         public Builder instanceId(java.util.List < String > instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -230,7 +230,7 @@ public class DescribeCloudAssistantStatusRequest extends Request {
         }
 
         /**
-         * The number of the page to return.
+         * The page number to return.
          * <p>
          * 
          * Pages start from page 1.
@@ -244,7 +244,7 @@ public class DescribeCloudAssistantStatusRequest extends Request {
         }
 
         /**
-         * The number of entries to return on each page. This parameter does not take effect if you specified the **InstanceId** parameter. Maximum value: 50.
+         * The number of entries to return on each page. If you specify the **InstanceId** parameter, this parameter does not take effect. Maximum value: 50.
          * <p>
          * 
          * Default value: 10.

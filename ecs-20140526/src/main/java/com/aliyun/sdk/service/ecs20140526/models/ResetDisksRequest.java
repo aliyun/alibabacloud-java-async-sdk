@@ -149,11 +149,11 @@ public class ResetDisksRequest extends Request {
         }
 
         /**
-         * Specifies whether to perform a dry run. Valid values:
+         * Specifies whether to perform only a dry run, without performing the actual request. Valid values:
          * <p>
          * 
-         * *   true: performs a dry run. The system checks the required parameters, request format, and resource status limits. If the request fails the dry run, an error code is returned. If the request passes the dry run, the `DryRunOperation` error code is returned.
-         * *   false: performs a dry run and sends the request. If the request passes the dry run, the operation is performed.
+         * *   true: performs only a dry run. The system checks the request for potential issues, including missing parameter values, incorrect request syntax, and resource state limits. If the request fails the dry run, an error code is returned. If the request passes the dry run, the `DryRunOperation` error code is returned.
+         * *   false: performs a dry run and performs the actual request. If the request passes the dry run, the rollback operation is performed.
          * 
          * Default value: false.
          */
@@ -182,7 +182,7 @@ public class ResetDisksRequest extends Request {
         }
 
         /**
-         * The region ID of the disks that you want to roll back. You can call the [DescribeRegions](~~25609~~) operation to query the most recent region list.
+         * The region ID. You can call the [DescribeRegions](~~25609~~) operation to query the most recent region list.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -254,7 +254,7 @@ public class ResetDisksRequest extends Request {
             private String snapshotId; 
 
             /**
-             * The IDs of the disks that you want to roll back. You can specify up to 10 disk IDs.
+             * The ID of the disk that you want to roll back. You can specify up to 10 disk IDs.
              */
             public Builder diskId(String diskId) {
                 this.diskId = diskId;
@@ -262,7 +262,7 @@ public class ResetDisksRequest extends Request {
             }
 
             /**
-             * The IDs of the disk snapshots that are contained in the instance snapshot. You can specify up to 10 disk snapshot IDs.
+             * The ID of the disk snapshot that is contained in the instance snapshot. You can specify up to 10 disk snapshot IDs.
              */
             public Builder snapshotId(String snapshotId) {
                 this.snapshotId = snapshotId;

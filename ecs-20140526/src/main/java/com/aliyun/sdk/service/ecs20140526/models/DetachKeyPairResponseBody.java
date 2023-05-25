@@ -94,7 +94,7 @@ public class DetachKeyPairResponseBody extends TeaModel {
         }
 
         /**
-         * The names of the key pairs.
+         * The name of the key pair.
          */
         public Builder keyPairName(String keyPairName) {
             this.keyPairName = keyPairName;
@@ -118,7 +118,7 @@ public class DetachKeyPairResponseBody extends TeaModel {
         }
 
         /**
-         * The total number of instances from which you attempted to unbind the SSH key pair.
+         * The total number of instances from which you want to unbind the SSH key pair.
          */
         public Builder totalCount(String totalCount) {
             this.totalCount = totalCount;
@@ -194,7 +194,7 @@ public class DetachKeyPairResponseBody extends TeaModel {
             private String success; 
 
             /**
-             * The operation status code returned. 200 indicates that the operation was successful.
+             * The operation status code that is returned. 200 indicates that the operation is successful.
              */
             public Builder code(String code) {
                 this.code = code;
@@ -210,7 +210,7 @@ public class DetachKeyPairResponseBody extends TeaModel {
             }
 
             /**
-             * The result of the operation. For example, when the value of `Code` is 200, the value of `Message` is `successful`.
+             * The result of the operation. For example, if the value of `Code` is 200, the value of `Message` is `successful`.
              */
             public Builder message(String message) {
                 this.message = message;
@@ -218,7 +218,7 @@ public class DetachKeyPairResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether the operation was successful.
+             * Indicates whether the operation is successful.
              */
             public Builder success(String success) {
                 this.success = success;

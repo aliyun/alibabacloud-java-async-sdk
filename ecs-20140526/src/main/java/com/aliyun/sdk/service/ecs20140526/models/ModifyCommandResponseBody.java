@@ -38,7 +38,7 @@ public class ModifyCommandResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The ID of the request.
+         * The maximum timeout period for the command to be run on the instance. Unit: seconds. When a command cannot run within the specified time range, the command times out. Then, the command process is forcibly terminated by canceling the process ID (PID) of the command.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

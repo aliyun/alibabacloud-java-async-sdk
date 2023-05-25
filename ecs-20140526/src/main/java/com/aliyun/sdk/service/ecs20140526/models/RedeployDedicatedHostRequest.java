@@ -153,7 +153,7 @@ public class RedeployDedicatedHostRequest extends Request {
         }
 
         /**
-         * The region ID of the dedicated host. You can call the [escribeRegions](~~25609~~) operation to query the most recent region list.
+         * The region ID of the dedicated host. You can call the [DescribeRegions](~~25609~~) operation to query the most recent region list.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);

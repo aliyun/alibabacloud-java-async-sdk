@@ -110,7 +110,7 @@ public class ListPluginStatusResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -233,13 +233,13 @@ public class ListPluginStatusResponseBody extends TeaModel {
              * The state of the Cloud Assistant plug-in. Valid values:
              * <p>
              * 
-             * * NotInstalled: The plug-in is not installed.
-             * * Installed: The one-time plug-in is installed.
-             * * Running: The long-running plug-in is running.
-             * * Stopped: The long-running plug-in is not running.
-             * * Crashed: The plug-in is abnormal.
-             * * Removed: The plug-in is uninstalled.
-             * * Unknown: The state of the plug-in is unknown.
+             * *   NotInstalled
+             * *   Installed
+             * *   Running
+             * *   Stopped
+             * *   Crashed
+             * *   Removed
+             * *   Unknown
              */
             public Builder pluginStatus(String pluginStatus) {
                 this.pluginStatus = pluginStatus;
@@ -247,7 +247,7 @@ public class ListPluginStatusResponseBody extends TeaModel {
             }
 
             /**
-             * The version of the plug-in
+             * The version of the plug-in.
              */
             public Builder pluginVersion(String pluginVersion) {
                 this.pluginVersion = pluginVersion;
@@ -291,13 +291,13 @@ public class ListPluginStatusResponseBody extends TeaModel {
              * The state of the Cloud Assistant plug-in. Valid values:
              * <p>
              * 
-             * * NotInstalled: The plug-in is not installed.
-             * * Installed: The one-time plug-in is installed.
-             * * Running: The long-running plug-in is running.
-             * * Stopped: The long-running plug-in is not running.
-             * * Crashed: The plug-in is abnormal.
-             * * Removed: The plug-in is uninstalled.
-             * * Unknown: The state of the plug-in is unknown.
+             * *   NotInstalled
+             * *   Installed
+             * *   Running
+             * *   Stopped
+             * *   Crashed
+             * *   Removed
+             * *   Unknown
              */
             public Builder pluginStatus(java.util.List < PluginStatus> pluginStatus) {
                 this.pluginStatus = pluginStatus;
@@ -350,7 +350,7 @@ public class ListPluginStatusResponseBody extends TeaModel {
             private PluginStatusSet pluginStatusSet; 
 
             /**
-             * The ID of the ECS instance.
+             * The instance ID.
              */
             public Builder instanceId(String instanceId) {
                 this.instanceId = instanceId;
@@ -358,7 +358,7 @@ public class ListPluginStatusResponseBody extends TeaModel {
             }
 
             /**
-             * Details about the Cloud Assistant plug-in.
+             * The states of the Cloud Assistant plug-ins.
              */
             public Builder pluginStatusSet(PluginStatusSet pluginStatusSet) {
                 this.pluginStatusSet = pluginStatusSet;

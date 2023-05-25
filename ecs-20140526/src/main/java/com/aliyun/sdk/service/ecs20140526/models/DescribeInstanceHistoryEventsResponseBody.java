@@ -86,7 +86,7 @@ public class DescribeInstanceHistoryEventsResponseBody extends TeaModel {
         private Integer totalCount; 
 
         /**
-         * Details about the instance system events.
+         * Details about historical system events of the instance.
          */
         public Builder instanceSystemEventSet(InstanceSystemEventSet instanceSystemEventSet) {
             this.instanceSystemEventSet = instanceSystemEventSet;
@@ -342,7 +342,7 @@ public class DescribeInstanceHistoryEventsResponseBody extends TeaModel {
              * *   cloud: basic disk
              * *   cloud_efficiency: ultra disk
              * *   cloud_ssd: standard SSD
-             * *   cloud_essd: enhanced SSD (ESSD) cloud_auto: ESSD AutoPL disk
+             * *   cloud_essd: enhanced SSD (ESSD)
              * *   local_ssd_pro: I/O-intensive local disk.
              * *   local_hdd_pro: throughput-intensive local disk
              * *   ephemeral: retired local disk
@@ -693,7 +693,7 @@ public class DescribeInstanceHistoryEventsResponseBody extends TeaModel {
             }
 
             /**
-             * Details about the inactive cloud disks or local disks that have been released and must be cleared.
+             * Details about the inactive disks that have been released and must be cleared.
              */
             public Builder inactiveDisks(InactiveDisks inactiveDisks) {
                 this.inactiveDisks = inactiveDisks;
@@ -966,7 +966,7 @@ public class DescribeInstanceHistoryEventsResponseBody extends TeaModel {
             }
 
             /**
-             * The scheduled start time of the system event. The time follows the [ISO 8601](~~25696~~) standard in the yyyy-MM-ddTHH:mm:ssZ format. The time is displayed in UTC.
+             * The start time of the scheduled execution of the system event. The time follows the [ISO 8601](~~25696~~) standard in the yyyy-MM-ddTHH:mm:ssZ format. The time is displayed in UTC.
              */
             public Builder notBefore(String notBefore) {
                 this.notBefore = notBefore;
@@ -982,7 +982,7 @@ public class DescribeInstanceHistoryEventsResponseBody extends TeaModel {
             }
 
             /**
-             * The type of the resource. Valid values:
+             * The type of a resource. Valid values:
              * <p>
              * 
              * *   instance: ECS instance

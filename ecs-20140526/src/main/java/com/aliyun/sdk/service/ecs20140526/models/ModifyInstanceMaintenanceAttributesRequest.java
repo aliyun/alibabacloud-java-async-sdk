@@ -195,7 +195,7 @@ public class ModifyInstanceMaintenanceAttributesRequest extends Request {
          * 
          * *   Stop: stops the instance.
          * *   AutoRecover: automatically recovers the instance.
-         * *   AutoRedeploy: redeploys the instance, which may damage the data of the local disks (if any).
+         * *   AutoRedeploy: redeploys the instance, which may damage the data disks attached to the instance.
          */
         public Builder actionOnMaintenance(String actionOnMaintenance) {
             this.putQueryParameter("ActionOnMaintenance", actionOnMaintenance);
@@ -225,8 +225,8 @@ public class ModifyInstanceMaintenanceAttributesRequest extends Request {
          * Specifies whether to send an event notification before maintenance. Valid values:
          * <p>
          * 
-         * *   True: sends an event notification.
-         * *   False: does not send an event notification.
+         * *   true
+         * *   false
          * 
          * Default value: false.
          */
@@ -255,7 +255,7 @@ public class ModifyInstanceMaintenanceAttributesRequest extends Request {
         }
 
         /**
-         * The region ID of the instance. You can call the [DescribeRegions](~~25609~~) operation to query the most recent list of regions.
+         * The region ID of the instance. You can call the [DescribeRegions](~~25609~~) operation to query the most recent region list.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -327,7 +327,7 @@ public class ModifyInstanceMaintenanceAttributesRequest extends Request {
             private String startTime; 
 
             /**
-             * The end time of the maintenance window. The time must be on the hour at exactly 0 minute and 0 second. The StartTime and EndTime parameters must be specified at the same time. The EndTime value must be 1 to 23 hours later than the StartTime value. Specify the time in the `HH:mm:ss` format. The time must be in UTC+8. Set the value of N to 1.
+             * The end time of the maintenance window. The time must be on the hour. You must configure both StartTime and EndTime. The value of EndTime must be 1 to 23 hours later than the value of StartTime. Specify the time in the `HH:mm:ss` format. The time must be in UTC+8. Set the value of N to 1.
              */
             public Builder endTime(String endTime) {
                 this.endTime = endTime;
@@ -335,7 +335,7 @@ public class ModifyInstanceMaintenanceAttributesRequest extends Request {
             }
 
             /**
-             * The start time of the maintenance window. The time must be on the hour at exactly 0 minute and 0 second. The StartTime and EndTime parameters must be specified at the same time. The EndTime value must be 1 to 23 hours later than the StartTime value. Specify the time in the `HH:mm:ss` format. The time must be in UTC+8. Set the value of N to 1.
+             * The start time of the maintenance window. The time must be on the hour. You must configure both StartTime and EndTime. The value of EndTime must be 1 to 23 hours later than the value of StartTime. Specify the time in the `HH:mm:ss` format. The time must be in UTC+8. Set the value of N to 1.
              */
             public Builder startTime(String startTime) {
                 this.startTime = startTime;

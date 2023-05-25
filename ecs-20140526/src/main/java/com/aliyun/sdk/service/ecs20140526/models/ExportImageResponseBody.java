@@ -62,7 +62,7 @@ public class ExportImageResponseBody extends TeaModel {
         private String taskId; 
 
         /**
-         * The ID of the region.
+         * The region ID.
          */
         public Builder regionId(String regionId) {
             this.regionId = regionId;
@@ -70,7 +70,7 @@ public class ExportImageResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -78,7 +78,7 @@ public class ExportImageResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the image export task.
+         * The ID of the task that is used to export the custom image.
          */
         public Builder taskId(String taskId) {
             this.taskId = taskId;

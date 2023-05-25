@@ -50,7 +50,7 @@ public class DescribeRenewalPriceResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * Details about the prices and discount rules.
+         * Details about the prices and promotion rules.
          */
         public Builder priceInfo(PriceInfo priceInfo) {
             this.priceInfo = priceInfo;

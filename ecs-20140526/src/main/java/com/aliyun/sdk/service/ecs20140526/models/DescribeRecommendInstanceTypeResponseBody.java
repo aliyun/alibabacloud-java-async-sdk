@@ -50,7 +50,7 @@ public class DescribeRecommendInstanceTypeResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * Details about the recommended instance types.
+         * The details of the recommended instance types.
          */
         public Builder data(Data data) {
             this.data = data;
@@ -292,7 +292,7 @@ public class DescribeRecommendInstanceTypeResponseBody extends TeaModel {
             private String zoneNo; 
 
             /**
-             * Details about network types of instance types.
+             * The details of network types of instance types.
              */
             public Builder networkTypes(NetworkTypes networkTypes) {
                 this.networkTypes = networkTypes;
@@ -300,7 +300,7 @@ public class DescribeRecommendInstanceTypeResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the zone in which the instance type is available.
+             * The ID of the zone where the instance type is available.
              */
             public Builder zoneNo(String zoneNo) {
                 this.zoneNo = zoneNo;
@@ -562,7 +562,7 @@ public class DescribeRecommendInstanceTypeResponseBody extends TeaModel {
             }
 
             /**
-             * Details about zones where the instance types resides.
+             * The details of the zones where the instance types resides.
              */
             public Builder zones(Zones zones) {
                 this.zones = zones;

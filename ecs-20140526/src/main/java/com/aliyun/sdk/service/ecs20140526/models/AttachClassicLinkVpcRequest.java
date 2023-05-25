@@ -150,7 +150,7 @@ public class AttachClassicLinkVpcRequest extends Request {
         }
 
         /**
-         * The ID of the classic network-type instance. You can call the [DescribeInstances](~~25506~~) operation to query available instances.
+         * The ID of the instance that is deployed in the classic network. You can call the [DescribeInstances](~~25506~~) operation to query available instances.
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);

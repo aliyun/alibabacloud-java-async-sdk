@@ -200,7 +200,7 @@ public class DescribeElasticityAssuranceInstancesRequest extends Request {
         }
 
         /**
-         * The token used to start the next query. Set the value to the NextToken value obtained from the response to the previous request.
+         * The token used to start the query. Set the value to the NextToken value obtained from the response to the preceding request.
          */
         public Builder nextToken(String nextToken) {
             this.putQueryParameter("NextToken", nextToken);

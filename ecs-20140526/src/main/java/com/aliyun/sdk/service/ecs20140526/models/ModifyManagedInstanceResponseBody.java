@@ -50,7 +50,7 @@ public class ModifyManagedInstanceResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * Details about the managed instance.
+         * Details of the managed instance.
          */
         public Builder instance(Instance instance) {
             this.instance = instance;
@@ -58,7 +58,7 @@ public class ModifyManagedInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

@@ -229,7 +229,7 @@ public class AssignIpv6AddressesRequest extends Request {
         }
 
         /**
-         * IPv6 address N to assign to the ENI. Valid values of N: 1 to 10.
+         * The IPv6 addresses that you want to assign to the ENI. You can specify up to 10 IPv6 addresses.
          * <p>
          * 
          * Example: Ipv6Address.1=2001:db8:1234:1a00::\*\*\*\*
@@ -243,10 +243,10 @@ public class AssignIpv6AddressesRequest extends Request {
         }
 
         /**
-         * The number of IPv6 addresses to randomly generate for the ENI. Valid values: 1 to 10.
+         * The number of IPv6 addresses that you want to generate at random for the ENI. Valid values: 1 to 10.
          * <p>
          * 
-         * >  You must specify `Ipv6Addresses.N` or `Ipv6AddressCount` but cannot specify both.
+         * > You must specify `Ipv6Addresses.N` or `Ipv6AddressCount` but cannot specify both.
          */
         public Builder ipv6AddressCount(Integer ipv6AddressCount) {
             this.putQueryParameter("Ipv6AddressCount", ipv6AddressCount);
@@ -255,7 +255,7 @@ public class AssignIpv6AddressesRequest extends Request {
         }
 
         /**
-         * > 该参数正在邀测中，暂未开放使用。
+         * > This parameter is in invitational preview and is unavailable for general users.
          */
         public Builder ipv6Prefix(java.util.List < String > ipv6Prefix) {
             this.putQueryParameter("Ipv6Prefix", ipv6Prefix);
@@ -264,7 +264,7 @@ public class AssignIpv6AddressesRequest extends Request {
         }
 
         /**
-         * > 该参数正在邀测中，暂未开放使用。
+         * > This parameter is in invitational preview and is unavailable for general users.
          */
         public Builder ipv6PrefixCount(Integer ipv6PrefixCount) {
             this.putQueryParameter("Ipv6PrefixCount", ipv6PrefixCount);
@@ -273,7 +273,7 @@ public class AssignIpv6AddressesRequest extends Request {
         }
 
         /**
-         * The ID of the ENI.
+         * The ENI ID.
          */
         public Builder networkInterfaceId(String networkInterfaceId) {
             this.putQueryParameter("NetworkInterfaceId", networkInterfaceId);

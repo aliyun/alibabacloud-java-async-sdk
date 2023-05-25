@@ -248,7 +248,7 @@ public class ReportInstancesStatusRequest extends Request {
         }
 
         /**
-         * Description.
+         * The description of the exception.
          */
         public Builder description(String description) {
             this.putQueryParameter("Description", description);
@@ -257,7 +257,12 @@ public class ReportInstancesStatusRequest extends Request {
         }
 
         /**
-         * Device.
+         * The device names of disks on an instance that have the exception. You can specify to 100 device names in a single request.
+         * <p>
+         * 
+         * If you are using an ECS bare metal instance, enter the slot numbers of disks on the instance.
+         * 
+         * > For ECS bare metal instances, this parameter is required when the value of the `Reason` parameter is `abnormal-local-disk` or `abnormal-cloud-disk` or when the value of the `IssueCategory` parameter is `hardware-disk-error`.
          */
         public Builder device(java.util.List < String > device) {
             this.putQueryParameter("Device", device);
@@ -266,7 +271,10 @@ public class ReportInstancesStatusRequest extends Request {
         }
 
         /**
-         * DiskId.
+         * The IDs of disks on an instance that have the exception. You can specify up to 100 disk IDs in a single request. If you are using an ECS bare metal instance, enter the serial numbers of disks on the instance.
+         * <p>
+         * 
+         * > This parameter is required when the value of the `Reason` parameter is `abnormal-local-disk` or `abnormal-cloud-disk` or when the value of the `IssueCategory` parameter is `hardware-disk-error`.
          */
         public Builder diskId(java.util.List < String > diskId) {
             this.putQueryParameter("DiskId", diskId);
@@ -275,7 +283,7 @@ public class ReportInstancesStatusRequest extends Request {
         }
 
         /**
-         * EndTime.
+         * The end time of the instance exception. Specify the time in the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC.
          */
         public Builder endTime(String endTime) {
             this.putQueryParameter("EndTime", endTime);
@@ -284,7 +292,7 @@ public class ReportInstancesStatusRequest extends Request {
         }
 
         /**
-         * InstanceId.
+         * The IDs of instances. You can specify up to 100 instance IDs in a single request.
          */
         public Builder instanceId(java.util.List < String > instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -293,7 +301,18 @@ public class ReportInstancesStatusRequest extends Request {
         }
 
         /**
-         * IssueCategory.
+         * The category of the exception. This parameter is applicable only to ECS bare metal instances. Valid values:
+         * <p>
+         * 
+         * *   hardware-cpu-error: CPU failure
+         * *   hardware-motherboard-error: motherboard failure
+         * *   hardware-mem-error: memory failure
+         * *   hardware-power-error: power failure
+         * *   hardware-disk-error: disk failure
+         * *   hardware-networkcard-error: network interface controller (NIC) failure
+         * *   hardware-raidcard-error: SAS/RAID card failure
+         * *   hardware-fan-error: fan failure
+         * *   others: other failures
          */
         public Builder issueCategory(String issueCategory) {
             this.putQueryParameter("IssueCategory", issueCategory);
@@ -320,7 +339,15 @@ public class ReportInstancesStatusRequest extends Request {
         }
 
         /**
-         * Reason.
+         * The impact of the exception on the instance. Valid values:
+         * <p>
+         * 
+         * *   instance-hang: The instance is unavailable or cannot be connected.
+         * *   instance-stuck-in-status: The instance is stuck in a state such as Starting or Stopping.
+         * *   abnormal-network: The instance has a network exception.
+         * *   abnormal-local-disk: A local disk attached to the instance has an exception.
+         * *   abnormal-cloud-disk: A disk or a Shared Block Storage device attached to the instance has an exception.
+         * *   others: other exception types. If the impact is not of the preceding types, you can set `Reason` to others and specify the `Description` parameter.
          */
         public Builder reason(String reason) {
             this.putQueryParameter("Reason", reason);
@@ -329,7 +356,7 @@ public class ReportInstancesStatusRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * The region ID of the instance. You can call the [DescribeRegions](~~25609~~) operation to query the most recent region list.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -356,7 +383,7 @@ public class ReportInstancesStatusRequest extends Request {
         }
 
         /**
-         * StartTime.
+         * The start time of the instance exception. Specify the time in the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC.
          */
         public Builder startTime(String startTime) {
             this.putQueryParameter("StartTime", startTime);

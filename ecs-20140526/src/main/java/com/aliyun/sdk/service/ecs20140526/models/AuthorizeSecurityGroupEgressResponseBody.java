@@ -38,7 +38,7 @@ public class AuthorizeSecurityGroupEgressResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The ID of the request.
+         * GROUP_AUTH_NO_VPC
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

@@ -58,7 +58,7 @@ public class DescribeSnapshotMonitorDataResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -110,7 +110,7 @@ public class DescribeSnapshotMonitorDataResponseBody extends TeaModel {
             private String timeStamp; 
 
             /**
-             * The total size of the snapshots. Unit: bytes.
+             * The snapshot size. Unit: bytes.
              */
             public Builder size(Long size) {
                 this.size = size;
@@ -118,7 +118,7 @@ public class DescribeSnapshotMonitorDataResponseBody extends TeaModel {
             }
 
             /**
-             * The timestamp that corresponds to a snapshot size.
+             * The timestamp that corresponds to the snapshot size.
              */
             public Builder timeStamp(String timeStamp) {
                 this.timeStamp = timeStamp;

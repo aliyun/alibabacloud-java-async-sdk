@@ -106,7 +106,7 @@ public class DescribeImagesResponseBody extends TeaModel {
         }
 
         /**
-         * The page number of the returned page.
+         * The page number returned.
          */
         public Builder pageNumber(Integer pageNumber) {
             this.pageNumber = pageNumber;
@@ -114,7 +114,7 @@ public class DescribeImagesResponseBody extends TeaModel {
         }
 
         /**
-         * The number of entries returned per page.
+         * The number of entries per page.
          */
         public Builder pageSize(Integer pageSize) {
             this.pageSize = pageSize;
@@ -130,7 +130,7 @@ public class DescribeImagesResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -230,12 +230,12 @@ public class DescribeImagesResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates the severity of the risk that is detected on the check item of the imported custom image. If the system detects a risk on the check item, this parameter is returned. If the system does not detect a risk on the check item, this parameter is not returned.
+             * The severity level of the risk that is detected on the check item of the imported custom image. If the system detects a risk on the check item, this parameter is returned. If the system does not detect a risk on the check item, this parameter is not returned.
              * <p>
              * 
              * Valid values:
              * 
-             * *   High: The check item is a high-risk item that may affect the startup of the instance. We strongly recommended that you fix this item at your earliest convenience.
+             * *   High: The check item is a high-risk item that may affect the startup of the instance and mustbe fixed at your earliest convenience.
              * *   Medium: The check item is a medium-risk item that may affect the startup performance or configurations of the instance. We recommend that you fix this item.
              */
             public Builder riskLevel(String riskLevel) {
@@ -346,7 +346,7 @@ public class DescribeImagesResponseBody extends TeaModel {
             }
 
             /**
-             * The state of the image check task. Valid values:
+             * The status of the image check task. Valid values:
              * <p>
              * 
              * *   Processing: The image check task is in progress.
@@ -498,7 +498,7 @@ public class DescribeImagesResponseBody extends TeaModel {
             }
 
             /**
-             * The format of the image.
+             * The image format.
              */
             public Builder format(String format) {
                 this.format = format;
@@ -530,7 +530,7 @@ public class DescribeImagesResponseBody extends TeaModel {
             }
 
             /**
-             * The amount of remaining time required for an image copy task. Unit: seconds.
+             * The remaining amount of time required for an image copy task. Unit: seconds.
              */
             public Builder remainTime(Integer remainTime) {
                 this.remainTime = remainTime;
@@ -538,7 +538,7 @@ public class DescribeImagesResponseBody extends TeaModel {
             }
 
             /**
-             * The size of the cloud disk.
+             * The disk size.
              */
             public Builder size(String size) {
                 this.size = size;
@@ -546,7 +546,7 @@ public class DescribeImagesResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the snapshot.
+             * The snapshot ID.
              */
             public Builder snapshotId(String snapshotId) {
                 this.snapshotId = snapshotId;
@@ -554,7 +554,7 @@ public class DescribeImagesResponseBody extends TeaModel {
             }
 
             /**
-             * The type of the image.
+             * The image type.
              */
             public Builder type(String type) {
                 this.type = type;
@@ -636,11 +636,11 @@ public class DescribeImagesResponseBody extends TeaModel {
             private String nvmeSupport; 
 
             /**
-             * Indicates whether the image supports Non-Volatile Memory Express (NVMe). Valid values:
+             * Indicates whether the image supports the Non-Volatile Memory Express (NVMe) protocol. Valid values:
              * <p>
              * 
-             * *   supported: The image supports NVMe. Instances created from this image also support NVMe.
-             * *   unsupported: The image does not support NVMe. Instances created from this image do not support NVMe.
+             * *   supported: The image supports the NVMe protocol. Instances created from this image support NVMe.
+             * *   unsupported: The image does not support the NVMe protocol. Instances created from this image do not support the NVMe protocol.
              */
             public Builder nvmeSupport(String nvmeSupport) {
                 this.nvmeSupport = nvmeSupport;
@@ -693,7 +693,7 @@ public class DescribeImagesResponseBody extends TeaModel {
             private String tagValue; 
 
             /**
-             * The tag key of the image.
+             * The key of tag N of the image.
              */
             public Builder tagKey(String tagKey) {
                 this.tagKey = tagKey;
@@ -701,7 +701,7 @@ public class DescribeImagesResponseBody extends TeaModel {
             }
 
             /**
-             * The tag value of the image.
+             * The value of tag N of the image.
              */
             public Builder tagValue(String tagValue) {
                 this.tagValue = tagValue;
@@ -1168,13 +1168,13 @@ public class DescribeImagesResponseBody extends TeaModel {
             }
 
             /**
-             * The new boot mode of the image. Valid values:
+             * The boot mode of the image. Valid values:
              * <p>
              * 
              * *   BIOS
              * *   UEFI
              * 
-             * > You need to be aware of the boot modes supported by the specified image. When you use this parameter to change the boot mode of the image, specify a boot mode supported by the image to ensure that instances that use this image can start as expected.
+             * > When you use this parameter to change the boot mode of the image, specify a boot mode supported by the image. We recommend that you familiarize yourself with the boot modes supported by the specified image to ensure that instances that use this image can be started as expected.
              */
             public Builder bootMode(String bootMode) {
                 this.bootMode = bootMode;
@@ -1182,7 +1182,7 @@ public class DescribeImagesResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the image was created.
+             * The image creation time.
              */
             public Builder creationTime(String creationTime) {
                 this.creationTime = creationTime;
@@ -1190,7 +1190,7 @@ public class DescribeImagesResponseBody extends TeaModel {
             }
 
             /**
-             * The description of the image.
+             * The image description.
              */
             public Builder description(String description) {
                 this.description = description;
@@ -1206,7 +1206,7 @@ public class DescribeImagesResponseBody extends TeaModel {
             }
 
             /**
-             * The mappings between disks and snapshots that belong to the image.
+             * The mappings between the disks and snapshots in the image.
              */
             public Builder diskDeviceMappings(DiskDeviceMappings diskDeviceMappings) {
                 this.diskDeviceMappings = diskDeviceMappings;
@@ -1214,7 +1214,7 @@ public class DescribeImagesResponseBody extends TeaModel {
             }
 
             /**
-             * The attributes of the image.
+             * The image attributes.
              */
             public Builder features(Features features) {
                 this.features = features;
@@ -1222,7 +1222,7 @@ public class DescribeImagesResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the image family.
+             * The image family name.
              */
             public Builder imageFamily(String imageFamily) {
                 this.imageFamily = imageFamily;
@@ -1230,7 +1230,7 @@ public class DescribeImagesResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the image.
+             * The image ID.
              */
             public Builder imageId(String imageId) {
                 this.imageId = imageId;
@@ -1238,7 +1238,7 @@ public class DescribeImagesResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the image.
+             * The image name.
              */
             public Builder imageName(String imageName) {
                 this.imageName = imageName;
@@ -1246,12 +1246,12 @@ public class DescribeImagesResponseBody extends TeaModel {
             }
 
             /**
-             * The source of the image. Valid values:
+             * The image source. Valid values:
              * <p>
              * 
-             * *   system: public images provided by Alibaba Cloud.
-             * *   self: your custom images.
-             * *   others: shared images from other Alibaba Cloud accounts or community images published by other Alibaba Cloud accounts.
+             * *   system: public images provided by Alibaba Cloud
+             * *   self: your custom images
+             * *   others: shared images from other Alibaba Cloud accounts, or community images published by other Alibaba Cloud accounts
              * *   marketplace: Alibaba Cloud Marketplace images.
              */
             public Builder imageOwnerAlias(String imageOwnerAlias) {
@@ -1260,7 +1260,7 @@ public class DescribeImagesResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the Alibaba Cloud account to which the image belongs. This parameter is valid only when you query shared images or community images.
+             * The ID of the Alibaba Cloud account to which the image belongs. This parameter takes effect only when you query shared images or community images.
              */
             public Builder imageOwnerId(Long imageOwnerId) {
                 this.imageOwnerId = imageOwnerId;
@@ -1268,7 +1268,7 @@ public class DescribeImagesResponseBody extends TeaModel {
             }
 
             /**
-             * The version of the image.
+             * The image version.
              */
             public Builder imageVersion(String imageVersion) {
                 this.imageVersion = imageVersion;
@@ -1304,7 +1304,7 @@ public class DescribeImagesResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether you have subscribed to the image that corresponds to the specified product code.
+             * Indicates whether the Terms of Service of the image service that corresponds to the product code are accepted.
              */
             public Builder isSubscribed(Boolean isSubscribed) {
                 this.isSubscribed = isSubscribed;
@@ -1356,7 +1356,7 @@ public class DescribeImagesResponseBody extends TeaModel {
             }
 
             /**
-             * The OS type of the image. Valid values:
+             * The type of the operating system. Valid values:
              * <p>
              * 
              * *   windows
@@ -1400,7 +1400,7 @@ public class DescribeImagesResponseBody extends TeaModel {
             }
 
             /**
-             * The size of the image. Unit: GiB.
+             * The image size. Unit: GiB.
              */
             public Builder size(Integer size) {
                 this.size = size;
@@ -1408,7 +1408,7 @@ public class DescribeImagesResponseBody extends TeaModel {
             }
 
             /**
-             * The state of the image. Valid values:
+             * The image status. Valid values:
              * <p>
              * 
              * *   UnAvailable: The image is unavailable.
@@ -1422,7 +1422,7 @@ public class DescribeImagesResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the supplier that certified the community image.
+             * The name of the provider that published the community image.
              */
             public Builder supplierName(String supplierName) {
                 this.supplierName = supplierName;
@@ -1430,7 +1430,7 @@ public class DescribeImagesResponseBody extends TeaModel {
             }
 
             /**
-             * The tags of the image.
+             * The image tags.
              */
             public Builder tags(Tags tags) {
                 this.tags = tags;
@@ -1438,11 +1438,11 @@ public class DescribeImagesResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether the image has been used to create ECS instances. Valid values:
+             * Indicates whether the image was used to create ECS instances. Valid values:
              * <p>
              * 
-             * *   instance: The image has been used to create one or more ECS instances.
-             * *   none: The image has not been used to create ECS instances.
+             * *   instance: The image was used to create one or more ECS instances.
+             * *   none: The image was not used to create ECS instances.
              */
             public Builder usage(String usage) {
                 this.usage = usage;

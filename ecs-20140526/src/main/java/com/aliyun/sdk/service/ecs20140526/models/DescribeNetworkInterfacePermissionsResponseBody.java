@@ -94,7 +94,7 @@ public class DescribeNetworkInterfacePermissionsResponseBody extends TeaModel {
         }
 
         /**
-         * The page number of the returned page.
+         * The page number.
          */
         public Builder pageNumber(Integer pageNumber) {
             this.pageNumber = pageNumber;
@@ -102,7 +102,7 @@ public class DescribeNetworkInterfacePermissionsResponseBody extends TeaModel {
         }
 
         /**
-         * The number of entries returned per page.
+         * The number of entries per page.
          */
         public Builder pageSize(Integer pageSize) {
             this.pageSize = pageSize;
@@ -110,7 +110,7 @@ public class DescribeNetworkInterfacePermissionsResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -226,7 +226,7 @@ public class DescribeNetworkInterfacePermissionsResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the ENI.
+             * The ID of ENI N.
              */
             public Builder networkInterfaceId(String networkInterfaceId) {
                 this.networkInterfaceId = networkInterfaceId;
@@ -250,7 +250,7 @@ public class DescribeNetworkInterfacePermissionsResponseBody extends TeaModel {
             }
 
             /**
-             * The state of the ENI permission. Valid values:
+             * The status of the ENI permission. Valid values:
              * <p>
              * 
              * *   Pending: The permission is being granted.

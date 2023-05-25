@@ -345,10 +345,10 @@ public class DescribeRecommendInstanceTypeRequest extends Request {
         }
 
         /**
-         * The number of vCPUs for the instance.
+         * The number of vCPUs of the instance.
          * <p>
          * 
-         * > If the `Cores` and `Memory` parameters are both specified, all instance types with the vCPUs and memory size specified by the parameters are queried.
+         * > If you specify both `Cores` and `Memory`, the system returns all instance types that match the values of the parameters.
          */
         public Builder cores(Integer cores) {
             this.putQueryParameter("Cores", cores);
@@ -375,9 +375,9 @@ public class DescribeRecommendInstanceTypeRequest extends Request {
          * The level of the instance family. Valid values:
          * <p>
          * 
-         * *   EntryLevel.
-         * *   EnterpriseLevel.
-         * *   CreditEntryLevel: credit-based entry level. For more information, see [Burstable instance families](~~59977~~).
+         * *   EntryLevel
+         * *   EnterpriseLevel
+         * *   CreditEntryLevel For more information, see [Burstable instance families](~~59977~~).
          */
         public Builder instanceFamilyLevel(String instanceFamilyLevel) {
             this.putQueryParameter("InstanceFamilyLevel", instanceFamilyLevel);
@@ -386,10 +386,10 @@ public class DescribeRecommendInstanceTypeRequest extends Request {
         }
 
         /**
-         * The specified instance type. For more information, see [Instance families](~~25378~~) or call the [DescribeInstanceTypes](~~25620~~) operation to query the most recent list of instance types.
+         * The instance type. For more information, see [Instance families](~~25378~~) or call the [DescribeInstanceTypes](~~25620~~) operation to query the most recent instance type list.
          * <p>
          * 
-         * > If the `InstanceType` parameter is specified, the `Cores` and `Memory` are ignored.
+         * > If you specify `InstanceType`, the `Cores` and `Memory` parameters are ignored.
          */
         public Builder instanceType(String instanceType) {
             this.putQueryParameter("InstanceType", instanceType);
@@ -398,7 +398,7 @@ public class DescribeRecommendInstanceTypeRequest extends Request {
         }
 
         /**
-         * Specifies the instance families from which the alternative instance types are selected. You can specify up to 10 instance types.
+         * Specifies the instance families from which the alternative instance types are selected. You can specify up to 10 instance families.
          */
         public Builder instanceTypeFamily(java.util.List < String > instanceTypeFamily) {
             this.putQueryParameter("InstanceTypeFamily", instanceTypeFamily);
@@ -407,11 +407,11 @@ public class DescribeRecommendInstanceTypeRequest extends Request {
         }
 
         /**
-         * Indicates whether the instance is an I/O optimized instance. The IoOptimized parameter cannot be specified when the instance is not I/O optimized. Valid values:
+         * Specifies whether the instance is I/O optimized. The IoOptimized parameter cannot be specified when the instance is not I/O optimized. Valid values:
          * <p>
          * 
-         * *   optimized
-         * *   none
+         * *   optimized: The instance is I/O optimized.
+         * *   none: The instance is not I/O optimized.
          * 
          * Default value: optimized.
          * 
@@ -439,7 +439,7 @@ public class DescribeRecommendInstanceTypeRequest extends Request {
          * The memory size of the instance. Unit: GiB.
          * <p>
          * 
-         * > If the `Cores` and `Memory` parameters are both specified, all instance types with the vCPUs and memory size specified by the parameters are queried.
+         * > If you specify both `Cores` and `Memory`, the system returns all instance types that match the values of the parameters.
          */
         public Builder memory(Float memory) {
             this.putQueryParameter("Memory", memory);
@@ -481,12 +481,12 @@ public class DescribeRecommendInstanceTypeRequest extends Request {
         }
 
         /**
-         * The policy based on which the system recommends the instance type. Valid values:
+         * The policy that is used to recommend instance types. Valid values:
          * <p>
          * 
-         * *   InventoryFirst: Instance types are recommended in descending order based on resource availability.
-         * *   PriceFirst: Instance types are recommended in ascending order based on hourly price per vCPU.
-         * *   NewProductFirst: The latest instance types are recommended first.
+         * *   InventoryFirst: recommends instance types in descending order of resource availability.
+         * *   PriceFirst: recommends instance types in ascending order of hourly price per vCPU.
+         * *   NewProductFirst: recommends the latest instance types first.
          * 
          * Default value: InventoryFirst.
          */
@@ -497,7 +497,7 @@ public class DescribeRecommendInstanceTypeRequest extends Request {
         }
 
         /**
-         * The ID of the region. You can call the [DescribeRegions](~~25609~~) operation to query the most recent region list.
+         * The region ID. You can call the [DescribeRegions](~~25609~~) operation to query the most recent region list.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -542,9 +542,9 @@ public class DescribeRecommendInstanceTypeRequest extends Request {
          * The bidding policy of preemptible instances. Valid values:
          * <p>
          * 
-         * *   NoSpot: The instance is created as a pay-as-you-go instance.
+         * *   NoSpot: The instance is a pay-as-you-go instance.
          * *   SpotWithPriceLimit: The instance is a preemptible instance with a user-defined maximum hourly price.
-         * *   SpotAsPriceGo: The instance is a preemptible instance for which the market price is automatically used as the bid price. The market price can be as high as the pay-as-you-go price.
+         * *   SpotAsPriceGo: The instance is a preemptible instance for which the market price is automatically used as the bid price. The market price can be up to the pay-as-you-go price.
          * 
          * > The `SpotStrategy` parameter takes effect only when `InstanceChargeType` is set to `PostPaid`.
          * 
@@ -557,12 +557,12 @@ public class DescribeRecommendInstanceTypeRequest extends Request {
         }
 
         /**
-         * The type of the system disk. Valid values:
+         * The category of the system disk. Valid values:
          * <p>
          * 
          * *   cloud_efficiency: ultra disk
          * *   cloud_ssd: SSD
-         * *   cloud_essd: enhanced SSD (ESSD)
+         * *   cloud_essd: ESSD
          * *   cloud: basic disk
          * 
          * For non-I/O optimized instances, the default value is cloud.
@@ -576,10 +576,10 @@ public class DescribeRecommendInstanceTypeRequest extends Request {
         }
 
         /**
-         * The ID of the zone for which to query resources. You can call the [DescribeZones](~~25610~~) operation to query the most recent zone list.
+         * The zone ID. You can call the [DescribeZones](~~25610~~) operation to query the most recent zone list.
          * <p>
          * 
-         * We recommend that you set the value of ZoneMatchMode to Include, which is the default value. As a result, instance types within zones specified by ZoneId are recommended with priority. Instance types in other zones within the same region are also listed.
+         * We recommend that you set the value of ZoneMatchMode to Include, which is the default value. This way, the system recommends instance types that are available in the zone specified by the ZoneId parameter based on priority. The system also recommends instance types that are available in other zones within the same region.
          */
         public Builder zoneId(String zoneId) {
             this.putQueryParameter("ZoneId", zoneId);
@@ -591,8 +591,8 @@ public class DescribeRecommendInstanceTypeRequest extends Request {
          * Specifies whether to recommend only instance types in the zone specified by ZoneId. Valid values:
          * <p>
          * 
-         * *   Strict: only instance types within zones specified by the ZoneId parameter are recommended.
-         * *   Include: instance types in other zones within the same region are also recommended.
+         * *   Strict: recommends only instance types that are available in zones specified by the ZoneId parameter.
+         * *   Include: recommends instance types that are available in zones specified by the ZoneId parameter and other zones within the same region.
          * 
          * If `ZoneId` is specified, the default value of this parameter is Strict. This value indicates that only alternative instance types in the zone specified by ZoneId are recommended.
          */

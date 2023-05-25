@@ -62,7 +62,7 @@ public class GetInstanceScreenshotResponseBody extends TeaModel {
         private String screenshot; 
 
         /**
-         * The ID of the instance
+         * The instance ID.
          */
         public Builder instanceId(String instanceId) {
             this.instanceId = instanceId;
@@ -70,7 +70,7 @@ public class GetInstanceScreenshotResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -78,7 +78,7 @@ public class GetInstanceScreenshotResponseBody extends TeaModel {
         }
 
         /**
-         * The JPG-formatted instance screenshot, which is encoded in Base64.
+         * The Base64-encoded instance screenshot in the JPG format.
          */
         public Builder screenshot(String screenshot) {
             this.screenshot = screenshot;

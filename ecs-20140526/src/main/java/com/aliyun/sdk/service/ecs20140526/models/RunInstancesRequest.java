@@ -1464,7 +1464,7 @@ public class RunInstancesRequest extends Request {
         }
 
         /**
-         * ImageOptions.
+         * 镜像相关属性信息。
          */
         public Builder imageOptions(ImageOptions imageOptions) {
             this.putQueryParameter("ImageOptions", imageOptions);
@@ -1692,7 +1692,7 @@ public class RunInstancesRequest extends Request {
         }
 
         /**
-         * NetworkOptions.
+         * 网络相关属性参数。
          */
         public Builder networkOptions(NetworkOptions networkOptions) {
             this.putQueryParameter("NetworkOptions", networkOptions);
@@ -3171,7 +3171,12 @@ public class RunInstancesRequest extends Request {
             private Boolean loginAsNonRoot; 
 
             /**
-             * LoginAsNonRoot.
+             * 使用该镜像的实例是否支持使用ecs-user用户登录。可能值：
+             * <p>
+             * 
+             * - true：是
+             * 
+             * - false：否
              */
             public Builder loginAsNonRoot(Boolean loginAsNonRoot) {
                 this.loginAsNonRoot = loginAsNonRoot;
@@ -3417,7 +3422,13 @@ public class RunInstancesRequest extends Request {
             }
 
             /**
-             * NetworkCardIndex.
+             * 网卡指定的物理网卡索引。
+             * <p>
+             * 
+             * 您需要注意：
+             * - 只有特定实例规格支持指定物理网卡索引。
+             * - NetworkInterface.N.InstanceType取值为Primary时，对于支持物理网卡的实例规格，如果设置此参数，只能设置为0。
+             * - NetworkInterface.N.InstanceType取值为Secondary或者空值，对于支持物理网卡的实例规格，此参数可以依据实例规格设置。更多信息，请参见[实例规格族](~~25378~~)。
              */
             public Builder networkCardIndex(Integer networkCardIndex) {
                 this.networkCardIndex = networkCardIndex;
@@ -3582,7 +3593,16 @@ public class RunInstancesRequest extends Request {
             private Boolean enableJumboFrame; 
 
             /**
-             * EnableJumboFrame.
+             * 实例是否开启Jumbo frame特性。参数取值范围：
+             * <p>
+             * 
+             * - false：不开启Jumbo frame, 该实例下的所有网卡（包括主网卡及辅助网卡）MTU取值为1500。
+             * 
+             * - true：开启Jumbo frame, 该实例下的所有网卡（包括主网卡及辅助网卡）的MTU取值为8500。
+             * 
+             * 默认值：true。
+             * 
+             * >只有八代以上部分实例规格支持开启Jumbo frame特性，更多信息，请参见[ECS实例MTU](~~200512~~)。
              */
             public Builder enableJumboFrame(Boolean enableJumboFrame) {
                 this.enableJumboFrame = enableJumboFrame;

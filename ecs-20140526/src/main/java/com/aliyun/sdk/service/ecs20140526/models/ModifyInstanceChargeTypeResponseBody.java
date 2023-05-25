@@ -70,7 +70,7 @@ public class ModifyInstanceChargeTypeResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the order.
+         * The order ID.
          */
         public Builder orderId(String orderId) {
             this.orderId = orderId;
@@ -78,7 +78,7 @@ public class ModifyInstanceChargeTypeResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -142,7 +142,7 @@ public class ModifyInstanceChargeTypeResponseBody extends TeaModel {
             private String instanceId; 
 
             /**
-             * The unit of currency used on the bill.
+             * The unit of currency for the bill.
              * <p>
              * 
              * Alibaba Cloud China site (aliyun.com): CNY.
@@ -155,7 +155,7 @@ public class ModifyInstanceChargeTypeResponseBody extends TeaModel {
             }
 
             /**
-             * The cost value.
+             * The charged amount.
              */
             public Builder fee(String fee) {
                 this.fee = fee;
@@ -163,7 +163,7 @@ public class ModifyInstanceChargeTypeResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the instance.
+             * The instance ID.
              */
             public Builder instanceId(String instanceId) {
                 this.instanceId = instanceId;

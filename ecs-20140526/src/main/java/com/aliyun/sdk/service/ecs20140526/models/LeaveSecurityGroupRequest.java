@@ -176,10 +176,10 @@ public class LeaveSecurityGroupRequest extends Request {
         }
 
         /**
-         * The ID of the instance.
+         * The instance ID.
          * <p>
          * 
-         * > If this parameter is specified, the `NetworkInterfaceId` parameter cannot be specified.
+         * > If you configure this parameter, you cannot configure `NetworkInterfaceId`.
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -188,10 +188,10 @@ public class LeaveSecurityGroupRequest extends Request {
         }
 
         /**
-         * The ID of the ENI.
+         * The ENI ID.
          * <p>
          * 
-         * > If this parameter is specified, the `InstanceId` parameter cannot be specified.
+         * > If you configure this parameter, you cannot configure `InstanceId`.
          */
         public Builder networkInterfaceId(String networkInterfaceId) {
             this.putQueryParameter("NetworkInterfaceId", networkInterfaceId);
@@ -218,7 +218,7 @@ public class LeaveSecurityGroupRequest extends Request {
         }
 
         /**
-         * The region ID of the security group. You can call the [DescribeRegions](~~25609~~) operation to query the most recent region list.
+         * The region ID. You can call the [DescribeRegions](~~25609~~) operation to query the most recent region list.
          * <p>
          * 
          * *   If you want to remove an instance from a security group, you do not need to specify a region ID.
@@ -249,7 +249,7 @@ public class LeaveSecurityGroupRequest extends Request {
         }
 
         /**
-         * The ID of the security group.
+         * The security group ID.
          */
         public Builder securityGroupId(String securityGroupId) {
             this.putQueryParameter("SecurityGroupId", securityGroupId);

@@ -186,12 +186,12 @@ public class DescribeCapacityReservationInstancesRequest extends Request {
         }
 
         /**
-         * The number of entries to return on each page.
+         * The number of entries per page.
          * <p>
          * 
          * Maximum value: 100.
          * 
-         * Default value: 10
+         * Default value: 10.
          */
         public Builder maxResults(Integer maxResults) {
             this.putQueryParameter("MaxResults", maxResults);
@@ -200,7 +200,7 @@ public class DescribeCapacityReservationInstancesRequest extends Request {
         }
 
         /**
-         * The token used to start the next query. Set the value to the NextToken value obtained from the response to the previous request.
+         * The pagination token that is used in the next request to retrieve a new page of results. You must specify the token that is obtained from the previous query as the value of NextToken.
          */
         public Builder nextToken(String nextToken) {
             this.putQueryParameter("NextToken", nextToken);

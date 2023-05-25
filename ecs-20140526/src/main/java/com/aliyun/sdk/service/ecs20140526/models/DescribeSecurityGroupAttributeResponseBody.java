@@ -134,7 +134,7 @@ public class DescribeSecurityGroupAttributeResponseBody extends TeaModel {
          * <p>
          * 
          * *   Accept: All instances in the security group can communicate with each other.
-         * *   drop: All instances in the security group are isolated from each other.
+         * *   Drop: All instances in the security group are isolated from each other.
          */
         public Builder innerAccessPolicy(String innerAccessPolicy) {
             this.innerAccessPolicy = innerAccessPolicy;
@@ -150,7 +150,7 @@ public class DescribeSecurityGroupAttributeResponseBody extends TeaModel {
         }
 
         /**
-         * The region ID of the security group.
+         * The ID of the region.
          */
         public Builder regionId(String regionId) {
             this.regionId = regionId;
@@ -498,7 +498,7 @@ public class DescribeSecurityGroupAttributeResponseBody extends TeaModel {
             private String sourcePrefixListName; 
 
             /**
-             * The time when the security group rule was created. The time is displayed in UTC.
+             * The time at which the security group rule was created. The time is displayed in UTC.
              */
             public Builder createTime(String createTime) {
                 this.createTime = createTime;
@@ -514,7 +514,7 @@ public class DescribeSecurityGroupAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * The destination CIDR blocks for outbound access control.
+             * The destination CIDR block for outbound access control.
              */
             public Builder destCidrIp(String destCidrIp) {
                 this.destCidrIp = destCidrIp;
@@ -594,7 +594,7 @@ public class DescribeSecurityGroupAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * The type of the network.
+             * The network type.
              */
             public Builder nicType(String nicType) {
                 this.nicType = nicType;
@@ -666,7 +666,7 @@ public class DescribeSecurityGroupAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * The source port number range.
+             * The source port range.
              */
             public Builder sourcePortRange(String sourcePortRange) {
                 this.sourcePortRange = sourcePortRange;

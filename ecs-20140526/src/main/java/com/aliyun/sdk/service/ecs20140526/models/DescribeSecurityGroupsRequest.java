@@ -346,13 +346,7 @@ public class DescribeSecurityGroupsRequest extends Request {
         }
 
         /**
-         * Specifies whether to perform a dry run. Valid values:
-         * <p>
-         * 
-         * *   true: performs a dry run. The system checks the AccessKey pair, the permissions of the RAM user, and the required parameters. If the request fails the dry run, an error message is returned. If the request passes the dry run, the DryRunOperation error code is returned.
-         * *   false: performs a dry run and sends the request. If the request passes the dry run, a 2xx HTTP status code is returned and the operation is performed.
-         * 
-         * Default value: false.
+         * The ID of the security group.
          */
         public Builder dryRun(Boolean dryRun) {
             this.putQueryParameter("DryRun", dryRun);
@@ -361,7 +355,14 @@ public class DescribeSecurityGroupsRequest extends Request {
         }
 
         /**
-         * > This parameter is no longer used.
+         * The number of the page to return.
+         * <p>
+         * 
+         * Pages start from page 1.
+         * 
+         * Default value: 1.
+         * 
+         * > This parameter will be removed in the future. We recommend that you use the NextToken and MaxResults parameters for a paged query.
          */
         public Builder fuzzyQuery(Boolean fuzzyQuery) {
             this.putQueryParameter("FuzzyQuery", fuzzyQuery);
@@ -370,25 +371,14 @@ public class DescribeSecurityGroupsRequest extends Request {
         }
 
         /**
-         * > This parameter is no longer used.
+         * The ID of the resource group to which the security groups belong. When you use this parameter to filter resources, the number of resources in the specified resource group cannot exceed 1,000. You can call the [ListResourceGroups](~~158855~~) operation to query the most recent resource group list.
+         * <p>
+         * 
+         * > Resources in the default resource group are displayed in the response regardless of how you specify this parameter.
          */
         public Builder isQueryEcsCount(Boolean isQueryEcsCount) {
             this.putQueryParameter("IsQueryEcsCount", isQueryEcsCount);
             this.isQueryEcsCount = isQueryEcsCount;
-            return this;
-        }
-
-        /**
-         * The maximum number of entries to return on each page. If you specify the MaxResults parameter, the `MaxResults` and `NextToken` parameters are used for a paged query.
-         * <p>
-         * 
-         * Maximum value: 100.
-         * 
-         * Default value: 10.
-         */
-        public Builder maxResults(Integer maxResults) {
-            this.putQueryParameter("MaxResults", maxResults);
-            this.maxResults = maxResults;
             return this;
         }
 
@@ -399,6 +389,15 @@ public class DescribeSecurityGroupsRequest extends Request {
          * *   vpc: virtual private cloud (VPC)
          * *   classic: classic network
          */
+        public Builder maxResults(Integer maxResults) {
+            this.putQueryParameter("MaxResults", maxResults);
+            this.maxResults = maxResults;
+            return this;
+        }
+
+        /**
+         * The name of the security group.
+         */
         public Builder networkType(String networkType) {
             this.putQueryParameter("NetworkType", networkType);
             this.networkType = networkType;
@@ -406,7 +405,12 @@ public class DescribeSecurityGroupsRequest extends Request {
         }
 
         /**
-         * The pagination token that is used in the next request to retrieve a new page of results. Set this parameter to the NextToken value that is returned when you called the DescribeInstanceTypes operation last time. You do not need to specify this parameter for the first request.
+         * The maximum number of entries to return on each page. If you specify the MaxResults parameter, the `MaxResults` and `NextToken` parameters are used for a paged query.
+         * <p>
+         * 
+         * Maximum value: 100.
+         * 
+         * Default value: 10.
          */
         public Builder nextToken(String nextToken) {
             this.putQueryParameter("NextToken", nextToken);
@@ -433,12 +437,12 @@ public class DescribeSecurityGroupsRequest extends Request {
         }
 
         /**
-         * The number of the page to return.
+         * The number of entries to return on each page.
          * <p>
          * 
-         * Pages start from page 1.
+         * Maximum value: 50.
          * 
-         * Default value: 1.
+         * Default value: 10.
          * 
          * > This parameter will be removed in the future. We recommend that you use the NextToken and MaxResults parameters for a paged query.
          */
@@ -449,14 +453,7 @@ public class DescribeSecurityGroupsRequest extends Request {
         }
 
         /**
-         * The number of entries to return on each page.
-         * <p>
-         * 
-         * Maximum value: 50.
-         * 
-         * Default value: 10.
-         * 
-         * > This parameter will be removed in the future. We recommend that you use the NextToken and MaxResults parameters for a paged query.
+         * The ID of the request.
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -465,7 +462,7 @@ public class DescribeSecurityGroupsRequest extends Request {
         }
 
         /**
-         * The region ID of the security groups. You can call the [DescribeRegions](~~25609~~) operation to query the most recent region list.
+         * The IDs of security groups. The value is a JSON array that consists of up to 100 security group IDs. Separate the IDs with commas (,).
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -474,10 +471,7 @@ public class DescribeSecurityGroupsRequest extends Request {
         }
 
         /**
-         * The ID of the resource group to which the security groups belong. When you use this parameter to filter resources, the number of resources in the specified resource group cannot exceed 1,000. You can call the [ListResourceGroups](~~158855~~) operation to query the most recent resource group list.
-         * <p>
-         * 
-         * > Resources in the default resource group are displayed in the response regardless of how you specify this parameter.
+         * The tags of the security group.
          */
         public Builder resourceGroupId(String resourceGroupId) {
             this.putQueryParameter("ResourceGroupId", resourceGroupId);
@@ -504,7 +498,7 @@ public class DescribeSecurityGroupsRequest extends Request {
         }
 
         /**
-         * The ID of the security group.
+         * > This parameter is no longer used.
          */
         public Builder securityGroupId(String securityGroupId) {
             this.putQueryParameter("SecurityGroupId", securityGroupId);
@@ -513,7 +507,7 @@ public class DescribeSecurityGroupsRequest extends Request {
         }
 
         /**
-         * The IDs of security groups. The value is a JSON array that consists of up to 100 security group IDs. Separate the IDs with commas (,).
+         * The ID of the virtual private cloud (VPC) to which the security groups belong.
          */
         public Builder securityGroupIds(String securityGroupIds) {
             this.putQueryParameter("SecurityGroupIds", securityGroupIds);
@@ -522,7 +516,7 @@ public class DescribeSecurityGroupsRequest extends Request {
         }
 
         /**
-         * The name of the security group.
+         * > This parameter is no longer used.
          */
         public Builder securityGroupName(String securityGroupName) {
             this.putQueryParameter("SecurityGroupName", securityGroupName);
@@ -531,13 +525,7 @@ public class DescribeSecurityGroupsRequest extends Request {
         }
 
         /**
-         * The type of the security group. Valid values:
-         * <p>
-         * 
-         * *   normal: basic security group
-         * *   enterprise: advanced security group
-         * 
-         * > If you do not specify this parameter, basic and advanced security groups are queried.
+         * The pagination token that is used in the next request to retrieve a new page of results. Set this parameter to the NextToken value that is returned when you called the DescribeInstanceTypes operation last time. You do not need to specify this parameter for the first request.
          */
         public Builder securityGroupType(String securityGroupType) {
             this.putQueryParameter("SecurityGroupType", securityGroupType);
@@ -555,7 +543,13 @@ public class DescribeSecurityGroupsRequest extends Request {
         }
 
         /**
-         * The ID of the virtual private cloud (VPC) to which the security groups belong.
+         * The type of the security group. Valid values:
+         * <p>
+         * 
+         * *   normal: basic security group
+         * *   enterprise: advanced security group
+         * 
+         * > If you do not specify this parameter, basic and advanced security groups are queried.
          */
         public Builder vpcId(String vpcId) {
             this.putQueryParameter("VpcId", vpcId);
@@ -609,10 +603,7 @@ public class DescribeSecurityGroupsRequest extends Request {
             private String value; 
 
             /**
-             * The tag keys of the security group. You can specify up to 20 tag keys for the security group.
-             * <p>
-             * 
-             * Up to 1,000 resources that have the specified tags can be returned in the response. To query more than 1,000 resources that have the specified tags, call the [ListTagResources](~~110425~~) operation.
+             * The tag values of the security group. You can specify up to 20 tag values for the security group.
              */
             public Builder key(String key) {
                 this.key = key;
@@ -620,7 +611,10 @@ public class DescribeSecurityGroupsRequest extends Request {
             }
 
             /**
-             * The tag values of the security group. You can specify up to 20 tag values for the security group.
+             * The tag values of the security group.
+             * <p>
+             * 
+             * > This parameter will be removed in the future. We recommend that you use the Tag.N.Value parameter to ensure future compatibility.
              */
             public Builder value(String value) {
                 this.value = value;

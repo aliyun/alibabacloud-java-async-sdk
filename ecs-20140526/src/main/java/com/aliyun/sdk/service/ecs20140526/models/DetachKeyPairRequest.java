@@ -159,7 +159,7 @@ public class DetachKeyPairRequest extends Request {
         }
 
         /**
-         * The names of SSH key pairs.
+         * The name of the SSH key pair.
          */
         public Builder keyPairName(String keyPairName) {
             this.putQueryParameter("KeyPairName", keyPairName);

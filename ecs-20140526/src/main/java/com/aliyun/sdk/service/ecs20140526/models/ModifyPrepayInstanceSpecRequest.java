@@ -320,7 +320,7 @@ public class ModifyPrepayInstanceSpecRequest extends Request {
          * 
          *     **
          * 
-         *     **Note** Make sure that your Alibaba Cloud account has sufficient balance. Otherwise, your order becomes invalid and is canceled. If your account balance is insufficient, you can set the `AutoPay` parameter to `false` to generate an unpaid order. Then, you can log on to the ECS console to pay for the order.
+         *     **Make sure that your payment account has sufficient balance. Otherwise, your order becomes invalid and is canceled.** If your account balance is insufficient, you can set the AutoPay parameter to false to generate an unpaid order. Then, you can log on to the ECS console to pay for the order.````
          * 
          * *   false: An order is generated but no payment is made.
          * 
@@ -335,7 +335,7 @@ public class ModifyPrepayInstanceSpecRequest extends Request {
         }
 
         /**
-         * The client token that is used to ensure the idempotence of the request. You can use the client to generate the token, but make sure that the token is unique among different requests. The token can contain only ASCII characters and cannot exceed 64 characters in length. For more information, see [How to ensure idempotence](~~25693~~).
+         * The client token that you want to use to ensure the idempotency of the request. You can use the client to generate the value, but make sure that the value is unique among different requests. This value allows only ASCII characters and is up to 64 characters in length. For more information, see [How do I ensure the idempotence of a request?](~~25693~~)
          */
         public Builder clientToken(String clientToken) {
             this.putQueryParameter("ClientToken", clientToken);
@@ -344,7 +344,7 @@ public class ModifyPrepayInstanceSpecRequest extends Request {
         }
 
         /**
-         * Disk.
+         * >该参数暂未开放使用。
          */
         public Builder disk(java.util.List < Disk> disk) {
             this.putQueryParameter("Disk", disk);
@@ -362,7 +362,7 @@ public class ModifyPrepayInstanceSpecRequest extends Request {
         }
 
         /**
-         * The ID of the instance
+         * The instance ID.
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -385,7 +385,7 @@ public class ModifyPrepayInstanceSpecRequest extends Request {
          * 
          * Default value: false.
          * 
-         * When the `MigrateAcrossZone` parameter is set to `true` and you upgrade the instance based on the returned information, take note of the following items:
+         * When you set `MigrateAcrossZone` to `true` and you upgrade the instance based on the returned information, take note of the following items:
          * 
          * Instances of the classic network type:
          * 
@@ -401,7 +401,7 @@ public class ModifyPrepayInstanceSpecRequest extends Request {
         }
 
         /**
-         * ModifyMode.
+         * >该参数暂未开放使用。
          */
         public Builder modifyMode(String modifyMode) {
             this.putQueryParameter("ModifyMode", modifyMode);
@@ -410,10 +410,10 @@ public class ModifyPrepayInstanceSpecRequest extends Request {
         }
 
         /**
-         * The operation type. Valid values:
+         * The type of the change to the instance. Valid values:
          * <p>
          * 
-         * >  This parameter is optional. The system can automatically determine whether the operation is an upgrade or a downgrade. If you want to specify this parameter, you can refer to the following valid values of the parameter.
+         * >  This parameter is optional. The system can automatically determine whether the instance change is an upgrade or a downgrade. If you want to specify this parameter, refer to the following valid values of the parameter.
          * 
          * *   upgrade: upgrades the instance type. Make sure that the balance in your account is sufficient.
          * *   downgrade: downgrades the instance type. When the new instance type specified by the `InstanceType` parameter has lower specifications than the current instance type, set `OperatorType` to downgrade.
@@ -457,12 +457,12 @@ public class ModifyPrepayInstanceSpecRequest extends Request {
          * Specifies whether to restart the instance immediately after the instance type is changed. Valid values:
          * <p>
          * 
-         * *   true
-         * *   false
+         * *   true: restart the instance immediately after the instance type is changed.
+         * *   false: does not restart the instance immediately after the instance type is changed.
          * 
          * Default value: false.
          * 
-         * >  If the instance is in the **Stopping** state, the instance status remains unchanged and no operations are performed regardless of whether you set the `RebootWhenFinished` parameter to true.
+         * >  If the instance is in the **Stopping** state, the instance status remains unchanged and no operations are performed after the instance type is change regardless of whether you set the `RebootWhenFinished` parameter to true.
          */
         public Builder rebootWhenFinished(Boolean rebootWhenFinished) {
             this.putQueryParameter("RebootWhenFinished", rebootWhenFinished);
@@ -471,7 +471,7 @@ public class ModifyPrepayInstanceSpecRequest extends Request {
         }
 
         /**
-         * The region ID of the instance. You can call the [DescribeRegions](~~25609~~) operation to query the most recent list of regions.
+         * The region ID of the instance. You can call the [DescribeRegions](~~25609~~) operation to query the most recent region list.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -531,11 +531,11 @@ public class ModifyPrepayInstanceSpecRequest extends Request {
             private String category; 
 
             /**
-             * The new category of the system disk. This parameter is valid only if you upgrade an instance from a retired instance type to an available instance type or if you upgrade a non-I/O optimized instance to an I/O optimized instance. For more information, see [Retired instance types](~~55263~~) and [Overview of instance families](~~25378~~). Valid values:
+             * The new category of the system disk. This parameter is applicable only when you upgrade an instance from a retired instance type to a currently available instance type or when you upgrade a non-I/O optimized instance to an I/O optimized instance. For more information, see [Retired instance types](~~55263~~) and [Instance families](~~25378~~). Valid values:
              * <p>
              * 
-             * *   cloud_efficiency: ultra disk
-             * *   cloud_ssd: standard SSD
+             * *   cloud_efficiency: ultra disk.
+             * *   cloud_ssd: standard SSD.
              */
             public Builder category(String category) {
                 this.category = category;
@@ -600,11 +600,7 @@ public class ModifyPrepayInstanceSpecRequest extends Request {
             private String performanceLevel; 
 
             /**
-             * The new category of the system disk. This parameter is valid only if you upgrade an instance from a retired instance type to an available instance type or if you upgrade a non-I/O optimized instance to an I/O optimized instance. For more information, see [Retired instance types](~~55263~~) and [Overview of instance families](~~25378~~). Valid values:
-             * <p>
-             * 
-             * *   cloud_efficiency: ultra disk
-             * *   cloud_ssd: standard SSD
+             * >该参数暂未开放使用。
              */
             public Builder category(String category) {
                 this.category = category;
@@ -612,7 +608,7 @@ public class ModifyPrepayInstanceSpecRequest extends Request {
             }
 
             /**
-             * DiskId.
+             * >该参数暂未开放使用。
              */
             public Builder diskId(String diskId) {
                 this.diskId = diskId;
@@ -620,7 +616,7 @@ public class ModifyPrepayInstanceSpecRequest extends Request {
             }
 
             /**
-             * PerformanceLevel.
+             * >该参数暂未开放使用。
              */
             public Builder performanceLevel(String performanceLevel) {
                 this.performanceLevel = performanceLevel;

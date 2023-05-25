@@ -174,7 +174,7 @@ public class AddTagsRequest extends Request {
         }
 
         /**
-         * The region ID of the resource on which you want to add or overwrite tags. You can call the [DescribeRegions](~~25609~~) operation to query the most recent region list.
+         * The region ID of the resource. You can call the [DescribeRegions](~~25609~~) operation to query the most recent region list.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -183,7 +183,7 @@ public class AddTagsRequest extends Request {
         }
 
         /**
-         * The ID of the resource. When ResourceType is set to instance, this parameter can be interpreted as InstanceId.
+         * The ID of the resource. When the resources are instances, this parameter can be interpreted as InstanceId.
          */
         public Builder resourceId(String resourceId) {
             this.putQueryParameter("ResourceId", resourceId);
@@ -226,7 +226,7 @@ public class AddTagsRequest extends Request {
          * *   reservedinstance: reserved instance
          * *   snapshotpolicy: automatic snapshot policy
          * 
-         * All these values are lowercase.
+         * All values must be lowercase.
          */
         public Builder resourceType(String resourceType) {
             this.putQueryParameter("ResourceType", resourceType);

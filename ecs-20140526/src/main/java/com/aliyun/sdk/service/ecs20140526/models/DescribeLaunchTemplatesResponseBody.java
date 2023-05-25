@@ -86,7 +86,7 @@ public class DescribeLaunchTemplatesResponseBody extends TeaModel {
         private Integer totalCount; 
 
         /**
-         * Details about the launch templates.
+         * The information about the launch templates.
          */
         public Builder launchTemplateSets(LaunchTemplateSets launchTemplateSets) {
             this.launchTemplateSets = launchTemplateSets;
@@ -170,7 +170,7 @@ public class DescribeLaunchTemplatesResponseBody extends TeaModel {
             private String tagValue; 
 
             /**
-             * The tag key of the launch template.
+             * The key of tag N of the launch template.
              */
             public Builder tagKey(String tagKey) {
                 this.tagKey = tagKey;
@@ -178,7 +178,7 @@ public class DescribeLaunchTemplatesResponseBody extends TeaModel {
             }
 
             /**
-             * The tag value of the launch template.
+             * The value of tag N of the launch template.
              */
             public Builder tagValue(String tagValue) {
                 this.tagValue = tagValue;

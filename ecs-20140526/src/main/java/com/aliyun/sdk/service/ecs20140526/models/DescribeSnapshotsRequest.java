@@ -425,18 +425,16 @@ public class DescribeSnapshotsRequest extends Request {
         }
 
         /**
-         * The type of the snapshot. Valid values:
+         * The snapshot type. Valid values:
          * <p>
          * 
-         * *   Standard: normal snapshot
-         * *   Flash: local snapshot
+         * *   Standard: the normal snapshot.
+         * *   Flash: the local snapshot.
          * 
          * The local snapshot feature is replaced by the instant access feature. When you specify this parameter, take note of the following items:
          * 
          * *   If you have used local snapshots before December 14, 2020, you can use this parameter.
          * *   If you have not used local snapshots before December 14, 2020, you cannot use this parameter.
-         * 
-         * For more information, see [Snapshot service upgrade and addition of a new billable item on December 14, 2020](https://help.aliyun.com/noticelist/articleid/1060755542.html).
          * 
          * > This parameter will be removed in the future. We recommend that you use other parameters to ensure future compatibility.
          */
@@ -447,7 +445,7 @@ public class DescribeSnapshotsRequest extends Request {
         }
 
         /**
-         * The ID of the disk.
+         * The disk ID.
          */
         public Builder diskId(String diskId) {
             this.putQueryParameter("DiskId", diskId);
@@ -456,11 +454,11 @@ public class DescribeSnapshotsRequest extends Request {
         }
 
         /**
-         * Specifies whether to perform a dry run. Default value: false. Valid values:
+         * Specifies whether to perform only a dry run, without performing the actual request. Valid values:
          * <p>
          * 
-         * *   true: performs a dry run. The system checks your AccessKey pair, the permissions of the RAM user, and the required parameters. If the request fails the dry run, an error message is returned. If the request passes the dry run, the DryRunOperation error code is returned.
-         * *   false: performs a dry run and sends the request. If the request passes the dry run, a 2xx HTTP status code is returned and the operation is performed.
+         * *   true: performs only a dry run. The system checks whether your AccessKey pair is valid, whether RAM users are granted permissions, and whether the required parameters are specified. If the request fails the dry run, an error message is returned. If the request passes the dry run, the DryRunOperation error code is returned.
+         * *   false (default): performs a dry run and performs the actual request. If the request passes the dry run, a 2xx HTTP status code is returned and the operation is performed.
          */
         public Builder dryRun(Boolean dryRun) {
             this.putQueryParameter("DryRun", dryRun);
@@ -478,7 +476,7 @@ public class DescribeSnapshotsRequest extends Request {
         }
 
         /**
-         * The ID of the instance.
+         * The instance ID.
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -496,7 +494,7 @@ public class DescribeSnapshotsRequest extends Request {
         }
 
         /**
-         * The maximum number of entries to return on each page. Maximum value: 100.
+         * The number of entries per page. Valid values: 1 to 100.
          * <p>
          * 
          * Default value: 10.
@@ -508,7 +506,7 @@ public class DescribeSnapshotsRequest extends Request {
         }
 
         /**
-         * The token used to start the query. Set the value to the NextToken value obtained from the response to the previous request.
+         * The pagination token that is used in the next request to retrieve a new page of results. You must specify the token that is obtained from the previous query as the value of NextToken.
          */
         public Builder nextToken(String nextToken) {
             this.putQueryParameter("NextToken", nextToken);
@@ -535,10 +533,10 @@ public class DescribeSnapshotsRequest extends Request {
         }
 
         /**
-         * The number of the page to return. Pages start from page 1.
+         * The page number. Pages start from page 1.
          * <p>
          * 
-         * Default value: 1
+         * Default value: 1.
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -547,7 +545,7 @@ public class DescribeSnapshotsRequest extends Request {
         }
 
         /**
-         * The number of entries to return on each page. Maximum value: 100.
+         * The number of entries per page. Valid values: 1 to 100.
          * <p>
          * 
          * Default value: 10.
@@ -568,10 +566,10 @@ public class DescribeSnapshotsRequest extends Request {
         }
 
         /**
-         * The ID of the resource group to which the snapshot belongs. If this parameter is specified to query resources, up to 1,000 resources that belong to the specified resource group can be displayed in the response.
+         * The ID of the resource group to which the snapshot belongs. When you use this property to filter resources, the number of resources that are contained in the specified resource group cannot exceed 1,000.
          * <p>
          * 
-         * > Resources in the default resource group are displayed in the response regardless of how this parameter is set.
+         * > Resources in the default resource group are displayed in the response regardless of whether you specify this parameter.
          */
         public Builder resourceGroupId(String resourceGroupId) {
             this.putQueryParameter("ResourceGroupId", resourceGroupId);
@@ -607,7 +605,7 @@ public class DescribeSnapshotsRequest extends Request {
         }
 
         /**
-         * The ID of the snapshot chain. The value is a JSON array that consists of up to 100 snapshot chain IDs. Separate the snapshot chain IDs with commas (,).
+         * The ID of the snapshot chain.
          */
         public Builder snapshotLinkId(String snapshotLinkId) {
             this.putQueryParameter("SnapshotLinkId", snapshotLinkId);
@@ -616,7 +614,7 @@ public class DescribeSnapshotsRequest extends Request {
         }
 
         /**
-         * The name of the snapshot.
+         * The snapshot name.
          */
         public Builder snapshotName(String snapshotName) {
             this.putQueryParameter("SnapshotName", snapshotName);
@@ -625,12 +623,12 @@ public class DescribeSnapshotsRequest extends Request {
         }
 
         /**
-         * The type of the snapshot. Valid values:
+         * The snapshot type. Valid values:
          * <p>
          * 
-         * *   auto: automatic snapshot
-         * *   user: manual snapshot
-         * *   all: This parameter indicates all snapshot types.
+         * *   auto: automatic snapshot.
+         * *   user: manual snapshot.
+         * *   all (default): This parameter indicates all snapshot types.
          */
         public Builder snapshotType(String snapshotType) {
             this.putQueryParameter("SnapshotType", snapshotType);
@@ -639,11 +637,11 @@ public class DescribeSnapshotsRequest extends Request {
         }
 
         /**
-         * The type of the source disk for which the snapshot was created. Valid values:
+         * The type of the source disk for which you want to create the snapshot. Valid values:
          * <p>
          * 
-         * *   System: system disk
-         * *   data: data disk
+         * *   System: the system disk.
+         * *   data: the data disk.
          * 
          * > The value of this parameter is case-insensitive.
          */
@@ -654,13 +652,13 @@ public class DescribeSnapshotsRequest extends Request {
         }
 
         /**
-         * The state of the snapshot. Default value: all. Valid values:
+         * The snapshot status. Valid values:
          * <p>
          * 
          * *   progressing: The snapshot is being created.
          * *   accomplished: The snapshot is created.
          * *   failed: The snapshot fails to be created.
-         * *   all: This parameter indicates all snapshot states.
+         * *   all (default): This parameter indicates all snapshot states.
          */
         public Builder status(String status) {
             this.putQueryParameter("Status", status);
@@ -669,7 +667,7 @@ public class DescribeSnapshotsRequest extends Request {
         }
 
         /**
-         * The tags of the snapshot.
+         * The tags.
          */
         public Builder tag(java.util.List < Tag> tag) {
             this.putQueryParameter("Tag", tag);
@@ -682,7 +680,7 @@ public class DescribeSnapshotsRequest extends Request {
          * <p>
          * 
          * *   image: The snapshot has been used to create custom images.
-         * *   disk: The snapshot is used to create disks.
+         * *   disk: The snapshot has been used to create disks.
          * *   image_disk: The snapshot has been used to create both custom images and data disks.
          * *   none: The snapshot has not been used to create custom images or disks.
          */
@@ -738,7 +736,7 @@ public class DescribeSnapshotsRequest extends Request {
             private String value; 
 
             /**
-             * The key of filter 1 used to query resources. Set the value to `CreationStartTime`. You can specify a time by setting both `Filter.1.Key` and `Filter.1.Value` to query resources that were created after the time.
+             * The key of filter 1 that is used to query resources. Set the value to `CreationStartTime`. You can specify a time by setting both `Filter.1.Key` and `Filter.1.Value` to query resources that were created after the time.
              */
             public Builder key(String key) {
                 this.key = key;
@@ -746,7 +744,7 @@ public class DescribeSnapshotsRequest extends Request {
             }
 
             /**
-             * The value of the filter that is used to query resources. If you specify this parameter, you must also specify the `Filter.1.Key` parameter. Specify the time in the `yyyy-MM-ddTHH:mmZ` format. The time must be in UTC.
+             * The value of the filter that is used to query resources. If you specify this parameter, you must also specify the `Filter.1.Key` parameter. Specify the time in the ISO 8601 standard in the `yyyy-MM-ddTHH:mmZ` format. The time must be in UTC.
              */
             public Builder value(String value) {
                 this.value = value;

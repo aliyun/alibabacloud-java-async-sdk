@@ -219,7 +219,7 @@ public class DescribeImagePipelineExecutionsRequest extends Request {
         }
 
         /**
-         * The ID of the image build task.
+         * The ID of the image creation task.
          */
         public Builder executionId(String executionId) {
             this.putQueryParameter("ExecutionId", executionId);
@@ -237,7 +237,7 @@ public class DescribeImagePipelineExecutionsRequest extends Request {
         }
 
         /**
-         * The maximum number of entries to return on each page. Valid values: 1 to 500.
+         * The number of entries per page. Valid values: 1 to 500.
          * <p>
          * 
          * Default value: 50.
@@ -249,7 +249,7 @@ public class DescribeImagePipelineExecutionsRequest extends Request {
         }
 
         /**
-         * The query token. Set the value to the `NextToken` value that was returned when you last called the DescribeImagePipelineExecutions operation. Leave this parameter empty when you call this operation for the first time.
+         * The pagination token that is used in the next request to retrieve a new page of results. You do not need to specify this parameter for the first request. You must specify the token that is obtained from the previous query as the value of `NextToken`.
          */
         public Builder nextToken(String nextToken) {
             this.putQueryParameter("NextToken", nextToken);
@@ -276,7 +276,7 @@ public class DescribeImagePipelineExecutionsRequest extends Request {
         }
 
         /**
-         * The region ID of the image build task. You can call the [DescribeRegions](~~25609~~) operation to query the most recent region list.
+         * The ID of the region. You can call the [DescribeRegions](~~25609~~) operation to query the most recent region list.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -303,18 +303,18 @@ public class DescribeImagePipelineExecutionsRequest extends Request {
         }
 
         /**
-         * The status of the image build task. You can specify multiple values at the same time. Separate the values with commas (,). Example format: `BUILDING,DISTRIBUTING`. Valid values: 
+         * The status of the image creation task. You can specify multiple values at the same time. Separate the values with commas (,). Example: `BUILDING,DISTRIBUTING`. Valid values:
          * <p>
          * 
-         * - BUILDING: The image is being built.
-         * - DISTRIBUTING: The image is being distributed.
-         * - RELEASING: The image is being recycled.
-         * - SUCCESS: The image is built.
-         * - FAILED: The image fails to be built.
-         * - CANCELLING: The image build task is being canceled.
-         * - CANCELLED: The image build task is canceled.
+         * *   BUILDING
+         * *   DISTRIBUTING
+         * *   RELEASING
+         * *   SUCCESS
+         * *   FAILED
+         * *   CANCELLING
+         * *   CANCELLED
          * 
-         * >  You cannot query the image build tasks in all status by leaving this parameter empty.
+         * > If you want to query the image creation tasks in all states, specify all values.
          */
         public Builder status(String status) {
             this.putQueryParameter("Status", status);
@@ -323,7 +323,7 @@ public class DescribeImagePipelineExecutionsRequest extends Request {
         }
 
         /**
-         * > This parameter is deprecated.
+         * > This parameter is unavailable.
          */
         public Builder tag(java.util.List < Tag> tag) {
             this.putQueryParameter("Tag", tag);
@@ -377,7 +377,7 @@ public class DescribeImagePipelineExecutionsRequest extends Request {
             private String value; 
 
             /**
-             * > This parameter is deprecated.
+             * > This parameter is unavailable.
              */
             public Builder key(String key) {
                 this.key = key;
@@ -385,7 +385,7 @@ public class DescribeImagePipelineExecutionsRequest extends Request {
             }
 
             /**
-             * > This parameter is deprecated.
+             * > This parameter is unavailable.
              */
             public Builder value(String value) {
                 this.value = value;

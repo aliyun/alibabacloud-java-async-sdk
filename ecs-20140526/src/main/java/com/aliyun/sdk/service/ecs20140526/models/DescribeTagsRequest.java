@@ -205,7 +205,7 @@ public class DescribeTagsRequest extends Request {
         }
 
         /**
-         * > This parameter will be removed in the future. We recommend that you use other parameters to ensure future compatibility.
+         * > This parameter will be deprecated in the future. We recommend that you use other parameters to ensure future compatibility.
          */
         public Builder category(String category) {
             this.putQueryParameter("Category", category);
@@ -223,10 +223,10 @@ public class DescribeTagsRequest extends Request {
         }
 
         /**
-         * The number of the page to return.
+         * The page number.
          * <p>
          * 
-         * Pages start from page 1.
+         * Page starts from page 1.
          * 
          * Default value: 1.
          */
@@ -237,10 +237,10 @@ public class DescribeTagsRequest extends Request {
         }
 
         /**
-         * The number of entries to return on each page.
+         * The number of entries per page.
          * <p>
          * 
-         * Maximum value: 100.
+         * Valid values: 1 to 100.
          * 
          * Default value: 50.
          */
@@ -251,7 +251,7 @@ public class DescribeTagsRequest extends Request {
         }
 
         /**
-         * The ID of the region. You can call the [DescribeRegions](~~25609~~) operation to query the most recent list of regions.
+         * The ID of the region. You can call the [DescribeRegions](~~25609~~) operation to query the most recent region list.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -260,7 +260,7 @@ public class DescribeTagsRequest extends Request {
         }
 
         /**
-         * The ID of the resource. For example, when ResourceType is set to instance, this parameter is interpreted as the ID of the instance (InstanceId).
+         * The ID of the resource to which the tags are added. If the resource is an instance, the value of this parameter is the ID of the instance.
          */
         public Builder resourceId(String resourceId) {
             this.putQueryParameter("ResourceId", resourceId);
@@ -287,23 +287,23 @@ public class DescribeTagsRequest extends Request {
         }
 
         /**
-         * The type of the resource to which the tag is added. Valid values:
+         * The type of the resource to which the tags are added. Valid values:
          * <p>
          * 
-         * *   instance: Elastic Compute Service (ECS) instance
-         * *   disk: disk
-         * *   snapshot: snapshot
-         * *   image: image
-         * *   securitygroup: security group
-         * *   volume: storage volume
-         * *   eni: elastic network interface (ENI)
-         * *   ddh: dedicated host
-         * *   keypair: SSH key pair
-         * *   launchtemplate: launch template
-         * *   reservedinstance: reserved instance
-         * *   snapshotpolicy: automatic snapshot policy
+         * *   instance: Elastic Compute Service (ECS) instance.
+         * *   disk: disk.
+         * *   snapshot: snapshot.
+         * *   image: image.
+         * *   securitygroup: security group.
+         * *   volume: storage volume.
+         * *   eni: elastic network interface (ENI).
+         * *   ddh: dedicated host.
+         * *   keypair: SSH key pair.
+         * *   launchtemplate: launch template.
+         * *   reservedinstance: reserved instance.
+         * *   snapshotpolicy: automatic snapshot policy.
          * 
-         * All values must be lowercase.
+         * All values must be in lowercase letters.
          */
         public Builder resourceType(String resourceType) {
             this.putQueryParameter("ResourceType", resourceType);
@@ -312,7 +312,7 @@ public class DescribeTagsRequest extends Request {
         }
 
         /**
-         * The list of tags.
+         * The tags of the resource.
          */
         public Builder tag(java.util.List < Tag> tag) {
             this.putQueryParameter("Tag", tag);
@@ -366,7 +366,7 @@ public class DescribeTagsRequest extends Request {
             private String value; 
 
             /**
-             * The key of tag N of the resource. Valid values of N: 1 to 20. The tag key cannot be an empty string. The tag key can be up to 64 characters in length and cannot start with `acs:` or `aliyun`. It cannot contain `http://` or `https://`.
+             * The key of tag N of the resource. Valid values of N: 1 to 20. The tag key cannot be an empty string. The tag key can be up to 64 characters in length and cannot start with acs: or aliyun. It cannot contain [http:// or https://.](http://https://。)
              */
             public Builder key(String key) {
                 this.key = key;
@@ -374,7 +374,7 @@ public class DescribeTagsRequest extends Request {
             }
 
             /**
-             * The value of tag N of the resource. Valid values of N: 1 to 20. The tag value can be an empty string. The tag value can be up to 128 characters in length and cannot start with `acs:` or `aliyun`. It cannot contain `http://` or `https://`.
+             * The value of tag N of the resource. Valid values of N: 1 to 20. The tag value can be an empty string. The tag value can be up to 128 characters in length and cannot start with acs: or aliyun. It cannot contain [http:// or https://.](http://https://。)
              */
             public Builder value(String value) {
                 this.value = value;

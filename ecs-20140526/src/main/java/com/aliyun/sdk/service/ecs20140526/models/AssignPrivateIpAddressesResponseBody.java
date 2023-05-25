@@ -212,7 +212,7 @@ public class AssignPrivateIpAddressesResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the ENI.
+             * The ENI ID.
              */
             public Builder networkInterfaceId(String networkInterfaceId) {
                 this.networkInterfaceId = networkInterfaceId;

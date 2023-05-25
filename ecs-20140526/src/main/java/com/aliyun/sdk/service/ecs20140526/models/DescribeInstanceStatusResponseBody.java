@@ -94,7 +94,7 @@ public class DescribeInstanceStatusResponseBody extends TeaModel {
         }
 
         /**
-         * The page number of the returned page.
+         * The page number.
          */
         public Builder pageNumber(Integer pageNumber) {
             this.pageNumber = pageNumber;
@@ -102,7 +102,7 @@ public class DescribeInstanceStatusResponseBody extends TeaModel {
         }
 
         /**
-         * The number of entries returned per page.
+         * The number of entries per page.
          */
         public Builder pageSize(Integer pageSize) {
             this.pageSize = pageSize;
@@ -110,7 +110,7 @@ public class DescribeInstanceStatusResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -170,7 +170,7 @@ public class DescribeInstanceStatusResponseBody extends TeaModel {
             private String status; 
 
             /**
-             * The ID of instance.
+             * The ID of the instance.
              */
             public Builder instanceId(String instanceId) {
                 this.instanceId = instanceId;
@@ -178,14 +178,14 @@ public class DescribeInstanceStatusResponseBody extends TeaModel {
             }
 
             /**
-             * The state of the instance. Valid values:
+             * The status of the instance. Valid values:
              * <p>
              * 
-             * * Pending: The instance is being created.
-             * * Running: The instance is running.
-             * * Starting: The instance is being started.
-             * * Stopping: The instance is being stopped.
-             * * Stopped: The instance is stopped.
+             * *   Pending: The instance is being created.
+             * *   Running: The instance is running.
+             * *   Starting: The instance is being started.
+             * *   Stopping: The instance is being stopped.
+             * *   Stopped: The instance is stopped.
              */
             public Builder status(String status) {
                 this.status = status;

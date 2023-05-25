@@ -70,7 +70,7 @@ public class CreateAutoProvisioningGroupResponseBody extends TeaModel {
         }
 
         /**
-         * Details about the instances created by the auto provisioning group. The values of parameters in this array are returned only when AutoProvisioningGroupType is set to `instant`.
+         * Details about the instances created by the auto provisioning group. The values of the parameters in this array are returned only when the AutoProvisioningGroupType parameter is set to `instant`.
          */
         public Builder launchResults(LaunchResults launchResults) {
             this.launchResults = launchResults;
@@ -78,7 +78,7 @@ public class CreateAutoProvisioningGroupResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -243,7 +243,7 @@ public class CreateAutoProvisioningGroupResponseBody extends TeaModel {
             }
 
             /**
-             * The instance type of the instance.
+             * The instance type.
              */
             public Builder instanceType(String instanceType) {
                 this.instanceType = instanceType;
@@ -256,7 +256,7 @@ public class CreateAutoProvisioningGroupResponseBody extends TeaModel {
              * 
              * *   NoSpot: The instance is created as a regular pay-as-you-go instance.
              * *   SpotWithPriceLimit: The instance is created as a preemptible instance with a user-defined maximum hourly price.
-             * *   SpotAsPriceGo: The instance is created as a preemptible instance for which the market price at the time of purchase is automatically used as the bid price.
+             * *   SpotAsPriceGo: The instance is created as a preemptible instance for which the market price at the time of purchase is automatically used as the bidding price.
              */
             public Builder spotStrategy(String spotStrategy) {
                 this.spotStrategy = spotStrategy;

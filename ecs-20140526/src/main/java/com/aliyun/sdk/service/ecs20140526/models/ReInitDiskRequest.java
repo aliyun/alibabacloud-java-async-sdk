@@ -211,7 +211,7 @@ public class ReInitDiskRequest extends Request {
         }
 
         /**
-         * The name of the key pair.
+         * The name of the key pair. This parameter is empty by default.
          * <p>
          * 
          * > The parameter is applicable only to Linux instances. You can bind an SSH key pair to an instance as the logon credential when you re-initialize the system disk of the instance. After the SSH key pair is bound, the username and password-based logon method is disabled for the instance.
@@ -278,8 +278,8 @@ public class ReInitDiskRequest extends Request {
          * Specifies whether to use Security Center for free after the system disk is re-initialized. Valid values:
          * <p>
          * 
-         * *   Active: uses Security Center for free after the system disk is re-initialized. This value is applicable only to public images.
-         * *   Deactive: does not use Security Center for free after the system disk is re-initialized. This value is applicable to all images.
+         * *   Active: Security Center is activated for free after the system disk is replaced. This value is applicable to only public images.
+         * *   Deactive: Security Center is not activated after the system disk is replaced. This value is applicable to all images.
          * 
          * Default value: Deactive.
          */

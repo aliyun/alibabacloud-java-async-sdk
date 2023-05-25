@@ -62,10 +62,10 @@ public class ModifyDiskSpecResponseBody extends TeaModel {
         private String taskId; 
 
         /**
-         * The ID of the order.
+         * The order ID.
          * <p>
          * 
-         * >  This parameter is returned only when the category of a subscription disk or the performance level of a subscription ESSD is modified.
+         * > This parameter is returned only when the category of a subscription cloud disk or the performance level of a subscription cloud disk is modified.
          */
         public Builder orderId(String orderId) {
             this.orderId = orderId;
@@ -73,7 +73,7 @@ public class ModifyDiskSpecResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -84,7 +84,7 @@ public class ModifyDiskSpecResponseBody extends TeaModel {
          * The task ID of changing the disk category.
          * <p>
          * 
-         * >  If you only modify the performance level of an ESSD, this parameter is not returned.
+         * > If you modify only the performance level of an ESSD, this parameter is not returned.
          */
         public Builder taskId(String taskId) {
             this.taskId = taskId;

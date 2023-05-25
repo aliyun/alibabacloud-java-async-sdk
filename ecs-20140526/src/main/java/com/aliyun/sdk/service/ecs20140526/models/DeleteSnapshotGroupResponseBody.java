@@ -236,10 +236,10 @@ public class DeleteSnapshotGroupResponseBody extends TeaModel {
             private RelatedItemSet relatedItemSet; 
 
             /**
-             * The error code. This parameter is empty when the operation was successful.
+             * The error code. This parameter is empty when the operation is successful.
              * <p>
              * 
-             * For information about error codes and error messages, visit the [API error center](https://error-center.alibabacloud.com/status/product/Ecs).
+             * For information about error codes and error messages, visit the [API error center](https://error-center.aliyun.com/status/product/Ecs).
              */
             public Builder errorCode(String errorCode) {
                 this.errorCode = errorCode;
@@ -247,10 +247,10 @@ public class DeleteSnapshotGroupResponseBody extends TeaModel {
             }
 
             /**
-             * The error message. This parameter is empty when the operation was successful.
+             * The error message. This parameter is empty when the operation is successful.
              * <p>
              * 
-             * For information about error codes and error messages, visit the [API error center](https://error-center.alibabacloud.com/status/product/Ecs).
+             * For information about error codes and error messages, visit the [API error center](https://error-center.aliyun.com/status/product/Ecs).
              */
             public Builder errorMsg(String errorMsg) {
                 this.errorMsg = errorMsg;

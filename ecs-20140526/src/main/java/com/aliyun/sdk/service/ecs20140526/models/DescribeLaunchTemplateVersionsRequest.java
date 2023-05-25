@@ -272,8 +272,8 @@ public class DescribeLaunchTemplateVersionsRequest extends Request {
          * Specifies whether to query the configurations of the launch template. Valid values:
          * <p>
          * 
-         * *   true: queries the basic information and other details of the launch template. The details include the image ID and system disk size.
-         * *   false: queries only the basic information of the launch template. The basic information includes the template ID, template name, and default version.
+         * *   true: queries the basic information and other details of the launch template. The details include the image ID and the size of the system disk.
+         * *   false: queries only the basic information of the launch template. The basic information includes the template ID, the template name, and the default version.
          * 
          * Default value: true.
          */
@@ -287,7 +287,7 @@ public class DescribeLaunchTemplateVersionsRequest extends Request {
          * The ID of the launch template.
          * <p>
          * 
-         * You must set LaunchTemplateId or LaunchTemplateName to specify a launch template.
+         * You must specify LaunchTemplateId or LaunchTemplateName to determine a launch template.
          */
         public Builder launchTemplateId(String launchTemplateId) {
             this.putQueryParameter("LaunchTemplateId", launchTemplateId);
@@ -305,7 +305,7 @@ public class DescribeLaunchTemplateVersionsRequest extends Request {
         }
 
         /**
-         * Version N of the launch template.
+         * The one or more versions of the launch template.
          */
         public Builder launchTemplateVersion(java.util.List < Long > launchTemplateVersion) {
             this.putQueryParameter("LaunchTemplateVersion", launchTemplateVersion);
@@ -367,7 +367,7 @@ public class DescribeLaunchTemplateVersionsRequest extends Request {
          * The number of entries to return on each page.
          * <p>
          * 
-         * Default value: 10
+         * Default value: 10.
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);

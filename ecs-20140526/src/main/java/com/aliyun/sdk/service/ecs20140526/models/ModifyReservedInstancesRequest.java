@@ -309,7 +309,7 @@ public class ModifyReservedInstancesRequest extends Request {
              * The name of reserved instance N. Valid values of N: 1 to 100.
              * <p>
              * 
-             * The name must be 2 to 128 characters in length. It must start with a letter but cannot start with [http:// or https://. It can contain letters, digits, colons (:), underscores (\_), and hyphens (-).](http://https://。、（:）、（\_）（-）。)
+             * The name must be 2 to 128 characters in length. It must start with a letter but cannot start with [http:// or https://. It can contain letters, digits, colons (.), underscores (\_), and hyphens (-).](http://https://。、（:）、（\_）（-）。)
              */
             public Builder reservedInstanceName(String reservedInstanceName) {
                 this.reservedInstanceName = reservedInstanceName;
@@ -320,8 +320,8 @@ public class ModifyReservedInstancesRequest extends Request {
              * The scope of reserved instance N. Valid values:
              * <p>
              * 
-             * *   Region: regional.
-             * *   Zone: zonal.
+             * *   Region
+             * *   Zone
              * 
              * Valid values of N: 1 to 100.
              * 
@@ -338,7 +338,7 @@ public class ModifyReservedInstancesRequest extends Request {
              * 
              * This parameter is required when `Scope` is set to `Zone`.
              * 
-             * You can call the [DescribeZones](~~25609~~) operation to query the most recent list of zones.
+             * You can call the [DescribeZones](~~25609~~) operation to query the most recent zone list.
              */
             public Builder zoneId(String zoneId) {
                 this.zoneId = zoneId;

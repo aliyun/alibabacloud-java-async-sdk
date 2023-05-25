@@ -229,7 +229,7 @@ public class ModifyImageSharePermissionRequest extends Request {
          * *   true: publishes the custom image as a community image.
          * *   false: unpublishes a community image. The unpublish operation takes effect only on community images.
          * 
-         * Default value: false
+         * Default value: false.
          */
         public Builder isPublic(Boolean isPublic) {
             this.putQueryParameter("IsPublic", isPublic);
@@ -238,7 +238,7 @@ public class ModifyImageSharePermissionRequest extends Request {
         }
 
         /**
-         * > This parameter is in invitational preview and is unavailable to general users.
+         * > This parameter is in invitational preview and is not publicly available.
          */
         public Builder launchPermission(String launchPermission) {
             this.putQueryParameter("LaunchPermission", launchPermission);

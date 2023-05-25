@@ -186,7 +186,7 @@ public class ModifyLaunchTemplateDefaultVersionRequest extends Request {
         }
 
         /**
-         * The ID of the launch template. You must set LaunchTemplateId or LaunchTemplateName to specify a launch template.
+         * The ID of the launch template. You must configure LaunchTemplateId or LaunchTemplateName to specify a launch template.
          */
         public Builder launchTemplateId(String launchTemplateId) {
             this.putQueryParameter("LaunchTemplateId", launchTemplateId);
@@ -195,7 +195,7 @@ public class ModifyLaunchTemplateDefaultVersionRequest extends Request {
         }
 
         /**
-         * The name of the launch template. You must set LaunchTemplateId or LaunchTemplateName to specify a launch template.
+         * The name of the launch template. You must configure LaunchTemplateId or LaunchTemplateName to specify a launch template.
          */
         public Builder launchTemplateName(String launchTemplateName) {
             this.putQueryParameter("LaunchTemplateName", launchTemplateName);

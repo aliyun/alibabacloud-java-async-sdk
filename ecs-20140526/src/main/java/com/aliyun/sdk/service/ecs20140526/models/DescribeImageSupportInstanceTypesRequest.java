@@ -162,13 +162,7 @@ public class DescribeImageSupportInstanceTypesRequest extends Request {
         }
 
         /**
-         * The scenario in which the instance type is used. Default value: CreateEcs. Valid values:
-         * <p>
-         * 
-         * *   CreateEcs: instance creation
-         * *   Upgrade: instance type upgrade
-         * *   Downgrade: instance type downgrade
-         * *   RenewDowngrade: renewal and configuration downgrade
+         * ActionType.
          */
         public Builder actionType(String actionType) {
             this.putQueryParameter("ActionType", actionType);
@@ -177,7 +171,7 @@ public class DescribeImageSupportInstanceTypesRequest extends Request {
         }
 
         /**
-         * The list of filters to querying resources.
+         * The filters used to filter instance types.
          */
         public Builder filter(java.util.List < Filter> filter) {
             this.putQueryParameter("Filter", filter);
@@ -276,11 +270,11 @@ public class DescribeImageSupportInstanceTypesRequest extends Request {
             private String value; 
 
             /**
-             * The key of filter. Only the image ID can be used to filter instance types. Valid values:
+             * The key of filter N. Only the image ID can be used to filter instance types. Valid values:
              * <p>
              * 
-             * * imagId: image ID
-             * * filter: image ID
+             * *   imagId: image ID
+             * *   filter: image ID
              */
             public Builder key(String key) {
                 this.key = key;
@@ -288,7 +282,7 @@ public class DescribeImageSupportInstanceTypesRequest extends Request {
             }
 
             /**
-             * The value of filter.
+             * The value of filter N.
              */
             public Builder value(String value) {
                 this.value = value;

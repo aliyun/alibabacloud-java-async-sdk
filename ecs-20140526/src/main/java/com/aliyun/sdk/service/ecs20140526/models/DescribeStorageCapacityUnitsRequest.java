@@ -227,7 +227,7 @@ public class DescribeStorageCapacityUnitsRequest extends Request {
          * The allocation type. Valid values:
          * <p>
          * 
-         * *   Normal: queries SCUs within the current Alibaba Cloud account.
+         * *   Normal: queries SCUs that belong to the current Alibaba Cloud account.
          * *   Shared: queries SCUs shared between the Alibaba Cloud account and RAM users.
          * 
          * Default value: Normal.
@@ -330,7 +330,13 @@ public class DescribeStorageCapacityUnitsRequest extends Request {
         }
 
         /**
-         * The statuses of SCUs.
+         * The state of SCUs. You can specify 1 to 4 types of state. Valid values:
+         * <p>
+         * 
+         * *   Creating: The SCUs are being created.
+         * *   Active: The SCUs are in effect.
+         * *   Expired: The SCUs have expired.
+         * *   Pending: The SCUs have not taken effect.
          */
         public Builder status(java.util.List < String > status) {
             this.putQueryParameter("Status", status);
@@ -339,7 +345,7 @@ public class DescribeStorageCapacityUnitsRequest extends Request {
         }
 
         /**
-         * The IDs of the SCUs. You can enter at most 100 SCU IDs.
+         * One or multiple SCU IDs. You can specify 1 to 100 SCU IDs.
          */
         public Builder storageCapacityUnitId(java.util.List < String > storageCapacityUnitId) {
             this.putQueryParameter("StorageCapacityUnitId", storageCapacityUnitId);
@@ -348,7 +354,7 @@ public class DescribeStorageCapacityUnitsRequest extends Request {
         }
 
         /**
-         * The tags.
+         * The tags of the SCUs.
          */
         public Builder tag(java.util.List < Tag> tag) {
             this.putQueryParameter("Tag", tag);
@@ -402,7 +408,7 @@ public class DescribeStorageCapacityUnitsRequest extends Request {
             private String value; 
 
             /**
-             * The key of tag N of the SCU. N indicates that you can set multiple tag keys to query. Valid values of N: 1 to 20.
+             * The key of tag N of the SCU. N is the identifier for the tag, which you can use to set and query the tag. Valid values of N: 1 to 20.
              */
             public Builder key(String key) {
                 this.key = key;
@@ -410,7 +416,7 @@ public class DescribeStorageCapacityUnitsRequest extends Request {
             }
 
             /**
-             * The value of tag N of the SCU. N indicates that you can set multiple tag values to query and corresponds to N of `Tag.N.Key`. Valid values of N: 1 to 20.
+             * The value of tag N of the SCU. N is the identifier for the tag, which you can use to set and query the tag. The value of N must coincide with `Tag.N.Key`. Valid values of N: 1 to 20.
              */
             public Builder value(String value) {
                 this.value = value;

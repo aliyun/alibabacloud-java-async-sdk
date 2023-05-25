@@ -443,7 +443,7 @@ public class CreateDiskRequest extends Request {
         }
 
         /**
-         * This parameter is unavailable.
+         * This parameter is not available for public use.
          */
         public Builder advancedFeatures(String advancedFeatures) {
             this.putQueryParameter("AdvancedFeatures", advancedFeatures);
@@ -452,7 +452,7 @@ public class CreateDiskRequest extends Request {
         }
 
         /**
-         * 该参数暂未开放使用。
+         * This parameter is not available for public use.
          */
         public Builder arn(java.util.List < Arn> arn) {
             this.putQueryParameter("Arn", arn);
@@ -461,7 +461,7 @@ public class CreateDiskRequest extends Request {
         }
 
         /**
-         * This parameter is unavailable.
+         * This parameter is not available for public use.
          */
         public Builder burstingEnabled(Boolean burstingEnabled) {
             this.putQueryParameter("BurstingEnabled", burstingEnabled);
@@ -470,7 +470,7 @@ public class CreateDiskRequest extends Request {
         }
 
         /**
-         * The client token that is used to ensure the idempotence of the request. You can use the client to generate the value, but you must make sure that the value is unique among different requests. The **ClientToken** value can contain only ASCII characters and cannot exceed 64 characters in length. For more information, see [How to ensure idempotence](~~25693~~).
+         * The client token that is used to ensure the idempotence of the request. You can use the client to generate the token, but you must make sure that the token is unique among different requests. The **token** can contain only ASCII characters and cannot exceed 64 characters in length. For more information, see [How to ensure idempotence](~~25693~~).
          */
         public Builder clientToken(String clientToken) {
             this.putQueryParameter("ClientToken", clientToken);
@@ -491,12 +491,12 @@ public class CreateDiskRequest extends Request {
         }
 
         /**
-         * The category of the data disk. Valid values:
+         * The disk category. Valid values:
          * <p>
          * 
          * *   cloud: basic disk
          * *   cloud_efficiency: ultra disk
-         * *   cloud_ssd: standard SSD
+         * *   cloud_ssd: SSD
          * *   cloud_essd: ESSD
          * 
          * Default value: cloud.
@@ -508,7 +508,7 @@ public class CreateDiskRequest extends Request {
         }
 
         /**
-         * The name of the disk. The name must be 2 to 128 characters in length. The name must start with a letter but cannot start with `http://` or `https://`. It can contain letters, digits, colons (:), underscores (\_), and hyphens (-).
+         * The disk name. The name must be 2 to 128 characters in length. It must start with a letter and cannot start with `http://` or `https://`. It can contain letters, digits, colons (:), underscores (\_), and hyphens (-).
          * <p>
          * 
          * This parameter is empty by default.
@@ -520,7 +520,7 @@ public class CreateDiskRequest extends Request {
         }
 
         /**
-         * This parameter is unavailable.
+         * This parameter is not available for public use.
          */
         public Builder encryptAlgorithm(String encryptAlgorithm) {
             this.putQueryParameter("EncryptAlgorithm", encryptAlgorithm);
@@ -535,7 +535,7 @@ public class CreateDiskRequest extends Request {
          * *   true: encrypts the disk.
          * *   false: does not encrypt the disk.
          * 
-         * Default value: false.
+         * Default value: false
          */
         public Builder encrypted(Boolean encrypted) {
             this.putQueryParameter("Encrypted", encrypted);
@@ -544,13 +544,13 @@ public class CreateDiskRequest extends Request {
         }
 
         /**
-         * The ID of the instance to which the created subscription disk is automatically attached.
+         * The ID of the subscription instance to which you want to automatically attach the created subscription disk.
          * <p>
          * 
          * *   After you specify the instance ID, the specified ResourceGroupId, Tag.N.Key, Tag.N.Value, ClientToken, and KMSKeyId parameters are ignored.
-         * *   You cannot specify ZoneId and InstanceId at the same time.
+         * *   You cannot specify the ZoneId and InstanceId parameters at the same time.
          * 
-         * This parameter is empty by default. This indicates that a pay-as-you-go disk is created. The RegionId and ZoneId parameters specify where the disk resides.
+         * By default, this parameter is empty. This specifies that a pay-as-you-go disk is created. The RegionId and ZoneId parameters specify where the disk resides.
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -559,7 +559,7 @@ public class CreateDiskRequest extends Request {
         }
 
         /**
-         * The ID of the Key Management Service (KMS) key used by the disk.
+         * The ID of the Key Management Service (KMS) key that you want to use for the disk.
          */
         public Builder KMSKeyId(String KMSKeyId) {
             this.putQueryParameter("KMSKeyId", KMSKeyId);
@@ -571,12 +571,14 @@ public class CreateDiskRequest extends Request {
          * Specifies whether to enable the multi-attach feature for the disk. Valid values:
          * <p>
          * 
-         * *   Disabled: disables the multi-attach feature.
-         * *   Enabled: enables the multi-attach feature. Set the value to `Enabled` only for ESSDs.
+         * *   Disabled
+         * *   Enabled Set the value to `Enabled` only for ESSDs.
          * 
          * Default value: Disabled.
          * 
-         * >  Disks for which the multi-attach feature is enabled support only the pay-as-you-go billing method. When the `MultiAttach` parameter is set to Enabled, you cannot specify the `InstanceId` parameter. You can call the [AttachDisk](~~25515~~) operation to attach disks to instances after the disks are created. Disks for which the multi-attach feature is enabled can be attached only as data disks.
+         * **
+         * 
+         * **Disks for which the multi-attach feature is enabled only support the pay-as-you-go billing method.** If you set the `MultiAttach` parameter to Enabled, you cannot specify the `InstanceId` parameter. After you create disks, you can call the [AttachDisk](~~25515~~) operation to attach the disks to instances. You can attach disks for which the multi-attach feature is enabled only as data disks.
          */
         public Builder multiAttach(String multiAttach) {
             this.putQueryParameter("MultiAttach", multiAttach);
@@ -603,13 +605,13 @@ public class CreateDiskRequest extends Request {
         }
 
         /**
-         * The performance level of the ESSD. Valid values:
+         * The performance level of the ESSD. Default value: PL1. Valid values:
          * <p>
          * 
-         * *   PL0: A single ESSD can deliver up to 10,000 random read/write IOPS.
+         * *   PL0: An ESSD can deliver up to 10,000 random read/write IOPS.
          * *   PL1: An ESSD can deliver up to 50,000 random read/write IOPS.
-         * *   PL2: A single ESSD can deliver up to 100,000 random read/write IOPS.
-         * *   PL3: A single ESSD can deliver up to 1,000,000 random read/write IOPS.
+         * *   PL2: An ESSD can deliver up to 100,000 random read/write IOPS.
+         * *   PL3: An ESSD can deliver up to 1,000,000 random read/write IOPS.
          * 
          * Default value: PL1.
          * 
@@ -622,7 +624,7 @@ public class CreateDiskRequest extends Request {
         }
 
         /**
-         * This parameter is unavailable.
+         * This parameter is not available for public use.
          */
         public Builder provisionedIops(Long provisionedIops) {
             this.putQueryParameter("ProvisionedIops", provisionedIops);
@@ -640,7 +642,7 @@ public class CreateDiskRequest extends Request {
         }
 
         /**
-         * The ID of the resource group to which to assign the disk.
+         * The ID of the resource group to which you want to assign the disk.
          */
         public Builder resourceGroupId(String resourceGroupId) {
             this.putQueryParameter("ResourceGroupId", resourceGroupId);
@@ -667,7 +669,7 @@ public class CreateDiskRequest extends Request {
         }
 
         /**
-         * The size of the disk. Unit: GiB. This parameter is required. Valid values:
+         * The disk size. Unit: GiB. You must specify this parameter. Valid values:
          * <p>
          * 
          * *   Valid values when DiskCategory is set to cloud: 5 to 2,000
@@ -676,17 +678,17 @@ public class CreateDiskRequest extends Request {
          * 
          * *   Valid values when DiskCategory is set to cloud_ssd: 20 to 32,768
          * 
-         * *   Valid values when DiskCategory is set to cloud_essd: depends on the `PerformanceLevel` value.
+         * *   Valid values when DiskCategory is set to cloud_essd: based on the value of the `PerformanceLevel` parameter
          * 
          *     *   Valid values when PerformanceLevel is set to PL0: 40 to 32,768
          *     *   Valid values when PerformanceLevel is set to PL1: 20 to 32,768
          *     *   Valid values when PerformanceLevel is set to PL2: 461 to 32,768
          *     *   Valid values when PerformanceLevel is set to PL3: 1,261 to 32,768
          * 
-         * If the `SnapshotId` parameter is specified, the following limits apply to the `SnapshotId` and `Size` parameters:
+         * If you specify the `SnapshotId` parameter, the following limits apply to the `SnapshotId` and `Size` parameters:
          * 
-         * *   If the size of the snapshot specified by the `SnapshotId` parameter is greater than the specified `Size` value, the size of the created disk is equal to the specified snapshot size.
-         * *   If the size of the snapshot specified by the `SnapshotId` parameter is smaller than the specified `Size` value, the size of the created disk is equal to the specified `Size` value.
+         * *   If the size of the snapshot that is specified by the `SnapshotId` parameter is greater than the value of the `Size` parameter, the disk is created based on the size of the specified snapshot.
+         * *   If the size of the snapshot that is specified by the `SnapshotId` parameter is less than the value of the `Size` parameter, the disk is created based on the value of the `Size` parameter.
          */
         public Builder size(Integer size) {
             this.putQueryParameter("Size", size);
@@ -695,13 +697,13 @@ public class CreateDiskRequest extends Request {
         }
 
         /**
-         * The ID of the snapshot used to create the disk. Snapshots that were created on or before July 15, 2013 cannot be used to create disks.
+         * The ID of the snapshot that you want to use to create the disk. You cannot use snapshots that are created on or before July 15, 2013 to create disks.
          * <p>
          * 
          * The following limits apply to the `SnapshotId` and `Size` parameters:
          * 
-         * *   If the size of the snapshot specified by the `SnapshotId` parameter is greater than the specified `Size` value, the size of the created disk is equal to the specified snapshot size.
-         * *   If the size of the snapshot specified by the `SnapshotId` parameter is smaller than the specified `Size` value, the size of the created disk is equal to the specified `Size` value.
+         * *   If the size of the snapshot that is specified by the `SnapshotId` parameter is greater than the value of the `Size` parameter, the disk is created based on the size of the specified snapshot.
+         * *   If the size of the snapshot that is specified by the `SnapshotId` parameter is less than the value of the `Size` parameter, the disk is created based on the value of the `Size` parameter.
          */
         public Builder snapshotId(String snapshotId) {
             this.putQueryParameter("SnapshotId", snapshotId);
@@ -710,10 +712,10 @@ public class CreateDiskRequest extends Request {
         }
 
         /**
-         * The ID of the dedicated block storage cluster. To create a disk in a specific dedicated block storage cluster, specify this parameter. For more information about dedicated block storage clusters, see [What is Dedicated Block Storage Cluster?](~~208883~~)
+         * The ID of the dedicated block storage cluster. If you want to create a disk in a specific dedicated block storage cluster, specify this parameter. For more information about dedicated block storage clusters, see [What is Dedicated Block Storage Cluster?](~~208883~~)
          * <p>
          * 
-         * >  You can specify only one of the storage set-related parameters (`StorageSetId` and `StorageSetPartitionNumber`) and dedicated block storage cluster-related parameter (`StorageClusterId`). If you specify more than one of the preceding parameters, the call fails.
+         * > Storage set-related parameters include `StorageSetId` as well as `StorageSetPartitionNumber`, and the dedicated block storage cluster-related parameter is `StorageClusterId`. You cannot specify a storage set-related parameter and a dedicated block storage cluster-related parameter at the same time.
          */
         public Builder storageClusterId(String storageClusterId) {
             this.putQueryParameter("StorageClusterId", storageClusterId);
@@ -722,10 +724,10 @@ public class CreateDiskRequest extends Request {
         }
 
         /**
-         * The ID of the storage set.
+         * The storage set ID.
          * <p>
          * 
-         * >  You can specify only one of the storage set-related parameters (`StorageSetId` and `StorageSetPartitionNumber`) and dedicated block storage cluster-related parameter (`StorageClusterId`). If you specify more than one of the preceding parameters, the call fails.
+         * > Storage set-related parameters include `StorageSetId` as well as `StorageSetPartitionNumber`, and the dedicated block storage cluster-related parameter is `StorageClusterId`. You cannot specify a storage set-related parameter and a dedicated block storage cluster-related parameter at the same time.
          */
         public Builder storageSetId(String storageSetId) {
             this.putQueryParameter("StorageSetId", storageSetId);
@@ -734,7 +736,7 @@ public class CreateDiskRequest extends Request {
         }
 
         /**
-         * The number of partitions in the storage set. The value must be greater than or equal to 2, but cannot exceed the quota obtained by calling the [DescribeAccountAttributes](~~73772~~) operation.
+         * The number of partitions in the storage set. The value must be greater than or equal to 2 but cannot exceed the quota that you obtained by calling the [DescribeAccountAttributes](~~73772~~) operation.
          * <p>
          * 
          * Default value: 2.
@@ -746,7 +748,7 @@ public class CreateDiskRequest extends Request {
         }
 
         /**
-         * 云盘的标签信息列表。
+         * The tags that you want to add to the disk.
          */
         public Builder tag(java.util.List < Tag> tag) {
             this.putQueryParameter("Tag", tag);
@@ -755,11 +757,11 @@ public class CreateDiskRequest extends Request {
         }
 
         /**
-         * The ID of the zone in which to create the pay-as-you-go disk.
+         * The disk zone ID.
          * <p>
          * 
-         * *   If the InstanceId parameter is not specified, the ZoneId parameter is required.
-         * *   You cannot specify ZoneId and InstanceId at the same time.
+         * *   If you do not specify the InstanceId parameter, you must specify the ZoneId parameter.
+         * *   You cannot specify the ZoneId and InstanceId parameters at the same time.
          */
         public Builder zoneId(String zoneId) {
             this.putQueryParameter("ZoneId", zoneId);
@@ -825,7 +827,7 @@ public class CreateDiskRequest extends Request {
             private String rolearn; 
 
             /**
-             * This parameter is unavailable.
+             * This parameter is not available for public use.
              */
             public Builder assumeRoleFor(Long assumeRoleFor) {
                 this.assumeRoleFor = assumeRoleFor;
@@ -833,7 +835,7 @@ public class CreateDiskRequest extends Request {
             }
 
             /**
-             * This parameter is unavailable.
+             * This parameter is not available for public use.
              */
             public Builder roleType(String roleType) {
                 this.roleType = roleType;
@@ -841,7 +843,7 @@ public class CreateDiskRequest extends Request {
             }
 
             /**
-             * This parameter is unavailable.
+             * This parameter is not available for public use.
              */
             public Builder rolearn(String rolearn) {
                 this.rolearn = rolearn;
@@ -894,7 +896,7 @@ public class CreateDiskRequest extends Request {
             private String value; 
 
             /**
-             * The key of tag N of the disk. Valid values of N: 1 to 20. The key cannot be an empty string. It can be up to 128 characters in length and cannot start with `acs:` or `aliyun`. It cannot contain `http://` or `https://`.
+             * The key of tag N that you want to add to the disk. Valid values of N: 1 to 20. The tag key cannot be an empty string. It can be up to 128 characters in length and cannot contain `http://` or `https://`. The tag key cannot start with `acs:` or `aliyun`.
              */
             public Builder key(String key) {
                 this.key = key;
@@ -902,7 +904,7 @@ public class CreateDiskRequest extends Request {
             }
 
             /**
-             * The value of tag N of the disk. Valid values of N: 1 to 20. The value can be an empty string. It can be up to 128 characters in length. It cannot start with `acs:` or contain `http://` or `https://`.
+             * The value of tag N that you want to add to the disk. Valid values of N: 1 to 20. The tag value can be an empty string. It can be up to 128 characters in length and cannot start with `acs:`. The tag value cannot contain `http://` or `https://`.
              */
             public Builder value(String value) {
                 this.value = value;

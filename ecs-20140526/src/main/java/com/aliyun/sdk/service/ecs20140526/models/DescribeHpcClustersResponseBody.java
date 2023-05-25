@@ -86,7 +86,7 @@ public class DescribeHpcClustersResponseBody extends TeaModel {
         private Integer totalCount; 
 
         /**
-         * Details about the HPC clusters. The value is an array that consists of the information of each HPC cluster.
+         * The ID of the HPC cluster.
          */
         public Builder hpcClusters(HpcClusters hpcClusters) {
             this.hpcClusters = hpcClusters;
@@ -94,7 +94,7 @@ public class DescribeHpcClustersResponseBody extends TeaModel {
         }
 
         /**
-         * The page number of the returned page.
+         * The total number of HPC clusters queried.
          */
         public Builder pageNumber(Integer pageNumber) {
             this.pageNumber = pageNumber;
@@ -102,7 +102,7 @@ public class DescribeHpcClustersResponseBody extends TeaModel {
         }
 
         /**
-         * The number of entries returned per page.
+         * The ID of the request.
          */
         public Builder pageSize(Integer pageSize) {
             this.pageSize = pageSize;
@@ -110,7 +110,7 @@ public class DescribeHpcClustersResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * The page number of the returned page.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -118,7 +118,7 @@ public class DescribeHpcClustersResponseBody extends TeaModel {
         }
 
         /**
-         * The total number of the HPC clusters.
+         * Details about the HPC clusters. The value is an array that consists of the information of each HPC cluster.
          */
         public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;
@@ -182,7 +182,7 @@ public class DescribeHpcClustersResponseBody extends TeaModel {
             private String name; 
 
             /**
-             * The description of the HPC cluster.
+             * Description.
              */
             public Builder description(String description) {
                 this.description = description;
@@ -190,7 +190,7 @@ public class DescribeHpcClustersResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the HPC cluster.
+             * The name of the HPC cluster.
              */
             public Builder hpcClusterId(String hpcClusterId) {
                 this.hpcClusterId = hpcClusterId;
@@ -198,7 +198,7 @@ public class DescribeHpcClustersResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the HPC cluster.
+             * The description of the HPC cluster.
              */
             public Builder name(String name) {
                 this.name = name;

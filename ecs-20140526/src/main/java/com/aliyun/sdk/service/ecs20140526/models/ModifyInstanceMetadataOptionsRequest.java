@@ -194,8 +194,8 @@ public class ModifyInstanceMetadataOptionsRequest extends Request {
          * Specifies whether to enable the access channel for instance metadata. Valid values:
          * <p>
          * 
-         * *   enabled: enables the access channel for instance metadata.
-         * *   disabled: disables the access channel for instance metadata.
+         * *   enabled
+         * *   disabled
          * 
          * Default value: enabled.
          * 
@@ -208,7 +208,7 @@ public class ModifyInstanceMetadataOptionsRequest extends Request {
         }
 
         /**
-         * > This parameter is in invitational preview and is unavailable to general users.
+         * > This parameter is in invitational preview and is not publicly available.
          */
         public Builder httpPutResponseHopLimit(Integer httpPutResponseHopLimit) {
             this.putQueryParameter("HttpPutResponseHopLimit", httpPutResponseHopLimit);
@@ -217,11 +217,11 @@ public class ModifyInstanceMetadataOptionsRequest extends Request {
         }
 
         /**
-         * Specifies whether to forcefully use the security-enhanced mode (IMDSv2) to access instance metadata. Valid values:
+         * Specifies whether to forcibly use the security hardening mode (IMDSv2) to access instance metadata. Valid values:
          * <p>
          * 
-         * *   optional: does not forcefully use the security-enhanced mode (IMDSv2).
-         * *   required: forcefully uses the security-enhanced mode (IMDSv2). After you set this parameter to required, you cannot access instance metadata in normal mode.
+         * *   optional: does not forcibly use the security hardening mode (IMDSv2).
+         * *   required: forcibly uses the security hardening mode (IMDSv2). After you set this parameter to required, you cannot access instance metadata in normal mode.
          * 
          * Default value: optional.
          * 
@@ -243,7 +243,7 @@ public class ModifyInstanceMetadataOptionsRequest extends Request {
         }
 
         /**
-         * InstanceMetadataTags.
+         * > This parameter is in invitational preview and is not publicly available.
          */
         public Builder instanceMetadataTags(String instanceMetadataTags) {
             this.putQueryParameter("InstanceMetadataTags", instanceMetadataTags);
@@ -261,7 +261,7 @@ public class ModifyInstanceMetadataOptionsRequest extends Request {
         }
 
         /**
-         * The region ID of the instance. You can call the [DescribeRegions](~~25609~~) operation to query the most recent list of regions.
+         * The region ID of the instance. You can call the [DescribeRegions](~~25609~~) operation to query the most recent region list.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);

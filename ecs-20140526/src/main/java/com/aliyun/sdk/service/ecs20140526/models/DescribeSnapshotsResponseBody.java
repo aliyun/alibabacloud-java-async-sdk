@@ -98,7 +98,7 @@ public class DescribeSnapshotsResponseBody extends TeaModel {
         private Integer totalCount; 
 
         /**
-         * The token used to start the next query.
+         * A pagination token. It can be used in the next request to retrieve a new page of results.If NextToken is empty, no next page exists.
          */
         public Builder nextToken(String nextToken) {
             this.nextToken = nextToken;
@@ -106,7 +106,7 @@ public class DescribeSnapshotsResponseBody extends TeaModel {
         }
 
         /**
-         * The page number of the returned page.
+         * The page number.
          */
         public Builder pageNumber(Integer pageNumber) {
             this.pageNumber = pageNumber;
@@ -114,7 +114,7 @@ public class DescribeSnapshotsResponseBody extends TeaModel {
         }
 
         /**
-         * The number of entries returned per page.
+         * The number of entries per page.
          */
         public Builder pageSize(Integer pageSize) {
             this.pageSize = pageSize;
@@ -122,7 +122,7 @@ public class DescribeSnapshotsResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -580,7 +580,7 @@ public class DescribeSnapshotsResponseBody extends TeaModel {
             private String usage; 
 
             /**
-             * The category of the snapshot.
+             * The snapshot type.
              * <p>
              * 
              * >  This parameter will be removed in the future. We recommend that you use the `InstantAccess` parameter to ensure future compatibility.
@@ -615,11 +615,11 @@ public class DescribeSnapshotsResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether the instant access feature was enabled. Valid values:
+             * Indicates whether the instant access feature is enabled. Valid values:
              * <p>
              * 
-             * *   true: The instant access feature was enabled. This feature can be enabled only for enhanced SSDs (ESSDs).
-             * *   false: The instant access feature was disabled. The snapshot is a normal snapshot for which the instant access feature was disabled.
+             * *   true: The instant access feature is enabled. This feature can be enabled only for enhanced SSDs (ESSDs).
+             * *   false: The instant access feature is disabled. The snapshot is a normal snapshot for which the instant access feature is disabled.
              */
             public Builder instantAccess(Boolean instantAccess) {
                 this.instantAccess = instantAccess;
@@ -630,7 +630,7 @@ public class DescribeSnapshotsResponseBody extends TeaModel {
              * The validity period of the instant access feature. The instant access feature is automatically disabled when the specified period expires.
              * <p>
              * 
-             * By default, the value of this parameter is the same as that of `RetentionDays`.
+             * By default, the value of this parameter is the same as the value of the `RetentionDays` parameter.
              */
             public Builder instantAccessRetentionDays(Integer instantAccessRetentionDays) {
                 this.instantAccessRetentionDays = instantAccessRetentionDays;
@@ -662,7 +662,7 @@ public class DescribeSnapshotsResponseBody extends TeaModel {
             }
 
             /**
-             * The progress of the snapshot creation task. Unit: percent (%).
+             * The progress of the snapshot creation task in percentage.
              */
             public Builder progress(String progress) {
                 this.progress = progress;
@@ -694,7 +694,7 @@ public class DescribeSnapshotsResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the snapshot.
+             * The snapshot ID.
              */
             public Builder snapshotId(String snapshotId) {
                 this.snapshotId = snapshotId;
@@ -721,9 +721,9 @@ public class DescribeSnapshotsResponseBody extends TeaModel {
              * The type of snapshot. Valid values:
              * <p>
              * 
-             * *   auto or timer: automatic snapshot
-             * *   user: manual snapshot
-             * *   all: all snapshot types
+             * *   auto or timer: automatic snapshot.
+             * *   user: manual snapshot.
+             * *   all: all snapshot types.
              */
             public Builder snapshotType(String snapshotType) {
                 this.snapshotType = snapshotType;
@@ -786,7 +786,7 @@ public class DescribeSnapshotsResponseBody extends TeaModel {
             }
 
             /**
-             * The state of the snapshot. Valid values:
+             * The snapshot status. Valid values:
              * <p>
              * 
              * *   progressing

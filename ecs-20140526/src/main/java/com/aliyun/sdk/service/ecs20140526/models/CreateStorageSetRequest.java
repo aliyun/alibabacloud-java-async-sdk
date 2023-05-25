@@ -182,7 +182,7 @@ public class CreateStorageSetRequest extends Request {
         } 
 
         /**
-         * The client token that is used to ensure the idempotence of the request. You can use the client to generate the value, but you must make sure that it is unique among different requests. The **ClientToken** value can contain only ASCII characters and cannot exceed 64 characters in length. For more information, see [How to ensure idempotence](~~25693~~).
+         * The client token that is used to ensure the idempotence of the request. You can use the client to generate the token, but you must make sure that the token is unique among different requests. The **token** can contain only ASCII characters and cannot exceed 64 characters in length. For more information, see [How to ensure idempotence](~~25693~~).
          */
         public Builder clientToken(String clientToken) {
             this.putQueryParameter("ClientToken", clientToken);
@@ -191,7 +191,7 @@ public class CreateStorageSetRequest extends Request {
         }
 
         /**
-         * The description of the storage set. The description must be 2 to 256 characters in length and cannot start with `http://` or `https://`.
+         * The description of the storage set. The description must be 2 to 256 characters in length and cannot start with [http:// or https://](http://https://。).
          */
         public Builder description(String description) {
             this.putQueryParameter("Description", description);
@@ -200,7 +200,7 @@ public class CreateStorageSetRequest extends Request {
         }
 
         /**
-         * The maximum number of partitions supported by the storage set. The value must be greater than or equal to 2, but cannot exceed the quota obtained by calling the [DescribeAccountAttributes](~~73772~~)operation.
+         * The maximum number of partitions supported by the storage set. The value must be greater than or equal to 2 but cannot exceed the quota that you obtained by calling the [DescribeAccountAttributes](~~73772~~) operation.
          * <p>
          * 
          * Default value: 2.
@@ -230,7 +230,7 @@ public class CreateStorageSetRequest extends Request {
         }
 
         /**
-         * The ID of the region in which to create the storage set. You can call the [DescribeRegions](~~25609~~) operation to query the most recent region list.
+         * The region ID of the storage set. You can call the [DescribeRegions](~~25609~~) operation to query the most recent region list.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -257,10 +257,7 @@ public class CreateStorageSetRequest extends Request {
         }
 
         /**
-         * The name of the storage set.
-         * <p>
-         * 
-         * The name must be 2 to 128 characters in length. The name must start with a letter and cannot start with `http://` or `https://`. It can contain letters, digits, colons (:), underscores (\_), and hyphens (-).
+         * The name of the storage set. The name must be 2 to 128 characters in length and can contain letters, digits, colons (:), underscores (\_), and hyphens (-). The name must start with a letter and cannot start with [http:// or https:// ](http://https://。、（:）、（\_）（-）。).
          */
         public Builder storageSetName(String storageSetName) {
             this.putQueryParameter("StorageSetName", storageSetName);
@@ -269,7 +266,7 @@ public class CreateStorageSetRequest extends Request {
         }
 
         /**
-         * The ID of the zone in which to create the storage set. You can call the [DescribeZones](~~25610~~) operation to query the most recent zone list.
+         * The zone ID of the storage set. You can call the [DescribeZones](~~25610~~) operation to query the most recent zone list.
          */
         public Builder zoneId(String zoneId) {
             this.putQueryParameter("ZoneId", zoneId);

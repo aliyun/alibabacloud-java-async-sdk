@@ -62,7 +62,7 @@ public class DescribeDiskMonitorDataResponseBody extends TeaModel {
         private Integer totalCount; 
 
         /**
-         * Details about the monitoring data of the disk.
+         * The details about the monitoring data of the disk.
          */
         public Builder monitorData(MonitorData monitorData) {
             this.monitorData = monitorData;
@@ -70,7 +70,7 @@ public class DescribeDiskMonitorDataResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -250,7 +250,7 @@ public class DescribeDiskMonitorDataResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the disk.
+             * The disk ID.
              */
             public Builder diskId(String diskId) {
                 this.diskId = diskId;
@@ -298,7 +298,7 @@ public class DescribeDiskMonitorDataResponseBody extends TeaModel {
             }
 
             /**
-             * The timestamp of the monitoring data. The time follows the [ISO 8601](~~25696~~) standard in the yyyy-MM-ddTHH:mm:ssZ format. The time is displayed in UTC.
+             * The timestamp to query the monitoring data. The time follows the [ISO 8601](~~25696~~) standard in the yyyy-MM-ddTHH:mm:ssZ format. The time is displayed in UTC.
              */
             public Builder timeStamp(String timeStamp) {
                 this.timeStamp = timeStamp;

@@ -177,7 +177,7 @@ public class DescribeInstanceRamRoleRequest extends Request {
         }
 
         /**
-         * The IDs of instances. You can specify up to 100 instance IDs in a single request. You must specify at least one of the `InstanceIds` and `RamRoleName` parameters.
+         * InstanceIds.
          */
         public Builder instanceIds(String instanceIds) {
             this.putQueryParameter("InstanceIds", instanceIds);
@@ -195,12 +195,7 @@ public class DescribeInstanceRamRoleRequest extends Request {
         }
 
         /**
-         * The number of the page to return.
-         * <p>
-         * 
-         * Pages start from page 1.
-         * 
-         * Default value: 1.
+         * PageNumber.
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -209,12 +204,7 @@ public class DescribeInstanceRamRoleRequest extends Request {
         }
 
         /**
-         * The number of entries to return on each page.
-         * <p>
-         * 
-         * Maximum value: 50.
-         * 
-         * Default value: 10.
+         * PageSize.
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -223,7 +213,7 @@ public class DescribeInstanceRamRoleRequest extends Request {
         }
 
         /**
-         * The name of the instance RAM role. You can call the [ListRoles](~~28713~~) operation provided by Resource Access Management (RAM) to query the instance RAM roles that you created. You must specify at least one of the `InstanceIds` and `RamRoleName` parameters.
+         * RamRoleName.
          */
         public Builder ramRoleName(String ramRoleName) {
             this.putQueryParameter("RamRoleName", ramRoleName);
@@ -232,7 +222,7 @@ public class DescribeInstanceRamRoleRequest extends Request {
         }
 
         /**
-         * The region ID of the instance RAM role. You can call the [DescribeRegions](~~25609~~) operation to query the most recent region list.
+         * RegionId.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);

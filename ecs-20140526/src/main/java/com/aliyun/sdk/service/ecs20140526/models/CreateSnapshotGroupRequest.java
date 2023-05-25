@@ -260,13 +260,13 @@ public class CreateSnapshotGroupRequest extends Request {
         }
 
         /**
-         * The ID of disk N for which you want to create snapshots. You can specify multiple disk IDs across instances within the same zone. Valid values of N: 1 to 16. A single snapshot-consistent group can contain snapshots of up to 16 disks and cannot exceed 32 TiB in size.
+         * The ID of cloud disk N for which you want to create snapshots. You can specify multiple cloud disk IDs across instances within the same zone. Valid values of N: 1 to 16. A single snapshot-consistent group can contain snapshots of up to 16 cloud disks whose total disk size does not exceed 32 TiB.
          * <p>
          * 
          * Take note of the following items:
          * 
-         * *   You cannot specify both DiskId.N and `ExcludeDiskId.N`.
-         * *   If `InstanceId` is set, you can use DiskId.N to specify only disks attached to the instance specified by InstanceId, and you cannot use DiskId.N to specify disks attached to multiple instances.
+         * *   You cannot specify both DiskId.N and `ExcludeDiskId.N` in the same request.
+         * *   If `InstanceId` is set, you can use DiskId.N to specify only cloud disks attached to the instance specified by InstanceId, and you cannot use DiskId.N to specify cloud disks attached to multiple instances.
          */
         public Builder diskId(java.util.List < String > diskId) {
             this.putQueryParameter("DiskId", diskId);
@@ -275,7 +275,7 @@ public class CreateSnapshotGroupRequest extends Request {
         }
 
         /**
-         * The ID of disk N for which you do not need to create snapshots. After this parameter is specified, the created snapshot-consistent group does not contain snapshots of the disk. Valid values of N: 1 to 16.
+         * The ID of cloud disk N for which you do not want to create snapshots. If this parameter is specified, the created snapshot-consistent group does not contain snapshots of the cloud disk. Valid values of N: 1 to 16.
          * <p>
          * 
          * This parameter is empty by default, which indicates that snapshots are created for all the disks of the instance.
@@ -289,7 +289,7 @@ public class CreateSnapshotGroupRequest extends Request {
         }
 
         /**
-         * The ID of the instance.
+         * The instance ID.
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -298,7 +298,7 @@ public class CreateSnapshotGroupRequest extends Request {
         }
 
         /**
-         * Specify whether to enable the instant access feature. Valid values:
+         * Specifies whether to enable the instant access feature. Valid values:
          * <p>
          * 
          * *   true
@@ -313,12 +313,12 @@ public class CreateSnapshotGroupRequest extends Request {
         }
 
         /**
-         * Specify the number of days for which the instant access feature is available. Unit: days. Valid values: 1 to 65535.
+         * The number of days for which the instant access feature is available. Unit: days. Valid values: 1 to 65535.
          * <p>
          * 
-         * This parameter takes effect only when `InstantAccess` is set to true. The instant access feature is automatically disabled when the specified duration of the instant access feature expires.
+         * This parameter takes effect only when `InstantAccess` is set to true. The instant access feature is automatically disabled when the specified duration ends.
          * 
-         * This parameter is empty by default, which indicates that the instant access feature expires when snapshots are released.
+         * This parameter is empty by default, which indicates that the expiration time of the instant access feature is determined by the time when snapshots are released.
          */
         public Builder instantAccessRetentionDays(Integer instantAccessRetentionDays) {
             this.putQueryParameter("InstantAccessRetentionDays", instantAccessRetentionDays);
@@ -327,7 +327,7 @@ public class CreateSnapshotGroupRequest extends Request {
         }
 
         /**
-         * The name of the snapshot-consistent group. The name must be 2 to 128 characters in length, and contain letters, digits, periods (.), underscores (\_), hyphens (-), and colons (:). It must start with a letter and cannot start with `http://` or `https://`.
+         * The name of the snapshot-consistent group. The name must be 2 to 128 characters in length, and can contain letters, digits, periods (.), underscores (\_), hyphens (-), and colons (:). It must start with a letter and cannot start with `http://` or `https://`.
          */
         public Builder name(String name) {
             this.putQueryParameter("Name", name);
@@ -390,7 +390,7 @@ public class CreateSnapshotGroupRequest extends Request {
         }
 
         /**
-         * > This parameter is unavailable.
+         * > This parameter is unavailable for public use.
          */
         public Builder storageLocationArn(String storageLocationArn) {
             this.putQueryParameter("StorageLocationArn", storageLocationArn);
@@ -399,7 +399,7 @@ public class CreateSnapshotGroupRequest extends Request {
         }
 
         /**
-         * The tags of the command.
+         * The list of tags.
          */
         public Builder tag(java.util.List < Tag> tag) {
             this.putQueryParameter("Tag", tag);
@@ -453,7 +453,7 @@ public class CreateSnapshotGroupRequest extends Request {
             private String value; 
 
             /**
-             * The key of tag N of the snapshot-consistent group. Valid values of N: 1 to 20. The tag value cannot be an empty string. It can be up to 128 characters in length and cannot start with `acs:` or `aliyun`. It cannot contain `http://` or `https://`.
+             * The key of tag N of the snapshot-consistent group. Valid values of N: 1 to 20. The tag key cannot be an empty string. The tag key can be up to 128 characters in length and cannot start with `acs:` or `aliyun`. It cannot contain `http://` or `https://`.
              */
             public Builder key(String key) {
                 this.key = key;

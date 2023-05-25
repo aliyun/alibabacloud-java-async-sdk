@@ -58,7 +58,7 @@ public class DisableActivationResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -206,7 +206,7 @@ public class DisableActivationResponseBody extends TeaModel {
             private Long timeToLiveInHours; 
 
             /**
-             * The ID of the activation code.
+             * The activation code ID.
              */
             public Builder activationId(String activationId) {
                 this.activationId = activationId;
@@ -254,7 +254,7 @@ public class DisableActivationResponseBody extends TeaModel {
             }
 
             /**
-             * The default instance name prefix.
+             * The default prefix of the instance name.
              */
             public Builder instanceName(String instanceName) {
                 this.instanceName = instanceName;
@@ -262,7 +262,7 @@ public class DisableActivationResponseBody extends TeaModel {
             }
 
             /**
-             * The IP addresses of hosts that are allowed to use the activation code.
+             * The IP addresses of the hosts that can use the activation code.
              */
             public Builder ipAddressRange(String ipAddressRange) {
                 this.ipAddressRange = ipAddressRange;
@@ -270,7 +270,7 @@ public class DisableActivationResponseBody extends TeaModel {
             }
 
             /**
-             * The number of instances that were registered.
+             * The number of registered instances.
              */
             public Builder registeredCount(Integer registeredCount) {
                 this.registeredCount = registeredCount;

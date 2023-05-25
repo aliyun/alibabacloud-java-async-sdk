@@ -182,7 +182,7 @@ public class DescribeAutoProvisioningGroupsRequest extends Request {
         } 
 
         /**
-         * The IDs of auto provisioning groups. You can specify up to 20 auto provisioning group IDs.
+         * The ID of the auto provisioning group. You can specify up to 20 IDs.
          */
         public Builder autoProvisioningGroupId(java.util.List < String > autoProvisioningGroupId) {
             this.putQueryParameter("AutoProvisioningGroupId", autoProvisioningGroupId);
@@ -200,7 +200,7 @@ public class DescribeAutoProvisioningGroupsRequest extends Request {
         }
 
         /**
-         * The statuses of auto provisioning groups.
+         * The status of the auto provisioning group.
          */
         public Builder autoProvisioningGroupStatus(java.util.List < String > autoProvisioningGroupStatus) {
             this.putQueryParameter("AutoProvisioningGroupStatus", autoProvisioningGroupStatus);

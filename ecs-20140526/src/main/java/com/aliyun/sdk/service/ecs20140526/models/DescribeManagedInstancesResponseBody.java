@@ -86,7 +86,11 @@ public class DescribeManagedInstancesResponseBody extends TeaModel {
         private Long totalCount; 
 
         /**
-         * Details about the managed instances.
+         * Indicates whether the managed instance is connected. Valid values:
+         * <p>
+         * 
+         * *   true: The managed instance is connected and you can manage the instance by using Cloud Assistant.
+         * *   false: The managed instance is not connected because the managed instance is down or because the Cloud Assistant client is not installed correctly.
          */
         public Builder instances(java.util.List < Instances> instances) {
             this.instances = instances;
@@ -94,7 +98,7 @@ public class DescribeManagedInstancesResponseBody extends TeaModel {
         }
 
         /**
-         * The page number of the returned page.
+         * The queried instances.
          */
         public Builder pageNumber(Long pageNumber) {
             this.pageNumber = pageNumber;
@@ -102,7 +106,7 @@ public class DescribeManagedInstancesResponseBody extends TeaModel {
         }
 
         /**
-         * The number of entries returned per page.
+         * The page number of the returned page.
          */
         public Builder pageSize(Long pageSize) {
             this.pageSize = pageSize;
@@ -110,7 +114,7 @@ public class DescribeManagedInstancesResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * The total number of managed instances returned.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -118,7 +122,7 @@ public class DescribeManagedInstancesResponseBody extends TeaModel {
         }
 
         /**
-         * The total number of managed instances returned.
+         * The last Cloud Assistant task execution time.
          */
         public Builder totalCount(Long totalCount) {
             this.totalCount = totalCount;
@@ -170,12 +174,7 @@ public class DescribeManagedInstancesResponseBody extends TeaModel {
             private String tagValue; 
 
             /**
-             * The tag key of the managed instance. Up to 20 tag keys can be returned for each managed instance. The tag key cannot be an empty string.
-             * <p>
-             * 
-             * If a single tag is specified to query resources, up to 1,000 resources that have this tag added can be displayed in the response. If multiple tags are specified to query resources, up to 1,000 resources that have all these tags added can be displayed in the response. To query more than 1,000 resources that have specified tags added, call the [ListTagResources](~~110425~~) operation.
-             * 
-             * The tag key can be up to 64 characters in length and cannot start with `acs:` or `aliyun`. It cannot contain `http://` or `https://`.
+             * TagKey.
              */
             public Builder tagKey(String tagKey) {
                 this.tagKey = tagKey;
@@ -183,10 +182,7 @@ public class DescribeManagedInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * The tag value of the managed instance. Up to 20 tag values can be returned for each managed instance. The tag value can be an empty string.
-             * <p>
-             * 
-             * It can be up to 128 characters in length and cannot contain `http://` or `https://`.
+             * TagValue.
              */
             public Builder tagValue(String tagValue) {
                 this.tagValue = tagValue;
@@ -395,7 +391,7 @@ public class DescribeManagedInstancesResponseBody extends TeaModel {
             private java.util.List < Tags> tags; 
 
             /**
-             * The ID of the activation code.
+             * The version number of the Cloud Assistant client.
              */
             public Builder activationId(String activationId) {
                 this.activationId = activationId;
@@ -403,7 +399,7 @@ public class DescribeManagedInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * The version number of the Cloud Assistant client.
+             * The name of the managed instance.
              */
             public Builder agentVersion(String agentVersion) {
                 this.agentVersion = agentVersion;
@@ -411,11 +407,7 @@ public class DescribeManagedInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether the managed instance is connected. Valid values:
-             * <p>
-             * 
-             * *   true: The managed instance is connected and you can manage the instance by using Cloud Assistant.
-             * *   false: The managed instance is not connected because the managed instance is down or because the Cloud Assistant client is not installed correctly.
+             * The hostname of the managed instance.
              */
             public Builder connected(Boolean connected) {
                 this.connected = connected;
@@ -423,7 +415,7 @@ public class DescribeManagedInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * The hostname of the managed instance.
+             * The ID of the activation code.
              */
             public Builder hostname(String hostname) {
                 this.hostname = hostname;
@@ -431,7 +423,7 @@ public class DescribeManagedInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the managed instance.
+             * The internal IP address of the managed instance.
              */
             public Builder instanceId(String instanceId) {
                 this.instanceId = instanceId;
@@ -439,7 +431,7 @@ public class DescribeManagedInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the managed instance.
+             * The version information of the operating system.
              */
             public Builder instanceName(String instanceName) {
                 this.instanceName = instanceName;
@@ -447,7 +439,7 @@ public class DescribeManagedInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * The public IP address of the managed instance.
+             * The ID of the managed instance.
              */
             public Builder internetIp(String internetIp) {
                 this.internetIp = internetIp;
@@ -455,7 +447,7 @@ public class DescribeManagedInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * The internal IP address of the managed instance.
+             * The time when the managed instance was registered.
              */
             public Builder intranetIp(String intranetIp) {
                 this.intranetIp = intranetIp;
@@ -463,7 +455,7 @@ public class DescribeManagedInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * The number of times that Cloud Assistant tasks were executed on the managed instance.
+             * The tags.
              */
             public Builder invocationCount(Long invocationCount) {
                 this.invocationCount = invocationCount;
@@ -471,7 +463,7 @@ public class DescribeManagedInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * The last Cloud Assistant task execution time.
+             * The public IP address of the managed instance.
              */
             public Builder lastInvokedTime(String lastInvokedTime) {
                 this.lastInvokedTime = lastInvokedTime;
@@ -479,7 +471,7 @@ public class DescribeManagedInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * The machine code of the managed instance.
+             * The tag of the managed instance.
              */
             public Builder machineId(String machineId) {
                 this.machineId = machineId;
@@ -487,7 +479,7 @@ public class DescribeManagedInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * The operating system type of the managed instance.
+             * The number of times that Cloud Assistant tasks were executed on the managed instance.
              */
             public Builder osType(String osType) {
                 this.osType = osType;
@@ -495,7 +487,7 @@ public class DescribeManagedInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * The version information of the operating system.
+             * The machine code of the managed instance.
              */
             public Builder osVersion(String osVersion) {
                 this.osVersion = osVersion;
@@ -503,7 +495,7 @@ public class DescribeManagedInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the managed instance was registered.
+             * The operating system type of the managed instance.
              */
             public Builder registrationTime(String registrationTime) {
                 this.registrationTime = registrationTime;
@@ -511,7 +503,12 @@ public class DescribeManagedInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * The tags of the managed instance.
+             * The tag key of the managed instance. Valid values of N: 1 to 20. The tag key cannot be an empty string.
+             * <p>
+             * 
+             * If a single tag is specified to query resources, up to 1,000 resources that have this tag added can be displayed in the response. If multiple tags are specified to query resources, up to 1,000 resources that have all these tags added can be displayed in the response. To query more than 1,000 resources that have specified tags added, call the [ListTagResources](~~110425~~) operation.
+             * 
+             * The tag key can be up to 64 characters in length and cannot contain `http://` or `https://`. The tag key cannot start with `acs:` or `aliyun`.
              */
             public Builder tags(java.util.List < Tags> tags) {
                 this.tags = tags;

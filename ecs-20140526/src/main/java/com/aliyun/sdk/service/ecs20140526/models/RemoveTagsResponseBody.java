@@ -38,7 +38,16 @@ public class RemoveTagsResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The ID of the request.
+         * The type of the resource. Valid values:
+         * <p>
+         * 
+         * *   disk
+         * *   instance
+         * *   image
+         * *   securitygroup
+         * *   snapshot
+         * 
+         * All the preceding values must be in lowercase.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

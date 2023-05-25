@@ -192,7 +192,7 @@ public class DescribeSnapshotMonitorDataRequest extends Request {
         }
 
         /**
-         * The type of the snapshot. Valid values:
+         * The snapshot type. Valid values:
          * <p>
          * 
          * *   Standard: normal snapshot
@@ -241,7 +241,7 @@ public class DescribeSnapshotMonitorDataRequest extends Request {
          * *   600
          * *   3600
          * 
-         * Default value: 60
+         * Default value: 60.
          */
         public Builder period(Integer period) {
             this.putQueryParameter("Period", period);
@@ -250,7 +250,7 @@ public class DescribeSnapshotMonitorDataRequest extends Request {
         }
 
         /**
-         * The ID of the region. You can call the [DescribeRegions](~~25609~~) operation to query the most recent region list.
+         * The region ID. You can call the [DescribeRegions](~~25609~~) operation to query the most recent region list.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);

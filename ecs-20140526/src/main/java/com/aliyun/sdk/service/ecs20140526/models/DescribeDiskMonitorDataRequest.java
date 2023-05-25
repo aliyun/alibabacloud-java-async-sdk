@@ -178,7 +178,7 @@ public class DescribeDiskMonitorDataRequest extends Request {
         }
 
         /**
-         * The ID of the disk.
+         * The disk ID.
          */
         public Builder diskId(String diskId) {
             this.putQueryParameter("DiskId", diskId);
@@ -187,7 +187,7 @@ public class DescribeDiskMonitorDataRequest extends Request {
         }
 
         /**
-         * The end of the time range in which you want to query the monitoring data. Specify the time in the [ISO 8601](~~25696~~) standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC. If the value of seconds (ss) is not 00, the time is rounded up to the next minute.
+         * The end of the time range to query. Specify the time in the [ISO 8601](~~25696~~) standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC. If the value of seconds (ss) is not 00, the time is rounded up to the next minute.
          */
         public Builder endTime(String endTime) {
             this.putQueryParameter("EndTime", endTime);
@@ -214,7 +214,7 @@ public class DescribeDiskMonitorDataRequest extends Request {
         }
 
         /**
-         * The interval at which to retrieve the monitoring data. Unit: seconds. Valid values:
+         * The interval at which you want to query the monitoring data. Unit: seconds. Valid values:
          * <p>
          * 
          * *   60
@@ -248,7 +248,7 @@ public class DescribeDiskMonitorDataRequest extends Request {
         }
 
         /**
-         * The start of the time range in which you want to query the monitoring data. Specify the time in the [ISO 8601](~~25696~~) standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC. If the value of seconds (ss) is not 00, the time is rounded up to the next minute.
+         * The beginning of the time range to query. Specify the time in the [ISO 8601](~~25696~~) standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC. If the value of seconds (ss) is not 00, the time is rounded up to the next minute.
          */
         public Builder startTime(String startTime) {
             this.putQueryParameter("StartTime", startTime);

@@ -74,7 +74,7 @@ public class AssignIpv6AddressesResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * > 该参数正在邀测中，暂未开放使用。
+         * > This parameter is in invitational preview and is unavailable for general users.
          */
         public Builder ipv6PrefixSets(Ipv6PrefixSets ipv6PrefixSets) {
             this.ipv6PrefixSets = ipv6PrefixSets;
@@ -90,7 +90,7 @@ public class AssignIpv6AddressesResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the ENI.
+         * The ENI ID.
          */
         public Builder networkInterfaceId(String networkInterfaceId) {
             this.networkInterfaceId = networkInterfaceId;
@@ -98,7 +98,7 @@ public class AssignIpv6AddressesResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

@@ -135,7 +135,7 @@ public class ConvertNatPublicIpToEipRequest extends Request {
         }
 
         /**
-         * The ID of the instance whose public IP address you want to convert to an EIP.
+         * The ID of the instance whose public IP address you want to convert into an EIP.
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);

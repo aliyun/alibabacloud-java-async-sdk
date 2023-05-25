@@ -205,7 +205,7 @@ public class DescribeSnapshotLinksRequest extends Request {
         }
 
         /**
-         * The IDs of disks. The value is a JSON array that consists of up to 100 disk IDs. Separate the disk IDs with commas (,).
+         * The disk IDs. You can specify a JSON array that contains a maximum of 100 disk IDs. Separate the disk IDs with commas (,).
          */
         public Builder diskIds(String diskIds) {
             this.putQueryParameter("DiskIds", diskIds);
@@ -214,7 +214,7 @@ public class DescribeSnapshotLinksRequest extends Request {
         }
 
         /**
-         * The ID of the instance.
+         * The instance ID.
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -241,10 +241,10 @@ public class DescribeSnapshotLinksRequest extends Request {
         }
 
         /**
-         * The number of the page to return. Pages start from page 1.
+         * The page number. Pages start from page 1.
          * <p>
          * 
-         * Default value: 1
+         * Default value: 1.
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -253,7 +253,7 @@ public class DescribeSnapshotLinksRequest extends Request {
         }
 
         /**
-         * The number of entries to return on each page. Valid values: 1 to 100.
+         * The number of entries per page. Valid values: 1 to 100.
          * <p>
          * 
          * Default value: 10.
@@ -292,7 +292,7 @@ public class DescribeSnapshotLinksRequest extends Request {
         }
 
         /**
-         * The IDs of snapshot chains. The value is a JSON array that consists of up to 100 snapshot chain IDs. Separate the snapshot chain IDs with commas (,).
+         * The snapshot chain IDs. You can specify a JSON array that contains a maximum of 100 snapshot chain IDs. Separate the snapshot chain IDs with commas (,).
          */
         public Builder snapshotLinkIds(String snapshotLinkIds) {
             this.putQueryParameter("SnapshotLinkIds", snapshotLinkIds);

@@ -58,7 +58,7 @@ public class DescribePriceResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -264,7 +264,7 @@ public class DescribePriceResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the resource.
+             * The resource name.
              */
             public Builder resource(String resource) {
                 this.resource = resource;
@@ -425,9 +425,9 @@ public class DescribePriceResponseBody extends TeaModel {
              * The currency unit.
              * <p>
              * 
-             * Alibaba Cloud China site (aliyun.com): CNY
+             * Alibaba Cloud China site (aliyun.com): CNY.
              * 
-             * Alibaba Cloud International site (alibabacloud.com): USD
+             * Alibaba Cloud International site (alibabacloud.com): USD.
              */
             public Builder currency(String currency) {
                 this.currency = currency;
@@ -438,7 +438,7 @@ public class DescribePriceResponseBody extends TeaModel {
              * Details about the price.
              * <p>
              * 
-             * > This parameter is in invitational preview and unavailable.
+             * > This parameter is in invitational preview and is unavailable for public use.
              */
             public Builder detailInfos(DetailInfos detailInfos) {
                 this.detailInfos = detailInfos;
@@ -470,7 +470,7 @@ public class DescribePriceResponseBody extends TeaModel {
             }
 
             /**
-             * The transaction price, which is equal to the original price minus the discount.
+             * The transaction price of the order. The transaction price is equal to the original price minus the discount.
              */
             public Builder tradePrice(Float tradePrice) {
                 this.tradePrice = tradePrice;
@@ -531,7 +531,7 @@ public class DescribePriceResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the promotion rule.
+             * The ID of the pricing rule.
              */
             public Builder ruleId(Long ruleId) {
                 this.ruleId = ruleId;

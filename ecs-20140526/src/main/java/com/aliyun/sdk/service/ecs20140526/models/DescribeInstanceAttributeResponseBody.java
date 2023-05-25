@@ -422,10 +422,10 @@ public class DescribeInstanceAttributeResponseBody extends TeaModel {
         private String zoneId; 
 
         /**
-         * The ID of the cluster to which the instance belongs. 
+         * The ID of the cluster to which the instance belongs.
          * <p>
          * 
-         * >  This parameter will be removed in the future. We recommend that you use other parameters to ensure future compatibility.
+         * > This parameter will be removed in the future. To ensure future compatibility, we recommend that you use other parameters.
          */
         public Builder clusterId(String clusterId) {
             this.clusterId = clusterId;
@@ -441,7 +441,7 @@ public class DescribeInstanceAttributeResponseBody extends TeaModel {
         }
 
         /**
-         * The time when the instance was created. The time follows the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time is displayed in UTC. For more information, see [ISO 8601](https://icms.alibaba-inc.com/content/ecs/api?l=1&m=277&n=10049).
+         * The time when the instance was created. The time follows the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time is displayed in UTC. For more information, see [ISO 8601](~~25696~~).
          */
         public Builder creationTime(String creationTime) {
             this.creationTime = creationTime;
@@ -452,8 +452,8 @@ public class DescribeInstanceAttributeResponseBody extends TeaModel {
          * The performance mode of the burstable instance. Valid values:
          * <p>
          * 
-         * - Standard: standard mode. For more information, see the "Standard mode" section in [Overview](https://www.alibabacloud.com/help/en/elastic-compute-service/latest/burstable-instance-types-overview#section-svb-w9d-dju).
-         * - Unlimited: unlimited mode. For more information, see the "Unlimited mode" section in [Overview](https://www.alibabacloud.com/help/en/elastic-compute-service/latest/burstable-instance-types-overview#section-svb-w9d-dju).
+         * *   Standard: standard mode. For more information, see the "Standard mode" section in [Overview](~~59977#section-svb-w9d-dju~~).
+         * *   Unlimited: unlimited mode. For more information, see the "Unlimited mode" section in [Overview](~~59977#section-svb-w9d-dju~~).
          */
         public Builder creditSpecification(String creditSpecification) {
             this.creditSpecification = creditSpecification;
@@ -485,7 +485,14 @@ public class DescribeInstanceAttributeResponseBody extends TeaModel {
         }
 
         /**
-         * EnableJumboFrame.
+         * ECS实例是否开启了Jumbo frame特性。 可能值：
+         * <p>
+         * 
+         * - true：开启。
+         * 
+         * - false：不开启。
+         * 
+         * 更多信息，请参见[ECS实例MTU](~~200512~~)。
          */
         public Builder enableJumboFrame(Boolean enableJumboFrame) {
             this.enableJumboFrame = enableJumboFrame;
@@ -493,7 +500,7 @@ public class DescribeInstanceAttributeResponseBody extends TeaModel {
         }
 
         /**
-         * The time when the instance expires. The time follows the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time is displayed in UTC. For more information, see [ISO 8601](https://icms.alibaba-inc.com/content/ecs/api?l=1&m=277&n=10049).
+         * The time when the instance expires. The time follows the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time is displayed in UTC. For more information, see [ISO 8601](~~25696~~).
          */
         public Builder expiredTime(String expiredTime) {
             this.expiredTime = expiredTime;
@@ -528,8 +535,8 @@ public class DescribeInstanceAttributeResponseBody extends TeaModel {
          * The billing method of the instance. Valid values:
          * <p>
          * 
-         * - PrePaid: subscription
-         * - PostPaid: pay-as-you-go
+         * *   PrePaid: subscription.
+         * *   PostPaid: pay-as-you-go
          */
         public Builder instanceChargeType(String instanceChargeType) {
             this.instanceChargeType = instanceChargeType;
@@ -537,7 +544,7 @@ public class DescribeInstanceAttributeResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of instance.
+         * The instance ID
          */
         public Builder instanceId(String instanceId) {
             this.instanceId = instanceId;
@@ -545,7 +552,7 @@ public class DescribeInstanceAttributeResponseBody extends TeaModel {
         }
 
         /**
-         * The name of the instance.
+         * The instance name.
          */
         public Builder instanceName(String instanceName) {
             this.instanceName = instanceName;
@@ -553,11 +560,11 @@ public class DescribeInstanceAttributeResponseBody extends TeaModel {
         }
 
         /**
-         * The network type of the instance. Valid values: 
+         * The network type of the instance. Valid values:
          * <p>
          * 
-         * - classic
-         * - vpc
+         * *   classic: classic network
+         * *   vpc: VPC
          */
         public Builder instanceNetworkType(String instanceNetworkType) {
             this.instanceNetworkType = instanceNetworkType;
@@ -565,7 +572,7 @@ public class DescribeInstanceAttributeResponseBody extends TeaModel {
         }
 
         /**
-         * The instance type of the instance.
+         * The instance type.
          */
         public Builder instanceType(String instanceType) {
             this.instanceType = instanceType;
@@ -573,13 +580,13 @@ public class DescribeInstanceAttributeResponseBody extends TeaModel {
         }
 
         /**
-         * The billing method for network usage. Valid values:
+         * The metering method for network usage. Valid values:
          * <p>
          * 
-         * - PayByBandwidth: pay-by-bandwidth
-         * - PayByTraffic: pay-by-traffic
+         * *   PayByBandwidth
+         * *   PayByTraffic
          * 
-         * >  When the **pay-by-traffic** billing method for network usage is used, the maximum inbound and outbound bandwidth values are used as upper limits of bandwidths instead of guaranteed performance specifications. In scenarios where demand outstrips resource supplies, these maximum bandwidth values may not be reached. If you want guaranteed bandwidths for your instance, use the **pay-by-bandwidth** billing method for network usage.
+         * > When the **pay-by-traffic** method is used, the maximum inbound and outbound bandwidths are used as the upper limits of bandwidths instead of guaranteed performance specifications. In scenarios where demand outstrips resource supplies, these maximum bandwidth values may not be reached. If you want guaranteed bandwidths for your instance, use the **pay-by-bandwidth** metering method for network usage.
          */
         public Builder internetChargeType(String internetChargeType) {
             this.internetChargeType = internetChargeType;
@@ -622,11 +629,11 @@ public class DescribeInstanceAttributeResponseBody extends TeaModel {
          * The reason why the instance was locked. Valid values:
          * <p>
          * 
-         * - financial: The instance was locked due to overdue payments.
-         * - security: The instance was locked due to security reasons.
-         * - recycling: The preemptible instance was locked and pending release.
-         * - dedicatedhostfinancial: The instance was locked due to overdue payments for the dedicated host.
-         * - refunded: The instance was locked because a refund was made for the instance.
+         * *   financial: The dedicated host was locked due to overdue payments.
+         * *   security: The instance was locked due to security reasons.
+         * *   recycling: The preemptible instance was locked and pending release.
+         * *   dedicatedhostfinancial: The instance was locked due to overdue payments for the dedicated host.
+         * *   refunded: The instance was locked because a refund was made for the instance.
          */
         public Builder operationLocks(OperationLocks operationLocks) {
             this.operationLocks = operationLocks;
@@ -642,7 +649,7 @@ public class DescribeInstanceAttributeResponseBody extends TeaModel {
         }
 
         /**
-         * The region ID of the instance.
+         * The ID of the region in which the instance resides.
          */
         public Builder regionId(String regionId) {
             this.regionId = regionId;
@@ -650,7 +657,7 @@ public class DescribeInstanceAttributeResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -674,14 +681,14 @@ public class DescribeInstanceAttributeResponseBody extends TeaModel {
         }
 
         /**
-         * The state of the instance. Valid values:
+         * The status of the instance. Valid values:
          * <p>
          * 
-         * - Pending: The instance is being created.
-         * - Running: The instance is running.
-         * - Starting: The instance is being started.
-         * - Stopping: The instance is being stopped.
-         * - Stopped: The instance is stopped.
+         * *   Pending: The instance is being created.
+         * *   Running: The instance is running.
+         * *   Starting: The instance is being started.
+         * *   Stopping: The instance is being stopped.
+         * *   Stopped: The instance is stopped.
          */
         public Builder status(String status) {
             this.status = status;
@@ -689,12 +696,12 @@ public class DescribeInstanceAttributeResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether the instance continues to be billed after it is stopped. Valid values:
+         * Indicates whether the system implements billing after the instance is stopped. Valid values:
          * <p>
          * 
-         * - KeepCharging: standard mode. Billing of the instance continues after the instance is stopped, and resources are retained for the instance.
-         * - StopCharging: economical mode. Billing of some resources of the instance stops after the instance is stopped. When the instance is stopped, its resources such as vCPUs, memory, and public IP address are released. You may be unable to restart the instance if some types of resources are out of stock in the current region.
-         * - Not-applicable: Economical mode is not applicable to the instance.
+         * *   KeepCharging: The instance is stopped in standard mode. The billing of the instance continues after the instance is stopped, and resources are retained for the instance.
+         * *   StopCharging: The instance is stopped in economical mode. The billing of some resources of the instance stops after the instance is stopped. When the instance is stopped, its resources such as vCPUs, memory, and public IP address are released. The instance may be unable to start again if some required resources are out of stock in the current region.
+         * *   Not-applicable: The instance does not support economical mode.
          */
         public Builder stoppedMode(String stoppedMode) {
             this.stoppedMode = stoppedMode;
@@ -702,10 +709,10 @@ public class DescribeInstanceAttributeResponseBody extends TeaModel {
         }
 
         /**
-         * The virtual LAN (VLAN) ID of the instance. 
+         * The virtual LAN (VLAN) ID of the instance.
          * <p>
          * 
-         * >  This parameter will be removed in the future. We recommend that you use other parameters to ensure future compatibility.
+         * > This parameter will be removed in the future. To ensure future compatibility, we recommend that you use other parameters.
          */
         public Builder vlanId(String vlanId) {
             this.vlanId = vlanId;
@@ -713,7 +720,7 @@ public class DescribeInstanceAttributeResponseBody extends TeaModel {
         }
 
         /**
-         * The virtual private cloud (VPC) attributes of the instance.
+         * The VPC attributes of the instance.
          */
         public Builder vpcAttributes(VpcAttributes vpcAttributes) {
             this.vpcAttributes = vpcAttributes;
@@ -721,7 +728,7 @@ public class DescribeInstanceAttributeResponseBody extends TeaModel {
         }
 
         /**
-         * The zone ID of the instance.
+         * The ID of the zone in which the instance resides.
          */
         public Builder zoneId(String zoneId) {
             this.zoneId = zoneId;
@@ -874,13 +881,13 @@ public class DescribeInstanceAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * The billing method for network usage. Valid values:
+             * The metering method for network usage. Valid values:
              * <p>
              * 
-             * - PayByBandwidth: pay-by-bandwidth
-             * - PayByTraffic: pay-by-traffic
+             * *   PayByBandwidth
+             * *   PayByTraffic
              * 
-             * >  When the **pay-by-traffic** billing method for network usage is used, the maximum inbound and outbound bandwidth values are used as upper limits of bandwidths instead of guaranteed performance specifications. In scenarios where demand outstrips resource supplies, these maximum bandwidth values may not be reached. If you want guaranteed bandwidths for your instance, use the **pay-by-bandwidth** billing method for network usage.
+             * > When the **pay-by-traffic** method is used, the maximum inbound and outbound bandwidths are used as the upper limits of bandwidths instead of guaranteed performance specifications. In scenarios where demand outstrips resource supplies, these maximum bandwidth values may not be reached. If you want guaranteed bandwidths for your instance, use the **pay-by-bandwidth** metering method for network usage.
              */
             public Builder internetChargeType(String internetChargeType) {
                 this.internetChargeType = internetChargeType;
@@ -888,7 +895,7 @@ public class DescribeInstanceAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * The EIP of the instance.
+             * The ID of the elastic IP address (EIP).
              */
             public Builder ipAddress(String ipAddress) {
                 this.ipAddress = ipAddress;
@@ -929,7 +936,7 @@ public class DescribeInstanceAttributeResponseBody extends TeaModel {
             private java.util.List < String > ipAddress; 
 
             /**
-             * The EIP of the instance.
+             * The ID of the elastic IP address (EIP).
              */
             public Builder ipAddress(java.util.List < String > ipAddress) {
                 this.ipAddress = ipAddress;
@@ -973,11 +980,11 @@ public class DescribeInstanceAttributeResponseBody extends TeaModel {
              * The reason why the instance was locked. Valid values:
              * <p>
              * 
-             * - financial: The instance was locked due to overdue payments.
-             * - security: The instance was locked due to security reasons.
-             * - recycling: The preemptible instance was locked and pending release.
-             * - dedicatedhostfinancial: The instance was locked due to overdue payments for the dedicated host.
-             * - refunded: The instance was locked because a refund was made for the instance.
+             * *   financial: The dedicated host was locked due to overdue payments.
+             * *   security: The instance was locked due to security reasons.
+             * *   recycling: The preemptible instance was locked and pending release.
+             * *   dedicatedhostfinancial: The instance was locked due to overdue payments for the dedicated host.
+             * *   refunded: The instance was locked because a refund was made for the instance.
              */
             public Builder lockReason(String lockReason) {
                 this.lockReason = lockReason;
@@ -1021,11 +1028,11 @@ public class DescribeInstanceAttributeResponseBody extends TeaModel {
              * The reason why the instance was locked. Valid values:
              * <p>
              * 
-             * - financial: The instance was locked due to overdue payments.
-             * - security: The instance was locked due to security reasons.
-             * - recycling: The preemptible instance was locked and pending release.
-             * - dedicatedhostfinancial: The instance was locked due to overdue payments for the dedicated host.
-             * - refunded: The instance was locked because a refund was made for the instance.
+             * *   financial: The dedicated host was locked due to overdue payments.
+             * *   security: The instance was locked due to security reasons.
+             * *   recycling: The preemptible instance was locked and pending release.
+             * *   dedicatedhostfinancial: The instance was locked due to overdue payments for the dedicated host.
+             * *   refunded: The instance was locked because a refund was made for the instance.
              */
             public Builder lockReason(java.util.List < LockReason> lockReason) {
                 this.lockReason = lockReason;
@@ -1066,7 +1073,7 @@ public class DescribeInstanceAttributeResponseBody extends TeaModel {
             private java.util.List < String > ipAddress; 
 
             /**
-             * The EIP of the instance.
+             * The ID of the elastic IP address (EIP).
              */
             public Builder ipAddress(java.util.List < String > ipAddress) {
                 this.ipAddress = ipAddress;
@@ -1148,7 +1155,7 @@ public class DescribeInstanceAttributeResponseBody extends TeaModel {
             private java.util.List < String > ipAddress; 
 
             /**
-             * The EIP of the instance.
+             * The ID of the elastic IP address (EIP).
              */
             public Builder ipAddress(java.util.List < String > ipAddress) {
                 this.ipAddress = ipAddress;
@@ -1225,7 +1232,7 @@ public class DescribeInstanceAttributeResponseBody extends TeaModel {
             private String vpcId; 
 
             /**
-             * The Network Address Translation (NAT) IP address of the instance. It is used by ECS instances in different VPCs for communication.
+             * The NAT IP address of the instance. It is used by ECS instances in different VPCs for communication.
              */
             public Builder natIpAddress(String natIpAddress) {
                 this.natIpAddress = natIpAddress;
@@ -1241,7 +1248,7 @@ public class DescribeInstanceAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the vSwitch.
+             * The ID of the vSwitch to which the instance is connected.
              */
             public Builder vSwitchId(String vSwitchId) {
                 this.vSwitchId = vSwitchId;

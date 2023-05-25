@@ -205,7 +205,7 @@ public class DescribeInstanceStatusRequest extends Request {
         }
 
         /**
-         * The cluster ID of the instance.
+         * The cluster ID of the instances.
          */
         public Builder clusterId(String clusterId) {
             this.putQueryParameter("ClusterId", clusterId);
@@ -214,7 +214,7 @@ public class DescribeInstanceStatusRequest extends Request {
         }
 
         /**
-         * The IDs of the instances.
+         * The IDs of the instances. When you use this parameter to specify multiple instance IDs, separate the IDs with commas(,). Example: `InstanceId.1=i-bp1j4i2jdf3owlhe****, InstanceId.2=i-bp1j4i2jdf3o1234****`.
          */
         public Builder instanceId(java.util.List < String > instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -241,7 +241,7 @@ public class DescribeInstanceStatusRequest extends Request {
         }
 
         /**
-         * The number of the page to return.
+         * The page number.
          * <p>
          * 
          * Pages start from page 1.
@@ -255,7 +255,7 @@ public class DescribeInstanceStatusRequest extends Request {
         }
 
         /**
-         * The number of entries to return on each page. Valid values: 1 to 50.
+         * The number of entries per page. Valid values: 1 to 50.
          * <p>
          * 
          * Default value: 10.
@@ -267,7 +267,7 @@ public class DescribeInstanceStatusRequest extends Request {
         }
 
         /**
-         * The region ID of the instance. You can call the [DescribeRegions](~~25609~~) operation to query the most recent region list.
+         * The region ID of the instances. You can call the [DescribeRegions](~~25609~~) operation to query the most recent region list.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -294,7 +294,7 @@ public class DescribeInstanceStatusRequest extends Request {
         }
 
         /**
-         * The zone ID of the instance. You can call the [DescribeZones](~~25610~~) operation to query the most recent zone list.
+         * The zone ID of the instances. You can call the [DescribeZones](~~25610~~) operation to query the most recent zone list.
          */
         public Builder zoneId(String zoneId) {
             this.putQueryParameter("ZoneId", zoneId);

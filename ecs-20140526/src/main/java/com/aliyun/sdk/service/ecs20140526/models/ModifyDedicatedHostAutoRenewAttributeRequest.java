@@ -219,13 +219,13 @@ public class ModifyDedicatedHostAutoRenewAttributeRequest extends Request {
         }
 
         /**
-         * Specifies whether to automatically renew the subscription dedicated host. Valid values:
+         * Specifies whether to automatically renew the subscription. Valid values:
          * <p>
          * 
-         * *   true: automatically renews the subscription dedicated host.
-         * *   false: does not automatically renew the subscription dedicated host.
+         * *   true
+         * *   false
          * 
-         * Default value: false.
+         * Default value: false
          */
         public Builder autoRenew(Boolean autoRenew) {
             this.putQueryParameter("AutoRenew", autoRenew);
@@ -234,22 +234,22 @@ public class ModifyDedicatedHostAutoRenewAttributeRequest extends Request {
         }
 
         /**
-         * Specifies whether to automatically renew the subscription dedicated host along with the subscription ECS instances hosted on it.
+         * Specifies whether to automatically renew the subscription dedicated hosts along with the subscription ECS instances hosted on the dedicated hosts.
          * <p>
          * 
-         * If auto-renewal is enabled for the subscription ECS instances hosted on your subscription dedicated host, you can specify this parameter to automatically renew the dedicated host along with the subscription ECS instances. When the subscription ECS instances hosted on your dedicated host are automatically renewed, the dedicated host is also automatically renewed if the expiration time of the dedicated host is earlier than the expiration time of the renewed instances.
+         * If auto-renewal is enabled for the subscription ECS instances hosted on the subscription dedicated hosts, you can specify this parameter to automatically renew the dedicated hosts along with the subscription ECS instances. When the subscription ECS instances hosted on your dedicated hosts are automatically renewed, the subscription dedicated hosts are also automatically renewed if the expiration time of the dedicated hosts is earlier than the expiration time of the renewed instances. Take note of the following items:
          * 
-         * When the dedicated host is configured to be automatically renewed along with the subscription ECS instances hosted on it, the dedicated host determines the expiration time of the renewed instances, and selects a minimum value from the valid values of the Duration parameter so that the dedicated host is renewed by a duration that expires later than the expiration time of the renewed instances. For more information about supported renewal durations, see the descriptions of the `PeriodUnit` and `Duration` parameters.
+         * When the subscription dedicated hosts are configured to be automatically renewed along with the subscription ECS instances hosted on the dedicated hosts, the system checks the expiration time of the renewed instances and selects a minimum renewal duration for the dedicated hosts so that the dedicated hosts are renewed by a duration that ends later than the expiration time of the renewed instances. For more information about supported renewal durations, see the descriptions of the `PeriodUnit` and `Duration` parameters.
          * 
-         * For example, assume that you have a subscription dedicated host that expires on January 15 of the current year. Subscription ECS instances hosted on the dedicated host have the auto-renewal feature enabled, and are automatically renewed to November 15 of the same year. The expiration time of the dedicated host is earlier than the expiration time of the ECS instances by 10 months. In this case, the dedicated host selects a renewal duration of 12 months, which is the minimum value of the `Duration` parameter (`PeriodUnit=Month`) that allows the dedicated host to expire later than the ECS instances.
+         * For example, assume that a dedicated host expires on January 15 of the current year. Subscription ECS instances hosted on the dedicated host are configured to be automatically renewed to November 15 of the same year. The expiration time of the dedicated host is earlier than the expiration time of the ECS instances by 10 months. In this case, the system selects a renewal duration of 12 months (a minimum duration calculated based on a `Duration` value of 12 and a `PeriodUnit` value of Month) for the dedicated host. This ensures that the dedicated host expires later than the ECS instances.
          * 
          * Valid values:
          * 
-         * *   AutoRenewWithEcs: automatically renews the subscription dedicated host along with the subscription ECS instances hosted on it.
-         * *   StopRenewWithEcs: does not automatically renew the subscription dedicated host along with the subscription ECS instances hosted on it.
-         * *   NoOperation: does not change the current settings for the dedicated host.
+         * *   AutoRenewWithEcs: automatically renews the subscription dedicated hosts along with the subscription ECS instances hosted on the dedicated hosts.
+         * *   StopRenewWithEcs: does not automatically renew the subscription dedicated hosts along with the subscription ECS instances hosted on the dedicated hosts.
+         * *   NoOperation: does not change the current settings for the dedicated hosts.
          * 
-         * >  If you set this parameter to AutoRenewWithEcs, make sure that `AutoRenew` is set to true to enable auto-renewal for the dedicated host. Otherwise, only the parameter value is changed. The dedicated host is not automatically renewed along with the subscription ECS instances hosted on it.
+         * > If you set this parameter to AutoRenewWithEcs, make sure that `AutoRenew` is set to true to enable auto-renewal for the dedicated hosts. Otherwise, the subscription dedicated hosts are not automatically renewed along with the subscription ECS instances hosted on the dedicated hosts.
          * 
          * Default value: NoOperation.
          */
@@ -260,7 +260,7 @@ public class ModifyDedicatedHostAutoRenewAttributeRequest extends Request {
         }
 
         /**
-         * The IDs of the dedicated hosts. You can specify up to 100 subscription dedicated host IDs. Separate multiple IDs with commas (,).
+         * The IDs of dedicated hosts. You can specify up to 100 subscription dedicated host IDs. Separate the IDs with commas (,).
          */
         public Builder dedicatedHostIds(String dedicatedHostIds) {
             this.putQueryParameter("DedicatedHostIds", dedicatedHostIds);
@@ -269,11 +269,11 @@ public class ModifyDedicatedHostAutoRenewAttributeRequest extends Request {
         }
 
         /**
-         * The renewal duration of the dedicated host. Valid values:
+         * The renewal duration.
          * <p>
          * 
-         * *   When the PeriodUnit parameter is set to Week, the valid values of the Duration parameter are 1, 2, and 3.
-         * *   When the PeriodUnit parameter is set to Month, the valid values of the Duration parameter are 1, 2, 3, 6, and 12.
+         * *   Valid values when PeriodUnit is set to Month: 1 and 12
+         * *   Valid values when PeriodUnit is set to Year: 1 and 12
          */
         public Builder duration(Integer duration) {
             this.putQueryParameter("Duration", duration);
@@ -300,13 +300,13 @@ public class ModifyDedicatedHostAutoRenewAttributeRequest extends Request {
         }
 
         /**
-         * The unit of the renewal duration. Valid values:
+         * The unit of the renewal period. Valid values:
          * <p>
          * 
-         * *   Week
          * *   Month
+         * *   Year
          * 
-         * Default value: Month.
+         * Default value: Month
          */
         public Builder periodUnit(String periodUnit) {
             this.putQueryParameter("PeriodUnit", periodUnit);
@@ -327,9 +327,9 @@ public class ModifyDedicatedHostAutoRenewAttributeRequest extends Request {
          * Specifies whether to automatically renew the subscription dedicated host. The `RenewalStatus` parameter takes precedence over the `AutoRenew` parameter. Valid values:
          * <p>
          * 
-         * *   AutoRenewal: automatically renews the subscription dedicated host.
-         * *   Normal: does not automatically renew the subscription dedicated host, but notifications for renewal are sent.
-         * *   NotRenewal: does not automatically renew the subscription dedicated host, and no expiration notification is sent. Notifications for renewal are automatically sent three days before the expiration time of the subscription dedicated host. You can change the value of this parameter from NotRenewal to Normal for the dedicated host and manually renew it by calling the [RenewDedicatedHosts](~~134250~~) operation. Alternatively, you can renew it by setting this parameter to AutoRenewal.
+         * *   AutoRenewal: The dedicated hosts are automatically renewed.
+         * *   Normal: The dedicated hosts are not automatically renewed, and renewal notifications are sent.
+         * *   NotRenewal: The dedicated hosts are not automatically renewed, and no expiration notification is sent. A notification of no renewal is automatically sent three days before the end of the current subscription cycle. You can change the value of this parameter from NotRenewal to Normal and manually renew the dedicated hosts by calling the [RenewDedicatedHosts](~~134250~~) operation. Alternatively, you can renew the dedicated hosts by setting this parameter to AutoRenewal.
          */
         public Builder renewalStatus(String renewalStatus) {
             this.putQueryParameter("RenewalStatus", renewalStatus);

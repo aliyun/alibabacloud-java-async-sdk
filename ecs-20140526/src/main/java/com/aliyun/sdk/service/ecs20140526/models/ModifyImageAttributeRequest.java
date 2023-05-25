@@ -253,7 +253,7 @@ public class ModifyImageAttributeRequest extends Request {
          * *   BIOS
          * *   UEFI
          * 
-         * >  You must know which boot modes the specified image supports. When you use this parameter to change the boot mode of the image, specify a boot mode supported by the image to ensure that instances which use this image can start normally.
+         * > You must be familiar with the boot modes that are supported by the image. When you use this parameter to change the boot mode of an image, specify a boot mode that is supported by the image to ensure that instances that use this image can start as expected.
          */
         public Builder bootMode(String bootMode) {
             this.putQueryParameter("BootMode", bootMode);
@@ -262,10 +262,10 @@ public class ModifyImageAttributeRequest extends Request {
         }
 
         /**
-         * The new description of the custom image. The description must be 2 to 256 characters in length and cannot start with http:// or https://.
+         * The new description of the custom image. The description must be 2 to 256 characters in length It cannot start with [http:// or https://.](http://https://。)
          * <p>
          * 
-         * This parameter is empty by default, which indicates that the original description is retained.
+         * This parameter is empty by default, which specifies that the original description is retained.
          */
         public Builder description(String description) {
             this.putQueryParameter("Description", description);
@@ -283,10 +283,10 @@ public class ModifyImageAttributeRequest extends Request {
         }
 
         /**
-         * The new name of the image family. The name must be 2 to 128 characters in length. It must start with a letter and cannot start with acs: or aliyun. It cannot contain http:// or https://. It can contain letters, digits, periods (.), colons (:), underscores (\_), and hyphens (-).
+         * The name of the image family. The name must be 2 to 128 characters in length. It must start with a letter and cannot start with acs: or aliyun. [It cannot contain http:// or https://. It can contain letters, digits, periods (.), colons (:), underscores (\_), and hyphens (-).](http://https://。、（.）、（:）、（\_）（-）。)
          * <p>
          * 
-         * This parameter is empty by default.
+         * By default, this parameter is empty.
          */
         public Builder imageFamily(String imageFamily) {
             this.putQueryParameter("ImageFamily", imageFamily);
@@ -304,10 +304,10 @@ public class ModifyImageAttributeRequest extends Request {
         }
 
         /**
-         * The new name of the custom image. The name must be 2 to 128 characters in length. It must start with a letter and cannot start with acs: or aliyun. It cannot contain http:// or https://. It can contain letters, digits, periods (.), colons (:), underscores (\_), and hyphens (-).
+         * The name of the custom image. The name must be 2 to 128 characters in length. It must start with a letter and cannot start with acs: or aliyun. [It cannot contain http:// or https://. It can contain letters, digits, periods (.), colons (:), underscores (\_), and hyphens (-).](http://https://。、（.）、（:）、（\_）（-）。)
          * <p>
          * 
-         * This parameter is empty by default, which indicates that the original name is retained.
+         * By default, this parameter is empty. In this case, the original name is retained.
          */
         public Builder imageName(String imageName) {
             this.putQueryParameter("ImageName", imageName);
@@ -316,10 +316,10 @@ public class ModifyImageAttributeRequest extends Request {
         }
 
         /**
-         * The type of the license to use to activate the operating system after the source image is imported. Valid values:
+         * The type of the license used to activate the operating system after the image is imported. Valid values:
          * <p>
          * 
-         * *   Auto: ECS checks the operating system of the source image and allocates a license to the operating system. ECS first checks whether the operating system distribution specified by `Platform` has a license allocated through an official Alibaba Cloud channel. If yes, the allocated license is used. If not, the license that comes with the source operating system is used.
+         * *   Auto: Elastic Compute Service (ECS) checks the OS of the source image and allocates a license to the OS. ECS first checks whether the operating system distribution specified by `Platform` has a license allocated through an official Alibaba Cloud channel. If yes, the allocated license is used. If no, the license that comes with the source operating system is used.
          * *   Aliyun: The license allocated through an official Alibaba Cloud channel is used for the operating system distribution specified by `Platform`.
          * *   BYOL: The license that comes with the source operating system is used. In this case, make sure that your license key can be used in Alibaba Cloud.
          * 
@@ -383,7 +383,7 @@ public class ModifyImageAttributeRequest extends Request {
          * *   Deprecated: puts the image into the Deprecated state. If the custom image is shared, you must unshare it before you can put it into the Deprecated state. Images in the Deprecated state cannot be shared or copied, but can be used to create instances or replace system disks.
          * *   Available: puts the image into the Available state. You can restore an image from the Deprecated state to the Available state.
          * 
-         * >  If you want to roll back a custom image in the image family to a previous version, you can put the latest available custom image into the Deprecated state. An instance family cannot be used to create instances if no custom images are in the Available state within the instance family. Proceed with caution if only a single custom image is in the Available state within the image family.
+         * > If you want to roll back a custom image in the image family to a previous version, you can put the latest available custom image into the Deprecated state. If no custom images are in the Available state within the image family, an image family cannot be used to create instances. Proceed with caution if only a single custom image is in the Available state within the image family.
          */
         public Builder status(String status) {
             this.putQueryParameter("Status", status);
@@ -428,8 +428,8 @@ public class ModifyImageAttributeRequest extends Request {
              * Specifies whether to support the Non-Volatile Memory Express (NVMe) protocol. Valid values:
              * <p>
              * 
-             * *   supported: The custom image supports the NVMe protocol. Instances created from this image also support the NVMe protocol.
-             * *   unsupported: The custom image does not support the NVMe protocol. Instances created from this image do not support the NVMe protocol.
+             * *   supported: The image supports NVMe. Instances created from this image also support NVMe.
+             * *   unsupported: The image does not support NVMe. Instances created from this image do not support NVMe.
              */
             public Builder nvmeSupport(String nvmeSupport) {
                 this.nvmeSupport = nvmeSupport;

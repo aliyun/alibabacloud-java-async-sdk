@@ -102,7 +102,7 @@ public class DescribeInvocationsResponseBody extends TeaModel {
         }
 
         /**
-         * The number of entries returned per page.
+         * The number of entries returned on each page.
          */
         public Builder pageSize(Long pageSize) {
             this.pageSize = pageSize;
@@ -110,7 +110,7 @@ public class DescribeInvocationsResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -345,7 +345,7 @@ public class DescribeInvocationsResponseBody extends TeaModel {
              * The code that indicates why the command failed to be sent or run. Valid values:
              * <p>
              * 
-             * *   If this parameter is empty, the execution is normal.
+             * *   If this parameter is empty, the command is run normally.
              * *   InstanceNotExists: The instance does not exist or was released.
              * *   InstanceReleased: The instance was released while the command was being run.
              * *   InstanceNotRunning: The instance was not in the Running state while the command started to be run.
@@ -416,7 +416,7 @@ public class DescribeInvocationsResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the instance.
+             * The instance ID
              */
             public Builder instanceId(String instanceId) {
                 this.instanceId = instanceId;
@@ -477,7 +477,7 @@ public class DescribeInvocationsResponseBody extends TeaModel {
             }
 
             /**
-             * The output of the command.
+             * The command output.
              */
             public Builder output(String output) {
                 this.output = output;
@@ -941,7 +941,7 @@ public class DescribeInvocationsResponseBody extends TeaModel {
             }
 
             /**
-             * The description of the command.
+             * The command description.
              */
             public Builder commandDescription(String commandDescription) {
                 this.commandDescription = commandDescription;
@@ -949,7 +949,7 @@ public class DescribeInvocationsResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the command.
+             * The command ID.
              */
             public Builder commandId(String commandId) {
                 this.commandId = commandId;
@@ -957,7 +957,7 @@ public class DescribeInvocationsResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the command.
+             * The command name.
              */
             public Builder commandName(String commandName) {
                 this.commandName = commandName;
@@ -965,7 +965,7 @@ public class DescribeInvocationsResponseBody extends TeaModel {
             }
 
             /**
-             * The type of the command.
+             * The command type.
              */
             public Builder commandType(String commandType) {
                 this.commandType = commandType;
@@ -973,7 +973,7 @@ public class DescribeInvocationsResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the container.
+             * The container ID.
              */
             public Builder containerId(String containerId) {
                 this.containerId = containerId;
@@ -981,7 +981,7 @@ public class DescribeInvocationsResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the container.
+             * The container name.
              */
             public Builder containerName(String containerName) {
                 this.containerName = containerName;
@@ -1044,7 +1044,7 @@ public class DescribeInvocationsResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the command task.
+             * The command task ID.
              */
             public Builder invokeId(String invokeId) {
                 this.invokeId = invokeId;
@@ -1079,13 +1079,13 @@ public class DescribeInvocationsResponseBody extends TeaModel {
             }
 
             /**
-             * The execution mode of the command. Valid values:
+             * Indicates the execution mode of the command. Valid values:
              * <p>
              * 
-             * *   Once: The command is immediately run.
+             * *   Once: immediately runs the command.
              * *   Period: The command is run on a schedule.
              * *   NextRebootOnly: The command is automatically run the next time the instance starts.
-             * *   EveryReboot: The command is automatically run every time the instance starts.
+             * *   EveryReboot: automatically runs the command every time the instance starts.
              */
             public Builder repeatMode(String repeatMode) {
                 this.repeatMode = repeatMode;

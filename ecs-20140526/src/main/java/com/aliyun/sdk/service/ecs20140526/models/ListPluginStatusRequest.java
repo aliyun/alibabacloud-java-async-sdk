@@ -190,7 +190,7 @@ public class ListPluginStatusRequest extends Request {
         }
 
         /**
-         * The IDs of ECS instances. You can specify up to 50 instance IDs in each request.
+         * The instance IDs. You can specify up to 50 instance IDs in a request. Valid values of N: 1 to 50.
          */
         public Builder instanceId(java.util.List < String > instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -202,11 +202,13 @@ public class ListPluginStatusRequest extends Request {
          * The name of the Cloud Assistant plug-in. The name supports all character sets and must be 1 to 255 characters in length.
          * <p>
          * 
-         * * If this parameter is not specified, the states of all Cloud Assistant plug-ins that are installed on the specified ECS instances are queried.
+         * *   If this parameter is not specified, the states of all Cloud Assistant plug-ins that are installed on the specified ECS instances are queried.
          * 
-         *     > If this parameter is not specified, only a single instance ID can be specified.
+         *     **
          * 
-         * * If this parameter is specified, the state of the specified Cloud Assistant plug-in is queried.
+         *     **Note**If this parameter is not specified, only a single instance ID can be specified.
+         * 
+         * *   If this parameter is specified, the state of the specified Cloud Assistant plug-in is queried.
          */
         public Builder name(String name) {
             this.putQueryParameter("Name", name);
@@ -233,7 +235,7 @@ public class ListPluginStatusRequest extends Request {
         }
 
         /**
-         * The number of the page to return.
+         * The page number of the returned page.
          * <p>
          * 
          * *   Pages start from page 1.
@@ -249,7 +251,7 @@ public class ListPluginStatusRequest extends Request {
          * The number of entries to return on each page.
          * <p>
          * 
-         * *   Maximum value: 50.
+         * *   Valid values: 1 to 50.
          * *   Default value: 10.
          */
         public Builder pageSize(Long pageSize) {
@@ -259,7 +261,7 @@ public class ListPluginStatusRequest extends Request {
         }
 
         /**
-         * The region ID of the ECS instance. You can call the [DescribeRegions](~~25609~~) operation to query the most recent region list.
+         * The region ID. You can call the [DescribeRegions](~~25609~~) operation to query the most recent region list.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);

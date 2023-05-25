@@ -171,7 +171,7 @@ public class ReleaseCapacityReservationRequest extends Request {
         }
 
         /**
-         * DryRun.
+         * Specifies whether to perform only a dry run, without performing the actual request. Set the value to false. This indicates that the system directly releases the capacity reservation.
          */
         public Builder dryRun(Boolean dryRun) {
             this.putQueryParameter("DryRun", dryRun);
@@ -198,7 +198,7 @@ public class ReleaseCapacityReservationRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * The region ID of the capacity reservation. You can call the [DescribeRegions](~~25609~~) operation to query the most recent region list.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -259,7 +259,7 @@ public class ReleaseCapacityReservationRequest extends Request {
             private String id; 
 
             /**
-             * Id.
+             * The ID of the capacity reservation.
              */
             public Builder id(String id) {
                 this.id = id;

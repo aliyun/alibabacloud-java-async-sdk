@@ -205,7 +205,7 @@ public class DescribeRenewalPriceRequest extends Request {
         }
 
         /**
-         * The synchronized expiration date. If you set this parameter, the price for renewing a specified instance to the specified synchronized expiration date is queried. Valid values: 1 to 28.
+         * The synchronized expiration date. If you specify this parameter, the price for renewing a specified instance to the specified synchronized expiration date is queried. Valid values: 1 to 28.
          * <p>
          * 
          * For information about how to synchronize the expiration dates of instances, see [Synchronize the expiration dates of instances](~~108486~~).
@@ -240,8 +240,8 @@ public class DescribeRenewalPriceRequest extends Request {
          * The renewal period. Valid values:
          * <p>
          * 
-         * *   Valid values when `PriceUnit` is set to `Month`: 1, 2, 3, 4, 5, 6, 7, 8, and 9.
-         * *   Valid values when `PriceUnit` is set to `Year`: 1, 2, 3.
+         * *   Valid values when the `PriceUnit` parameter is set to `Month`: 1, 2, 3, 4, 5, 6, 7, 8, and 9.
+         * *   Valid values when the `PriceUnit` parameter is set to `Year`: 1, 2, 3.
          * 
          * Default value: 1.
          * 
@@ -269,7 +269,7 @@ public class DescribeRenewalPriceRequest extends Request {
         }
 
         /**
-         * The region ID of the instance. You can call the [DescribeRegions](~~25609~~) operation to query the most recent region list.
+         * The region ID of the instance. You can call the [DescribeRegions](~~25609~~) operation to query the most recent list of regions.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -278,7 +278,7 @@ public class DescribeRenewalPriceRequest extends Request {
         }
 
         /**
-         * The ID of the resource. When the `ResourceType` parameter is set to`  instance `, `ResourceId` is interpreted as `InstanceId`.
+         * The ID of the resource. If the `ResourceType` parameter is set to`  instance `, the value of the `ResourceId` parameter is the ID of the specified instance.``
          */
         public Builder resourceId(String resourceId) {
             this.putQueryParameter("ResourceId", resourceId);

@@ -177,7 +177,7 @@ public class StartImagePipelineExecutionRequest extends Request {
         }
 
         /**
-         * The client token that is used to ensure the idempotence of the request. You can use the client to generate the value, but you must make sure that the value is unique among different requests. The value of the **ClientToken** parameter can contain only ASCII characters and cannot exceed 64 characters in length. For more information, see [How to ensure idempotence](~~25693~~).
+         * The client token that is used to ensure the idempotence of the request. You can use the client to generate the token, but make sure that the token is unique among requests. **The token can contain only ASCII characters and cannot exceed 64 characters in length.** For more information, see [How to ensure idempotence](~~25693~~).
          */
         public Builder clientToken(String clientToken) {
             this.putQueryParameter("ClientToken", clientToken);
@@ -213,7 +213,7 @@ public class StartImagePipelineExecutionRequest extends Request {
         }
 
         /**
-         * The region ID of the image creation task. You can call the [DescribeRegions](~~25609~~) operation to query the most recent region list.
+         * The region ID. You can call the [DescribeRegions](~~25609~~) operation to query the most recent list of regions.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -294,7 +294,7 @@ public class StartImagePipelineExecutionRequest extends Request {
             private String value; 
 
             /**
-             * >  This parameter is deprecated.
+             * > This parameter is deprecated.
              */
             public Builder key(String key) {
                 this.key = key;
@@ -302,7 +302,7 @@ public class StartImagePipelineExecutionRequest extends Request {
             }
 
             /**
-             * >  This parameter is deprecated.
+             * > This parameter is deprecated.
              */
             public Builder value(String value) {
                 this.value = value;

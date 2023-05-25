@@ -86,7 +86,7 @@ public class DescribeSnapshotLinksResponseBody extends TeaModel {
         private Integer totalCount; 
 
         /**
-         * The page number of the returned page.
+         * The page number.
          */
         public Builder pageNumber(Integer pageNumber) {
             this.pageNumber = pageNumber;
@@ -94,7 +94,7 @@ public class DescribeSnapshotLinksResponseBody extends TeaModel {
         }
 
         /**
-         * The number of entries returned per page.
+         * The number of entries per page.
          */
         public Builder pageSize(Integer pageSize) {
             this.pageSize = pageSize;
@@ -102,7 +102,7 @@ public class DescribeSnapshotLinksResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -110,7 +110,7 @@ public class DescribeSnapshotLinksResponseBody extends TeaModel {
         }
 
         /**
-         * Details about the snapshot chains.
+         * The details about the snapshot chains.
          */
         public Builder snapshotLinks(SnapshotLinks snapshotLinks) {
             this.snapshotLinks = snapshotLinks;
@@ -118,7 +118,7 @@ public class DescribeSnapshotLinksResponseBody extends TeaModel {
         }
 
         /**
-         * The total number of snapshot chains.
+         * The total number of entries returned.
          */
         public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;
@@ -290,10 +290,10 @@ public class DescribeSnapshotLinksResponseBody extends TeaModel {
             private Long totalSize; 
 
             /**
-             * The category of the snapshot.
+             * The type of the snapshot.
              * <p>
              * 
-             * > This parameter will be removed in the future. We recommend that you use the `InstantAccess` parameter to ensure future compatibility.
+             * > This parameter will be removed in the future. We recommend that you configure `InstantAccess` to ensure compatibility.
              */
             public Builder category(String category) {
                 this.category = category;
@@ -301,7 +301,7 @@ public class DescribeSnapshotLinksResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the instance.
+             * The instance ID.
              */
             public Builder instanceId(String instanceId) {
                 this.instanceId = instanceId;
@@ -317,11 +317,11 @@ public class DescribeSnapshotLinksResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether the instant access feature was enabled. Valid values:
+             * Indicates whether the instant access feature is enabled. Valid values:
              * <p>
              * 
-             * *   true: The instant access feature was enabled. This feature can be enabled only for enhanced SSDs (ESSDs).
-             * *   false: The instant access feature was disabled. The snapshot is a normal snapshot for which the instant access feature was disabled.
+             * *   true: The instant access feature is enabled. This feature can be enabled only for enhanced SSDs (ESSDs).
+             * *   false: The instant access feature is disabled. The snapshot is a normal snapshot for which the instant access feature is disabled.
              */
             public Builder instantAccess(Boolean instantAccess) {
                 this.instantAccess = instantAccess;
@@ -337,7 +337,7 @@ public class DescribeSnapshotLinksResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the snapshot chain.
+             * The snapshot chain IDs.
              */
             public Builder snapshotLinkId(String snapshotLinkId) {
                 this.snapshotLinkId = snapshotLinkId;
@@ -345,7 +345,7 @@ public class DescribeSnapshotLinksResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the source disk. This parameter is retained even if the source disk is deleted.
+             * The source disk ID. This parameter is retained even if the source disk is deleted.
              */
             public Builder sourceDiskId(String sourceDiskId) {
                 this.sourceDiskId = sourceDiskId;

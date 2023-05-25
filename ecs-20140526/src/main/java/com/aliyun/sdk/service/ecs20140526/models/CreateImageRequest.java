@@ -330,7 +330,7 @@ public class CreateImageRequest extends Request {
         }
 
         /**
-         * The system architecture of the system disk. If you specify a data disk snapshot to create the system disk of the custom image, use the Architecture parameter to specify the system architecture of the system disk. Valid values:
+         * The system architecture of the system disk. If you specify a data disk snapshot to create the system disk of the custom image, you must use Architecture to specify the system architecture of the system disk. Valid values:
          * <p>
          * 
          * *   i386
@@ -346,13 +346,13 @@ public class CreateImageRequest extends Request {
         }
 
         /**
-         * The boot mode of the custom image. Valid values:
+         * The boot mode of the image. Valid values:
          * <p>
          * 
          * *   BIOS
          * *   UEFI
          * 
-         * > You must be familiar with the boot modes that are supported by the specified image. When you use this parameter to change the boot mode of the image, specify a boot mode that is supported by the image to ensure that instances that use this image can start as expected.
+         * > You must be familiar with the boot modes supported by the specified image. When you use this parameter to change the boot mode of the image, specify a boot mode supported by the image to ensure that instances that use this image can be started as expected.
          */
         public Builder bootMode(String bootMode) {
             this.putQueryParameter("BootMode", bootMode);
@@ -361,7 +361,7 @@ public class CreateImageRequest extends Request {
         }
 
         /**
-         * The client token that is used to ensure the idempotence of the request. You can use the client to generate the token, but you must make sure that the token is unique among different requests. **The token can contain only ASCII characters and cannot exceed 64 characters in length.** For more information, see [How to ensure idempotence](~~25693~~).
+         * The client token that is used to ensure the idempotence of the request. You can use the client to generate the token, but you must make sure that the token is unique among different requests. The value of **ClientToken** can contain only ASCII characters and cannot exceed 64 characters in length. For more information, see [How to ensure idempotence](~~25693~~).
          */
         public Builder clientToken(String clientToken) {
             this.putQueryParameter("ClientToken", clientToken);
@@ -370,7 +370,7 @@ public class CreateImageRequest extends Request {
         }
 
         /**
-         * The description of the custom image. The description must be 2 to 256 characters in length and cannot start with [http:// or https://.](http://https://。)
+         * The image description. The description must be 2 to 256 characters in length and cannot start with [http:// or https://.](http://https://。)
          */
         public Builder description(String description) {
             this.putQueryParameter("Description", description);
@@ -379,25 +379,25 @@ public class CreateImageRequest extends Request {
         }
 
         /**
-         * The mode that you want to use to check the source image. If you do not specify this parameter, the source image is not checked. You can check only Linux images. Set the value to Standard, which specifies the standard check mode.
+         * The mode that you want to use to check the source image. If you do not specify this parameter, the source image is not checked. Only Linux images can be checked. Set the value to Standard, which indicates standard check mode.
          * <p>
          * 
          * The following items are checked in standard check mode:
          * 
          * *   Virtio: whether the virtio driver is installed.
-         * *   Fstab: whether the mounting configurations in the fstab file are valid.
-         * *   Grub: whether the GRand Unified Bootloader (GRUB) configurations are valid.
+         * *   Fstab: whether mounting configurations in the fstab file are correct.
+         * *   Grub: whether GRand Unified Bootloader (GRUB) configurations are correct.
          * *   SystemImage: whether the image is valid. Do not import images that are in the ISO format or empty.
          * *   CloudInit: whether cloud-init is installed.
-         * *   NVMe: whether the NVMe driver is installed.
+         * *   NVMe: whether the Non-Volatile Memory Express (NVMe) driver is installed.
          * *   Selinux: whether SElinux is enabled.
          * *   OnlineResizeFS: whether the root partition can be automatically resized.
-         * *   Dhcp: whether Dynamic Host Configuration Protocol (DHCP) is enabled for network interfaces.
+         * *   Dhcp: whether Dynamic Host Configuration Protocol (DHCP) is enabled for network interface controllers (NICs).
          * *   RtcTimeMode: the RTC time mode.
-         * *   Platform: the platform. Example: Linux or Windows.
+         * *   Platform: the platform. Examples: Linux and Windows.
          * *   OSVersion: the operating system version. Example: Centos 7.9.
-         * *   Architecture: the architecture. Example: ARM or x86\_64.
-         * *   BootMode: the boot mode. Example: UEFI or Legacy.
+         * *   Architecture: the architecture. Examples: ARM and x86\_64.
+         * *   BootMode: the boot mode. Examples: UEFI and Legacy.
          * *   KernelVersion: the kernel version.
          * *   CloudAssistant: whether the Cloud Assistant client is installed.
          * *   SecurityCenterAgent: whether the Security Center agent is installed.
@@ -409,7 +409,7 @@ public class CreateImageRequest extends Request {
         }
 
         /**
-         * The information about the custom image.
+         * The custom images.
          */
         public Builder diskDeviceMapping(java.util.List < DiskDeviceMapping> diskDeviceMapping) {
             this.putQueryParameter("DiskDeviceMapping", diskDeviceMapping);
@@ -418,7 +418,7 @@ public class CreateImageRequest extends Request {
         }
 
         /**
-         * The name of the family of the custom image. The name must be 2 to 128 characters in length. The name must start with a letter but cannot start with acs: or aliyun. The name cannot contain [http:// or https://. The name can contain letters, digits, colons (:), underscores (\_), and hyphens (-).](http://https://。、（:）、（\_）（-）。)
+         * The name of the image family. The name must be 2 to 128 characters in length and can contain digits, colons (:), underscores (\_), and hyphens (-). The name must start with a letter and cannot start with acs: or aliyun. It cannot contain [http:// or https://.](http://https://。、（:）、（\_）（-）。)
          */
         public Builder imageFamily(String imageFamily) {
             this.putQueryParameter("ImageFamily", imageFamily);
@@ -427,7 +427,7 @@ public class CreateImageRequest extends Request {
         }
 
         /**
-         * The name of the custom image. The name must be 2 to 128 characters in length. The name must start with a letter but cannot start with [http:// or https://. The name can contain letters, digits, colons (:), underscores (\_), and hyphens (-).](http://https://。、（:）、（\_）（-）。)
+         * The image name. The name must be 2 to 128 characters in length and can contain digits, colons (:), underscores (\_), and hyphens (-). The name must start with a letter but cannot start with [http:// or https://.](http://https://。、（:）、（\_）（-）。)
          */
         public Builder imageName(String imageName) {
             this.putQueryParameter("ImageName", imageName);
@@ -436,10 +436,10 @@ public class CreateImageRequest extends Request {
         }
 
         /**
-         * The version of the custom image.
+         * The image version.
          * <p>
          * 
-         * > If you specify an instance by using the `InstanceId` parameter and the instance uses an Alibaba Cloud Marketplace image or a custom image that is created from an Alibaba Cloud Marketplace image, you must leave this parameter empty or set this parameter to the value of the ImageVersion parameter of the instance.
+         * > If you specify an instance by configuring `InstanceId`, and the instance uses an Alibaba Cloud Marketplace image or a custom image that is created from an Alibaba Cloud Marketplace image, you must leave this parameter empty or set this parameter to the value of ImageVersion of the instance.
          */
         public Builder imageVersion(String imageVersion) {
             this.putQueryParameter("ImageVersion", imageVersion);
@@ -448,7 +448,7 @@ public class CreateImageRequest extends Request {
         }
 
         /**
-         * The ID of the instance that is used to create the custom image.
+         * The instance ID.
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -475,7 +475,7 @@ public class CreateImageRequest extends Request {
         }
 
         /**
-         * The distribution of the operating system for the system disk in the custom image. If you specify a data disk snapshot to create the system disk of the custom image, use the Platform parameter to specify the distribution of the operating system for the system disk. Valid values:
+         * The distribution of the operating system for the system disk in the custom image. If you specify a data disk snapshot to create the system disk of the custom image, you must use Platform to specify the distribution of the operating system for the system disk. Valid values:
          * <p>
          * 
          * *   CentOS
@@ -500,7 +500,7 @@ public class CreateImageRequest extends Request {
         }
 
         /**
-         * The region ID of the custom image that you want to create. You can call the [DescribeRegions](~~25609~~) operation to query the most recent region list.
+         * The region ID of the custom image that you want to create. You can call the [DescribeRegions](~~25609~~) operation to query the most recent list of regions.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -509,10 +509,10 @@ public class CreateImageRequest extends Request {
         }
 
         /**
-         * The ID of the resource group to which you want to assign the custom image. If you do not specify this parameter, the image is assigned to the default resource group.
+         * The ID of the resource group to which you want to assign the custom image. If you leave this parameter empty, the image is assigned to the default resource group.
          * <p>
          * 
-         * > If you call the CreateImage operation as a RAM user who is not authorized to manage the default resource group and you do not specify the `ResourceGroupId` parameter, the `Forbidden: User not authorized to operate on the specified resource` error message is returned. You must specify the ID of a resource group that the RAM user is authorized to manage or authorize the RAM user to manage the default resource group before you call the CreateImage operation again.
+         * > If you call the CreateImage operation as a RAM user who is not authorized to manage the default resource group and leave `ResourceGroupId` empty, the `Forbidden: User not authorized to operate on the specified resource` error message is returned. Before you call the CreateImage operation again, you must specify the ID of a resource group that the RAM user is authorized to manage or authorize the RAM user to manage the default resource group.
          */
         public Builder resourceGroupId(String resourceGroupId) {
             this.putQueryParameter("ResourceGroupId", resourceGroupId);
@@ -548,7 +548,7 @@ public class CreateImageRequest extends Request {
         }
 
         /**
-         * The tags that you want to add to the custom image.
+         * The tags.
          */
         public Builder tag(java.util.List < Tag> tag) {
             this.putQueryParameter("Tag", tag);
@@ -629,8 +629,8 @@ public class CreateImageRequest extends Request {
              * The device name of disk N in the custom image. Valid values:
              * <p>
              * 
-             * *   For disks other than basic disks, such as standard SSDs, ultra disks, and enhanced SSDs (ESSDs), the valid values range from /dev/vda to /dev/vdz in alphabetical order.
-             * *   For basic disks, the valid values range from /dev/xvda to /dev/xvdz in alphabetical order.
+             * *   For disks other than basic disks, such as standard SSDs, ultra disks, and enhanced SSDs (ESSDs), the valid values range from /dev/vda to /dev/vdz in ascending alphabetical order.
+             * *   For basic disks, the valid values are in alphabetical order from /dev/xvda to /dev/xvdz.
              */
             public Builder device(String device) {
                 this.device = device;
@@ -650,15 +650,15 @@ public class CreateImageRequest extends Request {
             }
 
             /**
-             * The size of disk N in the custom image. Unit: GiB. The valid values and default value of the DiskDeviceMapping.N.Size parameter vary based on the value of the DiskDeviceMapping.N.SnapshotId parameter.
+             * The size of disk N in the custom image. Unit: GiB. The valid values and default value of DiskDeviceMapping.N.Size depend on the value of DiskDeviceMapping.N.SnapshotId.
              * <p>
              * 
-             * *   If no corresponding snapshot IDs are specified in the value of the DiskDeviceMapping.N.SnapshotId parameter, the DiskDeviceMapping.N.Size parameter has the following valid values and default values:
+             * *   If no corresponding snapshot IDs are specified in the DiskDeviceMapping.N.SnapshotId value, the following valid values and default values are available for DiskDeviceMapping.N.Size:
              * 
-             *     *   For basic disks, the valid values range from 5 to 2000, and the default value is 5.
-             *     *   For other disks, the valid values range from 20 to 32768, and the default value is 20.
+             *     *   For basic disks, the valid values are 5 to 2000, and the default value is 5.
+             *     *   For other types of disk, the valid values are 20 to 32768, and the default value is 20.
              * 
-             * *   If a corresponding snapshot ID is specified in the value of the DiskDeviceMapping.N.SnapshotId parameter, the value of the DiskDeviceMapping.N.Size parameter must be greater than or equal to the size of the specified snapshot. The default value of the DiskDeviceMapping.N.Size parameter is the size of the specified snapshot.
+             * *   If a corresponding snapshot ID is specified in the DiskDeviceMapping.N.SnapshotId value, the value of DiskDeviceMapping.N.Size must be greater than or equal to the size of the specified snapshot. The default value of DiskDeviceMapping.N.Size is the size of the specified snapshot.
              */
             public Builder size(Integer size) {
                 this.size = size;
@@ -719,7 +719,7 @@ public class CreateImageRequest extends Request {
             private String value; 
 
             /**
-             * The key of tag N of the custom image. You can specify up to 20 tag keys for a custom image. The tag key cannot be an empty string. The tag key can be up to 128 characters in length and cannot contain `http://` or `https://`. The tag key cannot start with `aliyun` or `acs:`.
+             * The key of tag N of the custom image. Valid values of N: 1 to 20. The tag key cannot be an empty string. The tag key can be up to 128 characters in length and cannot start with `aliyun` or `acs:`. The tag key cannot contain `http://` or `https://`.
              */
             public Builder key(String key) {
                 this.key = key;
@@ -727,7 +727,7 @@ public class CreateImageRequest extends Request {
             }
 
             /**
-             * The value of tag N of the custom image. You can specify up to 20 tag values for a custom image. The tag value can be an empty string. The tag value can be up to 128 characters in length and cannot start with `acs:`. The tag value cannot contain `http://` or `https://`.
+             * The value of tag N of the custom image. Valid values of N: 1 to 20. The tag value can be an empty string. The tag value can be up to 128 characters in length and cannot start with `acs:`. The tag value cannot contain `http://` or `https://`.
              */
             public Builder value(String value) {
                 this.value = value;

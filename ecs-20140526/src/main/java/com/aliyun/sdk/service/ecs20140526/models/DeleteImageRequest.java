@@ -196,7 +196,7 @@ public class DeleteImageRequest extends Request {
         }
 
         /**
-         * OwnerId.
+         * RAM用户的虚拟账号ID。
          */
         public Builder ownerId(Long ownerId) {
             this.putQueryParameter("OwnerId", ownerId);
@@ -214,7 +214,7 @@ public class DeleteImageRequest extends Request {
         }
 
         /**
-         * ResourceOwnerAccount.
+         * 资源主账号的账号名称。
          */
         public Builder resourceOwnerAccount(String resourceOwnerAccount) {
             this.putQueryParameter("ResourceOwnerAccount", resourceOwnerAccount);
@@ -223,7 +223,7 @@ public class DeleteImageRequest extends Request {
         }
 
         /**
-         * ResourceOwnerId.
+         * 资源主账号的ID，亦即UID。
          */
         public Builder resourceOwnerId(Long resourceOwnerId) {
             this.putQueryParameter("ResourceOwnerId", resourceOwnerId);

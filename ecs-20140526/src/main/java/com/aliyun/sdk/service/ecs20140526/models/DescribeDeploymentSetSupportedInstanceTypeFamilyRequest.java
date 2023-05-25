@@ -37,6 +37,10 @@ public class DescribeDeploymentSetSupportedInstanceTypeFamilyRequest extends Req
     @NameInMap("ResourceOwnerId")
     private Long resourceOwnerId;
 
+    @Query
+    @NameInMap("Strategy")
+    private String strategy;
+
     private DescribeDeploymentSetSupportedInstanceTypeFamilyRequest(Builder builder) {
         super(builder);
         this.sourceRegionId = builder.sourceRegionId;
@@ -45,6 +49,7 @@ public class DescribeDeploymentSetSupportedInstanceTypeFamilyRequest extends Req
         this.regionId = builder.regionId;
         this.resourceOwnerAccount = builder.resourceOwnerAccount;
         this.resourceOwnerId = builder.resourceOwnerId;
+        this.strategy = builder.strategy;
     }
 
     public static Builder builder() {
@@ -102,6 +107,13 @@ public class DescribeDeploymentSetSupportedInstanceTypeFamilyRequest extends Req
         return this.resourceOwnerId;
     }
 
+    /**
+     * @return strategy
+     */
+    public String getStrategy() {
+        return this.strategy;
+    }
+
     public static final class Builder extends Request.Builder<DescribeDeploymentSetSupportedInstanceTypeFamilyRequest, Builder> {
         private String sourceRegionId; 
         private String ownerAccount; 
@@ -109,6 +121,7 @@ public class DescribeDeploymentSetSupportedInstanceTypeFamilyRequest extends Req
         private String regionId; 
         private String resourceOwnerAccount; 
         private Long resourceOwnerId; 
+        private String strategy; 
 
         private Builder() {
             super();
@@ -122,6 +135,7 @@ public class DescribeDeploymentSetSupportedInstanceTypeFamilyRequest extends Req
             this.regionId = request.regionId;
             this.resourceOwnerAccount = request.resourceOwnerAccount;
             this.resourceOwnerId = request.resourceOwnerId;
+            this.strategy = request.strategy;
         } 
 
         /**
@@ -175,6 +189,15 @@ public class DescribeDeploymentSetSupportedInstanceTypeFamilyRequest extends Req
         public Builder resourceOwnerId(Long resourceOwnerId) {
             this.putQueryParameter("ResourceOwnerId", resourceOwnerId);
             this.resourceOwnerId = resourceOwnerId;
+            return this;
+        }
+
+        /**
+         * Strategy.
+         */
+        public Builder strategy(String strategy) {
+            this.putQueryParameter("Strategy", strategy);
+            this.strategy = strategy;
             return this;
         }
 

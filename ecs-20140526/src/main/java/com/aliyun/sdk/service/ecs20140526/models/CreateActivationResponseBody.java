@@ -62,7 +62,7 @@ public class CreateActivationResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The value of the activation code. The value is returned only once after the CreateActivation operation is called and cannot be subsequently queried. Properly save the return value.
+         * The ID of the activation code.
          */
         public Builder activationCode(String activationCode) {
             this.activationCode = activationCode;
@@ -70,7 +70,7 @@ public class CreateActivationResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the activation code.
+         * ActivationId.
          */
         public Builder activationId(String activationId) {
             this.activationId = activationId;
@@ -78,7 +78,7 @@ public class CreateActivationResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * The value of the activation code. The value is returned only once after the CreateActivation operation is called and cannot be subsequently queried. Make sure that you properly save the return value.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

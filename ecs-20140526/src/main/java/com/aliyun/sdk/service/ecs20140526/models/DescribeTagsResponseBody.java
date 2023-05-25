@@ -86,7 +86,7 @@ public class DescribeTagsResponseBody extends TeaModel {
         private Integer totalCount; 
 
         /**
-         * The page number of the returned page.
+         * The page number.
          */
         public Builder pageNumber(Integer pageNumber) {
             this.pageNumber = pageNumber;
@@ -94,7 +94,7 @@ public class DescribeTagsResponseBody extends TeaModel {
         }
 
         /**
-         * The number of entries returned per page.
+         * The number of entries per page.
          */
         public Builder pageSize(Integer pageSize) {
             this.pageSize = pageSize;
@@ -110,7 +110,7 @@ public class DescribeTagsResponseBody extends TeaModel {
         }
 
         /**
-         * The tags that match all the filter conditions.
+         * The tags that match all filter conditions.
          */
         public Builder tags(Tags tags) {
             this.tags = tags;
@@ -451,7 +451,7 @@ public class DescribeTagsResponseBody extends TeaModel {
             }
 
             /**
-             * The key of the tag.
+             * The tag key.
              */
             public Builder tagKey(String tagKey) {
                 this.tagKey = tagKey;
@@ -459,7 +459,7 @@ public class DescribeTagsResponseBody extends TeaModel {
             }
 
             /**
-             * The value of the tag.
+             * The tag value.
              */
             public Builder tagValue(String tagValue) {
                 this.tagValue = tagValue;

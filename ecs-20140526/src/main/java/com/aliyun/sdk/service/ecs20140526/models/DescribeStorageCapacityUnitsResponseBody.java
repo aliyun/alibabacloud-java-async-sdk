@@ -170,7 +170,7 @@ public class DescribeStorageCapacityUnitsResponseBody extends TeaModel {
             private String tagValue; 
 
             /**
-             * The tag key of the SCU.
+             * The key of tag N.
              */
             public Builder tagKey(String tagKey) {
                 this.tagKey = tagKey;
@@ -178,7 +178,7 @@ public class DescribeStorageCapacityUnitsResponseBody extends TeaModel {
             }
 
             /**
-             * The tag value of the SCU.
+             * The value of tag N.
              */
             public Builder tagValue(String tagValue) {
                 this.tagValue = tagValue;

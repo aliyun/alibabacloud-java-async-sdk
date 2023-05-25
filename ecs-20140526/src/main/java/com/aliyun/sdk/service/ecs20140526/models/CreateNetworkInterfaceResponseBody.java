@@ -286,7 +286,7 @@ public class CreateNetworkInterfaceResponseBody extends TeaModel {
         }
 
         /**
-         * > This parameter is in invitational preview and is unavailable for general users.
+         * > This parameter is in invitational preview and is unavailable.
          */
         public Builder ipv4PrefixSets(Ipv4PrefixSets ipv4PrefixSets) {
             this.ipv4PrefixSets = ipv4PrefixSets;
@@ -294,7 +294,7 @@ public class CreateNetworkInterfaceResponseBody extends TeaModel {
         }
 
         /**
-         * > This parameter is in invitational preview and is unavailable for general users.
+         * > This parameter is in invitational preview and is unavailable.
          */
         public Builder ipv6PrefixSets(Ipv6PrefixSets ipv6PrefixSets) {
             this.ipv6PrefixSets = ipv6PrefixSets;
@@ -302,7 +302,7 @@ public class CreateNetworkInterfaceResponseBody extends TeaModel {
         }
 
         /**
-         * The IPv6 addresses of the ENI.
+         * The IPv6 addresses assigned to the ENI.
          */
         public Builder ipv6Sets(Ipv6Sets ipv6Sets) {
             this.ipv6Sets = ipv6Sets;
@@ -318,7 +318,7 @@ public class CreateNetworkInterfaceResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the ENI.
+         * The ENI ID.
          */
         public Builder networkInterfaceId(String networkInterfaceId) {
             this.networkInterfaceId = networkInterfaceId;
@@ -350,7 +350,7 @@ public class CreateNetworkInterfaceResponseBody extends TeaModel {
         }
 
         /**
-         * Details about the private IP addresses of the ENI.
+         * Details about the private IP addresses.
          */
         public Builder privateIpSets(PrivateIpSets privateIpSets) {
             this.privateIpSets = privateIpSets;
@@ -358,7 +358,7 @@ public class CreateNetworkInterfaceResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -438,7 +438,7 @@ public class CreateNetworkInterfaceResponseBody extends TeaModel {
         }
 
         /**
-         * The zone ID of the ENI.
+         * The ID of the zone in which the ENI resides.
          */
         public Builder zoneId(String zoneId) {
             this.zoneId = zoneId;
@@ -478,7 +478,7 @@ public class CreateNetworkInterfaceResponseBody extends TeaModel {
             private String ipv4Prefix; 
 
             /**
-             * > This parameter is in invitational preview and is unavailable for general users.
+             * > This parameter is in invitational preview and is unavailable.
              */
             public Builder ipv4Prefix(String ipv4Prefix) {
                 this.ipv4Prefix = ipv4Prefix;
@@ -560,7 +560,7 @@ public class CreateNetworkInterfaceResponseBody extends TeaModel {
             private String ipv6Prefix; 
 
             /**
-             * > This parameter is in invitational preview and is unavailable for general users.
+             * > This parameter is in invitational preview and is unavailable.
              */
             public Builder ipv6Prefix(String ipv6Prefix) {
                 this.ipv6Prefix = ipv6Prefix;
@@ -744,7 +744,7 @@ public class CreateNetworkInterfaceResponseBody extends TeaModel {
             }
 
             /**
-             * The private IP address of the ENI.
+             * The private IP address of the instance to which the ENI is attached.
              */
             public Builder privateIpAddress(String privateIpAddress) {
                 this.privateIpAddress = privateIpAddress;
@@ -879,7 +879,7 @@ public class CreateNetworkInterfaceResponseBody extends TeaModel {
             private String tagValue; 
 
             /**
-             * The tag key of the ENI.
+             * The tag key.
              */
             public Builder tagKey(String tagKey) {
                 this.tagKey = tagKey;
@@ -887,7 +887,7 @@ public class CreateNetworkInterfaceResponseBody extends TeaModel {
             }
 
             /**
-             * The tag value of the ENI.
+             * The tag value.
              */
             public Builder tagValue(String tagValue) {
                 this.tagValue = tagValue;
