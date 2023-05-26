@@ -93,7 +93,7 @@ public class RetryDataCorrectPreCheckRequest extends Request {
         }
 
         /**
-         * The error code returned.
+         * The ID of the data change ticket. You can call the [ListOrders](~~144643~~) operation to query the ID of the data change ticket.
          */
         public Builder orderId(Long orderId) {
             this.putQueryParameter("OrderId", orderId);
@@ -102,7 +102,7 @@ public class RetryDataCorrectPreCheckRequest extends Request {
         }
 
         /**
-         * The ID of the request.
+         * The ID of the tenant. You can call the [GetUserActiveTenant](~~198073~~) operation to query the tenant ID.
          */
         public Builder tid(Long tid) {
             this.putQueryParameter("Tid", tid);

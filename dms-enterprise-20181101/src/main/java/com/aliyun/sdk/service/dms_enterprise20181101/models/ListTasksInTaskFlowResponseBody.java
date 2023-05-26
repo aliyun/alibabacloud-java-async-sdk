@@ -86,7 +86,7 @@ public class ListTasksInTaskFlowResponseBody extends TeaModel {
         private Tasks tasks; 
 
         /**
-         * The type of the node. For more information about the valid values for this parameter, see [NodeType parameter](~~424705~~).
+         * The error code returned if the request failed.
          */
         public Builder errorCode(String errorCode) {
             this.errorCode = errorCode;
@@ -102,7 +102,7 @@ public class ListTasksInTaskFlowResponseBody extends TeaModel {
         }
 
         /**
-         * The operation that you want to perform. Set the value to **ListTasksInTaskFlow**.
+         * The ID of the request. You can use the ID to locate logs and troubleshoot issues.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -110,7 +110,11 @@ public class ListTasksInTaskFlowResponseBody extends TeaModel {
         }
 
         /**
-         * The tasks in the task flow.
+         * Indicates whether the request was successful. Valid values:
+         * <p>
+         * 
+         * *   **true**: The request was successful.
+         * *   **false**: The request failed.
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -118,7 +122,7 @@ public class ListTasksInTaskFlowResponseBody extends TeaModel {
         }
 
         /**
-         * The advanced configuration for the node.
+         * The tasks in the task flow.
          */
         public Builder tasks(Tasks tasks) {
             this.tasks = tasks;
@@ -242,7 +246,7 @@ public class ListTasksInTaskFlowResponseBody extends TeaModel {
             private String timeVariables; 
 
             /**
-             * GraphParam.
+             * The position of the node on the Directed Acyclic Graph (DAG).
              */
             public Builder graphParam(String graphParam) {
                 this.graphParam = graphParam;
@@ -250,7 +254,7 @@ public class ListTasksInTaskFlowResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the request. You can use the ID to locate logs and troubleshoot issues.
+             * The advanced configuration for the node.
              */
             public Builder nodeConfig(String nodeConfig) {
                 this.nodeConfig = nodeConfig;
@@ -258,7 +262,7 @@ public class ListTasksInTaskFlowResponseBody extends TeaModel {
             }
 
             /**
-             * The time variables configured for the node.
+             * The configuration for the node.
              */
             public Builder nodeContent(String nodeContent) {
                 this.nodeContent = nodeContent;
@@ -266,7 +270,7 @@ public class ListTasksInTaskFlowResponseBody extends TeaModel {
             }
 
             /**
-             * NodeId.
+             * The ID of the node.
              */
             public Builder nodeId(String nodeId) {
                 this.nodeId = nodeId;
@@ -274,10 +278,7 @@ public class ListTasksInTaskFlowResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the tenant.
-             * <p>
-             * 
-             * >  To view the ID of the tenant, move the pointer over the profile picture in the upper-right corner of the Data Management (DMS) console. For more information, see [View information about the current tenant](~~181330~~).
+             * The name of the node.
              */
             public Builder nodeName(String nodeName) {
                 this.nodeName = nodeName;
@@ -285,7 +286,7 @@ public class ListTasksInTaskFlowResponseBody extends TeaModel {
             }
 
             /**
-             * NodeOutput.
+             * The output variables for the task.
              */
             public Builder nodeOutput(String nodeOutput) {
                 this.nodeOutput = nodeOutput;
@@ -293,7 +294,7 @@ public class ListTasksInTaskFlowResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the node.
+             * The type of the node. For more information about the valid values for this parameter, see [NodeType parameter](~~424705~~).
              */
             public Builder nodeType(String nodeType) {
                 this.nodeType = nodeType;
@@ -301,7 +302,7 @@ public class ListTasksInTaskFlowResponseBody extends TeaModel {
             }
 
             /**
-             * The configuration for the node.
+             * The time variables configured for the node.
              */
             public Builder timeVariables(String timeVariables) {
                 this.timeVariables = timeVariables;

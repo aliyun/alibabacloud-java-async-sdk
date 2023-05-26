@@ -93,11 +93,7 @@ public class GetUserUploadFileJobRequest extends Request {
         }
 
         /**
-         * The method used to upload the file. Valid values:
-         * <p>
-         * 
-         * *   **URL**
-         * *   **OSS**
+         * The key of the file upload task. The key is returned when you call the [CreateUploadFileJob](~~206059~~) or [CreateUploadOSSFileJob](~~206060~~) operation.
          */
         public Builder jobKey(String jobKey) {
             this.putQueryParameter("JobKey", jobKey);
@@ -106,10 +102,10 @@ public class GetUserUploadFileJobRequest extends Request {
         }
 
         /**
-         * The ID of the tenant.
+         * The tenant ID.
          * <p>
          * 
-         * >  To view the ID of the tenant, move the pointer over the profile picture in the upper-right corner of the Data Management (DMS) console. For more information, see the "View information about the current tenant" section of the [Manage DMS tenants](~~181330~~) topic.
+         * > To view the tenant ID, move the pointer over the profile picture in the upper-right corner of the Data Management (DMS) console. For more information, see [Manage DMS tenants](~~181330~~).
          */
         public Builder tid(Long tid) {
             this.putQueryParameter("Tid", tid);

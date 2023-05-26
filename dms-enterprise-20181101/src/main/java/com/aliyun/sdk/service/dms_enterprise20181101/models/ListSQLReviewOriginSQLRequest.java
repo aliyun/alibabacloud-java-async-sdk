@@ -107,7 +107,7 @@ public class ListSQLReviewOriginSQLRequest extends Request {
         }
 
         /**
-         * The ID of the file.
+         * The parameters that are used to filter SQL statements involved in the ticket.
          */
         public Builder orderActionDetail(OrderActionDetail orderActionDetail) {
             String orderActionDetailShrink = shrink(orderActionDetail, "OrderActionDetail", "json");
@@ -117,7 +117,7 @@ public class ListSQLReviewOriginSQLRequest extends Request {
         }
 
         /**
-         * The information about the parsed SQL statements.
+         * The ID of the ticket for the SQL review. You can call the [CreateSQLReviewOrder](~~257777~~) operation to query the ID of the ticket.
          */
         public Builder orderId(Long orderId) {
             this.putQueryParameter("OrderId", orderId);
@@ -126,15 +126,7 @@ public class ListSQLReviewOriginSQLRequest extends Request {
         }
 
         /**
-         * The optimization suggestion for the SQL statement. Valid values:
-         * <p>
-         * 
-         * *   **MUST_IMPROVE**: The SQL statement must be improved.
-         * *   **POTENTIAL_ISSUE**: The SQL statement contains potential issues.
-         * *   **SUGGEST_IMPROVE**: We recommend that you improve the SQL statement.
-         * *   **USE_DMS_TOOLKIT**: We recommend that you change schemas without locking tables.
-         * *   **USE_DMS_DML_UNLOCK**: We recommend that you change data without locking tables.
-         * *   **TABLE_INDEX_SUGGEST**: We recommend that you use SQL statements that use indexes.
+         * The ID of the tenant. You can call the [GetUserActiveTenant](https://www.alibabacloud.com/help/en/data-management-service/latest/getuseractivetenant) or [ListUserTenants](https://www.alibabacloud.com/help/en/data-management-service/latest/listusertenants) operation to query the ID of the tenant.
          */
         public Builder tid(Long tid) {
             this.putQueryParameter("Tid", tid);
@@ -189,7 +181,7 @@ public class ListSQLReviewOriginSQLRequest extends Request {
             private Integer pageSize; 
 
             /**
-             * The ID of the ticket for the SQL review. You can call the [CreateSQLReviewOrder](~~257777~~) operation to query the ID of the ticket.
+             * The number of the page to return.
              */
             public Builder pageNumber(Integer pageNumber) {
                 this.pageNumber = pageNumber;
@@ -197,7 +189,7 @@ public class ListSQLReviewOriginSQLRequest extends Request {
             }
 
             /**
-             * The number of the page to return.
+             * The number of entries to return on each page.
              */
             public Builder pageSize(Integer pageSize) {
                 this.pageSize = pageSize;
@@ -274,22 +266,6 @@ public class ListSQLReviewOriginSQLRequest extends Request {
             private String SQLReviewResult; 
 
             /**
-             * The operation that you want to perform. Set the value to **ListSQLReviewOriginSQL**.
-             */
-            public Builder checkStatusResult(String checkStatusResult) {
-                this.checkStatusResult = checkStatusResult;
-                return this;
-            }
-
-            /**
-             * The error code returned.
-             */
-            public Builder fileId(Long fileId) {
-                this.fileId = fileId;
-                return this;
-            }
-
-            /**
              * The review status of the SQL statement. Valid values:
              * <p>
              * 
@@ -300,13 +276,37 @@ public class ListSQLReviewOriginSQLRequest extends Request {
              * *   **force_pass**: The SQL statement passed the review by manual effort.
              * *   **force_not_pass**: The SQL statement failed the review by manual effort.
              */
+            public Builder checkStatusResult(String checkStatusResult) {
+                this.checkStatusResult = checkStatusResult;
+                return this;
+            }
+
+            /**
+             * The ID of the file.
+             */
+            public Builder fileId(Long fileId) {
+                this.fileId = fileId;
+                return this;
+            }
+
+            /**
+             * The paging settings.
+             */
             public Builder page(Page page) {
                 this.page = page;
                 return this;
             }
 
             /**
-             * The paging settings.
+             * The optimization suggestion for the SQL statement. Valid values:
+             * <p>
+             * 
+             * *   **MUST_IMPROVE**: The SQL statement must be improved.
+             * *   **POTENTIAL_ISSUE**: The SQL statement contains potential issues.
+             * *   **SUGGEST_IMPROVE**: We recommend that you improve the SQL statement.
+             * *   **USE_DMS_TOOLKIT**: We recommend that you change schemas without locking tables.
+             * *   **USE_DMS_DML_UNLOCK**: We recommend that you change data without locking tables.
+             * *   **TABLE_INDEX_SUGGEST**: We recommend that you use SQL statements that use indexes.
              */
             public Builder SQLReviewResult(String SQLReviewResult) {
                 this.SQLReviewResult = SQLReviewResult;

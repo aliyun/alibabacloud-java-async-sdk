@@ -92,7 +92,7 @@ public class DisableUserRequest extends Request {
         }
 
         /**
-         * The ID of the request.
+         * The ID of the tenant. You can call the [GetUserActiveTenant](~~198073~~) or [ListUserTenants](~~198074~~) operation to obtain the tenant ID.
          */
         public Builder tid(Long tid) {
             this.putQueryParameter("Tid", tid);
@@ -101,7 +101,7 @@ public class DisableUserRequest extends Request {
         }
 
         /**
-         * You can call this operation to disable a user that is temporarily not used in Data Management (DMS) Enterprise.
+         * The UID of the Alibaba Cloud account.
          */
         public Builder uid(String uid) {
             this.putQueryParameter("Uid", uid);

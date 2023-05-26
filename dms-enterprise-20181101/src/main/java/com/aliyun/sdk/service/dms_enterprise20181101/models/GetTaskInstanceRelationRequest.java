@@ -108,7 +108,7 @@ public class GetTaskInstanceRelationRequest extends Request {
         }
 
         /**
-         * The ID of the execution record of the task flow. You can call the [ListTaskFlowInstance](~~424689~~) operation to obtain the execution record ID.
+         * The ID of the task flow. You can call the [ListTaskFlow](~~424565~~) or [ListLhTaskFlowAndScenario](~~426672~~) operation to obtain the ID of the task flow.
          */
         public Builder dagId(Long dagId) {
             this.putQueryParameter("DagId", dagId);
@@ -117,7 +117,7 @@ public class GetTaskInstanceRelationRequest extends Request {
         }
 
         /**
-         * The business time of the node.
+         * The ID of the execution record of the task flow. You can call the [ListTaskFlowInstance](~~424689~~) operation to obtain the execution record ID.
          */
         public Builder dagInstanceId(Long dagInstanceId) {
             this.putQueryParameter("DagInstanceId", dagInstanceId);

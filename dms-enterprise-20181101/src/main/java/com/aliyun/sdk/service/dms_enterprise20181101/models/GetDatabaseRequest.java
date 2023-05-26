@@ -136,7 +136,7 @@ public class GetDatabaseRequest extends Request {
         }
 
         /**
-         * The error code.
+         * The endpoint that is used to connect to the database.
          */
         public Builder host(String host) {
             this.putQueryParameter("Host", host);
@@ -145,7 +145,7 @@ public class GetDatabaseRequest extends Request {
         }
 
         /**
-         * The name of the catalog to which the database belongs.
+         * The port that is used to connect to the database.
          */
         public Builder port(Integer port) {
             this.putQueryParameter("Port", port);
@@ -154,7 +154,7 @@ public class GetDatabaseRequest extends Request {
         }
 
         /**
-         * The details of the database.
+         * The name of the database.
          */
         public Builder schemaName(String schemaName) {
             this.putQueryParameter("SchemaName", schemaName);
@@ -163,7 +163,10 @@ public class GetDatabaseRequest extends Request {
         }
 
         /**
-         * The operation that you want to perform. Set the value to **GetDatabase**.
+         * The system identifier (SID) of the database.
+         * <p>
+         * 
+         * >  The SID uniquely identifies an Oracle database. After a database is created, a SID is generated for the database.
          */
         public Builder sid(String sid) {
             this.putQueryParameter("Sid", sid);
@@ -172,7 +175,7 @@ public class GetDatabaseRequest extends Request {
         }
 
         /**
-         * The ID of the database.
+         * The ID of the tenant. You can call the [GetUserActiveTenant](~~198073~~) operation to query the ID of the tenant.
          */
         public Builder tid(Long tid) {
             this.putQueryParameter("Tid", tid);

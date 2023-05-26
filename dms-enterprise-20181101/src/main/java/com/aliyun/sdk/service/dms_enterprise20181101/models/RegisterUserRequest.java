@@ -143,15 +143,6 @@ public class RegisterUserRequest extends Request {
         }
 
         /**
-         * The operation that you want to perform. Set the value to **RegisterUser**.
-         */
-        public Builder roleNames(String roleNames) {
-            this.putQueryParameter("RoleNames", roleNames);
-            this.roleNames = roleNames;
-            return this;
-        }
-
-        /**
          * The role that you want to assign to the user. Valid values:
          * <p>
          * 
@@ -162,6 +153,18 @@ public class RegisterUserRequest extends Request {
          * 
          * >  If you do not specify this parameter, the regular user role is assigned to the user by default. You can assign one or more roles to the user. Separate multiple roles with commas (,).
          */
+        public Builder roleNames(String roleNames) {
+            this.putQueryParameter("RoleNames", roleNames);
+            this.roleNames = roleNames;
+            return this;
+        }
+
+        /**
+         * The ID of the tenant.
+         * <p>
+         * 
+         * >  To query ID of the tenant, move the pointer over the profile picture in the upper-right corner of the DMS console. For more information, see the "View information about the current tenant" section of the [Manage DMS tenants](~~181330~~) topic.
+         */
         public Builder tid(Long tid) {
             this.putQueryParameter("Tid", tid);
             this.tid = tid;
@@ -169,7 +172,7 @@ public class RegisterUserRequest extends Request {
         }
 
         /**
-         * The error code returned.
+         * The UID of the Alibaba Cloud account of the user that you want to register.
          */
         public Builder uid(String uid) {
             this.putQueryParameter("Uid", uid);
@@ -178,7 +181,7 @@ public class RegisterUserRequest extends Request {
         }
 
         /**
-         * The ID of the request.
+         * The nickname of the user.
          */
         public Builder userNick(String userNick) {
             this.putQueryParameter("UserNick", userNick);

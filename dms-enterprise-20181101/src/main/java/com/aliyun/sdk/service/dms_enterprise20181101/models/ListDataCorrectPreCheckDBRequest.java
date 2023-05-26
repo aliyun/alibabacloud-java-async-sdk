@@ -121,7 +121,7 @@ public class ListDataCorrectPreCheckDBRequest extends Request {
         }
 
         /**
-         * The error code returned.
+         * The ID of the ticket for the data change.
          */
         public Builder orderId(Long orderId) {
             this.putQueryParameter("OrderId", orderId);
@@ -130,7 +130,12 @@ public class ListDataCorrectPreCheckDBRequest extends Request {
         }
 
         /**
-         * The operation that you want to perform. Set the value to **ListDataCorrectPreCheckDB**.
+         * The number of the page to return.
+         * <p>
+         * 
+         * Valid values: an integer that is greater than 0.
+         * 
+         * Default value: 1.
          */
         public Builder pageNumber(Long pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -139,7 +144,7 @@ public class ListDataCorrectPreCheckDBRequest extends Request {
         }
 
         /**
-         * The error message returned.
+         * The number of entries to return on each page.
          */
         public Builder pageSize(Long pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -148,7 +153,7 @@ public class ListDataCorrectPreCheckDBRequest extends Request {
         }
 
         /**
-         * The information about the databases that are involved in the precheck.
+         * The ID of the tenant. You can call the [GetUserActiveTenant](~~198073~~) or [ListUserTenants](~~198074~~) operation to query the ID of the tenant.
          */
         public Builder tid(Long tid) {
             this.putQueryParameter("Tid", tid);

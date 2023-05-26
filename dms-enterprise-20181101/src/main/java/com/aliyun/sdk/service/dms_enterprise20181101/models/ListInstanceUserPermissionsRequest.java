@@ -134,7 +134,7 @@ public class ListInstanceUserPermissionsRequest extends Request {
         }
 
         /**
-         * The user who grants the permissions.
+         * The ID of the instance. You can call the [ListInstances](~~141936~~) or [GetInstance](~~141567~~) operation to query the ID of the instance.
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -143,7 +143,7 @@ public class ListInstanceUserPermissionsRequest extends Request {
         }
 
         /**
-         * The ID of the instance.
+         * The number of the page to return.
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -152,7 +152,7 @@ public class ListInstanceUserPermissionsRequest extends Request {
         }
 
         /**
-         * The time when the permissions expire.
+         * The number of entries to return on each page.
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -161,10 +161,10 @@ public class ListInstanceUserPermissionsRequest extends Request {
         }
 
         /**
-         * The nickname of the user. You can call the [ListUsers](~~141938~~) or [GetUser](~~147098~~) operation to query the nickname of the user.
+         * The ID of the tenant.
          * <p>
          * 
-         * >  The value of the NickName parameter is that of the UserName parameter.
+         * >  To view the ID of the tenant, move the pointer over the profile picture in the upper-right corner of the Data Management (DMS) console. For more information, see the "View information about the current tenant" section of the [Manage DMS tenants](~~181330~~) topic.
          */
         public Builder tid(Long tid) {
             this.putQueryParameter("Tid", tid);
@@ -173,7 +173,10 @@ public class ListInstanceUserPermissionsRequest extends Request {
         }
 
         /**
-         * The error code.
+         * The nickname of the user. You can call the [ListUsers](~~141938~~) or [GetUser](~~147098~~) operation to query the nickname of the user.
+         * <p>
+         * 
+         * >  The value of the NickName parameter is that of the UserName parameter.
          */
         public Builder userName(String userName) {
             this.putQueryParameter("UserName", userName);

@@ -86,7 +86,7 @@ public class GetDBTaskSQLJobLogResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * ErrorCode.
+         * The error code returned.
          */
         public Builder errorCode(String errorCode) {
             this.errorCode = errorCode;
@@ -94,7 +94,7 @@ public class GetDBTaskSQLJobLogResponseBody extends TeaModel {
         }
 
         /**
-         * ErrorMessage.
+         * The error message returned.
          */
         public Builder errorMessage(String errorMessage) {
             this.errorMessage = errorMessage;
@@ -102,7 +102,7 @@ public class GetDBTaskSQLJobLogResponseBody extends TeaModel {
         }
 
         /**
-         * Log.
+         * The log that records the scheduling details.
          */
         public Builder log(String log) {
             this.log = log;
@@ -118,7 +118,11 @@ public class GetDBTaskSQLJobLogResponseBody extends TeaModel {
         }
 
         /**
-         * The operation that you want to perform. Set the value to **GetDBTaskSQLJobLog**.
+         * Indicates whether the request was successful. Valid values:
+         * <p>
+         * 
+         * *   **true**: The request was successful.
+         * *   **false**: The request failed.
          */
         public Builder success(Boolean success) {
             this.success = success;

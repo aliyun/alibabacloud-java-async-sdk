@@ -92,7 +92,10 @@ public class EnableUserRequest extends Request {
         }
 
         /**
-         * Tid.
+         * The ID of the tenant.
+         * <p>
+         * 
+         * >  To obtain the tenant ID, move the pointer over the profile picture in the upper-right corner of the Data Management (DMS) console. For more information, see [Tenant information](~~181330~~).
          */
         public Builder tid(Long tid) {
             this.putQueryParameter("Tid", tid);
@@ -101,7 +104,7 @@ public class EnableUserRequest extends Request {
         }
 
         /**
-         * Uid.
+         * The UID of the Alibaba Cloud account.
          */
         public Builder uid(String uid) {
             this.putQueryParameter("Uid", uid);

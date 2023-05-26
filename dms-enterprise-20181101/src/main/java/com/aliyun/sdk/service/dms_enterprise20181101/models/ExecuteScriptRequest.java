@@ -122,7 +122,10 @@ public class ExecuteScriptRequest extends Request {
         }
 
         /**
-         * Indicates whether the SQL statement is executed.
+         * The ID of the database.
+         * <p>
+         * 
+         * >  This parameter is equivalent to the DatabaseId parameter in the SearchDatabase, ListDatabases, and GetDatabase operations. You can call one of these operations to obtain the required database ID. For more information, see [SearchDatabase](~~141876~~), [ListDatabases](~~141873~~), and [GetDatabase](~~141869~~).
          */
         public Builder dbId(Integer dbId) {
             this.putQueryParameter("DbId", dbId);
@@ -131,7 +134,7 @@ public class ExecuteScriptRequest extends Request {
         }
 
         /**
-         * The error code.
+         * Specifies whether the database is a logical database.
          */
         public Builder logic(Boolean logic) {
             this.putQueryParameter("Logic", logic);
@@ -140,7 +143,7 @@ public class ExecuteScriptRequest extends Request {
         }
 
         /**
-         * Specifies whether the database is a logical database.
+         * The SQL statements to be executed. Data query language (DQL) statements, data definition language (DDL) statements, and data manipulation language (DML) statements are supported. The control mode of the instance that you want to query determines whether you can execute DDL and DML statements.
          */
         public Builder script(String script) {
             this.putQueryParameter("Script", script);
@@ -149,7 +152,10 @@ public class ExecuteScriptRequest extends Request {
         }
 
         /**
-         * The operation that you want to perform. Set the value to **ExecuteScript**.
+         * The ID of the tenant.
+         * <p>
+         * 
+         * >  To obtain the tenant ID, move the pointer over the profile picture in the upper-right corner of the Data Management (DMS) console. For more information, see [Tenant information](~~181330~~).
          */
         public Builder tid(Long tid) {
             this.putQueryParameter("Tid", tid);

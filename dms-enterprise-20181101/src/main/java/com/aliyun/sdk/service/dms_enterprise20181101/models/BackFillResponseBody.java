@@ -12,6 +12,9 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>BackFillResponseBody</p>
  */
 public class BackFillResponseBody extends TeaModel {
+    @NameInMap("DagInstanceId")
+    private Long dagInstanceId;
+
     @NameInMap("ErrorCode")
     private String errorCode;
 
@@ -28,6 +31,7 @@ public class BackFillResponseBody extends TeaModel {
     private Boolean success;
 
     private BackFillResponseBody(Builder builder) {
+        this.dagInstanceId = builder.dagInstanceId;
         this.errorCode = builder.errorCode;
         this.errorMessage = builder.errorMessage;
         this.nodeId = builder.nodeId;
@@ -41,6 +45,13 @@ public class BackFillResponseBody extends TeaModel {
 
     public static BackFillResponseBody create() {
         return builder().build();
+    }
+
+    /**
+     * @return dagInstanceId
+     */
+    public Long getDagInstanceId() {
+        return this.dagInstanceId;
     }
 
     /**
@@ -79,6 +90,7 @@ public class BackFillResponseBody extends TeaModel {
     }
 
     public static final class Builder {
+        private Long dagInstanceId; 
         private String errorCode; 
         private String errorMessage; 
         private Long nodeId; 
@@ -86,7 +98,15 @@ public class BackFillResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * ErrorCode.
+         * DagInstanceId.
+         */
+        public Builder dagInstanceId(Long dagInstanceId) {
+            this.dagInstanceId = dagInstanceId;
+            return this;
+        }
+
+        /**
+         * The error code returned if the request failed.
          */
         public Builder errorCode(String errorCode) {
             this.errorCode = errorCode;
@@ -94,7 +114,7 @@ public class BackFillResponseBody extends TeaModel {
         }
 
         /**
-         * ErrorMessage.
+         * The error message returned if the request failed.
          */
         public Builder errorMessage(String errorMessage) {
             this.errorMessage = errorMessage;
@@ -102,7 +122,7 @@ public class BackFillResponseBody extends TeaModel {
         }
 
         /**
-         * NodeId.
+         * The ID of the node.
          */
         public Builder nodeId(Long nodeId) {
             this.nodeId = nodeId;
@@ -110,7 +130,7 @@ public class BackFillResponseBody extends TeaModel {
         }
 
         /**
-         * Backfills data for task orchestration.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -118,7 +138,11 @@ public class BackFillResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * Indicates whether the request was successful. Valid values:
+         * <p>
+         * 
+         * *   **true**: The request was successful.
+         * *   **false**: The request failed.
          */
         public Builder success(Boolean success) {
             this.success = success;

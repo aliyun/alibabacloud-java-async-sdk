@@ -78,7 +78,7 @@ public class ListStandardGroupsRequest extends Request {
         }
 
         /**
-         * The error code returned if the request fails.
+         * The ID of the tenant.
          */
         public Builder tid(Long tid) {
             this.putQueryParameter("Tid", tid);

@@ -74,7 +74,7 @@ public class RegisterUserResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * ErrorCode.
+         * The error code returned.
          */
         public Builder errorCode(String errorCode) {
             this.errorCode = errorCode;
@@ -82,7 +82,7 @@ public class RegisterUserResponseBody extends TeaModel {
         }
 
         /**
-         * ErrorMessage.
+         * The error message returned.
          */
         public Builder errorMessage(String errorMessage) {
             this.errorMessage = errorMessage;
@@ -90,7 +90,7 @@ public class RegisterUserResponseBody extends TeaModel {
         }
 
         /**
-         * Registers a user for your enterprise.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -98,7 +98,9 @@ public class RegisterUserResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * *   true: The request was successful.
+         * <p>
+         * *   false: The request failed.
          */
         public Builder success(Boolean success) {
             this.success = success;

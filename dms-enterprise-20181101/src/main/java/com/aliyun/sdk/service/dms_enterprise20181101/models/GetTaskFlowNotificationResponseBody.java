@@ -86,7 +86,7 @@ public class GetTaskFlowNotificationResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * ErrorCode.
+         * The error code returned if the request failed.
          */
         public Builder errorCode(String errorCode) {
             this.errorCode = errorCode;
@@ -94,7 +94,7 @@ public class GetTaskFlowNotificationResponseBody extends TeaModel {
         }
 
         /**
-         * ErrorMessage.
+         * The error message returned if the request failed.
          */
         public Builder errorMessage(String errorMessage) {
             this.errorMessage = errorMessage;
@@ -102,7 +102,7 @@ public class GetTaskFlowNotificationResponseBody extends TeaModel {
         }
 
         /**
-         * Notification.
+         * The notification settings specified by the user.
          */
         public Builder notification(Notification notification) {
             this.notification = notification;
@@ -110,7 +110,7 @@ public class GetTaskFlowNotificationResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request. You can use the ID to query logs and troubleshoot issues.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -118,7 +118,11 @@ public class GetTaskFlowNotificationResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * Indicates whether the request was successful. Valid values:
+         * <p>
+         * 
+         * *   **true**: The request was successful.
+         * *   **false**: The request failed.
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -182,7 +186,11 @@ public class GetTaskFlowNotificationResponseBody extends TeaModel {
             private Boolean dagNotificationSuccess; 
 
             /**
-             * DagNotificationFail.
+             * Indicates whether notifications for failed task flows are enabled. Valid values:
+             * <p>
+             * 
+             * *   **true**: enabled
+             * *   **false**: disabled
              */
             public Builder dagNotificationFail(Boolean dagNotificationFail) {
                 this.dagNotificationFail = dagNotificationFail;
@@ -190,7 +198,11 @@ public class GetTaskFlowNotificationResponseBody extends TeaModel {
             }
 
             /**
-             * DagNotificationSla.
+             * Indicates whether service level agreement (SLA) global notifications for task flows are enabled. Valid values:
+             * <p>
+             * 
+             * *   **true**: enabled
+             * *   **false**: disabled
              */
             public Builder dagNotificationSla(Boolean dagNotificationSla) {
                 this.dagNotificationSla = dagNotificationSla;
@@ -198,7 +210,11 @@ public class GetTaskFlowNotificationResponseBody extends TeaModel {
             }
 
             /**
-             * DagNotificationSuccess.
+             * Indicates whether notifications for successful task flows are enabled. Valid values:
+             * <p>
+             * 
+             * *   **true**: enabled
+             * *   **false**: disabled
              */
             public Builder dagNotificationSuccess(Boolean dagNotificationSuccess) {
                 this.dagNotificationSuccess = dagNotificationSuccess;

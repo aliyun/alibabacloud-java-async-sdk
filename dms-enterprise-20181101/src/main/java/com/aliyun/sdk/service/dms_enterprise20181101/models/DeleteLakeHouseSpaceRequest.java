@@ -93,7 +93,7 @@ public class DeleteLakeHouseSpaceRequest extends Request {
         }
 
         /**
-         * The error code returned if the request fails.
+         * The ID of the workspace. You can call the [GetLhSpaceByName](~~424379~~) operation to obtain the workspace ID.
          */
         public Builder spaceId(Long spaceId) {
             this.putQueryParameter("SpaceId", spaceId);
@@ -102,7 +102,7 @@ public class DeleteLakeHouseSpaceRequest extends Request {
         }
 
         /**
-         * The ID of the request.
+         * The ID of the tenant. You can call the [GetUserActiveTenant](~~198073~~) or [ListUserTenants](~~198074~~) operation to obtain the tenant ID.
          */
         public Builder tid(Long tid) {
             this.putQueryParameter("Tid", tid);

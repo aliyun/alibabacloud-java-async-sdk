@@ -92,7 +92,7 @@ public class GetDataExportDownloadURLRequest extends Request {
         }
 
         /**
-         * The details about the download URL of the file that records the export results for the ticket.
+         * The ID of the ticket. You can call the [ListOrders](~~144643~~) operation to obtain the ticket ID.
          */
         public Builder orderId(Long orderId) {
             this.putQueryParameter("OrderId", orderId);

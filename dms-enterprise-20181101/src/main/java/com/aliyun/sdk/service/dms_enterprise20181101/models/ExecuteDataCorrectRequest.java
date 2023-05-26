@@ -106,25 +106,6 @@ public class ExecuteDataCorrectRequest extends Request {
         }
 
         /**
-         * The ID of the request.
-         */
-        public Builder actionDetail(java.util.Map < String, ? > actionDetail) {
-            String actionDetailShrink = shrink(actionDetail, "ActionDetail", "json");
-            this.putQueryParameter("ActionDetail", actionDetailShrink);
-            this.actionDetail = actionDetail;
-            return this;
-        }
-
-        /**
-         * The error code.
-         */
-        public Builder orderId(Long orderId) {
-            this.putQueryParameter("OrderId", orderId);
-            this.orderId = orderId;
-            return this;
-        }
-
-        /**
          * The parameters that are required to perform the data change.
          * <p>
          * 
@@ -138,6 +119,25 @@ public class ExecuteDataCorrectRequest extends Request {
          *     "backupData" : true // Specify whether to back up data. 
          *   }
          * ```
+         */
+        public Builder actionDetail(java.util.Map < String, ? > actionDetail) {
+            String actionDetailShrink = shrink(actionDetail, "ActionDetail", "json");
+            this.putQueryParameter("ActionDetail", actionDetailShrink);
+            this.actionDetail = actionDetail;
+            return this;
+        }
+
+        /**
+         * The ID of the ticket. You can call the [ListOrders](~~144643~~) operation to query the ID of the ticket.
+         */
+        public Builder orderId(Long orderId) {
+            this.putQueryParameter("OrderId", orderId);
+            this.orderId = orderId;
+            return this;
+        }
+
+        /**
+         * The ID of the tenant. You can call the [GetUserActiveTenant](~~198073~~) operation to query the tenant ID.
          */
         public Builder tid(String tid) {
             this.putQueryParameter("Tid", tid);

@@ -92,7 +92,7 @@ public class GetDataCorrectOrderDetailRequest extends Request {
         }
 
         /**
-         * The information about the data change ticket.
+         * The ID of the ticket. You can call the [ListOrders](~~144643~~) operation to obtain the ticket ID.
          */
         public Builder orderId(Long orderId) {
             this.putQueryParameter("OrderId", orderId);
@@ -101,13 +101,7 @@ public class GetDataCorrectOrderDetailRequest extends Request {
         }
 
         /**
-         * The status of the precheck. Valid values:
-         * <p>
-         * 
-         * *   **WAITING**: The ticket is pending precheck.
-         * *   **RUNNING**: The ticket is being prechecked.
-         * *   **SUCCESS**: The ticket passes the precheck.
-         * *   **FAIL**: The ticket fails the precheck.
+         * The ID of the tenant. You can call the [GetUserActiveTenant](~~198073~~) or [ListUserTenants](~~198074~~) operation to obtain the tenant ID.
          */
         public Builder tid(Long tid) {
             this.putQueryParameter("Tid", tid);

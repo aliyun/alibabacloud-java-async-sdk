@@ -38,6 +38,10 @@ public class BackFillRequest extends Request {
     private Long dagId;
 
     @Query
+    @NameInMap("FilterNodeIds")
+    private java.util.List < Long > filterNodeIds;
+
+    @Query
     @NameInMap("HistoryDagId")
     private Long historyDagId;
 
@@ -66,6 +70,7 @@ public class BackFillRequest extends Request {
         this.backFillDateBegin = builder.backFillDateBegin;
         this.backFillDateEnd = builder.backFillDateEnd;
         this.dagId = builder.dagId;
+        this.filterNodeIds = builder.filterNodeIds;
         this.historyDagId = builder.historyDagId;
         this.interval = builder.interval;
         this.isTriggerSubTree = builder.isTriggerSubTree;
@@ -129,6 +134,13 @@ public class BackFillRequest extends Request {
     }
 
     /**
+     * @return filterNodeIds
+     */
+    public java.util.List < Long > getFilterNodeIds() {
+        return this.filterNodeIds;
+    }
+
+    /**
      * @return historyDagId
      */
     public Long getHistoryDagId() {
@@ -170,6 +182,7 @@ public class BackFillRequest extends Request {
         private String backFillDateBegin; 
         private String backFillDateEnd; 
         private Long dagId; 
+        private java.util.List < Long > filterNodeIds; 
         private Long historyDagId; 
         private Integer interval; 
         private Boolean isTriggerSubTree; 
@@ -188,6 +201,7 @@ public class BackFillRequest extends Request {
             this.backFillDateBegin = request.backFillDateBegin;
             this.backFillDateEnd = request.backFillDateEnd;
             this.dagId = request.dagId;
+            this.filterNodeIds = request.filterNodeIds;
             this.historyDagId = request.historyDagId;
             this.interval = request.interval;
             this.isTriggerSubTree = request.isTriggerSubTree;
@@ -205,7 +219,11 @@ public class BackFillRequest extends Request {
         }
 
         /**
-         * The ID of the request.
+         * The running sequence of task flows for data backfill. Valid values:
+         * <p>
+         * 
+         * *   **0**: reverse chronological order.
+         * *   **1**: chronological order. This is the default value.
          */
         public Builder asc(Boolean asc) {
             this.putQueryParameter("Asc", asc);
@@ -214,7 +232,7 @@ public class BackFillRequest extends Request {
         }
 
         /**
-         * The start date of the date range for the data to be backfilled. This parameter is required if you specify a date range for data backfill.
+         * The date for the data to be backfilled. This parameter is required if you specify a date for data backfill.
          */
         public Builder backFillDate(String backFillDate) {
             this.putQueryParameter("BackFillDate", backFillDate);
@@ -223,11 +241,7 @@ public class BackFillRequest extends Request {
         }
 
         /**
-         * The running sequence of task flows for data backfill. Valid values:
-         * <p>
-         * 
-         * *   **0**: reverse chronological order.
-         * *   **1**: chronological order. This is the default value.
+         * The start date of the date range for the data to be backfilled. This parameter is required if you specify a date range for data backfill.
          */
         public Builder backFillDateBegin(String backFillDateBegin) {
             this.putQueryParameter("BackFillDateBegin", backFillDateBegin);
@@ -236,10 +250,7 @@ public class BackFillRequest extends Request {
         }
 
         /**
-         * The ID of the tenant.
-         * <p>
-         * 
-         * >  To view the ID of the tenant, go to the Data Management (DMS) console and move the pointer over the profile picture in the upper-right corner. For more information, see [View information about the current tenant](~~181330~~).
+         * The end date of the date range for the data to be backfilled. This parameter is required if you specify a date range for data backfill.
          */
         public Builder backFillDateEnd(String backFillDateEnd) {
             this.putQueryParameter("BackFillDateEnd", backFillDateEnd);
@@ -248,7 +259,7 @@ public class BackFillRequest extends Request {
         }
 
         /**
-         * The operation that you want to perform. Set the value to **BackFill**.
+         * The ID of the task flow. You can call the [ListTaskFlow](~~424565~~) or [ListLhTaskFlowAndScenario](~~426672~~) operation to query the task flow ID.
          */
         public Builder dagId(Long dagId) {
             this.putQueryParameter("DagId", dagId);
@@ -257,10 +268,17 @@ public class BackFillRequest extends Request {
         }
 
         /**
-         * The BackFillDate parameter is required if you specify a date for data backfill.
-         * <p>
-         * 
-         * The BackFillDateBegin and BackFillDateEnd parameters are required if you specify a date range for data backfill.
+         * FilterNodeIds.
+         */
+        public Builder filterNodeIds(java.util.List < Long > filterNodeIds) {
+            String filterNodeIdsShrink = shrink(filterNodeIds, "FilterNodeIds", "json");
+            this.putQueryParameter("FilterNodeIds", filterNodeIdsShrink);
+            this.filterNodeIds = filterNodeIds;
+            return this;
+        }
+
+        /**
+         * The ID of the historical task flow.
          */
         public Builder historyDagId(Long historyDagId) {
             this.putQueryParameter("HistoryDagId", historyDagId);
@@ -269,7 +287,7 @@ public class BackFillRequest extends Request {
         }
 
         /**
-         * Specifies whether to run descendant nodes. Default value: true.
+         * The interval at which data backfill is performed. Unit: hours. Minimum value: 1. Default value: 24.
          */
         public Builder interval(Integer interval) {
             this.putQueryParameter("Interval", interval);
@@ -278,7 +296,7 @@ public class BackFillRequest extends Request {
         }
 
         /**
-         * The error message returned if the request failed.
+         * Specifies whether to run descendant nodes. Default value: true.
          */
         public Builder isTriggerSubTree(Boolean isTriggerSubTree) {
             this.putQueryParameter("IsTriggerSubTree", isTriggerSubTree);
@@ -287,7 +305,7 @@ public class BackFillRequest extends Request {
         }
 
         /**
-         * The date for the data to be backfilled. This parameter is required if you specify a date for data backfill.
+         * The number of nodes for which you want to backfill data.
          */
         public Builder startNodeIds(java.util.List < Long > startNodeIds) {
             String startNodeIdsShrink = shrink(startNodeIds, "StartNodeIds", "json");
@@ -297,7 +315,10 @@ public class BackFillRequest extends Request {
         }
 
         /**
-         * The error code returned if the request failed.
+         * The ID of the tenant.
+         * <p>
+         * 
+         * >  To view the ID of the tenant, go to the Data Management (DMS) console and move the pointer over the profile picture in the upper-right corner. For more information, see [View information about the current tenant](~~181330~~).
          */
         public Builder tid(Long tid) {
             this.putQueryParameter("Tid", tid);

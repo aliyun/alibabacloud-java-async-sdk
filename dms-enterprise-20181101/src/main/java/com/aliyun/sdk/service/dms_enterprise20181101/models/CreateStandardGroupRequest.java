@@ -123,7 +123,7 @@ public class CreateStandardGroupRequest extends Request {
         }
 
         /**
-         * The created security rule set.
+         * The type of the database engine. For more information about the valid values of this parameter, see [DbType parameter](~~198106~~).
          */
         public Builder dbType(String dbType) {
             this.putQueryParameter("DbType", dbType);
@@ -132,7 +132,7 @@ public class CreateStandardGroupRequest extends Request {
         }
 
         /**
-         * The type of the database engine. For more information about the valid values of this parameter, see [DbType parameter](~~198106~~).
+         * The description of the security rule set.
          */
         public Builder description(String description) {
             this.putQueryParameter("Description", description);
@@ -141,12 +141,7 @@ public class CreateStandardGroupRequest extends Request {
         }
 
         /**
-         * The control mode. Valid values:
-         * <p>
-         * 
-         * *   **NONE_CONTROL**: Flexible Management
-         * *   **STABLE**: Stable Change
-         * *   **COMMON**: Security Collaboration
+         * The name of the security rule set.
          */
         public Builder groupName(String groupName) {
             this.putQueryParameter("GroupName", groupName);
@@ -155,7 +150,7 @@ public class CreateStandardGroupRequest extends Request {
         }
 
         /**
-         * The error code returned if the request fails.
+         * The ID of the tenant.
          */
         public Builder tid(Long tid) {
             this.putQueryParameter("Tid", tid);

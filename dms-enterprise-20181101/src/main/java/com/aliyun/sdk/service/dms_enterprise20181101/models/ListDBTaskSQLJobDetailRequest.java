@@ -121,7 +121,7 @@ public class ListDBTaskSQLJobDetailRequest extends Request {
         }
 
         /**
-         * The number of times that the SQL statement was executed.
+         * The ID of the SQL task. You can call the [ListDBTaskSQLJob](~~207049~~) operation to query the SQL task ID.
          */
         public Builder jobId(Long jobId) {
             this.putQueryParameter("JobId", jobId);
@@ -130,17 +130,7 @@ public class ListDBTaskSQLJobDetailRequest extends Request {
         }
 
         /**
-         * The status of the SQL task. Valid values:
-         * <p>
-         * 
-         * *   **INIT**: The SQL task was initialized.
-         * *   **PENDING**: The SQL task waited to be run.
-         * *   **BE_SCHEDULED**: The SQL task waited to be scheduled.
-         * *   **FAIL**: The SQL task failed.
-         * *   **SUCCESS**: The SQL task was successful.
-         * *   **PAUSE**: The SQL task was paused.
-         * *   **DELETE**: The SQL task was deleted.
-         * *   **RUNNING**: The SQL task was being run.
+         * The number of the page to return.
          */
         public Builder pageNumber(Long pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -149,7 +139,7 @@ public class ListDBTaskSQLJobDetailRequest extends Request {
         }
 
         /**
-         * The error code that is returned.
+         * The number of entries to return on each page.
          */
         public Builder pageSize(Long pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -158,7 +148,7 @@ public class ListDBTaskSQLJobDetailRequest extends Request {
         }
 
         /**
-         * The ID of the physical database.
+         * The ID of the tenant. You can call the [GetUserActiveTenant](~~198073~~) operation to query the tenant ID.
          */
         public Builder tid(Long tid) {
             this.putQueryParameter("Tid", tid);

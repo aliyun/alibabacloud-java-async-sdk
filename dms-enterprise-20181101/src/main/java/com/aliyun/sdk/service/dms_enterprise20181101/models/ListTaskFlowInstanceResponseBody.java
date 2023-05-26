@@ -98,15 +98,7 @@ public class ListTaskFlowInstanceResponseBody extends TeaModel {
         private Integer totalCount; 
 
         /**
-         * The status of the task flow. Valid values:
-         * <p>
-         * 
-         * *   **0**: The task flow is waiting to be scheduled.
-         * *   **1**: The task flow is being executed.
-         * *   **2**: The task flow is paused.
-         * *   **3**: The task flow failed.
-         * *   **4**: The task flow is executed.
-         * *   **5**: The task flow is complete.
+         * The information about the execution records returned.
          */
         public Builder DAGInstanceList(DAGInstanceList DAGInstanceList) {
             this.DAGInstanceList = DAGInstanceList;
@@ -114,7 +106,7 @@ public class ListTaskFlowInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * The beginning of the time range to query the execution records of the task flow. Specify the time in the yyyy-MM-DD format.
+         * The error code returned if the request fails.
          */
         public Builder errorCode(String errorCode) {
             this.errorCode = errorCode;
@@ -122,7 +114,7 @@ public class ListTaskFlowInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the tenant. You can call the [GetUserActiveTenant](~~198073~~) or [ListUserTenants](~~198074~~) operation to obtain the tenant ID.
+         * The error message returned if the request fails.
          */
         public Builder errorMessage(String errorMessage) {
             this.errorMessage = errorMessage;
@@ -130,11 +122,7 @@ public class ListTaskFlowInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * The mode in which the task flow is triggered. Valid values:
-         * <p>
-         * 
-         * *   **0**: The task flow is automatically triggered based on periodic scheduling.
-         * *   **1**: The task flow is manually triggered.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -142,7 +130,11 @@ public class ListTaskFlowInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * The name of the task flow.
+         * Indicates whether the request is successful. Valid values:
+         * <p>
+         * 
+         * *   **true**: The request is successful.
+         * *   **false**: The request fails.
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -150,7 +142,7 @@ public class ListTaskFlowInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * TotalCount.
+         * The total number of execution records returned.
          */
         public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;
@@ -197,6 +189,9 @@ public class ListTaskFlowInstanceResponseBody extends TeaModel {
         @NameInMap("TriggerType")
         private Integer triggerType;
 
+        @NameInMap("startTime")
+        private String startTime;
+
         private DAGInstance(Builder builder) {
             this.businessTime = builder.businessTime;
             this.dagId = builder.dagId;
@@ -209,6 +204,7 @@ public class ListTaskFlowInstanceResponseBody extends TeaModel {
             this.ownerName = builder.ownerName;
             this.status = builder.status;
             this.triggerType = builder.triggerType;
+            this.startTime = builder.startTime;
         }
 
         public static Builder builder() {
@@ -296,6 +292,13 @@ public class ListTaskFlowInstanceResponseBody extends TeaModel {
             return this.triggerType;
         }
 
+        /**
+         * @return startTime
+         */
+        public String getStartTime() {
+            return this.startTime;
+        }
+
         public static final class Builder {
             private String businessTime; 
             private String dagId; 
@@ -308,9 +311,10 @@ public class ListTaskFlowInstanceResponseBody extends TeaModel {
             private String ownerName; 
             private Integer status; 
             private Integer triggerType; 
+            private String startTime; 
 
             /**
-             * The information about the execution records returned.
+             * The business time of the task flow. The time is displayed in the yyyy-MM-DD HH:mm:ss format.
              */
             public Builder businessTime(String businessTime) {
                 this.businessTime = businessTime;
@@ -318,7 +322,7 @@ public class ListTaskFlowInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * The description of the task.
+             * The ID of the task flow.
              */
             public Builder dagId(String dagId) {
                 this.dagId = dagId;
@@ -326,7 +330,7 @@ public class ListTaskFlowInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * DagName.
+             * The name of the task flow.
              */
             public Builder dagName(String dagName) {
                 this.dagName = dagName;
@@ -342,7 +346,7 @@ public class ListTaskFlowInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * The end of the time range to query the execution records of the task flow. Specify the time in the yyyy-MM-DD format.
+             * The time when the execution of the task flow was complete. The time is displayed in the yyyy-MM-DD HH:mm:ss format.
              */
             public Builder endTime(String endTime) {
                 this.endTime = endTime;
@@ -350,7 +354,7 @@ public class ListTaskFlowInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * Queries the execution records of a task flow.
+             * The ID of the previously published version of the task flow.
              */
             public Builder historyDagId(Long historyDagId) {
                 this.historyDagId = historyDagId;
@@ -358,10 +362,42 @@ public class ListTaskFlowInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * The error message returned if the request fails.
+             * The ID of the execution record.
              */
             public Builder id(Long id) {
                 this.id = id;
+                return this;
+            }
+
+            /**
+             * The description of the task.
+             */
+            public Builder message(String message) {
+                this.message = message;
+                return this;
+            }
+
+            /**
+             * The name of the task flow owner.
+             */
+            public Builder ownerName(String ownerName) {
+                this.ownerName = ownerName;
+                return this;
+            }
+
+            /**
+             * The status of the task flow. Valid values:
+             * <p>
+             * 
+             * *   **0**: The task flow is waiting to be scheduled.
+             * *   **1**: The task flow is being executed.
+             * *   **2**: The task flow is paused.
+             * *   **3**: The task flow failed.
+             * *   **4**: The task flow is executed.
+             * *   **5**: The task flow is complete.
+             */
+            public Builder status(Integer status) {
+                this.status = status;
                 return this;
             }
 
@@ -372,32 +408,16 @@ public class ListTaskFlowInstanceResponseBody extends TeaModel {
              * *   **0**: The task flow is automatically triggered based on periodic scheduling.
              * *   **1**: The task flow is manually triggered.
              */
-            public Builder message(String message) {
-                this.message = message;
-                return this;
-            }
-
-            /**
-             * OwnerName.
-             */
-            public Builder ownerName(String ownerName) {
-                this.ownerName = ownerName;
-                return this;
-            }
-
-            /**
-             * The ID of the request.
-             */
-            public Builder status(Integer status) {
-                this.status = status;
-                return this;
-            }
-
-            /**
-             * The time when the execution of the task flow was complete. The time is displayed in the yyyy-MM-DD HH:mm:ss format.
-             */
             public Builder triggerType(Integer triggerType) {
                 this.triggerType = triggerType;
+                return this;
+            }
+
+            /**
+             * startTime.
+             */
+            public Builder startTime(String startTime) {
+                this.startTime = startTime;
                 return this;
             }
 

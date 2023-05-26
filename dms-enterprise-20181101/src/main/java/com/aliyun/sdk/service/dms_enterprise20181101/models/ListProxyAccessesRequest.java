@@ -93,7 +93,10 @@ public class ListProxyAccessesRequest extends Request {
         }
 
         /**
-         * ProxyId.
+         * The ID of the secure access proxy. 
+         * <p>
+         * 
+         * >  You can call the [ListProxies](https://www.alibabacloud.com/help/en/data-management-service/latest/listproxies) operation to query the ID of the secure access proxy.
          */
         public Builder proxyId(Long proxyId) {
             this.putQueryParameter("ProxyId", proxyId);
@@ -102,7 +105,10 @@ public class ListProxyAccessesRequest extends Request {
         }
 
         /**
-         * Tid.
+         * The ID of the tenant. 
+         * <p>
+         * 
+         * >  You can call the [GetUserActiveTenant](https://www.alibabacloud.com/help/en/data-management-service/latest/getuseractivetenant) operation to query the ID of the tenant.
          */
         public Builder tid(Long tid) {
             this.putQueryParameter("Tid", tid);

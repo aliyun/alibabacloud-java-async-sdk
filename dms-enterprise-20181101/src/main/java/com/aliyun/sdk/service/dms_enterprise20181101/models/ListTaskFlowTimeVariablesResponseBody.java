@@ -86,7 +86,7 @@ public class ListTaskFlowTimeVariablesResponseBody extends TeaModel {
         private TimeVariables timeVariables; 
 
         /**
-         * ErrorCode.
+         * The error code returned if the request failed.
          */
         public Builder errorCode(String errorCode) {
             this.errorCode = errorCode;
@@ -94,7 +94,7 @@ public class ListTaskFlowTimeVariablesResponseBody extends TeaModel {
         }
 
         /**
-         * ErrorMessage.
+         * The error message returned if the request failed.
          */
         public Builder errorMessage(String errorMessage) {
             this.errorMessage = errorMessage;
@@ -102,7 +102,7 @@ public class ListTaskFlowTimeVariablesResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -110,7 +110,11 @@ public class ListTaskFlowTimeVariablesResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * Indicates whether the request was successful. Valid values:
+         * <p>
+         * 
+         * *   **true**: The request was successful.
+         * *   **false**: The request failed.
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -118,7 +122,7 @@ public class ListTaskFlowTimeVariablesResponseBody extends TeaModel {
         }
 
         /**
-         * TimeVariables.
+         * The time variables for the task flow.
          */
         public Builder timeVariables(TimeVariables timeVariables) {
             this.timeVariables = timeVariables;
@@ -170,7 +174,7 @@ public class ListTaskFlowTimeVariablesResponseBody extends TeaModel {
             private String pattern; 
 
             /**
-             * Name.
+             * The name of the time variable.
              */
             public Builder name(String name) {
                 this.name = name;
@@ -178,7 +182,7 @@ public class ListTaskFlowTimeVariablesResponseBody extends TeaModel {
             }
 
             /**
-             * Pattern.
+             * The format of the time variable.
              */
             public Builder pattern(String pattern) {
                 this.pattern = pattern;

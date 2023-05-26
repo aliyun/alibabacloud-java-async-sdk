@@ -74,7 +74,7 @@ public class DeleteUserResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * ErrorCode.
+         * The error code.
          */
         public Builder errorCode(String errorCode) {
             this.errorCode = errorCode;
@@ -82,7 +82,7 @@ public class DeleteUserResponseBody extends TeaModel {
         }
 
         /**
-         * ErrorMessage.
+         * The error message.
          */
         public Builder errorMessage(String errorMessage) {
             this.errorMessage = errorMessage;
@@ -90,7 +90,7 @@ public class DeleteUserResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -98,7 +98,9 @@ public class DeleteUserResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * *   **true**: The account was deleted.
+         * <p>
+         * *   **false**: The account failed to be deleted.
          */
         public Builder success(Boolean success) {
             this.success = success;

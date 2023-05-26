@@ -86,7 +86,7 @@ public class ListDataCorrectPreCheckDBResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * The ID of the tenant. You can call the [GetUserActiveTenant](~~198073~~) or [ListUserTenants](~~198074~~) operation to query the ID of the tenant.
+         * The error code returned.
          */
         public Builder errorCode(String errorCode) {
             this.errorCode = errorCode;
@@ -94,7 +94,7 @@ public class ListDataCorrectPreCheckDBResponseBody extends TeaModel {
         }
 
         /**
-         * The name of the database.
+         * The error message returned.
          */
         public Builder errorMessage(String errorMessage) {
             this.errorMessage = errorMessage;
@@ -102,7 +102,7 @@ public class ListDataCorrectPreCheckDBResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * The information about the databases that are involved in the precheck.
          */
         public Builder preCheckDBList(java.util.List < PreCheckDBList> preCheckDBList) {
             this.preCheckDBList = preCheckDBList;
@@ -110,7 +110,7 @@ public class ListDataCorrectPreCheckDBResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the ticket for the data change.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -118,7 +118,7 @@ public class ListDataCorrectPreCheckDBResponseBody extends TeaModel {
         }
 
         /**
-         * The number of SQL statements.
+         * Indicates whether the request is successful.
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -182,7 +182,7 @@ public class ListDataCorrectPreCheckDBResponseBody extends TeaModel {
             private Long sqlNum; 
 
             /**
-             * DbId.
+             * The ID of the database.
              */
             public Builder dbId(Long dbId) {
                 this.dbId = dbId;
@@ -190,7 +190,7 @@ public class ListDataCorrectPreCheckDBResponseBody extends TeaModel {
             }
 
             /**
-             * SearchName.
+             * The name of the database.
              */
             public Builder searchName(String searchName) {
                 this.searchName = searchName;
@@ -198,7 +198,7 @@ public class ListDataCorrectPreCheckDBResponseBody extends TeaModel {
             }
 
             /**
-             * SqlNum.
+             * The number of SQL statements.
              */
             public Builder sqlNum(Long sqlNum) {
                 this.sqlNum = sqlNum;

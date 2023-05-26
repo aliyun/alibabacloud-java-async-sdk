@@ -98,7 +98,7 @@ public class ListTaskFlowsByPageResponseBody extends TeaModel {
         private Integer totalCount; 
 
         /**
-         * ErrorCode.
+         * The error code returned if the request failed.
          */
         public Builder errorCode(String errorCode) {
             this.errorCode = errorCode;
@@ -106,7 +106,7 @@ public class ListTaskFlowsByPageResponseBody extends TeaModel {
         }
 
         /**
-         * ErrorMessage.
+         * The error message returned if the request failed.
          */
         public Builder errorMessage(String errorMessage) {
             this.errorMessage = errorMessage;
@@ -114,7 +114,7 @@ public class ListTaskFlowsByPageResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -122,7 +122,11 @@ public class ListTaskFlowsByPageResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * Indicates whether the request was successful. Valid values:
+         * <p>
+         * 
+         * *   **true**: The request was successful.
+         * *   **false**: The request failed.
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -130,7 +134,7 @@ public class ListTaskFlowsByPageResponseBody extends TeaModel {
         }
 
         /**
-         * TaskFlowList.
+         * The details of the returned task flows.
          */
         public Builder taskFlowList(TaskFlowList taskFlowList) {
             this.taskFlowList = taskFlowList;
@@ -138,7 +142,7 @@ public class ListTaskFlowsByPageResponseBody extends TeaModel {
         }
 
         /**
-         * TotalCount.
+         * The total number of entries returned.
          */
         public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;
@@ -157,6 +161,21 @@ public class ListTaskFlowsByPageResponseBody extends TeaModel {
 
         @NameInMap("CreatorNickName")
         private String creatorNickName;
+
+        @NameInMap("CronBeginDate")
+        private String cronBeginDate;
+
+        @NameInMap("CronEndDate")
+        private String cronEndDate;
+
+        @NameInMap("CronStr")
+        private String cronStr;
+
+        @NameInMap("CronSwitch")
+        private Boolean cronSwitch;
+
+        @NameInMap("CronType")
+        private Integer cronType;
 
         @NameInMap("DagName")
         private String dagName;
@@ -179,12 +198,29 @@ public class ListTaskFlowsByPageResponseBody extends TeaModel {
         @NameInMap("LatestInstanceTime")
         private String latestInstanceTime;
 
+        @NameInMap("ScenarioId")
+        private String scenarioId;
+
+        @NameInMap("ScheduleParam")
+        private String scheduleParam;
+
         @NameInMap("Status")
         private Integer status;
+
+        @NameInMap("TimeZoneId")
+        private String timeZoneId;
+
+        @NameInMap("TriggerType")
+        private Integer triggerType;
 
         private TaskFlow(Builder builder) {
             this.creatorId = builder.creatorId;
             this.creatorNickName = builder.creatorNickName;
+            this.cronBeginDate = builder.cronBeginDate;
+            this.cronEndDate = builder.cronEndDate;
+            this.cronStr = builder.cronStr;
+            this.cronSwitch = builder.cronSwitch;
+            this.cronType = builder.cronType;
             this.dagName = builder.dagName;
             this.dagOwnerNickName = builder.dagOwnerNickName;
             this.deployId = builder.deployId;
@@ -192,7 +228,11 @@ public class ListTaskFlowsByPageResponseBody extends TeaModel {
             this.id = builder.id;
             this.latestInstanceStatus = builder.latestInstanceStatus;
             this.latestInstanceTime = builder.latestInstanceTime;
+            this.scenarioId = builder.scenarioId;
+            this.scheduleParam = builder.scheduleParam;
             this.status = builder.status;
+            this.timeZoneId = builder.timeZoneId;
+            this.triggerType = builder.triggerType;
         }
 
         public static Builder builder() {
@@ -215,6 +255,41 @@ public class ListTaskFlowsByPageResponseBody extends TeaModel {
          */
         public String getCreatorNickName() {
             return this.creatorNickName;
+        }
+
+        /**
+         * @return cronBeginDate
+         */
+        public String getCronBeginDate() {
+            return this.cronBeginDate;
+        }
+
+        /**
+         * @return cronEndDate
+         */
+        public String getCronEndDate() {
+            return this.cronEndDate;
+        }
+
+        /**
+         * @return cronStr
+         */
+        public String getCronStr() {
+            return this.cronStr;
+        }
+
+        /**
+         * @return cronSwitch
+         */
+        public Boolean getCronSwitch() {
+            return this.cronSwitch;
+        }
+
+        /**
+         * @return cronType
+         */
+        public Integer getCronType() {
+            return this.cronType;
         }
 
         /**
@@ -267,15 +342,48 @@ public class ListTaskFlowsByPageResponseBody extends TeaModel {
         }
 
         /**
+         * @return scenarioId
+         */
+        public String getScenarioId() {
+            return this.scenarioId;
+        }
+
+        /**
+         * @return scheduleParam
+         */
+        public String getScheduleParam() {
+            return this.scheduleParam;
+        }
+
+        /**
          * @return status
          */
         public Integer getStatus() {
             return this.status;
         }
 
+        /**
+         * @return timeZoneId
+         */
+        public String getTimeZoneId() {
+            return this.timeZoneId;
+        }
+
+        /**
+         * @return triggerType
+         */
+        public Integer getTriggerType() {
+            return this.triggerType;
+        }
+
         public static final class Builder {
             private String creatorId; 
             private String creatorNickName; 
+            private String cronBeginDate; 
+            private String cronEndDate; 
+            private String cronStr; 
+            private Boolean cronSwitch; 
+            private Integer cronType; 
             private String dagName; 
             private String dagOwnerNickName; 
             private Long deployId; 
@@ -283,10 +391,14 @@ public class ListTaskFlowsByPageResponseBody extends TeaModel {
             private Long id; 
             private Integer latestInstanceStatus; 
             private String latestInstanceTime; 
+            private String scenarioId; 
+            private String scheduleParam; 
             private Integer status; 
+            private String timeZoneId; 
+            private Integer triggerType; 
 
             /**
-             * CreatorId.
+             * The ID of the user who created the task flow.
              */
             public Builder creatorId(String creatorId) {
                 this.creatorId = creatorId;
@@ -294,7 +406,7 @@ public class ListTaskFlowsByPageResponseBody extends TeaModel {
             }
 
             /**
-             * CreatorNickName.
+             * The username of the user who created the task flow.
              */
             public Builder creatorNickName(String creatorNickName) {
                 this.creatorNickName = creatorNickName;
@@ -302,7 +414,47 @@ public class ListTaskFlowsByPageResponseBody extends TeaModel {
             }
 
             /**
-             * DagName.
+             * CronBeginDate.
+             */
+            public Builder cronBeginDate(String cronBeginDate) {
+                this.cronBeginDate = cronBeginDate;
+                return this;
+            }
+
+            /**
+             * CronEndDate.
+             */
+            public Builder cronEndDate(String cronEndDate) {
+                this.cronEndDate = cronEndDate;
+                return this;
+            }
+
+            /**
+             * CronStr.
+             */
+            public Builder cronStr(String cronStr) {
+                this.cronStr = cronStr;
+                return this;
+            }
+
+            /**
+             * CronSwitch.
+             */
+            public Builder cronSwitch(Boolean cronSwitch) {
+                this.cronSwitch = cronSwitch;
+                return this;
+            }
+
+            /**
+             * CronType.
+             */
+            public Builder cronType(Integer cronType) {
+                this.cronType = cronType;
+                return this;
+            }
+
+            /**
+             * The name of the task flow.
              */
             public Builder dagName(String dagName) {
                 this.dagName = dagName;
@@ -310,7 +462,7 @@ public class ListTaskFlowsByPageResponseBody extends TeaModel {
             }
 
             /**
-             * DagOwnerNickName.
+             * The username of the owner of the task flow.
              */
             public Builder dagOwnerNickName(String dagOwnerNickName) {
                 this.dagOwnerNickName = dagOwnerNickName;
@@ -318,7 +470,7 @@ public class ListTaskFlowsByPageResponseBody extends TeaModel {
             }
 
             /**
-             * DeployId.
+             * The ID of the last deployment record of the task flow.
              */
             public Builder deployId(Long deployId) {
                 this.deployId = deployId;
@@ -326,7 +478,7 @@ public class ListTaskFlowsByPageResponseBody extends TeaModel {
             }
 
             /**
-             * Description.
+             * The description of the task flow.
              */
             public Builder description(String description) {
                 this.description = description;
@@ -334,7 +486,7 @@ public class ListTaskFlowsByPageResponseBody extends TeaModel {
             }
 
             /**
-             * Id.
+             * The ID of the task flow.
              */
             public Builder id(Long id) {
                 this.id = id;
@@ -342,7 +494,12 @@ public class ListTaskFlowsByPageResponseBody extends TeaModel {
             }
 
             /**
-             * LatestInstanceStatus.
+             * The status of the last execution of the task flow. Valid values:
+             * <p>
+             * 
+             * *   **0**: invalid
+             * *   **1**: scheduling disabled
+             * *   **2**: waiting to be scheduled
              */
             public Builder latestInstanceStatus(Integer latestInstanceStatus) {
                 this.latestInstanceStatus = latestInstanceStatus;
@@ -350,7 +507,7 @@ public class ListTaskFlowsByPageResponseBody extends TeaModel {
             }
 
             /**
-             * LatestInstanceTime.
+             * The time when the last execution record was created.
              */
             public Builder latestInstanceTime(String latestInstanceTime) {
                 this.latestInstanceTime = latestInstanceTime;
@@ -358,10 +515,47 @@ public class ListTaskFlowsByPageResponseBody extends TeaModel {
             }
 
             /**
-             * Status.
+             * ScenarioId.
+             */
+            public Builder scenarioId(String scenarioId) {
+                this.scenarioId = scenarioId;
+                return this;
+            }
+
+            /**
+             * ScheduleParam.
+             */
+            public Builder scheduleParam(String scheduleParam) {
+                this.scheduleParam = scheduleParam;
+                return this;
+            }
+
+            /**
+             * The status of the task flow. Valid values:
+             * <p>
+             * 
+             * *   **0**: invalid
+             * *   **1**: scheduling disabled
+             * *   **2**: waiting to be scheduled
              */
             public Builder status(Integer status) {
                 this.status = status;
+                return this;
+            }
+
+            /**
+             * TimeZoneId.
+             */
+            public Builder timeZoneId(String timeZoneId) {
+                this.timeZoneId = timeZoneId;
+                return this;
+            }
+
+            /**
+             * TriggerType.
+             */
+            public Builder triggerType(Integer triggerType) {
+                this.triggerType = triggerType;
                 return this;
             }
 

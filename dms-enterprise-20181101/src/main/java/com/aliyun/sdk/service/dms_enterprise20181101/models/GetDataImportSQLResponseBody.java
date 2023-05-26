@@ -86,7 +86,7 @@ public class GetDataImportSQLResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * ErrorCode.
+         * The error code returned if the request failed.
          */
         public Builder errorCode(String errorCode) {
             this.errorCode = errorCode;
@@ -94,7 +94,7 @@ public class GetDataImportSQLResponseBody extends TeaModel {
         }
 
         /**
-         * ErrorMessage.
+         * The error message returned if the request failed.
          */
         public Builder errorMessage(String errorMessage) {
             this.errorMessage = errorMessage;
@@ -102,7 +102,7 @@ public class GetDataImportSQLResponseBody extends TeaModel {
         }
 
         /**
-         * Id of the request
+         * The request ID. You can use the ID to locate logs and troubleshoot issues.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -110,7 +110,7 @@ public class GetDataImportSQLResponseBody extends TeaModel {
         }
 
         /**
-         * SQLDetail.
+         * The details of SQL statements.
          */
         public Builder SQLDetail(SQLDetail SQLDetail) {
             this.SQLDetail = SQLDetail;
@@ -118,7 +118,11 @@ public class GetDataImportSQLResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * Indicates whether the request was successful. Valid values:
+         * <p>
+         * 
+         * *   **true**
+         * *   **false**
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -158,7 +162,7 @@ public class GetDataImportSQLResponseBody extends TeaModel {
             private String execSql; 
 
             /**
-             * ExecSql.
+             * The SQL script.
              */
             public Builder execSql(String execSql) {
                 this.execSql = execSql;

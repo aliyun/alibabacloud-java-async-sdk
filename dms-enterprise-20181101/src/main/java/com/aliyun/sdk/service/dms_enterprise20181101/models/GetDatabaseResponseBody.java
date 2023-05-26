@@ -86,7 +86,7 @@ public class GetDatabaseResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * The ID of the tenant. You can call the [GetUserActiveTenant](~~198073~~) operation to query the ID of the tenant.
+         * The details of the database.
          */
         public Builder database(Database database) {
             this.database = database;
@@ -94,7 +94,7 @@ public class GetDatabaseResponseBody extends TeaModel {
         }
 
         /**
-         * ErrorCode.
+         * The error code.
          */
         public Builder errorCode(String errorCode) {
             this.errorCode = errorCode;
@@ -102,7 +102,7 @@ public class GetDatabaseResponseBody extends TeaModel {
         }
 
         /**
-         * ErrorMessage.
+         * The error message.
          */
         public Builder errorMessage(String errorMessage) {
             this.errorMessage = errorMessage;
@@ -110,7 +110,7 @@ public class GetDatabaseResponseBody extends TeaModel {
         }
 
         /**
-         * The name of the database.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -118,7 +118,11 @@ public class GetDatabaseResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * Indicates whether the request is successful. Valid values:
+         * <p>
+         * 
+         * *   **true**: The request is successful.
+         * *   **false**: The request fails.
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -432,7 +436,7 @@ public class GetDatabaseResponseBody extends TeaModel {
             private String state; 
 
             /**
-             * The type of the database. For more information about the valid values of this parameter, see [DbType parameter](~~198106~~).
+             * The name of the catalog to which the database belongs.
              */
             public Builder catalogName(String catalogName) {
                 this.catalogName = catalogName;
@@ -440,7 +444,7 @@ public class GetDatabaseResponseBody extends TeaModel {
             }
 
             /**
-             * The names of the owners of the database.
+             * The ID of the database.
              */
             public Builder databaseId(String databaseId) {
                 this.databaseId = databaseId;
@@ -448,10 +452,7 @@ public class GetDatabaseResponseBody extends TeaModel {
             }
 
             /**
-             * The system identifier (SID) of the database.
-             * <p>
-             * 
-             * >  The SID uniquely identifies an Oracle database. After a database is created, a SID is generated for the database.
+             * The type of the database. For more information about the valid values of this parameter, see [DbType parameter](~~198106~~).
              */
             public Builder dbType(String dbType) {
                 this.dbType = dbType;
@@ -459,7 +460,7 @@ public class GetDatabaseResponseBody extends TeaModel {
             }
 
             /**
-             * The port that is used to connect to the database.
+             * The ID of the database administrator (DBA).
              */
             public Builder dbaId(String dbaId) {
                 this.dbaId = dbaId;
@@ -467,7 +468,7 @@ public class GetDatabaseResponseBody extends TeaModel {
             }
 
             /**
-             * The encoding format of the database.
+             * The nickname of the DBA.
              */
             public Builder dbaName(String dbaName) {
                 this.dbaName = dbaName;
@@ -475,7 +476,7 @@ public class GetDatabaseResponseBody extends TeaModel {
             }
 
             /**
-             * The port that is used to connect to the database.
+             * The encoding format of the database.
              */
             public Builder encoding(String encoding) {
                 this.encoding = encoding;
@@ -483,7 +484,17 @@ public class GetDatabaseResponseBody extends TeaModel {
             }
 
             /**
-             * The endpoint that is used to connect to the database.
+             * The type of the environment to which the database belongs. Valid values:
+             * <p>
+             * 
+             * *   **product**: production environment
+             * *   **dev**: development environment
+             * *   **pre**: staging environment
+             * *   **test**: test environment
+             * *   **sit**: SIT environment
+             * *   **uat**: user acceptance testing (UAT) environment
+             * *   **pet**: stress testing environment
+             * *   **stag**: STAG environment
              */
             public Builder envType(String envType) {
                 this.envType = envType;
@@ -491,7 +502,7 @@ public class GetDatabaseResponseBody extends TeaModel {
             }
 
             /**
-             * The IDs of the owners of the database.
+             * The endpoint that is used to connect to the database.
              */
             public Builder host(String host) {
                 this.host = host;
@@ -507,13 +518,7 @@ public class GetDatabaseResponseBody extends TeaModel {
             }
 
             /**
-             * The status of the database. Valid values:
-             * <p>
-             * 
-             * *   **NORMAL**: The database is running as expected.
-             * *   **DISABLE**: The database is disabled.
-             * *   **OFFLINE**: The database is unpublished.
-             * *   **NOT_EXIST**: The database does not exist.
+             * The ID of the instance.
              */
             public Builder instanceId(String instanceId) {
                 this.instanceId = instanceId;
@@ -521,7 +526,7 @@ public class GetDatabaseResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the database.
+             * The IDs of the owners of the database.
              */
             public Builder ownerIdList(OwnerIdList ownerIdList) {
                 this.ownerIdList = ownerIdList;
@@ -529,7 +534,7 @@ public class GetDatabaseResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the database administrator (DBA).
+             * The names of the owners of the database.
              */
             public Builder ownerNameList(OwnerNameList ownerNameList) {
                 this.ownerNameList = ownerNameList;
@@ -537,7 +542,7 @@ public class GetDatabaseResponseBody extends TeaModel {
             }
 
             /**
-             * The error message.
+             * The port that is used to connect to the database.
              */
             public Builder port(Integer port) {
                 this.port = port;
@@ -545,7 +550,7 @@ public class GetDatabaseResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the instance.
+             * The name of the database.
              */
             public Builder schemaName(String schemaName) {
                 this.schemaName = schemaName;
@@ -553,7 +558,7 @@ public class GetDatabaseResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the request.
+             * The keyword that is used to search for the database.
              */
             public Builder searchName(String searchName) {
                 this.searchName = searchName;
@@ -561,7 +566,10 @@ public class GetDatabaseResponseBody extends TeaModel {
             }
 
             /**
-             * The nickname of the DBA.
+             * The SID of the database.
+             * <p>
+             * 
+             * >  The value of the parameter is returned only for Oracle databases.
              */
             public Builder sid(String sid) {
                 this.sid = sid;
@@ -569,7 +577,13 @@ public class GetDatabaseResponseBody extends TeaModel {
             }
 
             /**
-             * The endpoint that is used to connect to the database.
+             * The status of the database. Valid values:
+             * <p>
+             * 
+             * *   **NORMAL**: The database is running as expected.
+             * *   **DISABLE**: The database is disabled.
+             * *   **OFFLINE**: The database is unpublished.
+             * *   **NOT_EXIST**: The database does not exist.
              */
             public Builder state(String state) {
                 this.state = state;

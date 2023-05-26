@@ -189,11 +189,30 @@ public class ListInstancesRequest extends Request {
         }
 
         /**
-         * The alias of the database instance.
+         * The type of the database. For more information about the valid values of this parameter, see [DbType parameter](~~198106~~).
          */
         public Builder dbType(String dbType) {
             this.putQueryParameter("DbType", dbType);
             this.dbType = dbType;
+            return this;
+        }
+
+        /**
+         * The type of the environment to which the database instance belongs. Valid values:
+         * <p>
+         * 
+         * *   **product**: production environment
+         * *   **dev**: development environment
+         * *   **pre**: staging environment
+         * *   **test**: test environment
+         * *   **sit**: system integration testing (SIT) environment
+         * *   **uat**: user acceptance testing (UAT) environment
+         * *   **pet**: stress testing environment
+         * *   **stag**: STAG environment
+         */
+        public Builder envType(String envType) {
+            this.putQueryParameter("EnvType", envType);
+            this.envType = envType;
             return this;
         }
 
@@ -206,18 +225,22 @@ public class ListInstancesRequest extends Request {
          * *   **ECS_OWN**: a self-managed database that is deployed on an Elastic Compute Service (ECS) instance
          * *   **VPC_IDC**: a self-managed database instance that is deployed in a data center connected over a virtual private cloud (VPC)
          */
-        public Builder envType(String envType) {
-            this.putQueryParameter("EnvType", envType);
-            this.envType = envType;
+        public Builder instanceSource(String instanceSource) {
+            this.putQueryParameter("InstanceSource", instanceSource);
+            this.instanceSource = instanceSource;
             return this;
         }
 
         /**
-         * The timeout period for querying data in the database instance.
+         * The status of the database instance. Valid values:
+         * <p>
+         * 
+         * *   **NORMAL**: normal
+         * *   **DISABLE**: disabled
          */
-        public Builder instanceSource(String instanceSource) {
-            this.putQueryParameter("InstanceSource", instanceSource);
-            this.instanceSource = instanceSource;
+        public Builder instanceState(String instanceState) {
+            this.putQueryParameter("InstanceState", instanceState);
+            this.instanceState = instanceState;
             return this;
         }
 
@@ -228,15 +251,6 @@ public class ListInstancesRequest extends Request {
          * *   **CLASSIC**: classic network
          * *   **VPC**: VPC
          */
-        public Builder instanceState(String instanceState) {
-            this.putQueryParameter("InstanceState", instanceState);
-            this.instanceState = instanceState;
-            return this;
-        }
-
-        /**
-         * The status of the database instance.
-         */
         public Builder netType(String netType) {
             this.putQueryParameter("NetType", netType);
             this.netType = netType;
@@ -244,7 +258,7 @@ public class ListInstancesRequest extends Request {
         }
 
         /**
-         * The ID of the tenant. You can call the [GetUserActiveTenant](~~198073~~) operation to obtain the tenant ID.
+         * The number of the page to return.
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -253,7 +267,7 @@ public class ListInstancesRequest extends Request {
         }
 
         /**
-         * Indicates whether the lock-free schema change feature is enabled for the database instance.
+         * The number of entries to return on each page. The number cannot exceed 100.
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -262,7 +276,7 @@ public class ListInstancesRequest extends Request {
         }
 
         /**
-         * The operation that you want to perform. Set the value to **ListInstances**.
+         * The keyword that is used to search for database instances.
          */
         public Builder searchKey(String searchKey) {
             this.putQueryParameter("SearchKey", searchKey);
@@ -271,7 +285,7 @@ public class ListInstancesRequest extends Request {
         }
 
         /**
-         * The ID of the owner for the database instance.
+         * The ID of the tenant. You can call the [GetUserActiveTenant](~~198073~~) operation to obtain the tenant ID.
          */
         public Builder tid(Long tid) {
             this.putQueryParameter("Tid", tid);

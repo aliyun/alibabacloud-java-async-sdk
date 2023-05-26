@@ -86,7 +86,11 @@ public class GetOrderAttachmentFileResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * ErrorCode.
+         * The error code returned. Take note of the following rules:
+         * <p>
+         * 
+         * *   The **ErrorCode** parameter is not returned if the request is successful.
+         * *   The **ErrorCode** parameter is returned if the request fails. For more information, see the **Error codes** section of this topic.
          */
         public Builder errorCode(String errorCode) {
             this.errorCode = errorCode;
@@ -94,7 +98,7 @@ public class GetOrderAttachmentFileResponseBody extends TeaModel {
         }
 
         /**
-         * ErrorMessage.
+         * The error message returned if the request failed.
          */
         public Builder errorMessage(String errorMessage) {
             this.errorMessage = errorMessage;
@@ -102,7 +106,7 @@ public class GetOrderAttachmentFileResponseBody extends TeaModel {
         }
 
         /**
-         * FileUrl.
+         * The download URL of the attachment.
          */
         public Builder fileUrl(String fileUrl) {
             this.fileUrl = fileUrl;
@@ -110,7 +114,7 @@ public class GetOrderAttachmentFileResponseBody extends TeaModel {
         }
 
         /**
-         * Id of the request
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -118,7 +122,11 @@ public class GetOrderAttachmentFileResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * Indicates whether the request was successful. Valid values:
+         * <p>
+         * 
+         * *   **true**: The request was successful.
+         * *   **false**: The request failed.
          */
         public Builder success(Boolean success) {
             this.success = success;

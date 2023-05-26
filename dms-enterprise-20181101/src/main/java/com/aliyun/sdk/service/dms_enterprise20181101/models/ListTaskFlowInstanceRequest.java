@@ -40,6 +40,10 @@ public class ListTaskFlowInstanceRequest extends Request {
     private String startTimeEnd;
 
     @Query
+    @NameInMap("Status")
+    private Integer status;
+
+    @Query
     @NameInMap("Tid")
     @Validation(minimum = 1)
     private Long tid;
@@ -47,6 +51,10 @@ public class ListTaskFlowInstanceRequest extends Request {
     @Query
     @NameInMap("TriggerType")
     private Integer triggerType;
+
+    @Query
+    @NameInMap("UseBizDate")
+    private Boolean useBizDate;
 
     private ListTaskFlowInstanceRequest(Builder builder) {
         super(builder);
@@ -56,8 +64,10 @@ public class ListTaskFlowInstanceRequest extends Request {
         this.pageSize = builder.pageSize;
         this.startTimeBegin = builder.startTimeBegin;
         this.startTimeEnd = builder.startTimeEnd;
+        this.status = builder.status;
         this.tid = builder.tid;
         this.triggerType = builder.triggerType;
+        this.useBizDate = builder.useBizDate;
     }
 
     public static Builder builder() {
@@ -116,6 +126,13 @@ public class ListTaskFlowInstanceRequest extends Request {
     }
 
     /**
+     * @return status
+     */
+    public Integer getStatus() {
+        return this.status;
+    }
+
+    /**
      * @return tid
      */
     public Long getTid() {
@@ -129,6 +146,13 @@ public class ListTaskFlowInstanceRequest extends Request {
         return this.triggerType;
     }
 
+    /**
+     * @return useBizDate
+     */
+    public Boolean getUseBizDate() {
+        return this.useBizDate;
+    }
+
     public static final class Builder extends Request.Builder<ListTaskFlowInstanceRequest, Builder> {
         private String regionId; 
         private Long dagId; 
@@ -136,8 +160,10 @@ public class ListTaskFlowInstanceRequest extends Request {
         private Integer pageSize; 
         private String startTimeBegin; 
         private String startTimeEnd; 
+        private Integer status; 
         private Long tid; 
         private Integer triggerType; 
+        private Boolean useBizDate; 
 
         private Builder() {
             super();
@@ -151,8 +177,10 @@ public class ListTaskFlowInstanceRequest extends Request {
             this.pageSize = request.pageSize;
             this.startTimeBegin = request.startTimeBegin;
             this.startTimeEnd = request.startTimeEnd;
+            this.status = request.status;
             this.tid = request.tid;
             this.triggerType = request.triggerType;
+            this.useBizDate = request.useBizDate;
         } 
 
         /**
@@ -165,7 +193,7 @@ public class ListTaskFlowInstanceRequest extends Request {
         }
 
         /**
-         * The operation that you want to perform. Set the value to **ListTaskFlowInstance**.
+         * The ID of the task flow. You can call the [ListTaskFlow](~~424565~~) or [ListLhTaskFlowAndScenario](~~426672~~) operation to obtain the ID of the task flow.
          */
         public Builder dagId(Long dagId) {
             this.putQueryParameter("DagId", dagId);
@@ -174,7 +202,7 @@ public class ListTaskFlowInstanceRequest extends Request {
         }
 
         /**
-         * The number of entries to return on each page.
+         * The number of the page to return.
          */
         public Builder pageIndex(Integer pageIndex) {
             this.putQueryParameter("PageIndex", pageIndex);
@@ -183,7 +211,7 @@ public class ListTaskFlowInstanceRequest extends Request {
         }
 
         /**
-         * The ID of the task flow. You can call the [ListTaskFlow](~~424565~~) or [ListLhTaskFlowAndScenario](~~426672~~) operation to obtain the ID of the task flow.
+         * The number of entries to return on each page.
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -192,7 +220,7 @@ public class ListTaskFlowInstanceRequest extends Request {
         }
 
         /**
-         * The number of the page to return.
+         * The beginning of the time range to query the execution records of the task flow. Specify the time in the yyyy-MM-DD format.
          */
         public Builder startTimeBegin(String startTimeBegin) {
             this.putQueryParameter("StartTimeBegin", startTimeBegin);
@@ -201,7 +229,7 @@ public class ListTaskFlowInstanceRequest extends Request {
         }
 
         /**
-         * The ID of the task flow.
+         * The end of the time range to query the execution records of the task flow. Specify the time in the yyyy-MM-DD format.
          */
         public Builder startTimeEnd(String startTimeEnd) {
             this.putQueryParameter("StartTimeEnd", startTimeEnd);
@@ -210,7 +238,16 @@ public class ListTaskFlowInstanceRequest extends Request {
         }
 
         /**
-         * The ID of the execution record.
+         * Status.
+         */
+        public Builder status(Integer status) {
+            this.putQueryParameter("Status", status);
+            this.status = status;
+            return this;
+        }
+
+        /**
+         * The ID of the tenant. You can call the [GetUserActiveTenant](~~198073~~) or [ListUserTenants](~~198074~~) operation to obtain the tenant ID.
          */
         public Builder tid(Long tid) {
             this.putQueryParameter("Tid", tid);
@@ -219,11 +256,24 @@ public class ListTaskFlowInstanceRequest extends Request {
         }
 
         /**
-         * The business time of the task flow. The time is displayed in the yyyy-MM-DD HH:mm:ss format.
+         * The mode in which the task flow is triggered. Valid values:
+         * <p>
+         * 
+         * *   **0**: The task flow is automatically triggered based on periodic scheduling.
+         * *   **1**: The task flow is manually triggered.
          */
         public Builder triggerType(Integer triggerType) {
             this.putQueryParameter("TriggerType", triggerType);
             this.triggerType = triggerType;
+            return this;
+        }
+
+        /**
+         * UseBizDate.
+         */
+        public Builder useBizDate(Boolean useBizDate) {
+            this.putQueryParameter("UseBizDate", useBizDate);
+            this.useBizDate = useBizDate;
             return this;
         }
 

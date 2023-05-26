@@ -98,7 +98,7 @@ public class ListLhTaskFlowAndScenarioResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * ErrorCode.
+         * The error code returned if the request fails.
          */
         public Builder errorCode(String errorCode) {
             this.errorCode = errorCode;
@@ -106,7 +106,7 @@ public class ListLhTaskFlowAndScenarioResponseBody extends TeaModel {
         }
 
         /**
-         * ErrorMessage.
+         * The error message returned if the request fails.
          */
         public Builder errorMessage(String errorMessage) {
             this.errorMessage = errorMessage;
@@ -114,7 +114,7 @@ public class ListLhTaskFlowAndScenarioResponseBody extends TeaModel {
         }
 
         /**
-         * The extended field. No meaning is specified for this field.
+         * The task flows in the default business scenario.
          */
         public Builder rawDAGList(RawDAGList rawDAGList) {
             this.rawDAGList = rawDAGList;
@@ -122,7 +122,7 @@ public class ListLhTaskFlowAndScenarioResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -130,7 +130,7 @@ public class ListLhTaskFlowAndScenarioResponseBody extends TeaModel {
         }
 
         /**
-         * ScenarioDAGList.
+         * The task flows in other business scenarios.
          */
         public Builder scenarioDAGList(ScenarioDAGList scenarioDAGList) {
             this.scenarioDAGList = scenarioDAGList;
@@ -138,7 +138,11 @@ public class ListLhTaskFlowAndScenarioResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * Indicates whether the request is successful. Valid values:
+         * <p>
+         * 
+         * - **true**: The request is successful.
+         * - **false**: The request fails.
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -358,11 +362,11 @@ public class ListLhTaskFlowAndScenarioResponseBody extends TeaModel {
             private Integer status; 
 
             /**
-             * Indicates whether the task flow is deleted. Valid values:
+             * Indicates whether the task flow can be modified. Valid values:
              * <p>
              * 
-             * *   **true**: deleted
-             * *   **false**: not deleted
+             * *   **true**: The task flow can be modified.
+             * *   **false**: The task flow cannot be modified.
              */
             public Builder canEdit(Boolean canEdit) {
                 this.canEdit = canEdit;
@@ -370,10 +374,86 @@ public class ListLhTaskFlowAndScenarioResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the workspace.
+             * The ID of the user who creates the task flow.
              */
             public Builder creatorId(String creatorId) {
                 this.creatorId = creatorId;
+                return this;
+            }
+
+            /**
+             * The name of the user who creates the workspace.
+             */
+            public Builder creatorNickName(String creatorNickName) {
+                this.creatorNickName = creatorNickName;
+                return this;
+            }
+
+            /**
+             * The name of the task flow.
+             */
+            public Builder dagName(String dagName) {
+                this.dagName = dagName;
+                return this;
+            }
+
+            /**
+             * The user ID of the task flow owner.
+             */
+            public Builder dagOwnerId(String dagOwnerId) {
+                this.dagOwnerId = dagOwnerId;
+                return this;
+            }
+
+            /**
+             * The name of the task flow owner.
+             */
+            public Builder dagOwnerNickName(String dagOwnerNickName) {
+                this.dagOwnerNickName = dagOwnerNickName;
+                return this;
+            }
+
+            /**
+             * The extended field. No meaning is specified for this field.
+             */
+            public Builder dataFlowId(Long dataFlowId) {
+                this.dataFlowId = dataFlowId;
+                return this;
+            }
+
+            /**
+             * The extended field. No meaning is specified for this field.
+             */
+            public Builder demoId(String demoId) {
+                this.demoId = demoId;
+                return this;
+            }
+
+            /**
+             * The ID of the latest deployment record.
+             */
+            public Builder deployId(Long deployId) {
+                this.deployId = deployId;
+                return this;
+            }
+
+            /**
+             * The ID of the task flow.
+             */
+            public Builder id(Long id) {
+                this.id = id;
+                return this;
+            }
+
+            /**
+             * Indicates whether the task flow is deleted. Valid values:
+             * <p>
+             * 
+             * *   **true**: deleted
+             * *   **false**: not deleted
+             */
+            public Builder isDeleted(Boolean isDeleted) {
+                this.isDeleted = isDeleted;
                 return this;
             }
 
@@ -385,56 +465,32 @@ public class ListLhTaskFlowAndScenarioResponseBody extends TeaModel {
              * *   **1**: scheduling disabled
              * *   **2**: waiting to be scheduled
              */
-            public Builder creatorNickName(String creatorNickName) {
-                this.creatorNickName = creatorNickName;
+            public Builder latestInstanceStatus(Integer latestInstanceStatus) {
+                this.latestInstanceStatus = latestInstanceStatus;
                 return this;
             }
 
             /**
-             * DagName.
+             * The time when the latest execution record was generated.
              */
-            public Builder dagName(String dagName) {
-                this.dagName = dagName;
-                return this;
-            }
-
-            /**
-             * DagOwnerId.
-             */
-            public Builder dagOwnerId(String dagOwnerId) {
-                this.dagOwnerId = dagOwnerId;
-                return this;
-            }
-
-            /**
-             * The ID of the latest deployment record.
-             */
-            public Builder dagOwnerNickName(String dagOwnerNickName) {
-                this.dagOwnerNickName = dagOwnerNickName;
-                return this;
-            }
-
-            /**
-             * The name of the task flow owner.
-             */
-            public Builder dataFlowId(Long dataFlowId) {
-                this.dataFlowId = dataFlowId;
-                return this;
-            }
-
-            /**
-             * The ID of the tenant. You can call the [GetUserActiveTenant](~~198073~~) or [ListUserTenants](~~198074~~) operation to obtain the tenant ID.
-             */
-            public Builder demoId(String demoId) {
-                this.demoId = demoId;
+            public Builder latestInstanceTime(Integer latestInstanceTime) {
+                this.latestInstanceTime = latestInstanceTime;
                 return this;
             }
 
             /**
              * The ID of the business scenario.
              */
-            public Builder deployId(Long deployId) {
-                this.deployId = deployId;
+            public Builder scenarioId(Long scenarioId) {
+                this.scenarioId = scenarioId;
+                return this;
+            }
+
+            /**
+             * The ID of the workspace.
+             */
+            public Builder spaceId(Long spaceId) {
+                this.spaceId = spaceId;
                 return this;
             }
 
@@ -445,54 +501,6 @@ public class ListLhTaskFlowAndScenarioResponseBody extends TeaModel {
              * *   **0**: invalid
              * *   **1**: scheduling disabled
              * *   **2**: waiting to be scheduled
-             */
-            public Builder id(Long id) {
-                this.id = id;
-                return this;
-            }
-
-            /**
-             * The ID of the user. You can call the [ListUsers](~~141938~~) or [GetUser](~~147098~~) operation to obtain the user ID.
-             */
-            public Builder isDeleted(Boolean isDeleted) {
-                this.isDeleted = isDeleted;
-                return this;
-            }
-
-            /**
-             * The name of the task flow.
-             */
-            public Builder latestInstanceStatus(Integer latestInstanceStatus) {
-                this.latestInstanceStatus = latestInstanceStatus;
-                return this;
-            }
-
-            /**
-             * Queries the task flows corresponding to a specific business scenario in a workspace in Data Management (DMS).
-             */
-            public Builder latestInstanceTime(Integer latestInstanceTime) {
-                this.latestInstanceTime = latestInstanceTime;
-                return this;
-            }
-
-            /**
-             * The task flows in the default business scenario.
-             */
-            public Builder scenarioId(Long scenarioId) {
-                this.scenarioId = scenarioId;
-                return this;
-            }
-
-            /**
-             * The extended field. No meaning is specified for this field.
-             */
-            public Builder spaceId(Long spaceId) {
-                this.spaceId = spaceId;
-                return this;
-            }
-
-            /**
-             * The ID of the task flow.
              */
             public Builder status(Integer status) {
                 this.status = status;
@@ -754,11 +762,11 @@ public class ListLhTaskFlowAndScenarioResponseBody extends TeaModel {
             private Integer status; 
 
             /**
-             * Indicates whether the task flow is deleted. Valid values:
+             * Indicates whether the task flow can be modified. Valid values:
              * <p>
              * 
-             * *   **true**: deleted
-             * *   **false**: not deleted
+             * - **true**: The task flow can be modified.
+             * - **false**: The task flow cannot be modified.
              */
             public Builder canEdit(Boolean canEdit) {
                 this.canEdit = canEdit;
@@ -766,7 +774,7 @@ public class ListLhTaskFlowAndScenarioResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the workspace.
+             * The ID of the user who creates the task flow.
              */
             public Builder creatorId(String creatorId) {
                 this.creatorId = creatorId;
@@ -774,12 +782,7 @@ public class ListLhTaskFlowAndScenarioResponseBody extends TeaModel {
             }
 
             /**
-             * The status of the latest execution. Valid values:
-             * <p>
-             * 
-             * *   **0**: invalid
-             * *   **1**: scheduling disabled
-             * *   **2**: waiting to be scheduled
+             * The name of the user who creates the workspace.
              */
             public Builder creatorNickName(String creatorNickName) {
                 this.creatorNickName = creatorNickName;
@@ -787,7 +790,7 @@ public class ListLhTaskFlowAndScenarioResponseBody extends TeaModel {
             }
 
             /**
-             * DagName.
+             * The name of the task flow.
              */
             public Builder dagName(String dagName) {
                 this.dagName = dagName;
@@ -795,7 +798,7 @@ public class ListLhTaskFlowAndScenarioResponseBody extends TeaModel {
             }
 
             /**
-             * DagOwnerId.
+             * The user ID of the task flow owner.
              */
             public Builder dagOwnerId(String dagOwnerId) {
                 this.dagOwnerId = dagOwnerId;
@@ -803,7 +806,7 @@ public class ListLhTaskFlowAndScenarioResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the latest deployment record.
+             * The name of the task flow owner.
              */
             public Builder dagOwnerNickName(String dagOwnerNickName) {
                 this.dagOwnerNickName = dagOwnerNickName;
@@ -811,7 +814,7 @@ public class ListLhTaskFlowAndScenarioResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the task flow owner.
+             * The extended field. No meaning is specified for this field.
              */
             public Builder dataFlowId(Long dataFlowId) {
                 this.dataFlowId = dataFlowId;
@@ -819,7 +822,7 @@ public class ListLhTaskFlowAndScenarioResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the tenant. You can call the [GetUserActiveTenant](~~198073~~) or [ListUserTenants](~~198074~~) operation to obtain the tenant ID.
+             * The extended field. No meaning is specified for this field.
              */
             public Builder demoId(String demoId) {
                 this.demoId = demoId;
@@ -827,7 +830,7 @@ public class ListLhTaskFlowAndScenarioResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the business scenario.
+             * The ID of the latest deployment record.
              */
             public Builder deployId(Long deployId) {
                 this.deployId = deployId;
@@ -835,12 +838,7 @@ public class ListLhTaskFlowAndScenarioResponseBody extends TeaModel {
             }
 
             /**
-             * The status of the task flow. Valid values:
-             * <p>
-             * 
-             * *   **0**: invalid
-             * *   **1**: scheduling disabled
-             * *   **2**: waiting to be scheduled
+             * The ID of the task flow.
              */
             public Builder id(Long id) {
                 this.id = id;
@@ -848,7 +846,11 @@ public class ListLhTaskFlowAndScenarioResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the user. You can call the [ListUsers](~~141938~~) or [GetUser](~~147098~~) operation to obtain the user ID.
+             * Indicates whether the task flow is deleted. Valid values:
+             * <p>
+             * 
+             * - **true**: deleted
+             * - **false**: not deleted
              */
             public Builder isDeleted(Boolean isDeleted) {
                 this.isDeleted = isDeleted;
@@ -856,7 +858,12 @@ public class ListLhTaskFlowAndScenarioResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the task flow.
+             * The status of the latest execution. Valid values:
+             * <p>
+             * 
+             * - 0: invalid
+             * - 1: scheduling disabled
+             * - 2: waiting to be scheduled
              */
             public Builder latestInstanceStatus(Integer latestInstanceStatus) {
                 this.latestInstanceStatus = latestInstanceStatus;
@@ -864,7 +871,7 @@ public class ListLhTaskFlowAndScenarioResponseBody extends TeaModel {
             }
 
             /**
-             * Queries the task flows corresponding to a specific business scenario in a workspace in Data Management (DMS).
+             * The time when the latest execution record was generated.
              */
             public Builder latestInstanceTime(Integer latestInstanceTime) {
                 this.latestInstanceTime = latestInstanceTime;
@@ -872,7 +879,7 @@ public class ListLhTaskFlowAndScenarioResponseBody extends TeaModel {
             }
 
             /**
-             * The task flows in the default business scenario.
+             * The ID of the business scenario.
              */
             public Builder scenarioId(Long scenarioId) {
                 this.scenarioId = scenarioId;
@@ -880,7 +887,7 @@ public class ListLhTaskFlowAndScenarioResponseBody extends TeaModel {
             }
 
             /**
-             * The extended field. No meaning is specified for this field.
+             * The ID of the workspace.
              */
             public Builder spaceId(Long spaceId) {
                 this.spaceId = spaceId;
@@ -888,7 +895,12 @@ public class ListLhTaskFlowAndScenarioResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the task flow.
+             * The status of the task flow. Valid values:
+             * <p>
+             * 
+             * - **0**: invalid
+             * - **1**: scheduling disabled
+             * - **2**: waiting to be scheduled
              */
             public Builder status(Integer status) {
                 this.status = status;
@@ -994,7 +1006,7 @@ public class ListLhTaskFlowAndScenarioResponseBody extends TeaModel {
             private String scenarioName; 
 
             /**
-             * The ID of the workspace.
+             * The ID of the user who creates the business scenario.
              */
             public Builder creatorId(String creatorId) {
                 this.creatorId = creatorId;
@@ -1002,7 +1014,7 @@ public class ListLhTaskFlowAndScenarioResponseBody extends TeaModel {
             }
 
             /**
-             * Description.
+             * The description of the business scenario.
              */
             public Builder description(String description) {
                 this.description = description;
@@ -1010,7 +1022,7 @@ public class ListLhTaskFlowAndScenarioResponseBody extends TeaModel {
             }
 
             /**
-             * ScenarioName.
+             * The name of the business scenario.
              */
             public Builder scenarioName(String scenarioName) {
                 this.scenarioName = scenarioName;
@@ -1063,7 +1075,7 @@ public class ListLhTaskFlowAndScenarioResponseBody extends TeaModel {
             private Scenario scenario; 
 
             /**
-             * DagList.
+             * The list of task flows.
              */
             public Builder dagList(DagList dagList) {
                 this.dagList = dagList;
@@ -1071,7 +1083,7 @@ public class ListLhTaskFlowAndScenarioResponseBody extends TeaModel {
             }
 
             /**
-             * Scenario.
+             * The information about the business scenario.
              */
             public Builder scenario(Scenario scenario) {
                 this.scenario = scenario;

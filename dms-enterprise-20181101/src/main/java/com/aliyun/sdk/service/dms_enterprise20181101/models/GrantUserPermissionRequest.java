@@ -207,7 +207,10 @@ public class GrantUserPermissionRequest extends Request {
         }
 
         /**
-         * The error message.
+         * The ID of the database. You can call the [ListDatabases](~~141873~~) operation to query the ID of a physical database and the [ListLogicDatabases](~~141874~~) operation to query the ID of a logical database.
+         * <p>
+         * 
+         * >  The value of the DatabaseId parameter is that of the DbId parameter.
          */
         public Builder dbId(String dbId) {
             this.putQueryParameter("DbId", dbId);
@@ -216,7 +219,14 @@ public class GrantUserPermissionRequest extends Request {
         }
 
         /**
-         * The operation that you want to perform. Set the value to **GrantUserPermission**.
+         * The permissions on a specific type of object that you want to grant to the user. Valid values:
+         * <p>
+         * 
+         * *   INSTANCE: permissions on instances
+         * *   DATABASE: permissions on physical databases
+         * *   LOGIC_DATABASE: permissions on logical databases
+         * *   TABLE: permissions on physical tables
+         * *   LOGIC_TABLE: permissions on logical tables
          */
         public Builder dsType(String dsType) {
             this.putQueryParameter("DsType", dsType);
@@ -225,7 +235,7 @@ public class GrantUserPermissionRequest extends Request {
         }
 
         /**
-         * The ID of the request.
+         * The time when the permissions expire.
          */
         public Builder expireDate(String expireDate) {
             this.putQueryParameter("ExpireDate", expireDate);
@@ -234,10 +244,7 @@ public class GrantUserPermissionRequest extends Request {
         }
 
         /**
-         * The ID of the database. You can call the [ListDatabases](~~141873~~) operation to query the ID of a physical database and the [ListLogicDatabases](~~141874~~) operation to query the ID of a logical database.
-         * <p>
-         * 
-         * >  The value of the DatabaseId parameter is that of the DbId parameter.
+         * The ID of the instance. You must specify this parameter if you grant permissions on an instance to the user. You can call the [ListInstances](~~141936~~) or [GetInstance](~~141567~~) operation to query the ID of the instance.
          */
         public Builder instanceId(Long instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -259,15 +266,6 @@ public class GrantUserPermissionRequest extends Request {
         }
 
         /**
-         * The ID of the instance. You must specify this parameter if you grant permissions on an instance to the user. You can call the [ListInstances](~~141936~~) or [GetInstance](~~141567~~) operation to query the ID of the instance.
-         */
-        public Builder permTypes(String permTypes) {
-            this.putQueryParameter("PermTypes", permTypes);
-            this.permTypes = permTypes;
-            return this;
-        }
-
-        /**
          * The permission type. Separate multiple permission types with commas (,). Valid values:
          * <p>
          * 
@@ -277,9 +275,27 @@ public class GrantUserPermissionRequest extends Request {
          * *   **LOGIN**: the logon permissions
          * *   **PERF**: the query permissions on the performance details of the instance
          */
+        public Builder permTypes(String permTypes) {
+            this.putQueryParameter("PermTypes", permTypes);
+            this.permTypes = permTypes;
+            return this;
+        }
+
+        /**
+         * The ID of the table. You must specify this parameter if you grant permissions on a table to the user. You can call the [ListTables](~~141878~~) operation to query the table ID.
+         */
         public Builder tableId(String tableId) {
             this.putQueryParameter("TableId", tableId);
             this.tableId = tableId;
+            return this;
+        }
+
+        /**
+         * The name of the table. You must specify this parameter if you grant permissions on a table to the user.
+         */
+        public Builder tableName(String tableName) {
+            this.putQueryParameter("TableName", tableName);
+            this.tableName = tableName;
             return this;
         }
 
@@ -289,15 +305,6 @@ public class GrantUserPermissionRequest extends Request {
          * 
          * >  To view the ID of the tenant, move the pointer over the profile picture in the upper-right corner of the Data Management (DMS) console. For more information, see the "View information about the current tenant" section of the [Manage DMS tenants](~~181330~~) topic.
          */
-        public Builder tableName(String tableName) {
-            this.putQueryParameter("TableName", tableName);
-            this.tableName = tableName;
-            return this;
-        }
-
-        /**
-         * The ID of the table. You must specify this parameter if you grant permissions on a table to the user. You can call the [ListTables](~~141878~~) operation to query the table ID.
-         */
         public Builder tid(Long tid) {
             this.putQueryParameter("Tid", tid);
             this.tid = tid;
@@ -305,7 +312,10 @@ public class GrantUserPermissionRequest extends Request {
         }
 
         /**
-         * The error code.
+         * The ID of the user. You can call the [GetUser](~~147098~~) or [ListUsers](~~141938~~) operation to query the ID of the user.
+         * <p>
+         * 
+         * >  The user ID is different from the ID of your Alibaba Cloud account.
          */
         public Builder userId(String userId) {
             this.putQueryParameter("UserId", userId);

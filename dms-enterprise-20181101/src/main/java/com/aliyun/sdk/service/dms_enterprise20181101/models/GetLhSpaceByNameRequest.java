@@ -93,11 +93,7 @@ public class GetLhSpaceByNameRequest extends Request {
         }
 
         /**
-         * Indicates whether the workspace is deleted. Valid values:
-         * <p>
-         * 
-         * *   **true**: The workspace is deleted.
-         * *   **false**: The workspace is not deleted.
+         * The name of the workspace.
          */
         public Builder spaceName(String spaceName) {
             this.putQueryParameter("SpaceName", spaceName);
@@ -106,11 +102,7 @@ public class GetLhSpaceByNameRequest extends Request {
         }
 
         /**
-         * The type of the database. Valid values:
-         * <p>
-         * 
-         * *   **14**: AnalyticDB for MySQL
-         * *   **18**: AnalyticDB for PostgreSQL
+         * The ID of the tenant. You can call the [GetUserActiveTenant](~~198073~~) or [ListUserTenants](~~198074~~) operation to obtain the tenant ID.
          */
         public Builder tid(Long tid) {
             this.putQueryParameter("Tid", tid);

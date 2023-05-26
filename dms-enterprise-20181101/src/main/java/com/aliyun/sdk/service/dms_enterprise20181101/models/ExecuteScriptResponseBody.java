@@ -86,7 +86,7 @@ public class ExecuteScriptResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * ErrorCode.
+         * The error code.
          */
         public Builder errorCode(String errorCode) {
             this.errorCode = errorCode;
@@ -94,7 +94,7 @@ public class ExecuteScriptResponseBody extends TeaModel {
         }
 
         /**
-         * ErrorMessage.
+         * The error message about the gateway.
          */
         public Builder errorMessage(String errorMessage) {
             this.errorMessage = errorMessage;
@@ -102,7 +102,7 @@ public class ExecuteScriptResponseBody extends TeaModel {
         }
 
         /**
-         * The error message about the gateway.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -110,10 +110,7 @@ public class ExecuteScriptResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the database.
-         * <p>
-         * 
-         * >  This parameter is equivalent to the DatabaseId parameter in the SearchDatabase, ListDatabases, and GetDatabase operations. You can call one of these operations to obtain the required database ID. For more information, see [SearchDatabase](~~141876~~), [ListDatabases](~~141873~~), and [GetDatabase](~~141869~~).
+         * The results of the SQL statements that are executed, in the format of an array. Each entry in the array indicates the result of an SQL statement.
          */
         public Builder results(java.util.List < Results> results) {
             this.results = results;
@@ -121,7 +118,7 @@ public class ExecuteScriptResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * Indicates whether the request is successful.
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -217,10 +214,7 @@ public class ExecuteScriptResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the tenant.
-             * <p>
-             * 
-             * >  To obtain the tenant ID, move the pointer over the profile picture in the upper-right corner of the Data Management (DMS) console. For more information, see [Tenant information](~~181330~~).
+             * The error message that is returned if the SQL statement fails to be executed. For example, an error message is returned because the SQL statement is invalid.
              */
             public Builder message(String message) {
                 this.message = message;
@@ -228,7 +222,7 @@ public class ExecuteScriptResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the request.
+             * The total number of entries that are returned.
              */
             public Builder rowCount(Long rowCount) {
                 this.rowCount = rowCount;
@@ -236,7 +230,7 @@ public class ExecuteScriptResponseBody extends TeaModel {
             }
 
             /**
-             * The total number of entries that are returned.
+             * The rows that are queried after the SQL statement is executed.
              */
             public Builder rows(java.util.List < java.util.Map<String, ?>> rows) {
                 this.rows = rows;
@@ -244,7 +238,7 @@ public class ExecuteScriptResponseBody extends TeaModel {
             }
 
             /**
-             * The rows that are queried after the SQL statement is executed.
+             * Indicates whether the SQL statement is executed.
              */
             public Builder success(Boolean success) {
                 this.success = success;

@@ -98,11 +98,7 @@ public class ListSensitiveColumnsResponseBody extends TeaModel {
         private Long totalCount; 
 
         /**
-         * The sensitivity level of the field. Valid values:
-         * <p>
-         * 
-         * *   SENSITIVE
-         * *   CONFIDENTIAL
+         * The error code.
          */
         public Builder errorCode(String errorCode) {
             this.errorCode = errorCode;
@@ -110,7 +106,7 @@ public class ListSensitiveColumnsResponseBody extends TeaModel {
         }
 
         /**
-         * The sensitive fields.
+         * The error message.
          */
         public Builder errorMessage(String errorMessage) {
             this.errorMessage = errorMessage;
@@ -118,7 +114,7 @@ public class ListSensitiveColumnsResponseBody extends TeaModel {
         }
 
         /**
-         * The number of sensitive fields.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -126,12 +122,7 @@ public class ListSensitiveColumnsResponseBody extends TeaModel {
         }
 
         /**
-         * The type of the de-identification algorithm. Valid values:
-         * <p>
-         * 
-         * *   DEFAULT: All characters are masked. This is the default value.
-         * *   FIX_POS: The characters at specific positions are masked.
-         * *   FIX_CHAR: Specific characters are masked.
+         * The sensitive fields.
          */
         public Builder sensitiveColumnList(SensitiveColumnList sensitiveColumnList) {
             this.sensitiveColumnList = sensitiveColumnList;
@@ -139,7 +130,11 @@ public class ListSensitiveColumnsResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * Indicates whether the request is successful. Valid values:
+         * <p>
+         * 
+         * - true: The request is successful.
+         * - false: The request fails.
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -147,10 +142,7 @@ public class ListSensitiveColumnsResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the tenant.
-         * <p>
-         * 
-         * >  To view the ID of the tenant, move the pointer over the profile picture in the upper-right corner of the Data Management (DMS) console. For more information, see the "View information about the current tenant" section of the [Manage DMS tenants](~~181330~~) topic.
+         * The total number of returned entries.
          */
         public Builder totalCount(Long totalCount) {
             this.totalCount = totalCount;
@@ -250,7 +242,7 @@ public class ListSensitiveColumnsResponseBody extends TeaModel {
             private String tableName; 
 
             /**
-             * Queries sensitive fields in a table of a database.
+             * The number of sensitive fields.
              */
             public Builder columnCount(Long columnCount) {
                 this.columnCount = columnCount;
@@ -258,7 +250,7 @@ public class ListSensitiveColumnsResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the field. You can call the [ListColumns](~~141870~~) operation to query the name of the field.
+             * The name of the field.
              */
             public Builder columnName(String columnName) {
                 this.columnName = columnName;
@@ -266,7 +258,12 @@ public class ListSensitiveColumnsResponseBody extends TeaModel {
             }
 
             /**
-             * FunctionType.
+             * The type of the de-identification algorithm. Valid values:
+             * <p>
+             * 
+             * *   DEFAULT: All characters are masked. This is the default value.
+             * *   FIX_POS: The characters at specific positions are masked.
+             * *   FIX_CHAR: Specific characters are masked.
              */
             public Builder functionType(String functionType) {
                 this.functionType = functionType;
@@ -274,7 +271,7 @@ public class ListSensitiveColumnsResponseBody extends TeaModel {
             }
 
             /**
-             * SchemaName.
+             * The name of the database.
              */
             public Builder schemaName(String schemaName) {
                 this.schemaName = schemaName;
@@ -282,7 +279,11 @@ public class ListSensitiveColumnsResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the request.
+             * The sensitivity level of the field. Valid values:
+             * <p>
+             * 
+             * *   SENSITIVE
+             * *   CONFIDENTIAL
              */
             public Builder securityLevel(String securityLevel) {
                 this.securityLevel = securityLevel;
@@ -290,7 +291,7 @@ public class ListSensitiveColumnsResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the field.
+             * The name of the table.
              */
             public Builder tableName(String tableName) {
                 this.tableName = tableName;

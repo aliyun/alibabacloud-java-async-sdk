@@ -126,7 +126,10 @@ public class UpdateTaskFlowRelationsRequest extends Request {
         }
 
         /**
-         * The ID of the task flow edge.
+         * The ID of the tenant.
+         * <p>
+         * 
+         * >  To view the ID of the tenant, go to the Data Management (DMS) console and move the pointer over the profile picture in the upper-right corner. For more information, see [View information about the current tenant](~~181330~~).
          */
         public Builder tid(Long tid) {
             this.putQueryParameter("Tid", tid);
@@ -192,7 +195,7 @@ public class UpdateTaskFlowRelationsRequest extends Request {
             private Long nodeFrom; 
 
             /**
-             * The error code returned if the request failed.
+             * The ID of the task flow edge.
              */
             public Builder id(Long id) {
                 this.id = id;
@@ -200,7 +203,7 @@ public class UpdateTaskFlowRelationsRequest extends Request {
             }
 
             /**
-             * The ID of the request. You can use the ID to locate logs and troubleshoot issues.
+             * The ID of the end node on the edge.
              */
             public Builder nodeEnd(Long nodeEnd) {
                 this.nodeEnd = nodeEnd;
@@ -208,7 +211,7 @@ public class UpdateTaskFlowRelationsRequest extends Request {
             }
 
             /**
-             * The operation that you want to perform. Set the value to **UpdateTaskFlowRelations**.
+             * The ID of the start node on the edge.
              */
             public Builder nodeFrom(Long nodeFrom) {
                 this.nodeFrom = nodeFrom;

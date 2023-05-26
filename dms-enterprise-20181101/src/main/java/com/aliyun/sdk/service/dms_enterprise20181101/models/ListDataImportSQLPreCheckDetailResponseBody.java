@@ -98,7 +98,7 @@ public class ListDataImportSQLPreCheckDetailResponseBody extends TeaModel {
         private Long totalCount; 
 
         /**
-         * ErrorCode.
+         * The error code returned if the request failed.
          */
         public Builder errorCode(String errorCode) {
             this.errorCode = errorCode;
@@ -106,7 +106,7 @@ public class ListDataImportSQLPreCheckDetailResponseBody extends TeaModel {
         }
 
         /**
-         * ErrorMessage.
+         * The error message returned if the request failed.
          */
         public Builder errorMessage(String errorMessage) {
             this.errorMessage = errorMessage;
@@ -114,7 +114,7 @@ public class ListDataImportSQLPreCheckDetailResponseBody extends TeaModel {
         }
 
         /**
-         * PreCheckSQLDetailList.
+         * The precheck information of SQL statements.
          */
         public Builder preCheckSQLDetailList(java.util.List < PreCheckSQLDetailList> preCheckSQLDetailList) {
             this.preCheckSQLDetailList = preCheckSQLDetailList;
@@ -122,7 +122,7 @@ public class ListDataImportSQLPreCheckDetailResponseBody extends TeaModel {
         }
 
         /**
-         * Id of the request
+         * The request ID. You can use the ID to locate logs and troubleshoot issues.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -130,7 +130,11 @@ public class ListDataImportSQLPreCheckDetailResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * Indicates whether the request was successful. Valid values:
+         * <p>
+         * 
+         * *   **true**
+         * *   **false**
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -138,7 +142,7 @@ public class ListDataImportSQLPreCheckDetailResponseBody extends TeaModel {
         }
 
         /**
-         * TotalCount.
+         * The number of SQL statements.
          */
         public Builder totalCount(Long totalCount) {
             this.totalCount = totalCount;
@@ -214,7 +218,11 @@ public class ListDataImportSQLPreCheckDetailResponseBody extends TeaModel {
             private String statusCode; 
 
             /**
-             * Skip.
+             * Indicates whether the precheck of the SQL statement was skipped. Valid values:
+             * <p>
+             * 
+             * *   **true**
+             * *   **false**
              */
             public Builder skip(Boolean skip) {
                 this.skip = skip;
@@ -222,7 +230,7 @@ public class ListDataImportSQLPreCheckDetailResponseBody extends TeaModel {
             }
 
             /**
-             * SqlId.
+             * The SQL ID, which indicates the sequence number of the SQL statement. The number starts with 1.
              */
             public Builder sqlId(Long sqlId) {
                 this.sqlId = sqlId;
@@ -230,7 +238,7 @@ public class ListDataImportSQLPreCheckDetailResponseBody extends TeaModel {
             }
 
             /**
-             * SqlType.
+             * The type of the SQL statement, such as DELETE, UPDATE, or ALTER_TABLE.
              */
             public Builder sqlType(String sqlType) {
                 this.sqlType = sqlType;
@@ -238,7 +246,14 @@ public class ListDataImportSQLPreCheckDetailResponseBody extends TeaModel {
             }
 
             /**
-             * StatusCode.
+             * The state of the ticket. Valid values:
+             * <p>
+             * 
+             * *   **INIT**: The ticket was being initialized.
+             * *   **RUNNING**: The ticket was in progress.
+             * *   **SUCCESS**: The ticket was complete.
+             * *   **TIMEOUT**: The ticket was skipped due to timeout.
+             * *   **FAIL**: The ticket failed.
              */
             public Builder statusCode(String statusCode) {
                 this.statusCode = statusCode;

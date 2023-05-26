@@ -108,7 +108,7 @@ public class UpdateTaskNameRequest extends Request {
         }
 
         /**
-         * The error code returned if the request failed.
+         * The ID of the node. You can call the [GetTaskInstanceRelation](~~424711~~) operation to query the node ID.
          */
         public Builder nodeId(String nodeId) {
             this.putQueryParameter("NodeId", nodeId);
@@ -117,7 +117,7 @@ public class UpdateTaskNameRequest extends Request {
         }
 
         /**
-         * The ID of the request. You can use the ID to locate logs and troubleshoot issues.
+         * The name of the node. You can call the [GetTaskInstanceRelation](~~424711~~) operation to query the node name.
          */
         public Builder nodeName(String nodeName) {
             this.putQueryParameter("NodeName", nodeName);
@@ -126,7 +126,10 @@ public class UpdateTaskNameRequest extends Request {
         }
 
         /**
-         * The name of the node. You can call the [GetTaskInstanceRelation](~~424711~~) operation to query the node name.
+         * The ID of the tenant.
+         * <p>
+         * 
+         * >  To view the ID of the tenant, go to the Data Management (DMS) console and move the pointer over the profile picture in the upper-right corner. For more information, see [View information about the current tenant](~~181330~~).
          */
         public Builder tid(Long tid) {
             this.putQueryParameter("Tid", tid);

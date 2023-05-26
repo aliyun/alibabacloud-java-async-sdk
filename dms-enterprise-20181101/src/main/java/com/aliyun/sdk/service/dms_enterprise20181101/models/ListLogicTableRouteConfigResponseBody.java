@@ -86,7 +86,7 @@ public class ListLogicTableRouteConfigResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * ErrorCode.
+         * The error code returned.
          */
         public Builder errorCode(String errorCode) {
             this.errorCode = errorCode;
@@ -94,7 +94,7 @@ public class ListLogicTableRouteConfigResponseBody extends TeaModel {
         }
 
         /**
-         * ErrorMessage.
+         * The error message returned.
          */
         public Builder errorMessage(String errorMessage) {
             this.errorMessage = errorMessage;
@@ -102,7 +102,7 @@ public class ListLogicTableRouteConfigResponseBody extends TeaModel {
         }
 
         /**
-         * LogicTableRouteConfigList.
+         * The routing algorithms.
          */
         public Builder logicTableRouteConfigList(LogicTableRouteConfigList logicTableRouteConfigList) {
             this.logicTableRouteConfigList = logicTableRouteConfigList;
@@ -110,7 +110,7 @@ public class ListLogicTableRouteConfigResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -118,7 +118,11 @@ public class ListLogicTableRouteConfigResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * Indicates whether the request was successful. Valid values:
+         * <p>
+         * 
+         * - **true**: The request was successful.
+         * - **false**: The request failed.
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -182,7 +186,7 @@ public class ListLogicTableRouteConfigResponseBody extends TeaModel {
             private Long tableId; 
 
             /**
-             * RouteExpr.
+             * The routing algorithm expression.
              */
             public Builder routeExpr(String routeExpr) {
                 this.routeExpr = routeExpr;
@@ -190,7 +194,7 @@ public class ListLogicTableRouteConfigResponseBody extends TeaModel {
             }
 
             /**
-             * RouteKey.
+             * The unique key of the routing algorithm.
              */
             public Builder routeKey(String routeKey) {
                 this.routeKey = routeKey;
@@ -198,7 +202,7 @@ public class ListLogicTableRouteConfigResponseBody extends TeaModel {
             }
 
             /**
-             * TableId.
+             * The ID of the logical table.
              */
             public Builder tableId(Long tableId) {
                 this.tableId = tableId;

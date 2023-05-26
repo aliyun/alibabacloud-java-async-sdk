@@ -86,7 +86,7 @@ public class ListTaskFlowCooperatorsResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * CooperatorList.
+         * The users that are involved in the task flow.
          */
         public Builder cooperatorList(CooperatorList cooperatorList) {
             this.cooperatorList = cooperatorList;
@@ -94,7 +94,7 @@ public class ListTaskFlowCooperatorsResponseBody extends TeaModel {
         }
 
         /**
-         * The operation that you want to perform. Set the value to **ListTaskFlowCooperators**.
+         * The error code returned if the request failed.
          */
         public Builder errorCode(String errorCode) {
             this.errorCode = errorCode;
@@ -102,7 +102,7 @@ public class ListTaskFlowCooperatorsResponseBody extends TeaModel {
         }
 
         /**
-         * The users that are involved in the task flow.
+         * The error message returned if the request failed.
          */
         public Builder errorMessage(String errorMessage) {
             this.errorMessage = errorMessage;
@@ -118,7 +118,11 @@ public class ListTaskFlowCooperatorsResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * Indicates whether the request was successful. Valid values:
+         * <p>
+         * 
+         * *   **true**: The request was successful.
+         * *   **false**: The request failed.
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -194,7 +198,7 @@ public class ListTaskFlowCooperatorsResponseBody extends TeaModel {
             private String userId; 
 
             /**
-             * Email.
+             * The email address of the user.
              */
             public Builder email(String email) {
                 this.email = email;
@@ -202,7 +206,7 @@ public class ListTaskFlowCooperatorsResponseBody extends TeaModel {
             }
 
             /**
-             * LoginName.
+             * The username.
              */
             public Builder loginName(String loginName) {
                 this.loginName = loginName;
@@ -210,7 +214,7 @@ public class ListTaskFlowCooperatorsResponseBody extends TeaModel {
             }
 
             /**
-             * NickName.
+             * The alias of the user.
              */
             public Builder nickName(String nickName) {
                 this.nickName = nickName;

@@ -107,34 +107,7 @@ public class UpdateTaskOutputRequest extends Request {
         }
 
         /**
-         * ## Single-instance SQL assignment
-         * <p>
-         * 
-         * - Example of NodeOutput:```
-         * Variable extraction settings
-         *              
-         *                 "row":0, // Rows. -1 indicates all rows.
-         *                 "column":-1, // Columns. -1 indicates all columns.
-         *                  
-         *                 Delimiter
-         *                 If you select all rows or columns, you must specify a connector. The returned value of the variable is a string.
-         *                  
-         *                   
-         *              
-         *              
-         *               
-         *             "variableName":"var", // Variable name
-         *             "description":"For demo" // Variable description
-         * ```
-         * 
-         * 
-         * ## Script code /ECS remote command
-         * 
-         * - Example of NodeOutput:```
-         * "extractMethod":"json", // JSON
-         *             "variableName":"var", // Variable name
-         *             "description":"demo desc" // Variable description
-         * ```
+         * The ID of the node. You can call the [GetTaskInstanceRelation](~~424711~~) operation to query the node ID.
          */
         public Builder nodeId(String nodeId) {
             this.putQueryParameter("NodeId", nodeId);
@@ -143,7 +116,7 @@ public class UpdateTaskOutputRequest extends Request {
         }
 
         /**
-         * Updates the output variables for a specified task node.
+         * The output variables for the task.
          */
         public Builder nodeOutput(String nodeOutput) {
             this.putQueryParameter("NodeOutput", nodeOutput);
@@ -152,7 +125,10 @@ public class UpdateTaskOutputRequest extends Request {
         }
 
         /**
-         * The operation that you want to perform. Set the value to **UpdateTaskOutput**.
+         * The ID of the tenant.
+         * <p>
+         * 
+         * >  To view the ID of the tenant, go to the Data Management (DMS) console and move the pointer over the profile picture in the upper-right corner. For more information, see [View information about the current tenant](~~181330~~).
          */
         public Builder tid(Long tid) {
             this.putQueryParameter("Tid", tid);

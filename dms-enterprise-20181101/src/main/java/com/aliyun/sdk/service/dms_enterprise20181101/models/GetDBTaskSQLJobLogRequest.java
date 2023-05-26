@@ -93,7 +93,7 @@ public class GetDBTaskSQLJobLogRequest extends Request {
         }
 
         /**
-         * The log that records the scheduling details.
+         * The ID of the SQL task. You can call the [ListDBTaskSQLJob](~~207049~~) operation to query the ID of the SQL task.
          */
         public Builder jobId(Long jobId) {
             this.putQueryParameter("JobId", jobId);
@@ -102,7 +102,7 @@ public class GetDBTaskSQLJobLogRequest extends Request {
         }
 
         /**
-         * The error code returned.
+         * The ID of the tenant. You can call the [GetUserActiveTenant](~~198073~~) operation to query the tenant ID.
          */
         public Builder tid(Long tid) {
             this.putQueryParameter("Tid", tid);

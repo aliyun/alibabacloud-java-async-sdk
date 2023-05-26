@@ -203,38 +203,11 @@ public class ListOrdersRequest extends Request {
         }
 
         /**
-         * The user who submitted the ticket.
+         * The end of the time range to query.
          */
         public Builder endTime(String endTime) {
             this.putQueryParameter("EndTime", endTime);
             this.endTime = endTime;
-            return this;
-        }
-
-        /**
-         * The end of the time range to query.
-         */
-        public Builder orderResultType(String orderResultType) {
-            this.putQueryParameter("OrderResultType", orderResultType);
-            this.orderResultType = orderResultType;
-            return this;
-        }
-
-        /**
-         * The type of the tickets that you want to query. For more information, see [PluginType parameter](~~429109~~).
-         */
-        public Builder orderStatus(String orderStatus) {
-            this.putQueryParameter("OrderStatus", orderStatus);
-            this.orderStatus = orderStatus;
-            return this;
-        }
-
-        /**
-         * The keyword that is used to query tickets.
-         */
-        public Builder pageNumber(Integer pageNumber) {
-            this.putQueryParameter("PageNumber", pageNumber);
-            this.pageNumber = pageNumber;
             return this;
         }
 
@@ -248,18 +221,9 @@ public class ListOrdersRequest extends Request {
          * *   **AS_OWNER**: the tickets that are processed by the current user.
          * *   **AS_Related**: the tickets that are related to the current user.
          */
-        public Builder pageSize(Integer pageSize) {
-            this.putQueryParameter("PageSize", pageSize);
-            this.pageSize = pageSize;
-            return this;
-        }
-
-        /**
-         * The ID of the user who submitted the ticket.
-         */
-        public Builder pluginType(String pluginType) {
-            this.putQueryParameter("PluginType", pluginType);
-            this.pluginType = pluginType;
+        public Builder orderResultType(String orderResultType) {
+            this.putQueryParameter("OrderResultType", orderResultType);
+            this.orderResultType = orderResultType;
             return this;
         }
 
@@ -271,6 +235,42 @@ public class ListOrdersRequest extends Request {
          * *   **FINISHED**: queries the tickets that are completed.
          * *   **RUNNING**: queries the tickets that are being processed.
          */
+        public Builder orderStatus(String orderStatus) {
+            this.putQueryParameter("OrderStatus", orderStatus);
+            this.orderStatus = orderStatus;
+            return this;
+        }
+
+        /**
+         * The number of the page to return.
+         */
+        public Builder pageNumber(Integer pageNumber) {
+            this.putQueryParameter("PageNumber", pageNumber);
+            this.pageNumber = pageNumber;
+            return this;
+        }
+
+        /**
+         * The number of entries to return on each page.
+         */
+        public Builder pageSize(Integer pageSize) {
+            this.putQueryParameter("PageSize", pageSize);
+            this.pageSize = pageSize;
+            return this;
+        }
+
+        /**
+         * The type of the tickets that you want to query. For more information, see [PluginType parameter](~~429109~~).
+         */
+        public Builder pluginType(String pluginType) {
+            this.putQueryParameter("PluginType", pluginType);
+            this.pluginType = pluginType;
+            return this;
+        }
+
+        /**
+         * The keyword that is used to query tickets.
+         */
         public Builder searchContent(String searchContent) {
             this.putQueryParameter("SearchContent", searchContent);
             this.searchContent = searchContent;
@@ -278,7 +278,11 @@ public class ListOrdersRequest extends Request {
         }
 
         /**
-         * The ID of the tenant. You can call the [GetUserActiveTenant](~~198073~~) or [ListUserTenants](~~198074~~) operation to obtain the tenant ID.
+         * The time condition based on which you want to query tickets. Valid values:
+         * <p>
+         * 
+         * *   **CREATE_TIME**: the time when a ticket was created.
+         * *   **MODIFY_TIME**: the time when a ticket was last modified.
          */
         public Builder searchDateType(String searchDateType) {
             this.putQueryParameter("SearchDateType", searchDateType);
@@ -287,7 +291,7 @@ public class ListOrdersRequest extends Request {
         }
 
         /**
-         * The remarks of the ticket.
+         * The beginning of the time range to query.
          */
         public Builder startTime(String startTime) {
             this.putQueryParameter("StartTime", startTime);
@@ -296,7 +300,7 @@ public class ListOrdersRequest extends Request {
         }
 
         /**
-         * The beginning of the time range to query.
+         * The ID of the tenant. You can call the [GetUserActiveTenant](~~198073~~) or [ListUserTenants](~~198074~~) operation to obtain the tenant ID.
          */
         public Builder tid(Long tid) {
             this.putQueryParameter("Tid", tid);

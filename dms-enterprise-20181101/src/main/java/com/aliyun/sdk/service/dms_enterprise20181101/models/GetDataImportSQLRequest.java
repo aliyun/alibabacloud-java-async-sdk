@@ -108,7 +108,7 @@ public class GetDataImportSQLRequest extends Request {
         }
 
         /**
-         * OrderId.
+         * The ticket ID. You can call the [ListOrders](~~144643~~) operation to query the ticket ID.
          */
         public Builder orderId(Long orderId) {
             this.putQueryParameter("OrderId", orderId);
@@ -117,7 +117,7 @@ public class GetDataImportSQLRequest extends Request {
         }
 
         /**
-         * SqlId.
+         * The SQL ID. You can call the ListDataImportSQLPreCheckDetail operation to query the SQL ID.
          */
         public Builder sqlId(Long sqlId) {
             this.putQueryParameter("SqlId", sqlId);
@@ -126,7 +126,7 @@ public class GetDataImportSQLRequest extends Request {
         }
 
         /**
-         * Tid.
+         * The tenant ID. You can call the [GetUserActiveTenant](~~198073~~) or [ListUserTenants](~~198074~~) operation to query the tenant ID.
          */
         public Builder tid(Long tid) {
             this.putQueryParameter("Tid", tid);

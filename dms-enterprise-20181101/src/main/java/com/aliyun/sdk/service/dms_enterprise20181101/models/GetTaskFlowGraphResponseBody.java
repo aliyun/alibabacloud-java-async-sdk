@@ -86,7 +86,7 @@ public class GetTaskFlowGraphResponseBody extends TeaModel {
         private TaskFlowGraph taskFlowGraph; 
 
         /**
-         * The ID of the task flow.
+         * The error code returned if the request failed.
          */
         public Builder errorCode(String errorCode) {
             this.errorCode = errorCode;
@@ -94,7 +94,7 @@ public class GetTaskFlowGraphResponseBody extends TeaModel {
         }
 
         /**
-         * The error code returned if the request failed.
+         * The error message returned if the request failed.
          */
         public Builder errorMessage(String errorMessage) {
             this.errorMessage = errorMessage;
@@ -102,7 +102,7 @@ public class GetTaskFlowGraphResponseBody extends TeaModel {
         }
 
         /**
-         * The advanced configuration of the node.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -110,7 +110,11 @@ public class GetTaskFlowGraphResponseBody extends TeaModel {
         }
 
         /**
-         * The operation that you want to perform. Set the value to **GetTaskFlowGraph**.
+         * Indicates whether the request was successful. Valid values:
+         * <p>
+         * 
+         * *   **true**: The request was successful.
+         * *   **false**: The request failed.
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -118,7 +122,7 @@ public class GetTaskFlowGraphResponseBody extends TeaModel {
         }
 
         /**
-         * The error message returned if the request failed.
+         * The list of DAG variables of the task flow.
          */
         public Builder taskFlowGraph(TaskFlowGraph taskFlowGraph) {
             this.taskFlowGraph = taskFlowGraph;
@@ -194,7 +198,7 @@ public class GetTaskFlowGraphResponseBody extends TeaModel {
             private Long nodeFrom; 
 
             /**
-             * DagId.
+             * The ID of the task flow.
              */
             public Builder dagId(Long dagId) {
                 this.dagId = dagId;
@@ -202,7 +206,7 @@ public class GetTaskFlowGraphResponseBody extends TeaModel {
             }
 
             /**
-             * Id.
+             * The ID of the task flow edge.
              */
             public Builder id(Long id) {
                 this.id = id;
@@ -210,7 +214,7 @@ public class GetTaskFlowGraphResponseBody extends TeaModel {
             }
 
             /**
-             * NodeEnd.
+             * The ID of the end node on the edge.
              */
             public Builder nodeEnd(Long nodeEnd) {
                 this.nodeEnd = nodeEnd;
@@ -218,7 +222,7 @@ public class GetTaskFlowGraphResponseBody extends TeaModel {
             }
 
             /**
-             * NodeFrom.
+             * The ID of the start node on the edge.
              */
             public Builder nodeFrom(Long nodeFrom) {
                 this.nodeFrom = nodeFrom;
@@ -384,7 +388,7 @@ public class GetTaskFlowGraphResponseBody extends TeaModel {
             private String timeVariables; 
 
             /**
-             * The name of the node.
+             * The ID of the task flow.
              */
             public Builder dagId(Long dagId) {
                 this.dagId = dagId;
@@ -392,7 +396,7 @@ public class GetTaskFlowGraphResponseBody extends TeaModel {
             }
 
             /**
-             * GraphParam.
+             * The position of the node in the DAG.
              */
             public Builder graphParam(String graphParam) {
                 this.graphParam = graphParam;
@@ -400,7 +404,7 @@ public class GetTaskFlowGraphResponseBody extends TeaModel {
             }
 
             /**
-             * NodeConfig.
+             * The advanced configuration of the node.
              */
             public Builder nodeConfig(String nodeConfig) {
                 this.nodeConfig = nodeConfig;
@@ -408,7 +412,7 @@ public class GetTaskFlowGraphResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the request.
+             * The configuration of the node.
              */
             public Builder nodeContent(String nodeContent) {
                 this.nodeContent = nodeContent;
@@ -416,7 +420,7 @@ public class GetTaskFlowGraphResponseBody extends TeaModel {
             }
 
             /**
-             * The type of the node. For more information about the valid values for this parameter, see [NodeType parameter](~~424705~~).
+             * The ID of the node.
              */
             public Builder nodeId(Long nodeId) {
                 this.nodeId = nodeId;
@@ -424,7 +428,7 @@ public class GetTaskFlowGraphResponseBody extends TeaModel {
             }
 
             /**
-             * The position of the node in the DAG.
+             * The name of the node.
              */
             public Builder nodeName(String nodeName) {
                 this.nodeName = nodeName;
@@ -432,7 +436,7 @@ public class GetTaskFlowGraphResponseBody extends TeaModel {
             }
 
             /**
-             * The list of DAG variables of the task flow.
+             * The type of the node. For more information about the valid values for this parameter, see [NodeType parameter](~~424705~~).
              */
             public Builder nodeType(Long nodeType) {
                 this.nodeType = nodeType;
@@ -440,7 +444,7 @@ public class GetTaskFlowGraphResponseBody extends TeaModel {
             }
 
             /**
-             * Queries the Directed Acyclic Graph (DAG) of a task flow.
+             * The time variables for the node.
              */
             public Builder timeVariables(String timeVariables) {
                 this.timeVariables = timeVariables;
@@ -570,7 +574,11 @@ public class GetTaskFlowGraphResponseBody extends TeaModel {
             private Long status; 
 
             /**
-             * CanEdit.
+             * Indicates whether the task flow is editable. Valid values:
+             * <p>
+             * 
+             * - **true**: editable
+             * - **false**: non-editable
              */
             public Builder canEdit(Boolean canEdit) {
                 this.canEdit = canEdit;
@@ -578,7 +586,7 @@ public class GetTaskFlowGraphResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the node.
+             * The name of the task flow.
              */
             public Builder dagName(String dagName) {
                 this.dagName = dagName;
@@ -586,7 +594,7 @@ public class GetTaskFlowGraphResponseBody extends TeaModel {
             }
 
             /**
-             * Edges.
+             * The list of task flow edges.
              */
             public Builder edges(Edges edges) {
                 this.edges = edges;
@@ -594,10 +602,7 @@ public class GetTaskFlowGraphResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the tenant.
-             * <p>
-             * 
-             * >  To view the ID of the tenant, go to the Data Management (DMS) console and move the pointer over the profile picture in the upper-right corner. For more information, see [View information about the current tenant](~~181330~~).
+             * The node list of the task flow.
              */
             public Builder nodes(Nodes nodes) {
                 this.nodes = nodes;
@@ -605,7 +610,12 @@ public class GetTaskFlowGraphResponseBody extends TeaModel {
             }
 
             /**
-             * Status.
+             * The status of the task flow. Valid values:
+             * <p>
+             * 
+             * - **0**: invalid
+             * - **1**: not scheduled
+             * - **2**: to be scheduled
              */
             public Builder status(Long status) {
                 this.status = status;

@@ -92,7 +92,10 @@ public class DeleteUserRequest extends Request {
         }
 
         /**
-         * Tid.
+         * The tenant ID.
+         * <p>
+         * 
+         * > To view the tenant ID, log on to the DMS console and move the pointer over the profile picture in the upper-right corner. For more information, see [Manage DMS tenants](~~181330~~).
          */
         public Builder tid(Long tid) {
             this.putQueryParameter("Tid", tid);
@@ -101,7 +104,7 @@ public class DeleteUserRequest extends Request {
         }
 
         /**
-         * Uid.
+         * The unique ID (UID) of Alibaba Cloud account to delete.
          */
         public Builder uid(String uid) {
             this.putQueryParameter("Uid", uid);

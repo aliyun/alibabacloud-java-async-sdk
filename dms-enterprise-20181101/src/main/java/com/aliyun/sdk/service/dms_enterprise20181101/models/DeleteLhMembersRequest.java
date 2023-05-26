@@ -123,7 +123,7 @@ public class DeleteLhMembersRequest extends Request {
         }
 
         /**
-         * The operation that you want to perform. Set the value to **DeleteLhMembers**.
+         * The ID of the user to be removed. You can call the [ListUsers](~~141938~~) or [GetUser](~~147098~~) operation to obtain the user ID.
          */
         public Builder memberIds(java.util.List < Integer > memberIds) {
             String memberIdsShrink = shrink(memberIds, "MemberIds", "json");
@@ -133,7 +133,11 @@ public class DeleteLhMembersRequest extends Request {
         }
 
         /**
-         * The ID of the request.
+         * The ID of the object.
+         * <p>
+         * 
+         * *   If the object is a workspace, you can call the [GetLhSpaceByName](~~424379~~) operation to obtain the workspace ID.
+         * *   If the object is a task flow, you can call the [ListLhTaskFlowAndScenario](~~426672~~) operation to obtain the task flow ID.
          */
         public Builder objectId(Long objectId) {
             this.putQueryParameter("ObjectId", objectId);
@@ -142,7 +146,11 @@ public class DeleteLhMembersRequest extends Request {
         }
 
         /**
-         * The error code returned if the request fails.
+         * The type of the object. Valid values:
+         * <p>
+         * 
+         * *   **0**: workspace
+         * *   **1**: task flow
          */
         public Builder objectType(Integer objectType) {
             this.putQueryParameter("ObjectType", objectType);
@@ -151,7 +159,7 @@ public class DeleteLhMembersRequest extends Request {
         }
 
         /**
-         * Tid.
+         * The ID of the tenant. You can call the [GetUserActiveTenant](~~198073~~) or [ListUserTenants](~~198074~~) operation to obtain the tenant ID.
          */
         public Builder tid(Long tid) {
             this.putQueryParameter("Tid", tid);

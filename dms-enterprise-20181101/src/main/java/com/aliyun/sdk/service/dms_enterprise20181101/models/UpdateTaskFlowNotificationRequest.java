@@ -138,7 +138,7 @@ public class UpdateTaskFlowNotificationRequest extends Request {
         }
 
         /**
-         * Specifies whether to enable notifications for successful task flows. Notifications are disabled by default. You can enable notifications based on your business requirements.
+         * The unique ID of the task flow. You can call the [ListTaskFlow](~~424565~~) or [ListLhTaskFlowAndScenario](~~426672~~) operation to query the task flow ID.
          */
         public Builder dagId(Long dagId) {
             this.putQueryParameter("DagId", dagId);
@@ -147,7 +147,7 @@ public class UpdateTaskFlowNotificationRequest extends Request {
         }
 
         /**
-         * The error code returned if the request failed.
+         * Specifies whether to enable notifications for failed task flows. Notifications are disabled by default. You can enable notifications based on your business requirements.
          */
         public Builder dagNotificationFail(Boolean dagNotificationFail) {
             this.putQueryParameter("DagNotificationFail", dagNotificationFail);
@@ -156,7 +156,7 @@ public class UpdateTaskFlowNotificationRequest extends Request {
         }
 
         /**
-         * The operation that you want to perform. Set the value to **UpdateTaskFlowNotification**.
+         * Specifies whether to enable SLA global notifications for task flows. Notifications are disabled by default. You can enable notifications based on your business requirements.
          */
         public Builder dagNotificationSla(Boolean dagNotificationSla) {
             this.putQueryParameter("DagNotificationSla", dagNotificationSla);
@@ -165,7 +165,7 @@ public class UpdateTaskFlowNotificationRequest extends Request {
         }
 
         /**
-         * The ID of the request. You can use the ID to locate logs and troubleshoot issues.
+         * Specifies whether to enable notifications for successful task flows. Notifications are disabled by default. You can enable notifications based on your business requirements.
          */
         public Builder dagNotificationSuccess(Boolean dagNotificationSuccess) {
             this.putQueryParameter("DagNotificationSuccess", dagNotificationSuccess);
@@ -174,7 +174,10 @@ public class UpdateTaskFlowNotificationRequest extends Request {
         }
 
         /**
-         * Specifies whether to enable notifications for failed task flows. Notifications are disabled by default. You can enable notifications based on your business requirements.
+         * The ID of the tenant.
+         * <p>
+         * 
+         * >  To view the ID of the tenant, go to the Data Management (DMS) console and move the pointer over the profile picture in the upper-right corner. For more information, see [View information about the current tenant](~~181330~~).
          */
         public Builder tid(Long tid) {
             this.putQueryParameter("Tid", tid);

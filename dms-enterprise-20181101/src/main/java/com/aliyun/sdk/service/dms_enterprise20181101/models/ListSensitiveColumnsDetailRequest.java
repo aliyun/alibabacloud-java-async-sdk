@@ -150,7 +150,10 @@ public class ListSensitiveColumnsDetailRequest extends Request {
         }
 
         /**
-         * The details of the sensitive field.
+         * The name of the field. You can call the [ListSensitiveColumns](~~188103~~) operation to obtain the name of the field.
+         * <p>
+         * 
+         * >  You can also call the [ListColumns](~~141870~~) operation to obtain the name of the field.
          */
         public Builder columnName(String columnName) {
             this.putQueryParameter("ColumnName", columnName);
@@ -159,38 +162,15 @@ public class ListSensitiveColumnsDetailRequest extends Request {
         }
 
         /**
-         * The ID of the database.
+         * The ID of the database. The database can be a physical database or a logical database.
+         * <p>
+         * 
+         * *   To obtain the ID of a physical database, call the [ListDatabases](~~141873~~) or [SearchDatabase](~~141876~~) operation.
+         * *   To obtain the ID of a logical database, call the [ListLogicDatabases](~~141874~~) or [SearchDatabase](~~141876~~) operation.
          */
         public Builder dbId(Long dbId) {
             this.putQueryParameter("DbId", dbId);
             this.dbId = dbId;
-            return this;
-        }
-
-        /**
-         * The name of the field.
-         */
-        public Builder logic(Boolean logic) {
-            this.putQueryParameter("Logic", logic);
-            this.logic = logic;
-            return this;
-        }
-
-        /**
-         * The ID of the tenant. You can call the [GetUserActiveTenant](~~198073~~) or [ListUserTenants](~~198074~~) operation to obtain the tenant ID.
-         */
-        public Builder schemaName(String schemaName) {
-            this.putQueryParameter("SchemaName", schemaName);
-            this.schemaName = schemaName;
-            return this;
-        }
-
-        /**
-         * The name of the table.
-         */
-        public Builder tableName(String tableName) {
-            this.putQueryParameter("TableName", tableName);
-            this.tableName = tableName;
             return this;
         }
 
@@ -200,6 +180,40 @@ public class ListSensitiveColumnsDetailRequest extends Request {
          * 
          * *   **true**: The database is a logical database.
          * *   **false**: The database is a physical database.
+         */
+        public Builder logic(Boolean logic) {
+            this.putQueryParameter("Logic", logic);
+            this.logic = logic;
+            return this;
+        }
+
+        /**
+         * The name of the database. You can call the [ListSensitiveColumns](~~188103~~) operation to obtain the name of the database.
+         * <p>
+         * 
+         * > * You can also call the [ListDatabases](~~141873~~) or [SearchDatabase](~~141876~~) operation to obtain the name of a physical database.
+         * > * You can also call the [ListLogicDatabases](~~141874~~) or [SearchDatabase](~~141876~~) operation to obtain the name of a logical database.
+         */
+        public Builder schemaName(String schemaName) {
+            this.putQueryParameter("SchemaName", schemaName);
+            this.schemaName = schemaName;
+            return this;
+        }
+
+        /**
+         * The name of the table. You can call the [ListSensitiveColumns](~~188103~~) operation to obtain the name of the table.
+         * <p>
+         * 
+         * >  You can also call the [ListTables](~~141878~~) operation to obtain the name of the table.
+         */
+        public Builder tableName(String tableName) {
+            this.putQueryParameter("TableName", tableName);
+            this.tableName = tableName;
+            return this;
+        }
+
+        /**
+         * The ID of the tenant. You can call the [GetUserActiveTenant](~~198073~~) or [ListUserTenants](~~198074~~) operation to obtain the tenant ID.
          */
         public Builder tid(Long tid) {
             this.putQueryParameter("Tid", tid);

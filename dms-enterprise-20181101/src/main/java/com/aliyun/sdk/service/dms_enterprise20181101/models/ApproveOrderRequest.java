@@ -112,38 +112,11 @@ public class ApproveOrderRequest extends Request {
         } 
 
         /**
-         * The description of the ticket.
+         * The ID of the region in which you want to call this operation.
          */
         public Builder regionId(String regionId) {
             this.putHostParameter("RegionId", regionId);
             this.regionId = regionId;
-            return this;
-        }
-
-        /**
-         * The ID of the region in which you want to call this operation.
-         */
-        public Builder approvalType(String approvalType) {
-            this.putQueryParameter("ApprovalType", approvalType);
-            this.approvalType = approvalType;
-            return this;
-        }
-
-        /**
-         * The ID of the request.
-         */
-        public Builder comment(String comment) {
-            this.putQueryParameter("Comment", comment);
-            this.comment = comment;
-            return this;
-        }
-
-        /**
-         * The ID of the approval process. You can call the [GetOrderBaseInfo](~~144642~~) operation to obtain the ID of the approval process.
-         */
-        public Builder tid(Long tid) {
-            this.putQueryParameter("Tid", tid);
-            this.tid = tid;
             return this;
         }
 
@@ -154,6 +127,33 @@ public class ApproveOrderRequest extends Request {
          * *   AGREE: approve
          * *   CANCEL: cancel
          * *   REJECT: reject
+         */
+        public Builder approvalType(String approvalType) {
+            this.putQueryParameter("ApprovalType", approvalType);
+            this.approvalType = approvalType;
+            return this;
+        }
+
+        /**
+         * The description of the ticket.
+         */
+        public Builder comment(String comment) {
+            this.putQueryParameter("Comment", comment);
+            this.comment = comment;
+            return this;
+        }
+
+        /**
+         * The ID of the tenant. You can call the [GetUserActiveTenant](~~198073~~) operation to obtain the tenant ID.
+         */
+        public Builder tid(Long tid) {
+            this.putQueryParameter("Tid", tid);
+            this.tid = tid;
+            return this;
+        }
+
+        /**
+         * The ID of the approval process. You can call the [GetOrderBaseInfo](~~144642~~) operation to obtain the ID of the approval process.
          */
         public Builder workflowInstanceId(Long workflowInstanceId) {
             this.putQueryParameter("WorkflowInstanceId", workflowInstanceId);

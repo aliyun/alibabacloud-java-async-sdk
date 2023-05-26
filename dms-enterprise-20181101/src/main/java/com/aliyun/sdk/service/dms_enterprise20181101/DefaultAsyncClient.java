@@ -54,7 +54,11 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * The operation that you want to perform. Set the value to **AddLhMembers**.
+      * You must call this operation as a DMS administrator, a database administrator (DBA), or a workspace administrator.
+      * Usage notes:
+      * *   Before you call this operation to add a user as a task flow developer, make sure that you have added the user as a workspace member.
+      * *   You cannot call this operation to transfer the ownership of a task flow. To transfer the ownership of a task flow, call the [ChangLhDagOwner](~~424761~~) operation.
+      * *   For more information about workspace roles and permissions, see [Manage permissions on a workspace](~~410893~~).
       *
      */
     @Override
@@ -104,6 +108,20 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     @Override
+    public CompletableFuture<AnalyzeSQLLineageResponse> analyzeSQLLineage(AnalyzeSQLLineageRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("AnalyzeSQLLineage").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(AnalyzeSQLLineageResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<AnalyzeSQLLineageResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    @Override
     public CompletableFuture<ApproveOrderResponse> approveOrder(ApproveOrderRequest request) {
         try {
             this.handler.validateRequestModel(request);
@@ -118,7 +136,7 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * The ID of the task flow. You can call the [ListTaskFlow](~~424565~~) or [ListLhTaskFlowAndScenario](~~426672~~) operation to query the task flow ID.
+      * During a data backfill, task flows are run in sequence based on their dates. You can specify whether task flows are run in chronological or reverse chronological order. After the data backfill is complete, you can specify a date or date range, and a node range to run task flows.
       *
      */
     @Override
@@ -164,7 +182,9 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * The ID of the tenant. You can call the [GetUserActiveTenant](~~198073~~) or [ListUserTenants](~~198074~~) operation to obtain the tenant ID.
+      * Usage notes:
+      * *   If you call this operation to transfer the ownership of a published task flow, the ownership transfer does not take effect.
+      * *   You can call the [ReDeployLhDagVersion](~~424712~~) operation to redeploy a published version of a task flow.
       *
      */
     @Override
@@ -214,7 +234,7 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * The error code returned if the request fails.
+      * For more information about the Normal Data Modify feature, see [Change regular data](~~58419~~).
       *
      */
     @Override
@@ -232,7 +252,8 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * The error code.
+      * For more information about the historical data cleaning, see [Clear historical data](~~162507~~).
+      * This operation can be used only for MySQL databases.
       *
      */
     @Override
@@ -264,8 +285,7 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * The key of the attachment that contains the SQL statements used to roll back the data import. You can call the [GetUserUploadFileJob](~~206069~~) operation to obtain the attachment key from the value of the AttachmentKey parameter.
-      * >  This parameter is required if you set the **RollbackSqlType** parameter to **ATTACHMENT**.
+      * For more information about the Large Data Import feature, see [Import data](~~161439~~).
       *
      */
     @Override
@@ -311,7 +331,8 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * The SQL statements that you want to execute to change data.
+      * For more information about the lock-free change feature, see [Overview](~~207847~~).
+      * This operation can be used only for instances that are managed in Stable Change or Security Collaboration mode. For more information, see [Change data without the need to lock tables](~~96145~~) and [Change schemas without locking tables](~~98373~~).
       *
      */
     @Override
@@ -362,7 +383,11 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * The error code.
+      * To facilitate ticket creation, you can call the following dedicated operations to create some types of tickets:
+      * *   [CreateDataCorrectOrder](~~208388~~): creates a regular data change ticket.
+      * *   [CreateDataCronClearOrder](~~208385~~): creates a ticket to clear historical data.
+      * *   [CreateDataImportOrder](~~208387~~): creates a data import ticket.
+      * *   [CreateFreeLockCorrectOrder](~~208386~~): creates a lock-free change ticket.
       *
      */
     @Override
@@ -379,6 +404,12 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+      * - The database instance runs the MySQL or MariaDB database engine. For example, the database instance can be an ApsaraDB RDS for MySQL instance, a PolarDB for MySQL cluster, a Distributed Relational Database Service (DRDS) cluster, or an AnalyticDB for MySQL cluster. The database instance can also be a self-managed MySQL or MariaDB database, or a MySQL or MariaDB database in a third-party cloud.
+      * - The database instance resides in the China (Hangzhou) or China (Beijing) region.
+      * - You are a Data Management (DMS) administrator, a database administrator (DBA), or the owner of the database instance.
+      *
+     */
     @Override
     public CompletableFuture<CreateProxyResponse> createProxy(CreateProxyRequest request) {
         try {
@@ -393,6 +424,11 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+      * - The data security protection feature is enabled for the instance.
+      * - Your user role is the administrator role, DBA role, or the owner of data security protection for the current instance.
+      *
+     */
     @Override
     public CompletableFuture<CreateProxyAccessResponse> createProxyAccess(CreateProxyAccessRequest request) {
         try {
@@ -538,7 +574,7 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * The ID of the tenant. You can call the [GetUserActiveTenant](~~198073~~) operation to obtain the tenant ID.
+      * Note: You can call this operation only to remove a database instance from the instance list of DMS. The instance is not deleted or shut down.
       *
      */
     @Override
@@ -570,7 +606,8 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * The ID of the user to be removed. You can call the [ListUsers](~~141938~~) or [GetUser](~~147098~~) operation to obtain the user ID.
+      * You must call this operation as a DMS administrator, a database administrator (DBA), or a workspace administrator.
+      * You cannot call this operation to transfer the ownership of a task flow. To transfer the ownership of a task flow, call the [ChangLhDagOwner](~~424761~~) operation.
       *
      */
     @Override
@@ -615,6 +652,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+      * After you disable this feature, your DB instance loses the JDBC protocol. All authorization information is recycled.
+      *
+     */
     @Override
     public CompletableFuture<DeleteProxyResponse> deleteProxy(DeleteProxyRequest request) {
         try {
@@ -644,7 +685,7 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * The error code returned if the request failed.
+      * When you call this operation, make sure that no task flow is specified in the business scenario.
       *
      */
     @Override
@@ -690,7 +731,7 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * The ID of the task flow. You can call the [ListTaskFlow](~~424565~~) or [ListLhTaskFlowAndScenario](~~426672~~) operation to query the task flow ID.
+      * This operation is used for multi-condition query. You can call it to delete the edges of a specified task flow that meet all specified conditions.
       *
      */
     @Override
@@ -708,7 +749,8 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * DeleteUser
+      * This operation corresponds to the feature of deleting a user on the Users page in the Data Management (DMS) console. An administrator of DMS Enterprise can call this operation to delete an Alibaba Cloud account that is no longer used in DMS Enterprise. After an Alibaba Cloud account is deleted, the permissions that are granted to the Alibaba Cloud account are revoked. The data owner configurations and database administrator (DBA) configurations are disabled.
+      * > This operation only removes the relationship between an Alibaba Cloud account and DMS Enterprise. The Alibaba Cloud account is not deleted. After you delete an Alibaba Cloud account, you cannot use this account to log on to DMS Enterprise until the account is recreated.
       *
      */
     @Override
@@ -726,7 +768,8 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * The UID of the Alibaba Cloud account.
+      * The effect of disabling a user by calling this operation is the same as that of disabling a user by choosing System Management > User Management in the DMS Enterprise console. The administrator of DMS Enterprise can call this operation to disable a user that is temporarily not used in DMS Enterprise. After the user is disabled, the data source permission, data owner configuration, and database administrator (DBA) configuration of the corresponding Alibaba Cloud account or Resource Access Management (RAM) user are revoked and become invalid.
+      * >  This operation only stops the Alibaba Cloud account or RAM user from logging on to DMS Enterprise of the enterprise, rather than actually disabling the Alibaba Cloud account or RAM user. After the user is disabled, the Alibaba Cloud account or RAM user cannot log on to DMS Enterprise, unless the user is enabled again. The disabled user, however, still exists in DMS Enterprise.
       *
      */
     @Override
@@ -771,6 +814,11 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+      * The effect of enabling a user by calling this operation is the same as that of enabling a user by choosing System Management > User Management in the DMS Enterprise console. The administrator of DMS Enterprise can call this operation to enable a user that has been disabled in DMS Enterprise. After the user is enabled, the corresponding Alibaba Cloud account or Resource Access Management (RAM) user can continue to log on to DMS Enterprise and perform relevant operations.
+      * >  This operation only enables the Alibaba Cloud account or RAM user to log on to DMS Enterprise of the enterprise and perform relevant operations, rather than granting other permissions to the Alibaba Cloud account or RAM user.
+      *
+     */
     @Override
     public CompletableFuture<EnableUserResponse> enableUser(EnableUserRequest request) {
         try {
@@ -814,7 +862,7 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * The SQL statements to be executed. Data query language (DQL) statements, data definition language (DDL) statements, and data manipulation language (DML) statements are supported. The control mode of the instance that you want to query determines whether you can execute DDL and DML statements.
+      * You can call this operation only for instances that are managed in Security Collaboration mode.
       *
      */
     @Override
@@ -923,6 +971,20 @@ public final class DefaultAsyncClient implements AsyncClient {
             return this.handler.execute(params);
         } catch (Exception e) {
             CompletableFuture<GetDBTopologyResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    @Override
+    public CompletableFuture<GetDataArchiveOrderDetailResponse> getDataArchiveOrderDetail(GetDataArchiveOrderDetailRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("GetDataArchiveOrderDetail").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(GetDataArchiveOrderDetailResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<GetDataArchiveOrderDetailResponse> future = new CompletableFuture<>();
             future.completeExceptionally(e);
             return future;
         }
@@ -1072,6 +1134,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+      * You can call this operation only if the data is imported in security mode in your data import ticket.
+      *
+     */
     @Override
     public CompletableFuture<GetDataImportSQLResponse> getDataImportSQL(GetDataImportSQLRequest request) {
         try {
@@ -1171,7 +1237,7 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * The minimum scheduling cycle. Unit: minutes.
+      * The scheduling cycle of a task flow must be greater than the minimum scheduling cycle configured in the SLA rule for the task flow.
       *
      */
     @Override
@@ -1189,7 +1255,7 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * The ID of the workspace.
+      * You are a DMS administrator or a database administrator (DBA).
       *
      */
     @Override
@@ -1271,7 +1337,7 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * The error message returned if the request failed.
+      * Prerequisites: You are an administrator of Data Management (DMS) or a security administrator. You can call the [ListUsers](~~141938~~) or [GetUser](~~147098~~) operation to obtain your user role from the RoleIdList parameter that is returned.
       *
      */
     @Override
@@ -1422,6 +1488,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+      * For more information about the SQL review feature, see [SQL review](https://icms.alibaba-inc.com/content/dms/doc?l=1\\&m=61777\\&n=2433364).
+      *
+     */
     @Override
     public CompletableFuture<GetSQLReviewOptimizeDetailResponse> getSQLReviewOptimizeDetail(GetSQLReviewOptimizeDetailRequest request) {
         try {
@@ -1753,7 +1823,7 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * The number of entries to return on each page.
+      * For more information about the Normal Data Modify feature, see [Change regular data](~~58419~~).
       *
      */
     @Override
@@ -1771,7 +1841,7 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * The precheck information about SQL statements.
+      * For more information about the Normal Data Modify feature, see [Change regular data](~~58419~~).
       *
      */
     @Override
@@ -1788,6 +1858,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+      * You can call this operation only if the data is imported in security mode in your data import ticket.
+      *
+     */
     @Override
     public CompletableFuture<ListDataImportSQLPreCheckDetailResponse> listDataImportSQLPreCheckDetail(ListDataImportSQLPreCheckDetailRequest request) {
         try {
@@ -1802,6 +1876,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+      * You can call this operation only if the data is imported in security mode in your data import ticket.
+      *
+     */
     @Override
     public CompletableFuture<ListDataImportSQLTypeResponse> listDataImportSQLType(ListDataImportSQLTypeRequest request) {
         try {
@@ -1943,7 +2021,8 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * The operation that you want to perform. Set the value to **ListLhTaskFlowAndScenario**.
+      * *   Before you call this operation, make sure that you have the access permissions on the workspace. If you do not have the access permissions on the workspace, you can contact a DMS administrator, database administrator (DBA), or workspace administrator to add you as a member of the workspace. The [AddLhMembers](~~424759~~) operation can be called to add a workspace member.
+      * *   If you are a DMS administrator or a workspace administrator, you can query the business scenarios and task flows related to a user in a workspace based on the user ID.
       *
      */
     @Override
@@ -2087,7 +2166,7 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * The total number of the SQL statements.
+      * For more information about the SQL review feature, see [SQL review](~~60374~~).
       *
      */
     @Override
@@ -2235,7 +2314,7 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * The ID of the task flow. You can call the [ListTaskFlow](~~424565~~) or [ListLhTaskFlowAndScenario](~~426672~~) operation to query the task flow ID.
+      * This operation is used for multi-condition query. You can call this operation to query the edges of a specified task flow that meet all specified conditions.
       *
      */
     @Override
@@ -2533,7 +2612,7 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * WB01220505
+      * Prerequisites: You are a DMS administrator or a database administrator (DBA). You can call the [ListUsers](~~141938~~) or [GetUser](~~147098~~) operation to query your user role from the RoleIdList parameter that is returned.
       *
      */
     @Override
@@ -2551,8 +2630,7 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * The ID of the tenant.
-      * >  To query ID of the tenant, move the pointer over the profile picture in the upper-right corner of the DMS console. For more information, see the "View information about the current tenant" section of the [Manage DMS tenants](~~181330~~) topic.
+      * If you are an **administrator** in Data Management (DMS), you can call this operation to register a user for your enterprise. To view users that are assigned the administrator role, perform the following steps: Log on to the DMS console. In the top navigation bar, click O&M. In the left-side navigation pane, click User.
       *
      */
     @Override
@@ -2583,6 +2661,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+      * You can call this operation only for task flows that are suspended.
+      *
+     */
     @Override
     public CompletableFuture<ResumeTaskFlowInstanceResponse> resumeTaskFlowInstance(ResumeTaskFlowInstanceRequest request) {
         try {
@@ -2823,6 +2905,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+      * Before you call the UpdateInstance operation, call the [GetInstance](~~141567~~) or [ListInstances](~~141936~~) operation to obtain the complete information about the instance.
+      *
+     */
     @Override
     public CompletableFuture<UpdateInstanceResponse> updateInstance(UpdateInstanceRequest request) {
         try {
@@ -2838,7 +2924,7 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * The ID of the task node.
+      * SLA rules take effect after task flows are deployed and published.
       *
      */
     @Override
@@ -2869,6 +2955,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+      * You can call this operation to configure a failed task or rerun a task.
+      *
+     */
     @Override
     public CompletableFuture<UpdateTaskConfigResponse> updateTaskConfig(UpdateTaskConfigRequest request) {
         try {
@@ -2883,6 +2973,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+      * You can call this operation to modify node configurations.
+      *
+     */
     @Override
     public CompletableFuture<UpdateTaskContentResponse> updateTaskContent(UpdateTaskContentRequest request) {
         try {
@@ -2976,8 +3070,7 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * The ID of the tenant.
-      * >  To view the ID of the tenant, go to the Data Management (DMS) console and move the pointer over the profile picture in the upper-right corner. For more information, see [View information about the current tenant](~~181330~~).
+      * Note: The new owner of the task flow must belong to the same tenant as the previous owner.
       *
      */
     @Override
@@ -2995,7 +3088,7 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * The ID of the end node on the edge.
+      * You can call this operation to perform a full update. For incremental updates, see AddTaskFlowEdges, UpdateTaskFlowEdges, and DeleteTaskFlowEdgesByMultiCondition.
       *
      */
     @Override
@@ -3012,6 +3105,11 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+      * You can call this operation to update the scheduling properties for a task flow in the editing state. You can configure a **timed scheduling** task flow or an **event scheduling** task flow. When you configure a **timed scheduling** task flow, you can choose from one-time scheduling or periodic scheduling. When you configure an **event scheduling** task flow, you can subscribe to task flows or task flow nodes.****\\
+      * After you update the scheduling properties, you need to publish and deploy the task flow again. The new task flow instance will run based on the updated scheduling properties.
+      *
+     */
     @Override
     public CompletableFuture<UpdateTaskFlowScheduleResponse> updateTaskFlowSchedule(UpdateTaskFlowScheduleRequest request) {
         try {
@@ -3055,7 +3153,7 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * The output variables for the task.
+      * Only nodes of single-instance SQL assignment, script code, and ECS remote command have output variables.
       *
      */
     @Override

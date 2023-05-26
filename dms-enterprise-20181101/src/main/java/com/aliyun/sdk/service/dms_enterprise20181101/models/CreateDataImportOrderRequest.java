@@ -145,7 +145,7 @@ public class CreateDataImportOrderRequest extends Request {
         }
 
         /**
-         * The operation that you want to perform. Set the value to CreateDataImportOrder.
+         * The purpose or objective of the data import. This parameter is used to help reduce unnecessary communication.
          */
         public Builder comment(String comment) {
             this.putQueryParameter("Comment", comment);
@@ -154,7 +154,7 @@ public class CreateDataImportOrderRequest extends Request {
         }
 
         /**
-         * The ID of the tenant. You can call the [GetUserActiveTenant](~~198073~~) or [ListUserTenants](~~198074~~) operation to obtain the tenant ID.
+         * The parameters of the ticket.
          */
         public Builder param(Param param) {
             String paramShrink = shrink(param, "Param", "json");
@@ -164,13 +164,7 @@ public class CreateDataImportOrderRequest extends Request {
         }
 
         /**
-         * Specifies whether the database is a logical database. Valid values:
-         * <p>
-         * 
-         * *   **true**: The database is a logical database.
-         * *   **false**: The database is a physical database.
-         * 
-         * >  If you set this parameter to **true**, the database that you specify must be a logical database.
+         * The stakeholders of the data import. All stakeholders can view the ticket details and assist in the approval process. Irrelevant users other than DMS administrators and database administrators (DBAs) are not allowed to view the ticket details.
          */
         public Builder relatedUserList(java.util.List < Long > relatedUserList) {
             String relatedUserListShrink = shrink(relatedUserList, "RelatedUserList", "json");
@@ -180,7 +174,7 @@ public class CreateDataImportOrderRequest extends Request {
         }
 
         /**
-         * The ID of the ticket.
+         * The ID of the tenant. You can call the [GetUserActiveTenant](~~198073~~) or [ListUserTenants](~~198074~~) operation to obtain the tenant ID.
          */
         public Builder tid(Long tid) {
             this.putQueryParameter("Tid", tid);
@@ -248,14 +242,13 @@ public class CreateDataImportOrderRequest extends Request {
             }
 
             /**
-             * The mode in which the data in the CSV format is to be written to the destination table. Valid values:
+             * Specifies whether the database is a logical database. Valid values:
              * <p>
              * 
-             * *   **INSERT**: The database checks the primary key when data is written. If a duplicate primary key value exists, an error message is returned.
-             * *   **INSERT_IGNORE**: If the imported data contains data records that are the same as those in the destination table, the new data records are ignored.
-             * *   **REPLACE_INTO**: If the imported data contains a row that has the same value for the primary key or unique index as one row in the destination table, the database deletes the existing row and inserts the new row into the destination table.
+             * *   **true**: The database is a logical database.
+             * *   **false**: The database is a physical database.
              * 
-             * >  This parameter is required if you set the **FileType** parameter to **CSV**.
+             * >  If you set this parameter to **true**, the database that you specify must be a logical database.
              */
             public Builder logic(Boolean logic) {
                 this.logic = logic;
@@ -443,7 +436,7 @@ public class CreateDataImportOrderRequest extends Request {
             private String tableName; 
 
             /**
-             * The purpose or objective of the data import. This parameter is used to help reduce unnecessary communication.
+             * The key of the attachment that contains the SQL statements used to import data. You can call the [GetUserUploadFileJob](~~206069~~) operation to the attachment key from the value of the AttachmentKey parameter.
              */
             public Builder attachmentName(String attachmentName) {
                 this.attachmentName = attachmentName;
@@ -451,7 +444,7 @@ public class CreateDataImportOrderRequest extends Request {
             }
 
             /**
-             * The database to which you want to import data. You can specify only one database.
+             * The reason for the data import.
              */
             public Builder classify(String classify) {
                 this.classify = classify;
@@ -459,11 +452,13 @@ public class CreateDataImportOrderRequest extends Request {
             }
 
             /**
-             * The format of the SQL statements used to roll back the data import. Valid values:
+             * The type of the CSV file. Valid values:
              * <p>
              * 
-             * *   **TEXT**: text
-             * *   **ATTACHMENT**: attachment
+             * *   **true**: The first row in the CSV file contains field names.
+             * *   **false**: The first row in the CSV file contains data.
+             * 
+             * >  This parameter is required if you set the **FileType** parameter to **CSV**.
              */
             public Builder csvFirstRowIsColumnDef(Boolean csvFirstRowIsColumnDef) {
                 this.csvFirstRowIsColumnDef = csvFirstRowIsColumnDef;
@@ -471,80 +466,10 @@ public class CreateDataImportOrderRequest extends Request {
             }
 
             /**
-             * The format of the file for the data import. Valid values:
-             * <p>
-             * 
-             * *   **SQL**: an SQL file
-             * *   **CSV**: a CSV file
+             * The database to which you want to import data. You can specify only one database.
              */
             public Builder dbItemList(java.util.List < DbItemList> dbItemList) {
                 this.dbItemList = dbItemList;
-                return this;
-            }
-
-            /**
-             * The stakeholders of the data import. All stakeholders can view the ticket details and assist in the approval process. Irrelevant users other than DMS administrators and database administrators (DBAs) are not allowed to view the ticket details.
-             */
-            public Builder fileEncoding(String fileEncoding) {
-                this.fileEncoding = fileEncoding;
-                return this;
-            }
-
-            /**
-             * The import mode. Valid values:
-             * <p>
-             * 
-             * *   **FAST_MODE**: In the Execute step, the uploaded file is read and SQL statements are executed to import data to the specified destination database. Compared with the security mode, this mode can be used to import data in a less secure but more efficient manner.
-             * *   **SAFE_MODE**: In the Precheck step, the uploaded file is parsed, and SQL statements or CSV file data is cached. In the Execute step, the cached SQL statements are read and executed to import data, or the cached CSV file data is read and imported to the specified destination database. This mode can be used to import data in a more secure but less efficient manner.
-             */
-            public Builder fileType(String fileType) {
-                this.fileType = fileType;
-                return this;
-            }
-
-            /**
-             * The error message returned if the request fails.
-             */
-            public Builder ignoreError(Boolean ignoreError) {
-                this.ignoreError = ignoreError;
-                return this;
-            }
-
-            /**
-             * The key of the attachment that contains the SQL statements used to import data. You can call the [GetUserUploadFileJob](~~206069~~) operation to the attachment key from the value of the AttachmentKey parameter.
-             */
-            public Builder importMode(String importMode) {
-                this.importMode = importMode;
-                return this;
-            }
-
-            /**
-             * The parameters of the ticket.
-             */
-            public Builder insertType(String insertType) {
-                this.insertType = insertType;
-                return this;
-            }
-
-            /**
-             * The SQL statements used to roll back the data import.
-             * <p>
-             * 
-             * >  This parameter is required if you set the **RollbackSqlType** parameter to **TEXT**.
-             */
-            public Builder rollbackAttachmentName(String rollbackAttachmentName) {
-                this.rollbackAttachmentName = rollbackAttachmentName;
-                return this;
-            }
-
-            /**
-             * The destination table to which you want to import the data in the CSV format.
-             * <p>
-             * 
-             * >  This parameter is required if you set the **FileType** parameter to **CSV**.
-             */
-            public Builder rollbackSQL(String rollbackSQL) {
-                this.rollbackSQL = rollbackSQL;
                 return this;
             }
 
@@ -557,8 +482,20 @@ public class CreateDataImportOrderRequest extends Request {
              * *   **GBK**: GBK encoding
              * *   **ISO-8859-1**: ISO-8859-1 encoding
              */
-            public Builder rollbackSqlType(String rollbackSqlType) {
-                this.rollbackSqlType = rollbackSqlType;
+            public Builder fileEncoding(String fileEncoding) {
+                this.fileEncoding = fileEncoding;
+                return this;
+            }
+
+            /**
+             * The format of the file for the data import. Valid values:
+             * <p>
+             * 
+             * *   **SQL**: an SQL file
+             * *   **CSV**: a CSV file
+             */
+            public Builder fileType(String fileType) {
+                this.fileType = fileType;
                 return this;
             }
 
@@ -568,6 +505,78 @@ public class CreateDataImportOrderRequest extends Request {
              * 
              * *   **true**: skips the error and continues to execute SQL statements.
              * *   **false**: stops executing SQL statements.
+             */
+            public Builder ignoreError(Boolean ignoreError) {
+                this.ignoreError = ignoreError;
+                return this;
+            }
+
+            /**
+             * The import mode. Valid values:
+             * <p>
+             * 
+             * *   **FAST_MODE**: In the Execute step, the uploaded file is read and SQL statements are executed to import data to the specified destination database. Compared with the security mode, this mode can be used to import data in a less secure but more efficient manner.
+             * *   **SAFE_MODE**: In the Precheck step, the uploaded file is parsed, and SQL statements or CSV file data is cached. In the Execute step, the cached SQL statements are read and executed to import data, or the cached CSV file data is read and imported to the specified destination database. This mode can be used to import data in a more secure but less efficient manner.
+             */
+            public Builder importMode(String importMode) {
+                this.importMode = importMode;
+                return this;
+            }
+
+            /**
+             * The mode in which the data in the CSV format is to be written to the destination table. Valid values:
+             * <p>
+             * 
+             * *   **INSERT**: The database checks the primary key when data is written. If a duplicate primary key value exists, an error message is returned.
+             * *   **INSERT_IGNORE**: If the imported data contains data records that are the same as those in the destination table, the new data records are ignored.
+             * *   **REPLACE_INTO**: If the imported data contains a row that has the same value for the primary key or unique index as one row in the destination table, the database deletes the existing row and inserts the new row into the destination table.
+             * 
+             * >  This parameter is required if you set the **FileType** parameter to **CSV**.
+             */
+            public Builder insertType(String insertType) {
+                this.insertType = insertType;
+                return this;
+            }
+
+            /**
+             * The key of the attachment that contains the SQL statements used to roll back the data import. You can call the [GetUserUploadFileJob](~~206069~~) operation to obtain the attachment key from the value of the AttachmentKey parameter.
+             * <p>
+             * 
+             * >  This parameter is required if you set the **RollbackSqlType** parameter to **ATTACHMENT**.
+             */
+            public Builder rollbackAttachmentName(String rollbackAttachmentName) {
+                this.rollbackAttachmentName = rollbackAttachmentName;
+                return this;
+            }
+
+            /**
+             * The SQL statements used to roll back the data import.
+             * <p>
+             * 
+             * >  This parameter is required if you set the **RollbackSqlType** parameter to **TEXT**.
+             */
+            public Builder rollbackSQL(String rollbackSQL) {
+                this.rollbackSQL = rollbackSQL;
+                return this;
+            }
+
+            /**
+             * The format of the SQL statements used to roll back the data import. Valid values:
+             * <p>
+             * 
+             * *   **TEXT**: text
+             * *   **ATTACHMENT**: attachment
+             */
+            public Builder rollbackSqlType(String rollbackSqlType) {
+                this.rollbackSqlType = rollbackSqlType;
+                return this;
+            }
+
+            /**
+             * The destination table to which you want to import the data in the CSV format.
+             * <p>
+             * 
+             * >  This parameter is required if you set the **FileType** parameter to **CSV**.
              */
             public Builder tableName(String tableName) {
                 this.tableName = tableName;

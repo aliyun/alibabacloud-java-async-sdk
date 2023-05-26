@@ -86,7 +86,7 @@ public class ListTaskFlowEdgesByConditionResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * Edges.
+         * The list of task flow edges.
          */
         public Builder edges(Edges edges) {
             this.edges = edges;
@@ -94,7 +94,7 @@ public class ListTaskFlowEdgesByConditionResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the end node on the edge.
+         * The error code returned if the request failed.
          */
         public Builder errorCode(String errorCode) {
             this.errorCode = errorCode;
@@ -102,7 +102,7 @@ public class ListTaskFlowEdgesByConditionResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the start node on the edge.
+         * The error message returned if the request failed.
          */
         public Builder errorMessage(String errorMessage) {
             this.errorMessage = errorMessage;
@@ -110,7 +110,7 @@ public class ListTaskFlowEdgesByConditionResponseBody extends TeaModel {
         }
 
         /**
-         * The list of task flow edges.
+         * The ID of the request. You can use the ID to locate logs and troubleshoot issues.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -118,7 +118,11 @@ public class ListTaskFlowEdgesByConditionResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request. You can use the ID to locate logs and troubleshoot issues.
+         * Indicates whether the request was successful. Valid values:
+         * <p>
+         * 
+         * *   **true**: The request was successful.
+         * *   **false**: The request failed.
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -182,7 +186,7 @@ public class ListTaskFlowEdgesByConditionResponseBody extends TeaModel {
             private Long nodeFrom; 
 
             /**
-             * Id.
+             * The ID of the task flow edge.
              */
             public Builder id(Long id) {
                 this.id = id;
@@ -190,7 +194,7 @@ public class ListTaskFlowEdgesByConditionResponseBody extends TeaModel {
             }
 
             /**
-             * NodeEnd.
+             * The ID of the end node on the edge.
              */
             public Builder nodeEnd(Long nodeEnd) {
                 this.nodeEnd = nodeEnd;
@@ -198,7 +202,7 @@ public class ListTaskFlowEdgesByConditionResponseBody extends TeaModel {
             }
 
             /**
-             * NodeFrom.
+             * The ID of the start node on the edge.
              */
             public Builder nodeFrom(Long nodeFrom) {
                 this.nodeFrom = nodeFrom;

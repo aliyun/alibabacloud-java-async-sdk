@@ -145,7 +145,7 @@ public class CreateFreeLockCorrectOrderRequest extends Request {
         }
 
         /**
-         * The stakeholders of the data change. All stakeholders can view the ticket details and assist in the approval process. Irrelevant users other than DMS administrators and database administrators (DBAs) are not allowed to view the ticket details.
+         * The purpose or objective of the data change. This parameter is used to help reduce unnecessary communication.
          */
         public Builder comment(String comment) {
             this.putQueryParameter("Comment", comment);
@@ -154,7 +154,7 @@ public class CreateFreeLockCorrectOrderRequest extends Request {
         }
 
         /**
-         * The key of the attachment that contains the SQL statements used to roll back the data change.
+         * The parameters of the ticket.
          */
         public Builder param(Param param) {
             String paramShrink = shrink(param, "Param", "json");
@@ -164,7 +164,7 @@ public class CreateFreeLockCorrectOrderRequest extends Request {
         }
 
         /**
-         * The parameters of the ticket.
+         * The stakeholders of the data change. All stakeholders can view the ticket details and assist in the approval process. Irrelevant users other than DMS administrators and database administrators (DBAs) are not allowed to view the ticket details.
          */
         public Builder relatedUserList(java.util.List < Long > relatedUserList) {
             String relatedUserListShrink = shrink(relatedUserList, "RelatedUserList", "json");
@@ -174,7 +174,7 @@ public class CreateFreeLockCorrectOrderRequest extends Request {
         }
 
         /**
-         * The ID of the ticket.
+         * The ID of the tenant. You can call the [GetUserActiveTenant](~~198073~~) or [ListUserTenants](~~198074~~) operation to obtain the tenant ID.
          */
         public Builder tid(Long tid) {
             this.putQueryParameter("Tid", tid);
@@ -230,7 +230,11 @@ public class CreateFreeLockCorrectOrderRequest extends Request {
             private Boolean logic; 
 
             /**
-             * The purpose or objective of the data change. This parameter is used to help reduce unnecessary communication.
+             * The ID of the database. The database can be a physical database or a logical database.
+             * <p>
+             * 
+             * *   To obtain the ID of a physical database, call the [ListDatabases](~~141873~~) or [SearchDatabase](~~141876~~) operation.
+             * *   To obtain the ID of a logical database, call the [ListLogicDatabases](~~141874~~) or [SearchDatabase](~~141876~~) operation.
              */
             public Builder dbId(Long dbId) {
                 this.dbId = dbId;
@@ -238,7 +242,11 @@ public class CreateFreeLockCorrectOrderRequest extends Request {
             }
 
             /**
-             * The SQL statements used to roll back the data change.
+             * Specifies whether the database is a logical database. Valid values:
+             * <p>
+             * 
+             * *   **true**: The database is a logical database.
+             * *   **false**: The database is a physical database.
              */
             public Builder logic(Boolean logic) {
                 this.logic = logic;
@@ -378,11 +386,7 @@ public class CreateFreeLockCorrectOrderRequest extends Request {
             private String sqlType; 
 
             /**
-             * Specifies whether the database is a logical database. Valid values:
-             * <p>
-             * 
-             * *   **true**: The database is a logical database.
-             * *   **false**: The database is a physical database.
+             * The key of the attachment that contains the SQL statements used to change data. This parameter is not supported.
              */
             public Builder attachmentName(String attachmentName) {
                 this.attachmentName = attachmentName;
@@ -390,7 +394,7 @@ public class CreateFreeLockCorrectOrderRequest extends Request {
             }
 
             /**
-             * The error code returned if the request fails.
+             * The reason for the data change.
              */
             public Builder classify(String classify) {
                 this.classify = classify;
@@ -398,7 +402,7 @@ public class CreateFreeLockCorrectOrderRequest extends Request {
             }
 
             /**
-             * The key of the attachment that contains the SQL statements used to change data. This parameter is not supported.
+             * The databases in which you want to change data.
              */
             public Builder dbItemList(java.util.List < DbItemList> dbItemList) {
                 this.dbItemList = dbItemList;
@@ -406,14 +410,39 @@ public class CreateFreeLockCorrectOrderRequest extends Request {
             }
 
             /**
-             * The ID of the database. The database can be a physical database or a logical database.
+             * The execution mode of the ticket after the ticket is approved. Valid values:
              * <p>
              * 
-             * *   To obtain the ID of a physical database, call the [ListDatabases](~~141873~~) or [SearchDatabase](~~141876~~) operation.
-             * *   To obtain the ID of a logical database, call the [ListLogicDatabases](~~141874~~) or [SearchDatabase](~~141876~~) operation.
+             * *   **COMMITOR**: The data change is performed by the user who submits the ticket.
+             * *   **AUTO**: The data change is automatically performed after the ticket is approved.
+             * *   **LAST_AUDITOR**: The data change is performed by the last approver of the ticket.
              */
             public Builder execMode(String execMode) {
                 this.execMode = execMode;
+                return this;
+            }
+
+            /**
+             * The SQL statements that you want to execute to change data.
+             */
+            public Builder execSQL(String execSQL) {
+                this.execSQL = execSQL;
+                return this;
+            }
+
+            /**
+             * The key of the attachment that contains the SQL statements used to roll back the data change.
+             */
+            public Builder rollbackAttachmentName(String rollbackAttachmentName) {
+                this.rollbackAttachmentName = rollbackAttachmentName;
+                return this;
+            }
+
+            /**
+             * The SQL statements used to roll back the data change.
+             */
+            public Builder rollbackSQL(String rollbackSQL) {
+                this.rollbackSQL = rollbackSQL;
                 return this;
             }
 
@@ -424,37 +453,17 @@ public class CreateFreeLockCorrectOrderRequest extends Request {
              * *   **TEXT**: text
              * *   **ATTACHMENT**: attachment. This value is not supported.
              */
-            public Builder execSQL(String execSQL) {
-                this.execSQL = execSQL;
-                return this;
-            }
-
-            /**
-             * The error message returned if the request fails.
-             */
-            public Builder rollbackAttachmentName(String rollbackAttachmentName) {
-                this.rollbackAttachmentName = rollbackAttachmentName;
-                return this;
-            }
-
-            /**
-             * The ID of the tenant. You can call the [GetUserActiveTenant](~~198073~~) or [ListUserTenants](~~198074~~) operation to obtain the tenant ID.
-             */
-            public Builder rollbackSQL(String rollbackSQL) {
-                this.rollbackSQL = rollbackSQL;
-                return this;
-            }
-
-            /**
-             * The databases in which you want to change data.
-             */
             public Builder rollbackSqlType(String rollbackSqlType) {
                 this.rollbackSqlType = rollbackSqlType;
                 return this;
             }
 
             /**
-             * The operation that you want to perform. Set the value to CreateFreeLockCorrectOrder.
+             * The format of the SQL statements used to change data. Valid values:
+             * <p>
+             * 
+             * *   **TEXT**: text
+             * *   **ATTACHMENT**: attachment. This value is not supported.
              */
             public Builder sqlType(String sqlType) {
                 this.sqlType = sqlType;

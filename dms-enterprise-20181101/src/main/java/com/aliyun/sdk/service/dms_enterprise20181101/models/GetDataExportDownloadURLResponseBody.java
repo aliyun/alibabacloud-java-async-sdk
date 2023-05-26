@@ -86,7 +86,7 @@ public class GetDataExportDownloadURLResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * The ID of the ticket. You can call the [ListOrders](~~144643~~) operation to obtain the ticket ID.
+         * The details about the download URL of the file that records the export results for the ticket.
          */
         public Builder downloadURLResult(DownloadURLResult downloadURLResult) {
             this.downloadURLResult = downloadURLResult;
@@ -94,7 +94,7 @@ public class GetDataExportDownloadURLResponseBody extends TeaModel {
         }
 
         /**
-         * ErrorCode.
+         * The error code.
          */
         public Builder errorCode(String errorCode) {
             this.errorCode = errorCode;
@@ -102,7 +102,7 @@ public class GetDataExportDownloadURLResponseBody extends TeaModel {
         }
 
         /**
-         * ErrorMessage.
+         * The error message.
          */
         public Builder errorMessage(String errorMessage) {
             this.errorMessage = errorMessage;
@@ -110,7 +110,7 @@ public class GetDataExportDownloadURLResponseBody extends TeaModel {
         }
 
         /**
-         * The operation that you want to perform. Set the value to **GetDataExportDownloadURL**.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -118,7 +118,11 @@ public class GetDataExportDownloadURLResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * Indicates whether the request was successful. Valid values:
+         * <p>
+         * 
+         * *   **true**: The request was successful.
+         * *   **false**: The request failed.
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -194,7 +198,7 @@ public class GetDataExportDownloadURLResponseBody extends TeaModel {
             }
 
             /**
-             * The error code.
+             * The message that indicates an exception.
              */
             public Builder tipMessage(String tipMessage) {
                 this.tipMessage = tipMessage;
@@ -202,7 +206,7 @@ public class GetDataExportDownloadURLResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the request.
+             * The download URL of the file that records the export results for the ticket.
              */
             public Builder URL(String URL) {
                 this.URL = URL;

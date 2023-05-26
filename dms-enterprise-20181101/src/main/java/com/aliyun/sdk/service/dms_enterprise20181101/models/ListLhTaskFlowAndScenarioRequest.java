@@ -107,7 +107,7 @@ public class ListLhTaskFlowAndScenarioRequest extends Request {
         }
 
         /**
-         * The name of the user who creates the workspace.
+         * The ID of the workspace. You can call the [GetLhSpaceByName](~~424379~~) operation to obtain the workspace ID.
          */
         public Builder spaceId(Long spaceId) {
             this.putQueryParameter("SpaceId", spaceId);
@@ -116,7 +116,7 @@ public class ListLhTaskFlowAndScenarioRequest extends Request {
         }
 
         /**
-         * The ID of the workspace. You can call the [GetLhSpaceByName](~~424379~~) operation to obtain the workspace ID.
+         * The ID of the tenant. You can call the [GetUserActiveTenant](~~198073~~) or [ListUserTenants](~~198074~~) operation to obtain the tenant ID.
          */
         public Builder tid(Long tid) {
             this.putQueryParameter("Tid", tid);
@@ -125,7 +125,7 @@ public class ListLhTaskFlowAndScenarioRequest extends Request {
         }
 
         /**
-         * The user ID of the task flow owner.
+         * The ID of the user. You can call the [ListUsers](~~141938~~) or [GetUser](~~147098~~) operation to obtain the user ID.
          */
         public Builder userId(Long userId) {
             this.putQueryParameter("UserId", userId);

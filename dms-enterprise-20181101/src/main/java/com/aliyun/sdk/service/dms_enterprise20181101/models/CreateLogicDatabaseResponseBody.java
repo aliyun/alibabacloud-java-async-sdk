@@ -86,7 +86,7 @@ public class CreateLogicDatabaseResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * ErrorCode.
+         * The error code.
          */
         public Builder errorCode(String errorCode) {
             this.errorCode = errorCode;
@@ -94,7 +94,7 @@ public class CreateLogicDatabaseResponseBody extends TeaModel {
         }
 
         /**
-         * ErrorMessage.
+         * The error message.
          */
         public Builder errorMessage(String errorMessage) {
             this.errorMessage = errorMessage;
@@ -102,7 +102,7 @@ public class CreateLogicDatabaseResponseBody extends TeaModel {
         }
 
         /**
-         * LogicDbId.
+         * The ID of the logical database.
          */
         public Builder logicDbId(Long logicDbId) {
             this.logicDbId = logicDbId;
@@ -110,7 +110,7 @@ public class CreateLogicDatabaseResponseBody extends TeaModel {
         }
 
         /**
-         * Id of the request
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -118,7 +118,11 @@ public class CreateLogicDatabaseResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * Indicates whether the request is successful. Valid values:
+         * <p>
+         * 
+         * - true: The request is successful.
+         * - false: The request fails.
          */
         public Builder success(Boolean success) {
             this.success = success;

@@ -135,7 +135,11 @@ public class ListDataCorrectPreCheckSQLRequest extends Request {
         }
 
         /**
-         * The operation that you want to perform. Set the value to **ListDataCorrectPreCheckSQL**.
+         * The ID of the database. The database can be a physical database or a logical database.
+         * <p>
+         * 
+         * *   To query the ID of a physical database, call the [ListDatabases](~~141873~~) or [SearchDatabase](~~141876~~) operation.
+         * *   To query the ID of a logical database, call the [ListLogicDatabases](~~141874~~) or [SearchDatabase](~~141876~~) operation.
          */
         public Builder dbId(Long dbId) {
             this.putQueryParameter("DbId", dbId);
@@ -144,7 +148,7 @@ public class ListDataCorrectPreCheckSQLRequest extends Request {
         }
 
         /**
-         * The number of entries to return on each page.
+         * The ID of the data change ticket. You can call the [ListOrders](~~144643~~) operation to query the ID of the data change ticket.
          */
         public Builder orderId(Long orderId) {
             this.putQueryParameter("OrderId", orderId);
@@ -153,7 +157,7 @@ public class ListDataCorrectPreCheckSQLRequest extends Request {
         }
 
         /**
-         * The error code returned.
+         * The number of the page to return.
          */
         public Builder pageNumber(Long pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -162,7 +166,7 @@ public class ListDataCorrectPreCheckSQLRequest extends Request {
         }
 
         /**
-         * The key that is used to query the details of optimization suggestions. You can call the [GetSQLReviewOptimizeDetail](~~265977~~) operation to query the details of optimization suggestions based on the key.
+         * The number of entries to return on each page.
          */
         public Builder pageSize(Long pageSize) {
             this.putQueryParameter("PageSize", pageSize);

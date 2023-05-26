@@ -17,12 +17,20 @@ public class ListTaskFlowsByPageRequest extends Request {
     private String regionId;
 
     @Query
+    @NameInMap("DagIdList")
+    private java.util.List < Long > dagIdList;
+
+    @Query
     @NameInMap("PageIndex")
     private Integer pageIndex;
 
     @Query
     @NameInMap("PageSize")
     private Integer pageSize;
+
+    @Query
+    @NameInMap("ScenarioId")
+    private Long scenarioId;
 
     @Query
     @NameInMap("SearchKey")
@@ -36,8 +44,10 @@ public class ListTaskFlowsByPageRequest extends Request {
     private ListTaskFlowsByPageRequest(Builder builder) {
         super(builder);
         this.regionId = builder.regionId;
+        this.dagIdList = builder.dagIdList;
         this.pageIndex = builder.pageIndex;
         this.pageSize = builder.pageSize;
+        this.scenarioId = builder.scenarioId;
         this.searchKey = builder.searchKey;
         this.tid = builder.tid;
     }
@@ -63,6 +73,13 @@ public class ListTaskFlowsByPageRequest extends Request {
     }
 
     /**
+     * @return dagIdList
+     */
+    public java.util.List < Long > getDagIdList() {
+        return this.dagIdList;
+    }
+
+    /**
      * @return pageIndex
      */
     public Integer getPageIndex() {
@@ -74,6 +91,13 @@ public class ListTaskFlowsByPageRequest extends Request {
      */
     public Integer getPageSize() {
         return this.pageSize;
+    }
+
+    /**
+     * @return scenarioId
+     */
+    public Long getScenarioId() {
+        return this.scenarioId;
     }
 
     /**
@@ -92,8 +116,10 @@ public class ListTaskFlowsByPageRequest extends Request {
 
     public static final class Builder extends Request.Builder<ListTaskFlowsByPageRequest, Builder> {
         private String regionId; 
+        private java.util.List < Long > dagIdList; 
         private Integer pageIndex; 
         private Integer pageSize; 
+        private Long scenarioId; 
         private String searchKey; 
         private Long tid; 
 
@@ -104,8 +130,10 @@ public class ListTaskFlowsByPageRequest extends Request {
         private Builder(ListTaskFlowsByPageRequest request) {
             super(request);
             this.regionId = request.regionId;
+            this.dagIdList = request.dagIdList;
             this.pageIndex = request.pageIndex;
             this.pageSize = request.pageSize;
+            this.scenarioId = request.scenarioId;
             this.searchKey = request.searchKey;
             this.tid = request.tid;
         } 
@@ -120,7 +148,17 @@ public class ListTaskFlowsByPageRequest extends Request {
         }
 
         /**
-         * PageIndex.
+         * DagIdList.
+         */
+        public Builder dagIdList(java.util.List < Long > dagIdList) {
+            String dagIdListShrink = shrink(dagIdList, "DagIdList", "json");
+            this.putQueryParameter("DagIdList", dagIdListShrink);
+            this.dagIdList = dagIdList;
+            return this;
+        }
+
+        /**
+         * The number of the page to return.
          */
         public Builder pageIndex(Integer pageIndex) {
             this.putQueryParameter("PageIndex", pageIndex);
@@ -129,7 +167,7 @@ public class ListTaskFlowsByPageRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * The number of entries to return on each page.
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -138,7 +176,16 @@ public class ListTaskFlowsByPageRequest extends Request {
         }
 
         /**
-         * SearchKey.
+         * ScenarioId.
+         */
+        public Builder scenarioId(Long scenarioId) {
+            this.putQueryParameter("ScenarioId", scenarioId);
+            this.scenarioId = scenarioId;
+            return this;
+        }
+
+        /**
+         * The keyword that is used to search for task flow names.
          */
         public Builder searchKey(String searchKey) {
             this.putQueryParameter("SearchKey", searchKey);
@@ -147,7 +194,10 @@ public class ListTaskFlowsByPageRequest extends Request {
         }
 
         /**
-         * Tid.
+         * The ID of the tenant.
+         * <p>
+         * 
+         * > : To view the ID of the tenant, go to the Data Management (DMS) console and move the pointer over the profile picture in the upper-right corner. For more information, see [View information about the current tenant](~~181330~~).
          */
         public Builder tid(Long tid) {
             this.putQueryParameter("Tid", tid);

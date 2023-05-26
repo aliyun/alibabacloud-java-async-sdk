@@ -94,7 +94,7 @@ public class ListTaskFlowResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the latest deployment record.
+         * The error message.
          */
         public Builder errorMessage(String errorMessage) {
             this.errorMessage = errorMessage;
@@ -102,7 +102,7 @@ public class ListTaskFlowResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the task flow.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -110,7 +110,11 @@ public class ListTaskFlowResponseBody extends TeaModel {
         }
 
         /**
-         * The operation that you want to perform. Set the value to **ListTaskFlow**.
+         * Indicates whether the request was successful. Valid values:
+         * <p>
+         * 
+         * *   **true**: The request was successful.
+         * *   **false**: The request failed.
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -118,7 +122,7 @@ public class ListTaskFlowResponseBody extends TeaModel {
         }
 
         /**
-         * The name of the user who creates the task flow.
+         * The information about the task flows returned.
          */
         public Builder taskFlowList(TaskFlowList taskFlowList) {
             this.taskFlowList = taskFlowList;
@@ -242,7 +246,7 @@ public class ListTaskFlowResponseBody extends TeaModel {
             private Integer status; 
 
             /**
-             * The ID of the tenant. You can call the [GetUserActiveTenant](~~198073~~) or [ListUserTenants](~~198074~~) operation to obtain the tenant ID.
+             * The ID of the user who creates the task flow.
              */
             public Builder creatorId(String creatorId) {
                 this.creatorId = creatorId;
@@ -250,10 +254,55 @@ public class ListTaskFlowResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the user who creates the task flow.
+             * The name of the user who creates the task flow.
              */
             public Builder creatorNickName(String creatorNickName) {
                 this.creatorNickName = creatorNickName;
+                return this;
+            }
+
+            /**
+             * The name of the task flow owner.
+             */
+            public Builder dagOwnerNickName(String dagOwnerNickName) {
+                this.dagOwnerNickName = dagOwnerNickName;
+                return this;
+            }
+
+            /**
+             * The ID of the latest deployment record.
+             */
+            public Builder deployId(Long deployId) {
+                this.deployId = deployId;
+                return this;
+            }
+
+            /**
+             * The ID of the task flow.
+             */
+            public Builder id(Long id) {
+                this.id = id;
+                return this;
+            }
+
+            /**
+             * The status of the latest execution. Valid values:
+             * <p>
+             * 
+             * *   **0**: invalid.
+             * *   **1**: scheduling disabled.
+             * *   **2**: waiting to be scheduled.
+             */
+            public Builder latestInstanceStatus(Integer latestInstanceStatus) {
+                this.latestInstanceStatus = latestInstanceStatus;
+                return this;
+            }
+
+            /**
+             * The time when the latest execution record was generated.
+             */
+            public Builder latestInstanceTime(String latestInstanceTime) {
+                this.latestInstanceTime = latestInstanceTime;
                 return this;
             }
 
@@ -264,46 +313,6 @@ public class ListTaskFlowResponseBody extends TeaModel {
              * *   **0**: The task flow is invalid.
              * *   **1**: Scheduling is disabled for the task flow.
              * *   **2**: The task flow is waiting to be scheduled.
-             */
-            public Builder dagOwnerNickName(String dagOwnerNickName) {
-                this.dagOwnerNickName = dagOwnerNickName;
-                return this;
-            }
-
-            /**
-             * The ID of the request.
-             */
-            public Builder deployId(Long deployId) {
-                this.deployId = deployId;
-                return this;
-            }
-
-            /**
-             * The error message.
-             */
-            public Builder id(Long id) {
-                this.id = id;
-                return this;
-            }
-
-            /**
-             * LatestInstanceStatus.
-             */
-            public Builder latestInstanceStatus(Integer latestInstanceStatus) {
-                this.latestInstanceStatus = latestInstanceStatus;
-                return this;
-            }
-
-            /**
-             * LatestInstanceTime.
-             */
-            public Builder latestInstanceTime(String latestInstanceTime) {
-                this.latestInstanceTime = latestInstanceTime;
-                return this;
-            }
-
-            /**
-             * The time when the latest execution record was generated.
              */
             public Builder status(Integer status) {
                 this.status = status;
