@@ -17,9 +17,14 @@ public class GetJobRequest extends Request {
     @Validation(required = true, maxLength = 256, minLength = 1)
     private String jobId;
 
+    @Query
+    @NameInMap("NeedDetail")
+    private Boolean needDetail;
+
     private GetJobRequest(Builder builder) {
         super(builder);
         this.jobId = builder.jobId;
+        this.needDetail = builder.needDetail;
     }
 
     public static Builder builder() {
@@ -42,8 +47,16 @@ public class GetJobRequest extends Request {
         return this.jobId;
     }
 
+    /**
+     * @return needDetail
+     */
+    public Boolean getNeedDetail() {
+        return this.needDetail;
+    }
+
     public static final class Builder extends Request.Builder<GetJobRequest, Builder> {
         private String jobId; 
+        private Boolean needDetail; 
 
         private Builder() {
             super();
@@ -52,6 +65,7 @@ public class GetJobRequest extends Request {
         private Builder(GetJobRequest request) {
             super(request);
             this.jobId = request.jobId;
+            this.needDetail = request.needDetail;
         } 
 
         /**
@@ -60,6 +74,15 @@ public class GetJobRequest extends Request {
         public Builder jobId(String jobId) {
             this.putPathParameter("JobId", jobId);
             this.jobId = jobId;
+            return this;
+        }
+
+        /**
+         * 是否返回作业详情信息，默认为true
+         */
+        public Builder needDetail(Boolean needDetail) {
+            this.putQueryParameter("NeedDetail", needDetail);
+            this.needDetail = needDetail;
             return this;
         }
 
