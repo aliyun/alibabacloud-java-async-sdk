@@ -18,6 +18,10 @@ public class IsvRuleSaveRequest extends Request {
     private String bookType;
 
     @Body
+    @NameInMap("bookuser_list")
+    private java.util.List < BookuserList> bookuserList;
+
+    @Body
     @NameInMap("status")
     @Validation(required = true)
     private Integer status;
@@ -34,6 +38,7 @@ public class IsvRuleSaveRequest extends Request {
     private IsvRuleSaveRequest(Builder builder) {
         super(builder);
         this.bookType = builder.bookType;
+        this.bookuserList = builder.bookuserList;
         this.status = builder.status;
         this.userId = builder.userId;
         this.xAcsBtripSoCorpToken = builder.xAcsBtripSoCorpToken;
@@ -60,6 +65,13 @@ public class IsvRuleSaveRequest extends Request {
     }
 
     /**
+     * @return bookuserList
+     */
+    public java.util.List < BookuserList> getBookuserList() {
+        return this.bookuserList;
+    }
+
+    /**
      * @return status
      */
     public Integer getStatus() {
@@ -82,6 +94,7 @@ public class IsvRuleSaveRequest extends Request {
 
     public static final class Builder extends Request.Builder<IsvRuleSaveRequest, Builder> {
         private String bookType; 
+        private java.util.List < BookuserList> bookuserList; 
         private Integer status; 
         private String userId; 
         private String xAcsBtripSoCorpToken; 
@@ -93,6 +106,7 @@ public class IsvRuleSaveRequest extends Request {
         private Builder(IsvRuleSaveRequest request) {
             super(request);
             this.bookType = request.bookType;
+            this.bookuserList = request.bookuserList;
             this.status = request.status;
             this.userId = request.userId;
             this.xAcsBtripSoCorpToken = request.xAcsBtripSoCorpToken;
@@ -104,6 +118,16 @@ public class IsvRuleSaveRequest extends Request {
         public Builder bookType(String bookType) {
             this.putBodyParameter("book_type", bookType);
             this.bookType = bookType;
+            return this;
+        }
+
+        /**
+         * bookuser_list.
+         */
+        public Builder bookuserList(java.util.List < BookuserList> bookuserList) {
+            String bookuserListShrink = shrink(bookuserList, "bookuser_list", "json");
+            this.putBodyParameter("bookuser_list", bookuserListShrink);
+            this.bookuserList = bookuserList;
             return this;
         }
 
@@ -141,4 +165,67 @@ public class IsvRuleSaveRequest extends Request {
 
     } 
 
+    public static class BookuserList extends TeaModel {
+        @NameInMap("entity_id")
+        @Validation(required = true)
+        private String entityId;
+
+        @NameInMap("entity_type")
+        @Validation(required = true)
+        private Integer entityType;
+
+        private BookuserList(Builder builder) {
+            this.entityId = builder.entityId;
+            this.entityType = builder.entityType;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static BookuserList create() {
+            return builder().build();
+        }
+
+        /**
+         * @return entityId
+         */
+        public String getEntityId() {
+            return this.entityId;
+        }
+
+        /**
+         * @return entityType
+         */
+        public Integer getEntityType() {
+            return this.entityType;
+        }
+
+        public static final class Builder {
+            private String entityId; 
+            private Integer entityType; 
+
+            /**
+             * entity_id.
+             */
+            public Builder entityId(String entityId) {
+                this.entityId = entityId;
+                return this;
+            }
+
+            /**
+             * entity_type.
+             */
+            public Builder entityType(Integer entityType) {
+                this.entityType = entityType;
+                return this;
+            }
+
+            public BookuserList build() {
+                return new BookuserList(this);
+            } 
+
+        } 
+
+    }
 }
