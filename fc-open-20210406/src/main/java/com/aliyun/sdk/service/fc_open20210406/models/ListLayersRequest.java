@@ -166,7 +166,7 @@ public class ListLayersRequest extends Request {
         } 
 
         /**
-         * The ID of your Alibaba Cloud account.
+         * X-Fc-Account-Id.
          */
         public Builder xFcAccountId(String xFcAccountId) {
             this.putHeaderParameter("X-Fc-Account-Id", xFcAccountId);
@@ -175,7 +175,7 @@ public class ListLayersRequest extends Request {
         }
 
         /**
-         * The time when the function is invoked. The format is: **EEE,d MMM yyyy HH:mm:ss GMT**.
+         * X-Fc-Date.
          */
         public Builder xFcDate(String xFcDate) {
             this.putHeaderParameter("X-Fc-Date", xFcDate);
@@ -184,7 +184,7 @@ public class ListLayersRequest extends Request {
         }
 
         /**
-         * The trace ID of the request for Function Compute API.
+         * X-Fc-Trace-Id.
          */
         public Builder xFcTraceId(String xFcTraceId) {
             this.putHeaderParameter("X-Fc-Trace-Id", xFcTraceId);
@@ -193,7 +193,7 @@ public class ListLayersRequest extends Request {
         }
 
         /**
-         * The maximum number of resources to return. Default value: 20. Maximum value: 100. The number of returned configurations is less than or equal to the specified number.
+         * 最大返回条目数
          */
         public Builder limit(Integer limit) {
             this.putQueryParameter("limit", limit);
@@ -202,7 +202,7 @@ public class ListLayersRequest extends Request {
         }
 
         /**
-         * The token required to obtain more results. If the number of resources exceeds the limit, the nextToken parameter is returned. You can include the parameter in subsequent calls to obtain more results. You do not need to provide this parameter in the first call.
+         * 下一个层名称
          */
         public Builder nextToken(String nextToken) {
             this.putQueryParameter("nextToken", nextToken);
@@ -211,7 +211,7 @@ public class ListLayersRequest extends Request {
         }
 
         /**
-         * Specifies whether to obtain the official public layer. When the official parameter is set to true, the public field does not take effect. The default value is false.
+         * official.
          */
         public Builder official(Boolean official) {
             this.putQueryParameter("official", official);
@@ -220,7 +220,7 @@ public class ListLayersRequest extends Request {
         }
 
         /**
-         * The name prefix of the layer. The names of returned resources must contain the prefix. If the name prefix is a, the names of returned resources must start with a.
+         * 层名称前缀
          */
         public Builder prefix(String prefix) {
             this.putQueryParameter("prefix", prefix);
@@ -229,7 +229,7 @@ public class ListLayersRequest extends Request {
         }
 
         /**
-         * Specifies whether to obtain only the common layer. Default value: false.
+         * public.
          */
         public Builder _public(Boolean _public) {
             this.putQueryParameter("public", _public);
@@ -238,7 +238,7 @@ public class ListLayersRequest extends Request {
         }
 
         /**
-         * The name of the start layer. The returned layers are sorted in alphabetical order, and the layers that include and follow the layer specified by the startKey parameter are returned.
+         * 起始层名称
          */
         public Builder startKey(String startKey) {
             this.putQueryParameter("startKey", startKey);

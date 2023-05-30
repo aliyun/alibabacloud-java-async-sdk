@@ -196,7 +196,7 @@ public class ListFunctionAsyncInvokeConfigsRequest extends Request {
         } 
 
         /**
-         * The name of the service.
+         * 服务名称
          */
         public Builder serviceName(String serviceName) {
             this.putPathParameter("serviceName", serviceName);
@@ -205,7 +205,7 @@ public class ListFunctionAsyncInvokeConfigsRequest extends Request {
         }
 
         /**
-         * The name of the function.
+         * 函数名称
          */
         public Builder functionName(String functionName) {
             this.putPathParameter("functionName", functionName);
@@ -223,7 +223,7 @@ public class ListFunctionAsyncInvokeConfigsRequest extends Request {
         }
 
         /**
-         * The ID of your Alibaba Cloud account.
+         * X-Fc-Account-Id.
          */
         public Builder xFcAccountId(String xFcAccountId) {
             this.putHeaderParameter("X-Fc-Account-Id", xFcAccountId);
@@ -232,7 +232,7 @@ public class ListFunctionAsyncInvokeConfigsRequest extends Request {
         }
 
         /**
-         * The CRC-64 value of the function code package. This value is used to check data integrity. The value is automatically calculated by the tool.
+         * X-Fc-Code-Checksum.
          */
         public Builder xFcCodeChecksum(String xFcCodeChecksum) {
             this.putHeaderParameter("X-Fc-Code-Checksum", xFcCodeChecksum);
@@ -241,7 +241,7 @@ public class ListFunctionAsyncInvokeConfigsRequest extends Request {
         }
 
         /**
-         * The time when the Function Compute is called. The format is **EEE,d MMM yyyy HH:mm:ss GMT**.
+         * X-Fc-Date.
          */
         public Builder xFcDate(String xFcDate) {
             this.putHeaderParameter("X-Fc-Date", xFcDate);
@@ -250,11 +250,7 @@ public class ListFunctionAsyncInvokeConfigsRequest extends Request {
         }
 
         /**
-         * The invocation method.
-         * <p>
-         * 
-         * *   **Sync**: synchronous
-         * *   **Async**: asynchronous
+         * X-Fc-Invocation-Type.
          */
         public Builder xFcInvocationType(String xFcInvocationType) {
             this.putHeaderParameter("X-Fc-Invocation-Type", xFcInvocationType);
@@ -263,11 +259,7 @@ public class ListFunctionAsyncInvokeConfigsRequest extends Request {
         }
 
         /**
-         * The method used to return logs. Valid values:
-         * <p>
-         * 
-         * *   **Tail**: returns the last 4 KB of logs that are generated for the current request.
-         * *   **None**: No logs are returned for the current request. Default value: None.
+         * X-Fc-Log-Type.
          */
         public Builder xFcLogType(String xFcLogType) {
             this.putHeaderParameter("X-Fc-Log-Type", xFcLogType);
@@ -276,7 +268,7 @@ public class ListFunctionAsyncInvokeConfigsRequest extends Request {
         }
 
         /**
-         * The trace ID of the invocation request of Function Compute.
+         * X-Fc-Trace-Id.
          */
         public Builder xFcTraceId(String xFcTraceId) {
             this.putHeaderParameter("X-Fc-Trace-Id", xFcTraceId);
@@ -285,7 +277,7 @@ public class ListFunctionAsyncInvokeConfigsRequest extends Request {
         }
 
         /**
-         * The maximum number of resources to return.
+         * 最多返回个数
          */
         public Builder limit(Integer limit) {
             this.putQueryParameter("limit", limit);
@@ -294,7 +286,7 @@ public class ListFunctionAsyncInvokeConfigsRequest extends Request {
         }
 
         /**
-         * The token required to obtain more results. If the number of resources exceeds the limit, the nextToken parameter is returned. You can include the parameter in subsequent calls to obtain more results. You do not need to provide this parameter in the first call.
+         * 下次查询token
          */
         public Builder nextToken(String nextToken) {
             this.putQueryParameter("nextToken", nextToken);

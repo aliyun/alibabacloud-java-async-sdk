@@ -436,7 +436,7 @@ public class CreateFunctionRequest extends Request {
         } 
 
         /**
-         * The name of the service.
+         * 服务名称
          */
         public Builder serviceName(String serviceName) {
             this.putPathParameter("serviceName", serviceName);
@@ -445,7 +445,7 @@ public class CreateFunctionRequest extends Request {
         }
 
         /**
-         * The ID of your Alibaba Cloud account.
+         * X-Fc-Account-Id.
          */
         public Builder xFcAccountId(String xFcAccountId) {
             this.putHeaderParameter("X-Fc-Account-Id", xFcAccountId);
@@ -454,7 +454,7 @@ public class CreateFunctionRequest extends Request {
         }
 
         /**
-         * The CRC-64 value of the function code package.
+         * X-Fc-Code-Checksum.
          */
         public Builder xFcCodeChecksum(String xFcCodeChecksum) {
             this.putHeaderParameter("X-Fc-Code-Checksum", xFcCodeChecksum);
@@ -463,7 +463,7 @@ public class CreateFunctionRequest extends Request {
         }
 
         /**
-         * The time on which the function is invoked. The format of the value is: **EEE,d MMM yyyy HH:mm:ss GMT**.
+         * X-Fc-Date.
          */
         public Builder xFcDate(String xFcDate) {
             this.putHeaderParameter("X-Fc-Date", xFcDate);
@@ -472,7 +472,7 @@ public class CreateFunctionRequest extends Request {
         }
 
         /**
-         * The trace ID of the request. The value is the same as that of the requestId parameter in the response.
+         * X-Fc-Trace-Id.
          */
         public Builder xFcTraceId(String xFcTraceId) {
             this.putHeaderParameter("X-Fc-Trace-Id", xFcTraceId);
@@ -481,7 +481,7 @@ public class CreateFunctionRequest extends Request {
         }
 
         /**
-         * The port on which the HTTP server listens for the custom runtime or custom container runtime.
+         * 自定义、自定义容器运行时 HTTP Server 的监听端口
          */
         public Builder caPort(Integer caPort) {
             this.putBodyParameter("caPort", caPort);
@@ -490,7 +490,7 @@ public class CreateFunctionRequest extends Request {
         }
 
         /**
-         * The code of the function. The code must be packaged into a ZIP file. Choose **code** or **customContainerConfig** for the function.
+         * code.
          */
         public Builder code(Code code) {
             this.putBodyParameter("code", code);
@@ -499,7 +499,7 @@ public class CreateFunctionRequest extends Request {
         }
 
         /**
-         * The number of vCPUs of the function. The value must be a multiple of 0.05.
+         * function的CPU规格，单位为vCPU，为0.05vCPU的倍数
          */
         public Builder cpu(Float cpu) {
             this.putBodyParameter("cpu", cpu);
@@ -508,7 +508,7 @@ public class CreateFunctionRequest extends Request {
         }
 
         /**
-         * The configurations of the custom container runtime. After you configure the custom container runtime, Function Compute can execute the function in a container created from a custom image. Choose **code** or **customContainerConfig** for the function.
+         * customContainerConfig.
          */
         public Builder customContainerConfig(CustomContainerConfig customContainerConfig) {
             this.putBodyParameter("customContainerConfig", customContainerConfig);
@@ -517,7 +517,7 @@ public class CreateFunctionRequest extends Request {
         }
 
         /**
-         * The custom Domain Name System (DNS) configurations of the function.
+         * 函数自定义DNS配置
          */
         public Builder customDNS(CustomDNS customDNS) {
             this.putBodyParameter("customDNS", customDNS);
@@ -526,7 +526,7 @@ public class CreateFunctionRequest extends Request {
         }
 
         /**
-         * The custom health check configurations of the function. This parameter is applicable to only custom runtimes and custom containers.
+         * 函数自定义健康检查配置，仅适用于Custom runtime/container
          */
         public Builder customHealthCheckConfig(CustomHealthCheckConfig customHealthCheckConfig) {
             this.putBodyParameter("customHealthCheckConfig", customHealthCheckConfig);
@@ -535,7 +535,7 @@ public class CreateFunctionRequest extends Request {
         }
 
         /**
-         * The configurations of the custom runtime.
+         * Custom Runtime函数详细配置
          */
         public Builder customRuntimeConfig(CustomRuntimeConfig customRuntimeConfig) {
             this.putBodyParameter("customRuntimeConfig", customRuntimeConfig);
@@ -544,7 +544,7 @@ public class CreateFunctionRequest extends Request {
         }
 
         /**
-         * The description of the function.
+         * 函数描述
          */
         public Builder description(String description) {
             this.putBodyParameter("description", description);
@@ -553,7 +553,7 @@ public class CreateFunctionRequest extends Request {
         }
 
         /**
-         * The disk size of the function. Unit: MB. Valid values: 512 and 10240.
+         * function的磁盘规格，单位为MB，可选值为512MB或10240MB
          */
         public Builder diskSize(Integer diskSize) {
             this.putBodyParameter("diskSize", diskSize);
@@ -562,7 +562,7 @@ public class CreateFunctionRequest extends Request {
         }
 
         /**
-         * The environment variables that you configured for the function. You can obtain the values of the environment variables from the function. For more information, see [Overview](~~69777~~).
+         * environmentVariables.
          */
         public Builder environmentVariables(java.util.Map < String, String > environmentVariables) {
             this.putBodyParameter("environmentVariables", environmentVariables);
@@ -571,7 +571,7 @@ public class CreateFunctionRequest extends Request {
         }
 
         /**
-         * The name of the function. The name can contain letters, digits, underscores (\_), and hyphens (-) only. The name cannot start with a digit or a hyphen (-). The name must be 1 to 64 characters in length.
+         * 函数名称
          */
         public Builder functionName(String functionName) {
             this.putBodyParameter("functionName", functionName);
@@ -580,7 +580,7 @@ public class CreateFunctionRequest extends Request {
         }
 
         /**
-         * The GPU memory capacity for the function. Unit: MB. The value must be a multiple of 1,024.
+         * function的GPU显存规格，单位为MB，为1024MB的倍数
          */
         public Builder gpuMemorySize(Integer gpuMemorySize) {
             this.putBodyParameter("gpuMemorySize", gpuMemorySize);
@@ -589,7 +589,7 @@ public class CreateFunctionRequest extends Request {
         }
 
         /**
-         * The handler of the function. The format varies based on the programming language. For more information, see [Function handlers](~~157704~~).
+         * function执行的入口，具体格式和语言相关
          */
         public Builder handler(String handler) {
             this.putBodyParameter("handler", handler);
@@ -598,7 +598,7 @@ public class CreateFunctionRequest extends Request {
         }
 
         /**
-         * The timeout period for the execution of the Initializer hook. Unit: seconds. Default value: 3. Valid values: 1 to 300. When this period expires, the execution of the Initializer hook is terminated.
+         * 初始化function运行的超时时间，单位为秒，最小1秒，默认3秒。初始化function超过这个时间后会被终止执行
          */
         public Builder initializationTimeout(Integer initializationTimeout) {
             this.putBodyParameter("initializationTimeout", initializationTimeout);
@@ -607,7 +607,7 @@ public class CreateFunctionRequest extends Request {
         }
 
         /**
-         * The handler of the Initializer hook. For more information, see [Initializer hooks](~~157704~~).
+         * 初始化 function 执行的入口，具体格式和语言相关
          */
         public Builder initializer(String initializer) {
             this.putBodyParameter("initializer", initializer);
@@ -616,7 +616,7 @@ public class CreateFunctionRequest extends Request {
         }
 
         /**
-         * The number of requests that can be concurrently processed by a single instance.
+         * instanceConcurrency.
          */
         public Builder instanceConcurrency(Integer instanceConcurrency) {
             this.putBodyParameter("instanceConcurrency", instanceConcurrency);
@@ -625,7 +625,7 @@ public class CreateFunctionRequest extends Request {
         }
 
         /**
-         * The lifecycle configurations of the instance.
+         * instanceLifecycleConfig.
          */
         public Builder instanceLifecycleConfig(InstanceLifecycleConfig instanceLifecycleConfig) {
             this.putBodyParameter("instanceLifecycleConfig", instanceLifecycleConfig);
@@ -634,10 +634,7 @@ public class CreateFunctionRequest extends Request {
         }
 
         /**
-         * The soft concurrency of the instance. You can use this parameter to implement graceful scale-up of instances. If the number of concurrent requests on an instance is greater than the value of soft concurrency, an instance scale-up is triggered. For example, if your instance requires a long time to start, you can specify a suitable soft concurrency to start the instance in advance.
-         * <p>
-         * 
-         * The value must be less than or equal to that of the **instanceConcurrency** parameter.
+         * instanceSoftConcurrency.
          */
         public Builder instanceSoftConcurrency(Integer instanceSoftConcurrency) {
             this.putBodyParameter("instanceSoftConcurrency", instanceSoftConcurrency);
@@ -646,14 +643,7 @@ public class CreateFunctionRequest extends Request {
         }
 
         /**
-         * The instance type of the function. Valid values:
-         * <p>
-         * 
-         * *   **e1**: elastic instance
-         * *   **c1**: performance instance
-         * *   **fc.gpu.tesla.1**: GPU-accelerated instance (Tesla T4)
-         * *   **fc.gpu.ampere.1**: GPU-accelerated instance (Ampere A10)
-         * *   **g1**: same as **fc.gpu.tesla.1**
+         * instanceType.
          */
         public Builder instanceType(String instanceType) {
             this.putBodyParameter("instanceType", instanceType);
@@ -662,10 +652,7 @@ public class CreateFunctionRequest extends Request {
         }
 
         /**
-         * The information about layers.
-         * <p>
-         * 
-         * > Multiple layers are merged based on the order of array subscripts. The content of a layer with a smaller subscript overwrites the file that has the same name as a layer with a larger subscript.
+         * 层列表
          */
         public Builder layers(java.util.List < String > layers) {
             this.putBodyParameter("layers", layers);
@@ -674,7 +661,7 @@ public class CreateFunctionRequest extends Request {
         }
 
         /**
-         * The memory size for the function. Unit: MB. The value must be a multiple of 64. The memory size varies based on the function instance type. For more information, see [Instance types](~~179379~~).
+         * function的内存规格，单位为MB，为64MB的倍数
          */
         public Builder memorySize(Integer memorySize) {
             this.putBodyParameter("memorySize", memorySize);
@@ -683,7 +670,7 @@ public class CreateFunctionRequest extends Request {
         }
 
         /**
-         * The runtime environment of the function. Valid values: **nodejs16**, **nodejs14**, **nodejs12**, **nodejs10**, **nodejs8**, **nodejs6**, **nodejs4.4**, **python3.9**, **python3**, **python2.7**, **java11**, **java8**, **go1**, **php7.2**, **dotnetcore3.1**, **dotnetcore2.1**, **custom** and **custom-container**. For more information, see [Supported function runtime environments](~~73338~~).
+         * function运行的语言环境，目前支持nodejs6, nodejs8, python2.7, python3, java8
          */
         public Builder runtime(String runtime) {
             this.putBodyParameter("runtime", runtime);
@@ -692,7 +679,7 @@ public class CreateFunctionRequest extends Request {
         }
 
         /**
-         * The timeout period for the execution of the function. Unit: seconds. Default value: 3. Minimum value: 1. When the period ends, the execution of the function is terminated.
+         * function运行的超时时间，单位为秒，最小1秒，默认3秒。function超过这个时间后会被终止执行
          */
         public Builder timeout(Integer timeout) {
             this.putBodyParameter("timeout", timeout);

@@ -111,7 +111,7 @@ public class PutLayerACLRequest extends Request {
         } 
 
         /**
-         * The name of the layer.
+         * layerName.
          */
         public Builder layerName(String layerName) {
             this.putPathParameter("layerName", layerName);
@@ -120,7 +120,7 @@ public class PutLayerACLRequest extends Request {
         }
 
         /**
-         * The ID of your Alibaba Cloud account.
+         * X-Fc-Account-Id.
          */
         public Builder xFcAccountId(String xFcAccountId) {
             this.putHeaderParameter("X-Fc-Account-Id", xFcAccountId);
@@ -129,7 +129,7 @@ public class PutLayerACLRequest extends Request {
         }
 
         /**
-         * The time when the operation is called. The format is: **EEE,d MMM yyyy HH:mm:ss GMT**.
+         * X-Fc-Date.
          */
         public Builder xFcDate(String xFcDate) {
             this.putHeaderParameter("X-Fc-Date", xFcDate);
@@ -138,7 +138,7 @@ public class PutLayerACLRequest extends Request {
         }
 
         /**
-         * The trace ID of the request for Function Compute API.
+         * X-Fc-Trace-Id.
          */
         public Builder xFcTraceId(String xFcTraceId) {
             this.putHeaderParameter("X-Fc-Trace-Id", xFcTraceId);
@@ -147,11 +147,7 @@ public class PutLayerACLRequest extends Request {
         }
 
         /**
-         * Specifies whether the layer is public.
-         * <p>
-         * 
-         * *   **true**: Public.
-         * *   **false**: Not public.
+         * public.
          */
         public Builder _public(Boolean _public) {
             this.putQueryParameter("public", _public);

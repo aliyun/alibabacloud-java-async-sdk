@@ -182,7 +182,7 @@ public class GetTriggerResponseBody extends TeaModel {
         private String urlIntranet; 
 
         /**
-         * The time when the trigger was created.
+         * The ARN of the RAM role that is used by the event source to invoke the function.
          */
         public Builder createdTime(String createdTime) {
             this.createdTime = createdTime;
@@ -190,7 +190,7 @@ public class GetTriggerResponseBody extends TeaModel {
         }
 
         /**
-         * The description of the trigger.
+         * The unique ID of the trigger.
          */
         public Builder description(String description) {
             this.description = description;
@@ -198,7 +198,7 @@ public class GetTriggerResponseBody extends TeaModel {
         }
 
         /**
-         * The domain name used to invoke the function by using HTTP. You can add this domain name as the prefix to the endpoint of Function Compute. This way, you can invoke the function that corresponds to the trigger by using HTTP. For example, `{domainName}.cn-shanghai.fc.aliyuncs.com`.
+         * The public domain address. You can access HTTP triggers over the Internet by using HTTP or HTTPS.
          */
         public Builder domainName(String domainName) {
             this.domainName = domainName;
@@ -206,7 +206,7 @@ public class GetTriggerResponseBody extends TeaModel {
         }
 
         /**
-         * The ARN of the RAM role that is used by the event source to invoke the function.
+         * The time when the trigger was last modified.
          */
         public Builder invocationRole(String invocationRole) {
             this.invocationRole = invocationRole;
@@ -214,7 +214,7 @@ public class GetTriggerResponseBody extends TeaModel {
         }
 
         /**
-         * The time when the trigger was last modified.
+         * The version or alias of the service.
          */
         public Builder lastModifiedTime(String lastModifiedTime) {
             this.lastModifiedTime = lastModifiedTime;
@@ -222,18 +222,10 @@ public class GetTriggerResponseBody extends TeaModel {
         }
 
         /**
-         * The version or alias of the service.
+         * The ARN of the event source.
          */
         public Builder qualifier(String qualifier) {
             this.qualifier = qualifier;
-            return this;
-        }
-
-        /**
-         * The ARN of the event source.
-         */
-        public Builder sourceArn(String sourceArn) {
-            this.sourceArn = sourceArn;
             return this;
         }
 
@@ -249,13 +241,21 @@ public class GetTriggerResponseBody extends TeaModel {
          * *   Alibaba Cloud CDN event trigger: [CDNEventsTriggerConfig](~~struct:CDNEventsTriggerConfig~~).
          * *   MNS topic trigger: [MnsTopicTriggerConfig](~~struct:MnsTopicTriggerConfig~~).
          */
+        public Builder sourceArn(String sourceArn) {
+            this.sourceArn = sourceArn;
+            return this;
+        }
+
+        /**
+         * The name of the trigger.
+         */
         public Builder triggerConfig(String triggerConfig) {
             this.triggerConfig = triggerConfig;
             return this;
         }
 
         /**
-         * The unique ID of the trigger.
+         * The domain name used to invoke the function by using HTTP. You can add this domain name as the prefix to the endpoint of Function Compute. This way, you can invoke the function that corresponds to the trigger by using HTTP. For example, `{domainName}.cn-shanghai.fc.aliyuncs.com`.
          */
         public Builder triggerId(String triggerId) {
             this.triggerId = triggerId;
@@ -263,7 +263,7 @@ public class GetTriggerResponseBody extends TeaModel {
         }
 
         /**
-         * The name of the trigger.
+         * The trigger type, such as **oss**, **log**, **tablestore**, **timer**, **http**, **cdn_events**, and **mns_topic**.
          */
         public Builder triggerName(String triggerName) {
             this.triggerName = triggerName;
@@ -271,7 +271,7 @@ public class GetTriggerResponseBody extends TeaModel {
         }
 
         /**
-         * The trigger type, such as **oss**, **log**, **tablestore**, **timer**, **http**, **cdn_events**, and **mns_topic**.
+         * The description of the trigger.
          */
         public Builder triggerType(String triggerType) {
             this.triggerType = triggerType;
@@ -279,7 +279,7 @@ public class GetTriggerResponseBody extends TeaModel {
         }
 
         /**
-         * The public domain address. You can access HTTP triggers over the Internet by using HTTP or HTTPS.
+         * The private endpoint. In a VPC, you can access HTTP triggers by using HTTP or HTTPS.
          */
         public Builder urlInternet(String urlInternet) {
             this.urlInternet = urlInternet;
@@ -287,7 +287,7 @@ public class GetTriggerResponseBody extends TeaModel {
         }
 
         /**
-         * The private endpoint. In a VPC, you can access HTTP triggers by using HTTP or HTTPS.
+         * 私网域名地址。在VPC可以通过HTTP协议或者HTTPS协议访问HTTP Trigger。
          */
         public Builder urlIntranet(String urlIntranet) {
             this.urlIntranet = urlIntranet;

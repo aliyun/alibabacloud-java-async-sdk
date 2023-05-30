@@ -161,7 +161,7 @@ public class PublishServiceVersionRequest extends Request {
         }
 
         /**
-         * The trace ID of the invocation request of Function Compute.
+         * 2020-12-1210:00:00
          */
         public Builder xFcTraceId(String xFcTraceId) {
             this.putHeaderParameter("X-Fc-Trace-Id", xFcTraceId);

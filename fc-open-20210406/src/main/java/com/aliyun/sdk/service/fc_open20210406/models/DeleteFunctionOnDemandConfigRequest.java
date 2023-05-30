@@ -141,7 +141,7 @@ public class DeleteFunctionOnDemandConfigRequest extends Request {
         } 
 
         /**
-         * The name of the service.
+         * $.parameters[9].schema.enumValueTitles
          */
         public Builder serviceName(String serviceName) {
             this.putPathParameter("serviceName", serviceName);
@@ -150,7 +150,7 @@ public class DeleteFunctionOnDemandConfigRequest extends Request {
         }
 
         /**
-         * The name of the function.
+         * Example 1
          */
         public Builder functionName(String functionName) {
             this.putPathParameter("functionName", functionName);
@@ -159,7 +159,7 @@ public class DeleteFunctionOnDemandConfigRequest extends Request {
         }
 
         /**
-         * If the ETag specified in the request matches the ETag value of the OndemandConfig, FC returns 200 OK. If the ETag specified in the request does not match the ETag value of the object, FC returns 412 Precondition Failed.
+         * Xiaoqi
          */
         public Builder ifMatch(String ifMatch) {
             this.putHeaderParameter("If-Match", ifMatch);
@@ -168,7 +168,7 @@ public class DeleteFunctionOnDemandConfigRequest extends Request {
         }
 
         /**
-         * The ID of your Alibaba Cloud account.
+         * 65332
          */
         public Builder xFcAccountId(String xFcAccountId) {
             this.putHeaderParameter("X-Fc-Account-Id", xFcAccountId);
@@ -177,7 +177,7 @@ public class DeleteFunctionOnDemandConfigRequest extends Request {
         }
 
         /**
-         * The start time when the function is invoked. Specify the time in the **EEE,d MMM yyyy HH:mm:ss GMT** format.
+         * X-Fc-Date.
          */
         public Builder xFcDate(String xFcDate) {
             this.putHeaderParameter("X-Fc-Date", xFcDate);
@@ -186,7 +186,7 @@ public class DeleteFunctionOnDemandConfigRequest extends Request {
         }
 
         /**
-         * The trace ID of the request for Function Compute API, which is also the unique ID of the request.
+         * X-Fc-Trace-Id.
          */
         public Builder xFcTraceId(String xFcTraceId) {
             this.putHeaderParameter("X-Fc-Trace-Id", xFcTraceId);
@@ -195,7 +195,7 @@ public class DeleteFunctionOnDemandConfigRequest extends Request {
         }
 
         /**
-         * The alias of the service or LATEST.
+         * Deletes the on-demand configuration of a function.
          */
         public Builder qualifier(String qualifier) {
             this.putQueryParameter("qualifier", qualifier);

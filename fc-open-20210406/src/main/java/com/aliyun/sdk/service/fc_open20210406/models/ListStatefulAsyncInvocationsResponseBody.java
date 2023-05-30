@@ -50,7 +50,7 @@ public class ListStatefulAsyncInvocationsResponseBody extends TeaModel {
         private String nextToken; 
 
         /**
-         * The information about asynchronous tasks.
+         * The version or alias of the service to which the asynchronous task belongs.
          */
         public Builder invocations(java.util.List < StatefulAsyncInvocation > invocations) {
             this.invocations = invocations;
@@ -58,7 +58,7 @@ public class ListStatefulAsyncInvocationsResponseBody extends TeaModel {
         }
 
         /**
-         * The token used to obtain more results. If this parameter is left empty, all the results are returned.
+         * The returned data.
          */
         public Builder nextToken(String nextToken) {
             this.nextToken = nextToken;

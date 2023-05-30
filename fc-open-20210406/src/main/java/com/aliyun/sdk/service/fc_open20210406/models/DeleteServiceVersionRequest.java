@@ -112,7 +112,7 @@ public class DeleteServiceVersionRequest extends Request {
         } 
 
         /**
-         * The name of the service.
+         * Example 1
          */
         public Builder serviceName(String serviceName) {
             this.putPathParameter("serviceName", serviceName);
@@ -121,7 +121,7 @@ public class DeleteServiceVersionRequest extends Request {
         }
 
         /**
-         * The version of the service.
+         * 139490
          */
         public Builder versionId(String versionId) {
             this.putPathParameter("versionId", versionId);
@@ -130,7 +130,7 @@ public class DeleteServiceVersionRequest extends Request {
         }
 
         /**
-         * The ID of your Alibaba Cloud account.
+         * Xiaoqi
          */
         public Builder xFcAccountId(String xFcAccountId) {
             this.putHeaderParameter("X-Fc-Account-Id", xFcAccountId);
@@ -139,7 +139,7 @@ public class DeleteServiceVersionRequest extends Request {
         }
 
         /**
-         * The time when Function Compute API is called. Specify the time in the **EEE,d MMM yyyy HH:mm:ss GMT** format.
+         * X-Fc-Date.
          */
         public Builder xFcDate(String xFcDate) {
             this.putHeaderParameter("X-Fc-Date", xFcDate);
@@ -148,7 +148,7 @@ public class DeleteServiceVersionRequest extends Request {
         }
 
         /**
-         * The trace ID of the invocation request of Function Compute.
+         * X-Fc-Trace-Id.
          */
         public Builder xFcTraceId(String xFcTraceId) {
             this.putHeaderParameter("X-Fc-Trace-Id", xFcTraceId);

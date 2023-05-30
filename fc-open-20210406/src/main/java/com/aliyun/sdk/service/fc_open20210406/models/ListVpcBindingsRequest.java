@@ -105,7 +105,7 @@ public class ListVpcBindingsRequest extends Request {
         }
 
         /**
-         * The ID of your Alibaba Cloud account.
+         * The time when Function Compute API is called. Specify the time in the yyyy-mm-ddhh:mm:ss format.
          */
         public Builder xFcAccountId(String xFcAccountId) {
             this.putHeaderParameter("X-Fc-Account-Id", xFcAccountId);
@@ -114,7 +114,7 @@ public class ListVpcBindingsRequest extends Request {
         }
 
         /**
-         * The time when Function Compute API is called. Specify the time in the **EEE,d MMM yyyy HH:mm:ss GMT** format.
+         * Example 1
          */
         public Builder xFcDate(String xFcDate) {
             this.putHeaderParameter("X-Fc-Date", xFcDate);
@@ -123,7 +123,7 @@ public class ListVpcBindingsRequest extends Request {
         }
 
         /**
-         * The custom request ID.
+         * Queries the list of VPCs.
          */
         public Builder xFcTraceId(String xFcTraceId) {
             this.putHeaderParameter("X-Fc-Trace-Id", xFcTraceId);

@@ -50,7 +50,7 @@ public class ListLayersResponseBody extends TeaModel {
         private String nextToken; 
 
         /**
-         * The information about layers.
+         * 层列表
          */
         public Builder layers(java.util.List < Layer > layers) {
             this.layers = layers;
@@ -58,7 +58,7 @@ public class ListLayersResponseBody extends TeaModel {
         }
 
         /**
-         * The name of the start layer for the next query, which is also the token used to obtain more results.
+         * 剩余列表起始层名
          */
         public Builder nextToken(String nextToken) {
             this.nextToken = nextToken;

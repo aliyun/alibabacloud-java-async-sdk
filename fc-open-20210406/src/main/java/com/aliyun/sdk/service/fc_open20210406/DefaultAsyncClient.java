@@ -383,10 +383,6 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
-    /**
-      * StatefulAsyncInvocation indicates whether the asynchronous task feature is enabled. If the value of StatefulAsyncInvocation is true, the asynchronous task feature is enabled. All asynchronous invocations change to asynchronous task mode.
-      *
-     */
     @Override
     public CompletableFuture<GetFunctionAsyncInvokeConfigResponse> getFunctionAsyncInvokeConfig(GetFunctionAsyncInvokeConfigRequest request) {
         try {
@@ -486,7 +482,7 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * StatefulAsyncInvocation: asynchronous task. Asynchronous tasks allow you to manage the states on the basis of common asynchronous invocations, which is more suitable for task scenarios.
+      * The version or alias of the service to which the asynchronous task belongs.
       *
      */
     @Override
@@ -573,10 +569,6 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
-    /**
-      * StatefulAsyncInvocation indicates whether the asynchronous task feature is enabled. If StatefulAsyncInvocation is set to true, the asynchronous task is enabled. All asynchronous invocations to the function corresponding to this configuration change to asynchronous task mode.
-      *
-     */
     @Override
     public CompletableFuture<ListFunctionAsyncInvokeConfigsResponse> listFunctionAsyncInvokeConfigs(ListFunctionAsyncInvokeConfigsRequest request) {
         try {
@@ -606,8 +598,8 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * The ListInstances operation allows you to query the available instances of a function.
-      * Available instances are instances that are processing requests or can be scheduled to process requests. Available instances queried by the ListInstances operation are the same as those that can be used when you call the InvokeFunction operation with the same values specified for the `serviceName`, `functionName`, and `qualifier` parameters.
+      * The maximum number of resources to return. Valid values: \\[0,1000].
+      * The number of returned resources is less than or equal to the specified number.
       *
      */
     @Override
@@ -723,7 +715,7 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * StatefulAsyncInvocation: asynchronous task. Asynchronous tasks allow you to manage the states on the basis of common asynchronous invocations, which is more suitable for task scenarios.
+      * The metadata of the service and function to which the asynchronous task belongs.
       *
      */
     @Override
@@ -741,7 +733,7 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * StatefulAsyncInvocation: asynchronous task. Asynchronous tasks allow you to manage the states on the basis of common asynchronous invocations, which is more suitable for task scenarios.
+      * The name of the service to which the asynchronous task belongs.
       *
      */
     @Override
@@ -815,7 +807,7 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * StatefulAsyncInvocation specifies the configurations of the asynchronous task. Asynchronous tasks allow you to manage the states on the basis of common asynchronous invocations, which is more suitable for task scenarios.
+      * The maximum validity period of messages.
       *
      */
     @Override

@@ -50,7 +50,7 @@ public class GetAccountSettingsResponseBody extends TeaModel {
         private String defaultRole; 
 
         /**
-         * The list of zones.
+         * Liuxia
          */
         public Builder availableAZs(java.util.List < String > availableAZs) {
             this.availableAZs = availableAZs;
@@ -58,7 +58,7 @@ public class GetAccountSettingsResponseBody extends TeaModel {
         }
 
         /**
-         * The default RAM role.
+         * 默认服务角色
          */
         public Builder defaultRole(String defaultRole) {
             this.defaultRole = defaultRole;

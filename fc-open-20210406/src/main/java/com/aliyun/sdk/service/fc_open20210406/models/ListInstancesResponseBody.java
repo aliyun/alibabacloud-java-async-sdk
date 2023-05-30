@@ -38,7 +38,7 @@ public class ListInstancesResponseBody extends TeaModel {
         private java.util.List < Instances> instances; 
 
         /**
-         * The information about instances.
+         * 210234
          */
         public Builder instances(java.util.List < Instances> instances) {
             this.instances = instances;
@@ -90,7 +90,7 @@ public class ListInstancesResponseBody extends TeaModel {
             private String versionId; 
 
             /**
-             * The ID of the instance.
+             * 实例ID。
              */
             public Builder instanceId(String instanceId) {
                 this.instanceId = instanceId;
@@ -98,7 +98,7 @@ public class ListInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * The version of the service to which the instance belongs. If the instance belongs to the LATEST alias, 0 is returned as the version.
+             * 实例所属的服务版本。如果是LATEST别名下的函数实例，则返回版本号为0。
              */
             public Builder versionId(String versionId) {
                 this.versionId = versionId;

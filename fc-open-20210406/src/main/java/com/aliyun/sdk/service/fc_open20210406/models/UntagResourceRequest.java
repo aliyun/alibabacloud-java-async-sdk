@@ -134,7 +134,7 @@ public class UntagResourceRequest extends Request {
         }
 
         /**
-         * The time when Function Compute API is called. Specify the time in the **EEE,d MMM yyyy HH:mm:ss GMT** format.
+         * The time when the function is invoked. The value is in the **EEE,d MMM yyyy HH:mm:ss GMT** format.
          */
         public Builder xFcDate(String xFcDate) {
             this.putHeaderParameter("X-Fc-Date", xFcDate);
@@ -154,8 +154,9 @@ public class UntagResourceRequest extends Request {
         /**
          * Specifies whether to remove all tags. This parameter takes effect only when no tag key is specified. Valid values:
          * <p>
-         *   - **true**: removes all tags. 
-         *   - **false**: does not remove all tags.
+         * 
+         * *   **true**
+         * *   **false**
          */
         public Builder all(Boolean all) {
             this.putBodyParameter("all", all);
@@ -164,7 +165,7 @@ public class UntagResourceRequest extends Request {
         }
 
         /**
-         * The ARN of the resource. 
+         * The Alibaba Cloud Resource Name (ARN) of the resource.
          * <p>
          * 
          * > You can use the value of this parameter to query the information about the resource, such as the account, service, and region information of the resource. You can manage tags only for services for top level resources.

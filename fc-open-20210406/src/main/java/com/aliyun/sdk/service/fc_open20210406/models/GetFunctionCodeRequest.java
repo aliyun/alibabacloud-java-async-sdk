@@ -126,7 +126,7 @@ public class GetFunctionCodeRequest extends Request {
         } 
 
         /**
-         * The name of the service.
+         * service名称
          */
         public Builder serviceName(String serviceName) {
             this.putPathParameter("serviceName", serviceName);
@@ -135,7 +135,7 @@ public class GetFunctionCodeRequest extends Request {
         }
 
         /**
-         * The name of the function.
+         * function名称
          */
         public Builder functionName(String functionName) {
             this.putPathParameter("functionName", functionName);
@@ -144,7 +144,7 @@ public class GetFunctionCodeRequest extends Request {
         }
 
         /**
-         * The ID of your Alibaba Cloud account.
+         * X-Fc-Account-Id.
          */
         public Builder xFcAccountId(String xFcAccountId) {
             this.putHeaderParameter("X-Fc-Account-Id", xFcAccountId);
@@ -153,7 +153,7 @@ public class GetFunctionCodeRequest extends Request {
         }
 
         /**
-         * The time on which the function is invoked. The format of the value is: **EEE,d MMM yyyy HH:mm:ss GMT**.
+         * X-Fc-Date.
          */
         public Builder xFcDate(String xFcDate) {
             this.putHeaderParameter("X-Fc-Date", xFcDate);
@@ -162,7 +162,7 @@ public class GetFunctionCodeRequest extends Request {
         }
 
         /**
-         * The custom request ID.
+         * X-Fc-Trace-Id.
          */
         public Builder xFcTraceId(String xFcTraceId) {
             this.putHeaderParameter("X-Fc-Trace-Id", xFcTraceId);
@@ -171,7 +171,7 @@ public class GetFunctionCodeRequest extends Request {
         }
 
         /**
-         * The version or alias of the service.
+         * service版本, 可以是versionId或者aliasName
          */
         public Builder qualifier(String qualifier) {
             this.putQueryParameter("qualifier", qualifier);

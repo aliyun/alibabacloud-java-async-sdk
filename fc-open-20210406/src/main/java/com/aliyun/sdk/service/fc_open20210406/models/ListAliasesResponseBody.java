@@ -182,7 +182,11 @@ public class ListAliasesResponseBody extends TeaModel {
             private String versionId; 
 
             /**
-             * The weight of the canary release version.
+             * The additional version to which the alias points and the weight of the additional version.
+             * <p>
+             * 
+             * *   The additional version takes effect only when the function is invoked.
+             * *   The value consists of a version number and a specific weight. For example, 2:0.05 indicates that when a function is invoked, Version 2 is the canary release version, 5% of the traffic is distributed to the canary release version, and 95% of the traffic is distributed to the major version.
              */
             public Builder additionalVersionWeight(java.util.Map < String, Float > additionalVersionWeight) {
                 this.additionalVersionWeight = additionalVersionWeight;
@@ -198,7 +202,7 @@ public class ListAliasesResponseBody extends TeaModel {
             }
 
             /**
-             * The creation time.
+             * The time when the ConfigMaps were created.
              */
             public Builder createdTime(String createdTime) {
                 this.createdTime = createdTime;
@@ -214,7 +218,7 @@ public class ListAliasesResponseBody extends TeaModel {
             }
 
             /**
-             * The last update time.
+             * The time at which the system parameter was last modified.
              */
             public Builder lastModifiedTime(String lastModifiedTime) {
                 this.lastModifiedTime = lastModifiedTime;
@@ -222,11 +226,11 @@ public class ListAliasesResponseBody extends TeaModel {
             }
 
             /**
-             * 灰度方式：随机灰度或者规则灰度，默认值为随机灰度
+             * The canary release mode. Valid values:
              * <p>
-             * 枚举值：
-             * Random
-             * Content
+             * 
+             * *   **Random**: random canary release. This is the default value.
+             * *   **Content**: rule-based canary release.
              */
             public Builder resolvePolicy(String resolvePolicy) {
                 this.resolvePolicy = resolvePolicy;
@@ -234,7 +238,7 @@ public class ListAliasesResponseBody extends TeaModel {
             }
 
             /**
-             * 灰度规则：满足灰度规则条件的流量，会被路由至灰度实例
+             * The canary release rule. Traffic that meets the canary release rule is routed to the canary release instance.
              */
             public Builder routePolicy(RoutePolicy routePolicy) {
                 this.routePolicy = routePolicy;

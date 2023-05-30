@@ -50,7 +50,7 @@ public class RegisterEventSourceResponseBody extends TeaModel {
         private String sourceArn; 
 
         /**
-         * The time when the event source was created.
+         * 创建时间
          */
         public Builder createdTime(String createdTime) {
             this.createdTime = createdTime;
@@ -58,7 +58,7 @@ public class RegisterEventSourceResponseBody extends TeaModel {
         }
 
         /**
-         * The ARN of the event source.
+         * 事件源资源标识符
          */
         public Builder sourceArn(String sourceArn) {
             this.sourceArn = sourceArn;

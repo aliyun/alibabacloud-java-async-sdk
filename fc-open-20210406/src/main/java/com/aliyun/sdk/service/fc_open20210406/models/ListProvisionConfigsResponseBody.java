@@ -50,7 +50,7 @@ public class ListProvisionConfigsResponseBody extends TeaModel {
         private java.util.List < ProvisionConfigs> provisionConfigs; 
 
         /**
-         * The token used to obtain more results.
+         * The qualifier of the service to which resources belong. The qualifier must be aliasName and used together with the serviceName parameter.
          */
         public Builder nextToken(String nextToken) {
             this.nextToken = nextToken;
@@ -58,7 +58,7 @@ public class ListProvisionConfigsResponseBody extends TeaModel {
         }
 
         /**
-         * The information about provisioned instances.
+         * The time when Function Compute API is called. Specify the time in the **EEE,d MMM yyyy HH:mm:ss GMT** format.
          */
         public Builder provisionConfigs(java.util.List < ProvisionConfigs> provisionConfigs) {
             this.provisionConfigs = provisionConfigs;
@@ -170,7 +170,7 @@ public class ListProvisionConfigsResponseBody extends TeaModel {
             private java.util.List < TargetTrackingPolicies > targetTrackingPolicies; 
 
             /**
-             * Specifies whether to always allocate CPU to a function instance.
+             * Xiaoqi
              */
             public Builder alwaysAllocateCPU(Boolean alwaysAllocateCPU) {
                 this.alwaysAllocateCPU = alwaysAllocateCPU;
@@ -178,7 +178,7 @@ public class ListProvisionConfigsResponseBody extends TeaModel {
             }
 
             /**
-             * The actual number of provisioned instances.
+             * The expected number of provisioned instances.
              */
             public Builder current(Long current) {
                 this.current = current;
@@ -186,7 +186,7 @@ public class ListProvisionConfigsResponseBody extends TeaModel {
             }
 
             /**
-             * The error message returned if a provisioned instance fails to be created.
+             * 139490
              */
             public Builder currentError(String currentError) {
                 this.currentError = currentError;
@@ -194,7 +194,7 @@ public class ListProvisionConfigsResponseBody extends TeaModel {
             }
 
             /**
-             * The description of the resource.
+             * Details about the scheduled scaling policy. You can use the scheduled scaling policy to flexibly configure provisioned instances. You can specify the number of provisioned instances to the desired value at the scheduled time. This way, the number of provisioned instances can meet the concurrency requirements of your business.
              */
             public Builder resource(String resource) {
                 this.resource = resource;
@@ -202,7 +202,7 @@ public class ListProvisionConfigsResponseBody extends TeaModel {
             }
 
             /**
-             * The configurations of scheduled auto scaling.
+             * The ID of your Alibaba Cloud account.
              */
             public Builder scheduledActions(java.util.List < ScheduledActions > scheduledActions) {
                 this.scheduledActions = scheduledActions;
@@ -210,7 +210,13 @@ public class ListProvisionConfigsResponseBody extends TeaModel {
             }
 
             /**
-             * The expected number of provisioned instances.
+             * The configuration of metric-based auto scaling. Provisioned instances are scaled in or out every minute based on the concurrency utilization of provisioned instances. 
+             * <p>
+             * 
+             * - If the metric value exceeds the value of the metricTarget parameter, the system scales out provisioned instances based on a progressive policy to make the metric value closer to the value of the metricTarget parameter. 
+             * - When the metric value is smaller than the value of the metricTarget parameter, the system scales in provisioned instances based on a conservative policy to make the metric value close to the value of the metricTarget parameter. 
+             * 
+             * After you specify the maximum and minimum numbers of provisioned instances, the system scales in or out provisioned instances within the range from the minimum number to the maximum number. If the number of provisioned instances is beyond the range, the scaling stops.
              */
             public Builder target(Long target) {
                 this.target = target;
@@ -218,7 +224,7 @@ public class ListProvisionConfigsResponseBody extends TeaModel {
             }
 
             /**
-             * The configurations of metric-based auto scaling.
+             * Example 1
              */
             public Builder targetTrackingPolicies(java.util.List < TargetTrackingPolicies > targetTrackingPolicies) {
                 this.targetTrackingPolicies = targetTrackingPolicies;

@@ -50,7 +50,7 @@ public class ListTaggedResourcesResponseBody extends TeaModel {
         private java.util.List < Resource > resources; 
 
         /**
-         * The token used to obtain more results. You do not need to provide this parameter in the first call. The tokens for subsequent queries are obtained from the returned results.
+         * nextToken.
          */
         public Builder nextToken(String nextToken) {
             this.nextToken = nextToken;
@@ -58,7 +58,7 @@ public class ListTaggedResourcesResponseBody extends TeaModel {
         }
 
         /**
-         * The information about tagged services.
+         * resources.
          */
         public Builder resources(java.util.List < Resource > resources) {
             this.resources = resources;

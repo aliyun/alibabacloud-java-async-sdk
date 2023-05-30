@@ -97,7 +97,7 @@ public class DeleteCustomDomainRequest extends Request {
         } 
 
         /**
-         * The domain name.
+         * Removes a custom domain name.
          */
         public Builder domainName(String domainName) {
             this.putPathParameter("domainName", domainName);
@@ -106,7 +106,7 @@ public class DeleteCustomDomainRequest extends Request {
         }
 
         /**
-         * The ID of your Alibaba Cloud account.
+         * 150868
          */
         public Builder xFcAccountId(String xFcAccountId) {
             this.putHeaderParameter("X-Fc-Account-Id", xFcAccountId);
@@ -115,7 +115,7 @@ public class DeleteCustomDomainRequest extends Request {
         }
 
         /**
-         * The time when Function Compute API is called. Specify the time in the **EEE,d MMM yyyy HH:mm:ss GMT** format.
+         * Xiawan
          */
         public Builder xFcDate(String xFcDate) {
             this.putHeaderParameter("X-Fc-Date", xFcDate);
@@ -124,7 +124,7 @@ public class DeleteCustomDomainRequest extends Request {
         }
 
         /**
-         * The custom request ID.
+         * X-Fc-Trace-Id.
          */
         public Builder xFcTraceId(String xFcTraceId) {
             this.putHeaderParameter("X-Fc-Trace-Id", xFcTraceId);

@@ -50,7 +50,7 @@ public class ListStatefulAsyncInvocationFunctionsResponseBody extends TeaModel {
         private String nextToken; 
 
         /**
-         * The details of returned data.
+         * The trace ID of the request for Function Compute API.
          */
         public Builder data(java.util.List < AsyncConfigMeta > data) {
             this.data = data;
@@ -58,7 +58,7 @@ public class ListStatefulAsyncInvocationFunctionsResponseBody extends TeaModel {
         }
 
         /**
-         * The token used to obtain more results. If this parameter is left empty, all the results are returned.
+         * 2022-01-28 18:04:38
          */
         public Builder nextToken(String nextToken) {
             this.nextToken = nextToken;

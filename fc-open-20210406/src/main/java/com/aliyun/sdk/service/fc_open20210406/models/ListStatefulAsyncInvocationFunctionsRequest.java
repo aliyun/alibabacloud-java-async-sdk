@@ -111,7 +111,7 @@ public class ListStatefulAsyncInvocationFunctionsRequest extends Request {
         } 
 
         /**
-         * The ID of your Alibaba Cloud account.
+         * It is a tool used to manage and configure Alibaba Cloud resources. After simple installation and configuration, you can use Alibaba Cloud CLI to manage multiple Alibaba Cloud services and migrate your data and business to the cloud with ease.
          */
         public Builder xFcAccountId(String xFcAccountId) {
             this.putHeaderParameter("X-Fc-Account-Id", xFcAccountId);
@@ -120,7 +120,7 @@ public class ListStatefulAsyncInvocationFunctionsRequest extends Request {
         }
 
         /**
-         * The time when Function Compute API is called. Specify the time in the **EEE,d MMM yyyy HH:mm:ss GMT** format.
+         * The token used to obtain more results. If this parameter is left empty, all the results are returned.
          */
         public Builder xFcDate(String xFcDate) {
             this.putHeaderParameter("X-Fc-Date", xFcDate);
@@ -129,7 +129,7 @@ public class ListStatefulAsyncInvocationFunctionsRequest extends Request {
         }
 
         /**
-         * The trace ID of the request for Function Compute API.
+         * The details of returned data.
          */
         public Builder xFcTraceId(String xFcTraceId) {
             this.putHeaderParameter("X-Fc-Trace-Id", xFcTraceId);
@@ -138,7 +138,7 @@ public class ListStatefulAsyncInvocationFunctionsRequest extends Request {
         }
 
         /**
-         * The maximum number of resources to return. Default value: 20. Maximum value: 100. The number of returned resources is less than or equal to the specified number.
+         * The latest version of Function Compute API.
          */
         public Builder limit(Integer limit) {
             this.putQueryParameter("limit", limit);
@@ -147,7 +147,7 @@ public class ListStatefulAsyncInvocationFunctionsRequest extends Request {
         }
 
         /**
-         * The starting position of the query. If this parameter is left empty, the query starts from the beginning. If the number of resources exceeds the limit, the nextToken parameter is returned. You can include the parameter in subsequent calls to obtain more results. You do not need to provide this parameter in the first call.
+         * Alibaba Cloud provides SDKs for multiple programming languages to help you integrate Alibaba Cloud services by using APIs. We recommend that you use an SDK to call API operations. This frees you from manual signature verification.
          */
         public Builder nextToken(String nextToken) {
             this.putQueryParameter("nextToken", nextToken);

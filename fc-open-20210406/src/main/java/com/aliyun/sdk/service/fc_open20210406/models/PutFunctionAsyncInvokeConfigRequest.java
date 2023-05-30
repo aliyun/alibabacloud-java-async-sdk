@@ -182,7 +182,7 @@ public class PutFunctionAsyncInvokeConfigRequest extends Request {
         } 
 
         /**
-         * The name of the service.
+         * The information about the asynchronous invocation configuration.
          */
         public Builder serviceName(String serviceName) {
             this.putPathParameter("serviceName", serviceName);
@@ -191,7 +191,7 @@ public class PutFunctionAsyncInvokeConfigRequest extends Request {
         }
 
         /**
-         * The name of the function.
+         * The configurations of the destination of an asynchronous invocation.
          */
         public Builder functionName(String functionName) {
             this.putPathParameter("functionName", functionName);
@@ -200,7 +200,7 @@ public class PutFunctionAsyncInvokeConfigRequest extends Request {
         }
 
         /**
-         * The ID of your Alibaba Cloud account.
+         * The name of the service.
          */
         public Builder xFcAccountId(String xFcAccountId) {
             this.putHeaderParameter("X-Fc-Account-Id", xFcAccountId);
@@ -209,7 +209,7 @@ public class PutFunctionAsyncInvokeConfigRequest extends Request {
         }
 
         /**
-         * The time when Function Compute API is called. Specify the time in the **EEE,d MMM yyyy HH:mm:ss GMT** format.
+         * The creation time.
          */
         public Builder xFcDate(String xFcDate) {
             this.putHeaderParameter("X-Fc-Date", xFcDate);
@@ -218,7 +218,7 @@ public class PutFunctionAsyncInvokeConfigRequest extends Request {
         }
 
         /**
-         * The trace ID of the invocation request of Function Compute.
+         * The maximum number of retries allowed after an asynchronous invocation fails. Default value: 3. Valid values: 0 to 8.
          */
         public Builder xFcTraceId(String xFcTraceId) {
             this.putHeaderParameter("X-Fc-Trace-Id", xFcTraceId);
@@ -227,7 +227,7 @@ public class PutFunctionAsyncInvokeConfigRequest extends Request {
         }
 
         /**
-         * The configuration structure of the destination for asynchronous invocation.
+         * You can search for API operations, call and debug API operations online, and dynamically generate executable sample code for SDKs.
          */
         public Builder destinationConfig(DestinationConfig destinationConfig) {
             this.putBodyParameter("destinationConfig", destinationConfig);
@@ -236,7 +236,7 @@ public class PutFunctionAsyncInvokeConfigRequest extends Request {
         }
 
         /**
-         * The maximum validity period of messages. Valid values: 1 to 2592000. Unit: seconds.
+         * Alibaba Cloud CLI
          */
         public Builder maxAsyncEventAgeInSeconds(Long maxAsyncEventAgeInSeconds) {
             this.putBodyParameter("maxAsyncEventAgeInSeconds", maxAsyncEventAgeInSeconds);
@@ -245,7 +245,7 @@ public class PutFunctionAsyncInvokeConfigRequest extends Request {
         }
 
         /**
-         * The maximum number of retries allowed after an asynchronous invocation fails. Default value: 3. Valid values: 0 to 8.
+         * The information about the asynchronous invocation configuration.
          */
         public Builder maxAsyncRetryAttempts(Long maxAsyncRetryAttempts) {
             this.putBodyParameter("maxAsyncRetryAttempts", maxAsyncRetryAttempts);
@@ -254,11 +254,7 @@ public class PutFunctionAsyncInvokeConfigRequest extends Request {
         }
 
         /**
-         * Specifies whether to enable the asynchronous task feature. 
-         * <p>
-         * 
-         * - **true**: enables the asynchronous task feature. 
-         * - **false**: does not enable the asynchronous task feature.
+         * The version or alias of the service.
          */
         public Builder statefulInvocation(Boolean statefulInvocation) {
             this.putBodyParameter("statefulInvocation", statefulInvocation);
@@ -267,7 +263,7 @@ public class PutFunctionAsyncInvokeConfigRequest extends Request {
         }
 
         /**
-         * The version or alias of the service.
+         * The latest version of Function Compute API.
          */
         public Builder qualifier(String qualifier) {
             this.putQueryParameter("qualifier", qualifier);

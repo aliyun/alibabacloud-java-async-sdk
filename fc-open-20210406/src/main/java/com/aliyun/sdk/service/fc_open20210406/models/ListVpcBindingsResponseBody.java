@@ -38,7 +38,7 @@ public class ListVpcBindingsResponseBody extends TeaModel {
         private java.util.List < String > vpcIds; 
 
         /**
-         * The IDs of bound VPCs.
+         * vpcIds.
          */
         public Builder vpcIds(java.util.List < String > vpcIds) {
             this.vpcIds = vpcIds;

@@ -111,7 +111,7 @@ public class DeleteServiceRequest extends Request {
         } 
 
         /**
-         * The name of the service.
+         * Deletes a service.
          */
         public Builder serviceName(String serviceName) {
             this.putPathParameter("serviceName", serviceName);
@@ -120,7 +120,7 @@ public class DeleteServiceRequest extends Request {
         }
 
         /**
-         * The ETag value of the service. This value is used to ensure that the modified service is consistent with the service to be modified. The ETag value is returned in the responses of the [CreateService](~~175256~~), [UpdateService](~~188167~~), and [GetService](~~189225~~) operations.
+         * Examples
          */
         public Builder ifMatch(String ifMatch) {
             this.putHeaderParameter("If-Match", ifMatch);
@@ -129,7 +129,7 @@ public class DeleteServiceRequest extends Request {
         }
 
         /**
-         * The ID of your Alibaba Cloud account.
+         * Liuxia
          */
         public Builder xFcAccountId(String xFcAccountId) {
             this.putHeaderParameter("X-Fc-Account-Id", xFcAccountId);
@@ -138,7 +138,7 @@ public class DeleteServiceRequest extends Request {
         }
 
         /**
-         * The time when Function Compute API is called. Specify the time in the **EEE,d MMM yyyy HH:mm:ss GMT** format.
+         * X-Fc-Date.
          */
         public Builder xFcDate(String xFcDate) {
             this.putHeaderParameter("X-Fc-Date", xFcDate);
@@ -147,7 +147,7 @@ public class DeleteServiceRequest extends Request {
         }
 
         /**
-         * The custom request ID.
+         * X-Fc-Trace-Id.
          */
         public Builder xFcTraceId(String xFcTraceId) {
             this.putHeaderParameter("X-Fc-Trace-Id", xFcTraceId);

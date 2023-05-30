@@ -112,7 +112,7 @@ public class TagResourceRequest extends Request {
         } 
 
         /**
-         * The ID of your Alibaba Cloud account.
+         * X-Fc-Account-Id.
          */
         public Builder xFcAccountId(String xFcAccountId) {
             this.putHeaderParameter("X-Fc-Account-Id", xFcAccountId);
@@ -121,7 +121,7 @@ public class TagResourceRequest extends Request {
         }
 
         /**
-         * The time when the function is invoked. The format is **EEE,d MMM yyyy HH:mm:ss GMT**.
+         * X-Fc-Date.
          */
         public Builder xFcDate(String xFcDate) {
             this.putHeaderParameter("X-Fc-Date", xFcDate);
@@ -130,7 +130,7 @@ public class TagResourceRequest extends Request {
         }
 
         /**
-         * The custom request ID.
+         * X-Fc-Trace-Id.
          */
         public Builder xFcTraceId(String xFcTraceId) {
             this.putHeaderParameter("X-Fc-Trace-Id", xFcTraceId);
@@ -139,10 +139,7 @@ public class TagResourceRequest extends Request {
         }
 
         /**
-         * The ARN of the resource.
-         * <p>
-         * 
-         * > You can use the value of this parameter to query the information about the resource, such as the account, service, and region information of the resource. You can manage tags only for services for top level resources.
+         * resourceArn.
          */
         public Builder resourceArn(String resourceArn) {
             this.putBodyParameter("resourceArn", resourceArn);
@@ -151,7 +148,7 @@ public class TagResourceRequest extends Request {
         }
 
         /**
-         * The tag dictionary.
+         * tags.
          */
         public Builder tags(java.util.Map < String, String > tags) {
             this.putBodyParameter("tags", tags);

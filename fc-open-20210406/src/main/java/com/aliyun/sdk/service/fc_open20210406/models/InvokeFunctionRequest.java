@@ -39,6 +39,10 @@ public class InvokeFunctionRequest extends Request {
     private String xFcLogType;
 
     @Header
+    @NameInMap("X-Fc-Stateful-Async-Invocation-Enable")
+    private String xFcStatefulAsyncInvocationEnable;
+
+    @Header
     @NameInMap("X-Fc-Stateful-Async-Invocation-Id")
     private String xFcStatefulAsyncInvocationId;
 
@@ -62,6 +66,7 @@ public class InvokeFunctionRequest extends Request {
         this.xFcDate = builder.xFcDate;
         this.xFcInvocationType = builder.xFcInvocationType;
         this.xFcLogType = builder.xFcLogType;
+        this.xFcStatefulAsyncInvocationEnable = builder.xFcStatefulAsyncInvocationEnable;
         this.xFcStatefulAsyncInvocationId = builder.xFcStatefulAsyncInvocationId;
         this.xFcTraceId = builder.xFcTraceId;
         this.body = builder.body;
@@ -124,6 +129,13 @@ public class InvokeFunctionRequest extends Request {
     }
 
     /**
+     * @return xFcStatefulAsyncInvocationEnable
+     */
+    public String getXFcStatefulAsyncInvocationEnable() {
+        return this.xFcStatefulAsyncInvocationEnable;
+    }
+
+    /**
      * @return xFcStatefulAsyncInvocationId
      */
     public String getXFcStatefulAsyncInvocationId() {
@@ -158,6 +170,7 @@ public class InvokeFunctionRequest extends Request {
         private String xFcDate; 
         private String xFcInvocationType; 
         private String xFcLogType; 
+        private String xFcStatefulAsyncInvocationEnable; 
         private String xFcStatefulAsyncInvocationId; 
         private String xFcTraceId; 
         private byte[] body; 
@@ -175,6 +188,7 @@ public class InvokeFunctionRequest extends Request {
             this.xFcDate = request.xFcDate;
             this.xFcInvocationType = request.xFcInvocationType;
             this.xFcLogType = request.xFcLogType;
+            this.xFcStatefulAsyncInvocationEnable = request.xFcStatefulAsyncInvocationEnable;
             this.xFcStatefulAsyncInvocationId = request.xFcStatefulAsyncInvocationId;
             this.xFcTraceId = request.xFcTraceId;
             this.body = request.body;
@@ -240,6 +254,15 @@ public class InvokeFunctionRequest extends Request {
         public Builder xFcLogType(String xFcLogType) {
             this.putHeaderParameter("X-Fc-Log-Type", xFcLogType);
             this.xFcLogType = xFcLogType;
+            return this;
+        }
+
+        /**
+         * X-Fc-Stateful-Async-Invocation-Enable.
+         */
+        public Builder xFcStatefulAsyncInvocationEnable(String xFcStatefulAsyncInvocationEnable) {
+            this.putHeaderParameter("X-Fc-Stateful-Async-Invocation-Enable", xFcStatefulAsyncInvocationEnable);
+            this.xFcStatefulAsyncInvocationEnable = xFcStatefulAsyncInvocationEnable;
             return this;
         }
 

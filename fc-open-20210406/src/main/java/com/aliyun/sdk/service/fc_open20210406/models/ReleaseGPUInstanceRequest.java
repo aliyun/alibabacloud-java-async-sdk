@@ -97,7 +97,7 @@ public class ReleaseGPUInstanceRequest extends Request {
         } 
 
         /**
-         * The ID of the instance.
+         * instanceId.
          */
         public Builder instanceId(String instanceId) {
             this.putPathParameter("instanceId", instanceId);
@@ -106,7 +106,7 @@ public class ReleaseGPUInstanceRequest extends Request {
         }
 
         /**
-         * The ID of your Alibaba Cloud account.
+         * X-Fc-Account-Id.
          */
         public Builder xFcAccountId(String xFcAccountId) {
             this.putHeaderParameter("X-Fc-Account-Id", xFcAccountId);
@@ -115,7 +115,7 @@ public class ReleaseGPUInstanceRequest extends Request {
         }
 
         /**
-         * The time when the function is invoked. The format of the value is: EEE,d MMM yyyy HH:mm:ss GMT.
+         * X-Fc-Date.
          */
         public Builder xFcDate(String xFcDate) {
             this.putHeaderParameter("X-Fc-Date", xFcDate);
@@ -124,7 +124,7 @@ public class ReleaseGPUInstanceRequest extends Request {
         }
 
         /**
-         * The custom request ID.
+         * X-Fc-Trace-Id.
          */
         public Builder xFcTraceId(String xFcTraceId) {
             this.putHeaderParameter("X-Fc-Trace-Id", xFcTraceId);

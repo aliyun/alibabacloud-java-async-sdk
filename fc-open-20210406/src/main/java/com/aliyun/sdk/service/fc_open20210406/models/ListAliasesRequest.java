@@ -171,7 +171,7 @@ public class ListAliasesRequest extends Request {
         }
 
         /**
-         * The start time when the function is invoked. Specify the time in the yyyy-mm-ddhh:mm:ss format.
+         * The time on which the function is invoked. The format of the value is: **EEE,d MMM yyyy HH:mm:ss GMT**.
          */
         public Builder xFcDate(String xFcDate) {
             this.putHeaderParameter("X-Fc-Date", xFcDate);
@@ -189,7 +189,7 @@ public class ListAliasesRequest extends Request {
         }
 
         /**
-         * The maximum number of resources to return.
+         * The maximum number of resources to return. Default value: 20. Maximum value: 100. The number of returned resources is less than or equal to the specified number.
          */
         public Builder limit(Integer limit) {
             this.putQueryParameter("limit", limit);
@@ -198,7 +198,7 @@ public class ListAliasesRequest extends Request {
         }
 
         /**
-         * The token used to obtain more results.
+         * The token required to obtain more results. If the number of resources exceeds the limit, the nextToken parameter is returned. You can include the parameter in subsequent calls to obtain more results. You do not need to provide this parameter in the first call.
          */
         public Builder nextToken(String nextToken) {
             this.putQueryParameter("nextToken", nextToken);
@@ -207,7 +207,7 @@ public class ListAliasesRequest extends Request {
         }
 
         /**
-         * The prefix.
+         * The prefix that the names of returned resources must contain.
          */
         public Builder prefix(String prefix) {
             this.putQueryParameter("prefix", prefix);
@@ -216,7 +216,7 @@ public class ListAliasesRequest extends Request {
         }
 
         /**
-         * The starting position of the result list.
+         * The starting position of the result list. The returned resources are sorted in alphabetical order, and the resources that include and follow the resource specified by the startKey parameter are returned.
          */
         public Builder startKey(String startKey) {
             this.putQueryParameter("startKey", startKey);

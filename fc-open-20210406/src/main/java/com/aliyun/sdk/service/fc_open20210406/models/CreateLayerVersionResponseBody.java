@@ -146,7 +146,7 @@ public class CreateLayerVersionResponseBody extends TeaModel {
         private Integer version; 
 
         /**
-         * The access mode of the layer.
+         * Creates a layer version.
          */
         public Builder acl(Integer acl) {
             this.acl = acl;
@@ -154,7 +154,7 @@ public class CreateLayerVersionResponseBody extends TeaModel {
         }
 
         /**
-         * The name of the layer.
+         * arn.
          */
         public Builder arn(String arn) {
             this.arn = arn;
@@ -162,7 +162,7 @@ public class CreateLayerVersionResponseBody extends TeaModel {
         }
 
         /**
-         * The information about the layer code package.
+         * The access mode of the layer.
          */
         public Builder code(OutputCodeLocation code) {
             this.code = code;
@@ -170,7 +170,7 @@ public class CreateLayerVersionResponseBody extends TeaModel {
         }
 
         /**
-         * The checksum of the layer code package.
+         * Example 1
          */
         public Builder codeChecksum(String codeChecksum) {
             this.codeChecksum = codeChecksum;
@@ -186,7 +186,7 @@ public class CreateLayerVersionResponseBody extends TeaModel {
         }
 
         /**
-         * The list of runtime environments that are supported by the layer.
+         * Luoni
          */
         public Builder compatibleRuntime(java.util.List < String > compatibleRuntime) {
             this.compatibleRuntime = compatibleRuntime;
@@ -194,7 +194,7 @@ public class CreateLayerVersionResponseBody extends TeaModel {
         }
 
         /**
-         * The time when the layer version was created. The time follows the **yyyy-MM-ddTHH:mm:ssZ** format.
+         * Creates a layer version.
          */
         public Builder createTime(String createTime) {
             this.createTime = createTime;
@@ -202,7 +202,7 @@ public class CreateLayerVersionResponseBody extends TeaModel {
         }
 
         /**
-         * The description of the layer version.
+         * The name of the layer.
          */
         public Builder description(String description) {
             this.description = description;
@@ -210,7 +210,7 @@ public class CreateLayerVersionResponseBody extends TeaModel {
         }
 
         /**
-         * The name of the layer.
+         * The list of runtime environments that are supported by the layer.
          */
         public Builder layerName(String layerName) {
             this.layerName = layerName;
@@ -218,7 +218,7 @@ public class CreateLayerVersionResponseBody extends TeaModel {
         }
 
         /**
-         * The version of the layer.
+         * The time when the layer version was created. The time follows the **yyyy-MM-ddTHH:mm:ssZ** format.
          */
         public Builder version(Integer version) {
             this.version = version;

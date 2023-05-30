@@ -91,7 +91,7 @@ public class GetAccountSettingsRequest extends Request {
         }
 
         /**
-         * The time when Function Compute API is called. Specify the time in the **EEE,d MMM yyyy HH:mm:ss GMT** format.
+         * Example 1
          */
         public Builder xFcDate(String xFcDate) {
             this.putHeaderParameter("X-Fc-Date", xFcDate);
@@ -100,7 +100,7 @@ public class GetAccountSettingsRequest extends Request {
         }
 
         /**
-         * The custom request ID.
+         * Queries available zones within the current account.
          */
         public Builder xFcTraceId(String xFcTraceId) {
             this.putHeaderParameter("X-Fc-Trace-Id", xFcTraceId);

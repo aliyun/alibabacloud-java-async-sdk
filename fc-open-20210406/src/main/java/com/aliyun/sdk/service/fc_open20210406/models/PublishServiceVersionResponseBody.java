@@ -74,7 +74,7 @@ public class PublishServiceVersionResponseBody extends TeaModel {
         private String versionId; 
 
         /**
-         * The time when the service version was created.
+         * The returned data.
          */
         public Builder createdTime(String createdTime) {
             this.createdTime = createdTime;
@@ -82,7 +82,7 @@ public class PublishServiceVersionResponseBody extends TeaModel {
         }
 
         /**
-         * The description of the service version.
+         * The creation time.
          */
         public Builder description(String description) {
             this.description = description;
@@ -90,7 +90,7 @@ public class PublishServiceVersionResponseBody extends TeaModel {
         }
 
         /**
-         * The time when the service version was last modified.
+         * The description of the service version.
          */
         public Builder lastModifiedTime(String lastModifiedTime) {
             this.lastModifiedTime = lastModifiedTime;
@@ -98,7 +98,7 @@ public class PublishServiceVersionResponseBody extends TeaModel {
         }
 
         /**
-         * The version of the service.
+         * The last update time.
          */
         public Builder versionId(String versionId) {
             this.versionId = versionId;

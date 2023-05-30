@@ -141,7 +141,7 @@ public class DeleteTriggerRequest extends Request {
         } 
 
         /**
-         * The name of the service.
+         * service名称
          */
         public Builder serviceName(String serviceName) {
             this.putPathParameter("serviceName", serviceName);
@@ -150,7 +150,7 @@ public class DeleteTriggerRequest extends Request {
         }
 
         /**
-         * The name of the function.
+         * function名称
          */
         public Builder functionName(String functionName) {
             this.putPathParameter("functionName", functionName);
@@ -159,7 +159,7 @@ public class DeleteTriggerRequest extends Request {
         }
 
         /**
-         * The name of the trigger.
+         * 删除trigger
          */
         public Builder triggerName(String triggerName) {
             this.putPathParameter("triggerName", triggerName);
@@ -168,7 +168,7 @@ public class DeleteTriggerRequest extends Request {
         }
 
         /**
-         * This parameter is used to ensure that the modified resource is consistent with the resource to be modified. You can obtain the parameter value from the responses of [CreateTrigger](~~415729~~), [GetTrigger](~~415732~~), and [UpdateTrigger](~~415731~~) operations.
+         * 用于确保实际更改的资源和期望更改的资源是一致的，该值来自Create，Get和Update API的响应
          */
         public Builder ifMatch(String ifMatch) {
             this.putHeaderParameter("If-Match", ifMatch);
@@ -177,7 +177,7 @@ public class DeleteTriggerRequest extends Request {
         }
 
         /**
-         * The ID of your Alibaba Cloud account.
+         * X-Fc-Account-Id.
          */
         public Builder xFcAccountId(String xFcAccountId) {
             this.putHeaderParameter("X-Fc-Account-Id", xFcAccountId);
@@ -186,7 +186,7 @@ public class DeleteTriggerRequest extends Request {
         }
 
         /**
-         * The time when the request is initiated on the client. The format of the value is: **EEE,d MMM yyyy HH:mm:ss GMT**.
+         * X-Fc-Date.
          */
         public Builder xFcDate(String xFcDate) {
             this.putHeaderParameter("X-Fc-Date", xFcDate);
@@ -195,7 +195,7 @@ public class DeleteTriggerRequest extends Request {
         }
 
         /**
-         * The custom request ID.
+         * X-Fc-Trace-Id.
          */
         public Builder xFcTraceId(String xFcTraceId) {
             this.putHeaderParameter("X-Fc-Trace-Id", xFcTraceId);
