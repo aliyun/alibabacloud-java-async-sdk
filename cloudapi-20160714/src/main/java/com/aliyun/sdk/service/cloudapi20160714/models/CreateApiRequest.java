@@ -37,7 +37,7 @@ public class CreateApiRequest extends Request {
     @NameInMap("BackendId")
     private String backendId;
 
-    @Query
+    @Body
     @NameInMap("ConstantParameters")
     private String constantParameters;
 
@@ -49,11 +49,11 @@ public class CreateApiRequest extends Request {
     @NameInMap("DisableInternet")
     private Boolean disableInternet;
 
-    @Query
+    @Body
     @NameInMap("ErrorCodeSamples")
     private String errorCodeSamples;
 
-    @Query
+    @Body
     @NameInMap("FailResultSample")
     private String failResultSample;
 
@@ -75,7 +75,7 @@ public class CreateApiRequest extends Request {
     @Validation(required = true)
     private String requestConfig;
 
-    @Query
+    @Body
     @NameInMap("RequestParameters")
     private String requestParameters;
 
@@ -83,11 +83,11 @@ public class CreateApiRequest extends Request {
     @NameInMap("ResultBodyModel")
     private String resultBodyModel;
 
-    @Query
+    @Body
     @NameInMap("ResultDescriptions")
     private String resultDescriptions;
 
-    @Query
+    @Body
     @NameInMap("ResultSample")
     private String resultSample;
 
@@ -104,15 +104,15 @@ public class CreateApiRequest extends Request {
     @Validation(required = true)
     private String serviceConfig;
 
-    @Query
+    @Body
     @NameInMap("ServiceParameters")
     private String serviceParameters;
 
-    @Query
+    @Body
     @NameInMap("ServiceParametersMap")
     private String serviceParametersMap;
 
-    @Query
+    @Body
     @NameInMap("SystemParameters")
     private String systemParameters;
 
@@ -492,10 +492,10 @@ public class CreateApiRequest extends Request {
         }
 
         /**
-         * The parameters of the API.
+         * ConstantParameters.
          */
         public Builder constantParameters(String constantParameters) {
-            this.putQueryParameter("ConstantParameters", constantParameters);
+            this.putBodyParameter("ConstantParameters", constantParameters);
             this.constantParameters = constantParameters;
             return this;
         }
@@ -521,22 +521,19 @@ public class CreateApiRequest extends Request {
         }
 
         /**
-         * The sample error codes returned by the backend service.
-         * <p>
-         * 
-         * For more information, see [ErrorCodeSample](~~44392~~).
+         * ErrorCodeSamples.
          */
         public Builder errorCodeSamples(String errorCodeSamples) {
-            this.putQueryParameter("ErrorCodeSamples", errorCodeSamples);
+            this.putBodyParameter("ErrorCodeSamples", errorCodeSamples);
             this.errorCodeSamples = errorCodeSamples;
             return this;
         }
 
         /**
-         * The sample error response from the backend service.
+         * FailResultSample.
          */
         public Builder failResultSample(String failResultSample) {
-            this.putQueryParameter("FailResultSample", failResultSample);
+            this.putBodyParameter("FailResultSample", failResultSample);
             this.failResultSample = failResultSample;
             return this;
         }
@@ -583,13 +580,10 @@ public class CreateApiRequest extends Request {
         }
 
         /**
-         * The parameters of API requests sent by the consumer to API Gateway.
-         * <p>
-         * 
-         * For more information, see [RequestParameter](~~43986~~).
+         * RequestParameters.
          */
         public Builder requestParameters(String requestParameters) {
-            this.putQueryParameter("RequestParameters", requestParameters);
+            this.putBodyParameter("RequestParameters", requestParameters);
             this.requestParameters = requestParameters;
             return this;
         }
@@ -604,19 +598,19 @@ public class CreateApiRequest extends Request {
         }
 
         /**
-         * The return description of the API.
+         * ResultDescriptions.
          */
         public Builder resultDescriptions(String resultDescriptions) {
-            this.putQueryParameter("ResultDescriptions", resultDescriptions);
+            this.putBodyParameter("ResultDescriptions", resultDescriptions);
             this.resultDescriptions = resultDescriptions;
             return this;
         }
 
         /**
-         * The sample response from the backend service.
+         * ResultSample.
          */
         public Builder resultSample(String resultSample) {
-            this.putQueryParameter("ResultSample", resultSample);
+            this.putBodyParameter("ResultSample", resultSample);
             this.resultSample = resultSample;
             return this;
         }
@@ -652,34 +646,28 @@ public class CreateApiRequest extends Request {
         }
 
         /**
-         * The parameters of API requests sent by API Gateway to the backend service.
-         * <p>
-         * 
-         * For more information, see [ServiceParameter](~~43988~~).
+         * ServiceParameters.
          */
         public Builder serviceParameters(String serviceParameters) {
-            this.putQueryParameter("ServiceParameters", serviceParameters);
+            this.putBodyParameter("ServiceParameters", serviceParameters);
             this.serviceParameters = serviceParameters;
             return this;
         }
 
         /**
-         * The mappings between parameters of requests sent by the consumer to API Gateway and parameters of requests sent by API Gateway to the backend service.
-         * <p>
-         * 
-         * For more information, see [ServiceParameterMap](~~43989~~).
+         * ServiceParametersMap.
          */
         public Builder serviceParametersMap(String serviceParametersMap) {
-            this.putQueryParameter("ServiceParametersMap", serviceParametersMap);
+            this.putBodyParameter("ServiceParametersMap", serviceParametersMap);
             this.serviceParametersMap = serviceParametersMap;
             return this;
         }
 
         /**
-         * The common parameters of APIs in JSON format.
+         * SystemParameters.
          */
         public Builder systemParameters(String systemParameters) {
-            this.putQueryParameter("SystemParameters", systemParameters);
+            this.putBodyParameter("SystemParameters", systemParameters);
             this.systemParameters = systemParameters;
             return this;
         }
