@@ -74,10 +74,7 @@ public class AsymmetricSignResponseBody extends TeaModel {
         private String value; 
 
         /**
-         * The ID of the CMK. The ID must be globally unique.
-         * <p>
-         * 
-         * >  If you set the KeyId parameter in the request to an alias, the ID of the CMK to which the alias is bound is returned.
+         * The version ID of the CMK. The ID must be globally unique.
          */
         public Builder keyId(String keyId) {
             this.keyId = keyId;
@@ -85,18 +82,14 @@ public class AsymmetricSignResponseBody extends TeaModel {
         }
 
         /**
-         * The version ID of the CMK. The ID must be globally unique.
+         * The digest that is generated for the original message by using a hash algorithm. The hash algorithm is specified by the Algorithm parameter.
+         * <p>
+         * 
+         * > * The value is encoded in Base64.
+         * > * For more information about how to calculate message digests, see the **Preprocess signature: compute a message digest** section of the [Generate and verify a signature by using an asymmetric CMK](~~148146~~) topic.
          */
         public Builder keyVersionId(String keyVersionId) {
             this.keyVersionId = keyVersionId;
-            return this;
-        }
-
-        /**
-         * The ID of the request, which is used to locate and troubleshoot issues.
-         */
-        public Builder requestId(String requestId) {
-            this.requestId = requestId;
             return this;
         }
 
@@ -105,6 +98,17 @@ public class AsymmetricSignResponseBody extends TeaModel {
          * <p>
          * 
          * >  The value is encoded in Base64.
+         */
+        public Builder requestId(String requestId) {
+            this.requestId = requestId;
+            return this;
+        }
+
+        /**
+         * The ID of the CMK. The ID must be globally unique.
+         * <p>
+         * 
+         * >  If you set the KeyId parameter in the request to an alias, the ID of the CMK to which the alias is bound is returned.
          */
         public Builder value(String value) {
             this.value = value;

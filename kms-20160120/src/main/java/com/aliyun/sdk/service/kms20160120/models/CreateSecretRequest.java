@@ -211,20 +211,11 @@ public class CreateSecretRequest extends Request {
         } 
 
         /**
-         * The ID of the dedicated KMS instance.
+         * The version number of the secret.
          */
         public Builder DKMSInstanceId(String DKMSInstanceId) {
             this.putQueryParameter("DKMSInstanceId", DKMSInstanceId);
             this.DKMSInstanceId = DKMSInstanceId;
-            return this;
-        }
-
-        /**
-         * The description of the secret.
-         */
-        public Builder description(String description) {
-            this.putQueryParameter("Description", description);
-            this.description = description;
             return this;
         }
 
@@ -237,6 +228,22 @@ public class CreateSecretRequest extends Request {
          * 
          * >  This parameter is valid if you set the SecretType parameter to Rds, RAMCredentials, or ECS.
          */
+        public Builder description(String description) {
+            this.putQueryParameter("Description", description);
+            this.description = description;
+            return this;
+        }
+
+        /**
+         * Indicates whether automatic rotation is enabled. Valid values:
+         * <p>
+         * 
+         * *   Enabled: indicates that automatic rotation is enabled.
+         * *   Disabled: indicates that automatic rotation is disabled.
+         * *   Invalid: indicates that the status of automatic rotation is abnormal. In this case, Secrets Manager cannot automatically rotate the secret.
+         * 
+         * >  This parameter is returned if you set the SecretType parameter to Rds, RAMCredentials, or ECS.
+         */
         public Builder enableAutomaticRotation(Boolean enableAutomaticRotation) {
             this.putQueryParameter("EnableAutomaticRotation", enableAutomaticRotation);
             this.enableAutomaticRotation = enableAutomaticRotation;
@@ -244,16 +251,39 @@ public class CreateSecretRequest extends Request {
         }
 
         /**
-         * The ID of the CMK that is used to encrypt the secret value.
-         * <p>
-         * 
-         * If the DKMSInstanceId parameter is empty, Secrets Manager uses a CMK that is created by Dedicated KMS to encrypt and protect secrets. If the DKMSInstanceId parameter is not empty, specify the CMK of the dedicated KMS instance to encrypt and protect secrets.
-         * 
-         * >  The CMK must be a symmetric CMK.
+         * The description of the secret.
          */
         public Builder encryptionKeyId(String encryptionKeyId) {
             this.putQueryParameter("EncryptionKeyId", encryptionKeyId);
             this.encryptionKeyId = encryptionKeyId;
+            return this;
+        }
+
+        /**
+         * The ID of the request, which is used to locate and troubleshoot issues.
+         */
+        public Builder extendedConfig(java.util.Map < String, ? > extendedConfig) {
+            String extendedConfigShrink = shrink(extendedConfig, "ExtendedConfig", "json");
+            this.putQueryParameter("ExtendedConfig", extendedConfigShrink);
+            this.extendedConfig = extendedConfig;
+            return this;
+        }
+
+        /**
+         * The name of the secret.
+         */
+        public Builder rotationInterval(String rotationInterval) {
+            this.putQueryParameter("RotationInterval", rotationInterval);
+            this.rotationInterval = rotationInterval;
+            return this;
+        }
+
+        /**
+         * The tags of the secret.
+         */
+        public Builder secretData(String secretData) {
+            this.putQueryParameter("SecretData", secretData);
+            this.secretData = secretData;
             return this;
         }
 
@@ -295,26 +325,9 @@ public class CreateSecretRequest extends Request {
          * 
          * >  This parameter is required if you set the SecretType parameter to Rds, RAMCredentials, or ECS.
          */
-        public Builder extendedConfig(java.util.Map < String, ? > extendedConfig) {
-            String extendedConfigShrink = shrink(extendedConfig, "ExtendedConfig", "json");
-            this.putQueryParameter("ExtendedConfig", extendedConfigShrink);
-            this.extendedConfig = extendedConfig;
-            return this;
-        }
-
-        /**
-         * The interval for automatic rotation. Valid values: 6 hours to 8,760 hours (365 days).
-         * <p>
-         * 
-         * The value is in the `integer[unit]` format.
-         * 
-         * The unit can be d (day), h (hour), m (minute), or s (second). For example, both 7d and 604800s indicate a seven-day interval.
-         * 
-         * >  This parameter is required if you set the EnableAutomaticRotation parameter to true. This parameter is ignored if you set the EnableAutomaticRotation parameter to false or if the EnableAutomaticRotation parameter is not configured.
-         */
-        public Builder rotationInterval(String rotationInterval) {
-            this.putQueryParameter("RotationInterval", rotationInterval);
-            this.rotationInterval = rotationInterval;
+        public Builder secretDataType(String secretDataType) {
+            this.putQueryParameter("SecretDataType", secretDataType);
+            this.secretDataType = secretDataType;
             return this;
         }
 
@@ -333,9 +346,34 @@ public class CreateSecretRequest extends Request {
          *     *   `{"UserName":"","Password": ""}`: In the format, `UserName` specifies the username that is used to log on to the ECS instance, and `Password` specifies the password that is used to log on to the ECS instance.
          *     *   `{"UserName":"","PublicKey": "", "PrivateKey": ""}`: In the format, `PublicKey` indicates the SSH public key that is used to log on to the ECS instance, and `PrivateKey` specifies the SSH private key that is used to log on to the ECS instance.
          */
-        public Builder secretData(String secretData) {
-            this.putQueryParameter("SecretData", secretData);
-            this.secretData = secretData;
+        public Builder secretName(String secretName) {
+            this.putQueryParameter("SecretName", secretName);
+            this.secretName = secretName;
+            return this;
+        }
+
+        /**
+         * The ID of the dedicated KMS instance.
+         */
+        public Builder secretType(String secretType) {
+            this.putQueryParameter("SecretType", secretType);
+            this.secretType = secretType;
+            return this;
+        }
+
+        /**
+         * The interval for automatic rotation. Valid values: 6 hours to 8,760 hours (365 days).
+         * <p>
+         * 
+         * The value is in the `integer[unit]` format.
+         * 
+         * The unit can be d (day), h (hour), m (minute), or s (second). For example, both 7d and 604800s indicate a seven-day interval.
+         * 
+         * >  This parameter is required if you set the EnableAutomaticRotation parameter to true. This parameter is ignored if you set the EnableAutomaticRotation parameter to false or if the EnableAutomaticRotation parameter is not configured.
+         */
+        public Builder tags(String tags) {
+            this.putQueryParameter("Tags", tags);
+            this.tags = tags;
             return this;
         }
 
@@ -347,55 +385,6 @@ public class CreateSecretRequest extends Request {
          * *   binary
          * 
          * >  If you set the SecretType parameter to Rds, RAMCredentials, or ECS, the SecretDataType parameter must be set to text.
-         */
-        public Builder secretDataType(String secretDataType) {
-            this.putQueryParameter("SecretDataType", secretDataType);
-            this.secretDataType = secretDataType;
-            return this;
-        }
-
-        /**
-         * The name of the secret.
-         * <p>
-         * 
-         * The value must be 1 to 64 characters in length and can contain letters, digits, underscores (\_), forward slashes (/), plus signs (+), equal signs (=), periods (.), hyphens (-), and at signs (@). The following list describes the name requirements for different types of secrets:
-         * 
-         * *   If the SecretType parameter is set to Generic or Rds, the name cannot start with `acs/`.
-         * *   If the SecretType parameter is set to RAMCredentials, set the SecretName parameter to `$Auto`. In this case, KMS automatically generates a secret name that starts with `acs/ram/user/`. The name includes the display name of RAM user.
-         * *   If the SecretType parameter is set to ECS, the name must start with `acs/ecs/`.
-         */
-        public Builder secretName(String secretName) {
-            this.putQueryParameter("SecretName", secretName);
-            this.secretName = secretName;
-            return this;
-        }
-
-        /**
-         * The type of the secret. Valid values:
-         * <p>
-         * 
-         * *   Generic: specifies a generic secret.
-         * *   Rds: specifies a managed ApsaraDB RDS secret.
-         * *   RAMCredentials: specifies a managed RAM secret.
-         * *   ECS: specifies a managed ECS secret.
-         */
-        public Builder secretType(String secretType) {
-            this.putQueryParameter("SecretType", secretType);
-            this.secretType = secretType;
-            return this;
-        }
-
-        /**
-         * The tags of the secret.
-         */
-        public Builder tags(String tags) {
-            this.putQueryParameter("Tags", tags);
-            this.tags = tags;
-            return this;
-        }
-
-        /**
-         * The initial version number. Version numbers are unique in each secret.
          */
         public Builder versionId(String versionId) {
             this.putQueryParameter("VersionId", versionId);

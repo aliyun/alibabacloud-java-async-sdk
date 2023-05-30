@@ -100,7 +100,7 @@ public class ImportKeyMaterialRequest extends Request {
         } 
 
         /**
-         * Use** GetParametersForImport** the Returned public key and the base64-encoded key material.
+         * Use **GetParametersForImport** the Returned public key and the base64-encoded key material.
          */
         public Builder encryptedKeyMaterial(String encryptedKeyMaterial) {
             this.putQueryParameter("EncryptedKeyMaterial", encryptedKeyMaterial);
@@ -109,7 +109,7 @@ public class ImportKeyMaterialRequest extends Request {
         }
 
         /**
-         * By calling** GetParametersForImport** the import token.
+         * By calling **GetParametersForImport** the import token.
          */
         public Builder importToken(String importToken) {
             this.putQueryParameter("ImportToken", importToken);

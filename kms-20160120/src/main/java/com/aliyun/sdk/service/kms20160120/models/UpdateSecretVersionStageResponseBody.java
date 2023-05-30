@@ -50,7 +50,7 @@ public class UpdateSecretVersionStageResponseBody extends TeaModel {
         private String secretName; 
 
         /**
-         * The ID of the request, which is used to locate and troubleshoot issues.
+         * The name of the secret.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -58,7 +58,11 @@ public class UpdateSecretVersionStageResponseBody extends TeaModel {
         }
 
         /**
-         * The name of the secret.
+         * The version to which you want to apply the specified stage label.
+         * <p>
+         * 
+         * > * You must specify at least one of the RemoveFromVersion and MoveToVersion parameters.
+         * > * If the VersionStage parameter is set to ACSCurrent or ACSPrevious, this parameter is required.
          */
         public Builder secretName(String secretName) {
             this.secretName = secretName;

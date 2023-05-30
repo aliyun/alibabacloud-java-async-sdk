@@ -97,15 +97,25 @@ public class ListSecretsRequest extends Request {
         } 
 
         /**
-         * Specifies whether to return the resource tags of the secret. Valid values:
+         * The number of entries to return on each page.
          * <p>
          * 
-         * *   true: returns the resource tags.
-         * *   false: does not return the resource tags. This is the default value.
+         * Valid values: 1 to 100.
+         * 
+         * Default value: 10.
          */
         public Builder fetchTags(String fetchTags) {
             this.putQueryParameter("FetchTags", fetchTags);
             this.fetchTags = fetchTags;
+            return this;
+        }
+
+        /**
+         * The number of entries returned per page.
+         */
+        public Builder filters(String filters) {
+            this.putQueryParameter("Filters", filters);
+            this.filters = filters;
             return this;
         }
 
@@ -143,20 +153,6 @@ public class ListSecretsRequest extends Request {
          * 
          * The logical relationship between values of the Values field in a key-value pair is OR. Example: `[ {"Key":"SecretName", "Values":["sec1","sec2"]}]`. In this example, the semantics are `SecretName=sec 1 OR SecretName=sec 2`.
          */
-        public Builder filters(String filters) {
-            this.putQueryParameter("Filters", filters);
-            this.filters = filters;
-            return this;
-        }
-
-        /**
-         * The number of the page to return.
-         * <p>
-         * 
-         * Pages start from page 1.
-         * 
-         * Default value: 1.
-         */
         public Builder pageNumber(Integer pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
             this.pageNumber = pageNumber;
@@ -164,12 +160,7 @@ public class ListSecretsRequest extends Request {
         }
 
         /**
-         * The number of entries to return on each page.
-         * <p>
-         * 
-         * Valid values: 1 to 100.
-         * 
-         * Default value: 10.
+         * The page number of the returned page.
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);

@@ -97,10 +97,7 @@ public class UntagResourceRequest extends Request {
         } 
 
         /**
-         * The ID of the certificate.
-         * <p>
-         * 
-         * >  You can configure only one of the KeyId, SecretName, and CertificateId parameters.
+         * CertificateId.
          */
         public Builder certificateId(String certificateId) {
             this.putQueryParameter("CertificateId", certificateId);
@@ -109,10 +106,7 @@ public class UntagResourceRequest extends Request {
         }
 
         /**
-         * The ID of the customer master key (CMK). The ID must be globally unique.
-         * <p>
-         * 
-         * >  You can configure only one of the KeyId, SecretName, and CertificateId parameters.
+         * The ID of the request, which is used to locate and troubleshoot issues.
          */
         public Builder keyId(String keyId) {
             this.putQueryParameter("KeyId", keyId);
@@ -121,10 +115,7 @@ public class UntagResourceRequest extends Request {
         }
 
         /**
-         * The name of the secret.
-         * <p>
-         * 
-         * >  You can configure only one of the KeyId, SecretName, and CertificateId parameters.
+         * SecretName.
          */
         public Builder secretName(String secretName) {
             this.putQueryParameter("SecretName", secretName);
@@ -133,12 +124,7 @@ public class UntagResourceRequest extends Request {
         }
 
         /**
-         * One or more tag keys. Separate multiple tag keys with commas (,).
-         * <p>
-         * 
-         * You need to specify only the tag keys, not the tag values.
-         * 
-         * Each tag key must be 1 to 128 bytes in length.
+         * TagKeys.
          */
         public Builder tagKeys(String tagKeys) {
             this.putQueryParameter("TagKeys", tagKeys);

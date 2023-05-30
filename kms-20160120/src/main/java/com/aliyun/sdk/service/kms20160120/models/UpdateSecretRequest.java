@@ -146,9 +146,8 @@ public class UpdateSecretRequest extends Request {
              * The custom data in the extended configuration of the secret.
              * <p>
              * 
-             * > 
-             * *   If this parameter is specified, the existing extended configuration of the secret is updated.
-             * *   This parameter is unavailable for generic secrets.
+             * > *   If this parameter is specified, the existing extended configuration of the secret is updated.
+             * > *   This parameter is unavailable for generic secrets.
              */
             public Builder customData(java.util.Map < String, ? > customData) {
                 this.customData = customData;

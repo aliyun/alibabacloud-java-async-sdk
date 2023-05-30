@@ -86,7 +86,7 @@ public class ListSecretsResponseBody extends TeaModel {
         private Integer totalCount; 
 
         /**
-         * The page number of the returned page.
+         * The ID of the request, which is used to locate and troubleshoot issues.
          */
         public Builder pageNumber(Integer pageNumber) {
             this.pageNumber = pageNumber;
@@ -94,7 +94,7 @@ public class ListSecretsResponseBody extends TeaModel {
         }
 
         /**
-         * The number of entries returned per page.
+         * The number of returned secrets.
          */
         public Builder pageSize(Integer pageSize) {
             this.pageSize = pageSize;
@@ -102,7 +102,7 @@ public class ListSecretsResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request, which is used to locate and troubleshoot issues.
+         * The list of secrets.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -110,7 +110,7 @@ public class ListSecretsResponseBody extends TeaModel {
         }
 
         /**
-         * The list of secrets.
+         * The time when the secret was updated.
          */
         public Builder secretList(SecretList secretList) {
             this.secretList = secretList;
@@ -118,7 +118,7 @@ public class ListSecretsResponseBody extends TeaModel {
         }
 
         /**
-         * The number of returned secrets.
+         * The secret name.
          */
         public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;
@@ -170,7 +170,7 @@ public class ListSecretsResponseBody extends TeaModel {
             private String tagValue; 
 
             /**
-             * The tag key.
+             * TagKey.
              */
             public Builder tagKey(String tagKey) {
                 this.tagKey = tagKey;
@@ -178,7 +178,7 @@ public class ListSecretsResponseBody extends TeaModel {
             }
 
             /**
-             * The tag value.
+             * TagValue.
              */
             public Builder tagValue(String tagValue) {
                 this.tagValue = tagValue;
@@ -320,7 +320,7 @@ public class ListSecretsResponseBody extends TeaModel {
             private String updateTime; 
 
             /**
-             * The time when the secret was created.
+             * The tag value.
              */
             public Builder createTime(String createTime) {
                 this.createTime = createTime;
@@ -328,18 +328,13 @@ public class ListSecretsResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the secret is scheduled to be deleted.
+             * The resource tags of the secret.
+             * <p>
+             * 
+             * This parameter is not returned if you set the FetchTags parameter to false or do not specify the FetchTags parameter.
              */
             public Builder plannedDeleteTime(String plannedDeleteTime) {
                 this.plannedDeleteTime = plannedDeleteTime;
-                return this;
-            }
-
-            /**
-             * The secret name.
-             */
-            public Builder secretName(String secretName) {
-                this.secretName = secretName;
                 return this;
             }
 
@@ -350,16 +345,21 @@ public class ListSecretsResponseBody extends TeaModel {
              * *   Generic: indicates a generic secret.
              * *   Rds: indicates a managed ApsaraDB RDS secret.
              */
+            public Builder secretName(String secretName) {
+                this.secretName = secretName;
+                return this;
+            }
+
+            /**
+             * The time when the secret was created.
+             */
             public Builder secretType(String secretType) {
                 this.secretType = secretType;
                 return this;
             }
 
             /**
-             * The resource tags of the secret.
-             * <p>
-             * 
-             * This parameter is not returned if you set the FetchTags parameter to false or do not specify the FetchTags parameter.
+             * The tag key.
              */
             public Builder tags(Tags tags) {
                 this.tags = tags;
@@ -367,7 +367,7 @@ public class ListSecretsResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the secret was updated.
+             * The time when the secret is scheduled to be deleted.
              */
             public Builder updateTime(String updateTime) {
                 this.updateTime = updateTime;

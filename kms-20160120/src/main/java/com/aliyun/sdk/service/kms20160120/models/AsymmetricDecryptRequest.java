@@ -112,9 +112,8 @@ public class AsymmetricDecryptRequest extends Request {
          * The ciphertext that you want to decrypt.
          * <p>
          * 
-         * > 
-         * *   The value is encoded in Base64.
-         * *   You can call the [AsymmetricEncrypt](~~148131~~) operation to generate the ciphertext.
+         * > * The value is encoded in Base64.
+         * > * You can call the [AsymmetricEncrypt](~~148131~~) operation to generate the ciphertext.
          */
         public Builder ciphertextBlob(String ciphertextBlob) {
             this.putQueryParameter("CiphertextBlob", ciphertextBlob);

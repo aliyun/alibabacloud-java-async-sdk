@@ -146,84 +146,10 @@ public class CreateSecretResponseBody extends TeaModel {
         private String versionId; 
 
         /**
-         * The Alibaba Cloud Resource Name (ARN) of the secret.
+         * Arn.
          */
         public Builder arn(String arn) {
             this.arn = arn;
-            return this;
-        }
-
-        /**
-         * Indicates whether automatic rotation is enabled. Valid values:
-         * <p>
-         * 
-         * *   Enabled: indicates that automatic rotation is enabled.
-         * *   Disabled: indicates that automatic rotation is disabled.
-         * *   Invalid: indicates that the status of automatic rotation is abnormal. In this case, Secrets Manager cannot automatically rotate the secret.
-         * 
-         * >  This parameter is returned if you set the SecretType parameter to Rds, RAMCredentials, or ECS.
-         */
-        public Builder automaticRotation(String automaticRotation) {
-            this.automaticRotation = automaticRotation;
-            return this;
-        }
-
-        /**
-         * The ID of the dedicated KMS instance.
-         */
-        public Builder DKMSInstanceId(String DKMSInstanceId) {
-            this.DKMSInstanceId = DKMSInstanceId;
-            return this;
-        }
-
-        /**
-         * The extended configuration of the secret.
-         * <p>
-         * 
-         * >  This parameter is returned if you set the SecretType parameter to Rds, RAMCredentials, or ECS.
-         */
-        public Builder extendedConfig(String extendedConfig) {
-            this.extendedConfig = extendedConfig;
-            return this;
-        }
-
-        /**
-         * The time when the next rotation will be performed.
-         * <p>
-         * 
-         * >  This parameter is returned if automatic rotation is enabled.
-         */
-        public Builder nextRotationDate(String nextRotationDate) {
-            this.nextRotationDate = nextRotationDate;
-            return this;
-        }
-
-        /**
-         * The ID of the request, which is used to locate and troubleshoot issues.
-         */
-        public Builder requestId(String requestId) {
-            this.requestId = requestId;
-            return this;
-        }
-
-        /**
-         * The interval for automatic rotation.
-         * <p>
-         * 
-         * The value is in the `integer[unit]` format. The value of the `unit` field is fixed as s. For example, if the value is 604800s, automatic rotation is performed at a 7-day interval.
-         * 
-         * >  This parameter is returned if automatic rotation is enabled.
-         */
-        public Builder rotationInterval(String rotationInterval) {
-            this.rotationInterval = rotationInterval;
-            return this;
-        }
-
-        /**
-         * The name of the secret.
-         */
-        public Builder secretName(String secretName) {
-            this.secretName = secretName;
             return this;
         }
 
@@ -236,13 +162,80 @@ public class CreateSecretResponseBody extends TeaModel {
          * *   RAMCredentials: indicates a managed RAM secret.
          * *   ECS: indicates a managed ECS secret.
          */
+        public Builder automaticRotation(String automaticRotation) {
+            this.automaticRotation = automaticRotation;
+            return this;
+        }
+
+        /**
+         * DKMSInstanceId.
+         */
+        public Builder DKMSInstanceId(String DKMSInstanceId) {
+            this.DKMSInstanceId = DKMSInstanceId;
+            return this;
+        }
+
+        /**
+         * ExtendedConfig.
+         */
+        public Builder extendedConfig(String extendedConfig) {
+            this.extendedConfig = extendedConfig;
+            return this;
+        }
+
+        /**
+         * The extended configuration of the secret.
+         * <p>
+         * 
+         * >  This parameter is returned if you set the SecretType parameter to Rds, RAMCredentials, or ECS.
+         */
+        public Builder nextRotationDate(String nextRotationDate) {
+            this.nextRotationDate = nextRotationDate;
+            return this;
+        }
+
+        /**
+         * The time when the next rotation will be performed.
+         * <p>
+         * 
+         * >  This parameter is returned if automatic rotation is enabled.
+         */
+        public Builder requestId(String requestId) {
+            this.requestId = requestId;
+            return this;
+        }
+
+        /**
+         * RotationInterval.
+         */
+        public Builder rotationInterval(String rotationInterval) {
+            this.rotationInterval = rotationInterval;
+            return this;
+        }
+
+        /**
+         * The interval for automatic rotation.
+         * <p>
+         * 
+         * The value is in the `integer[unit]` format. The value of the `unit` field is fixed as s. For example, if the value is 604800s, automatic rotation is performed at a 7-day interval.
+         * 
+         * >  This parameter is returned if automatic rotation is enabled.
+         */
+        public Builder secretName(String secretName) {
+            this.secretName = secretName;
+            return this;
+        }
+
+        /**
+         * The ID of the dedicated KMS instance.
+         */
         public Builder secretType(String secretType) {
             this.secretType = secretType;
             return this;
         }
 
         /**
-         * The version number of the secret.
+         * The Alibaba Cloud Resource Name (ARN) of the secret.
          */
         public Builder versionId(String versionId) {
             this.versionId = versionId;

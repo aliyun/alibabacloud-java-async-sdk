@@ -44,6 +44,10 @@ public class CreateKeyRequest extends Request {
     @NameInMap("RotationInterval")
     private String rotationInterval;
 
+    @Query
+    @NameInMap("Tags")
+    private String tags;
+
     private CreateKeyRequest(Builder builder) {
         super(builder);
         this.DKMSInstanceId = builder.DKMSInstanceId;
@@ -54,6 +58,7 @@ public class CreateKeyRequest extends Request {
         this.origin = builder.origin;
         this.protectionLevel = builder.protectionLevel;
         this.rotationInterval = builder.rotationInterval;
+        this.tags = builder.tags;
     }
 
     public static Builder builder() {
@@ -125,6 +130,13 @@ public class CreateKeyRequest extends Request {
         return this.rotationInterval;
     }
 
+    /**
+     * @return tags
+     */
+    public String getTags() {
+        return this.tags;
+    }
+
     public static final class Builder extends Request.Builder<CreateKeyRequest, Builder> {
         private String DKMSInstanceId; 
         private String description; 
@@ -134,6 +146,7 @@ public class CreateKeyRequest extends Request {
         private String origin; 
         private String protectionLevel; 
         private String rotationInterval; 
+        private String tags; 
 
         private Builder() {
             super();
@@ -149,45 +162,8 @@ public class CreateKeyRequest extends Request {
             this.origin = request.origin;
             this.protectionLevel = request.protectionLevel;
             this.rotationInterval = request.rotationInterval;
+            this.tags = request.tags;
         } 
-
-        /**
-         * The ID of the dedicated KMS instance.
-         */
-        public Builder DKMSInstanceId(String DKMSInstanceId) {
-            this.putQueryParameter("DKMSInstanceId", DKMSInstanceId);
-            this.DKMSInstanceId = DKMSInstanceId;
-            return this;
-        }
-
-        /**
-         * The description of the CMK.
-         * <p>
-         * 
-         * The description can be 0 to 8,192 characters in length.
-         */
-        public Builder description(String description) {
-            this.putQueryParameter("Description", description);
-            this.description = description;
-            return this;
-        }
-
-        /**
-         * Specifies whether to enable automatic key rotation. Valid values:
-         * <p>
-         * 
-         * *   true
-         * *   false
-         * 
-         * Default value: false.
-         * 
-         * >  If the Origin parameter is set to EXTERNAL or the KeySpec parameter is set to an asymmetric CMK type, automatic key rotation is not supported.
-         */
-        public Builder enableAutomaticRotation(Boolean enableAutomaticRotation) {
-            this.putQueryParameter("EnableAutomaticRotation", enableAutomaticRotation);
-            this.enableAutomaticRotation = enableAutomaticRotation;
-            return this;
-        }
 
         /**
          * The type of the CMK. Valid values:
@@ -203,46 +179,21 @@ public class CreateKeyRequest extends Request {
          * *   EC_P256K
          * *   EC_SM2
          * 
-         * > 
-         * *   The default type of the CMK is Aliyun_AES\_256.
-         * *   Only Dedicated KMS supports Aliyun_AES\_128 and Aliyun_AES\_192.
+         * > * The default type of the CMK is Aliyun\_AES\_256.
+         * > * Only Dedicated KMS supports Aliyun\_AES\_128 and Aliyun\_AES\_192.
          */
-        public Builder keySpec(String keySpec) {
-            this.putQueryParameter("KeySpec", keySpec);
-            this.keySpec = keySpec;
+        public Builder DKMSInstanceId(String DKMSInstanceId) {
+            this.putQueryParameter("DKMSInstanceId", DKMSInstanceId);
+            this.DKMSInstanceId = DKMSInstanceId;
             return this;
         }
 
         /**
-         * The usage of the CMK. Valid values:
-         * <p>
-         * 
-         * *   ENCRYPT/DECRYPT: encrypts or decrypts data.
-         * *   SIGN/VERIFY: generates or verifies a digital signature.
-         * 
-         * If the CMK supports signature verification, the default value is SIGN/VERIFY. If the CMK does not support signature verification, the default value is ENCRYPT/DECRYPT.
+         * The operation that you want to perform. Set the value to **CreateKey**.
          */
-        public Builder keyUsage(String keyUsage) {
-            this.putQueryParameter("KeyUsage", keyUsage);
-            this.keyUsage = keyUsage;
-            return this;
-        }
-
-        /**
-         * The source of key material. Valid values:
-         * <p>
-         * 
-         * *   Aliyun_KMS (default value)
-         * *   EXTERNAL
-         * 
-         * > 
-         * *   The value of this parameter is case-sensitive.
-         * *   If you set the KeySpec parameter to an asymmetric CMK type, you are not allowed to set the Origin parameter to EXTERNAL.
-         * *   If you set the Origin parameter to EXTERNAL, you must import key material. For more information, see [Import key material](~~68523~~).
-         */
-        public Builder origin(String origin) {
-            this.putQueryParameter("Origin", origin);
-            this.origin = origin;
+        public Builder description(String description) {
+            this.putQueryParameter("Description", description);
+            this.description = description;
             return this;
         }
 
@@ -255,13 +206,12 @@ public class CreateKeyRequest extends Request {
          * 
          * Default value: SOFTWARE.
          * 
-         * > 
-         * *   The value of this parameter is case-sensitive.
-         * *   Assume that you set this parameter to HSM. If you set the Origin parameter to Aliyun_KMS, the CMK is created in a managed HSM. If you set the Origin parameter to EXTERNAL, you can import an external key into the managed HSM.
+         * > * The value of this parameter is case-sensitive.
+         * > * Assume that you set this parameter to HSM. If you set the Origin parameter to Aliyun_KMS, the CMK is created in a managed HSM. If you set the Origin parameter to EXTERNAL, you can import an external key into the managed HSM.
          */
-        public Builder protectionLevel(String protectionLevel) {
-            this.putQueryParameter("ProtectionLevel", protectionLevel);
-            this.protectionLevel = protectionLevel;
+        public Builder enableAutomaticRotation(Boolean enableAutomaticRotation) {
+            this.putQueryParameter("EnableAutomaticRotation", enableAutomaticRotation);
+            this.enableAutomaticRotation = enableAutomaticRotation;
             return this;
         }
 
@@ -271,9 +221,79 @@ public class CreateKeyRequest extends Request {
          * 
          * >  If you set the EnableAutomaticRotation parameter to true, you must also specify this parameter. If you set the EnableAutomaticRotation parameter to false, you can leave this parameter unspecified.
          */
+        public Builder keySpec(String keySpec) {
+            this.putQueryParameter("KeySpec", keySpec);
+            this.keySpec = keySpec;
+            return this;
+        }
+
+        /**
+         * The description of the CMK.
+         * <p>
+         * 
+         * The description can be 0 to 8,192 characters in length.
+         */
+        public Builder keyUsage(String keyUsage) {
+            this.putQueryParameter("KeyUsage", keyUsage);
+            this.keyUsage = keyUsage;
+            return this;
+        }
+
+        /**
+         * The usage of the CMK. Valid values:
+         * <p>
+         * 
+         * *   ENCRYPT/DECRYPT: encrypts or decrypts data.
+         * *   SIGN/VERIFY: generates or verifies a digital signature.
+         * 
+         * If the CMK supports signature verification, the default value is SIGN/VERIFY. If the CMK does not support signature verification, the default value is ENCRYPT/DECRYPT.
+         */
+        public Builder origin(String origin) {
+            this.putQueryParameter("Origin", origin);
+            this.origin = origin;
+            return this;
+        }
+
+        /**
+         * The source of key material. Valid values:
+         * <p>
+         * 
+         * *   Aliyun_KMS (default value)
+         * *   EXTERNAL
+         * 
+         * > * The value of this parameter is case-sensitive.
+         * > * If you set the KeySpec parameter to an asymmetric CMK type, you are not allowed to set the Origin parameter to EXTERNAL.
+         * > * If you set the Origin parameter to EXTERNAL, you must import key material. For more information, see [Import key material](~~68523~~).
+         */
+        public Builder protectionLevel(String protectionLevel) {
+            this.putQueryParameter("ProtectionLevel", protectionLevel);
+            this.protectionLevel = protectionLevel;
+            return this;
+        }
+
+        /**
+         * Specifies whether to enable automatic key rotation. Valid values:
+         * <p>
+         * 
+         * *   true
+         * *   false
+         * 
+         * Default value: false.
+         * 
+         * >  If the Origin parameter is set to EXTERNAL or the KeySpec parameter is set to an asymmetric CMK type, automatic key rotation is not supported.
+         */
         public Builder rotationInterval(String rotationInterval) {
             this.putQueryParameter("RotationInterval", rotationInterval);
             this.rotationInterval = rotationInterval;
+            return this;
+        }
+
+        /**
+         * Tags.
+         */
+        public Builder tags(String tags) {
+            this.putQueryParameter("Tags", tags);
+            this.tags = tags;
             return this;
         }
 

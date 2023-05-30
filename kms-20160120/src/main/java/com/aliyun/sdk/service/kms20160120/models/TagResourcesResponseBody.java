@@ -7,15 +7,15 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
- * {@link UntagResourceResponseBody} extends {@link TeaModel}
+ * {@link TagResourcesResponseBody} extends {@link TeaModel}
  *
- * <p>UntagResourceResponseBody</p>
+ * <p>TagResourcesResponseBody</p>
  */
-public class UntagResourceResponseBody extends TeaModel {
+public class TagResourcesResponseBody extends TeaModel {
     @NameInMap("RequestId")
     private String requestId;
 
-    private UntagResourceResponseBody(Builder builder) {
+    private TagResourcesResponseBody(Builder builder) {
         this.requestId = builder.requestId;
     }
 
@@ -23,7 +23,7 @@ public class UntagResourceResponseBody extends TeaModel {
         return new Builder();
     }
 
-    public static UntagResourceResponseBody create() {
+    public static TagResourcesResponseBody create() {
         return builder().build();
     }
 
@@ -38,15 +38,15 @@ public class UntagResourceResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * RequestId.
+         * Id of the request
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
             return this;
         }
 
-        public UntagResourceResponseBody build() {
-            return new UntagResourceResponseBody(this);
+        public TagResourcesResponseBody build() {
+            return new TagResourcesResponseBody(this);
         } 
 
     } 

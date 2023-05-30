@@ -86,7 +86,7 @@ public class ListKeysResponseBody extends TeaModel {
         private Integer totalCount; 
 
         /**
-         * An array that consists of the CMKs of the current Alibaba Cloud account in the current region.
+         * Keys.
          */
         public Builder keys(Keys keys) {
             this.keys = keys;
@@ -94,7 +94,7 @@ public class ListKeysResponseBody extends TeaModel {
         }
 
         /**
-         * The page number of the returned page.
+         * The total number of CMKs.
          */
         public Builder pageNumber(Integer pageNumber) {
             this.pageNumber = pageNumber;
@@ -102,7 +102,7 @@ public class ListKeysResponseBody extends TeaModel {
         }
 
         /**
-         * The number of entries returned per page.
+         * An array that consists of the CMKs of the current Alibaba Cloud account in the current region.
          */
         public Builder pageSize(Integer pageSize) {
             this.pageSize = pageSize;
@@ -110,7 +110,7 @@ public class ListKeysResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request, which is used to locate and troubleshoot issues.
+         * The ID of the CMK. The ID must be globally unique.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -118,7 +118,7 @@ public class ListKeysResponseBody extends TeaModel {
         }
 
         /**
-         * The total number of CMKs.
+         * The Alibaba Cloud Resource Name (ARN) of the CMK.
          */
         public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;
@@ -170,7 +170,7 @@ public class ListKeysResponseBody extends TeaModel {
             private String keyId; 
 
             /**
-             * The Alibaba Cloud Resource Name (ARN) of the CMK.
+             * KeyArn.
              */
             public Builder keyArn(String keyArn) {
                 this.keyArn = keyArn;
@@ -178,7 +178,7 @@ public class ListKeysResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the CMK. The ID must be globally unique.
+             * KeyId.
              */
             public Builder keyId(String keyId) {
                 this.keyId = keyId;
