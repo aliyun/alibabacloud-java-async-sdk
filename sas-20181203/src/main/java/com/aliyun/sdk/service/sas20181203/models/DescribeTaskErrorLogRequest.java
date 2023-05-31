@@ -55,7 +55,10 @@ public class DescribeTaskErrorLogRequest extends Request {
         } 
 
         /**
-         * BuildTaskId.
+         * The ID of the task.
+         * <p>
+         * 
+         * >  You can call the DescribeImageFixTask operation to query the IDs of tasks.
          */
         public Builder buildTaskId(String buildTaskId) {
             this.putQueryParameter("BuildTaskId", buildTaskId);

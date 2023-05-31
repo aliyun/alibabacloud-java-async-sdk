@@ -62,7 +62,7 @@ public class DescribePropertySoftwareItemResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * 10
+         * The pagination information.
          */
         public Builder pageInfo(PageInfo pageInfo) {
             this.pageInfo = pageInfo;
@@ -70,7 +70,7 @@ public class DescribePropertySoftwareItemResponseBody extends TeaModel {
         }
 
         /**
-         * DescribePropertySoftwareItem
+         * An array that consists of the software assets returned.
          */
         public Builder propertyItems(java.util.List < PropertyItems> propertyItems) {
             this.propertyItems = propertyItems;
@@ -78,7 +78,7 @@ public class DescribePropertySoftwareItemResponseBody extends TeaModel {
         }
 
         /**
-         * The name of the software.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -154,7 +154,7 @@ public class DescribePropertySoftwareItemResponseBody extends TeaModel {
             private Integer totalCount; 
 
             /**
-             * Queries information about all software assets.
+             * The number of entries returned on the current page.
              */
             public Builder count(Integer count) {
                 this.count = count;
@@ -162,7 +162,7 @@ public class DescribePropertySoftwareItemResponseBody extends TeaModel {
             }
 
             /**
-             * The number of entries returned per page.
+             * The page number of the returned page.
              */
             public Builder currentPage(Integer currentPage) {
                 this.currentPage = currentPage;
@@ -170,7 +170,7 @@ public class DescribePropertySoftwareItemResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the request.
+             * The number of entries returned per page.
              */
             public Builder pageSize(Integer pageSize) {
                 this.pageSize = pageSize;
@@ -178,7 +178,7 @@ public class DescribePropertySoftwareItemResponseBody extends TeaModel {
             }
 
             /**
-             * true
+             * The total number of entries returned.
              */
             public Builder totalCount(Integer totalCount) {
                 this.totalCount = totalCount;
@@ -231,7 +231,7 @@ public class DescribePropertySoftwareItemResponseBody extends TeaModel {
             private String name; 
 
             /**
-             * Queries information about all software assets.
+             * The number of servers on which the software is installed.
              */
             public Builder count(Integer count) {
                 this.count = count;
@@ -239,7 +239,7 @@ public class DescribePropertySoftwareItemResponseBody extends TeaModel {
             }
 
             /**
-             * Name.
+             * The name of the software.
              */
             public Builder name(String name) {
                 this.name = name;

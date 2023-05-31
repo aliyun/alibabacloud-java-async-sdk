@@ -110,7 +110,7 @@ public class DescribeDomainListRequest extends Request {
         } 
 
         /**
-         * Queries the information about the domain assets within your Alibaba Cloud account.
+         * The number of the page to return. Default value: **1**.
          */
         public Builder currentPage(Integer currentPage) {
             this.putQueryParameter("CurrentPage", currentPage);
@@ -119,7 +119,11 @@ public class DescribeDomainListRequest extends Request {
         }
 
         /**
-         * The number of entries returned per page. Default value: **10**.
+         * The type of the domain name that you want to query. Valid values:
+         * <p>
+         * 
+         * *   **root**: root domain name
+         * *   **sub**: subdomain name
          */
         public Builder domainType(String domainType) {
             this.putQueryParameter("DomainType", domainType);
@@ -128,7 +132,7 @@ public class DescribeDomainListRequest extends Request {
         }
 
         /**
-         * The name of the domain or website.
+         * The keyword that is used to query domain names. Fuzzy match is supported.
          */
         public Builder fuzzyDomain(String fuzzyDomain) {
             this.putQueryParameter("FuzzyDomain", fuzzyDomain);
@@ -137,7 +141,7 @@ public class DescribeDomainListRequest extends Request {
         }
 
         /**
-         * The ID of the request, which is used to locate and troubleshoot issues.
+         * The number of entries to return on each page. Default value: **10**.
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -146,7 +150,7 @@ public class DescribeDomainListRequest extends Request {
         }
 
         /**
-         * The number of entries to return on each page. Default value: **10**.
+         * The source IP address of the request.
          */
         public Builder sourceIp(String sourceIp) {
             this.putQueryParameter("SourceIp", sourceIp);

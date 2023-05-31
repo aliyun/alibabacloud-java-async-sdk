@@ -322,11 +322,10 @@ public class DescribeAffectedMaliciousFileImagesRequest extends Request {
         } 
 
         /**
-         * The language of the content within the request and the response. Valid values:
+         * The ID of the container cluster.
          * <p>
          * 
-         * *   **zh**: Chinese
-         * *   **en**: English
+         * >  You can call the [DescribeGroupedContainerInstances](~~DescribeGroupedContainerInstances~~) operation to query the IDs of container clusters.
          */
         public Builder clusterId(String clusterId) {
             this.putQueryParameter("ClusterId", clusterId);
@@ -344,7 +343,7 @@ public class DescribeAffectedMaliciousFileImagesRequest extends Request {
         }
 
         /**
-         * The total number of images that have malicious image samples.
+         * The ID of the container.
          */
         public Builder containerId(String containerId) {
             this.putQueryParameter("ContainerId", containerId);
@@ -362,7 +361,7 @@ public class DescribeAffectedMaliciousFileImagesRequest extends Request {
         }
 
         /**
-         * An array consisting of the images that have malicious image samples.
+         * The name of the container image.
          */
         public Builder image(String image) {
             this.putQueryParameter("Image", image);
@@ -371,7 +370,7 @@ public class DescribeAffectedMaliciousFileImagesRequest extends Request {
         }
 
         /**
-         * The severity of the malicious image sample. Separate multiple severities with commas (,). Valid values: serious suspicious remind
+         * The image digest.
          */
         public Builder imageDigest(String imageDigest) {
             this.putQueryParameter("ImageDigest", imageDigest);
@@ -380,7 +379,7 @@ public class DescribeAffectedMaliciousFileImagesRequest extends Request {
         }
 
         /**
-         * The text that is highlighted.
+         * The image layer.
          */
         public Builder imageLayer(String imageLayer) {
             this.putQueryParameter("ImageLayer", imageLayer);
@@ -389,7 +388,7 @@ public class DescribeAffectedMaliciousFileImagesRequest extends Request {
         }
 
         /**
-         * The timestamp of the last scan.
+         * The tag that is added to the image.
          */
         public Builder imageTag(String imageTag) {
             this.putQueryParameter("ImageTag", imageTag);
@@ -398,14 +397,111 @@ public class DescribeAffectedMaliciousFileImagesRequest extends Request {
         }
 
         /**
-         * The ID of the container cluster.
+         * The language of the content within the request and the response. Valid values:
          * <p>
          * 
-         * >  You can call the [DescribeGroupedContainerInstances](~~DescribeGroupedContainerInstances~~) operation to query the IDs of container clusters.
+         * *   **zh**: Chinese
+         * *   **en**: English
          */
         public Builder lang(String lang) {
             this.putQueryParameter("Lang", lang);
             this.lang = lang;
+            return this;
+        }
+
+        /**
+         * The severity of the malicious image sample. Separate multiple severities with commas (,). Valid values: serious suspicious remind
+         */
+        public Builder levels(String levels) {
+            this.putQueryParameter("Levels", levels);
+            this.levels = levels;
+            return this;
+        }
+
+        /**
+         * The MD5 hash value of the malicious image sample.
+         * <p>
+         * 
+         * >  You can call the [DescribeGroupedMaliciousFiles](~~DescribeGroupedMaliciousFiles~~) operation to query the MD5 hash values of malicious image samples.
+         */
+        public Builder maliciousMd5(String maliciousMd5) {
+            this.putQueryParameter("MaliciousMd5", maliciousMd5);
+            this.maliciousMd5 = maliciousMd5;
+            return this;
+        }
+
+        /**
+         * The namespace.
+         */
+        public Builder namespace(String namespace) {
+            this.putQueryParameter("Namespace", namespace);
+            this.namespace = namespace;
+            return this;
+        }
+
+        /**
+         * The number of entries to return on each page. Default value: **20**.
+         */
+        public Builder pageSize(String pageSize) {
+            this.putQueryParameter("PageSize", pageSize);
+            this.pageSize = pageSize;
+            return this;
+        }
+
+        /**
+         * The pod.
+         */
+        public Builder pod(String pod) {
+            this.putQueryParameter("Pod", pod);
+            this.pod = pod;
+            return this;
+        }
+
+        /**
+         * The ID of the image repository.
+         * <p>
+         * 
+         * >  You can call the [ListRepository](~~ListRepository~~) operation to query the IDs of image repositories from the value of the **RepoId** response parameter.
+         */
+        public Builder repoId(String repoId) {
+            this.putQueryParameter("RepoId", repoId);
+            this.repoId = repoId;
+            return this;
+        }
+
+        /**
+         * The ID of the container image.
+         * <p>
+         * 
+         * >  You can call the [ListRepository](~~ListRepository~~) operation to query the IDs of container images from the value of the **InstanceId** response parameter.
+         */
+        public Builder repoInstanceId(String repoInstanceId) {
+            this.putQueryParameter("RepoInstanceId", repoInstanceId);
+            this.repoInstanceId = repoInstanceId;
+            return this;
+        }
+
+        /**
+         * The name of the image repository.
+         * <p>
+         * 
+         * >  Fuzzy match is supported.
+         */
+        public Builder repoName(String repoName) {
+            this.putQueryParameter("RepoName", repoName);
+            this.repoName = repoName;
+            return this;
+        }
+
+        /**
+         * The namespace to which the image repository belongs.
+         * <p>
+         * 
+         * >  Fuzzy match is supported.
+         */
+        public Builder repoNamespace(String repoNamespace) {
+            this.putQueryParameter("RepoNamespace", repoNamespace);
+            this.repoNamespace = repoNamespace;
             return this;
         }
 
@@ -427,91 +523,6 @@ public class DescribeAffectedMaliciousFileImagesRequest extends Request {
          * *   **eu-west-1**: UK (London)
          * *   **ap-south-1**: India (Mumbai)
          */
-        public Builder levels(String levels) {
-            this.putQueryParameter("Levels", levels);
-            this.levels = levels;
-            return this;
-        }
-
-        /**
-         * The timestamp of the first scan.
-         */
-        public Builder maliciousMd5(String maliciousMd5) {
-            this.putQueryParameter("MaliciousMd5", maliciousMd5);
-            this.maliciousMd5 = maliciousMd5;
-            return this;
-        }
-
-        /**
-         * The namespace to which the image repository belongs.
-         */
-        public Builder namespace(String namespace) {
-            this.putQueryParameter("Namespace", namespace);
-            this.namespace = namespace;
-            return this;
-        }
-
-        /**
-         * The name of the image.
-         */
-        public Builder pageSize(String pageSize) {
-            this.putQueryParameter("PageSize", pageSize);
-            this.pageSize = pageSize;
-            return this;
-        }
-
-        /**
-         * The image layer.
-         */
-        public Builder pod(String pod) {
-            this.putQueryParameter("Pod", pod);
-            this.pod = pod;
-            return this;
-        }
-
-        /**
-         * The type of the asset that you want to scan. Valid values:
-         * <p>
-         * 
-         * *   **container**
-         * *   **image**
-         */
-        public Builder repoId(String repoId) {
-            this.putQueryParameter("RepoId", repoId);
-            this.repoId = repoId;
-            return this;
-        }
-
-        /**
-         * The ID of the container.
-         */
-        public Builder repoInstanceId(String repoInstanceId) {
-            this.putQueryParameter("RepoInstanceId", repoInstanceId);
-            this.repoInstanceId = repoInstanceId;
-            return this;
-        }
-
-        /**
-         * The number of images that have malicious image samples returned on the current page.
-         */
-        public Builder repoName(String repoName) {
-            this.putQueryParameter("RepoName", repoName);
-            this.repoName = repoName;
-            return this;
-        }
-
-        /**
-         * The image digest.
-         */
-        public Builder repoNamespace(String repoNamespace) {
-            this.putQueryParameter("RepoNamespace", repoNamespace);
-            this.repoNamespace = repoNamespace;
-            return this;
-        }
-
-        /**
-         * The number of entries to return on each page. Default value: **20**.
-         */
         public Builder repoRegionId(String repoRegionId) {
             this.putQueryParameter("RepoRegionId", repoRegionId);
             this.repoRegionId = repoRegionId;
@@ -519,13 +530,7 @@ public class DescribeAffectedMaliciousFileImagesRequest extends Request {
         }
 
         /**
-         * The handling status of the malicious image sample. Valid values:
-         * <p>
-         * 
-         * *   **0**: unhandled
-         * *   **1**: handled
-         * *   **2**: verifying
-         * *   **3**: added to the whitelist
+         * The types of the assets that you want to scan.
          */
         public Builder scanRange(java.util.List < String > scanRange) {
             this.putQueryParameter("ScanRange", scanRange);

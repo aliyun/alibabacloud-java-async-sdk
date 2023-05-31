@@ -114,7 +114,7 @@ public class ModifyCustomBlockRecordRequest extends Request {
         } 
 
         /**
-         * BlockIp.
+         * The IP address that you want to specify in the policy.
          */
         public Builder blockIp(String blockIp) {
             this.putQueryParameter("BlockIp", blockIp);
@@ -123,7 +123,11 @@ public class ModifyCustomBlockRecordRequest extends Request {
         }
 
         /**
-         * Bound.
+         * The traffic direction that you want to specify in the policy. Valid values:
+         * <p>
+         * 
+         * *   **in**: inbound
+         * *   **out**: outbound
          */
         public Builder bound(String bound) {
             this.putQueryParameter("Bound", bound);
@@ -132,7 +136,7 @@ public class ModifyCustomBlockRecordRequest extends Request {
         }
 
         /**
-         * ExpireTime.
+         * The expiration time of the policy.
          */
         public Builder expireTime(Long expireTime) {
             this.putQueryParameter("ExpireTime", expireTime);
@@ -150,7 +154,7 @@ public class ModifyCustomBlockRecordRequest extends Request {
         }
 
         /**
-         * Uuids.
+         * The UUIDs of servers.
          */
         public Builder uuids(String uuids) {
             this.putQueryParameter("Uuids", uuids);

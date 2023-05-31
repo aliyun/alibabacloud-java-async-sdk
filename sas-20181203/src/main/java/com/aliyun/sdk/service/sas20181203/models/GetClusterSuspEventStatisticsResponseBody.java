@@ -50,7 +50,7 @@ public class GetClusterSuspEventStatisticsResponseBody extends TeaModel {
         private SuspStatistics suspStatistics; 
 
         /**
-         * RequestId.
+         * The ID of the request, which is used to locate and troubleshoot issues.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -58,7 +58,7 @@ public class GetClusterSuspEventStatisticsResponseBody extends TeaModel {
         }
 
         /**
-         * SuspStatistics.
+         * The number of alerts by risk level.
          */
         public Builder suspStatistics(SuspStatistics suspStatistics) {
             this.suspStatistics = suspStatistics;
@@ -122,7 +122,7 @@ public class GetClusterSuspEventStatisticsResponseBody extends TeaModel {
             private Integer suspicious; 
 
             /**
-             * Remind.
+             * The number of alerts whose Emergency level is Reminder.
              */
             public Builder remind(Integer remind) {
                 this.remind = remind;
@@ -130,7 +130,7 @@ public class GetClusterSuspEventStatisticsResponseBody extends TeaModel {
             }
 
             /**
-             * Serious.
+             * The number of alerts whose Emergency level is Urgent.
              */
             public Builder serious(Integer serious) {
                 this.serious = serious;
@@ -138,7 +138,7 @@ public class GetClusterSuspEventStatisticsResponseBody extends TeaModel {
             }
 
             /**
-             * Suspicious.
+             * The number of alerts whose Emergency level is Suspicious.
              */
             public Builder suspicious(Integer suspicious) {
                 this.suspicious = suspicious;

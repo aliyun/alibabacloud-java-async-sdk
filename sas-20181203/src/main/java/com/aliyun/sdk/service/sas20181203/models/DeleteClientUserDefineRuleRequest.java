@@ -55,7 +55,7 @@ public class DeleteClientUserDefineRuleRequest extends Request {
         } 
 
         /**
-         * IdList.
+         * The IDs of the custom defense rules.
          */
         public Builder idList(java.util.List < Long > idList) {
             this.putQueryParameter("IdList", idList);

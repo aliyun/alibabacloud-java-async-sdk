@@ -110,7 +110,7 @@ public class QueryPreCheckDatabaseResponseBody extends TeaModel {
         private Long updatedTime; 
 
         /**
-         * CompletedTime.
+         * The time when the precheck task was complete.
          */
         public Builder completedTime(Long completedTime) {
             this.completedTime = completedTime;
@@ -118,7 +118,7 @@ public class QueryPreCheckDatabaseResponseBody extends TeaModel {
         }
 
         /**
-         * CreatedTime.
+         * The time when the precheck task was started.
          */
         public Builder createdTime(Long createdTime) {
             this.createdTime = createdTime;
@@ -126,7 +126,12 @@ public class QueryPreCheckDatabaseResponseBody extends TeaModel {
         }
 
         /**
-         * Description.
+         * The status of the precheck task. Valid values:
+         * <p>
+         * 
+         * *   **completed**: complete
+         * *   **created**: started
+         * *   **error**: failed
          */
         public Builder description(String description) {
             this.description = description;
@@ -134,7 +139,7 @@ public class QueryPreCheckDatabaseResponseBody extends TeaModel {
         }
 
         /**
-         * Progress.
+         * The precheck progress in percentage. Valid values: 0 to 100.
          */
         public Builder progress(Integer progress) {
             this.progress = progress;
@@ -142,7 +147,7 @@ public class QueryPreCheckDatabaseResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request, which is used to locate and troubleshoot issues.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -150,7 +155,43 @@ public class QueryPreCheckDatabaseResponseBody extends TeaModel {
         }
 
         /**
-         * Result.
+         * The result of the precheck task. The value is a JSON string that contains the following fields:
+         * <p>
+         * 
+         * *   **instanceId**: the ID of the server that hosts the database
+         * 
+         * *   **checkTime**: the precheck time
+         * 
+         * *   **sourceType**: the database type
+         * 
+         * *   **results**: the precheck item and result
+         * 
+         *     *   **item**: the precheck item
+         *     *   **result**: the precheck result
+         * 
+         * > The following section describes the precheck items:
+         * 
+         * *   MSSQL
+         * 
+         *     *   **OSS_INTERNAL_ENDPOINT_CONNECTIVITY**: OSS connectivity check
+         *     *   **SERVICE_CONNECTIVITY**: control network connectivity check
+         *     *   **SQL_SERVER_DB_IN_SIMPLE_RECOVERY_MODE**: recovery mode check
+         *     *   **SQL_SERVER_DB_NOT_ONLINE**: SQL Server database status check
+         * 
+         * *   ORACLE
+         * 
+         *     *   **OSS_INTERNAL_ENDPOINT_CONNECTIVITY**: OSS connectivity check
+         *     *   **SERVICE_CONNECTIVITY**: control network connectivity check
+         *     *   **ORACLE_INSTANCE_STATUS**: Oracle instance status check
+         *     *   **ORACLE_DB_STATUS**: Oracle database status check
+         *     *   **ARCHIVELOG**: archive mode check
+         * 
+         * *   MYSQL
+         * 
+         *     *   **OSS_INTERNAL_ENDPOINT_CONNECTIVITY**: OSS connectivity check
+         *     *   **SERVICE_CONNECTIVITY**: control network connectivity check
+         *     *   **MYSQL_VERSION**: Supports full backup version checking
+         *     *   **MYSQL_BINLOG**: BINLOG check
          */
         public Builder result(String result) {
             this.result = result;
@@ -158,7 +199,7 @@ public class QueryPreCheckDatabaseResponseBody extends TeaModel {
         }
 
         /**
-         * UpdatedTime.
+         * The time when the precheck task was last updated.
          */
         public Builder updatedTime(Long updatedTime) {
             this.updatedTime = updatedTime;

@@ -82,7 +82,7 @@ public class DescribeWebPathRequest extends Request {
         } 
 
         /**
-         * CurrentPage.
+         * The number of the page to return.
          */
         public Builder currentPage(Integer currentPage) {
             this.putQueryParameter("CurrentPage", currentPage);
@@ -91,7 +91,7 @@ public class DescribeWebPathRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * The number of entries to return on each page.
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -100,7 +100,10 @@ public class DescribeWebPathRequest extends Request {
         }
 
         /**
-         * Type.
+         * The type of the alert configuration. Valid values:
+         * <p>
+         * 
+         * *   **web_path**
          */
         public Builder type(String type) {
             this.putQueryParameter("Type", type);

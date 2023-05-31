@@ -142,7 +142,7 @@ public class DescribeTraceInfoDetailRequest extends Request {
         } 
 
         /**
-         * From.
+         * The ID of the request source. Set the value to **sas**.
          */
         public Builder from(String from) {
             this.putQueryParameter("From", from);
@@ -151,7 +151,7 @@ public class DescribeTraceInfoDetailRequest extends Request {
         }
 
         /**
-         * IncidentTime.
+         * The timestamp of the detection. Unit: milliseconds.
          */
         public Builder incidentTime(Long incidentTime) {
             this.putQueryParameter("IncidentTime", incidentTime);
@@ -160,7 +160,11 @@ public class DescribeTraceInfoDetailRequest extends Request {
         }
 
         /**
-         * Lang.
+         * The language of the content within the request and response. Valid values:
+         * <p>
+         * 
+         * *   **zh**: Chinese
+         * *   **en**: English
          */
         public Builder lang(String lang) {
             this.putQueryParameter("Lang", lang);
@@ -169,7 +173,7 @@ public class DescribeTraceInfoDetailRequest extends Request {
         }
 
         /**
-         * SourceIp.
+         * The source IP address of the request. The value of this parameter is specified by the system.
          */
         public Builder sourceIp(String sourceIp) {
             this.putQueryParameter("SourceIp", sourceIp);
@@ -178,7 +182,7 @@ public class DescribeTraceInfoDetailRequest extends Request {
         }
 
         /**
-         * Type.
+         * The type of the vertex. Set the value to **SAS_INCIDENT**.
          */
         public Builder type(String type) {
             this.putQueryParameter("Type", type);
@@ -187,7 +191,7 @@ public class DescribeTraceInfoDetailRequest extends Request {
         }
 
         /**
-         * Uuid.
+         * The UUID of the server.
          */
         public Builder uuid(String uuid) {
             this.putQueryParameter("Uuid", uuid);
@@ -196,7 +200,7 @@ public class DescribeTraceInfoDetailRequest extends Request {
         }
 
         /**
-         * VertexId.
+         * The ID of the vertex. You can call the [DescribeSuspEvents](~~DescribeSuspEvents~~) operation to query the ID.
          */
         public Builder vertexId(String vertexId) {
             this.putQueryParameter("VertexId", vertexId);

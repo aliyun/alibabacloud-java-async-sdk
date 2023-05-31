@@ -98,7 +98,11 @@ public class ModifySecurityEventMarkMissIndividuallyResponseBody extends TeaMode
         private Long timeCost; 
 
         /**
-         * Code.
+         * The status code of the alert event.
+         * <p>
+         * 
+         * *   **200**: indicates that the alert event is successfully handled.
+         * *   Other codes: indicates that the alert event fails to be handled.
          */
         public Builder code(String code) {
             this.code = code;
@@ -106,7 +110,7 @@ public class ModifySecurityEventMarkMissIndividuallyResponseBody extends TeaMode
         }
 
         /**
-         * HttpStatusCode.
+         * The HTTP status code returned.
          */
         public Builder httpStatusCode(Integer httpStatusCode) {
             this.httpStatusCode = httpStatusCode;
@@ -114,7 +118,7 @@ public class ModifySecurityEventMarkMissIndividuallyResponseBody extends TeaMode
         }
 
         /**
-         * Message.
+         * The message returned.
          */
         public Builder message(String message) {
             this.message = message;
@@ -122,7 +126,7 @@ public class ModifySecurityEventMarkMissIndividuallyResponseBody extends TeaMode
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -130,7 +134,11 @@ public class ModifySecurityEventMarkMissIndividuallyResponseBody extends TeaMode
         }
 
         /**
-         * Success.
+         * Indicates whether the request was successful. Valid values:
+         * <p>
+         * 
+         * *   **true**: The request was successful.
+         * *   **false**: The request failed.
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -138,7 +146,7 @@ public class ModifySecurityEventMarkMissIndividuallyResponseBody extends TeaMode
         }
 
         /**
-         * TimeCost.
+         * The time that was consumed to process the request. Unit: milliseconds.
          */
         public Builder timeCost(Long timeCost) {
             this.timeCost = timeCost;

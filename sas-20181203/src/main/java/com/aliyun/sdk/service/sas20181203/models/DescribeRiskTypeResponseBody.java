@@ -50,7 +50,7 @@ public class DescribeRiskTypeResponseBody extends TeaModel {
         private java.util.List < RiskTypes> riskTypes; 
 
         /**
-         * The description of the rule for the baseline.
+         * The ID of the request, which is used to locate and troubleshoot issues.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -170,7 +170,7 @@ public class DescribeRiskTypeResponseBody extends TeaModel {
             private Integer paramType; 
 
             /**
-             * EnumValue.
+             * If the value of paramType is 1, this parameter is empty. If the value of paramType is 2, this parameter provides the options that can be selected for paramType.
              */
             public Builder enumValue(String enumValue) {
                 this.enumValue = enumValue;
@@ -178,7 +178,7 @@ public class DescribeRiskTypeResponseBody extends TeaModel {
             }
 
             /**
-             * MaxValue.
+             * The maximum value of the parameter.
              */
             public Builder maxValue(Integer maxValue) {
                 this.maxValue = maxValue;
@@ -186,7 +186,7 @@ public class DescribeRiskTypeResponseBody extends TeaModel {
             }
 
             /**
-             * MinValue.
+             * The minimum value of the parameter.
              */
             public Builder minValue(Integer minValue) {
                 this.minValue = minValue;
@@ -194,7 +194,7 @@ public class DescribeRiskTypeResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the request, which is used to locate and troubleshoot issues.
+             * The default value of the parameter.
              */
             public Builder paramDefaultValue(String paramDefaultValue) {
                 this.paramDefaultValue = paramDefaultValue;
@@ -202,7 +202,7 @@ public class DescribeRiskTypeResponseBody extends TeaModel {
             }
 
             /**
-             * ParamDesc.
+             * The description of the parameter.
              */
             public Builder paramDesc(String paramDesc) {
                 this.paramDesc = paramDesc;
@@ -210,7 +210,7 @@ public class DescribeRiskTypeResponseBody extends TeaModel {
             }
 
             /**
-             * Queries baseline types.
+             * The name of the parameter.
              */
             public Builder paramName(String paramName) {
                 this.paramName = paramName;
@@ -218,7 +218,11 @@ public class DescribeRiskTypeResponseBody extends TeaModel {
             }
 
             /**
-             * ParamType.
+             * The configuration type of the parameter. Valid values:
+             * <p>
+             * 
+             * *   **1**: input
+             * *   **2**: selection
              */
             public Builder paramType(Integer paramType) {
                 this.paramType = paramType;
@@ -295,7 +299,11 @@ public class DescribeRiskTypeResponseBody extends TeaModel {
             private String ruleId; 
 
             /**
-             * The name of the parameter.
+             * Indicates whether the baseline can be edited. Valid values:
+             * <p>
+             * 
+             * *   **0**: no
+             * *   **1**: yes
              */
             public Builder optional(Integer optional) {
                 this.optional = optional;
@@ -303,7 +311,7 @@ public class DescribeRiskTypeResponseBody extends TeaModel {
             }
 
             /**
-             * The description of the baseline.
+             * An array that consists of the parameters in the rule for the baseline.
              */
             public Builder paramList(java.util.List < ParamList> paramList) {
                 this.paramList = paramList;
@@ -311,7 +319,7 @@ public class DescribeRiskTypeResponseBody extends TeaModel {
             }
 
             /**
-             * An array that consists of the information about baseline subtypes.
+             * The description of the rule for the baseline.
              */
             public Builder ruleDesc(String ruleDesc) {
                 this.ruleDesc = ruleDesc;
@@ -319,7 +327,7 @@ public class DescribeRiskTypeResponseBody extends TeaModel {
             }
 
             /**
-             * The maximum value of the parameter.
+             * The ID of the rule for the baseline.
              */
             public Builder ruleId(String ruleId) {
                 this.ruleId = ruleId;
@@ -396,7 +404,7 @@ public class DescribeRiskTypeResponseBody extends TeaModel {
             private java.util.List < Rules> rules; 
 
             /**
-             * The alias of the baseline subtype.
+             * The description of the baseline.
              */
             public Builder checkDesc(String checkDesc) {
                 this.checkDesc = checkDesc;
@@ -412,7 +420,7 @@ public class DescribeRiskTypeResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the baseline subtype.
+             * The baseline.
              */
             public Builder checkItem(String checkItem) {
                 this.checkItem = checkItem;
@@ -420,7 +428,7 @@ public class DescribeRiskTypeResponseBody extends TeaModel {
             }
 
             /**
-             * The minimum value of the parameter.
+             * An array that consists of the rule details about the baseline.
              */
             public Builder rules(java.util.List < Rules> rules) {
                 this.rules = rules;
@@ -485,11 +493,7 @@ public class DescribeRiskTypeResponseBody extends TeaModel {
             private String typeName; 
 
             /**
-             * The configuration type of the parameter. Valid values:
-             * <p>
-             * 
-             * *   **1**: input
-             * *   **2**: selection
+             * The alias of the baseline subtype.
              */
             public Builder alias(String alias) {
                 this.alias = alias;
@@ -497,11 +501,7 @@ public class DescribeRiskTypeResponseBody extends TeaModel {
             }
 
             /**
-             * The language of the content within the request and response. Default value: **zh**. Valid values:
-             * <p>
-             * 
-             * *   **zh**: Chinese
-             * *   **en**: English
+             * An array that consists of the check details about the baseline subtype.
              */
             public Builder checkDetails(java.util.List < CheckDetails> checkDetails) {
                 this.checkDetails = checkDetails;
@@ -509,7 +509,7 @@ public class DescribeRiskTypeResponseBody extends TeaModel {
             }
 
             /**
-             * An array that consists of the check details about the baseline subtype.
+             * The name of the baseline subtype.
              */
             public Builder typeName(String typeName) {
                 this.typeName = typeName;
@@ -574,7 +574,7 @@ public class DescribeRiskTypeResponseBody extends TeaModel {
             private String typeName; 
 
             /**
-             * The description of the parameter.
+             * The alias of the baseline type.
              */
             public Builder alias(String alias) {
                 this.alias = alias;
@@ -582,7 +582,7 @@ public class DescribeRiskTypeResponseBody extends TeaModel {
             }
 
             /**
-             * An array that consists of the rule details about the baseline.
+             * An array that consists of the information about baseline subtypes.
              */
             public Builder subTypes(java.util.List < SubTypes> subTypes) {
                 this.subTypes = subTypes;
@@ -590,7 +590,7 @@ public class DescribeRiskTypeResponseBody extends TeaModel {
             }
 
             /**
-             * The alias of the baseline type.
+             * The name of the baseline type.
              */
             public Builder typeName(String typeName) {
                 this.typeName = typeName;

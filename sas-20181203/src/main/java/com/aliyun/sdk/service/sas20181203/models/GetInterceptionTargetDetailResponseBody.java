@@ -50,7 +50,7 @@ public class GetInterceptionTargetDetailResponseBody extends TeaModel {
         private RuleTarget ruleTarget; 
 
         /**
-         * RequestId.
+         * The ID of the request, which is used to locate and troubleshoot issues.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -58,7 +58,7 @@ public class GetInterceptionTargetDetailResponseBody extends TeaModel {
         }
 
         /**
-         * RuleTarget.
+         * The information about the network object.
          */
         public Builder ruleTarget(RuleTarget ruleTarget) {
             this.ruleTarget = ruleTarget;
@@ -194,7 +194,7 @@ public class GetInterceptionTargetDetailResponseBody extends TeaModel {
             private String targetType; 
 
             /**
-             * AppName.
+             * The name of the application to which the network object belongs.
              */
             public Builder appName(String appName) {
                 this.appName = appName;
@@ -202,7 +202,7 @@ public class GetInterceptionTargetDetailResponseBody extends TeaModel {
             }
 
             /**
-             * ClusterId.
+             * The ID of the container cluster.
              */
             public Builder clusterId(String clusterId) {
                 this.clusterId = clusterId;
@@ -210,7 +210,7 @@ public class GetInterceptionTargetDetailResponseBody extends TeaModel {
             }
 
             /**
-             * ClusterName.
+             * The name of the container cluster.
              */
             public Builder clusterName(String clusterName) {
                 this.clusterName = clusterName;
@@ -218,7 +218,7 @@ public class GetInterceptionTargetDetailResponseBody extends TeaModel {
             }
 
             /**
-             * ImageList.
+             * An array that consists of the images of the network object.
              */
             public Builder imageList(java.util.List < String > imageList) {
                 this.imageList = imageList;
@@ -226,7 +226,7 @@ public class GetInterceptionTargetDetailResponseBody extends TeaModel {
             }
 
             /**
-             * Namespace.
+             * The namespace.
              */
             public Builder namespace(String namespace) {
                 this.namespace = namespace;
@@ -234,7 +234,7 @@ public class GetInterceptionTargetDetailResponseBody extends TeaModel {
             }
 
             /**
-             * TagList.
+             * An array that consists of the labels specified for the network object.
              */
             public Builder tagList(java.util.List < String > tagList) {
                 this.tagList = tagList;
@@ -242,7 +242,7 @@ public class GetInterceptionTargetDetailResponseBody extends TeaModel {
             }
 
             /**
-             * TargetId.
+             * The ID of the network object.
              */
             public Builder targetId(Long targetId) {
                 this.targetId = targetId;
@@ -250,7 +250,7 @@ public class GetInterceptionTargetDetailResponseBody extends TeaModel {
             }
 
             /**
-             * TargetName.
+             * The name of the network object.
              */
             public Builder targetName(String targetName) {
                 this.targetName = targetName;
@@ -258,7 +258,10 @@ public class GetInterceptionTargetDetailResponseBody extends TeaModel {
             }
 
             /**
-             * TargetType.
+             * The type of the network object. Valid values:
+             * <p>
+             * 
+             * *   **IMAGE**: image
              */
             public Builder targetType(String targetType) {
                 this.targetType = targetType;

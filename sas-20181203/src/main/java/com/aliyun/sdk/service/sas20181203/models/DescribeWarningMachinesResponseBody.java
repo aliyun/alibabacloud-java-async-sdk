@@ -98,11 +98,7 @@ public class DescribeWarningMachinesResponseBody extends TeaModel {
         private java.util.List < WarningMachines> warningMachines; 
 
         /**
-         * The verification status of the risk item after the risk item is fixed. Valid values:
-         * <p>
-         * 
-         * *   **1**: complete
-         * *   **2**: verifying
+         * The number of entries returned on the current page.
          */
         public Builder count(Integer count) {
             this.count = count;
@@ -110,7 +106,7 @@ public class DescribeWarningMachinesResponseBody extends TeaModel {
         }
 
         /**
-         * The name of the server on which the baseline check is performed.
+         * The page number of the returned page.
          */
         public Builder currentPage(Integer currentPage) {
             this.currentPage = currentPage;
@@ -118,7 +114,7 @@ public class DescribeWarningMachinesResponseBody extends TeaModel {
         }
 
         /**
-         * The number of entries to return on each page. Default value: **10**.
+         * The number of entries returned per page. Default value: **10**.
          */
         public Builder pageSize(Integer pageSize) {
             this.pageSize = pageSize;
@@ -126,7 +122,7 @@ public class DescribeWarningMachinesResponseBody extends TeaModel {
         }
 
         /**
-         * An array that consists of the servers.
+         * The ID of the request, which is used to locate and troubleshoot issues.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -134,7 +130,7 @@ public class DescribeWarningMachinesResponseBody extends TeaModel {
         }
 
         /**
-         * The value of the field that is used to search for the container.
+         * The total number of entries returned.
          */
         public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;
@@ -142,10 +138,7 @@ public class DescribeWarningMachinesResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the container cluster.
-         * <p>
-         * 
-         * >  You can call the [DescribeGroupedContainerInstances](~~DescribeGroupedContainerInstances~~) operation to query the IDs of container clusters.
+         * An array that consists of the servers.
          */
         public Builder warningMachines(java.util.List < WarningMachines> warningMachines) {
             this.warningMachines = warningMachines;
@@ -365,7 +358,15 @@ public class DescribeWarningMachinesResponseBody extends TeaModel {
             private String uuid; 
 
             /**
-             * AuthVersion.
+             * The edition of Security Center that is authorized to protect the asset. Valid values:
+             * <p>
+             * 
+             * *   **1**: Basic edition
+             * *   **6**: Anti-virus edition
+             * *   **5**: Advanced edition
+             * *   **3**: Enterprise edition
+             * *   **7**: Ultimate edition
+             * *   **10**: Value-added Plan edition
              */
             public Builder authVersion(Integer authVersion) {
                 this.authVersion = authVersion;
@@ -373,7 +374,11 @@ public class DescribeWarningMachinesResponseBody extends TeaModel {
             }
 
             /**
-             * Bind.
+             * Indicates whether Security Center is authorized to protect the asset. Valid values:
+             * <p>
+             * 
+             * *   **true**: yes
+             * *   **false**: no
              */
             public Builder bind(Boolean bind) {
                 this.bind = bind;
@@ -397,7 +402,7 @@ public class DescribeWarningMachinesResponseBody extends TeaModel {
             }
 
             /**
-             * The public IP address of the server.
+             * The number of **high-risk** items on the server.
              */
             public Builder highWarningCount(Integer highWarningCount) {
                 this.highWarningCount = highWarningCount;
@@ -405,7 +410,7 @@ public class DescribeWarningMachinesResponseBody extends TeaModel {
             }
 
             /**
-             * The number of entries returned per page. Default value: **10**.
+             * The ID of the server.
              */
             public Builder instanceId(String instanceId) {
                 this.instanceId = instanceId;
@@ -413,7 +418,7 @@ public class DescribeWarningMachinesResponseBody extends TeaModel {
             }
 
             /**
-             * InstanceName.
+             * The name of the server.
              */
             public Builder instanceName(String instanceName) {
                 this.instanceName = instanceName;
@@ -421,7 +426,7 @@ public class DescribeWarningMachinesResponseBody extends TeaModel {
             }
 
             /**
-             * The UUID of the server on which the baseline check is performed. Separate multiple UUIDs with commas (,).
+             * The public IP address of the server.
              */
             public Builder internetIp(String internetIp) {
                 this.internetIp = internetIp;
@@ -429,7 +434,7 @@ public class DescribeWarningMachinesResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the request, which is used to locate and troubleshoot issues.
+             * The private IP address of the server.
              */
             public Builder intranetIp(String intranetIp) {
                 this.intranetIp = intranetIp;
@@ -437,7 +442,7 @@ public class DescribeWarningMachinesResponseBody extends TeaModel {
             }
 
             /**
-             * Queries information about servers on which a baseline check is performed. The information includes the IDs of the servers, the statistics of a risk item, and the status of the risk item.
+             * The number of **low-risk** items on the server.
              */
             public Builder lowWarningCount(Integer lowWarningCount) {
                 this.lowWarningCount = lowWarningCount;
@@ -445,7 +450,7 @@ public class DescribeWarningMachinesResponseBody extends TeaModel {
             }
 
             /**
-             * MediumWarningCount.
+             * The number of **medium-risk** items on the server.
              */
             public Builder mediumWarningCount(Integer mediumWarningCount) {
                 this.mediumWarningCount = mediumWarningCount;
@@ -453,7 +458,7 @@ public class DescribeWarningMachinesResponseBody extends TeaModel {
             }
 
             /**
-             * PassCount.
+             * The number of the check items that passed the baseline check on the server.
              */
             public Builder passCount(Integer passCount) {
                 this.passCount = passCount;
@@ -461,7 +466,11 @@ public class DescribeWarningMachinesResponseBody extends TeaModel {
             }
 
             /**
-             * DescribeWarningMachines
+             * Indicates whether a port on the server is accessible over the Internet. Valid values:
+             * <p>
+             * 
+             * *   **true**: yes
+             * *   **false**: no
              */
             public Builder portOpen(Boolean portOpen) {
                 this.portOpen = portOpen;
@@ -469,7 +478,7 @@ public class DescribeWarningMachinesResponseBody extends TeaModel {
             }
 
             /**
-             * The number of entries returned on the current page.
+             * The ID of the region in which the server is deployed.
              */
             public Builder regionId(String regionId) {
                 this.regionId = regionId;
@@ -477,11 +486,11 @@ public class DescribeWarningMachinesResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether Security Center is authorized to protect the asset. Valid values:
+             * The verification status of the risk item after the risk item is fixed. Valid values:
              * <p>
              * 
-             * *   **true**: yes
-             * *   **false**: no
+             * *   **1**: complete
+             * *   **2**: verifying
              */
             public Builder status(Integer status) {
                 this.status = status;
@@ -489,7 +498,7 @@ public class DescribeWarningMachinesResponseBody extends TeaModel {
             }
 
             /**
-             * Uuid.
+             * The UUID of the server on which the baseline check is performed.
              */
             public Builder uuid(String uuid) {
                 this.uuid = uuid;

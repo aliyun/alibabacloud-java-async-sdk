@@ -99,7 +99,7 @@ public class GenerateOnceTaskRequest extends Request {
         } 
 
         /**
-         * The collection time.
+         * The additional information.
          */
         public Builder param(String param) {
             this.putQueryParameter("Param", param);
@@ -108,7 +108,7 @@ public class GenerateOnceTaskRequest extends Request {
         }
 
         /**
-         * The total number of scan tasks.
+         * The source of the scan task.
          */
         public Builder source(String source) {
             this.putQueryParameter("Source", source);
@@ -117,7 +117,12 @@ public class GenerateOnceTaskRequest extends Request {
         }
 
         /**
-         * The ID of the last scan task.
+         * The name of the scan task. Valid values:
+         * <p>
+         * 
+         * *   **CLIENT\_PROBLEM_CHECK**: a client diagnosis task
+         * *   **CLIENT\_DEV_OPS**: an O\&M task of Cloud Assistant
+         * *   **ASSET\_SECURITY_CHECK**: a task of asset information collection
          */
         public Builder taskName(String taskName) {
             this.putQueryParameter("TaskName", taskName);
@@ -126,13 +131,12 @@ public class GenerateOnceTaskRequest extends Request {
         }
 
         /**
-         * Indicates whether you can create more scan tasks. Valid values:
+         * The type of the scan task. Valid values:
          * <p>
          * 
-         * *   **true**: yes
-         * *   **false**: no
-         * 
-         * > By default, a maximum of 10 scan tasks can be running at the same time. If 10 image scan tasks are running, you cannot create a scan task by calling this operation. You must wait for at least one of the 10 existing scan tasks to complete before you can create a scan task.
+         * *   **CLIENT\_PROBLEM_CHECK**: a client diagnosis task
+         * *   **CLIENT\_DEV_OPS**: an O\&M task of Cloud Assistant
+         * *   **ASSET\_SECURITY_CHECK**: a task of asset information collection
          */
         public Builder taskType(String taskType) {
             this.putQueryParameter("TaskType", taskType);

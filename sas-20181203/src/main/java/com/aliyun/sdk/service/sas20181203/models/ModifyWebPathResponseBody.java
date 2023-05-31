@@ -50,7 +50,7 @@ public class ModifyWebPathResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * RequestId.
+         * The ID of the request, which is used to locate and troubleshoot issues.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -58,7 +58,11 @@ public class ModifyWebPathResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * Indicates whether the request was successful. Valid values:
+         * <p>
+         * 
+         * *   **true**: The request was successful.
+         * *   **false**: The request failed.
          */
         public Builder success(Boolean success) {
             this.success = success;

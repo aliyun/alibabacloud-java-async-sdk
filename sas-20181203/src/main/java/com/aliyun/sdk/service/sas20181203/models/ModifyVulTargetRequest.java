@@ -68,7 +68,15 @@ public class ModifyVulTargetRequest extends Request {
         } 
 
         /**
-         * Config.
+         * The configurations. The value of this parameter is in the JSON format and contains the following fields:
+         * <p>
+         * 
+         * *   **vulType**: the type of the vulnerabilities to scan. Valid values:
+         * 
+         *     *   **cve**: Linux software vulnerabilities
+         *     *   **sys**: Windows system vulnerabilities
+         *     *   **cms**: Web-CMS vulnerabilities
+         *     *   **emg**: urgent vulnerabilities
          */
         public Builder config(String config) {
             this.putQueryParameter("Config", config);
@@ -77,7 +85,17 @@ public class ModifyVulTargetRequest extends Request {
         }
 
         /**
-         * Target.
+         * The operation. The value of this parameter is in the JSON format and contains the following fields:
+         * <p>
+         * 
+         * *   **target**: the UUID of the server.
+         * 
+         * *   **targetType**: the application scope of the operation. Set the value to uuid.
+         * 
+         * *   **flag**: the type of the operation. Valid values:
+         * 
+         *     *   **add**: select
+         *     *   **del**: deselect
          */
         public Builder target(String target) {
             this.putQueryParameter("Target", target);

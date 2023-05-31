@@ -82,7 +82,10 @@ public class ChangeCheckCustomConfigRequest extends Request {
         } 
 
         /**
-         * CheckId.
+         * The ID of the check item.
+         * <p>
+         * 
+         * > You can call the [ListCheckResult](~~ListCheckResult~~) operation to query the IDs of check items.
          */
         public Builder checkId(Long checkId) {
             this.putQueryParameter("CheckId", checkId);
@@ -91,7 +94,7 @@ public class ChangeCheckCustomConfigRequest extends Request {
         }
 
         /**
-         * CustomConfigs.
+         * The custom configuration items of the check item.
          */
         public Builder customConfigs(java.util.List < CustomConfigs> customConfigs) {
             this.putQueryParameter("CustomConfigs", customConfigs);
@@ -100,7 +103,11 @@ public class ChangeCheckCustomConfigRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * The region where the Security Center instance is deployed. Valid values:
+         * <p>
+         * 
+         * *   **cn-hangzhou**: International
+         * *   **ap-southeast-1**: Singapore
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -166,7 +173,7 @@ public class ChangeCheckCustomConfigRequest extends Request {
             private String value; 
 
             /**
-             * Name.
+             * The name of the custom configuration item. The name of a custom configuration item is unique in a check item.
              */
             public Builder name(String name) {
                 this.name = name;
@@ -174,7 +181,7 @@ public class ChangeCheckCustomConfigRequest extends Request {
             }
 
             /**
-             * Operation.
+             * The operation that you want to perform on the custom configuration item. This parameter is required only if you want to delete the custom configuration item. To delete the custom configuration item, set the value to DELETE.
              */
             public Builder operation(String operation) {
                 this.operation = operation;
@@ -182,7 +189,7 @@ public class ChangeCheckCustomConfigRequest extends Request {
             }
 
             /**
-             * Value.
+             * The value of the custom configuration item. The value is a string.
              */
             public Builder value(String value) {
                 this.value = value;

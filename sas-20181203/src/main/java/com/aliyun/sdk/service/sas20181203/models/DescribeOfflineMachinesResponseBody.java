@@ -86,7 +86,7 @@ public class DescribeOfflineMachinesResponseBody extends TeaModel {
         private Integer totalCount; 
 
         /**
-         * CurrentPage.
+         * The page number of the returned page.
          */
         public Builder currentPage(Integer currentPage) {
             this.currentPage = currentPage;
@@ -94,7 +94,7 @@ public class DescribeOfflineMachinesResponseBody extends TeaModel {
         }
 
         /**
-         * MachineList.
+         * An array that consists of the information about servers.
          */
         public Builder machineList(java.util.List < MachineList> machineList) {
             this.machineList = machineList;
@@ -102,7 +102,7 @@ public class DescribeOfflineMachinesResponseBody extends TeaModel {
         }
 
         /**
-         * PageSize.
+         * The number of entries returned per page.
          */
         public Builder pageSize(Integer pageSize) {
             this.pageSize = pageSize;
@@ -110,7 +110,7 @@ public class DescribeOfflineMachinesResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request, which is used to locate and troubleshoot issues.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -118,7 +118,7 @@ public class DescribeOfflineMachinesResponseBody extends TeaModel {
         }
 
         /**
-         * TotalCount.
+         * The total number of entries returned.
          */
         public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;
@@ -266,7 +266,7 @@ public class DescribeOfflineMachinesResponseBody extends TeaModel {
             private String vendorName; 
 
             /**
-             * InstanceId.
+             * The ID of the server.
              */
             public Builder instanceId(String instanceId) {
                 this.instanceId = instanceId;
@@ -274,7 +274,7 @@ public class DescribeOfflineMachinesResponseBody extends TeaModel {
             }
 
             /**
-             * InstanceName.
+             * The name of the server.
              */
             public Builder instanceName(String instanceName) {
                 this.instanceName = instanceName;
@@ -282,7 +282,7 @@ public class DescribeOfflineMachinesResponseBody extends TeaModel {
             }
 
             /**
-             * InternetIp.
+             * The public IP address of the server.
              */
             public Builder internetIp(String internetIp) {
                 this.internetIp = internetIp;
@@ -290,7 +290,7 @@ public class DescribeOfflineMachinesResponseBody extends TeaModel {
             }
 
             /**
-             * IntranetIp.
+             * The private IP address of the server.
              */
             public Builder intranetIp(String intranetIp) {
                 this.intranetIp = intranetIp;
@@ -298,7 +298,7 @@ public class DescribeOfflineMachinesResponseBody extends TeaModel {
             }
 
             /**
-             * MachineRegion.
+             * The region in which the server resides.
              */
             public Builder machineRegion(String machineRegion) {
                 this.machineRegion = machineRegion;
@@ -306,7 +306,12 @@ public class DescribeOfflineMachinesResponseBody extends TeaModel {
             }
 
             /**
-             * Os.
+             * The operating system of the server. Valid values:
+             * <p>
+             * 
+             * *   **linux**
+             * *   **windows**
+             * *   **windows-2003**
              */
             public Builder os(String os) {
                 this.os = os;
@@ -314,7 +319,7 @@ public class DescribeOfflineMachinesResponseBody extends TeaModel {
             }
 
             /**
-             * RegionId.
+             * The ID of the region in which the server resides.
              */
             public Builder regionId(String regionId) {
                 this.regionId = regionId;
@@ -322,7 +327,7 @@ public class DescribeOfflineMachinesResponseBody extends TeaModel {
             }
 
             /**
-             * Uuid.
+             * The UUID of the server.
              */
             public Builder uuid(String uuid) {
                 this.uuid = uuid;
@@ -330,7 +335,14 @@ public class DescribeOfflineMachinesResponseBody extends TeaModel {
             }
 
             /**
-             * Vendor.
+             * The source of the server. Valid values:
+             * <p>
+             * 
+             * *   **0**: an asset provided by Alibaba Cloud.
+             * *   **1**: a third-party cloud server
+             * *   **2**: a server in a data center
+             * *   **3**, **4**, **5**, and **7**: other cloud asset
+             * *   **8**: a lightweight asset
              */
             public Builder vendor(Integer vendor) {
                 this.vendor = vendor;
@@ -338,7 +350,19 @@ public class DescribeOfflineMachinesResponseBody extends TeaModel {
             }
 
             /**
-             * VendorName.
+             * The name of the service provider (SP) for the server.
+             * <p>
+             * 
+             * Valid values:
+             * 
+             * *   **ALIYUN**: Alibaba Cloud
+             * *   **OUT**: a third-party service provider
+             * *   **IDC**: a data center
+             * *   **TENCENT**: Tencent Cloud
+             * *   **HUAWEICLOUD**: Huawei Cloud
+             * *   **Microsoft**: Microsoft
+             * *   **AWS**: Amazon Web Services (AWS)
+             * *   **TRIPARTITE**: a lightweight server
              */
             public Builder vendorName(String vendorName) {
                 this.vendorName = vendorName;

@@ -114,7 +114,7 @@ public class CreateHoneypotPresetRequest extends Request {
         } 
 
         /**
-         * 蜜罐镜像名称
+         * The name of the honeypot image.
          */
         public Builder honeypotImageName(String honeypotImageName) {
             this.putQueryParameter("HoneypotImageName", honeypotImageName);
@@ -132,7 +132,12 @@ public class CreateHoneypotPresetRequest extends Request {
         }
 
         /**
-         * 蜜罐模板自定义参数
+         * The custom configurations of the honeypot template. The value is a JSON string that contains the following fields:
+         * <p>
+         * 
+         * *   **portrait_option**: Social Source Tracing
+         * *   **burp**: Burp-specific Defense
+         * *   **trojan_git**: Git-specific Defense
          */
         public Builder meta(String meta) {
             this.putQueryParameter("Meta", meta);
@@ -141,7 +146,10 @@ public class CreateHoneypotPresetRequest extends Request {
         }
 
         /**
-         * 蜜罐管理节点唯一id
+         * The ID of the management node to which you want to deploy honeypots.
+         * <p>
+         * 
+         * > You can call the [ListHoneypotNode](~~ListHoneypotNode~~) operation to query the IDs of management nodes.
          */
         public Builder nodeId(String nodeId) {
             this.putQueryParameter("NodeId", nodeId);
@@ -150,7 +158,7 @@ public class CreateHoneypotPresetRequest extends Request {
         }
 
         /**
-         * 蜜罐模板自定义名称
+         * The custom name of the honeypot template.
          */
         public Builder presetName(String presetName) {
             this.putQueryParameter("PresetName", presetName);

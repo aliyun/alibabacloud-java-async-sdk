@@ -82,7 +82,11 @@ public class DescribeExposedCheckWarningRequest extends Request {
         } 
 
         /**
-         * Lang.
+         * The language of the content within the request and response. Default value: **zh**. Valid values:
+         * <p>
+         * 
+         * *   **zh**: Chinese
+         * *   **en**: English
          */
         public Builder lang(String lang) {
             this.putQueryParameter("Lang", lang);
@@ -91,7 +95,10 @@ public class DescribeExposedCheckWarningRequest extends Request {
         }
 
         /**
-         * TypeName.
+         * The type of the baseline.
+         * <p>
+         * 
+         * >  You can call the [DescribeRiskType](~~DescribeRiskType~~) operation to obtain the types of baselines from the response parameter **TypeName**.
          */
         public Builder typeName(String typeName) {
             this.putQueryParameter("TypeName", typeName);
@@ -100,7 +107,10 @@ public class DescribeExposedCheckWarningRequest extends Request {
         }
 
         /**
-         * Uuids.
+         * The UUID of the server. Separate multiple UUIDs with commas (,).
+         * <p>
+         * 
+         * >  You can call the [DescribeCloudCenterInstances](~~DescribeCloudCenterInstances~~) operation to query the UUIDs of servers.
          */
         public Builder uuids(String uuids) {
             this.putQueryParameter("Uuids", uuids);

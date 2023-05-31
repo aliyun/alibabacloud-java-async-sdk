@@ -166,7 +166,7 @@ public class PublicCreateImageScanTaskRequest extends Request {
         } 
 
         /**
-         * Digests.
+         * The SHA-256 value of the image digest. Separate multiple SHA-256 values with commas (,).
          */
         public Builder digests(String digests) {
             this.putQueryParameter("Digests", digests);
@@ -175,7 +175,7 @@ public class PublicCreateImageScanTaskRequest extends Request {
         }
 
         /**
-         * InstanceIds.
+         * The ID of the Container Registry instance in which the image repository is created. Separate multiple IDs with commas (,).
          */
         public Builder instanceIds(String instanceIds) {
             this.putQueryParameter("InstanceIds", instanceIds);
@@ -184,7 +184,7 @@ public class PublicCreateImageScanTaskRequest extends Request {
         }
 
         /**
-         * RegionIds.
+         * The region ID of the image. Separate multiple IDs with commas (,).
          */
         public Builder regionIds(String regionIds) {
             this.putQueryParameter("RegionIds", regionIds);
@@ -193,7 +193,12 @@ public class PublicCreateImageScanTaskRequest extends Request {
         }
 
         /**
-         * RegistryTypes.
+         * The type of the image repository. Separate multiple types with commas (,). Valid values:
+         * <p>
+         * 
+         * *   **acr**
+         * *   **harbor**
+         * *   **quay**
          */
         public Builder registryTypes(String registryTypes) {
             this.putQueryParameter("RegistryTypes", registryTypes);
@@ -202,7 +207,7 @@ public class PublicCreateImageScanTaskRequest extends Request {
         }
 
         /**
-         * RepoIds.
+         * The ID of the image repository. Separate multiple IDs with commas (,).
          */
         public Builder repoIds(String repoIds) {
             this.putQueryParameter("RepoIds", repoIds);
@@ -211,7 +216,7 @@ public class PublicCreateImageScanTaskRequest extends Request {
         }
 
         /**
-         * RepoNames.
+         * The name of the image repository. Separate multiple names with commas (,).
          */
         public Builder repoNames(String repoNames) {
             this.putQueryParameter("RepoNames", repoNames);
@@ -220,7 +225,7 @@ public class PublicCreateImageScanTaskRequest extends Request {
         }
 
         /**
-         * RepoNamespaces.
+         * The namespace to which the image repository belongs. Separate multiple namespaces with commas (,).
          */
         public Builder repoNamespaces(String repoNamespaces) {
             this.putQueryParameter("RepoNamespaces", repoNamespaces);
@@ -229,7 +234,7 @@ public class PublicCreateImageScanTaskRequest extends Request {
         }
 
         /**
-         * SourceIp.
+         * The source IP address of the request.
          */
         public Builder sourceIp(String sourceIp) {
             this.putQueryParameter("SourceIp", sourceIp);
@@ -238,7 +243,7 @@ public class PublicCreateImageScanTaskRequest extends Request {
         }
 
         /**
-         * Tags.
+         * The tag that is added to the image. Separate multiple tags with commas (,).
          */
         public Builder tags(String tags) {
             this.putQueryParameter("Tags", tags);

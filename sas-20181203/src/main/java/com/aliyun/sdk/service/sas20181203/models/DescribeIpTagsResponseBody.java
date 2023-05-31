@@ -50,7 +50,7 @@ public class DescribeIpTagsResponseBody extends TeaModel {
         private String tags; 
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -58,7 +58,7 @@ public class DescribeIpTagsResponseBody extends TeaModel {
         }
 
         /**
-         * Tags.
+         * The tags that are added to the IP address.
          */
         public Builder tags(String tags) {
             this.tags = tags;

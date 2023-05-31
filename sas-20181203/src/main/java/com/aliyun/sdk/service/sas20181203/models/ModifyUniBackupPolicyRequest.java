@@ -167,11 +167,7 @@ public class ModifyUniBackupPolicyRequest extends Request {
         } 
 
         /**
-         * The status of the anti-ransomware policy. Valid values:
-         * <p>
-         * 
-         * *   **enabled**
-         * *   **disabled**
+         * The name of the database account.
          */
         public Builder accountName(String accountName) {
             this.putQueryParameter("AccountName", accountName);
@@ -180,58 +176,11 @@ public class ModifyUniBackupPolicyRequest extends Request {
         }
 
         /**
-         * The data returned.
+         * The password of the database account.
          */
         public Builder accountPassword(String accountPassword) {
             this.putQueryParameter("AccountPassword", accountPassword);
             this.accountPassword = accountPassword;
-            return this;
-        }
-
-        /**
-         * The ID of the request, which is used to locate and troubleshoot issues.
-         */
-        public Builder fullPlan(java.util.Map < String, ? > fullPlan) {
-            String fullPlanShrink = shrink(fullPlan, "FullPlan", "json");
-            this.putQueryParameter("FullPlan", fullPlanShrink);
-            this.fullPlan = fullPlan;
-            return this;
-        }
-
-        /**
-         * IncPlan.
-         */
-        public Builder incPlan(java.util.Map < String, ? > incPlan) {
-            String incPlanShrink = shrink(incPlan, "IncPlan", "json");
-            this.putQueryParameter("IncPlan", incPlanShrink);
-            this.incPlan = incPlan;
-            return this;
-        }
-
-        /**
-         * The name of the database account.
-         */
-        public Builder policyId(Long policyId) {
-            this.putQueryParameter("PolicyId", policyId);
-            this.policyId = policyId;
-            return this;
-        }
-
-        /**
-         * The password of the database account.
-         */
-        public Builder policyName(String policyName) {
-            this.putQueryParameter("PolicyName", policyName);
-            this.policyName = policyName;
-            return this;
-        }
-
-        /**
-         * PolicyStatus.
-         */
-        public Builder policyStatus(String policyStatus) {
-            this.putQueryParameter("PolicyStatus", policyStatus);
-            this.policyStatus = policyStatus;
             return this;
         }
 
@@ -244,9 +193,10 @@ public class ModifyUniBackupPolicyRequest extends Request {
          * *   **type**: the unit of the interval
          * *   **days**: the days of a week on which a backup task is performed
          */
-        public Builder retention(Integer retention) {
-            this.putQueryParameter("Retention", retention);
-            this.retention = retention;
+        public Builder fullPlan(java.util.Map < String, ? > fullPlan) {
+            String fullPlanShrink = shrink(fullPlan, "FullPlan", "json");
+            this.putQueryParameter("FullPlan", fullPlanShrink);
+            this.fullPlan = fullPlan;
             return this;
         }
 
@@ -258,6 +208,59 @@ public class ModifyUniBackupPolicyRequest extends Request {
          * *   **interval**: the interval of backup tasks
          * *   **type**: the unit of the interval
          * *   **days**: the days of a week on which a backup task is performed
+         */
+        public Builder incPlan(java.util.Map < String, ? > incPlan) {
+            String incPlanShrink = shrink(incPlan, "IncPlan", "json");
+            this.putQueryParameter("IncPlan", incPlanShrink);
+            this.incPlan = incPlan;
+            return this;
+        }
+
+        /**
+         * The ID of the anti-ransomware policy.
+         * <p>
+         * 
+         * > You can call the [DescribeUniBackupPolicies](~~DescribeUniBackupPolicies~~) operation to query the IDs of anti-ransomware policies.
+         */
+        public Builder policyId(Long policyId) {
+            this.putQueryParameter("PolicyId", policyId);
+            this.policyId = policyId;
+            return this;
+        }
+
+        /**
+         * The name of the anti-ransomware policy.
+         */
+        public Builder policyName(String policyName) {
+            this.putQueryParameter("PolicyName", policyName);
+            this.policyName = policyName;
+            return this;
+        }
+
+        /**
+         * The status of the anti-ransomware policy. Valid values:
+         * <p>
+         * 
+         * *   **enabled**
+         * *   **disabled**
+         */
+        public Builder policyStatus(String policyStatus) {
+            this.putQueryParameter("PolicyStatus", policyStatus);
+            this.policyStatus = policyStatus;
+            return this;
+        }
+
+        /**
+         * The retention period of the backup snapshot.
+         */
+        public Builder retention(Integer retention) {
+            this.putQueryParameter("Retention", retention);
+            this.retention = retention;
+            return this;
+        }
+
+        /**
+         * The maximum network bandwidth that is allowed during data backup. Unit: bytes.
          */
         public Builder speedLimiter(Long speedLimiter) {
             this.putQueryParameter("SpeedLimiter", speedLimiter);

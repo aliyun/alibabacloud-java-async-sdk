@@ -69,13 +69,32 @@ public class PublicSyncAndCreateImageScanTaskRequest extends Request {
         } 
 
         /**
-         * The status of the image scan task. Valid values:
+         * The information about the images. The value of this parameter is in the JSON format and contains the following fields:
          * <p>
          * 
-         * *   **INIT**: The task is being initialized.
-         * *   **PRE_ANALYZER**: The task is being pre-processed.
-         * *   **SUCCESS**: The task is successful.
-         * *   **FAIL**: The task failed.
+         * *   **RegistryType**: the type of the image repository. Valid values:
+         * 
+         *     *   acr
+         *     *   harbor
+         *     *   quay
+         * 
+         * *   **RepoId**: the ID of the image repository.
+         * 
+         * *   **InstanceId**: the ID of the Container Registry instance to which the image repository belongs.
+         * 
+         * *   **RepoNamespace**: the namespace to which the image repository belongs.
+         * 
+         * *   **RegionId**: the region ID of the image.
+         * 
+         * *   **RepoName**: the name of the image repository.
+         * 
+         * *   **Digest**: the digest of the image.
+         * 
+         * *   **Tag**: the tag that is added to the image.
+         * 
+         * *   **CreateTime**: the timestamp when the image was created. Unit: milliseconds.
+         * 
+         * *   **UpdateTime**: the timestamp when the image was updated. Unit: milliseconds.
          */
         public Builder images(String images) {
             this.putQueryParameter("Images", images);
@@ -84,7 +103,7 @@ public class PublicSyncAndCreateImageScanTaskRequest extends Request {
         }
 
         /**
-         * The ID of the image scan task.
+         * The source IP address of the request.
          */
         public Builder sourceIp(String sourceIp) {
             this.putQueryParameter("SourceIp", sourceIp);

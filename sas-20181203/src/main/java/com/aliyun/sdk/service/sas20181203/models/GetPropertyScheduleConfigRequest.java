@@ -68,7 +68,18 @@ public class GetPropertyScheduleConfigRequest extends Request {
         } 
 
         /**
-         * Type.
+         * The type of the asset fingerprints. Valid values:
+         * <p>
+         * 
+         * *   **scheduler_port_period**: listening port
+         * *   **scheduler_process_period**: running process
+         * *   **scheduler_account_period**: account
+         * *   **scheduler_software_period**: software
+         * *   **scheduler_cron_period**: scheduled task
+         * *   **scheduler_sca_period**: middleware
+         * *   **scheduler_autorun_period**: startup item
+         * *   **scheduler_lkm_period**: kernel module
+         * *   **scheduler_sca_proxy_period**: website
          */
         public Builder type(String type) {
             this.putQueryParameter("Type", type);
@@ -77,7 +88,10 @@ public class GetPropertyScheduleConfigRequest extends Request {
         }
 
         /**
-         * Uuid.
+         * The UUID of the server.
+         * <p>
+         * 
+         * >  You can call the [DescribeCloudCenterInstances](~~DescribeCloudCenterInstances~~) operation to query the UUIDs of servers.
          */
         public Builder uuid(String uuid) {
             this.putQueryParameter("Uuid", uuid);

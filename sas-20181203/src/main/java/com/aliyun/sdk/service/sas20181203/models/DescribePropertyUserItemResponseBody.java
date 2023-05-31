@@ -62,7 +62,7 @@ public class DescribePropertyUserItemResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The page number of the returned page.
+         * The pagination information.
          */
         public Builder pageInfo(PageInfo pageInfo) {
             this.pageInfo = pageInfo;
@@ -70,7 +70,7 @@ public class DescribePropertyUserItemResponseBody extends TeaModel {
         }
 
         /**
-         * The name of the account.
+         * An array that consists of the account information returned.
          */
         public Builder propertyItems(java.util.List < PropertyItems> propertyItems) {
             this.propertyItems = propertyItems;
@@ -78,7 +78,7 @@ public class DescribePropertyUserItemResponseBody extends TeaModel {
         }
 
         /**
-         * The pagination information.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -154,7 +154,7 @@ public class DescribePropertyUserItemResponseBody extends TeaModel {
             private Integer totalCount; 
 
             /**
-             * An array that consists of the account information returned.
+             * The number of entries returned on the current page.
              */
             public Builder count(Integer count) {
                 this.count = count;
@@ -162,7 +162,7 @@ public class DescribePropertyUserItemResponseBody extends TeaModel {
             }
 
             /**
-             * The number of entries returned per page.
+             * The page number of the returned page.
              */
             public Builder currentPage(Integer currentPage) {
                 this.currentPage = currentPage;
@@ -170,7 +170,7 @@ public class DescribePropertyUserItemResponseBody extends TeaModel {
             }
 
             /**
-             * The total number of entries returned.
+             * The number of entries returned per page.
              */
             public Builder pageSize(Integer pageSize) {
                 this.pageSize = pageSize;
@@ -178,7 +178,7 @@ public class DescribePropertyUserItemResponseBody extends TeaModel {
             }
 
             /**
-             * The number of entries returned on the current page.
+             * The total number of entries returned.
              */
             public Builder totalCount(Integer totalCount) {
                 this.totalCount = totalCount;
@@ -231,7 +231,7 @@ public class DescribePropertyUserItemResponseBody extends TeaModel {
             private String user; 
 
             /**
-             * Queries information about an account.
+             * The number of servers that belong to the account.
              */
             public Builder count(Integer count) {
                 this.count = count;
@@ -239,7 +239,7 @@ public class DescribePropertyUserItemResponseBody extends TeaModel {
             }
 
             /**
-             * The number of servers that belong to the account.
+             * The name of the account.
              */
             public Builder user(String user) {
                 this.user = user;

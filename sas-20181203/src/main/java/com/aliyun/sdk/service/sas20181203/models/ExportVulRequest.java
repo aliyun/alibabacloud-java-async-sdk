@@ -181,7 +181,7 @@ public class ExportVulRequest extends Request {
         } 
 
         /**
-         * AliasName.
+         * The name of the vulnerability.
          */
         public Builder aliasName(String aliasName) {
             this.putQueryParameter("AliasName", aliasName);
@@ -190,7 +190,10 @@ public class ExportVulRequest extends Request {
         }
 
         /**
-         * AttachTypes.
+         * The additional type of the vulnerabilities. You need to specify this parameter when you query application vulnerabilities. If you set the Type parameter to app, you must specify this parameter. Set the value to **sca**.
+         * <p>
+         * 
+         * > If this parameter is set to **sca**, **application vulnerabilities** and the **vulnerabilities that are detected based on software component analysis** are queried. If you do not specify this parameter, only application vulnerabilities are queried.
          */
         public Builder attachTypes(String attachTypes) {
             this.putQueryParameter("AttachTypes", attachTypes);
@@ -199,7 +202,11 @@ public class ExportVulRequest extends Request {
         }
 
         /**
-         * Dealed.
+         * Specifies whether the vulnerability is fixed. Valid values:
+         * <p>
+         * 
+         * *   **y**: The vulnerability is fixed.
+         * *   **n**: The vulnerability is not fixed.
          */
         public Builder dealed(String dealed) {
             this.putQueryParameter("Dealed", dealed);
@@ -208,7 +215,10 @@ public class ExportVulRequest extends Request {
         }
 
         /**
-         * GroupId.
+         * The server group ID of the server on which the vulnerabilities are detected.
+         * <p>
+         * 
+         * > You can call the [DescribeAllGroups](~~DescribeAllGroups~~) operation to query the IDs of server groups.
          */
         public Builder groupId(String groupId) {
             this.putQueryParameter("GroupId", groupId);
@@ -217,7 +227,11 @@ public class ExportVulRequest extends Request {
         }
 
         /**
-         * Lang.
+         * The language of the content within the request and response. Default value: **zh**. Valid values:
+         * <p>
+         * 
+         * *   zh: Chinese
+         * *   en: English
          */
         public Builder lang(String lang) {
             this.putQueryParameter("Lang", lang);
@@ -226,7 +240,12 @@ public class ExportVulRequest extends Request {
         }
 
         /**
-         * Necessity.
+         * The priority to fix the vulnerability. Separate multiple priorities with commas (,). Valid values:
+         * <p>
+         * 
+         * *   **asap**: high
+         * *   **later**: medium
+         * *   **nntf**: low
          */
         public Builder necessity(String necessity) {
             this.putQueryParameter("Necessity", necessity);
@@ -235,7 +254,15 @@ public class ExportVulRequest extends Request {
         }
 
         /**
-         * SearchTags.
+         * The tag that is used to search for the vulnerabilities. Valid values:
+         * <p>
+         * 
+         * *   Restart required
+         * *   Remote exploitation
+         * *   Exploit exists
+         * *   Exploitable
+         * *   Privilege escalation
+         * *   Code execution
          */
         public Builder searchTags(String searchTags) {
             this.putQueryParameter("SearchTags", searchTags);
@@ -244,7 +271,14 @@ public class ExportVulRequest extends Request {
         }
 
         /**
-         * Type.
+         * The type of the vulnerability that you want to export. Valid values:
+         * <p>
+         * 
+         * *   **cve**: Linux software vulnerability
+         * *   **sys**: Windows system vulnerability
+         * *   **cms**: Web-CMS vulnerability
+         * *   **app**: application vulnerability
+         * *   **emg**: urgent vulnerability
          */
         public Builder type(String type) {
             this.putQueryParameter("Type", type);
@@ -253,7 +287,7 @@ public class ExportVulRequest extends Request {
         }
 
         /**
-         * Uuids.
+         * The UUID of the server on which the vulnerabilities are detected. Separate multiple UUIDs with commas (,).
          */
         public Builder uuids(String uuids) {
             this.putQueryParameter("Uuids", uuids);
@@ -262,7 +296,10 @@ public class ExportVulRequest extends Request {
         }
 
         /**
-         * VpcInstanceIds.
+         * The ID of the virtual private cloud (VPC) in which the vulnerabilities are detected. Separate multiple IDs with commas (,).
+         * <p>
+         * 
+         * > You can call the [DescribeVpcList](~~DescribeVpcList~~) operation to query the IDs of VPCs.
          */
         public Builder vpcInstanceIds(String vpcInstanceIds) {
             this.putQueryParameter("VpcInstanceIds", vpcInstanceIds);

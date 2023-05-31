@@ -98,7 +98,7 @@ public class BindAuthToMachineResponseBody extends TeaModel {
         private Integer unBindCount; 
 
         /**
-         * BindCount.
+         * The number of bound servers.
          */
         public Builder bindCount(Integer bindCount) {
             this.bindCount = bindCount;
@@ -106,7 +106,7 @@ public class BindAuthToMachineResponseBody extends TeaModel {
         }
 
         /**
-         * InsufficientCoreCount.
+         * The shortage in the quota for cores of servers that can be protected.
          */
         public Builder insufficientCoreCount(Integer insufficientCoreCount) {
             this.insufficientCoreCount = insufficientCoreCount;
@@ -114,7 +114,7 @@ public class BindAuthToMachineResponseBody extends TeaModel {
         }
 
         /**
-         * InsufficientEcsCount.
+         * The shortage in the quota for servers that can be protected.
          */
         public Builder insufficientEcsCount(Integer insufficientEcsCount) {
             this.insufficientEcsCount = insufficientEcsCount;
@@ -122,7 +122,7 @@ public class BindAuthToMachineResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request, which is used to locate and troubleshoot issues.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -130,7 +130,13 @@ public class BindAuthToMachineResponseBody extends TeaModel {
         }
 
         /**
-         * ResultCode.
+         * The status code that indicates the result. Valid values:
+         * <p>
+         * 
+         * *   **0**: The servers are bound to or unbound from Security Center.
+         * *   **1**: The values that you specified for the parameters are invalid.
+         * *   **2**: The quota for servers that can be protected is insufficient.
+         * *   **3**: The quota for cores of servers that can be protected is insufficient.
          */
         public Builder resultCode(Integer resultCode) {
             this.resultCode = resultCode;
@@ -138,7 +144,7 @@ public class BindAuthToMachineResponseBody extends TeaModel {
         }
 
         /**
-         * UnBindCount.
+         * The number of unbound servers.
          */
         public Builder unBindCount(Integer unBindCount) {
             this.unBindCount = unBindCount;

@@ -62,7 +62,7 @@ public class DescribePropertySoftwareDetailResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The details of the software asset.
+         * The pagination information.
          */
         public Builder pageInfo(PageInfo pageInfo) {
             this.pageInfo = pageInfo;
@@ -70,7 +70,7 @@ public class DescribePropertySoftwareDetailResponseBody extends TeaModel {
         }
 
         /**
-         * The version of the software.
+         * The details of the software asset.
          */
         public Builder propertys(java.util.List < Propertys> propertys) {
             this.propertys = propertys;
@@ -78,7 +78,7 @@ public class DescribePropertySoftwareDetailResponseBody extends TeaModel {
         }
 
         /**
-         * 192.168.XX.XX
+         * The ID of the request, which is used to locate and troubleshoot issues.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -154,7 +154,7 @@ public class DescribePropertySoftwareDetailResponseBody extends TeaModel {
             private Integer totalCount; 
 
             /**
-             * The version of the software.
+             * The number of entries returned on the current page.
              */
             public Builder count(Integer count) {
                 this.count = count;
@@ -162,7 +162,7 @@ public class DescribePropertySoftwareDetailResponseBody extends TeaModel {
             }
 
             /**
-             * 1
+             * The page number of the returned page.
              */
             public Builder currentPage(Integer currentPage) {
                 this.currentPage = currentPage;
@@ -170,7 +170,7 @@ public class DescribePropertySoftwareDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The timestamp at which the software update ends. Unit: milliseconds.
+             * The number of entries returned per page. Default value: **10**.
              */
             public Builder pageSize(Integer pageSize) {
                 this.pageSize = pageSize;
@@ -178,7 +178,7 @@ public class DescribePropertySoftwareDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The installation path of the software.
+             * The total number of entries returned.
              */
             public Builder totalCount(Integer totalCount) {
                 this.totalCount = totalCount;
@@ -351,7 +351,7 @@ public class DescribePropertySoftwareDetailResponseBody extends TeaModel {
             private String version; 
 
             /**
-             * The timestamp at which the software is installed. Unit: milliseconds.
+             * The timestamp at which the last asset fingerprint collection is performed. Unit: milliseconds.
              */
             public Builder createTimestamp(Long createTimestamp) {
                 this.createTimestamp = createTimestamp;
@@ -359,7 +359,7 @@ public class DescribePropertySoftwareDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the server.
+             * The time at which the software is installed.
              */
             public Builder installTime(String installTime) {
                 this.installTime = installTime;
@@ -367,7 +367,7 @@ public class DescribePropertySoftwareDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The UUID of the server.
+             * The timestamp at which the software is installed. Unit: milliseconds.
              */
             public Builder installTimeDt(Long installTimeDt) {
                 this.installTimeDt = installTimeDt;
@@ -375,7 +375,7 @@ public class DescribePropertySoftwareDetailResponseBody extends TeaModel {
             }
 
             /**
-             * 1
+             * The ID of the server.
              */
             public Builder instanceId(String instanceId) {
                 this.instanceId = instanceId;
@@ -383,7 +383,7 @@ public class DescribePropertySoftwareDetailResponseBody extends TeaModel {
             }
 
             /**
-             * /etc/test
+             * The name of the server.
              */
             public Builder instanceName(String instanceName) {
                 this.instanceName = instanceName;
@@ -391,7 +391,7 @@ public class DescribePropertySoftwareDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The timestamp at which the software update starts. Unit: milliseconds.
+             * The public IP address of the server.
              */
             public Builder internetIp(String internetIp) {
                 this.internetIp = internetIp;
@@ -399,7 +399,7 @@ public class DescribePropertySoftwareDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The pagination information.
+             * The private IP address of the server.
              */
             public Builder intranetIp(String intranetIp) {
                 this.intranetIp = intranetIp;
@@ -407,7 +407,7 @@ public class DescribePropertySoftwareDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The number of entries returned on the current page.
+             * The IP addresses of the server.
              */
             public Builder ip(String ip) {
                 this.ip = ip;
@@ -415,7 +415,7 @@ public class DescribePropertySoftwareDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the server.
+             * The name of the software.
              */
             public Builder name(String name) {
                 this.name = name;
@@ -423,7 +423,7 @@ public class DescribePropertySoftwareDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The IP addresses of the server.
+             * The installation path of the software.
              */
             public Builder path(String path) {
                 this.path = path;
@@ -431,7 +431,7 @@ public class DescribePropertySoftwareDetailResponseBody extends TeaModel {
             }
 
             /**
-             * 1650012695000
+             * The UUID of the server.
              */
             public Builder uuid(String uuid) {
                 this.uuid = uuid;
@@ -439,7 +439,7 @@ public class DescribePropertySoftwareDetailResponseBody extends TeaModel {
             }
 
             /**
-             * Specifies whether fuzzy search by software name is supported. If you want to use fuzzy search, set the parameter to 1. If you set the parameter to a different value or leave the parameter empty, fuzzy search is not supported.
+             * The version of the software.
              */
             public Builder version(String version) {
                 this.version = version;

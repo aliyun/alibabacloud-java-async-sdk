@@ -68,7 +68,7 @@ public class ModifyClusterCnnfStatusUserConfirmRequest extends Request {
         } 
 
         /**
-         * ClusterIds.
+         * The IDs of the clusters.
          */
         public Builder clusterIds(java.util.List < String > clusterIds) {
             this.putQueryParameter("ClusterIds", clusterIds);
@@ -77,7 +77,11 @@ public class ModifyClusterCnnfStatusUserConfirmRequest extends Request {
         }
 
         /**
-         * UserConfirm.
+         * Specifies whether to fix the blocking status of the cluster. Valid values:
+         * <p>
+         * 
+         * *   true: yes
+         * *   fasle: no
          */
         public Builder userConfirm(Boolean userConfirm) {
             this.putQueryParameter("UserConfirm", userConfirm);

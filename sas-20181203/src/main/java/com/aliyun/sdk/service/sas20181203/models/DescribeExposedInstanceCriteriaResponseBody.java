@@ -50,7 +50,7 @@ public class DescribeExposedInstanceCriteriaResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * CriteriaList.
+         * The search conditions that are used to search for exposed assets.
          */
         public Builder criteriaList(java.util.List < CriteriaList> criteriaList) {
             this.criteriaList = criteriaList;
@@ -58,7 +58,7 @@ public class DescribeExposedInstanceCriteriaResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request, which is used to locate and troubleshoot issues.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -122,7 +122,7 @@ public class DescribeExposedInstanceCriteriaResponseBody extends TeaModel {
             private String values; 
 
             /**
-             * Name.
+             * The name of the search condition.
              */
             public Builder name(String name) {
                 this.name = name;
@@ -130,7 +130,11 @@ public class DescribeExposedInstanceCriteriaResponseBody extends TeaModel {
             }
 
             /**
-             * Type.
+             * The type of the search condition. Valid values:
+             * <p>
+             * 
+             * *   **input**: You must configure the search condition.
+             * *   **select**: You must select a search condition from the **Values** list.
              */
             public Builder type(String type) {
                 this.type = type;
@@ -138,7 +142,10 @@ public class DescribeExposedInstanceCriteriaResponseBody extends TeaModel {
             }
 
             /**
-             * Values.
+             * The value of the search condition. This parameter is returned only when the value of the **Type** parameter is **select**.
+             * <p>
+             * 
+             * >  If the value of the **Type** parameter is **input**, this parameter is empty.
              */
             public Builder values(String values) {
                 this.values = values;

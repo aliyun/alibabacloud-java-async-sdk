@@ -96,7 +96,19 @@ public class DescribeImageRepoDetailListRequest extends Request {
         } 
 
         /**
-         * The number of the page to return. Default value: **1**.
+         * The search conditions for assets. The value of this parameter is in the JSON format and contains the following fields:
+         * <p>
+         * 
+         * *   **name**: the search condition.
+         * 
+         * *   **name**: the value of the search condition.
+         * 
+         * *   **logicalExp**: the logical relation for multiple search conditions. Valid values:
+         * 
+         *     *   **OR**: The search conditions use a logical **OR**.
+         *     *   **AND**: The search conditions use a logical **AND**.
+         * 
+         * > You can call the [DescribeImageRepoCriteria](~~DescribeImageRepoCriteria~~) operation to query the supported search conditions.
          */
         public Builder criteria(String criteria) {
             this.putQueryParameter("Criteria", criteria);
@@ -105,7 +117,7 @@ public class DescribeImageRepoDetailListRequest extends Request {
         }
 
         /**
-         * The pagination information.
+         * The number of the page to return. Default value: **1**.
          */
         public Builder currentPage(Integer currentPage) {
             this.putQueryParameter("CurrentPage", currentPage);
@@ -114,7 +126,11 @@ public class DescribeImageRepoDetailListRequest extends Request {
         }
 
         /**
-         * The data returned.
+         * The logical relationship that you want to use to evaluate multiple search conditions. Valid values:
+         * <p>
+         * 
+         * *   **OR**: Search conditions are evaluated by using a logical **OR**.
+         * *   **AND**: Search conditions are evaluated by using a logical **AND**.
          */
         public Builder logicalExp(String logicalExp) {
             this.putQueryParameter("LogicalExp", logicalExp);
@@ -123,7 +139,10 @@ public class DescribeImageRepoDetailListRequest extends Request {
         }
 
         /**
-         * The ID of the request, which is used to locate and troubleshoot issues.
+         * The number of entries to return on each page. Default value: 20. If you leave this parameter empty, 20 entries are returned on each page.
+         * <p>
+         * 
+         * > We recommend that you do not leave this parameter empty.
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);

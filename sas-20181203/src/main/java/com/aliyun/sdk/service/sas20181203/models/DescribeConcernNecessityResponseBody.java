@@ -50,7 +50,12 @@ public class DescribeConcernNecessityResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * ConcernNecessity.
+         * The priorities to fix the vulnerabilities. Valid values:
+         * <p>
+         * 
+         * *   asap: high
+         * *   later: medium
+         * *   nntf: low
          */
         public Builder concernNecessity(java.util.List < String > concernNecessity) {
             this.concernNecessity = concernNecessity;
@@ -58,7 +63,7 @@ public class DescribeConcernNecessityResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request, which is used to locate and troubleshoot issues.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

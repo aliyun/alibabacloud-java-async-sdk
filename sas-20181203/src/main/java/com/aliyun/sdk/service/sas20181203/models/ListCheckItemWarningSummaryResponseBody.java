@@ -62,7 +62,7 @@ public class ListCheckItemWarningSummaryResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The data returned.
+         * An array that consists of the risk statistics of check items.
          */
         public Builder list(java.util.List < List> list) {
             this.list = list;
@@ -70,7 +70,7 @@ public class ListCheckItemWarningSummaryResponseBody extends TeaModel {
         }
 
         /**
-         * The number of servers that are affected by the check item.
+         * The pagination information.
          */
         public Builder pageInfo(PageInfo pageInfo) {
             this.pageInfo = pageInfo;
@@ -78,7 +78,7 @@ public class ListCheckItemWarningSummaryResponseBody extends TeaModel {
         }
 
         /**
-         * The number of entries returned on the current page.
+         * The ID of the request, which is used to locate and troubleshoot issues.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -238,7 +238,7 @@ public class ListCheckItemWarningSummaryResponseBody extends TeaModel {
             private Integer warningMachineCount; 
 
             /**
-             * The type of the check item.
+             * The suggestion on the check item.
              */
             public Builder advice(String advice) {
                 this.advice = advice;
@@ -246,7 +246,7 @@ public class ListCheckItemWarningSummaryResponseBody extends TeaModel {
             }
 
             /**
-             * The type of the baseline.
+             * The alias of the baseline type.
              */
             public Builder alias(String alias) {
                 this.alias = alias;
@@ -254,7 +254,7 @@ public class ListCheckItemWarningSummaryResponseBody extends TeaModel {
             }
 
             /**
-             * The alias of the baseline type.
+             * The ID of the check item.
              */
             public Builder checkId(Long checkId) {
                 this.checkId = checkId;
@@ -262,18 +262,10 @@ public class ListCheckItemWarningSummaryResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the check item.
+             * The description of the check item.
              */
             public Builder checkItem(String checkItem) {
                 this.checkItem = checkItem;
-                return this;
-            }
-
-            /**
-             * The description of the check item.
-             */
-            public Builder checkLevel(String checkLevel) {
-                this.checkLevel = checkLevel;
                 return this;
             }
 
@@ -283,6 +275,14 @@ public class ListCheckItemWarningSummaryResponseBody extends TeaModel {
              * *   **high**
              * *  **medium**
              * *   **low**
+             */
+            public Builder checkLevel(String checkLevel) {
+                this.checkLevel = checkLevel;
+                return this;
+            }
+
+            /**
+             * The type of the check item.
              */
             public Builder checkType(String checkType) {
                 this.checkType = checkType;
@@ -298,7 +298,7 @@ public class ListCheckItemWarningSummaryResponseBody extends TeaModel {
             }
 
             /**
-             * The suggestion on the check item.
+             * The description of the check item.
              */
             public Builder description(String description) {
                 this.description = description;
@@ -306,18 +306,10 @@ public class ListCheckItemWarningSummaryResponseBody extends TeaModel {
             }
 
             /**
-             * The risk statistics of the check item.
+             * The type of the baseline.
              */
             public Builder riskType(String riskType) {
                 this.riskType = riskType;
-                return this;
-            }
-
-            /**
-             * The description of the check item.
-             */
-            public Builder status(Integer status) {
-                this.status = status;
                 return this;
             }
 
@@ -327,6 +319,14 @@ public class ListCheckItemWarningSummaryResponseBody extends TeaModel {
              * *  **1**: failed
              * 
              * *  **3**: passed
+             */
+            public Builder status(Integer status) {
+                this.status = status;
+                return this;
+            }
+
+            /**
+             * The number of servers that are affected by the check item.
              */
             public Builder warningMachineCount(Integer warningMachineCount) {
                 this.warningMachineCount = warningMachineCount;
@@ -403,7 +403,7 @@ public class ListCheckItemWarningSummaryResponseBody extends TeaModel {
             private Integer totalCount; 
 
             /**
-             * The total number of entries returned.
+             * The number of entries returned on the current page.
              */
             public Builder count(Integer count) {
                 this.count = count;
@@ -411,7 +411,7 @@ public class ListCheckItemWarningSummaryResponseBody extends TeaModel {
             }
 
             /**
-             * The pagination information.
+             * The page number of the returned page.
              */
             public Builder currentPage(Integer currentPage) {
                 this.currentPage = currentPage;
@@ -419,7 +419,7 @@ public class ListCheckItemWarningSummaryResponseBody extends TeaModel {
             }
 
             /**
-             * The page number of the returned page.
+             * The number of entries returned per page.
              */
             public Builder pageSize(Integer pageSize) {
                 this.pageSize = pageSize;
@@ -427,7 +427,7 @@ public class ListCheckItemWarningSummaryResponseBody extends TeaModel {
             }
 
             /**
-             * The number of entries returned per page.
+             * The total number of entries returned.
              */
             public Builder totalCount(Integer totalCount) {
                 this.totalCount = totalCount;

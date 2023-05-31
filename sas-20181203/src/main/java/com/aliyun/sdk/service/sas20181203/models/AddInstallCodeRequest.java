@@ -29,6 +29,10 @@ public class AddInstallCodeRequest extends Request {
     private String os;
 
     @Query
+    @NameInMap("ProxyCluster")
+    private String proxyCluster;
+
+    @Query
     @NameInMap("VendorName")
     private String vendorName;
 
@@ -38,6 +42,7 @@ public class AddInstallCodeRequest extends Request {
         this.groupId = builder.groupId;
         this.onlyImage = builder.onlyImage;
         this.os = builder.os;
+        this.proxyCluster = builder.proxyCluster;
         this.vendorName = builder.vendorName;
     }
 
@@ -83,6 +88,13 @@ public class AddInstallCodeRequest extends Request {
     }
 
     /**
+     * @return proxyCluster
+     */
+    public String getProxyCluster() {
+        return this.proxyCluster;
+    }
+
+    /**
      * @return vendorName
      */
     public String getVendorName() {
@@ -94,6 +106,7 @@ public class AddInstallCodeRequest extends Request {
         private Long groupId; 
         private Boolean onlyImage; 
         private String os; 
+        private String proxyCluster; 
         private String vendorName; 
 
         private Builder() {
@@ -106,15 +119,31 @@ public class AddInstallCodeRequest extends Request {
             this.groupId = request.groupId;
             this.onlyImage = request.onlyImage;
             this.os = request.os;
+            this.proxyCluster = request.proxyCluster;
             this.vendorName = request.vendorName;
         } 
 
         /**
-         * 6134
+         * The validity period of the installation command. The value is a 13-digit timestamp.
+         * <p>
+         * 
+         * >  The installation command is valid only within the validity period. An expired installation command cannot be used to install the Security Center agent.
          */
         public Builder expiredDate(Long expiredDate) {
             this.putQueryParameter("ExpiredDate", expiredDate);
             this.expiredDate = expiredDate;
+            return this;
+        }
+
+        /**
+         * The ID of the asset group to which the you want to add the asset.
+         * <p>
+         * 
+         * >  You can call the [DescribeAllGroups](~~describeallgroups~~) operation to query the IDs of asset groups.
+         */
+        public Builder groupId(Long groupId) {
+            this.putQueryParameter("GroupId", groupId);
+            this.groupId = groupId;
             return this;
         }
 
@@ -125,9 +154,9 @@ public class AddInstallCodeRequest extends Request {
          * *   **false**: does not create an image.
          * *   **true**: creates an image.
          */
-        public Builder groupId(Long groupId) {
-            this.putQueryParameter("GroupId", groupId);
-            this.groupId = groupId;
+        public Builder onlyImage(Boolean onlyImage) {
+            this.putQueryParameter("OnlyImage", onlyImage);
+            this.onlyImage = onlyImage;
             return this;
         }
 
@@ -139,15 +168,6 @@ public class AddInstallCodeRequest extends Request {
          * *   **windows**
          * *   **windows-2003**
          */
-        public Builder onlyImage(Boolean onlyImage) {
-            this.putQueryParameter("OnlyImage", onlyImage);
-            this.onlyImage = onlyImage;
-            return this;
-        }
-
-        /**
-         * The ID of the request, which is used to locate and troubleshoot issues.
-         */
         public Builder os(String os) {
             this.putQueryParameter("Os", os);
             this.os = os;
@@ -155,10 +175,19 @@ public class AddInstallCodeRequest extends Request {
         }
 
         /**
-         * The ID of the asset group to which the you want to add the asset.
+         * ProxyCluster.
+         */
+        public Builder proxyCluster(String proxyCluster) {
+            this.putQueryParameter("ProxyCluster", proxyCluster);
+            this.proxyCluster = proxyCluster;
+            return this;
+        }
+
+        /**
+         * The name of the service provider for the asset. Default value: **ALIYUN**.
          * <p>
          * 
-         * >  You can call the [DescribeAllGroups](~~describeallgroups~~) operation to query the IDs of asset groups.
+         * >  You can call the [DescribeVendorList](~~DescribeVendorList~~) operation to query the names of service providers.
          */
         public Builder vendorName(String vendorName) {
             this.putQueryParameter("VendorName", vendorName);

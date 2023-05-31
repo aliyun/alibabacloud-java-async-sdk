@@ -202,7 +202,11 @@ public class ModifyStrategyRequest extends Request {
         } 
 
         /**
-         * CustomType.
+         * The type of the baseline check policy. Valid values:
+         * <p>
+         * 
+         * *   **custom**: a custom baseline check policy
+         * *   **common**: a standard baseline check policy
          */
         public Builder customType(String customType) {
             this.putQueryParameter("CustomType", customType);
@@ -211,7 +215,13 @@ public class ModifyStrategyRequest extends Request {
         }
 
         /**
-         * CycleDays.
+         * The new interval of the baseline check. Valid values:
+         * <p>
+         * 
+         * *   **1**: every 2 days
+         * *   **3**: every 4 days
+         * *   **7**: every 8 days
+         * *   **30**: every 31 days
          */
         public Builder cycleDays(String cycleDays) {
             this.putQueryParameter("CycleDays", cycleDays);
@@ -220,7 +230,15 @@ public class ModifyStrategyRequest extends Request {
         }
 
         /**
-         * CycleStartTime.
+         * The new time range during which the baseline check starts. Valid values:
+         * <p>
+         * 
+         * *   **0**: The baseline check starts within the time range from 00:00 to 06:00.
+         * *   **6**: The baseline check starts within the time range from 06:00 to 12:00.
+         * *   **12**: The baseline check starts within the time range from 12:00 to 18:00.
+         * *   **18**: The baseline check starts within the time range from 18:00 to 24:00.
+         * 
+         * >  This parameter is deprecated.
          */
         public Builder cycleStartTime(String cycleStartTime) {
             this.putQueryParameter("CycleStartTime", cycleStartTime);
@@ -229,7 +247,7 @@ public class ModifyStrategyRequest extends Request {
         }
 
         /**
-         * EndTime.
+         * The time when the baseline check based on the baseline check policy ends.
          */
         public Builder endTime(String endTime) {
             this.putQueryParameter("EndTime", endTime);
@@ -238,7 +256,7 @@ public class ModifyStrategyRequest extends Request {
         }
 
         /**
-         * Id.
+         * The ID of the baseline check policy.
          */
         public Builder id(String id) {
             this.putQueryParameter("Id", id);
@@ -247,7 +265,7 @@ public class ModifyStrategyRequest extends Request {
         }
 
         /**
-         * Name.
+         * The new name of the baseline check policy.
          */
         public Builder name(String name) {
             this.putQueryParameter("Name", name);
@@ -256,7 +274,23 @@ public class ModifyStrategyRequest extends Request {
         }
 
         /**
-         * RiskCustomParams.
+         * The custom configurations of the baseline. The value of this parameter is in the JSON format and contains the following fields:
+         * <p>
+         * 
+         * *   **typeName**: the name of the baseline.
+         * 
+         * *   **checkDetails**: the details of the baseline. The value is in the JSON format.
+         * 
+         *     *   **checkId**: the ID of the check item.
+         * 
+         *     *   **rules**: the rule configurations. The value is in the JSON format.
+         * 
+         *         *   **ruleId**: the ID of the rule.
+         * 
+         *         *   **paramList**: the list of parameters in the rule. The value is in the JSON format.
+         * 
+         *             *   **paramName**: the name of the parameter.
+         *             *   **value**: the value of the parameter.
          */
         public Builder riskCustomParams(String riskCustomParams) {
             this.putQueryParameter("RiskCustomParams", riskCustomParams);
@@ -265,7 +299,7 @@ public class ModifyStrategyRequest extends Request {
         }
 
         /**
-         * RiskSubTypeName.
+         * The subtype of the baselines. You can call the [DescribeRiskType](~~DescribeRiskType~~) operation to query the subtypes of baselines.
          */
         public Builder riskSubTypeName(String riskSubTypeName) {
             this.putQueryParameter("RiskSubTypeName", riskSubTypeName);
@@ -274,7 +308,7 @@ public class ModifyStrategyRequest extends Request {
         }
 
         /**
-         * SourceIp.
+         * The source IP address of the request.
          */
         public Builder sourceIp(String sourceIp) {
             this.putQueryParameter("SourceIp", sourceIp);
@@ -283,7 +317,7 @@ public class ModifyStrategyRequest extends Request {
         }
 
         /**
-         * StartTime.
+         * The time when the baseline check based on the baseline check policy starts.
          */
         public Builder startTime(String startTime) {
             this.putQueryParameter("StartTime", startTime);
@@ -292,7 +326,11 @@ public class ModifyStrategyRequest extends Request {
         }
 
         /**
-         * TargetType.
+         * The method that is used to apply the baseline check policy. Valid values:
+         * <p>
+         * 
+         * *   **groupId**: asset groups
+         * *   **uuid**: assets
          */
         public Builder targetType(String targetType) {
             this.putQueryParameter("TargetType", targetType);

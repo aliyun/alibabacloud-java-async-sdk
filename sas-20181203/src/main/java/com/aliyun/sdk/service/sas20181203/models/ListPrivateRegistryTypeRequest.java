@@ -54,7 +54,10 @@ public class ListPrivateRegistryTypeRequest extends Request {
         } 
 
         /**
-         * Lang.
+         * 请求和接收消息的语言类型。取值：
+         * <p>
+         * - **zh**：中文
+         * - **en**：英文
          */
         public Builder lang(String lang) {
             this.putQueryParameter("Lang", lang);

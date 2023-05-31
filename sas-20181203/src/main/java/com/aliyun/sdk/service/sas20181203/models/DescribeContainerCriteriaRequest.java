@@ -68,7 +68,15 @@ public class DescribeContainerCriteriaRequest extends Request {
         } 
 
         /**
-         * GroupField.
+         * The filter condition. Valid values:
+         * <p>
+         * 
+         * *   **pod**: pod
+         * *   **appName**: application name
+         * *   **clusterId**: cluster ID
+         * *   **namespace**: namespace
+         * *   **image**: image
+         * *   **containerScan**: container scan
          */
         public Builder groupField(String groupField) {
             this.putQueryParameter("GroupField", groupField);
@@ -77,7 +85,7 @@ public class DescribeContainerCriteriaRequest extends Request {
         }
 
         /**
-         * Value.
+         * The value of the filter condition. The value can be an application name, node name, namespace, cluster name, public IP address, pod address, region, pod, instance ID, cluster ID, or container ID. Fuzzy match is supported.
          */
         public Builder value(String value) {
             this.putQueryParameter("Value", value);

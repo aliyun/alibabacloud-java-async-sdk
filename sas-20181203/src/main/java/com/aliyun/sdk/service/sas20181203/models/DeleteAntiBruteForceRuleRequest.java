@@ -55,7 +55,7 @@ public class DeleteAntiBruteForceRuleRequest extends Request {
         } 
 
         /**
-         * Ids.
+         * The IDs of the defense rules against brute-force attacks to delete.
          */
         public Builder ids(java.util.List < Long > ids) {
             this.putQueryParameter("Ids", ids);

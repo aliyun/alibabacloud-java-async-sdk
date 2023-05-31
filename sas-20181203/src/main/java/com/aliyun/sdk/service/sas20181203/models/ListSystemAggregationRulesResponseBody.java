@@ -62,7 +62,7 @@ public class ListSystemAggregationRulesResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * AggregationList.
+         * An array that consists of the details about the aggregation types.
          */
         public Builder aggregationList(java.util.List < AggregationList> aggregationList) {
             this.aggregationList = aggregationList;
@@ -70,7 +70,7 @@ public class ListSystemAggregationRulesResponseBody extends TeaModel {
         }
 
         /**
-         * PageInfo.
+         * The pagination information.
          */
         public Builder pageInfo(PageInfo pageInfo) {
             this.pageInfo = pageInfo;
@@ -78,7 +78,7 @@ public class ListSystemAggregationRulesResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request, which is used to locate and troubleshoot issues.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -142,7 +142,7 @@ public class ListSystemAggregationRulesResponseBody extends TeaModel {
             private Integer ruleCount; 
 
             /**
-             * Id.
+             * The ID of the aggregation type.
              */
             public Builder id(Integer id) {
                 this.id = id;
@@ -150,7 +150,7 @@ public class ListSystemAggregationRulesResponseBody extends TeaModel {
             }
 
             /**
-             * Name.
+             * The name of the aggregation type.
              */
             public Builder name(String name) {
                 this.name = name;
@@ -158,7 +158,7 @@ public class ListSystemAggregationRulesResponseBody extends TeaModel {
             }
 
             /**
-             * RuleCount.
+             * The number of rules that are of the aggregation type.
              */
             public Builder ruleCount(Integer ruleCount) {
                 this.ruleCount = ruleCount;
@@ -223,7 +223,7 @@ public class ListSystemAggregationRulesResponseBody extends TeaModel {
             private Integer totalCount; 
 
             /**
-             * CurrentPage.
+             * The page number of the returned page.
              */
             public Builder currentPage(Integer currentPage) {
                 this.currentPage = currentPage;
@@ -231,7 +231,7 @@ public class ListSystemAggregationRulesResponseBody extends TeaModel {
             }
 
             /**
-             * PageSize.
+             * The number of entries returned per page.
              */
             public Builder pageSize(Integer pageSize) {
                 this.pageSize = pageSize;
@@ -239,7 +239,7 @@ public class ListSystemAggregationRulesResponseBody extends TeaModel {
             }
 
             /**
-             * TotalCount.
+             * The total number of entries returned.
              */
             public Builder totalCount(Integer totalCount) {
                 this.totalCount = totalCount;

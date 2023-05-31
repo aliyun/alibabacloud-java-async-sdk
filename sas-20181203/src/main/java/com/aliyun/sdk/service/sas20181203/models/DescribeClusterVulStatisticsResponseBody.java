@@ -50,7 +50,7 @@ public class DescribeClusterVulStatisticsResponseBody extends TeaModel {
         private VulStat vulStat; 
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -58,7 +58,7 @@ public class DescribeClusterVulStatisticsResponseBody extends TeaModel {
         }
 
         /**
-         * VulStat.
+         * The statistics of the vulnerabilities.
          */
         public Builder vulStat(VulStat vulStat) {
             this.vulStat = vulStat;
@@ -122,7 +122,7 @@ public class DescribeClusterVulStatisticsResponseBody extends TeaModel {
             private String nntfCount; 
 
             /**
-             * AsapCount.
+             * The number of high-risk vulnerabilities.
              */
             public Builder asapCount(String asapCount) {
                 this.asapCount = asapCount;
@@ -130,7 +130,7 @@ public class DescribeClusterVulStatisticsResponseBody extends TeaModel {
             }
 
             /**
-             * LaterCount.
+             * The number of medium-risk vulnerabilities.
              */
             public Builder laterCount(String laterCount) {
                 this.laterCount = laterCount;
@@ -138,7 +138,7 @@ public class DescribeClusterVulStatisticsResponseBody extends TeaModel {
             }
 
             /**
-             * NntfCount.
+             * The number of low-risk vulnerabilities.
              */
             public Builder nntfCount(String nntfCount) {
                 this.nntfCount = nntfCount;

@@ -50,7 +50,7 @@ public class ListClusterCnnfStatusDetailResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The ID of the server.
+         * An array that consists of the protection status of the container firewall.
          */
         public Builder data(java.util.List < Data> data) {
             this.data = data;
@@ -58,7 +58,7 @@ public class ListClusterCnnfStatusDetailResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the cluster.
+         * The ID of the request, which is used to locate and troubleshoot issues.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -230,7 +230,7 @@ public class ListClusterCnnfStatusDetailResponseBody extends TeaModel {
             private String uuid; 
 
             /**
-             * Indicates whether the container firewall plug-in is installed.
+             * The ID of the cluster.
              */
             public Builder clusterId(String clusterId) {
                 this.clusterId = clusterId;
@@ -238,7 +238,7 @@ public class ListClusterCnnfStatusDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The machine type of the instance. The value is fixed as **ecs**.
+             * Indicates whether the container firewall plug-in is installed.
              */
             public Builder installed(Boolean installed) {
                 this.installed = installed;
@@ -246,14 +246,26 @@ public class ListClusterCnnfStatusDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The online status of the plug-in. Valid values:
-             * <p>
-             * 
-             * *   **false**: The plug-in is offline.
-             * *   **true**: The plug-in is online.
+             * The ID of the server.
              */
             public Builder instanceId(String instanceId) {
                 this.instanceId = instanceId;
+                return this;
+            }
+
+            /**
+             * The public IP address of the associated instance.
+             */
+            public Builder internetIp(String internetIp) {
+                this.internetIp = internetIp;
+                return this;
+            }
+
+            /**
+             * The private IP address of the associated instance.
+             */
+            public Builder intranetIp(String intranetIp) {
+                this.intranetIp = intranetIp;
                 return this;
             }
 
@@ -265,29 +277,13 @@ public class ListClusterCnnfStatusDetailResponseBody extends TeaModel {
              * *   **PLUGIN\_NOT_INSTALLED**: The plug-in is not installed.
              * *   **PLUGIN\_INVALID_VERSION**: The version of the plug-in is invalid.
              */
-            public Builder internetIp(String internetIp) {
-                this.internetIp = internetIp;
-                return this;
-            }
-
-            /**
-             * IntranetIp.
-             */
-            public Builder intranetIp(String intranetIp) {
-                this.intranetIp = intranetIp;
-                return this;
-            }
-
-            /**
-             * InvalidType.
-             */
             public Builder invalidType(String invalidType) {
                 this.invalidType = invalidType;
                 return this;
             }
 
             /**
-             * The public IP address of the associated instance.
+             * The name of the server.
              */
             public Builder machineName(String machineName) {
                 this.machineName = machineName;
@@ -295,7 +291,7 @@ public class ListClusterCnnfStatusDetailResponseBody extends TeaModel {
             }
 
             /**
-             * MachineType.
+             * The machine type of the instance. The value is fixed as **ecs**.
              */
             public Builder machineType(Integer machineType) {
                 this.machineType = machineType;
@@ -303,7 +299,7 @@ public class ListClusterCnnfStatusDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The private IP address of the associated instance.
+             * The name of the plug-in. The value is fixed as **alinet**.
              */
             public Builder pluginName(String pluginName) {
                 this.pluginName = pluginName;
@@ -311,7 +307,7 @@ public class ListClusterCnnfStatusDetailResponseBody extends TeaModel {
             }
 
             /**
-             * PluginVersion.
+             * The version of the plug-in.
              */
             public Builder pluginVersion(String pluginVersion) {
                 this.pluginVersion = pluginVersion;
@@ -319,7 +315,11 @@ public class ListClusterCnnfStatusDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The version of the plug-in.
+             * The online status of the plug-in. Valid values:
+             * <p>
+             * 
+             * *   **false**: The plug-in is offline.
+             * *   **true**: The plug-in is online.
              */
             public Builder status(String status) {
                 this.status = status;
@@ -327,7 +327,7 @@ public class ListClusterCnnfStatusDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the plug-in. The value is fixed as **alinet**.
+             * The UUID of the asset.
              */
             public Builder uuid(String uuid) {
                 this.uuid = uuid;

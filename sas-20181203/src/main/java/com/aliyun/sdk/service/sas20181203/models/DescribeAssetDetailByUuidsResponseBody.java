@@ -50,7 +50,7 @@ public class DescribeAssetDetailByUuidsResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * AssetList.
+         * An array that consists of the details of the ECS instances.
          */
         public Builder assetList(java.util.List < AssetList> assetList) {
             this.assetList = assetList;
@@ -58,7 +58,7 @@ public class DescribeAssetDetailByUuidsResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request, which is used to locate and troubleshoot issues.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -266,7 +266,10 @@ public class DescribeAssetDetailByUuidsResponseBody extends TeaModel {
             private String vpcInstanceId; 
 
             /**
-             * AssetType.
+             * The type of the asset.
+             * <p>
+             * 
+             * The value is fixed as **0**, which indicates ECS instances.
              */
             public Builder assetType(String assetType) {
                 this.assetType = assetType;
@@ -274,7 +277,11 @@ public class DescribeAssetDetailByUuidsResponseBody extends TeaModel {
             }
 
             /**
-             * ClientStatus.
+             * The status of the Security Center agent. Valid values:
+             * <p>
+             * 
+             * *   **online**
+             * *   **offline**
              */
             public Builder clientStatus(String clientStatus) {
                 this.clientStatus = clientStatus;
@@ -282,7 +289,14 @@ public class DescribeAssetDetailByUuidsResponseBody extends TeaModel {
             }
 
             /**
-             * Flag.
+             * The type of the asset by source. Valid values:
+             * <p>
+             * 
+             * *   **0**: The asset is provided by Alibaba Cloud.
+             * *   **1**: The asset is not provided by Alibaba Cloud.
+             * *   **2**: The asset resides in a data center.
+             * *   **3**, **4**, **5**, and **7**: other cloud asset.
+             * *   **8**: light-weight assets.
              */
             public Builder flag(Integer flag) {
                 this.flag = flag;
@@ -290,7 +304,7 @@ public class DescribeAssetDetailByUuidsResponseBody extends TeaModel {
             }
 
             /**
-             * InstanceId.
+             * The ID of the ECS instance.
              */
             public Builder instanceId(String instanceId) {
                 this.instanceId = instanceId;
@@ -298,7 +312,7 @@ public class DescribeAssetDetailByUuidsResponseBody extends TeaModel {
             }
 
             /**
-             * InstanceName.
+             * The name of the ECS instance.
              */
             public Builder instanceName(String instanceName) {
                 this.instanceName = instanceName;
@@ -306,7 +320,7 @@ public class DescribeAssetDetailByUuidsResponseBody extends TeaModel {
             }
 
             /**
-             * InternetIp.
+             * The public IP address of the ECS instance.
              */
             public Builder internetIp(String internetIp) {
                 this.internetIp = internetIp;
@@ -314,7 +328,7 @@ public class DescribeAssetDetailByUuidsResponseBody extends TeaModel {
             }
 
             /**
-             * IntranetIp.
+             * The private IP address of the ECS instance.
              */
             public Builder intranetIp(String intranetIp) {
                 this.intranetIp = intranetIp;
@@ -322,7 +336,10 @@ public class DescribeAssetDetailByUuidsResponseBody extends TeaModel {
             }
 
             /**
-             * Ip.
+             * The IP address of the ECS instance.
+             * <p>
+             * 
+             * >  If the ECS instance has a public IP address, the value of this parameter is the public IP address of the ECS instance. If the ECS instance does not have a public IP address, the value of this parameter is the private IP address of the ECS instance.
              */
             public Builder ip(String ip) {
                 this.ip = ip;
@@ -330,7 +347,7 @@ public class DescribeAssetDetailByUuidsResponseBody extends TeaModel {
             }
 
             /**
-             * Os.
+             * The operating system of the ECS instance.
              */
             public Builder os(String os) {
                 this.os = os;
@@ -338,7 +355,7 @@ public class DescribeAssetDetailByUuidsResponseBody extends TeaModel {
             }
 
             /**
-             * OsName.
+             * The name of the operating system run by the ECS instance.
              */
             public Builder osName(String osName) {
                 this.osName = osName;
@@ -346,7 +363,7 @@ public class DescribeAssetDetailByUuidsResponseBody extends TeaModel {
             }
 
             /**
-             * Region.
+             * The region in which the ECS instance resides.
              */
             public Builder region(String region) {
                 this.region = region;
@@ -354,7 +371,10 @@ public class DescribeAssetDetailByUuidsResponseBody extends TeaModel {
             }
 
             /**
-             * RegionId.
+             * The region in which the ECS instance resides.
+             * <p>
+             * 
+             * >  For more information about the mapping between region IDs and region names, see [Regions and zones](~~40654~~).
              */
             public Builder regionId(String regionId) {
                 this.regionId = regionId;
@@ -362,7 +382,7 @@ public class DescribeAssetDetailByUuidsResponseBody extends TeaModel {
             }
 
             /**
-             * RegionName.
+             * The name of the region in which the ECS instance resides.
              */
             public Builder regionName(String regionName) {
                 this.regionName = regionName;
@@ -370,7 +390,7 @@ public class DescribeAssetDetailByUuidsResponseBody extends TeaModel {
             }
 
             /**
-             * Uuid.
+             * The UUID of the ECS instance.
              */
             public Builder uuid(String uuid) {
                 this.uuid = uuid;
@@ -378,7 +398,7 @@ public class DescribeAssetDetailByUuidsResponseBody extends TeaModel {
             }
 
             /**
-             * VpcInstanceId.
+             * The ID of the virtual private cloud (VPC).
              */
             public Builder vpcInstanceId(String vpcInstanceId) {
                 this.vpcInstanceId = vpcInstanceId;

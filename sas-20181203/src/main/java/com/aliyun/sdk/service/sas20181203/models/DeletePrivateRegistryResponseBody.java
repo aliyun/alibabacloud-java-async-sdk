@@ -50,7 +50,11 @@ public class DeletePrivateRegistryResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * Data.
+         * Indicates whether the request was successful. Valid values:
+         * <p>
+         * 
+         * *   **true**: The request was successful.
+         * *   **false**: The request failed.
          */
         public Builder data(Boolean data) {
             this.data = data;
@@ -58,7 +62,7 @@ public class DeletePrivateRegistryResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request, which is used to locate and troubleshoot issues.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

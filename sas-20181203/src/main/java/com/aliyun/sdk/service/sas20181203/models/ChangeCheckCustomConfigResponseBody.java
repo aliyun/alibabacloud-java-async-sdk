@@ -50,7 +50,7 @@ public class ChangeCheckCustomConfigResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * IllegalCustomConfigs.
+         * An array that consists of the invalid custom configuration items of the check item.
          */
         public Builder illegalCustomConfigs(java.util.List < IllegalCustomConfigs> illegalCustomConfigs) {
             this.illegalCustomConfigs = illegalCustomConfigs;
@@ -58,7 +58,7 @@ public class ChangeCheckCustomConfigResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request, which is used to locate and troubleshoot issues.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -98,7 +98,7 @@ public class ChangeCheckCustomConfigResponseBody extends TeaModel {
             private String name; 
 
             /**
-             * Name.
+             * The name of the custom configuration item. The name of a custom configuration item is unique in a check item.
              */
             public Builder name(String name) {
                 this.name = name;

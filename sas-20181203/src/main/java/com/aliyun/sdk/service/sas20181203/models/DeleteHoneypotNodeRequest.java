@@ -78,7 +78,10 @@ public class DeleteHoneypotNodeRequest extends Request {
         }
 
         /**
-         * Deletes a specified management node.
+         * The ID of the management node.
+         * <p>
+         * 
+         * > You can call the [ListHoneypotNode](~~ListHoneypotNode~~) operation to query the IDs of management nodes.
          */
         public Builder nodeId(String nodeId) {
             this.putQueryParameter("NodeId", nodeId);

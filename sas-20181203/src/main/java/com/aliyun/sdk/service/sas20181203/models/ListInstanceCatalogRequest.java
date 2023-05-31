@@ -110,7 +110,11 @@ public class ListInstanceCatalogRequest extends Request {
         } 
 
         /**
-         * Lang.
+         * The language of the content within the request and response. Valid values:
+         * <p>
+         * 
+         * *   **zh**: Chinese
+         * *   **en**: English
          */
         public Builder lang(String lang) {
             this.putQueryParameter("Lang", lang);
@@ -119,7 +123,11 @@ public class ListInstanceCatalogRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * The ID of the region in which the asset resides. Valid values:
+         * <p>
+         * 
+         * *   **cn-hangzhou**: International
+         * *   **ap-southeast-1**: Singapore
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -128,7 +136,7 @@ public class ListInstanceCatalogRequest extends Request {
         }
 
         /**
-         * RequirementIds.
+         * The IDs of requirement items.
          */
         public Builder requirementIds(java.util.List < Long > requirementIds) {
             this.putQueryParameter("RequirementIds", requirementIds);
@@ -137,7 +145,7 @@ public class ListInstanceCatalogRequest extends Request {
         }
 
         /**
-         * StandardIds.
+         * The IDs of standards.
          */
         public Builder standardIds(java.util.List < Long > standardIds) {
             this.putQueryParameter("StandardIds", standardIds);
@@ -146,7 +154,7 @@ public class ListInstanceCatalogRequest extends Request {
         }
 
         /**
-         * Types.
+         * The types of check standards.
          */
         public Builder types(java.util.List < String > types) {
             this.putQueryParameter("Types", types);

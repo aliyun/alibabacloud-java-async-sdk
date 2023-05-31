@@ -98,7 +98,7 @@ public class CreateHoneypotPresetResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * Code.
+         * The status code returned. The status code **200** indicates that the request was successful. Other status codes indicate that the request failed. You can identify the cause of the failure based on the status code.
          */
         public Builder code(String code) {
             this.code = code;
@@ -106,7 +106,7 @@ public class CreateHoneypotPresetResponseBody extends TeaModel {
         }
 
         /**
-         * HoneypotPreset.
+         * The creation result.
          */
         public Builder honeypotPreset(HoneypotPreset honeypotPreset) {
             this.honeypotPreset = honeypotPreset;
@@ -114,7 +114,7 @@ public class CreateHoneypotPresetResponseBody extends TeaModel {
         }
 
         /**
-         * HttpStatusCode.
+         * The HTTP status code returned.
          */
         public Builder httpStatusCode(Integer httpStatusCode) {
             this.httpStatusCode = httpStatusCode;
@@ -122,7 +122,7 @@ public class CreateHoneypotPresetResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * The message returned.
          */
         public Builder message(String message) {
             this.message = message;
@@ -130,7 +130,7 @@ public class CreateHoneypotPresetResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request, which is used to locate and troubleshoot issues.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -138,7 +138,11 @@ public class CreateHoneypotPresetResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * Indicates whether the request was successful. Valid values:
+         * <p>
+         * 
+         * *   **true**: The request was successful.
+         * *   **false**: The request failed.
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -178,7 +182,7 @@ public class CreateHoneypotPresetResponseBody extends TeaModel {
             private String honeypotPresetId; 
 
             /**
-             * HoneypotPresetId.
+             * The ID of the honeypot template.
              */
             public Builder honeypotPresetId(String honeypotPresetId) {
                 this.honeypotPresetId = honeypotPresetId;

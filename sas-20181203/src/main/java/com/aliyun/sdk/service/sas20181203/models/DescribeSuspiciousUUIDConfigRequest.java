@@ -55,7 +55,14 @@ public class DescribeSuspiciousUUIDConfigRequest extends Request {
         } 
 
         /**
-         * Type.
+         * The type of proactive defense. Valid values:
+         * <p>
+         * 
+         * *   **auto_breaking**: virus defense
+         * *   **ransomware_breaking**: ransomware capture
+         * *   **webshell\_cloud_breaking**: webshell defense
+         * *   **alinet**: malicious behavior defense
+         * *   **alisecguard**: client protection
          */
         public Builder type(String type) {
             this.putQueryParameter("Type", type);

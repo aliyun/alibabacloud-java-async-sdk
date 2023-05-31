@@ -62,7 +62,7 @@ public class GetCheckProcessResponseBody extends TeaModel {
         private Integer totalCount; 
 
         /**
-         * FinishCount.
+         * The total number of assets on which the task is complete.
          */
         public Builder finishCount(Integer finishCount) {
             this.finishCount = finishCount;
@@ -70,7 +70,7 @@ public class GetCheckProcessResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request, which is used to locate and troubleshoot issues.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -78,7 +78,7 @@ public class GetCheckProcessResponseBody extends TeaModel {
         }
 
         /**
-         * TotalCount.
+         * The total number of assets on which the task is performed.
          */
         public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;

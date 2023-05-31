@@ -50,7 +50,7 @@ public class GetClusterCheckItemWarningStatisticsResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * Data.
+         * The statistics on risk items by risk level.
          */
         public Builder data(Data data) {
             this.data = data;
@@ -58,7 +58,7 @@ public class GetClusterCheckItemWarningStatisticsResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request, which is used to locate and troubleshoot issues.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -122,7 +122,7 @@ public class GetClusterCheckItemWarningStatisticsResponseBody extends TeaModel {
             private Integer mediumWarningCount; 
 
             /**
-             * 高危检查项数量
+             * The number of high-risk items.
              */
             public Builder highWarningCount(Integer highWarningCount) {
                 this.highWarningCount = highWarningCount;
@@ -130,7 +130,7 @@ public class GetClusterCheckItemWarningStatisticsResponseBody extends TeaModel {
             }
 
             /**
-             * 低危检查项数量
+             * The number of low-risk items.
              */
             public Builder lowWarningCount(Integer lowWarningCount) {
                 this.lowWarningCount = lowWarningCount;
@@ -138,7 +138,7 @@ public class GetClusterCheckItemWarningStatisticsResponseBody extends TeaModel {
             }
 
             /**
-             * 中危检查项数量
+             * The number of medium-risk items.
              */
             public Builder mediumWarningCount(Integer mediumWarningCount) {
                 this.mediumWarningCount = mediumWarningCount;

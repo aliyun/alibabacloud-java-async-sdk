@@ -98,7 +98,7 @@ public class DescribeCheckWarningSummaryResponseBody extends TeaModel {
         private java.util.List < WarningSummarys> warningSummarys; 
 
         /**
-         * The level-1 type of the check item. Examples: database, system, weak password, and middleware.
+         * The number of check items returned on the current page.
          */
         public Builder count(Integer count) {
             this.count = count;
@@ -106,11 +106,7 @@ public class DescribeCheckWarningSummaryResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether the risk item can be exploited. Valid values:
-         * <p>
-         * 
-         * *   **true**: yes
-         * *   **false**: no
+         * The page number of the current page.
          */
         public Builder currentPage(Integer currentPage) {
             this.currentPage = currentPage;
@@ -118,10 +114,7 @@ public class DescribeCheckWarningSummaryResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the container cluster.
-         * <p>
-         * 
-         * >  You can call the [DescribeGroupedContainerInstances](~~182997~~) operation to query the IDs of container clusters.
+         * The number of entries to return on each page.
          */
         public Builder pageSize(Integer pageSize) {
             this.pageSize = pageSize;
@@ -129,7 +122,7 @@ public class DescribeCheckWarningSummaryResponseBody extends TeaModel {
         }
 
         /**
-         * The number of entries to return on each page.
+         * The ID of the request, which is used to locate and troubleshoot issues.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -137,7 +130,7 @@ public class DescribeCheckWarningSummaryResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the risk item.
+         * The total number of check items.
          */
         public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;
@@ -145,7 +138,7 @@ public class DescribeCheckWarningSummaryResponseBody extends TeaModel {
         }
 
         /**
-         * The number of medium-risk items.
+         * The statistics of check items.
          */
         public Builder warningSummarys(java.util.List < WarningSummarys> warningSummarys) {
             this.warningSummarys = warningSummarys;
@@ -341,7 +334,7 @@ public class DescribeCheckWarningSummaryResponseBody extends TeaModel {
             private Integer warningMachineCount; 
 
             /**
-             * The statistics of check items.
+             * The number of check items.
              */
             public Builder checkCount(Integer checkCount) {
                 this.checkCount = checkCount;
@@ -349,7 +342,11 @@ public class DescribeCheckWarningSummaryResponseBody extends TeaModel {
             }
 
             /**
-             * CheckExploit.
+             * Indicates whether the risk item can be exploited. Valid values:
+             * <p>
+             * 
+             * *   **true**: yes
+             * *   **false**: no
              */
             public Builder checkExploit(Boolean checkExploit) {
                 this.checkExploit = checkExploit;
@@ -365,7 +362,11 @@ public class DescribeCheckWarningSummaryResponseBody extends TeaModel {
             }
 
             /**
-             * DatabaseRisk.
+             * Indicates whether the risk item is a database risk item. Valid values:
+             * <p>
+             * 
+             * *   **true**: yes
+             * *   **false**: no
              */
             public Builder databaseRisk(Boolean databaseRisk) {
                 this.databaseRisk = databaseRisk;
@@ -373,7 +374,7 @@ public class DescribeCheckWarningSummaryResponseBody extends TeaModel {
             }
 
             /**
-             * HighWarningCount.
+             * The number of high-risk items.
              */
             public Builder highWarningCount(Integer highWarningCount) {
                 this.highWarningCount = highWarningCount;
@@ -381,7 +382,7 @@ public class DescribeCheckWarningSummaryResponseBody extends TeaModel {
             }
 
             /**
-             * The number of low-risk items.
+             * The time when the last baseline check was performed.
              */
             public Builder lastFoundTime(String lastFoundTime) {
                 this.lastFoundTime = lastFoundTime;
@@ -389,7 +390,12 @@ public class DescribeCheckWarningSummaryResponseBody extends TeaModel {
             }
 
             /**
-             * Level.
+             * The risk level of the risk item. Valid values:
+             * <p>
+             * 
+             * *   **high**
+             * *   **medium**
+             * *   **low**
              */
             public Builder level(String level) {
                 this.level = level;
@@ -397,7 +403,7 @@ public class DescribeCheckWarningSummaryResponseBody extends TeaModel {
             }
 
             /**
-             * The number of entries to return on each page.
+             * The number of low-risk items.
              */
             public Builder lowWarningCount(Integer lowWarningCount) {
                 this.lowWarningCount = lowWarningCount;
@@ -405,7 +411,7 @@ public class DescribeCheckWarningSummaryResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the request, which is used to locate and troubleshoot issues.
+             * The number of medium-risk items.
              */
             public Builder mediumWarningCount(Integer mediumWarningCount) {
                 this.mediumWarningCount = mediumWarningCount;
@@ -413,7 +419,7 @@ public class DescribeCheckWarningSummaryResponseBody extends TeaModel {
             }
 
             /**
-             * The number of check items returned on the current page.
+             * The ID of the risk item.
              */
             public Builder riskId(Long riskId) {
                 this.riskId = riskId;
@@ -421,7 +427,7 @@ public class DescribeCheckWarningSummaryResponseBody extends TeaModel {
             }
 
             /**
-             * RiskName.
+             * The name of the risk item.
              */
             public Builder riskName(String riskName) {
                 this.riskName = riskName;
@@ -429,7 +435,7 @@ public class DescribeCheckWarningSummaryResponseBody extends TeaModel {
             }
 
             /**
-             * Queries the statistical information about baseline check results. The information includes the number of servers on which a baseline check is performed, the number of baseline check items, and the pass rate of check items in the last baseline check.
+             * The level-2 type of the risk item.
              */
             public Builder subTypeAlias(String subTypeAlias) {
                 this.subTypeAlias = subTypeAlias;
@@ -437,7 +443,7 @@ public class DescribeCheckWarningSummaryResponseBody extends TeaModel {
             }
 
             /**
-             * TypeAlias.
+             * The level-1 type of the check item. Examples: database, system, weak password, and middleware.
              */
             public Builder typeAlias(String typeAlias) {
                 this.typeAlias = typeAlias;
@@ -445,7 +451,7 @@ public class DescribeCheckWarningSummaryResponseBody extends TeaModel {
             }
 
             /**
-             * DescribeCheckWarningSummary
+             * The number of assets on which risk items are detected.
              */
             public Builder warningMachineCount(Integer warningMachineCount) {
                 this.warningMachineCount = warningMachineCount;

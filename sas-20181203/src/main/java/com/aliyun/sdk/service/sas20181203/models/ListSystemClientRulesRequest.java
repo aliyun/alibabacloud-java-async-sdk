@@ -154,7 +154,7 @@ public class ListSystemClientRulesRequest extends Request {
         } 
 
         /**
-         * AggregationIds.
+         * The IDs of the aggregation types for rules.
          */
         public Builder aggregationIds(java.util.List < Integer > aggregationIds) {
             this.putQueryParameter("AggregationIds", aggregationIds);
@@ -163,7 +163,7 @@ public class ListSystemClientRulesRequest extends Request {
         }
 
         /**
-         * CurrentPage.
+         * The number of the page to return.
          */
         public Builder currentPage(Integer currentPage) {
             this.putQueryParameter("CurrentPage", currentPage);
@@ -172,7 +172,11 @@ public class ListSystemClientRulesRequest extends Request {
         }
 
         /**
-         * IsContainer.
+         * Specifies whether to query only container images. Valid values:
+         * <p>
+         * 
+         * *   **0**: no
+         * *   **1**: yes
          */
         public Builder isContainer(Integer isContainer) {
             this.putQueryParameter("IsContainer", isContainer);
@@ -181,7 +185,11 @@ public class ListSystemClientRulesRequest extends Request {
         }
 
         /**
-         * Lang.
+         * The language of the content within the request and response. Default value: **zh**. Valid values:
+         * <p>
+         * 
+         * *   **zh**: Chinese
+         * *   **en**: English
          */
         public Builder lang(String lang) {
             this.putQueryParameter("Lang", lang);
@@ -190,7 +198,7 @@ public class ListSystemClientRulesRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * The number of entries to return on each page.
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -199,7 +207,7 @@ public class ListSystemClientRulesRequest extends Request {
         }
 
         /**
-         * RuleName.
+         * The name of the system defense rule.
          */
         public Builder ruleName(String ruleName) {
             this.putQueryParameter("RuleName", ruleName);
@@ -208,7 +216,7 @@ public class ListSystemClientRulesRequest extends Request {
         }
 
         /**
-         * RuleTypes.
+         * The types of the system defense rules.
          */
         public Builder ruleTypes(java.util.List < Integer > ruleTypes) {
             this.putQueryParameter("RuleTypes", ruleTypes);
@@ -217,7 +225,12 @@ public class ListSystemClientRulesRequest extends Request {
         }
 
         /**
-         * SystemType.
+         * The type of the OS. Valid values:
+         * <p>
+         * 
+         * *   **2**: Windows
+         * *   **1**: Linux
+         * *   **0**: all types
          */
         public Builder systemType(Integer systemType) {
             this.putQueryParameter("SystemType", systemType);

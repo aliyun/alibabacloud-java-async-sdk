@@ -62,7 +62,7 @@ public class DescribeTraceInfoDetailResponseBody extends TeaModel {
         private TraceInfoDetail traceInfoDetail; 
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -70,7 +70,11 @@ public class DescribeTraceInfoDetailResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * Indicates whether the request was successful. Valid values:
+         * <p>
+         * 
+         * *   **true**: The request was successful.
+         * *   **false**: The request failed.
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -78,7 +82,7 @@ public class DescribeTraceInfoDetailResponseBody extends TeaModel {
         }
 
         /**
-         * TraceInfoDetail.
+         * The details of the tracing diagram.
          */
         public Builder traceInfoDetail(TraceInfoDetail traceInfoDetail) {
             this.traceInfoDetail = traceInfoDetail;
@@ -166,7 +170,7 @@ public class DescribeTraceInfoDetailResponseBody extends TeaModel {
             private String type; 
 
             /**
-             * Count.
+             * The number of times.
              */
             public Builder count(Integer count) {
                 this.count = count;
@@ -174,7 +178,7 @@ public class DescribeTraceInfoDetailResponseBody extends TeaModel {
             }
 
             /**
-             * EndId.
+             * The ending vertex ID of the edge of the tracing diagram.
              */
             public Builder endId(String endId) {
                 this.endId = endId;
@@ -182,7 +186,7 @@ public class DescribeTraceInfoDetailResponseBody extends TeaModel {
             }
 
             /**
-             * StartId.
+             * The starting vertex ID of the edge of the tracing diagram.
              */
             public Builder startId(String startId) {
                 this.startId = startId;
@@ -190,7 +194,7 @@ public class DescribeTraceInfoDetailResponseBody extends TeaModel {
             }
 
             /**
-             * Time.
+             * The point in time.
              */
             public Builder time(String time) {
                 this.time = time;
@@ -198,7 +202,7 @@ public class DescribeTraceInfoDetailResponseBody extends TeaModel {
             }
 
             /**
-             * Type.
+             * The type of the edge of the tracing diagram.
              */
             public Builder type(String type) {
                 this.type = type;
@@ -359,7 +363,7 @@ public class DescribeTraceInfoDetailResponseBody extends TeaModel {
             private Integer offset; 
 
             /**
-             * DbId.
+             * This parameter is deprecated.
              */
             public Builder dbId(Integer dbId) {
                 this.dbId = dbId;
@@ -367,7 +371,7 @@ public class DescribeTraceInfoDetailResponseBody extends TeaModel {
             }
 
             /**
-             * DisplayColor.
+             * The rendering color of the vertex.
              */
             public Builder displayColor(String displayColor) {
                 this.displayColor = displayColor;
@@ -375,7 +379,7 @@ public class DescribeTraceInfoDetailResponseBody extends TeaModel {
             }
 
             /**
-             * DisplayIcon.
+             * The icon style of the vertex.
              */
             public Builder displayIcon(String displayIcon) {
                 this.displayIcon = displayIcon;
@@ -383,7 +387,7 @@ public class DescribeTraceInfoDetailResponseBody extends TeaModel {
             }
 
             /**
-             * DisplayTemplate.
+             * This parameter is deprecated.
              */
             public Builder displayTemplate(String displayTemplate) {
                 this.displayTemplate = displayTemplate;
@@ -391,7 +395,7 @@ public class DescribeTraceInfoDetailResponseBody extends TeaModel {
             }
 
             /**
-             * GmtCreate.
+             * The timestamp when the vertex was created.
              */
             public Builder gmtCreate(Long gmtCreate) {
                 this.gmtCreate = gmtCreate;
@@ -399,7 +403,7 @@ public class DescribeTraceInfoDetailResponseBody extends TeaModel {
             }
 
             /**
-             * GmtModified.
+             * The time when the vertex was last modified.
              */
             public Builder gmtModified(Long gmtModified) {
                 this.gmtModified = gmtModified;
@@ -407,7 +411,7 @@ public class DescribeTraceInfoDetailResponseBody extends TeaModel {
             }
 
             /**
-             * Id.
+             * The ID of the vertex type.
              */
             public Builder id(String id) {
                 this.id = id;
@@ -415,7 +419,7 @@ public class DescribeTraceInfoDetailResponseBody extends TeaModel {
             }
 
             /**
-             * Limit.
+             * This parameter is deprecated.
              */
             public Builder limit(Integer limit) {
                 this.limit = limit;
@@ -423,7 +427,7 @@ public class DescribeTraceInfoDetailResponseBody extends TeaModel {
             }
 
             /**
-             * Name.
+             * The name of the vertex type.
              */
             public Builder name(String name) {
                 this.name = name;
@@ -431,7 +435,7 @@ public class DescribeTraceInfoDetailResponseBody extends TeaModel {
             }
 
             /**
-             * Namespace.
+             * The namespace.
              */
             public Builder namespace(String namespace) {
                 this.namespace = namespace;
@@ -439,7 +443,7 @@ public class DescribeTraceInfoDetailResponseBody extends TeaModel {
             }
 
             /**
-             * Offset.
+             * This parameter is deprecated.
              */
             public Builder offset(Integer offset) {
                 this.offset = offset;
@@ -528,7 +532,11 @@ public class DescribeTraceInfoDetailResponseBody extends TeaModel {
             private String showType; 
 
             /**
-             * Directed.
+             * Indicates whether the edge is a directional edge. Valid values:
+             * <p>
+             * 
+             * *   **1**: yes
+             * *   **0**: no
              */
             public Builder directed(Integer directed) {
                 this.directed = directed;
@@ -536,7 +544,7 @@ public class DescribeTraceInfoDetailResponseBody extends TeaModel {
             }
 
             /**
-             * DisplayColor.
+             * The rendering color of the edge.
              */
             public Builder displayColor(String displayColor) {
                 this.displayColor = displayColor;
@@ -544,7 +552,7 @@ public class DescribeTraceInfoDetailResponseBody extends TeaModel {
             }
 
             /**
-             * Name.
+             * The name of the edge type.
              */
             public Builder name(String name) {
                 this.name = name;
@@ -552,7 +560,7 @@ public class DescribeTraceInfoDetailResponseBody extends TeaModel {
             }
 
             /**
-             * RelationTypeId.
+             * The ID of the edge type.
              */
             public Builder relationTypeId(String relationTypeId) {
                 this.relationTypeId = relationTypeId;
@@ -560,7 +568,7 @@ public class DescribeTraceInfoDetailResponseBody extends TeaModel {
             }
 
             /**
-             * ShowType.
+             * This parameter is deprecated.
              */
             public Builder showType(String showType) {
                 this.showType = showType;
@@ -625,7 +633,7 @@ public class DescribeTraceInfoDetailResponseBody extends TeaModel {
             private String type; 
 
             /**
-             * Count.
+             * The number of neighbor nodes.
              */
             public Builder count(Integer count) {
                 this.count = count;
@@ -633,7 +641,7 @@ public class DescribeTraceInfoDetailResponseBody extends TeaModel {
             }
 
             /**
-             * HasMore.
+             * Indicates whether one more page is returned.
              */
             public Builder hasMore(Boolean hasMore) {
                 this.hasMore = hasMore;
@@ -641,7 +649,7 @@ public class DescribeTraceInfoDetailResponseBody extends TeaModel {
             }
 
             /**
-             * Type.
+             * The type of the neighbor node. The value is fixed as **alert**.
              */
             public Builder type(String type) {
                 this.type = type;
@@ -742,7 +750,7 @@ public class DescribeTraceInfoDetailResponseBody extends TeaModel {
             private String type; 
 
             /**
-             * Count.
+             * The number of times.
              */
             public Builder count(Integer count) {
                 this.count = count;
@@ -750,7 +758,7 @@ public class DescribeTraceInfoDetailResponseBody extends TeaModel {
             }
 
             /**
-             * Id.
+             * The ID of the vertex.
              */
             public Builder id(String id) {
                 this.id = id;
@@ -758,7 +766,7 @@ public class DescribeTraceInfoDetailResponseBody extends TeaModel {
             }
 
             /**
-             * Name.
+             * The name of the entity represented by the vertex.
              */
             public Builder name(String name) {
                 this.name = name;
@@ -766,7 +774,7 @@ public class DescribeTraceInfoDetailResponseBody extends TeaModel {
             }
 
             /**
-             * NeighborList.
+             * An array that consists of the neighbor nodes.
              */
             public Builder neighborList(java.util.List < NeighborList> neighborList) {
                 this.neighborList = neighborList;
@@ -774,7 +782,7 @@ public class DescribeTraceInfoDetailResponseBody extends TeaModel {
             }
 
             /**
-             * Time.
+             * The point in time.
              */
             public Builder time(String time) {
                 this.time = time;
@@ -782,7 +790,7 @@ public class DescribeTraceInfoDetailResponseBody extends TeaModel {
             }
 
             /**
-             * Type.
+             * The type of the entity represented by the vertex.
              */
             public Builder type(String type) {
                 this.type = type;
@@ -859,7 +867,7 @@ public class DescribeTraceInfoDetailResponseBody extends TeaModel {
             private java.util.List < VertexList> vertexList; 
 
             /**
-             * EdgeList.
+             * An array that consists of the edges of the tracing diagram.
              */
             public Builder edgeList(java.util.List < EdgeList> edgeList) {
                 this.edgeList = edgeList;
@@ -867,7 +875,7 @@ public class DescribeTraceInfoDetailResponseBody extends TeaModel {
             }
 
             /**
-             * EntityTypeList.
+             * An array that consists of the metadata configurations of the vertex type.
              */
             public Builder entityTypeList(java.util.List < EntityTypeList> entityTypeList) {
                 this.entityTypeList = entityTypeList;
@@ -875,7 +883,7 @@ public class DescribeTraceInfoDetailResponseBody extends TeaModel {
             }
 
             /**
-             * RelationTypeList.
+             * An array that consists of the metadata configurations of the edge type.
              */
             public Builder relationTypeList(java.util.List < RelationTypeList> relationTypeList) {
                 this.relationTypeList = relationTypeList;
@@ -883,7 +891,7 @@ public class DescribeTraceInfoDetailResponseBody extends TeaModel {
             }
 
             /**
-             * VertexList.
+             * An array that consists of all vertexes of the tracing diagram.
              */
             public Builder vertexList(java.util.List < VertexList> vertexList) {
                 this.vertexList = vertexList;

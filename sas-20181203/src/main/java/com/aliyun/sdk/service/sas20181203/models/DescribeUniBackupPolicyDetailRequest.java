@@ -55,7 +55,10 @@ public class DescribeUniBackupPolicyDetailRequest extends Request {
         } 
 
         /**
-         * $.parameters[2].schema.enumValueTitles
+         * The ID of the anti-ransomware policy.
+         * <p>
+         * 
+         * > You can call the [DescribeUniBackupPolicies](~~DescribeUniBackupPolicies~~) operation to query the IDs of anti-ransomware policies.
          */
         public Builder policyId(String policyId) {
             this.putQueryParameter("PolicyId", policyId);

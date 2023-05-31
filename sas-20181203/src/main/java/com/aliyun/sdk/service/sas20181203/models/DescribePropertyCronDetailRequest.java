@@ -138,7 +138,7 @@ public class DescribePropertyCronDetailRequest extends Request {
         } 
 
         /**
-         * 1
+         * The number of the page to return. Default value: **1**.
          */
         public Builder currentPage(Integer currentPage) {
             this.putQueryParameter("CurrentPage", currentPage);
@@ -147,7 +147,7 @@ public class DescribePropertyCronDetailRequest extends Request {
         }
 
         /**
-         * The details of the scheduled tasks.
+         * Specifies whether fuzzy search by path to the scheduled task is supported. If you want to use fuzzy search, set the parameter to **1**. If you set the parameter to a different value or leave the parameter empty, fuzzy search is not supported.
          */
         public Builder extend(String extend) {
             this.putQueryParameter("Extend", extend);
@@ -156,7 +156,7 @@ public class DescribePropertyCronDetailRequest extends Request {
         }
 
         /**
-         * 192.168.XX.XX
+         * The number of entries to return on each page. Default value: **10**.
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -165,7 +165,7 @@ public class DescribePropertyCronDetailRequest extends Request {
         }
 
         /**
-         * The public IP address of the server.
+         * The name or IP address of the server.
          */
         public Builder remark(String remark) {
             this.putQueryParameter("Remark", remark);
@@ -174,7 +174,7 @@ public class DescribePropertyCronDetailRequest extends Request {
         }
 
         /**
-         * Specifies whether fuzzy search by path to the scheduled task is supported. If you want to use fuzzy search, set the parameter to **1**. If you set the parameter to a different value or leave the parameter empty, fuzzy search is not supported.
+         * The path to the scheduled task.
          */
         public Builder source(String source) {
             this.putQueryParameter("Source", source);
@@ -183,7 +183,7 @@ public class DescribePropertyCronDetailRequest extends Request {
         }
 
         /**
-         * The path to the scheduled task.
+         * The username of the account that runs the scheduled task.
          */
         public Builder user(String user) {
             this.putQueryParameter("User", user);
@@ -192,7 +192,7 @@ public class DescribePropertyCronDetailRequest extends Request {
         }
 
         /**
-         * 50d213b4-3a35-427a-b8a5-04b0c7e1****
+         * The UUID of the server.
          */
         public Builder uuid(String uuid) {
             this.putQueryParameter("Uuid", uuid);

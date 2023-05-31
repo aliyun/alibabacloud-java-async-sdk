@@ -50,7 +50,7 @@ public class DescribeBackupClientsResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * DescribeBackupClients
+         * An array that consists of the information about the anti-ransomware agent.
          */
         public Builder clients(java.util.List < Clients> clients) {
             this.clients = clients;
@@ -58,7 +58,7 @@ public class DescribeBackupClientsResponseBody extends TeaModel {
         }
 
         /**
-         * Queries the servers on which the anti-ransomware agent is installed in a specified region.
+         * The ID of the request, which is used to locate and troubleshoot issues.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -146,7 +146,7 @@ public class DescribeBackupClientsResponseBody extends TeaModel {
             private String uuid; 
 
             /**
-             * ClientId.
+             * The ID of the anti-ransomware agent.
              */
             public Builder clientId(String clientId) {
                 this.clientId = clientId;
@@ -154,7 +154,17 @@ public class DescribeBackupClientsResponseBody extends TeaModel {
             }
 
             /**
-             * ClientStatus.
+             * The status of the anti-ransomware agent.
+             * <p>
+             * 
+             * Valid values:
+             * 
+             * *   **INSTALLING**: The agent is being installed.
+             * *   **ONLINE**: The agent is online.
+             * *   **UNINSTALLING**: The agent is being uninstalled.
+             * *   **NOT_INSTALLED**: The agent is not installed.
+             * *   **ACTIVATED**: The agent is enabled.
+             * *   **CLIENT\_CONNECTION_ERROR**: A connection error occurs on the agent.
              */
             public Builder clientStatus(String clientStatus) {
                 this.clientStatus = clientStatus;
@@ -162,7 +172,7 @@ public class DescribeBackupClientsResponseBody extends TeaModel {
             }
 
             /**
-             * ClientVersion.
+             * The version of the anti-ransomware agent.
              */
             public Builder clientVersion(String clientVersion) {
                 this.clientVersion = clientVersion;
@@ -170,7 +180,7 @@ public class DescribeBackupClientsResponseBody extends TeaModel {
             }
 
             /**
-             * InstanceId.
+             * The ID of the ECS instance on which the anti-ransomware agent is installed.
              */
             public Builder instanceId(String instanceId) {
                 this.instanceId = instanceId;
@@ -178,7 +188,7 @@ public class DescribeBackupClientsResponseBody extends TeaModel {
             }
 
             /**
-             * Uuid.
+             * The UUID of the Elastic Compute Service (ECS) instance on which the anti-ransomware agent is installed.
              */
             public Builder uuid(String uuid) {
                 this.uuid = uuid;

@@ -50,7 +50,7 @@ public class DescribeSecurityEventOperationStatusResponseBody extends TeaModel {
         private SecurityEventOperationStatusResponse securityEventOperationStatusResponse; 
 
         /**
-         * The source IP address of the request.
+         * The ID of the request, which is used to locate and troubleshoot issues.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -58,7 +58,7 @@ public class DescribeSecurityEventOperationStatusResponseBody extends TeaModel {
         }
 
         /**
-         * 192.168.XX.XX
+         * The information about the task that handles the alert events.
          */
         public Builder securityEventOperationStatusResponse(SecurityEventOperationStatusResponse securityEventOperationStatusResponse) {
             this.securityEventOperationStatusResponse = securityEventOperationStatusResponse;
@@ -122,7 +122,7 @@ public class DescribeSecurityEventOperationStatusResponseBody extends TeaModel {
             private String status; 
 
             /**
-             * ErrorCode.
+             * The code that indicates the handling result of the alert event.
              */
             public Builder errorCode(String errorCode) {
                 this.errorCode = errorCode;
@@ -130,7 +130,7 @@ public class DescribeSecurityEventOperationStatusResponseBody extends TeaModel {
             }
 
             /**
-             * SecurityEventId.
+             * The ID of the alert event.
              */
             public Builder securityEventId(String securityEventId) {
                 this.securityEventId = securityEventId;
@@ -138,7 +138,12 @@ public class DescribeSecurityEventOperationStatusResponseBody extends TeaModel {
             }
 
             /**
-             * Status.
+             * The handling status of the alert event. Valid values:
+             * <p>
+             * 
+             * *   **Processing**: The alert event is being handled.
+             * *   **Success**: The alert event is handled.
+             * *   **Failed**: The alert event failed to be handled.
              */
             public Builder status(String status) {
                 this.status = status;
@@ -191,7 +196,7 @@ public class DescribeSecurityEventOperationStatusResponseBody extends TeaModel {
             private String taskStatus; 
 
             /**
-             * DescribeSecurityEventOperationStatus
+             * An array consisting of the status of the alert events handled by the task.
              */
             public Builder securityEventOperationStatuses(java.util.List < SecurityEventOperationStatuses> securityEventOperationStatuses) {
                 this.securityEventOperationStatuses = securityEventOperationStatuses;
@@ -199,7 +204,13 @@ public class DescribeSecurityEventOperationStatusResponseBody extends TeaModel {
             }
 
             /**
-             * Queries the alert events that are triggered by the same IP address rule or of the same alert type as a specific alert event if you want to handle the specific alert event in batch operation mode.
+             * The status of the task that handles the alert events. Valid values:
+             * <p>
+             * 
+             * *   **Processing**: The task is running.
+             * *   **Success**: The task is successful.
+             * *   **Failure**: The task failed.
+             * *   **Pending**: The task is pending.
              */
             public Builder taskStatus(String taskStatus) {
                 this.taskStatus = taskStatus;

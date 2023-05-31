@@ -62,7 +62,7 @@ public class DescribeGroupedContainerInstancesResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * GroupedContainerInstanceList.
+         * An array that consists of the container assets returned.
          */
         public Builder groupedContainerInstanceList(java.util.List < GroupedContainerInstanceList> groupedContainerInstanceList) {
             this.groupedContainerInstanceList = groupedContainerInstanceList;
@@ -70,7 +70,7 @@ public class DescribeGroupedContainerInstancesResponseBody extends TeaModel {
         }
 
         /**
-         * PageInfo.
+         * The pagination information.
          */
         public Builder pageInfo(PageInfo pageInfo) {
             this.pageInfo = pageInfo;
@@ -78,7 +78,7 @@ public class DescribeGroupedContainerInstancesResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request, which is used to locate and troubleshoot issues.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -406,7 +406,7 @@ public class DescribeGroupedContainerInstancesResponseBody extends TeaModel {
             private Integer vulCount; 
 
             /**
-             * AlarmCount.
+             * The number of alerts that are generated on the current pod, application, namespace, or cluster.
              */
             public Builder alarmCount(Integer alarmCount) {
                 this.alarmCount = alarmCount;
@@ -414,7 +414,7 @@ public class DescribeGroupedContainerInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * AppName.
+             * The name of the application.
              */
             public Builder appName(String appName) {
                 this.appName = appName;
@@ -422,7 +422,7 @@ public class DescribeGroupedContainerInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * ClusterId.
+             * The ID of cluster.
              */
             public Builder clusterId(String clusterId) {
                 this.clusterId = clusterId;
@@ -430,7 +430,7 @@ public class DescribeGroupedContainerInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * ClusterName.
+             * The name of the instance.
              */
             public Builder clusterName(String clusterName) {
                 this.clusterName = clusterName;
@@ -438,7 +438,12 @@ public class DescribeGroupedContainerInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * ClusterType.
+             * The type of the cluster. Valid values:
+             * <p>
+             * 
+             * *   **Kubernetes**: dedicated Kubernetes cluster
+             * *   **ManagedKubernetes**: standard managed cluster (edge cluster)
+             * *   **Ask**: standard serverless cluster
              */
             public Builder clusterType(String clusterType) {
                 this.clusterType = clusterType;
@@ -446,7 +451,7 @@ public class DescribeGroupedContainerInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * CreateTime.
+             * The timestamp when the cluster was created. Unit: milliseconds.
              */
             public Builder createTime(Long createTime) {
                 this.createTime = createTime;
@@ -454,7 +459,14 @@ public class DescribeGroupedContainerInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * CusterState.
+             * The status of the cluster. Valid values:
+             * <p>
+             * 
+             * *   **running**: The cluster is running.
+             * *   **stopped**: The cluster is stopped.
+             * *   **deleted**: The cluster is deleted.
+             * *   **delete_failed**: The cluster fails to be deleted.
+             * *   **failed**: The cluster fails to be created.
              */
             public Builder custerState(String custerState) {
                 this.custerState = custerState;
@@ -462,7 +474,7 @@ public class DescribeGroupedContainerInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * HcCount.
+             * The number of baseline risks that are detected on the current pod, application, namespace, or cluster.
              */
             public Builder hcCount(Integer hcCount) {
                 this.hcCount = hcCount;
@@ -470,7 +482,7 @@ public class DescribeGroupedContainerInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * HostIp.
+             * The IP address of the host in the container cluster.
              */
             public Builder hostIp(String hostIp) {
                 this.hostIp = hostIp;
@@ -478,7 +490,7 @@ public class DescribeGroupedContainerInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * Image.
+             * The image of the container.
              */
             public Builder image(String image) {
                 this.image = image;
@@ -486,7 +498,7 @@ public class DescribeGroupedContainerInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * ImageDigest.
+             * The digest value of the image.
              */
             public Builder imageDigest(String imageDigest) {
                 this.imageDigest = imageDigest;
@@ -494,7 +506,7 @@ public class DescribeGroupedContainerInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * ImageRepoName.
+             * The name of the image repository.
              */
             public Builder imageRepoName(String imageRepoName) {
                 this.imageRepoName = imageRepoName;
@@ -502,7 +514,7 @@ public class DescribeGroupedContainerInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * ImageRepoNamespace.
+             * The namespace to which the image repository belongs.
              */
             public Builder imageRepoNamespace(String imageRepoNamespace) {
                 this.imageRepoNamespace = imageRepoNamespace;
@@ -510,7 +522,7 @@ public class DescribeGroupedContainerInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * ImageRepoTag.
+             * The tag that is added to the image repository.
              */
             public Builder imageRepoTag(String imageRepoTag) {
                 this.imageRepoTag = imageRepoTag;
@@ -518,7 +530,7 @@ public class DescribeGroupedContainerInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * ImageUuid.
+             * The UUID of the image.
              */
             public Builder imageUuid(String imageUuid) {
                 this.imageUuid = imageUuid;
@@ -526,7 +538,7 @@ public class DescribeGroupedContainerInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * InstanceCount.
+             * The number of queried pods, applications, clusters, or namespaces.
              */
             public Builder instanceCount(Integer instanceCount) {
                 this.instanceCount = instanceCount;
@@ -534,7 +546,7 @@ public class DescribeGroupedContainerInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * InstanceId.
+             * The ID of the server.
              */
             public Builder instanceId(String instanceId) {
                 this.instanceId = instanceId;
@@ -542,7 +554,7 @@ public class DescribeGroupedContainerInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * Namespace.
+             * The namespace of the cluster.
              */
             public Builder namespace(String namespace) {
                 this.namespace = namespace;
@@ -550,7 +562,7 @@ public class DescribeGroupedContainerInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * Pod.
+             * The name of the pod.
              */
             public Builder pod(String pod) {
                 this.pod = pod;
@@ -558,7 +570,7 @@ public class DescribeGroupedContainerInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * PodIp.
+             * The IP address of the pod.
              */
             public Builder podIp(String podIp) {
                 this.podIp = podIp;
@@ -566,7 +578,7 @@ public class DescribeGroupedContainerInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * RegionId.
+             * The ID of the region in which the server resides.
              */
             public Builder regionId(String regionId) {
                 this.regionId = regionId;
@@ -574,7 +586,7 @@ public class DescribeGroupedContainerInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * RiskInstanceCount.
+             * The number of at-risk instances.
              */
             public Builder riskInstanceCount(Integer riskInstanceCount) {
                 this.riskInstanceCount = riskInstanceCount;
@@ -582,7 +594,12 @@ public class DescribeGroupedContainerInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * RiskLevel.
+             * The risk level. Valid values:
+             * <p>
+             * 
+             * *   **high**
+             * *   **medium**
+             * *   **low**
              */
             public Builder riskLevel(String riskLevel) {
                 this.riskLevel = riskLevel;
@@ -590,7 +607,11 @@ public class DescribeGroupedContainerInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * RiskStatus.
+             * Indicates whether risks were detected. Valid values:
+             * <p>
+             * 
+             * *   **NO**: No risks were detected.
+             * *   **YES**: Risks were detected.
              */
             public Builder riskStatus(String riskStatus) {
                 this.riskStatus = riskStatus;
@@ -598,7 +619,7 @@ public class DescribeGroupedContainerInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * VulCount.
+             * The number of vulnerabilities that are detected on the current pod, application, namespace, or cluster.
              */
             public Builder vulCount(Integer vulCount) {
                 this.vulCount = vulCount;
@@ -675,7 +696,7 @@ public class DescribeGroupedContainerInstancesResponseBody extends TeaModel {
             private Integer totalCount; 
 
             /**
-             * Count.
+             * The number of container assets returned on the current page.
              */
             public Builder count(Integer count) {
                 this.count = count;
@@ -683,7 +704,7 @@ public class DescribeGroupedContainerInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * CurrentPage.
+             * The page number of the returned page.
              */
             public Builder currentPage(Integer currentPage) {
                 this.currentPage = currentPage;
@@ -691,7 +712,7 @@ public class DescribeGroupedContainerInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * PageSize.
+             * The number of entries returned per page. Default value: **20**.
              */
             public Builder pageSize(Integer pageSize) {
                 this.pageSize = pageSize;
@@ -699,7 +720,7 @@ public class DescribeGroupedContainerInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * TotalCount.
+             * The total number of container assets returned.
              */
             public Builder totalCount(Integer totalCount) {
                 this.totalCount = totalCount;

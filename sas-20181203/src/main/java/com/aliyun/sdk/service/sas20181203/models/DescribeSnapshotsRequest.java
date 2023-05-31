@@ -168,7 +168,11 @@ public class DescribeSnapshotsRequest extends Request {
         } 
 
         /**
-         * ApiVersion.
+         * The version of the anti-ransomware policy. Valid values:
+         * <p>
+         * 
+         * *   **1.0.0**
+         * *   **2.0.0**
          */
         public Builder apiVersion(String apiVersion) {
             this.putQueryParameter("ApiVersion", apiVersion);
@@ -177,7 +181,7 @@ public class DescribeSnapshotsRequest extends Request {
         }
 
         /**
-         * CurrentPage.
+         * The number of the page to return. Default value: **1**.
          */
         public Builder currentPage(Integer currentPage) {
             this.putQueryParameter("CurrentPage", currentPage);
@@ -186,7 +190,11 @@ public class DescribeSnapshotsRequest extends Request {
         }
 
         /**
-         * IsAliYunEcs.
+         * Specifies whether the server is an Elastic Compute Service (ECS) instance. Valid values:
+         * <p>
+         * 
+         * *   **true**: yes
+         * *   **false**: no
          */
         public Builder isAliYunEcs(String isAliYunEcs) {
             this.putQueryParameter("IsAliYunEcs", isAliYunEcs);
@@ -195,7 +203,7 @@ public class DescribeSnapshotsRequest extends Request {
         }
 
         /**
-         * MachineRegion.
+         * The region in which the server resides.
          */
         public Builder machineRegion(String machineRegion) {
             this.putQueryParameter("MachineRegion", machineRegion);
@@ -204,7 +212,7 @@ public class DescribeSnapshotsRequest extends Request {
         }
 
         /**
-         * MachineRemark.
+         * The name or IP address of the server.
          */
         public Builder machineRemark(String machineRemark) {
             this.putQueryParameter("MachineRemark", machineRemark);
@@ -213,7 +221,10 @@ public class DescribeSnapshotsRequest extends Request {
         }
 
         /**
-         * NextToken.
+         * The starting position of the query. If this parameter is left empty, the query starts from the beginning.
+         * <p>
+         * 
+         * >  If you call the operation for the first time, you do not need to specify the parameter. The response to the first call contains the token that can be used for the second call. Each subsequent response contains the token that can be used for the next call.
          */
         public Builder nextToken(String nextToken) {
             this.putQueryParameter("NextToken", nextToken);
@@ -222,7 +233,7 @@ public class DescribeSnapshotsRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * The number of entries to return on each page.
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -231,7 +242,11 @@ public class DescribeSnapshotsRequest extends Request {
         }
 
         /**
-         * StatusList.
+         * The status of backup snapshots from which data can be restored. Valid values:
+         * <p>
+         * 
+         * *   **COMPLETE**: complete
+         * *   **PARTIAL_COMPLETE**: partial complete
          */
         public Builder statusList(String statusList) {
             this.putQueryParameter("StatusList", statusList);
@@ -240,7 +255,10 @@ public class DescribeSnapshotsRequest extends Request {
         }
 
         /**
-         * Uuid.
+         * The UUID of the server.
+         * <p>
+         * 
+         * >  You can call the [DescribeBackupPolicy](~~DescribeBackupPolicy~~) operation to query the UUIDs of servers.
          */
         public Builder uuid(String uuid) {
             this.putQueryParameter("Uuid", uuid);

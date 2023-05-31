@@ -126,7 +126,7 @@ public class HandleSimilarSecurityEventsRequest extends Request {
         } 
 
         /**
-         * MarkMissParam.
+         * The whitelist rule. For example, if you want to add a file that contains the string a to the whitelist based on the MD5 hash value, set this parameter to {"field":"md5","operate":"contains","fieldValue":"aa"}.
          */
         public Builder markMissParam(String markMissParam) {
             this.putQueryParameter("MarkMissParam", markMissParam);
@@ -135,7 +135,10 @@ public class HandleSimilarSecurityEventsRequest extends Request {
         }
 
         /**
-         * OperationCode.
+         * The operation that you want to perform to handle the alert events.
+         * <p>
+         * 
+         * >  You can call the [DescribeSecurityEventOperations](~~DescribeSecurityEventOperations~~) operation to query the operations.
          */
         public Builder operationCode(String operationCode) {
             this.putQueryParameter("OperationCode", operationCode);
@@ -144,7 +147,25 @@ public class HandleSimilarSecurityEventsRequest extends Request {
         }
 
         /**
-         * OperationParams.
+         * The configuration of the operation that you want to perform to handle the alert events. The value of this parameter is in the JSON format.
+         * <p>
+         * 
+         * >  If you set **OperationCode** to **kill\_and\_quara**, **block\_ip**, or **virus\_quara**, you must specify OperationParams. If you set **OperationCode** to other values, you can leave OperationParams empty. If you set **OperationCode** to **block_ip**, the value of OperationParams must consist of the following fields:
+         * 
+         * > *   **expireTime**: the end time of locking. Unit: milliseconds.
+         * 
+         * >  If you set **OperationCode** to **kill\_and_quara**, the value of OperationParams must consist of the following fields:
+         * 
+         * > *   **subOperation**: the method of detection and removal. Valid values:
+         * 
+         * >     *   **killAndQuaraFileByMd5andPath**: terminates the process and quarantines the source file of the process.
+         * >     *   **killByMd5andPath**: terminates the running process.
+         * 
+         * >  If you set **OperationCode** to **virus_quara**, the value of OperationParams consists of the following fields:
+         * 
+         * > *   **subOperation**: the method of detection and removal. Valid values:
+         * 
+         * >     *   **quaraFileByMd5andPath**: quarantines the source file of the process.
          */
         public Builder operationParams(String operationParams) {
             this.putQueryParameter("OperationParams", operationParams);
@@ -162,7 +183,7 @@ public class HandleSimilarSecurityEventsRequest extends Request {
         }
 
         /**
-         * HandleSimilarSecurityEvents
+         * The source IP address of the request.
          */
         public Builder sourceIp(String sourceIp) {
             this.putQueryParameter("SourceIp", sourceIp);
@@ -171,7 +192,10 @@ public class HandleSimilarSecurityEventsRequest extends Request {
         }
 
         /**
-         * TaskId.
+         * The ID of the task that handles the alert events at a time.
+         * <p>
+         * 
+         * >  You can call the [CreateSimilarSecurityEventsQueryTask](~~CreateSimilarSecurityEventsQueryTask~~) operation to query the IDs of tasks.
          */
         public Builder taskId(Long taskId) {
             this.putQueryParameter("TaskId", taskId);

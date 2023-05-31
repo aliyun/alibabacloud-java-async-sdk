@@ -133,7 +133,10 @@ public class DescribeAntiBruteForceRulesRequest extends Request {
         }
 
         /**
-         * Id.
+         * The ID of the defense rule.
+         * <p>
+         * 
+         * > You can call the [DescribeAntiBruteForceRules](~~DescribeAntiBruteForceRules~~) operation to query the IDs of defense rules.
          */
         public Builder id(Long id) {
             this.putQueryParameter("Id", id);
@@ -169,7 +172,7 @@ public class DescribeAntiBruteForceRulesRequest extends Request {
         }
 
         /**
-         * SourceIp.
+         * The source IP address of the request.
          */
         public Builder sourceIp(String sourceIp) {
             this.putQueryParameter("SourceIp", sourceIp);

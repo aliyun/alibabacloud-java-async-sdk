@@ -110,7 +110,7 @@ public class DescribeInstanceAntiBruteForceRulesRequest extends Request {
         } 
 
         /**
-         * CurrentPage.
+         * The number of the page to return. Default value: **1**.
          */
         public Builder currentPage(Integer currentPage) {
             this.putQueryParameter("CurrentPage", currentPage);
@@ -119,7 +119,7 @@ public class DescribeInstanceAntiBruteForceRulesRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * The number of entries to return on each page. Default value: **10000**.
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -137,7 +137,7 @@ public class DescribeInstanceAntiBruteForceRulesRequest extends Request {
         }
 
         /**
-         * SourceIp.
+         * The source IP address of the request.
          */
         public Builder sourceIp(String sourceIp) {
             this.putQueryParameter("SourceIp", sourceIp);
@@ -146,7 +146,10 @@ public class DescribeInstanceAntiBruteForceRulesRequest extends Request {
         }
 
         /**
-         * UuidList.
+         * The UUIDs of the servers.
+         * <p>
+         * 
+         * >  You can call the [DescribeCloudCenterInstances](~~DescribeCloudCenterInstances~~) operation to query the UUIDs of servers.
          */
         public Builder uuidList(java.util.List < String > uuidList) {
             this.putQueryParameter("UuidList", uuidList);

@@ -98,7 +98,7 @@ public class GetLastOnceTaskInfoResponseBody extends TeaModel {
         private Integer totalCount; 
 
         /**
-         * The information about the latest task.
+         * The time at which the task was run.
          */
         public Builder collectTime(Long collectTime) {
             this.collectTime = collectTime;
@@ -106,7 +106,7 @@ public class GetLastOnceTaskInfoResponseBody extends TeaModel {
         }
 
         /**
-         * FinishCount.
+         * The number of tasks that have been completed.
          */
         public Builder finishCount(Integer finishCount) {
             this.finishCount = finishCount;
@@ -114,13 +114,7 @@ public class GetLastOnceTaskInfoResponseBody extends TeaModel {
         }
 
         /**
-         * The status of the task. Valid values:
-         * <p>
-         * 
-         * *   **INIT**: The task is not started.
-         * *   **START**: The task is started.
-         * *   **SUCCESS**: The task is complete.
-         * *   **TIMEOUT**: The task timed out.
+         * The ID of the request, which is used to locate and troubleshoot issues.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -128,12 +122,7 @@ public class GetLastOnceTaskInfoResponseBody extends TeaModel {
         }
 
         /**
-         * The result of the scan task. Valid values:
-         * <p>
-         * 
-         * *   **SUCCESS**: The task is successful.
-         * *   **TASK\_NOT\_SUPPORT_REGION**: The images are deployed in a region that is not supported by container image scan.
-         * *   **TASK\_NOT_EXISTS**: The task does not exist.
+         * The ID of the latest scan task.
          */
         public Builder taskId(Long taskId) {
             this.taskId = taskId;
@@ -141,7 +130,7 @@ public class GetLastOnceTaskInfoResponseBody extends TeaModel {
         }
 
         /**
-         * TaskInfo.
+         * The information about the latest task.
          */
         public Builder taskInfo(TaskInfo taskInfo) {
             this.taskInfo = taskInfo;
@@ -149,7 +138,7 @@ public class GetLastOnceTaskInfoResponseBody extends TeaModel {
         }
 
         /**
-         * The progress of the task in percentage.
+         * The total number of entries returned.
          */
         public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;
@@ -213,7 +202,7 @@ public class GetLastOnceTaskInfoResponseBody extends TeaModel {
             private String status; 
 
             /**
-             * Progress.
+             * The progress of the task in percentage.
              */
             public Builder progress(Integer progress) {
                 this.progress = progress;
@@ -221,7 +210,12 @@ public class GetLastOnceTaskInfoResponseBody extends TeaModel {
             }
 
             /**
-             * Result.
+             * The result of the scan task. Valid values:
+             * <p>
+             * 
+             * *   **SUCCESS**: The task is successful.
+             * *   **TASK\_NOT\_SUPPORT_REGION**: The images are deployed in a region that is not supported by container image scan.
+             * *   **TASK\_NOT_EXISTS**: The task does not exist.
              */
             public Builder result(String result) {
                 this.result = result;
@@ -229,7 +223,13 @@ public class GetLastOnceTaskInfoResponseBody extends TeaModel {
             }
 
             /**
-             * Status.
+             * The status of the task. Valid values:
+             * <p>
+             * 
+             * *   **INIT**: The task is not started.
+             * *   **START**: The task is started.
+             * *   **SUCCESS**: The task is complete.
+             * *   **TIMEOUT**: The task timed out.
              */
             public Builder status(String status) {
                 this.status = status;

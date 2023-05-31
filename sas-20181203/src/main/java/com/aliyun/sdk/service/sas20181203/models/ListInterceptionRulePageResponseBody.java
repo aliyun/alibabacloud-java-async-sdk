@@ -62,7 +62,7 @@ public class ListInterceptionRulePageResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * InterceptionRuleList.
+         * An array that consists of information about the defense rules.
          */
         public Builder interceptionRuleList(java.util.List < InterceptionRuleList> interceptionRuleList) {
             this.interceptionRuleList = interceptionRuleList;
@@ -70,7 +70,7 @@ public class ListInterceptionRulePageResponseBody extends TeaModel {
         }
 
         /**
-         * PageInfo.
+         * The pagination information.
          */
         public Builder pageInfo(PageInfo pageInfo) {
             this.pageInfo = pageInfo;
@@ -78,7 +78,7 @@ public class ListInterceptionRulePageResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request, which is used to locate and troubleshoot issues.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -214,7 +214,7 @@ public class ListInterceptionRulePageResponseBody extends TeaModel {
             private String targetType; 
 
             /**
-             * AppName.
+             * The name of the application.
              */
             public Builder appName(String appName) {
                 this.appName = appName;
@@ -222,7 +222,7 @@ public class ListInterceptionRulePageResponseBody extends TeaModel {
             }
 
             /**
-             * ImageList.
+             * An array that consists of the affected images.
              */
             public Builder imageList(java.util.List < String > imageList) {
                 this.imageList = imageList;
@@ -230,7 +230,7 @@ public class ListInterceptionRulePageResponseBody extends TeaModel {
             }
 
             /**
-             * Namespace.
+             * The namespace.
              */
             public Builder namespace(String namespace) {
                 this.namespace = namespace;
@@ -238,7 +238,7 @@ public class ListInterceptionRulePageResponseBody extends TeaModel {
             }
 
             /**
-             * Ports.
+             * An array that consists of information about the ports used by the destination server.
              */
             public Builder ports(java.util.List < String > ports) {
                 this.ports = ports;
@@ -246,7 +246,12 @@ public class ListInterceptionRulePageResponseBody extends TeaModel {
             }
 
             /**
-             * RuleType.
+             * The type of the defense rule. Valid values:
+             * <p>
+             * 
+             * *   **suggest**: intelligently recommended rule
+             * *   **customize**: custom rule
+             * *   **system**: system rule
              */
             public Builder ruleType(String ruleType) {
                 this.ruleType = ruleType;
@@ -254,7 +259,7 @@ public class ListInterceptionRulePageResponseBody extends TeaModel {
             }
 
             /**
-             * TagList.
+             * An array that consists of tags added to the destination network object.
              */
             public Builder tagList(java.util.List < String > tagList) {
                 this.tagList = tagList;
@@ -262,7 +267,7 @@ public class ListInterceptionRulePageResponseBody extends TeaModel {
             }
 
             /**
-             * TargetId.
+             * The ID of the network object.
              */
             public Builder targetId(Integer targetId) {
                 this.targetId = targetId;
@@ -270,7 +275,7 @@ public class ListInterceptionRulePageResponseBody extends TeaModel {
             }
 
             /**
-             * TargetName.
+             * The name of the network object.
              */
             public Builder targetName(String targetName) {
                 this.targetName = targetName;
@@ -278,7 +283,7 @@ public class ListInterceptionRulePageResponseBody extends TeaModel {
             }
 
             /**
-             * TargetType.
+             * The type of the network object.
              */
             public Builder targetType(String targetType) {
                 this.targetType = targetType;
@@ -403,7 +408,7 @@ public class ListInterceptionRulePageResponseBody extends TeaModel {
             private String targetType; 
 
             /**
-             * AppName.
+             * The name of the application.
              */
             public Builder appName(String appName) {
                 this.appName = appName;
@@ -411,7 +416,7 @@ public class ListInterceptionRulePageResponseBody extends TeaModel {
             }
 
             /**
-             * ImageList.
+             * An array that consists of the images of the network object.
              */
             public Builder imageList(java.util.List < String > imageList) {
                 this.imageList = imageList;
@@ -419,7 +424,7 @@ public class ListInterceptionRulePageResponseBody extends TeaModel {
             }
 
             /**
-             * Namespace.
+             * The namespace.
              */
             public Builder namespace(String namespace) {
                 this.namespace = namespace;
@@ -427,7 +432,12 @@ public class ListInterceptionRulePageResponseBody extends TeaModel {
             }
 
             /**
-             * RuleType.
+             * The type of the defense rule. Valid values:
+             * <p>
+             * 
+             * *   **suggest**: intelligently recommended rule
+             * *   **customize**: custom rule
+             * *   **system**: system rule
              */
             public Builder ruleType(String ruleType) {
                 this.ruleType = ruleType;
@@ -435,7 +445,7 @@ public class ListInterceptionRulePageResponseBody extends TeaModel {
             }
 
             /**
-             * TagList.
+             * An array that consists of tags added to the source network object.
              */
             public Builder tagList(java.util.List < String > tagList) {
                 this.tagList = tagList;
@@ -443,7 +453,7 @@ public class ListInterceptionRulePageResponseBody extends TeaModel {
             }
 
             /**
-             * TargetId.
+             * The ID of the network object.
              */
             public Builder targetId(Integer targetId) {
                 this.targetId = targetId;
@@ -451,7 +461,7 @@ public class ListInterceptionRulePageResponseBody extends TeaModel {
             }
 
             /**
-             * TargetName.
+             * The name of the network object.
              */
             public Builder targetName(String targetName) {
                 this.targetName = targetName;
@@ -459,7 +469,7 @@ public class ListInterceptionRulePageResponseBody extends TeaModel {
             }
 
             /**
-             * TargetType.
+             * The type of the affected assets.
              */
             public Builder targetType(String targetType) {
                 this.targetType = targetType;
@@ -584,7 +594,7 @@ public class ListInterceptionRulePageResponseBody extends TeaModel {
             private SrcTarget srcTarget; 
 
             /**
-             * DstTarget.
+             * The destination network object.
              */
             public Builder dstTarget(DstTarget dstTarget) {
                 this.dstTarget = dstTarget;
@@ -592,7 +602,13 @@ public class ListInterceptionRulePageResponseBody extends TeaModel {
             }
 
             /**
-             * InterceptType.
+             * The interception mode. Valid values:
+             * <p>
+             * 
+             * *   **0**: monitor
+             * *   **1**: block
+             * *   **2**: alert
+             * *   **3**: allow
              */
             public Builder interceptType(Long interceptType) {
                 this.interceptType = interceptType;
@@ -600,7 +616,7 @@ public class ListInterceptionRulePageResponseBody extends TeaModel {
             }
 
             /**
-             * OrderIndex.
+             * The order in which the entries are sorted.
              */
             public Builder orderIndex(Long orderIndex) {
                 this.orderIndex = orderIndex;
@@ -608,7 +624,7 @@ public class ListInterceptionRulePageResponseBody extends TeaModel {
             }
 
             /**
-             * RuleId.
+             * The ID of the defense rule.
              */
             public Builder ruleId(Long ruleId) {
                 this.ruleId = ruleId;
@@ -616,7 +632,7 @@ public class ListInterceptionRulePageResponseBody extends TeaModel {
             }
 
             /**
-             * RuleName.
+             * The name of the defense rule.
              */
             public Builder ruleName(String ruleName) {
                 this.ruleName = ruleName;
@@ -624,7 +640,11 @@ public class ListInterceptionRulePageResponseBody extends TeaModel {
             }
 
             /**
-             * RuleSwitch.
+             * The status of the defense rule. Valid values:
+             * <p>
+             * 
+             * *   **1**: enabled
+             * *   **0**: disabled
              */
             public Builder ruleSwitch(Integer ruleSwitch) {
                 this.ruleSwitch = ruleSwitch;
@@ -632,7 +652,7 @@ public class ListInterceptionRulePageResponseBody extends TeaModel {
             }
 
             /**
-             * RuleType.
+             * The type of the defense rule.
              */
             public Builder ruleType(String ruleType) {
                 this.ruleType = ruleType;
@@ -640,7 +660,7 @@ public class ListInterceptionRulePageResponseBody extends TeaModel {
             }
 
             /**
-             * SrcTarget.
+             * The source network object.
              */
             public Builder srcTarget(SrcTarget srcTarget) {
                 this.srcTarget = srcTarget;
@@ -717,7 +737,7 @@ public class ListInterceptionRulePageResponseBody extends TeaModel {
             private Integer totalCount; 
 
             /**
-             * Count.
+             * The number of entries returned on the current page.
              */
             public Builder count(Integer count) {
                 this.count = count;
@@ -725,7 +745,7 @@ public class ListInterceptionRulePageResponseBody extends TeaModel {
             }
 
             /**
-             * CurrentPage.
+             * The page number of the returned page.
              */
             public Builder currentPage(Integer currentPage) {
                 this.currentPage = currentPage;
@@ -733,7 +753,7 @@ public class ListInterceptionRulePageResponseBody extends TeaModel {
             }
 
             /**
-             * PageSize.
+             * The number of entries returned per page.
              */
             public Builder pageSize(Integer pageSize) {
                 this.pageSize = pageSize;
@@ -741,7 +761,7 @@ public class ListInterceptionRulePageResponseBody extends TeaModel {
             }
 
             /**
-             * TotalCount.
+             * The total number of entries returned.
              */
             public Builder totalCount(Integer totalCount) {
                 this.totalCount = totalCount;

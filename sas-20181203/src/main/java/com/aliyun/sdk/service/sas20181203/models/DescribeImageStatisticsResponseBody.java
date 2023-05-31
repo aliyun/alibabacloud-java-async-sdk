@@ -62,7 +62,7 @@ public class DescribeImageStatisticsResponseBody extends TeaModel {
         private Integer riskInstanceCount; 
 
         /**
-         * InstanceCount.
+         * The number of container images in your assets. Only Container Registry Enterprise Edition instances are counted.
          */
         public Builder instanceCount(Integer instanceCount) {
             this.instanceCount = instanceCount;
@@ -70,7 +70,7 @@ public class DescribeImageStatisticsResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request, which is used to locate and troubleshoot issues.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -78,7 +78,7 @@ public class DescribeImageStatisticsResponseBody extends TeaModel {
         }
 
         /**
-         * RiskInstanceCount.
+         * The number of container images that have security risks. Only Container Registry Enterprise Edition instances are counted.
          */
         public Builder riskInstanceCount(Integer riskInstanceCount) {
             this.riskInstanceCount = riskInstanceCount;

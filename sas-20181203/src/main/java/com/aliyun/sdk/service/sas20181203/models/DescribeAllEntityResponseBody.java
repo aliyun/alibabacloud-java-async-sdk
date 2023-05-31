@@ -50,7 +50,7 @@ public class DescribeAllEntityResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * Queries the information about all assets. The information includes asset group IDs and asset names.
+         * An array that consists of servers.
          */
         public Builder entityList(java.util.List < EntityList> entityList) {
             this.entityList = entityList;
@@ -58,7 +58,7 @@ public class DescribeAllEntityResponseBody extends TeaModel {
         }
 
         /**
-         * The IP address of the server.
+         * The ID of the request, which is used to locate and troubleshoot issues.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -170,7 +170,7 @@ public class DescribeAllEntityResponseBody extends TeaModel {
             private String uuid; 
 
             /**
-             * GroupId.
+             * The ID of the asset group.
              */
             public Builder groupId(Integer groupId) {
                 this.groupId = groupId;
@@ -178,7 +178,7 @@ public class DescribeAllEntityResponseBody extends TeaModel {
             }
 
             /**
-             * InstanceName.
+             * The name of the server.
              */
             public Builder instanceName(String instanceName) {
                 this.instanceName = instanceName;
@@ -186,7 +186,7 @@ public class DescribeAllEntityResponseBody extends TeaModel {
             }
 
             /**
-             * InternetIp.
+             * The public IP address of the server.
              */
             public Builder internetIp(String internetIp) {
                 this.internetIp = internetIp;
@@ -194,7 +194,7 @@ public class DescribeAllEntityResponseBody extends TeaModel {
             }
 
             /**
-             * IntranetIp.
+             * The private IP address of the server.
              */
             public Builder intranetIp(String intranetIp) {
                 this.intranetIp = intranetIp;
@@ -202,7 +202,7 @@ public class DescribeAllEntityResponseBody extends TeaModel {
             }
 
             /**
-             * Ip.
+             * The IP address of the server.
              */
             public Builder ip(String ip) {
                 this.ip = ip;
@@ -210,7 +210,11 @@ public class DescribeAllEntityResponseBody extends TeaModel {
             }
 
             /**
-             * Os.
+             * The operating system of the server. Valid values:
+             * <p>
+             * 
+             * *   **linux**
+             * *   **windows**
              */
             public Builder os(String os) {
                 this.os = os;
@@ -218,7 +222,7 @@ public class DescribeAllEntityResponseBody extends TeaModel {
             }
 
             /**
-             * DescribeAllEntity
+             * The UUID of the server.
              */
             public Builder uuid(String uuid) {
                 this.uuid = uuid;

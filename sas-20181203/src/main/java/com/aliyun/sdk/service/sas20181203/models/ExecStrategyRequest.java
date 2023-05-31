@@ -68,7 +68,11 @@ public class ExecStrategyRequest extends Request {
         } 
 
         /**
-         * Lang.
+         * The language of the content within the request and response. Default value: **zh**. Valid values:
+         * <p>
+         * 
+         * *   **zh**: Chinese
+         * *   **en**: English
          */
         public Builder lang(String lang) {
             this.putQueryParameter("Lang", lang);
@@ -77,7 +81,10 @@ public class ExecStrategyRequest extends Request {
         }
 
         /**
-         * StrategyId.
+         * The ID of the baseline check policy.
+         * <p>
+         * 
+         * >  You can call the [DescribeStrategy](~~DescribeStrategy~~) operation to query the IDs of baseline check policies.
          */
         public Builder strategyId(Integer strategyId) {
             this.putQueryParameter("StrategyId", strategyId);

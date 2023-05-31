@@ -82,7 +82,10 @@ public class DeleteHoneypotProbeRequest extends Request {
         }
 
         /**
-         * 探针id
+         * The ID of the probe.
+         * <p>
+         * 
+         * > You can call the [ListHoneypotProbe](~~ListHoneypotProbe~~) operation to query the IDs of probes.
          */
         public Builder probeId(String probeId) {
             this.putQueryParameter("ProbeId", probeId);

@@ -98,7 +98,11 @@ public class InstallPmAgentRequest extends Request {
         } 
 
         /**
-         * Lang.
+         * The language of the content within the request and response. Default value: **zh**. Valid values:
+         * <p>
+         * 
+         * *   **zh**: Chinese
+         * *   **en**: English
          */
         public Builder lang(String lang) {
             this.putQueryParameter("Lang", lang);
@@ -107,7 +111,7 @@ public class InstallPmAgentRequest extends Request {
         }
 
         /**
-         * SourceIp.
+         * The source IP address of the request.
          */
         public Builder sourceIp(String sourceIp) {
             this.putQueryParameter("SourceIp", sourceIp);
@@ -116,7 +120,11 @@ public class InstallPmAgentRequest extends Request {
         }
 
         /**
-         * 运维插件类型
+         * The type of the client.
+         * <p>
+         * 
+         * *   **aliyun_assist**: Cloud Assistant client
+         * *   **aliyun_monitor**: CloudMonitor client
          */
         public Builder type(String type) {
             this.putQueryParameter("Type", type);
@@ -125,7 +133,7 @@ public class InstallPmAgentRequest extends Request {
         }
 
         /**
-         * 机器uuid列表
+         * The UUID of the server. If you specify multiple UUIDs, separate the UUIDs with commas (,).
          */
         public Builder uuids(String uuids) {
             this.putQueryParameter("Uuids", uuids);

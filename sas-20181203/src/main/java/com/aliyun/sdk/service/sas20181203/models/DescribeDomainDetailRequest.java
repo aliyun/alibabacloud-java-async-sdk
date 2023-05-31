@@ -81,14 +81,7 @@ public class DescribeDomainDetailRequest extends Request {
         }
 
         /**
-         * The type of the domain asset. Valid values:
-         * <p>
-         * 
-         * *   **0**: an Elastic Compute Service (ECS) instance
-         * *   **1**: a Server Load Balancer (SLB) instance
-         * *   **2**: a Network Address Translation (NAT) gateway
-         * *   **3**: an ApsaraDB RDS instance
-         * *   **4**: an ApsaraDB for MongoDB instance
+         * The source IP address of the request.
          */
         public Builder sourceIp(String sourceIp) {
             this.putQueryParameter("SourceIp", sourceIp);

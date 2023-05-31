@@ -152,7 +152,7 @@ public class ListInterceptionTargetPageRequest extends Request {
         } 
 
         /**
-         * AppName.
+         * The name of the application to which the network object belongs.
          */
         public Builder appName(String appName) {
             this.putQueryParameter("AppName", appName);
@@ -161,7 +161,7 @@ public class ListInterceptionTargetPageRequest extends Request {
         }
 
         /**
-         * CurrentPage.
+         * The number of the page to return. Default value: **1**.
          */
         public Builder currentPage(Integer currentPage) {
             this.putQueryParameter("CurrentPage", currentPage);
@@ -170,7 +170,7 @@ public class ListInterceptionTargetPageRequest extends Request {
         }
 
         /**
-         * ImageList.
+         * The images of the network object.
          */
         public Builder imageList(java.util.List < String > imageList) {
             this.putQueryParameter("ImageList", imageList);
@@ -179,7 +179,7 @@ public class ListInterceptionTargetPageRequest extends Request {
         }
 
         /**
-         * Namespace.
+         * The namespace to which the network object belongs.
          */
         public Builder namespace(String namespace) {
             this.putQueryParameter("Namespace", namespace);
@@ -188,7 +188,10 @@ public class ListInterceptionTargetPageRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * The number of entries to return on each page. Default value: 20. If you leave this parameter empty, 20 entries are returned on each page.
+         * <p>
+         * 
+         * > We recommend that you do not leave this parameter empty.
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -197,7 +200,7 @@ public class ListInterceptionTargetPageRequest extends Request {
         }
 
         /**
-         * TagList.
+         * The labels specified for the network object.
          */
         public Builder tagList(java.util.List < String > tagList) {
             this.putQueryParameter("TagList", tagList);
@@ -206,7 +209,7 @@ public class ListInterceptionTargetPageRequest extends Request {
         }
 
         /**
-         * TargetName.
+         * The name of the network object.
          */
         public Builder targetName(String targetName) {
             this.putQueryParameter("TargetName", targetName);
@@ -215,7 +218,10 @@ public class ListInterceptionTargetPageRequest extends Request {
         }
 
         /**
-         * TargetType.
+         * The type of the network object. Valid values:
+         * <p>
+         * 
+         * *   IMAGE
          */
         public Builder targetType(String targetType) {
             this.putQueryParameter("TargetType", targetType);

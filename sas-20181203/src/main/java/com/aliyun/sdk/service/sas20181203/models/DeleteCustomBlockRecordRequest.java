@@ -69,7 +69,10 @@ public class DeleteCustomBlockRecordRequest extends Request {
         } 
 
         /**
-         * Id.
+         * The ID of the IP address blocking policy.
+         * <p>
+         * 
+         * > You can call the [DescribeCustomBlockRecords](~~DescribeCustomBlockRecords~~) operation to query the ID.
          */
         public Builder id(Long id) {
             this.putQueryParameter("Id", id);

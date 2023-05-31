@@ -96,7 +96,11 @@ public class DescribeRiskCheckSummaryRequest extends Request {
         } 
 
         /**
-         * Lang.
+         * The language of the content within the request and response. Default value: **zh**. Valid values:
+         * <p>
+         * 
+         * *   **zh**: Chinese
+         * *   **en**: English
          */
         public Builder lang(String lang) {
             this.putQueryParameter("Lang", lang);
@@ -105,7 +109,7 @@ public class DescribeRiskCheckSummaryRequest extends Request {
         }
 
         /**
-         * ResourceDirectoryAccountId.
+         * The ID of the Alibaba Cloud account that is added as a member by using the multi-account control feature.
          */
         public Builder resourceDirectoryAccountId(String resourceDirectoryAccountId) {
             this.putQueryParameter("ResourceDirectoryAccountId", resourceDirectoryAccountId);
@@ -123,7 +127,7 @@ public class DescribeRiskCheckSummaryRequest extends Request {
         }
 
         /**
-         * SourceIp.
+         * The source IP address of the request.
          */
         public Builder sourceIp(String sourceIp) {
             this.putQueryParameter("SourceIp", sourceIp);

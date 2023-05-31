@@ -113,7 +113,7 @@ public class ListInterceptionRulePageRequest extends Request {
         } 
 
         /**
-         * ClusterId.
+         * The ID of the container cluster.
          */
         public Builder clusterId(String clusterId) {
             this.putQueryParameter("ClusterId", clusterId);
@@ -122,7 +122,7 @@ public class ListInterceptionRulePageRequest extends Request {
         }
 
         /**
-         * Criteria.
+         * The query condition.
          */
         public Builder criteria(String criteria) {
             this.putQueryParameter("Criteria", criteria);
@@ -131,7 +131,16 @@ public class ListInterceptionRulePageRequest extends Request {
         }
 
         /**
-         * CriteriaType.
+         * The type of the query condition. Valid values:
+         * <p>
+         * 
+         * *   **ID**
+         * *   **RULE_NAME**
+         * *   **SRC_TARGET**
+         * *   **DST_TARGET**
+         * *   **DST_PORT**
+         * *   **RULE_SWITCH**
+         * *   **INTERCEPTOR_TYPE**
          */
         public Builder criteriaType(String criteriaType) {
             this.putQueryParameter("CriteriaType", criteriaType);
@@ -140,7 +149,7 @@ public class ListInterceptionRulePageRequest extends Request {
         }
 
         /**
-         * CurrentPage.
+         * The number of the page to return.
          */
         public Builder currentPage(Integer currentPage) {
             this.putQueryParameter("CurrentPage", currentPage);
@@ -149,7 +158,7 @@ public class ListInterceptionRulePageRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * The number of entries to return on each page.
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);

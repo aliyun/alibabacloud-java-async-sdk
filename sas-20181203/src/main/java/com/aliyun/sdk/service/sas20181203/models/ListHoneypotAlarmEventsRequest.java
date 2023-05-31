@@ -124,7 +124,7 @@ public class ListHoneypotAlarmEventsRequest extends Request {
         } 
 
         /**
-         * The number of entries to return on each page. Default value: **100**
+         * The number of the page to return.
          */
         public Builder currentPage(Integer currentPage) {
             this.putBodyParameter("CurrentPage", currentPage);
@@ -133,7 +133,12 @@ public class ListHoneypotAlarmEventsRequest extends Request {
         }
 
         /**
-         * The source IP address.
+         * The status of the alert events. Valid values:
+         * <p>
+         * 
+         * *   **y**: handled
+         * *   **n**: unhandled
+         * *   **a**: all states
          */
         public Builder dealed(String dealed) {
             this.putBodyParameter("Dealed", dealed);
@@ -142,7 +147,7 @@ public class ListHoneypotAlarmEventsRequest extends Request {
         }
 
         /**
-         * The risk levels of the alert events.
+         * The destination IP address.
          */
         public Builder dstIp(String dstIp) {
             this.putBodyParameter("DstIp", dstIp);
@@ -151,7 +156,7 @@ public class ListHoneypotAlarmEventsRequest extends Request {
         }
 
         /**
-         * The data returned.
+         * The number of entries to return on each page. Default value: **100**
          */
         public Builder pageSize(Integer pageSize) {
             this.putBodyParameter("PageSize", pageSize);
@@ -160,12 +165,7 @@ public class ListHoneypotAlarmEventsRequest extends Request {
         }
 
         /**
-         * The risk level. Valid values:
-         * <p>
-         * 
-         * *   **2**: low
-         * *   **3**: medium
-         * *   **4**: high
+         * The risk levels of the alert events.
          */
         public Builder riskLevelList(java.util.List < String > riskLevelList) {
             this.putBodyParameter("RiskLevelList", riskLevelList);
@@ -174,7 +174,7 @@ public class ListHoneypotAlarmEventsRequest extends Request {
         }
 
         /**
-         * The destination IP address.
+         * The source IP address.
          */
         public Builder srcIp(String srcIp) {
             this.putBodyParameter("SrcIp", srcIp);

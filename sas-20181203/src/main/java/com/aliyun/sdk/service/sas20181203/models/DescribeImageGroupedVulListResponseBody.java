@@ -294,7 +294,10 @@ public class DescribeImageGroupedVulListResponseBody extends TeaModel {
             }
 
             /**
-             * CanFix.
+             * 是否可支持修复。取值：
+             * <p>
+             * - **yes**：支持修复
+             * - **no**： 不支持修复
              */
             public Builder canFix(String canFix) {
                 this.canFix = canFix;

@@ -85,7 +85,7 @@ public class GetOnceTaskResultInfoRequest extends Request {
         } 
 
         /**
-         * The number of tasks that were completed.
+         * The ID of the scan task.
          */
         public Builder taskId(String taskId) {
             this.putQueryParameter("TaskId", taskId);
@@ -94,7 +94,12 @@ public class GetOnceTaskResultInfoRequest extends Request {
         }
 
         /**
-         * The ID of the scan task.
+         * The name of the task. Valid values:
+         * <p>
+         * 
+         * *   **CLIENT\_PROBLEM_CHECK**: a task of the Security Center agent
+         * *   **CLIENT\_DEV_OPS**: an O\&M task of Cloud Assistant
+         * *   **ASSET\_SECURITY_CHECK**: a task of asset information collection
          */
         public Builder taskName(String taskName) {
             this.putQueryParameter("TaskName", taskName);
@@ -103,7 +108,12 @@ public class GetOnceTaskResultInfoRequest extends Request {
         }
 
         /**
-         * The total number of entries returned.
+         * The type of the task. Valid values:
+         * <p>
+         * 
+         * *   **CLIENT\_PROBLEM_CHECK**: a task of the Security Center agent
+         * *   **CLIENT\_DEV_OPS**: an O\&M task of Cloud Assistant
+         * *   **ASSET\_SECURITY_CHECK**: a task of asset information collection
          */
         public Builder taskType(String taskType) {
             this.putQueryParameter("TaskType", taskType);

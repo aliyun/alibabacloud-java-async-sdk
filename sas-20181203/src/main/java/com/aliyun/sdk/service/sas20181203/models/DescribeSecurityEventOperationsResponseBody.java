@@ -50,10 +50,7 @@ public class DescribeSecurityEventOperationsResponseBody extends TeaModel {
         private java.util.List < SecurityEventOperationsResponse> securityEventOperationsResponse; 
 
         /**
-         * The configuration of the operation that you can perform to handle the alert event.
-         * <p>
-         * 
-         * >  If the value of the OperationCode parameter is `kill_and_quara` or `block_ip`, the OperationParams parameter is required. If the value of the OperationCode parameter is a different value, the OperationParams parameter can be left empty.
+         * The ID of the request, which is used to locate and troubleshoot issues.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -61,14 +58,7 @@ public class DescribeSecurityEventOperationsResponseBody extends TeaModel {
         }
 
         /**
-         * The operation that is used and can be modified in the whitelist rule. Valid values:
-         * <p>
-         * 
-         * *   **contains**: contains
-         * *   **notContains**: does not contain
-         * *   **regex**: regular expression
-         * *   **strEqual**: equals
-         * *   **strNotEqual**: does not equal
+         * An array consisting of the operations that you can perform to handle the alert event.
          */
         public Builder securityEventOperationsResponse(java.util.List < SecurityEventOperationsResponse> securityEventOperationsResponse) {
             this.securityEventOperationsResponse = securityEventOperationsResponse;
@@ -168,7 +158,7 @@ public class DescribeSecurityEventOperationsResponseBody extends TeaModel {
             private String uuid; 
 
             /**
-             * 61352054
+             * The alias of the field that is used in the whitelist rule.
              */
             public Builder filedAliasName(String filedAliasName) {
                 this.filedAliasName = filedAliasName;
@@ -176,11 +166,7 @@ public class DescribeSecurityEventOperationsResponseBody extends TeaModel {
             }
 
             /**
-             * The language of the content within the request and response. Default value: **zh**. Valid values:
-             * <p>
-             * 
-             * *   **zh**: Chinese
-             * *   **en**: English
+             * The field that is used in the whitelist rule.
              */
             public Builder filedName(String filedName) {
                 this.filedName = filedName;
@@ -188,7 +174,14 @@ public class DescribeSecurityEventOperationsResponseBody extends TeaModel {
             }
 
             /**
-             * An array consisting of the operations that you can perform to handle the alert event.
+             * The operation that is used in the whitelist rule. Valid values:
+             * <p>
+             * 
+             * *   **contains**: contains
+             * *   **notContains**: does not contain
+             * *   **regex**: regular expression
+             * *   **strEqual**: equals
+             * *   **strNotEqual**: does not equal
              */
             public Builder markMisType(String markMisType) {
                 this.markMisType = markMisType;
@@ -196,7 +189,7 @@ public class DescribeSecurityEventOperationsResponseBody extends TeaModel {
             }
 
             /**
-             * An array consisting of the configuration information that is used when the value of the OperationCode parameter is **advance_mark_mis_info**.
+             * The value of the field that is used in the whitelist rule.
              */
             public Builder markMisValue(String markMisValue) {
                 this.markMisValue = markMisValue;
@@ -212,7 +205,7 @@ public class DescribeSecurityEventOperationsResponseBody extends TeaModel {
             }
 
             /**
-             * The alias of the field that can be used in the whitelist rule.
+             * The UUID of the server on which the alert event is detected.
              */
             public Builder uuid(String uuid) {
                 this.uuid = uuid;
@@ -289,7 +282,7 @@ public class DescribeSecurityEventOperationsResponseBody extends TeaModel {
             private java.util.List < String > supportedMisType; 
 
             /**
-             * DescribeSecurityEventOperations
+             * The alias of the field that can be used in the whitelist rule.
              */
             public Builder filedAliasName(String filedAliasName) {
                 this.filedAliasName = filedAliasName;
@@ -297,7 +290,7 @@ public class DescribeSecurityEventOperationsResponseBody extends TeaModel {
             }
 
             /**
-             * Queries the operations that you can perform to handle an alert event.
+             * The field that can be used in the whitelist rule.
              */
             public Builder filedName(String filedName) {
                 this.filedName = filedName;
@@ -305,7 +298,7 @@ public class DescribeSecurityEventOperationsResponseBody extends TeaModel {
             }
 
             /**
-             * An array consisting of the configuration information that is used when the value of the OperationCode parameter is **advance_mark_mis_info**.
+             * The value of the field that can be used in the whitelist rule.
              */
             public Builder markMisValue(String markMisValue) {
                 this.markMisValue = markMisValue;
@@ -402,7 +395,7 @@ public class DescribeSecurityEventOperationsResponseBody extends TeaModel {
             private Boolean userCanOperate; 
 
             /**
-             * The source IP address of the request.
+             * An array consisting of the configuration information that is used when the value of the OperationCode parameter is **advance\_mark\_mis_info**.
              */
             public Builder markField(java.util.List < MarkField> markField) {
                 this.markField = markField;
@@ -410,7 +403,7 @@ public class DescribeSecurityEventOperationsResponseBody extends TeaModel {
             }
 
             /**
-             * 192.168.XX.XX
+             * An array consisting of the configuration items that can be used when the value of the OperationCode parameter is advance_mark_mis_info.
              */
             public Builder markFieldsSource(java.util.List < MarkFieldsSource> markFieldsSource) {
                 this.markFieldsSource = markFieldsSource;
@@ -422,18 +415,29 @@ public class DescribeSecurityEventOperationsResponseBody extends TeaModel {
              * <p>
              * 
              * *   **block_ip**: blocks the source IP address.
-             * *   **advance_mark_mis_info**: adds the alert to the whitelist.
+             * *   **advance\_mark\_mis_info**: adds the alert to the whitelist.
              * *   **ignore**: ignores the alert.
              * *   **manual_handled**: marks the alert as manually handled.
              * *   **kill_process**: terminates the malicious process.
              * *   **cleanup**: performs in-depth virus detection and removal.
-             * *   **kill_and_quara**: terminates the malicious process and quarantines the source file.
-             * *   **disable_malicious_defense**: stops the container on which the alerting files or processes exist.
-             * *   **client_problem_check**: performs troubleshooting.
+             * *   **kill\_and_quara**: terminates the malicious process and quarantines the source file.
+             * *   **disable\_malicious_defense**: stops the container on which the alerting files or processes exist.
+             * *   **client\_problem_check**: performs troubleshooting.
              * *   **quara**: quarantines the source file of the malicious process.
              */
             public Builder operationCode(String operationCode) {
                 this.operationCode = operationCode;
+                return this;
+            }
+
+            /**
+             * The configuration of the operation that you can perform to handle the alert event.
+             * <p>
+             * 
+             * >  If the value of the OperationCode parameter is `kill_and_quara` or `block_ip`, the OperationParams parameter is required. If the value of the OperationCode parameter is a different value, the OperationParams parameter can be left empty.
+             */
+            public Builder operationParams(String operationParams) {
+                this.operationParams = operationParams;
                 return this;
             }
 
@@ -443,14 +447,6 @@ public class DescribeSecurityEventOperationsResponseBody extends TeaModel {
              * 
              * *   **true**: yes
              * *   **false**: no
-             */
-            public Builder operationParams(String operationParams) {
-                this.operationParams = operationParams;
-                return this;
-            }
-
-            /**
-             * The UUID of the server on which the alert event is detected.
              */
             public Builder userCanOperate(Boolean userCanOperate) {
                 this.userCanOperate = userCanOperate;

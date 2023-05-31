@@ -124,7 +124,7 @@ public class ListHoneypotProbeRequest extends Request {
         } 
 
         /**
-         * CurrentPage.
+         * The number of the page to return. Pages start from page **1**. Default value: **1**.
          */
         public Builder currentPage(Integer currentPage) {
             this.putQueryParameter("CurrentPage", currentPage);
@@ -133,7 +133,7 @@ public class ListHoneypotProbeRequest extends Request {
         }
 
         /**
-         * 探针名称
+         * The name of the probe.
          */
         public Builder displayName(String displayName) {
             this.putQueryParameter("DisplayName", displayName);
@@ -142,7 +142,11 @@ public class ListHoneypotProbeRequest extends Request {
         }
 
         /**
-         * Lang.
+         * The language of the content within the request and response. Default value: **zh**. Valid values:
+         * <p>
+         * 
+         * *   **zh**: Chinese
+         * *   **en**: English
          */
         public Builder lang(String lang) {
             this.putQueryParameter("Lang", lang);
@@ -151,7 +155,10 @@ public class ListHoneypotProbeRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * The number of entries to return on each page. Default value: 20. If you leave this parameter empty, 20 entries are returned on each page.
+         * <p>
+         * 
+         * > We recommend that you do not leave this parameter empty.
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -160,7 +167,19 @@ public class ListHoneypotProbeRequest extends Request {
         }
 
         /**
-         * ProbeStatus.
+         * The status of the probe. Valid values:
+         * <p>
+         * 
+         * *   **installed**: installed
+         * *   **install_failed**: installation failed
+         * *   **online**: online
+         * *   **offline**: offline
+         * *   **unnormal**: abnormal
+         * *   **unprobe**: unauthorized
+         * *   **uninstalling**: being uninstalled
+         * *   **uninstalled**: uninstalled
+         * *   **uninstall_failed**: uninstallation failed
+         * *   **not_exist**: not installed
          */
         public Builder probeStatus(String probeStatus) {
             this.putQueryParameter("ProbeStatus", probeStatus);
@@ -169,7 +188,11 @@ public class ListHoneypotProbeRequest extends Request {
         }
 
         /**
-         * ProbeType.
+         * The type of the probe. Valid values:
+         * <p>
+         * 
+         * *   **host_probe**: host probe
+         * *   **vpc_black_hole_probe**: VPC probe
          */
         public Builder probeType(String probeType) {
             this.putQueryParameter("ProbeType", probeType);

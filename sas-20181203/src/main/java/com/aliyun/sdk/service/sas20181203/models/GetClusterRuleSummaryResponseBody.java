@@ -50,7 +50,7 @@ public class GetClusterRuleSummaryResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * ClusterRuleSummary.
+         * The overall information about the cluster defense rules.
          */
         public Builder clusterRuleSummary(ClusterRuleSummary clusterRuleSummary) {
             this.clusterRuleSummary = clusterRuleSummary;
@@ -58,7 +58,7 @@ public class GetClusterRuleSummaryResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request, which is used to locate and troubleshoot issues.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -170,7 +170,7 @@ public class GetClusterRuleSummaryResponseBody extends TeaModel {
             private Integer suggestRuleCount; 
 
             /**
-             * CloseRuleCount.
+             * The number of disabled cluster defense rules.
              */
             public Builder closeRuleCount(Integer closeRuleCount) {
                 this.closeRuleCount = closeRuleCount;
@@ -178,7 +178,7 @@ public class GetClusterRuleSummaryResponseBody extends TeaModel {
             }
 
             /**
-             * InterceptionCount7Day.
+             * The number of alerts that are triggered by the cluster defense rules in the last seven days.
              */
             public Builder interceptionCount7Day(Long interceptionCount7Day) {
                 this.interceptionCount7Day = interceptionCount7Day;
@@ -186,7 +186,11 @@ public class GetClusterRuleSummaryResponseBody extends TeaModel {
             }
 
             /**
-             * InterceptionSwitch.
+             * The status of the container firewall feature. Valid values:
+             * <p>
+             * 
+             * *   **0**: disabled
+             * *   **1**: enabled
              */
             public Builder interceptionSwitch(Integer interceptionSwitch) {
                 this.interceptionSwitch = interceptionSwitch;
@@ -194,7 +198,7 @@ public class GetClusterRuleSummaryResponseBody extends TeaModel {
             }
 
             /**
-             * InterceptionType.
+             * The interception mode.
              */
             public Builder interceptionType(Integer interceptionType) {
                 this.interceptionType = interceptionType;
@@ -202,7 +206,7 @@ public class GetClusterRuleSummaryResponseBody extends TeaModel {
             }
 
             /**
-             * OpenRuleCount.
+             * The number of enabled cluster defense rules.
              */
             public Builder openRuleCount(Integer openRuleCount) {
                 this.openRuleCount = openRuleCount;
@@ -210,7 +214,7 @@ public class GetClusterRuleSummaryResponseBody extends TeaModel {
             }
 
             /**
-             * RuleCount.
+             * The total number of configured cluster defense rules.
              */
             public Builder ruleCount(Integer ruleCount) {
                 this.ruleCount = ruleCount;
@@ -218,7 +222,7 @@ public class GetClusterRuleSummaryResponseBody extends TeaModel {
             }
 
             /**
-             * SuggestRuleCount.
+             * The number of recommended cluster defense rules.
              */
             public Builder suggestRuleCount(Integer suggestRuleCount) {
                 this.suggestRuleCount = suggestRuleCount;

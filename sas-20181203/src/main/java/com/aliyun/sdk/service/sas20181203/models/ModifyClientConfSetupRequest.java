@@ -84,7 +84,11 @@ public class ModifyClientConfSetupRequest extends Request {
         } 
 
         /**
-         * StrategyConfig.
+         * The configurations of the Security Center agent.
+         * <p>
+         * 
+         * *   cpu: the maximum CPU utilization that can be occupied by the Security Center agent on the server
+         * *   mem: the maximum memory usage that can be occupied by the Security Center agent on the server
          */
         public Builder strategyConfig(String strategyConfig) {
             this.putQueryParameter("StrategyConfig", strategyConfig);
@@ -93,7 +97,7 @@ public class ModifyClientConfSetupRequest extends Request {
         }
 
         /**
-         * StrategyTag.
+         * The type of the tag.
          */
         public Builder strategyTag(String strategyTag) {
             this.putQueryParameter("StrategyTag", strategyTag);
@@ -102,7 +106,12 @@ public class ModifyClientConfSetupRequest extends Request {
         }
 
         /**
-         * StrategyTagValue.
+         * The value of the tag. Valid values:
+         * <p>
+         * 
+         * *   major
+         * *   advanced
+         * *   basic
          */
         public Builder strategyTagValue(String strategyTagValue) {
             this.putQueryParameter("StrategyTagValue", strategyTagValue);

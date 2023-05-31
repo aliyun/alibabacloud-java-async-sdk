@@ -98,7 +98,7 @@ public class DescribeSuspEventQuaraFilesResponseBody extends TeaModel {
         private Integer totalCount; 
 
         /**
-         * The download link of the quarantined file.
+         * The number of entries returned on the current page.
          */
         public Builder count(Integer count) {
             this.count = count;
@@ -106,7 +106,7 @@ public class DescribeSuspEventQuaraFilesResponseBody extends TeaModel {
         }
 
         /**
-         * The total number of entries returned.
+         * The page number of the returned page.
          */
         public Builder currentPage(Integer currentPage) {
             this.currentPage = currentPage;
@@ -114,7 +114,7 @@ public class DescribeSuspEventQuaraFilesResponseBody extends TeaModel {
         }
 
         /**
-         * The number of entries returned on the current page.
+         * The number of entries returned per page.
          */
         public Builder pageSize(Integer pageSize) {
             this.pageSize = pageSize;
@@ -122,15 +122,7 @@ public class DescribeSuspEventQuaraFilesResponseBody extends TeaModel {
         }
 
         /**
-         * The status of the quarantined file. Valid values:
-         * <p>
-         * 
-         * *   **quaraFailed**: The file fails to be quarantined.
-         * *   **quaraDone**: The file is quarantined.
-         * *   **quaraing**: The file is being quarantined.
-         * *   **rollbackFailed**: The system fails to cancel quarantining the file.
-         * *   **rollbackDone**: The system cancelled quarantining the file.
-         * *   **rollbacking**: The system is cancelling quarantining the file.
+         * An array that consists of the quarantined files.
          */
         public Builder quaraFiles(java.util.List < QuaraFiles> quaraFiles) {
             this.quaraFiles = quaraFiles;
@@ -138,7 +130,7 @@ public class DescribeSuspEventQuaraFilesResponseBody extends TeaModel {
         }
 
         /**
-         * An array that consists of the quarantined files.
+         * The ID of the request, which is used to locate and troubleshoot issues.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -146,7 +138,7 @@ public class DescribeSuspEventQuaraFilesResponseBody extends TeaModel {
         }
 
         /**
-         * The quarantined file.
+         * The total number of entries returned.
          */
         public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;
@@ -354,7 +346,7 @@ public class DescribeSuspEventQuaraFilesResponseBody extends TeaModel {
             private String uuid; 
 
             /**
-             * The unique ID of the event.
+             * The name of the event.
              */
             public Builder eventName(String eventName) {
                 this.eventName = eventName;
@@ -362,7 +354,7 @@ public class DescribeSuspEventQuaraFilesResponseBody extends TeaModel {
             }
 
             /**
-             * The MD5 hash value of the quarantined file.
+             * The type of the event.
              */
             public Builder eventType(String eventType) {
                 this.eventType = eventType;
@@ -370,7 +362,7 @@ public class DescribeSuspEventQuaraFilesResponseBody extends TeaModel {
             }
 
             /**
-             * 172.16.XX.XX
+             * The ID of the quarantined file.
              */
             public Builder id(Integer id) {
                 this.id = id;
@@ -378,7 +370,7 @@ public class DescribeSuspEventQuaraFilesResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the server on which the quarantined file is located.
+             * The instance ID of the asset.
              */
             public Builder instanceId(String instanceId) {
                 this.instanceId = instanceId;
@@ -386,7 +378,7 @@ public class DescribeSuspEventQuaraFilesResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the quarantined file.
+             * The name of the server on which the quarantined file is located.
              */
             public Builder instanceName(String instanceName) {
                 this.instanceName = instanceName;
@@ -394,7 +386,7 @@ public class DescribeSuspEventQuaraFilesResponseBody extends TeaModel {
             }
 
             /**
-             * The instance ID of the asset.
+             * The public IP address of the server on which the quarantined file is located.
              */
             public Builder internetIp(String internetIp) {
                 this.internetIp = internetIp;
@@ -402,7 +394,7 @@ public class DescribeSuspEventQuaraFilesResponseBody extends TeaModel {
             }
 
             /**
-             * IntranetIp.
+             * The private IP address of the server on which the quarantined file is located.
              */
             public Builder intranetIp(String intranetIp) {
                 this.intranetIp = intranetIp;
@@ -410,7 +402,7 @@ public class DescribeSuspEventQuaraFilesResponseBody extends TeaModel {
             }
 
             /**
-             * The UUID of the server.
+             * The public IP address of the server on which the quarantined file is located.
              */
             public Builder ip(String ip) {
                 this.ip = ip;
@@ -418,7 +410,7 @@ public class DescribeSuspEventQuaraFilesResponseBody extends TeaModel {
             }
 
             /**
-             * The public IP address of the server on which the quarantined file is located.
+             * The download link of the quarantined file.
              */
             public Builder link(String link) {
                 this.link = link;
@@ -426,7 +418,7 @@ public class DescribeSuspEventQuaraFilesResponseBody extends TeaModel {
             }
 
             /**
-             * The private IP address of the server on which the quarantined file is located.
+             * The MD5 hash value of the quarantined file.
              */
             public Builder md5(String md5) {
                 this.md5 = md5;
@@ -434,7 +426,7 @@ public class DescribeSuspEventQuaraFilesResponseBody extends TeaModel {
             }
 
             /**
-             * ModifyTime.
+             * The time when the quarantined file was last modified.
              */
             public Builder modifyTime(String modifyTime) {
                 this.modifyTime = modifyTime;
@@ -442,7 +434,7 @@ public class DescribeSuspEventQuaraFilesResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the quarantined file was last modified.
+             * The path to the quarantined file on the server.
              */
             public Builder path(String path) {
                 this.path = path;
@@ -450,7 +442,15 @@ public class DescribeSuspEventQuaraFilesResponseBody extends TeaModel {
             }
 
             /**
-             * The public IP address of the server on which the quarantined file is located.
+             * The status of the quarantined file. Valid values:
+             * <p>
+             * 
+             * *   **quaraFailed**: The file fails to be quarantined.
+             * *   **quaraDone**: The file is quarantined.
+             * *   **quaraing**: The file is being quarantined.
+             * *   **rollbackFailed**: The system fails to cancel quarantining the file.
+             * *   **rollbackDone**: The system cancelled quarantining the file.
+             * *   **rollbacking**: The system is cancelling quarantining the file.
              */
             public Builder status(String status) {
                 this.status = status;
@@ -458,7 +458,7 @@ public class DescribeSuspEventQuaraFilesResponseBody extends TeaModel {
             }
 
             /**
-             * The type of the event.
+             * The unique ID of the event.
              */
             public Builder tag(String tag) {
                 this.tag = tag;
@@ -466,7 +466,7 @@ public class DescribeSuspEventQuaraFilesResponseBody extends TeaModel {
             }
 
             /**
-             * The path to the quarantined file on the server.
+             * The UUID of the server.
              */
             public Builder uuid(String uuid) {
                 this.uuid = uuid;

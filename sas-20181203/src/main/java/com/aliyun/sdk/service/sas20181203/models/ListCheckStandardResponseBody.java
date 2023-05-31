@@ -50,7 +50,7 @@ public class ListCheckStandardResponseBody extends TeaModel {
         private java.util.List < Standards> standards; 
 
         /**
-         * RequestId.
+         * The ID of the request, which is used to locate and troubleshoot issues.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -58,7 +58,7 @@ public class ListCheckStandardResponseBody extends TeaModel {
         }
 
         /**
-         * Standards.
+         * An array that consists of the check items.
          */
         public Builder standards(java.util.List < Standards> standards) {
             this.standards = standards;
@@ -122,7 +122,7 @@ public class ListCheckStandardResponseBody extends TeaModel {
             private String showName; 
 
             /**
-             * Id.
+             * The ID of the search condition.
              */
             public Builder id(Long id) {
                 this.id = id;
@@ -130,7 +130,7 @@ public class ListCheckStandardResponseBody extends TeaModel {
             }
 
             /**
-             * RiskCheckCount.
+             * The number of check items queried by using the search condition.
              */
             public Builder riskCheckCount(Long riskCheckCount) {
                 this.riskCheckCount = riskCheckCount;
@@ -138,7 +138,7 @@ public class ListCheckStandardResponseBody extends TeaModel {
             }
 
             /**
-             * ShowName.
+             * The display name of the search condition.
              */
             public Builder showName(String showName) {
                 this.showName = showName;
@@ -215,7 +215,7 @@ public class ListCheckStandardResponseBody extends TeaModel {
             private String type; 
 
             /**
-             * Id.
+             * The ID of the check item.
              */
             public Builder id(Long id) {
                 this.id = id;
@@ -223,7 +223,7 @@ public class ListCheckStandardResponseBody extends TeaModel {
             }
 
             /**
-             * Requirements.
+             * An array that consists of search conditions.
              */
             public Builder requirements(java.util.List < Requirements> requirements) {
                 this.requirements = requirements;
@@ -231,7 +231,7 @@ public class ListCheckStandardResponseBody extends TeaModel {
             }
 
             /**
-             * ShowName.
+             * The display name of the check item.
              */
             public Builder showName(String showName) {
                 this.showName = showName;
@@ -239,7 +239,7 @@ public class ListCheckStandardResponseBody extends TeaModel {
             }
 
             /**
-             * Type.
+             * The type of the check item.
              */
             public Builder type(String type) {
                 this.type = type;

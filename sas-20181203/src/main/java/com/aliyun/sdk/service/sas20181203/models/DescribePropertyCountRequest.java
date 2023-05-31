@@ -68,7 +68,20 @@ public class DescribePropertyCountRequest extends Request {
         } 
 
         /**
-         * The UUIDs of the assets. Separate multiple UUIDs with commas (,).
+         * The type of the asset fingerprints. Separate multiple types with commas (,). Valid values:
+         * <p>
+         * 
+         * *   **port**: port
+         * *   **process**: process
+         * *   **software**: software
+         * *   **user**: account
+         * *   **cron**: scheduled task
+         * *   **sca**: middleware
+         * *   **web**: website
+         * *   **database**: database
+         * *   **lkm**: kernel module
+         * *   **autorun**: startup item
+         * *   **web_server**: web service
          */
         public Builder type(String type) {
             this.putQueryParameter("Type", type);
@@ -77,7 +90,7 @@ public class DescribePropertyCountRequest extends Request {
         }
 
         /**
-         * The number of scheduled tasks.
+         * The UUIDs of the assets. Separate multiple UUIDs with commas (,).
          */
         public Builder uuidList(String uuidList) {
             this.putQueryParameter("UuidList", uuidList);

@@ -55,7 +55,7 @@ public class DescribeInstanceRebootStatusRequest extends Request {
         } 
 
         /**
-         * Queries the status of the servers that you restart.
+         * The UUIDs of the servers that you restart. Separate multiple UUIDs with commas (,).
          */
         public Builder uuids(String uuids) {
             this.putQueryParameter("Uuids", uuids);

@@ -68,7 +68,10 @@ public class GetClusterSuspEventStatisticsRequest extends Request {
         } 
 
         /**
-         * ClusterId.
+         * The ID of the container cluster.
+         * <p>
+         * 
+         * >  You can call the [DescribeGroupedContainerInstances](~~DescribeGroupedContainerInstances~~) operation to query the IDs of container clusters.
          */
         public Builder clusterId(String clusterId) {
             this.putQueryParameter("ClusterId", clusterId);
@@ -77,7 +80,7 @@ public class GetClusterSuspEventStatisticsRequest extends Request {
         }
 
         /**
-         * From.
+         * The ID of the request source. Set the value to sas.
          */
         public Builder from(String from) {
             this.putQueryParameter("From", from);

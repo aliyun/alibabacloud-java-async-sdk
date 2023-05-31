@@ -69,7 +69,7 @@ public class DeleteTagWithUuidRequest extends Request {
         } 
 
         /**
-         * TagName.
+         * The name of the tag.
          */
         public Builder tagName(String tagName) {
             this.putQueryParameter("TagName", tagName);
@@ -78,7 +78,10 @@ public class DeleteTagWithUuidRequest extends Request {
         }
 
         /**
-         * UuidList.
+         * The UUIDs of servers.
+         * <p>
+         * 
+         * > If the UuidList parameter is specified, Security Center removes the tag only from the servers whose UUIDs are specified by UuidList. If the UuidList parameter is not specified, Security Center removes the tag from all servers.
          */
         public Builder uuidList(String uuidList) {
             this.putQueryParameter("UuidList", uuidList);

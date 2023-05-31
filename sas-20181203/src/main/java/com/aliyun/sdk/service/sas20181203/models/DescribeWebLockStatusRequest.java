@@ -82,7 +82,7 @@ public class DescribeWebLockStatusRequest extends Request {
         } 
 
         /**
-         * From.
+         * The ID of the request source. Set the value to sas.
          */
         public Builder from(String from) {
             this.putQueryParameter("From", from);
@@ -91,7 +91,11 @@ public class DescribeWebLockStatusRequest extends Request {
         }
 
         /**
-         * Lang.
+         * The language of the content within the request and response. Default value: **zh**. Valid values:
+         * <p>
+         * 
+         * *   **zh**: Chinese
+         * *   **en**: English
          */
         public Builder lang(String lang) {
             this.putQueryParameter("Lang", lang);
@@ -100,7 +104,7 @@ public class DescribeWebLockStatusRequest extends Request {
         }
 
         /**
-         * SourceIp.
+         * The source IP address of the request.
          */
         public Builder sourceIp(String sourceIp) {
             this.putQueryParameter("SourceIp", sourceIp);

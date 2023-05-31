@@ -54,7 +54,11 @@ public class DescribeVulNumStatisticsRequest extends Request {
         } 
 
         /**
-         * From.
+         * The source of the request.
+         * <p>
+         * 
+         * *   If you want to query Security Center-related data, set the value to **sas**.
+         * *   If you want to query Server Guard-related data, you do not need to specify this parameter.
          */
         public Builder from(String from) {
             this.putQueryParameter("From", from);

@@ -84,7 +84,11 @@ public class ConfirmVirusEventsRequest extends Request {
         } 
 
         /**
-         * Confirms the alert events that you want to handle.
+         * Specifies whether to handle all alert events. Valid values:
+         * <p>
+         * 
+         * *   **1**: yes
+         * *   **0**: no
          */
         public Builder operationAll(Integer operationAll) {
             this.putQueryParameter("OperationAll", operationAll);
@@ -93,7 +97,13 @@ public class ConfirmVirusEventsRequest extends Request {
         }
 
         /**
-         * The ID of the request.
+         * The operation that you want to perform on the alert events. Valid values:
+         * <p>
+         * 
+         * *   **default**: performs in-depth detection and removal
+         * *   **ignore**: ignores the alert event
+         * *   **advance\_mark\_mis_info**: adds the alert events to the whitelist
+         * *   **manual_handled**: marks the alert events as manually handled
          */
         public Builder operationCode(String operationCode) {
             this.putQueryParameter("OperationCode", operationCode);

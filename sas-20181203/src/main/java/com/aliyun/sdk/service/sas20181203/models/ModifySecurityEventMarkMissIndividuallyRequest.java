@@ -110,7 +110,7 @@ public class ModifySecurityEventMarkMissIndividuallyRequest extends Request {
         } 
 
         /**
-         * 与高级加白格式保持一致
+         * The alert handling rule that you want to delete.
          */
         public Builder deleteMarkMissParam(String deleteMarkMissParam) {
             this.putBodyParameter("DeleteMarkMissParam", deleteMarkMissParam);
@@ -119,7 +119,7 @@ public class ModifySecurityEventMarkMissIndividuallyRequest extends Request {
         }
 
         /**
-         * From.
+         * The ID of the request source. Set the value to **sas**.
          */
         public Builder from(String from) {
             this.putBodyParameter("From", from);
@@ -128,7 +128,7 @@ public class ModifySecurityEventMarkMissIndividuallyRequest extends Request {
         }
 
         /**
-         * 与高级加白格式保持一致
+         * The alert handling that you want to add.
          */
         public Builder insertMarkMissParam(String insertMarkMissParam) {
             this.putBodyParameter("InsertMarkMissParam", insertMarkMissParam);
@@ -137,7 +137,11 @@ public class ModifySecurityEventMarkMissIndividuallyRequest extends Request {
         }
 
         /**
-         * Lang.
+         * The language of the content within the request and response. Default value: **zh**. Valid values:
+         * <p>
+         * 
+         * *   **zh**: Chinese
+         * *   **en**: English
          */
         public Builder lang(String lang) {
             this.putBodyParameter("Lang", lang);
@@ -146,7 +150,7 @@ public class ModifySecurityEventMarkMissIndividuallyRequest extends Request {
         }
 
         /**
-         * SourceIp.
+         * The source IP address of the request. You do not need to specify this parameter. It is automatically obtained by the system.
          */
         public Builder sourceIp(String sourceIp) {
             this.putQueryParameter("SourceIp", sourceIp);

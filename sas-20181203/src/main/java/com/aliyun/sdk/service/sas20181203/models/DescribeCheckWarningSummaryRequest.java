@@ -250,7 +250,10 @@ public class DescribeCheckWarningSummaryRequest extends Request {
         } 
 
         /**
-         * The value of the container field.
+         * The ID of the container cluster.
+         * <p>
+         * 
+         * >  You can call the [DescribeGroupedContainerInstances](~~DescribeGroupedContainerInstances~~) operation to query the IDs of container clusters.
          */
         public Builder clusterId(String clusterId) {
             this.putQueryParameter("ClusterId", clusterId);
@@ -259,10 +262,13 @@ public class DescribeCheckWarningSummaryRequest extends Request {
         }
 
         /**
-         * The level-1 type of check items.
+         * The name of the container field. Valid values:
          * <p>
          * 
-         * >  You can call the [DescribeRiskType](~~DescribeRiskType~~) operation to query the level-1 types of check items.
+         * *   **clusterId**: the ID of the cluster
+         * *   **image**: the name of the image
+         * *   **imageId**: the ID of the image
+         * *   **namespace**: the namespace
          */
         public Builder containerFieldName(String containerFieldName) {
             this.putQueryParameter("ContainerFieldName", containerFieldName);
@@ -271,7 +277,7 @@ public class DescribeCheckWarningSummaryRequest extends Request {
         }
 
         /**
-         * The ID of the baseline check policy.
+         * The value of the container field.
          */
         public Builder containerFieldValue(String containerFieldValue) {
             this.putQueryParameter("ContainerFieldValue", containerFieldValue);
@@ -280,11 +286,7 @@ public class DescribeCheckWarningSummaryRequest extends Request {
         }
 
         /**
-         * The language of the content within the request and the response. Valid values:
-         * <p>
-         * 
-         * *   **zh**: Chinese
-         * *   **en**: English
+         * The number of the page to return.
          */
         public Builder currentPage(Integer currentPage) {
             this.putQueryParameter("CurrentPage", currentPage);
@@ -302,7 +304,11 @@ public class DescribeCheckWarningSummaryRequest extends Request {
         }
 
         /**
-         * The statistics of check items.
+         * The language of the content within the request and the response. Valid values:
+         * <p>
+         * 
+         * *   **zh**: Chinese
+         * *   **en**: English
          */
         public Builder lang(String lang) {
             this.putQueryParameter("Lang", lang);
@@ -311,10 +317,7 @@ public class DescribeCheckWarningSummaryRequest extends Request {
         }
 
         /**
-         * The UUID of the asset.
-         * <p>
-         * 
-         * >  You can call the [DescribeCloudCenterInstances](~~DescribeCloudCenterInstances~~) operation to query the UUIDs of assets.
+         * The number of entries to return on each page.
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -323,7 +326,7 @@ public class DescribeCheckWarningSummaryRequest extends Request {
         }
 
         /**
-         * The level-2 type of the risk item.
+         * The name of the risk item.
          */
         public Builder riskName(String riskName) {
             this.putQueryParameter("RiskName", riskName);
@@ -332,10 +335,11 @@ public class DescribeCheckWarningSummaryRequest extends Request {
         }
 
         /**
-         * The type of the query condition. Valid values:
+         * The status of the baseline check. Valid values:
          * <p>
          * 
-         * *   **uuid**: the ID of an asset
+         * *   **1**: failed
+         * *   **3**: passed
          */
         public Builder riskStatus(Integer riskStatus) {
             this.putQueryParameter("RiskStatus", riskStatus);
@@ -353,7 +357,14 @@ public class DescribeCheckWarningSummaryRequest extends Request {
         }
 
         /**
-         * The number of high-risk items.
+         * The status of the check item. Valid values:
+         * <p>
+         * 
+         * *   **1**: failed
+         * *   **2**: verifying
+         * *   **3**: passed
+         * *   **5**: expired
+         * *   **6**: ignored
          */
         public Builder status(String status) {
             this.putQueryParameter("Status", status);
@@ -362,7 +373,7 @@ public class DescribeCheckWarningSummaryRequest extends Request {
         }
 
         /**
-         * The number of assets on which risk items are detected.
+         * The ID of the baseline check policy.
          */
         public Builder strategyId(Long strategyId) {
             this.putQueryParameter("StrategyId", strategyId);
@@ -371,7 +382,10 @@ public class DescribeCheckWarningSummaryRequest extends Request {
         }
 
         /**
-         * The number of check items.
+         * The type of the query condition. Valid values:
+         * <p>
+         * 
+         * *   **uuid**: the ID of an asset
          */
         public Builder targetType(String targetType) {
             this.putQueryParameter("TargetType", targetType);
@@ -380,7 +394,10 @@ public class DescribeCheckWarningSummaryRequest extends Request {
         }
 
         /**
-         * The page number of the current page.
+         * The level-1 type of check items.
+         * <p>
+         * 
+         * >  You can call the [DescribeRiskType](~~DescribeRiskType~~) operation to query the level-1 types of check items.
          */
         public Builder typeName(String typeName) {
             this.putQueryParameter("TypeName", typeName);
@@ -389,13 +406,10 @@ public class DescribeCheckWarningSummaryRequest extends Request {
         }
 
         /**
-         * The name of the container field. Valid values:
+         * The UUID of the asset.
          * <p>
          * 
-         * *   **clusterId**: the ID of the cluster
-         * *   **image**: the name of the image
-         * *   **imageId**: the ID of the image
-         * *   **namespace**: the namespace
+         * >  You can call the [DescribeCloudCenterInstances](~~DescribeCloudCenterInstances~~) operation to query the UUIDs of assets.
          */
         public Builder uuids(String uuids) {
             this.putQueryParameter("Uuids", uuids);

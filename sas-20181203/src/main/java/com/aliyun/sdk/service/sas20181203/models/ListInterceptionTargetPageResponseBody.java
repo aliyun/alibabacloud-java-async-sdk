@@ -62,7 +62,7 @@ public class ListInterceptionTargetPageResponseBody extends TeaModel {
         private java.util.List < RuleTargetList> ruleTargetList; 
 
         /**
-         * PageInfo.
+         * The pagination information.
          */
         public Builder pageInfo(PageInfo pageInfo) {
             this.pageInfo = pageInfo;
@@ -70,7 +70,7 @@ public class ListInterceptionTargetPageResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request, which is used to locate and troubleshoot issues.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -78,7 +78,7 @@ public class ListInterceptionTargetPageResponseBody extends TeaModel {
         }
 
         /**
-         * RuleTargetList.
+         * An array that consists of the network objects.
          */
         public Builder ruleTargetList(java.util.List < RuleTargetList> ruleTargetList) {
             this.ruleTargetList = ruleTargetList;
@@ -142,7 +142,7 @@ public class ListInterceptionTargetPageResponseBody extends TeaModel {
             private Integer totalCount; 
 
             /**
-             * CurrentPage.
+             * The page number of the returned page.
              */
             public Builder currentPage(Integer currentPage) {
                 this.currentPage = currentPage;
@@ -150,7 +150,7 @@ public class ListInterceptionTargetPageResponseBody extends TeaModel {
             }
 
             /**
-             * PageSize.
+             * The number of entries returned per page.
              */
             public Builder pageSize(Integer pageSize) {
                 this.pageSize = pageSize;
@@ -158,7 +158,7 @@ public class ListInterceptionTargetPageResponseBody extends TeaModel {
             }
 
             /**
-             * TotalCount.
+             * The total number of entries returned.
              */
             public Builder totalCount(Integer totalCount) {
                 this.totalCount = totalCount;
@@ -307,7 +307,7 @@ public class ListInterceptionTargetPageResponseBody extends TeaModel {
             private String targetType; 
 
             /**
-             * AppName.
+             * The name of the application to which the network object belongs.
              */
             public Builder appName(String appName) {
                 this.appName = appName;
@@ -315,7 +315,7 @@ public class ListInterceptionTargetPageResponseBody extends TeaModel {
             }
 
             /**
-             * ClusterId.
+             * The ID of the container cluster.
              */
             public Builder clusterId(String clusterId) {
                 this.clusterId = clusterId;
@@ -323,7 +323,7 @@ public class ListInterceptionTargetPageResponseBody extends TeaModel {
             }
 
             /**
-             * ClusterName.
+             * The name of the container cluster.
              */
             public Builder clusterName(String clusterName) {
                 this.clusterName = clusterName;
@@ -331,7 +331,7 @@ public class ListInterceptionTargetPageResponseBody extends TeaModel {
             }
 
             /**
-             * ImageList.
+             * An array that consists of the images of the network object.
              */
             public Builder imageList(java.util.List < String > imageList) {
                 this.imageList = imageList;
@@ -339,7 +339,7 @@ public class ListInterceptionTargetPageResponseBody extends TeaModel {
             }
 
             /**
-             * Namespace.
+             * The namespace to which the network object belongs.
              */
             public Builder namespace(String namespace) {
                 this.namespace = namespace;
@@ -347,7 +347,10 @@ public class ListInterceptionTargetPageResponseBody extends TeaModel {
             }
 
             /**
-             * RuleType.
+             * The rule type. Valid values:
+             * <p>
+             * 
+             * *   customize: custom rule
              */
             public Builder ruleType(String ruleType) {
                 this.ruleType = ruleType;
@@ -355,7 +358,7 @@ public class ListInterceptionTargetPageResponseBody extends TeaModel {
             }
 
             /**
-             * TagList.
+             * An array that consists of the labels specified for the network object.
              */
             public Builder tagList(java.util.List < String > tagList) {
                 this.tagList = tagList;
@@ -363,7 +366,10 @@ public class ListInterceptionTargetPageResponseBody extends TeaModel {
             }
 
             /**
-             * TargetId.
+             * The ID of the network object.
+             * <p>
+             * 
+             * > You can call the [ListInterceptionTargetPage](~~ListInterceptionTargetPage~~) operation to query the IDs of network objects.
              */
             public Builder targetId(Long targetId) {
                 this.targetId = targetId;
@@ -371,7 +377,7 @@ public class ListInterceptionTargetPageResponseBody extends TeaModel {
             }
 
             /**
-             * TargetName.
+             * The name of the network object.
              */
             public Builder targetName(String targetName) {
                 this.targetName = targetName;
@@ -379,7 +385,10 @@ public class ListInterceptionTargetPageResponseBody extends TeaModel {
             }
 
             /**
-             * TargetType.
+             * The type of the network object. Valid values:
+             * <p>
+             * 
+             * *   IMAGE
              */
             public Builder targetType(String targetType) {
                 this.targetType = targetType;

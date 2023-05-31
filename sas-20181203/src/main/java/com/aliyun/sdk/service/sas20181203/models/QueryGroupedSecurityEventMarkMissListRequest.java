@@ -152,7 +152,7 @@ public class QueryGroupedSecurityEventMarkMissListRequest extends Request {
         } 
 
         /**
-         * The number of entries to return on each page. Default value: **20**.
+         * The number of the page to return. Default value: **1**.
          */
         public Builder currentPage(Integer currentPage) {
             this.putBodyParameter("CurrentPage", currentPage);
@@ -161,7 +161,11 @@ public class QueryGroupedSecurityEventMarkMissListRequest extends Request {
         }
 
         /**
-         * The name of the alert event. The value indicates a subtype.
+         * The handling method. Valid values:
+         * <p>
+         * 
+         * *   **1**: Automatically Added to Whitelist
+         * *   **2**: Defense Without Notification
          */
         public Builder disposalWay(String disposalWay) {
             this.putQueryParameter("DisposalWay", disposalWay);
@@ -170,14 +174,7 @@ public class QueryGroupedSecurityEventMarkMissListRequest extends Request {
         }
 
         /**
-         * The operator. Valid values:
-         * <p>
-         * 
-         * *   **contains**: contains
-         * *   **notContains**: does not contain
-         * *   **strEqual**: equals
-         * *   **strNotEqual**: does not equal
-         * *   **regex**: regular expression
+         * The name of the alert event. The value indicates a subtype.
          */
         public Builder eventName(String eventName) {
             this.putBodyParameter("EventName", eventName);
@@ -195,7 +192,11 @@ public class QueryGroupedSecurityEventMarkMissListRequest extends Request {
         }
 
         /**
-         * The status code returned. The status code **200** indicates that the request is successful. Other status codes indicate that the request fails. You can identify the cause of the failure based on the status code.
+         * The language of the content within the request and response. Default value: **zh**. Valid values:
+         * <p>
+         * 
+         * *   **zh**: Chinese
+         * *   **en**: English
          */
         public Builder lang(String lang) {
             this.putBodyParameter("Lang", lang);
@@ -204,7 +205,7 @@ public class QueryGroupedSecurityEventMarkMissListRequest extends Request {
         }
 
         /**
-         * The error message returned.
+         * The number of entries to return on each page. Default value: **20**.
          */
         public Builder pageSize(Integer pageSize) {
             this.putBodyParameter("PageSize", pageSize);
@@ -213,7 +214,13 @@ public class QueryGroupedSecurityEventMarkMissListRequest extends Request {
         }
 
         /**
-         * The ID of the user.
+         * The condition that is used to query alert events by asset. You can specify a value of the following types:
+         * <p>
+         * 
+         * *   The IP address of the asset.
+         * *   The public IP address of the asset.
+         * *   The private IP address of the asset.
+         * *   The name of the asset.
          */
         public Builder remark(String remark) {
             this.putBodyParameter("Remark", remark);
@@ -222,7 +229,7 @@ public class QueryGroupedSecurityEventMarkMissListRequest extends Request {
         }
 
         /**
-         * The field that is used in the whitelist rule.
+         * The source IP address of the request.
          */
         public Builder sourceIp(String sourceIp) {
             this.putQueryParameter("SourceIp", sourceIp);

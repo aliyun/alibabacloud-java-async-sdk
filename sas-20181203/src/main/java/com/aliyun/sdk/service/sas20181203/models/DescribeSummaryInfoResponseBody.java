@@ -86,7 +86,7 @@ public class DescribeSummaryInfoResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * WB01014029
+         * The number of unprotected assets.
          */
         public Builder aegisClientOfflineCount(Integer aegisClientOfflineCount) {
             this.aegisClientOfflineCount = aegisClientOfflineCount;
@@ -94,7 +94,7 @@ public class DescribeSummaryInfoResponseBody extends TeaModel {
         }
 
         /**
-         * AegisClientOnlineCount.
+         * The number of protected assets.
          */
         public Builder aegisClientOnlineCount(Integer aegisClientOnlineCount) {
             this.aegisClientOnlineCount = aegisClientOnlineCount;
@@ -102,7 +102,7 @@ public class DescribeSummaryInfoResponseBody extends TeaModel {
         }
 
         /**
-         * Queries the security information about your assets. The information includes the security score and the numbers of protected and unprotected assets.
+         * The ID of the request, which is used to locate and troubleshoot issues.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -110,7 +110,13 @@ public class DescribeSummaryInfoResponseBody extends TeaModel {
         }
 
         /**
-         * SecurityScore.
+         * The security score of the assets. Valid values:
+         * <p>
+         * 
+         * *   95 to 100: The assets are secure.
+         * *   85 to 94: The assets are exposed to a few security risks. We recommend that you reinforce your security system in a timely manner.
+         * *   70 to 84: The assets are exposed to multiple security risks. We recommend that you reinforce your security system in a timely manner.
+         * *   69 or lower: The current security system is unable to protect the assets against intrusions. We recommend that you reinforce your security system at the earliest opportunity.
          */
         public Builder securityScore(Integer securityScore) {
             this.securityScore = securityScore;
@@ -118,7 +124,11 @@ public class DescribeSummaryInfoResponseBody extends TeaModel {
         }
 
         /**
-         * DescribeSummaryInfo
+         * Indicates whether the request is successful. Valid values:
+         * <p>
+         * 
+         * *   **true**: yes
+         * *   **false**: no
          */
         public Builder success(Boolean success) {
             this.success = success;

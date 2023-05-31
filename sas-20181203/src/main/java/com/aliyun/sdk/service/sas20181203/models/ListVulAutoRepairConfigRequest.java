@@ -97,7 +97,7 @@ public class ListVulAutoRepairConfigRequest extends Request {
         } 
 
         /**
-         * 漏洞别名
+         * The alias of the vulnerability.
          */
         public Builder aliasName(String aliasName) {
             this.putQueryParameter("AliasName", aliasName);
@@ -106,7 +106,7 @@ public class ListVulAutoRepairConfigRequest extends Request {
         }
 
         /**
-         * CurrentPage.
+         * The number of the page to return. Default value: **1**.
          */
         public Builder currentPage(Integer currentPage) {
             this.putQueryParameter("CurrentPage", currentPage);
@@ -115,7 +115,7 @@ public class ListVulAutoRepairConfigRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * The number of entries to return on each page. Default value: **10**.
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -124,7 +124,11 @@ public class ListVulAutoRepairConfigRequest extends Request {
         }
 
         /**
-         * 漏洞类型
+         * The type of the vulnerability. Valid values:
+         * <p>
+         * 
+         * *   **cve**: Linux software vulnerability
+         * *   **sys**: Windows system vulnerability
          */
         public Builder type(String type) {
             this.putQueryParameter("Type", type);

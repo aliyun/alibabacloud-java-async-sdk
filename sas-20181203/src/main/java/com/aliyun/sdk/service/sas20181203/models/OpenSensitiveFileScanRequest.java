@@ -54,7 +54,11 @@ public class OpenSensitiveFileScanRequest extends Request {
         } 
 
         /**
-         * 开关操作, on打开, off关闭
+         * Specifies whether to enable or disable sensitive file scan. Valid values:
+         * <p>
+         * 
+         * *   **on**: enables sensitive file scan
+         * *   **off**: disables sensitive file scan
          */
         public Builder switchOn(String switchOn) {
             this.putQueryParameter("SwitchOn", switchOn);

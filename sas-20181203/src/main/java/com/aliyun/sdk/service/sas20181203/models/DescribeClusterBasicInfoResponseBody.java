@@ -50,7 +50,7 @@ public class DescribeClusterBasicInfoResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * ClusterInfo.
+         * The detailed information about the cluster.
          */
         public Builder clusterInfo(ClusterInfo clusterInfo) {
             this.clusterInfo = clusterInfo;
@@ -58,7 +58,7 @@ public class DescribeClusterBasicInfoResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request, which is used to locate and troubleshoot issues.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -194,7 +194,7 @@ public class DescribeClusterBasicInfoResponseBody extends TeaModel {
             private Boolean targetResult; 
 
             /**
-             * ClusterId.
+             * The ID of cluster.
              */
             public Builder clusterId(String clusterId) {
                 this.clusterId = clusterId;
@@ -202,7 +202,7 @@ public class DescribeClusterBasicInfoResponseBody extends TeaModel {
             }
 
             /**
-             * ClusterName.
+             * The name of the cluster.
              */
             public Builder clusterName(String clusterName) {
                 this.clusterName = clusterName;
@@ -210,7 +210,14 @@ public class DescribeClusterBasicInfoResponseBody extends TeaModel {
             }
 
             /**
-             * ClusterType.
+             * The type of the cluster. Valid values:
+             * <p>
+             * 
+             * *   **ManagedKubernetes**: managed Kubernetes cluster
+             * *   **NotManagedKubernetes**: non-managed Kubernetes cluster
+             * *   **PrivateKubernetes**: private cluster
+             * *   **kubernetes**: dedicated Kubernetes cluster
+             * *   **ask**: dedicated ASK cluster
              */
             public Builder clusterType(String clusterType) {
                 this.clusterType = clusterType;
@@ -218,7 +225,7 @@ public class DescribeClusterBasicInfoResponseBody extends TeaModel {
             }
 
             /**
-             * CreateTime.
+             * The timestamp when the cluster was created. Unit: milliseconds.
              */
             public Builder createTime(Long createTime) {
                 this.createTime = createTime;
@@ -226,7 +233,7 @@ public class DescribeClusterBasicInfoResponseBody extends TeaModel {
             }
 
             /**
-             * CurrentVersion.
+             * The version of the cluster.
              */
             public Builder currentVersion(String currentVersion) {
                 this.currentVersion = currentVersion;
@@ -234,7 +241,7 @@ public class DescribeClusterBasicInfoResponseBody extends TeaModel {
             }
 
             /**
-             * InstanceCount.
+             * The number of instances in the cluster.
              */
             public Builder instanceCount(Integer instanceCount) {
                 this.instanceCount = instanceCount;
@@ -242,7 +249,7 @@ public class DescribeClusterBasicInfoResponseBody extends TeaModel {
             }
 
             /**
-             * RegionId.
+             * The ID of the region in which the cluster is deployed.
              */
             public Builder regionId(String regionId) {
                 this.regionId = regionId;
@@ -250,7 +257,13 @@ public class DescribeClusterBasicInfoResponseBody extends TeaModel {
             }
 
             /**
-             * State.
+             * The status of the cluster. Valid values:
+             * <p>
+             * 
+             * *   **unavailable**
+             * *   **Available**
+             * *   **Creating**
+             * *   **CreateFailed**
              */
             public Builder state(String state) {
                 this.state = state;
@@ -258,7 +271,11 @@ public class DescribeClusterBasicInfoResponseBody extends TeaModel {
             }
 
             /**
-             * TargetResult.
+             * Indicates whether the cluster is enabled. Valid values:
+             * <p>
+             * 
+             * *   **true**: The cluster is enabled.
+             * *   **false**: The cluster is disabled.
              */
             public Builder targetResult(Boolean targetResult) {
                 this.targetResult = targetResult;

@@ -54,7 +54,7 @@ public class GetAlarmMachineCountRequest extends Request {
         } 
 
         /**
-         * From.
+         * The ID of the request source. Set the value to sas.
          */
         public Builder from(String from) {
             this.putQueryParameter("From", from);

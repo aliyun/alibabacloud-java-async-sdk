@@ -68,7 +68,11 @@ public class DescribeMachineCanRebootRequest extends Request {
         } 
 
         /**
-         * Type.
+         * The type of the vulnerabilities. Valid values:
+         * <p>
+         * 
+         * *   cve: Linux software vulnerabilities
+         * *   sys: Windows system vulnerabilities
          */
         public Builder type(String type) {
             this.putQueryParameter("Type", type);
@@ -77,7 +81,7 @@ public class DescribeMachineCanRebootRequest extends Request {
         }
 
         /**
-         * Uuid.
+         * The UUID of the server.
          */
         public Builder uuid(String uuid) {
             this.putQueryParameter("Uuid", uuid);

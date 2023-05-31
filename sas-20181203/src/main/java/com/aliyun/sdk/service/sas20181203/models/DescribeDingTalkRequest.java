@@ -82,7 +82,7 @@ public class DescribeDingTalkRequest extends Request {
         } 
 
         /**
-         * The UID of the user.
+         * The number of the page to return.Default value: 1.
          */
         public Builder currentPage(Integer currentPage) {
             this.putQueryParameter("CurrentPage", currentPage);
@@ -91,7 +91,7 @@ public class DescribeDingTalkRequest extends Request {
         }
 
         /**
-         * The pagination information.
+         * The number of entries to return on each page.Default value: 20.
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -100,7 +100,7 @@ public class DescribeDingTalkRequest extends Request {
         }
 
         /**
-         * The group IDs.
+         * The name of the notification.
          */
         public Builder ruleActionName(String ruleActionName) {
             this.putQueryParameter("RuleActionName", ruleActionName);

@@ -50,7 +50,7 @@ public class ListInstanceCatalogResponseBody extends TeaModel {
         private java.util.List < Vendors> vendors; 
 
         /**
-         * RequestId.
+         * The ID of the request, which is used to locate and troubleshoot issues.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -58,7 +58,7 @@ public class ListInstanceCatalogResponseBody extends TeaModel {
         }
 
         /**
-         * Vendors.
+         * An array that consists of the asset types by service provider.
          */
         public Builder vendors(java.util.List < Vendors> vendors) {
             this.vendors = vendors;
@@ -98,7 +98,7 @@ public class ListInstanceCatalogResponseBody extends TeaModel {
             private String name; 
 
             /**
-             * Name.
+             * The name of the asset subtype.
              */
             public Builder name(String name) {
                 this.name = name;
@@ -151,7 +151,7 @@ public class ListInstanceCatalogResponseBody extends TeaModel {
             private String name; 
 
             /**
-             * InstanceSubTypes.
+             * An array that consists of asset subtypes.
              */
             public Builder instanceSubTypes(java.util.List < InstanceSubTypes> instanceSubTypes) {
                 this.instanceSubTypes = instanceSubTypes;
@@ -159,7 +159,7 @@ public class ListInstanceCatalogResponseBody extends TeaModel {
             }
 
             /**
-             * Name.
+             * The name of the asset type.
              */
             public Builder name(String name) {
                 this.name = name;
@@ -212,7 +212,7 @@ public class ListInstanceCatalogResponseBody extends TeaModel {
             private String name; 
 
             /**
-             * InstanceTypes.
+             * An array that consists of asset types.
              */
             public Builder instanceTypes(java.util.List < InstanceTypes> instanceTypes) {
                 this.instanceTypes = instanceTypes;
@@ -220,7 +220,7 @@ public class ListInstanceCatalogResponseBody extends TeaModel {
             }
 
             /**
-             * Name.
+             * The name of the service provider.
              */
             public Builder name(String name) {
                 this.name = name;

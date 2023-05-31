@@ -70,7 +70,7 @@ public class DescribeIpTagsRequest extends Request {
         } 
 
         /**
-         * Ip.
+         * The IP address in the alert event.
          */
         public Builder ip(String ip) {
             this.putQueryParameter("Ip", ip);
@@ -79,7 +79,7 @@ public class DescribeIpTagsRequest extends Request {
         }
 
         /**
-         * SecurityEventId.
+         * The ID of the alert event.
          */
         public Builder securityEventId(String securityEventId) {
             this.putQueryParameter("SecurityEventId", securityEventId);

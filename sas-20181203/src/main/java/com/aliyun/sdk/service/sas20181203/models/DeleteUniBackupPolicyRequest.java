@@ -68,7 +68,10 @@ public class DeleteUniBackupPolicyRequest extends Request {
         } 
 
         /**
-         * PolicyId.
+         * The ID of the anti-ransomware policy.
+         * <p>
+         * 
+         * >  You can call the [DescribeUniBackupPolicies](~~DescribeUniBackupPolicies~~) operation to query the IDs of anti-ransomware policies. You must specify at least one of the PolicyId parameter and the **PolicyIds** parameter.
          */
         public Builder policyId(Long policyId) {
             this.putQueryParameter("PolicyId", policyId);
@@ -77,7 +80,10 @@ public class DeleteUniBackupPolicyRequest extends Request {
         }
 
         /**
-         * PolicyIds.
+         * The IDs of anti-ransomware policies.
+         * <p>
+         * 
+         * >  You can call the [DescribeUniBackupPolicies](~~DescribeUniBackupPolicies~~) operation to query the IDs of anti-ransomware policies. You must specify at least one of the **PolicyId** parameter and the PolicyIds parameter.
          */
         public Builder policyIds(String policyIds) {
             this.putQueryParameter("PolicyIds", policyIds);

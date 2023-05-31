@@ -68,7 +68,13 @@ public class DescribeVulTargetConfigRequest extends Request {
         } 
 
         /**
-         * Type.
+         * The type of the vulnerability. Valid values:
+         * <p>
+         * 
+         * *   **cve**: Linux software vulnerability
+         * *   **sys**: Windows system vulnerability
+         * *   **cms**: Web-CMS vulnerability
+         * *   **emg**: urgent vulnerability
          */
         public Builder type(String type) {
             this.putQueryParameter("Type", type);
@@ -77,7 +83,7 @@ public class DescribeVulTargetConfigRequest extends Request {
         }
 
         /**
-         * Uuid.
+         * The UUID of the server.
          */
         public Builder uuid(String uuid) {
             this.putQueryParameter("Uuid", uuid);

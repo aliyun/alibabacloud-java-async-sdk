@@ -50,10 +50,7 @@ public class DescribeExposedInstanceDetailResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The UUID of the server that is exposed on the Internet.
-         * <p>
-         * 
-         * >  You can call the [DescribeExposedInstanceList](~~DescribeExposedInstanceList~~) operation to query the UUIDs of servers.
+         * The exposure details about the server.
          */
         public Builder exposedChains(java.util.List < ExposedChains> exposedChains) {
             this.exposedChains = exposedChains;
@@ -61,7 +58,7 @@ public class DescribeExposedInstanceDetailResponseBody extends TeaModel {
         }
 
         /**
-         * The exposure details about the server.
+         * The ID of the request, which is used to locate and troubleshoot issues.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -149,7 +146,7 @@ public class DescribeExposedInstanceDetailResponseBody extends TeaModel {
             private String uuid; 
 
             /**
-             * AliasName.
+             * The alias of the vulnerability.
              */
             public Builder aliasName(String aliasName) {
                 this.aliasName = aliasName;
@@ -157,7 +154,7 @@ public class DescribeExposedInstanceDetailResponseBody extends TeaModel {
             }
 
             /**
-             * Name.
+             * The name of the vulnerability.
              */
             public Builder name(String name) {
                 this.name = name;
@@ -165,7 +162,14 @@ public class DescribeExposedInstanceDetailResponseBody extends TeaModel {
             }
 
             /**
-             * Necessity.
+             * The priority to fix the vulnerability. Valid values:
+             * <p>
+             * 
+             * *   **asap**: high
+             * *   **later**: medium
+             * *   **nntf**: low
+             * 
+             * >  We recommend that you fix the vulnerabilities that have the **high** priority at the earliest opportunity.
              */
             public Builder necessity(String necessity) {
                 this.necessity = necessity;
@@ -173,7 +177,15 @@ public class DescribeExposedInstanceDetailResponseBody extends TeaModel {
             }
 
             /**
-             * Type.
+             * The type of the vulnerability. Valid values:
+             * <p>
+             * 
+             * *   **cve**: Linux software vulnerabilities
+             * *   **sys**: Windows system vulnerabilities
+             * *   **cms**: Web-CMS vulnerabilities
+             * *   **app**: application vulnerabilities
+             * *   **emg**: urgent vulnerabilities
+             * *   **sca**: middleware vulnerabilities
              */
             public Builder type(String type) {
                 this.type = type;
@@ -181,7 +193,7 @@ public class DescribeExposedInstanceDetailResponseBody extends TeaModel {
             }
 
             /**
-             * Uuid.
+             * The UUID of the server.
              */
             public Builder uuid(String uuid) {
                 this.uuid = uuid;
@@ -270,7 +282,7 @@ public class DescribeExposedInstanceDetailResponseBody extends TeaModel {
             private String uuid; 
 
             /**
-             * Queries the details about a specified server that is exposed on the Internet.
+             * The alias of the vulnerability.
              */
             public Builder aliasName(String aliasName) {
                 this.aliasName = aliasName;
@@ -278,7 +290,7 @@ public class DescribeExposedInstanceDetailResponseBody extends TeaModel {
             }
 
             /**
-             * DescribeExposedInstanceDetail
+             * The name of the vulnerability.
              */
             public Builder name(String name) {
                 this.name = name;
@@ -286,7 +298,14 @@ public class DescribeExposedInstanceDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the request, which is used to locate and troubleshoot issues.
+             * The priority to fix the vulnerability. Valid values:
+             * <p>
+             * 
+             * *   **asap**: high
+             * *   **later**: medium
+             * *   **nntf**: low
+             * 
+             * >  We recommend that you fix the vulnerabilities that have the **high** priority at the earliest opportunity.
              */
             public Builder necessity(String necessity) {
                 this.necessity = necessity;
@@ -294,13 +313,15 @@ public class DescribeExposedInstanceDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The resource from which the server is exposed. Valid values:
+             * The type of the vulnerability. Valid values:
              * <p>
              * 
-             * *   **INTERNET_IP**: the public IP address of an Elastic Compute Service (ECS) instance
-             * *   **SLB**: the public IP address of a Server Load Balancer (SLB) instance
-             * *   **EIP**: an elastic IP address (EIP)
-             * *   **DNAT**: the NAT gateway that connects to the Internet by using the DNAT feature
+             * *   **cve**: Linux software vulnerabilities
+             * *   **sys**: Windows system vulnerabilities
+             * *   **cms**: Web-CMS vulnerabilities
+             * *   **app**: application vulnerabilities
+             * *   **emg**: urgent vulnerabilities
+             * *   **sca**: middleware vulnerabilities
              */
             public Builder type(String type) {
                 this.type = type;
@@ -308,7 +329,7 @@ public class DescribeExposedInstanceDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the server.
+             * The UUID of the server.
              */
             public Builder uuid(String uuid) {
                 this.uuid = uuid;
@@ -505,10 +526,48 @@ public class DescribeExposedInstanceDetailResponseBody extends TeaModel {
             private String uuid; 
 
             /**
-             * AllVulList.
+             * The information about all vulnerabilities on the server.
              */
             public Builder allVulList(java.util.List < AllVulList> allVulList) {
                 this.allVulList = allVulList;
+                return this;
+            }
+
+            /**
+             * The server component that is exposed on the Internet.
+             */
+            public Builder exposureComponent(String exposureComponent) {
+                this.exposureComponent = exposureComponent;
+                return this;
+            }
+
+            /**
+             * The public IP address.
+             */
+            public Builder exposureIp(String exposureIp) {
+                this.exposureIp = exposureIp;
+                return this;
+            }
+
+            /**
+             * The port that is exposed on the Internet.
+             */
+            public Builder exposurePort(String exposurePort) {
+                this.exposurePort = exposurePort;
+                return this;
+            }
+
+            /**
+             * The resource from which the server is exposed. Valid values:
+             * <p>
+             * 
+             * *   **INTERNET_IP**: the public IP address of an Elastic Compute Service (ECS) instance
+             * *   **SLB**: the public IP address of a Server Load Balancer (SLB) instance
+             * *   **EIP**: an elastic IP address (EIP)
+             * *   **DNAT**: the NAT gateway that connects to the Internet by using the DNAT feature
+             */
+            public Builder exposureType(String exposureType) {
+                this.exposureType = exposureType;
                 return this;
             }
 
@@ -521,52 +580,13 @@ public class DescribeExposedInstanceDetailResponseBody extends TeaModel {
              * *   If the value of the ExposureType parameter is **EIP**, the value of this parameter is the ID of the EIP.
              * *   If the value of the ExposureType parameter is **DNAT**, the value of this parameter is the ID of the NAT gateway.
              */
-            public Builder exposureComponent(String exposureComponent) {
-                this.exposureComponent = exposureComponent;
-                return this;
-            }
-
-            /**
-             * The name of the server.
-             */
-            public Builder exposureIp(String exposureIp) {
-                this.exposureIp = exposureIp;
-                return this;
-            }
-
-            /**
-             * The information about the vulnerabilities that are exposed on the Internet and can be exploited by attackers.
-             */
-            public Builder exposurePort(String exposurePort) {
-                this.exposurePort = exposurePort;
-                return this;
-            }
-
-            /**
-             * The priority to fix the vulnerability. Valid values:
-             * <p>
-             * 
-             * *   **asap**: high
-             * *   **later**: medium
-             * *   **nntf**: low
-             * 
-             * >  We recommend that you fix the vulnerabilities that have the **high** priority at the earliest opportunity.
-             */
-            public Builder exposureType(String exposureType) {
-                this.exposureType = exposureType;
-                return this;
-            }
-
-            /**
-             * The public IP address of the server.
-             */
             public Builder exposureTypeId(String exposureTypeId) {
                 this.exposureTypeId = exposureTypeId;
                 return this;
             }
 
             /**
-             * The port that is exposed on the Internet.
+             * The server group to which the server belongs.
              */
             public Builder groupNo(String groupNo) {
                 this.groupNo = groupNo;
@@ -574,7 +594,7 @@ public class DescribeExposedInstanceDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The public IP address.
+             * The ID of the server.
              */
             public Builder instanceId(String instanceId) {
                 this.instanceId = instanceId;
@@ -582,15 +602,7 @@ public class DescribeExposedInstanceDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The type of the vulnerability. Valid values:
-             * <p>
-             * 
-             * *   **cve**: Linux software vulnerabilities
-             * *   **sys**: Windows system vulnerabilities
-             * *   **cms**: Web-CMS vulnerabilities
-             * *   **app**: application vulnerabilities
-             * *   **emg**: urgent vulnerabilities
-             * *   **sca**: middleware vulnerabilities
+             * The name of the server.
              */
             public Builder instanceName(String instanceName) {
                 this.instanceName = instanceName;
@@ -598,7 +610,7 @@ public class DescribeExposedInstanceDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The alias of the vulnerability.
+             * The public IP address of the server.
              */
             public Builder internetIp(String internetIp) {
                 this.internetIp = internetIp;
@@ -606,7 +618,7 @@ public class DescribeExposedInstanceDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the vulnerability.
+             * The private IP address of the server.
              */
             public Builder intranetIp(String intranetIp) {
                 this.intranetIp = intranetIp;
@@ -614,7 +626,7 @@ public class DescribeExposedInstanceDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The information about all vulnerabilities on the server.
+             * The information about the vulnerabilities that are exposed on the Internet and can be exploited by attackers.
              */
             public Builder realVulList(java.util.List < RealVulList> realVulList) {
                 this.realVulList = realVulList;
@@ -622,7 +634,10 @@ public class DescribeExposedInstanceDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The alias of the vulnerability.
+             * The region in which the server resides.
+             * <p>
+             * 
+             * >  For more information about the mapping between region IDs and region names, see [Regions and zones](~~40654~~).
              */
             public Builder regionId(String regionId) {
                 this.regionId = regionId;

@@ -55,7 +55,10 @@ public class DeleteInstallCodeRequest extends Request {
         } 
 
         /**
-         * CaptchaCode.
+         * The installation command.
+         * <p>
+         * 
+         * >  You can call the [DescribeInstallCodes](~~DescribeInstallCodes~~) operation to query installation commands.
          */
         public Builder captchaCode(String captchaCode) {
             this.putQueryParameter("CaptchaCode", captchaCode);

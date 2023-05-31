@@ -156,6 +156,9 @@ public class DescribeGroupedVulResponseBody extends TeaModel {
         @NameInMap("RaspDefend")
         private Integer raspDefend;
 
+        @NameInMap("Related")
+        private String related;
+
         @NameInMap("Tags")
         private String tags;
 
@@ -174,6 +177,7 @@ public class DescribeGroupedVulResponseBody extends TeaModel {
             this.name = builder.name;
             this.nntfCount = builder.nntfCount;
             this.raspDefend = builder.raspDefend;
+            this.related = builder.related;
             this.tags = builder.tags;
             this.totalFixCount = builder.totalFixCount;
             this.type = builder.type;
@@ -244,6 +248,13 @@ public class DescribeGroupedVulResponseBody extends TeaModel {
         }
 
         /**
+         * @return related
+         */
+        public String getRelated() {
+            return this.related;
+        }
+
+        /**
          * @return tags
          */
         public String getTags() {
@@ -273,6 +284,7 @@ public class DescribeGroupedVulResponseBody extends TeaModel {
             private String name; 
             private Integer nntfCount; 
             private Integer raspDefend; 
+            private String related; 
             private String tags; 
             private Long totalFixCount; 
             private String type; 
@@ -344,6 +356,14 @@ public class DescribeGroupedVulResponseBody extends TeaModel {
              */
             public Builder raspDefend(Integer raspDefend) {
                 this.raspDefend = raspDefend;
+                return this;
+            }
+
+            /**
+             * Related.
+             */
+            public Builder related(String related) {
+                this.related = related;
                 return this;
             }
 

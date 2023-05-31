@@ -54,7 +54,11 @@ public class CheckUserHasEcsRequest extends Request {
         } 
 
         /**
-         * CheckUserHasEcs
+         * The language of the content within the request and response. Default value: **zh**. Valid values:
+         * <p>
+         * 
+         * *   **zh**: Chinese
+         * *   **en**: English
          */
         public Builder lang(String lang) {
             this.putQueryParameter("Lang", lang);

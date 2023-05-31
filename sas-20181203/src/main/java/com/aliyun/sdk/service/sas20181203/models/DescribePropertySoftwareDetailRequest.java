@@ -180,7 +180,7 @@ public class DescribePropertySoftwareDetailRequest extends Request {
         } 
 
         /**
-         * The name of the software.
+         * The number of the page to return. Default value: **1**.
          */
         public Builder currentPage(Integer currentPage) {
             this.putQueryParameter("CurrentPage", currentPage);
@@ -189,7 +189,7 @@ public class DescribePropertySoftwareDetailRequest extends Request {
         }
 
         /**
-         * 10
+         * Specifies whether fuzzy search by software name is supported. If you want to use fuzzy search, set the parameter to 1. If you set the parameter to a different value or leave the parameter empty, fuzzy search is not supported.
          */
         public Builder extend(String extend) {
             this.putQueryParameter("Extend", extend);
@@ -198,7 +198,7 @@ public class DescribePropertySoftwareDetailRequest extends Request {
         }
 
         /**
-         * 3.10.0
+         * The timestamp at which the software update ends. Unit: milliseconds.
          */
         public Builder installTimeEnd(Long installTimeEnd) {
             this.putQueryParameter("InstallTimeEnd", installTimeEnd);
@@ -207,7 +207,7 @@ public class DescribePropertySoftwareDetailRequest extends Request {
         }
 
         /**
-         * The name of the software.
+         * The timestamp at which the software update starts. Unit: milliseconds.
          */
         public Builder installTimeStart(Long installTimeStart) {
             this.putQueryParameter("InstallTimeStart", installTimeStart);
@@ -216,7 +216,7 @@ public class DescribePropertySoftwareDetailRequest extends Request {
         }
 
         /**
-         * The details of the software asset.
+         * The name of the software.
          */
         public Builder name(String name) {
             this.putQueryParameter("Name", name);
@@ -234,7 +234,7 @@ public class DescribePropertySoftwareDetailRequest extends Request {
         }
 
         /**
-         * The name or IP address of the server.
+         * The installation path of the software.
          */
         public Builder path(String path) {
             this.putQueryParameter("Path", path);
@@ -243,7 +243,7 @@ public class DescribePropertySoftwareDetailRequest extends Request {
         }
 
         /**
-         * The private IP address of the server.
+         * The name or IP address of the server.
          */
         public Builder remark(String remark) {
             this.putQueryParameter("Remark", remark);
@@ -252,7 +252,7 @@ public class DescribePropertySoftwareDetailRequest extends Request {
         }
 
         /**
-         * The number of the page to return. Default value: **1**.
+         * The version of the software.
          */
         public Builder softwareVersion(String softwareVersion) {
             this.putQueryParameter("SoftwareVersion", softwareVersion);
@@ -261,7 +261,7 @@ public class DescribePropertySoftwareDetailRequest extends Request {
         }
 
         /**
-         * The public IP address of the server.
+         * The UUID of the server.
          */
         public Builder uuid(String uuid) {
             this.putQueryParameter("Uuid", uuid);

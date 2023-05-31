@@ -98,7 +98,7 @@ public class ListClientUserDefineRulesRequest extends Request {
         } 
 
         /**
-         * CurrentPage.
+         * The number of the page to return.
          */
         public Builder currentPage(Integer currentPage) {
             this.putQueryParameter("CurrentPage", currentPage);
@@ -107,7 +107,7 @@ public class ListClientUserDefineRulesRequest extends Request {
         }
 
         /**
-         * Name.
+         * The name of the rule.
          */
         public Builder name(String name) {
             this.putQueryParameter("Name", name);
@@ -116,7 +116,7 @@ public class ListClientUserDefineRulesRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * The number of entries to return on each page.
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -125,7 +125,7 @@ public class ListClientUserDefineRulesRequest extends Request {
         }
 
         /**
-         * Type.
+         * The types of rules.
          */
         public Builder type(java.util.List < Integer > type) {
             this.putQueryParameter("Type", type);

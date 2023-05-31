@@ -245,7 +245,7 @@ public class ListCheckResultRequest extends Request {
         }
 
         /**
-         * The number of the page to return.
+         * The page number.
          */
         public Builder currentPage(Integer currentPage) {
             this.putQueryParameter("CurrentPage", currentPage);
@@ -263,7 +263,7 @@ public class ListCheckResultRequest extends Request {
         }
 
         /**
-         * The asset type of the cloud service. Valid values:
+         * The asset type of the cloud services. Valid values:
          * <p>
          * 
          * *   **ECS**: Elastic Compute Service (ECS)
@@ -309,7 +309,7 @@ public class ListCheckResultRequest extends Request {
         }
 
         /**
-         * The number of entries to return on each page.
+         * The number of entries per page.
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -318,7 +318,11 @@ public class ListCheckResultRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * The region ID of the instance. Valid values:
+         * <p>
+         * 
+         * *   **cn-hangzhou**: International
+         * *   **ap-southeast-1**: Singapore
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -372,7 +376,7 @@ public class ListCheckResultRequest extends Request {
         }
 
         /**
-         * The status of check items. Separate multiple status with commas (,). Valid values:
+         * The statuses of check items. Separate multiple statuses with commas (,). Valid values:
          * <p>
          * 
          * *   **PASS**
@@ -388,7 +392,7 @@ public class ListCheckResultRequest extends Request {
         }
 
         /**
-         * Types.
+         * The types of check standards.
          */
         public Builder types(java.util.List < String > types) {
             this.putQueryParameter("Types", types);
@@ -397,7 +401,7 @@ public class ListCheckResultRequest extends Request {
         }
 
         /**
-         * The cloud service provider. Valid values:
+         * The cloud service providers. Valid value:
          * <p>
          * 
          * *   **ALIYUN**: Alibaba Cloud

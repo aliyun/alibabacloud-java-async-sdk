@@ -86,7 +86,7 @@ public class ModifyAssetImportantResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * ErrCode.
+         * The error code returned if the request failed.
          */
         public Builder errCode(String errCode) {
             this.errCode = errCode;
@@ -94,7 +94,7 @@ public class ModifyAssetImportantResponseBody extends TeaModel {
         }
 
         /**
-         * ErrMessage.
+         * The error message returned if the request failed.
          */
         public Builder errMessage(String errMessage) {
             this.errMessage = errMessage;
@@ -102,7 +102,7 @@ public class ModifyAssetImportantResponseBody extends TeaModel {
         }
 
         /**
-         * HttpStatusCode.
+         * The HTTP status code returned. The value 200 indicates that the request was successful.
          */
         public Builder httpStatusCode(Integer httpStatusCode) {
             this.httpStatusCode = httpStatusCode;
@@ -110,7 +110,7 @@ public class ModifyAssetImportantResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request, which is used to locate and troubleshoot issues.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -118,7 +118,11 @@ public class ModifyAssetImportantResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * Indicates whether the request was successful. Valid values:
+         * <p>
+         * 
+         * *   **true**: The request was successful.
+         * *   **false**: The request failed.
          */
         public Builder success(Boolean success) {
             this.success = success;

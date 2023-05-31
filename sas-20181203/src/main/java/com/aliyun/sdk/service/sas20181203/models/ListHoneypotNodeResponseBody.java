@@ -110,7 +110,7 @@ public class ListHoneypotNodeResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * Queries the information about management nodes.
+         * The status code returned. The status code **200** indicates that the request was successful. Other status codes indicate that the request failed. You can identify the cause of the failure based on the status code.
          */
         public Builder code(String code) {
             this.code = code;
@@ -118,7 +118,7 @@ public class ListHoneypotNodeResponseBody extends TeaModel {
         }
 
         /**
-         * The error message returned.
+         * An array that consists of the information about the management nodes.
          */
         public Builder honeypotNodeList(java.util.List < HoneypotNodeList> honeypotNodeList) {
             this.honeypotNodeList = honeypotNodeList;
@@ -126,7 +126,7 @@ public class ListHoneypotNodeResponseBody extends TeaModel {
         }
 
         /**
-         * HttpStatusCode.
+         * The HTTP status code returned.
          */
         public Builder httpStatusCode(Integer httpStatusCode) {
             this.httpStatusCode = httpStatusCode;
@@ -134,7 +134,7 @@ public class ListHoneypotNodeResponseBody extends TeaModel {
         }
 
         /**
-         * ListHoneypotNode
+         * The error message returned.
          */
         public Builder message(String message) {
             this.message = message;
@@ -142,7 +142,7 @@ public class ListHoneypotNodeResponseBody extends TeaModel {
         }
 
         /**
-         * An array that consists of the allowed CIDR blocks.
+         * The pagination information.
          */
         public Builder pageInfo(PageInfo pageInfo) {
             this.pageInfo = pageInfo;
@@ -150,7 +150,7 @@ public class ListHoneypotNodeResponseBody extends TeaModel {
         }
 
         /**
-         * WB01224678
+         * The ID of the request, which is used to locate and troubleshoot issues.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -158,7 +158,11 @@ public class ListHoneypotNodeResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request, which is used to locate and troubleshoot issues.
+         * Indicates whether the request was successful. Valid values:
+         * <p>
+         * 
+         * *   **true**: The request was successful.
+         * *   **false**: The request failed.
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -354,7 +358,11 @@ public class ListHoneypotNodeResponseBody extends TeaModel {
             private Boolean upgradeAvailable; 
 
             /**
-             * The maximum number of probes that can be used.
+             * Indicates whether a honeypot is allowed to access the Internet. Valid values:
+             * <p>
+             * 
+             * *   **true**: The honeypot is allowed to access the Internet.
+             * *   **false**: The honeypot is not allowed to access the Internet.
              */
             public Builder allowHoneypotAccessInternet(Boolean allowHoneypotAccessInternet) {
                 this.allowHoneypotAccessInternet = allowHoneypotAccessInternet;
@@ -362,66 +370,10 @@ public class ListHoneypotNodeResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the management node.
+             * The time when the management node was created.
              */
             public Builder createTime(String createTime) {
                 this.createTime = createTime;
-                return this;
-            }
-
-            /**
-             * The number of entries returned on the current page.
-             */
-            public Builder defaultNode(Boolean defaultNode) {
-                this.defaultNode = defaultNode;
-                return this;
-            }
-
-            /**
-             * The HTTP status code returned.
-             */
-            public Builder ecsInstanceId(String ecsInstanceId) {
-                this.ecsInstanceId = ecsInstanceId;
-                return this;
-            }
-
-            /**
-             * The ID of the management node.
-             */
-            public Builder honeypotTotalCount(Integer honeypotTotalCount) {
-                this.honeypotTotalCount = honeypotTotalCount;
-                return this;
-            }
-
-            /**
-             * The maximum number of honeypots that can be deployed on the management node.
-             */
-            public Builder honeypotUsedCount(Integer honeypotUsedCount) {
-                this.honeypotUsedCount = honeypotUsedCount;
-                return this;
-            }
-
-            /**
-             * The name of the management node.
-             */
-            public Builder nodeId(String nodeId) {
-                this.nodeId = nodeId;
-                return this;
-            }
-
-            /**
-             * The pagination information.
-             */
-            public Builder nodeIp(String nodeIp) {
-                this.nodeIp = nodeIp;
-                return this;
-            }
-
-            /**
-             * The ID of the Elastic Compute Service (ECS) instance.
-             */
-            public Builder nodeName(String nodeName) {
-                this.nodeName = nodeName;
                 return this;
             }
 
@@ -432,20 +384,80 @@ public class ListHoneypotNodeResponseBody extends TeaModel {
              * *   **false**: non-default type
              * *   **true**: default type
              */
+            public Builder defaultNode(Boolean defaultNode) {
+                this.defaultNode = defaultNode;
+                return this;
+            }
+
+            /**
+             * The ID of the instance.
+             */
+            public Builder ecsInstanceId(String ecsInstanceId) {
+                this.ecsInstanceId = ecsInstanceId;
+                return this;
+            }
+
+            /**
+             * The maximum number of honeypots that can be deployed to the management node.
+             */
+            public Builder honeypotTotalCount(Integer honeypotTotalCount) {
+                this.honeypotTotalCount = honeypotTotalCount;
+                return this;
+            }
+
+            /**
+             * The number of honeypots that are deployed to the management node.
+             */
+            public Builder honeypotUsedCount(Integer honeypotUsedCount) {
+                this.honeypotUsedCount = honeypotUsedCount;
+                return this;
+            }
+
+            /**
+             * The ID of the management node.
+             */
+            public Builder nodeId(String nodeId) {
+                this.nodeId = nodeId;
+                return this;
+            }
+
+            /**
+             * The IP address of the management node.
+             */
+            public Builder nodeIp(String nodeIp) {
+                this.nodeIp = nodeIp;
+                return this;
+            }
+
+            /**
+             * The name of the management node.
+             */
+            public Builder nodeName(String nodeName) {
+                this.nodeName = nodeName;
+                return this;
+            }
+
+            /**
+             * The maximum number of probes that can be deployed for the management node.
+             */
             public Builder probeTotalCount(Integer probeTotalCount) {
                 this.probeTotalCount = probeTotalCount;
                 return this;
             }
 
             /**
-             * Indicates whether the honeypot is allowed to access the Internet.
-             * <p>
-             * 
-             * *   **true**: The honeypot is allowed to access the Internet.
-             * *   **false**: The honeypot is not allowed to access the Internet.
+             * The number of probes that are deployed for the management node.
              */
             public Builder probeUsedCount(Integer probeUsedCount) {
                 this.probeUsedCount = probeUsedCount;
+                return this;
+            }
+
+            /**
+             * An array consisting of the CIDR blocks that are allowed to access the management node.
+             */
+            public Builder securityGroupProbeIpList(java.util.List < String > securityGroupProbeIpList) {
+                this.securityGroupProbeIpList = securityGroupProbeIpList;
                 return this;
             }
 
@@ -456,24 +468,17 @@ public class ListHoneypotNodeResponseBody extends TeaModel {
              * *   **1**: normal
              * *   **2**: abnormal
              */
-            public Builder securityGroupProbeIpList(java.util.List < String > securityGroupProbeIpList) {
-                this.securityGroupProbeIpList = securityGroupProbeIpList;
-                return this;
-            }
-
-            /**
-             * The number of honeypots that are deployed on the management node.
-             */
             public Builder totalStatus(Integer totalStatus) {
                 this.totalStatus = totalStatus;
                 return this;
             }
 
             /**
-             * Whether the node is upgradable. Valid values:
+             * Indicates whether the management node can be upgraded. Valid values:
              * <p>
-             * *   **false**: non-default type
-             * *   **true**: default type
+             * 
+             * *   **false**: no
+             * *   **true**: yes
              */
             public Builder upgradeAvailable(Boolean upgradeAvailable) {
                 this.upgradeAvailable = upgradeAvailable;
@@ -550,7 +555,7 @@ public class ListHoneypotNodeResponseBody extends TeaModel {
             private Integer totalCount; 
 
             /**
-             * The IP address of the management node.
+             * The number of entries returned on the current page.
              */
             public Builder count(Integer count) {
                 this.count = count;
@@ -558,7 +563,7 @@ public class ListHoneypotNodeResponseBody extends TeaModel {
             }
 
             /**
-             * The number of entries to return on each page.
+             * The page number of the returned page.
              */
             public Builder currentPage(Integer currentPage) {
                 this.currentPage = currentPage;
@@ -566,7 +571,7 @@ public class ListHoneypotNodeResponseBody extends TeaModel {
             }
 
             /**
-             * An array that consists of the information about the management nodes.
+             * The number of entries returned per page.
              */
             public Builder pageSize(Integer pageSize) {
                 this.pageSize = pageSize;
@@ -574,7 +579,7 @@ public class ListHoneypotNodeResponseBody extends TeaModel {
             }
 
             /**
-             * The number of entries returned per page.
+             * The total number of entries returned.
              */
             public Builder totalCount(Integer totalCount) {
                 this.totalCount = totalCount;

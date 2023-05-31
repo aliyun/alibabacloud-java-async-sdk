@@ -62,7 +62,7 @@ public class DescribeRestoreJobsResponseBody extends TeaModel {
         private java.util.List < RestoreJobs> restoreJobs; 
 
         /**
-         * The folder to which the backup data is restored. After you create the restoration task, the backup data is restored to the specified folder.
+         * The pagination information.
          */
         public Builder pageInfo(PageInfo pageInfo) {
             this.pageInfo = pageInfo;
@@ -70,7 +70,7 @@ public class DescribeRestoreJobsResponseBody extends TeaModel {
         }
 
         /**
-         * The directory excluded from the anti-ransomware policy. The value is the directory that you specify to skip protection when you create the anti-ransomware policy.
+         * The ID of the request, which is used to locate and troubleshoot issues.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -78,7 +78,7 @@ public class DescribeRestoreJobsResponseBody extends TeaModel {
         }
 
         /**
-         * The timestamp when the restoration task is created. Unit: milliseconds.
+         * An array that consists of the restoration tasks.
          */
         public Builder restoreJobs(java.util.List < RestoreJobs> restoreJobs) {
             this.restoreJobs = restoreJobs;
@@ -154,7 +154,7 @@ public class DescribeRestoreJobsResponseBody extends TeaModel {
             private Integer totalCount; 
 
             /**
-             * The hash value of the snapshot that stores backup data when the data is backed up.
+             * The number of restoration tasks returned on the current page.
              */
             public Builder count(Integer count) {
                 this.count = count;
@@ -162,7 +162,7 @@ public class DescribeRestoreJobsResponseBody extends TeaModel {
             }
 
             /**
-             * The error message returned.
+             * The page number of the returned page.
              */
             public Builder currentPage(Integer currentPage) {
                 this.currentPage = currentPage;
@@ -170,7 +170,7 @@ public class DescribeRestoreJobsResponseBody extends TeaModel {
             }
 
             /**
-             * The number of entries to return on each page. Default value: **10**.
+             * The number of entries returned per page. Default value: **10**.
              */
             public Builder pageSize(Integer pageSize) {
                 this.pageSize = pageSize;
@@ -178,7 +178,7 @@ public class DescribeRestoreJobsResponseBody extends TeaModel {
             }
 
             /**
-             * The number of the page to return. Default value: **1**.
+             * The total number of restoration tasks returned.
              */
             public Builder totalCount(Integer totalCount) {
                 this.totalCount = totalCount;
@@ -687,7 +687,7 @@ public class DescribeRestoreJobsResponseBody extends TeaModel {
             private String vaultId; 
 
             /**
-             * The URL to download the CSV file. The CSV file contains the files that fail to be restored.
+             * The size of backup data. Unit: bytes.
              */
             public Builder actualBytes(Long actualBytes) {
                 this.actualBytes = actualBytes;
@@ -695,7 +695,7 @@ public class DescribeRestoreJobsResponseBody extends TeaModel {
             }
 
             /**
-             * BytesDone.
+             * The total size of data that is restored. Unit: bytes.
              */
             public Builder bytesDone(Long bytesDone) {
                 this.bytesDone = bytesDone;
@@ -703,7 +703,7 @@ public class DescribeRestoreJobsResponseBody extends TeaModel {
             }
 
             /**
-             * The size of backup data. Unit: bytes.
+             * The total size of data that you want to restore. Unit: bytes.
              */
             public Builder bytesTotal(Long bytesTotal) {
                 this.bytesTotal = bytesTotal;
@@ -711,7 +711,7 @@ public class DescribeRestoreJobsResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the restoration task is updated.
+             * The ID of the anti-ransomware agent that is used to restore data.
              */
             public Builder clientId(String clientId) {
                 this.clientId = clientId;
@@ -719,7 +719,7 @@ public class DescribeRestoreJobsResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the backup vault in which the backup data is stored.
+             * The timestamp when the restoration task is complete. Unit: milliseconds.
              */
             public Builder completeTime(Long completeTime) {
                 this.completeTime = completeTime;
@@ -727,7 +727,7 @@ public class DescribeRestoreJobsResponseBody extends TeaModel {
             }
 
             /**
-             * RUNNING
+             * The timestamp when the restoration task is created. Unit: milliseconds.
              */
             public Builder createdTime(Long createdTime) {
                 this.createdTime = createdTime;
@@ -735,7 +735,7 @@ public class DescribeRestoreJobsResponseBody extends TeaModel {
             }
 
             /**
-             * DescribeRestoreJobs
+             * The duration of the restoration task. Unit: seconds.
              */
             public Builder duration(Long duration) {
                 this.duration = duration;
@@ -743,7 +743,7 @@ public class DescribeRestoreJobsResponseBody extends TeaModel {
             }
 
             /**
-             * WB01014029
+             * The number of the restoration tasks on which errors occur.
              */
             public Builder errorCount(Long errorCount) {
                 this.errorCount = errorCount;
@@ -751,10 +751,222 @@ public class DescribeRestoreJobsResponseBody extends TeaModel {
             }
 
             /**
-             * The included directory based on which the files to restore are located. The value is the directory that you specify for protection when you create the anti-ransomware policy
+             * The name of the CSV file. The CSV file contains the files that fail to be restored.
              */
             public Builder errorFile(String errorFile) {
                 this.errorFile = errorFile;
+                return this;
+            }
+
+            /**
+             * The URL to download the CSV file. The CSV file contains the files that fail to be restored.
+             */
+            public Builder errorFileUrl(String errorFileUrl) {
+                this.errorFileUrl = errorFileUrl;
+                return this;
+            }
+
+            /**
+             * The error code that is returned for the restoration task.
+             */
+            public Builder errorType(String errorType) {
+                this.errorType = errorType;
+                return this;
+            }
+
+            /**
+             * The timestamp when the in-progress restoration task is expected to be complete. Unit: seconds.
+             */
+            public Builder eta(Long eta) {
+                this.eta = eta;
+                return this;
+            }
+
+            /**
+             * The directory excluded from the anti-ransomware policy. The value is the directory that you specify to skip protection when you create the anti-ransomware policy.
+             */
+            public Builder excludes(String excludes) {
+                this.excludes = excludes;
+                return this;
+            }
+
+            /**
+             * The return value of the restoration task.
+             */
+            public Builder exitCode(String exitCode) {
+                this.exitCode = exitCode;
+                return this;
+            }
+
+            /**
+             * The time when the restoration task is created.
+             */
+            public Builder gmtCreate(String gmtCreate) {
+                this.gmtCreate = gmtCreate;
+                return this;
+            }
+
+            /**
+             * The time when the restoration task is updated.
+             */
+            public Builder gmtModified(String gmtModified) {
+                this.gmtModified = gmtModified;
+                return this;
+            }
+
+            /**
+             * The included directory based on which the files to restore are located. The value is the directory that you specify for protection when you create the anti-ransomware policy
+             */
+            public Builder includes(String includes) {
+                this.includes = includes;
+                return this;
+            }
+
+            /**
+             * The ID of the server whose data you want to restore.
+             */
+            public Builder instanceId(String instanceId) {
+                this.instanceId = instanceId;
+                return this;
+            }
+
+            /**
+             * The name of the server whose data you want to restore.
+             */
+            public Builder instanceName(String instanceName) {
+                this.instanceName = instanceName;
+                return this;
+            }
+
+            /**
+             * The public IP address of the server whose data you want to restore.
+             */
+            public Builder internetIp(String internetIp) {
+                this.internetIp = internetIp;
+                return this;
+            }
+
+            /**
+             * The internal IP address of the server whose data you want to restore.
+             */
+            public Builder intranetIp(String intranetIp) {
+                this.intranetIp = intranetIp;
+                return this;
+            }
+
+            /**
+             * The number of files that are backed up.
+             */
+            public Builder itemsDone(Long itemsDone) {
+                this.itemsDone = itemsDone;
+                return this;
+            }
+
+            /**
+             * The total number of files that you want to restore.
+             */
+            public Builder itemsTotal(Long itemsTotal) {
+                this.itemsTotal = itemsTotal;
+                return this;
+            }
+
+            /**
+             * The error message returned.
+             */
+            public Builder message(String message) {
+                this.message = message;
+                return this;
+            }
+
+            /**
+             * The progress of the restoration task in percentage.
+             */
+            public Builder percentage(Integer percentage) {
+                this.percentage = percentage;
+                return this;
+            }
+
+            /**
+             * The ID of the request, which is used to locate and troubleshoot issues.
+             */
+            public Builder requestId(String requestId) {
+                this.requestId = requestId;
+                return this;
+            }
+
+            /**
+             * The ID of the restoration task.
+             */
+            public Builder restoreId(String restoreId) {
+                this.restoreId = restoreId;
+                return this;
+            }
+
+            /**
+             * The name of the restoration task.
+             */
+            public Builder restoreName(String restoreName) {
+                this.restoreName = restoreName;
+                return this;
+            }
+
+            /**
+             * The type of the file that is restored. Valid values:
+             * <p>
+             * 
+             * *   **ECS_FILE**: files on Elastic Compute Service (ECS) instances
+             * *   **FILE**: files on servers in data centers
+             */
+            public Builder restoreType(String restoreType) {
+                this.restoreType = restoreType;
+                return this;
+            }
+
+            /**
+             * The hash value of the snapshot that stores backup data when the data is backed up.
+             */
+            public Builder snapshotHash(String snapshotHash) {
+                this.snapshotHash = snapshotHash;
+                return this;
+            }
+
+            /**
+             * The hash value ID of the snapshot that stores backup data when the data is backed up.
+             */
+            public Builder snapshotId(String snapshotId) {
+                this.snapshotId = snapshotId;
+                return this;
+            }
+
+            /**
+             * The version of the backup data.
+             */
+            public Builder snapshotVersion(String snapshotVersion) {
+                this.snapshotVersion = snapshotVersion;
+                return this;
+            }
+
+            /**
+             * The path to the source file that you want to restore.
+             */
+            public Builder source(String source) {
+                this.source = source;
+                return this;
+            }
+
+            /**
+             * The ID of the anti-ransomware agent that is used to back up data.
+             */
+            public Builder sourceClientId(String sourceClientId) {
+                this.sourceClientId = sourceClientId;
+                return this;
+            }
+
+            /**
+             * The speed of data restoration. Unit: byte/s.
+             */
+            public Builder speed(Long speed) {
+                this.speed = speed;
                 return this;
             }
 
@@ -773,221 +985,13 @@ public class DescribeRestoreJobsResponseBody extends TeaModel {
              * *   **QUEUED**: The task is waiting to be run.
              * *   **CLIENT_DELETED**: The task fails because the anti-ransomware agent is uninstalled.
              */
-            public Builder errorFileUrl(String errorFileUrl) {
-                this.errorFileUrl = errorFileUrl;
-                return this;
-            }
-
-            /**
-             * 1
-             */
-            public Builder errorType(String errorType) {
-                this.errorType = errorType;
-                return this;
-            }
-
-            /**
-             * Queries the details about restoration tasks.
-             */
-            public Builder eta(Long eta) {
-                this.eta = eta;
-                return this;
-            }
-
-            /**
-             * The public IP address of the server whose data you want to restore.
-             */
-            public Builder excludes(String excludes) {
-                this.excludes = excludes;
-                return this;
-            }
-
-            /**
-             * The total number of restoration tasks returned.
-             */
-            public Builder exitCode(String exitCode) {
-                this.exitCode = exitCode;
-                return this;
-            }
-
-            /**
-             * The ID of the request, which is used to locate and troubleshoot issues.
-             */
-            public Builder gmtCreate(String gmtCreate) {
-                this.gmtCreate = gmtCreate;
-                return this;
-            }
-
-            /**
-             * The ID of the anti-ransomware agent that is used to back up data.
-             */
-            public Builder gmtModified(String gmtModified) {
-                this.gmtModified = gmtModified;
-                return this;
-            }
-
-            /**
-             * The total size of data that you want to restore. Unit: bytes.
-             */
-            public Builder includes(String includes) {
-                this.includes = includes;
-                return this;
-            }
-
-            /**
-             * The speed of data restoration. Unit: byte/s.
-             */
-            public Builder instanceId(String instanceId) {
-                this.instanceId = instanceId;
-                return this;
-            }
-
-            /**
-             * The error code that is returned for the restoration task.
-             */
-            public Builder instanceName(String instanceName) {
-                this.instanceName = instanceName;
-                return this;
-            }
-
-            /**
-             * 10
-             */
-            public Builder internetIp(String internetIp) {
-                this.internetIp = internetIp;
-                return this;
-            }
-
-            /**
-             * The timestamp when the restoration task is complete. Unit: milliseconds.
-             */
-            public Builder intranetIp(String intranetIp) {
-                this.intranetIp = intranetIp;
-                return this;
-            }
-
-            /**
-             * The number of files that are backed up.
-             */
-            public Builder itemsDone(Long itemsDone) {
-                this.itemsDone = itemsDone;
-                return this;
-            }
-
-            /**
-             * ItemsTotal.
-             */
-            public Builder itemsTotal(Long itemsTotal) {
-                this.itemsTotal = itemsTotal;
-                return this;
-            }
-
-            /**
-             * The total number of files that you want to restore.
-             */
-            public Builder message(String message) {
-                this.message = message;
-                return this;
-            }
-
-            /**
-             * The ID of the anti-ransomware agent that is used to restore data.
-             */
-            public Builder percentage(Integer percentage) {
-                this.percentage = percentage;
-                return this;
-            }
-
-            /**
-             * The internal IP address of the server whose data you want to restore.
-             */
-            public Builder requestId(String requestId) {
-                this.requestId = requestId;
-                return this;
-            }
-
-            /**
-             * The version of the backup data.
-             */
-            public Builder restoreId(String restoreId) {
-                this.restoreId = restoreId;
-                return this;
-            }
-
-            /**
-             * The UUID of the server whose data you want to restore.
-             */
-            public Builder restoreName(String restoreName) {
-                this.restoreName = restoreName;
-                return this;
-            }
-
-            /**
-             * The total size of data that is restored. Unit: bytes.
-             */
-            public Builder restoreType(String restoreType) {
-                this.restoreType = restoreType;
-                return this;
-            }
-
-            /**
-             * The number of restoration tasks returned on the current page.
-             */
-            public Builder snapshotHash(String snapshotHash) {
-                this.snapshotHash = snapshotHash;
-                return this;
-            }
-
-            /**
-             * The ID of the server whose data you want to restore.
-             */
-            public Builder snapshotId(String snapshotId) {
-                this.snapshotId = snapshotId;
-                return this;
-            }
-
-            /**
-             * The time when the restoration task is created.
-             */
-            public Builder snapshotVersion(String snapshotVersion) {
-                this.snapshotVersion = snapshotVersion;
-                return this;
-            }
-
-            /**
-             * The hash value ID of the snapshot that stores backup data when the data is backed up.
-             */
-            public Builder source(String source) {
-                this.source = source;
-                return this;
-            }
-
-            /**
-             * An array that consists of the restoration tasks.
-             */
-            public Builder sourceClientId(String sourceClientId) {
-                this.sourceClientId = sourceClientId;
-                return this;
-            }
-
-            /**
-             * The pagination information.
-             */
-            public Builder speed(Long speed) {
-                this.speed = speed;
-                return this;
-            }
-
-            /**
-             * The path to the source file that you want to restore.
-             */
             public Builder status(String status) {
                 this.status = status;
                 return this;
             }
 
             /**
-             * The ID of the request, which is used to locate and troubleshoot issues.
+             * The folder to which the backup data is restored. After you create the restoration task, the backup data is restored to the specified folder.
              */
             public Builder target(String target) {
                 this.target = target;
@@ -995,7 +999,7 @@ public class DescribeRestoreJobsResponseBody extends TeaModel {
             }
 
             /**
-             * The number of entries returned per page. Default value: **10**.
+             * The timestamp when the restoration task was last updated. Unit: milliseconds.
              */
             public Builder updatedTime(Long updatedTime) {
                 this.updatedTime = updatedTime;
@@ -1003,7 +1007,7 @@ public class DescribeRestoreJobsResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the restoration task.
+             * The UUID of the server whose data you want to restore.
              */
             public Builder uuid(String uuid) {
                 this.uuid = uuid;
@@ -1011,7 +1015,7 @@ public class DescribeRestoreJobsResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the restoration task.
+             * The ID of the backup vault in which the backup data is stored.
              */
             public Builder vaultId(String vaultId) {
                 this.vaultId = vaultId;

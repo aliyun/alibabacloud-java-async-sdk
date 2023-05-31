@@ -55,7 +55,11 @@ public class RefreshContainerAssetsRequest extends Request {
         } 
 
         /**
-         * AssetType.
+         * The type of the container asset whose statistics you want to refresh. Valid values:
+         * <p>
+         * 
+         * *   **IMAGE**
+         * *   **CONTAINER**
          */
         public Builder assetType(String assetType) {
             this.putQueryParameter("AssetType", assetType);

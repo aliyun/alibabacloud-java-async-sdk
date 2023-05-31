@@ -97,7 +97,11 @@ public class DescribeSecurityEventOperationsRequest extends Request {
         } 
 
         /**
-         * The value of the field that can be used in the whitelist rule.
+         * The language of the content within the request and response. Default value: **zh**. Valid values:
+         * <p>
+         * 
+         * *   **zh**: Chinese
+         * *   **en**: English
          */
         public Builder lang(String lang) {
             this.putQueryParameter("Lang", lang);
@@ -115,7 +119,7 @@ public class DescribeSecurityEventOperationsRequest extends Request {
         }
 
         /**
-         * The field that can be used in the whitelist rule.
+         * The ID of the alert event that you want to handle.
          */
         public Builder securityEventId(Long securityEventId) {
             this.putQueryParameter("SecurityEventId", securityEventId);
@@ -124,14 +128,7 @@ public class DescribeSecurityEventOperationsRequest extends Request {
         }
 
         /**
-         * The operation that is supported in the whitelist rule. Valid values:
-         * <p>
-         * 
-         * *   **contains**: contains
-         * *   **notContains**: does not contain
-         * *   **regex**: regular expression
-         * *   **strEqual**: equals
-         * *   **strNotEqual**: does not equal
+         * The source IP address of the request.
          */
         public Builder sourceIp(String sourceIp) {
             this.putQueryParameter("SourceIp", sourceIp);

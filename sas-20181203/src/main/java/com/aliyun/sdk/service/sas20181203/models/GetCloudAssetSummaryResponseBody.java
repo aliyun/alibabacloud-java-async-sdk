@@ -50,7 +50,7 @@ public class GetCloudAssetSummaryResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The summary of cloud services.
+         * GroupedFields.
          */
         public Builder groupedFields(GroupedFields groupedFields) {
             this.groupedFields = groupedFields;
@@ -58,7 +58,7 @@ public class GetCloudAssetSummaryResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request, which is used to locate and troubleshoot issues.
+         * RequestId.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -134,7 +134,7 @@ public class GetCloudAssetSummaryResponseBody extends TeaModel {
             private Integer instanceRiskCount; 
 
             /**
-             * The subtype of the cloud service.
+             * AssetSubType.
              */
             public Builder assetSubType(Integer assetSubType) {
                 this.assetSubType = assetSubType;
@@ -142,34 +142,7 @@ public class GetCloudAssetSummaryResponseBody extends TeaModel {
             }
 
             /**
-             * The type of the cloud service. Valid values:
-             * <p>
-             * 
-             * *   **0**: Elastic Compute Service (ECS)
-             * *   **1**: Server Load Balancer (SLB)
-             * *   **3**: ApsaraDB RDS
-             * *   **4**: ApsaraDB for MongoDB (MongoDB)
-             * *   **5**: ApsaraDB for Redis (Redis)
-             * *   **6**: Container Registry
-             * *   **8**: Container Service for Kubernetes (ACK)
-             * *   **9**: Virtual Private Cloud (VPC)
-             * *   **11**: ActionTrail
-             * *   **12**: Alibaba Cloud CDN (CDN)
-             * *   **13**: Certificate Management Service (formerly SSL Certificates Service)
-             * *   **14**: Apsara Devops
-             * *   **15**: Resource Access Management (RAM)
-             * *   **16**: Anti-DDoS
-             * *   **17**: Web Application Firewall (WAF)
-             * *   **18**: Object Storage Service (OSS)
-             * *   **19**: PolarDB
-             * *   **20**: ApsaraDB RDS for PostgreSQL
-             * *   **21**: Microservices Engine (MSE)
-             * *   **22**: Apsara File Storage NAS (NAS)
-             * *   **23**: Data Security Center (DSC)
-             * *   **24**: Elastic IP Address (EIP)
-             * *   **25**: IDaaS EIAM
-             * *   **26**: PolarDB-X
-             * *   **27**: Elasticsearch
+             * AssetType.
              */
             public Builder assetType(Integer assetType) {
                 this.assetType = assetType;
@@ -177,7 +150,7 @@ public class GetCloudAssetSummaryResponseBody extends TeaModel {
             }
 
             /**
-             * The total number of cloud service instances of this type.
+             * InstanceCount.
              */
             public Builder instanceCount(Integer instanceCount) {
                 this.instanceCount = instanceCount;
@@ -185,7 +158,7 @@ public class GetCloudAssetSummaryResponseBody extends TeaModel {
             }
 
             /**
-             * The total number of cloud service instances that are at risk of this type.
+             * InstanceRiskCount.
              */
             public Builder instanceRiskCount(Integer instanceRiskCount) {
                 this.instanceRiskCount = instanceRiskCount;
@@ -250,7 +223,7 @@ public class GetCloudAssetSummaryResponseBody extends TeaModel {
             private Integer instanceRiskCountTotal; 
 
             /**
-             * An array that consists of the statistics of cloud services.
+             * CloudAssetSummaryMetas.
              */
             public Builder cloudAssetSummaryMetas(java.util.List < CloudAssetSummaryMetas> cloudAssetSummaryMetas) {
                 this.cloudAssetSummaryMetas = cloudAssetSummaryMetas;
@@ -258,7 +231,7 @@ public class GetCloudAssetSummaryResponseBody extends TeaModel {
             }
 
             /**
-             * The total number of instances.
+             * InstanceCountTotal.
              */
             public Builder instanceCountTotal(Integer instanceCountTotal) {
                 this.instanceCountTotal = instanceCountTotal;
@@ -266,7 +239,7 @@ public class GetCloudAssetSummaryResponseBody extends TeaModel {
             }
 
             /**
-             * The total number of instances that are at risk.
+             * InstanceRiskCountTotal.
              */
             public Builder instanceRiskCountTotal(Integer instanceRiskCountTotal) {
                 this.instanceRiskCountTotal = instanceRiskCountTotal;

@@ -50,7 +50,7 @@ public class DescribeAssetsSecurityEventSummaryResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * Assets.
+         * An array that consists of risk information about containers.
          */
         public Builder assets(java.util.List < Assets> assets) {
             this.assets = assets;
@@ -58,7 +58,7 @@ public class DescribeAssetsSecurityEventSummaryResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request, which is used to locate and troubleshoot issues.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -122,7 +122,16 @@ public class DescribeAssetsSecurityEventSummaryResponseBody extends TeaModel {
             private Long totalCount; 
 
             /**
-             * AssetType.
+             * The type of the asset. Valid values:
+             * <p>
+             * 
+             * *   **namespace**: namespace
+             * *   **clusters**: cluster
+             * *   **applications**: application
+             * *   **pods**: container group
+             * *   **containers**: container
+             * *   **images**: image
+             * *   **hosts**: node
              */
             public Builder assetType(String assetType) {
                 this.assetType = assetType;
@@ -130,7 +139,7 @@ public class DescribeAssetsSecurityEventSummaryResponseBody extends TeaModel {
             }
 
             /**
-             * RiskCount.
+             * The number of assets that are at risk.
              */
             public Builder riskCount(Long riskCount) {
                 this.riskCount = riskCount;
@@ -138,7 +147,7 @@ public class DescribeAssetsSecurityEventSummaryResponseBody extends TeaModel {
             }
 
             /**
-             * TotalCount.
+             * The total number of assets.
              */
             public Builder totalCount(Long totalCount) {
                 this.totalCount = totalCount;

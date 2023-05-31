@@ -50,7 +50,11 @@ public class DescribeMachineCanRebootResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * CanReboot.
+         * Indicates whether the server can be restarted. Valid values:
+         * <p>
+         * 
+         * *   **true**: yes
+         * *   **false**: no
          */
         public Builder canReboot(Boolean canReboot) {
             this.canReboot = canReboot;
@@ -58,7 +62,7 @@ public class DescribeMachineCanRebootResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

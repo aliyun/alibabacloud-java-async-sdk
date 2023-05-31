@@ -82,7 +82,7 @@ public class GetHoneypotProbeRequest extends Request {
         }
 
         /**
-         * 探针id
+         * The ID of the probe.
          */
         public Builder probeId(String probeId) {
             this.putQueryParameter("ProbeId", probeId);

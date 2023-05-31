@@ -110,7 +110,7 @@ public class DescribeWebLockStatusResponseBody extends TeaModel {
         private Integer whiteCount; 
 
         /**
-         * AuthCount.
+         * The total quota that you purchase for web tamper proofing.
          */
         public Builder authCount(Integer authCount) {
             this.authCount = authCount;
@@ -118,7 +118,7 @@ public class DescribeWebLockStatusResponseBody extends TeaModel {
         }
 
         /**
-         * BindCount.
+         * The used quota for web tamper proofing.
          */
         public Builder bindCount(Integer bindCount) {
             this.bindCount = bindCount;
@@ -126,7 +126,7 @@ public class DescribeWebLockStatusResponseBody extends TeaModel {
         }
 
         /**
-         * BlockCount.
+         * The number of blocked processes.
          */
         public Builder blockCount(Integer blockCount) {
             this.blockCount = blockCount;
@@ -134,7 +134,7 @@ public class DescribeWebLockStatusResponseBody extends TeaModel {
         }
 
         /**
-         * DirCount.
+         * The number of protected directories.
          */
         public Builder dirCount(Integer dirCount) {
             this.dirCount = dirCount;
@@ -142,7 +142,7 @@ public class DescribeWebLockStatusResponseBody extends TeaModel {
         }
 
         /**
-         * ExpireTime.
+         * The timestamp when the quota for web tamper proofing expires.
          */
         public Builder expireTime(Long expireTime) {
             this.expireTime = expireTime;
@@ -150,7 +150,7 @@ public class DescribeWebLockStatusResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request, which is used to locate and troubleshoot issues.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -158,7 +158,7 @@ public class DescribeWebLockStatusResponseBody extends TeaModel {
         }
 
         /**
-         * WhiteCount.
+         * The number of processes that are added to the process whitelist.
          */
         public Builder whiteCount(Integer whiteCount) {
             this.whiteCount = whiteCount;

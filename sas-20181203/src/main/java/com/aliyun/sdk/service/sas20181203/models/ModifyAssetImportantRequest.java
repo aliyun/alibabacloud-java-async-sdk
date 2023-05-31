@@ -68,7 +68,12 @@ public class ModifyAssetImportantRequest extends Request {
         } 
 
         /**
-         * ImportantCode.
+         * The importance of the asset. Valid values:
+         * <p>
+         * 
+         * *   **0**: test
+         * *   **1**: normal
+         * *   **2**: important
          */
         public Builder importantCode(Integer importantCode) {
             this.putQueryParameter("ImportantCode", importantCode);
@@ -77,7 +82,10 @@ public class ModifyAssetImportantRequest extends Request {
         }
 
         /**
-         * UuidList.
+         * The UUIDs of servers. Separate multiple UUIDs with commas (,).
+         * <p>
+         * 
+         * >  You can call the [DescribeCloudCenterInstances](~~DescribeCloudCenterInstances~~) operation to query the UUIDs of servers.
          */
         public Builder uuidList(String uuidList) {
             this.putQueryParameter("UuidList", uuidList);
