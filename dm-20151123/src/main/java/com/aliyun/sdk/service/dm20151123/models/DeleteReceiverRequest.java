@@ -106,7 +106,7 @@ public class DeleteReceiverRequest extends Request {
         }
 
         /**
-         * ReceiverId.
+         * The ID of the recipient list.
          */
         public Builder receiverId(String receiverId) {
             this.putQueryParameter("ReceiverId", receiverId);

@@ -1,3 +1,7 @@
+2023-06-01 Version: 1.0.6
+- FIxed bugs for ModifyPWByDomain.
+- Fixed bugs for ModifyPWByDomain.
+
 2022-09-29 Version: 1.0.5
 - Automatically generate sdk tasks.
 

@@ -50,7 +50,14 @@ public class CheckDomainResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * DomainStatus.
+         * The status of the domain name. Indicates whether the domain name is verified and available.
+         * <p>
+         * 
+         * *   0: indicates that the domain name is verified and available.
+         * *   1: indicates that the domain name fails to be verified and is unavailable.
+         * *   2: indicates that the domain name is available, but not filed or configured with a CNAME record.
+         * *   3: indicates that the domain name is available but not filed.
+         * *   4: indicates that the domain name is available but not configured with a CNAME record.
          */
         public Builder domainStatus(Integer domainStatus) {
             this.domainStatus = domainStatus;
@@ -58,7 +65,7 @@ public class CheckDomainResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

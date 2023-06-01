@@ -97,7 +97,7 @@ public class CheckDomainRequest extends Request {
         } 
 
         /**
-         * DomainId.
+         * The ID of the domain name.
          */
         public Builder domainId(Integer domainId) {
             this.putQueryParameter("DomainId", domainId);

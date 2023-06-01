@@ -18,18 +18,28 @@ public class ModifyPWByDomainRequest extends Request {
     private String domainName;
 
     @Query
+    @NameInMap("OwnerId")
+    private Long ownerId;
+
+    @Query
     @NameInMap("Password")
     @Validation(required = true)
     private String password;
 
     @Query
+    @NameInMap("ResourceOwnerAccount")
+    private String resourceOwnerAccount;
+
+    @Query
     @NameInMap("ResourceOwnerId")
-    private String resourceOwnerId;
+    private Long resourceOwnerId;
 
     private ModifyPWByDomainRequest(Builder builder) {
         super(builder);
         this.domainName = builder.domainName;
+        this.ownerId = builder.ownerId;
         this.password = builder.password;
+        this.resourceOwnerAccount = builder.resourceOwnerAccount;
         this.resourceOwnerId = builder.resourceOwnerId;
     }
 
@@ -54,6 +64,13 @@ public class ModifyPWByDomainRequest extends Request {
     }
 
     /**
+     * @return ownerId
+     */
+    public Long getOwnerId() {
+        return this.ownerId;
+    }
+
+    /**
      * @return password
      */
     public String getPassword() {
@@ -61,16 +78,25 @@ public class ModifyPWByDomainRequest extends Request {
     }
 
     /**
+     * @return resourceOwnerAccount
+     */
+    public String getResourceOwnerAccount() {
+        return this.resourceOwnerAccount;
+    }
+
+    /**
      * @return resourceOwnerId
      */
-    public String getResourceOwnerId() {
+    public Long getResourceOwnerId() {
         return this.resourceOwnerId;
     }
 
     public static final class Builder extends Request.Builder<ModifyPWByDomainRequest, Builder> {
         private String domainName; 
+        private Long ownerId; 
         private String password; 
-        private String resourceOwnerId; 
+        private String resourceOwnerAccount; 
+        private Long resourceOwnerId; 
 
         private Builder() {
             super();
@@ -79,7 +105,9 @@ public class ModifyPWByDomainRequest extends Request {
         private Builder(ModifyPWByDomainRequest request) {
             super(request);
             this.domainName = request.domainName;
+            this.ownerId = request.ownerId;
             this.password = request.password;
+            this.resourceOwnerAccount = request.resourceOwnerAccount;
             this.resourceOwnerId = request.resourceOwnerId;
         } 
 
@@ -93,6 +121,15 @@ public class ModifyPWByDomainRequest extends Request {
         }
 
         /**
+         * OwnerId.
+         */
+        public Builder ownerId(Long ownerId) {
+            this.putQueryParameter("OwnerId", ownerId);
+            this.ownerId = ownerId;
+            return this;
+        }
+
+        /**
          * Password.
          */
         public Builder password(String password) {
@@ -102,9 +139,18 @@ public class ModifyPWByDomainRequest extends Request {
         }
 
         /**
+         * ResourceOwnerAccount.
+         */
+        public Builder resourceOwnerAccount(String resourceOwnerAccount) {
+            this.putQueryParameter("ResourceOwnerAccount", resourceOwnerAccount);
+            this.resourceOwnerAccount = resourceOwnerAccount;
+            return this;
+        }
+
+        /**
          * ResourceOwnerId.
          */
-        public Builder resourceOwnerId(String resourceOwnerId) {
+        public Builder resourceOwnerId(Long resourceOwnerId) {
             this.putQueryParameter("ResourceOwnerId", resourceOwnerId);
             this.resourceOwnerId = resourceOwnerId;
             return this;

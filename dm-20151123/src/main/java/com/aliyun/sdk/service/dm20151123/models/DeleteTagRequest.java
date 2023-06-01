@@ -124,7 +124,7 @@ public class DeleteTagRequest extends Request {
         }
 
         /**
-         * TagId.
+         * The ID of the tag.
          */
         public Builder tagId(Integer tagId) {
             this.putQueryParameter("TagId", tagId);

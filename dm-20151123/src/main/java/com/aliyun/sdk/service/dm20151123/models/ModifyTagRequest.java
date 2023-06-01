@@ -139,7 +139,7 @@ public class ModifyTagRequest extends Request {
         }
 
         /**
-         * TagId.
+         * The ID of the tag.
          */
         public Builder tagId(Integer tagId) {
             this.putQueryParameter("TagId", tagId);
@@ -148,7 +148,7 @@ public class ModifyTagRequest extends Request {
         }
 
         /**
-         * TagName.
+         * The name of the tag.
          */
         public Builder tagName(String tagName) {
             this.putQueryParameter("TagName", tagName);
