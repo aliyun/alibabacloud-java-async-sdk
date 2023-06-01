@@ -51,6 +51,10 @@ public class HotelOrderCreateRequest extends Request {
     private String disOrderId;
 
     @Body
+    @NameInMap("extra")
+    private String extra;
+
+    @Body
     @NameInMap("invoice_info")
     private InvoiceInfo invoiceInfo;
 
@@ -127,6 +131,7 @@ public class HotelOrderCreateRequest extends Request {
         this.contractPhone = builder.contractPhone;
         this.corpPayPrice = builder.corpPayPrice;
         this.disOrderId = builder.disOrderId;
+        this.extra = builder.extra;
         this.invoiceInfo = builder.invoiceInfo;
         this.itemId = builder.itemId;
         this.itineraryNo = builder.itineraryNo;
@@ -210,6 +215,13 @@ public class HotelOrderCreateRequest extends Request {
      */
     public String getDisOrderId() {
         return this.disOrderId;
+    }
+
+    /**
+     * @return extra
+     */
+    public String getExtra() {
+        return this.extra;
     }
 
     /**
@@ -319,6 +331,7 @@ public class HotelOrderCreateRequest extends Request {
         private String contractPhone; 
         private Long corpPayPrice; 
         private String disOrderId; 
+        private String extra; 
         private InvoiceInfo invoiceInfo; 
         private Long itemId; 
         private String itineraryNo; 
@@ -348,6 +361,7 @@ public class HotelOrderCreateRequest extends Request {
             this.contractPhone = request.contractPhone;
             this.corpPayPrice = request.corpPayPrice;
             this.disOrderId = request.disOrderId;
+            this.extra = request.extra;
             this.invoiceInfo = request.invoiceInfo;
             this.itemId = request.itemId;
             this.itineraryNo = request.itineraryNo;
@@ -433,6 +447,15 @@ public class HotelOrderCreateRequest extends Request {
         public Builder disOrderId(String disOrderId) {
             this.putBodyParameter("dis_order_id", disOrderId);
             this.disOrderId = disOrderId;
+            return this;
+        }
+
+        /**
+         * extra.
+         */
+        public Builder extra(String extra) {
+            this.putBodyParameter("extra", extra);
+            this.extra = extra;
             return this;
         }
 
@@ -1223,6 +1246,9 @@ public class HotelOrderCreateRequest extends Request {
         @NameInMap("need_check")
         private Boolean needCheck;
 
+        @NameInMap("promotion_code")
+        private String promotionCode;
+
         @NameInMap("promotion_id")
         private String promotionId;
 
@@ -1238,6 +1264,7 @@ public class HotelOrderCreateRequest extends Request {
         private PromotionDetailInfoList(Builder builder) {
             this.checkStatus = builder.checkStatus;
             this.needCheck = builder.needCheck;
+            this.promotionCode = builder.promotionCode;
             this.promotionId = builder.promotionId;
             this.promotionName = builder.promotionName;
             this.promotionPrice = builder.promotionPrice;
@@ -1264,6 +1291,13 @@ public class HotelOrderCreateRequest extends Request {
          */
         public Boolean getNeedCheck() {
             return this.needCheck;
+        }
+
+        /**
+         * @return promotionCode
+         */
+        public String getPromotionCode() {
+            return this.promotionCode;
         }
 
         /**
@@ -1297,6 +1331,7 @@ public class HotelOrderCreateRequest extends Request {
         public static final class Builder {
             private Boolean checkStatus; 
             private Boolean needCheck; 
+            private String promotionCode; 
             private String promotionId; 
             private String promotionName; 
             private Long promotionPrice; 
@@ -1315,6 +1350,14 @@ public class HotelOrderCreateRequest extends Request {
              */
             public Builder needCheck(Boolean needCheck) {
                 this.needCheck = needCheck;
+                return this;
+            }
+
+            /**
+             * 优惠码
+             */
+            public Builder promotionCode(String promotionCode) {
+                this.promotionCode = promotionCode;
                 return this;
             }
 

@@ -194,6 +194,9 @@ public class HotelSearchResponseBody extends TeaModel {
         @NameInMap("min_price")
         private Double minPrice;
 
+        @NameInMap("original_min_price")
+        private Double originalMinPrice;
+
         @NameInMap("score")
         private String score;
 
@@ -218,6 +221,7 @@ public class HotelSearchResponseBody extends TeaModel {
             this.isProtocol = builder.isProtocol;
             this.location = builder.location;
             this.minPrice = builder.minPrice;
+            this.originalMinPrice = builder.originalMinPrice;
             this.score = builder.score;
             this.status = builder.status;
             this.tel = builder.tel;
@@ -330,6 +334,13 @@ public class HotelSearchResponseBody extends TeaModel {
         }
 
         /**
+         * @return originalMinPrice
+         */
+        public Double getOriginalMinPrice() {
+            return this.originalMinPrice;
+        }
+
+        /**
          * @return score
          */
         public String getScore() {
@@ -365,6 +376,7 @@ public class HotelSearchResponseBody extends TeaModel {
             private Boolean isProtocol; 
             private String location; 
             private Double minPrice; 
+            private Double originalMinPrice; 
             private String score; 
             private Integer status; 
             private String tel; 
@@ -478,6 +490,14 @@ public class HotelSearchResponseBody extends TeaModel {
              */
             public Builder minPrice(Double minPrice) {
                 this.minPrice = minPrice;
+                return this;
+            }
+
+            /**
+             * original_min_price.
+             */
+            public Builder originalMinPrice(Double originalMinPrice) {
+                this.originalMinPrice = originalMinPrice;
                 return this;
             }
 

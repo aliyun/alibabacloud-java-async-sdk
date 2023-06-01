@@ -158,6 +158,9 @@ public class HotelOrderPreValidateResponseBody extends TeaModel {
         @NameInMap("need_check")
         private Boolean needCheck;
 
+        @NameInMap("promotion_code")
+        private String promotionCode;
+
         @NameInMap("promotion_id")
         private String promotionId;
 
@@ -173,6 +176,7 @@ public class HotelOrderPreValidateResponseBody extends TeaModel {
         private PromotionDetailInfoList(Builder builder) {
             this.checkStatus = builder.checkStatus;
             this.needCheck = builder.needCheck;
+            this.promotionCode = builder.promotionCode;
             this.promotionId = builder.promotionId;
             this.promotionName = builder.promotionName;
             this.promotionPrice = builder.promotionPrice;
@@ -199,6 +203,13 @@ public class HotelOrderPreValidateResponseBody extends TeaModel {
          */
         public Boolean getNeedCheck() {
             return this.needCheck;
+        }
+
+        /**
+         * @return promotionCode
+         */
+        public String getPromotionCode() {
+            return this.promotionCode;
         }
 
         /**
@@ -232,6 +243,7 @@ public class HotelOrderPreValidateResponseBody extends TeaModel {
         public static final class Builder {
             private Boolean checkStatus; 
             private Boolean needCheck; 
+            private String promotionCode; 
             private String promotionId; 
             private String promotionName; 
             private Long promotionPrice; 
@@ -250,6 +262,14 @@ public class HotelOrderPreValidateResponseBody extends TeaModel {
              */
             public Builder needCheck(Boolean needCheck) {
                 this.needCheck = needCheck;
+                return this;
+            }
+
+            /**
+             * promotion_code.
+             */
+            public Builder promotionCode(String promotionCode) {
+                this.promotionCode = promotionCode;
                 return this;
             }
 
@@ -377,6 +397,9 @@ public class HotelOrderPreValidateResponseBody extends TeaModel {
         @NameInMap("board")
         private String board;
 
+        @NameInMap("discount_price")
+        private String discountPrice;
+
         @NameInMap("price")
         private Long price;
 
@@ -386,14 +409,23 @@ public class HotelOrderPreValidateResponseBody extends TeaModel {
         @NameInMap("room_count")
         private Integer roomCount;
 
+        @NameInMap("rounding_discount_price")
+        private String roundingDiscountPrice;
+
+        @NameInMap("rounding_price")
+        private String roundingPrice;
+
         @NameInMap("service_fee")
         private Long serviceFee;
 
         private RatePlanDaily(Builder builder) {
             this.board = builder.board;
+            this.discountPrice = builder.discountPrice;
             this.price = builder.price;
             this.rateStartTime = builder.rateStartTime;
             this.roomCount = builder.roomCount;
+            this.roundingDiscountPrice = builder.roundingDiscountPrice;
+            this.roundingPrice = builder.roundingPrice;
             this.serviceFee = builder.serviceFee;
         }
 
@@ -410,6 +442,13 @@ public class HotelOrderPreValidateResponseBody extends TeaModel {
          */
         public String getBoard() {
             return this.board;
+        }
+
+        /**
+         * @return discountPrice
+         */
+        public String getDiscountPrice() {
+            return this.discountPrice;
         }
 
         /**
@@ -434,6 +473,20 @@ public class HotelOrderPreValidateResponseBody extends TeaModel {
         }
 
         /**
+         * @return roundingDiscountPrice
+         */
+        public String getRoundingDiscountPrice() {
+            return this.roundingDiscountPrice;
+        }
+
+        /**
+         * @return roundingPrice
+         */
+        public String getRoundingPrice() {
+            return this.roundingPrice;
+        }
+
+        /**
          * @return serviceFee
          */
         public Long getServiceFee() {
@@ -442,9 +495,12 @@ public class HotelOrderPreValidateResponseBody extends TeaModel {
 
         public static final class Builder {
             private String board; 
+            private String discountPrice; 
             private Long price; 
             private String rateStartTime; 
             private Integer roomCount; 
+            private String roundingDiscountPrice; 
+            private String roundingPrice; 
             private Long serviceFee; 
 
             /**
@@ -452,6 +508,14 @@ public class HotelOrderPreValidateResponseBody extends TeaModel {
              */
             public Builder board(String board) {
                 this.board = board;
+                return this;
+            }
+
+            /**
+             * discount_price.
+             */
+            public Builder discountPrice(String discountPrice) {
+                this.discountPrice = discountPrice;
                 return this;
             }
 
@@ -476,6 +540,22 @@ public class HotelOrderPreValidateResponseBody extends TeaModel {
              */
             public Builder roomCount(Integer roomCount) {
                 this.roomCount = roomCount;
+                return this;
+            }
+
+            /**
+             * rounding_discount_price.
+             */
+            public Builder roundingDiscountPrice(String roundingDiscountPrice) {
+                this.roundingDiscountPrice = roundingDiscountPrice;
+                return this;
+            }
+
+            /**
+             * rounding_price.
+             */
+            public Builder roundingPrice(String roundingPrice) {
+                this.roundingPrice = roundingPrice;
                 return this;
             }
 
