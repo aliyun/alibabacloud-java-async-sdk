@@ -18,6 +18,9 @@ public class DescribeFileUploadSignedUrlResponseBody extends TeaModel {
     @NameInMap("OssCallbackUrl")
     private String ossCallbackUrl;
 
+    @NameInMap("Overwrite")
+    private Boolean overwrite;
+
     @NameInMap("RequestId")
     private String requestId;
 
@@ -27,6 +30,7 @@ public class DescribeFileUploadSignedUrlResponseBody extends TeaModel {
     private DescribeFileUploadSignedUrlResponseBody(Builder builder) {
         this.id = builder.id;
         this.ossCallbackUrl = builder.ossCallbackUrl;
+        this.overwrite = builder.overwrite;
         this.requestId = builder.requestId;
         this.signUrl = builder.signUrl;
     }
@@ -54,6 +58,13 @@ public class DescribeFileUploadSignedUrlResponseBody extends TeaModel {
     }
 
     /**
+     * @return overwrite
+     */
+    public Boolean getOverwrite() {
+        return this.overwrite;
+    }
+
+    /**
      * @return requestId
      */
     public String getRequestId() {
@@ -70,6 +81,7 @@ public class DescribeFileUploadSignedUrlResponseBody extends TeaModel {
     public static final class Builder {
         private String id; 
         private String ossCallbackUrl; 
+        private Boolean overwrite; 
         private String requestId; 
         private String signUrl; 
 
@@ -86,6 +98,14 @@ public class DescribeFileUploadSignedUrlResponseBody extends TeaModel {
          */
         public Builder ossCallbackUrl(String ossCallbackUrl) {
             this.ossCallbackUrl = ossCallbackUrl;
+            return this;
+        }
+
+        /**
+         * Overwrite.
+         */
+        public Builder overwrite(Boolean overwrite) {
+            this.overwrite = overwrite;
             return this;
         }
 

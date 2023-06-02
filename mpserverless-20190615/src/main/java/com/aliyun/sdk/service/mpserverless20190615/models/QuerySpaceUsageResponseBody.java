@@ -558,7 +558,10 @@ public class QuerySpaceUsageResponseBody extends TeaModel {
             }
 
             /**
-             * EffectiveBillFlag.
+             * 标记该数据是否出账。
+             * <p>
+             * - true：正常出账。
+             * - false：不出账，例如在空间停服的情况下，用量数据不用于出账。
              */
             public Builder effectiveBillFlag(Boolean effectiveBillFlag) {
                 this.effectiveBillFlag = effectiveBillFlag;

@@ -75,6 +75,9 @@ public class ListWebHostingCustomDomainsResponseBody extends TeaModel {
         @NameInMap("AccessControlAllowOrigin")
         private String accessControlAllowOrigin;
 
+        @NameInMap("AccessOriginControl")
+        private Boolean accessOriginControl;
+
         @NameInMap("Cname")
         private String cname;
 
@@ -104,6 +107,7 @@ public class ListWebHostingCustomDomainsResponseBody extends TeaModel {
 
         private Data(Builder builder) {
             this.accessControlAllowOrigin = builder.accessControlAllowOrigin;
+            this.accessOriginControl = builder.accessOriginControl;
             this.cname = builder.cname;
             this.createTime = builder.createTime;
             this.description = builder.description;
@@ -128,6 +132,13 @@ public class ListWebHostingCustomDomainsResponseBody extends TeaModel {
          */
         public String getAccessControlAllowOrigin() {
             return this.accessControlAllowOrigin;
+        }
+
+        /**
+         * @return accessOriginControl
+         */
+        public Boolean getAccessOriginControl() {
+            return this.accessOriginControl;
         }
 
         /**
@@ -195,6 +206,7 @@ public class ListWebHostingCustomDomainsResponseBody extends TeaModel {
 
         public static final class Builder {
             private String accessControlAllowOrigin; 
+            private Boolean accessOriginControl; 
             private String cname; 
             private Long createTime; 
             private String description; 
@@ -210,6 +222,14 @@ public class ListWebHostingCustomDomainsResponseBody extends TeaModel {
              */
             public Builder accessControlAllowOrigin(String accessControlAllowOrigin) {
                 this.accessControlAllowOrigin = accessControlAllowOrigin;
+                return this;
+            }
+
+            /**
+             * AccessOriginControl.
+             */
+            public Builder accessOriginControl(Boolean accessOriginControl) {
+                this.accessOriginControl = accessOriginControl;
                 return this;
             }
 

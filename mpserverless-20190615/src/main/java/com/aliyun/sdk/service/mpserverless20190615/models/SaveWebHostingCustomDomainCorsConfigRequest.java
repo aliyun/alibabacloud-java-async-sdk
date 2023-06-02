@@ -17,6 +17,10 @@ public class SaveWebHostingCustomDomainCorsConfigRequest extends Request {
     private String accessControlAllowOrigin;
 
     @Body
+    @NameInMap("AccessOriginControl")
+    private Boolean accessOriginControl;
+
+    @Body
     @NameInMap("DomainName")
     @Validation(required = true)
     private String domainName;
@@ -34,6 +38,7 @@ public class SaveWebHostingCustomDomainCorsConfigRequest extends Request {
     private SaveWebHostingCustomDomainCorsConfigRequest(Builder builder) {
         super(builder);
         this.accessControlAllowOrigin = builder.accessControlAllowOrigin;
+        this.accessOriginControl = builder.accessOriginControl;
         this.domainName = builder.domainName;
         this.enableCors = builder.enableCors;
         this.spaceId = builder.spaceId;
@@ -60,6 +65,13 @@ public class SaveWebHostingCustomDomainCorsConfigRequest extends Request {
     }
 
     /**
+     * @return accessOriginControl
+     */
+    public Boolean getAccessOriginControl() {
+        return this.accessOriginControl;
+    }
+
+    /**
      * @return domainName
      */
     public String getDomainName() {
@@ -82,6 +94,7 @@ public class SaveWebHostingCustomDomainCorsConfigRequest extends Request {
 
     public static final class Builder extends Request.Builder<SaveWebHostingCustomDomainCorsConfigRequest, Builder> {
         private String accessControlAllowOrigin; 
+        private Boolean accessOriginControl; 
         private String domainName; 
         private Boolean enableCors; 
         private String spaceId; 
@@ -93,6 +106,7 @@ public class SaveWebHostingCustomDomainCorsConfigRequest extends Request {
         private Builder(SaveWebHostingCustomDomainCorsConfigRequest request) {
             super(request);
             this.accessControlAllowOrigin = request.accessControlAllowOrigin;
+            this.accessOriginControl = request.accessOriginControl;
             this.domainName = request.domainName;
             this.enableCors = request.enableCors;
             this.spaceId = request.spaceId;
@@ -104,6 +118,15 @@ public class SaveWebHostingCustomDomainCorsConfigRequest extends Request {
         public Builder accessControlAllowOrigin(String accessControlAllowOrigin) {
             this.putBodyParameter("AccessControlAllowOrigin", accessControlAllowOrigin);
             this.accessControlAllowOrigin = accessControlAllowOrigin;
+            return this;
+        }
+
+        /**
+         * AccessOriginControl.
+         */
+        public Builder accessOriginControl(Boolean accessOriginControl) {
+            this.putBodyParameter("AccessOriginControl", accessOriginControl);
+            this.accessOriginControl = accessOriginControl;
             return this;
         }
 

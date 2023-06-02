@@ -14,19 +14,27 @@ import com.aliyun.sdk.gateway.pop.models.*;
 public class QuerySpaceUsageRequest extends Request {
     @Body
     @NameInMap("EndTime")
+    @Validation(required = true)
     private String endTime;
 
     @Body
+    @NameInMap("Interval")
+    private Integer interval;
+
+    @Body
     @NameInMap("SpaceId")
+    @Validation(required = true)
     private String spaceId;
 
     @Body
     @NameInMap("StartTime")
+    @Validation(required = true)
     private String startTime;
 
     private QuerySpaceUsageRequest(Builder builder) {
         super(builder);
         this.endTime = builder.endTime;
+        this.interval = builder.interval;
         this.spaceId = builder.spaceId;
         this.startTime = builder.startTime;
     }
@@ -52,6 +60,13 @@ public class QuerySpaceUsageRequest extends Request {
     }
 
     /**
+     * @return interval
+     */
+    public Integer getInterval() {
+        return this.interval;
+    }
+
+    /**
      * @return spaceId
      */
     public String getSpaceId() {
@@ -67,6 +82,7 @@ public class QuerySpaceUsageRequest extends Request {
 
     public static final class Builder extends Request.Builder<QuerySpaceUsageRequest, Builder> {
         private String endTime; 
+        private Integer interval; 
         private String spaceId; 
         private String startTime; 
 
@@ -77,6 +93,7 @@ public class QuerySpaceUsageRequest extends Request {
         private Builder(QuerySpaceUsageRequest request) {
             super(request);
             this.endTime = request.endTime;
+            this.interval = request.interval;
             this.spaceId = request.spaceId;
             this.startTime = request.startTime;
         } 
@@ -87,6 +104,15 @@ public class QuerySpaceUsageRequest extends Request {
         public Builder endTime(String endTime) {
             this.putBodyParameter("EndTime", endTime);
             this.endTime = endTime;
+            return this;
+        }
+
+        /**
+         * Interval.
+         */
+        public Builder interval(Integer interval) {
+            this.putBodyParameter("Interval", interval);
+            this.interval = interval;
             return this;
         }
 
