@@ -105,13 +105,7 @@ public class DescribeInstanceIdsRequest extends Request {
         }
 
         /**
-         * The type of the instance that you want to query. Valid values:
-         * <p>
-         * 
-         * *   **0**: Anti-DDoS Premium instance of the Insurance mitigation plan
-         * *   **1**: Anti-DDoS Premium instance of the Unlimited mitigation plan
-         * *   **2**: Anti-DDoS Premium instance of the Chinese Mainland Acceleration (CMA) mitigation plan
-         * *   **9**: Anti-DDoS Pro instance of the Profession mitigation plan
+         * Edition.
          */
         public Builder edition(Integer edition) {
             this.putQueryParameter("Edition", edition);
@@ -120,7 +114,7 @@ public class DescribeInstanceIdsRequest extends Request {
         }
 
         /**
-         * An array that consists of the IDs of instances to query.
+         * InstanceIds.
          */
         public Builder instanceIds(java.util.List < String > instanceIds) {
             this.putQueryParameter("InstanceIds", instanceIds);
@@ -129,10 +123,7 @@ public class DescribeInstanceIdsRequest extends Request {
         }
 
         /**
-         * The ID of the resource group to which the instance belongs in Resource Management.
-         * <p>
-         * 
-         * If you do not configure this parameter, the instance belongs to the default resource group.
+         * ResourceGroupId.
          */
         public Builder resourceGroupId(String resourceGroupId) {
             this.putQueryParameter("ResourceGroupId", resourceGroupId);

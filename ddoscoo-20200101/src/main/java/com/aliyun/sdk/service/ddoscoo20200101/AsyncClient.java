@@ -167,10 +167,6 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<DescribeCertsResponse> describeCerts(DescribeCertsRequest request);
 
-    /**
-      * > This operation is suitable only for Anti-DDoS Premium.
-      *
-     */
     CompletableFuture<DescribeCnameReusesResponse> describeCnameReuses(DescribeCnameReusesRequest request);
 
     CompletableFuture<DescribeDDoSEventsResponse> describeDDoSEvents(DescribeDDoSEventsRequest request);
@@ -279,12 +275,6 @@ public interface AsyncClient extends SdkAutoCloseable {
      */
     CompletableFuture<DescribeInstanceDetailsResponse> describeInstanceDetails(DescribeInstanceDetailsRequest request);
 
-    /**
-      * You can call this operation to query the information about all Anti-DDoS Pro or Anti-DDoS Premium instances, such as the ID, version, description, and IP address type.
-      * ### Limits
-      * You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
-      *
-     */
     CompletableFuture<DescribeInstanceIdsResponse> describeInstanceIds(DescribeInstanceIdsRequest request);
 
     /**
@@ -299,12 +289,6 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<DescribeInstanceStatusResponse> describeInstanceStatus(DescribeInstanceStatusRequest request);
 
-    /**
-      * You can call the DescribeInstances operation to query the details of Anti-DDoS Pro or Anti-DDoS Premium instances within the Alibaba Cloud account by page. The details include the ID, mitigation plan, expiration time, and forwarding status.
-      * ### Limits
-      * You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
-      *
-     */
     CompletableFuture<DescribeInstancesResponse> describeInstances(DescribeInstancesRequest request);
 
     CompletableFuture<DescribeL7RsPolicyResponse> describeL7RsPolicy(DescribeL7RsPolicyRequest request);
@@ -353,10 +337,7 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<DescribePortViewSourceCountriesResponse> describePortViewSourceCountries(DescribePortViewSourceCountriesRequest request);
 
     /**
-      * You can call the DescribePortViewSourceIsps operation to query the ISPs from which requests are sent to one or more Anti-DDoS Pro or Anti-DDoS Premium instances within a specific period of time.
-      * > The data returned for this operation cannot reflect the actual traffic volume because Layer 4 identity authentication algorithms are updated for Anti-DDoS Pro and Anti-DDoS Premium. You can call this operation to calculate only the proportion of requests sent from different ISPs. If you want to query the request traffic volume, we recommend that you call the [DescribePortFlowList](~~157460~~) operation.
-      * ### Limits
-      * You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
+      * The ID of the ISP. For more information, see the ISP codes table.
       *
      */
     CompletableFuture<DescribePortViewSourceIspsResponse> describePortViewSourceIsps(DescribePortViewSourceIspsRequest request);
@@ -381,6 +362,8 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<DescribeSceneDefensePoliciesResponse> describeSceneDefensePolicies(DescribeSceneDefensePoliciesRequest request);
 
     CompletableFuture<DescribeSchedulerRulesResponse> describeSchedulerRules(DescribeSchedulerRulesRequest request);
+
+    CompletableFuture<DescribeSlaEventListResponse> describeSlaEventList(DescribeSlaEventListRequest request);
 
     CompletableFuture<DescribeSlsAuthStatusResponse> describeSlsAuthStatus(DescribeSlsAuthStatusRequest request);
 
@@ -469,13 +452,6 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<DescribeWebPreciseAccessRuleResponse> describeWebPreciseAccessRule(DescribeWebPreciseAccessRuleRequest request);
 
-    /**
-      * You can call the DescribeWebRules operation to query the configurations of the forwarding rules that you create for a website by page. The configurations include the protocol type, origin server address, HTTPS configuration, and IP address blacklist.
-      * Before you call this operation, you must have created forwarding rules by calling the [CreateWebRule](~~157463~~) operation.
-      * ### Limits
-      * You can call this operation up to 50 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
-      *
-     */
     CompletableFuture<DescribeWebRulesResponse> describeWebRules(DescribeWebRulesRequest request);
 
     CompletableFuture<DetachSceneDefenseObjectResponse> detachSceneDefenseObject(DetachSceneDefenseObjectRequest request);
@@ -599,11 +575,7 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<ModifyWebRuleResponse> modifyWebRule(ModifyWebRuleRequest request);
 
     /**
-      * If an Anti-DDoS Pro or Anti-DDoS Premium instance expires, DDoS mitigation stops. The instance stops forwarding service traffic seven days after it expires.
-      * *   We recommend that you renew your instance before it expires. This eliminates the impacts on service protection and traffic forwarding. You can call the [DescribeInstances](~~91478~~) operation to query the expiration time of all instances. If you want to renew your instance, log on to the [Anti-DDoS Pro](https://yundun.console.aliyun.com/?p=ddoscoo) console.
-      * *   If you do not plan to renew your instance, switch the service traffic back to the origin sever before your instance expires. To switch the traffic back, change the service IP address to the IP address of the origin server or modify the CNAME to stop forwarding service traffic to Anti-DDoS Pro or Anti-DDoS Premium. This prevents service interruptions caused by the expiration.
-      * You can call this operation to release an instance after the instance expires.
-      * > Before you release an instance, make sure that the service traffic is switched to the origin server.
+      * The ID of the request, which is used to locate and troubleshoot issues.
       *
      */
     CompletableFuture<ReleaseInstanceResponse> releaseInstance(ReleaseInstanceRequest request);

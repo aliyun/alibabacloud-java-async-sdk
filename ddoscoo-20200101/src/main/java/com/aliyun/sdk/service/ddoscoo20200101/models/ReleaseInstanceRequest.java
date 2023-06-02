@@ -79,10 +79,7 @@ public class ReleaseInstanceRequest extends Request {
         }
 
         /**
-         * The ID of the instance that you want to release.
-         * <p>
-         * 
-         * > You can release only expired instances. You can call the [DescribeInstances](~~91478~~) operation to query the IDs and expiration status of all instances.
+         * InstanceId.
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);

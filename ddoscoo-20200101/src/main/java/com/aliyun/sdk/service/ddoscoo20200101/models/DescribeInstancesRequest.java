@@ -233,13 +233,7 @@ public class DescribeInstancesRequest extends Request {
         }
 
         /**
-         * The mitigation plan of the instance to query. Valid values:
-         * <p>
-         * 
-         * *   **0**: Anti-DDoS Premium instance of the Insurance mitigation plan
-         * *   **1**: Anti-DDoS Premium instance of the Unlimited mitigation plan
-         * *   **2**: Anti-DDoS Premium instance of the Chinese Mainland Acceleration (CMA) mitigation plan
-         * *   **9**: Anti-DDoS Pro instance of the Profession mitigation plan
+         * Edition.
          */
         public Builder edition(Integer edition) {
             this.putQueryParameter("Edition", edition);
@@ -248,11 +242,7 @@ public class DescribeInstancesRequest extends Request {
         }
 
         /**
-         * The traffic forwarding status of the instance to query. Valid values:
-         * <p>
-         * 
-         * *   **0**: The instance no longer forwards service traffic.
-         * *   **1**: The instance forwards service traffic as expected.
+         * Enabled.
          */
         public Builder enabled(Integer enabled) {
             this.putQueryParameter("Enabled", enabled);
@@ -261,7 +251,7 @@ public class DescribeInstancesRequest extends Request {
         }
 
         /**
-         * The end of the time range to query. Instances whose expiration time is earlier than the point in time are queried.**** The value is a UNIX timestamp. Unit: milliseconds.
+         * ExpireEndTime.
          */
         public Builder expireEndTime(Long expireEndTime) {
             this.putQueryParameter("ExpireEndTime", expireEndTime);
@@ -270,7 +260,7 @@ public class DescribeInstancesRequest extends Request {
         }
 
         /**
-         * The beginning of the time range to query. Instances whose expiration time is later than the point in time are queried.**** The value is a UNIX timestamp. Unit: milliseconds.
+         * ExpireStartTime.
          */
         public Builder expireStartTime(Long expireStartTime) {
             this.putQueryParameter("ExpireStartTime", expireStartTime);
@@ -279,7 +269,7 @@ public class DescribeInstancesRequest extends Request {
         }
 
         /**
-         * An array that consists of the IDs of instances to query.
+         * InstanceIds.
          */
         public Builder instanceIds(java.util.List < String > instanceIds) {
             this.putQueryParameter("InstanceIds", instanceIds);
@@ -288,7 +278,7 @@ public class DescribeInstancesRequest extends Request {
         }
 
         /**
-         * The IP address of the instance to query.
+         * Ip.
          */
         public Builder ip(String ip) {
             this.putQueryParameter("Ip", ip);
@@ -297,7 +287,7 @@ public class DescribeInstancesRequest extends Request {
         }
 
         /**
-         * The number of the page to return.
+         * PageNumber.
          */
         public Builder pageNumber(String pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -306,7 +296,7 @@ public class DescribeInstancesRequest extends Request {
         }
 
         /**
-         * The number of entries to return on each page.
+         * PageSize.
          */
         public Builder pageSize(String pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -315,7 +305,7 @@ public class DescribeInstancesRequest extends Request {
         }
 
         /**
-         * The description of the instance to query. Fuzzy match is supported.
+         * Remark.
          */
         public Builder remark(String remark) {
             this.putQueryParameter("Remark", remark);
@@ -324,10 +314,7 @@ public class DescribeInstancesRequest extends Request {
         }
 
         /**
-         * The ID of the resource group to which the instance belongs in Resource Management.
-         * <p>
-         * 
-         * If you do not configure this parameter, the instance belongs to the default resource group.
+         * ResourceGroupId.
          */
         public Builder resourceGroupId(String resourceGroupId) {
             this.putQueryParameter("ResourceGroupId", resourceGroupId);
@@ -336,7 +323,7 @@ public class DescribeInstancesRequest extends Request {
         }
 
         /**
-         * An array that consists of the states of the instances to query.
+         * Status.
          */
         public Builder status(java.util.List < Integer > status) {
             this.putQueryParameter("Status", status);
@@ -345,7 +332,7 @@ public class DescribeInstancesRequest extends Request {
         }
 
         /**
-         * An array consisting of the tags that are added to the instance to query.
+         * Tag.
          */
         public Builder tag(java.util.List < Tag> tag) {
             this.putQueryParameter("Tag", tag);
@@ -399,13 +386,7 @@ public class DescribeInstancesRequest extends Request {
             private String value; 
 
             /**
-             * The key of tag N that is added to the instance to query. The maximum value of N is 200. You can specify up to 200 tags. When you specify tags, take note of the following rules:
-             * <p>
-             * 
-             * *   Each tag consists of a key (**Key**) and a value (**Value**), which are separated by a comma (,).
-             * *   Separate multiple tags with commas (,).
-             * 
-             * > : The tag key (**Key**) and tag value (**Value**) must be specified in pairs.
+             * Key.
              */
             public Builder key(String key) {
                 this.key = key;
@@ -413,13 +394,7 @@ public class DescribeInstancesRequest extends Request {
             }
 
             /**
-             * The value of tag N that is added to the instance to query. The maximum value of N is 200. You can specify up to 200 tags. When you specify tags, take note of the following rules:
-             * <p>
-             * 
-             * *   Each tag consists of a key (**Key**) and a value (**Value**), which are separated by a comma (,).
-             * *   Separate multiple tags with commas (,).
-             * 
-             * > : The tag key (**Key**) and tag value (**Value**) must be specified in pairs.
+             * Value.
              */
             public Builder value(String value) {
                 this.value = value;

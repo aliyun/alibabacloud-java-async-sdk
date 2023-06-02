@@ -62,7 +62,7 @@ public class DescribeSchedulerRulesResponseBody extends TeaModel {
         private String totalCount; 
 
         /**
-         * The ID of the request.
+         * RequestId.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -70,7 +70,7 @@ public class DescribeSchedulerRulesResponseBody extends TeaModel {
         }
 
         /**
-         * The information about the scheduling rule.
+         * SchedulerRules.
          */
         public Builder schedulerRules(java.util.List < SchedulerRules> schedulerRules) {
             this.schedulerRules = schedulerRules;
@@ -78,7 +78,7 @@ public class DescribeSchedulerRulesResponseBody extends TeaModel {
         }
 
         /**
-         * The total number of returned scheduling rules.
+         * TotalCount.
          */
         public Builder totalCount(String totalCount) {
             this.totalCount = totalCount;
@@ -118,7 +118,7 @@ public class DescribeSchedulerRulesResponseBody extends TeaModel {
             private String cloudInstanceId; 
 
             /**
-             * The ID of the GA instance.
+             * CloudInstanceId.
              */
             public Builder cloudInstanceId(String cloudInstanceId) {
                 this.cloudInstanceId = cloudInstanceId;
@@ -171,7 +171,7 @@ public class DescribeSchedulerRulesResponseBody extends TeaModel {
             private String paramType; 
 
             /**
-             * The interaction resource.
+             * ParamData.
              */
             public Builder paramData(ParamData paramData) {
                 this.paramData = paramData;
@@ -179,7 +179,7 @@ public class DescribeSchedulerRulesResponseBody extends TeaModel {
             }
 
             /**
-             * The type of the interaction resource. Valid value: **GA**, which indicates that the Global Accelerator instance is used.
+             * ParamType.
              */
             public Builder paramType(String paramType) {
                 this.paramType = paramType;
@@ -292,7 +292,7 @@ public class DescribeSchedulerRulesResponseBody extends TeaModel {
             private Integer valueType; 
 
             /**
-             * The priority of the rule.
+             * Priority.
              */
             public Builder priority(Integer priority) {
                 this.priority = priority;
@@ -300,10 +300,7 @@ public class DescribeSchedulerRulesResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the region.
-             * <p>
-             * 
-             * > This parameter is returned only if the **RuleType** parameter is set to **2**.
+             * RegionId.
              */
             public Builder regionId(String regionId) {
                 this.regionId = regionId;
@@ -311,7 +308,7 @@ public class DescribeSchedulerRulesResponseBody extends TeaModel {
             }
 
             /**
-             * The waiting time of switching back. Unit: minutes.
+             * RestoreDelay.
              */
             public Builder restoreDelay(Integer restoreDelay) {
                 this.restoreDelay = restoreDelay;
@@ -319,11 +316,7 @@ public class DescribeSchedulerRulesResponseBody extends TeaModel {
             }
 
             /**
-             * The status of the scheduling rule. Valid values:
-             * <p>
-             * 
-             * *   **0**: disabled
-             * *   **1**: enabled
+             * Status.
              */
             public Builder status(Integer status) {
                 this.status = status;
@@ -331,11 +324,7 @@ public class DescribeSchedulerRulesResponseBody extends TeaModel {
             }
 
             /**
-             * The address type of the interaction resource. Valid values:
-             * <p>
-             * 
-             * *   **A**: IPv4 address
-             * *   **CNAME**: CNAME record
+             * Type.
              */
             public Builder type(String type) {
                 this.type = type;
@@ -343,7 +332,7 @@ public class DescribeSchedulerRulesResponseBody extends TeaModel {
             }
 
             /**
-             * The address of the interaction resource.
+             * Value.
              */
             public Builder value(String value) {
                 this.value = value;
@@ -351,14 +340,7 @@ public class DescribeSchedulerRulesResponseBody extends TeaModel {
             }
 
             /**
-             * The address type of the interaction resource. Valid values:
-             * <p>
-             * 
-             * *   **1**: the IP address of the Anti-DDoS Pro or Anti-DDoS Premium instance
-             * *   **2**: the IP address of the interaction resource in the tiered protection scenario
-             * *   **3**: the IP address that is used to accelerate access in the network acceleration scenario
-             * *   **5**: the domain name that is configured in CDN in the CDN interaction scenario
-             * *   **6** the IP address of the interaction resource in the cloud service interaction scenario
+             * ValueType.
              */
             public Builder valueType(Integer valueType) {
                 this.valueType = valueType;
@@ -447,7 +429,7 @@ public class DescribeSchedulerRulesResponseBody extends TeaModel {
             private java.util.List < Rules> rules; 
 
             /**
-             * The Canonical Name (CNAME) record assigned by Sec-Traffic Manager for the scheduling rule.
+             * Cname.
              */
             public Builder cname(String cname) {
                 this.cname = cname;
@@ -455,7 +437,7 @@ public class DescribeSchedulerRulesResponseBody extends TeaModel {
             }
 
             /**
-             * The scheduling rule for the Global Accelerator instance that interacts with Anti-DDoS Pro or Anti-DDoS Premium.
+             * Param.
              */
             public Builder param(Param param) {
                 this.param = param;
@@ -463,7 +445,7 @@ public class DescribeSchedulerRulesResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the rule.
+             * RuleName.
              */
             public Builder ruleName(String ruleName) {
                 this.ruleName = ruleName;
@@ -471,13 +453,7 @@ public class DescribeSchedulerRulesResponseBody extends TeaModel {
             }
 
             /**
-             * The type of the rule. Valid values:
-             * <p>
-             * 
-             * *   **2**: tiered protection
-             * *   **3**: network acceleration
-             * *   **5**: Alibaba Cloud CDN (CDN) interaction
-             * *   **6**: cloud service interaction
+             * RuleType.
              */
             public Builder ruleType(String ruleType) {
                 this.ruleType = ruleType;
@@ -485,7 +461,7 @@ public class DescribeSchedulerRulesResponseBody extends TeaModel {
             }
 
             /**
-             * An array that consists of the rules.
+             * Rules.
              */
             public Builder rules(java.util.List < Rules> rules) {
                 this.rules = rules;

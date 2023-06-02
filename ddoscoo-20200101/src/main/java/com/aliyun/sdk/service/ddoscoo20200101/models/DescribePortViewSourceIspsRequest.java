@@ -122,10 +122,7 @@ public class DescribePortViewSourceIspsRequest extends Request {
         }
 
         /**
-         * The end of the time range to query. This value is a UNIX timestamp. Unit: seconds.
-         * <p>
-         * 
-         * > This UNIX timestamp must indicate a point in time that is accurate to the minute.
+         * EndTime.
          */
         public Builder endTime(Long endTime) {
             this.putQueryParameter("EndTime", endTime);
@@ -134,7 +131,7 @@ public class DescribePortViewSourceIspsRequest extends Request {
         }
 
         /**
-         * An array that consists of the IDs of instances to query.
+         * InstanceIds.
          */
         public Builder instanceIds(java.util.List < String > instanceIds) {
             this.putQueryParameter("InstanceIds", instanceIds);
@@ -143,10 +140,7 @@ public class DescribePortViewSourceIspsRequest extends Request {
         }
 
         /**
-         * The ID of the resource group to which the instance belongs in Resource Management.
-         * <p>
-         * 
-         * If you do not configure this parameter, the instance belongs to the default resource group.
+         * ResourceGroupId.
          */
         public Builder resourceGroupId(String resourceGroupId) {
             this.putQueryParameter("ResourceGroupId", resourceGroupId);
@@ -155,10 +149,7 @@ public class DescribePortViewSourceIspsRequest extends Request {
         }
 
         /**
-         * The beginning of the time range to query. This value is a UNIX timestamp. Unit: seconds.
-         * <p>
-         * 
-         * > This UNIX timestamp must indicate a point in time that is accurate to the minute.
+         * StartTime.
          */
         public Builder startTime(Long startTime) {
             this.putQueryParameter("StartTime", startTime);

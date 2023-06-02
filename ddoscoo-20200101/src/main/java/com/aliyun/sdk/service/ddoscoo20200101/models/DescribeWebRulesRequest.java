@@ -163,7 +163,7 @@ public class DescribeWebRulesRequest extends Request {
         }
 
         /**
-         * The CNAME to query.
+         * Cname.
          */
         public Builder cname(String cname) {
             this.putQueryParameter("Cname", cname);
@@ -172,10 +172,7 @@ public class DescribeWebRulesRequest extends Request {
         }
 
         /**
-         * The domain name of the website that you want to query.
-         * <p>
-         * 
-         * > A forwarding rule must be configured for the domain name. You can call the [DescribeDomains](~~91724~~) operation to query the domain names for which forwarding rules are configured.
+         * Domain.
          */
         public Builder domain(String domain) {
             this.putQueryParameter("Domain", domain);
@@ -184,7 +181,7 @@ public class DescribeWebRulesRequest extends Request {
         }
 
         /**
-         * An array that consists of the IDs of instances to query.
+         * InstanceIds.
          */
         public Builder instanceIds(java.util.List < String > instanceIds) {
             this.putQueryParameter("InstanceIds", instanceIds);
@@ -193,7 +190,7 @@ public class DescribeWebRulesRequest extends Request {
         }
 
         /**
-         * The number of the page to return. Default value: **1**.
+         * PageNumber.
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -202,7 +199,7 @@ public class DescribeWebRulesRequest extends Request {
         }
 
         /**
-         * The number of entries to return on each page.
+         * PageSize.
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -211,11 +208,7 @@ public class DescribeWebRulesRequest extends Request {
         }
 
         /**
-         * The match mode. Valid values:
-         * <p>
-         * 
-         * *   **fuzzy**: fuzzy match. This is the default value.
-         * *   **exact**: exact match.
+         * QueryDomainPattern.
          */
         public Builder queryDomainPattern(String queryDomainPattern) {
             this.putQueryParameter("QueryDomainPattern", queryDomainPattern);
@@ -224,10 +217,7 @@ public class DescribeWebRulesRequest extends Request {
         }
 
         /**
-         * The ID of the resource group to which the instance belongs in Resource Management.
-         * <p>
-         * 
-         * If you do not configure this parameter, the instance belongs to the default resource group.
+         * ResourceGroupId.
          */
         public Builder resourceGroupId(String resourceGroupId) {
             this.putQueryParameter("ResourceGroupId", resourceGroupId);

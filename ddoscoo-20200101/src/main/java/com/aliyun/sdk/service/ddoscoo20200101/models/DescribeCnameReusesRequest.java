@@ -92,10 +92,7 @@ public class DescribeCnameReusesRequest extends Request {
         }
 
         /**
-         * An array that consists of the domain names of websites.
-         * <p>
-         * 
-         * > A forwarding rule must be configured for the domain name. You can call the [DescribeDomains](~~91724~~) operation to query all domain names.
+         * Domains.
          */
         public Builder domains(java.util.List < String > domains) {
             this.putQueryParameter("Domains", domains);
@@ -104,7 +101,7 @@ public class DescribeCnameReusesRequest extends Request {
         }
 
         /**
-         * The ID of the resource group to which the instance belongs in Resource Management. This parameter is empty by default, which indicates that the instance belongs to the default resource group.
+         * ResourceGroupId.
          */
         public Builder resourceGroupId(String resourceGroupId) {
             this.putQueryParameter("ResourceGroupId", resourceGroupId);

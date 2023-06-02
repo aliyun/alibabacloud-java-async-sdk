@@ -99,6 +99,12 @@ public class DescribeInstanceSpecsResponseBody extends TeaModel {
         @NameInMap("ElasticBwModel")
         private String elasticBwModel;
 
+        @NameInMap("ElasticQps")
+        private Long elasticQps;
+
+        @NameInMap("ElasticQpsMode")
+        private String elasticQpsMode;
+
         @NameInMap("FunctionVersion")
         private String functionVersion;
 
@@ -127,6 +133,8 @@ public class DescribeInstanceSpecsResponseBody extends TeaModel {
             this.elasticBandwidth = builder.elasticBandwidth;
             this.elasticBw = builder.elasticBw;
             this.elasticBwModel = builder.elasticBwModel;
+            this.elasticQps = builder.elasticQps;
+            this.elasticQpsMode = builder.elasticQpsMode;
             this.functionVersion = builder.functionVersion;
             this.instanceId = builder.instanceId;
             this.portLimit = builder.portLimit;
@@ -207,6 +215,20 @@ public class DescribeInstanceSpecsResponseBody extends TeaModel {
         }
 
         /**
+         * @return elasticQps
+         */
+        public Long getElasticQps() {
+            return this.elasticQps;
+        }
+
+        /**
+         * @return elasticQpsMode
+         */
+        public String getElasticQpsMode() {
+            return this.elasticQpsMode;
+        }
+
+        /**
          * @return functionVersion
          */
         public String getFunctionVersion() {
@@ -258,6 +280,8 @@ public class DescribeInstanceSpecsResponseBody extends TeaModel {
             private Integer elasticBandwidth; 
             private Integer elasticBw; 
             private String elasticBwModel; 
+            private Long elasticQps; 
+            private String elasticQpsMode; 
             private String functionVersion; 
             private String instanceId; 
             private Integer portLimit; 
@@ -345,6 +369,22 @@ public class DescribeInstanceSpecsResponseBody extends TeaModel {
             }
 
             /**
+             * ElasticQps.
+             */
+            public Builder elasticQps(Long elasticQps) {
+                this.elasticQps = elasticQps;
+                return this;
+            }
+
+            /**
+             * ElasticQpsMode.
+             */
+            public Builder elasticQpsMode(String elasticQpsMode) {
+                this.elasticQpsMode = elasticQpsMode;
+                return this;
+            }
+
+            /**
              * The function plan of the instance. Valid values:
              * <p>
              * 
@@ -384,7 +424,7 @@ public class DescribeInstanceSpecsResponseBody extends TeaModel {
             }
 
             /**
-             * RealLimitBw.
+             * 实例业务带宽限速值。取值：0～15360，0表示不限速。单位：mbps。
              */
             public Builder realLimitBw(Long realLimitBw) {
                 this.realLimitBw = realLimitBw;

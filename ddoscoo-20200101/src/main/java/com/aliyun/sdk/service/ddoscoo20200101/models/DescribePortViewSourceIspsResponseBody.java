@@ -50,7 +50,7 @@ public class DescribePortViewSourceIspsResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * An array that consists of the details of the ISP.
+         * Isps.
          */
         public Builder isps(java.util.List < Isps> isps) {
             this.isps = isps;
@@ -58,7 +58,7 @@ public class DescribePortViewSourceIspsResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * RequestId.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -110,10 +110,7 @@ public class DescribePortViewSourceIspsResponseBody extends TeaModel {
             private String ispId; 
 
             /**
-             * The total number of requests that are sent from the ISP.
-             * <p>
-             * 
-             * > This parameter does not indicate the accurate number of requests. You can use this parameter to calculate the proportion of requests from different ISPs.
+             * Count.
              */
             public Builder count(Long count) {
                 this.count = count;
@@ -121,7 +118,7 @@ public class DescribePortViewSourceIspsResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the ISP. For more information, see the ISP codes table.
+             * IspId.
              */
             public Builder ispId(String ispId) {
                 this.ispId = ispId;

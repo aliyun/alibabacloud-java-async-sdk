@@ -96,11 +96,29 @@ public class DescribePortFlowListResponseBody extends TeaModel {
         @NameInMap("Region")
         private String region;
 
-        @NameInMap("SlaBps")
-        private Long slaBps;
+        @NameInMap("SlaBpsDropBps")
+        private Long slaBpsDropBps;
 
-        @NameInMap("SlaPps")
-        private Long slaPps;
+        @NameInMap("SlaBpsDropPps")
+        private Long slaBpsDropPps;
+
+        @NameInMap("SlaConnDropBps")
+        private Long slaConnDropBps;
+
+        @NameInMap("SlaConnDropPps")
+        private Long slaConnDropPps;
+
+        @NameInMap("SlaCpsDropBps")
+        private Long slaCpsDropBps;
+
+        @NameInMap("SlaCpsDropPps")
+        private Long slaCpsDropPps;
+
+        @NameInMap("SlaPpsDropBps")
+        private Long slaPpsDropBps;
+
+        @NameInMap("SlaPpsDropPps")
+        private Long slaPpsDropPps;
 
         @NameInMap("Time")
         private Long time;
@@ -114,8 +132,14 @@ public class DescribePortFlowListResponseBody extends TeaModel {
             this.outBps = builder.outBps;
             this.outPps = builder.outPps;
             this.region = builder.region;
-            this.slaBps = builder.slaBps;
-            this.slaPps = builder.slaPps;
+            this.slaBpsDropBps = builder.slaBpsDropBps;
+            this.slaBpsDropPps = builder.slaBpsDropPps;
+            this.slaConnDropBps = builder.slaConnDropBps;
+            this.slaConnDropPps = builder.slaConnDropPps;
+            this.slaCpsDropBps = builder.slaCpsDropBps;
+            this.slaCpsDropPps = builder.slaCpsDropPps;
+            this.slaPpsDropBps = builder.slaPpsDropBps;
+            this.slaPpsDropPps = builder.slaPpsDropPps;
             this.time = builder.time;
         }
 
@@ -184,17 +208,59 @@ public class DescribePortFlowListResponseBody extends TeaModel {
         }
 
         /**
-         * @return slaBps
+         * @return slaBpsDropBps
          */
-        public Long getSlaBps() {
-            return this.slaBps;
+        public Long getSlaBpsDropBps() {
+            return this.slaBpsDropBps;
         }
 
         /**
-         * @return slaPps
+         * @return slaBpsDropPps
          */
-        public Long getSlaPps() {
-            return this.slaPps;
+        public Long getSlaBpsDropPps() {
+            return this.slaBpsDropPps;
+        }
+
+        /**
+         * @return slaConnDropBps
+         */
+        public Long getSlaConnDropBps() {
+            return this.slaConnDropBps;
+        }
+
+        /**
+         * @return slaConnDropPps
+         */
+        public Long getSlaConnDropPps() {
+            return this.slaConnDropPps;
+        }
+
+        /**
+         * @return slaCpsDropBps
+         */
+        public Long getSlaCpsDropBps() {
+            return this.slaCpsDropBps;
+        }
+
+        /**
+         * @return slaCpsDropPps
+         */
+        public Long getSlaCpsDropPps() {
+            return this.slaCpsDropPps;
+        }
+
+        /**
+         * @return slaPpsDropBps
+         */
+        public Long getSlaPpsDropBps() {
+            return this.slaPpsDropBps;
+        }
+
+        /**
+         * @return slaPpsDropPps
+         */
+        public Long getSlaPpsDropPps() {
+            return this.slaPpsDropPps;
         }
 
         /**
@@ -213,8 +279,14 @@ public class DescribePortFlowListResponseBody extends TeaModel {
             private Long outBps; 
             private Long outPps; 
             private String region; 
-            private Long slaBps; 
-            private Long slaPps; 
+            private Long slaBpsDropBps; 
+            private Long slaBpsDropPps; 
+            private Long slaConnDropBps; 
+            private Long slaConnDropPps; 
+            private Long slaCpsDropBps; 
+            private Long slaCpsDropPps; 
+            private Long slaPpsDropBps; 
+            private Long slaPpsDropPps; 
             private Long time; 
 
             /**
@@ -292,18 +364,66 @@ public class DescribePortFlowListResponseBody extends TeaModel {
             }
 
             /**
-             * SlaBps.
+             * SlaBpsDropBps.
              */
-            public Builder slaBps(Long slaBps) {
-                this.slaBps = slaBps;
+            public Builder slaBpsDropBps(Long slaBpsDropBps) {
+                this.slaBpsDropBps = slaBpsDropBps;
                 return this;
             }
 
             /**
-             * SlaPps.
+             * SlaBpsDropPps.
              */
-            public Builder slaPps(Long slaPps) {
-                this.slaPps = slaPps;
+            public Builder slaBpsDropPps(Long slaBpsDropPps) {
+                this.slaBpsDropPps = slaBpsDropPps;
+                return this;
+            }
+
+            /**
+             * SlaConnDropBps.
+             */
+            public Builder slaConnDropBps(Long slaConnDropBps) {
+                this.slaConnDropBps = slaConnDropBps;
+                return this;
+            }
+
+            /**
+             * SlaConnDropPps.
+             */
+            public Builder slaConnDropPps(Long slaConnDropPps) {
+                this.slaConnDropPps = slaConnDropPps;
+                return this;
+            }
+
+            /**
+             * SlaCpsDropBps.
+             */
+            public Builder slaCpsDropBps(Long slaCpsDropBps) {
+                this.slaCpsDropBps = slaCpsDropBps;
+                return this;
+            }
+
+            /**
+             * SlaCpsDropPps.
+             */
+            public Builder slaCpsDropPps(Long slaCpsDropPps) {
+                this.slaCpsDropPps = slaCpsDropPps;
+                return this;
+            }
+
+            /**
+             * SlaPpsDropBps.
+             */
+            public Builder slaPpsDropBps(Long slaPpsDropBps) {
+                this.slaPpsDropBps = slaPpsDropBps;
+                return this;
+            }
+
+            /**
+             * SlaPpsDropPps.
+             */
+            public Builder slaPpsDropPps(Long slaPpsDropPps) {
+                this.slaPpsDropPps = slaPpsDropPps;
                 return this;
             }
 

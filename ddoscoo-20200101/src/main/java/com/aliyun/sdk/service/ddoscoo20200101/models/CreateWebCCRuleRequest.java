@@ -197,11 +197,7 @@ public class CreateWebCCRuleRequest extends Request {
         }
 
         /**
-         * The blocking type. Valid values:
-         * <p>
-         * 
-         * *   **close**: blocks the request.
-         * *   **captcha**: enables Completely Automated Public Turing test to tell Computers and Humans Apart (CAPTCHA) verification.
+         * Act.
          */
         public Builder act(String act) {
             this.putQueryParameter("Act", act);
@@ -210,7 +206,7 @@ public class CreateWebCCRuleRequest extends Request {
         }
 
         /**
-         * The number of requests that are allowed from an individual IP address. Valid values: **2** to **2000**.
+         * Count.
          */
         public Builder count(Integer count) {
             this.putQueryParameter("Count", count);
@@ -219,10 +215,7 @@ public class CreateWebCCRuleRequest extends Request {
         }
 
         /**
-         * The domain name of the website.
-         * <p>
-         * 
-         * > A forwarding rule must be configured for the domain name. You can call the [DescribeDomains](~~91724~~) operation to query all domain names.
+         * Domain.
          */
         public Builder domain(String domain) {
             this.putQueryParameter("Domain", domain);
@@ -231,7 +224,7 @@ public class CreateWebCCRuleRequest extends Request {
         }
 
         /**
-         * The detection interval. Valid values: **5** to **10800**. Unit: seconds.
+         * Interval.
          */
         public Builder interval(Integer interval) {
             this.putQueryParameter("Interval", interval);
@@ -240,13 +233,7 @@ public class CreateWebCCRuleRequest extends Request {
         }
 
         /**
-         * The match mode. Valid values:
-         * <p>
-         * 
-         * *   **prefix**: prefix match.
-         * *   **match**: exact match.
-         * 
-         * > If the **Uri** of the check path contains parameters, you must set the value to Prefix Match.
+         * Mode.
          */
         public Builder mode(String mode) {
             this.putQueryParameter("Mode", mode);
@@ -255,7 +242,7 @@ public class CreateWebCCRuleRequest extends Request {
         }
 
         /**
-         * The name of the rule. The name can be up to 128 characters in length and contain letters, digits, and underscores (\_).
+         * Name.
          */
         public Builder name(String name) {
             this.putQueryParameter("Name", name);
@@ -264,7 +251,7 @@ public class CreateWebCCRuleRequest extends Request {
         }
 
         /**
-         * The ID of the resource group to which the instance belongs in Resource Management. This parameter is empty by default, which indicates that the instance belongs to the default resource group.
+         * ResourceGroupId.
          */
         public Builder resourceGroupId(String resourceGroupId) {
             this.putQueryParameter("ResourceGroupId", resourceGroupId);
@@ -273,7 +260,7 @@ public class CreateWebCCRuleRequest extends Request {
         }
 
         /**
-         * The blocking duration. Valid values: **1** to **1440**. Unit: minutes.
+         * Ttl.
          */
         public Builder ttl(Integer ttl) {
             this.putQueryParameter("Ttl", ttl);
@@ -282,7 +269,7 @@ public class CreateWebCCRuleRequest extends Request {
         }
 
         /**
-         * The check path.
+         * Uri.
          */
         public Builder uri(String uri) {
             this.putQueryParameter("Uri", uri);

@@ -108,10 +108,7 @@ public class AddAutoCcBlacklistRequest extends Request {
         }
 
         /**
-         * The IP addresses that you want to manage. This parameter is a JSON string. The string contains the following field:
-         * <p>
-         * 
-         * *   **src**: the IP address. This field is required and must be of the STRING type.
+         * Blacklist.
          */
         public Builder blacklist(String blacklist) {
             this.putQueryParameter("Blacklist", blacklist);
@@ -120,7 +117,7 @@ public class AddAutoCcBlacklistRequest extends Request {
         }
 
         /**
-         * The expiration time. You can specify a custom expiration time. Valid values: **300** to **604800**. Unit: seconds.
+         * ExpireTime.
          */
         public Builder expireTime(Integer expireTime) {
             this.putQueryParameter("ExpireTime", expireTime);
@@ -129,10 +126,7 @@ public class AddAutoCcBlacklistRequest extends Request {
         }
 
         /**
-         * The ID of the instance.
-         * <p>
-         * 
-         * > You can call the **DescribeInstanceIds** operation to query the IDs of all instances.
+         * InstanceId.
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
