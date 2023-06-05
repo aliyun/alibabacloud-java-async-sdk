@@ -91,7 +91,7 @@ public class GetOptionValueForProjectRequest extends Request {
         }
 
         /**
-         * The unique code of the extension.
+         * The ID of the workspace.
          */
         public Builder extensionCode(String extensionCode) {
             this.putBodyParameter("ExtensionCode", extensionCode);
@@ -100,7 +100,7 @@ public class GetOptionValueForProjectRequest extends Request {
         }
 
         /**
-         * The ID of the workspace.
+         * Id of the request
          */
         public Builder projectId(String projectId) {
             this.putBodyParameter("ProjectId", projectId);

@@ -177,11 +177,38 @@ public class SearchMetaTablesRequest extends Request {
         }
 
         /**
-         * The GUID of the workspace where the metatables reside.
+         * The type of the metatables. Valid values: 0 and 1. The value 0 indicates that tables are queried. The value 1 indicates that views are queried. If you do not configure this parameter, all types of metatables are queried.
          */
         public Builder appGuid(String appGuid) {
             this.putQueryParameter("AppGuid", appGuid);
             this.appGuid = appGuid;
+            return this;
+        }
+
+        /**
+         * The schema information of the table. You need to configure this parameter if you enable the table schema in MaxCompute.
+         */
+        public Builder clusterId(String clusterId) {
+            this.putQueryParameter("ClusterId", clusterId);
+            this.clusterId = clusterId;
+            return this;
+        }
+
+        /**
+         * The HTTP status code returned.
+         */
+        public Builder dataSourceType(String dataSourceType) {
+            this.putQueryParameter("DataSourceType", dataSourceType);
+            this.dataSourceType = dataSourceType;
+            return this;
+        }
+
+        /**
+         * The type of the data source. Valid values: odps and emr.
+         */
+        public Builder entityType(Integer entityType) {
+            this.putQueryParameter("EntityType", entityType);
+            this.entityType = entityType;
             return this;
         }
 
@@ -191,33 +218,6 @@ public class SearchMetaTablesRequest extends Request {
          * 
          * You can log on to the [EMR console](https://emr.console.aliyun.com/?spm=a2c4g.11186623.0.0.965cc5c2GeiHet#/cn-hangzhou) to obtain the ID of the EMR cluster.
          */
-        public Builder clusterId(String clusterId) {
-            this.putQueryParameter("ClusterId", clusterId);
-            this.clusterId = clusterId;
-            return this;
-        }
-
-        /**
-         * The type of the data source. Valid values: odps and emr.
-         */
-        public Builder dataSourceType(String dataSourceType) {
-            this.putQueryParameter("DataSourceType", dataSourceType);
-            this.dataSourceType = dataSourceType;
-            return this;
-        }
-
-        /**
-         * The type of the metatables. Valid values: 0 and 1. The value 0 indicates that tables are queried. The value 1 indicates that views are queried. If you do not configure this parameter, all types of metatables are queried.
-         */
-        public Builder entityType(Integer entityType) {
-            this.putQueryParameter("EntityType", entityType);
-            this.entityType = entityType;
-            return this;
-        }
-
-        /**
-         * The keyword based on which metatables are queried. During the query, the system tokenizes the names of metatables and matches the names with the keyword. If no name is matched, an empty result is returned. By default, the system uses underscores (\_) to tokenize the names.
-         */
         public Builder keyword(String keyword) {
             this.putQueryParameter("Keyword", keyword);
             this.keyword = keyword;
@@ -225,7 +225,7 @@ public class SearchMetaTablesRequest extends Request {
         }
 
         /**
-         * The number of the page to return.
+         * The GUID of the workspace where the metatables reside.
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -234,7 +234,7 @@ public class SearchMetaTablesRequest extends Request {
         }
 
         /**
-         * The number of entries to return on each page. Default value: 10. Maximum value: 100.
+         * The keyword based on which metatables are queried. During the query, the system tokenizes the names of metatables and matches the names with the keyword. If no name is matched, an empty result is returned. By default, the system uses underscores (\_) to tokenize the names.
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -243,7 +243,7 @@ public class SearchMetaTablesRequest extends Request {
         }
 
         /**
-         * The schema information of the table. You need to configure this parameter if you enable the table schema in MaxCompute.
+         * The error message returned.
          */
         public Builder schema(String schema) {
             this.putQueryParameter("Schema", schema);

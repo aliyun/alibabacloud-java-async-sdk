@@ -143,44 +143,11 @@ public class RevokeColumnPermissionRequest extends Request {
         } 
 
         /**
-         * The ID of the region where the MaxCompute project that contains the destination fields resides. For example, the ID of the China (Shanghai) region is cn-shanghai, and that of the China (Zhangjiakou) region is cn-zhangjiakou. The system automatically determines the value of this parameter based on the endpoint used to call the operation.
+         * The ID of the DataWorks workspace with which the MaxCompute project is associated. You can log on to the DataWorks console and go to the Workspace Management page to obtain the ID.
          */
         public Builder regionId(String regionId) {
             this.putHostParameter("RegionId", regionId);
             this.regionId = regionId;
-            return this;
-        }
-
-        /**
-         * The fields for which you want to revoke permissions from a user. Separate multiple fields with commas (,).
-         * <p>
-         * 
-         * You can revoke the permissions on the fields only in MaxCompute tables.
-         */
-        public Builder columns(String columns) {
-            this.putQueryParameter("Columns", columns);
-            this.columns = columns;
-            return this;
-        }
-
-        /**
-         * The name of the MaxCompute project to which the destination fields belong. You can log on to the DataWorks console and go to the Workspace Management page to obtain the name of the MaxCompute project that is associated with the workspace.
-         */
-        public Builder maxComputeProjectName(String maxComputeProjectName) {
-            this.putQueryParameter("MaxComputeProjectName", maxComputeProjectName);
-            this.maxComputeProjectName = maxComputeProjectName;
-            return this;
-        }
-
-        /**
-         * The ID of the Alibaba Cloud account of the user from whom you want to revoke permissions. You can log on to the DataWorks console and go to the Security Settings page to obtain the ID.
-         * <p>
-         * 
-         * You must specify either this parameter or RevokeUserName. If you specify both this parameter and RevokeUserName, the value of this parameter prevails.
-         */
-        public Builder revokeUserId(String revokeUserId) {
-            this.putQueryParameter("RevokeUserId", revokeUserId);
-            this.revokeUserId = revokeUserId;
             return this;
         }
 
@@ -193,6 +160,36 @@ public class RevokeColumnPermissionRequest extends Request {
          * 
          * You must specify either this parameter or RevokeUserId. If you specify both this parameter and RevokeUserId, the value of RevokeUserId prevails.
          */
+        public Builder columns(String columns) {
+            this.putQueryParameter("Columns", columns);
+            this.columns = columns;
+            return this;
+        }
+
+        /**
+         * The name of the MaxCompute table to which the destination fields belong. You can call the [SearchMetaTables](~~173919~~) operation to query the name.
+         */
+        public Builder maxComputeProjectName(String maxComputeProjectName) {
+            this.putQueryParameter("MaxComputeProjectName", maxComputeProjectName);
+            this.maxComputeProjectName = maxComputeProjectName;
+            return this;
+        }
+
+        /**
+         * Indicates whether the permissions on table fields are revoked.
+         */
+        public Builder revokeUserId(String revokeUserId) {
+            this.putQueryParameter("RevokeUserId", revokeUserId);
+            this.revokeUserId = revokeUserId;
+            return this;
+        }
+
+        /**
+         * The ID of the Alibaba Cloud account of the user from whom you want to revoke permissions. You can log on to the DataWorks console and go to the Security Settings page to obtain the ID.
+         * <p>
+         * 
+         * You must specify either this parameter or RevokeUserName. If you specify both this parameter and RevokeUserName, the value of this parameter prevails.
+         */
         public Builder revokeUserName(String revokeUserName) {
             this.putQueryParameter("RevokeUserName", revokeUserName);
             this.revokeUserName = revokeUserName;
@@ -200,7 +197,10 @@ public class RevokeColumnPermissionRequest extends Request {
         }
 
         /**
-         * The name of the MaxCompute table to which the destination fields belong. You can call the [SearchMetaTables](~~173919~~) operation to query the name.
+         * The fields for which you want to revoke permissions from a user. Separate multiple fields with commas (,).
+         * <p>
+         * 
+         * You can revoke the permissions on the fields only in MaxCompute tables.
          */
         public Builder tableName(String tableName) {
             this.putQueryParameter("TableName", tableName);
@@ -209,7 +209,7 @@ public class RevokeColumnPermissionRequest extends Request {
         }
 
         /**
-         * The ID of the DataWorks workspace with which the MaxCompute project is associated. You can log on to the DataWorks console and go to the Workspace Management page to obtain the ID.
+         * The name of the MaxCompute project to which the destination fields belong. You can log on to the DataWorks console and go to the Workspace Management page to obtain the name of the MaxCompute project that is associated with the workspace.
          */
         public Builder workspaceId(Long workspaceId) {
             this.putQueryParameter("WorkspaceId", workspaceId);

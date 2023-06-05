@@ -98,7 +98,7 @@ public class GetBaselineKeyPathResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * The information about the key path.
+         * Data.
          */
         public Builder data(java.util.List < Data> data) {
             this.data = data;
@@ -106,7 +106,7 @@ public class GetBaselineKeyPathResponseBody extends TeaModel {
         }
 
         /**
-         * The error code returned.
+         * ErrorCode.
          */
         public Builder errorCode(String errorCode) {
             this.errorCode = errorCode;
@@ -114,7 +114,7 @@ public class GetBaselineKeyPathResponseBody extends TeaModel {
         }
 
         /**
-         * The error message returned.
+         * ErrorMessage.
          */
         public Builder errorMessage(String errorMessage) {
             this.errorMessage = errorMessage;
@@ -122,7 +122,7 @@ public class GetBaselineKeyPathResponseBody extends TeaModel {
         }
 
         /**
-         * The HTTP status code returned.
+         * The timestamp when the event was found.
          */
         public Builder httpStatusCode(Integer httpStatusCode) {
             this.httpStatusCode = httpStatusCode;
@@ -130,7 +130,7 @@ public class GetBaselineKeyPathResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request. You can use the ID to troubleshoot issues.
+         * RequestId.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -138,7 +138,7 @@ public class GetBaselineKeyPathResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether the request was successful.
+         * Success.
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -262,7 +262,7 @@ public class GetBaselineKeyPathResponseBody extends TeaModel {
             private String status; 
 
             /**
-             * The timestamp obtained by adding the predicted time when the instance started to run to the historical average running duration of the instance.
+             * AbsTime.
              */
             public Builder absTime(Long absTime) {
                 this.absTime = absTime;
@@ -270,7 +270,7 @@ public class GetBaselineKeyPathResponseBody extends TeaModel {
             }
 
             /**
-             * The timestamp of the predicted time when the instance started to run.
+             * BeginCast.
              */
             public Builder beginCast(Long beginCast) {
                 this.beginCast = beginCast;
@@ -278,7 +278,7 @@ public class GetBaselineKeyPathResponseBody extends TeaModel {
             }
 
             /**
-             * The timestamp of the actual time when the instance started to run.
+             * BeginRunningTime.
              */
             public Builder beginRunningTime(Long beginRunningTime) {
                 this.beginRunningTime = beginRunningTime;
@@ -286,7 +286,7 @@ public class GetBaselineKeyPathResponseBody extends TeaModel {
             }
 
             /**
-             * The timestamp when the instance started to wait for resources.
+             * BeginWaitResTime.
              */
             public Builder beginWaitResTime(Long beginWaitResTime) {
                 this.beginWaitResTime = beginWaitResTime;
@@ -294,7 +294,7 @@ public class GetBaselineKeyPathResponseBody extends TeaModel {
             }
 
             /**
-             * The timestamp when the instance started to wait for the scheduling time.
+             * BeginWaitTimeTime.
              */
             public Builder beginWaitTimeTime(Long beginWaitTimeTime) {
                 this.beginWaitTimeTime = beginWaitTimeTime;
@@ -302,7 +302,7 @@ public class GetBaselineKeyPathResponseBody extends TeaModel {
             }
 
             /**
-             * The timestamp of the predicted time when the instance finished running.
+             * EndCast.
              */
             public Builder endCast(Long endCast) {
                 this.endCast = endCast;
@@ -310,7 +310,7 @@ public class GetBaselineKeyPathResponseBody extends TeaModel {
             }
 
             /**
-             * The timestamp of the actual time when the instance finished running.
+             * FinishTime.
              */
             public Builder finishTime(Long finishTime) {
                 this.finishTime = finishTime;
@@ -318,7 +318,7 @@ public class GetBaselineKeyPathResponseBody extends TeaModel {
             }
 
             /**
-             * The status of the instance. Valid values: NOT_RUN, WAIT_TIME, WAIT_RESOURCE, RUNNING, CHECKING, CHECKING_CONDITION, FAILURE, and SUCCESS. The value NOT_RUN indicates that the instance is not run. The value WAIT_TIME indicates that the instance is waiting to be run. The value WAIT_RESOURCE indicates that the instance is waiting for resources. The value RUNNING indicates that the instance is running. The value CHECKING indicates that data quality is being checked for the instance. The value CHECKING_CONDITION indicates that branch conditions are being checked for the instance. The value FAILURE indicates that the instance fails to run. The value SUCCESS indicates that the instance is run.
+             * Status.
              */
             public Builder status(String status) {
                 this.status = status;
@@ -395,7 +395,7 @@ public class GetBaselineKeyPathResponseBody extends TeaModel {
             private String topicName; 
 
             /**
-             * The timestamp when the event was found.
+             * AddTime.
              */
             public Builder addTime(Long addTime) {
                 this.addTime = addTime;
@@ -403,7 +403,7 @@ public class GetBaselineKeyPathResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the instance.
+             * InstanceId.
              */
             public Builder instanceId(Long instanceId) {
                 this.instanceId = instanceId;
@@ -411,7 +411,7 @@ public class GetBaselineKeyPathResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the event.
+             * TopicId.
              */
             public Builder topicId(Long topicId) {
                 this.topicId = topicId;
@@ -419,7 +419,7 @@ public class GetBaselineKeyPathResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the event.
+             * TopicName.
              */
             public Builder topicName(String topicName) {
                 this.topicName = topicName;
@@ -568,7 +568,7 @@ public class GetBaselineKeyPathResponseBody extends TeaModel {
             private java.util.List < Topics> topics; 
 
             /**
-             * The data timestamp of the baseline instance.
+             * Bizdate.
              */
             public Builder bizdate(Long bizdate) {
                 this.bizdate = bizdate;
@@ -576,7 +576,7 @@ public class GetBaselineKeyPathResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the scheduling cycle of the instance. Valid values: 1 to 288.
+             * InGroupId.
              */
             public Builder inGroupId(Integer inGroupId) {
                 this.inGroupId = inGroupId;
@@ -584,7 +584,7 @@ public class GetBaselineKeyPathResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the instance.
+             * InstanceId.
              */
             public Builder instanceId(Long instanceId) {
                 this.instanceId = instanceId;
@@ -592,7 +592,7 @@ public class GetBaselineKeyPathResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the node.
+             * NodeId.
              */
             public Builder nodeId(Long nodeId) {
                 this.nodeId = nodeId;
@@ -600,7 +600,7 @@ public class GetBaselineKeyPathResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the node.
+             * NodeName.
              */
             public Builder nodeName(String nodeName) {
                 this.nodeName = nodeName;
@@ -608,7 +608,7 @@ public class GetBaselineKeyPathResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the Alibaba Cloud account used by the node owner.
+             * Owner.
              */
             public Builder owner(String owner) {
                 this.owner = owner;
@@ -616,7 +616,7 @@ public class GetBaselineKeyPathResponseBody extends TeaModel {
             }
 
             /**
-             * The type of the node. Valid values: 23, 10, 6, and 99. The value 23 indicates that the node is a Data Integration node. The value 10 indicates that the node is a MaxCompute SQL node. The value 6 indicates that the node is a Shell node. The value 99 indicates that the node is a zero load node.
+             * PrgType.
              */
             public Builder prgType(Integer prgType) {
                 this.prgType = prgType;
@@ -624,7 +624,7 @@ public class GetBaselineKeyPathResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the workspace to which the node belongs.
+             * ProjectId.
              */
             public Builder projectId(Long projectId) {
                 this.projectId = projectId;
@@ -632,7 +632,7 @@ public class GetBaselineKeyPathResponseBody extends TeaModel {
             }
 
             /**
-             * The running records of the instance.
+             * Runs.
              */
             public Builder runs(java.util.List < Runs> runs) {
                 this.runs = runs;
@@ -640,7 +640,7 @@ public class GetBaselineKeyPathResponseBody extends TeaModel {
             }
 
             /**
-             * The information about the events that are associated with the instance.
+             * Topics.
              */
             public Builder topics(java.util.List < Topics> topics) {
                 this.topics = topics;

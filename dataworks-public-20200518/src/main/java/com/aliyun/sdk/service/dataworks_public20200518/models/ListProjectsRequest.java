@@ -122,7 +122,7 @@ public class ListProjectsRequest extends Request {
         }
 
         /**
-         * The number of the page to return.
+         * The ID of the resource group.
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -131,7 +131,7 @@ public class ListProjectsRequest extends Request {
         }
 
         /**
-         * The number of entries to return on each page. Default value: 10. Maximum value: 100.
+         * The tags.
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -140,7 +140,7 @@ public class ListProjectsRequest extends Request {
         }
 
         /**
-         * The ID of the resource group.
+         * The tag key.
          */
         public Builder resourceManagerResourceGroupId(String resourceManagerResourceGroupId) {
             this.putQueryParameter("ResourceManagerResourceGroupId", resourceManagerResourceGroupId);
@@ -149,7 +149,7 @@ public class ListProjectsRequest extends Request {
         }
 
         /**
-         * The tags.
+         * The tag value.
          */
         public Builder tags(java.util.List < Tags> tags) {
             String tagsShrink = shrink(tags, "Tags", "json");
@@ -204,7 +204,7 @@ public class ListProjectsRequest extends Request {
             private String value; 
 
             /**
-             * The tag key.
+             * The ID of the request.
              */
             public Builder key(String key) {
                 this.key = key;
@@ -212,7 +212,7 @@ public class ListProjectsRequest extends Request {
             }
 
             /**
-             * The tag value.
+             * The results that are returned.
              */
             public Builder value(String value) {
                 this.value = value;

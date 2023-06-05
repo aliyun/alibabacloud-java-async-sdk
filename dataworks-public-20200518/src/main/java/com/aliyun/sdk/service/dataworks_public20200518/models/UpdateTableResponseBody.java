@@ -50,14 +50,6 @@ public class UpdateTableResponseBody extends TeaModel {
         private TaskInfo taskInfo; 
 
         /**
-         * The ID of the request.
-         */
-        public Builder requestId(String requestId) {
-            this.requestId = requestId;
-            return this;
-        }
-
-        /**
          * The information about the request task.
          * <p>
          * 
@@ -65,6 +57,19 @@ public class UpdateTableResponseBody extends TeaModel {
          * 
          * *   The request task fails to be submitted.
          * *   After the request task is submitted, a subtask fails to run.
+         */
+        public Builder requestId(String requestId) {
+            this.requestId = requestId;
+            return this;
+        }
+
+        /**
+         * The status of the current subtask. Valid values:
+         * <p>
+         * 
+         * *   operating: The subtask is running.
+         * *   success: The subtask succeeds.
+         * *   failure: The subtask fails to run. For more information about the error details, see the Content parameter.
          */
         public Builder taskInfo(TaskInfo taskInfo) {
             this.taskInfo = taskInfo;
@@ -140,11 +145,7 @@ public class UpdateTableResponseBody extends TeaModel {
             private String taskId; 
 
             /**
-             * Details about the status of the current subtask.
-             * <p>
-             * 
-             * *   If the current subtask succeeds, success is returned.
-             * *   If the current subtask fails, the error details are displayed.
+             * Content.
              */
             public Builder content(String content) {
                 this.content = content;
@@ -152,7 +153,7 @@ public class UpdateTableResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the subtask that you want to run. If this parameter is left empty, all subtasks are complete. You can call the [GetDDLJobStatus](~~185659~~) operation to query the status of the subtask based on the subtask ID.
+             * The ID of the current subtask.
              */
             public Builder nextTaskId(String nextTaskId) {
                 this.nextTaskId = nextTaskId;
@@ -160,12 +161,7 @@ public class UpdateTableResponseBody extends TeaModel {
             }
 
             /**
-             * The status of the current subtask. Valid values:
-             * <p>
-             * 
-             * *   operating: The subtask is running.
-             * *   success: The subtask succeeds.
-             * *   failure: The subtask fails to run. For more information about the error details, see the Content parameter.
+             * The ID of the subtask that you want to run. If this parameter is left empty, all subtasks are complete. You can call the [GetDDLJobStatus](~~185659~~) operation to query the status of the subtask based on the subtask ID.
              */
             public Builder status(String status) {
                 this.status = status;
@@ -173,7 +169,11 @@ public class UpdateTableResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the current subtask.
+             * Details about the status of the current subtask.
+             * <p>
+             * 
+             * *   If the current subtask succeeds, success is returned.
+             * *   If the current subtask fails, the error details are displayed.
              */
             public Builder taskId(String taskId) {
                 this.taskId = taskId;

@@ -62,7 +62,11 @@ public class QueryDISyncTaskConfigProcessResultResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * The information returned for the parameters that are asynchronously generated and used to create or update a real-time synchronization node or a synchronization solution in Data Integration.
+         * Indicates whether the parameters are obtained. Valid values:
+         * <p>
+         * 
+         * *   success: indicates that the parameters are obtained.
+         * *   fail: indicates that the parameters fail to be obtained. You can view the reason for the failure and troubleshoot the issue based on the reason.
          */
         public Builder data(Data data) {
             this.data = data;
@@ -70,7 +74,7 @@ public class QueryDISyncTaskConfigProcessResultResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request. You can locate logs and troubleshoot issues based on the ID.
+         * The information returned for the parameters that are asynchronously generated and used to create or update a real-time synchronization node or a synchronization solution in Data Integration.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -78,11 +82,7 @@ public class QueryDISyncTaskConfigProcessResultResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether the request is successful. Valid values:
-         * <p>
-         * 
-         * *   true: The request is successful.
-         * *   false: The request fails.
+         * The ID of the request. You can locate logs and troubleshoot issues based on the ID.
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -146,7 +146,7 @@ public class QueryDISyncTaskConfigProcessResultResponseBody extends TeaModel {
             private String taskContent; 
 
             /**
-             * The reason why the parameters fail to be obtained. If the parameters are obtained, the value null is returned.
+             * The parameters that are obtained. The parameters are used as the request parameters of the [CreateDISyncTask](~~278725~~) or [UpdateDISyncTask](~~289109~~) operation to create or update a real-time synchronization node or a synchronization solution in Data Integration.
              */
             public Builder message(String message) {
                 this.message = message;
@@ -154,11 +154,7 @@ public class QueryDISyncTaskConfigProcessResultResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether the parameters are obtained. Valid values:
-             * <p>
-             * 
-             * *   success: indicates that the parameters are obtained.
-             * *   fail: indicates that the parameters fail to be obtained. You can view the reason for the failure and troubleshoot the issue based on the reason.
+             * The reason why the parameters fail to be obtained. If the parameters are obtained, the value null is returned.
              */
             public Builder status(String status) {
                 this.status = status;
@@ -166,7 +162,7 @@ public class QueryDISyncTaskConfigProcessResultResponseBody extends TeaModel {
             }
 
             /**
-             * The parameters that are obtained. The parameters are used as the request parameters of the [CreateDISyncTask](~~278725~~) or [UpdateDISyncTask](~~289109~~) operation to create or update a real-time synchronization node or a synchronization solution in Data Integration.
+             * TaskContent.
              */
             public Builder taskContent(String taskContent) {
                 this.taskContent = taskContent;

@@ -23,7 +23,7 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<AddMetaCollectionEntityResponse> addMetaCollectionEntity(AddMetaCollectionEntityRequest request);
 
     /**
-      * For more information about how to add your Alibaba Cloud account or a RAM user as a member of a DataWorks workspace, see [Add a member to a DataWorks workspace](~~136941~~).
+      * The ID of the DataWorks workspace. You can call the [ListProjects](~~178393~~) operation to query the ID.
       *
      */
     CompletableFuture<AddProjectMemberToRoleResponse> addProjectMemberToRole(AddProjectMemberToRoleRequest request);
@@ -93,7 +93,8 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<CreateMetaCategoryResponse> createMetaCategory(CreateMetaCategoryRequest request);
 
     /**
-      * Collections are classified into various types. The names of collections of the same type must be different.
+      * A category must belong to a data album.
+      * You can create a category in a data album only after you create the data album. You can set the value of the parentQualifiedName parameter to the unique identifier of the data album to create the category.
       *
      */
     CompletableFuture<CreateMetaCollectionResponse> createMetaCollection(CreateMetaCollectionRequest request);
@@ -183,14 +184,13 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<ExportDataSourcesResponse> exportDataSources(ExportDataSourcesRequest request);
 
     /**
-      * DataWorks allows you to use only the [CreateDISyncTask](~~278725~~) operation to create a batch synchronization node in Data Integration. To create a real-time synchronization node or a synchronization solution, you must first call the [GenerateDISyncTaskConfigForCreating](~~383463~~) operation to generate the ID of an asynchronous thread and call the [QueryDISyncTaskConfigProcessResult](~~383465~~) operation to obtain the asynchronously generated parameters based on the ID. Then, you can call the [CreateDISyncTask](~~278725~~) operation and use the parameters as request parameters to create a real-time synchronization node or a synchronization solution in Data Integration.
-      * DataWorks allows you to create real-time synchronization nodes and synchronization solutions in Data Integration only in asynchronous mode.
+      * The operation that you want to perform.
       *
      */
     CompletableFuture<GenerateDISyncTaskConfigForCreatingResponse> generateDISyncTaskConfigForCreating(GenerateDISyncTaskConfigForCreatingRequest request);
 
     /**
-      * DataWorks allows you to use only the [UpdateDISyncTask](~~289109~~) operation to update a batch synchronization node in Data Integration. To update a real-time synchronization node or a synchronization solution, you must first call the GenerateDISyncTaskConfigForUpdating operation to generate the ID of an asynchronous thread and call the [QueryDISyncTaskConfigProcessResult](~~383465~~) operation to obtain the asynchronously generated parameters based on the ID. Then, you can call the UpdateDISyncTask operation and use the parameters as request parameters to update a real-time synchronization node or a synchronization solution in Data Integration. DataWorks allows you to update real-time synchronization nodes and synchronization solutions in Data Integration only in asynchronous mode.
+      * The operation that you want to perform.
       *
      */
     CompletableFuture<GenerateDISyncTaskConfigForUpdatingResponse> generateDISyncTaskConfigForUpdating(GenerateDISyncTaskConfigForUpdatingRequest request);
@@ -301,7 +301,8 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<GetMetaColumnLineageResponse> getMetaColumnLineage(GetMetaColumnLineageRequest request);
 
     /**
-      * You can call this operation to query only the basic metadata information about a MaxCompute or E-MapReduce (EMR) compute engine instance.
+      * The ID of the EMR cluster. This parameter is required only if you set the DataSourceType parameter to emr.
+      * You can log on to the [EMR console](https://emr.console.aliyun.com/?spm=a2c4g.11186623.0.0.965cc5c2GeiHet#/cn-hangzhou) to obtain the ID of the EMR cluster.
       *
      */
     CompletableFuture<GetMetaDBInfoResponse> getMetaDBInfo(GetMetaDBInfoRequest request);
@@ -329,7 +330,7 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<GetMetaTableOutputResponse> getMetaTableOutput(GetMetaTableOutputRequest request);
 
     /**
-      * You can call this operation to query only the partitions of a metatable in a MaxCompute or E-MapReduce (EMR) compute engine instance.
+      * The operation that you want to perform. Set the value to **GetMetaTablePartition**.
       *
      */
     CompletableFuture<GetMetaTablePartitionResponse> getMetaTablePartition(GetMetaTablePartitionRequest request);
@@ -435,16 +436,7 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<ListDIProjectConfigResponse> listDIProjectConfig(ListDIProjectConfigRequest request);
 
     /**
-      * Supported DAG types:
-      * *   MANUAL: the DAG for a manually triggered workflow.
-      * *   SMOKE_TEST: the DAG for a smoke testing workflow.
-      * *   SUPPLY_DATA: the DAG for a data backfill instance.
-      * *   BUSINESS_PROCESS_DAG: the DAG for a one-time workflow.
-      * Supported DAG states:
-      * *   CREATED: The DAG is created.
-      * *   RUNNING: The DAG is running.
-      * *   FAILURE: The DAG fails to run.
-      * *   SUCCESS: The DAG successfully runs.
+      * The operation that you want to perform. Set the value to **ListDags**.
       *
      */
     CompletableFuture<ListDagsResponse> listDags(ListDagsRequest request);
@@ -494,7 +486,7 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<ListMetaCollectionEntitiesResponse> listMetaCollectionEntities(ListMetaCollectionEntitiesRequest request);
 
     /**
-      * The type can be ALBUM or ALBUM_CATEGORY. ALBUM indicates data albums. ALBUM_CATEGORY indicates categories.
+      * You can configure only one of the Creator, Administrator, and Follower parameters.
       *
      */
     CompletableFuture<ListMetaCollectionsResponse> listMetaCollections(ListMetaCollectionsRequest request);
@@ -572,19 +564,11 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<PublishDataServiceApiResponse> publishDataServiceApi(PublishDataServiceApiRequest request);
 
     /**
-      * DataWorks allows you to call only the [CreateDISyncTask](~~278725~~) or [UpdateDISyncTask](~~289109~~) operation to create or update a batch synchronization node in Data Integration. To create or update a real-time synchronization node or a synchronization solution, you must first call the GenerateDISyncTaskConfigForCreating or GenerateDISyncTaskConfigForUpdating operation to generate the ID of an asynchronous thread and call the [QueryDISyncTaskConfigProcessResult](~~383465~~) operation to obtain the asynchronously generated parameters based on the ID. Then, you can call the CreateDISyncTask or UpdateDISyncTask operation and use the parameters as request parameters to create or update a real-time synchronization node or a synchronization solution.
-      * DataWorks allows you to create or update real-time synchronization nodes and synchronization solutions in Data Integration only in asynchronous mode.
+      * The operation that you want to perform.
       *
      */
     CompletableFuture<QueryDISyncTaskConfigProcessResultResponse> queryDISyncTaskConfigProcessResult(QueryDISyncTaskConfigProcessResultRequest request);
 
-    /**
-      * *   You must use FML statements to query information about the data modeling engine when you call this operation.
-      * *   The information about the data modeling engine can be queried by page, except for data layers, business processes, and data domains. You can add an offset to the end of an FML statement.
-      *     The num LIMIT num statement specifies the offset when the information about the data modeling engine is queried, and the number of pages to return each time. The offset value must be a multiple of the number of pages.
-      * *   A maximum of 1,000 entries can be returned each time you call the operation.
-      *
-     */
     CompletableFuture<QueryPublicModelEngineResponse> queryPublicModelEngine(QueryPublicModelEngineRequest request);
 
     CompletableFuture<RemoveProjectMemberFromRoleResponse> removeProjectMemberFromRole(RemoveProjectMemberFromRoleRequest request);
@@ -614,7 +598,7 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<ScanSensitiveDataResponse> scanSensitiveData(ScanSensitiveDataRequest request);
 
     /**
-      * You can call this operation to query only metatables in a MaxCompute or E-MapReduce (EMR) compute engine instance.
+      * The operation that you want to perform. Set the value to **SearchMetaTables**.
       *
      */
     CompletableFuture<SearchMetaTablesResponse> searchMetaTables(SearchMetaTablesRequest request);
@@ -670,7 +654,7 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<UpdateConnectionResponse> updateConnection(UpdateConnectionRequest request);
 
     /**
-      * DataWorks allows you to specify a default global configuration only for the processing rules of DDL messages in synchronization solutions. After you configure the **processing rules of DDL messages** in synchronization solutions, the configuration is used as the default global configuration and applies to all real-time synchronization nodes in the solutions. You can modify the **processing rules of DDL messages** based on your business requirements. For more information about how to configure a synchronization solution, see [Synchronization solutions](~~199008~~).
+      * The operation that you want to perform. Set the value to **UpdateDIProjectConfig**.
       *
      */
     CompletableFuture<UpdateDIProjectConfigResponse> updateDIProjectConfig(UpdateDIProjectConfigRequest request);
@@ -694,7 +678,7 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<UpdateMetaCategoryResponse> updateMetaCategory(UpdateMetaCategoryRequest request);
 
     /**
-      * Only the name and comment of a collection can be updated.
+      * You must configure at least one of the Name and Comment parameters when you update a collection.
       *
      */
     CompletableFuture<UpdateMetaCollectionResponse> updateMetaCollection(UpdateMetaCollectionRequest request);

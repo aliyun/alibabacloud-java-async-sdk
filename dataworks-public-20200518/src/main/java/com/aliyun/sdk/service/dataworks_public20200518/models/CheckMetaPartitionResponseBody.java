@@ -98,7 +98,7 @@ public class CheckMetaPartitionResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * Indicates whether the partition exists.
+         * The error message.
          */
         public Builder data(Boolean data) {
             this.data = data;
@@ -106,7 +106,7 @@ public class CheckMetaPartitionResponseBody extends TeaModel {
         }
 
         /**
-         * The error code.
+         * ErrorCode.
          */
         public Builder errorCode(String errorCode) {
             this.errorCode = errorCode;
@@ -114,7 +114,7 @@ public class CheckMetaPartitionResponseBody extends TeaModel {
         }
 
         /**
-         * The error message.
+         * Indicates whether the request is successful.
          */
         public Builder errorMessage(String errorMessage) {
             this.errorMessage = errorMessage;
@@ -122,7 +122,7 @@ public class CheckMetaPartitionResponseBody extends TeaModel {
         }
 
         /**
-         * The HTTP status code.
+         * The ID of the request.
          */
         public Builder httpStatusCode(Integer httpStatusCode) {
             this.httpStatusCode = httpStatusCode;
@@ -130,7 +130,7 @@ public class CheckMetaPartitionResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * The error code.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -138,7 +138,7 @@ public class CheckMetaPartitionResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether the request is successful.
+         * Success.
          */
         public Builder success(Boolean success) {
             this.success = success;

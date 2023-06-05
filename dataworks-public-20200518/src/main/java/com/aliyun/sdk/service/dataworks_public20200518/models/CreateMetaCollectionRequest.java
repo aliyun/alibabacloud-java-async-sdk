@@ -121,11 +121,20 @@ public class CreateMetaCollectionRequest extends Request {
         }
 
         /**
-         * The type of the collection.
+         * The ID of the request.
          */
         public Builder collectionType(String collectionType) {
             this.putQueryParameter("CollectionType", collectionType);
             this.collectionType = collectionType;
+            return this;
+        }
+
+        /**
+         * The unique identifier of the parent collection.
+         */
+        public Builder comment(String comment) {
+            this.putQueryParameter("Comment", comment);
+            this.comment = comment;
             return this;
         }
 
@@ -135,18 +144,6 @@ public class CreateMetaCollectionRequest extends Request {
          * 
          * The comment must be 1 to 64 characters in length.
          */
-        public Builder comment(String comment) {
-            this.putQueryParameter("Comment", comment);
-            this.comment = comment;
-            return this;
-        }
-
-        /**
-         * The name of the collection.
-         * <p>
-         * 
-         * The name must be 1 to 32 characters in length.
-         */
         public Builder name(String name) {
             this.putQueryParameter("Name", name);
             this.name = name;
@@ -154,7 +151,7 @@ public class CreateMetaCollectionRequest extends Request {
         }
 
         /**
-         * The unique identifier of the parent collection.
+         * The type of the collection.
          */
         public Builder parentQualifiedName(String parentQualifiedName) {
             this.putQueryParameter("ParentQualifiedName", parentQualifiedName);

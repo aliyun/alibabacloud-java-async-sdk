@@ -98,7 +98,7 @@ public class ListInstancesResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * The instances returned.
+         * The ID of the node. You can call the [ListNodes](~~173979~~) operation to query the ID of the node.
          */
         public Builder data(Data data) {
             this.data = data;
@@ -106,7 +106,7 @@ public class ListInstancesResponseBody extends TeaModel {
         }
 
         /**
-         * The error code returned.
+         * The HTTP status code returned.
          */
         public Builder errorCode(String errorCode) {
             this.errorCode = errorCode;
@@ -114,7 +114,7 @@ public class ListInstancesResponseBody extends TeaModel {
         }
 
         /**
-         * The error message returned.
+         * The page number of the returned page.
          */
         public Builder errorMessage(String errorMessage) {
             this.errorMessage = errorMessage;
@@ -122,7 +122,10 @@ public class ListInstancesResponseBody extends TeaModel {
         }
 
         /**
-         * The HTTP status code returned.
+         * The error message that is returned for the instance.
+         * <p>
+         * 
+         * This parameter is deprecated. You can call the [GetInstanceLog](~~173983~~) operation to query the error information related to the node.
          */
         public Builder httpStatusCode(Integer httpStatusCode) {
             this.httpStatusCode = httpStatusCode;
@@ -130,7 +133,7 @@ public class ListInstancesResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request. You can use the ID to locate logs and troubleshoot issues.
+         * The name of the node.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -138,11 +141,7 @@ public class ListInstancesResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether the request was successful. Valid values:
-         * <p>
-         * 
-         * *   true: The request was successful.
-         * *   false: The request failed.
+         * The beginning of the time range to query. Specify the time in the yyyy-MM-dd HH:mm:ss format.
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -506,7 +505,13 @@ public class ListInstancesResponseBody extends TeaModel {
             private String taskType; 
 
             /**
-             * The ID of the baseline.
+             * The type of the workflow. Valid values:
+             * <p>
+             * 
+             * *   DAILY: The workflow is used to run auto triggered nodes.
+             * *   MANUAL: The workflow is used to run manually triggered nodes.
+             * *   SMOKE_TEST: The workflow is used to perform smoke testing.
+             * *   SUPPLY_DATA: The workflow is used to backfill data.
              */
             public Builder baselineId(Long baselineId) {
                 this.baselineId = baselineId;
@@ -522,7 +527,7 @@ public class ListInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the instance started to wait for resources.
+             * The time when the node stopped running.
              */
             public Builder beginWaitResTime(Long beginWaitResTime) {
                 this.beginWaitResTime = beginWaitResTime;
@@ -530,7 +535,7 @@ public class ListInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the instance started to wait to be scheduled.
+             * The ID of the request. You can use the ID to locate logs and troubleshoot issues.
              */
             public Builder beginWaitTimeTime(Long beginWaitTimeTime) {
                 this.beginWaitTimeTime = beginWaitTimeTime;
@@ -538,7 +543,10 @@ public class ListInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * The data timestamp of the instance. In most cases, the value is one day before the time when the instance was run.
+             * The number of entries to return on each page. Default value: 10. Maximum value: 100.
+             * <p>
+             * 
+             * You cannot specify the sorting method for the instances to be returned by this operation. By default, the instances are sorted in descending order of the time when the instances were created.
              */
             public Builder bizdate(Long bizdate) {
                 this.bizdate = bizdate;
@@ -546,7 +554,7 @@ public class ListInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the workflow.
+             * The ID of the workflow to which the node belongs.
              */
             public Builder businessId(Long businessId) {
                 this.businessId = businessId;
@@ -554,7 +562,12 @@ public class ListInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * The connection string.
+             * The number of times the node can be rerun. The value of this parameter can be empty or an integer that is greater than or equal to 0.
+             * <p>
+             * 
+             * *   If the value of this parameter is empty, the number of times that the node can be rerun is not specified.
+             * *   If the value of this parameter is 0, the node cannot be rerun.
+             * *   If the value of this parameter is a positive integer such as n, the node can be rerun n times. For example, if the value of this parameter is 1, the node can be rerun once. If the value of this parameter is 2, the node can be rerun twice.
              */
             public Builder connection(String connection) {
                 this.connection = connection;
@@ -562,7 +575,7 @@ public class ListInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the instance was generated.
+             * The interval at which the node is rerun after the node fails to run. Unit: milliseconds.
              */
             public Builder createTime(Long createTime) {
                 this.createTime = createTime;
@@ -570,7 +583,7 @@ public class ListInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the account that is used to run the instance. For example, if an account named Test was used to run the instance to backfill data, the value of this parameter is Test.
+             * The ID of the node. You can call the [ListNodes](~~173979~~) operation to query the ID of the node.
              */
             public Builder createUser(String createUser) {
                 this.createUser = createUser;
@@ -578,7 +591,7 @@ public class ListInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the node was scheduled to run.
+             * The error message returned.
              */
             public Builder cycTime(Long cycTime) {
                 this.cycTime = cycTime;
@@ -586,7 +599,7 @@ public class ListInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the workflow.
+             * The time when the instance started to wait for resources.
              */
             public Builder dagId(Long dagId) {
                 this.dagId = dagId;
@@ -594,13 +607,7 @@ public class ListInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * The type of the workflow. Valid values:
-             * <p>
-             * 
-             * *   DAILY: The workflow is used to run auto triggered nodes.
-             * *   MANUAL: The workflow is used to run manually triggered nodes.
-             * *   SMOKE_TEST: The workflow is used to perform smoke testing.
-             * *   SUPPLY_DATA: The workflow is used to backfill data.
+             * The data timestamp of the instance. In most cases, the value is one day before the time when the instance was run.
              */
             public Builder dagType(String dagType) {
                 this.dagType = dagType;
@@ -608,116 +615,10 @@ public class ListInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * The table and partition filter expression in Data Quality that are associated with the node.
+             * The operation that you want to perform.
              */
             public Builder dqcDescription(String dqcDescription) {
                 this.dqcDescription = dqcDescription;
-                return this;
-            }
-
-            /**
-             * Indicates whether the instance is associated with a monitoring rule in Data Quality. Valid values:
-             * <p>
-             * 
-             * *   0: The instance is associated with a monitoring rule in Data Quality.
-             * *   1: The instance is not associated with a monitoring rule in Data Quality.
-             */
-            public Builder dqcType(Integer dqcType) {
-                this.dqcType = dqcType;
-                return this;
-            }
-
-            /**
-             * The error message that is returned for the instance.
-             * <p>
-             * 
-             * This parameter is deprecated. You can call the [GetInstanceLog](~~173983~~) operation to query the error information related to the node.
-             */
-            public Builder errorMessage(String errorMessage) {
-                this.errorMessage = errorMessage;
-                return this;
-            }
-
-            /**
-             * The time when the node stopped running.
-             */
-            public Builder finishTime(Long finishTime) {
-                this.finishTime = finishTime;
-                return this;
-            }
-
-            /**
-             * The ID of the instance.
-             */
-            public Builder instanceId(Long instanceId) {
-                this.instanceId = instanceId;
-                return this;
-            }
-
-            /**
-             * The time when the node was last modified.
-             */
-            public Builder modifyTime(Long modifyTime) {
-                this.modifyTime = modifyTime;
-                return this;
-            }
-
-            /**
-             * The ID of the node.
-             */
-            public Builder nodeId(Long nodeId) {
-                this.nodeId = nodeId;
-                return this;
-            }
-
-            /**
-             * The name of the node.
-             */
-            public Builder nodeName(String nodeName) {
-                this.nodeName = nodeName;
-                return this;
-            }
-
-            /**
-             * The parameters related to the node.
-             */
-            public Builder paramValues(String paramValues) {
-                this.paramValues = paramValues;
-                return this;
-            }
-
-            /**
-             * The priority of the instance. Valid values: 1, 3, 5, 7, and 8.
-             * <p>
-             * 
-             * A greater value indicates a higher priority. Default value: 1.
-             */
-            public Builder priority(Integer priority) {
-                this.priority = priority;
-                return this;
-            }
-
-            /**
-             * The ID of the workflow to which the node belongs.
-             */
-            public Builder relatedFlowId(Long relatedFlowId) {
-                this.relatedFlowId = relatedFlowId;
-                return this;
-            }
-
-            /**
-             * The interval at which the node is rerun after the node fails to run. Unit: milliseconds.
-             */
-            public Builder repeatInterval(Long repeatInterval) {
-                this.repeatInterval = repeatInterval;
-                return this;
-            }
-
-            /**
-             * Indicates whether the node can be rerun.
-             */
-            public Builder repeatability(Boolean repeatability) {
-                this.repeatability = repeatability;
                 return this;
             }
 
@@ -734,21 +635,80 @@ public class ListInstancesResponseBody extends TeaModel {
              * *   FAILURE: The node fails to run.
              * *   SUCCESS: The node is successfully run.
              */
-            public Builder status(String status) {
-                this.status = status;
+            public Builder dqcType(Integer dqcType) {
+                this.dqcType = dqcType;
                 return this;
             }
 
             /**
-             * The number of times the node can be rerun. The value of this parameter can be empty or an integer that is greater than or equal to 0.
-             * <p>
-             * 
-             * *   If the value of this parameter is empty, the number of times that the node can be rerun is not specified.
-             * *   If the value of this parameter is 0, the node cannot be rerun.
-             * *   If the value of this parameter is a positive integer such as n, the node can be rerun n times. For example, if the value of this parameter is 1, the node can be rerun once. If the value of this parameter is 2, the node can be rerun twice.
+             * The name of the account that is used to run the instance. For example, if an account named Test was used to run the instance to backfill data, the value of this parameter is Test.
              */
-            public Builder taskRerunTime(Integer taskRerunTime) {
-                this.taskRerunTime = taskRerunTime;
+            public Builder errorMessage(String errorMessage) {
+                this.errorMessage = errorMessage;
+                return this;
+            }
+
+            /**
+             * The ID of the Alibaba Cloud account used by the workspace administrator. You can log on to the Alibaba Cloud Management Console and view the ID on the Security Settings page of the Account Center console.
+             */
+            public Builder finishTime(Long finishTime) {
+                this.finishTime = finishTime;
+                return this;
+            }
+
+            /**
+             * The number of the page to return. Minimum value:1. Maximum value: 100.
+             */
+            public Builder instanceId(Long instanceId) {
+                this.instanceId = instanceId;
+                return this;
+            }
+
+            /**
+             * The name of the workflow. You can call the [ListBusiness](~~173945~~) operation to query the name of the workflow.
+             */
+            public Builder modifyTime(Long modifyTime) {
+                this.modifyTime = modifyTime;
+                return this;
+            }
+
+            /**
+             * The environment of the workspace. Valid values: PROD and DEV. The value PROD indicates the production environment. The value DEV indicates the development environment.
+             */
+            public Builder nodeId(Long nodeId) {
+                this.nodeId = nodeId;
+                return this;
+            }
+
+            /**
+             * The ID of the workflow.
+             */
+            public Builder nodeName(String nodeName) {
+                this.nodeName = nodeName;
+                return this;
+            }
+
+            /**
+             * The table and partition filter expression in Data Quality that are associated with the node.
+             */
+            public Builder paramValues(String paramValues) {
+                this.paramValues = paramValues;
+                return this;
+            }
+
+            /**
+             * The total number of instances.
+             */
+            public Builder priority(Integer priority) {
+                this.priority = priority;
+                return this;
+            }
+
+            /**
+             * The type of the node. You can call the [ListNodes](~~173979~~) operation to query the type of the node.
+             */
+            public Builder relatedFlowId(Long relatedFlowId) {
+                this.relatedFlowId = relatedFlowId;
                 return this;
             }
 
@@ -771,6 +731,48 @@ public class ListInstancesResponseBody extends TeaModel {
              * *   CONDITION_UNCHOOSE(6): The node is not selected by its ancestor branch node and is run as a dry-run node.
              * 
              *     REALTIME_DEPRECATED(7): The node has instances that are generated in real time but deprecated. The scheduling system sets the status of the node to succeeded.
+             */
+            public Builder repeatInterval(Long repeatInterval) {
+                this.repeatInterval = repeatInterval;
+                return this;
+            }
+
+            /**
+             * The status of the node. Valid values:
+             * <p>
+             * 
+             * *   NOT_RUN: The node is not run.
+             * *   WAIT_TIME: The node is waiting for the scheduling time to arrive.
+             * *   WAIT_RESOURCE: The node is waiting for resources.
+             * *   RUNNING: The node is running.
+             * *   CHECKING: Data quality is being checked for the node.
+             * *   CHECKING_CONDITION: Branch conditions are being checked for the node.
+             * *   FAILURE: The node fails to run.
+             * *   SUCCESS: The node is successfully run.
+             */
+            public Builder repeatability(Boolean repeatability) {
+                this.repeatability = repeatability;
+                return this;
+            }
+
+            /**
+             * The data timestamp of the instances that you want to query. Specify the timestamp in the yyyy-MM-dd HH:mm:ss format.
+             */
+            public Builder status(String status) {
+                this.status = status;
+                return this;
+            }
+
+            /**
+             * The ID of the workspace. You can call the [ListProjects](~~178393~~) operation to query the ID of the workspace.
+             */
+            public Builder taskRerunTime(Integer taskRerunTime) {
+                this.taskRerunTime = taskRerunTime;
+                return this;
+            }
+
+            /**
+             * The information about the instances.
              */
             public Builder taskType(String taskType) {
                 this.taskType = taskType;
@@ -847,7 +849,7 @@ public class ListInstancesResponseBody extends TeaModel {
             private Integer totalCount; 
 
             /**
-             * The information about the instances.
+             * The name of the node. You can call the [ListNodes](~~173979~~) operation to query the name of the node.
              */
             public Builder instances(java.util.List < Instances> instances) {
                 this.instances = instances;
@@ -855,7 +857,7 @@ public class ListInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * The page number of the returned page.
+             * The time when the node was scheduled to run.
              */
             public Builder pageNumber(Integer pageNumber) {
                 this.pageNumber = pageNumber;
@@ -863,7 +865,7 @@ public class ListInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * The number of entries returned per page. Default value: 10. Maximum value: 100.
+             * The end of the time range to query. Specify the time in the yyyy-MM-dd HH:mm:ss format.
              */
             public Builder pageSize(Integer pageSize) {
                 this.pageSize = pageSize;
@@ -871,7 +873,10 @@ public class ListInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * The total number of instances.
+             * The priority of the instance. Valid values: 1, 3, 5, 7, and 8.
+             * <p>
+             * 
+             * A greater value indicates a higher priority. Default value: 1.
              */
             public Builder totalCount(Integer totalCount) {
                 this.totalCount = totalCount;

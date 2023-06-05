@@ -38,7 +38,7 @@ public class AddProjectMemberToRoleResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The ID of the request. You can use the ID to search for logs and troubleshoot issues based on the logs.
+         * RequestId.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

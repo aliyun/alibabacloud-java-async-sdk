@@ -98,10 +98,7 @@ public class DeleteFileResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * The ID of the deployment task that deploys the file. If the file has been committed, an asynchronous process is triggered to delete the file in the scheduling system. The value of this parameter is used to call the GetDeployment operation to poll the status of the asynchronous process.
-         * <p>
-         * 
-         * If this parameter is empty, the file is deleted and the polling is not required.
+         * The ID of the request. You can troubleshoot errors based on the ID.
          */
         public Builder deploymentId(Long deploymentId) {
             this.deploymentId = deploymentId;
@@ -109,34 +106,10 @@ public class DeleteFileResponseBody extends TeaModel {
         }
 
         /**
-         * The error code returned.
+         * ErrorCode.
          */
         public Builder errorCode(String errorCode) {
             this.errorCode = errorCode;
-            return this;
-        }
-
-        /**
-         * The error message returned.
-         */
-        public Builder errorMessage(String errorMessage) {
-            this.errorMessage = errorMessage;
-            return this;
-        }
-
-        /**
-         * The HTTP status code.
-         */
-        public Builder httpStatusCode(Integer httpStatusCode) {
-            this.httpStatusCode = httpStatusCode;
-            return this;
-        }
-
-        /**
-         * The ID of the request. You can troubleshoot errors based on the ID.
-         */
-        public Builder requestId(String requestId) {
-            this.requestId = requestId;
             return this;
         }
 
@@ -146,6 +119,33 @@ public class DeleteFileResponseBody extends TeaModel {
          * 
          * *   true: The request is successful.
          * *   false: The request fails.
+         */
+        public Builder errorMessage(String errorMessage) {
+            this.errorMessage = errorMessage;
+            return this;
+        }
+
+        /**
+         * The ID of the deployment task that deploys the file. If the file has been committed, an asynchronous process is triggered to delete the file in the scheduling system. The value of this parameter is used to call the GetDeployment operation to poll the status of the asynchronous process.
+         * <p>
+         * 
+         * If this parameter is empty, the file is deleted and the polling is not required.
+         */
+        public Builder httpStatusCode(Integer httpStatusCode) {
+            this.httpStatusCode = httpStatusCode;
+            return this;
+        }
+
+        /**
+         * The error message returned.
+         */
+        public Builder requestId(String requestId) {
+            this.requestId = requestId;
+            return this;
+        }
+
+        /**
+         * The error code returned.
          */
         public Builder success(Boolean success) {
             this.success = success;

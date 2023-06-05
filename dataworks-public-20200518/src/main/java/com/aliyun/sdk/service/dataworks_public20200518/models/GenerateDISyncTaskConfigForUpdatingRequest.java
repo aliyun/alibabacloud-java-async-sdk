@@ -138,7 +138,11 @@ public class GenerateDISyncTaskConfigForUpdatingRequest extends Request {
         }
 
         /**
-         * The client token that is used to ensure the idempotence of the request. This parameter is used to prevent repeated operations that are caused by multiple calls.
+         * The ID of the real-time synchronization node or synchronization solution.
+         * <p>
+         * 
+         * *   If you set the TaskType parameter to DI_REALTIME, set the TaskId parameter to the value of the FileId parameter for the real-time synchronization node.
+         * *   If you set the TaskType parameter to DI_SOLUTION, set the TaskId parameter to the value of the FileId parameter for the synchronization solution.
          */
         public Builder clientToken(String clientToken) {
             this.putQueryParameter("ClientToken", clientToken);
@@ -147,10 +151,14 @@ public class GenerateDISyncTaskConfigForUpdatingRequest extends Request {
         }
 
         /**
-         * The ID of the DataWorks workspace. You can log on to the [DataWorks console](https://workbench.data.aliyun.com/console) and go to the Workspace Management page to obtain the workspace ID.
+         * The type of the object that you want to update in Data Integration in asynchronous mode. Valid values:
          * <p>
          * 
-         * This parameter specifies the DataWorks workspace to which the operation is applied.
+         * *   DI_REALTIME: real-time synchronization node
+         * 
+         * *   DI_SOLUTION: synchronization solution
+         * 
+         *     DataWorks allows you to update real-time synchronization nodes and synchronization solutions in Data Integration only in asynchronous mode.
          */
         public Builder projectId(Long projectId) {
             this.putQueryParameter("ProjectId", projectId);
@@ -159,15 +167,24 @@ public class GenerateDISyncTaskConfigForUpdatingRequest extends Request {
         }
 
         /**
-         * The ID of the real-time synchronization node or synchronization solution.
+         * Indicates whether the request is successful. Valid values:
          * <p>
          * 
-         * *   If you set the TaskType parameter to DI_REALTIME, set the TaskId parameter to the value of the FileId parameter for the real-time synchronization node.
-         * *   If you set the TaskType parameter to DI_SOLUTION, set the TaskId parameter to the value of the FileId parameter for the synchronization solution.
+         * *   true: The request is successful.
+         * *   false: The request fails.
          */
         public Builder taskId(Long taskId) {
             this.putQueryParameter("TaskId", taskId);
             this.taskId = taskId;
+            return this;
+        }
+
+        /**
+         * The client token that is used to ensure the idempotence of the request. This parameter is used to prevent repeated operations that are caused by multiple calls.
+         */
+        public Builder taskParam(String taskParam) {
+            this.putQueryParameter("TaskParam", taskParam);
+            this.taskParam = taskParam;
             return this;
         }
 
@@ -185,22 +202,6 @@ public class GenerateDISyncTaskConfigForUpdatingRequest extends Request {
          * 
          * *   If the script contains the SelectedTables parameter, the system synchronizes the tables that you specify in the SelectedTables parameter.
          * *   If the script contains the Tables parameter, the system synchronizes the tables that you specify in the Tables parameter.
-         */
-        public Builder taskParam(String taskParam) {
-            this.putQueryParameter("TaskParam", taskParam);
-            this.taskParam = taskParam;
-            return this;
-        }
-
-        /**
-         * The type of the object that you want to update in Data Integration in asynchronous mode. Valid values:
-         * <p>
-         * 
-         * *   DI_REALTIME: real-time synchronization node
-         * 
-         * *   DI_SOLUTION: synchronization solution
-         * 
-         *     DataWorks allows you to update real-time synchronization nodes and synchronization solutions in Data Integration only in asynchronous mode.
          */
         public Builder taskType(String taskType) {
             this.putQueryParameter("TaskType", taskType);

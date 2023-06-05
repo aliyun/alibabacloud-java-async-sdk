@@ -62,18 +62,20 @@ public class ListInstanceHistoryResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * The instance list.
+         * The status of the node that generates the instance. Valid values:
+         * <p>
+         * 
+         * *   NOT_RUN: The node is not run.
+         * *   WAIT_TIME: The node is waiting for the scheduling time to arrive.
+         * *   WAIT_RESOURCE: The node is waiting for resources.
+         * *   RUNNING: The node is running.
+         * *   CHECKING: Data quality is being checked for the node.
+         * *   CHECKING_CONDITION: Branch conditions are being checked for the node.
+         * *   FAILURE: The node fails to be run.
+         * *   SUCCESS: The node is successfully run.
          */
         public Builder instances(java.util.List < Instances> instances) {
             this.instances = instances;
-            return this;
-        }
-
-        /**
-         * The ID of the request. You can use the ID to query logs and troubleshoot issues.
-         */
-        public Builder requestId(String requestId) {
-            this.requestId = requestId;
             return this;
         }
 
@@ -83,6 +85,14 @@ public class ListInstanceHistoryResponseBody extends TeaModel {
          * 
          * *   true: The request is successful.
          * *   false: The request fails.
+         */
+        public Builder requestId(String requestId) {
+            this.requestId = requestId;
+            return this;
+        }
+
+        /**
+         * The instance list.
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -314,7 +324,7 @@ public class ListInstanceHistoryResponseBody extends TeaModel {
             private String taskType; 
 
             /**
-             * The time when the instance started to be run. This value is a UNIX timestamp representing the number of milliseconds that have elapsed since the epoch time January 1, 1970, 00:00:00 UTC.
+             * The time when the running of the node was complete. This value is a UNIX timestamp representing the number of milliseconds that have elapsed since the epoch time January 1, 1970, 00:00:00 UTC.
              */
             public Builder beginRunningTime(Long beginRunningTime) {
                 this.beginRunningTime = beginRunningTime;
@@ -322,7 +332,7 @@ public class ListInstanceHistoryResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the instance started to wait for resources.
+             * The data timestamp of the instance. In most cases, the value is one day before the time when the instance was run.
              */
             public Builder beginWaitResTime(Long beginWaitResTime) {
                 this.beginWaitResTime = beginWaitResTime;
@@ -330,7 +340,7 @@ public class ListInstanceHistoryResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the instance started to wait to be scheduled.
+             * The ID of the node that generates the instance.
              */
             public Builder beginWaitTimeTime(Long beginWaitTimeTime) {
                 this.beginWaitTimeTime = beginWaitTimeTime;
@@ -338,7 +348,7 @@ public class ListInstanceHistoryResponseBody extends TeaModel {
             }
 
             /**
-             * The data timestamp of the instance. In most cases, the value is one day before the time when the instance was run.
+             * The name of the node.
              */
             public Builder bizdate(Long bizdate) {
                 this.bizdate = bizdate;
@@ -346,7 +356,7 @@ public class ListInstanceHistoryResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the instance was generated.
+             * The ID of the workflow.
              */
             public Builder createTime(Long createTime) {
                 this.createTime = createTime;
@@ -354,104 +364,10 @@ public class ListInstanceHistoryResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the node started to be run. This value is a UNIX timestamp representing the number of milliseconds that have elapsed since the epoch time January 1, 1970, 00:00:00 UTC.
+             * The time when the instance started to be run. This value is a UNIX timestamp representing the number of milliseconds that have elapsed since the epoch time January 1, 1970, 00:00:00 UTC.
              */
             public Builder cycTime(Long cycTime) {
                 this.cycTime = cycTime;
-                return this;
-            }
-
-            /**
-             * The ID of the workflow.
-             */
-            public Builder dagId(Long dagId) {
-                this.dagId = dagId;
-                return this;
-            }
-
-            /**
-             * Indicates whether the instance is associated with a monitoring rule in Data Quality (DQC). Valid values:
-             * <p>
-             * 
-             * *   0: The instance is associated with a monitoring rule in Data Quality.
-             * *   1: The instance is not associated with a monitoring rule in Data Quality.
-             */
-            public Builder dagType(String dagType) {
-                this.dagType = dagType;
-                return this;
-            }
-
-            /**
-             * The error message that is returned for the instance. This parameter is deprecated. You can call the GetInstanceLog operation to query the error information related to the node.
-             */
-            public Builder errorMessage(String errorMessage) {
-                this.errorMessage = errorMessage;
-                return this;
-            }
-
-            /**
-             * The time when the running of the node was complete. This value is a UNIX timestamp representing the number of milliseconds that have elapsed since the epoch time January 1, 1970, 00:00:00 UTC.
-             */
-            public Builder finishTime(Long finishTime) {
-                this.finishTime = finishTime;
-                return this;
-            }
-
-            /**
-             * The historical record number of the instance.
-             */
-            public Builder instanceHistoryId(Long instanceHistoryId) {
-                this.instanceHistoryId = instanceHistoryId;
-                return this;
-            }
-
-            /**
-             * The ID of the instance.
-             */
-            public Builder instanceId(Long instanceId) {
-                this.instanceId = instanceId;
-                return this;
-            }
-
-            /**
-             * The time when the node was last modified.
-             */
-            public Builder modifyTime(Long modifyTime) {
-                this.modifyTime = modifyTime;
-                return this;
-            }
-
-            /**
-             * The ID of the node that generates the instance.
-             */
-            public Builder nodeId(Long nodeId) {
-                this.nodeId = nodeId;
-                return this;
-            }
-
-            /**
-             * The name of the node.
-             */
-            public Builder nodeName(String nodeName) {
-                this.nodeName = nodeName;
-                return this;
-            }
-
-            /**
-             * The status of the node that generates the instance. Valid values:
-             * <p>
-             * 
-             * *   NOT_RUN: The node is not run.
-             * *   WAIT_TIME: The node is waiting for the scheduling time to arrive.
-             * *   WAIT_RESOURCE: The node is waiting for resources.
-             * *   RUNNING: The node is running.
-             * *   CHECKING: Data quality is being checked for the node.
-             * *   CHECKING_CONDITION: Branch conditions are being checked for the node.
-             * *   FAILURE: The node fails to be run.
-             * *   SUCCESS: The node is successfully run.
-             */
-            public Builder status(String status) {
-                this.status = status;
                 return this;
             }
 
@@ -467,6 +383,90 @@ public class ListInstanceHistoryResponseBody extends TeaModel {
              * *   SKIP_CYCLE(5): The node is a node that is scheduled by week or month and is waiting for the scheduling time to arrive. The scheduling system regularly runs the node but sets the status of the node to succeeded when the scheduling system starts to run the node.
              * *   CONDITION_UNCHOOSE(6): The node is not selected by its ancestor branch node and is run as a dry-run node.
              * *   REALTIME_DEPRECATED(7): The node has instances that are generated in real time but deprecated. The scheduling system sets the status of the node to succeeded.
+             */
+            public Builder dagId(Long dagId) {
+                this.dagId = dagId;
+                return this;
+            }
+
+            /**
+             * The time when the node was last modified.
+             */
+            public Builder dagType(String dagType) {
+                this.dagType = dagType;
+                return this;
+            }
+
+            /**
+             * The time when the instance was generated.
+             */
+            public Builder errorMessage(String errorMessage) {
+                this.errorMessage = errorMessage;
+                return this;
+            }
+
+            /**
+             * The error message that is returned for the instance. This parameter is deprecated. You can call the GetInstanceLog operation to query the error information related to the node.
+             */
+            public Builder finishTime(Long finishTime) {
+                this.finishTime = finishTime;
+                return this;
+            }
+
+            /**
+             * InstanceHistoryId.
+             */
+            public Builder instanceHistoryId(Long instanceHistoryId) {
+                this.instanceHistoryId = instanceHistoryId;
+                return this;
+            }
+
+            /**
+             * The time when the instance started to wait for resources.
+             */
+            public Builder instanceId(Long instanceId) {
+                this.instanceId = instanceId;
+                return this;
+            }
+
+            /**
+             * The ID of the instance.
+             */
+            public Builder modifyTime(Long modifyTime) {
+                this.modifyTime = modifyTime;
+                return this;
+            }
+
+            /**
+             * The historical record number of the instance.
+             */
+            public Builder nodeId(Long nodeId) {
+                this.nodeId = nodeId;
+                return this;
+            }
+
+            /**
+             * The time when the instance started to wait to be scheduled.
+             */
+            public Builder nodeName(String nodeName) {
+                this.nodeName = nodeName;
+                return this;
+            }
+
+            /**
+             * The time when the node started to be run. This value is a UNIX timestamp representing the number of milliseconds that have elapsed since the epoch time January 1, 1970, 00:00:00 UTC.
+             */
+            public Builder status(String status) {
+                this.status = status;
+                return this;
+            }
+
+            /**
+             * Indicates whether the instance is associated with a monitoring rule in Data Quality (DQC). Valid values:
+             * <p>
+             * 
+             * *   0: The instance is associated with a monitoring rule in Data Quality.
+             * *   1: The instance is not associated with a monitoring rule in Data Quality.
              */
             public Builder taskType(String taskType) {
                 this.taskType = taskType;

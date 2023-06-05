@@ -74,7 +74,7 @@ public class ListDataSourcesResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * The query result.
+         * The number of entries returned per page. Default value: 10. Maximum value: 100.
          */
         public Builder data(Data data) {
             this.data = data;
@@ -82,7 +82,7 @@ public class ListDataSourcesResponseBody extends TeaModel {
         }
 
         /**
-         * The HTTP status code returned.
+         * Indicates whether the request was successful.
          */
         public Builder httpStatusCode(Integer httpStatusCode) {
             this.httpStatusCode = httpStatusCode;
@@ -90,7 +90,7 @@ public class ListDataSourcesResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * The query result.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -98,7 +98,7 @@ public class ListDataSourcesResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether the request was successful.
+         * The page number of the returned page.
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -113,7 +113,7 @@ public class ListDataSourcesResponseBody extends TeaModel {
 
     public static class DataSources extends TeaModel {
         @NameInMap("BindingCalcEngineId")
-        private Integer bindingCalcEngineId;
+        private Long bindingCalcEngineId;
 
         @NameInMap("ConnectStatus")
         private Integer connectStatus;
@@ -140,7 +140,7 @@ public class ListDataSourcesResponseBody extends TeaModel {
         private String gmtModified;
 
         @NameInMap("Id")
-        private Integer id;
+        private Long id;
 
         @NameInMap("Name")
         private String name;
@@ -198,7 +198,7 @@ public class ListDataSourcesResponseBody extends TeaModel {
         /**
          * @return bindingCalcEngineId
          */
-        public Integer getBindingCalcEngineId() {
+        public Long getBindingCalcEngineId() {
             return this.bindingCalcEngineId;
         }
 
@@ -261,7 +261,7 @@ public class ListDataSourcesResponseBody extends TeaModel {
         /**
          * @return id
          */
-        public Integer getId() {
+        public Long getId() {
             return this.id;
         }
 
@@ -322,7 +322,7 @@ public class ListDataSourcesResponseBody extends TeaModel {
         }
 
         public static final class Builder {
-            private Integer bindingCalcEngineId; 
+            private Long bindingCalcEngineId; 
             private Integer connectStatus; 
             private String content; 
             private String dataSourceType; 
@@ -331,7 +331,7 @@ public class ListDataSourcesResponseBody extends TeaModel {
             private Integer envType; 
             private String gmtCreate; 
             private String gmtModified; 
-            private Integer id; 
+            private Long id; 
             private String name; 
             private String operator; 
             private Integer projectId; 
@@ -342,10 +342,66 @@ public class ListDataSourcesResponseBody extends TeaModel {
             private Long tenantId; 
 
             /**
+             * BindingCalcEngineId.
+             */
+            public Builder bindingCalcEngineId(Long bindingCalcEngineId) {
+                this.bindingCalcEngineId = bindingCalcEngineId;
+                return this;
+            }
+
+            /**
+             * The description of the data source.
+             */
+            public Builder connectStatus(Integer connectStatus) {
+                this.connectStatus = connectStatus;
+                return this;
+            }
+
+            /**
              * The ID of the compute engine instance with which the data source is associated.
              */
-            public Builder bindingCalcEngineId(Integer bindingCalcEngineId) {
-                this.bindingCalcEngineId = bindingCalcEngineId;
+            public Builder content(String content) {
+                this.content = content;
+                return this;
+            }
+
+            /**
+             * Indicates whether the compute engine instance that is associated with the data source is the default compute engine instance used by data sources of the same type.
+             */
+            public Builder dataSourceType(String dataSourceType) {
+                this.dataSourceType = dataSourceType;
+                return this;
+            }
+
+            /**
+             * The ID of the Alibaba Cloud account that is used to last modify the data source.
+             */
+            public Builder defaultEngine(Boolean defaultEngine) {
+                this.defaultEngine = defaultEngine;
+                return this;
+            }
+
+            /**
+             * The time when the data source was created. Example: Mar 17, 2021 4:09:32 PM.
+             */
+            public Builder description(String description) {
+                this.description = description;
+                return this;
+            }
+
+            /**
+             * The field that is used to sort data sources. Data sources are sorted in descending order based on the value of this parameter.
+             */
+            public Builder envType(Integer envType) {
+                this.envType = envType;
+                return this;
+            }
+
+            /**
+             * Indicates whether the data source is a shared data source.
+             */
+            public Builder gmtCreate(String gmtCreate) {
+                this.gmtCreate = gmtCreate;
                 return this;
             }
 
@@ -356,8 +412,24 @@ public class ListDataSourcesResponseBody extends TeaModel {
              * *   1: The data source is accessible.
              * *   2: The data source is inaccessible.
              */
-            public Builder connectStatus(Integer connectStatus) {
-                this.connectStatus = connectStatus;
+            public Builder gmtModified(String gmtModified) {
+                this.gmtModified = gmtModified;
+                return this;
+            }
+
+            /**
+             * The ID of the tenant.
+             */
+            public Builder id(Long id) {
+                this.id = id;
+                return this;
+            }
+
+            /**
+             * The ID of the data source.
+             */
+            public Builder name(String name) {
+                this.name = name;
                 return this;
             }
 
@@ -454,8 +526,16 @@ public class ListDataSourcesResponseBody extends TeaModel {
              *       "username": "lslslsls"
              *     }
              */
-            public Builder content(String content) {
-                this.content = content;
+            public Builder operator(String operator) {
+                this.operator = operator;
+                return this;
+            }
+
+            /**
+             * The time when the data source was last modified. Example: Mar 17, 2021 4:09:32 PM.
+             */
+            public Builder projectId(Integer projectId) {
+                this.projectId = projectId;
                 return this;
             }
 
@@ -477,24 +557,27 @@ public class ListDataSourcesResponseBody extends TeaModel {
              * *   hybriddb_for_postgresql
              * *   holo
              */
-            public Builder dataSourceType(String dataSourceType) {
-                this.dataSourceType = dataSourceType;
+            public Builder sequence(Integer sequence) {
+                this.sequence = sequence;
                 return this;
             }
 
             /**
-             * Indicates whether the compute engine instance that is associated with the data source is the default compute engine instance used by data sources of the same type.
+             * The name of the data source.
              */
-            public Builder defaultEngine(Boolean defaultEngine) {
-                this.defaultEngine = defaultEngine;
+            public Builder shared(Boolean shared) {
+                this.shared = shared;
                 return this;
             }
 
             /**
-             * The description of the data source.
+             * The subtype of the data source. This parameter takes effect only if the DataSourceType parameter is set to rds.
+             * <p>
+             * 
+             * If the DataSourceType parameter is set to rds, this parameter can be set to mysql, sqlserver, or postgresql.
              */
-            public Builder description(String description) {
-                this.description = description;
+            public Builder status(Integer status) {
+                this.status = status;
                 return this;
             }
 
@@ -505,100 +588,13 @@ public class ListDataSourcesResponseBody extends TeaModel {
              * *   0: development environment
              * *   1: production environment
              */
-            public Builder envType(Integer envType) {
-                this.envType = envType;
-                return this;
-            }
-
-            /**
-             * The time when the data source was created. Example: Mar 17, 2021 4:09:32 PM.
-             */
-            public Builder gmtCreate(String gmtCreate) {
-                this.gmtCreate = gmtCreate;
-                return this;
-            }
-
-            /**
-             * The time when the data source was last modified. Example: Mar 17, 2021 4:09:32 PM.
-             */
-            public Builder gmtModified(String gmtModified) {
-                this.gmtModified = gmtModified;
-                return this;
-            }
-
-            /**
-             * The ID of the data source.
-             */
-            public Builder id(Integer id) {
-                this.id = id;
-                return this;
-            }
-
-            /**
-             * The name of the data source.
-             */
-            public Builder name(String name) {
-                this.name = name;
-                return this;
-            }
-
-            /**
-             * The ID of the Alibaba Cloud account that is used to last modify the data source.
-             */
-            public Builder operator(String operator) {
-                this.operator = operator;
-                return this;
-            }
-
-            /**
-             * The ID of the workspace to which the data source belongs.
-             */
-            public Builder projectId(Integer projectId) {
-                this.projectId = projectId;
-                return this;
-            }
-
-            /**
-             * The field that is used to sort data sources. Data sources are sorted in descending order based on the value of this parameter.
-             */
-            public Builder sequence(Integer sequence) {
-                this.sequence = sequence;
-                return this;
-            }
-
-            /**
-             * Indicates whether the data source is a shared data source.
-             */
-            public Builder shared(Boolean shared) {
-                this.shared = shared;
-                return this;
-            }
-
-            /**
-             * The status of the data source. Valid values:
-             * <p>
-             * 
-             * *   1: The data source is accessible.
-             * *   2: The data source is inaccessible.
-             */
-            public Builder status(Integer status) {
-                this.status = status;
-                return this;
-            }
-
-            /**
-             * The subtype of the data source. This parameter takes effect only if the DataSourceType parameter is set to rds.
-             * <p>
-             * 
-             * If the DataSourceType parameter is set to rds, this parameter can be set to mysql, sqlserver, or postgresql.
-             */
             public Builder subType(String subType) {
                 this.subType = subType;
                 return this;
             }
 
             /**
-             * The ID of the tenant.
+             * TenantId.
              */
             public Builder tenantId(Long tenantId) {
                 this.tenantId = tenantId;
@@ -675,7 +671,7 @@ public class ListDataSourcesResponseBody extends TeaModel {
             private Integer totalCount; 
 
             /**
-             * The data sources.
+             * The ID of the workspace to which the data source belongs.
              */
             public Builder dataSources(java.util.List < DataSources> dataSources) {
                 this.dataSources = dataSources;
@@ -683,7 +679,7 @@ public class ListDataSourcesResponseBody extends TeaModel {
             }
 
             /**
-             * The page number of the returned page.
+             * The total number of data sources.
              */
             public Builder pageNumber(Integer pageNumber) {
                 this.pageNumber = pageNumber;
@@ -691,7 +687,7 @@ public class ListDataSourcesResponseBody extends TeaModel {
             }
 
             /**
-             * The number of entries returned per page. Default value: 10. Maximum value: 100.
+             * The data sources.
              */
             public Builder pageSize(Integer pageSize) {
                 this.pageSize = pageSize;
@@ -699,7 +695,11 @@ public class ListDataSourcesResponseBody extends TeaModel {
             }
 
             /**
-             * The total number of data sources.
+             * The status of the data source. Valid values:
+             * <p>
+             * 
+             * *   1: The data source is accessible.
+             * *   2: The data source is inaccessible.
              */
             public Builder totalCount(Integer totalCount) {
                 this.totalCount = totalCount;

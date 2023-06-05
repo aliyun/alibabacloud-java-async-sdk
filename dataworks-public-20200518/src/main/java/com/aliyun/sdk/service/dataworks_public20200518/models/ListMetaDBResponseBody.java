@@ -50,7 +50,7 @@ public class ListMetaDBResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The information of the metadatabases.
+         * The list of metadatabases.
          */
         public Builder databaseInfo(DatabaseInfo databaseInfo) {
             this.databaseInfo = databaseInfo;
@@ -58,7 +58,7 @@ public class ListMetaDBResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * The total number of the metadatabases.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -170,7 +170,7 @@ public class ListMetaDBResponseBody extends TeaModel {
             private String UUID; 
 
             /**
-             * The timestamp at which the metadatabase was created. You can convert the timestamp to the related date based on the time zone that you use.
+             * The timestamp at which the metadatabase was updated.
              */
             public Builder createTimeStamp(Long createTimeStamp) {
                 this.createTimeStamp = createTimeStamp;
@@ -178,7 +178,7 @@ public class ListMetaDBResponseBody extends TeaModel {
             }
 
             /**
-             * The URL of the metadatabase.
+             * Location.
              */
             public Builder location(String location) {
                 this.location = location;
@@ -186,7 +186,7 @@ public class ListMetaDBResponseBody extends TeaModel {
             }
 
             /**
-             * The timestamp at which the metadatabase was updated.
+             * The ID of the metadatabase owner.
              */
             public Builder modifiedTimeStamp(Long modifiedTimeStamp) {
                 this.modifiedTimeStamp = modifiedTimeStamp;
@@ -194,7 +194,7 @@ public class ListMetaDBResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the metadatabase.
+             * The URL of the metadatabase.
              */
             public Builder name(String name) {
                 this.name = name;
@@ -202,7 +202,7 @@ public class ListMetaDBResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the metadatabase owner.
+             * OwnerId.
              */
             public Builder ownerId(String ownerId) {
                 this.ownerId = ownerId;
@@ -210,7 +210,7 @@ public class ListMetaDBResponseBody extends TeaModel {
             }
 
             /**
-             * The type of the metadatabase.
+             * The universally unique identifier (UUID) of the metadatabase.
              */
             public Builder type(String type) {
                 this.type = type;
@@ -218,7 +218,7 @@ public class ListMetaDBResponseBody extends TeaModel {
             }
 
             /**
-             * The universally unique identifier (UUID) of the metadatabase.
+             * The name of the metadatabase.
              */
             public Builder UUID(String UUID) {
                 this.UUID = UUID;
@@ -271,7 +271,7 @@ public class ListMetaDBResponseBody extends TeaModel {
             private Long totalCount; 
 
             /**
-             * The list of metadatabases.
+             * The timestamp at which the metadatabase was created. You can convert the timestamp to the related date based on the time zone that you use.
              */
             public Builder dbList(java.util.List < DbList> dbList) {
                 this.dbList = dbList;
@@ -279,7 +279,7 @@ public class ListMetaDBResponseBody extends TeaModel {
             }
 
             /**
-             * The total number of the metadatabases.
+             * The type of the metadatabase.
              */
             public Builder totalCount(Long totalCount) {
                 this.totalCount = totalCount;

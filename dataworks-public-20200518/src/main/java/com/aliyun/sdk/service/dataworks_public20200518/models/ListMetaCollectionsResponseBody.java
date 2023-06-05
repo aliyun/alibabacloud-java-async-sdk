@@ -98,7 +98,7 @@ public class ListMetaCollectionsResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * The object returned.
+         * The token that is used for the next query.
          */
         public Builder data(Data data) {
             this.data = data;
@@ -106,7 +106,7 @@ public class ListMetaCollectionsResponseBody extends TeaModel {
         }
 
         /**
-         * The error code returned.
+         * The error message returned.
          */
         public Builder errorCode(String errorCode) {
             this.errorCode = errorCode;
@@ -114,7 +114,7 @@ public class ListMetaCollectionsResponseBody extends TeaModel {
         }
 
         /**
-         * The error message returned.
+         * The HTTP status code returned.
          */
         public Builder errorMessage(String errorMessage) {
             this.errorMessage = errorMessage;
@@ -122,7 +122,7 @@ public class ListMetaCollectionsResponseBody extends TeaModel {
         }
 
         /**
-         * The HTTP status code returned.
+         * HttpStatusCode.
          */
         public Builder httpStatusCode(Integer httpStatusCode) {
             this.httpStatusCode = httpStatusCode;
@@ -130,7 +130,7 @@ public class ListMetaCollectionsResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request. You can use the ID to query logs and troubleshoot issues.
+         * The object returned.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -138,11 +138,7 @@ public class ListMetaCollectionsResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether the request was successful. Valid values:
-         * <p>
-         * 
-         * *   true: The request was successful.
-         * *   false: The request failed.
+         * The error code returned.
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -194,7 +190,11 @@ public class ListMetaCollectionsResponseBody extends TeaModel {
             private String nextToken; 
 
             /**
-             * The collections.
+             * Indicates whether the request was successful. Valid values:
+             * <p>
+             * 
+             * *   true: The request was successful.
+             * *   false: The request failed.
              */
             public Builder collectionList(java.util.List < Collection > collectionList) {
                 this.collectionList = collectionList;
@@ -202,7 +202,7 @@ public class ListMetaCollectionsResponseBody extends TeaModel {
             }
 
             /**
-             * The token that is used for the next query.
+             * The collections.
              */
             public Builder nextToken(String nextToken) {
                 this.nextToken = nextToken;

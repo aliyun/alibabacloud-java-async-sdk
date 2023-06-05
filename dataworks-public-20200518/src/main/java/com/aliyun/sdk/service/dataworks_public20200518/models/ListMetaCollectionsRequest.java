@@ -190,11 +190,56 @@ public class ListMetaCollectionsRequest extends Request {
         }
 
         /**
-         * The ID of the collection administrator.
+         * The ID of the collection follower.
          */
         public Builder administrator(String administrator) {
             this.putQueryParameter("Administrator", administrator);
             this.administrator = administrator;
+            return this;
+        }
+
+        /**
+         * The ID of the collection creator.
+         */
+        public Builder collectionType(String collectionType) {
+            this.putQueryParameter("CollectionType", collectionType);
+            this.collectionType = collectionType;
+            return this;
+        }
+
+        /**
+         * The ID of the collection administrator.
+         */
+        public Builder creator(String creator) {
+            this.putQueryParameter("Creator", creator);
+            this.creator = creator;
+            return this;
+        }
+
+        /**
+         * The ID of the request. You can use the ID to query logs and troubleshoot issues.
+         */
+        public Builder follower(String follower) {
+            this.putQueryParameter("Follower", follower);
+            this.follower = follower;
+            return this;
+        }
+
+        /**
+         * The name of the sorting field.
+         */
+        public Builder keyword(String keyword) {
+            this.putQueryParameter("Keyword", keyword);
+            this.keyword = keyword;
+            return this;
+        }
+
+        /**
+         * The number of entries to return on each page. Default value: 10. Maximum value: 100.
+         */
+        public Builder nextToken(String nextToken) {
+            this.putQueryParameter("NextToken", nextToken);
+            this.nextToken = nextToken;
             return this;
         }
 
@@ -204,51 +249,6 @@ public class ListMetaCollectionsRequest extends Request {
          * 
          * ALBUM_CATEGORY: category in a data album
          */
-        public Builder collectionType(String collectionType) {
-            this.putQueryParameter("CollectionType", collectionType);
-            this.collectionType = collectionType;
-            return this;
-        }
-
-        /**
-         * The ID of the collection creator.
-         */
-        public Builder creator(String creator) {
-            this.putQueryParameter("Creator", creator);
-            this.creator = creator;
-            return this;
-        }
-
-        /**
-         * The ID of the collection follower.
-         */
-        public Builder follower(String follower) {
-            this.putQueryParameter("Follower", follower);
-            this.follower = follower;
-            return this;
-        }
-
-        /**
-         * The keyword.
-         */
-        public Builder keyword(String keyword) {
-            this.putQueryParameter("Keyword", keyword);
-            this.keyword = keyword;
-            return this;
-        }
-
-        /**
-         * The paging information. This parameter specifies the start point of the query.
-         */
-        public Builder nextToken(String nextToken) {
-            this.putQueryParameter("NextToken", nextToken);
-            this.nextToken = nextToken;
-            return this;
-        }
-
-        /**
-         * The name of the sorting field.
-         */
         public Builder orderBy(String orderBy) {
             this.putQueryParameter("OrderBy", orderBy);
             this.orderBy = orderBy;
@@ -256,7 +256,7 @@ public class ListMetaCollectionsRequest extends Request {
         }
 
         /**
-         * The number of entries to return on each page. Default value: 10. Maximum value: 100.
+         * The keyword.
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -265,7 +265,7 @@ public class ListMetaCollectionsRequest extends Request {
         }
 
         /**
-         * The unique identifier of the parent collection.
+         * The paging information. This parameter specifies the start point of the query.
          */
         public Builder parentQualifiedName(String parentQualifiedName) {
             this.putQueryParameter("ParentQualifiedName", parentQualifiedName);

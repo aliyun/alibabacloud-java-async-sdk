@@ -109,27 +109,15 @@ public class QueryDISyncTaskConfigProcessResultRequest extends Request {
         }
 
         /**
-         * The ID of the asynchronous thread. You can call the [GenerateDISyncTaskConfigForCreating](~~383463~~) or [GenerateDISyncTaskConfigForUpdating](~~383464~~) operation to generate the ID.
+         * Indicates whether the request is successful. Valid values:
          * <p>
          * 
-         * *   The GenerateDISyncTaskConfigForCreating operation is used to generate the ID of the asynchronous thread that is used to create a real-time synchronization node or a synchronization solution in Data Integration.
-         * *   The GenerateDISyncTaskConfigForUpdating operation is used to generate the ID of the asynchronous thread that is used to update a real-time synchronization node or a synchronization solution in Data Integration.
+         * *   true: The request is successful.
+         * *   false: The request fails.
          */
         public Builder asyncProcessId(Long asyncProcessId) {
             this.putQueryParameter("AsyncProcessId", asyncProcessId);
             this.asyncProcessId = asyncProcessId;
-            return this;
-        }
-
-        /**
-         * The ID of the DataWorks workspace. You can log on to the [DataWorks console](https://workbench.data.aliyun.com/console) and go to the Workspace Management page to obtain the workspace ID.
-         * <p>
-         * 
-         * This parameter specifies the DataWorks workspace to which the operation is applied.
-         */
-        public Builder projectId(Long projectId) {
-            this.putQueryParameter("ProjectId", projectId);
-            this.projectId = projectId;
             return this;
         }
 
@@ -142,6 +130,19 @@ public class QueryDISyncTaskConfigProcessResultRequest extends Request {
          * *   DI_SOLUTION: synchronization solution
          * 
          *     DataWorks allows you to create or update real-time synchronization nodes and synchronization solutions in Data Integration only in asynchronous mode.
+         */
+        public Builder projectId(Long projectId) {
+            this.putQueryParameter("ProjectId", projectId);
+            this.projectId = projectId;
+            return this;
+        }
+
+        /**
+         * The ID of the asynchronous thread. You can call the [GenerateDISyncTaskConfigForCreating](~~383463~~) or [GenerateDISyncTaskConfigForUpdating](~~383464~~) operation to generate the ID.
+         * <p>
+         * 
+         * *   The GenerateDISyncTaskConfigForCreating operation is used to generate the ID of the asynchronous thread that is used to create a real-time synchronization node or a synchronization solution in Data Integration.
+         * *   The GenerateDISyncTaskConfigForUpdating operation is used to generate the ID of the asynchronous thread that is used to update a real-time synchronization node or a synchronization solution in Data Integration.
          */
         public Builder taskType(String taskType) {
             this.putQueryParameter("TaskType", taskType);

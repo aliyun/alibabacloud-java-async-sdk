@@ -109,27 +109,15 @@ public class GetDISyncInstanceInfoRequest extends Request {
         }
 
         /**
-         * *   If you set the TaskType parameter to DI_REALTIME, set the FileId parameter to the ID of the real-time synchronization node that you want to query.
+         * Indicates whether the request was successful. Valid values:
          * <p>
-         * *   If you set the TaskType parameter to DI_SOLUTION, set the FileId parameter to the ID of the data synchronization solution that you want to query.
          * 
-         * You can call the [ListFiles](~~173942~~) operation to obtain the ID of the real-time synchronization node or data synchronization solution.
+         * *   true: The request was successful.
+         * *   false: The request failed.
          */
         public Builder fileId(Long fileId) {
             this.putQueryParameter("FileId", fileId);
             this.fileId = fileId;
-            return this;
-        }
-
-        /**
-         * The ID of the DataWorks workspace. You can log on to the [DataWorks console](https://workbench.data.aliyun.com/console) and go to the Workspace Management page to obtain the workspace ID.
-         * <p>
-         * 
-         * This parameter specifies the DataWorks workspace to which the operation is applied.
-         */
-        public Builder projectId(Long projectId) {
-            this.putQueryParameter("ProjectId", projectId);
-            this.projectId = projectId;
             return this;
         }
 
@@ -139,6 +127,19 @@ public class GetDISyncInstanceInfoRequest extends Request {
          * 
          * *   DI_REALTIME: real-time synchronization node
          * *   DI_SOLUTION: data synchronization solution
+         */
+        public Builder projectId(Long projectId) {
+            this.putQueryParameter("ProjectId", projectId);
+            this.projectId = projectId;
+            return this;
+        }
+
+        /**
+         * *   If you set the TaskType parameter to DI_REALTIME, set the FileId parameter to the ID of the real-time synchronization node that you want to query.
+         * <p>
+         * *   If you set the TaskType parameter to DI_SOLUTION, set the FileId parameter to the ID of the data synchronization solution that you want to query.
+         * 
+         * You can call the [ListFiles](~~173942~~) operation to obtain the ID of the real-time synchronization node or data synchronization solution.
          */
         public Builder taskType(String taskType) {
             this.putQueryParameter("TaskType", taskType);

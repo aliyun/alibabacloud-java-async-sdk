@@ -109,7 +109,11 @@ public class DeleteDISyncTaskRequest extends Request {
         }
 
         /**
-         * The ID of the real-time synchronization node. You can call the [ListFiles](~~173942~~) operation to query the ID of the node.
+         * Indicates whether the request is successful. Valid values:
+         * <p>
+         * 
+         * *   true: The request is successful.
+         * *   false: The request failed.
          */
         public Builder fileId(Long fileId) {
             this.putQueryParameter("FileId", fileId);
@@ -118,10 +122,10 @@ public class DeleteDISyncTaskRequest extends Request {
         }
 
         /**
-         * The ID of the DataWorks workspace. You can log on to the [DataWorks console](https://workbench.data.aliyun.com/console) and go to the Workspace Management page to obtain the workspace ID.
+         * The type of the synchronization node in Data Integration.
          * <p>
          * 
-         * You must set this parameter to specify the DataWorks workspace in which the synchronization node resides.
+         * The parameter value is DI_REALTIME and cannot be changed. The value indicates a real-time synchronization node.
          */
         public Builder projectId(Long projectId) {
             this.putQueryParameter("ProjectId", projectId);
@@ -130,10 +134,7 @@ public class DeleteDISyncTaskRequest extends Request {
         }
 
         /**
-         * The type of the synchronization node in Data Integration.
-         * <p>
-         * 
-         * The parameter value is DI_REALTIME and cannot be changed. The value indicates a real-time synchronization node.
+         * The ID of the real-time synchronization node. You can call the [ListFiles](~~173942~~) operation to query the ID of the node.
          */
         public Builder taskType(String taskType) {
             this.putQueryParameter("TaskType", taskType);

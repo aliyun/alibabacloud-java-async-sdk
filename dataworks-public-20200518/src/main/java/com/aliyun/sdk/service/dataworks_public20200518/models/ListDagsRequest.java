@@ -94,7 +94,7 @@ public class ListDagsRequest extends Request {
         }
 
         /**
-         * The sequence number that uniquely identifies the data backfill operation. You can call the [GetDag](~~189753~~) operation to obtain the sequence number.
+         * The environment of the workspace. Valid values: PROD and DEV. PROD indicates the production environment. DEV indicates the development environment.
          */
         public Builder opSeq(Long opSeq) {
             this.putBodyParameter("OpSeq", opSeq);
@@ -103,7 +103,7 @@ public class ListDagsRequest extends Request {
         }
 
         /**
-         * The environment of the workspace. Valid values: PROD and DEV. PROD indicates the production environment. DEV indicates the development environment.
+         * The HTTP status code returned.
          */
         public Builder projectEnv(String projectEnv) {
             this.putBodyParameter("ProjectEnv", projectEnv);

@@ -50,7 +50,7 @@ public class QueryPublicModelEngineResponseBody extends TeaModel {
         private java.util.List < java.util.Map<String, ?>> returnValue; 
 
         /**
-         * The unique ID of the request. You can troubleshoot errors based on the ID.
+         * RequestId.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -58,7 +58,7 @@ public class QueryPublicModelEngineResponseBody extends TeaModel {
         }
 
         /**
-         * The information about the data modeling engine that is returned.
+         * ReturnValue.
          */
         public Builder returnValue(java.util.List < java.util.Map<String, ?>> returnValue) {
             this.returnValue = returnValue;

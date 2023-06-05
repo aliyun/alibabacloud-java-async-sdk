@@ -135,7 +135,11 @@ public class SubmitFileRequest extends Request {
         }
 
         /**
-         * The description of the commit operation.
+         * Specifies whether to skip the pre-publish check after the file is committed.
+         * <p>
+         * 
+         * *   false: indicates that the pre-publish check is not skipped. After the file is committed, the pre-publish check is automatically triggered. The file can be deployed only after the file passes the check.
+         * *   true: indicates that the pre-publish check is skipped. After the file is submitted, the pre-publish check process is not triggered. You can directly publish the file.
          */
         public Builder comment(String comment) {
             this.putBodyParameter("Comment", comment);
@@ -144,7 +148,7 @@ public class SubmitFileRequest extends Request {
         }
 
         /**
-         * The ID of the file. You can call the [ListFiles](~~173942~~) operation to query the ID.
+         * The description of the commit operation.
          */
         public Builder fileId(Long fileId) {
             this.putBodyParameter("FileId", fileId);
@@ -153,7 +157,7 @@ public class SubmitFileRequest extends Request {
         }
 
         /**
-         * The ID of the DataWorks workspace. You can log on to the DataWorks console and go to the Workspace Management page to obtain the workspace ID. You must configure either this parameter or the ProjectIdentifier parameter to determine the DataWorks workspace to which the operation is applied.
+         * The name of the DataWorks workspace. You can log on to the DataWorks console and go to the Workspace Management page to obtain the workspace name. You must configure either this parameter or the ProjectId parameter to determine the DataWorks workspace to which the operation is applied.
          */
         public Builder projectId(Long projectId) {
             this.putBodyParameter("ProjectId", projectId);
@@ -162,7 +166,7 @@ public class SubmitFileRequest extends Request {
         }
 
         /**
-         * The name of the DataWorks workspace. You can log on to the DataWorks console and go to the Workspace Management page to obtain the workspace name. You must configure either this parameter or the ProjectId parameter to determine the DataWorks workspace to which the operation is applied.
+         * The ID of the file. You can call the [ListFiles](~~173942~~) operation to query the ID.
          */
         public Builder projectIdentifier(String projectIdentifier) {
             this.putBodyParameter("ProjectIdentifier", projectIdentifier);
@@ -171,11 +175,7 @@ public class SubmitFileRequest extends Request {
         }
 
         /**
-         * Specifies whether to skip the pre-publish check after the file is committed.
-         * <p>
-         * 
-         * *   false: indicates that the pre-publish check is not skipped. After the file is committed, the pre-publish check is automatically triggered. The file can be deployed only after the file passes the check.
-         * *   true: indicates that the pre-publish check is skipped. After the file is submitted, the pre-publish check process is not triggered. You can directly publish the file.
+         * The HTTP status code returned.
          */
         public Builder skipAllDeployFileExtensions(Boolean skipAllDeployFileExtensions) {
             this.putBodyParameter("SkipAllDeployFileExtensions", skipAllDeployFileExtensions);

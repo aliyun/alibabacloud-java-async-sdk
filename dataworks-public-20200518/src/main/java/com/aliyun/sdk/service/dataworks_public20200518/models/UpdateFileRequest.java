@@ -79,6 +79,10 @@ public class UpdateFileRequest extends Request {
     private String fileName;
 
     @Body
+    @NameInMap("IgnoreParentSkipRunningProperty")
+    private Boolean ignoreParentSkipRunningProperty;
+
+    @Body
     @NameInMap("InputList")
     private String inputList;
 
@@ -152,6 +156,7 @@ public class UpdateFileRequest extends Request {
         this.fileFolderPath = builder.fileFolderPath;
         this.fileId = builder.fileId;
         this.fileName = builder.fileName;
+        this.ignoreParentSkipRunningProperty = builder.ignoreParentSkipRunningProperty;
         this.inputList = builder.inputList;
         this.inputParameters = builder.inputParameters;
         this.outputList = builder.outputList;
@@ -294,6 +299,13 @@ public class UpdateFileRequest extends Request {
     }
 
     /**
+     * @return ignoreParentSkipRunningProperty
+     */
+    public Boolean getIgnoreParentSkipRunningProperty() {
+        return this.ignoreParentSkipRunningProperty;
+    }
+
+    /**
      * @return inputList
      */
     public String getInputList() {
@@ -408,6 +420,7 @@ public class UpdateFileRequest extends Request {
         private String fileFolderPath; 
         private Long fileId; 
         private String fileName; 
+        private Boolean ignoreParentSkipRunningProperty; 
         private String inputList; 
         private String inputParameters; 
         private String outputList; 
@@ -445,6 +458,7 @@ public class UpdateFileRequest extends Request {
             this.fileFolderPath = request.fileFolderPath;
             this.fileId = request.fileId;
             this.fileName = request.fileName;
+            this.ignoreParentSkipRunningProperty = request.ignoreParentSkipRunningProperty;
             this.inputList = request.inputList;
             this.inputParameters = request.inputParameters;
             this.outputList = request.outputList;
@@ -652,6 +666,15 @@ public class UpdateFileRequest extends Request {
         public Builder fileName(String fileName) {
             this.putBodyParameter("FileName", fileName);
             this.fileName = fileName;
+            return this;
+        }
+
+        /**
+         * IgnoreParentSkipRunningProperty.
+         */
+        public Builder ignoreParentSkipRunningProperty(Boolean ignoreParentSkipRunningProperty) {
+            this.putBodyParameter("IgnoreParentSkipRunningProperty", ignoreParentSkipRunningProperty);
+            this.ignoreParentSkipRunningProperty = ignoreParentSkipRunningProperty;
             return this;
         }
 

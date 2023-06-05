@@ -98,7 +98,7 @@ public class GetMetaTableColumnResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * The business data.
+         * The number of entries returned per page. Default value: 10. Maximum value: 100.
          */
         public Builder data(Data data) {
             this.data = data;
@@ -106,7 +106,7 @@ public class GetMetaTableColumnResponseBody extends TeaModel {
         }
 
         /**
-         * The error code.
+         * The page number of the returned page.
          */
         public Builder errorCode(String errorCode) {
             this.errorCode = errorCode;
@@ -114,7 +114,7 @@ public class GetMetaTableColumnResponseBody extends TeaModel {
         }
 
         /**
-         * The error message.
+         * Indicates whether the request is successful.
          */
         public Builder errorMessage(String errorMessage) {
             this.errorMessage = errorMessage;
@@ -122,7 +122,7 @@ public class GetMetaTableColumnResponseBody extends TeaModel {
         }
 
         /**
-         * The HTTP status code.
+         * The ID of the request. You can locate logs and troubleshoot issues based on the ID.
          */
         public Builder httpStatusCode(Integer httpStatusCode) {
             this.httpStatusCode = httpStatusCode;
@@ -130,7 +130,7 @@ public class GetMetaTableColumnResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request. You can locate logs and troubleshoot issues based on the ID.
+         * The error code.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -138,7 +138,7 @@ public class GetMetaTableColumnResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether the request is successful.
+         * The business data.
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -286,54 +286,10 @@ public class GetMetaTableColumnResponseBody extends TeaModel {
             private Long relationCount; 
 
             /**
-             * The description of the field.
+             * The number of times the field is read.
              */
             public Builder caption(String caption) {
                 this.caption = caption;
-                return this;
-            }
-
-            /**
-             * The GUID of the field.
-             */
-            public Builder columnGuid(String columnGuid) {
-                this.columnGuid = columnGuid;
-                return this;
-            }
-
-            /**
-             * The name of the field.
-             */
-            public Builder columnName(String columnName) {
-                this.columnName = columnName;
-                return this;
-            }
-
-            /**
-             * The data type of the field.
-             */
-            public Builder columnType(String columnType) {
-                this.columnType = columnType;
-                return this;
-            }
-
-            /**
-             * The remarks of the field.
-             */
-            public Builder comment(String comment) {
-                this.comment = comment;
-                return this;
-            }
-
-            /**
-             * Indicates whether the field is a foreign key. Valid values:
-             * <p>
-             * 
-             * *   true: The field is a foreign key.
-             * *   false: The field is not a foreign key.
-             */
-            public Builder isForeignKey(Boolean isForeignKey) {
-                this.isForeignKey = isForeignKey;
                 return this;
             }
 
@@ -344,8 +300,24 @@ public class GetMetaTableColumnResponseBody extends TeaModel {
              * *   true: The field is a partition field.
              * *   false: The field is not a partition field.
              */
-            public Builder isPartitionColumn(Boolean isPartitionColumn) {
-                this.isPartitionColumn = isPartitionColumn;
+            public Builder columnGuid(String columnGuid) {
+                this.columnGuid = columnGuid;
+                return this;
+            }
+
+            /**
+             * The remarks of the field.
+             */
+            public Builder columnName(String columnName) {
+                this.columnName = columnName;
+                return this;
+            }
+
+            /**
+             * The ordinal number of the field.
+             */
+            public Builder columnType(String columnType) {
+                this.columnType = columnType;
                 return this;
             }
 
@@ -356,13 +328,41 @@ public class GetMetaTableColumnResponseBody extends TeaModel {
              * *   true: The field is the primary key.
              * *   false: The field is not the primary key.
              */
+            public Builder comment(String comment) {
+                this.comment = comment;
+                return this;
+            }
+
+            /**
+             * IsForeignKey.
+             */
+            public Builder isForeignKey(Boolean isForeignKey) {
+                this.isForeignKey = isForeignKey;
+                return this;
+            }
+
+            /**
+             * The data type of the field.
+             */
+            public Builder isPartitionColumn(Boolean isPartitionColumn) {
+                this.isPartitionColumn = isPartitionColumn;
+                return this;
+            }
+
+            /**
+             * The description of the field.
+             */
             public Builder isPrimaryKey(Boolean isPrimaryKey) {
                 this.isPrimaryKey = isPrimaryKey;
                 return this;
             }
 
             /**
-             * The ordinal number of the field.
+             * Indicates whether the field is a foreign key. Valid values:
+             * <p>
+             * 
+             * *   true: The field is a foreign key.
+             * *   false: The field is not a foreign key.
              */
             public Builder position(Integer position) {
                 this.position = position;
@@ -370,7 +370,7 @@ public class GetMetaTableColumnResponseBody extends TeaModel {
             }
 
             /**
-             * The number of times the field is read.
+             * RelationCount.
              */
             public Builder relationCount(Long relationCount) {
                 this.relationCount = relationCount;
@@ -447,7 +447,7 @@ public class GetMetaTableColumnResponseBody extends TeaModel {
             private Long totalCount; 
 
             /**
-             * The information of fields.
+             * The name of the field.
              */
             public Builder columnList(java.util.List < ColumnList> columnList) {
                 this.columnList = columnList;
@@ -455,7 +455,7 @@ public class GetMetaTableColumnResponseBody extends TeaModel {
             }
 
             /**
-             * The page number of the returned page.
+             * The total number of fields.
              */
             public Builder pageNum(Integer pageNum) {
                 this.pageNum = pageNum;
@@ -463,7 +463,7 @@ public class GetMetaTableColumnResponseBody extends TeaModel {
             }
 
             /**
-             * The number of entries returned per page. Default value: 10. Maximum value: 100.
+             * The information of fields.
              */
             public Builder pageSize(Integer pageSize) {
                 this.pageSize = pageSize;
@@ -471,7 +471,7 @@ public class GetMetaTableColumnResponseBody extends TeaModel {
             }
 
             /**
-             * The total number of fields.
+             * The GUID of the field.
              */
             public Builder totalCount(Long totalCount) {
                 this.totalCount = totalCount;

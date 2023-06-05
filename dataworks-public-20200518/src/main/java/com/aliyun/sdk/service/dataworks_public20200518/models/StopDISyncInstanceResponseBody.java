@@ -62,7 +62,11 @@ public class StopDISyncInstanceResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * The information returned for the synchronization node.
+         * Indicates whether the synchronization node is stopped. Valid values:
+         * <p>
+         * 
+         * *   success: The synchronization node is stopped.
+         * *   fail: The synchronization node fails to be stopped.
          */
         public Builder data(Data data) {
             this.data = data;
@@ -70,7 +74,7 @@ public class StopDISyncInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request. You can locate logs and troubleshoot issues based on the ID.
+         * The information returned for the synchronization node.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -78,11 +82,7 @@ public class StopDISyncInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether the request is successful. Valid values:
-         * <p>
-         * 
-         * *   true: The request is successful.
-         * *   false: The request fails.
+         * The ID of the request. You can locate logs and troubleshoot issues based on the ID.
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -134,10 +134,7 @@ public class StopDISyncInstanceResponseBody extends TeaModel {
             private String status; 
 
             /**
-             * The reason why the synchronization node fails to be stopped.
-             * <p>
-             * 
-             * If the synchronization node is stopped, the value null is returned.
+             * Message.
              */
             public Builder message(String message) {
                 this.message = message;
@@ -145,11 +142,10 @@ public class StopDISyncInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether the synchronization node is stopped. Valid values:
+             * The reason why the synchronization node fails to be stopped.
              * <p>
              * 
-             * *   success: The synchronization node is stopped.
-             * *   fail: The synchronization node fails to be stopped.
+             * If the synchronization node is stopped, the value null is returned.
              */
             public Builder status(String status) {
                 this.status = status;

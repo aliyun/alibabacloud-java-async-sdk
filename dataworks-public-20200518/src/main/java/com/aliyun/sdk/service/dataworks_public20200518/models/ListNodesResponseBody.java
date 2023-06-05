@@ -98,7 +98,7 @@ public class ListNodesResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * The list of nodes.
+         * The ID of the associated workflow.
          */
         public Builder data(Data data) {
             this.data = data;
@@ -106,7 +106,7 @@ public class ListNodesResponseBody extends TeaModel {
         }
 
         /**
-         * The error code returned.
+         * The HTTP status code returned.
          */
         public Builder errorCode(String errorCode) {
             this.errorCode = errorCode;
@@ -114,7 +114,7 @@ public class ListNodesResponseBody extends TeaModel {
         }
 
         /**
-         * The error message returned.
+         * The page number of the returned page.
          */
         public Builder errorMessage(String errorMessage) {
             this.errorMessage = errorMessage;
@@ -122,7 +122,7 @@ public class ListNodesResponseBody extends TeaModel {
         }
 
         /**
-         * The HTTP status code returned.
+         * The interval at which the node is rerun after the node fails to run.
          */
         public Builder httpStatusCode(Integer httpStatusCode) {
             this.httpStatusCode = httpStatusCode;
@@ -130,7 +130,7 @@ public class ListNodesResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request. You can use the ID to query logs and troubleshoot issues.
+         * The list of nodes.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -138,7 +138,7 @@ public class ListNodesResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether the request is successful.
+         * Indicates whether the node can be rerun.
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -418,7 +418,7 @@ public class ListNodesResponseBody extends TeaModel {
             private String schedulerType; 
 
             /**
-             * The ID of the baseline with which the node is associated.
+             * The number of the page to return. Minimum value: 1. Maximum value: 100.
              */
             public Builder baselineId(Long baselineId) {
                 this.baselineId = baselineId;
@@ -426,7 +426,7 @@ public class ListNodesResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the workflow.
+             * The operation that you want to perform. Set the value to **ListNodes**.
              */
             public Builder businessId(Long businessId) {
                 this.businessId = businessId;
@@ -434,7 +434,7 @@ public class ListNodesResponseBody extends TeaModel {
             }
 
             /**
-             * The connection string.
+             * The name of the resource group.
              */
             public Builder connection(String connection) {
                 this.connection = connection;
@@ -442,7 +442,7 @@ public class ListNodesResponseBody extends TeaModel {
             }
 
             /**
-             * The cron expression returned.
+             * The name of the workflow.
              */
             public Builder cronExpress(String cronExpress) {
                 this.cronExpress = cronExpress;
@@ -450,7 +450,7 @@ public class ListNodesResponseBody extends TeaModel {
             }
 
             /**
-             * The description of the node.
+             * The priority for running the node. Valid values: 1, 3, 5, 7, and 8.
              */
             public Builder description(String description) {
                 this.description = description;
@@ -458,7 +458,7 @@ public class ListNodesResponseBody extends TeaModel {
             }
 
             /**
-             * The table and partition filter expression in Data Quality that are associated with the node.
+             * The ID of the owner.
              */
             public Builder dqcDescription(String dqcDescription) {
                 this.dqcDescription = dqcDescription;
@@ -466,7 +466,7 @@ public class ListNodesResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether the node is associated with a monitoring rule in Data Quality. Valid values: 0 and 1. The value 0 indicates that the node is associated with Data Quality. The value 1 indicates that the node is not associated with Data Quality.
+             * The connection string.
              */
             public Builder dqcType(Integer dqcType) {
                 this.dqcType = dqcType;
@@ -482,7 +482,7 @@ public class ListNodesResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the node.
+             * The types of the nodes. You can call the [ListNodes](~~173979~~) operation to query the type of the node.
              */
             public Builder nodeId(Long nodeId) {
                 this.nodeId = nodeId;
@@ -490,7 +490,7 @@ public class ListNodesResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the node.
+             * The total number of nodes returned.
              */
             public Builder nodeName(String nodeName) {
                 this.nodeName = nodeName;
@@ -498,7 +498,7 @@ public class ListNodesResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the owner.
+             * The additional parameters.
              */
             public Builder ownerId(String ownerId) {
                 this.ownerId = ownerId;
@@ -506,7 +506,7 @@ public class ListNodesResponseBody extends TeaModel {
             }
 
             /**
-             * The additional parameters.
+             * The type of the node.
              */
             public Builder paramValues(String paramValues) {
                 this.paramValues = paramValues;
@@ -514,7 +514,7 @@ public class ListNodesResponseBody extends TeaModel {
             }
 
             /**
-             * The priority for running the node. Valid values: 1, 3, 5, 7, and 8.
+             * The ID of the owner.
              */
             public Builder priority(Integer priority) {
                 this.priority = priority;
@@ -522,7 +522,7 @@ public class ListNodesResponseBody extends TeaModel {
             }
 
             /**
-             * The type of the node.
+             * The error message returned.
              */
             public Builder programType(String programType) {
                 this.programType = programType;
@@ -530,7 +530,7 @@ public class ListNodesResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the workspace.
+             * The information about the nodes.
              */
             public Builder projectId(Long projectId) {
                 this.projectId = projectId;
@@ -538,7 +538,7 @@ public class ListNodesResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the associated workflow.
+             * The table and partition filter expression in Data Quality that are associated with the node.
              */
             public Builder relatedFlowId(Long relatedFlowId) {
                 this.relatedFlowId = relatedFlowId;
@@ -546,7 +546,7 @@ public class ListNodesResponseBody extends TeaModel {
             }
 
             /**
-             * The interval at which the node is rerun after the node fails to run.
+             * The environment of the workspace. Valid values: PROD and DEV.
              */
             public Builder repeatInterval(Long repeatInterval) {
                 this.repeatInterval = repeatInterval;
@@ -554,7 +554,7 @@ public class ListNodesResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether the node can be rerun.
+             * The name of the node.
              */
             public Builder repeatability(Boolean repeatability) {
                 this.repeatability = repeatability;
@@ -570,7 +570,7 @@ public class ListNodesResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the resource group.
+             * The ID of the workflow.
              */
             public Builder resGroupName(String resGroupName) {
                 this.resGroupName = resGroupName;
@@ -578,13 +578,7 @@ public class ListNodesResponseBody extends TeaModel {
             }
 
             /**
-             * The scheduling type of the node. Valid values:
-             * <p>
-             * 
-             * *   NORMAL: indicates that the node is a normal auto triggered node.
-             * *   MANUAL: indicates that the node is a manually triggered node.
-             * *   PAUSE: indicates that the node is a paused node.
-             * *   SKIP: indicates that the node is a dry-run node. Dry-run nodes are started as scheduled but the system sets the status of the nodes to successful when it starts to run them.
+             * The types of the nodes. You can call the [ListNodes](~~173979~~) operation to query the type of the node.
              */
             public Builder schedulerType(String schedulerType) {
                 this.schedulerType = schedulerType;
@@ -661,7 +655,13 @@ public class ListNodesResponseBody extends TeaModel {
             private Integer totalCount; 
 
             /**
-             * The information about the nodes.
+             * The scheduling type of the node. Valid values:
+             * <p>
+             * 
+             * *   NORMAL: indicates that the node is a normal auto triggered node.
+             * *   MANUAL: indicates that the node is a manually triggered node.
+             * *   PAUSE: indicates that the node is a paused node.
+             * *   SKIP: indicates that the node is a dry-run node. Dry-run nodes are started as scheduled but the system sets the status of the nodes to successful when it starts to run them.
              */
             public Builder nodes(java.util.List < Nodes> nodes) {
                 this.nodes = nodes;
@@ -669,7 +669,7 @@ public class ListNodesResponseBody extends TeaModel {
             }
 
             /**
-             * The page number of the returned page.
+             * The name of the node.
              */
             public Builder pageNumber(Integer pageNumber) {
                 this.pageNumber = pageNumber;
@@ -677,7 +677,7 @@ public class ListNodesResponseBody extends TeaModel {
             }
 
             /**
-             * The number of entries returned per page. Default value: 10. Maximum value: 100.
+             * The cron expression returned.
              */
             public Builder pageSize(Integer pageSize) {
                 this.pageSize = pageSize;
@@ -685,7 +685,7 @@ public class ListNodesResponseBody extends TeaModel {
             }
 
             /**
-             * The total number of nodes returned.
+             * The name of the workflow.
              */
             public Builder totalCount(Integer totalCount) {
                 this.totalCount = totalCount;

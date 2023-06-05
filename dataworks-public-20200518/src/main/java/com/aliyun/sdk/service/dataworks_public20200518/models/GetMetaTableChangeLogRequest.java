@@ -163,11 +163,24 @@ public class GetMetaTableChangeLogRequest extends Request {
         }
 
         /**
-         * The type of the change. Valid values: CREATE_TABLE, ALTER_TABLE, DROP_TABLE, ADD_PARTITION, and DROP_PARTITION.
+         * The beginning of the time range to query. Specify the time in the yyyy-MM-dd HH:mm:ss format.
+         * <p>
+         * 
+         * *   By default, the system uses the current time as the value of this parameter if the time that you specify is invalid.
+         * *   If both the values of the StartDate and EndDate parameters are invalid, the system automatically queries the change logs that are generated within the last 30 days.
          */
         public Builder changeType(String changeType) {
             this.putBodyParameter("ChangeType", changeType);
             this.changeType = changeType;
+            return this;
+        }
+
+        /**
+         * The error message returned.
+         */
+        public Builder endDate(String endDate) {
+            this.putBodyParameter("EndDate", endDate);
+            this.endDate = endDate;
             return this;
         }
 
@@ -178,49 +191,9 @@ public class GetMetaTableChangeLogRequest extends Request {
          * *   By default, the system uses the current time as the value of this parameter if the time that you specify is invalid.
          * *   If both the values of the StartDate and EndDate parameters are invalid, the system automatically queries the change logs that are generated within the last 30 days.
          */
-        public Builder endDate(String endDate) {
-            this.putBodyParameter("EndDate", endDate);
-            this.endDate = endDate;
-            return this;
-        }
-
-        /**
-         * The entity on which the change is made. Valid values: TABLE and PARTITION.
-         */
         public Builder objectType(String objectType) {
             this.putBodyParameter("ObjectType", objectType);
             this.objectType = objectType;
-            return this;
-        }
-
-        /**
-         * The number of the page to return.
-         */
-        public Builder pageNumber(Integer pageNumber) {
-            this.putBodyParameter("PageNumber", pageNumber);
-            this.pageNumber = pageNumber;
-            return this;
-        }
-
-        /**
-         * The number of entries to return on each page. Default value: 10. Maximum value: 100.
-         */
-        public Builder pageSize(Integer pageSize) {
-            this.putBodyParameter("PageSize", pageSize);
-            this.pageSize = pageSize;
-            return this;
-        }
-
-        /**
-         * The beginning of the time range to query. Specify the time in the yyyy-MM-dd HH:mm:ss format.
-         * <p>
-         * 
-         * *   By default, the system uses the current time as the value of this parameter if the time that you specify is invalid.
-         * *   If both the values of the StartDate and EndDate parameters are invalid, the system automatically queries the change logs that are generated within the last 30 days.
-         */
-        public Builder startDate(String startDate) {
-            this.putBodyParameter("StartDate", startDate);
-            this.startDate = startDate;
             return this;
         }
 
@@ -229,6 +202,33 @@ public class GetMetaTableChangeLogRequest extends Request {
          * <p>
          * 
          * >  To query the change logs of a MaxCompute table, you must call the [GetMetaTableChangeLog](~~173925~~) operation.
+         */
+        public Builder pageNumber(Integer pageNumber) {
+            this.putBodyParameter("PageNumber", pageNumber);
+            this.pageNumber = pageNumber;
+            return this;
+        }
+
+        /**
+         * The type of the change. Valid values: CREATE_TABLE, ALTER_TABLE, DROP_TABLE, ADD_PARTITION, and DROP_PARTITION.
+         */
+        public Builder pageSize(Integer pageSize) {
+            this.putBodyParameter("PageSize", pageSize);
+            this.pageSize = pageSize;
+            return this;
+        }
+
+        /**
+         * The HTTP status code returned.
+         */
+        public Builder startDate(String startDate) {
+            this.putBodyParameter("StartDate", startDate);
+            this.startDate = startDate;
+            return this;
+        }
+
+        /**
+         * The entity on which the change is made. Valid values: TABLE and PARTITION.
          */
         public Builder tableGuid(String tableGuid) {
             this.putBodyParameter("TableGuid", tableGuid);

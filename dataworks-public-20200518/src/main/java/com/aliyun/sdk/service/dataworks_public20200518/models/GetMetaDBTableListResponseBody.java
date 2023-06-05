@@ -50,7 +50,7 @@ public class GetMetaDBTableListResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The business data.
+         * The number of entries returned per page. Default value: 10. Maximum value: 100.
          */
         public Builder data(Data data) {
             this.data = data;
@@ -58,7 +58,7 @@ public class GetMetaDBTableListResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * The page number of the returned page.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -122,7 +122,7 @@ public class GetMetaDBTableListResponseBody extends TeaModel {
             private String tableName; 
 
             /**
-             * The name of the metadatabase.
+             * DatabaseName.
              */
             public Builder databaseName(String databaseName) {
                 this.databaseName = databaseName;
@@ -130,7 +130,7 @@ public class GetMetaDBTableListResponseBody extends TeaModel {
             }
 
             /**
-             * The GUID of the metatable.
+             * TableGuid.
              */
             public Builder tableGuid(String tableGuid) {
                 this.tableGuid = tableGuid;
@@ -138,7 +138,7 @@ public class GetMetaDBTableListResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the metatable.
+             * The name of the metadatabase.
              */
             public Builder tableName(String tableName) {
                 this.tableName = tableName;
@@ -215,7 +215,7 @@ public class GetMetaDBTableListResponseBody extends TeaModel {
             private Long totalCount; 
 
             /**
-             * The page number of the returned page.
+             * The total number of compute engine instances.
              */
             public Builder pageNumber(Integer pageNumber) {
                 this.pageNumber = pageNumber;
@@ -223,7 +223,7 @@ public class GetMetaDBTableListResponseBody extends TeaModel {
             }
 
             /**
-             * The number of entries returned per page. Default value: 10. Maximum value: 100.
+             * The list of metatables in the compute engine instance.
              */
             public Builder pageSize(Integer pageSize) {
                 this.pageSize = pageSize;
@@ -231,7 +231,7 @@ public class GetMetaDBTableListResponseBody extends TeaModel {
             }
 
             /**
-             * The list of metatables in the compute engine instance.
+             * The GUID of the metatable.
              */
             public Builder tableEntityList(java.util.List < TableEntityList> tableEntityList) {
                 this.tableEntityList = tableEntityList;
@@ -239,7 +239,7 @@ public class GetMetaDBTableListResponseBody extends TeaModel {
             }
 
             /**
-             * The total number of compute engine instances.
+             * The name of the metatable.
              */
             public Builder totalCount(Long totalCount) {
                 this.totalCount = totalCount;

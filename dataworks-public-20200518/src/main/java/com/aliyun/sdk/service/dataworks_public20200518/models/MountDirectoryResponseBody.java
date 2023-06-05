@@ -98,11 +98,11 @@ public class MountDirectoryResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * The number of directories that are added. Valid values:
+         * Indicates whether the request was successful. Valid values:
          * <p>
          * 
-         * *   0: No directories are added. The left-side navigation pane may contain the specified directory.
-         * *   1: One directory is added.
+         * *   true: The request was successful.
+         * *   false: The request failed.
          */
         public Builder data(Integer data) {
             this.data = data;
@@ -110,7 +110,7 @@ public class MountDirectoryResponseBody extends TeaModel {
         }
 
         /**
-         * The error code returned. The value 200 indicates that the add task is successful.
+         * ErrorCode.
          */
         public Builder errorCode(String errorCode) {
             this.errorCode = errorCode;
@@ -118,7 +118,7 @@ public class MountDirectoryResponseBody extends TeaModel {
         }
 
         /**
-         * The error message returned if the request failed.
+         * ErrorMessage.
          */
         public Builder errorMessage(String errorMessage) {
             this.errorMessage = errorMessage;
@@ -126,7 +126,7 @@ public class MountDirectoryResponseBody extends TeaModel {
         }
 
         /**
-         * The HTTP status code returned.
+         * The error message returned if the request failed.
          */
         public Builder httpStatusCode(Integer httpStatusCode) {
             this.httpStatusCode = httpStatusCode;
@@ -134,7 +134,7 @@ public class MountDirectoryResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request. You can use the ID to troubleshoot issues.
+         * The error code returned. The value 200 indicates that the add task is successful.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -142,11 +142,7 @@ public class MountDirectoryResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether the request was successful. Valid values:
-         * <p>
-         * 
-         * *   true: The request was successful.
-         * *   false: The request failed.
+         * Success.
          */
         public Builder success(Boolean success) {
             this.success = success;

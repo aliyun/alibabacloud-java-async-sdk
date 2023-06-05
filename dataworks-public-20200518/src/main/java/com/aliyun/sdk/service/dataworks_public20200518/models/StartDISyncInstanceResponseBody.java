@@ -62,7 +62,11 @@ public class StartDISyncInstanceResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * The result returned for the start.
+         * Indicates whether the real-time synchronization node or the data synchronization solution is started. Valid values:
+         * <p>
+         * 
+         * *   success: The real-time synchronization node or the data synchronization solution is started.
+         * *   fail: The real-time synchronization node or the data synchronization solution fails to be started. You can troubleshoot the issue based on the provided cause.
          */
         public Builder data(Data data) {
             this.data = data;
@@ -70,7 +74,7 @@ public class StartDISyncInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request. You can locate logs and troubleshoot issues based on the ID.
+         * The result returned for the start.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -78,11 +82,7 @@ public class StartDISyncInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether the request is successful. Valid values:
-         * <p>
-         * 
-         * *   true: The request succeeded.
-         * *   false: The request failed.
+         * The ID of the request. You can locate logs and troubleshoot issues based on the ID.
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -134,10 +134,7 @@ public class StartDISyncInstanceResponseBody extends TeaModel {
             private String status; 
 
             /**
-             * The reason why the real-time synchronization node or the data synchronization solution fails to be started.
-             * <p>
-             * 
-             * If the real-time synchronization node or the data synchronization solution is started, the value null is returned.
+             * Message.
              */
             public Builder message(String message) {
                 this.message = message;
@@ -145,11 +142,10 @@ public class StartDISyncInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether the real-time synchronization node or the data synchronization solution is started. Valid values:
+             * The reason why the real-time synchronization node or the data synchronization solution fails to be started.
              * <p>
              * 
-             * *   success: The real-time synchronization node or the data synchronization solution is started.
-             * *   fail: The real-time synchronization node or the data synchronization solution fails to be started. You can troubleshoot the issue based on the provided cause.
+             * If the real-time synchronization node or the data synchronization solution is started, the value null is returned.
              */
             public Builder status(String status) {
                 this.status = status;

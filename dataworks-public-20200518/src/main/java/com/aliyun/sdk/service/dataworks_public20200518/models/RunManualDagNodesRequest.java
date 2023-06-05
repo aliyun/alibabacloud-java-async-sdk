@@ -19,12 +19,15 @@ public class RunManualDagNodesRequest extends Request {
 
     @Body
     @NameInMap("BizDate")
-    @Validation(required = true)
     private String bizDate;
 
     @Body
     @NameInMap("DagParameters")
     private String dagParameters;
+
+    @Body
+    @NameInMap("EndBizDate")
+    private String endBizDate;
 
     @Body
     @NameInMap("ExcludeNodeIds")
@@ -57,11 +60,16 @@ public class RunManualDagNodesRequest extends Request {
     @Validation(required = true)
     private String projectName;
 
+    @Body
+    @NameInMap("StartBizDate")
+    private String startBizDate;
+
     private RunManualDagNodesRequest(Builder builder) {
         super(builder);
         this.regionId = builder.regionId;
         this.bizDate = builder.bizDate;
         this.dagParameters = builder.dagParameters;
+        this.endBizDate = builder.endBizDate;
         this.excludeNodeIds = builder.excludeNodeIds;
         this.flowName = builder.flowName;
         this.includeNodeIds = builder.includeNodeIds;
@@ -69,6 +77,7 @@ public class RunManualDagNodesRequest extends Request {
         this.projectEnv = builder.projectEnv;
         this.projectId = builder.projectId;
         this.projectName = builder.projectName;
+        this.startBizDate = builder.startBizDate;
     }
 
     public static Builder builder() {
@@ -103,6 +112,13 @@ public class RunManualDagNodesRequest extends Request {
      */
     public String getDagParameters() {
         return this.dagParameters;
+    }
+
+    /**
+     * @return endBizDate
+     */
+    public String getEndBizDate() {
+        return this.endBizDate;
     }
 
     /**
@@ -154,10 +170,18 @@ public class RunManualDagNodesRequest extends Request {
         return this.projectName;
     }
 
+    /**
+     * @return startBizDate
+     */
+    public String getStartBizDate() {
+        return this.startBizDate;
+    }
+
     public static final class Builder extends Request.Builder<RunManualDagNodesRequest, Builder> {
         private String regionId; 
         private String bizDate; 
         private String dagParameters; 
+        private String endBizDate; 
         private String excludeNodeIds; 
         private String flowName; 
         private String includeNodeIds; 
@@ -165,6 +189,7 @@ public class RunManualDagNodesRequest extends Request {
         private String projectEnv; 
         private Long projectId; 
         private String projectName; 
+        private String startBizDate; 
 
         private Builder() {
             super();
@@ -175,6 +200,7 @@ public class RunManualDagNodesRequest extends Request {
             this.regionId = request.regionId;
             this.bizDate = request.bizDate;
             this.dagParameters = request.dagParameters;
+            this.endBizDate = request.endBizDate;
             this.excludeNodeIds = request.excludeNodeIds;
             this.flowName = request.flowName;
             this.includeNodeIds = request.includeNodeIds;
@@ -182,10 +208,11 @@ public class RunManualDagNodesRequest extends Request {
             this.projectEnv = request.projectEnv;
             this.projectId = request.projectId;
             this.projectName = request.projectName;
+            this.startBizDate = request.startBizDate;
         } 
 
         /**
-         * The region ID. For example, the ID of the China (Shanghai) region is cn-shanghai, and that of the China (Zhangjiakou) region is cn-zhangjiakou. The system automatically determines the value of this parameter based on the endpoint used to call the operation.
+         * The environment type. Valid values: PROD and DEV. A value of PROD indicates the production environment. A value of DEV indicates the development environment.
          */
         public Builder regionId(String regionId) {
             this.putHostParameter("RegionId", regionId);
@@ -194,7 +221,7 @@ public class RunManualDagNodesRequest extends Request {
         }
 
         /**
-         * The data timestamp. The value must be one or more days before the current date. For example, if the current date is November 11, 2020, set the value to 2020-11-10 00:00:00 or earlier. Specify this parameter in the YYYY-MM-DD 00:00:00 format.
+         * The parameters transmitted between nodes in the manually triggered workflow. The parameters are in the following JSON format: { "\<ID of a node in the manually triggered workflow>": "Scheduling parameter settings of the node, which are in the same format as the Parameters parameter on the Properties tab of the DataStudio page", "\<ID of a node in the manually triggered workflow>": "Scheduling parameter settings of the node, which are in the same format as the Parameters parameter on the Properties tab of the DataStudio page" }.
          */
         public Builder bizDate(String bizDate) {
             this.putBodyParameter("BizDate", bizDate);
@@ -203,7 +230,7 @@ public class RunManualDagNodesRequest extends Request {
         }
 
         /**
-         * The parameters of the manually triggered workflow, which are synchronized to all the instances in the directed acyclic graph (DAG) of the workflow. If a workflow parameter specified in DagParameters is referenced as a scheduling parameter of a node, the value of the scheduling parameter is replaced with the value of the workflow parameter.
+         * The IDs of the nodes that you need to run in the manually triggered workflow. Separate multiple node IDs with commas (,). You can call the ListNodes operation to query the node IDs.
          */
         public Builder dagParameters(String dagParameters) {
             this.putBodyParameter("DagParameters", dagParameters);
@@ -212,7 +239,16 @@ public class RunManualDagNodesRequest extends Request {
         }
 
         /**
-         * The IDs of the nodes that you do not need to run in the manually triggered workflow. The system generates dry-run instances for all these nodes. After the dry-run instances are scheduled, the states of these instances are directly set to successful, but the scripts are not run. Separate multiple node IDs with commas (,).
+         * EndBizDate.
+         */
+        public Builder endBizDate(String endBizDate) {
+            this.putBodyParameter("EndBizDate", endBizDate);
+            this.endBizDate = endBizDate;
+            return this;
+        }
+
+        /**
+         * The ID of the workspace to which the manually triggered workflow belongs.
          */
         public Builder excludeNodeIds(String excludeNodeIds) {
             this.putBodyParameter("ExcludeNodeIds", excludeNodeIds);
@@ -221,7 +257,7 @@ public class RunManualDagNodesRequest extends Request {
         }
 
         /**
-         * The name of the manually triggered workflow.
+         * The data timestamp. The value must be one or more days before the current date. For example, if the current date is November 11, 2020, set the value to 2020-11-10 00:00:00 or earlier. Specify this parameter in the YYYY-MM-DD 00:00:00 format.
          */
         public Builder flowName(String flowName) {
             this.putBodyParameter("FlowName", flowName);
@@ -230,7 +266,7 @@ public class RunManualDagNodesRequest extends Request {
         }
 
         /**
-         * The IDs of the nodes that you need to run in the manually triggered workflow. Separate multiple node IDs with commas (,). You can call the ListNodes operation to query the node IDs.
+         * The IDs of the nodes that you do not need to run in the manually triggered workflow. The system generates dry-run instances for all these nodes. After the dry-run instances are scheduled, the states of these instances are directly set to successful, but the scripts are not run. Separate multiple node IDs with commas (,).
          */
         public Builder includeNodeIds(String includeNodeIds) {
             this.putBodyParameter("IncludeNodeIds", includeNodeIds);
@@ -239,7 +275,7 @@ public class RunManualDagNodesRequest extends Request {
         }
 
         /**
-         * The parameters transmitted between nodes in the manually triggered workflow. The parameters are in the following JSON format: { "\<ID of a node in the manually triggered workflow>": "Scheduling parameter settings of the node, which are in the same format as the Parameters parameter on the Properties tab of the DataStudio page", "\<ID of a node in the manually triggered workflow>": "Scheduling parameter settings of the node, which are in the same format as the Parameters parameter on the Properties tab of the DataStudio page" }.
+         * The parameters of the manually triggered workflow, which are synchronized to all the instances in the directed acyclic graph (DAG) of the workflow. If a workflow parameter specified in DagParameters is referenced as a scheduling parameter of a node, the value of the scheduling parameter is replaced with the value of the workflow parameter.
          */
         public Builder nodeParameters(String nodeParameters) {
             this.putBodyParameter("NodeParameters", nodeParameters);
@@ -248,7 +284,7 @@ public class RunManualDagNodesRequest extends Request {
         }
 
         /**
-         * The environment type. Valid values: PROD and DEV. A value of PROD indicates the production environment. A value of DEV indicates the development environment.
+         * The name of the workspace to which the manually triggered workflow belongs.
          */
         public Builder projectEnv(String projectEnv) {
             this.putBodyParameter("ProjectEnv", projectEnv);
@@ -257,7 +293,7 @@ public class RunManualDagNodesRequest extends Request {
         }
 
         /**
-         * The ID of the workspace to which the manually triggered workflow belongs.
+         * The ID of the DAG for the manually triggered workflow. You can call an operation with this parameter as a request parameter to query the details and statuses of the nodes in this manually triggered workflow.
          */
         public Builder projectId(Long projectId) {
             this.putBodyParameter("ProjectId", projectId);
@@ -266,11 +302,20 @@ public class RunManualDagNodesRequest extends Request {
         }
 
         /**
-         * The name of the workspace to which the manually triggered workflow belongs.
+         * The name of the manually triggered workflow.
          */
         public Builder projectName(String projectName) {
             this.putBodyParameter("ProjectName", projectName);
             this.projectName = projectName;
+            return this;
+        }
+
+        /**
+         * StartBizDate.
+         */
+        public Builder startBizDate(String startBizDate) {
+            this.putBodyParameter("StartBizDate", startBizDate);
+            this.startBizDate = startBizDate;
             return this;
         }
 

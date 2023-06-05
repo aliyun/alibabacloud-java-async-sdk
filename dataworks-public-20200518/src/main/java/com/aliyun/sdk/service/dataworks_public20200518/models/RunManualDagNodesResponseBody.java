@@ -50,7 +50,7 @@ public class RunManualDagNodesResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The ID of the DAG for the manually triggered workflow. You can call an operation with this parameter as a request parameter to query the details and statuses of the nodes in this manually triggered workflow.
+         * The ID of the request.
          */
         public Builder dagId(Long dagId) {
             this.dagId = dagId;
@@ -58,7 +58,7 @@ public class RunManualDagNodesResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * RequestId.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

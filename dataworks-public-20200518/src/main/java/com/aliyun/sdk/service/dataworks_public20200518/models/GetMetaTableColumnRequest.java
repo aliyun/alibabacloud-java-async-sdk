@@ -162,7 +162,7 @@ public class GetMetaTableColumnRequest extends Request {
         }
 
         /**
-         * The ID of the E-MapReduce (EMR) cluster. You can log on to the EMR console to obtain the ID.
+         * The name of the metatable in the EMR cluster. You can call the [GetMetaDBTableList](~~173916~~) operation to query the name.
          */
         public Builder clusterId(String clusterId) {
             this.putQueryParameter("ClusterId", clusterId);
@@ -171,7 +171,7 @@ public class GetMetaTableColumnRequest extends Request {
         }
 
         /**
-         * The type of the data source. Only emr is supported.
+         * The error message.
          */
         public Builder dataSourceType(String dataSourceType) {
             this.putQueryParameter("DataSourceType", dataSourceType);
@@ -180,7 +180,7 @@ public class GetMetaTableColumnRequest extends Request {
         }
 
         /**
-         * The name of the metadatabase of the EMR cluster. You can call the [ListMetaDB](~~185662~~) operation to query the name.
+         * The type of the data source. Only emr is supported.
          */
         public Builder databaseName(String databaseName) {
             this.putQueryParameter("DatabaseName", databaseName);
@@ -189,7 +189,7 @@ public class GetMetaTableColumnRequest extends Request {
         }
 
         /**
-         * The number of the page to return.
+         * The ID of the E-MapReduce (EMR) cluster. You can log on to the EMR console to obtain the ID.
          */
         public Builder pageNum(Integer pageNum) {
             this.putQueryParameter("PageNum", pageNum);
@@ -198,7 +198,7 @@ public class GetMetaTableColumnRequest extends Request {
         }
 
         /**
-         * The number of entries to return on each page. Default value: 10. Maximum value: 100.
+         * The name of the metadatabase of the EMR cluster. You can call the [ListMetaDB](~~185662~~) operation to query the name.
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -207,7 +207,7 @@ public class GetMetaTableColumnRequest extends Request {
         }
 
         /**
-         * The GUID of the metatable. You can call the [GetMetaDBTableList](~~173916~~) operation to query the GUID of the metatable.
+         * The number of entries to return on each page. Default value: 10. Maximum value: 100.
          */
         public Builder tableGuid(String tableGuid) {
             this.putQueryParameter("TableGuid", tableGuid);
@@ -216,7 +216,7 @@ public class GetMetaTableColumnRequest extends Request {
         }
 
         /**
-         * The name of the metatable in the EMR cluster. You can call the [GetMetaDBTableList](~~173916~~) operation to query the name.
+         * The HTTP status code.
          */
         public Builder tableName(String tableName) {
             this.putQueryParameter("TableName", tableName);

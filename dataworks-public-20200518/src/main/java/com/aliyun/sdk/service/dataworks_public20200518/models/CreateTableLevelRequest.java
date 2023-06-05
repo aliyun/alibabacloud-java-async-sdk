@@ -114,7 +114,7 @@ public class CreateTableLevelRequest extends Request {
         } 
 
         /**
-         * The ID of the region where the service is activated.
+         * The name of the table level.
          */
         public Builder regionId(String regionId) {
             this.putHostParameter("RegionId", regionId);
@@ -123,7 +123,7 @@ public class CreateTableLevelRequest extends Request {
         }
 
         /**
-         * The description of the table level.
+         * Level Description
          */
         public Builder description(String description) {
             this.putQueryParameter("Description", description);
@@ -132,7 +132,7 @@ public class CreateTableLevelRequest extends Request {
         }
 
         /**
-         * The type of the table level. Valid values: 1 and 2. A value of 1 indicates the logical level. A value of 2 indicates the physical level.
+         * The ID of the region where the service is activated.
          */
         public Builder levelType(Integer levelType) {
             this.putQueryParameter("LevelType", levelType);
@@ -141,7 +141,7 @@ public class CreateTableLevelRequest extends Request {
         }
 
         /**
-         * The name of the table level.
+         * Level 1
          */
         public Builder name(String name) {
             this.putQueryParameter("Name", name);
@@ -150,7 +150,7 @@ public class CreateTableLevelRequest extends Request {
         }
 
         /**
-         * The ID of the DataWorks workspace.
+         * The type of the table level. Valid values: 1 and 2. A value of 1 indicates the logical level. A value of 2 indicates the physical level.
          */
         public Builder projectId(Long projectId) {
             this.putQueryParameter("ProjectId", projectId);

@@ -74,26 +74,10 @@ public class ChangeResourceManagerResourceGroupResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * Indicates whether the resource group was successfully modified.
+         * The ID of the request. You can use the ID to query logs and troubleshoot issues.
          */
         public Builder data(Boolean data) {
             this.data = data;
-            return this;
-        }
-
-        /**
-         * The HTTP status code returned.
-         */
-        public Builder httpStatusCode(Integer httpStatusCode) {
-            this.httpStatusCode = httpStatusCode;
-            return this;
-        }
-
-        /**
-         * The ID of the request. You can use the ID to query logs and troubleshoot issues.
-         */
-        public Builder requestId(String requestId) {
-            this.requestId = requestId;
             return this;
         }
 
@@ -103,6 +87,22 @@ public class ChangeResourceManagerResourceGroupResponseBody extends TeaModel {
          * 
          * *   true: The request was successful.
          * *   false: The request failed.
+         */
+        public Builder httpStatusCode(Integer httpStatusCode) {
+            this.httpStatusCode = httpStatusCode;
+            return this;
+        }
+
+        /**
+         * The HTTP status code returned.
+         */
+        public Builder requestId(String requestId) {
+            this.requestId = requestId;
+            return this;
+        }
+
+        /**
+         * Success.
          */
         public Builder success(Boolean success) {
             this.success = success;

@@ -94,7 +94,7 @@ public class DeleteProjectMemberRequest extends Request {
         }
 
         /**
-         * The ID of the DataWorks workspace.
+         * The ID of the region.
          */
         public Builder projectId(Long projectId) {
             this.putQueryParameter("ProjectId", projectId);
@@ -103,7 +103,7 @@ public class DeleteProjectMemberRequest extends Request {
         }
 
         /**
-         * The ID of the user.
+         * UserId.
          */
         public Builder userId(String userId) {
             this.putQueryParameter("UserId", userId);

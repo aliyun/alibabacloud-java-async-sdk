@@ -114,7 +114,7 @@ public class AddProjectMemberToRoleRequest extends Request {
         } 
 
         /**
-         * The region of the workspace. For example, the ID of the China (Shanghai) region is cn-shanghai, and that of the China (Zhangjiakou) region is cn-zhangjiakou. The system automatically determines the value of this parameter based on the endpoint used to call the operation.
+         * The code of the role that you want to assign to a member of a DataWorks workspace. You can call the [ListProjectRoles](~~178228~~) operation to query the code of all roles in a DataWorks workspace.
          */
         public Builder regionId(String regionId) {
             this.putHostParameter("RegionId", regionId);
@@ -123,7 +123,7 @@ public class AddProjectMemberToRoleRequest extends Request {
         }
 
         /**
-         * The client token. It is a field with the idempotence property. We recommend that you use a universally unique identifier (UUID). This parameter is used to uniquely identify the API operation call.
+         * The ID of the request. You can use the ID to search for logs and troubleshoot issues based on the logs.
          */
         public Builder clientToken(String clientToken) {
             this.putQueryParameter("ClientToken", clientToken);
@@ -132,7 +132,7 @@ public class AddProjectMemberToRoleRequest extends Request {
         }
 
         /**
-         * The ID of the DataWorks workspace. You can call the [ListProjects](~~178393~~) operation to query the ID.
+         * The ID of your Alibaba Cloud account. To view the ID, log on to [the DataWorks console](https://workbench.data.aliyun.com/console) and move the pointer over the profile picture in the upper-right corner.
          */
         public Builder projectId(Long projectId) {
             this.putQueryParameter("ProjectId", projectId);
@@ -141,7 +141,7 @@ public class AddProjectMemberToRoleRequest extends Request {
         }
 
         /**
-         * The code of the role that you want to assign to a member of a DataWorks workspace. You can call the [ListProjectRoles](~~178228~~) operation to query the code of all roles in a DataWorks workspace.
+         * The client token. It is a field with the idempotence property. We recommend that you use a universally unique identifier (UUID). This parameter is used to uniquely identify the API operation call.
          */
         public Builder roleCode(String roleCode) {
             this.putQueryParameter("RoleCode", roleCode);
@@ -150,7 +150,7 @@ public class AddProjectMemberToRoleRequest extends Request {
         }
 
         /**
-         * The ID of your Alibaba Cloud account. To view the ID, log on to [the DataWorks console](https://workbench.data.aliyun.com/console) and move the pointer over the profile picture in the upper-right corner.
+         * The region of the workspace. For example, the ID of the China (Shanghai) region is cn-shanghai, and that of the China (Zhangjiakou) region is cn-zhangjiakou. The system automatically determines the value of this parameter based on the endpoint used to call the operation.
          */
         public Builder userId(String userId) {
             this.putQueryParameter("UserId", userId);

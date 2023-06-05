@@ -98,11 +98,11 @@ public class UmountDirectoryResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * The number of directories that are removed. Valid values:
+         * Indicates whether the request was successful. Valid values:
          * <p>
          * 
-         * *   0: No directories are removed. The left-side navigation pane may not contain the specified directory.
-         * *   1: One directory is removed.
+         * *   true: The request was successful.
+         * *   false: The request failed.
          */
         public Builder data(Integer data) {
             this.data = data;
@@ -110,7 +110,7 @@ public class UmountDirectoryResponseBody extends TeaModel {
         }
 
         /**
-         * The error code returned. The value 200 indicates that the remove task is successful.
+         * ErrorCode.
          */
         public Builder errorCode(String errorCode) {
             this.errorCode = errorCode;
@@ -118,7 +118,7 @@ public class UmountDirectoryResponseBody extends TeaModel {
         }
 
         /**
-         * The error message returned if the request failed.
+         * The error code returned. The value 200 indicates that the remove task is successful.
          */
         public Builder errorMessage(String errorMessage) {
             this.errorMessage = errorMessage;
@@ -126,7 +126,7 @@ public class UmountDirectoryResponseBody extends TeaModel {
         }
 
         /**
-         * The HTTP status code returned. The value 200 indicates that the request was successful.
+         * The error message returned if the request failed.
          */
         public Builder httpStatusCode(Integer httpStatusCode) {
             this.httpStatusCode = httpStatusCode;
@@ -134,7 +134,11 @@ public class UmountDirectoryResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request. You can use the ID to troubleshoot issues.
+         * The number of directories that are removed. Valid values:
+         * <p>
+         * 
+         * *   0: No directories are removed. The left-side navigation pane may not contain the specified directory.
+         * *   1: One directory is removed.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -142,11 +146,7 @@ public class UmountDirectoryResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether the request was successful. Valid values:
-         * <p>
-         * 
-         * *   true: The request was successful.
-         * *   false: The request failed.
+         * Success.
          */
         public Builder success(Boolean success) {
             this.success = success;

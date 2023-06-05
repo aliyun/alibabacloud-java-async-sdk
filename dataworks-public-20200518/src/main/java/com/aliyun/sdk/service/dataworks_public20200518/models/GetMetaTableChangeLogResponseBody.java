@@ -98,7 +98,7 @@ public class GetMetaTableChangeLogResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * The business data returned.
+         * The number of entries returned per page. Default value: 10. Maximum value: 100.
          */
         public Builder data(Data data) {
             this.data = data;
@@ -106,7 +106,7 @@ public class GetMetaTableChangeLogResponseBody extends TeaModel {
         }
 
         /**
-         * The error code returned.
+         * The page number of the returned page.
          */
         public Builder errorCode(String errorCode) {
             this.errorCode = errorCode;
@@ -114,7 +114,7 @@ public class GetMetaTableChangeLogResponseBody extends TeaModel {
         }
 
         /**
-         * The error message returned.
+         * Indicates whether the request is successful.
          */
         public Builder errorMessage(String errorMessage) {
             this.errorMessage = errorMessage;
@@ -122,7 +122,7 @@ public class GetMetaTableChangeLogResponseBody extends TeaModel {
         }
 
         /**
-         * The HTTP status code returned.
+         * The ID of the request.
          */
         public Builder httpStatusCode(Integer httpStatusCode) {
             this.httpStatusCode = httpStatusCode;
@@ -130,7 +130,7 @@ public class GetMetaTableChangeLogResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * The error code returned.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -138,7 +138,7 @@ public class GetMetaTableChangeLogResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether the request is successful.
+         * The business data returned.
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -238,7 +238,7 @@ public class GetMetaTableChangeLogResponseBody extends TeaModel {
             private String operator; 
 
             /**
-             * The content of the change.
+             * The type of the change.
              */
             public Builder changeContent(String changeContent) {
                 this.changeContent = changeContent;
@@ -246,7 +246,7 @@ public class GetMetaTableChangeLogResponseBody extends TeaModel {
             }
 
             /**
-             * The type of the change.
+             * ChangeType.
              */
             public Builder changeType(String changeType) {
                 this.changeType = changeType;
@@ -254,7 +254,7 @@ public class GetMetaTableChangeLogResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the metatable was created.
+             * The name of the operator.
              */
             public Builder createTime(Long createTime) {
                 this.createTime = createTime;
@@ -262,7 +262,7 @@ public class GetMetaTableChangeLogResponseBody extends TeaModel {
             }
 
             /**
-             * The last time when the metatable was modified.
+             * The content of the change.
              */
             public Builder modifiedTime(Long modifiedTime) {
                 this.modifiedTime = modifiedTime;
@@ -270,7 +270,7 @@ public class GetMetaTableChangeLogResponseBody extends TeaModel {
             }
 
             /**
-             * The entity on which the change was made. Valid values: TABLE and PARTITION.
+             * The time when the metatable was created.
              */
             public Builder objectType(String objectType) {
                 this.objectType = objectType;
@@ -278,7 +278,7 @@ public class GetMetaTableChangeLogResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the operator.
+             * Operator.
              */
             public Builder operator(String operator) {
                 this.operator = operator;
@@ -355,7 +355,7 @@ public class GetMetaTableChangeLogResponseBody extends TeaModel {
             private Long totalCount; 
 
             /**
-             * The information about the change logs of the metatable.
+             * The last time when the metatable was modified.
              */
             public Builder dataEntityList(java.util.List < DataEntityList> dataEntityList) {
                 this.dataEntityList = dataEntityList;
@@ -363,7 +363,7 @@ public class GetMetaTableChangeLogResponseBody extends TeaModel {
             }
 
             /**
-             * The page number of the returned page.
+             * The total number of returned entries.
              */
             public Builder pageNumber(Integer pageNumber) {
                 this.pageNumber = pageNumber;
@@ -371,7 +371,7 @@ public class GetMetaTableChangeLogResponseBody extends TeaModel {
             }
 
             /**
-             * The number of entries returned per page. Default value: 10. Maximum value: 100.
+             * The information about the change logs of the metatable.
              */
             public Builder pageSize(Integer pageSize) {
                 this.pageSize = pageSize;
@@ -379,7 +379,7 @@ public class GetMetaTableChangeLogResponseBody extends TeaModel {
             }
 
             /**
-             * The total number of returned entries.
+             * The entity on which the change was made. Valid values: TABLE and PARTITION.
              */
             public Builder totalCount(Long totalCount) {
                 this.totalCount = totalCount;

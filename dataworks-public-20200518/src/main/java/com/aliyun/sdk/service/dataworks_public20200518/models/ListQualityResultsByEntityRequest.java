@@ -167,7 +167,7 @@ public class ListQualityResultsByEntityRequest extends Request {
         }
 
         /**
-         * The end of the time range to query. Specify the time in the yyyy-MM-dd HH:mm:ss format.
+         * The name of the compute engine instance or data source. You can obtain the name from data source configurations.
          */
         public Builder endDate(String endDate) {
             this.putBodyParameter("EndDate", endDate);
@@ -176,7 +176,7 @@ public class ListQualityResultsByEntityRequest extends Request {
         }
 
         /**
-         * The ID of the partition filter expression. You can call the [GetQualityEntity](~~174003~~) operation to query the ID of the partition filter expression.
+         * The number of entries to return on each page. Default value: 10. Maximum value: 100.
          */
         public Builder entityId(Integer entityId) {
             this.putBodyParameter("EntityId", entityId);
@@ -185,7 +185,7 @@ public class ListQualityResultsByEntityRequest extends Request {
         }
 
         /**
-         * The number of the page to return.
+         * The error message returned.
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putBodyParameter("PageNumber", pageNumber);
@@ -194,7 +194,7 @@ public class ListQualityResultsByEntityRequest extends Request {
         }
 
         /**
-         * The number of entries to return on each page. Default value: 10. Maximum value: 100.
+         * The HTTP status code returned.
          */
         public Builder pageSize(Integer pageSize) {
             this.putBodyParameter("PageSize", pageSize);
@@ -212,7 +212,7 @@ public class ListQualityResultsByEntityRequest extends Request {
         }
 
         /**
-         * The name of the compute engine instance or data source. You can obtain the name from data source configurations.
+         * The ID of the request.
          */
         public Builder projectName(String projectName) {
             this.putBodyParameter("ProjectName", projectName);
@@ -221,7 +221,7 @@ public class ListQualityResultsByEntityRequest extends Request {
         }
 
         /**
-         * The beginning of the time range to query. Specify the time in the yyyy-MM-dd HH:mm:ss format.
+         * The number of the page to return.
          */
         public Builder startDate(String startDate) {
             this.putBodyParameter("StartDate", startDate);

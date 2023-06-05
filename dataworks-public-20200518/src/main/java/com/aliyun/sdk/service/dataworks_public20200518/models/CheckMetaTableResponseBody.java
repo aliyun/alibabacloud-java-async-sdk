@@ -50,7 +50,7 @@ public class CheckMetaTableResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * Indicates whether the table exists.
+         * Data.
          */
         public Builder data(Boolean data) {
             this.data = data;
@@ -58,7 +58,7 @@ public class CheckMetaTableResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * RequestId.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

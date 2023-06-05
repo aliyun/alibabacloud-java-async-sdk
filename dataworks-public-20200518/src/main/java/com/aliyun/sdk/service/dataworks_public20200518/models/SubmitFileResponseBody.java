@@ -98,7 +98,7 @@ public class SubmitFileResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * The ID of the deployment task. The ID is used as the value of a specific request parameter when you call the [GetDeployment](~~173950~~) operation to query the details of the deployment task.
+         * The ID of the request. You can troubleshoot issues based on the ID.
          */
         public Builder data(Long data) {
             this.data = data;
@@ -106,7 +106,7 @@ public class SubmitFileResponseBody extends TeaModel {
         }
 
         /**
-         * The error code returned.
+         * ErrorCode.
          */
         public Builder errorCode(String errorCode) {
             this.errorCode = errorCode;
@@ -114,7 +114,7 @@ public class SubmitFileResponseBody extends TeaModel {
         }
 
         /**
-         * The error message returned.
+         * Indicates whether the request is successful.
          */
         public Builder errorMessage(String errorMessage) {
             this.errorMessage = errorMessage;
@@ -122,7 +122,7 @@ public class SubmitFileResponseBody extends TeaModel {
         }
 
         /**
-         * The HTTP status code returned.
+         * The ID of the deployment task. The ID is used as the value of a specific request parameter when you call the [GetDeployment](~~173950~~) operation to query the details of the deployment task.
          */
         public Builder httpStatusCode(Integer httpStatusCode) {
             this.httpStatusCode = httpStatusCode;
@@ -130,7 +130,7 @@ public class SubmitFileResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request. You can troubleshoot issues based on the ID.
+         * The error message returned.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -138,7 +138,7 @@ public class SubmitFileResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether the request is successful.
+         * The error code returned.
          */
         public Builder success(Boolean success) {
             this.success = success;

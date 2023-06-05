@@ -120,7 +120,7 @@ public class GetMetaDBInfoRequest extends Request {
         }
 
         /**
-         * The ID of the compute engine instance. Specify the ID in the Engine type.Engine name format.
+         * The ID of the request.
          */
         public Builder appGuid(String appGuid) {
             this.putQueryParameter("AppGuid", appGuid);
@@ -129,10 +129,7 @@ public class GetMetaDBInfoRequest extends Request {
         }
 
         /**
-         * The ID of the EMR cluster. This parameter is required only if you set the DataSourceType parameter to emr.
-         * <p>
-         * 
-         * You can log on to the [EMR console](https://emr.console.aliyun.com/?spm=a2c4g.11186623.0.0.965cc5c2GeiHet#/cn-hangzhou) to obtain the ID of the EMR cluster.
+         * The business data returned.
          */
         public Builder clusterId(String clusterId) {
             this.putQueryParameter("ClusterId", clusterId);
@@ -141,7 +138,7 @@ public class GetMetaDBInfoRequest extends Request {
         }
 
         /**
-         * The type of the data source. Valid values: odps and emr.
+         * The comment.
          */
         public Builder dataSourceType(String dataSourceType) {
             this.putQueryParameter("DataSourceType", dataSourceType);
@@ -150,10 +147,7 @@ public class GetMetaDBInfoRequest extends Request {
         }
 
         /**
-         * The name of the metadatabase. This parameter is required only if you set the DataSourceType parameter to emr.
-         * <p>
-         * 
-         * You can call the [ListMetaDB](~~185662~~) operation to query the name of the metadatabase.
+         * The type of the metadatabase. Only hive is supported.
          */
         public Builder databaseName(String databaseName) {
             this.putQueryParameter("DatabaseName", databaseName);

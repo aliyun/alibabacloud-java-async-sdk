@@ -319,11 +319,70 @@ public class UpdateRemindRequest extends Request {
         }
 
         /**
-         * The intervals at which alert notifications are sent. Unit: seconds. Minimum value: 1200. Default value: 1800.
+         * The recipient to whom alert notifications are sent. Valid values: OWNER and OTHER. The value OWNER indicates that alert notifications are sent to the object owner. The value OTHER indicates that alert notifications are sent to a specified user.
          */
         public Builder alertInterval(Integer alertInterval) {
             this.putBodyParameter("AlertInterval", alertInterval);
             this.alertInterval = alertInterval;
+            return this;
+        }
+
+        /**
+         * Specifies whether to enable the alert rule. Valid values:
+         * <p>
+         * 
+         * *   true: enables the alert rule.
+         * *   false: disables the alert rule.
+         */
+        public Builder alertMethods(String alertMethods) {
+            this.putBodyParameter("AlertMethods", alertMethods);
+            this.alertMethods = alertMethods;
+            return this;
+        }
+
+        /**
+         * The webhook URL of the DingTalk chatbot. You can specify multiple webhook URLs. Separate them with commas (,).
+         * <p>
+         * 
+         * If this parameter is set to undefined, the specified webhook URLs are cleared.
+         */
+        public Builder alertTargets(String alertTargets) {
+            this.putBodyParameter("AlertTargets", alertTargets);
+            this.alertTargets = alertTargets;
+            return this;
+        }
+
+        /**
+         * The value format required by this parameter varies based on the value that you specify for the AlertUnit parameter. Take note of the following items:
+         * <p>
+         * 
+         * *   If the AlertUnit parameter is set to OWNER, leave this parameter empty.
+         * *   If the AlertUnit parameter is set to OTHER, set this parameter to the unique ID (UID) of the specified user. You can specify multiple IDs. Separate them with commas (,). You can specify a maximum of 10 IDs.
+         */
+        public Builder alertUnit(String alertUnit) {
+            this.putBodyParameter("AlertUnit", alertUnit);
+            this.alertUnit = alertUnit;
+            return this;
+        }
+
+        /**
+         * The ID of the workflow to which the custom alert rule is applied.. An alert rule can monitor a maximum of five workflows. Separate multiple IDs with commas (,).
+         * <p>
+         * 
+         * This parameter takes effect when you set the RemindUnit parameter to BIZPROCESS.
+         */
+        public Builder baselineIds(String baselineIds) {
+            this.putBodyParameter("BaselineIds", baselineIds);
+            this.baselineIds = baselineIds;
+            return this;
+        }
+
+        /**
+         * The maximum number of alerts. Valid values: 1 to 10. Default value: 3.
+         */
+        public Builder bizProcessIds(String bizProcessIds) {
+            this.putBodyParameter("BizProcessIds", bizProcessIds);
+            this.bizProcessIds = bizProcessIds;
             return this;
         }
 
@@ -339,55 +398,21 @@ public class UpdateRemindRequest extends Request {
          * 
          * You can specify multiple notification methods. Separate the specified notification methods with commas (,).
          */
-        public Builder alertMethods(String alertMethods) {
-            this.putBodyParameter("AlertMethods", alertMethods);
-            this.alertMethods = alertMethods;
+        public Builder detail(String detail) {
+            this.putBodyParameter("Detail", detail);
+            this.detail = detail;
             return this;
         }
 
         /**
-         * The value format required by this parameter varies based on the value that you specify for the AlertUnit parameter. Take note of the following items:
+         * The ID of the node to which the custom alert rule is applied.. An alert rule can monitor a maximum of 50 nodes. Separate multiple IDs with commas (,).
          * <p>
          * 
-         * *   If the AlertUnit parameter is set to OWNER, leave this parameter empty.
-         * *   If the AlertUnit parameter is set to OTHER, set this parameter to the unique ID (UID) of the specified user. You can specify multiple IDs. Separate them with commas (,). You can specify a maximum of 10 IDs.
+         * This parameter takes effect when you set the RemindUnit parameter to NODE.
          */
-        public Builder alertTargets(String alertTargets) {
-            this.putBodyParameter("AlertTargets", alertTargets);
-            this.alertTargets = alertTargets;
-            return this;
-        }
-
-        /**
-         * The recipient to whom alert notifications are sent. Valid values: OWNER and OTHER. The value OWNER indicates that alert notifications are sent to the object owner. The value OTHER indicates that alert notifications are sent to a specified user.
-         */
-        public Builder alertUnit(String alertUnit) {
-            this.putBodyParameter("AlertUnit", alertUnit);
-            this.alertUnit = alertUnit;
-            return this;
-        }
-
-        /**
-         * The ID of the baseline to which the custom alert rule is applied.. An alert rule can monitor a maximum of five baselines. Separate multiple IDs with commas (,).
-         * <p>
-         * 
-         * This parameter takes effect when you set the RemindUnit parameter to BASELINE.
-         */
-        public Builder baselineIds(String baselineIds) {
-            this.putBodyParameter("BaselineIds", baselineIds);
-            this.baselineIds = baselineIds;
-            return this;
-        }
-
-        /**
-         * The ID of the workflow to which the custom alert rule is applied.. An alert rule can monitor a maximum of five workflows. Separate multiple IDs with commas (,).
-         * <p>
-         * 
-         * This parameter takes effect when you set the RemindUnit parameter to BIZPROCESS.
-         */
-        public Builder bizProcessIds(String bizProcessIds) {
-            this.putBodyParameter("BizProcessIds", bizProcessIds);
-            this.bizProcessIds = bizProcessIds;
+        public Builder dndEnd(String dndEnd) {
+            this.putBodyParameter("DndEnd", dndEnd);
+            this.dndEnd = dndEnd;
             return this;
         }
 
@@ -407,39 +432,9 @@ public class UpdateRemindRequest extends Request {
          * 
          * *   If the RemindType parameter is set to TIMEOUT, set this parameter to the timeout period. Unit: seconds. Example: 1800. This indicates that an alert notification is sent if the duration of a monitored instance exceeds 30 minutes.
          */
-        public Builder detail(String detail) {
-            this.putBodyParameter("Detail", detail);
-            this.detail = detail;
-            return this;
-        }
-
-        /**
-         * The end of the period during which no alert notifications are sent. Specify the time in the hh:mm format. Valid values of hh: 0 to 23. Valid values of mm: 0 to 59.
-         */
-        public Builder dndEnd(String dndEnd) {
-            this.putBodyParameter("DndEnd", dndEnd);
-            this.dndEnd = dndEnd;
-            return this;
-        }
-
-        /**
-         * The maximum number of alerts. Valid values: 1 to 10. Default value: 3.
-         */
         public Builder maxAlertTimes(Integer maxAlertTimes) {
             this.putBodyParameter("MaxAlertTimes", maxAlertTimes);
             this.maxAlertTimes = maxAlertTimes;
-            return this;
-        }
-
-        /**
-         * The ID of the node to which the custom alert rule is applied.. An alert rule can monitor a maximum of 50 nodes. Separate multiple IDs with commas (,).
-         * <p>
-         * 
-         * This parameter takes effect when you set the RemindUnit parameter to NODE.
-         */
-        public Builder nodeIds(String nodeIds) {
-            this.putBodyParameter("NodeIds", nodeIds);
-            this.nodeIds = nodeIds;
             return this;
         }
 
@@ -449,27 +444,9 @@ public class UpdateRemindRequest extends Request {
          * 
          * This parameter takes effect when you set the RemindUnit parameter to PROJECT.
          */
-        public Builder projectId(Long projectId) {
-            this.putBodyParameter("ProjectId", projectId);
-            this.projectId = projectId;
-            return this;
-        }
-
-        /**
-         * The ID of the custom alert rule.
-         */
-        public Builder remindId(Long remindId) {
-            this.putBodyParameter("RemindId", remindId);
-            this.remindId = remindId;
-            return this;
-        }
-
-        /**
-         * The name of the custom alert rule. The name must be 1 to 128 characters in length.
-         */
-        public Builder remindName(String remindName) {
-            this.putBodyParameter("RemindName", remindName);
-            this.remindName = remindName;
+        public Builder nodeIds(String nodeIds) {
+            this.putBodyParameter("NodeIds", nodeIds);
+            this.nodeIds = nodeIds;
             return this;
         }
 
@@ -485,9 +462,18 @@ public class UpdateRemindRequest extends Request {
          * 
          * For more information, see [Manage custom alert rules](~~138172~~).
          */
-        public Builder remindType(String remindType) {
-            this.putBodyParameter("RemindType", remindType);
-            this.remindType = remindType;
+        public Builder projectId(Long projectId) {
+            this.putBodyParameter("ProjectId", projectId);
+            this.projectId = projectId;
+            return this;
+        }
+
+        /**
+         * The end of the period during which no alert notifications are sent. Specify the time in the hh:mm format. Valid values of hh: 0 to 23. Valid values of mm: 0 to 59.
+         */
+        public Builder remindId(Long remindId) {
+            this.putBodyParameter("RemindId", remindId);
+            this.remindId = remindId;
             return this;
         }
 
@@ -500,6 +486,27 @@ public class UpdateRemindRequest extends Request {
          * *   PROJECT: workspace
          * *   BIZPROCESS: workflow
          */
+        public Builder remindName(String remindName) {
+            this.putBodyParameter("RemindName", remindName);
+            this.remindName = remindName;
+            return this;
+        }
+
+        /**
+         * The intervals at which alert notifications are sent. Unit: seconds. Minimum value: 1200. Default value: 1800.
+         */
+        public Builder remindType(String remindType) {
+            this.putBodyParameter("RemindType", remindType);
+            this.remindType = remindType;
+            return this;
+        }
+
+        /**
+         * The ID of the baseline to which the custom alert rule is applied.. An alert rule can monitor a maximum of five baselines. Separate multiple IDs with commas (,).
+         * <p>
+         * 
+         * This parameter takes effect when you set the RemindUnit parameter to BASELINE.
+         */
         public Builder remindUnit(String remindUnit) {
             this.putBodyParameter("RemindUnit", remindUnit);
             this.remindUnit = remindUnit;
@@ -507,27 +514,11 @@ public class UpdateRemindRequest extends Request {
         }
 
         /**
-         * The webhook URL of the DingTalk chatbot. You can specify multiple webhook URLs. Separate them with commas (,).
-         * <p>
-         * 
-         * If this parameter is set to undefined, the specified webhook URLs are cleared.
+         * The HTTP status code returned.
          */
         public Builder robotUrls(String robotUrls) {
             this.putBodyParameter("RobotUrls", robotUrls);
             this.robotUrls = robotUrls;
-            return this;
-        }
-
-        /**
-         * Specifies whether to enable the alert rule. Valid values:
-         * <p>
-         * 
-         * *   true: enables the alert rule.
-         * *   false: disables the alert rule.
-         */
-        public Builder useFlag(Boolean useFlag) {
-            this.putBodyParameter("UseFlag", useFlag);
-            this.useFlag = useFlag;
             return this;
         }
 
@@ -538,6 +529,15 @@ public class UpdateRemindRequest extends Request {
          * Only DataWorks Enterprise Edition supports this parameter.
          * 
          * The webhook URL-based alerting feature is supported in the following regions: China (Shanghai), China (Chengdu), China (Zhangjiakou), China (Beijing), China (Hangzhou), China (Shenzhen), China (Hong Kong), Germany (Frankfurt), and Singapore.
+         */
+        public Builder useFlag(Boolean useFlag) {
+            this.putBodyParameter("UseFlag", useFlag);
+            this.useFlag = useFlag;
+            return this;
+        }
+
+        /**
+         * Indicates whether the modification to the custom alert rule succeeds.
          */
         public Builder webhooks(String webhooks) {
             this.putBodyParameter("Webhooks", webhooks);

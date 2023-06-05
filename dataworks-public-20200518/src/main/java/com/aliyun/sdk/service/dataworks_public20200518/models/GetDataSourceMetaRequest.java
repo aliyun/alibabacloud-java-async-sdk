@@ -138,11 +138,33 @@ public class GetDataSourceMetaRequest extends Request {
         }
 
         /**
-         * The name of the data source.
+         * The number of the page to return.
          */
         public Builder datasourceName(String datasourceName) {
             this.putQueryParameter("DatasourceName", datasourceName);
             this.datasourceName = datasourceName;
+            return this;
+        }
+
+        /**
+         * Indicates whether the request was successful. Valid values:
+         * <p>
+         * 
+         * *   true: The request was successful.
+         * *   false: The request failed.
+         */
+        public Builder envType(String envType) {
+            this.putQueryParameter("EnvType", envType);
+            this.envType = envType;
+            return this;
+        }
+
+        /**
+         * The number of entries to return on each page.
+         */
+        public Builder pageNumber(Long pageNumber) {
+            this.putQueryParameter("PageNumber", pageNumber);
+            this.pageNumber = pageNumber;
             return this;
         }
 
@@ -153,24 +175,6 @@ public class GetDataSourceMetaRequest extends Request {
          * *   0: development environment
          * *   1: production environment
          */
-        public Builder envType(String envType) {
-            this.putQueryParameter("EnvType", envType);
-            this.envType = envType;
-            return this;
-        }
-
-        /**
-         * The number of the page to return.
-         */
-        public Builder pageNumber(Long pageNumber) {
-            this.putQueryParameter("PageNumber", pageNumber);
-            this.pageNumber = pageNumber;
-            return this;
-        }
-
-        /**
-         * The number of entries to return on each page.
-         */
         public Builder pageSize(Long pageSize) {
             this.putQueryParameter("PageSize", pageSize);
             this.pageSize = pageSize;
@@ -178,7 +182,7 @@ public class GetDataSourceMetaRequest extends Request {
         }
 
         /**
-         * The ID of the DataWorks workspace. You can log on to the [DataWorks console](https://workbench.data.aliyun.com/console) and go to the Workspace Management page to obtain the workspace ID.
+         * The name of the data source.
          */
         public Builder projectId(Long projectId) {
             this.putQueryParameter("ProjectId", projectId);

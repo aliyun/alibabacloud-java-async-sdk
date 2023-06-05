@@ -94,7 +94,7 @@ public class GetNodeRequest extends Request {
         }
 
         /**
-         * The ID of the node. You can call the [ListNodes](~~173979~~) operation to query the node ID.
+         * The interval at which the node is rerun after the node fails to run.
          */
         public Builder nodeId(Long nodeId) {
             this.putBodyParameter("NodeId", nodeId);
@@ -103,7 +103,7 @@ public class GetNodeRequest extends Request {
         }
 
         /**
-         * The environment of the workspace. Valid values: PROD and DEV.
+         * The priority of the node. Valid values: 1, 3, 5, 7, and 8.
          */
         public Builder projectEnv(String projectEnv) {
             this.putBodyParameter("ProjectEnv", projectEnv);

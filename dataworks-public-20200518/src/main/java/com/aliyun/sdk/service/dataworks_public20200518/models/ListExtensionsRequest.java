@@ -91,7 +91,7 @@ public class ListExtensionsRequest extends Request {
         }
 
         /**
-         * The number of the page to return.
+         * The number of entries to return on each page.
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -100,7 +100,7 @@ public class ListExtensionsRequest extends Request {
         }
 
         /**
-         * The number of entries to return on each page.
+         * Id of the request
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);

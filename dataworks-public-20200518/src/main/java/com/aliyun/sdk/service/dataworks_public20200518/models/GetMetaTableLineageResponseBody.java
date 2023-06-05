@@ -98,7 +98,7 @@ public class GetMetaTableLineageResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * The business data.
+         * Indicates whether the next page has more query results.
          */
         public Builder data(Data data) {
             this.data = data;
@@ -106,7 +106,7 @@ public class GetMetaTableLineageResponseBody extends TeaModel {
         }
 
         /**
-         * The error code.
+         * The paging information.
          */
         public Builder errorCode(String errorCode) {
             this.errorCode = errorCode;
@@ -114,7 +114,7 @@ public class GetMetaTableLineageResponseBody extends TeaModel {
         }
 
         /**
-         * The error message.
+         * Indicates whether the request is successful.
          */
         public Builder errorMessage(String errorMessage) {
             this.errorMessage = errorMessage;
@@ -122,7 +122,7 @@ public class GetMetaTableLineageResponseBody extends TeaModel {
         }
 
         /**
-         * The HTTP status code.
+         * The ID of the request.
          */
         public Builder httpStatusCode(Integer httpStatusCode) {
             this.httpStatusCode = httpStatusCode;
@@ -130,7 +130,7 @@ public class GetMetaTableLineageResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * The error code.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -138,7 +138,7 @@ public class GetMetaTableLineageResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether the request is successful.
+         * The business data.
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -214,7 +214,7 @@ public class GetMetaTableLineageResponseBody extends TeaModel {
             private String tableName; 
 
             /**
-             * The time when the metatable was created.
+             * CreateTimestamp.
              */
             public Builder createTimestamp(Long createTimestamp) {
                 this.createTimestamp = createTimestamp;
@@ -230,7 +230,7 @@ public class GetMetaTableLineageResponseBody extends TeaModel {
             }
 
             /**
-             * The GUID of the metatable.
+             * TableGuid.
              */
             public Builder tableGuid(String tableGuid) {
                 this.tableGuid = tableGuid;
@@ -238,7 +238,7 @@ public class GetMetaTableLineageResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the metatable.
+             * The time when the metatable was created.
              */
             public Builder tableName(String tableName) {
                 this.tableName = tableName;
@@ -303,7 +303,7 @@ public class GetMetaTableLineageResponseBody extends TeaModel {
             private String nextPrimaryKey; 
 
             /**
-             * The information about the metatable.
+             * The GUID of the metatable.
              */
             public Builder dataEntityList(java.util.List < DataEntityList> dataEntityList) {
                 this.dataEntityList = dataEntityList;
@@ -311,7 +311,7 @@ public class GetMetaTableLineageResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether the next page has more query results.
+             * The name of the metatable.
              */
             public Builder hasNext(Boolean hasNext) {
                 this.hasNext = hasNext;
@@ -319,7 +319,7 @@ public class GetMetaTableLineageResponseBody extends TeaModel {
             }
 
             /**
-             * The paging information.
+             * The information about the metatable.
              */
             public Builder nextPrimaryKey(String nextPrimaryKey) {
                 this.nextPrimaryKey = nextPrimaryKey;

@@ -122,7 +122,7 @@ public class CreateProjectMemberRequest extends Request {
         }
 
         /**
-         * The client token that is used to ensure the idempotence of the request. We recommend that you set this parameter to a UUID.
+         * The ID of the request.
          */
         public Builder clientToken(String clientToken) {
             this.putQueryParameter("ClientToken", clientToken);
@@ -131,7 +131,7 @@ public class CreateProjectMemberRequest extends Request {
         }
 
         /**
-         * The ID of the DataWorks workspace.
+         * The client token that is used to ensure the idempotence of the request. We recommend that you set this parameter to a UUID.
          */
         public Builder projectId(Long projectId) {
             this.putQueryParameter("ProjectId", projectId);
@@ -140,7 +140,7 @@ public class CreateProjectMemberRequest extends Request {
         }
 
         /**
-         * The code of the role. This parameter is optional. If you specify the RoleCode parameter, the user is assigned the role.
+         * RoleCode.
          */
         public Builder roleCode(String roleCode) {
             this.putQueryParameter("RoleCode", roleCode);
@@ -149,7 +149,7 @@ public class CreateProjectMemberRequest extends Request {
         }
 
         /**
-         * The ID of the user to be added.
+         * The code of the role. This parameter is optional. If you specify the RoleCode parameter, the user is assigned the role.
          */
         public Builder userId(String userId) {
             this.putQueryParameter("UserId", userId);

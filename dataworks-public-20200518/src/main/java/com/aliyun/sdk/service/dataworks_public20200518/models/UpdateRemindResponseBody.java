@@ -98,7 +98,7 @@ public class UpdateRemindResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * Indicates whether the modification to the custom alert rule succeeds.
+         * The ID of the request. You can use the ID to troubleshoot issues.
          */
         public Builder data(Boolean data) {
             this.data = data;
@@ -106,34 +106,10 @@ public class UpdateRemindResponseBody extends TeaModel {
         }
 
         /**
-         * The error code returned.
+         * ErrorCode.
          */
         public Builder errorCode(String errorCode) {
             this.errorCode = errorCode;
-            return this;
-        }
-
-        /**
-         * The error message returned.
-         */
-        public Builder errorMessage(String errorMessage) {
-            this.errorMessage = errorMessage;
-            return this;
-        }
-
-        /**
-         * The HTTP status code returned.
-         */
-        public Builder httpStatusCode(Integer httpStatusCode) {
-            this.httpStatusCode = httpStatusCode;
-            return this;
-        }
-
-        /**
-         * The ID of the request. You can use the ID to troubleshoot issues.
-         */
-        public Builder requestId(String requestId) {
-            this.requestId = requestId;
             return this;
         }
 
@@ -143,6 +119,30 @@ public class UpdateRemindResponseBody extends TeaModel {
          * 
          * *   true: The request was successful.
          * *   false: The request failed.
+         */
+        public Builder errorMessage(String errorMessage) {
+            this.errorMessage = errorMessage;
+            return this;
+        }
+
+        /**
+         * The error message returned.
+         */
+        public Builder httpStatusCode(Integer httpStatusCode) {
+            this.httpStatusCode = httpStatusCode;
+            return this;
+        }
+
+        /**
+         * The error code returned.
+         */
+        public Builder requestId(String requestId) {
+            this.requestId = requestId;
+            return this;
+        }
+
+        /**
+         * Success.
          */
         public Builder success(Boolean success) {
             this.success = success;

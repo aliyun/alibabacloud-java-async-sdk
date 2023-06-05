@@ -98,7 +98,12 @@ public class DeleteMetaCollectionEntityResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * The error code returned.
+         * Indicates whether the request was successful. Valid values:
+         * <p>
+         * 
+         * true: The request was successful.
+         * 
+         * false: The request failed.
          */
         public Builder errorCode(String errorCode) {
             this.errorCode = errorCode;
@@ -106,7 +111,7 @@ public class DeleteMetaCollectionEntityResponseBody extends TeaModel {
         }
 
         /**
-         * The error message returned.
+         * The error code returned.
          */
         public Builder errorMessage(String errorMessage) {
             this.errorMessage = errorMessage;
@@ -114,18 +119,10 @@ public class DeleteMetaCollectionEntityResponseBody extends TeaModel {
         }
 
         /**
-         * The HTTP status code returned.
+         * The error message returned.
          */
         public Builder httpStatusCode(Integer httpStatusCode) {
             this.httpStatusCode = httpStatusCode;
-            return this;
-        }
-
-        /**
-         * The ID of the request.
-         */
-        public Builder requestId(String requestId) {
-            this.requestId = requestId;
             return this;
         }
 
@@ -137,18 +134,21 @@ public class DeleteMetaCollectionEntityResponseBody extends TeaModel {
          * 
          * false: failed
          */
+        public Builder requestId(String requestId) {
+            this.requestId = requestId;
+            return this;
+        }
+
+        /**
+         * The HTTP status code returned.
+         */
         public Builder status(Boolean status) {
             this.status = status;
             return this;
         }
 
         /**
-         * Indicates whether the request was successful. Valid values:
-         * <p>
-         * 
-         * true: The request was successful.
-         * 
-         * false: The request failed.
+         * Success.
          */
         public Builder success(Boolean success) {
             this.success = success;

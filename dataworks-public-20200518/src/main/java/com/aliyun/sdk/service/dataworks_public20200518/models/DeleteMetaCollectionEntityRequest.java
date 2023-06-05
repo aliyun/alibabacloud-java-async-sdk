@@ -93,7 +93,7 @@ public class DeleteMetaCollectionEntityRequest extends Request {
         }
 
         /**
-         * The unique identifier of the collection.
+         * The unique identifier of the entity.
          */
         public Builder collectionQualifiedName(String collectionQualifiedName) {
             this.putQueryParameter("CollectionQualifiedName", collectionQualifiedName);
@@ -102,7 +102,7 @@ public class DeleteMetaCollectionEntityRequest extends Request {
         }
 
         /**
-         * The unique identifier of the entity.
+         * The ID of the request.
          */
         public Builder entityQualifiedName(String entityQualifiedName) {
             this.putQueryParameter("EntityQualifiedName", entityQualifiedName);

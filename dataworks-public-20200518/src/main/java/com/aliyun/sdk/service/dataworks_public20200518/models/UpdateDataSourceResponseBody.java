@@ -74,7 +74,7 @@ public class UpdateDataSourceResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * Indicates whether the data source is updated.
+         * Indicates whether the request is successful.
          */
         public Builder data(Boolean data) {
             this.data = data;
@@ -82,7 +82,7 @@ public class UpdateDataSourceResponseBody extends TeaModel {
         }
 
         /**
-         * The HTTP status code returned.
+         * The ID of the request.
          */
         public Builder httpStatusCode(String httpStatusCode) {
             this.httpStatusCode = httpStatusCode;
@@ -90,7 +90,7 @@ public class UpdateDataSourceResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * RequestId.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -98,7 +98,7 @@ public class UpdateDataSourceResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether the request is successful.
+         * Success.
          */
         public Builder success(Boolean success) {
             this.success = success;

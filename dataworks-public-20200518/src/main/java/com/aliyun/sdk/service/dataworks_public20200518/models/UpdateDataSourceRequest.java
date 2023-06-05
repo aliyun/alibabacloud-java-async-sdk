@@ -135,6 +135,24 @@ public class UpdateDataSourceRequest extends Request {
         }
 
         /**
+         * The ID of the data source that you want to update. You can call the [ListDataSources](~~211431~~) operation to obtain the ID.
+         */
+        public Builder content(String content) {
+            this.putQueryParameter("Content", content);
+            this.content = content;
+            return this;
+        }
+
+        /**
+         * Indicates whether the data source is updated.
+         */
+        public Builder dataSourceId(Long dataSourceId) {
+            this.putQueryParameter("DataSourceId", dataSourceId);
+            this.dataSourceId = dataSourceId;
+            return this;
+        }
+
+        /**
          * The details about the data source that you want to update.
          * <p>
          * 
@@ -349,24 +367,6 @@ public class UpdateDataSourceRequest extends Request {
          *                                 
          * ```
          */
-        public Builder content(String content) {
-            this.putQueryParameter("Content", content);
-            this.content = content;
-            return this;
-        }
-
-        /**
-         * The ID of the data source that you want to update. You can call the [ListDataSources](~~211431~~) operation to obtain the ID.
-         */
-        public Builder dataSourceId(Long dataSourceId) {
-            this.putQueryParameter("DataSourceId", dataSourceId);
-            this.dataSourceId = dataSourceId;
-            return this;
-        }
-
-        /**
-         * The description of the data source.
-         */
         public Builder description(String description) {
             this.putQueryParameter("Description", description);
             this.description = description;
@@ -374,11 +374,7 @@ public class UpdateDataSourceRequest extends Request {
         }
 
         /**
-         * The environment in which the data source runs. Valid values:
-         * <p>
-         * 
-         * *   0: development environment
-         * *   1: production environment
+         * The status of the data source. The parameter is deprecated. Do not use this parameter.
          */
         public Builder envType(Integer envType) {
             this.putQueryParameter("EnvType", envType);
@@ -387,7 +383,7 @@ public class UpdateDataSourceRequest extends Request {
         }
 
         /**
-         * The status of the data source. The parameter is deprecated. Do not use this parameter.
+         * The HTTP status code returned.
          */
         public Builder status(String status) {
             this.putQueryParameter("Status", status);

@@ -98,7 +98,7 @@ public class CreateMetaCollectionResponseBody extends TeaModel {
         private String success; 
 
         /**
-         * The error code returned.
+         * The error message returned.
          */
         public Builder errorCode(String errorCode) {
             this.errorCode = errorCode;
@@ -106,7 +106,7 @@ public class CreateMetaCollectionResponseBody extends TeaModel {
         }
 
         /**
-         * The error message returned.
+         * The HTTP status code returned.
          */
         public Builder errorMessage(String errorMessage) {
             this.errorMessage = errorMessage;
@@ -114,26 +114,10 @@ public class CreateMetaCollectionResponseBody extends TeaModel {
         }
 
         /**
-         * The HTTP status code returned.
+         * HttpStatusCode.
          */
         public Builder httpStatusCode(String httpStatusCode) {
             this.httpStatusCode = httpStatusCode;
-            return this;
-        }
-
-        /**
-         * The unique identifier of the collection.
-         */
-        public Builder qualifiedName(String qualifiedName) {
-            this.qualifiedName = qualifiedName;
-            return this;
-        }
-
-        /**
-         * The ID of the request.
-         */
-        public Builder requestId(String requestId) {
-            this.requestId = requestId;
             return this;
         }
 
@@ -143,6 +127,22 @@ public class CreateMetaCollectionResponseBody extends TeaModel {
          * 
          * *   true: The request was successful.
          * *   false: The request failed.
+         */
+        public Builder qualifiedName(String qualifiedName) {
+            this.qualifiedName = qualifiedName;
+            return this;
+        }
+
+        /**
+         * The unique identifier of the collection.
+         */
+        public Builder requestId(String requestId) {
+            this.requestId = requestId;
+            return this;
+        }
+
+        /**
+         * The error code returned.
          */
         public Builder success(String success) {
             this.success = success;

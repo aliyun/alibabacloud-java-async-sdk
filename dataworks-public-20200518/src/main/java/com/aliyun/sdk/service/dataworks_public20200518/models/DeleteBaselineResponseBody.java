@@ -15,12 +15,6 @@ public class DeleteBaselineResponseBody extends TeaModel {
     @NameInMap("Data")
     private Boolean data;
 
-    @NameInMap("DynamicErrorCode")
-    private String dynamicErrorCode;
-
-    @NameInMap("DynamicErrorMessage")
-    private String dynamicErrorMessage;
-
     @NameInMap("ErrorCode")
     private String errorCode;
 
@@ -38,8 +32,6 @@ public class DeleteBaselineResponseBody extends TeaModel {
 
     private DeleteBaselineResponseBody(Builder builder) {
         this.data = builder.data;
-        this.dynamicErrorCode = builder.dynamicErrorCode;
-        this.dynamicErrorMessage = builder.dynamicErrorMessage;
         this.errorCode = builder.errorCode;
         this.errorMessage = builder.errorMessage;
         this.httpStatusCode = builder.httpStatusCode;
@@ -60,20 +52,6 @@ public class DeleteBaselineResponseBody extends TeaModel {
      */
     public Boolean getData() {
         return this.data;
-    }
-
-    /**
-     * @return dynamicErrorCode
-     */
-    public String getDynamicErrorCode() {
-        return this.dynamicErrorCode;
-    }
-
-    /**
-     * @return dynamicErrorMessage
-     */
-    public String getDynamicErrorMessage() {
-        return this.dynamicErrorMessage;
     }
 
     /**
@@ -113,8 +91,6 @@ public class DeleteBaselineResponseBody extends TeaModel {
 
     public static final class Builder {
         private Boolean data; 
-        private String dynamicErrorCode; 
-        private String dynamicErrorMessage; 
         private String errorCode; 
         private String errorMessage; 
         private Integer httpStatusCode; 
@@ -126,22 +102,6 @@ public class DeleteBaselineResponseBody extends TeaModel {
          */
         public Builder data(Boolean data) {
             this.data = data;
-            return this;
-        }
-
-        /**
-         * DynamicErrorCode.
-         */
-        public Builder dynamicErrorCode(String dynamicErrorCode) {
-            this.dynamicErrorCode = dynamicErrorCode;
-            return this;
-        }
-
-        /**
-         * DynamicErrorMessage.
-         */
-        public Builder dynamicErrorMessage(String dynamicErrorMessage) {
-            this.dynamicErrorMessage = dynamicErrorMessage;
             return this;
         }
 

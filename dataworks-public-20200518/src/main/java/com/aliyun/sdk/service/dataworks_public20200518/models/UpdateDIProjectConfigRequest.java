@@ -123,14 +123,41 @@ public class UpdateDIProjectConfigRequest extends Request {
         }
 
         /**
+         * The type of the sources of the synchronization solutions.
+         * <p>
+         * 
+         * Valid values: oracle, mysql, polardb, datahub, drds, and analyticdb_for_mysql.
+         * 
+         * If you do not configure this parameter, DataWorks applies the default global configuration to all sources.
+         */
+        public Builder destinationType(String destinationType) {
+            this.putQueryParameter("DestinationType", destinationType);
+            this.destinationType = destinationType;
+            return this;
+        }
+
+        /**
+         * Indicates whether the request was successful. Valid values:
+         * <p>
+         * 
+         * *   true: The request was successful.
+         * *   false: The request failed.
+         */
+        public Builder projectConfig(String projectConfig) {
+            this.putQueryParameter("ProjectConfig", projectConfig);
+            this.projectConfig = projectConfig;
+            return this;
+        }
+
+        /**
          * The type of the destinations of the synchronization solutions. This parameter cannot be left empty.
          * <p>
          * 
          * Valid values: analyticdb_for_mysql, odps, elasticsearch, holo, mysql, and polardb.
          */
-        public Builder destinationType(String destinationType) {
-            this.putQueryParameter("DestinationType", destinationType);
-            this.destinationType = destinationType;
+        public Builder projectId(Long projectId) {
+            this.putQueryParameter("ProjectId", projectId);
+            this.projectId = projectId;
             return this;
         }
 
@@ -157,29 +184,6 @@ public class UpdateDIProjectConfigRequest extends Request {
          * *   IGNORE: discards the message and does not send it to the destination.
          * *   CRITICAL: terminates the real-time synchronization node and sets the node status to Failed.
          * *   NORMAL: sends the message to the destination to process the message. Each destination processes DDL messages based on its own business logic. If DataWorks adopts the NORMAL policy, DataWorks only forwards DDL messages.
-         */
-        public Builder projectConfig(String projectConfig) {
-            this.putQueryParameter("ProjectConfig", projectConfig);
-            this.projectConfig = projectConfig;
-            return this;
-        }
-
-        /**
-         * The ID of the DataWorks workspace. You can log on to the [DataWorks console](https://workbench.data.aliyun.com/console) and go to the Workspace Management page to obtain the workspace ID.
-         */
-        public Builder projectId(Long projectId) {
-            this.putQueryParameter("ProjectId", projectId);
-            this.projectId = projectId;
-            return this;
-        }
-
-        /**
-         * The type of the sources of the synchronization solutions.
-         * <p>
-         * 
-         * Valid values: oracle, mysql, polardb, datahub, drds, and analyticdb_for_mysql.
-         * 
-         * If you do not configure this parameter, DataWorks applies the default global configuration to all sources.
          */
         public Builder sourceType(String sourceType) {
             this.putQueryParameter("SourceType", sourceType);

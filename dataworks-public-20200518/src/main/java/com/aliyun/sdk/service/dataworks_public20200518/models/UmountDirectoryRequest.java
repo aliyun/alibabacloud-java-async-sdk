@@ -105,10 +105,7 @@ public class UmountDirectoryRequest extends Request {
         }
 
         /**
-         * The ID of the directory that you want to remove from the left-side navigation pane of DataAnalysis. This parameter is used together with the TargetType parameter.
-         * <p>
-         * 
-         * For example, if you set the TargetType parameter to META_ALBUM, you must set the TargetId parameter to the ID of the related data album. You can call the [ListMetaCollections](~~469938~~) operation to obtain the ID of the data album. The ID is indicated by the QualifiedName parameter.
+         * The HTTP status code returned. The value 200 indicates that the request was successful.
          */
         public Builder targetId(String targetId) {
             this.putBodyParameter("TargetId", targetId);
@@ -117,7 +114,7 @@ public class UmountDirectoryRequest extends Request {
         }
 
         /**
-         * The type of the directory that you want to remove from the left-side navigation pane of DataAnalysis. Example: META_ALBUM, which indicates the data album.
+         * The ID of the request. You can use the ID to troubleshoot issues.
          */
         public Builder targetType(String targetType) {
             this.putBodyParameter("TargetType", targetType);

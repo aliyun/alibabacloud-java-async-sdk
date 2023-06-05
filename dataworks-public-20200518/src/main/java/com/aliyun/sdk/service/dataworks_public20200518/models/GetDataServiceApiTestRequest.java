@@ -79,7 +79,7 @@ public class GetDataServiceApiTestRequest extends Request {
         }
 
         /**
-         * The ID of the test. You can obtain the test ID from the response of the asynchronous operation TestDataServiceApi. You can also call the ListDataServiceApiTest operation to obtain the ID of the latest test.
+         * TestId.
          */
         public Builder testId(Long testId) {
             this.putQueryParameter("TestId", testId);

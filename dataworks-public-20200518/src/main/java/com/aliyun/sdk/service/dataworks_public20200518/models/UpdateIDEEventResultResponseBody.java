@@ -38,7 +38,7 @@ public class UpdateIDEEventResultResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The ID of the request. You can troubleshoot errors based on the ID.
+         * Id of the request
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

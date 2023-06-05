@@ -62,7 +62,11 @@ public class DeployDISyncTaskResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * The result of deploying the real-time synchronization node or data synchronization solution.
+         * Indicates whether the real-time synchronization node or data synchronization solution is deployed. Valid values:
+         * <p>
+         * 
+         * *   success: The real-time synchronization node or data synchronization solution is deployed.
+         * *   fail: The real-time synchronization node or data synchronization solution fails to be deployed.
          */
         public Builder data(Data data) {
             this.data = data;
@@ -70,7 +74,7 @@ public class DeployDISyncTaskResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request. You can query logs and troubleshoot issues based on the ID.
+         * The result of deploying the real-time synchronization node or data synchronization solution.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -78,11 +82,7 @@ public class DeployDISyncTaskResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether the request is successful. Valid values:
-         * <p>
-         * 
-         * *   true: The request is successful.
-         * *   false: The request fails.
+         * The ID of the request. You can query logs and troubleshoot issues based on the ID.
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -134,10 +134,7 @@ public class DeployDISyncTaskResponseBody extends TeaModel {
             private String status; 
 
             /**
-             * The cause of the failure to deploy the real-time synchronization node or data synchronization solution.
-             * <p>
-             * 
-             * If the real-time synchronization node or data synchronization solution is deployed, the value null is returned.
+             * Message.
              */
             public Builder message(String message) {
                 this.message = message;
@@ -145,11 +142,10 @@ public class DeployDISyncTaskResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether the real-time synchronization node or data synchronization solution is deployed. Valid values:
+             * The cause of the failure to deploy the real-time synchronization node or data synchronization solution.
              * <p>
              * 
-             * *   success: The real-time synchronization node or data synchronization solution is deployed.
-             * *   fail: The real-time synchronization node or data synchronization solution fails to be deployed.
+             * If the real-time synchronization node or data synchronization solution is deployed, the value null is returned.
              */
             public Builder status(String status) {
                 this.status = status;

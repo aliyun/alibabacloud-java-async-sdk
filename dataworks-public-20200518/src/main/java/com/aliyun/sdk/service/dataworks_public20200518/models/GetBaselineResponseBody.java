@@ -15,12 +15,6 @@ public class GetBaselineResponseBody extends TeaModel {
     @NameInMap("Data")
     private Data data;
 
-    @NameInMap("DynamicErrorCode")
-    private String dynamicErrorCode;
-
-    @NameInMap("DynamicErrorMessage")
-    private String dynamicErrorMessage;
-
     @NameInMap("ErrorCode")
     private String errorCode;
 
@@ -38,8 +32,6 @@ public class GetBaselineResponseBody extends TeaModel {
 
     private GetBaselineResponseBody(Builder builder) {
         this.data = builder.data;
-        this.dynamicErrorCode = builder.dynamicErrorCode;
-        this.dynamicErrorMessage = builder.dynamicErrorMessage;
         this.errorCode = builder.errorCode;
         this.errorMessage = builder.errorMessage;
         this.httpStatusCode = builder.httpStatusCode;
@@ -60,20 +52,6 @@ public class GetBaselineResponseBody extends TeaModel {
      */
     public Data getData() {
         return this.data;
-    }
-
-    /**
-     * @return dynamicErrorCode
-     */
-    public String getDynamicErrorCode() {
-        return this.dynamicErrorCode;
-    }
-
-    /**
-     * @return dynamicErrorMessage
-     */
-    public String getDynamicErrorMessage() {
-        return this.dynamicErrorMessage;
     }
 
     /**
@@ -113,8 +91,6 @@ public class GetBaselineResponseBody extends TeaModel {
 
     public static final class Builder {
         private Data data; 
-        private String dynamicErrorCode; 
-        private String dynamicErrorMessage; 
         private String errorCode; 
         private String errorMessage; 
         private Integer httpStatusCode; 
@@ -126,22 +102,6 @@ public class GetBaselineResponseBody extends TeaModel {
          */
         public Builder data(Data data) {
             this.data = data;
-            return this;
-        }
-
-        /**
-         * DynamicErrorCode.
-         */
-        public Builder dynamicErrorCode(String dynamicErrorCode) {
-            this.dynamicErrorCode = dynamicErrorCode;
-            return this;
-        }
-
-        /**
-         * DynamicErrorMessage.
-         */
-        public Builder dynamicErrorMessage(String dynamicErrorMessage) {
-            this.dynamicErrorMessage = dynamicErrorMessage;
             return this;
         }
 
@@ -596,6 +556,9 @@ public class GetBaselineResponseBody extends TeaModel {
         @NameInMap("Enabled")
         private Boolean enabled;
 
+        @NameInMap("NodeIds")
+        private java.util.List < Long > nodeIds;
+
         @NameInMap("OverTimeSettings")
         private java.util.List < OverTimeSettings> overTimeSettings;
 
@@ -608,9 +571,6 @@ public class GetBaselineResponseBody extends TeaModel {
         @NameInMap("ProjectId")
         private Long projectId;
 
-        @NameInMap("TaskIds")
-        private java.util.List < Long > taskIds;
-
         private Data(Builder builder) {
             this.alertEnabled = builder.alertEnabled;
             this.alertMarginThreshold = builder.alertMarginThreshold;
@@ -619,11 +579,11 @@ public class GetBaselineResponseBody extends TeaModel {
             this.baselineName = builder.baselineName;
             this.baselineType = builder.baselineType;
             this.enabled = builder.enabled;
+            this.nodeIds = builder.nodeIds;
             this.overTimeSettings = builder.overTimeSettings;
             this.owner = builder.owner;
             this.priority = builder.priority;
             this.projectId = builder.projectId;
-            this.taskIds = builder.taskIds;
         }
 
         public static Builder builder() {
@@ -684,6 +644,13 @@ public class GetBaselineResponseBody extends TeaModel {
         }
 
         /**
+         * @return nodeIds
+         */
+        public java.util.List < Long > getNodeIds() {
+            return this.nodeIds;
+        }
+
+        /**
          * @return overTimeSettings
          */
         public java.util.List < OverTimeSettings> getOverTimeSettings() {
@@ -711,13 +678,6 @@ public class GetBaselineResponseBody extends TeaModel {
             return this.projectId;
         }
 
-        /**
-         * @return taskIds
-         */
-        public java.util.List < Long > getTaskIds() {
-            return this.taskIds;
-        }
-
         public static final class Builder {
             private Boolean alertEnabled; 
             private Integer alertMarginThreshold; 
@@ -726,11 +686,11 @@ public class GetBaselineResponseBody extends TeaModel {
             private String baselineName; 
             private String baselineType; 
             private Boolean enabled; 
+            private java.util.List < Long > nodeIds; 
             private java.util.List < OverTimeSettings> overTimeSettings; 
             private String owner; 
             private Integer priority; 
             private Long projectId; 
-            private java.util.List < Long > taskIds; 
 
             /**
              * 是否开启告警
@@ -789,6 +749,14 @@ public class GetBaselineResponseBody extends TeaModel {
             }
 
             /**
+             * 基线节点列表
+             */
+            public Builder nodeIds(java.util.List < Long > nodeIds) {
+                this.nodeIds = nodeIds;
+                return this;
+            }
+
+            /**
              * 基线承诺时间设置
              */
             public Builder overTimeSettings(java.util.List < OverTimeSettings> overTimeSettings) {
@@ -817,14 +785,6 @@ public class GetBaselineResponseBody extends TeaModel {
              */
             public Builder projectId(Long projectId) {
                 this.projectId = projectId;
-                return this;
-            }
-
-            /**
-             * 基线节点列表
-             */
-            public Builder taskIds(java.util.List < Long > taskIds) {
-                this.taskIds = taskIds;
                 return this;
             }
 

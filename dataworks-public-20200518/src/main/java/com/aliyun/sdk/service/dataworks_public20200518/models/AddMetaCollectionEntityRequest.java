@@ -93,7 +93,10 @@ public class AddMetaCollectionEntityRequest extends Request {
         }
 
         /**
-         * The unique identifier of the collection.
+         * The unique identifier of the entity.
+         * <p>
+         * 
+         * Example: maxcompute-table.projectA.tableA.
          */
         public Builder collectionQualifiedName(String collectionQualifiedName) {
             this.putQueryParameter("CollectionQualifiedName", collectionQualifiedName);
@@ -102,10 +105,7 @@ public class AddMetaCollectionEntityRequest extends Request {
         }
 
         /**
-         * The unique identifier of the entity.
-         * <p>
-         * 
-         * Example: maxcompute-table.projectA.tableA.
+         * The ID of the request. You can use the ID to query logs and troubleshoot issues.
          */
         public Builder entityQualifiedName(String entityQualifiedName) {
             this.putQueryParameter("EntityQualifiedName", entityQualifiedName);

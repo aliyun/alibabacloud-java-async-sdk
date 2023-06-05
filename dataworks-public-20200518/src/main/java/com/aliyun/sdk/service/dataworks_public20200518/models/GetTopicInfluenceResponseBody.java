@@ -98,7 +98,7 @@ public class GetTopicInfluenceResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * The information about the baseline instances affected by the event.
+         * Data.
          */
         public Builder data(Data data) {
             this.data = data;
@@ -106,7 +106,7 @@ public class GetTopicInfluenceResponseBody extends TeaModel {
         }
 
         /**
-         * The error code returned.
+         * ErrorCode.
          */
         public Builder errorCode(String errorCode) {
             this.errorCode = errorCode;
@@ -114,7 +114,7 @@ public class GetTopicInfluenceResponseBody extends TeaModel {
         }
 
         /**
-         * The error message returned.
+         * ErrorMessage.
          */
         public Builder errorMessage(String errorMessage) {
             this.errorMessage = errorMessage;
@@ -122,7 +122,7 @@ public class GetTopicInfluenceResponseBody extends TeaModel {
         }
 
         /**
-         * The HTTP status code returned.
+         * HttpStatusCode.
          */
         public Builder httpStatusCode(Integer httpStatusCode) {
             this.httpStatusCode = httpStatusCode;
@@ -130,7 +130,7 @@ public class GetTopicInfluenceResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request. You can use the ID to troubleshoot issues.
+         * RequestId.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -138,7 +138,7 @@ public class GetTopicInfluenceResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether the request was successful.
+         * Success.
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -274,7 +274,7 @@ public class GetTopicInfluenceResponseBody extends TeaModel {
             private String status; 
 
             /**
-             * The ID of the baseline.
+             * BaselineId.
              */
             public Builder baselineId(Long baselineId) {
                 this.baselineId = baselineId;
@@ -282,7 +282,7 @@ public class GetTopicInfluenceResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the baseline.
+             * BaselineName.
              */
             public Builder baselineName(String baselineName) {
                 this.baselineName = baselineName;
@@ -290,7 +290,7 @@ public class GetTopicInfluenceResponseBody extends TeaModel {
             }
 
             /**
-             * The data timestamp of the baseline instance.
+             * Bizdate.
              */
             public Builder bizdate(Long bizdate) {
                 this.bizdate = bizdate;
@@ -298,7 +298,7 @@ public class GetTopicInfluenceResponseBody extends TeaModel {
             }
 
             /**
-             * The margin of the baseline instance. Unit: seconds.
+             * Buffer.
              */
             public Builder buffer(Long buffer) {
                 this.buffer = buffer;
@@ -306,7 +306,7 @@ public class GetTopicInfluenceResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the scheduling cycle of the baseline instance. For a baseline instance that is scheduled by day, the value of this parameter is 1. For a baseline instance that is scheduled by hour, the value of this parameter ranges from 1 to 24.
+             * InGroupId.
              */
             public Builder inGroupId(Integer inGroupId) {
                 this.inGroupId = inGroupId;
@@ -314,7 +314,7 @@ public class GetTopicInfluenceResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the Alibaba Cloud account used by the baseline owner. Multiple IDs are separated by commas (,).
+             * Owner.
              */
             public Builder owner(String owner) {
                 this.owner = owner;
@@ -322,7 +322,7 @@ public class GetTopicInfluenceResponseBody extends TeaModel {
             }
 
             /**
-             * The priority of the baseline. Valid values: 1, 2, 5, 7, and 8.
+             * Priority.
              */
             public Builder priority(Integer priority) {
                 this.priority = priority;
@@ -330,7 +330,7 @@ public class GetTopicInfluenceResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the workspace to which the baseline belongs.
+             * ProjectId.
              */
             public Builder projectId(Long projectId) {
                 this.projectId = projectId;
@@ -338,7 +338,7 @@ public class GetTopicInfluenceResponseBody extends TeaModel {
             }
 
             /**
-             * The status of the baseline. Valid values: ERROR, SAFE, DANGEROUS, and OVER. The value ERROR indicates that no nodes are associated with the baseline, or all nodes associated with the baseline are suspended. The value SAFE indicates that nodes finish running before the alerting time. The value DANGEROUS indicates that nodes are still running after the alerting time but before the committed time. The value OVER indicates that nodes are still running after the committed time.
+             * Status.
              */
             public Builder status(String status) {
                 this.status = status;
@@ -391,7 +391,7 @@ public class GetTopicInfluenceResponseBody extends TeaModel {
             private Long topicId; 
 
             /**
-             * The affected baseline instances.
+             * Influences.
              */
             public Builder influences(java.util.List < Influences> influences) {
                 this.influences = influences;
@@ -399,7 +399,7 @@ public class GetTopicInfluenceResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the event.
+             * TopicId.
              */
             public Builder topicId(Long topicId) {
                 this.topicId = topicId;

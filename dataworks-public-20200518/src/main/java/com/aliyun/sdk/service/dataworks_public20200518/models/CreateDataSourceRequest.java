@@ -167,6 +167,79 @@ public class CreateDataSourceRequest extends Request {
         }
 
         /**
+         * The ID of the data source.
+         */
+        public Builder content(String content) {
+            this.putQueryParameter("Content", content);
+            this.content = content;
+            return this;
+        }
+
+        /**
+         * The environment in which the data source is used. Valid values: 0 and 1. 0 indicates the development environment. 1 indicates the production environment.
+         */
+        public Builder dataSourceType(String dataSourceType) {
+            this.putQueryParameter("DataSourceType", dataSourceType);
+            this.dataSourceType = dataSourceType;
+            return this;
+        }
+
+        /**
+         * The subtype of the data source. Example:
+         * <p>
+         * 
+         * *   This parameter takes effect only if the DataSourceType parameter is set to rds.
+         * *   If the DataSourceType parameter is set to rds, this parameter can be set to mysql, sqlserver, or postgresql.
+         */
+        public Builder description(String description) {
+            this.putQueryParameter("Description", description);
+            this.description = description;
+            return this;
+        }
+
+        /**
+         * The HTTP status code returned.
+         */
+        public Builder envType(Integer envType) {
+            this.putQueryParameter("EnvType", envType);
+            this.envType = envType;
+            return this;
+        }
+
+        /**
+         * The type of the data source. Valid values:
+         * <p>
+         * 
+         * *   odps
+         * *   mysql
+         * *   rds
+         * *   oss
+         * *   sqlserver
+         * *   polardb
+         * *   oracle
+         * *   mongodb
+         * *   emr
+         * *   postgresql
+         * *   analyticdb_for_mysql
+         * *   hybriddb_for_postgresql
+         * *   holo
+         */
+        public Builder name(String name) {
+            this.putQueryParameter("Name", name);
+            this.name = name;
+            return this;
+        }
+
+        /**
+         * The description of the data source.
+         */
+        public Builder projectId(Long projectId) {
+            this.putQueryParameter("ProjectId", projectId);
+            this.projectId = projectId;
+            return this;
+        }
+
+        /**
          * The details of the data source. Examples of details of some common data sources:
          * <p>
          * 
@@ -362,79 +435,6 @@ public class CreateDataSourceRequest extends Request {
          *   "ownerId": "1212121212112"
          * }
          * ```
-         */
-        public Builder content(String content) {
-            this.putQueryParameter("Content", content);
-            this.content = content;
-            return this;
-        }
-
-        /**
-         * The type of the data source. Valid values:
-         * <p>
-         * 
-         * *   odps
-         * *   mysql
-         * *   rds
-         * *   oss
-         * *   sqlserver
-         * *   polardb
-         * *   oracle
-         * *   mongodb
-         * *   emr
-         * *   postgresql
-         * *   analyticdb_for_mysql
-         * *   hybriddb_for_postgresql
-         * *   holo
-         */
-        public Builder dataSourceType(String dataSourceType) {
-            this.putQueryParameter("DataSourceType", dataSourceType);
-            this.dataSourceType = dataSourceType;
-            return this;
-        }
-
-        /**
-         * The description of the data source.
-         */
-        public Builder description(String description) {
-            this.putQueryParameter("Description", description);
-            this.description = description;
-            return this;
-        }
-
-        /**
-         * The environment in which the data source is used. Valid values: 0 and 1. 0 indicates the development environment. 1 indicates the production environment.
-         */
-        public Builder envType(Integer envType) {
-            this.putQueryParameter("EnvType", envType);
-            this.envType = envType;
-            return this;
-        }
-
-        /**
-         * The name of the data source.
-         */
-        public Builder name(String name) {
-            this.putQueryParameter("Name", name);
-            this.name = name;
-            return this;
-        }
-
-        /**
-         * The ID of the DataWorks workspace to which the data source belongs. You can call the [ListProjects](~~178393~~) operation to obtain the ID.
-         */
-        public Builder projectId(Long projectId) {
-            this.putQueryParameter("ProjectId", projectId);
-            this.projectId = projectId;
-            return this;
-        }
-
-        /**
-         * The subtype of the data source. Example:
-         * <p>
-         * 
-         * *   This parameter takes effect only if the DataSourceType parameter is set to rds.
-         * *   If the DataSourceType parameter is set to rds, this parameter can be set to mysql, sqlserver, or postgresql.
          */
         public Builder subType(String subType) {
             this.putQueryParameter("SubType", subType);

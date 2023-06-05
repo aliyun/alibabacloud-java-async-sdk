@@ -74,7 +74,7 @@ public class GetProjectResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * The description of the workspace.
+         * This parameter is deprecated.
          */
         public Builder data(Data data) {
             this.data = data;
@@ -82,7 +82,7 @@ public class GetProjectResponseBody extends TeaModel {
         }
 
         /**
-         * The HTTP status code returned.
+         * Indicates whether the request was successful.
          */
         public Builder httpStatusCode(Integer httpStatusCode) {
             this.httpStatusCode = httpStatusCode;
@@ -90,7 +90,7 @@ public class GetProjectResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request. You can use the ID to locate logs and troubleshoot issues.
+         * The description of the workspace.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -98,7 +98,19 @@ public class GetProjectResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether the request was successful.
+         * The status of the workspace. Valid values:
+         * <p>
+         * 
+         * *   AVAILABLE(0): The workspace is in a normal state.
+         * *   DELETED(1): The workspace is deleted.
+         * *   INITIALIZING(2): The workspace is being initialized.
+         * *   INIT_FAILED(3): The workspace fails to be initialized.
+         * *   FORBIDDEN(4): The workspace is manually disabled.
+         * *   DELETING(5): The workspace is being deleted.
+         * *   DEL_FAILED(6): The workspace fails to be deleted.
+         * *   FROZEN(7): The workspace is frozen due to overdue payments.
+         * *   UPDATING(8): The workspace is being updated. The workspace enters this state after you associate a new compute engine with the workspace and the compute engine is being initialized.
+         * *   UPDATE_FAILED(9): The workspace fails to be updated.
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -150,13 +162,7 @@ public class GetProjectResponseBody extends TeaModel {
             private String value; 
 
             /**
-             * The keys of the tags that are added to resources in the workspace. The tag keys must meet the following conditions:
-             * <p>
-             * 
-             * *   The number of tag keys that can be added to resources ranges from 1 to 20.
-             * *   Each tag key can be a maximum of 128 characters in length.
-             * *   The tag keys cannot start with acs: or aliyun:.
-             * *   The tag keys cannot contain http:// or https://.
+             * Key.
              */
             public Builder key(String key) {
                 this.key = key;
@@ -164,13 +170,7 @@ public class GetProjectResponseBody extends TeaModel {
             }
 
             /**
-             * The values of the tags that are added to resources in the workspace. The tag values must meet the following conditions:
-             * <p>
-             * 
-             * *   The number of tag values that can be added to resources ranges from 1 to 20.
-             * *   Each tag value can be a maximum of 128 characters in length.
-             * *   The tag values cannot start with acs:.
-             * *   The tag values cannot contain http:// or https://.
+             * Value.
              */
             public Builder value(String value) {
                 this.value = value;
@@ -559,7 +559,11 @@ public class GetProjectResponseBody extends TeaModel {
             private Boolean useProxyOdpsAccount; 
 
             /**
-             * This parameter is deprecated.
+             * Indicates whether the workspace is a default workspace. Valid values:
+             * <p>
+             * 
+             * *   1: The workspace is a default workspace.
+             * *   0: The workspace is not a default workspace.
              */
             public Builder appkey(String appkey) {
                 this.appkey = appkey;
@@ -567,7 +571,7 @@ public class GetProjectResponseBody extends TeaModel {
             }
 
             /**
-             * This parameter is deprecated.
+             * The time when the workspace was created. Example: Dec 3, 2019 9:12:20 PM.
              */
             public Builder baseProject(Boolean baseProject) {
                 this.baseProject = baseProject;
@@ -583,7 +587,7 @@ public class GetProjectResponseBody extends TeaModel {
             }
 
             /**
-             * This parameter is deprecated.
+             * The unique identifier of the workspace.
              */
             public Builder destination(Integer destination) {
                 this.destination = destination;
@@ -599,10 +603,125 @@ public class GetProjectResponseBody extends TeaModel {
             }
 
             /**
-             * The development type of the workspace. The value is fixed as 4. This parameter is deprecated.
+             * The default maximum number of automatic reruns that are allowed after an error occurs.
              */
             public Builder developmentType(Integer developmentType) {
                 this.developmentType = developmentType;
+                return this;
+            }
+
+            /**
+             * This parameter is deprecated.
+             */
+            public Builder disableDevelopment(Boolean disableDevelopment) {
+                this.disableDevelopment = disableDevelopment;
+                return this;
+            }
+
+            /**
+             * The list of tags.
+             * <p>
+             * 
+             * The tags are added to resources in the workspace and used for authentication and cost allocation.
+             */
+            public Builder envTypes(java.util.List < String > envTypes) {
+                this.envTypes = envTypes;
+                return this;
+            }
+
+            /**
+             * The environment of the workspace. Valid values: PROD and DEV.
+             * <p>
+             * 
+             * *   The value PROD indicates the production environment. Workspaces in basic mode provide only the production environment.
+             * *   The value DEV indicates the development environment. Workspaces in standard mode provide both the development environment and the production environment.
+             */
+            public Builder gmtCreate(String gmtCreate) {
+                this.gmtCreate = gmtCreate;
+                return this;
+            }
+
+            /**
+             * The description of the workspace.
+             */
+            public Builder gmtModified(String gmtModified) {
+                this.gmtModified = gmtModified;
+                return this;
+            }
+
+            /**
+             * The time when the workspace was last modified. Example: Dec 3, 2019 9:12:20 PM.
+             */
+            public Builder isAllowDownload(Integer isAllowDownload) {
+                this.isAllowDownload = isAllowDownload;
+                return this;
+            }
+
+            /**
+             * The display name of the workspace.
+             */
+            public Builder isDefault(Integer isDefault) {
+                this.isDefault = isDefault;
+                return this;
+            }
+
+            /**
+             * Indicates whether you are allowed to download the query result from DataStudio. Valid values:
+             * <p>
+             * 
+             * *   1: You are allowed to download the query result from DataStudio.
+             * *   0: You are not allowed to download the query result from DataStudio.
+             */
+            public Builder maxFlowNode(Integer maxFlowNode) {
+                this.maxFlowNode = maxFlowNode;
+                return this;
+            }
+
+            /**
+             * The development type of the workspace. The value is fixed as 4. This parameter is deprecated.
+             */
+            public Builder prodStorageQuota(String prodStorageQuota) {
+                this.prodStorageQuota = prodStorageQuota;
+                return this;
+            }
+
+            /**
+             * Indicates whether the MaxCompute tables in the workspace are visible to the users within a tenant. Valid values:
+             * <p>
+             * 
+             * *   0: The MaxCompute tables are invisible to the users within a tenant.
+             * *   1: The MaxCompute tables are visible to the users within a tenant.
+             */
+            public Builder projectDescription(String projectDescription) {
+                this.projectDescription = projectDescription;
+                return this;
+            }
+
+            /**
+             * The mode of the workspace. Valid values:
+             * <p>
+             * 
+             * *   2: The workspace is in basic mode.
+             * *   3: The workspace is in standard mode.
+             */
+            public Builder projectId(Integer projectId) {
+                this.projectId = projectId;
+                return this;
+            }
+
+            /**
+             * The ID of the Alibaba Cloud account used by the workspace owner.
+             */
+            public Builder projectIdentifier(String projectIdentifier) {
+                this.projectIdentifier = projectIdentifier;
+                return this;
+            }
+
+            /**
+             * This parameter is deprecated.
+             */
+            public Builder projectMode(Integer projectMode) {
+                this.projectMode = projectMode;
                 return this;
             }
 
@@ -617,125 +736,13 @@ public class GetProjectResponseBody extends TeaModel {
              * 
              * *   Default value: false.
              */
-            public Builder disableDevelopment(Boolean disableDevelopment) {
-                this.disableDevelopment = disableDevelopment;
-                return this;
-            }
-
-            /**
-             * The environment of the workspace. Valid values: PROD and DEV.
-             * <p>
-             * 
-             * *   The value PROD indicates the production environment. Workspaces in basic mode provide only the production environment.
-             * *   The value DEV indicates the development environment. Workspaces in standard mode provide both the development environment and the production environment.
-             */
-            public Builder envTypes(java.util.List < String > envTypes) {
-                this.envTypes = envTypes;
-                return this;
-            }
-
-            /**
-             * The time when the workspace was created. Example: Dec 3, 2019 9:12:20 PM.
-             */
-            public Builder gmtCreate(String gmtCreate) {
-                this.gmtCreate = gmtCreate;
-                return this;
-            }
-
-            /**
-             * The time when the workspace was last modified. Example: Dec 3, 2019 9:12:20 PM.
-             */
-            public Builder gmtModified(String gmtModified) {
-                this.gmtModified = gmtModified;
-                return this;
-            }
-
-            /**
-             * Indicates whether you are allowed to download the query result from DataStudio. Valid values:
-             * <p>
-             * 
-             * *   1: You are allowed to download the query result from DataStudio.
-             * *   0: You are not allowed to download the query result from DataStudio.
-             */
-            public Builder isAllowDownload(Integer isAllowDownload) {
-                this.isAllowDownload = isAllowDownload;
-                return this;
-            }
-
-            /**
-             * Indicates whether the workspace is a default workspace. Valid values:
-             * <p>
-             * 
-             * *   1: The workspace is a default workspace.
-             * *   0: The workspace is not a default workspace.
-             */
-            public Builder isDefault(Integer isDefault) {
-                this.isDefault = isDefault;
-                return this;
-            }
-
-            /**
-             * This parameter is deprecated.
-             */
-            public Builder maxFlowNode(Integer maxFlowNode) {
-                this.maxFlowNode = maxFlowNode;
-                return this;
-            }
-
-            /**
-             * This parameter is deprecated.
-             */
-            public Builder prodStorageQuota(String prodStorageQuota) {
-                this.prodStorageQuota = prodStorageQuota;
-                return this;
-            }
-
-            /**
-             * The description of the workspace.
-             */
-            public Builder projectDescription(String projectDescription) {
-                this.projectDescription = projectDescription;
-                return this;
-            }
-
-            /**
-             * The ID of the workspace.
-             */
-            public Builder projectId(Integer projectId) {
-                this.projectId = projectId;
-                return this;
-            }
-
-            /**
-             * The unique identifier of the workspace.
-             */
-            public Builder projectIdentifier(String projectIdentifier) {
-                this.projectIdentifier = projectIdentifier;
-                return this;
-            }
-
-            /**
-             * The mode of the workspace. Valid values:
-             * <p>
-             * 
-             * *   2: The workspace is in basic mode.
-             * *   3: The workspace is in standard mode.
-             */
-            public Builder projectMode(Integer projectMode) {
-                this.projectMode = projectMode;
-                return this;
-            }
-
-            /**
-             * The display name of the workspace.
-             */
             public Builder projectName(String projectName) {
                 this.projectName = projectName;
                 return this;
             }
 
             /**
-             * The ID of the Alibaba Cloud account used by the workspace owner.
+             * Indicates whether a proxy account is used to access the MaxCompute compute engine instance associated with the workspace.
              */
             public Builder projectOwnerBaseId(String projectOwnerBaseId) {
                 this.projectOwnerBaseId = projectOwnerBaseId;
@@ -743,11 +750,7 @@ public class GetProjectResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether the workspace protection feature is enabled. Valid values:
-             * <p>
-             * 
-             * *   1: The workspace protection feature is enabled.
-             * *   0: The workspace protection feature is disabled.
+             * This parameter is deprecated.
              */
             public Builder protectedMode(Integer protectedMode) {
                 this.protectedMode = protectedMode;
@@ -763,7 +766,13 @@ public class GetProjectResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the resource group used in the workspace.
+             * The keys of the tags that are added to resources in the workspace. The tag keys must meet the following conditions:
+             * <p>
+             * 
+             * *   The number of tag keys that can be added to resources ranges from 1 to 20.
+             * *   Each tag key can be a maximum of 128 characters in length.
+             * *   The tag keys cannot start with acs: or aliyun:.
+             * *   The tag keys cannot contain http:// or https://.
              */
             public Builder resourceManagerResourceGroupId(String resourceManagerResourceGroupId) {
                 this.resourceManagerResourceGroupId = resourceManagerResourceGroupId;
@@ -771,7 +780,7 @@ public class GetProjectResponseBody extends TeaModel {
             }
 
             /**
-             * The default maximum number of automatic reruns that are allowed after an error occurs.
+             * The interval between automatic reruns after an error occurs. Unit: milliseconds. The maximum interval is 30 minutes. You must pay attention to the conversion between units.
              */
             public Builder schedulerMaxRetryTimes(Integer schedulerMaxRetryTimes) {
                 this.schedulerMaxRetryTimes = schedulerMaxRetryTimes;
@@ -779,7 +788,7 @@ public class GetProjectResponseBody extends TeaModel {
             }
 
             /**
-             * The interval between automatic reruns after an error occurs. Unit: milliseconds. The maximum interval is 30 minutes. You must pay attention to the conversion between units.
+             * This parameter is deprecated.
              */
             public Builder schedulerRetryInterval(Integer schedulerRetryInterval) {
                 this.schedulerRetryInterval = schedulerRetryInterval;
@@ -787,19 +796,7 @@ public class GetProjectResponseBody extends TeaModel {
             }
 
             /**
-             * The status of the workspace. Valid values:
-             * <p>
-             * 
-             * *   AVAILABLE(0): The workspace is in a normal state.
-             * *   DELETED(1): The workspace is deleted.
-             * *   INITIALIZING(2): The workspace is being initialized.
-             * *   INIT_FAILED(3): The workspace fails to be initialized.
-             * *   FORBIDDEN(4): The workspace is manually disabled.
-             * *   DELETING(5): The workspace is being deleted.
-             * *   DEL_FAILED(6): The workspace fails to be deleted.
-             * *   FROZEN(7): The workspace is frozen due to overdue payments.
-             * *   UPDATING(8): The workspace is being updated. The workspace enters this state after you associate a new compute engine with the workspace and the compute engine is being initialized.
-             * *   UPDATE_FAILED(9): The workspace fails to be updated.
+             * The ID of the workspace.
              */
             public Builder status(Integer status) {
                 this.status = status;
@@ -807,11 +804,11 @@ public class GetProjectResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether the MaxCompute tables in the workspace are visible to the users within a tenant. Valid values:
+             * Indicates whether the workspace protection feature is enabled. Valid values:
              * <p>
              * 
-             * *   0: The MaxCompute tables are invisible to the users within a tenant.
-             * *   1: The MaxCompute tables are visible to the users within a tenant.
+             * *   1: The workspace protection feature is enabled.
+             * *   0: The workspace protection feature is disabled.
              */
             public Builder tablePrivacyMode(Integer tablePrivacyMode) {
                 this.tablePrivacyMode = tablePrivacyMode;
@@ -819,10 +816,13 @@ public class GetProjectResponseBody extends TeaModel {
             }
 
             /**
-             * The list of tags.
+             * The values of the tags that are added to resources in the workspace. The tag values must meet the following conditions:
              * <p>
              * 
-             * The tags are added to resources in the workspace and used for authentication and cost allocation.
+             * *   The number of tag values that can be added to resources ranges from 1 to 20.
+             * *   Each tag value can be a maximum of 128 characters in length.
+             * *   The tag values cannot start with acs:.
+             * *   The tag values cannot contain http:// or https://.
              */
             public Builder tags(java.util.List < Tags> tags) {
                 this.tags = tags;
@@ -830,7 +830,7 @@ public class GetProjectResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the tenant.
+             * The ID of the resource group used in the workspace.
              */
             public Builder tenantId(Long tenantId) {
                 this.tenantId = tenantId;
@@ -838,7 +838,7 @@ public class GetProjectResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether a proxy account is used to access the MaxCompute compute engine instance associated with the workspace.
+             * The ID of the tenant.
              */
             public Builder useProxyOdpsAccount(Boolean useProxyOdpsAccount) {
                 this.useProxyOdpsAccount = useProxyOdpsAccount;

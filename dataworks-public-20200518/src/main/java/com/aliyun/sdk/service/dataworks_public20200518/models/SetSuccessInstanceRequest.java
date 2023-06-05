@@ -94,7 +94,7 @@ public class SetSuccessInstanceRequest extends Request {
         }
 
         /**
-         * The ID of the instance.
+         * The environment of the workspace. Valid values: PROD and DEV.
          */
         public Builder instanceId(Long instanceId) {
             this.putBodyParameter("InstanceId", instanceId);
@@ -103,7 +103,7 @@ public class SetSuccessInstanceRequest extends Request {
         }
 
         /**
-         * The environment of the workspace. Valid values: PROD and DEV.
+         * The HTTP status code.
          */
         public Builder projectEnv(String projectEnv) {
             this.putBodyParameter("ProjectEnv", projectEnv);

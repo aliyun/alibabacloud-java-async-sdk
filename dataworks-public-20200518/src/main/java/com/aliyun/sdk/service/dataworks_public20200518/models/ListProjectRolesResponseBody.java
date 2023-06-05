@@ -50,7 +50,7 @@ public class ListProjectRolesResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The roles of the workspace.
+         * The role ID of the workspace.
          */
         public Builder projectRoleList(java.util.List < ProjectRoleList> projectRoleList) {
             this.projectRoleList = projectRoleList;
@@ -58,7 +58,7 @@ public class ListProjectRolesResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * The roles of the workspace.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -134,7 +134,7 @@ public class ListProjectRolesResponseBody extends TeaModel {
             private String projectRoleType; 
 
             /**
-             * The role Code of the workspace.
+             * ProjectRoleCode.
              */
             public Builder projectRoleCode(String projectRoleCode) {
                 this.projectRoleCode = projectRoleCode;
@@ -142,7 +142,7 @@ public class ListProjectRolesResponseBody extends TeaModel {
             }
 
             /**
-             * The role ID of the workspace.
+             * The role type of the workspace. Valid values:
              */
             public Builder projectRoleId(Integer projectRoleId) {
                 this.projectRoleId = projectRoleId;
@@ -150,7 +150,7 @@ public class ListProjectRolesResponseBody extends TeaModel {
             }
 
             /**
-             * The role name of the workspace.
+             * The role Code of the workspace.
              */
             public Builder projectRoleName(String projectRoleName) {
                 this.projectRoleName = projectRoleName;
@@ -158,7 +158,7 @@ public class ListProjectRolesResponseBody extends TeaModel {
             }
 
             /**
-             * The role type of the workspace. Valid values:
+             * The role name of the workspace.
              */
             public Builder projectRoleType(String projectRoleType) {
                 this.projectRoleType = projectRoleType;

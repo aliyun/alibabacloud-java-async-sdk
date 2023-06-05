@@ -80,6 +80,10 @@ public class CreateFileRequest extends Request {
     private Integer fileType;
 
     @Body
+    @NameInMap("IgnoreParentSkipRunningProperty")
+    private Boolean ignoreParentSkipRunningProperty;
+
+    @Body
     @NameInMap("InputList")
     private String inputList;
 
@@ -153,6 +157,7 @@ public class CreateFileRequest extends Request {
         this.fileFolderPath = builder.fileFolderPath;
         this.fileName = builder.fileName;
         this.fileType = builder.fileType;
+        this.ignoreParentSkipRunningProperty = builder.ignoreParentSkipRunningProperty;
         this.inputList = builder.inputList;
         this.inputParameters = builder.inputParameters;
         this.outputParameters = builder.outputParameters;
@@ -295,6 +300,13 @@ public class CreateFileRequest extends Request {
     }
 
     /**
+     * @return ignoreParentSkipRunningProperty
+     */
+    public Boolean getIgnoreParentSkipRunningProperty() {
+        return this.ignoreParentSkipRunningProperty;
+    }
+
+    /**
      * @return inputList
      */
     public String getInputList() {
@@ -409,6 +421,7 @@ public class CreateFileRequest extends Request {
         private String fileFolderPath; 
         private String fileName; 
         private Integer fileType; 
+        private Boolean ignoreParentSkipRunningProperty; 
         private String inputList; 
         private String inputParameters; 
         private String outputParameters; 
@@ -446,6 +459,7 @@ public class CreateFileRequest extends Request {
             this.fileFolderPath = request.fileFolderPath;
             this.fileName = request.fileName;
             this.fileType = request.fileType;
+            this.ignoreParentSkipRunningProperty = request.ignoreParentSkipRunningProperty;
             this.inputList = request.inputList;
             this.inputParameters = request.inputParameters;
             this.outputParameters = request.outputParameters;
@@ -662,6 +676,15 @@ public class CreateFileRequest extends Request {
         public Builder fileType(Integer fileType) {
             this.putBodyParameter("FileType", fileType);
             this.fileType = fileType;
+            return this;
+        }
+
+        /**
+         * IgnoreParentSkipRunningProperty.
+         */
+        public Builder ignoreParentSkipRunningProperty(Boolean ignoreParentSkipRunningProperty) {
+            this.putBodyParameter("IgnoreParentSkipRunningProperty", ignoreParentSkipRunningProperty);
+            this.ignoreParentSkipRunningProperty = ignoreParentSkipRunningProperty;
             return this;
         }
 

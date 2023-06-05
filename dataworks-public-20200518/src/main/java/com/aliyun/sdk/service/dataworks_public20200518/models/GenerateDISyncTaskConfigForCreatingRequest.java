@@ -123,7 +123,11 @@ public class GenerateDISyncTaskConfigForCreatingRequest extends Request {
         }
 
         /**
-         * The client token that is used to ensure the idempotence of the request. This parameter is used to prevent repeated operations that are caused by multiple calls.
+         * Indicates whether the request is successful. Valid values:
+         * <p>
+         * 
+         * *   true: The request is successful.
+         * *   false: The request fails.
          */
         public Builder clientToken(String clientToken) {
             this.putQueryParameter("ClientToken", clientToken);
@@ -132,14 +136,26 @@ public class GenerateDISyncTaskConfigForCreatingRequest extends Request {
         }
 
         /**
-         * The ID of the DataWorks workspace. You can log on to the [DataWorks console](https://workbench.data.aliyun.com/console) and go to the Workspace Management page to obtain the workspace ID.
+         * The type of the object that you want to create in Data Integration in asynchronous mode. Valid values:
          * <p>
          * 
-         * This parameter specifies the DataWorks workspace to which the operation is applied.
+         * *   DI_REALTIME: real-time synchronization node
+         * *   DI_SOLUTION: synchronization solution
+         * 
+         * DataWorks allows you to create real-time synchronization nodes and synchronization solutions in Data Integration only in asynchronous mode.
          */
         public Builder projectId(Long projectId) {
             this.putQueryParameter("ProjectId", projectId);
             this.projectId = projectId;
+            return this;
+        }
+
+        /**
+         * The client token that is used to ensure the idempotence of the request. This parameter is used to prevent repeated operations that are caused by multiple calls.
+         */
+        public Builder taskParam(String taskParam) {
+            this.putQueryParameter("TaskParam", taskParam);
+            this.taskParam = taskParam;
             return this;
         }
 
@@ -331,21 +347,6 @@ public class GenerateDISyncTaskConfigForCreatingRequest extends Request {
          * ]
          * 
          * }
-         */
-        public Builder taskParam(String taskParam) {
-            this.putQueryParameter("TaskParam", taskParam);
-            this.taskParam = taskParam;
-            return this;
-        }
-
-        /**
-         * The type of the object that you want to create in Data Integration in asynchronous mode. Valid values:
-         * <p>
-         * 
-         * *   DI_REALTIME: real-time synchronization node
-         * *   DI_SOLUTION: synchronization solution
-         * 
-         * DataWorks allows you to create real-time synchronization nodes and synchronization solutions in Data Integration only in asynchronous mode.
          */
         public Builder taskType(String taskType) {
             this.putQueryParameter("TaskType", taskType);
