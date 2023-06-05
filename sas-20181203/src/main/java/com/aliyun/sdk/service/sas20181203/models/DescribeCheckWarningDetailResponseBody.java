@@ -15,6 +15,12 @@ public class DescribeCheckWarningDetailResponseBody extends TeaModel {
     @NameInMap("Advice")
     private String advice;
 
+    @NameInMap("CheckDetailAssetInfo")
+    private java.util.List < java.util.Map<String, String>> checkDetailAssetInfo;
+
+    @NameInMap("CheckDetailColumns")
+    private java.util.List < CheckDetailColumns> checkDetailColumns;
+
     @NameInMap("CheckId")
     private Long checkId;
 
@@ -38,6 +44,8 @@ public class DescribeCheckWarningDetailResponseBody extends TeaModel {
 
     private DescribeCheckWarningDetailResponseBody(Builder builder) {
         this.advice = builder.advice;
+        this.checkDetailAssetInfo = builder.checkDetailAssetInfo;
+        this.checkDetailColumns = builder.checkDetailColumns;
         this.checkId = builder.checkId;
         this.description = builder.description;
         this.item = builder.item;
@@ -60,6 +68,20 @@ public class DescribeCheckWarningDetailResponseBody extends TeaModel {
      */
     public String getAdvice() {
         return this.advice;
+    }
+
+    /**
+     * @return checkDetailAssetInfo
+     */
+    public java.util.List < java.util.Map<String, String>> getCheckDetailAssetInfo() {
+        return this.checkDetailAssetInfo;
+    }
+
+    /**
+     * @return checkDetailColumns
+     */
+    public java.util.List < CheckDetailColumns> getCheckDetailColumns() {
+        return this.checkDetailColumns;
     }
 
     /**
@@ -113,6 +135,8 @@ public class DescribeCheckWarningDetailResponseBody extends TeaModel {
 
     public static final class Builder {
         private String advice; 
+        private java.util.List < java.util.Map<String, String>> checkDetailAssetInfo; 
+        private java.util.List < CheckDetailColumns> checkDetailColumns; 
         private Long checkId; 
         private String description; 
         private String item; 
@@ -126,6 +150,22 @@ public class DescribeCheckWarningDetailResponseBody extends TeaModel {
          */
         public Builder advice(String advice) {
             this.advice = advice;
+            return this;
+        }
+
+        /**
+         * CheckDetailAssetInfo.
+         */
+        public Builder checkDetailAssetInfo(java.util.List < java.util.Map<String, String>> checkDetailAssetInfo) {
+            this.checkDetailAssetInfo = checkDetailAssetInfo;
+            return this;
+        }
+
+        /**
+         * CheckDetailColumns.
+         */
+        public Builder checkDetailColumns(java.util.List < CheckDetailColumns> checkDetailColumns) {
+            this.checkDetailColumns = checkDetailColumns;
             return this;
         }
 
@@ -196,4 +236,186 @@ public class DescribeCheckWarningDetailResponseBody extends TeaModel {
 
     } 
 
+    public static class Grids extends TeaModel {
+        @NameInMap("Key")
+        private String key;
+
+        @NameInMap("ShowName")
+        private String showName;
+
+        @NameInMap("Type")
+        private String type;
+
+        private Grids(Builder builder) {
+            this.key = builder.key;
+            this.showName = builder.showName;
+            this.type = builder.type;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static Grids create() {
+            return builder().build();
+        }
+
+        /**
+         * @return key
+         */
+        public String getKey() {
+            return this.key;
+        }
+
+        /**
+         * @return showName
+         */
+        public String getShowName() {
+            return this.showName;
+        }
+
+        /**
+         * @return type
+         */
+        public String getType() {
+            return this.type;
+        }
+
+        public static final class Builder {
+            private String key; 
+            private String showName; 
+            private String type; 
+
+            /**
+             * Key.
+             */
+            public Builder key(String key) {
+                this.key = key;
+                return this;
+            }
+
+            /**
+             * ShowName.
+             */
+            public Builder showName(String showName) {
+                this.showName = showName;
+                return this;
+            }
+
+            /**
+             * The type of the check item. Valid values:
+             */
+            public Builder type(String type) {
+                this.type = type;
+                return this;
+            }
+
+            public Grids build() {
+                return new Grids(this);
+            } 
+
+        } 
+
+    }
+    public static class CheckDetailColumns extends TeaModel {
+        @NameInMap("Grids")
+        private java.util.List < Grids> grids;
+
+        @NameInMap("Key")
+        private String key;
+
+        @NameInMap("ShowName")
+        private String showName;
+
+        @NameInMap("Type")
+        private String type;
+
+        private CheckDetailColumns(Builder builder) {
+            this.grids = builder.grids;
+            this.key = builder.key;
+            this.showName = builder.showName;
+            this.type = builder.type;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static CheckDetailColumns create() {
+            return builder().build();
+        }
+
+        /**
+         * @return grids
+         */
+        public java.util.List < Grids> getGrids() {
+            return this.grids;
+        }
+
+        /**
+         * @return key
+         */
+        public String getKey() {
+            return this.key;
+        }
+
+        /**
+         * @return showName
+         */
+        public String getShowName() {
+            return this.showName;
+        }
+
+        /**
+         * @return type
+         */
+        public String getType() {
+            return this.type;
+        }
+
+        public static final class Builder {
+            private java.util.List < Grids> grids; 
+            private String key; 
+            private String showName; 
+            private String type; 
+
+            /**
+             * Grids.
+             */
+            public Builder grids(java.util.List < Grids> grids) {
+                this.grids = grids;
+                return this;
+            }
+
+            /**
+             * Key.
+             */
+            public Builder key(String key) {
+                this.key = key;
+                return this;
+            }
+
+            /**
+             * ShowName.
+             */
+            public Builder showName(String showName) {
+                this.showName = showName;
+                return this;
+            }
+
+            /**
+             * The type of the check item. Valid values:
+             */
+            public Builder type(String type) {
+                this.type = type;
+                return this;
+            }
+
+            public CheckDetailColumns build() {
+                return new CheckDetailColumns(this);
+            } 
+
+        } 
+
+    }
 }

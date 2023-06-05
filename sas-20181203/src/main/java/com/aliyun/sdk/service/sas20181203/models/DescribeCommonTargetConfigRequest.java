@@ -14,6 +14,7 @@ import com.aliyun.sdk.gateway.pop.models.*;
 public class DescribeCommonTargetConfigRequest extends Request {
     @Query
     @NameInMap("Type")
+    @Validation(required = true)
     private String type;
 
     private DescribeCommonTargetConfigRequest(Builder builder) {

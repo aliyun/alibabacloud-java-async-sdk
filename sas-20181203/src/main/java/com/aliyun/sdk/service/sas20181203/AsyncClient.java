@@ -740,6 +740,8 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<GetAppNetworkResponse> getAppNetwork(GetAppNetworkRequest request);
 
+    CompletableFuture<GetAssetDetailByUuidResponse> getAssetDetailByUuid(GetAssetDetailByUuidRequest request);
+
     CompletableFuture<GetAssetSelectionConfigResponse> getAssetSelectionConfig(GetAssetSelectionConfigRequest request);
 
     CompletableFuture<GetAssetsPropertyDetailResponse> getAssetsPropertyDetail(GetAssetsPropertyDetailRequest request);
