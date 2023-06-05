@@ -18,6 +18,8 @@ public interface AsyncClient extends SdkAutoCloseable {
         return builder().build();
     }
 
+    CompletableFuture<ExpireLoginTokenResponse> expireLoginToken(ExpireLoginTokenRequest request);
+
     CompletableFuture<GetAuthCodeResponse> getAuthCode(GetAuthCodeRequest request);
 
 }

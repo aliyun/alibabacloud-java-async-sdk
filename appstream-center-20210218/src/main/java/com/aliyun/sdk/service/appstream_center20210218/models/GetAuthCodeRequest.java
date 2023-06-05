@@ -13,6 +13,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class GetAuthCodeRequest extends Request {
     @Body
+    @NameInMap("AutoCreateUser")
+    private Boolean autoCreateUser;
+
+    @Body
     @NameInMap("EndUserId")
     private String endUserId;
 
@@ -26,6 +30,7 @@ public class GetAuthCodeRequest extends Request {
 
     private GetAuthCodeRequest(Builder builder) {
         super(builder);
+        this.autoCreateUser = builder.autoCreateUser;
         this.endUserId = builder.endUserId;
         this.externalUserId = builder.externalUserId;
         this.policy = builder.policy;
@@ -42,6 +47,13 @@ public class GetAuthCodeRequest extends Request {
     @Override
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return autoCreateUser
+     */
+    public Boolean getAutoCreateUser() {
+        return this.autoCreateUser;
     }
 
     /**
@@ -66,6 +78,7 @@ public class GetAuthCodeRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<GetAuthCodeRequest, Builder> {
+        private Boolean autoCreateUser; 
         private String endUserId; 
         private String externalUserId; 
         private String policy; 
@@ -76,10 +89,20 @@ public class GetAuthCodeRequest extends Request {
 
         private Builder(GetAuthCodeRequest request) {
             super(request);
+            this.autoCreateUser = request.autoCreateUser;
             this.endUserId = request.endUserId;
             this.externalUserId = request.externalUserId;
             this.policy = request.policy;
         } 
+
+        /**
+         * AutoCreateUser.
+         */
+        public Builder autoCreateUser(Boolean autoCreateUser) {
+            this.putBodyParameter("AutoCreateUser", autoCreateUser);
+            this.autoCreateUser = autoCreateUser;
+            return this;
+        }
 
         /**
          * EndUserId.
