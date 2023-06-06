@@ -161,6 +161,9 @@ public class ReleaseCallResponseBody extends TeaModel {
         @NameInMap("ChannelState")
         private String channelState;
 
+        @NameInMap("ChannelVariables")
+        private String channelVariables;
+
         @NameInMap("Destination")
         private String destination;
 
@@ -189,6 +192,7 @@ public class ReleaseCallResponseBody extends TeaModel {
             this.callType = builder.callType;
             this.channelId = builder.channelId;
             this.channelState = builder.channelState;
+            this.channelVariables = builder.channelVariables;
             this.destination = builder.destination;
             this.jobId = builder.jobId;
             this.originator = builder.originator;
@@ -226,6 +230,13 @@ public class ReleaseCallResponseBody extends TeaModel {
          */
         public String getChannelState() {
             return this.channelState;
+        }
+
+        /**
+         * @return channelVariables
+         */
+        public String getChannelVariables() {
+            return this.channelVariables;
         }
 
         /**
@@ -288,6 +299,7 @@ public class ReleaseCallResponseBody extends TeaModel {
             private String callType; 
             private String channelId; 
             private String channelState; 
+            private String channelVariables; 
             private String destination; 
             private String jobId; 
             private String originator; 
@@ -318,6 +330,14 @@ public class ReleaseCallResponseBody extends TeaModel {
              */
             public Builder channelState(String channelState) {
                 this.channelState = channelState;
+                return this;
+            }
+
+            /**
+             * ChannelVariables.
+             */
+            public Builder channelVariables(String channelVariables) {
+                this.channelVariables = channelVariables;
                 return this;
             }
 

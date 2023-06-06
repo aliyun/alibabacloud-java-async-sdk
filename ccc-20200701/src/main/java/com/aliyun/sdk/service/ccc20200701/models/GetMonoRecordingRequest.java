@@ -18,6 +18,10 @@ public class GetMonoRecordingRequest extends Request {
     private String contactId;
 
     @Query
+    @NameInMap("ExpireSeconds")
+    private Long expireSeconds;
+
+    @Query
     @NameInMap("InstanceId")
     @Validation(required = true)
     private String instanceId;
@@ -25,6 +29,7 @@ public class GetMonoRecordingRequest extends Request {
     private GetMonoRecordingRequest(Builder builder) {
         super(builder);
         this.contactId = builder.contactId;
+        this.expireSeconds = builder.expireSeconds;
         this.instanceId = builder.instanceId;
     }
 
@@ -49,6 +54,13 @@ public class GetMonoRecordingRequest extends Request {
     }
 
     /**
+     * @return expireSeconds
+     */
+    public Long getExpireSeconds() {
+        return this.expireSeconds;
+    }
+
+    /**
      * @return instanceId
      */
     public String getInstanceId() {
@@ -57,6 +69,7 @@ public class GetMonoRecordingRequest extends Request {
 
     public static final class Builder extends Request.Builder<GetMonoRecordingRequest, Builder> {
         private String contactId; 
+        private Long expireSeconds; 
         private String instanceId; 
 
         private Builder() {
@@ -66,6 +79,7 @@ public class GetMonoRecordingRequest extends Request {
         private Builder(GetMonoRecordingRequest request) {
             super(request);
             this.contactId = request.contactId;
+            this.expireSeconds = request.expireSeconds;
             this.instanceId = request.instanceId;
         } 
 
@@ -75,6 +89,15 @@ public class GetMonoRecordingRequest extends Request {
         public Builder contactId(String contactId) {
             this.putQueryParameter("ContactId", contactId);
             this.contactId = contactId;
+            return this;
+        }
+
+        /**
+         * ExpireSeconds.
+         */
+        public Builder expireSeconds(Long expireSeconds) {
+            this.putQueryParameter("ExpireSeconds", expireSeconds);
+            this.expireSeconds = expireSeconds;
             return this;
         }
 

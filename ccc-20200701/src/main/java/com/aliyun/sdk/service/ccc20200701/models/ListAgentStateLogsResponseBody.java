@@ -132,6 +132,9 @@ public class ListAgentStateLogsResponseBody extends TeaModel {
     } 
 
     public static class Data extends TeaModel {
+        @NameInMap("BreakCode")
+        private String breakCode;
+
         @NameInMap("Duration")
         private Long duration;
 
@@ -147,12 +150,17 @@ public class ListAgentStateLogsResponseBody extends TeaModel {
         @NameInMap("StateCode")
         private String stateCode;
 
+        @NameInMap("WorkMode")
+        private String workMode;
+
         private Data(Builder builder) {
+            this.breakCode = builder.breakCode;
             this.duration = builder.duration;
             this.outboundScenario = builder.outboundScenario;
             this.startTime = builder.startTime;
             this.state = builder.state;
             this.stateCode = builder.stateCode;
+            this.workMode = builder.workMode;
         }
 
         public static Builder builder() {
@@ -161,6 +169,13 @@ public class ListAgentStateLogsResponseBody extends TeaModel {
 
         public static Data create() {
             return builder().build();
+        }
+
+        /**
+         * @return breakCode
+         */
+        public String getBreakCode() {
+            return this.breakCode;
         }
 
         /**
@@ -198,12 +213,29 @@ public class ListAgentStateLogsResponseBody extends TeaModel {
             return this.stateCode;
         }
 
+        /**
+         * @return workMode
+         */
+        public String getWorkMode() {
+            return this.workMode;
+        }
+
         public static final class Builder {
+            private String breakCode; 
             private Long duration; 
             private Boolean outboundScenario; 
             private Long startTime; 
             private String state; 
             private String stateCode; 
+            private String workMode; 
+
+            /**
+             * BreakCode.
+             */
+            public Builder breakCode(String breakCode) {
+                this.breakCode = breakCode;
+                return this;
+            }
 
             /**
              * Duration.
@@ -242,6 +274,14 @@ public class ListAgentStateLogsResponseBody extends TeaModel {
              */
             public Builder stateCode(String stateCode) {
                 this.stateCode = stateCode;
+                return this;
+            }
+
+            /**
+             * WorkMode.
+             */
+            public Builder workMode(String workMode) {
+                this.workMode = workMode;
                 return this;
             }
 
