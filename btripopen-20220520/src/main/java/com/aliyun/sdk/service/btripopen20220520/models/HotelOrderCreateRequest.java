@@ -992,6 +992,9 @@ public class HotelOrderCreateRequest extends Request {
         @Validation(required = true)
         private String phone;
 
+        @NameInMap("room_no")
+        private Integer roomNo;
+
         @NameInMap("staff_no")
         private String staffNo;
 
@@ -1010,6 +1013,7 @@ public class HotelOrderCreateRequest extends Request {
             this.lastName = builder.lastName;
             this.name = builder.name;
             this.phone = builder.phone;
+            this.roomNo = builder.roomNo;
             this.staffNo = builder.staffNo;
             this.userType = builder.userType;
         }
@@ -1100,6 +1104,13 @@ public class HotelOrderCreateRequest extends Request {
         }
 
         /**
+         * @return roomNo
+         */
+        public Integer getRoomNo() {
+            return this.roomNo;
+        }
+
+        /**
          * @return staffNo
          */
         public String getStaffNo() {
@@ -1125,6 +1136,7 @@ public class HotelOrderCreateRequest extends Request {
             private String lastName; 
             private String name; 
             private String phone; 
+            private Integer roomNo; 
             private String staffNo; 
             private Integer userType; 
 
@@ -1213,6 +1225,14 @@ public class HotelOrderCreateRequest extends Request {
              */
             public Builder phone(String phone) {
                 this.phone = phone;
+                return this;
+            }
+
+            /**
+             * room_no.
+             */
+            public Builder roomNo(Integer roomNo) {
+                this.roomNo = roomNo;
                 return this;
             }
 

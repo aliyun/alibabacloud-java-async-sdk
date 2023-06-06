@@ -400,6 +400,9 @@ public class HotelOrderPreValidateResponseBody extends TeaModel {
         @NameInMap("discount_price")
         private String discountPrice;
 
+        @NameInMap("max_booking_num")
+        private String maxBookingNum;
+
         @NameInMap("price")
         private Long price;
 
@@ -421,6 +424,7 @@ public class HotelOrderPreValidateResponseBody extends TeaModel {
         private RatePlanDaily(Builder builder) {
             this.board = builder.board;
             this.discountPrice = builder.discountPrice;
+            this.maxBookingNum = builder.maxBookingNum;
             this.price = builder.price;
             this.rateStartTime = builder.rateStartTime;
             this.roomCount = builder.roomCount;
@@ -449,6 +453,13 @@ public class HotelOrderPreValidateResponseBody extends TeaModel {
          */
         public String getDiscountPrice() {
             return this.discountPrice;
+        }
+
+        /**
+         * @return maxBookingNum
+         */
+        public String getMaxBookingNum() {
+            return this.maxBookingNum;
         }
 
         /**
@@ -496,6 +507,7 @@ public class HotelOrderPreValidateResponseBody extends TeaModel {
         public static final class Builder {
             private String board; 
             private String discountPrice; 
+            private String maxBookingNum; 
             private Long price; 
             private String rateStartTime; 
             private Integer roomCount; 
@@ -516,6 +528,14 @@ public class HotelOrderPreValidateResponseBody extends TeaModel {
              */
             public Builder discountPrice(String discountPrice) {
                 this.discountPrice = discountPrice;
+                return this;
+            }
+
+            /**
+             * max_booking_num.
+             */
+            public Builder maxBookingNum(String maxBookingNum) {
+                this.maxBookingNum = maxBookingNum;
                 return this;
             }
 

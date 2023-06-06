@@ -1117,6 +1117,9 @@ public class HotelOrderDetailInfoResponseBody extends TeaModel {
         @NameInMap("phone")
         private String phone;
 
+        @NameInMap("room_no")
+        private Integer roomNo;
+
         @NameInMap("selected")
         private Boolean selected;
 
@@ -1140,6 +1143,7 @@ public class HotelOrderDetailInfoResponseBody extends TeaModel {
             this.lastName = builder.lastName;
             this.name = builder.name;
             this.phone = builder.phone;
+            this.roomNo = builder.roomNo;
             this.selected = builder.selected;
             this.staffNo = builder.staffNo;
             this.userType = builder.userType;
@@ -1245,6 +1249,13 @@ public class HotelOrderDetailInfoResponseBody extends TeaModel {
         }
 
         /**
+         * @return roomNo
+         */
+        public Integer getRoomNo() {
+            return this.roomNo;
+        }
+
+        /**
          * @return selected
          */
         public Boolean getSelected() {
@@ -1279,6 +1290,7 @@ public class HotelOrderDetailInfoResponseBody extends TeaModel {
             private String lastName; 
             private String name; 
             private String phone; 
+            private Integer roomNo; 
             private Boolean selected; 
             private String staffNo; 
             private Integer userType; 
@@ -1384,6 +1396,14 @@ public class HotelOrderDetailInfoResponseBody extends TeaModel {
              */
             public Builder phone(String phone) {
                 this.phone = phone;
+                return this;
+            }
+
+            /**
+             * room_no.
+             */
+            public Builder roomNo(Integer roomNo) {
+                this.roomNo = roomNo;
                 return this;
             }
 
