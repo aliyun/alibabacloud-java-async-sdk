@@ -84,7 +84,7 @@ public class DeleteSnapshotRequest extends Request {
         } 
 
         /**
-         * ClientToken.
+         * The client token that is used to ensure the idempotence of the request. You can use the client to generate the value, but you must ensure that it is unique among different requests. The token can only contain ASCII characters and cannot exceed 64 characters in length.**** For more information, see [How to ensure idempotence](~~25693~~).
          */
         public Builder clientToken(String clientToken) {
             this.putQueryParameter("ClientToken", clientToken);
@@ -93,7 +93,7 @@ public class DeleteSnapshotRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * The region ID of the snapshot.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -102,7 +102,7 @@ public class DeleteSnapshotRequest extends Request {
         }
 
         /**
-         * SnapshotId.
+         * The ID of the snapshot.
          */
         public Builder snapshotId(String snapshotId) {
             this.putQueryParameter("SnapshotId", snapshotId);

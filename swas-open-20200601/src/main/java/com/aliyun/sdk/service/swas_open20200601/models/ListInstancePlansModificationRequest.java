@@ -70,7 +70,7 @@ public class ListInstancePlansModificationRequest extends Request {
         } 
 
         /**
-         * InstanceId.
+         * The ID of the simple application server.
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -79,7 +79,7 @@ public class ListInstancePlansModificationRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * The region ID of the simple application server. You can call the [ListRegions](~~189315~~) operation to query the most recent region list.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);

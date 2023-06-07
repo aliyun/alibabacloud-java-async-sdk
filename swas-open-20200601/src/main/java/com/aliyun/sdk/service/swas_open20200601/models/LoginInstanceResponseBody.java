@@ -50,7 +50,7 @@ public class LoginInstanceResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * RedirectUrl.
+         * The URL that you use to log on to the server.
          */
         public Builder redirectUrl(String redirectUrl) {
             this.redirectUrl = redirectUrl;
@@ -58,7 +58,7 @@ public class LoginInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * Id of the request
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

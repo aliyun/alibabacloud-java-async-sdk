@@ -99,7 +99,7 @@ public class ModifyImageShareStatusRequest extends Request {
         } 
 
         /**
-         * ClientToken.
+         * The client token that is used to ensure the idempotence of the request. You can use the client to generate the value, but you must ensure that it is unique among different requests. The token can only contain ASCII characters and cannot exceed 64 characters in length.**** For more information, see [How to ensure idempotence](~~25693~~).
          */
         public Builder clientToken(String clientToken) {
             this.putQueryParameter("ClientToken", clientToken);
@@ -108,7 +108,7 @@ public class ModifyImageShareStatusRequest extends Request {
         }
 
         /**
-         * ImageId.
+         * The ID of the image.
          */
         public Builder imageId(String imageId) {
             this.putQueryParameter("ImageId", imageId);
@@ -117,7 +117,11 @@ public class ModifyImageShareStatusRequest extends Request {
         }
 
         /**
-         * Operation.
+         * Valid values:
+         * <p>
+         * 
+         * *   Share
+         * *   UnShare
          */
         public Builder operation(String operation) {
             this.putQueryParameter("Operation", operation);
@@ -126,7 +130,7 @@ public class ModifyImageShareStatusRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * The region ID of the custom image. You can call the [ListRegions](~~189315~~) operation to query the most recent region list.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);

@@ -142,7 +142,7 @@ public class CreateCustomImageRequest extends Request {
         } 
 
         /**
-         * ClientToken.
+         * The client token that is used to ensure the idempotence of the request. You can use the client to generate the value, but you must ensure that it is unique among different requests. The **ClientToken** value can only contain ASCII characters and cannot exceed 64 characters in length. For more information, see [How to ensure idempotence](~~25693~~).
          */
         public Builder clientToken(String clientToken) {
             this.putQueryParameter("ClientToken", clientToken);
@@ -151,7 +151,7 @@ public class CreateCustomImageRequest extends Request {
         }
 
         /**
-         * DataSnapshotId.
+         * The ID of the data disk snapshot.
          */
         public Builder dataSnapshotId(String dataSnapshotId) {
             this.putQueryParameter("DataSnapshotId", dataSnapshotId);
@@ -160,7 +160,7 @@ public class CreateCustomImageRequest extends Request {
         }
 
         /**
-         * Description.
+         * The description of the custom image.
          */
         public Builder description(String description) {
             this.putQueryParameter("Description", description);
@@ -169,7 +169,10 @@ public class CreateCustomImageRequest extends Request {
         }
 
         /**
-         * ImageName.
+         * The name of the custom image. The name must be 2 to 128 characters in length, and can contain letters, digits, colons (:), underscores (\_), and hyphens (-). The name must start with a letter or a digit.
+         * <p>
+         * 
+         * This parameter is empty by default.
          */
         public Builder imageName(String imageName) {
             this.putQueryParameter("ImageName", imageName);
@@ -178,7 +181,7 @@ public class CreateCustomImageRequest extends Request {
         }
 
         /**
-         * InstanceId.
+         * The ID of the simple application server.
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -187,7 +190,7 @@ public class CreateCustomImageRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * The region ID of the simple application server. You can call the [ListRegions](~~189315~~) operation to query the most recent region list.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -196,7 +199,7 @@ public class CreateCustomImageRequest extends Request {
         }
 
         /**
-         * SystemSnapshotId.
+         * The ID of the system disk snapshot.
          */
         public Builder systemSnapshotId(String systemSnapshotId) {
             this.putQueryParameter("SystemSnapshotId", systemSnapshotId);

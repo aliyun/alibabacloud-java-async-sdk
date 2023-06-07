@@ -50,7 +50,7 @@ public class CreateInstancesResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * InstanceIds.
+         * The IDs of the simple application servers.
          */
         public Builder instanceIds(java.util.List < String > instanceIds) {
             this.instanceIds = instanceIds;
@@ -58,7 +58,7 @@ public class CreateInstancesResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

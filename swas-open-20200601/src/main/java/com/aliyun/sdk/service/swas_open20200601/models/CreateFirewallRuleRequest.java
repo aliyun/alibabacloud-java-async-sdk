@@ -128,7 +128,7 @@ public class CreateFirewallRuleRequest extends Request {
         } 
 
         /**
-         * ClientToken.
+         * The client token that is used to ensure the idempotence of the request. You can use the client to generate the value, but you must ensure that it is unique among different requests. The token can only contain ASCII characters and cannot exceed 64 characters in length. ****For more information, see [How to ensure idempotence](~~25693~~).
          */
         public Builder clientToken(String clientToken) {
             this.putQueryParameter("ClientToken", clientToken);
@@ -137,7 +137,7 @@ public class CreateFirewallRuleRequest extends Request {
         }
 
         /**
-         * InstanceId.
+         * The ID of the simple application server.
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -146,7 +146,7 @@ public class CreateFirewallRuleRequest extends Request {
         }
 
         /**
-         * Port.
+         * The port range. Valid values: 1 to 65535. Specify a port range in the format of \<start port number>/\<end port number>. Example: `1024/1055`, which indicates that the port range of 1024 to 1055.
          */
         public Builder port(String port) {
             this.putQueryParameter("Port", port);
@@ -155,7 +155,7 @@ public class CreateFirewallRuleRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * The region ID of the simple application server.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -164,7 +164,7 @@ public class CreateFirewallRuleRequest extends Request {
         }
 
         /**
-         * Remark.
+         * The remarks of the firewall rule.
          */
         public Builder remark(String remark) {
             this.putQueryParameter("Remark", remark);
@@ -173,7 +173,12 @@ public class CreateFirewallRuleRequest extends Request {
         }
 
         /**
-         * RuleProtocol.
+         * The transport layer protocol. Valid values:
+         * <p>
+         * 
+         * *   TCP: the TCP protocol
+         * *   UDP: the UDP protocol
+         * *   TCP+UDP: the TCP and UDP protocols
          */
         public Builder ruleProtocol(String ruleProtocol) {
             this.putQueryParameter("RuleProtocol", ruleProtocol);

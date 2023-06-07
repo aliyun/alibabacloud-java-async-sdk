@@ -99,7 +99,7 @@ public class UpgradeInstanceRequest extends Request {
         } 
 
         /**
-         * ClientToken.
+         * The client token that is used to ensure the idempotence of the request. You can use the client to generate the value, but you must ensure that it is unique among different requests. The token can only contain ASCII characters and cannot exceed 64 characters in length. For more information, see [How to ensure idempotence](~~25693~~).
          */
         public Builder clientToken(String clientToken) {
             this.putQueryParameter("ClientToken", clientToken);
@@ -108,7 +108,7 @@ public class UpgradeInstanceRequest extends Request {
         }
 
         /**
-         * InstanceId.
+         * The ID of the simple application server.
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -117,7 +117,7 @@ public class UpgradeInstanceRequest extends Request {
         }
 
         /**
-         * PlanId.
+         * The ID of the new plan. You can call the [ListPlans](~~189314~~) operation to query plans provided by Simple Application Server.
          */
         public Builder planId(String planId) {
             this.putQueryParameter("PlanId", planId);
@@ -126,7 +126,7 @@ public class UpgradeInstanceRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * The region ID of the simple application server.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);

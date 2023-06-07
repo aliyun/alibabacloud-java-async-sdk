@@ -50,7 +50,7 @@ public class ListInstancesTrafficPackagesResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * InstanceTrafficPackageUsages.
+         * The details of the data transfer plans of the simple application servers.
          */
         public Builder instanceTrafficPackageUsages(java.util.List < InstanceTrafficPackageUsages> instanceTrafficPackageUsages) {
             this.instanceTrafficPackageUsages = instanceTrafficPackageUsages;
@@ -58,7 +58,7 @@ public class ListInstancesTrafficPackagesResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -146,7 +146,7 @@ public class ListInstancesTrafficPackagesResponseBody extends TeaModel {
             private Long trafficUsed; 
 
             /**
-             * InstanceId.
+             * The ID of the simple application server.
              */
             public Builder instanceId(String instanceId) {
                 this.instanceId = instanceId;
@@ -154,7 +154,7 @@ public class ListInstancesTrafficPackagesResponseBody extends TeaModel {
             }
 
             /**
-             * TrafficOverflow.
+             * The data transfers that exceeds the quota of the data transfer plan in the current month. Unit: Byte.
              */
             public Builder trafficOverflow(Long trafficOverflow) {
                 this.trafficOverflow = trafficOverflow;
@@ -162,7 +162,7 @@ public class ListInstancesTrafficPackagesResponseBody extends TeaModel {
             }
 
             /**
-             * TrafficPackageRemaining.
+             * The unused quota of the data transfer plan in the current month. Unit: Byte.
              */
             public Builder trafficPackageRemaining(Long trafficPackageRemaining) {
                 this.trafficPackageRemaining = trafficPackageRemaining;
@@ -170,7 +170,10 @@ public class ListInstancesTrafficPackagesResponseBody extends TeaModel {
             }
 
             /**
-             * TrafficPackageTotal.
+             * The quota of the data transfer plan in the current month. Unit: Byte.
+             * <p>
+             * 
+             * >  TrafficPackageTotal = TrafficUsed + TrafficPackageRemaining
              */
             public Builder trafficPackageTotal(Long trafficPackageTotal) {
                 this.trafficPackageTotal = trafficPackageTotal;
@@ -178,7 +181,7 @@ public class ListInstancesTrafficPackagesResponseBody extends TeaModel {
             }
 
             /**
-             * TrafficUsed.
+             * The used quota of the data transfer plan in the current month. Unit: Byte.
              */
             public Builder trafficUsed(Long trafficUsed) {
                 this.trafficUsed = trafficUsed;

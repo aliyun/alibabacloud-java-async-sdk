@@ -99,7 +99,7 @@ public class ResetDiskRequest extends Request {
         } 
 
         /**
-         * ClientToken.
+         * The client token that is used to ensure the idempotence of the request. You can use the client to generate the value, but you must ensure that it is unique among different requests. The **ClientToken** value can only contain ASCII characters and cannot exceed 64 characters in length. For more information, see [How to ensure idempotence](~~25693~~).
          */
         public Builder clientToken(String clientToken) {
             this.putQueryParameter("ClientToken", clientToken);
@@ -108,7 +108,7 @@ public class ResetDiskRequest extends Request {
         }
 
         /**
-         * DiskId.
+         * The ID of the disk to be rolled back.
          */
         public Builder diskId(String diskId) {
             this.putQueryParameter("DiskId", diskId);
@@ -117,7 +117,7 @@ public class ResetDiskRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * The region ID of the simple application server for which the snapshot is created.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -126,7 +126,7 @@ public class ResetDiskRequest extends Request {
         }
 
         /**
-         * SnapshotId.
+         * The ID of the snapshot.
          */
         public Builder snapshotId(String snapshotId) {
             this.putQueryParameter("SnapshotId", snapshotId);

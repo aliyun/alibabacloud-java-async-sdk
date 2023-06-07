@@ -85,7 +85,7 @@ public class DescribeInvocationResultRequest extends Request {
         } 
 
         /**
-         * InstanceId.
+         * The ID of the simple application server.
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -94,7 +94,7 @@ public class DescribeInvocationResultRequest extends Request {
         }
 
         /**
-         * InvokeId.
+         * The ID of the command task. You can call the [DescribeInvocations](~~439368~~) operation to query the task IDs.
          */
         public Builder invokeId(String invokeId) {
             this.putQueryParameter("InvokeId", invokeId);
@@ -103,7 +103,7 @@ public class DescribeInvocationResultRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * The region ID of the simple application server. You can call the [DescribeRegions](~~25609~~) operation to query the most recent region list.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);

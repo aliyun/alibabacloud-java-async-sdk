@@ -86,7 +86,7 @@ public class ListFirewallRulesResponseBody extends TeaModel {
         private Integer totalCount; 
 
         /**
-         * FirewallRules.
+         * Details about the firewall rules.
          */
         public Builder firewallRules(java.util.List < FirewallRules> firewallRules) {
             this.firewallRules = firewallRules;
@@ -94,7 +94,7 @@ public class ListFirewallRulesResponseBody extends TeaModel {
         }
 
         /**
-         * PageNumber.
+         * The page number of the returned page.
          */
         public Builder pageNumber(Integer pageNumber) {
             this.pageNumber = pageNumber;
@@ -102,7 +102,7 @@ public class ListFirewallRulesResponseBody extends TeaModel {
         }
 
         /**
-         * PageSize.
+         * The number of entries returned per page.
          */
         public Builder pageSize(Integer pageSize) {
             this.pageSize = pageSize;
@@ -110,7 +110,7 @@ public class ListFirewallRulesResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -118,7 +118,7 @@ public class ListFirewallRulesResponseBody extends TeaModel {
         }
 
         /**
-         * TotalCount.
+         * The total number of firewall rules.
          */
         public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;
@@ -132,6 +132,9 @@ public class ListFirewallRulesResponseBody extends TeaModel {
     } 
 
     public static class FirewallRules extends TeaModel {
+        @NameInMap("Policy")
+        private String policy;
+
         @NameInMap("Port")
         private String port;
 
@@ -144,11 +147,16 @@ public class ListFirewallRulesResponseBody extends TeaModel {
         @NameInMap("RuleProtocol")
         private String ruleProtocol;
 
+        @NameInMap("SourceCidrIp")
+        private String sourceCidrIp;
+
         private FirewallRules(Builder builder) {
+            this.policy = builder.policy;
             this.port = builder.port;
             this.remark = builder.remark;
             this.ruleId = builder.ruleId;
             this.ruleProtocol = builder.ruleProtocol;
+            this.sourceCidrIp = builder.sourceCidrIp;
         }
 
         public static Builder builder() {
@@ -157,6 +165,13 @@ public class ListFirewallRulesResponseBody extends TeaModel {
 
         public static FirewallRules create() {
             return builder().build();
+        }
+
+        /**
+         * @return policy
+         */
+        public String getPolicy() {
+            return this.policy;
         }
 
         /**
@@ -187,14 +202,31 @@ public class ListFirewallRulesResponseBody extends TeaModel {
             return this.ruleProtocol;
         }
 
+        /**
+         * @return sourceCidrIp
+         */
+        public String getSourceCidrIp() {
+            return this.sourceCidrIp;
+        }
+
         public static final class Builder {
+            private String policy; 
             private String port; 
             private String remark; 
             private String ruleId; 
             private String ruleProtocol; 
+            private String sourceCidrIp; 
 
             /**
-             * Port.
+             * Policy.
+             */
+            public Builder policy(String policy) {
+                this.policy = policy;
+                return this;
+            }
+
+            /**
+             * The port range.
              */
             public Builder port(String port) {
                 this.port = port;
@@ -202,7 +234,7 @@ public class ListFirewallRulesResponseBody extends TeaModel {
             }
 
             /**
-             * Remark.
+             * The remarks of the firewall rule.
              */
             public Builder remark(String remark) {
                 this.remark = remark;
@@ -210,7 +242,7 @@ public class ListFirewallRulesResponseBody extends TeaModel {
             }
 
             /**
-             * RuleId.
+             * The ID of the firewall rule.
              */
             public Builder ruleId(String ruleId) {
                 this.ruleId = ruleId;
@@ -218,10 +250,23 @@ public class ListFirewallRulesResponseBody extends TeaModel {
             }
 
             /**
-             * RuleProtocol.
+             * The transport layer protocol. Valid values:
+             * <p>
+             * 
+             * *   TCP: the TCP protocol.
+             * *   UDP: the UDP protocol.
+             * *   TCP+UDP: the TCP and UDP protocols.
              */
             public Builder ruleProtocol(String ruleProtocol) {
                 this.ruleProtocol = ruleProtocol;
+                return this;
+            }
+
+            /**
+             * SourceCidrIp.
+             */
+            public Builder sourceCidrIp(String sourceCidrIp) {
+                this.sourceCidrIp = sourceCidrIp;
                 return this;
             }
 

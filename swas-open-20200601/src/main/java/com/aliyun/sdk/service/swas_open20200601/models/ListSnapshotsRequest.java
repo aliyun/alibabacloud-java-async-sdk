@@ -39,6 +39,10 @@ public class ListSnapshotsRequest extends Request {
     @NameInMap("SnapshotIds")
     private String snapshotIds;
 
+    @Query
+    @NameInMap("SourceDiskType")
+    private String sourceDiskType;
+
     private ListSnapshotsRequest(Builder builder) {
         super(builder);
         this.diskId = builder.diskId;
@@ -47,6 +51,7 @@ public class ListSnapshotsRequest extends Request {
         this.pageSize = builder.pageSize;
         this.regionId = builder.regionId;
         this.snapshotIds = builder.snapshotIds;
+        this.sourceDiskType = builder.sourceDiskType;
     }
 
     public static Builder builder() {
@@ -104,6 +109,13 @@ public class ListSnapshotsRequest extends Request {
         return this.snapshotIds;
     }
 
+    /**
+     * @return sourceDiskType
+     */
+    public String getSourceDiskType() {
+        return this.sourceDiskType;
+    }
+
     public static final class Builder extends Request.Builder<ListSnapshotsRequest, Builder> {
         private String diskId; 
         private String instanceId; 
@@ -111,6 +123,7 @@ public class ListSnapshotsRequest extends Request {
         private Integer pageSize; 
         private String regionId; 
         private String snapshotIds; 
+        private String sourceDiskType; 
 
         private Builder() {
             super();
@@ -124,10 +137,11 @@ public class ListSnapshotsRequest extends Request {
             this.pageSize = request.pageSize;
             this.regionId = request.regionId;
             this.snapshotIds = request.snapshotIds;
+            this.sourceDiskType = request.sourceDiskType;
         } 
 
         /**
-         * DiskId.
+         * The ID of the source disk.
          */
         public Builder diskId(String diskId) {
             this.putQueryParameter("DiskId", diskId);
@@ -136,7 +150,7 @@ public class ListSnapshotsRequest extends Request {
         }
 
         /**
-         * InstanceId.
+         * The ID of the simple application server.
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -145,7 +159,10 @@ public class ListSnapshotsRequest extends Request {
         }
 
         /**
-         * PageNumber.
+         * The number of the page to return.
+         * <p>
+         * 
+         * Default value: 1.
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -154,7 +171,10 @@ public class ListSnapshotsRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * The number of entries to return on each page. Maximum value: 100.
+         * <p>
+         * 
+         * Default value: 10.
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -163,7 +183,7 @@ public class ListSnapshotsRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * The region ID of the simple application server.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -172,11 +192,20 @@ public class ListSnapshotsRequest extends Request {
         }
 
         /**
-         * SnapshotIds.
+         * The IDs of the snapshots. The value can be a JSON array that consists of up to 100 snapshot IDs. Separate the snapshot IDs with commas (,).
          */
         public Builder snapshotIds(String snapshotIds) {
             this.putQueryParameter("SnapshotIds", snapshotIds);
             this.snapshotIds = snapshotIds;
+            return this;
+        }
+
+        /**
+         * SourceDiskType.
+         */
+        public Builder sourceDiskType(String sourceDiskType) {
+            this.putQueryParameter("SourceDiskType", sourceDiskType);
+            this.sourceDiskType = sourceDiskType;
             return this;
         }
 

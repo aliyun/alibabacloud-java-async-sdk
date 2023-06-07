@@ -1,0 +1,104 @@
+// This file is auto-generated, don't edit it. Thanks.
+package com.aliyun.sdk.service.swas_open20200601.models;
+
+import com.aliyun.core.annotation.*;
+import darabonba.core.RequestModel;
+import darabonba.core.TeaModel;
+import com.aliyun.sdk.gateway.pop.models.*;
+
+/**
+ * {@link DescribeSecurityAgentStatusResponse} extends {@link TeaModel}
+ *
+ * <p>DescribeSecurityAgentStatusResponse</p>
+ */
+public class DescribeSecurityAgentStatusResponse extends Response {
+    @NameInMap("headers")
+    @Validation(required = true)
+    private java.util.Map < String, String > headers;
+
+    @NameInMap("body")
+    @Validation(required = true)
+    private DescribeSecurityAgentStatusResponseBody body;
+
+    private DescribeSecurityAgentStatusResponse(BuilderImpl builder) {
+        super(builder);
+        this.headers = builder.headers;
+        this.body = builder.body;
+    }
+
+    public static DescribeSecurityAgentStatusResponse create() {
+        return new BuilderImpl().build();
+    }
+
+    @Override
+    public Builder toBuilder() {
+        return new BuilderImpl(this);
+    }
+
+    /**
+     * @return headers
+     */
+    public java.util.Map < String, String > getHeaders() {
+        return this.headers;
+    }
+
+    /**
+     * @return body
+     */
+    public DescribeSecurityAgentStatusResponseBody getBody() {
+        return this.body;
+    }
+
+    public interface Builder extends Response.Builder<DescribeSecurityAgentStatusResponse, Builder> {
+
+        Builder headers(java.util.Map < String, String > headers);
+
+        Builder body(DescribeSecurityAgentStatusResponseBody body);
+
+        @Override
+        DescribeSecurityAgentStatusResponse build();
+
+    } 
+
+    private static final class BuilderImpl
+            extends Response.BuilderImpl<DescribeSecurityAgentStatusResponse, Builder>
+            implements Builder {
+        private java.util.Map < String, String > headers; 
+        private DescribeSecurityAgentStatusResponseBody body; 
+
+        private BuilderImpl() {
+            super();
+        } 
+
+        private BuilderImpl(DescribeSecurityAgentStatusResponse response) {
+            super(response);
+            this.headers = response.headers;
+            this.body = response.body;
+        } 
+
+        /**
+         * headers.
+         */
+        @Override
+        public Builder headers(java.util.Map < String, String > headers) {
+            this.headers = headers;
+            return this;
+        }
+
+        /**
+         * body.
+         */
+        @Override
+        public Builder body(DescribeSecurityAgentStatusResponseBody body) {
+            this.body = body;
+            return this;
+        }
+
+        @Override
+        public DescribeSecurityAgentStatusResponse build() {
+            return new DescribeSecurityAgentStatusResponse(this);
+        } 
+
+    } 
+
+}

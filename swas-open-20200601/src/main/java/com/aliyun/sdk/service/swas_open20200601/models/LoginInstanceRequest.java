@@ -98,7 +98,7 @@ public class LoginInstanceRequest extends Request {
         } 
 
         /**
-         * InstanceId.
+         * The ID of the simple application server.
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -107,7 +107,11 @@ public class LoginInstanceRequest extends Request {
         }
 
         /**
-         * Password.
+         * The password that corresponds to the username.
+         * <p>
+         * 
+         * *   For a Linux server, you do not need to enter a password.
+         * *   For a Windows server, enter the password that you set. If you have not set a password for the simple application server, set a password. For more information, see [Reset the password](~~60055~~l).
          */
         public Builder password(String password) {
             this.putQueryParameter("Password", password);
@@ -116,7 +120,10 @@ public class LoginInstanceRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * The region ID of the simple application server.
+         * <p>
+         * 
+         * You can call the [ListRegions](~~189315~~) operation to query the most recent region list.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -125,7 +132,11 @@ public class LoginInstanceRequest extends Request {
         }
 
         /**
-         * Username.
+         * The username of the simple application server.
+         * <p>
+         * 
+         * *   For a Linux server, you do not need to enter a username.
+         * *   For a Windows server, the default username is `administrator`.
          */
         public Builder username(String username) {
             this.putQueryParameter("Username", username);

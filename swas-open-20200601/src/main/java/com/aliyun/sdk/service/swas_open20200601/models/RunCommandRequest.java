@@ -199,7 +199,14 @@ public class RunCommandRequest extends Request {
         } 
 
         /**
-         * CommandContent.
+         * The content of the command. Take note of the following items:
+         * <p>
+         * 
+         * *   When `EnableParameter` is set to true, the custom parameter feature is enabled and you can configure custom parameters based on the following rules:
+         * *   Define custom parameters in the {{}} format. Within `{{}}`, the spaces and line feeds before and after the parameter names are ignored.
+         * *   The number of custom parameters cannot be greater than 20.
+         * *   A custom parameter name can contain only letters, digits, underscores (\_), and hyphens (-). The name is case-insensitive.
+         * *   Each custom parameter name cannot exceed 64 bytes in length.
          */
         public Builder commandContent(String commandContent) {
             this.putQueryParameter("CommandContent", commandContent);
@@ -208,7 +215,10 @@ public class RunCommandRequest extends Request {
         }
 
         /**
-         * EnableParameter.
+         * Specifies whether to include custom parameters in the command.
+         * <p>
+         * 
+         * Default value: false.
          */
         public Builder enableParameter(Boolean enableParameter) {
             this.putQueryParameter("EnableParameter", enableParameter);
@@ -217,7 +227,7 @@ public class RunCommandRequest extends Request {
         }
 
         /**
-         * InstanceId.
+         * The ID of the simple application server.
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -226,7 +236,7 @@ public class RunCommandRequest extends Request {
         }
 
         /**
-         * Name.
+         * The name of the command.
          */
         public Builder name(String name) {
             this.putQueryParameter("Name", name);
@@ -235,7 +245,17 @@ public class RunCommandRequest extends Request {
         }
 
         /**
-         * Parameters.
+         * The custom parameters in the key-value pair format that are to be passed in when the command includes custom parameters. For example, if the command content is `echo {{name}}`, you can set the `Parameters` parameter to the `{"name":"Jack"}` key-value pair. The `name` key of the custom parameter is automatically replaced with the paired Jack value to generate a new command. As a result, the `echo Jack` command is actually run.
+         * <p>
+         * 
+         * Number of custom parameters ranges from 0 to 20. Take note of the following items:
+         * 
+         * *   The key cannot be an empty string and can be up to 64 characters in length.
+         * *   The value can be an empty string.
+         * *   After custom parameters and original command content are encoded in Base64, the command cannot exceed 16 KB in size.
+         * *   The value of Parameters must be included in the custom parameters specified when you created the command. You can use empty strings to represent the parameters that are not passed in.
+         * 
+         * This parameter is empty by default. You can leave this parameter empty to disable the custom parameter feature.
          */
         public Builder parameters(java.util.Map < String, ? > parameters) {
             String parametersShrink = shrink(parameters, "Parameters", "json");
@@ -245,7 +265,7 @@ public class RunCommandRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * The region ID of the simple application server. You can call the [ListRegions](~~189315~~) operation to query the most recent region list.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -254,7 +274,12 @@ public class RunCommandRequest extends Request {
         }
 
         /**
-         * Timeout.
+         * Specifies the timeout period of the command on the server.
+         * <p>
+         * 
+         * If a task that runs the command times out, Command Assistant forcefully terminates the task process. Valid values: 10 to 86400. Unit: seconds. The period of 86400 seconds is equal to 24 hours.
+         * 
+         * Default value: 60.
          */
         public Builder timeout(Integer timeout) {
             this.putQueryParameter("Timeout", timeout);
@@ -263,7 +288,12 @@ public class RunCommandRequest extends Request {
         }
 
         /**
-         * Type.
+         * The language type of the command. Valid values:
+         * <p>
+         * 
+         * *   RunBatScript: batch commands (applicable to Windows servers).
+         * *   RunPowerShellScript: PowerShell commands (applicable to Windows servers).
+         * *   RunShellScript: shell commands (applicable to Linux servers).
          */
         public Builder type(String type) {
             this.putQueryParameter("Type", type);
@@ -272,7 +302,10 @@ public class RunCommandRequest extends Request {
         }
 
         /**
-         * WindowsPasswordName.
+         * The name of the password to be used to run the command on a Windows server.
+         * <p>
+         * 
+         * If you want to use a username other than the default "system" username to run the command on a Windows server, you must specify both the WindowsPasswordName and WorkingUser parameters. The password is hosted in plaintext in the parameter repository of Operation Orchestration Service (OOS) to reduce the risk of password leaks. Only the name of the password is passed in by using the WindowsPasswordName parameter.
          */
         public Builder windowsPasswordName(String windowsPasswordName) {
             this.putQueryParameter("WindowsPasswordName", windowsPasswordName);
@@ -281,7 +314,11 @@ public class RunCommandRequest extends Request {
         }
 
         /**
-         * WorkingDir.
+         * The execution path of the command. You can specify a value for the parameter. Default execution paths vary based on the operating systems of the servers.
+         * <p>
+         * 
+         * *   For Linux servers, the default execution path is the /home directory of the root user.
+         * *   For Windows servers, the default execution path is C:\Windows\system32.
          */
         public Builder workingDir(String workingDir) {
             this.putQueryParameter("WorkingDir", workingDir);
@@ -290,7 +327,13 @@ public class RunCommandRequest extends Request {
         }
 
         /**
-         * WorkingUser.
+         * A user of the server who runs the command. We recommend that you run the command as a regular user to reduce security risks.
+         * <p>
+         * 
+         * Default value:
+         * 
+         * *   For Linux servers, the default value is root.
+         * *   For Windows servers, the default value is system.
          */
         public Builder workingUser(String workingUser) {
             this.putQueryParameter("WorkingUser", workingUser);

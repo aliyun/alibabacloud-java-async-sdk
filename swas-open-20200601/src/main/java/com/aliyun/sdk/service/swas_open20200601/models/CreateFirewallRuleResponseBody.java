@@ -50,7 +50,7 @@ public class CreateFirewallRuleResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * FirewallId.
+         * The ID of the firewall rule.
          */
         public Builder firewallId(String firewallId) {
             this.firewallId = firewallId;
@@ -58,7 +58,7 @@ public class CreateFirewallRuleResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

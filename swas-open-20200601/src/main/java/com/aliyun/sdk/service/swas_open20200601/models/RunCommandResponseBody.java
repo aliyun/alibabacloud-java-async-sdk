@@ -50,7 +50,7 @@ public class RunCommandResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * InvokeId.
+         * The ID of the command task.
          */
         public Builder invokeId(String invokeId) {
             this.invokeId = invokeId;
@@ -58,7 +58,7 @@ public class RunCommandResponseBody extends TeaModel {
         }
 
         /**
-         * Id of the request
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

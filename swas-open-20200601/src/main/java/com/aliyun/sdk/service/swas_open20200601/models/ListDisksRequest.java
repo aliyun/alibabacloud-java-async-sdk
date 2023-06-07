@@ -17,6 +17,10 @@ public class ListDisksRequest extends Request {
     private String diskIds;
 
     @Query
+    @NameInMap("DiskType")
+    private String diskType;
+
+    @Query
     @NameInMap("InstanceId")
     private String instanceId;
 
@@ -38,6 +42,7 @@ public class ListDisksRequest extends Request {
     private ListDisksRequest(Builder builder) {
         super(builder);
         this.diskIds = builder.diskIds;
+        this.diskType = builder.diskType;
         this.instanceId = builder.instanceId;
         this.pageNumber = builder.pageNumber;
         this.pageSize = builder.pageSize;
@@ -62,6 +67,13 @@ public class ListDisksRequest extends Request {
      */
     public String getDiskIds() {
         return this.diskIds;
+    }
+
+    /**
+     * @return diskType
+     */
+    public String getDiskType() {
+        return this.diskType;
     }
 
     /**
@@ -94,6 +106,7 @@ public class ListDisksRequest extends Request {
 
     public static final class Builder extends Request.Builder<ListDisksRequest, Builder> {
         private String diskIds; 
+        private String diskType; 
         private String instanceId; 
         private Integer pageNumber; 
         private Integer pageSize; 
@@ -106,6 +119,7 @@ public class ListDisksRequest extends Request {
         private Builder(ListDisksRequest request) {
             super(request);
             this.diskIds = request.diskIds;
+            this.diskType = request.diskType;
             this.instanceId = request.instanceId;
             this.pageNumber = request.pageNumber;
             this.pageSize = request.pageSize;
@@ -113,7 +127,7 @@ public class ListDisksRequest extends Request {
         } 
 
         /**
-         * DiskIds.
+         * The IDs of the disks. The value can be a JSON array that consists of up to 100 disk IDs. Separate the disk IDs with commas (,).
          */
         public Builder diskIds(String diskIds) {
             this.putQueryParameter("DiskIds", diskIds);
@@ -122,7 +136,16 @@ public class ListDisksRequest extends Request {
         }
 
         /**
-         * InstanceId.
+         * DiskType.
+         */
+        public Builder diskType(String diskType) {
+            this.putQueryParameter("DiskType", diskType);
+            this.diskType = diskType;
+            return this;
+        }
+
+        /**
+         * The ID of the simple application server.
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -131,7 +154,10 @@ public class ListDisksRequest extends Request {
         }
 
         /**
-         * PageNumber.
+         * The number of the page to return.
+         * <p>
+         * 
+         * Default value: 1.
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -140,7 +166,12 @@ public class ListDisksRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * The number of entries to return on each page.
+         * <p>
+         * 
+         * Maximum value: 100.
+         * 
+         * Default value: 10.
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -149,7 +180,7 @@ public class ListDisksRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * The region ID of the simple application server.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);

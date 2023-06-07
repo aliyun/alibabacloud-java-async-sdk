@@ -86,7 +86,7 @@ public class ListSnapshotsResponseBody extends TeaModel {
         private Integer totalCount; 
 
         /**
-         * PageNumber.
+         * The page number of the returned page.
          */
         public Builder pageNumber(Integer pageNumber) {
             this.pageNumber = pageNumber;
@@ -94,7 +94,7 @@ public class ListSnapshotsResponseBody extends TeaModel {
         }
 
         /**
-         * PageSize.
+         * The number of entries returned per page.
          */
         public Builder pageSize(Integer pageSize) {
             this.pageSize = pageSize;
@@ -102,7 +102,7 @@ public class ListSnapshotsResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -110,7 +110,7 @@ public class ListSnapshotsResponseBody extends TeaModel {
         }
 
         /**
-         * Snapshots.
+         * Details about the snapshots.
          */
         public Builder snapshots(java.util.List < Snapshots> snapshots) {
             this.snapshots = snapshots;
@@ -118,7 +118,7 @@ public class ListSnapshotsResponseBody extends TeaModel {
         }
 
         /**
-         * TotalCount.
+         * The total number of snapshots.
          */
         public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;
@@ -135,6 +135,9 @@ public class ListSnapshotsResponseBody extends TeaModel {
         @NameInMap("CreationTime")
         private String creationTime;
 
+        @NameInMap("InstanceId")
+        private String instanceId;
+
         @NameInMap("Progress")
         private String progress;
 
@@ -143,6 +146,9 @@ public class ListSnapshotsResponseBody extends TeaModel {
 
         @NameInMap("Remark")
         private String remark;
+
+        @NameInMap("RollbackTime")
+        private String rollbackTime;
 
         @NameInMap("SnapshotId")
         private String snapshotId;
@@ -161,9 +167,11 @@ public class ListSnapshotsResponseBody extends TeaModel {
 
         private Snapshots(Builder builder) {
             this.creationTime = builder.creationTime;
+            this.instanceId = builder.instanceId;
             this.progress = builder.progress;
             this.regionId = builder.regionId;
             this.remark = builder.remark;
+            this.rollbackTime = builder.rollbackTime;
             this.snapshotId = builder.snapshotId;
             this.snapshotName = builder.snapshotName;
             this.sourceDiskId = builder.sourceDiskId;
@@ -187,6 +195,13 @@ public class ListSnapshotsResponseBody extends TeaModel {
         }
 
         /**
+         * @return instanceId
+         */
+        public String getInstanceId() {
+            return this.instanceId;
+        }
+
+        /**
          * @return progress
          */
         public String getProgress() {
@@ -205,6 +220,13 @@ public class ListSnapshotsResponseBody extends TeaModel {
          */
         public String getRemark() {
             return this.remark;
+        }
+
+        /**
+         * @return rollbackTime
+         */
+        public String getRollbackTime() {
+            return this.rollbackTime;
         }
 
         /**
@@ -244,9 +266,11 @@ public class ListSnapshotsResponseBody extends TeaModel {
 
         public static final class Builder {
             private String creationTime; 
+            private String instanceId; 
             private String progress; 
             private String regionId; 
             private String remark; 
+            private String rollbackTime; 
             private String snapshotId; 
             private String snapshotName; 
             private String sourceDiskId; 
@@ -254,7 +278,7 @@ public class ListSnapshotsResponseBody extends TeaModel {
             private String status; 
 
             /**
-             * CreationTime.
+             * The time when the snapshot was created. The time follows the [ISO 8601](~~25696~~) standard in the yyyy-MM-ddTHH:mm:ssZ format. The time is displayed in UTC.
              */
             public Builder creationTime(String creationTime) {
                 this.creationTime = creationTime;
@@ -262,7 +286,15 @@ public class ListSnapshotsResponseBody extends TeaModel {
             }
 
             /**
-             * Progress.
+             * InstanceId.
+             */
+            public Builder instanceId(String instanceId) {
+                this.instanceId = instanceId;
+                return this;
+            }
+
+            /**
+             * The progress of snapshot creation.
              */
             public Builder progress(String progress) {
                 this.progress = progress;
@@ -270,7 +302,7 @@ public class ListSnapshotsResponseBody extends TeaModel {
             }
 
             /**
-             * RegionId.
+             * The ID of the region.
              */
             public Builder regionId(String regionId) {
                 this.regionId = regionId;
@@ -278,7 +310,7 @@ public class ListSnapshotsResponseBody extends TeaModel {
             }
 
             /**
-             * Remark.
+             * The remarks of the snapshot.
              */
             public Builder remark(String remark) {
                 this.remark = remark;
@@ -286,7 +318,15 @@ public class ListSnapshotsResponseBody extends TeaModel {
             }
 
             /**
-             * SnapshotId.
+             * RollbackTime.
+             */
+            public Builder rollbackTime(String rollbackTime) {
+                this.rollbackTime = rollbackTime;
+                return this;
+            }
+
+            /**
+             * The ID of the snapshot.
              */
             public Builder snapshotId(String snapshotId) {
                 this.snapshotId = snapshotId;
@@ -294,7 +334,7 @@ public class ListSnapshotsResponseBody extends TeaModel {
             }
 
             /**
-             * SnapshotName.
+             * The name of the snapshot.
              */
             public Builder snapshotName(String snapshotName) {
                 this.snapshotName = snapshotName;
@@ -302,7 +342,7 @@ public class ListSnapshotsResponseBody extends TeaModel {
             }
 
             /**
-             * SourceDiskId.
+             * The ID of the source disk. This parameter has a value even after the source disk is released.
              */
             public Builder sourceDiskId(String sourceDiskId) {
                 this.sourceDiskId = sourceDiskId;
@@ -310,7 +350,11 @@ public class ListSnapshotsResponseBody extends TeaModel {
             }
 
             /**
-             * SourceDiskType.
+             * The type of the source disk. Valid values:
+             * <p>
+             * 
+             * *   System: system disk
+             * *   data: data disk
              */
             public Builder sourceDiskType(String sourceDiskType) {
                 this.sourceDiskType = sourceDiskType;
@@ -318,7 +362,12 @@ public class ListSnapshotsResponseBody extends TeaModel {
             }
 
             /**
-             * Status.
+             * The status of the snapshot. Valid values:
+             * <p>
+             * 
+             * *   Progressing: The snapshot is being created.
+             * *   Accomplished: The snapshot is created.
+             * *   Failed: The snapshot failed to be created.
              */
             public Builder status(String status) {
                 this.status = status;

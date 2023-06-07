@@ -99,7 +99,7 @@ public class RenewInstanceRequest extends Request {
         } 
 
         /**
-         * ClientToken.
+         * The client token that is used to ensure the idempotence of the request. You can use the client to generate the value, but you must ensure that it is unique among different requests. The token can only contain ASCII characters and cannot exceed 64 characters in length. For more information, see [How to ensure idempotence](~~25693~~).
          */
         public Builder clientToken(String clientToken) {
             this.putQueryParameter("ClientToken", clientToken);
@@ -108,7 +108,7 @@ public class RenewInstanceRequest extends Request {
         }
 
         /**
-         * InstanceId.
+         * The ID of the simple application server.
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -117,7 +117,7 @@ public class RenewInstanceRequest extends Request {
         }
 
         /**
-         * Period.
+         * The renewal duration. Unit: months Valid values: 1, 3, 6, 12, 24, and 36.
          */
         public Builder period(Integer period) {
             this.putQueryParameter("Period", period);
@@ -126,7 +126,7 @@ public class RenewInstanceRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * The region ID of the simple application server.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);

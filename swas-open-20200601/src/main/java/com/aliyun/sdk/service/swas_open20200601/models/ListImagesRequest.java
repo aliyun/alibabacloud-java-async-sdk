@@ -83,7 +83,7 @@ public class ListImagesRequest extends Request {
         } 
 
         /**
-         * ImageIds.
+         * The IDs of the images. The value can be a JSON array that consists of up to 50 image IDs, in the format of `["xxx", "yyy", … "zzz"]`. Separate the image IDs with commas (,).
          */
         public Builder imageIds(String imageIds) {
             this.putQueryParameter("ImageIds", imageIds);
@@ -92,7 +92,12 @@ public class ListImagesRequest extends Request {
         }
 
         /**
-         * ImageType.
+         * The type of the image. Valid values:
+         * <p>
+         * 
+         * *   system
+         * *   app
+         * *   custom
          */
         public Builder imageType(String imageType) {
             this.putQueryParameter("ImageType", imageType);
@@ -101,7 +106,7 @@ public class ListImagesRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * The region ID of the images. You can call the [ListRegions](~~189315~~) operation to query the most recent region list.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);

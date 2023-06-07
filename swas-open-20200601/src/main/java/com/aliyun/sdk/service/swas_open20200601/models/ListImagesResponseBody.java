@@ -50,7 +50,7 @@ public class ListImagesResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * Images.
+         * Details of the images.
          */
         public Builder images(java.util.List < Images> images) {
             this.images = images;
@@ -58,7 +58,7 @@ public class ListImagesResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -146,7 +146,7 @@ public class ListImagesResponseBody extends TeaModel {
             private String platform; 
 
             /**
-             * Description.
+             * The description of the image.
              */
             public Builder description(String description) {
                 this.description = description;
@@ -154,7 +154,7 @@ public class ListImagesResponseBody extends TeaModel {
             }
 
             /**
-             * ImageId.
+             * The ID of the image.
              */
             public Builder imageId(String imageId) {
                 this.imageId = imageId;
@@ -162,7 +162,7 @@ public class ListImagesResponseBody extends TeaModel {
             }
 
             /**
-             * ImageName.
+             * The name of the image.
              */
             public Builder imageName(String imageName) {
                 this.imageName = imageName;
@@ -170,7 +170,12 @@ public class ListImagesResponseBody extends TeaModel {
             }
 
             /**
-             * ImageType.
+             * The type of the image. Valid values:
+             * <p>
+             * 
+             * *   system
+             * *   app
+             * *   custom
              */
             public Builder imageType(String imageType) {
                 this.imageType = imageType;
@@ -178,7 +183,11 @@ public class ListImagesResponseBody extends TeaModel {
             }
 
             /**
-             * Platform.
+             * The operating system type of the image. Valid values:
+             * <p>
+             * 
+             * *   Linux
+             * *   Windows
              */
             public Builder platform(String platform) {
                 this.platform = platform;

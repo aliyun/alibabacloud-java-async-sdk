@@ -127,7 +127,10 @@ public class ListInstancesRequest extends Request {
         } 
 
         /**
-         * ChargeType.
+         * The billing method of the simple application server. Set the value to PrePaid, which indicates the subscription billing method. Only the subscription billing method is supported.
+         * <p>
+         * 
+         * Default value: PrePaid.
          */
         public Builder chargeType(String chargeType) {
             this.putQueryParameter("ChargeType", chargeType);
@@ -136,7 +139,10 @@ public class ListInstancesRequest extends Request {
         }
 
         /**
-         * InstanceIds.
+         * The IDs of the simple application servers. The value can be a JSON array that consists of up to 100 simple application server IDs. Separate the server IDs with commas (,).
+         * <p>
+         * 
+         * >  If you specify both `InstanceIds` and `PublicIpAddresses`, make sure that each specified ID and its corresponding public IP address belong to the same simple application server. Otherwise, an empty result is returned.
          */
         public Builder instanceIds(String instanceIds) {
             this.putQueryParameter("InstanceIds", instanceIds);
@@ -145,7 +151,10 @@ public class ListInstancesRequest extends Request {
         }
 
         /**
-         * PageNumber.
+         * The number of the page to return.
+         * <p>
+         * 
+         * Default value: 1.
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -154,7 +163,10 @@ public class ListInstancesRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * The number of entries to return on each page. Maximum value: 100.
+         * <p>
+         * 
+         * Default value: 10.
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -163,7 +175,10 @@ public class ListInstancesRequest extends Request {
         }
 
         /**
-         * PublicIpAddresses.
+         * The public IP addresses of the simple application servers. The value can be a JSON array that consists of up to 100 IP addresses. Separate the IP addresses with commas (,).
+         * <p>
+         * 
+         * >  If you specify both `InstanceIds` and `PublicIpAddresses`, make sure that each specified ID and its corresponding public IP address belong to the same simple application server. Otherwise, an empty result is returned.
          */
         public Builder publicIpAddresses(String publicIpAddresses) {
             this.putQueryParameter("PublicIpAddresses", publicIpAddresses);
@@ -172,7 +187,7 @@ public class ListInstancesRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * The region ID of the simple application servers.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);

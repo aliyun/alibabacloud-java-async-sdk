@@ -86,7 +86,7 @@ public class ListDisksResponseBody extends TeaModel {
         private Integer totalCount; 
 
         /**
-         * Disks.
+         * Details about the disks.
          */
         public Builder disks(java.util.List < Disks> disks) {
             this.disks = disks;
@@ -94,7 +94,7 @@ public class ListDisksResponseBody extends TeaModel {
         }
 
         /**
-         * PageNumber.
+         * The page number of the returned page.
          */
         public Builder pageNumber(Integer pageNumber) {
             this.pageNumber = pageNumber;
@@ -102,7 +102,7 @@ public class ListDisksResponseBody extends TeaModel {
         }
 
         /**
-         * PageSize.
+         * The number of entries returned per page.
          */
         public Builder pageSize(Integer pageSize) {
             this.pageSize = pageSize;
@@ -110,7 +110,7 @@ public class ListDisksResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -118,7 +118,7 @@ public class ListDisksResponseBody extends TeaModel {
         }
 
         /**
-         * TotalCount.
+         * The total number of disks.
          */
         public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;
@@ -156,8 +156,14 @@ public class ListDisksResponseBody extends TeaModel {
         @NameInMap("InstanceId")
         private String instanceId;
 
+        @NameInMap("InstanceName")
+        private String instanceName;
+
         @NameInMap("RegionId")
         private String regionId;
+
+        @NameInMap("Remark")
+        private String remark;
 
         @NameInMap("Size")
         private Integer size;
@@ -174,7 +180,9 @@ public class ListDisksResponseBody extends TeaModel {
             this.diskName = builder.diskName;
             this.diskType = builder.diskType;
             this.instanceId = builder.instanceId;
+            this.instanceName = builder.instanceName;
             this.regionId = builder.regionId;
+            this.remark = builder.remark;
             this.size = builder.size;
             this.status = builder.status;
         }
@@ -244,10 +252,24 @@ public class ListDisksResponseBody extends TeaModel {
         }
 
         /**
+         * @return instanceName
+         */
+        public String getInstanceName() {
+            return this.instanceName;
+        }
+
+        /**
          * @return regionId
          */
         public String getRegionId() {
             return this.regionId;
+        }
+
+        /**
+         * @return remark
+         */
+        public String getRemark() {
+            return this.remark;
         }
 
         /**
@@ -273,12 +295,18 @@ public class ListDisksResponseBody extends TeaModel {
             private String diskName; 
             private String diskType; 
             private String instanceId; 
+            private String instanceName; 
             private String regionId; 
+            private String remark; 
             private Integer size; 
             private String status; 
 
             /**
-             * Category.
+             * The category of the disk. Valid values: Valid values:
+             * <p>
+             * 
+             * *   ESSD: enhanced SSD (ESSD) at performance level 0 (PL0)
+             * *   SSD: standard SSD
              */
             public Builder category(String category) {
                 this.category = category;
@@ -286,7 +314,7 @@ public class ListDisksResponseBody extends TeaModel {
             }
 
             /**
-             * CreationTime.
+             * The time when the disk was created. The time follows the [ISO 8601](~~25696~~) standard in the yyyy-MM-ddTHH:mm:ssZ format. The time is displayed in UTC.
              */
             public Builder creationTime(String creationTime) {
                 this.creationTime = creationTime;
@@ -294,7 +322,7 @@ public class ListDisksResponseBody extends TeaModel {
             }
 
             /**
-             * Device.
+             * The device name of the disk on the simple application server.
              */
             public Builder device(String device) {
                 this.device = device;
@@ -302,7 +330,7 @@ public class ListDisksResponseBody extends TeaModel {
             }
 
             /**
-             * DiskChargeType.
+             * The billing method of the disk.
              */
             public Builder diskChargeType(String diskChargeType) {
                 this.diskChargeType = diskChargeType;
@@ -310,7 +338,7 @@ public class ListDisksResponseBody extends TeaModel {
             }
 
             /**
-             * DiskId.
+             * The ID of the disk.
              */
             public Builder diskId(String diskId) {
                 this.diskId = diskId;
@@ -318,7 +346,7 @@ public class ListDisksResponseBody extends TeaModel {
             }
 
             /**
-             * DiskName.
+             * The name of the disk.
              */
             public Builder diskName(String diskName) {
                 this.diskName = diskName;
@@ -326,7 +354,11 @@ public class ListDisksResponseBody extends TeaModel {
             }
 
             /**
-             * DiskType.
+             * The type of the disk. Valid values:
+             * <p>
+             * 
+             * *   System: system disk
+             * *   Data: data disk
              */
             public Builder diskType(String diskType) {
                 this.diskType = diskType;
@@ -334,7 +366,7 @@ public class ListDisksResponseBody extends TeaModel {
             }
 
             /**
-             * InstanceId.
+             * The ID of the simple application server to which the disk is attached.
              */
             public Builder instanceId(String instanceId) {
                 this.instanceId = instanceId;
@@ -342,7 +374,15 @@ public class ListDisksResponseBody extends TeaModel {
             }
 
             /**
-             * RegionId.
+             * InstanceName.
+             */
+            public Builder instanceName(String instanceName) {
+                this.instanceName = instanceName;
+                return this;
+            }
+
+            /**
+             * The region ID of the server.
              */
             public Builder regionId(String regionId) {
                 this.regionId = regionId;
@@ -350,7 +390,15 @@ public class ListDisksResponseBody extends TeaModel {
             }
 
             /**
-             * Size.
+             * Remark.
+             */
+            public Builder remark(String remark) {
+                this.remark = remark;
+                return this;
+            }
+
+            /**
+             * The size of the disk. Unit: GB.
              */
             public Builder size(Integer size) {
                 this.size = size;
@@ -358,7 +406,15 @@ public class ListDisksResponseBody extends TeaModel {
             }
 
             /**
-             * Status.
+             * The status of the disk. Valid values:
+             * <p>
+             * 
+             * *   ReIniting: The disk is being initialized.
+             * *   Creating: The disk is being created.
+             * *   In_Use: The disk is being used.
+             * *   Available: The disk can be attached.
+             * *   Attaching: The disk is being attached.
+             * *   Detaching: The disk is being detached.
              */
             public Builder status(String status) {
                 this.status = status;

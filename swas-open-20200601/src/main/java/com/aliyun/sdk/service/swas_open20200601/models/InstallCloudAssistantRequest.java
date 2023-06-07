@@ -70,7 +70,7 @@ public class InstallCloudAssistantRequest extends Request {
         } 
 
         /**
-         * InstanceIds.
+         * The IDs of the simple application servers.
          */
         public Builder instanceIds(java.util.List < String > instanceIds) {
             String instanceIdsShrink = shrink(instanceIds, "InstanceIds", "json");
@@ -80,7 +80,7 @@ public class InstallCloudAssistantRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * The region ID of the simple application server. You can call the [ListRegions](~~189315~~) operation to query the most recent region list.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);

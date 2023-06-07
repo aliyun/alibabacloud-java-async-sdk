@@ -50,7 +50,7 @@ public class ListInstancePlansModificationResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * Plans.
+         * Details about the plans.
          */
         public Builder plans(java.util.List < Plans> plans) {
             this.plans = plans;
@@ -58,7 +58,7 @@ public class ListInstancePlansModificationResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -206,7 +206,7 @@ public class ListInstancePlansModificationResponseBody extends TeaModel {
             private String supportPlatform; 
 
             /**
-             * Bandwidth.
+             * The peak bandwidth. Unit: Mbit/s.
              */
             public Builder bandwidth(Integer bandwidth) {
                 this.bandwidth = bandwidth;
@@ -214,7 +214,7 @@ public class ListInstancePlansModificationResponseBody extends TeaModel {
             }
 
             /**
-             * Core.
+             * The number of vCPUs.
              */
             public Builder core(Integer core) {
                 this.core = core;
@@ -222,7 +222,11 @@ public class ListInstancePlansModificationResponseBody extends TeaModel {
             }
 
             /**
-             * Currency.
+             * The unit of the plan price. Valid values:
+             * <p>
+             * 
+             * *   CNY
+             * *   USD
              */
             public Builder currency(String currency) {
                 this.currency = currency;
@@ -230,7 +234,7 @@ public class ListInstancePlansModificationResponseBody extends TeaModel {
             }
 
             /**
-             * DiskSize.
+             * The disk size of the simple application server. Unit: GB.
              */
             public Builder diskSize(Integer diskSize) {
                 this.diskSize = diskSize;
@@ -238,7 +242,11 @@ public class ListInstancePlansModificationResponseBody extends TeaModel {
             }
 
             /**
-             * DiskType.
+             * The category of the disk. Valid values:
+             * <p>
+             * 
+             * *   SSD: standard SSD
+             * *   ESSD: enhanced SSD
              */
             public Builder diskType(String diskType) {
                 this.diskType = diskType;
@@ -246,7 +254,7 @@ public class ListInstancePlansModificationResponseBody extends TeaModel {
             }
 
             /**
-             * Flow.
+             * The monthly data transfer quota. Unit: GB.
              */
             public Builder flow(Integer flow) {
                 this.flow = flow;
@@ -254,7 +262,7 @@ public class ListInstancePlansModificationResponseBody extends TeaModel {
             }
 
             /**
-             * Memory.
+             * The memory size. Unit: GB.
              */
             public Builder memory(Integer memory) {
                 this.memory = memory;
@@ -262,7 +270,7 @@ public class ListInstancePlansModificationResponseBody extends TeaModel {
             }
 
             /**
-             * OriginPrice.
+             * The price of the plan.
              */
             public Builder originPrice(Double originPrice) {
                 this.originPrice = originPrice;
@@ -270,7 +278,7 @@ public class ListInstancePlansModificationResponseBody extends TeaModel {
             }
 
             /**
-             * PlanId.
+             * The ID of the plan.
              */
             public Builder planId(String planId) {
                 this.planId = planId;
@@ -278,7 +286,7 @@ public class ListInstancePlansModificationResponseBody extends TeaModel {
             }
 
             /**
-             * SupportPlatform.
+             * The operating system types supported by the plan.
              */
             public Builder supportPlatform(String supportPlatform) {
                 this.supportPlatform = supportPlatform;

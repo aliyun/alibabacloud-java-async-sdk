@@ -112,7 +112,7 @@ public class DescribeInvocationsRequest extends Request {
         } 
 
         /**
-         * InstanceId.
+         * The ID of the simple application server.
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -121,7 +121,12 @@ public class DescribeInvocationsRequest extends Request {
         }
 
         /**
-         * InvokeStatus.
+         * The status of the command. Valid values:
+         * <p>
+         * 
+         * *   Running: The command is running.
+         * *   Finished: The command finishes running.
+         * *   Failed: The command failed to be run.
          */
         public Builder invokeStatus(String invokeStatus) {
             this.putQueryParameter("InvokeStatus", invokeStatus);
@@ -130,7 +135,12 @@ public class DescribeInvocationsRequest extends Request {
         }
 
         /**
-         * PageNumber.
+         * The number of the page to return.
+         * <p>
+         * 
+         * Pages start from page 1.
+         * 
+         * Default value: 1.
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -139,7 +149,12 @@ public class DescribeInvocationsRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * The number of entries to return on each page.
+         * <p>
+         * 
+         * Maximum value: 50.
+         * 
+         * Default value: 10
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -148,7 +163,7 @@ public class DescribeInvocationsRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * The region ID of the simple application server. You can call the [ListRegions](~~189315~~) operation to query the most recent region list.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
