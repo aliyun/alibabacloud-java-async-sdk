@@ -74,7 +74,7 @@ public class BatchDisableJobsResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * The status code.
+         * The HTTP status code.
          */
         public Builder code(Integer code) {
             this.code = code;
@@ -82,7 +82,7 @@ public class BatchDisableJobsResponseBody extends TeaModel {
         }
 
         /**
-         * The additional information returned.
+         * The additional information that was returned.
          */
         public Builder message(String message) {
             this.message = message;
@@ -98,11 +98,11 @@ public class BatchDisableJobsResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether the call is successful. Valid values:
+         * Indicates whether the request was successful. Valid values:
          * <p>
          * 
-         * *   **true**: The call is successful.
-         * *   **false**: The call fails.
+         * *   **true**: The request was successful.
+         * *   **false**: The request failed.
          */
         public Builder success(Boolean success) {
             this.success = success;

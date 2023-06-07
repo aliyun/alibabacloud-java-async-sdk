@@ -184,7 +184,7 @@ public class CreateWorkflowRequest extends Request {
         } 
 
         /**
-         * Description.
+         * The description of the workflow.
          */
         public Builder description(String description) {
             this.putBodyParameter("Description", description);
@@ -193,7 +193,7 @@ public class CreateWorkflowRequest extends Request {
         }
 
         /**
-         * GroupId.
+         * The application group ID. You can obtain the ID on the Application Management page in the SchedulerX console.
          */
         public Builder groupId(String groupId) {
             this.putBodyParameter("GroupId", groupId);
@@ -202,7 +202,7 @@ public class CreateWorkflowRequest extends Request {
         }
 
         /**
-         * MaxConcurrency.
+         * The maximum number of workflow instances that can be run at the same time. Default value: 1. The value 1 indicates that only one workflow instance is allowed. In this case, if the triggered workflow instance is still ongoing, no more workflow instances can be triggered even the time to schedule the next workflow arrives.
          */
         public Builder maxConcurrency(Integer maxConcurrency) {
             this.putBodyParameter("MaxConcurrency", maxConcurrency);
@@ -211,7 +211,7 @@ public class CreateWorkflowRequest extends Request {
         }
 
         /**
-         * Name.
+         * The name of the workflow.
          */
         public Builder name(String name) {
             this.putBodyParameter("Name", name);
@@ -220,7 +220,7 @@ public class CreateWorkflowRequest extends Request {
         }
 
         /**
-         * Namespace.
+         * The namespace ID. You can obtain the namespace ID on the Namespace page in the SchedulerX console.
          */
         public Builder namespace(String namespace) {
             this.putBodyParameter("Namespace", namespace);
@@ -229,7 +229,7 @@ public class CreateWorkflowRequest extends Request {
         }
 
         /**
-         * NamespaceSource.
+         * The source of the namespace. This parameter is required only for a special third party.
          */
         public Builder namespaceSource(String namespaceSource) {
             this.putBodyParameter("NamespaceSource", namespaceSource);
@@ -238,7 +238,7 @@ public class CreateWorkflowRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * The region ID.
          */
         public Builder regionId(String regionId) {
             this.putBodyParameter("RegionId", regionId);
@@ -247,7 +247,11 @@ public class CreateWorkflowRequest extends Request {
         }
 
         /**
-         * TimeExpression.
+         * The time expression. You can set the time expression based on the selected method that is used to specify time.
+         * <p>
+         * 
+         * *   If you set the TimeType parameter to cron, you need to enter a standard cron expression. Online verification is supported.
+         * *   If you set the TimeType parameter to api, no time expression is required.
          */
         public Builder timeExpression(String timeExpression) {
             this.putBodyParameter("TimeExpression", timeExpression);
@@ -256,7 +260,11 @@ public class CreateWorkflowRequest extends Request {
         }
 
         /**
-         * TimeType.
+         * The method that is used to specify the time. Valid values:
+         * <p>
+         * 
+         * *   1: cron
+         * *   100: api
          */
         public Builder timeType(Integer timeType) {
             this.putBodyParameter("TimeType", timeType);
@@ -265,7 +273,7 @@ public class CreateWorkflowRequest extends Request {
         }
 
         /**
-         * Timezone.
+         * The time zone.
          */
         public Builder timezone(String timezone) {
             this.putBodyParameter("Timezone", timezone);

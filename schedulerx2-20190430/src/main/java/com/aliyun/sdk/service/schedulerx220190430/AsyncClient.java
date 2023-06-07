@@ -90,7 +90,7 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<EnableWorkflowResponse> enableWorkflow(EnableWorkflowRequest request);
 
     /**
-      * > : The combination of the `JobID` and `ScheduleTime` parameters serves as a unique index. Therefore, after the ExecuteJob operation is called to run a job once, a sleep for one second is required before the ExecuteJob operation is called to run the job again. Otherwise, the job may fail.
+      * > The combination of the `JobID` and `ScheduleTime` parameters serves as a unique index. Therefore, after the ExecuteJob operation is called to run a job once, a sleep for one second is required before the ExecuteJob operation is called to run the job again. Otherwise, the job may fail.
       *
      */
     CompletableFuture<ExecuteJobResponse> executeJob(ExecuteJobRequest request);
@@ -107,6 +107,8 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<GetLogResponse> getLog(GetLogRequest request);
 
+    CompletableFuture<GetOverviewResponse> getOverview(GetOverviewRequest request);
+
     CompletableFuture<GetWorkFlowResponse> getWorkFlow(GetWorkFlowRequest request);
 
     CompletableFuture<GetWorkerListResponse> getWorkerList(GetWorkerListRequest request);
@@ -116,10 +118,14 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<GrantPermissionResponse> grantPermission(GrantPermissionRequest request);
 
     /**
-      * >  Before you call this operation, you must add the following dependency to the pom.xml file:
-      *       <groupId>com.aliyun</groupId>
-      *       <artifactId>aliyun-java-sdk-schedulerx2</artifactId>
-      *       <version>1.0.5</version>
+      * Before you call this operation, you must add the following dependency to the pom.xml file:
+      * ```xml
+      * <dependency>
+      *     <groupId>com.aliyun</groupId>
+      *     <artifactId>aliyun-java-sdk-schedulerx2</artifactId>
+      *     <version>1.0.5</version>
+      * </dependency>
+      * ```
       *
      */
     CompletableFuture<ListGroupsResponse> listGroups(ListGroupsRequest request);

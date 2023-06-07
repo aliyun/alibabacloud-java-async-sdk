@@ -172,7 +172,7 @@ public class DesignateWorkersRequest extends Request {
         } 
 
         /**
-         * The type of the designated machines. Valid values: 1: worker. 2: label.
+         * The type of the machines to be designated. Valid values: 1 and 2. The value 1 specifies the worker type. The value 2 specifies the label type.
          */
         public Builder designateType(Integer designateType) {
             this.putQueryParameter("DesignateType", designateType);
@@ -181,7 +181,7 @@ public class DesignateWorkersRequest extends Request {
         }
 
         /**
-         * The ID of the application group.
+         * The application group ID.
          */
         public Builder groupId(String groupId) {
             this.putQueryParameter("GroupId", groupId);
@@ -190,7 +190,7 @@ public class DesignateWorkersRequest extends Request {
         }
 
         /**
-         * The ID of the job.
+         * The job ID.
          */
         public Builder jobId(Long jobId) {
             this.putQueryParameter("JobId", jobId);
@@ -199,7 +199,7 @@ public class DesignateWorkersRequest extends Request {
         }
 
         /**
-         * The designated `labels`. The value is a `JSON` string.
+         * The designated `labels`. Specify the value of the parameter in a `JSON` string.
          */
         public Builder labels(String labels) {
             this.putQueryParameter("Labels", labels);
@@ -208,7 +208,7 @@ public class DesignateWorkersRequest extends Request {
         }
 
         /**
-         * The ID of the namespace.
+         * The unique identifier (UID) of the namespace.
          */
         public Builder namespace(String namespace) {
             this.putQueryParameter("Namespace", namespace);
@@ -226,7 +226,7 @@ public class DesignateWorkersRequest extends Request {
         }
 
         /**
-         * The ID of the region.
+         * The region ID.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -244,7 +244,7 @@ public class DesignateWorkersRequest extends Request {
         }
 
         /**
-         * The designated workers. The value is a JSON string.
+         * The designated machines. Specify the value of the parameter in a JSON string.
          */
         public Builder workers(String workers) {
             this.putQueryParameter("Workers", workers);

@@ -86,7 +86,7 @@ public class GetWorkflowInstanceResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * Code.
+         * The HTTP status code.
          */
         public Builder code(Integer code) {
             this.code = code;
@@ -94,7 +94,7 @@ public class GetWorkflowInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * Data.
+         * The details of the workflow instance.
          */
         public Builder data(Data data) {
             this.data = data;
@@ -102,7 +102,7 @@ public class GetWorkflowInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * The returned error message.
          */
         public Builder message(String message) {
             this.message = message;
@@ -110,7 +110,7 @@ public class GetWorkflowInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * Id of the request
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -118,7 +118,11 @@ public class GetWorkflowInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * Indicates whether the request was successful. Valid values:
+         * <p>
+         * 
+         * *   true
+         * *   false
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -170,7 +174,7 @@ public class GetWorkflowInstanceResponseBody extends TeaModel {
             private Long target; 
 
             /**
-             * Source.
+             * The upstream job instance of the current job instance. The value 0 indicates that the upstream job instance is the root node.
              */
             public Builder source(Long source) {
                 this.source = source;
@@ -178,7 +182,7 @@ public class GetWorkflowInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * Target.
+             * The downstream job instance of the current job instance.
              */
             public Builder target(Long target) {
                 this.target = target;
@@ -315,7 +319,7 @@ public class GetWorkflowInstanceResponseBody extends TeaModel {
             private String workAddr; 
 
             /**
-             * Attempt.
+             * The number of retries when the job instance failed.
              */
             public Builder attempt(Integer attempt) {
                 this.attempt = attempt;
@@ -323,7 +327,7 @@ public class GetWorkflowInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * DataTime.
+             * The data timestamp of the job instance.
              */
             public Builder dataTime(String dataTime) {
                 this.dataTime = dataTime;
@@ -331,7 +335,7 @@ public class GetWorkflowInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * EndTime.
+             * The time when the job instance stopped running.
              */
             public Builder endTime(String endTime) {
                 this.endTime = endTime;
@@ -339,7 +343,7 @@ public class GetWorkflowInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * JobId.
+             * The job ID.
              */
             public Builder jobId(Long jobId) {
                 this.jobId = jobId;
@@ -347,7 +351,7 @@ public class GetWorkflowInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * JobInstanceId.
+             * The job instance ID.
              */
             public Builder jobInstanceId(Long jobInstanceId) {
                 this.jobInstanceId = jobInstanceId;
@@ -355,7 +359,7 @@ public class GetWorkflowInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * Result.
+             * The state of the job instance.
              */
             public Builder result(String result) {
                 this.result = result;
@@ -363,7 +367,7 @@ public class GetWorkflowInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * ScheduleTime.
+             * The time when the job instance was scheduled to run.
              */
             public Builder scheduleTime(String scheduleTime) {
                 this.scheduleTime = scheduleTime;
@@ -371,7 +375,7 @@ public class GetWorkflowInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * StartTime.
+             * The time when the job instance started to run.
              */
             public Builder startTime(String startTime) {
                 this.startTime = startTime;
@@ -379,7 +383,7 @@ public class GetWorkflowInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * WorkAddr.
+             * The server on which the job instance was run.
              */
             public Builder workAddr(String workAddr) {
                 this.workAddr = workAddr;
@@ -432,7 +436,7 @@ public class GetWorkflowInstanceResponseBody extends TeaModel {
             private java.util.List < Nodes> nodes; 
 
             /**
-             * Edges.
+             * The dependencies between job instances.
              */
             public Builder edges(java.util.List < Edges> edges) {
                 this.edges = edges;
@@ -440,7 +444,7 @@ public class GetWorkflowInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * Nodes.
+             * The job instances.
              */
             public Builder nodes(java.util.List < Nodes> nodes) {
                 this.nodes = nodes;
@@ -529,7 +533,7 @@ public class GetWorkflowInstanceResponseBody extends TeaModel {
             private Integer status; 
 
             /**
-             * DataTime.
+             * The data timestamp of the workflow instance.
              */
             public Builder dataTime(String dataTime) {
                 this.dataTime = dataTime;
@@ -537,7 +541,7 @@ public class GetWorkflowInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * EndTime.
+             * The time when the workflow instance stopped running.
              */
             public Builder endTime(String endTime) {
                 this.endTime = endTime;
@@ -545,7 +549,7 @@ public class GetWorkflowInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * ScheduleTime.
+             * The time when the workflow instance was scheduled to run.
              */
             public Builder scheduleTime(String scheduleTime) {
                 this.scheduleTime = scheduleTime;
@@ -553,7 +557,7 @@ public class GetWorkflowInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * StartTime.
+             * The time when the workflow instance started to run.
              */
             public Builder startTime(String startTime) {
                 this.startTime = startTime;
@@ -561,7 +565,14 @@ public class GetWorkflowInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * Status.
+             * The state of the workflow instance. Valid values:
+             * <p>
+             * 
+             * *   1: pending
+             * *   2: preparing
+             * *   3: running
+             * *   4: successful
+             * *   5: failed
              */
             public Builder status(Integer status) {
                 this.status = status;
@@ -614,7 +625,7 @@ public class GetWorkflowInstanceResponseBody extends TeaModel {
             private WfInstanceInfo wfInstanceInfo; 
 
             /**
-             * WfInstanceDag.
+             * The directed acyclic graph (DAG) of the workflow instance, including job instances and dependencies.
              */
             public Builder wfInstanceDag(WfInstanceDag wfInstanceDag) {
                 this.wfInstanceDag = wfInstanceDag;
@@ -622,7 +633,7 @@ public class GetWorkflowInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * WfInstanceInfo.
+             * The details of the workflow instance, including the state of the workflow instance, the time when the workflow instance started to run, the time when the workflow instance stopped running, the state of each job instance, and the dependencies between job instances.
              */
             public Builder wfInstanceInfo(WfInstanceInfo wfInstanceInfo) {
                 this.wfInstanceInfo = wfInstanceInfo;

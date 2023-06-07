@@ -156,7 +156,7 @@ public class CreateRouteStrategyRequest extends Request {
         } 
 
         /**
-         * GroupId.
+         * The ID of the application group. You can obtain the ID on the **Application Management** page in the SchedulerX console.
          */
         public Builder groupId(String groupId) {
             this.putQueryParameter("GroupId", groupId);
@@ -165,7 +165,7 @@ public class CreateRouteStrategyRequest extends Request {
         }
 
         /**
-         * JobId.
+         * The job ID. You can obtain the ID on the **Task Management** page in the SchedulerX console.
          */
         public Builder jobId(Long jobId) {
             this.putQueryParameter("JobId", jobId);
@@ -174,7 +174,7 @@ public class CreateRouteStrategyRequest extends Request {
         }
 
         /**
-         * Name.
+         * The name of the routing policy.
          */
         public Builder name(String name) {
             this.putQueryParameter("Name", name);
@@ -183,7 +183,7 @@ public class CreateRouteStrategyRequest extends Request {
         }
 
         /**
-         * Namespace.
+         * The namespace ID. You can obtain the namespace ID on the **Namespace** page in the SchedulerX console.
          */
         public Builder namespace(String namespace) {
             this.putQueryParameter("Namespace", namespace);
@@ -192,7 +192,7 @@ public class CreateRouteStrategyRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * The region ID.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -201,7 +201,11 @@ public class CreateRouteStrategyRequest extends Request {
         }
 
         /**
-         * Status.
+         * Specifies whether to enable the routing policy. Valid values:
+         * <p>
+         * 
+         * *   **0**: disables the routing policy.
+         * *   **1**: enables the routing policy.
          */
         public Builder status(Integer status) {
             this.putQueryParameter("Status", status);
@@ -210,7 +214,7 @@ public class CreateRouteStrategyRequest extends Request {
         }
 
         /**
-         * StrategyContent.
+         * The details of the routing policy. The value is a JSON string. For more information about this parameter, see **the additional information about request parameters** below this table.
          */
         public Builder strategyContent(String strategyContent) {
             this.putQueryParameter("StrategyContent", strategyContent);
@@ -219,7 +223,10 @@ public class CreateRouteStrategyRequest extends Request {
         }
 
         /**
-         * Type.
+         * The type of the routing policy. Valid value:
+         * <p>
+         * 
+         * *   **3**: routes by proportion.
          */
         public Builder type(Integer type) {
             this.putQueryParameter("Type", type);

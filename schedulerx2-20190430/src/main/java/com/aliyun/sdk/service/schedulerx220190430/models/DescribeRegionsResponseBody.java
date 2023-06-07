@@ -86,7 +86,7 @@ public class DescribeRegionsResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * The HTTP status code that is returned.
+         * The HTTP status code.
          */
         public Builder code(Integer code) {
             this.code = code;
@@ -94,7 +94,7 @@ public class DescribeRegionsResponseBody extends TeaModel {
         }
 
         /**
-         * The error message that is returned only if the error occurs.
+         * The error message that was returned only if the corresponding error occurred.
          */
         public Builder message(String message) {
             this.message = message;
@@ -102,7 +102,7 @@ public class DescribeRegionsResponseBody extends TeaModel {
         }
 
         /**
-         * The list of regions.
+         * The available regions.
          */
         public Builder regions(java.util.List < Regions> regions) {
             this.regions = regions;
@@ -118,11 +118,11 @@ public class DescribeRegionsResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether the call is successful. Valid values:
+         * Indicates whether the request was successful. Valid values:
          * <p>
          * 
-         * *   **true**: The call is successful.
-         * *   **false**: The call fails.
+         * *   **true**: The request was successful.
+         * *   **false**: The request failed.
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -186,7 +186,7 @@ public class DescribeRegionsResponseBody extends TeaModel {
             private String regionId; 
 
             /**
-             * The displayed name of the region, which varies based on the current language.
+             * The display name of the region, which varies based on the current language.
              */
             public Builder localName(String localName) {
                 this.localName = localName;

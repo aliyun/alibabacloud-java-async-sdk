@@ -113,7 +113,7 @@ public class EnableWorkflowRequest extends Request {
         } 
 
         /**
-         * The ID of the application. You can obtain the application ID on the Application Management page in Distributed Task Scheduling Platform.
+         * The application ID. You can obtain the application ID on the Application Management page in the SchedulerX console.
          */
         public Builder groupId(String groupId) {
             this.putQueryParameter("GroupId", groupId);
@@ -122,7 +122,7 @@ public class EnableWorkflowRequest extends Request {
         }
 
         /**
-         * The ID of the namespace. You can obtain the ID of the namespace on the Namespace page in Distributed Task Scheduling Platform.
+         * The namespace ID. You can obtain the namespace ID on the Namespace page in the SchedulerX console.
          */
         public Builder namespace(String namespace) {
             this.putQueryParameter("Namespace", namespace);
@@ -131,7 +131,7 @@ public class EnableWorkflowRequest extends Request {
         }
 
         /**
-         * This parameter is required only for a special third party.
+         * The source of the namespace. This parameter is required only for a special third party.
          */
         public Builder namespaceSource(String namespaceSource) {
             this.putQueryParameter("NamespaceSource", namespaceSource);
@@ -140,7 +140,7 @@ public class EnableWorkflowRequest extends Request {
         }
 
         /**
-         * The ID of the region.
+         * The region ID.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -149,7 +149,7 @@ public class EnableWorkflowRequest extends Request {
         }
 
         /**
-         * The ID of the workflow.
+         * The workflow ID.
          */
         public Builder workflowId(Long workflowId) {
             this.putQueryParameter("WorkflowId", workflowId);

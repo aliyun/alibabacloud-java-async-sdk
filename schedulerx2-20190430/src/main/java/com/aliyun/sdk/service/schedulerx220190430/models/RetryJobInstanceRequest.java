@@ -129,7 +129,7 @@ public class RetryJobInstanceRequest extends Request {
         } 
 
         /**
-         * GroupId.
+         * The application group ID. You can obtain the application group ID on the Application Management page in the SchedulerX console.
          */
         public Builder groupId(String groupId) {
             this.putQueryParameter("GroupId", groupId);
@@ -138,7 +138,7 @@ public class RetryJobInstanceRequest extends Request {
         }
 
         /**
-         * JobId.
+         * The job ID.
          */
         public Builder jobId(Long jobId) {
             this.putQueryParameter("JobId", jobId);
@@ -147,7 +147,7 @@ public class RetryJobInstanceRequest extends Request {
         }
 
         /**
-         * JobInstanceId.
+         * The job instance ID.
          */
         public Builder jobInstanceId(Long jobInstanceId) {
             this.putQueryParameter("JobInstanceId", jobInstanceId);
@@ -156,7 +156,7 @@ public class RetryJobInstanceRequest extends Request {
         }
 
         /**
-         * Namespace.
+         * The namespace ID. You can obtain the namespace ID on the Namespace page in the SchedulerX console.
          */
         public Builder namespace(String namespace) {
             this.putQueryParameter("Namespace", namespace);
@@ -165,7 +165,7 @@ public class RetryJobInstanceRequest extends Request {
         }
 
         /**
-         * NamespaceSource.
+         * The source of the namespace. This parameter is required only for a special third party.
          */
         public Builder namespaceSource(String namespaceSource) {
             this.putQueryParameter("NamespaceSource", namespaceSource);
@@ -174,7 +174,7 @@ public class RetryJobInstanceRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * The region ID.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);

@@ -212,7 +212,7 @@ public class GetLogRequest extends Request {
         } 
 
         /**
-         * EndTimestamp.
+         * The time when the job stops running. Specify a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.
          */
         public Builder endTimestamp(Long endTimestamp) {
             this.putQueryParameter("EndTimestamp", endTimestamp);
@@ -221,7 +221,7 @@ public class GetLogRequest extends Request {
         }
 
         /**
-         * GroupId.
+         * The application group ID. You can obtain the application group ID on the Application Management page in the SchedulerX console.
          */
         public Builder groupId(String groupId) {
             this.putQueryParameter("GroupId", groupId);
@@ -230,7 +230,7 @@ public class GetLogRequest extends Request {
         }
 
         /**
-         * JobId.
+         * The job ID.
          */
         public Builder jobId(String jobId) {
             this.putQueryParameter("JobId", jobId);
@@ -239,7 +239,7 @@ public class GetLogRequest extends Request {
         }
 
         /**
-         * JobInstanceId.
+         * The job instance ID.
          */
         public Builder jobInstanceId(String jobInstanceId) {
             this.putQueryParameter("JobInstanceId", jobInstanceId);
@@ -248,7 +248,7 @@ public class GetLogRequest extends Request {
         }
 
         /**
-         * Keyword.
+         * The keyword.
          */
         public Builder keyword(String keyword) {
             this.putQueryParameter("Keyword", keyword);
@@ -257,7 +257,7 @@ public class GetLogRequest extends Request {
         }
 
         /**
-         * Line.
+         * The number of rows to return. The maximum number is 200.
          */
         public Builder line(Integer line) {
             this.putQueryParameter("Line", line);
@@ -266,7 +266,7 @@ public class GetLogRequest extends Request {
         }
 
         /**
-         * Namespace.
+         * The namespace ID. You can obtain the namespace ID on the Namespace page in the SchedulerX console.
          */
         public Builder namespace(String namespace) {
             this.putQueryParameter("Namespace", namespace);
@@ -275,7 +275,7 @@ public class GetLogRequest extends Request {
         }
 
         /**
-         * NamespaceSource.
+         * The source of the namespace. This parameter is required only for a special third party.
          */
         public Builder namespaceSource(String namespaceSource) {
             this.putQueryParameter("NamespaceSource", namespaceSource);
@@ -284,7 +284,7 @@ public class GetLogRequest extends Request {
         }
 
         /**
-         * Offset.
+         * The number of offset rows. This parameter can be used for a paged query.
          */
         public Builder offset(Integer offset) {
             this.putQueryParameter("Offset", offset);
@@ -293,7 +293,7 @@ public class GetLogRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * The region ID.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -302,7 +302,7 @@ public class GetLogRequest extends Request {
         }
 
         /**
-         * Reverse.
+         * Specifies whether to reverse the order. By default, the order is reversed.
          */
         public Builder reverse(Boolean reverse) {
             this.putQueryParameter("Reverse", reverse);
@@ -311,7 +311,7 @@ public class GetLogRequest extends Request {
         }
 
         /**
-         * StartTimestamp.
+         * The time when the job starts to run. Specify a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.
          */
         public Builder startTimestamp(Long startTimestamp) {
             this.putQueryParameter("StartTimestamp", startTimestamp);

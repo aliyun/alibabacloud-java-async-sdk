@@ -214,7 +214,7 @@ public class ListJobsResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the user.
+             * The username.
              */
             public Builder userName(String userName) {
                 this.userName = userName;
@@ -1043,7 +1043,7 @@ public class ListJobsResponseBody extends TeaModel {
             }
 
             /**
-             * The status of the job. Valid values:
+             * Indicates whether the job is enabled. Valid values:
              * <p>
              * 
              * *   **1**: The job is enabled and can be triggered.

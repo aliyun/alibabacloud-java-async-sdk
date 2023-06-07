@@ -163,7 +163,7 @@ public class ListJobsRequest extends Request {
         }
 
         /**
-         * The ID of the region in which the job resides.
+         * The ID of the region.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);

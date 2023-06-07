@@ -170,7 +170,7 @@ public class UpdateWorkflowRequest extends Request {
         } 
 
         /**
-         * Description.
+         * The description of the workflow.
          */
         public Builder description(String description) {
             this.putBodyParameter("Description", description);
@@ -179,7 +179,7 @@ public class UpdateWorkflowRequest extends Request {
         }
 
         /**
-         * GroupId.
+         * The application group ID. You can obtain the application group ID on the Application Management page in the SchedulerX console.
          */
         public Builder groupId(String groupId) {
             this.putBodyParameter("GroupId", groupId);
@@ -188,7 +188,7 @@ public class UpdateWorkflowRequest extends Request {
         }
 
         /**
-         * Name.
+         * The name of the workflow.
          */
         public Builder name(String name) {
             this.putBodyParameter("Name", name);
@@ -197,7 +197,7 @@ public class UpdateWorkflowRequest extends Request {
         }
 
         /**
-         * Namespace.
+         * The namespace ID. You can obtain the namespace ID on the Namespace page in the SchedulerX console.
          */
         public Builder namespace(String namespace) {
             this.putBodyParameter("Namespace", namespace);
@@ -206,7 +206,7 @@ public class UpdateWorkflowRequest extends Request {
         }
 
         /**
-         * NamespaceSource.
+         * The source of the namespace. This parameter is required only for a special third party.
          */
         public Builder namespaceSource(String namespaceSource) {
             this.putBodyParameter("NamespaceSource", namespaceSource);
@@ -215,7 +215,7 @@ public class UpdateWorkflowRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * The region ID.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -224,7 +224,11 @@ public class UpdateWorkflowRequest extends Request {
         }
 
         /**
-         * TimeExpression.
+         * The time expression. You can set the time expression based on the selected method that is used to specify time.
+         * <p>
+         * 
+         * *   If you set TimeType to cron, you need to enter a standard cron expression. Online verification is supported.
+         * *   If you set TimeType to api, no time expression is required.
          */
         public Builder timeExpression(String timeExpression) {
             this.putBodyParameter("TimeExpression", timeExpression);
@@ -233,7 +237,11 @@ public class UpdateWorkflowRequest extends Request {
         }
 
         /**
-         * TimeType.
+         * The method that is used to specify the time. Valid values:
+         * <p>
+         * 
+         * *   1: cron
+         * *   100: api
          */
         public Builder timeType(Integer timeType) {
             this.putBodyParameter("TimeType", timeType);
@@ -242,7 +250,7 @@ public class UpdateWorkflowRequest extends Request {
         }
 
         /**
-         * WorkflowId.
+         * The workflow ID.
          */
         public Builder workflowId(String workflowId) {
             this.putBodyParameter("WorkflowId", workflowId);

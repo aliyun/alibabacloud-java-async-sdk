@@ -74,7 +74,7 @@ public class DisableWorkflowResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * The HTTP status code that is returned.
+         * The HTTP status code.
          */
         public Builder code(Integer code) {
             this.code = code;
@@ -82,7 +82,7 @@ public class DisableWorkflowResponseBody extends TeaModel {
         }
 
         /**
-         * The error message that is returned only if the error occurs.
+         * The error message that is returned only if the corresponding error occurs.
          */
         public Builder message(String message) {
             this.message = message;
@@ -90,7 +90,7 @@ public class DisableWorkflowResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -98,11 +98,11 @@ public class DisableWorkflowResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether the workflow is disabled. Valid values:
+         * Indicates whether the workflow was disabled. Valid values:
          * <p>
          * 
-         * *   **true**: The workflow is disabled.
-         * *   **false**: Failed to disable the workflow.
+         * *   **true**
+         * *   **false**
          */
         public Builder success(Boolean success) {
             this.success = success;

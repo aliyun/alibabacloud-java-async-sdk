@@ -86,7 +86,7 @@ public class CreateNamespaceResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * The HTTP status code that is returned.
+         * The HTTP status code.
          */
         public Builder code(Integer code) {
             this.code = code;
@@ -94,7 +94,7 @@ public class CreateNamespaceResponseBody extends TeaModel {
         }
 
         /**
-         * The information of the namespace.
+         * The information about the namespace.
          */
         public Builder data(Data data) {
             this.data = data;
@@ -102,7 +102,7 @@ public class CreateNamespaceResponseBody extends TeaModel {
         }
 
         /**
-         * The error message that is returned only if the error occurs.
+         * The error message that is returned only if the corresponding error occurs.
          */
         public Builder message(String message) {
             this.message = message;
@@ -110,7 +110,7 @@ public class CreateNamespaceResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -118,11 +118,11 @@ public class CreateNamespaceResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether an application is created. Valid values:
+         * Indicates whether the application was created. Valid values:
          * <p>
          * 
-         * *   **true**: The application is created.
-         * *   **false**: Failed to create the application.
+         * *   **true**
+         * *   **false**
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -162,7 +162,7 @@ public class CreateNamespaceResponseBody extends TeaModel {
             private String namespaceUid; 
 
             /**
-             * The unique identifier of the namespace.
+             * The UID of the namespace.
              */
             public Builder namespaceUid(String namespaceUid) {
                 this.namespaceUid = namespaceUid;

@@ -13,12 +13,22 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class ListNamespacesRequest extends Request {
     @Query
+    @NameInMap("Namespace")
+    private String namespace;
+
+    @Query
+    @NameInMap("NamespaceName")
+    private String namespaceName;
+
+    @Query
     @NameInMap("RegionId")
     @Validation(required = true)
     private String regionId;
 
     private ListNamespacesRequest(Builder builder) {
         super(builder);
+        this.namespace = builder.namespace;
+        this.namespaceName = builder.namespaceName;
         this.regionId = builder.regionId;
     }
 
@@ -36,6 +46,20 @@ public class ListNamespacesRequest extends Request {
     }
 
     /**
+     * @return namespace
+     */
+    public String getNamespace() {
+        return this.namespace;
+    }
+
+    /**
+     * @return namespaceName
+     */
+    public String getNamespaceName() {
+        return this.namespaceName;
+    }
+
+    /**
      * @return regionId
      */
     public String getRegionId() {
@@ -43,6 +67,8 @@ public class ListNamespacesRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<ListNamespacesRequest, Builder> {
+        private String namespace; 
+        private String namespaceName; 
         private String regionId; 
 
         private Builder() {
@@ -51,11 +77,31 @@ public class ListNamespacesRequest extends Request {
 
         private Builder(ListNamespacesRequest request) {
             super(request);
+            this.namespace = request.namespace;
+            this.namespaceName = request.namespaceName;
             this.regionId = request.regionId;
         } 
 
         /**
-         * The ID of the region.
+         * Namespace.
+         */
+        public Builder namespace(String namespace) {
+            this.putQueryParameter("Namespace", namespace);
+            this.namespace = namespace;
+            return this;
+        }
+
+        /**
+         * NamespaceName.
+         */
+        public Builder namespaceName(String namespaceName) {
+            this.putQueryParameter("NamespaceName", namespaceName);
+            this.namespaceName = namespaceName;
+            return this;
+        }
+
+        /**
+         * The region ID.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);

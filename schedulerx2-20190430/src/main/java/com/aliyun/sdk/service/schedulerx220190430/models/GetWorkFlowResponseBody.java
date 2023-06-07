@@ -86,7 +86,7 @@ public class GetWorkFlowResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * The error code that is returned.
+         * Error codes
          */
         public Builder code(Integer code) {
             this.code = code;
@@ -102,7 +102,7 @@ public class GetWorkFlowResponseBody extends TeaModel {
         }
 
         /**
-         * The error message that is returned.
+         * Error message
          */
         public Builder message(String message) {
             this.message = message;
@@ -319,7 +319,7 @@ public class GetWorkFlowResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the target job.
+             * The ID of the object job.
              */
             public Builder target(Long target) {
                 this.target = target;

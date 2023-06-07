@@ -86,7 +86,7 @@ public class CreateJobResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * The HTTP status code that is returned.
+         * The HTTP status code.
          */
         public Builder code(Integer code) {
             this.code = code;
@@ -102,7 +102,7 @@ public class CreateJobResponseBody extends TeaModel {
         }
 
         /**
-         * The additional information that is returned.
+         * The additional information returned.
          */
         public Builder message(String message) {
             this.message = message;
@@ -110,7 +110,7 @@ public class CreateJobResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -118,11 +118,11 @@ public class CreateJobResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether the job is created. Valid values:
+         * If you set JobType to k8s, this parameter is required. Valid values:
          * <p>
          * 
-         * *   **true**: The job is created.
-         * *   **false**: Failed to create the job.
+         * *   **true**
+         * *   **false**
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -162,7 +162,7 @@ public class CreateJobResponseBody extends TeaModel {
             private Long jobId; 
 
             /**
-             * The ID of the job.
+             * The job ID.
              */
             public Builder jobId(Long jobId) {
                 this.jobId = jobId;

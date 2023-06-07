@@ -129,7 +129,7 @@ public class UpdateWorkflowDagRequest extends Request {
         } 
 
         /**
-         * DagJson.
+         * The directed acyclic graph (DAG) of the workflow, including the information about the nodes and the edges. Specify the value of this parameter in the JSON format.
          */
         public Builder dagJson(String dagJson) {
             this.putBodyParameter("DagJson", dagJson);
@@ -138,7 +138,7 @@ public class UpdateWorkflowDagRequest extends Request {
         }
 
         /**
-         * GroupId.
+         * The application group ID. You can obtain the application group ID on the Application Management page in the SchedulerX console.
          */
         public Builder groupId(String groupId) {
             this.putBodyParameter("GroupId", groupId);
@@ -147,7 +147,7 @@ public class UpdateWorkflowDagRequest extends Request {
         }
 
         /**
-         * Namespace.
+         * The namespace ID. You can obtain the namespace ID on the Namespace page in the SchedulerX console.
          */
         public Builder namespace(String namespace) {
             this.putBodyParameter("Namespace", namespace);
@@ -156,7 +156,7 @@ public class UpdateWorkflowDagRequest extends Request {
         }
 
         /**
-         * NamespaceSource.
+         * The source of the namespace. This parameter is required only for a special third party.
          */
         public Builder namespaceSource(String namespaceSource) {
             this.putBodyParameter("NamespaceSource", namespaceSource);
@@ -165,7 +165,7 @@ public class UpdateWorkflowDagRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * The region ID.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -174,7 +174,7 @@ public class UpdateWorkflowDagRequest extends Request {
         }
 
         /**
-         * WorkflowId.
+         * The workflow ID.
          */
         public Builder workflowId(String workflowId) {
             this.putBodyParameter("WorkflowId", workflowId);

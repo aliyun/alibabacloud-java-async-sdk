@@ -86,7 +86,7 @@ public class GetJobInstanceResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * The HTTP status code that is returned.
+         * The HTTP status code.
          */
         public Builder code(Integer code) {
             this.code = code;
@@ -102,7 +102,7 @@ public class GetJobInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * The error message that is returned if an error occurs.
+         * The error message that is returned only if the corresponding error occurs.
          */
         public Builder message(String message) {
             this.message = message;
@@ -110,7 +110,7 @@ public class GetJobInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -118,11 +118,11 @@ public class GetJobInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether the call is successful. Valid values:
+         * Indicates whether the request was successful. Valid values:
          * <p>
          * 
-         * *   **true**: The call is successful.
-         * *   **false**: The call fails.
+         * *   **true**
+         * *   **false**
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -306,7 +306,7 @@ public class GetJobInstanceResponseBody extends TeaModel {
             private String workAddr; 
 
             /**
-             * The data time.
+             * The data timestamp of the job instance.
              */
             public Builder dataTime(String dataTime) {
                 this.dataTime = dataTime;
@@ -330,7 +330,7 @@ public class GetJobInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the job instance.
+             * The job instance ID.
              */
             public Builder instanceId(Long instanceId) {
                 this.instanceId = instanceId;
@@ -338,7 +338,7 @@ public class GetJobInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the job.
+             * The job ID.
              */
             public Builder jobId(Long jobId) {
                 this.jobId = jobId;
@@ -362,7 +362,7 @@ public class GetJobInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * The scheduled time of the job.
+             * The time when the job was scheduled to run.
              */
             public Builder scheduleTime(String scheduleTime) {
                 this.scheduleTime = scheduleTime;
@@ -378,13 +378,13 @@ public class GetJobInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * The status of the job instance. Valid values:
+             * The state of the job instance. Valid values:
              * <p>
              * 
              * *   **1**: The job instance is waiting for execution.
              * *   **3**: The job instance is running.
              * *   **4**: The job instance is successful.
-             * *   **5**: The job instance fails.
+             * *   **5**: The job instance failed.
              * *   **9**: The job instance is rejected.
              * 
              * Enumeration class: com.alibaba.schedulerx.common.domain.InstanceStatus
@@ -414,11 +414,11 @@ public class GetJobInstanceResponseBody extends TeaModel {
              * The trigger type of the job instance. Valid values:
              * <p>
              * 
-             * *   **1**: The job instance is triggered at the scheduled time.
-             * *   **2**: The job instance is triggered due to data update.
-             * *   **3**: The job instance is triggered by an API call.
-             * *   **4**: The job instance is triggered because it is manually rerun.
-             * *   **5**: The job instance is triggered because the system automatically reruns the job instance upon a system exception, such as a database exception.
+             * *   **1**: The job instance was triggered at the scheduled time.
+             * *   **2**: The job instance was triggered due to data update.
+             * *   **3**: The job instance was triggered by an API call.
+             * *   **4**: The job instance was triggered because it is manually rerun.
+             * *   **5**: The job instance was triggered because the system automatically reruns the job instance upon a system exception, such as a database exception.
              * 
              * Enumeration class: com.alibaba.schedulerx.common.domain.TriggerType
              */

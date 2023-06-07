@@ -7,16 +7,16 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
- * {@link ExecuteWorkflowResponseBody} extends {@link TeaModel}
+ * {@link GetOverviewResponseBody} extends {@link TeaModel}
  *
- * <p>ExecuteWorkflowResponseBody</p>
+ * <p>GetOverviewResponseBody</p>
  */
-public class ExecuteWorkflowResponseBody extends TeaModel {
+public class GetOverviewResponseBody extends TeaModel {
     @NameInMap("Code")
     private Integer code;
 
     @NameInMap("Data")
-    private Data data;
+    private String data;
 
     @NameInMap("Message")
     private String message;
@@ -27,7 +27,7 @@ public class ExecuteWorkflowResponseBody extends TeaModel {
     @NameInMap("Success")
     private Boolean success;
 
-    private ExecuteWorkflowResponseBody(Builder builder) {
+    private GetOverviewResponseBody(Builder builder) {
         this.code = builder.code;
         this.data = builder.data;
         this.message = builder.message;
@@ -39,7 +39,7 @@ public class ExecuteWorkflowResponseBody extends TeaModel {
         return new Builder();
     }
 
-    public static ExecuteWorkflowResponseBody create() {
+    public static GetOverviewResponseBody create() {
         return builder().build();
     }
 
@@ -53,7 +53,7 @@ public class ExecuteWorkflowResponseBody extends TeaModel {
     /**
      * @return data
      */
-    public Data getData() {
+    public String getData() {
         return this.data;
     }
 
@@ -80,13 +80,13 @@ public class ExecuteWorkflowResponseBody extends TeaModel {
 
     public static final class Builder {
         private Integer code; 
-        private Data data; 
+        private String data; 
         private String message; 
         private String requestId; 
         private Boolean success; 
 
         /**
-         * The HTTP status code.
+         * Code.
          */
         public Builder code(Integer code) {
             this.code = code;
@@ -94,15 +94,15 @@ public class ExecuteWorkflowResponseBody extends TeaModel {
         }
 
         /**
-         * If the request is successful, the ID of the workflow instance is returned.
+         * Data.
          */
-        public Builder data(Data data) {
+        public Builder data(String data) {
             this.data = data;
             return this;
         }
 
         /**
-         * The error message that is returned only if the corresponding error occurs.
+         * Message.
          */
         public Builder message(String message) {
             this.message = message;
@@ -110,7 +110,7 @@ public class ExecuteWorkflowResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * Id of the request
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -118,58 +118,17 @@ public class ExecuteWorkflowResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether the request was successful.
+         * Success.
          */
         public Builder success(Boolean success) {
             this.success = success;
             return this;
         }
 
-        public ExecuteWorkflowResponseBody build() {
-            return new ExecuteWorkflowResponseBody(this);
+        public GetOverviewResponseBody build() {
+            return new GetOverviewResponseBody(this);
         } 
 
     } 
 
-    public static class Data extends TeaModel {
-        @NameInMap("WfInstanceId")
-        private Long wfInstanceId;
-
-        private Data(Builder builder) {
-            this.wfInstanceId = builder.wfInstanceId;
-        }
-
-        public static Builder builder() {
-            return new Builder();
-        }
-
-        public static Data create() {
-            return builder().build();
-        }
-
-        /**
-         * @return wfInstanceId
-         */
-        public Long getWfInstanceId() {
-            return this.wfInstanceId;
-        }
-
-        public static final class Builder {
-            private Long wfInstanceId; 
-
-            /**
-             * The workflow instance ID.
-             */
-            public Builder wfInstanceId(Long wfInstanceId) {
-                this.wfInstanceId = wfInstanceId;
-                return this;
-            }
-
-            public Data build() {
-                return new Data(this);
-            } 
-
-        } 
-
-    }
 }

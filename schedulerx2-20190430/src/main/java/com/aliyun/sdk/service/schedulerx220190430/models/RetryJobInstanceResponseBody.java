@@ -74,7 +74,7 @@ public class RetryJobInstanceResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * Code.
+         * The HTTP status code.
          */
         public Builder code(Integer code) {
             this.code = code;
@@ -82,7 +82,7 @@ public class RetryJobInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * The returned error message.
          */
         public Builder message(String message) {
             this.message = message;
@@ -90,7 +90,7 @@ public class RetryJobInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * Id of the request
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -98,7 +98,11 @@ public class RetryJobInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * Indicates whether the request was successful. Valid values:
+         * <p>
+         * 
+         * *   true
+         * *   false
          */
         public Builder success(Boolean success) {
             this.success = success;

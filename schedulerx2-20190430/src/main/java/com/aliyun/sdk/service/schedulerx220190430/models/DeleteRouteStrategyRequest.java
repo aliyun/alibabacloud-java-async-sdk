@@ -99,7 +99,7 @@ public class DeleteRouteStrategyRequest extends Request {
         } 
 
         /**
-         * GroupId.
+         * The application ID. You can obtain the application ID on the **Application Management** page in the SchedulerX console.
          */
         public Builder groupId(String groupId) {
             this.putQueryParameter("GroupId", groupId);
@@ -108,7 +108,7 @@ public class DeleteRouteStrategyRequest extends Request {
         }
 
         /**
-         * JobId.
+         * The job ID. You can obtain the job ID on the **Task Management** page in the SchedulerX console.
          */
         public Builder jobId(Long jobId) {
             this.putQueryParameter("JobId", jobId);
@@ -117,7 +117,7 @@ public class DeleteRouteStrategyRequest extends Request {
         }
 
         /**
-         * Namespace.
+         * The namespace ID. You can obtain the ID of the namespace on the **Namespace** page in the SchedulerX console.
          */
         public Builder namespace(String namespace) {
             this.putQueryParameter("Namespace", namespace);
@@ -126,7 +126,7 @@ public class DeleteRouteStrategyRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * The region ID.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);

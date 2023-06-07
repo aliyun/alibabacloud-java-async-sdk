@@ -114,7 +114,7 @@ public class DeleteJobRequest extends Request {
         } 
 
         /**
-         * The ID of the application. You can obtain the application ID on the **Application Management** page in Distributed Task Scheduling Platform.
+         * The ID of the application. You can obtain the application ID on the **Application Management** page in the SchedulerX console.
          */
         public Builder groupId(String groupId) {
             this.putQueryParameter("GroupId", groupId);
@@ -123,7 +123,7 @@ public class DeleteJobRequest extends Request {
         }
 
         /**
-         * The ID of the job. You can obtain the ID on the **Task Management** page in Distributed Task Scheduling Platform.
+         * The ID of the job. You can obtain the ID on the **Task Management** page in the SchedulerX console.
          */
         public Builder jobId(Long jobId) {
             this.putQueryParameter("JobId", jobId);
@@ -132,7 +132,7 @@ public class DeleteJobRequest extends Request {
         }
 
         /**
-         * The ID of the namespace. You can obtain the ID of the namespace on the **Namespace** page in Distributed Task Scheduling Platform.
+         * The ID of the namespace. You can obtain the ID of the namespace on the **Namespace** page in the SchedulerX console.
          */
         public Builder namespace(String namespace) {
             this.putQueryParameter("Namespace", namespace);
@@ -141,7 +141,7 @@ public class DeleteJobRequest extends Request {
         }
 
         /**
-         * This parameter is required only for a special third party.
+         * The source of the namespace. This parameter is required only for a special third party.
          */
         public Builder namespaceSource(String namespaceSource) {
             this.putQueryParameter("NamespaceSource", namespaceSource);

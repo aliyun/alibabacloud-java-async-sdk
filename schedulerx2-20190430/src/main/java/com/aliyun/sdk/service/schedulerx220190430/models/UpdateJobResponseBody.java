@@ -74,7 +74,7 @@ public class UpdateJobResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * The HTTP status code that is returned.
+         * The HTTP status code.
          */
         public Builder code(Integer code) {
             this.code = code;
@@ -82,7 +82,7 @@ public class UpdateJobResponseBody extends TeaModel {
         }
 
         /**
-         * The additional information that is returned only if the error occurs.
+         * The additional information returned only if an error occurs.
          */
         public Builder message(String message) {
             this.message = message;
@@ -90,7 +90,7 @@ public class UpdateJobResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

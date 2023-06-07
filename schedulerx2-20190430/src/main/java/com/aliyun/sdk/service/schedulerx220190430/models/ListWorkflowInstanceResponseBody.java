@@ -86,7 +86,7 @@ public class ListWorkflowInstanceResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * Code.
+         * The HTTP status code.
          */
         public Builder code(Integer code) {
             this.code = code;
@@ -94,7 +94,7 @@ public class ListWorkflowInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * Data.
+         * The information about workflow instances.
          */
         public Builder data(Data data) {
             this.data = data;
@@ -102,7 +102,7 @@ public class ListWorkflowInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * The returned error message.
          */
         public Builder message(String message) {
             this.message = message;
@@ -110,7 +110,7 @@ public class ListWorkflowInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * Id of the request
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -118,7 +118,11 @@ public class ListWorkflowInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * Indicates whether the request was successful. Valid values:
+         * <p>
+         * 
+         * *   true
+         * *   false
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -230,7 +234,7 @@ public class ListWorkflowInstanceResponseBody extends TeaModel {
             private Long workflowId; 
 
             /**
-             * DataTime.
+             * The data timestamp of the workflow instance.
              */
             public Builder dataTime(String dataTime) {
                 this.dataTime = dataTime;
@@ -238,7 +242,7 @@ public class ListWorkflowInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * EndTime.
+             * The time when the workflow instance stopped running.
              */
             public Builder endTime(String endTime) {
                 this.endTime = endTime;
@@ -246,7 +250,7 @@ public class ListWorkflowInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * ScheduleTime.
+             * The time when the workflow instance was scheduled to run.
              */
             public Builder scheduleTime(String scheduleTime) {
                 this.scheduleTime = scheduleTime;
@@ -254,7 +258,7 @@ public class ListWorkflowInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * StartTime.
+             * The time when the workflow instance started to run.
              */
             public Builder startTime(String startTime) {
                 this.startTime = startTime;
@@ -262,7 +266,14 @@ public class ListWorkflowInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * Status.
+             * The state of the workflow instance. Valid values:
+             * <p>
+             * 
+             * *   1: pending
+             * *   2: preparing
+             * *   3: running
+             * *   4: successful
+             * *   5: failed
              */
             public Builder status(Integer status) {
                 this.status = status;
@@ -270,7 +281,7 @@ public class ListWorkflowInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * WfInstanceId.
+             * The workflow instance ID.
              */
             public Builder wfInstanceId(Long wfInstanceId) {
                 this.wfInstanceId = wfInstanceId;
@@ -278,7 +289,7 @@ public class ListWorkflowInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * WorkflowId.
+             * The workflow ID.
              */
             public Builder workflowId(Long workflowId) {
                 this.workflowId = workflowId;
@@ -319,7 +330,7 @@ public class ListWorkflowInstanceResponseBody extends TeaModel {
             private java.util.List < WfInstanceInfos> wfInstanceInfos; 
 
             /**
-             * WfInstanceInfos.
+             * The workflow instances.
              */
             public Builder wfInstanceInfos(java.util.List < WfInstanceInfos> wfInstanceInfos) {
                 this.wfInstanceInfos = wfInstanceInfos;

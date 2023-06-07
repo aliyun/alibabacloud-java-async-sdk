@@ -82,7 +82,7 @@ public class StopInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * The error message that is returned if an error occurs.
+         * The error message that is returned only if an error occurs.
          */
         public Builder message(String message) {
             this.message = message;

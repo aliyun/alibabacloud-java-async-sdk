@@ -344,7 +344,7 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * > : The combination of the `JobID` and `ScheduleTime` parameters serves as a unique index. Therefore, after the ExecuteJob operation is called to run a job once, a sleep for one second is required before the ExecuteJob operation is called to run the job again. Otherwise, the job may fail.
+      * > The combination of the `JobID` and `ScheduleTime` parameters serves as a unique index. Therefore, after the ExecuteJob operation is called to run a job once, a sleep for one second is required before the ExecuteJob operation is called to run the job again. Otherwise, the job may fail.
       *
      */
     @Override
@@ -446,6 +446,20 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     @Override
+    public CompletableFuture<GetOverviewResponse> getOverview(GetOverviewRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("GetOverview").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(GetOverviewResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<GetOverviewResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    @Override
     public CompletableFuture<GetWorkFlowResponse> getWorkFlow(GetWorkFlowRequest request) {
         try {
             this.handler.validateRequestModel(request);
@@ -502,17 +516,21 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * >  Before you call this operation, you must add the following dependency to the pom.xml file:
-      *       <groupId>com.aliyun</groupId>
-      *       <artifactId>aliyun-java-sdk-schedulerx2</artifactId>
-      *       <version>1.0.5</version>
+      * Before you call this operation, you must add the following dependency to the pom.xml file:
+      * ```xml
+      * <dependency>
+      *     <groupId>com.aliyun</groupId>
+      *     <artifactId>aliyun-java-sdk-schedulerx2</artifactId>
+      *     <version>1.0.5</version>
+      * </dependency>
+      * ```
       *
      */
     @Override
     public CompletableFuture<ListGroupsResponse> listGroups(ListGroupsRequest request) {
         try {
             this.handler.validateRequestModel(request);
-            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("ListGroups").setMethod(HttpMethod.GET).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("ListGroups").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
             ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(ListGroupsResponse.create());
             return this.handler.execute(params);
         } catch (Exception e) {
@@ -558,7 +576,7 @@ public final class DefaultAsyncClient implements AsyncClient {
     public CompletableFuture<ListNamespacesResponse> listNamespaces(ListNamespacesRequest request) {
         try {
             this.handler.validateRequestModel(request);
-            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("ListNamespaces").setMethod(HttpMethod.GET).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("ListNamespaces").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
             ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(ListNamespacesResponse.create());
             return this.handler.execute(params);
         } catch (Exception e) {

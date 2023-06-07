@@ -13,6 +13,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class ListGroupsRequest extends Request {
     @Query
+    @NameInMap("AppGroupName")
+    private String appGroupName;
+
+    @Query
     @NameInMap("Namespace")
     @Validation(required = true)
     private String namespace;
@@ -27,6 +31,7 @@ public class ListGroupsRequest extends Request {
 
     private ListGroupsRequest(Builder builder) {
         super(builder);
+        this.appGroupName = builder.appGroupName;
         this.namespace = builder.namespace;
         this.namespaceSource = builder.namespaceSource;
         this.regionId = builder.regionId;
@@ -43,6 +48,13 @@ public class ListGroupsRequest extends Request {
     @Override
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return appGroupName
+     */
+    public String getAppGroupName() {
+        return this.appGroupName;
     }
 
     /**
@@ -67,6 +79,7 @@ public class ListGroupsRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<ListGroupsRequest, Builder> {
+        private String appGroupName; 
         private String namespace; 
         private String namespaceSource; 
         private String regionId; 
@@ -77,13 +90,23 @@ public class ListGroupsRequest extends Request {
 
         private Builder(ListGroupsRequest request) {
             super(request);
+            this.appGroupName = request.appGroupName;
             this.namespace = request.namespace;
             this.namespaceSource = request.namespaceSource;
             this.regionId = request.regionId;
         } 
 
         /**
-         * The namespace. You can obtain the namespace on the **Namespace** page in Distributed Task Scheduling Platform.
+         * 应用分组名称。
+         */
+        public Builder appGroupName(String appGroupName) {
+            this.putQueryParameter("AppGroupName", appGroupName);
+            this.appGroupName = appGroupName;
+            return this;
+        }
+
+        /**
+         * The namespace ID. You can obtain the namespace ID on the **Namespace** page in the SchedulerX console.
          */
         public Builder namespace(String namespace) {
             this.putQueryParameter("Namespace", namespace);
@@ -92,7 +115,7 @@ public class ListGroupsRequest extends Request {
         }
 
         /**
-         * Required only for a special third party.
+         * The source of the namespace. This parameter is required only for a special third party.
          */
         public Builder namespaceSource(String namespaceSource) {
             this.putQueryParameter("NamespaceSource", namespaceSource);
@@ -101,7 +124,7 @@ public class ListGroupsRequest extends Request {
         }
 
         /**
-         * The ID of the region in which the application is located.
+         * The region ID.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);

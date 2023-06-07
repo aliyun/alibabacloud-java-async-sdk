@@ -86,7 +86,7 @@ public class CreateWorkflowResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * Code.
+         * The HTTP status code.
          */
         public Builder code(String code) {
             this.code = code;
@@ -94,7 +94,7 @@ public class CreateWorkflowResponseBody extends TeaModel {
         }
 
         /**
-         * Data.
+         * The data that was returned for the request.
          */
         public Builder data(Data data) {
             this.data = data;
@@ -102,7 +102,7 @@ public class CreateWorkflowResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * The returned error message.
          */
         public Builder message(String message) {
             this.message = message;
@@ -110,7 +110,7 @@ public class CreateWorkflowResponseBody extends TeaModel {
         }
 
         /**
-         * Id of the request
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -118,7 +118,11 @@ public class CreateWorkflowResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * Indicates whether the workflow was created. Valid values:
+         * <p>
+         * 
+         * *   true
+         * *   false
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -158,7 +162,7 @@ public class CreateWorkflowResponseBody extends TeaModel {
             private Long workflowId; 
 
             /**
-             * WorkflowId.
+             * The workflow ID.
              */
             public Builder workflowId(Long workflowId) {
                 this.workflowId = workflowId;

@@ -74,7 +74,7 @@ public class DeleteJobResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * The HTTP status code that is returned.
+         * The HTTP status code.
          */
         public Builder code(Integer code) {
             this.code = code;
@@ -82,7 +82,7 @@ public class DeleteJobResponseBody extends TeaModel {
         }
 
         /**
-         * The additional information that is returned.
+         * The additional information returned.
          */
         public Builder message(String message) {
             this.message = message;
@@ -98,11 +98,11 @@ public class DeleteJobResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether the job is deleted.
+         * Indicates whether the job was deleted. Valid values:
          * <p>
          * 
-         * *   **true**: The job is deleted.
-         * *   **false**: Failed to delete the job.
+         * *   **true**: The job was deleted.
+         * *   **false**: The job was not deleted.
          */
         public Builder success(Boolean success) {
             this.success = success;

@@ -74,7 +74,7 @@ public class DisableJobResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * The status code.
+         * The HTTP status code.
          */
         public Builder code(Integer code) {
             this.code = code;
@@ -82,7 +82,7 @@ public class DisableJobResponseBody extends TeaModel {
         }
 
         /**
-         * The error message. The error message is returned only when an error occurs.
+         * The error message that is returned only if the corresponding error occurs.
          */
         public Builder message(String message) {
             this.message = message;
@@ -90,7 +90,7 @@ public class DisableJobResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -98,11 +98,11 @@ public class DisableJobResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether the call is successful. Valid values:
+         * Indicates whether the job was disabled. Valid values:
          * <p>
          * 
-         * *   **true**: The call is successful.
-         * *   **false**: The call fails.
+         * *   **true**
+         * *   **false**
          */
         public Builder success(Boolean success) {
             this.success = success;

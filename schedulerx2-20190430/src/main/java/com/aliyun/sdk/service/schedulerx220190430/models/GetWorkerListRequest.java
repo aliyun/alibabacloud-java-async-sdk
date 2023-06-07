@@ -108,7 +108,7 @@ public class GetWorkerListRequest extends Request {
         }
 
         /**
-         * The ID of the namespace. You can obtain the ID of the namespace on the Namespace page in Distributed Task Scheduling Platform.
+         * The ID of the namespace. You can obtain the namespace ID on the Namespace page in the SchedulerX console.
          */
         public Builder namespace(String namespace) {
             this.putQueryParameter("Namespace", namespace);
@@ -117,7 +117,7 @@ public class GetWorkerListRequest extends Request {
         }
 
         /**
-         * This parameter is required only for a special third party.
+         * The source of the namespace. This parameter is required only for a special third party.
          */
         public Builder namespaceSource(String namespaceSource) {
             this.putQueryParameter("NamespaceSource", namespaceSource);

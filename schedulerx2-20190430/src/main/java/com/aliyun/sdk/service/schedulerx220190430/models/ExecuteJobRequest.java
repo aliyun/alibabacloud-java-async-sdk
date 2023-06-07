@@ -202,7 +202,7 @@ public class ExecuteJobRequest extends Request {
         }
 
         /**
-         * The ID of the application. You can obtain the application ID on the Application Management page in the SchedulerX console.
+         * The application ID. You can obtain the application ID on the Application Management page in the SchedulerX console.
          */
         public Builder groupId(String groupId) {
             this.putQueryParameter("GroupId", groupId);
@@ -211,7 +211,7 @@ public class ExecuteJobRequest extends Request {
         }
 
         /**
-         * The parameters that are passed to trigger the job to run. The input value can be any string. The parameters that are passed are obtained by calling the `context.getInstanceParameters()` class in the `processor` code. The parameters are different from custom parameters for creating jobs.
+         * The parameters that are passed to trigger the job to run. The input value can be a random string. The parameters that are passed are obtained by calling the `context.getInstanceParameters()` class in the `processor` code. The parameters are different from custom parameters for creating jobs.
          */
         public Builder instanceParameters(String instanceParameters) {
             this.putQueryParameter("InstanceParameters", instanceParameters);
@@ -220,7 +220,7 @@ public class ExecuteJobRequest extends Request {
         }
 
         /**
-         * The ID of the job. You can obtain the job ID on the Task Management page in the SchedulerX console.
+         * The job ID. You can obtain the job ID on the Task Management page in the SchedulerX console.
          */
         public Builder jobId(Long jobId) {
             this.putQueryParameter("JobId", jobId);
@@ -238,7 +238,7 @@ public class ExecuteJobRequest extends Request {
         }
 
         /**
-         * The ID of the namespace. You can obtain the namespace ID on the Namespace page in the SchedulerX console.
+         * The namespace ID. You can obtain the namespace ID on the Namespace page in the SchedulerX console.
          */
         public Builder namespace(String namespace) {
             this.putQueryParameter("Namespace", namespace);
@@ -256,7 +256,7 @@ public class ExecuteJobRequest extends Request {
         }
 
         /**
-         * The ID of the region.
+         * The region ID.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);

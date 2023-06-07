@@ -113,7 +113,7 @@ public class EnableJobRequest extends Request {
         } 
 
         /**
-         * The ID of the application. You can obtain the ID of the application on the Application Management page in the SchedulerX console.
+         * The application ID. You can obtain the application ID on the Application Management page in the SchedulerX console.
          */
         public Builder groupId(String groupId) {
             this.putQueryParameter("GroupId", groupId);
@@ -122,7 +122,7 @@ public class EnableJobRequest extends Request {
         }
 
         /**
-         * The ID of the job. You can obtain the ID of the job on the Task Management page in the SchedulerX console.
+         * The job ID. You can obtain the job ID on the Task Management page in the SchedulerX console.
          */
         public Builder jobId(Long jobId) {
             this.putQueryParameter("JobId", jobId);
@@ -131,7 +131,7 @@ public class EnableJobRequest extends Request {
         }
 
         /**
-         * The ID of the namespace. You can obtain the ID of the namespace on the Namespace page in the SchedulerX console.
+         * The namespace ID. You can obtain the namespace ID on the Namespace page in the SchedulerX console.
          */
         public Builder namespace(String namespace) {
             this.putQueryParameter("Namespace", namespace);
@@ -140,7 +140,7 @@ public class EnableJobRequest extends Request {
         }
 
         /**
-         * Required only for a special third party.
+         * The source of the namespace. This parameter is required only for a special third party.
          */
         public Builder namespaceSource(String namespaceSource) {
             this.putQueryParameter("NamespaceSource", namespaceSource);
@@ -149,7 +149,7 @@ public class EnableJobRequest extends Request {
         }
 
         /**
-         * The ID of the region.
+         * The region ID.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);

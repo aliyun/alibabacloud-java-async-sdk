@@ -257,7 +257,11 @@ public class CreateAppGroupRequest extends Request {
         }
 
         /**
-         * AppType.
+         * 应用类型。
+         * <p>
+         * 
+         * - 1、普通应用。
+         * - 2、k8s应用。
          */
         public Builder appType(Integer appType) {
             this.putQueryParameter("AppType", appType);
@@ -275,7 +279,12 @@ public class CreateAppGroupRequest extends Request {
         }
 
         /**
-         * EnableLog.
+         * 是否开启日志。
+         * <p>
+         * 
+         * - true：开启
+         * 
+         * - false：关闭
          */
         public Builder enableLog(Boolean enableLog) {
             this.putQueryParameter("EnableLog", enableLog);
@@ -284,7 +293,7 @@ public class CreateAppGroupRequest extends Request {
         }
 
         /**
-         * The ID of the application. You can obtain the application ID on the Application Management page in Distributed Task Scheduling Platform.
+         * The application ID. You can obtain the application ID on the Application Management page in the SchedulerX console.
          */
         public Builder groupId(String groupId) {
             this.putQueryParameter("GroupId", groupId);
@@ -320,7 +329,7 @@ public class CreateAppGroupRequest extends Request {
         }
 
         /**
-         * The ID of the namespace. You can obtain the ID of the namespace on the Namespace page in Distributed Task Scheduling Platform.
+         * The namespace ID. You can obtain the namespace ID on the Namespace page in the SchedulerX console.
          */
         public Builder namespace(String namespace) {
             this.putQueryParameter("Namespace", namespace);
@@ -347,7 +356,7 @@ public class CreateAppGroupRequest extends Request {
         }
 
         /**
-         * The ID of the region.
+         * The region ID.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);

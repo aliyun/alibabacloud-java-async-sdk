@@ -113,7 +113,7 @@ public class BatchDisableJobsRequest extends Request {
         } 
 
         /**
-         * The ID of the application. You can obtain the ID of the application on the **Application Management** page in the SchedulerX console.
+         * The ID of the application. You can obtain the application ID on the **Application Management** page in the SchedulerX console.
          */
         public Builder groupId(String groupId) {
             this.putQueryParameter("GroupId", groupId);
@@ -140,7 +140,7 @@ public class BatchDisableJobsRequest extends Request {
         }
 
         /**
-         * Required only for a special third party.
+         * The source of the namespace. This parameter is required only for a special third party.
          */
         public Builder namespaceSource(String namespaceSource) {
             this.putQueryParameter("NamespaceSource", namespaceSource);
@@ -149,7 +149,7 @@ public class BatchDisableJobsRequest extends Request {
         }
 
         /**
-         * The ID of the region in which the job resides.
+         * The ID of the region to which the job belongs.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);

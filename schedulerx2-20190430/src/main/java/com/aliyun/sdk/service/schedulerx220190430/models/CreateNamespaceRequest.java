@@ -116,7 +116,7 @@ public class CreateNamespaceRequest extends Request {
         }
 
         /**
-         * The ID of the region.
+         * The region ID.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -125,7 +125,7 @@ public class CreateNamespaceRequest extends Request {
         }
 
         /**
-         * The UID of the namespace, which is globally unique. We recommend that you use the UUID to generate the UID.
+         * The unique identifier (UID) of the namespace. We recommend that you use the universally unique identifier (UUID) to generate the UID.
          */
         public Builder uid(String uid) {
             this.putQueryParameter("Uid", uid);

@@ -86,7 +86,7 @@ public class GetJobInfoResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * The HTTP status code that is returned.
+         * The HTTP status code.
          */
         public Builder code(Integer code) {
             this.code = code;
@@ -102,7 +102,7 @@ public class GetJobInfoResponseBody extends TeaModel {
         }
 
         /**
-         * The error message that is returned only when an error occurs.
+         * The error message returned only if an error occurs.
          */
         public Builder message(String message) {
             this.message = message;
@@ -110,7 +110,7 @@ public class GetJobInfoResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -118,11 +118,11 @@ public class GetJobInfoResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether the job details are obtained. Valid values:
+         * Indicates whether the job details were obtained. Valid values:
          * <p>
          * 
-         * *   **true**: The job details are obtained.
-         * *   **false**: Failed to obtain the job details.
+         * *   **true**
+         * *   **false**
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -206,7 +206,7 @@ public class GetJobInfoResponseBody extends TeaModel {
             }
 
             /**
-             * The email address of the user.
+             * The email address of the alert contact.
              */
             public Builder userMail(String userMail) {
                 this.userMail = userMail;
@@ -214,7 +214,7 @@ public class GetJobInfoResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the user.
+             * The name of the alert contact.
              */
             public Builder userName(String userName) {
                 this.userName = userName;
@@ -222,7 +222,7 @@ public class GetJobInfoResponseBody extends TeaModel {
             }
 
             /**
-             * The mobile number of the user.
+             * The mobile phone number of the alert contact.
              */
             public Builder userPhone(String userPhone) {
                 this.userPhone = userPhone;
@@ -323,11 +323,11 @@ public class GetJobInfoResponseBody extends TeaModel {
             private Boolean timeoutKillEnable; 
 
             /**
-             * Indicates whether an alert is generated upon a failure. Valid values:
+             * Indicates whether the Failure alarm switch was turned on. Valid values:
              * <p>
              * 
-             * *   **true**: The feature is enabled.
-             * *   **false**: The feature is disabled.
+             * *   **true**
+             * *   **false**
              */
             public Builder failEnable(Boolean failEnable) {
                 this.failEnable = failEnable;
@@ -335,7 +335,7 @@ public class GetJobInfoResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether an alert is generated if no worker is available.
+             * Indicates whether the No machine alarm available switch was turned on.
              */
             public Builder missWorkerEnable(Boolean missWorkerEnable) {
                 this.missWorkerEnable = missWorkerEnable;
@@ -343,7 +343,7 @@ public class GetJobInfoResponseBody extends TeaModel {
             }
 
             /**
-             * The notification method. Only Short Message Service (SMS) is supported.
+             * The method used to send alerts. Only Short Message Service (SMS) is supported.
              */
             public Builder sendChannel(String sendChannel) {
                 this.sendChannel = sendChannel;
@@ -351,7 +351,7 @@ public class GetJobInfoResponseBody extends TeaModel {
             }
 
             /**
-             * The timeout threshold. Unit: seconds. Default value: 7200.
+             * The timeout threshold. Default value: 7200. Unit: seconds.
              */
             public Builder timeout(Long timeout) {
                 this.timeout = timeout;
@@ -359,11 +359,11 @@ public class GetJobInfoResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether an alert is generated upon a timeout. Valid values:
+             * Indicates whether the Timeout alarm switch was turned on. Valid values:
              * <p>
              * 
-             * *   **true**: The feature is enabled.
-             * *   **false**: The feature is disabled.
+             * *   **true**
+             * *   **false**
              */
             public Builder timeoutEnable(Boolean timeoutEnable) {
                 this.timeoutEnable = timeoutEnable;
@@ -371,7 +371,7 @@ public class GetJobInfoResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether the job is terminated upon a timeout. By default, this feature is disabled.
+             * Indicates whether the Timeout termination switch was turned on. The switch is turned off by default.
              */
             public Builder timeoutKillEnable(Boolean timeoutKillEnable) {
                 this.timeoutKillEnable = timeoutKillEnable;
@@ -424,7 +424,7 @@ public class GetJobInfoResponseBody extends TeaModel {
             private MonitorConfig monitorConfig; 
 
             /**
-             * The contact Information.
+             * The alert contact Information.
              */
             public Builder contactInfo(java.util.List < ContactInfo> contactInfo) {
                 this.contactInfo = contactInfo;
@@ -432,7 +432,7 @@ public class GetJobInfoResponseBody extends TeaModel {
             }
 
             /**
-             * The configurations of the alerting feature and alert thresholds.
+             * The configurations of the alerting features and the alert thresholds.
              */
             public Builder monitorConfig(MonitorConfig monitorConfig) {
                 this.monitorConfig = monitorConfig;
@@ -533,7 +533,7 @@ public class GetJobInfoResponseBody extends TeaModel {
             private Integer taskMaxAttempt; 
 
             /**
-             * The number of threads that are triggered by an instance. Default value: 5.
+             * The number of threads that were triggered by a single worker at a time. Default value: 5.
              */
             public Builder consumerSize(Integer consumerSize) {
                 this.consumerSize = consumerSize;
@@ -549,7 +549,7 @@ public class GetJobInfoResponseBody extends TeaModel {
             }
 
             /**
-             * The number of tasks that are returned for a parallel job at a time. Default value: 100.
+             * The number of tasks that were pulled by a parallel job at a time. Default value: 100.
              */
             public Builder pageSize(Integer pageSize) {
                 this.pageSize = pageSize;
@@ -565,7 +565,7 @@ public class GetJobInfoResponseBody extends TeaModel {
             }
 
             /**
-             * The retry interval of the task after a task failure.
+             * The interval at which the system retried to run the task after a task failure.
              */
             public Builder taskAttemptInterval(Integer taskAttemptInterval) {
                 this.taskAttemptInterval = taskAttemptInterval;
@@ -650,7 +650,7 @@ public class GetJobInfoResponseBody extends TeaModel {
             private Integer timeType; 
 
             /**
-             * If the TimeType parameter is set to **1** (cron), you can customize the calendar.
+             * Custom calendar days specified if TimeType is set to **1** (cron).
              */
             public Builder calendar(String calendar) {
                 this.calendar = calendar;
@@ -658,7 +658,7 @@ public class GetJobInfoResponseBody extends TeaModel {
             }
 
             /**
-             * If the TimeType parameter is set to **1** (cron), you can configure the time offset. Unit: seconds.
+             * The time offset specified if TimeType is set to **1** (cron). Unit: seconds.
              */
             public Builder dataOffset(Integer dataOffset) {
                 this.dataOffset = dataOffset;
@@ -666,13 +666,13 @@ public class GetJobInfoResponseBody extends TeaModel {
             }
 
             /**
-             * The time expression. The time expression varies with the time type:
+             * The time expression specified based on the value of TimeType:
              * <p>
              * 
-             * *   **api**: No time expression exists.
-             * *   **fix_rate**: a specific fixed frequency. For example, a value of 30 indicates that the job is triggered every 30 seconds.
-             * *   **cron**: a standard Cron expression.
-             * *   **second_delay**: a fixed delay after which the job is triggered. Valid values: 1 to 60. Unit: seconds.
+             * *   If TimeType is set to **100** (api), no time expression is required.
+             * *   If TimeType is set to **3** (fix_rate), this parameter value indicates the specific and fixed frequency. For example, if the value is 30, the system triggers a job every 30 seconds.
+             * *   If TimeType is set to **1** (cron), this parameter value indicates the standard CRON expression used to specify the time when to schedule the job.
+             * *   If TimeType is set to **4** (second_delay), this parameter value indicates the fixed delay after which the job is triggered. Valid values: 1 to 60. Unit: seconds.
              */
             public Builder timeExpression(String timeExpression) {
                 this.timeExpression = timeExpression;
@@ -686,6 +686,7 @@ public class GetJobInfoResponseBody extends TeaModel {
              * *   **1**: cron
              * *   **3**: fix_rate
              * *   **4**: second_delay
+             * *   **5**: one_time
              * *   **100**: api
              */
             public Builder timeType(Integer timeType) {
@@ -919,7 +920,7 @@ public class GetJobInfoResponseBody extends TeaModel {
             private String xAttrs; 
 
             /**
-             * The interval at which the system retries to run the job after a job failure. Unit: seconds. Default value: 30.
+             * The interval at which the system retried to run the job after a job failure. Default value: 30. Unit: seconds.
              */
             public Builder attemptInterval(Integer attemptInterval) {
                 this.attemptInterval = attemptInterval;
@@ -954,12 +955,12 @@ public class GetJobInfoResponseBody extends TeaModel {
              * The execution mode of the job. Valid values:
              * <p>
              * 
-             * *   **standalone**
-             * *   **broadcast**
-             * *   **parallel**
-             * *   **grid**
-             * *   **batch**
-             * *   **shard**
+             * *   **Stand-alone operation**
+             * *   **Broadcast run**
+             * *   **Visual MapReduce**
+             * *   **MapReduce**
+             * *   ****
+             * *   **Shard run**
              */
             public Builder executeMode(String executeMode) {
                 this.executeMode = executeMode;
@@ -967,7 +968,7 @@ public class GetJobInfoResponseBody extends TeaModel {
             }
 
             /**
-             * The full path that is used to upload files to Object Storage Service (OSS).
+             * The full path used to upload files to Object Storage Service (OSS).
              * <p>
              * 
              * If you use a JAR package, you can upload the JAR package to this OSS path.
@@ -978,7 +979,7 @@ public class GetJobInfoResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the job.
+             * The job ID.
              */
             public Builder jobId(Long jobId) {
                 this.jobId = jobId;
@@ -994,7 +995,7 @@ public class GetJobInfoResponseBody extends TeaModel {
             }
 
             /**
-             * The type of the job.
+             * The job type.
              */
             public Builder jobType(String jobType) {
                 this.jobType = jobType;
@@ -1002,7 +1003,7 @@ public class GetJobInfoResponseBody extends TeaModel {
             }
 
             /**
-             * The advanced configurations of the job. The parameters are returned only if the execution mode of the job is parallel, grid, or batch.
+             * The advanced configurations of the job.
              */
             public Builder mapTaskXAttrs(MapTaskXAttrs mapTaskXAttrs) {
                 this.mapTaskXAttrs = mapTaskXAttrs;
@@ -1010,7 +1011,7 @@ public class GetJobInfoResponseBody extends TeaModel {
             }
 
             /**
-             * The maximum number of retries after a job failure. This parameter is specified based on your business requirements. Default value: 0.
+             * The maximum number of retries after a job failure. This parameter was specified based on your business requirements. Default value: 0.
              */
             public Builder maxAttempt(Integer maxAttempt) {
                 this.maxAttempt = maxAttempt;
@@ -1018,7 +1019,7 @@ public class GetJobInfoResponseBody extends TeaModel {
             }
 
             /**
-             * The maximum number of concurrent instances. Default value: 1. A value of 1 indicates that if the last triggered instance is running, the next instance is not triggered even if the scheduled point in time for running the next instance is reached.
+             * The maximum number of concurrent instances. Default value: 1. The default value indicates that if the last triggered instance is running, the next instance is not triggered even if the scheduled point in time for running the next instance is reached.
              */
             public Builder maxConcurrency(String maxConcurrency) {
                 this.maxConcurrency = maxConcurrency;
@@ -1026,7 +1027,7 @@ public class GetJobInfoResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the job.
+             * The job name.
              */
             public Builder name(String name) {
                 this.name = name;
@@ -1034,7 +1035,7 @@ public class GetJobInfoResponseBody extends TeaModel {
             }
 
             /**
-             * The user-defined parameters. These parameters can be obtained when the job is running.
+             * The user-defined parameters that you can obtain when the job is running.
              */
             public Builder parameters(String parameters) {
                 this.parameters = parameters;
@@ -1042,11 +1043,11 @@ public class GetJobInfoResponseBody extends TeaModel {
             }
 
             /**
-             * The status of the job. Valid values:
+             * Indicates whether the job was enabled. Valid values:
              * <p>
              * 
-             * *   **1**: The job is enabled and can be triggered.
-             * *   **0**: The job is disabled and cannot be triggered.
+             * *   **1**: The job was enabled and could be triggered.
+             * *   **0**: The job was disabled and could not be triggered.
              */
             public Builder status(Integer status) {
                 this.status = status;

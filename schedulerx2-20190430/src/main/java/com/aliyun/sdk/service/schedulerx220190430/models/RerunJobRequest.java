@@ -159,7 +159,7 @@ public class RerunJobRequest extends Request {
         } 
 
         /**
-         * DataTime.
+         * The data timestamp of the job. Specify a string in the HH:mm:ss format.
          */
         public Builder dataTime(String dataTime) {
             this.putBodyParameter("DataTime", dataTime);
@@ -168,7 +168,7 @@ public class RerunJobRequest extends Request {
         }
 
         /**
-         * EndDate.
+         * The time when the job stops running. Specify a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.
          */
         public Builder endDate(Long endDate) {
             this.putBodyParameter("EndDate", endDate);
@@ -177,7 +177,7 @@ public class RerunJobRequest extends Request {
         }
 
         /**
-         * GroupId.
+         * The application group ID. You can obtain the application group ID on the Application Management page in the SchedulerX console.
          */
         public Builder groupId(String groupId) {
             this.putBodyParameter("GroupId", groupId);
@@ -186,7 +186,7 @@ public class RerunJobRequest extends Request {
         }
 
         /**
-         * JobId.
+         * The job ID.
          */
         public Builder jobId(Long jobId) {
             this.putBodyParameter("JobId", jobId);
@@ -195,7 +195,7 @@ public class RerunJobRequest extends Request {
         }
 
         /**
-         * Namespace.
+         * The namespace ID. You can obtain the namespace ID on the Namespace page in the SchedulerX console.
          */
         public Builder namespace(String namespace) {
             this.putBodyParameter("Namespace", namespace);
@@ -204,7 +204,7 @@ public class RerunJobRequest extends Request {
         }
 
         /**
-         * NamespaceSource.
+         * The source of the namespace. This parameter is required only for a special third party.
          */
         public Builder namespaceSource(String namespaceSource) {
             this.putBodyParameter("NamespaceSource", namespaceSource);
@@ -213,7 +213,7 @@ public class RerunJobRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * The region ID.
          */
         public Builder regionId(String regionId) {
             this.putBodyParameter("RegionId", regionId);
@@ -222,7 +222,7 @@ public class RerunJobRequest extends Request {
         }
 
         /**
-         * StartDate.
+         * The time when the job starts to rerun. Specify a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.
          */
         public Builder startDate(Long startDate) {
             this.putBodyParameter("StartDate", startDate);

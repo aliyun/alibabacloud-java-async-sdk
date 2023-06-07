@@ -114,7 +114,7 @@ public class BatchDeleteJobsRequest extends Request {
         } 
 
         /**
-         * The ID of the application. You can obtain the application ID on the **Application Management** page in Distributed Task Scheduling Platform.
+         * The ID of the application. You can obtain the application ID on the **Application Management** page in the SchedulerX console.
          */
         public Builder groupId(String groupId) {
             this.putQueryParameter("GroupId", groupId);
@@ -123,7 +123,7 @@ public class BatchDeleteJobsRequest extends Request {
         }
 
         /**
-         * The job IDs. Multiple job IDs are separated by commas (,).
+         * The job IDs. Separate multiple job IDs with commas (,).
          */
         public Builder jobIdList(java.util.List < Long > jobIdList) {
             this.putBodyParameter("JobIdList", jobIdList);
@@ -132,7 +132,7 @@ public class BatchDeleteJobsRequest extends Request {
         }
 
         /**
-         * The ID of the namespace to which the job belongs. You can obtain the ID of the namespace on the **Namespace** page in Distributed Task Scheduling Platform.
+         * The ID of the namespace to which the job belongs. You can obtain the ID of the namespace on the **Namespace** page in the SchedulerX console.
          */
         public Builder namespace(String namespace) {
             this.putQueryParameter("Namespace", namespace);
@@ -141,7 +141,7 @@ public class BatchDeleteJobsRequest extends Request {
         }
 
         /**
-         * This parameter is required only for a special third party.
+         * The source of the namespace. This parameter is required only for a special third party.
          */
         public Builder namespaceSource(String namespaceSource) {
             this.putQueryParameter("NamespaceSource", namespaceSource);

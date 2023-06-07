@@ -129,7 +129,7 @@ public class GetJobInstanceRequest extends Request {
         } 
 
         /**
-         * The ID of the application. You can obtain the application ID on the Application Management page in the SchedulerX console.
+         * The application ID. You can obtain the application ID on the Application Management page in the SchedulerX console.
          */
         public Builder groupId(String groupId) {
             this.putQueryParameter("GroupId", groupId);
@@ -138,7 +138,7 @@ public class GetJobInstanceRequest extends Request {
         }
 
         /**
-         * The ID of the job.
+         * The job ID.
          */
         public Builder jobId(Long jobId) {
             this.putQueryParameter("JobId", jobId);
@@ -147,7 +147,7 @@ public class GetJobInstanceRequest extends Request {
         }
 
         /**
-         * The ID of the job instance.
+         * The job instance ID.
          */
         public Builder jobInstanceId(Long jobInstanceId) {
             this.putQueryParameter("JobInstanceId", jobInstanceId);
@@ -156,7 +156,7 @@ public class GetJobInstanceRequest extends Request {
         }
 
         /**
-         * The ID of the namespace. You can obtain the namespace ID on the Namespace page in the SchedulerX console.
+         * The namespace ID. You can obtain the namespace ID on the Namespace page in the SchedulerX console.
          */
         public Builder namespace(String namespace) {
             this.putQueryParameter("Namespace", namespace);

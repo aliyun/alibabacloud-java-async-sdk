@@ -132,7 +132,7 @@ public class GetWorkFlowRequest extends Request {
         }
 
         /**
-         * The source of the namespcae.
+         * The source of the namespace.
          */
         public Builder namespaceSource(String namespaceSource) {
             this.putQueryParameter("NamespaceSource", namespaceSource);

@@ -86,7 +86,7 @@ public class ListNamespacesResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * The HTTP status code that is returned.
+         * The HTTP status code.
          */
         public Builder code(Integer code) {
             this.code = code;
@@ -94,7 +94,7 @@ public class ListNamespacesResponseBody extends TeaModel {
         }
 
         /**
-         * The list of namespaces.
+         * The information about the namespaces.
          */
         public Builder data(Data data) {
             this.data = data;
@@ -102,7 +102,7 @@ public class ListNamespacesResponseBody extends TeaModel {
         }
 
         /**
-         * The additional information that is returned.
+         * The returned message.
          */
         public Builder message(String message) {
             this.message = message;
@@ -110,7 +110,7 @@ public class ListNamespacesResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -118,11 +118,11 @@ public class ListNamespacesResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether the call is successful. Valid values:
+         * Indicates whether the request was successful. Valid values:
          * <p>
          * 
-         * *   **true**: The call is successful.
-         * *   **false**: The call fails.
+         * *   **true**
+         * *   **false**
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -202,7 +202,7 @@ public class ListNamespacesResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the namespace.
+             * The namespace ID.
              */
             public Builder uId(String uId) {
                 this.uId = uId;
@@ -243,7 +243,7 @@ public class ListNamespacesResponseBody extends TeaModel {
             private java.util.List < Namespaces> namespaces; 
 
             /**
-             * The list and details of the namespaces.
+             * The namespaces and their details.
              */
             public Builder namespaces(java.util.List < Namespaces> namespaces) {
                 this.namespaces = namespaces;

@@ -86,7 +86,7 @@ public class CreateAppGroupResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * The HTTP status code that is returned.
+         * The HTTP status code.
          */
         public Builder code(Integer code) {
             this.code = code;
@@ -102,7 +102,7 @@ public class CreateAppGroupResponseBody extends TeaModel {
         }
 
         /**
-         * The error message that is returned only if an error occurs.
+         * The error message that is returned only if the corresponding error occurs.
          */
         public Builder message(String message) {
             this.message = message;
@@ -110,7 +110,7 @@ public class CreateAppGroupResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -118,11 +118,11 @@ public class CreateAppGroupResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether the application is created. Valid values:
+         * Indicates whether the application was created. Valid values:
          * <p>
          * 
-         * *   **true**: The application is created.
-         * *   **false**: Failed to create the application.
+         * *   **true**
+         * *   **false**
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -174,7 +174,7 @@ public class CreateAppGroupResponseBody extends TeaModel {
             private String appKey; 
 
             /**
-             * The ID of the job group.
+             * The job group ID.
              */
             public Builder appGroupId(Long appGroupId) {
                 this.appGroupId = appGroupId;

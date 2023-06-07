@@ -86,7 +86,7 @@ public class ListGroupsResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * The HTTP status code returned.
+         * The HTTP status code.
          */
         public Builder code(Integer code) {
             this.code = code;
@@ -94,7 +94,7 @@ public class ListGroupsResponseBody extends TeaModel {
         }
 
         /**
-         * The information about the list of applications.
+         * The information about the applications.
          */
         public Builder data(Data data) {
             this.data = data;
@@ -102,7 +102,7 @@ public class ListGroupsResponseBody extends TeaModel {
         }
 
         /**
-         * The additional information returned.
+         * The returned message.
          */
         public Builder message(String message) {
             this.message = message;
@@ -110,7 +110,7 @@ public class ListGroupsResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -118,11 +118,11 @@ public class ListGroupsResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether the call is successful. Valid values:
+         * Indicates whether the request was successful. Valid values:
          * <p>
          * 
-         * *   **true**: The call is successful.
-         * *   **false**: The call fails.
+         * *   **true**
+         * *   **false**
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -210,7 +210,7 @@ public class ListGroupsResponseBody extends TeaModel {
             private String groupId; 
 
             /**
-             * 应用分组ID
+             * The application group ID.
              */
             public Builder appGroupId(Long appGroupId) {
                 this.appGroupId = appGroupId;
@@ -218,7 +218,7 @@ public class ListGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * The key for the application.
+             * The AppKey for the application.
              */
             public Builder appKey(String appKey) {
                 this.appKey = appKey;
@@ -234,7 +234,7 @@ public class ListGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * The application description.
+             * The description of the application.
              */
             public Builder description(String description) {
                 this.description = description;
@@ -283,7 +283,7 @@ public class ListGroupsResponseBody extends TeaModel {
             private java.util.List < AppGroups> appGroups; 
 
             /**
-             * The list of applications and details of applications.
+             * The applications and their details.
              */
             public Builder appGroups(java.util.List < AppGroups> appGroups) {
                 this.appGroups = appGroups;

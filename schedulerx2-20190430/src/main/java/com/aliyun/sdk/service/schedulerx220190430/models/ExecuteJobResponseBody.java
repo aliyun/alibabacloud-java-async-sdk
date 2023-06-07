@@ -86,7 +86,7 @@ public class ExecuteJobResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * The HTTP status code that is returned.
+         * The HTTP status code.
          */
         public Builder code(Integer code) {
             this.code = code;
@@ -94,7 +94,7 @@ public class ExecuteJobResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the job instance that is returned if the call is successful.
+         * The ID of the job instance that is returned if the request is successful.
          */
         public Builder data(Data data) {
             this.data = data;
@@ -102,7 +102,7 @@ public class ExecuteJobResponseBody extends TeaModel {
         }
 
         /**
-         * The error message that is returned if an error occurs.
+         * The error message that is returned only if the corresponding error occurs.
          */
         public Builder message(String message) {
             this.message = message;
@@ -110,7 +110,7 @@ public class ExecuteJobResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -118,11 +118,11 @@ public class ExecuteJobResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether the call is successful. Valid values:
+         * Indicates whether the request was successful. Valid values:
          * <p>
          * 
-         * *   `true`: The call is successful.
-         * *   `false`: The call fails.
+         * *   `true`
+         * *   `false`
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -162,7 +162,7 @@ public class ExecuteJobResponseBody extends TeaModel {
             private Long jobInstanceId; 
 
             /**
-             * The ID of the job instance.
+             * The job instance ID.
              */
             public Builder jobInstanceId(Long jobInstanceId) {
                 this.jobInstanceId = jobInstanceId;

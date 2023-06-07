@@ -147,7 +147,7 @@ public class StopInstanceRequest extends Request {
         }
 
         /**
-         * The ID of the job. You can obtain the job ID on the Task Management page in the SchedulerX console.
+         * The ID of the job. You can obtain the ID of the job on the Task Management page in the SchedulerX console.
          */
         public Builder jobId(Long jobId) {
             this.putQueryParameter("JobId", jobId);
@@ -174,7 +174,7 @@ public class StopInstanceRequest extends Request {
         }
 
         /**
-         * The ID of the region in which the application resides.
+         * The ID of the region.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);

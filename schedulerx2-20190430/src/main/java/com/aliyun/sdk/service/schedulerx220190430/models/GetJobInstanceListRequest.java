@@ -156,7 +156,7 @@ public class GetJobInstanceListRequest extends Request {
         } 
 
         /**
-         * EndTimestamp.
+         * 结束时间（时间戳）。
          */
         public Builder endTimestamp(Long endTimestamp) {
             this.putQueryParameter("EndTimestamp", endTimestamp);
@@ -174,7 +174,7 @@ public class GetJobInstanceListRequest extends Request {
         }
 
         /**
-         * The ID of the job. You can obtain the job ID on the Task Management page in the SchedulerX console.
+         * The ID of the job. You can obtain the ID of the job on the Task Management page in the SchedulerX console.
          */
         public Builder jobId(Long jobId) {
             this.putQueryParameter("JobId", jobId);
@@ -201,7 +201,7 @@ public class GetJobInstanceListRequest extends Request {
         }
 
         /**
-         * The ID of the region in which the application resides.
+         * The ID of the region.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -210,7 +210,7 @@ public class GetJobInstanceListRequest extends Request {
         }
 
         /**
-         * StartTimestamp.
+         * 开始时间（时间戳）。
          */
         public Builder startTimestamp(Long startTimestamp) {
             this.putQueryParameter("StartTimestamp", startTimestamp);
@@ -219,7 +219,15 @@ public class GetJobInstanceListRequest extends Request {
         }
 
         /**
-         * 查询指定状态的任务实例列表
+         * 实例状态。包含以下几种状态：
+         * <p>
+         * 
+         * 1：等待
+         * 3：运行中
+         * 4：成功
+         * 5：失败
+         * 9：拒绝
+         * 对应枚举类： com.alibaba.schedulerx.common.domain.InstanceStatus
          */
         public Builder status(Integer status) {
             this.putQueryParameter("Status", status);
