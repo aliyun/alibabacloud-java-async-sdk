@@ -141,6 +141,9 @@ public class GetVideoTaskInfoResponseBody extends TeaModel {
         @NameInMap("SubtitlesUrl")
         private String subtitlesUrl;
 
+        @NameInMap("VideoDuration")
+        private Integer videoDuration;
+
         @NameInMap("VideoUrl")
         private String videoUrl;
 
@@ -151,6 +154,7 @@ public class GetVideoTaskInfoResponseBody extends TeaModel {
             this.failCode = builder.failCode;
             this.failReason = builder.failReason;
             this.subtitlesUrl = builder.subtitlesUrl;
+            this.videoDuration = builder.videoDuration;
             this.videoUrl = builder.videoUrl;
             this.wordSubtitlesUrl = builder.wordSubtitlesUrl;
         }
@@ -185,6 +189,13 @@ public class GetVideoTaskInfoResponseBody extends TeaModel {
         }
 
         /**
+         * @return videoDuration
+         */
+        public Integer getVideoDuration() {
+            return this.videoDuration;
+        }
+
+        /**
          * @return videoUrl
          */
         public String getVideoUrl() {
@@ -202,6 +213,7 @@ public class GetVideoTaskInfoResponseBody extends TeaModel {
             private String failCode; 
             private String failReason; 
             private String subtitlesUrl; 
+            private Integer videoDuration; 
             private String videoUrl; 
             private String wordSubtitlesUrl; 
 
@@ -226,6 +238,14 @@ public class GetVideoTaskInfoResponseBody extends TeaModel {
              */
             public Builder subtitlesUrl(String subtitlesUrl) {
                 this.subtitlesUrl = subtitlesUrl;
+                return this;
+            }
+
+            /**
+             * VideoDuration.
+             */
+            public Builder videoDuration(Integer videoDuration) {
+                this.videoDuration = videoDuration;
                 return this;
             }
 

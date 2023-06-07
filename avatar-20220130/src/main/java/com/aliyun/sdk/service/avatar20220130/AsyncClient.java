@@ -44,6 +44,4 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<SubmitTextTo3DAvatarVideoTaskResponse> submitTextTo3DAvatarVideoTask(SubmitTextTo3DAvatarVideoTaskRequest request);
 
-    CompletableFuture<SubmitTextToSignVideoTaskResponse> submitTextToSignVideoTask(SubmitTextToSignVideoTaskRequest request);
-
 }

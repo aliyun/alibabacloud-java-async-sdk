@@ -403,6 +403,9 @@ public class SubmitTextTo2DAvatarVideoTaskRequest extends Request {
 
     }
     public static class VideoInfo extends TeaModel {
+        @NameInMap("AlphaFormat")
+        private Integer alphaFormat;
+
         @NameInMap("BackgroundImageUrl")
         private String backgroundImageUrl;
 
@@ -412,10 +415,15 @@ public class SubmitTextTo2DAvatarVideoTaskRequest extends Request {
         @NameInMap("IsSubtitles")
         private Boolean isSubtitles;
 
+        @NameInMap("Resolution")
+        private Integer resolution;
+
         private VideoInfo(Builder builder) {
+            this.alphaFormat = builder.alphaFormat;
             this.backgroundImageUrl = builder.backgroundImageUrl;
             this.isAlpha = builder.isAlpha;
             this.isSubtitles = builder.isSubtitles;
+            this.resolution = builder.resolution;
         }
 
         public static Builder builder() {
@@ -424,6 +432,13 @@ public class SubmitTextTo2DAvatarVideoTaskRequest extends Request {
 
         public static VideoInfo create() {
             return builder().build();
+        }
+
+        /**
+         * @return alphaFormat
+         */
+        public Integer getAlphaFormat() {
+            return this.alphaFormat;
         }
 
         /**
@@ -447,10 +462,27 @@ public class SubmitTextTo2DAvatarVideoTaskRequest extends Request {
             return this.isSubtitles;
         }
 
+        /**
+         * @return resolution
+         */
+        public Integer getResolution() {
+            return this.resolution;
+        }
+
         public static final class Builder {
+            private Integer alphaFormat; 
             private String backgroundImageUrl; 
             private Boolean isAlpha; 
             private Boolean isSubtitles; 
+            private Integer resolution; 
+
+            /**
+             * AlphaFormat.
+             */
+            public Builder alphaFormat(Integer alphaFormat) {
+                this.alphaFormat = alphaFormat;
+                return this;
+            }
 
             /**
              * BackgroundImageUrl.
@@ -473,6 +505,14 @@ public class SubmitTextTo2DAvatarVideoTaskRequest extends Request {
              */
             public Builder isSubtitles(Boolean isSubtitles) {
                 this.isSubtitles = isSubtitles;
+                return this;
+            }
+
+            /**
+             * Resolution.
+             */
+            public Builder resolution(Integer resolution) {
+                this.resolution = resolution;
                 return this;
             }
 
