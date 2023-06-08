@@ -401,7 +401,7 @@ public class HotelOrderPreValidateResponseBody extends TeaModel {
         private String discountPrice;
 
         @NameInMap("max_booking_num")
-        private String maxBookingNum;
+        private Integer maxBookingNum;
 
         @NameInMap("price")
         private Long price;
@@ -458,7 +458,7 @@ public class HotelOrderPreValidateResponseBody extends TeaModel {
         /**
          * @return maxBookingNum
          */
-        public String getMaxBookingNum() {
+        public Integer getMaxBookingNum() {
             return this.maxBookingNum;
         }
 
@@ -507,7 +507,7 @@ public class HotelOrderPreValidateResponseBody extends TeaModel {
         public static final class Builder {
             private String board; 
             private String discountPrice; 
-            private String maxBookingNum; 
+            private Integer maxBookingNum; 
             private Long price; 
             private String rateStartTime; 
             private Integer roomCount; 
@@ -534,7 +534,7 @@ public class HotelOrderPreValidateResponseBody extends TeaModel {
             /**
              * max_booking_num.
              */
-            public Builder maxBookingNum(String maxBookingNum) {
+            public Builder maxBookingNum(Integer maxBookingNum) {
                 this.maxBookingNum = maxBookingNum;
                 return this;
             }
