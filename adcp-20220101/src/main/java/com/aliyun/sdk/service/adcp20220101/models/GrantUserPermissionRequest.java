@@ -128,7 +128,7 @@ public class GrantUserPermissionRequest extends Request {
         } 
 
         /**
-         * The ID of the master instance.
+         * ClusterId.
          */
         public Builder clusterId(String clusterId) {
             this.putQueryParameter("ClusterId", clusterId);
@@ -146,7 +146,7 @@ public class GrantUserPermissionRequest extends Request {
         }
 
         /**
-         * The namespace to which the permissions are scoped. By default, this parameter is empty when you set role_type to cluster.
+         * Namespace.
          */
         public Builder namespace(String namespace) {
             this.putQueryParameter("Namespace", namespace);
@@ -155,11 +155,7 @@ public class GrantUserPermissionRequest extends Request {
         }
 
         /**
-         * Specifies the predefined role that you want to assign. Valid values:
-         * <p>
-         * 
-         * *   admin: the administrator role.
-         * *   dev: the developer role.
+         * RoleName.
          */
         public Builder roleName(String roleName) {
             this.putQueryParameter("RoleName", roleName);
@@ -168,11 +164,7 @@ public class GrantUserPermissionRequest extends Request {
         }
 
         /**
-         * The authorization type. Valid values:
-         * <p>
-         * 
-         * *   cluster: specifies that the permissions are scoped to a master instance.
-         * *   namespace: specifies that the permissions are scoped to a namespace of a cluster.
+         * RoleType.
          */
         public Builder roleType(String roleType) {
             this.putQueryParameter("RoleType", roleType);
@@ -181,7 +173,7 @@ public class GrantUserPermissionRequest extends Request {
         }
 
         /**
-         * The ID of the RAM user.
+         * UserId.
          */
         public Builder userId(String userId) {
             this.putQueryParameter("UserId", userId);

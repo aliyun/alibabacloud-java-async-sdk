@@ -25,6 +25,10 @@ public class UpdateHubClusterFeatureRequest extends Request {
     private Boolean argoServerEnabled;
 
     @Query
+    @NameInMap("ArmsEnabled")
+    private Boolean armsEnabled;
+
+    @Query
     @NameInMap("AuditLogEnabled")
     private Boolean auditLogEnabled;
 
@@ -66,6 +70,7 @@ public class UpdateHubClusterFeatureRequest extends Request {
         this.apiServerEipId = builder.apiServerEipId;
         this.argoCDEnabled = builder.argoCDEnabled;
         this.argoServerEnabled = builder.argoServerEnabled;
+        this.armsEnabled = builder.armsEnabled;
         this.auditLogEnabled = builder.auditLogEnabled;
         this.clusterId = builder.clusterId;
         this.deletionProtection = builder.deletionProtection;
@@ -109,6 +114,13 @@ public class UpdateHubClusterFeatureRequest extends Request {
      */
     public Boolean getArgoServerEnabled() {
         return this.argoServerEnabled;
+    }
+
+    /**
+     * @return armsEnabled
+     */
+    public Boolean getArmsEnabled() {
+        return this.armsEnabled;
     }
 
     /**
@@ -178,6 +190,7 @@ public class UpdateHubClusterFeatureRequest extends Request {
         private String apiServerEipId; 
         private Boolean argoCDEnabled; 
         private Boolean argoServerEnabled; 
+        private Boolean armsEnabled; 
         private Boolean auditLogEnabled; 
         private String clusterId; 
         private Boolean deletionProtection; 
@@ -197,6 +210,7 @@ public class UpdateHubClusterFeatureRequest extends Request {
             this.apiServerEipId = request.apiServerEipId;
             this.argoCDEnabled = request.argoCDEnabled;
             this.argoServerEnabled = request.argoServerEnabled;
+            this.armsEnabled = request.armsEnabled;
             this.auditLogEnabled = request.auditLogEnabled;
             this.clusterId = request.clusterId;
             this.deletionProtection = request.deletionProtection;
@@ -232,6 +246,15 @@ public class UpdateHubClusterFeatureRequest extends Request {
         public Builder argoServerEnabled(Boolean argoServerEnabled) {
             this.putQueryParameter("ArgoServerEnabled", argoServerEnabled);
             this.argoServerEnabled = argoServerEnabled;
+            return this;
+        }
+
+        /**
+         * ArmsEnabled.
+         */
+        public Builder armsEnabled(Boolean armsEnabled) {
+            this.putQueryParameter("ArmsEnabled", armsEnabled);
+            this.armsEnabled = armsEnabled;
             return this;
         }
 
