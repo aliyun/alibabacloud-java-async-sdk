@@ -1,3 +1,6 @@
+2023-06-08 Version: 1.0.21
+- 重新打包
+
 2023-06-07 Version: 1.0.20
 - GetVideoTaskInfo 支持返回视频时长
 - 新增 QueryAvatarList QueryAvatar 资产查询接口

@@ -28,6 +28,10 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<LicenseAuthResponse> licenseAuth(LicenseAuthRequest request);
 
+    CompletableFuture<QueryAvatarResponse> queryAvatar(QueryAvatarRequest request);
+
+    CompletableFuture<QueryAvatarListResponse> queryAvatarList(QueryAvatarListRequest request);
+
     CompletableFuture<QueryRunningInstanceResponse> queryRunningInstance(QueryRunningInstanceRequest request);
 
     CompletableFuture<QueryTimedResetOperateStatusResponse> queryTimedResetOperateStatus(QueryTimedResetOperateStatusRequest request);
@@ -39,6 +43,8 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<StartTimedResetOperateResponse> startTimedResetOperate(StartTimedResetOperateRequest request);
 
     CompletableFuture<StopInstanceResponse> stopInstance(StopInstanceRequest request);
+
+    CompletableFuture<SubmitAudioTo2DAvatarVideoTaskResponse> submitAudioTo2DAvatarVideoTask(SubmitAudioTo2DAvatarVideoTaskRequest request);
 
     CompletableFuture<SubmitTextTo2DAvatarVideoTaskResponse> submitTextTo2DAvatarVideoTask(SubmitTextTo2DAvatarVideoTaskRequest request);
 
