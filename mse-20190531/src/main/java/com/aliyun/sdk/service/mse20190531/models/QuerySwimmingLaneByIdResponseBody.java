@@ -12,17 +12,11 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>QuerySwimmingLaneByIdResponseBody</p>
  */
 public class QuerySwimmingLaneByIdResponseBody extends TeaModel {
-    @NameInMap("Code")
-    private Integer code;
-
     @NameInMap("Data")
     private Data data;
 
     @NameInMap("ErrorCode")
     private String errorCode;
-
-    @NameInMap("HttpStatusCode")
-    private Integer httpStatusCode;
 
     @NameInMap("Message")
     private String message;
@@ -34,10 +28,8 @@ public class QuerySwimmingLaneByIdResponseBody extends TeaModel {
     private Boolean success;
 
     private QuerySwimmingLaneByIdResponseBody(Builder builder) {
-        this.code = builder.code;
         this.data = builder.data;
         this.errorCode = builder.errorCode;
-        this.httpStatusCode = builder.httpStatusCode;
         this.message = builder.message;
         this.requestId = builder.requestId;
         this.success = builder.success;
@@ -52,13 +44,6 @@ public class QuerySwimmingLaneByIdResponseBody extends TeaModel {
     }
 
     /**
-     * @return code
-     */
-    public Integer getCode() {
-        return this.code;
-    }
-
-    /**
      * @return data
      */
     public Data getData() {
@@ -70,13 +55,6 @@ public class QuerySwimmingLaneByIdResponseBody extends TeaModel {
      */
     public String getErrorCode() {
         return this.errorCode;
-    }
-
-    /**
-     * @return httpStatusCode
-     */
-    public Integer getHttpStatusCode() {
-        return this.httpStatusCode;
     }
 
     /**
@@ -101,25 +79,11 @@ public class QuerySwimmingLaneByIdResponseBody extends TeaModel {
     }
 
     public static final class Builder {
-        private Integer code; 
         private Data data; 
         private String errorCode; 
-        private Integer httpStatusCode; 
         private String message; 
         private String requestId; 
         private Boolean success; 
-
-        /**
-         * Indicates whether the request was successful. Valid values:
-         * <p>
-         * 
-         * *   `true`: The request was successful.
-         * *   `false`: The request failed.
-         */
-        public Builder code(Integer code) {
-            this.code = code;
-            return this;
-        }
 
         /**
          * The request was successfully processed.
@@ -134,14 +98,6 @@ public class QuerySwimmingLaneByIdResponseBody extends TeaModel {
          */
         public Builder errorCode(String errorCode) {
             this.errorCode = errorCode;
-            return this;
-        }
-
-        /**
-         * The error code returned if the request failed.
-         */
-        public Builder httpStatusCode(Integer httpStatusCode) {
-            this.httpStatusCode = httpStatusCode;
             return this;
         }
 

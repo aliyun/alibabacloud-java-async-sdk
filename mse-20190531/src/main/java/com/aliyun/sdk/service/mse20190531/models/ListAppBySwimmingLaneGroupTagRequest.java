@@ -108,7 +108,7 @@ public class ListAppBySwimmingLaneGroupTagRequest extends Request {
         }
 
         /**
-         * GroupId.
+         * 泳道组id。
          */
         public Builder groupId(Long groupId) {
             this.putQueryParameter("GroupId", groupId);
@@ -126,7 +126,7 @@ public class ListAppBySwimmingLaneGroupTagRequest extends Request {
         }
 
         /**
-         * Tag.
+         * 标签名字。
          */
         public Builder tag(String tag) {
             this.putQueryParameter("Tag", tag);

@@ -134,7 +134,7 @@ public class GetPluginConfigResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * The description of the README file.
+         * The status code returned.
          */
         public Builder code(Integer code) {
             this.code = code;
@@ -142,7 +142,7 @@ public class GetPluginConfigResponseBody extends TeaModel {
         }
 
         /**
-         * The mode.
+         * The returned data.
          */
         public Builder data(Data data) {
             this.data = data;
@@ -150,7 +150,7 @@ public class GetPluginConfigResponseBody extends TeaModel {
         }
 
         /**
-         * The information about the plug-in configuration used for checking.
+         * The dynamic error code.
          */
         public Builder dynamicCode(String dynamicCode) {
             this.dynamicCode = dynamicCode;
@@ -158,7 +158,7 @@ public class GetPluginConfigResponseBody extends TeaModel {
         }
 
         /**
-         * \# The configuration includes the fields required for checking, such as name, age, and friends. Sample configuration: name: John age: 18 friends: - David - Anne
+         * The dynamic error message.
          */
         public Builder dynamicMessage(String dynamicMessage) {
             this.dynamicMessage = dynamicMessage;
@@ -166,7 +166,7 @@ public class GetPluginConfigResponseBody extends TeaModel {
         }
 
         /**
-         * The description of the README file that is edited in English.
+         * The error code returned if the request failed.
          */
         public Builder errorCode(String errorCode) {
             this.errorCode = errorCode;
@@ -174,16 +174,7 @@ public class GetPluginConfigResponseBody extends TeaModel {
         }
 
         /**
-         * The execution stage of the plug-in.
-         * <p>
-         * 
-         * 0: default stage
-         * 
-         * 1: authorization stage
-         * 
-         * 2: authentication stage
-         * 
-         * 3: statistics stage
+         * The HTTP status code returned.
          */
         public Builder httpStatusCode(Integer httpStatusCode) {
             this.httpStatusCode = httpStatusCode;
@@ -191,7 +182,7 @@ public class GetPluginConfigResponseBody extends TeaModel {
         }
 
         /**
-         * The execution priority of the plug-in. A larger value indicates a higher priority.
+         * The message returned.
          */
         public Builder message(String message) {
             this.message = message;
@@ -199,7 +190,7 @@ public class GetPluginConfigResponseBody extends TeaModel {
         }
 
         /**
-         * The summary of the plug-in.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -207,7 +198,7 @@ public class GetPluginConfigResponseBody extends TeaModel {
         }
 
         /**
-         * This is a plug-in.
+         * Indicates whether the request is successful.
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -343,7 +334,7 @@ public class GetPluginConfigResponseBody extends TeaModel {
             private Long pluginId; 
 
             /**
-             * The ID of the gateway.
+             * The plug-in configuration.
              */
             public Builder config(String config) {
                 this.config = config;
@@ -351,7 +342,14 @@ public class GetPluginConfigResponseBody extends TeaModel {
             }
 
             /**
-             * The dynamic error message.
+             * The application scope of the plug-in. Valid values:
+             * <p>
+             * 
+             * 0: global
+             * 
+             * 1: domain names
+             * 
+             * 2: routes
              */
             public Builder configLevel(Integer configLevel) {
                 this.configLevel = configLevel;
@@ -359,7 +357,7 @@ public class GetPluginConfigResponseBody extends TeaModel {
             }
 
             /**
-             * This is a plug-in.
+             * Indicates whether the plug-in is enabled.
              */
             public Builder enable(Boolean enable) {
                 this.enable = enable;
@@ -367,7 +365,7 @@ public class GetPluginConfigResponseBody extends TeaModel {
             }
 
             /**
-             * The description of the README file.
+             * The ID of the gateway.
              */
             public Builder gatewayId(Long gatewayId) {
                 this.gatewayId = gatewayId;
@@ -375,7 +373,7 @@ public class GetPluginConfigResponseBody extends TeaModel {
             }
 
             /**
-             * \# The configuration includes the fields required for checking, such as name, age, and friends. Sample configuration: name: John age: 18 friends: - David - Anne
+             * The unique ID of the gateway.
              */
             public Builder gatewayUniqueId(String gatewayUniqueId) {
                 this.gatewayUniqueId = gatewayUniqueId;
@@ -383,7 +381,7 @@ public class GetPluginConfigResponseBody extends TeaModel {
             }
 
             /**
-             * The mode.
+             * The creation time.
              */
             public Builder gmtCreate(String gmtCreate) {
                 this.gmtCreate = gmtCreate;
@@ -391,7 +389,7 @@ public class GetPluginConfigResponseBody extends TeaModel {
             }
 
             /**
-             * The dynamic error code.
+             * The update time.
              */
             public Builder gmtModified(String gmtModified) {
                 this.gmtModified = gmtModified;
@@ -399,7 +397,7 @@ public class GetPluginConfigResponseBody extends TeaModel {
             }
 
             /**
-             * The error code returned if the request failed.
+             * The ID of the plug-in configuration.
              */
             public Builder id(Long id) {
                 this.id = id;
@@ -407,7 +405,7 @@ public class GetPluginConfigResponseBody extends TeaModel {
             }
 
             /**
-             * The message returned.
+             * The ID of the gateway plug-in.
              */
             public Builder pluginId(Long pluginId) {
                 this.pluginId = pluginId;
@@ -664,12 +662,20 @@ public class GetPluginConfigResponseBody extends TeaModel {
             private Integer wasmLang; 
 
             /**
-             * Indicates whether the plug-in is enabled.
+             * The category of the plug-in. Valid values:
              * <p>
              * 
-             * 0: disabled
+             * 0: user-defined
              * 
-             * 1: enabled
+             * 1: permission authentication
+             * 
+             * 2: security protection
+             * 
+             * 3: transmission protocol
+             * 
+             * 4: traffic control
+             * 
+             * 5: traffic observation
              */
             public Builder category(Integer category) {
                 this.category = category;
@@ -677,7 +683,7 @@ public class GetPluginConfigResponseBody extends TeaModel {
             }
 
             /**
-             * \# The configuration includes the fields required for checking, such as name, age, and friends. Sample configuration: name: John age: 18 friends: - David - Anne
+             * The information about the plug-in configuration used for checking.
              */
             public Builder configCheck(String configCheck) {
                 this.configCheck = configCheck;
@@ -685,7 +691,7 @@ public class GetPluginConfigResponseBody extends TeaModel {
             }
 
             /**
-             * The version of the plug-in.
+             * The list of gateway plug-in configurations.
              */
             public Builder gatewayConfigList(java.util.List < GatewayConfigList> gatewayConfigList) {
                 this.gatewayConfigList = gatewayConfigList;
@@ -693,18 +699,7 @@ public class GetPluginConfigResponseBody extends TeaModel {
             }
 
             /**
-             * The WebAssembly language.
-             * <p>
-             * 
-             * 0: C++
-             * 
-             * 1: TinyGo
-             * 
-             * 2: Rust
-             * 
-             * 3: AssemblyScript
-             * 
-             * 4: Zig
+             * The ID of the plug-in.
              */
             public Builder id(Long id) {
                 this.id = id;
@@ -712,7 +707,7 @@ public class GetPluginConfigResponseBody extends TeaModel {
             }
 
             /**
-             * The unique ID of the gateway.
+             * The name of the image.
              */
             public Builder imageName(String imageName) {
                 this.imageName = imageName;
@@ -720,7 +715,7 @@ public class GetPluginConfigResponseBody extends TeaModel {
             }
 
             /**
-             * The creation time.
+             * The mode.
              */
             public Builder mode(Integer mode) {
                 this.mode = mode;
@@ -728,7 +723,7 @@ public class GetPluginConfigResponseBody extends TeaModel {
             }
 
             /**
-             * The list of gateway plug-in configurations.
+             * The name of the plug-in.
              */
             public Builder name(String name) {
                 this.name = name;
@@ -736,7 +731,16 @@ public class GetPluginConfigResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether the plug-in is enabled.
+             * The execution stage of the plug-in. Valid values:
+             * <p>
+             * 
+             * 0: default stage
+             * 
+             * 1: authorization stage
+             * 
+             * 2: authentication stage
+             * 
+             * 3: statistics stage
              */
             public Builder phase(Integer phase) {
                 this.phase = phase;
@@ -744,7 +748,7 @@ public class GetPluginConfigResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the image.
+             * The ID of the creator.
              */
             public Builder primaryUser(String primaryUser) {
                 this.primaryUser = primaryUser;
@@ -752,7 +756,7 @@ public class GetPluginConfigResponseBody extends TeaModel {
             }
 
             /**
-             * The plug-in configuration.
+             * The execution priority of the plug-in. A larger value indicates a higher priority.
              */
             public Builder priority(Integer priority) {
                 this.priority = priority;
@@ -760,7 +764,7 @@ public class GetPluginConfigResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether the request was successful.
+             * The publish status.
              */
             public Builder publishState(Integer publishState) {
                 this.publishState = publishState;
@@ -768,7 +772,7 @@ public class GetPluginConfigResponseBody extends TeaModel {
             }
 
             /**
-             * The unique ID of the gateway.
+             * The description of the README file.
              */
             public Builder readme(String readme) {
                 this.readme = readme;
@@ -776,7 +780,7 @@ public class GetPluginConfigResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the gateway plug-in.
+             * The description of the README file that is edited in English.
              */
             public Builder readmeEn(String readmeEn) {
                 this.readmeEn = readmeEn;
@@ -784,7 +788,12 @@ public class GetPluginConfigResponseBody extends TeaModel {
             }
 
             /**
-             * The information about the plug-in configuration used for checking.
+             * Indicates whether the plug-in is enabled. Valid values:
+             * <p>
+             * 
+             * 0: disabled
+             * 
+             * 1: enabled
              */
             public Builder status(String status) {
                 this.status = status;
@@ -792,7 +801,7 @@ public class GetPluginConfigResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the plug-in configuration.
+             * The summary of the plug-in.
              */
             public Builder summary(String summary) {
                 this.summary = summary;
@@ -800,7 +809,7 @@ public class GetPluginConfigResponseBody extends TeaModel {
             }
 
             /**
-             * The publish status.
+             * The type.
              */
             public Builder type(Integer type) {
                 this.type = type;
@@ -808,7 +817,7 @@ public class GetPluginConfigResponseBody extends TeaModel {
             }
 
             /**
-             * The data object.
+             * The version of the plug-in.
              */
             public Builder version(String version) {
                 this.version = version;
@@ -824,7 +833,18 @@ public class GetPluginConfigResponseBody extends TeaModel {
             }
 
             /**
-             * The update time.
+             * The WebAssembly language. Valid values:
+             * <p>
+             * 
+             * 0: C++
+             * 
+             * 1: TinyGo
+             * 
+             * 2: Rust
+             * 
+             * 3: AssemblyScript
+             * 
+             * 4: Zig
              */
             public Builder wasmLang(Integer wasmLang) {
                 this.wasmLang = wasmLang;

@@ -94,7 +94,7 @@ public class ListApplicationsWithTagRulesResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the region.
+         * The number of entries to return on each page.
          */
         public Builder httpStatusCode(Integer httpStatusCode) {
             this.httpStatusCode = httpStatusCode;
@@ -102,7 +102,7 @@ public class ListApplicationsWithTagRulesResponseBody extends TeaModel {
         }
 
         /**
-         * The source of the routing rule. Default value: edasmsc.
+         * The ID of the region.
          */
         public Builder message(String message) {
             this.message = message;
@@ -110,7 +110,7 @@ public class ListApplicationsWithTagRulesResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the application.
+         * The source of the routing rule. Default value: edasmsc.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -118,7 +118,7 @@ public class ListApplicationsWithTagRulesResponseBody extends TeaModel {
         }
 
         /**
-         * The status of the route. Valid values: -0: disabled. -1: enabled.
+         * The ID of the application.
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -560,7 +560,7 @@ public class ListApplicationsWithTagRulesResponseBody extends TeaModel {
             private Integer totalSize; 
 
             /**
-             * The rate.
+             * The modification time.
              */
             public Builder pageNumber(Integer pageNumber) {
                 this.pageNumber = pageNumber;
@@ -568,7 +568,11 @@ public class ListApplicationsWithTagRulesResponseBody extends TeaModel {
             }
 
             /**
-             * The modification time.
+             * Indicates whether the alert rule is enabled. Valid value:
+             * <p>
+             * 
+             * *   `true`: enabled.
+             * *   `false`: disabled.
              */
             public Builder pageSize(Integer pageSize) {
                 this.pageSize = pageSize;
@@ -588,7 +592,7 @@ public class ListApplicationsWithTagRulesResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the rule.
+             * The rate.
              */
             public Builder totalSize(Integer totalSize) {
                 this.totalSize = totalSize;

@@ -126,7 +126,11 @@ public class ListTagResourcesRequest extends Request {
         } 
 
         /**
-         * The key of a tag.
+         * The language of the response. Valid values:
+         * <p>
+         * 
+         * *   zh: Chinese
+         * *   en: English
          */
         public Builder acceptLanguage(String acceptLanguage) {
             this.putQueryParameter("AcceptLanguage", acceptLanguage);
@@ -135,7 +139,7 @@ public class ListTagResourcesRequest extends Request {
         }
 
         /**
-         * The request was successfully processed.
+         * The token used to start the next query.
          */
         public Builder nextToken(String nextToken) {
             this.putQueryParameter("NextToken", nextToken);
@@ -144,7 +148,7 @@ public class ListTagResourcesRequest extends Request {
         }
 
         /**
-         * The message returned.
+         * The ID of the region.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -153,11 +157,7 @@ public class ListTagResourcesRequest extends Request {
         }
 
         /**
-         * Indicates whether the request was successful. Valid values:
-         * <p>
-         * 
-         * *   `true`: The request was successful.
-         * *   `false`: The request failed.
+         * The resource IDs. You can specify a maximum of 50 resource IDs.
          */
         public Builder resourceId(java.util.List < String > resourceId) {
             this.putQueryParameter("ResourceId", resourceId);
@@ -166,7 +166,11 @@ public class ListTagResourcesRequest extends Request {
         }
 
         /**
-         * The error code returned if the request failed.
+         * The type of the resource. Valid values:
+         * <p>
+         * 
+         * *   CLUSTER: MSE instance
+         * *   GATEWAY: cloud-native gateway
          */
         public Builder resourceType(String resourceType) {
             this.putQueryParameter("ResourceType", resourceType);
@@ -175,7 +179,7 @@ public class ListTagResourcesRequest extends Request {
         }
 
         /**
-         * The details of a resource and its tags, including the resource ID, the resource type, and the keys and values of the tags.
+         * The list of tags. A maximum number of 20 tags are supported.
          */
         public Builder tag(java.util.List < Tag> tag) {
             this.putQueryParameter("Tag", tag);
@@ -229,7 +233,7 @@ public class ListTagResourcesRequest extends Request {
             private String value; 
 
             /**
-             * The type of a resource.
+             * The key of the tag.
              */
             public Builder key(String key) {
                 this.key = key;
@@ -237,7 +241,7 @@ public class ListTagResourcesRequest extends Request {
             }
 
             /**
-             * The value of a tag.
+             * The value of the tag.
              */
             public Builder value(String value) {
                 this.value = value;

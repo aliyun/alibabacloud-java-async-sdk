@@ -12,17 +12,11 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>CreateOrUpdateSwimmingLaneGroupResponseBody</p>
  */
 public class CreateOrUpdateSwimmingLaneGroupResponseBody extends TeaModel {
-    @NameInMap("Code")
-    private Integer code;
-
     @NameInMap("Data")
     private Data data;
 
     @NameInMap("ErrorCode")
     private String errorCode;
-
-    @NameInMap("HttpStatusCode")
-    private Integer httpStatusCode;
 
     @NameInMap("Message")
     private String message;
@@ -34,10 +28,8 @@ public class CreateOrUpdateSwimmingLaneGroupResponseBody extends TeaModel {
     private Boolean success;
 
     private CreateOrUpdateSwimmingLaneGroupResponseBody(Builder builder) {
-        this.code = builder.code;
         this.data = builder.data;
         this.errorCode = builder.errorCode;
-        this.httpStatusCode = builder.httpStatusCode;
         this.message = builder.message;
         this.requestId = builder.requestId;
         this.success = builder.success;
@@ -52,13 +44,6 @@ public class CreateOrUpdateSwimmingLaneGroupResponseBody extends TeaModel {
     }
 
     /**
-     * @return code
-     */
-    public Integer getCode() {
-        return this.code;
-    }
-
-    /**
      * @return data
      */
     public Data getData() {
@@ -70,13 +55,6 @@ public class CreateOrUpdateSwimmingLaneGroupResponseBody extends TeaModel {
      */
     public String getErrorCode() {
         return this.errorCode;
-    }
-
-    /**
-     * @return httpStatusCode
-     */
-    public Integer getHttpStatusCode() {
-        return this.httpStatusCode;
     }
 
     /**
@@ -101,24 +79,14 @@ public class CreateOrUpdateSwimmingLaneGroupResponseBody extends TeaModel {
     }
 
     public static final class Builder {
-        private Integer code; 
         private Data data; 
         private String errorCode; 
-        private Integer httpStatusCode; 
         private String message; 
         private String requestId; 
         private Boolean success; 
 
         /**
-         * code仅仅用来和success同步
-         */
-        public Builder code(Integer code) {
-            this.code = code;
-            return this;
-        }
-
-        /**
-         * Data.
+         * The name of the MSE namespace.
          */
         public Builder data(Data data) {
             this.data = data;
@@ -126,7 +94,7 @@ public class CreateOrUpdateSwimmingLaneGroupResponseBody extends TeaModel {
         }
 
         /**
-         * ErrorCode.
+         * The error code returned if the request failed.
          */
         public Builder errorCode(String errorCode) {
             this.errorCode = errorCode;
@@ -134,15 +102,7 @@ public class CreateOrUpdateSwimmingLaneGroupResponseBody extends TeaModel {
         }
 
         /**
-         * HttpStatusCode.
-         */
-        public Builder httpStatusCode(Integer httpStatusCode) {
-            this.httpStatusCode = httpStatusCode;
-            return this;
-        }
-
-        /**
-         * Message.
+         * The message returned.
          */
         public Builder message(String message) {
             this.message = message;
@@ -150,7 +110,7 @@ public class CreateOrUpdateSwimmingLaneGroupResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -158,7 +118,10 @@ public class CreateOrUpdateSwimmingLaneGroupResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * Indicates whether the request was successful. Valid values:
+         * <p>
+         * 
+         * true: The request was successful. false: The request failed.
          */
         public Builder success(Boolean success) {
             this.success = success;

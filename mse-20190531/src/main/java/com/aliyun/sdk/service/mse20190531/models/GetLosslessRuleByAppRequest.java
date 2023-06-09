@@ -110,7 +110,11 @@ public class GetLosslessRuleByAppRequest extends Request {
         } 
 
         /**
-         * 返回结果显示的语言。取值：zh（默认值）：中文，en：英文
+         * The language of the response. Valid values:
+         * <p>
+         * 
+         * *   zh: Chinese
+         * *   en: English
          */
         public Builder acceptLanguage(String acceptLanguage) {
             this.putQueryParameter("AcceptLanguage", acceptLanguage);
@@ -119,7 +123,7 @@ public class GetLosslessRuleByAppRequest extends Request {
         }
 
         /**
-         * appId
+         * The ID of the application.
          */
         public Builder appId(String appId) {
             this.putQueryParameter("AppId", appId);
@@ -128,7 +132,7 @@ public class GetLosslessRuleByAppRequest extends Request {
         }
 
         /**
-         * Key word of search lossless list
+         * The name of the application.
          */
         public Builder appName(String appName) {
             this.putQueryParameter("AppName", appName);
@@ -137,7 +141,7 @@ public class GetLosslessRuleByAppRequest extends Request {
         }
 
         /**
-         * Namespace.
+         * The name of the MSE namespace.
          */
         public Builder namespace(String namespace) {
             this.putQueryParameter("Namespace", namespace);
@@ -146,7 +150,7 @@ public class GetLosslessRuleByAppRequest extends Request {
         }
 
         /**
-         * region id, such as cn-hangzhou
+         * The ID of the region.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);

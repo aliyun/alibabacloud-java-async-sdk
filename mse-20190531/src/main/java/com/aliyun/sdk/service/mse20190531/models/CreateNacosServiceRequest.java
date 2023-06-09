@@ -153,7 +153,11 @@ public class CreateNacosServiceRequest extends Request {
         } 
 
         /**
-         * The ID of the request.
+         * The language of the response. Valid values:
+         * <p>
+         * 
+         * *   zh: Chinese
+         * *   en: English
          */
         public Builder acceptLanguage(String acceptLanguage) {
             this.putQueryParameter("AcceptLanguage", acceptLanguage);
@@ -162,42 +166,14 @@ public class CreateNacosServiceRequest extends Request {
         }
 
         /**
-         * The data structure.
+         * The ID of the cluster.
+         * <p>
+         * 
+         * > This operation contains both the InstanceId and ClusterId parameters. You must specify one of them.
          */
         public Builder clusterId(String clusterId) {
             this.putQueryParameter("ClusterId", clusterId);
             this.clusterId = clusterId;
-            return this;
-        }
-
-        /**
-         * The language of the response. Valid values:
-         * <p>
-         * 
-         * *   zh: Chinese
-         * *   en: English
-         */
-        public Builder ephemeral(Boolean ephemeral) {
-            this.putQueryParameter("Ephemeral", ephemeral);
-            this.ephemeral = ephemeral;
-            return this;
-        }
-
-        /**
-         * The protection threshold.
-         */
-        public Builder groupName(String groupName) {
-            this.putQueryParameter("GroupName", groupName);
-            this.groupName = groupName;
-            return this;
-        }
-
-        /**
-         * The name of the group.
-         */
-        public Builder instanceId(String instanceId) {
-            this.putQueryParameter("InstanceId", instanceId);
-            this.instanceId = instanceId;
             return this;
         }
 
@@ -208,6 +184,36 @@ public class CreateNacosServiceRequest extends Request {
          * *   `true`: yes
          * *   `false`: no
          */
+        public Builder ephemeral(Boolean ephemeral) {
+            this.putQueryParameter("Ephemeral", ephemeral);
+            this.ephemeral = ephemeral;
+            return this;
+        }
+
+        /**
+         * The name of the group.
+         */
+        public Builder groupName(String groupName) {
+            this.putQueryParameter("GroupName", groupName);
+            this.groupName = groupName;
+            return this;
+        }
+
+        /**
+         * The ID of the instance.
+         * <p>
+         * 
+         * > This operation contains both the InstanceId and ClusterId parameters. You must specify one of them.
+         */
+        public Builder instanceId(String instanceId) {
+            this.putQueryParameter("InstanceId", instanceId);
+            this.instanceId = instanceId;
+            return this;
+        }
+
+        /**
+         * The ID of the namespace.
+         */
         public Builder namespaceId(String namespaceId) {
             this.putQueryParameter("NamespaceId", namespaceId);
             this.namespaceId = namespaceId;
@@ -215,10 +221,7 @@ public class CreateNacosServiceRequest extends Request {
         }
 
         /**
-         * The ID of the cluster.
-         * <p>
-         * 
-         * > This operation contains both the InstanceId and ClusterId parameters. You must specify one of them.
+         * The protection threshold.
          */
         public Builder protectThreshold(String protectThreshold) {
             this.putQueryParameter("ProtectThreshold", protectThreshold);
@@ -227,7 +230,7 @@ public class CreateNacosServiceRequest extends Request {
         }
 
         /**
-         * The ID of the namespace.
+         * The name of the service.
          */
         public Builder serviceName(String serviceName) {
             this.putQueryParameter("ServiceName", serviceName);

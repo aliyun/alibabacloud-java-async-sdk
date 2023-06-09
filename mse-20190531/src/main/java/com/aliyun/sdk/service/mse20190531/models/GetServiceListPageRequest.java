@@ -7,24 +7,22 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
- * {@link ListApplicationsWithTagRulesRequest} extends {@link RequestModel}
+ * {@link GetServiceListPageRequest} extends {@link RequestModel}
  *
- * <p>ListApplicationsWithTagRulesRequest</p>
+ * <p>GetServiceListPageRequest</p>
  */
-public class ListApplicationsWithTagRulesRequest extends Request {
+public class GetServiceListPageRequest extends Request {
     @Query
     @NameInMap("AcceptLanguage")
     private String acceptLanguage;
 
     @Query
     @NameInMap("AppId")
-    @Deprecated
     private String appId;
 
     @Query
-    @NameInMap("AppName")
-    @Validation(maxLength = 64)
-    private String appName;
+    @NameInMap("Ip")
+    private String ip;
 
     @Query
     @NameInMap("Namespace")
@@ -33,40 +31,42 @@ public class ListApplicationsWithTagRulesRequest extends Request {
 
     @Query
     @NameInMap("PageNumber")
-    @Validation(required = true)
     private Integer pageNumber;
 
     @Query
     @NameInMap("PageSize")
-    @Validation(required = true, maximum = 50)
     private Integer pageSize;
 
     @Query
     @NameInMap("Region")
-    @Validation(required = true)
     private String region;
 
     @Query
-    @NameInMap("Source")
-    private String source;
+    @NameInMap("ServiceName")
+    private String serviceName;
 
-    private ListApplicationsWithTagRulesRequest(Builder builder) {
+    @Query
+    @NameInMap("ServiceType")
+    private String serviceType;
+
+    private GetServiceListPageRequest(Builder builder) {
         super(builder);
         this.acceptLanguage = builder.acceptLanguage;
         this.appId = builder.appId;
-        this.appName = builder.appName;
+        this.ip = builder.ip;
         this.namespace = builder.namespace;
         this.pageNumber = builder.pageNumber;
         this.pageSize = builder.pageSize;
         this.region = builder.region;
-        this.source = builder.source;
+        this.serviceName = builder.serviceName;
+        this.serviceType = builder.serviceType;
     }
 
     public static Builder builder() {
         return new Builder();
     }
 
-    public static ListApplicationsWithTagRulesRequest create() {
+    public static GetServiceListPageRequest create() {
         return builder().build();
     }
 
@@ -90,10 +90,10 @@ public class ListApplicationsWithTagRulesRequest extends Request {
     }
 
     /**
-     * @return appName
+     * @return ip
      */
-    public String getAppName() {
-        return this.appName;
+    public String getIp() {
+        return this.ip;
     }
 
     /**
@@ -125,40 +125,49 @@ public class ListApplicationsWithTagRulesRequest extends Request {
     }
 
     /**
-     * @return source
+     * @return serviceName
      */
-    public String getSource() {
-        return this.source;
+    public String getServiceName() {
+        return this.serviceName;
     }
 
-    public static final class Builder extends Request.Builder<ListApplicationsWithTagRulesRequest, Builder> {
+    /**
+     * @return serviceType
+     */
+    public String getServiceType() {
+        return this.serviceType;
+    }
+
+    public static final class Builder extends Request.Builder<GetServiceListPageRequest, Builder> {
         private String acceptLanguage; 
         private String appId; 
-        private String appName; 
+        private String ip; 
         private String namespace; 
         private Integer pageNumber; 
         private Integer pageSize; 
         private String region; 
-        private String source; 
+        private String serviceName; 
+        private String serviceType; 
 
         private Builder() {
             super();
         } 
 
-        private Builder(ListApplicationsWithTagRulesRequest request) {
+        private Builder(GetServiceListPageRequest request) {
             super(request);
             this.acceptLanguage = request.acceptLanguage;
             this.appId = request.appId;
-            this.appName = request.appName;
+            this.ip = request.ip;
             this.namespace = request.namespace;
             this.pageNumber = request.pageNumber;
             this.pageSize = request.pageSize;
             this.region = request.region;
-            this.source = request.source;
+            this.serviceName = request.serviceName;
+            this.serviceType = request.serviceType;
         } 
 
         /**
-         * The number of the page to return.
+         * 返回结果显示的语言。取值：zh（默认值）：中文，en：英文
          */
         public Builder acceptLanguage(String acceptLanguage) {
             this.putQueryParameter("AcceptLanguage", acceptLanguage);
@@ -167,7 +176,7 @@ public class ListApplicationsWithTagRulesRequest extends Request {
         }
 
         /**
-         * readAndWrite
+         * 应用id。
          */
         public Builder appId(String appId) {
             this.putQueryParameter("AppId", appId);
@@ -176,16 +185,16 @@ public class ListApplicationsWithTagRulesRequest extends Request {
         }
 
         /**
-         * edas-service-platform
+         * 要查询的ip地址。
          */
-        public Builder appName(String appName) {
-            this.putQueryParameter("AppName", appName);
-            this.appName = appName;
+        public Builder ip(String ip) {
+            this.putQueryParameter("Ip", ip);
+            this.ip = ip;
             return this;
         }
 
         /**
-         * 应用所属的MSE命名空间。
+         * MSE命名空间名字
          */
         public Builder namespace(String namespace) {
             this.putQueryParameter("Namespace", namespace);
@@ -194,7 +203,7 @@ public class ListApplicationsWithTagRulesRequest extends Request {
         }
 
         /**
-         * $.parameters[3].schema.enumValueTitles
+         * 页数。
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -203,7 +212,7 @@ public class ListApplicationsWithTagRulesRequest extends Request {
         }
 
         /**
-         * $.parameters[7].schema.description
+         * 每页大小。
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -212,7 +221,7 @@ public class ListApplicationsWithTagRulesRequest extends Request {
         }
 
         /**
-         * $.parameters[7].schema.example
+         * 地域。
          */
         public Builder region(String region) {
             this.putQueryParameter("Region", region);
@@ -221,17 +230,26 @@ public class ListApplicationsWithTagRulesRequest extends Request {
         }
 
         /**
-         * $.parameters[7].schema.enumValueTitles
+         * 服务名字。
          */
-        public Builder source(String source) {
-            this.putQueryParameter("Source", source);
-            this.source = source;
+        public Builder serviceName(String serviceName) {
+            this.putQueryParameter("ServiceName", serviceName);
+            this.serviceName = serviceName;
+            return this;
+        }
+
+        /**
+         * 服务类型。
+         */
+        public Builder serviceType(String serviceType) {
+            this.putQueryParameter("ServiceType", serviceType);
+            this.serviceType = serviceType;
             return this;
         }
 
         @Override
-        public ListApplicationsWithTagRulesRequest build() {
-            return new ListApplicationsWithTagRulesRequest(this);
+        public GetServiceListPageRequest build() {
+            return new GetServiceListPageRequest(this);
         } 
 
     } 

@@ -126,7 +126,7 @@ public class ModifyLosslessRuleResponseBody extends TeaModel {
         }
 
         /**
-         * mse-100-007
+         * The error code returned if the request failed.
          */
         public Builder errorCode(String errorCode) {
             this.errorCode = errorCode;
@@ -142,7 +142,7 @@ public class ModifyLosslessRuleResponseBody extends TeaModel {
         }
 
         /**
-         * illegalRequest
+         * The message returned.
          */
         public Builder message(String message) {
             this.message = message;
@@ -150,7 +150,7 @@ public class ModifyLosslessRuleResponseBody extends TeaModel {
         }
 
         /**
-         * mse-200-105
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -158,7 +158,11 @@ public class ModifyLosslessRuleResponseBody extends TeaModel {
         }
 
         /**
-         * duplicated cluster alias name
+         * Indicates whether the request was successful. Valid values:
+         * <p>
+         * 
+         * *   `true`: The request was successful.
+         * *   `false`: The request failed.
          */
         public Builder success(Boolean success) {
             this.success = success;

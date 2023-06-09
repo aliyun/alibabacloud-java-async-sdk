@@ -84,7 +84,7 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<CreateNacosInstanceResponse> createNacosInstance(CreateNacosInstanceRequest request);
 
     /**
-      * mse-200-105
+      * > The operation is not provided in Nacos SDKs. For information about Nacos SDKs, see the [official documentation](https://nacos.io/zh-cn/docs/sdk.html).
       *
      * @tags cluster
      */
@@ -98,9 +98,13 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<DeleteAuthResourceResponse> deleteAuthResource(DeleteAuthResourceRequest request);
 
+    CompletableFuture<DeleteCircuitBreakerRulesResponse> deleteCircuitBreakerRules(DeleteCircuitBreakerRulesRequest request);
+
     CompletableFuture<DeleteClusterResponse> deleteCluster(DeleteClusterRequest request);
 
     CompletableFuture<DeleteEngineNamespaceResponse> deleteEngineNamespace(DeleteEngineNamespaceRequest request);
+
+    CompletableFuture<DeleteFlowRulesResponse> deleteFlowRules(DeleteFlowRulesRequest request);
 
     CompletableFuture<DeleteGatewayResponse> deleteGateway(DeleteGatewayRequest request);
 
@@ -212,6 +216,13 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<GetKubernetesSourceResponse> getKubernetesSource(GetKubernetesSourceRequest request);
 
+    /**
+      * You can call this operation to query the rules for graceful start and shutdown of an application.
+      * You can query the rules for graceful start and shutdown of an application preferentially by using the AppId parameter.
+      * If the AppId parameter is left empty, you can use the RegionId, Namespace, and AppName parameters to query the rules for graceful start and shutdown of an application.
+      *
+     * @tags msc
+     */
     CompletableFuture<GetLosslessRuleByAppResponse> getLosslessRuleByApp(GetLosslessRuleByAppRequest request);
 
     CompletableFuture<GetMseFeatureSwitchResponse> getMseFeatureSwitch(GetMseFeatureSwitchRequest request);
@@ -240,7 +251,11 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<GetServiceListResponse> getServiceList(GetServiceListRequest request);
 
+    CompletableFuture<GetServiceListPageResponse> getServiceListPage(GetServiceListPageRequest request);
+
     CompletableFuture<GetServiceListenersResponse> getServiceListeners(GetServiceListenersRequest request);
+
+    CompletableFuture<GetServiceMethodPageResponse> getServiceMethodPage(GetServiceMethodPageRequest request);
 
     CompletableFuture<GetTagsBySwimmingLaneGroupIdResponse> getTagsBySwimmingLaneGroupId(GetTagsBySwimmingLaneGroupIdRequest request);
 

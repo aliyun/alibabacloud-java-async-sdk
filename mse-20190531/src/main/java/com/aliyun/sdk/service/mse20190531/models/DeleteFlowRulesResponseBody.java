@@ -7,16 +7,19 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
- * {@link DeleteSwimmingLaneGroupResponseBody} extends {@link TeaModel}
+ * {@link DeleteFlowRulesResponseBody} extends {@link TeaModel}
  *
- * <p>DeleteSwimmingLaneGroupResponseBody</p>
+ * <p>DeleteFlowRulesResponseBody</p>
  */
-public class DeleteSwimmingLaneGroupResponseBody extends TeaModel {
-    @NameInMap("Data")
-    private Object data;
+public class DeleteFlowRulesResponseBody extends TeaModel {
+    @NameInMap("Code")
+    private Integer code;
 
-    @NameInMap("ErrorCode")
-    private String errorCode;
+    @NameInMap("Data")
+    private java.util.List < Long > data;
+
+    @NameInMap("HttpStatusCode")
+    private Integer httpStatusCode;
 
     @NameInMap("Message")
     private String message;
@@ -27,9 +30,10 @@ public class DeleteSwimmingLaneGroupResponseBody extends TeaModel {
     @NameInMap("Success")
     private Boolean success;
 
-    private DeleteSwimmingLaneGroupResponseBody(Builder builder) {
+    private DeleteFlowRulesResponseBody(Builder builder) {
+        this.code = builder.code;
         this.data = builder.data;
-        this.errorCode = builder.errorCode;
+        this.httpStatusCode = builder.httpStatusCode;
         this.message = builder.message;
         this.requestId = builder.requestId;
         this.success = builder.success;
@@ -39,22 +43,29 @@ public class DeleteSwimmingLaneGroupResponseBody extends TeaModel {
         return new Builder();
     }
 
-    public static DeleteSwimmingLaneGroupResponseBody create() {
+    public static DeleteFlowRulesResponseBody create() {
         return builder().build();
+    }
+
+    /**
+     * @return code
+     */
+    public Integer getCode() {
+        return this.code;
     }
 
     /**
      * @return data
      */
-    public Object getData() {
+    public java.util.List < Long > getData() {
         return this.data;
     }
 
     /**
-     * @return errorCode
+     * @return httpStatusCode
      */
-    public String getErrorCode() {
-        return this.errorCode;
+    public Integer getHttpStatusCode() {
+        return this.httpStatusCode;
     }
 
     /**
@@ -79,25 +90,34 @@ public class DeleteSwimmingLaneGroupResponseBody extends TeaModel {
     }
 
     public static final class Builder {
-        private Object data; 
-        private String errorCode; 
+        private Integer code; 
+        private java.util.List < Long > data; 
+        private Integer httpStatusCode; 
         private String message; 
         private String requestId; 
         private Boolean success; 
 
         /**
-         * Data.
+         * Code.
          */
-        public Builder data(Object data) {
+        public Builder code(Integer code) {
+            this.code = code;
+            return this;
+        }
+
+        /**
+         * 完成删除的规则ID列表。
+         */
+        public Builder data(java.util.List < Long > data) {
             this.data = data;
             return this;
         }
 
         /**
-         * ErrorCode.
+         * HttpStatusCode.
          */
-        public Builder errorCode(String errorCode) {
-            this.errorCode = errorCode;
+        public Builder httpStatusCode(Integer httpStatusCode) {
+            this.httpStatusCode = httpStatusCode;
             return this;
         }
 
@@ -125,8 +145,8 @@ public class DeleteSwimmingLaneGroupResponseBody extends TeaModel {
             return this;
         }
 
-        public DeleteSwimmingLaneGroupResponseBody build() {
-            return new DeleteSwimmingLaneGroupResponseBody(this);
+        public DeleteFlowRulesResponseBody build() {
+            return new DeleteFlowRulesResponseBody(this);
         } 
 
     } 

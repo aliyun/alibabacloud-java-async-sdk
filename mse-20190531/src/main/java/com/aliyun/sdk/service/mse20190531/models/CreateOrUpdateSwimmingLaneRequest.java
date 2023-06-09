@@ -210,7 +210,13 @@ public class CreateOrUpdateSwimmingLaneRequest extends Request {
         } 
 
         /**
-         * 返回结果显示的语言。取值：zh（默认值）：中文，en：英文
+         * The language of the response. Valid values:****
+         * <p>
+         * 
+         * *   **zh-CN**: Chinese
+         * *   **en-US**: English
+         * 
+         * > Default value: **zh-CN**.
          */
         public Builder acceptLanguage(String acceptLanguage) {
             this.putQueryParameter("AcceptLanguage", acceptLanguage);
@@ -219,7 +225,7 @@ public class CreateOrUpdateSwimmingLaneRequest extends Request {
         }
 
         /**
-         * 是否开启。
+         * Specifies whether to enable the lane.
          */
         public Builder enable(Boolean enable) {
             this.putQueryParameter("Enable", enable);
@@ -228,7 +234,7 @@ public class CreateOrUpdateSwimmingLaneRequest extends Request {
         }
 
         /**
-         * 是否开启规则
+         * Specifies whether to configure a routing rule for the lane. If an Ingress gateway is used, this parameter is not required.
          */
         public Builder enableRules(Boolean enableRules) {
             this.putQueryParameter("EnableRules", enableRules);
@@ -237,7 +243,7 @@ public class CreateOrUpdateSwimmingLaneRequest extends Request {
         }
 
         /**
-         * json string
+         * The JSON string.
          */
         public Builder entryRule(String entryRule) {
             this.putQueryParameter("EntryRule", entryRule);
@@ -265,7 +271,13 @@ public class CreateOrUpdateSwimmingLaneRequest extends Request {
         }
 
         /**
-         * 所属泳道组
+         * The language of the response. Valid values:****
+         * <p>
+         * 
+         * *   **zh-CN**: Chinese
+         * *   **en-US**: English
+         * 
+         * > Default value: **zh-CN**.
          */
         public Builder groupId(Long groupId) {
             this.putQueryParameter("GroupId", groupId);
@@ -274,7 +286,7 @@ public class CreateOrUpdateSwimmingLaneRequest extends Request {
         }
 
         /**
-         * 泳道Id。如果没有则为新增
+         * The ID of the primary key. A value -1 specifies a request that is used to create a lane. A value greater than 0 specifies a request that is used to modify a lane.
          */
         public Builder id(Long id) {
             this.putQueryParameter("Id", id);
@@ -283,7 +295,7 @@ public class CreateOrUpdateSwimmingLaneRequest extends Request {
         }
 
         /**
-         * 名称
+         * The name of the MSE namespace.
          */
         public Builder name(String name) {
             this.putQueryParameter("Name", name);
@@ -301,7 +313,7 @@ public class CreateOrUpdateSwimmingLaneRequest extends Request {
         }
 
         /**
-         * region
+         * The ID of the region.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -310,7 +322,7 @@ public class CreateOrUpdateSwimmingLaneRequest extends Request {
         }
 
         /**
-         * 匹配到后的目标机器标签
+         * The ID of the primary key. The value -1 specifies a request that is used to create a lane. A value greater than 0 specifies a request that is used to modify a lane.
          */
         public Builder tag(String tag) {
             this.putQueryParameter("Tag", tag);

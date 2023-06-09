@@ -230,7 +230,11 @@ public class ModifyLosslessRuleRequest extends Request {
         } 
 
         /**
-         * The error code returned if the request failed.
+         * The language of the response. Valid values:
+         * <p>
+         * 
+         * *   zh: Chinese
+         * *   en: English
          */
         public Builder acceptLanguage(String acceptLanguage) {
             this.putQueryParameter("AcceptLanguage", acceptLanguage);
@@ -239,7 +243,7 @@ public class ModifyLosslessRuleRequest extends Request {
         }
 
         /**
-         * The data structure.
+         * The ID of the region.
          */
         public Builder aligned(Boolean aligned) {
             this.putQueryParameter("Aligned", aligned);
@@ -248,7 +252,7 @@ public class ModifyLosslessRuleRequest extends Request {
         }
 
         /**
-         * The slope of the prefetching curve.
+         * The ID of the application.
          */
         public Builder appId(String appId) {
             this.putQueryParameter("AppId", appId);
@@ -257,7 +261,7 @@ public class ModifyLosslessRuleRequest extends Request {
         }
 
         /**
-         * The registration latency.
+         * The microservice namespace to which the rule applies.
          */
         public Builder appName(String appName) {
             this.putQueryParameter("AppName", appName);
@@ -266,7 +270,11 @@ public class ModifyLosslessRuleRequest extends Request {
         }
 
         /**
-         * Specifies whether to display online and offline processing details.
+         * Specifies whether to enable graceful start. Valid values:
+         * <p>
+         * 
+         * *   true: enabled
+         * *   false: disabled
          */
         public Builder delayTime(Integer delayTime) {
             this.putQueryParameter("DelayTime", delayTime);
@@ -275,7 +283,7 @@ public class ModifyLosslessRuleRequest extends Request {
         }
 
         /**
-         * int64
+         * The prefetching duration.
          */
         public Builder enable(Boolean enable) {
             this.putQueryParameter("Enable", enable);
@@ -284,11 +292,7 @@ public class ModifyLosslessRuleRequest extends Request {
         }
 
         /**
-         * The language of the response. Valid values:
-         * <p>
-         * 
-         * *   zh: Chinese
-         * *   en: English
+         * The registration latency.
          */
         public Builder funcType(Integer funcType) {
             this.putQueryParameter("FuncType", funcType);
@@ -297,7 +301,7 @@ public class ModifyLosslessRuleRequest extends Request {
         }
 
         /**
-         * Id of the request
+         * Specifies whether to display online and offline processing details.
          */
         public Builder lossLessDetail(Boolean lossLessDetail) {
             this.putQueryParameter("LossLessDetail", lossLessDetail);
@@ -306,7 +310,7 @@ public class ModifyLosslessRuleRequest extends Request {
         }
 
         /**
-         * int64
+         * The microservice namespace to which the rule applies.
          */
         public Builder namespace(String namespace) {
             this.putQueryParameter("Namespace", namespace);
@@ -315,11 +319,7 @@ public class ModifyLosslessRuleRequest extends Request {
         }
 
         /**
-         * Indicates whether the request was successful. Valid values:
-         * <p>
-         * 
-         * *   `true`: The request was successful.
-         * *   `false`: The request failed.
+         * Specifies whether to enable notification.
          */
         public Builder notice(Boolean notice) {
             this.putQueryParameter("Notice", notice);
@@ -328,7 +328,7 @@ public class ModifyLosslessRuleRequest extends Request {
         }
 
         /**
-         * int64
+         * The slope of the prefetching curve.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -337,7 +337,7 @@ public class ModifyLosslessRuleRequest extends Request {
         }
 
         /**
-         * The ID of the request.
+         * Specifies whether to complete service registration before readiness probe.
          */
         public Builder related(Boolean related) {
             this.putQueryParameter("Related", related);
@@ -346,7 +346,7 @@ public class ModifyLosslessRuleRequest extends Request {
         }
 
         /**
-         * Specifies whether to align the lifecycle of the application in the Kubernetes cluster with that of the microservice.
+         * Specifies whether to complete service prefetching before readiness probe.
          */
         public Builder warmupTime(Integer warmupTime) {
             this.putQueryParameter("WarmupTime", warmupTime);
