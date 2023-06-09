@@ -62,7 +62,11 @@ public class GetMultiAccountResourceCenterServiceStatusResponseBody extends TeaM
         private String serviceStatus; 
 
         /**
-         * InitialStatus.
+         * The initialization status of the feature. Valid values:
+         * <p>
+         * 
+         * *   Pending: The feature is being initialized.
+         * *   Finished: The feature is initialized.
          */
         public Builder initialStatus(String initialStatus) {
             this.initialStatus = initialStatus;
@@ -70,7 +74,7 @@ public class GetMultiAccountResourceCenterServiceStatusResponseBody extends TeaM
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -78,7 +82,11 @@ public class GetMultiAccountResourceCenterServiceStatusResponseBody extends TeaM
         }
 
         /**
-         * ServiceStatus.
+         * The status of the feature. Valid values:
+         * <p>
+         * 
+         * *   Enabled: The feature is enabled.
+         * *   Disabled: The feature is disabled.
          */
         public Builder serviceStatus(String serviceStatus) {
             this.serviceStatus = serviceStatus;

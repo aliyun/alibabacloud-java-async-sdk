@@ -125,7 +125,11 @@ public class ListMultiAccountTagValuesRequest extends Request {
         } 
 
         /**
-         * EQUALS: 匹配 (match), TERMS: 术语匹配 (term/terms), PREFIX: 前缀匹配, NOT_EQUALS: 不等于, CONTAINS: 包含, RANGE: 范围匹配, GREATER_THAN: 大于, GREATER_THAN_OR_EQUAL_TO: 大于等于, LESS_THAN: 小于, LESS_THAN_OR_EQUAL_TO: 小于等于, EXISTS: 存在, NOT_EXISTS: 不存在, INVALID: 无效类型, NOT_CONTAINS: 不包含
+         * The matching mode. Valid values:
+         * <p>
+         * 
+         * *   Equals: equal match
+         * *   Prefix: match by prefix
          */
         public Builder matchType(String matchType) {
             this.putQueryParameter("MatchType", matchType);
@@ -134,7 +138,12 @@ public class ListMultiAccountTagValuesRequest extends Request {
         }
 
         /**
-         * MaxResults.
+         * The maximum number of entries to return on each page.
+         * <p>
+         * 
+         * Valid values: 1 to 100.
+         * 
+         * Default value: 20.
          */
         public Builder maxResults(Integer maxResults) {
             this.putQueryParameter("MaxResults", maxResults);
@@ -143,7 +152,10 @@ public class ListMultiAccountTagValuesRequest extends Request {
         }
 
         /**
-         * NextToken.
+         * The pagination token that is used in the next request to retrieve a new page of results.
+         * <p>
+         * 
+         * If the total number of entries returned for the current request exceeds the value of the `MaxResults` parameter, the entries are truncated. In this case, you can use the `token` to initiate another request and obtain the remaining entries.
          */
         public Builder nextToken(String nextToken) {
             this.putQueryParameter("NextToken", nextToken);
@@ -152,7 +164,13 @@ public class ListMultiAccountTagValuesRequest extends Request {
         }
 
         /**
-         * Scope.
+         * The search scope. You can set the value to one of the following items:
+         * <p>
+         * 
+         * *   ID of a resource directory: Resources within the management account and all members of the resource directory are searched. You can call the [GetResourceDirectory](~~159995~~) operation to obtain the ID.
+         * *   ID of the Root folder: Resources within all members in the Root folder and the subfolders of the Root folder are searched. You can call the [ListFoldersForParent](~~159997~~) operation to obtain the ID.
+         * *   ID of a folder: Resources within all members in the folder are searched. You can call the [ListFoldersForParent](~~159997~~) operation to obtain the ID.
+         * *   ID of a member: Resources within the member are searched. You can call the [ListAccounts](~~160016~~) operation to obtain the ID.
          */
         public Builder scope(String scope) {
             this.putQueryParameter("Scope", scope);
@@ -161,7 +179,7 @@ public class ListMultiAccountTagValuesRequest extends Request {
         }
 
         /**
-         * TagKey.
+         * The tag key.
          */
         public Builder tagKey(String tagKey) {
             this.putQueryParameter("TagKey", tagKey);
@@ -170,7 +188,7 @@ public class ListMultiAccountTagValuesRequest extends Request {
         }
 
         /**
-         * TagValue.
+         * The tag value.
          */
         public Builder tagValue(String tagValue) {
             this.putQueryParameter("TagValue", tagValue);

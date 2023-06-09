@@ -50,7 +50,7 @@ public class ListResourceTypesResponseBody extends TeaModel {
         private java.util.List < ResourceTypes> resourceTypes; 
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -58,7 +58,7 @@ public class ListResourceTypesResponseBody extends TeaModel {
         }
 
         /**
-         * ResourceTypes.
+         * The information about the resource types.
          */
         public Builder resourceTypes(java.util.List < ResourceTypes> resourceTypes) {
             this.resourceTypes = resourceTypes;
@@ -134,7 +134,7 @@ public class ListResourceTypesResponseBody extends TeaModel {
             private String resourceTypeName; 
 
             /**
-             * 支持的过滤条件
+             * The supported filter conditions.
              */
             public Builder filterKeys(java.util.List < String > filterKeys) {
                 this.filterKeys = filterKeys;
@@ -142,7 +142,7 @@ public class ListResourceTypesResponseBody extends TeaModel {
             }
 
             /**
-             * 产品名称 (国际化)
+             * The name of the Alibaba Cloud service.
              */
             public Builder productName(String productName) {
                 this.productName = productName;
@@ -150,7 +150,7 @@ public class ListResourceTypesResponseBody extends TeaModel {
             }
 
             /**
-             * 资源类型fullCode ACS::ECS::Instance
+             * The resource type.
              */
             public Builder resourceType(String resourceType) {
                 this.resourceType = resourceType;
@@ -158,7 +158,7 @@ public class ListResourceTypesResponseBody extends TeaModel {
             }
 
             /**
-             * 资源类型名称
+             * The name of the resource type.
              */
             public Builder resourceTypeName(String resourceTypeName) {
                 this.resourceTypeName = resourceTypeName;

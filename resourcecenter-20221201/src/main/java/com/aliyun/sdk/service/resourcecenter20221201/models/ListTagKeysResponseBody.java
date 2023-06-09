@@ -62,7 +62,7 @@ public class ListTagKeysResponseBody extends TeaModel {
         private java.util.List < String > tagKeys; 
 
         /**
-         * NextToken.
+         * The pagination token that is used in the next request to retrieve a new page of results.
          */
         public Builder nextToken(String nextToken) {
             this.nextToken = nextToken;
@@ -70,7 +70,7 @@ public class ListTagKeysResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -78,7 +78,7 @@ public class ListTagKeysResponseBody extends TeaModel {
         }
 
         /**
-         * TagKeys.
+         * The tag keys.
          */
         public Builder tagKeys(java.util.List < String > tagKeys) {
             this.tagKeys = tagKeys;

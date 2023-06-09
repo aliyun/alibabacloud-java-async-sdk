@@ -50,7 +50,7 @@ public class EnableResourceCenterResponseBody extends TeaModel {
         private String status; 
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -58,7 +58,11 @@ public class EnableResourceCenterResponseBody extends TeaModel {
         }
 
         /**
-         * Status.
+         * The activation status of the service. Valid values:
+         * <p>
+         * 
+         * *   Pending: The service is being activated.
+         * *   Enabled: The service is activated.
          */
         public Builder status(String status) {
             this.status = status;

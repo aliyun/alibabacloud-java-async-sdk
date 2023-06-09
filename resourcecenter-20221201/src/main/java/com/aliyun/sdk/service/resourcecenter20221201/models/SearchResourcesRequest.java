@@ -111,7 +111,7 @@ public class SearchResourcesRequest extends Request {
         } 
 
         /**
-         * Filter.
+         * The filter conditions.
          */
         public Builder filter(java.util.List < Filter> filter) {
             this.putQueryParameter("Filter", filter);
@@ -120,7 +120,12 @@ public class SearchResourcesRequest extends Request {
         }
 
         /**
-         * MaxResults.
+         * The maximum number of entries to return on each page.
+         * <p>
+         * 
+         * Valid values: 1 to 100.
+         * 
+         * Default value: 20.
          */
         public Builder maxResults(Integer maxResults) {
             this.putQueryParameter("MaxResults", maxResults);
@@ -129,7 +134,10 @@ public class SearchResourcesRequest extends Request {
         }
 
         /**
-         * NextToken.
+         * The pagination token that is used in the next request to retrieve a new page of results.
+         * <p>
+         * 
+         * If the total number of entries returned for the current request exceeds the value of the `MaxResults` parameter, the entries are truncated. In this case, you can use the `token` to initiate another request and obtain the remaining entries.
          */
         public Builder nextToken(String nextToken) {
             this.putQueryParameter("NextToken", nextToken);
@@ -138,7 +146,7 @@ public class SearchResourcesRequest extends Request {
         }
 
         /**
-         * ResourceGroupId.
+         * The ID of the resource group.
          */
         public Builder resourceGroupId(String resourceGroupId) {
             this.putQueryParameter("ResourceGroupId", resourceGroupId);
@@ -147,7 +155,7 @@ public class SearchResourcesRequest extends Request {
         }
 
         /**
-         * SortCriterion.
+         * The method that is used to sort the entries returned.
          */
         public Builder sortCriterion(SortCriterion sortCriterion) {
             this.putQueryParameter("SortCriterion", sortCriterion);
@@ -213,7 +221,7 @@ public class SearchResourcesRequest extends Request {
             private java.util.List < String > value; 
 
             /**
-             * Key.
+             * The key of the filter condition. For more information, see `Supported filter parameters`.
              */
             public Builder key(String key) {
                 this.key = key;
@@ -221,7 +229,10 @@ public class SearchResourcesRequest extends Request {
             }
 
             /**
-             * MatchType.
+             * The matching mode.
+             * <p>
+             * 
+             * The value Equals indicates an equal match.
              */
             public Builder matchType(String matchType) {
                 this.matchType = matchType;
@@ -229,7 +240,7 @@ public class SearchResourcesRequest extends Request {
             }
 
             /**
-             * Value.
+             * The values of the filter condition.
              */
             public Builder value(java.util.List < String > value) {
                 this.value = value;
@@ -282,7 +293,10 @@ public class SearchResourcesRequest extends Request {
             private String order; 
 
             /**
-             * Key.
+             * The attribute based on which the entries are sorted.
+             * <p>
+             * 
+             * The value CreateTime indicates the creation time of resources.
              */
             public Builder key(String key) {
                 this.key = key;
@@ -290,7 +304,11 @@ public class SearchResourcesRequest extends Request {
             }
 
             /**
-             * Order.
+             * The order in which the entries are sorted. Valid values:
+             * <p>
+             * 
+             * *   ASC: The entries are sorted in ascending order. This value is the default value.
+             * *   DESC: The entries are sorted in descending order.
              */
             public Builder order(String order) {
                 this.order = order;

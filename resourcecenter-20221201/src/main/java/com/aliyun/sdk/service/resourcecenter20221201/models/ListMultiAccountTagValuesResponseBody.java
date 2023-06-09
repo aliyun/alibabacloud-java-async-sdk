@@ -62,7 +62,7 @@ public class ListMultiAccountTagValuesResponseBody extends TeaModel {
         private java.util.List < String > tagValues; 
 
         /**
-         * NextToken.
+         * The pagination token that is used in the next request to retrieve a new page of results.
          */
         public Builder nextToken(String nextToken) {
             this.nextToken = nextToken;
@@ -70,7 +70,7 @@ public class ListMultiAccountTagValuesResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -78,7 +78,7 @@ public class ListMultiAccountTagValuesResponseBody extends TeaModel {
         }
 
         /**
-         * TagValues.
+         * The tag values.
          */
         public Builder tagValues(java.util.List < String > tagValues) {
             this.tagValues = tagValues;

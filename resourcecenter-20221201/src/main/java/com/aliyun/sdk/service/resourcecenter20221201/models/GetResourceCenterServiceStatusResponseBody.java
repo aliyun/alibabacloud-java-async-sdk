@@ -62,7 +62,11 @@ public class GetResourceCenterServiceStatusResponseBody extends TeaModel {
         private String serviceStatus; 
 
         /**
-         * InitialStatus.
+         * The initialization status of the service. Valid values:
+         * <p>
+         * 
+         * *   Pending: The service being initialized.
+         * *   Finished: The service is initialized.
          */
         public Builder initialStatus(String initialStatus) {
             this.initialStatus = initialStatus;
@@ -70,7 +74,7 @@ public class GetResourceCenterServiceStatusResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -78,7 +82,11 @@ public class GetResourceCenterServiceStatusResponseBody extends TeaModel {
         }
 
         /**
-         * ServiceStatus.
+         * The status of the service. Valid values:
+         * <p>
+         * 
+         * *   Enabled: The service is activated.
+         * *   Disabled: The service is deactivated.
          */
         public Builder serviceStatus(String serviceStatus) {
             this.serviceStatus = serviceStatus;

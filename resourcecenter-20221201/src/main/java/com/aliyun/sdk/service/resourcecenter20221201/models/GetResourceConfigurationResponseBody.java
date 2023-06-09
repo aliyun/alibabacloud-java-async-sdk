@@ -170,7 +170,7 @@ public class GetResourceConfigurationResponseBody extends TeaModel {
         private String zoneId; 
 
         /**
-         * AccountId.
+         * The ID of the Alibaba Cloud account to which the resource belongs.
          */
         public Builder accountId(String accountId) {
             this.accountId = accountId;
@@ -178,7 +178,7 @@ public class GetResourceConfigurationResponseBody extends TeaModel {
         }
 
         /**
-         * Configuration.
+         * The configurations of the resource.
          */
         public Builder configuration(java.util.Map < String, ? > configuration) {
             this.configuration = configuration;
@@ -186,7 +186,7 @@ public class GetResourceConfigurationResponseBody extends TeaModel {
         }
 
         /**
-         * CreateTime.
+         * The time when the resource was created.
          */
         public Builder createTime(String createTime) {
             this.createTime = createTime;
@@ -194,7 +194,10 @@ public class GetResourceConfigurationResponseBody extends TeaModel {
         }
 
         /**
-         * IpAddresses.
+         * The IP addresses.
+         * <p>
+         * 
+         * > Whether this parameter is returned is determined by the Alibaba Cloud service to which the resource belongs.
          */
         public Builder ipAddresses(java.util.List < String > ipAddresses) {
             this.ipAddresses = ipAddresses;
@@ -202,7 +205,7 @@ public class GetResourceConfigurationResponseBody extends TeaModel {
         }
 
         /**
-         * RegionId.
+         * The region ID of the resource.
          */
         public Builder regionId(String regionId) {
             this.regionId = regionId;
@@ -210,7 +213,7 @@ public class GetResourceConfigurationResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -218,7 +221,7 @@ public class GetResourceConfigurationResponseBody extends TeaModel {
         }
 
         /**
-         * ResourceGroupId.
+         * The ID of the resource group to which the resource belongs.
          */
         public Builder resourceGroupId(String resourceGroupId) {
             this.resourceGroupId = resourceGroupId;
@@ -226,7 +229,7 @@ public class GetResourceConfigurationResponseBody extends TeaModel {
         }
 
         /**
-         * ResourceId.
+         * The ID of the resource.
          */
         public Builder resourceId(String resourceId) {
             this.resourceId = resourceId;
@@ -234,7 +237,7 @@ public class GetResourceConfigurationResponseBody extends TeaModel {
         }
 
         /**
-         * ResourceName.
+         * The name of the resource.
          */
         public Builder resourceName(String resourceName) {
             this.resourceName = resourceName;
@@ -242,7 +245,7 @@ public class GetResourceConfigurationResponseBody extends TeaModel {
         }
 
         /**
-         * ResourceType.
+         * The type of the resource.
          */
         public Builder resourceType(String resourceType) {
             this.resourceType = resourceType;
@@ -250,7 +253,7 @@ public class GetResourceConfigurationResponseBody extends TeaModel {
         }
 
         /**
-         * Tags.
+         * The tags of the resource.
          */
         public Builder tags(java.util.List < Tags> tags) {
             this.tags = tags;
@@ -258,7 +261,7 @@ public class GetResourceConfigurationResponseBody extends TeaModel {
         }
 
         /**
-         * ZoneId.
+         * The zone ID of the resource.
          */
         public Builder zoneId(String zoneId) {
             this.zoneId = zoneId;
@@ -310,7 +313,7 @@ public class GetResourceConfigurationResponseBody extends TeaModel {
             private String value; 
 
             /**
-             * Key.
+             * The tag key.
              */
             public Builder key(String key) {
                 this.key = key;
@@ -318,7 +321,7 @@ public class GetResourceConfigurationResponseBody extends TeaModel {
             }
 
             /**
-             * Value.
+             * The tag value.
              */
             public Builder value(String value) {
                 this.value = value;

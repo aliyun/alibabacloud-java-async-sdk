@@ -97,7 +97,7 @@ public class ListMultiAccountResourceGroupsRequest extends Request {
         } 
 
         /**
-         * AccountId.
+         * The ID of the management account or member of the resource directory.
          */
         public Builder accountId(String accountId) {
             this.putQueryParameter("AccountId", accountId);
@@ -106,7 +106,10 @@ public class ListMultiAccountResourceGroupsRequest extends Request {
         }
 
         /**
-         * MaxResults.
+         * The maximum number of entries to return on each page.
+         * <p>
+         * 
+         * Maximum value: 100. Default value: 10.
          */
         public Builder maxResults(Integer maxResults) {
             this.putQueryParameter("MaxResults", maxResults);
@@ -115,7 +118,7 @@ public class ListMultiAccountResourceGroupsRequest extends Request {
         }
 
         /**
-         * NextToken.
+         * The pagination token that is used in the next request to retrieve a new page of results.
          */
         public Builder nextToken(String nextToken) {
             this.putQueryParameter("NextToken", nextToken);
@@ -124,7 +127,7 @@ public class ListMultiAccountResourceGroupsRequest extends Request {
         }
 
         /**
-         * ResourceGroupIds.
+         * The IDs of resource groups.
          */
         public Builder resourceGroupIds(java.util.List < String > resourceGroupIds) {
             this.putQueryParameter("ResourceGroupIds", resourceGroupIds);

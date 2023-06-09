@@ -82,7 +82,11 @@ public class ListResourceTypesRequest extends Request {
         } 
 
         /**
-         * AcceptLanguage.
+         * The language of the response. Valid values:
+         * <p>
+         * 
+         * *   zh-CN: Chinese
+         * *   en-US: English
          */
         public Builder acceptLanguage(String acceptLanguage) {
             this.putQueryParameter("AcceptLanguage", acceptLanguage);
@@ -91,7 +95,7 @@ public class ListResourceTypesRequest extends Request {
         }
 
         /**
-         * Query.
+         * The query conditions.
          */
         public Builder query(java.util.List < String > query) {
             this.putQueryParameter("Query", query);
@@ -100,7 +104,10 @@ public class ListResourceTypesRequest extends Request {
         }
 
         /**
-         * ResourceType.
+         * The resource type.
+         * <p>
+         * 
+         * For more information about the resource types that are supported by Resource Center, see [Services that work with Resource Center](~~477798~~).
          */
         public Builder resourceType(String resourceType) {
             this.putQueryParameter("ResourceType", resourceType);

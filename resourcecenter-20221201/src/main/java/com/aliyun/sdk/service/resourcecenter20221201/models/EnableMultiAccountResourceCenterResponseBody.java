@@ -50,7 +50,7 @@ public class EnableMultiAccountResourceCenterResponseBody extends TeaModel {
         private String status; 
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -58,7 +58,11 @@ public class EnableMultiAccountResourceCenterResponseBody extends TeaModel {
         }
 
         /**
-         * Status.
+         * The status of the feature. Valid values:
+         * <p>
+         * 
+         * *   Pending: The feature is being enabled.
+         * *   Enabled: The feature is enabled.
          */
         public Builder status(String status) {
             this.status = status;

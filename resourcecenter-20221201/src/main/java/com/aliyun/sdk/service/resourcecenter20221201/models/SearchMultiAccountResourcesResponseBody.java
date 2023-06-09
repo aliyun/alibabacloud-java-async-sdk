@@ -98,7 +98,7 @@ public class SearchMultiAccountResourcesResponseBody extends TeaModel {
         private String scope; 
 
         /**
-         * Filters.
+         * The filter conditions.
          */
         public Builder filters(java.util.List < Filters> filters) {
             this.filters = filters;
@@ -106,7 +106,7 @@ public class SearchMultiAccountResourcesResponseBody extends TeaModel {
         }
 
         /**
-         * MaxResults.
+         * The maximum number of entries returned per page.
          */
         public Builder maxResults(Integer maxResults) {
             this.maxResults = maxResults;
@@ -114,7 +114,7 @@ public class SearchMultiAccountResourcesResponseBody extends TeaModel {
         }
 
         /**
-         * NextToken.
+         * The pagination token that is used in the next request to retrieve a new page of results.
          */
         public Builder nextToken(String nextToken) {
             this.nextToken = nextToken;
@@ -122,7 +122,7 @@ public class SearchMultiAccountResourcesResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -130,7 +130,7 @@ public class SearchMultiAccountResourcesResponseBody extends TeaModel {
         }
 
         /**
-         * Resources.
+         * The information about the resources.
          */
         public Builder resources(java.util.List < Resources> resources) {
             this.resources = resources;
@@ -138,7 +138,13 @@ public class SearchMultiAccountResourcesResponseBody extends TeaModel {
         }
 
         /**
-         * Scope.
+         * The search scope.
+         * <p>
+         * 
+         * *   ID of a resource directory: Resources within the management account and all members of the resource directory are searched.
+         * *   ID of the Root folder: Resources within all members in the Root folder and the subfolders of the Root folder are searched.
+         * *   ID of a folder: Resources within all members in the folder are searched.
+         * *   ID of a member: Resources within the member are searched.
          */
         public Builder scope(String scope) {
             this.scope = scope;
@@ -202,7 +208,7 @@ public class SearchMultiAccountResourcesResponseBody extends TeaModel {
             private java.util.List < String > values; 
 
             /**
-             * Key.
+             * The key of the filter condition.
              */
             public Builder key(String key) {
                 this.key = key;
@@ -210,7 +216,7 @@ public class SearchMultiAccountResourcesResponseBody extends TeaModel {
             }
 
             /**
-             * MatchType.
+             * The matching mode.
              */
             public Builder matchType(String matchType) {
                 this.matchType = matchType;
@@ -218,7 +224,7 @@ public class SearchMultiAccountResourcesResponseBody extends TeaModel {
             }
 
             /**
-             * Values.
+             * The values of the filter condition.
              */
             public Builder values(java.util.List < String > values) {
                 this.values = values;
@@ -271,7 +277,7 @@ public class SearchMultiAccountResourcesResponseBody extends TeaModel {
             private String value; 
 
             /**
-             * Key.
+             * The key of the tag.
              */
             public Builder key(String key) {
                 this.key = key;
@@ -279,7 +285,7 @@ public class SearchMultiAccountResourcesResponseBody extends TeaModel {
             }
 
             /**
-             * Value.
+             * The value of the tag.
              */
             public Builder value(String value) {
                 this.value = value;
@@ -428,7 +434,7 @@ public class SearchMultiAccountResourcesResponseBody extends TeaModel {
             private String zoneId; 
 
             /**
-             * AccountId.
+             * The ID of the management account or member of the resource directory.
              */
             public Builder accountId(String accountId) {
                 this.accountId = accountId;
@@ -436,7 +442,10 @@ public class SearchMultiAccountResourcesResponseBody extends TeaModel {
             }
 
             /**
-             * CreateTime.
+             * The time when the resource was created.
+             * <p>
+             * 
+             * > Whether this parameter is returned is determined by the Alibaba Cloud service to which the resource belongs.
              */
             public Builder createTime(String createTime) {
                 this.createTime = createTime;
@@ -444,7 +453,10 @@ public class SearchMultiAccountResourcesResponseBody extends TeaModel {
             }
 
             /**
-             * IpAddresses.
+             * The IP addresses.
+             * <p>
+             * 
+             * > Whether this parameter is returned is determined by the Alibaba Cloud service to which the resource belongs.
              */
             public Builder ipAddresses(java.util.List < String > ipAddresses) {
                 this.ipAddresses = ipAddresses;
@@ -452,7 +464,7 @@ public class SearchMultiAccountResourcesResponseBody extends TeaModel {
             }
 
             /**
-             * RegionId.
+             * The region ID of the resource.
              */
             public Builder regionId(String regionId) {
                 this.regionId = regionId;
@@ -460,7 +472,7 @@ public class SearchMultiAccountResourcesResponseBody extends TeaModel {
             }
 
             /**
-             * ResourceGroupId.
+             * The ID of the resource group to which the resource belongs.
              */
             public Builder resourceGroupId(String resourceGroupId) {
                 this.resourceGroupId = resourceGroupId;
@@ -468,7 +480,7 @@ public class SearchMultiAccountResourcesResponseBody extends TeaModel {
             }
 
             /**
-             * ResourceId.
+             * The ID of the resource.
              */
             public Builder resourceId(String resourceId) {
                 this.resourceId = resourceId;
@@ -476,7 +488,7 @@ public class SearchMultiAccountResourcesResponseBody extends TeaModel {
             }
 
             /**
-             * ResourceName.
+             * The name of the resource.
              */
             public Builder resourceName(String resourceName) {
                 this.resourceName = resourceName;
@@ -484,7 +496,7 @@ public class SearchMultiAccountResourcesResponseBody extends TeaModel {
             }
 
             /**
-             * ResourceType.
+             * The type of the resource.
              */
             public Builder resourceType(String resourceType) {
                 this.resourceType = resourceType;
@@ -492,7 +504,7 @@ public class SearchMultiAccountResourcesResponseBody extends TeaModel {
             }
 
             /**
-             * Tags.
+             * The tags of the resource.
              */
             public Builder tags(java.util.List < Tags> tags) {
                 this.tags = tags;
@@ -500,7 +512,10 @@ public class SearchMultiAccountResourcesResponseBody extends TeaModel {
             }
 
             /**
-             * ZoneId.
+             * The zone ID of the resource.
+             * <p>
+             * 
+             * > Whether this parameter is returned is determined by the Alibaba Cloud service to which the resource belongs.
              */
             public Builder zoneId(String zoneId) {
                 this.zoneId = zoneId;

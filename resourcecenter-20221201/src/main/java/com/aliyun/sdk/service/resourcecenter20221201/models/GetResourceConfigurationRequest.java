@@ -85,7 +85,7 @@ public class GetResourceConfigurationRequest extends Request {
         } 
 
         /**
-         * ResourceId.
+         * The ID of the resource.
          */
         public Builder resourceId(String resourceId) {
             this.putQueryParameter("ResourceId", resourceId);
@@ -94,7 +94,7 @@ public class GetResourceConfigurationRequest extends Request {
         }
 
         /**
-         * ResourceRegionId.
+         * The region ID of the resource.
          */
         public Builder resourceRegionId(String resourceRegionId) {
             this.putQueryParameter("ResourceRegionId", resourceRegionId);
@@ -103,7 +103,10 @@ public class GetResourceConfigurationRequest extends Request {
         }
 
         /**
-         * ResourceType.
+         * The type of the resource.
+         * <p>
+         * 
+         * For more information about the resource types supported by Resource Center, see [Services that work with Resource Center](~~477798~~).
          */
         public Builder resourceType(String resourceType) {
             this.putQueryParameter("ResourceType", resourceType);

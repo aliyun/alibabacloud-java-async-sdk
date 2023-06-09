@@ -62,7 +62,7 @@ public class ListMultiAccountResourceGroupsResponseBody extends TeaModel {
         private java.util.List < ResourceGroups> resourceGroups; 
 
         /**
-         * NextToken.
+         * The pagination token that is used in the next request to retrieve a new page of results.
          */
         public Builder nextToken(String nextToken) {
             this.nextToken = nextToken;
@@ -70,7 +70,7 @@ public class ListMultiAccountResourceGroupsResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -78,7 +78,7 @@ public class ListMultiAccountResourceGroupsResponseBody extends TeaModel {
         }
 
         /**
-         * ResourceGroups.
+         * The information about the resource groups.
          */
         public Builder resourceGroups(java.util.List < ResourceGroups> resourceGroups) {
             this.resourceGroups = resourceGroups;
@@ -178,7 +178,7 @@ public class ListMultiAccountResourceGroupsResponseBody extends TeaModel {
             private String status; 
 
             /**
-             * AccountId.
+             * The ID of the management account or member of the resource directory.
              */
             public Builder accountId(String accountId) {
                 this.accountId = accountId;
@@ -186,7 +186,7 @@ public class ListMultiAccountResourceGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * CreateDate.
+             * The time when the resource group was created.
              */
             public Builder createDate(String createDate) {
                 this.createDate = createDate;
@@ -194,7 +194,7 @@ public class ListMultiAccountResourceGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * DisplayName.
+             * The display name of the resource group.
              */
             public Builder displayName(String displayName) {
                 this.displayName = displayName;
@@ -202,7 +202,7 @@ public class ListMultiAccountResourceGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * Id.
+             * The ID of the resource group.
              */
             public Builder id(String id) {
                 this.id = id;
@@ -210,7 +210,7 @@ public class ListMultiAccountResourceGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * Name.
+             * The unique identifier of the resource group.
              */
             public Builder name(String name) {
                 this.name = name;
@@ -218,7 +218,12 @@ public class ListMultiAccountResourceGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * Status.
+             * The status of the resource group. Valid values:
+             * <p>
+             * 
+             * *   Creating: The resource group is being created.
+             * *   OK: The resource group is created.
+             * *   PendingDelete: The resource group is waiting to be deleted.
              */
             public Builder status(String status) {
                 this.status = status;

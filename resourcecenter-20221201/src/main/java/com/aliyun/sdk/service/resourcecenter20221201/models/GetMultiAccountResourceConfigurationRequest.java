@@ -100,7 +100,7 @@ public class GetMultiAccountResourceConfigurationRequest extends Request {
         } 
 
         /**
-         * AccountId.
+         * The ID of the management account or member of the resource directory.
          */
         public Builder accountId(String accountId) {
             this.putQueryParameter("AccountId", accountId);
@@ -109,7 +109,7 @@ public class GetMultiAccountResourceConfigurationRequest extends Request {
         }
 
         /**
-         * ResourceId.
+         * The ID of the resource.
          */
         public Builder resourceId(String resourceId) {
             this.putQueryParameter("ResourceId", resourceId);
@@ -118,7 +118,7 @@ public class GetMultiAccountResourceConfigurationRequest extends Request {
         }
 
         /**
-         * ResourceRegionId.
+         * The region ID of the resource.
          */
         public Builder resourceRegionId(String resourceRegionId) {
             this.putQueryParameter("ResourceRegionId", resourceRegionId);
@@ -127,7 +127,7 @@ public class GetMultiAccountResourceConfigurationRequest extends Request {
         }
 
         /**
-         * ResourceType.
+         * The type of the resource.
          */
         public Builder resourceType(String resourceType) {
             this.putQueryParameter("ResourceType", resourceType);

@@ -22,6 +22,10 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<DisableResourceCenterResponse> disableResourceCenter(DisableResourceCenterRequest request);
 
+    /**
+      * If you have created a resource directory for your enterprise, you can enable the cross-account resource search feature by using the management account of the resource directory or a delegated administrator account of Resource Center to view the resources of members in the resource directory. For more information about a resource directory, see [Resource Directory overview](~~200506~~).
+      *
+     */
     CompletableFuture<EnableMultiAccountResourceCenterResponse> enableMultiAccountResourceCenter(EnableMultiAccountResourceCenterRequest request);
 
     CompletableFuture<EnableResourceCenterResponse> enableResourceCenter(EnableResourceCenterRequest request);
@@ -33,6 +37,8 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<GetResourceCenterServiceStatusResponse> getResourceCenterServiceStatus(GetResourceCenterServiceStatusRequest request);
 
     CompletableFuture<GetResourceConfigurationResponse> getResourceConfiguration(GetResourceConfigurationRequest request);
+
+    CompletableFuture<GetResourceCountsResponse> getResourceCounts(GetResourceCountsRequest request);
 
     CompletableFuture<ListMultiAccountResourceGroupsResponse> listMultiAccountResourceGroups(ListMultiAccountResourceGroupsRequest request);
 

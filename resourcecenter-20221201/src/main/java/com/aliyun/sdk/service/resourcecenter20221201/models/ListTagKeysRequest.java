@@ -96,7 +96,11 @@ public class ListTagKeysRequest extends Request {
         } 
 
         /**
-         * MatchType.
+         * The matching mode. Valid values:
+         * <p>
+         * 
+         * *   Equals: equal match
+         * *   Prefix: match by prefix
          */
         public Builder matchType(String matchType) {
             this.putQueryParameter("MatchType", matchType);
@@ -105,7 +109,12 @@ public class ListTagKeysRequest extends Request {
         }
 
         /**
-         * MaxResults.
+         * The maximum number of entries to return on each page.
+         * <p>
+         * 
+         * Valid values: 1 to 100.
+         * 
+         * Default value: 20.
          */
         public Builder maxResults(Integer maxResults) {
             this.putQueryParameter("MaxResults", maxResults);
@@ -114,7 +123,10 @@ public class ListTagKeysRequest extends Request {
         }
 
         /**
-         * NextToken.
+         * The pagination token that is used in the next request to retrieve a new page of results.
+         * <p>
+         * 
+         * If the total number of entries returned for the current request exceeds the value of the `MaxResults` parameter, the entries are truncated. In this case, you can use the `token` to initiate another request and obtain the remaining entries.
          */
         public Builder nextToken(String nextToken) {
             this.putQueryParameter("NextToken", nextToken);
@@ -123,7 +135,7 @@ public class ListTagKeysRequest extends Request {
         }
 
         /**
-         * TagKey.
+         * The tag key.
          */
         public Builder tagKey(String tagKey) {
             this.putQueryParameter("TagKey", tagKey);
