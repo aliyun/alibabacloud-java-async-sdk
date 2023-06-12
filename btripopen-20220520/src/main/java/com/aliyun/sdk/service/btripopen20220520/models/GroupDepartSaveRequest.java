@@ -37,8 +37,11 @@ public class GroupDepartSaveRequest extends Request {
 
     @Body
     @NameInMap("sub_corp_id_list")
-    @Validation(required = true)
     private java.util.List < String > subCorpIdList;
+
+    @Body
+    @NameInMap("sync_group")
+    private Boolean syncGroup;
 
     @Header
     @NameInMap("x-acs-btrip-corp-token")
@@ -52,6 +55,7 @@ public class GroupDepartSaveRequest extends Request {
         this.outerDeptPid = builder.outerDeptPid;
         this.status = builder.status;
         this.subCorpIdList = builder.subCorpIdList;
+        this.syncGroup = builder.syncGroup;
         this.xAcsBtripCorpToken = builder.xAcsBtripCorpToken;
     }
 
@@ -111,6 +115,13 @@ public class GroupDepartSaveRequest extends Request {
     }
 
     /**
+     * @return syncGroup
+     */
+    public Boolean getSyncGroup() {
+        return this.syncGroup;
+    }
+
+    /**
      * @return xAcsBtripCorpToken
      */
     public String getXAcsBtripCorpToken() {
@@ -124,6 +135,7 @@ public class GroupDepartSaveRequest extends Request {
         private String outerDeptPid; 
         private Integer status; 
         private java.util.List < String > subCorpIdList; 
+        private Boolean syncGroup; 
         private String xAcsBtripCorpToken; 
 
         private Builder() {
@@ -138,6 +150,7 @@ public class GroupDepartSaveRequest extends Request {
             this.outerDeptPid = request.outerDeptPid;
             this.status = request.status;
             this.subCorpIdList = request.subCorpIdList;
+            this.syncGroup = request.syncGroup;
             this.xAcsBtripCorpToken = request.xAcsBtripCorpToken;
         } 
 
@@ -193,6 +206,15 @@ public class GroupDepartSaveRequest extends Request {
             String subCorpIdListShrink = shrink(subCorpIdList, "sub_corp_id_list", "json");
             this.putBodyParameter("sub_corp_id_list", subCorpIdListShrink);
             this.subCorpIdList = subCorpIdList;
+            return this;
+        }
+
+        /**
+         * sync_group.
+         */
+        public Builder syncGroup(Boolean syncGroup) {
+            this.putBodyParameter("sync_group", syncGroup);
+            this.syncGroup = syncGroup;
             return this;
         }
 
