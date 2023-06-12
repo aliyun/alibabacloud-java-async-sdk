@@ -100,8 +100,7 @@ public class UpdateUserGroupRequest extends Request {
          * Attributes.
          */
         public Builder attributes(java.util.List < Attributes> attributes) {
-            String attributesShrink = shrink(attributes, "Attributes", "json");
-            this.putBodyParameter("Attributes", attributesShrink);
+            this.putBodyParameter("Attributes", attributes);
             this.attributes = attributes;
             return this;
         }

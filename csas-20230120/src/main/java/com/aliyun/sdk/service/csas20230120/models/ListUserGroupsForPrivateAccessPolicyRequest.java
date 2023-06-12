@@ -58,8 +58,7 @@ public class ListUserGroupsForPrivateAccessPolicyRequest extends Request {
          * PolicyIds.
          */
         public Builder policyIds(java.util.List < String > policyIds) {
-            String policyIdsShrink = shrink(policyIds, "PolicyIds", "json");
-            this.putQueryParameter("PolicyIds", policyIdsShrink);
+            this.putQueryParameter("PolicyIds", policyIds);
             this.policyIds = policyIds;
             return this;
         }

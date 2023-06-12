@@ -216,8 +216,7 @@ public class ListPrivateAccessPolicesRequest extends Request {
          * PolicyIds.
          */
         public Builder policyIds(java.util.List < String > policyIds) {
-            String policyIdsShrink = shrink(policyIds, "PolicyIds", "json");
-            this.putQueryParameter("PolicyIds", policyIdsShrink);
+            this.putQueryParameter("PolicyIds", policyIds);
             this.policyIds = policyIds;
             return this;
         }
@@ -241,7 +240,10 @@ public class ListPrivateAccessPolicesRequest extends Request {
         }
 
         /**
-         * UserGroupId.
+         * 用户组ID。取值来源：
+         * <p>
+         * - [ListUserGroups](~~ListUserGroups~~)：批量查询用户组。
+         * - [CreateUserGroup](~~CreateUserGroup~~)：创建用户组。
          */
         public Builder userGroupId(String userGroupId) {
             this.putQueryParameter("UserGroupId", userGroupId);

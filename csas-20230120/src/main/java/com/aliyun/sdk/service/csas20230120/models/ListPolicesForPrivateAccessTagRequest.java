@@ -58,8 +58,7 @@ public class ListPolicesForPrivateAccessTagRequest extends Request {
          * TagIds.
          */
         public Builder tagIds(java.util.List < String > tagIds) {
-            String tagIdsShrink = shrink(tagIds, "TagIds", "json");
-            this.putQueryParameter("TagIds", tagIdsShrink);
+            this.putQueryParameter("TagIds", tagIds);
             this.tagIds = tagIds;
             return this;
         }

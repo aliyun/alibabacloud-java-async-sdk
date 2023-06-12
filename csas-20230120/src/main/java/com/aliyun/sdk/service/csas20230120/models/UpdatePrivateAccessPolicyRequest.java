@@ -292,7 +292,7 @@ public class UpdatePrivateAccessPolicyRequest extends Request {
         }
 
         /**
-         * TagIds.
+         * 内网访问标签ID集合。一条策略最多支持100个内网访问标签ID。
          */
         public Builder tagIds(java.util.List < String > tagIds) {
             String tagIdsShrink = shrink(tagIds, "TagIds", "json");
@@ -312,7 +312,10 @@ public class UpdatePrivateAccessPolicyRequest extends Request {
         }
 
         /**
-         * UserGroupMode.
+         * 内网访问策略的用户组类型。取值：
+         * <p>
+         * - **Normal**：普通用户组。
+         * - **Custom**：自定义用户组。
          */
         public Builder userGroupMode(String userGroupMode) {
             this.putBodyParameter("UserGroupMode", userGroupMode);

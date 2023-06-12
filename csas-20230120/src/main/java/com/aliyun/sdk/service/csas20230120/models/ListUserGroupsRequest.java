@@ -144,7 +144,7 @@ public class ListUserGroupsRequest extends Request {
         }
 
         /**
-         * Name.
+         * 用户组名称。长度为1~128个字符，支持中文和大小写英文字母，可包含数字、半角句号（.）、下划线（_）和短划线（-）。
          */
         public Builder name(String name) {
             this.putQueryParameter("Name", name);
@@ -174,8 +174,7 @@ public class ListUserGroupsRequest extends Request {
          * UserGroupIds.
          */
         public Builder userGroupIds(java.util.List < String > userGroupIds) {
-            String userGroupIdsShrink = shrink(userGroupIds, "UserGroupIds", "json");
-            this.putQueryParameter("UserGroupIds", userGroupIdsShrink);
+            this.putQueryParameter("UserGroupIds", userGroupIds);
             this.userGroupIds = userGroupIds;
             return this;
         }

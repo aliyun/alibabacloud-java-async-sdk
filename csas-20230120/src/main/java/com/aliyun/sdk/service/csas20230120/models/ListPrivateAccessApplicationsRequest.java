@@ -166,8 +166,7 @@ public class ListPrivateAccessApplicationsRequest extends Request {
          * ApplicationIds.
          */
         public Builder applicationIds(java.util.List < String > applicationIds) {
-            String applicationIdsShrink = shrink(applicationIds, "ApplicationIds", "json");
-            this.putQueryParameter("ApplicationIds", applicationIdsShrink);
+            this.putQueryParameter("ApplicationIds", applicationIds);
             this.applicationIds = applicationIds;
             return this;
         }

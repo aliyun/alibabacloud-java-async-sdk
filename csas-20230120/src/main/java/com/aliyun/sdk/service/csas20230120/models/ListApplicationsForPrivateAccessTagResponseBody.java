@@ -259,7 +259,7 @@ public class ListApplicationsForPrivateAccessTagResponseBody extends TeaModel {
             }
 
             /**
-             * CreateTime.
+             * 内网访问应用创建时间。
              */
             public Builder createTime(String createTime) {
                 this.createTime = createTime;

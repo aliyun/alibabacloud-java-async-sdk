@@ -146,7 +146,7 @@ public class ListTagsForPrivateAccessPolicyResponseBody extends TeaModel {
             private String tagType; 
 
             /**
-             * CreateTime.
+             * 内网访问标签创建时间。
              */
             public Builder createTime(String createTime) {
                 this.createTime = createTime;

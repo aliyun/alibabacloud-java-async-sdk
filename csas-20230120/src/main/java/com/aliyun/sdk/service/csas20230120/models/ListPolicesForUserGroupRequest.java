@@ -58,8 +58,7 @@ public class ListPolicesForUserGroupRequest extends Request {
          * UserGroupIds.
          */
         public Builder userGroupIds(java.util.List < String > userGroupIds) {
-            String userGroupIdsShrink = shrink(userGroupIds, "UserGroupIds", "json");
-            this.putQueryParameter("UserGroupIds", userGroupIdsShrink);
+            this.putQueryParameter("UserGroupIds", userGroupIds);
             this.userGroupIds = userGroupIds;
             return this;
         }

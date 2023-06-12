@@ -30,12 +30,22 @@ public class ListConnectorsRequest extends Request {
     @Validation(required = true)
     private Integer pageSize;
 
+    @Query
+    @NameInMap("Status")
+    private String status;
+
+    @Query
+    @NameInMap("SwitchStatus")
+    private String switchStatus;
+
     private ListConnectorsRequest(Builder builder) {
         super(builder);
         this.connectorIds = builder.connectorIds;
         this.currentPage = builder.currentPage;
         this.name = builder.name;
         this.pageSize = builder.pageSize;
+        this.status = builder.status;
+        this.switchStatus = builder.switchStatus;
     }
 
     public static Builder builder() {
@@ -79,11 +89,27 @@ public class ListConnectorsRequest extends Request {
         return this.pageSize;
     }
 
+    /**
+     * @return status
+     */
+    public String getStatus() {
+        return this.status;
+    }
+
+    /**
+     * @return switchStatus
+     */
+    public String getSwitchStatus() {
+        return this.switchStatus;
+    }
+
     public static final class Builder extends Request.Builder<ListConnectorsRequest, Builder> {
         private java.util.List < String > connectorIds; 
         private Integer currentPage; 
         private String name; 
         private Integer pageSize; 
+        private String status; 
+        private String switchStatus; 
 
         private Builder() {
             super();
@@ -95,14 +121,15 @@ public class ListConnectorsRequest extends Request {
             this.currentPage = request.currentPage;
             this.name = request.name;
             this.pageSize = request.pageSize;
+            this.status = request.status;
+            this.switchStatus = request.switchStatus;
         } 
 
         /**
          * ConnectorIds.
          */
         public Builder connectorIds(java.util.List < String > connectorIds) {
-            String connectorIdsShrink = shrink(connectorIds, "ConnectorIds", "json");
-            this.putQueryParameter("ConnectorIds", connectorIdsShrink);
+            this.putQueryParameter("ConnectorIds", connectorIds);
             this.connectorIds = connectorIds;
             return this;
         }
@@ -131,6 +158,24 @@ public class ListConnectorsRequest extends Request {
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
             this.pageSize = pageSize;
+            return this;
+        }
+
+        /**
+         * Status.
+         */
+        public Builder status(String status) {
+            this.putQueryParameter("Status", status);
+            this.status = status;
+            return this;
+        }
+
+        /**
+         * SwitchStatus.
+         */
+        public Builder switchStatus(String switchStatus) {
+            this.putQueryParameter("SwitchStatus", switchStatus);
+            this.switchStatus = switchStatus;
             return this;
         }
 

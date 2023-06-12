@@ -255,7 +255,7 @@ public class ListUserGroupsForPrivateAccessPolicyResponseBody extends TeaModel {
             }
 
             /**
-             * CreateTime.
+             * 用户组创建时间。
              */
             public Builder createTime(String createTime) {
                 this.createTime = createTime;
