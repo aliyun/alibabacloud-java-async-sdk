@@ -1133,7 +1133,7 @@ public class CreateClusterRequest extends Request {
             private java.util.List < String > vpdSubnets; 
 
             /**
-             * VpdId.
+             * 专有网络 id
              */
             public Builder vpdId(String vpdId) {
                 this.vpdId = vpdId;
@@ -1141,7 +1141,7 @@ public class CreateClusterRequest extends Request {
             }
 
             /**
-             * vpd子网信息
+             * 集群子网id列表
              */
             public Builder vpdSubnets(java.util.List < String > vpdSubnets) {
                 this.vpdSubnets = vpdSubnets;
@@ -1222,7 +1222,7 @@ public class CreateClusterRequest extends Request {
             }
 
             /**
-             * VpdInfo.
+             * 复用VPD信息
              */
             public Builder vpdInfo(VpdInfo vpdInfo) {
                 this.vpdInfo = vpdInfo;

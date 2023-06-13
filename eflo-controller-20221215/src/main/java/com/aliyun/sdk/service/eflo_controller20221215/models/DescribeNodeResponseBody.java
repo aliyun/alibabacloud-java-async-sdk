@@ -30,6 +30,9 @@ public class DescribeNodeResponseBody extends TeaModel {
     @NameInMap("ImageId")
     private String imageId;
 
+    @NameInMap("ImageName")
+    private String imageName;
+
     @NameInMap("MachineType")
     private String machineType;
 
@@ -64,6 +67,7 @@ public class DescribeNodeResponseBody extends TeaModel {
         this.expiredTime = builder.expiredTime;
         this.hostname = builder.hostname;
         this.imageId = builder.imageId;
+        this.imageName = builder.imageName;
         this.machineType = builder.machineType;
         this.networks = builder.networks;
         this.nodeGroupId = builder.nodeGroupId;
@@ -123,6 +127,13 @@ public class DescribeNodeResponseBody extends TeaModel {
      */
     public String getImageId() {
         return this.imageId;
+    }
+
+    /**
+     * @return imageName
+     */
+    public String getImageName() {
+        return this.imageName;
     }
 
     /**
@@ -195,6 +206,7 @@ public class DescribeNodeResponseBody extends TeaModel {
         private String expiredTime; 
         private String hostname; 
         private String imageId; 
+        private String imageName; 
         private String machineType; 
         private java.util.List < Networks> networks; 
         private String nodeGroupId; 
@@ -250,6 +262,14 @@ public class DescribeNodeResponseBody extends TeaModel {
          */
         public Builder imageId(String imageId) {
             this.imageId = imageId;
+            return this;
+        }
+
+        /**
+         * 镜像名称
+         */
+        public Builder imageName(String imageName) {
+            this.imageName = imageName;
             return this;
         }
 

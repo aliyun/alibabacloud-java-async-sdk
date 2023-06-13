@@ -24,6 +24,9 @@ public class DescribeTaskResponseBody extends TeaModel {
     @NameInMap("Message")
     private String message;
 
+    @NameInMap("NodeIds")
+    private java.util.List < String > nodeIds;
+
     @NameInMap("RequestId")
     private String requestId;
 
@@ -44,6 +47,7 @@ public class DescribeTaskResponseBody extends TeaModel {
         this.clusterName = builder.clusterName;
         this.createTime = builder.createTime;
         this.message = builder.message;
+        this.nodeIds = builder.nodeIds;
         this.requestId = builder.requestId;
         this.steps = builder.steps;
         this.taskState = builder.taskState;
@@ -88,6 +92,13 @@ public class DescribeTaskResponseBody extends TeaModel {
     }
 
     /**
+     * @return nodeIds
+     */
+    public java.util.List < String > getNodeIds() {
+        return this.nodeIds;
+    }
+
+    /**
      * @return requestId
      */
     public String getRequestId() {
@@ -127,6 +138,7 @@ public class DescribeTaskResponseBody extends TeaModel {
         private String clusterName; 
         private String createTime; 
         private String message; 
+        private java.util.List < String > nodeIds; 
         private String requestId; 
         private java.util.List < Steps> steps; 
         private String taskState; 
@@ -162,6 +174,14 @@ public class DescribeTaskResponseBody extends TeaModel {
          */
         public Builder message(String message) {
             this.message = message;
+            return this;
+        }
+
+        /**
+         * 节点ID列表
+         */
+        public Builder nodeIds(java.util.List < String > nodeIds) {
+            this.nodeIds = nodeIds;
             return this;
         }
 
