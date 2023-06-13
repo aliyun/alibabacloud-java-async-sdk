@@ -1,3 +1,7 @@
+2023-06-13 Version: 1.0.8
+- UpdateHubClusterFeature support MonitorEnabled.
+
+
 2023-06-08 Version: 1.0.7
 - UpdateHubClusterFeature suppoert ArmsEnabled.
 

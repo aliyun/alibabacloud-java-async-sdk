@@ -25,10 +25,6 @@ public class UpdateHubClusterFeatureRequest extends Request {
     private Boolean argoServerEnabled;
 
     @Query
-    @NameInMap("ArmsEnabled")
-    private Boolean armsEnabled;
-
-    @Query
     @NameInMap("AuditLogEnabled")
     private Boolean auditLogEnabled;
 
@@ -44,6 +40,10 @@ public class UpdateHubClusterFeatureRequest extends Request {
     @Query
     @NameInMap("EnableMesh")
     private Boolean enableMesh;
+
+    @Query
+    @NameInMap("MonitorEnabled")
+    private Boolean monitorEnabled;
 
     @Query
     @NameInMap("Name")
@@ -70,11 +70,11 @@ public class UpdateHubClusterFeatureRequest extends Request {
         this.apiServerEipId = builder.apiServerEipId;
         this.argoCDEnabled = builder.argoCDEnabled;
         this.argoServerEnabled = builder.argoServerEnabled;
-        this.armsEnabled = builder.armsEnabled;
         this.auditLogEnabled = builder.auditLogEnabled;
         this.clusterId = builder.clusterId;
         this.deletionProtection = builder.deletionProtection;
         this.enableMesh = builder.enableMesh;
+        this.monitorEnabled = builder.monitorEnabled;
         this.name = builder.name;
         this.priceLimit = builder.priceLimit;
         this.publicApiServerEnabled = builder.publicApiServerEnabled;
@@ -117,13 +117,6 @@ public class UpdateHubClusterFeatureRequest extends Request {
     }
 
     /**
-     * @return armsEnabled
-     */
-    public Boolean getArmsEnabled() {
-        return this.armsEnabled;
-    }
-
-    /**
      * @return auditLogEnabled
      */
     public Boolean getAuditLogEnabled() {
@@ -149,6 +142,13 @@ public class UpdateHubClusterFeatureRequest extends Request {
      */
     public Boolean getEnableMesh() {
         return this.enableMesh;
+    }
+
+    /**
+     * @return monitorEnabled
+     */
+    public Boolean getMonitorEnabled() {
+        return this.monitorEnabled;
     }
 
     /**
@@ -190,11 +190,11 @@ public class UpdateHubClusterFeatureRequest extends Request {
         private String apiServerEipId; 
         private Boolean argoCDEnabled; 
         private Boolean argoServerEnabled; 
-        private Boolean armsEnabled; 
         private Boolean auditLogEnabled; 
         private String clusterId; 
         private Boolean deletionProtection; 
         private Boolean enableMesh; 
+        private Boolean monitorEnabled; 
         private String name; 
         private String priceLimit; 
         private Boolean publicApiServerEnabled; 
@@ -210,11 +210,11 @@ public class UpdateHubClusterFeatureRequest extends Request {
             this.apiServerEipId = request.apiServerEipId;
             this.argoCDEnabled = request.argoCDEnabled;
             this.argoServerEnabled = request.argoServerEnabled;
-            this.armsEnabled = request.armsEnabled;
             this.auditLogEnabled = request.auditLogEnabled;
             this.clusterId = request.clusterId;
             this.deletionProtection = request.deletionProtection;
             this.enableMesh = request.enableMesh;
+            this.monitorEnabled = request.monitorEnabled;
             this.name = request.name;
             this.priceLimit = request.priceLimit;
             this.publicApiServerEnabled = request.publicApiServerEnabled;
@@ -246,15 +246,6 @@ public class UpdateHubClusterFeatureRequest extends Request {
         public Builder argoServerEnabled(Boolean argoServerEnabled) {
             this.putQueryParameter("ArgoServerEnabled", argoServerEnabled);
             this.argoServerEnabled = argoServerEnabled;
-            return this;
-        }
-
-        /**
-         * ArmsEnabled.
-         */
-        public Builder armsEnabled(Boolean armsEnabled) {
-            this.putQueryParameter("ArmsEnabled", armsEnabled);
-            this.armsEnabled = armsEnabled;
             return this;
         }
 
@@ -302,6 +293,15 @@ public class UpdateHubClusterFeatureRequest extends Request {
         public Builder enableMesh(Boolean enableMesh) {
             this.putQueryParameter("EnableMesh", enableMesh);
             this.enableMesh = enableMesh;
+            return this;
+        }
+
+        /**
+         * MonitorEnabled.
+         */
+        public Builder monitorEnabled(Boolean monitorEnabled) {
+            this.putQueryParameter("MonitorEnabled", monitorEnabled);
+            this.monitorEnabled = monitorEnabled;
             return this;
         }
 
