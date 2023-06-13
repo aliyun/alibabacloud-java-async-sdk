@@ -72,6 +72,9 @@ public class DescribeRegionBandwidthQuotaResponseBody extends TeaModel {
     } 
 
     public static class BandwidthInfo extends TeaModel {
+        @NameInMap("Isp")
+        private String isp;
+
         @NameInMap("MonthAverageQuota")
         private Long monthAverageQuota;
 
@@ -85,6 +88,7 @@ public class DescribeRegionBandwidthQuotaResponseBody extends TeaModel {
         private Long weekMax;
 
         private BandwidthInfo(Builder builder) {
+            this.isp = builder.isp;
             this.monthAverageQuota = builder.monthAverageQuota;
             this.monthMax = builder.monthMax;
             this.weekAverageQuota = builder.weekAverageQuota;
@@ -97,6 +101,13 @@ public class DescribeRegionBandwidthQuotaResponseBody extends TeaModel {
 
         public static BandwidthInfo create() {
             return builder().build();
+        }
+
+        /**
+         * @return isp
+         */
+        public String getIsp() {
+            return this.isp;
         }
 
         /**
@@ -128,10 +139,19 @@ public class DescribeRegionBandwidthQuotaResponseBody extends TeaModel {
         }
 
         public static final class Builder {
+            private String isp; 
             private Long monthAverageQuota; 
             private Long monthMax; 
             private Long weekAverageQuota; 
             private Long weekMax; 
+
+            /**
+             * Isp.
+             */
+            public Builder isp(String isp) {
+                this.isp = isp;
+                return this;
+            }
 
             /**
              * MonthAverageQuota.
@@ -235,7 +255,7 @@ public class DescribeRegionBandwidthQuotaResponseBody extends TeaModel {
     }
     public static class BandwidthQuota extends TeaModel {
         @NameInMap("BandwidthInfo")
-        private BandwidthInfo bandwidthInfo;
+        private java.util.List < BandwidthInfo> bandwidthInfo;
 
         @NameInMap("Date")
         private String date;
@@ -264,7 +284,7 @@ public class DescribeRegionBandwidthQuotaResponseBody extends TeaModel {
         /**
          * @return bandwidthInfo
          */
-        public BandwidthInfo getBandwidthInfo() {
+        public java.util.List < BandwidthInfo> getBandwidthInfo() {
             return this.bandwidthInfo;
         }
 
@@ -290,7 +310,7 @@ public class DescribeRegionBandwidthQuotaResponseBody extends TeaModel {
         }
 
         public static final class Builder {
-            private BandwidthInfo bandwidthInfo; 
+            private java.util.List < BandwidthInfo> bandwidthInfo; 
             private String date; 
             private java.util.List < InstanceInfo> instanceInfo; 
             private String regionId; 
@@ -298,7 +318,7 @@ public class DescribeRegionBandwidthQuotaResponseBody extends TeaModel {
             /**
              * BandwidthInfo.
              */
-            public Builder bandwidthInfo(BandwidthInfo bandwidthInfo) {
+            public Builder bandwidthInfo(java.util.List < BandwidthInfo> bandwidthInfo) {
                 this.bandwidthInfo = bandwidthInfo;
                 return this;
             }

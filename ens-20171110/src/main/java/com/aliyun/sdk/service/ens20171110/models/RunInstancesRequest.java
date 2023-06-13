@@ -808,10 +808,14 @@ public class RunInstancesRequest extends Request {
 
     }
     public static class SystemDisk extends TeaModel {
+        @NameInMap("Category")
+        private String category;
+
         @NameInMap("Size")
         private Long size;
 
         private SystemDisk(Builder builder) {
+            this.category = builder.category;
             this.size = builder.size;
         }
 
@@ -824,6 +828,13 @@ public class RunInstancesRequest extends Request {
         }
 
         /**
+         * @return category
+         */
+        public String getCategory() {
+            return this.category;
+        }
+
+        /**
          * @return size
          */
         public Long getSize() {
@@ -831,7 +842,16 @@ public class RunInstancesRequest extends Request {
         }
 
         public static final class Builder {
+            private String category; 
             private Long size; 
+
+            /**
+             * Category.
+             */
+            public Builder category(String category) {
+                this.category = category;
+                return this;
+            }
 
             /**
              * Size.

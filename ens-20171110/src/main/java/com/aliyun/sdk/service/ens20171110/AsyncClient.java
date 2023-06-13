@@ -306,6 +306,10 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<DescribeVSwitchesResponse> describeVSwitches(DescribeVSwitchesRequest request);
 
+    CompletableFuture<DescribeWorkflowResponse> describeWorkflow(DescribeWorkflowRequest request);
+
+    CompletableFuture<DescribeWorkflowActivityResponse> describeWorkflowActivity(DescribeWorkflowActivityRequest request);
+
     CompletableFuture<DetachDiskResponse> detachDisk(DetachDiskRequest request);
 
     CompletableFuture<DistApplicationDataResponse> distApplicationData(DistApplicationDataRequest request);
@@ -412,11 +416,17 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<RestartDeviceInstanceResponse> restartDeviceInstance(RestartDeviceInstanceRequest request);
 
+    CompletableFuture<RestartWorkflowResponse> restartWorkflow(RestartWorkflowRequest request);
+
+    CompletableFuture<RetryWorkflowResponse> retryWorkflow(RetryWorkflowRequest request);
+
     CompletableFuture<RevokeSecurityGroupResponse> revokeSecurityGroup(RevokeSecurityGroupRequest request);
 
     CompletableFuture<RevokeSecurityGroupEgressResponse> revokeSecurityGroupEgress(RevokeSecurityGroupEgressRequest request);
 
     CompletableFuture<RollbackApplicationResponse> rollbackApplication(RollbackApplicationRequest request);
+
+    CompletableFuture<RollbackWorkflowResponse> rollbackWorkflow(RollbackWorkflowRequest request);
 
     CompletableFuture<RunInstancesResponse> runInstances(RunInstancesRequest request);
 
@@ -457,6 +467,8 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<StopLoadBalancerListenerResponse> stopLoadBalancerListener(StopLoadBalancerListenerRequest request);
 
     CompletableFuture<StopSnatIpForSnatEntryResponse> stopSnatIpForSnatEntry(StopSnatIpForSnatEntryRequest request);
+
+    CompletableFuture<TerminateWorkflowResponse> terminateWorkflow(TerminateWorkflowRequest request);
 
     CompletableFuture<UnAssociateEnsEipAddressResponse> unAssociateEnsEipAddress(UnAssociateEnsEipAddressRequest request);
 

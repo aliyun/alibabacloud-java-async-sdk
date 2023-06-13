@@ -68,6 +68,11 @@ public class CreateARMServerInstancesRequest extends Request {
     private String resolution;
 
     @Query
+    @NameInMap("ServerName")
+    @Validation(maxLength = 255)
+    private String serverName;
+
+    @Query
     @NameInMap("ServerType")
     @Validation(required = true)
     private String serverType;
@@ -86,6 +91,7 @@ public class CreateARMServerInstancesRequest extends Request {
         this.period = builder.period;
         this.periodUnit = builder.periodUnit;
         this.resolution = builder.resolution;
+        this.serverName = builder.serverName;
         this.serverType = builder.serverType;
     }
 
@@ -187,6 +193,13 @@ public class CreateARMServerInstancesRequest extends Request {
     }
 
     /**
+     * @return serverName
+     */
+    public String getServerName() {
+        return this.serverName;
+    }
+
+    /**
      * @return serverType
      */
     public String getServerType() {
@@ -206,6 +219,7 @@ public class CreateARMServerInstancesRequest extends Request {
         private Integer period; 
         private String periodUnit; 
         private String resolution; 
+        private String serverName; 
         private String serverType; 
 
         private Builder() {
@@ -226,6 +240,7 @@ public class CreateARMServerInstancesRequest extends Request {
             this.period = request.period;
             this.periodUnit = request.periodUnit;
             this.resolution = request.resolution;
+            this.serverName = request.serverName;
             this.serverType = request.serverType;
         } 
 
@@ -339,6 +354,15 @@ public class CreateARMServerInstancesRequest extends Request {
         public Builder resolution(String resolution) {
             this.putQueryParameter("Resolution", resolution);
             this.resolution = resolution;
+            return this;
+        }
+
+        /**
+         * ServerName.
+         */
+        public Builder serverName(String serverName) {
+            this.putQueryParameter("ServerName", serverName);
+            this.serverName = serverName;
             return this;
         }
 
