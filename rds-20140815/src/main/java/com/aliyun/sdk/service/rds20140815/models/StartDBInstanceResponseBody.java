@@ -62,7 +62,10 @@ public class StartDBInstanceResponseBody extends TeaModel {
         private Integer taskId; 
 
         /**
-         * MigrationId.
+         * The ID of the migration task.
+         * <p>
+         * 
+         * > This parameter is returned only for the instances that are created in dedicated clusters.
          */
         public Builder migrationId(Integer migrationId) {
             this.migrationId = migrationId;
@@ -70,7 +73,7 @@ public class StartDBInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -78,7 +81,7 @@ public class StartDBInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * TaskId.
+         * The ID of the task.
          */
         public Builder taskId(Integer taskId) {
             this.taskId = taskId;

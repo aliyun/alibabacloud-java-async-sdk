@@ -62,7 +62,7 @@ public class MigrateSecurityIPModeResponseBody extends TeaModel {
         private String securityIPMode; 
 
         /**
-         * DBInstanceId.
+         * The ID of the instance.
          */
         public Builder DBInstanceId(String DBInstanceId) {
             this.DBInstanceId = DBInstanceId;
@@ -70,7 +70,7 @@ public class MigrateSecurityIPModeResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -78,7 +78,22 @@ public class MigrateSecurityIPModeResponseBody extends TeaModel {
         }
 
         /**
-         * SecurityIPMode.
+         * The whitelist mode after the change, which is the enhanced whitelist mode.
+         * <p>
+         * 
+         * Valid values:
+         * 
+         * *   safety
+         * 
+         *     <!-- -->
+         * 
+         *     :
+         * 
+         *     <!-- -->
+         * 
+         *     enhanced whitelist mode
+         * 
+         *     <!-- -->
          */
         public Builder securityIPMode(String securityIPMode) {
             this.securityIPMode = securityIPMode;

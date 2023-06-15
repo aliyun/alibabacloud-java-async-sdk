@@ -208,7 +208,12 @@ public class DescribeVSwitchesRequest extends Request {
         } 
 
         /**
-         * DedicatedHostGroupId.
+         * The ID of the dedicated cluster. You can call the [DescribeDedicatedHostGroups](~~141946~~) operation to query the ID of the dedicated cluster. If you configure this parameter, the details about all vSwitches in the VPC to which the dedicated cluster belongs are returned.
+         * <p>
+         * 
+         * **
+         * 
+         * You must configure this parameter or the **VpcId** parameter.
          */
         public Builder dedicatedHostGroupId(String dedicatedHostGroupId) {
             this.putQueryParameter("DedicatedHostGroupId", dedicatedHostGroupId);
@@ -235,7 +240,7 @@ public class DescribeVSwitchesRequest extends Request {
         }
 
         /**
-         * PageNumber.
+         * The number of the page to return. Default value: **1**.
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -244,7 +249,7 @@ public class DescribeVSwitchesRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * The number of entries to return on each page. Valid values: **1 to 50**. Default value: **30**.
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -253,7 +258,7 @@ public class DescribeVSwitchesRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * The region ID of the vSwitch. You can call the [DescribeRegions](~~26243~~) operation to query the most recent region list.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -262,7 +267,7 @@ public class DescribeVSwitchesRequest extends Request {
         }
 
         /**
-         * ResourceGroupId.
+         * The ID of the resource group.
          */
         public Builder resourceGroupId(String resourceGroupId) {
             this.putQueryParameter("ResourceGroupId", resourceGroupId);
@@ -298,7 +303,12 @@ public class DescribeVSwitchesRequest extends Request {
         }
 
         /**
-         * VpcId.
+         * The ID of the VPC to which the vSwitches belong.
+         * <p>
+         * 
+         * **
+         * 
+         * You must configure this parameter or the **DedicatedHostGroupId** parameter.
          */
         public Builder vpcId(String vpcId) {
             this.putQueryParameter("VpcId", vpcId);
@@ -307,7 +317,7 @@ public class DescribeVSwitchesRequest extends Request {
         }
 
         /**
-         * ZoneId.
+         * The ID of the zone to which the vSwitches belong. You can call the [DescribeAvailableZones](~~169126~~) operation to query the ID of the zone. If you configure this parameter, the query results are filtered based on the value of this parameter and only the details about the vSwitches that are deployed in the specified zone are returned.
          */
         public Builder zoneId(String zoneId) {
             this.putQueryParameter("ZoneId", zoneId);

@@ -50,7 +50,7 @@ public class DescribeDedicatedHostGroupsResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * DedicatedHostGroups.
+         * An array that consists of dedicated clusters returned.
          */
         public Builder dedicatedHostGroups(DedicatedHostGroups dedicatedHostGroups) {
             this.dedicatedHostGroups = dedicatedHostGroups;
@@ -58,7 +58,7 @@ public class DescribeDedicatedHostGroupsResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -451,7 +451,11 @@ public class DescribeDedicatedHostGroupsResponseBody extends TeaModel {
             private ZoneIDList zoneIDList; 
 
             /**
-             * AllocationPolicy.
+             * The policy based on which the system allocates resources in the dedicated cluster. Valid values:
+             * <p>
+             * 
+             * *   **Evenly**: The system evenly allocates the resources to all the hosts in the dedicated cluster.
+             * *   **Intensively**: The system preferentially allocates the resources to the heavily loaded hosts in the dedicated cluster.
              */
             public Builder allocationPolicy(String allocationPolicy) {
                 this.allocationPolicy = allocationPolicy;
@@ -459,7 +463,7 @@ public class DescribeDedicatedHostGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * BastionInstanceId.
+             * The ID of the bastion host.
              */
             public Builder bastionInstanceId(String bastionInstanceId) {
                 this.bastionInstanceId = bastionInstanceId;
@@ -467,7 +471,7 @@ public class DescribeDedicatedHostGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * CpuAllocateRation.
+             * The percentage of allocated cores in the dedicated cluster. Unit: %.
              */
             public Builder cpuAllocateRation(Float cpuAllocateRation) {
                 this.cpuAllocateRation = cpuAllocateRation;
@@ -475,7 +479,7 @@ public class DescribeDedicatedHostGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * CpuAllocatedAmount.
+             * The number of allocated cores in the dedicated cluster.
              */
             public Builder cpuAllocatedAmount(Float cpuAllocatedAmount) {
                 this.cpuAllocatedAmount = cpuAllocatedAmount;
@@ -483,7 +487,7 @@ public class DescribeDedicatedHostGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * CpuAllocationRatio.
+             * The core overcommitment ratio of the dedicated cluster. Unit: %. For more information about the core overcommitment ratio, see [Manage a dedicated cluster](~~182328~~).
              */
             public Builder cpuAllocationRatio(Integer cpuAllocationRatio) {
                 this.cpuAllocationRatio = cpuAllocationRatio;
@@ -491,7 +495,7 @@ public class DescribeDedicatedHostGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * CreateTime.
+             * The timestamp when the dedicated cluster was created.
              */
             public Builder createTime(String createTime) {
                 this.createTime = createTime;
@@ -499,7 +503,11 @@ public class DescribeDedicatedHostGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * DedicatedHostCountGroupByHostType.
+             * The type of storage media that is used for the hosts in the dedicated cluster. Valid values:
+             * <p>
+             * 
+             * *   **dhg_cloud_ssd**: standard or enhanced solid-state drive (SSD)
+             * *   **dhg_local_ssd**: local SSD
              */
             public Builder dedicatedHostCountGroupByHostType(java.util.Map < String, ? > dedicatedHostCountGroupByHostType) {
                 this.dedicatedHostCountGroupByHostType = dedicatedHostCountGroupByHostType;
@@ -507,7 +515,7 @@ public class DescribeDedicatedHostGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * DedicatedHostGroupDesc.
+             * The name of the dedicated cluster.
              */
             public Builder dedicatedHostGroupDesc(String dedicatedHostGroupDesc) {
                 this.dedicatedHostGroupDesc = dedicatedHostGroupDesc;
@@ -515,7 +523,7 @@ public class DescribeDedicatedHostGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * DedicatedHostGroupId.
+             * The ID of the dedicated cluster.
              */
             public Builder dedicatedHostGroupId(String dedicatedHostGroupId) {
                 this.dedicatedHostGroupId = dedicatedHostGroupId;
@@ -523,7 +531,7 @@ public class DescribeDedicatedHostGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * DiskAllocateRation.
+             * The percentage of allocated disk space in the dedicated cluster. Unit: %.
              */
             public Builder diskAllocateRation(Float diskAllocateRation) {
                 this.diskAllocateRation = diskAllocateRation;
@@ -531,7 +539,7 @@ public class DescribeDedicatedHostGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * DiskAllocatedAmount.
+             * The amount of allocated disk space in the dedicated cluster. Unit: GB.
              */
             public Builder diskAllocatedAmount(Float diskAllocatedAmount) {
                 this.diskAllocatedAmount = diskAllocatedAmount;
@@ -539,7 +547,7 @@ public class DescribeDedicatedHostGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * DiskAllocationRatio.
+             * The disk overcommitment ratio of the dedicated cluster. Unit: %. For more information about the disk overcommitment ratio, see [Manage a dedicated cluster](~~182328~~).
              */
             public Builder diskAllocationRatio(Integer diskAllocationRatio) {
                 this.diskAllocationRatio = diskAllocationRatio;
@@ -547,7 +555,7 @@ public class DescribeDedicatedHostGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * DiskUsedAmount.
+             * The amount of used disk space in the dedicated cluster. Unit: GB.
              */
             public Builder diskUsedAmount(Float diskUsedAmount) {
                 this.diskUsedAmount = diskUsedAmount;
@@ -555,7 +563,7 @@ public class DescribeDedicatedHostGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * DiskUtility.
+             * The disk usage of the dedicated cluster. Unit: %.
              */
             public Builder diskUtility(Float diskUtility) {
                 this.diskUtility = diskUtility;
@@ -563,7 +571,7 @@ public class DescribeDedicatedHostGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * Engine.
+             * The database engine that is run on the instances in the dedicated cluster.
              */
             public Builder engine(String engine) {
                 this.engine = engine;
@@ -571,7 +579,7 @@ public class DescribeDedicatedHostGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * HostNumber.
+             * The total number of hosts in the dedicated cluster.
              */
             public Builder hostNumber(Integer hostNumber) {
                 this.hostNumber = hostNumber;
@@ -579,7 +587,11 @@ public class DescribeDedicatedHostGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * HostReplacePolicy.
+             * The policy based on which the system handles host failures. Valid values:
+             * <p>
+             * 
+             * *   **Auto**: The system automatically replaces faulty hosts.
+             * *   **Manual**: You must manually replace faulty hosts.
              */
             public Builder hostReplacePolicy(String hostReplacePolicy) {
                 this.hostReplacePolicy = hostReplacePolicy;
@@ -587,7 +599,7 @@ public class DescribeDedicatedHostGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * InstanceNumber.
+             * The total number of instances in the dedicated cluster.
              */
             public Builder instanceNumber(Integer instanceNumber) {
                 this.instanceNumber = instanceNumber;
@@ -595,7 +607,7 @@ public class DescribeDedicatedHostGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * MemAllocateRation.
+             * The percentage of allocated memory space in the dedicated cluster. Unit: %.
              */
             public Builder memAllocateRation(Float memAllocateRation) {
                 this.memAllocateRation = memAllocateRation;
@@ -603,7 +615,7 @@ public class DescribeDedicatedHostGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * MemAllocatedAmount.
+             * The amount of allocated memory space in the dedicated cluster.
              */
             public Builder memAllocatedAmount(Float memAllocatedAmount) {
                 this.memAllocatedAmount = memAllocatedAmount;
@@ -611,7 +623,7 @@ public class DescribeDedicatedHostGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * MemAllocationRatio.
+             * The memory overcommitment ratio of the dedicated cluster. Unit: %. For more information about the memory overcommitment ratio, see [Manage a dedicated cluster](~~182328~~).
              */
             public Builder memAllocationRatio(Integer memAllocationRatio) {
                 this.memAllocationRatio = memAllocationRatio;
@@ -619,7 +631,7 @@ public class DescribeDedicatedHostGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * MemUsedAmount.
+             * The amount of used memory space in the dedicated cluster. Unit: MB.
              */
             public Builder memUsedAmount(Float memUsedAmount) {
                 this.memUsedAmount = memUsedAmount;
@@ -627,7 +639,7 @@ public class DescribeDedicatedHostGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * MemUtility.
+             * The memory usage of the dedicated cluster. Unit: %.
              */
             public Builder memUtility(Float memUtility) {
                 this.memUtility = memUtility;
@@ -635,7 +647,12 @@ public class DescribeDedicatedHostGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * OpenPermission.
+             * Indicates whether the operating system permissions of the hosts in the dedicated cluster can be granted. Valid values:
+             * <p>
+             * 
+             * *   **0** or **null**: The permissions cannot be granted.
+             * *   **1**: The permissions can be granted.
+             * *   **3**: The permissions have been granted.
              */
             public Builder openPermission(String openPermission) {
                 this.openPermission = openPermission;
@@ -643,7 +660,7 @@ public class DescribeDedicatedHostGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * Text.
+             * The name and ID of the dedicated cluster. The value of this parameter consists of two parts: the value of the **DedicatedHostGroupDesc** parameter and the value of the **DedicatedHostGroupId** parameter. Format: DedicatedHostGroupDesc/DedicatedHostGroupId.
              */
             public Builder text(String text) {
                 this.text = text;
@@ -651,7 +668,7 @@ public class DescribeDedicatedHostGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * VPCId.
+             * The ID of the virtual private cloud (VPC) to which the dedicated cluster belongs.
              */
             public Builder VPCId(String VPCId) {
                 this.VPCId = VPCId;
@@ -659,7 +676,7 @@ public class DescribeDedicatedHostGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * ZoneIDList.
+             * A list of zones to which the hosts of the dedicated cluster belong.
              */
             public Builder zoneIDList(ZoneIDList zoneIDList) {
                 this.zoneIDList = zoneIDList;
@@ -700,7 +717,7 @@ public class DescribeDedicatedHostGroupsResponseBody extends TeaModel {
             private java.util.List < DedicatedHostGroupsDedicatedHostGroups> dedicatedHostGroups; 
 
             /**
-             * DedicatedHostGroups.
+             * An array that consists of dedicated clusters returned.
              */
             public Builder dedicatedHostGroups(java.util.List < DedicatedHostGroupsDedicatedHostGroups> dedicatedHostGroups) {
                 this.dedicatedHostGroups = dedicatedHostGroups;

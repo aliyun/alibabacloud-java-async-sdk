@@ -114,7 +114,7 @@ public class GrantAccountPrivilegeRequest extends Request {
         } 
 
         /**
-         * AccountName.
+         * The username of the account.
          */
         public Builder accountName(String accountName) {
             this.putQueryParameter("AccountName", accountName);
@@ -123,7 +123,21 @@ public class GrantAccountPrivilegeRequest extends Request {
         }
 
         /**
-         * AccountPrivilege.
+         * The permissions that you want to grant to the account. The number of permissions must be the same as the number of databases that you specify for the DBName parameter. You can specify this parameter based on your business requirements. Valid values:
+         * <p>
+         * 
+         * *   **ReadWrite**: read and write permissions
+         * *   **ReadOnly**: read-only permissions
+         * *   **DDLOnly**: DDL-only permissions
+         * *   **DMLOnly**: DML-only permissions
+         * *   **DBOwner**: database owner permissions
+         * 
+         * > 
+         * 
+         * *   If the instance runs MySQL or MariaDB, you can set this parameter to **ReadWrite**, **ReadOnly**, **DDLOnly**, or **DMLOnly**.
+         * 
+         * *   If the instance runs SQL Server, you can set this parameter to **ReadWrite**, **ReadOnly**, or **DBOwner**.
+         * *   If the instance runs PostgreSQL and uses cloud disks, you can set this parameter to **DBOwner**.
          */
         public Builder accountPrivilege(String accountPrivilege) {
             this.putQueryParameter("AccountPrivilege", accountPrivilege);
@@ -132,7 +146,7 @@ public class GrantAccountPrivilegeRequest extends Request {
         }
 
         /**
-         * DBInstanceId.
+         * The ID of the instance.
          */
         public Builder DBInstanceId(String DBInstanceId) {
             this.putQueryParameter("DBInstanceId", DBInstanceId);
@@ -141,7 +155,7 @@ public class GrantAccountPrivilegeRequest extends Request {
         }
 
         /**
-         * DBName.
+         * The name of the database on which you want to grant permissions. Separate multiple database names with commas (,).
          */
         public Builder DBName(String DBName) {
             this.putQueryParameter("DBName", DBName);

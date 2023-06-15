@@ -86,7 +86,7 @@ public class DescribeSQLLogReportListResponseBody extends TeaModel {
         private Integer totalRecordCount; 
 
         /**
-         * Items.
+         * An array that consists of SQL log reports.
          */
         public Builder items(Items items) {
             this.items = items;
@@ -94,7 +94,7 @@ public class DescribeSQLLogReportListResponseBody extends TeaModel {
         }
 
         /**
-         * PageNumber.
+         * The page number of the returned page.
          */
         public Builder pageNumber(Integer pageNumber) {
             this.pageNumber = pageNumber;
@@ -102,7 +102,7 @@ public class DescribeSQLLogReportListResponseBody extends TeaModel {
         }
 
         /**
-         * PageRecordCount.
+         * The number of reports on the current page.
          */
         public Builder pageRecordCount(Integer pageRecordCount) {
             this.pageRecordCount = pageRecordCount;
@@ -110,7 +110,7 @@ public class DescribeSQLLogReportListResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -118,7 +118,7 @@ public class DescribeSQLLogReportListResponseBody extends TeaModel {
         }
 
         /**
-         * TotalRecordCount.
+         * The total number of records returned.
          */
         public Builder totalRecordCount(Integer totalRecordCount) {
             this.totalRecordCount = totalRecordCount;
@@ -182,7 +182,7 @@ public class DescribeSQLLogReportListResponseBody extends TeaModel {
             private String SQLText; 
 
             /**
-             * AvgLatency.
+             * The average time that is required to execute the SQL statement. Unit: milliseconds.
              */
             public Builder avgLatency(Long avgLatency) {
                 this.avgLatency = avgLatency;
@@ -190,7 +190,7 @@ public class DescribeSQLLogReportListResponseBody extends TeaModel {
             }
 
             /**
-             * SQLExecuteTimes.
+             * The number of times that the SQL statement is executed.
              */
             public Builder SQLExecuteTimes(Long SQLExecuteTimes) {
                 this.SQLExecuteTimes = SQLExecuteTimes;
@@ -198,7 +198,10 @@ public class DescribeSQLLogReportListResponseBody extends TeaModel {
             }
 
             /**
-             * SQLText.
+             * The SQL statement returned.
+             * <p>
+             * 
+             * >  Only the first 128 characters of the SQL statement are returned. In addition, only the SQL statements that take more than 100 ms to execute are returned.
              */
             public Builder SQLText(String SQLText) {
                 this.SQLText = SQLText;
@@ -292,7 +295,7 @@ public class DescribeSQLLogReportListResponseBody extends TeaModel {
             private String SQLText; 
 
             /**
-             * SQLExecuteTimes.
+             * The number of times that the SQL statement is executed.
              */
             public Builder SQLExecuteTimes(Long SQLExecuteTimes) {
                 this.SQLExecuteTimes = SQLExecuteTimes;
@@ -300,7 +303,10 @@ public class DescribeSQLLogReportListResponseBody extends TeaModel {
             }
 
             /**
-             * SQLText.
+             * The SQL statement returned. 
+             * <p>
+             * 
+             * >  Only the first 128 characters of the SQL statement are returned. In addition, only the SQL statements that take more than 5 ms to execute are returned.
              */
             public Builder SQLText(String SQLText) {
                 this.SQLText = SQLText;
@@ -406,7 +412,7 @@ public class DescribeSQLLogReportListResponseBody extends TeaModel {
             private String reportTime; 
 
             /**
-             * LatencyTopNItems.
+             * An array that consists of SQL statements executed with the highest latency.
              */
             public Builder latencyTopNItems(LatencyTopNItems latencyTopNItems) {
                 this.latencyTopNItems = latencyTopNItems;
@@ -414,7 +420,7 @@ public class DescribeSQLLogReportListResponseBody extends TeaModel {
             }
 
             /**
-             * QPSTopNItems.
+             * An array that consists of SQL statements executed the most frequently.
              */
             public Builder QPSTopNItems(QPSTopNItems QPSTopNItems) {
                 this.QPSTopNItems = QPSTopNItems;
@@ -422,7 +428,7 @@ public class DescribeSQLLogReportListResponseBody extends TeaModel {
             }
 
             /**
-             * ReportTime.
+             * The time when the report was generated. The time follows the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time is displayed in UTC.
              */
             public Builder reportTime(String reportTime) {
                 this.reportTime = reportTime;

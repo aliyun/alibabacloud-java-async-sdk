@@ -126,7 +126,13 @@ public class DescribeCharacterSetNameRequest extends Request {
         } 
 
         /**
-         * Engine.
+         * The database engine that is run on the instance. Valid values:
+         * <p>
+         * 
+         * *   **mysql**: MySQL
+         * *   **mssql**: SQL Server
+         * *   **PostgreSQL**: PostgreSQL
+         * *   **MariaDB**: MariaDB
          */
         public Builder engine(String engine) {
             this.putQueryParameter("Engine", engine);
@@ -153,7 +159,7 @@ public class DescribeCharacterSetNameRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * The region ID of the instance. You can call the [DescribeRegions](~~26243~~) operation to query the most recent region list.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);

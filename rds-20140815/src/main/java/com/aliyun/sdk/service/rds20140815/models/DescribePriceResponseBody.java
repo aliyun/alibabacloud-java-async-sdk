@@ -21,10 +21,14 @@ public class DescribePriceResponseBody extends TeaModel {
     @NameInMap("Rules")
     private Rules rules;
 
+    @NameInMap("ShowDiscount")
+    private Boolean showDiscount;
+
     private DescribePriceResponseBody(Builder builder) {
         this.priceInfo = builder.priceInfo;
         this.requestId = builder.requestId;
         this.rules = builder.rules;
+        this.showDiscount = builder.showDiscount;
     }
 
     public static Builder builder() {
@@ -56,13 +60,21 @@ public class DescribePriceResponseBody extends TeaModel {
         return this.rules;
     }
 
+    /**
+     * @return showDiscount
+     */
+    public Boolean getShowDiscount() {
+        return this.showDiscount;
+    }
+
     public static final class Builder {
         private PriceInfo priceInfo; 
         private String requestId; 
         private Rules rules; 
+        private Boolean showDiscount; 
 
         /**
-         * PriceInfo.
+         * The information about the price.
          */
         public Builder priceInfo(PriceInfo priceInfo) {
             this.priceInfo = priceInfo;
@@ -70,7 +82,7 @@ public class DescribePriceResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -78,10 +90,18 @@ public class DescribePriceResponseBody extends TeaModel {
         }
 
         /**
-         * Rules.
+         * An array that consists of the details of the promotion rule.
          */
         public Builder rules(Rules rules) {
             this.rules = rules;
+            return this;
+        }
+
+        /**
+         * ShowDiscount.
+         */
+        public Builder showDiscount(Boolean showDiscount) {
+            this.showDiscount = showDiscount;
             return this;
         }
 
@@ -142,7 +162,7 @@ public class DescribePriceResponseBody extends TeaModel {
             private String success; 
 
             /**
-             * CheckErrMsg.
+             * The returned message.
              */
             public Builder checkErrMsg(String checkErrMsg) {
                 this.checkErrMsg = checkErrMsg;
@@ -150,7 +170,7 @@ public class DescribePriceResponseBody extends TeaModel {
             }
 
             /**
-             * ErrorCode.
+             * The error code that is returned.
              */
             public Builder errorCode(String errorCode) {
                 this.errorCode = errorCode;
@@ -158,7 +178,7 @@ public class DescribePriceResponseBody extends TeaModel {
             }
 
             /**
-             * Success.
+             * Indicates whether the request was successful.
              */
             public Builder success(String success) {
                 this.success = success;
@@ -235,7 +255,7 @@ public class DescribePriceResponseBody extends TeaModel {
             private String name; 
 
             /**
-             * CouponNo.
+             * The ID of the coupon.
              */
             public Builder couponNo(String couponNo) {
                 this.couponNo = couponNo;
@@ -243,7 +263,7 @@ public class DescribePriceResponseBody extends TeaModel {
             }
 
             /**
-             * Description.
+             * The description of the coupon.
              */
             public Builder description(String description) {
                 this.description = description;
@@ -251,7 +271,7 @@ public class DescribePriceResponseBody extends TeaModel {
             }
 
             /**
-             * IsSelected.
+             * Indicates whether the coupon is selected.
              */
             public Builder isSelected(String isSelected) {
                 this.isSelected = isSelected;
@@ -259,7 +279,7 @@ public class DescribePriceResponseBody extends TeaModel {
             }
 
             /**
-             * Name.
+             * The name of the coupon.
              */
             public Builder name(String name) {
                 this.name = name;
@@ -454,7 +474,7 @@ public class DescribePriceResponseBody extends TeaModel {
             private Float tradePrice; 
 
             /**
-             * ActivityInfo.
+             * The information about the promotion.
              */
             public Builder activityInfo(ActivityInfo activityInfo) {
                 this.activityInfo = activityInfo;
@@ -462,7 +482,7 @@ public class DescribePriceResponseBody extends TeaModel {
             }
 
             /**
-             * Coupons.
+             * An array that consists of information about the coupon.
              */
             public Builder coupons(Coupons coupons) {
                 this.coupons = coupons;
@@ -470,7 +490,7 @@ public class DescribePriceResponseBody extends TeaModel {
             }
 
             /**
-             * Currency.
+             * The currency unit.
              */
             public Builder currency(String currency) {
                 this.currency = currency;
@@ -478,7 +498,7 @@ public class DescribePriceResponseBody extends TeaModel {
             }
 
             /**
-             * DiscountPrice.
+             * The discount.
              */
             public Builder discountPrice(Float discountPrice) {
                 this.discountPrice = discountPrice;
@@ -486,7 +506,7 @@ public class DescribePriceResponseBody extends TeaModel {
             }
 
             /**
-             * OriginalPrice.
+             * The original price.
              */
             public Builder originalPrice(Float originalPrice) {
                 this.originalPrice = originalPrice;
@@ -494,7 +514,7 @@ public class DescribePriceResponseBody extends TeaModel {
             }
 
             /**
-             * RuleIds.
+             * An array that consists of the ID of the promotion rule.
              */
             public Builder ruleIds(RuleIds ruleIds) {
                 this.ruleIds = ruleIds;
@@ -502,7 +522,7 @@ public class DescribePriceResponseBody extends TeaModel {
             }
 
             /**
-             * TradePrice.
+             * The transaction price, which is equal to the original price minus the discount.
              */
             public Builder tradePrice(Float tradePrice) {
                 this.tradePrice = tradePrice;
@@ -567,7 +587,7 @@ public class DescribePriceResponseBody extends TeaModel {
             private Long ruleId; 
 
             /**
-             * Description.
+             * The description of the promotion rule.
              */
             public Builder description(String description) {
                 this.description = description;
@@ -575,7 +595,7 @@ public class DescribePriceResponseBody extends TeaModel {
             }
 
             /**
-             * Name.
+             * The name of the promotion rule.
              */
             public Builder name(String name) {
                 this.name = name;
@@ -583,7 +603,7 @@ public class DescribePriceResponseBody extends TeaModel {
             }
 
             /**
-             * RuleId.
+             * The ID of the promotion rule.
              */
             public Builder ruleId(Long ruleId) {
                 this.ruleId = ruleId;

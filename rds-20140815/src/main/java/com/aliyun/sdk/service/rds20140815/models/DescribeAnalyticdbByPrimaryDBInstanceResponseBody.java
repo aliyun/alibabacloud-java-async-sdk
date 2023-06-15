@@ -50,7 +50,7 @@ public class DescribeAnalyticdbByPrimaryDBInstanceResponseBody extends TeaModel 
         private String requestId; 
 
         /**
-         * AnalyticDBCount.
+         * The number of associated analytic instances.
          */
         public Builder analyticDBCount(Integer analyticDBCount) {
             this.analyticDBCount = analyticDBCount;
@@ -58,7 +58,7 @@ public class DescribeAnalyticdbByPrimaryDBInstanceResponseBody extends TeaModel 
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

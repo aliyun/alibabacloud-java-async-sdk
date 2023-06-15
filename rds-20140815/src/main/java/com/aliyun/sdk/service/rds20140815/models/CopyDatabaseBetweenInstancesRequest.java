@@ -141,7 +141,10 @@ public class CopyDatabaseBetweenInstancesRequest extends Request {
         } 
 
         /**
-         * BackupId.
+         * The ID of the backup set by which you want to restore databases of the source instance. You can call the [DescribeBackups](~~26273~~) operation to obtain the ID of the backup set.
+         * <p>
+         * 
+         * > You must specify one of **BackupId** and **RestoreTime**.
          */
         public Builder backupId(String backupId) {
             this.putQueryParameter("BackupId", backupId);
@@ -150,7 +153,7 @@ public class CopyDatabaseBetweenInstancesRequest extends Request {
         }
 
         /**
-         * DBInstanceId.
+         * The ID of the source instance.
          */
         public Builder DBInstanceId(String DBInstanceId) {
             this.putQueryParameter("DBInstanceId", DBInstanceId);
@@ -159,7 +162,7 @@ public class CopyDatabaseBetweenInstancesRequest extends Request {
         }
 
         /**
-         * DbNames.
+         * The names of the databases. Format: `{"Original database name 1":"New database name 1","Original database name 2":"New database name 2"}`.
          */
         public Builder dbNames(String dbNames) {
             this.putQueryParameter("DbNames", dbNames);
@@ -177,7 +180,10 @@ public class CopyDatabaseBetweenInstancesRequest extends Request {
         }
 
         /**
-         * RestoreTime.
+         * The point in time when the system replicates databases. You can select a point in time within the backup retention period. Specify the time in the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time must be in UTC.
+         * <p>
+         * 
+         * > You must specify one of **BackupId** and **RestoreTime**.
          */
         public Builder restoreTime(String restoreTime) {
             this.putQueryParameter("RestoreTime", restoreTime);
@@ -186,7 +192,13 @@ public class CopyDatabaseBetweenInstancesRequest extends Request {
         }
 
         /**
-         * SyncUserPrivilege.
+         * Specifies whether to copy users and permissions.
+         * <p>
+         * 
+         * *   **YES**: replicates users and permissions. If the destination instance has a user whose name is the same as a user in the source instance, the permissions of the user in the source instance will also be granted to the user in the destination instance after you replicate user permissions.
+         * *   **NO**: does not replicate users and permissions.
+         * 
+         * Default value: **NO**.
          */
         public Builder syncUserPrivilege(String syncUserPrivilege) {
             this.putQueryParameter("SyncUserPrivilege", syncUserPrivilege);
@@ -195,7 +207,7 @@ public class CopyDatabaseBetweenInstancesRequest extends Request {
         }
 
         /**
-         * TargetDBInstanceId.
+         * The ID of the destination instance, which must differ from the ID of the source instance.
          */
         public Builder targetDBInstanceId(String targetDBInstanceId) {
             this.putQueryParameter("TargetDBInstanceId", targetDBInstanceId);

@@ -69,7 +69,7 @@ public class DeleteGadInstanceRequest extends Request {
         } 
 
         /**
-         * GadInstanceName.
+         * The ID of the global active database cluster. You can call the [DescribeGadInstances](~~330105~~) operation to query the IDs of global active database clusters.
          */
         public Builder gadInstanceName(String gadInstanceName) {
             this.putQueryParameter("GadInstanceName", gadInstanceName);
@@ -78,7 +78,7 @@ public class DeleteGadInstanceRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * The region ID of the central node of the global active database cluster. You can call the [DescribeGadInstances](~~330105~~) operation to query the region IDs of global active database clusters.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);

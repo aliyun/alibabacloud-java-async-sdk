@@ -38,7 +38,7 @@ public class ModifyDBProxyEndpointAddressResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

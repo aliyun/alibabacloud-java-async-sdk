@@ -198,7 +198,13 @@ public class DescribeSecretsRequest extends Request {
         } 
 
         /**
-         * AcceptLanguage.
+         * The language of the text within the response. Valid values:
+         * <p>
+         * 
+         * *   **zh-CN**: Chinese
+         * *   **en-US**: English
+         * 
+         * > The default value is **en-US**.
          */
         public Builder acceptLanguage(String acceptLanguage) {
             this.putQueryParameter("AcceptLanguage", acceptLanguage);
@@ -207,7 +213,7 @@ public class DescribeSecretsRequest extends Request {
         }
 
         /**
-         * ClientToken.
+         * The client token that is used to ensure the idempotence of the request. You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters and cannot exceed 64 characters in length.
          */
         public Builder clientToken(String clientToken) {
             this.putQueryParameter("ClientToken", clientToken);
@@ -216,7 +222,7 @@ public class DescribeSecretsRequest extends Request {
         }
 
         /**
-         * DbInstanceId.
+         * The ID of the instance. You can call the [DescribeDBInstances](~~26232~~) operation to query the ID of the instance.
          */
         public Builder dbInstanceId(String dbInstanceId) {
             this.putQueryParameter("DbInstanceId", dbInstanceId);
@@ -225,7 +231,10 @@ public class DescribeSecretsRequest extends Request {
         }
 
         /**
-         * Engine.
+         * The database engine of the database.
+         * <p>
+         * 
+         * > Only MySQL is supported.
          */
         public Builder engine(String engine) {
             this.putQueryParameter("Engine", engine);
@@ -252,7 +261,10 @@ public class DescribeSecretsRequest extends Request {
         }
 
         /**
-         * PageNumber.
+         * The number of the page to return. Valid values: any non-zero positive integer.
+         * <p>
+         * 
+         * > The default value is 1.
          */
         public Builder pageNumber(Long pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -261,7 +273,7 @@ public class DescribeSecretsRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * The number of entries per page.
          */
         public Builder pageSize(Long pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -270,7 +282,7 @@ public class DescribeSecretsRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * The region ID of the instance. You can call the [DescribeDBInstanceAttribute](~~26231~~) operation to query region ID of the instance.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);

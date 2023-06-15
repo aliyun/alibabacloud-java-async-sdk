@@ -50,7 +50,7 @@ public class ModifyParameterGroupResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * ParameterGroupId.
+         * The parameter template ID.
          */
         public Builder parameterGroupId(String parameterGroupId) {
             this.parameterGroupId = parameterGroupId;
@@ -58,7 +58,7 @@ public class ModifyParameterGroupResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

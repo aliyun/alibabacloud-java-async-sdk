@@ -50,7 +50,7 @@ public class ImportDatabaseBetweenInstancesResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * ImportId.
+         * The ID of the import task.
          */
         public Builder importId(String importId) {
             this.importId = importId;
@@ -58,7 +58,7 @@ public class ImportDatabaseBetweenInstancesResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

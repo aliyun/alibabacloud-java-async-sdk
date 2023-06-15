@@ -126,7 +126,15 @@ public class ModifyDBInstanceConnectionModeRequest extends Request {
         } 
 
         /**
-         * ConnectionMode.
+         * The connection mode of the instance. Valid values:
+         * <p>
+         * 
+         * *   **Standard**: standard mode
+         * *   **Safe**: database proxy mode
+         * 
+         * The system automatically assigns a connection mode to the instance.
+         * 
+         * >  SQL Server 2012, SQL Server 2016, and SQL Server 2017 support only the standard mode.
          */
         public Builder connectionMode(String connectionMode) {
             this.putQueryParameter("ConnectionMode", connectionMode);
@@ -135,7 +143,7 @@ public class ModifyDBInstanceConnectionModeRequest extends Request {
         }
 
         /**
-         * DBInstanceId.
+         * The ID of the instance.
          */
         public Builder DBInstanceId(String DBInstanceId) {
             this.putQueryParameter("DBInstanceId", DBInstanceId);

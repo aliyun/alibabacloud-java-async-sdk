@@ -139,7 +139,7 @@ public class DescribeAvailableRecoveryTimeRequest extends Request {
         } 
 
         /**
-         * CrossBackupId.
+         * The ID of the cross-region backup file. You can call the [DescribeCrossRegionBackups](~~121733~~) operation to query IDs of backup files.
          */
         public Builder crossBackupId(Integer crossBackupId) {
             this.putQueryParameter("CrossBackupId", crossBackupId);
@@ -148,7 +148,7 @@ public class DescribeAvailableRecoveryTimeRequest extends Request {
         }
 
         /**
-         * DBInstanceId.
+         * The ID of the instance. You can call the [DescribeDBInstances](~~26232~~) operation to query the ID of the instance.
          */
         public Builder DBInstanceId(String DBInstanceId) {
             this.putQueryParameter("DBInstanceId", DBInstanceId);
@@ -166,7 +166,7 @@ public class DescribeAvailableRecoveryTimeRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * The ID of the region.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -175,7 +175,7 @@ public class DescribeAvailableRecoveryTimeRequest extends Request {
         }
 
         /**
-         * ResourceGroupId.
+         * The ID of the resource group.
          */
         public Builder resourceGroupId(String resourceGroupId) {
             this.putQueryParameter("ResourceGroupId", resourceGroupId);

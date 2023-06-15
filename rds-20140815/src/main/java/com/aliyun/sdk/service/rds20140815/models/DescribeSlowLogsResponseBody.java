@@ -134,7 +134,7 @@ public class DescribeSlowLogsResponseBody extends TeaModel {
         private Integer totalRecordCount; 
 
         /**
-         * DBInstanceId.
+         * The ID of the instance.
          */
         public Builder DBInstanceId(String DBInstanceId) {
             this.DBInstanceId = DBInstanceId;
@@ -142,7 +142,7 @@ public class DescribeSlowLogsResponseBody extends TeaModel {
         }
 
         /**
-         * EndTime.
+         * The end date of the time range that was queried.
          */
         public Builder endTime(String endTime) {
             this.endTime = endTime;
@@ -150,7 +150,7 @@ public class DescribeSlowLogsResponseBody extends TeaModel {
         }
 
         /**
-         * Engine.
+         * The database engine of the instance.
          */
         public Builder engine(String engine) {
             this.engine = engine;
@@ -158,7 +158,7 @@ public class DescribeSlowLogsResponseBody extends TeaModel {
         }
 
         /**
-         * Items.
+         * An array that consists of the information about each slow query.
          */
         public Builder items(Items items) {
             this.items = items;
@@ -166,7 +166,7 @@ public class DescribeSlowLogsResponseBody extends TeaModel {
         }
 
         /**
-         * PageNumber.
+         * The page number of the returned page.
          */
         public Builder pageNumber(Integer pageNumber) {
             this.pageNumber = pageNumber;
@@ -174,7 +174,7 @@ public class DescribeSlowLogsResponseBody extends TeaModel {
         }
 
         /**
-         * PageRecordCount.
+         * The number of SQL statements that are returned on the current page.
          */
         public Builder pageRecordCount(Integer pageRecordCount) {
             this.pageRecordCount = pageRecordCount;
@@ -182,7 +182,7 @@ public class DescribeSlowLogsResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -190,7 +190,7 @@ public class DescribeSlowLogsResponseBody extends TeaModel {
         }
 
         /**
-         * StartTime.
+         * The start date of the time range that was queried.
          */
         public Builder startTime(String startTime) {
             this.startTime = startTime;
@@ -198,7 +198,7 @@ public class DescribeSlowLogsResponseBody extends TeaModel {
         }
 
         /**
-         * TotalRecordCount.
+         * The total number of entries that are returned.
          */
         public Builder totalRecordCount(Integer totalRecordCount) {
             this.totalRecordCount = totalRecordCount;
@@ -239,6 +239,9 @@ public class DescribeSlowLogsResponseBody extends TeaModel {
         @NameInMap("MaxExecutionTime")
         private Long maxExecutionTime;
 
+        @NameInMap("MaxExecutionTimeMS")
+        private Long maxExecutionTimeMS;
+
         @NameInMap("MaxIOWriteCounts")
         private Long maxIOWriteCounts;
 
@@ -247,6 +250,9 @@ public class DescribeSlowLogsResponseBody extends TeaModel {
 
         @NameInMap("MaxLockTime")
         private Long maxLockTime;
+
+        @NameInMap("MaxLockTimeMS")
+        private Long maxLockTimeMS;
 
         @NameInMap("MaxLogicalReadCounts")
         private Long maxLogicalReadCounts;
@@ -357,9 +363,11 @@ public class DescribeSlowLogsResponseBody extends TeaModel {
             this.createTime = builder.createTime;
             this.DBName = builder.DBName;
             this.maxExecutionTime = builder.maxExecutionTime;
+            this.maxExecutionTimeMS = builder.maxExecutionTimeMS;
             this.maxIOWriteCounts = builder.maxIOWriteCounts;
             this.maxLastRowsAffectedCounts = builder.maxLastRowsAffectedCounts;
             this.maxLockTime = builder.maxLockTime;
+            this.maxLockTimeMS = builder.maxLockTimeMS;
             this.maxLogicalReadCounts = builder.maxLogicalReadCounts;
             this.maxPhysicalReadCounts = builder.maxPhysicalReadCounts;
             this.maxRowsAffectedCounts = builder.maxRowsAffectedCounts;
@@ -467,6 +475,13 @@ public class DescribeSlowLogsResponseBody extends TeaModel {
         }
 
         /**
+         * @return maxExecutionTimeMS
+         */
+        public Long getMaxExecutionTimeMS() {
+            return this.maxExecutionTimeMS;
+        }
+
+        /**
          * @return maxIOWriteCounts
          */
         public Long getMaxIOWriteCounts() {
@@ -485,6 +500,13 @@ public class DescribeSlowLogsResponseBody extends TeaModel {
          */
         public Long getMaxLockTime() {
             return this.maxLockTime;
+        }
+
+        /**
+         * @return maxLockTimeMS
+         */
+        public Long getMaxLockTimeMS() {
+            return this.maxLockTimeMS;
         }
 
         /**
@@ -728,9 +750,11 @@ public class DescribeSlowLogsResponseBody extends TeaModel {
             private String createTime; 
             private String DBName; 
             private Long maxExecutionTime; 
+            private Long maxExecutionTimeMS; 
             private Long maxIOWriteCounts; 
             private Long maxLastRowsAffectedCounts; 
             private Long maxLockTime; 
+            private Long maxLockTimeMS; 
             private Long maxLogicalReadCounts; 
             private Long maxPhysicalReadCounts; 
             private Long maxRowsAffectedCounts; 
@@ -766,7 +790,10 @@ public class DescribeSlowLogsResponseBody extends TeaModel {
             private Long totalRowsAffectedCounts; 
 
             /**
-             * AvgExecutionTime.
+             * The average execution duration per SQL statement in the query. Unit: seconds.
+             * <p>
+             * 
+             * >  This parameter is returned only for instances that run SQL Server.
              */
             public Builder avgExecutionTime(Long avgExecutionTime) {
                 this.avgExecutionTime = avgExecutionTime;
@@ -774,7 +801,10 @@ public class DescribeSlowLogsResponseBody extends TeaModel {
             }
 
             /**
-             * AvgIOWriteCounts.
+             * The average number of I/O writes per SQL statement in the query.
+             * <p>
+             * 
+             * >  This parameter is returned only for instances that run SQL Server.
              */
             public Builder avgIOWriteCounts(Long avgIOWriteCounts) {
                 this.avgIOWriteCounts = avgIOWriteCounts;
@@ -782,7 +812,10 @@ public class DescribeSlowLogsResponseBody extends TeaModel {
             }
 
             /**
-             * AvgLastRowsAffectedCounts.
+             * The average number of rows that are affected by the last SQL statement in the query.
+             * <p>
+             * 
+             * >  This parameter is returned only for instances that run SQL Server.
              */
             public Builder avgLastRowsAffectedCounts(Long avgLastRowsAffectedCounts) {
                 this.avgLastRowsAffectedCounts = avgLastRowsAffectedCounts;
@@ -790,7 +823,10 @@ public class DescribeSlowLogsResponseBody extends TeaModel {
             }
 
             /**
-             * AvgLogicalReadCounts.
+             * The average number of logical reads per SQL statement in the query.
+             * <p>
+             * 
+             * >  This parameter is returned only for instances that run SQL Server.
              */
             public Builder avgLogicalReadCounts(Long avgLogicalReadCounts) {
                 this.avgLogicalReadCounts = avgLogicalReadCounts;
@@ -798,7 +834,10 @@ public class DescribeSlowLogsResponseBody extends TeaModel {
             }
 
             /**
-             * AvgPhysicalReadCounts.
+             * The average number of physical reads per SQL statement in the query.
+             * <p>
+             * 
+             * >  This parameter is returned only for instances that run SQL Server.
              */
             public Builder avgPhysicalReadCounts(Long avgPhysicalReadCounts) {
                 this.avgPhysicalReadCounts = avgPhysicalReadCounts;
@@ -806,7 +845,10 @@ public class DescribeSlowLogsResponseBody extends TeaModel {
             }
 
             /**
-             * AvgRowsAffectedCounts.
+             * The average number of rows that were affected per SQL statement in the query.
+             * <p>
+             * 
+             * >  This parameter is returned only for instances that run SQL Server.
              */
             public Builder avgRowsAffectedCounts(Long avgRowsAffectedCounts) {
                 this.avgRowsAffectedCounts = avgRowsAffectedCounts;
@@ -814,7 +856,7 @@ public class DescribeSlowLogsResponseBody extends TeaModel {
             }
 
             /**
-             * CreateTime.
+             * The date when the data was generated.
              */
             public Builder createTime(String createTime) {
                 this.createTime = createTime;
@@ -822,7 +864,7 @@ public class DescribeSlowLogsResponseBody extends TeaModel {
             }
 
             /**
-             * DBName.
+             * The name of the database that was queried.
              */
             public Builder DBName(String DBName) {
                 this.DBName = DBName;
@@ -830,7 +872,7 @@ public class DescribeSlowLogsResponseBody extends TeaModel {
             }
 
             /**
-             * MaxExecutionTime.
+             * The longest execution duration of a specific SQL statement in the query. Unit: seconds.
              */
             public Builder maxExecutionTime(Long maxExecutionTime) {
                 this.maxExecutionTime = maxExecutionTime;
@@ -838,7 +880,18 @@ public class DescribeSlowLogsResponseBody extends TeaModel {
             }
 
             /**
-             * MaxIOWriteCounts.
+             * MaxExecutionTimeMS.
+             */
+            public Builder maxExecutionTimeMS(Long maxExecutionTimeMS) {
+                this.maxExecutionTimeMS = maxExecutionTimeMS;
+                return this;
+            }
+
+            /**
+             * The largest number of I/O writes that were performed by a specific SQL statement in the query.
+             * <p>
+             * 
+             * >  This parameter is returned only for instances that run SQL Server.
              */
             public Builder maxIOWriteCounts(Long maxIOWriteCounts) {
                 this.maxIOWriteCounts = maxIOWriteCounts;
@@ -846,7 +899,10 @@ public class DescribeSlowLogsResponseBody extends TeaModel {
             }
 
             /**
-             * MaxLastRowsAffectedCounts.
+             * The largest number of rows that were affected by the last SQL statement in the query.
+             * <p>
+             * 
+             * >  This parameter is returned only for instances that run SQL Server.
              */
             public Builder maxLastRowsAffectedCounts(Long maxLastRowsAffectedCounts) {
                 this.maxLastRowsAffectedCounts = maxLastRowsAffectedCounts;
@@ -854,7 +910,7 @@ public class DescribeSlowLogsResponseBody extends TeaModel {
             }
 
             /**
-             * MaxLockTime.
+             * The longest lock duration that was caused by a specific SQL statement in the query. Unit: seconds.
              */
             public Builder maxLockTime(Long maxLockTime) {
                 this.maxLockTime = maxLockTime;
@@ -862,7 +918,18 @@ public class DescribeSlowLogsResponseBody extends TeaModel {
             }
 
             /**
-             * MaxLogicalReadCounts.
+             * MaxLockTimeMS.
+             */
+            public Builder maxLockTimeMS(Long maxLockTimeMS) {
+                this.maxLockTimeMS = maxLockTimeMS;
+                return this;
+            }
+
+            /**
+             * The largest number of logical reads that were performed by a specific SQL statement in the query.
+             * <p>
+             * 
+             * >  This parameter is returned only for instances that run SQL Server.
              */
             public Builder maxLogicalReadCounts(Long maxLogicalReadCounts) {
                 this.maxLogicalReadCounts = maxLogicalReadCounts;
@@ -870,7 +937,10 @@ public class DescribeSlowLogsResponseBody extends TeaModel {
             }
 
             /**
-             * MaxPhysicalReadCounts.
+             * The largest number of physical reads that were performed by a specific SQL statement in the query.
+             * <p>
+             * 
+             * >  This parameter is returned only for instances that run SQL Server.
              */
             public Builder maxPhysicalReadCounts(Long maxPhysicalReadCounts) {
                 this.maxPhysicalReadCounts = maxPhysicalReadCounts;
@@ -878,7 +948,10 @@ public class DescribeSlowLogsResponseBody extends TeaModel {
             }
 
             /**
-             * MaxRowsAffectedCounts.
+             * The largest number of rows that were affected by a specific SQL statement in the query.
+             * <p>
+             * 
+             * >  This parameter is returned only for instances that run SQL Server.
              */
             public Builder maxRowsAffectedCounts(Long maxRowsAffectedCounts) {
                 this.maxRowsAffectedCounts = maxRowsAffectedCounts;
@@ -886,7 +959,10 @@ public class DescribeSlowLogsResponseBody extends TeaModel {
             }
 
             /**
-             * MinIOWriteCounts.
+             * The smallest number of I/O writes that were performed by a specific SQL statement in the query.
+             * <p>
+             * 
+             * >  This parameter is returned only for instances that run SQL Server.
              */
             public Builder minIOWriteCounts(Long minIOWriteCounts) {
                 this.minIOWriteCounts = minIOWriteCounts;
@@ -894,7 +970,10 @@ public class DescribeSlowLogsResponseBody extends TeaModel {
             }
 
             /**
-             * MinLastRowsAffectedCounts.
+             * The smallest number of rows that were affected by the last SQL statement in the query.
+             * <p>
+             * 
+             * >  This parameter is returned only for instances that run SQL Server.
              */
             public Builder minLastRowsAffectedCounts(Long minLastRowsAffectedCounts) {
                 this.minLastRowsAffectedCounts = minLastRowsAffectedCounts;
@@ -902,7 +981,10 @@ public class DescribeSlowLogsResponseBody extends TeaModel {
             }
 
             /**
-             * MinLogicalReadCounts.
+             * The smallest number of logical reads that were performed by a specific SQL statement in the query.
+             * <p>
+             * 
+             * >  This parameter is returned only for instances that run SQL Server.
              */
             public Builder minLogicalReadCounts(Long minLogicalReadCounts) {
                 this.minLogicalReadCounts = minLogicalReadCounts;
@@ -910,7 +992,10 @@ public class DescribeSlowLogsResponseBody extends TeaModel {
             }
 
             /**
-             * MinPhysicalReadCounts.
+             * The smallest number of physical reads that were performed by a specific SQL statement in the query.
+             * <p>
+             * 
+             * >  This parameter is returned only for instances that run SQL Server.
              */
             public Builder minPhysicalReadCounts(Long minPhysicalReadCounts) {
                 this.minPhysicalReadCounts = minPhysicalReadCounts;
@@ -918,7 +1003,10 @@ public class DescribeSlowLogsResponseBody extends TeaModel {
             }
 
             /**
-             * MinRowsAffectedCounts.
+             * The smallest number of rows that were affected by a specific SQL statement in the query.
+             * <p>
+             * 
+             * >  This parameter is returned only for instances that run SQL Server.
              */
             public Builder minRowsAffectedCounts(Long minRowsAffectedCounts) {
                 this.minRowsAffectedCounts = minRowsAffectedCounts;
@@ -926,7 +1014,7 @@ public class DescribeSlowLogsResponseBody extends TeaModel {
             }
 
             /**
-             * MySQLTotalExecutionCounts.
+             * The total number of SQL statements that were executed in the query. This parameter is returned only for instances that run MySQL.
              */
             public Builder mySQLTotalExecutionCounts(Long mySQLTotalExecutionCounts) {
                 this.mySQLTotalExecutionCounts = mySQLTotalExecutionCounts;
@@ -934,7 +1022,7 @@ public class DescribeSlowLogsResponseBody extends TeaModel {
             }
 
             /**
-             * MySQLTotalExecutionTimes.
+             * The total execution duration of all SQL statements in the query. This parameter is returned only for instances that run MySQL. Unit: seconds.
              */
             public Builder mySQLTotalExecutionTimes(Long mySQLTotalExecutionTimes) {
                 this.mySQLTotalExecutionTimes = mySQLTotalExecutionTimes;
@@ -942,7 +1030,7 @@ public class DescribeSlowLogsResponseBody extends TeaModel {
             }
 
             /**
-             * ParseMaxRowCount.
+             * The largest number of rows that were parsed by a specific SQL statement in the query.
              */
             public Builder parseMaxRowCount(Long parseMaxRowCount) {
                 this.parseMaxRowCount = parseMaxRowCount;
@@ -950,7 +1038,7 @@ public class DescribeSlowLogsResponseBody extends TeaModel {
             }
 
             /**
-             * ParseTotalRowCounts.
+             * The total number of rows that were parsed by all SQL statements in the query.
              */
             public Builder parseTotalRowCounts(Long parseTotalRowCounts) {
                 this.parseTotalRowCounts = parseTotalRowCounts;
@@ -958,7 +1046,7 @@ public class DescribeSlowLogsResponseBody extends TeaModel {
             }
 
             /**
-             * ReportTime.
+             * The date on which the data report was generated.
              */
             public Builder reportTime(String reportTime) {
                 this.reportTime = reportTime;
@@ -966,7 +1054,7 @@ public class DescribeSlowLogsResponseBody extends TeaModel {
             }
 
             /**
-             * ReturnMaxRowCount.
+             * The largest number of rows that were returned by a specific SQL statement in the query.
              */
             public Builder returnMaxRowCount(Long returnMaxRowCount) {
                 this.returnMaxRowCount = returnMaxRowCount;
@@ -974,7 +1062,7 @@ public class DescribeSlowLogsResponseBody extends TeaModel {
             }
 
             /**
-             * ReturnTotalRowCounts.
+             * The total number of rows that were returned by all SQL statements in the query.
              */
             public Builder returnTotalRowCounts(Long returnTotalRowCounts) {
                 this.returnTotalRowCounts = returnTotalRowCounts;
@@ -982,7 +1070,7 @@ public class DescribeSlowLogsResponseBody extends TeaModel {
             }
 
             /**
-             * SQLHASH.
+             * The unique ID of the SQL statement. The ID is used to obtain the slow query logs of the SQL statement.
              */
             public Builder SQLHASH(String SQLHASH) {
                 this.SQLHASH = SQLHASH;
@@ -990,7 +1078,7 @@ public class DescribeSlowLogsResponseBody extends TeaModel {
             }
 
             /**
-             * SQLIdStr.
+             * The ID of the SQL statement in the statistical template of slow query logs. This parameter is replaced by the **SQLHASH** parameter.
              */
             public Builder SQLIdStr(String SQLIdStr) {
                 this.SQLIdStr = SQLIdStr;
@@ -998,7 +1086,10 @@ public class DescribeSlowLogsResponseBody extends TeaModel {
             }
 
             /**
-             * SQLServerAvgCpuTime.
+             * The average amount of CPU time per SQL statement in the query. Unit: seconds.
+             * <p>
+             * 
+             * >  This parameter is returned only for instances that run SQL Server.
              */
             public Builder SQLServerAvgCpuTime(Long SQLServerAvgCpuTime) {
                 this.SQLServerAvgCpuTime = SQLServerAvgCpuTime;
@@ -1006,7 +1097,10 @@ public class DescribeSlowLogsResponseBody extends TeaModel {
             }
 
             /**
-             * SQLServerAvgExecutionTime.
+             * The average execution duration per SQL statement in the query. Unit: seconds.
+             * <p>
+             * 
+             * >  This parameter is returned only for instances that run SQL Server.
              */
             public Builder SQLServerAvgExecutionTime(Long SQLServerAvgExecutionTime) {
                 this.SQLServerAvgExecutionTime = SQLServerAvgExecutionTime;
@@ -1014,7 +1108,10 @@ public class DescribeSlowLogsResponseBody extends TeaModel {
             }
 
             /**
-             * SQLServerMaxCpuTime.
+             * The largest amount of CPU time that was used by a specific SQL statement in the query. Unit: seconds.
+             * <p>
+             * 
+             * >  This parameter is returned only for instances that run SQL Server.
              */
             public Builder SQLServerMaxCpuTime(Long SQLServerMaxCpuTime) {
                 this.SQLServerMaxCpuTime = SQLServerMaxCpuTime;
@@ -1022,7 +1119,10 @@ public class DescribeSlowLogsResponseBody extends TeaModel {
             }
 
             /**
-             * SQLServerMinCpuTime.
+             * The smallest amount of CPU time that was used by a specific SQL statement. Unit: seconds.
+             * <p>
+             * 
+             * >  This parameter is returned only for instances that run SQL Server.
              */
             public Builder SQLServerMinCpuTime(Long SQLServerMinCpuTime) {
                 this.SQLServerMinCpuTime = SQLServerMinCpuTime;
@@ -1030,7 +1130,10 @@ public class DescribeSlowLogsResponseBody extends TeaModel {
             }
 
             /**
-             * SQLServerMinExecutionTime.
+             * The smallest execution duration of a specific SQL statement in the query. Unit: seconds.
+             * <p>
+             * 
+             * >  This parameter is returned only for instances that run SQL Server.
              */
             public Builder SQLServerMinExecutionTime(Long SQLServerMinExecutionTime) {
                 this.SQLServerMinExecutionTime = SQLServerMinExecutionTime;
@@ -1038,7 +1141,10 @@ public class DescribeSlowLogsResponseBody extends TeaModel {
             }
 
             /**
-             * SQLServerTotalCpuTime.
+             * The total amount of CPU time that was used by all SQL statements in the query. Unit: seconds.
+             * <p>
+             * 
+             * >  This parameter is returned only for instances that run SQL Server.
              */
             public Builder SQLServerTotalCpuTime(Long SQLServerTotalCpuTime) {
                 this.SQLServerTotalCpuTime = SQLServerTotalCpuTime;
@@ -1046,7 +1152,7 @@ public class DescribeSlowLogsResponseBody extends TeaModel {
             }
 
             /**
-             * SQLServerTotalExecutionCounts.
+             * The total number of SQL statements that were executed in the query. This parameter is returned only for instances that run SQL Server.
              */
             public Builder SQLServerTotalExecutionCounts(Long SQLServerTotalExecutionCounts) {
                 this.SQLServerTotalExecutionCounts = SQLServerTotalExecutionCounts;
@@ -1054,7 +1160,7 @@ public class DescribeSlowLogsResponseBody extends TeaModel {
             }
 
             /**
-             * SQLServerTotalExecutionTimes.
+             * The total execution duration of all SQL statements in the query. This parameter is returned only for instances that run SQL Server. Unit: milliseconds.
              */
             public Builder SQLServerTotalExecutionTimes(Long SQLServerTotalExecutionTimes) {
                 this.SQLServerTotalExecutionTimes = SQLServerTotalExecutionTimes;
@@ -1062,7 +1168,7 @@ public class DescribeSlowLogsResponseBody extends TeaModel {
             }
 
             /**
-             * SQLText.
+             * The SQL statement that was executed in the query.
              */
             public Builder SQLText(String SQLText) {
                 this.SQLText = SQLText;
@@ -1070,7 +1176,7 @@ public class DescribeSlowLogsResponseBody extends TeaModel {
             }
 
             /**
-             * SlowLogId.
+             * The ID of the slow query log summary.
              */
             public Builder slowLogId(Long slowLogId) {
                 this.slowLogId = slowLogId;
@@ -1078,7 +1184,10 @@ public class DescribeSlowLogsResponseBody extends TeaModel {
             }
 
             /**
-             * TotalIOWriteCounts.
+             * The total number of I/O writes that were performed by all SQL statements in the query.
+             * <p>
+             * 
+             * >  This parameter is returned only for instances that run SQL Server.
              */
             public Builder totalIOWriteCounts(Long totalIOWriteCounts) {
                 this.totalIOWriteCounts = totalIOWriteCounts;
@@ -1086,7 +1195,10 @@ public class DescribeSlowLogsResponseBody extends TeaModel {
             }
 
             /**
-             * TotalLastRowsAffectedCounts.
+             * The total number of rows that were affected by the last SQL statement in the query.
+             * <p>
+             * 
+             * >  This parameter is returned only for instances that run SQL Server.
              */
             public Builder totalLastRowsAffectedCounts(Long totalLastRowsAffectedCounts) {
                 this.totalLastRowsAffectedCounts = totalLastRowsAffectedCounts;
@@ -1094,7 +1206,7 @@ public class DescribeSlowLogsResponseBody extends TeaModel {
             }
 
             /**
-             * TotalLockTimes.
+             * The total lock duration that was caused by all SQL statements in the query. Unit: seconds.
              */
             public Builder totalLockTimes(Long totalLockTimes) {
                 this.totalLockTimes = totalLockTimes;
@@ -1102,7 +1214,7 @@ public class DescribeSlowLogsResponseBody extends TeaModel {
             }
 
             /**
-             * TotalLogicalReadCounts.
+             * The total number of logical reads that were performed by all SQL statements in the query.
              */
             public Builder totalLogicalReadCounts(Long totalLogicalReadCounts) {
                 this.totalLogicalReadCounts = totalLogicalReadCounts;
@@ -1110,7 +1222,7 @@ public class DescribeSlowLogsResponseBody extends TeaModel {
             }
 
             /**
-             * TotalPhysicalReadCounts.
+             * The total number of physical reads that were performed by all SQL statements in the query.
              */
             public Builder totalPhysicalReadCounts(Long totalPhysicalReadCounts) {
                 this.totalPhysicalReadCounts = totalPhysicalReadCounts;
@@ -1118,7 +1230,7 @@ public class DescribeSlowLogsResponseBody extends TeaModel {
             }
 
             /**
-             * TotalRowsAffectedCounts.
+             * The total number of rows that were affected by all SQL statements in the query.
              */
             public Builder totalRowsAffectedCounts(Long totalRowsAffectedCounts) {
                 this.totalRowsAffectedCounts = totalRowsAffectedCounts;

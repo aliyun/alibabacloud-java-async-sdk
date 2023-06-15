@@ -86,7 +86,7 @@ public class DescribeUpgradeMajorVersionPrecheckTaskResponseBody extends TeaMode
         private Integer totalRecordCount; 
 
         /**
-         * Items.
+         * An array that consists of the attributes in the upgrade check report.
          */
         public Builder items(java.util.List < Items> items) {
             this.items = items;
@@ -94,7 +94,7 @@ public class DescribeUpgradeMajorVersionPrecheckTaskResponseBody extends TeaMode
         }
 
         /**
-         * PageNumber.
+         * The page number of the returned page.
          */
         public Builder pageNumber(Integer pageNumber) {
             this.pageNumber = pageNumber;
@@ -102,7 +102,7 @@ public class DescribeUpgradeMajorVersionPrecheckTaskResponseBody extends TeaMode
         }
 
         /**
-         * PageRecordCount.
+         * The number of entries returned per page.
          */
         public Builder pageRecordCount(Integer pageRecordCount) {
             this.pageRecordCount = pageRecordCount;
@@ -110,7 +110,7 @@ public class DescribeUpgradeMajorVersionPrecheckTaskResponseBody extends TeaMode
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -118,7 +118,7 @@ public class DescribeUpgradeMajorVersionPrecheckTaskResponseBody extends TeaMode
         }
 
         /**
-         * TotalRecordCount.
+         * The total number of entries in the upgrade check report.
          */
         public Builder totalRecordCount(Integer totalRecordCount) {
             this.totalRecordCount = totalRecordCount;
@@ -230,7 +230,10 @@ public class DescribeUpgradeMajorVersionPrecheckTaskResponseBody extends TeaMode
             private Integer taskId; 
 
             /**
-             * CheckTime.
+             * The time at which the upgrade check was performed.
+             * <p>
+             * 
+             * The value of this parameter is a timestamp that follows the UNIX time format. Unit: milliseconds.
              */
             public Builder checkTime(String checkTime) {
                 this.checkTime = checkTime;
@@ -238,7 +241,7 @@ public class DescribeUpgradeMajorVersionPrecheckTaskResponseBody extends TeaMode
             }
 
             /**
-             * Detail.
+             * The content of the upgrade check report.
              */
             public Builder detail(String detail) {
                 this.detail = detail;
@@ -246,7 +249,10 @@ public class DescribeUpgradeMajorVersionPrecheckTaskResponseBody extends TeaMode
             }
 
             /**
-             * EffectiveTime.
+             * The expiration time of the upgrade check report.
+             * <p>
+             * 
+             * The value of this parameter is a timestamp that follows the UNIX time format. Unit: milliseconds.
              */
             public Builder effectiveTime(String effectiveTime) {
                 this.effectiveTime = effectiveTime;
@@ -254,7 +260,15 @@ public class DescribeUpgradeMajorVersionPrecheckTaskResponseBody extends TeaMode
             }
 
             /**
-             * Result.
+             * The result of the upgrade check.
+             * <p>
+             * 
+             * Valid values:
+             * 
+             * *   Success
+             * *   Fail
+             * 
+             * >  If the check result is **Fail**, you must check the value of the **Detail** parameter to obtain the information about the errors that occurred. After you handle the errors, you can try again. For more information about how to handle common errors, see [Introduction to the check report for a major engine version upgrade to an ApsaraDB RDS for PostgreSQL instance](~~218391~~).
              */
             public Builder result(String result) {
                 this.result = result;
@@ -262,7 +276,7 @@ public class DescribeUpgradeMajorVersionPrecheckTaskResponseBody extends TeaMode
             }
 
             /**
-             * SourceMajorVersion.
+             * The original major engine version of the instance.
              */
             public Builder sourceMajorVersion(String sourceMajorVersion) {
                 this.sourceMajorVersion = sourceMajorVersion;
@@ -270,7 +284,7 @@ public class DescribeUpgradeMajorVersionPrecheckTaskResponseBody extends TeaMode
             }
 
             /**
-             * TargetMajorVersion.
+             * The new major engine version of the instance.
              */
             public Builder targetMajorVersion(String targetMajorVersion) {
                 this.targetMajorVersion = targetMajorVersion;
@@ -278,7 +292,7 @@ public class DescribeUpgradeMajorVersionPrecheckTaskResponseBody extends TeaMode
             }
 
             /**
-             * TaskId.
+             * The ID of the upgrade check task.
              */
             public Builder taskId(Integer taskId) {
                 this.taskId = taskId;

@@ -98,7 +98,11 @@ public class CreateMigrateTaskResponseBody extends TeaModel {
         private String taskId; 
 
         /**
-         * BackupMode.
+         * The type of the migration task. Valid values:
+         * <p>
+         * 
+         * *   **FULL**: The migration task migrates full backup files.
+         * *   **UPDF**: The migration task migrates incremental or log backup files.
          */
         public Builder backupMode(String backupMode) {
             this.backupMode = backupMode;
@@ -106,7 +110,7 @@ public class CreateMigrateTaskResponseBody extends TeaModel {
         }
 
         /**
-         * DBInstanceId.
+         * The ID of the instance.
          */
         public Builder DBInstanceId(String DBInstanceId) {
             this.DBInstanceId = DBInstanceId;
@@ -114,7 +118,7 @@ public class CreateMigrateTaskResponseBody extends TeaModel {
         }
 
         /**
-         * DBName.
+         * The name of the database.
          */
         public Builder DBName(String DBName) {
             this.DBName = DBName;
@@ -122,7 +126,7 @@ public class CreateMigrateTaskResponseBody extends TeaModel {
         }
 
         /**
-         * MigrateTaskId.
+         * The ID of the migration task.
          */
         public Builder migrateTaskId(String migrateTaskId) {
             this.migrateTaskId = migrateTaskId;
@@ -130,7 +134,7 @@ public class CreateMigrateTaskResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -138,7 +142,7 @@ public class CreateMigrateTaskResponseBody extends TeaModel {
         }
 
         /**
-         * TaskId.
+         * The ID of the task.
          */
         public Builder taskId(String taskId) {
             this.taskId = taskId;

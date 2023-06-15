@@ -62,7 +62,7 @@ public class DescribeInstanceKeywordsResponseBody extends TeaModel {
         private Words words; 
 
         /**
-         * Key.
+         * The type of reserved keyword returned.
          */
         public Builder key(String key) {
             this.key = key;
@@ -70,7 +70,7 @@ public class DescribeInstanceKeywordsResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -78,7 +78,7 @@ public class DescribeInstanceKeywordsResponseBody extends TeaModel {
         }
 
         /**
-         * Words.
+         * An array that consists of reserved keywords.
          */
         public Builder words(Words words) {
             this.words = words;

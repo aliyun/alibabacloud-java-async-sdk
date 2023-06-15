@@ -50,7 +50,7 @@ public class DescribeDBInstanceMonitorResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * Period.
+         * The monitoring frequency. Unit: seconds.
          */
         public Builder period(String period) {
             this.period = period;
@@ -58,7 +58,7 @@ public class DescribeDBInstanceMonitorResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

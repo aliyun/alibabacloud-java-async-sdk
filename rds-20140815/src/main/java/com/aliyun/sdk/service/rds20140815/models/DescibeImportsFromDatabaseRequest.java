@@ -212,7 +212,7 @@ public class DescibeImportsFromDatabaseRequest extends Request {
         } 
 
         /**
-         * ClientToken.
+         * The client token that is used to ensure the idempotence of the request. You can use the client to generate the value, but you must ensure that it is unique among different requests. The token can only contain ASCII characters and cannot exceed 64 characters in length.
          */
         public Builder clientToken(String clientToken) {
             this.putQueryParameter("ClientToken", clientToken);
@@ -221,7 +221,7 @@ public class DescibeImportsFromDatabaseRequest extends Request {
         }
 
         /**
-         * DBInstanceId.
+         * The ID of the instance.
          */
         public Builder DBInstanceId(String DBInstanceId) {
             this.putQueryParameter("DBInstanceId", DBInstanceId);
@@ -230,7 +230,7 @@ public class DescibeImportsFromDatabaseRequest extends Request {
         }
 
         /**
-         * EndTime.
+         * The end of the time range to query. Specify the time in the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm*Z format. The time must be in UTC.
          */
         public Builder endTime(String endTime) {
             this.putQueryParameter("EndTime", endTime);
@@ -239,7 +239,11 @@ public class DescibeImportsFromDatabaseRequest extends Request {
         }
 
         /**
-         * Engine.
+         * The database engine of the instance. Valid values:
+         * <p>
+         * 
+         * *   **MySQL**
+         * *   **SQL Server**
          */
         public Builder engine(String engine) {
             this.putQueryParameter("Engine", engine);
@@ -248,7 +252,7 @@ public class DescibeImportsFromDatabaseRequest extends Request {
         }
 
         /**
-         * ImportId.
+         * The ID of the migration task.
          */
         public Builder importId(Integer importId) {
             this.putQueryParameter("ImportId", importId);
@@ -275,7 +279,10 @@ public class DescibeImportsFromDatabaseRequest extends Request {
         }
 
         /**
-         * PageNumber.
+         * The number of the page to return. Valid values: any non-zero positive integer.
+         * <p>
+         * 
+         * Default value: **1**.
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -284,7 +291,14 @@ public class DescibeImportsFromDatabaseRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * The number of entries to return on each page. Valid values:
+         * <p>
+         * 
+         * *   **30**
+         * *   **50**
+         * *   **100**
+         * 
+         * Default value: **30**.
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -311,7 +325,7 @@ public class DescibeImportsFromDatabaseRequest extends Request {
         }
 
         /**
-         * StartTime.
+         * The beginning of the time range to query. Specify the time in the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm*Z format. The time must be in UTC.
          */
         public Builder startTime(String startTime) {
             this.putQueryParameter("StartTime", startTime);

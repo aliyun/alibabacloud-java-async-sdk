@@ -111,7 +111,7 @@ public class SwitchGuardToMasterInstanceRequest extends Request {
         } 
 
         /**
-         * DBInstanceId.
+         * The ID of the disaster recovery instance. You can call the [DescribeDBInstances](~~26232~~) operation to query the ID of the instance.
          */
         public Builder DBInstanceId(String DBInstanceId) {
             this.putQueryParameter("DBInstanceId", DBInstanceId);

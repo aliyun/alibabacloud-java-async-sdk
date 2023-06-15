@@ -50,7 +50,7 @@ public class CreateGadInstanceMemberResponseBody extends TeaModel {
         private Result result; 
 
         /**
-         * Id of the request
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -58,7 +58,7 @@ public class CreateGadInstanceMemberResponseBody extends TeaModel {
         }
 
         /**
-         * Result.
+         * An array that consists of the information returned.
          */
         public Builder result(Result result) {
             this.result = result;
@@ -110,7 +110,7 @@ public class CreateGadInstanceMemberResponseBody extends TeaModel {
             private String gadInstanceName; 
 
             /**
-             * CreateCount.
+             * The number of unit nodes that are created by calling this operation.
              */
             public Builder createCount(String createCount) {
                 this.createCount = createCount;
@@ -118,7 +118,7 @@ public class CreateGadInstanceMemberResponseBody extends TeaModel {
             }
 
             /**
-             * GadInstanceName.
+             * The ID of the global active database cluster.
              */
             public Builder gadInstanceName(String gadInstanceName) {
                 this.gadInstanceName = gadInstanceName;

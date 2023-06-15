@@ -86,7 +86,7 @@ public class DescribeAvailableRecoveryTimeResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * CrossBackupId.
+         * The ID of the cross-region backup file.
          */
         public Builder crossBackupId(Integer crossBackupId) {
             this.crossBackupId = crossBackupId;
@@ -94,7 +94,7 @@ public class DescribeAvailableRecoveryTimeResponseBody extends TeaModel {
         }
 
         /**
-         * RecoveryBeginTime.
+         * The start time to which data can be restored. The time follows the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time is displayed in UTC.
          */
         public Builder recoveryBeginTime(String recoveryBeginTime) {
             this.recoveryBeginTime = recoveryBeginTime;
@@ -102,7 +102,7 @@ public class DescribeAvailableRecoveryTimeResponseBody extends TeaModel {
         }
 
         /**
-         * RecoveryEndTime.
+         * The end time to which data can be restored. The time follows the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time is displayed in UTC.
          */
         public Builder recoveryEndTime(String recoveryEndTime) {
             this.recoveryEndTime = recoveryEndTime;
@@ -110,7 +110,7 @@ public class DescribeAvailableRecoveryTimeResponseBody extends TeaModel {
         }
 
         /**
-         * RegionId.
+         * The region ID of the source instance.
          */
         public Builder regionId(String regionId) {
             this.regionId = regionId;
@@ -118,7 +118,7 @@ public class DescribeAvailableRecoveryTimeResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

@@ -21,6 +21,9 @@ public class DescribeParametersResponseBody extends TeaModel {
     @NameInMap("EngineVersion")
     private String engineVersion;
 
+    @NameInMap("ParamGroupInfo")
+    private ParamGroupInfo paramGroupInfo;
+
     @NameInMap("RequestId")
     private String requestId;
 
@@ -31,6 +34,7 @@ public class DescribeParametersResponseBody extends TeaModel {
         this.configParameters = builder.configParameters;
         this.engine = builder.engine;
         this.engineVersion = builder.engineVersion;
+        this.paramGroupInfo = builder.paramGroupInfo;
         this.requestId = builder.requestId;
         this.runningParameters = builder.runningParameters;
     }
@@ -65,6 +69,13 @@ public class DescribeParametersResponseBody extends TeaModel {
     }
 
     /**
+     * @return paramGroupInfo
+     */
+    public ParamGroupInfo getParamGroupInfo() {
+        return this.paramGroupInfo;
+    }
+
+    /**
      * @return requestId
      */
     public String getRequestId() {
@@ -82,11 +93,12 @@ public class DescribeParametersResponseBody extends TeaModel {
         private ConfigParameters configParameters; 
         private String engine; 
         private String engineVersion; 
+        private ParamGroupInfo paramGroupInfo; 
         private String requestId; 
         private RunningParameters runningParameters; 
 
         /**
-         * ConfigParameters.
+         * The list of parameters that are being synchronized. After you modify and submit the parameter settings, you must wait for the parameter modifications to be synchronized to the instance. After the synchronization, you can delete the parameters from the list.
          */
         public Builder configParameters(ConfigParameters configParameters) {
             this.configParameters = configParameters;
@@ -94,7 +106,7 @@ public class DescribeParametersResponseBody extends TeaModel {
         }
 
         /**
-         * Engine.
+         * The type of the database engine.
          */
         public Builder engine(String engine) {
             this.engine = engine;
@@ -102,7 +114,7 @@ public class DescribeParametersResponseBody extends TeaModel {
         }
 
         /**
-         * EngineVersion.
+         * The database engine version of the instance.
          */
         public Builder engineVersion(String engineVersion) {
             this.engineVersion = engineVersion;
@@ -110,7 +122,15 @@ public class DescribeParametersResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * ParamGroupInfo.
+         */
+        public Builder paramGroupInfo(ParamGroupInfo paramGroupInfo) {
+            this.paramGroupInfo = paramGroupInfo;
+            return this;
+        }
+
+        /**
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -118,7 +138,7 @@ public class DescribeParametersResponseBody extends TeaModel {
         }
 
         /**
-         * RunningParameters.
+         * The list of parameters that are in use.
          */
         public Builder runningParameters(RunningParameters runningParameters) {
             this.runningParameters = runningParameters;
@@ -182,7 +202,7 @@ public class DescribeParametersResponseBody extends TeaModel {
             private String parameterValue; 
 
             /**
-             * ParameterDescription.
+             * The description of the parameter.
              */
             public Builder parameterDescription(String parameterDescription) {
                 this.parameterDescription = parameterDescription;
@@ -190,7 +210,7 @@ public class DescribeParametersResponseBody extends TeaModel {
             }
 
             /**
-             * ParameterName.
+             * The name of the parameter.
              */
             public Builder parameterName(String parameterName) {
                 this.parameterName = parameterName;
@@ -198,7 +218,7 @@ public class DescribeParametersResponseBody extends TeaModel {
             }
 
             /**
-             * ParameterValue.
+             * The value of the parameter.
              */
             public Builder parameterValue(String parameterValue) {
                 this.parameterValue = parameterValue;
@@ -248,6 +268,107 @@ public class DescribeParametersResponseBody extends TeaModel {
 
             public ConfigParameters build() {
                 return new ConfigParameters(this);
+            } 
+
+        } 
+
+    }
+    public static class ParamGroupInfo extends TeaModel {
+        @NameInMap("ParamGroupId")
+        private String paramGroupId;
+
+        @NameInMap("ParameterGroupDesc")
+        private String parameterGroupDesc;
+
+        @NameInMap("ParameterGroupName")
+        private String parameterGroupName;
+
+        @NameInMap("ParameterGroupType")
+        private String parameterGroupType;
+
+        private ParamGroupInfo(Builder builder) {
+            this.paramGroupId = builder.paramGroupId;
+            this.parameterGroupDesc = builder.parameterGroupDesc;
+            this.parameterGroupName = builder.parameterGroupName;
+            this.parameterGroupType = builder.parameterGroupType;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static ParamGroupInfo create() {
+            return builder().build();
+        }
+
+        /**
+         * @return paramGroupId
+         */
+        public String getParamGroupId() {
+            return this.paramGroupId;
+        }
+
+        /**
+         * @return parameterGroupDesc
+         */
+        public String getParameterGroupDesc() {
+            return this.parameterGroupDesc;
+        }
+
+        /**
+         * @return parameterGroupName
+         */
+        public String getParameterGroupName() {
+            return this.parameterGroupName;
+        }
+
+        /**
+         * @return parameterGroupType
+         */
+        public String getParameterGroupType() {
+            return this.parameterGroupType;
+        }
+
+        public static final class Builder {
+            private String paramGroupId; 
+            private String parameterGroupDesc; 
+            private String parameterGroupName; 
+            private String parameterGroupType; 
+
+            /**
+             * ParamGroupId.
+             */
+            public Builder paramGroupId(String paramGroupId) {
+                this.paramGroupId = paramGroupId;
+                return this;
+            }
+
+            /**
+             * ParameterGroupDesc.
+             */
+            public Builder parameterGroupDesc(String parameterGroupDesc) {
+                this.parameterGroupDesc = parameterGroupDesc;
+                return this;
+            }
+
+            /**
+             * ParameterGroupName.
+             */
+            public Builder parameterGroupName(String parameterGroupName) {
+                this.parameterGroupName = parameterGroupName;
+                return this;
+            }
+
+            /**
+             * ParameterGroupType.
+             */
+            public Builder parameterGroupType(String parameterGroupType) {
+                this.parameterGroupType = parameterGroupType;
+                return this;
+            }
+
+            public ParamGroupInfo build() {
+                return new ParamGroupInfo(this);
             } 
 
         } 
@@ -304,7 +425,7 @@ public class DescribeParametersResponseBody extends TeaModel {
             private String parameterValue; 
 
             /**
-             * ParameterDescription.
+             * The description of the parameter.
              */
             public Builder parameterDescription(String parameterDescription) {
                 this.parameterDescription = parameterDescription;
@@ -312,7 +433,7 @@ public class DescribeParametersResponseBody extends TeaModel {
             }
 
             /**
-             * ParameterName.
+             * The name of the parameter.
              */
             public Builder parameterName(String parameterName) {
                 this.parameterName = parameterName;
@@ -320,7 +441,7 @@ public class DescribeParametersResponseBody extends TeaModel {
             }
 
             /**
-             * ParameterValue.
+             * The value of the parameter.
              */
             public Builder parameterValue(String parameterValue) {
                 this.parameterValue = parameterValue;

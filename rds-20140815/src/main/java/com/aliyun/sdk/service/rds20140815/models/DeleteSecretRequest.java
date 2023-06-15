@@ -168,7 +168,7 @@ public class DeleteSecretRequest extends Request {
         } 
 
         /**
-         * ClientToken.
+         * The client token that is used to ensure the idempotence of the request. You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters and cannot exceed 64 characters in length.
          */
         public Builder clientToken(String clientToken) {
             this.putQueryParameter("ClientToken", clientToken);
@@ -177,7 +177,10 @@ public class DeleteSecretRequest extends Request {
         }
 
         /**
-         * DbInstanceId.
+         * The ID of the instance. You can call the [DescribeDBInstances](~~26232~~) operation to query the ID of the instance.
+         * <p>
+         * 
+         * > If you specify this parameter, you must also specify **SecretName**.
          */
         public Builder dbInstanceId(String dbInstanceId) {
             this.putQueryParameter("DbInstanceId", dbInstanceId);
@@ -186,7 +189,10 @@ public class DeleteSecretRequest extends Request {
         }
 
         /**
-         * Engine.
+         * The engine of the database.
+         * <p>
+         * 
+         * > Only MySQL is supported.
          */
         public Builder engine(String engine) {
             this.putQueryParameter("Engine", engine);
@@ -204,7 +210,7 @@ public class DeleteSecretRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * The region ID of the instance. You can call the [DescribeRegions](~~446624~~) operation to query the most recent region list.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -231,7 +237,10 @@ public class DeleteSecretRequest extends Request {
         }
 
         /**
-         * SecretArn.
+         * The Alibaba Cloud Resource Name (ARN) of the credential for the created Data API account. You can call the [CreateSecret](~~446607~~) operation to obtain the value of this parameter.
+         * <p>
+         * 
+         * > You must specify one of **SecretName** and SecretArn.
          */
         public Builder secretArn(String secretArn) {
             this.putQueryParameter("SecretArn", secretArn);
@@ -240,7 +249,14 @@ public class DeleteSecretRequest extends Request {
         }
 
         /**
-         * SecretName.
+         * The name of the credential.
+         * <p>
+         * 
+         * > 
+         * 
+         * *   You must specify one of **SecretArn** and SecretName.
+         * 
+         * *   If you specify this parameter, you must also specify **DbInstanceId**.
          */
         public Builder secretName(String secretName) {
             this.putQueryParameter("SecretName", secretName);

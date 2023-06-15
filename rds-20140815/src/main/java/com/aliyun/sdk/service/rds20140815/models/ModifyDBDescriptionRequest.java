@@ -141,7 +141,7 @@ public class ModifyDBDescriptionRequest extends Request {
         } 
 
         /**
-         * DBDescription.
+         * The description of the database.
          */
         public Builder DBDescription(String DBDescription) {
             this.putQueryParameter("DBDescription", DBDescription);
@@ -150,7 +150,7 @@ public class ModifyDBDescriptionRequest extends Request {
         }
 
         /**
-         * DBInstanceId.
+         * The ID of the instance. You can call the [DescribeDBInstances](~~26232~~) operation to query the ID of the instance.
          */
         public Builder DBInstanceId(String DBInstanceId) {
             this.putQueryParameter("DBInstanceId", DBInstanceId);
@@ -159,7 +159,7 @@ public class ModifyDBDescriptionRequest extends Request {
         }
 
         /**
-         * DBName.
+         * The name of the database.
          */
         public Builder DBName(String DBName) {
             this.putQueryParameter("DBName", DBName);

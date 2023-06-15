@@ -196,7 +196,13 @@ public class ModifyInstanceCrossBackupPolicyRequest extends Request {
         } 
 
         /**
-         * BackupEnabled.
+         * Specifies whether to enable the cross-region backup feature on the instance. This parameter specifies whether you can back up data and logs. Valid values:
+         * <p>
+         * 
+         * *   **0**: disables the feature.
+         * *   **1:** enables the feature.
+         * 
+         * > Before you enable the cross-region backup feature, you must configure the CrossBackupRegion parameter.
          */
         public Builder backupEnabled(String backupEnabled) {
             this.putQueryParameter("BackupEnabled", backupEnabled);
@@ -205,7 +211,7 @@ public class ModifyInstanceCrossBackupPolicyRequest extends Request {
         }
 
         /**
-         * CrossBackupRegion.
+         * The ID of the region in which the cross-region backup files of the instance are stored.
          */
         public Builder crossBackupRegion(String crossBackupRegion) {
             this.putQueryParameter("CrossBackupRegion", crossBackupRegion);
@@ -214,7 +220,7 @@ public class ModifyInstanceCrossBackupPolicyRequest extends Request {
         }
 
         /**
-         * CrossBackupType.
+         * The policy that is used to save the cross-region backup files of the instance. Set the value to **1**. The value 1 specifies that all cross-region backup files are saved.
          */
         public Builder crossBackupType(String crossBackupType) {
             this.putQueryParameter("CrossBackupType", crossBackupType);
@@ -223,7 +229,7 @@ public class ModifyInstanceCrossBackupPolicyRequest extends Request {
         }
 
         /**
-         * DBInstanceId.
+         * The ID of the instance.
          */
         public Builder DBInstanceId(String DBInstanceId) {
             this.putQueryParameter("DBInstanceId", DBInstanceId);
@@ -232,7 +238,13 @@ public class ModifyInstanceCrossBackupPolicyRequest extends Request {
         }
 
         /**
-         * LogBackupEnabled.
+         * Specifies whether to enable the cross-region log backup feature on the instance. Valid values:
+         * <p>
+         * 
+         * *   **0**: disables the feature.
+         * *   **1:** enables the feature.
+         * 
+         * > You can enable the cross-region log backup feature only when the cross-region backup feature is enabled.
          */
         public Builder logBackupEnabled(String logBackupEnabled) {
             this.putQueryParameter("LogBackupEnabled", logBackupEnabled);
@@ -250,7 +262,7 @@ public class ModifyInstanceCrossBackupPolicyRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * The ID of the region to which the source instance belongs. You can call the [DescribeRegions](~~26243~~) operation to query the most recent region list.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -277,7 +289,7 @@ public class ModifyInstanceCrossBackupPolicyRequest extends Request {
         }
 
         /**
-         * RetentType.
+         * The policy that is used to retain the cross-region backup files of the instance. Set the value to 1. The value **1** specifies that the cross-region backup files of the instance are retained based on the specified retention period.
          */
         public Builder retentType(Integer retentType) {
             this.putQueryParameter("RetentType", retentType);
@@ -286,7 +298,7 @@ public class ModifyInstanceCrossBackupPolicyRequest extends Request {
         }
 
         /**
-         * Retention.
+         * The number of days for which the cross-region backup files of the instance are retained. Valid values: **7 to 1825**.
          */
         public Builder retention(Integer retention) {
             this.putQueryParameter("Retention", retention);

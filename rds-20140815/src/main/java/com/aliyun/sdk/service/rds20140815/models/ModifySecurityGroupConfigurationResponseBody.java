@@ -62,7 +62,7 @@ public class ModifySecurityGroupConfigurationResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * DBInstanceName.
+         * The ID of the instance.
          */
         public Builder DBInstanceName(String DBInstanceName) {
             this.DBInstanceName = DBInstanceName;
@@ -70,7 +70,7 @@ public class ModifySecurityGroupConfigurationResponseBody extends TeaModel {
         }
 
         /**
-         * Items.
+         * An array that consists of ECS security groups.
          */
         public Builder items(Items items) {
             this.items = items;
@@ -78,7 +78,7 @@ public class ModifySecurityGroupConfigurationResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -142,7 +142,11 @@ public class ModifySecurityGroupConfigurationResponseBody extends TeaModel {
             private String securityGroupId; 
 
             /**
-             * NetworkType.
+             * The network type of an ECS security group. Valid values:
+             * <p>
+             * 
+             * *   **Classic**
+             * *   **VPC**
              */
             public Builder networkType(String networkType) {
                 this.networkType = networkType;
@@ -150,7 +154,7 @@ public class ModifySecurityGroupConfigurationResponseBody extends TeaModel {
             }
 
             /**
-             * RegionId.
+             * The ID of the region.
              */
             public Builder regionId(String regionId) {
                 this.regionId = regionId;
@@ -158,7 +162,7 @@ public class ModifySecurityGroupConfigurationResponseBody extends TeaModel {
             }
 
             /**
-             * SecurityGroupId.
+             * The ID of the ECS security group.
              */
             public Builder securityGroupId(String securityGroupId) {
                 this.securityGroupId = securityGroupId;

@@ -74,7 +74,7 @@ public class DescribeModifyPGHbaConfigLogResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * DBInstanceId.
+         * The ID of the instance.
          */
         public Builder DBInstanceId(String DBInstanceId) {
             this.DBInstanceId = DBInstanceId;
@@ -82,7 +82,7 @@ public class DescribeModifyPGHbaConfigLogResponseBody extends TeaModel {
         }
 
         /**
-         * HbaLogItems.
+         * An array that consists of the modifications to the pg_hba.conf file.
          */
         public Builder hbaLogItems(HbaLogItems hbaLogItems) {
             this.hbaLogItems = hbaLogItems;
@@ -90,7 +90,7 @@ public class DescribeModifyPGHbaConfigLogResponseBody extends TeaModel {
         }
 
         /**
-         * LogItemCount.
+         * The number of modification records.
          */
         public Builder logItemCount(Integer logItemCount) {
             this.logItemCount = logItemCount;
@@ -98,7 +98,7 @@ public class DescribeModifyPGHbaConfigLogResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -222,7 +222,7 @@ public class DescribeModifyPGHbaConfigLogResponseBody extends TeaModel {
             private String user; 
 
             /**
-             * Address.
+             * The IP address of the instance.
              */
             public Builder address(String address) {
                 this.address = address;
@@ -230,7 +230,7 @@ public class DescribeModifyPGHbaConfigLogResponseBody extends TeaModel {
             }
 
             /**
-             * Database.
+             * The name of the database.
              */
             public Builder database(String database) {
                 this.database = database;
@@ -238,7 +238,7 @@ public class DescribeModifyPGHbaConfigLogResponseBody extends TeaModel {
             }
 
             /**
-             * Mask.
+             * The mask of the instance.
              */
             public Builder mask(String mask) {
                 this.mask = mask;
@@ -246,7 +246,7 @@ public class DescribeModifyPGHbaConfigLogResponseBody extends TeaModel {
             }
 
             /**
-             * Method.
+             * The authentication method.
              */
             public Builder method(String method) {
                 this.method = method;
@@ -254,7 +254,7 @@ public class DescribeModifyPGHbaConfigLogResponseBody extends TeaModel {
             }
 
             /**
-             * Option.
+             * The value of this parameter was set based on the value of the Method parameter.
              */
             public Builder option(String option) {
                 this.option = option;
@@ -262,7 +262,7 @@ public class DescribeModifyPGHbaConfigLogResponseBody extends TeaModel {
             }
 
             /**
-             * PriorityId.
+             * The priority of the configuration item in the pg_hba.conf file.
              */
             public Builder priorityId(Integer priorityId) {
                 this.priorityId = priorityId;
@@ -270,7 +270,7 @@ public class DescribeModifyPGHbaConfigLogResponseBody extends TeaModel {
             }
 
             /**
-             * Type.
+             * The type of the connection.
              */
             public Builder type(String type) {
                 this.type = type;
@@ -278,7 +278,7 @@ public class DescribeModifyPGHbaConfigLogResponseBody extends TeaModel {
             }
 
             /**
-             * User.
+             * The username of the account that was used to connect to the instance.
              */
             public Builder user(String user) {
                 this.user = user;
@@ -444,7 +444,7 @@ public class DescribeModifyPGHbaConfigLogResponseBody extends TeaModel {
             private String user; 
 
             /**
-             * Address.
+             * The IP address of the instance.
              */
             public Builder address(String address) {
                 this.address = address;
@@ -452,7 +452,7 @@ public class DescribeModifyPGHbaConfigLogResponseBody extends TeaModel {
             }
 
             /**
-             * Database.
+             * The name of the database.
              */
             public Builder database(String database) {
                 this.database = database;
@@ -460,7 +460,7 @@ public class DescribeModifyPGHbaConfigLogResponseBody extends TeaModel {
             }
 
             /**
-             * Mask.
+             * The mask of the instance.
              */
             public Builder mask(String mask) {
                 this.mask = mask;
@@ -468,7 +468,7 @@ public class DescribeModifyPGHbaConfigLogResponseBody extends TeaModel {
             }
 
             /**
-             * Method.
+             * The authentication method.
              */
             public Builder method(String method) {
                 this.method = method;
@@ -476,7 +476,7 @@ public class DescribeModifyPGHbaConfigLogResponseBody extends TeaModel {
             }
 
             /**
-             * Option.
+             * The value of this parameter was set based on the value of the Method parameter.
              */
             public Builder option(String option) {
                 this.option = option;
@@ -484,7 +484,7 @@ public class DescribeModifyPGHbaConfigLogResponseBody extends TeaModel {
             }
 
             /**
-             * PriorityId.
+             * The priority of the configuration item in the pg_hba.conf file.
              */
             public Builder priorityId(Integer priorityId) {
                 this.priorityId = priorityId;
@@ -492,7 +492,7 @@ public class DescribeModifyPGHbaConfigLogResponseBody extends TeaModel {
             }
 
             /**
-             * Type.
+             * The type of the connection.
              */
             public Builder type(String type) {
                 this.type = type;
@@ -500,7 +500,7 @@ public class DescribeModifyPGHbaConfigLogResponseBody extends TeaModel {
             }
 
             /**
-             * User.
+             * The username of the account that was used to connect to the instance.
              */
             public Builder user(String user) {
                 this.user = user;
@@ -630,7 +630,7 @@ public class DescribeModifyPGHbaConfigLogResponseBody extends TeaModel {
             private String statusReason; 
 
             /**
-             * AfterHbaItems.
+             * The configuration of the pg_hba.conf file after the modification was made.
              */
             public Builder afterHbaItems(AfterHbaItems afterHbaItems) {
                 this.afterHbaItems = afterHbaItems;
@@ -638,7 +638,7 @@ public class DescribeModifyPGHbaConfigLogResponseBody extends TeaModel {
             }
 
             /**
-             * BeforeHbaItems.
+             * The configuration of the pg_hba.conf file before the modification was made.
              */
             public Builder beforeHbaItems(BeforeHbaItems beforeHbaItems) {
                 this.beforeHbaItems = beforeHbaItems;
@@ -646,7 +646,12 @@ public class DescribeModifyPGHbaConfigLogResponseBody extends TeaModel {
             }
 
             /**
-             * ModifyStatus.
+             * The status of the modification.
+             * <p>
+             * 
+             * *   **success**: The modification is successful.
+             * *   **failed**: The modification failed.
+             * *   **setting**: The modification is being applied.
              */
             public Builder modifyStatus(String modifyStatus) {
                 this.modifyStatus = modifyStatus;
@@ -654,7 +659,7 @@ public class DescribeModifyPGHbaConfigLogResponseBody extends TeaModel {
             }
 
             /**
-             * ModifyTime.
+             * The time when the pg_hba.conf file was modified. The time is displayed in UTC.
              */
             public Builder modifyTime(String modifyTime) {
                 this.modifyTime = modifyTime;
@@ -662,7 +667,7 @@ public class DescribeModifyPGHbaConfigLogResponseBody extends TeaModel {
             }
 
             /**
-             * StatusReason.
+             * The reason why the modification failed.
              */
             public Builder statusReason(String statusReason) {
                 this.statusReason = statusReason;

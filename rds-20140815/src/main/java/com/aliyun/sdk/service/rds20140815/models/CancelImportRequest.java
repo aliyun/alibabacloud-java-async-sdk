@@ -126,7 +126,7 @@ public class CancelImportRequest extends Request {
         } 
 
         /**
-         * DBInstanceId.
+         * The ID of the instance.
          */
         public Builder DBInstanceId(String DBInstanceId) {
             this.putQueryParameter("DBInstanceId", DBInstanceId);
@@ -135,7 +135,10 @@ public class CancelImportRequest extends Request {
         }
 
         /**
-         * ImportId.
+         * The ID of the migration task.
+         * <p>
+         * 
+         * > This parameter is returned when the migration task is started. For more information, see [ImportDatabaseBetweenInstances](~~26301~~).
          */
         public Builder importId(Integer importId) {
             this.putQueryParameter("ImportId", importId);

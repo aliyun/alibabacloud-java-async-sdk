@@ -98,7 +98,7 @@ public class DescribeAccountsResponseBody extends TeaModel {
         private Integer totalRecordCount; 
 
         /**
-         * Accounts.
+         * The details of the accounts.
          */
         public Builder accounts(Accounts accounts) {
             this.accounts = accounts;
@@ -106,7 +106,7 @@ public class DescribeAccountsResponseBody extends TeaModel {
         }
 
         /**
-         * PageNumber.
+         * The page number.
          */
         public Builder pageNumber(Integer pageNumber) {
             this.pageNumber = pageNumber;
@@ -114,7 +114,7 @@ public class DescribeAccountsResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -122,7 +122,7 @@ public class DescribeAccountsResponseBody extends TeaModel {
         }
 
         /**
-         * SystemAdminAccountFirstActivationTime.
+         * The first time when the superuser account was enabled. The time follows the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time is displayed in UTC.
          */
         public Builder systemAdminAccountFirstActivationTime(String systemAdminAccountFirstActivationTime) {
             this.systemAdminAccountFirstActivationTime = systemAdminAccountFirstActivationTime;
@@ -130,7 +130,7 @@ public class DescribeAccountsResponseBody extends TeaModel {
         }
 
         /**
-         * SystemAdminAccountStatus.
+         * Indicates whether the superuser account is enabled.
          */
         public Builder systemAdminAccountStatus(String systemAdminAccountStatus) {
             this.systemAdminAccountStatus = systemAdminAccountStatus;
@@ -138,7 +138,7 @@ public class DescribeAccountsResponseBody extends TeaModel {
         }
 
         /**
-         * TotalRecordCount.
+         * The total number of entries returned.
          */
         public Builder totalRecordCount(Integer totalRecordCount) {
             this.totalRecordCount = totalRecordCount;
@@ -202,7 +202,14 @@ public class DescribeAccountsResponseBody extends TeaModel {
             private String DBName; 
 
             /**
-             * AccountPrivilege.
+             * The type of the permissions. Valid values:
+             * <p>
+             * 
+             * *   **ReadWrite**: read and write permissions
+             * *   **ReadOnly**: read-only permissions
+             * *   **DDLOnly**: DDL-only permissions
+             * *   **DMLOnly**: DML-only permissions
+             * *   **Custom**: custom permissions (You can modify the permissions of the account by using SQL commands.)
              */
             public Builder accountPrivilege(String accountPrivilege) {
                 this.accountPrivilege = accountPrivilege;
@@ -210,7 +217,7 @@ public class DescribeAccountsResponseBody extends TeaModel {
             }
 
             /**
-             * AccountPrivilegeDetail.
+             * The permissions that are granted to the account. For more information, see [Account permissions](~~146395~~).
              */
             public Builder accountPrivilegeDetail(String accountPrivilegeDetail) {
                 this.accountPrivilegeDetail = accountPrivilegeDetail;
@@ -218,7 +225,7 @@ public class DescribeAccountsResponseBody extends TeaModel {
             }
 
             /**
-             * DBName.
+             * The name of the database.
              */
             public Builder DBName(String DBName) {
                 this.DBName = DBName;
@@ -432,7 +439,7 @@ public class DescribeAccountsResponseBody extends TeaModel {
             private String validUntil; 
 
             /**
-             * AccountDescription.
+             * The description of the account.
              */
             public Builder accountDescription(String accountDescription) {
                 this.accountDescription = accountDescription;
@@ -440,7 +447,7 @@ public class DescribeAccountsResponseBody extends TeaModel {
             }
 
             /**
-             * AccountName.
+             * The username of the account.
              */
             public Builder accountName(String accountName) {
                 this.accountName = accountName;
@@ -448,7 +455,11 @@ public class DescribeAccountsResponseBody extends TeaModel {
             }
 
             /**
-             * AccountStatus.
+             * The status of the account. Valid values:
+             * <p>
+             * 
+             * *   **Unavailable**
+             * *   **Available**
              */
             public Builder accountStatus(String accountStatus) {
                 this.accountStatus = accountStatus;
@@ -456,7 +467,12 @@ public class DescribeAccountsResponseBody extends TeaModel {
             }
 
             /**
-             * AccountType.
+             * The type of the account. Valid values:
+             * <p>
+             * 
+             * *   **Normal**: standard account
+             * *   **Super**: privileged account
+             * *   **Sysadmin**: superuser account that has the system administrator permissions
              */
             public Builder accountType(String accountType) {
                 this.accountType = accountType;
@@ -464,7 +480,13 @@ public class DescribeAccountsResponseBody extends TeaModel {
             }
 
             /**
-             * BypassRLS.
+             * Indicates whether the account has the row-level security (RLS) permissions. Valid values:
+             * <p>
+             * 
+             * *   **t**: yes
+             * *   **f**: no
+             * 
+             * > This parameter is returned only for instances that run PostgreSQL.
              */
             public Builder bypassRLS(String bypassRLS) {
                 this.bypassRLS = bypassRLS;
@@ -472,7 +494,13 @@ public class DescribeAccountsResponseBody extends TeaModel {
             }
 
             /**
-             * CreateDB.
+             * Indicates whether the account has the permissions to create databases. Valid values:
+             * <p>
+             * 
+             * *   **t**: yes
+             * *   **f**: no
+             * 
+             * > This parameter is returned only for instances that run PostgreSQL.
              */
             public Builder createDB(String createDB) {
                 this.createDB = createDB;
@@ -480,7 +508,13 @@ public class DescribeAccountsResponseBody extends TeaModel {
             }
 
             /**
-             * CreateRole.
+             * Indicates whether the account has the permissions to create roles. Valid values:
+             * <p>
+             * 
+             * *   **t**: yes
+             * *   **f**: no
+             * 
+             * > This parameter is returned only for instances that run PostgreSQL.
              */
             public Builder createRole(String createRole) {
                 this.createRole = createRole;
@@ -488,7 +522,7 @@ public class DescribeAccountsResponseBody extends TeaModel {
             }
 
             /**
-             * DBInstanceId.
+             * The ID of the instance to which the account belongs.
              */
             public Builder DBInstanceId(String DBInstanceId) {
                 this.DBInstanceId = DBInstanceId;
@@ -496,7 +530,7 @@ public class DescribeAccountsResponseBody extends TeaModel {
             }
 
             /**
-             * DatabasePrivileges.
+             * The details of the permissions that are granted to the account.
              */
             public Builder databasePrivileges(DatabasePrivileges databasePrivileges) {
                 this.databasePrivileges = databasePrivileges;
@@ -504,7 +538,11 @@ public class DescribeAccountsResponseBody extends TeaModel {
             }
 
             /**
-             * PrivExceeded.
+             * Indicates whether the number of databases that are managed by the account exceeds the upper limit. Valid values:
+             * <p>
+             * 
+             * *   **1**: yes
+             * *   **0**: no
              */
             public Builder privExceeded(String privExceeded) {
                 this.privExceeded = privExceeded;
@@ -512,7 +550,13 @@ public class DescribeAccountsResponseBody extends TeaModel {
             }
 
             /**
-             * Replication.
+             * Indicates whether the account has the replication permissions. Valid values:
+             * <p>
+             * 
+             * *   **t**: yes
+             * *   **f**: no
+             * 
+             * > This parameter is returned only for instances that run PostgreSQL.
              */
             public Builder replication(String replication) {
                 this.replication = replication;
@@ -520,7 +564,14 @@ public class DescribeAccountsResponseBody extends TeaModel {
             }
 
             /**
-             * ValidUntil.
+             * The expiration time of the password. Valid values:
+             * <p>
+             * 
+             * *   **infinity**: The password never expires.
+             * *   **Empty**: The expiration time is not specified.
+             * *   **Actual expiration time** in the format of *yyyy-MM-dd*T*HH:mm:ss*Z in UTC. Example: 2022-10-01T00:00:00Z.
+             * 
+             * > This parameter is returned only for instances that run PostgreSQL.
              */
             public Builder validUntil(String validUntil) {
                 this.validUntil = validUntil;

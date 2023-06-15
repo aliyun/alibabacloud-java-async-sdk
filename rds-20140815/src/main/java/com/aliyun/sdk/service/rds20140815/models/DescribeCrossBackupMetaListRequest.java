@@ -181,7 +181,7 @@ public class DescribeCrossBackupMetaListRequest extends Request {
         } 
 
         /**
-         * BackupSetId.
+         * The ID of the cross-region backup file that you want to use. You can call the [DescribeCrossRegionBackups](~~121733~~) operation to query the ID of the cross-region backup file.
          */
         public Builder backupSetId(String backupSetId) {
             this.putQueryParameter("BackupSetId", backupSetId);
@@ -190,7 +190,7 @@ public class DescribeCrossBackupMetaListRequest extends Request {
         }
 
         /**
-         * GetDbName.
+         * The name of the database that you want to query. The system implements exact match based on the value of this parameter and returns the name of the matched database and the names of the tables in the matched database.
          */
         public Builder getDbName(String getDbName) {
             this.putQueryParameter("GetDbName", getDbName);
@@ -208,7 +208,10 @@ public class DescribeCrossBackupMetaListRequest extends Request {
         }
 
         /**
-         * PageIndex.
+         * The number of the page to return. Valid values: any non-zero positive integer.
+         * <p>
+         * 
+         * > This parameter only takes effect when you specify the **PageSize** parameter.
          */
         public Builder pageIndex(String pageIndex) {
             this.putQueryParameter("PageIndex", pageIndex);
@@ -217,7 +220,10 @@ public class DescribeCrossBackupMetaListRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * The number of entries to return per page. Default value: **1**.
+         * <p>
+         * 
+         * > This parameter only takes effect when you specify the **PageIndex** parameter.
          */
         public Builder pageSize(String pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -226,7 +232,10 @@ public class DescribeCrossBackupMetaListRequest extends Request {
         }
 
         /**
-         * Pattern.
+         * The name of the database that you want to query. The system implements fuzzy match based on the value of this parameter and returns only the name of the matched database.
+         * <p>
+         * 
+         * > You can implement fuzzy match and then exact match. For example, you can set the Pattern parameter to test to query the testdb1 and testdb2 databases. Then, you can specify the **GetDbName** parameter to query only the matched database and the tables in the matched database.
          */
         public Builder pattern(String pattern) {
             this.putQueryParameter("Pattern", pattern);
@@ -235,7 +244,7 @@ public class DescribeCrossBackupMetaListRequest extends Request {
         }
 
         /**
-         * Region.
+         * The region ID of the instance.
          */
         public Builder region(String region) {
             this.putQueryParameter("Region", region);
@@ -244,7 +253,7 @@ public class DescribeCrossBackupMetaListRequest extends Request {
         }
 
         /**
-         * ResourceGroupId.
+         * The ID of the resource group.
          */
         public Builder resourceGroupId(String resourceGroupId) {
             this.putQueryParameter("ResourceGroupId", resourceGroupId);

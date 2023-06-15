@@ -239,7 +239,7 @@ public class DescribeRenewalPriceRequest extends Request {
         } 
 
         /**
-         * BusinessInfo.
+         * The additional business information about the instance.
          */
         public Builder businessInfo(String businessInfo) {
             this.putQueryParameter("BusinessInfo", businessInfo);
@@ -248,7 +248,7 @@ public class DescribeRenewalPriceRequest extends Request {
         }
 
         /**
-         * ClientToken.
+         * The client token that is used to ensure the idempotence of the request.
          */
         public Builder clientToken(String clientToken) {
             this.putQueryParameter("ClientToken", clientToken);
@@ -257,7 +257,7 @@ public class DescribeRenewalPriceRequest extends Request {
         }
 
         /**
-         * DBInstanceClass.
+         * The instance type of the instance. For more information, see [Primary instance types](~~26312~~). By default, the current instance type applies.
          */
         public Builder DBInstanceClass(String DBInstanceClass) {
             this.putQueryParameter("DBInstanceClass", DBInstanceClass);
@@ -266,7 +266,7 @@ public class DescribeRenewalPriceRequest extends Request {
         }
 
         /**
-         * DBInstanceId.
+         * The ID of the instance.
          */
         public Builder DBInstanceId(String DBInstanceId) {
             this.putQueryParameter("DBInstanceId", DBInstanceId);
@@ -275,7 +275,7 @@ public class DescribeRenewalPriceRequest extends Request {
         }
 
         /**
-         * OrderType.
+         * The type of the order that you want to place. Set the value to **BUY**.
          */
         public Builder orderType(String orderType) {
             this.putQueryParameter("OrderType", orderType);
@@ -302,7 +302,11 @@ public class DescribeRenewalPriceRequest extends Request {
         }
 
         /**
-         * PayType.
+         * The billing method of the instance. Valid values:
+         * <p>
+         * 
+         * *   **Postpaid**: pay-as-you-go
+         * *   **Prepaid**: subscription
          */
         public Builder payType(String payType) {
             this.putQueryParameter("PayType", payType);
@@ -311,7 +315,7 @@ public class DescribeRenewalPriceRequest extends Request {
         }
 
         /**
-         * Quantity.
+         * The number of the instances. Default value: **1**.
          */
         public Builder quantity(Integer quantity) {
             this.putQueryParameter("Quantity", quantity);
@@ -320,7 +324,7 @@ public class DescribeRenewalPriceRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * The region ID of the instance. You can call the [DescribeRegions](~~26243~~) operation to query the most recent region list.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -347,7 +351,11 @@ public class DescribeRenewalPriceRequest extends Request {
         }
 
         /**
-         * TimeType.
+         * The renewal cycle of the instance. Valid values:
+         * <p>
+         * 
+         * *   **Year**
+         * *   **Month**
          */
         public Builder timeType(String timeType) {
             this.putQueryParameter("TimeType", timeType);
@@ -356,7 +364,11 @@ public class DescribeRenewalPriceRequest extends Request {
         }
 
         /**
-         * UsedTime.
+         * The subscription duration of the instance. Valid values:
+         * <p>
+         * 
+         * *   If you set the **TimeType** parameter to **Year**, the value of the UsedTime parameter is within the range of **1 to 3**.
+         * *   If you set the **TimeType** parameter to **Month**, the value of the UsedTime parameter is within the range of **1 to 9**.
          */
         public Builder usedTime(Integer usedTime) {
             this.putQueryParameter("UsedTime", usedTime);

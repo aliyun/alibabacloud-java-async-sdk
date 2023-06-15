@@ -62,7 +62,7 @@ public class ImportUserBackupFileResponseBody extends TeaModel {
         private Boolean status; 
 
         /**
-         * BackupId.
+         * The ID of the full backup file.
          */
         public Builder backupId(String backupId) {
             this.backupId = backupId;
@@ -70,7 +70,7 @@ public class ImportUserBackupFileResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -78,7 +78,7 @@ public class ImportUserBackupFileResponseBody extends TeaModel {
         }
 
         /**
-         * Status.
+         * Indicates whether the full backup file is successfully imported into the instance. If the full backup file is successfully imported, **true** is returned. Otherwise, an error message is returned.
          */
         public Builder status(Boolean status) {
             this.status = status;

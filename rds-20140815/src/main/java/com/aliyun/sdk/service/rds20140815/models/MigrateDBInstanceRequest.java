@@ -210,7 +210,7 @@ public class MigrateDBInstanceRequest extends Request {
         } 
 
         /**
-         * DBInstanceId.
+         * The ID of the instance.
          */
         public Builder DBInstanceId(String DBInstanceId) {
             this.putQueryParameter("DBInstanceId", DBInstanceId);
@@ -219,7 +219,7 @@ public class MigrateDBInstanceRequest extends Request {
         }
 
         /**
-         * DedicatedHostGroupId.
+         * The ID of the dedicated cluster. You can call the [DescribeDedicatedHostGroups](~~141946~~) operation to query the ID of the dedicated cluster.
          */
         public Builder dedicatedHostGroupId(String dedicatedHostGroupId) {
             this.putQueryParameter("DedicatedHostGroupId", dedicatedHostGroupId);
@@ -228,7 +228,12 @@ public class MigrateDBInstanceRequest extends Request {
         }
 
         /**
-         * EffectiveTime.
+         * The time when you want the system to start the migration. Valid values:
+         * <p>
+         * 
+         * *   **Immediately**: The system immediately starts the migration. This is the default value.
+         * *   **MaintainTime**: The system starts the migration during the specified maintenance window.
+         * *   **Specified**: The system starts the migration at the specified point in time.
          */
         public Builder effectiveTime(String effectiveTime) {
             this.putQueryParameter("EffectiveTime", effectiveTime);
@@ -246,7 +251,7 @@ public class MigrateDBInstanceRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * The ID of the region. You can call the [DescribeRegions](~~26243~~) operation to query the most recent region list.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -273,7 +278,10 @@ public class MigrateDBInstanceRequest extends Request {
         }
 
         /**
-         * SpecifiedTime.
+         * The point in time when you want the system to start the migration. Specify the time in the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time must be in UTC.
+         * <p>
+         * 
+         * > This parameter must be specified when you set **EffectiveTime** to **Specified**.
          */
         public Builder specifiedTime(String specifiedTime) {
             this.putQueryParameter("SpecifiedTime", specifiedTime);
@@ -282,7 +290,7 @@ public class MigrateDBInstanceRequest extends Request {
         }
 
         /**
-         * TargetDedicatedHostIdForMaster.
+         * The ID of the host to which you want to migrate the primary instance. You can call the [DescribeDedicatedHosts](~~200944~~) operation to obtain the ID of the host.
          */
         public Builder targetDedicatedHostIdForMaster(String targetDedicatedHostIdForMaster) {
             this.putQueryParameter("TargetDedicatedHostIdForMaster", targetDedicatedHostIdForMaster);
@@ -291,7 +299,7 @@ public class MigrateDBInstanceRequest extends Request {
         }
 
         /**
-         * TargetDedicatedHostIdForSlave.
+         * The ID of the host to which you want to migrate the secondary instance. You can call the [DescribeDedicatedHosts](~~200944~~) operation to obtain the ID of the host.
          */
         public Builder targetDedicatedHostIdForSlave(String targetDedicatedHostIdForSlave) {
             this.putQueryParameter("TargetDedicatedHostIdForSlave", targetDedicatedHostIdForSlave);
@@ -300,7 +308,7 @@ public class MigrateDBInstanceRequest extends Request {
         }
 
         /**
-         * ZoneIdForFollower.
+         * The zone ID of the secondary instance.
          */
         public Builder zoneIdForFollower(String zoneIdForFollower) {
             this.putQueryParameter("ZoneIdForFollower", zoneIdForFollower);
@@ -309,7 +317,7 @@ public class MigrateDBInstanceRequest extends Request {
         }
 
         /**
-         * ZoneIdForLog.
+         * The zone ID of the logger instance.
          */
         public Builder zoneIdForLog(String zoneIdForLog) {
             this.putQueryParameter("ZoneIdForLog", zoneIdForLog);

@@ -196,7 +196,7 @@ public class DescribeDBInstancesByExpireTimeRequest extends Request {
         } 
 
         /**
-         * ExpirePeriod.
+         * The number of remaining days for which the instances are available. Valid values: **0 to 180**.
          */
         public Builder expirePeriod(Integer expirePeriod) {
             this.putQueryParameter("ExpirePeriod", expirePeriod);
@@ -205,7 +205,11 @@ public class DescribeDBInstancesByExpireTimeRequest extends Request {
         }
 
         /**
-         * Expired.
+         * Specifies whether to query instances that have expired. Valid values:
+         * <p>
+         * 
+         * *   **True**: queries instances that have expired.
+         * *   **False**: does not query instances that have expired.
          */
         public Builder expired(Boolean expired) {
             this.putQueryParameter("Expired", expired);
@@ -232,7 +236,10 @@ public class DescribeDBInstancesByExpireTimeRequest extends Request {
         }
 
         /**
-         * PageNumber.
+         * The number of the page to return. Valid values: any **non-zero** positive integer.
+         * <p>
+         * 
+         * Default value: **1**.
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -241,7 +248,10 @@ public class DescribeDBInstancesByExpireTimeRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * The number of entries to return on each page. Valid values: **1 to 100**.
+         * <p>
+         * 
+         * Default value: **30**.
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -250,7 +260,7 @@ public class DescribeDBInstancesByExpireTimeRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * The ID of the region. You can call the [DescribeRegions](~~26243~~) operation to query the most recent region list.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -277,7 +287,7 @@ public class DescribeDBInstancesByExpireTimeRequest extends Request {
         }
 
         /**
-         * Tags.
+         * The tag that is added to the instance. Each tag is a key-value pair that consists of two parts: TagKey and TagValue. You can specify a maximum of five tags in the following format for each request: `{"key1":"value1","key2":"value2"...}`.
          */
         public Builder tags(String tags) {
             this.putQueryParameter("Tags", tags);
@@ -286,7 +296,7 @@ public class DescribeDBInstancesByExpireTimeRequest extends Request {
         }
 
         /**
-         * proxyId.
+         * A deprecated parameter.
          */
         public Builder proxyId(String proxyId) {
             this.putQueryParameter("proxyId", proxyId);

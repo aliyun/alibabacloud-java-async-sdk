@@ -182,7 +182,7 @@ public class ModifyADInfoRequest extends Request {
         } 
 
         /**
-         * ADAccountName.
+         * The account of the AD domain.
          */
         public Builder ADAccountName(String ADAccountName) {
             this.putQueryParameter("ADAccountName", ADAccountName);
@@ -191,7 +191,7 @@ public class ModifyADInfoRequest extends Request {
         }
 
         /**
-         * ADDNS.
+         * The DNS information about the AD domain.
          */
         public Builder ADDNS(String ADDNS) {
             this.putQueryParameter("ADDNS", ADDNS);
@@ -200,7 +200,7 @@ public class ModifyADInfoRequest extends Request {
         }
 
         /**
-         * ADPassword.
+         * The password for the account of the AD domain.
          */
         public Builder ADPassword(String ADPassword) {
             this.putQueryParameter("ADPassword", ADPassword);
@@ -209,7 +209,7 @@ public class ModifyADInfoRequest extends Request {
         }
 
         /**
-         * ADServerIpAddress.
+         * The IP address of the AD domain.
          */
         public Builder ADServerIpAddress(String ADServerIpAddress) {
             this.putQueryParameter("ADServerIpAddress", ADServerIpAddress);
@@ -218,7 +218,7 @@ public class ModifyADInfoRequest extends Request {
         }
 
         /**
-         * ClientToken.
+         * The client token that is used to ensure the idempotence of the request. You can use the client to generate the value, but you must ensure that it is unique among different requests. The token can only contain ASCII characters and cannot exceed 64 characters in length.
          */
         public Builder clientToken(String clientToken) {
             this.putQueryParameter("ClientToken", clientToken);
@@ -227,7 +227,7 @@ public class ModifyADInfoRequest extends Request {
         }
 
         /**
-         * DBInstanceId.
+         * The ID of the instance. You can call the [DescribeDBInstances](~~26232~~) operation to query the ID of the instance.
          */
         public Builder DBInstanceId(String DBInstanceId) {
             this.putQueryParameter("DBInstanceId", DBInstanceId);
@@ -245,7 +245,7 @@ public class ModifyADInfoRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * The region ID of the instance. You can call the [DescribeRegions](~~26243~~) operation to query the most recent region list.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);

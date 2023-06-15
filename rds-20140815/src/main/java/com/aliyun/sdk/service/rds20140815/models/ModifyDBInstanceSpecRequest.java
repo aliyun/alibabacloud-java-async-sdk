@@ -13,6 +13,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class ModifyDBInstanceSpecRequest extends Request {
     @Query
+    @NameInMap("BurstingEnabled")
+    private Boolean burstingEnabled;
+
+    @Query
     @NameInMap("Category")
     private String category;
 
@@ -60,7 +64,6 @@ public class ModifyDBInstanceSpecRequest extends Request {
 
     @Query
     @NameInMap("PayType")
-    @Validation(required = true)
     private String payType;
 
     @Query
@@ -97,6 +100,7 @@ public class ModifyDBInstanceSpecRequest extends Request {
 
     private ModifyDBInstanceSpecRequest(Builder builder) {
         super(builder);
+        this.burstingEnabled = builder.burstingEnabled;
         this.category = builder.category;
         this.DBInstanceClass = builder.DBInstanceClass;
         this.DBInstanceId = builder.DBInstanceId;
@@ -130,6 +134,13 @@ public class ModifyDBInstanceSpecRequest extends Request {
     @Override
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return burstingEnabled
+     */
+    public Boolean getBurstingEnabled() {
+        return this.burstingEnabled;
     }
 
     /**
@@ -273,6 +284,7 @@ public class ModifyDBInstanceSpecRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<ModifyDBInstanceSpecRequest, Builder> {
+        private Boolean burstingEnabled; 
         private String category; 
         private String DBInstanceClass; 
         private String DBInstanceId; 
@@ -300,6 +312,7 @@ public class ModifyDBInstanceSpecRequest extends Request {
 
         private Builder(ModifyDBInstanceSpecRequest request) {
             super(request);
+            this.burstingEnabled = request.burstingEnabled;
             this.category = request.category;
             this.DBInstanceClass = request.DBInstanceClass;
             this.DBInstanceId = request.DBInstanceId;
@@ -323,6 +336,15 @@ public class ModifyDBInstanceSpecRequest extends Request {
         } 
 
         /**
+         * BurstingEnabled.
+         */
+        public Builder burstingEnabled(Boolean burstingEnabled) {
+            this.putQueryParameter("BurstingEnabled", burstingEnabled);
+            this.burstingEnabled = burstingEnabled;
+            return this;
+        }
+
+        /**
          * Category.
          */
         public Builder category(String category) {
@@ -332,7 +354,7 @@ public class ModifyDBInstanceSpecRequest extends Request {
         }
 
         /**
-         * DBInstanceClass.
+         * The ID of the dedicated cluster.
          */
         public Builder DBInstanceClass(String DBInstanceClass) {
             this.putQueryParameter("DBInstanceClass", DBInstanceClass);
@@ -341,7 +363,7 @@ public class ModifyDBInstanceSpecRequest extends Request {
         }
 
         /**
-         * DBInstanceId.
+         * N/A
          */
         public Builder DBInstanceId(String DBInstanceId) {
             this.putQueryParameter("DBInstanceId", DBInstanceId);
@@ -350,7 +372,7 @@ public class ModifyDBInstanceSpecRequest extends Request {
         }
 
         /**
-         * DBInstanceStorage.
+         * The ID of the zone.
          */
         public Builder DBInstanceStorage(Integer DBInstanceStorage) {
             this.putQueryParameter("DBInstanceStorage", DBInstanceStorage);
@@ -359,7 +381,7 @@ public class ModifyDBInstanceSpecRequest extends Request {
         }
 
         /**
-         * DBInstanceStorageType.
+         * The specification changes of a serverless ApsaraDB RDS for MySQL instance.
          */
         public Builder DBInstanceStorageType(String DBInstanceStorageType) {
             this.putQueryParameter("DBInstanceStorageType", DBInstanceStorageType);
@@ -368,7 +390,11 @@ public class ModifyDBInstanceSpecRequest extends Request {
         }
 
         /**
-         * DedicatedHostGroupId.
+         * Specifies whether to enable the forced scaling feature for the serverless instance. Valid values:
+         * <p>
+         * 
+         * *   **true**
+         * *   **false** (default)
          */
         public Builder dedicatedHostGroupId(String dedicatedHostGroupId) {
             this.putQueryParameter("DedicatedHostGroupId", dedicatedHostGroupId);
@@ -377,7 +403,7 @@ public class ModifyDBInstanceSpecRequest extends Request {
         }
 
         /**
-         * Direction.
+         * The maximum number of RDS Capacity Units (RCUs).
          */
         public Builder direction(String direction) {
             this.putQueryParameter("Direction", direction);
@@ -386,7 +412,7 @@ public class ModifyDBInstanceSpecRequest extends Request {
         }
 
         /**
-         * EffectiveTime.
+         * The ID of the resource group.
          */
         public Builder effectiveTime(String effectiveTime) {
             this.putQueryParameter("EffectiveTime", effectiveTime);
@@ -395,7 +421,7 @@ public class ModifyDBInstanceSpecRequest extends Request {
         }
 
         /**
-         * EngineVersion.
+         * The validity period of the specification changes on an ApsaraDB RDS for SQL Server instance. Unit: day.
          */
         public Builder engineVersion(String engineVersion) {
             this.putQueryParameter("EngineVersion", engineVersion);
@@ -422,7 +448,14 @@ public class ModifyDBInstanceSpecRequest extends Request {
         }
 
         /**
-         * PayType.
+         * The time at which you want to change the specifications. We recommend that you apply the specification during off-peak hours. Specify the time in the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time must be in UTC.
+         * <p>
+         * 
+         * > 
+         * 
+         * *   You must specify a point in time later than the current time. Otherwise, the specification change task fails. The current time refers to the time to call this operation. If the specification change task fails, you must wait for the order to be automatically canceled, and then call this operation again.
+         * 
+         * *   If you want to increase the storage capacity or change the ESSD storage type between different PLs, the specification change immediately takes effect and does not affect your workloads. You do not need to configure this parameter.
          */
         public Builder payType(String payType) {
             this.putQueryParameter("PayType", payType);
@@ -431,7 +464,7 @@ public class ModifyDBInstanceSpecRequest extends Request {
         }
 
         /**
-         * 资源组名称
+         * The ID of the request.
          */
         public Builder resourceGroupId(String resourceGroupId) {
             this.putQueryParameter("ResourceGroupId", resourceGroupId);
@@ -468,7 +501,7 @@ public class ModifyDBInstanceSpecRequest extends Request {
         }
 
         /**
-         * SourceBiz.
+         * The minimum number of RCUs.
          */
         public Builder sourceBiz(String sourceBiz) {
             this.putQueryParameter("SourceBiz", sourceBiz);
@@ -477,7 +510,7 @@ public class ModifyDBInstanceSpecRequest extends Request {
         }
 
         /**
-         * SwitchTime.
+         * The response parameters.
          */
         public Builder switchTime(String switchTime) {
             this.putQueryParameter("SwitchTime", switchTime);
@@ -486,7 +519,7 @@ public class ModifyDBInstanceSpecRequest extends Request {
         }
 
         /**
-         * UsedTime.
+         * The ID of the order.
          */
         public Builder usedTime(Long usedTime) {
             this.putQueryParameter("UsedTime", usedTime);
@@ -495,7 +528,15 @@ public class ModifyDBInstanceSpecRequest extends Request {
         }
 
         /**
-         * ZoneId.
+         * The RDS edition of the instance. Valid values:
+         * <p>
+         * 
+         * *   **Basic**: RDS Basic Edition.
+         * *   **HighAvailability**: RDS High-availability Edition.
+         * *   **AlwaysOn**: RDS Cluster Edition for SQL Server.
+         * *   **Finance**: RDS Enterprise Edition. This edition is available only on the China site (aliyun.com).
+         * 
+         * > If you set **EngineVersion** to an SQL Server version number, you must also specify this parameter.
          */
         public Builder zoneId(String zoneId) {
             this.putQueryParameter("ZoneId", zoneId);

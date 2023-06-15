@@ -50,7 +50,7 @@ public class QueryNotifyResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * Data.
+         * The details of the returned parameters.
          */
         public Builder data(Data data) {
             this.data = data;
@@ -58,7 +58,7 @@ public class QueryNotifyResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -230,7 +230,7 @@ public class QueryNotifyResponseBody extends TeaModel {
             private String type; 
 
             /**
-             * AliUid.
+             * The ID of the Alibaba Cloud account.
              */
             public Builder aliUid(Long aliUid) {
                 this.aliUid = aliUid;
@@ -238,7 +238,11 @@ public class QueryNotifyResponseBody extends TeaModel {
             }
 
             /**
-             * ConfirmFlag.
+             * Indicates whether the notification has been confirmed. You can call the ConfirmNotify operation to mark the notification as confirmed. Valid values:
+             * <p>
+             * 
+             * *   **true**
+             * *   **false**
              */
             public Builder confirmFlag(Boolean confirmFlag) {
                 this.confirmFlag = confirmFlag;
@@ -246,7 +250,10 @@ public class QueryNotifyResponseBody extends TeaModel {
             }
 
             /**
-             * Confirmor.
+             * The UID of the contact who called the ConfirmNotify operation to mark the notification as confirmed. The contact belongs to the current Alibaba Cloud account.
+             * <p>
+             * 
+             * The value **0** indicates that the notification is automatically confirmed by the system.
              */
             public Builder confirmor(Long confirmor) {
                 this.confirmor = confirmor;
@@ -254,7 +261,7 @@ public class QueryNotifyResponseBody extends TeaModel {
             }
 
             /**
-             * GmtCreated.
+             * The time when the notification was created.
              */
             public Builder gmtCreated(String gmtCreated) {
                 this.gmtCreated = gmtCreated;
@@ -262,7 +269,7 @@ public class QueryNotifyResponseBody extends TeaModel {
             }
 
             /**
-             * GmtModified.
+             * The time when the notification was modified.
              */
             public Builder gmtModified(String gmtModified) {
                 this.gmtModified = gmtModified;
@@ -270,7 +277,7 @@ public class QueryNotifyResponseBody extends TeaModel {
             }
 
             /**
-             * Id.
+             * The ID of the notification.
              */
             public Builder id(Long id) {
                 this.id = id;
@@ -278,7 +285,7 @@ public class QueryNotifyResponseBody extends TeaModel {
             }
 
             /**
-             * IdempotentCount.
+             * The number of times that repeatedly sent notifications are blocked.
              */
             public Builder idempotentCount(String idempotentCount) {
                 this.idempotentCount = idempotentCount;
@@ -286,7 +293,7 @@ public class QueryNotifyResponseBody extends TeaModel {
             }
 
             /**
-             * IdempotentId.
+             * This parameter ensures the idempotence of the notification and prevents the notification from being repeatedly sent.
              */
             public Builder idempotentId(String idempotentId) {
                 this.idempotentId = idempotentId;
@@ -294,7 +301,15 @@ public class QueryNotifyResponseBody extends TeaModel {
             }
 
             /**
-             * Level.
+             * The level of the notification. Valid values:
+             * <p>
+             * 
+             * *   **help**
+             * *   **success**
+             * *   **warning**
+             * *   **error**
+             * *   **loading**
+             * *   **notice**
              */
             public Builder level(String level) {
                 this.level = level;
@@ -302,7 +317,18 @@ public class QueryNotifyResponseBody extends TeaModel {
             }
 
             /**
-             * NotifyElement.
+             * The element in the notification template. This parameter is a JSON string. Fields in the JSON string vary based on the value of the **TemplateName** parameter.
+             * <p>
+             * 
+             * *   If the **TemplateName** parameter is **RenewalRecommend**, the JSON string contains the following fields:
+             * 
+             *     *   **instanceName**: the ID of the instance that is about to expire
+             *     *   **reservedTime**: the remaining validity period of the instance in days
+             * 
+             * *   If the **TemplateName** parameter is **InstanceCreateFailed**, the JSON string contains the following fields:
+             * 
+             *     *   **orderId**: the ID of the order to purchase the instance
+             *     *   **reason**: the cause of the instance creation failure
              */
             public Builder notifyElement(String notifyElement) {
                 this.notifyElement = notifyElement;
@@ -310,7 +336,11 @@ public class QueryNotifyResponseBody extends TeaModel {
             }
 
             /**
-             * TemplateName.
+             * The template of the notification. Valid values:
+             * <p>
+             * 
+             * *   **RenewalRecommend**: The template that is used to notify of renewal suggestions.
+             * *   **InstanceCreateFailed**: The template that is used to notify that an instance fails to be created and is refunded.
              */
             public Builder templateName(String templateName) {
                 this.templateName = templateName;
@@ -318,7 +348,12 @@ public class QueryNotifyResponseBody extends TeaModel {
             }
 
             /**
-             * Type.
+             * The type of the notification. Valid values:
+             * <p>
+             * 
+             * *   **Sell**: sales notification
+             * *   **Operation**: O\&M notification
+             * *   **Promotion**: promotion notification
              */
             public Builder type(String type) {
                 this.type = type;
@@ -395,7 +430,7 @@ public class QueryNotifyResponseBody extends TeaModel {
             private Integer totalRecordCount; 
 
             /**
-             * NotifyItemList.
+             * The details of the notification.
              */
             public Builder notifyItemList(java.util.List < NotifyItemList> notifyItemList) {
                 this.notifyItemList = notifyItemList;
@@ -403,7 +438,7 @@ public class QueryNotifyResponseBody extends TeaModel {
             }
 
             /**
-             * PageNumber.
+             * The page number of the returned page.
              */
             public Builder pageNumber(Integer pageNumber) {
                 this.pageNumber = pageNumber;
@@ -411,7 +446,7 @@ public class QueryNotifyResponseBody extends TeaModel {
             }
 
             /**
-             * PageSize.
+             * The number of entries returned per page.
              */
             public Builder pageSize(Integer pageSize) {
                 this.pageSize = pageSize;
@@ -419,7 +454,7 @@ public class QueryNotifyResponseBody extends TeaModel {
             }
 
             /**
-             * TotalRecordCount.
+             * The total number of entries.
              */
             public Builder totalRecordCount(Integer totalRecordCount) {
                 this.totalRecordCount = totalRecordCount;

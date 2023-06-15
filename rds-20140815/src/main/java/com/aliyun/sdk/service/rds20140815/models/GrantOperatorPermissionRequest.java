@@ -141,7 +141,7 @@ public class GrantOperatorPermissionRequest extends Request {
         } 
 
         /**
-         * DBInstanceId.
+         * The ID of the instance.
          */
         public Builder DBInstanceId(String DBInstanceId) {
             this.putQueryParameter("DBInstanceId", DBInstanceId);
@@ -150,7 +150,7 @@ public class GrantOperatorPermissionRequest extends Request {
         }
 
         /**
-         * ExpiredTime.
+         * The time when the permissions of the service account expire. Specify the time in the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time must be in UTC.
          */
         public Builder expiredTime(String expiredTime) {
             this.putQueryParameter("ExpiredTime", expiredTime);
@@ -177,7 +177,11 @@ public class GrantOperatorPermissionRequest extends Request {
         }
 
         /**
-         * Privileges.
+         * The permissions that you want to grant to the service account. Valid values:
+         * <p>
+         * 
+         * *   **Control**: the configuration permissions, which allow you to view and modify the configuration of the instance.
+         * *   **Data**: the data permissions, which allow you to view the schemas, indexes, and SQL statements of the instance.
          */
         public Builder privileges(String privileges) {
             this.putQueryParameter("Privileges", privileges);

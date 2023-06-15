@@ -62,7 +62,11 @@ public class DescribeHASwitchConfigResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * HAConfig.
+         * The status of the automatic primary/secondary switchover feature. Valid values:
+         * <p>
+         * 
+         * *   **Auto:** The automatic primary/secondary switchover feature is enabled. The system automatically switches your workloads over from the instance to its secondary instance in the event of a fault.
+         * *   **Manual:** The automatic primary/secondary switchover feature is temporarily disabled.
          */
         public Builder HAConfig(String HAConfig) {
             this.HAConfig = HAConfig;
@@ -70,7 +74,7 @@ public class DescribeHASwitchConfigResponseBody extends TeaModel {
         }
 
         /**
-         * ManualHATime.
+         * The time when the automatic primary/secondary switchover feature is enabled again. The time follows the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time is displayed in UTC.
          */
         public Builder manualHATime(String manualHATime) {
             this.manualHATime = manualHATime;
@@ -78,7 +82,7 @@ public class DescribeHASwitchConfigResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

@@ -405,7 +405,17 @@ public class ModifyBackupPolicyRequest extends Request {
         } 
 
         /**
-         * ArchiveBackupKeepCount.
+         * The number of archived backup files that are retained. Default value: **1**. Valid values:
+         * <p>
+         * 
+         * *   Valid values when **ArchiveBackupKeepPolicy** is set to **ByMonth**: **1** to **31**.
+         * *   Valid values when **ArchiveBackupKeepPolicy** is set to **ByWeek**: **1** to **7**.
+         * 
+         * > 
+         * 
+         * *   You do not need to specify this parameter when **ArchiveBackupKeepPolicy** is set to **KeepAll**.
+         * 
+         * *   This parameter takes effect only when **BackupPolicyMode** is set to **DataBackupPolicy**.
          */
         public Builder archiveBackupKeepCount(Integer archiveBackupKeepCount) {
             this.putQueryParameter("ArchiveBackupKeepCount", archiveBackupKeepCount);
@@ -414,7 +424,14 @@ public class ModifyBackupPolicyRequest extends Request {
         }
 
         /**
-         * ArchiveBackupKeepPolicy.
+         * The retention period of archived backup files. The number of archived backup files that can be retained within the specified retention period is specified by **ArchiveBackupKeepCount**. Default value: **0**. Valid values:
+         * <p>
+         * 
+         * *   **ByMonth**
+         * *   **ByWeek**
+         * *   **KeepAll**
+         * 
+         * > This parameter takes effect only when **BackupPolicyMode** is set to **DataBackupPolicy**.
          */
         public Builder archiveBackupKeepPolicy(String archiveBackupKeepPolicy) {
             this.putQueryParameter("ArchiveBackupKeepPolicy", archiveBackupKeepPolicy);
@@ -423,7 +440,10 @@ public class ModifyBackupPolicyRequest extends Request {
         }
 
         /**
-         * ArchiveBackupRetentionPeriod.
+         * The number of days for which the archived backup is retained. The default value **0** specifies that the backup archiving feature is disabled. Valid values: **30** to **1095**.
+         * <p>
+         * 
+         * > This parameter takes effect only when **BackupPolicyMode** is set to **DataBackupPolicy**.
          */
         public Builder archiveBackupRetentionPeriod(String archiveBackupRetentionPeriod) {
             this.putQueryParameter("ArchiveBackupRetentionPeriod", archiveBackupRetentionPeriod);
@@ -432,7 +452,27 @@ public class ModifyBackupPolicyRequest extends Request {
         }
 
         /**
-         * BackupInterval.
+         * The frequency at which you want to perform a snapshot backup on the instance. Valid values:
+         * <p>
+         * 
+         * *   **-1**: No backup frequencies are specified.
+         * *   **30**: A snapshot backup is performed every 30 minutes.
+         * *   **60**: A snapshot backup is performed every 60 minutes.
+         * *   **120**: A snapshot backup is performed every 120 minutes.
+         * *   **240**: A snapshot backup is performed every 240 minutes.
+         * *   **480**: A snapshot backup is performed every 480 minutes.
+         * 
+         * > 
+         * 
+         * *   You can configure a backup policy by using this parameter and the **PreferredBackupPeriod** parameter. For example, if you set **PreferredBackupPeriod** to Saturday,Sunday and BackupInterval to \*\*-1\*\*, a snapshot backup is performed on every Saturday and Sunday.
+         * 
+         * *   If the instance runs PostgreSQL, BackupInterval is supported only when the instance is equipped with cloud disks.
+         * 
+         * *   If the instance runs SQL Server, BackupInterval is supported only when the snapshot backup feature is enabled for the instance. For more information, see [Enable snapshot backups for an ApsaraDB RDS for SQL Server instance](~~211143~~).
+         * 
+         * *   If **Category** is set to **Flash**, BackupInterval is invalid.
+         * 
+         * *   This parameter takes effect only when **BackupPolicyMode** is set to **DataBackupPolicy**.
          */
         public Builder backupInterval(String backupInterval) {
             this.putQueryParameter("BackupInterval", backupInterval);
@@ -441,7 +481,17 @@ public class ModifyBackupPolicyRequest extends Request {
         }
 
         /**
-         * BackupLog.
+         * Specifies whether to enable the log backup feature. Valid values:
+         * <p>
+         * 
+         * *   **Enable**: enables the feature.
+         * *   **Disabled**: disables the feature.
+         * 
+         * > 
+         * 
+         * *   This parameter must be specified when **BackupPolicyMode** is set to **DataBackupPolicy**.
+         * 
+         * *   This parameter takes effect only when **BackupPolicyMode** is set to **DataBackupPolicy**.
          */
         public Builder backupLog(String backupLog) {
             this.putQueryParameter("BackupLog", backupLog);
@@ -450,7 +500,19 @@ public class ModifyBackupPolicyRequest extends Request {
         }
 
         /**
-         * BackupMethod.
+         * The backup method of the instance. Valid values:
+         * <p>
+         * 
+         * *   **Physical**: physical backup
+         * *   **Snapshot**: snapshot backup
+         * 
+         * Default value: **Physical**.
+         * 
+         * > 
+         * 
+         * *   This parameter takes effect only on instances that run SQL Server with cloud disks.
+         * 
+         * *   This parameter takes effect only when **BackupPolicyMode** is set to **DataBackupPolicy**.
          */
         public Builder backupMethod(String backupMethod) {
             this.putQueryParameter("BackupMethod", backupMethod);
@@ -459,7 +521,11 @@ public class ModifyBackupPolicyRequest extends Request {
         }
 
         /**
-         * BackupPolicyMode.
+         * The type of the backup. Valid values:
+         * <p>
+         * 
+         * *   **DataBackupPolicy**: data backup
+         * *   **LogBackupPolicy**: log backup
          */
         public Builder backupPolicyMode(String backupPolicyMode) {
             this.putQueryParameter("BackupPolicyMode", backupPolicyMode);
@@ -468,7 +534,14 @@ public class ModifyBackupPolicyRequest extends Request {
         }
 
         /**
-         * BackupRetentionPeriod.
+         * The number of days for which you want to retain data backup files. Valid values: **7 to 730**.
+         * <p>
+         * 
+         * > 
+         * 
+         * *   This parameter must be specified when **BackupPolicyMode** is set to **DataBackupPolicy**.
+         * 
+         * *   This parameter takes effect only when **BackupPolicyMode** is set to **DataBackupPolicy**.
          */
         public Builder backupRetentionPeriod(String backupRetentionPeriod) {
             this.putQueryParameter("BackupRetentionPeriod", backupRetentionPeriod);
@@ -477,7 +550,13 @@ public class ModifyBackupPolicyRequest extends Request {
         }
 
         /**
-         * Category.
+         * Specifies whether to enable the single-digit second backup feature. Valid values:
+         * <p>
+         * 
+         * *   **Flash**: enables the feature.
+         * *   **Standard**: disables the feature.
+         * 
+         * > This parameter takes effect only when **BackupPolicyMode** is set to **DataBackupPolicy**.
          */
         public Builder category(String category) {
             this.putQueryParameter("Category", category);
@@ -486,7 +565,16 @@ public class ModifyBackupPolicyRequest extends Request {
         }
 
         /**
-         * CompressType.
+         * The format that is used to compress backup data. Valid values:
+         * <p>
+         * 
+         * *   **0**: Backups are not compressed.
+         * *   **1**: The zlib tool is used to compress backups into .tar.gz files.
+         * *   **2**: The zlib tool is used to compress backups in parallel.
+         * *   **4**: The QuickLZ tool is used to compress backups into .xb.gz files. This compression format is supported for instances that run MySQL 5.6 or MySQL 5.7. Backups in this compression format can be used to restore individual databases and tables. For more information, see [Restore individual databases and tables of an ApsaraDB RDS for MySQL instance](~~103175~~).
+         * *   **8**: The QuickLZ tool is used to compress backups into .xb.gz files. This compression format is supported only for instances that run MySQL 8.0. Backups in this compression format cannot be used to restore individual databases and tables.
+         * 
+         * > This parameter takes effect only when **BackupPolicyMode** is set to **DataBackupPolicy**.
          */
         public Builder compressType(String compressType) {
             this.putQueryParameter("CompressType", compressType);
@@ -495,7 +583,7 @@ public class ModifyBackupPolicyRequest extends Request {
         }
 
         /**
-         * DBInstanceId.
+         * The ID of the instance. You can call the [DescribeDBInstances](~~26232~~) operation to query the ID of the instance.
          */
         public Builder DBInstanceId(String DBInstanceId) {
             this.putQueryParameter("DBInstanceId", DBInstanceId);
@@ -504,7 +592,17 @@ public class ModifyBackupPolicyRequest extends Request {
         }
 
         /**
-         * EnableBackupLog.
+         * Specifies whether to enable the log backup feature. Valid values:
+         * <p>
+         * 
+         * *   **True** or **1**: enables the feature.
+         * *   **False** or **0**: disables the feature.
+         * 
+         * > 
+         * 
+         * *   This parameter must be specified when **BackupPolicyMode** is set to **LogBackupPolicy**.
+         * 
+         * *   This parameter takes effect only when **BackupPolicyMode** is set to **LogBackupPolicy**.
          */
         public Builder enableBackupLog(String enableBackupLog) {
             this.putQueryParameter("EnableBackupLog", enableBackupLog);
@@ -513,7 +611,17 @@ public class ModifyBackupPolicyRequest extends Request {
         }
 
         /**
-         * EnableIncrementDataBackup.
+         * Specifies whether to enable the incremental backup feature. Valid values:
+         * <p>
+         * 
+         * *   **false** (default): disables the feature.
+         * *   **true**: enables the feature.
+         * 
+         * > 
+         * 
+         * *   This parameter takes effect only on instances that run SQL Server with cloud disks.
+         * 
+         * *   This parameter takes effect only when **BackupPolicyMode** is set to **DataBackupPolicy**.
          */
         public Builder enableIncrementDataBackup(Boolean enableIncrementDataBackup) {
             this.putQueryParameter("EnableIncrementDataBackup", enableIncrementDataBackup);
@@ -522,7 +630,14 @@ public class ModifyBackupPolicyRequest extends Request {
         }
 
         /**
-         * HighSpaceUsageProtection.
+         * Specifies whether to forcefully delete log backup files from the instance when the storage usage of the instance exceeds 80% or the amount of remaining storage on the instance is less than 5 GB. Valid values: **Enable and Disable**. You can retain the default value.
+         * <p>
+         * 
+         * > 
+         * 
+         * *   This parameter must be specified when **BackupPolicyMode** is set to **LogBackupPolicy**.
+         * 
+         * *   This parameter takes effect only when **BackupPolicyMode** is set to **LogBackupPolicy**.
          */
         public Builder highSpaceUsageProtection(String highSpaceUsageProtection) {
             this.putQueryParameter("HighSpaceUsageProtection", highSpaceUsageProtection);
@@ -531,7 +646,14 @@ public class ModifyBackupPolicyRequest extends Request {
         }
 
         /**
-         * LocalLogRetentionHours.
+         * The number of hours for which you want to retain log backup files on the instance. Valid values: **0 to 168**. The value 0 specifies that log backup files are not retained on the instance. The value 168 is calculated based on the following formula: 7 × 24.
+         * <p>
+         * 
+         * > 
+         * 
+         * *   This parameter must be specified when **BackupPolicyMode** is set to **LogBackupPolicy**.
+         * 
+         * *   This parameter takes effect only when **BackupPolicyMode** is set to **LogBackupPolicy**.
          */
         public Builder localLogRetentionHours(String localLogRetentionHours) {
             this.putQueryParameter("LocalLogRetentionHours", localLogRetentionHours);
@@ -540,7 +662,14 @@ public class ModifyBackupPolicyRequest extends Request {
         }
 
         /**
-         * LocalLogRetentionSpace.
+         * The maximum storage usage that is allowed for log backup files on the instance. If the storage usage for log backup files on the instance exceeds the value of this parameter, the system deletes earlier log backup files until the storage usage falls below the value of this parameter. Valid values:**0 to 50**. You can retain the default value.
+         * <p>
+         * 
+         * > 
+         * 
+         * *   This parameter must be specified when **BackupPolicyMode** is set to **LogBackupPolicy**.
+         * 
+         * *   This parameter takes effect only when **BackupPolicyMode** is set to **LogBackupPolicy**.
          */
         public Builder localLogRetentionSpace(String localLogRetentionSpace) {
             this.putQueryParameter("LocalLogRetentionSpace", localLogRetentionSpace);
@@ -549,7 +678,17 @@ public class ModifyBackupPolicyRequest extends Request {
         }
 
         /**
-         * LogBackupFrequency.
+         * The frequency at which you want to back up the logs of the instance. Valid values:
+         * <p>
+         * 
+         * *   **LogInterval**: A log backup is performed every 30 minutes.
+         * *   The default value is the same as the data backup frequency.
+         * 
+         * > 
+         * 
+         * *   The value **LogInterval** is supported only for instances that run SQL Server.
+         * 
+         * *   This parameter takes effect only when **BackupPolicyMode** is set to **DataBackupPolicy**.
          */
         public Builder logBackupFrequency(String logBackupFrequency) {
             this.putQueryParameter("LogBackupFrequency", logBackupFrequency);
@@ -558,7 +697,14 @@ public class ModifyBackupPolicyRequest extends Request {
         }
 
         /**
-         * LogBackupLocalRetentionNumber.
+         * The number of binary log files that you want to retain on the instance. Default value: **60**. Valid values: **6** to **100**.
+         * <p>
+         * 
+         * > 
+         * 
+         * *   This parameter takes effect only when **BackupPolicyMode** is set to **LogBackupPolicy**.
+         * 
+         * *   If the instance runs MySQL, you can set this parameter to \*\*-1\*\*. The value -1 specifies that no limits are imposed on the number of binary log files retained on the instance.
          */
         public Builder logBackupLocalRetentionNumber(Integer logBackupLocalRetentionNumber) {
             this.putQueryParameter("LogBackupLocalRetentionNumber", logBackupLocalRetentionNumber);
@@ -567,7 +713,14 @@ public class ModifyBackupPolicyRequest extends Request {
         }
 
         /**
-         * LogBackupRetentionPeriod.
+         * The number of days for which the log backup is retained. Valid values: **7 to 730**. The log backup retention period cannot be longer than the data backup retention period.
+         * <p>
+         * 
+         * > 
+         * 
+         * *   If you enable the log backup feature, you can specify the log backup retention period. This parameter is supported for instances that run MySQL and PostgreSQL.
+         * 
+         * *   This parameter takes effect only when **BackupPolicyMode** is set to **DataBackupPolicy** or **LogBackupPolicy**.
          */
         public Builder logBackupRetentionPeriod(String logBackupRetentionPeriod) {
             this.putQueryParameter("LogBackupRetentionPeriod", logBackupRetentionPeriod);
@@ -594,7 +747,24 @@ public class ModifyBackupPolicyRequest extends Request {
         }
 
         /**
-         * PreferredBackupPeriod.
+         * The backup cycle. Specify at least two days of the week and separate the days with commas (,). Valid values:
+         * <p>
+         * 
+         * *   **Monday**
+         * *   **Tuesday**
+         * *   **Wednesday**
+         * *   **Thursday**
+         * *   **Friday**
+         * *   **Saturday**
+         * *   **Sunday**
+         * 
+         * > 
+         * 
+         * *   You can configure a backup policy by using this parameter and the **BackupInterval** parameter. For example, if you set this parameter to Saturday,Sunday and the **BackupInterval** parameter to 30, a backup is performed every 30 minutes on every Saturday and Sunday.
+         * 
+         * *   This parameter must be specified when **BackupPolicyMode** is set to **DataBackupPolicy**.
+         * 
+         * *   This parameter takes effect only when **BackupPolicyMode** is set to **DataBackupPolicy**.
          */
         public Builder preferredBackupPeriod(String preferredBackupPeriod) {
             this.putQueryParameter("PreferredBackupPeriod", preferredBackupPeriod);
@@ -603,7 +773,14 @@ public class ModifyBackupPolicyRequest extends Request {
         }
 
         /**
-         * PreferredBackupTime.
+         * The time at which you want to perform a backup. Specify the time in the ISO 8601 standard in the *HH:mm*Z-*HH:mm*Z format. The time must be in UTC.
+         * <p>
+         * 
+         * > 
+         * 
+         * *   This parameter must be specified when **BackupPolicyMode** is set to **DataBackupPolicy**.
+         * 
+         * *   This parameter takes effect only when **BackupPolicyMode** is set to **DataBackupPolicy**.
          */
         public Builder preferredBackupTime(String preferredBackupTime) {
             this.putQueryParameter("PreferredBackupTime", preferredBackupTime);
@@ -612,7 +789,14 @@ public class ModifyBackupPolicyRequest extends Request {
         }
 
         /**
-         * ReleasedKeepPolicy.
+         * The policy that is used to retain archived backup files if the instance is released. Default value: None. Valid values:
+         * <p>
+         * 
+         * *   **None**: No archived backup files are retained.
+         * *   **Lastest**: Only the last archived backup file is retained.
+         * *   **All**: All archived backup files are retained.
+         * 
+         * > This parameter takes effect only when **BackupPolicyMode** is set to **DataBackupPolicy**.
          */
         public Builder releasedKeepPolicy(String releasedKeepPolicy) {
             this.putQueryParameter("ReleasedKeepPolicy", releasedKeepPolicy);

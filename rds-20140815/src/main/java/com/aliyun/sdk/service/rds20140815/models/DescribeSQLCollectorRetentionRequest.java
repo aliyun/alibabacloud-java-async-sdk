@@ -153,7 +153,7 @@ public class DescribeSQLCollectorRetentionRequest extends Request {
         } 
 
         /**
-         * RegionId.
+         * The ID of the region to which the instance belongs. You can call the [DescribeRegions](~~26243~~) operation to query the most recent region list.
          */
         public Builder regionId(String regionId) {
             this.putHostParameter("RegionId", regionId);
@@ -162,7 +162,7 @@ public class DescribeSQLCollectorRetentionRequest extends Request {
         }
 
         /**
-         * DBInstanceId.
+         * The ID of the instance.
          */
         public Builder DBInstanceId(String DBInstanceId) {
             this.putQueryParameter("DBInstanceId", DBInstanceId);
@@ -189,7 +189,7 @@ public class DescribeSQLCollectorRetentionRequest extends Request {
         }
 
         /**
-         * ResourceGroupId.
+         * The ID of the resource group to which the instance belongs.
          */
         public Builder resourceGroupId(String resourceGroupId) {
             this.putQueryParameter("ResourceGroupId", resourceGroupId);

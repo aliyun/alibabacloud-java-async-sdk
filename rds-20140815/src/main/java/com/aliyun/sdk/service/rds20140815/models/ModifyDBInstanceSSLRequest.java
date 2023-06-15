@@ -266,7 +266,13 @@ public class ModifyDBInstanceSSLRequest extends Request {
         } 
 
         /**
-         * ACL.
+         * The method that is used to verify the identities of clients. This parameter is supported only when the instance runs PostgreSQL with cloud disks. In addition, this parameter is available only when the public key of the CA that issues client certificates is enabled. Valid values:
+         * <p>
+         * 
+         * *   **cert**
+         * *   **perfer**
+         * *   **verify-ca**
+         * *   **verify-full** (supported only when the instance runs PostgreSQL 12 or later)
          */
         public Builder ACL(String ACL) {
             this.putQueryParameter("ACL", ACL);
@@ -275,7 +281,11 @@ public class ModifyDBInstanceSSLRequest extends Request {
         }
 
         /**
-         * CAType.
+         * The type of the server certificate. This parameter is supported only when the instance runs PostgreSQL with cloud disks. If you set SSLEnabled to **1**, the default value of this parameter is **aliyun**. Valid values:
+         * <p>
+         * 
+         * *   **aliyun**: a cloud certificate
+         * *   **custom**: a custom certificate
          */
         public Builder CAType(String CAType) {
             this.putQueryParameter("CAType", CAType);
@@ -284,7 +294,7 @@ public class ModifyDBInstanceSSLRequest extends Request {
         }
 
         /**
-         * ClientCACert.
+         * The public key of the CA that issues client certificates. This parameter is supported only when the instance runs PostgreSQL with cloud disks. This parameter must be specified when ClientCAEbabled is set to **1**.
          */
         public Builder clientCACert(String clientCACert) {
             this.putQueryParameter("ClientCACert", clientCACert);
@@ -293,7 +303,11 @@ public class ModifyDBInstanceSSLRequest extends Request {
         }
 
         /**
-         * ClientCAEnabled.
+         * Specifies whether to enable the public key of the CA that issues client certificates. This parameter is supported only when the instance runs PostgreSQL with cloud disks. Valid values:
+         * <p>
+         * 
+         * *   **1**: enables the public key.
+         * *   **0**: disables the public key.
          */
         public Builder clientCAEnabled(Integer clientCAEnabled) {
             this.putQueryParameter("ClientCAEnabled", clientCAEnabled);
@@ -302,7 +316,7 @@ public class ModifyDBInstanceSSLRequest extends Request {
         }
 
         /**
-         * ClientCertRevocationList.
+         * The CRL that contains revoked client certificates. This parameter is supported only when the instance runs PostgreSQL with cloud disks. This parameter must be specified when ClientCrlEnabled is set to **1**.
          */
         public Builder clientCertRevocationList(String clientCertRevocationList) {
             this.putQueryParameter("ClientCertRevocationList", clientCertRevocationList);
@@ -311,7 +325,11 @@ public class ModifyDBInstanceSSLRequest extends Request {
         }
 
         /**
-         * ClientCrlEnabled.
+         * Specifies whether to enable a certificate revocation list (CRL) that contains revoked client certificates. This parameter is supported only when the instance runs PostgreSQL with cloud disks. In addition, this parameter is available only when the public key of the CA that issues client certificates is enabled. Valid values:
+         * <p>
+         * 
+         * *   **1**: enables the CRL.
+         * *   **0**: disables the CRL.
          */
         public Builder clientCrlEnabled(Integer clientCrlEnabled) {
             this.putQueryParameter("ClientCrlEnabled", clientCrlEnabled);
@@ -320,7 +338,7 @@ public class ModifyDBInstanceSSLRequest extends Request {
         }
 
         /**
-         * ConnectionString.
+         * The internal or public endpoint for which the server certificate needs to be created or updated.
          */
         public Builder connectionString(String connectionString) {
             this.putQueryParameter("ConnectionString", connectionString);
@@ -329,7 +347,7 @@ public class ModifyDBInstanceSSLRequest extends Request {
         }
 
         /**
-         * DBInstanceId.
+         * The ID of the instance.
          */
         public Builder DBInstanceId(String DBInstanceId) {
             this.putQueryParameter("DBInstanceId", DBInstanceId);
@@ -356,7 +374,13 @@ public class ModifyDBInstanceSSLRequest extends Request {
         }
 
         /**
-         * ReplicationACL.
+         * The method that is used to verify the replication permission. This parameter is supported only when the instance runs PostgreSQL with cloud disks. In addition, this parameter is available only when the public key of the CA that issues client certificates is enabled. Valid values:
+         * <p>
+         * 
+         * *   **cert**
+         * *   **perfer**
+         * *   **verify-ca**
+         * *   **verify-full** (supported only when the instance runs PostgreSQL 12 or later)
          */
         public Builder replicationACL(String replicationACL) {
             this.putQueryParameter("ReplicationACL", replicationACL);
@@ -383,7 +407,11 @@ public class ModifyDBInstanceSSLRequest extends Request {
         }
 
         /**
-         * SSLEnabled.
+         * Specifies whether to enable or disable the SSL encryption feature. Valid values:
+         * <p>
+         * 
+         * *   **1**: enables the feature.
+         * *   **0**: disables the feature.
          */
         public Builder SSLEnabled(Integer SSLEnabled) {
             this.putQueryParameter("SSLEnabled", SSLEnabled);
@@ -392,7 +420,7 @@ public class ModifyDBInstanceSSLRequest extends Request {
         }
 
         /**
-         * ServerCert.
+         * The content of the server certificate. This parameter is supported only when the instance runs PostgreSQL with cloud disks. This parameter must be specified when CAType is set to **custom**.
          */
         public Builder serverCert(String serverCert) {
             this.putQueryParameter("ServerCert", serverCert);
@@ -401,7 +429,7 @@ public class ModifyDBInstanceSSLRequest extends Request {
         }
 
         /**
-         * ServerKey.
+         * The private key of the server certificate. This parameter is supported only when the instance runs PostgreSQL with cloud disks. This parameter must be specified when CAType is set to **custom**.
          */
         public Builder serverKey(String serverKey) {
             this.putQueryParameter("ServerKey", serverKey);

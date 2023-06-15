@@ -62,7 +62,10 @@ public class DescribeDBInstanceTDEResponseBody extends TeaModel {
         private String TDEStatus; 
 
         /**
-         * Databases.
+         * The details of the TDE status at the database level.
+         * <p>
+         * 
+         * > For the instances that run SQL Server 2019 SE or SQL Server EE, you can specify whether to enable TDE at the database level when you enable TDE at the instance level.
          */
         public Builder databases(Databases databases) {
             this.databases = databases;
@@ -70,7 +73,7 @@ public class DescribeDBInstanceTDEResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -78,7 +81,7 @@ public class DescribeDBInstanceTDEResponseBody extends TeaModel {
         }
 
         /**
-         * TDEStatus.
+         * The TDE status at the instance level. Valid values: **Enabled and Disabled**.
          */
         public Builder TDEStatus(String TDEStatus) {
             this.TDEStatus = TDEStatus;
@@ -130,7 +133,7 @@ public class DescribeDBInstanceTDEResponseBody extends TeaModel {
             private String TDEStatus; 
 
             /**
-             * DBName.
+             * The name of the database.
              */
             public Builder DBName(String DBName) {
                 this.DBName = DBName;
@@ -138,7 +141,7 @@ public class DescribeDBInstanceTDEResponseBody extends TeaModel {
             }
 
             /**
-             * TDEStatus.
+             * The TDE status at the database level. Valid values: **Enabled and Disabled**.
              */
             public Builder TDEStatus(String TDEStatus) {
                 this.TDEStatus = TDEStatus;

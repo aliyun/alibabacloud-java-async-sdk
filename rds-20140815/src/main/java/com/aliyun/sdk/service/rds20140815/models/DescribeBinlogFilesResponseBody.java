@@ -98,7 +98,7 @@ public class DescribeBinlogFilesResponseBody extends TeaModel {
         private Integer totalRecordCount; 
 
         /**
-         * Items.
+         * An array that consists of information about the binary log file.
          */
         public Builder items(Items items) {
             this.items = items;
@@ -106,7 +106,7 @@ public class DescribeBinlogFilesResponseBody extends TeaModel {
         }
 
         /**
-         * PageNumber.
+         * The page number of the returned page.
          */
         public Builder pageNumber(Integer pageNumber) {
             this.pageNumber = pageNumber;
@@ -114,7 +114,7 @@ public class DescribeBinlogFilesResponseBody extends TeaModel {
         }
 
         /**
-         * PageRecordCount.
+         * The number of binary log files returned on the current page.
          */
         public Builder pageRecordCount(Integer pageRecordCount) {
             this.pageRecordCount = pageRecordCount;
@@ -122,7 +122,7 @@ public class DescribeBinlogFilesResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -130,7 +130,7 @@ public class DescribeBinlogFilesResponseBody extends TeaModel {
         }
 
         /**
-         * TotalFileSize.
+         * The total size of the binary log files.
          */
         public Builder totalFileSize(Long totalFileSize) {
             this.totalFileSize = totalFileSize;
@@ -138,7 +138,7 @@ public class DescribeBinlogFilesResponseBody extends TeaModel {
         }
 
         /**
-         * TotalRecordCount.
+         * The total number of binary log files returned.
          */
         public Builder totalRecordCount(Integer totalRecordCount) {
             this.totalRecordCount = totalRecordCount;
@@ -286,7 +286,7 @@ public class DescribeBinlogFilesResponseBody extends TeaModel {
             private String remoteStatus; 
 
             /**
-             * Checksum.
+             * The checksum. The value of this parameter is calculated by using the CRC64 algorithm.
              */
             public Builder checksum(String checksum) {
                 this.checksum = checksum;
@@ -294,7 +294,7 @@ public class DescribeBinlogFilesResponseBody extends TeaModel {
             }
 
             /**
-             * DownloadLink.
+             * The HTTP-based download URL of the binary log file. If the return value of this parameter is NULL, ApsaraDB RDS does not provide a download URL for the file.
              */
             public Builder downloadLink(String downloadLink) {
                 this.downloadLink = downloadLink;
@@ -302,7 +302,7 @@ public class DescribeBinlogFilesResponseBody extends TeaModel {
             }
 
             /**
-             * FileSize.
+             * The size of the binary log file. Unit: bytes.
              */
             public Builder fileSize(Long fileSize) {
                 this.fileSize = fileSize;
@@ -310,7 +310,7 @@ public class DescribeBinlogFilesResponseBody extends TeaModel {
             }
 
             /**
-             * HostInstanceID.
+             * The ID of the instance to which the binary log file belongs. This parameter is used to distinguish between the binary log files that are generated on a primary instance and those that are generated on a secondary instance.
              */
             public Builder hostInstanceID(String hostInstanceID) {
                 this.hostInstanceID = hostInstanceID;
@@ -318,7 +318,7 @@ public class DescribeBinlogFilesResponseBody extends TeaModel {
             }
 
             /**
-             * IntranetDownloadLink.
+             * The download URL that is used over an internal network.
              */
             public Builder intranetDownloadLink(String intranetDownloadLink) {
                 this.intranetDownloadLink = intranetDownloadLink;
@@ -326,7 +326,7 @@ public class DescribeBinlogFilesResponseBody extends TeaModel {
             }
 
             /**
-             * LinkExpiredTime.
+             * The expiration time of the URL. The time follows the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time is displayed in UTC.
              */
             public Builder linkExpiredTime(String linkExpiredTime) {
                 this.linkExpiredTime = linkExpiredTime;
@@ -334,7 +334,7 @@ public class DescribeBinlogFilesResponseBody extends TeaModel {
             }
 
             /**
-             * LogBeginTime.
+             * The start time of the log data recorded in the binary log file. The time follows the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time is displayed in UTC.
              */
             public Builder logBeginTime(String logBeginTime) {
                 this.logBeginTime = logBeginTime;
@@ -342,7 +342,7 @@ public class DescribeBinlogFilesResponseBody extends TeaModel {
             }
 
             /**
-             * LogEndTime.
+             * The end time of the log data recorded in the binary log file. The time follows the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time is displayed in UTC.
              */
             public Builder logEndTime(String logEndTime) {
                 this.logEndTime = logEndTime;
@@ -350,7 +350,7 @@ public class DescribeBinlogFilesResponseBody extends TeaModel {
             }
 
             /**
-             * LogFileName.
+             * The name of the binary log file.
              */
             public Builder logFileName(String logFileName) {
                 this.logFileName = logFileName;
@@ -358,7 +358,11 @@ public class DescribeBinlogFilesResponseBody extends TeaModel {
             }
 
             /**
-             * RemoteStatus.
+             * The status of the binary log file that is stored in the Object Storage Service (OSS) bucket. Valid values:
+             * <p>
+             * 
+             * *   **Uploading**
+             * *   **Completed**
              */
             public Builder remoteStatus(String remoteStatus) {
                 this.remoteStatus = remoteStatus;

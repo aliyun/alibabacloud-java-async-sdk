@@ -126,7 +126,7 @@ public class DeleteAccountRequest extends Request {
         } 
 
         /**
-         * AccountName.
+         * The name of the account.
          */
         public Builder accountName(String accountName) {
             this.putQueryParameter("AccountName", accountName);
@@ -135,7 +135,7 @@ public class DeleteAccountRequest extends Request {
         }
 
         /**
-         * DBInstanceId.
+         * The ID of the instance.
          */
         public Builder DBInstanceId(String DBInstanceId) {
             this.putQueryParameter("DBInstanceId", DBInstanceId);

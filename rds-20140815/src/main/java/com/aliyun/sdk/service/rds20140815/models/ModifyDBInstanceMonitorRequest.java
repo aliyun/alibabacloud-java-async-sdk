@@ -140,7 +140,7 @@ public class ModifyDBInstanceMonitorRequest extends Request {
         } 
 
         /**
-         * ClientToken.
+         * The client token that is used to ensure the idempotence of the request. You can use the client to generate the value, but you must make sure that it is unique among different requests. The token can contain only ASCII characters and cannot exceed 64 characters in length.
          */
         public Builder clientToken(String clientToken) {
             this.putQueryParameter("ClientToken", clientToken);
@@ -149,7 +149,7 @@ public class ModifyDBInstanceMonitorRequest extends Request {
         }
 
         /**
-         * DBInstanceId.
+         * The ID of the instance. You can call the [DescribeDBInstances](~~26232~~) operation to query the IDs of instances.
          */
         public Builder DBInstanceId(String DBInstanceId) {
             this.putQueryParameter("DBInstanceId", DBInstanceId);
@@ -176,7 +176,15 @@ public class ModifyDBInstanceMonitorRequest extends Request {
         }
 
         /**
-         * Period.
+         * The monitoring frequency that you want to use. Valid values:
+         * <p>
+         * 
+         * *   **5**
+         * *   **10**
+         * *   **60**
+         * *   **300**
+         * 
+         * Unit: seconds.
          */
         public Builder period(String period) {
             this.putQueryParameter("Period", period);

@@ -83,7 +83,7 @@ public class DescribeAvailableMetricsRequest extends Request {
         } 
 
         /**
-         * DBInstanceName.
+         * The ID of the instance. You can call the [DescribeDBInstances](~~26232~~) operation to query the IDs of instances.
          */
         public Builder DBInstanceName(String DBInstanceName) {
             this.putQueryParameter("DBInstanceName", DBInstanceName);
@@ -92,7 +92,7 @@ public class DescribeAvailableMetricsRequest extends Request {
         }
 
         /**
-         * ResourceGroupId.
+         * The ID of the resource group.
          */
         public Builder resourceGroupId(String resourceGroupId) {
             this.putQueryParameter("ResourceGroupId", resourceGroupId);

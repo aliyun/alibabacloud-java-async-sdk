@@ -70,7 +70,7 @@ public class ConfirmNotifyRequest extends Request {
         } 
 
         /**
-         * Confirmor.
+         * The ID of the Alibaba Cloud account that is used to confirm the notification. You can set this parameter to **0**, which indicates that the notification is confirmed by the system.
          */
         public Builder confirmor(Long confirmor) {
             this.putBodyParameter("Confirmor", confirmor);
@@ -79,7 +79,7 @@ public class ConfirmNotifyRequest extends Request {
         }
 
         /**
-         * NotifyIdList.
+         * The IDs of the notifications that needs to be confirmed. You can call the [QueryNotify](~~427959~~) operation to query notifications for an instance.
          */
         public Builder notifyIdList(java.util.List < Long > notifyIdList) {
             String notifyIdListShrink = shrink(notifyIdList, "NotifyIdList", "json");

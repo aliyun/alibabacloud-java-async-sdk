@@ -127,7 +127,7 @@ public class DescribeAccountsRequest extends Request {
         } 
 
         /**
-         * AccountName.
+         * The username of the account.
          */
         public Builder accountName(String accountName) {
             this.putQueryParameter("AccountName", accountName);
@@ -136,7 +136,10 @@ public class DescribeAccountsRequest extends Request {
         }
 
         /**
-         * DBInstanceId.
+         * The ID of the instance.
+         * <p>
+         * 
+         * > This operation is not supported for instances that run SQL Server 2017 on RDS Cluster Edition.
          */
         public Builder DBInstanceId(String DBInstanceId) {
             this.putQueryParameter("DBInstanceId", DBInstanceId);
@@ -145,7 +148,7 @@ public class DescribeAccountsRequest extends Request {
         }
 
         /**
-         * PageNumber.
+         * The page number. Default value: **1**. Valid values: any non-zero positive integer.
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -154,7 +157,7 @@ public class DescribeAccountsRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * The number of entries per page. Valid value: **30 to 200**. Default value: **30**.
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);

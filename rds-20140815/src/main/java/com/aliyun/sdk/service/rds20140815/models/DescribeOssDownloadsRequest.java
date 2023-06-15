@@ -126,7 +126,7 @@ public class DescribeOssDownloadsRequest extends Request {
         } 
 
         /**
-         * DBInstanceId.
+         * The ID of the instance. You can call the [DescribeDBInstances](~~26232~~) operation to query the ID of the instance.
          */
         public Builder DBInstanceId(String DBInstanceId) {
             this.putQueryParameter("DBInstanceId", DBInstanceId);
@@ -135,7 +135,7 @@ public class DescribeOssDownloadsRequest extends Request {
         }
 
         /**
-         * MigrateTaskId.
+         * The ID of the backup data migration task. You can call the [DescribeMigrateTasks](~~64563~~) operation to query the ID of the migration task.
          */
         public Builder migrateTaskId(String migrateTaskId) {
             this.putQueryParameter("MigrateTaskId", migrateTaskId);
@@ -153,7 +153,7 @@ public class DescribeOssDownloadsRequest extends Request {
         }
 
         /**
-         * ResourceGroupId.
+         * The ID of the resource group.
          */
         public Builder resourceGroupId(String resourceGroupId) {
             this.putQueryParameter("ResourceGroupId", resourceGroupId);

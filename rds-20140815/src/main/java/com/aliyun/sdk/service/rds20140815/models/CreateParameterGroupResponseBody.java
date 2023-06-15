@@ -50,7 +50,7 @@ public class CreateParameterGroupResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * ParameterGroupId.
+         * The ID of the parameter template. You can call the [DescribeParameterGroups](~~144491~~) operation to query the IDs of parameter templates.
          */
         public Builder parameterGroupId(String parameterGroupId) {
             this.parameterGroupId = parameterGroupId;
@@ -58,7 +58,7 @@ public class CreateParameterGroupResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

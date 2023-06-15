@@ -74,7 +74,7 @@ public class UpgradeDBInstanceMajorVersionResponseBody extends TeaModel {
         private Long taskId; 
 
         /**
-         * DBInstanceId.
+         * The ID of the instance.
          */
         public Builder DBInstanceId(String DBInstanceId) {
             this.DBInstanceId = DBInstanceId;
@@ -82,7 +82,7 @@ public class UpgradeDBInstanceMajorVersionResponseBody extends TeaModel {
         }
 
         /**
-         * OrderId.
+         * The ID of the order.
          */
         public Builder orderId(String orderId) {
             this.orderId = orderId;
@@ -90,7 +90,7 @@ public class UpgradeDBInstanceMajorVersionResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -98,7 +98,7 @@ public class UpgradeDBInstanceMajorVersionResponseBody extends TeaModel {
         }
 
         /**
-         * TaskId.
+         * A reserved parameter.
          */
         public Builder taskId(Long taskId) {
             this.taskId = taskId;

@@ -50,7 +50,11 @@ public class CheckInstanceExistResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * IsExistInstance.
+         * Indicates whether the instance exists. Valid values:
+         * <p>
+         * 
+         * *   **true**: The instance exists.
+         * *   **false**: The instance does not exist.
          */
         public Builder isExistInstance(Boolean isExistInstance) {
             this.isExistInstance = isExistInstance;
@@ -58,7 +62,7 @@ public class CheckInstanceExistResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

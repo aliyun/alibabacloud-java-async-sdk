@@ -183,7 +183,7 @@ public class DescribeDBInstanceByTagsRequest extends Request {
         } 
 
         /**
-         * ClientToken.
+         * The client token that is used to ensure the idempotence of the request. You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters and cannot exceed 64 characters in length.
          */
         public Builder clientToken(String clientToken) {
             this.putQueryParameter("ClientToken", clientToken);
@@ -192,7 +192,7 @@ public class DescribeDBInstanceByTagsRequest extends Request {
         }
 
         /**
-         * DBInstanceId.
+         * The ID of the instance. You can call the [DescribeDBInstances](~~26232~~) operation to query the ID of the instance.
          */
         public Builder DBInstanceId(String DBInstanceId) {
             this.putQueryParameter("DBInstanceId", DBInstanceId);
@@ -219,7 +219,10 @@ public class DescribeDBInstanceByTagsRequest extends Request {
         }
 
         /**
-         * PageNumber.
+         * The page number. Valid values: any non-zero positive integer.
+         * <p>
+         * 
+         * Default value: **1**.
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -228,7 +231,7 @@ public class DescribeDBInstanceByTagsRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * The number of entries per page. Valid values: **30 to 100**. Default value: **30**.
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -237,7 +240,7 @@ public class DescribeDBInstanceByTagsRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * The ID of the region. You can call the [DescribeRegions](~~26243~~) operation to query the most recent region list.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -264,7 +267,7 @@ public class DescribeDBInstanceByTagsRequest extends Request {
         }
 
         /**
-         * proxyId.
+         * A deprecated parameter.
          */
         public Builder proxyId(String proxyId) {
             this.putQueryParameter("proxyId", proxyId);

@@ -314,7 +314,7 @@ public class DescribeBackupPolicyResponseBody extends TeaModel {
         private Integer supportVolumeShadowCopy; 
 
         /**
-         * ArchiveBackupKeepCount.
+         * The number of archived backup files that are retained.
          */
         public Builder archiveBackupKeepCount(String archiveBackupKeepCount) {
             this.archiveBackupKeepCount = archiveBackupKeepCount;
@@ -322,7 +322,7 @@ public class DescribeBackupPolicyResponseBody extends TeaModel {
         }
 
         /**
-         * ArchiveBackupKeepPolicy.
+         * The cycle based on which archived backup files are retained.
          */
         public Builder archiveBackupKeepPolicy(String archiveBackupKeepPolicy) {
             this.archiveBackupKeepPolicy = archiveBackupKeepPolicy;
@@ -330,7 +330,7 @@ public class DescribeBackupPolicyResponseBody extends TeaModel {
         }
 
         /**
-         * ArchiveBackupRetentionPeriod.
+         * The number of days for which archived backup files are retained.
          */
         public Builder archiveBackupRetentionPeriod(String archiveBackupRetentionPeriod) {
             this.archiveBackupRetentionPeriod = archiveBackupRetentionPeriod;
@@ -338,7 +338,11 @@ public class DescribeBackupPolicyResponseBody extends TeaModel {
         }
 
         /**
-         * BackupInterval.
+         * The backup interval. Unit: minutes.
+         * <p>
+         * 
+         * *   If the instance runs MySQL, the interval is the same as the value of the Snapshot Backup Start Time parameter rather than the Snapshot Backup Period parameter in the ApsaraDB RDS console. For more information, see [Back up an ApsaraDB RDS for MySQL instance](~~98818~~).
+         * *   If the instance runs SQL Server, the interval is the same as the log backup frequency.
          */
         public Builder backupInterval(String backupInterval) {
             this.backupInterval = backupInterval;
@@ -346,7 +350,11 @@ public class DescribeBackupPolicyResponseBody extends TeaModel {
         }
 
         /**
-         * BackupLog.
+         * Indicates whether the log backup feature is enabled. Valid values:
+         * <p>
+         * 
+         * *   **Enable**
+         * *   **Disabled**
          */
         public Builder backupLog(String backupLog) {
             this.backupLog = backupLog;
@@ -354,7 +362,13 @@ public class DescribeBackupPolicyResponseBody extends TeaModel {
         }
 
         /**
-         * BackupMethod.
+         * The backup method of the instance. Valid values:
+         * <p>
+         * 
+         * *   **Physical**: physical backup
+         * *   **Snapshot**: snapshot backup
+         * 
+         * > This parameter is returned only when the instance runs SQL Server and uses cloud disks.
          */
         public Builder backupMethod(String backupMethod) {
             this.backupMethod = backupMethod;
@@ -362,7 +376,7 @@ public class DescribeBackupPolicyResponseBody extends TeaModel {
         }
 
         /**
-         * BackupRetentionPeriod.
+         * The number of days for which data backup files are retained.
          */
         public Builder backupRetentionPeriod(Integer backupRetentionPeriod) {
             this.backupRetentionPeriod = backupRetentionPeriod;
@@ -370,7 +384,13 @@ public class DescribeBackupPolicyResponseBody extends TeaModel {
         }
 
         /**
-         * Category.
+         * Indicates whether to enable the single-digit second backup feature. This feature allows ApsaraDB RDS to complete a backup within single-digit seconds. Valid values:
+         * <p>
+         * 
+         * *   **Flash**: The single-digit second backup feature is enabled.
+         * *   **Standard**: The single-digit second backup feature is disabled.
+         * 
+         * > This parameter takes effect only when you set the **BackupPolicyMode** parameter to **DataBackupPolicy**.
          */
         public Builder category(String category) {
             this.category = category;
@@ -378,7 +398,14 @@ public class DescribeBackupPolicyResponseBody extends TeaModel {
         }
 
         /**
-         * CompressType.
+         * The method that is used to compress backup data. Valid values:
+         * <p>
+         * 
+         * *   **0**: Backup data is not compressed.
+         * *   **1**: Backup data is compressed by using zlib.
+         * *   **2**: Backup data is compressed by using zlib that invokes more than one thread in parallel for each backup.
+         * *   **4**: Backup data is compressed by using QuickLZ and can be used to restore individual databases and tables.
+         * *   **8**: Backup data is compressed by using QuickLZ but cannot be used to restore individual databases or tables. This value is available only when the instance runs MySQL 8.0.
          */
         public Builder compressType(String compressType) {
             this.compressType = compressType;
@@ -386,7 +413,11 @@ public class DescribeBackupPolicyResponseBody extends TeaModel {
         }
 
         /**
-         * EnableBackupLog.
+         * Indicates whether the log backup feature is enabled. Valid values:
+         * <p>
+         * 
+         * *   **1**: The log backup feature is enabled.
+         * *   **0**: The log backup feature is disabled.
          */
         public Builder enableBackupLog(String enableBackupLog) {
             this.enableBackupLog = enableBackupLog;
@@ -394,7 +425,11 @@ public class DescribeBackupPolicyResponseBody extends TeaModel {
         }
 
         /**
-         * EnableIncrementDataBackup.
+         * Indicates whether incremental backup is enabled. Valid values:
+         * <p>
+         * 
+         * *   **True**: Incremental backup is enabled.
+         * *   **False**: Incremental backup is disabled.
          */
         public Builder enableIncrementDataBackup(Boolean enableIncrementDataBackup) {
             this.enableIncrementDataBackup = enableIncrementDataBackup;
@@ -402,7 +437,11 @@ public class DescribeBackupPolicyResponseBody extends TeaModel {
         }
 
         /**
-         * HighSpaceUsageProtection.
+         * Indicates whether the log backup deletion feature is enabled. If the disk usage exceeds 80% or the remaining disk space is less than 5 GB on the instance, this feature deletes binary log files. Valid values:
+         * <p>
+         * 
+         * *   **Disable**
+         * *   **Enable**
          */
         public Builder highSpaceUsageProtection(String highSpaceUsageProtection) {
             this.highSpaceUsageProtection = highSpaceUsageProtection;
@@ -410,7 +449,7 @@ public class DescribeBackupPolicyResponseBody extends TeaModel {
         }
 
         /**
-         * LocalLogRetentionHours.
+         * The number of hours for which log backup files are retained on the instance.
          */
         public Builder localLogRetentionHours(Integer localLogRetentionHours) {
             this.localLogRetentionHours = localLogRetentionHours;
@@ -418,7 +457,7 @@ public class DescribeBackupPolicyResponseBody extends TeaModel {
         }
 
         /**
-         * LocalLogRetentionSpace.
+         * The maximum storage usage that is allowed for log files on the instance.
          */
         public Builder localLogRetentionSpace(String localLogRetentionSpace) {
             this.localLogRetentionSpace = localLogRetentionSpace;
@@ -426,7 +465,13 @@ public class DescribeBackupPolicyResponseBody extends TeaModel {
         }
 
         /**
-         * LogBackupFrequency.
+         * The backup frequency of logs. Valid values:
+         * <p>
+         * 
+         * *   **LogInterval**: Log backups are performed every 30 minutes.
+         * *   Default value: same as the value of the **PreferredBackupPeriod** parameter.
+         * 
+         * > The **LogBackupFrequency** parameter is supported only when the instance runs **SQL Server**.
          */
         public Builder logBackupFrequency(String logBackupFrequency) {
             this.logBackupFrequency = logBackupFrequency;
@@ -434,7 +479,7 @@ public class DescribeBackupPolicyResponseBody extends TeaModel {
         }
 
         /**
-         * LogBackupLocalRetentionNumber.
+         * The number of binary log files that you want to retain on the instance.
          */
         public Builder logBackupLocalRetentionNumber(Integer logBackupLocalRetentionNumber) {
             this.logBackupLocalRetentionNumber = logBackupLocalRetentionNumber;
@@ -442,7 +487,7 @@ public class DescribeBackupPolicyResponseBody extends TeaModel {
         }
 
         /**
-         * LogBackupRetentionPeriod.
+         * The number of days for which log backup files are retained.
          */
         public Builder logBackupRetentionPeriod(Integer logBackupRetentionPeriod) {
             this.logBackupRetentionPeriod = logBackupRetentionPeriod;
@@ -450,7 +495,16 @@ public class DescribeBackupPolicyResponseBody extends TeaModel {
         }
 
         /**
-         * PreferredBackupPeriod.
+         * The cycle based on which you want to perform a backup. Separate multiple values with commas (,). Valid values:
+         * <p>
+         * 
+         * *   **Monday**
+         * *   **Tuesday**
+         * *   **Wednesday**
+         * *   **Thursday**
+         * *   **Friday**
+         * *   **Saturday**
+         * *   **Sunday**
          */
         public Builder preferredBackupPeriod(String preferredBackupPeriod) {
             this.preferredBackupPeriod = preferredBackupPeriod;
@@ -458,7 +512,7 @@ public class DescribeBackupPolicyResponseBody extends TeaModel {
         }
 
         /**
-         * PreferredBackupTime.
+         * The time when a data backup is performed. The time follows the ISO 8601 standard in the *HH:mm*Z-*HH:mm*Z format. The time is displayed in UTC.
          */
         public Builder preferredBackupTime(String preferredBackupTime) {
             this.preferredBackupTime = preferredBackupTime;
@@ -466,7 +520,7 @@ public class DescribeBackupPolicyResponseBody extends TeaModel {
         }
 
         /**
-         * PreferredNextBackupTime.
+         * The time when the next backup is performed. The time follows the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm*Z format. The time is displayed in UTC.
          */
         public Builder preferredNextBackupTime(String preferredNextBackupTime) {
             this.preferredNextBackupTime = preferredNextBackupTime;
@@ -474,7 +528,12 @@ public class DescribeBackupPolicyResponseBody extends TeaModel {
         }
 
         /**
-         * ReleasedKeepPolicy.
+         * The policy that is used to retain archived backup files if the instance is released. Valid values:
+         * <p>
+         * 
+         * *   **None**: No archived backup files are retained.
+         * *   **Lastest**: Only the last archived backup file is retained.
+         * *   **All**: All archived backup files are retained.
          */
         public Builder releasedKeepPolicy(String releasedKeepPolicy) {
             this.releasedKeepPolicy = releasedKeepPolicy;
@@ -482,7 +541,7 @@ public class DescribeBackupPolicyResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -490,7 +549,7 @@ public class DescribeBackupPolicyResponseBody extends TeaModel {
         }
 
         /**
-         * SupportReleasedKeep.
+         * A reserved parameter.
          */
         public Builder supportReleasedKeep(Integer supportReleasedKeep) {
             this.supportReleasedKeep = supportReleasedKeep;
@@ -498,7 +557,13 @@ public class DescribeBackupPolicyResponseBody extends TeaModel {
         }
 
         /**
-         * SupportVolumeShadowCopy.
+         * Indicates whether the instance supports snapshot backups. Valid values:
+         * <p>
+         * 
+         * *   **1**: The instance supports snapshot backups.
+         * *   **0**: The instance does not support snapshot backups.
+         * 
+         * > This parameter is returned only when the instance runs SQL Server.
          */
         public Builder supportVolumeShadowCopy(Integer supportVolumeShadowCopy) {
             this.supportVolumeShadowCopy = supportVolumeShadowCopy;

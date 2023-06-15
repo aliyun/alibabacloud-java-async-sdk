@@ -62,7 +62,7 @@ public class DescribeActionEventPolicyResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * EnableEventLog.
+         * Indicates whether the event history feature is enabled.
          */
         public Builder enableEventLog(String enableEventLog) {
             this.enableEventLog = enableEventLog;
@@ -70,7 +70,7 @@ public class DescribeActionEventPolicyResponseBody extends TeaModel {
         }
 
         /**
-         * RegionId.
+         * The ID of the region.
          */
         public Builder regionId(String regionId) {
             this.regionId = regionId;
@@ -78,7 +78,7 @@ public class DescribeActionEventPolicyResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

@@ -98,7 +98,7 @@ public class DescribeLogBackupFilesResponseBody extends TeaModel {
         private Integer totalRecordCount; 
 
         /**
-         * Items.
+         * The details of log files.
          */
         public Builder items(Items items) {
             this.items = items;
@@ -106,7 +106,7 @@ public class DescribeLogBackupFilesResponseBody extends TeaModel {
         }
 
         /**
-         * PageNumber.
+         * The page number.
          */
         public Builder pageNumber(Integer pageNumber) {
             this.pageNumber = pageNumber;
@@ -114,7 +114,7 @@ public class DescribeLogBackupFilesResponseBody extends TeaModel {
         }
 
         /**
-         * PageRecordCount.
+         * The number of log files on the current page.
          */
         public Builder pageRecordCount(Integer pageRecordCount) {
             this.pageRecordCount = pageRecordCount;
@@ -122,7 +122,7 @@ public class DescribeLogBackupFilesResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -130,7 +130,7 @@ public class DescribeLogBackupFilesResponseBody extends TeaModel {
         }
 
         /**
-         * TotalFileSize.
+         * The total size of log files. Unit: bytes.
          */
         public Builder totalFileSize(Long totalFileSize) {
             this.totalFileSize = totalFileSize;
@@ -138,7 +138,7 @@ public class DescribeLogBackupFilesResponseBody extends TeaModel {
         }
 
         /**
-         * TotalRecordCount.
+         * The total number of log files.
          */
         public Builder totalRecordCount(Integer totalRecordCount) {
             this.totalRecordCount = totalRecordCount;
@@ -238,7 +238,7 @@ public class DescribeLogBackupFilesResponseBody extends TeaModel {
             private String logEndTime; 
 
             /**
-             * DownloadLink.
+             * The HTTP-based download URL of the log file. If the log file cannot be downloaded, an empty string is returned.
              */
             public Builder downloadLink(String downloadLink) {
                 this.downloadLink = downloadLink;
@@ -246,7 +246,7 @@ public class DescribeLogBackupFilesResponseBody extends TeaModel {
             }
 
             /**
-             * FileSize.
+             * The size of the log file. Unit: bytes.
              */
             public Builder fileSize(Long fileSize) {
                 this.fileSize = fileSize;
@@ -254,7 +254,7 @@ public class DescribeLogBackupFilesResponseBody extends TeaModel {
             }
 
             /**
-             * IntranetDownloadLink.
+             * The URL that is used to download the log file over an internal network. If the log file cannot be downloaded, an empty string is returned. This URL is valid for one hour.
              */
             public Builder intranetDownloadLink(String intranetDownloadLink) {
                 this.intranetDownloadLink = intranetDownloadLink;
@@ -262,7 +262,7 @@ public class DescribeLogBackupFilesResponseBody extends TeaModel {
             }
 
             /**
-             * LinkExpiredTime.
+             * The expiration time of the URL. The time follows the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time is displayed in UTC.
              */
             public Builder linkExpiredTime(String linkExpiredTime) {
                 this.linkExpiredTime = linkExpiredTime;
@@ -270,7 +270,7 @@ public class DescribeLogBackupFilesResponseBody extends TeaModel {
             }
 
             /**
-             * LogBeginTime.
+             * The start time of the log file. The time follows the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm*Z format. The time is displayed in UTC.
              */
             public Builder logBeginTime(String logBeginTime) {
                 this.logBeginTime = logBeginTime;
@@ -278,7 +278,7 @@ public class DescribeLogBackupFilesResponseBody extends TeaModel {
             }
 
             /**
-             * LogEndTime.
+             * The end time of the log file. The time follows the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm*Z format. The time is displayed in UTC.
              */
             public Builder logEndTime(String logEndTime) {
                 this.logEndTime = logEndTime;

@@ -13,12 +13,24 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class CloneDBInstanceRequest extends Request {
     @Query
+    @NameInMap("AutoPay")
+    private Boolean autoPay;
+
+    @Query
     @NameInMap("BackupId")
     private String backupId;
 
     @Query
     @NameInMap("BackupType")
     private String backupType;
+
+    @Query
+    @NameInMap("BpeEnabled")
+    private String bpeEnabled;
+
+    @Query
+    @NameInMap("BurstingEnabled")
+    private Boolean burstingEnabled;
 
     @Query
     @NameInMap("Category")
@@ -110,10 +122,21 @@ public class CloneDBInstanceRequest extends Request {
     @NameInMap("ZoneId")
     private String zoneId;
 
+    @Query
+    @NameInMap("ZoneIdSlave1")
+    private String zoneIdSlave1;
+
+    @Query
+    @NameInMap("ZoneIdSlave2")
+    private String zoneIdSlave2;
+
     private CloneDBInstanceRequest(Builder builder) {
         super(builder);
+        this.autoPay = builder.autoPay;
         this.backupId = builder.backupId;
         this.backupType = builder.backupType;
+        this.bpeEnabled = builder.bpeEnabled;
+        this.burstingEnabled = builder.burstingEnabled;
         this.category = builder.category;
         this.DBInstanceClass = builder.DBInstanceClass;
         this.DBInstanceId = builder.DBInstanceId;
@@ -136,6 +159,8 @@ public class CloneDBInstanceRequest extends Request {
         this.VPCId = builder.VPCId;
         this.vSwitchId = builder.vSwitchId;
         this.zoneId = builder.zoneId;
+        this.zoneIdSlave1 = builder.zoneIdSlave1;
+        this.zoneIdSlave2 = builder.zoneIdSlave2;
     }
 
     public static Builder builder() {
@@ -152,6 +177,13 @@ public class CloneDBInstanceRequest extends Request {
     }
 
     /**
+     * @return autoPay
+     */
+    public Boolean getAutoPay() {
+        return this.autoPay;
+    }
+
+    /**
      * @return backupId
      */
     public String getBackupId() {
@@ -163,6 +195,20 @@ public class CloneDBInstanceRequest extends Request {
      */
     public String getBackupType() {
         return this.backupType;
+    }
+
+    /**
+     * @return bpeEnabled
+     */
+    public String getBpeEnabled() {
+        return this.bpeEnabled;
+    }
+
+    /**
+     * @return burstingEnabled
+     */
+    public Boolean getBurstingEnabled() {
+        return this.burstingEnabled;
     }
 
     /**
@@ -319,9 +365,26 @@ public class CloneDBInstanceRequest extends Request {
         return this.zoneId;
     }
 
+    /**
+     * @return zoneIdSlave1
+     */
+    public String getZoneIdSlave1() {
+        return this.zoneIdSlave1;
+    }
+
+    /**
+     * @return zoneIdSlave2
+     */
+    public String getZoneIdSlave2() {
+        return this.zoneIdSlave2;
+    }
+
     public static final class Builder extends Request.Builder<CloneDBInstanceRequest, Builder> {
+        private Boolean autoPay; 
         private String backupId; 
         private String backupType; 
+        private String bpeEnabled; 
+        private Boolean burstingEnabled; 
         private String category; 
         private String DBInstanceClass; 
         private String DBInstanceId; 
@@ -344,6 +407,8 @@ public class CloneDBInstanceRequest extends Request {
         private String VPCId; 
         private String vSwitchId; 
         private String zoneId; 
+        private String zoneIdSlave1; 
+        private String zoneIdSlave2; 
 
         private Builder() {
             super();
@@ -351,8 +416,11 @@ public class CloneDBInstanceRequest extends Request {
 
         private Builder(CloneDBInstanceRequest request) {
             super(request);
+            this.autoPay = request.autoPay;
             this.backupId = request.backupId;
             this.backupType = request.backupType;
+            this.bpeEnabled = request.bpeEnabled;
+            this.burstingEnabled = request.burstingEnabled;
             this.category = request.category;
             this.DBInstanceClass = request.DBInstanceClass;
             this.DBInstanceId = request.DBInstanceId;
@@ -375,10 +443,26 @@ public class CloneDBInstanceRequest extends Request {
             this.VPCId = request.VPCId;
             this.vSwitchId = request.vSwitchId;
             this.zoneId = request.zoneId;
+            this.zoneIdSlave1 = request.zoneIdSlave1;
+            this.zoneIdSlave2 = request.zoneIdSlave2;
         } 
 
         /**
-         * BackupId.
+         * AutoPay.
+         */
+        public Builder autoPay(Boolean autoPay) {
+            this.putQueryParameter("AutoPay", autoPay);
+            this.autoPay = autoPay;
+            return this;
+        }
+
+        /**
+         * The ID of the backup set.
+         * <p>
+         * 
+         * You can call the [DescribeBackups](~~26273~~) operation to query the backup sets.
+         * 
+         * > You must specify at least one of the **BackupId** and **RestoreTime** parameters.
          */
         public Builder backupId(String backupId) {
             this.putQueryParameter("BackupId", backupId);
@@ -387,7 +471,11 @@ public class CloneDBInstanceRequest extends Request {
         }
 
         /**
-         * BackupType.
+         * The type of backup that is used to restore the data of the original instance. Valid values:
+         * <p>
+         * 
+         * *   **FullBackup**
+         * *   **IncrementalBackup**
          */
         public Builder backupType(String backupType) {
             this.putQueryParameter("BackupType", backupType);
@@ -396,7 +484,33 @@ public class CloneDBInstanceRequest extends Request {
         }
 
         /**
-         * Category.
+         * BpeEnabled.
+         */
+        public Builder bpeEnabled(String bpeEnabled) {
+            this.putQueryParameter("BpeEnabled", bpeEnabled);
+            this.bpeEnabled = bpeEnabled;
+            return this;
+        }
+
+        /**
+         * BurstingEnabled.
+         */
+        public Builder burstingEnabled(Boolean burstingEnabled) {
+            this.putQueryParameter("BurstingEnabled", burstingEnabled);
+            this.burstingEnabled = burstingEnabled;
+            return this;
+        }
+
+        /**
+         * The RDS edition of the instance. Valid values:
+         * <p>
+         * 
+         * *   **Basic**: RDS Basic Edition.
+         * *   **HighAvailability**: RDS High-availability Edition.
+         * *   **AlwaysOn**: RDS Cluster Edition for SQL Server.
+         * *   **cluster**: RDS Cluster Edition for MySQL.
+         * *   **Finance**: RDS Enterprise Edition. This edition is available only on the China site (aliyun.com).
+         * *   **serverless_basic**: RDS Serverless Basic Edition.
          */
         public Builder category(String category) {
             this.putQueryParameter("Category", category);
@@ -405,7 +519,10 @@ public class CloneDBInstanceRequest extends Request {
         }
 
         /**
-         * DBInstanceClass.
+         * The instance type of the new instance. For information, see [Primary ApsaraDB RDS instance types](~~26312~~).
+         * <p>
+         * 
+         * > By default, the new instance uses the same instance type as the original primary instance.
          */
         public Builder DBInstanceClass(String DBInstanceClass) {
             this.putQueryParameter("DBInstanceClass", DBInstanceClass);
@@ -414,7 +531,7 @@ public class CloneDBInstanceRequest extends Request {
         }
 
         /**
-         * DBInstanceId.
+         * The ID of the instance.
          */
         public Builder DBInstanceId(String DBInstanceId) {
             this.putQueryParameter("DBInstanceId", DBInstanceId);
@@ -423,7 +540,10 @@ public class CloneDBInstanceRequest extends Request {
         }
 
         /**
-         * DBInstanceStorage.
+         * The storage capacity of the new instance. Unit: GB. You can increase the storage capacity in increments of 5 GB. For more information, see [Primary ApsaraDB RDS instance types](~~26312~~).
+         * <p>
+         * 
+         * > By default, the new instance has the same storage capacity as the original primary instance.
          */
         public Builder DBInstanceStorage(Integer DBInstanceStorage) {
             this.putQueryParameter("DBInstanceStorage", DBInstanceStorage);
@@ -432,7 +552,14 @@ public class CloneDBInstanceRequest extends Request {
         }
 
         /**
-         * DBInstanceStorageType.
+         * The storage type of the new instance. Valid values:
+         * <p>
+         * 
+         * *   **local_ssd**: local SSD
+         * *   **cloud_ssd**: standard SSD
+         * *   **cloud_essd**: enhanced SSD (ESSD) of performance level 1 (PL1)
+         * *   **cloud_essd2**: ESSD of PL2
+         * *   **cloud_essd3**: ESSD of PL3
          */
         public Builder DBInstanceStorageType(String DBInstanceStorageType) {
             this.putQueryParameter("DBInstanceStorageType", DBInstanceStorageType);
@@ -441,7 +568,7 @@ public class CloneDBInstanceRequest extends Request {
         }
 
         /**
-         * DbNames.
+         * The name of the database. If you specify more than one database, the value is in the following format: `Original database name 1,Original database name 2`.
          */
         public Builder dbNames(String dbNames) {
             this.putQueryParameter("DbNames", dbNames);
@@ -450,7 +577,7 @@ public class CloneDBInstanceRequest extends Request {
         }
 
         /**
-         * DedicatedHostGroupId.
+         * The ID of the dedicated cluster.
          */
         public Builder dedicatedHostGroupId(String dedicatedHostGroupId) {
             this.putQueryParameter("DedicatedHostGroupId", dedicatedHostGroupId);
@@ -459,7 +586,13 @@ public class CloneDBInstanceRequest extends Request {
         }
 
         /**
-         * DeletionProtection.
+         * Specifies whether to enable the release protection feature for the new instance. Valid values:
+         * <p>
+         * 
+         * *   **true**
+         * *   **false**
+         * 
+         * Default value: **false**.
          */
         public Builder deletionProtection(Boolean deletionProtection) {
             this.putQueryParameter("DeletionProtection", deletionProtection);
@@ -468,7 +601,13 @@ public class CloneDBInstanceRequest extends Request {
         }
 
         /**
-         * InstanceNetworkType.
+         * The network type of the new instance. Valid values:
+         * <p>
+         * 
+         * *   **VPC**
+         * *   **Classic**
+         * 
+         * > By default, the new instance has the same network type as the original primary instance.
          */
         public Builder instanceNetworkType(String instanceNetworkType) {
             this.putQueryParameter("InstanceNetworkType", instanceNetworkType);
@@ -477,7 +616,12 @@ public class CloneDBInstanceRequest extends Request {
         }
 
         /**
-         * PayType.
+         * The billing method of the read-only instance. Valid values:
+         * <p>
+         * 
+         * *   **Postpaid**: pay-as-you-go
+         * *   **Prepaid**: subscription
+         * *   **Serverless**: serverless. This value is supported only for instances that run MySQL. For more information, see [Overview](~~411291~~).
          */
         public Builder payType(String payType) {
             this.putQueryParameter("PayType", payType);
@@ -486,7 +630,13 @@ public class CloneDBInstanceRequest extends Request {
         }
 
         /**
-         * Period.
+         * The unit that is used to calculate the billing cycle of the new instance. Valid values:
+         * <p>
+         * 
+         * *   **Year**
+         * *   **Month**
+         * 
+         * > If you set the PayType parameter to **Prepaid**, you must also specify this parameter.
          */
         public Builder period(String period) {
             this.putQueryParameter("Period", period);
@@ -495,7 +645,7 @@ public class CloneDBInstanceRequest extends Request {
         }
 
         /**
-         * PrivateIpAddress.
+         * The internal IP address of the new instance, which must be within the CIDR block supported by the specified vSwitch. The system automatically assigns an internal IP address based on the values of the **VPCId** and **VSwitchId** parameters.
          */
         public Builder privateIpAddress(String privateIpAddress) {
             this.putQueryParameter("PrivateIpAddress", privateIpAddress);
@@ -504,7 +654,7 @@ public class CloneDBInstanceRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * The region ID of the new instance. You can call the [DescribeRegions](~~26243~~) operation to query the most recent region list.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -522,7 +672,7 @@ public class CloneDBInstanceRequest extends Request {
         }
 
         /**
-         * RestoreTable.
+         * Specifies whether to restore only the databases and tables that you specify. The value **1** specifies to restore only the specified databases and tables. If you do not want to restore only the specified databases or tables, you do not need to specify this parameter.
          */
         public Builder restoreTable(String restoreTable) {
             this.putQueryParameter("RestoreTable", restoreTable);
@@ -531,7 +681,10 @@ public class CloneDBInstanceRequest extends Request {
         }
 
         /**
-         * RestoreTime.
+         * The point in time to which you want to restore data. The point in time must fall within the specified backup retention period. Specify the time in the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time must be in UTC.
+         * <p>
+         * 
+         * > You must specify at least one of the **BackupId** and **RestoreTime** parameters.
          */
         public Builder restoreTime(String restoreTime) {
             this.putQueryParameter("RestoreTime", restoreTime);
@@ -540,7 +693,7 @@ public class CloneDBInstanceRequest extends Request {
         }
 
         /**
-         * ServerlessConfig.
+         * The configuration of the serverless instance. You must specify this parameter only when you restore data to a new serverless instance.
          */
         public Builder serverlessConfig(ServerlessConfig serverlessConfig) {
             String serverlessConfigShrink = shrink(serverlessConfig, "ServerlessConfig", "json");
@@ -550,7 +703,7 @@ public class CloneDBInstanceRequest extends Request {
         }
 
         /**
-         * TableMeta.
+         * The information about the database and table that you want to restore. The value is in the following format: `[{"type":"db","name":"Name of Database 1","newname":"New name of Database 1","tables":[{"type":"table","name":"Name of Table 1 in Database 1","newname":"New name of Table 1"},{"type":"table","name":"Name of Table 2 in Database 1","newname":"New name of Table 2"}]},{"type":"db","name":"Name of Database 2","newname":"New name of Database 2","tables":[{"type":"table","name":"Name of Table 1 in Database 2","newname":"New name of Table 1"},{"type":"table","name":"Name of Table 2 in Database 2","newname":"New name of Table 2"}]}]`
          */
         public Builder tableMeta(String tableMeta) {
             this.putQueryParameter("TableMeta", tableMeta);
@@ -559,7 +712,13 @@ public class CloneDBInstanceRequest extends Request {
         }
 
         /**
-         * UsedTime.
+         * The subscription duration of the new instance. Valid values:
+         * <p>
+         * 
+         * *   If you set the **Period** parameter to **Year**, the value of the UsedTime parameter ranges from **1 to 3**.
+         * *   If you set the **Period** parameter to **Month**, the value of the UsedTime parameter ranges from **1 to 9**.
+         * 
+         * > If you set the PayType parameter to **Prepaid**, you must also specify this parameter.
          */
         public Builder usedTime(Integer usedTime) {
             this.putQueryParameter("UsedTime", usedTime);
@@ -568,7 +727,10 @@ public class CloneDBInstanceRequest extends Request {
         }
 
         /**
-         * VPCId.
+         * The ID of the virtual private cloud (VPC).
+         * <p>
+         * 
+         * > Make sure that the VPC belongs to the required region.
          */
         public Builder VPCId(String VPCId) {
             this.putQueryParameter("VPCId", VPCId);
@@ -577,7 +739,14 @@ public class CloneDBInstanceRequest extends Request {
         }
 
         /**
-         * VSwitchId.
+         * The ID of the vSwitch. The vSwitch must belong to the zone that is specified by the **ZoneId** parameter.
+         * <p>
+         * 
+         * > 
+         * 
+         * *   If you set the **InstanceNetworkType** parameter to **VPC**, you must also specify this parameter.
+         * 
+         * *   If you specify the **ZoneSlaveId1** parameter, you must specify the IDs of two vSwitches for this parameter and separate the IDs with a comma (,).
          */
         public Builder vSwitchId(String vSwitchId) {
             this.putQueryParameter("VSwitchId", vSwitchId);
@@ -586,11 +755,32 @@ public class CloneDBInstanceRequest extends Request {
         }
 
         /**
-         * ZoneId.
+         * The zone ID of the primary instance. You can call the [DescribeRegions](~~26243~~) operation to query the most recent zone list.
+         * <p>
+         * 
+         * > By default, the new instance resides in the same region as the original instance.
          */
         public Builder zoneId(String zoneId) {
             this.putQueryParameter("ZoneId", zoneId);
             this.zoneId = zoneId;
+            return this;
+        }
+
+        /**
+         * The zone ID of the secondary instance. If you set the ZoneIdSlave1 parameter and the **ZoneId** parameter to the same value, the single-zone deployment method is used. If you set the ZoneIdSlave1 parameter and the **ZoneId** parameter to different values, the multi-zone deployment method is used.
+         */
+        public Builder zoneIdSlave1(String zoneIdSlave1) {
+            this.putQueryParameter("ZoneIdSlave1", zoneIdSlave1);
+            this.zoneIdSlave1 = zoneIdSlave1;
+            return this;
+        }
+
+        /**
+         * The zone ID of the logger instance. If you set the ZoneIdSlave2 parameter to the same value as the **ZoneId** parameter, the single-zone deployment method is used. If you set the ZoneIdSlave2 parameter to a different value from the **ZoneId** parameter, the multi-zone deployment method is used.
+         */
+        public Builder zoneIdSlave2(String zoneIdSlave2) {
+            this.putQueryParameter("ZoneIdSlave2", zoneIdSlave2);
+            this.zoneIdSlave2 = zoneIdSlave2;
             return this;
         }
 
@@ -664,7 +854,11 @@ public class CloneDBInstanceRequest extends Request {
             private Boolean switchForce; 
 
             /**
-             * AutoPause.
+             * Specifies whether to enable the automatic start and stop feature for the serverless instance. After the automatic start and stop feature is enabled, if no connections to the instance are established within 10 minutes, the instance is suspended. After a connection is established to the instance, the instance is automatically resumed. Valid values:
+             * <p>
+             * 
+             * *   true: enables the feature.
+             * *   false (default): disables the feature.
              */
             public Builder autoPause(Boolean autoPause) {
                 this.autoPause = autoPause;
@@ -672,7 +866,7 @@ public class CloneDBInstanceRequest extends Request {
             }
 
             /**
-             * MaxCapacity.
+             * The maximum number of RDS Capacity Units (RCUs).
              */
             public Builder maxCapacity(Double maxCapacity) {
                 this.maxCapacity = maxCapacity;
@@ -680,7 +874,7 @@ public class CloneDBInstanceRequest extends Request {
             }
 
             /**
-             * MinCapacity.
+             * The minimum number of RCUs.
              */
             public Builder minCapacity(Double minCapacity) {
                 this.minCapacity = minCapacity;
@@ -688,7 +882,11 @@ public class CloneDBInstanceRequest extends Request {
             }
 
             /**
-             * SwitchForce.
+             * Specifies whether to enable the forced scaling feature for the serverless instance. In most cases, ApsaraDB RDS automatically scales in or out the RCUs of a serverless instance based on business requirements in real time. In rare cases, the scaling does not take effect in real time. You can enable the forced scaling feature to forcefully scales in or out the RCUs of the instance. Valid values:
+             * <p>
+             * 
+             * *   true: enables the feature.
+             * *   false (default): disables the feature.
              */
             public Builder switchForce(Boolean switchForce) {
                 this.switchForce = switchForce;

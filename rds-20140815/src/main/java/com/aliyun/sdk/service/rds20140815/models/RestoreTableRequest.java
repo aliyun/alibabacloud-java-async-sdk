@@ -182,7 +182,12 @@ public class RestoreTableRequest extends Request {
         } 
 
         /**
-         * BackupId.
+         * The ID of the backup set.
+         * <p>
+         * 
+         * You can call the [DescribeBackups](~~26273~~) operation to obtain the ID of the backup set.
+         * 
+         * > You must specify at least one of **BackupId** and **RestoreTime**.
          */
         public Builder backupId(String backupId) {
             this.putQueryParameter("BackupId", backupId);
@@ -191,7 +196,7 @@ public class RestoreTableRequest extends Request {
         }
 
         /**
-         * ClientToken.
+         * The client token that is used to ensure the idempotence of the request. You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters and cannot exceed 64 characters in length.
          */
         public Builder clientToken(String clientToken) {
             this.putQueryParameter("ClientToken", clientToken);
@@ -200,7 +205,7 @@ public class RestoreTableRequest extends Request {
         }
 
         /**
-         * DBInstanceId.
+         * The ID of the instance.
          */
         public Builder DBInstanceId(String DBInstanceId) {
             this.putQueryParameter("DBInstanceId", DBInstanceId);
@@ -209,7 +214,13 @@ public class RestoreTableRequest extends Request {
         }
 
         /**
-         * InstantRecovery.
+         * Specifies whether to enable the fast restoration feature for individual databases and tables. Valid values:
+         * <p>
+         * 
+         * *   **true**: enables the feature.
+         * *   **false**: disables the feature.
+         * 
+         * > For more information, see [Restore individual databases and tables of an ApsaraDB RDS for MySQL instance](~~103175~~).
          */
         public Builder instantRecovery(Boolean instantRecovery) {
             this.putQueryParameter("InstantRecovery", instantRecovery);
@@ -254,7 +265,14 @@ public class RestoreTableRequest extends Request {
         }
 
         /**
-         * RestoreTime.
+         * The point in time to which you want to restore data. The point in time must fall within the specified log backup retention period. Specify the time in the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time must be in UTC.
+         * <p>
+         * 
+         * > 
+         * 
+         * *   You must specify at least one of **BackupId** and **RestoreTime**.
+         * 
+         * *   You must enable the log backup feature. For more information, see [Back up an ApsaraDB RDS for MySQL instance](~~98818~~).
          */
         public Builder restoreTime(String restoreTime) {
             this.putQueryParameter("RestoreTime", restoreTime);
@@ -263,7 +281,7 @@ public class RestoreTableRequest extends Request {
         }
 
         /**
-         * TableMeta.
+         * The names of the databases and tables that you want to restore. The value is in the following format: `[{"type":"db","name":"<The name of Database 1 on the source instance>","newname":"<The name of Database 1 on the destination instance>","tables":[{"type":"table","name":"<The name of Table 1 in Database 1 on the source instance>","newname":"<The name of Table 1 in Database 1 on the destination instance>"},{"type":"table","name":"<The name of Table 2 in Database 1 on the source instance>","newname":"<The name of Table 2 in Database 1 on the destination instance>"}]},{"type":"db","name":"<The name of Database 2 on the source instance>","newname":"<The name of Database 2 on the destination instance>","tables":[{"type":"table","name":"<The name of Table 3 in Database 2 on the source instance>","newname":"<The name of Table 3 in Database 2 on the destination instance>"},{"type":"table","name":"<The name of Table 4 in Database 2 on the source instance>","newname":"<The name of Table 4 in Database 2 on the destination instance>"}]}]`
          */
         public Builder tableMeta(String tableMeta) {
             this.putQueryParameter("TableMeta", tableMeta);

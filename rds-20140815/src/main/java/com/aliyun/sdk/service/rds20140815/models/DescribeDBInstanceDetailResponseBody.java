@@ -86,7 +86,7 @@ public class DescribeDBInstanceDetailResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * ActivationState.
+         * Indicates whether the instance is in the active state.
          */
         public Builder activationState(String activationState) {
             this.activationState = activationState;
@@ -94,7 +94,7 @@ public class DescribeDBInstanceDetailResponseBody extends TeaModel {
         }
 
         /**
-         * DBInstanceId.
+         * The ID of the instance.
          */
         public Builder DBInstanceId(String DBInstanceId) {
             this.DBInstanceId = DBInstanceId;
@@ -102,7 +102,7 @@ public class DescribeDBInstanceDetailResponseBody extends TeaModel {
         }
 
         /**
-         * LicenseType.
+         * The type of the license.
          */
         public Builder licenseType(String licenseType) {
             this.licenseType = licenseType;
@@ -110,7 +110,7 @@ public class DescribeDBInstanceDetailResponseBody extends TeaModel {
         }
 
         /**
-         * RegionId.
+         * The region ID of the instance.
          */
         public Builder regionId(String regionId) {
             this.regionId = regionId;
@@ -118,7 +118,7 @@ public class DescribeDBInstanceDetailResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

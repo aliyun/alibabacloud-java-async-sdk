@@ -111,7 +111,7 @@ public class ActivateMigrationTargetInstanceRequest extends Request {
         } 
 
         /**
-         * DBInstanceName.
+         * The ID of the destination instance. You can call the [DescribeDBInstances](~~26232~~) operation to query the IDs of instances.
          */
         public Builder DBInstanceName(String DBInstanceName) {
             this.putQueryParameter("DBInstanceName", DBInstanceName);
@@ -120,7 +120,7 @@ public class ActivateMigrationTargetInstanceRequest extends Request {
         }
 
         /**
-         * ForceSwitch.
+         * Specifies whether to forcefully perform a switchover. Set the value to 1. The value 1 specifies a forceful switchover.
          */
         public Builder forceSwitch(String forceSwitch) {
             this.putQueryParameter("ForceSwitch", forceSwitch);
@@ -138,7 +138,7 @@ public class ActivateMigrationTargetInstanceRequest extends Request {
         }
 
         /**
-         * SwitchTime.
+         * A reserved parameter. This parameter does not take effect.
          */
         public Builder switchTime(String switchTime) {
             this.putQueryParameter("SwitchTime", switchTime);
@@ -147,7 +147,10 @@ public class ActivateMigrationTargetInstanceRequest extends Request {
         }
 
         /**
-         * SwitchTimeMode.
+         * The time when you want to perform the switchover.
+         * <p>
+         * 
+         * Set the value to 0. The value 0 specifies an immediate switchover.
          */
         public Builder switchTimeMode(String switchTimeMode) {
             this.putQueryParameter("SwitchTimeMode", switchTimeMode);

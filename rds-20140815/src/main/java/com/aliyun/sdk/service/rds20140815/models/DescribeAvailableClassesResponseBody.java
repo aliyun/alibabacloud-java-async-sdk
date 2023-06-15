@@ -50,7 +50,7 @@ public class DescribeAvailableClassesResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * DBInstanceClasses.
+         * An array that consists of the instance types available for the instance.
          */
         public Builder DBInstanceClasses(java.util.List < DBInstanceClasses> DBInstanceClasses) {
             this.DBInstanceClasses = DBInstanceClasses;
@@ -58,7 +58,7 @@ public class DescribeAvailableClassesResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -122,7 +122,7 @@ public class DescribeAvailableClassesResponseBody extends TeaModel {
             private Integer step; 
 
             /**
-             * MaxValue.
+             * The maximum storage capacity that is supported for the instance. Unit: GB.
              */
             public Builder maxValue(Integer maxValue) {
                 this.maxValue = maxValue;
@@ -130,7 +130,7 @@ public class DescribeAvailableClassesResponseBody extends TeaModel {
             }
 
             /**
-             * MinValue.
+             * The minimum storage capacity that is supported for the instance. Unit: GB.
              */
             public Builder minValue(Integer minValue) {
                 this.minValue = minValue;
@@ -138,7 +138,7 @@ public class DescribeAvailableClassesResponseBody extends TeaModel {
             }
 
             /**
-             * Step.
+             * The minimum step size at which you can adjust the storage capacity of the instance. The minimum step size is 5 GB.
              */
             public Builder step(Integer step) {
                 this.step = step;
@@ -191,7 +191,7 @@ public class DescribeAvailableClassesResponseBody extends TeaModel {
             private DBInstanceStorageRange DBInstanceStorageRange; 
 
             /**
-             * DBInstanceClass.
+             * The instance type of the instance.
              */
             public Builder DBInstanceClass(String DBInstanceClass) {
                 this.DBInstanceClass = DBInstanceClass;
@@ -199,7 +199,7 @@ public class DescribeAvailableClassesResponseBody extends TeaModel {
             }
 
             /**
-             * DBInstanceStorageRange.
+             * The storage capacity range that is supported for the instance.
              */
             public Builder DBInstanceStorageRange(DBInstanceStorageRange DBInstanceStorageRange) {
                 this.DBInstanceStorageRange = DBInstanceStorageRange;

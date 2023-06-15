@@ -125,7 +125,7 @@ public class DescribeDedicatedHostGroupsRequest extends Request {
         } 
 
         /**
-         * DedicatedHostGroupId.
+         * The ID of the dedicated cluster.
          */
         public Builder dedicatedHostGroupId(String dedicatedHostGroupId) {
             this.putQueryParameter("DedicatedHostGroupId", dedicatedHostGroupId);
@@ -134,7 +134,13 @@ public class DescribeDedicatedHostGroupsRequest extends Request {
         }
 
         /**
-         * ImageCategory.
+         * The image based on which the hosts in the dedicated clusters are created. Valid values:
+         * <p>
+         * 
+         * *   **WindowsWithMssqlStdLicense**: a Windows image, which contains the licenses of the SQL Server Standard Edition
+         * *   **WindowsWithMssqlEntLisence**: a Windows image, which contains the licenses of the SQL Server Enterprise Edition
+         * *   **WindowsWithMssqlWebLisence**: a Windows image, which contains the licenses of the SQL Server Web Edition
+         * *   **AliLinux**: a Linux image
          */
         public Builder imageCategory(String imageCategory) {
             this.putQueryParameter("ImageCategory", imageCategory);
@@ -152,7 +158,7 @@ public class DescribeDedicatedHostGroupsRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * The region ID of the dedicated clusters. You can call the [DescribeRegions](~~26243~~) operation to query the most recent region list.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);

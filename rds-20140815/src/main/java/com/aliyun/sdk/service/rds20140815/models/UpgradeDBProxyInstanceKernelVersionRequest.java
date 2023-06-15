@@ -139,7 +139,7 @@ public class UpgradeDBProxyInstanceKernelVersionRequest extends Request {
         } 
 
         /**
-         * DBInstanceId.
+         * The ID of the instance. You can call the [DescribeDBInstances](~~26232~~) operation to query the instance ID.
          */
         public Builder DBInstanceId(String DBInstanceId) {
             this.putQueryParameter("DBInstanceId", DBInstanceId);
@@ -148,7 +148,7 @@ public class UpgradeDBProxyInstanceKernelVersionRequest extends Request {
         }
 
         /**
-         * DBProxyEngineType.
+         * An internal parameter. You do not need to specify this parameter.
          */
         public Builder DBProxyEngineType(String DBProxyEngineType) {
             this.putQueryParameter("DBProxyEngineType", DBProxyEngineType);
@@ -184,7 +184,10 @@ public class UpgradeDBProxyInstanceKernelVersionRequest extends Request {
         }
 
         /**
-         * SwitchTime.
+         * The specific point in time when you want to perform the upgrade. Specify the time in the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time must be in UTC.
+         * <p>
+         * 
+         * > If you set **UpgradeTime** to **SpecificTime**, you must specify SwitchTime.
          */
         public Builder switchTime(String switchTime) {
             this.putQueryParameter("SwitchTime", switchTime);
@@ -193,7 +196,18 @@ public class UpgradeDBProxyInstanceKernelVersionRequest extends Request {
         }
 
         /**
-         * UpgradeTime.
+         * The time when you want to upgrade the database proxy version of the instance. Valid values:
+         * <p>
+         * 
+         * *   **MaintainTime**: ApsaraDB RDS performs the upgrade during the maintenance window that you specified. This is the default value. For more information, see [Modify the maintenance window](~~26249~~).
+         * *   **Immediate**: ApsaraDB RDS immediately performs the upgrade.
+         * *   **SpecificTime**: ApsaraDB RDS performs the upgrade at a specified point in time.
+         * 
+         * > 
+         * 
+         * *   If the instance runs MySQL, you can set this parameter to **MaintainTime**, **Immediate**, or **SpecificTime**.
+         * 
+         * *   If the instance runs PostgreSQL, you can set this parameter to **MaintainTime** or **Immediate**.
          */
         public Builder upgradeTime(String upgradeTime) {
             this.putQueryParameter("UpgradeTime", upgradeTime);

@@ -194,7 +194,11 @@ public class DescribeDedicatedHostsRequest extends Request {
         } 
 
         /**
-         * AllocationStatus.
+         * Specifies whether to query the hosts on which you can create instances or those on which you cannot create instances. Valid values:
+         * <p>
+         * 
+         * *   **0**: queries the hosts on which you cannot create instances
+         * *   **1**: queries the hosts on which you can create instances
          */
         public Builder allocationStatus(String allocationStatus) {
             this.putQueryParameter("AllocationStatus", allocationStatus);
@@ -203,7 +207,7 @@ public class DescribeDedicatedHostsRequest extends Request {
         }
 
         /**
-         * DedicatedHostGroupId.
+         * The ID of the dedicated cluster. You can call the [DescribeDedicatedHostGroups](~~141946~~) operation to query the IDs of dedicated clusters.
          */
         public Builder dedicatedHostGroupId(String dedicatedHostGroupId) {
             this.putQueryParameter("DedicatedHostGroupId", dedicatedHostGroupId);
@@ -212,7 +216,7 @@ public class DescribeDedicatedHostsRequest extends Request {
         }
 
         /**
-         * DedicatedHostId.
+         * The ID of the host.
          */
         public Builder dedicatedHostId(String dedicatedHostId) {
             this.putQueryParameter("DedicatedHostId", dedicatedHostId);
@@ -221,7 +225,16 @@ public class DescribeDedicatedHostsRequest extends Request {
         }
 
         /**
-         * HostStatus.
+         * The status of the hosts. Valid values:
+         * <p>
+         * 
+         * *   **0**: queries the hosts that are being created
+         * *   **1**: queries the hosts that are running
+         * *   **2**: queries the hosts that are faulty
+         * *   **3**: queries the hosts that are being replaced
+         * *   **4**: queries the hosts that are deprecated
+         * *   **5**: queries the hosts that are being deleted
+         * *   **6**: queries the hosts that are restarting
          */
         public Builder hostStatus(String hostStatus) {
             this.putQueryParameter("HostStatus", hostStatus);
@@ -230,7 +243,11 @@ public class DescribeDedicatedHostsRequest extends Request {
         }
 
         /**
-         * HostType.
+         * The type of storage media that is used for the hosts. Valid values:
+         * <p>
+         * 
+         * *   **dhg_cloud_ssd**: enhanced solid-state drive (SSD)
+         * *   **dhg_local_ssd**: local SSD
          */
         public Builder hostType(String hostType) {
             this.putQueryParameter("HostType", hostType);
@@ -239,7 +256,7 @@ public class DescribeDedicatedHostsRequest extends Request {
         }
 
         /**
-         * OrderId.
+         * The ID of the order.
          */
         public Builder orderId(Long orderId) {
             this.putQueryParameter("OrderId", orderId);
@@ -257,7 +274,7 @@ public class DescribeDedicatedHostsRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * The region ID of the hosts. You can call the [DescribeRegions](~~26243~~) operation to query the most recent region list.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -284,7 +301,7 @@ public class DescribeDedicatedHostsRequest extends Request {
         }
 
         /**
-         * ZoneId.
+         * The zone ID of the hosts.
          */
         public Builder zoneId(String zoneId) {
             this.putQueryParameter("ZoneId", zoneId);

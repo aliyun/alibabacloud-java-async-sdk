@@ -86,7 +86,7 @@ public class DescribeEventsResponseBody extends TeaModel {
         private Integer totalRecordCount; 
 
         /**
-         * EventItems.
+         * The details of the events.
          */
         public Builder eventItems(EventItems eventItems) {
             this.eventItems = eventItems;
@@ -94,7 +94,7 @@ public class DescribeEventsResponseBody extends TeaModel {
         }
 
         /**
-         * PageNumber.
+         * The page number of the returned page.
          */
         public Builder pageNumber(Integer pageNumber) {
             this.pageNumber = pageNumber;
@@ -102,7 +102,7 @@ public class DescribeEventsResponseBody extends TeaModel {
         }
 
         /**
-         * PageSize.
+         * The number of entries returned per page.
          */
         public Builder pageSize(Integer pageSize) {
             this.pageSize = pageSize;
@@ -110,7 +110,7 @@ public class DescribeEventsResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -118,7 +118,7 @@ public class DescribeEventsResponseBody extends TeaModel {
         }
 
         /**
-         * TotalRecordCount.
+         * The total number of entries returned.
          */
         public Builder totalRecordCount(Integer totalRecordCount) {
             this.totalRecordCount = totalRecordCount;
@@ -290,7 +290,7 @@ public class DescribeEventsResponseBody extends TeaModel {
             private String resourceType; 
 
             /**
-             * CallerUid.
+             * The ID of the user who executed the event.
              */
             public Builder callerUid(Long callerUid) {
                 this.callerUid = callerUid;
@@ -298,7 +298,7 @@ public class DescribeEventsResponseBody extends TeaModel {
             }
 
             /**
-             * EventId.
+             * The ID of the event.
              */
             public Builder eventId(Integer eventId) {
                 this.eventId = eventId;
@@ -306,7 +306,7 @@ public class DescribeEventsResponseBody extends TeaModel {
             }
 
             /**
-             * EventName.
+             * The name of the event. For more information, see [View the event history of an ApsaraDB RDS instance](~~129759~~).
              */
             public Builder eventName(String eventName) {
                 this.eventName = eventName;
@@ -314,7 +314,7 @@ public class DescribeEventsResponseBody extends TeaModel {
             }
 
             /**
-             * EventPayload.
+             * The request or context parameters of the event.
              */
             public Builder eventPayload(String eventPayload) {
                 this.eventPayload = eventPayload;
@@ -322,7 +322,7 @@ public class DescribeEventsResponseBody extends TeaModel {
             }
 
             /**
-             * EventReason.
+             * The source of the event. For more information, see [View the event history of an ApsaraDB RDS instance](~~129759~~).
              */
             public Builder eventReason(String eventReason) {
                 this.eventReason = eventReason;
@@ -330,7 +330,7 @@ public class DescribeEventsResponseBody extends TeaModel {
             }
 
             /**
-             * EventRecordTime.
+             * The time when the event was recorded. The time is slightly later than the time the event occurred.
              */
             public Builder eventRecordTime(String eventRecordTime) {
                 this.eventRecordTime = eventRecordTime;
@@ -338,7 +338,7 @@ public class DescribeEventsResponseBody extends TeaModel {
             }
 
             /**
-             * EventTime.
+             * The time when the event occurred.
              */
             public Builder eventTime(String eventTime) {
                 this.eventTime = eventTime;
@@ -346,7 +346,7 @@ public class DescribeEventsResponseBody extends TeaModel {
             }
 
             /**
-             * EventType.
+             * The type of the event. For more information, see [View the event history of an ApsaraDB RDS instance](~~129759~~).
              */
             public Builder eventType(String eventType) {
                 this.eventType = eventType;
@@ -354,7 +354,7 @@ public class DescribeEventsResponseBody extends TeaModel {
             }
 
             /**
-             * EventUserType.
+             * The type of the user who executed the event.
              */
             public Builder eventUserType(String eventUserType) {
                 this.eventUserType = eventUserType;
@@ -362,7 +362,7 @@ public class DescribeEventsResponseBody extends TeaModel {
             }
 
             /**
-             * RegionId.
+             * The region ID of the instance.
              */
             public Builder regionId(String regionId) {
                 this.regionId = regionId;
@@ -370,7 +370,7 @@ public class DescribeEventsResponseBody extends TeaModel {
             }
 
             /**
-             * ResourceName.
+             * The name of the resource associated with the event. Only instance IDs are supported for this parameter.
              */
             public Builder resourceName(String resourceName) {
                 this.resourceName = resourceName;
@@ -378,7 +378,7 @@ public class DescribeEventsResponseBody extends TeaModel {
             }
 
             /**
-             * ResourceType.
+             * The type of the resource associated with the event. Only instances are supported for this parameter.
              */
             public Builder resourceType(String resourceType) {
                 this.resourceType = resourceType;
@@ -419,7 +419,7 @@ public class DescribeEventsResponseBody extends TeaModel {
             private java.util.List < EventItemsEventItems> eventItems; 
 
             /**
-             * EventItems.
+             * The details of the events.
              */
             public Builder eventItems(java.util.List < EventItemsEventItems> eventItems) {
                 this.eventItems = eventItems;

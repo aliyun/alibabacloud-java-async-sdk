@@ -165,7 +165,7 @@ public class CloneParameterGroupRequest extends Request {
         }
 
         /**
-         * ParameterGroupDesc.
+         * The description of the parameter template in the destination region.
          */
         public Builder parameterGroupDesc(String parameterGroupDesc) {
             this.putQueryParameter("ParameterGroupDesc", parameterGroupDesc);
@@ -174,7 +174,7 @@ public class CloneParameterGroupRequest extends Request {
         }
 
         /**
-         * ParameterGroupId.
+         * The ID of the parameter template. You can call the [DescribeParameterGroups](~~144491~~) operation to query the most recent parameter templates in a region.
          */
         public Builder parameterGroupId(String parameterGroupId) {
             this.putQueryParameter("ParameterGroupId", parameterGroupId);
@@ -183,7 +183,7 @@ public class CloneParameterGroupRequest extends Request {
         }
 
         /**
-         * ParameterGroupName.
+         * The name of the parameter template in the destination region.
          */
         public Builder parameterGroupName(String parameterGroupName) {
             this.putQueryParameter("ParameterGroupName", parameterGroupName);
@@ -192,7 +192,7 @@ public class CloneParameterGroupRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * The ID of the source region to which the parameter template belongs. You can call the [DescribeRegions](~~26243~~) operation to query the most recent region list.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -219,7 +219,7 @@ public class CloneParameterGroupRequest extends Request {
         }
 
         /**
-         * TargetRegionId.
+         * The ID of the destination region. You can call the [DescribeRegions](~~26243~~) operation to query the most recent region list.
          */
         public Builder targetRegionId(String targetRegionId) {
             this.putQueryParameter("TargetRegionId", targetRegionId);

@@ -86,7 +86,7 @@ public class DescribeErrorLogsResponseBody extends TeaModel {
         private Integer totalRecordCount; 
 
         /**
-         * Items.
+         * The list of items in an error log.
          */
         public Builder items(Items items) {
             this.items = items;
@@ -94,7 +94,7 @@ public class DescribeErrorLogsResponseBody extends TeaModel {
         }
 
         /**
-         * PageNumber.
+         * The page number of the returned page.
          */
         public Builder pageNumber(Integer pageNumber) {
             this.pageNumber = pageNumber;
@@ -102,7 +102,7 @@ public class DescribeErrorLogsResponseBody extends TeaModel {
         }
 
         /**
-         * PageRecordCount.
+         * The number of error logs on the current page.
          */
         public Builder pageRecordCount(Integer pageRecordCount) {
             this.pageRecordCount = pageRecordCount;
@@ -110,7 +110,7 @@ public class DescribeErrorLogsResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -118,7 +118,7 @@ public class DescribeErrorLogsResponseBody extends TeaModel {
         }
 
         /**
-         * TotalRecordCount.
+         * The total number of error logs.
          */
         public Builder totalRecordCount(Integer totalRecordCount) {
             this.totalRecordCount = totalRecordCount;
@@ -170,7 +170,7 @@ public class DescribeErrorLogsResponseBody extends TeaModel {
             private String errorInfo; 
 
             /**
-             * CreateTime.
+             * The time when the error log was generated. The time follows the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time is displayed in UTC.
              */
             public Builder createTime(String createTime) {
                 this.createTime = createTime;
@@ -178,7 +178,7 @@ public class DescribeErrorLogsResponseBody extends TeaModel {
             }
 
             /**
-             * ErrorInfo.
+             * The error log information.
              */
             public Builder errorInfo(String errorInfo) {
                 this.errorInfo = errorInfo;

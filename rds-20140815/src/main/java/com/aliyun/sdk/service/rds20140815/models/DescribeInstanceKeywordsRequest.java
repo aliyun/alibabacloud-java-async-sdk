@@ -110,7 +110,11 @@ public class DescribeInstanceKeywordsRequest extends Request {
         } 
 
         /**
-         * Key.
+         * The type of reserved keyword to query. Valid values:
+         * <p>
+         * 
+         * *   **account**
+         * *   **database**
          */
         public Builder key(String key) {
             this.putQueryParameter("Key", key);

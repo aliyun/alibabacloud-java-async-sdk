@@ -62,7 +62,7 @@ public class ListClassesResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * Items.
+         * An array that consists of available instance types.
          */
         public Builder items(java.util.List < Items> items) {
             this.items = items;
@@ -70,7 +70,7 @@ public class ListClassesResponseBody extends TeaModel {
         }
 
         /**
-         * RegionId.
+         * The ID of the region.
          */
         public Builder regionId(String regionId) {
             this.regionId = regionId;
@@ -78,7 +78,7 @@ public class ListClassesResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -226,7 +226,7 @@ public class ListClassesResponseBody extends TeaModel {
             private String referencePrice; 
 
             /**
-             * ClassCode.
+             * The code of the instance type. For more information, see [Primary ApsaraDB RDS instance types](~~26312~~) and [Read-only ApsaraDB RDS instance types](~~145759~~).
              */
             public Builder classCode(String classCode) {
                 this.classCode = classCode;
@@ -234,7 +234,7 @@ public class ListClassesResponseBody extends TeaModel {
             }
 
             /**
-             * ClassGroup.
+             * The instance family. For more information, see [Instance families](~~57184~~).
              */
             public Builder classGroup(String classGroup) {
                 this.classGroup = classGroup;
@@ -242,7 +242,7 @@ public class ListClassesResponseBody extends TeaModel {
             }
 
             /**
-             * Cpu.
+             * The number of cores that are supported by the instance type. Unit: core.
              */
             public Builder cpu(String cpu) {
                 this.cpu = cpu;
@@ -250,7 +250,7 @@ public class ListClassesResponseBody extends TeaModel {
             }
 
             /**
-             * EncryptedMemory.
+             * The size of the encrypted memory that is supported by the security-enhanced instance type. Unit: GB.
              */
             public Builder encryptedMemory(String encryptedMemory) {
                 this.encryptedMemory = encryptedMemory;
@@ -258,7 +258,11 @@ public class ListClassesResponseBody extends TeaModel {
             }
 
             /**
-             * InstructionSetArch.
+             * The architecture of the instance type. Valid values:
+             * <p>
+             * 
+             * *   If the architecture of the instance type is **x86**, an empty string is returned by default.
+             * *   If the architecture of the instance type is **ARM**, **arm** is returned.
              */
             public Builder instructionSetArch(String instructionSetArch) {
                 this.instructionSetArch = instructionSetArch;
@@ -266,7 +270,7 @@ public class ListClassesResponseBody extends TeaModel {
             }
 
             /**
-             * MaxConnections.
+             * The maximum number of connections that are supported by the instance type. Unit: core.
              */
             public Builder maxConnections(String maxConnections) {
                 this.maxConnections = maxConnections;
@@ -274,7 +278,7 @@ public class ListClassesResponseBody extends TeaModel {
             }
 
             /**
-             * MaxIOMBPS.
+             * The maximum I/O bandwidth that is supported by the instance type. Unit: Mbit/s.
              */
             public Builder maxIOMBPS(String maxIOMBPS) {
                 this.maxIOMBPS = maxIOMBPS;
@@ -282,7 +286,7 @@ public class ListClassesResponseBody extends TeaModel {
             }
 
             /**
-             * MaxIOPS.
+             * The maximum input/output operations per second (IOPS) that is supported by the instance type. Unit: operations per second.
              */
             public Builder maxIOPS(String maxIOPS) {
                 this.maxIOPS = maxIOPS;
@@ -290,7 +294,7 @@ public class ListClassesResponseBody extends TeaModel {
             }
 
             /**
-             * MemoryClass.
+             * The memory capacity that is supported by the instance type. Unit: GB.
              */
             public Builder memoryClass(String memoryClass) {
                 this.memoryClass = memoryClass;
@@ -298,7 +302,16 @@ public class ListClassesResponseBody extends TeaModel {
             }
 
             /**
-             * ReferencePrice.
+             * The fee that you must pay for the instance type.
+             * <p>
+             * 
+             * *   Unit: cent (USD).
+             * 
+             * > 
+             * 
+             * *   If you set **CommodityCode** to a value that indicates the pay-as-you-go billing method, the ReferencePrice parameter specifies the hourly fee that you must pay.
+             * 
+             * *   If you set **CommodityCode** to a value that indicates the subscription billing method, the ReferencePrice parameter specifies the monthly fee that you must pay.
              */
             public Builder referencePrice(String referencePrice) {
                 this.referencePrice = referencePrice;

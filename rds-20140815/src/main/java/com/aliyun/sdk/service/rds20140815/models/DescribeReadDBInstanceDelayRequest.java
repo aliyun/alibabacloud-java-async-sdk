@@ -154,7 +154,7 @@ public class DescribeReadDBInstanceDelayRequest extends Request {
         } 
 
         /**
-         * DBInstanceId.
+         * The ID of the primary instance.
          */
         public Builder DBInstanceId(String DBInstanceId) {
             this.putQueryParameter("DBInstanceId", DBInstanceId);
@@ -181,7 +181,7 @@ public class DescribeReadDBInstanceDelayRequest extends Request {
         }
 
         /**
-         * ReadInstanceId.
+         * The ID of the read-only instance.
          */
         public Builder readInstanceId(String readInstanceId) {
             this.putQueryParameter("ReadInstanceId", readInstanceId);
@@ -190,7 +190,7 @@ public class DescribeReadDBInstanceDelayRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * The ID of the region where the global active database clusters that you want to query reside. You can call the [DescribeRegions](~~26243~~) operation to query the most recent region list.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);

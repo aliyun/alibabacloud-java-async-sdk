@@ -200,7 +200,21 @@ public class DescribeAvailableClassesRequest extends Request {
         } 
 
         /**
-         * Category.
+         * The RDS edition of the instance. Valid values:
+         * <p>
+         * 
+         * *   **Basic**: RDS Basic Edition.
+         * *   **HighAvailability**: RDS High-availability Edition.
+         * *   **AlwaysOn**: RDS Cluster Edition for SQL Server
+         * *   **Finance**: RDS Enterprise Edition
+         * 
+         * **Serverless instances**
+         * 
+         * *   **serverless_basic**: RDS Serverless Basic Edition. This edition is available only for instances that run MySQL and PostgreSQL.
+         * *   **serverless_standard**: RDS Serverless High-availability Edition for MySQL.
+         * *   **serverless_ha** RDS Serverless High-availability Edition for SQL Server.
+         * 
+         * > If you create a serverless instance, you must specify this parameter.
          */
         public Builder category(String category) {
             this.putQueryParameter("Category", category);
@@ -209,7 +223,21 @@ public class DescribeAvailableClassesRequest extends Request {
         }
 
         /**
-         * CommodityCode.
+         * The commodity code of the instance. Valid values:
+         * <p>
+         * 
+         * *   **bards**: The instance is a pay-as-you-go primary instance. This value is available at the China site (aliyun.com).
+         * *   **rds**: The instance is a subscription primary instance. This value is available at the China site (aliyun.com).
+         * *   **rords**: The instance is a pay-as-you-go read-only instance. This value is available at the China site (aliyun.com).
+         * *   **rds_rordspre_public_cn**: The instance is a subscription read-only instance. This value is available at the China site (aliyun.com).
+         * *   **bards_intl**: The instance is a pay-as-you-go primary instance. This value is available at the International site (alibabacloud.com).
+         * *   **rds_intl**: The instance is a subscription primary instance. This value is available at the International site (alibabacloud.com).
+         * *   **rords_intl**: The instance is a pay-as-you-go read-only instance. This value is available at the International site (alibabacloud.com).
+         * *   **rds_rordspre_public_intl**: The instance is a subscription read-only instance. This value is available at the International site (alibabacloud.com).
+         * *   **rds_serverless_public_cn**: The instance is a serverless instance. This value is available at the China site (aliyun.com).
+         * *   **rds_serverless_public_intl**: The instance is a serverless instance. This value is available at the International site (alibabacloud.com).
+         * 
+         * > If you want to query the price of a read-only instance, you must specify this parameter.
          */
         public Builder commodityCode(String commodityCode) {
             this.putQueryParameter("CommodityCode", commodityCode);
@@ -218,7 +246,7 @@ public class DescribeAvailableClassesRequest extends Request {
         }
 
         /**
-         * DBInstanceId.
+         * The ID of the instance.
          */
         public Builder DBInstanceId(String DBInstanceId) {
             this.putQueryParameter("DBInstanceId", DBInstanceId);
@@ -227,7 +255,16 @@ public class DescribeAvailableClassesRequest extends Request {
         }
 
         /**
-         * DBInstanceStorageType.
+         * The storage type of the instance. Valid values:
+         * <p>
+         * 
+         * *   **local_ssd**: local SSD. This is the recommended storage type.
+         * *   **cloud_ssd**: standard SSD.
+         * *   **cloud_essd**: enhanced SSDs (ESSDs) of performance level 1 (PL1)
+         * *   **cloud_essd2**: ESSDs of PL2
+         * *   **cloud_essd3**: ESSD of PL3
+         * 
+         * > Serverless instances support only ESSDs of PL 1. For a serverless instance, you must set this parameter to **cloud_essd**.
          */
         public Builder DBInstanceStorageType(String DBInstanceStorageType) {
             this.putQueryParameter("DBInstanceStorageType", DBInstanceStorageType);
@@ -236,7 +273,13 @@ public class DescribeAvailableClassesRequest extends Request {
         }
 
         /**
-         * Engine.
+         * The database engine that is run by the instance. Valid values:
+         * <p>
+         * 
+         * * **MySQL**
+         * * **SQLServer**
+         * * **PostgreSQL**
+         * * **MariaDB**
          */
         public Builder engine(String engine) {
             this.putQueryParameter("Engine", engine);
@@ -245,7 +288,21 @@ public class DescribeAvailableClassesRequest extends Request {
         }
 
         /**
-         * EngineVersion.
+         * The database engine version of the instance. Valid values:
+         * <p>
+         * 
+         * *   Valid values if you set Engine to MySQL: **5.5, 5.6, 5.7, and 8.0**
+         * *   Valid values if you set Engine to SQLServer: **2008r2, 08r2\_ent_ha, 2012, 2012\_ent_ha, 2012\_std_ha, 2012\_web, 2014\_std_ha, 2016\_ent_ha, 2016\_std_ha, 2016\_web, 2017\_std_ha, 2017\_ent, 2019\_std_ha, and 2019\_ent**
+         * *   Valid values if you set Engine to PostgreSQL: **10.0, 11.0, 12.0, 13.0, 14.0, and 15.0**
+         * *   Valid value if you set Engine to MariaDB: **10.3**
+         * 
+         * **Serverless instances**
+         * 
+         * *   Valid values if you set Engine to MySQL: **5.7** and **8.0**
+         * *   Valid values if you set Engine to SQLServer: **SQL Server**, **SQL Server**, and **SQL Server**
+         * *   Valid value if you set Engine to PostgreSQL: **14.0**
+         * 
+         * > ApsaraDB RDS for MariaDB does not support serverless instances.
          */
         public Builder engineVersion(String engineVersion) {
             this.putQueryParameter("EngineVersion", engineVersion);
@@ -254,7 +311,14 @@ public class DescribeAvailableClassesRequest extends Request {
         }
 
         /**
-         * InstanceChargeType.
+         * The billing method of the instance. Valid values:
+         * <p>
+         * 
+         * *   **Prepaid**: subscription
+         * *   **Postpaid**: pay-as-you-go
+         * *   **Serverless**: serverless
+         * 
+         * > ApsaraDB RDS for MariaDB does not support serverless instances.
          */
         public Builder instanceChargeType(String instanceChargeType) {
             this.putQueryParameter("InstanceChargeType", instanceChargeType);
@@ -263,7 +327,7 @@ public class DescribeAvailableClassesRequest extends Request {
         }
 
         /**
-         * OrderType.
+         * The type of the order. Set the value to **BUY**
          */
         public Builder orderType(String orderType) {
             this.putQueryParameter("OrderType", orderType);
@@ -272,7 +336,7 @@ public class DescribeAvailableClassesRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * The region ID of the instance. You can call the [DescribeDBInstanceAttribute](~~26231~~) operation to query the region ID of an instance.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -290,7 +354,10 @@ public class DescribeAvailableClassesRequest extends Request {
         }
 
         /**
-         * ZoneId.
+         * The zone ID of the instance. You can call the [DescribeDBInstanceAttribute](~~26231~~) operation to query the zone ID of an instance.
+         * <p>
+         * 
+         * > If the DescribeDBInstanceAttribute operation returns multiple zones, you must specify only one of the returned zones. For example, if the DescribeDBInstanceAttribute operation returns `cn-hangzhou-MAZ9(g,h)`, you can set the ZoneId parameter to `cn-hangzhou-g` or `cn-hangzhou-h`.
          */
         public Builder zoneId(String zoneId) {
             this.putQueryParameter("ZoneId", zoneId);

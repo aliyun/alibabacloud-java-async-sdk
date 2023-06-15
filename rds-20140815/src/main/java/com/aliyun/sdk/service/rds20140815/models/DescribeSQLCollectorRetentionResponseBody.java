@@ -50,7 +50,14 @@ public class DescribeSQLCollectorRetentionResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * ConfigValue.
+         * The log backup retention duration that is allowed by the SQL explorer feature on the instance. Valid values:
+         * <p>
+         * 
+         * *   **30:** 30 days
+         * *   **180:** 180 days
+         * *   **365:** one year
+         * *   **1095:** three years
+         * *   **1825:** five years
          */
         public Builder configValue(String configValue) {
             this.configValue = configValue;
@@ -58,7 +65,7 @@ public class DescribeSQLCollectorRetentionResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

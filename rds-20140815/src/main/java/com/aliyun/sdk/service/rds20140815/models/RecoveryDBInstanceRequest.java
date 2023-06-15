@@ -265,7 +265,12 @@ public class RecoveryDBInstanceRequest extends Request {
         } 
 
         /**
-         * BackupId.
+         * The ID of the backup set. You can call the [DescribeBackups](~~26273~~) operation to query the ID of the backup set.
+         * <p>
+         * 
+         * If you specify this parameter, you do not need to specify **DBInstanceId**.
+         * 
+         * > You must specify at least one of **BackupId** and **RestoreTime**.
          */
         public Builder backupId(String backupId) {
             this.putQueryParameter("BackupId", backupId);
@@ -274,7 +279,7 @@ public class RecoveryDBInstanceRequest extends Request {
         }
 
         /**
-         * DBInstanceClass.
+         * The instance type of the new instance. For more information, see [Instance types](~~26312~~).
          */
         public Builder DBInstanceClass(String DBInstanceClass) {
             this.putQueryParameter("DBInstanceClass", DBInstanceClass);
@@ -283,7 +288,14 @@ public class RecoveryDBInstanceRequest extends Request {
         }
 
         /**
-         * DBInstanceId.
+         * The ID of the original instance.
+         * <p>
+         * 
+         * > 
+         * 
+         * *   If you specify BackupId, you do not need to specify this parameter.
+         * 
+         * *   If you specify RestoreTime, you must also specify this parameter.
          */
         public Builder DBInstanceId(String DBInstanceId) {
             this.putQueryParameter("DBInstanceId", DBInstanceId);
@@ -292,7 +304,7 @@ public class RecoveryDBInstanceRequest extends Request {
         }
 
         /**
-         * DBInstanceStorage.
+         * The storage capacity of the new instance. Unit: GB. For more information, see [Instance types](~~26312~~).
          */
         public Builder DBInstanceStorage(Integer DBInstanceStorage) {
             this.putQueryParameter("DBInstanceStorage", DBInstanceStorage);
@@ -301,7 +313,12 @@ public class RecoveryDBInstanceRequest extends Request {
         }
 
         /**
-         * DBInstanceStorageType.
+         * The storage type of the new instance. Valid values:
+         * <p>
+         * 
+         * *   **local_ssd/ephemeral_ssd**: local SSD
+         * *   **cloud_ssd**: standard SSD
+         * *   **cloud_essd**: enhanced SSD (ESSD)
          */
         public Builder DBInstanceStorageType(String DBInstanceStorageType) {
             this.putQueryParameter("DBInstanceStorageType", DBInstanceStorageType);
@@ -310,7 +327,11 @@ public class RecoveryDBInstanceRequest extends Request {
         }
 
         /**
-         * DbNames.
+         * The name of the database.
+         * <p>
+         * 
+         * *   If you want to restore databases to a new instance, the value is in the format of `Original database name 1,New database name 2`.
+         * *   If you want to restore databases to an existing instance, the value is in the format of `{"Original database name 1":"New database name 1","Original database name 2":"New database name 2"`.
          */
         public Builder dbNames(String dbNames) {
             this.putQueryParameter("DbNames", dbNames);
@@ -319,7 +340,13 @@ public class RecoveryDBInstanceRequest extends Request {
         }
 
         /**
-         * InstanceNetworkType.
+         * The network type of the new instance. Valid values:
+         * <p>
+         * 
+         * *   **Classic**
+         * *   **VPC**
+         * 
+         * By default, the new instance uses the same network type as the original instance.
          */
         public Builder instanceNetworkType(String instanceNetworkType) {
             this.putQueryParameter("InstanceNetworkType", instanceNetworkType);
@@ -328,7 +355,11 @@ public class RecoveryDBInstanceRequest extends Request {
         }
 
         /**
-         * PayType.
+         * The billing method of the new instance. Valid values:
+         * <p>
+         * 
+         * *   **Postpaid**: pay-as-you-go
+         * *   **Prepaid**: subscription
          */
         public Builder payType(String payType) {
             this.putQueryParameter("PayType", payType);
@@ -337,7 +368,13 @@ public class RecoveryDBInstanceRequest extends Request {
         }
 
         /**
-         * Period.
+         * The unit that is used to calculate the billing cycle of the new instance. This parameter takes effect only when you select the subscription billing method for the new instance. Valid values:
+         * <p>
+         * 
+         * *   **Year**
+         * *   **Month**
+         * 
+         * > This parameter must be specified when **PayType** is set to **Prepaid**.
          */
         public Builder period(String period) {
             this.putQueryParameter("Period", period);
@@ -346,7 +383,7 @@ public class RecoveryDBInstanceRequest extends Request {
         }
 
         /**
-         * PrivateIpAddress.
+         * The internal IP address of the new instance. The internal IP address must be within the CIDR block that is supported by the specified vSwitch. The system automatically assigns a private IP address to an instance based on the values of **VPCId** and **VSwitchId**.
          */
         public Builder privateIpAddress(String privateIpAddress) {
             this.putQueryParameter("PrivateIpAddress", privateIpAddress);
@@ -364,7 +401,12 @@ public class RecoveryDBInstanceRequest extends Request {
         }
 
         /**
-         * RestoreTime.
+         * The point in time to which you want to restore data. The point in time must fall within the specified log backup retention period. Specify the time in the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time must be in UTC.
+         * <p>
+         * 
+         * If you specify this parameter, you must also specify **DBInstanceId**.
+         * 
+         * > You must specify at least one of **BackupId** and **RestoreTime**.
          */
         public Builder restoreTime(String restoreTime) {
             this.putQueryParameter("RestoreTime", restoreTime);
@@ -373,7 +415,7 @@ public class RecoveryDBInstanceRequest extends Request {
         }
 
         /**
-         * TargetDBInstanceId.
+         * The ID of the destination instance.
          */
         public Builder targetDBInstanceId(String targetDBInstanceId) {
             this.putQueryParameter("TargetDBInstanceId", targetDBInstanceId);
@@ -382,7 +424,13 @@ public class RecoveryDBInstanceRequest extends Request {
         }
 
         /**
-         * UsedTime.
+         * The subscription duration of the instance. Valid values:
+         * <p>
+         * 
+         * *   Valid values when **Period** is set to **Year**: **1 to 3**.****
+         * *   Valid values when **Period** is set to **Month**: **1 to 9**.****
+         * 
+         * > This parameter must be specified when PayType is set to **Prepaid**.
          */
         public Builder usedTime(String usedTime) {
             this.putQueryParameter("UsedTime", usedTime);
@@ -391,7 +439,7 @@ public class RecoveryDBInstanceRequest extends Request {
         }
 
         /**
-         * VPCId.
+         * The VPC ID of the new instance.
          */
         public Builder VPCId(String VPCId) {
             this.putQueryParameter("VPCId", VPCId);
@@ -400,7 +448,7 @@ public class RecoveryDBInstanceRequest extends Request {
         }
 
         /**
-         * VSwitchId.
+         * The vSwitch ID of the new instance. If you specify more than one vSwitch ID, you must separate the IDs with commas (,).
          */
         public Builder vSwitchId(String vSwitchId) {
             this.putQueryParameter("VSwitchId", vSwitchId);

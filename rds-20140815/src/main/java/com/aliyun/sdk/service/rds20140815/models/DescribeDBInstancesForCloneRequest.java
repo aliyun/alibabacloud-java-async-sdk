@@ -407,7 +407,7 @@ public class DescribeDBInstancesForCloneRequest extends Request {
         } 
 
         /**
-         * ClientToken.
+         * The client token that is used to ensure the idempotence of the request. You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters and cannot exceed 64 characters in length.
          */
         public Builder clientToken(String clientToken) {
             this.putQueryParameter("ClientToken", clientToken);
@@ -416,7 +416,13 @@ public class DescribeDBInstancesForCloneRequest extends Request {
         }
 
         /**
-         * ConnectionMode.
+         * The connection mode of the instance. Valid values:
+         * <p>
+         * 
+         * *   **Standard**: standard mode
+         * *   **Safe**: database proxy mode
+         * 
+         * By default, this operation queries the instances that use any of the supported connection modes.
          */
         public Builder connectionMode(String connectionMode) {
             this.putQueryParameter("ConnectionMode", connectionMode);
@@ -425,7 +431,7 @@ public class DescribeDBInstancesForCloneRequest extends Request {
         }
 
         /**
-         * CurrentInstanceId.
+         * The ID of the current instance.
          */
         public Builder currentInstanceId(String currentInstanceId) {
             this.putQueryParameter("CurrentInstanceId", currentInstanceId);
@@ -434,7 +440,7 @@ public class DescribeDBInstancesForCloneRequest extends Request {
         }
 
         /**
-         * DBInstanceClass.
+         * The instance type of the instance. For more information, see [Instance types](~~26312~~).
          */
         public Builder DBInstanceClass(String DBInstanceClass) {
             this.putQueryParameter("DBInstanceClass", DBInstanceClass);
@@ -443,7 +449,7 @@ public class DescribeDBInstancesForCloneRequest extends Request {
         }
 
         /**
-         * DBInstanceId.
+         * The ID of the instance.
          */
         public Builder DBInstanceId(String DBInstanceId) {
             this.putQueryParameter("DBInstanceId", DBInstanceId);
@@ -452,7 +458,7 @@ public class DescribeDBInstancesForCloneRequest extends Request {
         }
 
         /**
-         * DBInstanceStatus.
+         * The status of the instance. For more information, see [Instance state table](~~26315~~).
          */
         public Builder DBInstanceStatus(String DBInstanceStatus) {
             this.putQueryParameter("DBInstanceStatus", DBInstanceStatus);
@@ -461,7 +467,15 @@ public class DescribeDBInstancesForCloneRequest extends Request {
         }
 
         /**
-         * DBInstanceType.
+         * The role of the instance that you want to query. Valid values:
+         * <p>
+         * 
+         * *   **Primary**: primary instance
+         * *   **Readonly**: read-only instance
+         * *   **Guard**: disaster recovery instance
+         * *   **Temp**: temporary instance
+         * 
+         * By default, this operation queries the instances of all roles.
          */
         public Builder DBInstanceType(String DBInstanceType) {
             this.putQueryParameter("DBInstanceType", DBInstanceType);
@@ -470,7 +484,16 @@ public class DescribeDBInstancesForCloneRequest extends Request {
         }
 
         /**
-         * Engine.
+         * The database engine of the instance. Valid values:
+         * <p>
+         * 
+         * *   MySQL
+         * *   SQLServer
+         * *   PostgreSQL
+         * *   PPAS
+         * *   MariaDB
+         * 
+         * By default, this operation queries the instances that run any of the supported database engine types.
          */
         public Builder engine(String engine) {
             this.putQueryParameter("Engine", engine);
@@ -479,7 +502,7 @@ public class DescribeDBInstancesForCloneRequest extends Request {
         }
 
         /**
-         * EngineVersion.
+         * The version of the database engine.
          */
         public Builder engineVersion(String engineVersion) {
             this.putQueryParameter("EngineVersion", engineVersion);
@@ -488,7 +511,11 @@ public class DescribeDBInstancesForCloneRequest extends Request {
         }
 
         /**
-         * Expired.
+         * Specifies whether the instance expires. Valid values:
+         * <p>
+         * 
+         * *   **True**: queries the instances that have expired.
+         * *   **False**: does not query instances that have expired.
          */
         public Builder expired(String expired) {
             this.putQueryParameter("Expired", expired);
@@ -497,7 +524,11 @@ public class DescribeDBInstancesForCloneRequest extends Request {
         }
 
         /**
-         * InstanceNetworkType.
+         * The network type of the instance. Valid values:
+         * <p>
+         * 
+         * *   **Classic**
+         * *   **VPC**
          */
         public Builder instanceNetworkType(String instanceNetworkType) {
             this.putQueryParameter("InstanceNetworkType", instanceNetworkType);
@@ -506,7 +537,11 @@ public class DescribeDBInstancesForCloneRequest extends Request {
         }
 
         /**
-         * NodeType.
+         * The type of the database node. Valid values:
+         * <p>
+         * 
+         * *   **Master**: the primary node
+         * *   **Slave**: the secondary node
          */
         public Builder nodeType(String nodeType) {
             this.putQueryParameter("NodeType", nodeType);
@@ -533,7 +568,7 @@ public class DescribeDBInstancesForCloneRequest extends Request {
         }
 
         /**
-         * PageNumber.
+         * The number of the page to return.
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -542,7 +577,10 @@ public class DescribeDBInstancesForCloneRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * The number of entries to return on each page. Valid values: **1 to 100**.
+         * <p>
+         * 
+         * Default value: **30**.
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -551,7 +589,13 @@ public class DescribeDBInstancesForCloneRequest extends Request {
         }
 
         /**
-         * PayType.
+         * The billing method of the instance. Valid values:
+         * <p>
+         * 
+         * *   **Postpaid**: pay-as-you-go
+         * *   **Prepaid**: subscription
+         * 
+         * By default, this operation queries the instances that use any of the supported billing methods.
          */
         public Builder payType(String payType) {
             this.putQueryParameter("PayType", payType);
@@ -560,7 +604,7 @@ public class DescribeDBInstancesForCloneRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * The region ID of the instance.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -569,7 +613,7 @@ public class DescribeDBInstancesForCloneRequest extends Request {
         }
 
         /**
-         * ResourceGroupId.
+         * The ID of the resource group.
          */
         public Builder resourceGroupId(String resourceGroupId) {
             this.putQueryParameter("ResourceGroupId", resourceGroupId);
@@ -596,7 +640,7 @@ public class DescribeDBInstancesForCloneRequest extends Request {
         }
 
         /**
-         * SearchKey.
+         * The keyword that is used for the search. The keyword can be part of an instance ID or an instance description.
          */
         public Builder searchKey(String searchKey) {
             this.putQueryParameter("SearchKey", searchKey);
@@ -605,7 +649,7 @@ public class DescribeDBInstancesForCloneRequest extends Request {
         }
 
         /**
-         * VSwitchId.
+         * The ID of the vSwitch.
          */
         public Builder vSwitchId(String vSwitchId) {
             this.putQueryParameter("VSwitchId", vSwitchId);
@@ -614,7 +658,7 @@ public class DescribeDBInstancesForCloneRequest extends Request {
         }
 
         /**
-         * VpcId.
+         * The ID of the virtual private cloud (VPC).
          */
         public Builder vpcId(String vpcId) {
             this.putQueryParameter("VpcId", vpcId);
@@ -623,7 +667,7 @@ public class DescribeDBInstancesForCloneRequest extends Request {
         }
 
         /**
-         * ZoneId.
+         * The zone ID of the instance.
          */
         public Builder zoneId(String zoneId) {
             this.putQueryParameter("ZoneId", zoneId);
@@ -632,7 +676,7 @@ public class DescribeDBInstancesForCloneRequest extends Request {
         }
 
         /**
-         * proxyId.
+         * The ID of the proxy mode.
          */
         public Builder proxyId(String proxyId) {
             this.putQueryParameter("proxyId", proxyId);

@@ -111,7 +111,7 @@ public class ReleaseReadWriteSplittingConnectionRequest extends Request {
         } 
 
         /**
-         * DBInstanceId.
+         * The ID of the primary instance.
          */
         public Builder DBInstanceId(String DBInstanceId) {
             this.putQueryParameter("DBInstanceId", DBInstanceId);

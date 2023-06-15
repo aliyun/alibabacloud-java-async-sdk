@@ -141,7 +141,7 @@ public class ModifyDBInstanceNetworkExpireTimeRequest extends Request {
         } 
 
         /**
-         * ClassicExpiredDays.
+         * The retention days of the classic network endpoint. Valid values: **1 to 120**. Unit: days.
          */
         public Builder classicExpiredDays(Integer classicExpiredDays) {
             this.putQueryParameter("ClassicExpiredDays", classicExpiredDays);
@@ -150,7 +150,11 @@ public class ModifyDBInstanceNetworkExpireTimeRequest extends Request {
         }
 
         /**
-         * ConnectionString.
+         * The classic network endpoint whose expiration time you want to extend. Two types of classic network endpoints are supported:
+         * <p>
+         * 
+         * *   The internal endpoint of the classic network.
+         * *   The read/write splitting endpoint of the classic network.
          */
         public Builder connectionString(String connectionString) {
             this.putQueryParameter("ConnectionString", connectionString);
@@ -159,7 +163,7 @@ public class ModifyDBInstanceNetworkExpireTimeRequest extends Request {
         }
 
         /**
-         * DBInstanceId.
+         * The ID of the instance.
          */
         public Builder DBInstanceId(String DBInstanceId) {
             this.putQueryParameter("DBInstanceId", DBInstanceId);

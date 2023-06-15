@@ -86,7 +86,7 @@ public class DescribeCloudMigrationPrecheckResultResponseBody extends TeaModel {
         private Integer totalSize; 
 
         /**
-         * Items.
+         * The details of the assessment report.
          */
         public Builder items(java.util.List < Items> items) {
             this.items = items;
@@ -94,7 +94,7 @@ public class DescribeCloudMigrationPrecheckResultResponseBody extends TeaModel {
         }
 
         /**
-         * PageNumber.
+         * The page number.
          */
         public Builder pageNumber(Long pageNumber) {
             this.pageNumber = pageNumber;
@@ -102,7 +102,7 @@ public class DescribeCloudMigrationPrecheckResultResponseBody extends TeaModel {
         }
 
         /**
-         * PageSize.
+         * The number of entries returned per page.
          */
         public Builder pageSize(Long pageSize) {
             this.pageSize = pageSize;
@@ -110,7 +110,7 @@ public class DescribeCloudMigrationPrecheckResultResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -118,7 +118,7 @@ public class DescribeCloudMigrationPrecheckResultResponseBody extends TeaModel {
         }
 
         /**
-         * TotalSize.
+         * The total number of entries returned.
          */
         public Builder totalSize(Integer totalSize) {
             this.totalSize = totalSize;
@@ -290,7 +290,7 @@ public class DescribeCloudMigrationPrecheckResultResponseBody extends TeaModel {
             private String taskName; 
 
             /**
-             * Detail.
+             * The content of the assessment report.
              */
             public Builder detail(String detail) {
                 this.detail = detail;
@@ -298,7 +298,7 @@ public class DescribeCloudMigrationPrecheckResultResponseBody extends TeaModel {
             }
 
             /**
-             * GmtCreated.
+             * The time when the task was created.
              */
             public Builder gmtCreated(String gmtCreated) {
                 this.gmtCreated = gmtCreated;
@@ -306,7 +306,7 @@ public class DescribeCloudMigrationPrecheckResultResponseBody extends TeaModel {
             }
 
             /**
-             * GmtModified.
+             * The time when the task was modified.
              */
             public Builder gmtModified(String gmtModified) {
                 this.gmtModified = gmtModified;
@@ -314,7 +314,7 @@ public class DescribeCloudMigrationPrecheckResultResponseBody extends TeaModel {
             }
 
             /**
-             * SourceAccount.
+             * The username of the account.
              */
             public Builder sourceAccount(String sourceAccount) {
                 this.sourceAccount = sourceAccount;
@@ -322,7 +322,11 @@ public class DescribeCloudMigrationPrecheckResultResponseBody extends TeaModel {
             }
 
             /**
-             * SourceCategory.
+             * The environment in which the self-managed PostgreSQL instance runs.
+             * <p>
+             * 
+             * *   **idcOnVpc**: The self-managed PostgreSQL instance resides in a data center. The data center can communicate with the VPC to which the ApsaraDB RDS for PostgreSQL instance belongs.
+             * *   **ecsOnVpc**: The self-managed PostgreSQL instance resides on an ECS instance.
              */
             public Builder sourceCategory(String sourceCategory) {
                 this.sourceCategory = sourceCategory;
@@ -330,7 +334,7 @@ public class DescribeCloudMigrationPrecheckResultResponseBody extends TeaModel {
             }
 
             /**
-             * SourceIpAddress.
+             * The private IP address that is used to connect to the self-managed PostgreSQL instance.
              */
             public Builder sourceIpAddress(String sourceIpAddress) {
                 this.sourceIpAddress = sourceIpAddress;
@@ -338,7 +342,7 @@ public class DescribeCloudMigrationPrecheckResultResponseBody extends TeaModel {
             }
 
             /**
-             * SourcePassword.
+             * The password of the account.
              */
             public Builder sourcePassword(String sourcePassword) {
                 this.sourcePassword = sourcePassword;
@@ -346,7 +350,7 @@ public class DescribeCloudMigrationPrecheckResultResponseBody extends TeaModel {
             }
 
             /**
-             * SourcePort.
+             * The port number that is used to connect to the self-managed PostgreSQL instance.
              */
             public Builder sourcePort(Long sourcePort) {
                 this.sourcePort = sourcePort;
@@ -354,7 +358,7 @@ public class DescribeCloudMigrationPrecheckResultResponseBody extends TeaModel {
             }
 
             /**
-             * TargetEip.
+             * A reserved parameter. The return value of this parameter is null.
              */
             public Builder targetEip(String targetEip) {
                 this.targetEip = targetEip;
@@ -362,7 +366,7 @@ public class DescribeCloudMigrationPrecheckResultResponseBody extends TeaModel {
             }
 
             /**
-             * TargetInstanceName.
+             * The ID of the destination instance.
              */
             public Builder targetInstanceName(String targetInstanceName) {
                 this.targetInstanceName = targetInstanceName;
@@ -370,7 +374,7 @@ public class DescribeCloudMigrationPrecheckResultResponseBody extends TeaModel {
             }
 
             /**
-             * TaskId.
+             * The ID of the task.
              */
             public Builder taskId(Long taskId) {
                 this.taskId = taskId;
@@ -378,7 +382,7 @@ public class DescribeCloudMigrationPrecheckResultResponseBody extends TeaModel {
             }
 
             /**
-             * TaskName.
+             * The name of the task.
              */
             public Builder taskName(String taskName) {
                 this.taskName = taskName;

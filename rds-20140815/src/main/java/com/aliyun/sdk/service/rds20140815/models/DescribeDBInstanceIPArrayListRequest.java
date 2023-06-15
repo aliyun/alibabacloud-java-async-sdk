@@ -97,7 +97,7 @@ public class DescribeDBInstanceIPArrayListRequest extends Request {
         } 
 
         /**
-         * DBInstanceId.
+         * The ID of the instance.
          */
         public Builder DBInstanceId(String DBInstanceId) {
             this.putQueryParameter("DBInstanceId", DBInstanceId);
@@ -124,7 +124,14 @@ public class DescribeDBInstanceIPArrayListRequest extends Request {
         }
 
         /**
-         * WhitelistNetworkType.
+         * The network type of the IP address whitelist. Valid values:
+         * <p>
+         * 
+         * *   **Classic**: classic network in enhanced whitelist mode
+         * *   **VPC**: virtual private cloud (VPC) in enhanced whitelist mode
+         * *   **MIX**: standard whitelist mode
+         * 
+         * By default, this operation returns IP address whitelists of all network types.
          */
         public Builder whitelistNetworkType(String whitelistNetworkType) {
             this.putQueryParameter("WhitelistNetworkType", whitelistNetworkType);

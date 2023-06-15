@@ -50,7 +50,7 @@ public class CreateDBInstanceEndpointResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * Data.
+         * The data returned.
          */
         public Builder data(Data data) {
             this.data = data;
@@ -58,7 +58,7 @@ public class CreateDBInstanceEndpointResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -122,7 +122,7 @@ public class CreateDBInstanceEndpointResponseBody extends TeaModel {
             private String DBInstanceName; 
 
             /**
-             * ConnectionString.
+             * The internal endpoint.
              */
             public Builder connectionString(String connectionString) {
                 this.connectionString = connectionString;
@@ -130,7 +130,7 @@ public class CreateDBInstanceEndpointResponseBody extends TeaModel {
             }
 
             /**
-             * DBInstanceEndpointId.
+             * The endpoint ID of the instance.
              */
             public Builder DBInstanceEndpointId(String DBInstanceEndpointId) {
                 this.DBInstanceEndpointId = DBInstanceEndpointId;
@@ -138,7 +138,7 @@ public class CreateDBInstanceEndpointResponseBody extends TeaModel {
             }
 
             /**
-             * DBInstanceName.
+             * The ID of the instance.
              */
             public Builder DBInstanceName(String DBInstanceName) {
                 this.DBInstanceName = DBInstanceName;

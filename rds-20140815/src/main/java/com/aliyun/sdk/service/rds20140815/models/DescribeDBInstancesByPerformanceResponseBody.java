@@ -86,7 +86,7 @@ public class DescribeDBInstancesByPerformanceResponseBody extends TeaModel {
         private Integer totalRecordCount; 
 
         /**
-         * Items.
+         * The details about the instance.
          */
         public Builder items(Items items) {
             this.items = items;
@@ -94,7 +94,7 @@ public class DescribeDBInstancesByPerformanceResponseBody extends TeaModel {
         }
 
         /**
-         * PageNumber.
+         * The page number of the returned page.
          */
         public Builder pageNumber(Integer pageNumber) {
             this.pageNumber = pageNumber;
@@ -102,7 +102,7 @@ public class DescribeDBInstancesByPerformanceResponseBody extends TeaModel {
         }
 
         /**
-         * PageRecordCount.
+         * The number of entries returned on the current page.
          */
         public Builder pageRecordCount(Integer pageRecordCount) {
             this.pageRecordCount = pageRecordCount;
@@ -110,7 +110,7 @@ public class DescribeDBInstancesByPerformanceResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -118,7 +118,7 @@ public class DescribeDBInstancesByPerformanceResponseBody extends TeaModel {
         }
 
         /**
-         * TotalRecordCount.
+         * The total number of entries returned.
          */
         public Builder totalRecordCount(Integer totalRecordCount) {
             this.totalRecordCount = totalRecordCount;
@@ -218,7 +218,7 @@ public class DescribeDBInstancesByPerformanceResponseBody extends TeaModel {
             private String sessionUsage; 
 
             /**
-             * CPUUsage.
+             * The CPU utilization of the instance in percentage.
              */
             public Builder CPUUsage(String CPUUsage) {
                 this.CPUUsage = CPUUsage;
@@ -226,7 +226,7 @@ public class DescribeDBInstancesByPerformanceResponseBody extends TeaModel {
             }
 
             /**
-             * DBInstanceDescription.
+             * The name of the instance.
              */
             public Builder DBInstanceDescription(String DBInstanceDescription) {
                 this.DBInstanceDescription = DBInstanceDescription;
@@ -234,7 +234,7 @@ public class DescribeDBInstancesByPerformanceResponseBody extends TeaModel {
             }
 
             /**
-             * DBInstanceId.
+             * The ID of the instance.
              */
             public Builder DBInstanceId(String DBInstanceId) {
                 this.DBInstanceId = DBInstanceId;
@@ -242,7 +242,7 @@ public class DescribeDBInstancesByPerformanceResponseBody extends TeaModel {
             }
 
             /**
-             * DiskUsage.
+             * The disk usage of the instance in percentage.
              */
             public Builder diskUsage(String diskUsage) {
                 this.diskUsage = diskUsage;
@@ -250,7 +250,7 @@ public class DescribeDBInstancesByPerformanceResponseBody extends TeaModel {
             }
 
             /**
-             * IOPSUsage.
+             * The IOPS usage of the instance in percentage.
              */
             public Builder IOPSUsage(String IOPSUsage) {
                 this.IOPSUsage = IOPSUsage;
@@ -258,7 +258,7 @@ public class DescribeDBInstancesByPerformanceResponseBody extends TeaModel {
             }
 
             /**
-             * SessionUsage.
+             * The number of sessions.
              */
             public Builder sessionUsage(String sessionUsage) {
                 this.sessionUsage = sessionUsage;

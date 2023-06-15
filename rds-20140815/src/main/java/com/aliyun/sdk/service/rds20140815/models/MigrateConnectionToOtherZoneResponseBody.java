@@ -62,7 +62,7 @@ public class MigrateConnectionToOtherZoneResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * Code.
+         * The error code.
          */
         public Builder code(String code) {
             this.code = code;
@@ -70,7 +70,7 @@ public class MigrateConnectionToOtherZoneResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * The error message.
          */
         public Builder message(String message) {
             this.message = message;
@@ -78,7 +78,7 @@ public class MigrateConnectionToOtherZoneResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

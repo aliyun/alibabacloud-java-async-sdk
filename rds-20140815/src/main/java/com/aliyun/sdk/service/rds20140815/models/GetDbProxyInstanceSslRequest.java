@@ -83,7 +83,7 @@ public class GetDbProxyInstanceSslRequest extends Request {
         } 
 
         /**
-         * DBProxyEngineType.
+         * An internal parameter. You do not need to specify this parameter.
          */
         public Builder DBProxyEngineType(String DBProxyEngineType) {
             this.putQueryParameter("DBProxyEngineType", DBProxyEngineType);
@@ -92,7 +92,7 @@ public class GetDbProxyInstanceSslRequest extends Request {
         }
 
         /**
-         * DbInstanceId.
+         * The ID of the instance. You can call the [DescribeDBInstances](~~26232~~) operation to query the ID of the instance.
          */
         public Builder dbInstanceId(String dbInstanceId) {
             this.putQueryParameter("DbInstanceId", dbInstanceId);
@@ -101,7 +101,7 @@ public class GetDbProxyInstanceSslRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * The region ID of the instance. You can call the [DescribeRegions](~~26243~~) operation to query the most recent region list.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);

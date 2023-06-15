@@ -50,7 +50,7 @@ public class DescribeAvailableZonesResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * AvailableZones.
+         * An array that consists of available zones and resources available in the zones.
          */
         public Builder availableZones(java.util.List < AvailableZones> availableZones) {
             this.availableZones = availableZones;
@@ -58,7 +58,7 @@ public class DescribeAvailableZonesResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -98,7 +98,7 @@ public class DescribeAvailableZonesResponseBody extends TeaModel {
             private String storageType; 
 
             /**
-             * StorageType.
+             * The storage type of the instance.
              */
             public Builder storageType(String storageType) {
                 this.storageType = storageType;
@@ -151,7 +151,7 @@ public class DescribeAvailableZonesResponseBody extends TeaModel {
             private java.util.List < SupportedStorageTypes> supportedStorageTypes; 
 
             /**
-             * Category.
+             * The RDS edition of the instance.
              */
             public Builder category(String category) {
                 this.category = category;
@@ -159,7 +159,7 @@ public class DescribeAvailableZonesResponseBody extends TeaModel {
             }
 
             /**
-             * SupportedStorageTypes.
+             * An array that consists of the storage types available in the zone.
              */
             public Builder supportedStorageTypes(java.util.List < SupportedStorageTypes> supportedStorageTypes) {
                 this.supportedStorageTypes = supportedStorageTypes;
@@ -212,7 +212,7 @@ public class DescribeAvailableZonesResponseBody extends TeaModel {
             private String version; 
 
             /**
-             * SupportedCategorys.
+             * An array that consists of the RDS editions available in the zone.
              */
             public Builder supportedCategorys(java.util.List < SupportedCategorys> supportedCategorys) {
                 this.supportedCategorys = supportedCategorys;
@@ -220,7 +220,7 @@ public class DescribeAvailableZonesResponseBody extends TeaModel {
             }
 
             /**
-             * Version.
+             * The database engine version of the instance.
              */
             public Builder version(String version) {
                 this.version = version;
@@ -273,7 +273,7 @@ public class DescribeAvailableZonesResponseBody extends TeaModel {
             private java.util.List < SupportedEngineVersions> supportedEngineVersions; 
 
             /**
-             * Engine.
+             * The database engine of the instance.
              */
             public Builder engine(String engine) {
                 this.engine = engine;
@@ -281,7 +281,7 @@ public class DescribeAvailableZonesResponseBody extends TeaModel {
             }
 
             /**
-             * SupportedEngineVersions.
+             * An array that consists of the database engine versions available in the zone.
              */
             public Builder supportedEngineVersions(java.util.List < SupportedEngineVersions> supportedEngineVersions) {
                 this.supportedEngineVersions = supportedEngineVersions;
@@ -346,7 +346,7 @@ public class DescribeAvailableZonesResponseBody extends TeaModel {
             private String zoneId; 
 
             /**
-             * RegionId.
+             * The region ID of the instance.
              */
             public Builder regionId(String regionId) {
                 this.regionId = regionId;
@@ -354,7 +354,7 @@ public class DescribeAvailableZonesResponseBody extends TeaModel {
             }
 
             /**
-             * SupportedEngines.
+             * An array that consists of the database engines available in the zone.
              */
             public Builder supportedEngines(java.util.List < SupportedEngines> supportedEngines) {
                 this.supportedEngines = supportedEngines;
@@ -362,7 +362,7 @@ public class DescribeAvailableZonesResponseBody extends TeaModel {
             }
 
             /**
-             * ZoneId.
+             * The zone ID of the instance.
              */
             public Builder zoneId(String zoneId) {
                 this.zoneId = zoneId;

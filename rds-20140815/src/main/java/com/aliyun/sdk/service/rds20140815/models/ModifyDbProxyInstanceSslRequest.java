@@ -128,7 +128,7 @@ public class ModifyDbProxyInstanceSslRequest extends Request {
         } 
 
         /**
-         * DBProxyEngineType.
+         * An internal parameter. You do not need to specify this parameter.
          */
         public Builder DBProxyEngineType(String DBProxyEngineType) {
             this.putQueryParameter("DBProxyEngineType", DBProxyEngineType);
@@ -137,7 +137,7 @@ public class ModifyDbProxyInstanceSslRequest extends Request {
         }
 
         /**
-         * DbInstanceId.
+         * The ID of the instance. You can call the [DescribeDBInstances](~~26232~~) operation to query the ID of the instance.
          */
         public Builder dbInstanceId(String dbInstanceId) {
             this.putQueryParameter("DbInstanceId", dbInstanceId);
@@ -146,7 +146,7 @@ public class ModifyDbProxyInstanceSslRequest extends Request {
         }
 
         /**
-         * DbProxyConnectString.
+         * The dedicated proxy endpoint of the instance.
          */
         public Builder dbProxyConnectString(String dbProxyConnectString) {
             this.putQueryParameter("DbProxyConnectString", dbProxyConnectString);
@@ -155,7 +155,7 @@ public class ModifyDbProxyInstanceSslRequest extends Request {
         }
 
         /**
-         * DbProxyEndpointId.
+         * The ID of the proxy endpoint. You can call the [DescribeDBProxyEndpoint](~~140955~~) operation to query the ID of the proxy endpoint.
          */
         public Builder dbProxyEndpointId(String dbProxyEndpointId) {
             this.putQueryParameter("DbProxyEndpointId", dbProxyEndpointId);
@@ -164,7 +164,14 @@ public class ModifyDbProxyInstanceSslRequest extends Request {
         }
 
         /**
-         * DbProxySslEnabled.
+         * The SSL configuration setting that you want to apply on the instance. Valid values:
+         * <p>
+         * 
+         * *   0: disables SSL encryption.
+         * *   1: enables SSL encryption or modifies the endpoint that requires SSL encryption.
+         * *   2: updates the validity period of the SSL certificate.
+         * 
+         * > This setting causes your instance to restart. Proceed with caution.
          */
         public Builder dbProxySslEnabled(String dbProxySslEnabled) {
             this.putQueryParameter("DbProxySslEnabled", dbProxySslEnabled);
@@ -173,7 +180,7 @@ public class ModifyDbProxyInstanceSslRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * The region ID of the instance. You can call the [DescribeRegions](~~26243~~) operation to query the most recent region list.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);

@@ -210,7 +210,11 @@ public class ModifyDBProxyRequest extends Request {
         } 
 
         /**
-         * ConfigDBProxyService.
+         * Specifies whether to enable or disable the database proxy feature. Valid values:
+         * <p>
+         * 
+         * *   **Startup**: enables the database proxy feature.
+         * *   **Shutdown**: disables the database proxy feature.
          */
         public Builder configDBProxyService(String configDBProxyService) {
             this.putQueryParameter("ConfigDBProxyService", configDBProxyService);
@@ -219,7 +223,7 @@ public class ModifyDBProxyRequest extends Request {
         }
 
         /**
-         * DBInstanceId.
+         * The ID of the instance. You can call the [DescribeDBInstances](~~26232~~) operation to query the ID of the instance.
          */
         public Builder DBInstanceId(String DBInstanceId) {
             this.putQueryParameter("DBInstanceId", DBInstanceId);
@@ -228,7 +232,7 @@ public class ModifyDBProxyRequest extends Request {
         }
 
         /**
-         * DBProxyEngineType.
+         * An internal parameter. You do not need to specify this parameter.
          */
         public Builder DBProxyEngineType(String DBProxyEngineType) {
             this.putQueryParameter("DBProxyEngineType", DBProxyEngineType);
@@ -237,7 +241,10 @@ public class ModifyDBProxyRequest extends Request {
         }
 
         /**
-         * DBProxyInstanceNum.
+         * The number of proxy instances that are enabled. Valid values: **1** to **60**. Default value: **1**.
+         * <p>
+         * 
+         * > The capability to process requests increases in proportion with the number of proxy instances. You can specify a proper number of proxy instances based on the monitoring information of database loads.
          */
         public Builder DBProxyInstanceNum(String DBProxyInstanceNum) {
             this.putQueryParameter("DBProxyInstanceNum", DBProxyInstanceNum);
@@ -246,7 +253,10 @@ public class ModifyDBProxyRequest extends Request {
         }
 
         /**
-         * InstanceNetworkType.
+         * The network type of the instance. Set the value to **VPC**.
+         * <p>
+         * 
+         * > This parameter is required if you enable the database proxy feature for an ApsaraDB RDS for MySQL instance that uses cloud disks or an ApsaraDB RDS for PostgreSQL instance.
          */
         public Builder instanceNetworkType(String instanceNetworkType) {
             this.putQueryParameter("InstanceNetworkType", instanceNetworkType);
@@ -264,7 +274,7 @@ public class ModifyDBProxyRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * The region ID of the instance. You can call the [DescribeRegions](~~26243~~) operation to query most recent region list.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -273,7 +283,7 @@ public class ModifyDBProxyRequest extends Request {
         }
 
         /**
-         * ResourceGroupId.
+         * The ID of the resource group.
          */
         public Builder resourceGroupId(String resourceGroupId) {
             this.putQueryParameter("ResourceGroupId", resourceGroupId);
@@ -300,7 +310,10 @@ public class ModifyDBProxyRequest extends Request {
         }
 
         /**
-         * VPCId.
+         * The ID of the virtual private cloud (VPC) to which the instance belongs. You can call the [DescribeDBInstanceAttribute](~~26231~~) operation to query the VPC ID of the instance.
+         * <p>
+         * 
+         * > This parameter is required if you enable the database proxy feature for an ApsaraDB RDS for MySQL instance that uses cloud disks or an ApsaraDB RDS for PostgreSQL instance.
          */
         public Builder VPCId(String VPCId) {
             this.putQueryParameter("VPCId", VPCId);
@@ -309,7 +322,10 @@ public class ModifyDBProxyRequest extends Request {
         }
 
         /**
-         * VSwitchId.
+         * The ID of the vSwitch that is associated with the specified VPC. You can call the [DescribeDBInstanceAttribute](~~26231~~) operation to query the VPC ID of the instance.
+         * <p>
+         * 
+         * > This parameter is required if you enable the database proxy feature for an ApsaraDB RDS for MySQL instance that uses cloud disks or an ApsaraDB RDS for PostgreSQL instance.
          */
         public Builder vSwitchId(String vSwitchId) {
             this.putQueryParameter("VSwitchId", vSwitchId);

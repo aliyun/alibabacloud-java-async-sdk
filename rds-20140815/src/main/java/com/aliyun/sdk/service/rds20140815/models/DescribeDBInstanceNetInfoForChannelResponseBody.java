@@ -62,7 +62,7 @@ public class DescribeDBInstanceNetInfoForChannelResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * DBInstanceNetInfos.
+         * The network information about the instance.
          */
         public Builder DBInstanceNetInfos(DBInstanceNetInfos DBInstanceNetInfos) {
             this.DBInstanceNetInfos = DBInstanceNetInfos;
@@ -70,7 +70,11 @@ public class DescribeDBInstanceNetInfoForChannelResponseBody extends TeaModel {
         }
 
         /**
-         * InstanceNetworkType.
+         * The network type of the instance. Valid values:
+         * <p>
+         * 
+         * *   **VPC**: a virtual private cloud (VPC)
+         * *   **Classic**: classic network
          */
         public Builder instanceNetworkType(String instanceNetworkType) {
             this.instanceNetworkType = instanceNetworkType;
@@ -78,7 +82,7 @@ public class DescribeDBInstanceNetInfoForChannelResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -154,7 +158,11 @@ public class DescribeDBInstanceNetInfoForChannelResponseBody extends TeaModel {
             private String weight; 
 
             /**
-             * Availability.
+             * The availability of the instance. Valid values:
+             * <p>
+             * 
+             * *   **Unavailable**
+             * *   **Available**
              */
             public Builder availability(String availability) {
                 this.availability = availability;
@@ -162,7 +170,7 @@ public class DescribeDBInstanceNetInfoForChannelResponseBody extends TeaModel {
             }
 
             /**
-             * DBInstanceId.
+             * The ID of the instance.
              */
             public Builder DBInstanceId(String DBInstanceId) {
                 this.DBInstanceId = DBInstanceId;
@@ -170,7 +178,11 @@ public class DescribeDBInstanceNetInfoForChannelResponseBody extends TeaModel {
             }
 
             /**
-             * DBInstanceType.
+             * The type of the instance. Valid values:
+             * <p>
+             * 
+             * *   **Master**: primary instance
+             * *   **Readonly**: read-only instance
              */
             public Builder DBInstanceType(String DBInstanceType) {
                 this.DBInstanceType = DBInstanceType;
@@ -178,7 +190,7 @@ public class DescribeDBInstanceNetInfoForChannelResponseBody extends TeaModel {
             }
 
             /**
-             * Weight.
+             * The weight of the instance.
              */
             public Builder weight(String weight) {
                 this.weight = weight;
@@ -272,7 +284,7 @@ public class DescribeDBInstanceNetInfoForChannelResponseBody extends TeaModel {
             private String securityIPs; 
 
             /**
-             * SecurityIPGroupName.
+             * The name of the IP address whitelist.
              */
             public Builder securityIPGroupName(String securityIPGroupName) {
                 this.securityIPGroupName = securityIPGroupName;
@@ -280,7 +292,7 @@ public class DescribeDBInstanceNetInfoForChannelResponseBody extends TeaModel {
             }
 
             /**
-             * SecurityIPs.
+             * The IP addresses contained in the IP address whitelist.
              */
             public Builder securityIPs(String securityIPs) {
                 this.securityIPs = securityIPs;
@@ -518,7 +530,11 @@ public class DescribeDBInstanceNetInfoForChannelResponseBody extends TeaModel {
             private String expiredTime; 
 
             /**
-             * Availability.
+             * The availability of the instance. Valid values:
+             * <p>
+             * 
+             * *   **Unavailable**
+             * *   **Available**
              */
             public Builder availability(String availability) {
                 this.availability = availability;
@@ -526,7 +542,7 @@ public class DescribeDBInstanceNetInfoForChannelResponseBody extends TeaModel {
             }
 
             /**
-             * ConnectionString.
+             * The endpoint of the instance.
              */
             public Builder connectionString(String connectionString) {
                 this.connectionString = connectionString;
@@ -534,7 +550,11 @@ public class DescribeDBInstanceNetInfoForChannelResponseBody extends TeaModel {
             }
 
             /**
-             * ConnectionStringType.
+             * The type of the endpoint. Valid values:
+             * <p>
+             * 
+             * *   **Normal**: a regular endpoint
+             * *   **ReadWriteSplitting**: a read/write splitting endpoint that is assigned after the shared proxy feature is enabled.
              */
             public Builder connectionStringType(String connectionStringType) {
                 this.connectionStringType = connectionStringType;
@@ -542,7 +562,7 @@ public class DescribeDBInstanceNetInfoForChannelResponseBody extends TeaModel {
             }
 
             /**
-             * DBInstanceWeights.
+             * An array that consists of the information about read weights to implement read/write splitting after the shared proxy feature is enabled.
              */
             public Builder DBInstanceWeights(DBInstanceWeights DBInstanceWeights) {
                 this.DBInstanceWeights = DBInstanceWeights;
@@ -550,7 +570,11 @@ public class DescribeDBInstanceNetInfoForChannelResponseBody extends TeaModel {
             }
 
             /**
-             * DistributionType.
+             * The policy that is used to assign read weights. This parameter is returned only for a read/write splitting endpoint that is assigned after the shared proxy feature is enabled. Valid values:
+             * <p>
+             * 
+             * *   **Standard**: The system automatically allocates read weights to the instance and its read-only instances based on the specifications of the instances.
+             * *   **Custom**: You must manually assign read weights to the instance and its read-only instances.
              */
             public Builder distributionType(String distributionType) {
                 this.distributionType = distributionType;
@@ -558,7 +582,7 @@ public class DescribeDBInstanceNetInfoForChannelResponseBody extends TeaModel {
             }
 
             /**
-             * IPAddress.
+             * The IP address.
              */
             public Builder IPAddress(String IPAddress) {
                 this.IPAddress = IPAddress;
@@ -566,7 +590,12 @@ public class DescribeDBInstanceNetInfoForChannelResponseBody extends TeaModel {
             }
 
             /**
-             * IPType.
+             * The network type of the IP address. Valid values:
+             * <p>
+             * 
+             * *   **Public**: the Internet
+             * *   **Inner**: the classic network
+             * *   **Private**: a VPC
              */
             public Builder IPType(String IPType) {
                 this.IPType = IPType;
@@ -574,7 +603,10 @@ public class DescribeDBInstanceNetInfoForChannelResponseBody extends TeaModel {
             }
 
             /**
-             * MaxDelayTime.
+             * The latency threshold that is allowed for read/write splitting of the shared proxy feature. Unit: seconds
+             * <p>
+             * 
+             * > This parameter is returned only when the **ConnectionStringType** parameter is set to **ReadWriteSplitting**.
              */
             public Builder maxDelayTime(String maxDelayTime) {
                 this.maxDelayTime = maxDelayTime;
@@ -582,7 +614,7 @@ public class DescribeDBInstanceNetInfoForChannelResponseBody extends TeaModel {
             }
 
             /**
-             * Port.
+             * The service port number.
              */
             public Builder port(String port) {
                 this.port = port;
@@ -590,7 +622,7 @@ public class DescribeDBInstanceNetInfoForChannelResponseBody extends TeaModel {
             }
 
             /**
-             * SecurityIPGroups.
+             * An array that consists of the details about the IP address whitelist.
              */
             public Builder securityIPGroups(SecurityIPGroups securityIPGroups) {
                 this.securityIPGroups = securityIPGroups;
@@ -598,7 +630,7 @@ public class DescribeDBInstanceNetInfoForChannelResponseBody extends TeaModel {
             }
 
             /**
-             * Upgradeable.
+             * An internal parameter. This operation does not return a value for this parameter.
              */
             public Builder upgradeable(String upgradeable) {
                 this.upgradeable = upgradeable;
@@ -606,7 +638,7 @@ public class DescribeDBInstanceNetInfoForChannelResponseBody extends TeaModel {
             }
 
             /**
-             * VPCId.
+             * The ID of the VPC in which the instance is deployed.
              */
             public Builder VPCId(String VPCId) {
                 this.VPCId = VPCId;
@@ -614,7 +646,7 @@ public class DescribeDBInstanceNetInfoForChannelResponseBody extends TeaModel {
             }
 
             /**
-             * VSwitchId.
+             * The ID of the vSwitch to which the instance belongs.
              */
             public Builder vSwitchId(String vSwitchId) {
                 this.vSwitchId = vSwitchId;
@@ -622,7 +654,7 @@ public class DescribeDBInstanceNetInfoForChannelResponseBody extends TeaModel {
             }
 
             /**
-             * expiredTime.
+             * The expiration time of the endpoint of the classic network type. Unit: seconds.
              */
             public Builder expiredTime(String expiredTime) {
                 this.expiredTime = expiredTime;

@@ -261,7 +261,7 @@ public class DescribeDBInstancesByPerformanceRequest extends Request {
         }
 
         /**
-         * ClientToken.
+         * The client token that is used to ensure the idempotence of the request. You can use the client to generate the value, but you must ensure that it is unique among different requests. The token can only contain ASCII characters and cannot exceed 64 characters in length.
          */
         public Builder clientToken(String clientToken) {
             this.putQueryParameter("ClientToken", clientToken);
@@ -270,7 +270,7 @@ public class DescribeDBInstancesByPerformanceRequest extends Request {
         }
 
         /**
-         * DBInstanceId.
+         * The ID of the instance.
          */
         public Builder DBInstanceId(String DBInstanceId) {
             this.putQueryParameter("DBInstanceId", DBInstanceId);
@@ -297,7 +297,10 @@ public class DescribeDBInstancesByPerformanceRequest extends Request {
         }
 
         /**
-         * PageNumber.
+         * The number of the page to return. Valid values: any non-zero positive integer.
+         * <p>
+         * 
+         * Default value: **1**.
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -306,7 +309,10 @@ public class DescribeDBInstancesByPerformanceRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * The number of entries to return on each page. Valid values: **5** to **100**.
+         * <p>
+         * 
+         * Default value: **30**.
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -315,7 +321,7 @@ public class DescribeDBInstancesByPerformanceRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * The region ID of the instance. You can call the [DescribeRegions](~~26243~~) operation to query the most recent region list.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -324,7 +330,7 @@ public class DescribeDBInstancesByPerformanceRequest extends Request {
         }
 
         /**
-         * ResourceGroupId.
+         * The ID of the resource group.
          */
         public Builder resourceGroupId(String resourceGroupId) {
             this.putQueryParameter("ResourceGroupId", resourceGroupId);
@@ -351,7 +357,7 @@ public class DescribeDBInstancesByPerformanceRequest extends Request {
         }
 
         /**
-         * SortKey.
+         * The sorting basis.
          */
         public Builder sortKey(String sortKey) {
             this.putQueryParameter("SortKey", sortKey);
@@ -360,7 +366,7 @@ public class DescribeDBInstancesByPerformanceRequest extends Request {
         }
 
         /**
-         * SortMethod.
+         * The sorting method.
          */
         public Builder sortMethod(String sortMethod) {
             this.putQueryParameter("SortMethod", sortMethod);
@@ -369,7 +375,7 @@ public class DescribeDBInstancesByPerformanceRequest extends Request {
         }
 
         /**
-         * Tags.
+         * The tags that are added to the instances. Each tag is a key-value pair that consists of two parts: TagKey and TagValue. Format: `{"key1":"value1"}`.
          */
         public Builder tags(String tags) {
             this.putQueryParameter("Tags", tags);
@@ -378,7 +384,7 @@ public class DescribeDBInstancesByPerformanceRequest extends Request {
         }
 
         /**
-         * proxyId.
+         * The ID of the proxy mode.
          */
         public Builder proxyId(String proxyId) {
             this.putQueryParameter("proxyId", proxyId);
@@ -432,7 +438,7 @@ public class DescribeDBInstancesByPerformanceRequest extends Request {
             private String value; 
 
             /**
-             * key.
+             * The key of tag 1 that is added to the instances.
              */
             public Builder key(String key) {
                 this.key = key;
@@ -440,7 +446,7 @@ public class DescribeDBInstancesByPerformanceRequest extends Request {
             }
 
             /**
-             * value.
+             * The value of tag 1 that is added to the instances.
              */
             public Builder value(String value) {
                 this.value = value;

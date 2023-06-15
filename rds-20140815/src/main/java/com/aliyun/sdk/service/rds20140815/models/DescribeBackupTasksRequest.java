@@ -181,7 +181,7 @@ public class DescribeBackupTasksRequest extends Request {
         } 
 
         /**
-         * BackupJobId.
+         * The ID of the backup task.
          */
         public Builder backupJobId(Integer backupJobId) {
             this.putQueryParameter("BackupJobId", backupJobId);
@@ -190,7 +190,13 @@ public class DescribeBackupTasksRequest extends Request {
         }
 
         /**
-         * BackupJobStatus.
+         * The status of the backup task. Valid values:
+         * <p>
+         * 
+         * *   **NoStart**: The backup task is not started.
+         * *   **Progressing**: The backup task is in progress.
+         * 
+         * By default, this operation returns backup tasks in both states.
          */
         public Builder backupJobStatus(String backupJobStatus) {
             this.putQueryParameter("BackupJobStatus", backupJobStatus);
@@ -199,7 +205,11 @@ public class DescribeBackupTasksRequest extends Request {
         }
 
         /**
-         * BackupMode.
+         * The backup mode. Valid values:
+         * <p>
+         * 
+         * *   **Automated**
+         * *   **Manual**
          */
         public Builder backupMode(String backupMode) {
             this.putQueryParameter("BackupMode", backupMode);
@@ -208,7 +218,7 @@ public class DescribeBackupTasksRequest extends Request {
         }
 
         /**
-         * ClientToken.
+         * The client token that is used to ensure the idempotence of the request. You can use the client to generate the token, but you must make sure that the generated token is unique among different requests. The token can contain only ASCII characters and cannot exceed 64 characters in length.
          */
         public Builder clientToken(String clientToken) {
             this.putQueryParameter("ClientToken", clientToken);
@@ -217,7 +227,7 @@ public class DescribeBackupTasksRequest extends Request {
         }
 
         /**
-         * DBInstanceId.
+         * The ID of the instance.
          */
         public Builder DBInstanceId(String DBInstanceId) {
             this.putQueryParameter("DBInstanceId", DBInstanceId);
@@ -226,7 +236,7 @@ public class DescribeBackupTasksRequest extends Request {
         }
 
         /**
-         * Flag.
+         * A reserved parameter.
          */
         public Builder flag(String flag) {
             this.putQueryParameter("Flag", flag);

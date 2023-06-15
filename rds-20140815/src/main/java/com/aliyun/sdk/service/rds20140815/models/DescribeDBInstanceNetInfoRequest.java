@@ -167,7 +167,7 @@ public class DescribeDBInstanceNetInfoRequest extends Request {
         } 
 
         /**
-         * ClientToken.
+         * The client token that is used to ensure the idempotence of the request. You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters and cannot exceed 64 characters in length.
          */
         public Builder clientToken(String clientToken) {
             this.putQueryParameter("ClientToken", clientToken);
@@ -176,7 +176,7 @@ public class DescribeDBInstanceNetInfoRequest extends Request {
         }
 
         /**
-         * DBInstanceId.
+         * The ID of the instance.
          */
         public Builder DBInstanceId(String DBInstanceId) {
             this.putQueryParameter("DBInstanceId", DBInstanceId);
@@ -185,7 +185,13 @@ public class DescribeDBInstanceNetInfoRequest extends Request {
         }
 
         /**
-         * DBInstanceNetRWSplitType.
+         * The type of the endpoint. Valid values:
+         * <p>
+         * 
+         * *   **Normal**: regular endpoint
+         * *   **ReadWriteSplitting**: read/write splitting endpoint
+         * 
+         * > By default, the system returns both types of endpoints.
          */
         public Builder DBInstanceNetRWSplitType(String DBInstanceNetRWSplitType) {
             this.putQueryParameter("DBInstanceNetRWSplitType", DBInstanceNetRWSplitType);
@@ -194,7 +200,7 @@ public class DescribeDBInstanceNetInfoRequest extends Request {
         }
 
         /**
-         * Flag.
+         * A reserved parameter.
          */
         public Builder flag(Integer flag) {
             this.putQueryParameter("Flag", flag);
@@ -203,7 +209,7 @@ public class DescribeDBInstanceNetInfoRequest extends Request {
         }
 
         /**
-         * GeneralGroupName.
+         * The name of the dedicated cluster to which the instance belongs. This parameter takes effect only when the instance runs MySQL on RDS Standard Edition and is created in a dedicated cluster.
          */
         public Builder generalGroupName(String generalGroupName) {
             this.putQueryParameter("GeneralGroupName", generalGroupName);

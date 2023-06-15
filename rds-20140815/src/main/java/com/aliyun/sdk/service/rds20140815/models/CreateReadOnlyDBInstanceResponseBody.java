@@ -86,7 +86,7 @@ public class CreateReadOnlyDBInstanceResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * ConnectionString.
+         * The internal endpoint that is used to connect to the read-only instance.
          */
         public Builder connectionString(String connectionString) {
             this.connectionString = connectionString;
@@ -94,7 +94,7 @@ public class CreateReadOnlyDBInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * DBInstanceId.
+         * The ID of the read-only instance.
          */
         public Builder DBInstanceId(String DBInstanceId) {
             this.DBInstanceId = DBInstanceId;
@@ -102,7 +102,7 @@ public class CreateReadOnlyDBInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * OrderId.
+         * The ID of the order.
          */
         public Builder orderId(String orderId) {
             this.orderId = orderId;
@@ -110,7 +110,7 @@ public class CreateReadOnlyDBInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * Port.
+         * The internal port number that is used to connect to the read-only instance.
          */
         public Builder port(String port) {
             this.port = port;
@@ -118,7 +118,7 @@ public class CreateReadOnlyDBInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

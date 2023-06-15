@@ -62,7 +62,7 @@ public class AllocateInstancePublicConnectionResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * ConnectionString.
+         * The endpoint of the instance.
          */
         public Builder connectionString(String connectionString) {
             this.connectionString = connectionString;
@@ -70,7 +70,7 @@ public class AllocateInstancePublicConnectionResponseBody extends TeaModel {
         }
 
         /**
-         * DbInstanceName.
+         * The ID of the instance.
          */
         public Builder dbInstanceName(String dbInstanceName) {
             this.dbInstanceName = dbInstanceName;
@@ -78,7 +78,7 @@ public class AllocateInstancePublicConnectionResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

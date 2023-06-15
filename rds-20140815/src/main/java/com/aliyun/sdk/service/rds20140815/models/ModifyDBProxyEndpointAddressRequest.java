@@ -168,7 +168,7 @@ public class ModifyDBProxyEndpointAddressRequest extends Request {
         } 
 
         /**
-         * DBInstanceId.
+         * The ID of the instance. You can call the [DescribeDBInstances](~~26232~~) operation to query the ID of the instance.
          */
         public Builder DBInstanceId(String DBInstanceId) {
             this.putQueryParameter("DBInstanceId", DBInstanceId);
@@ -177,7 +177,16 @@ public class ModifyDBProxyEndpointAddressRequest extends Request {
         }
 
         /**
-         * DBProxyConnectStringNetType.
+         * The network type of the proxy endpoint. Valid values:
+         * <p>
+         * 
+         * *   **Public**: Internet
+         * *   **VPC**: virtual private cloud (VPC)
+         * *   **Classic**: classic network
+         * 
+         * If the instance runs MySQL, the default value of this parameter is **Classic**.
+         * 
+         * > If the instance runs PostgreSQL, you must set this parameter to **Public** or **VPC**.
          */
         public Builder DBProxyConnectStringNetType(String DBProxyConnectStringNetType) {
             this.putQueryParameter("DBProxyConnectStringNetType", DBProxyConnectStringNetType);
@@ -186,7 +195,7 @@ public class ModifyDBProxyEndpointAddressRequest extends Request {
         }
 
         /**
-         * DBProxyEndpointId.
+         * The ID of the proxy endpoint. You can call the [DescribeDBProxyEndpoint](~~140955~~) operation to query the ID of the proxy endpoint.
          */
         public Builder DBProxyEndpointId(String DBProxyEndpointId) {
             this.putQueryParameter("DBProxyEndpointId", DBProxyEndpointId);
@@ -195,7 +204,7 @@ public class ModifyDBProxyEndpointAddressRequest extends Request {
         }
 
         /**
-         * DBProxyEngineType.
+         * An internal parameter. You do not need to specify this parameter.
          */
         public Builder DBProxyEngineType(String DBProxyEngineType) {
             this.putQueryParameter("DBProxyEngineType", DBProxyEngineType);
@@ -204,7 +213,10 @@ public class ModifyDBProxyEndpointAddressRequest extends Request {
         }
 
         /**
-         * DBProxyNewConnectString.
+         * The new prefix of the proxy endpoint. Enter a prefix.
+         * <p>
+         * 
+         * > You must specify at least one of the **DBProxyNewConnectString** and **DBProxyNewConnectStringPort** parameters.
          */
         public Builder DBProxyNewConnectString(String DBProxyNewConnectString) {
             this.putQueryParameter("DBProxyNewConnectString", DBProxyNewConnectString);
@@ -213,7 +225,10 @@ public class ModifyDBProxyEndpointAddressRequest extends Request {
         }
 
         /**
-         * DBProxyNewConnectStringPort.
+         * The port number that is associated with the proxy endpoint. Enter a port number.
+         * <p>
+         * 
+         * > You must specify at least one of the **DBProxyNewConnectString** and **DBProxyNewConnectStringPort** parameters.
          */
         public Builder DBProxyNewConnectStringPort(String DBProxyNewConnectStringPort) {
             this.putQueryParameter("DBProxyNewConnectStringPort", DBProxyNewConnectStringPort);

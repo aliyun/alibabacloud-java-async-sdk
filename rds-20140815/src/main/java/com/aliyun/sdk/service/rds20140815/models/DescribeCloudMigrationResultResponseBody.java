@@ -86,7 +86,7 @@ public class DescribeCloudMigrationResultResponseBody extends TeaModel {
         private Integer totalSize; 
 
         /**
-         * Items.
+         * The details of the cloud migration tasks.
          */
         public Builder items(java.util.List < Items> items) {
             this.items = items;
@@ -94,7 +94,7 @@ public class DescribeCloudMigrationResultResponseBody extends TeaModel {
         }
 
         /**
-         * PageNumber.
+         * The page number.
          */
         public Builder pageNumber(Long pageNumber) {
             this.pageNumber = pageNumber;
@@ -102,7 +102,7 @@ public class DescribeCloudMigrationResultResponseBody extends TeaModel {
         }
 
         /**
-         * PageSize.
+         * The number of entries per page.
          */
         public Builder pageSize(Long pageSize) {
             this.pageSize = pageSize;
@@ -110,7 +110,7 @@ public class DescribeCloudMigrationResultResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -118,7 +118,7 @@ public class DescribeCloudMigrationResultResponseBody extends TeaModel {
         }
 
         /**
-         * TotalSize.
+         * The total number of entries returned.
          */
         public Builder totalSize(Integer totalSize) {
             this.totalSize = totalSize;
@@ -338,7 +338,7 @@ public class DescribeCloudMigrationResultResponseBody extends TeaModel {
             private String taskName; 
 
             /**
-             * Detail.
+             * The details of the task.
              */
             public Builder detail(String detail) {
                 this.detail = detail;
@@ -346,7 +346,7 @@ public class DescribeCloudMigrationResultResponseBody extends TeaModel {
             }
 
             /**
-             * GmtCreated.
+             * The time when the task was created.
              */
             public Builder gmtCreated(String gmtCreated) {
                 this.gmtCreated = gmtCreated;
@@ -354,7 +354,7 @@ public class DescribeCloudMigrationResultResponseBody extends TeaModel {
             }
 
             /**
-             * GmtModified.
+             * The time when the task was modified.
              */
             public Builder gmtModified(String gmtModified) {
                 this.gmtModified = gmtModified;
@@ -362,7 +362,15 @@ public class DescribeCloudMigrationResultResponseBody extends TeaModel {
             }
 
             /**
-             * MigrateStage.
+             * The migration phase in which the task stays.
+             * <p>
+             * 
+             * *   **precheck**: precheck
+             * *   **basebackup**: full data backup
+             * *   **startup**: link establishment
+             * *   **increment**: incremental data synchronization
+             * *   **switch**: cloud migration-triggered switchover
+             * *   **success**: cloud migration completed
              */
             public Builder migrateStage(String migrateStage) {
                 this.migrateStage = migrateStage;
@@ -370,7 +378,7 @@ public class DescribeCloudMigrationResultResponseBody extends TeaModel {
             }
 
             /**
-             * ReplicationInfo.
+             * The information about the replication link.
              */
             public Builder replicationInfo(String replicationInfo) {
                 this.replicationInfo = replicationInfo;
@@ -378,7 +386,14 @@ public class DescribeCloudMigrationResultResponseBody extends TeaModel {
             }
 
             /**
-             * ReplicationState.
+             * The status of data replication.
+             * <p>
+             * 
+             * *   **unstarted**
+             * *   **catchup**
+             * *   **streaming**
+             * *   **disconnect**
+             * *   **finish**
              */
             public Builder replicationState(String replicationState) {
                 this.replicationState = replicationState;
@@ -386,7 +401,7 @@ public class DescribeCloudMigrationResultResponseBody extends TeaModel {
             }
 
             /**
-             * SourceAccount.
+             * The username of the account.
              */
             public Builder sourceAccount(String sourceAccount) {
                 this.sourceAccount = sourceAccount;
@@ -394,7 +409,11 @@ public class DescribeCloudMigrationResultResponseBody extends TeaModel {
             }
 
             /**
-             * SourceCategory.
+             * The environment in which the self-managed PostgreSQL instance runs.
+             * <p>
+             * 
+             * *   **idcOnVpc**: The self-managed PostgreSQL instance resides in a data center. The data center can communicate with the VPC to which the ApsaraDB RDS for PostgreSQL instance belongs.
+             * *   **ecsOnVpc**: The self-managed PostgreSQL instance resides on an ECS instance.
              */
             public Builder sourceCategory(String sourceCategory) {
                 this.sourceCategory = sourceCategory;
@@ -402,7 +421,7 @@ public class DescribeCloudMigrationResultResponseBody extends TeaModel {
             }
 
             /**
-             * SourceIpAddress.
+             * The private IP address that is used to connect to the self-managed PostgreSQL instance.
              */
             public Builder sourceIpAddress(String sourceIpAddress) {
                 this.sourceIpAddress = sourceIpAddress;
@@ -410,7 +429,7 @@ public class DescribeCloudMigrationResultResponseBody extends TeaModel {
             }
 
             /**
-             * SourcePassword.
+             * The password of the account.
              */
             public Builder sourcePassword(String sourcePassword) {
                 this.sourcePassword = sourcePassword;
@@ -418,7 +437,7 @@ public class DescribeCloudMigrationResultResponseBody extends TeaModel {
             }
 
             /**
-             * SourcePort.
+             * The port number that is used to connect to the self-managed PostgreSQL instance.
              */
             public Builder sourcePort(Long sourcePort) {
                 this.sourcePort = sourcePort;
@@ -426,7 +445,7 @@ public class DescribeCloudMigrationResultResponseBody extends TeaModel {
             }
 
             /**
-             * SwitchTime.
+             * The time when a switchover was performed.
              */
             public Builder switchTime(String switchTime) {
                 this.switchTime = switchTime;
@@ -434,7 +453,7 @@ public class DescribeCloudMigrationResultResponseBody extends TeaModel {
             }
 
             /**
-             * TargetEip.
+             * A reserved parameter. The return value of this parameter is null.
              */
             public Builder targetEip(String targetEip) {
                 this.targetEip = targetEip;
@@ -442,7 +461,7 @@ public class DescribeCloudMigrationResultResponseBody extends TeaModel {
             }
 
             /**
-             * TargetInstanceName.
+             * The ID of the destination instance.
              */
             public Builder targetInstanceName(String targetInstanceName) {
                 this.targetInstanceName = targetInstanceName;
@@ -450,7 +469,7 @@ public class DescribeCloudMigrationResultResponseBody extends TeaModel {
             }
 
             /**
-             * TaskId.
+             * The ID of the task.
              */
             public Builder taskId(Long taskId) {
                 this.taskId = taskId;
@@ -458,7 +477,7 @@ public class DescribeCloudMigrationResultResponseBody extends TeaModel {
             }
 
             /**
-             * TaskName.
+             * The name of the task.
              */
             public Builder taskName(String taskName) {
                 this.taskName = taskName;

@@ -255,7 +255,7 @@ public class DescribeSQLLogRecordsRequest extends Request {
         } 
 
         /**
-         * ClientToken.
+         * The client token that is used to ensure the idempotence of the request. You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters and cannot exceed 64 characters in length.
          */
         public Builder clientToken(String clientToken) {
             this.putQueryParameter("ClientToken", clientToken);
@@ -264,7 +264,7 @@ public class DescribeSQLLogRecordsRequest extends Request {
         }
 
         /**
-         * DBInstanceId.
+         * The ID of the instance.
          */
         public Builder DBInstanceId(String DBInstanceId) {
             this.putQueryParameter("DBInstanceId", DBInstanceId);
@@ -273,7 +273,7 @@ public class DescribeSQLLogRecordsRequest extends Request {
         }
 
         /**
-         * Database.
+         * The name of the database. You can enter only one database name. If you specify this parameter, this operation returns the logs that are generated only for the specified database. If you do not specify this parameter, this operation returns the logs that are generated for all databases on the instance.
          */
         public Builder database(String database) {
             this.putQueryParameter("Database", database);
@@ -282,7 +282,7 @@ public class DescribeSQLLogRecordsRequest extends Request {
         }
 
         /**
-         * EndTime.
+         * The end of the time range to query. The end time must be later than the start time. The time span between the start time and the end time must be less than 30 days. Specify the time in the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time must be in UTC.
          */
         public Builder endTime(String endTime) {
             this.putQueryParameter("EndTime", endTime);
@@ -291,7 +291,13 @@ public class DescribeSQLLogRecordsRequest extends Request {
         }
 
         /**
-         * Form.
+         * Specifies whether to generate an SQL audit log file or return SQL audit log entries. Valid values:
+         * <p>
+         * 
+         * *   **File**: If you set this parameter to File, this operation generates an SQL audit log file and returns only common response parameters. After you call this operation, you must call the [DescribeSQLLogFiles](~~26295~~) operation to obtain the download URL of the SQL audit log file.
+         * *   **Stream** (default): If you set this parameter to Stream, this operation returns SQL audit log entries.
+         * 
+         * > If you set this parameter to **File**, only ApsaraDB RDS for MySQL instances that use local disks and ApsaraDB RDS for SQL Server instances are supported, and a maximum of 1 million log entries are returned.
          */
         public Builder form(String form) {
             this.putQueryParameter("Form", form);
@@ -318,7 +324,10 @@ public class DescribeSQLLogRecordsRequest extends Request {
         }
 
         /**
-         * PageNumber.
+         * The number of the page to return. Valid values: any non-zero positive integer.
+         * <p>
+         * 
+         * Default value: **1**.
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -327,7 +336,7 @@ public class DescribeSQLLogRecordsRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * The number of entries to return on each page. Valid values: **30** to **100**. Default value: **30**.
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -336,7 +345,14 @@ public class DescribeSQLLogRecordsRequest extends Request {
         }
 
         /**
-         * QueryKeywords.
+         * The keyword that is used for the query.
+         * <p>
+         * 
+         * *   When you call this operation and set the **Form** parameter to **File** to generate an audit file, you cannot filter log entries by keyword.
+         * *   You can specify up to 10 keywords. The keywords are evaluated by using the **AND** operator. Separate multiple keywords with spaces.
+         * *   If a field name in the specified SQL statement is enclosed in backquotes (\`) and you want to use the field name as a keyword, you must enter the backquotes (\`) as part of the field name. For example, if the field name is \*\*\`id\`**, enter **\`id\`** rather than **id\*\*.
+         * 
+         * > After you enter a keyword, the system matches the keyword based on the **Database**, **User**, and **QueryKeywords** parameters. The parameters are evaluated by using the **OR** operator.
          */
         public Builder queryKeywords(String queryKeywords) {
             this.putQueryParameter("QueryKeywords", queryKeywords);
@@ -363,7 +379,7 @@ public class DescribeSQLLogRecordsRequest extends Request {
         }
 
         /**
-         * SQLId.
+         * The unique ID of the SQL statement.
          */
         public Builder SQLId(Long SQLId) {
             this.putQueryParameter("SQLId", SQLId);
@@ -372,7 +388,7 @@ public class DescribeSQLLogRecordsRequest extends Request {
         }
 
         /**
-         * StartTime.
+         * The beginning of the time range to query. You can query data in the last 15 days before the current date. Specify the time in the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time must be in UTC.
          */
         public Builder startTime(String startTime) {
             this.putQueryParameter("StartTime", startTime);
@@ -381,7 +397,7 @@ public class DescribeSQLLogRecordsRequest extends Request {
         }
 
         /**
-         * User.
+         * The username of the account. You can enter only one username. If you specify this parameter, this operation returns the logs that are generated only for the specified account. If you do not specify this parameter, this operation returns the logs that are generated for all accounts on the instance.
          */
         public Builder user(String user) {
             this.putQueryParameter("User", user);

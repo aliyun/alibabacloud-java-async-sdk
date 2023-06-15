@@ -110,7 +110,7 @@ public class DescribeMetaListResponseBody extends TeaModel {
         private Integer totalRecordCount; 
 
         /**
-         * DBInstanceName.
+         * The name of the instance.
          */
         public Builder DBInstanceName(String DBInstanceName) {
             this.DBInstanceName = DBInstanceName;
@@ -118,7 +118,7 @@ public class DescribeMetaListResponseBody extends TeaModel {
         }
 
         /**
-         * Items.
+         * An array consisting of the information about the databases and tables whose data is included in the backup set.
          */
         public Builder items(Items items) {
             this.items = items;
@@ -126,7 +126,7 @@ public class DescribeMetaListResponseBody extends TeaModel {
         }
 
         /**
-         * PageNumber.
+         * The page number of the returned page.
          */
         public Builder pageNumber(Integer pageNumber) {
             this.pageNumber = pageNumber;
@@ -134,7 +134,7 @@ public class DescribeMetaListResponseBody extends TeaModel {
         }
 
         /**
-         * PageRecordCount.
+         * The number of entries returned per page.
          */
         public Builder pageRecordCount(Integer pageRecordCount) {
             this.pageRecordCount = pageRecordCount;
@@ -142,7 +142,7 @@ public class DescribeMetaListResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -150,7 +150,7 @@ public class DescribeMetaListResponseBody extends TeaModel {
         }
 
         /**
-         * TotalPageCount.
+         * The total number of pages returned.
          */
         public Builder totalPageCount(Integer totalPageCount) {
             this.totalPageCount = totalPageCount;
@@ -158,7 +158,7 @@ public class DescribeMetaListResponseBody extends TeaModel {
         }
 
         /**
-         * TotalRecordCount.
+         * The total number of returned entries.
          */
         public Builder totalRecordCount(Integer totalRecordCount) {
             this.totalRecordCount = totalRecordCount;
@@ -222,7 +222,7 @@ public class DescribeMetaListResponseBody extends TeaModel {
             private String tables; 
 
             /**
-             * Database.
+             * The name of the database.
              */
             public Builder database(String database) {
                 this.database = database;
@@ -230,7 +230,7 @@ public class DescribeMetaListResponseBody extends TeaModel {
             }
 
             /**
-             * Size.
+             * The size of the table. Unit: KB.
              */
             public Builder size(String size) {
                 this.size = size;
@@ -238,7 +238,7 @@ public class DescribeMetaListResponseBody extends TeaModel {
             }
 
             /**
-             * Tables.
+             * The name of the table.
              */
             public Builder tables(String tables) {
                 this.tables = tables;

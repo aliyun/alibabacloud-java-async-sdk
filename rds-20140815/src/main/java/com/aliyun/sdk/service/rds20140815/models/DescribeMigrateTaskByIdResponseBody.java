@@ -146,7 +146,11 @@ public class DescribeMigrateTaskByIdResponseBody extends TeaModel {
         private String status; 
 
         /**
-         * BackupMode.
+         * The type of the migration task. Valid values:
+         * <p>
+         * 
+         * *   **FULL**: The migration task migrates full backup files that can be used to restore the full data of the instance.
+         * *   **UPDF**: The migration task migrates incremental or log backup files that can be used to restore the incremental data of the instance.
          */
         public Builder backupMode(String backupMode) {
             this.backupMode = backupMode;
@@ -154,7 +158,7 @@ public class DescribeMigrateTaskByIdResponseBody extends TeaModel {
         }
 
         /**
-         * CreateTime.
+         * The time when the migration task was created. The time follows the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time is displayed in UTC.
          */
         public Builder createTime(String createTime) {
             this.createTime = createTime;
@@ -162,7 +166,7 @@ public class DescribeMigrateTaskByIdResponseBody extends TeaModel {
         }
 
         /**
-         * DBInstanceName.
+         * The ID of the instance.
          */
         public Builder DBInstanceName(String DBInstanceName) {
             this.DBInstanceName = DBInstanceName;
@@ -170,7 +174,7 @@ public class DescribeMigrateTaskByIdResponseBody extends TeaModel {
         }
 
         /**
-         * DBName.
+         * The name of the database.
          */
         public Builder DBName(String DBName) {
             this.DBName = DBName;
@@ -178,7 +182,7 @@ public class DescribeMigrateTaskByIdResponseBody extends TeaModel {
         }
 
         /**
-         * Description.
+         * The description of the migration task.
          */
         public Builder description(String description) {
             this.description = description;
@@ -186,7 +190,7 @@ public class DescribeMigrateTaskByIdResponseBody extends TeaModel {
         }
 
         /**
-         * EndTime.
+         * The time when the migration task was completed. The time follows the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time is displayed in UTC.
          */
         public Builder endTime(String endTime) {
             this.endTime = endTime;
@@ -194,7 +198,11 @@ public class DescribeMigrateTaskByIdResponseBody extends TeaModel {
         }
 
         /**
-         * IsDBReplaced.
+         * Indicates whether the imported data overwrites the existing data. Valid values:
+         * <p>
+         * 
+         * *   **False**: The imported data does not overwrite the existing data.
+         * *   **True**: The imported data overwrites the existing data.
          */
         public Builder isDBReplaced(String isDBReplaced) {
             this.isDBReplaced = isDBReplaced;
@@ -202,7 +210,7 @@ public class DescribeMigrateTaskByIdResponseBody extends TeaModel {
         }
 
         /**
-         * MigrateTaskId.
+         * The ID of the migration task.
          */
         public Builder migrateTaskId(String migrateTaskId) {
             this.migrateTaskId = migrateTaskId;
@@ -210,7 +218,7 @@ public class DescribeMigrateTaskByIdResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -218,7 +226,14 @@ public class DescribeMigrateTaskByIdResponseBody extends TeaModel {
         }
 
         /**
-         * Status.
+         * The status of the migration task. Valid values:
+         * <p>
+         * 
+         * *   **NoStart**: The task has not started.
+         * *   **Running**:The task is in progress.
+         * *   **Success**: The task is successful.
+         * *   **Failed**: The task failed.
+         * *   **Waiting**: The task is waiting for an incremental backup file to be imported.
          */
         public Builder status(String status) {
             this.status = status;

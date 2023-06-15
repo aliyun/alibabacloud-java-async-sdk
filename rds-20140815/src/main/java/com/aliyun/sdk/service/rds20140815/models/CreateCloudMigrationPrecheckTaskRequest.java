@@ -158,7 +158,7 @@ public class CreateCloudMigrationPrecheckTaskRequest extends Request {
         } 
 
         /**
-         * DBInstanceName.
+         * The ID of the instance. You can call the [DescribeDBInstances](~~26232~~) operation to query the IDs of instances.
          */
         public Builder DBInstanceName(String DBInstanceName) {
             this.putQueryParameter("DBInstanceName", DBInstanceName);
@@ -176,7 +176,7 @@ public class CreateCloudMigrationPrecheckTaskRequest extends Request {
         }
 
         /**
-         * SourceAccount.
+         * The username of the account that is used to connect to the self-managed PostgreSQL instance. Enter the username of the account that you created in the [Create an account for cloud migration on a self-managed PostgreSQL instance](~~369500~~) topic.
          */
         public Builder sourceAccount(String sourceAccount) {
             this.putQueryParameter("SourceAccount", sourceAccount);
@@ -185,7 +185,11 @@ public class CreateCloudMigrationPrecheckTaskRequest extends Request {
         }
 
         /**
-         * SourceCategory.
+         * The environment in which the self-managed PostgreSQL instance runs.
+         * <p>
+         * 
+         * *   **idcOnVpc**: The self-managed PostgreSQL instance resides in a data center. The data center can communicate with the VPC to which the ApsaraDB RDS for PostgreSQL instance belongs.
+         * *   **ecsOnVpc**: The self-managed PostgreSQL instance resides on an ECS instance.
          */
         public Builder sourceCategory(String sourceCategory) {
             this.putQueryParameter("SourceCategory", sourceCategory);
@@ -194,7 +198,11 @@ public class CreateCloudMigrationPrecheckTaskRequest extends Request {
         }
 
         /**
-         * SourceIpAddress.
+         * The private IP address that is used to connect to the self-managed PostgreSQL instance.
+         * <p>
+         * 
+         * *   If the self-managed PostgreSQL instance resides on an ECS instance, enter the private IP address of the ECS instance. For more information about how to obtain the private IP address of an ECS instance, see [View IP addresses](~~273914~~).
+         * *   If the self-managed PostgreSQL instance resides in an on-premises data center, enter the private IP address of the on-premises data center.
          */
         public Builder sourceIpAddress(String sourceIpAddress) {
             this.putQueryParameter("SourceIpAddress", sourceIpAddress);
@@ -203,7 +211,7 @@ public class CreateCloudMigrationPrecheckTaskRequest extends Request {
         }
 
         /**
-         * SourcePassword.
+         * The password of the account that is used to connect to the self-managed PostgreSQL instance. Enter the password of the account that you created in the [Create an account for cloud migration on a self-managed PostgreSQL instance](~~369500~~) topic.
          */
         public Builder sourcePassword(String sourcePassword) {
             this.putQueryParameter("SourcePassword", sourcePassword);
@@ -212,7 +220,7 @@ public class CreateCloudMigrationPrecheckTaskRequest extends Request {
         }
 
         /**
-         * SourcePort.
+         * The port that is used to connect to the self-managed PostgreSQL instance. You can run the `netstat -a | grep PGSQL` command to view the port.
          */
         public Builder sourcePort(Long sourcePort) {
             this.putQueryParameter("SourcePort", sourcePort);
@@ -221,7 +229,7 @@ public class CreateCloudMigrationPrecheckTaskRequest extends Request {
         }
 
         /**
-         * TaskName.
+         * The name of the task. If you do not specify this parameter, ApsaraDB RDS automatically generates a name for the cloud migration task.
          */
         public Builder taskName(String taskName) {
             this.putQueryParameter("TaskName", taskName);

@@ -279,7 +279,7 @@ public class StartDBInstanceRequest extends Request {
         } 
 
         /**
-         * DBInstanceId.
+         * The ID of the instance. You can call the [DescribeDBInstances](~~26232~~) operation to query the ID of the instance.
          */
         public Builder DBInstanceId(String DBInstanceId) {
             this.putQueryParameter("DBInstanceId", DBInstanceId);
@@ -288,7 +288,14 @@ public class StartDBInstanceRequest extends Request {
         }
 
         /**
-         * DBInstanceTransType.
+         * The policy based on which the system migrates the data of the instance. Valid values:
+         * <p>
+         * 
+         * *   **0**: the default value. The system preferentially upgrades or downgrades the instance without a migration. If the resources on the host on which the instance resides are insufficient, the system migrates the instance to another suitable host.
+         * *   **1**: The system upgrades or downgrades the instance without a migration. If the upgrade or downgrade is not supported, the system reports an error.
+         * *   **2**: The system migrates the data of the instance from the host on which the instance resides to another host. You must also specify the **DedicatedHostGroupId**, **TargetDedicatedHostIdForMaster**, and **TargetDedicatedHostIdForSlave** parameters. If you set the DBInstanceTransType parameter to 2, you cannot migrate the data of the instance to the host on which the instance resides. If you migrate the data of the instance to the host on which the instance resides, the migration fails.
+         * 
+         * > Only the instances that are created in dedicated clusters are supported.
          */
         public Builder DBInstanceTransType(Integer DBInstanceTransType) {
             this.putQueryParameter("DBInstanceTransType", DBInstanceTransType);
@@ -297,7 +304,10 @@ public class StartDBInstanceRequest extends Request {
         }
 
         /**
-         * DedicatedHostGroupId.
+         * The ID of the dedicated cluster. You can call the [DescribeDedicatedHostGroups](~~141946~~) operation to query the ID of the dedicated cluster.
+         * <p>
+         * 
+         * > Only the instances that are created in dedicated clusters are supported.
          */
         public Builder dedicatedHostGroupId(String dedicatedHostGroupId) {
             this.putQueryParameter("DedicatedHostGroupId", dedicatedHostGroupId);
@@ -306,7 +316,16 @@ public class StartDBInstanceRequest extends Request {
         }
 
         /**
-         * EffectiveTime.
+         * The time at which you want the change to take effect. Valid values:
+         * <p>
+         * 
+         * *   **Immediate**: The change immediately takes effect.
+         * *   **MaintainTime**: The change takes effect during the maintenance window that you specified. For more information, see [ModifyDBInstanceMaintainTime](~~26249~~).
+         * *   **SpecificTime**: The change takes effect at a specified point in time.
+         * 
+         * Default value: MaintainTime.
+         * 
+         * > Only the instances that are created in dedicated clusters are supported.
          */
         public Builder effectiveTime(String effectiveTime) {
             this.putQueryParameter("EffectiveTime", effectiveTime);
@@ -315,7 +334,10 @@ public class StartDBInstanceRequest extends Request {
         }
 
         /**
-         * EngineVersion.
+         * The database engine version of the instance.
+         * <p>
+         * 
+         * > Only the instances that are created in dedicated clusters are supported.
          */
         public Builder engineVersion(String engineVersion) {
             this.putQueryParameter("EngineVersion", engineVersion);
@@ -333,7 +355,7 @@ public class StartDBInstanceRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * The region ID of the instance. You can call the [DescribeRegions](~~26243~~) operation to query the most recent region list.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -360,7 +382,14 @@ public class StartDBInstanceRequest extends Request {
         }
 
         /**
-         * SpecifiedTime.
+         * The custom time at which you want the change to take effect. Specify the time in the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC.
+         * <p>
+         * 
+         * > 
+         * 
+         * *   This parameter must be specified when you set the **EffectiveTime** parameter to **Specified**.
+         * 
+         * *   Only the instances that are created in dedicated clusters are supported.
          */
         public Builder specifiedTime(String specifiedTime) {
             this.putQueryParameter("SpecifiedTime", specifiedTime);
@@ -369,7 +398,10 @@ public class StartDBInstanceRequest extends Request {
         }
 
         /**
-         * Storage.
+         * The storage capacity of the instance. Valid values: **5 to 2000**. Unit: GB. If you do not specify this parameter, the storage capacity of the instance remains unchanged.
+         * <p>
+         * 
+         * > Only the instances that are created in dedicated clusters are supported.
          */
         public Builder storage(Integer storage) {
             this.putQueryParameter("Storage", storage);
@@ -378,7 +410,10 @@ public class StartDBInstanceRequest extends Request {
         }
 
         /**
-         * TargetDBInstanceClass.
+         * The instance type of the instance.
+         * <p>
+         * 
+         * > Only the instances that are created in dedicated clusters are supported.
          */
         public Builder targetDBInstanceClass(String targetDBInstanceClass) {
             this.putQueryParameter("TargetDBInstanceClass", targetDBInstanceClass);
@@ -387,7 +422,12 @@ public class StartDBInstanceRequest extends Request {
         }
 
         /**
-         * TargetDedicatedHostIdForLog.
+         * The ID of the host on which the logger instance is created.
+         * <p>
+         * 
+         * > 
+         * 
+         * *   This parameter is invalid.
          */
         public Builder targetDedicatedHostIdForLog(String targetDedicatedHostIdForLog) {
             this.putQueryParameter("TargetDedicatedHostIdForLog", targetDedicatedHostIdForLog);
@@ -396,7 +436,14 @@ public class StartDBInstanceRequest extends Request {
         }
 
         /**
-         * TargetDedicatedHostIdForMaster.
+         * The ID of the host on which the primary instance is created.
+         * <p>
+         * 
+         * > 
+         * 
+         * *   This parameter must be specified when you set the **DBInstanceTransType** parameter to **2**.
+         * 
+         * *   Only the instances that are created in dedicated clusters are supported.
          */
         public Builder targetDedicatedHostIdForMaster(String targetDedicatedHostIdForMaster) {
             this.putQueryParameter("TargetDedicatedHostIdForMaster", targetDedicatedHostIdForMaster);
@@ -405,7 +452,14 @@ public class StartDBInstanceRequest extends Request {
         }
 
         /**
-         * TargetDedicatedHostIdForSlave.
+         * The ID of the host on which the secondary instance is created.
+         * <p>
+         * 
+         * > 
+         * 
+         * *   This parameter must be specified when you set the **DBInstanceTransType** parameter to **2**.
+         * 
+         * *   Only the instances that are created in dedicated clusters are supported.
          */
         public Builder targetDedicatedHostIdForSlave(String targetDedicatedHostIdForSlave) {
             this.putQueryParameter("TargetDedicatedHostIdForSlave", targetDedicatedHostIdForSlave);
@@ -414,7 +468,10 @@ public class StartDBInstanceRequest extends Request {
         }
 
         /**
-         * VSwitchId.
+         * The ID of the vSwitch.
+         * <p>
+         * 
+         * > Only the instances that are created in dedicated clusters are supported.
          */
         public Builder vSwitchId(String vSwitchId) {
             this.putQueryParameter("VSwitchId", vSwitchId);
@@ -423,7 +480,10 @@ public class StartDBInstanceRequest extends Request {
         }
 
         /**
-         * ZoneId.
+         * The zone ID of the instance.
+         * <p>
+         * 
+         * > Only the instances that are created in dedicated clusters are supported.
          */
         public Builder zoneId(String zoneId) {
             this.putQueryParameter("ZoneId", zoneId);

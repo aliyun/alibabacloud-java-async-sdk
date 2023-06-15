@@ -113,7 +113,21 @@ public class SwitchDBInstanceVpcRequest extends Request {
         } 
 
         /**
-         * DBInstanceId.
+         * The ID of the instance.
+         * <p>
+         * 
+         * > 
+         * 
+         * *   The instance must run one of the following database engines:
+         * 
+         *     - MySQL with local SSDs, standard SSDs, or ESSDs
+         *     - SQL Server with standard SSDs or ESSDs
+         *     - MariaDB with standard SSDs or ESSDs
+         *     - PostgreSQL with standard SSDs or ESSDs
+         * 
+         * *   The instance must be in the Running state.
+         * *   The instance must reside in a VPC.
+         * *   The instance cannot be a temporary instance or use an instance type that belongs to the shared instance family.
          */
         public Builder DBInstanceId(String DBInstanceId) {
             this.putQueryParameter("DBInstanceId", DBInstanceId);
@@ -122,7 +136,10 @@ public class SwitchDBInstanceVpcRequest extends Request {
         }
 
         /**
-         * PrivateIpAddress.
+         * The private IP address of the instance. The private IP address must be within the CIDR block of the vSwitch that is specified by the **VSwitchId** parameter.
+         * <p>
+         * 
+         * > You can call the [DescribeVSwitches](~~35748~~) operation to query the CIDR block of a specified vSwitch.
          */
         public Builder privateIpAddress(String privateIpAddress) {
             this.putQueryParameter("PrivateIpAddress", privateIpAddress);
@@ -140,7 +157,10 @@ public class SwitchDBInstanceVpcRequest extends Request {
         }
 
         /**
-         * VPCId.
+         * The ID of the VPC.
+         * <p>
+         * 
+         * > The VPC must belong to the same region as the instance.
          */
         public Builder VPCId(String VPCId) {
             this.putQueryParameter("VPCId", VPCId);
@@ -149,7 +169,10 @@ public class SwitchDBInstanceVpcRequest extends Request {
         }
 
         /**
-         * VSwitchId.
+         * The ID of the vSwitch.
+         * <p>
+         * 
+         * > The vSwitch must belong to the same zone as the instance.
          */
         public Builder vSwitchId(String vSwitchId) {
             this.putQueryParameter("VSwitchId", vSwitchId);

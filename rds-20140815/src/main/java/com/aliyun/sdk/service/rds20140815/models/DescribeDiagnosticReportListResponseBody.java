@@ -62,7 +62,7 @@ public class DescribeDiagnosticReportListResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * DBInstanceId.
+         * The ID of the instance.
          */
         public Builder DBInstanceId(String DBInstanceId) {
             this.DBInstanceId = DBInstanceId;
@@ -70,7 +70,7 @@ public class DescribeDiagnosticReportListResponseBody extends TeaModel {
         }
 
         /**
-         * ReportList.
+         * The details of a diagnostic report.
          */
         public Builder reportList(java.util.List < ReportList> reportList) {
             this.reportList = reportList;
@@ -78,7 +78,7 @@ public class DescribeDiagnosticReportListResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -166,7 +166,7 @@ public class DescribeDiagnosticReportListResponseBody extends TeaModel {
             private String startTime; 
 
             /**
-             * DiagnosticTime.
+             * The time when the diagnosis was performed.
              */
             public Builder diagnosticTime(String diagnosticTime) {
                 this.diagnosticTime = diagnosticTime;
@@ -174,7 +174,7 @@ public class DescribeDiagnosticReportListResponseBody extends TeaModel {
             }
 
             /**
-             * DownloadURL.
+             * The URL that is used to download the diagnostic report over the Internet. If the diagnostic report cannot be downloaded, an empty string is returned.
              */
             public Builder downloadURL(String downloadURL) {
                 this.downloadURL = downloadURL;
@@ -182,7 +182,7 @@ public class DescribeDiagnosticReportListResponseBody extends TeaModel {
             }
 
             /**
-             * EndTime.
+             * The end time of the monitoring data.
              */
             public Builder endTime(String endTime) {
                 this.endTime = endTime;
@@ -190,7 +190,7 @@ public class DescribeDiagnosticReportListResponseBody extends TeaModel {
             }
 
             /**
-             * Score.
+             * The diagnostic score.
              */
             public Builder score(Integer score) {
                 this.score = score;
@@ -198,7 +198,7 @@ public class DescribeDiagnosticReportListResponseBody extends TeaModel {
             }
 
             /**
-             * StartTime.
+             * The start time of the monitoring data.
              */
             public Builder startTime(String startTime) {
                 this.startTime = startTime;

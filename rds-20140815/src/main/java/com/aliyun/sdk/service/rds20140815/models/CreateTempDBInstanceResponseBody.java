@@ -50,7 +50,7 @@ public class CreateTempDBInstanceResponseBody extends TeaModel {
         private String tempDBInstanceId; 
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -58,7 +58,7 @@ public class CreateTempDBInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * TempDBInstanceId.
+         * The ID of the temporary instance.
          */
         public Builder tempDBInstanceId(String tempDBInstanceId) {
             this.tempDBInstanceId = tempDBInstanceId;

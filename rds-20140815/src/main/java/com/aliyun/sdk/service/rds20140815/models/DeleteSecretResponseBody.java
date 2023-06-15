@@ -74,7 +74,7 @@ public class DeleteSecretResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * Id of the request
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -82,7 +82,7 @@ public class DeleteSecretResponseBody extends TeaModel {
         }
 
         /**
-         * SecretArn.
+         * The ARN of the credential for the Data API account.
          */
         public Builder secretArn(String secretArn) {
             this.secretArn = secretArn;
@@ -90,7 +90,7 @@ public class DeleteSecretResponseBody extends TeaModel {
         }
 
         /**
-         * SecretName.
+         * The name of the credential.
          */
         public Builder secretName(String secretName) {
             this.secretName = secretName;
@@ -98,7 +98,11 @@ public class DeleteSecretResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * Indicates whether the request was successful. Valid values:
+         * <p>
+         * 
+         * *   **true**
+         * *   **false**
          */
         public Builder success(Boolean success) {
             this.success = success;

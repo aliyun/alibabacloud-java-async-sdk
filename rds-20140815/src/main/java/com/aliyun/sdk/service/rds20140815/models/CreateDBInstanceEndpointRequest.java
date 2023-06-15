@@ -198,7 +198,10 @@ public class CreateDBInstanceEndpointRequest extends Request {
         } 
 
         /**
-         * ClientToken.
+         * The client token that is used to ensure the idempotence of the request. You can use the client to generate the token, but you must make sure that the token is unique among different requests.
+         * <p>
+         * 
+         * The token can contain only ASCII characters and cannot exceed 64 characters in length.
          */
         public Builder clientToken(String clientToken) {
             this.putQueryParameter("ClientToken", clientToken);
@@ -207,7 +210,10 @@ public class CreateDBInstanceEndpointRequest extends Request {
         }
 
         /**
-         * 私网连接串
+         * The prefix of the internal endpoint.
+         * <p>
+         * 
+         * When you create any type of endpoint, an internal endpoint is automatically created for the endpoint. This parameter specifies the prefix of the internal endpoint.
          */
         public Builder connectionStringPrefix(String connectionStringPrefix) {
             this.putQueryParameter("ConnectionStringPrefix", connectionStringPrefix);
@@ -216,7 +222,7 @@ public class CreateDBInstanceEndpointRequest extends Request {
         }
 
         /**
-         * Endpoint 用户自定义描述
+         * The user-defined description of the endpoint.
          */
         public Builder DBInstanceEndpointDescription(String DBInstanceEndpointDescription) {
             this.putQueryParameter("DBInstanceEndpointDescription", DBInstanceEndpointDescription);
@@ -225,7 +231,11 @@ public class CreateDBInstanceEndpointRequest extends Request {
         }
 
         /**
-         * Endpoint 类型, Primary, Readonly, Custom, Custom_Readonly_group
+         * The type of the endpoint. Valid values:
+         * <p>
+         * 
+         * *   Primary: read/write endpoint of the instance
+         * *   Readonly: read-only endpoint of the instance
          */
         public Builder DBInstanceEndpointType(String DBInstanceEndpointType) {
             this.putQueryParameter("DBInstanceEndpointType", DBInstanceEndpointType);
@@ -234,7 +244,7 @@ public class CreateDBInstanceEndpointRequest extends Request {
         }
 
         /**
-         * DBInstanceId.
+         * The ID of the instance. You can call the [DescribeDBInstances](~~26232~~) operation to query the ID of the instance.
          */
         public Builder DBInstanceId(String DBInstanceId) {
             this.putQueryParameter("DBInstanceId", DBInstanceId);
@@ -243,7 +253,7 @@ public class CreateDBInstanceEndpointRequest extends Request {
         }
 
         /**
-         * NodeItems.
+         * The node that is configured for the endpoint.
          */
         public Builder nodeItems(java.util.List < NodeItems> nodeItems) {
             String nodeItemsShrink = shrink(nodeItems, "NodeItems", "json");
@@ -253,7 +263,10 @@ public class CreateDBInstanceEndpointRequest extends Request {
         }
 
         /**
-         * 私网连接端口
+         * The port number of the internal endpoint. You can specify the port number for the internal endpoint.
+         * <p>
+         * 
+         * Valid values: 3000 to 5999.
          */
         public Builder port(String port) {
             this.putQueryParameter("Port", port);
@@ -262,7 +275,7 @@ public class CreateDBInstanceEndpointRequest extends Request {
         }
 
         /**
-         * 私网IP地址
+         * The IP address of the internal endpoint.
          */
         public Builder privateIpAddress(String privateIpAddress) {
             this.putQueryParameter("PrivateIpAddress", privateIpAddress);
@@ -280,7 +293,7 @@ public class CreateDBInstanceEndpointRequest extends Request {
         }
 
         /**
-         * vSwitchID
+         * The vSwitch ID of the internal endpoint.
          */
         public Builder vSwitchId(String vSwitchId) {
             this.putQueryParameter("VSwitchId", vSwitchId);
@@ -289,7 +302,7 @@ public class CreateDBInstanceEndpointRequest extends Request {
         }
 
         /**
-         * vpcID
+         * The virtual private cloud (VPC) ID of the internal endpoint.
          */
         public Builder vpcId(String vpcId) {
             this.putQueryParameter("VpcId", vpcId);
@@ -355,7 +368,7 @@ public class CreateDBInstanceEndpointRequest extends Request {
             private Long weight; 
 
             /**
-             * DBInstanceId.
+             * The ID of the instance. You can call the [DescribeDBInstances](~~26232~~) operation to query the ID of the instance.
              */
             public Builder DBInstanceId(String DBInstanceId) {
                 this.DBInstanceId = DBInstanceId;
@@ -363,7 +376,7 @@ public class CreateDBInstanceEndpointRequest extends Request {
             }
 
             /**
-             * NodeId.
+             * The ID of the node.
              */
             public Builder nodeId(String nodeId) {
                 this.nodeId = nodeId;
@@ -371,7 +384,10 @@ public class CreateDBInstanceEndpointRequest extends Request {
             }
 
             /**
-             * Weight.
+             * The weight of the node. Read requests are distributed based on the weight.
+             * <p>
+             * 
+             * Valid values: 0 to 100.
              */
             public Builder weight(Long weight) {
                 this.weight = weight;

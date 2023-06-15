@@ -126,7 +126,7 @@ public class ReleaseInstancePublicConnectionRequest extends Request {
         } 
 
         /**
-         * CurrentConnectionString.
+         * The public endpoint.
          */
         public Builder currentConnectionString(String currentConnectionString) {
             this.putQueryParameter("CurrentConnectionString", currentConnectionString);
@@ -135,7 +135,7 @@ public class ReleaseInstancePublicConnectionRequest extends Request {
         }
 
         /**
-         * DBInstanceId.
+         * The ID of the instance.
          */
         public Builder DBInstanceId(String DBInstanceId) {
             this.putQueryParameter("DBInstanceId", DBInstanceId);

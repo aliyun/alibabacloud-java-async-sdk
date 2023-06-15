@@ -134,7 +134,11 @@ public class ModifyInstanceCrossBackupPolicyResponseBody extends TeaModel {
         private Integer retention; 
 
         /**
-         * BackupEnabled.
+         * The status of the cross-region backup feature on the instance. Valid values:
+         * <p>
+         * 
+         * *   **Disable**
+         * *   **Enable**
          */
         public Builder backupEnabled(String backupEnabled) {
             this.backupEnabled = backupEnabled;
@@ -142,7 +146,7 @@ public class ModifyInstanceCrossBackupPolicyResponseBody extends TeaModel {
         }
 
         /**
-         * CrossBackupRegion.
+         * The ID of the region in which the cross-region backup files of the instance are stored.
          */
         public Builder crossBackupRegion(String crossBackupRegion) {
             this.crossBackupRegion = crossBackupRegion;
@@ -150,7 +154,7 @@ public class ModifyInstanceCrossBackupPolicyResponseBody extends TeaModel {
         }
 
         /**
-         * CrossBackupType.
+         * The policy that is used to save the cross-region backup files of the instance. Default value: **1**. The value 1 indicates that all cross-region backup files are saved.
          */
         public Builder crossBackupType(String crossBackupType) {
             this.crossBackupType = crossBackupType;
@@ -158,7 +162,7 @@ public class ModifyInstanceCrossBackupPolicyResponseBody extends TeaModel {
         }
 
         /**
-         * DBInstanceId.
+         * The ID of the instance.
          */
         public Builder DBInstanceId(String DBInstanceId) {
             this.DBInstanceId = DBInstanceId;
@@ -166,7 +170,11 @@ public class ModifyInstanceCrossBackupPolicyResponseBody extends TeaModel {
         }
 
         /**
-         * LogBackupEnabled.
+         * The status of the cross-region log backup feature on the instance. Valid values:
+         * <p>
+         * 
+         * *   **Disable**
+         * *   **Enable**
          */
         public Builder logBackupEnabled(String logBackupEnabled) {
             this.logBackupEnabled = logBackupEnabled;
@@ -174,7 +182,7 @@ public class ModifyInstanceCrossBackupPolicyResponseBody extends TeaModel {
         }
 
         /**
-         * RegionId.
+         * The region ID of the source instance. You can call the [DescribeRegions](~~26243~~) operation to query the most recent region list.
          */
         public Builder regionId(String regionId) {
             this.regionId = regionId;
@@ -182,7 +190,7 @@ public class ModifyInstanceCrossBackupPolicyResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -190,7 +198,7 @@ public class ModifyInstanceCrossBackupPolicyResponseBody extends TeaModel {
         }
 
         /**
-         * RetentType.
+         * The policy that is used to retain the cross-region backup files of the instance. Default value: **1**. The value 1 indicates that the cross-region backup files of the instance are retained based on the specified retention period.
          */
         public Builder retentType(Integer retentType) {
             this.retentType = retentType;
@@ -198,7 +206,7 @@ public class ModifyInstanceCrossBackupPolicyResponseBody extends TeaModel {
         }
 
         /**
-         * Retention.
+         * The number of days for which the cross-region backup files of the instance are retained. Valid values: **7 to 1825**.
          */
         public Builder retention(Integer retention) {
             this.retention = retention;

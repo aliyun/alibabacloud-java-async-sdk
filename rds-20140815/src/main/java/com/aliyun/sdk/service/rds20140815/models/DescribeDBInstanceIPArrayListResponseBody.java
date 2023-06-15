@@ -50,7 +50,7 @@ public class DescribeDBInstanceIPArrayListResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * Items.
+         * An array that consists of the details of the IP address whitelists.
          */
         public Builder items(Items items) {
             this.items = items;
@@ -58,7 +58,7 @@ public class DescribeDBInstanceIPArrayListResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -134,7 +134,10 @@ public class DescribeDBInstanceIPArrayListResponseBody extends TeaModel {
             private String securityIPType; 
 
             /**
-             * DBInstanceIPArrayAttribute.
+             * The attribute of the IP address whitelist. By default, this parameter is empty.
+             * <p>
+             * 
+             * > The IP address whitelists that have the hidden attribute are not displayed in the ApsaraDB RDS console. These IP address whitelists are used to access Alibaba Cloud services, such as Data Transmission Service (DTS).
              */
             public Builder DBInstanceIPArrayAttribute(String DBInstanceIPArrayAttribute) {
                 this.DBInstanceIPArrayAttribute = DBInstanceIPArrayAttribute;
@@ -142,7 +145,7 @@ public class DescribeDBInstanceIPArrayListResponseBody extends TeaModel {
             }
 
             /**
-             * DBInstanceIPArrayName.
+             * The name of the IP address whitelist.
              */
             public Builder DBInstanceIPArrayName(String DBInstanceIPArrayName) {
                 this.DBInstanceIPArrayName = DBInstanceIPArrayName;
@@ -150,7 +153,7 @@ public class DescribeDBInstanceIPArrayListResponseBody extends TeaModel {
             }
 
             /**
-             * SecurityIPList.
+             * The IP addresses in the IP address whitelist.
              */
             public Builder securityIPList(String securityIPList) {
                 this.securityIPList = securityIPList;
@@ -158,7 +161,7 @@ public class DescribeDBInstanceIPArrayListResponseBody extends TeaModel {
             }
 
             /**
-             * SecurityIPType.
+             * The type of the IP address.
              */
             public Builder securityIPType(String securityIPType) {
                 this.securityIPType = securityIPType;

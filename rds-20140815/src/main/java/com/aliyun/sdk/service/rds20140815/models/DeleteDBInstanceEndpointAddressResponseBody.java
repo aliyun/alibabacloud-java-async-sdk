@@ -50,7 +50,7 @@ public class DeleteDBInstanceEndpointAddressResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * Data.
+         * The returned data.
          */
         public Builder data(Data data) {
             this.data = data;
@@ -58,7 +58,7 @@ public class DeleteDBInstanceEndpointAddressResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -110,7 +110,7 @@ public class DeleteDBInstanceEndpointAddressResponseBody extends TeaModel {
             private String DBInstanceName; 
 
             /**
-             * DBInstanceEndpointId.
+             * The endpoint ID of the instance.
              */
             public Builder DBInstanceEndpointId(String DBInstanceEndpointId) {
                 this.DBInstanceEndpointId = DBInstanceEndpointId;
@@ -118,7 +118,7 @@ public class DeleteDBInstanceEndpointAddressResponseBody extends TeaModel {
             }
 
             /**
-             * DBInstanceName.
+             * The ID of the instance.
              */
             public Builder DBInstanceName(String DBInstanceName) {
                 this.DBInstanceName = DBInstanceName;

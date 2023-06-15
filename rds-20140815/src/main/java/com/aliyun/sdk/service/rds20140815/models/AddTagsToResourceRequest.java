@@ -191,7 +191,7 @@ public class AddTagsToResourceRequest extends Request {
         }
 
         /**
-         * ClientToken.
+         * The client token that is used to ensure the idempotence of the request. You can use the client to generate the value, but you must ensure that it is unique among different requests. The token can only contain ASCII characters and cannot exceed 64 characters in length.
          */
         public Builder clientToken(String clientToken) {
             this.putQueryParameter("ClientToken", clientToken);
@@ -200,7 +200,10 @@ public class AddTagsToResourceRequest extends Request {
         }
 
         /**
-         * DBInstanceId.
+         * The ID of the instance.
+         * <p>
+         * 
+         * >  You can enter up to 30 instance IDs in a single request. If you enter more than one instance ID, you must separate the instance IDs with commas (,).
          */
         public Builder DBInstanceId(String DBInstanceId) {
             this.putQueryParameter("DBInstanceId", DBInstanceId);
@@ -227,7 +230,7 @@ public class AddTagsToResourceRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * The region ID of the instance. You can call the [DescribeRegions](~~26243~~) operation to query the most recent region list.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -254,7 +257,10 @@ public class AddTagsToResourceRequest extends Request {
         }
 
         /**
-         * Tags.
+         * The tags that you want to bind. Each tag consists of a TagKey and a TagValue. You can specify up to five tags in a single request. Format: {"key1":"value1","key2":"value2"...}.
+         * <p>
+         * 
+         * >  The TagKey is required, and the TagValue is optional.
          */
         public Builder tags(String tags) {
             this.putQueryParameter("Tags", tags);
@@ -263,7 +269,7 @@ public class AddTagsToResourceRequest extends Request {
         }
 
         /**
-         * proxyId.
+         * The ID of the proxy pattern.
          */
         public Builder proxyId(String proxyId) {
             this.putQueryParameter("proxyId", proxyId);
@@ -317,7 +323,7 @@ public class AddTagsToResourceRequest extends Request {
             private String value; 
 
             /**
-             * key.
+             * The TagKey of the first tag that you want to bind. Each tag consists of a TagKey and a TagValue. You can specify up to five tags in a single request. The TagKey is required, and the TagValue is optional.
              */
             public Builder key(String key) {
                 this.key = key;
@@ -325,7 +331,7 @@ public class AddTagsToResourceRequest extends Request {
             }
 
             /**
-             * value.
+             * The TagValue of the first tag that you want to bind. Each tag consists of a TagKey and a TagValue. You can specify up to five tags in a single request. The TagKey is required, and the TagValue is optional.
              */
             public Builder value(String value) {
                 this.value = value;

@@ -146,7 +146,10 @@ public class CreateDBInstanceResponseBody extends TeaModel {
         private String taskId; 
 
         /**
-         * ConnectionString.
+         * The endpoint of the instance.
+         * <p>
+         * 
+         * > The **DBInstanceNetType** parameter indicates whether the endpoint is internal or public.
          */
         public Builder connectionString(String connectionString) {
             this.connectionString = connectionString;
@@ -154,7 +157,10 @@ public class CreateDBInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * DBInstanceId.
+         * The ID of the instance If the value of the **Amount** parameter is greater than **1**, more than one instance ID is returned. The number of instance IDs that are returned is the same as the value of the Amount parameter. The returned instance IDs are separated by commas (,).
+         * <p>
+         * 
+         * For example, if the value of the **Amount** parameter is **3**, three instance IDs are returned. Example: `rm-uf6wjk5*****1,rm-uf6wjk5*****2,rm-uf6wjk5*****3`
          */
         public Builder DBInstanceId(String DBInstanceId) {
             this.DBInstanceId = DBInstanceId;
@@ -162,7 +168,11 @@ public class CreateDBInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * DryRun.
+         * Indicates that the system performed a dry run.
+         * <p>
+         * 
+         * *   The value is fixed as **true**.
+         * *   If the system does not perform a dry run, this parameter is not returned.
          */
         public Builder dryRun(Boolean dryRun) {
             this.dryRun = dryRun;
@@ -170,7 +180,14 @@ public class CreateDBInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * DryRunResult.
+         * Indicates whether the request passed the dry run. Valid values:
+         * <p>
+         * 
+         * *   **true**
+         * *   **false** 
+         * 
+         * *   If the system does not perform a dry run, this parameter is not returned.
+         * *   If the request failed the dry run, an error message is returned.
          */
         public Builder dryRunResult(Boolean dryRunResult) {
             this.dryRunResult = dryRunResult;
@@ -178,7 +195,10 @@ public class CreateDBInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * The message that indicates whether multiple instances are created.
+         * <p>
+         * 
+         * > The parameter is returned only when the value of the **Amount** parameter is greater than 1.
          */
         public Builder message(String message) {
             this.message = message;
@@ -186,7 +206,7 @@ public class CreateDBInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * OrderId.
+         * The ID of the order.
          */
         public Builder orderId(String orderId) {
             this.orderId = orderId;
@@ -194,7 +214,10 @@ public class CreateDBInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * Port.
+         * The port that is used to connect to the instance.
+         * <p>
+         * 
+         * > The **DBInstanceNetType** parameter indicates whether the port number is internal or public.
          */
         public Builder port(String port) {
             this.port = port;
@@ -202,7 +225,7 @@ public class CreateDBInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -210,7 +233,13 @@ public class CreateDBInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * TagResult.
+         * Indicates whether the specified tag is added to the instance. Valid values:
+         * <p>
+         * 
+         * *   **true**: The specified tag is added to the instance.
+         * *   **false**: The specified tag fails to be added to the instance.
+         * 
+         * > If you do not add a tag to the instance, this parameter is not returned.
          */
         public Builder tagResult(Boolean tagResult) {
             this.tagResult = tagResult;
@@ -218,7 +247,11 @@ public class CreateDBInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * TaskId.
+         * The ID of the task that is run to create multiple instances.
+         * <p>
+         * 
+         * *   This parameter is returned only when the value of **Amount** is greater than 1.
+         * *   **TaskID** cannot be used to query a task.
          */
         public Builder taskId(String taskId) {
             this.taskId = taskId;

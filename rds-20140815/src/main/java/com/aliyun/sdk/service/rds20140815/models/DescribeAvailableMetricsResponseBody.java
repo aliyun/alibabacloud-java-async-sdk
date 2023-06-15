@@ -74,7 +74,7 @@ public class DescribeAvailableMetricsResponseBody extends TeaModel {
         private Integer totalRecordCount; 
 
         /**
-         * DBInstanceName.
+         * The ID of the instance.
          */
         public Builder DBInstanceName(String DBInstanceName) {
             this.DBInstanceName = DBInstanceName;
@@ -82,7 +82,7 @@ public class DescribeAvailableMetricsResponseBody extends TeaModel {
         }
 
         /**
-         * Items.
+         * An array that consists of the details of the enhanced monitoring metric.
          */
         public Builder items(java.util.List < Items> items) {
             this.items = items;
@@ -90,7 +90,7 @@ public class DescribeAvailableMetricsResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -98,7 +98,7 @@ public class DescribeAvailableMetricsResponseBody extends TeaModel {
         }
 
         /**
-         * TotalRecordCount.
+         * The total number of enhanced monitoring metrics that are available for the instance.
          */
         public Builder totalRecordCount(Integer totalRecordCount) {
             this.totalRecordCount = totalRecordCount;
@@ -234,7 +234,7 @@ public class DescribeAvailableMetricsResponseBody extends TeaModel {
             private String unit; 
 
             /**
-             * Description.
+             * The description of the enhanced monitoring metric.
              */
             public Builder description(String description) {
                 this.description = description;
@@ -242,7 +242,11 @@ public class DescribeAvailableMetricsResponseBody extends TeaModel {
             }
 
             /**
-             * Dimension.
+             * The category of the enhanced monitoring metric. Valid values:
+             * <p>
+             * 
+             * *   **os**: OS metric
+             * *   **db**: database metric
              */
             public Builder dimension(String dimension) {
                 this.dimension = dimension;
@@ -250,7 +254,7 @@ public class DescribeAvailableMetricsResponseBody extends TeaModel {
             }
 
             /**
-             * GroupKey.
+             * The key of the group to which the enhanced monitoring metric belongs.
              */
             public Builder groupKey(String groupKey) {
                 this.groupKey = groupKey;
@@ -258,7 +262,7 @@ public class DescribeAvailableMetricsResponseBody extends TeaModel {
             }
 
             /**
-             * GroupKeyType.
+             * The name of the group to which the enhanced monitoring metric belongs.
              */
             public Builder groupKeyType(String groupKeyType) {
                 this.groupKeyType = groupKeyType;
@@ -266,7 +270,12 @@ public class DescribeAvailableMetricsResponseBody extends TeaModel {
             }
 
             /**
-             * Method.
+             * The method that is used to aggregate the monitoring data of the enhanced monitoring metric. Valid values:
+             * <p>
+             * 
+             * *   **avg**: The system calculates the average value of the enhanced monitoring metric.
+             * *   **min**: The system calculates the minimum value of the enhanced monitoring metric.
+             * *   **max**: The system calculates the maximum value of the enhanced monitoring metric.
              */
             public Builder method(String method) {
                 this.method = method;
@@ -274,7 +283,7 @@ public class DescribeAvailableMetricsResponseBody extends TeaModel {
             }
 
             /**
-             * MetricsKey.
+             * The key of the enhanced monitoring metric.
              */
             public Builder metricsKey(String metricsKey) {
                 this.metricsKey = metricsKey;
@@ -282,7 +291,7 @@ public class DescribeAvailableMetricsResponseBody extends TeaModel {
             }
 
             /**
-             * MetricsKeyAlias.
+             * The alias of the enhanced monitoring metric.
              */
             public Builder metricsKeyAlias(String metricsKeyAlias) {
                 this.metricsKeyAlias = metricsKeyAlias;
@@ -290,7 +299,7 @@ public class DescribeAvailableMetricsResponseBody extends TeaModel {
             }
 
             /**
-             * SortRule.
+             * The serial number of the enhanced monitoring metric.
              */
             public Builder sortRule(Integer sortRule) {
                 this.sortRule = sortRule;
@@ -298,7 +307,7 @@ public class DescribeAvailableMetricsResponseBody extends TeaModel {
             }
 
             /**
-             * Unit.
+             * The unit of the enhanced monitoring metric.
              */
             public Builder unit(String unit) {
                 this.unit = unit;

@@ -177,7 +177,14 @@ public class ModifySQLCollectorRetentionRequest extends Request {
         }
 
         /**
-         * ConfigValue.
+         * The log backup retention period that is allowed by the SQL explorer on the instance. Valid values:
+         * <p>
+         * 
+         * *   **30:** 30 days
+         * *   **180:** 180 days
+         * *   **365:** one year
+         * *   **1095:** three years
+         * *   **1825:** five years
          */
         public Builder configValue(String configValue) {
             this.putQueryParameter("ConfigValue", configValue);
@@ -186,7 +193,7 @@ public class ModifySQLCollectorRetentionRequest extends Request {
         }
 
         /**
-         * DBInstanceId.
+         * The ID of the instance.
          */
         public Builder DBInstanceId(String DBInstanceId) {
             this.putQueryParameter("DBInstanceId", DBInstanceId);
@@ -213,7 +220,7 @@ public class ModifySQLCollectorRetentionRequest extends Request {
         }
 
         /**
-         * ResourceGroupId.
+         * The ID of the resource group to which the instance belongs.
          */
         public Builder resourceGroupId(String resourceGroupId) {
             this.putQueryParameter("ResourceGroupId", resourceGroupId);

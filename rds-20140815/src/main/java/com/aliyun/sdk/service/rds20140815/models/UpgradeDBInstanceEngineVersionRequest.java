@@ -154,7 +154,7 @@ public class UpgradeDBInstanceEngineVersionRequest extends Request {
         } 
 
         /**
-         * ClientToken.
+         * The client token that is used to ensure the idempotence of the request. You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters and cannot exceed 64 characters in length.
          */
         public Builder clientToken(String clientToken) {
             this.putQueryParameter("ClientToken", clientToken);
@@ -163,7 +163,7 @@ public class UpgradeDBInstanceEngineVersionRequest extends Request {
         }
 
         /**
-         * DBInstanceId.
+         * The ID of the instance.
          */
         public Builder DBInstanceId(String DBInstanceId) {
             this.putQueryParameter("DBInstanceId", DBInstanceId);
@@ -172,7 +172,13 @@ public class UpgradeDBInstanceEngineVersionRequest extends Request {
         }
 
         /**
-         * EffectiveTime.
+         * The time at which you want the specification change to take effect. Valid values:
+         * <p>
+         * 
+         * *   **Immediate**: The specification change takes effect immediately.
+         * *   **MaintainTime**: The change is applied during the specified maintenance window. For more information, see [ModifyDBInstanceMaintainTime](~~26249~~).
+         * 
+         * Default value: **Immediate**.
          */
         public Builder effectiveTime(String effectiveTime) {
             this.putQueryParameter("EffectiveTime", effectiveTime);
@@ -181,7 +187,12 @@ public class UpgradeDBInstanceEngineVersionRequest extends Request {
         }
 
         /**
-         * EngineVersion.
+         * The major engine version that the new instance runs. Valid values:
+         * <p>
+         * 
+         * *   **8.0**
+         * *   **5.7**
+         * *   **5.6**
          */
         public Builder engineVersion(String engineVersion) {
             this.putQueryParameter("EngineVersion", engineVersion);

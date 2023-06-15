@@ -153,7 +153,14 @@ public class DeleteBackupFileRequest extends Request {
         } 
 
         /**
-         * BackupId.
+         * The ID of the backup set. You can specify the IDs of up to 100 backup sets at a time. Separate the IDs with commas (,).
+         * <p>
+         * 
+         * > 
+         * 
+         * *   Only the IDs of the backup sets for the database is supported.
+         * 
+         * *   You can call the [DescribeBackups](~~26273~~) operation to query the IDs of backup sets.
          */
         public Builder backupId(String backupId) {
             this.putQueryParameter("BackupId", backupId);
@@ -162,7 +169,7 @@ public class DeleteBackupFileRequest extends Request {
         }
 
         /**
-         * BackupTime.
+         * Specifies whether to delete the backup sets that are generated before the specified point in time. Specify the time in the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC.
          */
         public Builder backupTime(String backupTime) {
             this.putQueryParameter("BackupTime", backupTime);
@@ -171,7 +178,7 @@ public class DeleteBackupFileRequest extends Request {
         }
 
         /**
-         * DBInstanceId.
+         * The ID of the instance.
          */
         public Builder DBInstanceId(String DBInstanceId) {
             this.putQueryParameter("DBInstanceId", DBInstanceId);
@@ -180,7 +187,7 @@ public class DeleteBackupFileRequest extends Request {
         }
 
         /**
-         * DBName.
+         * The name of the database.
          */
         public Builder DBName(String DBName) {
             this.putQueryParameter("DBName", DBName);
@@ -198,7 +205,7 @@ public class DeleteBackupFileRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * The region ID of the instance. You can call the [DescribeRegions](~~26243~~) operation to query the most recent region list.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);

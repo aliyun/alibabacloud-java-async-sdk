@@ -62,7 +62,7 @@ public class DescribeDBInstanceIpHostnameResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * DBInstanceId.
+         * The ID of the instance.
          */
         public Builder DBInstanceId(String DBInstanceId) {
             this.DBInstanceId = DBInstanceId;
@@ -70,7 +70,7 @@ public class DescribeDBInstanceIpHostnameResponseBody extends TeaModel {
         }
 
         /**
-         * IpHostnameInfos.
+         * The internal IP addresses and hostnames of the ECS instances where the primary and secondary instances reside. Format: IP address 1,Hostname 1;IP address 2,Hostname 2.
          */
         public Builder ipHostnameInfos(String ipHostnameInfos) {
             this.ipHostnameInfos = ipHostnameInfos;
@@ -78,7 +78,7 @@ public class DescribeDBInstanceIpHostnameResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

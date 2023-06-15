@@ -154,7 +154,7 @@ public class ListClassesRequest extends Request {
         } 
 
         /**
-         * ClientToken.
+         * The client token that is used to ensure the idempotence of the request. You can use the client to generate the token, but you must make sure that the generated token is unique among different requests. The token can contain only ASCII characters and cannot exceed 64 characters in length.
          */
         public Builder clientToken(String clientToken) {
             this.putQueryParameter("ClientToken", clientToken);
@@ -163,7 +163,13 @@ public class ListClassesRequest extends Request {
         }
 
         /**
-         * CommodityCode.
+         * The commodity code of the instances.
+         * <p>
+         * 
+         * *   **bards_intl**: The instances are pay-as-you-go primary instances.
+         * *   **rds_intl**: The instances are subscription primary instances.
+         * *   **rords_intl**: The instances are pay-as-you-go read-only instances.
+         * *   **rds_rordspre_public_intl**: The instances are subscription read-only instances.
          */
         public Builder commodityCode(String commodityCode) {
             this.putQueryParameter("CommodityCode", commodityCode);
@@ -172,7 +178,10 @@ public class ListClassesRequest extends Request {
         }
 
         /**
-         * DBInstanceId.
+         * The ID of the primary instance. You can call the [DescribeDBInstances](~~26232~~) operation to query the ID of the primary instance.
+         * <p>
+         * 
+         * > If you use **CommodityCode** to query the instance types that are available to read-only instances, you must specify the DBInstanceId parameter.
          */
         public Builder DBInstanceId(String DBInstanceId) {
             this.putQueryParameter("DBInstanceId", DBInstanceId);
@@ -181,7 +190,13 @@ public class ListClassesRequest extends Request {
         }
 
         /**
-         * OrderType.
+         * The type of order that you want to query. Valid values:
+         * <p>
+         * 
+         * *   **BUY**: specifies the query orders that are used to purchase instances.
+         * *   **UPGRADE**: specifies the query orders that are used to change the specifications of instances.
+         * *   **RENEW**: specifies the query orders that are used to renew instances.
+         * *   **CONVERT**: specifies the query orders that are used to change the billing methods of instances.
          */
         public Builder orderType(String orderType) {
             this.putQueryParameter("OrderType", orderType);
@@ -199,7 +214,10 @@ public class ListClassesRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * The ID of the region. You can call the [DescribeRegions](~~26243~~) operation to query the most recent region list.
+         * <p>
+         * 
+         * > If you are using an Alibaba Cloud account on the International site (alibabacloud.com), you must specify the RegionId parameter.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);

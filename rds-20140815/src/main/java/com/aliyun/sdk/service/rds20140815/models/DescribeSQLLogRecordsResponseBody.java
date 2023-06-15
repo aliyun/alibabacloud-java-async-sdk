@@ -86,7 +86,7 @@ public class DescribeSQLLogRecordsResponseBody extends TeaModel {
         private Long totalRecordCount; 
 
         /**
-         * Items.
+         * An array that consists of the details about each SQL audit log entry.
          */
         public Builder items(Items items) {
             this.items = items;
@@ -94,7 +94,7 @@ public class DescribeSQLLogRecordsResponseBody extends TeaModel {
         }
 
         /**
-         * PageNumber.
+         * The page number of the returned page.
          */
         public Builder pageNumber(Integer pageNumber) {
             this.pageNumber = pageNumber;
@@ -102,7 +102,7 @@ public class DescribeSQLLogRecordsResponseBody extends TeaModel {
         }
 
         /**
-         * PageRecordCount.
+         * The number of SQL audit log entries on the current page.
          */
         public Builder pageRecordCount(Integer pageRecordCount) {
             this.pageRecordCount = pageRecordCount;
@@ -110,7 +110,7 @@ public class DescribeSQLLogRecordsResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -118,7 +118,7 @@ public class DescribeSQLLogRecordsResponseBody extends TeaModel {
         }
 
         /**
-         * TotalRecordCount.
+         * The total number of entries returned.
          */
         public Builder totalRecordCount(Long totalRecordCount) {
             this.totalRecordCount = totalRecordCount;
@@ -242,7 +242,7 @@ public class DescribeSQLLogRecordsResponseBody extends TeaModel {
             private Long totalExecutionTimes; 
 
             /**
-             * AccountName.
+             * The username of the account that is recorded in the SQL audit log entry.
              */
             public Builder accountName(String accountName) {
                 this.accountName = accountName;
@@ -250,7 +250,7 @@ public class DescribeSQLLogRecordsResponseBody extends TeaModel {
             }
 
             /**
-             * DBName.
+             * The name of the database.
              */
             public Builder DBName(String DBName) {
                 this.DBName = DBName;
@@ -258,7 +258,7 @@ public class DescribeSQLLogRecordsResponseBody extends TeaModel {
             }
 
             /**
-             * ExecuteTime.
+             * The time at which the SQL statement was executed. The time follows the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time is displayed in UTC.
              */
             public Builder executeTime(String executeTime) {
                 this.executeTime = executeTime;
@@ -266,7 +266,7 @@ public class DescribeSQLLogRecordsResponseBody extends TeaModel {
             }
 
             /**
-             * HostAddress.
+             * The IP address of the client that is connected to the instance.
              */
             public Builder hostAddress(String hostAddress) {
                 this.hostAddress = hostAddress;
@@ -274,7 +274,7 @@ public class DescribeSQLLogRecordsResponseBody extends TeaModel {
             }
 
             /**
-             * ReturnRowCounts.
+             * The number of SQL audit log entries that are returned.
              */
             public Builder returnRowCounts(Long returnRowCounts) {
                 this.returnRowCounts = returnRowCounts;
@@ -282,7 +282,7 @@ public class DescribeSQLLogRecordsResponseBody extends TeaModel {
             }
 
             /**
-             * SQLText.
+             * The SQL statement that is executed in the query.
              */
             public Builder SQLText(String SQLText) {
                 this.SQLText = SQLText;
@@ -290,7 +290,7 @@ public class DescribeSQLLogRecordsResponseBody extends TeaModel {
             }
 
             /**
-             * ThreadID.
+             * The ID of the thread.
              */
             public Builder threadID(String threadID) {
                 this.threadID = threadID;
@@ -298,7 +298,7 @@ public class DescribeSQLLogRecordsResponseBody extends TeaModel {
             }
 
             /**
-             * TotalExecutionTimes.
+             * The execution duration of the SQL statement. Unit: microseconds.
              */
             public Builder totalExecutionTimes(Long totalExecutionTimes) {
                 this.totalExecutionTimes = totalExecutionTimes;

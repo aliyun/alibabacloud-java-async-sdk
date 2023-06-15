@@ -121,7 +121,7 @@ public class CreateServiceLinkedRoleRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * The ID of the region where the instance resides. You can call the [DescribeRegions](~~26243~~) operation to query the most recent region list.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -148,7 +148,11 @@ public class CreateServiceLinkedRoleRequest extends Request {
         }
 
         /**
-         * ServiceLinkedRole.
+         * The name of the service-linked role.
+         * <p>
+         * 
+         * *   **AliyunServiceRoleForRdsPgsqlOnEcs**: the service-linked role for ApsaraDB RDS for PostgreSQL instances.
+         * *   **AliyunServiceRoleForRDSProxyOnEcs**: the service-linked role for the database proxy feature of ApsaraDB RDS instances.
          */
         public Builder serviceLinkedRole(String serviceLinkedRole) {
             this.putQueryParameter("ServiceLinkedRole", serviceLinkedRole);

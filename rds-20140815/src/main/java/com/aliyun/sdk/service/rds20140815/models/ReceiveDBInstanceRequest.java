@@ -126,7 +126,7 @@ public class ReceiveDBInstanceRequest extends Request {
         } 
 
         /**
-         * DBInstanceId.
+         * The ID of the primary instance. You can call the [DescribeDBInstances](~~26232~~) operation to query the ID of the primary instance.
          */
         public Builder DBInstanceId(String DBInstanceId) {
             this.putQueryParameter("DBInstanceId", DBInstanceId);
@@ -135,7 +135,7 @@ public class ReceiveDBInstanceRequest extends Request {
         }
 
         /**
-         * GuardDBInstanceId.
+         * The ID of the disaster recovery instance. You can call the [DescribeDBInstances](~~26232~~) operation to query the ID of the disaster recovery instance.
          */
         public Builder guardDBInstanceId(String guardDBInstanceId) {
             this.putQueryParameter("GuardDBInstanceId", guardDBInstanceId);

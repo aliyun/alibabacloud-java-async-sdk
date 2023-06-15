@@ -183,7 +183,7 @@ public class DescribeDatabasesRequest extends Request {
         } 
 
         /**
-         * DBInstanceId.
+         * The ID of the instance.
          */
         public Builder DBInstanceId(String DBInstanceId) {
             this.putQueryParameter("DBInstanceId", DBInstanceId);
@@ -192,7 +192,7 @@ public class DescribeDatabasesRequest extends Request {
         }
 
         /**
-         * DBName.
+         * The name of the database.
          */
         public Builder DBName(String DBName) {
             this.putQueryParameter("DBName", DBName);
@@ -201,7 +201,12 @@ public class DescribeDatabasesRequest extends Request {
         }
 
         /**
-         * DBStatus.
+         * The status of the database. Valid values:
+         * <p>
+         * 
+         * *   **Creating**
+         * *   **Running**
+         * *   **Deleting**
          */
         public Builder DBStatus(String DBStatus) {
             this.putQueryParameter("DBStatus", DBStatus);
@@ -228,7 +233,10 @@ public class DescribeDatabasesRequest extends Request {
         }
 
         /**
-         * PageNumber.
+         * The number of the page to return. Valid values: any non-zero positive integer.
+         * <p>
+         * 
+         * Default value: **1**.
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -237,7 +245,14 @@ public class DescribeDatabasesRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * The number of entries to return on each page. Valid values:
+         * <p>
+         * 
+         * *   **30**
+         * *   **50**
+         * *   **100**
+         * 
+         * Default value: 30.
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -246,7 +261,7 @@ public class DescribeDatabasesRequest extends Request {
         }
 
         /**
-         * ResourceGroupId.
+         * The ID of the resource group.
          */
         public Builder resourceGroupId(String resourceGroupId) {
             this.putQueryParameter("ResourceGroupId", resourceGroupId);

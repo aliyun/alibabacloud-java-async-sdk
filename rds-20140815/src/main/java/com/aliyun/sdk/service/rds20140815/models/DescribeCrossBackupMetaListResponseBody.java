@@ -110,7 +110,7 @@ public class DescribeCrossBackupMetaListResponseBody extends TeaModel {
         private Integer totalRecordCount; 
 
         /**
-         * DBInstanceName.
+         * The instance to which the cross-region backup file belongs.
          */
         public Builder DBInstanceName(String DBInstanceName) {
             this.DBInstanceName = DBInstanceName;
@@ -118,7 +118,7 @@ public class DescribeCrossBackupMetaListResponseBody extends TeaModel {
         }
 
         /**
-         * Items.
+         * An array that consists of the information about the databases and tables whose data is included in the cross-region backup file.
          */
         public Builder items(Items items) {
             this.items = items;
@@ -126,7 +126,7 @@ public class DescribeCrossBackupMetaListResponseBody extends TeaModel {
         }
 
         /**
-         * PageNumber.
+         * The page number of the returned page.
          */
         public Builder pageNumber(Integer pageNumber) {
             this.pageNumber = pageNumber;
@@ -134,7 +134,7 @@ public class DescribeCrossBackupMetaListResponseBody extends TeaModel {
         }
 
         /**
-         * PageRecordCount.
+         * The number of entries returned per page.
          */
         public Builder pageRecordCount(Integer pageRecordCount) {
             this.pageRecordCount = pageRecordCount;
@@ -142,7 +142,7 @@ public class DescribeCrossBackupMetaListResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -150,7 +150,7 @@ public class DescribeCrossBackupMetaListResponseBody extends TeaModel {
         }
 
         /**
-         * TotalPageCount.
+         * The total number of pages returned.
          */
         public Builder totalPageCount(Integer totalPageCount) {
             this.totalPageCount = totalPageCount;
@@ -158,7 +158,7 @@ public class DescribeCrossBackupMetaListResponseBody extends TeaModel {
         }
 
         /**
-         * TotalRecordCount.
+         * The total number of returned entries.
          */
         public Builder totalRecordCount(Integer totalRecordCount) {
             this.totalRecordCount = totalRecordCount;
@@ -222,7 +222,7 @@ public class DescribeCrossBackupMetaListResponseBody extends TeaModel {
             private String tables; 
 
             /**
-             * Database.
+             * The name of the database.
              */
             public Builder database(String database) {
                 this.database = database;
@@ -230,7 +230,7 @@ public class DescribeCrossBackupMetaListResponseBody extends TeaModel {
             }
 
             /**
-             * Size.
+             * The size of the table. Unit: KB. If the database contains more than one table, the names of these tables are separated by commas (,).
              */
             public Builder size(String size) {
                 this.size = size;
@@ -238,7 +238,7 @@ public class DescribeCrossBackupMetaListResponseBody extends TeaModel {
             }
 
             /**
-             * Tables.
+             * An array that consists of the names of the tables that the database contains. If the database contains more than one table, the names of these tables are separated by commas (,).
              */
             public Builder tables(String tables) {
                 this.tables = tables;

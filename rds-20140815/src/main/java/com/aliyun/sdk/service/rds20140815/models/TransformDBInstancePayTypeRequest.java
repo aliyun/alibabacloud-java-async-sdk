@@ -196,7 +196,17 @@ public class TransformDBInstancePayTypeRequest extends Request {
         } 
 
         /**
-         * AutoRenew.
+         * Specifies whether to enable the auto-renewal feature for the instance. Valid values:
+         * <p>
+         * 
+         * *   **true**
+         * *   **false**
+         * 
+         * > 
+         * 
+         * *   This parameter is valid only when you change the billing method from pay-as-you-go to subscription.
+         * 
+         * *   All strings except **true** are considered **false**.
          */
         public Builder autoRenew(String autoRenew) {
             this.putQueryParameter("AutoRenew", autoRenew);
@@ -205,7 +215,7 @@ public class TransformDBInstancePayTypeRequest extends Request {
         }
 
         /**
-         * BusinessInfo.
+         * The additional business information about the instance.
          */
         public Builder businessInfo(String businessInfo) {
             this.putQueryParameter("BusinessInfo", businessInfo);
@@ -214,7 +224,7 @@ public class TransformDBInstancePayTypeRequest extends Request {
         }
 
         /**
-         * ClientToken.
+         * The client token that is used to ensure the idempotence of the request. You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters and cannot exceed 64 characters in length.
          */
         public Builder clientToken(String clientToken) {
             this.putQueryParameter("ClientToken", clientToken);
@@ -223,7 +233,7 @@ public class TransformDBInstancePayTypeRequest extends Request {
         }
 
         /**
-         * DBInstanceId.
+         * The ID of the instance.
          */
         public Builder DBInstanceId(String DBInstanceId) {
             this.putQueryParameter("DBInstanceId", DBInstanceId);
@@ -250,7 +260,11 @@ public class TransformDBInstancePayTypeRequest extends Request {
         }
 
         /**
-         * PayType.
+         * The billing method of the instance. Valid values:
+         * <p>
+         * 
+         * *   **Postpaid**: pay-as-you-go
+         * *   **Prepaid**: subscription
          */
         public Builder payType(String payType) {
             this.putQueryParameter("PayType", payType);
@@ -259,7 +273,13 @@ public class TransformDBInstancePayTypeRequest extends Request {
         }
 
         /**
-         * Period.
+         * The renewal cycle of the instance. Valid values:
+         * <p>
+         * 
+         * *   **Year**
+         * *   **Month**
+         * 
+         * > This parameter must be specified if you set **PayType** to **Prepaid**.
          */
         public Builder period(String period) {
             this.putQueryParameter("Period", period);
@@ -286,7 +306,13 @@ public class TransformDBInstancePayTypeRequest extends Request {
         }
 
         /**
-         * UsedTime.
+         * The subscription duration of the instance. Valid values:
+         * <p>
+         * 
+         * *   If you set **Period** to **Year**, the value of UsedTime ranges from **1 to 5**.
+         * *   If you set **Period** to **Month**, the value of UsedTime ranges from **1 to 9**.
+         * 
+         * > This parameter must be specified if you set **PayType** to **Prepaid**.
          */
         public Builder usedTime(Integer usedTime) {
             this.putQueryParameter("UsedTime", usedTime);

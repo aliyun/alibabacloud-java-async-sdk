@@ -111,7 +111,7 @@ public class DescribeBackupDatabaseRequest extends Request {
         } 
 
         /**
-         * BackupId.
+         * The ID of the backup set.
          */
         public Builder backupId(String backupId) {
             this.putQueryParameter("BackupId", backupId);
@@ -120,7 +120,7 @@ public class DescribeBackupDatabaseRequest extends Request {
         }
 
         /**
-         * DBInstanceId.
+         * The ID of the instance.
          */
         public Builder DBInstanceId(String DBInstanceId) {
             this.putQueryParameter("DBInstanceId", DBInstanceId);

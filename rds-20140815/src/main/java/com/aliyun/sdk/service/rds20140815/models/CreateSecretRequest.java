@@ -228,7 +228,7 @@ public class CreateSecretRequest extends Request {
         } 
 
         /**
-         * ClientToken.
+         * The client token that is used to ensure the idempotence of the request. You can use the client to generate the value, but you must ensure that it is unique among different requests. The token can contain only ASCII characters and cannot exceed 64 characters in length.
          */
         public Builder clientToken(String clientToken) {
             this.putQueryParameter("ClientToken", clientToken);
@@ -237,7 +237,7 @@ public class CreateSecretRequest extends Request {
         }
 
         /**
-         * DbInstanceId.
+         * The ID of the instance. You can call the [DescribeDBInstances](~~26232~~) operation to query the ID of the instance.
          */
         public Builder dbInstanceId(String dbInstanceId) {
             this.putQueryParameter("DbInstanceId", dbInstanceId);
@@ -246,7 +246,7 @@ public class CreateSecretRequest extends Request {
         }
 
         /**
-         * DbNames.
+         * The name of the database.
          */
         public Builder dbNames(String dbNames) {
             this.putQueryParameter("DbNames", dbNames);
@@ -255,7 +255,7 @@ public class CreateSecretRequest extends Request {
         }
 
         /**
-         * Description.
+         * The description of the credential.
          */
         public Builder description(String description) {
             this.putQueryParameter("Description", description);
@@ -264,7 +264,10 @@ public class CreateSecretRequest extends Request {
         }
 
         /**
-         * Engine.
+         * The engine of the database.
+         * <p>
+         * 
+         * > Only MySQL is supported.
          */
         public Builder engine(String engine) {
             this.putQueryParameter("Engine", engine);
@@ -282,7 +285,7 @@ public class CreateSecretRequest extends Request {
         }
 
         /**
-         * Password.
+         * The password that is used to access the database.
          */
         public Builder password(String password) {
             this.putQueryParameter("Password", password);
@@ -291,7 +294,7 @@ public class CreateSecretRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * The region ID of the instance. You can call the [DescribeDBInstanceAttribute](~~26231~~) operation to query region ID of the instance.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -300,7 +303,7 @@ public class CreateSecretRequest extends Request {
         }
 
         /**
-         * ResourceGroupId.
+         * The ID of the resource group to which the instance belongs. You can call the [DescribeDBInstanceAttribute](~~26231~~) operation to query the ID of the resource group.
          */
         public Builder resourceGroupId(String resourceGroupId) {
             this.putQueryParameter("ResourceGroupId", resourceGroupId);
@@ -327,7 +330,7 @@ public class CreateSecretRequest extends Request {
         }
 
         /**
-         * SecretName.
+         * The name of the credential.
          */
         public Builder secretName(String secretName) {
             this.putQueryParameter("SecretName", secretName);
@@ -336,7 +339,7 @@ public class CreateSecretRequest extends Request {
         }
 
         /**
-         * Username.
+         * The username that is used to access the database.
          */
         public Builder username(String username) {
             this.putQueryParameter("Username", username);

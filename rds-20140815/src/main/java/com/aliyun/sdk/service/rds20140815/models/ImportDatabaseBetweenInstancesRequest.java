@@ -141,7 +141,10 @@ public class ImportDatabaseBetweenInstancesRequest extends Request {
         } 
 
         /**
-         * DBInfo.
+         * The names of the source and destination databases. The value of this parameter is a JSON string.
+         * <p>
+         * 
+         * > If the source and destination instances run SQL Server, the value of this parameter consists of one or more key-value pairs. In each key-value pair, the key specifies the name of the source database, and the value specifies the name of the destination database. A source database can have a different name from the destination database. For example, `{"DBNames":{"srcdb":"destdb","srcdb2":"destmydb2"}}` indicates that srcdb is migrated to destdb and srcdb2 is migrated to destmydb2. The names of source databases cannot be the same, and the names of destination databases cannot be the same.
          */
         public Builder DBInfo(String DBInfo) {
             this.putQueryParameter("DBInfo", DBInfo);
@@ -150,7 +153,7 @@ public class ImportDatabaseBetweenInstancesRequest extends Request {
         }
 
         /**
-         * DBInstanceId.
+         * The ID of the instance.
          */
         public Builder DBInstanceId(String DBInstanceId) {
             this.putQueryParameter("DBInstanceId", DBInstanceId);
@@ -195,7 +198,7 @@ public class ImportDatabaseBetweenInstancesRequest extends Request {
         }
 
         /**
-         * SourceDBInstanceId.
+         * The ID of the source instance, which cannot be the same as the ID of the destination instance.
          */
         public Builder sourceDBInstanceId(String sourceDBInstanceId) {
             this.putQueryParameter("SourceDBInstanceId", sourceDBInstanceId);

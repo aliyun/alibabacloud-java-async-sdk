@@ -38,7 +38,10 @@ public class CheckDBNameAvailableResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * RequestId.
+         * The ID of the request.
+         * <p>
+         * 
+         * > If this operation returns only the ID of the request, the database name conforms to the naming conventions. If an error message is returned, the database name is duplicate or does not conform to the naming conventions.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

@@ -114,7 +114,7 @@ public class QueryNotifyRequest extends Request {
         } 
 
         /**
-         * From.
+         * The beginning of the time range to query. Specify the time in the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time must be in UTC.
          */
         public Builder from(String from) {
             this.putBodyParameter("From", from);
@@ -123,7 +123,10 @@ public class QueryNotifyRequest extends Request {
         }
 
         /**
-         * PageNumber.
+         * The number of the page to return. Valid values: any **non-zero** positive integer.
+         * <p>
+         * 
+         * Default value: **1**.
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putBodyParameter("PageNumber", pageNumber);
@@ -132,7 +135,14 @@ public class QueryNotifyRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * The number of entries to return on each page. Valid values:
+         * <p>
+         * 
+         * *   **30**
+         * *   **50**
+         * *   **100**
+         * 
+         * Default value: **30**.
          */
         public Builder pageSize(Integer pageSize) {
             this.putBodyParameter("PageSize", pageSize);
@@ -141,7 +151,7 @@ public class QueryNotifyRequest extends Request {
         }
 
         /**
-         * To.
+         * The end of the time range to query. The end time must be later than the start time. Specify the time in the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time must be in UTC.
          */
         public Builder to(String to) {
             this.putBodyParameter("To", to);
@@ -150,7 +160,13 @@ public class QueryNotifyRequest extends Request {
         }
 
         /**
-         * WithConfirmed.
+         * Specifies whether the query results contain confirmed notifications. Valid values:
+         * <p>
+         * 
+         * *   **true**
+         * *   **false**
+         * 
+         *     > A confirmed notification is a notification that has been marked as confirmed by calling the ConfirmNotify operation.
          */
         public Builder withConfirmed(Boolean withConfirmed) {
             this.putBodyParameter("WithConfirmed", withConfirmed);

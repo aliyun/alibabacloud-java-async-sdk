@@ -145,7 +145,7 @@ public class CreateGadInstanceMemberRequest extends Request {
         } 
 
         /**
-         * CentralDBInstanceId.
+         * The ID of the central node. You can call the [DescribeGadInstances](~~330105~~) operation to query the ID of the central node.
          */
         public Builder centralDBInstanceId(String centralDBInstanceId) {
             this.putQueryParameter("CentralDBInstanceId", centralDBInstanceId);
@@ -154,7 +154,7 @@ public class CreateGadInstanceMemberRequest extends Request {
         }
 
         /**
-         * CentralRdsDtsAdminAccount.
+         * The username of the privileged account of the central node. You can call the [DescribeAccounts](~~26265~~) operation to query the privileged account of the central node.
          */
         public Builder centralRdsDtsAdminAccount(String centralRdsDtsAdminAccount) {
             this.putQueryParameter("CentralRdsDtsAdminAccount", centralRdsDtsAdminAccount);
@@ -163,7 +163,7 @@ public class CreateGadInstanceMemberRequest extends Request {
         }
 
         /**
-         * CentralRdsDtsAdminPassword.
+         * The password of the privileged account of the central node.
          */
         public Builder centralRdsDtsAdminPassword(String centralRdsDtsAdminPassword) {
             this.putQueryParameter("CentralRdsDtsAdminPassword", centralRdsDtsAdminPassword);
@@ -172,7 +172,7 @@ public class CreateGadInstanceMemberRequest extends Request {
         }
 
         /**
-         * CentralRegionId.
+         * The region ID of the central node. You can call the [DescribeRegions](~~26243~~) operation to query the most recent region list.
          */
         public Builder centralRegionId(String centralRegionId) {
             this.putQueryParameter("CentralRegionId", centralRegionId);
@@ -181,7 +181,16 @@ public class CreateGadInstanceMemberRequest extends Request {
         }
 
         /**
-         * DBList.
+         * A JSON array that consists of the information about the databases on the central node. All database information that you specify in this array is synchronized to the unit nodes of the global active database cluster. The JSON array contains the following parameters:
+         * <p>
+         * 
+         * *   **name**: the name of the database.
+         * *   **all**: specifies whether to synchronize all data in the database or the table. Valid values: **true** and **false**.
+         * *   **Table**: the name of the table. If you set the **all** parameter to **false**, you must nest the name of the table that you want to synchronize into the JSON array.
+         * 
+         * Example: `{ "testdb": { "name": "testdb", "all": false, "Table": { "order": { "name": "order", "all": true }, "ordernew": { "name": "ordernew", "all": true } } } }`
+         * 
+         * >  For more information, see [Objects of DTS tasks](~~209545~~).
          */
         public Builder DBList(String DBList) {
             this.putQueryParameter("DBList", DBList);
@@ -190,7 +199,7 @@ public class CreateGadInstanceMemberRequest extends Request {
         }
 
         /**
-         * GadInstanceId.
+         * The ID of the global active database cluster. You can call the [DescribeGadInstances](~~330105~~) operation to query the ID of the global active database cluster.
          */
         public Builder gadInstanceId(String gadInstanceId) {
             this.putQueryParameter("GadInstanceId", gadInstanceId);
@@ -199,7 +208,7 @@ public class CreateGadInstanceMemberRequest extends Request {
         }
 
         /**
-         * UnitNode.
+         * The list of the unit nodes.
          */
         public Builder unitNode(java.util.List < UnitNode> unitNode) {
             this.putQueryParameter("UnitNode", unitNode);
@@ -220,6 +229,9 @@ public class CreateGadInstanceMemberRequest extends Request {
 
         @NameInMap("DBInstanceStorage")
         private Long DBInstanceStorage;
+
+        @NameInMap("DBInstanceStorageType")
+        private String DBInstanceStorageType;
 
         @NameInMap("DbInstanceClass")
         private String dbInstanceClass;
@@ -265,6 +277,7 @@ public class CreateGadInstanceMemberRequest extends Request {
         private UnitNode(Builder builder) {
             this.DBInstanceDescription = builder.DBInstanceDescription;
             this.DBInstanceStorage = builder.DBInstanceStorage;
+            this.DBInstanceStorageType = builder.DBInstanceStorageType;
             this.dbInstanceClass = builder.dbInstanceClass;
             this.dtsConflict = builder.dtsConflict;
             this.dtsInstanceClass = builder.dtsInstanceClass;
@@ -299,6 +312,13 @@ public class CreateGadInstanceMemberRequest extends Request {
          */
         public Long getDBInstanceStorage() {
             return this.DBInstanceStorage;
+        }
+
+        /**
+         * @return DBInstanceStorageType
+         */
+        public String getDBInstanceStorageType() {
+            return this.DBInstanceStorageType;
         }
 
         /**
@@ -388,6 +408,7 @@ public class CreateGadInstanceMemberRequest extends Request {
         public static final class Builder {
             private String DBInstanceDescription; 
             private Long DBInstanceStorage; 
+            private String DBInstanceStorageType; 
             private String dbInstanceClass; 
             private String dtsConflict; 
             private String dtsInstanceClass; 
@@ -402,7 +423,14 @@ public class CreateGadInstanceMemberRequest extends Request {
             private String zoneIDSlave2; 
 
             /**
-             * DBInstanceDescription.
+             * The name of the unit node that you want to create. The name must meet the following requirements:
+             * <p>
+             * 
+             * *   The name must be **2 to 255** characters in length.
+             * *   The name can contain letters, digits, underscores (\_), and hyphens (-) and must start with a letter.
+             * *   The name cannot start with `http://` or `https://`.
+             * 
+             * **N** in this parameter specifies the Nth unit node. The value of N is an integer within the range of **1 to 10**. You can create up to 10 unit nodes in a global active database cluster.
              */
             public Builder DBInstanceDescription(String DBInstanceDescription) {
                 this.DBInstanceDescription = DBInstanceDescription;
@@ -410,7 +438,10 @@ public class CreateGadInstanceMemberRequest extends Request {
             }
 
             /**
-             * DBInstanceStorage.
+             * The storage capacity of the unit node that you want to create. Unit: GB. You can adjust the storage capacity in increments of 5 GB. For more information, see [Primary ApsaraDB RDS instance types](~~26312~~). You can call the [DescribeAvailableResource](~~134039~~) operation to query the storage capacity range that is supported for a specified instance type in a region.
+             * <p>
+             * 
+             * **N** in this parameter specifies the Nth unit node. The value of N is an integer within the range of **1 to 10**. You can create up to 10 unit nodes in a global active database cluster.
              */
             public Builder DBInstanceStorage(Long DBInstanceStorage) {
                 this.DBInstanceStorage = DBInstanceStorage;
@@ -418,7 +449,25 @@ public class CreateGadInstanceMemberRequest extends Request {
             }
 
             /**
-             * DbInstanceClass.
+             * The type of storage media that is used for the instance. Valid values:
+             * <p>
+             * 
+             * * **local_ssd**: local SSDs. This is the recommended storage type.
+             * * **cloud_ssd**: standard SSDs.
+             * * **cloud_essd**: enhanced SSDs (ESSDs) of performance level 1 (PL1).
+             * * **cloud_essd2**: ESSDs of PL2.
+             * * **cloud_essd3**: ESSDs of PL3.
+             */
+            public Builder DBInstanceStorageType(String DBInstanceStorageType) {
+                this.DBInstanceStorageType = DBInstanceStorageType;
+                return this;
+            }
+
+            /**
+             * The instance type of the unit node that you want to create. For more information, see [Primary ApsaraDB RDS instance types](~~26312~~). You can call the [DescribeAvailableResource](~~134039~~) operation to query the available instance types in a region.
+             * <p>
+             * 
+             * **N** in this parameter specifies the Nth unit node. The value of N is an integer within the range of **1 to 10**. You can create up to 10 unit nodes in a global active database cluster.
              */
             public Builder dbInstanceClass(String dbInstanceClass) {
                 this.dbInstanceClass = dbInstanceClass;
@@ -426,7 +475,14 @@ public class CreateGadInstanceMemberRequest extends Request {
             }
 
             /**
-             * DtsConflict.
+             * The conflict resolution policy of the unit node that you want to create. This policy is based on which Data Transmission Service (DTS) responds to primary key conflicts during data synchronization to the new unit node. Valid values:
+             * <p>
+             * 
+             * *   **overwrite**: DTS overwrites the conflicting primary key on the destination node.
+             * *   **interrupt**: DTS stops the synchronization task, reports an error, and then exits.
+             * *   **ignore**: DTS overwrites the conflicting primary key on the logger node.
+             * 
+             * **N** in this parameter specifies unit node N. The value of N is an integer within the range of **1 to 10**. You can create up to 10 unit nodes in a global active database cluster.
              */
             public Builder dtsConflict(String dtsConflict) {
                 this.dtsConflict = dtsConflict;
@@ -434,7 +490,17 @@ public class CreateGadInstanceMemberRequest extends Request {
             }
 
             /**
-             * DtsInstanceClass.
+             * The specifications of the data synchronization task for the unit node that you want to create. Valid values:
+             * <p>
+             * 
+             * *   **small**
+             * *   **medium**
+             * *   **large**
+             * *   **micro**
+             * 
+             * >  For more information, see [Specifications of data synchronization tasks](~~26605~~).
+             * 
+             * **N** in this parameter specifies the Nth unit node. The value of N is an integer within the range of **1 to 10**. You can create up to 10 unit nodes in a global active database cluster.
              */
             public Builder dtsInstanceClass(String dtsInstanceClass) {
                 this.dtsInstanceClass = dtsInstanceClass;
@@ -442,7 +508,10 @@ public class CreateGadInstanceMemberRequest extends Request {
             }
 
             /**
-             * Engine.
+             * The database engine of the unit node that you want to create. Set the value to **MySQL**.
+             * <p>
+             * 
+             * **N** in this parameter specifies the Nth unit node. The value of N is an integer within the range of **1 to 10**. You can create up to 10 unit nodes in a global active database cluster.
              */
             public Builder engine(String engine) {
                 this.engine = engine;
@@ -450,7 +519,15 @@ public class CreateGadInstanceMemberRequest extends Request {
             }
 
             /**
-             * EngineVersion.
+             * The database engine version of the unit node that you want to create. Valid values:
+             * <p>
+             * 
+             * *   **8.0**
+             * *   **5.7**
+             * *   **5.6**
+             * *   **5.5**
+             * 
+             * **N** in this parameter specifies the Nth unit node. The value of N is an integer within the range of **1 to 10**. You can create up to 10 unit nodes in a global active database cluster.
              */
             public Builder engineVersion(String engineVersion) {
                 this.engineVersion = engineVersion;
@@ -458,7 +535,10 @@ public class CreateGadInstanceMemberRequest extends Request {
             }
 
             /**
-             * RegionID.
+             * The region ID of the unit node that you want to create. You can call the [DescribeRegions](~~26243~~) operation to query the most recent region list.
+             * <p>
+             * 
+             * **N** in this parameter specifies the Nth unit node. The value of N is an integer within the range of **1 to 10**. You can create up to 10 unit nodes in a global active database cluster.
              */
             public Builder regionID(String regionID) {
                 this.regionID = regionID;
@@ -466,7 +546,13 @@ public class CreateGadInstanceMemberRequest extends Request {
             }
 
             /**
-             * SecurityIPList.
+             * The IP address allowlist of the unit node that you want to create. For more information, see [IP address allowlist](~~43185~~). If the IP address allowlist contains more than one entry, separate the entries with commas (,). Each entry must be unique. The IP address allowlist can contain up to 1,000 entries. The entries in the IP address allowlist must be in one of the following formats:
+             * <p>
+             * 
+             * *   IP addresses, such as `10.10.XX.XX`.
+             * *   CIDR blocks, such as `10.10.XX.XX/24`. In this example, **24** indicates that the prefix of each IP address in the IP address allowlist is 24 bits in length. You can replace 24 with a value within the range of **1 to 32**.
+             * 
+             * **N** in this parameter specifies the Nth unit node. The value of N is an integer within the range of **1 to 10**. You can create up to 10 unit nodes in a global active database cluster.
              */
             public Builder securityIPList(String securityIPList) {
                 this.securityIPList = securityIPList;
@@ -474,7 +560,10 @@ public class CreateGadInstanceMemberRequest extends Request {
             }
 
             /**
-             * VSwitchID.
+             * The vSwitch ID of the unit node that you want to create.
+             * <p>
+             * 
+             * **N** in this parameter specifies the Nth unit node. The value of N is an integer within the range of **1 to 10**. You can create up to 10 unit nodes in a global active database cluster.
              */
             public Builder vSwitchID(String vSwitchID) {
                 this.vSwitchID = vSwitchID;
@@ -482,7 +571,10 @@ public class CreateGadInstanceMemberRequest extends Request {
             }
 
             /**
-             * VpcID.
+             * The virtual private cloud (VPC) ID of the unit node that you want to create.
+             * <p>
+             * 
+             * **N** in this parameter specifies the Nth unit node. The value of N is an integer within the range of **1 to 10**. You can create up to 10 unit nodes in a global active database cluster.
              */
             public Builder vpcID(String vpcID) {
                 this.vpcID = vpcID;
@@ -490,7 +582,10 @@ public class CreateGadInstanceMemberRequest extends Request {
             }
 
             /**
-             * ZoneID.
+             * The zone ID of the unit node that you want to create. You can call the [DescribeRegions](~~26243~~) operation to query zone IDs.
+             * <p>
+             * 
+             * **N** in this parameter specifies the Nth unit node. The value of N is an integer within the range of **1 to 10**. You can create up to 10 unit nodes in a global active database cluster.
              */
             public Builder zoneID(String zoneID) {
                 this.zoneID = zoneID;
@@ -498,7 +593,13 @@ public class CreateGadInstanceMemberRequest extends Request {
             }
 
             /**
-             * ZoneIDSlave1.
+             * The zone ID of the secondary node of the unit node that you want to create. You can call the [DescribeRegions](~~26243~~) operation to query zone IDs.
+             * <p>
+             * 
+             * *   If the **zone ID** of the unit node that you want to create is the same as the zone ID of its logger node, the single-zone deployment method is used.
+             * *   If the **zone ID** of the unit node that you want to create is different from the zone ID of its logger node, the multiple-zone deployment method is used.
+             * 
+             * **N** in this parameter specifies the Nth unit node. The value of N is an integer within the range of **1 to 10**. You can create up to 10 unit nodes in a global active database cluster.
              */
             public Builder zoneIDSlave1(String zoneIDSlave1) {
                 this.zoneIDSlave1 = zoneIDSlave1;
@@ -506,7 +607,13 @@ public class CreateGadInstanceMemberRequest extends Request {
             }
 
             /**
-             * ZoneIDSlave2.
+             * The zone ID of the logger node of the unit node that you want to create. You can call the [DescribeRegions](~~26243~~) operation to query zone IDs.
+             * <p>
+             * 
+             * *   If the **zone ID** of the unit node that you want to create is the same as the zone ID of its logger node, the single-zone deployment method is used.
+             * *   If the **zone ID** of the unit node that you want to create is different from the zone ID of its logger node, the multiple-zone deployment method is used.
+             * 
+             * **N** in this parameter specifies the Nth unit node. The value of N is an integer within the range of **1 to 10**. You can create up to 10 unit nodes in a global active database cluster.
              */
             public Builder zoneIDSlave2(String zoneIDSlave2) {
                 this.zoneIDSlave2 = zoneIDSlave2;

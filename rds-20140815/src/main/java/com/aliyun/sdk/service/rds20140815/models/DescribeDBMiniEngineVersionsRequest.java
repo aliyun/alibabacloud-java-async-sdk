@@ -167,7 +167,7 @@ public class DescribeDBMiniEngineVersionsRequest extends Request {
         } 
 
         /**
-         * DBInstanceId.
+         * The ID of the instance. You can call the [DescribeDBInstances](~~26232~~) operation to query the ID of the instance.
          */
         public Builder DBInstanceId(String DBInstanceId) {
             this.putQueryParameter("DBInstanceId", DBInstanceId);
@@ -176,7 +176,7 @@ public class DescribeDBMiniEngineVersionsRequest extends Request {
         }
 
         /**
-         * DedicatedHostGroupId.
+         * The ID of the dedicated cluster. You can call the [DescribeDedicatedHostGroups](~~141946~~) operation to query the ID of the dedicated cluster.
          */
         public Builder dedicatedHostGroupId(String dedicatedHostGroupId) {
             this.putQueryParameter("DedicatedHostGroupId", dedicatedHostGroupId);
@@ -185,7 +185,7 @@ public class DescribeDBMiniEngineVersionsRequest extends Request {
         }
 
         /**
-         * Engine.
+         * The database engine of the instance. Valid values: **MySQL** and **PostgreSQL**.
          */
         public Builder engine(String engine) {
             this.putQueryParameter("Engine", engine);
@@ -194,7 +194,11 @@ public class DescribeDBMiniEngineVersionsRequest extends Request {
         }
 
         /**
-         * EngineVersion.
+         * The database engine version of the instance.
+         * <p>
+         * 
+         * *   Valid values when you set the Engine parameter to MySQL: **8.0**, **5.7**, **5.6**, and **5.5**
+         * *   Valid values when you set the Engine parameter to PostgreSQL: **14.0**, **13.0**, **12.0**, **11.0**, and **10.0**
          */
         public Builder engineVersion(String engineVersion) {
             this.putQueryParameter("EngineVersion", engineVersion);
@@ -203,7 +207,7 @@ public class DescribeDBMiniEngineVersionsRequest extends Request {
         }
 
         /**
-         * MinorVersionTag.
+         * The minor engine version of the instance. You can specify this parameter to query the minor engine version of the instance.
          */
         public Builder minorVersionTag(String minorVersionTag) {
             this.putQueryParameter("MinorVersionTag", minorVersionTag);
@@ -212,7 +216,12 @@ public class DescribeDBMiniEngineVersionsRequest extends Request {
         }
 
         /**
-         * NodeType.
+         * The RDS edition of the instance. Valid values:
+         * <p>
+         * 
+         * *   **Basic**: RDS Basic Edition
+         * *   **HighAvailability**: RDS High-availability Edition
+         * *   **Finance**: RDS Enterprise Edition
          */
         public Builder nodeType(String nodeType) {
             this.putQueryParameter("NodeType", nodeType);
@@ -221,7 +230,7 @@ public class DescribeDBMiniEngineVersionsRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * The region ID of the instance. You can call the [DescribeRegions](~~26243~~) operation to query the most recent region list.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -239,7 +248,14 @@ public class DescribeDBMiniEngineVersionsRequest extends Request {
         }
 
         /**
-         * StorageType.
+         * The storage type of the instance. Valid values:
+         * <p>
+         * 
+         * *   **local_ssd**: local SSD
+         * *   **cloud_ssd**: standard SSD
+         * *   **cloud_essd**: enhanced SSD (ESSD) of performance level 1 (PL1)
+         * *   **cloud_essd2**: ESSD of PL2
+         * *   **cloud_essd3**: ESSD of PL3
          */
         public Builder storageType(String storageType) {
             this.putQueryParameter("StorageType", storageType);

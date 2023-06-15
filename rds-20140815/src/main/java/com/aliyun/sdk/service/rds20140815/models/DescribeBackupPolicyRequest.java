@@ -153,7 +153,11 @@ public class DescribeBackupPolicyRequest extends Request {
         } 
 
         /**
-         * BackupPolicyMode.
+         * The backup type. Valid values:
+         * <p>
+         * 
+         * *   **DataBackupPolicy**: data backup
+         * *   **LogBackupPolicy**: log backup
          */
         public Builder backupPolicyMode(String backupPolicyMode) {
             this.putQueryParameter("BackupPolicyMode", backupPolicyMode);
@@ -162,7 +166,14 @@ public class DescribeBackupPolicyRequest extends Request {
         }
 
         /**
-         * CompressType.
+         * The method that is used to compress backup data. Valid values:
+         * <p>
+         * 
+         * *   **0**: Backup data is not compressed.
+         * *   **1**: Backup data is compressed by using zlib.
+         * *   **2**: Backup data is compressed by using zlib that invokes more than one thread in parallel for each backup.
+         * *   **4**: Backup data is compressed by using QuickLZ and can be used to restore individual databases and tables.
+         * *   **8**: Backup data is compressed by using QuickLZ but cannot be used to restore individual databases or tables. This value is available only when the instance runs MySQL 8.0.
          */
         public Builder compressType(String compressType) {
             this.putQueryParameter("CompressType", compressType);
@@ -171,7 +182,7 @@ public class DescribeBackupPolicyRequest extends Request {
         }
 
         /**
-         * DBInstanceId.
+         * The ID of the instance.
          */
         public Builder DBInstanceId(String DBInstanceId) {
             this.putQueryParameter("DBInstanceId", DBInstanceId);
@@ -198,7 +209,12 @@ public class DescribeBackupPolicyRequest extends Request {
         }
 
         /**
-         * ReleasedKeepPolicy.
+         * The policy that is used to retain archived backup files if the instance is released. Valid values:
+         * <p>
+         * 
+         * *   **None**: No archived backup files are retained.
+         * *   **Lastest**: Only the last archived backup file is retained.
+         * *   **All**: All archived backup files are retained.
          */
         public Builder releasedKeepPolicy(String releasedKeepPolicy) {
             this.putQueryParameter("ReleasedKeepPolicy", releasedKeepPolicy);

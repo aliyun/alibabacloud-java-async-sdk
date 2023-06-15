@@ -112,7 +112,7 @@ public class ModifyActionEventPolicyRequest extends Request {
         } 
 
         /**
-         * EnableEventLog.
+         * Specifies whether to enable the event history feature. Valid values: **True | False**.
          */
         public Builder enableEventLog(String enableEventLog) {
             this.putQueryParameter("EnableEventLog", enableEventLog);
@@ -130,7 +130,7 @@ public class ModifyActionEventPolicyRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * The ID of the region for which you want to enable the event history feature. You can call the [DescribeRegions](~~26243~~) operation to query the most recent region list.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);

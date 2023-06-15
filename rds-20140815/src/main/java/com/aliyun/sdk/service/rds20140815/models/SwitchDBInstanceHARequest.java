@@ -154,7 +154,7 @@ public class SwitchDBInstanceHARequest extends Request {
         } 
 
         /**
-         * DBInstanceId.
+         * The ID of the primary instance.
          */
         public Builder DBInstanceId(String DBInstanceId) {
             this.putQueryParameter("DBInstanceId", DBInstanceId);
@@ -163,7 +163,13 @@ public class SwitchDBInstanceHARequest extends Request {
         }
 
         /**
-         * EffectiveTime.
+         * The time when the switching takes effect. Valid values:
+         * <p>
+         * 
+         * *   **Immediate**: The switching immediately takes effect.
+         * *   **MaintainTime**: The switching takes effect during the maintenance time.
+         * 
+         * Default value: **Immediate**.
          */
         public Builder effectiveTime(String effectiveTime) {
             this.putQueryParameter("EffectiveTime", effectiveTime);
@@ -172,7 +178,13 @@ public class SwitchDBInstanceHARequest extends Request {
         }
 
         /**
-         * Force.
+         * Specifies whether to enable forcible switching. Valid values:
+         * <p>
+         * 
+         * *   **Yes**
+         * *   **No**
+         * 
+         * Default value: **No**.
          */
         public Builder force(String force) {
             this.putQueryParameter("Force", force);
@@ -181,7 +193,7 @@ public class SwitchDBInstanceHARequest extends Request {
         }
 
         /**
-         * NodeId.
+         * The unique ID of the secondary instance. You can call [DescribeDBInstanceHAConfig](~~26244~~) to query the secondary instance ID.
          */
         public Builder nodeId(String nodeId) {
             this.putQueryParameter("NodeId", nodeId);

@@ -141,7 +141,7 @@ public class ResetAccountRequest extends Request {
         } 
 
         /**
-         * AccountName.
+         * The name of the privileged account.
          */
         public Builder accountName(String accountName) {
             this.putQueryParameter("AccountName", accountName);
@@ -150,7 +150,16 @@ public class ResetAccountRequest extends Request {
         }
 
         /**
-         * AccountPassword.
+         * The new password of the privileged account.
+         * <p>
+         * 
+         * > 
+         * 
+         * *   The password must be 8 to 32 characters in length.
+         * 
+         * *   It must contain at least three of the following character types: uppercase letters, lowercase letters, digits, and special characters.
+         * 
+         * *   It can contain the following special characters: `! @ # $ & ; % ^ * () _ + - =`.
          */
         public Builder accountPassword(String accountPassword) {
             this.putQueryParameter("AccountPassword", accountPassword);
@@ -159,7 +168,7 @@ public class ResetAccountRequest extends Request {
         }
 
         /**
-         * DBInstanceId.
+         * The ID of the instance.
          */
         public Builder DBInstanceId(String DBInstanceId) {
             this.putQueryParameter("DBInstanceId", DBInstanceId);

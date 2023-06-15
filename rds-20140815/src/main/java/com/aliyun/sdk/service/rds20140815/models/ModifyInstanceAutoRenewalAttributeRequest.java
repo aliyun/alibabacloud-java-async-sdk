@@ -168,7 +168,7 @@ public class ModifyInstanceAutoRenewalAttributeRequest extends Request {
         } 
 
         /**
-         * AutoRenew.
+         * Specifies whether to enable or disable auto-renewal. Valid values: **True and False**.
          */
         public Builder autoRenew(String autoRenew) {
             this.putQueryParameter("AutoRenew", autoRenew);
@@ -177,7 +177,7 @@ public class ModifyInstanceAutoRenewalAttributeRequest extends Request {
         }
 
         /**
-         * ClientToken.
+         * The client token that is used to ensure the idempotence of the request. You can use the client to generate the value, but you must make sure that it is unique among different requests. The token can contain only ASCII characters and cannot exceed 64 characters in length.
          */
         public Builder clientToken(String clientToken) {
             this.putQueryParameter("ClientToken", clientToken);
@@ -186,7 +186,7 @@ public class ModifyInstanceAutoRenewalAttributeRequest extends Request {
         }
 
         /**
-         * DBInstanceId.
+         * The ID of the instance.
          */
         public Builder DBInstanceId(String DBInstanceId) {
             this.putQueryParameter("DBInstanceId", DBInstanceId);
@@ -195,7 +195,10 @@ public class ModifyInstanceAutoRenewalAttributeRequest extends Request {
         }
 
         /**
-         * Duration.
+         * The number of months for auto-renewal. Valid values: **1 to 12**.
+         * <p>
+         * 
+         * >  You must specify this parameter if you set the** AutoRenew **parameter to** True**.
          */
         public Builder duration(String duration) {
             this.putQueryParameter("Duration", duration);
@@ -222,7 +225,7 @@ public class ModifyInstanceAutoRenewalAttributeRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * The region ID of the instance. You can call the [DescribeRegions](~~26243~~) operation to query the most recent region list.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);

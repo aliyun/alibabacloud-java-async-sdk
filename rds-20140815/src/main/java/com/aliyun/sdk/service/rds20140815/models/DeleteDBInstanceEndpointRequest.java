@@ -107,7 +107,7 @@ public class DeleteDBInstanceEndpointRequest extends Request {
         }
 
         /**
-         * EndpointId
+         * DBInstanceEndpointId.
          */
         public Builder DBInstanceEndpointId(String DBInstanceEndpointId) {
             this.putQueryParameter("DBInstanceEndpointId", DBInstanceEndpointId);

@@ -86,7 +86,7 @@ public class DescribeVSwitchesResponseBody extends TeaModel {
         private java.util.List < VSwitchs> vSwitchs; 
 
         /**
-         * PageNumber.
+         * The page number of the returned page.
          */
         public Builder pageNumber(Integer pageNumber) {
             this.pageNumber = pageNumber;
@@ -94,7 +94,7 @@ public class DescribeVSwitchesResponseBody extends TeaModel {
         }
 
         /**
-         * PageSize.
+         * The number of entries returned on each page. The value of this parameter is the same as the value of the **PageSize** parameter in the request parameters.
          */
         public Builder pageSize(Integer pageSize) {
             this.pageSize = pageSize;
@@ -102,7 +102,7 @@ public class DescribeVSwitchesResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -110,7 +110,7 @@ public class DescribeVSwitchesResponseBody extends TeaModel {
         }
 
         /**
-         * TotalCount.
+         * The total number of returned entries.
          */
         public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;
@@ -118,7 +118,7 @@ public class DescribeVSwitchesResponseBody extends TeaModel {
         }
 
         /**
-         * VSwitchs.
+         * The details about the vSwitches.
          */
         public Builder vSwitchs(java.util.List < VSwitchs> vSwitchs) {
             this.vSwitchs = vSwitchs;
@@ -132,6 +132,10 @@ public class DescribeVSwitchesResponseBody extends TeaModel {
     } 
 
     public static class VSwitchs extends TeaModel {
+        @NameInMap("AvailableIpAddressCount")
+        @Validation(required = true)
+        private String availableIpAddressCount;
+
         @NameInMap("CidrBlock")
         private String cidrBlock;
 
@@ -154,6 +158,7 @@ public class DescribeVSwitchesResponseBody extends TeaModel {
         private String vSwitchName;
 
         private VSwitchs(Builder builder) {
+            this.availableIpAddressCount = builder.availableIpAddressCount;
             this.cidrBlock = builder.cidrBlock;
             this.description = builder.description;
             this.isDefault = builder.isDefault;
@@ -169,6 +174,13 @@ public class DescribeVSwitchesResponseBody extends TeaModel {
 
         public static VSwitchs create() {
             return builder().build();
+        }
+
+        /**
+         * @return availableIpAddressCount
+         */
+        public String getAvailableIpAddressCount() {
+            return this.availableIpAddressCount;
         }
 
         /**
@@ -221,6 +233,7 @@ public class DescribeVSwitchesResponseBody extends TeaModel {
         }
 
         public static final class Builder {
+            private String availableIpAddressCount; 
             private String cidrBlock; 
             private String description; 
             private Boolean isDefault; 
@@ -230,7 +243,15 @@ public class DescribeVSwitchesResponseBody extends TeaModel {
             private String vSwitchName; 
 
             /**
-             * CidrBlock.
+             * 交换机中可用的IP地址数量。
+             */
+            public Builder availableIpAddressCount(String availableIpAddressCount) {
+                this.availableIpAddressCount = availableIpAddressCount;
+                return this;
+            }
+
+            /**
+             * The CIDR blocks of the vSwitches.
              */
             public Builder cidrBlock(String cidrBlock) {
                 this.cidrBlock = cidrBlock;
@@ -238,7 +259,7 @@ public class DescribeVSwitchesResponseBody extends TeaModel {
             }
 
             /**
-             * Description.
+             * The descriptions of the vSwitches.
              */
             public Builder description(String description) {
                 this.description = description;
@@ -246,7 +267,11 @@ public class DescribeVSwitchesResponseBody extends TeaModel {
             }
 
             /**
-             * IsDefault.
+             * Indicates whether the vSwitch is the default vSwitch. Valid values:
+             * <p>
+             * 
+             * *   **true**: The vSwitch is the default vSwitch.
+             * *   **false**: The vSwitch is not the default vSwitch.
              */
             public Builder isDefault(Boolean isDefault) {
                 this.isDefault = isDefault;
@@ -254,7 +279,7 @@ public class DescribeVSwitchesResponseBody extends TeaModel {
             }
 
             /**
-             * IzNo.
+             * The ID of the zone to which the vSwitches belong.
              */
             public Builder izNo(String izNo) {
                 this.izNo = izNo;
@@ -262,7 +287,11 @@ public class DescribeVSwitchesResponseBody extends TeaModel {
             }
 
             /**
-             * Status.
+             * The status of a vSwitch. Valid values:
+             * <p>
+             * 
+             * *   **Pending**: The vSwitch is being configured.
+             * *   **Available**: The vSwitch is available.
              */
             public Builder status(String status) {
                 this.status = status;
@@ -270,7 +299,7 @@ public class DescribeVSwitchesResponseBody extends TeaModel {
             }
 
             /**
-             * VSwitchId.
+             * The ID of the vSwitch.
              */
             public Builder vSwitchId(String vSwitchId) {
                 this.vSwitchId = vSwitchId;
@@ -278,7 +307,7 @@ public class DescribeVSwitchesResponseBody extends TeaModel {
             }
 
             /**
-             * VSwitchName.
+             * The name of the vSwitch.
              */
             public Builder vSwitchName(String vSwitchName) {
                 this.vSwitchName = vSwitchName;

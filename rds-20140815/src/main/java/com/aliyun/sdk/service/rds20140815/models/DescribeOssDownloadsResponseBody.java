@@ -74,7 +74,7 @@ public class DescribeOssDownloadsResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * DBInstanceId.
+         * The ID of the instance.
          */
         public Builder DBInstanceId(String DBInstanceId) {
             this.DBInstanceId = DBInstanceId;
@@ -82,7 +82,7 @@ public class DescribeOssDownloadsResponseBody extends TeaModel {
         }
 
         /**
-         * Items.
+         * Details of the backup file.
          */
         public Builder items(Items items) {
             this.items = items;
@@ -90,7 +90,7 @@ public class DescribeOssDownloadsResponseBody extends TeaModel {
         }
 
         /**
-         * MigrateTaskId.
+         * The ID of the migration task.
          */
         public Builder migrateTaskId(String migrateTaskId) {
             this.migrateTaskId = migrateTaskId;
@@ -98,7 +98,7 @@ public class DescribeOssDownloadsResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -222,7 +222,12 @@ public class DescribeOssDownloadsResponseBody extends TeaModel {
             private String status; 
 
             /**
-             * BackupMode.
+             * The backup type. Valid values:
+             * <p>
+             * 
+             * *   **Database**: full backup file
+             * *   **Differential_Database**: incremental backup file
+             * *   **Transaction_Log**: log backup file
              */
             public Builder backupMode(String backupMode) {
                 this.backupMode = backupMode;
@@ -230,7 +235,7 @@ public class DescribeOssDownloadsResponseBody extends TeaModel {
             }
 
             /**
-             * CreateTime.
+             * The time when the backup file was created in the download list. The time follows the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time is displayed in UTC.
              */
             public Builder createTime(String createTime) {
                 this.createTime = createTime;
@@ -238,7 +243,7 @@ public class DescribeOssDownloadsResponseBody extends TeaModel {
             }
 
             /**
-             * Description.
+             * The description of the file.
              */
             public Builder description(String description) {
                 this.description = description;
@@ -246,7 +251,7 @@ public class DescribeOssDownloadsResponseBody extends TeaModel {
             }
 
             /**
-             * EndTime.
+             * The end of the time range. The time follows the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time is displayed in UTC.
              */
             public Builder endTime(String endTime) {
                 this.endTime = endTime;
@@ -254,7 +259,7 @@ public class DescribeOssDownloadsResponseBody extends TeaModel {
             }
 
             /**
-             * FileName.
+             * The name of the backup file stored in the Object Storage Service (OSS) bucket.
              */
             public Builder fileName(String fileName) {
                 this.fileName = fileName;
@@ -262,7 +267,7 @@ public class DescribeOssDownloadsResponseBody extends TeaModel {
             }
 
             /**
-             * FileSize.
+             * The size of the backup file. Unit: MB
              */
             public Builder fileSize(String fileSize) {
                 this.fileSize = fileSize;
@@ -270,7 +275,7 @@ public class DescribeOssDownloadsResponseBody extends TeaModel {
             }
 
             /**
-             * IsAvailable.
+             * Indicates whether the backup file is available. Valid values: **True and False**.
              */
             public Builder isAvailable(String isAvailable) {
                 this.isAvailable = isAvailable;
@@ -278,7 +283,21 @@ public class DescribeOssDownloadsResponseBody extends TeaModel {
             }
 
             /**
-             * Status.
+             * The state of the backup file. Valid values:
+             * <p>
+             * 
+             * *   **NoStart**:
+             * *   **Downloading**
+             * *   **Finished**
+             * *   **DownloadFailed**
+             * *   **VerifyFailed**
+             * *   **Deleted**
+             * *   **DeleteFailed**
+             * *   **CheckSuccess**
+             * *   **CheckFailed**
+             * *   **Restoring**
+             * *   **Restored**
+             * *   **RestoredFailed**
              */
             public Builder status(String status) {
                 this.status = status;

@@ -62,7 +62,7 @@ public class DescribeSQLCollectorPolicyResponseBody extends TeaModel {
         private Integer storagePeriod; 
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -70,7 +70,11 @@ public class DescribeSQLCollectorPolicyResponseBody extends TeaModel {
         }
 
         /**
-         * SQLCollectorStatus.
+         * The status of the SQL Explorer (SQL Audit) feature. Valid values:
+         * <p>
+         * 
+         * *   **Enable**
+         * *   **Disabled**
          */
         public Builder SQLCollectorStatus(String SQLCollectorStatus) {
             this.SQLCollectorStatus = SQLCollectorStatus;
@@ -78,7 +82,7 @@ public class DescribeSQLCollectorPolicyResponseBody extends TeaModel {
         }
 
         /**
-         * StoragePeriod.
+         * None
          */
         public Builder storagePeriod(Integer storagePeriod) {
             this.storagePeriod = storagePeriod;

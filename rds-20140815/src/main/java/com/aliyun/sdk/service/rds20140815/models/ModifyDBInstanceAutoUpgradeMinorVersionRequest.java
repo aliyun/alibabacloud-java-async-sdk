@@ -126,7 +126,11 @@ public class ModifyDBInstanceAutoUpgradeMinorVersionRequest extends Request {
         } 
 
         /**
-         * AutoUpgradeMinorVersion.
+         * The method that is used to update the minor engine version of the instance. Valid values:
+         * <p>
+         * 
+         * *   **Auto:** automatic update.
+         * *   **Manual**: manual update. ApsaraDB RDS automatically updates the current minor engine version of the instance only when the current minor engine version is phased out.
          */
         public Builder autoUpgradeMinorVersion(String autoUpgradeMinorVersion) {
             this.putQueryParameter("AutoUpgradeMinorVersion", autoUpgradeMinorVersion);
@@ -135,7 +139,7 @@ public class ModifyDBInstanceAutoUpgradeMinorVersionRequest extends Request {
         }
 
         /**
-         * ClientToken.
+         * The client token that is used to ensure the idempotence of the request. You can use the client to generate the token, but you must make sure that the generated token is unique among different requests. The token can contain only ASCII characters and cannot exceed 64 characters in length.
          */
         public Builder clientToken(String clientToken) {
             this.putQueryParameter("ClientToken", clientToken);
@@ -144,7 +148,7 @@ public class ModifyDBInstanceAutoUpgradeMinorVersionRequest extends Request {
         }
 
         /**
-         * DBInstanceId.
+         * The ID of the instance.
          */
         public Builder DBInstanceId(String DBInstanceId) {
             this.putQueryParameter("DBInstanceId", DBInstanceId);

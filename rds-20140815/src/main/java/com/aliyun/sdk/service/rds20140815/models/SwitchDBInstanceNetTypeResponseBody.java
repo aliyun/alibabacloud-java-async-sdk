@@ -62,7 +62,7 @@ public class SwitchDBInstanceNetTypeResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * NewConnectionString.
+         * The endpoint that is used to connect to the instance after the switch of endpoints.
          */
         public Builder newConnectionString(String newConnectionString) {
             this.newConnectionString = newConnectionString;
@@ -70,7 +70,7 @@ public class SwitchDBInstanceNetTypeResponseBody extends TeaModel {
         }
 
         /**
-         * OldConnectionString.
+         * The endpoint that is used to connect to the instance before the switch of endpoints.
          */
         public Builder oldConnectionString(String oldConnectionString) {
             this.oldConnectionString = oldConnectionString;
@@ -78,7 +78,7 @@ public class SwitchDBInstanceNetTypeResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

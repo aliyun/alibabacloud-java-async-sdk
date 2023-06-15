@@ -153,7 +153,7 @@ public class DescribeDBInstanceNetInfoForChannelRequest extends Request {
         } 
 
         /**
-         * ClientToken.
+         * The client token that is used to ensure the idempotence of the request. You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters and cannot exceed 64 characters in length.
          */
         public Builder clientToken(String clientToken) {
             this.putQueryParameter("ClientToken", clientToken);
@@ -162,7 +162,7 @@ public class DescribeDBInstanceNetInfoForChannelRequest extends Request {
         }
 
         /**
-         * DBInstanceId.
+         * The ID of the instance. You can call the [DescribeDBInstances](~~26232~~) operation to query the instance ID.
          */
         public Builder DBInstanceId(String DBInstanceId) {
             this.putQueryParameter("DBInstanceId", DBInstanceId);
@@ -171,7 +171,11 @@ public class DescribeDBInstanceNetInfoForChannelRequest extends Request {
         }
 
         /**
-         * DBInstanceNetRWSplitType.
+         * The type of the endpoint to query. Valid values:
+         * <p>
+         * 
+         * *   **0**: a regular endpoint. This is the default value.
+         * *   **1**: a read/write splitting endpoint that is assigned after the shared proxy feature is enabled.
          */
         public Builder DBInstanceNetRWSplitType(String DBInstanceNetRWSplitType) {
             this.putQueryParameter("DBInstanceNetRWSplitType", DBInstanceNetRWSplitType);
@@ -180,7 +184,7 @@ public class DescribeDBInstanceNetInfoForChannelRequest extends Request {
         }
 
         /**
-         * Flag.
+         * An internal parameter. You do not need to specify this parameter.
          */
         public Builder flag(String flag) {
             this.putQueryParameter("Flag", flag);

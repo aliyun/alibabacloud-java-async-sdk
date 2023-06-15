@@ -86,7 +86,7 @@ public class DescribeSQLLogFilesResponseBody extends TeaModel {
         private Integer totalRecordCount; 
 
         /**
-         * Items.
+         * An array that consists of the returned audit log files.
          */
         public Builder items(Items items) {
             this.items = items;
@@ -94,7 +94,7 @@ public class DescribeSQLLogFilesResponseBody extends TeaModel {
         }
 
         /**
-         * PageNumber.
+         * The page number of the returned page.
          */
         public Builder pageNumber(Integer pageNumber) {
             this.pageNumber = pageNumber;
@@ -102,7 +102,7 @@ public class DescribeSQLLogFilesResponseBody extends TeaModel {
         }
 
         /**
-         * PageRecordCount.
+         * The number of entries returned on the current page.
          */
         public Builder pageRecordCount(Integer pageRecordCount) {
             this.pageRecordCount = pageRecordCount;
@@ -110,7 +110,7 @@ public class DescribeSQLLogFilesResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -118,7 +118,7 @@ public class DescribeSQLLogFilesResponseBody extends TeaModel {
         }
 
         /**
-         * TotalRecordCount.
+         * The total number of returned entries.
          */
         public Builder totalRecordCount(Integer totalRecordCount) {
             this.totalRecordCount = totalRecordCount;
@@ -218,7 +218,7 @@ public class DescribeSQLLogFilesResponseBody extends TeaModel {
             private String logStatus; 
 
             /**
-             * FileID.
+             * The name of the audit log file.
              */
             public Builder fileID(String fileID) {
                 this.fileID = fileID;
@@ -226,7 +226,7 @@ public class DescribeSQLLogFilesResponseBody extends TeaModel {
             }
 
             /**
-             * LogDownloadURL.
+             * The download URL of the audit log file. If the audit log file cannot be downloaded, this parameter is null.
              */
             public Builder logDownloadURL(String logDownloadURL) {
                 this.logDownloadURL = logDownloadURL;
@@ -234,7 +234,7 @@ public class DescribeSQLLogFilesResponseBody extends TeaModel {
             }
 
             /**
-             * LogEndTime.
+             * The time at which the last SQL statement recorded in the audit log file was executed. The time follows the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time is displayed in UTC.
              */
             public Builder logEndTime(String logEndTime) {
                 this.logEndTime = logEndTime;
@@ -242,7 +242,7 @@ public class DescribeSQLLogFilesResponseBody extends TeaModel {
             }
 
             /**
-             * LogSize.
+             * The size of the audit log file. Unit: bytes.
              */
             public Builder logSize(String logSize) {
                 this.logSize = logSize;
@@ -250,7 +250,7 @@ public class DescribeSQLLogFilesResponseBody extends TeaModel {
             }
 
             /**
-             * LogStartTime.
+             * The time at which the first SQL statement recorded in the audit log file was executed. The time follows the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time is displayed in UTC.
              */
             public Builder logStartTime(String logStartTime) {
                 this.logStartTime = logStartTime;
@@ -258,7 +258,12 @@ public class DescribeSQLLogFilesResponseBody extends TeaModel {
             }
 
             /**
-             * LogStatus.
+             * The status of the audit log file. Valid values:
+             * <p>
+             * 
+             * *   **Success**
+             * *   **Failed**
+             * *   **Generating**
              */
             public Builder logStatus(String logStatus) {
                 this.logStatus = logStatus;

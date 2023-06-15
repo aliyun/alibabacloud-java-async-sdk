@@ -154,7 +154,7 @@ public class RebuildDBInstanceRequest extends Request {
         } 
 
         /**
-         * DBInstanceId.
+         * The ID of the primary instance.
          */
         public Builder DBInstanceId(String DBInstanceId) {
             this.putQueryParameter("DBInstanceId", DBInstanceId);
@@ -163,7 +163,7 @@ public class RebuildDBInstanceRequest extends Request {
         }
 
         /**
-         * DedicatedHostGroupId.
+         * The ID of the dedicated cluster. You can call the [DescribeDedicatedHostGroups](~~141946~~) operation to query the IDs of dedicated clusters.
          */
         public Builder dedicatedHostGroupId(String dedicatedHostGroupId) {
             this.putQueryParameter("DedicatedHostGroupId", dedicatedHostGroupId);
@@ -172,7 +172,10 @@ public class RebuildDBInstanceRequest extends Request {
         }
 
         /**
-         * DedicatedHostId.
+         * The ID of the host on which the system rebuilds the secondary instance.
+         * <p>
+         * 
+         * >  If you do not specify this parameter, the system preferentially rebuilds the secondary instance on the original host on which the secondary instance resides. If the remaining storage space of the original host is insufficient, the system rebuilds the secondary instance on a host on which the primary instance does not reside. If no suitable hosts are found, the system reports an error that indicates insufficient storage space.
          */
         public Builder dedicatedHostId(String dedicatedHostId) {
             this.putQueryParameter("DedicatedHostId", dedicatedHostId);
@@ -190,7 +193,11 @@ public class RebuildDBInstanceRequest extends Request {
         }
 
         /**
-         * RebuildNodeType.
+         * The role of the secondary instance that you want to rebuild. Valid values:
+         * <p>
+         * 
+         * *   **FOLLOWER**: secondary instance
+         * *   **LOG**: logger instance
          */
         public Builder rebuildNodeType(String rebuildNodeType) {
             this.putQueryParameter("RebuildNodeType", rebuildNodeType);
@@ -199,7 +206,7 @@ public class RebuildDBInstanceRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * The region ID of the instance. You can call the [DescribeRegions](~~26243~~) operation to query the most recent region list.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);

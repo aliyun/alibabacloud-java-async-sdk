@@ -126,7 +126,10 @@ public class ModifyDBInstanceEndpointRequest extends Request {
         } 
 
         /**
-         * ClientToken.
+         * The client token that is used to ensure the idempotence of the request. You can use the client to generate the token, but you must make sure that the token is unique among different requests.
+         * <p>
+         * 
+         * The token can contain only ASCII characters and cannot exceed 64 characters in length.
          */
         public Builder clientToken(String clientToken) {
             this.putQueryParameter("ClientToken", clientToken);
@@ -135,7 +138,7 @@ public class ModifyDBInstanceEndpointRequest extends Request {
         }
 
         /**
-         * Endpoint 用户自定义描述
+         * The user-defined description of the endpoint.
          */
         public Builder DBInstanceEndpointDescription(String DBInstanceEndpointDescription) {
             this.putQueryParameter("DBInstanceEndpointDescription", DBInstanceEndpointDescription);
@@ -144,7 +147,7 @@ public class ModifyDBInstanceEndpointRequest extends Request {
         }
 
         /**
-         * EndpointId
+         * The endpoint ID of the instance. You can call the [DescribeDBInstanceEndpoints](~~464397~~) operation to query the endpoint ID of the instance.
          */
         public Builder DBInstanceEndpointId(String DBInstanceEndpointId) {
             this.putQueryParameter("DBInstanceEndpointId", DBInstanceEndpointId);
@@ -153,7 +156,7 @@ public class ModifyDBInstanceEndpointRequest extends Request {
         }
 
         /**
-         * DBInstanceId.
+         * The ID of the instance. You can call the [DescribeDBInstances](~~26232~~) operation to query the ID of the instance.
          */
         public Builder DBInstanceId(String DBInstanceId) {
             this.putQueryParameter("DBInstanceId", DBInstanceId);
@@ -162,7 +165,7 @@ public class ModifyDBInstanceEndpointRequest extends Request {
         }
 
         /**
-         * NodeItems.
+         * The information about the node that is configured for the endpoint.
          */
         public Builder nodeItems(java.util.List < NodeItems> nodeItems) {
             String nodeItemsShrink = shrink(nodeItems, "NodeItems", "json");
@@ -238,7 +241,7 @@ public class ModifyDBInstanceEndpointRequest extends Request {
             private Long weight; 
 
             /**
-             * DBInstanceId.
+             * The ID of the instance. You can call the [DescribeDBInstances](~~26232~~) operation to query the ID of the instance.
              */
             public Builder DBInstanceId(String DBInstanceId) {
                 this.DBInstanceId = DBInstanceId;
@@ -246,7 +249,13 @@ public class ModifyDBInstanceEndpointRequest extends Request {
             }
 
             /**
-             * NodeId.
+             * The ID of the node.
+             * <p>
+             * 
+             * You can use one of the following methods to query the ID of the node:
+             * 
+             * *   Log on to the ApsaraDB RDS console, go to the instance details page, and then view the ID of the node in the instance topology section.
+             * *   Call the [DescribeDBInstanceAttribute](~~26231~~) operation to query the ID of the node.
              */
             public Builder nodeId(String nodeId) {
                 this.nodeId = nodeId;
@@ -254,7 +263,10 @@ public class ModifyDBInstanceEndpointRequest extends Request {
             }
 
             /**
-             * Weight.
+             * The weight of the node. Read requests are distributed based on the weight.
+             * <p>
+             * 
+             * Valid values: 0 to 100.
              */
             public Builder weight(Long weight) {
                 this.weight = weight;

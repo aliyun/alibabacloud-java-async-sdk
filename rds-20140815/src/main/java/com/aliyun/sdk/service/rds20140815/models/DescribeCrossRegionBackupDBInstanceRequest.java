@@ -139,7 +139,7 @@ public class DescribeCrossRegionBackupDBInstanceRequest extends Request {
         } 
 
         /**
-         * DBInstanceId.
+         * The ID of the instance. Up to 30 instance IDs are allowed in a single request. If you enter more than one instance ID, separate them with commas (,).
          */
         public Builder DBInstanceId(String DBInstanceId) {
             this.putQueryParameter("DBInstanceId", DBInstanceId);
@@ -157,7 +157,10 @@ public class DescribeCrossRegionBackupDBInstanceRequest extends Request {
         }
 
         /**
-         * PageNumber.
+         * The number of the page to return. Valid values: any non-zero positive integer.
+         * <p>
+         * 
+         * Default value: **1**.
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -166,7 +169,7 @@ public class DescribeCrossRegionBackupDBInstanceRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * The number of entries to return per page. Default value: 30.
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -175,7 +178,7 @@ public class DescribeCrossRegionBackupDBInstanceRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * The ID of the region.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);

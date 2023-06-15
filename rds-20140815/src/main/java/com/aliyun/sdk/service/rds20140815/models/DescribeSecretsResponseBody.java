@@ -74,7 +74,7 @@ public class DescribeSecretsResponseBody extends TeaModel {
         private java.util.List < Secrets> secrets; 
 
         /**
-         * PageNumber.
+         * The page number.
          */
         public Builder pageNumber(Long pageNumber) {
             this.pageNumber = pageNumber;
@@ -82,7 +82,7 @@ public class DescribeSecretsResponseBody extends TeaModel {
         }
 
         /**
-         * PageSize.
+         * The number of entries per page.
          */
         public Builder pageSize(Long pageSize) {
             this.pageSize = pageSize;
@@ -90,7 +90,7 @@ public class DescribeSecretsResponseBody extends TeaModel {
         }
 
         /**
-         * Id of the request
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -98,7 +98,7 @@ public class DescribeSecretsResponseBody extends TeaModel {
         }
 
         /**
-         * Secrets.
+         * An array that consists of the details about the credential.
          */
         public Builder secrets(java.util.List < Secrets> secrets) {
             this.secrets = secrets;
@@ -198,7 +198,7 @@ public class DescribeSecretsResponseBody extends TeaModel {
             private String username; 
 
             /**
-             * AccountId.
+             * The ID of the Alibaba Cloud account.
              */
             public Builder accountId(String accountId) {
                 this.accountId = accountId;
@@ -206,7 +206,7 @@ public class DescribeSecretsResponseBody extends TeaModel {
             }
 
             /**
-             * Description.
+             * The description of the credential.
              */
             public Builder description(String description) {
                 this.description = description;
@@ -214,7 +214,7 @@ public class DescribeSecretsResponseBody extends TeaModel {
             }
 
             /**
-             * RegionId.
+             * The ID of the region.
              */
             public Builder regionId(String regionId) {
                 this.regionId = regionId;
@@ -222,7 +222,7 @@ public class DescribeSecretsResponseBody extends TeaModel {
             }
 
             /**
-             * SecretArn.
+             * The Alibaba Cloud Resource Name (ARN) of the credential for the created Data API account.
              */
             public Builder secretArn(String secretArn) {
                 this.secretArn = secretArn;
@@ -230,7 +230,7 @@ public class DescribeSecretsResponseBody extends TeaModel {
             }
 
             /**
-             * SecretName.
+             * The name of the credential.
              */
             public Builder secretName(String secretName) {
                 this.secretName = secretName;
@@ -238,7 +238,7 @@ public class DescribeSecretsResponseBody extends TeaModel {
             }
 
             /**
-             * Username.
+             * The username that is used to access the database.
              */
             public Builder username(String username) {
                 this.username = username;

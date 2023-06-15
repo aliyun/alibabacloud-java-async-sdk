@@ -224,7 +224,18 @@ public class ModifyDBInstanceTDERequest extends Request {
         } 
 
         /**
-         * Certificate.
+         * The file that contains the certificate.\
+         * <p>
+         * Format:
+         * 
+         * *   Public endpoint: `oss-<The ID of the region>.aliyuncs.com:<The name of the bucket>:<The name of the certificate file>` (The file name contains the extension.)
+         * *   Internal endpoint: `oss-<The ID of the region>-internal.aliyuncs.com:<The name of the bucket>:<The name of the certificate file>` (The file name contains the extension.)
+         * 
+         * > 
+         * 
+         * *   This parameter is available when the instance runs SQL Server 2019 SE or an Enterprise Edition of SQL Server.
+         * 
+         * *   You can call the [DescribeRegions](~~26243~~) operation to query the most recent region list.
          */
         public Builder certificate(String certificate) {
             this.putQueryParameter("Certificate", certificate);
@@ -233,7 +244,7 @@ public class ModifyDBInstanceTDERequest extends Request {
         }
 
         /**
-         * DBInstanceId.
+         * The ID of the instance. You can call the [DescribeDBInstances](~~26232~~) operation to query the ID of the instance.
          */
         public Builder DBInstanceId(String DBInstanceId) {
             this.putQueryParameter("DBInstanceId", DBInstanceId);
@@ -242,7 +253,10 @@ public class ModifyDBInstanceTDERequest extends Request {
         }
 
         /**
-         * DBName.
+         * The name of the database for which you want to enable TDE. You can specify up to 50 database names in a single request. If you specify multiple database names, separate the database names with commas (,).
+         * <p>
+         * 
+         * > This parameter is available and must be specified only when the instance runs SQL Server 2019 SE or an Enterprise Edition of SQL Server.
          */
         public Builder DBName(String DBName) {
             this.putQueryParameter("DBName", DBName);
@@ -251,7 +265,10 @@ public class ModifyDBInstanceTDERequest extends Request {
         }
 
         /**
-         * EncryptionKey.
+         * The ID of the custom key.
+         * <p>
+         * 
+         * > This parameter is available when the instance runs MySQL or PostgreSQL.
          */
         public Builder encryptionKey(String encryptionKey) {
             this.putQueryParameter("EncryptionKey", encryptionKey);
@@ -260,7 +277,15 @@ public class ModifyDBInstanceTDERequest extends Request {
         }
 
         /**
-         * IsRotate.
+         * Specifies whether to replace the key. Valid values:
+         * <p>
+         * 
+         * *   **true**: replaces the key.
+         * *   **false**: does not replace the key.
+         * 
+         * Default value: **false**
+         * 
+         * > This parameter is available only when the instance runs PostgreSQL.
          */
         public Builder isRotate(Boolean isRotate) {
             this.putQueryParameter("IsRotate", isRotate);
@@ -287,7 +312,10 @@ public class ModifyDBInstanceTDERequest extends Request {
         }
 
         /**
-         * PassWord.
+         * The password of the certificate.
+         * <p>
+         * 
+         * > This parameter is available when the instance runs SQL Server 2019 SE or an Enterprise Edition of SQL Server.
          */
         public Builder passWord(String passWord) {
             this.putQueryParameter("PassWord", passWord);
@@ -296,7 +324,18 @@ public class ModifyDBInstanceTDERequest extends Request {
         }
 
         /**
-         * PrivateKey.
+         * The file that contains the private key of the certificate.\
+         * <p>
+         * Format:
+         * 
+         * *   Public endpoint: `oss-<The ID of the region>.aliyuncs.com:<The name of the bucket>:<The name of the file that contains the private key>` (The file name contains the extension.)
+         * *   Internal endpoint: `oss-<The ID of the region>-internal.aliyuncs.com:<The name of the bucket>:<The name of the file that contains the private key>` (The file name contains the extension.)
+         * 
+         * > 
+         * 
+         * *   This parameter is available when the instance runs SQL Server 2019 SE or an Enterprise Edition of SQL Server.
+         * 
+         * *   You can call the [DescribeRegions](~~26243~~) operation to query the most recent region list.
          */
         public Builder privateKey(String privateKey) {
             this.putQueryParameter("PrivateKey", privateKey);
@@ -323,7 +362,10 @@ public class ModifyDBInstanceTDERequest extends Request {
         }
 
         /**
-         * RoleArn.
+         * The Alibaba Cloud Resource Name (ARN) of the RAM role. A RAM role is a virtual identity that you can create within your Alibaba Cloud account. For more information, see [RAM role overview](~~93689~~).
+         * <p>
+         * 
+         * > This parameter is available when the instance runs MySQL or PostgreSQL.
          */
         public Builder roleArn(String roleArn) {
             this.putQueryParameter("RoleArn", roleArn);
@@ -332,7 +374,11 @@ public class ModifyDBInstanceTDERequest extends Request {
         }
 
         /**
-         * TDEStatus.
+         * The status of TDE. Valid values:
+         * <p>
+         * 
+         * *   **Enabled**
+         * *   **Disabled**
          */
         public Builder TDEStatus(String TDEStatus) {
             this.putQueryParameter("TDEStatus", TDEStatus);

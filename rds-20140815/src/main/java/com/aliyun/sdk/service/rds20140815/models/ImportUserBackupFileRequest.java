@@ -198,7 +198,14 @@ public class ImportUserBackupFileRequest extends Request {
         } 
 
         /**
-         * BackupFile.
+         * A JSON array that consists of the information about the full backup file stored as an object in an OSS bucket. Example: `{"Bucket":"test", "Object":"test/test_db_employees.xb","Location":"ap-southeast-1"}`
+         * <p>
+         * 
+         * The JSON array contains the following fields:
+         * 
+         * *   **Bucket**: The name of the OSS bucket in which the full backup file is stored as an object. You can call the [GetBucket](~~31965~~) operation to query the name of the bucket.
+         * *   **Object**: The path of the full backup file that is stored as an object in the OSS bucket. You can call the [GetObject](~~31980~~) operation to query the path of the object.
+         * *   **Location**: The ID of the region in which the OSS bucket is located. You can call the [GetBucketLocation](~~31967~~) operation to query the region of the bucket.
          */
         public Builder backupFile(String backupFile) {
             this.putQueryParameter("BackupFile", backupFile);
@@ -207,7 +214,7 @@ public class ImportUserBackupFileRequest extends Request {
         }
 
         /**
-         * BucketRegion.
+         * The region ID of the OSS bucket where the full backup file of the self-managed MySQL database is located. You can call the [DescribeRegions](~~26243~~) operation to query the most recent region list.
          */
         public Builder bucketRegion(String bucketRegion) {
             this.putQueryParameter("BucketRegion", bucketRegion);
@@ -216,7 +223,7 @@ public class ImportUserBackupFileRequest extends Request {
         }
 
         /**
-         * Comment.
+         * The description of the full backup file.
          */
         public Builder comment(String comment) {
             this.putQueryParameter("Comment", comment);
@@ -225,7 +232,7 @@ public class ImportUserBackupFileRequest extends Request {
         }
 
         /**
-         * EngineVersion.
+         * The version of the database engine that is run on the self-managed MySQL database and ApsaraDB RDS for MySQL instance. Set the value to **5.7**.
          */
         public Builder engineVersion(String engineVersion) {
             this.putQueryParameter("EngineVersion", engineVersion);
@@ -243,7 +250,14 @@ public class ImportUserBackupFileRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * The region ID of the instance. You can call the [DescribeRegions](~~26243~~) operation to query the most recent region list.
+         * <p>
+         * 
+         * > 
+         * 
+         * *   The value of this parameter is the ID of the region in which you want to create the instance.
+         * 
+         * *   The value of this parameter must be consistent with the value of **BucketRegion**.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -270,7 +284,14 @@ public class ImportUserBackupFileRequest extends Request {
         }
 
         /**
-         * RestoreSize.
+         * The amount of storage that is required to restore the data of the full backup file. Unit: GB.
+         * <p>
+         * 
+         * > 
+         * 
+         * *   The default value of this parameter is 5 times the size of the full backup file.
+         * 
+         * *   The minimum value of this parameter is 20.
          */
         public Builder restoreSize(Integer restoreSize) {
             this.putQueryParameter("RestoreSize", restoreSize);
@@ -279,7 +300,7 @@ public class ImportUserBackupFileRequest extends Request {
         }
 
         /**
-         * Retention.
+         * The retention period of the full backup file. Unit: days. Valid values: any **non-zero** positive integer.
          */
         public Builder retention(Integer retention) {
             this.putQueryParameter("Retention", retention);
@@ -288,7 +309,14 @@ public class ImportUserBackupFileRequest extends Request {
         }
 
         /**
-         * ZoneId.
+         * The ID of the zone. You can call the [DescribeRegions](~~26243~~) operation to query the ID of the zone.
+         * <p>
+         * 
+         * > 
+         * 
+         * *   If you specify this parameter, the system creates a snapshot in single-digit seconds, which greatly reduces the time that is required to import the full backup file.
+         * 
+         * *   When you call the [CreateDBInstance](~~26228~~) operation to create an instance by using the full backup file, the instance is created in the zone that you specify for this parameter.
          */
         public Builder zoneId(String zoneId) {
             this.putQueryParameter("ZoneId", zoneId);

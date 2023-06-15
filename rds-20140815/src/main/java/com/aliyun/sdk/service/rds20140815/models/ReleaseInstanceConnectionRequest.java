@@ -141,7 +141,7 @@ public class ReleaseInstanceConnectionRequest extends Request {
         } 
 
         /**
-         * CurrentConnectionString.
+         * The public endpoint of the instance.
          */
         public Builder currentConnectionString(String currentConnectionString) {
             this.putQueryParameter("CurrentConnectionString", currentConnectionString);
@@ -150,7 +150,7 @@ public class ReleaseInstanceConnectionRequest extends Request {
         }
 
         /**
-         * DBInstanceId.
+         * The ID of the instance. You can call the [DescribeDBInstances](~~26232~~) operation to query the ID of the instance.
          */
         public Builder DBInstanceId(String DBInstanceId) {
             this.putQueryParameter("DBInstanceId", DBInstanceId);
@@ -159,7 +159,11 @@ public class ReleaseInstanceConnectionRequest extends Request {
         }
 
         /**
-         * InstanceNetworkType.
+         * The network type of the instance. Valid values:
+         * <p>
+         * 
+         * *   **VPC**
+         * *   **Classic**
          */
         public Builder instanceNetworkType(String instanceNetworkType) {
             this.putQueryParameter("InstanceNetworkType", instanceNetworkType);

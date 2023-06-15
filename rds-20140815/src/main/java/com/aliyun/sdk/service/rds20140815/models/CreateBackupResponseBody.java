@@ -50,7 +50,7 @@ public class CreateBackupResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * BackupJobId.
+         * The ID of the backup task.
          */
         public Builder backupJobId(String backupJobId) {
             this.backupJobId = backupJobId;
@@ -58,7 +58,7 @@ public class CreateBackupResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

@@ -27,6 +27,10 @@ public class DescribeSlowLogRecordsRequest extends Request {
     private String endTime;
 
     @Query
+    @NameInMap("NodeId")
+    private String nodeId;
+
+    @Query
     @NameInMap("OwnerAccount")
     private String ownerAccount;
 
@@ -66,6 +70,7 @@ public class DescribeSlowLogRecordsRequest extends Request {
         this.DBInstanceId = builder.DBInstanceId;
         this.DBName = builder.DBName;
         this.endTime = builder.endTime;
+        this.nodeId = builder.nodeId;
         this.ownerAccount = builder.ownerAccount;
         this.ownerId = builder.ownerId;
         this.pageNumber = builder.pageNumber;
@@ -108,6 +113,13 @@ public class DescribeSlowLogRecordsRequest extends Request {
      */
     public String getEndTime() {
         return this.endTime;
+    }
+
+    /**
+     * @return nodeId
+     */
+    public String getNodeId() {
+        return this.nodeId;
     }
 
     /**
@@ -170,6 +182,7 @@ public class DescribeSlowLogRecordsRequest extends Request {
         private String DBInstanceId; 
         private String DBName; 
         private String endTime; 
+        private String nodeId; 
         private String ownerAccount; 
         private Long ownerId; 
         private Integer pageNumber; 
@@ -188,6 +201,7 @@ public class DescribeSlowLogRecordsRequest extends Request {
             this.DBInstanceId = request.DBInstanceId;
             this.DBName = request.DBName;
             this.endTime = request.endTime;
+            this.nodeId = request.nodeId;
             this.ownerAccount = request.ownerAccount;
             this.ownerId = request.ownerId;
             this.pageNumber = request.pageNumber;
@@ -222,6 +236,15 @@ public class DescribeSlowLogRecordsRequest extends Request {
         public Builder endTime(String endTime) {
             this.putQueryParameter("EndTime", endTime);
             this.endTime = endTime;
+            return this;
+        }
+
+        /**
+         * NodeId.
+         */
+        public Builder nodeId(String nodeId) {
+            this.putQueryParameter("NodeId", nodeId);
+            this.nodeId = nodeId;
             return this;
         }
 

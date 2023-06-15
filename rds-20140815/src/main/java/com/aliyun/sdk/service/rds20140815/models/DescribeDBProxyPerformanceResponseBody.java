@@ -98,7 +98,7 @@ public class DescribeDBProxyPerformanceResponseBody extends TeaModel {
         private String startTime; 
 
         /**
-         * DBInstanceId.
+         * The ID of the instance.
          */
         public Builder DBInstanceId(String DBInstanceId) {
             this.DBInstanceId = DBInstanceId;
@@ -106,7 +106,7 @@ public class DescribeDBProxyPerformanceResponseBody extends TeaModel {
         }
 
         /**
-         * DBProxyEngineType.
+         * An internal parameter. You do not need to specify this parameter.
          */
         public Builder DBProxyEngineType(String DBProxyEngineType) {
             this.DBProxyEngineType = DBProxyEngineType;
@@ -114,7 +114,7 @@ public class DescribeDBProxyPerformanceResponseBody extends TeaModel {
         }
 
         /**
-         * EndTime.
+         * The end of the time range that is queried.
          */
         public Builder endTime(String endTime) {
             this.endTime = endTime;
@@ -122,7 +122,7 @@ public class DescribeDBProxyPerformanceResponseBody extends TeaModel {
         }
 
         /**
-         * PerformanceKeys.
+         * An array that consists of the performance metrics that are returned.
          */
         public Builder performanceKeys(PerformanceKeys performanceKeys) {
             this.performanceKeys = performanceKeys;
@@ -130,7 +130,7 @@ public class DescribeDBProxyPerformanceResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -138,7 +138,7 @@ public class DescribeDBProxyPerformanceResponseBody extends TeaModel {
         }
 
         /**
-         * StartTime.
+         * The beginning of the time range that is queried.
          */
         public Builder startTime(String startTime) {
             this.startTime = startTime;
@@ -190,7 +190,7 @@ public class DescribeDBProxyPerformanceResponseBody extends TeaModel {
             private String value; 
 
             /**
-             * Date.
+             * The time when the value of the performance metric was recorded. The time follows the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time is displayed in UTC.
              */
             public Builder date(String date) {
                 this.date = date;
@@ -198,7 +198,7 @@ public class DescribeDBProxyPerformanceResponseBody extends TeaModel {
             }
 
             /**
-             * Value.
+             * The value of the performance metric.
              */
             public Builder value(String value) {
                 this.value = value;
@@ -304,7 +304,7 @@ public class DescribeDBProxyPerformanceResponseBody extends TeaModel {
             private Values values; 
 
             /**
-             * Key.
+             * The name of the performance metric.
              */
             public Builder key(String key) {
                 this.key = key;
@@ -312,7 +312,7 @@ public class DescribeDBProxyPerformanceResponseBody extends TeaModel {
             }
 
             /**
-             * ValueFormat.
+             * The format in which the value of the performance metric is returned.
              */
             public Builder valueFormat(String valueFormat) {
                 this.valueFormat = valueFormat;
@@ -320,7 +320,7 @@ public class DescribeDBProxyPerformanceResponseBody extends TeaModel {
             }
 
             /**
-             * Values.
+             * An array that consists of the values of the performance metric in the following format: {value1, value2, ...}.
              */
             public Builder values(Values values) {
                 this.values = values;

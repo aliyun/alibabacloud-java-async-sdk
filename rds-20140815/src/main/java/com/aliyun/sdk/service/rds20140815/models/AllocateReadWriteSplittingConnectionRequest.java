@@ -195,7 +195,10 @@ public class AllocateReadWriteSplittingConnectionRequest extends Request {
         } 
 
         /**
-         * ConnectionStringPrefix.
+         * The prefix of the read-only routing endpoint. The prefix must be unique. It can be up to 30 characters in length and can contain lowercase letters and hyphens (-). It must start with a lowercase letter.
+         * <p>
+         * 
+         * >  The default prefix consists of the name of the primary instance followed by the letters rw.
          */
         public Builder connectionStringPrefix(String connectionStringPrefix) {
             this.putQueryParameter("ConnectionStringPrefix", connectionStringPrefix);
@@ -204,7 +207,7 @@ public class AllocateReadWriteSplittingConnectionRequest extends Request {
         }
 
         /**
-         * DBInstanceId.
+         * The ID of the primary instance. You can call the [DescribeDBInstances](~~26232~~) operation to query the ID of the instance.
          */
         public Builder DBInstanceId(String DBInstanceId) {
             this.putQueryParameter("DBInstanceId", DBInstanceId);
@@ -213,7 +216,11 @@ public class AllocateReadWriteSplittingConnectionRequest extends Request {
         }
 
         /**
-         * DistributionType.
+         * The method that is used to assign read weights. Valid values:
+         * <p>
+         * 
+         * *   **Standard**: ApsaraDB RDS automatically assigns read weights to the primary and read-only instances based on the specifications of these instances.
+         * *   **Custom**: You must manually assign a read weight to each instance.
          */
         public Builder distributionType(String distributionType) {
             this.putQueryParameter("DistributionType", distributionType);
@@ -222,7 +229,10 @@ public class AllocateReadWriteSplittingConnectionRequest extends Request {
         }
 
         /**
-         * MaxDelayTime.
+         * The threshold of the latency that is allowed on the read-only instances. Valid values: 0 to 7200. Default value: 30. Unit: seconds.
+         * <p>
+         * 
+         * >  If the latency on a read-only instance exceeds the specified threshold, ApsaraDB RDS does not forward read requests to the read-only instance.
          */
         public Builder maxDelayTime(String maxDelayTime) {
             this.putQueryParameter("MaxDelayTime", maxDelayTime);
@@ -231,7 +241,13 @@ public class AllocateReadWriteSplittingConnectionRequest extends Request {
         }
 
         /**
-         * NetType.
+         * The network type of the read-only routing endpoint. Valid values:
+         * <p>
+         * 
+         * *   **Internet**: Internet
+         * *   **Intranet**: internal network
+         * 
+         * >  The default value is Intranet. Make sure that the network type of the read-only routing endpoint is the same as that of the primary instance.
          */
         public Builder netType(String netType) {
             this.putQueryParameter("NetType", netType);
@@ -258,7 +274,7 @@ public class AllocateReadWriteSplittingConnectionRequest extends Request {
         }
 
         /**
-         * Port.
+         * The port that is associated with the read-only routing endpoint. Valid values: 1000 to 5999. Default value: 1433.
          */
         public Builder port(String port) {
             this.putQueryParameter("Port", port);
@@ -285,7 +301,14 @@ public class AllocateReadWriteSplittingConnectionRequest extends Request {
         }
 
         /**
-         * Weight.
+         * The read weights of the primary instance and its read-only instances. The read weight is increased in increments of 100. The maximum value is 10000.
+         * <p>
+         * 
+         * * For ApsaraDB RDS instances, the value of this parameter is in the following format: `{"<ID of the read-only instance >":<Weight>,"master":<Weight>,"slave":<Weight>}`.
+         * * For ApsaraDB MyBase instances, the value of this parameter is in the following format: `[{"instanceName":"<ID of the primary instance>","weight":<Weight>,"role":"master"},{"instanceName":"<ID of the primary instance>","weight":<Weight>,"role":"slave"},{"instanceName":"<ID of the read-only instance>","weight":<Weight>,"role":"master"}]`
+         * 
+         * > * If you set the **DistributionType** parameter to **Custom**, you must also specify this parameter.
+         * > * If you set the **DistributionType** parameter to **Standard**, this parameter is invalid.
          */
         public Builder weight(String weight) {
             this.putQueryParameter("Weight", weight);

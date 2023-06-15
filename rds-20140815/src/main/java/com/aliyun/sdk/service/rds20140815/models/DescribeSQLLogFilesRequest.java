@@ -155,7 +155,7 @@ public class DescribeSQLLogFilesRequest extends Request {
         } 
 
         /**
-         * DBInstanceId.
+         * The ID of the instance.
          */
         public Builder DBInstanceId(String DBInstanceId) {
             this.putQueryParameter("DBInstanceId", DBInstanceId);
@@ -164,7 +164,7 @@ public class DescribeSQLLogFilesRequest extends Request {
         }
 
         /**
-         * FileName.
+         * The name of the audit log file.
          */
         public Builder fileName(String fileName) {
             this.putQueryParameter("FileName", fileName);
@@ -191,7 +191,10 @@ public class DescribeSQLLogFilesRequest extends Request {
         }
 
         /**
-         * PageNumber.
+         * The number of the page to return. Valid values: **1 to 100000**.  
+         * <p>
+         * 
+         * Default value: **1**.
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -200,7 +203,10 @@ public class DescribeSQLLogFilesRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * The number of entries to return on each page. Valid value: **30 to 200**. 
+         * <p>
+         * 
+         * Default value: **30**.
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);

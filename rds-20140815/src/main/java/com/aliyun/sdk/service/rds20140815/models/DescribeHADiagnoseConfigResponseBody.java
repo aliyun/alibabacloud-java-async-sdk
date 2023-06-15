@@ -50,7 +50,7 @@ public class DescribeHADiagnoseConfigResponseBody extends TeaModel {
         private String tcpConnectionType; 
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -58,7 +58,11 @@ public class DescribeHADiagnoseConfigResponseBody extends TeaModel {
         }
 
         /**
-         * TcpConnectionType.
+         * The availability check method of the instance. Valid values:
+         * <p>
+         * 
+         * *   **LONG**: Alibaba Cloud uses persistent connections to check the availability of the instance.
+         * *   **SHORT**: Alibaba Cloud uses short-lived connections to check the availability of the instance.
          */
         public Builder tcpConnectionType(String tcpConnectionType) {
             this.tcpConnectionType = tcpConnectionType;

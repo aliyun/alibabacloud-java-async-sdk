@@ -122,7 +122,14 @@ public class ModifyBackupPolicyResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * CompressType.
+         * The method that is used to compress backups. Valid values:
+         * <p>
+         * 
+         * *   **0:** Backups are not compressed.
+         * *   **1**: Backups are compressed by using the zlib tool.
+         * *   **2**: Backups are compressed in parallel by using the zlib tool.
+         * *   **4**: Backups are compressed by using the QuickLZ tool and can be used to restore individual databases and tables.
+         * *   **8**: Backups are compressed by using the QuickLZ tool but cannot be used to restore individual databases or tables. This value is supported only for instances that run MySQL 8.0.
          */
         public Builder compressType(String compressType) {
             this.compressType = compressType;
@@ -130,7 +137,7 @@ public class ModifyBackupPolicyResponseBody extends TeaModel {
         }
 
         /**
-         * DBInstanceID.
+         * The ID of the instance.
          */
         public Builder DBInstanceID(String DBInstanceID) {
             this.DBInstanceID = DBInstanceID;
@@ -138,7 +145,11 @@ public class ModifyBackupPolicyResponseBody extends TeaModel {
         }
 
         /**
-         * EnableBackupLog.
+         * Indicates whether the log backup feature is enabled. Valid values:
+         * <p>
+         * 
+         * *   **1**: The feature is enabled.
+         * *   **0**: The feature is disabled.
          */
         public Builder enableBackupLog(String enableBackupLog) {
             this.enableBackupLog = enableBackupLog;
@@ -146,7 +157,7 @@ public class ModifyBackupPolicyResponseBody extends TeaModel {
         }
 
         /**
-         * HighSpaceUsageProtection.
+         * Specifies whether to forcefully delete log backup files from the instance when the storage usage of the instance exceeds 80% or the amount of remaining storage on the instance is less than 5 GB.
          */
         public Builder highSpaceUsageProtection(String highSpaceUsageProtection) {
             this.highSpaceUsageProtection = highSpaceUsageProtection;
@@ -154,7 +165,7 @@ public class ModifyBackupPolicyResponseBody extends TeaModel {
         }
 
         /**
-         * LocalLogRetentionHours.
+         * The number of hours for which log backup files are retained on the instance.
          */
         public Builder localLogRetentionHours(Integer localLogRetentionHours) {
             this.localLogRetentionHours = localLogRetentionHours;
@@ -162,7 +173,7 @@ public class ModifyBackupPolicyResponseBody extends TeaModel {
         }
 
         /**
-         * LocalLogRetentionSpace.
+         * The maximum storage usage that is allowed for log backup files on the instance.
          */
         public Builder localLogRetentionSpace(String localLogRetentionSpace) {
             this.localLogRetentionSpace = localLogRetentionSpace;
@@ -170,7 +181,7 @@ public class ModifyBackupPolicyResponseBody extends TeaModel {
         }
 
         /**
-         * LogBackupLocalRetentionNumber.
+         * The number of binary log files on the instance.
          */
         public Builder logBackupLocalRetentionNumber(Integer logBackupLocalRetentionNumber) {
             this.logBackupLocalRetentionNumber = logBackupLocalRetentionNumber;
@@ -178,7 +189,7 @@ public class ModifyBackupPolicyResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

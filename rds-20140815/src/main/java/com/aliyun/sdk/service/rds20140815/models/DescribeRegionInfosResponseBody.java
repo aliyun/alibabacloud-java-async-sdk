@@ -50,7 +50,7 @@ public class DescribeRegionInfosResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * Regions.
+         * An array that consists of regions.
          */
         public Builder regions(Regions regions) {
             this.regions = regions;
@@ -58,7 +58,7 @@ public class DescribeRegionInfosResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -98,7 +98,7 @@ public class DescribeRegionInfosResponseBody extends TeaModel {
             private String regionId; 
 
             /**
-             * RegionId.
+             * The ID of the region.
              */
             public Builder regionId(String regionId) {
                 this.regionId = regionId;

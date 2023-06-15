@@ -254,7 +254,13 @@ public class DescribeDBInstanceSSLResponseBody extends TeaModel {
         private String serverKey; 
 
         /**
-         * ACL.
+         * The method that is used to verify the identities of clients. This parameter is supported only when the instance runs PostgreSQL with cloud disks. Valid values:
+         * <p>
+         * 
+         * *   **cert**
+         * *   **perfer**
+         * *   **verify-ca**
+         * *   **verify-full** (supported only when the instance runs PostgreSQL 12 or later)
          */
         public Builder ACL(String ACL) {
             this.ACL = ACL;
@@ -262,7 +268,11 @@ public class DescribeDBInstanceSSLResponseBody extends TeaModel {
         }
 
         /**
-         * CAType.
+         * The type of the server certificate. This parameter is supported only when the instance runs PostgreSQL with cloud disks. Valid values:
+         * <p>
+         * 
+         * *   **aliyun**: a cloud certificate
+         * *   **custom**: a custom certificate
          */
         public Builder CAType(String CAType) {
             this.CAType = CAType;
@@ -270,7 +280,7 @@ public class DescribeDBInstanceSSLResponseBody extends TeaModel {
         }
 
         /**
-         * ClientCACert.
+         * The public key of the CA that issues client certificates. This parameter is supported only when the instance runs PostgreSQL with cloud disks.
          */
         public Builder clientCACert(String clientCACert) {
             this.clientCACert = clientCACert;
@@ -278,7 +288,7 @@ public class DescribeDBInstanceSSLResponseBody extends TeaModel {
         }
 
         /**
-         * ClientCACertExpireTime.
+         * The content of the server certificate. This parameter is supported only when the instance runs PostgreSQL with cloud disks. The time follows the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time is displayed in UTC. This parameter is not supported now.
          */
         public Builder clientCACertExpireTime(String clientCACertExpireTime) {
             this.clientCACertExpireTime = clientCACertExpireTime;
@@ -286,7 +296,7 @@ public class DescribeDBInstanceSSLResponseBody extends TeaModel {
         }
 
         /**
-         * ClientCertRevocationList.
+         * The certificate revocation list (CRL) that contains revoked client certificates. This parameter is supported only when the instance runs PostgreSQL with cloud disks.
          */
         public Builder clientCertRevocationList(String clientCertRevocationList) {
             this.clientCertRevocationList = clientCertRevocationList;
@@ -294,7 +304,7 @@ public class DescribeDBInstanceSSLResponseBody extends TeaModel {
         }
 
         /**
-         * ConnectionString.
+         * The endpoint that is protected by SSL encryption.
          */
         public Builder connectionString(String connectionString) {
             this.connectionString = connectionString;
@@ -302,7 +312,12 @@ public class DescribeDBInstanceSSLResponseBody extends TeaModel {
         }
 
         /**
-         * LastModifyStatus.
+         * The status of the SSL link. This parameter is supported only when the instance runs PostgreSQL with cloud disks. Valid values:
+         * <p>
+         * 
+         * *   **success**
+         * *   **setting**
+         * *   **failed**
          */
         public Builder lastModifyStatus(String lastModifyStatus) {
             this.lastModifyStatus = lastModifyStatus;
@@ -310,7 +325,7 @@ public class DescribeDBInstanceSSLResponseBody extends TeaModel {
         }
 
         /**
-         * ModifyStatusReason.
+         * The reason why the SSL link stays in the current state. This parameter is supported only when the instance runs PostgreSQL with cloud disks.
          */
         public Builder modifyStatusReason(String modifyStatusReason) {
             this.modifyStatusReason = modifyStatusReason;
@@ -318,7 +333,13 @@ public class DescribeDBInstanceSSLResponseBody extends TeaModel {
         }
 
         /**
-         * ReplicationACL.
+         * The method that is used to verify the replication permission. This parameter is supported only when the instance runs PostgreSQL with cloud disks. Valid values:
+         * <p>
+         * 
+         * *   **cert**
+         * *   **perfer**
+         * *   **verify-ca**
+         * *   **verify-full** (supported only when the instance runs PostgreSQL 12 or later)
          */
         public Builder replicationACL(String replicationACL) {
             this.replicationACL = replicationACL;
@@ -326,7 +347,7 @@ public class DescribeDBInstanceSSLResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -334,7 +355,18 @@ public class DescribeDBInstanceSSLResponseBody extends TeaModel {
         }
 
         /**
-         * RequireUpdate.
+         * Indicates whether the server certificate needs to be updated.
+         * <p>
+         * 
+         * *   Valid values for ApsaraDB RDS for MySQL instances and ApsaraDB RDS for SQL Server instances:
+         * 
+         *     *   **No**
+         *     *   **Yes**
+         * 
+         * *   Valid values for ApsaraDB RDS for PostgreSQL instances:
+         * 
+         *     *   **0**: no
+         *     *   **1**: yes
          */
         public Builder requireUpdate(String requireUpdate) {
             this.requireUpdate = requireUpdate;
@@ -342,7 +374,7 @@ public class DescribeDBInstanceSSLResponseBody extends TeaModel {
         }
 
         /**
-         * RequireUpdateItem.
+         * The server certificate that needs to be updated. This parameter is supported only when the instance runs PostgreSQL with cloud disks.
          */
         public Builder requireUpdateItem(String requireUpdateItem) {
             this.requireUpdateItem = requireUpdateItem;
@@ -350,7 +382,7 @@ public class DescribeDBInstanceSSLResponseBody extends TeaModel {
         }
 
         /**
-         * RequireUpdateReason.
+         * The reason why the server certificate needs to be updated. This parameter is supported only when the instance runs PostgreSQL with cloud disks.
          */
         public Builder requireUpdateReason(String requireUpdateReason) {
             this.requireUpdateReason = requireUpdateReason;
@@ -358,7 +390,7 @@ public class DescribeDBInstanceSSLResponseBody extends TeaModel {
         }
 
         /**
-         * SSLCreateTime.
+         * The time when the server certificate was created. This parameter is supported only when the instance runs PostgreSQL with cloud disks. In addition, this parameter is valid only when CAType is set to aliyun.
          */
         public Builder SSLCreateTime(String SSLCreateTime) {
             this.SSLCreateTime = SSLCreateTime;
@@ -366,7 +398,18 @@ public class DescribeDBInstanceSSLResponseBody extends TeaModel {
         }
 
         /**
-         * SSLEnabled.
+         * Indicates whether SSL encryption is enabled.
+         * <p>
+         * 
+         * *   Valid values for ApsaraDB RDS for MySQL instances and ApsaraDB RDS for SQL Server instances:
+         * 
+         *     *   **Yes**
+         *     *   **No**
+         * 
+         * *   Valid values for ApsaraDB RDS for PostgreSQL instances:
+         * 
+         *     *   **on**: enabled
+         *     *   **off**: disabled
          */
         public Builder SSLEnabled(String SSLEnabled) {
             this.SSLEnabled = SSLEnabled;
@@ -374,7 +417,7 @@ public class DescribeDBInstanceSSLResponseBody extends TeaModel {
         }
 
         /**
-         * SSLExpireTime.
+         * The time when the server certificate expires. The time follows the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time is displayed in UTC.
          */
         public Builder SSLExpireTime(String SSLExpireTime) {
             this.SSLExpireTime = SSLExpireTime;
@@ -382,7 +425,7 @@ public class DescribeDBInstanceSSLResponseBody extends TeaModel {
         }
 
         /**
-         * ServerCAUrl.
+         * The URL of the certificate that is used to issue the server certificate. This parameter is supported only when the instance runs PostgreSQL with cloud disks.
          */
         public Builder serverCAUrl(String serverCAUrl) {
             this.serverCAUrl = serverCAUrl;
@@ -390,7 +433,7 @@ public class DescribeDBInstanceSSLResponseBody extends TeaModel {
         }
 
         /**
-         * ServerCert.
+         * The content of the server certificate. This parameter is supported only when the instance runs PostgreSQL with cloud disks.
          */
         public Builder serverCert(String serverCert) {
             this.serverCert = serverCert;
@@ -398,7 +441,7 @@ public class DescribeDBInstanceSSLResponseBody extends TeaModel {
         }
 
         /**
-         * ServerKey.
+         * The private key of the server certificate. This parameter is supported only when the instance runs PostgreSQL with cloud disks.
          */
         public Builder serverKey(String serverKey) {
             this.serverKey = serverKey;

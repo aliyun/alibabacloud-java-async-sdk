@@ -86,7 +86,7 @@ public class DescribeReadDBInstanceDelayResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * DBInstanceId.
+         * The ID of the primary instance.
          */
         public Builder DBInstanceId(String DBInstanceId) {
             this.DBInstanceId = DBInstanceId;
@@ -94,7 +94,7 @@ public class DescribeReadDBInstanceDelayResponseBody extends TeaModel {
         }
 
         /**
-         * DelayTime.
+         * The latency of data replication between the primary instance and the read-only instance.
          */
         public Builder delayTime(Integer delayTime) {
             this.delayTime = delayTime;
@@ -102,7 +102,7 @@ public class DescribeReadDBInstanceDelayResponseBody extends TeaModel {
         }
 
         /**
-         * Items.
+         * An array that consists of latency information.
          */
         public Builder items(Items items) {
             this.items = items;
@@ -110,7 +110,7 @@ public class DescribeReadDBInstanceDelayResponseBody extends TeaModel {
         }
 
         /**
-         * ReadDBInstanceId.
+         * The ID of the read-only instance.
          */
         public Builder readDBInstanceId(String readDBInstanceId) {
             this.readDBInstanceId = readDBInstanceId;
@@ -118,7 +118,7 @@ public class DescribeReadDBInstanceDelayResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -324,7 +324,7 @@ public class DescribeReadDBInstanceDelayResponseBody extends TeaModel {
             private String writeLatency; 
 
             /**
-             * FlushLag.
+             * The duration that is allowed for the latency in the persistence of WAL data. Unit: seconds.
              */
             public Builder flushLag(String flushLag) {
                 this.flushLag = flushLag;
@@ -332,7 +332,7 @@ public class DescribeReadDBInstanceDelayResponseBody extends TeaModel {
             }
 
             /**
-             * FlushLatency.
+             * The data size that is allowed for the latency in the persistence of WAL data. Unit: MB.
              */
             public Builder flushLatency(String flushLatency) {
                 this.flushLatency = flushLatency;
@@ -340,7 +340,7 @@ public class DescribeReadDBInstanceDelayResponseBody extends TeaModel {
             }
 
             /**
-             * ReadDBInstanceName.
+             * The ID of the read-only instance.
              */
             public Builder readDBInstanceName(String readDBInstanceName) {
                 this.readDBInstanceName = readDBInstanceName;
@@ -348,7 +348,7 @@ public class DescribeReadDBInstanceDelayResponseBody extends TeaModel {
             }
 
             /**
-             * ReplayLag.
+             * The duration that is allowed for the latency in the playback of WAL data. Unit: seconds.
              */
             public Builder replayLag(String replayLag) {
                 this.replayLag = replayLag;
@@ -356,7 +356,7 @@ public class DescribeReadDBInstanceDelayResponseBody extends TeaModel {
             }
 
             /**
-             * ReplayLatency.
+             * The data size that is allowed for the latency in the playback of WAL data. Unit: MB.
              */
             public Builder replayLatency(String replayLatency) {
                 this.replayLatency = replayLatency;
@@ -364,7 +364,7 @@ public class DescribeReadDBInstanceDelayResponseBody extends TeaModel {
             }
 
             /**
-             * SendLatency.
+             * The data size that is allowed for the latency in the sending of WAL data. Unit: MB.
              */
             public Builder sendLatency(String sendLatency) {
                 this.sendLatency = sendLatency;
@@ -372,7 +372,7 @@ public class DescribeReadDBInstanceDelayResponseBody extends TeaModel {
             }
 
             /**
-             * WriteLag.
+             * The duration that is allowed for the latency in the write-back of WAL data. Unit: seconds.
              */
             public Builder writeLag(String writeLag) {
                 this.writeLag = writeLag;
@@ -380,7 +380,7 @@ public class DescribeReadDBInstanceDelayResponseBody extends TeaModel {
             }
 
             /**
-             * WriteLatency.
+             * The data size that is allowed for the latency in the write-back of WAL data. Unit: MB.
              */
             public Builder writeLatency(String writeLatency) {
                 this.writeLatency = writeLatency;
@@ -498,7 +498,7 @@ public class DescribeReadDBInstanceDelayResponseBody extends TeaModel {
             private ItemsReadonlyInstanceDelay readonlyInstanceDelay; 
 
             /**
-             * DBInstanceId.
+             * The ID of the primary instance.
              */
             public Builder DBInstanceId(String DBInstanceId) {
                 this.DBInstanceId = DBInstanceId;
@@ -506,7 +506,10 @@ public class DescribeReadDBInstanceDelayResponseBody extends TeaModel {
             }
 
             /**
-             * ReadDBInstanceNames.
+             * An array that consists of information about the read-only instance.
+             * <p>
+             * 
+             * >  This parameter is returned only when the primary instance runs the MySQL database engine.
              */
             public Builder readDBInstanceNames(ReadDBInstanceNames readDBInstanceNames) {
                 this.readDBInstanceNames = readDBInstanceNames;
@@ -514,7 +517,10 @@ public class DescribeReadDBInstanceDelayResponseBody extends TeaModel {
             }
 
             /**
-             * ReadDelayTimes.
+             * An array that consists of latencies.
+             * <p>
+             * 
+             * >  This parameter is returned only when the primary instance runs the MySQL database engine.
              */
             public Builder readDelayTimes(ReadDelayTimes readDelayTimes) {
                 this.readDelayTimes = readDelayTimes;
@@ -522,7 +528,10 @@ public class DescribeReadDBInstanceDelayResponseBody extends TeaModel {
             }
 
             /**
-             * ReadonlyInstanceDelay.
+             * An array that consists of information about the write-ahead log (WAL) latency.
+             * <p>
+             * 
+             * >  This parameter is returned only when the primary instance runs the PostgreSQL database engine.
              */
             public Builder readonlyInstanceDelay(ItemsReadonlyInstanceDelay readonlyInstanceDelay) {
                 this.readonlyInstanceDelay = readonlyInstanceDelay;
@@ -563,7 +572,7 @@ public class DescribeReadDBInstanceDelayResponseBody extends TeaModel {
             private java.util.List < ItemsItems> items; 
 
             /**
-             * Items.
+             * An array that consists of latency information.
              */
             public Builder items(java.util.List < ItemsItems> items) {
                 this.items = items;

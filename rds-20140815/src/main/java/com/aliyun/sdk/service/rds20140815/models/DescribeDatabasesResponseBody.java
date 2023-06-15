@@ -50,7 +50,7 @@ public class DescribeDatabasesResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * Databases.
+         * An array that consists of the information about databases.
          */
         public Builder databases(Databases databases) {
             this.databases = databases;
@@ -58,7 +58,7 @@ public class DescribeDatabasesResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -122,7 +122,7 @@ public class DescribeDatabasesResponseBody extends TeaModel {
             private String accountPrivilegeDetail; 
 
             /**
-             * Account.
+             * The username of the account.
              */
             public Builder account(String account) {
                 this.account = account;
@@ -130,7 +130,13 @@ public class DescribeDatabasesResponseBody extends TeaModel {
             }
 
             /**
-             * AccountPrivilege.
+             * The permissions that the account has on the database. Valid values:
+             * <p>
+             * 
+             * *   **ReadWrite**: read and write permissions
+             * *   **ReadOnly**: read-only permissions
+             * *   **DMLOnly**: DML-only permissions
+             * *   **DDLOnly**: DDL-only permissions
              */
             public Builder accountPrivilege(String accountPrivilege) {
                 this.accountPrivilege = accountPrivilege;
@@ -138,7 +144,7 @@ public class DescribeDatabasesResponseBody extends TeaModel {
             }
 
             /**
-             * AccountPrivilegeDetail.
+             * The details of the permissions that the account has on the database.
              */
             public Builder accountPrivilegeDetail(String accountPrivilegeDetail) {
                 this.accountPrivilegeDetail = accountPrivilegeDetail;
@@ -388,7 +394,7 @@ public class DescribeDatabasesResponseBody extends TeaModel {
             private Integer totalCount; 
 
             /**
-             * Accounts.
+             * An array that consists of the details of the accounts. Each account has specific permissions on the database.
              */
             public Builder accounts(Accounts accounts) {
                 this.accounts = accounts;
@@ -396,7 +402,7 @@ public class DescribeDatabasesResponseBody extends TeaModel {
             }
 
             /**
-             * CharacterSetName.
+             * The name of the character set.
              */
             public Builder characterSetName(String characterSetName) {
                 this.characterSetName = characterSetName;
@@ -404,7 +410,10 @@ public class DescribeDatabasesResponseBody extends TeaModel {
             }
 
             /**
-             * Collate.
+             * The collation of the character set. The example value C stands for localization.
+             * <p>
+             * 
+             * >  This parameter is returned only for instances that run PostgreSQL.
              */
             public Builder collate(String collate) {
                 this.collate = collate;
@@ -412,7 +421,10 @@ public class DescribeDatabasesResponseBody extends TeaModel {
             }
 
             /**
-             * ConnLimit.
+             * The limit on the number of concurrent requests. The value -1 indicates that the number of concurrent requests is unlimited.
+             * <p>
+             * 
+             * >  This parameter is returned only for instances that run PostgreSQL.
              */
             public Builder connLimit(String connLimit) {
                 this.connLimit = connLimit;
@@ -420,7 +432,10 @@ public class DescribeDatabasesResponseBody extends TeaModel {
             }
 
             /**
-             * Ctype.
+             * The type of the character set.
+             * <p>
+             * 
+             * >  This parameter is returned only for instances that run PostgreSQL.
              */
             public Builder ctype(String ctype) {
                 this.ctype = ctype;
@@ -428,7 +443,7 @@ public class DescribeDatabasesResponseBody extends TeaModel {
             }
 
             /**
-             * DBDescription.
+             * The description of the database.
              */
             public Builder DBDescription(String DBDescription) {
                 this.DBDescription = DBDescription;
@@ -436,7 +451,7 @@ public class DescribeDatabasesResponseBody extends TeaModel {
             }
 
             /**
-             * DBInstanceId.
+             * The ID of the instance to which the database belongs.
              */
             public Builder DBInstanceId(String DBInstanceId) {
                 this.DBInstanceId = DBInstanceId;
@@ -444,7 +459,7 @@ public class DescribeDatabasesResponseBody extends TeaModel {
             }
 
             /**
-             * DBName.
+             * The name of the database.
              */
             public Builder DBName(String DBName) {
                 this.DBName = DBName;
@@ -452,7 +467,12 @@ public class DescribeDatabasesResponseBody extends TeaModel {
             }
 
             /**
-             * DBStatus.
+             * The status of the database. Valid values:
+             * <p>
+             * 
+             * *   **Creating**
+             * *   **Running**
+             * *   **Deleting**
              */
             public Builder DBStatus(String DBStatus) {
                 this.DBStatus = DBStatus;
@@ -460,7 +480,7 @@ public class DescribeDatabasesResponseBody extends TeaModel {
             }
 
             /**
-             * Engine.
+             * The database engine of the instance to which the database belongs.
              */
             public Builder engine(String engine) {
                 this.engine = engine;
@@ -476,7 +496,7 @@ public class DescribeDatabasesResponseBody extends TeaModel {
             }
 
             /**
-             * PageSize.
+             * The reserved parameter.
              */
             public Builder pageSize(Integer pageSize) {
                 this.pageSize = pageSize;
@@ -484,7 +504,7 @@ public class DescribeDatabasesResponseBody extends TeaModel {
             }
 
             /**
-             * ResourceGroupId.
+             * The ID of the resource group.
              */
             public Builder resourceGroupId(String resourceGroupId) {
                 this.resourceGroupId = resourceGroupId;
@@ -492,7 +512,10 @@ public class DescribeDatabasesResponseBody extends TeaModel {
             }
 
             /**
-             * Tablespace.
+             * The tablespace of the database.
+             * <p>
+             * 
+             * >  This parameter is returned only for instances that run PostgreSQL.
              */
             public Builder tablespace(String tablespace) {
                 this.tablespace = tablespace;
@@ -500,7 +523,7 @@ public class DescribeDatabasesResponseBody extends TeaModel {
             }
 
             /**
-             * TotalCount.
+             * The total number of entries returned.
              */
             public Builder totalCount(Integer totalCount) {
                 this.totalCount = totalCount;

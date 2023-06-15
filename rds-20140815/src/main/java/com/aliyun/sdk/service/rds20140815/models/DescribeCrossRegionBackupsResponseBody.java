@@ -122,7 +122,7 @@ public class DescribeCrossRegionBackupsResponseBody extends TeaModel {
         private Integer totalRecordCount; 
 
         /**
-         * EndTime.
+         * The end of the time range that is queried.
          */
         public Builder endTime(String endTime) {
             this.endTime = endTime;
@@ -130,7 +130,7 @@ public class DescribeCrossRegionBackupsResponseBody extends TeaModel {
         }
 
         /**
-         * Items.
+         * An array that consists of details of the cross-region data backup files.
          */
         public Builder items(Items items) {
             this.items = items;
@@ -138,7 +138,10 @@ public class DescribeCrossRegionBackupsResponseBody extends TeaModel {
         }
 
         /**
-         * PageNumber.
+         * The page number of the returned page. Valid values: any non-zero positive integer.
+         * <p>
+         * 
+         * Default value: **1**.
          */
         public Builder pageNumber(Integer pageNumber) {
             this.pageNumber = pageNumber;
@@ -146,7 +149,7 @@ public class DescribeCrossRegionBackupsResponseBody extends TeaModel {
         }
 
         /**
-         * PageRecordCount.
+         * The number of cross-region data backup files on the current page.
          */
         public Builder pageRecordCount(Integer pageRecordCount) {
             this.pageRecordCount = pageRecordCount;
@@ -154,7 +157,7 @@ public class DescribeCrossRegionBackupsResponseBody extends TeaModel {
         }
 
         /**
-         * RegionId.
+         * The region ID of the instance.
          */
         public Builder regionId(String regionId) {
             this.regionId = regionId;
@@ -162,7 +165,7 @@ public class DescribeCrossRegionBackupsResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -170,7 +173,7 @@ public class DescribeCrossRegionBackupsResponseBody extends TeaModel {
         }
 
         /**
-         * StartTime.
+         * The beginning of the time range that is queried.
          */
         public Builder startTime(String startTime) {
             this.startTime = startTime;
@@ -178,7 +181,7 @@ public class DescribeCrossRegionBackupsResponseBody extends TeaModel {
         }
 
         /**
-         * TotalRecordCount.
+         * The total number of entries returned.
          */
         public Builder totalRecordCount(Integer totalRecordCount) {
             this.totalRecordCount = totalRecordCount;
@@ -475,7 +478,7 @@ public class DescribeCrossRegionBackupsResponseBody extends TeaModel {
             private RestoreRegions restoreRegions; 
 
             /**
-             * BackupEndTime.
+             * The time when the cross-region data backup file was generated.
              */
             public Builder backupEndTime(String backupEndTime) {
                 this.backupEndTime = backupEndTime;
@@ -483,7 +486,11 @@ public class DescribeCrossRegionBackupsResponseBody extends TeaModel {
             }
 
             /**
-             * BackupMethod.
+             * The method that is used to generate the cross-region data backup file. Valid values:
+             * <p>
+             * 
+             * *   **L**: logical backup
+             * *   **P**: physical backup
              */
             public Builder backupMethod(String backupMethod) {
                 this.backupMethod = backupMethod;
@@ -491,7 +498,11 @@ public class DescribeCrossRegionBackupsResponseBody extends TeaModel {
             }
 
             /**
-             * BackupSetScale.
+             * The level at which the cross-region data backup file is generated.
+             * <p>
+             * 
+             * *   **0**: instance-level backup
+             * *   **1**: database-level backup
              */
             public Builder backupSetScale(Integer backupSetScale) {
                 this.backupSetScale = backupSetScale;
@@ -499,7 +510,11 @@ public class DescribeCrossRegionBackupsResponseBody extends TeaModel {
             }
 
             /**
-             * BackupSetStatus.
+             * The status of the cross-region data backup. Valid values:
+             * <p>
+             * 
+             * *   **0**: The cross-region data backup is successful.
+             * *   **1**: The cross-region data backup failed.
              */
             public Builder backupSetStatus(Integer backupSetStatus) {
                 this.backupSetStatus = backupSetStatus;
@@ -507,7 +522,7 @@ public class DescribeCrossRegionBackupsResponseBody extends TeaModel {
             }
 
             /**
-             * BackupStartTime.
+             * The time when the cross-region data backup started.
              */
             public Builder backupStartTime(String backupStartTime) {
                 this.backupStartTime = backupStartTime;
@@ -515,7 +530,11 @@ public class DescribeCrossRegionBackupsResponseBody extends TeaModel {
             }
 
             /**
-             * BackupType.
+             * The type of the cross-region data backup. Valid values:
+             * <p>
+             * 
+             * *   **F**: full data backup
+             * *   **I**: incremental data backup
              */
             public Builder backupType(String backupType) {
                 this.backupType = backupType;
@@ -523,7 +542,12 @@ public class DescribeCrossRegionBackupsResponseBody extends TeaModel {
             }
 
             /**
-             * Category.
+             * The RDS edition of the instance. Valid values:
+             * <p>
+             * 
+             * *   **Basic**: Basic Edition.
+             * *   **HighAvailability**: High-availability Edition.
+             * *   **Finance**: Enterprise Edition. This edition is supported only by the China site (aliyun.com).
              */
             public Builder category(String category) {
                 this.category = category;
@@ -531,7 +555,7 @@ public class DescribeCrossRegionBackupsResponseBody extends TeaModel {
             }
 
             /**
-             * ConsistentTime.
+             * The point in time that is indicated by the data in the cross-region data backup file.
              */
             public Builder consistentTime(String consistentTime) {
                 this.consistentTime = consistentTime;
@@ -539,7 +563,7 @@ public class DescribeCrossRegionBackupsResponseBody extends TeaModel {
             }
 
             /**
-             * CrossBackupDownloadLink.
+             * The external URL from which you can download the cross-region data backup file.
              */
             public Builder crossBackupDownloadLink(String crossBackupDownloadLink) {
                 this.crossBackupDownloadLink = crossBackupDownloadLink;
@@ -547,7 +571,7 @@ public class DescribeCrossRegionBackupsResponseBody extends TeaModel {
             }
 
             /**
-             * CrossBackupId.
+             * The ID of the cross-region data backup file.
              */
             public Builder crossBackupId(Integer crossBackupId) {
                 this.crossBackupId = crossBackupId;
@@ -555,7 +579,7 @@ public class DescribeCrossRegionBackupsResponseBody extends TeaModel {
             }
 
             /**
-             * CrossBackupRegion.
+             * The ID of the destination region where the cross-region data backup file of the instance is stored.
              */
             public Builder crossBackupRegion(String crossBackupRegion) {
                 this.crossBackupRegion = crossBackupRegion;
@@ -563,7 +587,7 @@ public class DescribeCrossRegionBackupsResponseBody extends TeaModel {
             }
 
             /**
-             * CrossBackupSetFile.
+             * The name of the compressed package that contains the cross-region data backup file.
              */
             public Builder crossBackupSetFile(String crossBackupSetFile) {
                 this.crossBackupSetFile = crossBackupSetFile;
@@ -571,7 +595,7 @@ public class DescribeCrossRegionBackupsResponseBody extends TeaModel {
             }
 
             /**
-             * CrossBackupSetLocation.
+             * The location where the cross-region data backup file is stored.
              */
             public Builder crossBackupSetLocation(String crossBackupSetLocation) {
                 this.crossBackupSetLocation = crossBackupSetLocation;
@@ -579,7 +603,7 @@ public class DescribeCrossRegionBackupsResponseBody extends TeaModel {
             }
 
             /**
-             * CrossBackupSetSize.
+             * The size of the cross-region data backup file. Unit: bytes.
              */
             public Builder crossBackupSetSize(Long crossBackupSetSize) {
                 this.crossBackupSetSize = crossBackupSetSize;
@@ -587,7 +611,12 @@ public class DescribeCrossRegionBackupsResponseBody extends TeaModel {
             }
 
             /**
-             * DBInstanceStorageType.
+             * The storage type. Valid values:
+             * <p>
+             * 
+             * *   **local_ssd**: local SSD. This is the recommended storage type.
+             * *   **cloud_ssd**: standard SSD.
+             * *   **cloud_essd**: enhanced SSD (ESSD).
              */
             public Builder DBInstanceStorageType(String DBInstanceStorageType) {
                 this.DBInstanceStorageType = DBInstanceStorageType;
@@ -595,7 +624,7 @@ public class DescribeCrossRegionBackupsResponseBody extends TeaModel {
             }
 
             /**
-             * Engine.
+             * The engine of the database.
              */
             public Builder engine(String engine) {
                 this.engine = engine;
@@ -603,7 +632,7 @@ public class DescribeCrossRegionBackupsResponseBody extends TeaModel {
             }
 
             /**
-             * EngineVersion.
+             * The version of the database engine.
              */
             public Builder engineVersion(String engineVersion) {
                 this.engineVersion = engineVersion;
@@ -611,7 +640,7 @@ public class DescribeCrossRegionBackupsResponseBody extends TeaModel {
             }
 
             /**
-             * InstanceId.
+             * The ID of the instance. This parameter is used to determine whether the instance that generates the cross-region data backup file is a primary or secondary instance.
              */
             public Builder instanceId(Integer instanceId) {
                 this.instanceId = instanceId;
@@ -619,7 +648,7 @@ public class DescribeCrossRegionBackupsResponseBody extends TeaModel {
             }
 
             /**
-             * RestoreRegions.
+             * An array that consists of the regions to which the cross-region data backup file can be restored.
              */
             public Builder restoreRegions(RestoreRegions restoreRegions) {
                 this.restoreRegions = restoreRegions;

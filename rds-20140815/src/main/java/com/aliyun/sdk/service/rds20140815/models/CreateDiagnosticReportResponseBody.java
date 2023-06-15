@@ -50,7 +50,7 @@ public class CreateDiagnosticReportResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * ReportId.
+         * The ID of the diagnostic report.
          */
         public Builder reportId(String reportId) {
             this.reportId = reportId;
@@ -58,7 +58,7 @@ public class CreateDiagnosticReportResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

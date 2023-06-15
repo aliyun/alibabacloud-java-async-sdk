@@ -86,7 +86,7 @@ public class TransformDBInstancePayTypeResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * ChargeType.
+         * The billing method.
          */
         public Builder chargeType(String chargeType) {
             this.chargeType = chargeType;
@@ -94,7 +94,7 @@ public class TransformDBInstancePayTypeResponseBody extends TeaModel {
         }
 
         /**
-         * DBInstanceId.
+         * The ID of the instance.
          */
         public Builder DBInstanceId(String DBInstanceId) {
             this.DBInstanceId = DBInstanceId;
@@ -102,7 +102,10 @@ public class TransformDBInstancePayTypeResponseBody extends TeaModel {
         }
 
         /**
-         * ExpiredTime.
+         * The expiration time.
+         * <p>
+         * 
+         * > If you call this operation to change the billing method of an instance from subscription to pay-as-you-go, this parameter is not returned.
          */
         public Builder expiredTime(String expiredTime) {
             this.expiredTime = expiredTime;
@@ -110,7 +113,7 @@ public class TransformDBInstancePayTypeResponseBody extends TeaModel {
         }
 
         /**
-         * OrderId.
+         * The ID of the order.
          */
         public Builder orderId(Long orderId) {
             this.orderId = orderId;
@@ -118,7 +121,7 @@ public class TransformDBInstancePayTypeResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

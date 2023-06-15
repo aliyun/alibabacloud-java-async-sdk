@@ -74,7 +74,7 @@ public class CreateCloudMigrationTaskResponseBody extends TeaModel {
         private String taskName; 
 
         /**
-         * DBInstanceName.
+         * The name of the instance.
          */
         public Builder DBInstanceName(String DBInstanceName) {
             this.DBInstanceName = DBInstanceName;
@@ -82,7 +82,7 @@ public class CreateCloudMigrationTaskResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -90,7 +90,7 @@ public class CreateCloudMigrationTaskResponseBody extends TeaModel {
         }
 
         /**
-         * TaskId.
+         * The ID of the task.
          */
         public Builder taskId(Long taskId) {
             this.taskId = taskId;
@@ -98,7 +98,7 @@ public class CreateCloudMigrationTaskResponseBody extends TeaModel {
         }
 
         /**
-         * TaskName.
+         * The name of the task.
          */
         public Builder taskName(String taskName) {
             this.taskName = taskName;

@@ -74,7 +74,7 @@ public class DescribeLocalAvailableRecoveryTimeResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * DBInstanceId.
+         * The ID of the instance.
          */
         public Builder DBInstanceId(String DBInstanceId) {
             this.DBInstanceId = DBInstanceId;
@@ -82,7 +82,7 @@ public class DescribeLocalAvailableRecoveryTimeResponseBody extends TeaModel {
         }
 
         /**
-         * RecoveryBeginTime.
+         * The start of the time range to which the instance can be restored.
          */
         public Builder recoveryBeginTime(String recoveryBeginTime) {
             this.recoveryBeginTime = recoveryBeginTime;
@@ -90,7 +90,7 @@ public class DescribeLocalAvailableRecoveryTimeResponseBody extends TeaModel {
         }
 
         /**
-         * RecoveryEndTime.
+         * The end of the time range to which the instance can be restored.
          */
         public Builder recoveryEndTime(String recoveryEndTime) {
             this.recoveryEndTime = recoveryEndTime;
@@ -98,7 +98,7 @@ public class DescribeLocalAvailableRecoveryTimeResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

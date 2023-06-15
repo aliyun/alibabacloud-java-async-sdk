@@ -169,7 +169,7 @@ public class DescribeUpgradeMajorVersionTasksRequest extends Request {
         } 
 
         /**
-         * DBInstanceId.
+         * The ID of the original instance.
          */
         public Builder DBInstanceId(String DBInstanceId) {
             this.putQueryParameter("DBInstanceId", DBInstanceId);
@@ -196,7 +196,12 @@ public class DescribeUpgradeMajorVersionTasksRequest extends Request {
         }
 
         /**
-         * PageNumber.
+         * The number of the page to return.
+         * <p>
+         * 
+         * Valid values: any non-zero positive integer.
+         * 
+         * Default value: **1**.
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -205,7 +210,12 @@ public class DescribeUpgradeMajorVersionTasksRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * The number of entries to return on each page.
+         * <p>
+         * 
+         * Valid values: **30** to **100**.
+         * 
+         * Default value: **30**.
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -232,7 +242,13 @@ public class DescribeUpgradeMajorVersionTasksRequest extends Request {
         }
 
         /**
-         * TargetMajorVersion.
+         * The major engine version of the new instance. Valid values:
+         * <p>
+         * 
+         * *   **10.0**
+         * *   **11.0**
+         * *   **12.0**
+         * *   **13.0**
          */
         public Builder targetMajorVersion(String targetMajorVersion) {
             this.putQueryParameter("TargetMajorVersion", targetMajorVersion);
@@ -241,7 +257,7 @@ public class DescribeUpgradeMajorVersionTasksRequest extends Request {
         }
 
         /**
-         * TaskId.
+         * This parameter is reserved. You do not need to specify this parameter.
          */
         public Builder taskId(Integer taskId) {
             this.putQueryParameter("TaskId", taskId);

@@ -171,7 +171,7 @@ public class DescribeLogBackupFilesRequest extends Request {
         } 
 
         /**
-         * DBInstanceId.
+         * The ID of the instance.
          */
         public Builder DBInstanceId(String DBInstanceId) {
             this.putQueryParameter("DBInstanceId", DBInstanceId);
@@ -180,7 +180,7 @@ public class DescribeLogBackupFilesRequest extends Request {
         }
 
         /**
-         * EndTime.
+         * The end of the time range to query. The end time must be later than the start time. Specify the time in the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm*Z format. The time must be in UTC.
          */
         public Builder endTime(String endTime) {
             this.putQueryParameter("EndTime", endTime);
@@ -207,7 +207,10 @@ public class DescribeLogBackupFilesRequest extends Request {
         }
 
         /**
-         * PageNumber.
+         * The page number. Valid values: any non-zero positive integer.
+         * <p>
+         * 
+         * Default value: **1**.
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -216,7 +219,7 @@ public class DescribeLogBackupFilesRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * The number of entries per page. Valid values: **30** to **1000**. Default value: **30**.
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -243,7 +246,7 @@ public class DescribeLogBackupFilesRequest extends Request {
         }
 
         /**
-         * StartTime.
+         * The beginning of the time range to query. The time follows the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm*Z format. The time is displayed in UTC.
          */
         public Builder startTime(String startTime) {
             this.putQueryParameter("StartTime", startTime);

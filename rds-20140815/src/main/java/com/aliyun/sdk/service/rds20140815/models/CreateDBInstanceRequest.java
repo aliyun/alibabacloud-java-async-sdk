@@ -17,12 +17,24 @@ public class CreateDBInstanceRequest extends Request {
     private Integer amount;
 
     @Query
+    @NameInMap("AutoPay")
+    private Boolean autoPay;
+
+    @Query
     @NameInMap("AutoRenew")
     private String autoRenew;
 
     @Query
     @NameInMap("BabelfishConfig")
     private String babelfishConfig;
+
+    @Query
+    @NameInMap("BpeEnabled")
+    private String bpeEnabled;
+
+    @Query
+    @NameInMap("BurstingEnabled")
+    private Boolean burstingEnabled;
 
     @Query
     @NameInMap("BusinessInfo")
@@ -123,6 +135,10 @@ public class CreateDBInstanceRequest extends Request {
     private String period;
 
     @Query
+    @NameInMap("Port")
+    private String port;
+
+    @Query
     @NameInMap("PrivateIpAddress")
     private String privateIpAddress;
 
@@ -219,8 +235,11 @@ public class CreateDBInstanceRequest extends Request {
     private CreateDBInstanceRequest(Builder builder) {
         super(builder);
         this.amount = builder.amount;
+        this.autoPay = builder.autoPay;
         this.autoRenew = builder.autoRenew;
         this.babelfishConfig = builder.babelfishConfig;
+        this.bpeEnabled = builder.bpeEnabled;
+        this.burstingEnabled = builder.burstingEnabled;
         this.businessInfo = builder.businessInfo;
         this.category = builder.category;
         this.clientToken = builder.clientToken;
@@ -244,6 +263,7 @@ public class CreateDBInstanceRequest extends Request {
         this.instanceNetworkType = builder.instanceNetworkType;
         this.payType = builder.payType;
         this.period = builder.period;
+        this.port = builder.port;
         this.privateIpAddress = builder.privateIpAddress;
         this.regionId = builder.regionId;
         this.resourceGroupId = builder.resourceGroupId;
@@ -290,6 +310,13 @@ public class CreateDBInstanceRequest extends Request {
     }
 
     /**
+     * @return autoPay
+     */
+    public Boolean getAutoPay() {
+        return this.autoPay;
+    }
+
+    /**
      * @return autoRenew
      */
     public String getAutoRenew() {
@@ -301,6 +328,20 @@ public class CreateDBInstanceRequest extends Request {
      */
     public String getBabelfishConfig() {
         return this.babelfishConfig;
+    }
+
+    /**
+     * @return bpeEnabled
+     */
+    public String getBpeEnabled() {
+        return this.bpeEnabled;
+    }
+
+    /**
+     * @return burstingEnabled
+     */
+    public Boolean getBurstingEnabled() {
+        return this.burstingEnabled;
     }
 
     /**
@@ -462,6 +503,13 @@ public class CreateDBInstanceRequest extends Request {
      */
     public String getPeriod() {
         return this.period;
+    }
+
+    /**
+     * @return port
+     */
+    public String getPort() {
+        return this.port;
     }
 
     /**
@@ -627,8 +675,11 @@ public class CreateDBInstanceRequest extends Request {
 
     public static final class Builder extends Request.Builder<CreateDBInstanceRequest, Builder> {
         private Integer amount; 
+        private Boolean autoPay; 
         private String autoRenew; 
         private String babelfishConfig; 
+        private String bpeEnabled; 
+        private Boolean burstingEnabled; 
         private String businessInfo; 
         private String category; 
         private String clientToken; 
@@ -652,6 +703,7 @@ public class CreateDBInstanceRequest extends Request {
         private String instanceNetworkType; 
         private String payType; 
         private String period; 
+        private String port; 
         private String privateIpAddress; 
         private String regionId; 
         private String resourceGroupId; 
@@ -683,8 +735,11 @@ public class CreateDBInstanceRequest extends Request {
         private Builder(CreateDBInstanceRequest request) {
             super(request);
             this.amount = request.amount;
+            this.autoPay = request.autoPay;
             this.autoRenew = request.autoRenew;
             this.babelfishConfig = request.babelfishConfig;
+            this.bpeEnabled = request.bpeEnabled;
+            this.burstingEnabled = request.burstingEnabled;
             this.businessInfo = request.businessInfo;
             this.category = request.category;
             this.clientToken = request.clientToken;
@@ -708,6 +763,7 @@ public class CreateDBInstanceRequest extends Request {
             this.instanceNetworkType = request.instanceNetworkType;
             this.payType = request.payType;
             this.period = request.period;
+            this.port = request.port;
             this.privateIpAddress = request.privateIpAddress;
             this.regionId = request.regionId;
             this.resourceGroupId = request.resourceGroupId;
@@ -734,7 +790,14 @@ public class CreateDBInstanceRequest extends Request {
         } 
 
         /**
-         * Amount.
+         * The number of ApsaraDB RDS for MySQL instances that you want to create. The parameter takes effect only when you create multiple ApsaraDB RDS for MySQL instances at a time by using a single request.
+         * <p>
+         * 
+         * Valid values: **1** to **20**. Default value: **1**.
+         * 
+         * *   If you want to create multiple ApsaraDB RDS for MySQL instances at a time by using a single request, you can add tags to all instances by using **Tag.N.Key** and **Tag.N.Value**. After the instances are created, you can manage the instances based on the tags.
+         * *   After you submit a request to create multiple ApsaraDB RDS for MySQL instances, this operation returns **TaskId**, **RequestId**, and **Message**. You can call the [DescribeDBInstanceAttribute](~~26231~~) operation to query the details of an instance.
+         * *   If the value of **Engine** is not **MySQL** and the value of Amount is greater than **1**, this operation fails and returns an error code `InvalidParam.Engine`.
          */
         public Builder amount(Integer amount) {
             this.putQueryParameter("Amount", amount);
@@ -743,7 +806,23 @@ public class CreateDBInstanceRequest extends Request {
         }
 
         /**
-         * AutoRenew.
+         * AutoPay.
+         */
+        public Builder autoPay(Boolean autoPay) {
+            this.putQueryParameter("AutoPay", autoPay);
+            this.autoPay = autoPay;
+            return this;
+        }
+
+        /**
+         * Specifies whether to enable auto-renewal for the instance. You must specify this parameter only when the instance uses the subscription billing method. Valid values:
+         * <p>
+         * 
+         * *   **true**
+         * *   **false** 
+         * 
+         * *   The auto-renewal cycle is one month for monthly subscription.
+         * *   The auto-renewal cycle is one year for yearly subscription.
          */
         public Builder autoRenew(String autoRenew) {
             this.putQueryParameter("AutoRenew", autoRenew);
@@ -752,7 +831,19 @@ public class CreateDBInstanceRequest extends Request {
         }
 
         /**
-         * BabelfishConfig.
+         * The configuration of the Babelfish feature for the instance that runs PostgreSQL.
+         * <p>
+         * 
+         * Format:{"babelfishEnabled":"true","migrationMode":"xxxxxxx","masterUsername":"xxxxxxx","masterUserPassword":"xxxxxxxx"}
+         * 
+         * The following list describes the fields in the format:
+         * 
+         * *   **babelfishEnabled**: specifies whether to enable Babelfish for the instance. If you set this field to **true**, you enable Babelfish for the instance. If you leave this parameter empty, Babelfish is disabled for the instance.
+         * *   **migrationMode**: The migration mode of the instance. Valid values: **single-db** and **multi-db**.
+         * *   **masterUsername**: The username of the administrator account. The username can contain lowercase letters, digits, and underscores (\_). It must start with a letter and end with a letter or digit. It can be up to 63 characters in length and cannot start with pg.
+         * *   **masterUserPassword**: The password of the administrator account. The password must contain at least three of the following character types: uppercase letters, lowercase letters, digits, and special characters. It must be 8 to 32 characters in length. The password can contain any of the following characters: `! @ # $ % ^ & * ( ) _ + - =`.
+         * 
+         * > This parameter applies only to instances that run PostgreSQL. For more information about Babelfish for ApsaraDB RDS for PostgreSQL, see [Introduction to Babelfish](~~428613~~).
          */
         public Builder babelfishConfig(String babelfishConfig) {
             this.putQueryParameter("BabelfishConfig", babelfishConfig);
@@ -761,7 +852,25 @@ public class CreateDBInstanceRequest extends Request {
         }
 
         /**
-         * BusinessInfo.
+         * BpeEnabled.
+         */
+        public Builder bpeEnabled(String bpeEnabled) {
+            this.putQueryParameter("BpeEnabled", bpeEnabled);
+            this.bpeEnabled = bpeEnabled;
+            return this;
+        }
+
+        /**
+         * BurstingEnabled.
+         */
+        public Builder burstingEnabled(Boolean burstingEnabled) {
+            this.putQueryParameter("BurstingEnabled", burstingEnabled);
+            this.burstingEnabled = burstingEnabled;
+            return this;
+        }
+
+        /**
+         * The additional business information about the instance.
          */
         public Builder businessInfo(String businessInfo) {
             this.putQueryParameter("BusinessInfo", businessInfo);
@@ -770,7 +879,21 @@ public class CreateDBInstanceRequest extends Request {
         }
 
         /**
-         * Category.
+         * The RDS edition of the instance. Valid values:
+         * <p>
+         * 
+         * *   **Basic**: RDS Basic Edition
+         * *   **HighAvailability**: RDS High-availability Edition
+         * *   **AlwaysOn**: RDS Cluster Edition for SQL Server
+         * *   **Finance**: RDS Enterprise Edition
+         * 
+         * **Serverless instances**
+         * 
+         * *   **serverless_basic**: RDS Serverless Basic Edition. This edition is available only for instances that run MySQL and PostgreSQL.
+         * *   **serverless_standard**: RDS Serverless High-availability Edition for MySQL
+         * *   **serverless_ha**: RDS Serverless High-availability Edition for SQL Server.
+         * 
+         * > If you want to create a serverless instance, you must specify this parameter.
          */
         public Builder category(String category) {
             this.putQueryParameter("Category", category);
@@ -779,7 +902,7 @@ public class CreateDBInstanceRequest extends Request {
         }
 
         /**
-         * ClientToken.
+         * The client token that is used to ensure the idempotence of the request. You can use the client to generate the value, but you must ensure that it is unique among different requests. The token can contain only ASCII characters and cannot exceed 64 characters in length.
          */
         public Builder clientToken(String clientToken) {
             this.putQueryParameter("ClientToken", clientToken);
@@ -788,7 +911,15 @@ public class CreateDBInstanceRequest extends Request {
         }
 
         /**
-         * ConnectionMode.
+         * The connection mode of the instance. Valid values:
+         * <p>
+         * 
+         * *   **Standard**: standard mode
+         * *   **Safe**: database proxy mode
+         * 
+         * ApsaraDB RDS automatically assigns a connection mode to the instance.
+         * 
+         * > If the RDS instance runs SQL Server 2012, SQL Server 2016, or SQL Server 2017, you must set this parameter to Standard.
          */
         public Builder connectionMode(String connectionMode) {
             this.putQueryParameter("ConnectionMode", connectionMode);
@@ -797,7 +928,10 @@ public class CreateDBInstanceRequest extends Request {
         }
 
         /**
-         * ConnectionString.
+         * The endpoint of the instance.
+         * <p>
+         * 
+         * > The **DBInstanceNetType** parameter specifies whether the endpoint is internal or public.
          */
         public Builder connectionString(String connectionString) {
             this.putQueryParameter("ConnectionString", connectionString);
@@ -806,7 +940,13 @@ public class CreateDBInstanceRequest extends Request {
         }
 
         /**
-         * CreateStrategy.
+         * The policy based on which multiple instances are created. The parameter takes effect only when the value of the **Amount** parameter is greater than 1.
+         * <p>
+         * 
+         * *   **Atomicity**: atomicity. The instances are all created. If one instance cannot be created, none of the instances is created.
+         * *   **Partial**: non-atomicity. Each instance is independently created. The failure in creating an instance does not affect the creation of the other instances.
+         * 
+         * > The default value of this parameter is **Atomicity**.
          */
         public Builder createStrategy(String createStrategy) {
             this.putQueryParameter("CreateStrategy", createStrategy);
@@ -815,7 +955,15 @@ public class CreateDBInstanceRequest extends Request {
         }
 
         /**
-         * DBInstanceClass.
+         * The instance type of the instance. For more information, see [Primary ApsaraDB RDS instance types](~~26312~~). You can also call the [DescribeAvailableResource](~~134039~~) operation to query the available instance types in a region.
+         * <p>
+         * 
+         * To create a serverless instance, set this parameter to one of the following values:
+         * 
+         * *  Basic Edition for MySQL: Set this parameter to **mysql.n2.serverless.1c**.
+         * *  High-availability Edition for MySQL: Set this parameter to **mysql.n2.serverless.2c**.
+         * *   SQL Server: Set this parameter to **mssql.mem2.serverless.s2**.
+         * *   PostgreSQL: Set this parameter to **pg.n2.serverless.1c**.
          */
         public Builder DBInstanceClass(String DBInstanceClass) {
             this.putQueryParameter("DBInstanceClass", DBInstanceClass);
@@ -824,7 +972,10 @@ public class CreateDBInstanceRequest extends Request {
         }
 
         /**
-         * DBInstanceDescription.
+         * The name of the instance. The name must be 2 to 255 characters in length and can contain letters, digits, underscores (\_), and hyphens (-). The name must start with a letter.
+         * <p>
+         * 
+         * > The value cannot start with http:// or https://.
          */
         public Builder DBInstanceDescription(String DBInstanceDescription) {
             this.putQueryParameter("DBInstanceDescription", DBInstanceDescription);
@@ -833,7 +984,7 @@ public class CreateDBInstanceRequest extends Request {
         }
 
         /**
-         * DBInstanceNetType.
+         * The network connection type of the instance. Set the value to **Intranet**.
          */
         public Builder DBInstanceNetType(String DBInstanceNetType) {
             this.putQueryParameter("DBInstanceNetType", DBInstanceNetType);
@@ -842,7 +993,7 @@ public class CreateDBInstanceRequest extends Request {
         }
 
         /**
-         * DBInstanceStorage.
+         * The storage capacity of the instance. Unit: GB. The storage capacity increases in increments of 5 GB. For more information, see [Primary ApsaraDB RDS instance types](~~26312~~). You can also call the [DescribeAvailableResource](~~134039~~) operation to query the storage capacity range that is supported for a specified instance type in a region.
          */
         public Builder DBInstanceStorage(Integer DBInstanceStorage) {
             this.putQueryParameter("DBInstanceStorage", DBInstanceStorage);
@@ -851,7 +1002,21 @@ public class CreateDBInstanceRequest extends Request {
         }
 
         /**
-         * DBInstanceStorageType.
+         * The storage type that is used by the instance. Valid values:
+         * <p>
+         * 
+         * *   **local_ssd**: local SSD. This is the recommended storage type.
+         * *   **cloud_ssd**: standard SSD. This storage type is not recommended. Standard SSDs are no longer available for purchase in some Alibaba Cloud regions.
+         * *   **cloud_essd**: enhanced SSD (ESSD) of performance level 1 (PL1).
+         * *   **cloud_essd2**: ESSD of PL2.
+         * *   **cloud_essd3**: ESSD of PL3.
+         * 
+         * The default value of this parameter is determined by the instance type specified by the **DBInstanceClass** parameter.
+         * 
+         * *   If the instance type specifies the local SSD storage type, the default value of this parameter is **local_ssd**.
+         * *   If the instance type specifies the standard SSD or ESSD storage type, the default value of this parameter is **cloud_essd**.
+         * 
+         * > Serverless instances support only ESSDs of PL 1. For a serverless instance, you must set this parameter to **cloud_essd**.
          */
         public Builder DBInstanceStorageType(String DBInstanceStorageType) {
             this.putQueryParameter("DBInstanceStorageType", DBInstanceStorageType);
@@ -860,7 +1025,11 @@ public class CreateDBInstanceRequest extends Request {
         }
 
         /**
-         * DBIsIgnoreCase.
+         * Specifies whether the table name is case-sensitive. Valid values:
+         * <p>
+         * 
+         * *   **true**: Table names are not case-sensitive. This is the default value.
+         * *   **false**: Table names are case-sensitive.
          */
         public Builder DBIsIgnoreCase(String DBIsIgnoreCase) {
             this.putQueryParameter("DBIsIgnoreCase", DBIsIgnoreCase);
@@ -869,7 +1038,11 @@ public class CreateDBInstanceRequest extends Request {
         }
 
         /**
-         * DBParamGroupId.
+         * The ID of the parameter template that is used for the instance. You can call the [DescribeParameterGroups](~~144491~~) operation to query the ID of the parameter template.
+         * <p>
+         * 
+         * *   If you want to create an instance that runs RDS Basic Edition and uses the X-Engine storage engine, you must call the preceding operation, locate the **mysql_xengine\_8.0\_basic_normal_safe** field in the response, find the ID of the required system parameter template, and then use the ID as the value for this parameter.
+         * *   If you want to create an instance that runs RDS High-availability Edition and uses the X-Engine storage engine, you must call the preceding operation, locate the **mysql_xengine\_8.0\_standard_normal_safe** field in the response, find the ID of the required system parameter template, and then use the ID as the value for this parameter.
          */
         public Builder DBParamGroupId(String DBParamGroupId) {
             this.putQueryParameter("DBParamGroupId", DBParamGroupId);
@@ -878,7 +1051,23 @@ public class CreateDBInstanceRequest extends Request {
         }
 
         /**
-         * DBTimeZone.
+         * The time zone of the instance. This parameter takes effect only when you set **Engine** to **MySQL** or **PostgreSQL**.
+         * <p>
+         * 
+         * *   If you set **Engine** to **MySQL**:
+         * 
+         *     *   The time zone of the instance is in UTC. Valid values: \*\*-12:59\*\* to **+13:00**.
+         *     *   If the instance uses local SSDs, you can specify the name of the time zone. Example: Asia/Hong_Kong. For more information, see [Time zones](~~297356~~).
+         * 
+         * *   If you set **Engine** to **PostgreSQL**:
+         * 
+         *     *   The time zone of the instance is not in UTC. For more information, see [Time zones](~~297356~~).
+         *     *   You can specify this parameter only when the instance runs PostgreSQL with cloud disks.
+         * 
+         * **Note**
+         * 
+         * *   You can specify the time zone when you create a primary instance. You cannot specify the time zone when you create a read-only instance. Read-only instances inherit the time zone of their primary instance.
+         * *   If you do not specify this parameter, the system automatically assigns the default time zone of the region in which the instance resides.
          */
         public Builder DBTimeZone(String DBTimeZone) {
             this.putQueryParameter("DBTimeZone", DBTimeZone);
@@ -887,7 +1076,13 @@ public class CreateDBInstanceRequest extends Request {
         }
 
         /**
-         * DedicatedHostGroupId.
+         * The ID of the dedicated cluster to which the instance belongs.
+         * <p>
+         * 
+         * If you create the instance in a dedicated cluster, you must specify this parameter.
+         * 
+         * *   You can call the [DescribeDedicatedHostGroups](~~141946~~) operation to query the details of a dedicated cluster.
+         * *   If no dedicated clusters are created, you can call the [CreateDedicatedHostGroup](~~209828~~) operation to create a dedicated cluster.
          */
         public Builder dedicatedHostGroupId(String dedicatedHostGroupId) {
             this.putQueryParameter("DedicatedHostGroupId", dedicatedHostGroupId);
@@ -896,7 +1091,11 @@ public class CreateDBInstanceRequest extends Request {
         }
 
         /**
-         * DeletionProtection.
+         * Specifies whether to enable the release protection feature for the instance.
+         * <p>
+         * 
+         * *   **true**
+         * *   **false** (default)
          */
         public Builder deletionProtection(Boolean deletionProtection) {
             this.putQueryParameter("DeletionProtection", deletionProtection);
@@ -905,7 +1104,11 @@ public class CreateDBInstanceRequest extends Request {
         }
 
         /**
-         * DryRun.
+         * Specifies whether to perform a dry run. Valid values:
+         * <p>
+         * 
+         * *   **true**: The system prechecks the request and does not create the instance. The system prechecks items such as the request parameters, request format, service limits, and available resources.
+         * *   **false**: The system sends the request without a precheck. If the request passes verification, the system creates the instance.
          */
         public Builder dryRun(Boolean dryRun) {
             this.putQueryParameter("DryRun", dryRun);
@@ -914,7 +1117,10 @@ public class CreateDBInstanceRequest extends Request {
         }
 
         /**
-         * EncryptionKey.
+         * The ID of the key that is used for disk encryption in the region in which the instance resides. If you specify the EncryptionKey parameter, disk encryption is automatically enabled. In this case, you must also specify the **RoleARN** parameter. Disk encryption cannot be disabled after it is enabled.
+         * <p>
+         * 
+         * You can obtain the ID of the key from the Key Management Service (KMS) console. You can also create a key. For more information, see [Create a CMK](~~181610~~).
          */
         public Builder encryptionKey(String encryptionKey) {
             this.putQueryParameter("EncryptionKey", encryptionKey);
@@ -923,7 +1129,13 @@ public class CreateDBInstanceRequest extends Request {
         }
 
         /**
-         * Engine.
+         * The database engine of the instance. Valid values:
+         * <p>
+         * 
+         * *   **MySQL**
+         * *   **SQLServer**
+         * *   **PostgreSQL**
+         * *   **MariaDB**
          */
         public Builder engine(String engine) {
             this.putQueryParameter("Engine", engine);
@@ -932,7 +1144,21 @@ public class CreateDBInstanceRequest extends Request {
         }
 
         /**
-         * EngineVersion.
+         * The database engine version of the instance.
+         * <p>
+         * 
+         * *   Valid values if you set Engine to MySQL: **5.5**, **5.6**, **5.7**, and **8.0**
+         * *   Valid values if you set Engine to SQLServer: **2008r2**, **08r2\_ent_ha**, **2012**, **2012\_ent_ha**, **2012\_std_ha**, **2012\_web**, **2014\_std_ha**, **2016\_ent_ha**, **2016\_std_ha**, **2016\_web**, **2017\_std_ha**, **2017\_ent**, **2019\_std_ha**, and **2019\_ent**
+         * *   Valid values if you set Engine to PostgreSQL: **10.0**, **11.0**, **12.0**, **13.0**, **14.0**, and **15.0**
+         * *   Valid value if you set Engine to MariaDB: **10.3**
+         * 
+         * **Serverless instances**
+         * 
+         * *   Valid values if you set Engine to MySQL: **5.7** and **8.0**
+         * *   Valid values if you set Engine to SQLServer: **2016\_std_sl**, **2017\_std_sl**, and **2019\_std_sl**
+         * *   Valid value if you set Engine to PostgreSQL: **14.0**
+         * 
+         * > ApsaraDB RDS for MariaDB does not support serverless instances.
          */
         public Builder engineVersion(String engineVersion) {
             this.putQueryParameter("EngineVersion", engineVersion);
@@ -941,7 +1167,17 @@ public class CreateDBInstanceRequest extends Request {
         }
 
         /**
-         * InstanceNetworkType.
+         * The network type of the instance. Valid values:
+         * <p>
+         * 
+         * *   **VPC**.
+         * *   **Classic** (default)
+         * 
+         * **Note**
+         * 
+         * *   If the instance runs MySQL and uses cloud disks, you must set this parameter to **VPC**.
+         * *   If the instance runs PostgreSQL or MariaDB, you must set this parameter to **VPC**.
+         * *   If the instance runs SQL Server Basic or SQL Server Web, you can set this parameter to VPC or Classic. If the instance runs other database engines, you must set this parameter to **VPC**.
          */
         public Builder instanceNetworkType(String instanceNetworkType) {
             this.putQueryParameter("InstanceNetworkType", instanceNetworkType);
@@ -950,7 +1186,14 @@ public class CreateDBInstanceRequest extends Request {
         }
 
         /**
-         * PayType.
+         * The billing method of the instance. Valid values:
+         * <p>
+         * 
+         * *   **Postpaid**: pay-as-you-go.
+         * *   **Prepaid**: subscription.
+         * *   **Serverless**: serverless. This value is not supported for instances that run MariaDB. For more information, see [Overview of serverless ApsaraDB RDS for MySQL instances](~~411291~~), [Overview of serverless ApsaraDB RDS for SQL Server instances](~~604344~~), and [Overview of serverless ApsaraDB RDS for PostgreSQL instances](~~607742~~).
+         * 
+         * > ApsaraDB RDS automatically generates a purchase order and completes the payment.
          */
         public Builder payType(String payType) {
             this.putQueryParameter("PayType", payType);
@@ -959,7 +1202,13 @@ public class CreateDBInstanceRequest extends Request {
         }
 
         /**
-         * Period.
+         * Specifies whether to use yearly subscription or monthly subscription for the instance. Valid values:
+         * <p>
+         * 
+         * *   **Year**
+         * *   **Month**
+         * 
+         * > If you set PayType to **Prepaid**, you must specify this parameter.
          */
         public Builder period(String period) {
             this.putQueryParameter("Period", period);
@@ -968,7 +1217,16 @@ public class CreateDBInstanceRequest extends Request {
         }
 
         /**
-         * PrivateIpAddress.
+         * The port. You can initialize the port when you create the instance. Valid values: 1000 to 5999.
+         */
+        public Builder port(String port) {
+            this.putQueryParameter("Port", port);
+            this.port = port;
+            return this;
+        }
+
+        /**
+         * The private IP address of the instance. The private IP address must be within the CIDR block that is supported by the specified vSwitch. ApsaraDB RDS automatically assigns a private IP address to the instance based on the values of the **VPCId** and **vSwitchId** parameters.
          */
         public Builder privateIpAddress(String privateIpAddress) {
             this.putQueryParameter("PrivateIpAddress", privateIpAddress);
@@ -977,7 +1235,7 @@ public class CreateDBInstanceRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * The ID of the region. You can call the [DescribeRegions](~~26243~~) operation to query the most recent region list.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -986,7 +1244,7 @@ public class CreateDBInstanceRequest extends Request {
         }
 
         /**
-         * ResourceGroupId.
+         * The ID of the resource group.
          */
         public Builder resourceGroupId(String resourceGroupId) {
             this.putQueryParameter("ResourceGroupId", resourceGroupId);
@@ -1004,7 +1262,7 @@ public class CreateDBInstanceRequest extends Request {
         }
 
         /**
-         * RoleARN.
+         * The Alibaba Cloud Resource Name (ARN) that is provided by your Alibaba Cloud account for RAM users. RAM users can use the ARN to connect ApsaraDB RDS to KMS. You can call the [CheckCloudResourceAuthorized](~~446261~~) operation to query the ARN.
          */
         public Builder roleARN(String roleARN) {
             this.putQueryParameter("RoleARN", roleARN);
@@ -1013,7 +1271,11 @@ public class CreateDBInstanceRequest extends Request {
         }
 
         /**
-         * SecurityIPList.
+         * The IP address whitelist of the instance. For more information, see [Use a database client or the CLI to connect to an ApsaraDB RDS for MySQL instance](~~43185~~). If the IP address whitelist contains more than one entry, separate the entries with commas (,). Each entry must be unique. The IP address whitelist can contain up to 1,000 entries. The entries in the IP address whitelist must be in one of the following formats:
+         * <p>
+         * 
+         * *   IP addresses, such as 10.10.XX.XX.
+         * *   CIDR blocks, such as 10.10.XX.XX/24. In this example, 24 indicates that the prefix of each IP address in the IP address whitelist is 24 bits in length. You can replace 24 with a value within the range of 1 to 32.
          */
         public Builder securityIPList(String securityIPList) {
             this.putQueryParameter("SecurityIPList", securityIPList);
@@ -1022,7 +1284,10 @@ public class CreateDBInstanceRequest extends Request {
         }
 
         /**
-         * ServerlessConfig.
+         * The settings of the serverless instance. This parameter is required when you create a serverless instance.
+         * <p>
+         * 
+         * > ApsaraDB RDS for MariaDB does not support serverless instances.
          */
         public Builder serverlessConfig(ServerlessConfig serverlessConfig) {
             String serverlessConfigShrink = shrink(serverlessConfig, "ServerlessConfig", "json");
@@ -1032,7 +1297,13 @@ public class CreateDBInstanceRequest extends Request {
         }
 
         /**
-         * StorageAutoScale.
+         * Specifies whether to enable automatic storage expansion for the instance. Valid values:
+         * <p>
+         * 
+         * *   **Enable**
+         * *   **Disable** (default)
+         * 
+         * > After the instance is created, you can call the [ModifyDasInstanceConfig](~~199281~~) operation to adjust the settings of automatic storage expansion for the instance. For more information, see [Configure automatic storage expansion for an ApsaraDB RDS for MySQL instance](~~173826~~).
          */
         public Builder storageAutoScale(String storageAutoScale) {
             this.putQueryParameter("StorageAutoScale", storageAutoScale);
@@ -1041,7 +1312,16 @@ public class CreateDBInstanceRequest extends Request {
         }
 
         /**
-         * StorageThreshold.
+         * The threshold based on which automatic storage expansion is triggered. Unit: percent. Valid values:
+         * <p>
+         * 
+         * *   **10**
+         * *   **20**
+         * *   **30**
+         * *   **40**
+         * *   **50**
+         * 
+         * > If you set **StorageAutoScale** to **Enable**, you must specify this parameter.
          */
         public Builder storageThreshold(Integer storageThreshold) {
             this.putQueryParameter("StorageThreshold", storageThreshold);
@@ -1050,7 +1330,11 @@ public class CreateDBInstanceRequest extends Request {
         }
 
         /**
-         * StorageUpperBound.
+         * The maximum storage capacity that is allowed for automatic storage expansion. The storage capacity of the instance cannot exceed the maximum storage capacity. Unit: GB.
+         * <p>
+         * 
+         * *   Valid values: an integer greater than or equal to 0.
+         * *   If you set the **StorageAutoScale** parameter to **Enable**, you must also specify this parameter.
          */
         public Builder storageUpperBound(Integer storageUpperBound) {
             this.putQueryParameter("StorageUpperBound", storageUpperBound);
@@ -1059,7 +1343,7 @@ public class CreateDBInstanceRequest extends Request {
         }
 
         /**
-         * SystemDBCharset.
+         * The character set that is used by the instance. This parameter is no longer used.
          */
         public Builder systemDBCharset(String systemDBCharset) {
             this.putQueryParameter("SystemDBCharset", systemDBCharset);
@@ -1068,7 +1352,7 @@ public class CreateDBInstanceRequest extends Request {
         }
 
         /**
-         * Tag.
+         * The list of tags.
          */
         public Builder tag(java.util.List < Tag> tag) {
             this.putQueryParameter("Tag", tag);
@@ -1077,7 +1361,13 @@ public class CreateDBInstanceRequest extends Request {
         }
 
         /**
-         * TargetDedicatedHostIdForLog.
+         * The ID of the host to which the logger instance belongs in the specified dedicated cluster.
+         * <p>
+         * 
+         * If the instance runs RDS Enterprise Edition and you create the instance in a dedicated cluster, you must specify this parameter. If you do not specify this parameter, the system automatically assigns a host.
+         * 
+         * *   You can call the [DescribeDedicatedHosts](~~141948~~) operation to query the details of the hosts in a dedicated cluster.
+         * *   If no hosts are created, you can call the [CreateDedicatedHost](~~210864~~) operation to create a host.
          */
         public Builder targetDedicatedHostIdForLog(String targetDedicatedHostIdForLog) {
             this.putQueryParameter("TargetDedicatedHostIdForLog", targetDedicatedHostIdForLog);
@@ -1086,7 +1376,13 @@ public class CreateDBInstanceRequest extends Request {
         }
 
         /**
-         * TargetDedicatedHostIdForMaster.
+         * The ID of the host to which the instance belongs in the specified dedicated cluster.
+         * <p>
+         * 
+         * If you create the instance in a dedicated cluster, you must specify this parameter. If you do not specify this parameter, the system automatically assigns a host.
+         * 
+         * *   You can call the [DescribeDedicatedHost](~~141948~~) operation to query the details about the hosts in a dedicated cluster.
+         * *   If no hosts are created, you can call the [CreateDedicatedHost](~~210864~~) operation to create a host.
          */
         public Builder targetDedicatedHostIdForMaster(String targetDedicatedHostIdForMaster) {
             this.putQueryParameter("TargetDedicatedHostIdForMaster", targetDedicatedHostIdForMaster);
@@ -1095,7 +1391,13 @@ public class CreateDBInstanceRequest extends Request {
         }
 
         /**
-         * TargetDedicatedHostIdForSlave.
+         * The ID of the host to which the secondary instance belongs in the specified dedicated cluster.
+         * <p>
+         * 
+         * If the instance runs RDS High-availability Edition or RDS Enterprise Edition and you create the instance in a dedicated cluster, you must specify this parameter. If you do not specify this parameter, the system automatically assigns a host.
+         * 
+         * *   You can call the [DescribeDedicatedHosts](~~141948~~) operation to query the details of the hosts in a dedicated cluster.
+         * *   If no hosts are created, you can call the [CreateDedicatedHost](~~210864~~) operation to create a host.
          */
         public Builder targetDedicatedHostIdForSlave(String targetDedicatedHostIdForSlave) {
             this.putQueryParameter("TargetDedicatedHostIdForSlave", targetDedicatedHostIdForSlave);
@@ -1104,7 +1406,23 @@ public class CreateDBInstanceRequest extends Request {
         }
 
         /**
-         * TargetMinorVersion.
+         * The minor engine version of the instance. This parameter is required only when you create an instance that runs MySQL or PostgreSQL. The value format varies based on the database engine of the instance.
+         * <p>
+         * 
+         * *   If you create an instance that runs MySQL, the value is in the following format: `<RDS edition>_<Minor engine version>`. Examples: `rds_20200229`, `xcluster_20200229`, and `xcluster80_20200229`. The following list describes the fields in the example values:
+         * 
+         *     *   rds: The instance runs RDS Basic Edition or High-availability Edition.
+         *     *   xcluster: The instance runs MySQL 5.7 on RDS Enterprise Edition.
+         *     *   xcluster80: The instance runs MySQL 8.0 on RDS Enterprise Edition.
+         * 
+         * > You can call the [DescribeDBMiniEngineVersions](~~445835~~) operation to query the minor engine version. For more information about minor engine versions, see [Release notes of minor AliSQL versions](~~96060~~).
+         * 
+         * *   If you create an instance that runs PostgreSQL, the value is in the following format: `rds_postgres_<Major engine version>00_<Minor engine version>`. Example: `rds_postgres_1400_20220830`. The following list describes the fields in the example value:
+         * 
+         *     *   1400: The major engine version is PostgreSQL 14.
+         *     *   20220830: the AliPG version. You can call the [DescribeDBMiniEngineVersions](~~445835~~) operation to query the AliPG version. For more information about minor engine versions, see [Release notes for AliPG](~~126002~~).
+         * 
+         * > If you configure the **BabelfishConfig** parameter for your instance that runs PostgreSQL and set the babelfishEnabled field to true, the value of this parameter is in the following format: `rds_postgres_Major engine version00_AliPG version_babelfish`.
          */
         public Builder targetMinorVersion(String targetMinorVersion) {
             this.putQueryParameter("TargetMinorVersion", targetMinorVersion);
@@ -1113,7 +1431,13 @@ public class CreateDBInstanceRequest extends Request {
         }
 
         /**
-         * UsedTime.
+         * The subscription duration of the instance.
+         * <p>
+         * 
+         * *   If you set the **Period** parameter to **Year**, the value of the **UsedTime** parameter ranges from **1 to 5**.
+         * *   If you set the **Period** parameter to **Month**, the value of the **UsedTime** parameter ranges from **1 to 11**.
+         * 
+         * > If you set the PayType parameter to **Prepaid**, you must specify the UsedTime parameter.
          */
         public Builder usedTime(String usedTime) {
             this.putQueryParameter("UsedTime", usedTime);
@@ -1122,7 +1446,15 @@ public class CreateDBInstanceRequest extends Request {
         }
 
         /**
-         * UserBackupId.
+         * The ID of the backup file. You can call the [ListUserBackupFiles](~~257821~~) operation to query backup files. If you want to create an instance by using the data of a backup file, you must specify this parameter.
+         * <p>
+         * 
+         * This parameter is supported only when the following requirements are met:
+         * 
+         * *   **PayType** is set to **Postpaid**.
+         * *   **Engine** is set to **MySQL**.
+         * *   **EngineVersion** is set to **5.7**.
+         * *   **Category** is set to **Basic**.
          */
         public Builder userBackupId(String userBackupId) {
             this.putQueryParameter("UserBackupId", userBackupId);
@@ -1131,7 +1463,10 @@ public class CreateDBInstanceRequest extends Request {
         }
 
         /**
-         * VPCId.
+         * The ID of the VPC to which the instance belongs.
+         * <p>
+         * 
+         * > This parameter is available when you set the **InstanceNetworkType** parameter to **VPC**.
          */
         public Builder VPCId(String VPCId) {
             this.putQueryParameter("VPCId", VPCId);
@@ -1140,7 +1475,11 @@ public class CreateDBInstanceRequest extends Request {
         }
 
         /**
-         * VSwitchId.
+         * The ID of the vSwitch. The vSwitch must belong to the zone that is specified by **ZoneId**.
+         * <p>
+         * 
+         * *   If you set **InstanceNetworkType** to **VPC**, you must also specify this parameter.
+         * *   If you specify ZoneSlaveId1, you must specify the IDs of two vSwitches for this parameter and separate the IDs with a comma (,).
          */
         public Builder vSwitchId(String vSwitchId) {
             this.putQueryParameter("VSwitchId", vSwitchId);
@@ -1149,7 +1488,12 @@ public class CreateDBInstanceRequest extends Request {
         }
 
         /**
-         * ZoneId.
+         * The zone ID of the primary instance.
+         * <p>
+         * 
+         * *   If you specify a virtual private cloud (VPC) and a vSwitch, you must specify the ID of the zone to which the specified vSwitch belongs. Otherwise, the instance cannot be created.
+         * *   If the instance runs RDS High-availability Edition, you must specify **ZoneIdSlave1**, which specifies whether to use the single-zone deployment method or the multi-zone deployment method.
+         * *   If the instance runs RDS Enterprise Edition, you must specify **ZoneIdSlave1** and **ZoneIdSlave2**, which specify whether to use the single-zone deployment method or the multi-zone deployment method.
          */
         public Builder zoneId(String zoneId) {
             this.putQueryParameter("ZoneId", zoneId);
@@ -1158,7 +1502,7 @@ public class CreateDBInstanceRequest extends Request {
         }
 
         /**
-         * ZoneIdSlave1.
+         * The ID of the zone in which the secondary instance resides. If you set the ZoneIdSlave1 parameter and the **ZoneId** parameter to the same value, the single-zone deployment method is used. If you set the ZoneIdSlave1 parameter and the **ZoneId** parameter to different values, the multi-zone deployment method is used.
          */
         public Builder zoneIdSlave1(String zoneIdSlave1) {
             this.putQueryParameter("ZoneIdSlave1", zoneIdSlave1);
@@ -1167,7 +1511,7 @@ public class CreateDBInstanceRequest extends Request {
         }
 
         /**
-         * ZoneIdSlave2.
+         * The ID of the zone in which the logger instance resides. If you set the ZoneIdSlave2 parameter and the **ZoneId** parameter to the same value, the single-zone deployment method is used. If you set the ZoneIdSlave2 parameter and the **ZoneId** parameter to different values, the multi-zone deployment method is used.
          */
         public Builder zoneIdSlave2(String zoneIdSlave2) {
             this.putQueryParameter("ZoneIdSlave2", zoneIdSlave2);
@@ -1245,7 +1589,13 @@ public class CreateDBInstanceRequest extends Request {
             private Boolean switchForce; 
 
             /**
-             * AutoPause.
+             * Specifies whether to enable the automatic start and stop feature for the serverless instance. Valid values:
+             * <p>
+             * 
+             * *   **true**
+             * *   **false** (default)
+             * 
+             * > This parameter is required only for serverless ApsaraDB RDS for MySQL instances. After the automatic start and stop feature is enabled, if no connections to the instance are established within 10 minutes, the instance is suspended. After a connection to the instance is established, the instance is resumed.
              */
             public Builder autoPause(Boolean autoPause) {
                 this.autoPause = autoPause;
@@ -1253,7 +1603,14 @@ public class CreateDBInstanceRequest extends Request {
             }
 
             /**
-             * MaxCapacity.
+             * The maximum number of RDS Capacity Units (RCUs). Valid values:
+             * <p>
+             * 
+             * *   Serverless ApsaraDB RDS for MySQL instances: **1 to 8**
+             * *   Serverless ApsaraDB RDS for SQL Server instances: **2 to 8**
+             * *   Serverless ApsaraDB RDS for PostgreSQL instances: **1 to 12**
+             * 
+             * > The value of this parameter must be greater than or equal to the value of **MinCapacity** and can be specified only to an **integer**.
              */
             public Builder maxCapacity(Double maxCapacity) {
                 this.maxCapacity = maxCapacity;
@@ -1261,7 +1618,14 @@ public class CreateDBInstanceRequest extends Request {
             }
 
             /**
-             * MinCapacity.
+             * The minimum number of RCUs. Valid values:
+             * <p>
+             * 
+             * *   Serverless ApsaraDB RDS for MySQL instances: **0.5 to 8**.
+             * *   Serverless ApsaraDB RDS for SQL Server instances: **2 to 8**. Only integers are supported.
+             * *   Serverless ApsaraDB RDS for PostgreSQL instances: **0.5 to 12**.
+             * 
+             * > The value of this parameter must be less than or equal to the value of **MaxCapacity**.
              */
             public Builder minCapacity(Double minCapacity) {
                 this.minCapacity = minCapacity;
@@ -1269,7 +1633,16 @@ public class CreateDBInstanceRequest extends Request {
             }
 
             /**
-             * SwitchForce.
+             * Specifies whether to enable the forced scaling feature for the serverless instance. Valid values:
+             * <p>
+             * 
+             * *   **true**
+             * *   **false** (default)
+             * 
+             * **Note**
+             * 
+             * *   This parameter is required only for serverless ApsaraDB RDS for MySQL instances. If you set this parameter to true, a transient connection that lasts approximately 1 minute occurs during forced scaling. Process with caution.
+             * *   The RCU scaling for a serverless instance immediately takes effect. In some cases, such as the execution of large transactions, the scaling does not immediately take effect. In this case, you can enable this feature to forcefully scale the RCUs of the instance.
              */
             public Builder switchForce(Boolean switchForce) {
                 this.switchForce = switchForce;
@@ -1322,7 +1695,13 @@ public class CreateDBInstanceRequest extends Request {
             private String value; 
 
             /**
-             * Key.
+             * The key of the tag. You can use this parameter to add tags to the instance.
+             * <p>
+             * 
+             * *   If the specified tag key is an existing key, the system directly adds the tag key to the instance. You can call the [ListTagResources](~~141258~~) operation to query the details of the existing tags.
+             * *   If the specified tag key is not an existing key, the system creates the tag key and adds the tag key to the instance.
+             * *   A tag key cannot be an empty string.
+             * *   This parameter must be used together with **Tag.Value**.
              */
             public Builder key(String key) {
                 this.key = key;
@@ -1330,7 +1709,12 @@ public class CreateDBInstanceRequest extends Request {
             }
 
             /**
-             * Value.
+             * The tag value that is associated with the specified tag key. You can use this parameter to add tags to the instance.
+             * <p>
+             * 
+             * *   If the specified tag value is found in the specified tag key, the system directly adds the tag value to the instance. You can call the [ListTagResources](~~141258~~) operation to query the details of the existing tags.
+             * *   If the specified tag value is not found in the specified tag key, the system creates the tag value and adds the tag value to the instance.
+             * *   This parameter must be used together with **Tag.Key**.
              */
             public Builder value(String value) {
                 this.value = value;

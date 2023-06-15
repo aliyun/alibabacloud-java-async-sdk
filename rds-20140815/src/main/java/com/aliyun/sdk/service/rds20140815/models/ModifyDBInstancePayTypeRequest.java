@@ -113,7 +113,7 @@ public class ModifyDBInstancePayTypeRequest extends Request {
         } 
 
         /**
-         * DBInstanceId.
+         * The ID of the instance.
          */
         public Builder DBInstanceId(String DBInstanceId) {
             this.putQueryParameter("DBInstanceId", DBInstanceId);
@@ -122,7 +122,11 @@ public class ModifyDBInstancePayTypeRequest extends Request {
         }
 
         /**
-         * PayType.
+         * The billing method of the instance. Valid values:
+         * <p>
+         * 
+         * *   Postpaid: pay-as-you-go
+         * *   Prepaid: subscription
          */
         public Builder payType(String payType) {
             this.putQueryParameter("PayType", payType);
@@ -131,7 +135,11 @@ public class ModifyDBInstancePayTypeRequest extends Request {
         }
 
         /**
-         * Period.
+         * The subscription method of the instance. This parameter must be specified when PayType is set to Prepaid.
+         * <p>
+         * 
+         * *   Year
+         * *   Month
          */
         public Builder period(String period) {
             this.putQueryParameter("Period", period);
@@ -149,7 +157,7 @@ public class ModifyDBInstancePayTypeRequest extends Request {
         }
 
         /**
-         * UsedTime.
+         * Valid values when Period is set to Year: 1 to 9. Valid values when Period is set to Month: 1, 2, and 3.
          */
         public Builder usedTime(Integer usedTime) {
             this.putQueryParameter("UsedTime", usedTime);

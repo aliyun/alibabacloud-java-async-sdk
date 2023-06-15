@@ -197,7 +197,7 @@ public class DescribeDetachedBackupsRequest extends Request {
         } 
 
         /**
-         * BackupId.
+         * The ID of the data backup file.
          */
         public Builder backupId(String backupId) {
             this.putQueryParameter("BackupId", backupId);
@@ -206,7 +206,11 @@ public class DescribeDetachedBackupsRequest extends Request {
         }
 
         /**
-         * BackupMode.
+         * The backup mode of the data backup file. Valid values:
+         * <p>
+         * 
+         * *   **Automated**
+         * *   **Manual**
          */
         public Builder backupMode(String backupMode) {
             this.putQueryParameter("BackupMode", backupMode);
@@ -215,7 +219,11 @@ public class DescribeDetachedBackupsRequest extends Request {
         }
 
         /**
-         * BackupStatus.
+         * The status of the data backup file. Valid values:
+         * <p>
+         * 
+         * *   **Success**
+         * *   **Failed**
          */
         public Builder backupStatus(String backupStatus) {
             this.putQueryParameter("BackupStatus", backupStatus);
@@ -224,7 +232,7 @@ public class DescribeDetachedBackupsRequest extends Request {
         }
 
         /**
-         * DBInstanceId.
+         * The ID of the instance.
          */
         public Builder DBInstanceId(String DBInstanceId) {
             this.putQueryParameter("DBInstanceId", DBInstanceId);
@@ -233,7 +241,10 @@ public class DescribeDetachedBackupsRequest extends Request {
         }
 
         /**
-         * EndTime.
+         * The end of the time range to query. The end time must be later than the start time.
+         * <p>
+         * 
+         * The time follows the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm*Z format. The time is displayed in UTC.
          */
         public Builder endTime(String endTime) {
             this.putQueryParameter("EndTime", endTime);
@@ -242,7 +253,10 @@ public class DescribeDetachedBackupsRequest extends Request {
         }
 
         /**
-         * PageNumber.
+         * The number of the page to return. Valid values: any non-zero positive integer.
+         * <p>
+         * 
+         * >  Default value: 1.
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -251,7 +265,14 @@ public class DescribeDetachedBackupsRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * The number of entries to return on each page. Valid values:
+         * <p>
+         * 
+         * *   **30**
+         * *   **50**
+         * *   **100**
+         * 
+         * >  Default value: **30**.
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -260,7 +281,7 @@ public class DescribeDetachedBackupsRequest extends Request {
         }
 
         /**
-         * Region.
+         * The region ID of the instance.
          */
         public Builder region(String region) {
             this.putQueryParameter("Region", region);
@@ -269,7 +290,7 @@ public class DescribeDetachedBackupsRequest extends Request {
         }
 
         /**
-         * ResourceGroupId.
+         * The ID of the resource group.
          */
         public Builder resourceGroupId(String resourceGroupId) {
             this.putQueryParameter("ResourceGroupId", resourceGroupId);
@@ -287,7 +308,10 @@ public class DescribeDetachedBackupsRequest extends Request {
         }
 
         /**
-         * StartTime.
+         * The beginning of the time range to query.
+         * <p>
+         * 
+         * Specify the time in the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm*Z format. The time must be in UTC.
          */
         public Builder startTime(String startTime) {
             this.putQueryParameter("StartTime", startTime);

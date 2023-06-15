@@ -155,7 +155,7 @@ public class ModifyDasInstanceConfigRequest extends Request {
         } 
 
         /**
-         * ClientToken.
+         * The client token that is used to ensure the idempotence of the request. You can use the client to generate the token, but you must make sure that the generated token is unique among different requests. The token can contain only ASCII characters and cannot exceed 64 characters in length.
          */
         public Builder clientToken(String clientToken) {
             this.putQueryParameter("ClientToken", clientToken);
@@ -164,7 +164,7 @@ public class ModifyDasInstanceConfigRequest extends Request {
         }
 
         /**
-         * DBInstanceId.
+         * The ID of the instance.
          */
         public Builder DBInstanceId(String DBInstanceId) {
             this.putQueryParameter("DBInstanceId", DBInstanceId);
@@ -200,7 +200,11 @@ public class ModifyDasInstanceConfigRequest extends Request {
         }
 
         /**
-         * StorageAutoScale.
+         * Specifies whether to enable automatic storage expansion. Valid values:
+         * <p>
+         * 
+         * *   **Enable**
+         * *   **Disable**
          */
         public Builder storageAutoScale(String storageAutoScale) {
             this.putQueryParameter("StorageAutoScale", storageAutoScale);
@@ -209,7 +213,16 @@ public class ModifyDasInstanceConfigRequest extends Request {
         }
 
         /**
-         * StorageThreshold.
+         * The threshold in percentage based on which an automatic storage expansion is triggered. If the available storage reaches the threshold, ApsaraDB RDS increases the storage capacity of the instance. Valid values:
+         * <p>
+         * 
+         * *   **10**
+         * *   **20**
+         * *   **30**
+         * *   **40**
+         * *   **50**
+         * 
+         * >  If you set the **StorageAutoScale** parameter to **Enable**, you must specify this parameter.
          */
         public Builder storageThreshold(Integer storageThreshold) {
             this.putQueryParameter("StorageThreshold", storageThreshold);
@@ -218,7 +231,13 @@ public class ModifyDasInstanceConfigRequest extends Request {
         }
 
         /**
-         * StorageUpperBound.
+         * The maximum storage capacity that is allowed by automatic storage expansion. The value of this parameter must be equal to or greater than the current storage capacity of the instance.
+         * <p>
+         * 
+         * *   Valid value for instances with ESSDs: 32000. Unit: GB
+         * *   Valid value for instances with standard SSDs: 6000. Unit: GB
+         * 
+         *     > If you set the **StorageAutoScale** parameter to **Enable**, you must specify this parameter.
          */
         public Builder storageUpperBound(Integer storageUpperBound) {
             this.putQueryParameter("StorageUpperBound", storageUpperBound);

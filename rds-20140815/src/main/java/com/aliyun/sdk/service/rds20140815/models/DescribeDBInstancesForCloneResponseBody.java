@@ -86,7 +86,7 @@ public class DescribeDBInstancesForCloneResponseBody extends TeaModel {
         private Integer totalRecordCount; 
 
         /**
-         * Items.
+         * An array that consists of the details about the instances.
          */
         public Builder items(Items items) {
             this.items = items;
@@ -94,7 +94,7 @@ public class DescribeDBInstancesForCloneResponseBody extends TeaModel {
         }
 
         /**
-         * PageNumber.
+         * The page number of the returned page.
          */
         public Builder pageNumber(Integer pageNumber) {
             this.pageNumber = pageNumber;
@@ -102,7 +102,7 @@ public class DescribeDBInstancesForCloneResponseBody extends TeaModel {
         }
 
         /**
-         * PageRecordCount.
+         * The number of entries returned on the current page.
          */
         public Builder pageRecordCount(Integer pageRecordCount) {
             this.pageRecordCount = pageRecordCount;
@@ -110,7 +110,7 @@ public class DescribeDBInstancesForCloneResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -118,7 +118,7 @@ public class DescribeDBInstancesForCloneResponseBody extends TeaModel {
         }
 
         /**
-         * TotalRecordCount.
+         * The total number of entries returned.
          */
         public Builder totalRecordCount(Integer totalRecordCount) {
             this.totalRecordCount = totalRecordCount;
@@ -158,7 +158,7 @@ public class DescribeDBInstancesForCloneResponseBody extends TeaModel {
             private String DBInstanceId; 
 
             /**
-             * DBInstanceId.
+             * The ID of the read-only instance.
              */
             public Builder DBInstanceId(String DBInstanceId) {
                 this.DBInstanceId = DBInstanceId;
@@ -600,7 +600,12 @@ public class DescribeDBInstancesForCloneResponseBody extends TeaModel {
             private String zoneId; 
 
             /**
-             * Category.
+             * The RDS edition of the instance. Valid values:
+             * <p>
+             * 
+             * *   **Basic**: RDS Basic Edition
+             * *   **HighAvailability**: RDS High-availability Edition
+             * *   **Finance**: RDS Enterprise Edition
              */
             public Builder category(String category) {
                 this.category = category;
@@ -608,7 +613,11 @@ public class DescribeDBInstancesForCloneResponseBody extends TeaModel {
             }
 
             /**
-             * ConnectionMode.
+             * The connection mode of the instance. Valid values:
+             * <p>
+             * 
+             * *   **Standard**: standard mode
+             * *   **Safe**: database proxy mode
              */
             public Builder connectionMode(String connectionMode) {
                 this.connectionMode = connectionMode;
@@ -616,7 +625,7 @@ public class DescribeDBInstancesForCloneResponseBody extends TeaModel {
             }
 
             /**
-             * CreateTime.
+             * The time when the instance was created. The time follows the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time is displayed in UTC.
              */
             public Builder createTime(String createTime) {
                 this.createTime = createTime;
@@ -624,7 +633,7 @@ public class DescribeDBInstancesForCloneResponseBody extends TeaModel {
             }
 
             /**
-             * DBInstanceClass.
+             * The instance type of the instance. For more information, see [Instance types](~~26312~~).
              */
             public Builder DBInstanceClass(String DBInstanceClass) {
                 this.DBInstanceClass = DBInstanceClass;
@@ -632,7 +641,10 @@ public class DescribeDBInstancesForCloneResponseBody extends TeaModel {
             }
 
             /**
-             * DBInstanceDescription.
+             * The name of the instance. It must be 2 to 256 characters in length. The value can contain letters, digits, underscores (\_), and hyphens (-). The value must start with a letter.
+             * <p>
+             * 
+             * > The value cannot start with http:// or https://.
              */
             public Builder DBInstanceDescription(String DBInstanceDescription) {
                 this.DBInstanceDescription = DBInstanceDescription;
@@ -640,7 +652,7 @@ public class DescribeDBInstancesForCloneResponseBody extends TeaModel {
             }
 
             /**
-             * DBInstanceId.
+             * The ID of the instance.
              */
             public Builder DBInstanceId(String DBInstanceId) {
                 this.DBInstanceId = DBInstanceId;
@@ -648,7 +660,11 @@ public class DescribeDBInstancesForCloneResponseBody extends TeaModel {
             }
 
             /**
-             * DBInstanceNetType.
+             * The network connection type of the instance. Valid values:
+             * <p>
+             * 
+             * *   **Internet**
+             * *   **Intranet**
              */
             public Builder DBInstanceNetType(String DBInstanceNetType) {
                 this.DBInstanceNetType = DBInstanceNetType;
@@ -656,7 +672,7 @@ public class DescribeDBInstancesForCloneResponseBody extends TeaModel {
             }
 
             /**
-             * DBInstanceStatus.
+             * The status of the instance. For more information, see [Instance state table](~~26315~~).
              */
             public Builder DBInstanceStatus(String DBInstanceStatus) {
                 this.DBInstanceStatus = DBInstanceStatus;
@@ -664,7 +680,12 @@ public class DescribeDBInstancesForCloneResponseBody extends TeaModel {
             }
 
             /**
-             * DBInstanceStorageType.
+             * The storage type of the instance. Valid values:
+             * <p>
+             * 
+             * *   **local_ssd/ephemeral_ssd**: local SSD
+             * *   **cloud_ssd**: standard SSD.
+             * *   **cloud_essd**: enhanced SSD (ESSD)
              */
             public Builder DBInstanceStorageType(String DBInstanceStorageType) {
                 this.DBInstanceStorageType = DBInstanceStorageType;
@@ -672,7 +693,13 @@ public class DescribeDBInstancesForCloneResponseBody extends TeaModel {
             }
 
             /**
-             * DBInstanceType.
+             * The role of the instance. Valid values:
+             * <p>
+             * 
+             * *   **Primary**: primary instance
+             * *   **Readonly**: read-only instance
+             * *   **Guard**: disaster recovery instance
+             * *   **Temp**: temporary instance
              */
             public Builder DBInstanceType(String DBInstanceType) {
                 this.DBInstanceType = DBInstanceType;
@@ -680,7 +707,7 @@ public class DescribeDBInstancesForCloneResponseBody extends TeaModel {
             }
 
             /**
-             * DestroyTime.
+             * The time when the instance was destroyed. The time follows the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time is displayed in UTC.
              */
             public Builder destroyTime(String destroyTime) {
                 this.destroyTime = destroyTime;
@@ -688,7 +715,14 @@ public class DescribeDBInstancesForCloneResponseBody extends TeaModel {
             }
 
             /**
-             * Engine.
+             * The database engine of the instance. Valid values:
+             * <p>
+             * 
+             * *   MySQL
+             * *   SQLServer
+             * *   PostgreSQL
+             * *   PPAS
+             * *   MariaDB
              */
             public Builder engine(String engine) {
                 this.engine = engine;
@@ -696,7 +730,7 @@ public class DescribeDBInstancesForCloneResponseBody extends TeaModel {
             }
 
             /**
-             * EngineVersion.
+             * The version of the database engine.
              */
             public Builder engineVersion(String engineVersion) {
                 this.engineVersion = engineVersion;
@@ -704,7 +738,7 @@ public class DescribeDBInstancesForCloneResponseBody extends TeaModel {
             }
 
             /**
-             * ExpireTime.
+             * The time when the instance expired. The time follows the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time is displayed in UTC.
              */
             public Builder expireTime(String expireTime) {
                 this.expireTime = expireTime;
@@ -712,7 +746,7 @@ public class DescribeDBInstancesForCloneResponseBody extends TeaModel {
             }
 
             /**
-             * GuardDBInstanceId.
+             * The ID of the disaster recovery instance. This parameter is returned only when the instance is a primary instance and has a disaster recovery instance.
              */
             public Builder guardDBInstanceId(String guardDBInstanceId) {
                 this.guardDBInstanceId = guardDBInstanceId;
@@ -720,7 +754,7 @@ public class DescribeDBInstancesForCloneResponseBody extends TeaModel {
             }
 
             /**
-             * InsId.
+             * The ID of the instance role.
              */
             public Builder insId(Integer insId) {
                 this.insId = insId;
@@ -728,7 +762,11 @@ public class DescribeDBInstancesForCloneResponseBody extends TeaModel {
             }
 
             /**
-             * InstanceNetworkType.
+             * The network type of the instance. Valid values:
+             * <p>
+             * 
+             * *   **Classic**
+             * *   **VPC**
              */
             public Builder instanceNetworkType(String instanceNetworkType) {
                 this.instanceNetworkType = instanceNetworkType;
@@ -736,7 +774,14 @@ public class DescribeDBInstancesForCloneResponseBody extends TeaModel {
             }
 
             /**
-             * LockMode.
+             * The lock method of the instance. Valid values:
+             * <p>
+             * 
+             * *   **Unlock**: The instance is not locked.
+             * *   **ManualLock**: The instance is manually locked.
+             * *   **LockByExpiration**: The instance is automatically locked after it expires.
+             * *   **LockByRestoration**: The instance is automatically locked before a rollback.
+             * *   **LockByDiskQuota**: The instance is automatically locked because its storage capacity is exhausted and the instance is inaccessible.
              */
             public Builder lockMode(String lockMode) {
                 this.lockMode = lockMode;
@@ -744,7 +789,7 @@ public class DescribeDBInstancesForCloneResponseBody extends TeaModel {
             }
 
             /**
-             * LockReason.
+             * The reason why the instance was locked.
              */
             public Builder lockReason(String lockReason) {
                 this.lockReason = lockReason;
@@ -752,7 +797,7 @@ public class DescribeDBInstancesForCloneResponseBody extends TeaModel {
             }
 
             /**
-             * MasterInstanceId.
+             * The ID of the primary instance. If the value of this parameter is null, the instance is a primary instance.
              */
             public Builder masterInstanceId(String masterInstanceId) {
                 this.masterInstanceId = masterInstanceId;
@@ -760,7 +805,11 @@ public class DescribeDBInstancesForCloneResponseBody extends TeaModel {
             }
 
             /**
-             * MutriORsignle.
+             * Indicates whether multi-region deployment is used. Valid values:
+             * <p>
+             * 
+             * *   **true**: Multi-region deployment is used.
+             * *   **false**: Multi-region deployment is not used.
              */
             public Builder mutriORsignle(Boolean mutriORsignle) {
                 this.mutriORsignle = mutriORsignle;
@@ -768,7 +817,11 @@ public class DescribeDBInstancesForCloneResponseBody extends TeaModel {
             }
 
             /**
-             * PayType.
+             * The billing method of the instance. Valid values:
+             * <p>
+             * 
+             * *   **Postpaid**: pay-as-you-go
+             * *   **Prepaid**: subscription
              */
             public Builder payType(String payType) {
                 this.payType = payType;
@@ -776,7 +829,7 @@ public class DescribeDBInstancesForCloneResponseBody extends TeaModel {
             }
 
             /**
-             * ReadOnlyDBInstanceIds.
+             * An array consisting of the IDs of the read-only instances that are attached to the primary instance.
              */
             public Builder readOnlyDBInstanceIds(ReadOnlyDBInstanceIds readOnlyDBInstanceIds) {
                 this.readOnlyDBInstanceIds = readOnlyDBInstanceIds;
@@ -784,7 +837,7 @@ public class DescribeDBInstancesForCloneResponseBody extends TeaModel {
             }
 
             /**
-             * RegionId.
+             * The region ID of the instance.
              */
             public Builder regionId(String regionId) {
                 this.regionId = regionId;
@@ -792,7 +845,7 @@ public class DescribeDBInstancesForCloneResponseBody extends TeaModel {
             }
 
             /**
-             * ReplicateId.
+             * None.
              */
             public Builder replicateId(String replicateId) {
                 this.replicateId = replicateId;
@@ -800,7 +853,7 @@ public class DescribeDBInstancesForCloneResponseBody extends TeaModel {
             }
 
             /**
-             * ResourceGroupId.
+             * The ID of the resource group.
              */
             public Builder resourceGroupId(String resourceGroupId) {
                 this.resourceGroupId = resourceGroupId;
@@ -808,7 +861,7 @@ public class DescribeDBInstancesForCloneResponseBody extends TeaModel {
             }
 
             /**
-             * TempDBInstanceId.
+             * The ID of the temporary instance.
              */
             public Builder tempDBInstanceId(String tempDBInstanceId) {
                 this.tempDBInstanceId = tempDBInstanceId;
@@ -816,7 +869,7 @@ public class DescribeDBInstancesForCloneResponseBody extends TeaModel {
             }
 
             /**
-             * VSwitchId.
+             * The ID of the vSwitch.
              */
             public Builder vSwitchId(String vSwitchId) {
                 this.vSwitchId = vSwitchId;
@@ -824,7 +877,7 @@ public class DescribeDBInstancesForCloneResponseBody extends TeaModel {
             }
 
             /**
-             * VpcCloudInstanceId.
+             * The ID of the instance in the VPC.
              */
             public Builder vpcCloudInstanceId(String vpcCloudInstanceId) {
                 this.vpcCloudInstanceId = vpcCloudInstanceId;
@@ -832,7 +885,7 @@ public class DescribeDBInstancesForCloneResponseBody extends TeaModel {
             }
 
             /**
-             * VpcId.
+             * The ID of the virtual private cloud (VPC).
              */
             public Builder vpcId(String vpcId) {
                 this.vpcId = vpcId;
@@ -840,7 +893,7 @@ public class DescribeDBInstancesForCloneResponseBody extends TeaModel {
             }
 
             /**
-             * ZoneId.
+             * The zone ID of the instance.
              */
             public Builder zoneId(String zoneId) {
                 this.zoneId = zoneId;

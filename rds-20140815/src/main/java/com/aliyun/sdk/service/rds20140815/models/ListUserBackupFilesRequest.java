@@ -167,7 +167,7 @@ public class ListUserBackupFilesRequest extends Request {
         } 
 
         /**
-         * BackupId.
+         * The ID of the full backup file.
          */
         public Builder backupId(String backupId) {
             this.putQueryParameter("BackupId", backupId);
@@ -176,7 +176,10 @@ public class ListUserBackupFilesRequest extends Request {
         }
 
         /**
-         * Comment.
+         * The description of the full backup file.
+         * <p>
+         * 
+         * > The system implements a fuzzy match based on the value of this parameter.
          */
         public Builder comment(String comment) {
             this.putQueryParameter("Comment", comment);
@@ -185,7 +188,7 @@ public class ListUserBackupFilesRequest extends Request {
         }
 
         /**
-         * OssUrl.
+         * The URL from which you can download the full backup file that is stored as an object in an Object Storage Service (OSS) bucket. For more information about how to obtain the URL, see [Obtain the access URL after you upload objects](~~39607~~).
          */
         public Builder ossUrl(String ossUrl) {
             this.putQueryParameter("OssUrl", ossUrl);
@@ -203,7 +206,7 @@ public class ListUserBackupFilesRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * The ID of the region. You can call the [DescribeRegions](~~26243~~) operation to query the most recent region list.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -230,7 +233,14 @@ public class ListUserBackupFilesRequest extends Request {
         }
 
         /**
-         * Status.
+         * The status of the full backup file. Valid values:
+         * <p>
+         * 
+         * *   **Importing**: The full backup file is being imported.
+         * *   **Failed**: The full backup file fails to be imported.
+         * *   **CheckSucccess**: The full backup file passes the check.
+         * *   **BackupSuccess**: The full backup file is imported.
+         * *   **Deleted**: The full backup file is deleted.
          */
         public Builder status(String status) {
             this.putQueryParameter("Status", status);
@@ -239,7 +249,7 @@ public class ListUserBackupFilesRequest extends Request {
         }
 
         /**
-         * Tags.
+         * The tag that is added to the full backup file.
          */
         public Builder tags(String tags) {
             this.putQueryParameter("Tags", tags);

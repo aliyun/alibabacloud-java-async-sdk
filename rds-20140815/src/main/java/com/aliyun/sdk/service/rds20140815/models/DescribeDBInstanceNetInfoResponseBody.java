@@ -74,7 +74,7 @@ public class DescribeDBInstanceNetInfoResponseBody extends TeaModel {
         private String securityIPMode; 
 
         /**
-         * DBInstanceNetInfos.
+         * Details of the endpoints of the instance.
          */
         public Builder DBInstanceNetInfos(DBInstanceNetInfos DBInstanceNetInfos) {
             this.DBInstanceNetInfos = DBInstanceNetInfos;
@@ -82,7 +82,11 @@ public class DescribeDBInstanceNetInfoResponseBody extends TeaModel {
         }
 
         /**
-         * InstanceNetworkType.
+         * The network type of the instance. Valid values:
+         * <p>
+         * 
+         * *   **Classic**: classic network
+         * *   **VPC**: virtual private cloud (VPC)
          */
         public Builder instanceNetworkType(String instanceNetworkType) {
             this.instanceNetworkType = instanceNetworkType;
@@ -90,7 +94,7 @@ public class DescribeDBInstanceNetInfoResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -98,7 +102,11 @@ public class DescribeDBInstanceNetInfoResponseBody extends TeaModel {
         }
 
         /**
-         * SecurityIPMode.
+         * The whitelist mode of the instance. Valid values:
+         * <p>
+         * 
+         * *   **normal**: standard whitelist mode
+         * *   **safety**: enhanced whitelist mode
          */
         public Builder securityIPMode(String securityIPMode) {
             this.securityIPMode = securityIPMode;
@@ -186,7 +194,11 @@ public class DescribeDBInstanceNetInfoResponseBody extends TeaModel {
             private String weight; 
 
             /**
-             * Availability.
+             * The availability of the instance. Valid values:
+             * <p>
+             * 
+             * *   **Unavailable**
+             * *   **Available**
              */
             public Builder availability(String availability) {
                 this.availability = availability;
@@ -194,7 +206,7 @@ public class DescribeDBInstanceNetInfoResponseBody extends TeaModel {
             }
 
             /**
-             * DBInstanceId.
+             * The ID of the instance.
              */
             public Builder DBInstanceId(String DBInstanceId) {
                 this.DBInstanceId = DBInstanceId;
@@ -202,7 +214,11 @@ public class DescribeDBInstanceNetInfoResponseBody extends TeaModel {
             }
 
             /**
-             * DBInstanceType.
+             * The database engine of the instance. Valid values:
+             * <p>
+             * 
+             * *   **Master**: primary instance
+             * *   **Readonly**: read-only instance
              */
             public Builder DBInstanceType(String DBInstanceType) {
                 this.DBInstanceType = DBInstanceType;
@@ -210,7 +226,7 @@ public class DescribeDBInstanceNetInfoResponseBody extends TeaModel {
             }
 
             /**
-             * Role.
+             * A deprecated parameter.
              */
             public Builder role(String role) {
                 this.role = role;
@@ -218,7 +234,7 @@ public class DescribeDBInstanceNetInfoResponseBody extends TeaModel {
             }
 
             /**
-             * Weight.
+             * The weight of the instance.
              */
             public Builder weight(String weight) {
                 this.weight = weight;
@@ -312,7 +328,7 @@ public class DescribeDBInstanceNetInfoResponseBody extends TeaModel {
             private String securityIPs; 
 
             /**
-             * SecurityIPGroupName.
+             * The name of the IP address whitelist.
              */
             public Builder securityIPGroupName(String securityIPGroupName) {
                 this.securityIPGroupName = securityIPGroupName;
@@ -320,7 +336,7 @@ public class DescribeDBInstanceNetInfoResponseBody extends TeaModel {
             }
 
             /**
-             * SecurityIPs.
+             * The IP addresses contained in the IP address whitelist.
              */
             public Builder securityIPs(String securityIPs) {
                 this.securityIPs = securityIPs;
@@ -558,7 +574,10 @@ public class DescribeDBInstanceNetInfoResponseBody extends TeaModel {
             private String vSwitchId; 
 
             /**
-             * BabelfishPort.
+             * The Tabular Data Stream (TDS) port of the instance for which Babelfish is enabled.
+             * <p>
+             * 
+             * > This parameter applies only to ApsaraDB RDS for PostgreSQL instances. For more information about Babelfish for ApsaraDB RDS for PostgreSQL, see [Introduction to Babelfish](~~428613~~).
              */
             public Builder babelfishPort(String babelfishPort) {
                 this.babelfishPort = babelfishPort;
@@ -566,7 +585,7 @@ public class DescribeDBInstanceNetInfoResponseBody extends TeaModel {
             }
 
             /**
-             * ConnectionString.
+             * The endpoint of the instance.
              */
             public Builder connectionString(String connectionString) {
                 this.connectionString = connectionString;
@@ -574,7 +593,11 @@ public class DescribeDBInstanceNetInfoResponseBody extends TeaModel {
             }
 
             /**
-             * ConnectionStringType.
+             * The type of the endpoint. Valid values:
+             * <p>
+             * 
+             * *   **Normal**: regular endpoint
+             * *   **ReadWriteSplitting**: read/write splitting endpoint
              */
             public Builder connectionStringType(String connectionStringType) {
                 this.connectionStringType = connectionStringType;
@@ -582,7 +605,7 @@ public class DescribeDBInstanceNetInfoResponseBody extends TeaModel {
             }
 
             /**
-             * DBInstanceWeights.
+             * Details of the weight. This parameter is returned only when the read/write splitting feature is enabled for the instance.
              */
             public Builder DBInstanceWeights(DBInstanceWeights DBInstanceWeights) {
                 this.DBInstanceWeights = DBInstanceWeights;
@@ -590,7 +613,11 @@ public class DescribeDBInstanceNetInfoResponseBody extends TeaModel {
             }
 
             /**
-             * DistributionType.
+             * The policy that is used to assign read weights. This parameter is returned only for a read/write splitting endpoint. Valid values:
+             * <p>
+             * 
+             * *   **Standard**: The system automatically assigns read weights to the instance and its read-only instances based on the specifications of these instances.
+             * *   **Custom**: You must manually allocate read weights to the instance and its read-only instances.
              */
             public Builder distributionType(String distributionType) {
                 this.distributionType = distributionType;
@@ -598,7 +625,7 @@ public class DescribeDBInstanceNetInfoResponseBody extends TeaModel {
             }
 
             /**
-             * ExpiredTime.
+             * The remaining validity period of the instance of the classic network in hybrid access mode. Unit: seconds.
              */
             public Builder expiredTime(String expiredTime) {
                 this.expiredTime = expiredTime;
@@ -606,7 +633,7 @@ public class DescribeDBInstanceNetInfoResponseBody extends TeaModel {
             }
 
             /**
-             * IPAddress.
+             * The IP address of the endpoint.
              */
             public Builder IPAddress(String IPAddress) {
                 this.IPAddress = IPAddress;
@@ -614,7 +641,15 @@ public class DescribeDBInstanceNetInfoResponseBody extends TeaModel {
             }
 
             /**
-             * IPType.
+             * The type of the network.
+             * <p>
+             * 
+             * *   Valid values when the instance resides in the classic network:
+             * *   **Inner:**: internal network
+             * *   **Public**: Internet
+             * *   Valid values when the instance resides in a VPC:
+             * *   **Private**: internal network
+             * *   **Public**: Internet
              */
             public Builder IPType(String IPType) {
                 this.IPType = IPType;
@@ -622,7 +657,10 @@ public class DescribeDBInstanceNetInfoResponseBody extends TeaModel {
             }
 
             /**
-             * MaxDelayTime.
+             * The latency threshold. This parameter is returned only for a read/write splitting endpoint. Unit: seconds.
+             * <p>
+             * 
+             * > If the latency on a read-only instance exceeds the specified threshold, the system no longer forwards read requests to the read-only instance.
              */
             public Builder maxDelayTime(String maxDelayTime) {
                 this.maxDelayTime = maxDelayTime;
@@ -630,7 +668,7 @@ public class DescribeDBInstanceNetInfoResponseBody extends TeaModel {
             }
 
             /**
-             * Port.
+             * The port that is used to connect to the instance.
              */
             public Builder port(String port) {
                 this.port = port;
@@ -638,7 +676,7 @@ public class DescribeDBInstanceNetInfoResponseBody extends TeaModel {
             }
 
             /**
-             * SecurityIPGroups.
+             * An array that consists of the details about the IP address whitelists.
              */
             public Builder securityIPGroups(SecurityIPGroups securityIPGroups) {
                 this.securityIPGroups = securityIPGroups;
@@ -646,7 +684,13 @@ public class DescribeDBInstanceNetInfoResponseBody extends TeaModel {
             }
 
             /**
-             * Upgradeable.
+             * Indicates whether the IP version can be updated. Valid values:
+             * <p>
+             * 
+             * *   **Enable**: The IP version can be updated.
+             * *   **Disabled**: The IP version cannot be updated.
+             * 
+             * > The IP version can be updated from IPv4 to IPv6.
              */
             public Builder upgradeable(String upgradeable) {
                 this.upgradeable = upgradeable;
@@ -654,7 +698,7 @@ public class DescribeDBInstanceNetInfoResponseBody extends TeaModel {
             }
 
             /**
-             * VPCId.
+             * The ID of the VPC.
              */
             public Builder VPCId(String VPCId) {
                 this.VPCId = VPCId;
@@ -662,7 +706,7 @@ public class DescribeDBInstanceNetInfoResponseBody extends TeaModel {
             }
 
             /**
-             * VSwitchId.
+             * The ID of the vSwitch.
              */
             public Builder vSwitchId(String vSwitchId) {
                 this.vSwitchId = vSwitchId;

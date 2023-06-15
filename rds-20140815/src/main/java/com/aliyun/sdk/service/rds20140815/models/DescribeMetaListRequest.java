@@ -223,7 +223,10 @@ public class DescribeMetaListRequest extends Request {
         } 
 
         /**
-         * BackupSetID.
+         * The ID of the backup set from which you want to restore data. You can call the [DescribeBackups](~~26273~~) operation to query the IDs of backup sets.
+         * <p>
+         * 
+         * > If you set the **RestoreType** parameter to **BackupSetID**, you must also specify this parameter.
          */
         public Builder backupSetID(Integer backupSetID) {
             this.putQueryParameter("BackupSetID", backupSetID);
@@ -232,7 +235,7 @@ public class DescribeMetaListRequest extends Request {
         }
 
         /**
-         * ClientToken.
+         * The client token that is used to ensure the idempotence of the request. You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters and cannot exceed 64 characters in length.
          */
         public Builder clientToken(String clientToken) {
             this.putQueryParameter("ClientToken", clientToken);
@@ -241,7 +244,7 @@ public class DescribeMetaListRequest extends Request {
         }
 
         /**
-         * DBInstanceId.
+         * The ID of the instance. You can call the [DescribeDBInstances](~~26232~~) operation to query the ID of the instance.
          */
         public Builder DBInstanceId(String DBInstanceId) {
             this.putQueryParameter("DBInstanceId", DBInstanceId);
@@ -250,7 +253,10 @@ public class DescribeMetaListRequest extends Request {
         }
 
         /**
-         * GetDbName.
+         * The name of the database to query. The system implements exact match based on the value of this parameter and returns the name of the matched database and the names of all tables contained in the database.
+         * <p>
+         * 
+         * > If you leave this parameter empty, the system returns all databases that are created on the instance.
          */
         public Builder getDbName(String getDbName) {
             this.putQueryParameter("GetDbName", getDbName);
@@ -268,7 +274,10 @@ public class DescribeMetaListRequest extends Request {
         }
 
         /**
-         * PageIndex.
+         * The number of the page to return. Valid values: any non-zero positive integer.**** Default value: **1**.
+         * <p>
+         * 
+         * > This parameter only takes effect when you specify the **PageSize** parameter.
          */
         public Builder pageIndex(Integer pageIndex) {
             this.putQueryParameter("PageIndex", pageIndex);
@@ -277,7 +286,10 @@ public class DescribeMetaListRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * The number of entries to return on each page. Default value: **1**.
+         * <p>
+         * 
+         * > This parameter only takes effect when you specify the **PageIndex** parameter.
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -286,7 +298,10 @@ public class DescribeMetaListRequest extends Request {
         }
 
         /**
-         * Pattern.
+         * The name of the database to query. The system implements fuzzy match based on the value of this parameter and returns only the name of the matched database.
+         * <p>
+         * 
+         * > For example, if you set the value to `test`, the system returns `testdb1` and `testdb2`. Then, you can specify the **GetDbName** parameter to query tables in the required database.
          */
         public Builder pattern(String pattern) {
             this.putQueryParameter("Pattern", pattern);
@@ -295,7 +310,7 @@ public class DescribeMetaListRequest extends Request {
         }
 
         /**
-         * ResourceGroupId.
+         * The ID of the resource group.
          */
         public Builder resourceGroupId(String resourceGroupId) {
             this.putQueryParameter("ResourceGroupId", resourceGroupId);
@@ -322,7 +337,10 @@ public class DescribeMetaListRequest extends Request {
         }
 
         /**
-         * RestoreTime.
+         * The point in time to which you want to restore data. The specified point in time must be earlier than the current time. Specify the time in the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time must be in UTC. You can call the [DescribeBackups](~~26273~~) operation to query the restorable time range.
+         * <p>
+         * 
+         * > If you set the **RestoreType** parameter to **RestoreTime**, you must also specify this parameter.
          */
         public Builder restoreTime(String restoreTime) {
             this.putQueryParameter("RestoreTime", restoreTime);
@@ -331,7 +349,13 @@ public class DescribeMetaListRequest extends Request {
         }
 
         /**
-         * RestoreType.
+         * The method that is used to restore data. Valid values:
+         * <p>
+         * 
+         * *   **BackupSetID**: Data is restored from a backup set. If you use this value, you must also specify the **BackupSetID** parameter.
+         * *   **RestoreTime**: Data is restored to a specific point in time. If you use this value, you must also specify the **RestoreTime** parameter.
+         * 
+         * Default value: **BackupSetID**.
          */
         public Builder restoreType(String restoreType) {
             this.putQueryParameter("RestoreType", restoreType);

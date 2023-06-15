@@ -86,7 +86,7 @@ public class ActivateMigrationTargetInstanceResponseBody extends TeaModel {
         private Long taskId; 
 
         /**
-         * DBInstanceName.
+         * The name of the destination instance.
          */
         public Builder DBInstanceName(String DBInstanceName) {
             this.DBInstanceName = DBInstanceName;
@@ -94,7 +94,7 @@ public class ActivateMigrationTargetInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -102,7 +102,7 @@ public class ActivateMigrationTargetInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * SourceIpAddress.
+         * The private IP address that is used to connect to the self-managed PostgreSQL instance.
          */
         public Builder sourceIpAddress(String sourceIpAddress) {
             this.sourceIpAddress = sourceIpAddress;
@@ -110,7 +110,7 @@ public class ActivateMigrationTargetInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * SourcePort.
+         * The port number that is used to connect to the self-managed PostgreSQL instance.
          */
         public Builder sourcePort(Long sourcePort) {
             this.sourcePort = sourcePort;
@@ -118,7 +118,7 @@ public class ActivateMigrationTargetInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * TaskId.
+         * The ID of the identification task.
          */
         public Builder taskId(Long taskId) {
             this.taskId = taskId;

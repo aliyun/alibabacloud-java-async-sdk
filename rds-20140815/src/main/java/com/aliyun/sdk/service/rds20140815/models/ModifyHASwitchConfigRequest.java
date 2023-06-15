@@ -140,7 +140,7 @@ public class ModifyHASwitchConfigRequest extends Request {
         } 
 
         /**
-         * DBInstanceId.
+         * The ID of the instance.
          */
         public Builder DBInstanceId(String DBInstanceId) {
             this.putQueryParameter("DBInstanceId", DBInstanceId);
@@ -149,7 +149,15 @@ public class ModifyHASwitchConfigRequest extends Request {
         }
 
         /**
-         * HAConfig.
+         * The status of the automatic primary/secondary switchover feature. Valid values:
+         * <p>
+         * 
+         * *   **Auto:** The automatic primary/secondary switchover feature is enabled. The system automatically switches your workloads over from the instance to its secondary instance in the event of a fault.
+         * *   **Manual:** The automatic primary/secondary switchover feature is disabled. You must manually switch your workloads over from the instance to its secondary instance in the event of a fault.
+         * 
+         * Default value: **Auto**.
+         * 
+         * >  If you set this parameter to **Manual**, you must specify the **ManualHATime** parameter.
          */
         public Builder HAConfig(String HAConfig) {
             this.putQueryParameter("HAConfig", HAConfig);
@@ -158,7 +166,10 @@ public class ModifyHASwitchConfigRequest extends Request {
         }
 
         /**
-         * ManualHATime.
+         * The time after which the automatic primary/secondary switchover feature is enabled. At most, you can set this parameter to 23:59:59 seven days later. The time follows the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time must be in UTC.
+         * <p>
+         * 
+         * >  This parameter takes effect only when you set the **HAConfig** parameter to **Manual**.
          */
         public Builder manualHATime(String manualHATime) {
             this.putQueryParameter("ManualHATime", manualHATime);
@@ -176,7 +187,7 @@ public class ModifyHASwitchConfigRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * The region ID of the instance. You can call the [DescribeRegions](~~26243~~) operation to query the most recent region list.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);

@@ -126,7 +126,7 @@ public class DescribeSlowLogRecordsResponseBody extends TeaModel {
         }
 
         /**
-         * Items.
+         * An array that consists of the information about each slow query log.
          */
         public Builder items(Items items) {
             this.items = items;

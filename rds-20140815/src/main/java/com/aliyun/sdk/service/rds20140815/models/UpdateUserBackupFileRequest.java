@@ -141,7 +141,7 @@ public class UpdateUserBackupFileRequest extends Request {
         } 
 
         /**
-         * BackupId.
+         * The ID of the backup file. You can call the [ListUserBackupFiles](~~257821~~) operation to query the ID of the backup file.
          */
         public Builder backupId(String backupId) {
             this.putQueryParameter("BackupId", backupId);
@@ -150,7 +150,7 @@ public class UpdateUserBackupFileRequest extends Request {
         }
 
         /**
-         * Comment.
+         * The new description of the full backup file.
          */
         public Builder comment(String comment) {
             this.putQueryParameter("Comment", comment);
@@ -168,7 +168,7 @@ public class UpdateUserBackupFileRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * The ID of the region. You can call the [DescribeRegions](~~26243~~) operation to query the most recent region list.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -195,7 +195,7 @@ public class UpdateUserBackupFileRequest extends Request {
         }
 
         /**
-         * Retention.
+         * The new retention period of the full backup file. Unit: days. Valid values: any non-zero positive integer.
          */
         public Builder retention(Integer retention) {
             this.putQueryParameter("Retention", retention);

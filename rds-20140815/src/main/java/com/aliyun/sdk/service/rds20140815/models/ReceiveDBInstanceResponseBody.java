@@ -50,7 +50,7 @@ public class ReceiveDBInstanceResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * GuardDBInstanceId.
+         * The ID of the disaster recovery instance after the switchover.
          */
         public Builder guardDBInstanceId(String guardDBInstanceId) {
             this.guardDBInstanceId = guardDBInstanceId;
@@ -58,7 +58,7 @@ public class ReceiveDBInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

@@ -126,7 +126,10 @@ public class ModifyDBInstanceDescriptionRequest extends Request {
         } 
 
         /**
-         * DBInstanceDescription.
+         * The name of the instance.
+         * <p>
+         * 
+         * > The name must be 2 to 64 characters in length.
          */
         public Builder DBInstanceDescription(String DBInstanceDescription) {
             this.putQueryParameter("DBInstanceDescription", DBInstanceDescription);
@@ -135,7 +138,7 @@ public class ModifyDBInstanceDescriptionRequest extends Request {
         }
 
         /**
-         * DBInstanceId.
+         * The ID of the instance.
          */
         public Builder DBInstanceId(String DBInstanceId) {
             this.putQueryParameter("DBInstanceId", DBInstanceId);

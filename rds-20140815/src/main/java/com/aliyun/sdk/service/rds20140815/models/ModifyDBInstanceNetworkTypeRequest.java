@@ -224,7 +224,10 @@ public class ModifyDBInstanceNetworkTypeRequest extends Request {
         } 
 
         /**
-         * ClassicExpiredDays.
+         * The number of days for which you want to retain the classic network endpoint. Valid values: **1 to 120**. Default value: **7**.
+         * <p>
+         * 
+         * > If you set the **RetainClassic** parameter to **True**, you must also specify this parameter.
          */
         public Builder classicExpiredDays(String classicExpiredDays) {
             this.putQueryParameter("ClassicExpiredDays", classicExpiredDays);
@@ -233,7 +236,7 @@ public class ModifyDBInstanceNetworkTypeRequest extends Request {
         }
 
         /**
-         * DBInstanceId.
+         * The ID of the instance.
          */
         public Builder DBInstanceId(String DBInstanceId) {
             this.putQueryParameter("DBInstanceId", DBInstanceId);
@@ -242,7 +245,7 @@ public class ModifyDBInstanceNetworkTypeRequest extends Request {
         }
 
         /**
-         * InstanceNetworkType.
+         * The network type after the modification. Set the value to **VPC**.
          */
         public Builder instanceNetworkType(String instanceNetworkType) {
             this.putQueryParameter("InstanceNetworkType", instanceNetworkType);
@@ -269,7 +272,7 @@ public class ModifyDBInstanceNetworkTypeRequest extends Request {
         }
 
         /**
-         * PrivateIpAddress.
+         * The internal IP address of the instance. The internal IP address must be within the CIDR block supported by the specified vSwitch. ApsaraDB RDS automatically assigns an internal IP address to the instance based on the values of the **VPCId** and **VSwitchId** parameters.
          */
         public Builder privateIpAddress(String privateIpAddress) {
             this.putQueryParameter("PrivateIpAddress", privateIpAddress);
@@ -278,7 +281,10 @@ public class ModifyDBInstanceNetworkTypeRequest extends Request {
         }
 
         /**
-         * ReadWriteSplittingClassicExpiredDays.
+         * The number of days for which you want to retain the read/write splitting endpoint of the classic network type. Valid values: **1 to 120**. Default value: **7**.
+         * <p>
+         * 
+         * > This parameter takes effect only when a read/write splitting endpoint of the classic network type exists and the **RetainClassic** parameter is set to **True**.
          */
         public Builder readWriteSplittingClassicExpiredDays(Integer readWriteSplittingClassicExpiredDays) {
             this.putQueryParameter("ReadWriteSplittingClassicExpiredDays", readWriteSplittingClassicExpiredDays);
@@ -287,7 +293,10 @@ public class ModifyDBInstanceNetworkTypeRequest extends Request {
         }
 
         /**
-         * ReadWriteSplittingPrivateIpAddress.
+         * The internal IP address that corresponds to the read/write splitting endpoint of the instance. The internal IP address must be within the CIDR block supported by the specified vSwitch. The system automatically assigns an internal IP address to the read-only instance based on the values of the **VPCId** and **VSwitchId** parameters.
+         * <p>
+         * 
+         * > This value is valid when a read/write splitting endpoint of the classic network type exists.
          */
         public Builder readWriteSplittingPrivateIpAddress(String readWriteSplittingPrivateIpAddress) {
             this.putQueryParameter("ReadWriteSplittingPrivateIpAddress", readWriteSplittingPrivateIpAddress);
@@ -314,7 +323,13 @@ public class ModifyDBInstanceNetworkTypeRequest extends Request {
         }
 
         /**
-         * RetainClassic.
+         * Specifies whether to retain the classic network endpoint. Valid values:
+         * <p>
+         * 
+         * *   **True**: retains the classic network endpoint.
+         * *   **False**: does not retain the classic network endpoint.
+         * 
+         * Default value: **False**.
          */
         public Builder retainClassic(String retainClassic) {
             this.putQueryParameter("RetainClassic", retainClassic);
@@ -323,7 +338,7 @@ public class ModifyDBInstanceNetworkTypeRequest extends Request {
         }
 
         /**
-         * VPCId.
+         * The ID of the VPC.
          */
         public Builder VPCId(String VPCId) {
             this.putQueryParameter("VPCId", VPCId);
@@ -332,7 +347,7 @@ public class ModifyDBInstanceNetworkTypeRequest extends Request {
         }
 
         /**
-         * VSwitchId.
+         * The ID of the vSwitch. This parameter is required if the **VPCId** parameter is specified.
          */
         public Builder vSwitchId(String vSwitchId) {
             this.putQueryParameter("VSwitchId", vSwitchId);

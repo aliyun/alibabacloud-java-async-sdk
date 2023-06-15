@@ -184,7 +184,10 @@ public class ModifyDBInstanceConnectionStringRequest extends Request {
         } 
 
         /**
-         * BabelfishPort.
+         * The Tabular Data Stream (TDS) port of the instance for which Babelfish is enabled.
+         * <p>
+         * 
+         * > This parameter applies only to ApsaraDB RDS for PostgreSQL instances. For more information about Babelfish for ApsaraDB RDS for PostgreSQL, see [Introduction to Babelfish](~~428613~~).
          */
         public Builder babelfishPort(String babelfishPort) {
             this.putQueryParameter("BabelfishPort", babelfishPort);
@@ -193,7 +196,10 @@ public class ModifyDBInstanceConnectionStringRequest extends Request {
         }
 
         /**
-         * ConnectionStringPrefix.
+         * The prefix of the endpoint after the change. Only the prefix of the value of **CurrentConnectionString** can be changed.
+         * <p>
+         * 
+         * > The value must be 8 to 64 characters in length and can contain letters, digits, and hyphens (-). The value cannot contain any of the following special characters: ! # % ^ & \* = + | {} ; : \" " ,<> / ?
          */
         public Builder connectionStringPrefix(String connectionStringPrefix) {
             this.putQueryParameter("ConnectionStringPrefix", connectionStringPrefix);
@@ -202,7 +208,10 @@ public class ModifyDBInstanceConnectionStringRequest extends Request {
         }
 
         /**
-         * CurrentConnectionString.
+         * The endpoint of the instance. It can be an internal endpoint, a public endpoint, or a classic network endpoint in hybrid access mode.
+         * <p>
+         * 
+         * > The read/write splitting endpoint cannot be changed.
          */
         public Builder currentConnectionString(String currentConnectionString) {
             this.putQueryParameter("CurrentConnectionString", currentConnectionString);
@@ -211,7 +220,7 @@ public class ModifyDBInstanceConnectionStringRequest extends Request {
         }
 
         /**
-         * DBInstanceId.
+         * The ID of the instance.
          */
         public Builder DBInstanceId(String DBInstanceId) {
             this.putQueryParameter("DBInstanceId", DBInstanceId);
@@ -220,7 +229,7 @@ public class ModifyDBInstanceConnectionStringRequest extends Request {
         }
 
         /**
-         * GeneralGroupName.
+         * The name of the dedicated cluster to which the instance belongs. This parameter is returned only when the instance is created in an ApsaraDB MyBase cluster that runs MySQL on Standard Edition.
          */
         public Builder generalGroupName(String generalGroupName) {
             this.putQueryParameter("GeneralGroupName", generalGroupName);
@@ -247,7 +256,7 @@ public class ModifyDBInstanceConnectionStringRequest extends Request {
         }
 
         /**
-         * Port.
+         * The port number after the change.
          */
         public Builder port(String port) {
             this.putQueryParameter("Port", port);

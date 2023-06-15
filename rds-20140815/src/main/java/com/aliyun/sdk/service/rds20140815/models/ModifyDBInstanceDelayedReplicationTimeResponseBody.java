@@ -74,7 +74,7 @@ public class ModifyDBInstanceDelayedReplicationTimeResponseBody extends TeaModel
         private String taskId; 
 
         /**
-         * DBInstanceId.
+         * The ID of the instance.
          */
         public Builder DBInstanceId(String DBInstanceId) {
             this.DBInstanceId = DBInstanceId;
@@ -82,7 +82,7 @@ public class ModifyDBInstanceDelayedReplicationTimeResponseBody extends TeaModel
         }
 
         /**
-         * ReadSQLReplicationTime.
+         * The replication latency of the read-only instance. Unit: seconds.
          */
         public Builder readSQLReplicationTime(String readSQLReplicationTime) {
             this.readSQLReplicationTime = readSQLReplicationTime;
@@ -90,7 +90,7 @@ public class ModifyDBInstanceDelayedReplicationTimeResponseBody extends TeaModel
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -98,7 +98,7 @@ public class ModifyDBInstanceDelayedReplicationTimeResponseBody extends TeaModel
         }
 
         /**
-         * TaskId.
+         * The ID of the task.
          */
         public Builder taskId(String taskId) {
             this.taskId = taskId;

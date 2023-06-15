@@ -85,7 +85,7 @@ public class MigrateConnectionToOtherZoneRequest extends Request {
         } 
 
         /**
-         * ConnectionString.
+         * The endpoint of the instance. The endpoint is specified when you create the instance.
          */
         public Builder connectionString(String connectionString) {
             this.putQueryParameter("ConnectionString", connectionString);
@@ -94,7 +94,7 @@ public class MigrateConnectionToOtherZoneRequest extends Request {
         }
 
         /**
-         * DBInstanceId.
+         * The ID of the instance. You can call the [DescribeDBInstances](~~610396~~) operation to query the ID of the instance.
          */
         public Builder DBInstanceId(String DBInstanceId) {
             this.putQueryParameter("DBInstanceId", DBInstanceId);
@@ -103,7 +103,7 @@ public class MigrateConnectionToOtherZoneRequest extends Request {
         }
 
         /**
-         * ZoneId.
+         * The ID of the zone.
          */
         public Builder zoneId(String zoneId) {
             this.putQueryParameter("ZoneId", zoneId);

@@ -62,7 +62,7 @@ public class ModifyDBInstanceMetricsResponseBody extends TeaModel {
         private String scope; 
 
         /**
-         * DBInstanceId.
+         * The ID of the instance.
          */
         public Builder DBInstanceId(String DBInstanceId) {
             this.DBInstanceId = DBInstanceId;
@@ -70,7 +70,7 @@ public class ModifyDBInstanceMetricsResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -78,7 +78,11 @@ public class ModifyDBInstanceMetricsResponseBody extends TeaModel {
         }
 
         /**
-         * Scope.
+         * The application scope of this modification. Valid values:
+         * <p>
+         * 
+         * *   **instance**: This modification is applied only to the current instance.
+         * *   **region**: This modification is applied to all ApsaraDB RDS for PostgreSQL instances that are equipped with the same type of storage media as the current instance in the region to which the current instance belongs.
          */
         public Builder scope(String scope) {
             this.scope = scope;

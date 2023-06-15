@@ -74,7 +74,7 @@ public class DescribeDTCSecurityIpHostsForSQLServerResponseBody extends TeaModel
         private String requestId; 
 
         /**
-         * DBInstanceId.
+         * The ID of the instance.
          */
         public Builder DBInstanceId(String DBInstanceId) {
             this.DBInstanceId = DBInstanceId;
@@ -82,7 +82,7 @@ public class DescribeDTCSecurityIpHostsForSQLServerResponseBody extends TeaModel
         }
 
         /**
-         * IpHostPairNum.
+         * The number of distributed transaction whitelists.
          */
         public Builder ipHostPairNum(String ipHostPairNum) {
             this.ipHostPairNum = ipHostPairNum;
@@ -90,7 +90,7 @@ public class DescribeDTCSecurityIpHostsForSQLServerResponseBody extends TeaModel
         }
 
         /**
-         * Items.
+         * Details of distributed transaction whitelists.
          */
         public Builder items(Items items) {
             this.items = items;
@@ -98,7 +98,7 @@ public class DescribeDTCSecurityIpHostsForSQLServerResponseBody extends TeaModel
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -150,7 +150,7 @@ public class DescribeDTCSecurityIpHostsForSQLServerResponseBody extends TeaModel
             private String whitelistGroupName; 
 
             /**
-             * SecurityIpHosts.
+             * The IP address of the ECS instance and the hostname of the Windows computer. Format: IP address,Hostname. Multiple values are separated with semicolons (;).
              */
             public Builder securityIpHosts(String securityIpHosts) {
                 this.securityIpHosts = securityIpHosts;
@@ -158,7 +158,7 @@ public class DescribeDTCSecurityIpHostsForSQLServerResponseBody extends TeaModel
             }
 
             /**
-             * WhitelistGroupName.
+             * The name of the distributed transaction whitelist.
              */
             public Builder whitelistGroupName(String whitelistGroupName) {
                 this.whitelistGroupName = whitelistGroupName;

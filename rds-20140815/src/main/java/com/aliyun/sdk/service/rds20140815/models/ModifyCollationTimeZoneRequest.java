@@ -125,7 +125,24 @@ public class ModifyCollationTimeZoneRequest extends Request {
         } 
 
         /**
-         * Collation.
+         * The character set collation of the instance. Valid values:
+         * <p>
+         * 
+         * *   **Latin1\_General_CI_AS**
+         * *   **Latin1\_General_CS_AS**
+         * *   **SQL_Latin1\_General_CP1\_CI_AS**
+         * *   **SQL_Latin1\_General_CP1\_CS_AS**
+         * *   **Chinese_PRC_CS_AS**
+         * *   **Chinese_PRC_BIN**
+         * *   **Chinese_PRC_CI_AS**
+         * *   **Japanese_CI_AS**
+         * *   **Japanese_CS_AS**
+         * *   **Chinese_Taiwan_Stroke_CI_AS**
+         * *   **Chinese_Taiwan_Stroke_CS_AS**
+         * 
+         * By default, the system does not modify the character set collation of the instance.
+         * 
+         * > You must specify one of the **Collation** and **Timezone** parameters.
          */
         public Builder collation(String collation) {
             this.putQueryParameter("Collation", collation);
@@ -134,7 +151,7 @@ public class ModifyCollationTimeZoneRequest extends Request {
         }
 
         /**
-         * DBInstanceId.
+         * The ID of the instance.
          */
         public Builder DBInstanceId(String DBInstanceId) {
             this.putQueryParameter("DBInstanceId", DBInstanceId);
@@ -170,7 +187,10 @@ public class ModifyCollationTimeZoneRequest extends Request {
         }
 
         /**
-         * Timezone.
+         * The time zone of the instance. By default, the system does not modify the time zone.
+         * <p>
+         * 
+         * > You must specify one of the **Collation** and **Timezone** parameters.
          */
         public Builder timezone(String timezone) {
             this.putQueryParameter("Timezone", timezone);

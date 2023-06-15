@@ -83,7 +83,7 @@ public class DescribeDBInstanceAttributeRequest extends Request {
         } 
 
         /**
-         * DBInstanceId.
+         * The ID of the instance. You can specify up to 30 instance IDs in a single request. If you specify multiple instance IDs, separate the instance IDs with commas (,).
          */
         public Builder DBInstanceId(String DBInstanceId) {
             this.putQueryParameter("DBInstanceId", DBInstanceId);
@@ -92,7 +92,11 @@ public class DescribeDBInstanceAttributeRequest extends Request {
         }
 
         /**
-         * Expired.
+         * Specifies whether the instance expires. Valid values:
+         * <p>
+         * 
+         * *   **True**: The instance expires.
+         * *   **False**: The instance does not expire.
          */
         public Builder expired(String expired) {
             this.putQueryParameter("Expired", expired);

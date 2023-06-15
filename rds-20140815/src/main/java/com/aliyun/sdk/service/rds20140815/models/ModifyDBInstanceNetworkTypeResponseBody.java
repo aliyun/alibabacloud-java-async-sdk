@@ -62,7 +62,7 @@ public class ModifyDBInstanceNetworkTypeResponseBody extends TeaModel {
         private String taskId; 
 
         /**
-         * ConnectionString.
+         * The endpoint that is used to connect to the instance.
          */
         public Builder connectionString(String connectionString) {
             this.connectionString = connectionString;
@@ -70,7 +70,7 @@ public class ModifyDBInstanceNetworkTypeResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -78,7 +78,7 @@ public class ModifyDBInstanceNetworkTypeResponseBody extends TeaModel {
         }
 
         /**
-         * TaskId.
+         * The ID of the task.
          */
         public Builder taskId(String taskId) {
             this.taskId = taskId;

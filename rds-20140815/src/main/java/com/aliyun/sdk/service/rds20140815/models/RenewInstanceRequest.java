@@ -154,7 +154,11 @@ public class RenewInstanceRequest extends Request {
         } 
 
         /**
-         * AutoPay.
+         * Specifies whether payment is automatically made during renewal. Valid values:
+         * <p>
+         * 
+         * *   **True**: enables automatic payment. Make sure that your Alibaba Cloud account has adequate balance.
+         * *   **False** (default): disables automatic payment. You have to manually pay the order in the console. Log on to the ApsaraDB RDS console. In the upper-right corner, choose **Expenses > User Center**. In the left-side navigation pane, click **Orders**. On the page that appears, find your order and complete the payment.
          */
         public Builder autoPay(String autoPay) {
             this.putQueryParameter("AutoPay", autoPay);
@@ -163,7 +167,11 @@ public class RenewInstanceRequest extends Request {
         }
 
         /**
-         * AutoRenew.
+         * Specifies whether to enable auto-renewal for the instance. Valid values:
+         * <p>
+         * 
+         * *   **true**.
+         * *   **false** (default)
          */
         public Builder autoRenew(String autoRenew) {
             this.putQueryParameter("AutoRenew", autoRenew);
@@ -172,7 +180,7 @@ public class RenewInstanceRequest extends Request {
         }
 
         /**
-         * ClientToken.
+         * The client token that is used to ensure the idempotence of the request. You can use the client to generate the token, but you must make sure that the generated token is unique among different requests. The token can contain only ASCII characters and cannot exceed 64 characters in length.
          */
         public Builder clientToken(String clientToken) {
             this.putQueryParameter("ClientToken", clientToken);
@@ -181,7 +189,7 @@ public class RenewInstanceRequest extends Request {
         }
 
         /**
-         * DBInstanceId.
+         * The ID of the instance.
          */
         public Builder DBInstanceId(String DBInstanceId) {
             this.putQueryParameter("DBInstanceId", DBInstanceId);
@@ -199,7 +207,15 @@ public class RenewInstanceRequest extends Request {
         }
 
         /**
-         * Period.
+         * The duration of the subscription renewal. Unit: month. Valid values:
+         * <p>
+         * 
+         * *   **1~9**
+         * *   **12**
+         * *   **24**
+         * *   **36**
+         * *   **48**
+         * *   **60**
          */
         public Builder period(Integer period) {
             this.putQueryParameter("Period", period);

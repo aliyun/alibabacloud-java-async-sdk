@@ -38,7 +38,7 @@ public class ModifyDBInstancePayTypeResponseBody extends TeaModel {
         private Long orderId; 
 
         /**
-         * OrderId.
+         * The ID of the order.
          */
         public Builder orderId(Long orderId) {
             this.orderId = orderId;

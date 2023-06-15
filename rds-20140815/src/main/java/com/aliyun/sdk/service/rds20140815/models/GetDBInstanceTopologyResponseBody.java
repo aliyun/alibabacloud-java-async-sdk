@@ -74,7 +74,7 @@ public class GetDBInstanceTopologyResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * Code.
+         * An internal parameter. You can ignore this parameter.
          */
         public Builder code(String code) {
             this.code = code;
@@ -82,7 +82,7 @@ public class GetDBInstanceTopologyResponseBody extends TeaModel {
         }
 
         /**
-         * Data.
+         * The details about the topology.
          */
         public Builder data(Data data) {
             this.data = data;
@@ -90,7 +90,7 @@ public class GetDBInstanceTopologyResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * An internal parameter. You can ignore this parameter.
          */
         public Builder message(String message) {
             this.message = message;
@@ -98,7 +98,7 @@ public class GetDBInstanceTopologyResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -174,7 +174,7 @@ public class GetDBInstanceTopologyResponseBody extends TeaModel {
             private String zoneId; 
 
             /**
-             * ConnectionString.
+             * The endpoint of the instance.
              */
             public Builder connectionString(String connectionString) {
                 this.connectionString = connectionString;
@@ -182,7 +182,7 @@ public class GetDBInstanceTopologyResponseBody extends TeaModel {
             }
 
             /**
-             * DBInstanceName.
+             * The ID of the instance.
              */
             public Builder DBInstanceName(String DBInstanceName) {
                 this.DBInstanceName = DBInstanceName;
@@ -190,7 +190,11 @@ public class GetDBInstanceTopologyResponseBody extends TeaModel {
             }
 
             /**
-             * NetType.
+             * The network type of the endpoint. Valid values:
+             * <p>
+             * 
+             * *   **vpc**
+             * *   **public**
              */
             public Builder netType(String netType) {
                 this.netType = netType;
@@ -198,7 +202,7 @@ public class GetDBInstanceTopologyResponseBody extends TeaModel {
             }
 
             /**
-             * ZoneId.
+             * The zone ID of the instance.
              */
             public Builder zoneId(String zoneId) {
                 this.zoneId = zoneId;
@@ -299,7 +303,7 @@ public class GetDBInstanceTopologyResponseBody extends TeaModel {
             private String zoneId; 
 
             /**
-             * DBInstanceName.
+             * The ID of the instance.
              */
             public Builder DBInstanceName(String DBInstanceName) {
                 this.DBInstanceName = DBInstanceName;
@@ -307,7 +311,10 @@ public class GetDBInstanceTopologyResponseBody extends TeaModel {
             }
 
             /**
-             * DedicatedHostGroupId.
+             * The ID of the dedicated cluster.
+             * <p>
+             * 
+             * > If the instance does not reside in the specified dedicated cluster, no value is returned.
              */
             public Builder dedicatedHostGroupId(String dedicatedHostGroupId) {
                 this.dedicatedHostGroupId = dedicatedHostGroupId;
@@ -315,7 +322,10 @@ public class GetDBInstanceTopologyResponseBody extends TeaModel {
             }
 
             /**
-             * DedicatedHostId.
+             * The ID of the host on which the instance resides in the dedicated cluster.
+             * <p>
+             * 
+             * > If the instance does not reside in the specified dedicated cluster, no value is returned.
              */
             public Builder dedicatedHostId(String dedicatedHostId) {
                 this.dedicatedHostId = dedicatedHostId;
@@ -323,7 +333,10 @@ public class GetDBInstanceTopologyResponseBody extends TeaModel {
             }
 
             /**
-             * NodeId.
+             * The unique identifier of the instance.
+             * <p>
+             * 
+             * > The value \*\*-1\*\* is returned for an instance that does not reside in a dedicated cluster.
              */
             public Builder nodeId(String nodeId) {
                 this.nodeId = nodeId;
@@ -331,7 +344,11 @@ public class GetDBInstanceTopologyResponseBody extends TeaModel {
             }
 
             /**
-             * Role.
+             * The type of the node. Valid values:
+             * <p>
+             * 
+             * *   **Master**: a primary node
+             * *   **Slave**: a secondary node
              */
             public Builder role(String role) {
                 this.role = role;
@@ -339,7 +356,7 @@ public class GetDBInstanceTopologyResponseBody extends TeaModel {
             }
 
             /**
-             * ZoneId.
+             * The zone ID of the instance.
              */
             public Builder zoneId(String zoneId) {
                 this.zoneId = zoneId;
@@ -404,7 +421,7 @@ public class GetDBInstanceTopologyResponseBody extends TeaModel {
             private java.util.List < Nodes> nodes; 
 
             /**
-             * Connections.
+             * The network connection of the instance.
              */
             public Builder connections(java.util.List < Connections> connections) {
                 this.connections = connections;
@@ -412,7 +429,7 @@ public class GetDBInstanceTopologyResponseBody extends TeaModel {
             }
 
             /**
-             * DBInstanceName.
+             * The ID of the instance.
              */
             public Builder DBInstanceName(String DBInstanceName) {
                 this.DBInstanceName = DBInstanceName;
@@ -420,7 +437,7 @@ public class GetDBInstanceTopologyResponseBody extends TeaModel {
             }
 
             /**
-             * Nodes.
+             * The node information.
              */
             public Builder nodes(java.util.List < Nodes> nodes) {
                 this.nodes = nodes;

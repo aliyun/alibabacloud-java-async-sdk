@@ -110,7 +110,7 @@ public class DescribePGHbaConfigResponseBody extends TeaModel {
         private RunningHbaItems runningHbaItems; 
 
         /**
-         * DBInstanceId.
+         * The ID of the instance.
          */
         public Builder DBInstanceId(String DBInstanceId) {
             this.DBInstanceId = DBInstanceId;
@@ -118,7 +118,7 @@ public class DescribePGHbaConfigResponseBody extends TeaModel {
         }
 
         /**
-         * DefaultHbaItems.
+         * An array that consists of the default configuration items in the pg_hba.conf file.
          */
         public Builder defaultHbaItems(DefaultHbaItems defaultHbaItems) {
             this.defaultHbaItems = defaultHbaItems;
@@ -126,7 +126,7 @@ public class DescribePGHbaConfigResponseBody extends TeaModel {
         }
 
         /**
-         * HbaModifyTime.
+         * The time when the previous modification was made to the pg_hba.conf file.
          */
         public Builder hbaModifyTime(String hbaModifyTime) {
             this.hbaModifyTime = hbaModifyTime;
@@ -134,7 +134,14 @@ public class DescribePGHbaConfigResponseBody extends TeaModel {
         }
 
         /**
-         * LastModifyStatus.
+         * The status of the previous modification to the pg_hba.conf file.
+         * <p>
+         * 
+         * Valid values:
+         * 
+         * *   **success**: The modification is successful.
+         * *   **setting**: The modification is being applied.
+         * *   **failed**: The modification fails.
          */
         public Builder lastModifyStatus(String lastModifyStatus) {
             this.lastModifyStatus = lastModifyStatus;
@@ -142,7 +149,7 @@ public class DescribePGHbaConfigResponseBody extends TeaModel {
         }
 
         /**
-         * ModifyStatusReason.
+         * The reason why the previous modification was made to the pg_hba.conf file.
          */
         public Builder modifyStatusReason(String modifyStatusReason) {
             this.modifyStatusReason = modifyStatusReason;
@@ -150,7 +157,7 @@ public class DescribePGHbaConfigResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -158,7 +165,7 @@ public class DescribePGHbaConfigResponseBody extends TeaModel {
         }
 
         /**
-         * RunningHbaItems.
+         * An array that consists of the current configuration items in the pg_hba.conf file.
          */
         public Builder runningHbaItems(RunningHbaItems runningHbaItems) {
             this.runningHbaItems = runningHbaItems;
@@ -282,7 +289,7 @@ public class DescribePGHbaConfigResponseBody extends TeaModel {
             private String user; 
 
             /**
-             * Address.
+             * The IP addresses from which the specified users can access the specified databases. The value is fixed as 0.0.0.0/0.
              */
             public Builder address(String address) {
                 this.address = address;
@@ -290,7 +297,7 @@ public class DescribePGHbaConfigResponseBody extends TeaModel {
             }
 
             /**
-             * Database.
+             * The names of the databases that the specified users are allowed to access. The value is fixed as all or replication.
              */
             public Builder database(String database) {
                 this.database = database;
@@ -298,7 +305,7 @@ public class DescribePGHbaConfigResponseBody extends TeaModel {
             }
 
             /**
-             * Mask.
+             * The mask of the instance. The value is fixed as null.
              */
             public Builder mask(String mask) {
                 this.mask = mask;
@@ -306,7 +313,7 @@ public class DescribePGHbaConfigResponseBody extends TeaModel {
             }
 
             /**
-             * Method.
+             * The authentication method. The value is fixed as md5.
              */
             public Builder method(String method) {
                 this.method = method;
@@ -314,7 +321,7 @@ public class DescribePGHbaConfigResponseBody extends TeaModel {
             }
 
             /**
-             * Option.
+             * The value of this parameter is based on the value of the Method parameter. The value is fixed as null.
              */
             public Builder option(String option) {
                 this.option = option;
@@ -322,7 +329,7 @@ public class DescribePGHbaConfigResponseBody extends TeaModel {
             }
 
             /**
-             * PriorityId.
+             * The priority of the configuration items in the pg_hba.conf file. This value is automatically generated.
              */
             public Builder priorityId(Integer priorityId) {
                 this.priorityId = priorityId;
@@ -330,7 +337,7 @@ public class DescribePGHbaConfigResponseBody extends TeaModel {
             }
 
             /**
-             * Type.
+             * The type of connection to the instance. The value is fixed as host.
              */
             public Builder type(String type) {
                 this.type = type;
@@ -338,7 +345,7 @@ public class DescribePGHbaConfigResponseBody extends TeaModel {
             }
 
             /**
-             * User.
+             * The user that is allowed to access the instance. The value is fixed as all.
              */
             public Builder user(String user) {
                 this.user = user;
@@ -504,7 +511,7 @@ public class DescribePGHbaConfigResponseBody extends TeaModel {
             private String user; 
 
             /**
-             * Address.
+             * The IP address of the client.
              */
             public Builder address(String address) {
                 this.address = address;
@@ -512,7 +519,7 @@ public class DescribePGHbaConfigResponseBody extends TeaModel {
             }
 
             /**
-             * Database.
+             * The name of the database that the specified users are allowed to access.
              */
             public Builder database(String database) {
                 this.database = database;
@@ -520,7 +527,7 @@ public class DescribePGHbaConfigResponseBody extends TeaModel {
             }
 
             /**
-             * Mask.
+             * The mask of the instance.
              */
             public Builder mask(String mask) {
                 this.mask = mask;
@@ -528,7 +535,7 @@ public class DescribePGHbaConfigResponseBody extends TeaModel {
             }
 
             /**
-             * Method.
+             * The authentication method.
              */
             public Builder method(String method) {
                 this.method = method;
@@ -536,7 +543,7 @@ public class DescribePGHbaConfigResponseBody extends TeaModel {
             }
 
             /**
-             * Option.
+             * The value of this parameter varies based on the value of the Method parameter. The value is fixed as null.
              */
             public Builder option(String option) {
                 this.option = option;
@@ -544,7 +551,7 @@ public class DescribePGHbaConfigResponseBody extends TeaModel {
             }
 
             /**
-             * PriorityId.
+             * The priority of the instance.
              */
             public Builder priorityId(Integer priorityId) {
                 this.priorityId = priorityId;
@@ -552,7 +559,12 @@ public class DescribePGHbaConfigResponseBody extends TeaModel {
             }
 
             /**
-             * Type.
+             * The type of the connection. 
+             * <p>
+             * 
+             * - **host**: The record matches TCP/IP connections, including SSL connections and non-SSL connections.
+             * - **hostssl**: The record matches only TCP/IP connections that are established over SSL.
+             * - **hostnossl**: The record matches only TCP/IP connections that are not established over SSL.
              */
             public Builder type(String type) {
                 this.type = type;
@@ -560,7 +572,7 @@ public class DescribePGHbaConfigResponseBody extends TeaModel {
             }
 
             /**
-             * User.
+             * The username of the account that is used to connect to the instance.
              */
             public Builder user(String user) {
                 this.user = user;

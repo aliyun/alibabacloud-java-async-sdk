@@ -181,7 +181,10 @@ public class ModifyReadWriteSplittingConnectionRequest extends Request {
         } 
 
         /**
-         * ConnectionStringPrefix.
+         * The prefix of the read/write splitting endpoint. The prefix must be unique. It can be up to 30 characters in length and can contain lowercase letters and hyphens (-). It must start with a lowercase letter.
+         * <p>
+         * 
+         * > The default prefix consists of the name of the primary instance followed by the letters rw.
          */
         public Builder connectionStringPrefix(String connectionStringPrefix) {
             this.putQueryParameter("ConnectionStringPrefix", connectionStringPrefix);
@@ -190,7 +193,7 @@ public class ModifyReadWriteSplittingConnectionRequest extends Request {
         }
 
         /**
-         * DBInstanceId.
+         * The ID of the primary instance.
          */
         public Builder DBInstanceId(String DBInstanceId) {
             this.putQueryParameter("DBInstanceId", DBInstanceId);
@@ -199,7 +202,13 @@ public class ModifyReadWriteSplittingConnectionRequest extends Request {
         }
 
         /**
-         * DistributionType.
+         * The method that is used to assign read weights. Valid values:
+         * <p>
+         * 
+         * *   **Standard**: The system automatically assigns read weights to the primary and read-only instances based on the specifications of these instances.
+         * *   **Custom**: You must manually assign a read weight to each instance.
+         * 
+         * > You must specify at least one of **MaxDelayTime** and **DistributionType**.
          */
         public Builder distributionType(String distributionType) {
             this.putQueryParameter("DistributionType", distributionType);
@@ -208,7 +217,14 @@ public class ModifyReadWriteSplittingConnectionRequest extends Request {
         }
 
         /**
-         * MaxDelayTime.
+         * The latency threshold that is allowed by the read/write splitting link. Unit: seconds. If the latency on a read-only instance exceeds the specified threshold, the system no longer routes read requests to the read-only instance. If you do not specify this parameter, the default value of this parameter is retained.
+         * <p>
+         * 
+         * > 
+         * 
+         * *   If the primary instance runs SQL Server 2017 on RDS Cluster Edition, the **MaxDelayTime** parameter is not supported.
+         * 
+         * *   You must specify at least one of **MaxDelayTime** and **DistributionType**.
          */
         public Builder maxDelayTime(String maxDelayTime) {
             this.putQueryParameter("MaxDelayTime", maxDelayTime);
@@ -235,7 +251,7 @@ public class ModifyReadWriteSplittingConnectionRequest extends Request {
         }
 
         /**
-         * Port.
+         * The port that is associated with the read/write splitting endpoint.
          */
         public Builder port(String port) {
             this.putQueryParameter("Port", port);
@@ -262,7 +278,17 @@ public class ModifyReadWriteSplittingConnectionRequest extends Request {
         }
 
         /**
-         * Weight.
+         * The read weights of the primary instance and its read-only instances. A read weight must be a multiple of 100 and cannot exceed 10,000.
+         * <p>
+         * 
+         * *   For ApsaraDB RDS instances, the value of this parameter is in the following format: `{"<ID of the read-only instance >":<Weight>,"master":<Weight>,"slave":<Weight>}`.
+         * *   For ApsaraDB MyBase instances, the value of this parameter is in the following format: `[{"instanceName":"<ID of the primary instance>","weight":<Weight>,"role":"master"},{"instanceName":"<ID of the primary instance>","weight":<Weight>,"role":"slave"},{"instanceName":"<ID of the read-only instance>","weight":<Weight>,"role":"master"}]`
+         * 
+         * > 
+         * 
+         * *   This parameter must be specified when **DistributionType** is set to **Custom**.
+         * 
+         * *   If **DistributionType** is set to **Standard**, this parameter is invalid.
          */
         public Builder weight(String weight) {
             this.putQueryParameter("Weight", weight);

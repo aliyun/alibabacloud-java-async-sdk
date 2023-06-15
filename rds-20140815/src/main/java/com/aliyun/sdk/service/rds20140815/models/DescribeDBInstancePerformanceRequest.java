@@ -128,7 +128,7 @@ public class DescribeDBInstancePerformanceRequest extends Request {
         } 
 
         /**
-         * DBInstanceId.
+         * The ID of the instance. You can call the [DescribeDBInstances](~~26232~~) operation to query the ID of the instance.
          */
         public Builder DBInstanceId(String DBInstanceId) {
             this.putQueryParameter("DBInstanceId", DBInstanceId);
@@ -137,7 +137,10 @@ public class DescribeDBInstancePerformanceRequest extends Request {
         }
 
         /**
-         * EndTime.
+         * The end of the time range to query. The time follows the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm*Z format. The time is displayed in UTC.
+         * <p>
+         * 
+         * >  The time span between the beginning time and the end time must be longer than the monitoring frequency. Otherwise, this operation may return an empty array.
          */
         public Builder endTime(String endTime) {
             this.putQueryParameter("EndTime", endTime);
@@ -146,7 +149,10 @@ public class DescribeDBInstancePerformanceRequest extends Request {
         }
 
         /**
-         * Key.
+         * The performance metric that you want to query. If you enter more than one performance metric, separate them with commas (,). You can enter up to 30 performance metrics. For more information, see [Performance parameters](~~26316~~).
+         * <p>
+         * 
+         * >  If you set the **Key** parameter to **MySQL_SpaceUsage** or **SQLServer_SpaceUsage**, you can query the performance metric only over one day.
          */
         public Builder key(String key) {
             this.putQueryParameter("Key", key);
@@ -155,7 +161,7 @@ public class DescribeDBInstancePerformanceRequest extends Request {
         }
 
         /**
-         * NodeId.
+         * The unique ID of the instance.
          */
         public Builder nodeId(String nodeId) {
             this.putQueryParameter("NodeId", nodeId);
@@ -173,7 +179,10 @@ public class DescribeDBInstancePerformanceRequest extends Request {
         }
 
         /**
-         * StartTime.
+         * The beginning of the time range to query. Specify the time in the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm*Z format. The time must be in UTC.
+         * <p>
+         * 
+         * >  The time span between the beginning time and the end time must be longer than the monitoring frequency. Otherwise, this operation may return an empty array.
          */
         public Builder startTime(String startTime) {
             this.putQueryParameter("StartTime", startTime);

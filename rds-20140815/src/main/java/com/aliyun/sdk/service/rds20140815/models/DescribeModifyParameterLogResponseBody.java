@@ -122,7 +122,7 @@ public class DescribeModifyParameterLogResponseBody extends TeaModel {
         private Integer totalRecordCount; 
 
         /**
-         * DBInstanceId.
+         * The ID of the RDS instance.
          */
         public Builder DBInstanceId(String DBInstanceId) {
             this.DBInstanceId = DBInstanceId;
@@ -130,7 +130,7 @@ public class DescribeModifyParameterLogResponseBody extends TeaModel {
         }
 
         /**
-         * Engine.
+         * The database engine that the RDS instance runs.
          */
         public Builder engine(String engine) {
             this.engine = engine;
@@ -138,7 +138,7 @@ public class DescribeModifyParameterLogResponseBody extends TeaModel {
         }
 
         /**
-         * EngineVersion.
+         * The version of the database engine that the RDS instance runs.
          */
         public Builder engineVersion(String engineVersion) {
             this.engineVersion = engineVersion;
@@ -146,7 +146,7 @@ public class DescribeModifyParameterLogResponseBody extends TeaModel {
         }
 
         /**
-         * Items.
+         * An array that consists of parameter reconfiguration log entries.
          */
         public Builder items(Items items) {
             this.items = items;
@@ -154,7 +154,7 @@ public class DescribeModifyParameterLogResponseBody extends TeaModel {
         }
 
         /**
-         * PageNumber.
+         * The page number of the returned page.
          */
         public Builder pageNumber(Integer pageNumber) {
             this.pageNumber = pageNumber;
@@ -162,7 +162,7 @@ public class DescribeModifyParameterLogResponseBody extends TeaModel {
         }
 
         /**
-         * PageRecordCount.
+         * The number of entries returned per page.
          */
         public Builder pageRecordCount(Integer pageRecordCount) {
             this.pageRecordCount = pageRecordCount;
@@ -170,7 +170,7 @@ public class DescribeModifyParameterLogResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -178,7 +178,7 @@ public class DescribeModifyParameterLogResponseBody extends TeaModel {
         }
 
         /**
-         * TotalRecordCount.
+         * The total number of entries returned.
          */
         public Builder totalRecordCount(Integer totalRecordCount) {
             this.totalRecordCount = totalRecordCount;
@@ -266,7 +266,7 @@ public class DescribeModifyParameterLogResponseBody extends TeaModel {
             private String status; 
 
             /**
-             * ModifyTime.
+             * The time when the parameter was reconfigured. This value is a UNIX timestamp. Unit: milliseconds.
              */
             public Builder modifyTime(String modifyTime) {
                 this.modifyTime = modifyTime;
@@ -274,7 +274,7 @@ public class DescribeModifyParameterLogResponseBody extends TeaModel {
             }
 
             /**
-             * NewParameterValue.
+             * The new value of the parameter.
              */
             public Builder newParameterValue(String newParameterValue) {
                 this.newParameterValue = newParameterValue;
@@ -282,7 +282,7 @@ public class DescribeModifyParameterLogResponseBody extends TeaModel {
             }
 
             /**
-             * OldParameterValue.
+             * The original value of the parameter.
              */
             public Builder oldParameterValue(String oldParameterValue) {
                 this.oldParameterValue = oldParameterValue;
@@ -290,7 +290,7 @@ public class DescribeModifyParameterLogResponseBody extends TeaModel {
             }
 
             /**
-             * ParameterName.
+             * The name of the parameter.
              */
             public Builder parameterName(String parameterName) {
                 this.parameterName = parameterName;
@@ -298,7 +298,11 @@ public class DescribeModifyParameterLogResponseBody extends TeaModel {
             }
 
             /**
-             * Status.
+             * The status of the new value specified for the parameter. Valid values:
+             * <p>
+             * 
+             * *   **Applied:** The new value has taken effect.
+             * *   **Syncing:** The new value is being applied and has not taken effect.
              */
             public Builder status(String status) {
                 this.status = status;

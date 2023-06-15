@@ -86,7 +86,7 @@ public class DescribeDBInstancesByExpireTimeResponseBody extends TeaModel {
         private Integer totalRecordCount; 
 
         /**
-         * Items.
+         * An array that consists of the details about the instances.
          */
         public Builder items(Items items) {
             this.items = items;
@@ -94,7 +94,10 @@ public class DescribeDBInstancesByExpireTimeResponseBody extends TeaModel {
         }
 
         /**
-         * PageNumber.
+         * The page number of the returned page. Valid values: any **non-zero** positive integer.
+         * <p>
+         * 
+         * Default value: **1**.
          */
         public Builder pageNumber(Integer pageNumber) {
             this.pageNumber = pageNumber;
@@ -102,7 +105,7 @@ public class DescribeDBInstancesByExpireTimeResponseBody extends TeaModel {
         }
 
         /**
-         * PageRecordCount.
+         * The number of instances returned on the current page.
          */
         public Builder pageRecordCount(Integer pageRecordCount) {
             this.pageRecordCount = pageRecordCount;
@@ -110,7 +113,7 @@ public class DescribeDBInstancesByExpireTimeResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -118,7 +121,7 @@ public class DescribeDBInstancesByExpireTimeResponseBody extends TeaModel {
         }
 
         /**
-         * TotalRecordCount.
+         * The total number of returned entries.
          */
         public Builder totalRecordCount(Integer totalRecordCount) {
             this.totalRecordCount = totalRecordCount;
@@ -218,7 +221,7 @@ public class DescribeDBInstancesByExpireTimeResponseBody extends TeaModel {
             private String payType; 
 
             /**
-             * DBInstanceDescription.
+             * The description of the instance.
              */
             public Builder DBInstanceDescription(String DBInstanceDescription) {
                 this.DBInstanceDescription = DBInstanceDescription;
@@ -226,7 +229,7 @@ public class DescribeDBInstancesByExpireTimeResponseBody extends TeaModel {
             }
 
             /**
-             * DBInstanceId.
+             * The ID of the instance.
              */
             public Builder DBInstanceId(String DBInstanceId) {
                 this.DBInstanceId = DBInstanceId;
@@ -234,7 +237,7 @@ public class DescribeDBInstancesByExpireTimeResponseBody extends TeaModel {
             }
 
             /**
-             * DBInstanceStatus.
+             * The status of the instance. For more information, see [Instance state table](~~26315~~).
              */
             public Builder DBInstanceStatus(String DBInstanceStatus) {
                 this.DBInstanceStatus = DBInstanceStatus;
@@ -242,7 +245,10 @@ public class DescribeDBInstancesByExpireTimeResponseBody extends TeaModel {
             }
 
             /**
-             * ExpireTime.
+             * The expiration date and time of the instance. The time follows the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time is displayed in UTC.
+             * <p>
+             * 
+             * > Pay-as-you-go instances never expire.
              */
             public Builder expireTime(String expireTime) {
                 this.expireTime = expireTime;
@@ -250,7 +256,15 @@ public class DescribeDBInstancesByExpireTimeResponseBody extends TeaModel {
             }
 
             /**
-             * LockMode.
+             * The lock mode of the instance. Valid values:
+             * <p>
+             * 
+             * *   **Unlock**: The instance is not locked.
+             * *   **ManualLock**: The instance is manually locked.
+             * *   **LockByExpiration**: The instance is automatically locked after it expires.
+             * *   **LockByRestoration**: The instance is automatically locked before it is rolled back.
+             * *   **LockByDiskQuota**: The instance is automatically locked after its storage capacity is exhausted.
+             * *   **LockReadInstanceByDiskQuota**: The instance is a read-only instance and is automatically locked after its storage capacity is exhausted.
              */
             public Builder lockMode(String lockMode) {
                 this.lockMode = lockMode;
@@ -258,7 +272,11 @@ public class DescribeDBInstancesByExpireTimeResponseBody extends TeaModel {
             }
 
             /**
-             * PayType.
+             * The billing method of the instance. Valid values:
+             * <p>
+             * 
+             * *   **Postpaid**: pay-as-you-go
+             * *   **Prepaid**: subscription
              */
             public Builder payType(String payType) {
                 this.payType = payType;

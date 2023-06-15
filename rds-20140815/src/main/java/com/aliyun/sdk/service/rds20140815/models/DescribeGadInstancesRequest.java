@@ -82,7 +82,13 @@ public class DescribeGadInstancesRequest extends Request {
         } 
 
         /**
-         * GadInstanceName.
+         * The ID of the single global active database cluster that you want to query.
+         * <p>
+         * 
+         * *   If you leave this parameter empty, this operation returns the details about all global active database clusters that are created within your Alibaba Cloud account.
+         * *   If you specify this parameter, this operation returns the details about the single global active database cluster that you specify.
+         * 
+         * >  You can call this operation with this parameter left empty to query the details about all global active database clusters that are created within your Alibaba Cloud account. Then, you can call this operation again with this parameter specified to query the details about the single global active database cluster that you specify.
          */
         public Builder gadInstanceName(String gadInstanceName) {
             this.putQueryParameter("GadInstanceName", gadInstanceName);
@@ -91,7 +97,7 @@ public class DescribeGadInstancesRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * The ID of the region where the global active database clusters that you want to query reside. You can call the [DescribeRegions](~~26243~~) operation to query the most recent region list.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -100,7 +106,7 @@ public class DescribeGadInstancesRequest extends Request {
         }
 
         /**
-         * ResourceGroupId.
+         * The ID of the resource group.
          */
         public Builder resourceGroupId(String resourceGroupId) {
             this.putQueryParameter("ResourceGroupId", resourceGroupId);

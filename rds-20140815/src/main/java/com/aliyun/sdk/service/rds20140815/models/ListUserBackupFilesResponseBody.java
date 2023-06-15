@@ -50,7 +50,7 @@ public class ListUserBackupFilesResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * Records.
+         * An array that consists of the information about the full backup files that are returned.
          */
         public Builder records(java.util.List < Records> records) {
             this.records = records;
@@ -58,7 +58,7 @@ public class ListUserBackupFilesResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -314,7 +314,7 @@ public class ListUserBackupFilesResponseBody extends TeaModel {
             private String zoneId; 
 
             /**
-             * BackupId.
+             * The ID of the full backup file.
              */
             public Builder backupId(String backupId) {
                 this.backupId = backupId;
@@ -322,7 +322,7 @@ public class ListUserBackupFilesResponseBody extends TeaModel {
             }
 
             /**
-             * BinlogInfo.
+             * The information about the binary log file that contains incremental data. If incremental data is generated during the full backup, this parameter is returned.
              */
             public Builder binlogInfo(String binlogInfo) {
                 this.binlogInfo = binlogInfo;
@@ -330,7 +330,7 @@ public class ListUserBackupFilesResponseBody extends TeaModel {
             }
 
             /**
-             * Comment.
+             * The description of the full backup file.
              */
             public Builder comment(String comment) {
                 this.comment = comment;
@@ -338,7 +338,7 @@ public class ListUserBackupFilesResponseBody extends TeaModel {
             }
 
             /**
-             * CreationTime.
+             * The time when the system started to import the full backup file. The value is a UNIX timestamp. Unit: milliseconds.
              */
             public Builder creationTime(String creationTime) {
                 this.creationTime = creationTime;
@@ -346,7 +346,7 @@ public class ListUserBackupFilesResponseBody extends TeaModel {
             }
 
             /**
-             * Engine.
+             * The database engine of the instance.
              */
             public Builder engine(String engine) {
                 this.engine = engine;
@@ -354,7 +354,7 @@ public class ListUserBackupFilesResponseBody extends TeaModel {
             }
 
             /**
-             * EngineVersion.
+             * The database engine version of the instance.
              */
             public Builder engineVersion(String engineVersion) {
                 this.engineVersion = engineVersion;
@@ -362,7 +362,7 @@ public class ListUserBackupFilesResponseBody extends TeaModel {
             }
 
             /**
-             * FinishTime.
+             * The time when the full backup file is successfully imported. The value is a UNIX timestamp. Unit: milliseconds.
              */
             public Builder finishTime(String finishTime) {
                 this.finishTime = finishTime;
@@ -370,7 +370,7 @@ public class ListUserBackupFilesResponseBody extends TeaModel {
             }
 
             /**
-             * ModificationTime.
+             * The time when the full backup file is successfully imported. The value is a UNIX timestamp. Unit: milliseconds.
              */
             public Builder modificationTime(String modificationTime) {
                 this.modificationTime = modificationTime;
@@ -378,7 +378,7 @@ public class ListUserBackupFilesResponseBody extends TeaModel {
             }
 
             /**
-             * OssBucket.
+             * The name of the OSS bucket in which the full backup file is stored as an object.
              */
             public Builder ossBucket(String ossBucket) {
                 this.ossBucket = ossBucket;
@@ -386,7 +386,7 @@ public class ListUserBackupFilesResponseBody extends TeaModel {
             }
 
             /**
-             * OssFileMetaData.
+             * The metadata of the full backup file. For more information, see [Manage object metadata](~~31859~~).
              */
             public Builder ossFileMetaData(String ossFileMetaData) {
                 this.ossFileMetaData = ossFileMetaData;
@@ -394,7 +394,7 @@ public class ListUserBackupFilesResponseBody extends TeaModel {
             }
 
             /**
-             * OssFileName.
+             * The name of the full backup file that is stored as an object in an OSS bucket.
              */
             public Builder ossFileName(String ossFileName) {
                 this.ossFileName = ossFileName;
@@ -402,7 +402,7 @@ public class ListUserBackupFilesResponseBody extends TeaModel {
             }
 
             /**
-             * OssFilePath.
+             * The path of the full backup file that is stored as an object in an OSS bucket.
              */
             public Builder ossFilePath(String ossFilePath) {
                 this.ossFilePath = ossFilePath;
@@ -410,7 +410,7 @@ public class ListUserBackupFilesResponseBody extends TeaModel {
             }
 
             /**
-             * OssFileSize.
+             * The size of the full backup file that is stored as an object in an OSS bucket. Unit: KB.
              */
             public Builder ossFileSize(Long ossFileSize) {
                 this.ossFileSize = ossFileSize;
@@ -418,7 +418,7 @@ public class ListUserBackupFilesResponseBody extends TeaModel {
             }
 
             /**
-             * OssUrl.
+             * The URL to download the full backup file from the OSS bucket.
              */
             public Builder ossUrl(String ossUrl) {
                 this.ossUrl = ossUrl;
@@ -426,7 +426,7 @@ public class ListUserBackupFilesResponseBody extends TeaModel {
             }
 
             /**
-             * Reason.
+             * The reason why the full backup file failed to be imported.
              */
             public Builder reason(String reason) {
                 this.reason = reason;
@@ -434,7 +434,7 @@ public class ListUserBackupFilesResponseBody extends TeaModel {
             }
 
             /**
-             * RestoreSize.
+             * The amount of storage that is required to restore the data of the full backup file. Unit: GB.
              */
             public Builder restoreSize(String restoreSize) {
                 this.restoreSize = restoreSize;
@@ -442,7 +442,7 @@ public class ListUserBackupFilesResponseBody extends TeaModel {
             }
 
             /**
-             * Retention.
+             * The retention period of the full backup file. Unit: days.
              */
             public Builder retention(Integer retention) {
                 this.retention = retention;
@@ -450,7 +450,14 @@ public class ListUserBackupFilesResponseBody extends TeaModel {
             }
 
             /**
-             * Status.
+             * The status of the full backup file. Valid values:
+             * <p>
+             * 
+             * *   **Importing**: The full backup file is being imported.
+             * *   **Failed**: The full backup file fails to be imported.
+             * *   **CheckSucccess**: The full backup file passes the check.
+             * *   **BackupSuccess**: The full backup file is imported.
+             * *   **Deleted**: The full backup file is deleted.
              */
             public Builder status(String status) {
                 this.status = status;
@@ -458,7 +465,7 @@ public class ListUserBackupFilesResponseBody extends TeaModel {
             }
 
             /**
-             * ZoneId.
+             * The zone ID of the full backup file.
              */
             public Builder zoneId(String zoneId) {
                 this.zoneId = zoneId;

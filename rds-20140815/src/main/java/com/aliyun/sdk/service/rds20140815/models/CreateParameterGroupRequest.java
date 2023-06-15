@@ -171,7 +171,11 @@ public class CreateParameterGroupRequest extends Request {
         } 
 
         /**
-         * Engine.
+         * The database engine. Valid values:
+         * <p>
+         * 
+         * *   **mysql**
+         * *   **PostgreSQL**
          */
         public Builder engine(String engine) {
             this.putQueryParameter("Engine", engine);
@@ -180,7 +184,23 @@ public class CreateParameterGroupRequest extends Request {
         }
 
         /**
-         * EngineVersion.
+         * The database engine version of the instance.
+         * <p>
+         * 
+         * *   If the instance runs MySQL, the instance must run one of the following MySQL versions:
+         * 
+         *     *   **5.6**
+         *     *   **5.7**
+         *     *   **8.0**
+         * 
+         * *   If the instance runs PostgreSQL, the instance must run one of the following PostgreSQL versions:
+         * 
+         *     *   **10.0**
+         *     *   **11.0**
+         *     *   **12.0**
+         *     *   **13.0**
+         *     *   **14.0**
+         *     *   **15.0**
          */
         public Builder engineVersion(String engineVersion) {
             this.putQueryParameter("EngineVersion", engineVersion);
@@ -198,7 +218,7 @@ public class CreateParameterGroupRequest extends Request {
         }
 
         /**
-         * ParameterGroupDesc.
+         * The description of the parameter template. The value can be up to 200 characters in length.
          */
         public Builder parameterGroupDesc(String parameterGroupDesc) {
             this.putQueryParameter("ParameterGroupDesc", parameterGroupDesc);
@@ -207,7 +227,11 @@ public class CreateParameterGroupRequest extends Request {
         }
 
         /**
-         * ParameterGroupName.
+         * The name of the parameter template.
+         * <p>
+         * 
+         * *   The value must start with a letter and can contain letters, digits, periods (.), and underscores (\_).
+         * *   The value can be 8 to 64 characters in length.
          */
         public Builder parameterGroupName(String parameterGroupName) {
             this.putQueryParameter("ParameterGroupName", parameterGroupName);
@@ -216,7 +240,7 @@ public class CreateParameterGroupRequest extends Request {
         }
 
         /**
-         * Parameters.
+         * A JSON string that consists of parameters and their values in the parameter template. Format: {"Parameter 1":"Value of Parameter 1","Parameter 2":"Value of Parameter 2"...}. For more information about the parameters that can be modified, see [Modify the parameters of an ApsaraDB RDS for MySQL instance](~~96063~~) or [Modify the parameters of an ApsaraDB RDS for PostgreSQL instance](~~96751~~).
          */
         public Builder parameters(String parameters) {
             this.putQueryParameter("Parameters", parameters);
@@ -225,7 +249,7 @@ public class CreateParameterGroupRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * The region ID of the parameter template. You can call the [DescribeRegions](~~26243~~) operation to query the most recent region list.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);

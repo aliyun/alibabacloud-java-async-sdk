@@ -183,7 +183,10 @@ public class ModifyDBInstanceEndpointAddressRequest extends Request {
         } 
 
         /**
-         * ClientToken.
+         * The client token that is used to ensure the idempotence of the request. You can use the client to generate the token, but you must make sure that the token is unique among different requests.
+         * <p>
+         * 
+         * The token can contain only ASCII characters and cannot exceed 64 characters in length.
          */
         public Builder clientToken(String clientToken) {
             this.putQueryParameter("ClientToken", clientToken);
@@ -192,7 +195,7 @@ public class ModifyDBInstanceEndpointAddressRequest extends Request {
         }
 
         /**
-         * 修改的目标连接串
+         * The endpoint that you want to modify. The endpoint can be a public endpoint or an internal endpoint.
          */
         public Builder connectionString(String connectionString) {
             this.putQueryParameter("ConnectionString", connectionString);
@@ -201,7 +204,7 @@ public class ModifyDBInstanceEndpointAddressRequest extends Request {
         }
 
         /**
-         * 连接串前缀
+         * The prefix of the new endpoint. You can modify only the prefix of the endpoint that is specified by the ConnectionString parameter.
          */
         public Builder connectionStringPrefix(String connectionStringPrefix) {
             this.putQueryParameter("ConnectionStringPrefix", connectionStringPrefix);
@@ -210,7 +213,7 @@ public class ModifyDBInstanceEndpointAddressRequest extends Request {
         }
 
         /**
-         * EndpointId
+         * The endpoint ID of the instance. You can call the [DescribeDBInstanceEndpoints](~~610488~~) operation to query the endpoint ID of the instance.
          */
         public Builder DBInstanceEndpointId(String DBInstanceEndpointId) {
             this.putQueryParameter("DBInstanceEndpointId", DBInstanceEndpointId);
@@ -219,7 +222,7 @@ public class ModifyDBInstanceEndpointAddressRequest extends Request {
         }
 
         /**
-         * DBInstanceId.
+         * The ID of the instance. You can call the [DescribeDBInstances](~~26232~~) operation to query the ID of the instance.
          */
         public Builder DBInstanceId(String DBInstanceId) {
             this.putQueryParameter("DBInstanceId", DBInstanceId);
@@ -228,7 +231,7 @@ public class ModifyDBInstanceEndpointAddressRequest extends Request {
         }
 
         /**
-         * 连接端口
+         * The port number of the new endpoint.
          */
         public Builder port(String port) {
             this.putQueryParameter("Port", port);
@@ -237,7 +240,7 @@ public class ModifyDBInstanceEndpointAddressRequest extends Request {
         }
 
         /**
-         * 私网IP地址
+         * The IP address of the internal endpoint.
          */
         public Builder privateIpAddress(String privateIpAddress) {
             this.putQueryParameter("PrivateIpAddress", privateIpAddress);
@@ -255,7 +258,7 @@ public class ModifyDBInstanceEndpointAddressRequest extends Request {
         }
 
         /**
-         * vSwitchID
+         * The vSwitch ID of the internal endpoint.
          */
         public Builder vSwitchId(String vSwitchId) {
             this.putQueryParameter("VSwitchId", vSwitchId);
@@ -264,7 +267,7 @@ public class ModifyDBInstanceEndpointAddressRequest extends Request {
         }
 
         /**
-         * vpcID
+         * The VPC ID of the internal endpoint.
          */
         public Builder vpcId(String vpcId) {
             this.putQueryParameter("VpcId", vpcId);

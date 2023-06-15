@@ -62,7 +62,7 @@ public class MigrateDBInstanceResponseBody extends TeaModel {
         private Integer taskId; 
 
         /**
-         * MigrationId.
+         * The serial number of the task in the migration task queue. When the serial number becomes 0, the system starts the migration.
          */
         public Builder migrationId(Integer migrationId) {
             this.migrationId = migrationId;
@@ -70,7 +70,7 @@ public class MigrateDBInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -78,7 +78,7 @@ public class MigrateDBInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * TaskId.
+         * The ID of the task.
          */
         public Builder taskId(Integer taskId) {
             this.taskId = taskId;

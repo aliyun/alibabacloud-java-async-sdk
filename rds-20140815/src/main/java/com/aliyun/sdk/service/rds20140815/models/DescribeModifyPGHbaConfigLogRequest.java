@@ -167,7 +167,7 @@ public class DescribeModifyPGHbaConfigLogRequest extends Request {
         } 
 
         /**
-         * ClientToken.
+         * This parameter is reserved. You do not need to specify this parameter.
          */
         public Builder clientToken(String clientToken) {
             this.putQueryParameter("ClientToken", clientToken);
@@ -176,7 +176,7 @@ public class DescribeModifyPGHbaConfigLogRequest extends Request {
         }
 
         /**
-         * DBInstanceId.
+         * You can call the [DescribeDBInstances](~~26232~~) operation to query the ID of the instance.
          */
         public Builder DBInstanceId(String DBInstanceId) {
             this.putQueryParameter("DBInstanceId", DBInstanceId);
@@ -185,7 +185,7 @@ public class DescribeModifyPGHbaConfigLogRequest extends Request {
         }
 
         /**
-         * EndTime.
+         * The end of the time range to query. Specify the time in the yyyy-MM-ddTHH:mmZ format. The time must be in UTC.
          */
         public Builder endTime(String endTime) {
             this.putQueryParameter("EndTime", endTime);
@@ -212,7 +212,7 @@ public class DescribeModifyPGHbaConfigLogRequest extends Request {
         }
 
         /**
-         * ResourceGroupId.
+         * The ID of the resource group.
          */
         public Builder resourceGroupId(String resourceGroupId) {
             this.putQueryParameter("ResourceGroupId", resourceGroupId);
@@ -239,7 +239,7 @@ public class DescribeModifyPGHbaConfigLogRequest extends Request {
         }
 
         /**
-         * StartTime.
+         * The beginning of the time range to query. Specify the time in the yyyy-MM-ddTHH:mmZ format. The time must be in UTC.
          */
         public Builder startTime(String startTime) {
             this.putQueryParameter("StartTime", startTime);

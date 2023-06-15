@@ -112,7 +112,7 @@ public class UnlockAccountRequest extends Request {
         } 
 
         /**
-         * AccountName.
+         * The account that you want to unlock. You can unlock only one account at a time.
          */
         public Builder accountName(String accountName) {
             this.putQueryParameter("AccountName", accountName);
@@ -121,7 +121,7 @@ public class UnlockAccountRequest extends Request {
         }
 
         /**
-         * DBInstanceId.
+         * The ID of the ApsaraDB RDS for PostgreSQL instance.
          */
         public Builder DBInstanceId(String DBInstanceId) {
             this.putQueryParameter("DBInstanceId", DBInstanceId);

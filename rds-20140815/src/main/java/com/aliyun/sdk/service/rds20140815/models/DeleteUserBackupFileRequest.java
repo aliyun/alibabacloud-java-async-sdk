@@ -112,7 +112,7 @@ public class DeleteUserBackupFileRequest extends Request {
         } 
 
         /**
-         * BackupId.
+         * The ID of the backup file. You can call the [ListUserBackupFiles](~~257821~~) operation to query the ID of the file.
          */
         public Builder backupId(String backupId) {
             this.putQueryParameter("BackupId", backupId);
@@ -130,7 +130,7 @@ public class DeleteUserBackupFileRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * The ID of the region. You can call the [DescribeRegions](~~26243~~) operation to query the most recent region list.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);

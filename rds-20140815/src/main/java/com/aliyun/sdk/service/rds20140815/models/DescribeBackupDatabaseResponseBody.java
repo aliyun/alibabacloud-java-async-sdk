@@ -50,7 +50,7 @@ public class DescribeBackupDatabaseResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * DatabaseNames.
+         * The name of the database. Format: "db1,db2".
          */
         public Builder databaseNames(String databaseNames) {
             this.databaseNames = databaseNames;
@@ -58,7 +58,7 @@ public class DescribeBackupDatabaseResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

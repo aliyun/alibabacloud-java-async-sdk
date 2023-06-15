@@ -86,7 +86,7 @@ public class DescibeImportsFromDatabaseResponseBody extends TeaModel {
         private Integer totalRecordCount; 
 
         /**
-         * Items.
+         * An array that consists of migration tasks.
          */
         public Builder items(Items items) {
             this.items = items;
@@ -94,7 +94,7 @@ public class DescibeImportsFromDatabaseResponseBody extends TeaModel {
         }
 
         /**
-         * PageNumber.
+         * The page number of the returned page.
          */
         public Builder pageNumber(Integer pageNumber) {
             this.pageNumber = pageNumber;
@@ -102,7 +102,7 @@ public class DescibeImportsFromDatabaseResponseBody extends TeaModel {
         }
 
         /**
-         * PageRecordCount.
+         * The number of entries returned per page.
          */
         public Builder pageRecordCount(Integer pageRecordCount) {
             this.pageRecordCount = pageRecordCount;
@@ -110,7 +110,7 @@ public class DescibeImportsFromDatabaseResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -118,7 +118,7 @@ public class DescibeImportsFromDatabaseResponseBody extends TeaModel {
         }
 
         /**
-         * TotalRecordCount.
+         * The total number of entries returned.
          */
         public Builder totalRecordCount(Integer totalRecordCount) {
             this.totalRecordCount = totalRecordCount;
@@ -206,7 +206,19 @@ public class DescibeImportsFromDatabaseResponseBody extends TeaModel {
             private String incrementalImportingTime; 
 
             /**
-             * ImportDataStatus.
+             * The status of the migration task. Valid values:
+             * <p>
+             * 
+             * *   **NotStart**: The migration task has not started.
+             * *   **FullExporting**: The migration task is exporting full data.
+             * *   **FullImporting**: The migration task is importing full data.
+             * *   **Success**: The migration task is successful.
+             * *   **Failed**: The migration task fails.
+             * *   **Canceled**: The migration task is canceled.
+             * *   **Canceling**: The migration task is being canceled.
+             * *   **IncrementalWaiting**: The migration task is waiting to synchronize incremental data.
+             * *   **IncrementalImporting**: The migration task is synchronizing incremental data.
+             * *   **StopSyncing**: The migration task stops synchronizing data.
              */
             public Builder importDataStatus(String importDataStatus) {
                 this.importDataStatus = importDataStatus;
@@ -214,7 +226,7 @@ public class DescibeImportsFromDatabaseResponseBody extends TeaModel {
             }
 
             /**
-             * ImportDataStatusDescription.
+             * The description of the migration task.
              */
             public Builder importDataStatusDescription(String importDataStatusDescription) {
                 this.importDataStatusDescription = importDataStatusDescription;
@@ -222,7 +234,11 @@ public class DescibeImportsFromDatabaseResponseBody extends TeaModel {
             }
 
             /**
-             * ImportDataType.
+             * The type of the migration task. Valid values:
+             * <p>
+             * 
+             * *   **Full**: full migration
+             * *   **Incremental:**: incremental migration
              */
             public Builder importDataType(String importDataType) {
                 this.importDataType = importDataType;
@@ -230,7 +246,7 @@ public class DescibeImportsFromDatabaseResponseBody extends TeaModel {
             }
 
             /**
-             * ImportId.
+             * The ID of the migration task.
              */
             public Builder importId(Integer importId) {
                 this.importId = importId;
@@ -238,7 +254,7 @@ public class DescibeImportsFromDatabaseResponseBody extends TeaModel {
             }
 
             /**
-             * IncrementalImportingTime.
+             * The time when the migration task synchronized incremental data. The time follows the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time is displayed in UTC.
              */
             public Builder incrementalImportingTime(String incrementalImportingTime) {
                 this.incrementalImportingTime = incrementalImportingTime;

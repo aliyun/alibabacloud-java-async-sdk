@@ -74,7 +74,7 @@ public class UpgradeDBInstanceKernelVersionResponseBody extends TeaModel {
         private String taskId; 
 
         /**
-         * DBInstanceName.
+         * The ID of the instance.
          */
         public Builder DBInstanceName(String DBInstanceName) {
             this.DBInstanceName = DBInstanceName;
@@ -82,7 +82,7 @@ public class UpgradeDBInstanceKernelVersionResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -90,7 +90,7 @@ public class UpgradeDBInstanceKernelVersionResponseBody extends TeaModel {
         }
 
         /**
-         * TargetMinorVersion.
+         * The new minor engine version of the instance.
          */
         public Builder targetMinorVersion(String targetMinorVersion) {
             this.targetMinorVersion = targetMinorVersion;
@@ -98,7 +98,7 @@ public class UpgradeDBInstanceKernelVersionResponseBody extends TeaModel {
         }
 
         /**
-         * TaskId.
+         * The ID of the task.
          */
         public Builder taskId(String taskId) {
             this.taskId = taskId;

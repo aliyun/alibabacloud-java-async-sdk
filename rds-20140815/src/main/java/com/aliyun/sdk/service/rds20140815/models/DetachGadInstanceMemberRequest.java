@@ -84,7 +84,7 @@ public class DetachGadInstanceMemberRequest extends Request {
         } 
 
         /**
-         * GadInstanceName.
+         * The ID of the global active database cluster.
          */
         public Builder gadInstanceName(String gadInstanceName) {
             this.putQueryParameter("GadInstanceName", gadInstanceName);
@@ -93,7 +93,7 @@ public class DetachGadInstanceMemberRequest extends Request {
         }
 
         /**
-         * MemberInstanceName.
+         * The ID of the instance that serves as the unit node you want to remove. You can call the [DescribeGadInstances](~~330105~~) query the ID of the instance.
          */
         public Builder memberInstanceName(String memberInstanceName) {
             this.putQueryParameter("MemberInstanceName", memberInstanceName);
@@ -102,7 +102,7 @@ public class DetachGadInstanceMemberRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * The region ID of the central node. You can call the [DescribeGadInstances](~~330105~~) operation to query the most recent region list.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);

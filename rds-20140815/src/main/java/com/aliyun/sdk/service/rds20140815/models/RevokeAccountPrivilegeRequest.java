@@ -141,7 +141,7 @@ public class RevokeAccountPrivilegeRequest extends Request {
         } 
 
         /**
-         * AccountName.
+         * The name of the account.
          */
         public Builder accountName(String accountName) {
             this.putQueryParameter("AccountName", accountName);
@@ -150,7 +150,7 @@ public class RevokeAccountPrivilegeRequest extends Request {
         }
 
         /**
-         * DBInstanceId.
+         * The ID of the instance.
          */
         public Builder DBInstanceId(String DBInstanceId) {
             this.putQueryParameter("DBInstanceId", DBInstanceId);
@@ -159,7 +159,7 @@ public class RevokeAccountPrivilegeRequest extends Request {
         }
 
         /**
-         * DBName.
+         * The name of the database. You can revoke all permissions of the account on this database. Separate multiple databases with commas (,).
          */
         public Builder DBName(String DBName) {
             this.putQueryParameter("DBName", DBName);

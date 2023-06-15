@@ -98,7 +98,7 @@ public class DescribeADInfoResponseBody extends TeaModel {
         private String userName; 
 
         /**
-         * ADDNS.
+         * The DNS information about the AD domain.
          */
         public Builder ADDNS(String ADDNS) {
             this.ADDNS = ADDNS;
@@ -106,7 +106,7 @@ public class DescribeADInfoResponseBody extends TeaModel {
         }
 
         /**
-         * ADServerIpAddress.
+         * The service IP address of the AD domain.
          */
         public Builder ADServerIpAddress(String ADServerIpAddress) {
             this.ADServerIpAddress = ADServerIpAddress;
@@ -114,7 +114,12 @@ public class DescribeADInfoResponseBody extends TeaModel {
         }
 
         /**
-         * ADStatus.
+         * The status of the AD domain. Valid values:
+         * <p>
+         * 
+         * *   **-1**: The instance is being added to the AD domain.
+         * *   **0**: The instance fails to be added to the AD domain.
+         * *   **1**: The instance is added to the AD domain.
          */
         public Builder ADStatus(String ADStatus) {
             this.ADStatus = ADStatus;
@@ -122,7 +127,7 @@ public class DescribeADInfoResponseBody extends TeaModel {
         }
 
         /**
-         * AbnormalReason.
+         * The cause of the exception.
          */
         public Builder abnormalReason(String abnormalReason) {
             this.abnormalReason = abnormalReason;
@@ -130,7 +135,7 @@ public class DescribeADInfoResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -138,7 +143,7 @@ public class DescribeADInfoResponseBody extends TeaModel {
         }
 
         /**
-         * UserName.
+         * The username of the AD domain.
          */
         public Builder userName(String userName) {
             this.userName = userName;

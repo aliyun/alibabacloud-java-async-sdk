@@ -74,7 +74,7 @@ public class CopyDatabaseResponseBody extends TeaModel {
         private String taskId; 
 
         /**
-         * DBName.
+         * The name of the database.
          */
         public Builder DBName(String DBName) {
             this.DBName = DBName;
@@ -82,7 +82,12 @@ public class CopyDatabaseResponseBody extends TeaModel {
         }
 
         /**
-         * DBStatus.
+         * The status of the database. Valid values:
+         * <p>
+         * 
+         * *   **Creating**
+         * *   **Running**
+         * *   **Deleting**
          */
         public Builder DBStatus(String DBStatus) {
             this.DBStatus = DBStatus;
@@ -90,7 +95,7 @@ public class CopyDatabaseResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -98,7 +103,7 @@ public class CopyDatabaseResponseBody extends TeaModel {
         }
 
         /**
-         * TaskId.
+         * The ID of the task.
          */
         public Builder taskId(String taskId) {
             this.taskId = taskId;
