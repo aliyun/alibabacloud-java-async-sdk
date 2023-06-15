@@ -172,7 +172,7 @@ public class EstimatedPriceQueryRequest extends Request {
         } 
 
         /**
-         * 目的地。
+         * arr_city.
          */
         public Builder arrCity(String arrCity) {
             this.putQueryParameter("arr_city", arrCity);
@@ -181,11 +181,7 @@ public class EstimatedPriceQueryRequest extends Request {
         }
 
         /**
-         * 类目：
-         * <p>
-         * flight：机票
-         * hotel：酒店
-         * train：火车
+         * category.
          */
         public Builder category(String category) {
             this.putQueryParameter("category", category);
@@ -194,7 +190,7 @@ public class EstimatedPriceQueryRequest extends Request {
         }
 
         /**
-         * 出发地点。
+         * dep_city.
          */
         public Builder depCity(String depCity) {
             this.putQueryParameter("dep_city", depCity);
@@ -203,7 +199,7 @@ public class EstimatedPriceQueryRequest extends Request {
         }
 
         /**
-         * 返程时间: 毫秒时间戳
+         * end_time.
          */
         public Builder endTime(Long endTime) {
             this.putQueryParameter("end_time", endTime);
@@ -212,10 +208,7 @@ public class EstimatedPriceQueryRequest extends Request {
         }
 
         /**
-         * 行程ID。
-         * <p>
-         * 企业内部应用，通过获取申请单列表接口获取。
-         * 第三方企业应用，通过获取申请单列表接口获取。
+         * itinerary_id.
          */
         public Builder itineraryId(String itineraryId) {
             this.putQueryParameter("itinerary_id", itineraryId);
@@ -224,7 +217,7 @@ public class EstimatedPriceQueryRequest extends Request {
         }
 
         /**
-         * 出发时间: 毫秒时间戳
+         * start_time.
          */
         public Builder startTime(Long startTime) {
             this.putQueryParameter("start_time", startTime);
@@ -233,7 +226,7 @@ public class EstimatedPriceQueryRequest extends Request {
         }
 
         /**
-         * 子企业corpId
+         * sub_corp_id.
          */
         public Builder subCorpId(String subCorpId) {
             this.putQueryParameter("sub_corp_id", subCorpId);
@@ -242,7 +235,7 @@ public class EstimatedPriceQueryRequest extends Request {
         }
 
         /**
-         * 用户的userid
+         * user_id.
          */
         public Builder userId(String userId) {
             this.putQueryParameter("user_id", userId);

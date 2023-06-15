@@ -171,7 +171,7 @@ public class TicketChangingApplyRequest extends Request {
         } 
 
         /**
-         * 分销外部订单号
+         * dis_order_id.
          */
         public Builder disOrderId(String disOrderId) {
             this.putBodyParameter("dis_order_id", disOrderId);
@@ -180,7 +180,7 @@ public class TicketChangingApplyRequest extends Request {
         }
 
         /**
-         * 分销外部改签订单号
+         * dis_sub_order_id.
          */
         public Builder disSubOrderId(String disSubOrderId) {
             this.putBodyParameter("dis_sub_order_id", disSubOrderId);
@@ -189,7 +189,7 @@ public class TicketChangingApplyRequest extends Request {
         }
 
         /**
-         * 是否自愿:1自愿，0非自愿
+         * is_voluntary.
          */
         public Builder isVoluntary(Integer isVoluntary) {
             this.putBodyParameter("is_voluntary", isVoluntary);
@@ -198,7 +198,7 @@ public class TicketChangingApplyRequest extends Request {
         }
 
         /**
-         * 改签航班信息
+         * modify_flight_info_list.
          */
         public Builder modifyFlightInfoList(java.util.List < ModifyFlightInfoList> modifyFlightInfoList) {
             String modifyFlightInfoListShrink = shrink(modifyFlightInfoList, "modify_flight_info_list", "json");
@@ -208,7 +208,7 @@ public class TicketChangingApplyRequest extends Request {
         }
 
         /**
-         * ota商品itemId
+         * ota_item_id.
          */
         public Builder otaItemId(String otaItemId) {
             this.putBodyParameter("ota_item_id", otaItemId);
@@ -217,7 +217,7 @@ public class TicketChangingApplyRequest extends Request {
         }
 
         /**
-         * 改签理由
+         * reason.
          */
         public Builder reason(String reason) {
             this.putBodyParameter("reason", reason);
@@ -226,7 +226,7 @@ public class TicketChangingApplyRequest extends Request {
         }
 
         /**
-         * 会话ID
+         * session_id.
          */
         public Builder sessionId(String sessionId) {
             this.putBodyParameter("session_id", sessionId);
@@ -235,7 +235,7 @@ public class TicketChangingApplyRequest extends Request {
         }
 
         /**
-         * 是否重试
+         * whether_retry.
          */
         public Builder whetherRetry(Boolean whetherRetry) {
             this.putBodyParameter("whether_retry", whetherRetry);
@@ -313,7 +313,7 @@ public class TicketChangingApplyRequest extends Request {
             private String passengerName; 
 
             /**
-             * 原始航班号
+             * origin_flight_no.
              */
             public Builder originFlightNo(String originFlightNo) {
                 this.originFlightNo = originFlightNo;
@@ -321,7 +321,7 @@ public class TicketChangingApplyRequest extends Request {
             }
 
             /**
-             * 用户id
+             * out_user_id.
              */
             public Builder outUserId(String outUserId) {
                 this.outUserId = outUserId;
@@ -329,7 +329,7 @@ public class TicketChangingApplyRequest extends Request {
             }
 
             /**
-             * 乘客姓名
+             * passenger_name.
              */
             public Builder passengerName(String passengerName) {
                 this.passengerName = passengerName;
@@ -435,7 +435,7 @@ public class TicketChangingApplyRequest extends Request {
             private java.util.List < PassengerInfoList> passengerInfoList; 
 
             /**
-             * 到达城市三字码
+             * arr_city.
              */
             public Builder arrCity(String arrCity) {
                 this.arrCity = arrCity;
@@ -443,7 +443,7 @@ public class TicketChangingApplyRequest extends Request {
             }
 
             /**
-             * 改签目标舱位代码
+             * cabin.
              */
             public Builder cabin(String cabin) {
                 this.cabin = cabin;
@@ -451,7 +451,7 @@ public class TicketChangingApplyRequest extends Request {
             }
 
             /**
-             * 出发城市三字码
+             * dep_city.
              */
             public Builder depCity(String depCity) {
                 this.depCity = depCity;
@@ -459,7 +459,7 @@ public class TicketChangingApplyRequest extends Request {
             }
 
             /**
-             * 改签出发日期
+             * dep_date.
              */
             public Builder depDate(String depDate) {
                 this.depDate = depDate;
@@ -467,7 +467,7 @@ public class TicketChangingApplyRequest extends Request {
             }
 
             /**
-             * 航班号
+             * flight_no.
              */
             public Builder flightNo(String flightNo) {
                 this.flightNo = flightNo;
@@ -475,7 +475,7 @@ public class TicketChangingApplyRequest extends Request {
             }
 
             /**
-             * 改签乘客信息
+             * passenger_info_list.
              */
             public Builder passengerInfoList(java.util.List < PassengerInfoList> passengerInfoList) {
                 this.passengerInfoList = passengerInfoList;

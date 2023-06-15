@@ -225,7 +225,7 @@ public class HotelAskingPriceRequest extends Request {
         } 
 
         /**
-         * 成人数
+         * adult_num.
          */
         public Builder adultNum(String adultNum) {
             this.putQueryParameter("adult_num", adultNum);
@@ -243,7 +243,7 @@ public class HotelAskingPriceRequest extends Request {
         }
 
         /**
-         * 入住日期，YYYY-MM-DD HH:mm:ss
+         * check_in_date.
          */
         public Builder checkInDate(String checkInDate) {
             this.putQueryParameter("check_in_date", checkInDate);
@@ -252,7 +252,7 @@ public class HotelAskingPriceRequest extends Request {
         }
 
         /**
-         * 离店日期，YYYY-MM-DD HH:mm:ss
+         * check_out_date.
          */
         public Builder checkOutDate(String checkOutDate) {
             this.putQueryParameter("check_out_date", checkOutDate);
@@ -261,7 +261,7 @@ public class HotelAskingPriceRequest extends Request {
         }
 
         /**
-         * 城市code
+         * city_code.
          */
         public Builder cityCode(String cityCode) {
             this.putQueryParameter("city_code", cityCode);
@@ -270,7 +270,7 @@ public class HotelAskingPriceRequest extends Request {
         }
 
         /**
-         * 城市Name
+         * city_name.
          */
         public Builder cityName(String cityName) {
             this.putQueryParameter("city_name", cityName);
@@ -279,7 +279,7 @@ public class HotelAskingPriceRequest extends Request {
         }
 
         /**
-         * 排序方向
+         * dir.
          */
         public Builder dir(Integer dir) {
             this.putQueryParameter("dir", dir);
@@ -288,7 +288,7 @@ public class HotelAskingPriceRequest extends Request {
         }
 
         /**
-         * 筛选星级列表
+         * hotel_star.
          */
         public Builder hotelStar(String hotelStar) {
             this.putQueryParameter("hotel_star", hotelStar);
@@ -297,7 +297,7 @@ public class HotelAskingPriceRequest extends Request {
         }
 
         /**
-         * 只查协议酒店
+         * is_protocol.
          */
         public Builder isProtocol(Boolean isProtocol) {
             this.putQueryParameter("is_protocol", isProtocol);
@@ -306,7 +306,7 @@ public class HotelAskingPriceRequest extends Request {
         }
 
         /**
-         * 支付方式0:企业支付；1个人支付
+         * payment_type.
          */
         public Builder paymentType(Integer paymentType) {
             this.putQueryParameter("payment_type", paymentType);
@@ -315,7 +315,7 @@ public class HotelAskingPriceRequest extends Request {
         }
 
         /**
-         * 筛选酒店Id(分页个数最大20)
+         * shids.
          */
         public Builder shids(java.util.List < Long > shids) {
             String shidsShrink = shrink(shids, "shids", "json");
@@ -325,7 +325,7 @@ public class HotelAskingPriceRequest extends Request {
         }
 
         /**
-         * 排序方式
+         * sort_code.
          */
         public Builder sortCode(Integer sortCode) {
             this.putQueryParameter("sort_code", sortCode);

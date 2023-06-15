@@ -250,7 +250,7 @@ public class HotelOrderPreValidateResponseBody extends TeaModel {
             private String promotionType; 
 
             /**
-             * 选中状态
+             * check_status.
              */
             public Builder checkStatus(Boolean checkStatus) {
                 this.checkStatus = checkStatus;
@@ -258,7 +258,7 @@ public class HotelOrderPreValidateResponseBody extends TeaModel {
             }
 
             /**
-             * 是否需要选中
+             * need_check.
              */
             public Builder needCheck(Boolean needCheck) {
                 this.needCheck = needCheck;
@@ -274,7 +274,7 @@ public class HotelOrderPreValidateResponseBody extends TeaModel {
             }
 
             /**
-             * 优惠Id
+             * promotion_id.
              */
             public Builder promotionId(String promotionId) {
                 this.promotionId = promotionId;
@@ -282,7 +282,7 @@ public class HotelOrderPreValidateResponseBody extends TeaModel {
             }
 
             /**
-             * 优惠名称
+             * promotion_name.
              */
             public Builder promotionName(String promotionName) {
                 this.promotionName = promotionName;
@@ -290,7 +290,7 @@ public class HotelOrderPreValidateResponseBody extends TeaModel {
             }
 
             /**
-             * 优惠金额
+             * promotion_price.
              */
             public Builder promotionPrice(Long promotionPrice) {
                 this.promotionPrice = promotionPrice;
@@ -298,7 +298,7 @@ public class HotelOrderPreValidateResponseBody extends TeaModel {
             }
 
             /**
-             * 优惠类型
+             * promotion_type.
              */
             public Builder promotionType(String promotionType) {
                 this.promotionType = promotionType;
@@ -363,7 +363,7 @@ public class HotelOrderPreValidateResponseBody extends TeaModel {
             private Long promotionTotalPrice; 
 
             /**
-             * 扩展信息
+             * ext_attr_map.
              */
             public Builder extAttrMap(java.util.Map < String, String > extAttrMap) {
                 this.extAttrMap = extAttrMap;
@@ -371,7 +371,7 @@ public class HotelOrderPreValidateResponseBody extends TeaModel {
             }
 
             /**
-             * 优惠信息
+             * promotion_detail_info_list.
              */
             public Builder promotionDetailInfoList(java.util.List < PromotionDetailInfoList> promotionDetailInfoList) {
                 this.promotionDetailInfoList = promotionDetailInfoList;
@@ -379,7 +379,7 @@ public class HotelOrderPreValidateResponseBody extends TeaModel {
             }
 
             /**
-             * 总优惠金额
+             * promotion_total_price.
              */
             public Builder promotionTotalPrice(Long promotionTotalPrice) {
                 this.promotionTotalPrice = promotionTotalPrice;
@@ -516,7 +516,7 @@ public class HotelOrderPreValidateResponseBody extends TeaModel {
             private Long serviceFee; 
 
             /**
-             * 每日早餐
+             * board.
              */
             public Builder board(String board) {
                 this.board = board;
@@ -540,7 +540,7 @@ public class HotelOrderPreValidateResponseBody extends TeaModel {
             }
 
             /**
-             * 每日价格
+             * price.
              */
             public Builder price(Long price) {
                 this.price = price;
@@ -548,7 +548,7 @@ public class HotelOrderPreValidateResponseBody extends TeaModel {
             }
 
             /**
-             * 适用日期
+             * rate_start_time.
              */
             public Builder rateStartTime(String rateStartTime) {
                 this.rateStartTime = rateStartTime;
@@ -556,7 +556,7 @@ public class HotelOrderPreValidateResponseBody extends TeaModel {
             }
 
             /**
-             * 每日房量
+             * room_count.
              */
             public Builder roomCount(Integer roomCount) {
                 this.roomCount = roomCount;
@@ -580,7 +580,7 @@ public class HotelOrderPreValidateResponseBody extends TeaModel {
             }
 
             /**
-             * 服务费（收客户或收汇联易的服务费）
+             * service_fee.
              */
             public Builder serviceFee(Long serviceFee) {
                 this.serviceFee = serviceFee;
@@ -851,7 +851,7 @@ public class HotelOrderPreValidateResponseBody extends TeaModel {
             private Long totalRoomPrice; 
 
             /**
-             * 房型
+             * bed_desc.
              */
             public Builder bedDesc(String bedDesc) {
                 this.bedDesc = bedDesc;
@@ -859,7 +859,7 @@ public class HotelOrderPreValidateResponseBody extends TeaModel {
             }
 
             /**
-             * 取消政策
+             * btrip_hotel_cancel_policy_d_t_o.
              */
             public Builder btripHotelCancelPolicyDTO(BtripHotelCancelPolicyDTO btripHotelCancelPolicyDTO) {
                 this.btripHotelCancelPolicyDTO = btripHotelCancelPolicyDTO;
@@ -867,7 +867,7 @@ public class HotelOrderPreValidateResponseBody extends TeaModel {
             }
 
             /**
-             * 最早可以办理入住时间
+             * earliest_check_in_time.
              */
             public Builder earliestCheckInTime(String earliestCheckInTime) {
                 this.earliestCheckInTime = earliestCheckInTime;
@@ -875,7 +875,7 @@ public class HotelOrderPreValidateResponseBody extends TeaModel {
             }
 
             /**
-             * 最晚离店时间
+             * latest_check_out_time.
              */
             public Builder latestCheckOutTime(String latestCheckOutTime) {
                 this.latestCheckOutTime = latestCheckOutTime;
@@ -883,7 +883,7 @@ public class HotelOrderPreValidateResponseBody extends TeaModel {
             }
 
             /**
-             * 每间房最大可入住人数
+             * max_occupancy_num.
              */
             public Builder maxOccupancyNum(Integer maxOccupancyNum) {
                 this.maxOccupancyNum = maxOccupancyNum;
@@ -891,7 +891,7 @@ public class HotelOrderPreValidateResponseBody extends TeaModel {
             }
 
             /**
-             * 是否需要证件信息
+             * need_certificate.
              */
             public Builder needCertificate(Boolean needCertificate) {
                 this.needCertificate = needCertificate;
@@ -899,7 +899,7 @@ public class HotelOrderPreValidateResponseBody extends TeaModel {
             }
 
             /**
-             * 是否需要填写电子邮箱
+             * need_email.
              */
             public Builder needEmail(Boolean needEmail) {
                 this.needEmail = needEmail;
@@ -907,7 +907,7 @@ public class HotelOrderPreValidateResponseBody extends TeaModel {
             }
 
             /**
-             * 是否填写英文/拼音姓名 firstName/lastName
+             * need_english_name.
              */
             public Builder needEnglishName(Boolean needEnglishName) {
                 this.needEnglishName = needEnglishName;
@@ -915,7 +915,7 @@ public class HotelOrderPreValidateResponseBody extends TeaModel {
             }
 
             /**
-             * 优惠后总金额
+             * total_order_price.
              */
             public Builder totalOrderPrice(Long totalOrderPrice) {
                 this.totalOrderPrice = totalOrderPrice;
@@ -923,7 +923,7 @@ public class HotelOrderPreValidateResponseBody extends TeaModel {
             }
 
             /**
-             * 总房价
+             * total_room_price.
              */
             public Builder totalRoomPrice(Long totalRoomPrice) {
                 this.totalRoomPrice = totalRoomPrice;
@@ -1036,7 +1036,7 @@ public class HotelOrderPreValidateResponseBody extends TeaModel {
             private String validateResKey; 
 
             /**
-             * 扩展信息
+             * extend_info.
              */
             public Builder extendInfo(String extendInfo) {
                 this.extendInfo = extendInfo;
@@ -1044,7 +1044,7 @@ public class HotelOrderPreValidateResponseBody extends TeaModel {
             }
 
             /**
-             * 行程单Id，创单接口需要
+             * itinerary_no.
              */
             public Builder itineraryNo(String itineraryNo) {
                 this.itineraryNo = itineraryNo;
@@ -1052,7 +1052,7 @@ public class HotelOrderPreValidateResponseBody extends TeaModel {
             }
 
             /**
-             * 优惠信息
+             * promotion_info.
              */
             public Builder promotionInfo(PromotionInfo promotionInfo) {
                 this.promotionInfo = promotionInfo;
@@ -1060,7 +1060,7 @@ public class HotelOrderPreValidateResponseBody extends TeaModel {
             }
 
             /**
-             * 每日价格
+             * rate_plan_daily.
              */
             public Builder ratePlanDaily(java.util.List < RatePlanDaily> ratePlanDaily) {
                 this.ratePlanDaily = ratePlanDaily;
@@ -1068,7 +1068,7 @@ public class HotelOrderPreValidateResponseBody extends TeaModel {
             }
 
             /**
-             * 产品编号
+             * rate_plan_id.
              */
             public Builder ratePlanId(Long ratePlanId) {
                 this.ratePlanId = ratePlanId;
@@ -1076,7 +1076,7 @@ public class HotelOrderPreValidateResponseBody extends TeaModel {
             }
 
             /**
-             * 售卖政策信息
+             * rate_plan_info.
              */
             public Builder ratePlanInfo(RatePlanInfo ratePlanInfo) {
                 this.ratePlanInfo = ratePlanInfo;
@@ -1084,7 +1084,7 @@ public class HotelOrderPreValidateResponseBody extends TeaModel {
             }
 
             /**
-             * 渲染返回key，创单接口需要
+             * validate_res_key.
              */
             public Builder validateResKey(String validateResKey) {
                 this.validateResKey = validateResKey;

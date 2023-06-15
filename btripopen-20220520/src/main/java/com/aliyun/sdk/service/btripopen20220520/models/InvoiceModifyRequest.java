@@ -26,7 +26,6 @@ public class InvoiceModifyRequest extends Request {
 
     @Body
     @NameInMap("tax_no")
-    @Validation(required = true)
     private String taxNo;
 
     @Body
@@ -48,6 +47,10 @@ public class InvoiceModifyRequest extends Request {
     @Validation(required = true)
     private Integer type;
 
+    @Body
+    @NameInMap("unit_type")
+    private Integer unitType;
+
     @Header
     @NameInMap("x-acs-btrip-so-corp-token")
     private String xAcsBtripSoCorpToken;
@@ -62,6 +65,7 @@ public class InvoiceModifyRequest extends Request {
         this.thirdPartId = builder.thirdPartId;
         this.title = builder.title;
         this.type = builder.type;
+        this.unitType = builder.unitType;
         this.xAcsBtripSoCorpToken = builder.xAcsBtripSoCorpToken;
     }
 
@@ -135,6 +139,13 @@ public class InvoiceModifyRequest extends Request {
     }
 
     /**
+     * @return unitType
+     */
+    public Integer getUnitType() {
+        return this.unitType;
+    }
+
+    /**
      * @return xAcsBtripSoCorpToken
      */
     public String getXAcsBtripSoCorpToken() {
@@ -150,6 +161,7 @@ public class InvoiceModifyRequest extends Request {
         private String thirdPartId; 
         private String title; 
         private Integer type; 
+        private Integer unitType; 
         private String xAcsBtripSoCorpToken; 
 
         private Builder() {
@@ -166,11 +178,12 @@ public class InvoiceModifyRequest extends Request {
             this.thirdPartId = request.thirdPartId;
             this.title = request.title;
             this.type = request.type;
+            this.unitType = request.unitType;
             this.xAcsBtripSoCorpToken = request.xAcsBtripSoCorpToken;
         } 
 
         /**
-         * 注册地址
+         * address.
          */
         public Builder address(String address) {
             this.putBodyParameter("address", address);
@@ -179,7 +192,7 @@ public class InvoiceModifyRequest extends Request {
         }
 
         /**
-         * 开户行
+         * bank_name.
          */
         public Builder bankName(String bankName) {
             this.putBodyParameter("bank_name", bankName);
@@ -188,7 +201,7 @@ public class InvoiceModifyRequest extends Request {
         }
 
         /**
-         * 银行账号
+         * bank_no.
          */
         public Builder bankNo(String bankNo) {
             this.putBodyParameter("bank_no", bankNo);
@@ -197,7 +210,7 @@ public class InvoiceModifyRequest extends Request {
         }
 
         /**
-         * 税号
+         * tax_no.
          */
         public Builder taxNo(String taxNo) {
             this.putBodyParameter("tax_no", taxNo);
@@ -206,7 +219,7 @@ public class InvoiceModifyRequest extends Request {
         }
 
         /**
-         * 公司电话
+         * tel.
          */
         public Builder tel(String tel) {
             this.putBodyParameter("tel", tel);
@@ -215,7 +228,7 @@ public class InvoiceModifyRequest extends Request {
         }
 
         /**
-         * 第三方id
+         * third_part_id.
          */
         public Builder thirdPartId(String thirdPartId) {
             this.putBodyParameter("third_part_id", thirdPartId);
@@ -224,7 +237,7 @@ public class InvoiceModifyRequest extends Request {
         }
 
         /**
-         * 发票抬头
+         * title.
          */
         public Builder title(String title) {
             this.putBodyParameter("title", title);
@@ -233,11 +246,20 @@ public class InvoiceModifyRequest extends Request {
         }
 
         /**
-         * 类型，1:增值税普通发票,2:增值税专用发票
+         * type.
          */
         public Builder type(Integer type) {
             this.putBodyParameter("type", type);
             this.type = type;
+            return this;
+        }
+
+        /**
+         * unit_type.
+         */
+        public Builder unitType(Integer unitType) {
+            this.putBodyParameter("unit_type", unitType);
+            this.unitType = unitType;
             return this;
         }
 

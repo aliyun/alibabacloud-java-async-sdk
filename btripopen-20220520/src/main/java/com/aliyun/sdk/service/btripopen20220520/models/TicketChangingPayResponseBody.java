@@ -226,7 +226,7 @@ public class TicketChangingPayResponseBody extends TeaModel {
             private String tradeNo; 
 
             /**
-             * 是否可以重复支付
+             * can_retry.
              */
             public Builder canRetry(Boolean canRetry) {
                 this.canRetry = canRetry;
@@ -234,7 +234,7 @@ public class TicketChangingPayResponseBody extends TeaModel {
             }
 
             /**
-             * 支付金额
+             * pay_price.
              */
             public Builder payPrice(Long payPrice) {
                 this.payPrice = payPrice;
@@ -242,7 +242,7 @@ public class TicketChangingPayResponseBody extends TeaModel {
             }
 
             /**
-             * 支付状态
+             * pay_status.
              */
             public Builder payStatus(Integer payStatus) {
                 this.payStatus = payStatus;
@@ -250,7 +250,7 @@ public class TicketChangingPayResponseBody extends TeaModel {
             }
 
             /**
-             * 支付时间
+             * pay_time.
              */
             public Builder payTime(String payTime) {
                 this.payTime = payTime;
@@ -258,7 +258,7 @@ public class TicketChangingPayResponseBody extends TeaModel {
             }
 
             /**
-             * 支付流水号
+             * trade_no.
              */
             public Builder tradeNo(String tradeNo) {
                 this.tradeNo = tradeNo;

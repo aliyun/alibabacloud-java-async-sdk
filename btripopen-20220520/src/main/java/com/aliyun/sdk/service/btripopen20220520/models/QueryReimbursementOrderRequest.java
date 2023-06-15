@@ -83,7 +83,7 @@ public class QueryReimbursementOrderRequest extends Request {
         } 
 
         /**
-         * 报销单no
+         * reimb_order_no.
          */
         public Builder reimbOrderNo(String reimbOrderNo) {
             this.putQueryParameter("reimb_order_no", reimbOrderNo);
@@ -92,7 +92,7 @@ public class QueryReimbursementOrderRequest extends Request {
         }
 
         /**
-         * 子企业id
+         * sub_corp_id.
          */
         public Builder subCorpId(String subCorpId) {
             this.putQueryParameter("sub_corp_id", subCorpId);

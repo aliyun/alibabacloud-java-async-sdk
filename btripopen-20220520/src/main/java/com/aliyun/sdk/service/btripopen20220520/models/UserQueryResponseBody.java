@@ -214,7 +214,7 @@ public class UserQueryResponseBody extends TeaModel {
             private String thirdPartJobNo; 
 
             /**
-             * 员工昵称，user.user_nick
+             * employee_nick.
              */
             public Builder employeeNick(String employeeNick) {
                 this.employeeNick = employeeNick;
@@ -230,7 +230,7 @@ public class UserQueryResponseBody extends TeaModel {
             }
 
             /**
-             * 第三方员工ID，user.user_id
+             * third_part_employee_id.
              */
             public Builder thirdPartEmployeeId(String thirdPartEmployeeId) {
                 this.thirdPartEmployeeId = thirdPartEmployeeId;
@@ -238,7 +238,7 @@ public class UserQueryResponseBody extends TeaModel {
             }
 
             /**
-             * 第三方员工工号，user.job_no
+             * third_part_job_no.
              */
             public Builder thirdPartJobNo(String thirdPartJobNo) {
                 this.thirdPartJobNo = thirdPartJobNo;
@@ -315,7 +315,7 @@ public class UserQueryResponseBody extends TeaModel {
             private Long total; 
 
             /**
-             * 是否还有更多数据项
+             * has_more.
              */
             public Builder hasMore(Boolean hasMore) {
                 this.hasMore = hasMore;
@@ -331,7 +331,7 @@ public class UserQueryResponseBody extends TeaModel {
             }
 
             /**
-             * 连续翻页的分页标记，当has_more为true时，会同时返回新的page_token，否则不返回page_token
+             * page_token.
              */
             public Builder pageToken(String pageToken) {
                 this.pageToken = pageToken;
@@ -339,7 +339,7 @@ public class UserQueryResponseBody extends TeaModel {
             }
 
             /**
-             * 本次请求条件下的数据项总量
+             * total.
              */
             public Builder total(Long total) {
                 this.total = total;

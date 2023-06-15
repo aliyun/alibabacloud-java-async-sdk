@@ -69,7 +69,7 @@ public class WaitApplyInvoiceTaskDetailQueryRequest extends Request {
         } 
 
         /**
-         * 出账日
+         * bill_date.
          */
         public Builder billDate(String billDate) {
             this.putQueryParameter("bill_date", billDate);

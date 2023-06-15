@@ -190,7 +190,7 @@ public class HotelCityCodeListResponseBody extends TeaModel {
             private String districtName; 
 
             /**
-             * 行程区code
+             * district_code.
              */
             public Builder districtCode(String districtCode) {
                 this.districtCode = districtCode;
@@ -198,7 +198,7 @@ public class HotelCityCodeListResponseBody extends TeaModel {
             }
 
             /**
-             * 行程区名称
+             * district_name.
              */
             public Builder districtName(String districtName) {
                 this.districtName = districtName;
@@ -263,7 +263,7 @@ public class HotelCityCodeListResponseBody extends TeaModel {
             private java.util.List < Districts> districts; 
 
             /**
-             * 城市code
+             * city_code.
              */
             public Builder cityCode(String cityCode) {
                 this.cityCode = cityCode;
@@ -271,7 +271,7 @@ public class HotelCityCodeListResponseBody extends TeaModel {
             }
 
             /**
-             * 城市名称
+             * city_name.
              */
             public Builder cityName(String cityName) {
                 this.cityName = cityName;
@@ -279,7 +279,7 @@ public class HotelCityCodeListResponseBody extends TeaModel {
             }
 
             /**
-             * 行政区列表
+             * districts.
              */
             public Builder districts(java.util.List < Districts> districts) {
                 this.districts = districts;
@@ -344,7 +344,7 @@ public class HotelCityCodeListResponseBody extends TeaModel {
             private String provinceName; 
 
             /**
-             * 城市列表
+             * citys.
              */
             public Builder citys(java.util.List < Citys> citys) {
                 this.citys = citys;
@@ -352,7 +352,7 @@ public class HotelCityCodeListResponseBody extends TeaModel {
             }
 
             /**
-             * 省份code
+             * provice_code.
              */
             public Builder proviceCode(String proviceCode) {
                 this.proviceCode = proviceCode;
@@ -360,7 +360,7 @@ public class HotelCityCodeListResponseBody extends TeaModel {
             }
 
             /**
-             * 省份名称
+             * province_name.
              */
             public Builder provinceName(String provinceName) {
                 this.provinceName = provinceName;

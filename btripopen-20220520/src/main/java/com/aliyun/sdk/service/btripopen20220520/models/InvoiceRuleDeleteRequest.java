@@ -97,7 +97,7 @@ public class InvoiceRuleDeleteRequest extends Request {
         } 
 
         /**
-         * 删除所有适用人员
+         * del_all.
          */
         public Builder delAll(Boolean delAll) {
             this.putQueryParameter("del_all", delAll);
@@ -116,7 +116,7 @@ public class InvoiceRuleDeleteRequest extends Request {
         }
 
         /**
-         * 第三方发票id
+         * third_part_id.
          */
         public Builder thirdPartId(String thirdPartId) {
             this.putQueryParameter("third_part_id", thirdPartId);
@@ -179,7 +179,7 @@ public class InvoiceRuleDeleteRequest extends Request {
             private String entityType; 
 
             /**
-             * 实体id
+             * entity_id.
              */
             public Builder entityId(String entityId) {
                 this.entityId = entityId;
@@ -187,7 +187,7 @@ public class InvoiceRuleDeleteRequest extends Request {
             }
 
             /**
-             * 实体类型：1员工，2部门，3角色，4第三方部门
+             * entity_type.
              */
             public Builder entityType(String entityType) {
                 this.entityType = entityType;

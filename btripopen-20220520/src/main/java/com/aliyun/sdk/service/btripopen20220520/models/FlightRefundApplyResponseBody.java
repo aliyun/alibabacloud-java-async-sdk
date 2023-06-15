@@ -226,7 +226,7 @@ public class FlightRefundApplyResponseBody extends TeaModel {
             private Long refundMoney; 
 
             /**
-             * 分销外部订单号
+             * dis_order_id.
              */
             public Builder disOrderId(String disOrderId) {
                 this.disOrderId = disOrderId;
@@ -234,7 +234,7 @@ public class FlightRefundApplyResponseBody extends TeaModel {
             }
 
             /**
-             * 分销外部订单号
+             * dis_sub_order_id.
              */
             public Builder disSubOrderId(String disSubOrderId) {
                 this.disSubOrderId = disSubOrderId;
@@ -242,7 +242,7 @@ public class FlightRefundApplyResponseBody extends TeaModel {
             }
 
             /**
-             * 创建的退票申请单号
+             * refund_apply_id.
              */
             public Builder refundApplyId(Long refundApplyId) {
                 this.refundApplyId = refundApplyId;
@@ -250,7 +250,7 @@ public class FlightRefundApplyResponseBody extends TeaModel {
             }
 
             /**
-             * 退票手续费
+             * refund_fee.
              */
             public Builder refundFee(Long refundFee) {
                 this.refundFee = refundFee;
@@ -258,7 +258,7 @@ public class FlightRefundApplyResponseBody extends TeaModel {
             }
 
             /**
-             * 退还金额
+             * refund_money.
              */
             public Builder refundMoney(Long refundMoney) {
                 this.refundMoney = refundMoney;

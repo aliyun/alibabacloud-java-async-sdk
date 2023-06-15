@@ -823,7 +823,7 @@ public class InsInvoiceScanQueryResponseBody extends TeaModel {
             private String totalAmountInWords; 
 
             /**
-             * 价税合计金额
+             * amount_with_tax.
              */
             public Builder amountWithTax(String amountWithTax) {
                 this.amountWithTax = amountWithTax;
@@ -831,7 +831,7 @@ public class InsInvoiceScanQueryResponseBody extends TeaModel {
             }
 
             /**
-             * 不含税金额
+             * amount_without_tax.
              */
             public Builder amountWithoutTax(String amountWithoutTax) {
                 this.amountWithoutTax = amountWithoutTax;
@@ -839,7 +839,7 @@ public class InsInvoiceScanQueryResponseBody extends TeaModel {
             }
 
             /**
-             * 出账日
+             * bill_date.
              */
             public Builder billDate(String billDate) {
                 this.billDate = billDate;
@@ -855,7 +855,7 @@ public class InsInvoiceScanQueryResponseBody extends TeaModel {
             }
 
             /**
-             * 成本中心
+             * cost_center.
              */
             public Builder costCenter(String costCenter) {
                 this.costCenter = costCenter;
@@ -863,7 +863,7 @@ public class InsInvoiceScanQueryResponseBody extends TeaModel {
             }
 
             /**
-             * 部门
+             * department.
              */
             public Builder department(String department) {
                 this.department = department;
@@ -887,7 +887,7 @@ public class InsInvoiceScanQueryResponseBody extends TeaModel {
             }
 
             /**
-             * 保险公司
+             * insurance_company.
              */
             public Builder insuranceCompany(String insuranceCompany) {
                 this.insuranceCompany = insuranceCompany;
@@ -895,7 +895,7 @@ public class InsInvoiceScanQueryResponseBody extends TeaModel {
             }
 
             /**
-             * 保单号
+             * insurance_order_id.
              */
             public Builder insuranceOrderId(String insuranceOrderId) {
                 this.insuranceOrderId = insuranceOrderId;
@@ -903,7 +903,7 @@ public class InsInvoiceScanQueryResponseBody extends TeaModel {
             }
 
             /**
-             * 险种
+             * insurance_type.
              */
             public Builder insuranceType(String insuranceType) {
                 this.insuranceType = insuranceType;
@@ -911,7 +911,7 @@ public class InsInvoiceScanQueryResponseBody extends TeaModel {
             }
 
             /**
-             * 发票代码
+             * invoice_code.
              */
             public Builder invoiceCode(String invoiceCode) {
                 this.invoiceCode = invoiceCode;
@@ -919,7 +919,7 @@ public class InsInvoiceScanQueryResponseBody extends TeaModel {
             }
 
             /**
-             * 开票日期
+             * invoice_day.
              */
             public Builder invoiceDay(String invoiceDay) {
                 this.invoiceDay = invoiceDay;
@@ -943,7 +943,7 @@ public class InsInvoiceScanQueryResponseBody extends TeaModel {
             }
 
             /**
-             * 发票号码
+             * invoice_no.
              */
             public Builder invoiceNo(String invoiceNo) {
                 this.invoiceNo = invoiceNo;
@@ -967,7 +967,7 @@ public class InsInvoiceScanQueryResponseBody extends TeaModel {
             }
 
             /**
-             * 订单号
+             * order_id.
              */
             public Builder orderId(Long orderId) {
                 this.orderId = orderId;
@@ -975,7 +975,7 @@ public class InsInvoiceScanQueryResponseBody extends TeaModel {
             }
 
             /**
-             * 图片地址，专票已邮寄前为空，普票已开票前为空
+             * oss_url.
              */
             public Builder ossUrl(String ossUrl) {
                 this.ossUrl = ossUrl;
@@ -983,7 +983,7 @@ public class InsInvoiceScanQueryResponseBody extends TeaModel {
             }
 
             /**
-             * 乘机人
+             * passenger.
              */
             public Builder passenger(String passenger) {
                 this.passenger = passenger;
@@ -999,7 +999,7 @@ public class InsInvoiceScanQueryResponseBody extends TeaModel {
             }
 
             /**
-             * 项目
+             * project.
              */
             public Builder project(String project) {
                 this.project = project;
@@ -1023,7 +1023,7 @@ public class InsInvoiceScanQueryResponseBody extends TeaModel {
             }
 
             /**
-             * 购方名称
+             * purchaser_name.
              */
             public Builder purchaserName(String purchaserName) {
                 this.purchaserName = purchaserName;
@@ -1031,7 +1031,7 @@ public class InsInvoiceScanQueryResponseBody extends TeaModel {
             }
 
             /**
-             * 购方税号
+             * purchaser_tax_no.
              */
             public Builder purchaserTaxNo(String purchaserTaxNo) {
                 this.purchaserTaxNo = purchaserTaxNo;
@@ -1079,7 +1079,7 @@ public class InsInvoiceScanQueryResponseBody extends TeaModel {
             }
 
             /**
-             * 销方名称
+             * seller_name.
              */
             public Builder sellerName(String sellerName) {
                 this.sellerName = sellerName;
@@ -1087,7 +1087,7 @@ public class InsInvoiceScanQueryResponseBody extends TeaModel {
             }
 
             /**
-             * 销方税号
+             * seller_tax_no.
              */
             public Builder sellerTaxNo(String sellerTaxNo) {
                 this.sellerTaxNo = sellerTaxNo;
@@ -1103,7 +1103,7 @@ public class InsInvoiceScanQueryResponseBody extends TeaModel {
             }
 
             /**
-             * 税额
+             * tax_amount.
              */
             public Builder taxAmount(String taxAmount) {
                 this.taxAmount = taxAmount;

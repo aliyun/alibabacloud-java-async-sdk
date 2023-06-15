@@ -256,7 +256,7 @@ public class HotelOrderPreValidateRequest extends Request {
         }
 
         /**
-         * 入住日期
+         * check_in.
          */
         public Builder checkIn(String checkIn) {
             this.putQueryParameter("check_in", checkIn);
@@ -265,7 +265,7 @@ public class HotelOrderPreValidateRequest extends Request {
         }
 
         /**
-         * 离店日期
+         * check_out.
          */
         public Builder checkOut(String checkOut) {
             this.putQueryParameter("check_out", checkOut);
@@ -274,7 +274,7 @@ public class HotelOrderPreValidateRequest extends Request {
         }
 
         /**
-         * 每日价格
+         * daily_list.
          */
         public Builder dailyList(java.util.List < DailyList> dailyList) {
             String dailyListShrink = shrink(dailyList, "daily_list", "json");
@@ -284,7 +284,7 @@ public class HotelOrderPreValidateRequest extends Request {
         }
 
         /**
-         * 商品id
+         * item_id.
          */
         public Builder itemId(Long itemId) {
             this.putQueryParameter("item_id", itemId);
@@ -293,7 +293,7 @@ public class HotelOrderPreValidateRequest extends Request {
         }
 
         /**
-         * 每间房的成人数
+         * number_of_adults_per_room.
          */
         public Builder numberOfAdultsPerRoom(Integer numberOfAdultsPerRoom) {
             this.putQueryParameter("number_of_adults_per_room", numberOfAdultsPerRoom);
@@ -302,7 +302,7 @@ public class HotelOrderPreValidateRequest extends Request {
         }
 
         /**
-         * 入住人信息
+         * occupant_info_list.
          */
         public Builder occupantInfoList(java.util.List < OccupantInfoList> occupantInfoList) {
             String occupantInfoListShrink = shrink(occupantInfoList, "occupant_info_list", "json");
@@ -312,7 +312,7 @@ public class HotelOrderPreValidateRequest extends Request {
         }
 
         /**
-         * 报价接口透传的rp_Id
+         * rate_plan_id.
          */
         public Builder ratePlanId(Long ratePlanId) {
             this.putQueryParameter("rate_plan_id", ratePlanId);
@@ -321,7 +321,7 @@ public class HotelOrderPreValidateRequest extends Request {
         }
 
         /**
-         * 房间id
+         * room_id.
          */
         public Builder roomId(Long roomId) {
             this.putQueryParameter("room_id", roomId);
@@ -330,7 +330,7 @@ public class HotelOrderPreValidateRequest extends Request {
         }
 
         /**
-         * 房间数
+         * room_num.
          */
         public Builder roomNum(Integer roomNum) {
             this.putQueryParameter("room_num", roomNum);
@@ -339,7 +339,7 @@ public class HotelOrderPreValidateRequest extends Request {
         }
 
         /**
-         * 从报价接口透传的房间总价格，单位：分
+         * search_room_price.
          */
         public Builder searchRoomPrice(Long searchRoomPrice) {
             this.putQueryParameter("search_room_price", searchRoomPrice);
@@ -348,7 +348,7 @@ public class HotelOrderPreValidateRequest extends Request {
         }
 
         /**
-         * 卖家Id
+         * seller_id.
          */
         public Builder sellerId(Long sellerId) {
             this.putQueryParameter("seller_id", sellerId);
@@ -357,7 +357,7 @@ public class HotelOrderPreValidateRequest extends Request {
         }
 
         /**
-         * 标准酒店id
+         * shid.
          */
         public Builder shid(Long shid) {
             this.putQueryParameter("shid", shid);
@@ -444,7 +444,7 @@ public class HotelOrderPreValidateRequest extends Request {
             private Integer roomCount; 
 
             /**
-             * 每日早餐
+             * board.
              */
             public Builder board(String board) {
                 this.board = board;
@@ -452,7 +452,7 @@ public class HotelOrderPreValidateRequest extends Request {
             }
 
             /**
-             * 每日价格
+             * price.
              */
             public Builder price(Long price) {
                 this.price = price;
@@ -460,7 +460,7 @@ public class HotelOrderPreValidateRequest extends Request {
             }
 
             /**
-             * 适用日期
+             * rate_start_time.
              */
             public Builder rateStartTime(String rateStartTime) {
                 this.rateStartTime = rateStartTime;
@@ -468,7 +468,7 @@ public class HotelOrderPreValidateRequest extends Request {
             }
 
             /**
-             * 每日房量
+             * room_count.
              */
             public Builder roomCount(Integer roomCount) {
                 this.roomCount = roomCount;
@@ -569,7 +569,7 @@ public class HotelOrderPreValidateRequest extends Request {
             private Integer userType; 
 
             /**
-             * 证件号
+             * card_no.
              */
             public Builder cardNo(String cardNo) {
                 this.cardNo = cardNo;
@@ -577,7 +577,7 @@ public class HotelOrderPreValidateRequest extends Request {
             }
 
             /**
-             * 证件类型
+             * card_type.
              */
             public Builder cardType(Integer cardType) {
                 this.cardType = cardType;
@@ -585,7 +585,7 @@ public class HotelOrderPreValidateRequest extends Request {
             }
 
             /**
-             * 入住人姓名
+             * name.
              */
             public Builder name(String name) {
                 this.name = name;
@@ -593,7 +593,7 @@ public class HotelOrderPreValidateRequest extends Request {
             }
 
             /**
-             * 入住人联系电话
+             * phone.
              */
             public Builder phone(String phone) {
                 this.phone = phone;
@@ -601,7 +601,7 @@ public class HotelOrderPreValidateRequest extends Request {
             }
 
             /**
-             * 员工编号
+             * staff_no.
              */
             public Builder staffNo(String staffNo) {
                 this.staffNo = staffNo;
@@ -609,7 +609,7 @@ public class HotelOrderPreValidateRequest extends Request {
             }
 
             /**
-             * 用户类型
+             * user_type.
              */
             public Builder userType(Integer userType) {
                 this.userType = userType;

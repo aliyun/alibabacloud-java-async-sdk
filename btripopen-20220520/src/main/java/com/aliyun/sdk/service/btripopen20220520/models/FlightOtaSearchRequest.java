@@ -156,7 +156,7 @@ public class FlightOtaSearchRequest extends Request {
         } 
 
         /**
-         * 航司二字码
+         * airline_code.
          */
         public Builder airlineCode(String airlineCode) {
             this.putQueryParameter("airline_code", airlineCode);
@@ -165,7 +165,7 @@ public class FlightOtaSearchRequest extends Request {
         }
 
         /**
-         * 必填项,到达城市三字码
+         * arr_city_code.
          */
         public Builder arrCityCode(String arrCityCode) {
             this.putQueryParameter("arr_city_code", arrCityCode);
@@ -174,7 +174,7 @@ public class FlightOtaSearchRequest extends Request {
         }
 
         /**
-         * 舱等， 0所有舱位,1经济舱,2商务舱
+         * cabin_class.
          */
         public Builder cabinClass(String cabinClass) {
             this.putQueryParameter("cabin_class", cabinClass);
@@ -183,7 +183,7 @@ public class FlightOtaSearchRequest extends Request {
         }
 
         /**
-         * 承运航班号
+         * carrier_flight_no.
          */
         public Builder carrierFlightNo(String carrierFlightNo) {
             this.putQueryParameter("carrier_flight_no", carrierFlightNo);
@@ -192,7 +192,7 @@ public class FlightOtaSearchRequest extends Request {
         }
 
         /**
-         * 必填项,出发城市三字码
+         * dep_city_code.
          */
         public Builder depCityCode(String depCityCode) {
             this.putQueryParameter("dep_city_code", depCityCode);
@@ -201,7 +201,7 @@ public class FlightOtaSearchRequest extends Request {
         }
 
         /**
-         * 必填项,出发时间
+         * dep_date.
          */
         public Builder depDate(String depDate) {
             this.putQueryParameter("dep_date", depDate);
@@ -210,7 +210,7 @@ public class FlightOtaSearchRequest extends Request {
         }
 
         /**
-         * 航班号
+         * flight_no.
          */
         public Builder flightNo(String flightNo) {
             this.putQueryParameter("flight_no", flightNo);

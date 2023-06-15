@@ -142,7 +142,7 @@ public class ApplyQueryRequest extends Request {
         }
 
         /**
-         * 子企业Id
+         * sub_corp_id.
          */
         public Builder subCorpId(String subCorpId) {
             this.putQueryParameter("sub_corp_id", subCorpId);

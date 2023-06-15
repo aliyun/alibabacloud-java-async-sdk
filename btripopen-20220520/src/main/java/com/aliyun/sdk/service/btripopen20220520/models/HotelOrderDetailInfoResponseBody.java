@@ -312,7 +312,7 @@ public class HotelOrderDetailInfoResponseBody extends TeaModel {
             private String cancelStartTime; 
 
             /**
-             * 取消结束时间
+             * cancel_end_time.
              */
             public Builder cancelEndTime(String cancelEndTime) {
                 this.cancelEndTime = cancelEndTime;
@@ -320,7 +320,7 @@ public class HotelOrderDetailInfoResponseBody extends TeaModel {
             }
 
             /**
-             * 取消开始时间
+             * cancel_start_time.
              */
             public Builder cancelStartTime(String cancelStartTime) {
                 this.cancelStartTime = cancelStartTime;
@@ -409,7 +409,7 @@ public class HotelOrderDetailInfoResponseBody extends TeaModel {
             private Long shid; 
 
             /**
-             * 酒店地址
+             * address.
              */
             public Builder address(String address) {
                 this.address = address;
@@ -417,7 +417,7 @@ public class HotelOrderDetailInfoResponseBody extends TeaModel {
             }
 
             /**
-             * 城市
+             * city_name.
              */
             public Builder cityName(String cityName) {
                 this.cityName = cityName;
@@ -425,7 +425,7 @@ public class HotelOrderDetailInfoResponseBody extends TeaModel {
             }
 
             /**
-             * 酒店名
+             * hotel_name.
              */
             public Builder hotelName(String hotelName) {
                 this.hotelName = hotelName;
@@ -433,7 +433,7 @@ public class HotelOrderDetailInfoResponseBody extends TeaModel {
             }
 
             /**
-             * 酒店电话
+             * hotel_tel.
              */
             public Builder hotelTel(String hotelTel) {
                 this.hotelTel = hotelTel;
@@ -441,7 +441,7 @@ public class HotelOrderDetailInfoResponseBody extends TeaModel {
             }
 
             /**
-             * 酒店ID
+             * shid.
              */
             public Builder shid(Long shid) {
                 this.shid = shid;
@@ -698,7 +698,7 @@ public class HotelOrderDetailInfoResponseBody extends TeaModel {
             private String remark; 
 
             /**
-             * 开票金额,分
+             * billing_money.
              */
             public Builder billingMoney(Long billingMoney) {
                 this.billingMoney = billingMoney;
@@ -706,7 +706,7 @@ public class HotelOrderDetailInfoResponseBody extends TeaModel {
             }
 
             /**
-             * 公司地址
+             * buyer_add.
              */
             public Builder buyerAdd(String buyerAdd) {
                 this.buyerAdd = buyerAdd;
@@ -714,7 +714,7 @@ public class HotelOrderDetailInfoResponseBody extends TeaModel {
             }
 
             /**
-             * 银行账号
+             * buyer_bank_acc.
              */
             public Builder buyerBankAcc(String buyerBankAcc) {
                 this.buyerBankAcc = buyerBankAcc;
@@ -722,7 +722,7 @@ public class HotelOrderDetailInfoResponseBody extends TeaModel {
             }
 
             /**
-             * 银行名称
+             * buyer_bank_add.
              */
             public Builder buyerBankAdd(String buyerBankAdd) {
                 this.buyerBankAdd = buyerBankAdd;
@@ -730,7 +730,7 @@ public class HotelOrderDetailInfoResponseBody extends TeaModel {
             }
 
             /**
-             * 公司电话
+             * buyer_phone.
              */
             public Builder buyerPhone(String buyerPhone) {
                 this.buyerPhone = buyerPhone;
@@ -738,7 +738,7 @@ public class HotelOrderDetailInfoResponseBody extends TeaModel {
             }
 
             /**
-             * 税号
+             * buyer_tax_num.
              */
             public Builder buyerTaxNum(String buyerTaxNum) {
                 this.buyerTaxNum = buyerTaxNum;
@@ -746,7 +746,7 @@ public class HotelOrderDetailInfoResponseBody extends TeaModel {
             }
 
             /**
-             * 配送详细地址（纸质发票必填）
+             * delivery_address.
              */
             public Builder deliveryAddress(String deliveryAddress) {
                 this.deliveryAddress = deliveryAddress;
@@ -754,7 +754,7 @@ public class HotelOrderDetailInfoResponseBody extends TeaModel {
             }
 
             /**
-             * 配送区（纸质发票必填）
+             * delivery_area.
              */
             public Builder deliveryArea(String deliveryArea) {
                 this.deliveryArea = deliveryArea;
@@ -762,7 +762,7 @@ public class HotelOrderDetailInfoResponseBody extends TeaModel {
             }
 
             /**
-             * 配送城市（纸质发票必填）
+             * delivery_city.
              */
             public Builder deliveryCity(String deliveryCity) {
                 this.deliveryCity = deliveryCity;
@@ -770,7 +770,7 @@ public class HotelOrderDetailInfoResponseBody extends TeaModel {
             }
 
             /**
-             * 配送省（纸质发票必填）
+             * delivery_province.
              */
             public Builder deliveryProvince(String deliveryProvince) {
                 this.deliveryProvince = deliveryProvince;
@@ -778,7 +778,7 @@ public class HotelOrderDetailInfoResponseBody extends TeaModel {
             }
 
             /**
-             * 配送街道（纸质发票必填）
+             * delivery_street.
              */
             public Builder deliveryStreet(String deliveryStreet) {
                 this.deliveryStreet = deliveryStreet;
@@ -786,7 +786,7 @@ public class HotelOrderDetailInfoResponseBody extends TeaModel {
             }
 
             /**
-             * 邮箱地址（电子发票必填）
+             * email.
              */
             public Builder email(String email) {
                 this.email = email;
@@ -794,7 +794,7 @@ public class HotelOrderDetailInfoResponseBody extends TeaModel {
             }
 
             /**
-             * 发票材质
+             * invoice_material.
              */
             public Builder invoiceMaterial(Integer invoiceMaterial) {
                 this.invoiceMaterial = invoiceMaterial;
@@ -802,7 +802,7 @@ public class HotelOrderDetailInfoResponseBody extends TeaModel {
             }
 
             /**
-             * 发票抬头
+             * invoice_title.
              */
             public Builder invoiceTitle(String invoiceTitle) {
                 this.invoiceTitle = invoiceTitle;
@@ -810,7 +810,7 @@ public class HotelOrderDetailInfoResponseBody extends TeaModel {
             }
 
             /**
-             * 发票类，只支持（1：普通发票(电子)；2：专用发票(纸质)）
+             * invoice_type.
              */
             public Builder invoiceType(Integer invoiceType) {
                 this.invoiceType = invoiceType;
@@ -818,7 +818,7 @@ public class HotelOrderDetailInfoResponseBody extends TeaModel {
             }
 
             /**
-             * 邮寄费,分
+             * postage.
              */
             public Builder postage(Long postage) {
                 this.postage = postage;
@@ -826,7 +826,7 @@ public class HotelOrderDetailInfoResponseBody extends TeaModel {
             }
 
             /**
-             * 收件人姓名（纸质发票必填）
+             * receiver_name.
              */
             public Builder receiverName(String receiverName) {
                 this.receiverName = receiverName;
@@ -834,7 +834,7 @@ public class HotelOrderDetailInfoResponseBody extends TeaModel {
             }
 
             /**
-             * 收件人电话（纸质发票必填）
+             * receiver_phone.
              */
             public Builder receiverPhone(String receiverPhone) {
                 this.receiverPhone = receiverPhone;
@@ -842,7 +842,7 @@ public class HotelOrderDetailInfoResponseBody extends TeaModel {
             }
 
             /**
-             * 发票备注
+             * remark.
              */
             public Builder remark(String remark) {
                 this.remark = remark;
@@ -991,7 +991,7 @@ public class HotelOrderDetailInfoResponseBody extends TeaModel {
             private String settleSubjectNo; 
 
             /**
-             * 成本中心ID
+             * cost_center_id.
              */
             public Builder costCenterId(String costCenterId) {
                 this.costCenterId = costCenterId;
@@ -999,7 +999,7 @@ public class HotelOrderDetailInfoResponseBody extends TeaModel {
             }
 
             /**
-             * 成本中心名称
+             * cost_center_name.
              */
             public Builder costCenterName(String costCenterName) {
                 this.costCenterName = costCenterName;
@@ -1007,7 +1007,7 @@ public class HotelOrderDetailInfoResponseBody extends TeaModel {
             }
 
             /**
-             * 成本中心编号
+             * cost_center_no.
              */
             public Builder costCenterNo(String costCenterNo) {
                 this.costCenterNo = costCenterNo;
@@ -1015,7 +1015,7 @@ public class HotelOrderDetailInfoResponseBody extends TeaModel {
             }
 
             /**
-             * 分摊金额
+             * cost_center_prices.
              */
             public Builder costCenterPrices(Long costCenterPrices) {
                 this.costCenterPrices = costCenterPrices;
@@ -1023,7 +1023,7 @@ public class HotelOrderDetailInfoResponseBody extends TeaModel {
             }
 
             /**
-             * 分摊比例（%），如值为100代表100%
+             * cost_center_ratios.
              */
             public Builder costCenterRatios(Long costCenterRatios) {
                 this.costCenterRatios = costCenterRatios;
@@ -1031,7 +1031,7 @@ public class HotelOrderDetailInfoResponseBody extends TeaModel {
             }
 
             /**
-             * 费用科目编号
+             * cost_center_subject_code.
              */
             public Builder costCenterSubjectCode(String costCenterSubjectCode) {
                 this.costCenterSubjectCode = costCenterSubjectCode;
@@ -1039,7 +1039,7 @@ public class HotelOrderDetailInfoResponseBody extends TeaModel {
             }
 
             /**
-             * 费用科目名称
+             * cost_center_subject_name.
              */
             public Builder costCenterSubjectName(String costCenterSubjectName) {
                 this.costCenterSubjectName = costCenterSubjectName;
@@ -1047,7 +1047,7 @@ public class HotelOrderDetailInfoResponseBody extends TeaModel {
             }
 
             /**
-             * 核算主体ID
+             * settle_subject_id.
              */
             public Builder settleSubjectId(String settleSubjectId) {
                 this.settleSubjectId = settleSubjectId;
@@ -1055,7 +1055,7 @@ public class HotelOrderDetailInfoResponseBody extends TeaModel {
             }
 
             /**
-             * 核算主体名称
+             * settle_subject_name.
              */
             public Builder settleSubjectName(String settleSubjectName) {
                 this.settleSubjectName = settleSubjectName;
@@ -1063,7 +1063,7 @@ public class HotelOrderDetailInfoResponseBody extends TeaModel {
             }
 
             /**
-             * 核算主体编号
+             * settle_subject_no.
              */
             public Builder settleSubjectNo(String settleSubjectNo) {
                 this.settleSubjectNo = settleSubjectNo;
@@ -1296,7 +1296,7 @@ public class HotelOrderDetailInfoResponseBody extends TeaModel {
             private Integer userType; 
 
             /**
-             * 证件号
+             * card_no.
              */
             public Builder cardNo(String cardNo) {
                 this.cardNo = cardNo;
@@ -1304,7 +1304,7 @@ public class HotelOrderDetailInfoResponseBody extends TeaModel {
             }
 
             /**
-             * 证件类型
+             * card_type.
              */
             public Builder cardType(Integer cardType) {
                 this.cardType = cardType;
@@ -1312,7 +1312,7 @@ public class HotelOrderDetailInfoResponseBody extends TeaModel {
             }
 
             /**
-             * 成本中心
+             * cost_center_info_list.
              */
             public Builder costCenterInfoList(java.util.List < CostCenterInfoList> costCenterInfoList) {
                 this.costCenterInfoList = costCenterInfoList;
@@ -1320,7 +1320,7 @@ public class HotelOrderDetailInfoResponseBody extends TeaModel {
             }
 
             /**
-             * 入住人类型
+             * customer_type.
              */
             public Builder customerType(Integer customerType) {
                 this.customerType = customerType;
@@ -1328,7 +1328,7 @@ public class HotelOrderDetailInfoResponseBody extends TeaModel {
             }
 
             /**
-             * 用户部门id
+             * department_id.
              */
             public Builder departmentId(String departmentId) {
                 this.departmentId = departmentId;
@@ -1336,7 +1336,7 @@ public class HotelOrderDetailInfoResponseBody extends TeaModel {
             }
 
             /**
-             * 用户部门姓名
+             * department_name.
              */
             public Builder departmentName(String departmentName) {
                 this.departmentName = departmentName;
@@ -1344,7 +1344,7 @@ public class HotelOrderDetailInfoResponseBody extends TeaModel {
             }
 
             /**
-             * 入住人联系email
+             * email.
              */
             public Builder email(String email) {
                 this.email = email;
@@ -1352,7 +1352,7 @@ public class HotelOrderDetailInfoResponseBody extends TeaModel {
             }
 
             /**
-             * 员工类型
+             * employee_type.
              */
             public Builder employeeType(Integer employeeType) {
                 this.employeeType = employeeType;
@@ -1360,7 +1360,7 @@ public class HotelOrderDetailInfoResponseBody extends TeaModel {
             }
 
             /**
-             * 英文名
+             * first_name.
              */
             public Builder firstName(String firstName) {
                 this.firstName = firstName;
@@ -1368,7 +1368,7 @@ public class HotelOrderDetailInfoResponseBody extends TeaModel {
             }
 
             /**
-             * 是否为预订人
+             * is_booker.
              */
             public Builder isBooker(Boolean isBooker) {
                 this.isBooker = isBooker;
@@ -1376,7 +1376,7 @@ public class HotelOrderDetailInfoResponseBody extends TeaModel {
             }
 
             /**
-             * 英文姓
+             * last_name.
              */
             public Builder lastName(String lastName) {
                 this.lastName = lastName;
@@ -1384,7 +1384,7 @@ public class HotelOrderDetailInfoResponseBody extends TeaModel {
             }
 
             /**
-             * 入住人姓名
+             * name.
              */
             public Builder name(String name) {
                 this.name = name;
@@ -1392,7 +1392,7 @@ public class HotelOrderDetailInfoResponseBody extends TeaModel {
             }
 
             /**
-             * 入住人联系电话
+             * phone.
              */
             public Builder phone(String phone) {
                 this.phone = phone;
@@ -1408,7 +1408,7 @@ public class HotelOrderDetailInfoResponseBody extends TeaModel {
             }
 
             /**
-             * 选择是否接受短信
+             * selected.
              */
             public Builder selected(Boolean selected) {
                 this.selected = selected;
@@ -1416,7 +1416,7 @@ public class HotelOrderDetailInfoResponseBody extends TeaModel {
             }
 
             /**
-             * 员工编号
+             * staff_no.
              */
             public Builder staffNo(String staffNo) {
                 this.staffNo = staffNo;
@@ -1424,7 +1424,7 @@ public class HotelOrderDetailInfoResponseBody extends TeaModel {
             }
 
             /**
-             * 用户类型
+             * user_type.
              */
             public Builder userType(Integer userType) {
                 this.userType = userType;
@@ -1549,7 +1549,7 @@ public class HotelOrderDetailInfoResponseBody extends TeaModel {
             private Long roomPrice; 
 
             /**
-             * 餐食
+             * board.
              */
             public Builder board(String board) {
                 this.board = board;
@@ -1557,7 +1557,7 @@ public class HotelOrderDetailInfoResponseBody extends TeaModel {
             }
 
             /**
-             * 早餐数量
+             * board_num.
              */
             public Builder boardNum(Integer boardNum) {
                 this.boardNum = boardNum;
@@ -1565,7 +1565,7 @@ public class HotelOrderDetailInfoResponseBody extends TeaModel {
             }
 
             /**
-             * 入住日期
+             * check_in.
              */
             public Builder checkIn(String checkIn) {
                 this.checkIn = checkIn;
@@ -1573,7 +1573,7 @@ public class HotelOrderDetailInfoResponseBody extends TeaModel {
             }
 
             /**
-             * 价格计划id
+             * rate_plan_id.
              */
             public Builder ratePlanId(String ratePlanId) {
                 this.ratePlanId = ratePlanId;
@@ -1581,7 +1581,7 @@ public class HotelOrderDetailInfoResponseBody extends TeaModel {
             }
 
             /**
-             * 价格计划名称
+             * rate_plan_name.
              */
             public Builder ratePlanName(String ratePlanName) {
                 this.ratePlanName = ratePlanName;
@@ -1589,7 +1589,7 @@ public class HotelOrderDetailInfoResponseBody extends TeaModel {
             }
 
             /**
-             * 房型id
+             * room_id.
              */
             public Builder roomId(String roomId) {
                 this.roomId = roomId;
@@ -1597,7 +1597,7 @@ public class HotelOrderDetailInfoResponseBody extends TeaModel {
             }
 
             /**
-             * 房型名称
+             * room_name.
              */
             public Builder roomName(String roomName) {
                 this.roomName = roomName;
@@ -1605,7 +1605,7 @@ public class HotelOrderDetailInfoResponseBody extends TeaModel {
             }
 
             /**
-             * 房间价格
+             * room_price.
              */
             public Builder roomPrice(Long roomPrice) {
                 this.roomPrice = roomPrice;
@@ -2078,7 +2078,7 @@ public class HotelOrderDetailInfoResponseBody extends TeaModel {
             private Long totalPrice; 
 
             /**
-             * 实际入住时间
+             * actual_check_in_time.
              */
             public Builder actualCheckInTime(String actualCheckInTime) {
                 this.actualCheckInTime = actualCheckInTime;
@@ -2086,7 +2086,7 @@ public class HotelOrderDetailInfoResponseBody extends TeaModel {
             }
 
             /**
-             * 实际离店时间
+             * actual_check_out_time.
              */
             public Builder actualCheckOutTime(String actualCheckOutTime) {
                 this.actualCheckOutTime = actualCheckOutTime;
@@ -2094,7 +2094,7 @@ public class HotelOrderDetailInfoResponseBody extends TeaModel {
             }
 
             /**
-             * 取消政策
+             * btrip_hotel_cancel_policy_d_t_o.
              */
             public Builder btripHotelCancelPolicyDTO(BtripHotelCancelPolicyDTO btripHotelCancelPolicyDTO) {
                 this.btripHotelCancelPolicyDTO = btripHotelCancelPolicyDTO;
@@ -2102,7 +2102,7 @@ public class HotelOrderDetailInfoResponseBody extends TeaModel {
             }
 
             /**
-             * 商旅订单号
+             * btrip_order_id.
              */
             public Builder btripOrderId(String btripOrderId) {
                 this.btripOrderId = btripOrderId;
@@ -2110,7 +2110,7 @@ public class HotelOrderDetailInfoResponseBody extends TeaModel {
             }
 
             /**
-             * 退订罚金
+             * cancel_fine.
              */
             public Builder cancelFine(Long cancelFine) {
                 this.cancelFine = cancelFine;
@@ -2118,7 +2118,7 @@ public class HotelOrderDetailInfoResponseBody extends TeaModel {
             }
 
             /**
-             * 退订信息
+             * cancel_info.
              */
             public Builder cancelInfo(CancelInfo cancelInfo) {
                 this.cancelInfo = cancelInfo;
@@ -2126,7 +2126,7 @@ public class HotelOrderDetailInfoResponseBody extends TeaModel {
             }
 
             /**
-             * 入住日期
+             * check_in.
              */
             public Builder checkIn(String checkIn) {
                 this.checkIn = checkIn;
@@ -2134,7 +2134,7 @@ public class HotelOrderDetailInfoResponseBody extends TeaModel {
             }
 
             /**
-             * 离店日期
+             * check_out.
              */
             public Builder checkOut(String checkOut) {
                 this.checkOut = checkOut;
@@ -2142,7 +2142,7 @@ public class HotelOrderDetailInfoResponseBody extends TeaModel {
             }
 
             /**
-             * 确认订单时间
+             * confirm_order_time.
              */
             public Builder confirmOrderTime(String confirmOrderTime) {
                 this.confirmOrderTime = confirmOrderTime;
@@ -2150,7 +2150,7 @@ public class HotelOrderDetailInfoResponseBody extends TeaModel {
             }
 
             /**
-             * 联系人姓名
+             * contract_name.
              */
             public Builder contractName(String contractName) {
                 this.contractName = contractName;
@@ -2158,7 +2158,7 @@ public class HotelOrderDetailInfoResponseBody extends TeaModel {
             }
 
             /**
-             * 联系人电话
+             * contract_tel.
              */
             public Builder contractTel(String contractTel) {
                 this.contractTel = contractTel;
@@ -2166,7 +2166,7 @@ public class HotelOrderDetailInfoResponseBody extends TeaModel {
             }
 
             /**
-             * 创单时间
+             * create_order_time.
              */
             public Builder createOrderTime(String createOrderTime) {
                 this.createOrderTime = createOrderTime;
@@ -2174,7 +2174,7 @@ public class HotelOrderDetailInfoResponseBody extends TeaModel {
             }
 
             /**
-             * 最早到达时间
+             * early_arrival_time.
              */
             public Builder earlyArrivalTime(String earlyArrivalTime) {
                 this.earlyArrivalTime = earlyArrivalTime;
@@ -2182,7 +2182,7 @@ public class HotelOrderDetailInfoResponseBody extends TeaModel {
             }
 
             /**
-             * 是否提前离店
+             * early_departure.
              */
             public Builder earlyDeparture(Boolean earlyDeparture) {
                 this.earlyDeparture = earlyDeparture;
@@ -2190,7 +2190,7 @@ public class HotelOrderDetailInfoResponseBody extends TeaModel {
             }
 
             /**
-             * 入住人数量
+             * guest_count.
              */
             public Builder guestCount(Integer guestCount) {
                 this.guestCount = guestCount;
@@ -2198,7 +2198,7 @@ public class HotelOrderDetailInfoResponseBody extends TeaModel {
             }
 
             /**
-             * 酒店数据
+             * hotel_detail_info.
              */
             public Builder hotelDetailInfo(HotelDetailInfo hotelDetailInfo) {
                 this.hotelDetailInfo = hotelDetailInfo;
@@ -2206,7 +2206,7 @@ public class HotelOrderDetailInfoResponseBody extends TeaModel {
             }
 
             /**
-             * 发票信息
+             * invoice_info.
              */
             public Builder invoiceInfo(InvoiceInfo invoiceInfo) {
                 this.invoiceInfo = invoiceInfo;
@@ -2214,7 +2214,7 @@ public class HotelOrderDetailInfoResponseBody extends TeaModel {
             }
 
             /**
-             * 商品id
+             * item_id.
              */
             public Builder itemId(String itemId) {
                 this.itemId = itemId;
@@ -2222,7 +2222,7 @@ public class HotelOrderDetailInfoResponseBody extends TeaModel {
             }
 
             /**
-             * 最晚到达时间
+             * last_arrival_time.
              */
             public Builder lastArrivalTime(String lastArrivalTime) {
                 this.lastArrivalTime = lastArrivalTime;
@@ -2230,7 +2230,7 @@ public class HotelOrderDetailInfoResponseBody extends TeaModel {
             }
 
             /**
-             * 入住人信息
+             * occupant_info_list.
              */
             public Builder occupantInfoList(java.util.List < OccupantInfoList> occupantInfoList) {
                 this.occupantInfoList = occupantInfoList;
@@ -2238,7 +2238,7 @@ public class HotelOrderDetailInfoResponseBody extends TeaModel {
             }
 
             /**
-             * 订单状态
+             * order_status.
              */
             public Builder orderStatus(Integer orderStatus) {
                 this.orderStatus = orderStatus;
@@ -2246,7 +2246,7 @@ public class HotelOrderDetailInfoResponseBody extends TeaModel {
             }
 
             /**
-             * 订单状态描述
+             * order_status_desc.
              */
             public Builder orderStatusDesc(String orderStatusDesc) {
                 this.orderStatusDesc = orderStatusDesc;
@@ -2254,7 +2254,7 @@ public class HotelOrderDetailInfoResponseBody extends TeaModel {
             }
 
             /**
-             * 支付时间
+             * pay_time.
              */
             public Builder payTime(String payTime) {
                 this.payTime = payTime;
@@ -2262,7 +2262,7 @@ public class HotelOrderDetailInfoResponseBody extends TeaModel {
             }
 
             /**
-             * 产品类型
+             * product_type.
              */
             public Builder productType(Integer productType) {
                 this.productType = productType;
@@ -2270,7 +2270,7 @@ public class HotelOrderDetailInfoResponseBody extends TeaModel {
             }
 
             /**
-             * 商旅采购单号
+             * purchase_order_id.
              */
             public Builder purchaseOrderId(String purchaseOrderId) {
                 this.purchaseOrderId = purchaseOrderId;
@@ -2278,7 +2278,7 @@ public class HotelOrderDetailInfoResponseBody extends TeaModel {
             }
 
             /**
-             * 应退金额
+             * refund_price.
              */
             public Builder refundPrice(Long refundPrice) {
                 this.refundPrice = refundPrice;
@@ -2286,7 +2286,7 @@ public class HotelOrderDetailInfoResponseBody extends TeaModel {
             }
 
             /**
-             * 退款原因
+             * refund_reason.
              */
             public Builder refundReason(String refundReason) {
                 this.refundReason = refundReason;
@@ -2294,7 +2294,7 @@ public class HotelOrderDetailInfoResponseBody extends TeaModel {
             }
 
             /**
-             * 退订服务费
+             * refund_service_fee.
              */
             public Builder refundServiceFee(Long refundServiceFee) {
                 this.refundServiceFee = refundServiceFee;
@@ -2302,7 +2302,7 @@ public class HotelOrderDetailInfoResponseBody extends TeaModel {
             }
 
             /**
-             * 间夜价格
+             * room_night_price_info_list.
              */
             public Builder roomNightPriceInfoList(java.util.List < RoomNightPriceInfoList> roomNightPriceInfoList) {
                 this.roomNightPriceInfoList = roomNightPriceInfoList;
@@ -2310,7 +2310,7 @@ public class HotelOrderDetailInfoResponseBody extends TeaModel {
             }
 
             /**
-             * 房间数
+             * room_number.
              */
             public Builder roomNumber(Integer roomNumber) {
                 this.roomNumber = roomNumber;
@@ -2318,7 +2318,7 @@ public class HotelOrderDetailInfoResponseBody extends TeaModel {
             }
 
             /**
-             * 房型名
+             * room_type_name.
              */
             public Builder roomTypeName(String roomTypeName) {
                 this.roomTypeName = roomTypeName;
@@ -2326,7 +2326,7 @@ public class HotelOrderDetailInfoResponseBody extends TeaModel {
             }
 
             /**
-             * 卖家id
+             * seller_id.
              */
             public Builder sellerId(String sellerId) {
                 this.sellerId = sellerId;
@@ -2334,7 +2334,7 @@ public class HotelOrderDetailInfoResponseBody extends TeaModel {
             }
 
             /**
-             * 卖家名称
+             * seller_name.
              */
             public Builder sellerName(String sellerName) {
                 this.sellerName = sellerName;
@@ -2342,7 +2342,7 @@ public class HotelOrderDetailInfoResponseBody extends TeaModel {
             }
 
             /**
-             * 服务费
+             * service_fee.
              */
             public Builder serviceFee(Long serviceFee) {
                 this.serviceFee = serviceFee;
@@ -2350,7 +2350,7 @@ public class HotelOrderDetailInfoResponseBody extends TeaModel {
             }
 
             /**
-             * 支付类型
+             * settle_type.
              */
             public Builder settleType(String settleType) {
                 this.settleType = settleType;
@@ -2358,7 +2358,7 @@ public class HotelOrderDetailInfoResponseBody extends TeaModel {
             }
 
             /**
-             * 分销商酒店订单号
+             * supplier_order_id.
              */
             public Builder supplierOrderId(String supplierOrderId) {
                 this.supplierOrderId = supplierOrderId;
@@ -2366,7 +2366,7 @@ public class HotelOrderDetailInfoResponseBody extends TeaModel {
             }
 
             /**
-             * 订单总价
+             * total_price.
              */
             public Builder totalPrice(Long totalPrice) {
                 this.totalPrice = totalPrice;

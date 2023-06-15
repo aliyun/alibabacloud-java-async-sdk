@@ -202,7 +202,7 @@ public class CarSceneQueryResponseBody extends TeaModel {
             private String state; 
 
             /**
-             * 场景模板id
+             * scenarioTemplateId.
              */
             public Builder scenarioTemplateId(String scenarioTemplateId) {
                 this.scenarioTemplateId = scenarioTemplateId;
@@ -210,7 +210,7 @@ public class CarSceneQueryResponseBody extends TeaModel {
             }
 
             /**
-             * 场景模板名称
+             * scenarioTemplateName.
              */
             public Builder scenarioTemplateName(String scenarioTemplateName) {
                 this.scenarioTemplateName = scenarioTemplateName;
@@ -218,7 +218,7 @@ public class CarSceneQueryResponseBody extends TeaModel {
             }
 
             /**
-             * 场景状态，ACTIVATE：开启，FORBIDDEN：禁用
+             * state.
              */
             public Builder state(String state) {
                 this.state = state;

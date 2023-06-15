@@ -127,7 +127,7 @@ public class ProjectAddRequest extends Request {
         } 
 
         /**
-         * 项目代码
+         * code.
          */
         public Builder code(String code) {
             this.putBodyParameter("code", code);
@@ -136,7 +136,7 @@ public class ProjectAddRequest extends Request {
         }
 
         /**
-         * 项目名称
+         * project_name.
          */
         public Builder projectName(String projectName) {
             this.putBodyParameter("project_name", projectName);
@@ -145,7 +145,7 @@ public class ProjectAddRequest extends Request {
         }
 
         /**
-         * 第三方成本中心id
+         * third_part_cost_center_id.
          */
         public Builder thirdPartCostCenterId(String thirdPartCostCenterId) {
             this.putBodyParameter("third_part_cost_center_id", thirdPartCostCenterId);
@@ -154,7 +154,7 @@ public class ProjectAddRequest extends Request {
         }
 
         /**
-         * 第三方项目id
+         * third_part_id.
          */
         public Builder thirdPartId(String thirdPartId) {
             this.putBodyParameter("third_part_id", thirdPartId);
@@ -163,7 +163,7 @@ public class ProjectAddRequest extends Request {
         }
 
         /**
-         * 第三方发票id
+         * third_part_invoice_id.
          */
         public Builder thirdPartInvoiceId(String thirdPartInvoiceId) {
             this.putBodyParameter("third_part_invoice_id", thirdPartInvoiceId);

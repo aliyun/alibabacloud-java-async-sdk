@@ -418,7 +418,7 @@ public class TrainTicketScanQueryResponseBody extends TeaModel {
             private String trainNo; 
 
             /**
-             * 到达站
+             * arr_station.
              */
             public Builder arrStation(String arrStation) {
                 this.arrStation = arrStation;
@@ -426,7 +426,7 @@ public class TrainTicketScanQueryResponseBody extends TeaModel {
             }
 
             /**
-             * 出账日
+             * bill_date.
              */
             public Builder billDate(String billDate) {
                 this.billDate = billDate;
@@ -434,7 +434,7 @@ public class TrainTicketScanQueryResponseBody extends TeaModel {
             }
 
             /**
-             * 车厢
+             * coach_name.
              */
             public Builder coachName(String coachName) {
                 this.coachName = coachName;
@@ -442,7 +442,7 @@ public class TrainTicketScanQueryResponseBody extends TeaModel {
             }
 
             /**
-             * 成本中心
+             * cost_center.
              */
             public Builder costCenter(String costCenter) {
                 this.costCenter = costCenter;
@@ -450,7 +450,7 @@ public class TrainTicketScanQueryResponseBody extends TeaModel {
             }
 
             /**
-             * 出发站
+             * dep_station.
              */
             public Builder depStation(String depStation) {
                 this.depStation = depStation;
@@ -458,7 +458,7 @@ public class TrainTicketScanQueryResponseBody extends TeaModel {
             }
 
             /**
-             * 发车时间
+             * dep_time.
              */
             public Builder depTime(String depTime) {
                 this.depTime = depTime;
@@ -466,7 +466,7 @@ public class TrainTicketScanQueryResponseBody extends TeaModel {
             }
 
             /**
-             * 部门
+             * department.
              */
             public Builder department(String department) {
                 this.department = department;
@@ -474,7 +474,7 @@ public class TrainTicketScanQueryResponseBody extends TeaModel {
             }
 
             /**
-             * 应用ID
+             * id.
              */
             public Builder id(String id) {
                 this.id = id;
@@ -482,7 +482,7 @@ public class TrainTicketScanQueryResponseBody extends TeaModel {
             }
 
             /**
-             * 发票抬头
+             * invoice_title.
              */
             public Builder invoiceTitle(String invoiceTitle) {
                 this.invoiceTitle = invoiceTitle;
@@ -490,7 +490,7 @@ public class TrainTicketScanQueryResponseBody extends TeaModel {
             }
 
             /**
-             * 商旅订单号
+             * order_id.
              */
             public Builder orderId(Long orderId) {
                 this.orderId = orderId;
@@ -498,7 +498,7 @@ public class TrainTicketScanQueryResponseBody extends TeaModel {
             }
 
             /**
-             * 下载地址
+             * oss_url.
              */
             public Builder ossUrl(String ossUrl) {
                 this.ossUrl = ossUrl;
@@ -506,7 +506,7 @@ public class TrainTicketScanQueryResponseBody extends TeaModel {
             }
 
             /**
-             * 乘车人
+             * passenger.
              */
             public Builder passenger(String passenger) {
                 this.passenger = passenger;
@@ -514,7 +514,7 @@ public class TrainTicketScanQueryResponseBody extends TeaModel {
             }
 
             /**
-             * 票价
+             * price.
              */
             public Builder price(String price) {
                 this.price = price;
@@ -522,7 +522,7 @@ public class TrainTicketScanQueryResponseBody extends TeaModel {
             }
 
             /**
-             * 项目
+             * project.
              */
             public Builder project(String project) {
                 this.project = project;
@@ -530,7 +530,7 @@ public class TrainTicketScanQueryResponseBody extends TeaModel {
             }
 
             /**
-             * 席别
+             * seat.
              */
             public Builder seat(String seat) {
                 this.seat = seat;
@@ -538,7 +538,7 @@ public class TrainTicketScanQueryResponseBody extends TeaModel {
             }
 
             /**
-             * 座位号
+             * seat_no.
              */
             public Builder seatNo(String seatNo) {
                 this.seatNo = seatNo;
@@ -546,7 +546,7 @@ public class TrainTicketScanQueryResponseBody extends TeaModel {
             }
 
             /**
-             * 票面票号
+             * serial_number.
              */
             public Builder serialNumber(String serialNumber) {
                 this.serialNumber = serialNumber;
@@ -554,7 +554,7 @@ public class TrainTicketScanQueryResponseBody extends TeaModel {
             }
 
             /**
-             * 税额
+             * tax_amount.
              */
             public Builder taxAmount(String taxAmount) {
                 this.taxAmount = taxAmount;
@@ -562,7 +562,7 @@ public class TrainTicketScanQueryResponseBody extends TeaModel {
             }
 
             /**
-             * 税率
+             * tax_rate.
              */
             public Builder taxRate(String taxRate) {
                 this.taxRate = taxRate;

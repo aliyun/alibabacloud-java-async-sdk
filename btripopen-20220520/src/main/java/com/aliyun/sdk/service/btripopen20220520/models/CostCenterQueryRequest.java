@@ -110,7 +110,7 @@ public class CostCenterQueryRequest extends Request {
         } 
 
         /**
-         * 是否需要展示成员信息，当成本中心为部分人员适用的时候有返回
+         * need_org_entity.
          */
         public Builder needOrgEntity(Boolean needOrgEntity) {
             this.putQueryParameter("need_org_entity", needOrgEntity);
@@ -119,7 +119,7 @@ public class CostCenterQueryRequest extends Request {
         }
 
         /**
-         * 第三方成本中心id
+         * thirdpart_id.
          */
         public Builder thirdpartId(String thirdpartId) {
             this.putQueryParameter("thirdpart_id", thirdpartId);
@@ -128,7 +128,7 @@ public class CostCenterQueryRequest extends Request {
         }
 
         /**
-         * 成本中心名称
+         * title.
          */
         public Builder title(String title) {
             this.putQueryParameter("title", title);
@@ -137,7 +137,7 @@ public class CostCenterQueryRequest extends Request {
         }
 
         /**
-         * 无userId时传缺省值superAdmin
+         * user_id.
          */
         public Builder userId(String userId) {
             this.putQueryParameter("user_id", userId);

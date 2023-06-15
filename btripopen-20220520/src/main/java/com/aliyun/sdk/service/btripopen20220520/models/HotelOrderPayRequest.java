@@ -174,7 +174,7 @@ public class HotelOrderPayRequest extends Request {
         }
 
         /**
-         * 企业支付金额
+         * company_pay_fee.
          */
         public Builder companyPayFee(Long companyPayFee) {
             this.putBodyParameter("company_pay_fee", companyPayFee);
@@ -183,7 +183,7 @@ public class HotelOrderPayRequest extends Request {
         }
 
         /**
-         * 个人支付金额
+         * person_pay_fee.
          */
         public Builder personPayFee(Long personPayFee) {
             this.putBodyParameter("person_pay_fee", personPayFee);
@@ -192,7 +192,7 @@ public class HotelOrderPayRequest extends Request {
         }
 
         /**
-         * 三方支付账号
+         * third_pay_account.
          */
         public Builder thirdPayAccount(String thirdPayAccount) {
             this.putBodyParameter("third_pay_account", thirdPayAccount);
@@ -201,7 +201,7 @@ public class HotelOrderPayRequest extends Request {
         }
 
         /**
-         * 三方交易号
+         * third_trade_no.
          */
         public Builder thirdTradeNo(String thirdTradeNo) {
             this.putBodyParameter("third_trade_no", thirdTradeNo);
@@ -210,7 +210,7 @@ public class HotelOrderPayRequest extends Request {
         }
 
         /**
-         * 房费总价（不含服务费）
+         * total_price.
          */
         public Builder totalPrice(Long totalPrice) {
             this.putBodyParameter("total_price", totalPrice);

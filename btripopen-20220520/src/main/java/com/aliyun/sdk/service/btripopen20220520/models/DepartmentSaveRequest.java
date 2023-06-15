@@ -217,7 +217,7 @@ public class DepartmentSaveRequest extends Request {
             }
 
             /**
-             * 部门主管id 以多个主管以|隔开
+             * manager_ids.
              */
             public Builder managerIds(String managerIds) {
                 this.managerIds = managerIds;

@@ -69,7 +69,7 @@ public class HotelOrderCancelRequest extends Request {
         } 
 
         /**
-         * 分销商订单id
+         * dis_order_id.
          */
         public Builder disOrderId(String disOrderId) {
             this.putQueryParameter("dis_order_id", disOrderId);

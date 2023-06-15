@@ -83,7 +83,7 @@ public class MonthBillConfirmRequest extends Request {
         } 
 
         /**
-         * 账期日，例如20221001
+         * mail_bill_date.
          */
         public Builder mailBillDate(Integer mailBillDate) {
             this.putBodyParameter("mail_bill_date", mailBillDate);

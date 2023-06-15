@@ -202,7 +202,7 @@ public class FlightSearchListResponseBody extends TeaModel {
             private String airlineSimpleName; 
 
             /**
-             * 必填项,航司编码
+             * airline_code.
              */
             public Builder airlineCode(String airlineCode) {
                 this.airlineCode = airlineCode;
@@ -210,7 +210,7 @@ public class FlightSearchListResponseBody extends TeaModel {
             }
 
             /**
-             * 必填项,航司名称
+             * airline_name.
              */
             public Builder airlineName(String airlineName) {
                 this.airlineName = airlineName;
@@ -218,7 +218,7 @@ public class FlightSearchListResponseBody extends TeaModel {
             }
 
             /**
-             * 必填项,航司简称
+             * airline_simple_name.
              */
             public Builder airlineSimpleName(String airlineSimpleName) {
                 this.airlineSimpleName = airlineSimpleName;
@@ -307,7 +307,7 @@ public class FlightSearchListResponseBody extends TeaModel {
             private String terminal; 
 
             /**
-             * 必填项,机场编码
+             * airport_code.
              */
             public Builder airportCode(String airportCode) {
                 this.airportCode = airportCode;
@@ -315,7 +315,7 @@ public class FlightSearchListResponseBody extends TeaModel {
             }
 
             /**
-             * 必填项,机场编码
+             * airport_name.
              */
             public Builder airportName(String airportName) {
                 this.airportName = airportName;
@@ -323,7 +323,7 @@ public class FlightSearchListResponseBody extends TeaModel {
             }
 
             /**
-             * 必填项,城市编码
+             * city_code.
              */
             public Builder cityCode(String cityCode) {
                 this.cityCode = cityCode;
@@ -331,7 +331,7 @@ public class FlightSearchListResponseBody extends TeaModel {
             }
 
             /**
-             * 必填项,城市名称
+             * city_name.
              */
             public Builder cityName(String cityName) {
                 this.cityName = cityName;
@@ -339,7 +339,7 @@ public class FlightSearchListResponseBody extends TeaModel {
             }
 
             /**
-             * 必填项,航站楼
+             * terminal.
              */
             public Builder terminal(String terminal) {
                 this.terminal = terminal;
@@ -658,7 +658,7 @@ public class FlightSearchListResponseBody extends TeaModel {
             }
 
             /**
-             * desc : 您可以随身携带上飞机客舱内的行李物品，由旅客自行负责保管。具体尺寸、重量、类型等以各航空公司规定为准。
+             * description.
              */
             public Builder description(Description description) {
                 this.description = description;
@@ -666,7 +666,7 @@ public class FlightSearchListResponseBody extends TeaModel {
             }
 
             /**
-             * image : https://gw.alicdn.com/imgextra/i3/O1CN01kLt3m923XsUs6WVif_!!6000000007266-2-tps-280-300.png
+             * image_d_o.
              */
             public Builder imageDO(ImageDO imageDO) {
                 this.imageDO = imageDO;
@@ -771,7 +771,7 @@ public class FlightSearchListResponseBody extends TeaModel {
             private String title; 
 
             /**
-             * baggageDesc : ["每人可携带 1件 登机","至多 5公斤/件","尺寸不超过 20*40*55cm"]
+             * baggage_sub_content_visualizes.
              */
             public Builder baggageSubContentVisualizes(java.util.List < BaggageSubContentVisualizes> baggageSubContentVisualizes) {
                 this.baggageSubContentVisualizes = baggageSubContentVisualizes;
@@ -787,7 +787,7 @@ public class FlightSearchListResponseBody extends TeaModel {
             }
 
             /**
-             * baggageSubContentVisualizes : [
+             * is_struct.
              */
             public Builder isStruct(Boolean isStruct) {
                 this.isStruct = isStruct;
@@ -993,7 +993,7 @@ public class FlightSearchListResponseBody extends TeaModel {
             }
 
             /**
-             * baggageSubItems : [
+             * index.
              */
             public Builder index(Integer index) {
                 this.index = index;
@@ -1009,7 +1009,7 @@ public class FlightSearchListResponseBody extends TeaModel {
             }
 
             /**
-             * logo : https://gw.alicdn.com/imgextra/i1/O1CN019zl3WZ22fNLxzx2cR_!!6000000007147-2-tps-125-45.png
+             * tips.
              */
             public Builder tips(Tips tips) {
                 this.tips = tips;
@@ -1446,7 +1446,7 @@ public class FlightSearchListResponseBody extends TeaModel {
             private String title; 
 
             /**
-             * isStruct : true
+             * is_struct.
              */
             public Builder isStruct(Boolean isStruct) {
                 this.isStruct = isStruct;
@@ -1462,7 +1462,7 @@ public class FlightSearchListResponseBody extends TeaModel {
             }
 
             /**
-             * feeDesc : ￥156/人
+             * refund_sub_contents.
              */
             public Builder refundSubContents(java.util.List < RefundSubContents> refundSubContents) {
                 this.refundSubContents = refundSubContents;
@@ -1583,7 +1583,7 @@ public class FlightSearchListResponseBody extends TeaModel {
             private Integer type; 
 
             /**
-             * content : 不可签转
+             * extra_contents.
              */
             public Builder extraContents(java.util.List < ExtraContents> extraContents) {
                 this.extraContents = extraContents;
@@ -1591,7 +1591,7 @@ public class FlightSearchListResponseBody extends TeaModel {
             }
 
             /**
-             * extraContents : [
+             * index.
              */
             public Builder index(Integer index) {
                 this.index = index;
@@ -2052,7 +2052,7 @@ public class FlightSearchListResponseBody extends TeaModel {
             private String title; 
 
             /**
-             * isStruct : true
+             * is_struct.
              */
             public Builder isStruct(Boolean isStruct) {
                 this.isStruct = isStruct;
@@ -2068,7 +2068,7 @@ public class FlightSearchListResponseBody extends TeaModel {
             }
 
             /**
-             * feeDesc : ￥156/人
+             * refund_sub_contents.
              */
             public Builder refundSubContents(java.util.List < RefundSubItemsRefundSubContents> refundSubContents) {
                 this.refundSubContents = refundSubContents;
@@ -2189,7 +2189,7 @@ public class FlightSearchListResponseBody extends TeaModel {
             private Integer type; 
 
             /**
-             * content : 不可签转
+             * extra_contents.
              */
             public Builder extraContents(java.util.List < RefundRuleItemExtraContents> extraContents) {
                 this.extraContents = extraContents;
@@ -2197,7 +2197,7 @@ public class FlightSearchListResponseBody extends TeaModel {
             }
 
             /**
-             * extraContents : [
+             * index.
              */
             public Builder index(Integer index) {
                 this.index = index;
@@ -2790,7 +2790,7 @@ public class FlightSearchListResponseBody extends TeaModel {
             private UpgradeRule upgradeRule; 
 
             /**
-             * 行李额描述
+             * baggage_info.
              */
             public Builder baggageInfo(String baggageInfo) {
                 this.baggageInfo = baggageInfo;
@@ -2806,7 +2806,7 @@ public class FlightSearchListResponseBody extends TeaModel {
             }
 
             /**
-             * 改签规则
+             * change_rule.
              */
             public Builder changeRule(ChangeRule changeRule) {
                 this.changeRule = changeRule;
@@ -2822,7 +2822,7 @@ public class FlightSearchListResponseBody extends TeaModel {
             }
 
             /**
-             * 额外信息
+             * extra.
              */
             public Builder extra(String extra) {
                 this.extra = extra;
@@ -2830,7 +2830,7 @@ public class FlightSearchListResponseBody extends TeaModel {
             }
 
             /**
-             * 退票规则
+             * refund_rule.
              */
             public Builder refundRule(RefundRule refundRule) {
                 this.refundRule = refundRule;
@@ -2846,7 +2846,7 @@ public class FlightSearchListResponseBody extends TeaModel {
             }
 
             /**
-             * 签转规则
+             * sign_rule.
              */
             public Builder signRule(SignRule signRule) {
                 this.signRule = signRule;
@@ -2854,7 +2854,7 @@ public class FlightSearchListResponseBody extends TeaModel {
             }
 
             /**
-             * 退改签描述
+             * tuigaiqian_info.
              */
             public Builder tuigaiqianInfo(String tuigaiqianInfo) {
                 this.tuigaiqianInfo = tuigaiqianInfo;
@@ -2862,7 +2862,7 @@ public class FlightSearchListResponseBody extends TeaModel {
             }
 
             /**
-             * 升舱规则
+             * upgrade_rule.
              */
             public Builder upgradeRule(UpgradeRule upgradeRule) {
                 this.upgradeRule = upgradeRule;
@@ -3191,7 +3191,7 @@ public class FlightSearchListResponseBody extends TeaModel {
             private Integer totalPrice; 
 
             /**
-             * 代理人编号
+             * agent_id.
              */
             public Builder agentId(Long agentId) {
                 this.agentId = agentId;
@@ -3199,7 +3199,7 @@ public class FlightSearchListResponseBody extends TeaModel {
             }
 
             /**
-             * 舱位基准价
+             * basic_cabin_price.
              */
             public Builder basicCabinPrice(Integer basicCabinPrice) {
                 this.basicCabinPrice = basicCabinPrice;
@@ -3207,7 +3207,7 @@ public class FlightSearchListResponseBody extends TeaModel {
             }
 
             /**
-             * 基建
+             * build_price.
              */
             public Builder buildPrice(Integer buildPrice) {
                 this.buildPrice = buildPrice;
@@ -3215,7 +3215,7 @@ public class FlightSearchListResponseBody extends TeaModel {
             }
 
             /**
-             * 必填项,舱位代码
+             * cabin.
              */
             public Builder cabin(String cabin) {
                 this.cabin = cabin;
@@ -3223,7 +3223,7 @@ public class FlightSearchListResponseBody extends TeaModel {
             }
 
             /**
-             * 必填项,舱等
+             * cabin_class.
              */
             public Builder cabinClass(String cabinClass) {
                 this.cabinClass = cabinClass;
@@ -3231,7 +3231,7 @@ public class FlightSearchListResponseBody extends TeaModel {
             }
 
             /**
-             * 子舱位等级展示用名称，超级经济舱
+             * cabin_class_name.
              */
             public Builder cabinClassName(String cabinClassName) {
                 this.cabinClassName = cabinClassName;
@@ -3239,7 +3239,7 @@ public class FlightSearchListResponseBody extends TeaModel {
             }
 
             /**
-             * 必填项,子舱位代码
+             * child_cabin.
              */
             public Builder childCabin(String childCabin) {
                 this.childCabin = childCabin;
@@ -3247,7 +3247,7 @@ public class FlightSearchListResponseBody extends TeaModel {
             }
 
             /**
-             * 舱位名称，公务舱
+             * class_name.
              */
             public Builder className(String className) {
                 this.className = className;
@@ -3255,7 +3255,7 @@ public class FlightSearchListResponseBody extends TeaModel {
             }
 
             /**
-             * 退改签描述
+             * class_rule.
              */
             public Builder classRule(String classRule) {
                 this.classRule = classRule;
@@ -3263,7 +3263,7 @@ public class FlightSearchListResponseBody extends TeaModel {
             }
 
             /**
-             * 必填项,折扣
+             * discount.
              */
             public Builder discount(String discount) {
                 this.discount = discount;
@@ -3271,7 +3271,7 @@ public class FlightSearchListResponseBody extends TeaModel {
             }
 
             /**
-             * 退改签规则列表
+             * flight_rule_list.
              */
             public Builder flightRuleList(java.util.List < FlightRuleList> flightRuleList) {
                 this.flightRuleList = flightRuleList;
@@ -3279,7 +3279,7 @@ public class FlightSearchListResponseBody extends TeaModel {
             }
 
             /**
-             * 退改签规则列表json
+             * flight_rule_list_str.
              */
             public Builder flightRuleListStr(String flightRuleListStr) {
                 this.flightRuleListStr = flightRuleListStr;
@@ -3287,7 +3287,7 @@ public class FlightSearchListResponseBody extends TeaModel {
             }
 
             /**
-             * 行程单类型
+             * invoice_type.
              */
             public Builder invoiceType(Integer invoiceType) {
                 this.invoiceType = invoiceType;
@@ -3295,7 +3295,7 @@ public class FlightSearchListResponseBody extends TeaModel {
             }
 
             /**
-             * 是否协议价
+             * is_protocol.
              */
             public Builder isProtocol(Boolean isProtocol) {
                 this.isProtocol = isProtocol;
@@ -3311,7 +3311,7 @@ public class FlightSearchListResponseBody extends TeaModel {
             }
 
             /**
-             * 燃油
+             * oil_price.
              */
             public Builder oilPrice(Integer oilPrice) {
                 this.oilPrice = oilPrice;
@@ -3319,7 +3319,7 @@ public class FlightSearchListResponseBody extends TeaModel {
             }
 
             /**
-             * 加密参数,包含agentId 登下单需要用到的参数信息
+             * order_params.
              */
             public Builder orderParams(String orderParams) {
                 this.orderParams = orderParams;
@@ -3327,7 +3327,7 @@ public class FlightSearchListResponseBody extends TeaModel {
             }
 
             /**
-             * 商品id
+             * ota_item_id.
              */
             public Builder otaItemId(String otaItemId) {
                 this.otaItemId = otaItemId;
@@ -3335,7 +3335,7 @@ public class FlightSearchListResponseBody extends TeaModel {
             }
 
             /**
-             * 必填项,销售票价（分）
+             * price.
              */
             public Builder price(Integer price) {
                 this.price = price;
@@ -3343,7 +3343,7 @@ public class FlightSearchListResponseBody extends TeaModel {
             }
 
             /**
-             * 产品类型
+             * product_type.
              */
             public Builder productType(Long productType) {
                 this.productType = productType;
@@ -3351,7 +3351,7 @@ public class FlightSearchListResponseBody extends TeaModel {
             }
 
             /**
-             * 标准/非标准产品
+             * product_type_desc.
              */
             public Builder productTypeDesc(String productTypeDesc) {
                 this.productTypeDesc = productTypeDesc;
@@ -3359,7 +3359,7 @@ public class FlightSearchListResponseBody extends TeaModel {
             }
 
             /**
-             * 优惠价
+             * promotion_price.
              */
             public Builder promotionPrice(String promotionPrice) {
                 this.promotionPrice = promotionPrice;
@@ -3367,7 +3367,7 @@ public class FlightSearchListResponseBody extends TeaModel {
             }
 
             /**
-             * 必填项,剩余座位数
+             * remained_seat_count.
              */
             public Builder remainedSeatCount(String remainedSeatCount) {
                 this.remainedSeatCount = remainedSeatCount;
@@ -3375,7 +3375,7 @@ public class FlightSearchListResponseBody extends TeaModel {
             }
 
             /**
-             * 票面价
+             * ticket_price.
              */
             public Builder ticketPrice(Integer ticketPrice) {
                 this.ticketPrice = ticketPrice;
@@ -3383,7 +3383,7 @@ public class FlightSearchListResponseBody extends TeaModel {
             }
 
             /**
-             * 总价=销售价+基建+燃油费
+             * total_price.
              */
             public Builder totalPrice(Integer totalPrice) {
                 this.totalPrice = totalPrice;
@@ -3472,7 +3472,7 @@ public class FlightSearchListResponseBody extends TeaModel {
             private String terminal; 
 
             /**
-             * 必填项,机场编码
+             * airport_code.
              */
             public Builder airportCode(String airportCode) {
                 this.airportCode = airportCode;
@@ -3480,7 +3480,7 @@ public class FlightSearchListResponseBody extends TeaModel {
             }
 
             /**
-             * 必填项,机场编码
+             * airport_name.
              */
             public Builder airportName(String airportName) {
                 this.airportName = airportName;
@@ -3488,7 +3488,7 @@ public class FlightSearchListResponseBody extends TeaModel {
             }
 
             /**
-             * 必填项,城市编码
+             * city_code.
              */
             public Builder cityCode(String cityCode) {
                 this.cityCode = cityCode;
@@ -3496,7 +3496,7 @@ public class FlightSearchListResponseBody extends TeaModel {
             }
 
             /**
-             * 必填项,城市名称
+             * city_name.
              */
             public Builder cityName(String cityName) {
                 this.cityName = cityName;
@@ -3504,7 +3504,7 @@ public class FlightSearchListResponseBody extends TeaModel {
             }
 
             /**
-             * 必填项,航站楼
+             * terminal.
              */
             public Builder terminal(String terminal) {
                 this.terminal = terminal;
@@ -3823,7 +3823,7 @@ public class FlightSearchListResponseBody extends TeaModel {
             }
 
             /**
-             * desc : 您可以随身携带上飞机客舱内的行李物品，由旅客自行负责保管。具体尺寸、重量、类型等以各航空公司规定为准。
+             * description.
              */
             public Builder description(BaggageSubContentVisualizesDescription description) {
                 this.description = description;
@@ -3831,7 +3831,7 @@ public class FlightSearchListResponseBody extends TeaModel {
             }
 
             /**
-             * image : https://gw.alicdn.com/imgextra/i3/O1CN01kLt3m923XsUs6WVif_!!6000000007266-2-tps-280-300.png
+             * image_d_o.
              */
             public Builder imageDO(BaggageSubContentVisualizesImageDO imageDO) {
                 this.imageDO = imageDO;
@@ -3936,7 +3936,7 @@ public class FlightSearchListResponseBody extends TeaModel {
             private String title; 
 
             /**
-             * baggageDesc : ["每人可携带 1件 登机","至多 5公斤/件","尺寸不超过 20*40*55cm"]
+             * baggage_sub_content_visualizes.
              */
             public Builder baggageSubContentVisualizes(java.util.List < BaggageSubItemsBaggageSubContentVisualizes> baggageSubContentVisualizes) {
                 this.baggageSubContentVisualizes = baggageSubContentVisualizes;
@@ -3952,7 +3952,7 @@ public class FlightSearchListResponseBody extends TeaModel {
             }
 
             /**
-             * baggageSubContentVisualizes : [
+             * is_struct.
              */
             public Builder isStruct(Boolean isStruct) {
                 this.isStruct = isStruct;
@@ -4158,7 +4158,7 @@ public class FlightSearchListResponseBody extends TeaModel {
             }
 
             /**
-             * baggageSubItems : [
+             * index.
              */
             public Builder index(Integer index) {
                 this.index = index;
@@ -4174,7 +4174,7 @@ public class FlightSearchListResponseBody extends TeaModel {
             }
 
             /**
-             * logo : https://gw.alicdn.com/imgextra/i1/O1CN019zl3WZ22fNLxzx2cR_!!6000000007147-2-tps-125-45.png
+             * tips.
              */
             public Builder tips(BaggageItemTips tips) {
                 this.tips = tips;
@@ -4611,7 +4611,7 @@ public class FlightSearchListResponseBody extends TeaModel {
             private String title; 
 
             /**
-             * isStruct : true
+             * is_struct.
              */
             public Builder isStruct(Boolean isStruct) {
                 this.isStruct = isStruct;
@@ -4627,7 +4627,7 @@ public class FlightSearchListResponseBody extends TeaModel {
             }
 
             /**
-             * feeDesc : ￥156/人
+             * refund_sub_contents.
              */
             public Builder refundSubContents(java.util.List < ChangeRuleItemRefundSubItemsRefundSubContents> refundSubContents) {
                 this.refundSubContents = refundSubContents;
@@ -4748,7 +4748,7 @@ public class FlightSearchListResponseBody extends TeaModel {
             private Integer type; 
 
             /**
-             * content : 不可签转
+             * extra_contents.
              */
             public Builder extraContents(java.util.List < ChangeRuleItemExtraContents> extraContents) {
                 this.extraContents = extraContents;
@@ -4756,7 +4756,7 @@ public class FlightSearchListResponseBody extends TeaModel {
             }
 
             /**
-             * extraContents : [
+             * index.
              */
             public Builder index(Integer index) {
                 this.index = index;
@@ -5217,7 +5217,7 @@ public class FlightSearchListResponseBody extends TeaModel {
             private String title; 
 
             /**
-             * isStruct : true
+             * is_struct.
              */
             public Builder isStruct(Boolean isStruct) {
                 this.isStruct = isStruct;
@@ -5233,7 +5233,7 @@ public class FlightSearchListResponseBody extends TeaModel {
             }
 
             /**
-             * feeDesc : ￥156/人
+             * refund_sub_contents.
              */
             public Builder refundSubContents(java.util.List < RefundRuleItemRefundSubItemsRefundSubContents> refundSubContents) {
                 this.refundSubContents = refundSubContents;
@@ -5354,7 +5354,7 @@ public class FlightSearchListResponseBody extends TeaModel {
             private Integer type; 
 
             /**
-             * content : 不可签转
+             * extra_contents.
              */
             public Builder extraContents(java.util.List < FlightRuleListRefundRuleItemExtraContents> extraContents) {
                 this.extraContents = extraContents;
@@ -5362,7 +5362,7 @@ public class FlightSearchListResponseBody extends TeaModel {
             }
 
             /**
-             * extraContents : [
+             * index.
              */
             public Builder index(Integer index) {
                 this.index = index;
@@ -5955,7 +5955,7 @@ public class FlightSearchListResponseBody extends TeaModel {
             private FlightRuleListUpgradeRule upgradeRule; 
 
             /**
-             * 行李额描述
+             * baggage_info.
              */
             public Builder baggageInfo(String baggageInfo) {
                 this.baggageInfo = baggageInfo;
@@ -5971,7 +5971,7 @@ public class FlightSearchListResponseBody extends TeaModel {
             }
 
             /**
-             * 改签规则
+             * change_rule.
              */
             public Builder changeRule(FlightRuleListChangeRule changeRule) {
                 this.changeRule = changeRule;
@@ -5987,7 +5987,7 @@ public class FlightSearchListResponseBody extends TeaModel {
             }
 
             /**
-             * 额外信息
+             * extra.
              */
             public Builder extra(String extra) {
                 this.extra = extra;
@@ -5995,7 +5995,7 @@ public class FlightSearchListResponseBody extends TeaModel {
             }
 
             /**
-             * 退票规则
+             * refund_rule.
              */
             public Builder refundRule(FlightRuleListRefundRule refundRule) {
                 this.refundRule = refundRule;
@@ -6011,7 +6011,7 @@ public class FlightSearchListResponseBody extends TeaModel {
             }
 
             /**
-             * 签转规则
+             * sign_rule.
              */
             public Builder signRule(FlightRuleListSignRule signRule) {
                 this.signRule = signRule;
@@ -6019,7 +6019,7 @@ public class FlightSearchListResponseBody extends TeaModel {
             }
 
             /**
-             * 退改签描述
+             * tuigaiqian_info.
              */
             public Builder tuigaiqianInfo(String tuigaiqianInfo) {
                 this.tuigaiqianInfo = tuigaiqianInfo;
@@ -6027,7 +6027,7 @@ public class FlightSearchListResponseBody extends TeaModel {
             }
 
             /**
-             * 升舱规则
+             * upgrade_rule.
              */
             public Builder upgradeRule(FlightRuleListUpgradeRule upgradeRule) {
                 this.upgradeRule = upgradeRule;
@@ -6092,7 +6092,7 @@ public class FlightSearchListResponseBody extends TeaModel {
             private String airlineSimpleName; 
 
             /**
-             * 必填项,航司编码
+             * airline_code.
              */
             public Builder airlineCode(String airlineCode) {
                 this.airlineCode = airlineCode;
@@ -6100,7 +6100,7 @@ public class FlightSearchListResponseBody extends TeaModel {
             }
 
             /**
-             * 必填项,航司名称
+             * airline_name.
              */
             public Builder airlineName(String airlineName) {
                 this.airlineName = airlineName;
@@ -6108,7 +6108,7 @@ public class FlightSearchListResponseBody extends TeaModel {
             }
 
             /**
-             * 必填项,航司简称
+             * airline_simple_name.
              */
             public Builder airlineSimpleName(String airlineSimpleName) {
                 this.airlineSimpleName = airlineSimpleName;
@@ -6197,7 +6197,7 @@ public class FlightSearchListResponseBody extends TeaModel {
             private String terminal; 
 
             /**
-             * 必填项,机场编码
+             * airport_code.
              */
             public Builder airportCode(String airportCode) {
                 this.airportCode = airportCode;
@@ -6205,7 +6205,7 @@ public class FlightSearchListResponseBody extends TeaModel {
             }
 
             /**
-             * 必填项,机场编码
+             * airport_name.
              */
             public Builder airportName(String airportName) {
                 this.airportName = airportName;
@@ -6213,7 +6213,7 @@ public class FlightSearchListResponseBody extends TeaModel {
             }
 
             /**
-             * 必填项,城市编码
+             * city_code.
              */
             public Builder cityCode(String cityCode) {
                 this.cityCode = cityCode;
@@ -6221,7 +6221,7 @@ public class FlightSearchListResponseBody extends TeaModel {
             }
 
             /**
-             * 必填项,城市名称
+             * city_name.
              */
             public Builder cityName(String cityName) {
                 this.cityName = cityName;
@@ -6229,7 +6229,7 @@ public class FlightSearchListResponseBody extends TeaModel {
             }
 
             /**
-             * 必填项,航站楼
+             * terminal.
              */
             public Builder terminal(String terminal) {
                 this.terminal = terminal;
@@ -6318,7 +6318,7 @@ public class FlightSearchListResponseBody extends TeaModel {
             private String terminal; 
 
             /**
-             * 必填项,机场编码
+             * airport_code.
              */
             public Builder airportCode(String airportCode) {
                 this.airportCode = airportCode;
@@ -6326,7 +6326,7 @@ public class FlightSearchListResponseBody extends TeaModel {
             }
 
             /**
-             * 必填项,机场编码
+             * airport_name.
              */
             public Builder airportName(String airportName) {
                 this.airportName = airportName;
@@ -6334,7 +6334,7 @@ public class FlightSearchListResponseBody extends TeaModel {
             }
 
             /**
-             * 必填项,城市编码
+             * city_code.
              */
             public Builder cityCode(String cityCode) {
                 this.cityCode = cityCode;
@@ -6342,7 +6342,7 @@ public class FlightSearchListResponseBody extends TeaModel {
             }
 
             /**
-             * 必填项,城市名称
+             * city_name.
              */
             public Builder cityName(String cityName) {
                 this.cityName = cityName;
@@ -6350,7 +6350,7 @@ public class FlightSearchListResponseBody extends TeaModel {
             }
 
             /**
-             * 必填项,航站楼
+             * terminal.
              */
             public Builder terminal(String terminal) {
                 this.terminal = terminal;
@@ -6669,7 +6669,7 @@ public class FlightSearchListResponseBody extends TeaModel {
             }
 
             /**
-             * desc : 您可以随身携带上飞机客舱内的行李物品，由旅客自行负责保管。具体尺寸、重量、类型等以各航空公司规定为准。
+             * description.
              */
             public Builder description(BaggageSubItemsBaggageSubContentVisualizesDescription description) {
                 this.description = description;
@@ -6677,7 +6677,7 @@ public class FlightSearchListResponseBody extends TeaModel {
             }
 
             /**
-             * image : https://gw.alicdn.com/imgextra/i3/O1CN01kLt3m923XsUs6WVif_!!6000000007266-2-tps-280-300.png
+             * image_d_o.
              */
             public Builder imageDO(BaggageSubItemsBaggageSubContentVisualizesImageDO imageDO) {
                 this.imageDO = imageDO;
@@ -6782,7 +6782,7 @@ public class FlightSearchListResponseBody extends TeaModel {
             private String title; 
 
             /**
-             * baggageDesc : ["每人可携带 1件 登机","至多 5公斤/件","尺寸不超过 20*40*55cm"]
+             * baggage_sub_content_visualizes.
              */
             public Builder baggageSubContentVisualizes(java.util.List < BaggageItemBaggageSubItemsBaggageSubContentVisualizes> baggageSubContentVisualizes) {
                 this.baggageSubContentVisualizes = baggageSubContentVisualizes;
@@ -6798,7 +6798,7 @@ public class FlightSearchListResponseBody extends TeaModel {
             }
 
             /**
-             * baggageSubContentVisualizes : [
+             * is_struct.
              */
             public Builder isStruct(Boolean isStruct) {
                 this.isStruct = isStruct;
@@ -7004,7 +7004,7 @@ public class FlightSearchListResponseBody extends TeaModel {
             }
 
             /**
-             * baggageSubItems : [
+             * index.
              */
             public Builder index(Integer index) {
                 this.index = index;
@@ -7020,7 +7020,7 @@ public class FlightSearchListResponseBody extends TeaModel {
             }
 
             /**
-             * logo : https://gw.alicdn.com/imgextra/i1/O1CN019zl3WZ22fNLxzx2cR_!!6000000007147-2-tps-125-45.png
+             * tips.
              */
             public Builder tips(TransferFlightRuleListBaggageItemTips tips) {
                 this.tips = tips;
@@ -7457,7 +7457,7 @@ public class FlightSearchListResponseBody extends TeaModel {
             private String title; 
 
             /**
-             * isStruct : true
+             * is_struct.
              */
             public Builder isStruct(Boolean isStruct) {
                 this.isStruct = isStruct;
@@ -7473,7 +7473,7 @@ public class FlightSearchListResponseBody extends TeaModel {
             }
 
             /**
-             * feeDesc : ￥156/人
+             * refund_sub_contents.
              */
             public Builder refundSubContents(java.util.List < TransferFlightRuleListChangeRuleItemRefundSubItemsRefundSubContents> refundSubContents) {
                 this.refundSubContents = refundSubContents;
@@ -7594,7 +7594,7 @@ public class FlightSearchListResponseBody extends TeaModel {
             private Integer type; 
 
             /**
-             * content : 不可签转
+             * extra_contents.
              */
             public Builder extraContents(java.util.List < TransferFlightRuleListChangeRuleItemExtraContents> extraContents) {
                 this.extraContents = extraContents;
@@ -7602,7 +7602,7 @@ public class FlightSearchListResponseBody extends TeaModel {
             }
 
             /**
-             * extraContents : [
+             * index.
              */
             public Builder index(Integer index) {
                 this.index = index;
@@ -8063,7 +8063,7 @@ public class FlightSearchListResponseBody extends TeaModel {
             private String title; 
 
             /**
-             * isStruct : true
+             * is_struct.
              */
             public Builder isStruct(Boolean isStruct) {
                 this.isStruct = isStruct;
@@ -8079,7 +8079,7 @@ public class FlightSearchListResponseBody extends TeaModel {
             }
 
             /**
-             * feeDesc : ￥156/人
+             * refund_sub_contents.
              */
             public Builder refundSubContents(java.util.List < TransferFlightRuleListRefundRuleItemRefundSubItemsRefundSubContents> refundSubContents) {
                 this.refundSubContents = refundSubContents;
@@ -8200,7 +8200,7 @@ public class FlightSearchListResponseBody extends TeaModel {
             private Integer type; 
 
             /**
-             * content : 不可签转
+             * extra_contents.
              */
             public Builder extraContents(java.util.List < TransferFlightRuleListRefundRuleItemExtraContents> extraContents) {
                 this.extraContents = extraContents;
@@ -8208,7 +8208,7 @@ public class FlightSearchListResponseBody extends TeaModel {
             }
 
             /**
-             * extraContents : [
+             * index.
              */
             public Builder index(Integer index) {
                 this.index = index;
@@ -8801,7 +8801,7 @@ public class FlightSearchListResponseBody extends TeaModel {
             private TransferFlightRuleListUpgradeRule upgradeRule; 
 
             /**
-             * 行李额描述
+             * baggage_info.
              */
             public Builder baggageInfo(String baggageInfo) {
                 this.baggageInfo = baggageInfo;
@@ -8817,7 +8817,7 @@ public class FlightSearchListResponseBody extends TeaModel {
             }
 
             /**
-             * 改签规则
+             * change_rule.
              */
             public Builder changeRule(TransferFlightRuleListChangeRule changeRule) {
                 this.changeRule = changeRule;
@@ -8833,7 +8833,7 @@ public class FlightSearchListResponseBody extends TeaModel {
             }
 
             /**
-             * 额外信息
+             * extra.
              */
             public Builder extra(String extra) {
                 this.extra = extra;
@@ -8841,7 +8841,7 @@ public class FlightSearchListResponseBody extends TeaModel {
             }
 
             /**
-             * 退票规则
+             * refund_rule.
              */
             public Builder refundRule(TransferFlightRuleListRefundRule refundRule) {
                 this.refundRule = refundRule;
@@ -8857,7 +8857,7 @@ public class FlightSearchListResponseBody extends TeaModel {
             }
 
             /**
-             * 签转规则
+             * sign_rule.
              */
             public Builder signRule(TransferFlightRuleListSignRule signRule) {
                 this.signRule = signRule;
@@ -8865,7 +8865,7 @@ public class FlightSearchListResponseBody extends TeaModel {
             }
 
             /**
-             * 退改签描述
+             * tuigaiqian_info.
              */
             public Builder tuigaiqianInfo(String tuigaiqianInfo) {
                 this.tuigaiqianInfo = tuigaiqianInfo;
@@ -8873,7 +8873,7 @@ public class FlightSearchListResponseBody extends TeaModel {
             }
 
             /**
-             * 升舱规则
+             * upgrade_rule.
              */
             public Builder upgradeRule(TransferFlightRuleListUpgradeRule upgradeRule) {
                 this.upgradeRule = upgradeRule;
@@ -9010,7 +9010,7 @@ public class FlightSearchListResponseBody extends TeaModel {
             private java.util.List < TransferFlightRuleList> transferFlightRuleList; 
 
             /**
-             * 机型
+             * flight_size.
              */
             public Builder flightSize(String flightSize) {
                 this.flightSize = flightSize;
@@ -9018,7 +9018,7 @@ public class FlightSearchListResponseBody extends TeaModel {
             }
 
             /**
-             * 机型代码
+             * flight_type.
              */
             public Builder flightType(String flightType) {
                 this.flightType = flightType;
@@ -9026,7 +9026,7 @@ public class FlightSearchListResponseBody extends TeaModel {
             }
 
             /**
-             * 第二程销售航司信息
+             * transfer_airline_info.
              */
             public Builder transferAirlineInfo(TransferAirlineInfo transferAirlineInfo) {
                 this.transferAirlineInfo = transferAirlineInfo;
@@ -9034,7 +9034,7 @@ public class FlightSearchListResponseBody extends TeaModel {
             }
 
             /**
-             * 中转到达机场信息
+             * transfer_arr_airport_info.
              */
             public Builder transferArrAirportInfo(TransferArrAirportInfo transferArrAirportInfo) {
                 this.transferArrAirportInfo = transferArrAirportInfo;
@@ -9042,7 +9042,7 @@ public class FlightSearchListResponseBody extends TeaModel {
             }
 
             /**
-             * 中转到达时间 (第一程到达时间)
+             * transfer_arr_date.
              */
             public Builder transferArrDate(String transferArrDate) {
                 this.transferArrDate = transferArrDate;
@@ -9050,7 +9050,7 @@ public class FlightSearchListResponseBody extends TeaModel {
             }
 
             /**
-             * 中转出发机场信息
+             * transfer_dep_airport_info.
              */
             public Builder transferDepAirportInfo(TransferDepAirportInfo transferDepAirportInfo) {
                 this.transferDepAirportInfo = transferDepAirportInfo;
@@ -9058,7 +9058,7 @@ public class FlightSearchListResponseBody extends TeaModel {
             }
 
             /**
-             * 中转起飞时间 (第二程起飞时间)
+             * transfer_dep_date.
              */
             public Builder transferDepDate(String transferDepDate) {
                 this.transferDepDate = transferDepDate;
@@ -9066,7 +9066,7 @@ public class FlightSearchListResponseBody extends TeaModel {
             }
 
             /**
-             * 航班号，二程
+             * transfer_flight_no.
              */
             public Builder transferFlightNo(String transferFlightNo) {
                 this.transferFlightNo = transferFlightNo;
@@ -9074,7 +9074,7 @@ public class FlightSearchListResponseBody extends TeaModel {
             }
 
             /**
-             * 第二程退改签规则列表
+             * transfer_flight_rule_list.
              */
             public Builder transferFlightRuleList(java.util.List < TransferFlightRuleList> transferFlightRuleList) {
                 this.transferFlightRuleList = transferFlightRuleList;
@@ -9619,7 +9619,7 @@ public class FlightSearchListResponseBody extends TeaModel {
             private Integer tripType; 
 
             /**
-             * 必填项,AirlineInfo 销售航司信息
+             * airline_info.
              */
             public Builder airlineInfo(AirlineInfo airlineInfo) {
                 this.airlineInfo = airlineInfo;
@@ -9627,7 +9627,7 @@ public class FlightSearchListResponseBody extends TeaModel {
             }
 
             /**
-             * 必填项,AirportInfo 到达机场信息
+             * arr_airport_info.
              */
             public Builder arrAirportInfo(ArrAirportInfo arrAirportInfo) {
                 this.arrAirportInfo = arrAirportInfo;
@@ -9635,7 +9635,7 @@ public class FlightSearchListResponseBody extends TeaModel {
             }
 
             /**
-             * 到达时间
+             * arr_date.
              */
             public Builder arrDate(String arrDate) {
                 this.arrDate = arrDate;
@@ -9643,7 +9643,7 @@ public class FlightSearchListResponseBody extends TeaModel {
             }
 
             /**
-             * 舱位基准价
+             * basic_cabin_price.
              */
             public Builder basicCabinPrice(Integer basicCabinPrice) {
                 this.basicCabinPrice = basicCabinPrice;
@@ -9651,7 +9651,7 @@ public class FlightSearchListResponseBody extends TeaModel {
             }
 
             /**
-             * 必填项,机建费（分）
+             * build_price.
              */
             public Builder buildPrice(Integer buildPrice) {
                 this.buildPrice = buildPrice;
@@ -9659,7 +9659,7 @@ public class FlightSearchListResponseBody extends TeaModel {
             }
 
             /**
-             * 必填项,舱位代码
+             * cabin.
              */
             public Builder cabin(String cabin) {
                 this.cabin = cabin;
@@ -9667,7 +9667,7 @@ public class FlightSearchListResponseBody extends TeaModel {
             }
 
             /**
-             * 必填项,舱等
+             * cabin_class.
              */
             public Builder cabinClass(String cabinClass) {
                 this.cabinClass = cabinClass;
@@ -9675,7 +9675,7 @@ public class FlightSearchListResponseBody extends TeaModel {
             }
 
             /**
-             * 多舱位价格
+             * cabin_info_list.
              */
             public Builder cabinInfoList(java.util.List < CabinInfoList> cabinInfoList) {
                 this.cabinInfoList = cabinInfoList;
@@ -9683,7 +9683,7 @@ public class FlightSearchListResponseBody extends TeaModel {
             }
 
             /**
-             * 承运航班信息（共享航班时有值）
+             * carrier_airline.
              */
             public Builder carrierAirline(String carrierAirline) {
                 this.carrierAirline = carrierAirline;
@@ -9691,7 +9691,7 @@ public class FlightSearchListResponseBody extends TeaModel {
             }
 
             /**
-             * 承运航班信息（共享航班时有值）
+             * carrier_no.
              */
             public Builder carrierNo(String carrierNo) {
                 this.carrierNo = carrierNo;
@@ -9699,7 +9699,7 @@ public class FlightSearchListResponseBody extends TeaModel {
             }
 
             /**
-             * 退改签描述
+             * class_rule.
              */
             public Builder classRule(String classRule) {
                 this.classRule = classRule;
@@ -9707,7 +9707,7 @@ public class FlightSearchListResponseBody extends TeaModel {
             }
 
             /**
-             * 必填项,AirportInfo 出发机场信息
+             * dep_airport_info.
              */
             public Builder depAirportInfo(DepAirportInfo depAirportInfo) {
                 this.depAirportInfo = depAirportInfo;
@@ -9715,7 +9715,7 @@ public class FlightSearchListResponseBody extends TeaModel {
             }
 
             /**
-             * 出发城市三字码
+             * dep_city_code.
              */
             public Builder depCityCode(String depCityCode) {
                 this.depCityCode = depCityCode;
@@ -9723,7 +9723,7 @@ public class FlightSearchListResponseBody extends TeaModel {
             }
 
             /**
-             * 出发时间
+             * dep_date.
              */
             public Builder depDate(String depDate) {
                 this.depDate = depDate;
@@ -9731,7 +9731,7 @@ public class FlightSearchListResponseBody extends TeaModel {
             }
 
             /**
-             * 折扣
+             * discount.
              */
             public Builder discount(Integer discount) {
                 this.discount = discount;
@@ -9739,7 +9739,7 @@ public class FlightSearchListResponseBody extends TeaModel {
             }
 
             /**
-             * 必填项,销售航班号
+             * flight_no.
              */
             public Builder flightNo(String flightNo) {
                 this.flightNo = flightNo;
@@ -9747,7 +9747,7 @@ public class FlightSearchListResponseBody extends TeaModel {
             }
 
             /**
-             * 退改签规则列表
+             * flight_rule_list.
              */
             public Builder flightRuleList(java.util.List < FlightListFlightRuleList> flightRuleList) {
                 this.flightRuleList = flightRuleList;
@@ -9755,7 +9755,7 @@ public class FlightSearchListResponseBody extends TeaModel {
             }
 
             /**
-             * 退改签规则列表json
+             * flight_rule_list_str.
              */
             public Builder flightRuleListStr(String flightRuleListStr) {
                 this.flightRuleListStr = flightRuleListStr;
@@ -9763,7 +9763,7 @@ public class FlightSearchListResponseBody extends TeaModel {
             }
 
             /**
-             * 机型
+             * flight_size.
              */
             public Builder flightSize(String flightSize) {
                 this.flightSize = flightSize;
@@ -9771,7 +9771,7 @@ public class FlightSearchListResponseBody extends TeaModel {
             }
 
             /**
-             * 机型号
+             * flight_type.
              */
             public Builder flightType(String flightType) {
                 this.flightType = flightType;
@@ -9779,7 +9779,7 @@ public class FlightSearchListResponseBody extends TeaModel {
             }
 
             /**
-             * 行程单类型
+             * invoice_type.
              */
             public Builder invoiceType(Integer invoiceType) {
                 this.invoiceType = invoiceType;
@@ -9787,7 +9787,7 @@ public class FlightSearchListResponseBody extends TeaModel {
             }
 
             /**
-             * 是否协议价
+             * is_protocol.
              */
             public Builder isProtocol(Boolean isProtocol) {
                 this.isProtocol = isProtocol;
@@ -9795,7 +9795,7 @@ public class FlightSearchListResponseBody extends TeaModel {
             }
 
             /**
-             * 必填项,是否共享航班
+             * is_share.
              */
             public Builder isShare(Boolean isShare) {
                 this.isShare = isShare;
@@ -9803,7 +9803,7 @@ public class FlightSearchListResponseBody extends TeaModel {
             }
 
             /**
-             * 必填项,是否经停
+             * is_stop.
              */
             public Builder isStop(Boolean isStop) {
                 this.isStop = isStop;
@@ -9811,7 +9811,7 @@ public class FlightSearchListResponseBody extends TeaModel {
             }
 
             /**
-             * 必填项,是否中转
+             * is_transfer.
              */
             public Builder isTransfer(Boolean isTransfer) {
                 this.isTransfer = isTransfer;
@@ -9819,7 +9819,7 @@ public class FlightSearchListResponseBody extends TeaModel {
             }
 
             /**
-             * 餐食
+             * meal_desc.
              */
             public Builder mealDesc(String mealDesc) {
                 this.mealDesc = mealDesc;
@@ -9835,7 +9835,7 @@ public class FlightSearchListResponseBody extends TeaModel {
             }
 
             /**
-             * 必填项,燃油费（分）
+             * oil_price.
              */
             public Builder oilPrice(Integer oilPrice) {
                 this.oilPrice = oilPrice;
@@ -9843,7 +9843,7 @@ public class FlightSearchListResponseBody extends TeaModel {
             }
 
             /**
-             * ???id
+             * ota_item_id.
              */
             public Builder otaItemId(String otaItemId) {
                 this.otaItemId = otaItemId;
@@ -9851,7 +9851,7 @@ public class FlightSearchListResponseBody extends TeaModel {
             }
 
             /**
-             * 必填项,销售票价（分）
+             * price.
              */
             public Builder price(Integer price) {
                 this.price = price;
@@ -9859,7 +9859,7 @@ public class FlightSearchListResponseBody extends TeaModel {
             }
 
             /**
-             * 产品类型
+             * product_type.
              */
             public Builder productType(Long productType) {
                 this.productType = productType;
@@ -9867,7 +9867,7 @@ public class FlightSearchListResponseBody extends TeaModel {
             }
 
             /**
-             * 产品类型描述（标准产品/非标准产品）
+             * product_type_desc.
              */
             public Builder productTypeDesc(String productTypeDesc) {
                 this.productTypeDesc = productTypeDesc;
@@ -9875,7 +9875,7 @@ public class FlightSearchListResponseBody extends TeaModel {
             }
 
             /**
-             * 优惠价
+             * promotion_price.
              */
             public Builder promotionPrice(String promotionPrice) {
                 this.promotionPrice = promotionPrice;
@@ -9883,7 +9883,7 @@ public class FlightSearchListResponseBody extends TeaModel {
             }
 
             /**
-             * 必填项,剩余座位数
+             * remained_seat_count.
              */
             public Builder remainedSeatCount(String remainedSeatCount) {
                 this.remainedSeatCount = remainedSeatCount;
@@ -9891,7 +9891,7 @@ public class FlightSearchListResponseBody extends TeaModel {
             }
 
             /**
-             * 加密参数,包含agentId 登下单需要用到的参数信息
+             * secret_params.
              */
             public Builder secretParams(String secretParams) {
                 this.secretParams = secretParams;
@@ -9899,7 +9899,7 @@ public class FlightSearchListResponseBody extends TeaModel {
             }
 
             /**
-             * 航段编号
+             * segment_number.
              */
             public Builder segmentNumber(String segmentNumber) {
                 this.segmentNumber = segmentNumber;
@@ -9907,7 +9907,7 @@ public class FlightSearchListResponseBody extends TeaModel {
             }
 
             /**
-             * 经停落地时间
+             * stop_arr_time.
              */
             public Builder stopArrTime(String stopArrTime) {
                 this.stopArrTime = stopArrTime;
@@ -9915,7 +9915,7 @@ public class FlightSearchListResponseBody extends TeaModel {
             }
 
             /**
-             * 经停城市
+             * stop_city.
              */
             public Builder stopCity(String stopCity) {
                 this.stopCity = stopCity;
@@ -9923,7 +9923,7 @@ public class FlightSearchListResponseBody extends TeaModel {
             }
 
             /**
-             * 经停起飞时间
+             * stop_dep_time.
              */
             public Builder stopDepTime(String stopDepTime) {
                 this.stopDepTime = stopDepTime;
@@ -9931,7 +9931,7 @@ public class FlightSearchListResponseBody extends TeaModel {
             }
 
             /**
-             * 必填项,票面价
+             * ticket_price.
              */
             public Builder ticketPrice(Integer ticketPrice) {
                 this.ticketPrice = ticketPrice;
@@ -9939,7 +9939,7 @@ public class FlightSearchListResponseBody extends TeaModel {
             }
 
             /**
-             * 必填项,总价
+             * total_price.
              */
             public Builder totalPrice(String totalPrice) {
                 this.totalPrice = totalPrice;
@@ -9947,7 +9947,7 @@ public class FlightSearchListResponseBody extends TeaModel {
             }
 
             /**
-             * 中转信息
+             * transfer_info.
              */
             public Builder transferInfo(TransferInfo transferInfo) {
                 this.transferInfo = transferInfo;
@@ -9955,7 +9955,7 @@ public class FlightSearchListResponseBody extends TeaModel {
             }
 
             /**
-             * 航线类型
+             * trip_type.
              */
             public Builder tripType(Integer tripType) {
                 this.tripType = tripType;
@@ -10016,7 +10016,7 @@ public class FlightSearchListResponseBody extends TeaModel {
             }
 
             /**
-             * 是否可更换PNR出票
+             * is_replace_pnr.
              */
             public Builder isReplacePnr(Boolean isReplacePnr) {
                 this.isReplacePnr = isReplacePnr;

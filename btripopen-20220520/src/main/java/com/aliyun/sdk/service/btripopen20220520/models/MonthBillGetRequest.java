@@ -68,7 +68,7 @@ public class MonthBillGetRequest extends Request {
         } 
 
         /**
-         * YYYY-MM 出账月份
+         * bill_month.
          */
         public Builder billMonth(String billMonth) {
             this.putQueryParameter("bill_month", billMonth);

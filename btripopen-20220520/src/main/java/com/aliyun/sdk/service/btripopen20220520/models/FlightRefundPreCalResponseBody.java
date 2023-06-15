@@ -226,7 +226,7 @@ public class FlightRefundPreCalResponseBody extends TeaModel {
             private String userId; 
 
             /**
-             * 是否能退票申请
+             * can_apply_refund.
              */
             public Builder canApplyRefund(Boolean canApplyRefund) {
                 this.canApplyRefund = canApplyRefund;
@@ -242,7 +242,7 @@ public class FlightRefundPreCalResponseBody extends TeaModel {
             }
 
             /**
-             * 预计退还金额
+             * pre_refund_money.
              */
             public Builder preRefundMoney(Long preRefundMoney) {
                 this.preRefundMoney = preRefundMoney;
@@ -250,7 +250,7 @@ public class FlightRefundPreCalResponseBody extends TeaModel {
             }
 
             /**
-             * 退票手续费
+             * refund_fee.
              */
             public Builder refundFee(Long refundFee) {
                 this.refundFee = refundFee;
@@ -359,7 +359,7 @@ public class FlightRefundPreCalResponseBody extends TeaModel {
             private Integer volunteer; 
 
             /**
-             * 退票原因注释
+             * extend_desc.
              */
             public Builder extendDesc(String extendDesc) {
                 this.extendDesc = extendDesc;
@@ -367,7 +367,7 @@ public class FlightRefundPreCalResponseBody extends TeaModel {
             }
 
             /**
-             * 个人原因或航司原因  0-航司、1-个人
+             * person.
              */
             public Builder person(Integer person) {
                 this.person = person;
@@ -375,7 +375,7 @@ public class FlightRefundPreCalResponseBody extends TeaModel {
             }
 
             /**
-             * 原因code
+             * reason_code.
              */
             public Builder reasonCode(Integer reasonCode) {
                 this.reasonCode = reasonCode;
@@ -383,7 +383,7 @@ public class FlightRefundPreCalResponseBody extends TeaModel {
             }
 
             /**
-             * 原因的文案展示
+             * reason_show.
              */
             public Builder reasonShow(String reasonShow) {
                 this.reasonShow = reasonShow;
@@ -391,7 +391,7 @@ public class FlightRefundPreCalResponseBody extends TeaModel {
             }
 
             /**
-             * 原因的类型
+             * reason_type.
              */
             public Builder reasonType(Integer reasonType) {
                 this.reasonType = reasonType;
@@ -399,7 +399,7 @@ public class FlightRefundPreCalResponseBody extends TeaModel {
             }
 
             /**
-             * 自愿或非自愿 0-非自愿、1-自愿
+             * volunteer.
              */
             public Builder volunteer(Integer volunteer) {
                 this.volunteer = volunteer;
@@ -524,7 +524,7 @@ public class FlightRefundPreCalResponseBody extends TeaModel {
             private String tips; 
 
             /**
-             * 是否发生航变
+             * flight_change.
              */
             public Builder flightChange(Boolean flightChange) {
                 this.flightChange = flightChange;
@@ -540,7 +540,7 @@ public class FlightRefundPreCalResponseBody extends TeaModel {
             }
 
             /**
-             * 多人退票预计算list
+             * multi_refund_cal_list.
              */
             public Builder multiRefundCalList(java.util.List < MultiRefundCalList> multiRefundCalList) {
                 this.multiRefundCalList = multiRefundCalList;
@@ -548,7 +548,7 @@ public class FlightRefundPreCalResponseBody extends TeaModel {
             }
 
             /**
-             * 预计退还金额
+             * pre_refund_money.
              */
             public Builder preRefundMoney(Long preRefundMoney) {
                 this.preRefundMoney = preRefundMoney;
@@ -556,7 +556,7 @@ public class FlightRefundPreCalResponseBody extends TeaModel {
             }
 
             /**
-             * 退票手续费
+             * refund_fee.
              */
             public Builder refundFee(Long refundFee) {
                 this.refundFee = refundFee;
@@ -564,7 +564,7 @@ public class FlightRefundPreCalResponseBody extends TeaModel {
             }
 
             /**
-             * 退票原因
+             * return_reason.
              */
             public Builder returnReason(java.util.List < ReturnReason> returnReason) {
                 this.returnReason = returnReason;

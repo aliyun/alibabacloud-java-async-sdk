@@ -114,7 +114,7 @@ public class FlightBillSettlementQueryRequest extends Request {
         } 
 
         /**
-         * 分页页数（第几页）
+         * page_no.
          */
         public Builder pageNo(Integer pageNo) {
             this.putQueryParameter("page_no", pageNo);
@@ -123,7 +123,7 @@ public class FlightBillSettlementQueryRequest extends Request {
         }
 
         /**
-         * 分页数量（每页多少条）
+         * page_size.
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("page_size", pageSize);
@@ -132,7 +132,7 @@ public class FlightBillSettlementQueryRequest extends Request {
         }
 
         /**
-         * 记账更新日期止 yyyy-MM-dd
+         * period_end.
          */
         public Builder periodEnd(String periodEnd) {
             this.putQueryParameter("period_end", periodEnd);
@@ -141,7 +141,7 @@ public class FlightBillSettlementQueryRequest extends Request {
         }
 
         /**
-         * 记账更新日期起 yyyy-MM-dd
+         * period_start.
          */
         public Builder periodStart(String periodStart) {
             this.putQueryParameter("period_start", periodStart);

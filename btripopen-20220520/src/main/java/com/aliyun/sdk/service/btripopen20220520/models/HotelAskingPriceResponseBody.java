@@ -250,7 +250,7 @@ public class HotelAskingPriceResponseBody extends TeaModel {
             private Double originalMinPrice; 
 
             /**
-             * 城市Code
+             * city_code.
              */
             public Builder cityCode(String cityCode) {
                 this.cityCode = cityCode;
@@ -258,7 +258,7 @@ public class HotelAskingPriceResponseBody extends TeaModel {
             }
 
             /**
-             * 酒店地址
+             * hotel_address.
              */
             public Builder hotelAddress(String hotelAddress) {
                 this.hotelAddress = hotelAddress;
@@ -266,7 +266,7 @@ public class HotelAskingPriceResponseBody extends TeaModel {
             }
 
             /**
-             * 酒店code
+             * hotel_code.
              */
             public Builder hotelCode(String hotelCode) {
                 this.hotelCode = hotelCode;
@@ -274,7 +274,7 @@ public class HotelAskingPriceResponseBody extends TeaModel {
             }
 
             /**
-             * 酒店名称
+             * hotel_name.
              */
             public Builder hotelName(String hotelName) {
                 this.hotelName = hotelName;
@@ -282,7 +282,7 @@ public class HotelAskingPriceResponseBody extends TeaModel {
             }
 
             /**
-             * 是否是协议价
+             * is_protocol.
              */
             public Builder isProtocol(Boolean isProtocol) {
                 this.isProtocol = isProtocol;
@@ -290,7 +290,7 @@ public class HotelAskingPriceResponseBody extends TeaModel {
             }
 
             /**
-             * 酒店起价
+             * min_price.
              */
             public Builder minPrice(Double minPrice) {
                 this.minPrice = minPrice;
@@ -298,7 +298,7 @@ public class HotelAskingPriceResponseBody extends TeaModel {
             }
 
             /**
-             * 优惠前价格
+             * original_min_price.
              */
             public Builder originalMinPrice(Double originalMinPrice) {
                 this.originalMinPrice = originalMinPrice;

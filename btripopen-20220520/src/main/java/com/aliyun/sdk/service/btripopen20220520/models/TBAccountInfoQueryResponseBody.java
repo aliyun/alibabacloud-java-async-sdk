@@ -190,7 +190,7 @@ public class TBAccountInfoQueryResponseBody extends TeaModel {
             private Boolean tbBond; 
 
             /**
-             * 淘宝账号
+             * tb_account.
              */
             public Builder tbAccount(String tbAccount) {
                 this.tbAccount = tbAccount;
@@ -198,7 +198,7 @@ public class TBAccountInfoQueryResponseBody extends TeaModel {
             }
 
             /**
-             * 是否绑定淘宝
+             * tb_bond.
              */
             public Builder tbBond(Boolean tbBond) {
                 this.tbBond = tbBond;

@@ -155,7 +155,7 @@ public class GroupDepartSaveRequest extends Request {
         } 
 
         /**
-         * 部门名称
+         * dept_name.
          */
         public Builder deptName(String deptName) {
             this.putBodyParameter("dept_name", deptName);
@@ -164,7 +164,7 @@ public class GroupDepartSaveRequest extends Request {
         }
 
         /**
-         * 部门主管ID列表
+         * manager_ids.
          */
         public Builder managerIds(String managerIds) {
             this.putBodyParameter("manager_ids", managerIds);
@@ -173,7 +173,7 @@ public class GroupDepartSaveRequest extends Request {
         }
 
         /**
-         * 三方部门ID
+         * outer_dept_id.
          */
         public Builder outerDeptId(String outerDeptId) {
             this.putBodyParameter("outer_dept_id", outerDeptId);
@@ -182,7 +182,7 @@ public class GroupDepartSaveRequest extends Request {
         }
 
         /**
-         * 三方父级部门ID
+         * outer_dept_pid.
          */
         public Builder outerDeptPid(String outerDeptPid) {
             this.putBodyParameter("outer_dept_pid", outerDeptPid);
@@ -191,7 +191,7 @@ public class GroupDepartSaveRequest extends Request {
         }
 
         /**
-         * 部门状态，0生效；1失效
+         * status.
          */
         public Builder status(Integer status) {
             this.putBodyParameter("status", status);

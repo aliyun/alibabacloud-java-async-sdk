@@ -83,7 +83,7 @@ public class AirportSearchRequest extends Request {
         } 
 
         /**
-         * 搜索关键字
+         * keyword.
          */
         public Builder keyword(String keyword) {
             this.putQueryParameter("keyword", keyword);
@@ -92,7 +92,7 @@ public class AirportSearchRequest extends Request {
         }
 
         /**
-         * 0国内机场，2国内机场+临近机场，3国际机场
+         * type.
          */
         public Builder type(Integer type) {
             this.putQueryParameter("type", type);

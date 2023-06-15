@@ -358,7 +358,7 @@ public class TicketChangingApplyResponseBody extends TeaModel {
             private Long upgradeFee; 
 
             /**
-             * 预定后变价-用户原支付费用总金额
+             * booking_changed_total_fee.
              */
             public Builder bookingChangedTotalFee(Integer bookingChangedTotalFee) {
                 this.bookingChangedTotalFee = bookingChangedTotalFee;
@@ -366,7 +366,7 @@ public class TicketChangingApplyResponseBody extends TeaModel {
             }
 
             /**
-             * 预定后变价-用户原支付费用总金额
+             * booking_origin_total_fee.
              */
             public Builder bookingOriginTotalFee(Integer bookingOriginTotalFee) {
                 this.bookingOriginTotalFee = bookingOriginTotalFee;
@@ -374,7 +374,7 @@ public class TicketChangingApplyResponseBody extends TeaModel {
             }
 
             /**
-             * 是否变价
+             * booking_price_changed.
              */
             public Builder bookingPriceChanged(Boolean bookingPriceChanged) {
                 this.bookingPriceChanged = bookingPriceChanged;
@@ -382,7 +382,7 @@ public class TicketChangingApplyResponseBody extends TeaModel {
             }
 
             /**
-             * 商旅订单号
+             * btrip_order_id.
              */
             public Builder btripOrderId(Long btripOrderId) {
                 this.btripOrderId = btripOrderId;
@@ -390,7 +390,7 @@ public class TicketChangingApplyResponseBody extends TeaModel {
             }
 
             /**
-             * 商旅订单号
+             * btrip_sub_order_id.
              */
             public Builder btripSubOrderId(Long btripSubOrderId) {
                 this.btripSubOrderId = btripSubOrderId;
@@ -398,7 +398,7 @@ public class TicketChangingApplyResponseBody extends TeaModel {
             }
 
             /**
-             * 是否可支付
+             * can_pay.
              */
             public Builder canPay(Boolean canPay) {
                 this.canPay = canPay;
@@ -406,7 +406,7 @@ public class TicketChangingApplyResponseBody extends TeaModel {
             }
 
             /**
-             * 改签费
+             * change_fee.
              */
             public Builder changeFee(Long changeFee) {
                 this.changeFee = changeFee;
@@ -414,7 +414,7 @@ public class TicketChangingApplyResponseBody extends TeaModel {
             }
 
             /**
-             * 最迟支付时间
+             * deadline_time.
              */
             public Builder deadlineTime(String deadlineTime) {
                 this.deadlineTime = deadlineTime;
@@ -422,7 +422,7 @@ public class TicketChangingApplyResponseBody extends TeaModel {
             }
 
             /**
-             * 分销外部订单号
+             * dis_order_id.
              */
             public Builder disOrderId(String disOrderId) {
                 this.disOrderId = disOrderId;
@@ -430,7 +430,7 @@ public class TicketChangingApplyResponseBody extends TeaModel {
             }
 
             /**
-             * 改签单号
+             * dis_sub_order_id.
              */
             public Builder disSubOrderId(String disSubOrderId) {
                 this.disSubOrderId = disSubOrderId;
@@ -438,7 +438,7 @@ public class TicketChangingApplyResponseBody extends TeaModel {
             }
 
             /**
-             * 最大的重试次数
+             * max_retry_times.
              */
             public Builder maxRetryTimes(Integer maxRetryTimes) {
                 this.maxRetryTimes = maxRetryTimes;
@@ -446,7 +446,7 @@ public class TicketChangingApplyResponseBody extends TeaModel {
             }
 
             /**
-             * 单位(ms)
+             * next_retry_interval.
              */
             public Builder nextRetryInterval(Long nextRetryInterval) {
                 this.nextRetryInterval = nextRetryInterval;
@@ -454,7 +454,7 @@ public class TicketChangingApplyResponseBody extends TeaModel {
             }
 
             /**
-             * 是否重试
+             * retry.
              */
             public Builder retry(Boolean retry) {
                 this.retry = retry;
@@ -462,7 +462,7 @@ public class TicketChangingApplyResponseBody extends TeaModel {
             }
 
             /**
-             * 重试时给用户提示的文案
+             * retry_client_tips.
              */
             public Builder retryClientTips(String retryClientTips) {
                 this.retryClientTips = retryClientTips;
@@ -470,7 +470,7 @@ public class TicketChangingApplyResponseBody extends TeaModel {
             }
 
             /**
-             * 改签单状态
+             * status.
              */
             public Builder status(Integer status) {
                 this.status = status;
@@ -478,7 +478,7 @@ public class TicketChangingApplyResponseBody extends TeaModel {
             }
 
             /**
-             * 升舱费
+             * upgrade_fee.
              */
             public Builder upgradeFee(Long upgradeFee) {
                 this.upgradeFee = upgradeFee;

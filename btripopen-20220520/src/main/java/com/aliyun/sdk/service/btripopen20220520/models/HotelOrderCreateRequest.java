@@ -388,7 +388,7 @@ public class HotelOrderCreateRequest extends Request {
         }
 
         /**
-         * 入住日期
+         * check_in.
          */
         public Builder checkIn(String checkIn) {
             this.putBodyParameter("check_in", checkIn);
@@ -397,7 +397,7 @@ public class HotelOrderCreateRequest extends Request {
         }
 
         /**
-         * 离店日期
+         * check_out.
          */
         public Builder checkOut(String checkOut) {
             this.putBodyParameter("check_out", checkOut);
@@ -406,7 +406,7 @@ public class HotelOrderCreateRequest extends Request {
         }
 
         /**
-         * 联系人邮箱
+         * contract_email.
          */
         public Builder contractEmail(String contractEmail) {
             this.putBodyParameter("contract_email", contractEmail);
@@ -415,7 +415,7 @@ public class HotelOrderCreateRequest extends Request {
         }
 
         /**
-         * 联系人姓名
+         * contract_name.
          */
         public Builder contractName(String contractName) {
             this.putBodyParameter("contract_name", contractName);
@@ -424,7 +424,7 @@ public class HotelOrderCreateRequest extends Request {
         }
 
         /**
-         * 联系人电话
+         * contract_phone.
          */
         public Builder contractPhone(String contractPhone) {
             this.putBodyParameter("contract_phone", contractPhone);
@@ -433,7 +433,7 @@ public class HotelOrderCreateRequest extends Request {
         }
 
         /**
-         * 企业支付金额
+         * corp_pay_price.
          */
         public Builder corpPayPrice(Long corpPayPrice) {
             this.putBodyParameter("corp_pay_price", corpPayPrice);
@@ -442,7 +442,7 @@ public class HotelOrderCreateRequest extends Request {
         }
 
         /**
-         * 分销商订单id
+         * dis_order_id.
          */
         public Builder disOrderId(String disOrderId) {
             this.putBodyParameter("dis_order_id", disOrderId);
@@ -460,7 +460,7 @@ public class HotelOrderCreateRequest extends Request {
         }
 
         /**
-         * 发票信息区块
+         * invoice_info.
          */
         public Builder invoiceInfo(InvoiceInfo invoiceInfo) {
             String invoiceInfoShrink = shrink(invoiceInfo, "invoice_info", "json");
@@ -470,7 +470,7 @@ public class HotelOrderCreateRequest extends Request {
         }
 
         /**
-         * 商品id
+         * item_id.
          */
         public Builder itemId(Long itemId) {
             this.putBodyParameter("item_id", itemId);
@@ -479,7 +479,7 @@ public class HotelOrderCreateRequest extends Request {
         }
 
         /**
-         * btrip行程Id
+         * itinerary_no.
          */
         public Builder itineraryNo(String itineraryNo) {
             this.putBodyParameter("itinerary_no", itineraryNo);
@@ -488,7 +488,7 @@ public class HotelOrderCreateRequest extends Request {
         }
 
         /**
-         * 入住人区块
+         * occupant_info_list.
          */
         public Builder occupantInfoList(java.util.List < OccupantInfoList> occupantInfoList) {
             String occupantInfoListShrink = shrink(occupantInfoList, "occupant_info_list", "json");
@@ -498,7 +498,7 @@ public class HotelOrderCreateRequest extends Request {
         }
 
         /**
-         * 个人支付金额
+         * person_pay_price.
          */
         public Builder personPayPrice(Long personPayPrice) {
             this.putBodyParameter("person_pay_price", personPayPrice);
@@ -507,7 +507,7 @@ public class HotelOrderCreateRequest extends Request {
         }
 
         /**
-         * 优惠信息区块
+         * promotion_info.
          */
         public Builder promotionInfo(PromotionInfo promotionInfo) {
             String promotionInfoShrink = shrink(promotionInfo, "promotion_info", "json");
@@ -517,7 +517,7 @@ public class HotelOrderCreateRequest extends Request {
         }
 
         /**
-         * 产品编号
+         * rate_plan_id.
          */
         public Builder ratePlanId(Long ratePlanId) {
             this.putBodyParameter("rate_plan_id", ratePlanId);
@@ -526,7 +526,7 @@ public class HotelOrderCreateRequest extends Request {
         }
 
         /**
-         * 房间id
+         * room_id.
          */
         public Builder roomId(Long roomId) {
             this.putBodyParameter("room_id", roomId);
@@ -535,7 +535,7 @@ public class HotelOrderCreateRequest extends Request {
         }
 
         /**
-         * 房间数
+         * room_num.
          */
         public Builder roomNum(Integer roomNum) {
             this.putBodyParameter("room_num", roomNum);
@@ -544,7 +544,7 @@ public class HotelOrderCreateRequest extends Request {
         }
 
         /**
-         * 卖家id
+         * seller_id.
          */
         public Builder sellerId(Long sellerId) {
             this.putBodyParameter("seller_id", sellerId);
@@ -553,7 +553,7 @@ public class HotelOrderCreateRequest extends Request {
         }
 
         /**
-         * 标准酒店id
+         * shid.
          */
         public Builder shid(Long shid) {
             this.putBodyParameter("shid", shid);
@@ -562,7 +562,7 @@ public class HotelOrderCreateRequest extends Request {
         }
 
         /**
-         * 总订单价格
+         * total_order_price.
          */
         public Builder totalOrderPrice(Long totalOrderPrice) {
             this.putBodyParameter("total_order_price", totalOrderPrice);
@@ -571,7 +571,7 @@ public class HotelOrderCreateRequest extends Request {
         }
 
         /**
-         * 渲染结果
+         * validate_res_key.
          */
         public Builder validateResKey(String validateResKey) {
             this.putBodyParameter("validate_res_key", validateResKey);
@@ -814,7 +814,7 @@ public class HotelOrderCreateRequest extends Request {
             private String remark; 
 
             /**
-             * 公司地址
+             * buyer_add.
              */
             public Builder buyerAdd(String buyerAdd) {
                 this.buyerAdd = buyerAdd;
@@ -822,7 +822,7 @@ public class HotelOrderCreateRequest extends Request {
             }
 
             /**
-             * 银行账号
+             * buyer_bank_acc.
              */
             public Builder buyerBankAcc(String buyerBankAcc) {
                 this.buyerBankAcc = buyerBankAcc;
@@ -830,7 +830,7 @@ public class HotelOrderCreateRequest extends Request {
             }
 
             /**
-             * 银行名称
+             * buyer_bank_add.
              */
             public Builder buyerBankAdd(String buyerBankAdd) {
                 this.buyerBankAdd = buyerBankAdd;
@@ -838,7 +838,7 @@ public class HotelOrderCreateRequest extends Request {
             }
 
             /**
-             * 公司电话
+             * buyer_phone.
              */
             public Builder buyerPhone(String buyerPhone) {
                 this.buyerPhone = buyerPhone;
@@ -846,7 +846,7 @@ public class HotelOrderCreateRequest extends Request {
             }
 
             /**
-             * 税号
+             * buyer_tax_num.
              */
             public Builder buyerTaxNum(String buyerTaxNum) {
                 this.buyerTaxNum = buyerTaxNum;
@@ -854,7 +854,7 @@ public class HotelOrderCreateRequest extends Request {
             }
 
             /**
-             * 配送详细地址（纸质发票必填）
+             * delivery_address.
              */
             public Builder deliveryAddress(String deliveryAddress) {
                 this.deliveryAddress = deliveryAddress;
@@ -862,7 +862,7 @@ public class HotelOrderCreateRequest extends Request {
             }
 
             /**
-             * 配送区（纸质发票必填）
+             * delivery_area.
              */
             public Builder deliveryArea(String deliveryArea) {
                 this.deliveryArea = deliveryArea;
@@ -870,7 +870,7 @@ public class HotelOrderCreateRequest extends Request {
             }
 
             /**
-             * 配送城市（纸质发票必填）
+             * delivery_city.
              */
             public Builder deliveryCity(String deliveryCity) {
                 this.deliveryCity = deliveryCity;
@@ -878,7 +878,7 @@ public class HotelOrderCreateRequest extends Request {
             }
 
             /**
-             * 配送省（纸质发票必填）
+             * delivery_province.
              */
             public Builder deliveryProvince(String deliveryProvince) {
                 this.deliveryProvince = deliveryProvince;
@@ -886,7 +886,7 @@ public class HotelOrderCreateRequest extends Request {
             }
 
             /**
-             * 配送街道（纸质发票必填）
+             * delivery_street.
              */
             public Builder deliveryStreet(String deliveryStreet) {
                 this.deliveryStreet = deliveryStreet;
@@ -894,7 +894,7 @@ public class HotelOrderCreateRequest extends Request {
             }
 
             /**
-             * 邮箱地址（电子发票必填）
+             * email.
              */
             public Builder email(String email) {
                 this.email = email;
@@ -902,7 +902,7 @@ public class HotelOrderCreateRequest extends Request {
             }
 
             /**
-             * 发票材质
+             * invoice_material.
              */
             public Builder invoiceMaterial(Integer invoiceMaterial) {
                 this.invoiceMaterial = invoiceMaterial;
@@ -910,7 +910,7 @@ public class HotelOrderCreateRequest extends Request {
             }
 
             /**
-             * 发票抬头
+             * invoice_title.
              */
             public Builder invoiceTitle(String invoiceTitle) {
                 this.invoiceTitle = invoiceTitle;
@@ -918,7 +918,7 @@ public class HotelOrderCreateRequest extends Request {
             }
 
             /**
-             * 发票类，只支持（1：普通发票(电子)；2：专用发票(纸质)）
+             * invoice_type.
              */
             public Builder invoiceType(Integer invoiceType) {
                 this.invoiceType = invoiceType;
@@ -926,7 +926,7 @@ public class HotelOrderCreateRequest extends Request {
             }
 
             /**
-             * 收件人姓名（纸质发票必填）
+             * receiver_name.
              */
             public Builder receiverName(String receiverName) {
                 this.receiverName = receiverName;
@@ -934,7 +934,7 @@ public class HotelOrderCreateRequest extends Request {
             }
 
             /**
-             * 收件人电话（纸质发票必填）
+             * receiver_phone.
              */
             public Builder receiverPhone(String receiverPhone) {
                 this.receiverPhone = receiverPhone;
@@ -942,7 +942,7 @@ public class HotelOrderCreateRequest extends Request {
             }
 
             /**
-             * 发票备注
+             * remark.
              */
             public Builder remark(String remark) {
                 this.remark = remark;
@@ -1141,7 +1141,7 @@ public class HotelOrderCreateRequest extends Request {
             private Integer userType; 
 
             /**
-             * 证件号
+             * card_no.
              */
             public Builder cardNo(String cardNo) {
                 this.cardNo = cardNo;
@@ -1149,7 +1149,7 @@ public class HotelOrderCreateRequest extends Request {
             }
 
             /**
-             * 证件类型
+             * card_type.
              */
             public Builder cardType(Integer cardType) {
                 this.cardType = cardType;
@@ -1157,7 +1157,7 @@ public class HotelOrderCreateRequest extends Request {
             }
 
             /**
-             * 入住人类型
+             * customer_type.
              */
             public Builder customerType(Integer customerType) {
                 this.customerType = customerType;
@@ -1165,7 +1165,7 @@ public class HotelOrderCreateRequest extends Request {
             }
 
             /**
-             * 用户部门id
+             * department_id.
              */
             public Builder departmentId(String departmentId) {
                 this.departmentId = departmentId;
@@ -1173,7 +1173,7 @@ public class HotelOrderCreateRequest extends Request {
             }
 
             /**
-             * 用户部门姓名
+             * department_name.
              */
             public Builder departmentName(String departmentName) {
                 this.departmentName = departmentName;
@@ -1181,7 +1181,7 @@ public class HotelOrderCreateRequest extends Request {
             }
 
             /**
-             * 入住人联系email
+             * email.
              */
             public Builder email(String email) {
                 this.email = email;
@@ -1189,7 +1189,7 @@ public class HotelOrderCreateRequest extends Request {
             }
 
             /**
-             * 员工类型
+             * employee_type.
              */
             public Builder employeeType(Integer employeeType) {
                 this.employeeType = employeeType;
@@ -1197,7 +1197,7 @@ public class HotelOrderCreateRequest extends Request {
             }
 
             /**
-             * 英文名
+             * first_name.
              */
             public Builder firstName(String firstName) {
                 this.firstName = firstName;
@@ -1205,7 +1205,7 @@ public class HotelOrderCreateRequest extends Request {
             }
 
             /**
-             * 英文姓
+             * last_name.
              */
             public Builder lastName(String lastName) {
                 this.lastName = lastName;
@@ -1213,7 +1213,7 @@ public class HotelOrderCreateRequest extends Request {
             }
 
             /**
-             * 入住人姓名
+             * name.
              */
             public Builder name(String name) {
                 this.name = name;
@@ -1221,7 +1221,7 @@ public class HotelOrderCreateRequest extends Request {
             }
 
             /**
-             * 入住人联系电话
+             * phone.
              */
             public Builder phone(String phone) {
                 this.phone = phone;
@@ -1237,7 +1237,7 @@ public class HotelOrderCreateRequest extends Request {
             }
 
             /**
-             * 员工编号
+             * staff_no.
              */
             public Builder staffNo(String staffNo) {
                 this.staffNo = staffNo;
@@ -1245,7 +1245,7 @@ public class HotelOrderCreateRequest extends Request {
             }
 
             /**
-             * 用户类型
+             * user_type.
              */
             public Builder userType(Integer userType) {
                 this.userType = userType;
@@ -1358,7 +1358,7 @@ public class HotelOrderCreateRequest extends Request {
             private String promotionType; 
 
             /**
-             * 选中状态
+             * check_status.
              */
             public Builder checkStatus(Boolean checkStatus) {
                 this.checkStatus = checkStatus;
@@ -1366,7 +1366,7 @@ public class HotelOrderCreateRequest extends Request {
             }
 
             /**
-             * 是否需要选中
+             * need_check.
              */
             public Builder needCheck(Boolean needCheck) {
                 this.needCheck = needCheck;
@@ -1374,7 +1374,7 @@ public class HotelOrderCreateRequest extends Request {
             }
 
             /**
-             * 优惠码
+             * promotion_code.
              */
             public Builder promotionCode(String promotionCode) {
                 this.promotionCode = promotionCode;
@@ -1382,7 +1382,7 @@ public class HotelOrderCreateRequest extends Request {
             }
 
             /**
-             * 优惠Id
+             * promotion_id.
              */
             public Builder promotionId(String promotionId) {
                 this.promotionId = promotionId;
@@ -1390,7 +1390,7 @@ public class HotelOrderCreateRequest extends Request {
             }
 
             /**
-             * 优惠名称
+             * promotion_name.
              */
             public Builder promotionName(String promotionName) {
                 this.promotionName = promotionName;
@@ -1398,7 +1398,7 @@ public class HotelOrderCreateRequest extends Request {
             }
 
             /**
-             * 优惠金额
+             * promotion_price.
              */
             public Builder promotionPrice(Long promotionPrice) {
                 this.promotionPrice = promotionPrice;
@@ -1406,7 +1406,7 @@ public class HotelOrderCreateRequest extends Request {
             }
 
             /**
-             * 优惠类型
+             * promotion_type.
              */
             public Builder promotionType(String promotionType) {
                 this.promotionType = promotionType;
@@ -1459,7 +1459,7 @@ public class HotelOrderCreateRequest extends Request {
             private Long promotionTotalPrice; 
 
             /**
-             * 优惠信息
+             * promotion_detail_info_list.
              */
             public Builder promotionDetailInfoList(java.util.List < PromotionDetailInfoList> promotionDetailInfoList) {
                 this.promotionDetailInfoList = promotionDetailInfoList;
@@ -1467,7 +1467,7 @@ public class HotelOrderCreateRequest extends Request {
             }
 
             /**
-             * 总优惠金额
+             * promotion_total_price.
              */
             public Builder promotionTotalPrice(Long promotionTotalPrice) {
                 this.promotionTotalPrice = promotionTotalPrice;

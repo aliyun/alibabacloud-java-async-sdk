@@ -182,7 +182,7 @@ public class GroupCorpTokenResponseBody extends TeaModel {
             private String token; 
 
             /**
-             * 过期时间，单位ms
+             * expire.
              */
             public Builder expire(Long expire) {
                 this.expire = expire;
@@ -190,7 +190,7 @@ public class GroupCorpTokenResponseBody extends TeaModel {
             }
 
             /**
-             * 开始时间戳
+             * start.
              */
             public Builder start(Long start) {
                 this.start = start;
@@ -198,7 +198,7 @@ public class GroupCorpTokenResponseBody extends TeaModel {
             }
 
             /**
-             * 令牌
+             * token.
              */
             public Builder token(String token) {
                 this.token = token;

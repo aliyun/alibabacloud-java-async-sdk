@@ -298,7 +298,7 @@ public class HotelStaticInfoResponseBody extends TeaModel {
             private String themeTag; 
 
             /**
-             * 入住时间（最早入住时间）
+             * check_in.
              */
             public Builder checkIn(String checkIn) {
                 this.checkIn = checkIn;
@@ -306,7 +306,7 @@ public class HotelStaticInfoResponseBody extends TeaModel {
             }
 
             /**
-             * 离店时间（最早离店时间）
+             * check_out.
              */
             public Builder checkOut(String checkOut) {
                 this.checkOut = checkOut;
@@ -314,7 +314,7 @@ public class HotelStaticInfoResponseBody extends TeaModel {
             }
 
             /**
-             * 装修时间
+             * decorate_time.
              */
             public Builder decorateTime(String decorateTime) {
                 this.decorateTime = decorateTime;
@@ -322,7 +322,7 @@ public class HotelStaticInfoResponseBody extends TeaModel {
             }
 
             /**
-             * 楼层信息
+             * floors.
              */
             public Builder floors(String floors) {
                 this.floors = floors;
@@ -330,7 +330,7 @@ public class HotelStaticInfoResponseBody extends TeaModel {
             }
 
             /**
-             * 酒店设施
+             * hotel_facilities.
              */
             public Builder hotelFacilities(java.util.List < String > hotelFacilities) {
                 this.hotelFacilities = hotelFacilities;
@@ -338,7 +338,7 @@ public class HotelStaticInfoResponseBody extends TeaModel {
             }
 
             /**
-             * 酒店类型
+             * hotel_type.
              */
             public Builder hotelType(Integer hotelType) {
                 this.hotelType = hotelType;
@@ -346,7 +346,7 @@ public class HotelStaticInfoResponseBody extends TeaModel {
             }
 
             /**
-             * 开业时间
+             * opening_time.
              */
             public Builder openingTime(String openingTime) {
                 this.openingTime = openingTime;
@@ -354,7 +354,7 @@ public class HotelStaticInfoResponseBody extends TeaModel {
             }
 
             /**
-             * 房型设施
+             * room_facilities.
              */
             public Builder roomFacilities(java.util.List < String > roomFacilities) {
                 this.roomFacilities = roomFacilities;
@@ -362,7 +362,7 @@ public class HotelStaticInfoResponseBody extends TeaModel {
             }
 
             /**
-             * 酒店房间数
+             * rooms.
              */
             public Builder rooms(Integer rooms) {
                 this.rooms = rooms;
@@ -370,7 +370,7 @@ public class HotelStaticInfoResponseBody extends TeaModel {
             }
 
             /**
-             * 酒店服务
+             * service.
              */
             public Builder service(java.util.List < String > service) {
                 this.service = service;
@@ -378,7 +378,7 @@ public class HotelStaticInfoResponseBody extends TeaModel {
             }
 
             /**
-             * 酒店特色
+             * theme_tag.
              */
             public Builder themeTag(String themeTag) {
                 this.themeTag = themeTag;
@@ -443,7 +443,7 @@ public class HotelStaticInfoResponseBody extends TeaModel {
             private String url; 
 
             /**
-             * 图片描述
+             * desc.
              */
             public Builder desc(String desc) {
                 this.desc = desc;
@@ -451,7 +451,7 @@ public class HotelStaticInfoResponseBody extends TeaModel {
             }
 
             /**
-             * 图片类型
+             * tag.
              */
             public Builder tag(Integer tag) {
                 this.tag = tag;
@@ -459,7 +459,7 @@ public class HotelStaticInfoResponseBody extends TeaModel {
             }
 
             /**
-             * 地址
+             * url.
              */
             public Builder url(String url) {
                 this.url = url;
@@ -536,7 +536,7 @@ public class HotelStaticInfoResponseBody extends TeaModel {
             private String bedType; 
 
             /**
-             * 床型描述
+             * bed_desc.
              */
             public Builder bedDesc(String bedDesc) {
                 this.bedDesc = bedDesc;
@@ -544,7 +544,7 @@ public class HotelStaticInfoResponseBody extends TeaModel {
             }
 
             /**
-             * 床型数量
+             * bed_num.
              */
             public Builder bedNum(Integer bedNum) {
                 this.bedNum = bedNum;
@@ -552,7 +552,7 @@ public class HotelStaticInfoResponseBody extends TeaModel {
             }
 
             /**
-             * 床型尺寸说明
+             * bed_size.
              */
             public Builder bedSize(String bedSize) {
                 this.bedSize = bedSize;
@@ -560,7 +560,7 @@ public class HotelStaticInfoResponseBody extends TeaModel {
             }
 
             /**
-             * 床型
+             * bed_type.
              */
             public Builder bedType(String bedType) {
                 this.bedType = bedType;
@@ -805,7 +805,7 @@ public class HotelStaticInfoResponseBody extends TeaModel {
             private String windowView; 
 
             /**
-             * 该房型下的床型列表
+             * bed_infos.
              */
             public Builder bedInfos(java.util.List < BedInfos> bedInfos) {
                 this.bedInfos = bedInfos;
@@ -813,7 +813,7 @@ public class HotelStaticInfoResponseBody extends TeaModel {
             }
 
             /**
-             * 是否可以加床
+             * extra_bed.
              */
             public Builder extraBed(Integer extraBed) {
                 this.extraBed = extraBed;
@@ -821,7 +821,7 @@ public class HotelStaticInfoResponseBody extends TeaModel {
             }
 
             /**
-             * 加床说明
+             * extra_bed_desc.
              */
             public Builder extraBedDesc(String extraBedDesc) {
                 this.extraBedDesc = extraBedDesc;
@@ -829,7 +829,7 @@ public class HotelStaticInfoResponseBody extends TeaModel {
             }
 
             /**
-             * 房间所在楼层，如"2"、"2-3"
+             * floor.
              */
             public Builder floor(String floor) {
                 this.floor = floor;
@@ -837,7 +837,7 @@ public class HotelStaticInfoResponseBody extends TeaModel {
             }
 
             /**
-             * 宽带
+             * internet_way.
              */
             public Builder internetWay(String internetWay) {
                 this.internetWay = internetWay;
@@ -845,7 +845,7 @@ public class HotelStaticInfoResponseBody extends TeaModel {
             }
 
             /**
-             * 房间最大容纳人数
+             * max_occupancy.
              */
             public Builder maxOccupancy(Integer maxOccupancy) {
                 this.maxOccupancy = maxOccupancy;
@@ -853,7 +853,7 @@ public class HotelStaticInfoResponseBody extends TeaModel {
             }
 
             /**
-             * 房间设施
+             * room_facilities.
              */
             public Builder roomFacilities(String roomFacilities) {
                 this.roomFacilities = roomFacilities;
@@ -861,7 +861,7 @@ public class HotelStaticInfoResponseBody extends TeaModel {
             }
 
             /**
-             * 房间设施列表
+             * room_facility_list.
              */
             public Builder roomFacilityList(java.util.List < String > roomFacilityList) {
                 this.roomFacilityList = roomFacilityList;
@@ -869,7 +869,7 @@ public class HotelStaticInfoResponseBody extends TeaModel {
             }
 
             /**
-             * 房型Id
+             * room_id.
              */
             public Builder roomId(String roomId) {
                 this.roomId = roomId;
@@ -877,7 +877,7 @@ public class HotelStaticInfoResponseBody extends TeaModel {
             }
 
             /**
-             * 房型主图链接
+             * room_image.
              */
             public Builder roomImage(String roomImage) {
                 this.roomImage = roomImage;
@@ -885,7 +885,7 @@ public class HotelStaticInfoResponseBody extends TeaModel {
             }
 
             /**
-             * 房型图片链接列表
+             * room_images.
              */
             public Builder roomImages(java.util.List < String > roomImages) {
                 this.roomImages = roomImages;
@@ -893,7 +893,7 @@ public class HotelStaticInfoResponseBody extends TeaModel {
             }
 
             /**
-             * 房型名称
+             * room_name.
              */
             public Builder roomName(String roomName) {
                 this.roomName = roomName;
@@ -901,7 +901,7 @@ public class HotelStaticInfoResponseBody extends TeaModel {
             }
 
             /**
-             * 房型类型
+             * room_type.
              */
             public Builder roomType(Integer roomType) {
                 this.roomType = roomType;
@@ -909,7 +909,7 @@ public class HotelStaticInfoResponseBody extends TeaModel {
             }
 
             /**
-             * 面积
+             * roomarea.
              */
             public Builder roomarea(String roomarea) {
                 this.roomarea = roomarea;
@@ -917,7 +917,7 @@ public class HotelStaticInfoResponseBody extends TeaModel {
             }
 
             /**
-             * 房间数
+             * rooms.
              */
             public Builder rooms(Integer rooms) {
                 this.rooms = rooms;
@@ -925,7 +925,7 @@ public class HotelStaticInfoResponseBody extends TeaModel {
             }
 
             /**
-             * 窗型
+             * window.
              */
             public Builder window(String window) {
                 this.window = window;
@@ -933,7 +933,7 @@ public class HotelStaticInfoResponseBody extends TeaModel {
             }
 
             /**
-             * 窗型缺陷
+             * window_bad.
              */
             public Builder windowBad(String windowBad) {
                 this.windowBad = windowBad;
@@ -941,7 +941,7 @@ public class HotelStaticInfoResponseBody extends TeaModel {
             }
 
             /**
-             * 窗景描述
+             * window_view.
              */
             public Builder windowView(String windowView) {
                 this.windowView = windowView;
@@ -1378,7 +1378,7 @@ public class HotelStaticInfoResponseBody extends TeaModel {
             private Boolean visaReminding; 
 
             /**
-             * 屏蔽房型的信息
+             * block_room_type_information.
              */
             public Builder blockRoomTypeInformation(java.util.Map < String, String > blockRoomTypeInformation) {
                 this.blockRoomTypeInformation = blockRoomTypeInformation;
@@ -1386,7 +1386,7 @@ public class HotelStaticInfoResponseBody extends TeaModel {
             }
 
             /**
-             * 品牌编码
+             * brand.
              */
             public Builder brand(String brand) {
                 this.brand = brand;
@@ -1394,7 +1394,7 @@ public class HotelStaticInfoResponseBody extends TeaModel {
             }
 
             /**
-             * 品牌名称
+             * brand_name.
              */
             public Builder brandName(String brandName) {
                 this.brandName = brandName;
@@ -1402,7 +1402,7 @@ public class HotelStaticInfoResponseBody extends TeaModel {
             }
 
             /**
-             * 城市编码
+             * city_code.
              */
             public Builder cityCode(String cityCode) {
                 this.cityCode = cityCode;
@@ -1410,7 +1410,7 @@ public class HotelStaticInfoResponseBody extends TeaModel {
             }
 
             /**
-             * 城市名称
+             * city_name.
              */
             public Builder cityName(String cityName) {
                 this.cityName = cityName;
@@ -1418,7 +1418,7 @@ public class HotelStaticInfoResponseBody extends TeaModel {
             }
 
             /**
-             * 所属国家名称
+             * country.
              */
             public Builder country(String country) {
                 this.country = country;
@@ -1426,7 +1426,7 @@ public class HotelStaticInfoResponseBody extends TeaModel {
             }
 
             /**
-             * 所属国家Code
+             * country_code.
              */
             public Builder countryCode(String countryCode) {
                 this.countryCode = countryCode;
@@ -1434,7 +1434,7 @@ public class HotelStaticInfoResponseBody extends TeaModel {
             }
 
             /**
-             * 酒店描述
+             * description.
              */
             public Builder description(String description) {
                 this.description = description;
@@ -1442,7 +1442,7 @@ public class HotelStaticInfoResponseBody extends TeaModel {
             }
 
             /**
-             * 行政区编码
+             * district.
              */
             public Builder district(String district) {
                 this.district = district;
@@ -1450,7 +1450,7 @@ public class HotelStaticInfoResponseBody extends TeaModel {
             }
 
             /**
-             * 行政区名称
+             * district_name.
              */
             public Builder districtName(String districtName) {
                 this.districtName = districtName;
@@ -1458,7 +1458,7 @@ public class HotelStaticInfoResponseBody extends TeaModel {
             }
 
             /**
-             * 酒店扩展信息
+             * expand_info.
              */
             public Builder expandInfo(ExpandInfo expandInfo) {
                 this.expandInfo = expandInfo;
@@ -1466,7 +1466,7 @@ public class HotelStaticInfoResponseBody extends TeaModel {
             }
 
             /**
-             * 酒店地址
+             * hotel_address.
              */
             public Builder hotelAddress(String hotelAddress) {
                 this.hotelAddress = hotelAddress;
@@ -1474,7 +1474,7 @@ public class HotelStaticInfoResponseBody extends TeaModel {
             }
 
             /**
-             * 酒店英文地址
+             * hotel_en_address.
              */
             public Builder hotelEnAddress(String hotelEnAddress) {
                 this.hotelEnAddress = hotelEnAddress;
@@ -1482,7 +1482,7 @@ public class HotelStaticInfoResponseBody extends TeaModel {
             }
 
             /**
-             * 酒店英文名
+             * hotel_en_name.
              */
             public Builder hotelEnName(String hotelEnName) {
                 this.hotelEnName = hotelEnName;
@@ -1490,7 +1490,7 @@ public class HotelStaticInfoResponseBody extends TeaModel {
             }
 
             /**
-             * 酒店id
+             * hotel_id.
              */
             public Builder hotelId(String hotelId) {
                 this.hotelId = hotelId;
@@ -1498,7 +1498,7 @@ public class HotelStaticInfoResponseBody extends TeaModel {
             }
 
             /**
-             * 酒店名称
+             * hotel_name.
              */
             public Builder hotelName(String hotelName) {
                 this.hotelName = hotelName;
@@ -1506,7 +1506,7 @@ public class HotelStaticInfoResponseBody extends TeaModel {
             }
 
             /**
-             * 酒店开业时间
+             * hotel_open_time.
              */
             public Builder hotelOpenTime(String hotelOpenTime) {
                 this.hotelOpenTime = hotelOpenTime;
@@ -1514,7 +1514,7 @@ public class HotelStaticInfoResponseBody extends TeaModel {
             }
 
             /**
-             * 酒店电话如有多个使用英文逗号,拼接
+             * hotel_phones.
              */
             public Builder hotelPhones(String hotelPhones) {
                 this.hotelPhones = hotelPhones;
@@ -1522,7 +1522,7 @@ public class HotelStaticInfoResponseBody extends TeaModel {
             }
 
             /**
-             * 酒店入住政策(针对国际酒店，儿童及加床信息)
+             * hotel_policies.
              */
             public Builder hotelPolicies(String hotelPolicies) {
                 this.hotelPolicies = hotelPolicies;
@@ -1530,7 +1530,7 @@ public class HotelStaticInfoResponseBody extends TeaModel {
             }
 
             /**
-             * 酒店传真如有多个使用英文逗号,拼接
+             * hotelfax.
              */
             public Builder hotelfax(String hotelfax) {
                 this.hotelfax = hotelfax;
@@ -1538,7 +1538,7 @@ public class HotelStaticInfoResponseBody extends TeaModel {
             }
 
             /**
-             * 逗号分隔多张图片
+             * hotelpics.
              */
             public Builder hotelpics(String hotelpics) {
                 this.hotelpics = hotelpics;
@@ -1546,7 +1546,7 @@ public class HotelStaticInfoResponseBody extends TeaModel {
             }
 
             /**
-             * 图片列表
+             * imageinfos.
              */
             public Builder imageinfos(java.util.List < Imageinfos> imageinfos) {
                 this.imageinfos = imageinfos;
@@ -1554,7 +1554,7 @@ public class HotelStaticInfoResponseBody extends TeaModel {
             }
 
             /**
-             * 发票提供方式
+             * invoice_provider_method.
              */
             public Builder invoiceProviderMethod(String invoiceProviderMethod) {
                 this.invoiceProviderMethod = invoiceProviderMethod;
@@ -1562,7 +1562,7 @@ public class HotelStaticInfoResponseBody extends TeaModel {
             }
 
             /**
-             * 发票类型
+             * invoice_types.
              */
             public Builder invoiceTypes(java.util.List < Integer > invoiceTypes) {
                 this.invoiceTypes = invoiceTypes;
@@ -1570,7 +1570,7 @@ public class HotelStaticInfoResponseBody extends TeaModel {
             }
 
             /**
-             * 酒店地址的经纬度(高德)
+             * location.
              */
             public Builder location(String location) {
                 this.location = location;
@@ -1578,7 +1578,7 @@ public class HotelStaticInfoResponseBody extends TeaModel {
             }
 
             /**
-             * 所属省份code
+             * province.
              */
             public Builder province(String province) {
                 this.province = province;
@@ -1586,7 +1586,7 @@ public class HotelStaticInfoResponseBody extends TeaModel {
             }
 
             /**
-             * 所属省份名称
+             * province_name.
              */
             public Builder provinceName(String provinceName) {
                 this.provinceName = provinceName;
@@ -1594,7 +1594,7 @@ public class HotelStaticInfoResponseBody extends TeaModel {
             }
 
             /**
-             * 酒店评分
+             * rating_average.
              */
             public Builder ratingAverage(String ratingAverage) {
                 this.ratingAverage = ratingAverage;
@@ -1602,7 +1602,7 @@ public class HotelStaticInfoResponseBody extends TeaModel {
             }
 
             /**
-             * 房型列表
+             * room_infos.
              */
             public Builder roomInfos(java.util.List < RoomInfos> roomInfos) {
                 this.roomInfos = roomInfos;
@@ -1610,7 +1610,7 @@ public class HotelStaticInfoResponseBody extends TeaModel {
             }
 
             /**
-             * 酒店档次(档次不是星级)
+             * star.
              */
             public Builder star(String star) {
                 this.star = star;
@@ -1618,7 +1618,7 @@ public class HotelStaticInfoResponseBody extends TeaModel {
             }
 
             /**
-             * 旅游局评定星级
+             * star_rate.
              */
             public Builder starRate(String starRate) {
                 this.starRate = starRate;
@@ -1626,7 +1626,7 @@ public class HotelStaticInfoResponseBody extends TeaModel {
             }
 
             /**
-             * 状态
+             * status.
              */
             public Builder status(String status) {
                 this.status = status;
@@ -1634,7 +1634,7 @@ public class HotelStaticInfoResponseBody extends TeaModel {
             }
 
             /**
-             * 酒店主题
+             * themes.
              */
             public Builder themes(String themes) {
                 this.themes = themes;
@@ -1642,7 +1642,7 @@ public class HotelStaticInfoResponseBody extends TeaModel {
             }
 
             /**
-             * 国家维度的签证提示
+             * visa_reminding.
              */
             public Builder visaReminding(Boolean visaReminding) {
                 this.visaReminding = visaReminding;

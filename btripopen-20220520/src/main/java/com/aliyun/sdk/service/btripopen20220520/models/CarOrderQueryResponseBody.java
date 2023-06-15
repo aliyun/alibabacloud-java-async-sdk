@@ -651,7 +651,7 @@ public class CarOrderQueryResponseBody extends TeaModel {
             private String title; 
 
             /**
-             * 发票id
+             * id.
              */
             public Builder id(Long id) {
                 this.id = id;
@@ -659,7 +659,7 @@ public class CarOrderQueryResponseBody extends TeaModel {
             }
 
             /**
-             * 发票抬头
+             * title.
              */
             public Builder title(String title) {
                 this.title = title;
@@ -904,7 +904,7 @@ public class CarOrderQueryResponseBody extends TeaModel {
             private String userName; 
 
             /**
-             * 申请单id
+             * apply_id.
              */
             public Builder applyId(String applyId) {
                 this.applyId = applyId;
@@ -912,7 +912,7 @@ public class CarOrderQueryResponseBody extends TeaModel {
             }
 
             /**
-             * 申请单-出行事由
+             * btrip_cause.
              */
             public Builder btripCause(String btripCause) {
                 this.btripCause = btripCause;
@@ -920,7 +920,7 @@ public class CarOrderQueryResponseBody extends TeaModel {
             }
 
             /**
-             * 申请单-出行标题
+             * btrip_title.
              */
             public Builder btripTitle(String btripTitle) {
                 this.btripTitle = btripTitle;
@@ -928,7 +928,7 @@ public class CarOrderQueryResponseBody extends TeaModel {
             }
 
             /**
-             * 企业id
+             * corp_id.
              */
             public Builder corpId(String corpId) {
                 this.corpId = corpId;
@@ -936,7 +936,7 @@ public class CarOrderQueryResponseBody extends TeaModel {
             }
 
             /**
-             * 企业名称
+             * corp_name.
              */
             public Builder corpName(String corpName) {
                 this.corpName = corpName;
@@ -944,7 +944,7 @@ public class CarOrderQueryResponseBody extends TeaModel {
             }
 
             /**
-             * 部门id
+             * depart_id.
              */
             public Builder departId(String departId) {
                 this.departId = departId;
@@ -952,7 +952,7 @@ public class CarOrderQueryResponseBody extends TeaModel {
             }
 
             /**
-             * 部门名称
+             * depart_name.
              */
             public Builder departName(String departName) {
                 this.departName = departName;
@@ -960,7 +960,7 @@ public class CarOrderQueryResponseBody extends TeaModel {
             }
 
             /**
-             * 订单创建时间
+             * gmt_create.
              */
             public Builder gmtCreate(Long gmtCreate) {
                 this.gmtCreate = gmtCreate;
@@ -968,7 +968,7 @@ public class CarOrderQueryResponseBody extends TeaModel {
             }
 
             /**
-             * 订单更新时间
+             * gmt_modified.
              */
             public Builder gmtModified(Long gmtModified) {
                 this.gmtModified = gmtModified;
@@ -976,7 +976,7 @@ public class CarOrderQueryResponseBody extends TeaModel {
             }
 
             /**
-             * 行程单id
+             * itinerary_id.
              */
             public Builder itineraryId(String itineraryId) {
                 this.itineraryId = itineraryId;
@@ -984,7 +984,7 @@ public class CarOrderQueryResponseBody extends TeaModel {
             }
 
             /**
-             * 订单id
+             * order_id.
              */
             public Builder orderId(Long orderId) {
                 this.orderId = orderId;
@@ -992,7 +992,7 @@ public class CarOrderQueryResponseBody extends TeaModel {
             }
 
             /**
-             * 订单状态 0: 初始化状态 1: 已超时 2: 派单成功 3: 派单失败 4: 已退款 5: 已支付 6: 已取消
+             * order_status.
              */
             public Builder orderStatus(Integer orderStatus) {
                 this.orderStatus = orderStatus;
@@ -1000,7 +1000,7 @@ public class CarOrderQueryResponseBody extends TeaModel {
             }
 
             /**
-             * 子订单id
+             * sub_order_id.
              */
             public Builder subOrderId(Long subOrderId) {
                 this.subOrderId = subOrderId;
@@ -1008,7 +1008,7 @@ public class CarOrderQueryResponseBody extends TeaModel {
             }
 
             /**
-             * 三方部门id
+             * third_depart_id.
              */
             public Builder thirdDepartId(String thirdDepartId) {
                 this.thirdDepartId = thirdDepartId;
@@ -1016,7 +1016,7 @@ public class CarOrderQueryResponseBody extends TeaModel {
             }
 
             /**
-             * 三方申请单id
+             * thirdpart_apply_id.
              */
             public Builder thirdpartApplyId(String thirdpartApplyId) {
                 this.thirdpartApplyId = thirdpartApplyId;
@@ -1024,7 +1024,7 @@ public class CarOrderQueryResponseBody extends TeaModel {
             }
 
             /**
-             * 三方行程单id
+             * thirdpart_itinerary_id.
              */
             public Builder thirdpartItineraryId(String thirdpartItineraryId) {
                 this.thirdpartItineraryId = thirdpartItineraryId;
@@ -1032,7 +1032,7 @@ public class CarOrderQueryResponseBody extends TeaModel {
             }
 
             /**
-             * 预订人id
+             * user_id.
              */
             public Builder userId(String userId) {
                 this.userId = userId;
@@ -1040,7 +1040,7 @@ public class CarOrderQueryResponseBody extends TeaModel {
             }
 
             /**
-             * 预订人姓名
+             * user_name.
              */
             public Builder userName(String userName) {
                 this.userName = userName;
@@ -1201,7 +1201,7 @@ public class CarOrderQueryResponseBody extends TeaModel {
             private Integer userType; 
 
             /**
-             * 成本中心id
+             * cost_center_id.
              */
             public Builder costCenterId(Long costCenterId) {
                 this.costCenterId = costCenterId;
@@ -1209,7 +1209,7 @@ public class CarOrderQueryResponseBody extends TeaModel {
             }
 
             /**
-             * 成本中心名称
+             * cost_center_name.
              */
             public Builder costCenterName(String costCenterName) {
                 this.costCenterName = costCenterName;
@@ -1217,7 +1217,7 @@ public class CarOrderQueryResponseBody extends TeaModel {
             }
 
             /**
-             * 成本中心编码
+             * cost_center_number.
              */
             public Builder costCenterNumber(String costCenterNumber) {
                 this.costCenterNumber = costCenterNumber;
@@ -1225,7 +1225,7 @@ public class CarOrderQueryResponseBody extends TeaModel {
             }
 
             /**
-             * 项目编码
+             * project_code.
              */
             public Builder projectCode(String projectCode) {
                 this.projectCode = projectCode;
@@ -1233,7 +1233,7 @@ public class CarOrderQueryResponseBody extends TeaModel {
             }
 
             /**
-             * 项目id
+             * project_id.
              */
             public Builder projectId(Long projectId) {
                 this.projectId = projectId;
@@ -1241,7 +1241,7 @@ public class CarOrderQueryResponseBody extends TeaModel {
             }
 
             /**
-             * 项目名称
+             * project_title.
              */
             public Builder projectTitle(String projectTitle) {
                 this.projectTitle = projectTitle;
@@ -1249,7 +1249,7 @@ public class CarOrderQueryResponseBody extends TeaModel {
             }
 
             /**
-             * 第三方成本中心id
+             * thirdpart_cost_center_id.
              */
             public Builder thirdpartCostCenterId(String thirdpartCostCenterId) {
                 this.thirdpartCostCenterId = thirdpartCostCenterId;
@@ -1257,7 +1257,7 @@ public class CarOrderQueryResponseBody extends TeaModel {
             }
 
             /**
-             * 三方项目id
+             * thirdpart_project_id.
              */
             public Builder thirdpartProjectId(String thirdpartProjectId) {
                 this.thirdpartProjectId = thirdpartProjectId;
@@ -1265,7 +1265,7 @@ public class CarOrderQueryResponseBody extends TeaModel {
             }
 
             /**
-             * 出行人dingId
+             * user_id.
              */
             public Builder userId(String userId) {
                 this.userId = userId;
@@ -1273,7 +1273,7 @@ public class CarOrderQueryResponseBody extends TeaModel {
             }
 
             /**
-             * 出行人姓名
+             * user_name.
              */
             public Builder userName(String userName) {
                 this.userName = userName;
@@ -1281,7 +1281,7 @@ public class CarOrderQueryResponseBody extends TeaModel {
             }
 
             /**
-             * 出行人类型 0:内部/1:外部
+             * user_type.
              */
             public Builder userType(Integer userType) {
                 this.userType = userType;
@@ -1394,7 +1394,7 @@ public class CarOrderQueryResponseBody extends TeaModel {
             private Integer type; 
 
             /**
-             * 交易类目编码
+             * category_code.
              */
             public Builder categoryCode(Integer categoryCode) {
                 this.categoryCode = categoryCode;
@@ -1402,7 +1402,7 @@ public class CarOrderQueryResponseBody extends TeaModel {
             }
 
             /**
-             * 订单创建时间
+             * gmt_create.
              */
             public Builder gmtCreate(Long gmtCreate) {
                 this.gmtCreate = gmtCreate;

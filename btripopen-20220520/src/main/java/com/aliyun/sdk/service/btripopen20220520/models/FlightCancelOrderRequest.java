@@ -69,7 +69,7 @@ public class FlightCancelOrderRequest extends Request {
         } 
 
         /**
-         * 分销外部订单号
+         * dis_order_id.
          */
         public Builder disOrderId(String disOrderId) {
             this.putQueryParameter("dis_order_id", disOrderId);

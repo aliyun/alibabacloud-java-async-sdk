@@ -190,7 +190,7 @@ public class HotelOrderCreateResponseBody extends TeaModel {
             private Long totalPrice; 
 
             /**
-             * 商旅销售订单号
+             * btrip_order_id.
              */
             public Builder btripOrderId(Long btripOrderId) {
                 this.btripOrderId = btripOrderId;
@@ -198,7 +198,7 @@ public class HotelOrderCreateResponseBody extends TeaModel {
             }
 
             /**
-             * 订单总价
+             * total_price.
              */
             public Builder totalPrice(Long totalPrice) {
                 this.totalPrice = totalPrice;

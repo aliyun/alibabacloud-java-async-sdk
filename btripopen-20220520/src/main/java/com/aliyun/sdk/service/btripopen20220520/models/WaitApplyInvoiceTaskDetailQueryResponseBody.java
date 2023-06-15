@@ -394,7 +394,7 @@ public class WaitApplyInvoiceTaskDetailQueryResponseBody extends TeaModel {
             private String vehicleInvoiceFee; 
 
             /**
-             * 收件人姓名
+             * contact.
              */
             public Builder contact(String contact) {
                 this.contact = contact;
@@ -402,7 +402,7 @@ public class WaitApplyInvoiceTaskDetailQueryResponseBody extends TeaModel {
             }
 
             /**
-             * 接收邮箱
+             * email.
              */
             public Builder email(String email) {
                 this.email = email;
@@ -410,7 +410,7 @@ public class WaitApplyInvoiceTaskDetailQueryResponseBody extends TeaModel {
             }
 
             /**
-             * 国内机票-普票发票金额
+             * flight_invoice_fee.
              */
             public Builder flightInvoiceFee(String flightInvoiceFee) {
                 this.flightInvoiceFee = flightInvoiceFee;
@@ -418,7 +418,7 @@ public class WaitApplyInvoiceTaskDetailQueryResponseBody extends TeaModel {
             }
 
             /**
-             * 福豆发票金额
+             * fu_point_invoice_fee.
              */
             public Builder fuPointInvoiceFee(String fuPointInvoiceFee) {
                 this.fuPointInvoiceFee = fuPointInvoiceFee;
@@ -426,7 +426,7 @@ public class WaitApplyInvoiceTaskDetailQueryResponseBody extends TeaModel {
             }
 
             /**
-             * 酒店普票发票金额
+             * hotel_normal_invoice_fee.
              */
             public Builder hotelNormalInvoiceFee(String hotelNormalInvoiceFee) {
                 this.hotelNormalInvoiceFee = hotelNormalInvoiceFee;
@@ -434,7 +434,7 @@ public class WaitApplyInvoiceTaskDetailQueryResponseBody extends TeaModel {
             }
 
             /**
-             * 酒店专票发票金额
+             * hotel_special_invoice_fee.
              */
             public Builder hotelSpecialInvoiceFee(String hotelSpecialInvoiceFee) {
                 this.hotelSpecialInvoiceFee = hotelSpecialInvoiceFee;
@@ -442,7 +442,7 @@ public class WaitApplyInvoiceTaskDetailQueryResponseBody extends TeaModel {
             }
 
             /**
-             * 国际机票-普票发票金额
+             * international_flight_invoice_fee.
              */
             public Builder internationalFlightInvoiceFee(String internationalFlightInvoiceFee) {
                 this.internationalFlightInvoiceFee = internationalFlightInvoiceFee;
@@ -450,7 +450,7 @@ public class WaitApplyInvoiceTaskDetailQueryResponseBody extends TeaModel {
             }
 
             /**
-             * 发票抬头名称
+             * invoice_third_part_id.
              */
             public Builder invoiceThirdPartId(String invoiceThirdPartId) {
                 this.invoiceThirdPartId = invoiceThirdPartId;
@@ -458,7 +458,7 @@ public class WaitApplyInvoiceTaskDetailQueryResponseBody extends TeaModel {
             }
 
             /**
-             * 发票抬头名称
+             * invoice_title.
              */
             public Builder invoiceTitle(String invoiceTitle) {
                 this.invoiceTitle = invoiceTitle;
@@ -466,7 +466,7 @@ public class WaitApplyInvoiceTaskDetailQueryResponseBody extends TeaModel {
             }
 
             /**
-             * 邮寄地址-详情地址
+             * mail_address.
              */
             public Builder mailAddress(String mailAddress) {
                 this.mailAddress = mailAddress;
@@ -474,7 +474,7 @@ public class WaitApplyInvoiceTaskDetailQueryResponseBody extends TeaModel {
             }
 
             /**
-             * 邮寄地址-市
+             * mail_city.
              */
             public Builder mailCity(String mailCity) {
                 this.mailCity = mailCity;
@@ -482,7 +482,7 @@ public class WaitApplyInvoiceTaskDetailQueryResponseBody extends TeaModel {
             }
 
             /**
-             * 邮寄完整地址
+             * mail_full_address.
              */
             public Builder mailFullAddress(String mailFullAddress) {
                 this.mailFullAddress = mailFullAddress;
@@ -490,7 +490,7 @@ public class WaitApplyInvoiceTaskDetailQueryResponseBody extends TeaModel {
             }
 
             /**
-             * 邮寄地址-省
+             * mail_province.
              */
             public Builder mailProvince(String mailProvince) {
                 this.mailProvince = mailProvince;
@@ -498,7 +498,7 @@ public class WaitApplyInvoiceTaskDetailQueryResponseBody extends TeaModel {
             }
 
             /**
-             * 违约金发票金额
+             * penalty_fee.
              */
             public Builder penaltyFee(String penaltyFee) {
                 this.penaltyFee = penaltyFee;
@@ -506,7 +506,7 @@ public class WaitApplyInvoiceTaskDetailQueryResponseBody extends TeaModel {
             }
 
             /**
-             * 发票备注
+             * remark.
              */
             public Builder remark(String remark) {
                 this.remark = remark;
@@ -514,7 +514,7 @@ public class WaitApplyInvoiceTaskDetailQueryResponseBody extends TeaModel {
             }
 
             /**
-             * 服务费发票金额
+             * service_fee.
              */
             public Builder serviceFee(String serviceFee) {
                 this.serviceFee = serviceFee;
@@ -522,7 +522,7 @@ public class WaitApplyInvoiceTaskDetailQueryResponseBody extends TeaModel {
             }
 
             /**
-             * 收件人联系电话
+             * telephone.
              */
             public Builder telephone(String telephone) {
                 this.telephone = telephone;
@@ -530,7 +530,7 @@ public class WaitApplyInvoiceTaskDetailQueryResponseBody extends TeaModel {
             }
 
             /**
-             * 火车票-普票发票金额
+             * train_invoice_fee.
              */
             public Builder trainInvoiceFee(String trainInvoiceFee) {
                 this.trainInvoiceFee = trainInvoiceFee;
@@ -538,7 +538,7 @@ public class WaitApplyInvoiceTaskDetailQueryResponseBody extends TeaModel {
             }
 
             /**
-             * 用车发票金额
+             * vehicle_invoice_fee.
              */
             public Builder vehicleInvoiceFee(String vehicleInvoiceFee) {
                 this.vehicleInvoiceFee = vehicleInvoiceFee;

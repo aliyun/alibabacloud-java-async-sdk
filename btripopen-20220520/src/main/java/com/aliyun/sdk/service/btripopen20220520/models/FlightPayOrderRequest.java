@@ -128,7 +128,7 @@ public class FlightPayOrderRequest extends Request {
         } 
 
         /**
-         * 企业支付金额
+         * corp_pay_price.
          */
         public Builder corpPayPrice(Long corpPayPrice) {
             this.putBodyParameter("corp_pay_price", corpPayPrice);
@@ -137,7 +137,7 @@ public class FlightPayOrderRequest extends Request {
         }
 
         /**
-         * 分销外部订单号
+         * dis_order_id.
          */
         public Builder disOrderId(String disOrderId) {
             this.putBodyParameter("dis_order_id", disOrderId);
@@ -146,7 +146,7 @@ public class FlightPayOrderRequest extends Request {
         }
 
         /**
-         * 扩展信息
+         * extra.
          */
         public Builder extra(java.util.Map < String, String > extra) {
             String extraShrink = shrink(extra, "extra", "json");
@@ -156,7 +156,7 @@ public class FlightPayOrderRequest extends Request {
         }
 
         /**
-         * 个人支付金额
+         * personal_pay_price.
          */
         public Builder personalPayPrice(Long personalPayPrice) {
             this.putBodyParameter("personal_pay_price", personalPayPrice);
@@ -165,7 +165,7 @@ public class FlightPayOrderRequest extends Request {
         }
 
         /**
-         * 订单支付总金额
+         * total_pay_price.
          */
         public Builder totalPayPrice(Long totalPayPrice) {
             this.putBodyParameter("total_pay_price", totalPayPrice);

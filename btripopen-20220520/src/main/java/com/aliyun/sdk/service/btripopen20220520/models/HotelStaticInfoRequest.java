@@ -69,7 +69,7 @@ public class HotelStaticInfoRequest extends Request {
         } 
 
         /**
-         * 酒店Id列表
+         * hotel_ids.
          */
         public Builder hotelIds(java.util.List < String > hotelIds) {
             String hotelIdsShrink = shrink(hotelIds, "hotel_ids", "json");

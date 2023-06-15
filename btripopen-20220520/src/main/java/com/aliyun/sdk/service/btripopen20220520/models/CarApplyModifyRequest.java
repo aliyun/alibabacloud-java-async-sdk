@@ -127,7 +127,7 @@ public class CarApplyModifyRequest extends Request {
         } 
 
         /**
-         * 审批时间
+         * operate_time.
          */
         public Builder operateTime(String operateTime) {
             this.putBodyParameter("operate_time", operateTime);
@@ -136,7 +136,7 @@ public class CarApplyModifyRequest extends Request {
         }
 
         /**
-         * 审批备注
+         * remark.
          */
         public Builder remark(String remark) {
             this.putBodyParameter("remark", remark);
@@ -145,7 +145,7 @@ public class CarApplyModifyRequest extends Request {
         }
 
         /**
-         * 0申请 1同意 2拒绝 3转交 4取消 5 修改已同意 6 撤销已同意 7 修改审批中 8 已同意(修改被拒绝)  9 撤销审批中\n10 已同意(撤销被拒绝) 11 已同意(修改被取消) 12 已同意(撤销被取消)
+         * status.
          */
         public Builder status(Integer status) {
             this.putBodyParameter("status", status);
@@ -163,7 +163,7 @@ public class CarApplyModifyRequest extends Request {
         }
 
         /**
-         * 无userId时传缺省值superAdmin
+         * user_id.
          */
         public Builder userId(String userId) {
             this.putBodyParameter("user_id", userId);

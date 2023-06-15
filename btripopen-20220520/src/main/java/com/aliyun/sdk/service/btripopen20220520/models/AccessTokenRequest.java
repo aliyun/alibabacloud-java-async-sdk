@@ -55,7 +55,7 @@ public class AccessTokenRequest extends Request {
         } 
 
         /**
-         * 应用的appSecret
+         * app_secret.
          */
         public Builder appSecret(String appSecret) {
             this.putQueryParameter("app_secret", appSecret);

@@ -254,7 +254,7 @@ public class FlightSearchListRequest extends Request {
         } 
 
         /**
-         * 航司二字码
+         * airline_code.
          */
         public Builder airlineCode(String airlineCode) {
             this.putQueryParameter("airline_code", airlineCode);
@@ -263,7 +263,7 @@ public class FlightSearchListRequest extends Request {
         }
 
         /**
-         * 必填项,到达城市三字码
+         * arr_city_code.
          */
         public Builder arrCityCode(String arrCityCode) {
             this.putQueryParameter("arr_city_code", arrCityCode);
@@ -272,7 +272,7 @@ public class FlightSearchListRequest extends Request {
         }
 
         /**
-         * 到达城市
+         * arr_city_name.
          */
         public Builder arrCityName(String arrCityName) {
             this.putQueryParameter("arr_city_name", arrCityName);
@@ -281,7 +281,7 @@ public class FlightSearchListRequest extends Request {
         }
 
         /**
-         * 回程时间
+         * arr_date.
          */
         public Builder arrDate(String arrDate) {
             this.putQueryParameter("arr_date", arrDate);
@@ -290,7 +290,7 @@ public class FlightSearchListRequest extends Request {
         }
 
         /**
-         * 舱等， 0所有舱位,1经济舱,2商务舱
+         * cabin_class.
          */
         public Builder cabinClass(String cabinClass) {
             this.putQueryParameter("cabin_class", cabinClass);
@@ -299,7 +299,7 @@ public class FlightSearchListRequest extends Request {
         }
 
         /**
-         * 必填项,出发城市三字码
+         * dep_city_code.
          */
         public Builder depCityCode(String depCityCode) {
             this.putQueryParameter("dep_city_code", depCityCode);
@@ -308,7 +308,7 @@ public class FlightSearchListRequest extends Request {
         }
 
         /**
-         * 出发城市
+         * dep_city_name.
          */
         public Builder depCityName(String depCityName) {
             this.putQueryParameter("dep_city_name", depCityName);
@@ -317,7 +317,7 @@ public class FlightSearchListRequest extends Request {
         }
 
         /**
-         * 必填项,出发时间
+         * dep_date.
          */
         public Builder depDate(String depDate) {
             this.putQueryParameter("dep_date", depDate);
@@ -326,7 +326,7 @@ public class FlightSearchListRequest extends Request {
         }
 
         /**
-         * 可选项,航班号
+         * flight_no.
          */
         public Builder flightNo(String flightNo) {
             this.putQueryParameter("flight_no", flightNo);
@@ -335,7 +335,7 @@ public class FlightSearchListRequest extends Request {
         }
 
         /**
-         * 可选项,是否查询多舱价位
+         * need_multi_class_price.
          */
         public Builder needMultiClassPrice(Boolean needMultiClassPrice) {
             this.putQueryParameter("need_multi_class_price", needMultiClassPrice);
@@ -344,7 +344,7 @@ public class FlightSearchListRequest extends Request {
         }
 
         /**
-         * 可选项,中转城市三字码(有中转航班号则必填)
+         * transfer_city_code.
          */
         public Builder transferCityCode(String transferCityCode) {
             this.putQueryParameter("transfer_city_code", transferCityCode);
@@ -353,7 +353,7 @@ public class FlightSearchListRequest extends Request {
         }
 
         /**
-         * 可选项,航班号,中转航班号，（即第二程航班）
+         * transfer_flight_no.
          */
         public Builder transferFlightNo(String transferFlightNo) {
             this.putQueryParameter("transfer_flight_no", transferFlightNo);
@@ -362,7 +362,7 @@ public class FlightSearchListRequest extends Request {
         }
 
         /**
-         * 可选项,中转航班出发时间(有中转航班号则必填)
+         * transfer_leave_date.
          */
         public Builder transferLeaveDate(String transferLeaveDate) {
             this.putQueryParameter("transfer_leave_date", transferLeaveDate);
@@ -371,7 +371,7 @@ public class FlightSearchListRequest extends Request {
         }
 
         /**
-         * 必填项,航程类型
+         * trip_type.
          */
         public Builder tripType(String tripType) {
             this.putQueryParameter("trip_type", tripType);

@@ -99,7 +99,7 @@ public class GroupCorpTokenRequest extends Request {
         } 
 
         /**
-         * 密钥
+         * app_secret.
          */
         public Builder appSecret(String appSecret) {
             this.putQueryParameter("app_secret", appSecret);
@@ -108,7 +108,7 @@ public class GroupCorpTokenRequest extends Request {
         }
 
         /**
-         * 企业id
+         * corp_id.
          */
         public Builder corpId(String corpId) {
             this.putQueryParameter("corp_id", corpId);
@@ -117,7 +117,7 @@ public class GroupCorpTokenRequest extends Request {
         }
 
         /**
-         * 子企业id
+         * sub_corp_id.
          */
         public Builder subCorpId(String subCorpId) {
             this.putQueryParameter("sub_corp_id", subCorpId);

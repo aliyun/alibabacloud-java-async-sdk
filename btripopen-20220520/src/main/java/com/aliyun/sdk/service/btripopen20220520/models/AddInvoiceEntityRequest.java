@@ -84,7 +84,7 @@ public class AddInvoiceEntityRequest extends Request {
         } 
 
         /**
-         * 实体列表
+         * entities.
          */
         public Builder entities(java.util.List < Entities> entities) {
             String entitiesShrink = shrink(entities, "entities", "json");
@@ -94,7 +94,7 @@ public class AddInvoiceEntityRequest extends Request {
         }
 
         /**
-         * 第三方发票id
+         * third_part_id.
          */
         public Builder thirdPartId(String thirdPartId) {
             this.putBodyParameter("third_part_id", thirdPartId);
@@ -172,7 +172,7 @@ public class AddInvoiceEntityRequest extends Request {
             private String entityType; 
 
             /**
-             * 实体id
+             * entity_id.
              */
             public Builder entityId(String entityId) {
                 this.entityId = entityId;
@@ -180,7 +180,7 @@ public class AddInvoiceEntityRequest extends Request {
             }
 
             /**
-             * 实体name
+             * entity_name.
              */
             public Builder entityName(String entityName) {
                 this.entityName = entityName;
@@ -188,7 +188,7 @@ public class AddInvoiceEntityRequest extends Request {
             }
 
             /**
-             * 实体类型：1员工，2部门，3角色，4第三方部门
+             * entity_type.
              */
             public Builder entityType(String entityType) {
                 this.entityType = entityType;

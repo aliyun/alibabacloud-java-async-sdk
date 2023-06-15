@@ -127,7 +127,7 @@ public class FlightListingSearchRequest extends Request {
         } 
 
         /**
-         * 航司二字码
+         * airline_code.
          */
         public Builder airlineCode(String airlineCode) {
             this.putQueryParameter("airline_code", airlineCode);
@@ -136,7 +136,7 @@ public class FlightListingSearchRequest extends Request {
         }
 
         /**
-         * 到达城市三字码
+         * arr_city_code.
          */
         public Builder arrCityCode(String arrCityCode) {
             this.putQueryParameter("arr_city_code", arrCityCode);
@@ -145,7 +145,7 @@ public class FlightListingSearchRequest extends Request {
         }
 
         /**
-         * 舱等， 0所有舱位,1经济舱,2商务舱
+         * cabin_class.
          */
         public Builder cabinClass(String cabinClass) {
             this.putQueryParameter("cabin_class", cabinClass);
@@ -154,7 +154,7 @@ public class FlightListingSearchRequest extends Request {
         }
 
         /**
-         * 出发城市三字码
+         * dep_city_code.
          */
         public Builder depCityCode(String depCityCode) {
             this.putQueryParameter("dep_city_code", depCityCode);
@@ -163,7 +163,7 @@ public class FlightListingSearchRequest extends Request {
         }
 
         /**
-         * 出发时间
+         * dep_date.
          */
         public Builder depDate(String depDate) {
             this.putQueryParameter("dep_date", depDate);

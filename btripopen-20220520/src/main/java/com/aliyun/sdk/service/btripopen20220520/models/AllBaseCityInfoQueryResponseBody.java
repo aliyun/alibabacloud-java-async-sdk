@@ -122,7 +122,7 @@ public class AllBaseCityInfoQueryResponseBody extends TeaModel {
         }
 
         /**
-         * Id of the request
+         * requestId.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -250,7 +250,7 @@ public class AllBaseCityInfoQueryResponseBody extends TeaModel {
             private java.util.List < String > otherNameList; 
 
             /**
-             * 城市行政区划编码
+             * adcode.
              */
             public Builder adcode(String adcode) {
                 this.adcode = adcode;
@@ -258,7 +258,7 @@ public class AllBaseCityInfoQueryResponseBody extends TeaModel {
             }
 
             /**
-             * 城市区域编码
+             * city_code.
              */
             public Builder cityCode(String cityCode) {
                 this.cityCode = cityCode;
@@ -266,7 +266,7 @@ public class AllBaseCityInfoQueryResponseBody extends TeaModel {
             }
 
             /**
-             * 城市级别：2-地级市，3-县级市
+             * city_level.
              */
             public Builder cityLevel(String cityLevel) {
                 this.cityLevel = cityLevel;
@@ -274,7 +274,7 @@ public class AllBaseCityInfoQueryResponseBody extends TeaModel {
             }
 
             /**
-             * 所在城市名称
+             * city_name.
              */
             public Builder cityName(String cityName) {
                 this.cityName = cityName;
@@ -282,7 +282,7 @@ public class AllBaseCityInfoQueryResponseBody extends TeaModel {
             }
 
             /**
-             * 城市级别全路径
+             * cn_name_tree.
              */
             public Builder cnNameTree(String cnNameTree) {
                 this.cnNameTree = cnNameTree;
@@ -290,7 +290,7 @@ public class AllBaseCityInfoQueryResponseBody extends TeaModel {
             }
 
             /**
-             * 主键id
+             * id.
              */
             public Builder id(Long id) {
                 this.id = id;
@@ -298,7 +298,7 @@ public class AllBaseCityInfoQueryResponseBody extends TeaModel {
             }
 
             /**
-             * 城市别名列表
+             * other_name_list.
              */
             public Builder otherNameList(java.util.List < String > otherNameList) {
                 this.otherNameList = otherNameList;
@@ -339,7 +339,7 @@ public class AllBaseCityInfoQueryResponseBody extends TeaModel {
             private java.util.List < AllCityBaseInfoList> allCityBaseInfoList; 
 
             /**
-             * 全量城市信息列表
+             * all_city_base_info_list.
              */
             public Builder allCityBaseInfoList(java.util.List < AllCityBaseInfoList> allCityBaseInfoList) {
                 this.allCityBaseInfoList = allCityBaseInfoList;

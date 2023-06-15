@@ -778,7 +778,7 @@ public class TrainBillSettlementQueryResponseBody extends TeaModel {
             private Integer voucherType; 
 
             /**
-             * 交易流水号
+             * alipay_trade_no.
              */
             public Builder alipayTradeNo(String alipayTradeNo) {
                 this.alipayTradeNo = alipayTradeNo;
@@ -794,7 +794,7 @@ public class TrainBillSettlementQueryResponseBody extends TeaModel {
             }
 
             /**
-             * 审批单号
+             * apply_id.
              */
             public Builder applyId(String applyId) {
                 this.applyId = applyId;
@@ -802,7 +802,7 @@ public class TrainBillSettlementQueryResponseBody extends TeaModel {
             }
 
             /**
-             * 到达日期
+             * arr_date.
              */
             public Builder arrDate(String arrDate) {
                 this.arrDate = arrDate;
@@ -810,7 +810,7 @@ public class TrainBillSettlementQueryResponseBody extends TeaModel {
             }
 
             /**
-             * 到达站
+             * arr_station.
              */
             public Builder arrStation(String arrStation) {
                 this.arrStation = arrStation;
@@ -818,7 +818,7 @@ public class TrainBillSettlementQueryResponseBody extends TeaModel {
             }
 
             /**
-             * 到达时间
+             * arr_time.
              */
             public Builder arrTime(String arrTime) {
                 this.arrTime = arrTime;
@@ -826,7 +826,7 @@ public class TrainBillSettlementQueryResponseBody extends TeaModel {
             }
 
             /**
-             * 入账时间
+             * bill_record_time.
              */
             public Builder billRecordTime(String billRecordTime) {
                 this.billRecordTime = billRecordTime;
@@ -834,7 +834,7 @@ public class TrainBillSettlementQueryResponseBody extends TeaModel {
             }
 
             /**
-             * 预定时间
+             * book_time.
              */
             public Builder bookTime(String bookTime) {
                 this.bookTime = bookTime;
@@ -842,7 +842,7 @@ public class TrainBillSettlementQueryResponseBody extends TeaModel {
             }
 
             /**
-             * 预定人id
+             * booker_id.
              */
             public Builder bookerId(String bookerId) {
                 this.bookerId = bookerId;
@@ -850,7 +850,7 @@ public class TrainBillSettlementQueryResponseBody extends TeaModel {
             }
 
             /**
-             * 预订人工号
+             * booker_job_no.
              */
             public Builder bookerJobNo(String bookerJobNo) {
                 this.bookerJobNo = bookerJobNo;
@@ -858,7 +858,7 @@ public class TrainBillSettlementQueryResponseBody extends TeaModel {
             }
 
             /**
-             * 预定人姓名
+             * booker_name.
              */
             public Builder bookerName(String bookerName) {
                 this.bookerName = bookerName;
@@ -866,7 +866,7 @@ public class TrainBillSettlementQueryResponseBody extends TeaModel {
             }
 
             /**
-             * 资金方向
+             * capital_direction.
              */
             public Builder capitalDirection(String capitalDirection) {
                 this.capitalDirection = capitalDirection;
@@ -874,7 +874,7 @@ public class TrainBillSettlementQueryResponseBody extends TeaModel {
             }
 
             /**
-             * 联级部门
+             * cascade_department.
              */
             public Builder cascadeDepartment(String cascadeDepartment) {
                 this.cascadeDepartment = cascadeDepartment;
@@ -882,7 +882,7 @@ public class TrainBillSettlementQueryResponseBody extends TeaModel {
             }
 
             /**
-             * 改签手续费
+             * change_fee.
              */
             public Builder changeFee(Double changeFee) {
                 this.changeFee = changeFee;
@@ -890,7 +890,7 @@ public class TrainBillSettlementQueryResponseBody extends TeaModel {
             }
 
             /**
-             * 成本中心名称
+             * cost_center.
              */
             public Builder costCenter(String costCenter) {
                 this.costCenter = costCenter;
@@ -898,7 +898,7 @@ public class TrainBillSettlementQueryResponseBody extends TeaModel {
             }
 
             /**
-             * 成本中心编号
+             * cost_center_number.
              */
             public Builder costCenterNumber(String costCenterNumber) {
                 this.costCenterNumber = costCenterNumber;
@@ -906,7 +906,7 @@ public class TrainBillSettlementQueryResponseBody extends TeaModel {
             }
 
             /**
-             * 优惠券
+             * coupon.
              */
             public Builder coupon(Double coupon) {
                 this.coupon = coupon;
@@ -914,7 +914,7 @@ public class TrainBillSettlementQueryResponseBody extends TeaModel {
             }
 
             /**
-             * 末级部门
+             * department.
              */
             public Builder department(String department) {
                 this.department = department;
@@ -922,7 +922,7 @@ public class TrainBillSettlementQueryResponseBody extends TeaModel {
             }
 
             /**
-             * 部门编号
+             * department_id.
              */
             public Builder departmentId(String departmentId) {
                 this.departmentId = departmentId;
@@ -930,7 +930,7 @@ public class TrainBillSettlementQueryResponseBody extends TeaModel {
             }
 
             /**
-             * 发车日期
+             * dept_date.
              */
             public Builder deptDate(String deptDate) {
                 this.deptDate = deptDate;
@@ -938,7 +938,7 @@ public class TrainBillSettlementQueryResponseBody extends TeaModel {
             }
 
             /**
-             * 发车站
+             * dept_station.
              */
             public Builder deptStation(String deptStation) {
                 this.deptStation = deptStation;
@@ -946,7 +946,7 @@ public class TrainBillSettlementQueryResponseBody extends TeaModel {
             }
 
             /**
-             * 发车时间
+             * dept_time.
              */
             public Builder deptTime(String deptTime) {
                 this.deptTime = deptTime;
@@ -954,7 +954,7 @@ public class TrainBillSettlementQueryResponseBody extends TeaModel {
             }
 
             /**
-             * 费用类型
+             * fee_type.
              */
             public Builder feeType(String feeType) {
                 this.feeType = feeType;
@@ -962,7 +962,7 @@ public class TrainBillSettlementQueryResponseBody extends TeaModel {
             }
 
             /**
-             * 序号
+             * index.
              */
             public Builder index(String index) {
                 this.index = index;
@@ -970,7 +970,7 @@ public class TrainBillSettlementQueryResponseBody extends TeaModel {
             }
 
             /**
-             * 发票抬头
+             * invoice_title.
              */
             public Builder invoiceTitle(String invoiceTitle) {
                 this.invoiceTitle = invoiceTitle;
@@ -978,7 +978,7 @@ public class TrainBillSettlementQueryResponseBody extends TeaModel {
             }
 
             /**
-             * 订单id、福豆发放订单号
+             * order_id.
              */
             public Builder orderId(String orderId) {
                 this.orderId = orderId;
@@ -986,7 +986,7 @@ public class TrainBillSettlementQueryResponseBody extends TeaModel {
             }
 
             /**
-             * 订单金额
+             * order_price.
              */
             public Builder orderPrice(Double orderPrice) {
                 this.orderPrice = orderPrice;
@@ -994,7 +994,7 @@ public class TrainBillSettlementQueryResponseBody extends TeaModel {
             }
 
             /**
-             * 超标审批单号
+             * over_apply_id.
              */
             public Builder overApplyId(String overApplyId) {
                 this.overApplyId = overApplyId;
@@ -1002,7 +1002,7 @@ public class TrainBillSettlementQueryResponseBody extends TeaModel {
             }
 
             /**
-             * 主键id
+             * primary_id.
              */
             public Builder primaryId(Long primaryId) {
                 this.primaryId = primaryId;
@@ -1010,7 +1010,7 @@ public class TrainBillSettlementQueryResponseBody extends TeaModel {
             }
 
             /**
-             * 项目编码
+             * project_code.
              */
             public Builder projectCode(String projectCode) {
                 this.projectCode = projectCode;
@@ -1018,7 +1018,7 @@ public class TrainBillSettlementQueryResponseBody extends TeaModel {
             }
 
             /**
-             * 项目名称
+             * project_name.
              */
             public Builder projectName(String projectName) {
                 this.projectName = projectName;
@@ -1026,7 +1026,7 @@ public class TrainBillSettlementQueryResponseBody extends TeaModel {
             }
 
             /**
-             * 退票手续费
+             * refund_fee.
              */
             public Builder refundFee(Double refundFee) {
                 this.refundFee = refundFee;
@@ -1034,7 +1034,7 @@ public class TrainBillSettlementQueryResponseBody extends TeaModel {
             }
 
             /**
-             * 备注
+             * remark.
              */
             public Builder remark(String remark) {
                 this.remark = remark;
@@ -1042,7 +1042,7 @@ public class TrainBillSettlementQueryResponseBody extends TeaModel {
             }
 
             /**
-             * 运行时长
+             * run_time.
              */
             public Builder runTime(String runTime) {
                 this.runTime = runTime;
@@ -1050,7 +1050,7 @@ public class TrainBillSettlementQueryResponseBody extends TeaModel {
             }
 
             /**
-             * 座位号
+             * seat_no.
              */
             public Builder seatNo(String seatNo) {
                 this.seatNo = seatNo;
@@ -1058,7 +1058,7 @@ public class TrainBillSettlementQueryResponseBody extends TeaModel {
             }
 
             /**
-             * 坐席
+             * seat_type.
              */
             public Builder seatType(String seatType) {
                 this.seatType = seatType;
@@ -1066,7 +1066,7 @@ public class TrainBillSettlementQueryResponseBody extends TeaModel {
             }
 
             /**
-             * 服务费
+             * service_fee.
              */
             public Builder serviceFee(Double serviceFee) {
                 this.serviceFee = serviceFee;
@@ -1074,7 +1074,7 @@ public class TrainBillSettlementQueryResponseBody extends TeaModel {
             }
 
             /**
-             * 结算金额
+             * settlement_fee.
              */
             public Builder settlementFee(Double settlementFee) {
                 this.settlementFee = settlementFee;
@@ -1082,7 +1082,7 @@ public class TrainBillSettlementQueryResponseBody extends TeaModel {
             }
 
             /**
-             * 结算金额--赠送部分
+             * settlement_grant_fee.
              */
             public Builder settlementGrantFee(Double settlementGrantFee) {
                 this.settlementGrantFee = settlementGrantFee;
@@ -1090,7 +1090,7 @@ public class TrainBillSettlementQueryResponseBody extends TeaModel {
             }
 
             /**
-             * 结算时间
+             * settlement_time.
              */
             public Builder settlementTime(String settlementTime) {
                 this.settlementTime = settlementTime;
@@ -1098,7 +1098,7 @@ public class TrainBillSettlementQueryResponseBody extends TeaModel {
             }
 
             /**
-             * 结算类型
+             * settlement_type.
              */
             public Builder settlementType(String settlementType) {
                 this.settlementType = settlementType;
@@ -1106,7 +1106,7 @@ public class TrainBillSettlementQueryResponseBody extends TeaModel {
             }
 
             /**
-             * 入账状态
+             * status.
              */
             public Builder status(Integer status) {
                 this.status = status;
@@ -1122,7 +1122,7 @@ public class TrainBillSettlementQueryResponseBody extends TeaModel {
             }
 
             /**
-             * 票面票号
+             * ticket_no.
              */
             public Builder ticketNo(String ticketNo) {
                 this.ticketNo = ticketNo;
@@ -1130,7 +1130,7 @@ public class TrainBillSettlementQueryResponseBody extends TeaModel {
             }
 
             /**
-             * 票价
+             * ticket_price.
              */
             public Builder ticketPrice(Double ticketPrice) {
                 this.ticketPrice = ticketPrice;
@@ -1138,7 +1138,7 @@ public class TrainBillSettlementQueryResponseBody extends TeaModel {
             }
 
             /**
-             * 车次
+             * train_no.
              */
             public Builder trainNo(String trainNo) {
                 this.trainNo = trainNo;
@@ -1146,7 +1146,7 @@ public class TrainBillSettlementQueryResponseBody extends TeaModel {
             }
 
             /**
-             * 车次类型
+             * train_type.
              */
             public Builder trainType(String trainType) {
                 this.trainType = trainType;
@@ -1154,7 +1154,7 @@ public class TrainBillSettlementQueryResponseBody extends TeaModel {
             }
 
             /**
-             * 出行人userId
+             * traveler_id.
              */
             public Builder travelerId(String travelerId) {
                 this.travelerId = travelerId;
@@ -1162,7 +1162,7 @@ public class TrainBillSettlementQueryResponseBody extends TeaModel {
             }
 
             /**
-             * 出行人工号
+             * traveler_job_no.
              */
             public Builder travelerJobNo(String travelerJobNo) {
                 this.travelerJobNo = travelerJobNo;
@@ -1170,7 +1170,7 @@ public class TrainBillSettlementQueryResponseBody extends TeaModel {
             }
 
             /**
-             * 出行人名称
+             * traveler_name.
              */
             public Builder travelerName(String travelerName) {
                 this.travelerName = travelerName;
@@ -1178,7 +1178,7 @@ public class TrainBillSettlementQueryResponseBody extends TeaModel {
             }
 
             /**
-             * 票据类型
+             * voucher_type.
              */
             public Builder voucherType(Integer voucherType) {
                 this.voucherType = voucherType;
@@ -1279,7 +1279,7 @@ public class TrainBillSettlementQueryResponseBody extends TeaModel {
             private Long totalNum; 
 
             /**
-             * 类目
+             * category.
              */
             public Builder category(Integer category) {
                 this.category = category;
@@ -1287,7 +1287,7 @@ public class TrainBillSettlementQueryResponseBody extends TeaModel {
             }
 
             /**
-             * 企业id
+             * corp_id.
              */
             public Builder corpId(String corpId) {
                 this.corpId = corpId;
@@ -1295,7 +1295,7 @@ public class TrainBillSettlementQueryResponseBody extends TeaModel {
             }
 
             /**
-             * 数据集合
+             * data_list.
              */
             public Builder dataList(java.util.List < DataList> dataList) {
                 this.dataList = dataList;
@@ -1303,7 +1303,7 @@ public class TrainBillSettlementQueryResponseBody extends TeaModel {
             }
 
             /**
-             * 记账日期止 yyyy-MM-dd
+             * period_end.
              */
             public Builder periodEnd(String periodEnd) {
                 this.periodEnd = periodEnd;
@@ -1311,7 +1311,7 @@ public class TrainBillSettlementQueryResponseBody extends TeaModel {
             }
 
             /**
-             * 记账日期起 yyyy-MM-dd
+             * period_start.
              */
             public Builder periodStart(String periodStart) {
                 this.periodStart = periodStart;
@@ -1319,7 +1319,7 @@ public class TrainBillSettlementQueryResponseBody extends TeaModel {
             }
 
             /**
-             * 总数量
+             * total_num.
              */
             public Builder totalNum(Long totalNum) {
                 this.totalNum = totalNum;

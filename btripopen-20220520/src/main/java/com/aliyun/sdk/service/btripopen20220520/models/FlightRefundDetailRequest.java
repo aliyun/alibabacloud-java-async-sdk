@@ -84,7 +84,7 @@ public class FlightRefundDetailRequest extends Request {
         } 
 
         /**
-         * 分销外部订单号
+         * dis_order_id.
          */
         public Builder disOrderId(String disOrderId) {
             this.putQueryParameter("dis_order_id", disOrderId);
@@ -93,7 +93,7 @@ public class FlightRefundDetailRequest extends Request {
         }
 
         /**
-         * 子订单号
+         * dis_sub_order_id.
          */
         public Builder disSubOrderId(String disSubOrderId) {
             this.putQueryParameter("dis_sub_order_id", disSubOrderId);

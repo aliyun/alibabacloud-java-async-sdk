@@ -112,7 +112,7 @@ public class HotelIndexInfoRequest extends Request {
         } 
 
         /**
-         * 城市Id
+         * city_code.
          */
         public Builder cityCode(String cityCode) {
             this.putQueryParameter("city_code", cityCode);
@@ -121,7 +121,7 @@ public class HotelIndexInfoRequest extends Request {
         }
 
         /**
-         * 酒店状态
+         * hotel_status.
          */
         public Builder hotelStatus(Integer hotelStatus) {
             this.putQueryParameter("hotel_status", hotelStatus);
@@ -130,7 +130,7 @@ public class HotelIndexInfoRequest extends Request {
         }
 
         /**
-         * 页数
+         * page_size.
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("page_size", pageSize);
@@ -139,7 +139,7 @@ public class HotelIndexInfoRequest extends Request {
         }
 
         /**
-         * 首次传空，之后每次请求传入上次返回的hotelId。
+         * page_token.
          */
         public Builder pageToken(String pageToken) {
             this.putQueryParameter("page_token", pageToken);

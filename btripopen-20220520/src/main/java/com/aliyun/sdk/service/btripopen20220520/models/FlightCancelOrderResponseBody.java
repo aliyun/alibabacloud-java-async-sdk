@@ -214,7 +214,7 @@ public class FlightCancelOrderResponseBody extends TeaModel {
             private String orderStatus; 
 
             /**
-             * 订单取消时间
+             * cancel_time.
              */
             public Builder cancelTime(String cancelTime) {
                 this.cancelTime = cancelTime;
@@ -222,7 +222,7 @@ public class FlightCancelOrderResponseBody extends TeaModel {
             }
 
             /**
-             * 取消失败类型
+             * fail_code.
              */
             public Builder failCode(String failCode) {
                 this.failCode = failCode;
@@ -230,7 +230,7 @@ public class FlightCancelOrderResponseBody extends TeaModel {
             }
 
             /**
-             * 取消失败原因
+             * fail_reason.
              */
             public Builder failReason(String failReason) {
                 this.failReason = failReason;
@@ -238,7 +238,7 @@ public class FlightCancelOrderResponseBody extends TeaModel {
             }
 
             /**
-             * 订单状态
+             * order_status.
              */
             public Builder orderStatus(String orderStatus) {
                 this.orderStatus = orderStatus;

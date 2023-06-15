@@ -257,7 +257,7 @@ public class FlightRefundApplyRequest extends Request {
         } 
 
         /**
-         * 企业退款金额
+         * corp_refund_price.
          */
         public Builder corpRefundPrice(Long corpRefundPrice) {
             this.putBodyParameter("corp_refund_price", corpRefundPrice);
@@ -266,7 +266,7 @@ public class FlightRefundApplyRequest extends Request {
         }
 
         /**
-         * 分销外部订单号
+         * dis_order_id.
          */
         public Builder disOrderId(String disOrderId) {
             this.putBodyParameter("dis_order_id", disOrderId);
@@ -275,7 +275,7 @@ public class FlightRefundApplyRequest extends Request {
         }
 
         /**
-         * 分销外部订单号
+         * dis_sub_order_id.
          */
         public Builder disSubOrderId(String disSubOrderId) {
             this.putBodyParameter("dis_sub_order_id", disSubOrderId);
@@ -293,7 +293,7 @@ public class FlightRefundApplyRequest extends Request {
         }
 
         /**
-         * 扩展信息
+         * extra.
          */
         public Builder extra(java.util.Map < String, String > extra) {
             String extraShrink = shrink(extra, "extra", "json");
@@ -303,7 +303,7 @@ public class FlightRefundApplyRequest extends Request {
         }
 
         /**
-         * 是否自愿:0自愿，1非自愿F
+         * is_voluntary.
          */
         public Builder isVoluntary(Integer isVoluntary) {
             this.putBodyParameter("is_voluntary", isVoluntary);
@@ -321,7 +321,7 @@ public class FlightRefundApplyRequest extends Request {
         }
 
         /**
-         * 选择的要退票的乘客航段列表
+         * passenger_segment_info_list.
          */
         public Builder passengerSegmentInfoList(java.util.List < PassengerSegmentInfoList> passengerSegmentInfoList) {
             String passengerSegmentInfoListShrink = shrink(passengerSegmentInfoList, "passenger_segment_info_list", "json");
@@ -331,7 +331,7 @@ public class FlightRefundApplyRequest extends Request {
         }
 
         /**
-         * 个人退款金额
+         * personal_refund_price.
          */
         public Builder personalRefundPrice(Long personalRefundPrice) {
             this.putBodyParameter("personal_refund_price", personalRefundPrice);
@@ -340,7 +340,7 @@ public class FlightRefundApplyRequest extends Request {
         }
 
         /**
-         * 退票原因
+         * reason_detail.
          */
         public Builder reasonDetail(String reasonDetail) {
             this.putBodyParameter("reason_detail", reasonDetail);
@@ -349,7 +349,7 @@ public class FlightRefundApplyRequest extends Request {
         }
 
         /**
-         * 退票原因类型(1：自愿退票（我要改变行程计划、我不想飞）；2：自愿退票（填错名字、选错日期、选错航班）；3：自愿退票（没赶上飞机、证件忘带了）；4：自愿退票（生病了无法乘机（无二甲医院证明））；5：自愿退票（其他）；6：非自愿退票（航班延误或取消、航班时刻变更等航司原因）；7：非自愿退票（身体原因且有二级甲等医院<含>以上的医院证明）；)
+         * reason_type.
          */
         public Builder reasonType(Integer reasonType) {
             this.putBodyParameter("reason_type", reasonType);
@@ -358,7 +358,7 @@ public class FlightRefundApplyRequest extends Request {
         }
 
         /**
-         * 退票上传凭证信息(json格式)
+         * refund_voucher_info.
          */
         public Builder refundVoucherInfo(java.util.List < String > refundVoucherInfo) {
             String refundVoucherInfoShrink = shrink(refundVoucherInfo, "refund_voucher_info", "json");
@@ -377,7 +377,7 @@ public class FlightRefundApplyRequest extends Request {
         }
 
         /**
-         * 订单退款总金额
+         * total_refund_price.
          */
         public Builder totalRefundPrice(Long totalRefundPrice) {
             this.putBodyParameter("total_refund_price", totalRefundPrice);
@@ -452,7 +452,7 @@ public class FlightRefundApplyRequest extends Request {
             private String userId; 
 
             /**
-             * 航班号
+             * flight_no.
              */
             public Builder flightNo(String flightNo) {
                 this.flightNo = flightNo;
@@ -460,7 +460,7 @@ public class FlightRefundApplyRequest extends Request {
             }
 
             /**
-             * 乘客姓名
+             * passenger_name.
              */
             public Builder passengerName(String passengerName) {
                 this.passengerName = passengerName;
@@ -468,7 +468,7 @@ public class FlightRefundApplyRequest extends Request {
             }
 
             /**
-             * 用户id
+             * user_id.
              */
             public Builder userId(String userId) {
                 this.userId = userId;

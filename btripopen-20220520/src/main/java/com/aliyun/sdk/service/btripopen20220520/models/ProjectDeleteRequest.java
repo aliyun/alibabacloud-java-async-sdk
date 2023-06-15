@@ -69,7 +69,7 @@ public class ProjectDeleteRequest extends Request {
         } 
 
         /**
-         * 第三方项目id
+         * third_part_id.
          */
         public Builder thirdPartId(String thirdPartId) {
             this.putQueryParameter("third_part_id", thirdPartId);

@@ -139,7 +139,7 @@ public class BtripBillInfoAdjustRequest extends Request {
         } 
 
         /**
-         * 账单数据id
+         * primary_id.
          */
         public Builder primaryId(Long primaryId) {
             this.putBodyParameter("primary_id", primaryId);
@@ -148,7 +148,7 @@ public class BtripBillInfoAdjustRequest extends Request {
         }
 
         /**
-         * 第三方成本中心id
+         * third_part_cost_center_id.
          */
         public Builder thirdPartCostCenterId(String thirdPartCostCenterId) {
             this.putBodyParameter("third_part_cost_center_id", thirdPartCostCenterId);
@@ -157,7 +157,7 @@ public class BtripBillInfoAdjustRequest extends Request {
         }
 
         /**
-         * 第三方部门id
+         * third_part_department_id.
          */
         public Builder thirdPartDepartmentId(String thirdPartDepartmentId) {
             this.putBodyParameter("third_part_department_id", thirdPartDepartmentId);
@@ -166,7 +166,7 @@ public class BtripBillInfoAdjustRequest extends Request {
         }
 
         /**
-         * 第三方发票抬头id
+         * third_part_invoice_id.
          */
         public Builder thirdPartInvoiceId(String thirdPartInvoiceId) {
             this.putBodyParameter("third_part_invoice_id", thirdPartInvoiceId);
@@ -175,7 +175,7 @@ public class BtripBillInfoAdjustRequest extends Request {
         }
 
         /**
-         * 第三方项目id
+         * third_part_project_id.
          */
         public Builder thirdPartProjectId(String thirdPartProjectId) {
             this.putBodyParameter("third_part_project_id", thirdPartProjectId);

@@ -331,7 +331,7 @@ public class FlightCreateOrderRequest extends Request {
         } 
 
         /**
-         * 到达机场编码
+         * arr_airport_code.
          */
         public Builder arrAirportCode(String arrAirportCode) {
             this.putBodyParameter("arr_airport_code", arrAirportCode);
@@ -340,7 +340,7 @@ public class FlightCreateOrderRequest extends Request {
         }
 
         /**
-         * 到达城市编码
+         * arr_city_code.
          */
         public Builder arrCityCode(String arrCityCode) {
             this.putBodyParameter("arr_city_code", arrCityCode);
@@ -349,7 +349,7 @@ public class FlightCreateOrderRequest extends Request {
         }
 
         /**
-         * 自动支付
+         * auto_pay.
          */
         public Builder autoPay(Integer autoPay) {
             this.putBodyParameter("auto_pay", autoPay);
@@ -358,7 +358,7 @@ public class FlightCreateOrderRequest extends Request {
         }
 
         /**
-         * 买家姓名
+         * buyer_name.
          */
         public Builder buyerName(String buyerName) {
             this.putBodyParameter("buyer_name", buyerName);
@@ -367,7 +367,7 @@ public class FlightCreateOrderRequest extends Request {
         }
 
         /**
-         * 分销场景，外部渠道用户唯一标识
+         * buyer_unique_key.
          */
         public Builder buyerUniqueKey(String buyerUniqueKey) {
             this.putBodyParameter("buyer_unique_key", buyerUniqueKey);
@@ -376,7 +376,7 @@ public class FlightCreateOrderRequest extends Request {
         }
 
         /**
-         * 联系人
+         * contact_info.
          */
         public Builder contactInfo(ContactInfo contactInfo) {
             String contactInfoShrink = shrink(contactInfo, "contact_info", "json");
@@ -386,7 +386,7 @@ public class FlightCreateOrderRequest extends Request {
         }
 
         /**
-         * 出发机场编码
+         * dep_airport_code.
          */
         public Builder depAirportCode(String depAirportCode) {
             this.putBodyParameter("dep_airport_code", depAirportCode);
@@ -395,7 +395,7 @@ public class FlightCreateOrderRequest extends Request {
         }
 
         /**
-         * 出发城市编码
+         * dep_city_code.
          */
         public Builder depCityCode(String depCityCode) {
             this.putBodyParameter("dep_city_code", depCityCode);
@@ -404,7 +404,7 @@ public class FlightCreateOrderRequest extends Request {
         }
 
         /**
-         * 出发日期
+         * dep_date.
          */
         public Builder depDate(String depDate) {
             this.putBodyParameter("dep_date", depDate);
@@ -413,7 +413,7 @@ public class FlightCreateOrderRequest extends Request {
         }
 
         /**
-         * 分销商订单id
+         * dis_order_id.
          */
         public Builder disOrderId(String disOrderId) {
             this.putBodyParameter("dis_order_id", disOrderId);
@@ -422,7 +422,7 @@ public class FlightCreateOrderRequest extends Request {
         }
 
         /**
-         * 需要订单标记字段
+         * order_attr.
          */
         public Builder orderAttr(java.util.Map < String, ? > orderAttr) {
             String orderAttrShrink = shrink(orderAttr, "order_attr", "json");
@@ -432,7 +432,7 @@ public class FlightCreateOrderRequest extends Request {
         }
 
         /**
-         * 预定下单加密参数
+         * order_params.
          */
         public Builder orderParams(String orderParams) {
             this.putBodyParameter("order_params", orderParams);
@@ -441,7 +441,7 @@ public class FlightCreateOrderRequest extends Request {
         }
 
         /**
-         * 商品id
+         * ota_item_id.
          */
         public Builder otaItemId(String otaItemId) {
             this.putBodyParameter("ota_item_id", otaItemId);
@@ -450,7 +450,7 @@ public class FlightCreateOrderRequest extends Request {
         }
 
         /**
-         * 价格
+         * price.
          */
         public Builder price(Long price) {
             this.putBodyParameter("price", price);
@@ -459,7 +459,7 @@ public class FlightCreateOrderRequest extends Request {
         }
 
         /**
-         * 需要统一邮寄发票时，不能为空
+         * receipt_address.
          */
         public Builder receiptAddress(String receiptAddress) {
             this.putBodyParameter("receipt_address", receiptAddress);
@@ -468,7 +468,7 @@ public class FlightCreateOrderRequest extends Request {
         }
 
         /**
-         * 1:个人，2：公司
+         * receipt_target.
          */
         public Builder receiptTarget(Integer receiptTarget) {
             this.putBodyParameter("receipt_target", receiptTarget);
@@ -477,7 +477,7 @@ public class FlightCreateOrderRequest extends Request {
         }
 
         /**
-         * 需要统一邮寄发票时，不能为空
+         * receipt_title.
          */
         public Builder receiptTitle(String receiptTitle) {
             this.putBodyParameter("receipt_title", receiptTitle);
@@ -486,7 +486,7 @@ public class FlightCreateOrderRequest extends Request {
         }
 
         /**
-         * 乘机人列表
+         * traveler_info_list.
          */
         public Builder travelerInfoList(java.util.List < TravelerInfoList> travelerInfoList) {
             String travelerInfoListShrink = shrink(travelerInfoList, "traveler_info_list", "json");
@@ -496,7 +496,7 @@ public class FlightCreateOrderRequest extends Request {
         }
 
         /**
-         * 行程类型
+         * trip_type.
          */
         public Builder tripType(Integer tripType) {
             this.putBodyParameter("trip_type", tripType);
@@ -573,7 +573,7 @@ public class FlightCreateOrderRequest extends Request {
             private String contactPhone; 
 
             /**
-             * 联系人邮箱
+             * contact_email.
              */
             public Builder contactEmail(String contactEmail) {
                 this.contactEmail = contactEmail;
@@ -581,7 +581,7 @@ public class FlightCreateOrderRequest extends Request {
             }
 
             /**
-             * 联系人姓名
+             * contact_name.
              */
             public Builder contactName(String contactName) {
                 this.contactName = contactName;
@@ -589,7 +589,7 @@ public class FlightCreateOrderRequest extends Request {
             }
 
             /**
-             * 联系人手机号
+             * contact_phone.
              */
             public Builder contactPhone(String contactPhone) {
                 this.contactPhone = contactPhone;
@@ -768,7 +768,7 @@ public class FlightCreateOrderRequest extends Request {
             private String type; 
 
             /**
-             * 生日
+             * birthday.
              */
             public Builder birthday(String birthday) {
                 this.birthday = birthday;
@@ -776,7 +776,7 @@ public class FlightCreateOrderRequest extends Request {
             }
 
             /**
-             * 证件签发国
+             * cert_nation.
              */
             public Builder certNation(String certNation) {
                 this.certNation = certNation;
@@ -784,7 +784,7 @@ public class FlightCreateOrderRequest extends Request {
             }
 
             /**
-             * 证件号
+             * cert_no.
              */
             public Builder certNo(String certNo) {
                 this.certNo = certNo;
@@ -792,7 +792,7 @@ public class FlightCreateOrderRequest extends Request {
             }
 
             /**
-             * 证件类型
+             * cert_type.
              */
             public Builder certType(String certType) {
                 this.certType = certType;
@@ -800,7 +800,7 @@ public class FlightCreateOrderRequest extends Request {
             }
 
             /**
-             * 证件有效期
+             * cert_valid_date.
              */
             public Builder certValidDate(String certValidDate) {
                 this.certValidDate = certValidDate;
@@ -808,7 +808,7 @@ public class FlightCreateOrderRequest extends Request {
             }
 
             /**
-             * 姓名
+             * name.
              */
             public Builder name(String name) {
                 this.name = name;
@@ -832,7 +832,7 @@ public class FlightCreateOrderRequest extends Request {
             }
 
             /**
-             * 员工编号
+             * out_user_id.
              */
             public Builder outUserId(String outUserId) {
                 this.outUserId = outUserId;
@@ -840,7 +840,7 @@ public class FlightCreateOrderRequest extends Request {
             }
 
             /**
-             * 手机号
+             * phone.
              */
             public Builder phone(String phone) {
                 this.phone = phone;
@@ -848,7 +848,7 @@ public class FlightCreateOrderRequest extends Request {
             }
 
             /**
-             * 性别
+             * sex.
              */
             public Builder sex(Integer sex) {
                 this.sex = sex;
@@ -856,7 +856,7 @@ public class FlightCreateOrderRequest extends Request {
             }
 
             /**
-             * 乘客类型 (ENUM_INVALID, ADULT, CHILD, INFANT, STUDENT, OTHER)
+             * type.
              */
             public Builder type(String type) {
                 this.type = type;

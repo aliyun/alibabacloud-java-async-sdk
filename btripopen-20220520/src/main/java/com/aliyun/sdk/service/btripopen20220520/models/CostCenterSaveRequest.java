@@ -127,7 +127,7 @@ public class CostCenterSaveRequest extends Request {
         } 
 
         /**
-         * 绑定支付宝账号
+         * alipay_no.
          */
         public Builder alipayNo(String alipayNo) {
             this.putBodyParameter("alipay_no", alipayNo);
@@ -136,7 +136,7 @@ public class CostCenterSaveRequest extends Request {
         }
 
         /**
-         * 第三方成本中心编号
+         * number.
          */
         public Builder number(String number) {
             this.putBodyParameter("number", number);
@@ -145,7 +145,7 @@ public class CostCenterSaveRequest extends Request {
         }
 
         /**
-         * 适用范围:1全员，2部分人员
+         * scope.
          */
         public Builder scope(Long scope) {
             this.putBodyParameter("scope", scope);
@@ -154,7 +154,7 @@ public class CostCenterSaveRequest extends Request {
         }
 
         /**
-         * 第三方成本中心id
+         * thirdpart_id.
          */
         public Builder thirdpartId(String thirdpartId) {
             this.putBodyParameter("thirdpart_id", thirdpartId);
@@ -163,7 +163,7 @@ public class CostCenterSaveRequest extends Request {
         }
 
         /**
-         * 成本中心名称
+         * title.
          */
         public Builder title(String title) {
             this.putBodyParameter("title", title);

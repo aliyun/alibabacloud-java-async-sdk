@@ -874,7 +874,7 @@ public class CarBillSettlementQueryResponseBody extends TeaModel {
             private Integer voucherType; 
 
             /**
-             * 交易流水号
+             * alipay_trade_no.
              */
             public Builder alipayTradeNo(String alipayTradeNo) {
                 this.alipayTradeNo = alipayTradeNo;
@@ -890,7 +890,7 @@ public class CarBillSettlementQueryResponseBody extends TeaModel {
             }
 
             /**
-             * 审批单号
+             * apply_id.
              */
             public Builder applyId(String applyId) {
                 this.applyId = applyId;
@@ -898,7 +898,7 @@ public class CarBillSettlementQueryResponseBody extends TeaModel {
             }
 
             /**
-             * 到达城市
+             * arr_city.
              */
             public Builder arrCity(String arrCity) {
                 this.arrCity = arrCity;
@@ -906,7 +906,7 @@ public class CarBillSettlementQueryResponseBody extends TeaModel {
             }
 
             /**
-             * 到达日期
+             * arr_date.
              */
             public Builder arrDate(String arrDate) {
                 this.arrDate = arrDate;
@@ -914,7 +914,7 @@ public class CarBillSettlementQueryResponseBody extends TeaModel {
             }
 
             /**
-             * 到达地
+             * arr_location.
              */
             public Builder arrLocation(String arrLocation) {
                 this.arrLocation = arrLocation;
@@ -922,7 +922,7 @@ public class CarBillSettlementQueryResponseBody extends TeaModel {
             }
 
             /**
-             * 到达时间
+             * arr_time.
              */
             public Builder arrTime(String arrTime) {
                 this.arrTime = arrTime;
@@ -930,7 +930,7 @@ public class CarBillSettlementQueryResponseBody extends TeaModel {
             }
 
             /**
-             * 入账时间
+             * bill_record_time.
              */
             public Builder billRecordTime(String billRecordTime) {
                 this.billRecordTime = billRecordTime;
@@ -938,7 +938,7 @@ public class CarBillSettlementQueryResponseBody extends TeaModel {
             }
 
             /**
-             * 预定时间
+             * book_time.
              */
             public Builder bookTime(String bookTime) {
                 this.bookTime = bookTime;
@@ -946,7 +946,7 @@ public class CarBillSettlementQueryResponseBody extends TeaModel {
             }
 
             /**
-             * 预定人id
+             * booker_id.
              */
             public Builder bookerId(String bookerId) {
                 this.bookerId = bookerId;
@@ -954,7 +954,7 @@ public class CarBillSettlementQueryResponseBody extends TeaModel {
             }
 
             /**
-             * 预订人工号
+             * booker_job_no.
              */
             public Builder bookerJobNo(String bookerJobNo) {
                 this.bookerJobNo = bookerJobNo;
@@ -962,7 +962,7 @@ public class CarBillSettlementQueryResponseBody extends TeaModel {
             }
 
             /**
-             * 预定人姓名
+             * booker_name.
              */
             public Builder bookerName(String bookerName) {
                 this.bookerName = bookerName;
@@ -970,7 +970,7 @@ public class CarBillSettlementQueryResponseBody extends TeaModel {
             }
 
             /**
-             * 用车原因（中文）
+             * business_category.
              */
             public Builder businessCategory(String businessCategory) {
                 this.businessCategory = businessCategory;
@@ -978,7 +978,7 @@ public class CarBillSettlementQueryResponseBody extends TeaModel {
             }
 
             /**
-             * 资金方向
+             * capital_direction.
              */
             public Builder capitalDirection(String capitalDirection) {
                 this.capitalDirection = capitalDirection;
@@ -986,7 +986,7 @@ public class CarBillSettlementQueryResponseBody extends TeaModel {
             }
 
             /**
-             * 平台车型
+             * car_level.
              */
             public Builder carLevel(String carLevel) {
                 this.carLevel = carLevel;
@@ -994,7 +994,7 @@ public class CarBillSettlementQueryResponseBody extends TeaModel {
             }
 
             /**
-             * 联级部门
+             * cascade_department.
              */
             public Builder cascadeDepartment(String cascadeDepartment) {
                 this.cascadeDepartment = cascadeDepartment;
@@ -1002,7 +1002,7 @@ public class CarBillSettlementQueryResponseBody extends TeaModel {
             }
 
             /**
-             * 成本中心名称
+             * cost_center.
              */
             public Builder costCenter(String costCenter) {
                 this.costCenter = costCenter;
@@ -1010,7 +1010,7 @@ public class CarBillSettlementQueryResponseBody extends TeaModel {
             }
 
             /**
-             * 成本中心编号
+             * cost_center_number.
              */
             public Builder costCenterNumber(String costCenterNumber) {
                 this.costCenterNumber = costCenterNumber;
@@ -1018,7 +1018,7 @@ public class CarBillSettlementQueryResponseBody extends TeaModel {
             }
 
             /**
-             * 优惠券
+             * coupon.
              */
             public Builder coupon(Double coupon) {
                 this.coupon = coupon;
@@ -1026,7 +1026,7 @@ public class CarBillSettlementQueryResponseBody extends TeaModel {
             }
 
             /**
-             * 商旅优惠金额
+             * coupon_price.
              */
             public Builder couponPrice(Double couponPrice) {
                 this.couponPrice = couponPrice;
@@ -1034,7 +1034,7 @@ public class CarBillSettlementQueryResponseBody extends TeaModel {
             }
 
             /**
-             * 末级部门
+             * department.
              */
             public Builder department(String department) {
                 this.department = department;
@@ -1042,7 +1042,7 @@ public class CarBillSettlementQueryResponseBody extends TeaModel {
             }
 
             /**
-             * 部门编号
+             * department_id.
              */
             public Builder departmentId(String departmentId) {
                 this.departmentId = departmentId;
@@ -1050,7 +1050,7 @@ public class CarBillSettlementQueryResponseBody extends TeaModel {
             }
 
             /**
-             * 出发城市
+             * dept_city.
              */
             public Builder deptCity(String deptCity) {
                 this.deptCity = deptCity;
@@ -1058,7 +1058,7 @@ public class CarBillSettlementQueryResponseBody extends TeaModel {
             }
 
             /**
-             * 出发日期
+             * dept_date.
              */
             public Builder deptDate(String deptDate) {
                 this.deptDate = deptDate;
@@ -1066,7 +1066,7 @@ public class CarBillSettlementQueryResponseBody extends TeaModel {
             }
 
             /**
-             * 出发地
+             * dept_location.
              */
             public Builder deptLocation(String deptLocation) {
                 this.deptLocation = deptLocation;
@@ -1074,7 +1074,7 @@ public class CarBillSettlementQueryResponseBody extends TeaModel {
             }
 
             /**
-             * 出发时间
+             * dept_time.
              */
             public Builder deptTime(String deptTime) {
                 this.deptTime = deptTime;
@@ -1082,7 +1082,7 @@ public class CarBillSettlementQueryResponseBody extends TeaModel {
             }
 
             /**
-             * 预估公里数
+             * estimate_drive_distance.
              */
             public Builder estimateDriveDistance(String estimateDriveDistance) {
                 this.estimateDriveDistance = estimateDriveDistance;
@@ -1090,7 +1090,7 @@ public class CarBillSettlementQueryResponseBody extends TeaModel {
             }
 
             /**
-             * 预估金额
+             * estimate_price.
              */
             public Builder estimatePrice(Double estimatePrice) {
                 this.estimatePrice = estimatePrice;
@@ -1098,7 +1098,7 @@ public class CarBillSettlementQueryResponseBody extends TeaModel {
             }
 
             /**
-             * 费用类型
+             * fee_type.
              */
             public Builder feeType(String feeType) {
                 this.feeType = feeType;
@@ -1106,7 +1106,7 @@ public class CarBillSettlementQueryResponseBody extends TeaModel {
             }
 
             /**
-             * 序号
+             * index.
              */
             public Builder index(String index) {
                 this.index = index;
@@ -1114,7 +1114,7 @@ public class CarBillSettlementQueryResponseBody extends TeaModel {
             }
 
             /**
-             * 发票抬头
+             * invoice_title.
              */
             public Builder invoiceTitle(String invoiceTitle) {
                 this.invoiceTitle = invoiceTitle;
@@ -1122,7 +1122,7 @@ public class CarBillSettlementQueryResponseBody extends TeaModel {
             }
 
             /**
-             * 用车事由
+             * memo.
              */
             public Builder memo(String memo) {
                 this.memo = memo;
@@ -1130,7 +1130,7 @@ public class CarBillSettlementQueryResponseBody extends TeaModel {
             }
 
             /**
-             * 订单id、福豆发放订单号
+             * order_id.
              */
             public Builder orderId(String orderId) {
                 this.orderId = orderId;
@@ -1138,7 +1138,7 @@ public class CarBillSettlementQueryResponseBody extends TeaModel {
             }
 
             /**
-             * 订单金额
+             * order_price.
              */
             public Builder orderPrice(Double orderPrice) {
                 this.orderPrice = orderPrice;
@@ -1146,7 +1146,7 @@ public class CarBillSettlementQueryResponseBody extends TeaModel {
             }
 
             /**
-             * 超标审批单号
+             * over_apply_id.
              */
             public Builder overApplyId(String overApplyId) {
                 this.overApplyId = overApplyId;
@@ -1154,7 +1154,7 @@ public class CarBillSettlementQueryResponseBody extends TeaModel {
             }
 
             /**
-             * 个人支付金额
+             * person_settle_fee.
              */
             public Builder personSettleFee(Double personSettleFee) {
                 this.personSettleFee = personSettleFee;
@@ -1162,7 +1162,7 @@ public class CarBillSettlementQueryResponseBody extends TeaModel {
             }
 
             /**
-             * 主键id
+             * primary_id.
              */
             public Builder primaryId(Long primaryId) {
                 this.primaryId = primaryId;
@@ -1170,7 +1170,7 @@ public class CarBillSettlementQueryResponseBody extends TeaModel {
             }
 
             /**
-             * 项目编码
+             * project_code.
              */
             public Builder projectCode(String projectCode) {
                 this.projectCode = projectCode;
@@ -1178,7 +1178,7 @@ public class CarBillSettlementQueryResponseBody extends TeaModel {
             }
 
             /**
-             * 项目名称
+             * project_name.
              */
             public Builder projectName(String projectName) {
                 this.projectName = projectName;
@@ -1186,7 +1186,7 @@ public class CarBillSettlementQueryResponseBody extends TeaModel {
             }
 
             /**
-             * 服务方
+             * provider_name.
              */
             public Builder providerName(String providerName) {
                 this.providerName = providerName;
@@ -1194,7 +1194,7 @@ public class CarBillSettlementQueryResponseBody extends TeaModel {
             }
 
             /**
-             * 实际行驶公里数
+             * real_drive_distance.
              */
             public Builder realDriveDistance(String realDriveDistance) {
                 this.realDriveDistance = realDriveDistance;
@@ -1202,7 +1202,7 @@ public class CarBillSettlementQueryResponseBody extends TeaModel {
             }
 
             /**
-             * 实际上车点
+             * real_from_addr.
              */
             public Builder realFromAddr(String realFromAddr) {
                 this.realFromAddr = realFromAddr;
@@ -1210,7 +1210,7 @@ public class CarBillSettlementQueryResponseBody extends TeaModel {
             }
 
             /**
-             * 实际下车点
+             * real_to_addr.
              */
             public Builder realToAddr(String realToAddr) {
                 this.realToAddr = realToAddr;
@@ -1218,7 +1218,7 @@ public class CarBillSettlementQueryResponseBody extends TeaModel {
             }
 
             /**
-             * 备注
+             * remark.
              */
             public Builder remark(String remark) {
                 this.remark = remark;
@@ -1226,7 +1226,7 @@ public class CarBillSettlementQueryResponseBody extends TeaModel {
             }
 
             /**
-             * 服务费
+             * service_fee.
              */
             public Builder serviceFee(Double serviceFee) {
                 this.serviceFee = serviceFee;
@@ -1234,7 +1234,7 @@ public class CarBillSettlementQueryResponseBody extends TeaModel {
             }
 
             /**
-             * 结算金额
+             * settlement_fee.
              */
             public Builder settlementFee(Double settlementFee) {
                 this.settlementFee = settlementFee;
@@ -1242,7 +1242,7 @@ public class CarBillSettlementQueryResponseBody extends TeaModel {
             }
 
             /**
-             * 结算金额--赠送部分
+             * settlement_grant_fee.
              */
             public Builder settlementGrantFee(Double settlementGrantFee) {
                 this.settlementGrantFee = settlementGrantFee;
@@ -1250,7 +1250,7 @@ public class CarBillSettlementQueryResponseBody extends TeaModel {
             }
 
             /**
-             * 结算时间
+             * settlement_time.
              */
             public Builder settlementTime(String settlementTime) {
                 this.settlementTime = settlementTime;
@@ -1258,7 +1258,7 @@ public class CarBillSettlementQueryResponseBody extends TeaModel {
             }
 
             /**
-             * 结算类型
+             * settlement_type.
              */
             public Builder settlementType(String settlementType) {
                 this.settlementType = settlementType;
@@ -1266,7 +1266,7 @@ public class CarBillSettlementQueryResponseBody extends TeaModel {
             }
 
             /**
-             * 特别关注订单
+             * special_order.
              */
             public Builder specialOrder(String specialOrder) {
                 this.specialOrder = specialOrder;
@@ -1274,7 +1274,7 @@ public class CarBillSettlementQueryResponseBody extends TeaModel {
             }
 
             /**
-             * 特别关注原因
+             * special_reason.
              */
             public Builder specialReason(String specialReason) {
                 this.specialReason = specialReason;
@@ -1282,7 +1282,7 @@ public class CarBillSettlementQueryResponseBody extends TeaModel {
             }
 
             /**
-             * 入账状态
+             * status.
              */
             public Builder status(Integer status) {
                 this.status = status;
@@ -1290,7 +1290,7 @@ public class CarBillSettlementQueryResponseBody extends TeaModel {
             }
 
             /**
-             * 子订单id（目前用车有）
+             * sub_order_id.
              */
             public Builder subOrderId(String subOrderId) {
                 this.subOrderId = subOrderId;
@@ -1306,7 +1306,7 @@ public class CarBillSettlementQueryResponseBody extends TeaModel {
             }
 
             /**
-             * 出行人userId
+             * traveler_id.
              */
             public Builder travelerId(String travelerId) {
                 this.travelerId = travelerId;
@@ -1314,7 +1314,7 @@ public class CarBillSettlementQueryResponseBody extends TeaModel {
             }
 
             /**
-             * 出行人工号
+             * traveler_job_no.
              */
             public Builder travelerJobNo(String travelerJobNo) {
                 this.travelerJobNo = travelerJobNo;
@@ -1322,7 +1322,7 @@ public class CarBillSettlementQueryResponseBody extends TeaModel {
             }
 
             /**
-             * 出行人名称
+             * traveler_name.
              */
             public Builder travelerName(String travelerName) {
                 this.travelerName = travelerName;
@@ -1330,7 +1330,7 @@ public class CarBillSettlementQueryResponseBody extends TeaModel {
             }
 
             /**
-             * 员工是否认可
+             * user_confirm_desc.
              */
             public Builder userConfirmDesc(String userConfirmDesc) {
                 this.userConfirmDesc = userConfirmDesc;
@@ -1338,7 +1338,7 @@ public class CarBillSettlementQueryResponseBody extends TeaModel {
             }
 
             /**
-             * 票据类型
+             * voucher_type.
              */
             public Builder voucherType(Integer voucherType) {
                 this.voucherType = voucherType;
@@ -1439,7 +1439,7 @@ public class CarBillSettlementQueryResponseBody extends TeaModel {
             private Long totalNum; 
 
             /**
-             * 类目
+             * category.
              */
             public Builder category(Integer category) {
                 this.category = category;
@@ -1447,7 +1447,7 @@ public class CarBillSettlementQueryResponseBody extends TeaModel {
             }
 
             /**
-             * 企业id
+             * corp_id.
              */
             public Builder corpId(String corpId) {
                 this.corpId = corpId;
@@ -1455,7 +1455,7 @@ public class CarBillSettlementQueryResponseBody extends TeaModel {
             }
 
             /**
-             * 数据集合
+             * data_list.
              */
             public Builder dataList(java.util.List < DataList> dataList) {
                 this.dataList = dataList;
@@ -1463,7 +1463,7 @@ public class CarBillSettlementQueryResponseBody extends TeaModel {
             }
 
             /**
-             * 记账日期止 yyyy-MM-dd
+             * period_end.
              */
             public Builder periodEnd(String periodEnd) {
                 this.periodEnd = periodEnd;
@@ -1471,7 +1471,7 @@ public class CarBillSettlementQueryResponseBody extends TeaModel {
             }
 
             /**
-             * 记账日期起 yyyy-MM-dd
+             * period_start.
              */
             public Builder periodStart(String periodStart) {
                 this.periodStart = periodStart;
@@ -1479,7 +1479,7 @@ public class CarBillSettlementQueryResponseBody extends TeaModel {
             }
 
             /**
-             * 总数量
+             * total_num.
              */
             public Builder totalNum(Long totalNum) {
                 this.totalNum = totalNum;

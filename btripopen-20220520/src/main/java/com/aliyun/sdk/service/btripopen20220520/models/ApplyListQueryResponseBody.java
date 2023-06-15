@@ -729,7 +729,7 @@ public class ApplyListQueryResponseBody extends TeaModel {
             private Integer trafficType; 
 
             /**
-             * 到达日期
+             * arr_date.
              */
             public Builder arrDate(String arrDate) {
                 this.arrDate = arrDate;
@@ -737,7 +737,7 @@ public class ApplyListQueryResponseBody extends TeaModel {
             }
 
             /**
-             * 离抵城市code，多个城市用中文“，”隔开
+             * city_code_set.
              */
             public Builder cityCodeSet(String cityCodeSet) {
                 this.cityCodeSet = cityCodeSet;
@@ -745,7 +745,7 @@ public class ApplyListQueryResponseBody extends TeaModel {
             }
 
             /**
-             * 离抵城市名称，多个城市用中文“，”隔开
+             * city_set.
              */
             public Builder citySet(String citySet) {
                 this.citySet = citySet;
@@ -753,7 +753,7 @@ public class ApplyListQueryResponseBody extends TeaModel {
             }
 
             /**
-             * 成本中心名称
+             * cost_center_name.
              */
             public Builder costCenterName(String costCenterName) {
                 this.costCenterName = costCenterName;
@@ -761,7 +761,7 @@ public class ApplyListQueryResponseBody extends TeaModel {
             }
 
             /**
-             * 出发日期
+             * dep_date.
              */
             public Builder depDate(String depDate) {
                 this.depDate = depDate;
@@ -769,7 +769,7 @@ public class ApplyListQueryResponseBody extends TeaModel {
             }
 
             /**
-             * 发票抬头
+             * invoice_name.
              */
             public Builder invoiceName(String invoiceName) {
                 this.invoiceName = invoiceName;
@@ -777,7 +777,7 @@ public class ApplyListQueryResponseBody extends TeaModel {
             }
 
             /**
-             * 行程id
+             * itinerary_id.
              */
             public Builder itineraryId(String itineraryId) {
                 this.itineraryId = itineraryId;
@@ -785,7 +785,7 @@ public class ApplyListQueryResponseBody extends TeaModel {
             }
 
             /**
-             * 项目编号
+             * project_code.
              */
             public Builder projectCode(String projectCode) {
                 this.projectCode = projectCode;
@@ -793,7 +793,7 @@ public class ApplyListQueryResponseBody extends TeaModel {
             }
 
             /**
-             * 项目名称
+             * project_title.
              */
             public Builder projectTitle(String projectTitle) {
                 this.projectTitle = projectTitle;
@@ -801,7 +801,7 @@ public class ApplyListQueryResponseBody extends TeaModel {
             }
 
             /**
-             * 交通方式： 0 飞机、酒店,  1 火车、酒店,  2 汽车、酒店,  3 酒店，5 不限，6 飞机，7 火车，9 飞机、火车、酒店
+             * traffic_type.
              */
             public Builder trafficType(Integer trafficType) {
                 this.trafficType = trafficType;
@@ -854,7 +854,7 @@ public class ApplyListQueryResponseBody extends TeaModel {
             private String userName; 
 
             /**
-             * 无userId时传缺省值superAdmin
+             * user_id.
              */
             public Builder userId(String userId) {
                 this.userId = userId;
@@ -1299,12 +1299,7 @@ public class ApplyListQueryResponseBody extends TeaModel {
             }
 
             /**
-             * 申请单城市规则：
-             * <p>
-             * 0出发&目的地一对一，按列表传行程 
-             * 1多选N个地点，城市集行程
-             * 当申请单城市规则为0，itinerary_list行程列表必填
-             * 当申请单城市规则为1，itinerary_set_list行程列表必填
+             * itinerary_rule.
              */
             public Builder itineraryRule(Integer itineraryRule) {
                 this.itineraryRule = itineraryRule;
@@ -1312,7 +1307,7 @@ public class ApplyListQueryResponseBody extends TeaModel {
             }
 
             /**
-             * 城市集行程列表
+             * itinerary_set_list.
              */
             public Builder itinerarySetList(java.util.List < ItinerarySetList> itinerarySetList) {
                 this.itinerarySetList = itinerarySetList;
@@ -1400,7 +1395,7 @@ public class ApplyListQueryResponseBody extends TeaModel {
             }
 
             /**
-             * 无userId时传缺省值superAdmin
+             * user_id.
              */
             public Builder userId(String userId) {
                 this.userId = userId;

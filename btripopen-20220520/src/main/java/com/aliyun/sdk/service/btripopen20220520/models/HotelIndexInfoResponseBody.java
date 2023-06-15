@@ -190,7 +190,7 @@ public class HotelIndexInfoResponseBody extends TeaModel {
             private String hotelStatus; 
 
             /**
-             * 酒店ID；
+             * hotel_id.
              */
             public Builder hotelId(String hotelId) {
                 this.hotelId = hotelId;
@@ -198,7 +198,7 @@ public class HotelIndexInfoResponseBody extends TeaModel {
             }
 
             /**
-             * 酒店状态
+             * hotel_status.
              */
             public Builder hotelStatus(String hotelStatus) {
                 this.hotelStatus = hotelStatus;
@@ -263,7 +263,7 @@ public class HotelIndexInfoResponseBody extends TeaModel {
             private String pageToken; 
 
             /**
-             * 酒店Code列表
+             * items.
              */
             public Builder items(java.util.List < Items> items) {
                 this.items = items;
@@ -271,7 +271,7 @@ public class HotelIndexInfoResponseBody extends TeaModel {
             }
 
             /**
-             * 分页大小
+             * page_size.
              */
             public Builder pageSize(Integer pageSize) {
                 this.pageSize = pageSize;
@@ -279,7 +279,7 @@ public class HotelIndexInfoResponseBody extends TeaModel {
             }
 
             /**
-             * 断点ID，返回"0"则代表查询完
+             * page_token.
              */
             public Builder pageToken(String pageToken) {
                 this.pageToken = pageToken;

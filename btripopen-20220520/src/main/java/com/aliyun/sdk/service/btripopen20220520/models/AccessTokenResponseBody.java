@@ -110,7 +110,7 @@ public class AccessTokenResponseBody extends TeaModel {
         private String traceId; 
 
         /**
-         * 错误码
+         * code.
          */
         public Builder code(String code) {
             this.code = code;
@@ -118,7 +118,7 @@ public class AccessTokenResponseBody extends TeaModel {
         }
 
         /**
-         * 请看module字段（作废）
+         * data.
          */
         public Builder data(Data data) {
             this.data = data;
@@ -126,7 +126,7 @@ public class AccessTokenResponseBody extends TeaModel {
         }
 
         /**
-         * 错误信息
+         * message.
          */
         public Builder message(String message) {
             this.message = message;
@@ -134,7 +134,7 @@ public class AccessTokenResponseBody extends TeaModel {
         }
 
         /**
-         * 请看module字段（作废）
+         * module.
          */
         public Builder module(Module module) {
             this.module = module;
@@ -210,7 +210,7 @@ public class AccessTokenResponseBody extends TeaModel {
             private String token; 
 
             /**
-             * 过期时间，单位ms，token在存储时，不要接近expire的时间，最好远小于expire
+             * expire.
              */
             public Builder expire(Long expire) {
                 this.expire = expire;
@@ -218,7 +218,7 @@ public class AccessTokenResponseBody extends TeaModel {
             }
 
             /**
-             * 令牌
+             * token.
              */
             public Builder token(String token) {
                 this.token = token;
@@ -283,7 +283,7 @@ public class AccessTokenResponseBody extends TeaModel {
             private String token; 
 
             /**
-             * 过期时间，单位ms，token在存储时，不要接近expire的时间，最好远小于expire
+             * expire.
              */
             public Builder expire(Long expire) {
                 this.expire = expire;
@@ -291,7 +291,7 @@ public class AccessTokenResponseBody extends TeaModel {
             }
 
             /**
-             * 开始时间
+             * start.
              */
             public Builder start(Long start) {
                 this.start = start;
@@ -299,7 +299,7 @@ public class AccessTokenResponseBody extends TeaModel {
             }
 
             /**
-             * 令牌
+             * token.
              */
             public Builder token(String token) {
                 this.token = token;

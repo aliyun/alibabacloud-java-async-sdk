@@ -119,7 +119,7 @@ public class UserQueryRequest extends Request {
         }
 
         /**
-         * 每页的最大数据记录数量；默认10，该值要求大于0且小于等于1000。
+         * page_size.
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("page_size", pageSize);
@@ -128,7 +128,7 @@ public class UserQueryRequest extends Request {
         }
 
         /**
-         * 游标分页的游标值，用来标记当前分页的开始位置，第一次请求不填表示从头开始遍历；
+         * page_token.
          */
         public Builder pageToken(String pageToken) {
             this.putQueryParameter("page_token", pageToken);
@@ -137,7 +137,7 @@ public class UserQueryRequest extends Request {
         }
 
         /**
-         * 第三方员工工号，user.job_no
+         * third_part_job_no.
          */
         public Builder thirdPartJobNo(String thirdPartJobNo) {
             this.putQueryParameter("third_part_job_no", thirdPartJobNo);

@@ -156,7 +156,7 @@ public class ApplyApproveRequest extends Request {
         } 
 
         /**
-         * 外部申请单id
+         * apply_id.
          */
         public Builder applyId(String applyId) {
             this.putBodyParameter("apply_id", applyId);
@@ -165,7 +165,7 @@ public class ApplyApproveRequest extends Request {
         }
 
         /**
-         * 备注
+         * note.
          */
         public Builder note(String note) {
             this.putBodyParameter("note", note);
@@ -174,7 +174,7 @@ public class ApplyApproveRequest extends Request {
         }
 
         /**
-         * 操作时间
+         * operate_time.
          */
         public Builder operateTime(String operateTime) {
             this.putBodyParameter("operate_time", operateTime);
@@ -183,7 +183,7 @@ public class ApplyApproveRequest extends Request {
         }
 
         /**
-         * 1已同意 2已拒绝 3已转交 4已取消
+         * status.
          */
         public Builder status(Integer status) {
             this.putBodyParameter("status", status);
@@ -201,7 +201,7 @@ public class ApplyApproveRequest extends Request {
         }
 
         /**
-         * 审批人id（第三方用户Id），无userId时传缺省值superAdmin
+         * user_id.
          */
         public Builder userId(String userId) {
             this.putBodyParameter("user_id", userId);
@@ -210,7 +210,7 @@ public class ApplyApproveRequest extends Request {
         }
 
         /**
-         * 审批人名字
+         * user_name.
          */
         public Builder userName(String userName) {
             this.putBodyParameter("user_name", userName);

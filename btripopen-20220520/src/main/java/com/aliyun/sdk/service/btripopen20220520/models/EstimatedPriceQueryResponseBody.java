@@ -226,7 +226,7 @@ public class EstimatedPriceQueryResponseBody extends TeaModel {
             private Integer tripDays; 
 
             /**
-             * 城市
+             * city.
              */
             public Builder city(String city) {
                 this.city = city;
@@ -234,7 +234,7 @@ public class EstimatedPriceQueryResponseBody extends TeaModel {
             }
 
             /**
-             * 差旅标准，单位为元
+             * criterion.
              */
             public Builder criterion(Long criterion) {
                 this.criterion = criterion;
@@ -242,7 +242,7 @@ public class EstimatedPriceQueryResponseBody extends TeaModel {
             }
 
             /**
-             * 行程id
+             * itinerary_id.
              */
             public Builder itineraryId(String itineraryId) {
                 this.itineraryId = itineraryId;
@@ -250,7 +250,7 @@ public class EstimatedPriceQueryResponseBody extends TeaModel {
             }
 
             /**
-             * 预估总价, 单位为元
+             * total.
              */
             public Builder total(Long total) {
                 this.total = total;
@@ -258,7 +258,7 @@ public class EstimatedPriceQueryResponseBody extends TeaModel {
             }
 
             /**
-             * 行程天数
+             * trip_days.
              */
             public Builder tripDays(Integer tripDays) {
                 this.tripDays = tripDays;
@@ -371,7 +371,7 @@ public class EstimatedPriceQueryResponseBody extends TeaModel {
             }
 
             /**
-             * 座位等级，可表示飞机舱位或火车座位
+             * seat_grade.
              */
             public Builder seatGrade(String seatGrade) {
                 this.seatGrade = seatGrade;
@@ -379,7 +379,7 @@ public class EstimatedPriceQueryResponseBody extends TeaModel {
             }
 
             /**
-             * 交通工具编号，可表示航班号或火车车次
+             * vehicle_no.
              */
             public Builder vehicleNo(String vehicleNo) {
                 this.vehicleNo = vehicleNo;
@@ -492,7 +492,7 @@ public class EstimatedPriceQueryResponseBody extends TeaModel {
             }
 
             /**
-             * 座位等级，可表示飞机舱位或火车座位
+             * seat_grade.
              */
             public Builder seatGrade(String seatGrade) {
                 this.seatGrade = seatGrade;
@@ -500,7 +500,7 @@ public class EstimatedPriceQueryResponseBody extends TeaModel {
             }
 
             /**
-             * 交通工具编号，可表示航班号或火车车次
+             * vehicle_no.
              */
             public Builder vehicleNo(String vehicleNo) {
                 this.vehicleNo = vehicleNo;
@@ -685,7 +685,7 @@ public class EstimatedPriceQueryResponseBody extends TeaModel {
             }
 
             /**
-             * 行程id
+             * itinerary_id.
              */
             public Builder itineraryId(String itineraryId) {
                 this.itineraryId = itineraryId;
@@ -790,7 +790,7 @@ public class EstimatedPriceQueryResponseBody extends TeaModel {
             private Boolean success; 
 
             /**
-             * 差旅行程费用预估详情
+             * btrip_routes.
              */
             public Builder btripRoutes(java.util.List < BtripRoutes> btripRoutes) {
                 this.btripRoutes = btripRoutes;
@@ -798,7 +798,7 @@ public class EstimatedPriceQueryResponseBody extends TeaModel {
             }
 
             /**
-             * 错误码
+             * err_msg.
              */
             public Builder errMsg(String errMsg) {
                 this.errMsg = errMsg;
@@ -806,7 +806,7 @@ public class EstimatedPriceQueryResponseBody extends TeaModel {
             }
 
             /**
-             * 交通费用上限，单位为分
+             * max_fee.
              */
             public Builder maxFee(Long maxFee) {
                 this.maxFee = maxFee;
@@ -814,7 +814,7 @@ public class EstimatedPriceQueryResponseBody extends TeaModel {
             }
 
             /**
-             * 交通费用下限，单位为分
+             * min_fee.
              */
             public Builder minFee(Long minFee) {
                 this.minFee = minFee;
@@ -887,7 +887,7 @@ public class EstimatedPriceQueryResponseBody extends TeaModel {
             private TrafficFee trafficFee; 
 
             /**
-             * 酒店费用预估
+             * hotel_fee_detail.
              */
             public Builder hotelFeeDetail(java.util.List < HotelFeeDetail> hotelFeeDetail) {
                 this.hotelFeeDetail = hotelFeeDetail;

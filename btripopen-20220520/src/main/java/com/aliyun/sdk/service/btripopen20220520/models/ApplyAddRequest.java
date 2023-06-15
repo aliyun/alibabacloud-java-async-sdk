@@ -520,7 +520,7 @@ public class ApplyAddRequest extends Request {
         } 
 
         /**
-         * 审批单总预算(分)
+         * budget.
          */
         public Builder budget(Long budget) {
             this.putBodyParameter("budget", budget);
@@ -529,7 +529,7 @@ public class ApplyAddRequest extends Request {
         }
 
         /**
-         * 多个申请单预算合并。
+         * budget_merge.
          */
         public Builder budgetMerge(Integer budgetMerge) {
             this.putBodyParameter("budget_merge", budgetMerge);
@@ -594,7 +594,7 @@ public class ApplyAddRequest extends Request {
         }
 
         /**
-         * 审批单机票预算(分)
+         * flight_budget.
          */
         public Builder flightBudget(Long flightBudget) {
             this.putBodyParameter("flight_budget", flightBudget);
@@ -603,7 +603,7 @@ public class ApplyAddRequest extends Request {
         }
 
         /**
-         * 审批单酒店预算(分)
+         * hotel_budget.
          */
         public Builder hotelBudget(Long hotelBudget) {
             this.putBodyParameter("hotel_budget", hotelBudget);
@@ -612,7 +612,7 @@ public class ApplyAddRequest extends Request {
         }
 
         /**
-         * 酒店合住规则
+         * hotel_share.
          */
         public Builder hotelShare(HotelShare hotelShare) {
             String hotelShareShrink = shrink(hotelShare, "hotel_share", "json");
@@ -641,17 +641,7 @@ public class ApplyAddRequest extends Request {
         }
 
         /**
-         * 申请单城市规则：
-         * <p>
-         * 0出发&目的地一对一，按列表传行程 
-         * 1多选N个地点，城市集行程
-         * 不传默认为0
-         * 会根据商旅管理后台-通用差旅设置-行程城市规则中的设置，校验申请单本字段的值是否正确
-         * 当行程城市规则中设置的是“1对1行程”时，必须传0
-         * 当行程城市规则中设置的是“多对多城市集行程”时，必须传1
-         * 会根据此字段传入的值，校验行程传参是否正确
-         * 当申请单城市规则为0，itinerary_list行程列表必填
-         * 当申请单城市规则为1，城市集行程必填
+         * itinerary_rule.
          */
         public Builder itineraryRule(Integer itineraryRule) {
             this.putBodyParameter("itinerary_rule", itineraryRule);
@@ -660,7 +650,7 @@ public class ApplyAddRequest extends Request {
         }
 
         /**
-         * 城市集行程列表
+         * itinerary_set_list.
          */
         public Builder itinerarySetList(java.util.List < ItinerarySetList> itinerarySetList) {
             String itinerarySetListShrink = shrink(itinerarySetList, "itinerary_set_list", "json");
@@ -670,7 +660,7 @@ public class ApplyAddRequest extends Request {
         }
 
         /**
-         * 是否限制审批单的出行人
+         * limit_traveler.
          */
         public Builder limitTraveler(Integer limitTraveler) {
             this.putBodyParameter("limit_traveler", limitTraveler);
@@ -688,7 +678,7 @@ public class ApplyAddRequest extends Request {
         }
 
         /**
-         * 子企业Id
+         * sub_corp_id.
          */
         public Builder subCorpId(String subCorpId) {
             this.putBodyParameter("sub_corp_id", subCorpId);
@@ -706,7 +696,7 @@ public class ApplyAddRequest extends Request {
         }
 
         /**
-         * 审批单的展示id
+         * thirdpart_business_id.
          */
         public Builder thirdpartBusinessId(String thirdpartBusinessId) {
             this.putBodyParameter("thirdpart_business_id", thirdpartBusinessId);
@@ -715,10 +705,7 @@ public class ApplyAddRequest extends Request {
         }
 
         /**
-         * 三方部门id
-         * <p>
-         * thirdpart_depart_id和depart_id中任意一个传值，以该字段为准
-         * thirdpart_depart_id和depart_id均传值，以thirdpart_depart_id为准
+         * thirdpart_depart_id.
          */
         public Builder thirdpartDepartId(String thirdpartDepartId) {
             this.putBodyParameter("thirdpart_depart_id", thirdpartDepartId);
@@ -727,7 +714,7 @@ public class ApplyAddRequest extends Request {
         }
 
         /**
-         * 同时预订(机票&火车票)规则。1：就高；2：就低。
+         * together_book_rule.
          */
         public Builder togetherBookRule(Integer togetherBookRule) {
             this.putBodyParameter("together_book_rule", togetherBookRule);
@@ -736,7 +723,7 @@ public class ApplyAddRequest extends Request {
         }
 
         /**
-         * 审批单火车票预算(分)
+         * train_budget.
          */
         public Builder trainBudget(Long trainBudget) {
             this.putBodyParameter("train_budget", trainBudget);
@@ -801,7 +788,7 @@ public class ApplyAddRequest extends Request {
         }
 
         /**
-         * 关联单号
+         * union_no.
          */
         public Builder unionNo(String unionNo) {
             this.putBodyParameter("union_no", unionNo);
@@ -810,7 +797,7 @@ public class ApplyAddRequest extends Request {
         }
 
         /**
-         * 无userId时传缺省值superAdmin
+         * user_id.
          */
         public Builder userId(String userId) {
             this.putBodyParameter("user_id", userId);
@@ -828,7 +815,7 @@ public class ApplyAddRequest extends Request {
         }
 
         /**
-         * 审批单用车预算(分)
+         * vehicle_budget.
          */
         public Builder vehicleBudget(Long vehicleBudget) {
             this.putBodyParameter("vehicle_budget", vehicleBudget);
@@ -1109,7 +1096,7 @@ public class ApplyAddRequest extends Request {
             }
 
             /**
-             * 国内机票舱等，多值逗号分隔。F：头等舱，C：商务舱，Y：经济舱，P：超级经济舱
+             * flight_cabins.
              */
             public Builder flightCabins(String flightCabins) {
                 this.flightCabins = flightCabins;
@@ -1133,7 +1120,7 @@ public class ApplyAddRequest extends Request {
             }
 
             /**
-             * 限制差标类型。0-不限差标，1-限制差标
+             * reserve_type.
              */
             public Builder reserveType(Integer reserveType) {
                 this.reserveType = reserveType;
@@ -1194,7 +1181,7 @@ public class ApplyAddRequest extends Request {
             private String type; 
 
             /**
-             * 比例/固定金额
+             * param.
              */
             public Builder param(String param) {
                 this.param = param;
@@ -1202,7 +1189,7 @@ public class ApplyAddRequest extends Request {
             }
 
             /**
-             * 合住公式（HotelShareEnum.type）
+             * type.
              */
             public Builder type(String type) {
                 this.type = type;
@@ -1562,7 +1549,7 @@ public class ApplyAddRequest extends Request {
             }
 
             /**
-             * 交通方式： 0 飞机、酒店,  1 火车、酒店,  2 汽车、酒店,  3 酒店，5 不限，6 飞机，7 火车，9 飞机、火车、酒店
+             * traffic_type.
              */
             public Builder trafficType(Integer trafficType) {
                 this.trafficType = trafficType;
@@ -1749,7 +1736,7 @@ public class ApplyAddRequest extends Request {
             private Integer trafficType; 
 
             /**
-             * 到达日期
+             * arr_date.
              */
             public Builder arrDate(String arrDate) {
                 this.arrDate = arrDate;
@@ -1757,11 +1744,7 @@ public class ApplyAddRequest extends Request {
             }
 
             /**
-             * 离抵城市code，多个城市请用中文“，”隔开
-             * <p>
-             * 当允许预订的类目为1/3/7/9时，仅传行政区划citycode允许通过
-             * 当允许预订的类目为0/6时，仅传城市三字码允许通过
-             * city_set和city_code_set必须一对一
+             * city_code_set.
              */
             public Builder cityCodeSet(String cityCodeSet) {
                 this.cityCodeSet = cityCodeSet;
@@ -1769,7 +1752,7 @@ public class ApplyAddRequest extends Request {
             }
 
             /**
-             * 离抵城市名称，多个城市请用中文“，”隔开
+             * city_set.
              */
             public Builder citySet(String citySet) {
                 this.citySet = citySet;
@@ -1777,7 +1760,7 @@ public class ApplyAddRequest extends Request {
             }
 
             /**
-             * 商旅成本中心id，和第三方成本中心id二者选择其一即可
+             * cost_center_id.
              */
             public Builder costCenterId(Long costCenterId) {
                 this.costCenterId = costCenterId;
@@ -1785,7 +1768,7 @@ public class ApplyAddRequest extends Request {
             }
 
             /**
-             * 出发日期
+             * dep_date.
              */
             public Builder depDate(String depDate) {
                 this.depDate = depDate;
@@ -1793,7 +1776,7 @@ public class ApplyAddRequest extends Request {
             }
 
             /**
-             * 商旅发票id，和第三方发票Id二者选择其一即可
+             * invoice_id.
              */
             public Builder invoiceId(Long invoiceId) {
                 this.invoiceId = invoiceId;
@@ -1801,7 +1784,7 @@ public class ApplyAddRequest extends Request {
             }
 
             /**
-             * 行程id
+             * itinerary_id.
              */
             public Builder itineraryId(String itineraryId) {
                 this.itineraryId = itineraryId;
@@ -1809,7 +1792,7 @@ public class ApplyAddRequest extends Request {
             }
 
             /**
-             * 项目编号
+             * project_code.
              */
             public Builder projectCode(String projectCode) {
                 this.projectCode = projectCode;
@@ -1817,7 +1800,7 @@ public class ApplyAddRequest extends Request {
             }
 
             /**
-             * 项目名称
+             * project_title.
              */
             public Builder projectTitle(String projectTitle) {
                 this.projectTitle = projectTitle;
@@ -1825,7 +1808,7 @@ public class ApplyAddRequest extends Request {
             }
 
             /**
-             * 第三方发票id，和商旅发票id二者选择其一即可
+             * third_part_invoice_id.
              */
             public Builder thirdPartInvoiceId(String thirdPartInvoiceId) {
                 this.thirdPartInvoiceId = thirdPartInvoiceId;
@@ -1833,7 +1816,7 @@ public class ApplyAddRequest extends Request {
             }
 
             /**
-             * 第三方成本中心id，和商旅成本中心id二者选择其一即可
+             * thirdpart_cost_center_id.
              */
             public Builder thirdpartCostCenterId(String thirdpartCostCenterId) {
                 this.thirdpartCostCenterId = thirdpartCostCenterId;
@@ -1841,7 +1824,7 @@ public class ApplyAddRequest extends Request {
             }
 
             /**
-             * 交通方式： 0 飞机、酒店,  1 火车、酒店,  2 汽车、酒店,  3 酒店，5 不限，6 飞机，7 火车，9 飞机、火车、酒店
+             * traffic_type.
              */
             public Builder trafficType(Integer trafficType) {
                 this.trafficType = trafficType;
@@ -1894,7 +1877,7 @@ public class ApplyAddRequest extends Request {
             private String userName; 
 
             /**
-             * 无userId时传缺省值superAdmin
+             * user_id.
              */
             public Builder userId(String userId) {
                 this.userId = userId;
@@ -2144,7 +2127,7 @@ public class ApplyAddRequest extends Request {
             }
 
             /**
-             * 国内机票舱等，多值逗号分隔。F：头等舱，C：商务舱，Y：经济舱，P：超级经济舱
+             * flight_cabins.
              */
             public Builder flightCabins(String flightCabins) {
                 this.flightCabins = flightCabins;
@@ -2168,7 +2151,7 @@ public class ApplyAddRequest extends Request {
             }
 
             /**
-             * 限制差标类型。0-不限差标，1-限制差标
+             * reserve_type.
              */
             public Builder reserveType(Integer reserveType) {
                 this.reserveType = reserveType;
@@ -2184,7 +2167,7 @@ public class ApplyAddRequest extends Request {
             }
 
             /**
-             * 无userId时传缺省值superAdmin
+             * user_id.
              */
             public Builder userId(String userId) {
                 this.userId = userId;

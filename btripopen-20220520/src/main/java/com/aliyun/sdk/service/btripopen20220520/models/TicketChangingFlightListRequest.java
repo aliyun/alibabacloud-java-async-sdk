@@ -140,7 +140,7 @@ public class TicketChangingFlightListRequest extends Request {
         } 
 
         /**
-         * 必填项,到达城市三字码
+         * arr_city.
          */
         public Builder arrCity(String arrCity) {
             this.putQueryParameter("arr_city", arrCity);
@@ -149,7 +149,7 @@ public class TicketChangingFlightListRequest extends Request {
         }
 
         /**
-         * 必填项,出发城市三字码
+         * dep_city.
          */
         public Builder depCity(String depCity) {
             this.putQueryParameter("dep_city", depCity);
@@ -158,7 +158,7 @@ public class TicketChangingFlightListRequest extends Request {
         }
 
         /**
-         * 必填项,出发时间
+         * dep_date.
          */
         public Builder depDate(String depDate) {
             this.putQueryParameter("dep_date", depDate);
@@ -167,7 +167,7 @@ public class TicketChangingFlightListRequest extends Request {
         }
 
         /**
-         * 必填项,订单号
+         * dis_order_id.
          */
         public Builder disOrderId(String disOrderId) {
             this.putQueryParameter("dis_order_id", disOrderId);
@@ -176,7 +176,7 @@ public class TicketChangingFlightListRequest extends Request {
         }
 
         /**
-         * 是否自愿:1自愿，0非自愿
+         * is_voluntary.
          */
         public Builder isVoluntary(Integer isVoluntary) {
             this.putQueryParameter("is_voluntary", isVoluntary);
@@ -185,7 +185,7 @@ public class TicketChangingFlightListRequest extends Request {
         }
 
         /**
-         * 必填项,需要改签乘客信息
+         * traveler_info_list.
          */
         public Builder travelerInfoList(java.util.List < TravelerInfoList> travelerInfoList) {
             String travelerInfoListShrink = shrink(travelerInfoList, "traveler_info_list", "json");
@@ -288,7 +288,7 @@ public class TicketChangingFlightListRequest extends Request {
             private String userId; 
 
             /**
-             * 到达机场三字码
+             * arr_city.
              */
             public Builder arrCity(String arrCity) {
                 this.arrCity = arrCity;
@@ -296,7 +296,7 @@ public class TicketChangingFlightListRequest extends Request {
             }
 
             /**
-             * 出发机场三字码
+             * dep_city.
              */
             public Builder depCity(String depCity) {
                 this.depCity = depCity;
@@ -304,7 +304,7 @@ public class TicketChangingFlightListRequest extends Request {
             }
 
             /**
-             * 姓名
+             * name.
              */
             public Builder name(String name) {
                 this.name = name;
@@ -312,7 +312,7 @@ public class TicketChangingFlightListRequest extends Request {
             }
 
             /**
-             * 乘客类型 (ENUM_INVALID, ADULT, CHILD, INFANT, STUDENT, OTHER)
+             * type.
              */
             public Builder type(String type) {
                 this.type = type;
@@ -320,7 +320,7 @@ public class TicketChangingFlightListRequest extends Request {
             }
 
             /**
-             * 员工编号
+             * user_id.
              */
             public Builder userId(String userId) {
                 this.userId = userId;

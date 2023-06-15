@@ -262,7 +262,7 @@ public class FlightCreateOrderResponseBody extends TeaModel {
             private Long totalPrice; 
 
             /**
-             * 支付宝交易编号
+             * alipay_trade_no.
              */
             public Builder alipayTradeNo(String alipayTradeNo) {
                 this.alipayTradeNo = alipayTradeNo;
@@ -270,7 +270,7 @@ public class FlightCreateOrderResponseBody extends TeaModel {
             }
 
             /**
-             * 商旅订单号
+             * btrip_order_id.
              */
             public Builder btripOrderId(Long btripOrderId) {
                 this.btripOrderId = btripOrderId;
@@ -278,7 +278,7 @@ public class FlightCreateOrderResponseBody extends TeaModel {
             }
 
             /**
-             * 分销外部订单号
+             * dis_order_id.
              */
             public Builder disOrderId(String disOrderId) {
                 this.disOrderId = disOrderId;
@@ -286,7 +286,7 @@ public class FlightCreateOrderResponseBody extends TeaModel {
             }
 
             /**
-             * 最后支付时间
+             * last_pay_time.
              */
             public Builder lastPayTime(String lastPayTime) {
                 this.lastPayTime = lastPayTime;
@@ -294,7 +294,7 @@ public class FlightCreateOrderResponseBody extends TeaModel {
             }
 
             /**
-             * 支付状态
+             * order_status.
              */
             public Builder orderStatus(Integer orderStatus) {
                 this.orderStatus = orderStatus;
@@ -302,7 +302,7 @@ public class FlightCreateOrderResponseBody extends TeaModel {
             }
 
             /**
-             * 订单状态
+             * pay_status.
              */
             public Builder payStatus(Integer payStatus) {
                 this.payStatus = payStatus;
@@ -310,7 +310,7 @@ public class FlightCreateOrderResponseBody extends TeaModel {
             }
 
             /**
-             * 应支付价格
+             * payment_price.
              */
             public Builder paymentPrice(Long paymentPrice) {
                 this.paymentPrice = paymentPrice;
@@ -318,7 +318,7 @@ public class FlightCreateOrderResponseBody extends TeaModel {
             }
 
             /**
-             * 总价格
+             * total_price.
              */
             public Builder totalPrice(Long totalPrice) {
                 this.totalPrice = totalPrice;

@@ -106,7 +106,7 @@ public class CitySearchResponseBody extends TeaModel {
         }
 
         /**
-         * ��ע������ı�ע����Խ����˵��
+         * message.
          */
         public Builder message(String message) {
             this.message = message;
@@ -130,7 +130,7 @@ public class CitySearchResponseBody extends TeaModel {
         }
 
         /**
-         * �ɹ���ʶ���ɷ�������ã������쳣ʱΪfalse�����Ϊnull����Ϊfalse��
+         * success.
          */
         public Builder success(Boolean success) {
             this.success = success;

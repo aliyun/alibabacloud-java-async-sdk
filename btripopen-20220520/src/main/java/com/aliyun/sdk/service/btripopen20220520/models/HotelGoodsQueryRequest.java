@@ -235,7 +235,7 @@ public class HotelGoodsQueryRequest extends Request {
         }
 
         /**
-         * 是否协议价
+         * agreement_price.
          */
         public Builder agreementPrice(Boolean agreementPrice) {
             this.putQueryParameter("agreement_price", agreementPrice);
@@ -244,7 +244,7 @@ public class HotelGoodsQueryRequest extends Request {
         }
 
         /**
-         * 开始日期，yyyy-MM-dd
+         * begin_date.
          */
         public Builder beginDate(String beginDate) {
             this.putQueryParameter("begin_date", beginDate);
@@ -253,7 +253,7 @@ public class HotelGoodsQueryRequest extends Request {
         }
 
         /**
-         * 是否含早
+         * breakfast_included.
          */
         public Builder breakfastIncluded(Boolean breakfastIncluded) {
             this.putQueryParameter("breakfast_included", breakfastIncluded);
@@ -271,7 +271,7 @@ public class HotelGoodsQueryRequest extends Request {
         }
 
         /**
-         * 城市code 非必填
+         * city_code.
          */
         public Builder cityCode(String cityCode) {
             this.putQueryParameter("city_code", cityCode);
@@ -280,7 +280,7 @@ public class HotelGoodsQueryRequest extends Request {
         }
 
         /**
-         * 结束日期，yyyy-MM-dd（单次查询入离日期跨度最大为30天）
+         * end_date.
          */
         public Builder endDate(String endDate) {
             this.putQueryParameter("end_date", endDate);
@@ -289,7 +289,7 @@ public class HotelGoodsQueryRequest extends Request {
         }
 
         /**
-         * 酒店code
+         * hotel_id.
          */
         public Builder hotelId(String hotelId) {
             this.putQueryParameter("hotel_id", hotelId);
@@ -298,7 +298,7 @@ public class HotelGoodsQueryRequest extends Request {
         }
 
         /**
-         * 是否支持混合支付 0 支持 1不支持
+         * pay_over_type.
          */
         public Builder payOverType(Integer payOverType) {
             this.putQueryParameter("pay_over_type", payOverType);
@@ -307,7 +307,7 @@ public class HotelGoodsQueryRequest extends Request {
         }
 
         /**
-         * 支付方式0:企业支付；1个人支付
+         * payment_type.
          */
         public Builder paymentType(Integer paymentType) {
             this.putQueryParameter("payment_type", paymentType);
@@ -316,7 +316,7 @@ public class HotelGoodsQueryRequest extends Request {
         }
 
         /**
-         * 是否可开专票
+         * special_invoice.
          */
         public Builder specialInvoice(Boolean specialInvoice) {
             this.putQueryParameter("special_invoice", specialInvoice);
@@ -325,7 +325,7 @@ public class HotelGoodsQueryRequest extends Request {
         }
 
         /**
-         * 角色0表示普通人，1表示特殊申请人
+         * super_man.
          */
         public Builder superMan(Integer superMan) {
             this.putQueryParameter("super_man", superMan);

@@ -106,7 +106,7 @@ public class AirportSearchResponseBody extends TeaModel {
         }
 
         /**
-         * ��ע������ı�ע����Խ����˵��
+         * message.
          */
         public Builder message(String message) {
             this.message = message;
@@ -130,7 +130,7 @@ public class AirportSearchResponseBody extends TeaModel {
         }
 
         /**
-         * �ɹ���ʶ���ɷ�������ã������쳣ʱΪfalse�����Ϊnull����Ϊfalse��
+         * success.
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -222,7 +222,7 @@ public class AirportSearchResponseBody extends TeaModel {
             }
 
             /**
-             * 与搜索城市距离，单位千米，只在邻近机场推荐有值
+             * distance.
              */
             public Builder distance(Integer distance) {
                 this.distance = distance;
@@ -238,7 +238,7 @@ public class AirportSearchResponseBody extends TeaModel {
             }
 
             /**
-             * 邻近机场城市，只在邻近机场推荐有值
+             * travel_name.
              */
             public Builder travelName(String travelName) {
                 this.travelName = travelName;
@@ -299,7 +299,7 @@ public class AirportSearchResponseBody extends TeaModel {
             }
 
             /**
-             * 是否为邻近城市
+             * nearby.
              */
             public Builder nearby(Boolean nearby) {
                 this.nearby = nearby;

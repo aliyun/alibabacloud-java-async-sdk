@@ -83,7 +83,7 @@ public class EntityAddRequest extends Request {
         } 
 
         /**
-         * 员工/部门/角色信息列表
+         * entity_d_o_list.
          */
         public Builder entityDOList(java.util.List < EntityDOList> entityDOList) {
             String entityDOListShrink = shrink(entityDOList, "entity_d_o_list", "json");
@@ -93,7 +93,7 @@ public class EntityAddRequest extends Request {
         }
 
         /**
-         * 第三方成本中心id
+         * thirdpart_id.
          */
         public Builder thirdpartId(String thirdpartId) {
             this.putBodyParameter("thirdpart_id", thirdpartId);

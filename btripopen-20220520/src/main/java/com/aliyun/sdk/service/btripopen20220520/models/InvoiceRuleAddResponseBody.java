@@ -122,7 +122,7 @@ public class InvoiceRuleAddResponseBody extends TeaModel {
         }
 
         /**
-         * requestId
+         * requestId.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

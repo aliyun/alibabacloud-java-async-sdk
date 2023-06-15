@@ -110,7 +110,7 @@ public class CorpAuthLinkInfoQueryResponseBody extends TeaModel {
         }
 
         /**
-         * requestId
+         * requestId.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -118,7 +118,7 @@ public class CorpAuthLinkInfoQueryResponseBody extends TeaModel {
         }
 
         /**
-         * traceId
+         * traceId.
          */
         public Builder traceId(String traceId) {
             this.traceId = traceId;

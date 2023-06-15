@@ -382,7 +382,7 @@ public class HotelSearchResponseBody extends TeaModel {
             private String tel; 
 
             /**
-             * 品牌名称
+             * brand_name.
              */
             public Builder brandName(String brandName) {
                 this.brandName = brandName;
@@ -390,7 +390,7 @@ public class HotelSearchResponseBody extends TeaModel {
             }
 
             /**
-             * 品牌code
+             * btand_code.
              */
             public Builder btandCode(String btandCode) {
                 this.btandCode = btandCode;
@@ -398,7 +398,7 @@ public class HotelSearchResponseBody extends TeaModel {
             }
 
             /**
-             * 城市Code
+             * city_code.
              */
             public Builder cityCode(String cityCode) {
                 this.cityCode = cityCode;
@@ -406,7 +406,7 @@ public class HotelSearchResponseBody extends TeaModel {
             }
 
             /**
-             * 位置距离 单位：米
+             * distance.
              */
             public Builder distance(Integer distance) {
                 this.distance = distance;
@@ -414,7 +414,7 @@ public class HotelSearchResponseBody extends TeaModel {
             }
 
             /**
-             * 行政区code
+             * district_code.
              */
             public Builder districtCode(String districtCode) {
                 this.districtCode = districtCode;
@@ -422,7 +422,7 @@ public class HotelSearchResponseBody extends TeaModel {
             }
 
             /**
-             * 酒店地址
+             * hotel_address.
              */
             public Builder hotelAddress(String hotelAddress) {
                 this.hotelAddress = hotelAddress;
@@ -430,7 +430,7 @@ public class HotelSearchResponseBody extends TeaModel {
             }
 
             /**
-             * 酒店code
+             * hotel_code.
              */
             public Builder hotelCode(String hotelCode) {
                 this.hotelCode = hotelCode;
@@ -438,7 +438,7 @@ public class HotelSearchResponseBody extends TeaModel {
             }
 
             /**
-             * 酒店英文名称
+             * hotel_en_name.
              */
             public Builder hotelEnName(String hotelEnName) {
                 this.hotelEnName = hotelEnName;
@@ -446,7 +446,7 @@ public class HotelSearchResponseBody extends TeaModel {
             }
 
             /**
-             * 酒店名称
+             * hotel_name.
              */
             public Builder hotelName(String hotelName) {
                 this.hotelName = hotelName;
@@ -454,7 +454,7 @@ public class HotelSearchResponseBody extends TeaModel {
             }
 
             /**
-             * 酒店星级
+             * hotel_star.
              */
             public Builder hotelStar(String hotelStar) {
                 this.hotelStar = hotelStar;
@@ -462,7 +462,7 @@ public class HotelSearchResponseBody extends TeaModel {
             }
 
             /**
-             * 酒店主图
+             * image_url.
              */
             public Builder imageUrl(String imageUrl) {
                 this.imageUrl = imageUrl;
@@ -470,7 +470,7 @@ public class HotelSearchResponseBody extends TeaModel {
             }
 
             /**
-             * 是否是协议价
+             * is_protocol.
              */
             public Builder isProtocol(Boolean isProtocol) {
                 this.isProtocol = isProtocol;
@@ -478,7 +478,7 @@ public class HotelSearchResponseBody extends TeaModel {
             }
 
             /**
-             * 酒店经纬度
+             * location.
              */
             public Builder location(String location) {
                 this.location = location;
@@ -486,7 +486,7 @@ public class HotelSearchResponseBody extends TeaModel {
             }
 
             /**
-             * 酒店起价
+             * min_price.
              */
             public Builder minPrice(Double minPrice) {
                 this.minPrice = minPrice;
@@ -502,7 +502,7 @@ public class HotelSearchResponseBody extends TeaModel {
             }
 
             /**
-             * 评分
+             * score.
              */
             public Builder score(String score) {
                 this.score = score;
@@ -510,7 +510,7 @@ public class HotelSearchResponseBody extends TeaModel {
             }
 
             /**
-             * 房态
+             * status.
              */
             public Builder status(Integer status) {
                 this.status = status;
@@ -518,7 +518,7 @@ public class HotelSearchResponseBody extends TeaModel {
             }
 
             /**
-             * 酒店电话
+             * tel.
              */
             public Builder tel(String tel) {
                 this.tel = tel;

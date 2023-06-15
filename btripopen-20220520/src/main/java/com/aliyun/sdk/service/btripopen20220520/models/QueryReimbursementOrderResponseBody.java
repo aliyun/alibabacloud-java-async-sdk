@@ -274,7 +274,7 @@ public class QueryReimbursementOrderResponseBody extends TeaModel {
             private String settlementType; 
 
             /**
-             * 报销金额
+             * amount.
              */
             public Builder amount(String amount) {
                 this.amount = amount;
@@ -282,7 +282,7 @@ public class QueryReimbursementOrderResponseBody extends TeaModel {
             }
 
             /**
-             * 币种
+             * currency.
              */
             public Builder currency(String currency) {
                 this.currency = currency;
@@ -290,7 +290,7 @@ public class QueryReimbursementOrderResponseBody extends TeaModel {
             }
 
             /**
-             * 费用发生城市
+             * expense_city.
              */
             public Builder expenseCity(String expenseCity) {
                 this.expenseCity = expenseCity;
@@ -298,7 +298,7 @@ public class QueryReimbursementOrderResponseBody extends TeaModel {
             }
 
             /**
-             * 费用发生时间
+             * expense_time.
              */
             public Builder expenseTime(String expenseTime) {
                 this.expenseTime = expenseTime;
@@ -306,7 +306,7 @@ public class QueryReimbursementOrderResponseBody extends TeaModel {
             }
 
             /**
-             * 费用类型
+             * expense_type.
              */
             public Builder expenseType(String expenseType) {
                 this.expenseType = expenseType;
@@ -314,7 +314,7 @@ public class QueryReimbursementOrderResponseBody extends TeaModel {
             }
 
             /**
-             * 费用类型code
+             * expense_type_code.
              */
             public Builder expenseTypeCode(String expenseTypeCode) {
                 this.expenseTypeCode = expenseTypeCode;
@@ -322,7 +322,7 @@ public class QueryReimbursementOrderResponseBody extends TeaModel {
             }
 
             /**
-             * 费用明细id
+             * reimb_expense_id.
              */
             public Builder reimbExpenseId(Long reimbExpenseId) {
                 this.reimbExpenseId = reimbExpenseId;
@@ -330,7 +330,7 @@ public class QueryReimbursementOrderResponseBody extends TeaModel {
             }
 
             /**
-             * 备注
+             * remark.
              */
             public Builder remark(String remark) {
                 this.remark = remark;
@@ -338,7 +338,7 @@ public class QueryReimbursementOrderResponseBody extends TeaModel {
             }
 
             /**
-             * 个人支付、企业支付
+             * settlement_type.
              */
             public Builder settlementType(String settlementType) {
                 this.settlementType = settlementType;
@@ -439,7 +439,7 @@ public class QueryReimbursementOrderResponseBody extends TeaModel {
             private String tripWay; 
 
             /**
-             * 到达城市
+             * arr_city.
              */
             public Builder arrCity(String arrCity) {
                 this.arrCity = arrCity;
@@ -447,7 +447,7 @@ public class QueryReimbursementOrderResponseBody extends TeaModel {
             }
 
             /**
-             * 到达时间
+             * arr_date.
              */
             public Builder arrDate(String arrDate) {
                 this.arrDate = arrDate;
@@ -455,7 +455,7 @@ public class QueryReimbursementOrderResponseBody extends TeaModel {
             }
 
             /**
-             * 出发城市
+             * dep_city.
              */
             public Builder depCity(String depCity) {
                 this.depCity = depCity;
@@ -463,7 +463,7 @@ public class QueryReimbursementOrderResponseBody extends TeaModel {
             }
 
             /**
-             * 出发时间
+             * dep_date.
              */
             public Builder depDate(String depDate) {
                 this.depDate = depDate;
@@ -471,7 +471,7 @@ public class QueryReimbursementOrderResponseBody extends TeaModel {
             }
 
             /**
-             * 交通工具
+             * traffic_way.
              */
             public Builder trafficWay(String trafficWay) {
                 this.trafficWay = trafficWay;
@@ -479,7 +479,7 @@ public class QueryReimbursementOrderResponseBody extends TeaModel {
             }
 
             /**
-             * 行程类型 单程/往返
+             * trip_way.
              */
             public Builder tripWay(String tripWay) {
                 this.tripWay = tripWay;
@@ -532,7 +532,7 @@ public class QueryReimbursementOrderResponseBody extends TeaModel {
             private String payeeUserId; 
 
             /**
-             * 收款金额
+             * amount.
              */
             public Builder amount(String amount) {
                 this.amount = amount;
@@ -540,7 +540,7 @@ public class QueryReimbursementOrderResponseBody extends TeaModel {
             }
 
             /**
-             * 收款人userID
+             * payee_user_id.
              */
             public Builder payeeUserId(String payeeUserId) {
                 this.payeeUserId = payeeUserId;
@@ -761,7 +761,7 @@ public class QueryReimbursementOrderResponseBody extends TeaModel {
             private String userName; 
 
             /**
-             * 企业支付金额
+             * company_amount.
              */
             public Builder companyAmount(String companyAmount) {
                 this.companyAmount = companyAmount;
@@ -769,7 +769,7 @@ public class QueryReimbursementOrderResponseBody extends TeaModel {
             }
 
             /**
-             * 企业应付金额
+             * company_pay_amount.
              */
             public Builder companyPayAmount(String companyPayAmount) {
                 this.companyPayAmount = companyPayAmount;
@@ -777,7 +777,7 @@ public class QueryReimbursementOrderResponseBody extends TeaModel {
             }
 
             /**
-             * 企业id
+             * corp_id.
              */
             public Builder corpId(String corpId) {
                 this.corpId = corpId;
@@ -785,7 +785,7 @@ public class QueryReimbursementOrderResponseBody extends TeaModel {
             }
 
             /**
-             * 费用明细
+             * expenses.
              */
             public Builder expenses(java.util.List < Expenses> expenses) {
                 this.expenses = expenses;
@@ -793,7 +793,7 @@ public class QueryReimbursementOrderResponseBody extends TeaModel {
             }
 
             /**
-             * 创建时间
+             * gmt_create.
              */
             public Builder gmtCreate(String gmtCreate) {
                 this.gmtCreate = gmtCreate;
@@ -801,7 +801,7 @@ public class QueryReimbursementOrderResponseBody extends TeaModel {
             }
 
             /**
-             * 修改时间
+             * gmt_modified.
              */
             public Builder gmtModified(String gmtModified) {
                 this.gmtModified = gmtModified;
@@ -809,7 +809,7 @@ public class QueryReimbursementOrderResponseBody extends TeaModel {
             }
 
             /**
-             * 行程
+             * itineraries.
              */
             public Builder itineraries(java.util.List < Itineraries> itineraries) {
                 this.itineraries = itineraries;
@@ -817,7 +817,7 @@ public class QueryReimbursementOrderResponseBody extends TeaModel {
             }
 
             /**
-             * 收款明细
+             * payment_infos.
              */
             public Builder paymentInfos(java.util.List < PaymentInfos> paymentInfos) {
                 this.paymentInfos = paymentInfos;
@@ -825,7 +825,7 @@ public class QueryReimbursementOrderResponseBody extends TeaModel {
             }
 
             /**
-             * 个人支付金额
+             * personal_amount.
              */
             public Builder personalAmount(String personalAmount) {
                 this.personalAmount = personalAmount;
@@ -833,7 +833,7 @@ public class QueryReimbursementOrderResponseBody extends TeaModel {
             }
 
             /**
-             * 事由
+             * reason.
              */
             public Builder reason(String reason) {
                 this.reason = reason;
@@ -841,7 +841,7 @@ public class QueryReimbursementOrderResponseBody extends TeaModel {
             }
 
             /**
-             * 报销单号
+             * reimbursement_no.
              */
             public Builder reimbursementNo(String reimbursementNo) {
                 this.reimbursementNo = reimbursementNo;
@@ -849,7 +849,7 @@ public class QueryReimbursementOrderResponseBody extends TeaModel {
             }
 
             /**
-             * 备注
+             * remark.
              */
             public Builder remark(String remark) {
                 this.remark = remark;
@@ -857,7 +857,7 @@ public class QueryReimbursementOrderResponseBody extends TeaModel {
             }
 
             /**
-             * 报销单的业务状态
+             * status.
              */
             public Builder status(String status) {
                 this.status = status;
@@ -865,7 +865,7 @@ public class QueryReimbursementOrderResponseBody extends TeaModel {
             }
 
             /**
-             * 关联申请单号
+             * travel_third_apply_id.
              */
             public Builder travelThirdApplyId(String travelThirdApplyId) {
                 this.travelThirdApplyId = travelThirdApplyId;
@@ -873,7 +873,7 @@ public class QueryReimbursementOrderResponseBody extends TeaModel {
             }
 
             /**
-             * 申请人userID
+             * user_id.
              */
             public Builder userId(String userId) {
                 this.userId = userId;
@@ -881,7 +881,7 @@ public class QueryReimbursementOrderResponseBody extends TeaModel {
             }
 
             /**
-             * 申请人
+             * user_name.
              */
             public Builder userName(String userName) {
                 this.userName = userName;

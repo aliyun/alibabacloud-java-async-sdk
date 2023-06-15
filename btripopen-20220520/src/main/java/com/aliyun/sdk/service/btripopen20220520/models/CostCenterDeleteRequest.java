@@ -69,7 +69,7 @@ public class CostCenterDeleteRequest extends Request {
         } 
 
         /**
-         * 第三方成本中心id
+         * thirdpart_id.
          */
         public Builder thirdpartId(String thirdpartId) {
             this.putQueryParameter("thirdpart_id", thirdpartId);

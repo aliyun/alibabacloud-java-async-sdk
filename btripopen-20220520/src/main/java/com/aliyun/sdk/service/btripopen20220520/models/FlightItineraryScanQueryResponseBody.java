@@ -723,7 +723,7 @@ public class FlightItineraryScanQueryResponseBody extends TeaModel {
             }
 
             /**
-             * 出账日
+             * bill_date.
              */
             public Builder billDate(String billDate) {
                 this.billDate = billDate;
@@ -731,7 +731,7 @@ public class FlightItineraryScanQueryResponseBody extends TeaModel {
             }
 
             /**
-             * 基建
+             * build.
              */
             public Builder build(String build) {
                 this.build = build;
@@ -739,7 +739,7 @@ public class FlightItineraryScanQueryResponseBody extends TeaModel {
             }
 
             /**
-             * 成本中心
+             * cost_center.
              */
             public Builder costCenter(String costCenter) {
                 this.costCenter = costCenter;
@@ -747,7 +747,7 @@ public class FlightItineraryScanQueryResponseBody extends TeaModel {
             }
 
             /**
-             * 部门
+             * department.
              */
             public Builder department(String department) {
                 this.department = department;
@@ -763,7 +763,7 @@ public class FlightItineraryScanQueryResponseBody extends TeaModel {
             }
 
             /**
-             * 燃油
+             * fuel_surcharge.
              */
             public Builder fuelSurcharge(String fuelSurcharge) {
                 this.fuelSurcharge = fuelSurcharge;
@@ -779,7 +779,7 @@ public class FlightItineraryScanQueryResponseBody extends TeaModel {
             }
 
             /**
-             * 保险
+             * insurance.
              */
             public Builder insurance(String insurance) {
                 this.insurance = insurance;
@@ -787,7 +787,7 @@ public class FlightItineraryScanQueryResponseBody extends TeaModel {
             }
 
             /**
-             * 发票抬头
+             * invoice_title.
              */
             public Builder invoiceTitle(String invoiceTitle) {
                 this.invoiceTitle = invoiceTitle;
@@ -811,7 +811,7 @@ public class FlightItineraryScanQueryResponseBody extends TeaModel {
             }
 
             /**
-             * 行程单号
+             * itinerary_num.
              */
             public Builder itineraryNum(String itineraryNum) {
                 this.itineraryNum = itineraryNum;
@@ -819,7 +819,7 @@ public class FlightItineraryScanQueryResponseBody extends TeaModel {
             }
 
             /**
-             * 商旅订单号
+             * order_id.
              */
             public Builder orderId(Long orderId) {
                 this.orderId = orderId;
@@ -827,7 +827,7 @@ public class FlightItineraryScanQueryResponseBody extends TeaModel {
             }
 
             /**
-             * 图片下载url
+             * oss_url.
              */
             public Builder ossUrl(String ossUrl) {
                 this.ossUrl = ossUrl;
@@ -835,7 +835,7 @@ public class FlightItineraryScanQueryResponseBody extends TeaModel {
             }
 
             /**
-             * 旅客姓名
+             * passenger_name.
              */
             public Builder passengerName(String passengerName) {
                 this.passengerName = passengerName;
@@ -843,7 +843,7 @@ public class FlightItineraryScanQueryResponseBody extends TeaModel {
             }
 
             /**
-             * 项目
+             * project.
              */
             public Builder project(String project) {
                 this.project = project;
@@ -859,7 +859,7 @@ public class FlightItineraryScanQueryResponseBody extends TeaModel {
             }
 
             /**
-             * 税额
+             * tax_amount.
              */
             public Builder taxAmount(String taxAmount) {
                 this.taxAmount = taxAmount;
@@ -867,7 +867,7 @@ public class FlightItineraryScanQueryResponseBody extends TeaModel {
             }
 
             /**
-             * 税率
+             * tax_rate.
              */
             public Builder taxRate(String taxRate) {
                 this.taxRate = taxRate;
@@ -875,7 +875,7 @@ public class FlightItineraryScanQueryResponseBody extends TeaModel {
             }
 
             /**
-             * 票号
+             * ticket_no.
              */
             public Builder ticketNo(String ticketNo) {
                 this.ticketNo = ticketNo;
@@ -883,7 +883,7 @@ public class FlightItineraryScanQueryResponseBody extends TeaModel {
             }
 
             /**
-             * 票价
+             * ticket_price.
              */
             public Builder ticketPrice(String ticketPrice) {
                 this.ticketPrice = ticketPrice;
@@ -891,7 +891,7 @@ public class FlightItineraryScanQueryResponseBody extends TeaModel {
             }
 
             /**
-             * 总金额
+             * total_price.
              */
             public Builder totalPrice(String totalPrice) {
                 this.totalPrice = totalPrice;

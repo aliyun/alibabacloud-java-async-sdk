@@ -202,7 +202,7 @@ public class TicketChangingFlightListResponseBody extends TeaModel {
             private String airlineSimpleName; 
 
             /**
-             * 必填项,航司编码
+             * airline_code.
              */
             public Builder airlineCode(String airlineCode) {
                 this.airlineCode = airlineCode;
@@ -210,7 +210,7 @@ public class TicketChangingFlightListResponseBody extends TeaModel {
             }
 
             /**
-             * 必填项,航司名称
+             * airline_name.
              */
             public Builder airlineName(String airlineName) {
                 this.airlineName = airlineName;
@@ -218,7 +218,7 @@ public class TicketChangingFlightListResponseBody extends TeaModel {
             }
 
             /**
-             * 必填项,航司简称
+             * airline_simple_name.
              */
             public Builder airlineSimpleName(String airlineSimpleName) {
                 this.airlineSimpleName = airlineSimpleName;
@@ -307,7 +307,7 @@ public class TicketChangingFlightListResponseBody extends TeaModel {
             private String terminal; 
 
             /**
-             * 必填项,机场编码
+             * airport_code.
              */
             public Builder airportCode(String airportCode) {
                 this.airportCode = airportCode;
@@ -315,7 +315,7 @@ public class TicketChangingFlightListResponseBody extends TeaModel {
             }
 
             /**
-             * 必填项,机场编码
+             * airport_name.
              */
             public Builder airportName(String airportName) {
                 this.airportName = airportName;
@@ -323,7 +323,7 @@ public class TicketChangingFlightListResponseBody extends TeaModel {
             }
 
             /**
-             * 必填项,城市编码
+             * city_code.
              */
             public Builder cityCode(String cityCode) {
                 this.cityCode = cityCode;
@@ -331,7 +331,7 @@ public class TicketChangingFlightListResponseBody extends TeaModel {
             }
 
             /**
-             * 必填项,城市名称
+             * city_name.
              */
             public Builder cityName(String cityName) {
                 this.cityName = cityName;
@@ -339,7 +339,7 @@ public class TicketChangingFlightListResponseBody extends TeaModel {
             }
 
             /**
-             * 必填项,航站楼
+             * terminal.
              */
             public Builder terminal(String terminal) {
                 this.terminal = terminal;
@@ -416,7 +416,7 @@ public class TicketChangingFlightListResponseBody extends TeaModel {
             private Integer upgradePrice; 
 
             /**
-             * 必填项，乘客类型
+             * passenger_type.
              */
             public Builder passengerType(Integer passengerType) {
                 this.passengerType = passengerType;
@@ -424,7 +424,7 @@ public class TicketChangingFlightListResponseBody extends TeaModel {
             }
 
             /**
-             * 票价
+             * ticket_price.
              */
             public Builder ticketPrice(Integer ticketPrice) {
                 this.ticketPrice = ticketPrice;
@@ -432,7 +432,7 @@ public class TicketChangingFlightListResponseBody extends TeaModel {
             }
 
             /**
-             * 必填项，改签手续费
+             * upgrade_fee.
              */
             public Builder upgradeFee(Integer upgradeFee) {
                 this.upgradeFee = upgradeFee;
@@ -440,7 +440,7 @@ public class TicketChangingFlightListResponseBody extends TeaModel {
             }
 
             /**
-             * 必填项，升舱差价
+             * upgrade_price.
              */
             public Builder upgradePrice(Integer upgradePrice) {
                 this.upgradePrice = upgradePrice;
@@ -565,7 +565,7 @@ public class TicketChangingFlightListResponseBody extends TeaModel {
             private String otaItemid; 
 
             /**
-             * 必填项，舱位代码
+             * cabin.
              */
             public Builder cabin(String cabin) {
                 this.cabin = cabin;
@@ -573,7 +573,7 @@ public class TicketChangingFlightListResponseBody extends TeaModel {
             }
 
             /**
-             * 必填项，舱等
+             * cabin_class.
              */
             public Builder cabinClass(String cabinClass) {
                 this.cabinClass = cabinClass;
@@ -581,7 +581,7 @@ public class TicketChangingFlightListResponseBody extends TeaModel {
             }
 
             /**
-             * 必填项，舱位描述
+             * cabin_desc.
              */
             public Builder cabinDesc(String cabinDesc) {
                 this.cabinDesc = cabinDesc;
@@ -589,7 +589,7 @@ public class TicketChangingFlightListResponseBody extends TeaModel {
             }
 
             /**
-             * 舱等折扣，八折用80表示（null代表不限制）
+             * cabin_discount.
              */
             public Builder cabinDiscount(Integer cabinDiscount) {
                 this.cabinDiscount = cabinDiscount;
@@ -597,7 +597,7 @@ public class TicketChangingFlightListResponseBody extends TeaModel {
             }
 
             /**
-             * 必填项，子舱位
+             * child_cabin.
              */
             public Builder childCabin(String childCabin) {
                 this.childCabin = childCabin;
@@ -605,7 +605,7 @@ public class TicketChangingFlightListResponseBody extends TeaModel {
             }
 
             /**
-             * 必填项，av
+             * left_num.
              */
             public Builder leftNum(String leftNum) {
                 this.leftNum = leftNum;
@@ -613,7 +613,7 @@ public class TicketChangingFlightListResponseBody extends TeaModel {
             }
 
             /**
-             * 改签费用信息
+             * modify_price_list.
              */
             public Builder modifyPriceList(java.util.List < ModifyPriceList> modifyPriceList) {
                 this.modifyPriceList = modifyPriceList;
@@ -621,7 +621,7 @@ public class TicketChangingFlightListResponseBody extends TeaModel {
             }
 
             /**
-             * 商品Id"360379a11ee84e9aa011baa41b758fe6"
+             * ota_itemid.
              */
             public Builder otaItemid(String otaItemid) {
                 this.otaItemid = otaItemid;
@@ -710,7 +710,7 @@ public class TicketChangingFlightListResponseBody extends TeaModel {
             private String terminal; 
 
             /**
-             * 必填项,机场编码
+             * airport_code.
              */
             public Builder airportCode(String airportCode) {
                 this.airportCode = airportCode;
@@ -718,7 +718,7 @@ public class TicketChangingFlightListResponseBody extends TeaModel {
             }
 
             /**
-             * 必填项,机场编码
+             * airport_name.
              */
             public Builder airportName(String airportName) {
                 this.airportName = airportName;
@@ -726,7 +726,7 @@ public class TicketChangingFlightListResponseBody extends TeaModel {
             }
 
             /**
-             * 必填项,城市编码
+             * city_code.
              */
             public Builder cityCode(String cityCode) {
                 this.cityCode = cityCode;
@@ -734,7 +734,7 @@ public class TicketChangingFlightListResponseBody extends TeaModel {
             }
 
             /**
-             * 必填项,城市名称
+             * city_name.
              */
             public Builder cityName(String cityName) {
                 this.cityName = cityName;
@@ -742,7 +742,7 @@ public class TicketChangingFlightListResponseBody extends TeaModel {
             }
 
             /**
-             * 必填项,航站楼
+             * terminal.
              */
             public Builder terminal(String terminal) {
                 this.terminal = terminal;
@@ -819,7 +819,7 @@ public class TicketChangingFlightListResponseBody extends TeaModel {
             private Integer upgradePrice; 
 
             /**
-             * 必填项，乘客类型
+             * passenger_type.
              */
             public Builder passengerType(Integer passengerType) {
                 this.passengerType = passengerType;
@@ -827,7 +827,7 @@ public class TicketChangingFlightListResponseBody extends TeaModel {
             }
 
             /**
-             * 票价
+             * ticket_price.
              */
             public Builder ticketPrice(Integer ticketPrice) {
                 this.ticketPrice = ticketPrice;
@@ -835,7 +835,7 @@ public class TicketChangingFlightListResponseBody extends TeaModel {
             }
 
             /**
-             * 必填项，改签手续费
+             * upgrade_fee.
              */
             public Builder upgradeFee(Integer upgradeFee) {
                 this.upgradeFee = upgradeFee;
@@ -843,7 +843,7 @@ public class TicketChangingFlightListResponseBody extends TeaModel {
             }
 
             /**
-             * 必填项，升舱差价
+             * upgrade_price.
              */
             public Builder upgradePrice(Integer upgradePrice) {
                 this.upgradePrice = upgradePrice;
@@ -1172,7 +1172,7 @@ public class TicketChangingFlightListResponseBody extends TeaModel {
             private String stopDepTime; 
 
             /**
-             * 必填项,AirlineInfo 销售航司信息
+             * airline_info.
              */
             public Builder airlineInfo(AirlineInfo airlineInfo) {
                 this.airlineInfo = airlineInfo;
@@ -1180,7 +1180,7 @@ public class TicketChangingFlightListResponseBody extends TeaModel {
             }
 
             /**
-             * 必填项,AirportInfo 到达机场信息
+             * arr_airport_info.
              */
             public Builder arrAirportInfo(ArrAirportInfo arrAirportInfo) {
                 this.arrAirportInfo = arrAirportInfo;
@@ -1188,7 +1188,7 @@ public class TicketChangingFlightListResponseBody extends TeaModel {
             }
 
             /**
-             * 必填项,仓位列表
+             * cabin_list.
              */
             public Builder cabinList(java.util.List < CabinList> cabinList) {
                 this.cabinList = cabinList;
@@ -1196,7 +1196,7 @@ public class TicketChangingFlightListResponseBody extends TeaModel {
             }
 
             /**
-             * 承运航班信息（共享航班时有值）
+             * carrier_airline.
              */
             public Builder carrierAirline(String carrierAirline) {
                 this.carrierAirline = carrierAirline;
@@ -1204,7 +1204,7 @@ public class TicketChangingFlightListResponseBody extends TeaModel {
             }
 
             /**
-             * 承运航班信息（共享航班时有值）
+             * carrier_no.
              */
             public Builder carrierNo(String carrierNo) {
                 this.carrierNo = carrierNo;
@@ -1212,7 +1212,7 @@ public class TicketChangingFlightListResponseBody extends TeaModel {
             }
 
             /**
-             * 必填项,AirportInfo 出发机场信息
+             * dep_airport_info.
              */
             public Builder depAirportInfo(DepAirportInfo depAirportInfo) {
                 this.depAirportInfo = depAirportInfo;
@@ -1220,7 +1220,7 @@ public class TicketChangingFlightListResponseBody extends TeaModel {
             }
 
             /**
-             * 必填项,销售航班号
+             * flight_no.
              */
             public Builder flightNo(String flightNo) {
                 this.flightNo = flightNo;
@@ -1228,7 +1228,7 @@ public class TicketChangingFlightListResponseBody extends TeaModel {
             }
 
             /**
-             * 机型
+             * flight_size.
              */
             public Builder flightSize(String flightSize) {
                 this.flightSize = flightSize;
@@ -1236,7 +1236,7 @@ public class TicketChangingFlightListResponseBody extends TeaModel {
             }
 
             /**
-             * 机型号
+             * flight_type.
              */
             public Builder flightType(String flightType) {
                 this.flightType = flightType;
@@ -1244,7 +1244,7 @@ public class TicketChangingFlightListResponseBody extends TeaModel {
             }
 
             /**
-             * 是否协议价
+             * is_protocol.
              */
             public Builder isProtocol(Boolean isProtocol) {
                 this.isProtocol = isProtocol;
@@ -1252,7 +1252,7 @@ public class TicketChangingFlightListResponseBody extends TeaModel {
             }
 
             /**
-             * 必填项,是否共享航班
+             * is_share.
              */
             public Builder isShare(Boolean isShare) {
                 this.isShare = isShare;
@@ -1260,7 +1260,7 @@ public class TicketChangingFlightListResponseBody extends TeaModel {
             }
 
             /**
-             * 必填项,是否经停
+             * is_stop.
              */
             public Builder isStop(Boolean isStop) {
                 this.isStop = isStop;
@@ -1268,7 +1268,7 @@ public class TicketChangingFlightListResponseBody extends TeaModel {
             }
 
             /**
-             * 必填项,最低价舱位代码
+             * lowest_cabin.
              */
             public Builder lowestCabin(String lowestCabin) {
                 this.lowestCabin = lowestCabin;
@@ -1276,7 +1276,7 @@ public class TicketChangingFlightListResponseBody extends TeaModel {
             }
 
             /**
-             * 必填项,最低价舱等
+             * lowest_cabin_class.
              */
             public Builder lowestCabinClass(String lowestCabinClass) {
                 this.lowestCabinClass = lowestCabinClass;
@@ -1292,7 +1292,7 @@ public class TicketChangingFlightListResponseBody extends TeaModel {
             }
 
             /**
-             * 必填项,最低价舱位av
+             * lowest_cabin_num.
              */
             public Builder lowestCabinNum(String lowestCabinNum) {
                 this.lowestCabinNum = lowestCabinNum;
@@ -1300,7 +1300,7 @@ public class TicketChangingFlightListResponseBody extends TeaModel {
             }
 
             /**
-             * 必填项,最低价舱位改签价格
+             * lowest_cabin_price.
              */
             public Builder lowestCabinPrice(java.util.List < LowestCabinPrice> lowestCabinPrice) {
                 this.lowestCabinPrice = lowestCabinPrice;
@@ -1308,7 +1308,7 @@ public class TicketChangingFlightListResponseBody extends TeaModel {
             }
 
             /**
-             * 餐食
+             * meal_desc.
              */
             public Builder mealDesc(String mealDesc) {
                 this.mealDesc = mealDesc;
@@ -1316,7 +1316,7 @@ public class TicketChangingFlightListResponseBody extends TeaModel {
             }
 
             /**
-             * 改签航班到达时间
+             * modify_flight_arr_time.
              */
             public Builder modifyFlightArrTime(String modifyFlightArrTime) {
                 this.modifyFlightArrTime = modifyFlightArrTime;
@@ -1324,7 +1324,7 @@ public class TicketChangingFlightListResponseBody extends TeaModel {
             }
 
             /**
-             * 改签航班出发日期
+             * modify_flight_dep_date.
              */
             public Builder modifyFlightDepDate(String modifyFlightDepDate) {
                 this.modifyFlightDepDate = modifyFlightDepDate;
@@ -1332,7 +1332,7 @@ public class TicketChangingFlightListResponseBody extends TeaModel {
             }
 
             /**
-             * 改签航班出发时间
+             * modify_flight_dep_time.
              */
             public Builder modifyFlightDepTime(String modifyFlightDepTime) {
                 this.modifyFlightDepTime = modifyFlightDepTime;
@@ -1340,7 +1340,7 @@ public class TicketChangingFlightListResponseBody extends TeaModel {
             }
 
             /**
-             * ??id
+             * session_id.
              */
             public Builder sessionId(String sessionId) {
                 this.sessionId = sessionId;
@@ -1348,7 +1348,7 @@ public class TicketChangingFlightListResponseBody extends TeaModel {
             }
 
             /**
-             * 经停落地时间
+             * stop_arr_time.
              */
             public Builder stopArrTime(String stopArrTime) {
                 this.stopArrTime = stopArrTime;
@@ -1356,7 +1356,7 @@ public class TicketChangingFlightListResponseBody extends TeaModel {
             }
 
             /**
-             * 经停城市
+             * stop_city.
              */
             public Builder stopCity(String stopCity) {
                 this.stopCity = stopCity;
@@ -1364,7 +1364,7 @@ public class TicketChangingFlightListResponseBody extends TeaModel {
             }
 
             /**
-             * 经停起飞时间
+             * stop_dep_time.
              */
             public Builder stopDepTime(String stopDepTime) {
                 this.stopDepTime = stopDepTime;
@@ -1405,7 +1405,7 @@ public class TicketChangingFlightListResponseBody extends TeaModel {
             private java.util.List < FlightInfoList> flightInfoList; 
 
             /**
-             * 改签航班列表
+             * flight_info_list.
              */
             public Builder flightInfoList(java.util.List < FlightInfoList> flightInfoList) {
                 this.flightInfoList = flightInfoList;

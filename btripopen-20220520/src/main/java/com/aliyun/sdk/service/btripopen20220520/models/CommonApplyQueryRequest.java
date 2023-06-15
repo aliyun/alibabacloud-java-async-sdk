@@ -107,7 +107,7 @@ public class CommonApplyQueryRequest extends Request {
         }
 
         /**
-         * 业务类型
+         * biz_category.
          */
         public Builder bizCategory(Integer bizCategory) {
             this.putQueryParameter("biz_category", bizCategory);
@@ -116,7 +116,7 @@ public class CommonApplyQueryRequest extends Request {
         }
 
         /**
-         * 无userId时传缺省值superAdmin
+         * user_id.
          */
         public Builder userId(String userId) {
             this.putQueryParameter("user_id", userId);

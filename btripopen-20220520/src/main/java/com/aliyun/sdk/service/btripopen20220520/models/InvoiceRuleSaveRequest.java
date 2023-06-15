@@ -98,7 +98,7 @@ public class InvoiceRuleSaveRequest extends Request {
         } 
 
         /**
-         * 是否全员适用
+         * all_employe.
          */
         public Builder allEmploye(Boolean allEmploye) {
             this.putBodyParameter("all_employe", allEmploye);
@@ -107,7 +107,7 @@ public class InvoiceRuleSaveRequest extends Request {
         }
 
         /**
-         * 当非全员时，启用该适用名单
+         * entities.
          */
         public Builder entities(java.util.List < Entities> entities) {
             String entitiesShrink = shrink(entities, "entities", "json");

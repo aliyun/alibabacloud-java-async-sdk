@@ -394,7 +394,7 @@ public class TrainOrderQueryResponseBody extends TeaModel {
             private String toStationName; 
 
             /**
-             * 改签车厢号
+             * change_coach_no.
              */
             public Builder changeCoachNo(String changeCoachNo) {
                 this.changeCoachNo = changeCoachNo;
@@ -402,7 +402,7 @@ public class TrainOrderQueryResponseBody extends TeaModel {
             }
 
             /**
-             * 改签差价
+             * change_gap_fee.
              */
             public Builder changeGapFee(Double changeGapFee) {
                 this.changeGapFee = changeGapFee;
@@ -410,7 +410,7 @@ public class TrainOrderQueryResponseBody extends TeaModel {
             }
 
             /**
-             * 改签手续费
+             * change_handling_fee.
              */
             public Builder changeHandlingFee(Double changeHandlingFee) {
                 this.changeHandlingFee = changeHandlingFee;
@@ -418,7 +418,7 @@ public class TrainOrderQueryResponseBody extends TeaModel {
             }
 
             /**
-             * 改签座位号
+             * change_seat_no.
              */
             public Builder changeSeatNo(String changeSeatNo) {
                 this.changeSeatNo = changeSeatNo;
@@ -426,7 +426,7 @@ public class TrainOrderQueryResponseBody extends TeaModel {
             }
 
             /**
-             * 改签车次类型
+             * change_seat_type_name.
              */
             public Builder changeSeatTypeName(String changeSeatTypeName) {
                 this.changeSeatTypeName = changeSeatTypeName;
@@ -434,7 +434,7 @@ public class TrainOrderQueryResponseBody extends TeaModel {
             }
 
             /**
-             * 改签服务费
+             * change_service_fee.
              */
             public Builder changeServiceFee(Double changeServiceFee) {
                 this.changeServiceFee = changeServiceFee;
@@ -450,7 +450,7 @@ public class TrainOrderQueryResponseBody extends TeaModel {
             }
 
             /**
-             * 改签座位类型
+             * change_train_type_name.
              */
             public Builder changeTrainTypeName(String changeTrainTypeName) {
                 this.changeTrainTypeName = changeTrainTypeName;
@@ -458,7 +458,7 @@ public class TrainOrderQueryResponseBody extends TeaModel {
             }
 
             /**
-             * 进站时间
+             * check_in_time.
              */
             public Builder checkInTime(String checkInTime) {
                 this.checkInTime = checkInTime;
@@ -466,7 +466,7 @@ public class TrainOrderQueryResponseBody extends TeaModel {
             }
 
             /**
-             * 出站时间
+             * check_out_time.
              */
             public Builder checkOutTime(String checkOutTime) {
                 this.checkOutTime = checkOutTime;
@@ -474,7 +474,7 @@ public class TrainOrderQueryResponseBody extends TeaModel {
             }
 
             /**
-             * 改签票到达时间
+             * end_time.
              */
             public Builder endTime(String endTime) {
                 this.endTime = endTime;
@@ -490,7 +490,7 @@ public class TrainOrderQueryResponseBody extends TeaModel {
             }
 
             /**
-             * 创建时间
+             * gmt_create.
              */
             public Builder gmtCreate(String gmtCreate) {
                 this.gmtCreate = gmtCreate;
@@ -498,7 +498,7 @@ public class TrainOrderQueryResponseBody extends TeaModel {
             }
 
             /**
-             * 修改时间
+             * gmt_modify.
              */
             public Builder gmtModify(String gmtModify) {
                 this.gmtModify = gmtModify;
@@ -506,7 +506,7 @@ public class TrainOrderQueryResponseBody extends TeaModel {
             }
 
             /**
-             * 改签原票
+             * origin_ticket_no.
              */
             public Builder originTicketNo(String originTicketNo) {
                 this.originTicketNo = originTicketNo;
@@ -514,7 +514,7 @@ public class TrainOrderQueryResponseBody extends TeaModel {
             }
 
             /**
-             * 12306票状态
+             * out_ticket_status.
              */
             public Builder outTicketStatus(String outTicketStatus) {
                 this.outTicketStatus = outTicketStatus;
@@ -522,7 +522,7 @@ public class TrainOrderQueryResponseBody extends TeaModel {
             }
 
             /**
-             * 改签票启程时间
+             * start_time.
              */
             public Builder startTime(String startTime) {
                 this.startTime = startTime;
@@ -530,7 +530,7 @@ public class TrainOrderQueryResponseBody extends TeaModel {
             }
 
             /**
-             * 改签票号
+             * ticket_no.
              */
             public Builder ticketNo(String ticketNo) {
                 this.ticketNo = ticketNo;
@@ -591,7 +591,7 @@ public class TrainOrderQueryResponseBody extends TeaModel {
             private String title; 
 
             /**
-             * 发票id
+             * id.
              */
             public Builder id(Long id) {
                 this.id = id;
@@ -599,7 +599,7 @@ public class TrainOrderQueryResponseBody extends TeaModel {
             }
 
             /**
-             * 发票抬头
+             * title.
              */
             public Builder title(String title) {
                 this.title = title;
@@ -856,7 +856,7 @@ public class TrainOrderQueryResponseBody extends TeaModel {
             private String userId; 
 
             /**
-             * 申请单id
+             * apply_id.
              */
             public Builder applyId(String applyId) {
                 this.applyId = applyId;
@@ -864,7 +864,7 @@ public class TrainOrderQueryResponseBody extends TeaModel {
             }
 
             /**
-             * 申请单-出行事由
+             * btrip_title.
              */
             public Builder btripTitle(String btripTitle) {
                 this.btripTitle = btripTitle;
@@ -872,7 +872,7 @@ public class TrainOrderQueryResponseBody extends TeaModel {
             }
 
             /**
-             * 联系人姓名
+             * contact_name.
              */
             public Builder contactName(String contactName) {
                 this.contactName = contactName;
@@ -880,7 +880,7 @@ public class TrainOrderQueryResponseBody extends TeaModel {
             }
 
             /**
-             * 企业id
+             * corp_id.
              */
             public Builder corpId(String corpId) {
                 this.corpId = corpId;
@@ -888,7 +888,7 @@ public class TrainOrderQueryResponseBody extends TeaModel {
             }
 
             /**
-             * 企业名称
+             * corp_name.
              */
             public Builder corpName(String corpName) {
                 this.corpName = corpName;
@@ -928,7 +928,7 @@ public class TrainOrderQueryResponseBody extends TeaModel {
             }
 
             /**
-             * 订单创建时间
+             * gmt_create.
              */
             public Builder gmtCreate(String gmtCreate) {
                 this.gmtCreate = gmtCreate;
@@ -936,7 +936,7 @@ public class TrainOrderQueryResponseBody extends TeaModel {
             }
 
             /**
-             * 订单更新时间
+             * gmt_modify.
              */
             public Builder gmtModify(String gmtModify) {
                 this.gmtModify = gmtModify;
@@ -944,7 +944,7 @@ public class TrainOrderQueryResponseBody extends TeaModel {
             }
 
             /**
-             * 行程单id
+             * itinerary_id.
              */
             public Builder itineraryId(String itineraryId) {
                 this.itineraryId = itineraryId;
@@ -952,7 +952,7 @@ public class TrainOrderQueryResponseBody extends TeaModel {
             }
 
             /**
-             * 订单号
+             * order_id.
              */
             public Builder orderId(Long orderId) {
                 this.orderId = orderId;
@@ -960,7 +960,7 @@ public class TrainOrderQueryResponseBody extends TeaModel {
             }
 
             /**
-             * 订单状态
+             * order_status.
              */
             public Builder orderStatus(Integer orderStatus) {
                 this.orderStatus = orderStatus;
@@ -968,7 +968,7 @@ public class TrainOrderQueryResponseBody extends TeaModel {
             }
 
             /**
-             * 三方申请单id
+             * thirdpart_apply_id.
              */
             public Builder thirdpartApplyId(String thirdpartApplyId) {
                 this.thirdpartApplyId = thirdpartApplyId;
@@ -976,7 +976,7 @@ public class TrainOrderQueryResponseBody extends TeaModel {
             }
 
             /**
-             * 三方企业id
+             * thirdpart_corp_id.
              */
             public Builder thirdpartCorpId(String thirdpartCorpId) {
                 this.thirdpartCorpId = thirdpartCorpId;
@@ -984,7 +984,7 @@ public class TrainOrderQueryResponseBody extends TeaModel {
             }
 
             /**
-             * 三方行程单id
+             * thirdpart_itinerary_id.
              */
             public Builder thirdpartItineraryId(String thirdpartItineraryId) {
                 this.thirdpartItineraryId = thirdpartItineraryId;
@@ -992,7 +992,7 @@ public class TrainOrderQueryResponseBody extends TeaModel {
             }
 
             /**
-             * 航程类型：0单程  1往返 2中转
+             * trip_type.
              */
             public Builder tripType(Integer tripType) {
                 this.tripType = tripType;
@@ -1000,7 +1000,7 @@ public class TrainOrderQueryResponseBody extends TeaModel {
             }
 
             /**
-             * 下单人dingId
+             * user_id.
              */
             public Builder userId(String userId) {
                 this.userId = userId;
@@ -1149,7 +1149,7 @@ public class TrainOrderQueryResponseBody extends TeaModel {
             private Integer userType; 
 
             /**
-             * 成本中心id
+             * cost_center_id.
              */
             public Builder costCenterId(Long costCenterId) {
                 this.costCenterId = costCenterId;
@@ -1157,7 +1157,7 @@ public class TrainOrderQueryResponseBody extends TeaModel {
             }
 
             /**
-             * 成本中心名称
+             * cost_center_name.
              */
             public Builder costCenterName(String costCenterName) {
                 this.costCenterName = costCenterName;
@@ -1165,7 +1165,7 @@ public class TrainOrderQueryResponseBody extends TeaModel {
             }
 
             /**
-             * 成本中心编码
+             * cost_center_number.
              */
             public Builder costCenterNumber(String costCenterNumber) {
                 this.costCenterNumber = costCenterNumber;
@@ -1173,7 +1173,7 @@ public class TrainOrderQueryResponseBody extends TeaModel {
             }
 
             /**
-             * 项目编码
+             * project_code.
              */
             public Builder projectCode(String projectCode) {
                 this.projectCode = projectCode;
@@ -1181,7 +1181,7 @@ public class TrainOrderQueryResponseBody extends TeaModel {
             }
 
             /**
-             * 项目id
+             * project_id.
              */
             public Builder projectId(Long projectId) {
                 this.projectId = projectId;
@@ -1189,7 +1189,7 @@ public class TrainOrderQueryResponseBody extends TeaModel {
             }
 
             /**
-             * 项目名称
+             * project_title.
              */
             public Builder projectTitle(String projectTitle) {
                 this.projectTitle = projectTitle;
@@ -1197,7 +1197,7 @@ public class TrainOrderQueryResponseBody extends TeaModel {
             }
 
             /**
-             * 三方项目id
+             * thirdpart_project_id.
              */
             public Builder thirdpartProjectId(String thirdpartProjectId) {
                 this.thirdpartProjectId = thirdpartProjectId;
@@ -1205,7 +1205,7 @@ public class TrainOrderQueryResponseBody extends TeaModel {
             }
 
             /**
-             * 出行人dingId
+             * user_id.
              */
             public Builder userId(String userId) {
                 this.userId = userId;
@@ -1213,7 +1213,7 @@ public class TrainOrderQueryResponseBody extends TeaModel {
             }
 
             /**
-             * 出行人姓名
+             * user_name.
              */
             public Builder userName(String userName) {
                 this.userName = userName;
@@ -1221,7 +1221,7 @@ public class TrainOrderQueryResponseBody extends TeaModel {
             }
 
             /**
-             * 出行人类型 0:内部/1:外部
+             * user_type.
              */
             public Builder userType(Integer userType) {
                 this.userType = userType;
@@ -1334,7 +1334,7 @@ public class TrainOrderQueryResponseBody extends TeaModel {
             private Integer type; 
 
             /**
-             * 交易类目编码
+             * category_code.
              */
             public Builder categoryCode(Integer categoryCode) {
                 this.categoryCode = categoryCode;
@@ -1342,7 +1342,7 @@ public class TrainOrderQueryResponseBody extends TeaModel {
             }
 
             /**
-             * 流水创建时间
+             * gmt_create.
              */
             public Builder gmtCreate(String gmtCreate) {
                 this.gmtCreate = gmtCreate;
@@ -1350,7 +1350,7 @@ public class TrainOrderQueryResponseBody extends TeaModel {
             }
 
             /**
-             * 乘机人
+             * passenger_name.
              */
             public Builder passengerName(String passengerName) {
                 this.passengerName = passengerName;
@@ -1358,7 +1358,7 @@ public class TrainOrderQueryResponseBody extends TeaModel {
             }
 
             /**
-             * 结算方式:1：个人现付，2:企业现付,4:企业月结，8、企业预存
+             * pay_type.
              */
             public Builder payType(Integer payType) {
                 this.payType = payType;
@@ -1366,7 +1366,7 @@ public class TrainOrderQueryResponseBody extends TeaModel {
             }
 
             /**
-             * 交易金额
+             * price.
              */
             public Builder price(Double price) {
                 this.price = price;
@@ -1374,7 +1374,7 @@ public class TrainOrderQueryResponseBody extends TeaModel {
             }
 
             /**
-             * 交易流水号
+             * trade_id.
              */
             public Builder tradeId(String tradeId) {
                 this.tradeId = tradeId;
@@ -1382,7 +1382,7 @@ public class TrainOrderQueryResponseBody extends TeaModel {
             }
 
             /**
-             * 资金流向,1:支出，2:收入
+             * type.
              */
             public Builder type(Integer type) {
                 this.type = type;
@@ -1471,7 +1471,7 @@ public class TrainOrderQueryResponseBody extends TeaModel {
             private String ticketNo; 
 
             /**
-             * 创建时间
+             * gmt_create.
              */
             public Builder gmtCreate(String gmtCreate) {
                 this.gmtCreate = gmtCreate;
@@ -1479,7 +1479,7 @@ public class TrainOrderQueryResponseBody extends TeaModel {
             }
 
             /**
-             * 修改时间
+             * gmt_modify.
              */
             public Builder gmtModify(String gmtModify) {
                 this.gmtModify = gmtModify;
@@ -1487,7 +1487,7 @@ public class TrainOrderQueryResponseBody extends TeaModel {
             }
 
             /**
-             * 退票金额
+             * refund_fee.
              */
             public Builder refundFee(Double refundFee) {
                 this.refundFee = refundFee;
@@ -1495,7 +1495,7 @@ public class TrainOrderQueryResponseBody extends TeaModel {
             }
 
             /**
-             * 退票手续费
+             * refund_service_fee.
              */
             public Builder refundServiceFee(Double refundServiceFee) {
                 this.refundServiceFee = refundServiceFee;
@@ -1503,7 +1503,7 @@ public class TrainOrderQueryResponseBody extends TeaModel {
             }
 
             /**
-             * 退票票号
+             * ticket_no.
              */
             public Builder ticketNo(String ticketNo) {
                 this.ticketNo = ticketNo;
@@ -1748,7 +1748,7 @@ public class TrainOrderQueryResponseBody extends TeaModel {
             private String userId; 
 
             /**
-             * 是否改签
+             * changed.
              */
             public Builder changed(Boolean changed) {
                 this.changed = changed;
@@ -1756,7 +1756,7 @@ public class TrainOrderQueryResponseBody extends TeaModel {
             }
 
             /**
-             * 进站时间
+             * check_in_time.
              */
             public Builder checkInTime(String checkInTime) {
                 this.checkInTime = checkInTime;
@@ -1764,7 +1764,7 @@ public class TrainOrderQueryResponseBody extends TeaModel {
             }
 
             /**
-             * 出站时间
+             * check_out_time.
              */
             public Builder checkOutTime(String checkOutTime) {
                 this.checkOutTime = checkOutTime;
@@ -1772,7 +1772,7 @@ public class TrainOrderQueryResponseBody extends TeaModel {
             }
 
             /**
-             * 车厢号
+             * coach_no.
              */
             public Builder coachNo(String coachNo) {
                 this.coachNo = coachNo;
@@ -1780,7 +1780,7 @@ public class TrainOrderQueryResponseBody extends TeaModel {
             }
 
             /**
-             * 到达时间
+             * end_time.
              */
             public Builder endTime(String endTime) {
                 this.endTime = endTime;
@@ -1788,7 +1788,7 @@ public class TrainOrderQueryResponseBody extends TeaModel {
             }
 
             /**
-             * 创建时间
+             * gmt_create.
              */
             public Builder gmtCreate(String gmtCreate) {
                 this.gmtCreate = gmtCreate;
@@ -1796,7 +1796,7 @@ public class TrainOrderQueryResponseBody extends TeaModel {
             }
 
             /**
-             * 修改时间
+             * gmt_modify.
              */
             public Builder gmtModify(String gmtModify) {
                 this.gmtModify = gmtModify;
@@ -1804,7 +1804,7 @@ public class TrainOrderQueryResponseBody extends TeaModel {
             }
 
             /**
-             * 12306票状态
+             * out_ticket_status.
              */
             public Builder outTicketStatus(String outTicketStatus) {
                 this.outTicketStatus = outTicketStatus;
@@ -1812,7 +1812,7 @@ public class TrainOrderQueryResponseBody extends TeaModel {
             }
 
             /**
-             * 正票支付方式 1个人支付/2企业支付/3混付
+             * pay_type.
              */
             public Builder payType(Integer payType) {
                 this.payType = payType;
@@ -1820,7 +1820,7 @@ public class TrainOrderQueryResponseBody extends TeaModel {
             }
 
             /**
-             * 座位号
+             * seat_no.
              */
             public Builder seatNo(String seatNo) {
                 this.seatNo = seatNo;
@@ -1828,7 +1828,7 @@ public class TrainOrderQueryResponseBody extends TeaModel {
             }
 
             /**
-             * 座位类型
+             * seat_type_name.
              */
             public Builder seatTypeName(String seatTypeName) {
                 this.seatTypeName = seatTypeName;
@@ -1836,7 +1836,7 @@ public class TrainOrderQueryResponseBody extends TeaModel {
             }
 
             /**
-             * 预订服务费
+             * service_fee.
              */
             public Builder serviceFee(Double serviceFee) {
                 this.serviceFee = serviceFee;
@@ -1844,7 +1844,7 @@ public class TrainOrderQueryResponseBody extends TeaModel {
             }
 
             /**
-             * 启程时间
+             * start_time.
              */
             public Builder startTime(String startTime) {
                 this.startTime = startTime;
@@ -1852,7 +1852,7 @@ public class TrainOrderQueryResponseBody extends TeaModel {
             }
 
             /**
-             * 票号
+             * ticket_no.
              */
             public Builder ticketNo(String ticketNo) {
                 this.ticketNo = ticketNo;
@@ -1860,7 +1860,7 @@ public class TrainOrderQueryResponseBody extends TeaModel {
             }
 
             /**
-             * 票价
+             * ticket_price.
              */
             public Builder ticketPrice(Double ticketPrice) {
                 this.ticketPrice = ticketPrice;
@@ -1868,7 +1868,7 @@ public class TrainOrderQueryResponseBody extends TeaModel {
             }
 
             /**
-             * 票状态
+             * ticket_status.
              */
             public Builder ticketStatus(Integer ticketStatus) {
                 this.ticketStatus = ticketStatus;
@@ -1876,7 +1876,7 @@ public class TrainOrderQueryResponseBody extends TeaModel {
             }
 
             /**
-             * 车次类型
+             * train_type_name.
              */
             public Builder trainTypeName(String trainTypeName) {
                 this.trainTypeName = trainTypeName;
@@ -1884,7 +1884,7 @@ public class TrainOrderQueryResponseBody extends TeaModel {
             }
 
             /**
-             * 车票对应乘客dingId
+             * user_id.
              */
             public Builder userId(String userId) {
                 this.userId = userId;
@@ -1985,7 +1985,7 @@ public class TrainOrderQueryResponseBody extends TeaModel {
             private String trainNo; 
 
             /**
-             * 到站时间
+             * arr_time.
              */
             public Builder arrTime(String arrTime) {
                 this.arrTime = arrTime;
@@ -1993,7 +1993,7 @@ public class TrainOrderQueryResponseBody extends TeaModel {
             }
 
             /**
-             * 发车时间
+             * dep_time.
              */
             public Builder depTime(String depTime) {
                 this.depTime = depTime;
@@ -2001,7 +2001,7 @@ public class TrainOrderQueryResponseBody extends TeaModel {
             }
 
             /**
-             * 发车站名称
+             * from_station_name.
              */
             public Builder fromStationName(String fromStationName) {
                 this.fromStationName = fromStationName;
@@ -2009,7 +2009,7 @@ public class TrainOrderQueryResponseBody extends TeaModel {
             }
 
             /**
-             * 运行时长
+             * run_time.
              */
             public Builder runTime(Long runTime) {
                 this.runTime = runTime;
@@ -2017,7 +2017,7 @@ public class TrainOrderQueryResponseBody extends TeaModel {
             }
 
             /**
-             * 目的站名称
+             * to_station_name.
              */
             public Builder toStationName(String toStationName) {
                 this.toStationName = toStationName;
@@ -2025,7 +2025,7 @@ public class TrainOrderQueryResponseBody extends TeaModel {
             }
 
             /**
-             * 车次编号
+             * train_no.
              */
             public Builder trainNo(String trainNo) {
                 this.trainNo = trainNo;

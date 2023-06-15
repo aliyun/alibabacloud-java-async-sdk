@@ -367,7 +367,7 @@ public class HotelSearchRequest extends Request {
         } 
 
         /**
-         * 成人数
+         * adult_num.
          */
         public Builder adultNum(String adultNum) {
             this.putQueryParameter("adult_num", adultNum);
@@ -376,7 +376,7 @@ public class HotelSearchRequest extends Request {
         }
 
         /**
-         * 筛选品牌code列表
+         * brand_code.
          */
         public Builder brandCode(java.util.List < String > brandCode) {
             String brandCodeShrink = shrink(brandCode, "brand_code", "json");
@@ -395,7 +395,7 @@ public class HotelSearchRequest extends Request {
         }
 
         /**
-         * 入住日期，yyyy-MM-dd
+         * check_in_date.
          */
         public Builder checkInDate(String checkInDate) {
             this.putQueryParameter("check_in_date", checkInDate);
@@ -404,7 +404,7 @@ public class HotelSearchRequest extends Request {
         }
 
         /**
-         * 离店日期，yyyy-MM-dd
+         * check_out_date.
          */
         public Builder checkOutDate(String checkOutDate) {
             this.putQueryParameter("check_out_date", checkOutDate);
@@ -413,7 +413,7 @@ public class HotelSearchRequest extends Request {
         }
 
         /**
-         * 城市code
+         * city_code.
          */
         public Builder cityCode(String cityCode) {
             this.putQueryParameter("city_code", cityCode);
@@ -422,7 +422,7 @@ public class HotelSearchRequest extends Request {
         }
 
         /**
-         * 排序方向
+         * dir.
          */
         public Builder dir(Integer dir) {
             this.putQueryParameter("dir", dir);
@@ -431,7 +431,7 @@ public class HotelSearchRequest extends Request {
         }
 
         /**
-         * 搜索距离范围，单位：米
+         * distance.
          */
         public Builder distance(Integer distance) {
             this.putQueryParameter("distance", distance);
@@ -440,7 +440,7 @@ public class HotelSearchRequest extends Request {
         }
 
         /**
-         * 行政区code
+         * district_code.
          */
         public Builder districtCode(String districtCode) {
             this.putQueryParameter("district_code", districtCode);
@@ -449,7 +449,7 @@ public class HotelSearchRequest extends Request {
         }
 
         /**
-         * 筛选星级列表
+         * hotel_star.
          */
         public Builder hotelStar(String hotelStar) {
             this.putQueryParameter("hotel_star", hotelStar);
@@ -458,7 +458,7 @@ public class HotelSearchRequest extends Request {
         }
 
         /**
-         * 只查协议酒店
+         * is_protocol.
          */
         public Builder isProtocol(Boolean isProtocol) {
             this.putQueryParameter("is_protocol", isProtocol);
@@ -467,7 +467,7 @@ public class HotelSearchRequest extends Request {
         }
 
         /**
-         * 关键词（关键词搜索时用)
+         * key_words.
          */
         public Builder keyWords(String keyWords) {
             this.putQueryParameter("key_words", keyWords);
@@ -476,7 +476,7 @@ public class HotelSearchRequest extends Request {
         }
 
         /**
-         * 经纬度（高德），经度在前维度在后
+         * location.
          */
         public Builder location(String location) {
             this.putQueryParameter("location", location);
@@ -485,7 +485,7 @@ public class HotelSearchRequest extends Request {
         }
 
         /**
-         * 最高金额
+         * max_price.
          */
         public Builder maxPrice(Double maxPrice) {
             this.putQueryParameter("max_price", maxPrice);
@@ -494,7 +494,7 @@ public class HotelSearchRequest extends Request {
         }
 
         /**
-         * 最低金额
+         * min_price.
          */
         public Builder minPrice(Double minPrice) {
             this.putQueryParameter("min_price", minPrice);
@@ -503,7 +503,7 @@ public class HotelSearchRequest extends Request {
         }
 
         /**
-         * 第几页，默认1
+         * page_no.
          */
         public Builder pageNo(Integer pageNo) {
             this.putQueryParameter("page_no", pageNo);
@@ -512,7 +512,7 @@ public class HotelSearchRequest extends Request {
         }
 
         /**
-         * 每页几条，默认20
+         * page_size.
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("page_size", pageSize);
@@ -521,7 +521,7 @@ public class HotelSearchRequest extends Request {
         }
 
         /**
-         * 是否支持混合支付 0 支持 1不支持
+         * pay_over_type.
          */
         public Builder payOverType(Integer payOverType) {
             this.putQueryParameter("pay_over_type", payOverType);
@@ -530,7 +530,7 @@ public class HotelSearchRequest extends Request {
         }
 
         /**
-         * 支付方式0:企业支付；1个人支付
+         * payment_type.
          */
         public Builder paymentType(Integer paymentType) {
             this.putQueryParameter("payment_type", paymentType);
@@ -539,7 +539,7 @@ public class HotelSearchRequest extends Request {
         }
 
         /**
-         * 筛选酒店Id
+         * shids.
          */
         public Builder shids(java.util.List < Long > shids) {
             String shidsShrink = shrink(shids, "shids", "json");
@@ -549,7 +549,7 @@ public class HotelSearchRequest extends Request {
         }
 
         /**
-         * 排序方式
+         * sort_code.
          */
         public Builder sortCode(Integer sortCode) {
             this.putQueryParameter("sort_code", sortCode);
@@ -558,7 +558,7 @@ public class HotelSearchRequest extends Request {
         }
 
         /**
-         * 角色0表示普通人，1表示特殊申请人
+         * super_man.
          */
         public Builder superMan(Integer superMan) {
             this.putQueryParameter("super_man", superMan);

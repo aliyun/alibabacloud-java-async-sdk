@@ -69,7 +69,7 @@ public class InvoiceDeleteRequest extends Request {
         } 
 
         /**
-         * 第三方发票id
+         * third_part_id.
          */
         public Builder thirdPartId(String thirdPartId) {
             this.putQueryParameter("third_part_id", thirdPartId);

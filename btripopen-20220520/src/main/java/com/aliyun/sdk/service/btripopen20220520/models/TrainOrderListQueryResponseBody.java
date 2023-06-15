@@ -544,7 +544,7 @@ public class TrainOrderListQueryResponseBody extends TeaModel {
             }
 
             /**
-             * 目的地
+             * end_city.
              */
             public Builder endCity(String endCity) {
                 this.endCity = endCity;
@@ -552,7 +552,7 @@ public class TrainOrderListQueryResponseBody extends TeaModel {
             }
 
             /**
-             * 结束时间
+             * end_time.
              */
             public Builder endTime(String endTime) {
                 this.endTime = endTime;
@@ -568,7 +568,7 @@ public class TrainOrderListQueryResponseBody extends TeaModel {
             }
 
             /**
-             * 改签前车次号
+             * original_train_no.
              */
             public Builder originalTrainNo(String originalTrainNo) {
                 this.originalTrainNo = originalTrainNo;
@@ -600,7 +600,7 @@ public class TrainOrderListQueryResponseBody extends TeaModel {
             }
 
             /**
-             * 座位类型
+             * seat_type.
              */
             public Builder seatType(String seatType) {
                 this.seatType = seatType;
@@ -608,7 +608,7 @@ public class TrainOrderListQueryResponseBody extends TeaModel {
             }
 
             /**
-             * 始发地
+             * start_city.
              */
             public Builder startCity(String startCity) {
                 this.startCity = startCity;
@@ -616,7 +616,7 @@ public class TrainOrderListQueryResponseBody extends TeaModel {
             }
 
             /**
-             * 开始时间
+             * start_time.
              */
             public Builder startTime(String startTime) {
                 this.startTime = startTime;
@@ -632,7 +632,7 @@ public class TrainOrderListQueryResponseBody extends TeaModel {
             }
 
             /**
-             * 火车车次号
+             * train_no.
              */
             public Builder trainNo(String trainNo) {
                 this.trainNo = trainNo;
@@ -1194,7 +1194,7 @@ public class TrainOrderListQueryResponseBody extends TeaModel {
             }
 
             /**
-             * 申请单名称
+             * btrip_title.
              */
             public Builder btripTitle(String btripTitle) {
                 this.btripTitle = btripTitle;
@@ -1314,7 +1314,7 @@ public class TrainOrderListQueryResponseBody extends TeaModel {
             }
 
             /**
-             * 项目code
+             * project_code.
              */
             public Builder projectCode(String projectCode) {
                 this.projectCode = projectCode;
@@ -1322,7 +1322,7 @@ public class TrainOrderListQueryResponseBody extends TeaModel {
             }
 
             /**
-             * 项目id
+             * project_id.
              */
             public Builder projectId(Long projectId) {
                 this.projectId = projectId;
@@ -1330,7 +1330,7 @@ public class TrainOrderListQueryResponseBody extends TeaModel {
             }
 
             /**
-             * 项目名称
+             * project_title.
              */
             public Builder projectTitle(String projectTitle) {
                 this.projectTitle = projectTitle;
@@ -1354,7 +1354,7 @@ public class TrainOrderListQueryResponseBody extends TeaModel {
             }
 
             /**
-             * 座位类型
+             * seat_type.
              */
             public Builder seatType(String seatType) {
                 this.seatType = seatType;
@@ -1370,7 +1370,7 @@ public class TrainOrderListQueryResponseBody extends TeaModel {
             }
 
             /**
-             * 第三方项目id
+             * third_part_project_id.
              */
             public Builder thirdPartProjectId(String thirdPartProjectId) {
                 this.thirdPartProjectId = thirdPartProjectId;
@@ -1378,7 +1378,7 @@ public class TrainOrderListQueryResponseBody extends TeaModel {
             }
 
             /**
-             * 第三方申请单
+             * thirdpart_apply_id.
              */
             public Builder thirdpartApplyId(String thirdpartApplyId) {
                 this.thirdpartApplyId = thirdpartApplyId;
@@ -1426,7 +1426,7 @@ public class TrainOrderListQueryResponseBody extends TeaModel {
             }
 
             /**
-             * 出行人信息
+             * user_affiliate_list.
              */
             public Builder userAffiliateList(java.util.List < UserAffiliateList> userAffiliateList) {
                 this.userAffiliateList = userAffiliateList;
@@ -1507,7 +1507,7 @@ public class TrainOrderListQueryResponseBody extends TeaModel {
             private Integer totalNumber; 
 
             /**
-             * 当前页
+             * page.
              */
             public Builder page(Integer page) {
                 this.page = page;
@@ -1515,7 +1515,7 @@ public class TrainOrderListQueryResponseBody extends TeaModel {
             }
 
             /**
-             * 每页大小
+             * page_size.
              */
             public Builder pageSize(Integer pageSize) {
                 this.pageSize = pageSize;
@@ -1523,7 +1523,7 @@ public class TrainOrderListQueryResponseBody extends TeaModel {
             }
 
             /**
-             * 总记录数
+             * total_number.
              */
             public Builder totalNumber(Integer totalNumber) {
                 this.totalNumber = totalNumber;

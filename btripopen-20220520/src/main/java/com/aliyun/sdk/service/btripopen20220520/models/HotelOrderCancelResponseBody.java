@@ -190,7 +190,7 @@ public class HotelOrderCancelResponseBody extends TeaModel {
             private Long forfeitFee; 
 
             /**
-             * 是否取消成功
+             * cancel_success.
              */
             public Builder cancelSuccess(Boolean cancelSuccess) {
                 this.cancelSuccess = cancelSuccess;
@@ -198,7 +198,7 @@ public class HotelOrderCancelResponseBody extends TeaModel {
             }
 
             /**
-             * 罚金金额，单位：分
+             * forfeit_fee.
              */
             public Builder forfeitFee(Long forfeitFee) {
                 this.forfeitFee = forfeitFee;

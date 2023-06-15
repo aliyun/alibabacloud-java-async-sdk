@@ -331,7 +331,7 @@ public class HotelOrderListQueryResponseBody extends TeaModel {
             }
 
             /**
-             * 发配类型：1 增值税普通发票，2 增值税专用发票
+             * invoice_type.
              */
             public Builder invoiceType(Integer invoiceType) {
                 this.invoiceType = invoiceType;
@@ -1050,7 +1050,7 @@ public class HotelOrderListQueryResponseBody extends TeaModel {
             }
 
             /**
-             * 申请单名称
+             * btrip_title.
              */
             public Builder btripTitle(String btripTitle) {
                 this.btripTitle = btripTitle;
@@ -1170,7 +1170,7 @@ public class HotelOrderListQueryResponseBody extends TeaModel {
             }
 
             /**
-             * 酒店发票类型
+             * hotel_support_vat_invoice_type.
              */
             public Builder hotelSupportVatInvoiceType(Integer hotelSupportVatInvoiceType) {
                 this.hotelSupportVatInvoiceType = hotelSupportVatInvoiceType;
@@ -1242,7 +1242,7 @@ public class HotelOrderListQueryResponseBody extends TeaModel {
             }
 
             /**
-             * 项目code
+             * project_code.
              */
             public Builder projectCode(String projectCode) {
                 this.projectCode = projectCode;
@@ -1250,7 +1250,7 @@ public class HotelOrderListQueryResponseBody extends TeaModel {
             }
 
             /**
-             * 项目id
+             * project_id.
              */
             public Builder projectId(Long projectId) {
                 this.projectId = projectId;
@@ -1258,7 +1258,7 @@ public class HotelOrderListQueryResponseBody extends TeaModel {
             }
 
             /**
-             * 项目名称
+             * project_title.
              */
             public Builder projectTitle(String projectTitle) {
                 this.projectTitle = projectTitle;
@@ -1282,7 +1282,7 @@ public class HotelOrderListQueryResponseBody extends TeaModel {
             }
 
             /**
-             * 第三方申请单
+             * thirdpart_apply_id.
              */
             public Builder thirdpartApplyId(String thirdpartApplyId) {
                 this.thirdpartApplyId = thirdpartApplyId;
@@ -1298,7 +1298,7 @@ public class HotelOrderListQueryResponseBody extends TeaModel {
             }
 
             /**
-             * 第三方项目id
+             * thirdpart_project_id.
              */
             public Builder thirdpartProjectId(String thirdpartProjectId) {
                 this.thirdpartProjectId = thirdpartProjectId;
@@ -1306,7 +1306,7 @@ public class HotelOrderListQueryResponseBody extends TeaModel {
             }
 
             /**
-             * 出行人信息
+             * user_affiliate_list.
              */
             public Builder userAffiliateList(java.util.List < UserAffiliateList> userAffiliateList) {
                 this.userAffiliateList = userAffiliateList;
@@ -1387,7 +1387,7 @@ public class HotelOrderListQueryResponseBody extends TeaModel {
             private Integer totalNumber; 
 
             /**
-             * 当前页
+             * page.
              */
             public Builder page(Integer page) {
                 this.page = page;
@@ -1395,7 +1395,7 @@ public class HotelOrderListQueryResponseBody extends TeaModel {
             }
 
             /**
-             * 每页大小
+             * page_size.
              */
             public Builder pageSize(Integer pageSize) {
                 this.pageSize = pageSize;
@@ -1403,7 +1403,7 @@ public class HotelOrderListQueryResponseBody extends TeaModel {
             }
 
             /**
-             * 总记录数
+             * total_number.
              */
             public Builder totalNumber(Integer totalNumber) {
                 this.totalNumber = totalNumber;

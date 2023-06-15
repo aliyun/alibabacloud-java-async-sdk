@@ -763,7 +763,7 @@ public class VatInvoiceScanQueryResponseBody extends TeaModel {
             private String totalAmountInWords; 
 
             /**
-             * 价税合计金额
+             * amount_with_tax.
              */
             public Builder amountWithTax(String amountWithTax) {
                 this.amountWithTax = amountWithTax;
@@ -771,7 +771,7 @@ public class VatInvoiceScanQueryResponseBody extends TeaModel {
             }
 
             /**
-             * 不含税金额
+             * amount_without_tax.
              */
             public Builder amountWithoutTax(String amountWithoutTax) {
                 this.amountWithoutTax = amountWithoutTax;
@@ -779,7 +779,7 @@ public class VatInvoiceScanQueryResponseBody extends TeaModel {
             }
 
             /**
-             * 出账日
+             * bill_date.
              */
             public Builder billDate(String billDate) {
                 this.billDate = billDate;
@@ -811,7 +811,7 @@ public class VatInvoiceScanQueryResponseBody extends TeaModel {
             }
 
             /**
-             * 发票代码
+             * invoice_code.
              */
             public Builder invoiceCode(String invoiceCode) {
                 this.invoiceCode = invoiceCode;
@@ -819,7 +819,7 @@ public class VatInvoiceScanQueryResponseBody extends TeaModel {
             }
 
             /**
-             * 开票日期
+             * invoice_day.
              */
             public Builder invoiceDay(String invoiceDay) {
                 this.invoiceDay = invoiceDay;
@@ -827,7 +827,7 @@ public class VatInvoiceScanQueryResponseBody extends TeaModel {
             }
 
             /**
-             * 开票详情
+             * invoice_detail.
              */
             public Builder invoiceDetail(String invoiceDetail) {
                 this.invoiceDetail = invoiceDetail;
@@ -851,7 +851,7 @@ public class VatInvoiceScanQueryResponseBody extends TeaModel {
             }
 
             /**
-             * 发票号码
+             * invoice_no.
              */
             public Builder invoiceNo(String invoiceNo) {
                 this.invoiceNo = invoiceNo;
@@ -859,7 +859,7 @@ public class VatInvoiceScanQueryResponseBody extends TeaModel {
             }
 
             /**
-             * 发票子任务id
+             * invoice_sub_task_id.
              */
             public Builder invoiceSubTaskId(Long invoiceSubTaskId) {
                 this.invoiceSubTaskId = invoiceSubTaskId;
@@ -867,7 +867,7 @@ public class VatInvoiceScanQueryResponseBody extends TeaModel {
             }
 
             /**
-             * 发票类型
+             * invoice_type.
              */
             public Builder invoiceType(Integer invoiceType) {
                 this.invoiceType = invoiceType;
@@ -875,7 +875,7 @@ public class VatInvoiceScanQueryResponseBody extends TeaModel {
             }
 
             /**
-             * 发票类型描述
+             * invoice_type_desc.
              */
             public Builder invoiceTypeDesc(String invoiceTypeDesc) {
                 this.invoiceTypeDesc = invoiceTypeDesc;
@@ -891,7 +891,7 @@ public class VatInvoiceScanQueryResponseBody extends TeaModel {
             }
 
             /**
-             * 图片地址，专票已邮寄前为空，普票已开票前为空
+             * oss_url.
              */
             public Builder ossUrl(String ossUrl) {
                 this.ossUrl = ossUrl;
@@ -899,7 +899,7 @@ public class VatInvoiceScanQueryResponseBody extends TeaModel {
             }
 
             /**
-             * 密码区
+             * password_area.
              */
             public Builder passwordArea(String passwordArea) {
                 this.passwordArea = passwordArea;
@@ -923,7 +923,7 @@ public class VatInvoiceScanQueryResponseBody extends TeaModel {
             }
 
             /**
-             * 购方名称
+             * purchaser_name.
              */
             public Builder purchaserName(String purchaserName) {
                 this.purchaserName = purchaserName;
@@ -931,7 +931,7 @@ public class VatInvoiceScanQueryResponseBody extends TeaModel {
             }
 
             /**
-             * 购方税号
+             * purchaser_tax_no.
              */
             public Builder purchaserTaxNo(String purchaserTaxNo) {
                 this.purchaserTaxNo = purchaserTaxNo;
@@ -979,7 +979,7 @@ public class VatInvoiceScanQueryResponseBody extends TeaModel {
             }
 
             /**
-             * 销方名称
+             * seller_name.
              */
             public Builder sellerName(String sellerName) {
                 this.sellerName = sellerName;
@@ -987,7 +987,7 @@ public class VatInvoiceScanQueryResponseBody extends TeaModel {
             }
 
             /**
-             * 销方税号
+             * seller_tax_no.
              */
             public Builder sellerTaxNo(String sellerTaxNo) {
                 this.sellerTaxNo = sellerTaxNo;
@@ -1003,7 +1003,7 @@ public class VatInvoiceScanQueryResponseBody extends TeaModel {
             }
 
             /**
-             * 税额
+             * tax_amount.
              */
             public Builder taxAmount(String taxAmount) {
                 this.taxAmount = taxAmount;
@@ -1011,7 +1011,7 @@ public class VatInvoiceScanQueryResponseBody extends TeaModel {
             }
 
             /**
-             * 税率
+             * tax_rate.
              */
             public Builder taxRate(String taxRate) {
                 this.taxRate = taxRate;

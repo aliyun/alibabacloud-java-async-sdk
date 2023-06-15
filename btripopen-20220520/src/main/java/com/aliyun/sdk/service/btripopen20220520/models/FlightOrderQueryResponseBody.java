@@ -334,7 +334,7 @@ public class FlightOrderQueryResponseBody extends TeaModel {
             private Double upgradeFee; 
 
             /**
-             * 改签票到达时间
+             * arr_time.
              */
             public Builder arrTime(String arrTime) {
                 this.arrTime = arrTime;
@@ -342,7 +342,7 @@ public class FlightOrderQueryResponseBody extends TeaModel {
             }
 
             /**
-             * 改签舱位，如：V
+             * change_cabin.
              */
             public Builder changeCabin(String changeCabin) {
                 this.changeCabin = changeCabin;
@@ -350,7 +350,7 @@ public class FlightOrderQueryResponseBody extends TeaModel {
             }
 
             /**
-             * 改签舱等，如：Y,Y:经济舱,C:公务舱,F:头等舱
+             * change_cabin_level.
              */
             public Builder changeCabinLevel(String changeCabinLevel) {
                 this.changeCabinLevel = changeCabinLevel;
@@ -358,7 +358,7 @@ public class FlightOrderQueryResponseBody extends TeaModel {
             }
 
             /**
-             * 机票改签费
+             * change_fee.
              */
             public Builder changeFee(Double changeFee) {
                 this.changeFee = changeFee;
@@ -366,7 +366,7 @@ public class FlightOrderQueryResponseBody extends TeaModel {
             }
 
             /**
-             * 改签航班号
+             * change_flight_no.
              */
             public Builder changeFlightNo(String changeFlightNo) {
                 this.changeFlightNo = changeFlightNo;
@@ -374,7 +374,7 @@ public class FlightOrderQueryResponseBody extends TeaModel {
             }
 
             /**
-             * 改签单id
+             * change_order_id.
              */
             public Builder changeOrderId(Long changeOrderId) {
                 this.changeOrderId = changeOrderId;
@@ -382,7 +382,7 @@ public class FlightOrderQueryResponseBody extends TeaModel {
             }
 
             /**
-             * 改签原因
+             * change_reason.
              */
             public Builder changeReason(String changeReason) {
                 this.changeReason = changeReason;
@@ -390,7 +390,7 @@ public class FlightOrderQueryResponseBody extends TeaModel {
             }
 
             /**
-             * 改签类型：0自愿/1非自愿
+             * change_type.
              */
             public Builder changeType(Integer changeType) {
                 this.changeType = changeType;
@@ -398,7 +398,7 @@ public class FlightOrderQueryResponseBody extends TeaModel {
             }
 
             /**
-             * 改签票起飞时间
+             * dep_time.
              */
             public Builder depTime(String depTime) {
                 this.depTime = depTime;
@@ -406,7 +406,7 @@ public class FlightOrderQueryResponseBody extends TeaModel {
             }
 
             /**
-             * 创建时间
+             * gmt_create.
              */
             public Builder gmtCreate(String gmtCreate) {
                 this.gmtCreate = gmtCreate;
@@ -414,7 +414,7 @@ public class FlightOrderQueryResponseBody extends TeaModel {
             }
 
             /**
-             * 修改时间
+             * gmt_modify.
              */
             public Builder gmtModify(String gmtModify) {
                 this.gmtModify = gmtModify;
@@ -422,7 +422,7 @@ public class FlightOrderQueryResponseBody extends TeaModel {
             }
 
             /**
-             * 改签原票号
+             * origin_ticket_no.
              */
             public Builder originTicketNo(String originTicketNo) {
                 this.originTicketNo = originTicketNo;
@@ -430,7 +430,7 @@ public class FlightOrderQueryResponseBody extends TeaModel {
             }
 
             /**
-             * 改签票号
+             * ticket_no.
              */
             public Builder ticketNo(String ticketNo) {
                 this.ticketNo = ticketNo;
@@ -438,7 +438,7 @@ public class FlightOrderQueryResponseBody extends TeaModel {
             }
 
             /**
-             * 机票升舱费
+             * upgrade_fee.
              */
             public Builder upgradeFee(Double upgradeFee) {
                 this.upgradeFee = upgradeFee;
@@ -659,7 +659,7 @@ public class FlightOrderQueryResponseBody extends TeaModel {
             private String flightNo; 
 
             /**
-             * 航司码，如：CA
+             * airline_code.
              */
             public Builder airlineCode(String airlineCode) {
                 this.airlineCode = airlineCode;
@@ -667,7 +667,7 @@ public class FlightOrderQueryResponseBody extends TeaModel {
             }
 
             /**
-             * 航司名称 ，如：中国国航
+             * airline_name.
              */
             public Builder airlineName(String airlineName) {
                 this.airlineName = airlineName;
@@ -675,7 +675,7 @@ public class FlightOrderQueryResponseBody extends TeaModel {
             }
 
             /**
-             * 到达机场三字码
+             * arr_airport_code.
              */
             public Builder arrAirportCode(String arrAirportCode) {
                 this.arrAirportCode = arrAirportCode;
@@ -683,7 +683,7 @@ public class FlightOrderQueryResponseBody extends TeaModel {
             }
 
             /**
-             * 到达机场站名称
+             * arr_airport_name.
              */
             public Builder arrAirportName(String arrAirportName) {
                 this.arrAirportName = arrAirportName;
@@ -691,7 +691,7 @@ public class FlightOrderQueryResponseBody extends TeaModel {
             }
 
             /**
-             * 到达城市三字码
+             * arr_city_code.
              */
             public Builder arrCityCode(String arrCityCode) {
                 this.arrCityCode = arrCityCode;
@@ -699,7 +699,7 @@ public class FlightOrderQueryResponseBody extends TeaModel {
             }
 
             /**
-             * 到达城市名称
+             * arr_city_name.
              */
             public Builder arrCityName(String arrCityName) {
                 this.arrCityName = arrCityName;
@@ -707,7 +707,7 @@ public class FlightOrderQueryResponseBody extends TeaModel {
             }
 
             /**
-             * 到达时间
+             * arr_time.
              */
             public Builder arrTime(String arrTime) {
                 this.arrTime = arrTime;
@@ -715,7 +715,7 @@ public class FlightOrderQueryResponseBody extends TeaModel {
             }
 
             /**
-             * 舱位
+             * cabin.
              */
             public Builder cabin(String cabin) {
                 this.cabin = cabin;
@@ -723,7 +723,7 @@ public class FlightOrderQueryResponseBody extends TeaModel {
             }
 
             /**
-             * 舱等
+             * cabin_level.
              */
             public Builder cabinLevel(String cabinLevel) {
                 this.cabinLevel = cabinLevel;
@@ -731,7 +731,7 @@ public class FlightOrderQueryResponseBody extends TeaModel {
             }
 
             /**
-             * 出发机场三字码
+             * dep_airport_code.
              */
             public Builder depAirportCode(String depAirportCode) {
                 this.depAirportCode = depAirportCode;
@@ -739,7 +739,7 @@ public class FlightOrderQueryResponseBody extends TeaModel {
             }
 
             /**
-             * 出发机场名称
+             * dep_airport_name.
              */
             public Builder depAirportName(String depAirportName) {
                 this.depAirportName = depAirportName;
@@ -747,7 +747,7 @@ public class FlightOrderQueryResponseBody extends TeaModel {
             }
 
             /**
-             * 出发城市三字码
+             * dep_city_code.
              */
             public Builder depCityCode(String depCityCode) {
                 this.depCityCode = depCityCode;
@@ -755,7 +755,7 @@ public class FlightOrderQueryResponseBody extends TeaModel {
             }
 
             /**
-             * 出发城市名称，如：北京
+             * dep_city_name.
              */
             public Builder depCityName(String depCityName) {
                 this.depCityName = depCityName;
@@ -763,7 +763,7 @@ public class FlightOrderQueryResponseBody extends TeaModel {
             }
 
             /**
-             * 起飞时间
+             * dep_time.
              */
             public Builder depTime(String depTime) {
                 this.depTime = depTime;
@@ -771,7 +771,7 @@ public class FlightOrderQueryResponseBody extends TeaModel {
             }
 
             /**
-             * 里程
+             * flight_mile.
              */
             public Builder flightMile(Integer flightMile) {
                 this.flightMile = flightMile;
@@ -779,7 +779,7 @@ public class FlightOrderQueryResponseBody extends TeaModel {
             }
 
             /**
-             * 航班号
+             * flight_no.
              */
             public Builder flightNo(String flightNo) {
                 this.flightNo = flightNo;
@@ -892,7 +892,7 @@ public class FlightOrderQueryResponseBody extends TeaModel {
             private String ticketNo; 
 
             /**
-             * 创建时间
+             * gmt_create.
              */
             public Builder gmtCreate(String gmtCreate) {
                 this.gmtCreate = gmtCreate;
@@ -900,7 +900,7 @@ public class FlightOrderQueryResponseBody extends TeaModel {
             }
 
             /**
-             * 更新时间
+             * gmt_modify.
              */
             public Builder gmtModify(String gmtModify) {
                 this.gmtModify = gmtModify;
@@ -908,7 +908,7 @@ public class FlightOrderQueryResponseBody extends TeaModel {
             }
 
             /**
-             * 退票单id
+             * refund_order_id.
              */
             public Builder refundOrderId(Long refundOrderId) {
                 this.refundOrderId = refundOrderId;
@@ -916,7 +916,7 @@ public class FlightOrderQueryResponseBody extends TeaModel {
             }
 
             /**
-             * 退票原因
+             * refund_reason.
              */
             public Builder refundReason(String refundReason) {
                 this.refundReason = refundReason;
@@ -924,7 +924,7 @@ public class FlightOrderQueryResponseBody extends TeaModel {
             }
 
             /**
-             * 退票金额
+             * refund_ticket_fee.
              */
             public Builder refundTicketFee(Double refundTicketFee) {
                 this.refundTicketFee = refundTicketFee;
@@ -932,7 +932,7 @@ public class FlightOrderQueryResponseBody extends TeaModel {
             }
 
             /**
-             * 退票类型：0自愿/1非自愿
+             * refund_type.
              */
             public Builder refundType(Integer refundType) {
                 this.refundType = refundType;
@@ -940,7 +940,7 @@ public class FlightOrderQueryResponseBody extends TeaModel {
             }
 
             /**
-             * 退票票号
+             * ticket_no.
              */
             public Builder ticketNo(String ticketNo) {
                 this.ticketNo = ticketNo;
@@ -1125,7 +1125,7 @@ public class FlightOrderQueryResponseBody extends TeaModel {
             private String userId; 
 
             /**
-             * 燃油
+             * build_price.
              */
             public Builder buildPrice(Double buildPrice) {
                 this.buildPrice = buildPrice;
@@ -1133,7 +1133,7 @@ public class FlightOrderQueryResponseBody extends TeaModel {
             }
 
             /**
-             * 是否改签
+             * changed.
              */
             public Builder changed(Boolean changed) {
                 this.changed = changed;
@@ -1141,7 +1141,7 @@ public class FlightOrderQueryResponseBody extends TeaModel {
             }
 
             /**
-             * 折扣
+             * discount.
              */
             public Builder discount(Integer discount) {
                 this.discount = discount;
@@ -1149,7 +1149,7 @@ public class FlightOrderQueryResponseBody extends TeaModel {
             }
 
             /**
-             * 创建时间
+             * gmt_create.
              */
             public Builder gmtCreate(String gmtCreate) {
                 this.gmtCreate = gmtCreate;
@@ -1157,7 +1157,7 @@ public class FlightOrderQueryResponseBody extends TeaModel {
             }
 
             /**
-             * 更新时间
+             * gmt_modify.
              */
             public Builder gmtModify(String gmtModify) {
                 this.gmtModify = gmtModify;
@@ -1165,7 +1165,7 @@ public class FlightOrderQueryResponseBody extends TeaModel {
             }
 
             /**
-             * 燃油
+             * oil_price.
              */
             public Builder oilPrice(Double oilPrice) {
                 this.oilPrice = oilPrice;
@@ -1173,7 +1173,7 @@ public class FlightOrderQueryResponseBody extends TeaModel {
             }
 
             /**
-             * 正票支付方式 1个人支付/2企业支付/3混付
+             * pay_type.
              */
             public Builder payType(Integer payType) {
                 this.payType = payType;
@@ -1181,7 +1181,7 @@ public class FlightOrderQueryResponseBody extends TeaModel {
             }
 
             /**
-             * 结算金额
+             * settle_price.
              */
             public Builder settlePrice(Double settlePrice) {
                 this.settlePrice = settlePrice;
@@ -1189,7 +1189,7 @@ public class FlightOrderQueryResponseBody extends TeaModel {
             }
 
             /**
-             * 票号
+             * ticket_no.
              */
             public Builder ticketNo(String ticketNo) {
                 this.ticketNo = ticketNo;
@@ -1197,7 +1197,7 @@ public class FlightOrderQueryResponseBody extends TeaModel {
             }
 
             /**
-             * 票价
+             * ticket_price.
              */
             public Builder ticketPrice(Double ticketPrice) {
                 this.ticketPrice = ticketPrice;
@@ -1205,7 +1205,7 @@ public class FlightOrderQueryResponseBody extends TeaModel {
             }
 
             /**
-             * 票状态
+             * ticket_status.
              */
             public Builder ticketStatus(String ticketStatus) {
                 this.ticketStatus = ticketStatus;
@@ -1213,7 +1213,7 @@ public class FlightOrderQueryResponseBody extends TeaModel {
             }
 
             /**
-             * 票状态
+             * ticket_status_code.
              */
             public Builder ticketStatusCode(Integer ticketStatusCode) {
                 this.ticketStatusCode = ticketStatusCode;
@@ -1221,7 +1221,7 @@ public class FlightOrderQueryResponseBody extends TeaModel {
             }
 
             /**
-             * 机票对应乘客dingId
+             * user_id.
              */
             public Builder userId(String userId) {
                 this.userId = userId;
@@ -1298,7 +1298,7 @@ public class FlightOrderQueryResponseBody extends TeaModel {
             private String type; 
 
             /**
-             * 保险金额
+             * amount.
              */
             public Builder amount(Double amount) {
                 this.amount = amount;
@@ -1306,7 +1306,7 @@ public class FlightOrderQueryResponseBody extends TeaModel {
             }
 
             /**
-             * 保险单号
+             * insurance_no.
              */
             public Builder insuranceNo(String insuranceNo) {
                 this.insuranceNo = insuranceNo;
@@ -1314,7 +1314,7 @@ public class FlightOrderQueryResponseBody extends TeaModel {
             }
 
             /**
-             * 保险状态
+             * status.
              */
             public Builder status(Integer status) {
                 this.status = status;
@@ -1322,7 +1322,7 @@ public class FlightOrderQueryResponseBody extends TeaModel {
             }
 
             /**
-             * 保险类型
+             * type.
              */
             public Builder type(String type) {
                 this.type = type;
@@ -1375,7 +1375,7 @@ public class FlightOrderQueryResponseBody extends TeaModel {
             private String title; 
 
             /**
-             * 发票id
+             * id.
              */
             public Builder id(Long id) {
                 this.id = id;
@@ -1383,7 +1383,7 @@ public class FlightOrderQueryResponseBody extends TeaModel {
             }
 
             /**
-             * 发票抬头
+             * title.
              */
             public Builder title(String title) {
                 this.title = title;
@@ -1616,7 +1616,7 @@ public class FlightOrderQueryResponseBody extends TeaModel {
             private String userId; 
 
             /**
-             * 申请单id
+             * apply_id.
              */
             public Builder applyId(String applyId) {
                 this.applyId = applyId;
@@ -1624,7 +1624,7 @@ public class FlightOrderQueryResponseBody extends TeaModel {
             }
 
             /**
-             * 申请单-出行事由
+             * btrip_title.
              */
             public Builder btripTitle(String btripTitle) {
                 this.btripTitle = btripTitle;
@@ -1632,7 +1632,7 @@ public class FlightOrderQueryResponseBody extends TeaModel {
             }
 
             /**
-             * 联系人姓名
+             * contact_name.
              */
             public Builder contactName(String contactName) {
                 this.contactName = contactName;
@@ -1640,7 +1640,7 @@ public class FlightOrderQueryResponseBody extends TeaModel {
             }
 
             /**
-             * 企业id
+             * corp_id.
              */
             public Builder corpId(String corpId) {
                 this.corpId = corpId;
@@ -1648,7 +1648,7 @@ public class FlightOrderQueryResponseBody extends TeaModel {
             }
 
             /**
-             * 企业名称
+             * corp_name.
              */
             public Builder corpName(String corpName) {
                 this.corpName = corpName;
@@ -1672,7 +1672,7 @@ public class FlightOrderQueryResponseBody extends TeaModel {
             }
 
             /**
-             * 订单创建时间
+             * gmt_create.
              */
             public Builder gmtCreate(String gmtCreate) {
                 this.gmtCreate = gmtCreate;
@@ -1680,7 +1680,7 @@ public class FlightOrderQueryResponseBody extends TeaModel {
             }
 
             /**
-             * 订单更新时间
+             * gmt_modify.
              */
             public Builder gmtModify(String gmtModify) {
                 this.gmtModify = gmtModify;
@@ -1688,7 +1688,7 @@ public class FlightOrderQueryResponseBody extends TeaModel {
             }
 
             /**
-             * 行程单id
+             * itinerary_id.
              */
             public Builder itineraryId(String itineraryId) {
                 this.itineraryId = itineraryId;
@@ -1696,7 +1696,7 @@ public class FlightOrderQueryResponseBody extends TeaModel {
             }
 
             /**
-             * 订单号
+             * order_id.
              */
             public Builder orderId(Long orderId) {
                 this.orderId = orderId;
@@ -1704,7 +1704,7 @@ public class FlightOrderQueryResponseBody extends TeaModel {
             }
 
             /**
-             * 订单状态
+             * order_status.
              */
             public Builder orderStatus(Integer orderStatus) {
                 this.orderStatus = orderStatus;
@@ -1712,7 +1712,7 @@ public class FlightOrderQueryResponseBody extends TeaModel {
             }
 
             /**
-             * 三方申请单id
+             * thirdpart_apply_id.
              */
             public Builder thirdpartApplyId(String thirdpartApplyId) {
                 this.thirdpartApplyId = thirdpartApplyId;
@@ -1720,7 +1720,7 @@ public class FlightOrderQueryResponseBody extends TeaModel {
             }
 
             /**
-             * 三方企业id
+             * thirdpart_corp_id.
              */
             public Builder thirdpartCorpId(String thirdpartCorpId) {
                 this.thirdpartCorpId = thirdpartCorpId;
@@ -1728,7 +1728,7 @@ public class FlightOrderQueryResponseBody extends TeaModel {
             }
 
             /**
-             * 三方行程单id
+             * thirdpart_itinerary_id.
              */
             public Builder thirdpartItineraryId(String thirdpartItineraryId) {
                 this.thirdpartItineraryId = thirdpartItineraryId;
@@ -1736,7 +1736,7 @@ public class FlightOrderQueryResponseBody extends TeaModel {
             }
 
             /**
-             * 航程类型：0单程  1往返 2中转
+             * trip_type.
              */
             public Builder tripType(Integer tripType) {
                 this.tripType = tripType;
@@ -1744,7 +1744,7 @@ public class FlightOrderQueryResponseBody extends TeaModel {
             }
 
             /**
-             * 下单人dingId
+             * user_id.
              */
             public Builder userId(String userId) {
                 this.userId = userId;
@@ -1893,7 +1893,7 @@ public class FlightOrderQueryResponseBody extends TeaModel {
             private Integer userType; 
 
             /**
-             * 成本中心id
+             * cost_center_id.
              */
             public Builder costCenterId(Long costCenterId) {
                 this.costCenterId = costCenterId;
@@ -1901,7 +1901,7 @@ public class FlightOrderQueryResponseBody extends TeaModel {
             }
 
             /**
-             * 成本中心名称
+             * cost_center_name.
              */
             public Builder costCenterName(String costCenterName) {
                 this.costCenterName = costCenterName;
@@ -1909,7 +1909,7 @@ public class FlightOrderQueryResponseBody extends TeaModel {
             }
 
             /**
-             * 成本中心编码
+             * cost_center_number.
              */
             public Builder costCenterNumber(String costCenterNumber) {
                 this.costCenterNumber = costCenterNumber;
@@ -1917,7 +1917,7 @@ public class FlightOrderQueryResponseBody extends TeaModel {
             }
 
             /**
-             * 项目编码
+             * project_code.
              */
             public Builder projectCode(String projectCode) {
                 this.projectCode = projectCode;
@@ -1925,7 +1925,7 @@ public class FlightOrderQueryResponseBody extends TeaModel {
             }
 
             /**
-             * 项目id
+             * project_id.
              */
             public Builder projectId(Long projectId) {
                 this.projectId = projectId;
@@ -1933,7 +1933,7 @@ public class FlightOrderQueryResponseBody extends TeaModel {
             }
 
             /**
-             * 项目名称
+             * project_title.
              */
             public Builder projectTitle(String projectTitle) {
                 this.projectTitle = projectTitle;
@@ -1941,7 +1941,7 @@ public class FlightOrderQueryResponseBody extends TeaModel {
             }
 
             /**
-             * 三方项目id
+             * thirdpart_project_id.
              */
             public Builder thirdpartProjectId(String thirdpartProjectId) {
                 this.thirdpartProjectId = thirdpartProjectId;
@@ -1949,7 +1949,7 @@ public class FlightOrderQueryResponseBody extends TeaModel {
             }
 
             /**
-             * 出行人dingId
+             * user_id.
              */
             public Builder userId(String userId) {
                 this.userId = userId;
@@ -1957,7 +1957,7 @@ public class FlightOrderQueryResponseBody extends TeaModel {
             }
 
             /**
-             * 出行人姓名
+             * user_name.
              */
             public Builder userName(String userName) {
                 this.userName = userName;
@@ -1965,7 +1965,7 @@ public class FlightOrderQueryResponseBody extends TeaModel {
             }
 
             /**
-             * 出行人类型 0:内部/1:外部
+             * user_type.
              */
             public Builder userType(Integer userType) {
                 this.userType = userType;
@@ -2078,7 +2078,7 @@ public class FlightOrderQueryResponseBody extends TeaModel {
             private Integer type; 
 
             /**
-             * 交易类目编码
+             * category_code.
              */
             public Builder categoryCode(Integer categoryCode) {
                 this.categoryCode = categoryCode;
@@ -2086,7 +2086,7 @@ public class FlightOrderQueryResponseBody extends TeaModel {
             }
 
             /**
-             * 流水创建时间
+             * gmt_create.
              */
             public Builder gmtCreate(String gmtCreate) {
                 this.gmtCreate = gmtCreate;
@@ -2094,7 +2094,7 @@ public class FlightOrderQueryResponseBody extends TeaModel {
             }
 
             /**
-             * 乘机人
+             * passenger_name.
              */
             public Builder passengerName(String passengerName) {
                 this.passengerName = passengerName;
@@ -2102,7 +2102,7 @@ public class FlightOrderQueryResponseBody extends TeaModel {
             }
 
             /**
-             * 结算方式:1：个人现付，2:企业现付,4:企业月结，8、企业预存
+             * pay_type.
              */
             public Builder payType(Integer payType) {
                 this.payType = payType;
@@ -2110,7 +2110,7 @@ public class FlightOrderQueryResponseBody extends TeaModel {
             }
 
             /**
-             * 交易金额
+             * price.
              */
             public Builder price(Double price) {
                 this.price = price;
@@ -2118,7 +2118,7 @@ public class FlightOrderQueryResponseBody extends TeaModel {
             }
 
             /**
-             * 交易流水号
+             * trade_id.
              */
             public Builder tradeId(String tradeId) {
                 this.tradeId = tradeId;
@@ -2126,7 +2126,7 @@ public class FlightOrderQueryResponseBody extends TeaModel {
             }
 
             /**
-             * 资金流向,1:支出，2:收入
+             * type.
              */
             public Builder type(Integer type) {
                 this.type = type;

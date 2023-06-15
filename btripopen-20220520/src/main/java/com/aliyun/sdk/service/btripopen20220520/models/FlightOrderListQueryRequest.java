@@ -298,7 +298,7 @@ public class FlightOrderListQueryRequest extends Request {
         }
 
         /**
-         * 无userId时传缺省值superAdmin
+         * user_id.
          */
         public Builder userId(String userId) {
             this.putQueryParameter("user_id", userId);

@@ -159,7 +159,7 @@ public class TicketChangingEnquiryRequest extends Request {
         } 
 
         /**
-         * 到达城市三字码
+         * arr_city.
          */
         public Builder arrCity(String arrCity) {
             this.putQueryParameter("arr_city", arrCity);
@@ -168,7 +168,7 @@ public class TicketChangingEnquiryRequest extends Request {
         }
 
         /**
-         * 出发城市三字码
+         * dep_city.
          */
         public Builder depCity(String depCity) {
             this.putQueryParameter("dep_city", depCity);
@@ -177,7 +177,7 @@ public class TicketChangingEnquiryRequest extends Request {
         }
 
         /**
-         * 分销外部订单号
+         * dis_order_id.
          */
         public Builder disOrderId(String disOrderId) {
             this.putQueryParameter("dis_order_id", disOrderId);
@@ -186,7 +186,7 @@ public class TicketChangingEnquiryRequest extends Request {
         }
 
         /**
-         * 是否自愿:1自愿，0非自愿
+         * is_voluntary.
          */
         public Builder isVoluntary(Integer isVoluntary) {
             this.putQueryParameter("is_voluntary", isVoluntary);
@@ -195,7 +195,7 @@ public class TicketChangingEnquiryRequest extends Request {
         }
 
         /**
-         * 改签日期，计算改签价格需要传递
+         * modify_depart_date.
          */
         public Builder modifyDepartDate(String modifyDepartDate) {
             this.putQueryParameter("modify_depart_date", modifyDepartDate);
@@ -204,7 +204,7 @@ public class TicketChangingEnquiryRequest extends Request {
         }
 
         /**
-         * 改签航班号，计算改签价格需要传递
+         * modify_flight_no.
          */
         public Builder modifyFlightNo(String modifyFlightNo) {
             this.putQueryParameter("modify_flight_no", modifyFlightNo);
@@ -213,7 +213,7 @@ public class TicketChangingEnquiryRequest extends Request {
         }
 
         /**
-         * sessionId
+         * session_id.
          */
         public Builder sessionId(String sessionId) {
             this.putQueryParameter("session_id", sessionId);

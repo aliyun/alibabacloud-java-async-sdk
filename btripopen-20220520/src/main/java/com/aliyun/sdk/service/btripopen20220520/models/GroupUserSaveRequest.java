@@ -141,7 +141,7 @@ public class GroupUserSaveRequest extends Request {
         } 
 
         /**
-         * 工号
+         * job_no.
          */
         public Builder jobNo(String jobNo) {
             this.putBodyParameter("job_no", jobNo);
@@ -159,7 +159,7 @@ public class GroupUserSaveRequest extends Request {
         }
 
         /**
-         * 员工名称EN
+         * real_name_en.
          */
         public Builder realNameEn(String realNameEn) {
             this.putBodyParameter("real_name_en", realNameEn);
@@ -168,7 +168,7 @@ public class GroupUserSaveRequest extends Request {
         }
 
         /**
-         * 归属企业列表
+         * sub_corp_id_list.
          */
         public Builder subCorpIdList(java.util.List < SubCorpIdList> subCorpIdList) {
             String subCorpIdListShrink = shrink(subCorpIdList, "sub_corp_id_list", "json");
@@ -178,7 +178,7 @@ public class GroupUserSaveRequest extends Request {
         }
 
         /**
-         * 员工ID
+         * user_id.
          */
         public Builder userId(String userId) {
             this.putBodyParameter("user_id", userId);
@@ -187,7 +187,7 @@ public class GroupUserSaveRequest extends Request {
         }
 
         /**
-         * 员工名称
+         * user_name.
          */
         public Builder userName(String userName) {
             this.putBodyParameter("user_name", userName);
@@ -213,7 +213,6 @@ public class GroupUserSaveRequest extends Request {
 
     public static class SubCorpIdList extends TeaModel {
         @NameInMap("depart_ids")
-        @Validation(required = true)
         private java.util.List < String > departIds;
 
         @NameInMap("leave_status")
@@ -289,7 +288,7 @@ public class GroupUserSaveRequest extends Request {
             private String subCorpId; 
 
             /**
-             * 部门Id集合
+             * depart_ids.
              */
             public Builder departIds(java.util.List < String > departIds) {
                 this.departIds = departIds;
@@ -297,7 +296,7 @@ public class GroupUserSaveRequest extends Request {
             }
 
             /**
-             * 离职状态（0 在职 1 离职）
+             * leave_status.
              */
             public Builder leaveStatus(Integer leaveStatus) {
                 this.leaveStatus = leaveStatus;
@@ -305,7 +304,7 @@ public class GroupUserSaveRequest extends Request {
             }
 
             /**
-             * 直属主管id
+             * manager_user_id.
              */
             public Builder managerUserId(String managerUserId) {
                 this.managerUserId = managerUserId;
@@ -313,7 +312,7 @@ public class GroupUserSaveRequest extends Request {
             }
 
             /**
-             * 职级
+             * position_level.
              */
             public Builder positionLevel(String positionLevel) {
                 this.positionLevel = positionLevel;
@@ -321,7 +320,7 @@ public class GroupUserSaveRequest extends Request {
             }
 
             /**
-             * 子企业ID
+             * sub_corp_id.
              */
             public Builder subCorpId(String subCorpId) {
                 this.subCorpId = subCorpId;

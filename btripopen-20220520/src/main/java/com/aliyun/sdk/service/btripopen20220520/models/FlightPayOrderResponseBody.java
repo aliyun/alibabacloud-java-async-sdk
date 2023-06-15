@@ -214,7 +214,7 @@ public class FlightPayOrderResponseBody extends TeaModel {
             private Integer payStatus; 
 
             /**
-             * 实际支付金额
+             * actual_pay_price.
              */
             public Builder actualPayPrice(Long actualPayPrice) {
                 this.actualPayPrice = actualPayPrice;
@@ -222,7 +222,7 @@ public class FlightPayOrderResponseBody extends TeaModel {
             }
 
             /**
-             * 支付宝交易单号
+             * alipay_trade_no.
              */
             public Builder alipayTradeNo(String alipayTradeNo) {
                 this.alipayTradeNo = alipayTradeNo;
@@ -230,7 +230,7 @@ public class FlightPayOrderResponseBody extends TeaModel {
             }
 
             /**
-             * 最晚支付时间
+             * last_pay_time.
              */
             public Builder lastPayTime(String lastPayTime) {
                 this.lastPayTime = lastPayTime;
@@ -238,7 +238,7 @@ public class FlightPayOrderResponseBody extends TeaModel {
             }
 
             /**
-             * 支付状态
+             * pay_status.
              */
             public Builder payStatus(Integer payStatus) {
                 this.payStatus = payStatus;

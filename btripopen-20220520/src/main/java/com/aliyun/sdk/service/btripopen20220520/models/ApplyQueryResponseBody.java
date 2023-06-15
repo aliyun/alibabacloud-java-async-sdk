@@ -564,7 +564,7 @@ public class ApplyQueryResponseBody extends TeaModel {
             }
 
             /**
-             * 限制差标类型。0-不限差标，1-限制差标
+             * reserve_type.
              */
             public Builder reserveType(Integer reserveType) {
                 this.reserveType = reserveType;
@@ -633,7 +633,7 @@ public class ApplyQueryResponseBody extends TeaModel {
             private String type; 
 
             /**
-             * 比例/固定金额
+             * param.
              */
             public Builder param(String param) {
                 this.param = param;
@@ -641,7 +641,7 @@ public class ApplyQueryResponseBody extends TeaModel {
             }
 
             /**
-             * 合住公式（HotelShareEnum.type）
+             * type.
              */
             public Builder type(String type) {
                 this.type = type;
@@ -1071,7 +1071,7 @@ public class ApplyQueryResponseBody extends TeaModel {
             private Integer trafficType; 
 
             /**
-             * 到达日期
+             * arr_date.
              */
             public Builder arrDate(String arrDate) {
                 this.arrDate = arrDate;
@@ -1079,7 +1079,7 @@ public class ApplyQueryResponseBody extends TeaModel {
             }
 
             /**
-             * 离抵城市code，多个城市用中文“，”隔开
+             * city_code_set.
              */
             public Builder cityCodeSet(String cityCodeSet) {
                 this.cityCodeSet = cityCodeSet;
@@ -1087,7 +1087,7 @@ public class ApplyQueryResponseBody extends TeaModel {
             }
 
             /**
-             * 离抵城市名称，多个城市用中文“，”隔开
+             * city_set.
              */
             public Builder citySet(String citySet) {
                 this.citySet = citySet;
@@ -1095,7 +1095,7 @@ public class ApplyQueryResponseBody extends TeaModel {
             }
 
             /**
-             * 成本中心名称
+             * cost_center_name.
              */
             public Builder costCenterName(String costCenterName) {
                 this.costCenterName = costCenterName;
@@ -1103,7 +1103,7 @@ public class ApplyQueryResponseBody extends TeaModel {
             }
 
             /**
-             * 出发日期
+             * dep_date.
              */
             public Builder depDate(String depDate) {
                 this.depDate = depDate;
@@ -1111,7 +1111,7 @@ public class ApplyQueryResponseBody extends TeaModel {
             }
 
             /**
-             * 发票抬头
+             * invoice_name.
              */
             public Builder invoiceName(String invoiceName) {
                 this.invoiceName = invoiceName;
@@ -1119,7 +1119,7 @@ public class ApplyQueryResponseBody extends TeaModel {
             }
 
             /**
-             * 行程id
+             * itinerary_id.
              */
             public Builder itineraryId(String itineraryId) {
                 this.itineraryId = itineraryId;
@@ -1127,7 +1127,7 @@ public class ApplyQueryResponseBody extends TeaModel {
             }
 
             /**
-             * 项目编号
+             * project_code.
              */
             public Builder projectCode(String projectCode) {
                 this.projectCode = projectCode;
@@ -1135,7 +1135,7 @@ public class ApplyQueryResponseBody extends TeaModel {
             }
 
             /**
-             * 项目名称
+             * project_title.
              */
             public Builder projectTitle(String projectTitle) {
                 this.projectTitle = projectTitle;
@@ -1143,7 +1143,7 @@ public class ApplyQueryResponseBody extends TeaModel {
             }
 
             /**
-             * 交通方式： 0 飞机、酒店,  1 火车、酒店,  2 汽车、酒店,  3 酒店，5 不限，6 飞机，7 火车，9 飞机、火车、酒店
+             * traffic_type.
              */
             public Builder trafficType(Integer trafficType) {
                 this.trafficType = trafficType;
@@ -1421,7 +1421,7 @@ public class ApplyQueryResponseBody extends TeaModel {
             }
 
             /**
-             * 限制差标类型。0-不限差标，1-限制差标
+             * reserve_type.
              */
             public Builder reserveType(Integer reserveType) {
                 this.reserveType = reserveType;
@@ -1437,7 +1437,7 @@ public class ApplyQueryResponseBody extends TeaModel {
             }
 
             /**
-             * 无userId时传缺省值superAdmin
+             * user_id.
              */
             public Builder userId(String userId) {
                 this.userId = userId;
@@ -2030,17 +2030,7 @@ public class ApplyQueryResponseBody extends TeaModel {
             }
 
             /**
-             * 申请单城市规则：
-             * <p>
-             * 0出发&目的地一对一，按列表传行程 
-             * 1多选N个地点，城市集行程
-             * 不传默认为0
-             * 会根据商旅管理后台-通用差旅设置-行程城市规则中的设置，校验申请单本字段的值是否正确
-             * 当行程城市规则中设置的是“1对1行程”时，必须传0
-             * 当行程城市规则中设置的是“多对多城市集行程”时，必须传1
-             * 会根据此字段传入的值，校验行程传参是否正确
-             * 当申请单城市规则为0，itinerary_list行程列表必填
-             * 当申请单城市规则为1，城市集行程必填
+             * itinerary_rule.
              */
             public Builder itineraryRule(Integer itineraryRule) {
                 this.itineraryRule = itineraryRule;
@@ -2048,7 +2038,7 @@ public class ApplyQueryResponseBody extends TeaModel {
             }
 
             /**
-             * 城市集行程列表
+             * itinerary_set_list.
              */
             public Builder itinerarySetList(java.util.List < ItinerarySetList> itinerarySetList) {
                 this.itinerarySetList = itinerarySetList;
@@ -2144,7 +2134,7 @@ public class ApplyQueryResponseBody extends TeaModel {
             }
 
             /**
-             * 合住公式（HotelShareEnum.type）
+             * type.
              */
             public Builder type(Integer type) {
                 this.type = type;
@@ -2160,7 +2150,7 @@ public class ApplyQueryResponseBody extends TeaModel {
             }
 
             /**
-             * 无userId时传缺省值superAdmin
+             * user_id.
              */
             public Builder userId(String userId) {
                 this.userId = userId;

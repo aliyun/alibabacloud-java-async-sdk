@@ -324,7 +324,7 @@ public class HotelGoodsQueryResponseBody extends TeaModel {
             private String checkIn; 
 
             /**
-             * 取消政策
+             * btrip_hotel_cancel_policy_d_t_o.
              */
             public Builder btripHotelCancelPolicyDTO(BtripHotelCancelPolicyDTO btripHotelCancelPolicyDTO) {
                 this.btripHotelCancelPolicyDTO = btripHotelCancelPolicyDTO;
@@ -332,7 +332,7 @@ public class HotelGoodsQueryResponseBody extends TeaModel {
             }
 
             /**
-             * 取消政策文本
+             * cancel_policy_title.
              */
             public Builder cancelPolicyTitle(String cancelPolicyTitle) {
                 this.cancelPolicyTitle = cancelPolicyTitle;
@@ -340,7 +340,7 @@ public class HotelGoodsQueryResponseBody extends TeaModel {
             }
 
             /**
-             * 入住日期
+             * check_in.
              */
             public Builder checkIn(String checkIn) {
                 this.checkIn = checkIn;
@@ -514,7 +514,7 @@ public class HotelGoodsQueryResponseBody extends TeaModel {
             private Integer status; 
 
             /**
-             * 优惠前每日价格
+             * before_discount_price.
              */
             public Builder beforeDiscountPrice(Long beforeDiscountPrice) {
                 this.beforeDiscountPrice = beforeDiscountPrice;
@@ -522,7 +522,7 @@ public class HotelGoodsQueryResponseBody extends TeaModel {
             }
 
             /**
-             * 早餐描述
+             * breakfast.
              */
             public Builder breakfast(String breakfast) {
                 this.breakfast = breakfast;
@@ -530,7 +530,7 @@ public class HotelGoodsQueryResponseBody extends TeaModel {
             }
 
             /**
-             * 优惠价格
+             * discount_price.
              */
             public Builder discountPrice(Long discountPrice) {
                 this.discountPrice = discountPrice;
@@ -538,7 +538,7 @@ public class HotelGoodsQueryResponseBody extends TeaModel {
             }
 
             /**
-             * 优惠后每日价格
+             * last_discounts_price.
              */
             public Builder lastDiscountsPrice(Long lastDiscountsPrice) {
                 this.lastDiscountsPrice = lastDiscountsPrice;
@@ -546,7 +546,7 @@ public class HotelGoodsQueryResponseBody extends TeaModel {
             }
 
             /**
-             * 剩余房量
+             * last_num.
              */
             public Builder lastNum(Integer lastNum) {
                 this.lastNum = lastNum;
@@ -554,7 +554,7 @@ public class HotelGoodsQueryResponseBody extends TeaModel {
             }
 
             /**
-             * 适用日期（格式：yyyy-MM-dd HH:mm:ss）
+             * rate_start_time.
              */
             public Builder rateStartTime(String rateStartTime) {
                 this.rateStartTime = rateStartTime;
@@ -562,7 +562,7 @@ public class HotelGoodsQueryResponseBody extends TeaModel {
             }
 
             /**
-             * 房态（1：可售；0：不可售）
+             * status.
              */
             public Builder status(Integer status) {
                 this.status = status;
@@ -1099,7 +1099,7 @@ public class HotelGoodsQueryResponseBody extends TeaModel {
             }
 
             /**
-             * 早餐描述
+             * breakfast.
              */
             public Builder breakfast(String breakfast) {
                 this.breakfast = breakfast;
@@ -1107,7 +1107,7 @@ public class HotelGoodsQueryResponseBody extends TeaModel {
             }
 
             /**
-             * 取消政策结构化DTO
+             * btrip_cancel_rule.
              */
             public Builder btripCancelRule(BtripCancelRule btripCancelRule) {
                 this.btripCancelRule = btripCancelRule;
@@ -1115,7 +1115,7 @@ public class HotelGoodsQueryResponseBody extends TeaModel {
             }
 
             /**
-             * 取消政策
+             * btrip_hotel_cancel_desc.
              */
             public Builder btripHotelCancelDesc(java.util.List < BtripHotelCancelDesc> btripHotelCancelDesc) {
                 this.btripHotelCancelDesc = btripHotelCancelDesc;
@@ -1123,7 +1123,7 @@ public class HotelGoodsQueryResponseBody extends TeaModel {
             }
 
             /**
-             * 是否可以吸烟
+             * can_smoking.
              */
             public Builder canSmoking(Boolean canSmoking) {
                 this.canSmoking = canSmoking;
@@ -1131,7 +1131,7 @@ public class HotelGoodsQueryResponseBody extends TeaModel {
             }
 
             /**
-             * 免费取消政策描述
+             * cancel_policy_desc.
              */
             public Builder cancelPolicyDesc(String cancelPolicyDesc) {
                 this.cancelPolicyDesc = cancelPolicyDesc;
@@ -1139,7 +1139,7 @@ public class HotelGoodsQueryResponseBody extends TeaModel {
             }
 
             /**
-             * 退订类型
+             * cancel_policy_type.
              */
             public Builder cancelPolicyType(Integer cancelPolicyType) {
                 this.cancelPolicyType = cancelPolicyType;
@@ -1147,7 +1147,7 @@ public class HotelGoodsQueryResponseBody extends TeaModel {
             }
 
             /**
-             * 协议价，1表示协议支付
+             * company_aassist.
              */
             public Builder companyAassist(String companyAassist) {
                 this.companyAassist = companyAassist;
@@ -1155,7 +1155,7 @@ public class HotelGoodsQueryResponseBody extends TeaModel {
             }
 
             /**
-             * 确认类型
+             * confirm_type.
              */
             public Builder confirmType(Integer confirmType) {
                 this.confirmType = confirmType;
@@ -1163,7 +1163,7 @@ public class HotelGoodsQueryResponseBody extends TeaModel {
             }
 
             /**
-             * 币种
+             * currency_code.
              */
             public Builder currencyCode(String currencyCode) {
                 this.currencyCode = currencyCode;
@@ -1171,7 +1171,7 @@ public class HotelGoodsQueryResponseBody extends TeaModel {
             }
 
             /**
-             * 取整后每日均价（inventoryPrice-totalPromotion）/间夜
+             * daily_price_format_yuan.
              */
             public Builder dailyPriceFormatYuan(String dailyPriceFormatYuan) {
                 this.dailyPriceFormatYuan = dailyPriceFormatYuan;
@@ -1179,7 +1179,7 @@ public class HotelGoodsQueryResponseBody extends TeaModel {
             }
 
             /**
-             * 界面展示价格
+             * daily_price_view.
              */
             public Builder dailyPriceView(String dailyPriceView) {
                 this.dailyPriceView = dailyPriceView;
@@ -1187,7 +1187,7 @@ public class HotelGoodsQueryResponseBody extends TeaModel {
             }
 
             /**
-             * 每日截止时间
+             * end_time_daily.
              */
             public Builder endTimeDaily(String endTimeDaily) {
                 this.endTimeDaily = endTimeDaily;
@@ -1195,7 +1195,7 @@ public class HotelGoodsQueryResponseBody extends TeaModel {
             }
 
             /**
-             * 价格计划
+             * hotel_detail_rate_price_d_t_o.
              */
             public Builder hotelDetailRatePriceDTO(java.util.List < HotelDetailRatePriceDTO> hotelDetailRatePriceDTO) {
                 this.hotelDetailRatePriceDTO = hotelDetailRatePriceDTO;
@@ -1203,7 +1203,7 @@ public class HotelGoodsQueryResponseBody extends TeaModel {
             }
 
             /**
-             * 是否即时确认
+             * instant_confirm.
              */
             public Builder instantConfirm(Boolean instantConfirm) {
                 this.instantConfirm = instantConfirm;
@@ -1211,7 +1211,7 @@ public class HotelGoodsQueryResponseBody extends TeaModel {
             }
 
             /**
-             * 库存价格，
+             * inventory_price.
              */
             public Builder inventoryPrice(String inventoryPrice) {
                 this.inventoryPrice = inventoryPrice;
@@ -1219,7 +1219,7 @@ public class HotelGoodsQueryResponseBody extends TeaModel {
             }
 
             /**
-             * 是否是企业支付
+             * is_business_pay4_goods.
              */
             public Builder isBusinessPay4Goods(Boolean isBusinessPay4Goods) {
                 this.isBusinessPay4Goods = isBusinessPay4Goods;
@@ -1227,7 +1227,7 @@ public class HotelGoodsQueryResponseBody extends TeaModel {
             }
 
             /**
-             * 是否是担保
+             * is_guarantee.
              */
             public Builder isGuarantee(Integer isGuarantee) {
                 this.isGuarantee = isGuarantee;
@@ -1235,7 +1235,7 @@ public class HotelGoodsQueryResponseBody extends TeaModel {
             }
 
             /**
-             * 是否需要邮箱
+             * is_need_email.
              */
             public Builder isNeedEmail(Boolean isNeedEmail) {
                 this.isNeedEmail = isNeedEmail;
@@ -1243,7 +1243,7 @@ public class HotelGoodsQueryResponseBody extends TeaModel {
             }
 
             /**
-             * 商品id
+             * item_id.
              */
             public Builder itemId(Long itemId) {
                 this.itemId = itemId;
@@ -1251,7 +1251,7 @@ public class HotelGoodsQueryResponseBody extends TeaModel {
             }
 
             /**
-             * 最晚取消时间
+             * last_cancel_time.
              */
             public Builder lastCancelTime(String lastCancelTime) {
                 this.lastCancelTime = lastCancelTime;
@@ -1259,7 +1259,7 @@ public class HotelGoodsQueryResponseBody extends TeaModel {
             }
 
             /**
-             * 最大入住人数
+             * max_occupancy.
              */
             public Builder maxOccupancy(Integer maxOccupancy) {
                 this.maxOccupancy = maxOccupancy;
@@ -1267,7 +1267,7 @@ public class HotelGoodsQueryResponseBody extends TeaModel {
             }
 
             /**
-             * 最小提前小时数
+             * min_adv_hours.
              */
             public Builder minAdvHours(Integer minAdvHours) {
                 this.minAdvHours = minAdvHours;
@@ -1275,7 +1275,7 @@ public class HotelGoodsQueryResponseBody extends TeaModel {
             }
 
             /**
-             * 最小间隔天数
+             * min_days.
              */
             public Builder minDays(Integer minDays) {
                 this.minDays = minDays;
@@ -1283,7 +1283,7 @@ public class HotelGoodsQueryResponseBody extends TeaModel {
             }
 
             /**
-             * 间隔天数
+             * nod.
              */
             public Builder nod(Integer nod) {
                 this.nod = nod;
@@ -1291,7 +1291,7 @@ public class HotelGoodsQueryResponseBody extends TeaModel {
             }
 
             /**
-             * 人数
+             * nop.
              */
             public Builder nop(Integer nop) {
                 this.nop = nop;
@@ -1299,7 +1299,7 @@ public class HotelGoodsQueryResponseBody extends TeaModel {
             }
 
             /**
-             * 确认时长
+             * order_ship_time.
              */
             public Builder orderShipTime(Integer orderShipTime) {
                 this.orderShipTime = orderShipTime;
@@ -1307,7 +1307,7 @@ public class HotelGoodsQueryResponseBody extends TeaModel {
             }
 
             /**
-             * 1表示全额支付，2表示手续费，3表示定金，4表示手续费/间夜，5表示面付，6表示信用住，7表示房券在线预约，8表示信用住房券在线预约
+             * payment_type.
              */
             public Builder paymentType(Integer paymentType) {
                 this.paymentType = paymentType;
@@ -1315,7 +1315,7 @@ public class HotelGoodsQueryResponseBody extends TeaModel {
             }
 
             /**
-             * 价格类型
+             * price_type.
              */
             public Builder priceType(Integer priceType) {
                 this.priceType = priceType;
@@ -1323,7 +1323,7 @@ public class HotelGoodsQueryResponseBody extends TeaModel {
             }
 
             /**
-             * 营销信息
+             * promotion_info.
              */
             public Builder promotionInfo(String promotionInfo) {
                 this.promotionInfo = promotionInfo;
@@ -1339,7 +1339,7 @@ public class HotelGoodsQueryResponseBody extends TeaModel {
             }
 
             /**
-             * rp名称
+             * rate_plan_name.
              */
             public Builder ratePlanName(String ratePlanName) {
                 this.ratePlanName = ratePlanName;
@@ -1363,7 +1363,7 @@ public class HotelGoodsQueryResponseBody extends TeaModel {
             }
 
             /**
-             * rp名称
+             * start_time_daily.
              */
             public Builder startTimeDaily(String startTimeDaily) {
                 this.startTimeDaily = startTimeDaily;
@@ -1371,7 +1371,7 @@ public class HotelGoodsQueryResponseBody extends TeaModel {
             }
 
             /**
-             * 房态
+             * status.
              */
             public Builder status(Integer status) {
                 this.status = status;
@@ -1379,7 +1379,7 @@ public class HotelGoodsQueryResponseBody extends TeaModel {
             }
 
             /**
-             * 供应商CODE
+             * supplier_code.
              */
             public Builder supplierCode(String supplierCode) {
                 this.supplierCode = supplierCode;
@@ -1387,7 +1387,7 @@ public class HotelGoodsQueryResponseBody extends TeaModel {
             }
 
             /**
-             * 应商name
+             * supplier_name.
              */
             public Builder supplierName(String supplierName) {
                 this.supplierName = supplierName;
@@ -1395,7 +1395,7 @@ public class HotelGoodsQueryResponseBody extends TeaModel {
             }
 
             /**
-             * 是否支持专票
+             * support_special_invoice.
              */
             public Builder supportSpecialInvoice(Boolean supportSpecialInvoice) {
                 this.supportSpecialInvoice = supportSpecialInvoice;
@@ -1403,7 +1403,7 @@ public class HotelGoodsQueryResponseBody extends TeaModel {
             }
 
             /**
-             * 不取整的每日均价
+             * unrounding_daily_price_format_yuan.
              */
             public Builder unroundingDailyPriceFormatYuan(String unroundingDailyPriceFormatYuan) {
                 this.unroundingDailyPriceFormatYuan = unroundingDailyPriceFormatYuan;
@@ -1725,7 +1725,7 @@ public class HotelGoodsQueryResponseBody extends TeaModel {
             private String windowType; 
 
             /**
-             * 面积
+             * area.
              */
             public Builder area(String area) {
                 this.area = area;
@@ -1733,7 +1733,7 @@ public class HotelGoodsQueryResponseBody extends TeaModel {
             }
 
             /**
-             * 床型
+             * bed_type_string.
              */
             public Builder bedTypeString(String bedTypeString) {
                 this.bedTypeString = bedTypeString;
@@ -1741,7 +1741,7 @@ public class HotelGoodsQueryResponseBody extends TeaModel {
             }
 
             /**
-             * 是否可以加床
+             * extra_bed.
              */
             public Builder extraBed(Boolean extraBed) {
                 this.extraBed = extraBed;
@@ -1749,7 +1749,7 @@ public class HotelGoodsQueryResponseBody extends TeaModel {
             }
 
             /**
-             * 设施
+             * facility.
              */
             public Builder facility(String facility) {
                 this.facility = facility;
@@ -1757,7 +1757,7 @@ public class HotelGoodsQueryResponseBody extends TeaModel {
             }
 
             /**
-             * 楼层
+             * floor.
              */
             public Builder floor(String floor) {
                 this.floor = floor;
@@ -1765,7 +1765,7 @@ public class HotelGoodsQueryResponseBody extends TeaModel {
             }
 
             /**
-             * 最大入住人数
+             * max_occupancy.
              */
             public Builder maxOccupancy(Integer maxOccupancy) {
                 this.maxOccupancy = maxOccupancy;
@@ -1773,7 +1773,7 @@ public class HotelGoodsQueryResponseBody extends TeaModel {
             }
 
             /**
-             * 房型名
+             * name.
              */
             public Builder name(String name) {
                 this.name = name;
@@ -1781,7 +1781,7 @@ public class HotelGoodsQueryResponseBody extends TeaModel {
             }
 
             /**
-             * 宽带服务 "0","有线上网(免费),"1","有线上网(无)","2","有线上网(收费)","3","有线上网(部分有且免费)","4","有线上网(部分有且收费)"
+             * network_service.
              */
             public Builder networkService(String networkService) {
                 this.networkService = networkService;
@@ -1789,7 +1789,7 @@ public class HotelGoodsQueryResponseBody extends TeaModel {
             }
 
             /**
-             * 房型图片
+             * pics.
              */
             public Builder pics(String pics) {
                 this.pics = pics;
@@ -1797,7 +1797,7 @@ public class HotelGoodsQueryResponseBody extends TeaModel {
             }
 
             /**
-             * 床型信息
+             * rates.
              */
             public Builder rates(java.util.List < Rates> rates) {
                 this.rates = rates;
@@ -1805,7 +1805,7 @@ public class HotelGoodsQueryResponseBody extends TeaModel {
             }
 
             /**
-             * 房型描述
+             * room_dasc.
              */
             public Builder roomDasc(String roomDasc) {
                 this.roomDasc = roomDasc;
@@ -1813,7 +1813,7 @@ public class HotelGoodsQueryResponseBody extends TeaModel {
             }
 
             /**
-             * 房间设施
+             * room_facility.
              */
             public Builder roomFacility(java.util.List < String > roomFacility) {
                 this.roomFacility = roomFacility;
@@ -1821,7 +1821,7 @@ public class HotelGoodsQueryResponseBody extends TeaModel {
             }
 
             /**
-             * 房间服务
+             * room_service.
              */
             public Builder roomService(java.util.List < RoomService> roomService) {
                 this.roomService = roomService;
@@ -1829,7 +1829,7 @@ public class HotelGoodsQueryResponseBody extends TeaModel {
             }
 
             /**
-             * 房型ID
+             * srid.
              */
             public Builder srid(Long srid) {
                 this.srid = srid;
@@ -1837,7 +1837,7 @@ public class HotelGoodsQueryResponseBody extends TeaModel {
             }
 
             /**
-             * 状态0:正常;-1:删除
+             * status.
              */
             public Builder status(Integer status) {
                 this.status = status;
@@ -1845,7 +1845,7 @@ public class HotelGoodsQueryResponseBody extends TeaModel {
             }
 
             /**
-             * 窗型
+             * window_type.
              */
             public Builder windowType(String windowType) {
                 this.windowType = windowType;
@@ -2030,7 +2030,7 @@ public class HotelGoodsQueryResponseBody extends TeaModel {
             private String searchId; 
 
             /**
-             * 酒店地址
+             * address.
              */
             public Builder address(String address) {
                 this.address = address;
@@ -2038,7 +2038,7 @@ public class HotelGoodsQueryResponseBody extends TeaModel {
             }
 
             /**
-             * 预订须知
+             * booking_instructions.
              */
             public Builder bookingInstructions(java.util.Map < String, String > bookingInstructions) {
                 this.bookingInstructions = bookingInstructions;
@@ -2046,7 +2046,7 @@ public class HotelGoodsQueryResponseBody extends TeaModel {
             }
 
             /**
-             * 接待政策
+             * can_foreigner.
              */
             public Builder canForeigner(Boolean canForeigner) {
                 this.canForeigner = canForeigner;
@@ -2054,7 +2054,7 @@ public class HotelGoodsQueryResponseBody extends TeaModel {
             }
 
             /**
-             * 入住日期
+             * check_in.
              */
             public Builder checkIn(String checkIn) {
                 this.checkIn = checkIn;
@@ -2062,7 +2062,7 @@ public class HotelGoodsQueryResponseBody extends TeaModel {
             }
 
             /**
-             * 离店日期
+             * check_out.
              */
             public Builder checkOut(String checkOut) {
                 this.checkOut = checkOut;
@@ -2070,7 +2070,7 @@ public class HotelGoodsQueryResponseBody extends TeaModel {
             }
 
             /**
-             * 酒店描述
+             * descriptions.
              */
             public Builder descriptions(java.util.List < String > descriptions) {
                 this.descriptions = descriptions;
@@ -2078,7 +2078,7 @@ public class HotelGoodsQueryResponseBody extends TeaModel {
             }
 
             /**
-             * 酒店图片
+             * dinamic_banner_pic_urls.
              */
             public Builder dinamicBannerPicUrls(java.util.List < String > dinamicBannerPicUrls) {
                 this.dinamicBannerPicUrls = dinamicBannerPicUrls;
@@ -2086,7 +2086,7 @@ public class HotelGoodsQueryResponseBody extends TeaModel {
             }
 
             /**
-             * 最早到店时间
+             * early_arrival_time.
              */
             public Builder earlyArrivalTime(String earlyArrivalTime) {
                 this.earlyArrivalTime = earlyArrivalTime;
@@ -2094,7 +2094,7 @@ public class HotelGoodsQueryResponseBody extends TeaModel {
             }
 
             /**
-             * 酒店ID
+             * hotel_id.
              */
             public Builder hotelId(Long hotelId) {
                 this.hotelId = hotelId;
@@ -2102,7 +2102,7 @@ public class HotelGoodsQueryResponseBody extends TeaModel {
             }
 
             /**
-             * 酒店名
+             * hotel_name.
              */
             public Builder hotelName(String hotelName) {
                 this.hotelName = hotelName;
@@ -2110,7 +2110,7 @@ public class HotelGoodsQueryResponseBody extends TeaModel {
             }
 
             /**
-             * 最晚到店时间
+             * late_arrival_time.
              */
             public Builder lateArrivalTime(String lateArrivalTime) {
                 this.lateArrivalTime = lateArrivalTime;
@@ -2118,7 +2118,7 @@ public class HotelGoodsQueryResponseBody extends TeaModel {
             }
 
             /**
-             * 房型信息
+             * rooms.
              */
             public Builder rooms(java.util.List < Rooms> rooms) {
                 this.rooms = rooms;
@@ -2126,7 +2126,7 @@ public class HotelGoodsQueryResponseBody extends TeaModel {
             }
 
             /**
-             * 搜索ID便于查日志
+             * search_id.
              */
             public Builder searchId(String searchId) {
                 this.searchId = searchId;

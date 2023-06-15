@@ -114,7 +114,7 @@ public class SyncThirdUserMappingRequest extends Request {
         } 
 
         /**
-         * 状态 1:有效 0:失效
+         * status.
          */
         public Builder status(Integer status) {
             this.putBodyParameter("status", status);
@@ -123,7 +123,7 @@ public class SyncThirdUserMappingRequest extends Request {
         }
 
         /**
-         * 三方渠道类型 weCom:企业微信 qingTui:轻推
+         * third_channel_type.
          */
         public Builder thirdChannelType(String thirdChannelType) {
             this.putBodyParameter("third_channel_type", thirdChannelType);
@@ -132,7 +132,7 @@ public class SyncThirdUserMappingRequest extends Request {
         }
 
         /**
-         * 三方系统用户id
+         * third_user_id.
          */
         public Builder thirdUserId(String thirdUserId) {
             this.putBodyParameter("third_user_id", thirdUserId);
@@ -141,7 +141,7 @@ public class SyncThirdUserMappingRequest extends Request {
         }
 
         /**
-         * 用户id
+         * user_id.
          */
         public Builder userId(String userId) {
             this.putBodyParameter("user_id", userId);

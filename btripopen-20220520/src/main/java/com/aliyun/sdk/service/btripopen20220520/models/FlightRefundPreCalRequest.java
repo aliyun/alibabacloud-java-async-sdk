@@ -98,7 +98,7 @@ public class FlightRefundPreCalRequest extends Request {
         } 
 
         /**
-         * 分销外部订单号
+         * dis_order_id.
          */
         public Builder disOrderId(String disOrderId) {
             this.putQueryParameter("dis_order_id", disOrderId);
@@ -116,7 +116,7 @@ public class FlightRefundPreCalRequest extends Request {
         }
 
         /**
-         * 选择的要退票的乘客航段列表
+         * passenger_segment_info_list.
          */
         public Builder passengerSegmentInfoList(java.util.List < PassengerSegmentInfoList> passengerSegmentInfoList) {
             String passengerSegmentInfoListShrink = shrink(passengerSegmentInfoList, "passenger_segment_info_list", "json");
@@ -195,7 +195,7 @@ public class FlightRefundPreCalRequest extends Request {
             private String userId; 
 
             /**
-             * 航班号
+             * flight_no.
              */
             public Builder flightNo(String flightNo) {
                 this.flightNo = flightNo;
@@ -203,7 +203,7 @@ public class FlightRefundPreCalRequest extends Request {
             }
 
             /**
-             * 乘客姓名
+             * passenger_name.
              */
             public Builder passengerName(String passengerName) {
                 this.passengerName = passengerName;
@@ -211,7 +211,7 @@ public class FlightRefundPreCalRequest extends Request {
             }
 
             /**
-             * 用户id
+             * user_id.
              */
             public Builder userId(String userId) {
                 this.userId = userId;

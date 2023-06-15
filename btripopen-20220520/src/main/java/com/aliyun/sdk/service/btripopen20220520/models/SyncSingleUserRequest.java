@@ -210,7 +210,7 @@ public class SyncSingleUserRequest extends Request {
         } 
 
         /**
-         * 人员邮箱
+         * email.
          */
         public Builder email(String email) {
             this.putBodyParameter("email", email);
@@ -219,7 +219,7 @@ public class SyncSingleUserRequest extends Request {
         }
 
         /**
-         * 工号
+         * job_no.
          */
         public Builder jobNo(String jobNo) {
             this.putBodyParameter("job_no", jobNo);
@@ -228,7 +228,7 @@ public class SyncSingleUserRequest extends Request {
         }
 
         /**
-         * 离职状态（0 在职 1 离职）
+         * leave_status.
          */
         public Builder leaveStatus(Integer leaveStatus) {
             this.putBodyParameter("leave_status", leaveStatus);
@@ -237,7 +237,7 @@ public class SyncSingleUserRequest extends Request {
         }
 
         /**
-         * 直属主管id
+         * manager_user_id.
          */
         public Builder managerUserId(String managerUserId) {
             this.putBodyParameter("manager_user_id", managerUserId);
@@ -246,7 +246,7 @@ public class SyncSingleUserRequest extends Request {
         }
 
         /**
-         * 人员电话
+         * phone.
          */
         public Builder phone(String phone) {
             this.putBodyParameter("phone", phone);
@@ -255,7 +255,7 @@ public class SyncSingleUserRequest extends Request {
         }
 
         /**
-         * 职位 （eg：开发）
+         * position.
          */
         public Builder position(String position) {
             this.putBodyParameter("position", position);
@@ -264,7 +264,7 @@ public class SyncSingleUserRequest extends Request {
         }
 
         /**
-         * 职级
+         * position_level.
          */
         public Builder positionLevel(String positionLevel) {
             this.putBodyParameter("position_level", positionLevel);
@@ -273,7 +273,7 @@ public class SyncSingleUserRequest extends Request {
         }
 
         /**
-         * 用户名称EN
+         * real_name_en.
          */
         public Builder realNameEn(String realNameEn) {
             this.putBodyParameter("real_name_en", realNameEn);
@@ -282,7 +282,7 @@ public class SyncSingleUserRequest extends Request {
         }
 
         /**
-         * 第三方部门ID
+         * third_depart_id_list.
          */
         public Builder thirdDepartIdList(java.util.List < String > thirdDepartIdList) {
             String thirdDepartIdListShrink = shrink(thirdDepartIdList, "third_depart_id_list", "json");
@@ -301,7 +301,7 @@ public class SyncSingleUserRequest extends Request {
         }
 
         /**
-         * 用户名称
+         * user_name.
          */
         public Builder userName(String userName) {
             this.putBodyParameter("user_name", userName);

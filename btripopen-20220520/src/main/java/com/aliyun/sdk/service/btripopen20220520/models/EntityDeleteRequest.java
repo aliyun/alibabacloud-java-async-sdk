@@ -98,7 +98,7 @@ public class EntityDeleteRequest extends Request {
         } 
 
         /**
-         * 是否全部删除
+         * del_all.
          */
         public Builder delAll(Boolean delAll) {
             this.putQueryParameter("del_all", delAll);
@@ -107,7 +107,7 @@ public class EntityDeleteRequest extends Request {
         }
 
         /**
-         * 删除的成员信息列表,delAll为true时可不填
+         * entity_d_o_list.
          */
         public Builder entityDOList(java.util.List < EntityDOList> entityDOList) {
             String entityDOListShrink = shrink(entityDOList, "entity_d_o_list", "json");
@@ -117,7 +117,7 @@ public class EntityDeleteRequest extends Request {
         }
 
         /**
-         * 第三方成本中心id
+         * thirdpart_id.
          */
         public Builder thirdpartId(String thirdpartId) {
             this.putQueryParameter("thirdpart_id", thirdpartId);

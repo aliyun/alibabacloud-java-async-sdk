@@ -99,7 +99,7 @@ public class CreateSubCorpRequest extends Request {
         } 
 
         /**
-         * 三方企业id
+         * outer_corp_id.
          */
         public Builder outerCorpId(String outerCorpId) {
             this.putBodyParameter("outer_corp_id", outerCorpId);
@@ -108,7 +108,7 @@ public class CreateSubCorpRequest extends Request {
         }
 
         /**
-         * 三方企业名称
+         * outer_corp_name.
          */
         public Builder outerCorpName(String outerCorpName) {
             this.putBodyParameter("outer_corp_name", outerCorpName);
@@ -117,7 +117,7 @@ public class CreateSubCorpRequest extends Request {
         }
 
         /**
-         * 用户id
+         * user_id.
          */
         public Builder userId(String userId) {
             this.putBodyParameter("user_id", userId);

@@ -106,7 +106,7 @@ public class CostCenterSaveResponseBody extends TeaModel {
         }
 
         /**
-         * 备注，结果的备注，如对结果的说明
+         * message.
          */
         public Builder message(String message) {
             this.message = message;
@@ -114,7 +114,7 @@ public class CostCenterSaveResponseBody extends TeaModel {
         }
 
         /**
-         * 返回值，服务端返回，没有结果或发生异常都返回空
+         * module.
          */
         public Builder module(Module module) {
             this.module = module;
@@ -130,7 +130,7 @@ public class CostCenterSaveResponseBody extends TeaModel {
         }
 
         /**
-         * 成功标识，由服务端设置，发生异常时为false。结果为null设置为false。
+         * success.
          */
         public Builder success(Boolean success) {
             this.success = success;

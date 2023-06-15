@@ -68,7 +68,7 @@ public class HotelCityCodeListRequest extends Request {
         } 
 
         /**
-         * 国家二字码
+         * country_code.
          */
         public Builder countryCode(String countryCode) {
             this.putQueryParameter("country_code", countryCode);

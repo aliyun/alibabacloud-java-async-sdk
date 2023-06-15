@@ -1074,7 +1074,7 @@ public class IeFlightBillSettlementQueryResponseBody extends TeaModel {
             private Integer voucherType; 
 
             /**
-             * 提前预定天数
+             * advance_day.
              */
             public Builder advanceDay(Integer advanceDay) {
                 this.advanceDay = advanceDay;
@@ -1082,7 +1082,7 @@ public class IeFlightBillSettlementQueryResponseBody extends TeaModel {
             }
 
             /**
-             * 航司二字码	新字段，khipu已落库
+             * airline_corp_code.
              */
             public Builder airlineCorpCode(String airlineCorpCode) {
                 this.airlineCorpCode = airlineCorpCode;
@@ -1090,7 +1090,7 @@ public class IeFlightBillSettlementQueryResponseBody extends TeaModel {
             }
 
             /**
-             * 航司名称
+             * airline_corp_name.
              */
             public Builder airlineCorpName(String airlineCorpName) {
                 this.airlineCorpName = airlineCorpName;
@@ -1098,7 +1098,7 @@ public class IeFlightBillSettlementQueryResponseBody extends TeaModel {
             }
 
             /**
-             * 交易流水号
+             * alipay_trade_no.
              */
             public Builder alipayTradeNo(String alipayTradeNo) {
                 this.alipayTradeNo = alipayTradeNo;
@@ -1114,7 +1114,7 @@ public class IeFlightBillSettlementQueryResponseBody extends TeaModel {
             }
 
             /**
-             * 审批单号
+             * apply_id.
              */
             public Builder applyId(String applyId) {
                 this.applyId = applyId;
@@ -1122,7 +1122,7 @@ public class IeFlightBillSettlementQueryResponseBody extends TeaModel {
             }
 
             /**
-             * 到达机场三字码	新字段，供应链hsf接口有返回
+             * arr_airport_code.
              */
             public Builder arrAirportCode(String arrAirportCode) {
                 this.arrAirportCode = arrAirportCode;
@@ -1130,7 +1130,7 @@ public class IeFlightBillSettlementQueryResponseBody extends TeaModel {
             }
 
             /**
-             * 到达城市
+             * arr_city.
              */
             public Builder arrCity(String arrCity) {
                 this.arrCity = arrCity;
@@ -1138,7 +1138,7 @@ public class IeFlightBillSettlementQueryResponseBody extends TeaModel {
             }
 
             /**
-             * 到达日期
+             * arr_date.
              */
             public Builder arrDate(String arrDate) {
                 this.arrDate = arrDate;
@@ -1146,7 +1146,7 @@ public class IeFlightBillSettlementQueryResponseBody extends TeaModel {
             }
 
             /**
-             * 到达机场名称
+             * arr_station.
              */
             public Builder arrStation(String arrStation) {
                 this.arrStation = arrStation;
@@ -1154,7 +1154,7 @@ public class IeFlightBillSettlementQueryResponseBody extends TeaModel {
             }
 
             /**
-             * 到达时间
+             * arr_time.
              */
             public Builder arrTime(String arrTime) {
                 this.arrTime = arrTime;
@@ -1162,7 +1162,7 @@ public class IeFlightBillSettlementQueryResponseBody extends TeaModel {
             }
 
             /**
-             * 入账时间
+             * bill_record_time.
              */
             public Builder billRecordTime(String billRecordTime) {
                 this.billRecordTime = billRecordTime;
@@ -1170,7 +1170,7 @@ public class IeFlightBillSettlementQueryResponseBody extends TeaModel {
             }
 
             /**
-             * 预定类型
+             * book_mode.
              */
             public Builder bookMode(String bookMode) {
                 this.bookMode = bookMode;
@@ -1178,7 +1178,7 @@ public class IeFlightBillSettlementQueryResponseBody extends TeaModel {
             }
 
             /**
-             * 预定时间
+             * book_time.
              */
             public Builder bookTime(String bookTime) {
                 this.bookTime = bookTime;
@@ -1186,7 +1186,7 @@ public class IeFlightBillSettlementQueryResponseBody extends TeaModel {
             }
 
             /**
-             * 预定人id
+             * booker_id.
              */
             public Builder bookerId(String bookerId) {
                 this.bookerId = bookerId;
@@ -1194,7 +1194,7 @@ public class IeFlightBillSettlementQueryResponseBody extends TeaModel {
             }
 
             /**
-             * 预订人工号
+             * booker_job_no.
              */
             public Builder bookerJobNo(String bookerJobNo) {
                 this.bookerJobNo = bookerJobNo;
@@ -1202,7 +1202,7 @@ public class IeFlightBillSettlementQueryResponseBody extends TeaModel {
             }
 
             /**
-             * 预定人姓名
+             * booker_name.
              */
             public Builder bookerName(String bookerName) {
                 this.bookerName = bookerName;
@@ -1210,7 +1210,7 @@ public class IeFlightBillSettlementQueryResponseBody extends TeaModel {
             }
 
             /**
-             * 商旅价优惠金额
+             * btrip_coupon_fee.
              */
             public Builder btripCouponFee(Double btripCouponFee) {
                 this.btripCouponFee = btripCouponFee;
@@ -1218,7 +1218,7 @@ public class IeFlightBillSettlementQueryResponseBody extends TeaModel {
             }
 
             /**
-             * 舱位代码
+             * cabin.
              */
             public Builder cabin(String cabin) {
                 this.cabin = cabin;
@@ -1226,7 +1226,7 @@ public class IeFlightBillSettlementQueryResponseBody extends TeaModel {
             }
 
             /**
-             * 舱位等级
+             * cabin_class.
              */
             public Builder cabinClass(String cabinClass) {
                 this.cabinClass = cabinClass;
@@ -1234,7 +1234,7 @@ public class IeFlightBillSettlementQueryResponseBody extends TeaModel {
             }
 
             /**
-             * 资金方向
+             * capital_direction.
              */
             public Builder capitalDirection(String capitalDirection) {
                 this.capitalDirection = capitalDirection;
@@ -1242,7 +1242,7 @@ public class IeFlightBillSettlementQueryResponseBody extends TeaModel {
             }
 
             /**
-             * 联级部门
+             * cascade_department.
              */
             public Builder cascadeDepartment(String cascadeDepartment) {
                 this.cascadeDepartment = cascadeDepartment;
@@ -1250,7 +1250,7 @@ public class IeFlightBillSettlementQueryResponseBody extends TeaModel {
             }
 
             /**
-             * 改签费
+             * change_fee.
              */
             public Builder changeFee(Double changeFee) {
                 this.changeFee = changeFee;
@@ -1258,7 +1258,7 @@ public class IeFlightBillSettlementQueryResponseBody extends TeaModel {
             }
 
             /**
-             * 订单金额
+             * corp_pay_order_fee.
              */
             public Builder corpPayOrderFee(Double corpPayOrderFee) {
                 this.corpPayOrderFee = corpPayOrderFee;
@@ -1266,7 +1266,7 @@ public class IeFlightBillSettlementQueryResponseBody extends TeaModel {
             }
 
             /**
-             * 成本中心名称
+             * cost_center.
              */
             public Builder costCenter(String costCenter) {
                 this.costCenter = costCenter;
@@ -1274,7 +1274,7 @@ public class IeFlightBillSettlementQueryResponseBody extends TeaModel {
             }
 
             /**
-             * 成本中心编号
+             * cost_center_number.
              */
             public Builder costCenterNumber(String costCenterNumber) {
                 this.costCenterNumber = costCenterNumber;
@@ -1282,7 +1282,7 @@ public class IeFlightBillSettlementQueryResponseBody extends TeaModel {
             }
 
             /**
-             * 优惠券
+             * coupon.
              */
             public Builder coupon(Double coupon) {
                 this.coupon = coupon;
@@ -1290,7 +1290,7 @@ public class IeFlightBillSettlementQueryResponseBody extends TeaModel {
             }
 
             /**
-             * 起飞机场三字码	新字段，供应链hsf接口有返回
+             * dep_airport_code.
              */
             public Builder depAirportCode(String depAirportCode) {
                 this.depAirportCode = depAirportCode;
@@ -1298,7 +1298,7 @@ public class IeFlightBillSettlementQueryResponseBody extends TeaModel {
             }
 
             /**
-             * 末级部门
+             * department.
              */
             public Builder department(String department) {
                 this.department = department;
@@ -1306,7 +1306,7 @@ public class IeFlightBillSettlementQueryResponseBody extends TeaModel {
             }
 
             /**
-             * 部门编号
+             * department_id.
              */
             public Builder departmentId(String departmentId) {
                 this.departmentId = departmentId;
@@ -1314,7 +1314,7 @@ public class IeFlightBillSettlementQueryResponseBody extends TeaModel {
             }
 
             /**
-             * 起飞城市
+             * dept_city.
              */
             public Builder deptCity(String deptCity) {
                 this.deptCity = deptCity;
@@ -1322,7 +1322,7 @@ public class IeFlightBillSettlementQueryResponseBody extends TeaModel {
             }
 
             /**
-             * 起飞日期
+             * dept_date.
              */
             public Builder deptDate(String deptDate) {
                 this.deptDate = deptDate;
@@ -1330,7 +1330,7 @@ public class IeFlightBillSettlementQueryResponseBody extends TeaModel {
             }
 
             /**
-             * 起飞机场名称
+             * dept_station.
              */
             public Builder deptStation(String deptStation) {
                 this.deptStation = deptStation;
@@ -1338,7 +1338,7 @@ public class IeFlightBillSettlementQueryResponseBody extends TeaModel {
             }
 
             /**
-             * 起飞时间
+             * dept_time.
              */
             public Builder deptTime(String deptTime) {
                 this.deptTime = deptTime;
@@ -1346,7 +1346,7 @@ public class IeFlightBillSettlementQueryResponseBody extends TeaModel {
             }
 
             /**
-             * 折扣率
+             * discount.
              */
             public Builder discount(String discount) {
                 this.discount = discount;
@@ -1354,7 +1354,7 @@ public class IeFlightBillSettlementQueryResponseBody extends TeaModel {
             }
 
             /**
-             * 费用类型
+             * fee_type.
              */
             public Builder feeType(String feeType) {
                 this.feeType = feeType;
@@ -1362,7 +1362,7 @@ public class IeFlightBillSettlementQueryResponseBody extends TeaModel {
             }
 
             /**
-             * 航班号
+             * flight_no.
              */
             public Builder flightNo(String flightNo) {
                 this.flightNo = flightNo;
@@ -1370,7 +1370,7 @@ public class IeFlightBillSettlementQueryResponseBody extends TeaModel {
             }
 
             /**
-             * 序号
+             * index.
              */
             public Builder index(String index) {
                 this.index = index;
@@ -1378,7 +1378,7 @@ public class IeFlightBillSettlementQueryResponseBody extends TeaModel {
             }
 
             /**
-             * 保险费
+             * insurance_fee.
              */
             public Builder insuranceFee(Double insuranceFee) {
                 this.insuranceFee = insuranceFee;
@@ -1386,7 +1386,7 @@ public class IeFlightBillSettlementQueryResponseBody extends TeaModel {
             }
 
             /**
-             * 保单号
+             * insurance_number.
              */
             public Builder insuranceNumber(String insuranceNumber) {
                 this.insuranceNumber = insuranceNumber;
@@ -1394,7 +1394,7 @@ public class IeFlightBillSettlementQueryResponseBody extends TeaModel {
             }
 
             /**
-             * 发票抬头
+             * invoice_title.
              */
             public Builder invoiceTitle(String invoiceTitle) {
                 this.invoiceTitle = invoiceTitle;
@@ -1402,7 +1402,7 @@ public class IeFlightBillSettlementQueryResponseBody extends TeaModel {
             }
 
             /**
-             * 低价提醒（起飞时间）
+             * most_difference_dept_time.
              */
             public Builder mostDifferenceDeptTime(String mostDifferenceDeptTime) {
                 this.mostDifferenceDeptTime = mostDifferenceDeptTime;
@@ -1410,7 +1410,7 @@ public class IeFlightBillSettlementQueryResponseBody extends TeaModel {
             }
 
             /**
-             * 低价提醒（折扣）
+             * most_difference_discount.
              */
             public Builder mostDifferenceDiscount(String mostDifferenceDiscount) {
                 this.mostDifferenceDiscount = mostDifferenceDiscount;
@@ -1418,7 +1418,7 @@ public class IeFlightBillSettlementQueryResponseBody extends TeaModel {
             }
 
             /**
-             * 低价提醒(航班号)
+             * most_difference_flight_no.
              */
             public Builder mostDifferenceFlightNo(String mostDifferenceFlightNo) {
                 this.mostDifferenceFlightNo = mostDifferenceFlightNo;
@@ -1426,7 +1426,7 @@ public class IeFlightBillSettlementQueryResponseBody extends TeaModel {
             }
 
             /**
-             * 低价提醒(与最低价差额)
+             * most_difference_price.
              */
             public Builder mostDifferencePrice(Double mostDifferencePrice) {
                 this.mostDifferencePrice = mostDifferencePrice;
@@ -1434,7 +1434,7 @@ public class IeFlightBillSettlementQueryResponseBody extends TeaModel {
             }
 
             /**
-             * 不选低价原因
+             * most_difference_reason.
              */
             public Builder mostDifferenceReason(String mostDifferenceReason) {
                 this.mostDifferenceReason = mostDifferenceReason;
@@ -1442,7 +1442,7 @@ public class IeFlightBillSettlementQueryResponseBody extends TeaModel {
             }
 
             /**
-             * 低价航班价格	新字段，反算，暂不开放
+             * most_price.
              */
             public Builder mostPrice(Double mostPrice) {
                 this.mostPrice = mostPrice;
@@ -1450,7 +1450,7 @@ public class IeFlightBillSettlementQueryResponseBody extends TeaModel {
             }
 
             /**
-             * 协议价优惠金额
+             * negotiation_coupon_fee.
              */
             public Builder negotiationCouponFee(Double negotiationCouponFee) {
                 this.negotiationCouponFee = negotiationCouponFee;
@@ -1458,7 +1458,7 @@ public class IeFlightBillSettlementQueryResponseBody extends TeaModel {
             }
 
             /**
-             * 订单id、福豆发放订单号
+             * order_id.
              */
             public Builder orderId(String orderId) {
                 this.orderId = orderId;
@@ -1466,7 +1466,7 @@ public class IeFlightBillSettlementQueryResponseBody extends TeaModel {
             }
 
             /**
-             * 订单状态描述
+             * order_status_desc.
              */
             public Builder orderStatusDesc(String orderStatusDesc) {
                 this.orderStatusDesc = orderStatusDesc;
@@ -1474,7 +1474,7 @@ public class IeFlightBillSettlementQueryResponseBody extends TeaModel {
             }
 
             /**
-             * 超标审批单号
+             * over_apply_id.
              */
             public Builder overApplyId(String overApplyId) {
                 this.overApplyId = overApplyId;
@@ -1482,7 +1482,7 @@ public class IeFlightBillSettlementQueryResponseBody extends TeaModel {
             }
 
             /**
-             * 主键id
+             * primary_id.
              */
             public Builder primaryId(Long primaryId) {
                 this.primaryId = primaryId;
@@ -1490,7 +1490,7 @@ public class IeFlightBillSettlementQueryResponseBody extends TeaModel {
             }
 
             /**
-             * 项目编码
+             * project_code.
              */
             public Builder projectCode(String projectCode) {
                 this.projectCode = projectCode;
@@ -1498,7 +1498,7 @@ public class IeFlightBillSettlementQueryResponseBody extends TeaModel {
             }
 
             /**
-             * 项目名称
+             * project_name.
              */
             public Builder projectName(String projectName) {
                 this.projectName = projectName;
@@ -1506,7 +1506,7 @@ public class IeFlightBillSettlementQueryResponseBody extends TeaModel {
             }
 
             /**
-             * 退票手续费
+             * refund_fee.
              */
             public Builder refundFee(Double refundFee) {
                 this.refundFee = refundFee;
@@ -1514,7 +1514,7 @@ public class IeFlightBillSettlementQueryResponseBody extends TeaModel {
             }
 
             /**
-             * 备注
+             * remark.
              */
             public Builder remark(String remark) {
                 this.remark = remark;
@@ -1522,7 +1522,7 @@ public class IeFlightBillSettlementQueryResponseBody extends TeaModel {
             }
 
             /**
-             * 是否重复退
+             * repeat_refund.
              */
             public Builder repeatRefund(String repeatRefund) {
                 this.repeatRefund = repeatRefund;
@@ -1530,7 +1530,7 @@ public class IeFlightBillSettlementQueryResponseBody extends TeaModel {
             }
 
             /**
-             * 销售价
+             * seal_price.
              */
             public Builder sealPrice(Double sealPrice) {
                 this.sealPrice = sealPrice;
@@ -1538,7 +1538,7 @@ public class IeFlightBillSettlementQueryResponseBody extends TeaModel {
             }
 
             /**
-             * 洲际、洲内
+             * segment_type.
              */
             public Builder segmentType(String segmentType) {
                 this.segmentType = segmentType;
@@ -1546,7 +1546,7 @@ public class IeFlightBillSettlementQueryResponseBody extends TeaModel {
             }
 
             /**
-             * 服务费
+             * service_fee.
              */
             public Builder serviceFee(Double serviceFee) {
                 this.serviceFee = serviceFee;
@@ -1554,7 +1554,7 @@ public class IeFlightBillSettlementQueryResponseBody extends TeaModel {
             }
 
             /**
-             * 结算金额
+             * settlement_fee.
              */
             public Builder settlementFee(Double settlementFee) {
                 this.settlementFee = settlementFee;
@@ -1562,7 +1562,7 @@ public class IeFlightBillSettlementQueryResponseBody extends TeaModel {
             }
 
             /**
-             * 结算金额--赠送部分
+             * settlement_grant_fee.
              */
             public Builder settlementGrantFee(Double settlementGrantFee) {
                 this.settlementGrantFee = settlementGrantFee;
@@ -1570,7 +1570,7 @@ public class IeFlightBillSettlementQueryResponseBody extends TeaModel {
             }
 
             /**
-             * 结算时间
+             * settlement_time.
              */
             public Builder settlementTime(String settlementTime) {
                 this.settlementTime = settlementTime;
@@ -1578,7 +1578,7 @@ public class IeFlightBillSettlementQueryResponseBody extends TeaModel {
             }
 
             /**
-             * 结算类型
+             * settlement_type.
              */
             public Builder settlementType(String settlementType) {
                 this.settlementType = settlementType;
@@ -1586,7 +1586,7 @@ public class IeFlightBillSettlementQueryResponseBody extends TeaModel {
             }
 
             /**
-             * 入账状态
+             * status.
              */
             public Builder status(Integer status) {
                 this.status = status;
@@ -1594,7 +1594,7 @@ public class IeFlightBillSettlementQueryResponseBody extends TeaModel {
             }
 
             /**
-             * 子订单id（目前用车有）
+             * sub_order_id.
              */
             public Builder subOrderId(String subOrderId) {
                 this.subOrderId = subOrderId;
@@ -1602,7 +1602,7 @@ public class IeFlightBillSettlementQueryResponseBody extends TeaModel {
             }
 
             /**
-             * 税费
+             * tax_fee.
              */
             public Builder taxFee(Double taxFee) {
                 this.taxFee = taxFee;
@@ -1618,7 +1618,7 @@ public class IeFlightBillSettlementQueryResponseBody extends TeaModel {
             }
 
             /**
-             * 票号
+             * ticket_id.
              */
             public Builder ticketId(String ticketId) {
                 this.ticketId = ticketId;
@@ -1626,7 +1626,7 @@ public class IeFlightBillSettlementQueryResponseBody extends TeaModel {
             }
 
             /**
-             * 行程
+             * trade.
              */
             public Builder trade(String trade) {
                 this.trade = trade;
@@ -1634,7 +1634,7 @@ public class IeFlightBillSettlementQueryResponseBody extends TeaModel {
             }
 
             /**
-             * 出行人userId
+             * traveler_id.
              */
             public Builder travelerId(String travelerId) {
                 this.travelerId = travelerId;
@@ -1642,7 +1642,7 @@ public class IeFlightBillSettlementQueryResponseBody extends TeaModel {
             }
 
             /**
-             * 出行人工号
+             * traveler_job_no.
              */
             public Builder travelerJobNo(String travelerJobNo) {
                 this.travelerJobNo = travelerJobNo;
@@ -1650,7 +1650,7 @@ public class IeFlightBillSettlementQueryResponseBody extends TeaModel {
             }
 
             /**
-             * 出行人名称
+             * traveler_name.
              */
             public Builder travelerName(String travelerName) {
                 this.travelerName = travelerName;
@@ -1658,7 +1658,7 @@ public class IeFlightBillSettlementQueryResponseBody extends TeaModel {
             }
 
             /**
-             * 票据类型
+             * voucher_type.
              */
             public Builder voucherType(Integer voucherType) {
                 this.voucherType = voucherType;
@@ -1759,7 +1759,7 @@ public class IeFlightBillSettlementQueryResponseBody extends TeaModel {
             private Long totalNum; 
 
             /**
-             * 类目
+             * category.
              */
             public Builder category(Integer category) {
                 this.category = category;
@@ -1767,7 +1767,7 @@ public class IeFlightBillSettlementQueryResponseBody extends TeaModel {
             }
 
             /**
-             * 企业id
+             * corp_id.
              */
             public Builder corpId(String corpId) {
                 this.corpId = corpId;
@@ -1775,7 +1775,7 @@ public class IeFlightBillSettlementQueryResponseBody extends TeaModel {
             }
 
             /**
-             * 数据集合
+             * data_list.
              */
             public Builder dataList(java.util.List < DataList> dataList) {
                 this.dataList = dataList;
@@ -1783,7 +1783,7 @@ public class IeFlightBillSettlementQueryResponseBody extends TeaModel {
             }
 
             /**
-             * 记账日期止 yyyy-MM-dd
+             * period_end.
              */
             public Builder periodEnd(String periodEnd) {
                 this.periodEnd = periodEnd;
@@ -1791,7 +1791,7 @@ public class IeFlightBillSettlementQueryResponseBody extends TeaModel {
             }
 
             /**
-             * 记账日期起 yyyy-MM-dd
+             * period_start.
              */
             public Builder periodStart(String periodStart) {
                 this.periodStart = periodStart;
@@ -1799,7 +1799,7 @@ public class IeFlightBillSettlementQueryResponseBody extends TeaModel {
             }
 
             /**
-             * 总数量
+             * total_num.
              */
             public Builder totalNum(Long totalNum) {
                 this.totalNum = totalNum;

@@ -276,7 +276,7 @@ public class CarApplyAddRequest extends Request {
         } 
 
         /**
-         * 出差事由
+         * cause.
          */
         public Builder cause(String cause) {
             this.putBodyParameter("cause", cause);
@@ -285,7 +285,7 @@ public class CarApplyAddRequest extends Request {
         }
 
         /**
-         * 用车城市
+         * city.
          */
         public Builder city(String city) {
             this.putBodyParameter("city", city);
@@ -294,7 +294,7 @@ public class CarApplyAddRequest extends Request {
         }
 
         /**
-         * 用车时间
+         * date.
          */
         public Builder date(String date) {
             this.putBodyParameter("date", date);
@@ -303,7 +303,7 @@ public class CarApplyAddRequest extends Request {
         }
 
         /**
-         * 用车结束时间，为null时取date
+         * finished_date.
          */
         public Builder finishedDate(String finishedDate) {
             this.putBodyParameter("finished_date", finishedDate);
@@ -312,7 +312,7 @@ public class CarApplyAddRequest extends Request {
         }
 
         /**
-         * 审批单关联的项目code
+         * project_code.
          */
         public Builder projectCode(String projectCode) {
             this.putBodyParameter("project_code", projectCode);
@@ -321,7 +321,7 @@ public class CarApplyAddRequest extends Request {
         }
 
         /**
-         * 审批单关联的项目名
+         * project_name.
          */
         public Builder projectName(String projectName) {
             this.putBodyParameter("project_name", projectName);
@@ -330,7 +330,7 @@ public class CarApplyAddRequest extends Request {
         }
 
         /**
-         * 0申请 1同意 2拒绝 3转交 4取消 5 修改已同意 6 撤销已同意 7 修改审批中 8 已同意(修改被拒绝)  9 撤销审批中\n10 已同意(撤销被拒绝) 11 已同意(修改被取消) 12 已同意(撤销被取消)
+         * status.
          */
         public Builder status(Integer status) {
             this.putBodyParameter("status", status);
@@ -339,7 +339,7 @@ public class CarApplyAddRequest extends Request {
         }
 
         /**
-         * 三方审批单ID
+         * third_part_apply_id.
          */
         public Builder thirdPartApplyId(String thirdPartApplyId) {
             this.putBodyParameter("third_part_apply_id", thirdPartApplyId);
@@ -348,7 +348,7 @@ public class CarApplyAddRequest extends Request {
         }
 
         /**
-         * 审批单关联的三方成本中心ID
+         * third_part_cost_center_id.
          */
         public Builder thirdPartCostCenterId(String thirdPartCostCenterId) {
             this.putBodyParameter("third_part_cost_center_id", thirdPartCostCenterId);
@@ -357,7 +357,7 @@ public class CarApplyAddRequest extends Request {
         }
 
         /**
-         * 审批单关联的三方发票抬头ID
+         * third_part_invoice_id.
          */
         public Builder thirdPartInvoiceId(String thirdPartInvoiceId) {
             this.putBodyParameter("third_part_invoice_id", thirdPartInvoiceId);
@@ -366,7 +366,7 @@ public class CarApplyAddRequest extends Request {
         }
 
         /**
-         * 申请单可用总次数
+         * times_total.
          */
         public Builder timesTotal(Integer timesTotal) {
             this.putBodyParameter("times_total", timesTotal);
@@ -375,7 +375,7 @@ public class CarApplyAddRequest extends Request {
         }
 
         /**
-         * 次数类型 1:次数不限制 2、用户可指定次数 3、管理员限制次数
+         * times_type.
          */
         public Builder timesType(Integer timesType) {
             this.putBodyParameter("times_type", timesType);
@@ -384,7 +384,7 @@ public class CarApplyAddRequest extends Request {
         }
 
         /**
-         * 申请单已用次数
+         * times_used.
          */
         public Builder timesUsed(Integer timesUsed) {
             this.putBodyParameter("times_used", timesUsed);
@@ -393,7 +393,7 @@ public class CarApplyAddRequest extends Request {
         }
 
         /**
-         * 审批单标题
+         * title.
          */
         public Builder title(String title) {
             this.putBodyParameter("title", title);
@@ -402,7 +402,7 @@ public class CarApplyAddRequest extends Request {
         }
 
         /**
-         * 无userId时传缺省值superAdmin
+         * user_id.
          */
         public Builder userId(String userId) {
             this.putBodyParameter("user_id", userId);

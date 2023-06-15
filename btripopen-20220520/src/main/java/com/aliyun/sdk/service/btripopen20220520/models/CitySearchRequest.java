@@ -69,7 +69,7 @@ public class CitySearchRequest extends Request {
         } 
 
         /**
-         * 搜索关键字
+         * keyword.
          */
         public Builder keyword(String keyword) {
             this.putQueryParameter("keyword", keyword);

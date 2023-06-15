@@ -202,7 +202,7 @@ public class TicketChangingCancelResponseBody extends TeaModel {
             private String status; 
 
             /**
-             * 取消时间
+             * cancel_time.
              */
             public Builder cancelTime(String cancelTime) {
                 this.cancelTime = cancelTime;
@@ -210,7 +210,7 @@ public class TicketChangingCancelResponseBody extends TeaModel {
             }
 
             /**
-             * 改签单号
+             * dis_sub_order_id.
              */
             public Builder disSubOrderId(String disSubOrderId) {
                 this.disSubOrderId = disSubOrderId;
@@ -218,7 +218,7 @@ public class TicketChangingCancelResponseBody extends TeaModel {
             }
 
             /**
-             * 改签单状态
+             * status.
              */
             public Builder status(String status) {
                 this.status = status;

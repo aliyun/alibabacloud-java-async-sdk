@@ -107,7 +107,7 @@ public class CorpTokenRequest extends Request {
         }
 
         /**
-         * 企业id，值可以在开放平台中的关联企业查看。
+         * corp_id.
          */
         public Builder corpId(String corpId) {
             this.putQueryParameter("corp_id", corpId);
@@ -116,7 +116,7 @@ public class CorpTokenRequest extends Request {
         }
 
         /**
-         * 类型，0-自营 1-分销
+         * type.
          */
         public Builder type(Integer type) {
             this.putQueryParameter("type", type);

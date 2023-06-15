@@ -214,7 +214,7 @@ public class FlightRefundDetailResponseBody extends TeaModel {
             private String status; 
 
             /**
-             * 支付宝交易订单号
+             * alipay_trade_no.
              */
             public Builder alipayTradeNo(String alipayTradeNo) {
                 this.alipayTradeNo = alipayTradeNo;
@@ -222,7 +222,7 @@ public class FlightRefundDetailResponseBody extends TeaModel {
             }
 
             /**
-             * 退票手续费
+             * refund_fee.
              */
             public Builder refundFee(Long refundFee) {
                 this.refundFee = refundFee;
@@ -230,7 +230,7 @@ public class FlightRefundDetailResponseBody extends TeaModel {
             }
 
             /**
-             * 退票金额
+             * refund_price.
              */
             public Builder refundPrice(Long refundPrice) {
                 this.refundPrice = refundPrice;
@@ -238,7 +238,7 @@ public class FlightRefundDetailResponseBody extends TeaModel {
             }
 
             /**
-             * 退款状态
+             * status.
              */
             public Builder status(String status) {
                 this.status = status;
@@ -387,7 +387,7 @@ public class FlightRefundDetailResponseBody extends TeaModel {
             private String status; 
 
             /**
-             * 订单号
+             * btrip_order_id.
              */
             public Builder btripOrderId(Long btripOrderId) {
                 this.btripOrderId = btripOrderId;
@@ -395,7 +395,7 @@ public class FlightRefundDetailResponseBody extends TeaModel {
             }
 
             /**
-             * 退票单号
+             * btrip_sub_order_id.
              */
             public Builder btripSubOrderId(Long btripSubOrderId) {
                 this.btripSubOrderId = btripSubOrderId;
@@ -403,7 +403,7 @@ public class FlightRefundDetailResponseBody extends TeaModel {
             }
 
             /**
-             * 订单号
+             * dis_order_id.
              */
             public Builder disOrderId(String disOrderId) {
                 this.disOrderId = disOrderId;
@@ -411,7 +411,7 @@ public class FlightRefundDetailResponseBody extends TeaModel {
             }
 
             /**
-             * 退票单号
+             * dis_sub_order_id.
              */
             public Builder disSubOrderId(String disSubOrderId) {
                 this.disSubOrderId = disSubOrderId;
@@ -419,7 +419,7 @@ public class FlightRefundDetailResponseBody extends TeaModel {
             }
 
             /**
-             * 是否是自愿退票
+             * is_voluntary.
              */
             public Builder isVoluntary(Integer isVoluntary) {
                 this.isVoluntary = isVoluntary;
@@ -427,7 +427,7 @@ public class FlightRefundDetailResponseBody extends TeaModel {
             }
 
             /**
-             * 退票原因
+             * reason.
              */
             public Builder reason(String reason) {
                 this.reason = reason;
@@ -435,7 +435,7 @@ public class FlightRefundDetailResponseBody extends TeaModel {
             }
 
             /**
-             * 退票手续费
+             * refund_fee.
              */
             public Builder refundFee(Long refundFee) {
                 this.refundFee = refundFee;
@@ -443,7 +443,7 @@ public class FlightRefundDetailResponseBody extends TeaModel {
             }
 
             /**
-             * 退票费用列表
+             * refund_fee_list.
              */
             public Builder refundFeeList(java.util.List < RefundFeeList> refundFeeList) {
                 this.refundFeeList = refundFeeList;
@@ -451,7 +451,7 @@ public class FlightRefundDetailResponseBody extends TeaModel {
             }
 
             /**
-             * 退票金额
+             * refund_price.
              */
             public Builder refundPrice(Long refundPrice) {
                 this.refundPrice = refundPrice;
@@ -459,7 +459,7 @@ public class FlightRefundDetailResponseBody extends TeaModel {
             }
 
             /**
-             * 状态
+             * status.
              */
             public Builder status(String status) {
                 this.status = status;

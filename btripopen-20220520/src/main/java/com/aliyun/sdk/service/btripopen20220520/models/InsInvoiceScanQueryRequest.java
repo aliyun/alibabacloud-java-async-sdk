@@ -125,7 +125,7 @@ public class InsInvoiceScanQueryRequest extends Request {
         } 
 
         /**
-         * 出账日
+         * bill_date.
          */
         public Builder billDate(String billDate) {
             this.putQueryParameter("bill_date", billDate);
@@ -134,7 +134,7 @@ public class InsInvoiceScanQueryRequest extends Request {
         }
 
         /**
-         * 账单id
+         * bill_id.
          */
         public Builder billId(Long billId) {
             this.putQueryParameter("bill_id", billId);
@@ -143,7 +143,7 @@ public class InsInvoiceScanQueryRequest extends Request {
         }
 
         /**
-         * 发票子任务id
+         * invoice_sub_task_id.
          */
         public Builder invoiceSubTaskId(Long invoiceSubTaskId) {
             this.putQueryParameter("invoice_sub_task_id", invoiceSubTaskId);

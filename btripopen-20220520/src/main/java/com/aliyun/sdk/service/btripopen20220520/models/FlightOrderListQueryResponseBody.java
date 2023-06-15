@@ -613,7 +613,7 @@ public class FlightOrderListQueryResponseBody extends TeaModel {
             }
 
             /**
-             * 改签航班号
+             * change_flight_no.
              */
             public Builder changeFlightNo(String changeFlightNo) {
                 this.changeFlightNo = changeFlightNo;
@@ -621,7 +621,7 @@ public class FlightOrderListQueryResponseBody extends TeaModel {
             }
 
             /**
-             * 折扣
+             * discount.
              */
             public Builder discount(String discount) {
                 this.discount = discount;
@@ -629,7 +629,7 @@ public class FlightOrderListQueryResponseBody extends TeaModel {
             }
 
             /**
-             * 结束时间
+             * end_time.
              */
             public Builder endTime(String endTime) {
                 this.endTime = endTime;
@@ -645,7 +645,7 @@ public class FlightOrderListQueryResponseBody extends TeaModel {
             }
 
             /**
-             * 改签前的票号
+             * original_ticket_no.
              */
             public Builder originalTicketNo(String originalTicketNo) {
                 this.originalTicketNo = originalTicketNo;
@@ -677,7 +677,7 @@ public class FlightOrderListQueryResponseBody extends TeaModel {
             }
 
             /**
-             * 开始时间
+             * start_time.
              */
             public Builder startTime(String startTime) {
                 this.startTime = startTime;
@@ -685,7 +685,7 @@ public class FlightOrderListQueryResponseBody extends TeaModel {
             }
 
             /**
-             * 当前票号
+             * ticket_no.
              */
             public Builder ticketNo(String ticketNo) {
                 this.ticketNo = ticketNo;
@@ -1247,7 +1247,7 @@ public class FlightOrderListQueryResponseBody extends TeaModel {
             }
 
             /**
-             * 申请单名称
+             * btrip_title.
              */
             public Builder btripTitle(String btripTitle) {
                 this.btripTitle = btripTitle;
@@ -1335,7 +1335,7 @@ public class FlightOrderListQueryResponseBody extends TeaModel {
             }
 
             /**
-             * 折扣
+             * discount.
              */
             public Builder discount(String discount) {
                 this.discount = discount;
@@ -1415,7 +1415,7 @@ public class FlightOrderListQueryResponseBody extends TeaModel {
             }
 
             /**
-             * 项目code
+             * project_code.
              */
             public Builder projectCode(String projectCode) {
                 this.projectCode = projectCode;
@@ -1423,7 +1423,7 @@ public class FlightOrderListQueryResponseBody extends TeaModel {
             }
 
             /**
-             * 项目id
+             * project_id.
              */
             public Builder projectId(Long projectId) {
                 this.projectId = projectId;
@@ -1431,7 +1431,7 @@ public class FlightOrderListQueryResponseBody extends TeaModel {
             }
 
             /**
-             * 项目名称
+             * project_title.
              */
             public Builder projectTitle(String projectTitle) {
                 this.projectTitle = projectTitle;
@@ -1455,7 +1455,7 @@ public class FlightOrderListQueryResponseBody extends TeaModel {
             }
 
             /**
-             * 第三方项目id
+             * third_part_project_id.
              */
             public Builder thirdPartProjectId(String thirdPartProjectId) {
                 this.thirdPartProjectId = thirdPartProjectId;
@@ -1463,7 +1463,7 @@ public class FlightOrderListQueryResponseBody extends TeaModel {
             }
 
             /**
-             * 第三方申请单
+             * thirdpart_apply_id.
              */
             public Builder thirdpartApplyId(String thirdpartApplyId) {
                 this.thirdpartApplyId = thirdpartApplyId;
@@ -1487,7 +1487,7 @@ public class FlightOrderListQueryResponseBody extends TeaModel {
             }
 
             /**
-             * 出行人信息
+             * user_affiliate_list.
              */
             public Builder userAffiliateList(java.util.List < UserAffiliateList> userAffiliateList) {
                 this.userAffiliateList = userAffiliateList;
@@ -1568,7 +1568,7 @@ public class FlightOrderListQueryResponseBody extends TeaModel {
             private Integer totalNumber; 
 
             /**
-             * 当前页
+             * page.
              */
             public Builder page(Integer page) {
                 this.page = page;
@@ -1576,7 +1576,7 @@ public class FlightOrderListQueryResponseBody extends TeaModel {
             }
 
             /**
-             * 每页大小
+             * page_size.
              */
             public Builder pageSize(Integer pageSize) {
                 this.pageSize = pageSize;
@@ -1584,7 +1584,7 @@ public class FlightOrderListQueryResponseBody extends TeaModel {
             }
 
             /**
-             * 总记录数
+             * total_number.
              */
             public Builder totalNumber(Integer totalNumber) {
                 this.totalNumber = totalNumber;

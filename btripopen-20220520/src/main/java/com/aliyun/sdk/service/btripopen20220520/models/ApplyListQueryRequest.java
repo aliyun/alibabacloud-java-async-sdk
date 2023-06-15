@@ -222,7 +222,7 @@ public class ApplyListQueryRequest extends Request {
         } 
 
         /**
-         * 所有申请单（含已报销的）
+         * all_apply.
          */
         public Builder allApply(Boolean allApply) {
             this.putQueryParameter("all_apply", allApply);
@@ -258,7 +258,7 @@ public class ApplyListQueryRequest extends Request {
         }
 
         /**
-         * 仅商旅申请单
+         * only_shang_lv_apply.
          */
         public Builder onlyShangLvApply(Boolean onlyShangLvApply) {
             this.putQueryParameter("only_shang_lv_apply", onlyShangLvApply);
@@ -294,7 +294,7 @@ public class ApplyListQueryRequest extends Request {
         }
 
         /**
-         * 子企业Id
+         * sub_corp_id.
          */
         public Builder subCorpId(String subCorpId) {
             this.putQueryParameter("sub_corp_id", subCorpId);
@@ -312,7 +312,7 @@ public class ApplyListQueryRequest extends Request {
         }
 
         /**
-         * 关联单号
+         * union_no.
          */
         public Builder unionNo(String unionNo) {
             this.putQueryParameter("union_no", unionNo);
@@ -321,7 +321,7 @@ public class ApplyListQueryRequest extends Request {
         }
 
         /**
-         * 无userId时传缺省值superAdmin
+         * user_id.
          */
         public Builder userId(String userId) {
             this.putQueryParameter("user_id", userId);
