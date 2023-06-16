@@ -151,6 +151,167 @@ public class QueryReimbursementOrderResponseBody extends TeaModel {
 
     } 
 
+    public static class ExpenseCompositions extends TeaModel {
+        @NameInMap("bill_settlement_id")
+        private Long billSettlementId;
+
+        @NameInMap("fee_type")
+        private String feeType;
+
+        @NameInMap("remark")
+        private String remark;
+
+        @NameInMap("remind_tag_list")
+        private java.util.List < String > remindTagList;
+
+        @NameInMap("settlement_amount")
+        private String settlementAmount;
+
+        @NameInMap("settlement_time")
+        private String settlementTime;
+
+        @NameInMap("voucher_type")
+        private Integer voucherType;
+
+        private ExpenseCompositions(Builder builder) {
+            this.billSettlementId = builder.billSettlementId;
+            this.feeType = builder.feeType;
+            this.remark = builder.remark;
+            this.remindTagList = builder.remindTagList;
+            this.settlementAmount = builder.settlementAmount;
+            this.settlementTime = builder.settlementTime;
+            this.voucherType = builder.voucherType;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static ExpenseCompositions create() {
+            return builder().build();
+        }
+
+        /**
+         * @return billSettlementId
+         */
+        public Long getBillSettlementId() {
+            return this.billSettlementId;
+        }
+
+        /**
+         * @return feeType
+         */
+        public String getFeeType() {
+            return this.feeType;
+        }
+
+        /**
+         * @return remark
+         */
+        public String getRemark() {
+            return this.remark;
+        }
+
+        /**
+         * @return remindTagList
+         */
+        public java.util.List < String > getRemindTagList() {
+            return this.remindTagList;
+        }
+
+        /**
+         * @return settlementAmount
+         */
+        public String getSettlementAmount() {
+            return this.settlementAmount;
+        }
+
+        /**
+         * @return settlementTime
+         */
+        public String getSettlementTime() {
+            return this.settlementTime;
+        }
+
+        /**
+         * @return voucherType
+         */
+        public Integer getVoucherType() {
+            return this.voucherType;
+        }
+
+        public static final class Builder {
+            private Long billSettlementId; 
+            private String feeType; 
+            private String remark; 
+            private java.util.List < String > remindTagList; 
+            private String settlementAmount; 
+            private String settlementTime; 
+            private Integer voucherType; 
+
+            /**
+             * bill_settlement_id.
+             */
+            public Builder billSettlementId(Long billSettlementId) {
+                this.billSettlementId = billSettlementId;
+                return this;
+            }
+
+            /**
+             * fee_type.
+             */
+            public Builder feeType(String feeType) {
+                this.feeType = feeType;
+                return this;
+            }
+
+            /**
+             * remark.
+             */
+            public Builder remark(String remark) {
+                this.remark = remark;
+                return this;
+            }
+
+            /**
+             * remind_tag_list.
+             */
+            public Builder remindTagList(java.util.List < String > remindTagList) {
+                this.remindTagList = remindTagList;
+                return this;
+            }
+
+            /**
+             * settlement_amount.
+             */
+            public Builder settlementAmount(String settlementAmount) {
+                this.settlementAmount = settlementAmount;
+                return this;
+            }
+
+            /**
+             * settlement_time.
+             */
+            public Builder settlementTime(String settlementTime) {
+                this.settlementTime = settlementTime;
+                return this;
+            }
+
+            /**
+             * voucher_type.
+             */
+            public Builder voucherType(Integer voucherType) {
+                this.voucherType = voucherType;
+                return this;
+            }
+
+            public ExpenseCompositions build() {
+                return new ExpenseCompositions(this);
+            } 
+
+        } 
+
+    }
     public static class Expenses extends TeaModel {
         @NameInMap("amount")
         private String amount;
@@ -160,6 +321,9 @@ public class QueryReimbursementOrderResponseBody extends TeaModel {
 
         @NameInMap("expense_city")
         private String expenseCity;
+
+        @NameInMap("expense_compositions")
+        private java.util.List < ExpenseCompositions> expenseCompositions;
 
         @NameInMap("expense_time")
         private String expenseTime;
@@ -183,6 +347,7 @@ public class QueryReimbursementOrderResponseBody extends TeaModel {
             this.amount = builder.amount;
             this.currency = builder.currency;
             this.expenseCity = builder.expenseCity;
+            this.expenseCompositions = builder.expenseCompositions;
             this.expenseTime = builder.expenseTime;
             this.expenseType = builder.expenseType;
             this.expenseTypeCode = builder.expenseTypeCode;
@@ -218,6 +383,13 @@ public class QueryReimbursementOrderResponseBody extends TeaModel {
          */
         public String getExpenseCity() {
             return this.expenseCity;
+        }
+
+        /**
+         * @return expenseCompositions
+         */
+        public java.util.List < ExpenseCompositions> getExpenseCompositions() {
+            return this.expenseCompositions;
         }
 
         /**
@@ -266,6 +438,7 @@ public class QueryReimbursementOrderResponseBody extends TeaModel {
             private String amount; 
             private String currency; 
             private String expenseCity; 
+            private java.util.List < ExpenseCompositions> expenseCompositions; 
             private String expenseTime; 
             private String expenseType; 
             private String expenseTypeCode; 
@@ -294,6 +467,14 @@ public class QueryReimbursementOrderResponseBody extends TeaModel {
              */
             public Builder expenseCity(String expenseCity) {
                 this.expenseCity = expenseCity;
+                return this;
+            }
+
+            /**
+             * expense_compositions.
+             */
+            public Builder expenseCompositions(java.util.List < ExpenseCompositions> expenseCompositions) {
+                this.expenseCompositions = expenseCompositions;
                 return this;
             }
 
