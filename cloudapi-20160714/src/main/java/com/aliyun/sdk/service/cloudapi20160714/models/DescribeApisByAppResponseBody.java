@@ -94,7 +94,7 @@ public class DescribeApisByAppResponseBody extends TeaModel {
         }
 
         /**
-         * 当前页码
+         * PageNumber.
          */
         public Builder pageNumber(Integer pageNumber) {
             this.pageNumber = pageNumber;
@@ -102,7 +102,7 @@ public class DescribeApisByAppResponseBody extends TeaModel {
         }
 
         /**
-         * 每页条目
+         * PageSize.
          */
         public Builder pageSize(Integer pageSize) {
             this.pageSize = pageSize;
@@ -110,7 +110,7 @@ public class DescribeApisByAppResponseBody extends TeaModel {
         }
 
         /**
-         * 请求ID
+         * RequestId.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -118,7 +118,7 @@ public class DescribeApisByAppResponseBody extends TeaModel {
         }
 
         /**
-         * 总条目数
+         * TotalCount.
          */
         public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;
@@ -302,7 +302,7 @@ public class DescribeApisByAppResponseBody extends TeaModel {
             private String stageName; 
 
             /**
-             * API的ID
+             * ApiId.
              */
             public Builder apiId(String apiId) {
                 this.apiId = apiId;
@@ -310,7 +310,7 @@ public class DescribeApisByAppResponseBody extends TeaModel {
             }
 
             /**
-             * API名称
+             * ApiName.
              */
             public Builder apiName(String apiName) {
                 this.apiName = apiName;
@@ -318,7 +318,7 @@ public class DescribeApisByAppResponseBody extends TeaModel {
             }
 
             /**
-             * 授权有效时间
+             * AuthVaildTime.
              */
             public Builder authVaildTime(String authVaildTime) {
                 this.authVaildTime = authVaildTime;
@@ -326,7 +326,7 @@ public class DescribeApisByAppResponseBody extends TeaModel {
             }
 
             /**
-             * 授权来源
+             * AuthorizationSource.
              */
             public Builder authorizationSource(String authorizationSource) {
                 this.authorizationSource = authorizationSource;
@@ -334,7 +334,7 @@ public class DescribeApisByAppResponseBody extends TeaModel {
             }
 
             /**
-             * 授权时间
+             * CreatedTime.
              */
             public Builder createdTime(String createdTime) {
                 this.createdTime = createdTime;
@@ -342,7 +342,7 @@ public class DescribeApisByAppResponseBody extends TeaModel {
             }
 
             /**
-             * 描述
+             * Description.
              */
             public Builder description(String description) {
                 this.description = description;
@@ -350,7 +350,7 @@ public class DescribeApisByAppResponseBody extends TeaModel {
             }
 
             /**
-             * 分组ID
+             * GroupId.
              */
             public Builder groupId(String groupId) {
                 this.groupId = groupId;
@@ -358,7 +358,7 @@ public class DescribeApisByAppResponseBody extends TeaModel {
             }
 
             /**
-             * 分组名称
+             * GroupName.
              */
             public Builder groupName(String groupName) {
                 this.groupName = groupName;
@@ -366,7 +366,7 @@ public class DescribeApisByAppResponseBody extends TeaModel {
             }
 
             /**
-             * API的请求HTTP Method
+             * Method.
              */
             public Builder method(String method) {
                 this.method = method;
@@ -382,7 +382,7 @@ public class DescribeApisByAppResponseBody extends TeaModel {
             }
 
             /**
-             * API的请求路径
+             * Path.
              */
             public Builder path(String path) {
                 this.path = path;
@@ -390,7 +390,7 @@ public class DescribeApisByAppResponseBody extends TeaModel {
             }
 
             /**
-             * 地区ID
+             * RegionId.
              */
             public Builder regionId(String regionId) {
                 this.regionId = regionId;
@@ -398,7 +398,7 @@ public class DescribeApisByAppResponseBody extends TeaModel {
             }
 
             /**
-             * 环境名称
+             * StageName.
              */
             public Builder stageName(String stageName) {
                 this.stageName = stageName;

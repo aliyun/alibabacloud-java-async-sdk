@@ -71,6 +71,288 @@ public class DescribeBackendInfoResponseBody extends TeaModel {
 
     } 
 
+    public static class NacosConfig extends TeaModel {
+        @NameInMap("AccessKey")
+        private String accessKey;
+
+        @NameInMap("AuthType")
+        private String authType;
+
+        @NameInMap("Clusters")
+        private String clusters;
+
+        @NameInMap("GroupName")
+        private String groupName;
+
+        @NameInMap("Namespace")
+        private String namespace;
+
+        @NameInMap("Password")
+        private String password;
+
+        @NameInMap("SecretKey")
+        private String secretKey;
+
+        @NameInMap("ServerAddress")
+        private String serverAddress;
+
+        @NameInMap("ServiceName")
+        private String serviceName;
+
+        @NameInMap("UserName")
+        private String userName;
+
+        private NacosConfig(Builder builder) {
+            this.accessKey = builder.accessKey;
+            this.authType = builder.authType;
+            this.clusters = builder.clusters;
+            this.groupName = builder.groupName;
+            this.namespace = builder.namespace;
+            this.password = builder.password;
+            this.secretKey = builder.secretKey;
+            this.serverAddress = builder.serverAddress;
+            this.serviceName = builder.serviceName;
+            this.userName = builder.userName;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static NacosConfig create() {
+            return builder().build();
+        }
+
+        /**
+         * @return accessKey
+         */
+        public String getAccessKey() {
+            return this.accessKey;
+        }
+
+        /**
+         * @return authType
+         */
+        public String getAuthType() {
+            return this.authType;
+        }
+
+        /**
+         * @return clusters
+         */
+        public String getClusters() {
+            return this.clusters;
+        }
+
+        /**
+         * @return groupName
+         */
+        public String getGroupName() {
+            return this.groupName;
+        }
+
+        /**
+         * @return namespace
+         */
+        public String getNamespace() {
+            return this.namespace;
+        }
+
+        /**
+         * @return password
+         */
+        public String getPassword() {
+            return this.password;
+        }
+
+        /**
+         * @return secretKey
+         */
+        public String getSecretKey() {
+            return this.secretKey;
+        }
+
+        /**
+         * @return serverAddress
+         */
+        public String getServerAddress() {
+            return this.serverAddress;
+        }
+
+        /**
+         * @return serviceName
+         */
+        public String getServiceName() {
+            return this.serviceName;
+        }
+
+        /**
+         * @return userName
+         */
+        public String getUserName() {
+            return this.userName;
+        }
+
+        public static final class Builder {
+            private String accessKey; 
+            private String authType; 
+            private String clusters; 
+            private String groupName; 
+            private String namespace; 
+            private String password; 
+            private String secretKey; 
+            private String serverAddress; 
+            private String serviceName; 
+            private String userName; 
+
+            /**
+             * AccessKey.
+             */
+            public Builder accessKey(String accessKey) {
+                this.accessKey = accessKey;
+                return this;
+            }
+
+            /**
+             * AuthType.
+             */
+            public Builder authType(String authType) {
+                this.authType = authType;
+                return this;
+            }
+
+            /**
+             * Clusters.
+             */
+            public Builder clusters(String clusters) {
+                this.clusters = clusters;
+                return this;
+            }
+
+            /**
+             * GroupName.
+             */
+            public Builder groupName(String groupName) {
+                this.groupName = groupName;
+                return this;
+            }
+
+            /**
+             * Namespace.
+             */
+            public Builder namespace(String namespace) {
+                this.namespace = namespace;
+                return this;
+            }
+
+            /**
+             * Password.
+             */
+            public Builder password(String password) {
+                this.password = password;
+                return this;
+            }
+
+            /**
+             * SecretKey.
+             */
+            public Builder secretKey(String secretKey) {
+                this.secretKey = secretKey;
+                return this;
+            }
+
+            /**
+             * ServerAddress.
+             */
+            public Builder serverAddress(String serverAddress) {
+                this.serverAddress = serverAddress;
+                return this;
+            }
+
+            /**
+             * ServiceName.
+             */
+            public Builder serviceName(String serviceName) {
+                this.serviceName = serviceName;
+                return this;
+            }
+
+            /**
+             * UserName.
+             */
+            public Builder userName(String userName) {
+                this.userName = userName;
+                return this;
+            }
+
+            public NacosConfig build() {
+                return new NacosConfig(this);
+            } 
+
+        } 
+
+    }
+    public static class DiscoveryConfig extends TeaModel {
+        @NameInMap("NacosConfig")
+        private NacosConfig nacosConfig;
+
+        @NameInMap("RcType")
+        private String rcType;
+
+        private DiscoveryConfig(Builder builder) {
+            this.nacosConfig = builder.nacosConfig;
+            this.rcType = builder.rcType;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static DiscoveryConfig create() {
+            return builder().build();
+        }
+
+        /**
+         * @return nacosConfig
+         */
+        public NacosConfig getNacosConfig() {
+            return this.nacosConfig;
+        }
+
+        /**
+         * @return rcType
+         */
+        public String getRcType() {
+            return this.rcType;
+        }
+
+        public static final class Builder {
+            private NacosConfig nacosConfig; 
+            private String rcType; 
+
+            /**
+             * NacosConfig.
+             */
+            public Builder nacosConfig(NacosConfig nacosConfig) {
+                this.nacosConfig = nacosConfig;
+                return this;
+            }
+
+            /**
+             * RcType.
+             */
+            public Builder rcType(String rcType) {
+                this.rcType = rcType;
+                return this;
+            }
+
+            public DiscoveryConfig build() {
+                return new DiscoveryConfig(this);
+            } 
+
+        } 
+
+    }
     public static class EventBridgeConfig extends TeaModel {
         @NameInMap("EventBridgeRegionId")
         private String eventBridgeRegionId;
@@ -718,6 +1000,9 @@ public class DescribeBackendInfoResponseBody extends TeaModel {
 
     }
     public static class BackendConfig extends TeaModel {
+        @NameInMap("DiscoveryConfig")
+        private DiscoveryConfig discoveryConfig;
+
         @NameInMap("EventBridgeConfig")
         private EventBridgeConfig eventBridgeConfig;
 
@@ -743,6 +1028,7 @@ public class DescribeBackendInfoResponseBody extends TeaModel {
         private VpcConfig vpcConfig;
 
         private BackendConfig(Builder builder) {
+            this.discoveryConfig = builder.discoveryConfig;
             this.eventBridgeConfig = builder.eventBridgeConfig;
             this.functionComputeConfig = builder.functionComputeConfig;
             this.httpTargetHostName = builder.httpTargetHostName;
@@ -759,6 +1045,13 @@ public class DescribeBackendInfoResponseBody extends TeaModel {
 
         public static BackendConfig create() {
             return builder().build();
+        }
+
+        /**
+         * @return discoveryConfig
+         */
+        public DiscoveryConfig getDiscoveryConfig() {
+            return this.discoveryConfig;
         }
 
         /**
@@ -818,6 +1111,7 @@ public class DescribeBackendInfoResponseBody extends TeaModel {
         }
 
         public static final class Builder {
+            private DiscoveryConfig discoveryConfig; 
             private EventBridgeConfig eventBridgeConfig; 
             private FunctionComputeConfig functionComputeConfig; 
             private String httpTargetHostName; 
@@ -826,6 +1120,14 @@ public class DescribeBackendInfoResponseBody extends TeaModel {
             private String serviceAddress; 
             private String type; 
             private VpcConfig vpcConfig; 
+
+            /**
+             * DiscoveryConfig.
+             */
+            public Builder discoveryConfig(DiscoveryConfig discoveryConfig) {
+                this.discoveryConfig = discoveryConfig;
+                return this;
+            }
 
             /**
              * EventBridgeConfig.

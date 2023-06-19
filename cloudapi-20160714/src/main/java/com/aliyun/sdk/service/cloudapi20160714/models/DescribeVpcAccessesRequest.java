@@ -152,7 +152,7 @@ public class DescribeVpcAccessesRequest extends Request {
         } 
 
         /**
-         * 实例ID
+         * InstanceId.
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -161,7 +161,7 @@ public class DescribeVpcAccessesRequest extends Request {
         }
 
         /**
-         * VPC授权名称
+         * Name.
          */
         public Builder name(String name) {
             this.putQueryParameter("Name", name);
@@ -170,7 +170,7 @@ public class DescribeVpcAccessesRequest extends Request {
         }
 
         /**
-         * 当前页码
+         * PageNumber.
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -179,7 +179,7 @@ public class DescribeVpcAccessesRequest extends Request {
         }
 
         /**
-         * 每页展示条目
+         * PageSize.
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -188,7 +188,7 @@ public class DescribeVpcAccessesRequest extends Request {
         }
 
         /**
-         * 端口号
+         * Port.
          */
         public Builder port(String port) {
             this.putQueryParameter("Port", port);
@@ -206,7 +206,7 @@ public class DescribeVpcAccessesRequest extends Request {
         }
 
         /**
-         * Vpc授权ID
+         * VpcAccessId.
          */
         public Builder vpcAccessId(String vpcAccessId) {
             this.putQueryParameter("VpcAccessId", vpcAccessId);
@@ -215,7 +215,7 @@ public class DescribeVpcAccessesRequest extends Request {
         }
 
         /**
-         * Vpc ID
+         * VpcId.
          */
         public Builder vpcId(String vpcId) {
             this.putQueryParameter("VpcId", vpcId);

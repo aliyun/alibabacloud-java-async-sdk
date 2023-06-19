@@ -75,6 +75,12 @@ public class DescribeApiGroupResponseBody extends TeaModel {
     @NameInMap("Ipv6Status")
     private String ipv6Status;
 
+    @NameInMap("MigrationError")
+    private String migrationError;
+
+    @NameInMap("MigrationStatus")
+    private String migrationStatus;
+
     @NameInMap("ModifiedTime")
     private String modifiedTime;
 
@@ -133,6 +139,8 @@ public class DescribeApiGroupResponseBody extends TeaModel {
         this.instanceType = builder.instanceType;
         this.instanceVipList = builder.instanceVipList;
         this.ipv6Status = builder.ipv6Status;
+        this.migrationError = builder.migrationError;
+        this.migrationStatus = builder.migrationStatus;
         this.modifiedTime = builder.modifiedTime;
         this.passthroughHeaders = builder.passthroughHeaders;
         this.regionId = builder.regionId;
@@ -303,6 +311,20 @@ public class DescribeApiGroupResponseBody extends TeaModel {
     }
 
     /**
+     * @return migrationError
+     */
+    public String getMigrationError() {
+        return this.migrationError;
+    }
+
+    /**
+     * @return migrationStatus
+     */
+    public String getMigrationStatus() {
+        return this.migrationStatus;
+    }
+
+    /**
      * @return modifiedTime
      */
     public String getModifiedTime() {
@@ -408,6 +430,8 @@ public class DescribeApiGroupResponseBody extends TeaModel {
         private String instanceType; 
         private String instanceVipList; 
         private String ipv6Status; 
+        private String migrationError; 
+        private String migrationStatus; 
         private String modifiedTime; 
         private String passthroughHeaders; 
         private String regionId; 
@@ -599,6 +623,22 @@ public class DescribeApiGroupResponseBody extends TeaModel {
          */
         public Builder ipv6Status(String ipv6Status) {
             this.ipv6Status = ipv6Status;
+            return this;
+        }
+
+        /**
+         * MigrationError.
+         */
+        public Builder migrationError(String migrationError) {
+            this.migrationError = migrationError;
+            return this;
+        }
+
+        /**
+         * MigrationStatus.
+         */
+        public Builder migrationStatus(String migrationStatus) {
+            this.migrationStatus = migrationStatus;
             return this;
         }
 

@@ -411,6 +411,9 @@ public class DescribeInstancesResponseBody extends TeaModel {
         @NameInMap("ClassicEgressAddress")
         private String classicEgressAddress;
 
+        @NameInMap("ConnectCidrBlocks")
+        private String connectCidrBlocks;
+
         @NameInMap("ConnectVpcId")
         private String connectVpcId;
 
@@ -474,6 +477,12 @@ public class DescribeInstancesResponseBody extends TeaModel {
         @NameInMap("IntranetSegments")
         private String intranetSegments;
 
+        @NameInMap("MaintainEndTime")
+        private String maintainEndTime;
+
+        @NameInMap("MaintainStartTime")
+        private String maintainStartTime;
+
         @NameInMap("NetworkInterfaceAttributes")
         private NetworkInterfaceAttributes networkInterfaceAttributes;
 
@@ -519,6 +528,7 @@ public class DescribeInstancesResponseBody extends TeaModel {
             this.aclStatus = builder.aclStatus;
             this.aclType = builder.aclType;
             this.classicEgressAddress = builder.classicEgressAddress;
+            this.connectCidrBlocks = builder.connectCidrBlocks;
             this.connectVpcId = builder.connectVpcId;
             this.createdTime = builder.createdTime;
             this.dedicatedInstanceType = builder.dedicatedInstanceType;
@@ -540,6 +550,8 @@ public class DescribeInstancesResponseBody extends TeaModel {
             this.instanceType = builder.instanceType;
             this.internetEgressAddress = builder.internetEgressAddress;
             this.intranetSegments = builder.intranetSegments;
+            this.maintainEndTime = builder.maintainEndTime;
+            this.maintainStartTime = builder.maintainStartTime;
             this.networkInterfaceAttributes = builder.networkInterfaceAttributes;
             this.regionId = builder.regionId;
             this.status = builder.status;
@@ -596,6 +608,13 @@ public class DescribeInstancesResponseBody extends TeaModel {
          */
         public String getClassicEgressAddress() {
             return this.classicEgressAddress;
+        }
+
+        /**
+         * @return connectCidrBlocks
+         */
+        public String getConnectCidrBlocks() {
+            return this.connectCidrBlocks;
         }
 
         /**
@@ -746,6 +765,20 @@ public class DescribeInstancesResponseBody extends TeaModel {
         }
 
         /**
+         * @return maintainEndTime
+         */
+        public String getMaintainEndTime() {
+            return this.maintainEndTime;
+        }
+
+        /**
+         * @return maintainStartTime
+         */
+        public String getMaintainStartTime() {
+            return this.maintainStartTime;
+        }
+
+        /**
          * @return networkInterfaceAttributes
          */
         public NetworkInterfaceAttributes getNetworkInterfaceAttributes() {
@@ -842,6 +875,7 @@ public class DescribeInstancesResponseBody extends TeaModel {
             private String aclStatus; 
             private String aclType; 
             private String classicEgressAddress; 
+            private String connectCidrBlocks; 
             private String connectVpcId; 
             private String createdTime; 
             private String dedicatedInstanceType; 
@@ -863,6 +897,8 @@ public class DescribeInstancesResponseBody extends TeaModel {
             private String instanceType; 
             private String internetEgressAddress; 
             private String intranetSegments; 
+            private String maintainEndTime; 
+            private String maintainStartTime; 
             private NetworkInterfaceAttributes networkInterfaceAttributes; 
             private String regionId; 
             private String status; 
@@ -914,6 +950,14 @@ public class DescribeInstancesResponseBody extends TeaModel {
              */
             public Builder classicEgressAddress(String classicEgressAddress) {
                 this.classicEgressAddress = classicEgressAddress;
+                return this;
+            }
+
+            /**
+             * ConnectCidrBlocks.
+             */
+            public Builder connectCidrBlocks(String connectCidrBlocks) {
+                this.connectCidrBlocks = connectCidrBlocks;
                 return this;
             }
 
@@ -1088,6 +1132,22 @@ public class DescribeInstancesResponseBody extends TeaModel {
              */
             public Builder intranetSegments(String intranetSegments) {
                 this.intranetSegments = intranetSegments;
+                return this;
+            }
+
+            /**
+             * MaintainEndTime.
+             */
+            public Builder maintainEndTime(String maintainEndTime) {
+                this.maintainEndTime = maintainEndTime;
+                return this;
+            }
+
+            /**
+             * MaintainStartTime.
+             */
+            public Builder maintainStartTime(String maintainStartTime) {
+                this.maintainStartTime = maintainStartTime;
                 return this;
             }
 

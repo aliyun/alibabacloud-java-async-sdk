@@ -58,6 +58,10 @@ public class ModifyApiGroupRequest extends Request {
     private String securityToken;
 
     @Query
+    @NameInMap("SupportSSE")
+    private String supportSSE;
+
+    @Query
     @NameInMap("Tag")
     private java.util.List < Tag> tag;
 
@@ -78,6 +82,7 @@ public class ModifyApiGroupRequest extends Request {
         this.passthroughHeaders = builder.passthroughHeaders;
         this.rpcPattern = builder.rpcPattern;
         this.securityToken = builder.securityToken;
+        this.supportSSE = builder.supportSSE;
         this.tag = builder.tag;
         this.userLogConfig = builder.userLogConfig;
     }
@@ -173,6 +178,13 @@ public class ModifyApiGroupRequest extends Request {
     }
 
     /**
+     * @return supportSSE
+     */
+    public String getSupportSSE() {
+        return this.supportSSE;
+    }
+
+    /**
      * @return tag
      */
     public java.util.List < Tag> getTag() {
@@ -198,6 +210,7 @@ public class ModifyApiGroupRequest extends Request {
         private String passthroughHeaders; 
         private String rpcPattern; 
         private String securityToken; 
+        private String supportSSE; 
         private java.util.List < Tag> tag; 
         private String userLogConfig; 
 
@@ -218,6 +231,7 @@ public class ModifyApiGroupRequest extends Request {
             this.passthroughHeaders = request.passthroughHeaders;
             this.rpcPattern = request.rpcPattern;
             this.securityToken = request.securityToken;
+            this.supportSSE = request.supportSSE;
             this.tag = request.tag;
             this.userLogConfig = request.userLogConfig;
         } 
@@ -318,6 +332,15 @@ public class ModifyApiGroupRequest extends Request {
         public Builder securityToken(String securityToken) {
             this.putQueryParameter("SecurityToken", securityToken);
             this.securityToken = securityToken;
+            return this;
+        }
+
+        /**
+         * SupportSSE.
+         */
+        public Builder supportSSE(String supportSSE) {
+            this.putQueryParameter("SupportSSE", supportSSE);
+            this.supportSSE = supportSSE;
             return this;
         }
 

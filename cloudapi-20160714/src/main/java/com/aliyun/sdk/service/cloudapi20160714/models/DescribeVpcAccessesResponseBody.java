@@ -254,7 +254,7 @@ public class DescribeVpcAccessesResponseBody extends TeaModel {
             private String vpcTargetHostName; 
 
             /**
-             * VPC授权的创建时间
+             * CreatedTime.
              */
             public Builder createdTime(String createdTime) {
                 this.createdTime = createdTime;
@@ -262,7 +262,7 @@ public class DescribeVpcAccessesResponseBody extends TeaModel {
             }
 
             /**
-             * VPC授权的描述
+             * Description.
              */
             public Builder description(String description) {
                 this.description = description;
@@ -270,7 +270,7 @@ public class DescribeVpcAccessesResponseBody extends TeaModel {
             }
 
             /**
-             * VPC中的后端服务信息
+             * InstanceId.
              */
             public Builder instanceId(String instanceId) {
                 this.instanceId = instanceId;
@@ -278,7 +278,7 @@ public class DescribeVpcAccessesResponseBody extends TeaModel {
             }
 
             /**
-             * VPC授权名称
+             * Name.
              */
             public Builder name(String name) {
                 this.name = name;
@@ -286,7 +286,7 @@ public class DescribeVpcAccessesResponseBody extends TeaModel {
             }
 
             /**
-             * VPC中的后端服务端口
+             * Port.
              */
             public Builder port(Integer port) {
                 this.port = port;
@@ -294,7 +294,7 @@ public class DescribeVpcAccessesResponseBody extends TeaModel {
             }
 
             /**
-             * 地域id
+             * RegionId.
              */
             public Builder regionId(String regionId) {
                 this.regionId = regionId;
@@ -302,7 +302,7 @@ public class DescribeVpcAccessesResponseBody extends TeaModel {
             }
 
             /**
-             * vpc授权ID
+             * VpcAccessId.
              */
             public Builder vpcAccessId(String vpcAccessId) {
                 this.vpcAccessId = vpcAccessId;
@@ -310,7 +310,7 @@ public class DescribeVpcAccessesResponseBody extends TeaModel {
             }
 
             /**
-             * VPC的ID
+             * VpcId.
              */
             public Builder vpcId(String vpcId) {
                 this.vpcId = vpcId;
