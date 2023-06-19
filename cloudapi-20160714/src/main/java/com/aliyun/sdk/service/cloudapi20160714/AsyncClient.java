@@ -397,6 +397,8 @@ public interface AsyncClient extends SdkAutoCloseable {
      */
     CompletableFuture<DescribeSignaturesByApiResponse> describeSignaturesByApi(DescribeSignaturesByApiRequest request);
 
+    CompletableFuture<DescribeSummaryDataResponse> describeSummaryData(DescribeSummaryDataRequest request);
+
     /**
       * The returned information about system parameters. It is an array that consists of SystemParam data.
       *
