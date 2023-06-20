@@ -170,9 +170,6 @@ public class ListApplicationResponseBody extends TeaModel {
         @NameInMap("Status")
         private String status;
 
-        @NameInMap("TopoURL")
-        private String topoURL;
-
         private Data(Builder builder) {
             this.applicationId = builder.applicationId;
             this.createTime = builder.createTime;
@@ -180,7 +177,6 @@ public class ListApplicationResponseBody extends TeaModel {
             this.name = builder.name;
             this.resourceGroupId = builder.resourceGroupId;
             this.status = builder.status;
-            this.topoURL = builder.topoURL;
         }
 
         public static Builder builder() {
@@ -233,13 +229,6 @@ public class ListApplicationResponseBody extends TeaModel {
             return this.status;
         }
 
-        /**
-         * @return topoURL
-         */
-        public String getTopoURL() {
-            return this.topoURL;
-        }
-
         public static final class Builder {
             private String applicationId; 
             private String createTime; 
@@ -247,10 +236,9 @@ public class ListApplicationResponseBody extends TeaModel {
             private String name; 
             private String resourceGroupId; 
             private String status; 
-            private String topoURL; 
 
             /**
-             * 应用ID
+             * ApplicationId.
              */
             public Builder applicationId(String applicationId) {
                 this.applicationId = applicationId;
@@ -266,7 +254,7 @@ public class ListApplicationResponseBody extends TeaModel {
             }
 
             /**
-             * 应用的图片链接
+             * ImageURL.
              */
             public Builder imageURL(String imageURL) {
                 this.imageURL = imageURL;
@@ -274,7 +262,7 @@ public class ListApplicationResponseBody extends TeaModel {
             }
 
             /**
-             * 应用的名称
+             * Name.
              */
             public Builder name(String name) {
                 this.name = name;
@@ -282,7 +270,7 @@ public class ListApplicationResponseBody extends TeaModel {
             }
 
             /**
-             * 应用的资源组
+             * ResourceGroupId.
              */
             public Builder resourceGroupId(String resourceGroupId) {
                 this.resourceGroupId = resourceGroupId;
@@ -290,18 +278,10 @@ public class ListApplicationResponseBody extends TeaModel {
             }
 
             /**
-             * 应用状态：Modified、Verifying、Verified_Failure、Verified_Success、Valuating、Valuating_Failure、Valuating_Success、Deploying、Deployed_Failure、Partially_Deployed_Success、Deployed_Success、Destroying、Destroyed_Failure、Partially_Destroyed_Success、Destroyed_Success等，详见应用状态说明
+             * Status.
              */
             public Builder status(String status) {
                 this.status = status;
-                return this;
-            }
-
-            /**
-             * 应用的拓扑图链接
-             */
-            public Builder topoURL(String topoURL) {
-                this.topoURL = topoURL;
                 return this;
             }
 

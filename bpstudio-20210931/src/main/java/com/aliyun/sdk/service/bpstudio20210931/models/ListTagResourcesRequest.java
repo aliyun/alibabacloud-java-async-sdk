@@ -127,7 +127,7 @@ public class ListTagResourcesRequest extends Request {
         } 
 
         /**
-         * 幂等标记
+         * The client token that is used to ensure the idempotence of the request.
          */
         public Builder clientToken(String clientToken) {
             this.putBodyParameter("ClientToken", clientToken);
@@ -136,7 +136,7 @@ public class ListTagResourcesRequest extends Request {
         }
 
         /**
-         * 下一个查询开始Token
+         * The pagination token that is used in the next request to retrieve a new page of results.
          */
         public Builder nextToken(String nextToken) {
             this.putBodyParameter("NextToken", nextToken);
@@ -145,7 +145,7 @@ public class ListTagResourcesRequest extends Request {
         }
 
         /**
-         * 区域ID
+         * The ID of the region.
          */
         public Builder regionId(String regionId) {
             this.putBodyParameter("RegionId", regionId);
@@ -154,7 +154,7 @@ public class ListTagResourcesRequest extends Request {
         }
 
         /**
-         * 资源ID,最多 50个子项
+         * The resource IDs. You can specify a maximum number of 50 IDs.
          */
         public Builder resourceId(java.util.List < String > resourceId) {
             this.putBodyParameter("ResourceId", resourceId);
@@ -163,7 +163,7 @@ public class ListTagResourcesRequest extends Request {
         }
 
         /**
-         * 资源类型
+         * The resource type.
          */
         public Builder resourceType(String resourceType) {
             this.putBodyParameter("ResourceType", resourceType);
@@ -172,7 +172,7 @@ public class ListTagResourcesRequest extends Request {
         }
 
         /**
-         * 标签列表，最多包含20个子项
+         * The tags. A maximum of 20 tags are supported.
          */
         public Builder tag(java.util.List < Tag> tag) {
             this.putBodyParameter("Tag", tag);
@@ -226,7 +226,7 @@ public class ListTagResourcesRequest extends Request {
             private String value; 
 
             /**
-             * 标签键
+             * The key of the tag.
              */
             public Builder key(String key) {
                 this.key = key;
@@ -234,7 +234,7 @@ public class ListTagResourcesRequest extends Request {
             }
 
             /**
-             * 标签值
+             * The value of the tag.
              */
             public Builder value(String value) {
                 this.value = value;

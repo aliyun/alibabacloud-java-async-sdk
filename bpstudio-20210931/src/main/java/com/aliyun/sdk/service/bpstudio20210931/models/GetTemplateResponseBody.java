@@ -231,9 +231,6 @@ public class GetTemplateResponseBody extends TeaModel {
         @NameInMap("TemplateId")
         private String templateId;
 
-        @NameInMap("TopoURL")
-        private String topoURL;
-
         @NameInMap("Variables")
         private java.util.List < Variables> variables;
 
@@ -244,7 +241,6 @@ public class GetTemplateResponseBody extends TeaModel {
             this.name = builder.name;
             this.resourceGroupId = builder.resourceGroupId;
             this.templateId = builder.templateId;
-            this.topoURL = builder.topoURL;
             this.variables = builder.variables;
         }
 
@@ -299,13 +295,6 @@ public class GetTemplateResponseBody extends TeaModel {
         }
 
         /**
-         * @return topoURL
-         */
-        public String getTopoURL() {
-            return this.topoURL;
-        }
-
-        /**
          * @return variables
          */
         public java.util.List < Variables> getVariables() {
@@ -319,7 +308,6 @@ public class GetTemplateResponseBody extends TeaModel {
             private String name; 
             private String resourceGroupId; 
             private String templateId; 
-            private String topoURL; 
             private java.util.List < Variables> variables; 
 
             /**
@@ -367,14 +355,6 @@ public class GetTemplateResponseBody extends TeaModel {
              */
             public Builder templateId(String templateId) {
                 this.templateId = templateId;
-                return this;
-            }
-
-            /**
-             * TopoURL.
-             */
-            public Builder topoURL(String topoURL) {
-                this.topoURL = topoURL;
                 return this;
             }
 

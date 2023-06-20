@@ -48,4 +48,6 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<ValuateApplicationResponse> valuateApplication(ValuateApplicationRequest request);
 
+    CompletableFuture<ValuateTemplateResponse> valuateTemplate(ValuateTemplateRequest request);
+
 }

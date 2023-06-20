@@ -98,7 +98,7 @@ public class ExecuteOperationASyncRequest extends Request {
         } 
 
         /**
-         * 操作相关参数，根据不同的Operation值，输入对应的参数
+         * Attributes.
          */
         public Builder attributes(java.util.Map < String, String > attributes) {
             String attributesShrink = shrink(attributes, "Attributes", "json");
@@ -108,7 +108,7 @@ public class ExecuteOperationASyncRequest extends Request {
         }
 
         /**
-         * 本次操作类型，例如：attachTag，批量打标; assignResourceGroup，批量分配资源组等
+         * Operation.
          */
         public Builder operation(String operation) {
             this.putBodyParameter("Operation", operation);
@@ -117,7 +117,7 @@ public class ExecuteOperationASyncRequest extends Request {
         }
 
         /**
-         * 资源组ID，用于资源组权限校验
+         * ResourceGroupId.
          */
         public Builder resourceGroupId(String resourceGroupId) {
             this.putBodyParameter("ResourceGroupId", resourceGroupId);

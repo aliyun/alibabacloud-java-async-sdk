@@ -154,7 +154,7 @@ public class ListApplicationRequest extends Request {
         }
 
         /**
-         * 排序字段
+         * OrderType.
          */
         public Builder orderType(Long orderType) {
             this.putBodyParameter("OrderType", orderType);
@@ -172,7 +172,7 @@ public class ListApplicationRequest extends Request {
         }
 
         /**
-         * 应用的状态
+         * Status.
          */
         public Builder status(String status) {
             this.putBodyParameter("Status", status);

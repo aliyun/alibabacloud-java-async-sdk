@@ -797,9 +797,6 @@ public class GetApplicationResponseBody extends TeaModel {
         @NameInMap("TemplateId")
         private String templateId;
 
-        @NameInMap("TopoURL")
-        private String topoURL;
-
         private Data(Builder builder) {
             this.applicationId = builder.applicationId;
             this.checklist = builder.checklist;
@@ -813,7 +810,6 @@ public class GetApplicationResponseBody extends TeaModel {
             this.resourceList = builder.resourceList;
             this.status = builder.status;
             this.templateId = builder.templateId;
-            this.topoURL = builder.topoURL;
         }
 
         public static Builder builder() {
@@ -908,13 +904,6 @@ public class GetApplicationResponseBody extends TeaModel {
             return this.templateId;
         }
 
-        /**
-         * @return topoURL
-         */
-        public String getTopoURL() {
-            return this.topoURL;
-        }
-
         public static final class Builder {
             private String applicationId; 
             private java.util.List < Checklist> checklist; 
@@ -928,7 +917,6 @@ public class GetApplicationResponseBody extends TeaModel {
             private java.util.List < ResourceList> resourceList; 
             private String status; 
             private String templateId; 
-            private String topoURL; 
 
             /**
              * The description of the application.
@@ -1023,14 +1011,6 @@ public class GetApplicationResponseBody extends TeaModel {
              */
             public Builder templateId(String templateId) {
                 this.templateId = templateId;
-                return this;
-            }
-
-            /**
-             * The ID of the application.
-             */
-            public Builder topoURL(String topoURL) {
-                this.topoURL = topoURL;
                 return this;
             }
 

@@ -173,9 +173,6 @@ public class ListTemplateResponseBody extends TeaModel {
         @NameInMap("TemplateId")
         private String templateId;
 
-        @NameInMap("TopoURL")
-        private String topoURL;
-
         private Data(Builder builder) {
             this.createTime = builder.createTime;
             this.imageURL = builder.imageURL;
@@ -184,7 +181,6 @@ public class ListTemplateResponseBody extends TeaModel {
             this.tagId = builder.tagId;
             this.tagName = builder.tagName;
             this.templateId = builder.templateId;
-            this.topoURL = builder.topoURL;
         }
 
         public static Builder builder() {
@@ -244,13 +240,6 @@ public class ListTemplateResponseBody extends TeaModel {
             return this.templateId;
         }
 
-        /**
-         * @return topoURL
-         */
-        public String getTopoURL() {
-            return this.topoURL;
-        }
-
         public static final class Builder {
             private String createTime; 
             private String imageURL; 
@@ -259,7 +248,6 @@ public class ListTemplateResponseBody extends TeaModel {
             private Integer tagId; 
             private String tagName; 
             private String templateId; 
-            private String topoURL; 
 
             /**
              * The time when the template was created.
@@ -314,14 +302,6 @@ public class ListTemplateResponseBody extends TeaModel {
              */
             public Builder templateId(String templateId) {
                 this.templateId = templateId;
-                return this;
-            }
-
-            /**
-             * The URL of the template topology image.
-             */
-            public Builder topoURL(String topoURL) {
-                this.topoURL = topoURL;
                 return this;
             }
 

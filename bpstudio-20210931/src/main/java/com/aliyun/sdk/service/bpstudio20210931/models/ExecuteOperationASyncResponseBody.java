@@ -74,7 +74,7 @@ public class ExecuteOperationASyncResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * 结果码，200代表成功；其它代表失败。
+         * Code.
          */
         public Builder code(Integer code) {
             this.code = code;
@@ -82,7 +82,7 @@ public class ExecuteOperationASyncResponseBody extends TeaModel {
         }
 
         /**
-         * 异步操作任务ID
+         * Data.
          */
         public Builder data(String data) {
             this.data = data;
@@ -90,7 +90,7 @@ public class ExecuteOperationASyncResponseBody extends TeaModel {
         }
 
         /**
-         * 错误信息
+         * Message.
          */
         public Builder message(String message) {
             this.message = message;
@@ -98,7 +98,7 @@ public class ExecuteOperationASyncResponseBody extends TeaModel {
         }
 
         /**
-         * 请求ID
+         * RequestId.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
