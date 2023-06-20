@@ -1,0 +1,166 @@
+// This file is auto-generated, don't edit it. Thanks.
+package com.aliyun.sdk.service.market20151101.models;
+
+import com.aliyun.core.annotation.*;
+import darabonba.core.RequestModel;
+import darabonba.core.TeaModel;
+import com.aliyun.sdk.gateway.pop.models.*;
+
+/**
+ * {@link AutoRenewInstanceRequest} extends {@link RequestModel}
+ *
+ * <p>AutoRenewInstanceRequest</p>
+ */
+public class AutoRenewInstanceRequest extends Request {
+    @Body
+    @NameInMap("AutoRenewCycle")
+    private String autoRenewCycle;
+
+    @Body
+    @NameInMap("AutoRenewDuration")
+    private Integer autoRenewDuration;
+
+    @Body
+    @NameInMap("OrderBizId")
+    @Validation(required = true)
+    private Long orderBizId;
+
+    @Body
+    @NameInMap("OwnerId")
+    private Long ownerId;
+
+    @Body
+    @NameInMap("Type")
+    @Validation(required = true)
+    private String type;
+
+    private AutoRenewInstanceRequest(Builder builder) {
+        super(builder);
+        this.autoRenewCycle = builder.autoRenewCycle;
+        this.autoRenewDuration = builder.autoRenewDuration;
+        this.orderBizId = builder.orderBizId;
+        this.ownerId = builder.ownerId;
+        this.type = builder.type;
+    }
+
+    public static Builder builder() {
+        return new Builder();
+    }
+
+    public static AutoRenewInstanceRequest create() {
+        return builder().build();
+    }
+
+    @Override
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
+    /**
+     * @return autoRenewCycle
+     */
+    public String getAutoRenewCycle() {
+        return this.autoRenewCycle;
+    }
+
+    /**
+     * @return autoRenewDuration
+     */
+    public Integer getAutoRenewDuration() {
+        return this.autoRenewDuration;
+    }
+
+    /**
+     * @return orderBizId
+     */
+    public Long getOrderBizId() {
+        return this.orderBizId;
+    }
+
+    /**
+     * @return ownerId
+     */
+    public Long getOwnerId() {
+        return this.ownerId;
+    }
+
+    /**
+     * @return type
+     */
+    public String getType() {
+        return this.type;
+    }
+
+    public static final class Builder extends Request.Builder<AutoRenewInstanceRequest, Builder> {
+        private String autoRenewCycle; 
+        private Integer autoRenewDuration; 
+        private Long orderBizId; 
+        private Long ownerId; 
+        private String type; 
+
+        private Builder() {
+            super();
+        } 
+
+        private Builder(AutoRenewInstanceRequest request) {
+            super(request);
+            this.autoRenewCycle = request.autoRenewCycle;
+            this.autoRenewDuration = request.autoRenewDuration;
+            this.orderBizId = request.orderBizId;
+            this.ownerId = request.ownerId;
+            this.type = request.type;
+        } 
+
+        /**
+         * AutoRenewCycle.
+         */
+        public Builder autoRenewCycle(String autoRenewCycle) {
+            this.putBodyParameter("AutoRenewCycle", autoRenewCycle);
+            this.autoRenewCycle = autoRenewCycle;
+            return this;
+        }
+
+        /**
+         * AutoRenewDuration.
+         */
+        public Builder autoRenewDuration(Integer autoRenewDuration) {
+            this.putBodyParameter("AutoRenewDuration", autoRenewDuration);
+            this.autoRenewDuration = autoRenewDuration;
+            return this;
+        }
+
+        /**
+         * OrderBizId.
+         */
+        public Builder orderBizId(Long orderBizId) {
+            this.putBodyParameter("OrderBizId", orderBizId);
+            this.orderBizId = orderBizId;
+            return this;
+        }
+
+        /**
+         * OwnerId.
+         */
+        public Builder ownerId(Long ownerId) {
+            this.putBodyParameter("OwnerId", ownerId);
+            this.ownerId = ownerId;
+            return this;
+        }
+
+        /**
+         * Type.
+         */
+        public Builder type(String type) {
+            this.putBodyParameter("Type", type);
+            this.type = type;
+            return this;
+        }
+
+        @Override
+        public AutoRenewInstanceRequest build() {
+            return new AutoRenewInstanceRequest(this);
+        } 
+
+    } 
+
+}
