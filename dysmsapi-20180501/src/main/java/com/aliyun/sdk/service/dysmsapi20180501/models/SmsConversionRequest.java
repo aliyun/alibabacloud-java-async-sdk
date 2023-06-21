@@ -1,0 +1,124 @@
+// This file is auto-generated, don't edit it. Thanks.
+package com.aliyun.sdk.service.dysmsapi20180501.models;
+
+import com.aliyun.core.annotation.*;
+import darabonba.core.RequestModel;
+import darabonba.core.TeaModel;
+import com.aliyun.sdk.gateway.pop.models.*;
+
+/**
+ * {@link SmsConversionRequest} extends {@link RequestModel}
+ *
+ * <p>SmsConversionRequest</p>
+ */
+public class SmsConversionRequest extends Request {
+    @Query
+    @NameInMap("ConversionTime")
+    private Long conversionTime;
+
+    @Query
+    @NameInMap("Delivered")
+    @Validation(required = true)
+    private Boolean delivered;
+
+    @Query
+    @NameInMap("MessageId")
+    @Validation(required = true)
+    private String messageId;
+
+    private SmsConversionRequest(Builder builder) {
+        super(builder);
+        this.conversionTime = builder.conversionTime;
+        this.delivered = builder.delivered;
+        this.messageId = builder.messageId;
+    }
+
+    public static Builder builder() {
+        return new Builder();
+    }
+
+    public static SmsConversionRequest create() {
+        return builder().build();
+    }
+
+    @Override
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
+    /**
+     * @return conversionTime
+     */
+    public Long getConversionTime() {
+        return this.conversionTime;
+    }
+
+    /**
+     * @return delivered
+     */
+    public Boolean getDelivered() {
+        return this.delivered;
+    }
+
+    /**
+     * @return messageId
+     */
+    public String getMessageId() {
+        return this.messageId;
+    }
+
+    public static final class Builder extends Request.Builder<SmsConversionRequest, Builder> {
+        private Long conversionTime; 
+        private Boolean delivered; 
+        private String messageId; 
+
+        private Builder() {
+            super();
+        } 
+
+        private Builder(SmsConversionRequest request) {
+            super(request);
+            this.conversionTime = request.conversionTime;
+            this.delivered = request.delivered;
+            this.messageId = request.messageId;
+        } 
+
+        /**
+         * The time when the OTP message was delivered. The value is a UNIX timestamp. Unit: milliseconds.
+         * <p>
+         * 
+         * *   If you leave the parameter empty, the current timestamp is specified by default.
+         * *   If you specify the parameter, the timestamp must be greater than the message sending time and less than the current timestamp.
+         */
+        public Builder conversionTime(Long conversionTime) {
+            this.putQueryParameter("ConversionTime", conversionTime);
+            this.conversionTime = conversionTime;
+            return this;
+        }
+
+        /**
+         * Specifies whether customers replied to the OTP message. Valid values: true and false.
+         */
+        public Builder delivered(Boolean delivered) {
+            this.putQueryParameter("Delivered", delivered);
+            this.delivered = delivered;
+            return this;
+        }
+
+        /**
+         * The ID of the OTP message.
+         */
+        public Builder messageId(String messageId) {
+            this.putQueryParameter("MessageId", messageId);
+            this.messageId = messageId;
+            return this;
+        }
+
+        @Override
+        public SmsConversionRequest build() {
+            return new SmsConversionRequest(this);
+        } 
+
+    } 
+
+}
