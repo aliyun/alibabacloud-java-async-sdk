@@ -62,7 +62,7 @@ public class ListApplicationClientSecretsResponseBody extends TeaModel {
         private Long totalCount; 
 
         /**
-         * ApplicationClientSecrets.
+         * The information about the client keys.
          */
         public Builder applicationClientSecrets(java.util.List < ApplicationClientSecrets> applicationClientSecrets) {
             this.applicationClientSecrets = applicationClientSecrets;
@@ -70,7 +70,7 @@ public class ListApplicationClientSecretsResponseBody extends TeaModel {
         }
 
         /**
-         * 请求Id
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -78,7 +78,7 @@ public class ListApplicationClientSecretsResponseBody extends TeaModel {
         }
 
         /**
-         * 列表条数目
+         * The total number of returned entries.
          */
         public Builder totalCount(Long totalCount) {
             this.totalCount = totalCount;
@@ -190,7 +190,7 @@ public class ListApplicationClientSecretsResponseBody extends TeaModel {
             private String status; 
 
             /**
-             * IDaaS EIAM 应用Id
+             * The ID of the application that you want to query.
              */
             public Builder applicationId(String applicationId) {
                 this.applicationId = applicationId;
@@ -198,7 +198,7 @@ public class ListApplicationClientSecretsResponseBody extends TeaModel {
             }
 
             /**
-             * IDaaS EIAM 客户端ID
+             * The client ID of the application.
              */
             public Builder clientId(String clientId) {
                 this.clientId = clientId;
@@ -206,7 +206,7 @@ public class ListApplicationClientSecretsResponseBody extends TeaModel {
             }
 
             /**
-             * 客户端密钥（已脱敏）
+             * The client key secret of the application. The value is not masked.
              */
             public Builder clientSecret(String clientSecret) {
                 this.clientSecret = clientSecret;
@@ -214,7 +214,7 @@ public class ListApplicationClientSecretsResponseBody extends TeaModel {
             }
 
             /**
-             * IDaaS EIAM 实例Id
+             * The ID of the instance.
              */
             public Builder instanceId(String instanceId) {
                 this.instanceId = instanceId;
@@ -222,7 +222,7 @@ public class ListApplicationClientSecretsResponseBody extends TeaModel {
             }
 
             /**
-             * IDaaS EIAM 客户端密钥最近使用时间
+             * The time when the client key was last used. The value is a UNIX timestamp. Unit: milliseconds.
              */
             public Builder lastUsedTime(Long lastUsedTime) {
                 this.lastUsedTime = lastUsedTime;
@@ -230,7 +230,7 @@ public class ListApplicationClientSecretsResponseBody extends TeaModel {
             }
 
             /**
-             * IDaaS EIAM 客户端密钥Id
+             * The client key ID of the application.
              */
             public Builder secretId(String secretId) {
                 this.secretId = secretId;
@@ -238,7 +238,11 @@ public class ListApplicationClientSecretsResponseBody extends TeaModel {
             }
 
             /**
-             * IDaaS EIAM 客户端密钥状态
+             * The status of the client key. Valid values:
+             * <p>
+             * 
+             * *   Enabled: The client key is enabled.
+             * *   Disabled: The client key is disabled.
              */
             public Builder status(String status) {
                 this.status = status;

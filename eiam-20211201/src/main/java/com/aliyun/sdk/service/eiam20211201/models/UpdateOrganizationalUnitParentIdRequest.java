@@ -108,7 +108,7 @@ public class UpdateOrganizationalUnitParentIdRequest extends Request {
         }
 
         /**
-         * IDaaS EIAM实例的ID。
+         * The instance ID.
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -117,7 +117,7 @@ public class UpdateOrganizationalUnitParentIdRequest extends Request {
         }
 
         /**
-         * 组织ID。
+         * The organization ID.
          */
         public Builder organizationalUnitId(String organizationalUnitId) {
             this.putQueryParameter("OrganizationalUnitId", organizationalUnitId);
@@ -126,7 +126,7 @@ public class UpdateOrganizationalUnitParentIdRequest extends Request {
         }
 
         /**
-         * 父组织ID。
+         * The parent organization ID.
          */
         public Builder parentId(String parentId) {
             this.putQueryParameter("ParentId", parentId);

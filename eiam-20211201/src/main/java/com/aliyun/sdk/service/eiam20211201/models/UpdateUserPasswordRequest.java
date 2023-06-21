@@ -138,7 +138,7 @@ public class UpdateUserPasswordRequest extends Request {
         }
 
         /**
-         * IDaaS EIAM实例的ID。
+         * The instance ID.
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -147,7 +147,7 @@ public class UpdateUserPasswordRequest extends Request {
         }
 
         /**
-         * 密码
+         * The new password of the account. For more information about the password format, see the "Password Policies" topic.
          */
         public Builder password(String password) {
             this.putQueryParameter("Password", password);
@@ -156,7 +156,11 @@ public class UpdateUserPasswordRequest extends Request {
         }
 
         /**
-         * 强制修改密码状态,默认不启用。枚举取值:enabled(开启)、disabled(禁用)
+         * Specifies whether to enable forcible password change upon first logon. Default value: disabled. Valid values:
+         * <p>
+         * 
+         * *   enabled
+         * *   disabled
          */
         public Builder passwordForcedUpdateStatus(String passwordForcedUpdateStatus) {
             this.putQueryParameter("PasswordForcedUpdateStatus", passwordForcedUpdateStatus);
@@ -165,7 +169,7 @@ public class UpdateUserPasswordRequest extends Request {
         }
 
         /**
-         * 账户ID
+         * The account ID.
          */
         public Builder userId(String userId) {
             this.putQueryParameter("UserId", userId);
@@ -174,7 +178,7 @@ public class UpdateUserPasswordRequest extends Request {
         }
 
         /**
-         * 密码通知渠道。枚举取值:email(邮件)、sms(短信)
+         * The methods for receiving password notifications.
          */
         public Builder userNotificationChannels(java.util.List < String > userNotificationChannels) {
             this.putQueryParameter("UserNotificationChannels", userNotificationChannels);

@@ -121,7 +121,7 @@ public class CreateGroupRequest extends Request {
         }
 
         /**
-         * 组描述，长度最大限制128。
+         * The description of the group. The value can be up to 256 characters in length.
          */
         public Builder description(String description) {
             this.putQueryParameter("Description", description);
@@ -130,7 +130,7 @@ public class CreateGroupRequest extends Request {
         }
 
         /**
-         * 组外部ID，长度最大限制64，如果不填，则默认使用groupId填充。
+         * The external ID of the group, which can be used to associate the group with an external system. By default, the external ID is the group ID. The value can be up to 64 characters in length.
          */
         public Builder groupExternalId(String groupExternalId) {
             this.putQueryParameter("GroupExternalId", groupExternalId);
@@ -139,7 +139,7 @@ public class CreateGroupRequest extends Request {
         }
 
         /**
-         * 组名称，长度最大限制64。
+         * The name of the group. The name can be up to 64 characters in length.
          */
         public Builder groupName(String groupName) {
             this.putQueryParameter("GroupName", groupName);
@@ -148,7 +148,7 @@ public class CreateGroupRequest extends Request {
         }
 
         /**
-         * IDaaS EIAM实例的ID。
+         * The instance ID.
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);

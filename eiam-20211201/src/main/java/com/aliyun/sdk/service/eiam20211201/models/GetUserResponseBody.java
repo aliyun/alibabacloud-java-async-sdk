@@ -50,7 +50,7 @@ public class GetUserResponseBody extends TeaModel {
         private User user; 
 
         /**
-         * 请求ID。
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -58,7 +58,7 @@ public class GetUserResponseBody extends TeaModel {
         }
 
         /**
-         * User.
+         * The data object of the account.
          */
         public Builder user(User user) {
             this.user = user;
@@ -110,7 +110,7 @@ public class GetUserResponseBody extends TeaModel {
             private String fieldValue; 
 
             /**
-             * 字段标识
+             * The identifier of the custom field.
              */
             public Builder fieldName(String fieldName) {
                 this.fieldName = fieldName;
@@ -118,7 +118,7 @@ public class GetUserResponseBody extends TeaModel {
             }
 
             /**
-             * 字段数据值
+             * The value of the custom field.
              */
             public Builder fieldValue(String fieldValue) {
                 this.fieldValue = fieldValue;
@@ -183,7 +183,7 @@ public class GetUserResponseBody extends TeaModel {
             private String groupName; 
 
             /**
-             * 组描述。
+             * The description of the organizational unit.
              */
             public Builder description(String description) {
                 this.description = description;
@@ -191,7 +191,7 @@ public class GetUserResponseBody extends TeaModel {
             }
 
             /**
-             * 组ID。
+             * The ID of the organizational unit.
              */
             public Builder groupId(String groupId) {
                 this.groupId = groupId;
@@ -199,7 +199,7 @@ public class GetUserResponseBody extends TeaModel {
             }
 
             /**
-             * 组名称。
+             * The name of the organizational unit.
              */
             public Builder groupName(String groupName) {
                 this.groupName = groupName;
@@ -264,7 +264,7 @@ public class GetUserResponseBody extends TeaModel {
             private Boolean primary; 
 
             /**
-             * 机构ID
+             * The ID of the organizational unit.
              */
             public Builder organizationalUnitId(String organizationalUnitId) {
                 this.organizationalUnitId = organizationalUnitId;
@@ -272,7 +272,7 @@ public class GetUserResponseBody extends TeaModel {
             }
 
             /**
-             * 机构名称
+             * The name of the organizational unit.
              */
             public Builder organizationalUnitName(String organizationalUnitName) {
                 this.organizationalUnitName = organizationalUnitName;
@@ -280,7 +280,7 @@ public class GetUserResponseBody extends TeaModel {
             }
 
             /**
-             * 是否主机构
+             * Indicates whether the organization is the primary organization.
              */
             public Builder primary(Boolean primary) {
                 this.primary = primary;
@@ -609,7 +609,7 @@ public class GetUserResponseBody extends TeaModel {
             private String username; 
 
             /**
-             * 账户过期时间
+             * The time when the account expires. This value is a UNIX timestamp. Unit: milliseconds.
              */
             public Builder accountExpireTime(Long accountExpireTime) {
                 this.accountExpireTime = accountExpireTime;
@@ -617,7 +617,7 @@ public class GetUserResponseBody extends TeaModel {
             }
 
             /**
-             * 创建时间
+             * The time when the account was created. This value is a UNIX timestamp. Unit: milliseconds.
              */
             public Builder createTime(Long createTime) {
                 this.createTime = createTime;
@@ -625,7 +625,7 @@ public class GetUserResponseBody extends TeaModel {
             }
 
             /**
-             * 账户扩展字段列表
+             * The list of custom fields that describe the account.
              */
             public Builder customFields(java.util.List < CustomFields> customFields) {
                 this.customFields = customFields;
@@ -633,7 +633,7 @@ public class GetUserResponseBody extends TeaModel {
             }
 
             /**
-             * 账号描述
+             * The description of the account.
              */
             public Builder description(String description) {
                 this.description = description;
@@ -641,7 +641,7 @@ public class GetUserResponseBody extends TeaModel {
             }
 
             /**
-             * 账户显示名
+             * The display name of the account.
              */
             public Builder displayName(String displayName) {
                 this.displayName = displayName;
@@ -649,7 +649,7 @@ public class GetUserResponseBody extends TeaModel {
             }
 
             /**
-             * 邮箱
+             * The email address of the user who owns the account.
              */
             public Builder email(String email) {
                 this.email = email;
@@ -657,7 +657,7 @@ public class GetUserResponseBody extends TeaModel {
             }
 
             /**
-             * 邮箱是否已验证
+             * Indicates whether the email address has been verified. A value of true indicates that the email address has been verified by the user or has been set to the verified status by the administrator. A value of false indicates that the email address has not been verified.
              */
             public Builder emailVerified(Boolean emailVerified) {
                 this.emailVerified = emailVerified;
@@ -665,7 +665,7 @@ public class GetUserResponseBody extends TeaModel {
             }
 
             /**
-             * 账户所属组列表
+             * The organizational units to which the account belongs.
              */
             public Builder groups(java.util.List < Groups> groups) {
                 this.groups = groups;
@@ -673,7 +673,7 @@ public class GetUserResponseBody extends TeaModel {
             }
 
             /**
-             * 实例ID
+             * The ID of the instance
              */
             public Builder instanceId(String instanceId) {
                 this.instanceId = instanceId;
@@ -681,7 +681,7 @@ public class GetUserResponseBody extends TeaModel {
             }
 
             /**
-             * 锁定过期时间
+             * The time when the account lock expires. This value is a UNIX timestamp. Unit: milliseconds.
              */
             public Builder lockExpireTime(Long lockExpireTime) {
                 this.lockExpireTime = lockExpireTime;
@@ -689,7 +689,7 @@ public class GetUserResponseBody extends TeaModel {
             }
 
             /**
-             * 账户所属组织列表
+             * The organizational units to which the account belongs.
              */
             public Builder organizationalUnits(java.util.List < OrganizationalUnits> organizationalUnits) {
                 this.organizationalUnits = organizationalUnits;
@@ -697,7 +697,12 @@ public class GetUserResponseBody extends TeaModel {
             }
 
             /**
-             * 密码过期时间
+             * The time when the password of the account expires. This value is a UNIX timestamp. Unit: milliseconds.
+             * <p>
+             * 
+             * *   If the value -1 is returned, the password does not expire.
+             * *   If no value is returned, the password does not expire.
+             * *   If a UNIX timestamp is returned, the password expires at the indicated point of time.
              */
             public Builder passwordExpireTime(Long passwordExpireTime) {
                 this.passwordExpireTime = passwordExpireTime;
@@ -705,7 +710,7 @@ public class GetUserResponseBody extends TeaModel {
             }
 
             /**
-             * 密码是否已设置
+             * Indicates whether a password is set.
              */
             public Builder passwordSet(Boolean passwordSet) {
                 this.passwordSet = passwordSet;
@@ -713,7 +718,7 @@ public class GetUserResponseBody extends TeaModel {
             }
 
             /**
-             * 手机号码
+             * The mobile number of the user who owns the account.
              */
             public Builder phoneNumber(String phoneNumber) {
                 this.phoneNumber = phoneNumber;
@@ -721,7 +726,7 @@ public class GetUserResponseBody extends TeaModel {
             }
 
             /**
-             * 手机号是否已验证
+             * Indicates whether the mobile number has been verified. A value of true indicates that the mobile number has been verified by the user or has been set to the verified status by the administrator. A value of false indicates that the mobile number has not been verified.
              */
             public Builder phoneNumberVerified(Boolean phoneNumberVerified) {
                 this.phoneNumberVerified = phoneNumberVerified;
@@ -729,7 +734,7 @@ public class GetUserResponseBody extends TeaModel {
             }
 
             /**
-             * 手机地区编号,示例：中国大陆手区号为86，不带 00 或 +
+             * The country code of the mobile number. For example, the country code of China is 86 without 00 or +.
              */
             public Builder phoneRegion(String phoneRegion) {
                 this.phoneRegion = phoneRegion;
@@ -737,7 +742,7 @@ public class GetUserResponseBody extends TeaModel {
             }
 
             /**
-             * 账户主机构ID
+             * The ID of the primary organizational unit to which the account belongs.
              */
             public Builder primaryOrganizationalUnitId(String primaryOrganizationalUnitId) {
                 this.primaryOrganizationalUnitId = primaryOrganizationalUnitId;
@@ -745,7 +750,7 @@ public class GetUserResponseBody extends TeaModel {
             }
 
             /**
-             * 账户注册时间
+             * The time when the account was registered. This value is a UNIX timestamp. Unit: milliseconds.
              */
             public Builder registerTime(Long registerTime) {
                 this.registerTime = registerTime;
@@ -753,7 +758,11 @@ public class GetUserResponseBody extends TeaModel {
             }
 
             /**
-             * 账户状态, enabled:启用,disabled:禁用
+             * The status of the account. Valid values:
+             * <p>
+             * 
+             * *   enabled: The account is enabled.
+             * *   disabled: The account is disabled.
              */
             public Builder status(String status) {
                 this.status = status;
@@ -761,7 +770,7 @@ public class GetUserResponseBody extends TeaModel {
             }
 
             /**
-             * 最近一次更新时间
+             * The time when the account was last updated. The value is a UNIX timestamp. Unit: milliseconds.
              */
             public Builder updateTime(Long updateTime) {
                 this.updateTime = updateTime;
@@ -769,7 +778,10 @@ public class GetUserResponseBody extends TeaModel {
             }
 
             /**
-             * 外部ID
+             * The external ID of the account. The external ID can be used by external data to map the data of the account in IDaaS EIAM. By default, the external ID is the account ID.
+             * <p>
+             * 
+             * For accounts with the same source type and source ID, each account has a unique external ID.
              */
             public Builder userExternalId(String userExternalId) {
                 this.userExternalId = userExternalId;
@@ -777,7 +789,7 @@ public class GetUserResponseBody extends TeaModel {
             }
 
             /**
-             * 账户ID
+             * The ID of the account.
              */
             public Builder userId(String userId) {
                 this.userId = userId;
@@ -785,7 +797,10 @@ public class GetUserResponseBody extends TeaModel {
             }
 
             /**
-             * 来源ID
+             * The source ID of the account.
+             * <p>
+             * 
+             * If the account was created in IDaaS, its source ID is the ID of the IDaaS instance. If the account was imported, its source ID is the enterprise ID in the source. For example, if the account was imported from DingTalk, its source ID is the corpId value of the enterprise in DingTalk.
              */
             public Builder userSourceId(String userSourceId) {
                 this.userSourceId = userSourceId;
@@ -793,7 +808,13 @@ public class GetUserResponseBody extends TeaModel {
             }
 
             /**
-             * 来源类型，build_in[自建],ding_talk[钉钉导入],ad[AD导入],ldap[LDAP导入]
+             * The source type of the account. Valid values:
+             * <p>
+             * 
+             * *   build_in: The account was created in IDaaS.
+             * *   ding_talk: The account was imported from DingTalk.
+             * *   ad: The account was imported from Microsoft Active Directory (AD).
+             * *   ldap: The account was imported from a Lightweight Directory Access Protocol (LDAP) service.
              */
             public Builder userSourceType(String userSourceType) {
                 this.userSourceType = userSourceType;
@@ -801,7 +822,7 @@ public class GetUserResponseBody extends TeaModel {
             }
 
             /**
-             * 账户名
+             * The username of the account.
              */
             public Builder username(String username) {
                 this.username = username;

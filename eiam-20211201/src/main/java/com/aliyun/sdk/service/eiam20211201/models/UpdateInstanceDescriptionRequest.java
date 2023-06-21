@@ -93,7 +93,7 @@ public class UpdateInstanceDescriptionRequest extends Request {
         }
 
         /**
-         * 实例的描述信息
+         * The new description of the instance.
          */
         public Builder description(String description) {
             this.putQueryParameter("Description", description);
@@ -102,7 +102,7 @@ public class UpdateInstanceDescriptionRequest extends Request {
         }
 
         /**
-         * IDaaS EIAM的实例id
+         * The ID of the instance whose description you want to modify.
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);

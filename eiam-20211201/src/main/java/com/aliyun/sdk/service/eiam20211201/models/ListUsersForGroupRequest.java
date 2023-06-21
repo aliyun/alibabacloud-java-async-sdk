@@ -135,7 +135,7 @@ public class ListUsersForGroupRequest extends Request {
         }
 
         /**
-         * 组ID。
+         * The group ID.
          */
         public Builder groupId(String groupId) {
             this.putQueryParameter("GroupId", groupId);
@@ -144,7 +144,7 @@ public class ListUsersForGroupRequest extends Request {
         }
 
         /**
-         * IDaaS EIAM实例的ID。
+         * The instance ID.
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -153,7 +153,7 @@ public class ListUsersForGroupRequest extends Request {
         }
 
         /**
-         * 当前查询的列表页码，默认为1。
+         * The number of the page to return. Default value: 1.
          */
         public Builder pageNumber(Long pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -162,7 +162,7 @@ public class ListUsersForGroupRequest extends Request {
         }
 
         /**
-         * 当前查询的列表页码，默认为20。
+         * The number of entries to return on each page. Default value: 20. Maximum value: 100.
          */
         public Builder pageSize(Long pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -171,7 +171,7 @@ public class ListUsersForGroupRequest extends Request {
         }
 
         /**
-         * 账户ID列表，列表元素最大限制100。
+         * The account IDs. A maximum of 100 accounts can be queried.
          */
         public Builder userIds(java.util.List < String > userIds) {
             this.putQueryParameter("UserIds", userIds);

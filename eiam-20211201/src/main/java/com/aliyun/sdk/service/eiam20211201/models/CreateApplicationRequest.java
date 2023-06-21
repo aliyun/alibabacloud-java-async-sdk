@@ -167,7 +167,7 @@ public class CreateApplicationRequest extends Request {
         }
 
         /**
-         * 应用的表示名称
+         * The name of the application.
          */
         public Builder applicationName(String applicationName) {
             this.putQueryParameter("ApplicationName", applicationName);
@@ -176,7 +176,11 @@ public class CreateApplicationRequest extends Request {
         }
 
         /**
-         * 创建应用的来源类型，标准协议 or 模板应用 or 自建应用
+         * The type of the application source. Valid values:
+         * <p>
+         * 
+         * *   urn:alibaba:idaas:app:source:template: application template
+         * *   urn:alibaba:idaas:app:source:standard: standard protocol
          */
         public Builder applicationSourceType(String applicationSourceType) {
             this.putQueryParameter("ApplicationSourceType", applicationSourceType);
@@ -185,7 +189,7 @@ public class CreateApplicationRequest extends Request {
         }
 
         /**
-         * 应用创建来源为模板应用时必须指定
+         * The ID of the application template. This parameter is required if you set the ApplicationSourceType parameter to urn:alibaba:idaas:app:source:template.
          */
         public Builder applicationTemplateId(String applicationTemplateId) {
             this.putQueryParameter("ApplicationTemplateId", applicationTemplateId);
@@ -194,7 +198,7 @@ public class CreateApplicationRequest extends Request {
         }
 
         /**
-         * 应用的描述信息
+         * The description of the application.
          */
         public Builder description(String description) {
             this.putQueryParameter("Description", description);
@@ -203,7 +207,7 @@ public class CreateApplicationRequest extends Request {
         }
 
         /**
-         * IDaaS EIAM的实例id
+         * The ID of the instance.
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -212,7 +216,7 @@ public class CreateApplicationRequest extends Request {
         }
 
         /**
-         * 应用Logo地址
+         * The URL of the application logo.
          */
         public Builder logoUrl(String logoUrl) {
             this.putQueryParameter("LogoUrl", logoUrl);
@@ -221,7 +225,11 @@ public class CreateApplicationRequest extends Request {
         }
 
         /**
-         * 单点登录类型，saml2 or oidc
+         * The SSO protocol. Valid values:
+         * <p>
+         * 
+         * *   saml2: the SAML 2.0 protocol.
+         * *   oidc: the OpenID Connect protocol.
          */
         public Builder ssoType(String ssoType) {
             this.putQueryParameter("SsoType", ssoType);

@@ -50,7 +50,7 @@ public class GetPasswordHistoryConfigurationResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * PasswordHistoryConfiguration.
+         * The password history configurations.
          */
         public Builder passwordHistoryConfiguration(PasswordHistoryConfiguration passwordHistoryConfiguration) {
             this.passwordHistoryConfiguration = passwordHistoryConfiguration;
@@ -58,7 +58,7 @@ public class GetPasswordHistoryConfigurationResponseBody extends TeaModel {
         }
 
         /**
-         * 请求ID。
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -110,7 +110,7 @@ public class GetPasswordHistoryConfigurationResponseBody extends TeaModel {
             private String passwordHistoryStatus; 
 
             /**
-             * 保留最近密码记录数。
+             * The maximum number of recent passwords that are retained.
              */
             public Builder passwordHistoryMaxRetention(Integer passwordHistoryMaxRetention) {
                 this.passwordHistoryMaxRetention = passwordHistoryMaxRetention;
@@ -118,7 +118,11 @@ public class GetPasswordHistoryConfigurationResponseBody extends TeaModel {
             }
 
             /**
-             * 密码历史配置状态。枚举取值:enabled(开启)、disabled(禁用)
+             * Indicates whether the password history feature is enabled. Valid values:
+             * <p>
+             * 
+             * *   enabled
+             * *   disabled
              */
             public Builder passwordHistoryStatus(String passwordHistoryStatus) {
                 this.passwordHistoryStatus = passwordHistoryStatus;

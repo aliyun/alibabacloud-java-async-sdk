@@ -135,7 +135,7 @@ public class ListGroupsForApplicationRequest extends Request {
         }
 
         /**
-         * 应用的唯一标识。
+         * The application ID.
          */
         public Builder applicationId(String applicationId) {
             this.putQueryParameter("ApplicationId", applicationId);
@@ -144,7 +144,7 @@ public class ListGroupsForApplicationRequest extends Request {
         }
 
         /**
-         * 非必填，如果填写则可以基于组ID进行过滤，列表中最多包含100个元素。
+         * The group IDs. You can specify up to 100 group IDs at a time.
          */
         public Builder groupIds(java.util.List < String > groupIds) {
             this.putQueryParameter("GroupIds", groupIds);
@@ -153,7 +153,7 @@ public class ListGroupsForApplicationRequest extends Request {
         }
 
         /**
-         * IDaaS EIAM实例的ID。
+         * The instance ID.
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -162,7 +162,7 @@ public class ListGroupsForApplicationRequest extends Request {
         }
 
         /**
-         * 当前查询的列表页码，默认为1。
+         * The page number.
          */
         public Builder pageNumber(Long pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -171,7 +171,7 @@ public class ListGroupsForApplicationRequest extends Request {
         }
 
         /**
-         * 当前查询的列表页码，默认为20。
+         * The number of entries per page.
          */
         public Builder pageSize(Long pageSize) {
             this.putQueryParameter("PageSize", pageSize);

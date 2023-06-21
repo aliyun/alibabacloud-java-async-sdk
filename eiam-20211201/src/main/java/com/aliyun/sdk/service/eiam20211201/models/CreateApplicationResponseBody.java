@@ -50,7 +50,7 @@ public class CreateApplicationResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * 应用Id
+         * The ID of the application.
          */
         public Builder applicationId(String applicationId) {
             this.applicationId = applicationId;
@@ -58,7 +58,7 @@ public class CreateApplicationResponseBody extends TeaModel {
         }
 
         /**
-         * 请求Id
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

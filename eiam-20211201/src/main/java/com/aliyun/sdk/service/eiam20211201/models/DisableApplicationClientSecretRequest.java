@@ -108,7 +108,7 @@ public class DisableApplicationClientSecretRequest extends Request {
         }
 
         /**
-         * IDaaS的应用主键id
+         * The ID of the application for which you want to disable a client key.
          */
         public Builder applicationId(String applicationId) {
             this.putQueryParameter("ApplicationId", applicationId);
@@ -117,7 +117,7 @@ public class DisableApplicationClientSecretRequest extends Request {
         }
 
         /**
-         * IDaaS EIAM的实例id
+         * The ID of the instance.
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -126,7 +126,7 @@ public class DisableApplicationClientSecretRequest extends Request {
         }
 
         /**
-         * OIDC 场景下用于客户端身份验证的客户端密钥ID
+         * The client key ID of the application.
          */
         public Builder secretId(String secretId) {
             this.putQueryParameter("SecretId", secretId);

@@ -212,7 +212,7 @@ public class UpdateUserRequest extends Request {
         }
 
         /**
-         * 扩展字段列表
+         * The custom extended fields.
          */
         public Builder customFields(java.util.List < CustomFields> customFields) {
             this.putQueryParameter("CustomFields", customFields);
@@ -221,7 +221,7 @@ public class UpdateUserRequest extends Request {
         }
 
         /**
-         * 账户展示名
+         * The display name of the account. The display name can be up to 64 characters in length.
          */
         public Builder displayName(String displayName) {
             this.putQueryParameter("DisplayName", displayName);
@@ -230,7 +230,7 @@ public class UpdateUserRequest extends Request {
         }
 
         /**
-         * 邮箱
+         * The email address. The prefix of the email address can contain letters, digits, periods (.), underscores (\_), and hyphens (-).
          */
         public Builder email(String email) {
             this.putQueryParameter("Email", email);
@@ -239,7 +239,7 @@ public class UpdateUserRequest extends Request {
         }
 
         /**
-         * 邮箱是否验证，邮箱若设置此字段必须设置，无特殊业务可直接设置为true
+         * Specifies whether the email address is verified. This parameter must be specified if you specify Email. You can set this parameter to true if you have no special business requirements.
          */
         public Builder emailVerified(Boolean emailVerified) {
             this.putQueryParameter("EmailVerified", emailVerified);
@@ -248,7 +248,7 @@ public class UpdateUserRequest extends Request {
         }
 
         /**
-         * IDaaS EIAM实例的ID。
+         * The instance ID.
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -257,7 +257,7 @@ public class UpdateUserRequest extends Request {
         }
 
         /**
-         * 手机号
+         * The mobile number. The mobile number must be 6 to 15 digits in length.
          */
         public Builder phoneNumber(String phoneNumber) {
             this.putQueryParameter("PhoneNumber", phoneNumber);
@@ -266,7 +266,7 @@ public class UpdateUserRequest extends Request {
         }
 
         /**
-         * 手机号是否验证，手机号若设置此字段必须设置，无特殊业务可直接设置为true
+         * Specifies whether the mobile number is verified. This parameter must be specified if you specify PhoneNumber. You can set this parameter to true if you have no special business requirements.
          */
         public Builder phoneNumberVerified(Boolean phoneNumberVerified) {
             this.putQueryParameter("PhoneNumberVerified", phoneNumberVerified);
@@ -275,7 +275,7 @@ public class UpdateUserRequest extends Request {
         }
 
         /**
-         * 手机地区编号,示例：中国大陆手区号为86，不带 00 或 +, 手机号若设置，此参数必填
+         * The area code of the mobile number. For example, the area code of a mobile number in the Chinese mainland is 86 without 00 or the plus sign (+). This parameter must be specified if you specify PhoneNumber.
          */
         public Builder phoneRegion(String phoneRegion) {
             this.putQueryParameter("PhoneRegion", phoneRegion);
@@ -284,7 +284,7 @@ public class UpdateUserRequest extends Request {
         }
 
         /**
-         * 账户ID
+         * The account ID.
          */
         public Builder userId(String userId) {
             this.putQueryParameter("UserId", userId);
@@ -293,7 +293,7 @@ public class UpdateUserRequest extends Request {
         }
 
         /**
-         * 账户名。
+         * The name of the account. The name can be up to 64 characters in length. It can contain letters, digits, and the following special characters: \_ . @ -
          */
         public Builder username(String username) {
             this.putQueryParameter("Username", username);
@@ -362,7 +362,7 @@ public class UpdateUserRequest extends Request {
             private String operation; 
 
             /**
-             * 扩展字段标识
+             * The name of the extended field. You must create an extended field before you specify this parameter. To create an extended field, go to the Extended Fields page of the specified EIAM instance in the IDaaS console.
              */
             public Builder fieldName(String fieldName) {
                 this.fieldName = fieldName;
@@ -370,7 +370,7 @@ public class UpdateUserRequest extends Request {
             }
 
             /**
-             * 扩展字段值
+             * The value of the extended field. The value follows the limits on the properties of the extended field.
              */
             public Builder fieldValue(String fieldValue) {
                 this.fieldValue = fieldValue;
@@ -378,7 +378,12 @@ public class UpdateUserRequest extends Request {
             }
 
             /**
-             * 扩展字段操作类型，枚举值，add（新增),replace（更新),remove(移除)
+             * The operation type of the extended field. Valid values:
+             * <p>
+             * 
+             * *   add: adds a value to the extended field of the account.
+             * *   replace: replaces the existing value of the extended field of the account. If the existing value to be replaced does not exist, this operation changes to the add operation.
+             * *   remove: removes a value from the extended field of the account.
              */
             public Builder operation(String operation) {
                 this.operation = operation;

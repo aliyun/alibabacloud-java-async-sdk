@@ -38,7 +38,7 @@ public class DisableApplicationProvisioningResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * 请求Id
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

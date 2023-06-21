@@ -28,6 +28,10 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<AuthorizeApplicationToUsersResponse> authorizeApplicationToUsers(AuthorizeApplicationToUsersRequest request);
 
+    /**
+      * IDaaS EIAM supports the following two standard single sign-on (SSO) protocols for adding applications: SAML 2.0 and OIDC. You can select an SSO protocol based on your business requirements when you add an application. You cannot change the SSO protocol that you selected after the application is added.
+      *
+     */
     CompletableFuture<CreateApplicationResponse> createApplication(CreateApplicationRequest request);
 
     CompletableFuture<CreateApplicationClientSecretResponse> createApplicationClientSecret(CreateApplicationClientSecretRequest request);
@@ -40,18 +44,30 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<CreateUserResponse> createUser(CreateUserRequest request);
 
+    /**
+      * Make sure that the EIAM application that you want to delete is not used before you delete the EIAM application. After you delete the EIAM application, all configurations are deleted and cannot be restored.
+      *
+     */
     CompletableFuture<DeleteApplicationResponse> deleteApplication(DeleteApplicationRequest request);
 
     CompletableFuture<DeleteApplicationClientSecretResponse> deleteApplicationClientSecret(DeleteApplicationClientSecretRequest request);
 
     CompletableFuture<DeleteGroupResponse> deleteGroup(DeleteGroupRequest request);
 
+    /**
+      * Make sure that the instance to be deleted is no longer used. If the instance is deleted, all data related to the instance will be deleted.
+      *
+     */
     CompletableFuture<DeleteInstanceResponse> deleteInstance(DeleteInstanceRequest request);
 
     CompletableFuture<DeleteOrganizationalUnitResponse> deleteOrganizationalUnit(DeleteOrganizationalUnitRequest request);
 
     CompletableFuture<DeleteUserResponse> deleteUser(DeleteUserRequest request);
 
+    /**
+      * All features of the EIAM application cannot be used if you disable the EIAM application, such as single sign-on (SSO) and account synchronization. Make sure that you acknowledge the risks of the delete operation.
+      *
+     */
     CompletableFuture<DisableApplicationResponse> disableApplication(DisableApplicationRequest request);
 
     CompletableFuture<DisableApplicationApiInvokeResponse> disableApplicationApiInvoke(DisableApplicationApiInvokeRequest request);
@@ -104,6 +120,10 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<ListApplicationsResponse> listApplications(ListApplicationsRequest request);
 
+    /**
+      * You can only query the permissions that are directly granted to the EIAM organization by calling the ListApplicationsForOrganizationalUnit operation. You can filter applications by configuring the **ApplicationIds** parameter when you call this operation.
+      *
+     */
     CompletableFuture<ListApplicationsForOrganizationalUnitResponse> listApplicationsForOrganizationalUnit(ListApplicationsForOrganizationalUnitRequest request);
 
     CompletableFuture<ListApplicationsForUserResponse> listApplicationsForUser(ListApplicationsForUserRequest request);
@@ -115,6 +135,8 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<ListGroupsForUserResponse> listGroupsForUser(ListGroupsForUserRequest request);
 
     CompletableFuture<ListInstancesResponse> listInstances(ListInstancesRequest request);
+
+    CompletableFuture<ListOrganizationalUnitParentsResponse> listOrganizationalUnitParents(ListOrganizationalUnitParentsRequest request);
 
     CompletableFuture<ListOrganizationalUnitsResponse> listOrganizationalUnits(ListOrganizationalUnitsRequest request);
 
@@ -146,6 +168,10 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<SetApplicationProvisioningScopeResponse> setApplicationProvisioningScope(SetApplicationProvisioningScopeRequest request);
 
+    /**
+      * In IDaaS EIAM, the application management feature supports multiple SSO protocols for applications, including SAML 2.0 and OIDC protocols. Each application supports only one protocol, and the protocol cannot be changed after the application is created. You can specify the SSO configuration attributes of an application based on the supported SSO protocol.
+      *
+     */
     CompletableFuture<SetApplicationSsoConfigResponse> setApplicationSsoConfig(SetApplicationSsoConfigRequest request);
 
     CompletableFuture<SetPasswordComplexityConfigurationResponse> setPasswordComplexityConfiguration(SetPasswordComplexityConfigurationRequest request);

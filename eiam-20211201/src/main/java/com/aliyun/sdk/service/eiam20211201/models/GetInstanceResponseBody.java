@@ -50,7 +50,7 @@ public class GetInstanceResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * Instance.
+         * The details of the instance.
          */
         public Builder instance(Instance instance) {
             this.instance = instance;
@@ -58,7 +58,7 @@ public class GetInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * 请求ID。
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -110,7 +110,7 @@ public class GetInstanceResponseBody extends TeaModel {
             private String status; 
 
             /**
-             * 用户portal和应用开发集成的端点地址
+             * The endpoint of the instance.
              */
             public Builder endpoint(String endpoint) {
                 this.endpoint = endpoint;
@@ -118,7 +118,11 @@ public class GetInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * 实例域名状态，Unresolved(未解析)、Resolved(已解析)
+             * The status of the endpoint. Valid values:
+             * <p>
+             * 
+             * *   resolved
+             * *   unresolved
              */
             public Builder status(String status) {
                 this.status = status;
@@ -219,7 +223,7 @@ public class GetInstanceResponseBody extends TeaModel {
             private String status; 
 
             /**
-             * 实例的创建时间
+             * The time when the instance was created. This value is a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.
              */
             public Builder createTime(Long createTime) {
                 this.createTime = createTime;
@@ -227,7 +231,7 @@ public class GetInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * 实例默认域名,用户portal和应用开发集成的端点地址
+             * The default endpoint of the instance.
              */
             public Builder defaultEndpoint(DefaultEndpoint defaultEndpoint) {
                 this.defaultEndpoint = defaultEndpoint;
@@ -235,7 +239,7 @@ public class GetInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * 实例描述信息
+             * The description of the instance.
              */
             public Builder description(String description) {
                 this.description = description;
@@ -243,7 +247,7 @@ public class GetInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * IDaaS实例出口公网地址段
+             * The outbound public CIDR blocks of the instance. For example, when you synchronize Active Directory (AD) accounts, the IDaaS EIAM instance accesses your AD service by using the outbound public CIDR blocks.
              */
             public Builder egressAddresses(java.util.List < String > egressAddresses) {
                 this.egressAddresses = egressAddresses;
@@ -251,7 +255,7 @@ public class GetInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * 实例id
+             * The instance ID.
              */
             public Builder instanceId(String instanceId) {
                 this.instanceId = instanceId;
@@ -259,7 +263,11 @@ public class GetInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * 实例状态，Pending(初始状态)、Creating(创建中)、Running(运行中)、Disabled(禁用)、CreateFailed(创建失败)
+             * The status of the instance. Valid values:
+             * <p>
+             * 
+             * *   creating
+             * *   running
              */
             public Builder status(String status) {
                 this.status = status;

@@ -50,7 +50,7 @@ public class GetPasswordExpirationConfigurationResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * PasswordExpirationConfiguration.
+         * The password expiration configurations.
          */
         public Builder passwordExpirationConfiguration(PasswordExpirationConfiguration passwordExpirationConfiguration) {
             this.passwordExpirationConfiguration = passwordExpirationConfiguration;
@@ -58,7 +58,7 @@ public class GetPasswordExpirationConfigurationResponseBody extends TeaModel {
         }
 
         /**
-         * 请求ID。
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -170,7 +170,12 @@ public class GetPasswordExpirationConfigurationResponseBody extends TeaModel {
             private Integer passwordValidMaxDay; 
 
             /**
-             * 密码过期动作。枚举取值:forbid\_login(禁止登录)、force\_update\_password(强制修改密码)、remind\_update\_password(提醒修改密码)
+             * The action to take when a password expires. Valid values:
+             * <p>
+             * 
+             * *   forbid_login: Prohibit the user from using the password to log on to IDaaS.
+             * *   force_update_password: Force the user to change the password.
+             * *   remind_update_password: Remind the user to change the password.
              */
             public Builder passwordExpirationAction(String passwordExpirationAction) {
                 this.passwordExpirationAction = passwordExpirationAction;
@@ -178,7 +183,7 @@ public class GetPasswordExpirationConfigurationResponseBody extends TeaModel {
             }
 
             /**
-             * 密码过期通知渠道。枚举取值:login(用户登录)、email(邮件)、sms(短信)
+             * The methods for receiving password expiration notifications.
              */
             public Builder passwordExpirationNotificationChannels(java.util.List < String > passwordExpirationNotificationChannels) {
                 this.passwordExpirationNotificationChannels = passwordExpirationNotificationChannels;
@@ -186,7 +191,7 @@ public class GetPasswordExpirationConfigurationResponseBody extends TeaModel {
             }
 
             /**
-             * 密码过期通知时间，单位是天。
+             * The number of days before the expiration date during which password expiration notifications are sent. Unit: day.
              */
             public Builder passwordExpirationNotificationDuration(Integer passwordExpirationNotificationDuration) {
                 this.passwordExpirationNotificationDuration = passwordExpirationNotificationDuration;
@@ -194,7 +199,11 @@ public class GetPasswordExpirationConfigurationResponseBody extends TeaModel {
             }
 
             /**
-             * 密码过期通知状态。枚举取值:enabled(开启)、disabled(禁用)
+             * Indicates whether the password expiration notification feature is enabled. Valid values:
+             * <p>
+             * 
+             * *   enabled
+             * *   disabled
              */
             public Builder passwordExpirationNotificationStatus(String passwordExpirationNotificationStatus) {
                 this.passwordExpirationNotificationStatus = passwordExpirationNotificationStatus;
@@ -202,7 +211,11 @@ public class GetPasswordExpirationConfigurationResponseBody extends TeaModel {
             }
 
             /**
-             * 密码过期配置状态。枚举取值:enabled(开启)、disabled(禁用)
+             * Indicates whether the password expiration feature is enabled. Valid values:
+             * <p>
+             * 
+             * *   enabled
+             * *   disabled
              */
             public Builder passwordExpirationStatus(String passwordExpirationStatus) {
                 this.passwordExpirationStatus = passwordExpirationStatus;
@@ -210,7 +223,7 @@ public class GetPasswordExpirationConfigurationResponseBody extends TeaModel {
             }
 
             /**
-             * 密码强制修改时间，单位是天。
+             * The number of days before which users must change the password to prevent password expiration. Unit: day.
              */
             public Builder passwordForcedUpdateDuration(Integer passwordForcedUpdateDuration) {
                 this.passwordForcedUpdateDuration = passwordForcedUpdateDuration;
@@ -218,7 +231,7 @@ public class GetPasswordExpirationConfigurationResponseBody extends TeaModel {
             }
 
             /**
-             * 密码有效时长，单位是天。
+             * The validity period of a password. Unit: day.
              */
             public Builder passwordValidMaxDay(Integer passwordValidMaxDay) {
                 this.passwordValidMaxDay = passwordValidMaxDay;

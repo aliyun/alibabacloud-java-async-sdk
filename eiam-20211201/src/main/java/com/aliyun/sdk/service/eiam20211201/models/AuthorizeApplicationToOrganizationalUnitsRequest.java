@@ -108,7 +108,7 @@ public class AuthorizeApplicationToOrganizationalUnitsRequest extends Request {
         }
 
         /**
-         * 应用的唯一标识。
+         * The ID of the application on which you want to grant permissions.
          */
         public Builder applicationId(String applicationId) {
             this.putQueryParameter("ApplicationId", applicationId);
@@ -117,7 +117,7 @@ public class AuthorizeApplicationToOrganizationalUnitsRequest extends Request {
         }
 
         /**
-         * IDaaS EIAM实例的ID。
+         * The ID of the instance.
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -126,7 +126,7 @@ public class AuthorizeApplicationToOrganizationalUnitsRequest extends Request {
         }
 
         /**
-         * 被授权的组织ID的列表，必填，列表中最多包含100个元素。
+         * The IDs of the organizations to which you want to grant permissions. You can grant permissions to a maximum of 100 organizations at a time.
          */
         public Builder organizationalUnitIds(java.util.List < String > organizationalUnitIds) {
             this.putQueryParameter("OrganizationalUnitIds", organizationalUnitIds);

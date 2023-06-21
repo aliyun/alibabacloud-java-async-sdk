@@ -108,7 +108,7 @@ public class AuthorizeApplicationToUsersRequest extends Request {
         }
 
         /**
-         * 应用的唯一标识。
+         * The ID of the application on which you want to grant permissions.
          */
         public Builder applicationId(String applicationId) {
             this.putQueryParameter("ApplicationId", applicationId);
@@ -117,7 +117,7 @@ public class AuthorizeApplicationToUsersRequest extends Request {
         }
 
         /**
-         * IDaaS EIAM实例的ID。
+         * The ID of the instance.
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -126,7 +126,7 @@ public class AuthorizeApplicationToUsersRequest extends Request {
         }
 
         /**
-         * 被授权的账户ID列表，必填，列表中最多包含100个元素。
+         * The IDs of the accounts to which you want to grant permissions. You can grant permissions to a maximum of 100 accounts at a time.
          */
         public Builder userIds(java.util.List < String > userIds) {
             this.putQueryParameter("UserIds", userIds);

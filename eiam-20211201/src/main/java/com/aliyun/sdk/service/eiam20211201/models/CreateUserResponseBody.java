@@ -50,7 +50,7 @@ public class CreateUserResponseBody extends TeaModel {
         private String userId; 
 
         /**
-         * 请求ID。
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -58,7 +58,7 @@ public class CreateUserResponseBody extends TeaModel {
         }
 
         /**
-         * 账户Id
+         * The ID of the account.
          */
         public Builder userId(String userId) {
             this.userId = userId;

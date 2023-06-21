@@ -108,7 +108,7 @@ public class UpdateUserDescriptionRequest extends Request {
         }
 
         /**
-         * 账户描述
+         * The description of the account. The value can be up to 256 characters in length.
          */
         public Builder description(String description) {
             this.putQueryParameter("Description", description);
@@ -117,7 +117,7 @@ public class UpdateUserDescriptionRequest extends Request {
         }
 
         /**
-         * IDaaS EIAM实例的ID。
+         * The ID of the instance.
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -126,7 +126,7 @@ public class UpdateUserDescriptionRequest extends Request {
         }
 
         /**
-         * 账户ID
+         * The ID of the account.
          */
         public Builder userId(String userId) {
             this.putQueryParameter("UserId", userId);

@@ -50,7 +50,7 @@ public class GetGroupResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * Group.
+         * The information about the account group.
          */
         public Builder group(Group group) {
             this.group = group;
@@ -58,7 +58,7 @@ public class GetGroupResponseBody extends TeaModel {
         }
 
         /**
-         * 请求ID。
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -194,7 +194,7 @@ public class GetGroupResponseBody extends TeaModel {
             private Long updateTime; 
 
             /**
-             * 组创建时间, Unix时间戳格式，单位为毫秒。
+             * The time at which the group was created. This value is a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.
              */
             public Builder createTime(Long createTime) {
                 this.createTime = createTime;
@@ -202,7 +202,7 @@ public class GetGroupResponseBody extends TeaModel {
             }
 
             /**
-             * 组描述。
+             * The description of the group.
              */
             public Builder description(String description) {
                 this.description = description;
@@ -210,7 +210,7 @@ public class GetGroupResponseBody extends TeaModel {
             }
 
             /**
-             * 组外部标识。
+             * The external ID of the group, which can be used to associate the group with an external system. By default, the external ID is the group ID.
              */
             public Builder groupExternalId(String groupExternalId) {
                 this.groupExternalId = groupExternalId;
@@ -218,7 +218,7 @@ public class GetGroupResponseBody extends TeaModel {
             }
 
             /**
-             * 组ID。
+             * The group ID.
              */
             public Builder groupId(String groupId) {
                 this.groupId = groupId;
@@ -226,7 +226,7 @@ public class GetGroupResponseBody extends TeaModel {
             }
 
             /**
-             * 组名称。
+             * The name of the group.
              */
             public Builder groupName(String groupName) {
                 this.groupName = groupName;
@@ -234,7 +234,7 @@ public class GetGroupResponseBody extends TeaModel {
             }
 
             /**
-             * 组来源ID。
+             * The source ID of the group. By default, the source ID is the instance ID.
              */
             public Builder groupSourceId(String groupSourceId) {
                 this.groupSourceId = groupSourceId;
@@ -242,7 +242,10 @@ public class GetGroupResponseBody extends TeaModel {
             }
 
             /**
-             * 组来源类型，build_in[自建],ding_talk[钉钉导入],ad[AD导入],ldap[LDAP导入]。
+             * The source type of the group. Only build_in may be returned, which indicates that the group was created in IDaaS.
+             * <p>
+             * 
+             * *
              */
             public Builder groupSourceType(String groupSourceType) {
                 this.groupSourceType = groupSourceType;
@@ -250,7 +253,7 @@ public class GetGroupResponseBody extends TeaModel {
             }
 
             /**
-             * 实例ID。
+             * The instance ID.
              */
             public Builder instanceId(String instanceId) {
                 this.instanceId = instanceId;
@@ -258,7 +261,7 @@ public class GetGroupResponseBody extends TeaModel {
             }
 
             /**
-             * 组最近一次更新时间，Unix时间戳格式，单位为毫秒。
+             * The time at which the group was last updated. This value is a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.
              */
             public Builder updateTime(Long updateTime) {
                 this.updateTime = updateTime;

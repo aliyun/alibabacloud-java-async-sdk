@@ -285,7 +285,7 @@ public class CreateUserRequest extends Request {
         }
 
         /**
-         * 扩展字段列表
+         * The extended fields.
          */
         public Builder customFields(java.util.List < CustomFields> customFields) {
             this.putQueryParameter("CustomFields", customFields);
@@ -294,7 +294,7 @@ public class CreateUserRequest extends Request {
         }
 
         /**
-         * 描述
+         * The description of the organizational unit. The description can be up to 256 characters in length.
          */
         public Builder description(String description) {
             this.putQueryParameter("Description", description);
@@ -303,7 +303,7 @@ public class CreateUserRequest extends Request {
         }
 
         /**
-         * 账户展示名
+         * The display name of the account. The display name can be up to 64 characters in length.
          */
         public Builder displayName(String displayName) {
             this.putQueryParameter("DisplayName", displayName);
@@ -312,7 +312,7 @@ public class CreateUserRequest extends Request {
         }
 
         /**
-         * 邮箱
+         * The email address of the user who owns the account. The email address prefix can contain letters, digits, underscores (\_), periods (.), and hyphens (-).
          */
         public Builder email(String email) {
             this.putQueryParameter("Email", email);
@@ -321,7 +321,7 @@ public class CreateUserRequest extends Request {
         }
 
         /**
-         * 邮箱是否验证，邮箱若设置此字段必须设置，无特殊业务可直接设置为true
+         * Specifies whether the email address is a trusted email address. This parameter is required if the Email parameter is specified. If you have no special business requirements, set this parameter to true.
          */
         public Builder emailVerified(Boolean emailVerified) {
             this.putQueryParameter("EmailVerified", emailVerified);
@@ -330,7 +330,7 @@ public class CreateUserRequest extends Request {
         }
 
         /**
-         * IDaaS EIAM实例的ID。
+         * The ID of the instance.
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -339,7 +339,7 @@ public class CreateUserRequest extends Request {
         }
 
         /**
-         * 所属组织ID集合
+         * The IDs of organizational units to which the account belongs. An account can belong to multiple organizational units.
          */
         public Builder organizationalUnitIds(java.util.List < String > organizationalUnitIds) {
             this.putQueryParameter("OrganizationalUnitIds", organizationalUnitIds);
@@ -348,7 +348,7 @@ public class CreateUserRequest extends Request {
         }
 
         /**
-         * 密码
+         * The password of the account. For more information, view the password policy of the instance in the IDaaS console.
          */
         public Builder password(String password) {
             this.putQueryParameter("Password", password);
@@ -357,7 +357,7 @@ public class CreateUserRequest extends Request {
         }
 
         /**
-         * 密码初始化配置
+         * The configurations for password initialization.
          */
         public Builder passwordInitializationConfig(PasswordInitializationConfig passwordInitializationConfig) {
             this.putQueryParameter("PasswordInitializationConfig", passwordInitializationConfig);
@@ -366,7 +366,7 @@ public class CreateUserRequest extends Request {
         }
 
         /**
-         * 手机号
+         * The mobile phone number, which contains 6 to 15 digits.
          */
         public Builder phoneNumber(String phoneNumber) {
             this.putQueryParameter("PhoneNumber", phoneNumber);
@@ -375,7 +375,7 @@ public class CreateUserRequest extends Request {
         }
 
         /**
-         * 手机号是否验证，手机号若设置此字段必须设置，无特殊业务可直接设置为true
+         * Specifies whether the mobile phone number is a trusted mobile phone number. This parameter is required if the PhoneNumber parameter is specified. If you have no special business requirements, set this parameter to true.
          */
         public Builder phoneNumberVerified(Boolean phoneNumberVerified) {
             this.putQueryParameter("PhoneNumberVerified", phoneNumberVerified);
@@ -384,7 +384,7 @@ public class CreateUserRequest extends Request {
         }
 
         /**
-         * 手机地区编号,示例：中国大陆手区号为86，不带 00 或 +, 手机号若设置，此参数必填
+         * The country code of the mobile phone number. The country code contains only digits and does not contain a plus sign (+).
          */
         public Builder phoneRegion(String phoneRegion) {
             this.putQueryParameter("PhoneRegion", phoneRegion);
@@ -393,7 +393,7 @@ public class CreateUserRequest extends Request {
         }
 
         /**
-         * 账户主组织ID
+         * The ID of the primary organizational unit to which the account belongs.
          */
         public Builder primaryOrganizationalUnitId(String primaryOrganizationalUnitId) {
             this.putQueryParameter("PrimaryOrganizationalUnitId", primaryOrganizationalUnitId);
@@ -402,7 +402,7 @@ public class CreateUserRequest extends Request {
         }
 
         /**
-         * 外部ID
+         * The external ID of the account. The external ID can be used to associate the account with an external system. The external ID can be up to 64 characters in length. If you do not specify an external ID for the account, the ID of the account is used as the external ID by default.
          */
         public Builder userExternalId(String userExternalId) {
             this.putQueryParameter("UserExternalId", userExternalId);
@@ -411,7 +411,7 @@ public class CreateUserRequest extends Request {
         }
 
         /**
-         * 账户名
+         * The name of the account. The name can be up to 64 characters in length and can contain letters, digits, underscores (\_), periods (.), at signs (@), and hyphens (-).
          */
         public Builder username(String username) {
             this.putQueryParameter("Username", username);
@@ -467,7 +467,7 @@ public class CreateUserRequest extends Request {
             private String fieldValue; 
 
             /**
-             * 扩展字段标识
+             * The name of the extended field. You must create the extended field in advance. To create an extended field, log on to the IDaaS console. In the left-side navigation pane, choose Accounts > Extended Fields, and then click Create Field on the Extended Fields page.
              */
             public Builder fieldName(String fieldName) {
                 this.fieldName = fieldName;
@@ -475,7 +475,7 @@ public class CreateUserRequest extends Request {
             }
 
             /**
-             * 扩展字段值
+             * The value of the extended field. The value follows the limits on the properties of the extended field.
              */
             public Builder fieldValue(String fieldValue) {
                 this.fieldValue = fieldValue;
@@ -556,7 +556,11 @@ public class CreateUserRequest extends Request {
             private java.util.List < String > userNotificationChannels; 
 
             /**
-             * 强制修改密码状态,默认不启用。枚举取值:enabled(开启)、disabled(禁用)
+             * Specifies whether to forcibly change the password status. Default value: disabled. Valid values:
+             * <p>
+             * 
+             * *   enabled: forcibly changes the password status.
+             * *   disabled: does not forcibly change the password status.
              */
             public Builder passwordForcedUpdateStatus(String passwordForcedUpdateStatus) {
                 this.passwordForcedUpdateStatus = passwordForcedUpdateStatus;
@@ -564,7 +568,11 @@ public class CreateUserRequest extends Request {
             }
 
             /**
-             * 密码初始化策略优先级，默认不生效。枚举取值:global(全局优先)、custom(自定义优先)
+             * The priority of the password initialization policy. By default, this parameter does not take effect. Valid values:
+             * <p>
+             * 
+             * *   global: The password initialization policy globally takes effect.
+             * *   custom: The password initialization policy takes effect based on custom settings.
              */
             public Builder passwordInitializationPolicyPriority(String passwordInitializationPolicyPriority) {
                 this.passwordInitializationPolicyPriority = passwordInitializationPolicyPriority;
@@ -572,7 +580,10 @@ public class CreateUserRequest extends Request {
             }
 
             /**
-             * 密码初始化方式。枚举取值:random(随机)
+             * The password initialization method. Set the value to random,
+             * <p>
+             * 
+             * *   which indicates that the password is randomly generated.
              */
             public Builder passwordInitializationType(String passwordInitializationType) {
                 this.passwordInitializationType = passwordInitializationType;
@@ -580,7 +591,7 @@ public class CreateUserRequest extends Request {
             }
 
             /**
-             * 密码通知渠道。枚举取值:email(邮件)、sms(短信)
+             * The password notification methods.
              */
             public Builder userNotificationChannels(java.util.List < String > userNotificationChannels) {
                 this.userNotificationChannels = userNotificationChannels;

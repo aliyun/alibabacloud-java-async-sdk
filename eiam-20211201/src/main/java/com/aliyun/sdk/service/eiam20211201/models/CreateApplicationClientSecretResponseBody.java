@@ -50,7 +50,7 @@ public class CreateApplicationClientSecretResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * ApplicationClientSecret.
+         * The information about the client key.
          */
         public Builder applicationClientSecret(ApplicationClientSecret applicationClientSecret) {
             this.applicationClientSecret = applicationClientSecret;
@@ -58,7 +58,7 @@ public class CreateApplicationClientSecretResponseBody extends TeaModel {
         }
 
         /**
-         * 请求Id
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -122,7 +122,7 @@ public class CreateApplicationClientSecretResponseBody extends TeaModel {
             private String secretId; 
 
             /**
-             * IDaaS EIAM 客户端ID
+             * The client ID of the application.
              */
             public Builder clientId(String clientId) {
                 this.clientId = clientId;
@@ -130,7 +130,7 @@ public class CreateApplicationClientSecretResponseBody extends TeaModel {
             }
 
             /**
-             * IDaaS EIAM 客户端密钥
+             * The client key secret of the application.
              */
             public Builder clientSecret(String clientSecret) {
                 this.clientSecret = clientSecret;
@@ -138,7 +138,7 @@ public class CreateApplicationClientSecretResponseBody extends TeaModel {
             }
 
             /**
-             * IDaaS EIAM 客户端密钥Id
+             * The client key ID of the application.
              */
             public Builder secretId(String secretId) {
                 this.secretId = secretId;

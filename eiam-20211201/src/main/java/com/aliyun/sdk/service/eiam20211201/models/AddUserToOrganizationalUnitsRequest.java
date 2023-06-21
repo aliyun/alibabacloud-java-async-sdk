@@ -108,7 +108,7 @@ public class AddUserToOrganizationalUnitsRequest extends Request {
         }
 
         /**
-         * IDaaS EIAM实例的ID。
+         * The instance ID.
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -117,7 +117,7 @@ public class AddUserToOrganizationalUnitsRequest extends Request {
         }
 
         /**
-         * 组织ID集合
+         * The organization IDs. You can add an account to a maximum of 100 organizations.
          */
         public Builder organizationalUnitIds(java.util.List < String > organizationalUnitIds) {
             this.putQueryParameter("OrganizationalUnitIds", organizationalUnitIds);
@@ -126,7 +126,7 @@ public class AddUserToOrganizationalUnitsRequest extends Request {
         }
 
         /**
-         * 账户ID
+         * The account ID.
          */
         public Builder userId(String userId) {
             this.putQueryParameter("UserId", userId);

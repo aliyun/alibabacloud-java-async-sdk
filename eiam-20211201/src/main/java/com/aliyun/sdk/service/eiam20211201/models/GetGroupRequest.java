@@ -93,7 +93,7 @@ public class GetGroupRequest extends Request {
         }
 
         /**
-         * 组ID。
+         * The group ID.
          */
         public Builder groupId(String groupId) {
             this.putQueryParameter("GroupId", groupId);
@@ -102,7 +102,7 @@ public class GetGroupRequest extends Request {
         }
 
         /**
-         * IDaaS EIAM实例的ID。
+         * The instance ID.
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);

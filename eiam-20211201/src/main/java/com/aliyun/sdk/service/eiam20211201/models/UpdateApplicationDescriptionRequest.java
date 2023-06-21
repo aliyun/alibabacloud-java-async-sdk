@@ -108,7 +108,7 @@ public class UpdateApplicationDescriptionRequest extends Request {
         }
 
         /**
-         * IDaaS的应用主键id
+         * The ID of the application that you want to modify.
          */
         public Builder applicationId(String applicationId) {
             this.putQueryParameter("ApplicationId", applicationId);
@@ -117,7 +117,7 @@ public class UpdateApplicationDescriptionRequest extends Request {
         }
 
         /**
-         * IDaaS的应用描述信息
+         * The description of the application.
          */
         public Builder description(String description) {
             this.putQueryParameter("Description", description);
@@ -126,7 +126,7 @@ public class UpdateApplicationDescriptionRequest extends Request {
         }
 
         /**
-         * IDaaS EIAM的实例id
+         * The ID of the instance.
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);

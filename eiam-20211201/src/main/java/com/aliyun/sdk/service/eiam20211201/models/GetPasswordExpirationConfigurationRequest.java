@@ -78,7 +78,7 @@ public class GetPasswordExpirationConfigurationRequest extends Request {
         }
 
         /**
-         * IDaaS EIAM实例的ID。
+         * The ID of the instance.
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);

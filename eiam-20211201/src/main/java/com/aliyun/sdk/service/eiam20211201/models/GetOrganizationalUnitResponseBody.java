@@ -269,7 +269,7 @@ public class GetOrganizationalUnitResponseBody extends TeaModel {
             }
 
             /**
-             * 机构名称
+             * 组织名称。
              */
             public Builder organizationalUnitName(String organizationalUnitName) {
                 this.organizationalUnitName = organizationalUnitName;

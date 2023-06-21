@@ -38,7 +38,7 @@ public class DeleteGroupResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * 请求ID。
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

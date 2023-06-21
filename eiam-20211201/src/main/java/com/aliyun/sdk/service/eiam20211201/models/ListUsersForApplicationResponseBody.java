@@ -62,7 +62,7 @@ public class ListUsersForApplicationResponseBody extends TeaModel {
         private java.util.List < Users> users; 
 
         /**
-         * 请求ID。
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -70,7 +70,7 @@ public class ListUsersForApplicationResponseBody extends TeaModel {
         }
 
         /**
-         * 列表总条数目。
+         * The total number of returned entries.
          */
         public Builder totalCount(Long totalCount) {
             this.totalCount = totalCount;
@@ -78,7 +78,7 @@ public class ListUsersForApplicationResponseBody extends TeaModel {
         }
 
         /**
-         * Users.
+         * The IDs of the accounts.
          */
         public Builder users(java.util.List < Users> users) {
             this.users = users;
@@ -118,7 +118,7 @@ public class ListUsersForApplicationResponseBody extends TeaModel {
             private String userId; 
 
             /**
-             * 账户的唯一标识。
+             * The ID of the account.
              */
             public Builder userId(String userId) {
                 this.userId = userId;

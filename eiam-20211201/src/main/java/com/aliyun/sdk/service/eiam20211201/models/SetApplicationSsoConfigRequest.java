@@ -149,7 +149,7 @@ public class SetApplicationSsoConfigRequest extends Request {
         }
 
         /**
-         * IDaaS的应用资源ID。
+         * The ID of the application.
          */
         public Builder applicationId(String applicationId) {
             this.putQueryParameter("ApplicationId", applicationId);
@@ -158,7 +158,11 @@ public class SetApplicationSsoConfigRequest extends Request {
         }
 
         /**
-         * 初始化登录方式，only_app_init_sso or idaas_or_app_init_sso
+         * The initial SSO method. Valid values:
+         * <p>
+         * 
+         * *   only_app_init_sso: Only application-initiated SSO is allowed. This method is selected by default when the SSO protocol of the application is an OIDC protocol. If this method is selected when the SSO protocol of the application is SAML, the InitLoginUrl parameter is required.
+         * *   idaas_or_app_init_sso: IDaaS-initiated SSO and application-initiated SSO are allowed. This method is selected by default when the SSO protocol of the application is SAML. If this method is selected when the SSO protocol of the application is an OIDC protocol, the InitLoginUrl parameter is required.
          */
         public Builder initLoginType(String initLoginType) {
             this.putQueryParameter("InitLoginType", initLoginType);
@@ -167,7 +171,7 @@ public class SetApplicationSsoConfigRequest extends Request {
         }
 
         /**
-         * 仅only_app_init_sso情况下，SP指定的登录地址
+         * The initial webhook URL of SSO. This parameter is required when the SSO protocol of the application is an OIDC protocol and the InitLoginType parameters is set to idaas_or_app_init_sso or when the SSO protocol of the application is SAML and the InitLoginType parameter is set to only_app_init_sso.
          */
         public Builder initLoginUrl(String initLoginUrl) {
             this.putQueryParameter("InitLoginUrl", initLoginUrl);
@@ -176,7 +180,7 @@ public class SetApplicationSsoConfigRequest extends Request {
         }
 
         /**
-         * IDaaS EIAM的实例id
+         * The ID of the instance.
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -185,7 +189,7 @@ public class SetApplicationSsoConfigRequest extends Request {
         }
 
         /**
-         * 单点登录类型为Oidc时可以配置
+         * The Open ID Connect (OIDC)-based SSO configuration attributes of the application.
          */
         public Builder oidcSsoConfig(OidcSsoConfig oidcSsoConfig) {
             this.putQueryParameter("OidcSsoConfig", oidcSsoConfig);
@@ -194,7 +198,7 @@ public class SetApplicationSsoConfigRequest extends Request {
         }
 
         /**
-         * 单点登录类型为saml2时可以配置
+         * The Security Assertion Markup Language (SAML)-based SSO configuration attributes of the application.
          */
         public Builder samlSsoConfig(SamlSsoConfig samlSsoConfig) {
             this.putQueryParameter("SamlSsoConfig", samlSsoConfig);
@@ -248,7 +252,7 @@ public class SetApplicationSsoConfigRequest extends Request {
             private String claimValueExpression; 
 
             /**
-             * 返回的claim名称
+             * The claim name.
              */
             public Builder claimName(String claimName) {
                 this.claimName = claimName;
@@ -256,7 +260,7 @@ public class SetApplicationSsoConfigRequest extends Request {
             }
 
             /**
-             * 返回的claim取值表达式
+             * The expression that is used to generate the value of the claim.
              */
             public Builder claimValueExpression(String claimValueExpression) {
                 this.claimValueExpression = claimValueExpression;
@@ -466,7 +470,7 @@ public class SetApplicationSsoConfigRequest extends Request {
             private String subjectIdExpression; 
 
             /**
-             * 返回的access token有效时间，单位为Second
+             * The validity period of the issued access token. Unit: seconds. Default value: 1200.
              */
             public Builder accessTokenEffectiveTime(Long accessTokenEffectiveTime) {
                 this.accessTokenEffectiveTime = accessTokenEffectiveTime;
@@ -474,7 +478,7 @@ public class SetApplicationSsoConfigRequest extends Request {
             }
 
             /**
-             * Authorization code流中code的有效时间，单位为Second
+             * The validity period of the issued code. Unit: seconds. Default value: 60.
              */
             public Builder codeEffectiveTime(Long codeEffectiveTime) {
                 this.codeEffectiveTime = codeEffectiveTime;
@@ -482,7 +486,7 @@ public class SetApplicationSsoConfigRequest extends Request {
             }
 
             /**
-             * 自定义id token返回信息
+             * The custom claims that are returned for the ID token.
              */
             public Builder customClaims(java.util.List < CustomClaims> customClaims) {
                 this.customClaims = customClaims;
@@ -490,7 +494,7 @@ public class SetApplicationSsoConfigRequest extends Request {
             }
 
             /**
-             * OIDC标准参数，如profile、email等
+             * The scopes of user attributes that can be returned for the UserInfo endpoint or ID token.
              */
             public Builder grantScopes(java.util.List < String > grantScopes) {
                 this.grantScopes = grantScopes;
@@ -498,7 +502,7 @@ public class SetApplicationSsoConfigRequest extends Request {
             }
 
             /**
-             * 应用支持的授权类型，OIDC标准参数
+             * The list of grant types that are supported for OIDC protocols.
              */
             public Builder grantTypes(java.util.List < String > grantTypes) {
                 this.grantTypes = grantTypes;
@@ -506,7 +510,7 @@ public class SetApplicationSsoConfigRequest extends Request {
             }
 
             /**
-             * id token有效时间，单位为Second
+             * The validity period of the issued ID token. Unit: seconds. Default value: 300.
              */
             public Builder idTokenEffectiveTime(Long idTokenEffectiveTime) {
                 this.idTokenEffectiveTime = idTokenEffectiveTime;
@@ -514,7 +518,7 @@ public class SetApplicationSsoConfigRequest extends Request {
             }
 
             /**
-             * 密码模式使用的身份认证来源id，仅对password模式生效
+             * The ID of the identity authentication source in password mode. Specify this parameter only when the value of the GrantTypes parameter includes the password mode.
              */
             public Builder passwordAuthenticationSourceId(String passwordAuthenticationSourceId) {
                 this.passwordAuthenticationSourceId = passwordAuthenticationSourceId;
@@ -522,7 +526,7 @@ public class SetApplicationSsoConfigRequest extends Request {
             }
 
             /**
-             * 是否强制需要TOTP二次认证，仅对password模式生效
+             * Specifies whether time-based one-time password (TOTP) authentication is required in password mode. Specify this parameter only when the value of the GrantTypes parameter includes the password mode.
              */
             public Builder passwordTotpMfaRequired(Boolean passwordTotpMfaRequired) {
                 this.passwordTotpMfaRequired = passwordTotpMfaRequired;
@@ -530,7 +534,7 @@ public class SetApplicationSsoConfigRequest extends Request {
             }
 
             /**
-             * 支持的PKCE算法类型
+             * The algorithms that are used to calculate the code challenge for PKCE.
              */
             public Builder pkceChallengeMethods(java.util.List < String > pkceChallengeMethods) {
                 this.pkceChallengeMethods = pkceChallengeMethods;
@@ -538,7 +542,7 @@ public class SetApplicationSsoConfigRequest extends Request {
             }
 
             /**
-             * 是否强制PKCE,authorization_code强制必须指定PKCE参数
+             * Specifies whether the SSO of the application requires Proof Key for Code Exchange (PKCE) (RFC 7636).
              */
             public Builder pkceRequired(Boolean pkceRequired) {
                 this.pkceRequired = pkceRequired;
@@ -546,7 +550,7 @@ public class SetApplicationSsoConfigRequest extends Request {
             }
 
             /**
-             * Logout回调支持的Uri列表，OIDC协议标准参数。
+             * The list of logout redirect URIs that are supported by the application.
              */
             public Builder postLogoutRedirectUris(java.util.List < String > postLogoutRedirectUris) {
                 this.postLogoutRedirectUris = postLogoutRedirectUris;
@@ -554,7 +558,7 @@ public class SetApplicationSsoConfigRequest extends Request {
             }
 
             /**
-             * 应用SSO支持的回调的uri列表，OIDC标准参数。
+             * The list of redirect URIs that are supported by the application.
              */
             public Builder redirectUris(java.util.List < String > redirectUris) {
                 this.redirectUris = redirectUris;
@@ -562,7 +566,7 @@ public class SetApplicationSsoConfigRequest extends Request {
             }
 
             /**
-             * refresh token有效时间，单位为Second
+             * The validity period of the issued refresh token. Unit: seconds. Default value: 86400.
              */
             public Builder refreshTokenEffective(Long refreshTokenEffective) {
                 this.refreshTokenEffective = refreshTokenEffective;
@@ -570,7 +574,7 @@ public class SetApplicationSsoConfigRequest extends Request {
             }
 
             /**
-             * 隐式流支持的返回类型，OIDC标准参数，如token id_token
+             * The response types that are supported by the application. Specify this parameter when the value of the GrantTypes parameter includes the implicit mode.
              */
             public Builder responseTypes(java.util.List < String > responseTypes) {
                 this.responseTypes = responseTypes;
@@ -578,7 +582,7 @@ public class SetApplicationSsoConfigRequest extends Request {
             }
 
             /**
-             * 自定义id token返回信息
+             * The custom expression that is used to generate the subject ID returned for the ID token.
              */
             public Builder subjectIdExpression(String subjectIdExpression) {
                 this.subjectIdExpression = subjectIdExpression;
@@ -631,7 +635,7 @@ public class SetApplicationSsoConfigRequest extends Request {
             private String attributeValueExpression; 
 
             /**
-             * SAML属性的Name
+             * The attribute name.
              */
             public Builder attributeName(String attributeName) {
                 this.attributeName = attributeName;
@@ -639,7 +643,7 @@ public class SetApplicationSsoConfigRequest extends Request {
             }
 
             /**
-             * SAML属性取值表达式
+             * The expression that is used to generate the value of the attribute.
              */
             public Builder attributeValueExpression(String attributeValueExpression) {
                 this.attributeValueExpression = attributeValueExpression;
@@ -752,7 +756,7 @@ public class SetApplicationSsoConfigRequest extends Request {
             private String spSsoAcsUrl; 
 
             /**
-             * SAML断言的属性配置
+             * The additional user attributes in the SAML assertion.
              */
             public Builder attributeStatements(java.util.List < AttributeStatements> attributeStatements) {
                 this.attributeStatements = attributeStatements;
@@ -760,7 +764,7 @@ public class SetApplicationSsoConfigRequest extends Request {
             }
 
             /**
-             * 默认RelayState取值，可空
+             * The default value of the RelayState attribute. If the SSO request is initiated in EIAM, the RelayState attribute in the SAML response is set to this default value.
              */
             public Builder defaultRelayState(String defaultRelayState) {
                 this.defaultRelayState = defaultRelayState;
@@ -768,7 +772,13 @@ public class SetApplicationSsoConfigRequest extends Request {
             }
 
             /**
-             * SAML标准协议中的NameID格式
+             * The Format attribute of the NameID element in the SAML assertion. Valid values:
+             * <p>
+             * 
+             * *   urn:oasis:names:tc:SAML:1.1:nameid-format:unspecified: No format is specified. How to resolve the NameID element depends on the application.
+             * *   urn:oasis:names:tc:SAML:1.1:nameid-format:emailAddress: The NameID element must be an email address.
+             * *   urn:oasis:names:tc:SAML:2.0:nameid-format:persistent: The NameID element must be persistent.
+             * *   urn:oasis:names:tc:SAML:2.0:nameid-format:transient: The NameID element must be transient.
              */
             public Builder nameIdFormat(String nameIdFormat) {
                 this.nameIdFormat = nameIdFormat;
@@ -776,7 +786,7 @@ public class SetApplicationSsoConfigRequest extends Request {
             }
 
             /**
-             * 返回的claim名称
+             * The expression that is used to generate the value of NameID in the SAML assertion.
              */
             public Builder nameIdValueExpression(String nameIdValueExpression) {
                 this.nameIdValueExpression = nameIdValueExpression;
@@ -784,7 +794,7 @@ public class SetApplicationSsoConfigRequest extends Request {
             }
 
             /**
-             * IDaaS签发SAML断言时使用的签名算法
+             * The algorithm that is used to calculate the signature for the SAML assertion.
              */
             public Builder signatureAlgorithm(String signatureAlgorithm) {
                 this.signatureAlgorithm = signatureAlgorithm;
@@ -792,7 +802,7 @@ public class SetApplicationSsoConfigRequest extends Request {
             }
 
             /**
-             * SP的EntityId，用于唯一标识SP身份
+             * The entity ID of the application in SAML. The application assumes the role of service provider.
              */
             public Builder spEntityId(String spEntityId) {
                 this.spEntityId = spEntityId;
@@ -800,7 +810,7 @@ public class SetApplicationSsoConfigRequest extends Request {
             }
 
             /**
-             * SP的SSO地址，用于接受IDaaS签发的SAML断言
+             * The Assertion Consumer Service (ACS) URL of the application in SAML. The application assumes the role of service provider.
              */
             public Builder spSsoAcsUrl(String spSsoAcsUrl) {
                 this.spSsoAcsUrl = spSsoAcsUrl;

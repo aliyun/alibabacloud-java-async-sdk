@@ -22,6 +22,10 @@ public class ListOrganizationalUnitsRequest extends Request {
     private String instanceId;
 
     @Query
+    @NameInMap("OrganizationalUnitIds")
+    private java.util.List < String > organizationalUnitIds;
+
+    @Query
     @NameInMap("OrganizationalUnitName")
     @Validation(maxLength = 64)
     private String organizationalUnitName;
@@ -48,6 +52,7 @@ public class ListOrganizationalUnitsRequest extends Request {
         super(builder);
         this.regionId = builder.regionId;
         this.instanceId = builder.instanceId;
+        this.organizationalUnitIds = builder.organizationalUnitIds;
         this.organizationalUnitName = builder.organizationalUnitName;
         this.organizationalUnitNameStartsWith = builder.organizationalUnitNameStartsWith;
         this.pageNumber = builder.pageNumber;
@@ -80,6 +85,13 @@ public class ListOrganizationalUnitsRequest extends Request {
      */
     public String getInstanceId() {
         return this.instanceId;
+    }
+
+    /**
+     * @return organizationalUnitIds
+     */
+    public java.util.List < String > getOrganizationalUnitIds() {
+        return this.organizationalUnitIds;
     }
 
     /**
@@ -120,6 +132,7 @@ public class ListOrganizationalUnitsRequest extends Request {
     public static final class Builder extends Request.Builder<ListOrganizationalUnitsRequest, Builder> {
         private String regionId; 
         private String instanceId; 
+        private java.util.List < String > organizationalUnitIds; 
         private String organizationalUnitName; 
         private String organizationalUnitNameStartsWith; 
         private Long pageNumber; 
@@ -134,6 +147,7 @@ public class ListOrganizationalUnitsRequest extends Request {
             super(request);
             this.regionId = request.regionId;
             this.instanceId = request.instanceId;
+            this.organizationalUnitIds = request.organizationalUnitIds;
             this.organizationalUnitName = request.organizationalUnitName;
             this.organizationalUnitNameStartsWith = request.organizationalUnitNameStartsWith;
             this.pageNumber = request.pageNumber;
@@ -156,6 +170,15 @@ public class ListOrganizationalUnitsRequest extends Request {
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
             this.instanceId = instanceId;
+            return this;
+        }
+
+        /**
+         * 组织ID列表。size限制最大100。
+         */
+        public Builder organizationalUnitIds(java.util.List < String > organizationalUnitIds) {
+            this.putQueryParameter("OrganizationalUnitIds", organizationalUnitIds);
+            this.organizationalUnitIds = organizationalUnitIds;
             return this;
         }
 

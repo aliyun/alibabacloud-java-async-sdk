@@ -119,7 +119,7 @@ public class ListInstancesRequest extends Request {
         }
 
         /**
-         * 实例ID列表，支持0到100个
+         * The list of instance IDs.
          */
         public Builder instanceIds(java.util.List < String > instanceIds) {
             this.putQueryParameter("InstanceIds", instanceIds);
@@ -128,7 +128,7 @@ public class ListInstancesRequest extends Request {
         }
 
         /**
-         * 当前查询的列表页码，默认为1
+         * The number of the page to return.
          */
         public Builder pageNumber(Long pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -137,7 +137,7 @@ public class ListInstancesRequest extends Request {
         }
 
         /**
-         * 当前查询的列表页码，默认为20
+         * The number of entries to return on each page.
          */
         public Builder pageSize(Long pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -146,7 +146,11 @@ public class ListInstancesRequest extends Request {
         }
 
         /**
-         * 实例状态
+         * The status of the instance. Valid values:
+         * <p>
+         * 
+         * *   creating
+         * *   running
          */
         public Builder status(String status) {
             this.putQueryParameter("Status", status);

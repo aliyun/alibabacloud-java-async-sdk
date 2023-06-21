@@ -107,7 +107,7 @@ public class UpdateGroupDescriptionRequest extends Request {
         }
 
         /**
-         * 组描述，长度最大限制128。
+         * The description of the account group. The value can be up to 256 characters in length.
          */
         public Builder description(String description) {
             this.putQueryParameter("Description", description);
@@ -116,7 +116,7 @@ public class UpdateGroupDescriptionRequest extends Request {
         }
 
         /**
-         * 组ID，长度最大限制64。
+         * The ID of the account group.
          */
         public Builder groupId(String groupId) {
             this.putQueryParameter("GroupId", groupId);
@@ -125,7 +125,7 @@ public class UpdateGroupDescriptionRequest extends Request {
         }
 
         /**
-         * IDaaS EIAM实例的ID。
+         * The instance ID.
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);

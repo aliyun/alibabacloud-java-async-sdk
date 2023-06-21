@@ -93,7 +93,7 @@ public class GetApplicationGrantScopeRequest extends Request {
         }
 
         /**
-         * IDaaS的应用主键id
+         * The ID of the application.
          */
         public Builder applicationId(String applicationId) {
             this.putQueryParameter("ApplicationId", applicationId);
@@ -102,7 +102,7 @@ public class GetApplicationGrantScopeRequest extends Request {
         }
 
         /**
-         * IDaaS EIAM的实例id
+         * The ID of the instance.
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);

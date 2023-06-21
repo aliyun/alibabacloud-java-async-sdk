@@ -62,7 +62,7 @@ public class ListGroupsResponseBody extends TeaModel {
         private Long totalCount; 
 
         /**
-         * Groups.
+         * The queried account groups.
          */
         public Builder groups(java.util.List < Groups> groups) {
             this.groups = groups;
@@ -70,7 +70,7 @@ public class ListGroupsResponseBody extends TeaModel {
         }
 
         /**
-         * 请求ID。
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -78,7 +78,7 @@ public class ListGroupsResponseBody extends TeaModel {
         }
 
         /**
-         * 列表总条数目。
+         * The total number of entries returned. The maximum number of entries returned at a time depends on the value of PageSize.
          */
         public Builder totalCount(Long totalCount) {
             this.totalCount = totalCount;
@@ -214,7 +214,7 @@ public class ListGroupsResponseBody extends TeaModel {
             private Long updateTime; 
 
             /**
-             * 组创建时间, Unix时间戳格式，单位为毫秒。
+             * The time at which the group was created. This value is a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.
              */
             public Builder createTime(Long createTime) {
                 this.createTime = createTime;
@@ -222,7 +222,7 @@ public class ListGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * 组描述。
+             * The description of the group.
              */
             public Builder description(String description) {
                 this.description = description;
@@ -230,7 +230,7 @@ public class ListGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * 组外部标识。
+             * The external ID of the group, which can be used to associate the group with an external system. By default, the external ID is the group ID.
              */
             public Builder groupExternalId(String groupExternalId) {
                 this.groupExternalId = groupExternalId;
@@ -238,7 +238,7 @@ public class ListGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * 组ID。
+             * The group ID.
              */
             public Builder groupId(String groupId) {
                 this.groupId = groupId;
@@ -246,7 +246,7 @@ public class ListGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * 组名称。
+             * The name of the group.
              */
             public Builder groupName(String groupName) {
                 this.groupName = groupName;
@@ -254,7 +254,7 @@ public class ListGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * 组来源ID。
+             * The source ID of the group. If the group was imported from other services, this value indicates the external source ID. By default, the source ID is the instance ID.
              */
             public Builder groupSourceId(String groupSourceId) {
                 this.groupSourceId = groupSourceId;
@@ -262,7 +262,10 @@ public class ListGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * 组来源类型，build_in[自建],ding_talk[钉钉导入],ad[AD导入],ldap[LDAP导入]。
+             * The source type of the group. Only build_in may be returned, which indicates that the group was created in IDaaS.
+             * <p>
+             * 
+             * *
              */
             public Builder groupSourceType(String groupSourceType) {
                 this.groupSourceType = groupSourceType;
@@ -270,7 +273,7 @@ public class ListGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * 实例ID。
+             * The instance ID.
              */
             public Builder instanceId(String instanceId) {
                 this.instanceId = instanceId;
@@ -278,7 +281,7 @@ public class ListGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * 组最近一次更新时间，Unix时间戳格式，单位为毫秒。
+             * The time at which the group was last updated. This value is a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.
              */
             public Builder updateTime(Long updateTime) {
                 this.updateTime = updateTime;

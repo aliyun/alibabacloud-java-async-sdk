@@ -183,7 +183,7 @@ public class SetPasswordExpirationConfigurationRequest extends Request {
         }
 
         /**
-         * IDaaS EIAM实例的ID。
+         * The instance ID.
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -192,7 +192,12 @@ public class SetPasswordExpirationConfigurationRequest extends Request {
         }
 
         /**
-         * 密码过期动作。当passwordExpirationStatus取值为enabled时必传。枚举取值:forbid_login(禁止登录)、force_update_password(强制修改密码)、remind_update_password(提醒修改密码)
+         * The action to take upon password expiration. This parameter must be specified when PasswordExpirationStatus is set to enabled. Valid values:
+         * <p>
+         * 
+         * *   forbid_login: Users cannot log on to IDaaS.
+         * *   force_update_password: Users must change the password.
+         * *   remind_update_password: IDaaS reminds users to change the password upon each logon.
          */
         public Builder passwordExpirationAction(String passwordExpirationAction) {
             this.putQueryParameter("PasswordExpirationAction", passwordExpirationAction);
@@ -201,7 +206,7 @@ public class SetPasswordExpirationConfigurationRequest extends Request {
         }
 
         /**
-         * 密码过期通知渠道。枚举取值:login(用户登录)、email(邮件)、sms(短信)
+         * The methods for receiving password expiration notifications. This parameter must be specified when PasswordExpirationNotificationStatus is set to enabled.
          */
         public Builder passwordExpirationNotificationChannels(java.util.List < String > passwordExpirationNotificationChannels) {
             this.putQueryParameter("PasswordExpirationNotificationChannels", passwordExpirationNotificationChannels);
@@ -210,7 +215,7 @@ public class SetPasswordExpirationConfigurationRequest extends Request {
         }
 
         /**
-         * 密码过期通知时间，单位是天。当passwordExpirationNotificationStatus取值为enabled时必传。
+         * The number of days before the expiration date during which password expiration notifications are sent. Unit: day. This parameter must be specified when PasswordExpirationNotificationStatus is set to enabled.
          */
         public Builder passwordExpirationNotificationDuration(Integer passwordExpirationNotificationDuration) {
             this.putQueryParameter("PasswordExpirationNotificationDuration", passwordExpirationNotificationDuration);
@@ -219,7 +224,11 @@ public class SetPasswordExpirationConfigurationRequest extends Request {
         }
 
         /**
-         * 密码过期通知状态。枚举取值:enabled(开启)、disabled(禁用)
+         * Specifies whether to enable the password expiration notification feature. Valid values:
+         * <p>
+         * 
+         * *   enabled
+         * *   disabled
          */
         public Builder passwordExpirationNotificationStatus(String passwordExpirationNotificationStatus) {
             this.putQueryParameter("PasswordExpirationNotificationStatus", passwordExpirationNotificationStatus);
@@ -228,7 +237,11 @@ public class SetPasswordExpirationConfigurationRequest extends Request {
         }
 
         /**
-         * 密码过期配置状态。枚举取值:enabled(开启)、disabled(禁用)
+         * Specifies whether to enable the password expiration feature. Valid values:
+         * <p>
+         * 
+         * *   enabled
+         * *   disabled
          */
         public Builder passwordExpirationStatus(String passwordExpirationStatus) {
             this.putQueryParameter("PasswordExpirationStatus", passwordExpirationStatus);
@@ -237,7 +250,7 @@ public class SetPasswordExpirationConfigurationRequest extends Request {
         }
 
         /**
-         * 密码强制修改时间，单位是天。当前字段取值要比passwordExpirationNotificationDuration大。
+         * The number of days before which users must change the password to prevent password expiration. Unit: day. You must set this parameter to a value greater than the value of PasswordExpirationNotificationDuration.
          */
         public Builder passwordForcedUpdateDuration(Integer passwordForcedUpdateDuration) {
             this.putQueryParameter("PasswordForcedUpdateDuration", passwordForcedUpdateDuration);
@@ -246,7 +259,7 @@ public class SetPasswordExpirationConfigurationRequest extends Request {
         }
 
         /**
-         * 密码有效时长，单位是天。当passwordExpirationStatus取值为enabled时必传。
+         * The validity period of a password. Unit: day. This parameter must be specified when PasswordExpirationStatus is set to enabled.
          */
         public Builder passwordValidMaxDay(Integer passwordValidMaxDay) {
             this.putQueryParameter("PasswordValidMaxDay", passwordValidMaxDay);

@@ -138,7 +138,7 @@ public class CreateOrganizationalUnitRequest extends Request {
         }
 
         /**
-         * 组织描述。
+         * The description of the organization. The value can be up to 256 characters in length.
          */
         public Builder description(String description) {
             this.putQueryParameter("Description", description);
@@ -147,7 +147,7 @@ public class CreateOrganizationalUnitRequest extends Request {
         }
 
         /**
-         * IDaaS EIAM实例的ID。
+         * The instance ID.
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -156,7 +156,7 @@ public class CreateOrganizationalUnitRequest extends Request {
         }
 
         /**
-         * 外部ID。
+         * The external ID of the organization, which can be used to associate the organization with an external system. By default, the external ID is the organization ID. The value can be up to 64 characters in length.
          */
         public Builder organizationalUnitExternalId(String organizationalUnitExternalId) {
             this.putQueryParameter("OrganizationalUnitExternalId", organizationalUnitExternalId);
@@ -165,7 +165,7 @@ public class CreateOrganizationalUnitRequest extends Request {
         }
 
         /**
-         * 组织名称。
+         * The name of the organization. The name can be up to 64 characters in length.
          */
         public Builder organizationalUnitName(String organizationalUnitName) {
             this.putQueryParameter("OrganizationalUnitName", organizationalUnitName);
@@ -174,7 +174,7 @@ public class CreateOrganizationalUnitRequest extends Request {
         }
 
         /**
-         * 父组织ID。
+         * The parent organization ID.
          */
         public Builder parentId(String parentId) {
             this.putQueryParameter("ParentId", parentId);

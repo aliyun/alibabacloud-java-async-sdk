@@ -108,7 +108,7 @@ public class UpdateOrganizationalUnitRequest extends Request {
         }
 
         /**
-         * IDaaS EIAM实例的ID。
+         * The instance ID.
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -117,7 +117,7 @@ public class UpdateOrganizationalUnitRequest extends Request {
         }
 
         /**
-         * 组织ID。
+         * The organization ID.
          */
         public Builder organizationalUnitId(String organizationalUnitId) {
             this.putQueryParameter("OrganizationalUnitId", organizationalUnitId);
@@ -126,7 +126,7 @@ public class UpdateOrganizationalUnitRequest extends Request {
         }
 
         /**
-         * 组织名称。
+         * The name of the organization. The name can be up to 64 characters in length and must be unique in the same parent organization.
          */
         public Builder organizationalUnitName(String organizationalUnitName) {
             this.putQueryParameter("OrganizationalUnitName", organizationalUnitName);

@@ -38,7 +38,7 @@ public class UpdateInstanceDescriptionResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * 请求Id
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

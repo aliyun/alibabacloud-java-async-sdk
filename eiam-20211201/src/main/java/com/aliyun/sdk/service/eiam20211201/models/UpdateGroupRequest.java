@@ -121,7 +121,7 @@ public class UpdateGroupRequest extends Request {
         }
 
         /**
-         * 组外部ID，长度最大限制64，如果不填，则默认使用groupId填充。
+         * The external ID of the group.
          */
         public Builder groupExternalId(String groupExternalId) {
             this.putQueryParameter("GroupExternalId", groupExternalId);
@@ -130,7 +130,7 @@ public class UpdateGroupRequest extends Request {
         }
 
         /**
-         * 组ID，长度最大限制64。
+         * The group ID.
          */
         public Builder groupId(String groupId) {
             this.putQueryParameter("GroupId", groupId);
@@ -139,7 +139,7 @@ public class UpdateGroupRequest extends Request {
         }
 
         /**
-         * 组名称，长度最大限制64。
+         * The name of the group.
          */
         public Builder groupName(String groupName) {
             this.putQueryParameter("GroupName", groupName);
@@ -148,7 +148,7 @@ public class UpdateGroupRequest extends Request {
         }
 
         /**
-         * IDaaS EIAM实例的ID。
+         * The instance ID.
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);

@@ -108,7 +108,7 @@ public class UpdateApplicationAuthorizationTypeRequest extends Request {
         }
 
         /**
-         * IDaaS的应用主键id
+         * The ID of the application that you want to modify.
          */
         public Builder applicationId(String applicationId) {
             this.putQueryParameter("ApplicationId", applicationId);
@@ -117,7 +117,11 @@ public class UpdateApplicationAuthorizationTypeRequest extends Request {
         }
 
         /**
-         * 应用的授权类型
+         * The authorization type of the application. Valid values:
+         * <p>
+         * 
+         * *   authorize_required: Only the user with explicit authorization can access the application.
+         * *   default_all: By default, all users can access the application.
          */
         public Builder authorizationType(String authorizationType) {
             this.putQueryParameter("AuthorizationType", authorizationType);
@@ -126,7 +130,7 @@ public class UpdateApplicationAuthorizationTypeRequest extends Request {
         }
 
         /**
-         * IDaaS EIAM的实例id
+         * The ID of the instance.
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);

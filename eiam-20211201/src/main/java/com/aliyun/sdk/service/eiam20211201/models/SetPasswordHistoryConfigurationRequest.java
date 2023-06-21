@@ -108,7 +108,7 @@ public class SetPasswordHistoryConfigurationRequest extends Request {
         }
 
         /**
-         * IDaaS EIAM实例的ID。
+         * The instance ID.
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -117,7 +117,7 @@ public class SetPasswordHistoryConfigurationRequest extends Request {
         }
 
         /**
-         * 保留最近密码记录数。当passwordHistoryStatus取值为enabled时必传。
+         * The maximum number of recent passwords that can be retained. This parameter must be specified when PasswordHistoryStatus is set to enabled.
          */
         public Builder passwordHistoryMaxRetention(Integer passwordHistoryMaxRetention) {
             this.putQueryParameter("PasswordHistoryMaxRetention", passwordHistoryMaxRetention);
@@ -126,7 +126,11 @@ public class SetPasswordHistoryConfigurationRequest extends Request {
         }
 
         /**
-         * 密码历史配置状态。枚举取值:enabled(开启)、disabled(禁用)
+         * Specifies whether to enable the password history feature. Valid values:
+         * <p>
+         * 
+         * *   enabled
+         * *   disabled
          */
         public Builder passwordHistoryStatus(String passwordHistoryStatus) {
             this.putQueryParameter("PasswordHistoryStatus", passwordHistoryStatus);

@@ -135,7 +135,7 @@ public class ListApplicationsForOrganizationalUnitRequest extends Request {
         }
 
         /**
-         * 非必填，如果填写则可以基于应用ID进行过滤，列表中最多包含100个元素。
+         * The IDs of the applications that the EIAM organization can access. You can query a maximum of 100 application IDs at a time.
          */
         public Builder applicationIds(java.util.List < String > applicationIds) {
             this.putQueryParameter("ApplicationIds", applicationIds);
@@ -144,7 +144,7 @@ public class ListApplicationsForOrganizationalUnitRequest extends Request {
         }
 
         /**
-         * IDaaS EIAM实例的ID。
+         * The ID of the instance.
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -153,7 +153,7 @@ public class ListApplicationsForOrganizationalUnitRequest extends Request {
         }
 
         /**
-         * 组织的唯一标识。
+         * The ID of the EIAM organization.
          */
         public Builder organizationalUnitId(String organizationalUnitId) {
             this.putQueryParameter("OrganizationalUnitId", organizationalUnitId);
@@ -162,7 +162,7 @@ public class ListApplicationsForOrganizationalUnitRequest extends Request {
         }
 
         /**
-         * 当前查询的列表页码，默认为1。
+         * The number of the page to return.
          */
         public Builder pageNumber(Long pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -171,7 +171,7 @@ public class ListApplicationsForOrganizationalUnitRequest extends Request {
         }
 
         /**
-         * 当前查询的列表页码，默认为20。
+         * The number of entries to return on each page.
          */
         public Builder pageSize(Long pageSize) {
             this.putQueryParameter("PageSize", pageSize);

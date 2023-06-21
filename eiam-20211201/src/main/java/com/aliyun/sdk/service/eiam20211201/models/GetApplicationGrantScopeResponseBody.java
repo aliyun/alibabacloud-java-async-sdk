@@ -50,7 +50,7 @@ public class GetApplicationGrantScopeResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * 授权范围
+         * The permissions of the Developer API feature.
          */
         public Builder applicationGrantScope(ApplicationGrantScope applicationGrantScope) {
             this.applicationGrantScope = applicationGrantScope;
@@ -58,7 +58,7 @@ public class GetApplicationGrantScopeResponseBody extends TeaModel {
         }
 
         /**
-         * 请求Id
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -98,7 +98,7 @@ public class GetApplicationGrantScopeResponseBody extends TeaModel {
             private java.util.List < String > grantScopes; 
 
             /**
-             * 应用授权的api权限scope列表
+             * The permissions of the Developer API feature.
              */
             public Builder grantScopes(java.util.List < String > grantScopes) {
                 this.grantScopes = grantScopes;

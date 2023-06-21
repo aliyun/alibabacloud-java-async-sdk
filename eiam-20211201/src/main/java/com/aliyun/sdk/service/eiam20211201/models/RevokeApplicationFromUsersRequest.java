@@ -108,7 +108,7 @@ public class RevokeApplicationFromUsersRequest extends Request {
         }
 
         /**
-         * 应用的唯一标识。
+         * The ID of the application.
          */
         public Builder applicationId(String applicationId) {
             this.putQueryParameter("ApplicationId", applicationId);
@@ -117,7 +117,7 @@ public class RevokeApplicationFromUsersRequest extends Request {
         }
 
         /**
-         * IDaaS EIAM实例的ID。
+         * The ID of the instance.
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -126,7 +126,7 @@ public class RevokeApplicationFromUsersRequest extends Request {
         }
 
         /**
-         * 被取消授权的账户ID列表，必填，列表中最多包含100个元素。
+         * The IDs of the accounts. You can revoke the access permissions from a maximum of 100 accounts at a time.
          */
         public Builder userIds(java.util.List < String > userIds) {
             this.putQueryParameter("UserIds", userIds);

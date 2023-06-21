@@ -93,7 +93,7 @@ public class DisableUserRequest extends Request {
         }
 
         /**
-         * IDaaS EIAM实例的ID。
+         * The instance ID.
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -102,7 +102,7 @@ public class DisableUserRequest extends Request {
         }
 
         /**
-         * 账户ID
+         * The ID of the account.
          */
         public Builder userId(String userId) {
             this.putQueryParameter("UserId", userId);

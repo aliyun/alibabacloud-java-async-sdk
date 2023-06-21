@@ -107,7 +107,7 @@ public class SetApplicationGrantScopeRequest extends Request {
         }
 
         /**
-         * IDaaS的应用主键id
+         * The ID of the application that you want to configure.
          */
         public Builder applicationId(String applicationId) {
             this.putQueryParameter("ApplicationId", applicationId);
@@ -116,7 +116,7 @@ public class SetApplicationGrantScopeRequest extends Request {
         }
 
         /**
-         * api调用的授权范围
+         * The permissions of the Developer API feature.
          */
         public Builder grantScopes(java.util.List < String > grantScopes) {
             this.putQueryParameter("GrantScopes", grantScopes);
@@ -125,7 +125,7 @@ public class SetApplicationGrantScopeRequest extends Request {
         }
 
         /**
-         * IDaaS EIAM的实例id
+         * The ID of the instance.
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);

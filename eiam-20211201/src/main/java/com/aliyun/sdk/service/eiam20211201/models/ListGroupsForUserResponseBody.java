@@ -62,7 +62,7 @@ public class ListGroupsForUserResponseBody extends TeaModel {
         private Long totalCount; 
 
         /**
-         * Groups.
+         * The queried account groups.
          */
         public Builder groups(java.util.List < Groups> groups) {
             this.groups = groups;
@@ -70,7 +70,7 @@ public class ListGroupsForUserResponseBody extends TeaModel {
         }
 
         /**
-         * 请求ID。
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -78,7 +78,7 @@ public class ListGroupsForUserResponseBody extends TeaModel {
         }
 
         /**
-         * 列表总条数目。
+         * The total number of entries returned. The maximum number of entries returned at a time depends on the value of PageSize.
          */
         public Builder totalCount(Long totalCount) {
             this.totalCount = totalCount;
@@ -118,7 +118,7 @@ public class ListGroupsForUserResponseBody extends TeaModel {
             private String groupId; 
 
             /**
-             * 组ID。
+             * The group ID.
              */
             public Builder groupId(String groupId) {
                 this.groupId = groupId;

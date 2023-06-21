@@ -162,7 +162,7 @@ public class ListGroupsRequest extends Request {
         }
 
         /**
-         * 组外部ID。
+         * The external ID of the group.
          */
         public Builder groupExternalId(String groupExternalId) {
             this.putQueryParameter("GroupExternalId", groupExternalId);
@@ -171,7 +171,7 @@ public class ListGroupsRequest extends Request {
         }
 
         /**
-         * 组ID列表，size最大限制100。
+         * The group IDs.
          */
         public Builder groupIds(java.util.List < String > groupIds) {
             this.putQueryParameter("GroupIds", groupIds);
@@ -180,7 +180,7 @@ public class ListGroupsRequest extends Request {
         }
 
         /**
-         * 组名称，长度最大限制64。
+         * The name of the group. If you specify this parameter, the query is based on an exact match.
          */
         public Builder groupName(String groupName) {
             this.putQueryParameter("GroupName", groupName);
@@ -189,7 +189,7 @@ public class ListGroupsRequest extends Request {
         }
 
         /**
-         * 组名称，长度最大限制64。
+         * The prefix of the group name. If you specify this parameter, the query follows the leftmost matching principle.
          */
         public Builder groupNameStartsWith(String groupNameStartsWith) {
             this.putQueryParameter("GroupNameStartsWith", groupNameStartsWith);
@@ -198,7 +198,7 @@ public class ListGroupsRequest extends Request {
         }
 
         /**
-         * IDaaS EIAM实例的ID。
+         * The instance ID.
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -207,7 +207,7 @@ public class ListGroupsRequest extends Request {
         }
 
         /**
-         * 当前查询的列表页码，默认为1。
+         * The number of the page to return.
          */
         public Builder pageNumber(Long pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -216,7 +216,7 @@ public class ListGroupsRequest extends Request {
         }
 
         /**
-         * 当前查询的列表页码，默认为20。
+         * The number of entries to return on each page.
          */
         public Builder pageSize(Long pageSize) {
             this.putQueryParameter("PageSize", pageSize);

@@ -93,7 +93,7 @@ public class GetUserRequest extends Request {
         }
 
         /**
-         * IDaaS EIAM实例的ID。
+         * The ID of the instance.
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -102,7 +102,7 @@ public class GetUserRequest extends Request {
         }
 
         /**
-         * 账户ID
+         * The ID of the account.
          */
         public Builder userId(String userId) {
             this.putQueryParameter("UserId", userId);

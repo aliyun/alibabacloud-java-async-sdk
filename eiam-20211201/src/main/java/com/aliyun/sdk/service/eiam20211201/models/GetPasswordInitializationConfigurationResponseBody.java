@@ -50,7 +50,7 @@ public class GetPasswordInitializationConfigurationResponseBody extends TeaModel
         private String requestId; 
 
         /**
-         * PasswordInitializationConfiguration.
+         * The password initialization configurations.
          */
         public Builder passwordInitializationConfiguration(PasswordInitializationConfiguration passwordInitializationConfiguration) {
             this.passwordInitializationConfiguration = passwordInitializationConfiguration;
@@ -58,7 +58,7 @@ public class GetPasswordInitializationConfigurationResponseBody extends TeaModel
         }
 
         /**
-         * 请求ID。
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -134,7 +134,11 @@ public class GetPasswordInitializationConfigurationResponseBody extends TeaModel
             private String passwordInitializationType; 
 
             /**
-             * 密码强制更新状态。枚举取值:enabled(开启)、disabled(禁用)
+             * Indicates whether forcible password change upon first logon is enabled. Valid values:
+             * <p>
+             * 
+             * *   enabled
+             * *   disabled
              */
             public Builder passwordForcedUpdateStatus(String passwordForcedUpdateStatus) {
                 this.passwordForcedUpdateStatus = passwordForcedUpdateStatus;
@@ -142,7 +146,7 @@ public class GetPasswordInitializationConfigurationResponseBody extends TeaModel
             }
 
             /**
-             * 密码初始化通知渠道。枚举取值:email(邮件)、sms(短信)
+             * The methods for receiving password initialization notifications.
              */
             public Builder passwordInitializationNotificationChannels(java.util.List < String > passwordInitializationNotificationChannels) {
                 this.passwordInitializationNotificationChannels = passwordInitializationNotificationChannels;
@@ -150,7 +154,11 @@ public class GetPasswordInitializationConfigurationResponseBody extends TeaModel
             }
 
             /**
-             * 密码初始化配置状态。枚举取值:enabled(开启)、disabled(禁用)
+             * Indicates whether the password initialization feature is enabled. Valid values:
+             * <p>
+             * 
+             * *   enabled
+             * *   disabled
              */
             public Builder passwordInitializationStatus(String passwordInitializationStatus) {
                 this.passwordInitializationStatus = passwordInitializationStatus;
@@ -158,7 +166,10 @@ public class GetPasswordInitializationConfigurationResponseBody extends TeaModel
             }
 
             /**
-             * 密码初始化方式。枚举取值:random(随机)
+             * The password initialization method. Set the value to random.
+             * <p>
+             * 
+             * *   random: A randomly generated password is used.
              */
             public Builder passwordInitializationType(String passwordInitializationType) {
                 this.passwordInitializationType = passwordInitializationType;

@@ -50,7 +50,7 @@ public class GetRootOrganizationalUnitResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * OrganizationalUnit.
+         * The data object of the organizational unit.
          */
         public Builder organizationalUnit(OrganizationalUnit organizationalUnit) {
             this.organizationalUnit = organizationalUnit;
@@ -58,7 +58,7 @@ public class GetRootOrganizationalUnitResponseBody extends TeaModel {
         }
 
         /**
-         * 请求ID。
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -158,7 +158,7 @@ public class GetRootOrganizationalUnitResponseBody extends TeaModel {
             private Long updateTime; 
 
             /**
-             * 创建时间
+             * The time when the organizational unit was created. This value is a UNIX timestamp. Unit: milliseconds.
              */
             public Builder createTime(Long createTime) {
                 this.createTime = createTime;
@@ -166,7 +166,7 @@ public class GetRootOrganizationalUnitResponseBody extends TeaModel {
             }
 
             /**
-             * 描述
+             * The description of the organizational unit.
              */
             public Builder description(String description) {
                 this.description = description;
@@ -174,7 +174,7 @@ public class GetRootOrganizationalUnitResponseBody extends TeaModel {
             }
 
             /**
-             * 实例ID
+             * The ID of the instance.
              */
             public Builder instanceId(String instanceId) {
                 this.instanceId = instanceId;
@@ -182,7 +182,7 @@ public class GetRootOrganizationalUnitResponseBody extends TeaModel {
             }
 
             /**
-             * 组织ID
+             * The ID of the organizational unit.
              */
             public Builder organizationalUnitId(String organizationalUnitId) {
                 this.organizationalUnitId = organizationalUnitId;
@@ -190,7 +190,7 @@ public class GetRootOrganizationalUnitResponseBody extends TeaModel {
             }
 
             /**
-             * 组织名称
+             * The name of the organization.
              */
             public Builder organizationalUnitName(String organizationalUnitName) {
                 this.organizationalUnitName = organizationalUnitName;
@@ -198,7 +198,7 @@ public class GetRootOrganizationalUnitResponseBody extends TeaModel {
             }
 
             /**
-             * 最近一次更新时间
+             * The time when the organizational unit was last updated. The value is a UNIX timestamp. Unit: milliseconds.
              */
             public Builder updateTime(Long updateTime) {
                 this.updateTime = updateTime;

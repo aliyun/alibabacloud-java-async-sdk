@@ -7,19 +7,14 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
- * {@link ObtainApplicationClientSecretRequest} extends {@link RequestModel}
+ * {@link ListOrganizationalUnitParentsRequest} extends {@link RequestModel}
  *
- * <p>ObtainApplicationClientSecretRequest</p>
+ * <p>ListOrganizationalUnitParentsRequest</p>
  */
-public class ObtainApplicationClientSecretRequest extends Request {
+public class ListOrganizationalUnitParentsRequest extends Request {
     @Host
     @NameInMap("RegionId")
     private String regionId;
-
-    @Query
-    @NameInMap("ApplicationId")
-    @Validation(required = true, maxLength = 64)
-    private String applicationId;
 
     @Query
     @NameInMap("InstanceId")
@@ -27,23 +22,22 @@ public class ObtainApplicationClientSecretRequest extends Request {
     private String instanceId;
 
     @Query
-    @NameInMap("SecretId")
+    @NameInMap("OrganizationalUnitId")
     @Validation(required = true, maxLength = 64)
-    private String secretId;
+    private String organizationalUnitId;
 
-    private ObtainApplicationClientSecretRequest(Builder builder) {
+    private ListOrganizationalUnitParentsRequest(Builder builder) {
         super(builder);
         this.regionId = builder.regionId;
-        this.applicationId = builder.applicationId;
         this.instanceId = builder.instanceId;
-        this.secretId = builder.secretId;
+        this.organizationalUnitId = builder.organizationalUnitId;
     }
 
     public static Builder builder() {
         return new Builder();
     }
 
-    public static ObtainApplicationClientSecretRequest create() {
+    public static ListOrganizationalUnitParentsRequest create() {
         return builder().build();
     }
 
@@ -60,13 +54,6 @@ public class ObtainApplicationClientSecretRequest extends Request {
     }
 
     /**
-     * @return applicationId
-     */
-    public String getApplicationId() {
-        return this.applicationId;
-    }
-
-    /**
      * @return instanceId
      */
     public String getInstanceId() {
@@ -74,28 +61,26 @@ public class ObtainApplicationClientSecretRequest extends Request {
     }
 
     /**
-     * @return secretId
+     * @return organizationalUnitId
      */
-    public String getSecretId() {
-        return this.secretId;
+    public String getOrganizationalUnitId() {
+        return this.organizationalUnitId;
     }
 
-    public static final class Builder extends Request.Builder<ObtainApplicationClientSecretRequest, Builder> {
+    public static final class Builder extends Request.Builder<ListOrganizationalUnitParentsRequest, Builder> {
         private String regionId; 
-        private String applicationId; 
         private String instanceId; 
-        private String secretId; 
+        private String organizationalUnitId; 
 
         private Builder() {
             super();
         } 
 
-        private Builder(ObtainApplicationClientSecretRequest request) {
+        private Builder(ListOrganizationalUnitParentsRequest request) {
             super(request);
             this.regionId = request.regionId;
-            this.applicationId = request.applicationId;
             this.instanceId = request.instanceId;
-            this.secretId = request.secretId;
+            this.organizationalUnitId = request.organizationalUnitId;
         } 
 
         /**
@@ -108,16 +93,7 @@ public class ObtainApplicationClientSecretRequest extends Request {
         }
 
         /**
-         * The ID of the application whose client key you want to query.
-         */
-        public Builder applicationId(String applicationId) {
-            this.putQueryParameter("ApplicationId", applicationId);
-            this.applicationId = applicationId;
-            return this;
-        }
-
-        /**
-         * The ID of the instance.
+         * IDaaS EIAM实例的ID。
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -126,17 +102,17 @@ public class ObtainApplicationClientSecretRequest extends Request {
         }
 
         /**
-         * The client key ID of the application.
+         * 组织ID。
          */
-        public Builder secretId(String secretId) {
-            this.putQueryParameter("SecretId", secretId);
-            this.secretId = secretId;
+        public Builder organizationalUnitId(String organizationalUnitId) {
+            this.putQueryParameter("OrganizationalUnitId", organizationalUnitId);
+            this.organizationalUnitId = organizationalUnitId;
             return this;
         }
 
         @Override
-        public ObtainApplicationClientSecretRequest build() {
-            return new ObtainApplicationClientSecretRequest(this);
+        public ListOrganizationalUnitParentsRequest build() {
+            return new ListOrganizationalUnitParentsRequest(this);
         } 
 
     } 

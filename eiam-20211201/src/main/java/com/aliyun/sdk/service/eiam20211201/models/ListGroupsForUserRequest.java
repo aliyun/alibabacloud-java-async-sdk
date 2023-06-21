@@ -121,7 +121,7 @@ public class ListGroupsForUserRequest extends Request {
         }
 
         /**
-         * IDaaS EIAM实例的ID。
+         * The instance ID.
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -130,7 +130,7 @@ public class ListGroupsForUserRequest extends Request {
         }
 
         /**
-         * 当前查询的列表页码，默认为1。
+         * The number of the page to return.
          */
         public Builder pageNumber(Long pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -139,7 +139,7 @@ public class ListGroupsForUserRequest extends Request {
         }
 
         /**
-         * 当前查询的列表页码，默认为20。
+         * The number of entries to return on each page.
          */
         public Builder pageSize(Long pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -148,7 +148,7 @@ public class ListGroupsForUserRequest extends Request {
         }
 
         /**
-         * 账户ID。
+         * The account ID.
          */
         public Builder userId(String userId) {
             this.putQueryParameter("UserId", userId);

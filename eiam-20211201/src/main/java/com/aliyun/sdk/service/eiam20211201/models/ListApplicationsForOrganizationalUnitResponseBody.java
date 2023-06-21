@@ -62,7 +62,7 @@ public class ListApplicationsForOrganizationalUnitResponseBody extends TeaModel 
         private Long totalCount; 
 
         /**
-         * Applications.
+         * The applications that the EIAM organization can access.
          */
         public Builder applications(java.util.List < Applications> applications) {
             this.applications = applications;
@@ -70,7 +70,7 @@ public class ListApplicationsForOrganizationalUnitResponseBody extends TeaModel 
         }
 
         /**
-         * 请求ID。
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -78,7 +78,7 @@ public class ListApplicationsForOrganizationalUnitResponseBody extends TeaModel 
         }
 
         /**
-         * 列表总条数目。
+         * The total number of the returned entries.
          */
         public Builder totalCount(Long totalCount) {
             this.totalCount = totalCount;
@@ -118,7 +118,7 @@ public class ListApplicationsForOrganizationalUnitResponseBody extends TeaModel 
             private String applicationId; 
 
             /**
-             * 应用的唯一标识。
+             * The ID of the application that the EIAM organization can access.
              */
             public Builder applicationId(String applicationId) {
                 this.applicationId = applicationId;

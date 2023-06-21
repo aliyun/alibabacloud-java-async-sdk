@@ -108,7 +108,7 @@ public class AddUsersToGroupRequest extends Request {
         }
 
         /**
-         * 组ID。
+         * The group ID.
          */
         public Builder groupId(String groupId) {
             this.putQueryParameter("GroupId", groupId);
@@ -117,7 +117,7 @@ public class AddUsersToGroupRequest extends Request {
         }
 
         /**
-         * IDaaS EIAM实例的ID。
+         * The instance ID.
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -126,7 +126,7 @@ public class AddUsersToGroupRequest extends Request {
         }
 
         /**
-         * 账户ID列表。
+         * The account IDs.
          */
         public Builder userIds(java.util.List < String > userIds) {
             this.putQueryParameter("UserIds", userIds);

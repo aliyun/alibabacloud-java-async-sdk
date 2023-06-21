@@ -165,7 +165,7 @@ public class ListApplicationsRequest extends Request {
         }
 
         /**
-         * 应用Id列表
+         * The IDs of the applications.
          */
         public Builder applicationIds(java.util.List < String > applicationIds) {
             this.putQueryParameter("ApplicationIds", applicationIds);
@@ -174,7 +174,7 @@ public class ListApplicationsRequest extends Request {
         }
 
         /**
-         * 应用的表示名称
+         * The name of the application. Only fuzzy match from the leftmost character is supported.
          */
         public Builder applicationName(String applicationName) {
             this.putQueryParameter("ApplicationName", applicationName);
@@ -183,7 +183,11 @@ public class ListApplicationsRequest extends Request {
         }
 
         /**
-         * 应用的授权类型。
+         * The authorization of the application. Valid values:
+         * <p>
+         * 
+         * *   authorize_required: Only the user with explicit authorization can access the application.
+         * *   default_all: By default, all users can access the application.
          */
         public Builder authorizationType(String authorizationType) {
             this.putQueryParameter("AuthorizationType", authorizationType);
@@ -192,7 +196,7 @@ public class ListApplicationsRequest extends Request {
         }
 
         /**
-         * IDaaS EIAM的实例id
+         * The ID of the instance.
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -201,7 +205,7 @@ public class ListApplicationsRequest extends Request {
         }
 
         /**
-         * 当前查询的列表页码，默认为1
+         * The number of the page to return.
          */
         public Builder pageNumber(Long pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -210,7 +214,7 @@ public class ListApplicationsRequest extends Request {
         }
 
         /**
-         * 当前查询的列表页码，默认为20
+         * The number of entries to return on each page.
          */
         public Builder pageSize(Long pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -219,7 +223,11 @@ public class ListApplicationsRequest extends Request {
         }
 
         /**
-         * 应用状态检索条件
+         * The status of the application. Valid values:
+         * <p>
+         * 
+         * *   Enabled: The application is enabled.
+         * *   Disabled: The application is disabled.
          */
         public Builder status(String status) {
             this.putQueryParameter("Status", status);

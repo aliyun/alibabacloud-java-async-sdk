@@ -50,7 +50,7 @@ public class GetApplicationProvisioningScopeResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * 同步实体范围
+         * The scope of account synchronization.
          */
         public Builder applicationProvisioningScope(ApplicationProvisioningScope applicationProvisioningScope) {
             this.applicationProvisioningScope = applicationProvisioningScope;
@@ -58,7 +58,7 @@ public class GetApplicationProvisioningScopeResponseBody extends TeaModel {
         }
 
         /**
-         * 请求Id
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -98,7 +98,7 @@ public class GetApplicationProvisioningScopeResponseBody extends TeaModel {
             private java.util.List < String > organizationalUnitIds; 
 
             /**
-             * 同步授权的组织机构列表
+             * The list of organizational units that are authorized for account synchronization.
              */
             public Builder organizationalUnitIds(java.util.List < String > organizationalUnitIds) {
                 this.organizationalUnitIds = organizationalUnitIds;

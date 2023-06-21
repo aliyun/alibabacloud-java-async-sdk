@@ -108,7 +108,7 @@ public class UpdateOrganizationalUnitDescriptionRequest extends Request {
         }
 
         /**
-         * 组织描述。
+         * The description of the organization. The value can be up to 256 characters in length.
          */
         public Builder description(String description) {
             this.putQueryParameter("Description", description);
@@ -117,7 +117,7 @@ public class UpdateOrganizationalUnitDescriptionRequest extends Request {
         }
 
         /**
-         * IDaaS EIAM实例的ID。
+         * The instance ID.
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -126,7 +126,7 @@ public class UpdateOrganizationalUnitDescriptionRequest extends Request {
         }
 
         /**
-         * 组织ID。
+         * The organization ID.
          */
         public Builder organizationalUnitId(String organizationalUnitId) {
             this.putQueryParameter("OrganizationalUnitId", organizationalUnitId);

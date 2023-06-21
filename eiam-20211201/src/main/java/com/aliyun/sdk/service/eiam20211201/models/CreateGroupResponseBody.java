@@ -50,7 +50,7 @@ public class CreateGroupResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * 组ID。
+         * The group ID.
          */
         public Builder groupId(String groupId) {
             this.groupId = groupId;
@@ -58,7 +58,7 @@ public class CreateGroupResponseBody extends TeaModel {
         }
 
         /**
-         * 请求ID。
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

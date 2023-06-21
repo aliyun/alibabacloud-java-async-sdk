@@ -62,7 +62,7 @@ public class ListInstancesResponseBody extends TeaModel {
         private Long totalCount; 
 
         /**
-         * Instances.
+         * The information of instances.
          */
         public Builder instances(java.util.List < Instances> instances) {
             this.instances = instances;
@@ -70,7 +70,7 @@ public class ListInstancesResponseBody extends TeaModel {
         }
 
         /**
-         * 请求Id
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -78,7 +78,7 @@ public class ListInstancesResponseBody extends TeaModel {
         }
 
         /**
-         * 列表条数目
+         * The total number of entries returned.
          */
         public Builder totalCount(Long totalCount) {
             this.totalCount = totalCount;
@@ -130,7 +130,7 @@ public class ListInstancesResponseBody extends TeaModel {
             private String status; 
 
             /**
-             * 用户portal和应用开发集成的端点地址
+             * The endpoint of the instance.
              */
             public Builder endpoint(String endpoint) {
                 this.endpoint = endpoint;
@@ -138,7 +138,11 @@ public class ListInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * 实例域名状态，Unresolved(未解析)、Resolved(已解析)
+             * The status of the endpoint. Valid values:
+             * <p>
+             * 
+             * *   resolved
+             * *   unresolved
              */
             public Builder status(String status) {
                 this.status = status;
@@ -227,7 +231,7 @@ public class ListInstancesResponseBody extends TeaModel {
             private String status; 
 
             /**
-             * 实例的创建时间
+             * The time when the instance was created. This value is a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.
              */
             public Builder createTime(Long createTime) {
                 this.createTime = createTime;
@@ -235,7 +239,7 @@ public class ListInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * 实例默认域名,用户portal和应用开发集成的端点地址
+             * The default endpoint of the instance.
              */
             public Builder defaultEndpoint(DefaultEndpoint defaultEndpoint) {
                 this.defaultEndpoint = defaultEndpoint;
@@ -243,7 +247,7 @@ public class ListInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * 实例描述信息
+             * The description of the instance.
              */
             public Builder description(String description) {
                 this.description = description;
@@ -251,7 +255,7 @@ public class ListInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * 实例id
+             * The instance ID.
              */
             public Builder instanceId(String instanceId) {
                 this.instanceId = instanceId;
@@ -259,7 +263,11 @@ public class ListInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * 实例状态，Pending(初始状态)、Creating(创建中)、Running(运行中)、Disabled(禁用)、CreateFailed(创建失败)
+             * The status of the instance. Valid values:
+             * <p>
+             * 
+             * *   creating
+             * *   running
              */
             public Builder status(String status) {
                 this.status = status;

@@ -108,7 +108,7 @@ public class AuthorizeApplicationToGroupsRequest extends Request {
         }
 
         /**
-         * 应用的唯一标识。
+         * The application ID.
          */
         public Builder applicationId(String applicationId) {
             this.putQueryParameter("ApplicationId", applicationId);
@@ -117,7 +117,7 @@ public class AuthorizeApplicationToGroupsRequest extends Request {
         }
 
         /**
-         * 被授权的组ID列表，必填，列表中最多包含100个元素。
+         * The group IDs. You can specify up to 100 group IDs at a time.
          */
         public Builder groupIds(java.util.List < String > groupIds) {
             this.putQueryParameter("GroupIds", groupIds);
@@ -126,7 +126,7 @@ public class AuthorizeApplicationToGroupsRequest extends Request {
         }
 
         /**
-         * IDaaS EIAM实例的ID。
+         * The instance ID.
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);

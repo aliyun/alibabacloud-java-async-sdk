@@ -62,7 +62,7 @@ public class ListUsersForGroupResponseBody extends TeaModel {
         private java.util.List < Users> users; 
 
         /**
-         * 请求ID。
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -70,7 +70,7 @@ public class ListUsersForGroupResponseBody extends TeaModel {
         }
 
         /**
-         * 列表总条数目。
+         * The total number of entries returned. The maximum number of entries that can be returned per page is specified by PageSize.
          */
         public Builder totalCount(Long totalCount) {
             this.totalCount = totalCount;
@@ -78,7 +78,7 @@ public class ListUsersForGroupResponseBody extends TeaModel {
         }
 
         /**
-         * Users.
+         * The information about accounts.
          */
         public Builder users(java.util.List < Users> users) {
             this.users = users;
@@ -118,7 +118,7 @@ public class ListUsersForGroupResponseBody extends TeaModel {
             private String userId; 
 
             /**
-             * 账户Id
+             * The account ID.
              */
             public Builder userId(String userId) {
                 this.userId = userId;

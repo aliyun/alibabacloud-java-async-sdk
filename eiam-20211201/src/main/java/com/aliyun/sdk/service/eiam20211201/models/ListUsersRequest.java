@@ -17,6 +17,11 @@ public class ListUsersRequest extends Request {
     private String regionId;
 
     @Query
+    @NameInMap("DisplayNameStartsWith")
+    @Validation(maxLength = 64)
+    private String displayNameStartsWith;
+
+    @Query
     @NameInMap("Email")
     @Validation(maxLength = 64)
     private String email;
@@ -60,6 +65,10 @@ public class ListUsersRequest extends Request {
     private String userExternalId;
 
     @Query
+    @NameInMap("UserIds")
+    private java.util.List < String > userIds;
+
+    @Query
     @NameInMap("UserSourceId")
     @Validation(maxLength = 64)
     private String userSourceId;
@@ -69,9 +78,15 @@ public class ListUsersRequest extends Request {
     @Validation(maxLength = 32)
     private String userSourceType;
 
+    @Query
+    @NameInMap("UsernameStartsWith")
+    @Validation(maxLength = 64)
+    private String usernameStartsWith;
+
     private ListUsersRequest(Builder builder) {
         super(builder);
         this.regionId = builder.regionId;
+        this.displayNameStartsWith = builder.displayNameStartsWith;
         this.email = builder.email;
         this.instanceId = builder.instanceId;
         this.organizationalUnitId = builder.organizationalUnitId;
@@ -81,8 +96,10 @@ public class ListUsersRequest extends Request {
         this.phoneRegion = builder.phoneRegion;
         this.status = builder.status;
         this.userExternalId = builder.userExternalId;
+        this.userIds = builder.userIds;
         this.userSourceId = builder.userSourceId;
         this.userSourceType = builder.userSourceType;
+        this.usernameStartsWith = builder.usernameStartsWith;
     }
 
     public static Builder builder() {
@@ -103,6 +120,13 @@ public class ListUsersRequest extends Request {
      */
     public String getRegionId() {
         return this.regionId;
+    }
+
+    /**
+     * @return displayNameStartsWith
+     */
+    public String getDisplayNameStartsWith() {
+        return this.displayNameStartsWith;
     }
 
     /**
@@ -169,6 +193,13 @@ public class ListUsersRequest extends Request {
     }
 
     /**
+     * @return userIds
+     */
+    public java.util.List < String > getUserIds() {
+        return this.userIds;
+    }
+
+    /**
      * @return userSourceId
      */
     public String getUserSourceId() {
@@ -182,8 +213,16 @@ public class ListUsersRequest extends Request {
         return this.userSourceType;
     }
 
+    /**
+     * @return usernameStartsWith
+     */
+    public String getUsernameStartsWith() {
+        return this.usernameStartsWith;
+    }
+
     public static final class Builder extends Request.Builder<ListUsersRequest, Builder> {
         private String regionId; 
+        private String displayNameStartsWith; 
         private String email; 
         private String instanceId; 
         private String organizationalUnitId; 
@@ -193,8 +232,10 @@ public class ListUsersRequest extends Request {
         private String phoneRegion; 
         private String status; 
         private String userExternalId; 
+        private java.util.List < String > userIds; 
         private String userSourceId; 
         private String userSourceType; 
+        private String usernameStartsWith; 
 
         private Builder() {
             super();
@@ -203,6 +244,7 @@ public class ListUsersRequest extends Request {
         private Builder(ListUsersRequest request) {
             super(request);
             this.regionId = request.regionId;
+            this.displayNameStartsWith = request.displayNameStartsWith;
             this.email = request.email;
             this.instanceId = request.instanceId;
             this.organizationalUnitId = request.organizationalUnitId;
@@ -212,8 +254,10 @@ public class ListUsersRequest extends Request {
             this.phoneRegion = request.phoneRegion;
             this.status = request.status;
             this.userExternalId = request.userExternalId;
+            this.userIds = request.userIds;
             this.userSourceId = request.userSourceId;
             this.userSourceType = request.userSourceType;
+            this.usernameStartsWith = request.usernameStartsWith;
         } 
 
         /**
@@ -226,7 +270,16 @@ public class ListUsersRequest extends Request {
         }
 
         /**
-         * 邮箱
+         * 账户展示名，模糊匹配
+         */
+        public Builder displayNameStartsWith(String displayNameStartsWith) {
+            this.putQueryParameter("DisplayNameStartsWith", displayNameStartsWith);
+            this.displayNameStartsWith = displayNameStartsWith;
+            return this;
+        }
+
+        /**
+         * The email address of the user who owns the account.
          */
         public Builder email(String email) {
             this.putQueryParameter("Email", email);
@@ -235,7 +288,7 @@ public class ListUsersRequest extends Request {
         }
 
         /**
-         * IDaaS EIAM实例的ID。
+         * The ID of the instance.
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -244,7 +297,7 @@ public class ListUsersRequest extends Request {
         }
 
         /**
-         * 组织ID
+         * The ID of the organizational unit.
          */
         public Builder organizationalUnitId(String organizationalUnitId) {
             this.putQueryParameter("OrganizationalUnitId", organizationalUnitId);
@@ -253,7 +306,7 @@ public class ListUsersRequest extends Request {
         }
 
         /**
-         * 当前查询的列表页码，默认为1。
+         * The number of the page to return. Default value: 1.
          */
         public Builder pageNumber(Long pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -262,7 +315,7 @@ public class ListUsersRequest extends Request {
         }
 
         /**
-         * 当前查询的列表页码，默认为20。
+         * The number of entries to return on each page. Default value: 20.
          */
         public Builder pageSize(Long pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -271,7 +324,7 @@ public class ListUsersRequest extends Request {
         }
 
         /**
-         * 手机区号
+         * The mobile number of the user who owns the account.
          */
         public Builder phoneNumber(String phoneNumber) {
             this.putQueryParameter("PhoneNumber", phoneNumber);
@@ -280,7 +333,7 @@ public class ListUsersRequest extends Request {
         }
 
         /**
-         * 手机区号
+         * The country code of the mobile number. For example, the country code of China is 86 without 00 or +.
          */
         public Builder phoneRegion(String phoneRegion) {
             this.putQueryParameter("PhoneRegion", phoneRegion);
@@ -289,7 +342,11 @@ public class ListUsersRequest extends Request {
         }
 
         /**
-         * 账户状态
+         * The status of the account. Valid values:
+         * <p>
+         * 
+         * *   enabled: The account is enabled.
+         * *   disabled: The account is disabled.
          */
         public Builder status(String status) {
             this.putQueryParameter("Status", status);
@@ -298,7 +355,10 @@ public class ListUsersRequest extends Request {
         }
 
         /**
-         * 外部关联ID
+         * The external ID of the account. The external ID can be used by external data to map the data of the account in IDaaS EIAM.
+         * <p>
+         * 
+         * For accounts with the same source type and source ID, each account has a unique external ID.
          */
         public Builder userExternalId(String userExternalId) {
             this.putQueryParameter("UserExternalId", userExternalId);
@@ -307,7 +367,19 @@ public class ListUsersRequest extends Request {
         }
 
         /**
-         * 自建类型为实例ID，非自建类型，为对应企业ID，比如钉钉，对应的corpId
+         * 账户的ID集合
+         */
+        public Builder userIds(java.util.List < String > userIds) {
+            this.putQueryParameter("UserIds", userIds);
+            this.userIds = userIds;
+            return this;
+        }
+
+        /**
+         * The source ID of the account.
+         * <p>
+         * 
+         * If the account was created in IDaaS, its source ID is the ID of the IDaaS instance. If the account was imported, its source ID is the enterprise ID in the source. For example, if the account was imported from DingTalk, its source ID is the corpId value of the enterprise in DingTalk.
          */
         public Builder userSourceId(String userSourceId) {
             this.putQueryParameter("UserSourceId", userSourceId);
@@ -316,11 +388,26 @@ public class ListUsersRequest extends Request {
         }
 
         /**
-         * build_in(自建),ding_talk(钉钉导入),ad(AD导入),ldap(LDAP导入)
+         * The source type of the account. Valid values:
+         * <p>
+         * 
+         * *   build_in: The account was created in IDaaS.
+         * *   ding_talk: The account was imported from DingTalk.
+         * *   ad: The account was imported from Microsoft Active Directory (AD).
+         * *   ldap: The account was imported from a Lightweight Directory Access Protocol (LDAP) service.
          */
         public Builder userSourceType(String userSourceType) {
             this.putQueryParameter("UserSourceType", userSourceType);
             this.userSourceType = userSourceType;
+            return this;
+        }
+
+        /**
+         * 账户名，左模糊匹配
+         */
+        public Builder usernameStartsWith(String usernameStartsWith) {
+            this.putQueryParameter("UsernameStartsWith", usernameStartsWith);
+            this.usernameStartsWith = usernameStartsWith;
             return this;
         }
 

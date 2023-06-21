@@ -50,7 +50,7 @@ public class CreateOrganizationalUnitResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * 组织ID
+         * The organization ID.
          */
         public Builder organizationalUnitId(String organizationalUnitId) {
             this.organizationalUnitId = organizationalUnitId;
@@ -58,7 +58,7 @@ public class CreateOrganizationalUnitResponseBody extends TeaModel {
         }
 
         /**
-         * 请求ID。
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

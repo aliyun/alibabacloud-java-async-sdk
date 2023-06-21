@@ -93,7 +93,7 @@ public class UnlockUserRequest extends Request {
         }
 
         /**
-         * IDaaS EIAM实例的ID。
+         * The instance ID.
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -102,7 +102,7 @@ public class UnlockUserRequest extends Request {
         }
 
         /**
-         * 账户ID
+         * The account ID.
          */
         public Builder userId(String userId) {
             this.putQueryParameter("UserId", userId);

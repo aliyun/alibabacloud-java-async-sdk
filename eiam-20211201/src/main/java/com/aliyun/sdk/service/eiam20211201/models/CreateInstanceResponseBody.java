@@ -50,7 +50,7 @@ public class CreateInstanceResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * 实例ID
+         * The ID of the instance that is created.
          */
         public Builder instanceId(String instanceId) {
             this.instanceId = instanceId;
@@ -58,7 +58,7 @@ public class CreateInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * 请求Id
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

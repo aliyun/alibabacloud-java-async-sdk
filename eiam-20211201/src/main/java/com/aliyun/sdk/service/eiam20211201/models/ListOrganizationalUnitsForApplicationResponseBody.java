@@ -62,7 +62,7 @@ public class ListOrganizationalUnitsForApplicationResponseBody extends TeaModel 
         private Long totalCount; 
 
         /**
-         * OrganizationalUnits.
+         * The IDs of the organizations that are allowed to access the application.
          */
         public Builder organizationalUnits(java.util.List < OrganizationalUnits> organizationalUnits) {
             this.organizationalUnits = organizationalUnits;
@@ -70,7 +70,7 @@ public class ListOrganizationalUnitsForApplicationResponseBody extends TeaModel 
         }
 
         /**
-         * 请求ID。
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -78,7 +78,7 @@ public class ListOrganizationalUnitsForApplicationResponseBody extends TeaModel 
         }
 
         /**
-         * 列表总条数目。
+         * The total number of the returned entries.
          */
         public Builder totalCount(Long totalCount) {
             this.totalCount = totalCount;
@@ -118,7 +118,7 @@ public class ListOrganizationalUnitsForApplicationResponseBody extends TeaModel 
             private String organizationalUnitId; 
 
             /**
-             * 组织的唯一标识.
+             * The ID of the organization that is allowed to access the application.
              */
             public Builder organizationalUnitId(String organizationalUnitId) {
                 this.organizationalUnitId = organizationalUnitId;

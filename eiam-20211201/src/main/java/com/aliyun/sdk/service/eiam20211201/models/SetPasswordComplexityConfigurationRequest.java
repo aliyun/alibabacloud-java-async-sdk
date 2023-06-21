@@ -107,7 +107,7 @@ public class SetPasswordComplexityConfigurationRequest extends Request {
         }
 
         /**
-         * IDaaS EIAM实例的ID。
+         * The instance ID.
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -116,7 +116,7 @@ public class SetPasswordComplexityConfigurationRequest extends Request {
         }
 
         /**
-         * 密码复杂度规则
+         * The password complexity rules.
          */
         public Builder passwordComplexityRules(java.util.List < PasswordComplexityRules> passwordComplexityRules) {
             this.putQueryParameter("PasswordComplexityRules", passwordComplexityRules);
@@ -125,7 +125,7 @@ public class SetPasswordComplexityConfigurationRequest extends Request {
         }
 
         /**
-         * 密码最小长度
+         * The minimum number of characters in a password.
          */
         public Builder passwordMinLength(Integer passwordMinLength) {
             this.putQueryParameter("PasswordMinLength", passwordMinLength);
@@ -168,7 +168,17 @@ public class SetPasswordComplexityConfigurationRequest extends Request {
             private String passwordCheckType; 
 
             /**
-             * 密码检查类型。枚举取值:inclusion\_upper\_case(包含大写字母)、inclusion\_lower\_case(包含小写字母)、inclusion\_special\_case(包含特殊字符)、inclusion\_number(包含数字)、exclusion\_username(不能包含用户名)、exclusion\_email(不能包含邮箱)、exclusion\_phone\_number(不能包含手机号)、exclusion\_display\_name(不能包含显示名)
+             * The type of the password check. Valid values:
+             * <p>
+             * 
+             * *   inclusion_upper_case: The password must contain uppercase letters.
+             * *   inclusion_lower_case: The password must contain lowercase letters.
+             * *   inclusion_special_case: The password must contain one or more of the following special characters: @ % + \ / \" ! # $ ^ ? : , ( ) { } \[ ] ~ - \_ .
+             * *   inclusion_number: The password must contain digits.
+             * *   exclusion_username: The password cannot contain a username.
+             * *   exclusion_email: The password cannot contain an email prefix.
+             * *   exclusion_phone_number: The password cannot contain a mobile number.
+             * *   exclusion_display_name: The password cannot contain a display name.
              */
             public Builder passwordCheckType(String passwordCheckType) {
                 this.passwordCheckType = passwordCheckType;

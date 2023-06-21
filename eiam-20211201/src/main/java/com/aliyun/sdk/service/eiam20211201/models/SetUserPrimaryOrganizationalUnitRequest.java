@@ -108,7 +108,7 @@ public class SetUserPrimaryOrganizationalUnitRequest extends Request {
         }
 
         /**
-         * IDaaS EIAM实例的ID。
+         * The instance ID.
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -117,7 +117,7 @@ public class SetUserPrimaryOrganizationalUnitRequest extends Request {
         }
 
         /**
-         * 主组织ID
+         * The ID of the new primary organizational unit.
          */
         public Builder organizationalUnitId(String organizationalUnitId) {
             this.putQueryParameter("OrganizationalUnitId", organizationalUnitId);
@@ -126,7 +126,7 @@ public class SetUserPrimaryOrganizationalUnitRequest extends Request {
         }
 
         /**
-         * 账户ID
+         * The ID of the account.
          */
         public Builder userId(String userId) {
             this.putQueryParameter("UserId", userId);

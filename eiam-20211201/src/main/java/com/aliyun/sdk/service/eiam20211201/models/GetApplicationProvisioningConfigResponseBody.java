@@ -50,7 +50,7 @@ public class GetApplicationProvisioningConfigResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * ApplicationProvisioningConfig.
+         * The configuration of the account synchronization feature for the application.
          */
         public Builder applicationProvisioningConfig(ApplicationProvisioningConfig applicationProvisioningConfig) {
             this.applicationProvisioningConfig = applicationProvisioningConfig;
@@ -58,7 +58,7 @@ public class GetApplicationProvisioningConfigResponseBody extends TeaModel {
         }
 
         /**
-         * 请求ID。
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -134,7 +134,7 @@ public class GetApplicationProvisioningConfigResponseBody extends TeaModel {
             private java.util.List < String > listenEventScopes; 
 
             /**
-             * IDaaS回调SP地址，当provisionProtocolType为idaas_callback时必填
+             * The URL that the application uses to receive IDaaS event callbacks.
              */
             public Builder callbackUrl(String callbackUrl) {
                 this.callbackUrl = callbackUrl;
@@ -142,7 +142,7 @@ public class GetApplicationProvisioningConfigResponseBody extends TeaModel {
             }
 
             /**
-             * IDaaS回调对称加密秘钥, AES 256格式
+             * The symmetric key for IDaaS event callbacks. The key is an AES-256 encryption key in the HEX format.
              */
             public Builder encryptKey(String encryptKey) {
                 this.encryptKey = encryptKey;
@@ -150,7 +150,11 @@ public class GetApplicationProvisioningConfigResponseBody extends TeaModel {
             }
 
             /**
-             * IDaaS回调是否加密
+             * Indicates whether IDaaS event callback messages are encrypted. Valid values:
+             * <p>
+             * 
+             * *   true: The messages are encrypted.
+             * *   false: The messages are transmitted in plaintext.
              */
             public Builder encryptRequired(Boolean encryptRequired) {
                 this.encryptRequired = encryptRequired;
@@ -158,7 +162,7 @@ public class GetApplicationProvisioningConfigResponseBody extends TeaModel {
             }
 
             /**
-             * IDaaS回调事件监听范围
+             * The list of types of IDaaS event callback messages that are supported by the listener.
              */
             public Builder listenEventScopes(java.util.List < String > listenEventScopes) {
                 this.listenEventScopes = listenEventScopes;
@@ -247,7 +251,7 @@ public class GetApplicationProvisioningConfigResponseBody extends TeaModel {
             private String tokenEndpoint; 
 
             /**
-             * accessToken
+             * The access token. This parameter is returned when the GrantType parameter is set to bearer_token.
              */
             public Builder accessToken(String accessToken) {
                 this.accessToken = accessToken;
@@ -255,7 +259,11 @@ public class GetApplicationProvisioningConfigResponseBody extends TeaModel {
             }
 
             /**
-             * oauth2 authentication method
+             * The authentication mode of the SCIM protocol. Valid values:
+             * <p>
+             * 
+             * *   client_secret_basic: The client secret is passed in the request header.
+             * *   client_secret_post: The client secret is passed in the request body.
              */
             public Builder authnMethod(String authnMethod) {
                 this.authnMethod = authnMethod;
@@ -263,7 +271,7 @@ public class GetApplicationProvisioningConfigResponseBody extends TeaModel {
             }
 
             /**
-             * oauth2 client id
+             * The client ID of the application.
              */
             public Builder clientId(String clientId) {
                 this.clientId = clientId;
@@ -271,7 +279,7 @@ public class GetApplicationProvisioningConfigResponseBody extends TeaModel {
             }
 
             /**
-             * oauth2 client secret
+             * The client secret of the application.
              */
             public Builder clientSecret(String clientSecret) {
                 this.clientSecret = clientSecret;
@@ -279,7 +287,7 @@ public class GetApplicationProvisioningConfigResponseBody extends TeaModel {
             }
 
             /**
-             * oauth2 token端点
+             * The token endpoint.
              */
             public Builder tokenEndpoint(String tokenEndpoint) {
                 this.tokenEndpoint = tokenEndpoint;
@@ -344,7 +352,10 @@ public class GetApplicationProvisioningConfigResponseBody extends TeaModel {
             private String grantType; 
 
             /**
-             * 认证类型
+             * The authentication mode of the SCIM protocol. Valid value:
+             * <p>
+             * 
+             * *   oauth2: OAuth2.0 mode.
              */
             public Builder authnMode(String authnMode) {
                 this.authnMode = authnMode;
@@ -352,7 +363,11 @@ public class GetApplicationProvisioningConfigResponseBody extends TeaModel {
             }
 
             /**
-             * 授权相关配置
+             * The configuration parameters related to authorization.
+             * <p>
+             * 
+             * *   If the GrantType parameter is set to client_credentials, the configuration parameters ClientId, ClientSecret, and AuthnMethod are returned.
+             * *   If the GrantType parameter is set to bearer_token, the configuration parameter AccessToken is returned.
              */
             public Builder authnParam(AuthnParam authnParam) {
                 this.authnParam = authnParam;
@@ -360,7 +375,11 @@ public class GetApplicationProvisioningConfigResponseBody extends TeaModel {
             }
 
             /**
-             * 授权模式
+             * The grant type of the SCIM protocol. Valid values:
+             * <p>
+             * 
+             * *   client_credentials: client mode.
+             * *   bearer_token: key mode.
              */
             public Builder grantType(String grantType) {
                 this.grantType = grantType;
@@ -437,7 +456,7 @@ public class GetApplicationProvisioningConfigResponseBody extends TeaModel {
             private String scimBaseUrl; 
 
             /**
-             * scim同步相关配置
+             * The configuration parameters related to SCIM-based synchronization.
              */
             public Builder authnConfiguration(AuthnConfiguration authnConfiguration) {
                 this.authnConfiguration = authnConfiguration;
@@ -445,7 +464,10 @@ public class GetApplicationProvisioningConfigResponseBody extends TeaModel {
             }
 
             /**
-             * 全量推送范围
+             * The full synchronization scope of the SCIM protocol. Valid value:
+             * <p>
+             * 
+             * *   urn:alibaba:idaas:app:scim:User:PUSH: full account data synchronization.
              */
             public Builder fullPushScopes(java.util.List < String > fullPushScopes) {
                 this.fullPushScopes = fullPushScopes;
@@ -453,7 +475,12 @@ public class GetApplicationProvisioningConfigResponseBody extends TeaModel {
             }
 
             /**
-             * 目标资源操作行为
+             * The resource operations of the SCIM protocol. Valid values:
+             * <p>
+             * 
+             * *   urn:alibaba:idaas:app:scim:User:CREATE: account creation.
+             * *   urn:alibaba:idaas:app:scim:User:UPDATE: account update.
+             * *   urn:alibaba:idaas:app:scim:User:DELETE: account deletion.
              */
             public Builder provisioningActions(java.util.List < String > provisioningActions) {
                 this.provisioningActions = provisioningActions;
@@ -461,7 +488,7 @@ public class GetApplicationProvisioningConfigResponseBody extends TeaModel {
             }
 
             /**
-             * scim同步端点
+             * The base URL that the application uses to receive the SCIM protocol for IDaaS synchronization.
              */
             public Builder scimBaseUrl(String scimBaseUrl) {
                 this.scimBaseUrl = scimBaseUrl;
@@ -598,7 +625,7 @@ public class GetApplicationProvisioningConfigResponseBody extends TeaModel {
             private String status; 
 
             /**
-             * IDaaS EIAM 应用Id
+             * The ID of the application.
              */
             public Builder applicationId(String applicationId) {
                 this.applicationId = applicationId;
@@ -606,7 +633,7 @@ public class GetApplicationProvisioningConfigResponseBody extends TeaModel {
             }
 
             /**
-             * IDaaS回调同步配置，当provisionProtocolType为idaas_callback时必填
+             * The configuration of the custom event callback protocol of IDaaS.
              */
             public Builder callbackProvisioningConfig(CallbackProvisioningConfig callbackProvisioningConfig) {
                 this.callbackProvisioningConfig = callbackProvisioningConfig;
@@ -622,7 +649,7 @@ public class GetApplicationProvisioningConfigResponseBody extends TeaModel {
             }
 
             /**
-             * IDaaS EIAM 实例Id
+             * The ID of the instance.
              */
             public Builder instanceId(String instanceId) {
                 this.instanceId = instanceId;
@@ -630,7 +657,7 @@ public class GetApplicationProvisioningConfigResponseBody extends TeaModel {
             }
 
             /**
-             * 应用同步验签公钥端点
+             * The public key endpoint for signature verification of the synchronization callback information.
              */
             public Builder provisionJwksEndpoint(String provisionJwksEndpoint) {
                 this.provisionJwksEndpoint = provisionJwksEndpoint;
@@ -638,7 +665,11 @@ public class GetApplicationProvisioningConfigResponseBody extends TeaModel {
             }
 
             /**
-             * 同步信息是否包含密码
+             * Indicates whether the password is synchronized in IDaaS user event callbacks. Valid values:
+             * <p>
+             * 
+             * *   true: The password is synchronized.
+             * *   false: The password is not synchronized.
              */
             public Builder provisionPassword(Boolean provisionPassword) {
                 this.provisionPassword = provisionPassword;
@@ -646,7 +677,11 @@ public class GetApplicationProvisioningConfigResponseBody extends TeaModel {
             }
 
             /**
-             * IDaaS EIAM 应用同步协议，scim2 or custom or idaas_callback
+             * The synchronization protocol type of the application. Valid values:
+             * <p>
+             * 
+             * *   idaas_callback: custom event callback protocol of IDaaS.
+             * *   scim2: System for Cross-domain Identity Management (SCIM) protocol.
              */
             public Builder provisionProtocolType(String provisionProtocolType) {
                 this.provisionProtocolType = provisionProtocolType;
@@ -654,7 +689,7 @@ public class GetApplicationProvisioningConfigResponseBody extends TeaModel {
             }
 
             /**
-             * IDaaS SCIM同步配置，当provisionProtocolType为scim2时填写该配置
+             * The configuration of SCIM-based IDaaS synchronization.
              */
             public Builder scimProvisioningConfig(ScimProvisioningConfig scimProvisioningConfig) {
                 this.scimProvisioningConfig = scimProvisioningConfig;
@@ -662,7 +697,11 @@ public class GetApplicationProvisioningConfigResponseBody extends TeaModel {
             }
 
             /**
-             * IDaaS 应用同步启用状态
+             * The status of the IDaaS account synchronization feature. Valid values:
+             * <p>
+             * 
+             * *   enabled: The feature is enabled.
+             * *   disabled: The feature is disabled.
              */
             public Builder status(String status) {
                 this.status = status;

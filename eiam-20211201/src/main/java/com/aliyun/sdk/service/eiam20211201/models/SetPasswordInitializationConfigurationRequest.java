@@ -138,7 +138,7 @@ public class SetPasswordInitializationConfigurationRequest extends Request {
         }
 
         /**
-         * IDaaS EIAM实例的ID。
+         * The ID of the instance.
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -147,7 +147,11 @@ public class SetPasswordInitializationConfigurationRequest extends Request {
         }
 
         /**
-         * 密码强制更新状态。枚举取值:enabled(开启)、disabled(禁用)
+         * Specifies whether to enable forcible password change upon first logon. Valid values:
+         * <p>
+         * 
+         * *   enabled
+         * *   disabled
          */
         public Builder passwordForcedUpdateStatus(String passwordForcedUpdateStatus) {
             this.putQueryParameter("PasswordForcedUpdateStatus", passwordForcedUpdateStatus);
@@ -156,7 +160,7 @@ public class SetPasswordInitializationConfigurationRequest extends Request {
         }
 
         /**
-         * 密码初始化通知渠道。枚举取值:email(邮件)、sms(短信)
+         * The methods for receiving password initialization notifications.
          */
         public Builder passwordInitializationNotificationChannels(java.util.List < String > passwordInitializationNotificationChannels) {
             this.putQueryParameter("PasswordInitializationNotificationChannels", passwordInitializationNotificationChannels);
@@ -165,7 +169,11 @@ public class SetPasswordInitializationConfigurationRequest extends Request {
         }
 
         /**
-         * 密码初始化配置状态。枚举取值:enabled(开启)、disabled(禁用)
+         * Specifies whether to enable password initialization. Valid values:
+         * <p>
+         * 
+         * *   enabled
+         * *   disabled
          */
         public Builder passwordInitializationStatus(String passwordInitializationStatus) {
             this.putQueryParameter("PasswordInitializationStatus", passwordInitializationStatus);
@@ -174,7 +182,10 @@ public class SetPasswordInitializationConfigurationRequest extends Request {
         }
 
         /**
-         * 密码初始化方式。当passwordInitializationStatus取值为enabled时必传。枚举取值:random(随机)
+         * The password initialization method. This parameter is required when PasswordInitializationStatus is set to enabled. Set the value to random.
+         * <p>
+         * 
+         * *   random: A randomly generated password is used.
          */
         public Builder passwordInitializationType(String passwordInitializationType) {
             this.putQueryParameter("PasswordInitializationType", passwordInitializationType);

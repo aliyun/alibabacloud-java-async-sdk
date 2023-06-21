@@ -62,7 +62,7 @@ public class ListUsersResponseBody extends TeaModel {
         private java.util.List < Users> users; 
 
         /**
-         * 请求ID。
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -70,7 +70,7 @@ public class ListUsersResponseBody extends TeaModel {
         }
 
         /**
-         * 列表总条数目。
+         * The number of entries in the list.
          */
         public Builder totalCount(Long totalCount) {
             this.totalCount = totalCount;
@@ -78,7 +78,7 @@ public class ListUsersResponseBody extends TeaModel {
         }
 
         /**
-         * Users.
+         * The list of data objects of accounts.
          */
         public Builder users(java.util.List < Users> users) {
             this.users = users;
@@ -358,7 +358,7 @@ public class ListUsersResponseBody extends TeaModel {
             private String username; 
 
             /**
-             * 账户过期时间
+             * The time when the account expires. This value is a UNIX timestamp. Unit: milliseconds.
              */
             public Builder accountExpireTime(Long accountExpireTime) {
                 this.accountExpireTime = accountExpireTime;
@@ -366,7 +366,7 @@ public class ListUsersResponseBody extends TeaModel {
             }
 
             /**
-             * 创建时间
+             * The time when the account was created. This value is a UNIX timestamp. Unit: milliseconds.
              */
             public Builder createTime(Long createTime) {
                 this.createTime = createTime;
@@ -374,7 +374,7 @@ public class ListUsersResponseBody extends TeaModel {
             }
 
             /**
-             * 账号描述
+             * The description of the account.
              */
             public Builder description(String description) {
                 this.description = description;
@@ -382,7 +382,7 @@ public class ListUsersResponseBody extends TeaModel {
             }
 
             /**
-             * 账户显示名
+             * The display name of the account.
              */
             public Builder displayName(String displayName) {
                 this.displayName = displayName;
@@ -390,7 +390,7 @@ public class ListUsersResponseBody extends TeaModel {
             }
 
             /**
-             * 邮箱
+             * The email address of the user who owns the account.
              */
             public Builder email(String email) {
                 this.email = email;
@@ -398,7 +398,7 @@ public class ListUsersResponseBody extends TeaModel {
             }
 
             /**
-             * 邮箱是否已验证
+             * Indicates whether the email address has been verified. A value of true indicates that the email address has been verified by the user or has been set to the verified status by the administrator. A value of false indicates that the email address has not been verified.
              */
             public Builder emailVerified(Boolean emailVerified) {
                 this.emailVerified = emailVerified;
@@ -406,7 +406,7 @@ public class ListUsersResponseBody extends TeaModel {
             }
 
             /**
-             * 实例ID
+             * The ID of the instance
              */
             public Builder instanceId(String instanceId) {
                 this.instanceId = instanceId;
@@ -414,7 +414,7 @@ public class ListUsersResponseBody extends TeaModel {
             }
 
             /**
-             * 锁定过期时间
+             * The time when the account lock expires. This value is a UNIX timestamp. Unit: milliseconds.
              */
             public Builder lockExpireTime(Long lockExpireTime) {
                 this.lockExpireTime = lockExpireTime;
@@ -422,7 +422,7 @@ public class ListUsersResponseBody extends TeaModel {
             }
 
             /**
-             * 密码过期时间
+             * Time When Password Expires
              */
             public Builder passwordExpireTime(Long passwordExpireTime) {
                 this.passwordExpireTime = passwordExpireTime;
@@ -430,7 +430,7 @@ public class ListUsersResponseBody extends TeaModel {
             }
 
             /**
-             * 密码是否已设置
+             * Indicates whether a password is set.
              */
             public Builder passwordSet(Boolean passwordSet) {
                 this.passwordSet = passwordSet;
@@ -438,7 +438,7 @@ public class ListUsersResponseBody extends TeaModel {
             }
 
             /**
-             * 手机号码
+             * The mobile number of the user who owns the account.
              */
             public Builder phoneNumber(String phoneNumber) {
                 this.phoneNumber = phoneNumber;
@@ -446,7 +446,7 @@ public class ListUsersResponseBody extends TeaModel {
             }
 
             /**
-             * 手机号是否已验证
+             * Indicates whether the mobile number has been verified. A value of true indicates that the mobile number has been verified by the user or has been set to the verified status by the administrator. A value of false indicates that the mobile number has not been verified.
              */
             public Builder phoneNumberVerified(Boolean phoneNumberVerified) {
                 this.phoneNumberVerified = phoneNumberVerified;
@@ -454,7 +454,7 @@ public class ListUsersResponseBody extends TeaModel {
             }
 
             /**
-             * 手机地区编号,示例：中国大陆手区号为86，不带 00 或 +
+             * The country code of the mobile number. For example, the country code of China is 86 without 00 or +.
              */
             public Builder phoneRegion(String phoneRegion) {
                 this.phoneRegion = phoneRegion;
@@ -462,7 +462,7 @@ public class ListUsersResponseBody extends TeaModel {
             }
 
             /**
-             * 账户注册时间
+             * The time when the account was registered. This value is a UNIX timestamp. Unit: milliseconds.
              */
             public Builder registerTime(Long registerTime) {
                 this.registerTime = registerTime;
@@ -470,7 +470,11 @@ public class ListUsersResponseBody extends TeaModel {
             }
 
             /**
-             * 账户状态, enabled:启用,disabled:禁用
+             * The status of the account. Valid values:
+             * <p>
+             * 
+             * *   enabled: The account is enabled.
+             * *   disabled: The account is disabled.
              */
             public Builder status(String status) {
                 this.status = status;
@@ -478,7 +482,7 @@ public class ListUsersResponseBody extends TeaModel {
             }
 
             /**
-             * 最近一次更新时间
+             * The time when the account was last updated. The value is a UNIX timestamp. Unit: milliseconds.
              */
             public Builder updateTime(Long updateTime) {
                 this.updateTime = updateTime;
@@ -486,7 +490,10 @@ public class ListUsersResponseBody extends TeaModel {
             }
 
             /**
-             * 外部ID
+             * The external ID of the account. The external ID can be used by external data to map the data of the account in IDaaS EIAM. By default, the external ID is the account ID.
+             * <p>
+             * 
+             * For accounts with the same source type and source ID, each account has a unique external ID.
              */
             public Builder userExternalId(String userExternalId) {
                 this.userExternalId = userExternalId;
@@ -494,7 +501,7 @@ public class ListUsersResponseBody extends TeaModel {
             }
 
             /**
-             * 账户ID
+             * The ID of the account.
              */
             public Builder userId(String userId) {
                 this.userId = userId;
@@ -502,7 +509,10 @@ public class ListUsersResponseBody extends TeaModel {
             }
 
             /**
-             * 来源ID
+             * The source ID of the account.
+             * <p>
+             * 
+             * If the account was created in IDaaS, its source ID is the ID of the IDaaS instance. If the account was imported, its source ID is the enterprise ID in the source. For example, if the account was imported from DingTalk, its source ID is the corpId value of the enterprise in DingTalk.
              */
             public Builder userSourceId(String userSourceId) {
                 this.userSourceId = userSourceId;
@@ -510,7 +520,13 @@ public class ListUsersResponseBody extends TeaModel {
             }
 
             /**
-             * 来源类型，build_in[自建],ding_talk[钉钉导入],ad[AD导入],ldap[LDAP导入]
+             * The source type of the account. Valid values:
+             * <p>
+             * 
+             * *   build_in: The account was created in IDaaS.
+             * *   ding_talk: The account was imported from DingTalk.
+             * *   ad: The account was imported from Microsoft Active Directory (AD).
+             * *   ldap: The account was imported from a Lightweight Directory Access Protocol (LDAP) service.
              */
             public Builder userSourceType(String userSourceType) {
                 this.userSourceType = userSourceType;
@@ -518,7 +534,7 @@ public class ListUsersResponseBody extends TeaModel {
             }
 
             /**
-             * 账户名
+             * The username of the account.
              */
             public Builder username(String username) {
                 this.username = username;

@@ -62,7 +62,7 @@ public class ListApplicationsResponseBody extends TeaModel {
         private Long totalCount; 
 
         /**
-         * Applications.
+         * The details of the applications.
          */
         public Builder applications(java.util.List < Applications> applications) {
             this.applications = applications;
@@ -70,7 +70,7 @@ public class ListApplicationsResponseBody extends TeaModel {
         }
 
         /**
-         * 请求Id
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -78,7 +78,7 @@ public class ListApplicationsResponseBody extends TeaModel {
         }
 
         /**
-         * 列表条数目
+         * The total number of the returned entries.
          */
         public Builder totalCount(Long totalCount) {
             this.totalCount = totalCount;
@@ -274,7 +274,7 @@ public class ListApplicationsResponseBody extends TeaModel {
             private Long updateTime; 
 
             /**
-             * IDaaS EIAM 应用Id
+             * The ID of the application.
              */
             public Builder applicationId(String applicationId) {
                 this.applicationId = applicationId;
@@ -282,7 +282,7 @@ public class ListApplicationsResponseBody extends TeaModel {
             }
 
             /**
-             * IDaaS EIAM 应用名称
+             * The name of the application.
              */
             public Builder applicationName(String applicationName) {
                 this.applicationName = applicationName;
@@ -290,7 +290,11 @@ public class ListApplicationsResponseBody extends TeaModel {
             }
 
             /**
-             * 创建应用的来源类型，标准协议 or 模板应用 or 自建应用
+             * The origin of the application. Valid values:
+             * <p>
+             * 
+             * *   urn:alibaba:idaas:app:source:template: The application is created based on a template.
+             * *   urn:alibaba:idaas: The application is created based on the standard protocol.
              */
             public Builder applicationSourceType(String applicationSourceType) {
                 this.applicationSourceType = applicationSourceType;
@@ -298,7 +302,7 @@ public class ListApplicationsResponseBody extends TeaModel {
             }
 
             /**
-             * IDaaS EIAM 客户端ID
+             * The client ID of the application.
              */
             public Builder clientId(String clientId) {
                 this.clientId = clientId;
@@ -306,7 +310,7 @@ public class ListApplicationsResponseBody extends TeaModel {
             }
 
             /**
-             * IDaaS EIAM 应用创建时间
+             * The time when the application was created. The value is a UNIX timestamp. Unit: milliseconds.
              */
             public Builder createTime(Long createTime) {
                 this.createTime = createTime;
@@ -314,7 +318,7 @@ public class ListApplicationsResponseBody extends TeaModel {
             }
 
             /**
-             * IDaaS EIAM 应用描述信息
+             * The description of the application.
              */
             public Builder description(String description) {
                 this.description = description;
@@ -322,7 +326,12 @@ public class ListApplicationsResponseBody extends TeaModel {
             }
 
             /**
-             * IDaaS EIAM 应用支持的特性，provisioning、permission_system、api_invoke等
+             * The features that are supported by the application. The value is a JSON array. Valid values:
+             * <p>
+             * 
+             * *   sso: The application supports SSO.
+             * *   provision: The application supports account synchronization.
+             * *   api_invoke: The application supports custom APIs.
              */
             public Builder features(String features) {
                 this.features = features;
@@ -330,7 +339,7 @@ public class ListApplicationsResponseBody extends TeaModel {
             }
 
             /**
-             * IDaaS EIAM 实例Id
+             * The ID of the instance.
              */
             public Builder instanceId(String instanceId) {
                 this.instanceId = instanceId;
@@ -338,7 +347,7 @@ public class ListApplicationsResponseBody extends TeaModel {
             }
 
             /**
-             * IDaaS EIAM 应用图标URL地址
+             * The URL of the application icon.
              */
             public Builder logoUrl(String logoUrl) {
                 this.logoUrl = logoUrl;
@@ -346,7 +355,7 @@ public class ListApplicationsResponseBody extends TeaModel {
             }
 
             /**
-             * 托管应用模板的云产品ServiceCode。当且仅当ServiceManaged为true是返回。
+             * The service code of the cloud service that manages the application template.
              */
             public Builder managedServiceCode(String managedServiceCode) {
                 this.managedServiceCode = managedServiceCode;
@@ -354,7 +363,7 @@ public class ListApplicationsResponseBody extends TeaModel {
             }
 
             /**
-             * 应用模板是否被云产品托管。
+             * Indicates whether the application template is managed by a cloud service.
              */
             public Builder serviceManaged(Boolean serviceManaged) {
                 this.serviceManaged = serviceManaged;
@@ -362,7 +371,11 @@ public class ListApplicationsResponseBody extends TeaModel {
             }
 
             /**
-             * IDaaS EIAM 应用支持的sso协议类型，oidc、saml2
+             * The type of the single sign-on (SSO) protocol. Valid values:
+             * <p>
+             * 
+             * *   saml2: the Security Assertion Markup Language (SAML) 2.0 protocol.
+             * *   oidc: the OpenID Connect (OIDC) protocol.
              */
             public Builder ssoType(String ssoType) {
                 this.ssoType = ssoType;
@@ -370,7 +383,11 @@ public class ListApplicationsResponseBody extends TeaModel {
             }
 
             /**
-             * IDaaS EIAM 应用状态
+             * The status of the application. Valid values:
+             * <p>
+             * 
+             * *   Enabled: The application is enabled.
+             * *   Disabled: The application is disabled.
              */
             public Builder status(String status) {
                 this.status = status;
@@ -378,7 +395,7 @@ public class ListApplicationsResponseBody extends TeaModel {
             }
 
             /**
-             * IDaaS EIAM 应用最近更新时间
+             * The time when the application was last updated. The value is a UNIX timestamp. Unit: milliseconds.
              */
             public Builder updateTime(Long updateTime) {
                 this.updateTime = updateTime;

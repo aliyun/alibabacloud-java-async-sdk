@@ -50,7 +50,7 @@ public class ListRegionsResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * Regions.
+         * The supported regions.
          */
         public Builder regions(java.util.List < Regions> regions) {
             this.regions = regions;
@@ -58,7 +58,7 @@ public class ListRegionsResponseBody extends TeaModel {
         }
 
         /**
-         * 请求ID。
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -122,7 +122,7 @@ public class ListRegionsResponseBody extends TeaModel {
             private String regionId; 
 
             /**
-             * 地域名称
+             * The name of the region.
              */
             public Builder localName(String localName) {
                 this.localName = localName;
@@ -130,7 +130,7 @@ public class ListRegionsResponseBody extends TeaModel {
             }
 
             /**
-             * 地域对应的接入地址
+             * The endpoint of the region.
              */
             public Builder regionEndpoint(String regionEndpoint) {
                 this.regionEndpoint = regionEndpoint;
@@ -138,7 +138,7 @@ public class ListRegionsResponseBody extends TeaModel {
             }
 
             /**
-             * 地域ID
+             * The ID of the region.
              */
             public Builder regionId(String regionId) {
                 this.regionId = regionId;

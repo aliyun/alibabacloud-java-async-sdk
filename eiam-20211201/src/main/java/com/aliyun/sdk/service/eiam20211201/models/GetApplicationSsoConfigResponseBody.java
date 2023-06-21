@@ -50,7 +50,7 @@ public class GetApplicationSsoConfigResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * ApplicationSsoConfig.
+         * The SSO configuration information of the application.
          */
         public Builder applicationSsoConfig(ApplicationSsoConfig applicationSsoConfig) {
             this.applicationSsoConfig = applicationSsoConfig;
@@ -58,7 +58,7 @@ public class GetApplicationSsoConfigResponseBody extends TeaModel {
         }
 
         /**
-         * 请求Id
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -110,7 +110,7 @@ public class GetApplicationSsoConfigResponseBody extends TeaModel {
             private String claimValueExpression; 
 
             /**
-             * 返回的claim名称
+             * The claim name.
              */
             public Builder claimName(String claimName) {
                 this.claimName = claimName;
@@ -118,7 +118,7 @@ public class GetApplicationSsoConfigResponseBody extends TeaModel {
             }
 
             /**
-             * 返回的claim取值表达式
+             * The expression that is used to generate the value of the claim.
              */
             public Builder claimValueExpression(String claimValueExpression) {
                 this.claimValueExpression = claimValueExpression;
@@ -327,7 +327,7 @@ public class GetApplicationSsoConfigResponseBody extends TeaModel {
             private String subjectIdExpression; 
 
             /**
-             * 返回的access token有效时间，单位为Second
+             * The validity period of the issued access token. Unit: seconds. Default value: 1200.
              */
             public Builder accessTokenEffectiveTime(Long accessTokenEffectiveTime) {
                 this.accessTokenEffectiveTime = accessTokenEffectiveTime;
@@ -335,7 +335,7 @@ public class GetApplicationSsoConfigResponseBody extends TeaModel {
             }
 
             /**
-             * Authorization code流中code的有效时间，单位为Second
+             * The validity period of the issued code. Unit: seconds. Default value: 60.
              */
             public Builder codeEffectiveTime(Long codeEffectiveTime) {
                 this.codeEffectiveTime = codeEffectiveTime;
@@ -343,7 +343,7 @@ public class GetApplicationSsoConfigResponseBody extends TeaModel {
             }
 
             /**
-             * 自定义id token返回信息
+             * The custom claims that are returned for the ID token.
              */
             public Builder customClaims(java.util.List < CustomClaims> customClaims) {
                 this.customClaims = customClaims;
@@ -351,7 +351,7 @@ public class GetApplicationSsoConfigResponseBody extends TeaModel {
             }
 
             /**
-             * OIDC标准参数，如profile、email等
+             * The scopes of user attributes that can be returned for the UserInfo endpoint or ID token.
              */
             public Builder grantScopes(java.util.List < String > grantScopes) {
                 this.grantScopes = grantScopes;
@@ -359,7 +359,7 @@ public class GetApplicationSsoConfigResponseBody extends TeaModel {
             }
 
             /**
-             * 应用支持的授权类型，OIDC标准参数
+             * The list of grant types that are supported for OIDC protocols.
              */
             public Builder grantTypes(java.util.List < String > grantTypes) {
                 this.grantTypes = grantTypes;
@@ -367,7 +367,7 @@ public class GetApplicationSsoConfigResponseBody extends TeaModel {
             }
 
             /**
-             * id token有效时间，单位为Second
+             * The validity period of the issued ID token. Unit: seconds. Default value: 300.
              */
             public Builder idTokenEffectiveTime(Long idTokenEffectiveTime) {
                 this.idTokenEffectiveTime = idTokenEffectiveTime;
@@ -375,7 +375,7 @@ public class GetApplicationSsoConfigResponseBody extends TeaModel {
             }
 
             /**
-             * 密码模式使用的身份认证来源id，仅对password模式生效
+             * The ID of the identity authentication source in password mode. This parameter is returned only when the value of the GrantTypes parameter includes the password mode.
              */
             public Builder passwordAuthenticationSourceId(String passwordAuthenticationSourceId) {
                 this.passwordAuthenticationSourceId = passwordAuthenticationSourceId;
@@ -383,7 +383,7 @@ public class GetApplicationSsoConfigResponseBody extends TeaModel {
             }
 
             /**
-             * 是否强制需要TOTP二次认证，仅对password模式生效
+             * Indicates whether time-based one-time password (TOTP) authentication is required in password mode. This parameter is returned only when the value of the GrantTypes parameter includes the password mode.
              */
             public Builder passwordTotpMfaRequired(Boolean passwordTotpMfaRequired) {
                 this.passwordTotpMfaRequired = passwordTotpMfaRequired;
@@ -391,7 +391,7 @@ public class GetApplicationSsoConfigResponseBody extends TeaModel {
             }
 
             /**
-             * 支持的PKCE算法类型
+             * The algorithms that are used to calculate the code challenge for PKCE.
              */
             public Builder pkceChallengeMethods(java.util.List < String > pkceChallengeMethods) {
                 this.pkceChallengeMethods = pkceChallengeMethods;
@@ -399,7 +399,7 @@ public class GetApplicationSsoConfigResponseBody extends TeaModel {
             }
 
             /**
-             * 是否强制PKCE,authorization_code强制必须指定PKCE参数
+             * Indicates whether the SSO of the application requires Proof Key for Code Exchange (PKCE) (RFC 7636).
              */
             public Builder pkceRequired(Boolean pkceRequired) {
                 this.pkceRequired = pkceRequired;
@@ -407,7 +407,7 @@ public class GetApplicationSsoConfigResponseBody extends TeaModel {
             }
 
             /**
-             * Logout回调支持的Uri列表，OIDC协议标准参数。
+             * The list of logout redirect URIs that are supported by the application.
              */
             public Builder postLogoutRedirectUris(java.util.List < String > postLogoutRedirectUris) {
                 this.postLogoutRedirectUris = postLogoutRedirectUris;
@@ -415,7 +415,7 @@ public class GetApplicationSsoConfigResponseBody extends TeaModel {
             }
 
             /**
-             * 应用SSO支持的回调的uri列表，OIDC标准参数。
+             * The list of redirect URIs that are supported by the application.
              */
             public Builder redirectUris(java.util.List < String > redirectUris) {
                 this.redirectUris = redirectUris;
@@ -423,7 +423,7 @@ public class GetApplicationSsoConfigResponseBody extends TeaModel {
             }
 
             /**
-             * refresh token有效时间，单位为Second
+             * The validity period of the issued refresh token. Unit: seconds. Default value: 86400.
              */
             public Builder refreshTokenEffective(Long refreshTokenEffective) {
                 this.refreshTokenEffective = refreshTokenEffective;
@@ -431,7 +431,7 @@ public class GetApplicationSsoConfigResponseBody extends TeaModel {
             }
 
             /**
-             * 隐式流支持的返回类型，OIDC标准参数，如token id_token
+             * The response types that are supported by the application. This parameter is returned when the value of the GrantTypes parameter includes the implicit mode.
              */
             public Builder responseTypes(java.util.List < String > responseTypes) {
                 this.responseTypes = responseTypes;
@@ -439,7 +439,7 @@ public class GetApplicationSsoConfigResponseBody extends TeaModel {
             }
 
             /**
-             * 自定义id token返回信息
+             * The custom expression that is used to generate the subject ID returned for the ID token.
              */
             public Builder subjectIdExpression(String subjectIdExpression) {
                 this.subjectIdExpression = subjectIdExpression;
@@ -588,7 +588,7 @@ public class GetApplicationSsoConfigResponseBody extends TeaModel {
             private String samlSsoEndpoint; 
 
             /**
-             * 单点登录地址，接受认证请求
+             * The OAuth2.0 authorization endpoint. This parameter is returned only when the SSO protocol of the application is an OIDC protocol.
              */
             public Builder oauth2AuthorizationEndpoint(String oauth2AuthorizationEndpoint) {
                 this.oauth2AuthorizationEndpoint = oauth2AuthorizationEndpoint;
@@ -596,7 +596,7 @@ public class GetApplicationSsoConfigResponseBody extends TeaModel {
             }
 
             /**
-             * oauth2设备模式授权端点
+             * The OAuth2.0 device authorization endpoint. This parameter is returned only when the SSO protocol of the application is an OIDC protocol.
              */
             public Builder oauth2DeviceAuthorizationEndpoint(String oauth2DeviceAuthorizationEndpoint) {
                 this.oauth2DeviceAuthorizationEndpoint = oauth2DeviceAuthorizationEndpoint;
@@ -604,7 +604,7 @@ public class GetApplicationSsoConfigResponseBody extends TeaModel {
             }
 
             /**
-             * 吊销 access token 端点
+             * The OAuth2.0 token revocation endpoint. This parameter is returned only when the SSO protocol of the application is an OIDC protocol.
              */
             public Builder oauth2RevokeEndpoint(String oauth2RevokeEndpoint) {
                 this.oauth2RevokeEndpoint = oauth2RevokeEndpoint;
@@ -612,7 +612,7 @@ public class GetApplicationSsoConfigResponseBody extends TeaModel {
             }
 
             /**
-             * 换取access token 端点
+             * The OAuth2.0 token endpoint. This parameter is returned only when the SSO protocol of the application is an OIDC protocol.
              */
             public Builder oauth2TokenEndpoint(String oauth2TokenEndpoint) {
                 this.oauth2TokenEndpoint = oauth2TokenEndpoint;
@@ -620,7 +620,7 @@ public class GetApplicationSsoConfigResponseBody extends TeaModel {
             }
 
             /**
-             * 获取用户信息端点
+             * The OIDC UserInfo endpoint. This parameter is returned only when the SSO protocol of the application is an OIDC protocol.
              */
             public Builder oauth2UserinfoEndpoint(String oauth2UserinfoEndpoint) {
                 this.oauth2UserinfoEndpoint = oauth2UserinfoEndpoint;
@@ -628,7 +628,7 @@ public class GetApplicationSsoConfigResponseBody extends TeaModel {
             }
 
             /**
-             * OIDC issuer地址，类似于SAML Entity ID
+             * The information about the OIDC issuer. This parameter is returned only when the SSO protocol of the application is an OIDC protocol.
              */
             public Builder oidcIssuer(String oidcIssuer) {
                 this.oidcIssuer = oidcIssuer;
@@ -636,7 +636,7 @@ public class GetApplicationSsoConfigResponseBody extends TeaModel {
             }
 
             /**
-             * 获取公钥信息端点
+             * The JSON Web Key Set (JWKS) URL of the OIDC issuer. This parameter is returned only when the SSO protocol of the application is an OIDC protocol.
              */
             public Builder oidcJwksEndpoint(String oidcJwksEndpoint) {
                 this.oidcJwksEndpoint = oidcJwksEndpoint;
@@ -644,7 +644,7 @@ public class GetApplicationSsoConfigResponseBody extends TeaModel {
             }
 
             /**
-             * OIDC RP-initial Logout端点
+             * The OIDC relying party (RP)-initiated logout endpoint. This parameter is returned only when the SSO protocol of the application is an OIDC protocol.
              */
             public Builder oidcLogoutEndpoint(String oidcLogoutEndpoint) {
                 this.oidcLogoutEndpoint = oidcLogoutEndpoint;
@@ -652,7 +652,7 @@ public class GetApplicationSsoConfigResponseBody extends TeaModel {
             }
 
             /**
-             * IdP 单点登录地址 SSO URL
+             * The metadata URL of the SAML protocol. This parameter is returned only when the SSO protocol of the application is SAML 2.0.
              */
             public Builder samlMetaEndpoint(String samlMetaEndpoint) {
                 this.samlMetaEndpoint = samlMetaEndpoint;
@@ -660,7 +660,7 @@ public class GetApplicationSsoConfigResponseBody extends TeaModel {
             }
 
             /**
-             * saml SSO URL 单点登录地址
+             * The request receiving URL of the SAML protocol. This parameter is returned only when the SSO protocol of the application is SAML 2.0.
              */
             public Builder samlSsoEndpoint(String samlSsoEndpoint) {
                 this.samlSsoEndpoint = samlSsoEndpoint;
@@ -713,7 +713,7 @@ public class GetApplicationSsoConfigResponseBody extends TeaModel {
             private String attributeValueExpression; 
 
             /**
-             * SAML属性的Name
+             * The attribute name.
              */
             public Builder attributeName(String attributeName) {
                 this.attributeName = attributeName;
@@ -721,7 +721,7 @@ public class GetApplicationSsoConfigResponseBody extends TeaModel {
             }
 
             /**
-             * SAML属性取值表达式
+             * The expression that is used to generate the value of the attribute.
              */
             public Builder attributeValueExpression(String attributeValueExpression) {
                 this.attributeValueExpression = attributeValueExpression;
@@ -834,7 +834,7 @@ public class GetApplicationSsoConfigResponseBody extends TeaModel {
             private String spSsoAcsUrl; 
 
             /**
-             * SAML断言的属性配置
+             * The additional user attributes in the SAML assertion.
              */
             public Builder attributeStatements(java.util.List < AttributeStatements> attributeStatements) {
                 this.attributeStatements = attributeStatements;
@@ -842,7 +842,7 @@ public class GetApplicationSsoConfigResponseBody extends TeaModel {
             }
 
             /**
-             * 默认RelayState取值，可空
+             * The default value of the RelayState attribute. If the SSO request is initiated in EIAM, the RelayState attribute in the SAML response is set to this default value.
              */
             public Builder defaultRelayState(String defaultRelayState) {
                 this.defaultRelayState = defaultRelayState;
@@ -850,7 +850,13 @@ public class GetApplicationSsoConfigResponseBody extends TeaModel {
             }
 
             /**
-             * SAML标准协议中的NameID格式
+             * The Format attribute of the NameID element in the SAML assertion. Valid values:
+             * <p>
+             * 
+             * *   urn:oasis:names:tc:SAML:1.1:nameid-format:unspecified: No format is specified. How to resolve the NameID element depends on the application.
+             * *   urn:oasis:names:tc:SAML:1.1:nameid-format:emailAddress: The NameID element must be an email address.
+             * *   urn:oasis:names:tc:SAML:2.0:nameid-format:persistent: The NameID element must be persistent.
+             * *   urn:oasis:names:tc:SAML:2.0:nameid-format:transient: The NameID element must be transient.
              */
             public Builder nameIdFormat(String nameIdFormat) {
                 this.nameIdFormat = nameIdFormat;
@@ -858,7 +864,7 @@ public class GetApplicationSsoConfigResponseBody extends TeaModel {
             }
 
             /**
-             * 返回的claim名称
+             * The expression that is used to generate the value of NameID in the SAML assertion.
              */
             public Builder nameIdValueExpression(String nameIdValueExpression) {
                 this.nameIdValueExpression = nameIdValueExpression;
@@ -866,7 +872,7 @@ public class GetApplicationSsoConfigResponseBody extends TeaModel {
             }
 
             /**
-             * IDaaS签发SAML断言时使用的签名算法
+             * The algorithm that is used to calculate the signature for the SAML assertion.
              */
             public Builder signatureAlgorithm(String signatureAlgorithm) {
                 this.signatureAlgorithm = signatureAlgorithm;
@@ -874,7 +880,7 @@ public class GetApplicationSsoConfigResponseBody extends TeaModel {
             }
 
             /**
-             * SP的EntityId，用于唯一标识SP身份
+             * The entity ID of the application in SAML. The application assumes the role of service provider.
              */
             public Builder spEntityId(String spEntityId) {
                 this.spEntityId = spEntityId;
@@ -882,7 +888,7 @@ public class GetApplicationSsoConfigResponseBody extends TeaModel {
             }
 
             /**
-             * SP的SSO地址，用于接受IDaaS签发的SAML断言
+             * The Assertion Consumer Service (ACS) URL of the application in SAML. The application assumes the role of service provider.
              */
             public Builder spSsoAcsUrl(String spSsoAcsUrl) {
                 this.spSsoAcsUrl = spSsoAcsUrl;
@@ -983,7 +989,11 @@ public class GetApplicationSsoConfigResponseBody extends TeaModel {
             private String ssoStatus; 
 
             /**
-             * 初始化登录方式，idp_init or sp_init or idp_or_sp_init
+             * The initial SSO method. Valid values:
+             * <p>
+             * 
+             * *   only_app_init_sso: Only application-initiated SSO is allowed. This method is selected by default when the SSO protocol of the application is an OIDC protocol. If this method is selected when the SSO protocol of the application is SAML, the InitLoginUrl parameter is required.
+             * *   idaas_or_app_init_sso: IDaaS-initiated SSO and application-initiated SSO are allowed. This method is selected by default when the SSO protocol of the application is SAML. If this method is selected when the SSO protocol of the application is an OIDC protocol, the InitLoginUrl parameter is required.
              */
             public Builder initLoginType(String initLoginType) {
                 this.initLoginType = initLoginType;
@@ -991,7 +1001,7 @@ public class GetApplicationSsoConfigResponseBody extends TeaModel {
             }
 
             /**
-             * 仅SP-init情况下，SP指定的登录地址
+             * The initial webhook URL of SSO. This parameter is required when the SSO protocol of the application is an OIDC protocol and the InitLoginType parameters is set to idaas_or_app_init_sso or when the SSO protocol of the application is SAML and the InitLoginType parameter is set to only_app_init_sso.
              */
             public Builder initLoginUrl(String initLoginUrl) {
                 this.initLoginUrl = initLoginUrl;
@@ -999,7 +1009,7 @@ public class GetApplicationSsoConfigResponseBody extends TeaModel {
             }
 
             /**
-             * IDaaS OIDC SSO配置，单点登录类型为Oidc时可以配置
+             * The Open ID Connect (OIDC)-based SSO configuration attributes of the application. This parameter is returned only when the SSO protocol of the application is an OIDC protocol.
              */
             public Builder oidcSsoConfig(OidcSsoConfig oidcSsoConfig) {
                 this.oidcSsoConfig = oidcSsoConfig;
@@ -1007,7 +1017,7 @@ public class GetApplicationSsoConfigResponseBody extends TeaModel {
             }
 
             /**
-             * IDaaS metadata 端点配置信息
+             * The configuration of the metadata endpoint provided by the application.
              */
             public Builder protocolEndpointDomain(ProtocolEndpointDomain protocolEndpointDomain) {
                 this.protocolEndpointDomain = protocolEndpointDomain;
@@ -1015,7 +1025,7 @@ public class GetApplicationSsoConfigResponseBody extends TeaModel {
             }
 
             /**
-             * IDaaS SAML SSO配置，单点登录类型为saml2时可以配置
+             * The Security Assertion Markup Language (SAML)-based SSO configuration attributes of the application. This parameter is returned only when the SSO protocol of the application is SAML 2.0.
              */
             public Builder samlSsoConfig(SamlSsoConfig samlSsoConfig) {
                 this.samlSsoConfig = samlSsoConfig;
@@ -1023,7 +1033,11 @@ public class GetApplicationSsoConfigResponseBody extends TeaModel {
             }
 
             /**
-             * 应用 SSO 启用状态
+             * The SSO feature status of the application. Valid values:
+             * <p>
+             * 
+             * *   enabled: The feature is enabled.
+             * *   disabled: The feature is disabled.
              */
             public Builder ssoStatus(String ssoStatus) {
                 this.ssoStatus = ssoStatus;

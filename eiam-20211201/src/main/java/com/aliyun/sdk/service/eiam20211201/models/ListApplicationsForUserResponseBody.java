@@ -62,7 +62,7 @@ public class ListApplicationsForUserResponseBody extends TeaModel {
         private Long totalCount; 
 
         /**
-         * Applications.
+         * The applications that the EIAM account can access.
          */
         public Builder applications(java.util.List < Applications> applications) {
             this.applications = applications;
@@ -70,7 +70,7 @@ public class ListApplicationsForUserResponseBody extends TeaModel {
         }
 
         /**
-         * 请求ID。
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -78,7 +78,7 @@ public class ListApplicationsForUserResponseBody extends TeaModel {
         }
 
         /**
-         * 列表总条数目。
+         * The total number of the returned entries.
          */
         public Builder totalCount(Long totalCount) {
             this.totalCount = totalCount;
@@ -142,7 +142,7 @@ public class ListApplicationsForUserResponseBody extends TeaModel {
             private Boolean hasInheritAuthorization; 
 
             /**
-             * 应用的唯一标识。
+             * The ID of the application that the EIAM account can access.
              */
             public Builder applicationId(String applicationId) {
                 this.applicationId = applicationId;
@@ -150,7 +150,11 @@ public class ListApplicationsForUserResponseBody extends TeaModel {
             }
 
             /**
-             * 直接分配给当前用户的权限，视为直接授权。
+             * Indicates whether the EIAM account has direct permissions on the application. Valid values:
+             * <p>
+             * 
+             * *   true: The EIAM account has direct permissions on the application.
+             * *   false: The EIAM account does not have direct permissions on the application.
              */
             public Builder hasDirectAuthorization(Boolean hasDirectAuthorization) {
                 this.hasDirectAuthorization = hasDirectAuthorization;
@@ -158,7 +162,11 @@ public class ListApplicationsForUserResponseBody extends TeaModel {
             }
 
             /**
-             * 通过用户隶属的组织、组获取的权限，视为继承权限。
+             * Indicates whether the EIAM account has inherited permissions on the application. Valid values:
+             * <p>
+             * 
+             * *   true: A parent organization or an organization to which the EIAM account belongs has direct permissions on the application.
+             * *   false: A parent organization or an organization to which the EIAM account belongs does not have direct permissions on the application.
              */
             public Builder hasInheritAuthorization(Boolean hasInheritAuthorization) {
                 this.hasInheritAuthorization = hasInheritAuthorization;
