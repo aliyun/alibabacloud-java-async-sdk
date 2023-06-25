@@ -22,6 +22,18 @@ public class SubmitAudioTo3DAvatarVideoTaskRequest extends Request {
     private AvatarInfo avatarInfo;
 
     @Query
+    @NameInMap("Callback")
+    private Boolean callback;
+
+    @Query
+    @NameInMap("CallbackParams")
+    private String callbackParams;
+
+    @Query
+    @NameInMap("ExtParams")
+    private String extParams;
+
+    @Query
     @NameInMap("TenantId")
     @Validation(required = true)
     private Long tenantId;
@@ -44,6 +56,9 @@ public class SubmitAudioTo3DAvatarVideoTaskRequest extends Request {
         super(builder);
         this.app = builder.app;
         this.avatarInfo = builder.avatarInfo;
+        this.callback = builder.callback;
+        this.callbackParams = builder.callbackParams;
+        this.extParams = builder.extParams;
         this.tenantId = builder.tenantId;
         this.title = builder.title;
         this.url = builder.url;
@@ -78,6 +93,27 @@ public class SubmitAudioTo3DAvatarVideoTaskRequest extends Request {
     }
 
     /**
+     * @return callback
+     */
+    public Boolean getCallback() {
+        return this.callback;
+    }
+
+    /**
+     * @return callbackParams
+     */
+    public String getCallbackParams() {
+        return this.callbackParams;
+    }
+
+    /**
+     * @return extParams
+     */
+    public String getExtParams() {
+        return this.extParams;
+    }
+
+    /**
      * @return tenantId
      */
     public Long getTenantId() {
@@ -108,6 +144,9 @@ public class SubmitAudioTo3DAvatarVideoTaskRequest extends Request {
     public static final class Builder extends Request.Builder<SubmitAudioTo3DAvatarVideoTaskRequest, Builder> {
         private App app; 
         private AvatarInfo avatarInfo; 
+        private Boolean callback; 
+        private String callbackParams; 
+        private String extParams; 
         private Long tenantId; 
         private String title; 
         private String url; 
@@ -121,6 +160,9 @@ public class SubmitAudioTo3DAvatarVideoTaskRequest extends Request {
             super(request);
             this.app = request.app;
             this.avatarInfo = request.avatarInfo;
+            this.callback = request.callback;
+            this.callbackParams = request.callbackParams;
+            this.extParams = request.extParams;
             this.tenantId = request.tenantId;
             this.title = request.title;
             this.url = request.url;
@@ -144,6 +186,33 @@ public class SubmitAudioTo3DAvatarVideoTaskRequest extends Request {
             String avatarInfoShrink = shrink(avatarInfo, "AvatarInfo", "json");
             this.putQueryParameter("AvatarInfo", avatarInfoShrink);
             this.avatarInfo = avatarInfo;
+            return this;
+        }
+
+        /**
+         * Callback.
+         */
+        public Builder callback(Boolean callback) {
+            this.putQueryParameter("Callback", callback);
+            this.callback = callback;
+            return this;
+        }
+
+        /**
+         * CallbackParams.
+         */
+        public Builder callbackParams(String callbackParams) {
+            this.putQueryParameter("CallbackParams", callbackParams);
+            this.callbackParams = callbackParams;
+            return this;
+        }
+
+        /**
+         * ExtParams.
+         */
+        public Builder extParams(String extParams) {
+            this.putQueryParameter("ExtParams", extParams);
+            this.extParams = extParams;
             return this;
         }
 

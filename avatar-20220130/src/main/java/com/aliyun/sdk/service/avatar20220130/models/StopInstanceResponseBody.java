@@ -74,7 +74,7 @@ public class StopInstanceResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * Id of the request
+         * Code.
          */
         public Builder code(String code) {
             this.code = code;
