@@ -110,7 +110,7 @@ public class ListPipelineRunsResponseBody extends TeaModel {
         private Long totalCount; 
 
         /**
-         * 错误码
+         * errorCode.
          */
         public Builder errorCode(String errorCode) {
             this.errorCode = errorCode;
@@ -118,7 +118,7 @@ public class ListPipelineRunsResponseBody extends TeaModel {
         }
 
         /**
-         * 错误信息
+         * errorMessage.
          */
         public Builder errorMessage(String errorMessage) {
             this.errorMessage = errorMessage;
@@ -126,7 +126,7 @@ public class ListPipelineRunsResponseBody extends TeaModel {
         }
 
         /**
-         * 下一个分页token，为空时，表示没有下一页
+         * nextToken.
          */
         public Builder nextToken(String nextToken) {
             this.nextToken = nextToken;
@@ -134,7 +134,7 @@ public class ListPipelineRunsResponseBody extends TeaModel {
         }
 
         /**
-         * 流水线运行实例
+         * pipelineRuns.
          */
         public Builder pipelineRuns(java.util.List < PipelineRuns> pipelineRuns) {
             this.pipelineRuns = pipelineRuns;
@@ -142,7 +142,7 @@ public class ListPipelineRunsResponseBody extends TeaModel {
         }
 
         /**
-         * 请求id，每次请求都是唯一值，便于后续排查问题
+         * requestId.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -150,7 +150,7 @@ public class ListPipelineRunsResponseBody extends TeaModel {
         }
 
         /**
-         * true 接口调用成功，false 接口调用失败
+         * success.
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -158,7 +158,7 @@ public class ListPipelineRunsResponseBody extends TeaModel {
         }
 
         /**
-         * 总数
+         * totalCount.
          */
         public Builder totalCount(Long totalCount) {
             this.totalCount = totalCount;
@@ -270,7 +270,7 @@ public class ListPipelineRunsResponseBody extends TeaModel {
             private Long triggerMode; 
 
             /**
-             * 运行人阿里云账号id
+             * creatorAccountId.
              */
             public Builder creatorAccountId(String creatorAccountId) {
                 this.creatorAccountId = creatorAccountId;
@@ -278,7 +278,7 @@ public class ListPipelineRunsResponseBody extends TeaModel {
             }
 
             /**
-             * 结束时间
+             * endTime.
              */
             public Builder endTime(Long endTime) {
                 this.endTime = endTime;
@@ -286,7 +286,7 @@ public class ListPipelineRunsResponseBody extends TeaModel {
             }
 
             /**
-             * 流水线id
+             * pipelineId.
              */
             public Builder pipelineId(Long pipelineId) {
                 this.pipelineId = pipelineId;
@@ -294,7 +294,7 @@ public class ListPipelineRunsResponseBody extends TeaModel {
             }
 
             /**
-             * 流水线实例id
+             * pipelineRunId.
              */
             public Builder pipelineRunId(Long pipelineRunId) {
                 this.pipelineRunId = pipelineRunId;
@@ -302,7 +302,7 @@ public class ListPipelineRunsResponseBody extends TeaModel {
             }
 
             /**
-             * 开始时间
+             * startTime.
              */
             public Builder startTime(Long startTime) {
                 this.startTime = startTime;
@@ -310,7 +310,7 @@ public class ListPipelineRunsResponseBody extends TeaModel {
             }
 
             /**
-             * 运行状态
+             * status.
              */
             public Builder status(String status) {
                 this.status = status;
@@ -318,7 +318,7 @@ public class ListPipelineRunsResponseBody extends TeaModel {
             }
 
             /**
-             * 触发模式
+             * triggerMode.
              */
             public Builder triggerMode(Long triggerMode) {
                 this.triggerMode = triggerMode;

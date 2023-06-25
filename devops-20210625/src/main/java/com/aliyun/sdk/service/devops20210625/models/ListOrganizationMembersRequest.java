@@ -18,6 +18,10 @@ public class ListOrganizationMembersRequest extends Request {
     private String organizationId;
 
     @Query
+    @NameInMap("containsExternInfo")
+    private Boolean containsExternInfo;
+
+    @Query
     @NameInMap("externUid")
     private String externUid;
 
@@ -53,6 +57,7 @@ public class ListOrganizationMembersRequest extends Request {
     private ListOrganizationMembersRequest(Builder builder) {
         super(builder);
         this.organizationId = builder.organizationId;
+        this.containsExternInfo = builder.containsExternInfo;
         this.externUid = builder.externUid;
         this.joinTimeFrom = builder.joinTimeFrom;
         this.joinTimeTo = builder.joinTimeTo;
@@ -81,6 +86,13 @@ public class ListOrganizationMembersRequest extends Request {
      */
     public String getOrganizationId() {
         return this.organizationId;
+    }
+
+    /**
+     * @return containsExternInfo
+     */
+    public Boolean getContainsExternInfo() {
+        return this.containsExternInfo;
     }
 
     /**
@@ -141,6 +153,7 @@ public class ListOrganizationMembersRequest extends Request {
 
     public static final class Builder extends Request.Builder<ListOrganizationMembersRequest, Builder> {
         private String organizationId; 
+        private Boolean containsExternInfo; 
         private String externUid; 
         private Long joinTimeFrom; 
         private Long joinTimeTo; 
@@ -157,6 +170,7 @@ public class ListOrganizationMembersRequest extends Request {
         private Builder(ListOrganizationMembersRequest request) {
             super(request);
             this.organizationId = request.organizationId;
+            this.containsExternInfo = request.containsExternInfo;
             this.externUid = request.externUid;
             this.joinTimeFrom = request.joinTimeFrom;
             this.joinTimeTo = request.joinTimeTo;
@@ -173,6 +187,15 @@ public class ListOrganizationMembersRequest extends Request {
         public Builder organizationId(String organizationId) {
             this.putPathParameter("organizationId", organizationId);
             this.organizationId = organizationId;
+            return this;
+        }
+
+        /**
+         * 返回信息中是否包含第三方信息，默认不包含。
+         */
+        public Builder containsExternInfo(Boolean containsExternInfo) {
+            this.putQueryParameter("containsExternInfo", containsExternInfo);
+            this.containsExternInfo = containsExternInfo;
             return this;
         }
 

@@ -94,7 +94,7 @@ public class ListProjectMembersRequest extends Request {
         }
 
         /**
-         * 项目id
+         * projectId.
          */
         public Builder projectId(String projectId) {
             this.putPathParameter("projectId", projectId);

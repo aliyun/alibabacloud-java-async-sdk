@@ -86,7 +86,7 @@ public class LogVMDeployMachineResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * 部署单
+         * deployMachineLog.
          */
         public Builder deployMachineLog(DeployMachineLog deployMachineLog) {
             this.deployMachineLog = deployMachineLog;
@@ -94,7 +94,7 @@ public class LogVMDeployMachineResponseBody extends TeaModel {
         }
 
         /**
-         * 错误码
+         * errorCode.
          */
         public Builder errorCode(String errorCode) {
             this.errorCode = errorCode;
@@ -102,7 +102,7 @@ public class LogVMDeployMachineResponseBody extends TeaModel {
         }
 
         /**
-         * 错误信息
+         * errorMessage.
          */
         public Builder errorMessage(String errorMessage) {
             this.errorMessage = errorMessage;
@@ -110,7 +110,7 @@ public class LogVMDeployMachineResponseBody extends TeaModel {
         }
 
         /**
-         * 请求id，每次请求都是唯一值，便于后续排查问题
+         * requestId.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -118,7 +118,7 @@ public class LogVMDeployMachineResponseBody extends TeaModel {
         }
 
         /**
-         * true 接口调用成功，false 接口调用失败
+         * success.
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -206,7 +206,7 @@ public class LogVMDeployMachineResponseBody extends TeaModel {
             private String deployLogPath; 
 
             /**
-             * 部署地域
+             * aliyunRegion.
              */
             public Builder aliyunRegion(String aliyunRegion) {
                 this.aliyunRegion = aliyunRegion;
@@ -214,7 +214,7 @@ public class LogVMDeployMachineResponseBody extends TeaModel {
             }
 
             /**
-             * 部署开始时间
+             * deployBeginTime.
              */
             public Builder deployBeginTime(Long deployBeginTime) {
                 this.deployBeginTime = deployBeginTime;
@@ -222,7 +222,7 @@ public class LogVMDeployMachineResponseBody extends TeaModel {
             }
 
             /**
-             * 部署结束时间
+             * deployEndTime.
              */
             public Builder deployEndTime(Long deployEndTime) {
                 this.deployEndTime = deployEndTime;
@@ -230,7 +230,7 @@ public class LogVMDeployMachineResponseBody extends TeaModel {
             }
 
             /**
-             * 部署日志
+             * deployLog.
              */
             public Builder deployLog(String deployLog) {
                 this.deployLog = deployLog;
@@ -238,7 +238,7 @@ public class LogVMDeployMachineResponseBody extends TeaModel {
             }
 
             /**
-             * 部署日志路径
+             * deployLogPath.
              */
             public Builder deployLogPath(String deployLogPath) {
                 this.deployLogPath = deployLogPath;

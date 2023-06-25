@@ -70,7 +70,7 @@ public class ListWorkitemTimeRequest extends Request {
         } 
 
         /**
-         * 企业id
+         * organizationId.
          */
         public Builder organizationId(String organizationId) {
             this.putPathParameter("organizationId", organizationId);
@@ -79,7 +79,7 @@ public class ListWorkitemTimeRequest extends Request {
         }
 
         /**
-         * 工作项唯一标识
+         * workitemId.
          */
         public Builder workitemId(String workitemId) {
             this.putPathParameter("workitemId", workitemId);

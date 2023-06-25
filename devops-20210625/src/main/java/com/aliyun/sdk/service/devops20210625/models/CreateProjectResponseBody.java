@@ -86,7 +86,7 @@ public class CreateProjectResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * 错误码
+         * errorCode.
          */
         public Builder errorCode(String errorCode) {
             this.errorCode = errorCode;
@@ -94,7 +94,7 @@ public class CreateProjectResponseBody extends TeaModel {
         }
 
         /**
-         * 错误信息
+         * errorMsg.
          */
         public Builder errorMsg(String errorMsg) {
             this.errorMsg = errorMsg;
@@ -102,7 +102,7 @@ public class CreateProjectResponseBody extends TeaModel {
         }
 
         /**
-         * 项目信息
+         * project.
          */
         public Builder project(Project project) {
             this.project = project;
@@ -110,7 +110,7 @@ public class CreateProjectResponseBody extends TeaModel {
         }
 
         /**
-         * 请求id，每次请求都是唯一值，便于后续排查问题
+         * requestId.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -118,7 +118,7 @@ public class CreateProjectResponseBody extends TeaModel {
         }
 
         /**
-         * true或者false
+         * success.
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -338,7 +338,7 @@ public class CreateProjectResponseBody extends TeaModel {
             private String typeIdentifier; 
 
             /**
-             * 空间大类id
+             * categoryIdentifier.
              */
             public Builder categoryIdentifier(String categoryIdentifier) {
                 this.categoryIdentifier = categoryIdentifier;
@@ -346,7 +346,7 @@ public class CreateProjectResponseBody extends TeaModel {
             }
 
             /**
-             * 创建人id
+             * creator.
              */
             public Builder creator(String creator) {
                 this.creator = creator;
@@ -354,7 +354,7 @@ public class CreateProjectResponseBody extends TeaModel {
             }
 
             /**
-             * 自定义编号
+             * customCode.
              */
             public Builder customCode(String customCode) {
                 this.customCode = customCode;
@@ -362,7 +362,7 @@ public class CreateProjectResponseBody extends TeaModel {
             }
 
             /**
-             * 描述信息
+             * description.
              */
             public Builder description(String description) {
                 this.description = description;
@@ -370,7 +370,7 @@ public class CreateProjectResponseBody extends TeaModel {
             }
 
             /**
-             * 创建时间
+             * gmtCreate.
              */
             public Builder gmtCreate(Long gmtCreate) {
                 this.gmtCreate = gmtCreate;
@@ -378,7 +378,7 @@ public class CreateProjectResponseBody extends TeaModel {
             }
 
             /**
-             * 修改时间
+             * gmtModified.
              */
             public Builder gmtModified(Long gmtModified) {
                 this.gmtModified = gmtModified;
@@ -386,7 +386,7 @@ public class CreateProjectResponseBody extends TeaModel {
             }
 
             /**
-             * 图标
+             * icon.
              */
             public Builder icon(String icon) {
                 this.icon = icon;
@@ -394,7 +394,7 @@ public class CreateProjectResponseBody extends TeaModel {
             }
 
             /**
-             * 项目唯一标识符
+             * identifier.
              */
             public Builder identifier(String identifier) {
                 this.identifier = identifier;
@@ -402,7 +402,7 @@ public class CreateProjectResponseBody extends TeaModel {
             }
 
             /**
-             * 项目状态
+             * logicalStatus.
              */
             public Builder logicalStatus(String logicalStatus) {
                 this.logicalStatus = logicalStatus;
@@ -410,7 +410,7 @@ public class CreateProjectResponseBody extends TeaModel {
             }
 
             /**
-             * 修改人
+             * modifier.
              */
             public Builder modifier(String modifier) {
                 this.modifier = modifier;
@@ -418,7 +418,7 @@ public class CreateProjectResponseBody extends TeaModel {
             }
 
             /**
-             * 项目名称
+             * name.
              */
             public Builder name(String name) {
                 this.name = name;
@@ -426,7 +426,7 @@ public class CreateProjectResponseBody extends TeaModel {
             }
 
             /**
-             * 企业id
+             * organizationIdentifier.
              */
             public Builder organizationIdentifier(String organizationIdentifier) {
                 this.organizationIdentifier = organizationIdentifier;
@@ -434,7 +434,7 @@ public class CreateProjectResponseBody extends TeaModel {
             }
 
             /**
-             * 可见范围
+             * scope.
              */
             public Builder scope(String scope) {
                 this.scope = scope;
@@ -442,7 +442,7 @@ public class CreateProjectResponseBody extends TeaModel {
             }
 
             /**
-             * 状态id
+             * statusIdentifier.
              */
             public Builder statusIdentifier(String statusIdentifier) {
                 this.statusIdentifier = statusIdentifier;
@@ -450,7 +450,7 @@ public class CreateProjectResponseBody extends TeaModel {
             }
 
             /**
-             * 状态阶段
+             * statusStageIdentifier.
              */
             public Builder statusStageIdentifier(String statusStageIdentifier) {
                 this.statusStageIdentifier = statusStageIdentifier;
@@ -458,7 +458,7 @@ public class CreateProjectResponseBody extends TeaModel {
             }
 
             /**
-             * 空间小类id
+             * typeIdentifier.
              */
             public Builder typeIdentifier(String typeIdentifier) {
                 this.typeIdentifier = typeIdentifier;

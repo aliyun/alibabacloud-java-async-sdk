@@ -110,7 +110,7 @@ public class GetSprintInfoResponseBody extends TeaModel {
         }
 
         /**
-         * 迭代信息
+         * sprint.
          */
         public Builder sprint(Sprint sprint) {
             this.sprint = sprint;
@@ -302,7 +302,7 @@ public class GetSprintInfoResponseBody extends TeaModel {
             private String status; 
 
             /**
-             * 创建人id
+             * creator.
              */
             public Builder creator(String creator) {
                 this.creator = creator;
@@ -310,7 +310,7 @@ public class GetSprintInfoResponseBody extends TeaModel {
             }
 
             /**
-             * 描述信息
+             * description.
              */
             public Builder description(String description) {
                 this.description = description;
@@ -318,7 +318,7 @@ public class GetSprintInfoResponseBody extends TeaModel {
             }
 
             /**
-             * 结束时间
+             * endDate.
              */
             public Builder endDate(Long endDate) {
                 this.endDate = endDate;
@@ -326,7 +326,7 @@ public class GetSprintInfoResponseBody extends TeaModel {
             }
 
             /**
-             * 创建时间
+             * gmtCreate.
              */
             public Builder gmtCreate(Long gmtCreate) {
                 this.gmtCreate = gmtCreate;
@@ -334,7 +334,7 @@ public class GetSprintInfoResponseBody extends TeaModel {
             }
 
             /**
-             * 修改时间
+             * gmtModified.
              */
             public Builder gmtModified(Long gmtModified) {
                 this.gmtModified = gmtModified;
@@ -342,7 +342,7 @@ public class GetSprintInfoResponseBody extends TeaModel {
             }
 
             /**
-             * 迭代唯一标识符
+             * identifier.
              */
             public Builder identifier(String identifier) {
                 this.identifier = identifier;
@@ -350,7 +350,7 @@ public class GetSprintInfoResponseBody extends TeaModel {
             }
 
             /**
-             * 修改人
+             * modifier.
              */
             public Builder modifier(String modifier) {
                 this.modifier = modifier;
@@ -358,7 +358,7 @@ public class GetSprintInfoResponseBody extends TeaModel {
             }
 
             /**
-             * 迭代名称
+             * name.
              */
             public Builder name(String name) {
                 this.name = name;
@@ -374,7 +374,7 @@ public class GetSprintInfoResponseBody extends TeaModel {
             }
 
             /**
-             * 可见范围
+             * scope.
              */
             public Builder scope(String scope) {
                 this.scope = scope;
@@ -382,7 +382,7 @@ public class GetSprintInfoResponseBody extends TeaModel {
             }
 
             /**
-             * 项目id
+             * spaceIdentifier.
              */
             public Builder spaceIdentifier(String spaceIdentifier) {
                 this.spaceIdentifier = spaceIdentifier;
@@ -390,7 +390,7 @@ public class GetSprintInfoResponseBody extends TeaModel {
             }
 
             /**
-             * 开始时间
+             * startDate.
              */
             public Builder startDate(Long startDate) {
                 this.startDate = startDate;
@@ -398,7 +398,7 @@ public class GetSprintInfoResponseBody extends TeaModel {
             }
 
             /**
-             * 状态
+             * status.
              */
             public Builder status(String status) {
                 this.status = status;

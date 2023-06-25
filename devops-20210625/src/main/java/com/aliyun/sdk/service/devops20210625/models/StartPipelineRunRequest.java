@@ -84,7 +84,7 @@ public class StartPipelineRunRequest extends Request {
         } 
 
         /**
-         * 企业标识，也称企业id，字符串形式，可在云效访问链接中获取，如  https:// devops.aliyun.com/organization/【OrgId】
+         * organizationId.
          */
         public Builder organizationId(String organizationId) {
             this.putPathParameter("organizationId", organizationId);
@@ -93,7 +93,7 @@ public class StartPipelineRunRequest extends Request {
         }
 
         /**
-         * 流水线ID，可在流水线链接中获取，如  https:// flow.aliyun.com/pipelines/【PipelineId】/current
+         * pipelineId.
          */
         public Builder pipelineId(Long pipelineId) {
             this.putPathParameter("pipelineId", pipelineId);
@@ -102,7 +102,7 @@ public class StartPipelineRunRequest extends Request {
         }
 
         /**
-         * 流水线运行参数,json字符串 branchModeBranchs  分支模式运行的分支 envs  环境变量 runningBranchs 运行分支 runningTags  运行代码tag comment  运行备注
+         * params.
          */
         public Builder params(String params) {
             this.putBodyParameter("params", params);

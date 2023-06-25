@@ -70,7 +70,7 @@ public class DeleteWorkitemAllCommentRequest extends Request {
         } 
 
         /**
-         * 企业id
+         * organizationId.
          */
         public Builder organizationId(String organizationId) {
             this.putPathParameter("organizationId", organizationId);
@@ -79,7 +79,7 @@ public class DeleteWorkitemAllCommentRequest extends Request {
         }
 
         /**
-         * 工作项id
+         * identifier.
          */
         public Builder identifier(String identifier) {
             this.putQueryParameter("identifier", identifier);

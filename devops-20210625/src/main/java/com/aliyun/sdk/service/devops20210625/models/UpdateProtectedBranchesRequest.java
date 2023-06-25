@@ -216,7 +216,7 @@ public class UpdateProtectedBranchesRequest extends Request {
         }
 
         /**
-         * accessToken（选填），使用AK方式调用时无需填accessToken
+         * accessToken.
          */
         public Builder accessToken(String accessToken) {
             this.putQueryParameter("accessToken", accessToken);

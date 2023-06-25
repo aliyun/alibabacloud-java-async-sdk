@@ -102,7 +102,7 @@ public class GetProjectInfoResponseBody extends TeaModel {
         }
 
         /**
-         * 项目信息
+         * project.
          */
         public Builder project(Project project) {
             this.project = project;

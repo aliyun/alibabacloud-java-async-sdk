@@ -168,7 +168,7 @@ public class CreateWorkitemRecordRequest extends Request {
         }
 
         /**
-         * 花费工时，最大为9999
+         * actualTime.
          */
         public Builder actualTime(String actualTime) {
             this.putBodyParameter("actualTime", actualTime);
@@ -177,7 +177,7 @@ public class CreateWorkitemRecordRequest extends Request {
         }
 
         /**
-         * 描述
+         * description.
          */
         public Builder description(String description) {
             this.putBodyParameter("description", description);
@@ -186,7 +186,7 @@ public class CreateWorkitemRecordRequest extends Request {
         }
 
         /**
-         * 结束时间，开始时间不能大于结束时间
+         * gmtEnd.
          */
         public Builder gmtEnd(String gmtEnd) {
             this.putBodyParameter("gmtEnd", gmtEnd);
@@ -195,7 +195,7 @@ public class CreateWorkitemRecordRequest extends Request {
         }
 
         /**
-         * 开始时间
+         * gmtStart.
          */
         public Builder gmtStart(String gmtStart) {
             this.putBodyParameter("gmtStart", gmtStart);
@@ -204,7 +204,7 @@ public class CreateWorkitemRecordRequest extends Request {
         }
 
         /**
-         * 登记人,为用户的aliyunPk
+         * recordUserIdentifier.
          */
         public Builder recordUserIdentifier(String recordUserIdentifier) {
             this.putBodyParameter("recordUserIdentifier", recordUserIdentifier);
@@ -213,7 +213,7 @@ public class CreateWorkitemRecordRequest extends Request {
         }
 
         /**
-         * 类型，从获取工时类型接口获取
+         * type.
          */
         public Builder type(String type) {
             this.putBodyParameter("type", type);
@@ -222,7 +222,7 @@ public class CreateWorkitemRecordRequest extends Request {
         }
 
         /**
-         * 工作项id
+         * workitemIdentifier.
          */
         public Builder workitemIdentifier(String workitemIdentifier) {
             this.putBodyParameter("workitemIdentifier", workitemIdentifier);

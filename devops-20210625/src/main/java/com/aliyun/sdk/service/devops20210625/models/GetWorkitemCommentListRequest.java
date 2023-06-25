@@ -70,7 +70,7 @@ public class GetWorkitemCommentListRequest extends Request {
         } 
 
         /**
-         * 企业号
+         * organizationId.
          */
         public Builder organizationId(String organizationId) {
             this.putPathParameter("organizationId", organizationId);
@@ -79,7 +79,7 @@ public class GetWorkitemCommentListRequest extends Request {
         }
 
         /**
-         * 工作项id
+         * workitemId.
          */
         public Builder workitemId(String workitemId) {
             this.putPathParameter("workitemId", workitemId);

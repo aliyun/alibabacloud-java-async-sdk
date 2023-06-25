@@ -94,7 +94,7 @@ public class CreateOAuthTokenResponseBody extends TeaModel {
         }
 
         /**
-         * Id of the request
+         * errorMessage.
          */
         public Builder errorMessage(String errorMessage) {
             this.errorMessage = errorMessage;

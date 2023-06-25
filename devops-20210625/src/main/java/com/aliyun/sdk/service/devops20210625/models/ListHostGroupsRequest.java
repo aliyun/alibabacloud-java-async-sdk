@@ -181,7 +181,7 @@ public class ListHostGroupsRequest extends Request {
         } 
 
         /**
-         * 企业标识，也称企业id，字符串形式，可在云效访问链接中获取，如  https:// devops.aliyun.com/organization/【OrgId】
+         * organizationId.
          */
         public Builder organizationId(String organizationId) {
             this.putPathParameter("organizationId", organizationId);
@@ -190,7 +190,7 @@ public class ListHostGroupsRequest extends Request {
         }
 
         /**
-         * 主机组结束时间
+         * createEndTime.
          */
         public Builder createEndTime(Long createEndTime) {
             this.putQueryParameter("createEndTime", createEndTime);
@@ -199,7 +199,7 @@ public class ListHostGroupsRequest extends Request {
         }
 
         /**
-         * 主机组创建时间
+         * createStartTime.
          */
         public Builder createStartTime(Long createStartTime) {
             this.putQueryParameter("createStartTime", createStartTime);
@@ -208,7 +208,7 @@ public class ListHostGroupsRequest extends Request {
         }
 
         /**
-         * 创建阿里云账号id，多个逗号分割
+         * creatorAccountIds.
          */
         public Builder creatorAccountIds(String creatorAccountIds) {
             this.putQueryParameter("creatorAccountIds", creatorAccountIds);
@@ -217,7 +217,7 @@ public class ListHostGroupsRequest extends Request {
         }
 
         /**
-         * 主机组id，多个逗号分割
+         * ids.
          */
         public Builder ids(String ids) {
             this.putQueryParameter("ids", ids);
@@ -226,7 +226,7 @@ public class ListHostGroupsRequest extends Request {
         }
 
         /**
-         * 结果返回个数
+         * maxResults.
          */
         public Builder maxResults(Long maxResults) {
             this.putQueryParameter("maxResults", maxResults);
@@ -235,7 +235,7 @@ public class ListHostGroupsRequest extends Request {
         }
 
         /**
-         * 主机组名称
+         * name.
          */
         public Builder name(String name) {
             this.putQueryParameter("name", name);
@@ -244,7 +244,7 @@ public class ListHostGroupsRequest extends Request {
         }
 
         /**
-         * 分页token
+         * nextToken.
          */
         public Builder nextToken(String nextToken) {
             this.putQueryParameter("nextToken", nextToken);
@@ -253,7 +253,7 @@ public class ListHostGroupsRequest extends Request {
         }
 
         /**
-         * 排序顺序
+         * pageOrder.
          */
         public Builder pageOrder(String pageOrder) {
             this.putQueryParameter("pageOrder", pageOrder);
@@ -262,7 +262,7 @@ public class ListHostGroupsRequest extends Request {
         }
 
         /**
-         * 排序条件ID
+         * pageSort.
          */
         public Builder pageSort(String pageSort) {
             this.putQueryParameter("pageSort", pageSort);

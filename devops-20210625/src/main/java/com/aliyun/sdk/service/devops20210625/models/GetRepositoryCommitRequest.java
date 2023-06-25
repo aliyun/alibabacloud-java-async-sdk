@@ -113,7 +113,7 @@ public class GetRepositoryCommitRequest extends Request {
         } 
 
         /**
-         * The ID of a project
+         * repositoryId.
          */
         public Builder repositoryId(Long repositoryId) {
             this.putPathParameter("repositoryId", repositoryId);
@@ -122,7 +122,7 @@ public class GetRepositoryCommitRequest extends Request {
         }
 
         /**
-         * The commit hash or name of a repository branch or tag
+         * sha.
          */
         public Builder sha(String sha) {
             this.putPathParameter("sha", sha);
@@ -149,7 +149,7 @@ public class GetRepositoryCommitRequest extends Request {
         }
 
         /**
-         * 展示签名
+         * showSignature.
          */
         public Builder showSignature(Boolean showSignature) {
             this.putQueryParameter("showSignature", showSignature);

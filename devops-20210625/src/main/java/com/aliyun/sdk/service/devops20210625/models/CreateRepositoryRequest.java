@@ -345,7 +345,7 @@ public class CreateRepositoryRequest extends Request {
         }
 
         /**
-         * 代码库头像地址
+         * avatarUrl.
          */
         public Builder avatarUrl(String avatarUrl) {
             this.putBodyParameter("avatarUrl", avatarUrl);
@@ -354,7 +354,7 @@ public class CreateRepositoryRequest extends Request {
         }
 
         /**
-         * 代码库描述
+         * description.
          */
         public Builder description(String description) {
             this.putBodyParameter("description", description);
@@ -363,7 +363,7 @@ public class CreateRepositoryRequest extends Request {
         }
 
         /**
-         * gitignore模板类型
+         * gitignoreType.
          */
         public Builder gitignoreType(String gitignoreType) {
             this.putBodyParameter("gitignoreType", gitignoreType);
@@ -372,7 +372,7 @@ public class CreateRepositoryRequest extends Request {
         }
 
         /**
-         * 导入时使用的账号
+         * importAccount.
          */
         public Builder importAccount(String importAccount) {
             this.putBodyParameter("importAccount", importAccount);
@@ -381,7 +381,7 @@ public class CreateRepositoryRequest extends Request {
         }
 
         /**
-         * 使用使用demo库内容进行初始化
+         * importDemoProject.
          */
         public Builder importDemoProject(Boolean importDemoProject) {
             this.putBodyParameter("importDemoProject", importDemoProject);
@@ -390,7 +390,7 @@ public class CreateRepositoryRequest extends Request {
         }
 
         /**
-         * 导入代码库类型 (GIT: Git库, SVN: SVN库)
+         * importRepoType.
          */
         public Builder importRepoType(String importRepoType) {
             this.putBodyParameter("importRepoType", importRepoType);
@@ -399,7 +399,7 @@ public class CreateRepositoryRequest extends Request {
         }
 
         /**
-         * 导入时账号的token
+         * importToken.
          */
         public Builder importToken(String importToken) {
             this.putBodyParameter("importToken", importToken);
@@ -408,7 +408,7 @@ public class CreateRepositoryRequest extends Request {
         }
 
         /**
-         * import_token字段的传输格式，使用明文或rsa加密
+         * importTokenEncrypted.
          */
         public Builder importTokenEncrypted(String importTokenEncrypted) {
             this.putBodyParameter("importTokenEncrypted", importTokenEncrypted);
@@ -417,7 +417,7 @@ public class CreateRepositoryRequest extends Request {
         }
 
         /**
-         * 导入地址（http协议地址）
+         * importUrl.
          */
         public Builder importUrl(String importUrl) {
             this.putBodyParameter("importUrl", importUrl);
@@ -426,7 +426,7 @@ public class CreateRepositoryRequest extends Request {
         }
 
         /**
-         * 初始化标准智能化服务
+         * initStandardService.
          */
         public Builder initStandardService(Boolean initStandardService) {
             this.putBodyParameter("initStandardService", initStandardService);
@@ -435,7 +435,7 @@ public class CreateRepositoryRequest extends Request {
         }
 
         /**
-         * 是否启用加密
+         * isCryptoEnabled.
          */
         public Builder isCryptoEnabled(Boolean isCryptoEnabled) {
             this.putBodyParameter("isCryptoEnabled", isCryptoEnabled);
@@ -444,7 +444,7 @@ public class CreateRepositoryRequest extends Request {
         }
 
         /**
-         * 本地导入代码库的远程地址
+         * localImportUrl.
          */
         public Builder localImportUrl(String localImportUrl) {
             this.putBodyParameter("localImportUrl", localImportUrl);
@@ -453,7 +453,7 @@ public class CreateRepositoryRequest extends Request {
         }
 
         /**
-         * 代码库名称
+         * name.
          */
         public Builder name(String name) {
             this.putBodyParameter("name", name);
@@ -462,7 +462,7 @@ public class CreateRepositoryRequest extends Request {
         }
 
         /**
-         * 代码库父路径id
+         * namespaceId.
          */
         public Builder namespaceId(Long namespaceId) {
             this.putBodyParameter("namespaceId", namespaceId);
@@ -471,7 +471,7 @@ public class CreateRepositoryRequest extends Request {
         }
 
         /**
-         * 代码库路径
+         * path.
          */
         public Builder path(String path) {
             this.putBodyParameter("path", path);
@@ -480,7 +480,7 @@ public class CreateRepositoryRequest extends Request {
         }
 
         /**
-         * 自动创建readme类型 (EMPTY: 仅创建README.md, USER_GUIDE: 包含新手引导)
+         * readmeType.
          */
         public Builder readmeType(String readmeType) {
             this.putBodyParameter("readmeType", readmeType);

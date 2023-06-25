@@ -84,7 +84,7 @@ public class ListResourceMembersRequest extends Request {
         } 
 
         /**
-         * 企业标识，也称企业id，字符串形式，可在云效访问链接中获取，如  https:// devops.aliyun.com/organization/【OrgId】
+         * organizationId.
          */
         public Builder organizationId(String organizationId) {
             this.putPathParameter("organizationId", organizationId);
@@ -93,7 +93,7 @@ public class ListResourceMembersRequest extends Request {
         }
 
         /**
-         * 资源类型流水线 pipeline 部署组 deployGroup
+         * resourceType.
          */
         public Builder resourceType(String resourceType) {
             this.putPathParameter("resourceType", resourceType);

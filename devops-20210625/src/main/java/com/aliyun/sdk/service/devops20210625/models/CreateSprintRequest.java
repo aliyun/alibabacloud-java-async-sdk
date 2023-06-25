@@ -128,7 +128,7 @@ public class CreateSprintRequest extends Request {
         } 
 
         /**
-         * 企业id
+         * organizationId.
          */
         public Builder organizationId(String organizationId) {
             this.putPathParameter("organizationId", organizationId);
@@ -137,7 +137,7 @@ public class CreateSprintRequest extends Request {
         }
 
         /**
-         * 结束时间
+         * endDate.
          */
         public Builder endDate(String endDate) {
             this.putBodyParameter("endDate", endDate);
@@ -146,7 +146,7 @@ public class CreateSprintRequest extends Request {
         }
 
         /**
-         * 迭代名
+         * name.
          */
         public Builder name(String name) {
             this.putBodyParameter("name", name);
@@ -155,7 +155,7 @@ public class CreateSprintRequest extends Request {
         }
 
         /**
-         * 项目id
+         * spaceIdentifier.
          */
         public Builder spaceIdentifier(String spaceIdentifier) {
             this.putBodyParameter("spaceIdentifier", spaceIdentifier);
@@ -164,7 +164,7 @@ public class CreateSprintRequest extends Request {
         }
 
         /**
-         * 负责人列表
+         * staffIds.
          */
         public Builder staffIds(java.util.List < String > staffIds) {
             this.putBodyParameter("staffIds", staffIds);
@@ -173,7 +173,7 @@ public class CreateSprintRequest extends Request {
         }
 
         /**
-         * 开始时间
+         * startDate.
          */
         public Builder startDate(String startDate) {
             this.putBodyParameter("startDate", startDate);

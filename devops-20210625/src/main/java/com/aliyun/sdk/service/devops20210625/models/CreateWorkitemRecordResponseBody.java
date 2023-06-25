@@ -655,7 +655,7 @@ public class CreateWorkitemRecordResponseBody extends TeaModel {
             }
 
             /**
-             * 工时唯一标识
+             * identifier.
              */
             public Builder identifier(String identifier) {
                 this.identifier = identifier;
@@ -679,7 +679,7 @@ public class CreateWorkitemRecordResponseBody extends TeaModel {
             }
 
             /**
-             * 工作项id
+             * workitemIdentifier.
              */
             public Builder workitemIdentifier(String workitemIdentifier) {
                 this.workitemIdentifier = workitemIdentifier;

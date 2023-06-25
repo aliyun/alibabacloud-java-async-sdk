@@ -272,7 +272,7 @@ public class CreateWorkitemRequest extends Request {
         } 
 
         /**
-         * 企业id
+         * organizationId.
          */
         public Builder organizationId(String organizationId) {
             this.putPathParameter("organizationId", organizationId);
@@ -281,7 +281,7 @@ public class CreateWorkitemRequest extends Request {
         }
 
         /**
-         * 工作项负责人的account id，或者企业中的用户名
+         * assignedTo.
          */
         public Builder assignedTo(String assignedTo) {
             this.putBodyParameter("assignedTo", assignedTo);
@@ -290,7 +290,7 @@ public class CreateWorkitemRequest extends Request {
         }
 
         /**
-         * 工作项的类型id，比如：Bug、Task对应id
+         * category.
          */
         public Builder category(String category) {
             this.putBodyParameter("category", category);
@@ -299,7 +299,7 @@ public class CreateWorkitemRequest extends Request {
         }
 
         /**
-         * 工作项内容
+         * description.
          */
         public Builder description(String description) {
             this.putBodyParameter("description", description);
@@ -308,7 +308,7 @@ public class CreateWorkitemRequest extends Request {
         }
 
         /**
-         * 内容格式
+         * descriptionFormat.
          */
         public Builder descriptionFormat(String descriptionFormat) {
             this.putBodyParameter("descriptionFormat", descriptionFormat);
@@ -317,7 +317,7 @@ public class CreateWorkitemRequest extends Request {
         }
 
         /**
-         * 自定义字段
+         * fieldValueList.
          */
         public Builder fieldValueList(java.util.List < FieldValueList> fieldValueList) {
             this.putBodyParameter("fieldValueList", fieldValueList);
@@ -326,7 +326,7 @@ public class CreateWorkitemRequest extends Request {
         }
 
         /**
-         * 所属父工作项的唯一标识
+         * parent.
          */
         public Builder parent(String parent) {
             this.putBodyParameter("parent", parent);
@@ -335,7 +335,7 @@ public class CreateWorkitemRequest extends Request {
         }
 
         /**
-         * 参与人account id列表，或者企业名称列表
+         * participant.
          */
         public Builder participant(java.util.List < String > participant) {
             this.putBodyParameter("participant", participant);
@@ -344,7 +344,7 @@ public class CreateWorkitemRequest extends Request {
         }
 
         /**
-         * 项目id
+         * space.
          */
         public Builder space(String space) {
             this.putBodyParameter("space", space);
@@ -353,7 +353,7 @@ public class CreateWorkitemRequest extends Request {
         }
 
         /**
-         * 项目id
+         * spaceIdentifier.
          */
         public Builder spaceIdentifier(String spaceIdentifier) {
             this.putBodyParameter("spaceIdentifier", spaceIdentifier);
@@ -362,7 +362,7 @@ public class CreateWorkitemRequest extends Request {
         }
 
         /**
-         * 资源类型
+         * spaceType.
          */
         public Builder spaceType(String spaceType) {
             this.putBodyParameter("spaceType", spaceType);
@@ -371,7 +371,7 @@ public class CreateWorkitemRequest extends Request {
         }
 
         /**
-         * 要关联迭代
+         * sprint.
          */
         public Builder sprint(java.util.List < String > sprint) {
             this.putBodyParameter("sprint", sprint);
@@ -380,7 +380,7 @@ public class CreateWorkitemRequest extends Request {
         }
 
         /**
-         * 标题
+         * subject.
          */
         public Builder subject(String subject) {
             this.putBodyParameter("subject", subject);
@@ -389,7 +389,7 @@ public class CreateWorkitemRequest extends Request {
         }
 
         /**
-         * 抄送人account id列表
+         * tracker.
          */
         public Builder tracker(java.util.List < String > tracker) {
             this.putBodyParameter("tracker", tracker);
@@ -398,7 +398,7 @@ public class CreateWorkitemRequest extends Request {
         }
 
         /**
-         * 验证者account id列表，或者企业名称列表
+         * verifier.
          */
         public Builder verifier(java.util.List < String > verifier) {
             this.putBodyParameter("verifier", verifier);
@@ -407,7 +407,7 @@ public class CreateWorkitemRequest extends Request {
         }
 
         /**
-         * 工作项小类型id
+         * workitemType.
          */
         public Builder workitemType(String workitemType) {
             this.putBodyParameter("workitemType", workitemType);
@@ -473,7 +473,7 @@ public class CreateWorkitemRequest extends Request {
             private String workitemIdentifier; 
 
             /**
-             * 字段唯一标识
+             * fieldIdentifier.
              */
             public Builder fieldIdentifier(String fieldIdentifier) {
                 this.fieldIdentifier = fieldIdentifier;
@@ -481,7 +481,7 @@ public class CreateWorkitemRequest extends Request {
             }
 
             /**
-             * 字段值，写入时使用
+             * value.
              */
             public Builder value(String value) {
                 this.value = value;
@@ -489,7 +489,7 @@ public class CreateWorkitemRequest extends Request {
             }
 
             /**
-             * 工作项的唯一标识
+             * workitemIdentifier.
              */
             public Builder workitemIdentifier(String workitemIdentifier) {
                 this.workitemIdentifier = workitemIdentifier;

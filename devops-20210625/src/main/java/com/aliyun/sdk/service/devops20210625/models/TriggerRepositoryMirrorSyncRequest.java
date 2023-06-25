@@ -112,7 +112,7 @@ public class TriggerRepositoryMirrorSyncRequest extends Request {
         } 
 
         /**
-         * 代码库ID
+         * repositoryId.
          */
         public Builder repositoryId(Long repositoryId) {
             this.putPathParameter("repositoryId", repositoryId);
@@ -121,7 +121,7 @@ public class TriggerRepositoryMirrorSyncRequest extends Request {
         }
 
         /**
-         * 个人访问令牌。 使用阿里云AK+SK或使用STS临时授权方式不需要传该字段
+         * accessToken.
          */
         public Builder accessToken(String accessToken) {
             this.putQueryParameter("accessToken", accessToken);
@@ -130,7 +130,7 @@ public class TriggerRepositoryMirrorSyncRequest extends Request {
         }
 
         /**
-         * 远程同步库克隆账号
+         * account.
          */
         public Builder account(String account) {
             this.putQueryParameter("account", account);
@@ -139,7 +139,7 @@ public class TriggerRepositoryMirrorSyncRequest extends Request {
         }
 
         /**
-         * 企业标识，也称企业id，字符串形式，可在云效访问链接中获取，如 https://devops.aliyun.com/organization/
+         * organizationId.
          */
         public Builder organizationId(String organizationId) {
             this.putQueryParameter("organizationId", organizationId);
@@ -148,7 +148,7 @@ public class TriggerRepositoryMirrorSyncRequest extends Request {
         }
 
         /**
-         * 远程同步库克隆令牌
+         * token.
          */
         public Builder token(String token) {
             this.putQueryParameter("token", token);

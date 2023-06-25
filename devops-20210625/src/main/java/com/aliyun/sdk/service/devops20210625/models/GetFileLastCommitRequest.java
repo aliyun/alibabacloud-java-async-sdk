@@ -128,7 +128,7 @@ public class GetFileLastCommitRequest extends Request {
         } 
 
         /**
-         * 代码库ID
+         * repositoryId.
          */
         public Builder repositoryId(Long repositoryId) {
             this.putPathParameter("repositoryId", repositoryId);
@@ -137,7 +137,7 @@ public class GetFileLastCommitRequest extends Request {
         }
 
         /**
-         * 个人访问令牌
+         * accessToken.
          */
         public Builder accessToken(String accessToken) {
             this.putQueryParameter("accessToken", accessToken);
@@ -146,7 +146,7 @@ public class GetFileLastCommitRequest extends Request {
         }
 
         /**
-         * 文件路径
+         * filePath.
          */
         public Builder filePath(String filePath) {
             this.putQueryParameter("filePath", filePath);
@@ -155,7 +155,7 @@ public class GetFileLastCommitRequest extends Request {
         }
 
         /**
-         * 云效企业ID
+         * organizationId.
          */
         public Builder organizationId(String organizationId) {
             this.putQueryParameter("organizationId", organizationId);
@@ -164,7 +164,7 @@ public class GetFileLastCommitRequest extends Request {
         }
 
         /**
-         * 分支名称、标签名称或Commit ID
+         * sha.
          */
         public Builder sha(String sha) {
             this.putQueryParameter("sha", sha);

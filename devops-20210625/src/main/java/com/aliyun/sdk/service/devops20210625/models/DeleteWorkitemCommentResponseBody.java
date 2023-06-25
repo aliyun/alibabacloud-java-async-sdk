@@ -86,7 +86,7 @@ public class DeleteWorkitemCommentResponseBody extends TeaModel {
         private String success; 
 
         /**
-         * 是否删除成功
+         * deleteFlag.
          */
         public Builder deleteFlag(Boolean deleteFlag) {
             this.deleteFlag = deleteFlag;

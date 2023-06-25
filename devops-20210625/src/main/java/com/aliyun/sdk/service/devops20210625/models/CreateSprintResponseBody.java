@@ -86,7 +86,7 @@ public class CreateSprintResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * 错误码
+         * errorCode.
          */
         public Builder errorCode(String errorCode) {
             this.errorCode = errorCode;
@@ -94,7 +94,7 @@ public class CreateSprintResponseBody extends TeaModel {
         }
 
         /**
-         * 错误信息
+         * errorMsg.
          */
         public Builder errorMsg(String errorMsg) {
             this.errorMsg = errorMsg;
@@ -102,7 +102,7 @@ public class CreateSprintResponseBody extends TeaModel {
         }
 
         /**
-         * 请求id，每次请求都是唯一值，便于后续排查问题
+         * requestId.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -110,7 +110,7 @@ public class CreateSprintResponseBody extends TeaModel {
         }
 
         /**
-         * 迭代信息
+         * sprint.
          */
         public Builder sprint(Sprint sprint) {
             this.sprint = sprint;
@@ -118,7 +118,7 @@ public class CreateSprintResponseBody extends TeaModel {
         }
 
         /**
-         * true或者false
+         * success.
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -290,7 +290,7 @@ public class CreateSprintResponseBody extends TeaModel {
             private String status; 
 
             /**
-             * 创建人id
+             * creator.
              */
             public Builder creator(String creator) {
                 this.creator = creator;
@@ -298,7 +298,7 @@ public class CreateSprintResponseBody extends TeaModel {
             }
 
             /**
-             * 描述信息
+             * description.
              */
             public Builder description(String description) {
                 this.description = description;
@@ -306,7 +306,7 @@ public class CreateSprintResponseBody extends TeaModel {
             }
 
             /**
-             * 结束时间
+             * endDate.
              */
             public Builder endDate(Long endDate) {
                 this.endDate = endDate;
@@ -314,7 +314,7 @@ public class CreateSprintResponseBody extends TeaModel {
             }
 
             /**
-             * 创建时间
+             * gmtCreate.
              */
             public Builder gmtCreate(Long gmtCreate) {
                 this.gmtCreate = gmtCreate;
@@ -322,7 +322,7 @@ public class CreateSprintResponseBody extends TeaModel {
             }
 
             /**
-             * 修改时间
+             * gmtModified.
              */
             public Builder gmtModified(Long gmtModified) {
                 this.gmtModified = gmtModified;
@@ -330,7 +330,7 @@ public class CreateSprintResponseBody extends TeaModel {
             }
 
             /**
-             * 迭代唯一标识符
+             * identifier.
              */
             public Builder identifier(String identifier) {
                 this.identifier = identifier;
@@ -338,7 +338,7 @@ public class CreateSprintResponseBody extends TeaModel {
             }
 
             /**
-             * 修改人
+             * modifier.
              */
             public Builder modifier(String modifier) {
                 this.modifier = modifier;
@@ -346,7 +346,7 @@ public class CreateSprintResponseBody extends TeaModel {
             }
 
             /**
-             * 迭代名称
+             * name.
              */
             public Builder name(String name) {
                 this.name = name;
@@ -354,7 +354,7 @@ public class CreateSprintResponseBody extends TeaModel {
             }
 
             /**
-             * 可见范围
+             * scope.
              */
             public Builder scope(String scope) {
                 this.scope = scope;
@@ -362,7 +362,7 @@ public class CreateSprintResponseBody extends TeaModel {
             }
 
             /**
-             * 项目id
+             * spaceIdentifier.
              */
             public Builder spaceIdentifier(String spaceIdentifier) {
                 this.spaceIdentifier = spaceIdentifier;
@@ -370,7 +370,7 @@ public class CreateSprintResponseBody extends TeaModel {
             }
 
             /**
-             * 开始时间
+             * startDate.
              */
             public Builder startDate(Long startDate) {
                 this.startDate = startDate;
@@ -378,7 +378,7 @@ public class CreateSprintResponseBody extends TeaModel {
             }
 
             /**
-             * 状态
+             * status.
              */
             public Builder status(String status) {
                 this.status = status;

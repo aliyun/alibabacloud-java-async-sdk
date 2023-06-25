@@ -84,7 +84,7 @@ public class ListRepositoryMemberWithInheritedRequest extends Request {
         } 
 
         /**
-         * 仓库Id
+         * repositoryId.
          */
         public Builder repositoryId(Long repositoryId) {
             this.putPathParameter("repositoryId", repositoryId);
@@ -93,7 +93,7 @@ public class ListRepositoryMemberWithInheritedRequest extends Request {
         }
 
         /**
-         * accessToken
+         * accessToken.
          */
         public Builder accessToken(String accessToken) {
             this.putQueryParameter("accessToken", accessToken);
@@ -102,7 +102,7 @@ public class ListRepositoryMemberWithInheritedRequest extends Request {
         }
 
         /**
-         * 企业Id
+         * organizationId.
          */
         public Builder organizationId(String organizationId) {
             this.putQueryParameter("organizationId", organizationId);

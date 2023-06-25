@@ -58,6 +58,10 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<CreateTagResponse> createTag(CreateTagRequest request);
 
+    CompletableFuture<CreateTestCaseResponse> createTestCase(CreateTestCaseRequest request);
+
+    CompletableFuture<CreateUserKeyResponse> createUserKey(CreateUserKeyRequest request);
+
     CompletableFuture<CreateVariableGroupResponse> createVariableGroup(CreateVariableGroupRequest request);
 
     CompletableFuture<CreateWorkitemResponse> createWorkitem(CreateWorkitemRequest request);
@@ -103,6 +107,8 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<DeleteResourceMemberResponse> deleteResourceMember(DeleteResourceMemberRequest request);
 
     CompletableFuture<DeleteTagResponse> deleteTag(DeleteTagRequest request);
+
+    CompletableFuture<DeleteUserKeyResponse> deleteUserKey(DeleteUserKeyRequest request);
 
     CompletableFuture<DeleteVariableGroupResponse> deleteVariableGroup(DeleteVariableGroupRequest request);
 
@@ -161,6 +167,10 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<GetSearchCodePreviewResponse> getSearchCodePreview(GetSearchCodePreviewRequest request);
 
     CompletableFuture<GetSprintInfoResponse> getSprintInfo(GetSprintInfoRequest request);
+
+    CompletableFuture<GetTestResultListResponse> getTestResultList(GetTestResultListRequest request);
+
+    CompletableFuture<GetTestcaseListResponse> getTestcaseList(GetTestcaseListRequest request);
 
     CompletableFuture<GetUserInfoResponse> getUserInfo(GetUserInfoRequest request);
 
@@ -250,6 +260,10 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<ListSprintsResponse> listSprints(ListSprintsRequest request);
 
+    CompletableFuture<ListTestCaseFieldsResponse> listTestCaseFields(ListTestCaseFieldsRequest request);
+
+    CompletableFuture<ListUserKeysResponse> listUserKeys(ListUserKeysRequest request);
+
     CompletableFuture<ListVariableGroupsResponse> listVariableGroups(ListVariableGroupsRequest request);
 
     CompletableFuture<ListWorkItemAllFieldsResponse> listWorkItemAllFields(ListWorkItemAllFieldsRequest request);
@@ -321,6 +335,10 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<UpdateRepositoryMemberResponse> updateRepositoryMember(UpdateRepositoryMemberRequest request);
 
     CompletableFuture<UpdateResourceMemberResponse> updateResourceMember(UpdateResourceMemberRequest request);
+
+    CompletableFuture<UpdateTestCaseResponse> updateTestCase(UpdateTestCaseRequest request);
+
+    CompletableFuture<UpdateTestResultResponse> updateTestResult(UpdateTestResultRequest request);
 
     CompletableFuture<UpdateVariableGroupResponse> updateVariableGroup(UpdateVariableGroupRequest request);
 

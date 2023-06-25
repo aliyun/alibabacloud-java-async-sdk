@@ -86,7 +86,7 @@ public class ListProjectTemplatesResponseBody extends TeaModel {
         private java.util.List < Templates> templates; 
 
         /**
-         * 错误码
+         * errorCode.
          */
         public Builder errorCode(String errorCode) {
             this.errorCode = errorCode;
@@ -94,7 +94,7 @@ public class ListProjectTemplatesResponseBody extends TeaModel {
         }
 
         /**
-         * 错误信息
+         * errorMsg.
          */
         public Builder errorMsg(String errorMsg) {
             this.errorMsg = errorMsg;
@@ -102,7 +102,7 @@ public class ListProjectTemplatesResponseBody extends TeaModel {
         }
 
         /**
-         * 请求id，每次请求都是唯一值，便于后续排查问题
+         * requestId.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -110,7 +110,7 @@ public class ListProjectTemplatesResponseBody extends TeaModel {
         }
 
         /**
-         * true或者false
+         * success.
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -118,7 +118,7 @@ public class ListProjectTemplatesResponseBody extends TeaModel {
         }
 
         /**
-         * 项目模板信息
+         * templates.
          */
         public Builder templates(java.util.List < Templates> templates) {
             this.templates = templates;
@@ -334,7 +334,7 @@ public class ListProjectTemplatesResponseBody extends TeaModel {
             }
 
             /**
-             * 创建人id
+             * creator.
              */
             public Builder creator(String creator) {
                 this.creator = creator;
@@ -342,7 +342,7 @@ public class ListProjectTemplatesResponseBody extends TeaModel {
             }
 
             /**
-             * 描述信息
+             * description.
              */
             public Builder description(String description) {
                 this.description = description;
@@ -350,7 +350,7 @@ public class ListProjectTemplatesResponseBody extends TeaModel {
             }
 
             /**
-             * 创建时间
+             * gmtCreate.
              */
             public Builder gmtCreate(Long gmtCreate) {
                 this.gmtCreate = gmtCreate;
@@ -358,7 +358,7 @@ public class ListProjectTemplatesResponseBody extends TeaModel {
             }
 
             /**
-             * 修改时间
+             * gmtModified.
              */
             public Builder gmtModified(Long gmtModified) {
                 this.gmtModified = gmtModified;
@@ -366,7 +366,7 @@ public class ListProjectTemplatesResponseBody extends TeaModel {
             }
 
             /**
-             * 模板封面
+             * icon.
              */
             public Builder icon(String icon) {
                 this.icon = icon;
@@ -374,7 +374,7 @@ public class ListProjectTemplatesResponseBody extends TeaModel {
             }
 
             /**
-             * 模板唯一标识符
+             * identifier.
              */
             public Builder identifier(String identifier) {
                 this.identifier = identifier;
@@ -382,7 +382,7 @@ public class ListProjectTemplatesResponseBody extends TeaModel {
             }
 
             /**
-             * 修改人
+             * modifier.
              */
             public Builder modifier(String modifier) {
                 this.modifier = modifier;
@@ -390,7 +390,7 @@ public class ListProjectTemplatesResponseBody extends TeaModel {
             }
 
             /**
-             * 模板名称
+             * name.
              */
             public Builder name(String name) {
                 this.name = name;
@@ -398,7 +398,7 @@ public class ListProjectTemplatesResponseBody extends TeaModel {
             }
 
             /**
-             * 模板英文名称
+             * nameEn.
              */
             public Builder nameEn(String nameEn) {
                 this.nameEn = nameEn;
@@ -406,7 +406,7 @@ public class ListProjectTemplatesResponseBody extends TeaModel {
             }
 
             /**
-             * 所属资源类型
+             * resourceCategory.
              */
             public Builder resourceCategory(String resourceCategory) {
                 this.resourceCategory = resourceCategory;
@@ -438,7 +438,7 @@ public class ListProjectTemplatesResponseBody extends TeaModel {
             }
 
             /**
-             * 模板类型 0-system/4-custom/16-instance
+             * type.
              */
             public Builder type(Long type) {
                 this.type = type;

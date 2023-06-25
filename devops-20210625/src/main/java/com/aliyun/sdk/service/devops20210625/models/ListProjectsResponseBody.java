@@ -122,7 +122,7 @@ public class ListProjectsResponseBody extends TeaModel {
         private Long totalCount; 
 
         /**
-         * 错误码
+         * errorCode.
          */
         public Builder errorCode(String errorCode) {
             this.errorCode = errorCode;
@@ -130,7 +130,7 @@ public class ListProjectsResponseBody extends TeaModel {
         }
 
         /**
-         * 错误信息
+         * errorMsg.
          */
         public Builder errorMsg(String errorMsg) {
             this.errorMsg = errorMsg;
@@ -138,7 +138,7 @@ public class ListProjectsResponseBody extends TeaModel {
         }
 
         /**
-         * 每页数量
+         * maxResults.
          */
         public Builder maxResults(Long maxResults) {
             this.maxResults = maxResults;
@@ -146,7 +146,7 @@ public class ListProjectsResponseBody extends TeaModel {
         }
 
         /**
-         * 分页Token，没有下一页则为空
+         * nextToken.
          */
         public Builder nextToken(String nextToken) {
             this.nextToken = nextToken;
@@ -154,7 +154,7 @@ public class ListProjectsResponseBody extends TeaModel {
         }
 
         /**
-         * 项目信息
+         * projects.
          */
         public Builder projects(java.util.List < Projects> projects) {
             this.projects = projects;
@@ -162,7 +162,7 @@ public class ListProjectsResponseBody extends TeaModel {
         }
 
         /**
-         * 请求id，每次请求都是唯一值，便于后续排查问题
+         * requestId.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -170,7 +170,7 @@ public class ListProjectsResponseBody extends TeaModel {
         }
 
         /**
-         * true或者false
+         * success.
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -178,7 +178,7 @@ public class ListProjectsResponseBody extends TeaModel {
         }
 
         /**
-         * 总数
+         * totalCount.
          */
         public Builder totalCount(Long totalCount) {
             this.totalCount = totalCount;
@@ -362,7 +362,7 @@ public class ListProjectsResponseBody extends TeaModel {
             private String typeIdentifier; 
 
             /**
-             * 类型
+             * categoryIdentifier.
              */
             public Builder categoryIdentifier(String categoryIdentifier) {
                 this.categoryIdentifier = categoryIdentifier;
@@ -370,7 +370,7 @@ public class ListProjectsResponseBody extends TeaModel {
             }
 
             /**
-             * 创建人
+             * creator.
              */
             public Builder creator(String creator) {
                 this.creator = creator;
@@ -378,7 +378,7 @@ public class ListProjectsResponseBody extends TeaModel {
             }
 
             /**
-             * 自定义编号
+             * customCode.
              */
             public Builder customCode(String customCode) {
                 this.customCode = customCode;
@@ -386,7 +386,7 @@ public class ListProjectsResponseBody extends TeaModel {
             }
 
             /**
-             * 删除时间
+             * deleteTime.
              */
             public Builder deleteTime(Long deleteTime) {
                 this.deleteTime = deleteTime;
@@ -394,7 +394,7 @@ public class ListProjectsResponseBody extends TeaModel {
             }
 
             /**
-             * 描述信息
+             * description.
              */
             public Builder description(String description) {
                 this.description = description;
@@ -402,7 +402,7 @@ public class ListProjectsResponseBody extends TeaModel {
             }
 
             /**
-             * 创建时间
+             * gmtCreate.
              */
             public Builder gmtCreate(Long gmtCreate) {
                 this.gmtCreate = gmtCreate;
@@ -410,7 +410,7 @@ public class ListProjectsResponseBody extends TeaModel {
             }
 
             /**
-             * 项目封面
+             * icon.
              */
             public Builder icon(String icon) {
                 this.icon = icon;
@@ -418,7 +418,7 @@ public class ListProjectsResponseBody extends TeaModel {
             }
 
             /**
-             * 项目唯一标识符
+             * identifier.
              */
             public Builder identifier(String identifier) {
                 this.identifier = identifier;
@@ -426,7 +426,7 @@ public class ListProjectsResponseBody extends TeaModel {
             }
 
             /**
-             * 逻辑状态
+             * logicalStatus.
              */
             public Builder logicalStatus(String logicalStatus) {
                 this.logicalStatus = logicalStatus;
@@ -434,7 +434,7 @@ public class ListProjectsResponseBody extends TeaModel {
             }
 
             /**
-             * 项目名称
+             * name.
              */
             public Builder name(String name) {
                 this.name = name;
@@ -442,7 +442,7 @@ public class ListProjectsResponseBody extends TeaModel {
             }
 
             /**
-             * 公开还是私有
+             * scope.
              */
             public Builder scope(String scope) {
                 this.scope = scope;
@@ -450,7 +450,7 @@ public class ListProjectsResponseBody extends TeaModel {
             }
 
             /**
-             * 状态阶段
+             * statusStageIdentifier.
              */
             public Builder statusStageIdentifier(String statusStageIdentifier) {
                 this.statusStageIdentifier = statusStageIdentifier;
@@ -458,7 +458,7 @@ public class ListProjectsResponseBody extends TeaModel {
             }
 
             /**
-             * 类型id
+             * typeIdentifier.
              */
             public Builder typeIdentifier(String typeIdentifier) {
                 this.typeIdentifier = typeIdentifier;

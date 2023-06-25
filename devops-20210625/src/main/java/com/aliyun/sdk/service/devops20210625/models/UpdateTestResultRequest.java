@@ -1,0 +1,167 @@
+// This file is auto-generated, don't edit it. Thanks.
+package com.aliyun.sdk.service.devops20210625.models;
+
+import com.aliyun.core.annotation.*;
+import darabonba.core.RequestModel;
+import darabonba.core.TeaModel;
+import com.aliyun.sdk.gateway.pop.models.*;
+
+/**
+ * {@link UpdateTestResultRequest} extends {@link RequestModel}
+ *
+ * <p>UpdateTestResultRequest</p>
+ */
+public class UpdateTestResultRequest extends Request {
+    @Path
+    @NameInMap("organizationId")
+    @Validation(required = true)
+    private String organizationId;
+
+    @Path
+    @NameInMap("testPlanIdentifier")
+    @Validation(required = true)
+    private String testPlanIdentifier;
+
+    @Path
+    @NameInMap("testcaseIdentifier")
+    @Validation(required = true)
+    private String testcaseIdentifier;
+
+    @Body
+    @NameInMap("executor")
+    private String executor;
+
+    @Body
+    @NameInMap("status")
+    private String status;
+
+    private UpdateTestResultRequest(Builder builder) {
+        super(builder);
+        this.organizationId = builder.organizationId;
+        this.testPlanIdentifier = builder.testPlanIdentifier;
+        this.testcaseIdentifier = builder.testcaseIdentifier;
+        this.executor = builder.executor;
+        this.status = builder.status;
+    }
+
+    public static Builder builder() {
+        return new Builder();
+    }
+
+    public static UpdateTestResultRequest create() {
+        return builder().build();
+    }
+
+    @Override
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
+    /**
+     * @return organizationId
+     */
+    public String getOrganizationId() {
+        return this.organizationId;
+    }
+
+    /**
+     * @return testPlanIdentifier
+     */
+    public String getTestPlanIdentifier() {
+        return this.testPlanIdentifier;
+    }
+
+    /**
+     * @return testcaseIdentifier
+     */
+    public String getTestcaseIdentifier() {
+        return this.testcaseIdentifier;
+    }
+
+    /**
+     * @return executor
+     */
+    public String getExecutor() {
+        return this.executor;
+    }
+
+    /**
+     * @return status
+     */
+    public String getStatus() {
+        return this.status;
+    }
+
+    public static final class Builder extends Request.Builder<UpdateTestResultRequest, Builder> {
+        private String organizationId; 
+        private String testPlanIdentifier; 
+        private String testcaseIdentifier; 
+        private String executor; 
+        private String status; 
+
+        private Builder() {
+            super();
+        } 
+
+        private Builder(UpdateTestResultRequest request) {
+            super(request);
+            this.organizationId = request.organizationId;
+            this.testPlanIdentifier = request.testPlanIdentifier;
+            this.testcaseIdentifier = request.testcaseIdentifier;
+            this.executor = request.executor;
+            this.status = request.status;
+        } 
+
+        /**
+         * organizationId.
+         */
+        public Builder organizationId(String organizationId) {
+            this.putPathParameter("organizationId", organizationId);
+            this.organizationId = organizationId;
+            return this;
+        }
+
+        /**
+         * testPlanIdentifier.
+         */
+        public Builder testPlanIdentifier(String testPlanIdentifier) {
+            this.putPathParameter("testPlanIdentifier", testPlanIdentifier);
+            this.testPlanIdentifier = testPlanIdentifier;
+            return this;
+        }
+
+        /**
+         * testcaseIdentifier.
+         */
+        public Builder testcaseIdentifier(String testcaseIdentifier) {
+            this.putPathParameter("testcaseIdentifier", testcaseIdentifier);
+            this.testcaseIdentifier = testcaseIdentifier;
+            return this;
+        }
+
+        /**
+         * executor.
+         */
+        public Builder executor(String executor) {
+            this.putBodyParameter("executor", executor);
+            this.executor = executor;
+            return this;
+        }
+
+        /**
+         * status.
+         */
+        public Builder status(String status) {
+            this.putBodyParameter("status", status);
+            this.status = status;
+            return this;
+        }
+
+        @Override
+        public UpdateTestResultRequest build() {
+            return new UpdateTestResultRequest(this);
+        } 
+
+    } 
+
+}

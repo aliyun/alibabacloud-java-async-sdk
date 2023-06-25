@@ -86,7 +86,7 @@ public class ListWorkItemAllFieldsResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * 错误码
+         * errorCode.
          */
         public Builder errorCode(String errorCode) {
             this.errorCode = errorCode;
@@ -94,7 +94,7 @@ public class ListWorkItemAllFieldsResponseBody extends TeaModel {
         }
 
         /**
-         * 错误信息
+         * errorMsg.
          */
         public Builder errorMsg(String errorMsg) {
             this.errorMsg = errorMsg;
@@ -102,7 +102,7 @@ public class ListWorkItemAllFieldsResponseBody extends TeaModel {
         }
 
         /**
-         * 字段信息
+         * fields.
          */
         public Builder fields(java.util.List < Fields> fields) {
             this.fields = fields;
@@ -110,7 +110,7 @@ public class ListWorkItemAllFieldsResponseBody extends TeaModel {
         }
 
         /**
-         * 请求id，每次请求都是唯一值，便于后续排查问题
+         * requestId.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -118,7 +118,7 @@ public class ListWorkItemAllFieldsResponseBody extends TeaModel {
         }
 
         /**
-         * true或者false
+         * success.
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -230,7 +230,7 @@ public class ListWorkItemAllFieldsResponseBody extends TeaModel {
             private String valueEn; 
 
             /**
-             * 根据语言环境获取当前展示的值
+             * displayValue.
              */
             public Builder displayValue(String displayValue) {
                 this.displayValue = displayValue;
@@ -238,7 +238,7 @@ public class ListWorkItemAllFieldsResponseBody extends TeaModel {
             }
 
             /**
-             * 字段唯一标识
+             * fieldIdentifier.
              */
             public Builder fieldIdentifier(String fieldIdentifier) {
                 this.fieldIdentifier = fieldIdentifier;
@@ -246,7 +246,7 @@ public class ListWorkItemAllFieldsResponseBody extends TeaModel {
             }
 
             /**
-             * 待选值的唯一标识
+             * identifier.
              */
             public Builder identifier(String identifier) {
                 this.identifier = identifier;
@@ -254,7 +254,7 @@ public class ListWorkItemAllFieldsResponseBody extends TeaModel {
             }
 
             /**
-             * 展示级别，数字范围1~9，数字越大，颜色越浅。
+             * level.
              */
             public Builder level(Long level) {
                 this.level = level;
@@ -262,7 +262,7 @@ public class ListWorkItemAllFieldsResponseBody extends TeaModel {
             }
 
             /**
-             * 待选值顺序
+             * position.
              */
             public Builder position(Long position) {
                 this.position = position;
@@ -270,7 +270,7 @@ public class ListWorkItemAllFieldsResponseBody extends TeaModel {
             }
 
             /**
-             * 待选值中文名称
+             * value.
              */
             public Builder value(String value) {
                 this.value = value;
@@ -278,7 +278,7 @@ public class ListWorkItemAllFieldsResponseBody extends TeaModel {
             }
 
             /**
-             * 待选值英文名称
+             * valueEn.
              */
             public Builder valueEn(String valueEn) {
                 this.valueEn = valueEn;
@@ -511,7 +511,7 @@ public class ListWorkItemAllFieldsResponseBody extends TeaModel {
             private String type; 
 
             /**
-             * 字段类型
+             * className.
              */
             public Builder className(String className) {
                 this.className = className;
@@ -519,7 +519,7 @@ public class ListWorkItemAllFieldsResponseBody extends TeaModel {
             }
 
             /**
-             * 创建人id
+             * creator.
              */
             public Builder creator(String creator) {
                 this.creator = creator;
@@ -527,7 +527,7 @@ public class ListWorkItemAllFieldsResponseBody extends TeaModel {
             }
 
             /**
-             * 默认值
+             * defaultValue.
              */
             public Builder defaultValue(String defaultValue) {
                 this.defaultValue = defaultValue;
@@ -535,7 +535,7 @@ public class ListWorkItemAllFieldsResponseBody extends TeaModel {
             }
 
             /**
-             * 描述信息
+             * description.
              */
             public Builder description(String description) {
                 this.description = description;
@@ -543,7 +543,7 @@ public class ListWorkItemAllFieldsResponseBody extends TeaModel {
             }
 
             /**
-             * 字段格式
+             * format.
              */
             public Builder format(String format) {
                 this.format = format;
@@ -551,7 +551,7 @@ public class ListWorkItemAllFieldsResponseBody extends TeaModel {
             }
 
             /**
-             * 创建时间
+             * gmtCreate.
              */
             public Builder gmtCreate(Long gmtCreate) {
                 this.gmtCreate = gmtCreate;
@@ -559,7 +559,7 @@ public class ListWorkItemAllFieldsResponseBody extends TeaModel {
             }
 
             /**
-             * 修改时间
+             * gmtModified.
              */
             public Builder gmtModified(Long gmtModified) {
                 this.gmtModified = gmtModified;
@@ -567,7 +567,7 @@ public class ListWorkItemAllFieldsResponseBody extends TeaModel {
             }
 
             /**
-             * 字段唯一标识符
+             * identifier.
              */
             public Builder identifier(String identifier) {
                 this.identifier = identifier;
@@ -575,7 +575,7 @@ public class ListWorkItemAllFieldsResponseBody extends TeaModel {
             }
 
             /**
-             * 是否必填
+             * isRequired.
              */
             public Builder isRequired(Boolean isRequired) {
                 this.isRequired = isRequired;
@@ -583,7 +583,7 @@ public class ListWorkItemAllFieldsResponseBody extends TeaModel {
             }
 
             /**
-             * 创建时是否展示
+             * isShowWhenCreate.
              */
             public Builder isShowWhenCreate(Boolean isShowWhenCreate) {
                 this.isShowWhenCreate = isShowWhenCreate;
@@ -591,7 +591,7 @@ public class ListWorkItemAllFieldsResponseBody extends TeaModel {
             }
 
             /**
-             * 是否是系统必须字段，比如：负责人、状态等。
+             * isSystemRequired.
              */
             public Builder isSystemRequired(Boolean isSystemRequired) {
                 this.isSystemRequired = isSystemRequired;
@@ -599,7 +599,7 @@ public class ListWorkItemAllFieldsResponseBody extends TeaModel {
             }
 
             /**
-             * 联动的服务，比如：迭代 迭代服务开启/关闭，这个字段字段加进/剔除出对应的模板； 字段模板里，这类字段不能手动添加或删除
+             * linkWithService.
              */
             public Builder linkWithService(String linkWithService) {
                 this.linkWithService = linkWithService;
@@ -607,7 +607,7 @@ public class ListWorkItemAllFieldsResponseBody extends TeaModel {
             }
 
             /**
-             * 修改人
+             * modifier.
              */
             public Builder modifier(String modifier) {
                 this.modifier = modifier;
@@ -615,7 +615,7 @@ public class ListWorkItemAllFieldsResponseBody extends TeaModel {
             }
 
             /**
-             * 字段名称
+             * name.
              */
             public Builder name(String name) {
                 this.name = name;
@@ -623,7 +623,7 @@ public class ListWorkItemAllFieldsResponseBody extends TeaModel {
             }
 
             /**
-             * 待选值
+             * options.
              */
             public Builder options(java.util.List < Options> options) {
                 this.options = options;
@@ -631,7 +631,7 @@ public class ListWorkItemAllFieldsResponseBody extends TeaModel {
             }
 
             /**
-             * 区分不同的适用对象
+             * resourceType.
              */
             public Builder resourceType(String resourceType) {
                 this.resourceType = resourceType;
@@ -639,7 +639,7 @@ public class ListWorkItemAllFieldsResponseBody extends TeaModel {
             }
 
             /**
-             * 区分不同的类型，如系统字段、用户自定义字段
+             * type.
              */
             public Builder type(String type) {
                 this.type = type;

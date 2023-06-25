@@ -32,7 +32,6 @@ public class CreateProtectdBranchRequest extends Request {
 
     @Body
     @NameInMap("allowPushRoles")
-    @Validation(required = true)
     private java.util.List < Integer > allowPushRoles;
 
     @Body
@@ -289,7 +288,7 @@ public class CreateProtectdBranchRequest extends Request {
         }
 
         /**
-         * A short description of struct
+         * organizationId.
          */
         public Builder organizationId(String organizationId) {
             this.putQueryParameter("organizationId", organizationId);

@@ -79,7 +79,7 @@ public class GetSprintInfoRequest extends Request {
         }
 
         /**
-         * 迭代id
+         * sprintId.
          */
         public Builder sprintId(String sprintId) {
             this.putPathParameter("sprintId", sprintId);

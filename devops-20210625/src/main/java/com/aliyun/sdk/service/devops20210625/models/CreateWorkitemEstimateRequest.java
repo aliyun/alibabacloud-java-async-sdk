@@ -138,7 +138,7 @@ public class CreateWorkitemEstimateRequest extends Request {
         }
 
         /**
-         * 描述
+         * description.
          */
         public Builder description(String description) {
             this.putBodyParameter("description", description);
@@ -147,7 +147,7 @@ public class CreateWorkitemEstimateRequest extends Request {
         }
 
         /**
-         * 登记人,为用户的aliyunPk
+         * recordUserIdentifier.
          */
         public Builder recordUserIdentifier(String recordUserIdentifier) {
             this.putBodyParameter("recordUserIdentifier", recordUserIdentifier);
@@ -156,7 +156,7 @@ public class CreateWorkitemEstimateRequest extends Request {
         }
 
         /**
-         * 花费工时，最大为9999
+         * spentTime.
          */
         public Builder spentTime(String spentTime) {
             this.putBodyParameter("spentTime", spentTime);
@@ -165,7 +165,7 @@ public class CreateWorkitemEstimateRequest extends Request {
         }
 
         /**
-         * 类型
+         * type.
          */
         public Builder type(String type) {
             this.putBodyParameter("type", type);
@@ -174,7 +174,7 @@ public class CreateWorkitemEstimateRequest extends Request {
         }
 
         /**
-         * 工作项id
+         * workitemIdentifier.
          */
         public Builder workitemIdentifier(String workitemIdentifier) {
             this.putBodyParameter("workitemIdentifier", workitemIdentifier);

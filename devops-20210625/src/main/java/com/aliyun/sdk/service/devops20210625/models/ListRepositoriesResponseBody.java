@@ -98,7 +98,7 @@ public class ListRepositoriesResponseBody extends TeaModel {
         private Long total; 
 
         /**
-         * 错误码
+         * errorCode.
          */
         public Builder errorCode(Integer errorCode) {
             this.errorCode = errorCode;
@@ -106,7 +106,7 @@ public class ListRepositoriesResponseBody extends TeaModel {
         }
 
         /**
-         * 错误信息
+         * errorMessage.
          */
         public Builder errorMessage(String errorMessage) {
             this.errorMessage = errorMessage;
@@ -114,7 +114,7 @@ public class ListRepositoriesResponseBody extends TeaModel {
         }
 
         /**
-         * 请求requestId
+         * requestId.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -130,7 +130,7 @@ public class ListRepositoriesResponseBody extends TeaModel {
         }
 
         /**
-         * 调用是否成功
+         * success.
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -138,7 +138,7 @@ public class ListRepositoriesResponseBody extends TeaModel {
         }
 
         /**
-         * 总数量
+         * total.
          */
         public Builder total(Long total) {
             this.total = total;
@@ -382,7 +382,7 @@ public class ListRepositoriesResponseBody extends TeaModel {
             private String webUrl; 
 
             /**
-             * 代码库Id
+             * Id.
              */
             public Builder id(Long id) {
                 this.id = id;
@@ -390,7 +390,7 @@ public class ListRepositoriesResponseBody extends TeaModel {
             }
 
             /**
-             * 当前用户在该代码库上的权限类型
+             * accessLevel.
              */
             public Builder accessLevel(Integer accessLevel) {
                 this.accessLevel = accessLevel;
@@ -398,7 +398,7 @@ public class ListRepositoriesResponseBody extends TeaModel {
             }
 
             /**
-             * 代码库是否归档
+             * archive.
              */
             public Builder archive(Boolean archive) {
                 this.archive = archive;
@@ -406,7 +406,7 @@ public class ListRepositoriesResponseBody extends TeaModel {
             }
 
             /**
-             * 头像地址
+             * avatarUrl.
              */
             public Builder avatarUrl(String avatarUrl) {
                 this.avatarUrl = avatarUrl;
@@ -414,7 +414,7 @@ public class ListRepositoriesResponseBody extends TeaModel {
             }
 
             /**
-             * 创建时间
+             * createdAt.
              */
             public Builder createdAt(String createdAt) {
                 this.createdAt = createdAt;
@@ -422,7 +422,7 @@ public class ListRepositoriesResponseBody extends TeaModel {
             }
 
             /**
-             * 代码库描述
+             * description.
              */
             public Builder description(String description) {
                 this.description = description;
@@ -430,7 +430,7 @@ public class ListRepositoriesResponseBody extends TeaModel {
             }
 
             /**
-             * 代码库导入状态
+             * importStatus.
              */
             public Builder importStatus(String importStatus) {
                 this.importStatus = importStatus;
@@ -438,7 +438,7 @@ public class ListRepositoriesResponseBody extends TeaModel {
             }
 
             /**
-             * 最后活跃时间
+             * lastActivityAt.
              */
             public Builder lastActivityAt(String lastActivityAt) {
                 this.lastActivityAt = lastActivityAt;
@@ -446,7 +446,7 @@ public class ListRepositoriesResponseBody extends TeaModel {
             }
 
             /**
-             * 代码库名称
+             * name.
              */
             public Builder name(String name) {
                 this.name = name;
@@ -454,7 +454,7 @@ public class ListRepositoriesResponseBody extends TeaModel {
             }
 
             /**
-             * 代码库完整名称（含完整组名称）
+             * nameWithNamespace.
              */
             public Builder nameWithNamespace(String nameWithNamespace) {
                 this.nameWithNamespace = nameWithNamespace;
@@ -462,7 +462,7 @@ public class ListRepositoriesResponseBody extends TeaModel {
             }
 
             /**
-             * 上级路径的id
+             * namespaceId.
              */
             public Builder namespaceId(Long namespaceId) {
                 this.namespaceId = namespaceId;
@@ -470,7 +470,7 @@ public class ListRepositoriesResponseBody extends TeaModel {
             }
 
             /**
-             * 代码库路径
+             * path.
              */
             public Builder path(String path) {
                 this.path = path;
@@ -478,7 +478,7 @@ public class ListRepositoriesResponseBody extends TeaModel {
             }
 
             /**
-             * 代码库完整路径（含完整组路径）
+             * pathWithNamespace.
              */
             public Builder pathWithNamespace(String pathWithNamespace) {
                 this.pathWithNamespace = pathWithNamespace;
@@ -486,7 +486,7 @@ public class ListRepositoriesResponseBody extends TeaModel {
             }
 
             /**
-             * 是否被收藏
+             * star.
              */
             public Builder star(Boolean star) {
                 this.star = star;
@@ -494,7 +494,7 @@ public class ListRepositoriesResponseBody extends TeaModel {
             }
 
             /**
-             * 被收藏的数量
+             * starCount.
              */
             public Builder starCount(Long starCount) {
                 this.starCount = starCount;
@@ -502,7 +502,7 @@ public class ListRepositoriesResponseBody extends TeaModel {
             }
 
             /**
-             * 更新时间
+             * updatedAt.
              */
             public Builder updatedAt(String updatedAt) {
                 this.updatedAt = updatedAt;
@@ -510,7 +510,7 @@ public class ListRepositoriesResponseBody extends TeaModel {
             }
 
             /**
-             * 可见性;0标识私有的/10标识企业内公开
+             * visibilityLevel.
              */
             public Builder visibilityLevel(String visibilityLevel) {
                 this.visibilityLevel = visibilityLevel;
@@ -518,7 +518,7 @@ public class ListRepositoriesResponseBody extends TeaModel {
             }
 
             /**
-             * 页面访问时的URL
+             * webUrl.
              */
             public Builder webUrl(String webUrl) {
                 this.webUrl = webUrl;

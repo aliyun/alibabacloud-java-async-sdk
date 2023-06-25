@@ -109,7 +109,7 @@ public class ListWorkItemAllFieldsRequest extends Request {
         }
 
         /**
-         * 项目id
+         * spaceIdentifier.
          */
         public Builder spaceIdentifier(String spaceIdentifier) {
             this.putQueryParameter("spaceIdentifier", spaceIdentifier);
@@ -118,7 +118,7 @@ public class ListWorkItemAllFieldsRequest extends Request {
         }
 
         /**
-         * 资源类型
+         * spaceType.
          */
         public Builder spaceType(String spaceType) {
             this.putQueryParameter("spaceType", spaceType);
@@ -127,7 +127,7 @@ public class ListWorkItemAllFieldsRequest extends Request {
         }
 
         /**
-         * 工作项类型id，工作项类型的列表和id可以从ListProjectWorkitemType中获取
+         * workitemTypeIdentifier.
          */
         public Builder workitemTypeIdentifier(String workitemTypeIdentifier) {
             this.putQueryParameter("workitemTypeIdentifier", workitemTypeIdentifier);

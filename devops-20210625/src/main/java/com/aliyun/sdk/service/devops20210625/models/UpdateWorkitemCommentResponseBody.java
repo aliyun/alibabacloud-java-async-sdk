@@ -443,7 +443,7 @@ public class UpdateWorkitemCommentResponseBody extends TeaModel {
             }
 
             /**
-             * 评论唯一id
+             * id.
              */
             public Builder id(String id) {
                 this.id = id;

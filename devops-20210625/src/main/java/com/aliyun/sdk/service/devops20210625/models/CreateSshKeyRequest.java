@@ -55,7 +55,7 @@ public class CreateSshKeyRequest extends Request {
         } 
 
         /**
-         * 企业标识，也称企业id，字符串形式，可在云效访问链接中获取，如  https:// devops.aliyun.com/organization/【OrgId】
+         * organizationId.
          */
         public Builder organizationId(String organizationId) {
             this.putPathParameter("organizationId", organizationId);

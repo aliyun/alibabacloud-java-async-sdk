@@ -86,7 +86,7 @@ public class GetWorkItemActivityResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * 动态信息
+         * activities.
          */
         public Builder activities(java.util.List < Activities> activities) {
             this.activities = activities;
@@ -94,7 +94,7 @@ public class GetWorkItemActivityResponseBody extends TeaModel {
         }
 
         /**
-         * 错误码
+         * errorCode.
          */
         public Builder errorCode(String errorCode) {
             this.errorCode = errorCode;
@@ -102,7 +102,7 @@ public class GetWorkItemActivityResponseBody extends TeaModel {
         }
 
         /**
-         * 错误信息
+         * errorMsg.
          */
         public Builder errorMsg(String errorMsg) {
             this.errorMsg = errorMsg;
@@ -110,7 +110,7 @@ public class GetWorkItemActivityResponseBody extends TeaModel {
         }
 
         /**
-         * 请求id，每次请求都是唯一值，便于后续排查问题
+         * requestId.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -118,7 +118,7 @@ public class GetWorkItemActivityResponseBody extends TeaModel {
         }
 
         /**
-         * true或者false
+         * success.
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -356,7 +356,7 @@ public class GetWorkItemActivityResponseBody extends TeaModel {
             private String propertyType; 
 
             /**
-             * 属性的展示名
+             * displayName.
              */
             public Builder displayName(String displayName) {
                 this.displayName = displayName;
@@ -364,7 +364,7 @@ public class GetWorkItemActivityResponseBody extends TeaModel {
             }
 
             /**
-             * 资源id
+             * propertyIdentifier.
              */
             public Builder propertyIdentifier(String propertyIdentifier) {
                 this.propertyIdentifier = propertyIdentifier;
@@ -372,7 +372,7 @@ public class GetWorkItemActivityResponseBody extends TeaModel {
             }
 
             /**
-             * 属性key
+             * propertyName.
              */
             public Builder propertyName(String propertyName) {
                 this.propertyName = propertyName;
@@ -380,7 +380,7 @@ public class GetWorkItemActivityResponseBody extends TeaModel {
             }
 
             /**
-             * 类型
+             * propertyType.
              */
             public Builder propertyType(String propertyType) {
                 this.propertyType = propertyType;
@@ -529,7 +529,7 @@ public class GetWorkItemActivityResponseBody extends TeaModel {
             private String resourceIdentifier; 
 
             /**
-             * 动作类型
+             * actionType.
              */
             public Builder actionType(String actionType) {
                 this.actionType = actionType;
@@ -537,7 +537,7 @@ public class GetWorkItemActivityResponseBody extends TeaModel {
             }
 
             /**
-             * 事件id
+             * eventId.
              */
             public Builder eventId(Long eventId) {
                 this.eventId = eventId;
@@ -545,7 +545,7 @@ public class GetWorkItemActivityResponseBody extends TeaModel {
             }
 
             /**
-             * 事件时间
+             * eventTime.
              */
             public Builder eventTime(Long eventTime) {
                 this.eventTime = eventTime;
@@ -553,7 +553,7 @@ public class GetWorkItemActivityResponseBody extends TeaModel {
             }
 
             /**
-             * 事件类型
+             * eventType.
              */
             public Builder eventType(String eventType) {
                 this.eventType = eventType;
@@ -577,7 +577,7 @@ public class GetWorkItemActivityResponseBody extends TeaModel {
             }
 
             /**
-             * 操作者
+             * operator.
              */
             public Builder operator(String operator) {
                 this.operator = operator;
@@ -585,7 +585,7 @@ public class GetWorkItemActivityResponseBody extends TeaModel {
             }
 
             /**
-             * 父事件id
+             * parentEventId.
              */
             public Builder parentEventId(Long parentEventId) {
                 this.parentEventId = parentEventId;
@@ -593,7 +593,7 @@ public class GetWorkItemActivityResponseBody extends TeaModel {
             }
 
             /**
-             * 修改属性
+             * property.
              */
             public Builder property(Property property) {
                 this.property = property;
@@ -601,7 +601,7 @@ public class GetWorkItemActivityResponseBody extends TeaModel {
             }
 
             /**
-             * 操作对象
+             * resourceIdentifier.
              */
             public Builder resourceIdentifier(String resourceIdentifier) {
                 this.resourceIdentifier = resourceIdentifier;

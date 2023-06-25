@@ -92,7 +92,7 @@ public class GetWorkItemWorkFlowInfoRequest extends Request {
         }
 
         /**
-         * 工作项id
+         * workitemId.
          */
         public Builder workitemId(String workitemId) {
             this.putPathParameter("workitemId", workitemId);
@@ -101,7 +101,7 @@ public class GetWorkItemWorkFlowInfoRequest extends Request {
         }
 
         /**
-         * 项目id
+         * configurationId.
          */
         public Builder configurationId(String configurationId) {
             this.putQueryParameter("configurationId", configurationId);

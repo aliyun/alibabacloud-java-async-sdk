@@ -86,7 +86,7 @@ public class GetPipelineRunResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * 错误码
+         * errorCode.
          */
         public Builder errorCode(String errorCode) {
             this.errorCode = errorCode;
@@ -94,7 +94,7 @@ public class GetPipelineRunResponseBody extends TeaModel {
         }
 
         /**
-         * 错误信息
+         * errorMessage.
          */
         public Builder errorMessage(String errorMessage) {
             this.errorMessage = errorMessage;
@@ -102,7 +102,7 @@ public class GetPipelineRunResponseBody extends TeaModel {
         }
 
         /**
-         * 流水线运行实例
+         * pipelineRun.
          */
         public Builder pipelineRun(PipelineRun pipelineRun) {
             this.pipelineRun = pipelineRun;
@@ -110,7 +110,7 @@ public class GetPipelineRunResponseBody extends TeaModel {
         }
 
         /**
-         * 请求id，每次请求都是唯一值，便于后续排查问题
+         * requestId.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -118,7 +118,7 @@ public class GetPipelineRunResponseBody extends TeaModel {
         }
 
         /**
-         * true 接口调用成功，false 接口调用失败
+         * success.
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -182,7 +182,7 @@ public class GetPipelineRunResponseBody extends TeaModel {
             private String repo; 
 
             /**
-             * 分支
+             * branch.
              */
             public Builder branch(String branch) {
                 this.branch = branch;
@@ -190,7 +190,7 @@ public class GetPipelineRunResponseBody extends TeaModel {
             }
 
             /**
-             * 提交信息 json数据
+             * commint.
              */
             public Builder commint(String commint) {
                 this.commint = commint;
@@ -198,7 +198,7 @@ public class GetPipelineRunResponseBody extends TeaModel {
             }
 
             /**
-             * 代码库地址
+             * repo.
              */
             public Builder repo(String repo) {
                 this.repo = repo;
@@ -263,7 +263,7 @@ public class GetPipelineRunResponseBody extends TeaModel {
             private String type; 
 
             /**
-             * 代码源信息
+             * data.
              */
             public Builder data(Data data) {
                 this.data = data;
@@ -271,7 +271,7 @@ public class GetPipelineRunResponseBody extends TeaModel {
             }
 
             /**
-             * 代码源唯一标识
+             * sign.
              */
             public Builder sign(String sign) {
                 this.sign = sign;
@@ -279,7 +279,7 @@ public class GetPipelineRunResponseBody extends TeaModel {
             }
 
             /**
-             * 代码库类型
+             * type.
              */
             public Builder type(String type) {
                 this.type = type;
@@ -344,7 +344,7 @@ public class GetPipelineRunResponseBody extends TeaModel {
             private String type; 
 
             /**
-             * 是否可用
+             * disable.
              */
             public Builder disable(Boolean disable) {
                 this.disable = disable;
@@ -360,7 +360,7 @@ public class GetPipelineRunResponseBody extends TeaModel {
             }
 
             /**
-             * API名称
+             * type.
              */
             public Builder type(String type) {
                 this.type = type;
@@ -473,7 +473,7 @@ public class GetPipelineRunResponseBody extends TeaModel {
             private String status; 
 
             /**
-             * 后续操作
+             * actions.
              */
             public Builder actions(java.util.List < Actions> actions) {
                 this.actions = actions;
@@ -481,7 +481,7 @@ public class GetPipelineRunResponseBody extends TeaModel {
             }
 
             /**
-             * 结束时间
+             * endTime.
              */
             public Builder endTime(Long endTime) {
                 this.endTime = endTime;
@@ -489,7 +489,7 @@ public class GetPipelineRunResponseBody extends TeaModel {
             }
 
             /**
-             * 任务Id
+             * id.
              */
             public Builder id(Long id) {
                 this.id = id;
@@ -497,7 +497,7 @@ public class GetPipelineRunResponseBody extends TeaModel {
             }
 
             /**
-             * 任务名称
+             * name.
              */
             public Builder name(String name) {
                 this.name = name;
@@ -505,7 +505,7 @@ public class GetPipelineRunResponseBody extends TeaModel {
             }
 
             /**
-             * 触发参数
+             * params.
              */
             public Builder params(String params) {
                 this.params = params;
@@ -513,7 +513,7 @@ public class GetPipelineRunResponseBody extends TeaModel {
             }
 
             /**
-             * 开始时间
+             * startTime.
              */
             public Builder startTime(Long startTime) {
                 this.startTime = startTime;
@@ -521,7 +521,7 @@ public class GetPipelineRunResponseBody extends TeaModel {
             }
 
             /**
-             * 状态
+             * status.
              */
             public Builder status(String status) {
                 this.status = status;
@@ -610,7 +610,7 @@ public class GetPipelineRunResponseBody extends TeaModel {
             private String status; 
 
             /**
-             * 结束时间
+             * endTime.
              */
             public Builder endTime(Long endTime) {
                 this.endTime = endTime;
@@ -618,7 +618,7 @@ public class GetPipelineRunResponseBody extends TeaModel {
             }
 
             /**
-             * 任务
+             * jobs.
              */
             public Builder jobs(java.util.List < Jobs> jobs) {
                 this.jobs = jobs;
@@ -626,7 +626,7 @@ public class GetPipelineRunResponseBody extends TeaModel {
             }
 
             /**
-             * 阶段名称
+             * name.
              */
             public Builder name(String name) {
                 this.name = name;
@@ -634,7 +634,7 @@ public class GetPipelineRunResponseBody extends TeaModel {
             }
 
             /**
-             * 开始时间
+             * startTime.
              */
             public Builder startTime(Long startTime) {
                 this.startTime = startTime;
@@ -642,7 +642,7 @@ public class GetPipelineRunResponseBody extends TeaModel {
             }
 
             /**
-             * 状态
+             * status.
              */
             public Builder status(String status) {
                 this.status = status;
@@ -695,7 +695,7 @@ public class GetPipelineRunResponseBody extends TeaModel {
             private StageInfo stageInfo; 
 
             /**
-             * 阶段名称
+             * name.
              */
             public Builder name(String name) {
                 this.name = name;
@@ -703,7 +703,7 @@ public class GetPipelineRunResponseBody extends TeaModel {
             }
 
             /**
-             * 阶段详情
+             * stageInfo.
              */
             public Builder stageInfo(StageInfo stageInfo) {
                 this.stageInfo = stageInfo;
@@ -864,7 +864,7 @@ public class GetPipelineRunResponseBody extends TeaModel {
             private Long updateTime; 
 
             /**
-             * 创建时间
+             * createTime.
              */
             public Builder createTime(Long createTime) {
                 this.createTime = createTime;
@@ -872,7 +872,7 @@ public class GetPipelineRunResponseBody extends TeaModel {
             }
 
             /**
-             * 创建者阿里云账号id
+             * creatorAccountId.
              */
             public Builder creatorAccountId(String creatorAccountId) {
                 this.creatorAccountId = creatorAccountId;
@@ -880,7 +880,7 @@ public class GetPipelineRunResponseBody extends TeaModel {
             }
 
             /**
-             * 更新人阿里云账号id
+             * modifierAccountId.
              */
             public Builder modifierAccountId(String modifierAccountId) {
                 this.modifierAccountId = modifierAccountId;
@@ -888,7 +888,7 @@ public class GetPipelineRunResponseBody extends TeaModel {
             }
 
             /**
-             * 流水线Id
+             * pipelineId.
              */
             public Builder pipelineId(Long pipelineId) {
                 this.pipelineId = pipelineId;
@@ -896,7 +896,7 @@ public class GetPipelineRunResponseBody extends TeaModel {
             }
 
             /**
-             * 流水线运行实例id
+             * pipelineRunId.
              */
             public Builder pipelineRunId(Long pipelineRunId) {
                 this.pipelineRunId = pipelineRunId;
@@ -904,7 +904,7 @@ public class GetPipelineRunResponseBody extends TeaModel {
             }
 
             /**
-             * 代码源
+             * sources.
              */
             public Builder sources(java.util.List < Sources> sources) {
                 this.sources = sources;
@@ -912,7 +912,7 @@ public class GetPipelineRunResponseBody extends TeaModel {
             }
 
             /**
-             * 阶段拓扑信息
+             * stageGroup.
              */
             public Builder stageGroup(java.util.List < java.util.List < String > > stageGroup) {
                 this.stageGroup = stageGroup;
@@ -920,7 +920,7 @@ public class GetPipelineRunResponseBody extends TeaModel {
             }
 
             /**
-             * 阶段信息
+             * stages.
              */
             public Builder stages(java.util.List < Stages> stages) {
                 this.stages = stages;
@@ -928,7 +928,7 @@ public class GetPipelineRunResponseBody extends TeaModel {
             }
 
             /**
-             * 状态 FAIL 运行失败 SUCCESS 运行成功 RUNNING 运行中
+             * status.
              */
             public Builder status(String status) {
                 this.status = status;
@@ -936,7 +936,7 @@ public class GetPipelineRunResponseBody extends TeaModel {
             }
 
             /**
-             * 触发模式 1人工触发 2定时触发 3代码提交触发
+             * triggerMode.
              */
             public Builder triggerMode(Integer triggerMode) {
                 this.triggerMode = triggerMode;
@@ -944,7 +944,7 @@ public class GetPipelineRunResponseBody extends TeaModel {
             }
 
             /**
-             * 更新时间
+             * updateTime.
              */
             public Builder updateTime(Long updateTime) {
                 this.updateTime = updateTime;

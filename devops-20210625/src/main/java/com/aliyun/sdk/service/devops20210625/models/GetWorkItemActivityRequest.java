@@ -79,7 +79,7 @@ public class GetWorkItemActivityRequest extends Request {
         }
 
         /**
-         * 工作项id
+         * workitemId.
          */
         public Builder workitemId(String workitemId) {
             this.putPathParameter("workitemId", workitemId);

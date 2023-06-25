@@ -198,7 +198,7 @@ public class ListWorkitemsRequest extends Request {
         } 
 
         /**
-         * 企业id
+         * organizationId.
          */
         public Builder organizationId(String organizationId) {
             this.putPathParameter("organizationId", organizationId);
@@ -207,7 +207,7 @@ public class ListWorkitemsRequest extends Request {
         }
 
         /**
-         * 工作项类型，需求为Req，缺陷为Bug，任务为Task，风险为Risk
+         * category.
          */
         public Builder category(String category) {
             this.putQueryParameter("category", category);
@@ -216,7 +216,7 @@ public class ListWorkitemsRequest extends Request {
         }
 
         /**
-         * 过滤条件
+         * conditions.
          */
         public Builder conditions(String conditions) {
             this.putQueryParameter("conditions", conditions);
@@ -225,7 +225,7 @@ public class ListWorkitemsRequest extends Request {
         }
 
         /**
-         * 额外条件
+         * extraConditions.
          */
         public Builder extraConditions(String extraConditions) {
             this.putQueryParameter("extraConditions", extraConditions);
@@ -234,7 +234,7 @@ public class ListWorkitemsRequest extends Request {
         }
 
         /**
-         * 分组条件
+         * groupCondition.
          */
         public Builder groupCondition(String groupCondition) {
             this.putQueryParameter("groupCondition", groupCondition);
@@ -243,7 +243,7 @@ public class ListWorkitemsRequest extends Request {
         }
 
         /**
-         * 每页最大返回数量，0-200，默认值20
+         * maxResults.
          */
         public Builder maxResults(String maxResults) {
             this.putQueryParameter("maxResults", maxResults);
@@ -252,7 +252,7 @@ public class ListWorkitemsRequest extends Request {
         }
 
         /**
-         * 分页中的起始序列
+         * nextToken.
          */
         public Builder nextToken(String nextToken) {
             this.putQueryParameter("nextToken", nextToken);
@@ -261,7 +261,7 @@ public class ListWorkitemsRequest extends Request {
         }
 
         /**
-         * 排序顺序
+         * orderBy.
          */
         public Builder orderBy(String orderBy) {
             this.putQueryParameter("orderBy", orderBy);
@@ -270,7 +270,7 @@ public class ListWorkitemsRequest extends Request {
         }
 
         /**
-         * 查询类型
+         * searchType.
          */
         public Builder searchType(String searchType) {
             this.putQueryParameter("searchType", searchType);
@@ -279,7 +279,7 @@ public class ListWorkitemsRequest extends Request {
         }
 
         /**
-         * 项目id
+         * spaceIdentifier.
          */
         public Builder spaceIdentifier(String spaceIdentifier) {
             this.putQueryParameter("spaceIdentifier", spaceIdentifier);
@@ -288,7 +288,7 @@ public class ListWorkitemsRequest extends Request {
         }
 
         /**
-         * 项目类型
+         * spaceType.
          */
         public Builder spaceType(String spaceType) {
             this.putQueryParameter("spaceType", spaceType);

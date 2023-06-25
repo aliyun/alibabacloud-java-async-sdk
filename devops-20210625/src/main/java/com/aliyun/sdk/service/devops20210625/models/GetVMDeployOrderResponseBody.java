@@ -86,7 +86,7 @@ public class GetVMDeployOrderResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * 部署单
+         * deployOrder.
          */
         public Builder deployOrder(DeployOrder deployOrder) {
             this.deployOrder = deployOrder;
@@ -94,7 +94,7 @@ public class GetVMDeployOrderResponseBody extends TeaModel {
         }
 
         /**
-         * 错误码
+         * errorCode.
          */
         public Builder errorCode(String errorCode) {
             this.errorCode = errorCode;
@@ -102,7 +102,7 @@ public class GetVMDeployOrderResponseBody extends TeaModel {
         }
 
         /**
-         * 错误信息
+         * errorMessage.
          */
         public Builder errorMessage(String errorMessage) {
             this.errorMessage = errorMessage;
@@ -110,7 +110,7 @@ public class GetVMDeployOrderResponseBody extends TeaModel {
         }
 
         /**
-         * 请求id，每次请求都是唯一值，便于后续排查问题
+         * requestId.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -118,7 +118,7 @@ public class GetVMDeployOrderResponseBody extends TeaModel {
         }
 
         /**
-         * true 接口调用成功，false 接口调用失败
+         * success.
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -182,7 +182,7 @@ public class GetVMDeployOrderResponseBody extends TeaModel {
             private String type; 
 
             /**
-             * 是否可用
+             * disable.
              */
             public Builder disable(Boolean disable) {
                 this.disable = disable;
@@ -198,7 +198,7 @@ public class GetVMDeployOrderResponseBody extends TeaModel {
             }
 
             /**
-             * Action
+             * type.
              */
             public Builder type(String type) {
                 this.type = type;
@@ -263,7 +263,7 @@ public class GetVMDeployOrderResponseBody extends TeaModel {
             private String type; 
 
             /**
-             * 是否可用
+             * disable.
              */
             public Builder disable(Boolean disable) {
                 this.disable = disable;
@@ -279,7 +279,7 @@ public class GetVMDeployOrderResponseBody extends TeaModel {
             }
 
             /**
-             * Action
+             * type.
              */
             public Builder type(String type) {
                 this.type = type;
@@ -404,7 +404,7 @@ public class GetVMDeployOrderResponseBody extends TeaModel {
             private Long updateTime; 
 
             /**
-             * 后续action
+             * actions.
              */
             public Builder actions(java.util.List < DeployMachinesActions> actions) {
                 this.actions = actions;
@@ -412,7 +412,7 @@ public class GetVMDeployOrderResponseBody extends TeaModel {
             }
 
             /**
-             * 部署批次
+             * batchNum.
              */
             public Builder batchNum(Integer batchNum) {
                 this.batchNum = batchNum;
@@ -420,7 +420,7 @@ public class GetVMDeployOrderResponseBody extends TeaModel {
             }
 
             /**
-             * 机器状态
+             * clientStatus.
              */
             public Builder clientStatus(String clientStatus) {
                 this.clientStatus = clientStatus;
@@ -428,7 +428,7 @@ public class GetVMDeployOrderResponseBody extends TeaModel {
             }
 
             /**
-             * 开始时间
+             * createTime.
              */
             public Builder createTime(Long createTime) {
                 this.createTime = createTime;
@@ -436,7 +436,7 @@ public class GetVMDeployOrderResponseBody extends TeaModel {
             }
 
             /**
-             * 机器IP
+             * ip.
              */
             public Builder ip(String ip) {
                 this.ip = ip;
@@ -444,7 +444,7 @@ public class GetVMDeployOrderResponseBody extends TeaModel {
             }
 
             /**
-             * 机器sn
+             * machineSn.
              */
             public Builder machineSn(String machineSn) {
                 this.machineSn = machineSn;
@@ -452,7 +452,7 @@ public class GetVMDeployOrderResponseBody extends TeaModel {
             }
 
             /**
-             * 部署状态
+             * status.
              */
             public Builder status(String status) {
                 this.status = status;
@@ -460,7 +460,7 @@ public class GetVMDeployOrderResponseBody extends TeaModel {
             }
 
             /**
-             * 修改时间
+             * updateTime.
              */
             public Builder updateTime(Long updateTime) {
                 this.updateTime = updateTime;
@@ -525,7 +525,7 @@ public class GetVMDeployOrderResponseBody extends TeaModel {
             private Long hostGroupId; 
 
             /**
-             * 发布批次
+             * batchNum.
              */
             public Builder batchNum(Integer batchNum) {
                 this.batchNum = batchNum;
@@ -533,7 +533,7 @@ public class GetVMDeployOrderResponseBody extends TeaModel {
             }
 
             /**
-             * 部署机器列表
+             * deployMachines.
              */
             public Builder deployMachines(java.util.List < DeployMachines> deployMachines) {
                 this.deployMachines = deployMachines;
@@ -541,7 +541,7 @@ public class GetVMDeployOrderResponseBody extends TeaModel {
             }
 
             /**
-             * 主机组ID
+             * hostGroupId.
              */
             public Builder hostGroupId(Long hostGroupId) {
                 this.hostGroupId = hostGroupId;
@@ -690,7 +690,7 @@ public class GetVMDeployOrderResponseBody extends TeaModel {
             private Long updateTime; 
 
             /**
-             * 后续action
+             * actions.
              */
             public Builder actions(java.util.List < Actions> actions) {
                 this.actions = actions;
@@ -698,7 +698,7 @@ public class GetVMDeployOrderResponseBody extends TeaModel {
             }
 
             /**
-             * 创建时时间
+             * createTime.
              */
             public Builder createTime(Long createTime) {
                 this.createTime = createTime;
@@ -706,7 +706,7 @@ public class GetVMDeployOrderResponseBody extends TeaModel {
             }
 
             /**
-             * 创建人
+             * creator.
              */
             public Builder creator(String creator) {
                 this.creator = creator;
@@ -714,7 +714,7 @@ public class GetVMDeployOrderResponseBody extends TeaModel {
             }
 
             /**
-             * 当前发布批次
+             * currentBatch.
              */
             public Builder currentBatch(Integer currentBatch) {
                 this.currentBatch = currentBatch;
@@ -722,7 +722,7 @@ public class GetVMDeployOrderResponseBody extends TeaModel {
             }
 
             /**
-             * 部署机器信息
+             * deployMachineInfo.
              */
             public Builder deployMachineInfo(DeployMachineInfo deployMachineInfo) {
                 this.deployMachineInfo = deployMachineInfo;
@@ -730,7 +730,7 @@ public class GetVMDeployOrderResponseBody extends TeaModel {
             }
 
             /**
-             * 部署单ID
+             * deployOrderId.
              */
             public Builder deployOrderId(String deployOrderId) {
                 this.deployOrderId = deployOrderId;
@@ -738,7 +738,7 @@ public class GetVMDeployOrderResponseBody extends TeaModel {
             }
 
             /**
-             * 错误码
+             * exceptionCode.
              */
             public Builder exceptionCode(String exceptionCode) {
                 this.exceptionCode = exceptionCode;
@@ -746,7 +746,7 @@ public class GetVMDeployOrderResponseBody extends TeaModel {
             }
 
             /**
-             * 发布状态
+             * status.
              */
             public Builder status(String status) {
                 this.status = status;
@@ -754,7 +754,7 @@ public class GetVMDeployOrderResponseBody extends TeaModel {
             }
 
             /**
-             * 总发布批次
+             * totalBatch.
              */
             public Builder totalBatch(Integer totalBatch) {
                 this.totalBatch = totalBatch;
@@ -762,7 +762,7 @@ public class GetVMDeployOrderResponseBody extends TeaModel {
             }
 
             /**
-             * 修改时间
+             * updateTime.
              */
             public Builder updateTime(Long updateTime) {
                 this.updateTime = updateTime;

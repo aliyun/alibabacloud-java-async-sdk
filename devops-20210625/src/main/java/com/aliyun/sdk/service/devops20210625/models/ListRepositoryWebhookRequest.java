@@ -114,7 +114,7 @@ public class ListRepositoryWebhookRequest extends Request {
         } 
 
         /**
-         * 代码仓库Id
+         * repositoryId.
          */
         public Builder repositoryId(Long repositoryId) {
             this.putPathParameter("repositoryId", repositoryId);
@@ -123,7 +123,7 @@ public class ListRepositoryWebhookRequest extends Request {
         }
 
         /**
-         * accessToken
+         * accessToken.
          */
         public Builder accessToken(String accessToken) {
             this.putQueryParameter("accessToken", accessToken);
@@ -132,7 +132,7 @@ public class ListRepositoryWebhookRequest extends Request {
         }
 
         /**
-         * 企业Id
+         * organizationId.
          */
         public Builder organizationId(String organizationId) {
             this.putQueryParameter("organizationId", organizationId);
@@ -141,7 +141,7 @@ public class ListRepositoryWebhookRequest extends Request {
         }
 
         /**
-         * 页码
+         * page.
          */
         public Builder page(Long page) {
             this.putQueryParameter("page", page);
@@ -150,7 +150,7 @@ public class ListRepositoryWebhookRequest extends Request {
         }
 
         /**
-         * 每页数据量
+         * pageSize.
          */
         public Builder pageSize(Long pageSize) {
             this.putQueryParameter("pageSize", pageSize);

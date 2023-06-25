@@ -149,7 +149,7 @@ public class ListProjectsRequest extends Request {
         }
 
         /**
-         * 项目类型
+         * category.
          */
         public Builder category(String category) {
             this.putQueryParameter("category", category);
@@ -176,7 +176,7 @@ public class ListProjectsRequest extends Request {
         }
 
         /**
-         * 每页最大返回数量，0-200，默认值20
+         * maxResults.
          */
         public Builder maxResults(Long maxResults) {
             this.putQueryParameter("maxResults", maxResults);
@@ -185,7 +185,7 @@ public class ListProjectsRequest extends Request {
         }
 
         /**
-         * 分页中的起始序列
+         * nextToken.
          */
         public Builder nextToken(String nextToken) {
             this.putQueryParameter("nextToken", nextToken);
@@ -194,7 +194,7 @@ public class ListProjectsRequest extends Request {
         }
 
         /**
-         * 公开类型
+         * scope.
          */
         public Builder scope(String scope) {
             this.putQueryParameter("scope", scope);

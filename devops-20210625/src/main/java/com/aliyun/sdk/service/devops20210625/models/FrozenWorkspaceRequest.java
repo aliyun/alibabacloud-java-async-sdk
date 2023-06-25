@@ -55,7 +55,7 @@ public class FrozenWorkspaceRequest extends Request {
         } 
 
         /**
-         * 工作空间唯一标识
+         * workspaceId.
          */
         public Builder workspaceId(String workspaceId) {
             this.putPathParameter("workspaceId", workspaceId);

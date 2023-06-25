@@ -99,7 +99,7 @@ public class GetProjectMemberRequest extends Request {
         } 
 
         /**
-         * 代码仓库Id
+         * repositoryId.
          */
         public Builder repositoryId(Long repositoryId) {
             this.putPathParameter("repositoryId", repositoryId);
@@ -108,7 +108,7 @@ public class GetProjectMemberRequest extends Request {
         }
 
         /**
-         * 用户阿里云PK
+         * aliyunPk.
          */
         public Builder aliyunPk(String aliyunPk) {
             this.putPathParameter("aliyunPk", aliyunPk);
@@ -117,7 +117,7 @@ public class GetProjectMemberRequest extends Request {
         }
 
         /**
-         * accessToken（选填），使用AK方式调用时无需填accessToken
+         * accessToken.
          */
         public Builder accessToken(String accessToken) {
             this.putQueryParameter("accessToken", accessToken);
@@ -126,7 +126,7 @@ public class GetProjectMemberRequest extends Request {
         }
 
         /**
-         * 企业ID
+         * organizationId.
          */
         public Builder organizationId(String organizationId) {
             this.putQueryParameter("organizationId", organizationId);

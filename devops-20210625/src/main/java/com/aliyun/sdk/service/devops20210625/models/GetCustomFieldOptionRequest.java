@@ -124,7 +124,7 @@ public class GetCustomFieldOptionRequest extends Request {
         }
 
         /**
-         * 字段id
+         * fieldId.
          */
         public Builder fieldId(String fieldId) {
             this.putPathParameter("fieldId", fieldId);
@@ -133,7 +133,7 @@ public class GetCustomFieldOptionRequest extends Request {
         }
 
         /**
-         * 项目id
+         * spaceIdentifier.
          */
         public Builder spaceIdentifier(String spaceIdentifier) {
             this.putQueryParameter("spaceIdentifier", spaceIdentifier);
@@ -142,7 +142,7 @@ public class GetCustomFieldOptionRequest extends Request {
         }
 
         /**
-         * 类型
+         * spaceType.
          */
         public Builder spaceType(String spaceType) {
             this.putQueryParameter("spaceType", spaceType);
@@ -151,7 +151,7 @@ public class GetCustomFieldOptionRequest extends Request {
         }
 
         /**
-         * 工作项类型id
+         * workitemTypeIdentifier.
          */
         public Builder workitemTypeIdentifier(String workitemTypeIdentifier) {
             this.putQueryParameter("workitemTypeIdentifier", workitemTypeIdentifier);

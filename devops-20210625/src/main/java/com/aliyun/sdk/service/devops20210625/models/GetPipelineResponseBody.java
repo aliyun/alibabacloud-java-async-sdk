@@ -86,7 +86,7 @@ public class GetPipelineResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * 错误码
+         * errorCode.
          */
         public Builder errorCode(String errorCode) {
             this.errorCode = errorCode;
@@ -94,7 +94,7 @@ public class GetPipelineResponseBody extends TeaModel {
         }
 
         /**
-         * 错误信息
+         * errorMessage.
          */
         public Builder errorMessage(String errorMessage) {
             this.errorMessage = errorMessage;
@@ -102,7 +102,7 @@ public class GetPipelineResponseBody extends TeaModel {
         }
 
         /**
-         * 流水线
+         * pipeline.
          */
         public Builder pipeline(Pipeline pipeline) {
             this.pipeline = pipeline;
@@ -110,7 +110,7 @@ public class GetPipelineResponseBody extends TeaModel {
         }
 
         /**
-         * 请求id，每次请求都是唯一值，便于后续排查问题
+         * requestId.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -118,7 +118,7 @@ public class GetPipelineResponseBody extends TeaModel {
         }
 
         /**
-         * true 接口调用成功，false 接口调用失败
+         * success.
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -338,7 +338,7 @@ public class GetPipelineResponseBody extends TeaModel {
             private String webhook; 
 
             /**
-             * 分支
+             * branch.
              */
             public Builder branch(String branch) {
                 this.branch = branch;
@@ -346,7 +346,7 @@ public class GetPipelineResponseBody extends TeaModel {
             }
 
             /**
-             * 克隆深度
+             * cloneDepth.
              */
             public Builder cloneDepth(Long cloneDepth) {
                 this.cloneDepth = cloneDepth;
@@ -378,7 +378,7 @@ public class GetPipelineResponseBody extends TeaModel {
             }
 
             /**
-             * 触发事件
+             * events.
              */
             public Builder events(java.util.List < String > events) {
                 this.events = events;
@@ -386,7 +386,7 @@ public class GetPipelineResponseBody extends TeaModel {
             }
 
             /**
-             * 是否分支模式
+             * isBranchMode.
              */
             public Builder isBranchMode(Boolean isBranchMode) {
                 this.isBranchMode = isBranchMode;
@@ -394,7 +394,7 @@ public class GetPipelineResponseBody extends TeaModel {
             }
 
             /**
-             * 是否设置clone深度
+             * isCloneDepth.
              */
             public Builder isCloneDepth(Boolean isCloneDepth) {
                 this.isCloneDepth = isCloneDepth;
@@ -402,7 +402,7 @@ public class GetPipelineResponseBody extends TeaModel {
             }
 
             /**
-             * 是否子模块
+             * isSubmodule.
              */
             public Builder isSubmodule(Boolean isSubmodule) {
                 this.isSubmodule = isSubmodule;
@@ -410,7 +410,7 @@ public class GetPipelineResponseBody extends TeaModel {
             }
 
             /**
-             * 是否提交触发
+             * isTrigger.
              */
             public Builder isTrigger(Boolean isTrigger) {
                 this.isTrigger = isTrigger;
@@ -418,7 +418,7 @@ public class GetPipelineResponseBody extends TeaModel {
             }
 
             /**
-             * 代码源显示标签
+             * label.
              */
             public Builder label(String label) {
                 this.label = label;
@@ -426,7 +426,7 @@ public class GetPipelineResponseBody extends TeaModel {
             }
 
             /**
-             * github命名空间
+             * namespace.
              */
             public Builder namespace(String namespace) {
                 this.namespace = namespace;
@@ -434,7 +434,7 @@ public class GetPipelineResponseBody extends TeaModel {
             }
 
             /**
-             * 代码库地址
+             * repo.
              */
             public Builder repo(String repo) {
                 this.repo = repo;
@@ -442,7 +442,7 @@ public class GetPipelineResponseBody extends TeaModel {
             }
 
             /**
-             * 服务连接Id
+             * serviceConnectionId.
              */
             public Builder serviceConnectionId(Long serviceConnectionId) {
                 this.serviceConnectionId = serviceConnectionId;
@@ -450,7 +450,7 @@ public class GetPipelineResponseBody extends TeaModel {
             }
 
             /**
-             * 触发过滤条件
+             * triggerFilter.
              */
             public Builder triggerFilter(String triggerFilter) {
                 this.triggerFilter = triggerFilter;
@@ -458,7 +458,7 @@ public class GetPipelineResponseBody extends TeaModel {
             }
 
             /**
-             * webhhook地址
+             * webhook.
              */
             public Builder webhook(String webhook) {
                 this.webhook = webhook;
@@ -523,7 +523,7 @@ public class GetPipelineResponseBody extends TeaModel {
             private String type; 
 
             /**
-             * 代码数据
+             * data.
              */
             public Builder data(Data data) {
                 this.data = data;
@@ -531,7 +531,7 @@ public class GetPipelineResponseBody extends TeaModel {
             }
 
             /**
-             * 代码源唯一标识
+             * sign.
              */
             public Builder sign(String sign) {
                 this.sign = sign;
@@ -539,7 +539,7 @@ public class GetPipelineResponseBody extends TeaModel {
             }
 
             /**
-             * 代码源类型aliyunGit 阿里云代码库 customGitlab  自建git giteeGit 码云 codeup Codeup git 通用git gitlab gitlab bitbucket bitbucket githubOAuth github
+             * type.
              */
             public Builder type(String type) {
                 this.type = type;
@@ -604,7 +604,7 @@ public class GetPipelineResponseBody extends TeaModel {
             private java.util.List < Sources> sources; 
 
             /**
-             * 流水线配置信息
+             * flow.
              */
             public Builder flow(String flow) {
                 this.flow = flow;
@@ -612,7 +612,7 @@ public class GetPipelineResponseBody extends TeaModel {
             }
 
             /**
-             * 流水线环境变量等
+             * settings.
              */
             public Builder settings(String settings) {
                 this.settings = settings;
@@ -620,7 +620,7 @@ public class GetPipelineResponseBody extends TeaModel {
             }
 
             /**
-             * 代码源
+             * sources.
              */
             public Builder sources(java.util.List < Sources> sources) {
                 this.sources = sources;
@@ -673,7 +673,7 @@ public class GetPipelineResponseBody extends TeaModel {
             private String name; 
 
             /**
-             * 标签id
+             * id.
              */
             public Builder id(Long id) {
                 this.id = id;
@@ -681,7 +681,7 @@ public class GetPipelineResponseBody extends TeaModel {
             }
 
             /**
-             * 标签名称
+             * name.
              */
             public Builder name(String name) {
                 this.name = name;
@@ -830,7 +830,7 @@ public class GetPipelineResponseBody extends TeaModel {
             private Long updateTime; 
 
             /**
-             * 创建时间
+             * createTime.
              */
             public Builder createTime(Long createTime) {
                 this.createTime = createTime;
@@ -838,7 +838,7 @@ public class GetPipelineResponseBody extends TeaModel {
             }
 
             /**
-             * 创建者阿里云账号id
+             * creatorAccountId.
              */
             public Builder creatorAccountId(String creatorAccountId) {
                 this.creatorAccountId = creatorAccountId;
@@ -846,7 +846,7 @@ public class GetPipelineResponseBody extends TeaModel {
             }
 
             /**
-             * 环境id 0 日常环境  1预发环境 2正式环境
+             * envId.
              */
             public Builder envId(Integer envId) {
                 this.envId = envId;
@@ -854,7 +854,7 @@ public class GetPipelineResponseBody extends TeaModel {
             }
 
             /**
-             * 环境名称
+             * envName.
              */
             public Builder envName(String envName) {
                 this.envName = envName;
@@ -862,7 +862,7 @@ public class GetPipelineResponseBody extends TeaModel {
             }
 
             /**
-             * 流水线分组id
+             * groupId.
              */
             public Builder groupId(Long groupId) {
                 this.groupId = groupId;
@@ -870,7 +870,7 @@ public class GetPipelineResponseBody extends TeaModel {
             }
 
             /**
-             * 更新人阿里云账号id
+             * modifierAccountId.
              */
             public Builder modifierAccountId(String modifierAccountId) {
                 this.modifierAccountId = modifierAccountId;
@@ -878,7 +878,7 @@ public class GetPipelineResponseBody extends TeaModel {
             }
 
             /**
-             * 流水线名称
+             * name.
              */
             public Builder name(String name) {
                 this.name = name;
@@ -886,7 +886,7 @@ public class GetPipelineResponseBody extends TeaModel {
             }
 
             /**
-             * 流水线配置
+             * pipelineConfig.
              */
             public Builder pipelineConfig(PipelineConfig pipelineConfig) {
                 this.pipelineConfig = pipelineConfig;
@@ -894,7 +894,7 @@ public class GetPipelineResponseBody extends TeaModel {
             }
 
             /**
-             * 标签
+             * tagList.
              */
             public Builder tagList(java.util.List < TagList> tagList) {
                 this.tagList = tagList;
@@ -902,7 +902,7 @@ public class GetPipelineResponseBody extends TeaModel {
             }
 
             /**
-             * 更新时间
+             * updateTime.
              */
             public Builder updateTime(Long updateTime) {
                 this.updateTime = updateTime;

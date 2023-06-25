@@ -86,7 +86,7 @@ public class GetWorkItemInfoResponseBody extends TeaModel {
         private Workitem workitem; 
 
         /**
-         * 错误码
+         * errorCode.
          */
         public Builder errorCode(String errorCode) {
             this.errorCode = errorCode;
@@ -94,7 +94,7 @@ public class GetWorkItemInfoResponseBody extends TeaModel {
         }
 
         /**
-         * 错误信息
+         * errorMessage.
          */
         public Builder errorMessage(String errorMessage) {
             this.errorMessage = errorMessage;
@@ -102,7 +102,7 @@ public class GetWorkItemInfoResponseBody extends TeaModel {
         }
 
         /**
-         * 请求id，每次请求都是唯一值，便于后续排查问题
+         * requestId.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -110,7 +110,7 @@ public class GetWorkItemInfoResponseBody extends TeaModel {
         }
 
         /**
-         * true或者false
+         * success.
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -118,7 +118,7 @@ public class GetWorkItemInfoResponseBody extends TeaModel {
         }
 
         /**
-         * 工作项信息
+         * workitem.
          */
         public Builder workitem(Workitem workitem) {
             this.workitem = workitem;
@@ -206,7 +206,7 @@ public class GetWorkItemInfoResponseBody extends TeaModel {
             private String valueEn; 
 
             /**
-             * 根据语言环境获取当前展示的值
+             * displayValue.
              */
             public Builder displayValue(String displayValue) {
                 this.displayValue = displayValue;
@@ -214,7 +214,7 @@ public class GetWorkItemInfoResponseBody extends TeaModel {
             }
 
             /**
-             * 字段值为对象类型时，值所对应的对象的唯一标识 例如：option表中的id
+             * identifier.
              */
             public Builder identifier(String identifier) {
                 this.identifier = identifier;
@@ -222,7 +222,7 @@ public class GetWorkItemInfoResponseBody extends TeaModel {
             }
 
             /**
-             * 展示级别，数字范围1~9，数字越大，颜色越浅。
+             * level.
              */
             public Builder level(Long level) {
                 this.level = level;
@@ -230,7 +230,7 @@ public class GetWorkItemInfoResponseBody extends TeaModel {
             }
 
             /**
-             * 字段值
+             * value.
              */
             public Builder value(String value) {
                 this.value = value;
@@ -238,7 +238,7 @@ public class GetWorkItemInfoResponseBody extends TeaModel {
             }
 
             /**
-             * 字段英文值，目前只有列表类有英文值
+             * valueEn.
              */
             public Builder valueEn(String valueEn) {
                 this.valueEn = valueEn;
@@ -375,7 +375,7 @@ public class GetWorkItemInfoResponseBody extends TeaModel {
             private String workitemIdentifier; 
 
             /**
-             * 字段的className，便于数据查询
+             * fieldClassName.
              */
             public Builder fieldClassName(String fieldClassName) {
                 this.fieldClassName = fieldClassName;
@@ -383,7 +383,7 @@ public class GetWorkItemInfoResponseBody extends TeaModel {
             }
 
             /**
-             * 字段格式，便于查询数据
+             * fieldFormat.
              */
             public Builder fieldFormat(String fieldFormat) {
                 this.fieldFormat = fieldFormat;
@@ -391,7 +391,7 @@ public class GetWorkItemInfoResponseBody extends TeaModel {
             }
 
             /**
-             * 字段的唯一标识
+             * fieldIdentifier.
              */
             public Builder fieldIdentifier(String fieldIdentifier) {
                 this.fieldIdentifier = fieldIdentifier;
@@ -399,7 +399,7 @@ public class GetWorkItemInfoResponseBody extends TeaModel {
             }
 
             /**
-             * 展示级别，数字范围1~9，数字越大，颜色越浅。
+             * level.
              */
             public Builder level(Long level) {
                 this.level = level;
@@ -407,7 +407,7 @@ public class GetWorkItemInfoResponseBody extends TeaModel {
             }
 
             /**
-             * 值对象列表
+             * objectValue.
              */
             public Builder objectValue(String objectValue) {
                 this.objectValue = objectValue;
@@ -415,7 +415,7 @@ public class GetWorkItemInfoResponseBody extends TeaModel {
             }
 
             /**
-             * 自定义字段值的position
+             * position.
              */
             public Builder position(Long position) {
                 this.position = position;
@@ -423,7 +423,7 @@ public class GetWorkItemInfoResponseBody extends TeaModel {
             }
 
             /**
-             * 字段值，写入时使用
+             * value.
              */
             public Builder value(String value) {
                 this.value = value;
@@ -431,7 +431,7 @@ public class GetWorkItemInfoResponseBody extends TeaModel {
             }
 
             /**
-             * 值对象列表，查询时使用
+             * valueList.
              */
             public Builder valueList(java.util.List < ValueList> valueList) {
                 this.valueList = valueList;
@@ -439,7 +439,7 @@ public class GetWorkItemInfoResponseBody extends TeaModel {
             }
 
             /**
-             * 工作项的唯一标识
+             * workitemIdentifier.
              */
             public Builder workitemIdentifier(String workitemIdentifier) {
                 this.workitemIdentifier = workitemIdentifier;
@@ -780,7 +780,7 @@ public class GetWorkItemInfoResponseBody extends TeaModel {
             private String workitemTypeIdentifier; 
 
             /**
-             * 负责人
+             * assignedTo.
              */
             public Builder assignedTo(String assignedTo) {
                 this.assignedTo = assignedTo;
@@ -788,7 +788,7 @@ public class GetWorkItemInfoResponseBody extends TeaModel {
             }
 
             /**
-             * 工作项的类型id
+             * categoryIdentifier.
              */
             public Builder categoryIdentifier(String categoryIdentifier) {
                 this.categoryIdentifier = categoryIdentifier;
@@ -796,7 +796,7 @@ public class GetWorkItemInfoResponseBody extends TeaModel {
             }
 
             /**
-             * 创建人
+             * creator.
              */
             public Builder creator(String creator) {
                 this.creator = creator;
@@ -804,7 +804,7 @@ public class GetWorkItemInfoResponseBody extends TeaModel {
             }
 
             /**
-             * 自定义字段列表
+             * customFields.
              */
             public Builder customFields(java.util.List < CustomFields> customFields) {
                 this.customFields = customFields;
@@ -812,7 +812,7 @@ public class GetWorkItemInfoResponseBody extends TeaModel {
             }
 
             /**
-             * 工作项内容
+             * document.
              */
             public Builder document(String document) {
                 this.document = document;
@@ -820,7 +820,7 @@ public class GetWorkItemInfoResponseBody extends TeaModel {
             }
 
             /**
-             * 创建时间
+             * gmtCreate.
              */
             public Builder gmtCreate(Long gmtCreate) {
                 this.gmtCreate = gmtCreate;
@@ -828,7 +828,7 @@ public class GetWorkItemInfoResponseBody extends TeaModel {
             }
 
             /**
-             * 修改时间
+             * gmtModified.
              */
             public Builder gmtModified(Long gmtModified) {
                 this.gmtModified = gmtModified;
@@ -836,7 +836,7 @@ public class GetWorkItemInfoResponseBody extends TeaModel {
             }
 
             /**
-             * 工作项唯一标识
+             * identifier.
              */
             public Builder identifier(String identifier) {
                 this.identifier = identifier;
@@ -844,7 +844,7 @@ public class GetWorkItemInfoResponseBody extends TeaModel {
             }
 
             /**
-             * 逻辑状态
+             * logicalStatus.
              */
             public Builder logicalStatus(String logicalStatus) {
                 this.logicalStatus = logicalStatus;
@@ -852,7 +852,7 @@ public class GetWorkItemInfoResponseBody extends TeaModel {
             }
 
             /**
-             * 修改人
+             * modifier.
              */
             public Builder modifier(String modifier) {
                 this.modifier = modifier;
@@ -860,7 +860,7 @@ public class GetWorkItemInfoResponseBody extends TeaModel {
             }
 
             /**
-             * 父工作项id
+             * parentIdentifier.
              */
             public Builder parentIdentifier(String parentIdentifier) {
                 this.parentIdentifier = parentIdentifier;
@@ -868,7 +868,7 @@ public class GetWorkItemInfoResponseBody extends TeaModel {
             }
 
             /**
-             * 参与人account id列表
+             * participant.
              */
             public Builder participant(java.util.List < String > participant) {
                 this.participant = participant;
@@ -876,7 +876,7 @@ public class GetWorkItemInfoResponseBody extends TeaModel {
             }
 
             /**
-             * 编号
+             * serialNumber.
              */
             public Builder serialNumber(String serialNumber) {
                 this.serialNumber = serialNumber;
@@ -884,7 +884,7 @@ public class GetWorkItemInfoResponseBody extends TeaModel {
             }
 
             /**
-             * 所属项目id
+             * spaceIdentifier.
              */
             public Builder spaceIdentifier(String spaceIdentifier) {
                 this.spaceIdentifier = spaceIdentifier;
@@ -892,7 +892,7 @@ public class GetWorkItemInfoResponseBody extends TeaModel {
             }
 
             /**
-             * 所属项目名称
+             * spaceName.
              */
             public Builder spaceName(String spaceName) {
                 this.spaceName = spaceName;
@@ -900,7 +900,7 @@ public class GetWorkItemInfoResponseBody extends TeaModel {
             }
 
             /**
-             * 项目类型
+             * spaceType.
              */
             public Builder spaceType(String spaceType) {
                 this.spaceType = spaceType;
@@ -908,7 +908,7 @@ public class GetWorkItemInfoResponseBody extends TeaModel {
             }
 
             /**
-             * 关联的迭代id
+             * sprint.
              */
             public Builder sprint(java.util.List < String > sprint) {
                 this.sprint = sprint;
@@ -916,7 +916,7 @@ public class GetWorkItemInfoResponseBody extends TeaModel {
             }
 
             /**
-             * 状态名称
+             * status.
              */
             public Builder status(String status) {
                 this.status = status;
@@ -924,7 +924,7 @@ public class GetWorkItemInfoResponseBody extends TeaModel {
             }
 
             /**
-             * 状态id
+             * statusIdentifier.
              */
             public Builder statusIdentifier(String statusIdentifier) {
                 this.statusIdentifier = statusIdentifier;
@@ -932,7 +932,7 @@ public class GetWorkItemInfoResponseBody extends TeaModel {
             }
 
             /**
-             * 状态阶段id
+             * statusStageIdentifier.
              */
             public Builder statusStageIdentifier(String statusStageIdentifier) {
                 this.statusStageIdentifier = statusStageIdentifier;
@@ -940,7 +940,7 @@ public class GetWorkItemInfoResponseBody extends TeaModel {
             }
 
             /**
-             * 工作项标题
+             * subject.
              */
             public Builder subject(String subject) {
                 this.subject = subject;
@@ -948,7 +948,7 @@ public class GetWorkItemInfoResponseBody extends TeaModel {
             }
 
             /**
-             * 标签id列表
+             * tag.
              */
             public Builder tag(java.util.List < String > tag) {
                 this.tag = tag;
@@ -956,7 +956,7 @@ public class GetWorkItemInfoResponseBody extends TeaModel {
             }
 
             /**
-             * 抄送人的account id列表
+             * tracker.
              */
             public Builder tracker(java.util.List < String > tracker) {
                 this.tracker = tracker;
@@ -964,7 +964,7 @@ public class GetWorkItemInfoResponseBody extends TeaModel {
             }
 
             /**
-             * 状态更新时间
+             * updateStatusAt.
              */
             public Builder updateStatusAt(Long updateStatusAt) {
                 this.updateStatusAt = updateStatusAt;
@@ -972,7 +972,7 @@ public class GetWorkItemInfoResponseBody extends TeaModel {
             }
 
             /**
-             * 验证者的account id列表
+             * verifier.
              */
             public Builder verifier(java.util.List < String > verifier) {
                 this.verifier = verifier;
@@ -980,7 +980,7 @@ public class GetWorkItemInfoResponseBody extends TeaModel {
             }
 
             /**
-             * 工作项类型id
+             * workitemTypeIdentifier.
              */
             public Builder workitemTypeIdentifier(String workitemTypeIdentifier) {
                 this.workitemTypeIdentifier = workitemTypeIdentifier;

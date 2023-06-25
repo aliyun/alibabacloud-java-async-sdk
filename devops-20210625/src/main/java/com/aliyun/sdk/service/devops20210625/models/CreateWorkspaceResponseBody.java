@@ -86,7 +86,7 @@ public class CreateWorkspaceResponseBody extends TeaModel {
         private Workspace workspace; 
 
         /**
-         * 错误码
+         * errorCode.
          */
         public Builder errorCode(String errorCode) {
             this.errorCode = errorCode;
@@ -94,7 +94,7 @@ public class CreateWorkspaceResponseBody extends TeaModel {
         }
 
         /**
-         * 错误信息
+         * errorMessage.
          */
         public Builder errorMessage(String errorMessage) {
             this.errorMessage = errorMessage;
@@ -102,7 +102,7 @@ public class CreateWorkspaceResponseBody extends TeaModel {
         }
 
         /**
-         * 请求ID
+         * requestId.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -110,7 +110,7 @@ public class CreateWorkspaceResponseBody extends TeaModel {
         }
 
         /**
-         * 请求是否成功
+         * success.
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -118,7 +118,7 @@ public class CreateWorkspaceResponseBody extends TeaModel {
         }
 
         /**
-         * 工作空间信息
+         * workspace.
          */
         public Builder workspace(Workspace workspace) {
             this.workspace = workspace;
@@ -218,7 +218,7 @@ public class CreateWorkspaceResponseBody extends TeaModel {
             private String template; 
 
             /**
-             * 创建时间戳
+             * createTime.
              */
             public Builder createTime(String createTime) {
                 this.createTime = createTime;
@@ -226,7 +226,7 @@ public class CreateWorkspaceResponseBody extends TeaModel {
             }
 
             /**
-             * 创建者，阿里云PK
+             * creator.
              */
             public Builder creator(String creator) {
                 this.creator = creator;
@@ -234,7 +234,7 @@ public class CreateWorkspaceResponseBody extends TeaModel {
             }
 
             /**
-             * 工作空间唯一标识，字符串形式，可在云效DevStudio访问空间链接中获取
+             * id.
              */
             public Builder id(String id) {
                 this.id = id;
@@ -242,7 +242,7 @@ public class CreateWorkspaceResponseBody extends TeaModel {
             }
 
             /**
-             * 工作空间名称
+             * name.
              */
             public Builder name(String name) {
                 this.name = name;
@@ -250,7 +250,7 @@ public class CreateWorkspaceResponseBody extends TeaModel {
             }
 
             /**
-             * 空间状态，枚举：CREATING-创建中, SUCCESS-运行中, FROZEN-冻结中, RECOVERING-恢复中
+             * status.
              */
             public Builder status(String status) {
                 this.status = status;
@@ -258,7 +258,7 @@ public class CreateWorkspaceResponseBody extends TeaModel {
             }
 
             /**
-             * 工作空间模板
+             * template.
              */
             public Builder template(String template) {
                 this.template = template;

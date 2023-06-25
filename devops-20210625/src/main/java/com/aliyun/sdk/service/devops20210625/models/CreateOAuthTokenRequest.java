@@ -146,7 +146,7 @@ public class CreateOAuthTokenRequest extends Request {
         }
 
         /**
-         * 当前grantType=code时必传
+         * code.
          */
         public Builder code(String code) {
             this.putBodyParameter("code", code);
@@ -155,7 +155,7 @@ public class CreateOAuthTokenRequest extends Request {
         }
 
         /**
-         * 授权类型：code，token
+         * grantType.
          */
         public Builder grantType(String grantType) {
             this.putBodyParameter("grantType", grantType);
@@ -164,7 +164,7 @@ public class CreateOAuthTokenRequest extends Request {
         }
 
         /**
-         * code = token时必传
+         * login.
          */
         public Builder login(String login) {
             this.putBodyParameter("login", login);
@@ -173,7 +173,7 @@ public class CreateOAuthTokenRequest extends Request {
         }
 
         /**
-         * 授权范围.例如：read:repo,write:repo
+         * scope.
          */
         public Builder scope(String scope) {
             this.putBodyParameter("scope", scope);

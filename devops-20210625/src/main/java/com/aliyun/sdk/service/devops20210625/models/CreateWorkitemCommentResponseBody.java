@@ -439,7 +439,7 @@ public class CreateWorkitemCommentResponseBody extends TeaModel {
             private User user; 
 
             /**
-             * 唯一标识
+             * Id.
              */
             public Builder id(Long id) {
                 this.id = id;
@@ -447,7 +447,7 @@ public class CreateWorkitemCommentResponseBody extends TeaModel {
             }
 
             /**
-             * 内容
+             * content.
              */
             public Builder content(String content) {
                 this.content = content;
@@ -463,7 +463,7 @@ public class CreateWorkitemCommentResponseBody extends TeaModel {
             }
 
             /**
-             * 评论类型
+             * formatType.
              */
             public Builder formatType(String formatType) {
                 this.formatType = formatType;
@@ -471,7 +471,7 @@ public class CreateWorkitemCommentResponseBody extends TeaModel {
             }
 
             /**
-             * 是否置顶
+             * isTop.
              */
             public Builder isTop(Boolean isTop) {
                 this.isTop = isTop;
@@ -511,7 +511,7 @@ public class CreateWorkitemCommentResponseBody extends TeaModel {
             }
 
             /**
-             * 置顶时间
+             * topTime.
              */
             public Builder topTime(Long topTime) {
                 this.topTime = topTime;

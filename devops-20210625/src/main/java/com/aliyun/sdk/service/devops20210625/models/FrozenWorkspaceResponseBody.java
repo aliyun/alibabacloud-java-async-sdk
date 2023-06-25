@@ -74,7 +74,7 @@ public class FrozenWorkspaceResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * 错误码
+         * errorCode.
          */
         public Builder errorCode(String errorCode) {
             this.errorCode = errorCode;
@@ -82,7 +82,7 @@ public class FrozenWorkspaceResponseBody extends TeaModel {
         }
 
         /**
-         * 错误信息
+         * errorMessage.
          */
         public Builder errorMessage(String errorMessage) {
             this.errorMessage = errorMessage;
@@ -90,7 +90,7 @@ public class FrozenWorkspaceResponseBody extends TeaModel {
         }
 
         /**
-         * 请求ID
+         * requestId.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -98,7 +98,7 @@ public class FrozenWorkspaceResponseBody extends TeaModel {
         }
 
         /**
-         * 请求是否成功
+         * success.
          */
         public Builder success(Boolean success) {
             this.success = success;

@@ -86,7 +86,7 @@ public class GetWorkItemWorkFlowInfoResponseBody extends TeaModel {
         private Workflow workflow; 
 
         /**
-         * 错误码
+         * errorCode.
          */
         public Builder errorCode(String errorCode) {
             this.errorCode = errorCode;
@@ -94,7 +94,7 @@ public class GetWorkItemWorkFlowInfoResponseBody extends TeaModel {
         }
 
         /**
-         * 错误信息
+         * errorMessage.
          */
         public Builder errorMessage(String errorMessage) {
             this.errorMessage = errorMessage;
@@ -102,7 +102,7 @@ public class GetWorkItemWorkFlowInfoResponseBody extends TeaModel {
         }
 
         /**
-         * 请求id，每次请求都是唯一值，便于后续排查问题
+         * requestId.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -110,7 +110,7 @@ public class GetWorkItemWorkFlowInfoResponseBody extends TeaModel {
         }
 
         /**
-         * true或者false
+         * success.
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -118,7 +118,7 @@ public class GetWorkItemWorkFlowInfoResponseBody extends TeaModel {
         }
 
         /**
-         * 工作项信息
+         * workflow.
          */
         public Builder workflow(Workflow workflow) {
             this.workflow = workflow;
@@ -278,7 +278,7 @@ public class GetWorkItemWorkFlowInfoResponseBody extends TeaModel {
             private String workflowStageName; 
 
             /**
-             * 创建人
+             * creator.
              */
             public Builder creator(String creator) {
                 this.creator = creator;
@@ -286,7 +286,7 @@ public class GetWorkItemWorkFlowInfoResponseBody extends TeaModel {
             }
 
             /**
-             * 描述信息
+             * description.
              */
             public Builder description(String description) {
                 this.description = description;
@@ -294,7 +294,7 @@ public class GetWorkItemWorkFlowInfoResponseBody extends TeaModel {
             }
 
             /**
-             * 创建时间
+             * gmtCreate.
              */
             public Builder gmtCreate(Long gmtCreate) {
                 this.gmtCreate = gmtCreate;
@@ -302,7 +302,7 @@ public class GetWorkItemWorkFlowInfoResponseBody extends TeaModel {
             }
 
             /**
-             * 修改时间
+             * gmtModified.
              */
             public Builder gmtModified(Long gmtModified) {
                 this.gmtModified = gmtModified;
@@ -310,7 +310,7 @@ public class GetWorkItemWorkFlowInfoResponseBody extends TeaModel {
             }
 
             /**
-             * 状态唯一标识
+             * identifier.
              */
             public Builder identifier(String identifier) {
                 this.identifier = identifier;
@@ -318,7 +318,7 @@ public class GetWorkItemWorkFlowInfoResponseBody extends TeaModel {
             }
 
             /**
-             * 修改人
+             * modifier.
              */
             public Builder modifier(String modifier) {
                 this.modifier = modifier;
@@ -326,7 +326,7 @@ public class GetWorkItemWorkFlowInfoResponseBody extends TeaModel {
             }
 
             /**
-             * 状态名
+             * name.
              */
             public Builder name(String name) {
                 this.name = name;
@@ -334,7 +334,7 @@ public class GetWorkItemWorkFlowInfoResponseBody extends TeaModel {
             }
 
             /**
-             * 资源来源
+             * resourceType.
              */
             public Builder resourceType(String resourceType) {
                 this.resourceType = resourceType;
@@ -342,7 +342,7 @@ public class GetWorkItemWorkFlowInfoResponseBody extends TeaModel {
             }
 
             /**
-             * 状态来源
+             * source.
              */
             public Builder source(String source) {
                 this.source = source;
@@ -350,7 +350,7 @@ public class GetWorkItemWorkFlowInfoResponseBody extends TeaModel {
             }
 
             /**
-             * 阶段信息-阶段的唯一标识
+             * workflowStageIdentifier.
              */
             public Builder workflowStageIdentifier(String workflowStageIdentifier) {
                 this.workflowStageIdentifier = workflowStageIdentifier;
@@ -358,7 +358,7 @@ public class GetWorkItemWorkFlowInfoResponseBody extends TeaModel {
             }
 
             /**
-             * 阶段信息-名称
+             * workflowStageName.
              */
             public Builder workflowStageName(String workflowStageName) {
                 this.workflowStageName = workflowStageName;
@@ -447,7 +447,7 @@ public class GetWorkItemWorkFlowInfoResponseBody extends TeaModel {
             private String workflowStatusIdentifier; 
 
             /**
-             * 流转步骤的id
+             * id.
              */
             public Builder id(Long id) {
                 this.id = id;
@@ -455,7 +455,7 @@ public class GetWorkItemWorkFlowInfoResponseBody extends TeaModel {
             }
 
             /**
-             * action的名称
+             * name.
              */
             public Builder name(String name) {
                 this.name = name;
@@ -463,7 +463,7 @@ public class GetWorkItemWorkFlowInfoResponseBody extends TeaModel {
             }
 
             /**
-             * action对应的下个状态的信息id
+             * nextWorkflowStatusIdentifier.
              */
             public Builder nextWorkflowStatusIdentifier(String nextWorkflowStatusIdentifier) {
                 this.nextWorkflowStatusIdentifier = nextWorkflowStatusIdentifier;
@@ -471,7 +471,7 @@ public class GetWorkItemWorkFlowInfoResponseBody extends TeaModel {
             }
 
             /**
-             * action对应的工作流
+             * workflowIdentifier.
              */
             public Builder workflowIdentifier(String workflowIdentifier) {
                 this.workflowIdentifier = workflowIdentifier;
@@ -479,7 +479,7 @@ public class GetWorkItemWorkFlowInfoResponseBody extends TeaModel {
             }
 
             /**
-             * action对应的当前状态id
+             * workflowStatusIdentifier.
              */
             public Builder workflowStatusIdentifier(String workflowStatusIdentifier) {
                 this.workflowStatusIdentifier = workflowStatusIdentifier;
@@ -688,7 +688,7 @@ public class GetWorkItemWorkFlowInfoResponseBody extends TeaModel {
             private java.util.List < WorkflowActions> workflowActions; 
 
             /**
-             * 创建人
+             * creator.
              */
             public Builder creator(String creator) {
                 this.creator = creator;
@@ -696,7 +696,7 @@ public class GetWorkItemWorkFlowInfoResponseBody extends TeaModel {
             }
 
             /**
-             * 工作流的默认状态
+             * defaultStatusIdentifier.
              */
             public Builder defaultStatusIdentifier(String defaultStatusIdentifier) {
                 this.defaultStatusIdentifier = defaultStatusIdentifier;
@@ -704,7 +704,7 @@ public class GetWorkItemWorkFlowInfoResponseBody extends TeaModel {
             }
 
             /**
-             * 工作流的描述
+             * description.
              */
             public Builder description(String description) {
                 this.description = description;
@@ -712,7 +712,7 @@ public class GetWorkItemWorkFlowInfoResponseBody extends TeaModel {
             }
 
             /**
-             * 创建时间
+             * gmtCreate.
              */
             public Builder gmtCreate(Long gmtCreate) {
                 this.gmtCreate = gmtCreate;
@@ -720,7 +720,7 @@ public class GetWorkItemWorkFlowInfoResponseBody extends TeaModel {
             }
 
             /**
-             * 修改时间
+             * gmtModified.
              */
             public Builder gmtModified(Long gmtModified) {
                 this.gmtModified = gmtModified;
@@ -728,7 +728,7 @@ public class GetWorkItemWorkFlowInfoResponseBody extends TeaModel {
             }
 
             /**
-             * 工作流唯一标识
+             * identifier.
              */
             public Builder identifier(String identifier) {
                 this.identifier = identifier;
@@ -736,7 +736,7 @@ public class GetWorkItemWorkFlowInfoResponseBody extends TeaModel {
             }
 
             /**
-             * 修改人
+             * modifier.
              */
             public Builder modifier(String modifier) {
                 this.modifier = modifier;
@@ -744,7 +744,7 @@ public class GetWorkItemWorkFlowInfoResponseBody extends TeaModel {
             }
 
             /**
-             * 工作流名称
+             * name.
              */
             public Builder name(String name) {
                 this.name = name;
@@ -752,7 +752,7 @@ public class GetWorkItemWorkFlowInfoResponseBody extends TeaModel {
             }
 
             /**
-             * 工作流所属的团队空间或项目的identifier
+             * ownerSpaceIdentifier.
              */
             public Builder ownerSpaceIdentifier(String ownerSpaceIdentifier) {
                 this.ownerSpaceIdentifier = ownerSpaceIdentifier;
@@ -760,7 +760,7 @@ public class GetWorkItemWorkFlowInfoResponseBody extends TeaModel {
             }
 
             /**
-             * 工作流所属的团队项目类型
+             * ownerSpaceType.
              */
             public Builder ownerSpaceType(String ownerSpaceType) {
                 this.ownerSpaceType = ownerSpaceType;
@@ -768,7 +768,7 @@ public class GetWorkItemWorkFlowInfoResponseBody extends TeaModel {
             }
 
             /**
-             * 资源类型
+             * resourceType.
              */
             public Builder resourceType(String resourceType) {
                 this.resourceType = resourceType;
@@ -776,7 +776,7 @@ public class GetWorkItemWorkFlowInfoResponseBody extends TeaModel {
             }
 
             /**
-             * 工作流来源
+             * source.
              */
             public Builder source(String source) {
                 this.source = source;
@@ -784,7 +784,7 @@ public class GetWorkItemWorkFlowInfoResponseBody extends TeaModel {
             }
 
             /**
-             * 工作流的状态顺序
+             * statusOrder.
              */
             public Builder statusOrder(String statusOrder) {
                 this.statusOrder = statusOrder;
@@ -792,7 +792,7 @@ public class GetWorkItemWorkFlowInfoResponseBody extends TeaModel {
             }
 
             /**
-             * 状态列表
+             * statuses.
              */
             public Builder statuses(java.util.List < Statuses> statuses) {
                 this.statuses = statuses;
@@ -800,7 +800,7 @@ public class GetWorkItemWorkFlowInfoResponseBody extends TeaModel {
             }
 
             /**
-             * 工作流的流转步骤
+             * workflowActions.
              */
             public Builder workflowActions(java.util.List < WorkflowActions> workflowActions) {
                 this.workflowActions = workflowActions;

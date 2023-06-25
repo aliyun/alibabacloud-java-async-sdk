@@ -100,7 +100,7 @@ public class ListProjectWorkitemTypesRequest extends Request {
         } 
 
         /**
-         * 企业标识，也称企业id
+         * organizationId.
          */
         public Builder organizationId(String organizationId) {
             this.putPathParameter("organizationId", organizationId);
@@ -109,7 +109,7 @@ public class ListProjectWorkitemTypesRequest extends Request {
         }
 
         /**
-         * 项目id
+         * projectId.
          */
         public Builder projectId(String projectId) {
             this.putPathParameter("projectId", projectId);
@@ -118,7 +118,7 @@ public class ListProjectWorkitemTypesRequest extends Request {
         }
 
         /**
-         * 工作项类型
+         * category.
          */
         public Builder category(String category) {
             this.putQueryParameter("category", category);
@@ -127,7 +127,7 @@ public class ListProjectWorkitemTypesRequest extends Request {
         }
 
         /**
-         * 空间类型
+         * spaceType.
          */
         public Builder spaceType(String spaceType) {
             this.putQueryParameter("spaceType", spaceType);

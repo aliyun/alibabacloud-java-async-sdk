@@ -154,7 +154,7 @@ public class ListPipelineRunsRequest extends Request {
         } 
 
         /**
-         * 企业标识，也称企业id，字符串形式，可在云效访问链接中获取，如  https:// devops.aliyun.com/organization/【OrgId】
+         * organizationId.
          */
         public Builder organizationId(String organizationId) {
             this.putPathParameter("organizationId", organizationId);
@@ -163,7 +163,7 @@ public class ListPipelineRunsRequest extends Request {
         }
 
         /**
-         * 流水线id
+         * pipelineId.
          */
         public Builder pipelineId(Long pipelineId) {
             this.putPathParameter("pipelineId", pipelineId);
@@ -172,7 +172,7 @@ public class ListPipelineRunsRequest extends Request {
         }
 
         /**
-         * 结束时间
+         * endTime.
          */
         public Builder endTime(Long endTime) {
             this.putQueryParameter("endTime", endTime);
@@ -181,7 +181,7 @@ public class ListPipelineRunsRequest extends Request {
         }
 
         /**
-         * 最大返回数量
+         * maxResults.
          */
         public Builder maxResults(Long maxResults) {
             this.putQueryParameter("maxResults", maxResults);
@@ -190,7 +190,7 @@ public class ListPipelineRunsRequest extends Request {
         }
 
         /**
-         * 分页Token
+         * nextToken.
          */
         public Builder nextToken(String nextToken) {
             this.putQueryParameter("nextToken", nextToken);
@@ -199,7 +199,7 @@ public class ListPipelineRunsRequest extends Request {
         }
 
         /**
-         * 开始时间
+         * startTime.
          */
         public Builder startTime(Long startTime) {
             this.putQueryParameter("startTime", startTime);
@@ -208,7 +208,7 @@ public class ListPipelineRunsRequest extends Request {
         }
 
         /**
-         * 状态 状态 FAIL 运行失败 SUCCESS 运行成功 RUNNING 运行中
+         * status.
          */
         public Builder status(String status) {
             this.putQueryParameter("status", status);
@@ -217,7 +217,7 @@ public class ListPipelineRunsRequest extends Request {
         }
 
         /**
-         * 触发模式 1人工触发 2定时触发 3代码提交触发
+         * triggerMode.
          */
         public Builder triggerMode(Integer triggerMode) {
             this.putQueryParameter("triggerMode", triggerMode);

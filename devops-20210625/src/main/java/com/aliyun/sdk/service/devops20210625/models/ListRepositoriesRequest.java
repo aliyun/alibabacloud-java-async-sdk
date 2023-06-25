@@ -153,7 +153,7 @@ public class ListRepositoriesRequest extends Request {
         } 
 
         /**
-         * accessToken
+         * accessToken.
          */
         public Builder accessToken(String accessToken) {
             this.putQueryParameter("accessToken", accessToken);
@@ -162,7 +162,7 @@ public class ListRepositoriesRequest extends Request {
         }
 
         /**
-         * 是否列出归档项目
+         * archived.
          */
         public Builder archived(Boolean archived) {
             this.putQueryParameter("archived", archived);
@@ -171,7 +171,7 @@ public class ListRepositoriesRequest extends Request {
         }
 
         /**
-         * 排序字段
+         * orderBy.
          */
         public Builder orderBy(String orderBy) {
             this.putQueryParameter("orderBy", orderBy);
@@ -180,7 +180,7 @@ public class ListRepositoriesRequest extends Request {
         }
 
         /**
-         * 企业ID
+         * organizationId.
          */
         public Builder organizationId(String organizationId) {
             this.putQueryParameter("organizationId", organizationId);
@@ -189,7 +189,7 @@ public class ListRepositoriesRequest extends Request {
         }
 
         /**
-         * 页码
+         * page.
          */
         public Builder page(Long page) {
             this.putQueryParameter("page", page);
@@ -198,7 +198,7 @@ public class ListRepositoriesRequest extends Request {
         }
 
         /**
-         * 每页大小
+         * perPage.
          */
         public Builder perPage(Long perPage) {
             this.putQueryParameter("perPage", perPage);
@@ -207,7 +207,7 @@ public class ListRepositoriesRequest extends Request {
         }
 
         /**
-         * 搜索关键字
+         * search.
          */
         public Builder search(String search) {
             this.putQueryParameter("search", search);
@@ -216,7 +216,7 @@ public class ListRepositoriesRequest extends Request {
         }
 
         /**
-         * 排序方式 (desc: 降序, asc: 升序)
+         * sort.
          */
         public Builder sort(String sort) {
             this.putQueryParameter("sort", sort);

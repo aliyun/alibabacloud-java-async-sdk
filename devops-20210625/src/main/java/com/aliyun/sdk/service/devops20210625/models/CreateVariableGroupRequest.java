@@ -99,7 +99,7 @@ public class CreateVariableGroupRequest extends Request {
         } 
 
         /**
-         * 企业标识，也称企业id，字符串形式，可在云效访问链接中获取，如 https:// devops.aliyun.com/organization/【OrgId】
+         * organizationId.
          */
         public Builder organizationId(String organizationId) {
             this.putPathParameter("organizationId", organizationId);
@@ -108,7 +108,7 @@ public class CreateVariableGroupRequest extends Request {
         }
 
         /**
-         * 变量组描述
+         * description.
          */
         public Builder description(String description) {
             this.putBodyParameter("description", description);
@@ -117,7 +117,7 @@ public class CreateVariableGroupRequest extends Request {
         }
 
         /**
-         * 变量组名称
+         * name.
          */
         public Builder name(String name) {
             this.putBodyParameter("name", name);
@@ -126,7 +126,7 @@ public class CreateVariableGroupRequest extends Request {
         }
 
         /**
-         * 变量信息json字符串 isEncrypted 是否加密 name 变量名称 value 变量值
+         * variables.
          */
         public Builder variables(String variables) {
             this.putBodyParameter("variables", variables);

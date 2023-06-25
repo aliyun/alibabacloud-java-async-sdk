@@ -96,7 +96,7 @@ public class ListWorkspacesRequest extends Request {
         } 
 
         /**
-         * 本次读取的最大数据记录数量，默认10，最大100
+         * maxResults.
          */
         public Builder maxResults(Integer maxResults) {
             this.putQueryParameter("maxResults", maxResults);
@@ -105,7 +105,7 @@ public class ListWorkspacesRequest extends Request {
         }
 
         /**
-         * 用来标记当前开始读取的位置，置空表示从头开始
+         * nextToken.
          */
         public Builder nextToken(String nextToken) {
             this.putQueryParameter("nextToken", nextToken);
@@ -114,7 +114,7 @@ public class ListWorkspacesRequest extends Request {
         }
 
         /**
-         * 枚举值：CREATING-创建中, SUCCESS-运行中, FROZEN-冻结中, RECOVERING-恢复中
+         * statusList.
          */
         public Builder statusList(java.util.List < String > statusList) {
             String statusListShrink = shrink(statusList, "statusList", "simple");
@@ -124,7 +124,7 @@ public class ListWorkspacesRequest extends Request {
         }
 
         /**
-         * 空间模板列表
+         * workspaceTemplateList.
          */
         public Builder workspaceTemplateList(java.util.List < String > workspaceTemplateList) {
             String workspaceTemplateListShrink = shrink(workspaceTemplateList, "workspaceTemplateList", "simple");

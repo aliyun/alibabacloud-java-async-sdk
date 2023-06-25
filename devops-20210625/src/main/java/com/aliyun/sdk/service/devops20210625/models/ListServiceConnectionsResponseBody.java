@@ -86,7 +86,7 @@ public class ListServiceConnectionsResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * 错误码
+         * errorCode.
          */
         public Builder errorCode(String errorCode) {
             this.errorCode = errorCode;
@@ -94,7 +94,7 @@ public class ListServiceConnectionsResponseBody extends TeaModel {
         }
 
         /**
-         * 错误信息
+         * errorMessage.
          */
         public Builder errorMessage(String errorMessage) {
             this.errorMessage = errorMessage;
@@ -102,7 +102,7 @@ public class ListServiceConnectionsResponseBody extends TeaModel {
         }
 
         /**
-         * 请求id，每次请求都是唯一值，便于后续排查问题
+         * requestId.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -110,7 +110,7 @@ public class ListServiceConnectionsResponseBody extends TeaModel {
         }
 
         /**
-         * 服务连接
+         * serviceConnections.
          */
         public Builder serviceConnections(java.util.List < ServiceConnections> serviceConnections) {
             this.serviceConnections = serviceConnections;
@@ -118,7 +118,7 @@ public class ListServiceConnectionsResponseBody extends TeaModel {
         }
 
         /**
-         * true 接口调用成功，false 接口调用失败
+         * success.
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -206,7 +206,7 @@ public class ListServiceConnectionsResponseBody extends TeaModel {
             private String type; 
 
             /**
-             * 创建时间
+             * createTime.
              */
             public Builder createTime(Long createTime) {
                 this.createTime = createTime;
@@ -214,7 +214,7 @@ public class ListServiceConnectionsResponseBody extends TeaModel {
             }
 
             /**
-             * 服务连接Id
+             * id.
              */
             public Builder id(Long id) {
                 this.id = id;
@@ -222,7 +222,7 @@ public class ListServiceConnectionsResponseBody extends TeaModel {
             }
 
             /**
-             * 服务连接名称
+             * name.
              */
             public Builder name(String name) {
                 this.name = name;
@@ -230,7 +230,7 @@ public class ListServiceConnectionsResponseBody extends TeaModel {
             }
 
             /**
-             * 拥有者阿里云账号id
+             * ownerAccountId.
              */
             public Builder ownerAccountId(Long ownerAccountId) {
                 this.ownerAccountId = ownerAccountId;
@@ -238,7 +238,7 @@ public class ListServiceConnectionsResponseBody extends TeaModel {
             }
 
             /**
-             * 服务连接类型
+             * type.
              */
             public Builder type(String type) {
                 this.type = type;

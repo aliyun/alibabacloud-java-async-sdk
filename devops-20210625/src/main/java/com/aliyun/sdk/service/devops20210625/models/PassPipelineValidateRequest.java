@@ -100,7 +100,7 @@ public class PassPipelineValidateRequest extends Request {
         } 
 
         /**
-         * 企业标识，也称企业id，字符串形式，可在云效访问链接中获取，如https://devops.aliyun.com/organization/【OrganizationId】
+         * organizationId.
          */
         public Builder organizationId(String organizationId) {
             this.putPathParameter("organizationId", organizationId);
@@ -109,7 +109,7 @@ public class PassPipelineValidateRequest extends Request {
         }
 
         /**
-         * 流水线ID，可在流水线链接中获取，如https://flow.aliyun.com/pipelines/【PipelineId】/current
+         * pipelineId.
          */
         public Builder pipelineId(Long pipelineId) {
             this.putPathParameter("pipelineId", pipelineId);
@@ -118,7 +118,7 @@ public class PassPipelineValidateRequest extends Request {
         }
 
         /**
-         * 流水线运行实例id
+         * pipelineRunId.
          */
         public Builder pipelineRunId(Long pipelineRunId) {
             this.putPathParameter("pipelineRunId", pipelineRunId);
@@ -127,7 +127,7 @@ public class PassPipelineValidateRequest extends Request {
         }
 
         /**
-         * 1111
+         * jobId.
          */
         public Builder jobId(String jobId) {
             this.putPathParameter("jobId", jobId);

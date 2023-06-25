@@ -100,7 +100,7 @@ public class StopPipelineJobRunRequest extends Request {
         } 
 
         /**
-         * 企业标识，也称企业id，字符串形式，可在云效访问链接中获取，如 https:// devops.aliyun.com/organization/【OrgId】
+         * organizationId.
          */
         public Builder organizationId(String organizationId) {
             this.putPathParameter("organizationId", organizationId);
@@ -109,7 +109,7 @@ public class StopPipelineJobRunRequest extends Request {
         }
 
         /**
-         * 流水线ID，可在流水线链接中获取，如 https:// flow.aliyun.com/pipelines/【PipelineId】/current
+         * pipelineId.
          */
         public Builder pipelineId(Long pipelineId) {
             this.putPathParameter("pipelineId", pipelineId);
@@ -118,7 +118,7 @@ public class StopPipelineJobRunRequest extends Request {
         }
 
         /**
-         * 流水线运行实例id
+         * pipelineRunId.
          */
         public Builder pipelineRunId(Long pipelineRunId) {
             this.putPathParameter("pipelineRunId", pipelineRunId);
@@ -127,7 +127,7 @@ public class StopPipelineJobRunRequest extends Request {
         }
 
         /**
-         * 流水线运行任务Id
+         * jobId.
          */
         public Builder jobId(Long jobId) {
             this.putPathParameter("jobId", jobId);

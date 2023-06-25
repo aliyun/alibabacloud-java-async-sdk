@@ -110,7 +110,7 @@ public class ListHostGroupsResponseBody extends TeaModel {
         private Long totalCount; 
 
         /**
-         * 错误码
+         * errorCode.
          */
         public Builder errorCode(String errorCode) {
             this.errorCode = errorCode;
@@ -118,7 +118,7 @@ public class ListHostGroupsResponseBody extends TeaModel {
         }
 
         /**
-         * 错误信息
+         * errorMessage.
          */
         public Builder errorMessage(String errorMessage) {
             this.errorMessage = errorMessage;
@@ -126,7 +126,7 @@ public class ListHostGroupsResponseBody extends TeaModel {
         }
 
         /**
-         * 主机组
+         * hostGroups.
          */
         public Builder hostGroups(java.util.List < HostGroups> hostGroups) {
             this.hostGroups = hostGroups;
@@ -134,7 +134,7 @@ public class ListHostGroupsResponseBody extends TeaModel {
         }
 
         /**
-         * 分页token,空表示最后一页
+         * nextToken.
          */
         public Builder nextToken(String nextToken) {
             this.nextToken = nextToken;
@@ -142,7 +142,7 @@ public class ListHostGroupsResponseBody extends TeaModel {
         }
 
         /**
-         * 请求id，每次请求都是唯一值，便于后续排查问题
+         * requestId.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -150,7 +150,7 @@ public class ListHostGroupsResponseBody extends TeaModel {
         }
 
         /**
-         * true 接口调用成功，false 接口调用失败
+         * success.
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -158,7 +158,7 @@ public class ListHostGroupsResponseBody extends TeaModel {
         }
 
         /**
-         * 总数
+         * totalCount.
          */
         public Builder totalCount(Long totalCount) {
             this.totalCount = totalCount;
@@ -354,7 +354,7 @@ public class ListHostGroupsResponseBody extends TeaModel {
             private Long updateTime; 
 
             /**
-             * 阿里云区域
+             * aliyunRegion.
              */
             public Builder aliyunRegion(String aliyunRegion) {
                 this.aliyunRegion = aliyunRegion;
@@ -362,7 +362,7 @@ public class ListHostGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * 主机时间
+             * createTime.
              */
             public Builder createTime(Long createTime) {
                 this.createTime = createTime;
@@ -370,7 +370,7 @@ public class ListHostGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * 创建人阿里云账号id
+             * creatorAccountId.
              */
             public Builder creatorAccountId(String creatorAccountId) {
                 this.creatorAccountId = creatorAccountId;
@@ -378,7 +378,7 @@ public class ListHostGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * 描述
+             * description.
              */
             public Builder description(String description) {
                 this.description = description;
@@ -386,7 +386,7 @@ public class ListHostGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * ecs标签Key
+             * ecsLabelKey.
              */
             public Builder ecsLabelKey(String ecsLabelKey) {
                 this.ecsLabelKey = ecsLabelKey;
@@ -394,7 +394,7 @@ public class ListHostGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * Ecs标签值
+             * ecsLabelValue.
              */
             public Builder ecsLabelValue(String ecsLabelValue) {
                 this.ecsLabelValue = ecsLabelValue;
@@ -402,7 +402,7 @@ public class ListHostGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * 主机类型
+             * ecsType.
              */
             public Builder ecsType(String ecsType) {
                 this.ecsType = ecsType;
@@ -410,7 +410,7 @@ public class ListHostGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * 主机个数
+             * hostNum.
              */
             public Builder hostNum(Long hostNum) {
                 this.hostNum = hostNum;
@@ -426,7 +426,7 @@ public class ListHostGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * 修改人阿里云账号id
+             * modifierAccountId.
              */
             public Builder modifierAccountId(String modifierAccountId) {
                 this.modifierAccountId = modifierAccountId;
@@ -434,7 +434,7 @@ public class ListHostGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * 部署组名称
+             * name.
              */
             public Builder name(String name) {
                 this.name = name;
@@ -442,7 +442,7 @@ public class ListHostGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * 服务连接Id
+             * serviceConnectionId.
              */
             public Builder serviceConnectionId(Long serviceConnectionId) {
                 this.serviceConnectionId = serviceConnectionId;
@@ -450,7 +450,7 @@ public class ListHostGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * 类型
+             * type.
              */
             public Builder type(String type) {
                 this.type = type;
@@ -458,7 +458,7 @@ public class ListHostGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * 更新时间
+             * updateTime.
              */
             public Builder updateTime(Long updateTime) {
                 this.updateTime = updateTime;

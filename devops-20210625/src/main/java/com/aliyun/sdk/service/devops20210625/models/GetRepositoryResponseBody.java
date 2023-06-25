@@ -86,7 +86,7 @@ public class GetRepositoryResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * 错误码
+         * errorCode.
          */
         public Builder errorCode(String errorCode) {
             this.errorCode = errorCode;
@@ -94,7 +94,7 @@ public class GetRepositoryResponseBody extends TeaModel {
         }
 
         /**
-         * 错误信息
+         * errorMessage.
          */
         public Builder errorMessage(String errorMessage) {
             this.errorMessage = errorMessage;
@@ -102,7 +102,7 @@ public class GetRepositoryResponseBody extends TeaModel {
         }
 
         /**
-         * 代码库信息
+         * repository.
          */
         public Builder repository(Repository repository) {
             this.repository = repository;
@@ -110,7 +110,7 @@ public class GetRepositoryResponseBody extends TeaModel {
         }
 
         /**
-         * 请求ID
+         * requestId.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -118,7 +118,7 @@ public class GetRepositoryResponseBody extends TeaModel {
         }
 
         /**
-         * 请求是否成功
+         * success.
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -254,7 +254,7 @@ public class GetRepositoryResponseBody extends TeaModel {
             private Integer visibilityLevel; 
 
             /**
-             * 头像地址
+             * avatar.
              */
             public Builder avatar(String avatar) {
                 this.avatar = avatar;
@@ -262,7 +262,7 @@ public class GetRepositoryResponseBody extends TeaModel {
             }
 
             /**
-             * 创建时间
+             * createdAt.
              */
             public Builder createdAt(String createdAt) {
                 this.createdAt = createdAt;
@@ -270,7 +270,7 @@ public class GetRepositoryResponseBody extends TeaModel {
             }
 
             /**
-             * 描述
+             * description.
              */
             public Builder description(String description) {
                 this.description = description;
@@ -286,7 +286,7 @@ public class GetRepositoryResponseBody extends TeaModel {
             }
 
             /**
-             * 名称
+             * name.
              */
             public Builder name(String name) {
                 this.name = name;
@@ -294,7 +294,7 @@ public class GetRepositoryResponseBody extends TeaModel {
             }
 
             /**
-             * 归属者ID
+             * ownerId.
              */
             public Builder ownerId(Long ownerId) {
                 this.ownerId = ownerId;
@@ -302,7 +302,7 @@ public class GetRepositoryResponseBody extends TeaModel {
             }
 
             /**
-             * 路径
+             * path.
              */
             public Builder path(String path) {
                 this.path = path;
@@ -310,7 +310,7 @@ public class GetRepositoryResponseBody extends TeaModel {
             }
 
             /**
-             * 更新时间
+             * updatedAt.
              */
             public Builder updatedAt(String updatedAt) {
                 this.updatedAt = updatedAt;
@@ -318,7 +318,7 @@ public class GetRepositoryResponseBody extends TeaModel {
             }
 
             /**
-             * 可见性。0：私有，10：内部公开
+             * visibilityLevel.
              */
             public Builder visibilityLevel(Integer visibilityLevel) {
                 this.visibilityLevel = visibilityLevel;
@@ -563,7 +563,7 @@ public class GetRepositoryResponseBody extends TeaModel {
             private String webUrl; 
 
             /**
-             * 归档标识
+             * archive.
              */
             public Builder archive(Boolean archive) {
                 this.archive = archive;
@@ -571,7 +571,7 @@ public class GetRepositoryResponseBody extends TeaModel {
             }
 
             /**
-             * 代码库头像地址
+             * avatarUrl.
              */
             public Builder avatarUrl(String avatarUrl) {
                 this.avatarUrl = avatarUrl;
@@ -579,7 +579,7 @@ public class GetRepositoryResponseBody extends TeaModel {
             }
 
             /**
-             * 创建时间
+             * createdAt.
              */
             public Builder createdAt(String createdAt) {
                 this.createdAt = createdAt;
@@ -587,7 +587,7 @@ public class GetRepositoryResponseBody extends TeaModel {
             }
 
             /**
-             * 创建者ID
+             * creatorId.
              */
             public Builder creatorId(Long creatorId) {
                 this.creatorId = creatorId;
@@ -595,7 +595,7 @@ public class GetRepositoryResponseBody extends TeaModel {
             }
 
             /**
-             * 默认分支
+             * defaultBranch.
              */
             public Builder defaultBranch(String defaultBranch) {
                 this.defaultBranch = defaultBranch;
@@ -603,7 +603,7 @@ public class GetRepositoryResponseBody extends TeaModel {
             }
 
             /**
-             * DEMO库标识
+             * demoProjectStatus.
              */
             public Builder demoProjectStatus(Boolean demoProjectStatus) {
                 this.demoProjectStatus = demoProjectStatus;
@@ -611,7 +611,7 @@ public class GetRepositoryResponseBody extends TeaModel {
             }
 
             /**
-             * 描述
+             * description.
              */
             public Builder description(String description) {
                 this.description = description;
@@ -619,7 +619,7 @@ public class GetRepositoryResponseBody extends TeaModel {
             }
 
             /**
-             * HTTP克隆地址
+             * httpUrlToRepository.
              */
             public Builder httpUrlToRepository(String httpUrlToRepository) {
                 this.httpUrlToRepository = httpUrlToRepository;
@@ -627,7 +627,7 @@ public class GetRepositoryResponseBody extends TeaModel {
             }
 
             /**
-             * 代码库ID
+             * id
              */
             public Builder id(Long id) {
                 this.id = id;
@@ -635,7 +635,7 @@ public class GetRepositoryResponseBody extends TeaModel {
             }
 
             /**
-             * 最后活跃时间
+             * lastActivityAt.
              */
             public Builder lastActivityAt(String lastActivityAt) {
                 this.lastActivityAt = lastActivityAt;
@@ -643,7 +643,7 @@ public class GetRepositoryResponseBody extends TeaModel {
             }
 
             /**
-             * 名称
+             * name.
              */
             public Builder name(String name) {
                 this.name = name;
@@ -651,7 +651,7 @@ public class GetRepositoryResponseBody extends TeaModel {
             }
 
             /**
-             * 名称（含父名称）
+             * nameWithNamespace.
              */
             public Builder nameWithNamespace(String nameWithNamespace) {
                 this.nameWithNamespace = nameWithNamespace;
@@ -659,7 +659,7 @@ public class GetRepositoryResponseBody extends TeaModel {
             }
 
             /**
-             * 父空间
+             * namespace.
              */
             public Builder namespace(Namespace namespace) {
                 this.namespace = namespace;
@@ -667,7 +667,7 @@ public class GetRepositoryResponseBody extends TeaModel {
             }
 
             /**
-             * 路径
+             * path.
              */
             public Builder path(String path) {
                 this.path = path;
@@ -675,7 +675,7 @@ public class GetRepositoryResponseBody extends TeaModel {
             }
 
             /**
-             * 路径（含父路径）
+             * pathWithNamespace.
              */
             public Builder pathWithNamespace(String pathWithNamespace) {
                 this.pathWithNamespace = pathWithNamespace;
@@ -683,7 +683,7 @@ public class GetRepositoryResponseBody extends TeaModel {
             }
 
             /**
-             * SSH克隆地址
+             * sshUrlToRepository.
              */
             public Builder sshUrlToRepository(String sshUrlToRepository) {
                 this.sshUrlToRepository = sshUrlToRepository;
@@ -691,7 +691,7 @@ public class GetRepositoryResponseBody extends TeaModel {
             }
 
             /**
-             * 可见性。0：私有，10：内部公开
+             * visibilityLevel.
              */
             public Builder visibilityLevel(Integer visibilityLevel) {
                 this.visibilityLevel = visibilityLevel;
@@ -699,7 +699,7 @@ public class GetRepositoryResponseBody extends TeaModel {
             }
 
             /**
-             * 页面访问地址
+             * webUrl.
              */
             public Builder webUrl(String webUrl) {
                 this.webUrl = webUrl;

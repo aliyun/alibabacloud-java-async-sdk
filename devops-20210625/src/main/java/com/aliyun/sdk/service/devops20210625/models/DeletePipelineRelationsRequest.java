@@ -100,7 +100,7 @@ public class DeletePipelineRelationsRequest extends Request {
         } 
 
         /**
-         * 企业标识，也称企业id，字符串形式，可在云效访问链接中获取，如  https:// devops.aliyun.com/organization/【OrgId】
+         * organizationId.
          */
         public Builder organizationId(String organizationId) {
             this.putPathParameter("organizationId", organizationId);
@@ -109,7 +109,7 @@ public class DeletePipelineRelationsRequest extends Request {
         }
 
         /**
-         * 流水线ID，可在流水线链接中获取，如https://flow.aliyun.com/pipelines/【PipelineId】/current
+         * pipelineId.
          */
         public Builder pipelineId(Long pipelineId) {
             this.putPathParameter("pipelineId", pipelineId);
@@ -118,7 +118,7 @@ public class DeletePipelineRelationsRequest extends Request {
         }
 
         /**
-         * 关联的资源id，目前只支持变量组id
+         * relObjectId.
          */
         public Builder relObjectId(String relObjectId) {
             this.putQueryParameter("relObjectId", relObjectId);
@@ -127,7 +127,7 @@ public class DeletePipelineRelationsRequest extends Request {
         }
 
         /**
-         * 关联的资源类型，目前只支持VARIABLE_GROUP
+         * relObjectType.
          */
         public Builder relObjectType(String relObjectType) {
             this.putQueryParameter("relObjectType", relObjectType);

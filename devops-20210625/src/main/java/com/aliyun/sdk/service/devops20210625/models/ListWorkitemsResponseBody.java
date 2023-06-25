@@ -122,7 +122,7 @@ public class ListWorkitemsResponseBody extends TeaModel {
         private java.util.List < Workitems> workitems; 
 
         /**
-         * 错误码
+         * errorCode.
          */
         public Builder errorCode(String errorCode) {
             this.errorCode = errorCode;
@@ -130,7 +130,7 @@ public class ListWorkitemsResponseBody extends TeaModel {
         }
 
         /**
-         * 错误信息
+         * errorMsg.
          */
         public Builder errorMsg(String errorMsg) {
             this.errorMsg = errorMsg;
@@ -138,7 +138,7 @@ public class ListWorkitemsResponseBody extends TeaModel {
         }
 
         /**
-         * 每页数量
+         * maxResults.
          */
         public Builder maxResults(Long maxResults) {
             this.maxResults = maxResults;
@@ -146,7 +146,7 @@ public class ListWorkitemsResponseBody extends TeaModel {
         }
 
         /**
-         * 分页Token，没有下一页则为空
+         * nextToken.
          */
         public Builder nextToken(String nextToken) {
             this.nextToken = nextToken;
@@ -154,7 +154,7 @@ public class ListWorkitemsResponseBody extends TeaModel {
         }
 
         /**
-         * 请求id，每次请求都是唯一值，便于后续排查问题
+         * requestId.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -162,7 +162,7 @@ public class ListWorkitemsResponseBody extends TeaModel {
         }
 
         /**
-         * true或者false
+         * success.
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -170,7 +170,7 @@ public class ListWorkitemsResponseBody extends TeaModel {
         }
 
         /**
-         * 总数
+         * totalCount.
          */
         public Builder totalCount(Long totalCount) {
             this.totalCount = totalCount;
@@ -178,7 +178,7 @@ public class ListWorkitemsResponseBody extends TeaModel {
         }
 
         /**
-         * 工作项信息
+         * workitems.
          */
         public Builder workitems(java.util.List < Workitems> workitems) {
             this.workitems = workitems;
@@ -458,7 +458,7 @@ public class ListWorkitemsResponseBody extends TeaModel {
             private String workitemTypeIdentifier; 
 
             /**
-             * 负责人aliyunPk
+             * assignedTo.
              */
             public Builder assignedTo(String assignedTo) {
                 this.assignedTo = assignedTo;
@@ -466,7 +466,7 @@ public class ListWorkitemsResponseBody extends TeaModel {
             }
 
             /**
-             * 工作项的类型id
+             * categoryIdentifier.
              */
             public Builder categoryIdentifier(String categoryIdentifier) {
                 this.categoryIdentifier = categoryIdentifier;
@@ -474,7 +474,7 @@ public class ListWorkitemsResponseBody extends TeaModel {
             }
 
             /**
-             * 创建人aliyunPK
+             * creator.
              */
             public Builder creator(String creator) {
                 this.creator = creator;
@@ -482,7 +482,7 @@ public class ListWorkitemsResponseBody extends TeaModel {
             }
 
             /**
-             * 工作项内容
+             * document.
              */
             public Builder document(String document) {
                 this.document = document;
@@ -490,7 +490,7 @@ public class ListWorkitemsResponseBody extends TeaModel {
             }
 
             /**
-             * 创建时间
+             * gmtCreate.
              */
             public Builder gmtCreate(Long gmtCreate) {
                 this.gmtCreate = gmtCreate;
@@ -498,7 +498,7 @@ public class ListWorkitemsResponseBody extends TeaModel {
             }
 
             /**
-             * 修改时间
+             * gmtModified.
              */
             public Builder gmtModified(Long gmtModified) {
                 this.gmtModified = gmtModified;
@@ -506,7 +506,7 @@ public class ListWorkitemsResponseBody extends TeaModel {
             }
 
             /**
-             * 工作项唯一标识
+             * identifier.
              */
             public Builder identifier(String identifier) {
                 this.identifier = identifier;
@@ -514,7 +514,7 @@ public class ListWorkitemsResponseBody extends TeaModel {
             }
 
             /**
-             * 逻辑状态
+             * logicalStatus.
              */
             public Builder logicalStatus(String logicalStatus) {
                 this.logicalStatus = logicalStatus;
@@ -522,7 +522,7 @@ public class ListWorkitemsResponseBody extends TeaModel {
             }
 
             /**
-             * 修改人aliyunPK
+             * modifier.
              */
             public Builder modifier(String modifier) {
                 this.modifier = modifier;
@@ -530,7 +530,7 @@ public class ListWorkitemsResponseBody extends TeaModel {
             }
 
             /**
-             * 父工作项id
+             * parentIdentifier.
              */
             public Builder parentIdentifier(String parentIdentifier) {
                 this.parentIdentifier = parentIdentifier;
@@ -538,7 +538,7 @@ public class ListWorkitemsResponseBody extends TeaModel {
             }
 
             /**
-             * 编号
+             * serialNumber.
              */
             public Builder serialNumber(String serialNumber) {
                 this.serialNumber = serialNumber;
@@ -546,7 +546,7 @@ public class ListWorkitemsResponseBody extends TeaModel {
             }
 
             /**
-             * 所属项目id
+             * spaceIdentifier.
              */
             public Builder spaceIdentifier(String spaceIdentifier) {
                 this.spaceIdentifier = spaceIdentifier;
@@ -554,7 +554,7 @@ public class ListWorkitemsResponseBody extends TeaModel {
             }
 
             /**
-             * 所属项目名称
+             * spaceName.
              */
             public Builder spaceName(String spaceName) {
                 this.spaceName = spaceName;
@@ -562,7 +562,7 @@ public class ListWorkitemsResponseBody extends TeaModel {
             }
 
             /**
-             * 项目类型
+             * spaceType.
              */
             public Builder spaceType(String spaceType) {
                 this.spaceType = spaceType;
@@ -570,7 +570,7 @@ public class ListWorkitemsResponseBody extends TeaModel {
             }
 
             /**
-             * 迭代id
+             * sprintIdentifier.
              */
             public Builder sprintIdentifier(String sprintIdentifier) {
                 this.sprintIdentifier = sprintIdentifier;
@@ -578,7 +578,7 @@ public class ListWorkitemsResponseBody extends TeaModel {
             }
 
             /**
-             * 状态名称
+             * status.
              */
             public Builder status(String status) {
                 this.status = status;
@@ -586,7 +586,7 @@ public class ListWorkitemsResponseBody extends TeaModel {
             }
 
             /**
-             * 状态唯一标识
+             * statusIdentifier.
              */
             public Builder statusIdentifier(String statusIdentifier) {
                 this.statusIdentifier = statusIdentifier;
@@ -594,7 +594,7 @@ public class ListWorkitemsResponseBody extends TeaModel {
             }
 
             /**
-             * 状态阶段id
+             * statusStageIdentifier.
              */
             public Builder statusStageIdentifier(String statusStageIdentifier) {
                 this.statusStageIdentifier = statusStageIdentifier;
@@ -602,7 +602,7 @@ public class ListWorkitemsResponseBody extends TeaModel {
             }
 
             /**
-             * 工作项标题
+             * subject.
              */
             public Builder subject(String subject) {
                 this.subject = subject;
@@ -610,7 +610,7 @@ public class ListWorkitemsResponseBody extends TeaModel {
             }
 
             /**
-             * 状态更新时间
+             * updateStatusAt.
              */
             public Builder updateStatusAt(Long updateStatusAt) {
                 this.updateStatusAt = updateStatusAt;
@@ -618,7 +618,7 @@ public class ListWorkitemsResponseBody extends TeaModel {
             }
 
             /**
-             * 工作项类型id
+             * workitemTypeIdentifier.
              */
             public Builder workitemTypeIdentifier(String workitemTypeIdentifier) {
                 this.workitemTypeIdentifier = workitemTypeIdentifier;

@@ -195,7 +195,7 @@ public class ListPipelinesRequest extends Request {
         } 
 
         /**
-         * 企业标识，也称企业id，字符串形式，可在云效访问链接中获取，如 https:// devops.aliyun.com/organization/【OrgId】
+         * organizationId.
          */
         public Builder organizationId(String organizationId) {
             this.putPathParameter("organizationId", organizationId);
@@ -204,7 +204,7 @@ public class ListPipelinesRequest extends Request {
         }
 
         /**
-         * 创建结束时间
+         * createEndTime.
          */
         public Builder createEndTime(Long createEndTime) {
             this.putQueryParameter("createEndTime", createEndTime);
@@ -213,7 +213,7 @@ public class ListPipelinesRequest extends Request {
         }
 
         /**
-         * 创建开始时间
+         * createStartTime.
          */
         public Builder createStartTime(Long createStartTime) {
             this.putQueryParameter("createStartTime", createStartTime);
@@ -222,7 +222,7 @@ public class ListPipelinesRequest extends Request {
         }
 
         /**
-         * 创建人阿里云账号Id
+         * creatorAccountIds.
          */
         public Builder creatorAccountIds(String creatorAccountIds) {
             this.putQueryParameter("creatorAccountIds", creatorAccountIds);
@@ -231,7 +231,7 @@ public class ListPipelinesRequest extends Request {
         }
 
         /**
-         * 执行人阿里云账号id
+         * executeAccountIds.
          */
         public Builder executeAccountIds(String executeAccountIds) {
             this.putQueryParameter("executeAccountIds", executeAccountIds);
@@ -240,7 +240,7 @@ public class ListPipelinesRequest extends Request {
         }
 
         /**
-         * 执行结束时间
+         * executeEndTime.
          */
         public Builder executeEndTime(Long executeEndTime) {
             this.putQueryParameter("executeEndTime", executeEndTime);
@@ -249,7 +249,7 @@ public class ListPipelinesRequest extends Request {
         }
 
         /**
-         * 执行开始时间
+         * executeStartTime.
          */
         public Builder executeStartTime(Long executeStartTime) {
             this.putQueryParameter("executeStartTime", executeStartTime);
@@ -258,7 +258,7 @@ public class ListPipelinesRequest extends Request {
         }
 
         /**
-         * 返回的总数
+         * maxResults.
          */
         public Builder maxResults(Long maxResults) {
             this.putQueryParameter("maxResults", maxResults);
@@ -267,7 +267,7 @@ public class ListPipelinesRequest extends Request {
         }
 
         /**
-         * 分页Token
+         * nextToken.
          */
         public Builder nextToken(String nextToken) {
             this.putQueryParameter("nextToken", nextToken);
@@ -276,7 +276,7 @@ public class ListPipelinesRequest extends Request {
         }
 
         /**
-         * 流水线名称
+         * pipelineName.
          */
         public Builder pipelineName(String pipelineName) {
             this.putQueryParameter("pipelineName", pipelineName);
@@ -285,7 +285,7 @@ public class ListPipelinesRequest extends Request {
         }
 
         /**
-         * 状态列表，多个逗号分割
+         * statusList.
          */
         public Builder statusList(String statusList) {
             this.putQueryParameter("statusList", statusList);

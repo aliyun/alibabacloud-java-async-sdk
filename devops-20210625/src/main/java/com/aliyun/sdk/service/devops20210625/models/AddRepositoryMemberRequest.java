@@ -114,7 +114,7 @@ public class AddRepositoryMemberRequest extends Request {
         } 
 
         /**
-         * 代码库ID
+         * repositoryId.
          */
         public Builder repositoryId(Long repositoryId) {
             this.putPathParameter("repositoryId", repositoryId);
@@ -123,7 +123,7 @@ public class AddRepositoryMemberRequest extends Request {
         }
 
         /**
-         * Codeup访问令牌，使用AK/SK方式访问可以不用填AccessToken
+         * accessToken.
          */
         public Builder accessToken(String accessToken) {
             this.putQueryParameter("accessToken", accessToken);
@@ -132,7 +132,7 @@ public class AddRepositoryMemberRequest extends Request {
         }
 
         /**
-         * 成员权限
+         * accessLevel.
          */
         public Builder accessLevel(Integer accessLevel) {
             this.putBodyParameter("accessLevel", accessLevel);
@@ -141,7 +141,7 @@ public class AddRepositoryMemberRequest extends Request {
         }
 
         /**
-         * 需要添加为代码库成员的用户阿里云ID。支持多个，以","分割
+         * aliyunPks.
          */
         public Builder aliyunPks(String aliyunPks) {
             this.putBodyParameter("aliyunPks", aliyunPks);
@@ -150,7 +150,7 @@ public class AddRepositoryMemberRequest extends Request {
         }
 
         /**
-         * 企业ID
+         * organizationId.
          */
         public Builder organizationId(String organizationId) {
             this.putQueryParameter("organizationId", organizationId);

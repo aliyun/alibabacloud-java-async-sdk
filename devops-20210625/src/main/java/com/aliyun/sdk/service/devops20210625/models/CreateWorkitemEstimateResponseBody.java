@@ -607,7 +607,7 @@ public class CreateWorkitemEstimateResponseBody extends TeaModel {
             }
 
             /**
-             * 工时唯一标识
+             * identifier.
              */
             public Builder identifier(String identifier) {
                 this.identifier = identifier;

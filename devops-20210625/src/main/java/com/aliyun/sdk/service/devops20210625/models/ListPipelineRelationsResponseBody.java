@@ -86,7 +86,7 @@ public class ListPipelineRelationsResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * 错误码
+         * errorCode.
          */
         public Builder errorCode(String errorCode) {
             this.errorCode = errorCode;
@@ -94,7 +94,7 @@ public class ListPipelineRelationsResponseBody extends TeaModel {
         }
 
         /**
-         * 错误信息
+         * errorMessage.
          */
         public Builder errorMessage(String errorMessage) {
             this.errorMessage = errorMessage;
@@ -102,7 +102,7 @@ public class ListPipelineRelationsResponseBody extends TeaModel {
         }
 
         /**
-         * 变量组
+         * pipelineRelations.
          */
         public Builder pipelineRelations(java.util.List < PipelineRelations> pipelineRelations) {
             this.pipelineRelations = pipelineRelations;
@@ -110,7 +110,7 @@ public class ListPipelineRelationsResponseBody extends TeaModel {
         }
 
         /**
-         * 请求id，每次请求都是唯一值，便于后续排查问题
+         * requestId.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -118,7 +118,7 @@ public class ListPipelineRelationsResponseBody extends TeaModel {
         }
 
         /**
-         * true 接口调用成功，false 接口调用失败
+         * success.
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -158,7 +158,7 @@ public class ListPipelineRelationsResponseBody extends TeaModel {
             private Long refObjectId; 
 
             /**
-             * 变量组id
+             * refObjectId.
              */
             public Builder refObjectId(Long refObjectId) {
                 this.refObjectId = refObjectId;

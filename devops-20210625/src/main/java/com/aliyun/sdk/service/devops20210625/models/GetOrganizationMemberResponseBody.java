@@ -86,7 +86,7 @@ public class GetOrganizationMemberResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * 错误码
+         * errorCode.
          */
         public Builder errorCode(String errorCode) {
             this.errorCode = errorCode;
@@ -94,7 +94,7 @@ public class GetOrganizationMemberResponseBody extends TeaModel {
         }
 
         /**
-         * 错误信息
+         * errorMessage.
          */
         public Builder errorMessage(String errorMessage) {
             this.errorMessage = errorMessage;
@@ -102,7 +102,7 @@ public class GetOrganizationMemberResponseBody extends TeaModel {
         }
 
         /**
-         * 成员
+         * member.
          */
         public Builder member(Member member) {
             this.member = member;
@@ -110,7 +110,7 @@ public class GetOrganizationMemberResponseBody extends TeaModel {
         }
 
         /**
-         * 请求id，每次请求都是唯一值，便于后续排查问题
+         * requestId.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -118,7 +118,7 @@ public class GetOrganizationMemberResponseBody extends TeaModel {
         }
 
         /**
-         * true 接口调用成功，false 接口调用失败
+         * success.
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -170,7 +170,7 @@ public class GetOrganizationMemberResponseBody extends TeaModel {
             private String provider; 
 
             /**
-             * 第三方系统的用户 id
+             * externUid.
              */
             public Builder externUid(String externUid) {
                 this.externUid = externUid;
@@ -178,7 +178,7 @@ public class GetOrganizationMemberResponseBody extends TeaModel {
             }
 
             /**
-             * 第三方系统
+             * provider.
              */
             public Builder provider(String provider) {
                 this.provider = provider;
@@ -363,7 +363,7 @@ public class GetOrganizationMemberResponseBody extends TeaModel {
             private String state; 
 
             /**
-             * 阿里云用户PK
+             * accountId.
              */
             public Builder accountId(String accountId) {
                 this.accountId = accountId;
@@ -371,7 +371,7 @@ public class GetOrganizationMemberResponseBody extends TeaModel {
             }
 
             /**
-             * 生日
+             * birthday.
              */
             public Builder birthday(Long birthday) {
                 this.birthday = birthday;
@@ -379,7 +379,7 @@ public class GetOrganizationMemberResponseBody extends TeaModel {
             }
 
             /**
-             * 部门名称列表
+             * deptLists.
              */
             public Builder deptLists(java.util.List < String > deptLists) {
                 this.deptLists = deptLists;
@@ -387,7 +387,7 @@ public class GetOrganizationMemberResponseBody extends TeaModel {
             }
 
             /**
-             * 邮箱
+             * email.
              */
             public Builder email(String email) {
                 this.email = email;
@@ -395,7 +395,7 @@ public class GetOrganizationMemberResponseBody extends TeaModel {
             }
 
             /**
-             * 入职时间
+             * hiredDate.
              */
             public Builder hiredDate(Long hiredDate) {
                 this.hiredDate = hiredDate;
@@ -403,7 +403,7 @@ public class GetOrganizationMemberResponseBody extends TeaModel {
             }
 
             /**
-             * 第三方信息
+             * identities.
              */
             public Builder identities(Identities identities) {
                 this.identities = identities;
@@ -411,7 +411,7 @@ public class GetOrganizationMemberResponseBody extends TeaModel {
             }
 
             /**
-             * 加入云效企业时间
+             * joinTime.
              */
             public Builder joinTime(Long joinTime) {
                 this.joinTime = joinTime;
@@ -419,7 +419,7 @@ public class GetOrganizationMemberResponseBody extends TeaModel {
             }
 
             /**
-             * 最近一次访问时间
+             * lastVisitTime.
              */
             public Builder lastVisitTime(Long lastVisitTime) {
                 this.lastVisitTime = lastVisitTime;
@@ -427,7 +427,7 @@ public class GetOrganizationMemberResponseBody extends TeaModel {
             }
 
             /**
-             * 手机号
+             * mobile.
              */
             public Builder mobile(String mobile) {
                 this.mobile = mobile;
@@ -435,7 +435,7 @@ public class GetOrganizationMemberResponseBody extends TeaModel {
             }
 
             /**
-             * 企业成员名
+             * organizationMemberName.
              */
             public Builder organizationMemberName(String organizationMemberName) {
                 this.organizationMemberName = organizationMemberName;
@@ -443,7 +443,7 @@ public class GetOrganizationMemberResponseBody extends TeaModel {
             }
 
             /**
-             * 企业角色Id
+             * organizationRoleId.
              */
             public Builder organizationRoleId(String organizationRoleId) {
                 this.organizationRoleId = organizationRoleId;
@@ -451,7 +451,7 @@ public class GetOrganizationMemberResponseBody extends TeaModel {
             }
 
             /**
-             * 企业角色名字
+             * organizationRoleName.
              */
             public Builder organizationRoleName(String organizationRoleName) {
                 this.organizationRoleName = organizationRoleName;
@@ -459,7 +459,7 @@ public class GetOrganizationMemberResponseBody extends TeaModel {
             }
 
             /**
-             * 用户状态
+             * state.
              */
             public Builder state(String state) {
                 this.state = state;

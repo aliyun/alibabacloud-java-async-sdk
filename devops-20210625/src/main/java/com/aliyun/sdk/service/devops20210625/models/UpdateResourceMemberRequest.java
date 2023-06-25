@@ -114,7 +114,7 @@ public class UpdateResourceMemberRequest extends Request {
         } 
 
         /**
-         * 企业标识，也称企业id，字符串形式，可在云效访问链接中获取，如 https:// devops.aliyun.com/organization/【OrgId】
+         * organizationId.
          */
         public Builder organizationId(String organizationId) {
             this.putPathParameter("organizationId", organizationId);
@@ -123,7 +123,7 @@ public class UpdateResourceMemberRequest extends Request {
         }
 
         /**
-         * 资源Id
+         * resourceType.
          */
         public Builder resourceType(String resourceType) {
             this.putPathParameter("resourceType", resourceType);
@@ -132,7 +132,7 @@ public class UpdateResourceMemberRequest extends Request {
         }
 
         /**
-         * 资源类型 流水线 pipeline 部署组 deployGroup
+         * resourceId.
          */
         public Builder resourceId(Long resourceId) {
             this.putPathParameter("resourceId", resourceId);
@@ -150,7 +150,7 @@ public class UpdateResourceMemberRequest extends Request {
         }
 
         /**
-         * 角色部署组 deployGroup   user  成员，使用权限   admin 管理员，使用编辑权限   owner 拥有者，所有权限 流水线 pipeline   owner 拥有者，所有权限   admin 查看、运行、编辑权限   member  运行权限   viewer 查看权限
+         * roleName.
          */
         public Builder roleName(String roleName) {
             this.putBodyParameter("roleName", roleName);

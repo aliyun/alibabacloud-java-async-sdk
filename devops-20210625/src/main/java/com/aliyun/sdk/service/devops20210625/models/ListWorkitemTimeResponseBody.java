@@ -98,7 +98,7 @@ public class ListWorkitemTimeResponseBody extends TeaModel {
         private java.util.List < WorkitemTime> workitemTime; 
 
         /**
-         * 接口返回code
+         * code.
          */
         public Builder code(Long code) {
             this.code = code;
@@ -106,7 +106,7 @@ public class ListWorkitemTimeResponseBody extends TeaModel {
         }
 
         /**
-         * 错误码
+         * errorCode.
          */
         public Builder errorCode(String errorCode) {
             this.errorCode = errorCode;
@@ -114,7 +114,7 @@ public class ListWorkitemTimeResponseBody extends TeaModel {
         }
 
         /**
-         * 错误信息
+         * errorMsg.
          */
         public Builder errorMsg(String errorMsg) {
             this.errorMsg = errorMsg;
@@ -122,7 +122,7 @@ public class ListWorkitemTimeResponseBody extends TeaModel {
         }
 
         /**
-         * 请求id，每次请求都是唯一值，便于后续排查问题
+         * requestId.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -130,7 +130,7 @@ public class ListWorkitemTimeResponseBody extends TeaModel {
         }
 
         /**
-         * true或者false
+         * success.
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -138,7 +138,7 @@ public class ListWorkitemTimeResponseBody extends TeaModel {
         }
 
         /**
-         * 工时信息
+         * workitemTime.
          */
         public Builder workitemTime(java.util.List < WorkitemTime> workitemTime) {
             this.workitemTime = workitemTime;
@@ -294,7 +294,7 @@ public class ListWorkitemTimeResponseBody extends TeaModel {
             }
 
             /**
-             * 工时描述信息
+             * description.
              */
             public Builder description(String description) {
                 this.description = description;
@@ -302,7 +302,7 @@ public class ListWorkitemTimeResponseBody extends TeaModel {
             }
 
             /**
-             * 工时记录的创建时间
+             * gmtCreate.
              */
             public Builder gmtCreate(Long gmtCreate) {
                 this.gmtCreate = gmtCreate;
@@ -310,7 +310,7 @@ public class ListWorkitemTimeResponseBody extends TeaModel {
             }
 
             /**
-             * 结束时间
+             * gmtEnd.
              */
             public Builder gmtEnd(Long gmtEnd) {
                 this.gmtEnd = gmtEnd;
@@ -318,7 +318,7 @@ public class ListWorkitemTimeResponseBody extends TeaModel {
             }
 
             /**
-             * 工时记录的修改时间
+             * gmtModified.
              */
             public Builder gmtModified(Long gmtModified) {
                 this.gmtModified = gmtModified;
@@ -326,7 +326,7 @@ public class ListWorkitemTimeResponseBody extends TeaModel {
             }
 
             /**
-             * 开始时间
+             * gmtStart.
              */
             public Builder gmtStart(Long gmtStart) {
                 this.gmtStart = gmtStart;
@@ -334,7 +334,7 @@ public class ListWorkitemTimeResponseBody extends TeaModel {
             }
 
             /**
-             * 工时唯一标识
+             * identifier.
              */
             public Builder identifier(String identifier) {
                 this.identifier = identifier;
@@ -342,7 +342,7 @@ public class ListWorkitemTimeResponseBody extends TeaModel {
             }
 
             /**
-             * 登记人的account Id
+             * recordUser.
              */
             public Builder recordUser(String recordUser) {
                 this.recordUser = recordUser;
@@ -350,7 +350,7 @@ public class ListWorkitemTimeResponseBody extends TeaModel {
             }
 
             /**
-             * 工时类型
+             * type.
              */
             public Builder type(String type) {
                 this.type = type;
@@ -358,7 +358,7 @@ public class ListWorkitemTimeResponseBody extends TeaModel {
             }
 
             /**
-             * 工作项id，唯一标识
+             * workitemIdentifier.
              */
             public Builder workitemIdentifier(String workitemIdentifier) {
                 this.workitemIdentifier = workitemIdentifier;

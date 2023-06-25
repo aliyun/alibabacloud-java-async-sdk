@@ -123,7 +123,7 @@ public class CreateWorkitemCommentRequest extends Request {
         }
 
         /**
-         * 评论内容
+         * content.
          */
         public Builder content(String content) {
             this.putBodyParameter("content", content);
@@ -132,7 +132,7 @@ public class CreateWorkitemCommentRequest extends Request {
         }
 
         /**
-         * 目前支持RICHTEXT/MARKDOWN 二选一
+         * formatType.
          */
         public Builder formatType(String formatType) {
             this.putBodyParameter("formatType", formatType);

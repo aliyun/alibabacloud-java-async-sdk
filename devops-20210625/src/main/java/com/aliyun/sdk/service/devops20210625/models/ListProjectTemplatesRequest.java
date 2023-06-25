@@ -79,7 +79,7 @@ public class ListProjectTemplatesRequest extends Request {
         }
 
         /**
-         * 模板类型
+         * category.
          */
         public Builder category(String category) {
             this.putQueryParameter("category", category);

@@ -86,7 +86,7 @@ public class ListResourceMembersResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * 错误码
+         * errorCode.
          */
         public Builder errorCode(String errorCode) {
             this.errorCode = errorCode;
@@ -94,7 +94,7 @@ public class ListResourceMembersResponseBody extends TeaModel {
         }
 
         /**
-         * 错误信息
+         * errorMessage.
          */
         public Builder errorMessage(String errorMessage) {
             this.errorMessage = errorMessage;
@@ -102,7 +102,7 @@ public class ListResourceMembersResponseBody extends TeaModel {
         }
 
         /**
-         * 请求id，每次请求都是唯一值，便于后续排查问题
+         * requestId.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -110,7 +110,7 @@ public class ListResourceMembersResponseBody extends TeaModel {
         }
 
         /**
-         * 成员
+         * resourceMembers.
          */
         public Builder resourceMembers(java.util.List < ResourceMembers> resourceMembers) {
             this.resourceMembers = resourceMembers;
@@ -118,7 +118,7 @@ public class ListResourceMembersResponseBody extends TeaModel {
         }
 
         /**
-         * 请求id，每次请求都是唯一值，便于后续排查问题
+         * success.
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -182,7 +182,7 @@ public class ListResourceMembersResponseBody extends TeaModel {
             private String username; 
 
             /**
-             * 账号id
+             * accountId.
              */
             public Builder accountId(String accountId) {
                 this.accountId = accountId;
@@ -190,7 +190,7 @@ public class ListResourceMembersResponseBody extends TeaModel {
             }
 
             /**
-             * 角色
+             * roleName.
              */
             public Builder roleName(String roleName) {
                 this.roleName = roleName;
@@ -198,7 +198,7 @@ public class ListResourceMembersResponseBody extends TeaModel {
             }
 
             /**
-             * 用户名称
+             * username.
              */
             public Builder username(String username) {
                 this.username = username;

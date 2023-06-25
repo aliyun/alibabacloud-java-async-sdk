@@ -86,7 +86,7 @@ public class ListProjectWorkitemTypesResponseBody extends TeaModel {
         private java.util.List < WorkitemTypes> workitemTypes; 
 
         /**
-         * 错误返回码
+         * errorCode.
          */
         public Builder errorCode(String errorCode) {
             this.errorCode = errorCode;
@@ -94,7 +94,7 @@ public class ListProjectWorkitemTypesResponseBody extends TeaModel {
         }
 
         /**
-         * 错误返回信息
+         * errorMessage.
          */
         public Builder errorMessage(String errorMessage) {
             this.errorMessage = errorMessage;
@@ -102,7 +102,7 @@ public class ListProjectWorkitemTypesResponseBody extends TeaModel {
         }
 
         /**
-         * openapi平台的request id
+         * requestId.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -110,7 +110,7 @@ public class ListProjectWorkitemTypesResponseBody extends TeaModel {
         }
 
         /**
-         * 接口是否正常返回
+         * success.
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -118,7 +118,7 @@ public class ListProjectWorkitemTypesResponseBody extends TeaModel {
         }
 
         /**
-         * 工作项类型
+         * workitemTypes.
          */
         public Builder workitemTypes(java.util.List < WorkitemTypes> workitemTypes) {
             this.workitemTypes = workitemTypes;
@@ -290,7 +290,7 @@ public class ListProjectWorkitemTypesResponseBody extends TeaModel {
             private Boolean systemDefault; 
 
             /**
-             * 添加到项目中的添加人
+             * addUser.
              */
             public Builder addUser(String addUser) {
                 this.addUser = addUser;
@@ -298,7 +298,7 @@ public class ListProjectWorkitemTypesResponseBody extends TeaModel {
             }
 
             /**
-             * 工作项类型
+             * categoryIdentifier.
              */
             public Builder categoryIdentifier(String categoryIdentifier) {
                 this.categoryIdentifier = categoryIdentifier;
@@ -306,7 +306,7 @@ public class ListProjectWorkitemTypesResponseBody extends TeaModel {
             }
 
             /**
-             * 工作项类型创建人
+             * creator.
              */
             public Builder creator(String creator) {
                 this.creator = creator;
@@ -314,7 +314,7 @@ public class ListProjectWorkitemTypesResponseBody extends TeaModel {
             }
 
             /**
-             * 在项目中是否为默认类型
+             * defaultType.
              */
             public Builder defaultType(Boolean defaultType) {
                 this.defaultType = defaultType;
@@ -322,7 +322,7 @@ public class ListProjectWorkitemTypesResponseBody extends TeaModel {
             }
 
             /**
-             * 描述
+             * description.
              */
             public Builder description(String description) {
                 this.description = description;
@@ -330,7 +330,7 @@ public class ListProjectWorkitemTypesResponseBody extends TeaModel {
             }
 
             /**
-             * 是否启用
+             * enable.
              */
             public Builder enable(Boolean enable) {
                 this.enable = enable;
@@ -338,7 +338,7 @@ public class ListProjectWorkitemTypesResponseBody extends TeaModel {
             }
 
             /**
-             * 添加到项目中的时间
+             * gmtAdd.
              */
             public Builder gmtAdd(Long gmtAdd) {
                 this.gmtAdd = gmtAdd;
@@ -346,7 +346,7 @@ public class ListProjectWorkitemTypesResponseBody extends TeaModel {
             }
 
             /**
-             * 创建时间
+             * gmtCreate.
              */
             public Builder gmtCreate(Long gmtCreate) {
                 this.gmtCreate = gmtCreate;
@@ -354,7 +354,7 @@ public class ListProjectWorkitemTypesResponseBody extends TeaModel {
             }
 
             /**
-             * 工作项类型id
+             * identifier.
              */
             public Builder identifier(String identifier) {
                 this.identifier = identifier;
@@ -362,7 +362,7 @@ public class ListProjectWorkitemTypesResponseBody extends TeaModel {
             }
 
             /**
-             * 工作项类型的名称
+             * name.
              */
             public Builder name(String name) {
                 this.name = name;
@@ -370,7 +370,7 @@ public class ListProjectWorkitemTypesResponseBody extends TeaModel {
             }
 
             /**
-             * 工作项类型的英文名称
+             * nameEn.
              */
             public Builder nameEn(String nameEn) {
                 this.nameEn = nameEn;
@@ -378,7 +378,7 @@ public class ListProjectWorkitemTypesResponseBody extends TeaModel {
             }
 
             /**
-             * 是否系统默认
+             * systemDefault.
              */
             public Builder systemDefault(Boolean systemDefault) {
                 this.systemDefault = systemDefault;

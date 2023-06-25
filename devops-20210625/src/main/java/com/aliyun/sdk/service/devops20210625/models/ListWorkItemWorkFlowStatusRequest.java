@@ -114,7 +114,7 @@ public class ListWorkItemWorkFlowStatusRequest extends Request {
         } 
 
         /**
-         * 企业标识，也称企业id
+         * organizationId.
          */
         public Builder organizationId(String organizationId) {
             this.putPathParameter("organizationId", organizationId);
@@ -123,7 +123,7 @@ public class ListWorkItemWorkFlowStatusRequest extends Request {
         }
 
         /**
-         * 项目id
+         * spaceIdentifier.
          */
         public Builder spaceIdentifier(String spaceIdentifier) {
             this.putQueryParameter("spaceIdentifier", spaceIdentifier);
@@ -132,7 +132,7 @@ public class ListWorkItemWorkFlowStatusRequest extends Request {
         }
 
         /**
-         * 空间类型
+         * spaceType.
          */
         public Builder spaceType(String spaceType) {
             this.putQueryParameter("spaceType", spaceType);
@@ -141,7 +141,7 @@ public class ListWorkItemWorkFlowStatusRequest extends Request {
         }
 
         /**
-         * 工作项大类型
+         * workitemCategoryIdentifier.
          */
         public Builder workitemCategoryIdentifier(String workitemCategoryIdentifier) {
             this.putQueryParameter("workitemCategoryIdentifier", workitemCategoryIdentifier);
@@ -150,7 +150,7 @@ public class ListWorkItemWorkFlowStatusRequest extends Request {
         }
 
         /**
-         * 工作项小类型id
+         * workitemTypeIdentifier.
          */
         public Builder workitemTypeIdentifier(String workitemTypeIdentifier) {
             this.putQueryParameter("workitemTypeIdentifier", workitemTypeIdentifier);

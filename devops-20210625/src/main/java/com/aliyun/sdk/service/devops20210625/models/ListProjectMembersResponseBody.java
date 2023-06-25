@@ -86,7 +86,7 @@ public class ListProjectMembersResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * 错误码
+         * errorCode.
          */
         public Builder errorCode(String errorCode) {
             this.errorCode = errorCode;
@@ -94,7 +94,7 @@ public class ListProjectMembersResponseBody extends TeaModel {
         }
 
         /**
-         * 错误信息
+         * errorMsg.
          */
         public Builder errorMsg(String errorMsg) {
             this.errorMsg = errorMsg;
@@ -102,7 +102,7 @@ public class ListProjectMembersResponseBody extends TeaModel {
         }
 
         /**
-         * member信息
+         * members.
          */
         public Builder members(java.util.List < Members> members) {
             this.members = members;
@@ -110,7 +110,7 @@ public class ListProjectMembersResponseBody extends TeaModel {
         }
 
         /**
-         * 请求id，每次请求都是唯一值，便于后续排查问题
+         * requestId.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -118,7 +118,7 @@ public class ListProjectMembersResponseBody extends TeaModel {
         }
 
         /**
-         * true或者false
+         * success.
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -158,7 +158,7 @@ public class ListProjectMembersResponseBody extends TeaModel {
             private String identifier; 
 
             /**
-             * 部门唯一标识
+             * identifier.
              */
             public Builder identifier(String identifier) {
                 this.identifier = identifier;
@@ -199,7 +199,7 @@ public class ListProjectMembersResponseBody extends TeaModel {
             private String organizationIdentifier; 
 
             /**
-             * 企业唯一标识符
+             * organizationIdentifier.
              */
             public Builder organizationIdentifier(String organizationIdentifier) {
                 this.organizationIdentifier = organizationIdentifier;
@@ -468,7 +468,7 @@ public class ListProjectMembersResponseBody extends TeaModel {
             private String tbRoleId; 
 
             /**
-             * 登陆账号
+             * account.
              */
             public Builder account(String account) {
                 this.account = account;
@@ -476,7 +476,7 @@ public class ListProjectMembersResponseBody extends TeaModel {
             }
 
             /**
-             * 用户头像
+             * avatar.
              */
             public Builder avatar(String avatar) {
                 this.avatar = avatar;
@@ -484,7 +484,7 @@ public class ListProjectMembersResponseBody extends TeaModel {
             }
 
             /**
-             * 钉钉id
+             * dingTalkId.
              */
             public Builder dingTalkId(String dingTalkId) {
                 this.dingTalkId = dingTalkId;
@@ -492,7 +492,7 @@ public class ListProjectMembersResponseBody extends TeaModel {
             }
 
             /**
-             * 展示名
+             * displayName.
              */
             public Builder displayName(String displayName) {
                 this.displayName = displayName;
@@ -500,7 +500,7 @@ public class ListProjectMembersResponseBody extends TeaModel {
             }
 
             /**
-             * 展示昵称
+             * displayNickName.
              */
             public Builder displayNickName(String displayNickName) {
                 this.displayNickName = displayNickName;
@@ -508,7 +508,7 @@ public class ListProjectMembersResponseBody extends TeaModel {
             }
 
             /**
-             * 展示真名
+             * displayRealName.
              */
             public Builder displayRealName(String displayRealName) {
                 this.displayRealName = displayRealName;
@@ -516,7 +516,7 @@ public class ListProjectMembersResponseBody extends TeaModel {
             }
 
             /**
-             * 部门信息
+             * division.
              */
             public Builder division(Division division) {
                 this.division = division;
@@ -524,7 +524,7 @@ public class ListProjectMembersResponseBody extends TeaModel {
             }
 
             /**
-             * 邮箱
+             * email.
              */
             public Builder email(String email) {
                 this.email = email;
@@ -532,7 +532,7 @@ public class ListProjectMembersResponseBody extends TeaModel {
             }
 
             /**
-             * 性别
+             * gender.
              */
             public Builder gender(String gender) {
                 this.gender = gender;
@@ -540,7 +540,7 @@ public class ListProjectMembersResponseBody extends TeaModel {
             }
 
             /**
-             * 用户唯一 标识符
+             * identifier.
              */
             public Builder identifier(String identifier) {
                 this.identifier = identifier;
@@ -548,7 +548,7 @@ public class ListProjectMembersResponseBody extends TeaModel {
             }
 
             /**
-             * 手机号
+             * mobile.
              */
             public Builder mobile(String mobile) {
                 this.mobile = mobile;
@@ -556,7 +556,7 @@ public class ListProjectMembersResponseBody extends TeaModel {
             }
 
             /**
-             * 英文名
+             * nameEn.
              */
             public Builder nameEn(String nameEn) {
                 this.nameEn = nameEn;
@@ -564,7 +564,7 @@ public class ListProjectMembersResponseBody extends TeaModel {
             }
 
             /**
-             * 昵称
+             * nickName.
              */
             public Builder nickName(String nickName) {
                 this.nickName = nickName;
@@ -572,7 +572,7 @@ public class ListProjectMembersResponseBody extends TeaModel {
             }
 
             /**
-             * 昵称拼音
+             * nickNamePinyin.
              */
             public Builder nickNamePinyin(String nickNamePinyin) {
                 this.nickNamePinyin = nickNamePinyin;
@@ -580,7 +580,7 @@ public class ListProjectMembersResponseBody extends TeaModel {
             }
 
             /**
-             * 企业信息
+             * organizationUserInfo.
              */
             public Builder organizationUserInfo(OrganizationUserInfo organizationUserInfo) {
                 this.organizationUserInfo = organizationUserInfo;
@@ -588,7 +588,7 @@ public class ListProjectMembersResponseBody extends TeaModel {
             }
 
             /**
-             * 真名
+             * realName.
              */
             public Builder realName(String realName) {
                 this.realName = realName;
@@ -596,7 +596,7 @@ public class ListProjectMembersResponseBody extends TeaModel {
             }
 
             /**
-             * 真名拼音
+             * realNamePinyin.
              */
             public Builder realNamePinyin(String realNamePinyin) {
                 this.realNamePinyin = realNamePinyin;
@@ -612,7 +612,7 @@ public class ListProjectMembersResponseBody extends TeaModel {
             }
 
             /**
-             * 用户类型
+             * stamp.
              */
             public Builder stamp(String stamp) {
                 this.stamp = stamp;
@@ -620,7 +620,7 @@ public class ListProjectMembersResponseBody extends TeaModel {
             }
 
             /**
-             * 角色id
+             * tbRoleId.
              */
             public Builder tbRoleId(String tbRoleId) {
                 this.tbRoleId = tbRoleId;

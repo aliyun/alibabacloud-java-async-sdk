@@ -86,7 +86,7 @@ public class UpdateProjectMemberResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * 错误码
+         * errorCode.
          */
         public Builder errorCode(String errorCode) {
             this.errorCode = errorCode;
@@ -94,7 +94,7 @@ public class UpdateProjectMemberResponseBody extends TeaModel {
         }
 
         /**
-         * 错误信息
+         * errorMsg.
          */
         public Builder errorMsg(String errorMsg) {
             this.errorMsg = errorMsg;
@@ -102,7 +102,7 @@ public class UpdateProjectMemberResponseBody extends TeaModel {
         }
 
         /**
-         * 成员信息
+         * member.
          */
         public Builder member(Member member) {
             this.member = member;
@@ -110,7 +110,7 @@ public class UpdateProjectMemberResponseBody extends TeaModel {
         }
 
         /**
-         * 请求id，每次请求都是唯一值，便于后续排查问题
+         * requestId.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -118,7 +118,7 @@ public class UpdateProjectMemberResponseBody extends TeaModel {
         }
 
         /**
-         * true或者false
+         * success.
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -242,7 +242,7 @@ public class UpdateProjectMemberResponseBody extends TeaModel {
             private String userType; 
 
             /**
-             * 创建时间
+             * gmtCreate.
              */
             public Builder gmtCreate(Long gmtCreate) {
                 this.gmtCreate = gmtCreate;
@@ -250,7 +250,7 @@ public class UpdateProjectMemberResponseBody extends TeaModel {
             }
 
             /**
-             * 修改时间
+             * gmtModified.
              */
             public Builder gmtModified(Long gmtModified) {
                 this.gmtModified = gmtModified;
@@ -258,7 +258,7 @@ public class UpdateProjectMemberResponseBody extends TeaModel {
             }
 
             /**
-             * id
+             * id.
              */
             public Builder id(String id) {
                 this.id = id;
@@ -266,7 +266,7 @@ public class UpdateProjectMemberResponseBody extends TeaModel {
             }
 
             /**
-             * 角色id
+             * roleIdentifier.
              */
             public Builder roleIdentifier(String roleIdentifier) {
                 this.roleIdentifier = roleIdentifier;
@@ -274,7 +274,7 @@ public class UpdateProjectMemberResponseBody extends TeaModel {
             }
 
             /**
-             * 资源id，也就是项目id
+             * targetIdentifier.
              */
             public Builder targetIdentifier(String targetIdentifier) {
                 this.targetIdentifier = targetIdentifier;
@@ -282,7 +282,7 @@ public class UpdateProjectMemberResponseBody extends TeaModel {
             }
 
             /**
-             * 资源类型
+             * targetType.
              */
             public Builder targetType(String targetType) {
                 this.targetType = targetType;
@@ -290,7 +290,7 @@ public class UpdateProjectMemberResponseBody extends TeaModel {
             }
 
             /**
-             * 用户id
+             * userIdentifier.
              */
             public Builder userIdentifier(String userIdentifier) {
                 this.userIdentifier = userIdentifier;
@@ -298,7 +298,7 @@ public class UpdateProjectMemberResponseBody extends TeaModel {
             }
 
             /**
-             * 用户类型
+             * userType.
              */
             public Builder userType(String userType) {
                 this.userType = userType;

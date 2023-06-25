@@ -85,7 +85,7 @@ public class GetWorkitemRelationsRequest extends Request {
         } 
 
         /**
-         * 企业id
+         * organizationId.
          */
         public Builder organizationId(String organizationId) {
             this.putPathParameter("organizationId", organizationId);
@@ -94,7 +94,7 @@ public class GetWorkitemRelationsRequest extends Request {
         }
 
         /**
-         * 工作项id
+         * workitemId.
          */
         public Builder workitemId(String workitemId) {
             this.putPathParameter("workitemId", workitemId);
@@ -103,7 +103,7 @@ public class GetWorkitemRelationsRequest extends Request {
         }
 
         /**
-         * 一共有BLOCKING，BLOCKED，ASSOCIATED， DUPLICATED，SUB， PARENT，一共6个待选值，只会获得工作项类型的关系项
+         * relationType.
          */
         public Builder relationType(String relationType) {
             this.putQueryParameter("relationType", relationType);

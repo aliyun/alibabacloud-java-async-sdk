@@ -155,7 +155,7 @@ public class CreateWorkspaceRequest extends Request {
         } 
 
         /**
-         * 代码来源URL（当前仅支持云效 Codeup 来源）
+         * codeUrl.
          */
         public Builder codeUrl(String codeUrl) {
             this.putBodyParameter("codeUrl", codeUrl);
@@ -164,7 +164,7 @@ public class CreateWorkspaceRequest extends Request {
         }
 
         /**
-         * 代码版本，支持 commitSHA、分支、标签
+         * codeVersion.
          */
         public Builder codeVersion(String codeVersion) {
             this.putBodyParameter("codeVersion", codeVersion);
@@ -173,7 +173,7 @@ public class CreateWorkspaceRequest extends Request {
         }
 
         /**
-         * 打开空间默认打开的文件相对路径
+         * filePath.
          */
         public Builder filePath(String filePath) {
             this.putBodyParameter("filePath", filePath);
@@ -182,7 +182,7 @@ public class CreateWorkspaceRequest extends Request {
         }
 
         /**
-         * 工作空间名称
+         * name.
          */
         public Builder name(String name) {
             this.putBodyParameter("name", name);
@@ -191,7 +191,7 @@ public class CreateWorkspaceRequest extends Request {
         }
 
         /**
-         * 请求来源（用于统计，云产品集成时需要传入）
+         * requestFrom.
          */
         public Builder requestFrom(String requestFrom) {
             this.putBodyParameter("requestFrom", requestFrom);
@@ -200,7 +200,7 @@ public class CreateWorkspaceRequest extends Request {
         }
 
         /**
-         * 资源标识，提供给非标代码源作为空间复用的唯一标识
+         * resourceIdentifier.
          */
         public Builder resourceIdentifier(String resourceIdentifier) {
             this.putBodyParameter("resourceIdentifier", resourceIdentifier);
@@ -209,7 +209,7 @@ public class CreateWorkspaceRequest extends Request {
         }
 
         /**
-         * 工作空间复用标识，按照"用户+技术栈+代码地址+版本"进行复用 true - 复用 false - 不复用，每次均为新创建
+         * reuse.
          */
         public Builder reuse(Boolean reuse) {
             this.putBodyParameter("reuse", reuse);
@@ -218,7 +218,7 @@ public class CreateWorkspaceRequest extends Request {
         }
 
         /**
-         * 技术栈
+         * workspaceTemplate.
          */
         public Builder workspaceTemplate(String workspaceTemplate) {
             this.putBodyParameter("workspaceTemplate", workspaceTemplate);

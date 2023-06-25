@@ -100,7 +100,7 @@ public class RefusePipelineValidateRequest extends Request {
         } 
 
         /**
-         * 企业标识，也称企业id，字符串形式，可在云效访问链接中获取，如https://devops.aliyun.com/organization/【OrganizationId】
+         * organizationId.
          */
         public Builder organizationId(String organizationId) {
             this.putPathParameter("organizationId", organizationId);
@@ -118,7 +118,7 @@ public class RefusePipelineValidateRequest extends Request {
         }
 
         /**
-         * 1
+         * pipelineRunId.
          */
         public Builder pipelineRunId(Long pipelineRunId) {
             this.putPathParameter("pipelineRunId", pipelineRunId);
@@ -127,7 +127,7 @@ public class RefusePipelineValidateRequest extends Request {
         }
 
         /**
-         * 11111
+         * jobId.
          */
         public Builder jobId(String jobId) {
             this.putPathParameter("jobId", jobId);

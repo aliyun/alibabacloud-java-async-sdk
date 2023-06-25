@@ -111,7 +111,7 @@ public class ListVariableGroupsRequest extends Request {
         } 
 
         /**
-         * 企业标识，也称企业id，字符串形式，可在云效访问链接中获取，如  https:// devops.aliyun.com/organization/【OrgId】
+         * organizationId.
          */
         public Builder organizationId(String organizationId) {
             this.putPathParameter("organizationId", organizationId);
@@ -120,7 +120,7 @@ public class ListVariableGroupsRequest extends Request {
         }
 
         /**
-         * 最大返回数，默认30
+         * maxResults.
          */
         public Builder maxResults(Integer maxResults) {
             this.putQueryParameter("maxResults", maxResults);
@@ -129,7 +129,7 @@ public class ListVariableGroupsRequest extends Request {
         }
 
         /**
-         * 分页token，上一次请求的出参nextToken
+         * nextToken.
          */
         public Builder nextToken(String nextToken) {
             this.putQueryParameter("nextToken", nextToken);
@@ -138,7 +138,7 @@ public class ListVariableGroupsRequest extends Request {
         }
 
         /**
-         * 排序顺序
+         * pageOrder.
          */
         public Builder pageOrder(String pageOrder) {
             this.putQueryParameter("pageOrder", pageOrder);
@@ -147,7 +147,7 @@ public class ListVariableGroupsRequest extends Request {
         }
 
         /**
-         * 排序条件
+         * pageSort.
          */
         public Builder pageSort(String pageSort) {
             this.putQueryParameter("pageSort", pageSort);

@@ -86,7 +86,7 @@ public class ListFlowTagGroupsResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * 错误码
+         * errorCode.
          */
         public Builder errorCode(String errorCode) {
             this.errorCode = errorCode;
@@ -94,7 +94,7 @@ public class ListFlowTagGroupsResponseBody extends TeaModel {
         }
 
         /**
-         * 错误信息
+         * errorMessage.
          */
         public Builder errorMessage(String errorMessage) {
             this.errorMessage = errorMessage;
@@ -102,7 +102,7 @@ public class ListFlowTagGroupsResponseBody extends TeaModel {
         }
 
         /**
-         * 标签分类
+         * flowTagGroups.
          */
         public Builder flowTagGroups(java.util.List < FlowTagGroups> flowTagGroups) {
             this.flowTagGroups = flowTagGroups;
@@ -110,7 +110,7 @@ public class ListFlowTagGroupsResponseBody extends TeaModel {
         }
 
         /**
-         * 请求id，每次请求都是唯一值，便于后续排查问题
+         * requestId.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -118,7 +118,7 @@ public class ListFlowTagGroupsResponseBody extends TeaModel {
         }
 
         /**
-         * true 接口调用成功，false 接口调用失败
+         * success.
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -194,7 +194,7 @@ public class ListFlowTagGroupsResponseBody extends TeaModel {
             private String name; 
 
             /**
-             * 创建人
+             * creatorAccountId.
              */
             public Builder creatorAccountId(String creatorAccountId) {
                 this.creatorAccountId = creatorAccountId;
@@ -202,7 +202,7 @@ public class ListFlowTagGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * 标签分类id
+             * id.
              */
             public Builder id(Long id) {
                 this.id = id;
@@ -210,7 +210,7 @@ public class ListFlowTagGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * 修改人
+             * modiferAccountId.
              */
             public Builder modiferAccountId(String modiferAccountId) {
                 this.modiferAccountId = modiferAccountId;
@@ -218,7 +218,7 @@ public class ListFlowTagGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * 标签分类名称
+             * name.
              */
             public Builder name(String name) {
                 this.name = name;

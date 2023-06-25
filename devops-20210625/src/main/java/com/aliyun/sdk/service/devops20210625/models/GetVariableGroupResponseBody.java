@@ -86,7 +86,7 @@ public class GetVariableGroupResponseBody extends TeaModel {
         private VariableGroup variableGroup; 
 
         /**
-         * 错误码
+         * errorCode.
          */
         public Builder errorCode(String errorCode) {
             this.errorCode = errorCode;
@@ -94,7 +94,7 @@ public class GetVariableGroupResponseBody extends TeaModel {
         }
 
         /**
-         * 错误信息
+         * errorMessage.
          */
         public Builder errorMessage(String errorMessage) {
             this.errorMessage = errorMessage;
@@ -102,7 +102,7 @@ public class GetVariableGroupResponseBody extends TeaModel {
         }
 
         /**
-         * 请求id，每次请求都是唯一值，便于后续排查问题
+         * requestId.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -110,7 +110,7 @@ public class GetVariableGroupResponseBody extends TeaModel {
         }
 
         /**
-         * true 接口调用成功，false 接口调用失败
+         * success.
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -118,7 +118,7 @@ public class GetVariableGroupResponseBody extends TeaModel {
         }
 
         /**
-         * 变量组
+         * variableGroup.
          */
         public Builder variableGroup(VariableGroup variableGroup) {
             this.variableGroup = variableGroup;
@@ -170,7 +170,7 @@ public class GetVariableGroupResponseBody extends TeaModel {
             private String name; 
 
             /**
-             * 关联的流水线Id
+             * id.
              */
             public Builder id(Long id) {
                 this.id = id;
@@ -178,7 +178,7 @@ public class GetVariableGroupResponseBody extends TeaModel {
             }
 
             /**
-             * 关联的流水线名称
+             * name.
              */
             public Builder name(String name) {
                 this.name = name;
@@ -243,7 +243,7 @@ public class GetVariableGroupResponseBody extends TeaModel {
             private String value; 
 
             /**
-             * 是否加密
+             * isEncrypted.
              */
             public Builder isEncrypted(Boolean isEncrypted) {
                 this.isEncrypted = isEncrypted;
@@ -251,7 +251,7 @@ public class GetVariableGroupResponseBody extends TeaModel {
             }
 
             /**
-             * 变量名
+             * name.
              */
             public Builder name(String name) {
                 this.name = name;
@@ -259,7 +259,7 @@ public class GetVariableGroupResponseBody extends TeaModel {
             }
 
             /**
-             * 变量值
+             * value.
              */
             public Builder value(String value) {
                 this.value = value;
@@ -396,7 +396,7 @@ public class GetVariableGroupResponseBody extends TeaModel {
             private java.util.List < Variables> variables; 
 
             /**
-             * 创建人阿里云账号id
+             * ccreatorAccountId.
              */
             public Builder ccreatorAccountId(String ccreatorAccountId) {
                 this.ccreatorAccountId = ccreatorAccountId;
@@ -404,7 +404,7 @@ public class GetVariableGroupResponseBody extends TeaModel {
             }
 
             /**
-             * 创建时间
+             * createTime.
              */
             public Builder createTime(Long createTime) {
                 this.createTime = createTime;
@@ -412,7 +412,7 @@ public class GetVariableGroupResponseBody extends TeaModel {
             }
 
             /**
-             * 变量组描述
+             * description.
              */
             public Builder description(String description) {
                 this.description = description;
@@ -420,7 +420,7 @@ public class GetVariableGroupResponseBody extends TeaModel {
             }
 
             /**
-             * 变量组id
+             * id.
              */
             public Builder id(Long id) {
                 this.id = id;
@@ -428,7 +428,7 @@ public class GetVariableGroupResponseBody extends TeaModel {
             }
 
             /**
-             * 更新人阿里云账号id
+             * modifierAccountId.
              */
             public Builder modifierAccountId(String modifierAccountId) {
                 this.modifierAccountId = modifierAccountId;
@@ -436,7 +436,7 @@ public class GetVariableGroupResponseBody extends TeaModel {
             }
 
             /**
-             * 变量组名称
+             * name.
              */
             public Builder name(String name) {
                 this.name = name;
@@ -444,7 +444,7 @@ public class GetVariableGroupResponseBody extends TeaModel {
             }
 
             /**
-             * 关联的流水线
+             * relatedPipelines.
              */
             public Builder relatedPipelines(java.util.List < RelatedPipelines> relatedPipelines) {
                 this.relatedPipelines = relatedPipelines;
@@ -452,7 +452,7 @@ public class GetVariableGroupResponseBody extends TeaModel {
             }
 
             /**
-             * 更新时间
+             * updateTime.
              */
             public Builder updateTime(Long updateTime) {
                 this.updateTime = updateTime;
@@ -460,7 +460,7 @@ public class GetVariableGroupResponseBody extends TeaModel {
             }
 
             /**
-             * 变量
+             * variables.
              */
             public Builder variables(java.util.List < Variables> variables) {
                 this.variables = variables;

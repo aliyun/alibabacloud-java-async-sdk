@@ -85,7 +85,7 @@ public class UpdateWorkitemFieldRequest extends Request {
         } 
 
         /**
-         * 企业id
+         * organizationId.
          */
         public Builder organizationId(String organizationId) {
             this.putPathParameter("organizationId", organizationId);
@@ -94,7 +94,7 @@ public class UpdateWorkitemFieldRequest extends Request {
         }
 
         /**
-         * 更新工作项属性请求，数组形式
+         * updateWorkitemPropertyRequest.
          */
         public Builder updateWorkitemPropertyRequest(java.util.List < UpdateWorkitemPropertyRequest> updateWorkitemPropertyRequest) {
             this.putBodyParameter("updateWorkitemPropertyRequest", updateWorkitemPropertyRequest);
@@ -103,7 +103,7 @@ public class UpdateWorkitemFieldRequest extends Request {
         }
 
         /**
-         * 工作项id，同workitemId，工作项唯一标识
+         * workitemIdentifier.
          */
         public Builder workitemIdentifier(String workitemIdentifier) {
             this.putBodyParameter("workitemIdentifier", workitemIdentifier);
@@ -159,7 +159,7 @@ public class UpdateWorkitemFieldRequest extends Request {
             private String fieldValue; 
 
             /**
-             * 需要更新的工作项字段id，可以从获取工作项所有字段接口获取相应的数据
+             * fieldIdentifier.
              */
             public Builder fieldIdentifier(String fieldIdentifier) {
                 this.fieldIdentifier = fieldIdentifier;
@@ -167,7 +167,7 @@ public class UpdateWorkitemFieldRequest extends Request {
             }
 
             /**
-             * 需要更新字段的属性值 (注：1.如果是人员类型的值必须要填写aliyunPK。2.如果是含有待选值的字段，填写相应的待选值的id。 3.如果多个值，需要用" , "进行分割，拼接成一个字符串。
+             * fieldValue.
              */
             public Builder fieldValue(String fieldValue) {
                 this.fieldValue = fieldValue;

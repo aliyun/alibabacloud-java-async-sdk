@@ -122,7 +122,7 @@ public class ListSprintsRequest extends Request {
         }
 
         /**
-         * 每页最大返回数量，0-200，默认值20
+         * maxResults.
          */
         public Builder maxResults(Long maxResults) {
             this.putQueryParameter("maxResults", maxResults);
@@ -131,7 +131,7 @@ public class ListSprintsRequest extends Request {
         }
 
         /**
-         * 分页中的起始序列
+         * nextToken.
          */
         public Builder nextToken(String nextToken) {
             this.putQueryParameter("nextToken", nextToken);
@@ -140,7 +140,7 @@ public class ListSprintsRequest extends Request {
         }
 
         /**
-         * 项目id
+         * spaceIdentifier.
          */
         public Builder spaceIdentifier(String spaceIdentifier) {
             this.putQueryParameter("spaceIdentifier", spaceIdentifier);
@@ -149,7 +149,7 @@ public class ListSprintsRequest extends Request {
         }
 
         /**
-         * 类型
+         * spaceType.
          */
         public Builder spaceType(String spaceType) {
             this.putQueryParameter("spaceType", spaceType);

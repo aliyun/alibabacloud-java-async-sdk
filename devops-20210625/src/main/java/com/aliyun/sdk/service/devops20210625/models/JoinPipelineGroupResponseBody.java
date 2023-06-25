@@ -90,7 +90,7 @@ public class JoinPipelineGroupResponseBody extends TeaModel {
         }
 
         /**
-         * Id of the request
+         * requestId.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

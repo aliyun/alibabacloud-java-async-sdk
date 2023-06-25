@@ -84,7 +84,7 @@ public class GetRepositoryRequest extends Request {
         } 
 
         /**
-         * 个人访问令牌
+         * accessToken.
          */
         public Builder accessToken(String accessToken) {
             this.putQueryParameter("accessToken", accessToken);
@@ -93,7 +93,7 @@ public class GetRepositoryRequest extends Request {
         }
 
         /**
-         * 代码库ID或路径
+         * identity.
          */
         public Builder identity(String identity) {
             this.putQueryParameter("identity", identity);
@@ -102,7 +102,7 @@ public class GetRepositoryRequest extends Request {
         }
 
         /**
-         * 企业ID
+         * organizationId.
          */
         public Builder organizationId(String organizationId) {
             this.putQueryParameter("organizationId", organizationId);

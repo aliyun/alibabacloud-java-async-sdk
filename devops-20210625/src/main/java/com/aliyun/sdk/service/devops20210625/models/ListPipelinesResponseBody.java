@@ -110,7 +110,7 @@ public class ListPipelinesResponseBody extends TeaModel {
         private Long totalCount; 
 
         /**
-         * 错误码
+         * errorCode.
          */
         public Builder errorCode(String errorCode) {
             this.errorCode = errorCode;
@@ -118,7 +118,7 @@ public class ListPipelinesResponseBody extends TeaModel {
         }
 
         /**
-         * 错误信息
+         * errorMessage.
          */
         public Builder errorMessage(String errorMessage) {
             this.errorMessage = errorMessage;
@@ -126,7 +126,7 @@ public class ListPipelinesResponseBody extends TeaModel {
         }
 
         /**
-         * 分页Token
+         * nextToken.
          */
         public Builder nextToken(String nextToken) {
             this.nextToken = nextToken;
@@ -134,7 +134,7 @@ public class ListPipelinesResponseBody extends TeaModel {
         }
 
         /**
-         * 流水线
+         * pipelines.
          */
         public Builder pipelines(java.util.List < Pipelines> pipelines) {
             this.pipelines = pipelines;
@@ -142,7 +142,7 @@ public class ListPipelinesResponseBody extends TeaModel {
         }
 
         /**
-         * 请求id，每次请求都是唯一值，便于后续排查问题
+         * requestId.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -150,7 +150,7 @@ public class ListPipelinesResponseBody extends TeaModel {
         }
 
         /**
-         * true 接口调用成功，false 接口调用失败
+         * success.
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -158,7 +158,7 @@ public class ListPipelinesResponseBody extends TeaModel {
         }
 
         /**
-         * 总数
+         * totalCount.
          */
         public Builder totalCount(Long totalCount) {
             this.totalCount = totalCount;
@@ -246,7 +246,7 @@ public class ListPipelinesResponseBody extends TeaModel {
             private String pipelineName; 
 
             /**
-             * 创建时间
+             * createTime.
              */
             public Builder createTime(Long createTime) {
                 this.createTime = createTime;
@@ -254,7 +254,7 @@ public class ListPipelinesResponseBody extends TeaModel {
             }
 
             /**
-             * 创建人阿里云账号id
+             * creatorAccountId.
              */
             public Builder creatorAccountId(String creatorAccountId) {
                 this.creatorAccountId = creatorAccountId;
@@ -270,7 +270,7 @@ public class ListPipelinesResponseBody extends TeaModel {
             }
 
             /**
-             * 流水线id
+             * pipelineId.
              */
             public Builder pipelineId(Long pipelineId) {
                 this.pipelineId = pipelineId;
@@ -278,7 +278,7 @@ public class ListPipelinesResponseBody extends TeaModel {
             }
 
             /**
-             * 流水线名称
+             * pipelineName.
              */
             public Builder pipelineName(String pipelineName) {
                 this.pipelineName = pipelineName;

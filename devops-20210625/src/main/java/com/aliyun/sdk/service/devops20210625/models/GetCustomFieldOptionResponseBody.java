@@ -86,7 +86,7 @@ public class GetCustomFieldOptionResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * 错误码
+         * errorCode.
          */
         public Builder errorCode(String errorCode) {
             this.errorCode = errorCode;
@@ -94,7 +94,7 @@ public class GetCustomFieldOptionResponseBody extends TeaModel {
         }
 
         /**
-         * 错误信息
+         * errorMsg.
          */
         public Builder errorMsg(String errorMsg) {
             this.errorMsg = errorMsg;
@@ -102,7 +102,7 @@ public class GetCustomFieldOptionResponseBody extends TeaModel {
         }
 
         /**
-         * 字段值信息
+         * fileds.
          */
         public Builder fileds(java.util.List < Fileds> fileds) {
             this.fileds = fileds;
@@ -110,7 +110,7 @@ public class GetCustomFieldOptionResponseBody extends TeaModel {
         }
 
         /**
-         * 请求id，每次请求都是唯一值，便于后续排查问题
+         * requestId.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -118,7 +118,7 @@ public class GetCustomFieldOptionResponseBody extends TeaModel {
         }
 
         /**
-         * true或者false
+         * success.
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -230,7 +230,7 @@ public class GetCustomFieldOptionResponseBody extends TeaModel {
             private String valueEn; 
 
             /**
-             * 展示的值
+             * displayValue.
              */
             public Builder displayValue(String displayValue) {
                 this.displayValue = displayValue;
@@ -238,7 +238,7 @@ public class GetCustomFieldOptionResponseBody extends TeaModel {
             }
 
             /**
-             * 字段唯一标识
+             * fieldIdentifier.
              */
             public Builder fieldIdentifier(String fieldIdentifier) {
                 this.fieldIdentifier = fieldIdentifier;
@@ -246,7 +246,7 @@ public class GetCustomFieldOptionResponseBody extends TeaModel {
             }
 
             /**
-             * 迭代唯一标识符
+             * identifier.
              */
             public Builder identifier(String identifier) {
                 this.identifier = identifier;
@@ -254,7 +254,7 @@ public class GetCustomFieldOptionResponseBody extends TeaModel {
             }
 
             /**
-             * 展示级别，数字范围1~9，数字越大，颜色越浅
+             * level.
              */
             public Builder level(Long level) {
                 this.level = level;
@@ -262,7 +262,7 @@ public class GetCustomFieldOptionResponseBody extends TeaModel {
             }
 
             /**
-             * 待选值顺序
+             * position.
              */
             public Builder position(Long position) {
                 this.position = position;
@@ -270,7 +270,7 @@ public class GetCustomFieldOptionResponseBody extends TeaModel {
             }
 
             /**
-             * 字段中文名称
+             * value.
              */
             public Builder value(String value) {
                 this.value = value;
@@ -278,7 +278,7 @@ public class GetCustomFieldOptionResponseBody extends TeaModel {
             }
 
             /**
-             * 字段英文名称
+             * valueEn.
              */
             public Builder valueEn(String valueEn) {
                 this.valueEn = valueEn;

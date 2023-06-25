@@ -86,7 +86,7 @@ public class GetFileLastCommitResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * 错误码
+         * errorCode.
          */
         public Builder errorCode(String errorCode) {
             this.errorCode = errorCode;
@@ -94,7 +94,7 @@ public class GetFileLastCommitResponseBody extends TeaModel {
         }
 
         /**
-         * 错误信息
+         * errorMessage.
          */
         public Builder errorMessage(String errorMessage) {
             this.errorMessage = errorMessage;
@@ -102,7 +102,7 @@ public class GetFileLastCommitResponseBody extends TeaModel {
         }
 
         /**
-         * 请求ID
+         * requestId.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -110,7 +110,7 @@ public class GetFileLastCommitResponseBody extends TeaModel {
         }
 
         /**
-         * 响应结果
+         * result.
          */
         public Builder result(Result result) {
             this.result = result;
@@ -118,7 +118,7 @@ public class GetFileLastCommitResponseBody extends TeaModel {
         }
 
         /**
-         * 请求结果
+         * success.
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -178,7 +178,7 @@ public class GetFileLastCommitResponseBody extends TeaModel {
             }
 
             /**
-             * 验证状态
+             * verificationStatus.
              */
             public Builder verificationStatus(String verificationStatus) {
                 this.verificationStatus = verificationStatus;
@@ -363,7 +363,7 @@ public class GetFileLastCommitResponseBody extends TeaModel {
             private String title; 
 
             /**
-             * 作者提交时间
+             * authorDate.
              */
             public Builder authorDate(String authorDate) {
                 this.authorDate = authorDate;
@@ -371,7 +371,7 @@ public class GetFileLastCommitResponseBody extends TeaModel {
             }
 
             /**
-             * 提交者邮箱
+             * authorEmail.
              */
             public Builder authorEmail(String authorEmail) {
                 this.authorEmail = authorEmail;
@@ -379,7 +379,7 @@ public class GetFileLastCommitResponseBody extends TeaModel {
             }
 
             /**
-             * 作者姓名
+             * authorName.
              */
             public Builder authorName(String authorName) {
                 this.authorName = authorName;
@@ -387,7 +387,7 @@ public class GetFileLastCommitResponseBody extends TeaModel {
             }
 
             /**
-             * 提交者提交时间
+             * committedDate.
              */
             public Builder committedDate(String committedDate) {
                 this.committedDate = committedDate;
@@ -395,7 +395,7 @@ public class GetFileLastCommitResponseBody extends TeaModel {
             }
 
             /**
-             * 提交者邮箱
+             * committerEmail.
              */
             public Builder committerEmail(String committerEmail) {
                 this.committerEmail = committerEmail;
@@ -403,7 +403,7 @@ public class GetFileLastCommitResponseBody extends TeaModel {
             }
 
             /**
-             * 提交者姓名
+             * committerName.
              */
             public Builder committerName(String committerName) {
                 this.committerName = committerName;
@@ -411,7 +411,7 @@ public class GetFileLastCommitResponseBody extends TeaModel {
             }
 
             /**
-             * 创建时间
+             * createdAt.
              */
             public Builder createdAt(String createdAt) {
                 this.createdAt = createdAt;
@@ -419,7 +419,7 @@ public class GetFileLastCommitResponseBody extends TeaModel {
             }
 
             /**
-             * Commit ID
+             * id.
              */
             public Builder id(String id) {
                 this.id = id;
@@ -427,7 +427,7 @@ public class GetFileLastCommitResponseBody extends TeaModel {
             }
 
             /**
-             * 提交内容
+             * message.
              */
             public Builder message(String message) {
                 this.message = message;
@@ -435,7 +435,7 @@ public class GetFileLastCommitResponseBody extends TeaModel {
             }
 
             /**
-             * 父提交ID
+             * parentIds.
              */
             public Builder parentIds(java.util.List < String > parentIds) {
                 this.parentIds = parentIds;
@@ -443,7 +443,7 @@ public class GetFileLastCommitResponseBody extends TeaModel {
             }
 
             /**
-             * Commit短ID
+             * shortId.
              */
             public Builder shortId(String shortId) {
                 this.shortId = shortId;
@@ -451,7 +451,7 @@ public class GetFileLastCommitResponseBody extends TeaModel {
             }
 
             /**
-             * 签名
+             * signature.
              */
             public Builder signature(Signature signature) {
                 this.signature = signature;
@@ -459,7 +459,7 @@ public class GetFileLastCommitResponseBody extends TeaModel {
             }
 
             /**
-             * 标题，提交的第一行内容
+             * title.
              */
             public Builder title(String title) {
                 this.title = title;

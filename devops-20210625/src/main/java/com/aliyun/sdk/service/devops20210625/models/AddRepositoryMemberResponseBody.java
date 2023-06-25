@@ -86,7 +86,7 @@ public class AddRepositoryMemberResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * 错误码
+         * errorCode.
          */
         public Builder errorCode(String errorCode) {
             this.errorCode = errorCode;
@@ -94,7 +94,7 @@ public class AddRepositoryMemberResponseBody extends TeaModel {
         }
 
         /**
-         * 错误信息
+         * errorMessage.
          */
         public Builder errorMessage(String errorMessage) {
             this.errorMessage = errorMessage;
@@ -102,7 +102,7 @@ public class AddRepositoryMemberResponseBody extends TeaModel {
         }
 
         /**
-         * 请求ID
+         * requestId.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -110,7 +110,7 @@ public class AddRepositoryMemberResponseBody extends TeaModel {
         }
 
         /**
-         * 返回结果
+         * result.
          */
         public Builder result(java.util.List < Result> result) {
             this.result = result;
@@ -118,7 +118,7 @@ public class AddRepositoryMemberResponseBody extends TeaModel {
         }
 
         /**
-         * 请求状态
+         * success.
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -218,7 +218,7 @@ public class AddRepositoryMemberResponseBody extends TeaModel {
             private String state; 
 
             /**
-             * 权限类型
+             * accessLevel.
              */
             public Builder accessLevel(Integer accessLevel) {
                 this.accessLevel = accessLevel;
@@ -226,7 +226,7 @@ public class AddRepositoryMemberResponseBody extends TeaModel {
             }
 
             /**
-             * 头像地址
+             * avatarUrl.
              */
             public Builder avatarUrl(String avatarUrl) {
                 this.avatarUrl = avatarUrl;
@@ -234,7 +234,7 @@ public class AddRepositoryMemberResponseBody extends TeaModel {
             }
 
             /**
-             * 邮箱
+             * email.
              */
             public Builder email(String email) {
                 this.email = email;
@@ -242,7 +242,7 @@ public class AddRepositoryMemberResponseBody extends TeaModel {
             }
 
             /**
-             * 云效用户ID
+             * externUserId.
              */
             public Builder externUserId(String externUserId) {
                 this.externUserId = externUserId;
@@ -250,7 +250,7 @@ public class AddRepositoryMemberResponseBody extends TeaModel {
             }
 
             /**
-             * Codeup用户Id
+             * id.
              */
             public Builder id(Long id) {
                 this.id = id;
@@ -258,7 +258,7 @@ public class AddRepositoryMemberResponseBody extends TeaModel {
             }
 
             /**
-             * 状态
+             * state.
              */
             public Builder state(String state) {
                 this.state = state;

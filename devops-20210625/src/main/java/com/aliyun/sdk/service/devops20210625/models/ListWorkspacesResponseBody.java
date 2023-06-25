@@ -123,7 +123,7 @@ public class ListWorkspacesResponseBody extends TeaModel {
         private java.util.List < Workspaces> workspaces; 
 
         /**
-         * 错误码
+         * errorCode.
          */
         public Builder errorCode(String errorCode) {
             this.errorCode = errorCode;
@@ -131,7 +131,7 @@ public class ListWorkspacesResponseBody extends TeaModel {
         }
 
         /**
-         * 错误信息
+         * errorMessage.
          */
         public Builder errorMessage(String errorMessage) {
             this.errorMessage = errorMessage;
@@ -139,7 +139,7 @@ public class ListWorkspacesResponseBody extends TeaModel {
         }
 
         /**
-         * MaxResults本次请求所返回的最大记录条数
+         * maxResults.
          */
         public Builder maxResults(Integer maxResults) {
             this.maxResults = maxResults;
@@ -147,7 +147,7 @@ public class ListWorkspacesResponseBody extends TeaModel {
         }
 
         /**
-         * 表示当前调用返回读取到的位置，空代表数据已经读取完毕
+         * nextToken.
          */
         public Builder nextToken(String nextToken) {
             this.nextToken = nextToken;
@@ -155,7 +155,7 @@ public class ListWorkspacesResponseBody extends TeaModel {
         }
 
         /**
-         * 请求ID
+         * requestId.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -163,7 +163,7 @@ public class ListWorkspacesResponseBody extends TeaModel {
         }
 
         /**
-         * 请求是否成功
+         * success.
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -171,7 +171,7 @@ public class ListWorkspacesResponseBody extends TeaModel {
         }
 
         /**
-         * TotalCount本次请求条件下的数据总量，此参数为可选参数，默认可不返回
+         * totalCount.
          */
         public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;
@@ -179,7 +179,7 @@ public class ListWorkspacesResponseBody extends TeaModel {
         }
 
         /**
-         * 工作空间列表
+         * workspaces.
          */
         public Builder workspaces(java.util.List < Workspaces> workspaces) {
             this.workspaces = workspaces;
@@ -315,7 +315,7 @@ public class ListWorkspacesResponseBody extends TeaModel {
             private String userId; 
 
             /**
-             * 代码来源URL
+             * codeUrl.
              */
             public Builder codeUrl(String codeUrl) {
                 this.codeUrl = codeUrl;
@@ -323,7 +323,7 @@ public class ListWorkspacesResponseBody extends TeaModel {
             }
 
             /**
-             * 代码版本，支持 commitSHA、分支、标签
+             * codeVersion.
              */
             public Builder codeVersion(String codeVersion) {
                 this.codeVersion = codeVersion;
@@ -331,7 +331,7 @@ public class ListWorkspacesResponseBody extends TeaModel {
             }
 
             /**
-             * 创建时间戳
+             * createTime.
              */
             public Builder createTime(String createTime) {
                 this.createTime = createTime;
@@ -339,7 +339,7 @@ public class ListWorkspacesResponseBody extends TeaModel {
             }
 
             /**
-             * 工作空间唯一标识，字符串形式，可在云效DevStudio访问空间链接中获取
+             * id.
              */
             public Builder id(String id) {
                 this.id = id;
@@ -347,7 +347,7 @@ public class ListWorkspacesResponseBody extends TeaModel {
             }
 
             /**
-             * 工作空间名称
+             * name.
              */
             public Builder name(String name) {
                 this.name = name;
@@ -355,7 +355,7 @@ public class ListWorkspacesResponseBody extends TeaModel {
             }
 
             /**
-             * 机器规格
+             * spec.
              */
             public Builder spec(String spec) {
                 this.spec = spec;
@@ -363,7 +363,7 @@ public class ListWorkspacesResponseBody extends TeaModel {
             }
 
             /**
-             * 空间状态，枚举：CREATING-创建中, SUCCESS-运行中, FROZEN-冻结中, RECOVERING-恢复中
+             * status.
              */
             public Builder status(String status) {
                 this.status = status;
@@ -371,7 +371,7 @@ public class ListWorkspacesResponseBody extends TeaModel {
             }
 
             /**
-             * 工作空间模板
+             * template.
              */
             public Builder template(String template) {
                 this.template = template;
@@ -379,7 +379,7 @@ public class ListWorkspacesResponseBody extends TeaModel {
             }
 
             /**
-             * 用户阿里云PK
+             * userId.
              */
             public Builder userId(String userId) {
                 this.userId = userId;

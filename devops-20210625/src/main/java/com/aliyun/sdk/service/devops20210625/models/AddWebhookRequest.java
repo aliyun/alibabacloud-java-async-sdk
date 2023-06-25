@@ -215,7 +215,7 @@ public class AddWebhookRequest extends Request {
         }
 
         /**
-         * webhook描述
+         * description.
          */
         public Builder description(String description) {
             this.putBodyParameter("description", description);
@@ -224,7 +224,7 @@ public class AddWebhookRequest extends Request {
         }
 
         /**
-         * 使用ssl认证
+         * enableSslVerification.
          */
         public Builder enableSslVerification(Boolean enableSslVerification) {
             this.putBodyParameter("enableSslVerification", enableSslVerification);
@@ -233,7 +233,7 @@ public class AddWebhookRequest extends Request {
         }
 
         /**
-         * 合并请求事件
+         * mergeRequestsEvents.
          */
         public Builder mergeRequestsEvents(Boolean mergeRequestsEvents) {
             this.putBodyParameter("mergeRequestsEvents", mergeRequestsEvents);
@@ -242,7 +242,7 @@ public class AddWebhookRequest extends Request {
         }
 
         /**
-         * 评论事件
+         * noteEvents.
          */
         public Builder noteEvents(Boolean noteEvents) {
             this.putBodyParameter("noteEvents", noteEvents);
@@ -251,7 +251,7 @@ public class AddWebhookRequest extends Request {
         }
 
         /**
-         * 分支推送事件
+         * pushEvents.
          */
         public Builder pushEvents(Boolean pushEvents) {
             this.putBodyParameter("pushEvents", pushEvents);
@@ -269,7 +269,7 @@ public class AddWebhookRequest extends Request {
         }
 
         /**
-         * 标签推送事件
+         * tagPushEvents.
          */
         public Builder tagPushEvents(Boolean tagPushEvents) {
             this.putBodyParameter("tagPushEvents", tagPushEvents);
@@ -278,7 +278,7 @@ public class AddWebhookRequest extends Request {
         }
 
         /**
-         * hook url
+         * url.
          */
         public Builder url(String url) {
             this.putBodyParameter("url", url);

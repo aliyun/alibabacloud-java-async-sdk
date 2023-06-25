@@ -86,7 +86,7 @@ public class ResetSshKeyResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * 错误码
+         * errorCode.
          */
         public Builder errorCode(String errorCode) {
             this.errorCode = errorCode;
@@ -94,7 +94,7 @@ public class ResetSshKeyResponseBody extends TeaModel {
         }
 
         /**
-         * 错误信息
+         * errorMessage.
          */
         public Builder errorMessage(String errorMessage) {
             this.errorMessage = errorMessage;
@@ -102,7 +102,7 @@ public class ResetSshKeyResponseBody extends TeaModel {
         }
 
         /**
-         * 请求id，每次请求都是唯一值，便于后续排查问题
+         * requestId.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -110,7 +110,7 @@ public class ResetSshKeyResponseBody extends TeaModel {
         }
 
         /**
-         * 企业公钥
+         * sshKey.
          */
         public Builder sshKey(SshKey sshKey) {
             this.sshKey = sshKey;
@@ -118,7 +118,7 @@ public class ResetSshKeyResponseBody extends TeaModel {
         }
 
         /**
-         * true 接口调用成功，false 接口调用失败
+         * success.
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -170,7 +170,7 @@ public class ResetSshKeyResponseBody extends TeaModel {
             private String publicKey; 
 
             /**
-             * 企业公钥id
+             * id.
              */
             public Builder id(Long id) {
                 this.id = id;
@@ -178,7 +178,7 @@ public class ResetSshKeyResponseBody extends TeaModel {
             }
 
             /**
-             * 企业公钥
+             * publicKey.
              */
             public Builder publicKey(String publicKey) {
                 this.publicKey = publicKey;

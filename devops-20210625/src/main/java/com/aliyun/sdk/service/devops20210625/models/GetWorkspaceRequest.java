@@ -55,7 +55,7 @@ public class GetWorkspaceRequest extends Request {
         } 
 
         /**
-         * 工作空间唯一标识，字符串形式，可在云效DevStudio访问空间链接中获取
+         * workspaceId.
          */
         public Builder workspaceId(String workspaceId) {
             this.putPathParameter("workspaceId", workspaceId);

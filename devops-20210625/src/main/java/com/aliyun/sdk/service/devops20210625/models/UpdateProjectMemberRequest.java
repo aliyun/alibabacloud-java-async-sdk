@@ -145,7 +145,7 @@ public class UpdateProjectMemberRequest extends Request {
         } 
 
         /**
-         * 企业id
+         * organizationId.
          */
         public Builder organizationId(String organizationId) {
             this.putPathParameter("organizationId", organizationId);
@@ -154,7 +154,7 @@ public class UpdateProjectMemberRequest extends Request {
         }
 
         /**
-         * 项目id
+         * projectId.
          */
         public Builder projectId(String projectId) {
             this.putPathParameter("projectId", projectId);
@@ -163,7 +163,7 @@ public class UpdateProjectMemberRequest extends Request {
         }
 
         /**
-         * 角色id
+         * roleIdentifier.
          */
         public Builder roleIdentifier(String roleIdentifier) {
             this.putBodyParameter("roleIdentifier", roleIdentifier);
@@ -172,7 +172,7 @@ public class UpdateProjectMemberRequest extends Request {
         }
 
         /**
-         * 资源id，也就是项目id
+         * targetIdentifier.
          */
         public Builder targetIdentifier(String targetIdentifier) {
             this.putBodyParameter("targetIdentifier", targetIdentifier);
@@ -181,7 +181,7 @@ public class UpdateProjectMemberRequest extends Request {
         }
 
         /**
-         * 资源类型
+         * targetType.
          */
         public Builder targetType(String targetType) {
             this.putBodyParameter("targetType", targetType);
@@ -190,7 +190,7 @@ public class UpdateProjectMemberRequest extends Request {
         }
 
         /**
-         * 用户id
+         * userIdentifier.
          */
         public Builder userIdentifier(String userIdentifier) {
             this.putBodyParameter("userIdentifier", userIdentifier);
@@ -199,7 +199,7 @@ public class UpdateProjectMemberRequest extends Request {
         }
 
         /**
-         * 用户类型
+         * userType.
          */
         public Builder userType(String userType) {
             this.putBodyParameter("userType", userType);

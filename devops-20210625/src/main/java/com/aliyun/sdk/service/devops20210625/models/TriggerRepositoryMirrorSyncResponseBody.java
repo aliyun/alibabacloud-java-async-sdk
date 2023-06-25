@@ -86,7 +86,7 @@ public class TriggerRepositoryMirrorSyncResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * 错误码
+         * errorCode.
          */
         public Builder errorCode(String errorCode) {
             this.errorCode = errorCode;
@@ -94,7 +94,7 @@ public class TriggerRepositoryMirrorSyncResponseBody extends TeaModel {
         }
 
         /**
-         * 错误信息
+         * errorMessage.
          */
         public Builder errorMessage(String errorMessage) {
             this.errorMessage = errorMessage;
@@ -102,7 +102,7 @@ public class TriggerRepositoryMirrorSyncResponseBody extends TeaModel {
         }
 
         /**
-         * 请求ID
+         * requestId.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -110,7 +110,7 @@ public class TriggerRepositoryMirrorSyncResponseBody extends TeaModel {
         }
 
         /**
-         * 响应结果
+         * result.
          */
         public Builder result(Result result) {
             this.result = result;
@@ -118,7 +118,7 @@ public class TriggerRepositoryMirrorSyncResponseBody extends TeaModel {
         }
 
         /**
-         * 请求结果
+         * success.
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -158,7 +158,7 @@ public class TriggerRepositoryMirrorSyncResponseBody extends TeaModel {
             private Boolean result; 
 
             /**
-             * 仓库同步触发结果
+             * result.
              */
             public Builder result(Boolean result) {
                 this.result = result;

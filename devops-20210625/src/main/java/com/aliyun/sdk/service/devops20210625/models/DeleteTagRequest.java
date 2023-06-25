@@ -117,7 +117,7 @@ public class DeleteTagRequest extends Request {
         }
 
         /**
-         * A short description of struct
+         * organizationId.
          */
         public Builder organizationId(String organizationId) {
             this.putQueryParameter("organizationId", organizationId);

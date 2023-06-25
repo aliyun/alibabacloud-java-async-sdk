@@ -86,7 +86,7 @@ public class DeleteWorkitemResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * 是否成功
+         * deleteFlag.
          */
         public Builder deleteFlag(Boolean deleteFlag) {
             this.deleteFlag = deleteFlag;
@@ -94,7 +94,7 @@ public class DeleteWorkitemResponseBody extends TeaModel {
         }
 
         /**
-         * 错误状态码
+         * errorCode.
          */
         public Builder errorCode(String errorCode) {
             this.errorCode = errorCode;
@@ -102,7 +102,7 @@ public class DeleteWorkitemResponseBody extends TeaModel {
         }
 
         /**
-         * 错误信息
+         * errorMsg.
          */
         public Builder errorMsg(String errorMsg) {
             this.errorMsg = errorMsg;

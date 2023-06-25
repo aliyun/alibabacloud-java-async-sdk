@@ -100,7 +100,7 @@ public class SkipVMDeployMachineRequest extends Request {
         } 
 
         /**
-         * 企业标识，也称企业id，字符串形式，可在云效访问链接中获取，如https://devops.aliyun.com/organization/【OrganizationId】
+         * organizationId.
          */
         public Builder organizationId(String organizationId) {
             this.putPathParameter("organizationId", organizationId);
@@ -109,7 +109,7 @@ public class SkipVMDeployMachineRequest extends Request {
         }
 
         /**
-         * 12222
+         * pipelineId.
          */
         public Builder pipelineId(Long pipelineId) {
             this.putPathParameter("pipelineId", pipelineId);
@@ -118,7 +118,7 @@ public class SkipVMDeployMachineRequest extends Request {
         }
 
         /**
-         * 部署单ID
+         * deployOrderId.
          */
         public Builder deployOrderId(Long deployOrderId) {
             this.putPathParameter("deployOrderId", deployOrderId);
@@ -127,7 +127,7 @@ public class SkipVMDeployMachineRequest extends Request {
         }
 
         /**
-         * 机器SN
+         * machineSn.
          */
         public Builder machineSn(String machineSn) {
             this.putPathParameter("machineSn", machineSn);

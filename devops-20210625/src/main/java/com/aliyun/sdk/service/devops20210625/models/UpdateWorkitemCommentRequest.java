@@ -124,7 +124,7 @@ public class UpdateWorkitemCommentRequest extends Request {
         }
 
         /**
-         * 工作项id
+         * commentId.
          */
         public Builder commentId(Long commentId) {
             this.putBodyParameter("commentId", commentId);
@@ -133,7 +133,7 @@ public class UpdateWorkitemCommentRequest extends Request {
         }
 
         /**
-         * 工作项内容
+         * content.
          */
         public Builder content(String content) {
             this.putBodyParameter("content", content);
@@ -142,7 +142,7 @@ public class UpdateWorkitemCommentRequest extends Request {
         }
 
         /**
-         * 内容格式 目前支持MARKDOWN/RICHTEXT
+         * formatType.
          */
         public Builder formatType(String formatType) {
             this.putBodyParameter("formatType", formatType);
@@ -151,7 +151,7 @@ public class UpdateWorkitemCommentRequest extends Request {
         }
 
         /**
-         * 工作项id
+         * workitemIdentifier.
          */
         public Builder workitemIdentifier(String workitemIdentifier) {
             this.putBodyParameter("workitemIdentifier", workitemIdentifier);

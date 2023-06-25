@@ -115,7 +115,7 @@ public class UpdateWorkItemRequest extends Request {
         } 
 
         /**
-         * 企业id
+         * organizationId.
          */
         public Builder organizationId(String organizationId) {
             this.putPathParameter("organizationId", organizationId);
@@ -124,7 +124,7 @@ public class UpdateWorkItemRequest extends Request {
         }
 
         /**
-         * 更新字段的类型，标题：subject/自定义字段：customField/状态：status/描述：document/基本字段：basic(包括负责人、迭代、参与人等)
+         * fieldType.
          */
         public Builder fieldType(String fieldType) {
             this.putBodyParameter("fieldType", fieldType);
@@ -133,7 +133,7 @@ public class UpdateWorkItemRequest extends Request {
         }
 
         /**
-         * 工作项唯一标识id
+         * identifier.
          */
         public Builder identifier(String identifier) {
             this.putBodyParameter("identifier", identifier);
@@ -142,7 +142,7 @@ public class UpdateWorkItemRequest extends Request {
         }
 
         /**
-         * 更新的字段名
+         * propertyKey.
          */
         public Builder propertyKey(String propertyKey) {
             this.putBodyParameter("propertyKey", propertyKey);
@@ -151,7 +151,7 @@ public class UpdateWorkItemRequest extends Request {
         }
 
         /**
-         * 更新后的值
+         * propertyValue.
          */
         public Builder propertyValue(String propertyValue) {
             this.putBodyParameter("propertyValue", propertyValue);
