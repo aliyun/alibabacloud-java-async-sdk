@@ -484,7 +484,9 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * The Terraform version that is supported by ROS. The parameter value is the same as the value of the Transform parameter in a Terraform template.
+      * You can call this operation to query the Terraform hosting, resource cleaner, and scenario features.
+      * This topic provides an example on how to query the details of features supported by ROS in the China (Hangzhou) region. The details include Terraform versions, provider versions, and supported resource types.
+      * >  In the Examples section, only part of the sample code is provided.
       *
      */
     @Override
@@ -707,7 +709,7 @@ public final class DefaultAsyncClient implements AsyncClient {
     public CompletableFuture<GetTemplateEstimateCostResponse> getTemplateEstimateCost(GetTemplateEstimateCostRequest request) {
         try {
             this.handler.validateRequestModel(request);
-            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("GetTemplateEstimateCost").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("GetTemplateEstimateCost").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(true).setReqBodyType(BodyType.FORM).formModel(request);
             ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(GetTemplateEstimateCostResponse.create());
             return this.handler.execute(params);
         } catch (Exception e) {
@@ -726,7 +728,7 @@ public final class DefaultAsyncClient implements AsyncClient {
     public CompletableFuture<GetTemplateParameterConstraintsResponse> getTemplateParameterConstraints(GetTemplateParameterConstraintsRequest request) {
         try {
             this.handler.validateRequestModel(request);
-            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("GetTemplateParameterConstraints").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("GetTemplateParameterConstraints").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(true).setReqBodyType(BodyType.FORM).formModel(request);
             ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(GetTemplateParameterConstraintsResponse.create());
             return this.handler.execute(params);
         } catch (Exception e) {
@@ -925,7 +927,9 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * The ID of the stack.
+      * The ListStackOperationRisks operation is suitable for the following scenarios:
+      * *   You want to detect high risks that may arise in resources when you delete a stack that contains the resources, and query the cause of each risk in a resource.
+      * *   When you create a stack, the creation may fail. In this case, you can call this operation to check which types of permissions that are required to create stacks are missing.
       *
      */
     @Override

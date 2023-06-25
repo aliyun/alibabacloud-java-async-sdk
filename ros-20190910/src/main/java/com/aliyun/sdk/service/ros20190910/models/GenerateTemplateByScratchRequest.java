@@ -26,11 +26,16 @@ public class GenerateTemplateByScratchRequest extends Request {
     @Validation(required = true)
     private String templateScratchId;
 
+    @Query
+    @NameInMap("TemplateType")
+    private String templateType;
+
     private GenerateTemplateByScratchRequest(Builder builder) {
         super(builder);
         this.provisionRegionId = builder.provisionRegionId;
         this.regionId = builder.regionId;
         this.templateScratchId = builder.templateScratchId;
+        this.templateType = builder.templateType;
     }
 
     public static Builder builder() {
@@ -67,10 +72,18 @@ public class GenerateTemplateByScratchRequest extends Request {
         return this.templateScratchId;
     }
 
+    /**
+     * @return templateType
+     */
+    public String getTemplateType() {
+        return this.templateType;
+    }
+
     public static final class Builder extends Request.Builder<GenerateTemplateByScratchRequest, Builder> {
         private String provisionRegionId; 
         private String regionId; 
         private String templateScratchId; 
+        private String templateType; 
 
         private Builder() {
             super();
@@ -81,6 +94,7 @@ public class GenerateTemplateByScratchRequest extends Request {
             this.provisionRegionId = request.provisionRegionId;
             this.regionId = request.regionId;
             this.templateScratchId = request.templateScratchId;
+            this.templateType = request.templateType;
         } 
 
         /**
@@ -113,6 +127,15 @@ public class GenerateTemplateByScratchRequest extends Request {
         public Builder templateScratchId(String templateScratchId) {
             this.putQueryParameter("TemplateScratchId", templateScratchId);
             this.templateScratchId = templateScratchId;
+            return this;
+        }
+
+        /**
+         * TemplateType.
+         */
+        public Builder templateType(String templateType) {
+            this.putQueryParameter("TemplateType", templateType);
+            this.templateType = templateType;
             return this;
         }
 

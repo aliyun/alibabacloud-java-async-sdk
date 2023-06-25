@@ -195,7 +195,7 @@ public class ListStackOperationRisksRequest extends Request {
         } 
 
         /**
-         * The resource N that you want to retain in the stack.
+         * The client token that is used to ensure the idempotence of the request. You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can be up to 64 characters in length, and can contain letters, digits, hyphens (-), and underscores (\_). For more information, see [How to ensure idempotence](~~134212~~).
          */
         public Builder clientToken(String clientToken) {
             this.putQueryParameter("ClientToken", clientToken);
@@ -204,66 +204,15 @@ public class ListStackOperationRisksRequest extends Request {
         }
 
         /**
-         * Specifies whether to retain all resources in the stack.
+         * The type of the operation of which you want to detect risks. Valid values:
          * <p>
          * 
-         * Default value: false. Valid values:
-         * 
-         * *   true
-         * *   false
-         * 
-         * >  This parameter takes effect when the OperationType parameter is set to DeleteStack.
+         * *   DeleteStack: detects high risks that may arise in resources when you delete a stack.
+         * *   CreateStack: detects the missing permissions when you fail to create a stack.
          */
         public Builder operationType(String operationType) {
             this.putQueryParameter("OperationType", operationType);
             this.operationType = operationType;
-            return this;
-        }
-
-        /**
-         * The resource N that you want to retain in the stack.
-         */
-        public Builder ramRoleName(String ramRoleName) {
-            this.putQueryParameter("RamRoleName", ramRoleName);
-            this.ramRoleName = ramRoleName;
-            return this;
-        }
-
-        /**
-         * The client token that is used to ensure the idempotence of the request. You can use the client to generate the value, but you must make sure that the value is unique among different requests.
-         * <p>
-         * 
-         * The token can be up to 64 characters in length, and can contain letters, digits, hyphens (-), and underscores (\_).
-         * 
-         * For more information, see [Ensure idempotence](~~134212~~).
-         */
-        public Builder regionId(String regionId) {
-            this.putQueryParameter("RegionId", regionId);
-            this.regionId = regionId;
-            return this;
-        }
-
-        /**
-         * The structure that contains the template body. The template body must be 1 to 524,288 bytes in length. If the length of the template body exceeds the upper limit, we recommend that you add parameters to the HTTP POST request body to prevent request failures caused by excessively long URLs.
-         * <p>
-         * 
-         * >  You must specify only one of the following parameters: TemplateBody, TemplateURL, TemplateId, and TemplateScratchId.
-         */
-        public Builder retainAllResources(Boolean retainAllResources) {
-            this.putQueryParameter("RetainAllResources", retainAllResources);
-            this.retainAllResources = retainAllResources;
-            return this;
-        }
-
-        /**
-         * The URL of the file that contains the template body. The URL must point to a template that is located on an HTTP or HTTPS web server or in an Object Storage Service (OSS) bucket, such as oss://ros/stack-policy/demo or oss://ros/stack-policy/demo?RegionId=cn-hangzhou. The template body can be up to 524,288 bytes in length. If you do not specify the region ID of the OSS bucket, the value of the RegionId parameter is used.
-         * <p>
-         * 
-         * >  You must specify only one of the following parameters: TemplateBody, TemplateURL, TemplateId, and TemplateScratchId.
-         */
-        public Builder retainResources(java.util.List < String > retainResources) {
-            this.putQueryParameter("RetainResources", retainResources);
-            this.retainResources = retainResources;
             return this;
         }
 
@@ -276,6 +225,51 @@ public class ListStackOperationRisksRequest extends Request {
          * 
          * The name of the RAM role can be up to 64 bytes in length.
          */
+        public Builder ramRoleName(String ramRoleName) {
+            this.putQueryParameter("RamRoleName", ramRoleName);
+            this.ramRoleName = ramRoleName;
+            return this;
+        }
+
+        /**
+         * The region ID of the stack. You can call the [DescribeRegions](~~131035~~) operation to query the most recent region list.
+         */
+        public Builder regionId(String regionId) {
+            this.putQueryParameter("RegionId", regionId);
+            this.regionId = regionId;
+            return this;
+        }
+
+        /**
+         * Specifies whether to retain all resources in the stack. Valid values:
+         * <p>
+         * 
+         * *   true
+         * *   false (default)
+         * 
+         * > This parameter takes effect only if you set OperationType to DeleteStack.
+         */
+        public Builder retainAllResources(Boolean retainAllResources) {
+            this.putQueryParameter("RetainAllResources", retainAllResources);
+            this.retainAllResources = retainAllResources;
+            return this;
+        }
+
+        /**
+         * The list of resources to retain.
+         * <p>
+         * 
+         * > This parameter takes effect only if you set OperationType to DeleteStack.
+         */
+        public Builder retainResources(java.util.List < String > retainResources) {
+            this.putQueryParameter("RetainResources", retainResources);
+            this.retainResources = retainResources;
+            return this;
+        }
+
+        /**
+         * The ID of the stack.
+         */
         public Builder stackId(String stackId) {
             this.putQueryParameter("StackId", stackId);
             this.stackId = stackId;
@@ -283,10 +277,10 @@ public class ListStackOperationRisksRequest extends Request {
         }
 
         /**
-         * The version of the template.
+         * The template body. The template body must be 1 to 524,288 bytes in length. If the length of the template body exceeds the upper limit, we recommend that you add parameters to the HTTP POST request body to prevent request failures caused by excessively long URLs.
          * <p>
          * 
-         * >  This parameter takes effect only when the TemplateId parameter is specified.
+         * > You must specify one of TemplateBody, TemplateURL, TemplateId, and TemplateScratchId.
          */
         public Builder templateBody(String templateBody) {
             this.putQueryParameter("TemplateBody", templateBody);
@@ -295,7 +289,10 @@ public class ListStackOperationRisksRequest extends Request {
         }
 
         /**
-         * The resources that are at risk.
+         * The ID of the template. This parameter applies to shared and private templates.
+         * <p>
+         * 
+         * > You must specify one of TemplateBody, TemplateURL, TemplateId, and TemplateScratchId.
          */
         public Builder templateId(String templateId) {
             this.putQueryParameter("TemplateId", templateId);
@@ -304,7 +301,10 @@ public class ListStackOperationRisksRequest extends Request {
         }
 
         /**
-         * The ID of the request.
+         * The URL of the file that contains the template body. The URL must point to a template that is located on an HTTP or HTTPS web server or in an Object Storage Service (OSS) bucket, such as oss://ros/stack-policy/demo and oss://ros/stack-policy/demo?RegionId=cn-hangzhou. The template body can be up to 524,288 bytes in length. If you do not specify RegionId in the URL, the region ID of the stack is used.
+         * <p>
+         * 
+         * > You must specify one of TemplateBody, TemplateURL, TemplateId, and TemplateScratchId.
          */
         public Builder templateURL(String templateURL) {
             this.putQueryParameter("TemplateURL", templateURL);
@@ -313,7 +313,10 @@ public class ListStackOperationRisksRequest extends Request {
         }
 
         /**
-         * The logical ID of the resource. The logical ID is the resource name that is defined in the template.
+         * The version of the template.
+         * <p>
+         * 
+         * > This parameter takes effect only if you specify TemplateId.
          */
         public Builder templateVersion(String templateVersion) {
             this.putQueryParameter("TemplateVersion", templateVersion);

@@ -135,7 +135,11 @@ public class DeleteStackRequest extends Request {
         }
 
         /**
-         * The name of resource N that you want to retain.
+         * The name of the RAM role. Resource Orchestration Service (ROS) assumes the RAM role to create the stack and uses the credentials of the role to call the APIs of Alibaba Cloud services.\
+         * <p>
+         * ROS assumes the role to perform operations on the stack. If you have permissions to perform operations on the stack but do not have permissions to use the RAM role, ROS still assumes the RAM role. You must make sure that the least privileges are granted to the RAM role.\
+         * If you leave this parameter empty when you call the DeleteStack operation, ROS cannot assume the existing RAM role that is associated with the stack. If you want ROS to assume a RAM role, you must specify this parameter. If no RAM roles are available, ROS uses a temporary credential that is generated from the credentials of your account.\
+         * The name of the RAM role can be up to 64 bytes in length.
          */
         public Builder ramRoleName(String ramRoleName) {
             this.putQueryParameter("RamRoleName", ramRoleName);
@@ -144,7 +148,7 @@ public class DeleteStackRequest extends Request {
         }
 
         /**
-         * The name of resource N that you want to retain.
+         * The region ID of the stack. You can call the [DescribeRegions](~~131035~~) operation to query the most recent region list.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -153,14 +157,13 @@ public class DeleteStackRequest extends Request {
         }
 
         /**
-         * The name of the RAM role. Resource Orchestration Service (ROS) assumes the RAM role to create the stack and uses credentials of the role to call the APIs of Alibaba Cloud services.
+         * Specifies whether to retain all resources in the stack.
          * <p>
          * 
-         * ROS assumes the RAM role to perform operations on the stack. If you have permissions to perform operations on the stack but do not have permissions to use the RAM role, ROS still assumes the RAM role. You must make sure that the least privileges are granted to the role.
+         * Valid values:
          * 
-         * If you leave this parameter empty when you call the DeleteStack operation, ROS cannot assume the existing RAM role that is associated with the stack. If you want ROS to assume a RAM role, you must specify this parameter. If no role is available for ROS to assume, ROS uses a temporary credential that is generated from the credentials of your account.
-         * 
-         * The name of the RAM role can be up to 64 bytes in length.
+         * *   true
+         * *   false (default)
          */
         public Builder retainAllResources(Boolean retainAllResources) {
             this.putQueryParameter("RetainAllResources", retainAllResources);
@@ -169,7 +172,7 @@ public class DeleteStackRequest extends Request {
         }
 
         /**
-         * The ID of the request.
+         * The resources that you want to retain.
          */
         public Builder retainResources(java.util.List < String > retainResources) {
             this.putQueryParameter("RetainResources", retainResources);
@@ -178,7 +181,7 @@ public class DeleteStackRequest extends Request {
         }
 
         /**
-         * The region ID of the stack. You can call the [DescribeRegions](~~131035~~) operation to query the most recent region list.
+         * The ID of the stack.
          */
         public Builder stackId(String stackId) {
             this.putQueryParameter("StackId", stackId);

@@ -29,7 +29,7 @@ public class GetTemplateEstimateCostRequest extends Request {
     @NameInMap("StackId")
     private String stackId;
 
-    @Query
+    @Body
     @NameInMap("TemplateBody")
     private String templateBody;
 
@@ -233,10 +233,10 @@ public class GetTemplateEstimateCostRequest extends Request {
         }
 
         /**
-         * The version of the template. This parameter takes effect only when the TemplateId parameter is specified.
+         * TemplateBody.
          */
         public Builder templateBody(String templateBody) {
-            this.putQueryParameter("TemplateBody", templateBody);
+            this.putBodyParameter("TemplateBody", templateBody);
             this.templateBody = templateBody;
             return this;
         }

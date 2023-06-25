@@ -135,6 +135,110 @@ public class GetTemplateParameterConstraintsResponseBody extends TeaModel {
         } 
 
     }
+    public static class OriginalConstraints extends TeaModel {
+        @NameInMap("AllowedValues")
+        private java.util.List < ? > allowedValues;
+
+        @NameInMap("PropertyName")
+        private String propertyName;
+
+        @NameInMap("ResourceName")
+        private String resourceName;
+
+        @NameInMap("ResourceType")
+        private String resourceType;
+
+        private OriginalConstraints(Builder builder) {
+            this.allowedValues = builder.allowedValues;
+            this.propertyName = builder.propertyName;
+            this.resourceName = builder.resourceName;
+            this.resourceType = builder.resourceType;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static OriginalConstraints create() {
+            return builder().build();
+        }
+
+        /**
+         * @return allowedValues
+         */
+        public java.util.List < ? > getAllowedValues() {
+            return this.allowedValues;
+        }
+
+        /**
+         * @return propertyName
+         */
+        public String getPropertyName() {
+            return this.propertyName;
+        }
+
+        /**
+         * @return resourceName
+         */
+        public String getResourceName() {
+            return this.resourceName;
+        }
+
+        /**
+         * @return resourceType
+         */
+        public String getResourceType() {
+            return this.resourceType;
+        }
+
+        public static final class Builder {
+            private java.util.List < ? > allowedValues; 
+            private String propertyName; 
+            private String resourceName; 
+            private String resourceType; 
+
+            /**
+             * AllowedValues.
+             */
+            public Builder allowedValues(java.util.List < ? > allowedValues) {
+                this.allowedValues = allowedValues;
+                return this;
+            }
+
+            /**
+             * The name of the resource property.
+             */
+            public Builder propertyName(String propertyName) {
+                this.propertyName = propertyName;
+                return this;
+            }
+
+            /**
+             * ResourceName.
+             */
+            public Builder resourceName(String resourceName) {
+                this.resourceName = resourceName;
+                return this;
+            }
+
+            /**
+             * The resource type.
+             * <p>
+             * 
+             * You can call the [ListResourceTypes](~~133957~~) operation to query the resource type.
+             */
+            public Builder resourceType(String resourceType) {
+                this.resourceType = resourceType;
+                return this;
+            }
+
+            public OriginalConstraints build() {
+                return new OriginalConstraints(this);
+            } 
+
+        } 
+
+    }
     public static class QueryErrors extends TeaModel {
         @NameInMap("ErrorMessage")
         private String errorMessage;
@@ -238,6 +342,9 @@ public class GetTemplateParameterConstraintsResponseBody extends TeaModel {
         @NameInMap("NotSupportResources")
         private java.util.List < NotSupportResources> notSupportResources;
 
+        @NameInMap("OriginalConstraints")
+        private java.util.List < OriginalConstraints> originalConstraints;
+
         @NameInMap("ParameterKey")
         private String parameterKey;
 
@@ -255,6 +362,7 @@ public class GetTemplateParameterConstraintsResponseBody extends TeaModel {
             this.illegalValueByParameterConstraints = builder.illegalValueByParameterConstraints;
             this.illegalValueByRules = builder.illegalValueByRules;
             this.notSupportResources = builder.notSupportResources;
+            this.originalConstraints = builder.originalConstraints;
             this.parameterKey = builder.parameterKey;
             this.queryErrors = builder.queryErrors;
             this.type = builder.type;
@@ -318,6 +426,13 @@ public class GetTemplateParameterConstraintsResponseBody extends TeaModel {
         }
 
         /**
+         * @return originalConstraints
+         */
+        public java.util.List < OriginalConstraints> getOriginalConstraints() {
+            return this.originalConstraints;
+        }
+
+        /**
          * @return parameterKey
          */
         public String getParameterKey() {
@@ -346,6 +461,7 @@ public class GetTemplateParameterConstraintsResponseBody extends TeaModel {
             private java.util.List < ? > illegalValueByParameterConstraints; 
             private java.util.List < ? > illegalValueByRules; 
             private java.util.List < NotSupportResources> notSupportResources; 
+            private java.util.List < OriginalConstraints> originalConstraints; 
             private String parameterKey; 
             private java.util.List < QueryErrors> queryErrors; 
             private String type; 
@@ -416,6 +532,14 @@ public class GetTemplateParameterConstraintsResponseBody extends TeaModel {
              */
             public Builder notSupportResources(java.util.List < NotSupportResources> notSupportResources) {
                 this.notSupportResources = notSupportResources;
+                return this;
+            }
+
+            /**
+             * OriginalConstraints.
+             */
+            public Builder originalConstraints(java.util.List < OriginalConstraints> originalConstraints) {
+                this.originalConstraints = originalConstraints;
                 return this;
             }
 

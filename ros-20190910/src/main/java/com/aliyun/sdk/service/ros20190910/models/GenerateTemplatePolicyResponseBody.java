@@ -75,6 +75,9 @@ public class GenerateTemplatePolicyResponseBody extends TeaModel {
         @NameInMap("Action")
         private java.util.List < String > action;
 
+        @NameInMap("Condition")
+        private java.util.Map < String, ? > condition;
+
         @NameInMap("Effect")
         private String effect;
 
@@ -83,6 +86,7 @@ public class GenerateTemplatePolicyResponseBody extends TeaModel {
 
         private Statement(Builder builder) {
             this.action = builder.action;
+            this.condition = builder.condition;
             this.effect = builder.effect;
             this.resource = builder.resource;
         }
@@ -103,6 +107,13 @@ public class GenerateTemplatePolicyResponseBody extends TeaModel {
         }
 
         /**
+         * @return condition
+         */
+        public java.util.Map < String, ? > getCondition() {
+            return this.condition;
+        }
+
+        /**
          * @return effect
          */
         public String getEffect() {
@@ -118,6 +129,7 @@ public class GenerateTemplatePolicyResponseBody extends TeaModel {
 
         public static final class Builder {
             private java.util.List < String > action; 
+            private java.util.Map < String, ? > condition; 
             private String effect; 
             private String resource; 
 
@@ -126,6 +138,14 @@ public class GenerateTemplatePolicyResponseBody extends TeaModel {
              */
             public Builder action(java.util.List < String > action) {
                 this.action = action;
+                return this;
+            }
+
+            /**
+             * Condition.
+             */
+            public Builder condition(java.util.Map < String, ? > condition) {
+                this.condition = condition;
                 return this;
             }
 

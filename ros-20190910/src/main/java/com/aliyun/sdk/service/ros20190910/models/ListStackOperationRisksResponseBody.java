@@ -62,7 +62,7 @@ public class ListStackOperationRisksResponseBody extends TeaModel {
         private java.util.List < RiskResources> riskResources; 
 
         /**
-         * MissingPolicyActions.
+         * The operations on which the permissions are not granted to the Alibaba Cloud account of the caller.
          */
         public Builder missingPolicyActions(java.util.List < String > missingPolicyActions) {
             this.missingPolicyActions = missingPolicyActions;
@@ -70,7 +70,7 @@ public class ListStackOperationRisksResponseBody extends TeaModel {
         }
 
         /**
-         * The physical ID of the resource. The physical ID is the actual ID of the resource.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -78,10 +78,7 @@ public class ListStackOperationRisksResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request when the risk detection fails.
-         * <p>
-         * 
-         * >  This parameter is not returned if the risk detection is successful.
+         * The resources that are at risk.
          */
         public Builder riskResources(java.util.List < RiskResources> riskResources) {
             this.riskResources = riskResources;
@@ -205,7 +202,10 @@ public class ListStackOperationRisksResponseBody extends TeaModel {
             private String riskType; 
 
             /**
-             * The reason for the risk.
+             * The error code that is returned when the risk detection fails.
+             * <p>
+             * 
+             * >  This parameter is not returned if the risk detection is successful.
              */
             public Builder code(String code) {
                 this.code = code;
@@ -213,37 +213,10 @@ public class ListStackOperationRisksResponseBody extends TeaModel {
             }
 
             /**
-             * The resource type.
+             * The logical ID of the resource. The logical ID is the resource name that is defined in the template.
              */
             public Builder logicalResourceId(String logicalResourceId) {
                 this.logicalResourceId = logicalResourceId;
-                return this;
-            }
-
-            /**
-             * The operations on which the permissions are not granted to the Alibaba Cloud account of the caller.
-             */
-            public Builder message(String message) {
-                this.message = message;
-                return this;
-            }
-
-            /**
-             * The error code that is returned when the risk detection fails.
-             * <p>
-             * 
-             * >  This parameter is not returned if the risk detection is successful.
-             */
-            public Builder physicalResourceId(String physicalResourceId) {
-                this.physicalResourceId = physicalResourceId;
-                return this;
-            }
-
-            /**
-             * Reason.
-             */
-            public Builder reason(String reason) {
-                this.reason = reason;
                 return this;
             }
 
@@ -253,8 +226,43 @@ public class ListStackOperationRisksResponseBody extends TeaModel {
              * 
              * >  This parameter is not returned if the risk detection is successful.
              */
+            public Builder message(String message) {
+                this.message = message;
+                return this;
+            }
+
+            /**
+             * The physical ID of the resource. The physical ID is the actual ID of the resource.
+             */
+            public Builder physicalResourceId(String physicalResourceId) {
+                this.physicalResourceId = physicalResourceId;
+                return this;
+            }
+
+            /**
+             * The cause of the risk.
+             */
+            public Builder reason(String reason) {
+                this.reason = reason;
+                return this;
+            }
+
+            /**
+             * The ID of the request when the risk detection fails.
+             * <p>
+             * 
+             * >  This parameter is not returned if the risk detection is successful.
+             */
             public Builder requestId(String requestId) {
                 this.requestId = requestId;
+                return this;
+            }
+
+            /**
+             * The type of the resource.
+             */
+            public Builder resourceType(String resourceType) {
+                this.resourceType = resourceType;
                 return this;
             }
 
@@ -266,14 +274,6 @@ public class ListStackOperationRisksResponseBody extends TeaModel {
              * *   MaybeReferenced: The resource may be referenced by other resources.
              * *   AdditionalRiskCheckRequired: An additional risk detection is required for a nested stack.
              * *   OperationIgnored: The operation does not take effect for the resource.
-             */
-            public Builder resourceType(String resourceType) {
-                this.resourceType = resourceType;
-                return this;
-            }
-
-            /**
-             * The operations on which the permissions are not granted to the Alibaba Cloud account of the caller.
              */
             public Builder riskType(String riskType) {
                 this.riskType = riskType;
