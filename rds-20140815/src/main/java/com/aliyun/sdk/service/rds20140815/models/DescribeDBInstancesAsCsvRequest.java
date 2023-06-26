@@ -13,8 +13,16 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class DescribeDBInstancesAsCsvRequest extends Request {
     @Query
+    @NameInMap("CachedAsync")
+    private Boolean cachedAsync;
+
+    @Query
     @NameInMap("DBInstanceId")
     private String DBInstanceId;
+
+    @Query
+    @NameInMap("ExportKey")
+    private String exportKey;
 
     @Query
     @NameInMap("OwnerId")
@@ -39,7 +47,9 @@ public class DescribeDBInstancesAsCsvRequest extends Request {
 
     private DescribeDBInstancesAsCsvRequest(Builder builder) {
         super(builder);
+        this.cachedAsync = builder.cachedAsync;
         this.DBInstanceId = builder.DBInstanceId;
+        this.exportKey = builder.exportKey;
         this.ownerId = builder.ownerId;
         this.regionId = builder.regionId;
         this.resourceGroupId = builder.resourceGroupId;
@@ -61,10 +71,24 @@ public class DescribeDBInstancesAsCsvRequest extends Request {
     }
 
     /**
+     * @return cachedAsync
+     */
+    public Boolean getCachedAsync() {
+        return this.cachedAsync;
+    }
+
+    /**
      * @return DBInstanceId
      */
     public String getDBInstanceId() {
         return this.DBInstanceId;
+    }
+
+    /**
+     * @return exportKey
+     */
+    public String getExportKey() {
+        return this.exportKey;
     }
 
     /**
@@ -103,7 +127,9 @@ public class DescribeDBInstancesAsCsvRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<DescribeDBInstancesAsCsvRequest, Builder> {
+        private Boolean cachedAsync; 
         private String DBInstanceId; 
+        private String exportKey; 
         private Long ownerId; 
         private String regionId; 
         private String resourceGroupId; 
@@ -116,7 +142,9 @@ public class DescribeDBInstancesAsCsvRequest extends Request {
 
         private Builder(DescribeDBInstancesAsCsvRequest request) {
             super(request);
+            this.cachedAsync = request.cachedAsync;
             this.DBInstanceId = request.DBInstanceId;
+            this.exportKey = request.exportKey;
             this.ownerId = request.ownerId;
             this.regionId = request.regionId;
             this.resourceGroupId = request.resourceGroupId;
@@ -125,11 +153,29 @@ public class DescribeDBInstancesAsCsvRequest extends Request {
         } 
 
         /**
+         * CachedAsync.
+         */
+        public Builder cachedAsync(Boolean cachedAsync) {
+            this.putQueryParameter("CachedAsync", cachedAsync);
+            this.cachedAsync = cachedAsync;
+            return this;
+        }
+
+        /**
          * The ID of the instance. You can call the [DescribeDBInstances](~~26232~~) operation to query the ID of the instance.
          */
         public Builder DBInstanceId(String DBInstanceId) {
             this.putQueryParameter("DBInstanceId", DBInstanceId);
             this.DBInstanceId = DBInstanceId;
+            return this;
+        }
+
+        /**
+         * ExportKey.
+         */
+        public Builder exportKey(String exportKey) {
+            this.putQueryParameter("ExportKey", exportKey);
+            this.exportKey = exportKey;
             return this;
         }
 

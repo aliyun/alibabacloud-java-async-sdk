@@ -102,7 +102,7 @@ public class DescribeSQLLogFilesResponseBody extends TeaModel {
         }
 
         /**
-         * The number of entries returned on the current page.
+         * The number of entries returned per page.
          */
         public Builder pageRecordCount(Integer pageRecordCount) {
             this.pageRecordCount = pageRecordCount;
@@ -118,7 +118,7 @@ public class DescribeSQLLogFilesResponseBody extends TeaModel {
         }
 
         /**
-         * The total number of returned entries.
+         * The total number of entries returned.
          */
         public Builder totalRecordCount(Integer totalRecordCount) {
             this.totalRecordCount = totalRecordCount;
@@ -218,7 +218,7 @@ public class DescribeSQLLogFilesResponseBody extends TeaModel {
             private String logStatus; 
 
             /**
-             * The name of the audit log file.
+             * The name of the file.
              */
             public Builder fileID(String fileID) {
                 this.fileID = fileID;
@@ -226,7 +226,7 @@ public class DescribeSQLLogFilesResponseBody extends TeaModel {
             }
 
             /**
-             * The download URL of the audit log file. If the audit log file cannot be downloaded, this parameter is null.
+             * The download URL of the file. If the audit log file cannot be downloaded, this parameter is null.
              */
             public Builder logDownloadURL(String logDownloadURL) {
                 this.logDownloadURL = logDownloadURL;

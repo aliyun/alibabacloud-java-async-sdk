@@ -71,6 +71,47 @@ public class DescribeDBInstancesAsCsvResponseBody extends TeaModel {
 
     } 
 
+    public static class SlaveZones extends TeaModel {
+        @NameInMap("slaveRegion")
+        private java.util.List < String > slaveRegion;
+
+        private SlaveZones(Builder builder) {
+            this.slaveRegion = builder.slaveRegion;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static SlaveZones create() {
+            return builder().build();
+        }
+
+        /**
+         * @return slaveRegion
+         */
+        public java.util.List < String > getSlaveRegion() {
+            return this.slaveRegion;
+        }
+
+        public static final class Builder {
+            private java.util.List < String > slaveRegion; 
+
+            /**
+             * slaveRegion.
+             */
+            public Builder slaveRegion(java.util.List < String > slaveRegion) {
+                this.slaveRegion = slaveRegion;
+                return this;
+            }
+
+            public SlaveZones build() {
+                return new SlaveZones(this);
+            } 
+
+        } 
+
+    }
     public static class DBInstanceAttribute extends TeaModel {
         @NameInMap("AccountMaxQuantity")
         private Integer accountMaxQuantity;
@@ -135,6 +176,9 @@ public class DescribeDBInstancesAsCsvResponseBody extends TeaModel {
         @NameInMap("ExpireTime")
         private String expireTime;
 
+        @NameInMap("ExportKey")
+        private String exportKey;
+
         @NameInMap("GuardDBInstanceId")
         private String guardDBInstanceId;
 
@@ -177,6 +221,9 @@ public class DescribeDBInstancesAsCsvResponseBody extends TeaModel {
         @NameInMap("SecurityIPList")
         private String securityIPList;
 
+        @NameInMap("SlaveZones")
+        private SlaveZones slaveZones;
+
         @NameInMap("SupportUpgradeAccountType")
         private String supportUpgradeAccountType;
 
@@ -217,6 +264,7 @@ public class DescribeDBInstancesAsCsvResponseBody extends TeaModel {
             this.engine = builder.engine;
             this.engineVersion = builder.engineVersion;
             this.expireTime = builder.expireTime;
+            this.exportKey = builder.exportKey;
             this.guardDBInstanceId = builder.guardDBInstanceId;
             this.incrementSourceDBInstanceId = builder.incrementSourceDBInstanceId;
             this.instanceNetworkType = builder.instanceNetworkType;
@@ -231,6 +279,7 @@ public class DescribeDBInstancesAsCsvResponseBody extends TeaModel {
             this.readDelayTime = builder.readDelayTime;
             this.regionId = builder.regionId;
             this.securityIPList = builder.securityIPList;
+            this.slaveZones = builder.slaveZones;
             this.supportUpgradeAccountType = builder.supportUpgradeAccountType;
             this.tags = builder.tags;
             this.tempDBInstanceId = builder.tempDBInstanceId;
@@ -395,6 +444,13 @@ public class DescribeDBInstancesAsCsvResponseBody extends TeaModel {
         }
 
         /**
+         * @return exportKey
+         */
+        public String getExportKey() {
+            return this.exportKey;
+        }
+
+        /**
          * @return guardDBInstanceId
          */
         public String getGuardDBInstanceId() {
@@ -493,6 +549,13 @@ public class DescribeDBInstancesAsCsvResponseBody extends TeaModel {
         }
 
         /**
+         * @return slaveZones
+         */
+        public SlaveZones getSlaveZones() {
+            return this.slaveZones;
+        }
+
+        /**
          * @return supportUpgradeAccountType
          */
         public String getSupportUpgradeAccountType() {
@@ -556,6 +619,7 @@ public class DescribeDBInstancesAsCsvResponseBody extends TeaModel {
             private String engine; 
             private String engineVersion; 
             private String expireTime; 
+            private String exportKey; 
             private String guardDBInstanceId; 
             private String incrementSourceDBInstanceId; 
             private String instanceNetworkType; 
@@ -570,6 +634,7 @@ public class DescribeDBInstancesAsCsvResponseBody extends TeaModel {
             private String readDelayTime; 
             private String regionId; 
             private String securityIPList; 
+            private SlaveZones slaveZones; 
             private String supportUpgradeAccountType; 
             private String tags; 
             private String tempDBInstanceId; 
@@ -760,6 +825,14 @@ public class DescribeDBInstancesAsCsvResponseBody extends TeaModel {
             }
 
             /**
+             * ExportKey.
+             */
+            public Builder exportKey(String exportKey) {
+                this.exportKey = exportKey;
+                return this;
+            }
+
+            /**
              * The ID of the disaster recovery instance that is attached to the instance.
              */
             public Builder guardDBInstanceId(String guardDBInstanceId) {
@@ -868,6 +941,14 @@ public class DescribeDBInstancesAsCsvResponseBody extends TeaModel {
              */
             public Builder securityIPList(String securityIPList) {
                 this.securityIPList = securityIPList;
+                return this;
+            }
+
+            /**
+             * SlaveZones.
+             */
+            public Builder slaveZones(SlaveZones slaveZones) {
+                this.slaveZones = slaveZones;
                 return this;
             }
 

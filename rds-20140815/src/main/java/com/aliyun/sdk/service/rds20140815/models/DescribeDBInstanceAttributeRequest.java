@@ -96,7 +96,7 @@ public class DescribeDBInstanceAttributeRequest extends Request {
          * <p>
          * 
          * *   **True**: The instance expires.
-         * *   **False**: The instance does not expire.
+         * *   **False:** The instance does not expire.
          */
         public Builder expired(String expired) {
             this.putQueryParameter("Expired", expired);

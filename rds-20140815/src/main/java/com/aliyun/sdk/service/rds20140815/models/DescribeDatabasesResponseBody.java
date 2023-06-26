@@ -199,9 +199,138 @@ public class DescribeDatabasesResponseBody extends TeaModel {
         } 
 
     }
+    public static class AdvancedInfo extends TeaModel {
+        @NameInMap("AdvancedDbProperty")
+        private java.util.List < java.util.Map<String, ?>> advancedDbProperty;
+
+        private AdvancedInfo(Builder builder) {
+            this.advancedDbProperty = builder.advancedDbProperty;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static AdvancedInfo create() {
+            return builder().build();
+        }
+
+        /**
+         * @return advancedDbProperty
+         */
+        public java.util.List < java.util.Map<String, ?>> getAdvancedDbProperty() {
+            return this.advancedDbProperty;
+        }
+
+        public static final class Builder {
+            private java.util.List < java.util.Map<String, ?>> advancedDbProperty; 
+
+            /**
+             * AdvancedDbProperty.
+             */
+            public Builder advancedDbProperty(java.util.List < java.util.Map<String, ?>> advancedDbProperty) {
+                this.advancedDbProperty = advancedDbProperty;
+                return this;
+            }
+
+            public AdvancedInfo build() {
+                return new AdvancedInfo(this);
+            } 
+
+        } 
+
+    }
+    public static class BasicInfo extends TeaModel {
+        @NameInMap("BasicDbProperty")
+        private java.util.List < java.util.Map<String, ?>> basicDbProperty;
+
+        private BasicInfo(Builder builder) {
+            this.basicDbProperty = builder.basicDbProperty;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static BasicInfo create() {
+            return builder().build();
+        }
+
+        /**
+         * @return basicDbProperty
+         */
+        public java.util.List < java.util.Map<String, ?>> getBasicDbProperty() {
+            return this.basicDbProperty;
+        }
+
+        public static final class Builder {
+            private java.util.List < java.util.Map<String, ?>> basicDbProperty; 
+
+            /**
+             * BasicDbProperty.
+             */
+            public Builder basicDbProperty(java.util.List < java.util.Map<String, ?>> basicDbProperty) {
+                this.basicDbProperty = basicDbProperty;
+                return this;
+            }
+
+            public BasicInfo build() {
+                return new BasicInfo(this);
+            } 
+
+        } 
+
+    }
+    public static class RuntimeInfo extends TeaModel {
+        @NameInMap("RuntimeDbProperty")
+        private java.util.List < java.util.Map<String, ?>> runtimeDbProperty;
+
+        private RuntimeInfo(Builder builder) {
+            this.runtimeDbProperty = builder.runtimeDbProperty;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static RuntimeInfo create() {
+            return builder().build();
+        }
+
+        /**
+         * @return runtimeDbProperty
+         */
+        public java.util.List < java.util.Map<String, ?>> getRuntimeDbProperty() {
+            return this.runtimeDbProperty;
+        }
+
+        public static final class Builder {
+            private java.util.List < java.util.Map<String, ?>> runtimeDbProperty; 
+
+            /**
+             * RuntimeDbProperty.
+             */
+            public Builder runtimeDbProperty(java.util.List < java.util.Map<String, ?>> runtimeDbProperty) {
+                this.runtimeDbProperty = runtimeDbProperty;
+                return this;
+            }
+
+            public RuntimeInfo build() {
+                return new RuntimeInfo(this);
+            } 
+
+        } 
+
+    }
     public static class Database extends TeaModel {
         @NameInMap("Accounts")
         private Accounts accounts;
+
+        @NameInMap("AdvancedInfo")
+        private AdvancedInfo advancedInfo;
+
+        @NameInMap("BasicInfo")
+        private BasicInfo basicInfo;
 
         @NameInMap("CharacterSetName")
         private String characterSetName;
@@ -239,6 +368,9 @@ public class DescribeDatabasesResponseBody extends TeaModel {
         @NameInMap("ResourceGroupId")
         private String resourceGroupId;
 
+        @NameInMap("RuntimeInfo")
+        private RuntimeInfo runtimeInfo;
+
         @NameInMap("Tablespace")
         private String tablespace;
 
@@ -247,6 +379,8 @@ public class DescribeDatabasesResponseBody extends TeaModel {
 
         private Database(Builder builder) {
             this.accounts = builder.accounts;
+            this.advancedInfo = builder.advancedInfo;
+            this.basicInfo = builder.basicInfo;
             this.characterSetName = builder.characterSetName;
             this.collate = builder.collate;
             this.connLimit = builder.connLimit;
@@ -259,6 +393,7 @@ public class DescribeDatabasesResponseBody extends TeaModel {
             this.pageNumber = builder.pageNumber;
             this.pageSize = builder.pageSize;
             this.resourceGroupId = builder.resourceGroupId;
+            this.runtimeInfo = builder.runtimeInfo;
             this.tablespace = builder.tablespace;
             this.totalCount = builder.totalCount;
         }
@@ -276,6 +411,20 @@ public class DescribeDatabasesResponseBody extends TeaModel {
          */
         public Accounts getAccounts() {
             return this.accounts;
+        }
+
+        /**
+         * @return advancedInfo
+         */
+        public AdvancedInfo getAdvancedInfo() {
+            return this.advancedInfo;
+        }
+
+        /**
+         * @return basicInfo
+         */
+        public BasicInfo getBasicInfo() {
+            return this.basicInfo;
         }
 
         /**
@@ -363,6 +512,13 @@ public class DescribeDatabasesResponseBody extends TeaModel {
         }
 
         /**
+         * @return runtimeInfo
+         */
+        public RuntimeInfo getRuntimeInfo() {
+            return this.runtimeInfo;
+        }
+
+        /**
          * @return tablespace
          */
         public String getTablespace() {
@@ -378,6 +534,8 @@ public class DescribeDatabasesResponseBody extends TeaModel {
 
         public static final class Builder {
             private Accounts accounts; 
+            private AdvancedInfo advancedInfo; 
+            private BasicInfo basicInfo; 
             private String characterSetName; 
             private String collate; 
             private String connLimit; 
@@ -390,6 +548,7 @@ public class DescribeDatabasesResponseBody extends TeaModel {
             private Integer pageNumber; 
             private Integer pageSize; 
             private String resourceGroupId; 
+            private RuntimeInfo runtimeInfo; 
             private String tablespace; 
             private Integer totalCount; 
 
@@ -398,6 +557,22 @@ public class DescribeDatabasesResponseBody extends TeaModel {
              */
             public Builder accounts(Accounts accounts) {
                 this.accounts = accounts;
+                return this;
+            }
+
+            /**
+             * AdvancedInfo.
+             */
+            public Builder advancedInfo(AdvancedInfo advancedInfo) {
+                this.advancedInfo = advancedInfo;
+                return this;
+            }
+
+            /**
+             * BasicInfo.
+             */
+            public Builder basicInfo(BasicInfo basicInfo) {
+                this.basicInfo = basicInfo;
                 return this;
             }
 
@@ -508,6 +683,14 @@ public class DescribeDatabasesResponseBody extends TeaModel {
              */
             public Builder resourceGroupId(String resourceGroupId) {
                 this.resourceGroupId = resourceGroupId;
+                return this;
+            }
+
+            /**
+             * RuntimeInfo.
+             */
+            public Builder runtimeInfo(RuntimeInfo runtimeInfo) {
+                this.runtimeInfo = runtimeInfo;
                 return this;
             }
 

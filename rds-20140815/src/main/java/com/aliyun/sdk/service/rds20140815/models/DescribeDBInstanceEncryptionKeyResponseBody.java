@@ -178,7 +178,7 @@ public class DescribeDBInstanceEncryptionKeyResponseBody extends TeaModel {
         }
 
         /**
-         * An array that consists of keys.
+         * The details about the key.
          */
         public Builder encryptionKeyList(java.util.List < EncryptionKeyList> encryptionKeyList) {
             this.encryptionKeyList = encryptionKeyList;
@@ -189,8 +189,8 @@ public class DescribeDBInstanceEncryptionKeyResponseBody extends TeaModel {
          * The status of the key. Valid values:
          * <p>
          * 
-         * *   Enabled
-         * *   Disabled
+         * *   **Enabled**
+         * *   **Disabled**
          */
         public Builder encryptionKeyStatus(String encryptionKeyStatus) {
             this.encryptionKeyStatus = encryptionKeyStatus;
@@ -425,8 +425,8 @@ public class DescribeDBInstanceEncryptionKeyResponseBody extends TeaModel {
              * The status of the key. Valid values:
              * <p>
              * 
-             * *   Enabled
-             * *   Disabled
+             * *   **Enabled**
+             * *   **Disabled**
              */
             public Builder encryptionKeyStatus(String encryptionKeyStatus) {
                 this.encryptionKeyStatus = encryptionKeyStatus;
@@ -434,7 +434,11 @@ public class DescribeDBInstanceEncryptionKeyResponseBody extends TeaModel {
             }
 
             /**
-             * The type of the key.
+             * The type of the key. Valid values:
+             * <p>
+             * 
+             * *   **CMK**
+             * *   **ServiceKey**
              */
             public Builder keyType(String keyType) {
                 this.keyType = keyType;
@@ -466,7 +470,11 @@ public class DescribeDBInstanceEncryptionKeyResponseBody extends TeaModel {
             }
 
             /**
-             * The role of the instance that uses the key. Valid values: ***master**: primary instance*. **slave**: read-only instance.
+             * The role of the instance. Valid values:
+             * <p>
+             * 
+             * *   **Master**: primary instance
+             * *   **slave**: read-only instance
              */
             public Builder usedBy(String usedBy) {
                 this.usedBy = usedBy;
