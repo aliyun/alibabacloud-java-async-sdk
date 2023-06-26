@@ -98,7 +98,7 @@ public class DescribeDedicatedBlockStorageClustersResponseBody extends TeaModel 
         private Long totalCount; 
 
         /**
-         * 由一个或多个集群组成的数组
+         * Details about the dedicated block storage clusters.
          */
         public Builder dedicatedBlockStorageClusters(java.util.List < DedicatedBlockStorageClusters> dedicatedBlockStorageClusters) {
             this.dedicatedBlockStorageClusters = dedicatedBlockStorageClusters;
@@ -106,7 +106,7 @@ public class DescribeDedicatedBlockStorageClustersResponseBody extends TeaModel 
         }
 
         /**
-         * 本次调用返回的查询凭证值
+         * The query token returned in this call.
          */
         public Builder nextToken(String nextToken) {
             this.nextToken = nextToken;
@@ -130,7 +130,7 @@ public class DescribeDedicatedBlockStorageClustersResponseBody extends TeaModel 
         }
 
         /**
-         * RrequestId
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -214,7 +214,7 @@ public class DescribeDedicatedBlockStorageClustersResponseBody extends TeaModel 
             private Long usedCapacity; 
 
             /**
-             * 当前集群的可用容量，单位为GB
+             * The available capacity of the dedicated block storage cluster. Unit: GiB.
              */
             public Builder availableCapacity(Long availableCapacity) {
                 this.availableCapacity = availableCapacity;
@@ -222,7 +222,7 @@ public class DescribeDedicatedBlockStorageClustersResponseBody extends TeaModel 
             }
 
             /**
-             * 待交付容量，单位为GB。
+             * DeliveryCapacity.
              */
             public Builder deliveryCapacity(Long deliveryCapacity) {
                 this.deliveryCapacity = deliveryCapacity;
@@ -230,7 +230,7 @@ public class DescribeDedicatedBlockStorageClustersResponseBody extends TeaModel 
             }
 
             /**
-             * 当前集群总容量，单位为GB
+             * The total capacity of the dedicated block storage cluster. Unit: GiB.
              */
             public Builder totalCapacity(Long totalCapacity) {
                 this.totalCapacity = totalCapacity;
@@ -238,7 +238,7 @@ public class DescribeDedicatedBlockStorageClustersResponseBody extends TeaModel 
             }
 
             /**
-             * 当前集群的已使用（已创盘）容量，单位为GB
+             * UsedCapacity.
              */
             public Builder usedCapacity(Long usedCapacity) {
                 this.usedCapacity = usedCapacity;
@@ -291,7 +291,7 @@ public class DescribeDedicatedBlockStorageClustersResponseBody extends TeaModel 
             private String tagValue; 
 
             /**
-             * 异步复制对的标签键
+             * TagKey.
              */
             public Builder tagKey(String tagKey) {
                 this.tagKey = tagKey;
@@ -299,7 +299,7 @@ public class DescribeDedicatedBlockStorageClustersResponseBody extends TeaModel 
             }
 
             /**
-             * 异步复制对的标签值
+             * TagValue.
              */
             public Builder tagValue(String tagValue) {
                 this.tagValue = tagValue;
@@ -508,7 +508,7 @@ public class DescribeDedicatedBlockStorageClustersResponseBody extends TeaModel 
             private String zoneId; 
 
             /**
-             * 云盘类型，暂时只会返回cloud_essd
+             * The category of disks that can be created in the dedicated block storage cluster.
              */
             public Builder category(String category) {
                 this.category = category;
@@ -516,7 +516,7 @@ public class DescribeDedicatedBlockStorageClustersResponseBody extends TeaModel 
             }
 
             /**
-             * 专属块存储集群创建时间的时间戳，单位为秒
+             * The time when the dedicated block storage cluster was created. The value is a UNIX timestamp. Unit: seconds.
              */
             public Builder createTime(String createTime) {
                 this.createTime = createTime;
@@ -524,7 +524,7 @@ public class DescribeDedicatedBlockStorageClustersResponseBody extends TeaModel 
             }
 
             /**
-             * 专属块存储集群存储容量，单位为GB
+             * Details about the storage capacity of the dedicated block storage cluster.
              */
             public Builder dedicatedBlockStorageClusterCapacity(DedicatedBlockStorageClusterCapacity dedicatedBlockStorageClusterCapacity) {
                 this.dedicatedBlockStorageClusterCapacity = dedicatedBlockStorageClusterCapacity;
@@ -532,7 +532,7 @@ public class DescribeDedicatedBlockStorageClustersResponseBody extends TeaModel 
             }
 
             /**
-             * 专属块存储集群id
+             * The ID of the dedicated block storage cluster.
              */
             public Builder dedicatedBlockStorageClusterId(String dedicatedBlockStorageClusterId) {
                 this.dedicatedBlockStorageClusterId = dedicatedBlockStorageClusterId;
@@ -540,7 +540,7 @@ public class DescribeDedicatedBlockStorageClustersResponseBody extends TeaModel 
             }
 
             /**
-             * 专属块存储集群名称
+             * The name of the dedicated block storage cluster.
              */
             public Builder dedicatedBlockStorageClusterName(String dedicatedBlockStorageClusterName) {
                 this.dedicatedBlockStorageClusterName = dedicatedBlockStorageClusterName;
@@ -548,7 +548,7 @@ public class DescribeDedicatedBlockStorageClustersResponseBody extends TeaModel 
             }
 
             /**
-             * 专属块存储集群描述
+             * The description of the dedicated block storage cluster.
              */
             public Builder description(String description) {
                 this.description = description;
@@ -556,7 +556,7 @@ public class DescribeDedicatedBlockStorageClustersResponseBody extends TeaModel 
             }
 
             /**
-             * 专属块存储集群到期时间的时间戳，单位为秒
+             * The time when the dedicated block storage cluster expires. The value is a UNIX timestamp. Unit: seconds.
              */
             public Builder expiredTime(String expiredTime) {
                 this.expiredTime = expiredTime;
@@ -564,13 +564,15 @@ public class DescribeDedicatedBlockStorageClustersResponseBody extends TeaModel 
             }
 
             /**
-             * 云盘性能等级，可能值：
+             * The performance level of disks. Valid values:
              * <p>
-             * PL0 
-             * PL1 
-             * PL2 
-             * PL3
-             * 仅在SupportedCategory = cloud_essd有效
+             * 
+             * *   PL0
+             * *   PL1
+             * *   PL2
+             * *   PL3
+             * 
+             * >  This parameter is valid only when SupportedCategory is set to cloud_essd.
              */
             public Builder performanceLevel(String performanceLevel) {
                 this.performanceLevel = performanceLevel;
@@ -578,7 +580,7 @@ public class DescribeDedicatedBlockStorageClustersResponseBody extends TeaModel 
             }
 
             /**
-             * 专属块存储集群所在地域id
+             * The region ID of the dedicated block storage cluster.
              */
             public Builder regionId(String regionId) {
                 this.regionId = regionId;
@@ -594,12 +596,13 @@ public class DescribeDedicatedBlockStorageClustersResponseBody extends TeaModel 
             }
 
             /**
-             * 专属块存储集群的状态。可能值：
+             * The state of the dedicated block storage cluster. Valid values:
              * <p>
-             * Preparing：待交付
-             * Running：运行中
-             * Expired：集群到期
-             * Offline：下线
+             * 
+             * *   Preparing: The cluster is pending delivery.
+             * *   Running: The cluster is running.
+             * *   Expired: The cluster has expired.
+             * *   Offline: The cluster is offline.
              */
             public Builder status(String status) {
                 this.status = status;
@@ -607,7 +610,7 @@ public class DescribeDedicatedBlockStorageClustersResponseBody extends TeaModel 
             }
 
             /**
-             * 支持的云盘类型（新版），与ECS的云盘类型项对应
+             * This parameter is not supported.
              */
             public Builder supportedCategory(String supportedCategory) {
                 this.supportedCategory = supportedCategory;
@@ -615,7 +618,7 @@ public class DescribeDedicatedBlockStorageClustersResponseBody extends TeaModel 
             }
 
             /**
-             * 异步复制对的标签
+             * Tags.
              */
             public Builder tags(java.util.List < Tags> tags) {
                 this.tags = tags;
@@ -623,10 +626,11 @@ public class DescribeDedicatedBlockStorageClustersResponseBody extends TeaModel 
             }
 
             /**
-             * 专属块存储集群性能类型。可能值：
+             * The type of the dedicated block storage cluster. Valid values:
              * <p>
-             * Standard：基础型。该类型的专属块存储集群中可创建ESSD PL0云盘。
-             * Premium：性能型。该类型的专属块存储集群中可创建ESSD PL1云盘。
+             * 
+             * *   Standard: a standard dedicated block storage cluster. ESSDs at performance level 0 (PL0 ESSDs) can be created in standard dedicated block storage clusters.
+             * *   Premium: a performance dedicated block storage cluster. ESSDs at performance level 1 (PL1 ESSDs) can be created in performance dedicated block storage clusters.
              */
             public Builder type(String type) {
                 this.type = type;
@@ -634,7 +638,7 @@ public class DescribeDedicatedBlockStorageClustersResponseBody extends TeaModel 
             }
 
             /**
-             * 专属块存储集群可用区id
+             * The zone ID of the dedicated block storage cluster.
              */
             public Builder zoneId(String zoneId) {
                 this.zoneId = zoneId;

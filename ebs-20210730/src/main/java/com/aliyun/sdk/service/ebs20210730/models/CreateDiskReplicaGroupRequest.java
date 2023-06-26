@@ -49,9 +49,17 @@ public class CreateDiskReplicaGroupRequest extends Request {
     private String regionId;
 
     @Query
+    @NameInMap("ResourceGroupId")
+    private String resourceGroupId;
+
+    @Query
     @NameInMap("SourceZoneId")
     @Validation(required = true)
     private String sourceZoneId;
+
+    @Query
+    @NameInMap("Tag")
+    private java.util.List < Tag> tag;
 
     private CreateDiskReplicaGroupRequest(Builder builder) {
         super(builder);
@@ -63,7 +71,9 @@ public class CreateDiskReplicaGroupRequest extends Request {
         this.groupName = builder.groupName;
         this.RPO = builder.RPO;
         this.regionId = builder.regionId;
+        this.resourceGroupId = builder.resourceGroupId;
         this.sourceZoneId = builder.sourceZoneId;
+        this.tag = builder.tag;
     }
 
     public static Builder builder() {
@@ -136,10 +146,24 @@ public class CreateDiskReplicaGroupRequest extends Request {
     }
 
     /**
+     * @return resourceGroupId
+     */
+    public String getResourceGroupId() {
+        return this.resourceGroupId;
+    }
+
+    /**
      * @return sourceZoneId
      */
     public String getSourceZoneId() {
         return this.sourceZoneId;
+    }
+
+    /**
+     * @return tag
+     */
+    public java.util.List < Tag> getTag() {
+        return this.tag;
     }
 
     public static final class Builder extends Request.Builder<CreateDiskReplicaGroupRequest, Builder> {
@@ -151,7 +175,9 @@ public class CreateDiskReplicaGroupRequest extends Request {
         private String groupName; 
         private Long RPO; 
         private String regionId; 
+        private String resourceGroupId; 
         private String sourceZoneId; 
+        private java.util.List < Tag> tag; 
 
         private Builder() {
             super();
@@ -167,11 +193,16 @@ public class CreateDiskReplicaGroupRequest extends Request {
             this.groupName = request.groupName;
             this.RPO = request.RPO;
             this.regionId = request.regionId;
+            this.resourceGroupId = request.resourceGroupId;
             this.sourceZoneId = request.sourceZoneId;
+            this.tag = request.tag;
         } 
 
         /**
-         * 带宽值，单位为Kbps。公共云暂不支持。
+         * The bandwidth value. Unit: Mbit/s.
+         * <p>
+         * 
+         * >  This parameter is unavailable.
          */
         public Builder bandwidth(Long bandwidth) {
             this.putQueryParameter("Bandwidth", bandwidth);
@@ -180,7 +211,7 @@ public class CreateDiskReplicaGroupRequest extends Request {
         }
 
         /**
-         * ClientToken.
+         * The client token that is used to ensure the idempotence of the request. You can use the client to generate the value, but you must make sure that the value is unique among different requests. The ClientToken value can contain only ASCII characters and cannot exceed 64 characters in length. For more information, see [How to ensure idempotence](~~25693~~).
          */
         public Builder clientToken(String clientToken) {
             this.putQueryParameter("ClientToken", clientToken);
@@ -189,7 +220,7 @@ public class CreateDiskReplicaGroupRequest extends Request {
         }
 
         /**
-         * Description.
+         * The description of the replication pair-consistent group. The description must be 2 to 256 characters in length and cannot start with `http://` or `https://`.
          */
         public Builder description(String description) {
             this.putQueryParameter("Description", description);
@@ -198,7 +229,7 @@ public class CreateDiskReplicaGroupRequest extends Request {
         }
 
         /**
-         * DestinationRegionId.
+         * The region ID of the secondary site.
          */
         public Builder destinationRegionId(String destinationRegionId) {
             this.putQueryParameter("DestinationRegionId", destinationRegionId);
@@ -207,7 +238,7 @@ public class CreateDiskReplicaGroupRequest extends Request {
         }
 
         /**
-         * DestinationZoneId.
+         * The zone ID of the secondary site.
          */
         public Builder destinationZoneId(String destinationZoneId) {
             this.putQueryParameter("DestinationZoneId", destinationZoneId);
@@ -216,7 +247,7 @@ public class CreateDiskReplicaGroupRequest extends Request {
         }
 
         /**
-         * GroupName.
+         * The name of the replication pair-consistent group. The name must be 2 to 128 characters in length. It must start with a letter and cannot start with `http://` or `https://`. It can contain letters, digits, colons (:), underscores (\_), and hyphens (-).
          */
         public Builder groupName(String groupName) {
             this.putQueryParameter("GroupName", groupName);
@@ -225,7 +256,7 @@ public class CreateDiskReplicaGroupRequest extends Request {
         }
 
         /**
-         * RPO.
+         * The RPO of the replication pair-consistent group. Unit: seconds. Set the value to 900.
          */
         public Builder RPO(Long RPO) {
             this.putQueryParameter("RPO", RPO);
@@ -234,7 +265,7 @@ public class CreateDiskReplicaGroupRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * The ID of the region in which to create the replication pair-consistent group. The primary site is deployed in this region.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -243,11 +274,29 @@ public class CreateDiskReplicaGroupRequest extends Request {
         }
 
         /**
-         * SourceZoneId.
+         * ResourceGroupId.
+         */
+        public Builder resourceGroupId(String resourceGroupId) {
+            this.putQueryParameter("ResourceGroupId", resourceGroupId);
+            this.resourceGroupId = resourceGroupId;
+            return this;
+        }
+
+        /**
+         * The zone ID of the primary site.
          */
         public Builder sourceZoneId(String sourceZoneId) {
             this.putQueryParameter("SourceZoneId", sourceZoneId);
             this.sourceZoneId = sourceZoneId;
+            return this;
+        }
+
+        /**
+         * Tag.
+         */
+        public Builder tag(java.util.List < Tag> tag) {
+            this.putQueryParameter("Tag", tag);
+            this.tag = tag;
             return this;
         }
 
@@ -258,4 +307,65 @@ public class CreateDiskReplicaGroupRequest extends Request {
 
     } 
 
+    public static class Tag extends TeaModel {
+        @NameInMap("Key")
+        private String key;
+
+        @NameInMap("Value")
+        private String value;
+
+        private Tag(Builder builder) {
+            this.key = builder.key;
+            this.value = builder.value;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static Tag create() {
+            return builder().build();
+        }
+
+        /**
+         * @return key
+         */
+        public String getKey() {
+            return this.key;
+        }
+
+        /**
+         * @return value
+         */
+        public String getValue() {
+            return this.value;
+        }
+
+        public static final class Builder {
+            private String key; 
+            private String value; 
+
+            /**
+             * Key.
+             */
+            public Builder key(String key) {
+                this.key = key;
+                return this;
+            }
+
+            /**
+             * Value.
+             */
+            public Builder value(String value) {
+                this.value = value;
+                return this;
+            }
+
+            public Tag build() {
+                return new Tag(this);
+            } 
+
+        } 
+
+    }
 }

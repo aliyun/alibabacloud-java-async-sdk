@@ -209,9 +209,7 @@ public class DescribeDedicatedBlockStorageClustersRequest extends Request {
         } 
 
         /**
-         * 专属块存储集群所在的可用区ID。您可以调用DescribeZones
-         * <p>
-         * 查看阿里云地域下的可用区。
+         * The zone ID of the dedicated block storage cluster. You can call the [DescribeZones](~~25610~~) operation to query the most recent zone list.
          */
         public Builder azoneId(String azoneId) {
             this.putBodyParameter("AzoneId", azoneId);
@@ -220,9 +218,10 @@ public class DescribeDedicatedBlockStorageClustersRequest extends Request {
         }
 
         /**
-         * 专属块存储集群可创建的云盘类型。
+         * The category of disks that can be created in the dedicated block storage cluster.
          * <p>
-         * 取值仅支持cloud_essd，即ESSD云盘。
+         * 
+         * Set the value to cloud_essd. Only enhanced SSDs (ESSDs) can be created in dedicated block storage clusters.
          */
         public Builder category(String category) {
             this.putBodyParameter("Category", category);
@@ -231,7 +230,7 @@ public class DescribeDedicatedBlockStorageClustersRequest extends Request {
         }
 
         /**
-         * 客户端幂等token
+         * The client token that is used to ensure the idempotence of the request. You can use the client to generate the value, but you must ensure that it is unique among different requests. The ClientToken value can contain only ASCII characters and cannot exceed 64 characters in length. For more information, see [How to ensure idempotence](~~25693~~).
          */
         public Builder clientToken(String clientToken) {
             this.putBodyParameter("ClientToken", clientToken);
@@ -240,7 +239,7 @@ public class DescribeDedicatedBlockStorageClustersRequest extends Request {
         }
 
         /**
-         * 专属块存储集群ID，参数前缀DedicatedBlockStorageClusterId，后缀.n为可查询的多个专属存储集群id
+         * DedicatedBlockStorageClusterId.
          */
         public Builder dedicatedBlockStorageClusterId(java.util.List < String > dedicatedBlockStorageClusterId) {
             this.putBodyParameter("DedicatedBlockStorageClusterId", dedicatedBlockStorageClusterId);
@@ -249,7 +248,10 @@ public class DescribeDedicatedBlockStorageClustersRequest extends Request {
         }
 
         /**
-         * 分页大小, 默认值10
+         * The maximum number of entries to return on each page. Maximum value: 500.
+         * <p>
+         * 
+         * Default value: 10.
          */
         public Builder maxResults(Integer maxResults) {
             this.putBodyParameter("MaxResults", maxResults);
@@ -258,7 +260,7 @@ public class DescribeDedicatedBlockStorageClustersRequest extends Request {
         }
 
         /**
-         * 查询凭证（Token），取值为上一次API调用返回的NextToken参数值
+         * The query token. Set the value to the NextToken value returned in the previous call to the DescribeDedicatedBlockStorageClusters operation. Leave this parameter empty the first time you call this operation.
          */
         public Builder nextToken(String nextToken) {
             this.putBodyParameter("NextToken", nextToken);
@@ -285,9 +287,7 @@ public class DescribeDedicatedBlockStorageClustersRequest extends Request {
         }
 
         /**
-         * 专属块存储集群所在的地域ID。您可以调用DescribeRegions
-         * <p>
-         * 查看最新的阿里云地域列表。
+         * The region ID of the dedicated block storage cluster. You can call the [DescribeRegions](~~25609~~) operation to query the most recent region list.
          */
         public Builder regionId(String regionId) {
             this.putBodyParameter("RegionId", regionId);
@@ -305,13 +305,7 @@ public class DescribeDedicatedBlockStorageClustersRequest extends Request {
         }
 
         /**
-         * 专属块存储集群的状态。取值范围：
-         * <p>
-         * Preparing：待交付
-         * Running：运行中
-         * Expired：集群到期
-         * Offline：下线
-         * N表示可同时设置多个状态，N的取值范围为1~4。
+         * Status.
          */
         public Builder status(java.util.List < String > status) {
             this.putBodyParameter("Status", status);
@@ -320,7 +314,7 @@ public class DescribeDedicatedBlockStorageClustersRequest extends Request {
         }
 
         /**
-         * 标签列表，最多包含20个子项
+         * Tag.
          */
         public Builder tag(java.util.List < Tag> tag) {
             this.putQueryParameter("Tag", tag);
@@ -374,7 +368,7 @@ public class DescribeDedicatedBlockStorageClustersRequest extends Request {
             private String value; 
 
             /**
-             * 异步复制对的标签键
+             * Key.
              */
             public Builder key(String key) {
                 this.key = key;
@@ -382,7 +376,7 @@ public class DescribeDedicatedBlockStorageClustersRequest extends Request {
             }
 
             /**
-             * 异步复制对的标签值
+             * Value.
              */
             public Builder value(String value) {
                 this.value = value;

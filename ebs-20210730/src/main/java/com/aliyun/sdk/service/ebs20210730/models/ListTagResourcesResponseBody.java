@@ -62,7 +62,7 @@ public class ListTagResourcesResponseBody extends TeaModel {
         private java.util.List < TagResources> tagResources; 
 
         /**
-         * 下一个查询开始Token
+         * The token used to start the next query.
          */
         public Builder nextToken(String nextToken) {
             this.nextToken = nextToken;
@@ -70,7 +70,7 @@ public class ListTagResourcesResponseBody extends TeaModel {
         }
 
         /**
-         * 请求 ID。无论调用接口成功与否，我们都会返回请求 ID。
+         * The ID of the request. The request ID is returned regardless of whether the call is successful.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -78,7 +78,7 @@ public class ListTagResourcesResponseBody extends TeaModel {
         }
 
         /**
-         * 资源标签列表
+         * Details about the resources and tags, including resource IDs, resource types, and tag key-value pairs.
          */
         public Builder tagResources(java.util.List < TagResources> tagResources) {
             this.tagResources = tagResources;
@@ -154,7 +154,7 @@ public class ListTagResourcesResponseBody extends TeaModel {
             private String tagValue; 
 
             /**
-             * 资源ID
+             * The ID of the resource.
              */
             public Builder resourceId(String resourceId) {
                 this.resourceId = resourceId;
@@ -162,7 +162,12 @@ public class ListTagResourcesResponseBody extends TeaModel {
             }
 
             /**
-             * 资源类型
+             * The type of the resource. Valid values:
+             * <p>
+             * 
+             * *   dbsc: dedicated block storage cluster
+             * *   pair: replication pair
+             * *   group: replication pair-consistent group
              */
             public Builder resourceType(String resourceType) {
                 this.resourceType = resourceType;
@@ -170,7 +175,7 @@ public class ListTagResourcesResponseBody extends TeaModel {
             }
 
             /**
-             * 资源的标签键
+             * The tag key of the resource.
              */
             public Builder tagKey(String tagKey) {
                 this.tagKey = tagKey;
@@ -178,7 +183,7 @@ public class ListTagResourcesResponseBody extends TeaModel {
             }
 
             /**
-             * 资源的标签值
+             * The tag value of the resource.
              */
             public Builder tagValue(String tagValue) {
                 this.tagValue = tagValue;

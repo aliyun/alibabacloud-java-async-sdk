@@ -42,8 +42,16 @@ public class DescribeDiskReplicaPairsRequest extends Request {
     private String replicaGroupId;
 
     @Query
+    @NameInMap("ResourceGroupId")
+    private String resourceGroupId;
+
+    @Query
     @NameInMap("Site")
     private String site;
+
+    @Query
+    @NameInMap("Tag")
+    private java.util.List < Tag> tag;
 
     private DescribeDiskReplicaPairsRequest(Builder builder) {
         super(builder);
@@ -54,7 +62,9 @@ public class DescribeDiskReplicaPairsRequest extends Request {
         this.pairIds = builder.pairIds;
         this.regionId = builder.regionId;
         this.replicaGroupId = builder.replicaGroupId;
+        this.resourceGroupId = builder.resourceGroupId;
         this.site = builder.site;
+        this.tag = builder.tag;
     }
 
     public static Builder builder() {
@@ -120,10 +130,24 @@ public class DescribeDiskReplicaPairsRequest extends Request {
     }
 
     /**
+     * @return resourceGroupId
+     */
+    public String getResourceGroupId() {
+        return this.resourceGroupId;
+    }
+
+    /**
      * @return site
      */
     public String getSite() {
         return this.site;
+    }
+
+    /**
+     * @return tag
+     */
+    public java.util.List < Tag> getTag() {
+        return this.tag;
     }
 
     public static final class Builder extends Request.Builder<DescribeDiskReplicaPairsRequest, Builder> {
@@ -134,7 +158,9 @@ public class DescribeDiskReplicaPairsRequest extends Request {
         private String pairIds; 
         private String regionId; 
         private String replicaGroupId; 
+        private String resourceGroupId; 
         private String site; 
+        private java.util.List < Tag> tag; 
 
         private Builder() {
             super();
@@ -149,14 +175,18 @@ public class DescribeDiskReplicaPairsRequest extends Request {
             this.pairIds = request.pairIds;
             this.regionId = request.regionId;
             this.replicaGroupId = request.replicaGroupId;
+            this.resourceGroupId = request.resourceGroupId;
             this.site = request.site;
+            this.tag = request.tag;
         } 
 
         /**
-         * 分页查询时每页的最大条目数。取值范围：1~500
+         * The maximum number of entries to return on each page.
          * <p>
          * 
-         * 默认值：10
+         * Valid values: 1 to 500.
+         * 
+         * Default value: 10.
          */
         public Builder maxResults(Long maxResults) {
             this.putQueryParameter("MaxResults", maxResults);
@@ -165,7 +195,7 @@ public class DescribeDiskReplicaPairsRequest extends Request {
         }
 
         /**
-         * 查询凭证（Token）。取值为上一次调用该接口返回的NextToken参数值，初次调用接口时无需设置该参数。如果设置了NextToken，则请求参数PageSize和PageNumber将失效，且返回数据中的TotalCount无效。
+         * The query token. Set the value to the NextToken value returned in the previous call to the DescribeDiskReplicaPairs operation. Leave this parameter empty the first time you call this operation. When NextToken is specified, the PageSize and PageNumber request parameters do not take effect and the TotalCount response parameter is invalid.
          */
         public Builder nextToken(String nextToken) {
             this.putQueryParameter("NextToken", nextToken);
@@ -174,7 +204,7 @@ public class DescribeDiskReplicaPairsRequest extends Request {
         }
 
         /**
-         * 分页查询时的页码。
+         * The number of the page to return.
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -183,7 +213,10 @@ public class DescribeDiskReplicaPairsRequest extends Request {
         }
 
         /**
-         * 分页查询时设置的每页行数。
+         * The number of entries to return on each page.
+         * <p>
+         * 
+         * Valid values: 1 to 100.
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -192,10 +225,10 @@ public class DescribeDiskReplicaPairsRequest extends Request {
         }
 
         /**
-         * 异步复制关系ID列表。您可以指定一个或多个异步复制关系ID进行查询。格式为：pair-cn-dsa****,pair-cn-asd****。
+         * The IDs of replication pairs. You can specify the IDs of one or more replication pairs and separate the IDs with commas (,). Example: `pair-cn-dsa****,pair-cn-asd****`.
          * <p>
          * 
-         * 默认值为空，表示查询当前地域下所有的异步复制关系。
+         * This parameter is empty by default, which indicates that all replication pairs in the specified region are queried.
          */
         public Builder pairIds(String pairIds) {
             this.putQueryParameter("PairIds", pairIds);
@@ -204,7 +237,7 @@ public class DescribeDiskReplicaPairsRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * The region ID of the primary or secondary disk in the replication pair. You can call the [DescribeRegions](~~354276~~) operation to query the most recent list of regions in which async replication is supported.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -213,7 +246,12 @@ public class DescribeDiskReplicaPairsRequest extends Request {
         }
 
         /**
-         * 所属复制组id。
+         * The ID of the replication pair-consistent group. You can specify the ID of a replication pair-consistent group to query the replication pairs that are added to this group. Example: `pg-****`.
+         * <p>
+         * 
+         * This parameter is empty by default, which indicates that all replication pairs in the specified region are queried.
+         * 
+         * >  If you set this parameter to `-`, replication pairs that are not added to replication pair-consistent groups are queried.
          */
         public Builder replicaGroupId(String replicaGroupId) {
             this.putQueryParameter("ReplicaGroupId", replicaGroupId);
@@ -222,11 +260,35 @@ public class DescribeDiskReplicaPairsRequest extends Request {
         }
 
         /**
-         * production或backup，表示获取本地为生产站点或灾备站点的复制对数据，默认为production。
+         * The ID of the resource group to which the replication pair belongs.
+         */
+        public Builder resourceGroupId(String resourceGroupId) {
+            this.putQueryParameter("ResourceGroupId", resourceGroupId);
+            this.resourceGroupId = resourceGroupId;
+            return this;
+        }
+
+        /**
+         * The type of the site from which the information of replication pairs is retrieved. Valid values:
+         * <p>
+         * 
+         * *   production: primary site
+         * *   backup: secondary site
+         * 
+         * Default value: production.
          */
         public Builder site(String site) {
             this.putQueryParameter("Site", site);
             this.site = site;
+            return this;
+        }
+
+        /**
+         * Tag.
+         */
+        public Builder tag(java.util.List < Tag> tag) {
+            this.putQueryParameter("Tag", tag);
+            this.tag = tag;
             return this;
         }
 
@@ -237,4 +299,65 @@ public class DescribeDiskReplicaPairsRequest extends Request {
 
     } 
 
+    public static class Tag extends TeaModel {
+        @NameInMap("Key")
+        private String key;
+
+        @NameInMap("Value")
+        private String value;
+
+        private Tag(Builder builder) {
+            this.key = builder.key;
+            this.value = builder.value;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static Tag create() {
+            return builder().build();
+        }
+
+        /**
+         * @return key
+         */
+        public String getKey() {
+            return this.key;
+        }
+
+        /**
+         * @return value
+         */
+        public String getValue() {
+            return this.value;
+        }
+
+        public static final class Builder {
+            private String key; 
+            private String value; 
+
+            /**
+             * The key of tag N of the replication pair.
+             */
+            public Builder key(String key) {
+                this.key = key;
+                return this;
+            }
+
+            /**
+             * The value of tag N of the replication pair.
+             */
+            public Builder value(String value) {
+                this.value = value;
+                return this;
+            }
+
+            public Tag build() {
+                return new Tag(this);
+            } 
+
+        } 
+
+    }
 }

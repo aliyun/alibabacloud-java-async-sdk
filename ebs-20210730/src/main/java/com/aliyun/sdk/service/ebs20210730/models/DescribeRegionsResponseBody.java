@@ -50,7 +50,7 @@ public class DescribeRegionsResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * Regions.
+         * Details about the zones.
          */
         public Builder regions(java.util.List < Regions> regions) {
             this.regions = regions;
@@ -58,7 +58,7 @@ public class DescribeRegionsResponseBody extends TeaModel {
         }
 
         /**
-         * Id of the request
+         * The ID of the region.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -215,7 +215,7 @@ public class DescribeRegionsResponseBody extends TeaModel {
             private java.util.List < Zones> zones; 
 
             /**
-             * LocalName.
+             * The name of the zone.
              */
             public Builder localName(String localName) {
                 this.localName = localName;
@@ -223,7 +223,7 @@ public class DescribeRegionsResponseBody extends TeaModel {
             }
 
             /**
-             * RegionEndpoint.
+             * The ID of the zone.
              */
             public Builder regionEndpoint(String regionEndpoint) {
                 this.regionEndpoint = regionEndpoint;
@@ -231,7 +231,12 @@ public class DescribeRegionsResponseBody extends TeaModel {
             }
 
             /**
-             * RegionId.
+             * The type of resource. Valid values:
+             * <p>
+             * 
+             * *   ear: async replication
+             * *   lend: CloudLens for EBS
+             * *   dbsc: Dedicated Block Storage Cluster
              */
             public Builder regionId(String regionId) {
                 this.regionId = regionId;

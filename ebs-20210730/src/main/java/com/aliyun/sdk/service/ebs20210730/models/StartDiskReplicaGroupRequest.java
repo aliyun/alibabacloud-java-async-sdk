@@ -98,7 +98,13 @@ public class StartDiskReplicaGroupRequest extends Request {
         } 
 
         /**
-         * ClientToken.
+         * Specifies whether to immediately synchronize data once. Valid values:
+         * <p>
+         * 
+         * *   true: immediately synchronizes data once.
+         * *   false: synchronizes data based on the RPO of the replication pair-consistent group.
+         * 
+         * Default value: false.
          */
         public Builder clientToken(String clientToken) {
             this.putQueryParameter("ClientToken", clientToken);
@@ -107,7 +113,7 @@ public class StartDiskReplicaGroupRequest extends Request {
         }
 
         /**
-         * OneShot.
+         * The ID of the request.
          */
         public Builder oneShot(Boolean oneShot) {
             this.putQueryParameter("OneShot", oneShot);
@@ -116,7 +122,7 @@ public class StartDiskReplicaGroupRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * The ID of the replication pair-consistent group.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -125,7 +131,7 @@ public class StartDiskReplicaGroupRequest extends Request {
         }
 
         /**
-         * ReplicaGroupId.
+         * The client token that is used to ensure the idempotence of the request. You can use the client to generate the value, but you must make sure that the value is unique among different requests. The ClientToken value can contain only ASCII characters and cannot exceed 64 characters in length. For more information, see [How to ensure idempotence](~~25693~~).
          */
         public Builder replicaGroupId(String replicaGroupId) {
             this.putQueryParameter("ReplicaGroupId", replicaGroupId);

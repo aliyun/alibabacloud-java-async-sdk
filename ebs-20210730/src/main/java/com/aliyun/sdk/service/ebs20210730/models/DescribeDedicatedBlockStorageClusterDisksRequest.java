@@ -98,7 +98,7 @@ public class DescribeDedicatedBlockStorageClusterDisksRequest extends Request {
         } 
 
         /**
-         * 专属块存储集群ID
+         * The ID of the dedicated block storage cluster.
          */
         public Builder dbscId(String dbscId) {
             this.putQueryParameter("DbscId", dbscId);
@@ -107,10 +107,10 @@ public class DescribeDedicatedBlockStorageClusterDisksRequest extends Request {
         }
 
         /**
-         * 分页查询时每页的最大条目数。最大值为500。
+         * The maximum number of entries to return on each page. Maximum value: 500.
          * <p>
          * 
-         * 默认值：10
+         * Default value: 10.
          */
         public Builder maxResults(Long maxResults) {
             this.putQueryParameter("MaxResults", maxResults);
@@ -119,7 +119,7 @@ public class DescribeDedicatedBlockStorageClusterDisksRequest extends Request {
         }
 
         /**
-         * 查询凭证（Token）。取值为上一次调用该接口返回的NextToken参数值，初次调用接口时无需设置该参数。
+         * The query token. Set the value to the NextToken value returned in the previous call to the DescribeDedicatedBlockStorageClusterDisks operation. Leave this parameter empty the first time you call this operation.
          */
         public Builder nextToken(String nextToken) {
             this.putQueryParameter("NextToken", nextToken);
@@ -128,9 +128,7 @@ public class DescribeDedicatedBlockStorageClusterDisksRequest extends Request {
         }
 
         /**
-         * 专属块存储集群所在的地域ID。您可以调用DescribeRegions
-         * <p>
-         * 查看最新的阿里云地域列表。
+         * The ID of the region where the dedicated block storage cluster resides. You can call the [DescribeRegions](~~25609~~) operation to query the most recent region list.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);

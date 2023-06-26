@@ -62,7 +62,7 @@ public class CreateDedicatedBlockStorageClusterResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * Id of the dbsc
+         * The ID of the dedicated block storage cluster.
          */
         public Builder dbscId(String dbscId) {
             this.dbscId = dbscId;
@@ -70,7 +70,7 @@ public class CreateDedicatedBlockStorageClusterResponseBody extends TeaModel {
         }
 
         /**
-         * Id of the order
+         * The ID of the order.
          */
         public Builder orderId(String orderId) {
             this.orderId = orderId;
@@ -78,7 +78,7 @@ public class CreateDedicatedBlockStorageClusterResponseBody extends TeaModel {
         }
 
         /**
-         * Id of the request
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

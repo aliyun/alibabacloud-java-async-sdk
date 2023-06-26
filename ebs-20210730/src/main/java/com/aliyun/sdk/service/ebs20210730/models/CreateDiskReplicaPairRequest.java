@@ -70,9 +70,17 @@ public class CreateDiskReplicaPairRequest extends Request {
     private String regionId;
 
     @Query
+    @NameInMap("ResourceGroupId")
+    private String resourceGroupId;
+
+    @Query
     @NameInMap("SourceZoneId")
     @Validation(required = true)
     private String sourceZoneId;
+
+    @Query
+    @NameInMap("Tag")
+    private java.util.List < Tag> tag;
 
     private CreateDiskReplicaPairRequest(Builder builder) {
         super(builder);
@@ -89,7 +97,9 @@ public class CreateDiskReplicaPairRequest extends Request {
         this.periodUnit = builder.periodUnit;
         this.RPO = builder.RPO;
         this.regionId = builder.regionId;
+        this.resourceGroupId = builder.resourceGroupId;
         this.sourceZoneId = builder.sourceZoneId;
+        this.tag = builder.tag;
     }
 
     public static Builder builder() {
@@ -197,10 +207,24 @@ public class CreateDiskReplicaPairRequest extends Request {
     }
 
     /**
+     * @return resourceGroupId
+     */
+    public String getResourceGroupId() {
+        return this.resourceGroupId;
+    }
+
+    /**
      * @return sourceZoneId
      */
     public String getSourceZoneId() {
         return this.sourceZoneId;
+    }
+
+    /**
+     * @return tag
+     */
+    public java.util.List < Tag> getTag() {
+        return this.tag;
     }
 
     public static final class Builder extends Request.Builder<CreateDiskReplicaPairRequest, Builder> {
@@ -217,7 +241,9 @@ public class CreateDiskReplicaPairRequest extends Request {
         private String periodUnit; 
         private Long RPO; 
         private String regionId; 
+        private String resourceGroupId; 
         private String sourceZoneId; 
+        private java.util.List < Tag> tag; 
 
         private Builder() {
             super();
@@ -238,11 +264,13 @@ public class CreateDiskReplicaPairRequest extends Request {
             this.periodUnit = request.periodUnit;
             this.RPO = request.RPO;
             this.regionId = request.regionId;
+            this.resourceGroupId = request.resourceGroupId;
             this.sourceZoneId = request.sourceZoneId;
+            this.tag = request.tag;
         } 
 
         /**
-         * Bandwidth.
+         * The recovery point objective (RPO) of the replication pair. Unit: seconds. Set the value to 900.
          */
         public Builder bandwidth(Long bandwidth) {
             this.putQueryParameter("Bandwidth", bandwidth);
@@ -251,7 +279,11 @@ public class CreateDiskReplicaPairRequest extends Request {
         }
 
         /**
-         * ChargeType.
+         * The subscription duration of the replication pair. This parameter is required when the `ChargeType` parameter is set to PREPAY. The unit of the subscription duration is specified by the `PeriodUnit` parameter.
+         * <p>
+         * 
+         * *   Valid values when the `PeriodUnit` parameter is set to Week: 1, 2, 3, and 4.
+         * *   Valid values when the `PeriodUnit` parameter is set to Month: 1, 2, 3, 4, 5, 6, 7, 8, 9, 12, 24, 36, 48, and 60.
          */
         public Builder chargeType(String chargeType) {
             this.putQueryParameter("ChargeType", chargeType);
@@ -260,7 +292,17 @@ public class CreateDiskReplicaPairRequest extends Request {
         }
 
         /**
-         * ClientToken.
+         * The bandwidth to use to asynchronously replicate data between the primary disk and secondary disk. Unit: Kbit/s. Valid values:
+         * <p>
+         * 
+         * *   10240 : equal to 10 Mbit/s
+         * *   20480 : equal to 20 Mbit/s
+         * *   51200 : equal to 50 Mbit/s
+         * *   102400 : equal to 100 Mbit/s
+         * 
+         * Default value: 10240.
+         * 
+         * When you set the ChargeType parameter to POSTPAY, the Bandwidth parameter is automatically set to 0 and cannot be modified. The value 0 indicates that bandwidth is dynamically allocated based on the volume of data that is asynchronously replicated from the primary disk to the secondary disk.
          */
         public Builder clientToken(String clientToken) {
             this.putQueryParameter("ClientToken", clientToken);
@@ -269,7 +311,13 @@ public class CreateDiskReplicaPairRequest extends Request {
         }
 
         /**
-         * Description.
+         * The billing method of the replication pair. Valid values:
+         * <p>
+         * 
+         * *   PREPAY: subscription
+         * *   POSTPAY: pay-as-you-go
+         * 
+         * Default value: POSTPAY.
          */
         public Builder description(String description) {
             this.putQueryParameter("Description", description);
@@ -278,7 +326,7 @@ public class CreateDiskReplicaPairRequest extends Request {
         }
 
         /**
-         * DestinationDiskId.
+         * The zone ID of the secondary disk.
          */
         public Builder destinationDiskId(String destinationDiskId) {
             this.putQueryParameter("DestinationDiskId", destinationDiskId);
@@ -287,7 +335,7 @@ public class CreateDiskReplicaPairRequest extends Request {
         }
 
         /**
-         * DestinationRegionId.
+         * The ID of the secondary disk.
          */
         public Builder destinationRegionId(String destinationRegionId) {
             this.putQueryParameter("DestinationRegionId", destinationRegionId);
@@ -296,7 +344,7 @@ public class CreateDiskReplicaPairRequest extends Request {
         }
 
         /**
-         * DestinationZoneId.
+         * The name of the replication pair. The name must be 2 to 128 characters in length. It must start with a letter and cannot start with `http://` or `https://`. It can contain letters, digits, colons (:), underscores (\_), periods (.), and hyphens (-).
          */
         public Builder destinationZoneId(String destinationZoneId) {
             this.putQueryParameter("DestinationZoneId", destinationZoneId);
@@ -305,7 +353,7 @@ public class CreateDiskReplicaPairRequest extends Request {
         }
 
         /**
-         * DiskId.
+         * The region ID of the secondary disk. You can call the [DescribeRegions](~~354276~~) operation to query the most recent list of regions in which async replication is supported.
          */
         public Builder diskId(String diskId) {
             this.putQueryParameter("DiskId", diskId);
@@ -314,7 +362,7 @@ public class CreateDiskReplicaPairRequest extends Request {
         }
 
         /**
-         * PairName.
+         * The description of the replication pair. The description must be 2 to 256 characters in length and cannot start with `http://` or `https://`.
          */
         public Builder pairName(String pairName) {
             this.putQueryParameter("PairName", pairName);
@@ -323,7 +371,13 @@ public class CreateDiskReplicaPairRequest extends Request {
         }
 
         /**
-         * Period.
+         * The unit of the subscription duration of the replication pair. Valid values:
+         * <p>
+         * 
+         * *   Week.
+         * *   Month
+         * 
+         * Default value: Month.
          */
         public Builder period(Long period) {
             this.putQueryParameter("Period", period);
@@ -332,7 +386,7 @@ public class CreateDiskReplicaPairRequest extends Request {
         }
 
         /**
-         * PeriodUnit.
+         * The client token that is used to ensure the idempotence of the request. You can use the client to generate the value, but you must ensure that it is unique among different requests. The token can contain only ASCII characters and cannot exceed 64 characters in length. For more information, see [How to ensure idempotence](~~25693~~).
          */
         public Builder periodUnit(String periodUnit) {
             this.putQueryParameter("PeriodUnit", periodUnit);
@@ -341,7 +395,7 @@ public class CreateDiskReplicaPairRequest extends Request {
         }
 
         /**
-         * RPO.
+         * The ID of the resource group to which to assign the replication pair.
          */
         public Builder RPO(Long RPO) {
             this.putQueryParameter("RPO", RPO);
@@ -350,7 +404,7 @@ public class CreateDiskReplicaPairRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * The zone ID of the primary disk.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -359,11 +413,29 @@ public class CreateDiskReplicaPairRequest extends Request {
         }
 
         /**
-         * SourceZoneId.
+         * The key of tag N to add to the replication pair.
+         */
+        public Builder resourceGroupId(String resourceGroupId) {
+            this.putQueryParameter("ResourceGroupId", resourceGroupId);
+            this.resourceGroupId = resourceGroupId;
+            return this;
+        }
+
+        /**
+         * The ID of the primary disk.
          */
         public Builder sourceZoneId(String sourceZoneId) {
             this.putQueryParameter("SourceZoneId", sourceZoneId);
             this.sourceZoneId = sourceZoneId;
+            return this;
+        }
+
+        /**
+         * Tag.
+         */
+        public Builder tag(java.util.List < Tag> tag) {
+            this.putQueryParameter("Tag", tag);
+            this.tag = tag;
             return this;
         }
 
@@ -374,4 +446,65 @@ public class CreateDiskReplicaPairRequest extends Request {
 
     } 
 
+    public static class Tag extends TeaModel {
+        @NameInMap("Key")
+        private String key;
+
+        @NameInMap("Value")
+        private String value;
+
+        private Tag(Builder builder) {
+            this.key = builder.key;
+            this.value = builder.value;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static Tag create() {
+            return builder().build();
+        }
+
+        /**
+         * @return key
+         */
+        public String getKey() {
+            return this.key;
+        }
+
+        /**
+         * @return value
+         */
+        public String getValue() {
+            return this.value;
+        }
+
+        public static final class Builder {
+            private String key; 
+            private String value; 
+
+            /**
+             * The value of tag N to add to the replication pair.
+             */
+            public Builder key(String key) {
+                this.key = key;
+                return this;
+            }
+
+            /**
+             * The ID of the request.
+             */
+            public Builder value(String value) {
+                this.value = value;
+                return this;
+            }
+
+            public Tag build() {
+                return new Tag(this);
+            } 
+
+        } 
+
+    }
 }

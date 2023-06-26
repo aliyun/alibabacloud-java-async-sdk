@@ -84,7 +84,7 @@ public class FailoverDiskReplicaGroupRequest extends Request {
         } 
 
         /**
-         * ClientToken.
+         * The ID of the request.
          */
         public Builder clientToken(String clientToken) {
             this.putQueryParameter("ClientToken", clientToken);
@@ -93,7 +93,7 @@ public class FailoverDiskReplicaGroupRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * The ID of the replication pair-consistent group.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -102,7 +102,7 @@ public class FailoverDiskReplicaGroupRequest extends Request {
         }
 
         /**
-         * ReplicaGroupId.
+         * The client token that is used to ensure the idempotence of the request. You can use the client to generate the value, but you must make sure that the value is unique among different requests. The ClientToken value can contain only ASCII characters and cannot exceed 64 characters in length. For more information, see [How to ensure idempotence](~~25693~~).
          */
         public Builder replicaGroupId(String replicaGroupId) {
             this.putQueryParameter("ReplicaGroupId", replicaGroupId);

@@ -50,7 +50,7 @@ public class CreateDiskReplicaGroupResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * ReplicaGroupId.
+         * The ID of the replication pair-consistent group.
          */
         public Builder replicaGroupId(String replicaGroupId) {
             this.replicaGroupId = replicaGroupId;
@@ -58,7 +58,7 @@ public class CreateDiskReplicaGroupResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

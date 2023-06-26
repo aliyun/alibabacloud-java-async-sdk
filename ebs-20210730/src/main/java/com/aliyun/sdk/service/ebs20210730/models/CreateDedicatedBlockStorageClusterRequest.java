@@ -24,12 +24,21 @@ public class CreateDedicatedBlockStorageClusterRequest extends Request {
 
     @Query
     @NameInMap("DbscId")
+    @Deprecated
     private String dbscId;
 
     @Query
     @NameInMap("DbscName")
     @Validation(required = true)
     private String dbscName;
+
+    @Query
+    @NameInMap("Period")
+    private Integer period;
+
+    @Query
+    @NameInMap("PeriodUnit")
+    private String periodUnit;
 
     @Query
     @NameInMap("RegionId")
@@ -39,6 +48,10 @@ public class CreateDedicatedBlockStorageClusterRequest extends Request {
     @Query
     @NameInMap("ResourceGroupId")
     private String resourceGroupId;
+
+    @Query
+    @NameInMap("Tag")
+    private java.util.List < Tag> tag;
 
     @Query
     @NameInMap("Type")
@@ -51,8 +64,11 @@ public class CreateDedicatedBlockStorageClusterRequest extends Request {
         this.capacity = builder.capacity;
         this.dbscId = builder.dbscId;
         this.dbscName = builder.dbscName;
+        this.period = builder.period;
+        this.periodUnit = builder.periodUnit;
         this.regionId = builder.regionId;
         this.resourceGroupId = builder.resourceGroupId;
+        this.tag = builder.tag;
         this.type = builder.type;
     }
 
@@ -98,6 +114,20 @@ public class CreateDedicatedBlockStorageClusterRequest extends Request {
     }
 
     /**
+     * @return period
+     */
+    public Integer getPeriod() {
+        return this.period;
+    }
+
+    /**
+     * @return periodUnit
+     */
+    public String getPeriodUnit() {
+        return this.periodUnit;
+    }
+
+    /**
      * @return regionId
      */
     public String getRegionId() {
@@ -112,6 +142,13 @@ public class CreateDedicatedBlockStorageClusterRequest extends Request {
     }
 
     /**
+     * @return tag
+     */
+    public java.util.List < Tag> getTag() {
+        return this.tag;
+    }
+
+    /**
      * @return type
      */
     public String getType() {
@@ -123,8 +160,11 @@ public class CreateDedicatedBlockStorageClusterRequest extends Request {
         private Long capacity; 
         private String dbscId; 
         private String dbscName; 
+        private Integer period; 
+        private String periodUnit; 
         private String regionId; 
         private String resourceGroupId; 
+        private java.util.List < Tag> tag; 
         private String type; 
 
         private Builder() {
@@ -137,15 +177,16 @@ public class CreateDedicatedBlockStorageClusterRequest extends Request {
             this.capacity = request.capacity;
             this.dbscId = request.dbscId;
             this.dbscName = request.dbscName;
+            this.period = request.period;
+            this.periodUnit = request.periodUnit;
             this.regionId = request.regionId;
             this.resourceGroupId = request.resourceGroupId;
+            this.tag = request.tag;
             this.type = request.type;
         } 
 
         /**
-         * 专属块存储集群所在的可用区ID。您可以调用DescribeZones
-         * <p>
-         * 查看阿里云地域下的可用区。
+         * The ID of the zone in which to create the dedicated block storage cluster. You can call the [DescribeZones](~~25610~~) operation to query the most recent zone list.
          */
         public Builder azone(String azone) {
             this.putQueryParameter("Azone", azone);
@@ -154,7 +195,10 @@ public class CreateDedicatedBlockStorageClusterRequest extends Request {
         }
 
         /**
-         * 专属集群容量，单位为GiB，范围为[61440, 2334720]，最小递增步长为12288GiB
+         * The capacity of the dedicated block storage cluster. Valid values: 61440 to 2334720. Unit: GiB. 2,334,720 GiB is equal to 2,280 TiB. The capacity increases in a minimum increment of 12,288 GB.
+         * <p>
+         * 
+         * >  If the capacity of a dedicated block storage cluster is less than 576 TiB, the maximum throughput supported per TiB does not exceed 52 MB/s. If the capacity of a dedicated block storage cluster is greater than 576 TiB, the maximum throughput supported per TiB does not exceed 26 MB/s.
          */
         public Builder capacity(Long capacity) {
             this.putQueryParameter("Capacity", capacity);
@@ -163,7 +207,7 @@ public class CreateDedicatedBlockStorageClusterRequest extends Request {
         }
 
         /**
-         * 专属集群虚拟ID，可填任意字符串，不影响最终生成的专属集群ID
+         * DbscId.
          */
         public Builder dbscId(String dbscId) {
             this.putQueryParameter("DbscId", dbscId);
@@ -172,7 +216,7 @@ public class CreateDedicatedBlockStorageClusterRequest extends Request {
         }
 
         /**
-         * 专属集群名称
+         * The name of the dedicated block storage cluster.
          */
         public Builder dbscName(String dbscName) {
             this.putQueryParameter("DbscName", dbscName);
@@ -181,9 +225,25 @@ public class CreateDedicatedBlockStorageClusterRequest extends Request {
         }
 
         /**
-         * 专属块存储集群所在的地域ID。您可以调用DescribeRegions
-         * <p>
-         * 查看最新的阿里云地域列表。
+         * Period.
+         */
+        public Builder period(Integer period) {
+            this.putQueryParameter("Period", period);
+            this.period = period;
+            return this;
+        }
+
+        /**
+         * PeriodUnit.
+         */
+        public Builder periodUnit(String periodUnit) {
+            this.putQueryParameter("PeriodUnit", periodUnit);
+            this.periodUnit = periodUnit;
+            return this;
+        }
+
+        /**
+         * The ID of the region in which to create the dedicated block storage cluster. You can call the [DescribeRegions](~~25609~~) operation to query the most recent region list.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -192,7 +252,7 @@ public class CreateDedicatedBlockStorageClusterRequest extends Request {
         }
 
         /**
-         * 专属集群所在的企业资源组ID。
+         * ResourceGroupId.
          */
         public Builder resourceGroupId(String resourceGroupId) {
             this.putQueryParameter("ResourceGroupId", resourceGroupId);
@@ -201,10 +261,24 @@ public class CreateDedicatedBlockStorageClusterRequest extends Request {
         }
 
         /**
-         * 专属块存储集群性能类型。可能值：
+         * Tag.
+         */
+        public Builder tag(java.util.List < Tag> tag) {
+            this.putQueryParameter("Tag", tag);
+            this.tag = tag;
+            return this;
+        }
+
+        /**
+         * The type of the dedicated block storage cluster. Valid values:
          * <p>
-         * Standard：基础型。该类型的专属块存储集群中可创建ESSD PL0云盘。
-         * Premium：性能型。该类型的专属块存储集群中可创建ESSD PL1云盘。
+         * 
+         * *   Standard: basic type. When you set Type to Standard, enhanced SSDs (ESSDs) at performance level 0 (PL0 ESSDs) can be created in the dedicated block storage cluster.
+         * *   Premium: performance type. When you set Type to Premium, ESSDs at performance level 1 (PL1 ESSDs) can be created in the dedicated block storage cluster.
+         * 
+         * Default value: Premium.
+         * 
+         * For more information about ESSDs, see [ESSDs](~~122389~~).
          */
         public Builder type(String type) {
             this.putQueryParameter("Type", type);
@@ -219,4 +293,67 @@ public class CreateDedicatedBlockStorageClusterRequest extends Request {
 
     } 
 
+    public static class Tag extends TeaModel {
+        @NameInMap("Key")
+        @Validation(required = true)
+        private String key;
+
+        @NameInMap("Value")
+        @Validation(required = true)
+        private String value;
+
+        private Tag(Builder builder) {
+            this.key = builder.key;
+            this.value = builder.value;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static Tag create() {
+            return builder().build();
+        }
+
+        /**
+         * @return key
+         */
+        public String getKey() {
+            return this.key;
+        }
+
+        /**
+         * @return value
+         */
+        public String getValue() {
+            return this.value;
+        }
+
+        public static final class Builder {
+            private String key; 
+            private String value; 
+
+            /**
+             * Key.
+             */
+            public Builder key(String key) {
+                this.key = key;
+                return this;
+            }
+
+            /**
+             * Value.
+             */
+            public Builder value(String value) {
+                this.value = value;
+                return this;
+            }
+
+            public Tag build() {
+                return new Tag(this);
+            } 
+
+        } 
+
+    }
 }

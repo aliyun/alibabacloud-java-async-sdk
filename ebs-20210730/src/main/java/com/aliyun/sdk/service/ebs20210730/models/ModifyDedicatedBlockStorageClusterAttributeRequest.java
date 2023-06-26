@@ -113,7 +113,10 @@ public class ModifyDedicatedBlockStorageClusterAttributeRequest extends Request 
         } 
 
         /**
-         * 客户端幂等token
+         * The client token that is used to ensure the idempotence of the request. You can use the client to generate the value, but you must ensure that it is unique among different requests.
+         * <p>
+         * 
+         * The ClientToken value can contain only ASCII characters and cannot exceed 64 characters in length. For more information, see [How do I ensure idempotence ](~~25693~~).
          */
         public Builder clientToken(String clientToken) {
             this.putQueryParameter("ClientToken", clientToken);
@@ -122,7 +125,7 @@ public class ModifyDedicatedBlockStorageClusterAttributeRequest extends Request 
         }
 
         /**
-         * 专属集群ID
+         * The ID of the dedicated block storage cluster.
          */
         public Builder dbscId(String dbscId) {
             this.putQueryParameter("DbscId", dbscId);
@@ -131,7 +134,7 @@ public class ModifyDedicatedBlockStorageClusterAttributeRequest extends Request 
         }
 
         /**
-         * 修改后的专属集群名称，不为空
+         * The new name of the dedicated block storage cluster.
          */
         public Builder dbscName(String dbscName) {
             this.putQueryParameter("DbscName", dbscName);
@@ -140,7 +143,7 @@ public class ModifyDedicatedBlockStorageClusterAttributeRequest extends Request 
         }
 
         /**
-         * 修改后的专属集群描述信息
+         * The new description of dedicated block storage cluster.
          */
         public Builder description(String description) {
             this.putQueryParameter("Description", description);
@@ -149,9 +152,7 @@ public class ModifyDedicatedBlockStorageClusterAttributeRequest extends Request 
         }
 
         /**
-         * 专属块存储集群所在的地域ID。您可以调用DescribeRegions
-         * <p>
-         * 查看最新的阿里云地域列表。
+         * The region ID of the dedicated block storage cluster. You can call the [DescribeRegions](~~25609~~) operation to query the most recent region list.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);

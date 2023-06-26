@@ -116,7 +116,7 @@ public class StartDiskReplicaPairRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * The ID of the request.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);

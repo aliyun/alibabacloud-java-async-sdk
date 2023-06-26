@@ -38,7 +38,7 @@ public class UntagResourcesResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * 请求 ID。无论调用接口成功与否，我们都会返回请求 ID。
+         * The ID of the request. The request ID is returned regardless of whether the call is successful.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

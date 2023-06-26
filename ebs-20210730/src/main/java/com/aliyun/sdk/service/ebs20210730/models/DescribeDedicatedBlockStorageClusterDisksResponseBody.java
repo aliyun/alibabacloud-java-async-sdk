@@ -62,7 +62,7 @@ public class DescribeDedicatedBlockStorageClusterDisksResponseBody extends TeaMo
         private String requestId; 
 
         /**
-         * Disks.
+         * Details about the cloud disks.
          */
         public Builder disks(Disks disks) {
             this.disks = disks;
@@ -70,7 +70,7 @@ public class DescribeDedicatedBlockStorageClusterDisksResponseBody extends TeaMo
         }
 
         /**
-         * 本次调用返回的查询凭证值。
+         * The query token returned in this call.
          */
         public Builder nextToken(String nextToken) {
             this.nextToken = nextToken;
@@ -78,7 +78,7 @@ public class DescribeDedicatedBlockStorageClusterDisksResponseBody extends TeaMo
         }
 
         /**
-         * Id of the request
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -130,7 +130,7 @@ public class DescribeDedicatedBlockStorageClusterDisksResponseBody extends TeaMo
             private String tagValue; 
 
             /**
-             * TagKey.
+             * The tag key of the cloud disk.
              */
             public Builder tagKey(String tagKey) {
                 this.tagKey = tagKey;
@@ -138,7 +138,7 @@ public class DescribeDedicatedBlockStorageClusterDisksResponseBody extends TeaMo
             }
 
             /**
-             * TagValue.
+             * The tag value of the cloud disk.
              */
             public Builder tagValue(String tagValue) {
                 this.tagValue = tagValue;
@@ -158,6 +158,9 @@ public class DescribeDedicatedBlockStorageClusterDisksResponseBody extends TeaMo
 
         @NameInMap("BdfId")
         private String bdfId;
+
+        @NameInMap("BurstingEnabled")
+        private Boolean burstingEnabled;
 
         @NameInMap("Category")
         private String category;
@@ -216,6 +219,9 @@ public class DescribeDedicatedBlockStorageClusterDisksResponseBody extends TeaMo
         @NameInMap("Portable")
         private Boolean portable;
 
+        @NameInMap("ProvisionedIops")
+        private Long provisionedIops;
+
         @NameInMap("RegionId")
         private String regionId;
 
@@ -240,6 +246,9 @@ public class DescribeDedicatedBlockStorageClusterDisksResponseBody extends TeaMo
         @NameInMap("Tags")
         private java.util.List < Tags> tags;
 
+        @NameInMap("Throughput")
+        private Long throughput;
+
         @NameInMap("Type")
         private String type;
 
@@ -249,6 +258,7 @@ public class DescribeDedicatedBlockStorageClusterDisksResponseBody extends TeaMo
         private Disk(Builder builder) {
             this.attachedTime = builder.attachedTime;
             this.bdfId = builder.bdfId;
+            this.burstingEnabled = builder.burstingEnabled;
             this.category = builder.category;
             this.deleteAutoSnapshot = builder.deleteAutoSnapshot;
             this.deleteWithInstance = builder.deleteWithInstance;
@@ -268,6 +278,7 @@ public class DescribeDedicatedBlockStorageClusterDisksResponseBody extends TeaMo
             this.multiAttach = builder.multiAttach;
             this.performanceLevel = builder.performanceLevel;
             this.portable = builder.portable;
+            this.provisionedIops = builder.provisionedIops;
             this.regionId = builder.regionId;
             this.size = builder.size;
             this.sourceSnapshotId = builder.sourceSnapshotId;
@@ -276,6 +287,7 @@ public class DescribeDedicatedBlockStorageClusterDisksResponseBody extends TeaMo
             this.storageSetId = builder.storageSetId;
             this.storageSetPartitionNumber = builder.storageSetPartitionNumber;
             this.tags = builder.tags;
+            this.throughput = builder.throughput;
             this.type = builder.type;
             this.zoneId = builder.zoneId;
         }
@@ -300,6 +312,13 @@ public class DescribeDedicatedBlockStorageClusterDisksResponseBody extends TeaMo
          */
         public String getBdfId() {
             return this.bdfId;
+        }
+
+        /**
+         * @return burstingEnabled
+         */
+        public Boolean getBurstingEnabled() {
+            return this.burstingEnabled;
         }
 
         /**
@@ -436,6 +455,13 @@ public class DescribeDedicatedBlockStorageClusterDisksResponseBody extends TeaMo
         }
 
         /**
+         * @return provisionedIops
+         */
+        public Long getProvisionedIops() {
+            return this.provisionedIops;
+        }
+
+        /**
          * @return regionId
          */
         public String getRegionId() {
@@ -492,6 +518,13 @@ public class DescribeDedicatedBlockStorageClusterDisksResponseBody extends TeaMo
         }
 
         /**
+         * @return throughput
+         */
+        public Long getThroughput() {
+            return this.throughput;
+        }
+
+        /**
          * @return type
          */
         public String getType() {
@@ -508,6 +541,7 @@ public class DescribeDedicatedBlockStorageClusterDisksResponseBody extends TeaMo
         public static final class Builder {
             private String attachedTime; 
             private String bdfId; 
+            private Boolean burstingEnabled; 
             private String category; 
             private Boolean deleteAutoSnapshot; 
             private Boolean deleteWithInstance; 
@@ -527,6 +561,7 @@ public class DescribeDedicatedBlockStorageClusterDisksResponseBody extends TeaMo
             private String multiAttach; 
             private String performanceLevel; 
             private Boolean portable; 
+            private Long provisionedIops; 
             private String regionId; 
             private Integer size; 
             private String sourceSnapshotId; 
@@ -535,11 +570,12 @@ public class DescribeDedicatedBlockStorageClusterDisksResponseBody extends TeaMo
             private String storageSetId; 
             private Integer storageSetPartitionNumber; 
             private java.util.List < Tags> tags; 
+            private Long throughput; 
             private String type; 
             private String zoneId; 
 
             /**
-             * AttachedTime.
+             * The time when the cloud disk was last attached. The time follows the ISO 8601 standard in the yyyy-MM-ddThh:mmZ format. The time is displayed in UTC.
              */
             public Builder attachedTime(String attachedTime) {
                 this.attachedTime = attachedTime;
@@ -547,7 +583,7 @@ public class DescribeDedicatedBlockStorageClusterDisksResponseBody extends TeaMo
             }
 
             /**
-             * BdfId.
+             * This parameter is currently in invitational preview and unavailable for general users.
              */
             public Builder bdfId(String bdfId) {
                 this.bdfId = bdfId;
@@ -555,7 +591,15 @@ public class DescribeDedicatedBlockStorageClusterDisksResponseBody extends TeaMo
             }
 
             /**
-             * Category.
+             * BurstingEnabled.
+             */
+            public Builder burstingEnabled(Boolean burstingEnabled) {
+                this.burstingEnabled = burstingEnabled;
+                return this;
+            }
+
+            /**
+             * The category of the disk. A value of cloud_essd indicates that the disk is an ESSD.
              */
             public Builder category(String category) {
                 this.category = category;
@@ -563,7 +607,13 @@ public class DescribeDedicatedBlockStorageClusterDisksResponseBody extends TeaMo
             }
 
             /**
-             * DeleteAutoSnapshot.
+             * Indicates whether the automatic snapshots of the cloud disk are deleted when the disk is released. Valid values:
+             * <p>
+             * 
+             * *   true: The automatic snapshots of the cloud disk are deleted when the disk is released.
+             * *   false: The automatic snapshots of the cloud disk are retained when the disk is released.
+             * 
+             * Snapshots that are created by calling the [CreateSnapshot](~~25524~~) operation or by using the Elastic Compute Service (ECS) console are retained and not affected by this parameter.
              */
             public Builder deleteAutoSnapshot(Boolean deleteAutoSnapshot) {
                 this.deleteAutoSnapshot = deleteAutoSnapshot;
@@ -571,7 +621,11 @@ public class DescribeDedicatedBlockStorageClusterDisksResponseBody extends TeaMo
             }
 
             /**
-             * DeleteWithInstance.
+             * Indicates whether the cloud disk is released when its associated instance is released. Valid values:
+             * <p>
+             * 
+             * *   true: The cloud disk is released when its associated instance is released.
+             * *   false: The cloud disk is retained when its associated instance is released.
              */
             public Builder deleteWithInstance(Boolean deleteWithInstance) {
                 this.deleteWithInstance = deleteWithInstance;
@@ -579,7 +633,7 @@ public class DescribeDedicatedBlockStorageClusterDisksResponseBody extends TeaMo
             }
 
             /**
-             * Description.
+             * The description of the cloud disk.
              */
             public Builder description(String description) {
                 this.description = description;
@@ -587,7 +641,7 @@ public class DescribeDedicatedBlockStorageClusterDisksResponseBody extends TeaMo
             }
 
             /**
-             * DetachedTime.
+             * The time when the cloud disk was last detached.
              */
             public Builder detachedTime(String detachedTime) {
                 this.detachedTime = detachedTime;
@@ -595,7 +649,13 @@ public class DescribeDedicatedBlockStorageClusterDisksResponseBody extends TeaMo
             }
 
             /**
-             * Device.
+             * The device name of the cloud disk on its associated instance. Example: /dev/xvdb. Take note of the following items:
+             * <p>
+             * 
+             * *   This parameter has a value only when the `Status` value is `In_use`.
+             * *   This parameter is empty for cloud disks that have the multi-attach feature enabled. You can query the attachment information of the cloud disk based on the `Attachment` values.
+             * 
+             * >  This parameter will be removed in the future. We recommend that you use other parameters to ensure future compatibility.
              */
             public Builder device(String device) {
                 this.device = device;
@@ -603,7 +663,11 @@ public class DescribeDedicatedBlockStorageClusterDisksResponseBody extends TeaMo
             }
 
             /**
-             * DiskChargeType.
+             * The billing method of the cloud disk. Valid values:
+             * <p>
+             * 
+             * *   PrePaid: subscription
+             * *   PostPaid: pay-as-you-go
              */
             public Builder diskChargeType(String diskChargeType) {
                 this.diskChargeType = diskChargeType;
@@ -611,7 +675,7 @@ public class DescribeDedicatedBlockStorageClusterDisksResponseBody extends TeaMo
             }
 
             /**
-             * DiskId.
+             * The ID of the cloud disk.
              */
             public Builder diskId(String diskId) {
                 this.diskId = diskId;
@@ -619,7 +683,7 @@ public class DescribeDedicatedBlockStorageClusterDisksResponseBody extends TeaMo
             }
 
             /**
-             * DiskName.
+             * The name of the cloud disk.
              */
             public Builder diskName(String diskName) {
                 this.diskName = diskName;
@@ -627,7 +691,7 @@ public class DescribeDedicatedBlockStorageClusterDisksResponseBody extends TeaMo
             }
 
             /**
-             * EnableAutoSnapshot.
+             * Indicates whether the automatic snapshot policy feature is enabled for the cloud disk.
              */
             public Builder enableAutoSnapshot(Boolean enableAutoSnapshot) {
                 this.enableAutoSnapshot = enableAutoSnapshot;
@@ -635,7 +699,7 @@ public class DescribeDedicatedBlockStorageClusterDisksResponseBody extends TeaMo
             }
 
             /**
-             * Encrypted.
+             * Indicates whether the cloud disk is encrypted.
              */
             public Builder encrypted(Boolean encrypted) {
                 this.encrypted = encrypted;
@@ -643,7 +707,7 @@ public class DescribeDedicatedBlockStorageClusterDisksResponseBody extends TeaMo
             }
 
             /**
-             * IOPS.
+             * The maximum number of IOPS.
              */
             public Builder IOPS(Long IOPS) {
                 this.IOPS = IOPS;
@@ -651,7 +715,7 @@ public class DescribeDedicatedBlockStorageClusterDisksResponseBody extends TeaMo
             }
 
             /**
-             * ImageId.
+             * The ID of the image that was used to create the instance. This parameter is empty unless the cloud disk was created from an image. The value of this parameter remains unchanged throughout the lifecycle of the cloud disk.
              */
             public Builder imageId(String imageId) {
                 this.imageId = imageId;
@@ -659,7 +723,11 @@ public class DescribeDedicatedBlockStorageClusterDisksResponseBody extends TeaMo
             }
 
             /**
-             * InstanceId.
+             * The ID of the instance to which the cloud disk is attached. Take note of the following items:
+             * <p>
+             * 
+             * *   This parameter has a value only when the `Status` value is `In_use`.
+             * *   This parameter is empty for cloud disks that have the multi-attach feature enabled. You can query the attachment information of the cloud disk based on the `Attachment` values.
              */
             public Builder instanceId(String instanceId) {
                 this.instanceId = instanceId;
@@ -667,7 +735,7 @@ public class DescribeDedicatedBlockStorageClusterDisksResponseBody extends TeaMo
             }
 
             /**
-             * KMSKeyId.
+             * The ID of the Key Management Service (KMS) key used by the cloud disk.
              */
             public Builder KMSKeyId(String KMSKeyId) {
                 this.KMSKeyId = KMSKeyId;
@@ -675,7 +743,7 @@ public class DescribeDedicatedBlockStorageClusterDisksResponseBody extends TeaMo
             }
 
             /**
-             * MountInstanceNum.
+             * The number of instances to which the Shared Block Storage device is attached.
              */
             public Builder mountInstanceNum(Integer mountInstanceNum) {
                 this.mountInstanceNum = mountInstanceNum;
@@ -683,7 +751,7 @@ public class DescribeDedicatedBlockStorageClusterDisksResponseBody extends TeaMo
             }
 
             /**
-             * MultiAttach.
+             * Indicates whether the multi-attach feature was enabled for the cloud disk.
              */
             public Builder multiAttach(String multiAttach) {
                 this.multiAttach = multiAttach;
@@ -691,7 +759,13 @@ public class DescribeDedicatedBlockStorageClusterDisksResponseBody extends TeaMo
             }
 
             /**
-             * PerformanceLevel.
+             * The performance level of the enhanced SSD (ESSD). Valid values:
+             * <p>
+             * 
+             * *   PL0: A single ESSD can deliver up to 10,000 random read/write IOPS.
+             * *   PL1: A single ESSD can deliver up to 50,000 random read/write IOPS.
+             * *   PL2: A single ESSD can deliver up to 100,000 random read/write IOPS.
+             * *   PL3: A single ESSD can deliver up to 1,000,000 random read/write IOPS.
              */
             public Builder performanceLevel(String performanceLevel) {
                 this.performanceLevel = performanceLevel;
@@ -699,7 +773,7 @@ public class DescribeDedicatedBlockStorageClusterDisksResponseBody extends TeaMo
             }
 
             /**
-             * Portable.
+             * Indicates whether the cloud disk is removable.
              */
             public Builder portable(Boolean portable) {
                 this.portable = portable;
@@ -707,7 +781,15 @@ public class DescribeDedicatedBlockStorageClusterDisksResponseBody extends TeaMo
             }
 
             /**
-             * RegionId.
+             * ProvisionedIops.
+             */
+            public Builder provisionedIops(Long provisionedIops) {
+                this.provisionedIops = provisionedIops;
+                return this;
+            }
+
+            /**
+             * The region ID of cloud disk.
              */
             public Builder regionId(String regionId) {
                 this.regionId = regionId;
@@ -715,7 +797,7 @@ public class DescribeDedicatedBlockStorageClusterDisksResponseBody extends TeaMo
             }
 
             /**
-             * Size.
+             * The size of the disk. Unit: GiB.
              */
             public Builder size(Integer size) {
                 this.size = size;
@@ -723,7 +805,10 @@ public class DescribeDedicatedBlockStorageClusterDisksResponseBody extends TeaMo
             }
 
             /**
-             * SourceSnapshotId.
+             * The ID of the snapshot that was used to create the cloud disk.
+             * <p>
+             * 
+             * This parameter is empty unless the cloud disk was created from a snapshot. The value of this parameter remains unchanged throughout the lifecycle of the cloud disk.
              */
             public Builder sourceSnapshotId(String sourceSnapshotId) {
                 this.sourceSnapshotId = sourceSnapshotId;
@@ -731,7 +816,15 @@ public class DescribeDedicatedBlockStorageClusterDisksResponseBody extends TeaMo
             }
 
             /**
-             * Status.
+             * The state of the cloud disk. For more information, see [Disk states](~~25689~~). Valid values:
+             * <p>
+             * 
+             * *   In_use
+             * *   Available
+             * *   Attaching
+             * *   Detaching
+             * *   Creating
+             * *   ReIniting
              */
             public Builder status(String status) {
                 this.status = status;
@@ -739,7 +832,7 @@ public class DescribeDedicatedBlockStorageClusterDisksResponseBody extends TeaMo
             }
 
             /**
-             * StorageClusterId.
+             * The ID of the dedicated block storage cluster to which the cloud disk belongs. If your cloud disk belongs to the public block storage cluster, an empty value is returned.
              */
             public Builder storageClusterId(String storageClusterId) {
                 this.storageClusterId = storageClusterId;
@@ -747,7 +840,7 @@ public class DescribeDedicatedBlockStorageClusterDisksResponseBody extends TeaMo
             }
 
             /**
-             * StorageSetId.
+             * The ID of the storage set.
              */
             public Builder storageSetId(String storageSetId) {
                 this.storageSetId = storageSetId;
@@ -755,7 +848,7 @@ public class DescribeDedicatedBlockStorageClusterDisksResponseBody extends TeaMo
             }
 
             /**
-             * StorageSetPartitionNumber.
+             * The maximum number of partitions in the storage set.
              */
             public Builder storageSetPartitionNumber(Integer storageSetPartitionNumber) {
                 this.storageSetPartitionNumber = storageSetPartitionNumber;
@@ -763,7 +856,7 @@ public class DescribeDedicatedBlockStorageClusterDisksResponseBody extends TeaMo
             }
 
             /**
-             * Tags.
+             * The tags of the cloud disk.
              */
             public Builder tags(java.util.List < Tags> tags) {
                 this.tags = tags;
@@ -771,7 +864,19 @@ public class DescribeDedicatedBlockStorageClusterDisksResponseBody extends TeaMo
             }
 
             /**
-             * Type.
+             * Throughput.
+             */
+            public Builder throughput(Long throughput) {
+                this.throughput = throughput;
+                return this;
+            }
+
+            /**
+             * The type of the disk. Valid values:
+             * <p>
+             * 
+             * *   system: system disk
+             * *   data: data disk
              */
             public Builder type(String type) {
                 this.type = type;
@@ -779,7 +884,7 @@ public class DescribeDedicatedBlockStorageClusterDisksResponseBody extends TeaMo
             }
 
             /**
-             * ZoneId.
+             * The zone ID of cloud disk.
              */
             public Builder zoneId(String zoneId) {
                 this.zoneId = zoneId;
@@ -820,9 +925,7 @@ public class DescribeDedicatedBlockStorageClusterDisksResponseBody extends TeaMo
             private java.util.List < Disk> disk; 
 
             /**
-             * 参考ECS DescribeDisks接口的返回结果
-             * <p>
-             * https://help.aliyun.com/document_detail/25514.html
+             * Details about the cloud disks.
              */
             public Builder disk(java.util.List < Disk> disk) {
                 this.disk = disk;

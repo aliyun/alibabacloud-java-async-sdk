@@ -62,7 +62,7 @@ public class DescribeDiskReplicaPairProgressResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * 同步进度
+         * Progress.
          */
         public Builder progress(Integer progress) {
             this.progress = progress;
@@ -70,7 +70,7 @@ public class DescribeDiskReplicaPairProgressResponseBody extends TeaModel {
         }
 
         /**
-         * 最近一次恢复点的时间戳。有条件返回，复制对start后，才会返回该字段。
+         * RecoverPoint.
          */
         public Builder recoverPoint(Long recoverPoint) {
             this.recoverPoint = recoverPoint;

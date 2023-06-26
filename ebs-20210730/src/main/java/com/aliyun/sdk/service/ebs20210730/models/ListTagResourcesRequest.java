@@ -126,7 +126,7 @@ public class ListTagResourcesRequest extends Request {
         } 
 
         /**
-         * 客户端幂等token
+         * The client token that is used to ensure the idempotence of the request. You can use the client to generate the value, but you must ensure that the value is unique among different requests. The **ClientToken** value can contain only ASCII characters and cannot exceed 64 characters in length. For more information, see [How to ensure idempotence](~~25693~~).
          */
         public Builder clientToken(String clientToken) {
             this.putQueryParameter("ClientToken", clientToken);
@@ -135,7 +135,7 @@ public class ListTagResourcesRequest extends Request {
         }
 
         /**
-         * 下一个查询开始Token
+         * The token used to start the next query.
          */
         public Builder nextToken(String nextToken) {
             this.putQueryParameter("NextToken", nextToken);
@@ -144,7 +144,7 @@ public class ListTagResourcesRequest extends Request {
         }
 
         /**
-         * 地域
+         * The region ID of the resource. You can call the [DescribeRegions](~~25609~~) operation to query the most recent region list.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -153,7 +153,7 @@ public class ListTagResourcesRequest extends Request {
         }
 
         /**
-         * 资源ID，n的取值范围为 [1, 50]
+         * ResourceId.
          */
         public Builder resourceId(java.util.List < String > resourceId) {
             this.putQueryParameter("ResourceId", resourceId);
@@ -162,7 +162,12 @@ public class ListTagResourcesRequest extends Request {
         }
 
         /**
-         * 资源类型定义
+         * The type of the resource. Valid values:
+         * <p>
+         * 
+         * *   dbsc: dedicated block storage cluster
+         * *   pair: replication pair
+         * *   group: replication pair-consistent group
          */
         public Builder resourceType(String resourceType) {
             this.putQueryParameter("ResourceType", resourceType);
@@ -171,7 +176,7 @@ public class ListTagResourcesRequest extends Request {
         }
 
         /**
-         * 标签键值对。n的取值范围为 [1, 20]
+         * Tag.
          */
         public Builder tag(java.util.List < Tag> tag) {
             this.putQueryParameter("Tag", tag);
@@ -225,7 +230,14 @@ public class ListTagResourcesRequest extends Request {
             private String value; 
 
             /**
-             * 资源的标签键
+             * The key of tag N used for exact search of EBS resources. The tag key must be 1 to 128 characters in length. Valid values of N: 1 to 20.
+             * <p>
+             * 
+             * The `Tag.N` parameter pair (Tag.N.Key and Tag.N.Value) is used for exact search of EBS resources that have specified tags added. Each tag is a key-value pair.
+             * 
+             * *   If you specify only `Tag.N.Key`, all EBS resources whose tags contain the specified tag key are returned.
+             * *   If you specify only `Tag.N.Value`, the `InvalidParameter.TagValue` error is returned.
+             * *   If you specify multiple tag key-value pairs at the same time, only EBS resources that match all tag key-value pairs are returned.
              */
             public Builder key(String key) {
                 this.key = key;
@@ -233,7 +245,7 @@ public class ListTagResourcesRequest extends Request {
             }
 
             /**
-             * 资源的标签值
+             * The value of tag N used for exact search of EBS resources. The tag value must be 1 to 128 characters in length. Valid values of N: 1 to 20.
              */
             public Builder value(String value) {
                 this.value = value;

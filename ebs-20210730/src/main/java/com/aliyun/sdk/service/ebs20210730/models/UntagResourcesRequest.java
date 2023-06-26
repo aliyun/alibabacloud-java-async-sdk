@@ -127,7 +127,13 @@ public class UntagResourcesRequest extends Request {
         } 
 
         /**
-         * 是否全部删除，只针对TagKey.N为空时有效
+         * Specifies whether to remove all tags from the resource. This parameter is valid only when the TagKey.N parameter is not specified. Valid values:
+         * <p>
+         * 
+         * *   true: removes all tags from the resource.
+         * *   false: does not remove all tags from the resource.
+         * 
+         * Default value: false.
          */
         public Builder all(Boolean all) {
             this.putQueryParameter("All", all);
@@ -136,7 +142,7 @@ public class UntagResourcesRequest extends Request {
         }
 
         /**
-         * 客户端幂等token
+         * The client token that is used to ensure the idempotence of the request. You can use the client to generate the value, but you must make sure that it is unique among different requests. The **ClientToken** value can contain only ASCII characters and cannot exceed 64 characters in length. For more information, see [How to ensure idempotence](~~25693~~).
          */
         public Builder clientToken(String clientToken) {
             this.putQueryParameter("ClientToken", clientToken);
@@ -145,7 +151,7 @@ public class UntagResourcesRequest extends Request {
         }
 
         /**
-         * 地域
+         * The region ID of the resource. You can call the [DescribeRegions](~~25609~~) operation to query the most recent region list.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -154,7 +160,7 @@ public class UntagResourcesRequest extends Request {
         }
 
         /**
-         * 资源ID，n的取值范围为 [1, 50]
+         * ResourceId.
          */
         public Builder resourceId(java.util.List < String > resourceId) {
             this.putQueryParameter("ResourceId", resourceId);
@@ -163,7 +169,12 @@ public class UntagResourcesRequest extends Request {
         }
 
         /**
-         * 资源类型定义
+         * The type of the resource. Valid values:
+         * <p>
+         * 
+         * *   dbsc: dedicated block storage cluster
+         * *   pair: the replication pair.
+         * *   group: replication pair-consistent group
          */
         public Builder resourceType(String resourceType) {
             this.putQueryParameter("ResourceType", resourceType);
@@ -172,7 +183,7 @@ public class UntagResourcesRequest extends Request {
         }
 
         /**
-         * 标签键。n 的取值范围为 [1, 20]
+         * TagKey.
          */
         public Builder tagKey(java.util.List < String > tagKey) {
             this.putQueryParameter("TagKey", tagKey);

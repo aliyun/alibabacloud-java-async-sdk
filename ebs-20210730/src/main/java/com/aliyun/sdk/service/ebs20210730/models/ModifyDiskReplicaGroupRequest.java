@@ -140,7 +140,7 @@ public class ModifyDiskReplicaGroupRequest extends Request {
         } 
 
         /**
-         * 带宽值，单位kbps。公共云暂不支持。
+         * Bandwidth.
          */
         public Builder bandwidth(Long bandwidth) {
             this.putQueryParameter("Bandwidth", bandwidth);
@@ -149,7 +149,7 @@ public class ModifyDiskReplicaGroupRequest extends Request {
         }
 
         /**
-         * ClientToken.
+         * The client token that is used to ensure the idempotence of the request. You can use the client to generate the value, but you must make sure that the value is unique among different requests. The ClientToken value can contain only ASCII characters and cannot exceed 64 characters in length. For more information, see [How to ensure idempotence](~~25693~~).
          */
         public Builder clientToken(String clientToken) {
             this.putQueryParameter("ClientToken", clientToken);
@@ -158,7 +158,7 @@ public class ModifyDiskReplicaGroupRequest extends Request {
         }
 
         /**
-         * Description.
+         * The description of the replication pair-consistent group. The description must be 2 to 256 characters in length and cannot start with `http://` or `https://`.
          */
         public Builder description(String description) {
             this.putQueryParameter("Description", description);
@@ -167,7 +167,7 @@ public class ModifyDiskReplicaGroupRequest extends Request {
         }
 
         /**
-         * GroupName.
+         * The name of the replication pair-consistent group. The name must be 2 to 128 characters in length. It must start with a letter and cannot start with `http://` or `https://`. It can contain letters, digits, colons (:), underscores (\_), and hyphens (-).
          */
         public Builder groupName(String groupName) {
             this.putQueryParameter("GroupName", groupName);
@@ -176,7 +176,7 @@ public class ModifyDiskReplicaGroupRequest extends Request {
         }
 
         /**
-         * RPO.
+         * The RPO of the replication pair-consistent group. Unit: seconds. Valid value: 900.
          */
         public Builder RPO(Long RPO) {
             this.putQueryParameter("RPO", RPO);
@@ -185,7 +185,7 @@ public class ModifyDiskReplicaGroupRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * The region ID of the replication pair-consistent group.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -194,7 +194,7 @@ public class ModifyDiskReplicaGroupRequest extends Request {
         }
 
         /**
-         * ReplicaGroupId.
+         * The ID of the replication pair-consistent group. You can call the [DescribeDiskReplicaGroups](~~426614~~) operation to query the IDs of replication pair-consistent groups.
          */
         public Builder replicaGroupId(String replicaGroupId) {
             this.putQueryParameter("ReplicaGroupId", replicaGroupId);

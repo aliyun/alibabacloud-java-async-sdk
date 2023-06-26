@@ -98,7 +98,7 @@ public class DescribeDiskReplicaPairsResponseBody extends TeaModel {
         private Long totalCount; 
 
         /**
-         * 查询凭证（Token）。取值为上一次调用该接口返回的NextToken参数值，初次调用接口时无需设置该参数。如果设置了NextToken，则请求参数PageSize和PageNumber将失效，且返回数据中的TotalCount无效。
+         * The query token returned in this call.
          */
         public Builder nextToken(String nextToken) {
             this.nextToken = nextToken;
@@ -106,7 +106,7 @@ public class DescribeDiskReplicaPairsResponseBody extends TeaModel {
         }
 
         /**
-         * 参数页码。
+         * The page number of the returned page.
          */
         public Builder pageNumber(Integer pageNumber) {
             this.pageNumber = pageNumber;
@@ -114,7 +114,7 @@ public class DescribeDiskReplicaPairsResponseBody extends TeaModel {
         }
 
         /**
-         * 参数页行数。
+         * The number of entries returned per page. Valid values: 1 to 100.
          */
         public Builder pageSize(Integer pageSize) {
             this.pageSize = pageSize;
@@ -122,7 +122,7 @@ public class DescribeDiskReplicaPairsResponseBody extends TeaModel {
         }
 
         /**
-         * ReplicaPairs.
+         * Details about the replication pairs.
          */
         public Builder replicaPairs(java.util.List < ReplicaPairs> replicaPairs) {
             this.replicaPairs = replicaPairs;
@@ -130,7 +130,7 @@ public class DescribeDiskReplicaPairsResponseBody extends TeaModel {
         }
 
         /**
-         * Id of the request
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -138,7 +138,7 @@ public class DescribeDiskReplicaPairsResponseBody extends TeaModel {
         }
 
         /**
-         * 分页查询时的结果总条数。
+         * The total number of entries returned.
          */
         public Builder totalCount(Long totalCount) {
             this.totalCount = totalCount;
@@ -151,6 +151,67 @@ public class DescribeDiskReplicaPairsResponseBody extends TeaModel {
 
     } 
 
+    public static class Tags extends TeaModel {
+        @NameInMap("TagKey")
+        private String tagKey;
+
+        @NameInMap("TagValue")
+        private String tagValue;
+
+        private Tags(Builder builder) {
+            this.tagKey = builder.tagKey;
+            this.tagValue = builder.tagValue;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static Tags create() {
+            return builder().build();
+        }
+
+        /**
+         * @return tagKey
+         */
+        public String getTagKey() {
+            return this.tagKey;
+        }
+
+        /**
+         * @return tagValue
+         */
+        public String getTagValue() {
+            return this.tagValue;
+        }
+
+        public static final class Builder {
+            private String tagKey; 
+            private String tagValue; 
+
+            /**
+             * The tag key of the replication pair.
+             */
+            public Builder tagKey(String tagKey) {
+                this.tagKey = tagKey;
+                return this;
+            }
+
+            /**
+             * The tag value of the replication pair.
+             */
+            public Builder tagValue(String tagValue) {
+                this.tagValue = tagValue;
+                return this;
+            }
+
+            public Tags build() {
+                return new Tags(this);
+            } 
+
+        } 
+
+    }
     public static class ReplicaPairs extends TeaModel {
         @NameInMap("Bandwidth")
         private Long bandwidth;
@@ -200,6 +261,9 @@ public class DescribeDiskReplicaPairsResponseBody extends TeaModel {
         @NameInMap("ReplicaPairId")
         private String replicaPairId;
 
+        @NameInMap("ResourceGroupId")
+        private String resourceGroupId;
+
         @NameInMap("Site")
         private String site;
 
@@ -224,6 +288,9 @@ public class DescribeDiskReplicaPairsResponseBody extends TeaModel {
         @NameInMap("StatusMessage")
         private String statusMessage;
 
+        @NameInMap("Tags")
+        private java.util.List < Tags> tags;
+
         private ReplicaPairs(Builder builder) {
             this.bandwidth = builder.bandwidth;
             this.chargeType = builder.chargeType;
@@ -241,6 +308,7 @@ public class DescribeDiskReplicaPairsResponseBody extends TeaModel {
             this.replicaGroupId = builder.replicaGroupId;
             this.replicaGroupName = builder.replicaGroupName;
             this.replicaPairId = builder.replicaPairId;
+            this.resourceGroupId = builder.resourceGroupId;
             this.site = builder.site;
             this.sourceDiskId = builder.sourceDiskId;
             this.sourceRegion = builder.sourceRegion;
@@ -249,6 +317,7 @@ public class DescribeDiskReplicaPairsResponseBody extends TeaModel {
             this.standbyZone = builder.standbyZone;
             this.status = builder.status;
             this.statusMessage = builder.statusMessage;
+            this.tags = builder.tags;
         }
 
         public static Builder builder() {
@@ -372,6 +441,13 @@ public class DescribeDiskReplicaPairsResponseBody extends TeaModel {
         }
 
         /**
+         * @return resourceGroupId
+         */
+        public String getResourceGroupId() {
+            return this.resourceGroupId;
+        }
+
+        /**
          * @return site
          */
         public String getSite() {
@@ -427,6 +503,13 @@ public class DescribeDiskReplicaPairsResponseBody extends TeaModel {
             return this.statusMessage;
         }
 
+        /**
+         * @return tags
+         */
+        public java.util.List < Tags> getTags() {
+            return this.tags;
+        }
+
         public static final class Builder {
             private Long bandwidth; 
             private String chargeType; 
@@ -444,6 +527,7 @@ public class DescribeDiskReplicaPairsResponseBody extends TeaModel {
             private String replicaGroupId; 
             private String replicaGroupName; 
             private String replicaPairId; 
+            private String resourceGroupId; 
             private String site; 
             private String sourceDiskId; 
             private String sourceRegion; 
@@ -452,9 +536,10 @@ public class DescribeDiskReplicaPairsResponseBody extends TeaModel {
             private String standbyZone; 
             private String status; 
             private String statusMessage; 
+            private java.util.List < Tags> tags; 
 
             /**
-             * 异步复制时使用的带宽。单位为Kbps。
+             * The bandwidth used to asynchronously replicate data from the primary disk to the secondary disk. Unit: Kbit/s.
              */
             public Builder bandwidth(Long bandwidth) {
                 this.bandwidth = bandwidth;
@@ -462,7 +547,13 @@ public class DescribeDiskReplicaPairsResponseBody extends TeaModel {
             }
 
             /**
-             * 付费类型。PREPAY：预付费；POSTPAY：后付费。
+             * The billing method of the replication pair.
+             * <p>
+             * 
+             * Valid values:
+             * 
+             * *   PREPAY: subscription
+             * *   POSTPAY: pay-as-you-go
              */
             public Builder chargeType(String chargeType) {
                 this.chargeType = chargeType;
@@ -470,7 +561,7 @@ public class DescribeDiskReplicaPairsResponseBody extends TeaModel {
             }
 
             /**
-             * 创建时间。1970年1月1日0点0分以来的秒数。
+             * The time when the replication pair was created. The value of this parameter is a timestamp. Unit: seconds.
              */
             public Builder createTime(Long createTime) {
                 this.createTime = createTime;
@@ -478,7 +569,7 @@ public class DescribeDiskReplicaPairsResponseBody extends TeaModel {
             }
 
             /**
-             * Description.
+             * The description of the replication pair.
              */
             public Builder description(String description) {
                 this.description = description;
@@ -486,7 +577,7 @@ public class DescribeDiskReplicaPairsResponseBody extends TeaModel {
             }
 
             /**
-             * DestinationDiskId.
+             * The ID of the secondary disk.
              */
             public Builder destinationDiskId(String destinationDiskId) {
                 this.destinationDiskId = destinationDiskId;
@@ -494,7 +585,7 @@ public class DescribeDiskReplicaPairsResponseBody extends TeaModel {
             }
 
             /**
-             * DestinationRegion.
+             * The region ID of the secondary disk.
              */
             public Builder destinationRegion(String destinationRegion) {
                 this.destinationRegion = destinationRegion;
@@ -502,7 +593,7 @@ public class DescribeDiskReplicaPairsResponseBody extends TeaModel {
             }
 
             /**
-             * 从盘所属的可用区。
+             * The zone ID of the secondary disk.
              */
             public Builder destinationZoneId(String destinationZoneId) {
                 this.destinationZoneId = destinationZoneId;
@@ -510,7 +601,7 @@ public class DescribeDiskReplicaPairsResponseBody extends TeaModel {
             }
 
             /**
-             * ExpiredTime.
+             * The time when the replication pair expires. The value of this parameter is a timestamp. Unit: seconds.
              */
             public Builder expiredTime(Long expiredTime) {
                 this.expiredTime = expiredTime;
@@ -518,7 +609,7 @@ public class DescribeDiskReplicaPairsResponseBody extends TeaModel {
             }
 
             /**
-             * 最近一次异步复制操作完成的时间。该参数以时间戳的形式提供返回值。单位为秒。
+             * The time when data was last replicated from the primary disk to the secondary disk in the replication pair. The value of this parameter is a timestamp. Unit: seconds.
              */
             public Builder lastRecoverPoint(Long lastRecoverPoint) {
                 this.lastRecoverPoint = lastRecoverPoint;
@@ -526,7 +617,7 @@ public class DescribeDiskReplicaPairsResponseBody extends TeaModel {
             }
 
             /**
-             * PairName.
+             * The name of the replication pair.
              */
             public Builder pairName(String pairName) {
                 this.pairName = pairName;
@@ -534,7 +625,7 @@ public class DescribeDiskReplicaPairsResponseBody extends TeaModel {
             }
 
             /**
-             * 复制对的初始源地域。
+             * The initial source region (primary region) of the replication pair.
              */
             public Builder primaryRegion(String primaryRegion) {
                 this.primaryRegion = primaryRegion;
@@ -542,7 +633,7 @@ public class DescribeDiskReplicaPairsResponseBody extends TeaModel {
             }
 
             /**
-             * 复制对的初始源可用区。
+             * The initial source zone (primary zone) of the replication pair.
              */
             public Builder primaryZone(String primaryZone) {
                 this.primaryZone = primaryZone;
@@ -550,7 +641,7 @@ public class DescribeDiskReplicaPairsResponseBody extends TeaModel {
             }
 
             /**
-             * 复制对的RPO值。单位为秒。
+             * The recovery point objective (RPO) of the replication pair. Unit: seconds.
              */
             public Builder RPO(Long RPO) {
                 this.RPO = RPO;
@@ -558,7 +649,7 @@ public class DescribeDiskReplicaPairsResponseBody extends TeaModel {
             }
 
             /**
-             * 所属复制组id。
+             * The ID of the replication pair-consistent group to which the replication pair belongs.
              */
             public Builder replicaGroupId(String replicaGroupId) {
                 this.replicaGroupId = replicaGroupId;
@@ -566,7 +657,7 @@ public class DescribeDiskReplicaPairsResponseBody extends TeaModel {
             }
 
             /**
-             * 所属复制组名称。
+             * The name of the replication pair-consistent group to which the replication pair belongs.
              */
             public Builder replicaGroupName(String replicaGroupName) {
                 this.replicaGroupName = replicaGroupName;
@@ -574,7 +665,7 @@ public class DescribeDiskReplicaPairsResponseBody extends TeaModel {
             }
 
             /**
-             * ReplicaPairId.
+             * The ID of the replication pair.
              */
             public Builder replicaPairId(String replicaPairId) {
                 this.replicaPairId = replicaPairId;
@@ -582,7 +673,19 @@ public class DescribeDiskReplicaPairsResponseBody extends TeaModel {
             }
 
             /**
-             * 复制对信息的后端站点来源，production或backup。
+             * The ID of the resource group to which the replication pair belongs.
+             */
+            public Builder resourceGroupId(String resourceGroupId) {
+                this.resourceGroupId = resourceGroupId;
+                return this;
+            }
+
+            /**
+             * The type of the site from which the information of the replication pair and replication pair-consistent group is obtained. Valid values:
+             * <p>
+             * 
+             * *   production: primary site
+             * *   backup: secondary site
              */
             public Builder site(String site) {
                 this.site = site;
@@ -590,7 +693,7 @@ public class DescribeDiskReplicaPairsResponseBody extends TeaModel {
             }
 
             /**
-             * SourceDiskId.
+             * The ID of the primary disk.
              */
             public Builder sourceDiskId(String sourceDiskId) {
                 this.sourceDiskId = sourceDiskId;
@@ -598,7 +701,7 @@ public class DescribeDiskReplicaPairsResponseBody extends TeaModel {
             }
 
             /**
-             * SourceRegion.
+             * The region ID of the primary disk.
              */
             public Builder sourceRegion(String sourceRegion) {
                 this.sourceRegion = sourceRegion;
@@ -606,7 +709,7 @@ public class DescribeDiskReplicaPairsResponseBody extends TeaModel {
             }
 
             /**
-             * 主盘所属的可用区。
+             * The zone ID of the primary disk.
              */
             public Builder sourceZoneId(String sourceZoneId) {
                 this.sourceZoneId = sourceZoneId;
@@ -614,7 +717,7 @@ public class DescribeDiskReplicaPairsResponseBody extends TeaModel {
             }
 
             /**
-             * 复制对的初始目的地域。
+             * The initial destination region (secondary region) of the replication pair.
              */
             public Builder standbyRegion(String standbyRegion) {
                 this.standbyRegion = standbyRegion;
@@ -622,7 +725,7 @@ public class DescribeDiskReplicaPairsResponseBody extends TeaModel {
             }
 
             /**
-             * 复制对的初始目的可用区。
+             * The initial destination zone (secondary zone) of the replication pair.
              */
             public Builder standbyZone(String standbyZone) {
                 this.standbyZone = standbyZone;
@@ -630,28 +733,28 @@ public class DescribeDiskReplicaPairsResponseBody extends TeaModel {
             }
 
             /**
-             * 异步复制关系的状态。可能值：
+             * The state of the replication pair. Valid values:
              * <p>
              * 
-             * - invalid：失效。该状态表示异步复制关系存在异常。
-             * - creating：创建中。
-             * - created：已创建。
-             * - create_failed：创建失败。
-             * - initial_syncing：初始同步中。异步复制在创建并启动后，主盘数据初次异步复制到从盘的过程中，将处于该状态。
-             * - syncing：同步中。主盘和从盘之间非第一次进行异步复制数据时，将处于该状态。
-             * - manual_syncing：单次同步中。单次同步，同步完成后恢复到stopped状态。如果是第一次单次同步，则同步中也显示为状态manual_syncing。
-             * - normal：正常。当异步复制的当前周期内数据复制完成时，将处于该状态。
-             * - stopping：停止中。
-             * - stopped：已停止。
-             * - stop_failed：停止失败。
-             * - failovering：故障切换中。
-             * - failovered：故障切换完成。
-             * - failover_failed：故障切换失败。
-             * - reprotecting：反向复制操作中。
-             * - reprotect_failed：反向复制失败。
-             * - deleting：删除中。
-             * - delete_failed：删除失败。
-             * - deleted：已删除。
+             * *   invalid: The replication pair is invalid. When a replication pair becomes abnormal, it enters this state.
+             * *   creating: The replication pair is being created.
+             * *   created: The replication pair is created.
+             * *   create_failed: The replication pair cannot be created.
+             * *   initial_syncing: Data is synchronized from the primary disk to the secondary disk for the first time. After a replication pair is created and activated, the replication pair is in this state the first time data is synchronized from the primary disk to the secondary disk.
+             * *   manual_syncing: Data is being manually synchronized from the primary disk to the secondary disk. After data is manually synchronized from the primary disk to the secondary disk, the replication pair returns to the Stopped state. The first time data is manually synchronized from the primary disk to the secondary disk, the replication pair is in the manual_syncing state during the synchronization.
+             * *   syncing: Data is being synchronized from the primary disk to the secondary disk. While data is being asynchronously replicated from the primary disk to the secondary disk not for the first time, the replication pair is in this state.
+             * *   normal: The replication pair is working as expected. When the system finishes replicating data from the primary disk to the secondary disk within the current replication cycle, the replication pair enters this state.
+             * *   stopping: The replication pair is being stopped.
+             * *   stopped: The replication pair is stopped.
+             * *   stop_failed: The replication pair cannot be stopped.
+             * *   failovering: A failover is being performed.
+             * *   failovered: A failover is performed.
+             * *   failover_failed: A failover cannot be performed.
+             * *   reprotecting: A reverse replication is being performed.
+             * *   reprotect_failed: A reverse replication cannot be performed.
+             * *   deleting: The replication pair is being deleted.
+             * *   delete_failed: The replication pair cannot be deleted.
+             * *   deleted: The replication pair is deleted.
              */
             public Builder status(String status) {
                 this.status = status;
@@ -659,10 +762,26 @@ public class DescribeDiskReplicaPairsResponseBody extends TeaModel {
             }
 
             /**
-             * 复制对的状态提示信息。比如invalid时，可能值：DeviceRemoved：主盘或者从盘被删除。DeviceKeyChanged：主盘或从盘的DeviceKey映射发生变化。
+             * The message that describes the state of the replication pair. This parameter has a value when `Status` has a value of invalid or `create_failed`. Valid values:
+             * <p>
+             * 
+             * *   PrePayOrderExpired: The replication pair has expired.
+             * *   PostPayOrderCeaseService: The pay-as-you-go replication pair has been stopped due to an overdue payment.
+             * *   DeviceRemoved: The primary or secondary disk has been deleted.
+             * *   DeviceKeyChanged: The `DeviceKey` mapping of the primary or secondary disk has changed.
+             * *   DeviceSizeChanged: The `DeviceSize` value of the primary or secondary disk has changed.
+             * *   OperationDenied.QuotaExceed: The maximum number of replication pairs that can be created has been reached.
              */
             public Builder statusMessage(String statusMessage) {
                 this.statusMessage = statusMessage;
+                return this;
+            }
+
+            /**
+             * The tags of the replication pair.
+             */
+            public Builder tags(java.util.List < Tags> tags) {
+                this.tags = tags;
                 return this;
             }
 
