@@ -155,11 +155,19 @@ public class HotelOrderCancelResponseBody extends TeaModel {
         @NameInMap("cancel_success")
         private Boolean cancelSuccess;
 
+        @NameInMap("code")
+        private String code;
+
+        @NameInMap("desc")
+        private String desc;
+
         @NameInMap("forfeit_fee")
         private Long forfeitFee;
 
         private Module(Builder builder) {
             this.cancelSuccess = builder.cancelSuccess;
+            this.code = builder.code;
+            this.desc = builder.desc;
             this.forfeitFee = builder.forfeitFee;
         }
 
@@ -179,6 +187,20 @@ public class HotelOrderCancelResponseBody extends TeaModel {
         }
 
         /**
+         * @return code
+         */
+        public String getCode() {
+            return this.code;
+        }
+
+        /**
+         * @return desc
+         */
+        public String getDesc() {
+            return this.desc;
+        }
+
+        /**
          * @return forfeitFee
          */
         public Long getForfeitFee() {
@@ -187,6 +209,8 @@ public class HotelOrderCancelResponseBody extends TeaModel {
 
         public static final class Builder {
             private Boolean cancelSuccess; 
+            private String code; 
+            private String desc; 
             private Long forfeitFee; 
 
             /**
@@ -194,6 +218,22 @@ public class HotelOrderCancelResponseBody extends TeaModel {
              */
             public Builder cancelSuccess(Boolean cancelSuccess) {
                 this.cancelSuccess = cancelSuccess;
+                return this;
+            }
+
+            /**
+             * code.
+             */
+            public Builder code(String code) {
+                this.code = code;
+                return this;
+            }
+
+            /**
+             * desc.
+             */
+            public Builder desc(String desc) {
+                this.desc = desc;
                 return this;
             }
 
