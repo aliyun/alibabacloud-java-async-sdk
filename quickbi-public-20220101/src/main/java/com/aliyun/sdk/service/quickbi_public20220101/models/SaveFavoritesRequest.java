@@ -70,7 +70,7 @@ public class SaveFavoritesRequest extends Request {
         } 
 
         /**
-         * UserId.
+         * The user ID of the collection. The user ID is the UserID of the Quick BI, not the UID of Alibaba Cloud.
          */
         public Builder userId(String userId) {
             this.putQueryParameter("UserId", userId);
@@ -79,7 +79,7 @@ public class SaveFavoritesRequest extends Request {
         }
 
         /**
-         * WorksId.
+         * The ID of the collection.
          */
         public Builder worksId(String worksId) {
             this.putQueryParameter("WorksId", worksId);

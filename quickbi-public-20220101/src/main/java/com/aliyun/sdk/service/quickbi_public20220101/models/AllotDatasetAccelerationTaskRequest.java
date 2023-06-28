@@ -55,7 +55,7 @@ public class AllotDatasetAccelerationTaskRequest extends Request {
         } 
 
         /**
-         * 数据集ID。
+         * CubeId.
          */
         public Builder cubeId(String cubeId) {
             this.putQueryParameter("CubeId", cubeId);

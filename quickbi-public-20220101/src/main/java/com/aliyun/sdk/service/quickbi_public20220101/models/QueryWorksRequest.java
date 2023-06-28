@@ -55,7 +55,7 @@ public class QueryWorksRequest extends Request {
         } 
 
         /**
-         * 报表ID
+         * WorksId.
          */
         public Builder worksId(String worksId) {
             this.putQueryParameter("WorksId", worksId);

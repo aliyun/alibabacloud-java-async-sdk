@@ -19,9 +19,7 @@ public interface AsyncClient extends SdkAutoCloseable {
     }
 
     /**
-      * Indicates whether the request is successful. Valid values:
-      * *   true: The request was successful.
-      * *   false: The request failed.
+      * > : You can only Quick BI the new row-column permission model. If you are still using the old row-column permission model, migrate to the new row-column permission model before you call this operation. To migrate row-level permissions to the new row-level permission model, perform the following steps: Choose Organizations> Security Configurations> Upgrade Row-Level Permissions. On the Upgrade Row-Level Permissions page, click **Upgrade**.\\n
       *
      */
     CompletableFuture<AddDataLevelPermissionRuleUsersResponse> addDataLevelPermissionRuleUsers(AddDataLevelPermissionRuleUsersRequest request);
@@ -124,6 +122,12 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<ModifyApiDatasourceParametersResponse> modifyApiDatasourceParameters(ModifyApiDatasourceParametersRequest request);
 
+    CompletableFuture<QueryComponentPerformanceResponse> queryComponentPerformance(QueryComponentPerformanceRequest request);
+
+    CompletableFuture<QueryCubeOptimizationResponse> queryCubeOptimization(QueryCubeOptimizationRequest request);
+
+    CompletableFuture<QueryCubePerformanceResponse> queryCubePerformance(QueryCubePerformanceRequest request);
+
     /**
       * f4cc43bc3***
       *
@@ -131,9 +135,7 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<QueryDataServiceResponse> queryDataService(QueryDataServiceRequest request);
 
     /**
-      * The execution result of the interface is returned. Valid values:
-      * *   true: The request was successful.
-      * *   false: The request fails.
+      * The data source, directory, and dataset model (including dimensions, measures, physical fields, custom SQL text, and association relationships).
       *
      */
     CompletableFuture<QueryDatasetDetailInfoResponse> queryDatasetDetailInfo(QueryDatasetDetailInfoRequest request);
@@ -151,6 +153,8 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<QueryOrganizationWorkspaceListResponse> queryOrganizationWorkspaceList(QueryOrganizationWorkspaceListRequest request);
 
     CompletableFuture<QueryReadableResourcesListByUserIdResponse> queryReadableResourcesListByUserId(QueryReadableResourcesListByUserIdRequest request);
+
+    CompletableFuture<QueryReportPerformanceResponse> queryReportPerformance(QueryReportPerformanceRequest request);
 
     CompletableFuture<QueryShareListResponse> queryShareList(QueryShareListRequest request);
 
@@ -190,12 +194,6 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<SetDataLevelPermissionExtraConfigResponse> setDataLevelPermissionExtraConfig(SetDataLevelPermissionExtraConfigRequest request);
 
-    /**
-      * Indicates whether the request is successful. Valid values:
-      * *   true: The request was successful.
-      * *   false: The request failed.
-      *
-     */
     CompletableFuture<SetDataLevelPermissionRuleConfigResponse> setDataLevelPermissionRuleConfig(SetDataLevelPermissionRuleConfigRequest request);
 
     /**

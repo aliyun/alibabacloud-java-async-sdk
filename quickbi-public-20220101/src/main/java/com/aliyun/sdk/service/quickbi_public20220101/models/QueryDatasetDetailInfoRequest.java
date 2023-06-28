@@ -55,7 +55,7 @@ public class QueryDatasetDetailInfoRequest extends Request {
         } 
 
         /**
-         * DatasetId.
+         * The ID of the training dataset that you want to remove from the specified custom linguistic model.
          */
         public Builder datasetId(String datasetId) {
             this.putQueryParameter("DatasetId", datasetId);

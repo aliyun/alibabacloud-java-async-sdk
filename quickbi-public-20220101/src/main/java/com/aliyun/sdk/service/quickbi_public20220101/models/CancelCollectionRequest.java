@@ -70,7 +70,7 @@ public class CancelCollectionRequest extends Request {
         } 
 
         /**
-         * UserId.
+         * The ID of the favorite user. The user ID is the UserID of the Quick BI, not the UID of Alibaba Cloud.
          */
         public Builder userId(String userId) {
             this.putQueryParameter("UserId", userId);
@@ -79,7 +79,7 @@ public class CancelCollectionRequest extends Request {
         }
 
         /**
-         * WorksId.
+         * The ID of the work to cancel the collection.
          */
         public Builder worksId(String worksId) {
             this.putQueryParameter("WorksId", worksId);

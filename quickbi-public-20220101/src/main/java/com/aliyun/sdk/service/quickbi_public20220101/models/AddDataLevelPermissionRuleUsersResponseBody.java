@@ -62,7 +62,7 @@ public class AddDataLevelPermissionRuleUsersResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -70,7 +70,7 @@ public class AddDataLevelPermissionRuleUsersResponseBody extends TeaModel {
         }
 
         /**
-         * Result.
+         * The execution result of the interface. Valid values:\n\n*   true: The request was successful.\n*   false: The request failed.\n
          */
         public Builder result(Boolean result) {
             this.result = result;
@@ -78,7 +78,7 @@ public class AddDataLevelPermissionRuleUsersResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * Indicates whether the request is successful. Valid values:\n\n*   true: The request was successful.\n*   false: The request failed.\n
          */
         public Builder success(Boolean success) {
             this.success = success;

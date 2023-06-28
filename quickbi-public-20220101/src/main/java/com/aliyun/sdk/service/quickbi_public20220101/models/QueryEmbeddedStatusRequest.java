@@ -55,7 +55,7 @@ public class QueryEmbeddedStatusRequest extends Request {
         } 
 
         /**
-         * WorksId.
+         * The work ID of the query.
          */
         public Builder worksId(String worksId) {
             this.putQueryParameter("WorksId", worksId);

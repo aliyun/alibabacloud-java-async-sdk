@@ -62,7 +62,7 @@ public class AllotDatasetAccelerationTaskResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * 请求ID。
+         * RequestId.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -70,7 +70,7 @@ public class AllotDatasetAccelerationTaskResponseBody extends TeaModel {
         }
 
         /**
-         * 是否执行成功。
+         * Result.
          */
         public Builder result(Boolean result) {
             this.result = result;

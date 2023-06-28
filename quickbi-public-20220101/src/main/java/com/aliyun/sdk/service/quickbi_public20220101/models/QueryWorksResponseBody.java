@@ -70,7 +70,7 @@ public class QueryWorksResponseBody extends TeaModel {
         }
 
         /**
-         * QueryWorksModel
+         * Result.
          */
         public Builder result(Result result) {
             this.result = result;
@@ -154,7 +154,7 @@ public class QueryWorksResponseBody extends TeaModel {
             private String pathName; 
 
             /**
-             * 目录ID
+             * Id.
              */
             public Builder id(String id) {
                 this.id = id;
@@ -162,7 +162,7 @@ public class QueryWorksResponseBody extends TeaModel {
             }
 
             /**
-             * 目录名称
+             * Name.
              */
             public Builder name(String name) {
                 this.name = name;
@@ -170,7 +170,7 @@ public class QueryWorksResponseBody extends TeaModel {
             }
 
             /**
-             * 目录ID的路径，例如：aa/bb/cc/dd
+             * PathId.
              */
             public Builder pathId(String pathId) {
                 this.pathId = pathId;
@@ -178,7 +178,7 @@ public class QueryWorksResponseBody extends TeaModel {
             }
 
             /**
-             * 目录ID的路径名称，例如：一层目录/二层目录
+             * PathName.
              */
             public Builder pathName(String pathName) {
                 this.pathName = pathName;
@@ -387,7 +387,7 @@ public class QueryWorksResponseBody extends TeaModel {
             private String workspaceName; 
 
             /**
-             * 第三方嵌入状态
+             * Auth3rdFlag.
              */
             public Builder auth3rdFlag(Integer auth3rdFlag) {
                 this.auth3rdFlag = auth3rdFlag;
@@ -395,7 +395,7 @@ public class QueryWorksResponseBody extends TeaModel {
             }
 
             /**
-             * 描述
+             * Description.
              */
             public Builder description(String description) {
                 this.description = description;
@@ -403,7 +403,7 @@ public class QueryWorksResponseBody extends TeaModel {
             }
 
             /**
-             * 所属空间目录信息
+             * Directory.
              */
             public Builder directory(Directory directory) {
                 this.directory = directory;
@@ -411,7 +411,7 @@ public class QueryWorksResponseBody extends TeaModel {
             }
 
             /**
-             * 创建时间d
+             * GmtCreate.
              */
             public Builder gmtCreate(String gmtCreate) {
                 this.gmtCreate = gmtCreate;
@@ -419,7 +419,7 @@ public class QueryWorksResponseBody extends TeaModel {
             }
 
             /**
-             * 修改时间
+             * GmtModify.
              */
             public Builder gmtModify(String gmtModify) {
                 this.gmtModify = gmtModify;
@@ -427,7 +427,7 @@ public class QueryWorksResponseBody extends TeaModel {
             }
 
             /**
-             * 修改显示名称
+             * ModifyName.
              */
             public Builder modifyName(String modifyName) {
                 this.modifyName = modifyName;
@@ -435,7 +435,7 @@ public class QueryWorksResponseBody extends TeaModel {
             }
 
             /**
-             * 所有者Id
+             * OwnerId.
              */
             public Builder ownerId(String ownerId) {
                 this.ownerId = ownerId;
@@ -443,7 +443,7 @@ public class QueryWorksResponseBody extends TeaModel {
             }
 
             /**
-             * 所有者显示名称
+             * OwnerName.
              */
             public Builder ownerName(String ownerName) {
                 this.ownerName = ownerName;
@@ -451,7 +451,7 @@ public class QueryWorksResponseBody extends TeaModel {
             }
 
             /**
-             * 安全策略：0 私有 1 协同编辑。 （
+             * SecurityLevel.
              */
             public Builder securityLevel(String securityLevel) {
                 this.securityLevel = securityLevel;
@@ -459,7 +459,7 @@ public class QueryWorksResponseBody extends TeaModel {
             }
 
             /**
-             * 报表发布状态 @PublishStatusEnum
+             * Status.
              */
             public Builder status(Integer status) {
                 this.status = status;
@@ -467,7 +467,7 @@ public class QueryWorksResponseBody extends TeaModel {
             }
 
             /**
-             * 作品名称
+             * WorkName.
              */
             public Builder workName(String workName) {
                 this.workName = workName;
@@ -475,7 +475,7 @@ public class QueryWorksResponseBody extends TeaModel {
             }
 
             /**
-             * 作品类型
+             * WorkType.
              */
             public Builder workType(String workType) {
                 this.workType = workType;
@@ -483,7 +483,7 @@ public class QueryWorksResponseBody extends TeaModel {
             }
 
             /**
-             * 作品ID
+             * WorksId.
              */
             public Builder worksId(String worksId) {
                 this.worksId = worksId;
@@ -491,7 +491,7 @@ public class QueryWorksResponseBody extends TeaModel {
             }
 
             /**
-             * 所属工作空间
+             * WorkspaceId.
              */
             public Builder workspaceId(String workspaceId) {
                 this.workspaceId = workspaceId;
@@ -499,7 +499,7 @@ public class QueryWorksResponseBody extends TeaModel {
             }
 
             /**
-             * 所属空间名称
+             * WorkspaceName.
              */
             public Builder workspaceName(String workspaceName) {
                 this.workspaceName = workspaceName;

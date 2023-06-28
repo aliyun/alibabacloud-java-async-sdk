@@ -70,7 +70,7 @@ public class CheckReadableRequest extends Request {
         } 
 
         /**
-         * UserId.
+         * The user ID of the Quick BI to be checked.
          */
         public Builder userId(String userId) {
             this.putQueryParameter("UserId", userId);
@@ -79,7 +79,7 @@ public class CheckReadableRequest extends Request {
         }
 
         /**
-         * WorksId.
+         * The ID of the work. Resources here include BI portal, dashboards, spreadsheets, and self-service access.
          */
         public Builder worksId(String worksId) {
             this.putQueryParameter("WorksId", worksId);
