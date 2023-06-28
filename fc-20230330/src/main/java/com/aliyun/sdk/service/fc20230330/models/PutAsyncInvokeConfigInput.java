@@ -1,0 +1,96 @@
+// This file is auto-generated, don't edit it. Thanks.
+package com.aliyun.sdk.service.fc20230330.models;
+
+import com.aliyun.core.annotation.*;
+import darabonba.core.RequestModel;
+import darabonba.core.TeaModel;
+import com.aliyun.sdk.gateway.pop.models.*;
+
+/**
+ * {@link PutAsyncInvokeConfigInput} extends {@link TeaModel}
+ *
+ * <p>PutAsyncInvokeConfigInput</p>
+ */
+public class PutAsyncInvokeConfigInput extends TeaModel {
+    @NameInMap("destinationConfig")
+    private DestinationConfig destinationConfig;
+
+    @NameInMap("maxAsyncEventAgeInSeconds")
+    @Validation(maximum = 2592000, minimum = 1)
+    private Long maxAsyncEventAgeInSeconds;
+
+    @NameInMap("maxAsyncRetryAttempts")
+    @Validation(maximum = 8)
+    private Long maxAsyncRetryAttempts;
+
+    private PutAsyncInvokeConfigInput(Builder builder) {
+        this.destinationConfig = builder.destinationConfig;
+        this.maxAsyncEventAgeInSeconds = builder.maxAsyncEventAgeInSeconds;
+        this.maxAsyncRetryAttempts = builder.maxAsyncRetryAttempts;
+    }
+
+    public static Builder builder() {
+        return new Builder();
+    }
+
+    public static PutAsyncInvokeConfigInput create() {
+        return builder().build();
+    }
+
+    /**
+     * @return destinationConfig
+     */
+    public DestinationConfig getDestinationConfig() {
+        return this.destinationConfig;
+    }
+
+    /**
+     * @return maxAsyncEventAgeInSeconds
+     */
+    public Long getMaxAsyncEventAgeInSeconds() {
+        return this.maxAsyncEventAgeInSeconds;
+    }
+
+    /**
+     * @return maxAsyncRetryAttempts
+     */
+    public Long getMaxAsyncRetryAttempts() {
+        return this.maxAsyncRetryAttempts;
+    }
+
+    public static final class Builder {
+        private DestinationConfig destinationConfig; 
+        private Long maxAsyncEventAgeInSeconds; 
+        private Long maxAsyncRetryAttempts; 
+
+        /**
+         * destinationConfig.
+         */
+        public Builder destinationConfig(DestinationConfig destinationConfig) {
+            this.destinationConfig = destinationConfig;
+            return this;
+        }
+
+        /**
+         * maxAsyncEventAgeInSeconds.
+         */
+        public Builder maxAsyncEventAgeInSeconds(Long maxAsyncEventAgeInSeconds) {
+            this.maxAsyncEventAgeInSeconds = maxAsyncEventAgeInSeconds;
+            return this;
+        }
+
+        /**
+         * maxAsyncRetryAttempts.
+         */
+        public Builder maxAsyncRetryAttempts(Long maxAsyncRetryAttempts) {
+            this.maxAsyncRetryAttempts = maxAsyncRetryAttempts;
+            return this;
+        }
+
+        public PutAsyncInvokeConfigInput build() {
+            return new PutAsyncInvokeConfigInput(this);
+        } 
+
+    } 
+
+}

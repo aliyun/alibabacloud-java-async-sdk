@@ -1,0 +1,179 @@
+// This file is auto-generated, don't edit it. Thanks.
+package com.aliyun.sdk.service.fc20230330.models;
+
+import com.aliyun.core.annotation.*;
+import darabonba.core.RequestModel;
+import darabonba.core.TeaModel;
+import com.aliyun.sdk.gateway.pop.models.*;
+
+/**
+ * {@link CreateTriggerInput} extends {@link TeaModel}
+ *
+ * <p>CreateTriggerInput</p>
+ */
+public class CreateTriggerInput extends TeaModel {
+    @NameInMap("description")
+    @Validation(maxLength = 256)
+    private String description;
+
+    @NameInMap("invocationRole")
+    @Validation(maxLength = 300)
+    private String invocationRole;
+
+    @NameInMap("qualifier")
+    private String qualifier;
+
+    @NameInMap("sourceArn")
+    @Validation(maxLength = 300, minLength = 1)
+    private String sourceArn;
+
+    @NameInMap("triggerConfig")
+    @Validation(required = true)
+    private String triggerConfig;
+
+    @NameInMap("triggerName")
+    @Validation(maxLength = 128, minLength = 1)
+    private String triggerName;
+
+    @NameInMap("triggerType")
+    private String triggerType;
+
+    private CreateTriggerInput(Builder builder) {
+        this.description = builder.description;
+        this.invocationRole = builder.invocationRole;
+        this.qualifier = builder.qualifier;
+        this.sourceArn = builder.sourceArn;
+        this.triggerConfig = builder.triggerConfig;
+        this.triggerName = builder.triggerName;
+        this.triggerType = builder.triggerType;
+    }
+
+    public static Builder builder() {
+        return new Builder();
+    }
+
+    public static CreateTriggerInput create() {
+        return builder().build();
+    }
+
+    /**
+     * @return description
+     */
+    public String getDescription() {
+        return this.description;
+    }
+
+    /**
+     * @return invocationRole
+     */
+    public String getInvocationRole() {
+        return this.invocationRole;
+    }
+
+    /**
+     * @return qualifier
+     */
+    public String getQualifier() {
+        return this.qualifier;
+    }
+
+    /**
+     * @return sourceArn
+     */
+    public String getSourceArn() {
+        return this.sourceArn;
+    }
+
+    /**
+     * @return triggerConfig
+     */
+    public String getTriggerConfig() {
+        return this.triggerConfig;
+    }
+
+    /**
+     * @return triggerName
+     */
+    public String getTriggerName() {
+        return this.triggerName;
+    }
+
+    /**
+     * @return triggerType
+     */
+    public String getTriggerType() {
+        return this.triggerType;
+    }
+
+    public static final class Builder {
+        private String description; 
+        private String invocationRole; 
+        private String qualifier; 
+        private String sourceArn; 
+        private String triggerConfig; 
+        private String triggerName; 
+        private String triggerType; 
+
+        /**
+         * description.
+         */
+        public Builder description(String description) {
+            this.description = description;
+            return this;
+        }
+
+        /**
+         * invocationRole.
+         */
+        public Builder invocationRole(String invocationRole) {
+            this.invocationRole = invocationRole;
+            return this;
+        }
+
+        /**
+         * qualifier.
+         */
+        public Builder qualifier(String qualifier) {
+            this.qualifier = qualifier;
+            return this;
+        }
+
+        /**
+         * sourceArn.
+         */
+        public Builder sourceArn(String sourceArn) {
+            this.sourceArn = sourceArn;
+            return this;
+        }
+
+        /**
+         * triggerConfig.
+         */
+        public Builder triggerConfig(String triggerConfig) {
+            this.triggerConfig = triggerConfig;
+            return this;
+        }
+
+        /**
+         * triggerName.
+         */
+        public Builder triggerName(String triggerName) {
+            this.triggerName = triggerName;
+            return this;
+        }
+
+        /**
+         * triggerType.
+         */
+        public Builder triggerType(String triggerType) {
+            this.triggerType = triggerType;
+            return this;
+        }
+
+        public CreateTriggerInput build() {
+            return new CreateTriggerInput(this);
+        } 
+
+    } 
+
+}
