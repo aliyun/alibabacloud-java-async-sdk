@@ -126,10 +126,7 @@ public class ListOfficeSiteOverviewRequest extends Request {
         } 
 
         /**
-         * The beginning of the time range that you want to query.
-         * <p>
-         * 
-         * > The desktop group feature is in invitational preview. If you want to use this feature, submit a ticket.
+         * Specifies whether to refresh the cache.
          */
         public Builder forceRefresh(Boolean forceRefresh) {
             this.putQueryParameter("ForceRefresh", forceRefresh);
@@ -138,7 +135,11 @@ public class ListOfficeSiteOverviewRequest extends Request {
         }
 
         /**
-         * The ID of the region. You can call the [DescribeRegions](~~196646~~) operation to query the most recent region list.
+         * The number of entries to return on each page.
+         * <p>
+         * 
+         * *   Valid values: 1 to 100
+         * *   Default value: 10
          */
         public Builder maxResults(Integer maxResults) {
             this.putQueryParameter("MaxResults", maxResults);
@@ -147,7 +148,7 @@ public class ListOfficeSiteOverviewRequest extends Request {
         }
 
         /**
-         * Details of the workspaces.
+         * The token that determines the start point of the next query. If this is your first query or no next query is to be sent, skip this parameter. If a next query is to be sent, set the parameter to the value of NextToken that is returned from the last call.
          */
         public Builder nextToken(String nextToken) {
             this.putQueryParameter("NextToken", nextToken);
@@ -156,7 +157,7 @@ public class ListOfficeSiteOverviewRequest extends Request {
         }
 
         /**
-         * The ID of the workspace.
+         * Details about the IDs of the workspaces. You can specify 1 to 100 workspace IDs.
          */
         public Builder officeSiteId(java.util.List < String > officeSiteId) {
             this.putQueryParameter("OfficeSiteId", officeSiteId);
@@ -165,7 +166,7 @@ public class ListOfficeSiteOverviewRequest extends Request {
         }
 
         /**
-         * The region ID of the workspace.
+         * The query scope. Default value: 1.
          */
         public Builder queryRange(Integer queryRange) {
             this.putQueryParameter("QueryRange", queryRange);
@@ -174,7 +175,7 @@ public class ListOfficeSiteOverviewRequest extends Request {
         }
 
         /**
-         * Details about the IDs of the workspaces. You can specify 1 to 100 workspace IDs.
+         * The ID of the region. You can call the [DescribeRegions](~~196646~~) operation to query the most recent region list.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);

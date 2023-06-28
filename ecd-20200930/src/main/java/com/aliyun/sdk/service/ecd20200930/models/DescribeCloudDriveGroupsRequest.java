@@ -220,7 +220,7 @@ public class DescribeCloudDriveGroupsRequest extends Request {
         }
 
         /**
-         * The ID of the workspace.
+         * The workspace ID.
          */
         public Builder directoryId(String directoryId) {
             this.putQueryParameter("DirectoryId", directoryId);
@@ -229,7 +229,7 @@ public class DescribeCloudDriveGroupsRequest extends Request {
         }
 
         /**
-         * The name of the workspace.
+         * The workspace name.
          */
         public Builder directoryName(String directoryName) {
             this.putQueryParameter("DirectoryName", directoryName);
@@ -238,7 +238,7 @@ public class DescribeCloudDriveGroupsRequest extends Request {
         }
 
         /**
-         * The status of the team space. Valid values:
+         * The team space status. Valid values:
          * <p>
          * 
          * *   enabled
@@ -253,13 +253,13 @@ public class DescribeCloudDriveGroupsRequest extends Request {
         }
 
         /**
-         * Specifies whether space is increased.
+         * Specifies whether the space is increased.
          * <p>
          * 
-         * *   binding: Space is increased.
-         * *   unbound: Space is not increased.
+         * *   binding: increased
+         * *   unbound: not increased
          * 
-         * Default value: null. This value indicates that all results are queried.
+         * Default value: null. The default value indicates that all spaces are queried.
          */
         public Builder driveType(String driveType) {
             this.putQueryParameter("DriveType", driveType);
@@ -268,7 +268,7 @@ public class DescribeCloudDriveGroupsRequest extends Request {
         }
 
         /**
-         * The IDs of the teams.
+         * The team ID.
          */
         public Builder groupId(java.util.List < String > groupId) {
             this.putQueryParameter("GroupId", groupId);
@@ -277,7 +277,7 @@ public class DescribeCloudDriveGroupsRequest extends Request {
         }
 
         /**
-         * The name of the team for fuzzy search.
+         * The team name for fuzzy search.
          */
         public Builder groupName(String groupName) {
             this.putQueryParameter("GroupName", groupName);
@@ -286,13 +286,13 @@ public class DescribeCloudDriveGroupsRequest extends Request {
         }
 
         /**
-         * The type of the team.
+         * The team type.
          * <p>
          * 
          * *   org: organizational structure
          * *   directory: workspace
          * 
-         * Default value: null. This value indicates that all results are queried.
+         * Default value: null. The default value indicates that all types of teams are queried.
          */
         public Builder groupType(String groupType) {
             this.putQueryParameter("GroupType", groupType);
@@ -301,7 +301,7 @@ public class DescribeCloudDriveGroupsRequest extends Request {
         }
 
         /**
-         * The maximum number of entries to return on each page.
+         * The number of entries to return on each page.
          * <p>
          * 
          * *   Valid values: 1 to 100
@@ -323,7 +323,10 @@ public class DescribeCloudDriveGroupsRequest extends Request {
         }
 
         /**
-         * The ID of the parent ID. If a parent node ID is specified, the subnode list is queried. If you set the value of this parameter to root, the root nodes are queried. Default value: null. This value indicates that all results are queried.
+         * The ID of the parent node. If a parent node ID is specified, the subnodes are queried. If you set the value of this parameter to root, the root node is queried.
+         * <p>
+         * 
+         * Default value: null. The default value indicates that all nodes are queried.
          */
         public Builder parentGroupId(String parentGroupId) {
             this.putQueryParameter("ParentGroupId", parentGroupId);

@@ -86,7 +86,7 @@ public class CopyCdsFileResponseBody extends TeaModel {
         private String success; 
 
         /**
-         * Code.
+         * The operation result. The value success indicates that the operation is successful. If the operation failed, an error message is returned.
          */
         public Builder code(String code) {
             this.code = code;
@@ -94,7 +94,7 @@ public class CopyCdsFileResponseBody extends TeaModel {
         }
 
         /**
-         * CopyCdsFileModel.
+         * The details about the file copying.
          */
         public Builder copyCdsFileModel(CopyCdsFileModel copyCdsFileModel) {
             this.copyCdsFileModel = copyCdsFileModel;
@@ -102,7 +102,7 @@ public class CopyCdsFileResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * The error message that is returned. This parameter is not returned if the value of Code is success.
          */
         public Builder message(String message) {
             this.message = message;
@@ -110,7 +110,7 @@ public class CopyCdsFileResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -118,7 +118,26 @@ public class CopyCdsFileResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * Indicates whether the request is successful.
+         * <p>
+         * 
+         * Valid values:
+         * 
+         * *   true
+         * 
+         *     <!-- -->
+         * 
+         *     <!-- -->
+         * 
+         *     <!-- -->
+         * 
+         * *   false
+         * 
+         *     <!-- -->
+         * 
+         *     <!-- -->
+         * 
+         *     <!-- -->
          */
         public Builder success(String success) {
             this.success = success;
@@ -170,7 +189,7 @@ public class CopyCdsFileResponseBody extends TeaModel {
             private String fileId; 
 
             /**
-             * AsyncTaskId.
+             * The ID of the asynchronous task. This parameter is not returned if you copy a file. This parameter is returned if you copy a folder in the backend in an asynchronous manner. You can call the GetAsyncTask operation to obtain the ID and details of an asynchronous task.
              */
             public Builder asyncTaskId(String asyncTaskId) {
                 this.asyncTaskId = asyncTaskId;
@@ -178,7 +197,7 @@ public class CopyCdsFileResponseBody extends TeaModel {
             }
 
             /**
-             * FileId.
+             * The ID of the copied file or folder.
              */
             public Builder fileId(String fileId) {
                 this.fileId = fileId;

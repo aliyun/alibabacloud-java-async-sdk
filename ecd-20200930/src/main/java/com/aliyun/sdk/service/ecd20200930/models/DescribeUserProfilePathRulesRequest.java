@@ -83,7 +83,7 @@ public class DescribeUserProfilePathRulesRequest extends Request {
         } 
 
         /**
-         * DesktopGroupId.
+         * The desktop group ID. This parameter is required when you set RuleType parameter to DesktopGroup.
          */
         public Builder desktopGroupId(String desktopGroupId) {
             this.putQueryParameter("DesktopGroupId", desktopGroupId);
@@ -92,7 +92,7 @@ public class DescribeUserProfilePathRulesRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * The region ID.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -101,7 +101,26 @@ public class DescribeUserProfilePathRulesRequest extends Request {
         }
 
         /**
-         * RuleType.
+         * The rule type that you want to configure for the directory.
+         * <p>
+         * 
+         * Valid values:
+         * 
+         * *   DesktopGroup
+         * 
+         *     <!-- -->
+         * 
+         *     <!-- -->
+         * 
+         *     <!-- -->
+         * 
+         * *   Default
+         * 
+         *     <!-- -->
+         * 
+         *     <!-- -->
+         * 
+         *     <!-- -->
          */
         public Builder ruleType(String ruleType) {
             this.putQueryParameter("RuleType", ruleType);

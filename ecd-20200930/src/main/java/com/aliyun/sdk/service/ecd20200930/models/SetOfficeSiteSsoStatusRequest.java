@@ -85,7 +85,26 @@ public class SetOfficeSiteSsoStatusRequest extends Request {
         } 
 
         /**
-         * EnableSso.
+         * Specifies whether to enable SSO.
+         * <p>
+         * 
+         * Valid values:
+         * 
+         * *   true
+         * 
+         *     <!-- -->
+         * 
+         *     <!-- -->
+         * 
+         *     <!-- -->
+         * 
+         * *   false
+         * 
+         *     <!-- -->
+         * 
+         *     <!-- -->
+         * 
+         *     <!-- -->
          */
         public Builder enableSso(Boolean enableSso) {
             this.putQueryParameter("EnableSso", enableSso);
@@ -94,7 +113,7 @@ public class SetOfficeSiteSsoStatusRequest extends Request {
         }
 
         /**
-         * The operation that you want to perform. Set the value to SetOfficeSiteSsoStatus.
+         * The workspace ID.
          */
         public Builder officeSiteId(String officeSiteId) {
             this.putQueryParameter("OfficeSiteId", officeSiteId);
@@ -103,7 +122,7 @@ public class SetOfficeSiteSsoStatusRequest extends Request {
         }
 
         /**
-         * The ID of the request.
+         * The region ID. You can call the [DescribeRegions](~~196646~~) operation to query the most recent region list.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);

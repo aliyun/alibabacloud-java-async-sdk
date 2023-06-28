@@ -70,7 +70,7 @@ public class CancelCdsFileShareLinkRequest extends Request {
         } 
 
         /**
-         * CdsId.
+         * The ID of the cloud disk.
          */
         public Builder cdsId(String cdsId) {
             this.putQueryParameter("CdsId", cdsId);
@@ -79,7 +79,7 @@ public class CancelCdsFileShareLinkRequest extends Request {
         }
 
         /**
-         * ShareId.
+         * The ID of the file sharing task.
          */
         public Builder shareId(String shareId) {
             this.putQueryParameter("ShareId", shareId);

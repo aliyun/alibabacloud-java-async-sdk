@@ -22,7 +22,6 @@ public class CreateImageRequest extends Request {
 
     @Query
     @NameInMap("DesktopId")
-    @Validation(required = true)
     private String desktopId;
 
     @Query

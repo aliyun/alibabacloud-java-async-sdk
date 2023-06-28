@@ -100,7 +100,7 @@ public class DeleteCdsFileRequest extends Request {
         } 
 
         /**
-         * CdsId.
+         * The ID of the cloud disk.
          */
         public Builder cdsId(String cdsId) {
             this.putQueryParameter("CdsId", cdsId);
@@ -109,7 +109,7 @@ public class DeleteCdsFileRequest extends Request {
         }
 
         /**
-         * EndUserId.
+         * The ID of the end user who uses the cloud disk.
          */
         public Builder endUserId(String endUserId) {
             this.putQueryParameter("EndUserId", endUserId);
@@ -118,7 +118,7 @@ public class DeleteCdsFileRequest extends Request {
         }
 
         /**
-         * FileId.
+         * The ID of the file. The ID is a unique identifier for the file.
          */
         public Builder fileId(String fileId) {
             this.putQueryParameter("FileId", fileId);
@@ -127,7 +127,7 @@ public class DeleteCdsFileRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * The region ID. You can call the [DescribeRegions](~~196646~~) operation to query the most recent region list.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);

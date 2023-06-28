@@ -132,6 +132,9 @@ public class DescribeCloudDriveGroupsResponseBody extends TeaModel {
     } 
 
     public static class CloudDriveGroups extends TeaModel {
+        @NameInMap("AdminUserIds")
+        private String adminUserIds;
+
         @NameInMap("CreateTime")
         private String createTime;
 
@@ -147,6 +150,9 @@ public class DescribeCloudDriveGroupsResponseBody extends TeaModel {
         @NameInMap("GroupName")
         private String groupName;
 
+        @NameInMap("OrgId")
+        private String orgId;
+
         @NameInMap("Status")
         private String status;
 
@@ -157,11 +163,13 @@ public class DescribeCloudDriveGroupsResponseBody extends TeaModel {
         private String usedSize;
 
         private CloudDriveGroups(Builder builder) {
+            this.adminUserIds = builder.adminUserIds;
             this.createTime = builder.createTime;
             this.directoryId = builder.directoryId;
             this.driveId = builder.driveId;
             this.groupId = builder.groupId;
             this.groupName = builder.groupName;
+            this.orgId = builder.orgId;
             this.status = builder.status;
             this.totalSize = builder.totalSize;
             this.usedSize = builder.usedSize;
@@ -173,6 +181,13 @@ public class DescribeCloudDriveGroupsResponseBody extends TeaModel {
 
         public static CloudDriveGroups create() {
             return builder().build();
+        }
+
+        /**
+         * @return adminUserIds
+         */
+        public String getAdminUserIds() {
+            return this.adminUserIds;
         }
 
         /**
@@ -211,6 +226,13 @@ public class DescribeCloudDriveGroupsResponseBody extends TeaModel {
         }
 
         /**
+         * @return orgId
+         */
+        public String getOrgId() {
+            return this.orgId;
+        }
+
+        /**
          * @return status
          */
         public String getStatus() {
@@ -232,14 +254,24 @@ public class DescribeCloudDriveGroupsResponseBody extends TeaModel {
         }
 
         public static final class Builder {
+            private String adminUserIds; 
             private String createTime; 
             private String directoryId; 
             private String driveId; 
             private String groupId; 
             private String groupName; 
+            private String orgId; 
             private String status; 
             private Long totalSize; 
             private String usedSize; 
+
+            /**
+             * AdminUserIds.
+             */
+            public Builder adminUserIds(String adminUserIds) {
+                this.adminUserIds = adminUserIds;
+                return this;
+            }
 
             /**
              * The time when the team space was created.
@@ -250,7 +282,7 @@ public class DescribeCloudDriveGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the workspace.
+             * The workspace ID.
              */
             public Builder directoryId(String directoryId) {
                 this.directoryId = directoryId;
@@ -258,7 +290,7 @@ public class DescribeCloudDriveGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the team space.
+             * The team space ID.
              */
             public Builder driveId(String driveId) {
                 this.driveId = driveId;
@@ -266,7 +298,7 @@ public class DescribeCloudDriveGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the team.
+             * The team ID.
              */
             public Builder groupId(String groupId) {
                 this.groupId = groupId;
@@ -282,7 +314,15 @@ public class DescribeCloudDriveGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * The status of the team space. Valid values:
+             * OrgId.
+             */
+            public Builder orgId(String orgId) {
+                this.orgId = orgId;
+                return this;
+            }
+
+            /**
+             * The team space status. Valid values:
              * <p>
              * 
              * *   enabled
@@ -304,7 +344,7 @@ public class DescribeCloudDriveGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * The size of the used space. Unit: bytes.
+             * The capacity of the used space. Unit: bytes.
              */
             public Builder usedSize(String usedSize) {
                 this.usedSize = usedSize;

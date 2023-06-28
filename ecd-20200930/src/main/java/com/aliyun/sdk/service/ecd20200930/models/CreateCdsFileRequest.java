@@ -173,7 +173,7 @@ public class CreateCdsFileRequest extends Request {
         } 
 
         /**
-         * CdsId.
+         * The ID of the cloud disk.
          */
         public Builder cdsId(String cdsId) {
             this.putQueryParameter("CdsId", cdsId);
@@ -182,7 +182,66 @@ public class CreateCdsFileRequest extends Request {
         }
 
         /**
-         * ConflictPolicy.
+         * The policy that is used when the file that you want to upload has the same name as an existing file in the cloud disk.
+         * <p>
+         * 
+         * Valid values:
+         * 
+         * *   refuse
+         * 
+         *     <!-- -->
+         * 
+         *     :
+         * 
+         *     <!-- -->
+         * 
+         *     denies creating the file
+         * 
+         *     <!-- -->
+         * 
+         *     .
+         * 
+         * *   auto_rename
+         * 
+         *     <!-- -->
+         * 
+         *     :
+         * 
+         *     <!-- -->
+         * 
+         *     automatically renames the file
+         * 
+         *     <!-- -->
+         * 
+         *     .
+         * 
+         * *   ignore
+         * 
+         *     <!-- -->
+         * 
+         *     :
+         * 
+         *     <!-- -->
+         * 
+         *     allows the file to use the same name as the existing file in the cloud disk
+         * 
+         *     <!-- -->
+         * 
+         *     .
+         * 
+         * *   over_write
+         * 
+         *     <!-- -->
+         * 
+         *     :
+         * 
+         *     <!-- -->
+         * 
+         *     overwrites the existing file in the cloud disk
+         * 
+         *     <!-- -->
+         * 
+         *     .
          */
         public Builder conflictPolicy(String conflictPolicy) {
             this.putQueryParameter("ConflictPolicy", conflictPolicy);
@@ -191,7 +250,7 @@ public class CreateCdsFileRequest extends Request {
         }
 
         /**
-         * EndUserId.
+         * The user ID.
          */
         public Builder endUserId(String endUserId) {
             this.putQueryParameter("EndUserId", endUserId);
@@ -200,7 +259,7 @@ public class CreateCdsFileRequest extends Request {
         }
 
         /**
-         * FileHash.
+         * The hash value of the SHA1 algorithm that is used by the file.
          */
         public Builder fileHash(String fileHash) {
             this.putQueryParameter("FileHash", fileHash);
@@ -209,7 +268,7 @@ public class CreateCdsFileRequest extends Request {
         }
 
         /**
-         * FileLength.
+         * The file size. Unit: bytes.
          */
         public Builder fileLength(Long fileLength) {
             this.putQueryParameter("FileLength", fileLength);
@@ -218,7 +277,7 @@ public class CreateCdsFileRequest extends Request {
         }
 
         /**
-         * FileName.
+         * The file name.
          */
         public Builder fileName(String fileName) {
             this.putQueryParameter("FileName", fileName);
@@ -227,7 +286,26 @@ public class CreateCdsFileRequest extends Request {
         }
 
         /**
-         * FileType.
+         * The file type.
+         * <p>
+         * 
+         * Valid values:
+         * 
+         * *   file
+         * 
+         *     <!-- -->
+         * 
+         *     <!-- -->
+         * 
+         *     <!-- -->
+         * 
+         * *   folder
+         * 
+         *     <!-- -->
+         * 
+         *     <!-- -->
+         * 
+         *     <!-- -->
          */
         public Builder fileType(String fileType) {
             this.putQueryParameter("FileType", fileType);
@@ -236,7 +314,7 @@ public class CreateCdsFileRequest extends Request {
         }
 
         /**
-         * ParentFileId.
+         * The ID of the parent folder.
          */
         public Builder parentFileId(String parentFileId) {
             this.putQueryParameter("ParentFileId", parentFileId);
@@ -245,7 +323,7 @@ public class CreateCdsFileRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * The region ID.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);

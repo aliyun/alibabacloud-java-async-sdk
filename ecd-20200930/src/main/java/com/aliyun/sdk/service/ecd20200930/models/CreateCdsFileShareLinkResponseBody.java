@@ -86,7 +86,7 @@ public class CreateCdsFileShareLinkResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * Code.
+         * The operation result. The value success indicates that the operation is successful. If the operation failed, an error message is returned.
          */
         public Builder code(String code) {
             this.code = code;
@@ -94,7 +94,7 @@ public class CreateCdsFileShareLinkResponseBody extends TeaModel {
         }
 
         /**
-         * Data.
+         * The data information.
          */
         public Builder data(CdsFileShareLinkModel data) {
             this.data = data;
@@ -102,7 +102,7 @@ public class CreateCdsFileShareLinkResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * The error message that is returned. This parameter is not returned if the value of Code is success.
          */
         public Builder message(String message) {
             this.message = message;
@@ -110,7 +110,7 @@ public class CreateCdsFileShareLinkResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -118,7 +118,26 @@ public class CreateCdsFileShareLinkResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * Indicates whether the request is successful.
+         * <p>
+         * 
+         * Valid values:
+         * 
+         * *   true
+         * 
+         *     <!-- -->
+         * 
+         *     <!-- -->
+         * 
+         *     <!-- -->
+         * 
+         * *   false
+         * 
+         *     <!-- -->
+         * 
+         *     <!-- -->
+         * 
+         *     <!-- -->
          */
         public Builder success(Boolean success) {
             this.success = success;

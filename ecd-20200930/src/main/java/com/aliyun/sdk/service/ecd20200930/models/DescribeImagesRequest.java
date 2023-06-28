@@ -17,6 +17,10 @@ public class DescribeImagesRequest extends Request {
     private String desktopInstanceType;
 
     @Query
+    @NameInMap("FotaVersion")
+    private String fotaVersion;
+
+    @Query
     @NameInMap("GpuCategory")
     private Boolean gpuCategory;
 
@@ -27,6 +31,10 @@ public class DescribeImagesRequest extends Request {
     @Query
     @NameInMap("ImageId")
     private java.util.List < String > imageId;
+
+    @Query
+    @NameInMap("ImageName")
+    private String imageName;
 
     @Query
     @NameInMap("ImageStatus")
@@ -69,9 +77,11 @@ public class DescribeImagesRequest extends Request {
     private DescribeImagesRequest(Builder builder) {
         super(builder);
         this.desktopInstanceType = builder.desktopInstanceType;
+        this.fotaVersion = builder.fotaVersion;
         this.gpuCategory = builder.gpuCategory;
         this.gpuDriverVersion = builder.gpuDriverVersion;
         this.imageId = builder.imageId;
+        this.imageName = builder.imageName;
         this.imageStatus = builder.imageStatus;
         this.imageType = builder.imageType;
         this.languageType = builder.languageType;
@@ -104,6 +114,13 @@ public class DescribeImagesRequest extends Request {
     }
 
     /**
+     * @return fotaVersion
+     */
+    public String getFotaVersion() {
+        return this.fotaVersion;
+    }
+
+    /**
      * @return gpuCategory
      */
     public Boolean getGpuCategory() {
@@ -122,6 +139,13 @@ public class DescribeImagesRequest extends Request {
      */
     public java.util.List < String > getImageId() {
         return this.imageId;
+    }
+
+    /**
+     * @return imageName
+     */
+    public String getImageName() {
+        return this.imageName;
     }
 
     /**
@@ -189,9 +213,11 @@ public class DescribeImagesRequest extends Request {
 
     public static final class Builder extends Request.Builder<DescribeImagesRequest, Builder> {
         private String desktopInstanceType; 
+        private String fotaVersion; 
         private Boolean gpuCategory; 
         private String gpuDriverVersion; 
         private java.util.List < String > imageId; 
+        private String imageName; 
         private String imageStatus; 
         private String imageType; 
         private String languageType; 
@@ -209,9 +235,11 @@ public class DescribeImagesRequest extends Request {
         private Builder(DescribeImagesRequest request) {
             super(request);
             this.desktopInstanceType = request.desktopInstanceType;
+            this.fotaVersion = request.fotaVersion;
             this.gpuCategory = request.gpuCategory;
             this.gpuDriverVersion = request.gpuDriverVersion;
             this.imageId = request.imageId;
+            this.imageName = request.imageName;
             this.imageStatus = request.imageStatus;
             this.imageType = request.imageType;
             this.languageType = request.languageType;
@@ -229,6 +257,15 @@ public class DescribeImagesRequest extends Request {
         public Builder desktopInstanceType(String desktopInstanceType) {
             this.putQueryParameter("DesktopInstanceType", desktopInstanceType);
             this.desktopInstanceType = desktopInstanceType;
+            return this;
+        }
+
+        /**
+         * FotaVersion.
+         */
+        public Builder fotaVersion(String fotaVersion) {
+            this.putQueryParameter("FotaVersion", fotaVersion);
+            this.fotaVersion = fotaVersion;
             return this;
         }
 
@@ -256,6 +293,15 @@ public class DescribeImagesRequest extends Request {
         public Builder imageId(java.util.List < String > imageId) {
             this.putQueryParameter("ImageId", imageId);
             this.imageId = imageId;
+            return this;
+        }
+
+        /**
+         * ImageName.
+         */
+        public Builder imageName(String imageName) {
+            this.putQueryParameter("ImageName", imageName);
+            this.imageName = imageName;
             return this;
         }
 

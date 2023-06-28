@@ -97,7 +97,7 @@ public class SetUserProfilePathRulesRequest extends Request {
         } 
 
         /**
-         * DesktopGroupId.
+         * The desktop group ID.
          */
         public Builder desktopGroupId(String desktopGroupId) {
             this.putQueryParameter("DesktopGroupId", desktopGroupId);
@@ -106,7 +106,7 @@ public class SetUserProfilePathRulesRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * The region ID.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -115,7 +115,7 @@ public class SetUserProfilePathRulesRequest extends Request {
         }
 
         /**
-         * UserProfilePathRule.
+         * The directories that you want to configure in the blacklist and whitelist.
          */
         public Builder userProfilePathRule(java.util.List < UserProfilePathRule> userProfilePathRule) {
             String userProfilePathRuleShrink = shrink(userProfilePathRule, "UserProfilePathRule", "json");
@@ -125,7 +125,34 @@ public class SetUserProfilePathRulesRequest extends Request {
         }
 
         /**
-         * UserProfileRuleType.
+         * The directory type that you want to configure.
+         * <p>
+         * 
+         * Valid values:
+         * 
+         * *   Both_Default_DesktopGroup
+         * 
+         *     <!-- -->
+         * 
+         *     <!-- -->
+         * 
+         *     <!-- -->
+         * 
+         * *   DesktopGroup
+         * 
+         *     <!-- -->
+         * 
+         *     <!-- -->
+         * 
+         *     <!-- -->
+         * 
+         * *   Default
+         * 
+         *     <!-- -->
+         * 
+         *     <!-- -->
+         * 
+         *     <!-- -->
          */
         public Builder userProfileRuleType(String userProfileRuleType) {
             this.putQueryParameter("UserProfileRuleType", userProfileRuleType);
@@ -180,7 +207,7 @@ public class SetUserProfilePathRulesRequest extends Request {
             private String type; 
 
             /**
-             * Path.
+             * The blacklist path.
              */
             public Builder path(String path) {
                 this.path = path;
@@ -188,7 +215,26 @@ public class SetUserProfilePathRulesRequest extends Request {
             }
 
             /**
-             * Type.
+             * The path type.
+             * <p>
+             * 
+             * Valid values:
+             * 
+             * *   file
+             * 
+             *     <!-- -->
+             * 
+             *     <!-- -->
+             * 
+             *     <!-- -->
+             * 
+             * *   folder
+             * 
+             *     <!-- -->
+             * 
+             *     <!-- -->
+             * 
+             *     <!-- -->
              */
             public Builder type(String type) {
                 this.type = type;
@@ -242,7 +288,7 @@ public class SetUserProfilePathRulesRequest extends Request {
             private String type; 
 
             /**
-             * Path.
+             * The whitelist path.
              */
             public Builder path(String path) {
                 this.path = path;
@@ -250,7 +296,26 @@ public class SetUserProfilePathRulesRequest extends Request {
             }
 
             /**
-             * Type.
+             * The path type.
+             * <p>
+             * 
+             * Valid values:
+             * 
+             * *   file
+             * 
+             *     <!-- -->
+             * 
+             *     <!-- -->
+             * 
+             *     <!-- -->
+             * 
+             * *   folder
+             * 
+             *     <!-- -->
+             * 
+             *     <!-- -->
+             * 
+             *     <!-- -->
              */
             public Builder type(String type) {
                 this.type = type;
@@ -303,7 +368,7 @@ public class SetUserProfilePathRulesRequest extends Request {
             private java.util.List < WhitePaths> whitePaths; 
 
             /**
-             * BlackPath.
+             * The directory in the blacklist.
              */
             public Builder blackPath(BlackPath blackPath) {
                 this.blackPath = blackPath;
@@ -311,7 +376,7 @@ public class SetUserProfilePathRulesRequest extends Request {
             }
 
             /**
-             * WhitePaths.
+             * The directories that you want to configure in the whitelist.
              */
             public Builder whitePaths(java.util.List < WhitePaths> whitePaths) {
                 this.whitePaths = whitePaths;

@@ -75,6 +75,10 @@ public class DescribeBundlesRequest extends Request {
     private String regionId;
 
     @Query
+    @NameInMap("Scope")
+    private String scope;
+
+    @Query
     @NameInMap("SelectedBundle")
     private Boolean selectedBundle;
 
@@ -107,6 +111,7 @@ public class DescribeBundlesRequest extends Request {
         this.osType = builder.osType;
         this.protocolType = builder.protocolType;
         this.regionId = builder.regionId;
+        this.scope = builder.scope;
         this.selectedBundle = builder.selectedBundle;
         this.sessionType = builder.sessionType;
         this.supportMultiSession = builder.supportMultiSession;
@@ -232,6 +237,13 @@ public class DescribeBundlesRequest extends Request {
     }
 
     /**
+     * @return scope
+     */
+    public String getScope() {
+        return this.scope;
+    }
+
+    /**
      * @return selectedBundle
      */
     public Boolean getSelectedBundle() {
@@ -275,6 +287,7 @@ public class DescribeBundlesRequest extends Request {
         private String osType; 
         private String protocolType; 
         private String regionId; 
+        private String scope; 
         private Boolean selectedBundle; 
         private String sessionType; 
         private Boolean supportMultiSession; 
@@ -301,6 +314,7 @@ public class DescribeBundlesRequest extends Request {
             this.osType = request.osType;
             this.protocolType = request.protocolType;
             this.regionId = request.regionId;
+            this.scope = request.scope;
             this.selectedBundle = request.selectedBundle;
             this.sessionType = request.sessionType;
             this.supportMultiSession = request.supportMultiSession;
@@ -439,6 +453,15 @@ public class DescribeBundlesRequest extends Request {
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
             this.regionId = regionId;
+            return this;
+        }
+
+        /**
+         * Scope.
+         */
+        public Builder scope(String scope) {
+            this.putQueryParameter("Scope", scope);
+            this.scope = scope;
             return this;
         }
 

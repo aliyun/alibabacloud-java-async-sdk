@@ -86,7 +86,7 @@ public class DeleteCdsFileResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * Code.
+         * The operation result. A value of success indicates that the operation is successful. If the operation failed, an error message is returned.
          */
         public Builder code(String code) {
             this.code = code;
@@ -94,7 +94,26 @@ public class DeleteCdsFileResponseBody extends TeaModel {
         }
 
         /**
-         * Data.
+         * Indicates whether the data is returned.
+         * <p>
+         * 
+         * Valid values:
+         * 
+         * *   true
+         * 
+         *     <!-- -->
+         * 
+         *     <!-- -->
+         * 
+         *     <!-- -->
+         * 
+         * *   false
+         * 
+         *     <!-- -->
+         * 
+         *     <!-- -->
+         * 
+         *     <!-- -->
          */
         public Builder data(String data) {
             this.data = data;
@@ -102,7 +121,7 @@ public class DeleteCdsFileResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * The returned message.
          */
         public Builder message(String message) {
             this.message = message;
@@ -110,7 +129,7 @@ public class DeleteCdsFileResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -118,7 +137,26 @@ public class DeleteCdsFileResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * Indicates whether the request was successful.
+         * <p>
+         * 
+         * Valid values:
+         * 
+         * *   true
+         * 
+         *     <!-- -->
+         * 
+         *     <!-- -->
+         * 
+         *     <!-- -->
+         * 
+         * *   false
+         * 
+         *     <!-- -->
+         * 
+         *     <!-- -->
+         * 
+         *     <!-- -->
          */
         public Builder success(Boolean success) {
             this.success = success;

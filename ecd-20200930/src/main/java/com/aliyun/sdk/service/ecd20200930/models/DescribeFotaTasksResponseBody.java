@@ -50,7 +50,7 @@ public class DescribeFotaTasksResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * FotaTasks.
+         * Details about the image update task.
          */
         public Builder fotaTasks(java.util.List < FotaTasks> fotaTasks) {
             this.fotaTasks = fotaTasks;
@@ -58,7 +58,7 @@ public class DescribeFotaTasksResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -194,7 +194,7 @@ public class DescribeFotaTasksResponseBody extends TeaModel {
             private String taskUid; 
 
             /**
-             * AppVersion.
+             * The image version. You can call the [DescribeImages](~~188895~~) operation to obtain the value of this parameter.
              */
             public Builder appVersion(String appVersion) {
                 this.appVersion = appVersion;
@@ -202,7 +202,7 @@ public class DescribeFotaTasksResponseBody extends TeaModel {
             }
 
             /**
-             * FotaProject.
+             * This parameter is not available.
              */
             public Builder fotaProject(String fotaProject) {
                 this.fotaProject = fotaProject;
@@ -210,7 +210,7 @@ public class DescribeFotaTasksResponseBody extends TeaModel {
             }
 
             /**
-             * PendingCustomImageCount.
+             * The number of custom images that can be updated to this version.
              */
             public Builder pendingCustomImageCount(Integer pendingCustomImageCount) {
                 this.pendingCustomImageCount = pendingCustomImageCount;
@@ -218,7 +218,7 @@ public class DescribeFotaTasksResponseBody extends TeaModel {
             }
 
             /**
-             * PendingDesktopCount.
+             * The number of cloud desktops for which the images can be updated to this version.
              */
             public Builder pendingDesktopCount(Integer pendingDesktopCount) {
                 this.pendingDesktopCount = pendingDesktopCount;
@@ -226,7 +226,7 @@ public class DescribeFotaTasksResponseBody extends TeaModel {
             }
 
             /**
-             * PublishTime.
+             * The time when the image version available for update was published.
              */
             public Builder publishTime(String publishTime) {
                 this.publishTime = publishTime;
@@ -234,7 +234,7 @@ public class DescribeFotaTasksResponseBody extends TeaModel {
             }
 
             /**
-             * ReleaseNote.
+             * The description of the image version available for update.
              */
             public Builder releaseNote(String releaseNote) {
                 this.releaseNote = releaseNote;
@@ -242,7 +242,7 @@ public class DescribeFotaTasksResponseBody extends TeaModel {
             }
 
             /**
-             * Size.
+             * The size of the image update package. Unit: KB.
              */
             public Builder size(Integer size) {
                 this.size = size;
@@ -250,7 +250,34 @@ public class DescribeFotaTasksResponseBody extends TeaModel {
             }
 
             /**
-             * Status.
+             * Indicates whether an end user can update the image of the cloud desktop.
+             * <p>
+             * 
+             * Valid values:
+             * 
+             * *   valid
+             * 
+             *     <!-- -->
+             * 
+             *     :
+             * 
+             *     <!-- -->
+             * 
+             *     The end user can update the image of the cloud desktop.
+             * 
+             *     <!-- -->
+             * 
+             * *   invalid
+             * 
+             *     <!-- -->
+             * 
+             *     :
+             * 
+             *     <!-- -->
+             * 
+             *     The end user cannot update the image of the cloud desktop.
+             * 
+             *     <!-- -->
              */
             public Builder status(String status) {
                 this.status = status;
@@ -258,7 +285,7 @@ public class DescribeFotaTasksResponseBody extends TeaModel {
             }
 
             /**
-             * TaskUid.
+             * The ID of the image update task.
              */
             public Builder taskUid(String taskUid) {
                 this.taskUid = taskUid;

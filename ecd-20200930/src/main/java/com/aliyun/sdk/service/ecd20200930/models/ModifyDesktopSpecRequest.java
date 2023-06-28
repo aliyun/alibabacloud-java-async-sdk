@@ -156,7 +156,13 @@ public class ModifyDesktopSpecRequest extends Request {
         } 
 
         /**
-         * AutoPay.
+         * Specifies whether to automatically complete the payment. Valid values:
+         * <p>
+         * 
+         * *   `true`: automatically completes the payment. Make sure that your Alibaba Cloud account has sufficient balance. If your Alibaba Cloud account does not have sufficient balance, abnormal orders are generated.
+         * *   `false`: does not automatically complete the payment. In this case, an order is generated, but no payment is made. You can log on to the EDS console and complete the payment based on the order ID on the **Orders** page.
+         * 
+         * Default value: `true`.
          */
         public Builder autoPay(Boolean autoPay) {
             this.putQueryParameter("AutoPay", autoPay);
@@ -165,7 +171,7 @@ public class ModifyDesktopSpecRequest extends Request {
         }
 
         /**
-         * DesktopId.
+         * The ID of the cloud desktop.
          */
         public Builder desktopId(String desktopId) {
             this.putQueryParameter("DesktopId", desktopId);
@@ -174,7 +180,7 @@ public class ModifyDesktopSpecRequest extends Request {
         }
 
         /**
-         * DesktopType.
+         * The new cloud desktop type. You can call the [DescribeDesktopTypes](~~188882~~) operation to query the IDs of supported cloud desktop types.
          */
         public Builder desktopType(String desktopType) {
             this.putQueryParameter("DesktopType", desktopType);
@@ -183,7 +189,7 @@ public class ModifyDesktopSpecRequest extends Request {
         }
 
         /**
-         * PromotionId.
+         * The ID of the sales promotion.
          */
         public Builder promotionId(String promotionId) {
             this.putQueryParameter("PromotionId", promotionId);
@@ -192,7 +198,7 @@ public class ModifyDesktopSpecRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * The ID of the region.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -201,7 +207,7 @@ public class ModifyDesktopSpecRequest extends Request {
         }
 
         /**
-         * RootDiskSizeGib.
+         * The size of the new system disk. Unit: GiB. Valid values: 80 to 500 GiB. The value must be a multiple of 10.
          */
         public Builder rootDiskSizeGib(Integer rootDiskSizeGib) {
             this.putQueryParameter("RootDiskSizeGib", rootDiskSizeGib);
@@ -210,7 +216,15 @@ public class ModifyDesktopSpecRequest extends Request {
         }
 
         /**
-         * UserDiskPerformanceLevel.
+         * The performance level (PL) of the data disk. Valid values:
+         * <p>
+         * 
+         * *   PL0
+         * *   PL1
+         * *   PL2
+         * *   PL3
+         * 
+         * Default value: PL0.
          */
         public Builder userDiskPerformanceLevel(String userDiskPerformanceLevel) {
             this.putQueryParameter("UserDiskPerformanceLevel", userDiskPerformanceLevel);
@@ -219,7 +233,11 @@ public class ModifyDesktopSpecRequest extends Request {
         }
 
         /**
-         * UserDiskSizeGib.
+         * The size of the new data disk. Unit: GiB.
+         * <p>
+         * 
+         * *   The data disk size of a non-Graphics cloud desktop can be within the range of 20 to 1,020 GiB. The value must be a multiple of 10.
+         * *   The data disk size of the Graphics cloud desktop can be within the range of 40 to 1,020 GiB. The value must be a multiple of 10.
          */
         public Builder userDiskSizeGib(Integer userDiskSizeGib) {
             this.putQueryParameter("UserDiskSizeGib", userDiskSizeGib);

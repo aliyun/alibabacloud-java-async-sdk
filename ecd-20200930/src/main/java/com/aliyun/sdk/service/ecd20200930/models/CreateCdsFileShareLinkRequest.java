@@ -229,7 +229,7 @@ public class CreateCdsFileShareLinkRequest extends Request {
         } 
 
         /**
-         * CdsId.
+         * The ID of the cloud disk.
          */
         public Builder cdsId(String cdsId) {
             this.putQueryParameter("CdsId", cdsId);
@@ -238,7 +238,7 @@ public class CreateCdsFileShareLinkRequest extends Request {
         }
 
         /**
-         * Description.
+         * The description of the file sharing task. The description must be 0 to 1,024 characters in length.
          */
         public Builder description(String description) {
             this.putQueryParameter("Description", description);
@@ -247,7 +247,38 @@ public class CreateCdsFileShareLinkRequest extends Request {
         }
 
         /**
-         * DisableDownload.
+         * Specifies whether to prohibit the download of the files that are being shared.
+         * <p>
+         * 
+         * Valid values:
+         * 
+         * *   true
+         * 
+         *     <!-- -->
+         * 
+         *     :
+         * 
+         *     <!-- -->
+         * 
+         *     prohibits file download
+         * 
+         *     <!-- -->
+         * 
+         *     .
+         * 
+         * *   false
+         * 
+         *     <!-- -->
+         * 
+         *     :
+         * 
+         *     <!-- -->
+         * 
+         *     allows file download
+         * 
+         *     <!-- -->
+         * 
+         *     .
          */
         public Builder disableDownload(Boolean disableDownload) {
             this.putQueryParameter("DisableDownload", disableDownload);
@@ -256,7 +287,38 @@ public class CreateCdsFileShareLinkRequest extends Request {
         }
 
         /**
-         * DisablePreview.
+         * Specifies whether to prohibit the preview of the files that are being shared.
+         * <p>
+         * 
+         * Valid values:
+         * 
+         * *   true
+         * 
+         *     <!-- -->
+         * 
+         *     :
+         * 
+         *     <!-- -->
+         * 
+         *     prohibits file preview
+         * 
+         *     <!-- -->
+         * 
+         *     .
+         * 
+         * *   false
+         * 
+         *     <!-- -->
+         * 
+         *     :
+         * 
+         *     <!-- -->
+         * 
+         *     allows file preview
+         * 
+         *     <!-- -->
+         * 
+         *     .
          */
         public Builder disablePreview(Boolean disablePreview) {
             this.putQueryParameter("DisablePreview", disablePreview);
@@ -265,7 +327,38 @@ public class CreateCdsFileShareLinkRequest extends Request {
         }
 
         /**
-         * DisableSave.
+         * Specifies whether to prohibit the dump of the files that are being shared.
+         * <p>
+         * 
+         * Valid values:
+         * 
+         * *   true
+         * 
+         *     <!-- -->
+         * 
+         *     :
+         * 
+         *     <!-- -->
+         * 
+         *     prohibits file dump
+         * 
+         *     <!-- -->
+         * 
+         *     .
+         * 
+         * *   false
+         * 
+         *     <!-- -->
+         * 
+         *     :
+         * 
+         *     <!-- -->
+         * 
+         *     allows file dump
+         * 
+         *     <!-- -->
+         * 
+         *     .
          */
         public Builder disableSave(Boolean disableSave) {
             this.putQueryParameter("DisableSave", disableSave);
@@ -274,7 +367,7 @@ public class CreateCdsFileShareLinkRequest extends Request {
         }
 
         /**
-         * DownloadLimit.
+         * The limit on the number of times that the shared files can be downloaded. The value of this parameter must be equal to or greater than 0. The value 0 specifies that no limit is imposed on the number of times that the shared files can be downloaded.
          */
         public Builder downloadLimit(Long downloadLimit) {
             this.putQueryParameter("DownloadLimit", downloadLimit);
@@ -283,7 +376,7 @@ public class CreateCdsFileShareLinkRequest extends Request {
         }
 
         /**
-         * EndUserId.
+         * The ID of the end user.
          */
         public Builder endUserId(String endUserId) {
             this.putQueryParameter("EndUserId", endUserId);
@@ -292,7 +385,7 @@ public class CreateCdsFileShareLinkRequest extends Request {
         }
 
         /**
-         * Expiration.
+         * The time when the file sharing link expires. The value of this parameter follows the RFC 3339 standard. Example: "2020-06-28T11:33:00.000+08:00". If this parameter is set to "", the file sharing link never expires.
          */
         public Builder expiration(String expiration) {
             this.putQueryParameter("Expiration", expiration);
@@ -301,7 +394,7 @@ public class CreateCdsFileShareLinkRequest extends Request {
         }
 
         /**
-         * FileIds.
+         * The file IDs.
          */
         public Builder fileIds(java.util.List < String > fileIds) {
             this.putQueryParameter("FileIds", fileIds);
@@ -310,7 +403,7 @@ public class CreateCdsFileShareLinkRequest extends Request {
         }
 
         /**
-         * PreviewLimit.
+         * The limit on the number of times that the shared files can be previewed. The value of this parameter must be equal to or greater than 0. The value 0 specifies that no limit is imposed on the number of times that the shared files can be previewed.
          */
         public Builder previewLimit(Long previewLimit) {
             this.putQueryParameter("PreviewLimit", previewLimit);
@@ -319,7 +412,7 @@ public class CreateCdsFileShareLinkRequest extends Request {
         }
 
         /**
-         * SaveLimit.
+         * The limit on the number of times that the shared files can be dumped. The value of this parameter must be equal to or greater than 0. The value 0 specifies that no limit is imposed on the number of times that the shared files can be dumped.
          */
         public Builder saveLimit(Long saveLimit) {
             this.putQueryParameter("SaveLimit", saveLimit);
@@ -328,7 +421,7 @@ public class CreateCdsFileShareLinkRequest extends Request {
         }
 
         /**
-         * ShareName.
+         * The name of the file sharing task. If you leave this parameter empty, the file name that corresponds to the first ID in the file ID list is used. The name must be 0 to 128 characters in length.
          */
         public Builder shareName(String shareName) {
             this.putQueryParameter("ShareName", shareName);
@@ -337,7 +430,7 @@ public class CreateCdsFileShareLinkRequest extends Request {
         }
 
         /**
-         * SharePwd.
+         * The length of the access code. Valid values: 6 to 8. Unit: bytes. If you leave this parameter empty or set it to null, no access code is required. If you use a token to share files, you do not need to configure this parameter. The access code can contain only visible ASCII characters.
          */
         public Builder sharePwd(String sharePwd) {
             this.putQueryParameter("SharePwd", sharePwd);

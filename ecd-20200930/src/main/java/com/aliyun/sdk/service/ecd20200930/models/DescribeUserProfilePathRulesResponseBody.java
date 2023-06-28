@@ -50,7 +50,7 @@ public class DescribeUserProfilePathRulesResponseBody extends TeaModel {
         private UserProfilePathRule userProfilePathRule; 
 
         /**
-         * RequestId.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -58,7 +58,7 @@ public class DescribeUserProfilePathRulesResponseBody extends TeaModel {
         }
 
         /**
-         * UserProfilePathRule.
+         * The directory blacklist and whitelist.
          */
         public Builder userProfilePathRule(UserProfilePathRule userProfilePathRule) {
             this.userProfilePathRule = userProfilePathRule;
@@ -110,7 +110,7 @@ public class DescribeUserProfilePathRulesResponseBody extends TeaModel {
             private String type; 
 
             /**
-             * Path.
+             * The path.
              */
             public Builder path(String path) {
                 this.path = path;
@@ -118,7 +118,26 @@ public class DescribeUserProfilePathRulesResponseBody extends TeaModel {
             }
 
             /**
-             * Type.
+             * The path type.
+             * <p>
+             * 
+             * Valid values:
+             * 
+             * *   file
+             * 
+             *     <!-- -->
+             * 
+             *     <!-- -->
+             * 
+             *     <!-- -->
+             * 
+             * *   folder
+             * 
+             *     <!-- -->
+             * 
+             *     <!-- -->
+             * 
+             *     <!-- -->
              */
             public Builder type(String type) {
                 this.type = type;
@@ -171,7 +190,7 @@ public class DescribeUserProfilePathRulesResponseBody extends TeaModel {
             private String type; 
 
             /**
-             * Path.
+             * The path.
              */
             public Builder path(String path) {
                 this.path = path;
@@ -179,7 +198,26 @@ public class DescribeUserProfilePathRulesResponseBody extends TeaModel {
             }
 
             /**
-             * Type.
+             * The path type.
+             * <p>
+             * 
+             * Valid values:
+             * 
+             * *   file
+             * 
+             *     <!-- -->
+             * 
+             *     <!-- -->
+             * 
+             *     <!-- -->
+             * 
+             * *   folder
+             * 
+             *     <!-- -->
+             * 
+             *     <!-- -->
+             * 
+             *     <!-- -->
              */
             public Builder type(String type) {
                 this.type = type;
@@ -232,7 +270,7 @@ public class DescribeUserProfilePathRulesResponseBody extends TeaModel {
             private java.util.List < WhitePaths> whitePaths; 
 
             /**
-             * BlackPath.
+             * The blacklist that is configured.
              */
             public Builder blackPath(BlackPath blackPath) {
                 this.blackPath = blackPath;
@@ -240,7 +278,7 @@ public class DescribeUserProfilePathRulesResponseBody extends TeaModel {
             }
 
             /**
-             * WhitePaths.
+             * The directories in the whitelist.
              */
             public Builder whitePaths(java.util.List < WhitePaths> whitePaths) {
                 this.whitePaths = whitePaths;
@@ -305,7 +343,7 @@ public class DescribeUserProfilePathRulesResponseBody extends TeaModel {
             private String userProfileRuleType; 
 
             /**
-             * DesktopGroupId.
+             * The desktop group ID.
              */
             public Builder desktopGroupId(String desktopGroupId) {
                 this.desktopGroupId = desktopGroupId;
@@ -313,7 +351,7 @@ public class DescribeUserProfilePathRulesResponseBody extends TeaModel {
             }
 
             /**
-             * Rules.
+             * The directory rules.
              */
             public Builder rules(java.util.List < Rules> rules) {
                 this.rules = rules;
@@ -321,7 +359,26 @@ public class DescribeUserProfilePathRulesResponseBody extends TeaModel {
             }
 
             /**
-             * UserProfileRuleType.
+             * The directory type that is configured for the directory.
+             * <p>
+             * 
+             * Valid values:
+             * 
+             * *   DesktopGroup
+             * 
+             *     <!-- -->
+             * 
+             *     <!-- -->
+             * 
+             *     <!-- -->
+             * 
+             * *   Default
+             * 
+             *     <!-- -->
+             * 
+             *     <!-- -->
+             * 
+             *     <!-- -->
              */
             public Builder userProfileRuleType(String userProfileRuleType) {
                 this.userProfileRuleType = userProfileRuleType;

@@ -42,6 +42,9 @@ public class DescribeDesktopsInGroupResponseBody extends TeaModel {
     @NameInMap("StopedPrePaidDesktopsCount")
     private Integer stopedPrePaidDesktopsCount;
 
+    @NameInMap("StoppedPrePaidDesktopsCount")
+    private Integer stoppedPrePaidDesktopsCount;
+
     private DescribeDesktopsInGroupResponseBody(Builder builder) {
         this.nextToken = builder.nextToken;
         this.onlinePrePaidDesktopsCount = builder.onlinePrePaidDesktopsCount;
@@ -53,6 +56,7 @@ public class DescribeDesktopsInGroupResponseBody extends TeaModel {
         this.requestId = builder.requestId;
         this.runningPrePaidDesktopsCount = builder.runningPrePaidDesktopsCount;
         this.stopedPrePaidDesktopsCount = builder.stopedPrePaidDesktopsCount;
+        this.stoppedPrePaidDesktopsCount = builder.stoppedPrePaidDesktopsCount;
     }
 
     public static Builder builder() {
@@ -133,6 +137,13 @@ public class DescribeDesktopsInGroupResponseBody extends TeaModel {
         return this.stopedPrePaidDesktopsCount;
     }
 
+    /**
+     * @return stoppedPrePaidDesktopsCount
+     */
+    public Integer getStoppedPrePaidDesktopsCount() {
+        return this.stoppedPrePaidDesktopsCount;
+    }
+
     public static final class Builder {
         private String nextToken; 
         private Integer onlinePrePaidDesktopsCount; 
@@ -144,6 +155,7 @@ public class DescribeDesktopsInGroupResponseBody extends TeaModel {
         private String requestId; 
         private Integer runningPrePaidDesktopsCount; 
         private Integer stopedPrePaidDesktopsCount; 
+        private Integer stoppedPrePaidDesktopsCount; 
 
         /**
          * The returned value of NextToken is a pagination token, which can be used in the next request to retrieve a new page of results.
@@ -222,6 +234,14 @@ public class DescribeDesktopsInGroupResponseBody extends TeaModel {
          */
         public Builder stopedPrePaidDesktopsCount(Integer stopedPrePaidDesktopsCount) {
             this.stopedPrePaidDesktopsCount = stopedPrePaidDesktopsCount;
+            return this;
+        }
+
+        /**
+         * StoppedPrePaidDesktopsCount.
+         */
+        public Builder stoppedPrePaidDesktopsCount(Integer stoppedPrePaidDesktopsCount) {
+            this.stoppedPrePaidDesktopsCount = stoppedPrePaidDesktopsCount;
             return this;
         }
 

@@ -129,7 +129,7 @@ public class ModifyCdsFileRequest extends Request {
         } 
 
         /**
-         * CdsId.
+         * The ID of the cloud disk.
          */
         public Builder cdsId(String cdsId) {
             this.putQueryParameter("CdsId", cdsId);
@@ -138,7 +138,7 @@ public class ModifyCdsFileRequest extends Request {
         }
 
         /**
-         * ConflictPolicy.
+         * The processing method that is used if the file that you want to create has the same name as an existing file in the cloud. Valid values: ignore: allows you to create the file by using the same name as an existing file in the cloud. auto_rename: automatically renames the file that you want to create if a file that has the same name exists in the cloud. By default, the current point in time is added to the end of the file name. Example: xxx\_20060102\_150405. refuse: denies creating the file if a file that has the same name exists in the cloud. Default value: refuse.
          */
         public Builder conflictPolicy(String conflictPolicy) {
             this.putQueryParameter("ConflictPolicy", conflictPolicy);
@@ -147,7 +147,7 @@ public class ModifyCdsFileRequest extends Request {
         }
 
         /**
-         * EndUserId.
+         * The ID of the end user who uses the cloud disk.
          */
         public Builder endUserId(String endUserId) {
             this.putQueryParameter("EndUserId", endUserId);
@@ -156,7 +156,7 @@ public class ModifyCdsFileRequest extends Request {
         }
 
         /**
-         * FileId.
+         * The file ID.
          */
         public Builder fileId(String fileId) {
             this.putQueryParameter("FileId", fileId);
@@ -165,7 +165,7 @@ public class ModifyCdsFileRequest extends Request {
         }
 
         /**
-         * FileName.
+         * The file name.
          */
         public Builder fileName(String fileName) {
             this.putQueryParameter("FileName", fileName);
@@ -174,7 +174,7 @@ public class ModifyCdsFileRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * The region ID. You can call the [DescribeRegions](~~196646~~) operation to query the most recent region list.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);

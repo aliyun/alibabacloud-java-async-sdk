@@ -369,7 +369,11 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * The ID of the CEN instance.
+      * *   When you create a workspace of the enterprise AD account type, AD connectors are automatically created to allow you to connect to enterprise AD systems. You are charged for the AD connectors. For more information, see [Billing overview](~~188395~~).
+      * *   After you call this operation to create a workspace of the enterprise AD account type, perform the following steps to configure the AD domain: 1. Configure the conditional forwarder in the Domain Name System (DNS) server. 2. Configure the trust relationship in the AD domain server, and call the [ConfigADConnectorTrust](~~311258~~) operation to configure the trust relationship for the workspace of the enterprise AD account type. 3. Call the [ListUserAdOrganizationUnits](~~311259~~) operation to obtain the organizational unit (OU) details of the AD domain. Then, call the [ConfigADConnectorUser](~~311262~~) operation to specify an OU and an administrator for the workspace of the enterprise AD account type.
+      *     **
+      *     **Note**If you specify DomainUserName and DomainPassword when you create a workspace of the enterprise AD account type, you must configure only the conditional forwarder. If you do not specify DomainUserName or DomainPassword, you must configure the conditional forwarder, trust relationship, and OU.
+      * For more information, see [Create a workspace of the enterprise AD account type](~~214469~~).
       *
      */
     @Override
@@ -441,6 +445,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+      * After the RAM permissions are authenticated, you can call the CreateCdsFile operation to obtain the upload URL of a file and upload the file to a cloud disk.
+      *
+     */
     @Override
     public CompletableFuture<CreateCdsFileResponse> createCdsFile(CreateCdsFileRequest request) {
         try {
@@ -464,6 +472,20 @@ public final class DefaultAsyncClient implements AsyncClient {
             return this.handler.execute(params);
         } catch (Exception e) {
             CompletableFuture<CreateCdsFileShareLinkResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    @Override
+    public CompletableFuture<CreateCloudDriveUsersResponse> createCloudDriveUsers(CreateCloudDriveUsersRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("CreateCloudDriveUsers").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(CreateCloudDriveUsersResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<CreateCloudDriveUsersResponse> future = new CompletableFuture<>();
             future.completeExceptionally(e);
             return future;
         }
@@ -773,6 +795,20 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    @Override
+    public CompletableFuture<DeleteEduRoomResponse> deleteEduRoom(DeleteEduRoomRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("DeleteEduRoom").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(DeleteEduRoomResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<DeleteEduRoomResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
     /**
       * The IDs of the images that you want to delete. You can configure one or more image IDs. Valid values of N: 1 to 100.
       *
@@ -792,7 +828,9 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * The operation that you want to perform. Set the value to DeleteNASFileSystems.
+      * Before you delete an Apsara File Storage NAS (NAS) file system, make sure that the data you want to retain is backed up.
+      * **
+      * **Warning** If a NAS file system is deleted, data stored in the NAS file system cannot be restored. Proceed with caution when you delete NAS file systems.
       *
      */
     @Override
@@ -824,7 +862,11 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * The operation that you want to perform. Set the value to **DeleteOfficeSites**.
+      * Before you delete a workspace, make sure that the following requirements are met:
+      * *   All cloud desktops in the workspace are released.
+      * *   The data that you want to retain is backed up.
+      * **
+      * **Warning** After you delete a workspace, the resources and data of the workspace cannot be recovered. Exercise with caution.
       *
      */
     @Override
@@ -1012,6 +1054,20 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     @Override
+    public CompletableFuture<DescribeCloudDriveUsersResponse> describeCloudDriveUsers(DescribeCloudDriveUsersRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("DescribeCloudDriveUsers").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(DescribeCloudDriveUsersResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<DescribeCloudDriveUsersResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    @Override
     public CompletableFuture<DescribeCustomizedListHeadersResponse> describeCustomizedListHeaders(DescribeCustomizedListHeadersRequest request) {
         try {
             this.handler.validateRequestModel(request);
@@ -1137,6 +1193,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+      * > You can query only the traffic data in the last 90 days.
+      *
+     */
     @Override
     public CompletableFuture<DescribeFlowStatisticResponse> describeFlowStatistic(DescribeFlowStatisticRequest request) {
         try {
@@ -1254,8 +1314,21 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * *   After you run a command, the command may not succeed or return the expected results. You can call this operation to query the execution result.
-      * *   You can query the execution information in the previous two weeks. Up to 100,000 lines of execution information can be retained.
+      * The error message that is returned if the command failed to be sent or run.
+      * *   If null is returned, the command is run normally.
+      * *   If "the specified instance does not exist" is returned, the specified cloud desktop does not exist or is released.
+      * *   If "the instance has released when create task" is returned, the specified cloud desktop is released during the command execution.
+      * *   If "the instance is not running when create task" is returned, the specified cloud desktop is not in the Running state when the execution is created.
+      * *   If "the command is not applicable" is returned, the command cannot be run on the specified cloud desktop.
+      * *   If "the aliyun service is not running on the instance" is returned, Cloud Assistant is not running.
+      * *   If "the aliyun service in the instance does not response" is returned, Cloud Assistant does not respond to your request.
+      * *   If "the aliyun service in the instance is upgrading now" is returned, Cloud Assistant is being upgraded.
+      * *   If "the aliyun service in the instance need upgrade" is returned, you must upgrade Cloud Assistant.
+      * *   If "the command delivery has been timeout" is returned, the operation to send the command times out.
+      * *   If "the command execution has been timeout" is returned, the command execution times out.
+      * *   If "the command execution got an exception" is returned, an exception occurs during the command execution.
+      * *   If "the command execution has been interrupted" is returned, the command execution is interrupted.
+      * *   If "the command execution exit code is not zero" is returned, the command execution is complete, but the exit code is not 0.
       *
      */
     @Override
@@ -1337,6 +1410,29 @@ public final class DefaultAsyncClient implements AsyncClient {
             return this.handler.execute(params);
         } catch (Exception e) {
             CompletableFuture<DescribePolicyGroupsResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+      * ## Usage notes
+      * The request parameters vary based on the type of desktop resources whose price you want to query. Take note of the following items:
+      * *   If you set ResourceType to OfficeSite, you must specify InstanceType.
+      * *   If you set ResourceType to Bandwidth, the pay-by-data-transfer metering method is used for network billing.
+      * *   If you set ResourceType to Desktop, you must specify InstanceType, RootDiskSizeGib, and UserDiskSizeGib. You can specify OsType, PeriodUnit, Period, and Amount based on your business requirements.
+      * > Before you call this operation to query the prices of cloud desktops by setting ResourceType to Desktop, you must know the desktop types and disk sizes that EDS provides. The disk sizes vary based on the desktop types. For more information, see [Cloud desktop types](~~188609~~).
+      *
+     */
+    @Override
+    public CompletableFuture<DescribePriceResponse> describePrice(DescribePriceRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("DescribePrice").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(DescribePriceResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<DescribePriceResponse> future = new CompletableFuture<>();
             future.completeExceptionally(e);
             return future;
         }
@@ -1683,6 +1779,20 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     @Override
+    public CompletableFuture<GetAsyncTaskResponse> getAsyncTask(GetAsyncTaskRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("GetAsyncTask").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(GetAsyncTaskResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<GetAsyncTaskResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    @Override
     public CompletableFuture<GetConnectionTicketResponse> getConnectionTicket(GetConnectionTicketRequest request) {
         try {
             this.handler.validateRequestModel(request);
@@ -1725,7 +1835,7 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * The ID of the workspace.
+      * You can call this operation only for workspaces of the Active Directory (AD) and convenience account types.
       *
      */
     @Override
@@ -2021,6 +2131,20 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     @Override
+    public CompletableFuture<ModifyCloudDriveUsersResponse> modifyCloudDriveUsers(ModifyCloudDriveUsersRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("ModifyCloudDriveUsers").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(ModifyCloudDriveUsersResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<ModifyCloudDriveUsersResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    @Override
     public CompletableFuture<ModifyCustomizedListHeadersResponse> modifyCustomizedListHeaders(ModifyCustomizedListHeadersRequest request) {
         try {
             this.handler.validateRequestModel(request);
@@ -2106,6 +2230,19 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+      * You can call this operation to change the configurations, such as the desktop type and disk size, of a cloud desktop.
+      * *   Before you call this operation, take note of the cloud desktop types and the disk sizes for each type of cloud desktop that Elastic Desktop Service (EDS) provides. For more information, see [Cloud desktop types](~~188609~~).
+      * *   When you change the configurations of a cloud desktop, you must change the desktop type or the size of the system disk or data disk. You must configure at least one of the following parameters: DesktopType, RootDiskSizeGib, and UserDiskSizeGib. You must take note of the following items:
+      *     *   Each desktop type contains different desktop specifications, such as vCPUs, memory, and GPUs. When you change the desktop configurations, you can only change the desktop type from one to another. However, you cannot change only one of the specifications, such as vCPUs, memory, and GPUs.
+      *     *   You cannot change a cloud desktop from the General Office type to a non-General Office type, or from a non-General Office type to the General Office type. You cannot change a cloud desktop from the Graphics type to a non-Graphics type, or from a non-Graphics type to the Graphics type.
+      *     *   You can only increase the sizes of system and data disks.
+      *     *   If your cloud desktop uses the subscription billing method, the price difference is calculated based on the price before and after configuration changes. You may receive a refund, or pay for the price difference.
+      *     *   If you want to change the configurations of your cloud desktop for multiple times, we recommend that you wait at least 5 minutes the next time you change the configurations of the same cloud desktop.
+      *     *   The cloud desktop for which you want to change configurations must be in the Stopped state.
+      * *   The changes do not affect your personal data on the cloud desktop.
+      *
+     */
     @Override
     public CompletableFuture<ModifyDesktopSpecResponse> modifyDesktopSpec(ModifyDesktopSpecRequest request) {
         try {
@@ -2115,6 +2252,20 @@ public final class DefaultAsyncClient implements AsyncClient {
             return this.handler.execute(params);
         } catch (Exception e) {
             CompletableFuture<ModifyDesktopSpecResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    @Override
+    public CompletableFuture<ModifyDesktopTimerResponse> modifyDesktopTimer(ModifyDesktopTimerRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("ModifyDesktopTimer").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(ModifyDesktopTimerResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<ModifyDesktopTimerResponse> future = new CompletableFuture<>();
             future.completeExceptionally(e);
             return future;
         }
@@ -2162,7 +2313,7 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * The ID of the request.
+      * The cloud desktop must be in the Running state.
       *
      */
     @Override
@@ -2483,6 +2634,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+      * > You can call this operation to reset only cloud desktops that are managed by a cloud desktop group. You cannot reset an independent cloud desktop.
+      *
+     */
     @Override
     public CompletableFuture<ResetDesktopsResponse> resetDesktops(ResetDesktopsRequest request) {
         try {
@@ -2516,7 +2671,11 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * The ID of the request.
+      * Before you call this operation, make sure that the following operations are performed:
+      * *   The data that you want to retain in the disk is backed up.
+      *     **
+      *     **Note**The disk restoration operation is irreversible. After you restore data on a disk, the disk is restored to the status at the point in time when the snapshot was created. Data that is generated between the snapshot creation time and the current time is lost. Before you restore a disk from a snapshot, make sure that you back up important data.
+      * *   The cloud desktop whose disk you want to restore is stopped.
       *
      */
     @Override
@@ -2579,6 +2738,11 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+      * ## Description
+      * When you attach your workspace network to a Cloud Enterprise Network (CEN) instance in another Alibaba Cloud account, you need to call this operation to obtain a verification code. After the call is successful, the system sends a verification code to the email address associated with the Alibaba Cloud account.
+      *
+     */
     @Override
     public CompletableFuture<SendVerifyCodeResponse> sendVerifyCode(SendVerifyCodeRequest request) {
         try {
@@ -2635,6 +2799,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+      * This operation is supported only for AD directories, not for RAM directories.
+      *
+     */
     @Override
     public CompletableFuture<SetDirectorySsoStatusResponse> setDirectorySsoStatus(SetDirectorySsoStatusRequest request) {
         try {
@@ -2650,7 +2818,7 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * The entityID value obtained after the IdP metadata file is parsed.
+      * You can call this operation only for workspaces of the Active Directory (AD) and convenience account types.
       *
      */
     @Override

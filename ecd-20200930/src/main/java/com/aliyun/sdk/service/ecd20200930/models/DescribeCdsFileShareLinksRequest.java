@@ -140,7 +140,7 @@ public class DescribeCdsFileShareLinksRequest extends Request {
         } 
 
         /**
-         * CdsId.
+         * The ID of the cloud disk.
          */
         public Builder cdsId(String cdsId) {
             this.putQueryParameter("CdsId", cdsId);
@@ -149,7 +149,7 @@ public class DescribeCdsFileShareLinksRequest extends Request {
         }
 
         /**
-         * Creators.
+         * The users that create the file sharing links.
          */
         public Builder creators(java.util.List < String > creators) {
             this.putQueryParameter("Creators", creators);
@@ -158,7 +158,7 @@ public class DescribeCdsFileShareLinksRequest extends Request {
         }
 
         /**
-         * MaxResults.
+         * The maximum number of resources to return. Valid values: 1 to 100. Default value: 100. The number of returned resources must be less than or equal to the specified number.
          */
         public Builder maxResults(Integer maxResults) {
             this.putQueryParameter("MaxResults", maxResults);
@@ -167,7 +167,7 @@ public class DescribeCdsFileShareLinksRequest extends Request {
         }
 
         /**
-         * NextToken.
+         * Specifies the marker after which the returned list begins. If this parameter is not specified, all results are returned. Default value: null.
          */
         public Builder nextToken(String nextToken) {
             this.putQueryParameter("NextToken", nextToken);
@@ -176,7 +176,7 @@ public class DescribeCdsFileShareLinksRequest extends Request {
         }
 
         /**
-         * ShareId.
+         * The ID of the file sharing link.
          */
         public Builder shareId(String shareId) {
             this.putQueryParameter("ShareId", shareId);
@@ -185,7 +185,7 @@ public class DescribeCdsFileShareLinksRequest extends Request {
         }
 
         /**
-         * ShareName.
+         * The sharing name for fuzzy search.
          */
         public Builder shareName(String shareName) {
             this.putQueryParameter("ShareName", shareName);
@@ -194,7 +194,7 @@ public class DescribeCdsFileShareLinksRequest extends Request {
         }
 
         /**
-         * Status.
+         * The file sharing status. Valid values: ● disabled: canceled ● enabled: valid
          */
         public Builder status(String status) {
             this.putQueryParameter("Status", status);

@@ -115,7 +115,7 @@ public class CompleteCdsFileRequest extends Request {
         } 
 
         /**
-         * CdsId.
+         * The ID of the cloud disk.
          */
         public Builder cdsId(String cdsId) {
             this.putQueryParameter("CdsId", cdsId);
@@ -124,7 +124,7 @@ public class CompleteCdsFileRequest extends Request {
         }
 
         /**
-         * EndUserId.
+         * The name of the end user.
          */
         public Builder endUserId(String endUserId) {
             this.putQueryParameter("EndUserId", endUserId);
@@ -133,7 +133,7 @@ public class CompleteCdsFileRequest extends Request {
         }
 
         /**
-         * FileId.
+         * The file ID. An ID is the unique identifier of a file.
          */
         public Builder fileId(String fileId) {
             this.putQueryParameter("FileId", fileId);
@@ -142,7 +142,7 @@ public class CompleteCdsFileRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * The region ID. You can call the DescribeRegions operation to query the most recent region list.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -151,7 +151,7 @@ public class CompleteCdsFileRequest extends Request {
         }
 
         /**
-         * UploadId.
+         * The ID of the file uploading task.
          */
         public Builder uploadId(String uploadId) {
             this.putQueryParameter("UploadId", uploadId);

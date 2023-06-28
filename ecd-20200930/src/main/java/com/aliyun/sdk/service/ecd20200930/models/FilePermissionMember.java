@@ -76,7 +76,7 @@ public class FilePermissionMember extends TeaModel {
         private String roleId; 
 
         /**
-         * 用户对象
+         * CdsIdentity.
          */
         public Builder cdsIdentity(CdsIdentity cdsIdentity) {
             this.cdsIdentity = cdsIdentity;
@@ -84,7 +84,7 @@ public class FilePermissionMember extends TeaModel {
         }
 
         /**
-         * 子用户组是否继承
+         * DisinheritSubGroup.
          */
         public Builder disinheritSubGroup(Boolean disinheritSubGroup) {
             this.disinheritSubGroup = disinheritSubGroup;
@@ -92,7 +92,7 @@ public class FilePermissionMember extends TeaModel {
         }
 
         /**
-         * 过期时间
+         * ExpireTime.
          */
         public Builder expireTime(Long expireTime) {
             this.expireTime = expireTime;
@@ -100,7 +100,7 @@ public class FilePermissionMember extends TeaModel {
         }
 
         /**
-         * 角色ID
+         * RoleId.
          */
         public Builder roleId(String roleId) {
             this.roleId = roleId;
@@ -154,7 +154,7 @@ public class FilePermissionMember extends TeaModel {
             private String type; 
 
             /**
-             * 用户ID
+             * Id.
              */
             public Builder id(String id) {
                 this.id = id;
@@ -162,7 +162,7 @@ public class FilePermissionMember extends TeaModel {
             }
 
             /**
-             * 用户类型
+             * Type.
              */
             public Builder type(String type) {
                 this.type = type;

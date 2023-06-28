@@ -219,7 +219,7 @@ public class DescribeSnapshotsRequest extends Request {
         }
 
         /**
-         * The ID of the snapshot.
+         * The cloud desktop ID.
          */
         public Builder desktopId(String desktopId) {
             this.putQueryParameter("DesktopId", desktopId);
@@ -228,10 +228,7 @@ public class DescribeSnapshotsRequest extends Request {
         }
 
         /**
-         * The name of the snapshot. The name must be 2 to 128 characters in length. It can contain letters, digits, colons (:), underscores (\_), and hyphens (-). It must start with a letter and cannot start with `http://` or `https://`.
-         * <p>
-         * 
-         * It cannot start with `auto` because snapshots whose names start with auto are recognized as automatic snapshots.
+         * The cloud desktop name.
          */
         public Builder desktopName(String desktopName) {
             this.putQueryParameter("DesktopName", desktopName);
@@ -240,11 +237,7 @@ public class DescribeSnapshotsRequest extends Request {
         }
 
         /**
-         * The maximum number of entries to return on each page.
-         * <p>
-         * 
-         * *   Maximum value: 100
-         * *   Default value: 10
+         * The end of the time range to query. The query is performed based on the time when the system stopped creating a snapshot. Specify the time in the [ISO 8601](~~25696~~) standard in the yyyy-mm-ddthh:mm:ssz format. The time must be in UTC.
          */
         public Builder endTime(String endTime) {
             this.putQueryParameter("EndTime", endTime);
@@ -253,7 +246,11 @@ public class DescribeSnapshotsRequest extends Request {
         }
 
         /**
-         * The token that is used to start the next query. If the value of this parameter is empty, all results are returned.
+         * The maximum number of entries to return on each page.
+         * <p>
+         * 
+         * *   Valid values: 1 to 100
+         * *   Default value: 10
          */
         public Builder maxResults(Integer maxResults) {
             this.putQueryParameter("MaxResults", maxResults);
@@ -262,7 +259,7 @@ public class DescribeSnapshotsRequest extends Request {
         }
 
         /**
-         * The information that is returned.
+         * The pagination token that is used in the next request to retrieve a new page of results. You must specify the token that is obtained from the previous query as the value of NextToken.
          */
         public Builder nextToken(String nextToken) {
             this.putQueryParameter("NextToken", nextToken);
@@ -271,7 +268,7 @@ public class DescribeSnapshotsRequest extends Request {
         }
 
         /**
-         * The name of the cloud desktop.
+         * The region ID. You can call the [DescribeRegions](~~196646~~) operation to query the most recent region list.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -280,7 +277,7 @@ public class DescribeSnapshotsRequest extends Request {
         }
 
         /**
-         * test data disk
+         * The snapshot ID.
          */
         public Builder snapshotId(String snapshotId) {
             this.putQueryParameter("SnapshotId", snapshotId);
@@ -289,13 +286,10 @@ public class DescribeSnapshotsRequest extends Request {
         }
 
         /**
-         * The type of the source disk for which you want to create the snapshot. Valid values:
+         * The snapshot name. The name must be 2 to 128 characters in length and can contain letters, digits, colons (:), underscores (\_), and hyphens (-). The name must start with a letter but cannot start with `http://` or `https://`.
          * <p>
          * 
-         * *   System: system disk
-         * *   Data: data disk
-         * 
-         * > The value of this parameter is not case-sensitive.
+         * The name cannot start with `auto` because snapshots whose names start with auto are recognized as automatic snapshots.
          */
         public Builder snapshotName(String snapshotName) {
             this.putQueryParameter("SnapshotName", snapshotName);
@@ -304,7 +298,14 @@ public class DescribeSnapshotsRequest extends Request {
         }
 
         /**
-         * The time when you want to stop creating the snapshot. Specify the time in the [ISO 8601](~~25696~~) standard in the yyyy-mm-ddthh:mm:ssz format. The time must be in UTC.
+         * The snapshot type.
+         * <p>
+         * 
+         * Valid values:
+         * 
+         * *   auto: automatic snapshot
+         * *   user: manual snapshot
+         * *   all (default): all types of snapshots
          */
         public Builder snapshotType(String snapshotType) {
             this.putQueryParameter("SnapshotType", snapshotType);
@@ -313,7 +314,13 @@ public class DescribeSnapshotsRequest extends Request {
         }
 
         /**
-         * The time when you want to create the snapshot. Specify the time in the [ISO 8601](~~25696~~) standard in the yyyy-mm-ddthh:mm:ssz format. The time must be in UTC.
+         * The type of the source disk of which you want to query snapshots. Valid values:
+         * <p>
+         * 
+         * *   System: system disk
+         * *   Data: data disk
+         * 
+         * > The value of this parameter is not case-sensitive.
          */
         public Builder sourceDiskType(String sourceDiskType) {
             this.putQueryParameter("SourceDiskType", sourceDiskType);
@@ -322,7 +329,7 @@ public class DescribeSnapshotsRequest extends Request {
         }
 
         /**
-         * The token that determines the start point of the query. Set the value to the value of NextToken that is returned from the last call.
+         * The beginning of the time range to query. The query is performed based on the time when the system created a snapshot. Specify the time in the [ISO 8601](~~25696~~) standard in the yyyy-mm-ddthh:mm:ssz format. The time must be in UTC.
          */
         public Builder startTime(String startTime) {
             this.putQueryParameter("StartTime", startTime);

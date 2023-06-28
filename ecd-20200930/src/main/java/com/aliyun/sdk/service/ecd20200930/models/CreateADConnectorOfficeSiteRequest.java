@@ -325,7 +325,7 @@ public class CreateADConnectorOfficeSiteRequest extends Request {
         } 
 
         /**
-         * AdHostname.
+         * The hostname of the domain controller. The hostname must comply with the naming conventions for Windows hosts.
          */
         public Builder adHostname(String adHostname) {
             this.putQueryParameter("AdHostname", adHostname);
@@ -334,7 +334,9 @@ public class CreateADConnectorOfficeSiteRequest extends Request {
         }
 
         /**
-         * Bandwidth.
+         * The maximum public bandwidth of the Internet access package. Valid values: 0 to 200.\
+         * <p>
+         * If you do not specify this parameter or you set this parameter to 0, Internet access is disabled.
          */
         public Builder bandwidth(Integer bandwidth) {
             this.putQueryParameter("Bandwidth", bandwidth);
@@ -343,7 +345,7 @@ public class CreateADConnectorOfficeSiteRequest extends Request {
         }
 
         /**
-         * CenId.
+         * The ID of the CEN instance.
          */
         public Builder cenId(String cenId) {
             this.putQueryParameter("CenId", cenId);
@@ -352,7 +354,11 @@ public class CreateADConnectorOfficeSiteRequest extends Request {
         }
 
         /**
-         * CenOwnerId.
+         * The ID of the Alibaba Cloud account to which the Cloud Enterprise Network (CEN) instance belongs.
+         * <p>
+         * 
+         * *   If you do not specify CenId or the CEN instance that is specified by CenId belongs to the current Alibaba Cloud account, leave this parameter empty.
+         * *   If you specify CenId and the CEN instance that is specified by CenId belongs to another Alibaba Cloud account, enter the ID of the Alibaba Cloud account.
          */
         public Builder cenOwnerId(Long cenOwnerId) {
             this.putQueryParameter("CenOwnerId", cenOwnerId);
@@ -361,7 +367,7 @@ public class CreateADConnectorOfficeSiteRequest extends Request {
         }
 
         /**
-         * CidrBlock.
+         * The IPv4 CIDR block in the secure office network of the workspace. The IPv4 CIDR block that the system uses to create a virtual private cloud (VPC) for the workspace. We recommend that you set the IPv4 CIDR block to 10.0.0.0/12, 172.16.0.0/12, 192.168.0.0/16, or a subnet of these CIDR blocks. If you set the IPv4 CIDR block to 10.0.0.0/12 or 172.16.0.0/12, the mask is 1224 bits in length. If you set the IPv4 CIDR block to 192.168.0.0/16, the mask is 1624 bits in length.
          */
         public Builder cidrBlock(String cidrBlock) {
             this.putQueryParameter("CidrBlock", cidrBlock);
@@ -370,7 +376,16 @@ public class CreateADConnectorOfficeSiteRequest extends Request {
         }
 
         /**
-         * DesktopAccessType.
+         * The connection method that is used to connect clients to cloud desktops. Valid values:
+         * <p>
+         * 
+         * *   Internet: connects clients to cloud desktops only over the Internet.
+         * *   VPC: connects clients to cloud desktops only over a VPC.
+         * *   Any: connects clients to cloud desktops over the Internet or a VPC. You can select a connection method based on your business requirements when you connect to your cloud desktop from a client.
+         * 
+         * Default value: Internet
+         * 
+         * > VPC connections are established by using Alibaba Cloud PrivateLink. You can use PrivateLink free of charge. If you set this parameter to VPC or Any, PrivateLink is automatically activated.
          */
         public Builder desktopAccessType(String desktopAccessType) {
             this.putQueryParameter("DesktopAccessType", desktopAccessType);
@@ -379,7 +394,7 @@ public class CreateADConnectorOfficeSiteRequest extends Request {
         }
 
         /**
-         * DnsAddress.
+         * The IP address of the DNS server of the enterprise AD system. You can specify only one IP address.
          */
         public Builder dnsAddress(java.util.List < String > dnsAddress) {
             this.putQueryParameter("DnsAddress", dnsAddress);
@@ -388,7 +403,7 @@ public class CreateADConnectorOfficeSiteRequest extends Request {
         }
 
         /**
-         * DomainName.
+         * The domain name of the enterprise AD system. You can register each domain name only once.
          */
         public Builder domainName(String domainName) {
             this.putQueryParameter("DomainName", domainName);
@@ -397,7 +412,7 @@ public class CreateADConnectorOfficeSiteRequest extends Request {
         }
 
         /**
-         * DomainPassword.
+         * The password of the domain administrator. The password can be up to 64 characters in length.
          */
         public Builder domainPassword(String domainPassword) {
             this.putQueryParameter("DomainPassword", domainPassword);
@@ -406,7 +421,10 @@ public class CreateADConnectorOfficeSiteRequest extends Request {
         }
 
         /**
-         * DomainUserName.
+         * The username of the domain administrator. The username can be up to 64 characters in length.
+         * <p>
+         * 
+         * > Specify the username by using sAMAccountName instead of userPrincipalName.
          */
         public Builder domainUserName(String domainUserName) {
             this.putQueryParameter("DomainUserName", domainUserName);
@@ -415,7 +433,7 @@ public class CreateADConnectorOfficeSiteRequest extends Request {
         }
 
         /**
-         * EnableAdminAccess.
+         * Specifies whether to grant the permissions of the local administrator to end users of the cloud desktops that belong to the workspace. Default value: `true`
          */
         public Builder enableAdminAccess(Boolean enableAdminAccess) {
             this.putQueryParameter("EnableAdminAccess", enableAdminAccess);
@@ -424,7 +442,7 @@ public class CreateADConnectorOfficeSiteRequest extends Request {
         }
 
         /**
-         * EnableInternetAccess.
+         * Specifies whether to enable Internet access.
          */
         public Builder enableInternetAccess(Boolean enableInternetAccess) {
             this.putQueryParameter("EnableInternetAccess", enableInternetAccess);
@@ -433,7 +451,7 @@ public class CreateADConnectorOfficeSiteRequest extends Request {
         }
 
         /**
-         * MfaEnabled.
+         * Specifies whether to enable multi-factor authentication (MFA).
          */
         public Builder mfaEnabled(Boolean mfaEnabled) {
             this.putQueryParameter("MfaEnabled", mfaEnabled);
@@ -442,7 +460,9 @@ public class CreateADConnectorOfficeSiteRequest extends Request {
         }
 
         /**
-         * OfficeSiteName.
+         * The name of the workspace. The name must be 2 to 255 characters in length. The name must start with a letter but cannot start with `http://` or `https://`. The name can contain letters, digits, colons (:), underscores (\_), and hyphens (-).\
+         * <p>
+         * Default value: null
          */
         public Builder officeSiteName(String officeSiteName) {
             this.putQueryParameter("OfficeSiteName", officeSiteName);
@@ -451,7 +471,7 @@ public class CreateADConnectorOfficeSiteRequest extends Request {
         }
 
         /**
-         * ProtocolType.
+         * The type of the protocol. Set the value to ASP.
          */
         public Builder protocolType(String protocolType) {
             this.putQueryParameter("ProtocolType", protocolType);
@@ -460,7 +480,7 @@ public class CreateADConnectorOfficeSiteRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * The region ID of the workspace.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -469,7 +489,11 @@ public class CreateADConnectorOfficeSiteRequest extends Request {
         }
 
         /**
-         * Specification.
+         * The type of the AD connector.
+         * <p>
+         * 
+         * *   1: General
+         * *   2: Advanced
          */
         public Builder specification(Long specification) {
             this.putQueryParameter("Specification", specification);
@@ -478,7 +502,7 @@ public class CreateADConnectorOfficeSiteRequest extends Request {
         }
 
         /**
-         * SubDomainDnsAddress.
+         * The DNS address of the enterprise AD subdomain. If you specify `SubDomainName` but do not specify this parameter, the DNS address of the subdomain is the same as the DNS address of the parent domain.
          */
         public Builder subDomainDnsAddress(java.util.List < String > subDomainDnsAddress) {
             this.putQueryParameter("SubDomainDnsAddress", subDomainDnsAddress);
@@ -487,7 +511,7 @@ public class CreateADConnectorOfficeSiteRequest extends Request {
         }
 
         /**
-         * SubDomainName.
+         * The domain name of the enterprise AD subdomain.
          */
         public Builder subDomainName(String subDomainName) {
             this.putQueryParameter("SubDomainName", subDomainName);
@@ -496,7 +520,7 @@ public class CreateADConnectorOfficeSiteRequest extends Request {
         }
 
         /**
-         * VerifyCode.
+         * The verification code. If the CEN instance that is specified by CenId belongs to another Alibaba Cloud account, you must call the SendVerifyCode operation to obtain the verification code.
          */
         public Builder verifyCode(String verifyCode) {
             this.putQueryParameter("VerifyCode", verifyCode);

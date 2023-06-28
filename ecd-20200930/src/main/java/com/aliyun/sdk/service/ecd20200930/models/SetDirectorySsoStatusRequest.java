@@ -85,7 +85,7 @@ public class SetDirectorySsoStatusRequest extends Request {
         } 
 
         /**
-         * DirectoryId.
+         * The AD directory ID.
          */
         public Builder directoryId(String directoryId) {
             this.putQueryParameter("DirectoryId", directoryId);
@@ -94,7 +94,11 @@ public class SetDirectorySsoStatusRequest extends Request {
         }
 
         /**
-         * EnableSso.
+         * Specifies whether to enable SSO. Valid values:
+         * <p>
+         * 
+         * *   true: enables SSO.
+         * *   false: disables SSO.
          */
         public Builder enableSso(Boolean enableSso) {
             this.putQueryParameter("EnableSso", enableSso);
@@ -103,7 +107,7 @@ public class SetDirectorySsoStatusRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * The region ID.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);

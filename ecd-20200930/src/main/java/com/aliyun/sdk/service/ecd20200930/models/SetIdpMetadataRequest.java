@@ -98,7 +98,7 @@ public class SetIdpMetadataRequest extends Request {
         } 
 
         /**
-         * The ID of the request.
+         * The workspace ID. This parameter is the same as `OfficeSiteId`. We recommend that you use `OfficeSiteId` to replace `DirectoryId`. You can specify only `DirectoryId` or `OfficeSiteId`.
          */
         public Builder directoryId(String directoryId) {
             this.putQueryParameter("DirectoryId", directoryId);
@@ -107,7 +107,7 @@ public class SetIdpMetadataRequest extends Request {
         }
 
         /**
-         * IdpMetadata.
+         * The metadata of the IdP.
          */
         public Builder idpMetadata(String idpMetadata) {
             this.putQueryParameter("IdpMetadata", idpMetadata);
@@ -116,7 +116,7 @@ public class SetIdpMetadataRequest extends Request {
         }
 
         /**
-         * The operation that you want to perform. Set the value to SetIdpMetadata.
+         * The workspace ID.
          */
         public Builder officeSiteId(String officeSiteId) {
             this.putQueryParameter("OfficeSiteId", officeSiteId);
@@ -125,7 +125,7 @@ public class SetIdpMetadataRequest extends Request {
         }
 
         /**
-         * The metadata of the IdP.
+         * The region ID.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);

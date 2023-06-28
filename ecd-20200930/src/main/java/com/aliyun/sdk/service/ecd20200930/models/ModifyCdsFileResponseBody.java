@@ -86,7 +86,7 @@ public class ModifyCdsFileResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * Code.
+         * The modification result. The value success indicates that the modification is successful. If the modification failed, an error message is returned.
          */
         public Builder code(String code) {
             this.code = code;
@@ -94,7 +94,7 @@ public class ModifyCdsFileResponseBody extends TeaModel {
         }
 
         /**
-         * Data.
+         * The value true returned if the request is successful.
          */
         public Builder data(String data) {
             this.data = data;
@@ -102,7 +102,7 @@ public class ModifyCdsFileResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * The error message returned if the request failed.
          */
         public Builder message(String message) {
             this.message = message;
@@ -110,7 +110,7 @@ public class ModifyCdsFileResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -118,7 +118,7 @@ public class ModifyCdsFileResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * Indicates whether the request is successful. Valid values: true: The request is successful. false: The request failed.
          */
         public Builder success(Boolean success) {
             this.success = success;

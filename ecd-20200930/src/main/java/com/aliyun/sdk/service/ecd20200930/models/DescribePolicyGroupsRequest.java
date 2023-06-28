@@ -112,7 +112,11 @@ public class DescribePolicyGroupsRequest extends Request {
         } 
 
         /**
-         * MaxResults.
+         * The number of entries per page.
+         * <p>
+         * 
+         * *   Valid values: 1 to 100
+         * *   Default value: 10
          */
         public Builder maxResults(Integer maxResults) {
             this.putQueryParameter("MaxResults", maxResults);
@@ -121,7 +125,7 @@ public class DescribePolicyGroupsRequest extends Request {
         }
 
         /**
-         * NextToken.
+         * The pagination token that is used in the next request to retrieve a new page of results. You do not need to specify this parameter for the first request. You must specify the token that is obtained from the previous query as the value of NextToken.
          */
         public Builder nextToken(String nextToken) {
             this.putQueryParameter("NextToken", nextToken);
@@ -130,7 +134,7 @@ public class DescribePolicyGroupsRequest extends Request {
         }
 
         /**
-         * PolicyGroupId.
+         * The policy IDs. You can specify one or more policy IDs.
          */
         public Builder policyGroupId(java.util.List < String > policyGroupId) {
             this.putQueryParameter("PolicyGroupId", policyGroupId);
@@ -139,7 +143,7 @@ public class DescribePolicyGroupsRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * The region ID. You can call the [DescribeRegions](~~196646~~) operation to query the most recent region list.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -148,7 +152,14 @@ public class DescribePolicyGroupsRequest extends Request {
         }
 
         /**
-         * Scope.
+         * The effective scope of the policy. Valid values:
+         * <p>
+         * 
+         * *   GLOBAL: The policy takes effect globally.
+         * *   IP: The policy takes effect based on the IP address.
+         * *   ALL: The policy takes effect without limits.
+         * 
+         * Default value: GLOBAL.
          */
         public Builder scope(String scope) {
             this.putQueryParameter("Scope", scope);

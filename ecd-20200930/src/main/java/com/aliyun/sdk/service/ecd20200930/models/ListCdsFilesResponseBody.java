@@ -110,7 +110,7 @@ public class ListCdsFilesResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * Code.
+         * The result of the operation. A value of success indicates that the operation is successful. If the operation failed, an error message is returned.
          */
         public Builder code(String code) {
             this.code = code;
@@ -118,7 +118,7 @@ public class ListCdsFilesResponseBody extends TeaModel {
         }
 
         /**
-         * Count.
+         * The total number of entries.
          */
         public Builder count(String count) {
             this.count = count;
@@ -126,7 +126,7 @@ public class ListCdsFilesResponseBody extends TeaModel {
         }
 
         /**
-         * FileModels.
+         * The files.
          */
         public Builder fileModels(java.util.List < FileModels> fileModels) {
             this.fileModels = fileModels;
@@ -134,7 +134,7 @@ public class ListCdsFilesResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * The error message returned if the request failed. This parameter is empty if the value of Code is success.
          */
         public Builder message(String message) {
             this.message = message;
@@ -142,7 +142,7 @@ public class ListCdsFilesResponseBody extends TeaModel {
         }
 
         /**
-         * NextToken.
+         * The token used for the next query. If this parameter is empty, all results have been returned.
          */
         public Builder nextToken(String nextToken) {
             this.nextToken = nextToken;
@@ -150,7 +150,7 @@ public class ListCdsFilesResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The request ID. An ID is the unique identifier of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -158,7 +158,26 @@ public class ListCdsFilesResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * Indicates whether the request is successful.
+         * <p>
+         * 
+         * Valid values:
+         * 
+         * *   true
+         * 
+         *     <!-- -->
+         * 
+         *     <!-- -->
+         * 
+         *     <!-- -->
+         * 
+         * *   <!-- -->
+         * 
+         *     false
+         * 
+         *     <!-- -->
+         * 
+         *     <!-- -->
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -438,7 +457,7 @@ public class ListCdsFilesResponseBody extends TeaModel {
             private String thumbnail; 
 
             /**
-             * Category.
+             * The file category. PDS categorizes files based on their suffixes and MIME types. The following major categories are included: doc, image, audio, and video.
              */
             public Builder category(String category) {
                 this.category = category;
@@ -446,7 +465,7 @@ public class ListCdsFilesResponseBody extends TeaModel {
             }
 
             /**
-             * ContentType.
+             * The content type of the file.
              */
             public Builder contentType(String contentType) {
                 this.contentType = contentType;
@@ -454,7 +473,7 @@ public class ListCdsFilesResponseBody extends TeaModel {
             }
 
             /**
-             * CreateTime.
+             * The time when the file was created.
              */
             public Builder createTime(String createTime) {
                 this.createTime = createTime;
@@ -462,7 +481,7 @@ public class ListCdsFilesResponseBody extends TeaModel {
             }
 
             /**
-             * Creator.
+             * The file creator.
              */
             public Builder creator(String creator) {
                 this.creator = creator;
@@ -470,7 +489,7 @@ public class ListCdsFilesResponseBody extends TeaModel {
             }
 
             /**
-             * Description.
+             * The file description.
              */
             public Builder description(String description) {
                 this.description = description;
@@ -478,7 +497,7 @@ public class ListCdsFilesResponseBody extends TeaModel {
             }
 
             /**
-             * DownloadUrl.
+             * The URL that is used to download the file. The download URL is valid for only 15 minutes. If the URL is expired, you can call the GetFile operation to obtain the file.
              */
             public Builder downloadUrl(String downloadUrl) {
                 this.downloadUrl = downloadUrl;
@@ -486,7 +505,7 @@ public class ListCdsFilesResponseBody extends TeaModel {
             }
 
             /**
-             * FileExtension.
+             * The filename extension.
              */
             public Builder fileExtension(String fileExtension) {
                 this.fileExtension = fileExtension;
@@ -494,7 +513,7 @@ public class ListCdsFilesResponseBody extends TeaModel {
             }
 
             /**
-             * FileId.
+             * The file ID.
              */
             public Builder fileId(String fileId) {
                 this.fileId = fileId;
@@ -502,7 +521,7 @@ public class ListCdsFilesResponseBody extends TeaModel {
             }
 
             /**
-             * FilePath.
+             * The file path.
              */
             public Builder filePath(String filePath) {
                 this.filePath = filePath;
@@ -510,7 +529,7 @@ public class ListCdsFilesResponseBody extends TeaModel {
             }
 
             /**
-             * FileType.
+             * The file type.
              */
             public Builder fileType(String fileType) {
                 this.fileType = fileType;
@@ -518,7 +537,7 @@ public class ListCdsFilesResponseBody extends TeaModel {
             }
 
             /**
-             * Md5.
+             * The MD5 value of the file.
              */
             public Builder md5(String md5) {
                 this.md5 = md5;
@@ -526,7 +545,7 @@ public class ListCdsFilesResponseBody extends TeaModel {
             }
 
             /**
-             * ModifiedTime.
+             * The time when the file was last modified.
              */
             public Builder modifiedTime(String modifiedTime) {
                 this.modifiedTime = modifiedTime;
@@ -534,7 +553,7 @@ public class ListCdsFilesResponseBody extends TeaModel {
             }
 
             /**
-             * Modifier.
+             * The user who modified the file.
              */
             public Builder modifier(String modifier) {
                 this.modifier = modifier;
@@ -542,7 +561,7 @@ public class ListCdsFilesResponseBody extends TeaModel {
             }
 
             /**
-             * Name.
+             * The file name.
              */
             public Builder name(String name) {
                 this.name = name;
@@ -550,7 +569,7 @@ public class ListCdsFilesResponseBody extends TeaModel {
             }
 
             /**
-             * OpenTime.
+             * The time when the file was last opened.
              */
             public Builder openTime(String openTime) {
                 this.openTime = openTime;
@@ -558,7 +577,7 @@ public class ListCdsFilesResponseBody extends TeaModel {
             }
 
             /**
-             * OpenTimeStamp.
+             * The timestamp that indicates the time when the file was last opened.
              */
             public Builder openTimeStamp(Long openTimeStamp) {
                 this.openTimeStamp = openTimeStamp;
@@ -566,7 +585,7 @@ public class ListCdsFilesResponseBody extends TeaModel {
             }
 
             /**
-             * ParentId.
+             * The ID of the parent folder.
              */
             public Builder parentId(String parentId) {
                 this.parentId = parentId;
@@ -574,7 +593,7 @@ public class ListCdsFilesResponseBody extends TeaModel {
             }
 
             /**
-             * RegionId.
+             * The region ID You can call the [DescribeRegions](~~196646~~) operation to query the most recent region list.
              */
             public Builder regionId(String regionId) {
                 this.regionId = regionId;
@@ -582,7 +601,7 @@ public class ListCdsFilesResponseBody extends TeaModel {
             }
 
             /**
-             * Sha1.
+             * The SHA 1 file.
              */
             public Builder sha1(String sha1) {
                 this.sha1 = sha1;
@@ -590,7 +609,7 @@ public class ListCdsFilesResponseBody extends TeaModel {
             }
 
             /**
-             * Size.
+             * The file size. Unit: bits.
              */
             public Builder size(Long size) {
                 this.size = size;
@@ -598,7 +617,7 @@ public class ListCdsFilesResponseBody extends TeaModel {
             }
 
             /**
-             * Thumbnail.
+             * The URL of the thumbnail.
              */
             public Builder thumbnail(String thumbnail) {
                 this.thumbnail = thumbnail;

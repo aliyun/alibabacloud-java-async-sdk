@@ -98,7 +98,7 @@ public class DescribeCdsFileShareLinksResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * Code.
+         * The operation result. A value of success indicates that the operation is successful. If the operation failed, an error message is returned.
          */
         public Builder code(String code) {
             this.code = code;
@@ -106,7 +106,7 @@ public class DescribeCdsFileShareLinksResponseBody extends TeaModel {
         }
 
         /**
-         * Data.
+         * The data information.
          */
         public Builder data(java.util.List < CdsFileShareLinkModel > data) {
             this.data = data;
@@ -114,7 +114,7 @@ public class DescribeCdsFileShareLinksResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * The error message that is returned. This parameter is not returned if the value of Code is `success`.
          */
         public Builder message(String message) {
             this.message = message;
@@ -122,7 +122,7 @@ public class DescribeCdsFileShareLinksResponseBody extends TeaModel {
         }
 
         /**
-         * NextToken.
+         * A pagination token. It can be used in the next request to retrieve a new page of results. If NextToken is empty, no next page exists.
          */
         public Builder nextToken(String nextToken) {
             this.nextToken = nextToken;
@@ -130,7 +130,7 @@ public class DescribeCdsFileShareLinksResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -138,7 +138,7 @@ public class DescribeCdsFileShareLinksResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * Indicates whether the request was successful.
          */
         public Builder success(Boolean success) {
             this.success = success;

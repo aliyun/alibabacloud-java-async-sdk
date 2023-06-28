@@ -326,7 +326,7 @@ public class CdsFileShareLinkModel extends TeaModel {
         private Long videoPreviewCount; 
 
         /**
-         * 访问次数
+         * AccessCount.
          */
         public Builder accessCount(Long accessCount) {
             this.accessCount = accessCount;
@@ -334,7 +334,7 @@ public class CdsFileShareLinkModel extends TeaModel {
         }
 
         /**
-         * 创建时间
+         * CreateTime.
          */
         public Builder createTime(String createTime) {
             this.createTime = createTime;
@@ -342,7 +342,7 @@ public class CdsFileShareLinkModel extends TeaModel {
         }
 
         /**
-         * 创建者
+         * Creator.
          */
         public Builder creator(String creator) {
             this.creator = creator;
@@ -350,7 +350,7 @@ public class CdsFileShareLinkModel extends TeaModel {
         }
 
         /**
-         * 描述
+         * Description.
          */
         public Builder description(String description) {
             this.description = description;
@@ -358,7 +358,7 @@ public class CdsFileShareLinkModel extends TeaModel {
         }
 
         /**
-         * 禁止下载分享中的文件
+         * DisableDownload.
          */
         public Builder disableDownload(Boolean disableDownload) {
             this.disableDownload = disableDownload;
@@ -366,7 +366,7 @@ public class CdsFileShareLinkModel extends TeaModel {
         }
 
         /**
-         * 禁止预览分享中的文件
+         * DisablePreview.
          */
         public Builder disablePreview(Boolean disablePreview) {
             this.disablePreview = disablePreview;
@@ -374,7 +374,7 @@ public class CdsFileShareLinkModel extends TeaModel {
         }
 
         /**
-         * 禁止转存分享中的文件
+         * DisableSave.
          */
         public Builder disableSave(Boolean disableSave) {
             this.disableSave = disableSave;
@@ -382,7 +382,7 @@ public class CdsFileShareLinkModel extends TeaModel {
         }
 
         /**
-         * 下载次数
+         * DownloadCount.
          */
         public Builder downloadCount(Long downloadCount) {
             this.downloadCount = downloadCount;
@@ -390,7 +390,7 @@ public class CdsFileShareLinkModel extends TeaModel {
         }
 
         /**
-         * 分享下载次数限制
+         * DownloadLimit.
          */
         public Builder downloadLimit(Long downloadLimit) {
             this.downloadLimit = downloadLimit;
@@ -398,7 +398,7 @@ public class CdsFileShareLinkModel extends TeaModel {
         }
 
         /**
-         * 空间id
+         * DriveId.
          */
         public Builder driveId(String driveId) {
             this.driveId = driveId;
@@ -406,7 +406,7 @@ public class CdsFileShareLinkModel extends TeaModel {
         }
 
         /**
-         * 失效时间点。 RFC3339格式，比如："2020-06-28T11:33:00.000+08:00"。 永久有效：""
+         * Expiration.
          */
         public Builder expiration(String expiration) {
             this.expiration = expiration;
@@ -414,7 +414,7 @@ public class CdsFileShareLinkModel extends TeaModel {
         }
 
         /**
-         * 是否过期
+         * Expired.
          */
         public Builder expired(Boolean expired) {
             this.expired = expired;
@@ -422,7 +422,7 @@ public class CdsFileShareLinkModel extends TeaModel {
         }
 
         /**
-         * 分享父路径文件id列表
+         * FileIds.
          */
         public Builder fileIds(String fileIds) {
             this.fileIds = fileIds;
@@ -430,7 +430,7 @@ public class CdsFileShareLinkModel extends TeaModel {
         }
 
         /**
-         * 修改时间
+         * ModifiyTime.
          */
         public Builder modifiyTime(String modifiyTime) {
             this.modifiyTime = modifiyTime;
@@ -438,7 +438,7 @@ public class CdsFileShareLinkModel extends TeaModel {
         }
 
         /**
-         * 预览次数
+         * PreviewCount.
          */
         public Builder previewCount(Long previewCount) {
             this.previewCount = previewCount;
@@ -446,7 +446,7 @@ public class CdsFileShareLinkModel extends TeaModel {
         }
 
         /**
-         * 分享预览次数限制
+         * PreviewLimit.
          */
         public Builder previewLimit(Long previewLimit) {
             this.previewLimit = previewLimit;
@@ -454,7 +454,7 @@ public class CdsFileShareLinkModel extends TeaModel {
         }
 
         /**
-         * 被举报次数
+         * ReportCount.
          */
         public Builder reportCount(Long reportCount) {
             this.reportCount = reportCount;
@@ -462,7 +462,7 @@ public class CdsFileShareLinkModel extends TeaModel {
         }
 
         /**
-         * 转存次数
+         * SaveCount.
          */
         public Builder saveCount(Long saveCount) {
             this.saveCount = saveCount;
@@ -470,7 +470,7 @@ public class CdsFileShareLinkModel extends TeaModel {
         }
 
         /**
-         * 分享转存次数限制
+         * SaveLimit.
          */
         public Builder saveLimit(Long saveLimit) {
             this.saveLimit = saveLimit;
@@ -478,7 +478,7 @@ public class CdsFileShareLinkModel extends TeaModel {
         }
 
         /**
-         * 分享id
+         * ShareId.
          */
         public Builder shareId(String shareId) {
             this.shareId = shareId;
@@ -486,7 +486,7 @@ public class CdsFileShareLinkModel extends TeaModel {
         }
 
         /**
-         * 分享链接
+         * ShareLink.
          */
         public Builder shareLink(String shareLink) {
             this.shareLink = shareLink;
@@ -494,7 +494,7 @@ public class CdsFileShareLinkModel extends TeaModel {
         }
 
         /**
-         * 分享名，默认使用第一个文件名
+         * ShareName.
          */
         public Builder shareName(String shareName) {
             this.shareName = shareName;
@@ -502,7 +502,7 @@ public class CdsFileShareLinkModel extends TeaModel {
         }
 
         /**
-         * 提取码，0-64个字符。长度0表示没有提取码。
+         * SharePwd.
          */
         public Builder sharePwd(String sharePwd) {
             this.sharePwd = sharePwd;
@@ -510,7 +510,7 @@ public class CdsFileShareLinkModel extends TeaModel {
         }
 
         /**
-         * 状态。 枚举值如下：  forbidden（被禁用） forbidden_disabled（被禁用后取消） disabled（已取消） enabled（有效）
+         * Status.
          */
         public Builder status(String status) {
             this.status = status;
@@ -518,7 +518,7 @@ public class CdsFileShareLinkModel extends TeaModel {
         }
 
         /**
-         * 音视频播放次数
+         * VideoPreviewCount.
          */
         public Builder videoPreviewCount(Long videoPreviewCount) {
             this.videoPreviewCount = videoPreviewCount;

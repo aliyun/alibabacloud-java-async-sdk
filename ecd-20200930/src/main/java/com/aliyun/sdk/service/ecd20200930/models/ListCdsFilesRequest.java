@@ -40,7 +40,6 @@ public class ListCdsFilesRequest extends Request {
 
     @Query
     @NameInMap("ParentFileId")
-    @Validation(required = true)
     private String parentFileId;
 
     @Query
@@ -170,7 +169,7 @@ public class ListCdsFilesRequest extends Request {
         } 
 
         /**
-         * CdsId.
+         * The ID of the cloud disk.
          */
         public Builder cdsId(String cdsId) {
             this.putQueryParameter("CdsId", cdsId);
@@ -179,7 +178,7 @@ public class ListCdsFilesRequest extends Request {
         }
 
         /**
-         * EndUserId.
+         * The ID of the user to whom the cloud disk is allocated.
          */
         public Builder endUserId(String endUserId) {
             this.putQueryParameter("EndUserId", endUserId);
@@ -188,7 +187,7 @@ public class ListCdsFilesRequest extends Request {
         }
 
         /**
-         * FileIds.
+         * The IDs of the files to be queried.
          */
         public Builder fileIds(java.util.List < String > fileIds) {
             String fileIdsShrink = shrink(fileIds, "FileIds", "json");
@@ -198,7 +197,7 @@ public class ListCdsFilesRequest extends Request {
         }
 
         /**
-         * MaxResults.
+         * The number of entries to return on each page. Default value: 100.
          */
         public Builder maxResults(Integer maxResults) {
             this.putQueryParameter("MaxResults", maxResults);
@@ -207,7 +206,7 @@ public class ListCdsFilesRequest extends Request {
         }
 
         /**
-         * NextToken.
+         * The token used for the next query. If this parameter is empty, all results are returned.
          */
         public Builder nextToken(String nextToken) {
             this.putQueryParameter("NextToken", nextToken);
@@ -216,7 +215,106 @@ public class ListCdsFilesRequest extends Request {
         }
 
         /**
-         * OrderType.
+         * The sorting method of the files.
+         * <p>
+         * 
+         * Valid values:
+         * 
+         * *   CreateTimeDesc
+         * 
+         *     <!-- -->
+         * 
+         *     :
+         * 
+         *     <!-- -->
+         * 
+         *     sorts files in descending order based on the time when they are created.
+         * 
+         *     <!-- -->
+         * 
+         * *   ModifiedTimeAsc
+         * 
+         *     <!-- -->
+         * 
+         *     :
+         * 
+         *     <!-- -->
+         * 
+         *     sorts files in ascending order based on the time when they are modified.
+         * 
+         *     <!-- -->
+         * 
+         * *   NameDesc
+         * 
+         *     <!-- -->
+         * 
+         *     :
+         * 
+         *     <!-- -->
+         * 
+         *     sorts files in descending order based on their names.
+         * 
+         *     <!-- -->
+         * 
+         * *   SizeAsc
+         * 
+         *     <!-- -->
+         * 
+         *     :
+         * 
+         *     <!-- -->
+         * 
+         *     sorts files in ascending order based on their sizes.
+         * 
+         *     <!-- -->
+         * 
+         * *   ModifiedTimeDesc
+         * 
+         *     <!-- -->
+         * 
+         *     :
+         * 
+         *     <!-- -->
+         * 
+         *     sorts files in descending order based on the time when they are modified.
+         * 
+         *     <!-- -->
+         * 
+         * *   CreateTimeAsc
+         * 
+         *     <!-- -->
+         * 
+         *     :
+         * 
+         *     <!-- -->
+         * 
+         *     sorts files in ascending order based on the time when they are created.
+         * 
+         *     <!-- -->
+         * 
+         * *   SizeDesc
+         * 
+         *     <!-- -->
+         * 
+         *     :
+         * 
+         *     <!-- -->
+         * 
+         *     sorts files in descending order based on their sizes.
+         * 
+         *     <!-- -->
+         * 
+         * *   NameAsc
+         * 
+         *     <!-- -->
+         * 
+         *     :
+         * 
+         *     <!-- -->
+         * 
+         *     sorts files in ascending order based on their names.
+         * 
+         *     <!-- -->
          */
         public Builder orderType(String orderType) {
             this.putQueryParameter("OrderType", orderType);
@@ -225,7 +323,7 @@ public class ListCdsFilesRequest extends Request {
         }
 
         /**
-         * ParentFileId.
+         * The ID of the parent file.
          */
         public Builder parentFileId(String parentFileId) {
             this.putQueryParameter("ParentFileId", parentFileId);
@@ -234,7 +332,7 @@ public class ListCdsFilesRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * The region ID. You can call the [DescribeRegions](~~196646~~) operation to query the most recent region list.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -243,7 +341,34 @@ public class ListCdsFilesRequest extends Request {
         }
 
         /**
-         * Status.
+         * The file status.
+         * <p>
+         * 
+         * Valid values:
+         * 
+         * *   available
+         * 
+         *     <!-- -->
+         * 
+         *     :
+         * 
+         *     <!-- -->
+         * 
+         *     returns only normal files.
+         * 
+         *     <!-- -->
+         * 
+         * *   uploading
+         * 
+         *     <!-- -->
+         * 
+         *     :
+         * 
+         *     <!-- -->
+         * 
+         *     returns only the files that are being uploaded.
+         * 
+         *     <!-- -->
          */
         public Builder status(String status) {
             this.putQueryParameter("Status", status);

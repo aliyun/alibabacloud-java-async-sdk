@@ -448,6 +448,12 @@ public class DescribeOfficeSitesResponseBody extends TeaModel {
         @NameInMap("SubDomainName")
         private String subDomainName;
 
+        @NameInMap("TotalEdsCount")
+        private Long totalEdsCount;
+
+        @NameInMap("TotalEdsCountForGroup")
+        private Long totalEdsCountForGroup;
+
         @NameInMap("TrustPassword")
         private String trustPassword;
 
@@ -499,6 +505,8 @@ public class DescribeOfficeSitesResponseBody extends TeaModel {
             this.status = builder.status;
             this.subDnsAddress = builder.subDnsAddress;
             this.subDomainName = builder.subDomainName;
+            this.totalEdsCount = builder.totalEdsCount;
+            this.totalEdsCountForGroup = builder.totalEdsCountForGroup;
             this.trustPassword = builder.trustPassword;
             this.vSwitchIds = builder.vSwitchIds;
             this.vpcId = builder.vpcId;
@@ -780,6 +788,20 @@ public class DescribeOfficeSitesResponseBody extends TeaModel {
         }
 
         /**
+         * @return totalEdsCount
+         */
+        public Long getTotalEdsCount() {
+            return this.totalEdsCount;
+        }
+
+        /**
+         * @return totalEdsCountForGroup
+         */
+        public Long getTotalEdsCountForGroup() {
+            return this.totalEdsCountForGroup;
+        }
+
+        /**
          * @return trustPassword
          */
         public String getTrustPassword() {
@@ -846,6 +868,8 @@ public class DescribeOfficeSitesResponseBody extends TeaModel {
             private String status; 
             private java.util.List < String > subDnsAddress; 
             private String subDomainName; 
+            private Long totalEdsCount; 
+            private Long totalEdsCountForGroup; 
             private String trustPassword; 
             private java.util.List < String > vSwitchIds; 
             private String vpcId; 
@@ -1152,6 +1176,22 @@ public class DescribeOfficeSitesResponseBody extends TeaModel {
              */
             public Builder subDomainName(String subDomainName) {
                 this.subDomainName = subDomainName;
+                return this;
+            }
+
+            /**
+             * TotalEdsCount.
+             */
+            public Builder totalEdsCount(Long totalEdsCount) {
+                this.totalEdsCount = totalEdsCount;
+                return this;
+            }
+
+            /**
+             * TotalEdsCountForGroup.
+             */
+            public Builder totalEdsCountForGroup(Long totalEdsCountForGroup) {
+                this.totalEdsCountForGroup = totalEdsCountForGroup;
                 return this;
             }
 

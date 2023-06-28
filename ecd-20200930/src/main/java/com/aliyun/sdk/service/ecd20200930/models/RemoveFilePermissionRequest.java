@@ -115,7 +115,7 @@ public class RemoveFilePermissionRequest extends Request {
         } 
 
         /**
-         * CdsId.
+         * The ID of the cloud disk in Cloud Drive Service.
          */
         public Builder cdsId(String cdsId) {
             this.putQueryParameter("CdsId", cdsId);
@@ -124,7 +124,7 @@ public class RemoveFilePermissionRequest extends Request {
         }
 
         /**
-         * EndUserId.
+         * The user ID.
          */
         public Builder endUserId(String endUserId) {
             this.putQueryParameter("EndUserId", endUserId);
@@ -133,7 +133,7 @@ public class RemoveFilePermissionRequest extends Request {
         }
 
         /**
-         * FileId.
+         * The file ID. The ID is a unique identifier for the file.
          */
         public Builder fileId(String fileId) {
             this.putQueryParameter("FileId", fileId);
@@ -142,7 +142,7 @@ public class RemoveFilePermissionRequest extends Request {
         }
 
         /**
-         * MemberList.
+         * The users that you want to authorize.
          */
         public Builder memberList(java.util.List < MemberList> memberList) {
             String memberListShrink = shrink(memberList, "MemberList", "json");
@@ -152,7 +152,7 @@ public class RemoveFilePermissionRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * The region ID. You can call the [DescribeRegions](~~196646~~) operation to query the most recent region list.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -208,7 +208,7 @@ public class RemoveFilePermissionRequest extends Request {
             private String type; 
 
             /**
-             * Id.
+             * The user ID or group ID.
              */
             public Builder id(String id) {
                 this.id = id;
@@ -216,7 +216,34 @@ public class RemoveFilePermissionRequest extends Request {
             }
 
             /**
-             * Type.
+             * The object type.
+             * <p>
+             * 
+             * Valid values:
+             * 
+             * *   IT_Group
+             * 
+             *     <!-- -->
+             * 
+             *     :
+             * 
+             *     <!-- -->
+             * 
+             *     group
+             * 
+             *     <!-- -->
+             * 
+             * *   IT_User
+             * 
+             *     <!-- -->
+             * 
+             *     :
+             * 
+             *     <!-- -->
+             * 
+             *     user
+             * 
+             *     <!-- -->
              */
             public Builder type(String type) {
                 this.type = type;
@@ -271,7 +298,7 @@ public class RemoveFilePermissionRequest extends Request {
             private String roleId; 
 
             /**
-             * CdsIdentity.
+             * The permission information.
              */
             public Builder cdsIdentity(CdsIdentity cdsIdentity) {
                 this.cdsIdentity = cdsIdentity;
@@ -279,7 +306,166 @@ public class RemoveFilePermissionRequest extends Request {
             }
 
             /**
-             * RoleId.
+             * The role ID. You can configure permissions on roles or actions. This parameter is used to specify the permissions on roles, which conflicts with the ActionList parameter. When you configure both the parameters, this parameter shall prevail.
+             * <p>
+             * 
+             * Valid values:
+             * 
+             * *   SystemFileEditorWithoutShareLink
+             * 
+             *     <!-- -->
+             * 
+             *     :
+             * 
+             *     <!-- -->
+             * 
+             *     the role that has the permissions to edit files but cannot share files
+             * 
+             *     <!-- -->
+             * 
+             * *   SystemFileUploaderAndDownloaderWithShareLink
+             * 
+             *     <!-- -->
+             * 
+             *     :
+             * 
+             *     <!-- -->
+             * 
+             *     the role that has the permissions to upload, download, and share files
+             * 
+             *     <!-- -->
+             * 
+             * *   SystemFileDownloader
+             * 
+             *     <!-- -->
+             * 
+             *     :
+             * 
+             *     <!-- -->
+             * 
+             *     the role that has the permissions to download files
+             * 
+             *     <!-- -->
+             * 
+             * *   SystemFileEditorWithoutDelete
+             * 
+             *     <!-- -->
+             * 
+             *     :
+             * 
+             *     <!-- -->
+             * 
+             *     the role that has the permissions to edit files but cannot delete files
+             * 
+             *     <!-- -->
+             * 
+             * *   SystemFileOwner
+             * 
+             *     <!-- -->
+             * 
+             *     :
+             * 
+             *     <!-- -->
+             * 
+             *     the role that has the permissions to collaborate with others
+             * 
+             *     <!-- -->
+             * 
+             * *   SystemFileDownloaderWithShareLink
+             * 
+             *     <!-- -->
+             * 
+             *     :
+             * 
+             *     <!-- -->
+             * 
+             *     the role that has the permissions to download and share files
+             * 
+             *     <!-- -->
+             * 
+             * *   SystemFileUploaderAndViewer
+             * 
+             *     <!-- -->
+             * 
+             *     :
+             * 
+             *     <!-- -->
+             * 
+             *     the role that has the permissions to preview or upload files
+             * 
+             *     <!-- -->
+             * 
+             * *   SystemFileViewer
+             * 
+             *     <!-- -->
+             * 
+             *     :
+             * 
+             *     <!-- -->
+             * 
+             *     the role that has the permissions to preview files
+             * 
+             *     <!-- -->
+             * 
+             * *   SystemFileEditor
+             * 
+             *     <!-- -->
+             * 
+             *     :
+             * 
+             *     <!-- -->
+             * 
+             *     the role that has the permissions to edit files
+             * 
+             *     <!-- -->
+             * 
+             * *   SystemFileUploaderWithShareLink
+             * 
+             *     <!-- -->
+             * 
+             *     :
+             * 
+             *     <!-- -->
+             * 
+             *     the role that has the permissions to upload or share files
+             * 
+             *     <!-- -->
+             * 
+             * *   SystemFileUploader
+             * 
+             *     <!-- -->
+             * 
+             *     :
+             * 
+             *     <!-- -->
+             * 
+             *     the role that has the permission to upload files
+             * 
+             *     <!-- -->
+             * 
+             * *   SystemFileUploaderAndDownloader
+             * 
+             *     <!-- -->
+             * 
+             *     :
+             * 
+             *     <!-- -->
+             * 
+             *     the role that has the permissions to upload or download files
+             * 
+             *     <!-- -->
+             * 
+             * *   SystemFileMetaViewer
+             * 
+             *     <!-- -->
+             * 
+             *     :
+             * 
+             *     <!-- -->
+             * 
+             *     the role that has the permissions to view files
+             * 
+             *     <!-- -->
              */
             public Builder roleId(String roleId) {
                 this.roleId = roleId;

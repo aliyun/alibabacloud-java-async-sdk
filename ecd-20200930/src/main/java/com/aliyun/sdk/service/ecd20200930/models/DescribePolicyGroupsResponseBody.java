@@ -62,7 +62,7 @@ public class DescribePolicyGroupsResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * DescribePolicyGroups.
+         * Details of the policies.
          */
         public Builder describePolicyGroups(java.util.List < DescribePolicyGroups> describePolicyGroups) {
             this.describePolicyGroups = describePolicyGroups;
@@ -70,7 +70,7 @@ public class DescribePolicyGroupsResponseBody extends TeaModel {
         }
 
         /**
-         * NextToken.
+         * A pagination token. It can be used in the next request to retrieve a new page of results. If NextToken is empty, no next page exists.
          */
         public Builder nextToken(String nextToken) {
             this.nextToken = nextToken;
@@ -78,7 +78,7 @@ public class DescribePolicyGroupsResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -130,7 +130,7 @@ public class DescribePolicyGroupsResponseBody extends TeaModel {
             private String description; 
 
             /**
-             * CidrIp.
+             * The CIDR block that you access from the client. The value is an IPv4 CIDR block.
              */
             public Builder cidrIp(String cidrIp) {
                 this.cidrIp = cidrIp;
@@ -138,7 +138,7 @@ public class DescribePolicyGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * Description.
+             * The description of the IPv4 CIDR block.
              */
             public Builder description(String description) {
                 this.description = description;
@@ -251,7 +251,7 @@ public class DescribePolicyGroupsResponseBody extends TeaModel {
             private String type; 
 
             /**
-             * CidrIp.
+             * The IPv4 CIDR block of the security group rule.
              */
             public Builder cidrIp(String cidrIp) {
                 this.cidrIp = cidrIp;
@@ -259,7 +259,7 @@ public class DescribePolicyGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * Description.
+             * The description of the security group rule.
              */
             public Builder description(String description) {
                 this.description = description;
@@ -267,7 +267,50 @@ public class DescribePolicyGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * IpProtocol.
+             * The protocol type of the security group rule.
+             * <p>
+             * 
+             * Valid values:
+             * 
+             * *   tcp: Transmission Control Protocol (TCP)
+             * 
+             *     <!-- -->
+             * 
+             *     <!-- -->
+             * 
+             *     <!-- -->
+             * 
+             * *   udp: User Datagram Protocol (UDP)
+             * 
+             *     <!-- -->
+             * 
+             *     <!-- -->
+             * 
+             *     <!-- -->
+             * 
+             * *   all: all protocols
+             * 
+             *     <!-- -->
+             * 
+             *     <!-- -->
+             * 
+             *     <!-- -->
+             * 
+             * *   gre: Generic Routing Encapsulation (GRE)
+             * 
+             *     <!-- -->
+             * 
+             *     <!-- -->
+             * 
+             *     <!-- -->
+             * 
+             * *   icmp: ICMP (IPv4)
+             * 
+             *     <!-- -->
+             * 
+             *     <!-- -->
+             * 
+             *     <!-- -->
              */
             public Builder ipProtocol(String ipProtocol) {
                 this.ipProtocol = ipProtocol;
@@ -275,7 +318,26 @@ public class DescribePolicyGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * Policy.
+             * The authorization policy of the security group rule.
+             * <p>
+             * 
+             * Valid values:
+             * 
+             * *   drop: denies all access requests.
+             * 
+             *     <!-- -->
+             * 
+             *     <!-- -->
+             * 
+             *     <!-- -->
+             * 
+             * *   accept: accepts all access requests.
+             * 
+             *     <!-- -->
+             * 
+             *     <!-- -->
+             * 
+             *     <!-- -->
              */
             public Builder policy(String policy) {
                 this.policy = policy;
@@ -283,7 +345,7 @@ public class DescribePolicyGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * PortRange.
+             * The port range of the security group rule.
              */
             public Builder portRange(String portRange) {
                 this.portRange = portRange;
@@ -291,7 +353,7 @@ public class DescribePolicyGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * Priority.
+             * The priority of the security group rule. A smaller value indicates a higher priority.
              */
             public Builder priority(String priority) {
                 this.priority = priority;
@@ -299,7 +361,26 @@ public class DescribePolicyGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * Type.
+             * The direction of the security group rule.
+             * <p>
+             * 
+             * Valid values:
+             * 
+             * *   outflow: outbound
+             * 
+             *     <!-- -->
+             * 
+             *     <!-- -->
+             * 
+             *     <!-- -->
+             * 
+             * *   inflow: inbound
+             * 
+             *     <!-- -->
+             * 
+             *     <!-- -->
+             * 
+             *     <!-- -->
              */
             public Builder type(String type) {
                 this.type = type;
@@ -352,7 +433,78 @@ public class DescribePolicyGroupsResponseBody extends TeaModel {
             private String status; 
 
             /**
-             * ClientType.
+             * The client type.
+             * <p>
+             * 
+             * Valid values:
+             * 
+             * *   html5: web client
+             * 
+             *     <!-- -->
+             * 
+             *     <!-- -->
+             * 
+             *     <!-- -->
+             * 
+             * *   linux
+             * 
+             *     <!-- -->
+             * 
+             *     :
+             * 
+             *     <!-- -->
+             * 
+             *     WUYING hardware client
+             * 
+             *     <!-- -->
+             * 
+             * *   android
+             * 
+             *     <!-- -->
+             * 
+             *     :
+             * 
+             *     <!-- -->
+             * 
+             *     Android client
+             * 
+             *     <!-- -->
+             * 
+             * *   windows
+             * 
+             *     <!-- -->
+             * 
+             *     :
+             * 
+             *     <!-- -->
+             * 
+             *     Windows client
+             * 
+             *     <!-- -->
+             * 
+             * *   ios
+             * 
+             *     <!-- -->
+             * 
+             *     :
+             * 
+             *     <!-- -->
+             * 
+             *     iOS client
+             * 
+             *     <!-- -->
+             * 
+             * *   macos
+             * 
+             *     <!-- -->
+             * 
+             *     :
+             * 
+             *     <!-- -->
+             * 
+             *     macOS client
+             * 
+             *     <!-- -->
              */
             public Builder clientType(String clientType) {
                 this.clientType = clientType;
@@ -360,7 +512,34 @@ public class DescribePolicyGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * Status.
+             * Indicates whether a specific type of client is allowed to connect to the cloud desktop.
+             * <p>
+             * 
+             * Valid values:
+             * 
+             * *   OFF
+             * 
+             *     <!-- -->
+             * 
+             *     :
+             * 
+             *     <!-- -->
+             * 
+             *     not allowed
+             * 
+             *     <!-- -->
+             * 
+             * *   ON
+             * 
+             *     <!-- -->
+             * 
+             *     :
+             * 
+             *     <!-- -->
+             * 
+             *     allowed
+             * 
+             *     <!-- -->
              */
             public Builder status(String status) {
                 this.status = status;
@@ -425,7 +604,7 @@ public class DescribePolicyGroupsResponseBody extends TeaModel {
             private String policy; 
 
             /**
-             * Description.
+             * The policy description.
              */
             public Builder description(String description) {
                 this.description = description;
@@ -433,7 +612,7 @@ public class DescribePolicyGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * Domain.
+             * The domain name.
              */
             public Builder domain(String domain) {
                 this.domain = domain;
@@ -441,7 +620,11 @@ public class DescribePolicyGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * Policy.
+             * Indicates whether the resolution feature is allowed.
+             * <p>
+             * 
+             * *   allow: The feature is allowed.
+             * *   block: The feature is not allowed.
              */
             public Builder policy(String policy) {
                 this.policy = policy;
@@ -506,7 +689,7 @@ public class DescribePolicyGroupsResponseBody extends TeaModel {
             private String ruleType; 
 
             /**
-             * Domain.
+             * The content of the rule.
              */
             public Builder domain(String domain) {
                 this.domain = domain;
@@ -514,7 +697,11 @@ public class DescribePolicyGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * Policy.
+             * Indicates whether the resolution feature is allowed.
+             * <p>
+             * 
+             * *   allow: The feature is allowed.
+             * *   block: The feature is not allowed.
              */
             public Builder policy(String policy) {
                 this.policy = policy;
@@ -522,7 +709,34 @@ public class DescribePolicyGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * RuleType.
+             * The rule type.
+             * <p>
+             * 
+             * Valid values:
+             * 
+             * *   prc
+             * 
+             *     <!-- -->
+             * 
+             *     :
+             * 
+             *     <!-- -->
+             * 
+             *     process
+             * 
+             *     <!-- -->
+             * 
+             * *   domain
+             * 
+             *     <!-- -->
+             * 
+             *     :
+             * 
+             *     <!-- -->
+             * 
+             *     domain name
+             * 
+             *     <!-- -->
              */
             public Builder ruleType(String ruleType) {
                 this.ruleType = ruleType;
@@ -635,7 +849,7 @@ public class DescribePolicyGroupsResponseBody extends TeaModel {
             private String vendorId; 
 
             /**
-             * Description.
+             * The rule description.
              */
             public Builder description(String description) {
                 this.description = description;
@@ -643,7 +857,7 @@ public class DescribePolicyGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * DeviceClass.
+             * The device class. If you set `UsbRuleType` to 1, you must specify this parameter. For more information, see [Defined Class Codes](https://www.usb.org/defined-class-codes).
              */
             public Builder deviceClass(String deviceClass) {
                 this.deviceClass = deviceClass;
@@ -651,7 +865,7 @@ public class DescribePolicyGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * DeviceSubclass.
+             * The device subclass. This parameter is required if `UsbRuleType` is set to 1. For more information, see [Defined Class Codes](https://www.usb.org/defined-class-codes).
              */
             public Builder deviceSubclass(String deviceSubclass) {
                 this.deviceSubclass = deviceSubclass;
@@ -659,7 +873,7 @@ public class DescribePolicyGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * ProductId.
+             * The product ID.
              */
             public Builder productId(String productId) {
                 this.productId = productId;
@@ -667,7 +881,26 @@ public class DescribePolicyGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * UsbRedirectType.
+             * The USB redirection type.
+             * <p>
+             * 
+             * Valid values:
+             * 
+             * *   1: allows USB redirection.
+             * 
+             *     <!-- -->
+             * 
+             *     <!-- -->
+             * 
+             *     <!-- -->
+             * 
+             * *   2: forbids USB redirection.
+             * 
+             *     <!-- -->
+             * 
+             *     <!-- -->
+             * 
+             *     <!-- -->
              */
             public Builder usbRedirectType(Long usbRedirectType) {
                 this.usbRedirectType = usbRedirectType;
@@ -675,7 +908,26 @@ public class DescribePolicyGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * UsbRuleType.
+             * The type of the USB redirection rule.
+             * <p>
+             * 
+             * Valid values:
+             * 
+             * *   1: by device class
+             * 
+             *     <!-- -->
+             * 
+             *     <!-- -->
+             * 
+             *     <!-- -->
+             * 
+             * *   2: by device vendor
+             * 
+             *     <!-- -->
+             * 
+             *     <!-- -->
+             * 
+             *     <!-- -->
              */
             public Builder usbRuleType(Long usbRuleType) {
                 this.usbRuleType = usbRuleType;
@@ -683,7 +935,7 @@ public class DescribePolicyGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * VendorId.
+             * The vendor ID. For more information, see [Valid USB Vendor IDs (VIDs)](https://www.usb.org/sites/default/files/vendor_ids032322.pdf\_1.pdf).
              */
             public Builder vendorId(String vendorId) {
                 this.vendorId = vendorId;
@@ -1480,7 +1732,13 @@ public class DescribePolicyGroupsResponseBody extends TeaModel {
             private String watermarkType; 
 
             /**
-             * AppContentProtection.
+             * Indicates whether the anti-screenshot feature is enabled. Valid values:
+             * <p>
+             * 
+             * *   on: This feature is enabled.
+             * *   off: This feature is disabled.
+             * 
+             * Default value: off.
              */
             public Builder appContentProtection(String appContentProtection) {
                 this.appContentProtection = appContentProtection;
@@ -1488,7 +1746,7 @@ public class DescribePolicyGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * AuthorizeAccessPolicyRules.
+             * The client CIDR blocks in the whitelist.
              */
             public Builder authorizeAccessPolicyRules(java.util.List < AuthorizeAccessPolicyRules> authorizeAccessPolicyRules) {
                 this.authorizeAccessPolicyRules = authorizeAccessPolicyRules;
@@ -1496,7 +1754,7 @@ public class DescribePolicyGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * AuthorizeSecurityPolicyRules.
+             * The security group rules.
              */
             public Builder authorizeSecurityPolicyRules(java.util.List < AuthorizeSecurityPolicyRules> authorizeSecurityPolicyRules) {
                 this.authorizeSecurityPolicyRules = authorizeSecurityPolicyRules;
@@ -1504,7 +1762,26 @@ public class DescribePolicyGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * CameraRedirect.
+             * Indicates whether the webcam redirection feature is enabled.
+             * <p>
+             * 
+             * Valid values:
+             * 
+             * *   off: The feature is disabled.
+             * 
+             *     <!-- -->
+             * 
+             *     <!-- -->
+             * 
+             *     <!-- -->
+             * 
+             * *   on (default): The feature is enabled.
+             * 
+             *     <!-- -->
+             * 
+             *     <!-- -->
+             * 
+             *     <!-- -->
              */
             public Builder cameraRedirect(String cameraRedirect) {
                 this.cameraRedirect = cameraRedirect;
@@ -1512,7 +1789,7 @@ public class DescribePolicyGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * ClientTypes.
+             * The logon methods.
              */
             public Builder clientTypes(java.util.List < ClientTypes> clientTypes) {
                 this.clientTypes = clientTypes;
@@ -1520,7 +1797,34 @@ public class DescribePolicyGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * Clipboard.
+             * The permissions on the clipboard.
+             * <p>
+             * 
+             * Valid values:
+             * 
+             * *   read: One-way transfer is allowed.
+             * 
+             *     <!-- -->
+             * 
+             *     <!-- -->
+             * 
+             *     <!-- -->
+             * 
+             * *   readwrite: Two-way transfer is allowed.
+             * 
+             *     <!-- -->
+             * 
+             *     <!-- -->
+             * 
+             *     <!-- -->
+             * 
+             * *   off: Two-way transfer is not allowed.
+             * 
+             *     <!-- -->
+             * 
+             *     <!-- -->
+             * 
+             *     <!-- -->
              */
             public Builder clipboard(String clipboard) {
                 this.clipboard = clipboard;
@@ -1576,7 +1880,11 @@ public class DescribePolicyGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * DomainList.
+             * The access control for domain names. The domain names can contain the wildcard character (\*). Multiple domain names are separated by commas (,). Valid values:
+             * <p>
+             * 
+             * *   off: This feature is disabled.
+             * *   on: This feature is enabled.
              */
             public Builder domainList(String domainList) {
                 this.domainList = domainList;
@@ -1584,7 +1892,7 @@ public class DescribePolicyGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * DomainResolveRule.
+             * The resolution of domain names.
              */
             public Builder domainResolveRule(java.util.List < DomainResolveRule> domainResolveRule) {
                 this.domainResolveRule = domainResolveRule;
@@ -1592,7 +1900,26 @@ public class DescribePolicyGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * DomainResolveRuleType.
+             * Indicates whether the switch for domain name resolution is turned on.
+             * <p>
+             * 
+             * Valid values:
+             * 
+             * *   off
+             * 
+             *     <!-- -->
+             * 
+             *     <!-- -->
+             * 
+             *     <!-- -->
+             * 
+             * *   on
+             * 
+             *     <!-- -->
+             * 
+             *     <!-- -->
+             * 
+             *     <!-- -->
              */
             public Builder domainResolveRuleType(String domainResolveRuleType) {
                 this.domainResolveRuleType = domainResolveRuleType;
@@ -1600,7 +1927,9 @@ public class DescribePolicyGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * EdsCount.
+             * The number of cloud desktops that are associated with the policy.\
+             * <p>
+             * This parameter is returned only if PolicyGroupType is set to CUSTOM.
              */
             public Builder edsCount(Integer edsCount) {
                 this.edsCount = edsCount;
@@ -1608,7 +1937,7 @@ public class DescribePolicyGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * EndUserApplyAdminCoordinate.
+             * Indicates whether the switch for end users to ask for assistance from the administrator is turned on. Valid values: on off
              */
             public Builder endUserApplyAdminCoordinate(String endUserApplyAdminCoordinate) {
                 this.endUserApplyAdminCoordinate = endUserApplyAdminCoordinate;
@@ -1616,7 +1945,7 @@ public class DescribePolicyGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * EndUserGroupCoordinate.
+             * The switch for stream collaboration between end users. Valid values: on off
              */
             public Builder endUserGroupCoordinate(String endUserGroupCoordinate) {
                 this.endUserGroupCoordinate = endUserGroupCoordinate;
@@ -1624,7 +1953,26 @@ public class DescribePolicyGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * GpuAcceleration.
+             * Indicates whether the image quality policy is enabled for Graphics cloud desktops. If you have high requirements for desktop performance and user experience, we recommend that you enable this feature. For example, you can enable this feature in professional design scenarios.
+             * <p>
+             * 
+             * Valid values:
+             * 
+             * *   off: The feature is disabled.
+             * 
+             *     <!-- -->
+             * 
+             *     <!-- -->
+             * 
+             *     <!-- -->
+             * 
+             * *   on: This feature is enabled.
+             * 
+             *     <!-- -->
+             * 
+             *     <!-- -->
+             * 
+             *     <!-- -->
              */
             public Builder gpuAcceleration(String gpuAcceleration) {
                 this.gpuAcceleration = gpuAcceleration;
@@ -1632,7 +1980,34 @@ public class DescribePolicyGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * Html5Access.
+             * The HTML5 client access feature.
+             * <p>
+             * 
+             * Valid values:
+             * 
+             * *   off (default)
+             * 
+             *     <!-- -->
+             * 
+             *     :
+             * 
+             *     <!-- -->
+             * 
+             *     disabled
+             * 
+             *     <!-- -->
+             * 
+             * *   on
+             * 
+             *     <!-- -->
+             * 
+             *     :
+             * 
+             *     <!-- -->
+             * 
+             *     enabled
+             * 
+             *     <!-- -->
              */
             public Builder html5Access(String html5Access) {
                 this.html5Access = html5Access;
@@ -1640,7 +2015,42 @@ public class DescribePolicyGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * Html5FileTransfer.
+             * The file transfer feature for the HTML5 client.
+             * <p>
+             * 
+             * Valid values:
+             * 
+             * *   all: Files can be uploaded and downloaded between your computer and HTML5 clients.
+             * 
+             *     <!-- -->
+             * 
+             *     <!-- -->
+             * 
+             *     <!-- -->
+             * 
+             * *   download: Files on HTML5 clients can be downloaded to your computer.
+             * 
+             *     <!-- -->
+             * 
+             *     <!-- -->
+             * 
+             *     <!-- -->
+             * 
+             * *   upload: Files on your computer can be uploaded to HTML5 clients.
+             * 
+             *     <!-- -->
+             * 
+             *     <!-- -->
+             * 
+             *     <!-- -->
+             * 
+             * *   off (default): File transfer between HTML5 clients and your computer is disabled.
+             * 
+             *     <!-- -->
+             * 
+             *     <!-- -->
+             * 
+             *     <!-- -->
              */
             public Builder html5FileTransfer(String html5FileTransfer) {
                 this.html5FileTransfer = html5FileTransfer;
@@ -1648,7 +2058,13 @@ public class DescribePolicyGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * InternetCommunicationProtocol.
+             * The protocol that is used for network communication. Valid values:
+             * <p>
+             * 
+             * *   TCP: Only the TCP protocol is used.
+             * *   BOTH: The automatic switchover between the TCP protocol and the UDP protocol is supported.
+             * 
+             * Default value: TCP.
              */
             public Builder internetCommunicationProtocol(String internetCommunicationProtocol) {
                 this.internetCommunicationProtocol = internetCommunicationProtocol;
@@ -1656,7 +2072,34 @@ public class DescribePolicyGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * LocalDrive.
+             * The permissions on local disk mapping.
+             * <p>
+             * 
+             * Valid values:
+             * 
+             * *   read: read-only
+             * 
+             *     <!-- -->
+             * 
+             *     <!-- -->
+             * 
+             *     <!-- -->
+             * 
+             * *   readwrite: read and write
+             * 
+             *     <!-- -->
+             * 
+             *     <!-- -->
+             * 
+             *     <!-- -->
+             * 
+             * *   off: no permissions
+             * 
+             *     <!-- -->
+             * 
+             *     <!-- -->
+             * 
+             *     <!-- -->
              */
             public Builder localDrive(String localDrive) {
                 this.localDrive = localDrive;
@@ -1712,7 +2155,7 @@ public class DescribePolicyGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * Name.
+             * The policy name.
              */
             public Builder name(String name) {
                 this.name = name;
@@ -1720,7 +2163,13 @@ public class DescribePolicyGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * NetRedirect.
+             * Indicates whether the network redirection feature is enabled. Valid values:
+             * <p>
+             * 
+             * *   on: This feature is enabled.
+             * *   off: The feature is disabled.
+             * 
+             * Default value: off.
              */
             public Builder netRedirect(String netRedirect) {
                 this.netRedirect = netRedirect;
@@ -1728,7 +2177,7 @@ public class DescribePolicyGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * NetRedirectRule.
+             * The network redirection rules.
              */
             public Builder netRedirectRule(java.util.List < NetRedirectRule> netRedirectRule) {
                 this.netRedirectRule = netRedirectRule;
@@ -1736,7 +2185,7 @@ public class DescribePolicyGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * PolicyGroupId.
+             * The policy ID.
              */
             public Builder policyGroupId(String policyGroupId) {
                 this.policyGroupId = policyGroupId;
@@ -1744,7 +2193,26 @@ public class DescribePolicyGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * PolicyGroupType.
+             * The rule type.
+             * <p>
+             * 
+             * Valid values:
+             * 
+             * *   SYSTEM
+             * 
+             *     <!-- -->
+             * 
+             *     <!-- -->
+             * 
+             *     <!-- -->
+             * 
+             * *   CUSTOM
+             * 
+             *     <!-- -->
+             * 
+             *     <!-- -->
+             * 
+             *     <!-- -->
              */
             public Builder policyGroupType(String policyGroupType) {
                 this.policyGroupType = policyGroupType;
@@ -1752,7 +2220,26 @@ public class DescribePolicyGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * PolicyStatus.
+             * The state of the policy.
+             * <p>
+             * 
+             * Valid values:
+             * 
+             * *   AVAILABLE
+             * 
+             *     <!-- -->
+             * 
+             *     <!-- -->
+             * 
+             *     <!-- -->
+             * 
+             * *   CREATING
+             * 
+             *     <!-- -->
+             * 
+             *     <!-- -->
+             * 
+             *     <!-- -->
              */
             public Builder policyStatus(String policyStatus) {
                 this.policyStatus = policyStatus;
@@ -1760,7 +2247,7 @@ public class DescribePolicyGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * PreemptLogin.
+             * Indicates whether user preemption is allowed. The value is fixed to `off`, which indicates that user preemption is not allowed.
              */
             public Builder preemptLogin(String preemptLogin) {
                 this.preemptLogin = preemptLogin;
@@ -1768,7 +2255,7 @@ public class DescribePolicyGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * PreemptLoginUsers.
+             * The names of the users that are allowed to connect to the cloud desktop to which another user is logged on.
              */
             public Builder preemptLoginUsers(java.util.List < String > preemptLoginUsers) {
                 this.preemptLoginUsers = preemptLoginUsers;
@@ -1776,7 +2263,38 @@ public class DescribePolicyGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * PrinterRedirection.
+             * The printer redirection feature.
+             * <p>
+             * 
+             * Valid values:
+             * 
+             * *   off
+             * 
+             *     <!-- -->
+             * 
+             *     :
+             * 
+             *     <!-- -->
+             * 
+             *     The feature is disabled
+             * 
+             *     <!-- -->
+             * 
+             *     .
+             * 
+             * *   on
+             * 
+             *     <!-- -->
+             * 
+             *     :
+             * 
+             *     <!-- -->
+             * 
+             *     The feature is enabled
+             * 
+             *     <!-- -->
+             * 
+             *     .
              */
             public Builder printerRedirection(String printerRedirection) {
                 this.printerRedirection = printerRedirection;
@@ -1784,7 +2302,13 @@ public class DescribePolicyGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * RecordContent.
+             * Indicates whether the custom screen recording feature is enabled. Valid values:
+             * <p>
+             * 
+             * *   on: This feature is enabled.
+             * *   off: This feature is disabled.
+             * 
+             * Default value: off.
              */
             public Builder recordContent(String recordContent) {
                 this.recordContent = recordContent;
@@ -1792,7 +2316,7 @@ public class DescribePolicyGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * RecordContentExpires.
+             * The duration in which the custom screen recording is valid. Default value: 30. Unit: days.
              */
             public Builder recordContentExpires(Long recordContentExpires) {
                 this.recordContentExpires = recordContentExpires;
@@ -1800,7 +2324,34 @@ public class DescribePolicyGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * Recording.
+             * Indicates whether screen recording is enabled.
+             * <p>
+             * 
+             * Valid values:
+             * 
+             * *   ALLTIME: All operations that are performed by end users on cloud desktops are recorded. The recording starts immediately when end users connect to cloud desktops and ends after the end users disconnect from the cloud desktops.
+             * 
+             *     <!-- -->
+             * 
+             *     <!-- -->
+             * 
+             *     <!-- -->
+             * 
+             * *   PERIOD: The operations that are performed by end users on cloud desktops during a specified period of time are recorded. You must specify the start time and the end time of the recording.
+             * 
+             *     <!-- -->
+             * 
+             *     <!-- -->
+             * 
+             *     <!-- -->
+             * 
+             * *   OFF: Screen recording is disabled.
+             * 
+             *     <!-- -->
+             * 
+             *     <!-- -->
+             * 
+             *     <!-- -->
              */
             public Builder recording(String recording) {
                 this.recording = recording;
@@ -1808,7 +2359,11 @@ public class DescribePolicyGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * RecordingAudio.
+             * Indicates whether the sound that is generated on the cloud desktop is recorded during screen recording. Valid values:
+             * <p>
+             * 
+             * *   on: records audio and video data.
+             * *   off: records only video data.
              */
             public Builder recordingAudio(String recordingAudio) {
                 this.recordingAudio = recordingAudio;
@@ -1816,7 +2371,7 @@ public class DescribePolicyGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * RecordingDuration.
+             * This parameter is used together with Recording. After the specified period of the recording reaches, a screen recording file is generated.
              */
             public Builder recordingDuration(Integer recordingDuration) {
                 this.recordingDuration = recordingDuration;
@@ -1824,7 +2379,7 @@ public class DescribePolicyGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * RecordingEndTime.
+             * The time when the screen recording ended. The value is in the HH:MM:SS format. The value of this parameter is valid only if Recording is set to PERIOD.
              */
             public Builder recordingEndTime(String recordingEndTime) {
                 this.recordingEndTime = recordingEndTime;
@@ -1832,7 +2387,7 @@ public class DescribePolicyGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * RecordingExpires.
+             * The period in which the screen recording audit is valid. Valid values: 15 to 180. Unit: days.
              */
             public Builder recordingExpires(Long recordingExpires) {
                 this.recordingExpires = recordingExpires;
@@ -1840,7 +2395,13 @@ public class DescribePolicyGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * RecordingFps.
+             * The frame rate of screen recording. Unit: fps. Valid values:
+             * <p>
+             * 
+             * *   2
+             * *   5
+             * *   10
+             * *   15
              */
             public Builder recordingFps(Long recordingFps) {
                 this.recordingFps = recordingFps;
@@ -1848,7 +2409,7 @@ public class DescribePolicyGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * RecordingStartTime.
+             * The time when the screen recording was started. The value is in the HH:MM:SS format. The value of this parameter is valid only if Recording is set to PERIOD.
              */
             public Builder recordingStartTime(String recordingStartTime) {
                 this.recordingStartTime = recordingStartTime;
@@ -1856,7 +2417,12 @@ public class DescribePolicyGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * RemoteCoordinate.
+             * The permissions on the keyboard and mouse to control the cloud desktop during remote assistance. Valid values:
+             * <p>
+             * 
+             * *   fullControl: The keyboard and mouse are fully controlled.
+             * *   optionalControl: By default, you do not have the permissions on the keyboard or mouse to control the cloud desktop during remote assistance. You can apply for the permissions.
+             * *   disableControl: The keyboard and mouse are not controlled.
              */
             public Builder remoteCoordinate(String remoteCoordinate) {
                 this.remoteCoordinate = remoteCoordinate;
@@ -1864,7 +2430,11 @@ public class DescribePolicyGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * Scope.
+             * The effective scope of the policy. Valid values:
+             * <p>
+             * 
+             * *   GLOBAL: The policy takes effect globally.
+             * *   IP: The policy takes effect based on the IP address.
              */
             public Builder scope(String scope) {
                 this.scope = scope;
@@ -1872,7 +2442,7 @@ public class DescribePolicyGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * ScopeValue.
+             * This parameter is specified if Scope is set to IP.
              */
             public Builder scopeValue(java.util.List < String > scopeValue) {
                 this.scopeValue = scopeValue;
@@ -1880,7 +2450,26 @@ public class DescribePolicyGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * UsbRedirect.
+             * Indicates whether the USB redirection feature is enabled.
+             * <p>
+             * 
+             * Valid values:
+             * 
+             * *   off: The feature is disabled.
+             * 
+             *     <!-- -->
+             * 
+             *     <!-- -->
+             * 
+             *     <!-- -->
+             * 
+             * *   on: This feature is enabled.
+             * 
+             *     <!-- -->
+             * 
+             *     <!-- -->
+             * 
+             *     <!-- -->
              */
             public Builder usbRedirect(String usbRedirect) {
                 this.usbRedirect = usbRedirect;
@@ -1888,7 +2477,7 @@ public class DescribePolicyGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * UsbSupplyRedirectRule.
+             * The USB redirection rules.
              */
             public Builder usbSupplyRedirectRule(java.util.List < UsbSupplyRedirectRule> usbSupplyRedirectRule) {
                 this.usbSupplyRedirectRule = usbSupplyRedirectRule;
@@ -1896,7 +2485,7 @@ public class DescribePolicyGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * VideoRedirect.
+             * Indicates whether the multimedia redirection feature is enabled. Valid values: on: The feature is enabled. off: The feature is disabled.
              */
             public Builder videoRedirect(String videoRedirect) {
                 this.videoRedirect = videoRedirect;
@@ -1904,7 +2493,58 @@ public class DescribePolicyGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * VisualQuality.
+             * The image display quality feature.
+             * <p>
+             * 
+             * Valid values:
+             * 
+             * *   high
+             * 
+             *     <!-- -->
+             * 
+             *     :
+             * 
+             *     <!-- -->
+             * 
+             *     high-definition (HD)
+             * 
+             *     <!-- -->
+             * 
+             * *   low
+             * 
+             *     <!-- -->
+             * 
+             *     :
+             * 
+             *     <!-- -->
+             * 
+             *     fluent
+             * 
+             *     <!-- -->
+             * 
+             * *   medium (default)
+             * 
+             *     <!-- -->
+             * 
+             *     :
+             * 
+             *     <!-- -->
+             * 
+             *     adaptive
+             * 
+             *     <!-- -->
+             * 
+             * *   lossless
+             * 
+             *     <!-- -->
+             * 
+             *     :
+             * 
+             *     <!-- -->
+             * 
+             *     no quality loss
+             * 
+             *     <!-- -->
              */
             public Builder visualQuality(String visualQuality) {
                 this.visualQuality = visualQuality;
@@ -1912,7 +2552,26 @@ public class DescribePolicyGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * Watermark.
+             * Indicates whether the watermark feature is enabled.
+             * <p>
+             * 
+             * Valid values:
+             * 
+             * *   off: The feature is disabled.
+             * 
+             *     <!-- -->
+             * 
+             *     <!-- -->
+             * 
+             *     <!-- -->
+             * 
+             * *   on: This feature is enabled.
+             * 
+             *     <!-- -->
+             * 
+             *     <!-- -->
+             * 
+             *     <!-- -->
              */
             public Builder watermark(String watermark) {
                 this.watermark = watermark;
@@ -1920,7 +2579,7 @@ public class DescribePolicyGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * WatermarkColor.
+             * The font color of the watermark. Valid values: 0 to 16777215.
              */
             public Builder watermarkColor(Integer watermarkColor) {
                 this.watermarkColor = watermarkColor;
@@ -1928,7 +2587,7 @@ public class DescribePolicyGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * WatermarkCustomText.
+             * This parameter is unavailable for public use.
              */
             public Builder watermarkCustomText(String watermarkCustomText) {
                 this.watermarkCustomText = watermarkCustomText;
@@ -1936,7 +2595,7 @@ public class DescribePolicyGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * WatermarkDegree.
+             * The inclination angle of the watermark. Valid values: -10 to -30.
              */
             public Builder watermarkDegree(Double watermarkDegree) {
                 this.watermarkDegree = watermarkDegree;
@@ -1944,7 +2603,7 @@ public class DescribePolicyGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * WatermarkFontSize.
+             * The font size of the watermark. Valid values: 10 to 20.
              */
             public Builder watermarkFontSize(Integer watermarkFontSize) {
                 this.watermarkFontSize = watermarkFontSize;
@@ -1952,7 +2611,11 @@ public class DescribePolicyGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * WatermarkFontStyle.
+             * The font style of the watermark. Valid values:
+             * <p>
+             * 
+             * *   plain
+             * *   bold
              */
             public Builder watermarkFontStyle(String watermarkFontStyle) {
                 this.watermarkFontStyle = watermarkFontStyle;
@@ -1960,7 +2623,7 @@ public class DescribePolicyGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * WatermarkRowAmount.
+             * The number of watermark rows. This parameter is now invalid.
              */
             public Builder watermarkRowAmount(Integer watermarkRowAmount) {
                 this.watermarkRowAmount = watermarkRowAmount;
@@ -1968,7 +2631,34 @@ public class DescribePolicyGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * WatermarkTransparency.
+             * The watermark transparency.
+             * <p>
+             * 
+             * Valid values:
+             * 
+             * *   LIGHT
+             * 
+             *     <!-- -->
+             * 
+             *     <!-- -->
+             * 
+             *     <!-- -->
+             * 
+             * *   DARK
+             * 
+             *     <!-- -->
+             * 
+             *     <!-- -->
+             * 
+             *     <!-- -->
+             * 
+             * *   MIDDLE
+             * 
+             *     <!-- -->
+             * 
+             *     <!-- -->
+             * 
+             *     <!-- -->
              */
             public Builder watermarkTransparency(String watermarkTransparency) {
                 this.watermarkTransparency = watermarkTransparency;
@@ -1976,7 +2666,7 @@ public class DescribePolicyGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * WatermarkTransparencyValue.
+             * The watermark transparency. A larger value indicates that the watermark is less transparent. Valid values: 10 to 100.
              */
             public Builder watermarkTransparencyValue(Integer watermarkTransparencyValue) {
                 this.watermarkTransparencyValue = watermarkTransparencyValue;
@@ -1984,7 +2674,42 @@ public class DescribePolicyGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * WatermarkType.
+             * The watermark type.
+             * <p>
+             * 
+             * Valid values:
+             * 
+             * *   HostName,EndUserId: The watermark is displayed in the following format: Rightmost 15 characters of the cloud desktop ID,Username.
+             * 
+             *     <!-- -->
+             * 
+             *     <!-- -->
+             * 
+             *     <!-- -->
+             * 
+             * *   EndUserId: The username is displayed.
+             * 
+             *     <!-- -->
+             * 
+             *     <!-- -->
+             * 
+             *     <!-- -->
+             * 
+             * *   EndUserId,HostName: The watermark is displayed in the following format: Username,Rightmost 15 characters of the cloud desktop ID.
+             * 
+             *     <!-- -->
+             * 
+             *     <!-- -->
+             * 
+             *     <!-- -->
+             * 
+             * *   HostName: The rightmost 15 characters of the cloud desktop ID are displayed.
+             * 
+             *     <!-- -->
+             * 
+             *     <!-- -->
+             * 
+             *     <!-- -->
              */
             public Builder watermarkType(String watermarkType) {
                 this.watermarkType = watermarkType;

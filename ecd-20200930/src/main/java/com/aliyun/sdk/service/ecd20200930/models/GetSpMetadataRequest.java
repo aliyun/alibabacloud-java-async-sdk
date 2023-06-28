@@ -83,7 +83,7 @@ public class GetSpMetadataRequest extends Request {
         } 
 
         /**
-         * GetSpMetadata
+         * The workspace ID. This parameter is the same as `OfficeSiteId`. We recommend that you use `OfficeSiteId` to replace `DirectoryId`. You can specify only `DirectoryId` or `OfficeSiteId`.
          */
         public Builder directoryId(String directoryId) {
             this.putQueryParameter("DirectoryId", directoryId);
@@ -92,7 +92,7 @@ public class GetSpMetadataRequest extends Request {
         }
 
         /**
-         * OfficeSiteId.
+         * The workspace ID.
          */
         public Builder officeSiteId(String officeSiteId) {
             this.putQueryParameter("OfficeSiteId", officeSiteId);
@@ -101,7 +101,7 @@ public class GetSpMetadataRequest extends Request {
         }
 
         /**
-         * The operation that you want to perform. Set the value to GetSpMetadata.
+         * The region ID.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);

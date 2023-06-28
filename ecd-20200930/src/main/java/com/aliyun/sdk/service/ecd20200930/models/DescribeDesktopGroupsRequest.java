@@ -274,7 +274,7 @@ public class DescribeDesktopGroupsRequest extends Request {
         }
 
         /**
-         * DesktopGroupId.
+         * The desktop group ID.
          */
         public Builder desktopGroupId(String desktopGroupId) {
             this.putQueryParameter("DesktopGroupId", desktopGroupId);
@@ -283,7 +283,7 @@ public class DescribeDesktopGroupsRequest extends Request {
         }
 
         /**
-         * DesktopGroupName.
+         * The name of the desktop group that you want to query. Fuzzy search is supported.
          */
         public Builder desktopGroupName(String desktopGroupName) {
             this.putQueryParameter("DesktopGroupName", desktopGroupName);
@@ -292,7 +292,7 @@ public class DescribeDesktopGroupsRequest extends Request {
         }
 
         /**
-         * EndUserIds.
+         * The authorized users.
          */
         public Builder endUserIds(java.util.List < String > endUserIds) {
             this.putQueryParameter("EndUserIds", endUserIds);
@@ -301,7 +301,7 @@ public class DescribeDesktopGroupsRequest extends Request {
         }
 
         /**
-         * ExcludedEndUserIds.
+         * The authorized users that you want to exclude.
          */
         public Builder excludedEndUserIds(java.util.List < String > excludedEndUserIds) {
             this.putQueryParameter("ExcludedEndUserIds", excludedEndUserIds);
@@ -319,7 +319,7 @@ public class DescribeDesktopGroupsRequest extends Request {
         }
 
         /**
-         * MaxResults.
+         * The number of entries to return on each page. Valid values: 1 to 100. Default value: 10.
          */
         public Builder maxResults(Integer maxResults) {
             this.putQueryParameter("MaxResults", maxResults);
@@ -328,7 +328,7 @@ public class DescribeDesktopGroupsRequest extends Request {
         }
 
         /**
-         * NextToken.
+         * The pagination token that is used in the next request to retrieve a new page of results. If the NextToken parameter is empty, no next page exists.
          */
         public Builder nextToken(String nextToken) {
             this.putQueryParameter("NextToken", nextToken);
@@ -337,7 +337,7 @@ public class DescribeDesktopGroupsRequest extends Request {
         }
 
         /**
-         * OfficeSiteId.
+         * The workspace ID of the desktop group that you want to query.
          */
         public Builder officeSiteId(String officeSiteId) {
             this.putQueryParameter("OfficeSiteId", officeSiteId);
@@ -346,7 +346,34 @@ public class DescribeDesktopGroupsRequest extends Request {
         }
 
         /**
-         * OwnType.
+         * The desktop group type.
+         * <p>
+         * 
+         * Valid values:
+         * 
+         * *   0
+         * 
+         *     <!-- -->
+         * 
+         *     :
+         * 
+         *     <!-- -->
+         * 
+         *     personal desktop group
+         * 
+         *     <!-- -->
+         * 
+         * *   1
+         * 
+         *     <!-- -->
+         * 
+         *     :
+         * 
+         *     <!-- -->
+         * 
+         *     shared desktop group (multi-session)
+         * 
+         *     <!-- -->
          */
         public Builder ownType(Long ownType) {
             this.putQueryParameter("OwnType", ownType);
@@ -355,7 +382,7 @@ public class DescribeDesktopGroupsRequest extends Request {
         }
 
         /**
-         * Period.
+         * The validity period of the desktop group. The unit is specified by the PeriodUnit parameter.
          */
         public Builder period(Integer period) {
             this.putQueryParameter("Period", period);
@@ -364,7 +391,34 @@ public class DescribeDesktopGroupsRequest extends Request {
         }
 
         /**
-         * PeriodUnit.
+         * The unit of the duration.
+         * <p>
+         * 
+         * Valid values:
+         * 
+         * *   Month
+         * 
+         *     <!-- -->
+         * 
+         *     <!-- -->
+         * 
+         *     <!-- -->
+         * 
+         * *   Year
+         * 
+         *     <!-- -->
+         * 
+         *     <!-- -->
+         * 
+         *     <!-- -->
+         * 
+         * *   Day
+         * 
+         *     <!-- -->
+         * 
+         *     <!-- -->
+         * 
+         *     <!-- -->
          */
         public Builder periodUnit(String periodUnit) {
             this.putQueryParameter("PeriodUnit", periodUnit);
@@ -373,7 +427,7 @@ public class DescribeDesktopGroupsRequest extends Request {
         }
 
         /**
-         * PolicyGroupId.
+         * The ID of the policy with which the desktop group is associated.
          */
         public Builder policyGroupId(String policyGroupId) {
             this.putQueryParameter("PolicyGroupId", policyGroupId);
@@ -382,7 +436,11 @@ public class DescribeDesktopGroupsRequest extends Request {
         }
 
         /**
-         * ProtocolType.
+         * The protocol. Valid values:
+         * <p>
+         * 
+         * *   ASP
+         * *   HDX
          */
         public Builder protocolType(String protocolType) {
             this.putQueryParameter("ProtocolType", protocolType);
@@ -391,7 +449,7 @@ public class DescribeDesktopGroupsRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * The region ID.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -400,7 +458,46 @@ public class DescribeDesktopGroupsRequest extends Request {
         }
 
         /**
-         * Status.
+         * The payment status of the desktop group.
+         * <p>
+         * 
+         * Valid values:
+         * 
+         * *   0
+         * 
+         *     <!-- -->
+         * 
+         *     :
+         * 
+         *     <!-- -->
+         * 
+         *     unpaid
+         * 
+         *     <!-- -->
+         * 
+         * *   1
+         * 
+         *     <!-- -->
+         * 
+         *     :
+         * 
+         *     <!-- -->
+         * 
+         *     paid
+         * 
+         *     <!-- -->
+         * 
+         * *   2
+         * 
+         *     <!-- -->
+         * 
+         *     :
+         * 
+         *     <!-- -->
+         * 
+         *     overdue or expired
+         * 
+         *     <!-- -->
          */
         public Builder status(Integer status) {
             this.putQueryParameter("Status", status);

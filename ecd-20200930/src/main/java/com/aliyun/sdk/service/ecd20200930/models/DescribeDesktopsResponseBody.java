@@ -542,6 +542,9 @@ public class DescribeDesktopsResponseBody extends TeaModel {
         @NameInMap("GpuSpec")
         private String gpuSpec;
 
+        @NameInMap("HibernationBeta")
+        private Boolean hibernationBeta;
+
         @NameInMap("HibernationOptionsConfigured")
         private Boolean hibernationOptionsConfigured;
 
@@ -665,6 +668,7 @@ public class DescribeDesktopsResponseBody extends TeaModel {
             this.gpuCount = builder.gpuCount;
             this.gpuDriverVersion = builder.gpuDriverVersion;
             this.gpuSpec = builder.gpuSpec;
+            this.hibernationBeta = builder.hibernationBeta;
             this.hibernationOptionsConfigured = builder.hibernationOptionsConfigured;
             this.hostName = builder.hostName;
             this.imageId = builder.imageId;
@@ -887,6 +891,13 @@ public class DescribeDesktopsResponseBody extends TeaModel {
          */
         public String getGpuSpec() {
             return this.gpuSpec;
+        }
+
+        /**
+         * @return hibernationBeta
+         */
+        public Boolean getHibernationBeta() {
+            return this.hibernationBeta;
         }
 
         /**
@@ -1140,6 +1151,7 @@ public class DescribeDesktopsResponseBody extends TeaModel {
             private Float gpuCount; 
             private String gpuDriverVersion; 
             private String gpuSpec; 
+            private Boolean hibernationBeta; 
             private Boolean hibernationOptionsConfigured; 
             private String hostName; 
             private String imageId; 
@@ -1378,6 +1390,14 @@ public class DescribeDesktopsResponseBody extends TeaModel {
              */
             public Builder gpuSpec(String gpuSpec) {
                 this.gpuSpec = gpuSpec;
+                return this;
+            }
+
+            /**
+             * HibernationBeta.
+             */
+            public Builder hibernationBeta(Boolean hibernationBeta) {
+                this.hibernationBeta = hibernationBeta;
                 return this;
             }
 
