@@ -3,7 +3,7 @@
   <modelVersion>4.0.0</modelVersion>
   <groupId>com.aliyun</groupId>
   <artifactId>alibabacloud-linkcard20210520</artifactId>
-  <version>1.0.6</version>
+  <version>1.0.7</version>
   <packaging>jar</packaging>
   <name>alibabacloud-linkcard20210520</name>
   <description>Alibaba Cloud Linkcard (20210520) Async SDK for Java

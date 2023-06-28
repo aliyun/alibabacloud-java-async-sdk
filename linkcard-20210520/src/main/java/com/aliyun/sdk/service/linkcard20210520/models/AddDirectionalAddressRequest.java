@@ -40,6 +40,10 @@ public class AddDirectionalAddressRequest extends Request {
     @Validation(required = true)
     private String source;
 
+    @Query
+    @NameInMap("UrlInsecurityForce")
+    private Boolean urlInsecurityForce;
+
     private AddDirectionalAddressRequest(Builder builder) {
         super(builder);
         this.address = builder.address;
@@ -48,6 +52,7 @@ public class AddDirectionalAddressRequest extends Request {
         this.msgNotify = builder.msgNotify;
         this.serialNo = builder.serialNo;
         this.source = builder.source;
+        this.urlInsecurityForce = builder.urlInsecurityForce;
     }
 
     public static Builder builder() {
@@ -105,6 +110,13 @@ public class AddDirectionalAddressRequest extends Request {
         return this.source;
     }
 
+    /**
+     * @return urlInsecurityForce
+     */
+    public Boolean getUrlInsecurityForce() {
+        return this.urlInsecurityForce;
+    }
+
     public static final class Builder extends Request.Builder<AddDirectionalAddressRequest, Builder> {
         private String address; 
         private String addressType; 
@@ -112,6 +124,7 @@ public class AddDirectionalAddressRequest extends Request {
         private Boolean msgNotify; 
         private String serialNo; 
         private String source; 
+        private Boolean urlInsecurityForce; 
 
         private Builder() {
             super();
@@ -125,6 +138,7 @@ public class AddDirectionalAddressRequest extends Request {
             this.msgNotify = request.msgNotify;
             this.serialNo = request.serialNo;
             this.source = request.source;
+            this.urlInsecurityForce = request.urlInsecurityForce;
         } 
 
         /**
@@ -178,6 +192,15 @@ public class AddDirectionalAddressRequest extends Request {
         public Builder source(String source) {
             this.putQueryParameter("Source", source);
             this.source = source;
+            return this;
+        }
+
+        /**
+         * UrlInsecurityForce.
+         */
+        public Builder urlInsecurityForce(Boolean urlInsecurityForce) {
+            this.putQueryParameter("UrlInsecurityForce", urlInsecurityForce);
+            this.urlInsecurityForce = urlInsecurityForce;
             return this;
         }
 

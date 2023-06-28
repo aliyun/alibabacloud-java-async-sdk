@@ -55,7 +55,7 @@ public class GetCardLatestFlowRequest extends Request {
         } 
 
         /**
-         * iccid
+         * Iccid.
          */
         public Builder iccid(String iccid) {
             this.putQueryParameter("Iccid", iccid);

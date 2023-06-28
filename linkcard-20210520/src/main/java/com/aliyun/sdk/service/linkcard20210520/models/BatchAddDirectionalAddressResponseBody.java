@@ -138,7 +138,7 @@ public class BatchAddDirectionalAddressResponseBody extends TeaModel {
         }
 
         /**
-         * 必填
+         * Success.
          */
         public Builder success(Boolean success) {
             this.success = success;

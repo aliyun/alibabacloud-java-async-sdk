@@ -153,6 +153,9 @@ public class GetCredentialPoolStatisticsResponseBody extends TeaModel {
         @NameInMap("EffectiveTotalFlow")
         private String effectiveTotalFlow;
 
+        @NameInMap("MonthExceedFee")
+        private Long monthExceedFee;
+
         @NameInMap("MonthFeatureFee")
         private Long monthFeatureFee;
 
@@ -185,6 +188,7 @@ public class GetCredentialPoolStatisticsResponseBody extends TeaModel {
             this.credentialType = builder.credentialType;
             this.effectiveAvailableFlow = builder.effectiveAvailableFlow;
             this.effectiveTotalFlow = builder.effectiveTotalFlow;
+            this.monthExceedFee = builder.monthExceedFee;
             this.monthFeatureFee = builder.monthFeatureFee;
             this.monthUsedAmount = builder.monthUsedAmount;
             this.poolAvaiable = builder.poolAvaiable;
@@ -253,6 +257,13 @@ public class GetCredentialPoolStatisticsResponseBody extends TeaModel {
         }
 
         /**
+         * @return monthExceedFee
+         */
+        public Long getMonthExceedFee() {
+            return this.monthExceedFee;
+        }
+
+        /**
          * @return monthFeatureFee
          */
         public Long getMonthFeatureFee() {
@@ -316,6 +327,7 @@ public class GetCredentialPoolStatisticsResponseBody extends TeaModel {
             private String credentialType; 
             private String effectiveAvailableFlow; 
             private String effectiveTotalFlow; 
+            private Long monthExceedFee; 
             private Long monthFeatureFee; 
             private Long monthUsedAmount; 
             private String poolAvaiable; 
@@ -378,6 +390,14 @@ public class GetCredentialPoolStatisticsResponseBody extends TeaModel {
              */
             public Builder effectiveTotalFlow(String effectiveTotalFlow) {
                 this.effectiveTotalFlow = effectiveTotalFlow;
+                return this;
+            }
+
+            /**
+             * MonthExceedFee.
+             */
+            public Builder monthExceedFee(Long monthExceedFee) {
+                this.monthExceedFee = monthExceedFee;
                 return this;
             }
 
