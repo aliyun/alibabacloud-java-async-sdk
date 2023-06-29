@@ -122,7 +122,7 @@ public class DescribeParametersResponseBody extends TeaModel {
         }
 
         /**
-         * ParamGroupInfo.
+         * Parameter template information.
          */
         public Builder paramGroupInfo(ParamGroupInfo paramGroupInfo) {
             this.paramGroupInfo = paramGroupInfo;
@@ -336,7 +336,7 @@ public class DescribeParametersResponseBody extends TeaModel {
             private String parameterGroupType; 
 
             /**
-             * ParamGroupId.
+             * Parameter template ID.
              */
             public Builder paramGroupId(String paramGroupId) {
                 this.paramGroupId = paramGroupId;
@@ -344,7 +344,7 @@ public class DescribeParametersResponseBody extends TeaModel {
             }
 
             /**
-             * ParameterGroupDesc.
+             * Parameter template description.
              */
             public Builder parameterGroupDesc(String parameterGroupDesc) {
                 this.parameterGroupDesc = parameterGroupDesc;
@@ -352,7 +352,7 @@ public class DescribeParametersResponseBody extends TeaModel {
             }
 
             /**
-             * ParameterGroupName.
+             * Parameter template name.
              */
             public Builder parameterGroupName(String parameterGroupName) {
                 this.parameterGroupName = parameterGroupName;
@@ -360,7 +360,7 @@ public class DescribeParametersResponseBody extends TeaModel {
             }
 
             /**
-             * ParameterGroupType.
+             * Parameter template type.
              */
             public Builder parameterGroupType(String parameterGroupType) {
                 this.parameterGroupType = parameterGroupType;

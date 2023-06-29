@@ -709,6 +709,7 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<DescribeDBInstancesResponse> describeDBInstances(DescribeDBInstancesRequest request);
 
     /**
+      * @deprecated
       * This operation is no longer available. You can call the DescribeDBInstanceAttribute operation to query information about an instance.
       *
      */

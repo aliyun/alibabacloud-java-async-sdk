@@ -811,6 +811,9 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
         @NameInMap("MaxIOPS")
         private Integer maxIOPS;
 
+        @NameInMap("PGBouncerEnabled")
+        private String PGBouncerEnabled;
+
         @NameInMap("PayType")
         private String payType;
 
@@ -923,6 +926,7 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
             this.maxConnections = builder.maxConnections;
             this.maxIOMBPS = builder.maxIOMBPS;
             this.maxIOPS = builder.maxIOPS;
+            this.PGBouncerEnabled = builder.PGBouncerEnabled;
             this.payType = builder.payType;
             this.port = builder.port;
             this.proxyType = builder.proxyType;
@@ -1291,6 +1295,13 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
         }
 
         /**
+         * @return PGBouncerEnabled
+         */
+        public String getPGBouncerEnabled() {
+            return this.PGBouncerEnabled;
+        }
+
+        /**
          * @return payType
          */
         public String getPayType() {
@@ -1486,6 +1497,7 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
             private Integer maxConnections; 
             private Integer maxIOMBPS; 
             private Integer maxIOPS; 
+            private String PGBouncerEnabled; 
             private String payType; 
             private String port; 
             private Integer proxyType; 
@@ -1975,6 +1987,14 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
              */
             public Builder maxIOPS(Integer maxIOPS) {
                 this.maxIOPS = maxIOPS;
+                return this;
+            }
+
+            /**
+             * PGBouncerEnabled.
+             */
+            public Builder PGBouncerEnabled(String PGBouncerEnabled) {
+                this.PGBouncerEnabled = PGBouncerEnabled;
                 return this;
             }
 

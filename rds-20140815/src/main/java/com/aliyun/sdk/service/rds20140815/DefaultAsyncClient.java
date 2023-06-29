@@ -1928,6 +1928,7 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+      * @deprecated
       * This operation is no longer available. You can call the DescribeDBInstanceAttribute operation to query information about an instance.
       *
      */

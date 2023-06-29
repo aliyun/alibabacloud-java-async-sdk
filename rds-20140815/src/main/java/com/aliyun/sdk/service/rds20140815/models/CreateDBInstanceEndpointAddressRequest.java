@@ -42,6 +42,10 @@ public class CreateDBInstanceEndpointAddressRequest extends Request {
     private String port;
 
     @Query
+    @NameInMap("ResourceGroupId")
+    private String resourceGroupId;
+
+    @Query
     @NameInMap("ResourceOwnerId")
     private Long resourceOwnerId;
 
@@ -53,6 +57,7 @@ public class CreateDBInstanceEndpointAddressRequest extends Request {
         this.DBInstanceId = builder.DBInstanceId;
         this.ipType = builder.ipType;
         this.port = builder.port;
+        this.resourceGroupId = builder.resourceGroupId;
         this.resourceOwnerId = builder.resourceOwnerId;
     }
 
@@ -112,6 +117,13 @@ public class CreateDBInstanceEndpointAddressRequest extends Request {
     }
 
     /**
+     * @return resourceGroupId
+     */
+    public String getResourceGroupId() {
+        return this.resourceGroupId;
+    }
+
+    /**
      * @return resourceOwnerId
      */
     public Long getResourceOwnerId() {
@@ -125,6 +137,7 @@ public class CreateDBInstanceEndpointAddressRequest extends Request {
         private String DBInstanceId; 
         private String ipType; 
         private String port; 
+        private String resourceGroupId; 
         private Long resourceOwnerId; 
 
         private Builder() {
@@ -139,6 +152,7 @@ public class CreateDBInstanceEndpointAddressRequest extends Request {
             this.DBInstanceId = request.DBInstanceId;
             this.ipType = request.ipType;
             this.port = request.port;
+            this.resourceGroupId = request.resourceGroupId;
             this.resourceOwnerId = request.resourceOwnerId;
         } 
 
@@ -196,6 +210,15 @@ public class CreateDBInstanceEndpointAddressRequest extends Request {
         public Builder port(String port) {
             this.putQueryParameter("Port", port);
             this.port = port;
+            return this;
+        }
+
+        /**
+         * ResourceGroupId.
+         */
+        public Builder resourceGroupId(String resourceGroupId) {
+            this.putQueryParameter("ResourceGroupId", resourceGroupId);
+            this.resourceGroupId = resourceGroupId;
             return this;
         }
 

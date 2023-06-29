@@ -419,6 +419,9 @@ public class DescribeDBInstanceNetInfoResponseBody extends TeaModel {
         @NameInMap("MaxDelayTime")
         private String maxDelayTime;
 
+        @NameInMap("PGBouncerPort")
+        private String PGBouncerPort;
+
         @NameInMap("Port")
         private String port;
 
@@ -444,6 +447,7 @@ public class DescribeDBInstanceNetInfoResponseBody extends TeaModel {
             this.IPAddress = builder.IPAddress;
             this.IPType = builder.IPType;
             this.maxDelayTime = builder.maxDelayTime;
+            this.PGBouncerPort = builder.PGBouncerPort;
             this.port = builder.port;
             this.securityIPGroups = builder.securityIPGroups;
             this.upgradeable = builder.upgradeable;
@@ -523,6 +527,13 @@ public class DescribeDBInstanceNetInfoResponseBody extends TeaModel {
         }
 
         /**
+         * @return PGBouncerPort
+         */
+        public String getPGBouncerPort() {
+            return this.PGBouncerPort;
+        }
+
+        /**
          * @return port
          */
         public String getPort() {
@@ -567,6 +578,7 @@ public class DescribeDBInstanceNetInfoResponseBody extends TeaModel {
             private String IPAddress; 
             private String IPType; 
             private String maxDelayTime; 
+            private String PGBouncerPort; 
             private String port; 
             private SecurityIPGroups securityIPGroups; 
             private String upgradeable; 
@@ -664,6 +676,14 @@ public class DescribeDBInstanceNetInfoResponseBody extends TeaModel {
              */
             public Builder maxDelayTime(String maxDelayTime) {
                 this.maxDelayTime = maxDelayTime;
+                return this;
+            }
+
+            /**
+             * PGBouncerPort.
+             */
+            public Builder PGBouncerPort(String PGBouncerPort) {
+                this.PGBouncerPort = PGBouncerPort;
                 return this;
             }
 

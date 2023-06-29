@@ -44,6 +44,10 @@ public class ModifyDBInstanceConnectionStringRequest extends Request {
     private Long ownerId;
 
     @Query
+    @NameInMap("PGBouncerPort")
+    private String PGBouncerPort;
+
+    @Query
     @NameInMap("Port")
     @Validation(required = true)
     private String port;
@@ -65,6 +69,7 @@ public class ModifyDBInstanceConnectionStringRequest extends Request {
         this.generalGroupName = builder.generalGroupName;
         this.ownerAccount = builder.ownerAccount;
         this.ownerId = builder.ownerId;
+        this.PGBouncerPort = builder.PGBouncerPort;
         this.port = builder.port;
         this.resourceOwnerAccount = builder.resourceOwnerAccount;
         this.resourceOwnerId = builder.resourceOwnerId;
@@ -133,6 +138,13 @@ public class ModifyDBInstanceConnectionStringRequest extends Request {
     }
 
     /**
+     * @return PGBouncerPort
+     */
+    public String getPGBouncerPort() {
+        return this.PGBouncerPort;
+    }
+
+    /**
      * @return port
      */
     public String getPort() {
@@ -161,6 +173,7 @@ public class ModifyDBInstanceConnectionStringRequest extends Request {
         private String generalGroupName; 
         private String ownerAccount; 
         private Long ownerId; 
+        private String PGBouncerPort; 
         private String port; 
         private String resourceOwnerAccount; 
         private Long resourceOwnerId; 
@@ -178,6 +191,7 @@ public class ModifyDBInstanceConnectionStringRequest extends Request {
             this.generalGroupName = request.generalGroupName;
             this.ownerAccount = request.ownerAccount;
             this.ownerId = request.ownerId;
+            this.PGBouncerPort = request.PGBouncerPort;
             this.port = request.port;
             this.resourceOwnerAccount = request.resourceOwnerAccount;
             this.resourceOwnerId = request.resourceOwnerId;
@@ -252,6 +266,15 @@ public class ModifyDBInstanceConnectionStringRequest extends Request {
         public Builder ownerId(Long ownerId) {
             this.putQueryParameter("OwnerId", ownerId);
             this.ownerId = ownerId;
+            return this;
+        }
+
+        /**
+         * PGBouncerPort.
+         */
+        public Builder PGBouncerPort(String PGBouncerPort) {
+            this.putQueryParameter("PGBouncerPort", PGBouncerPort);
+            this.PGBouncerPort = PGBouncerPort;
             return this;
         }
 

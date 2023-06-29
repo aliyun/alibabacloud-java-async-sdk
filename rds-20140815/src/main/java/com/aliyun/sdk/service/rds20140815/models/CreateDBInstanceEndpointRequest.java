@@ -49,6 +49,10 @@ public class CreateDBInstanceEndpointRequest extends Request {
     private String privateIpAddress;
 
     @Query
+    @NameInMap("ResourceGroupId")
+    private String resourceGroupId;
+
+    @Query
     @NameInMap("ResourceOwnerId")
     private Long resourceOwnerId;
 
@@ -70,6 +74,7 @@ public class CreateDBInstanceEndpointRequest extends Request {
         this.nodeItems = builder.nodeItems;
         this.port = builder.port;
         this.privateIpAddress = builder.privateIpAddress;
+        this.resourceGroupId = builder.resourceGroupId;
         this.resourceOwnerId = builder.resourceOwnerId;
         this.vSwitchId = builder.vSwitchId;
         this.vpcId = builder.vpcId;
@@ -145,6 +150,13 @@ public class CreateDBInstanceEndpointRequest extends Request {
     }
 
     /**
+     * @return resourceGroupId
+     */
+    public String getResourceGroupId() {
+        return this.resourceGroupId;
+    }
+
+    /**
      * @return resourceOwnerId
      */
     public Long getResourceOwnerId() {
@@ -174,6 +186,7 @@ public class CreateDBInstanceEndpointRequest extends Request {
         private java.util.List < NodeItems> nodeItems; 
         private String port; 
         private String privateIpAddress; 
+        private String resourceGroupId; 
         private Long resourceOwnerId; 
         private String vSwitchId; 
         private String vpcId; 
@@ -192,6 +205,7 @@ public class CreateDBInstanceEndpointRequest extends Request {
             this.nodeItems = request.nodeItems;
             this.port = request.port;
             this.privateIpAddress = request.privateIpAddress;
+            this.resourceGroupId = request.resourceGroupId;
             this.resourceOwnerId = request.resourceOwnerId;
             this.vSwitchId = request.vSwitchId;
             this.vpcId = request.vpcId;
@@ -280,6 +294,15 @@ public class CreateDBInstanceEndpointRequest extends Request {
         public Builder privateIpAddress(String privateIpAddress) {
             this.putQueryParameter("PrivateIpAddress", privateIpAddress);
             this.privateIpAddress = privateIpAddress;
+            return this;
+        }
+
+        /**
+         * ResourceGroupId.
+         */
+        public Builder resourceGroupId(String resourceGroupId) {
+            this.putQueryParameter("ResourceGroupId", resourceGroupId);
+            this.resourceGroupId = resourceGroupId;
             return this;
         }
 
