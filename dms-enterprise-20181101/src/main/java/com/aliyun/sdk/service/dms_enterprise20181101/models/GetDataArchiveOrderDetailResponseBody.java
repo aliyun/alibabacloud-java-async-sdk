@@ -138,7 +138,7 @@ public class GetDataArchiveOrderDetailResponseBody extends TeaModel {
         }
 
         /**
-         * Id of the request
+         * TraceId.
          */
         public Builder traceId(String traceId) {
             this.traceId = traceId;

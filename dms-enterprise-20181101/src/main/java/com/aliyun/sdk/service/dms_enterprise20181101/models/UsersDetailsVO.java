@@ -182,7 +182,7 @@ public class UsersDetailsVO extends TeaModel {
         private String userPublicKeyPem; 
 
         /**
-         * 审批签名信息
+         * ApprovalSignatureBase64.
          */
         public Builder approvalSignatureBase64(String approvalSignatureBase64) {
             this.approvalSignatureBase64 = approvalSignatureBase64;
@@ -190,7 +190,7 @@ public class UsersDetailsVO extends TeaModel {
         }
 
         /**
-         * 审批过的sql模板
+         * ApprovalSqlTemplate.
          */
         public Builder approvalSqlTemplate(String approvalSqlTemplate) {
             this.approvalSqlTemplate = approvalSqlTemplate;
@@ -198,7 +198,7 @@ public class UsersDetailsVO extends TeaModel {
         }
 
         /**
-         * 是否完成了审批
+         * ApprovalStatus.
          */
         public Builder approvalStatus(String approvalStatus) {
             this.approvalStatus = approvalStatus;
@@ -206,7 +206,7 @@ public class UsersDetailsVO extends TeaModel {
         }
 
         /**
-         * 是否为项目创建者
+         * Creator.
          */
         public Builder creator(Integer creator) {
             this.creator = creator;
@@ -214,7 +214,7 @@ public class UsersDetailsVO extends TeaModel {
         }
 
         /**
-         * 是否绑定完数据
+         * DataReady.
          */
         public Builder dataReady(Integer dataReady) {
             this.dataReady = dataReady;
@@ -222,7 +222,7 @@ public class UsersDetailsVO extends TeaModel {
         }
 
         /**
-         * 用户id
+         * Id.
          */
         public Builder id(Long id) {
             this.id = id;
@@ -230,7 +230,7 @@ public class UsersDetailsVO extends TeaModel {
         }
 
         /**
-         * mekid
+         * Mekid.
          */
         public Builder mekid(Long mekid) {
             this.mekid = mekid;
@@ -238,7 +238,7 @@ public class UsersDetailsVO extends TeaModel {
         }
 
         /**
-         * 存储空间路径
+         * PathPrefix.
          */
         public Builder pathPrefix(String pathPrefix) {
             this.pathPrefix = pathPrefix;
@@ -246,7 +246,7 @@ public class UsersDetailsVO extends TeaModel {
         }
 
         /**
-         * 是否为结果方
+         * ResultParty.
          */
         public Builder resultParty(Integer resultParty) {
             this.resultParty = resultParty;
@@ -254,7 +254,7 @@ public class UsersDetailsVO extends TeaModel {
         }
 
         /**
-         * uid
+         * Uid.
          */
         public Builder uid(String uid) {
             this.uid = uid;
@@ -262,7 +262,7 @@ public class UsersDetailsVO extends TeaModel {
         }
 
         /**
-         * 是否验证过项目同意加入
+         * UserConfirmed.
          */
         public Builder userConfirmed(Integer userConfirmed) {
             this.userConfirmed = userConfirmed;
@@ -270,7 +270,7 @@ public class UsersDetailsVO extends TeaModel {
         }
 
         /**
-         * 用户名
+         * UserName.
          */
         public Builder userName(String userName) {
             this.userName = userName;
@@ -278,7 +278,7 @@ public class UsersDetailsVO extends TeaModel {
         }
 
         /**
-         * 公钥
+         * UserPublicKeyPem.
          */
         public Builder userPublicKeyPem(String userPublicKeyPem) {
             this.userPublicKeyPem = userPublicKeyPem;

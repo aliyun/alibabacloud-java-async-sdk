@@ -86,7 +86,7 @@ public class SearchDataTrackResultResponseBody extends TeaModel {
         private TrackResult trackResult; 
 
         /**
-         * ErrorCode.
+         * The error code returned if the request failed.
          */
         public Builder errorCode(String errorCode) {
             this.errorCode = errorCode;
@@ -94,7 +94,7 @@ public class SearchDataTrackResultResponseBody extends TeaModel {
         }
 
         /**
-         * ErrorMessage.
+         * The error message returned if the request failed.
          */
         public Builder errorMessage(String errorMessage) {
             this.errorMessage = errorMessage;
@@ -102,7 +102,7 @@ public class SearchDataTrackResultResponseBody extends TeaModel {
         }
 
         /**
-         * Id of the request
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -110,7 +110,11 @@ public class SearchDataTrackResultResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * Indicates whether the request was successful. Valid values:
+         * <p>
+         * 
+         * *   **true**: The request was successful.
+         * *   **false**: The request failed.
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -118,7 +122,7 @@ public class SearchDataTrackResultResponseBody extends TeaModel {
         }
 
         /**
-         * TrackResult.
+         * The parsing result of the data tracking task.
          */
         public Builder trackResult(TrackResult trackResult) {
             this.trackResult = trackResult;
@@ -230,7 +234,7 @@ public class SearchDataTrackResultResponseBody extends TeaModel {
             private String rollSQL; 
 
             /**
-             * DataAfter.
+             * The data records after you perform data operations in the database.
              */
             public Builder dataAfter(java.util.List < String > dataAfter) {
                 this.dataAfter = dataAfter;
@@ -238,7 +242,7 @@ public class SearchDataTrackResultResponseBody extends TeaModel {
             }
 
             /**
-             * DataBefore.
+             * The data records before you perform data operations in the database.
              */
             public Builder dataBefore(java.util.List < String > dataBefore) {
                 this.dataBefore = dataBefore;
@@ -246,7 +250,7 @@ public class SearchDataTrackResultResponseBody extends TeaModel {
             }
 
             /**
-             * EventId.
+             * The ID of the event.
              */
             public Builder eventId(Long eventId) {
                 this.eventId = eventId;
@@ -254,7 +258,7 @@ public class SearchDataTrackResultResponseBody extends TeaModel {
             }
 
             /**
-             * EventLength.
+             * The length of the event content. Unit: bytes.
              */
             public Builder eventLength(Long eventLength) {
                 this.eventLength = eventLength;
@@ -262,7 +266,7 @@ public class SearchDataTrackResultResponseBody extends TeaModel {
             }
 
             /**
-             * EventTimestamp.
+             * The event time.
              */
             public Builder eventTimestamp(String eventTimestamp) {
                 this.eventTimestamp = eventTimestamp;
@@ -270,7 +274,15 @@ public class SearchDataTrackResultResponseBody extends TeaModel {
             }
 
             /**
-             * EventType.
+             * The type of the event. Valid values:
+             * <p>
+             * 
+             * *   **WRITE_ROWS**: indicates an INSERT operation.
+             * *   **UPDATE_ROWS**: indicates an UPDATE operation.
+             * *   **DELETE_ROWS**: indicates a DELETE operation.
+             * *   **EXT_WRITE_ROWS**: indicates an INSERT operation, which is equivalent to WRITE_ROWS.
+             * *   **EXT_UPDATE_ROWS**: indicates an UPDATE operation, which is equivalent to UPDATE_ROWS.
+             * *   **EXT_DELETE_ROWS**: indicates a DELETE operation, which is equivalent to DELETE_ROWS.
              */
             public Builder eventType(String eventType) {
                 this.eventType = eventType;
@@ -278,7 +290,7 @@ public class SearchDataTrackResultResponseBody extends TeaModel {
             }
 
             /**
-             * RollSQL.
+             * The SQL statements used to roll back the data change.
              */
             public Builder rollSQL(String rollSQL) {
                 this.rollSQL = rollSQL;
@@ -355,7 +367,7 @@ public class SearchDataTrackResultResponseBody extends TeaModel {
             private Boolean fictive; 
 
             /**
-             * ColumnName.
+             * The name of the column.
              */
             public Builder columnName(String columnName) {
                 this.columnName = columnName;
@@ -363,7 +375,7 @@ public class SearchDataTrackResultResponseBody extends TeaModel {
             }
 
             /**
-             * ColumnPosition.
+             * The position of the column.
              */
             public Builder columnPosition(Integer columnPosition) {
                 this.columnPosition = columnPosition;
@@ -371,7 +383,7 @@ public class SearchDataTrackResultResponseBody extends TeaModel {
             }
 
             /**
-             * ColumnType.
+             * The data type of the column. Examples: BIGINT, INT, and VARCHAR.
              */
             public Builder columnType(String columnType) {
                 this.columnType = columnType;
@@ -379,7 +391,11 @@ public class SearchDataTrackResultResponseBody extends TeaModel {
             }
 
             /**
-             * Fictive.
+             * Indicates whether the column is a virtual column. Valid values:
+             * <p>
+             * 
+             * *   **true**
+             * *   **false**
              */
             public Builder fictive(Boolean fictive) {
                 this.fictive = fictive;
@@ -456,7 +472,7 @@ public class SearchDataTrackResultResponseBody extends TeaModel {
             private String tableName; 
 
             /**
-             * Columns.
+             * The information about columns.
              */
             public Builder columns(java.util.List < Columns> columns) {
                 this.columns = columns;
@@ -464,7 +480,7 @@ public class SearchDataTrackResultResponseBody extends TeaModel {
             }
 
             /**
-             * Description.
+             * The description of the column.
              */
             public Builder description(String description) {
                 this.description = description;
@@ -472,7 +488,7 @@ public class SearchDataTrackResultResponseBody extends TeaModel {
             }
 
             /**
-             * SchemaName.
+             * The name of the database.
              */
             public Builder schemaName(String schemaName) {
                 this.schemaName = schemaName;
@@ -480,7 +496,7 @@ public class SearchDataTrackResultResponseBody extends TeaModel {
             }
 
             /**
-             * TableName.
+             * The name of the table.
              */
             public Builder tableName(String tableName) {
                 this.tableName = tableName;
@@ -545,7 +561,7 @@ public class SearchDataTrackResultResponseBody extends TeaModel {
             private Long totalCount; 
 
             /**
-             * EventList.
+             * The details of the event logs.
              */
             public Builder eventList(java.util.List < EventList> eventList) {
                 this.eventList = eventList;
@@ -553,7 +569,7 @@ public class SearchDataTrackResultResponseBody extends TeaModel {
             }
 
             /**
-             * TableInfoList.
+             * The metadata of tables for which you track data operations.
              */
             public Builder tableInfoList(java.util.List < TableInfoList> tableInfoList) {
                 this.tableInfoList = tableInfoList;
@@ -561,7 +577,7 @@ public class SearchDataTrackResultResponseBody extends TeaModel {
             }
 
             /**
-             * TotalCount.
+             * The total number of entries returned.
              */
             public Builder totalCount(Long totalCount) {
                 this.totalCount = totalCount;

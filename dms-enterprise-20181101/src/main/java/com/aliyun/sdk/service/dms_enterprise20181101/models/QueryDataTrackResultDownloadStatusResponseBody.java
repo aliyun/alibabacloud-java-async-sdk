@@ -86,7 +86,7 @@ public class QueryDataTrackResultDownloadStatusResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * ErrorCode.
+         * The error code returned if the request failed.
          */
         public Builder errorCode(String errorCode) {
             this.errorCode = errorCode;
@@ -94,7 +94,7 @@ public class QueryDataTrackResultDownloadStatusResponseBody extends TeaModel {
         }
 
         /**
-         * ErrorMessage.
+         * The error message returned if the request failed.
          */
         public Builder errorMessage(String errorMessage) {
             this.errorMessage = errorMessage;
@@ -102,7 +102,7 @@ public class QueryDataTrackResultDownloadStatusResponseBody extends TeaModel {
         }
 
         /**
-         * Id of the request
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -110,7 +110,7 @@ public class QueryDataTrackResultDownloadStatusResponseBody extends TeaModel {
         }
 
         /**
-         * StatusResult.
+         * The information about the download progress.
          */
         public Builder statusResult(StatusResult statusResult) {
             this.statusResult = statusResult;
@@ -118,7 +118,11 @@ public class QueryDataTrackResultDownloadStatusResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * Indicates whether the request was successful. Valid values:
+         * <p>
+         * 
+         * *   **true**: The request was successful.
+         * *   **false**: The request failed.
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -194,7 +198,14 @@ public class QueryDataTrackResultDownloadStatusResponseBody extends TeaModel {
             private Long totalCount; 
 
             /**
-             * DownloadStatus.
+             * The status of the download task. Valid values:
+             * <p>
+             * 
+             * *   **INIT**: The download task is being initialized.
+             * *   **LISTING**: The download task is in a transient intermediate state during the initialization.
+             * *   **DOWNLOADING**: The download task is being processed.
+             * *   **DOWNLOAD_SUCCESS**: The download task was successfully processed.
+             * *   **DOWNLOAD_FAIL**: The download task failed.
              */
             public Builder downloadStatus(String downloadStatus) {
                 this.downloadStatus = downloadStatus;
@@ -202,7 +213,7 @@ public class QueryDataTrackResultDownloadStatusResponseBody extends TeaModel {
             }
 
             /**
-             * DownloadUrl.
+             * The URL that is used to download data tracking logs. This parameter is returned only when the value of DownloadStatus is DOWNLOAD_SUCCESS.
              */
             public Builder downloadUrl(String downloadUrl) {
                 this.downloadUrl = downloadUrl;
@@ -210,7 +221,7 @@ public class QueryDataTrackResultDownloadStatusResponseBody extends TeaModel {
             }
 
             /**
-             * StatusDesc.
+             * The description of the state.
              */
             public Builder statusDesc(String statusDesc) {
                 this.statusDesc = statusDesc;
@@ -218,7 +229,7 @@ public class QueryDataTrackResultDownloadStatusResponseBody extends TeaModel {
             }
 
             /**
-             * TotalCount.
+             * The total number of entries returned.
              */
             public Builder totalCount(Long totalCount) {
                 this.totalCount = totalCount;

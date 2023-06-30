@@ -86,7 +86,7 @@ public class GetDataTrackJobDegreeResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * ErrorCode.
+         * The error code returned if the request failed.
          */
         public Builder errorCode(String errorCode) {
             this.errorCode = errorCode;
@@ -94,7 +94,7 @@ public class GetDataTrackJobDegreeResponseBody extends TeaModel {
         }
 
         /**
-         * ErrorMessage.
+         * The error message returned if the request failed.
          */
         public Builder errorMessage(String errorMessage) {
             this.errorMessage = errorMessage;
@@ -102,7 +102,7 @@ public class GetDataTrackJobDegreeResponseBody extends TeaModel {
         }
 
         /**
-         * JobDegree.
+         * The progress details of the data tracking task.
          */
         public Builder jobDegree(JobDegree jobDegree) {
             this.jobDegree = jobDegree;
@@ -110,7 +110,7 @@ public class GetDataTrackJobDegreeResponseBody extends TeaModel {
         }
 
         /**
-         * Id of the request
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -118,7 +118,11 @@ public class GetDataTrackJobDegreeResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * Indicates whether the request was successful. Valid values:
+         * <p>
+         * 
+         * *   **true**
+         * *   **false**
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -206,7 +210,7 @@ public class GetDataTrackJobDegreeResponseBody extends TeaModel {
             private String statusDesc; 
 
             /**
-             * DownloadCompletionDegree.
+             * The progress of binary log download. Valid values: 0 to 1. A value of 1 indicates that binary log download is complete.
              */
             public Builder downloadCompletionDegree(Double downloadCompletionDegree) {
                 this.downloadCompletionDegree = downloadCompletionDegree;
@@ -214,7 +218,7 @@ public class GetDataTrackJobDegreeResponseBody extends TeaModel {
             }
 
             /**
-             * FilterCompletionDegree.
+             * The progress of binary log parsing. Valid values: 0 to 1. A value of 1 indicates that binary log parsing is complete.
              */
             public Builder filterCompletionDegree(Double filterCompletionDegree) {
                 this.filterCompletionDegree = filterCompletionDegree;
@@ -222,7 +226,18 @@ public class GetDataTrackJobDegreeResponseBody extends TeaModel {
             }
 
             /**
-             * JobStatus.
+             * The status of the data tracking task. Valid values:
+             * <p>
+             * 
+             * *   **INIT**: The task is being initialized.
+             * *   **LISTING**: The binary logs are being obtained.
+             * *   **LIST_SUCCESS**: The binary logs are successfully obtained.
+             * *   **DOWNLOADING**: The binary logs are being downloaded.
+             * *   **DOWNLOAD_FAIL**: The binary logs failed to be downloaded.
+             * *   **DOWNLOAD_SUCCESS**: The binary logs are successfully downloaded.
+             * *   **FILTERING**: The binary logs are being parsed.
+             * *   **FILTER_FAIL**: The binary logs failed to be parsed.
+             * *   **FILTER_SUCCESS**: The binary logs are successfully parsed.
              */
             public Builder jobStatus(String jobStatus) {
                 this.jobStatus = jobStatus;
@@ -230,7 +245,7 @@ public class GetDataTrackJobDegreeResponseBody extends TeaModel {
             }
 
             /**
-             * ListCompletionDegree.
+             * The progress of binary log obtaining. Valid values: 0 to 1. A value of 1 indicates that binary log obtaining is complete.
              */
             public Builder listCompletionDegree(Double listCompletionDegree) {
                 this.listCompletionDegree = listCompletionDegree;
@@ -238,7 +253,7 @@ public class GetDataTrackJobDegreeResponseBody extends TeaModel {
             }
 
             /**
-             * StatusDesc.
+             * The description of the task status.
              */
             public Builder statusDesc(String statusDesc) {
                 this.statusDesc = statusDesc;

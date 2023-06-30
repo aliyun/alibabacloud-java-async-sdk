@@ -93,7 +93,7 @@ public class GetDataTrackOrderDetailRequest extends Request {
         }
 
         /**
-         * OrderId.
+         * The ID of the ticket. You can call the [ListOrders](~~144643~~) operation to query the ticket ID.
          */
         public Builder orderId(Long orderId) {
             this.putQueryParameter("OrderId", orderId);
@@ -102,7 +102,7 @@ public class GetDataTrackOrderDetailRequest extends Request {
         }
 
         /**
-         * Tid.
+         * The ID of the tenant. You can call the [GetUserActiveTenant](~~198073~~) operation to query the tenant ID.
          */
         public Builder tid(Long tid) {
             this.putQueryParameter("Tid", tid);

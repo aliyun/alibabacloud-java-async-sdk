@@ -28,7 +28,6 @@ public class ReRunTaskFlowInstanceRequest extends Request {
 
     @Query
     @NameInMap("DagVersion")
-    @Validation(required = true)
     private String dagVersion;
 
     @Query

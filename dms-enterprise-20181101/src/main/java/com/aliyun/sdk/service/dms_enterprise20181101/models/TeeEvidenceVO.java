@@ -170,7 +170,7 @@ public class TeeEvidenceVO extends TeaModel {
         private java.util.List < String > trustedMrEnclave; 
 
         /**
-         * cipherSuite
+         * CipherSuite.
          */
         public Builder cipherSuite(String cipherSuite) {
             this.cipherSuite = cipherSuite;
@@ -178,7 +178,7 @@ public class TeeEvidenceVO extends TeaModel {
         }
 
         /**
-         * enclaveData
+         * EnclaveData.
          */
         public Builder enclaveData(String enclaveData) {
             this.enclaveData = enclaveData;
@@ -186,7 +186,7 @@ public class TeeEvidenceVO extends TeaModel {
         }
 
         /**
-         * 公钥pem格式数据
+         * EncryptPublicKeyPem.
          */
         public Builder encryptPublicKeyPem(String encryptPublicKeyPem) {
             this.encryptPublicKeyPem = encryptPublicKeyPem;
@@ -194,7 +194,7 @@ public class TeeEvidenceVO extends TeaModel {
         }
 
         /**
-         * 加密类型
+         * EncryptPublicKeyType.
          */
         public Builder encryptPublicKeyType(String encryptPublicKeyType) {
             this.encryptPublicKeyType = encryptPublicKeyType;
@@ -202,7 +202,7 @@ public class TeeEvidenceVO extends TeaModel {
         }
 
         /**
-         * modifiedDate
+         * ModifiedDate.
          */
         public Builder modifiedDate(String modifiedDate) {
             this.modifiedDate = modifiedDate;
@@ -210,7 +210,7 @@ public class TeeEvidenceVO extends TeaModel {
         }
 
         /**
-         * publicKey
+         * PublicKey.
          */
         public Builder publicKey(String publicKey) {
             this.publicKey = publicKey;
@@ -218,7 +218,7 @@ public class TeeEvidenceVO extends TeaModel {
         }
 
         /**
-         * 校验数据
+         * PublicKeyRaBase64.
          */
         public Builder publicKeyRaBase64(String publicKeyRaBase64) {
             this.publicKeyRaBase64 = publicKeyRaBase64;
@@ -226,7 +226,7 @@ public class TeeEvidenceVO extends TeaModel {
         }
 
         /**
-         * RA 校验类型
+         * PublicKeyRaType.
          */
         public Builder publicKeyRaType(String publicKeyRaType) {
             this.publicKeyRaType = publicKeyRaType;
@@ -234,7 +234,7 @@ public class TeeEvidenceVO extends TeaModel {
         }
 
         /**
-         * quoteReport
+         * QuoteReport.
          */
         public Builder quoteReport(String quoteReport) {
             this.quoteReport = quoteReport;
@@ -242,7 +242,7 @@ public class TeeEvidenceVO extends TeaModel {
         }
 
         /**
-         * 签名pem格式数据
+         * SignPublicKeyPem.
          */
         public Builder signPublicKeyPem(String signPublicKeyPem) {
             this.signPublicKeyPem = signPublicKeyPem;
@@ -250,7 +250,7 @@ public class TeeEvidenceVO extends TeaModel {
         }
 
         /**
-         * 签名类型
+         * SignPublicKeyType.
          */
         public Builder signPublicKeyType(String signPublicKeyType) {
             this.signPublicKeyType = signPublicKeyType;
@@ -258,7 +258,7 @@ public class TeeEvidenceVO extends TeaModel {
         }
 
         /**
-         * trustedMrEnclave
+         * TrustedMrEnclave.
          */
         public Builder trustedMrEnclave(java.util.List < String > trustedMrEnclave) {
             this.trustedMrEnclave = trustedMrEnclave;

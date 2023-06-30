@@ -206,7 +206,7 @@ public class DatasetItemVO extends TeaModel {
         private String url; 
 
         /**
-         * 关联etl任务
+         * AsyncTaskList.
          */
         public Builder asyncTaskList(java.util.List < AsyncTaskVO > asyncTaskList) {
             this.asyncTaskList = asyncTaskList;
@@ -214,7 +214,7 @@ public class DatasetItemVO extends TeaModel {
         }
 
         /**
-         * 是否完成上传/融合计算（0否 1是）
+         * DatasetStatus.
          */
         public Builder datasetStatus(Integer datasetStatus) {
             this.datasetStatus = datasetStatus;
@@ -222,7 +222,7 @@ public class DatasetItemVO extends TeaModel {
         }
 
         /**
-         * 类型（0上传 1融合计算）
+         * DatasetType.
          */
         public Builder datasetType(Integer datasetType) {
             this.datasetType = datasetType;
@@ -230,7 +230,7 @@ public class DatasetItemVO extends TeaModel {
         }
 
         /**
-         * 摘要信息
+         * Digest.
          */
         public Builder digest(String digest) {
             this.digest = digest;
@@ -238,7 +238,7 @@ public class DatasetItemVO extends TeaModel {
         }
 
         /**
-         * 存储系统类型
+         * FileSystem.
          */
         public Builder fileSystem(String fileSystem) {
             this.fileSystem = fileSystem;
@@ -246,7 +246,7 @@ public class DatasetItemVO extends TeaModel {
         }
 
         /**
-         * id值
+         * Id.
          */
         public Builder id(String id) {
             this.id = id;
@@ -254,7 +254,7 @@ public class DatasetItemVO extends TeaModel {
         }
 
         /**
-         * encdb.encdb_internal_scm_table.keyname
+         * KeyName.
          */
         public Builder keyName(String keyName) {
             this.keyName = keyName;
@@ -262,7 +262,7 @@ public class DatasetItemVO extends TeaModel {
         }
 
         /**
-         * 其他数据集信息Json格式
+         * MoreInfo.
          */
         public Builder moreInfo(String moreInfo) {
             this.moreInfo = moreInfo;
@@ -270,7 +270,7 @@ public class DatasetItemVO extends TeaModel {
         }
 
         /**
-         * 路径
+         * Path.
          */
         public Builder path(String path) {
             this.path = path;
@@ -278,7 +278,7 @@ public class DatasetItemVO extends TeaModel {
         }
 
         /**
-         * 关联项目
+         * ProjectsLinked.
          */
         public Builder projectsLinked(java.util.List < ProjectDetailsLiteVO > projectsLinked) {
             this.projectsLinked = projectsLinked;
@@ -286,7 +286,7 @@ public class DatasetItemVO extends TeaModel {
         }
 
         /**
-         * 最近任务状态(0开始 1连接oos成功 2任务完成 -1失败 -2无任务)
+         * RecentTaskStatus.
          */
         public Builder recentTaskStatus(Integer recentTaskStatus) {
             this.recentTaskStatus = recentTaskStatus;
@@ -294,7 +294,7 @@ public class DatasetItemVO extends TeaModel {
         }
 
         /**
-         * 描述
+         * Remark.
          */
         public Builder remark(String remark) {
             this.remark = remark;
@@ -302,7 +302,7 @@ public class DatasetItemVO extends TeaModel {
         }
 
         /**
-         * 元数据信息
+         * Schema.
          */
         public Builder schema(String schema) {
             this.schema = schema;
@@ -310,7 +310,7 @@ public class DatasetItemVO extends TeaModel {
         }
 
         /**
-         * 表名
+         * TableName.
          */
         public Builder tableName(String tableName) {
             this.tableName = tableName;
@@ -318,7 +318,7 @@ public class DatasetItemVO extends TeaModel {
         }
 
         /**
-         * 存储系统地址
+         * Url.
          */
         public Builder url(String url) {
             this.url = url;

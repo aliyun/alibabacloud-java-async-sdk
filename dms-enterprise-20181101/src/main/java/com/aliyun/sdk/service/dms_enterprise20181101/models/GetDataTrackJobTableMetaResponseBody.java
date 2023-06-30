@@ -86,7 +86,7 @@ public class GetDataTrackJobTableMetaResponseBody extends TeaModel {
         private java.util.List < TableMetaList> tableMetaList; 
 
         /**
-         * ErrorCode.
+         * The error code returned if the request failed.
          */
         public Builder errorCode(String errorCode) {
             this.errorCode = errorCode;
@@ -94,7 +94,7 @@ public class GetDataTrackJobTableMetaResponseBody extends TeaModel {
         }
 
         /**
-         * ErrorMessage.
+         * The error message returned if the request failed.
          */
         public Builder errorMessage(String errorMessage) {
             this.errorMessage = errorMessage;
@@ -102,7 +102,7 @@ public class GetDataTrackJobTableMetaResponseBody extends TeaModel {
         }
 
         /**
-         * Id of the request
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -110,7 +110,11 @@ public class GetDataTrackJobTableMetaResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * Indicates whether the request was successful. Valid values:
+         * <p>
+         * 
+         * *   **true**: The request was successful.
+         * *   **false**: The request failed.
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -118,7 +122,7 @@ public class GetDataTrackJobTableMetaResponseBody extends TeaModel {
         }
 
         /**
-         * TableMetaList.
+         * The metadata of tables.
          */
         public Builder tableMetaList(java.util.List < TableMetaList> tableMetaList) {
             this.tableMetaList = tableMetaList;
@@ -206,7 +210,7 @@ public class GetDataTrackJobTableMetaResponseBody extends TeaModel {
             private Boolean fictive; 
 
             /**
-             * Charset.
+             * The name of the character set.
              */
             public Builder charset(String charset) {
                 this.charset = charset;
@@ -214,7 +218,7 @@ public class GetDataTrackJobTableMetaResponseBody extends TeaModel {
             }
 
             /**
-             * ColumnName.
+             * The name of the column.
              */
             public Builder columnName(String columnName) {
                 this.columnName = columnName;
@@ -222,7 +226,7 @@ public class GetDataTrackJobTableMetaResponseBody extends TeaModel {
             }
 
             /**
-             * ColumnPosition.
+             * The position of the column.
              */
             public Builder columnPosition(Integer columnPosition) {
                 this.columnPosition = columnPosition;
@@ -230,7 +234,7 @@ public class GetDataTrackJobTableMetaResponseBody extends TeaModel {
             }
 
             /**
-             * ColumnType.
+             * The data type of the column. Examples: BIGINT, INT, and VARCHAR.
              */
             public Builder columnType(String columnType) {
                 this.columnType = columnType;
@@ -238,7 +242,11 @@ public class GetDataTrackJobTableMetaResponseBody extends TeaModel {
             }
 
             /**
-             * Fictive.
+             * Indicates whether the column is a virtual column. Valid values:
+             * <p>
+             * 
+             * *   **true**
+             * *   **false**
              */
             public Builder fictive(Boolean fictive) {
                 this.fictive = fictive;
@@ -303,7 +311,7 @@ public class GetDataTrackJobTableMetaResponseBody extends TeaModel {
             private String tableName; 
 
             /**
-             * Columns.
+             * The information about columns.
              */
             public Builder columns(java.util.List < Columns> columns) {
                 this.columns = columns;
@@ -311,7 +319,7 @@ public class GetDataTrackJobTableMetaResponseBody extends TeaModel {
             }
 
             /**
-             * SchemaName.
+             * The name of the database.
              */
             public Builder schemaName(String schemaName) {
                 this.schemaName = schemaName;
@@ -319,7 +327,7 @@ public class GetDataTrackJobTableMetaResponseBody extends TeaModel {
             }
 
             /**
-             * TableName.
+             * The name of the table.
              */
             public Builder tableName(String tableName) {
                 this.tableName = tableName;

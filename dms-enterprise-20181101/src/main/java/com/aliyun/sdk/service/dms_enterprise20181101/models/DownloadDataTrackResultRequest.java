@@ -192,7 +192,7 @@ public class DownloadDataTrackResultRequest extends Request {
         }
 
         /**
-         * ColumnFilter.
+         * The condition to filter columns.
          */
         public Builder columnFilter(ColumnFilter columnFilter) {
             String columnFilterShrink = shrink(columnFilter, "ColumnFilter", "json");
@@ -202,7 +202,7 @@ public class DownloadDataTrackResultRequest extends Request {
         }
 
         /**
-         * EventIdList.
+         * The IDs of the events.
          */
         public Builder eventIdList(java.util.List < Long > eventIdList) {
             String eventIdListShrink = shrink(eventIdList, "EventIdList", "json");
@@ -212,7 +212,7 @@ public class DownloadDataTrackResultRequest extends Request {
         }
 
         /**
-         * FilterEndTime.
+         * The end time of the time range in which you want to track data operations. The time must be specified in the yyyy-MM-dd HH:mm:ss format.
          */
         public Builder filterEndTime(String filterEndTime) {
             this.putQueryParameter("FilterEndTime", filterEndTime);
@@ -221,7 +221,7 @@ public class DownloadDataTrackResultRequest extends Request {
         }
 
         /**
-         * FilterStartTime.
+         * The start time of the time range in which you want to track data operations. The time must be specified in the yyyy-MM-dd HH:mm:ss format.
          */
         public Builder filterStartTime(String filterStartTime) {
             this.putQueryParameter("FilterStartTime", filterStartTime);
@@ -230,7 +230,7 @@ public class DownloadDataTrackResultRequest extends Request {
         }
 
         /**
-         * FilterTableList.
+         * The names of the tables for which you want to track data operations.
          */
         public Builder filterTableList(java.util.List < String > filterTableList) {
             String filterTableListShrink = shrink(filterTableList, "FilterTableList", "json");
@@ -240,7 +240,7 @@ public class DownloadDataTrackResultRequest extends Request {
         }
 
         /**
-         * FilterTypeList.
+         * The types of data operations that you want to track.
          */
         public Builder filterTypeList(java.util.List < String > filterTypeList) {
             String filterTypeListShrink = shrink(filterTypeList, "FilterTypeList", "json");
@@ -250,7 +250,7 @@ public class DownloadDataTrackResultRequest extends Request {
         }
 
         /**
-         * OrderId.
+         * The ID of the ticket. You can call the [ListOrders](~~144643~~) operation to obtain the ticket ID.
          */
         public Builder orderId(Long orderId) {
             this.putQueryParameter("OrderId", orderId);
@@ -259,7 +259,11 @@ public class DownloadDataTrackResultRequest extends Request {
         }
 
         /**
-         * RollbackSQLType.
+         * The type of the SQL statement.
+         * <p>
+         * 
+         * *   **REVERSE**: undoes or rolls back an executed SQL statement, which is equivalent to the UNDO SQL statement.
+         * *   **FORWARD**: redoes or re-executes an SQL statement that failed to be executed, which is equivalent to the REDO SQL statement.
          */
         public Builder rollbackSQLType(String rollbackSQLType) {
             this.putQueryParameter("RollbackSQLType", rollbackSQLType);
@@ -268,7 +272,7 @@ public class DownloadDataTrackResultRequest extends Request {
         }
 
         /**
-         * Tid.
+         * The ID of the tenant. You can call the [GetUserActiveTenant](~~198073~~) or [ListUserTenants](~~198074~~) operation to query the tenant ID.
          */
         public Builder tid(Long tid) {
             this.putQueryParameter("Tid", tid);
@@ -370,7 +374,7 @@ public class DownloadDataTrackResultRequest extends Request {
             private String value; 
 
             /**
-             * BetweenEnd.
+             * The end value of the range used in the filter condition. This parameter takes effect only when Operator is set to BETWEEN.
              */
             public Builder betweenEnd(String betweenEnd) {
                 this.betweenEnd = betweenEnd;
@@ -378,7 +382,7 @@ public class DownloadDataTrackResultRequest extends Request {
             }
 
             /**
-             * BetweenStart.
+             * The start value of the range used in the filter condition. This parameter takes effect only when Operator is set to BETWEEN.
              */
             public Builder betweenStart(String betweenStart) {
                 this.betweenStart = betweenStart;
@@ -386,7 +390,7 @@ public class DownloadDataTrackResultRequest extends Request {
             }
 
             /**
-             * ColumnName.
+             * The name of the column.
              */
             public Builder columnName(String columnName) {
                 this.columnName = columnName;
@@ -394,7 +398,7 @@ public class DownloadDataTrackResultRequest extends Request {
             }
 
             /**
-             * InList.
+             * The IN list used in the filter condition.
              */
             public Builder inList(java.util.List < String > inList) {
                 this.inList = inList;
@@ -402,7 +406,16 @@ public class DownloadDataTrackResultRequest extends Request {
             }
 
             /**
-             * Operator.
+             * The type of the operator used to configure the filter condition. Valid values:
+             * <p>
+             * 
+             * *   **EQUAL**: retrieves the column whose value is equal to the specified value.
+             * *   **NOT_EQUAL**: retrieves the column whose value is not equal to the specified value.
+             * *   **IN**: retrieves the column whose value is in the IN list.
+             * *   **BETWEEN**: retrieves the column whose value is in the specified range.
+             * *   **LESS**: retrieves the column whose value is less than the specified value.
+             * *   **MORE**: retrieves the column whose value is greater than the specified value.
+             * *   **NOT_IN**: retrieves the column whose value is not in the IN list.
              */
             public Builder operator(String operator) {
                 this.operator = operator;
@@ -410,7 +423,7 @@ public class DownloadDataTrackResultRequest extends Request {
             }
 
             /**
-             * Value.
+             * The value used in the filter condition.
              */
             public Builder value(String value) {
                 this.value = value;

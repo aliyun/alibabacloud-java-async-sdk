@@ -110,7 +110,7 @@ public class AsyncTaskVO extends TeaModel {
         private Long userId; 
 
         /**
-         * 数据集id
+         * DatasetId.
          */
         public Builder datasetId(String datasetId) {
             this.datasetId = datasetId;
@@ -118,7 +118,7 @@ public class AsyncTaskVO extends TeaModel {
         }
 
         /**
-         * 任务id
+         * Id.
          */
         public Builder id(Long id) {
             this.id = id;
@@ -126,7 +126,7 @@ public class AsyncTaskVO extends TeaModel {
         }
 
         /**
-         * 任务记录
+         * Remark.
          */
         public Builder remark(String remark) {
             this.remark = remark;
@@ -134,7 +134,7 @@ public class AsyncTaskVO extends TeaModel {
         }
 
         /**
-         * 任务名
+         * TaskName.
          */
         public Builder taskName(String taskName) {
             this.taskName = taskName;
@@ -142,7 +142,7 @@ public class AsyncTaskVO extends TeaModel {
         }
 
         /**
-         * 任务状态(0=开始;1=读取成功;2=任务成功;-1=任务失败)
+         * TaskStatus.
          */
         public Builder taskStatus(Integer taskStatus) {
             this.taskStatus = taskStatus;
@@ -150,7 +150,7 @@ public class AsyncTaskVO extends TeaModel {
         }
 
         /**
-         * 任务类型(0=上传;1=下载)
+         * TaskType.
          */
         public Builder taskType(Integer taskType) {
             this.taskType = taskType;
@@ -158,7 +158,7 @@ public class AsyncTaskVO extends TeaModel {
         }
 
         /**
-         * 用户id
+         * UserId.
          */
         public Builder userId(Long userId) {
             this.userId = userId;

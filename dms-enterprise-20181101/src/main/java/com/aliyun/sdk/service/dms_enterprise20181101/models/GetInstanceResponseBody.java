@@ -780,7 +780,7 @@ public class GetInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * 为true，敏感数据保护开启，否则未开启
+             * SellSitd.
              */
             public Builder sellSitd(String sellSitd) {
                 this.sellSitd = sellSitd;

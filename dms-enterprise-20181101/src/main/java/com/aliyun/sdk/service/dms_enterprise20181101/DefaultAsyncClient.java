@@ -302,6 +302,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+      * This operation is available only for instances that are managed in Security Collaboration mode.
+      *
+     */
     @Override
     public CompletableFuture<CreateDataTrackOrderResponse> createDataTrackOrder(CreateDataTrackOrderRequest request) {
         try {

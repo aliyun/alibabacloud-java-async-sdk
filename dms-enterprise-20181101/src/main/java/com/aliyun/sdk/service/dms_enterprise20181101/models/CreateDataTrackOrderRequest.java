@@ -122,7 +122,7 @@ public class CreateDataTrackOrderRequest extends Request {
         }
 
         /**
-         * Comment.
+         * The purpose or objective of the data tracking ticket. This parameter is used to help reduce unnecessary communication.
          */
         public Builder comment(String comment) {
             this.putQueryParameter("Comment", comment);
@@ -131,7 +131,7 @@ public class CreateDataTrackOrderRequest extends Request {
         }
 
         /**
-         * Param.
+         * The parameters of the ticket.
          */
         public Builder param(Param param) {
             String paramShrink = shrink(param, "Param", "json");
@@ -141,7 +141,7 @@ public class CreateDataTrackOrderRequest extends Request {
         }
 
         /**
-         * RelatedUserList.
+         * The IDs of the operators that are related to the ticket.
          */
         public Builder relatedUserList(java.util.List < String > relatedUserList) {
             String relatedUserListShrink = shrink(relatedUserList, "RelatedUserList", "json");
@@ -151,7 +151,7 @@ public class CreateDataTrackOrderRequest extends Request {
         }
 
         /**
-         * Tid.
+         * The ID of the tenant. You can call the [GetUserActiveTenant](~~198073~~) operation to query the tenant ID.
          */
         public Builder tid(Long tid) {
             this.putQueryParameter("Tid", tid);
@@ -246,7 +246,10 @@ public class CreateDataTrackOrderRequest extends Request {
             private java.util.List < String > trackTypes; 
 
             /**
-             * DbId.
+             * The ID of the database. You can call the [SearchDatabases](~~141876~~) operation to query the ID of the database.
+             * <p>
+             * 
+             * > You can call this operation to create a data tracking ticket for only physical databases. This operation is not applicable to logical databases.
              */
             public Builder dbId(String dbId) {
                 this.dbId = dbId;
@@ -254,7 +257,7 @@ public class CreateDataTrackOrderRequest extends Request {
             }
 
             /**
-             * JobEndTime.
+             * The end time of the time range in which you want to track data operations. The time must be in the yyyy-MM-dd HH:mm:ss format.
              */
             public Builder jobEndTime(String jobEndTime) {
                 this.jobEndTime = jobEndTime;
@@ -262,7 +265,7 @@ public class CreateDataTrackOrderRequest extends Request {
             }
 
             /**
-             * JobStartTime.
+             * The start time of the time range in which you want to track data operations. The time must be in the yyyy-MM-dd HH:mm:ss format.
              */
             public Builder jobStartTime(String jobStartTime) {
                 this.jobStartTime = jobStartTime;
@@ -270,7 +273,7 @@ public class CreateDataTrackOrderRequest extends Request {
             }
 
             /**
-             * TableNames.
+             * The names of the tables for which you want to track data operations.
              */
             public Builder tableNames(java.util.List < String > tableNames) {
                 this.tableNames = tableNames;
@@ -278,7 +281,7 @@ public class CreateDataTrackOrderRequest extends Request {
             }
 
             /**
-             * TrackTypes.
+             * The types of data operations that you want to track.
              */
             public Builder trackTypes(java.util.List < String > trackTypes) {
                 this.trackTypes = trackTypes;

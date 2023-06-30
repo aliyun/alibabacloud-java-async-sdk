@@ -93,7 +93,7 @@ public class GetPermApplyOrderDetailRequest extends Request {
         }
 
         /**
-         * The ID of the ticket.
+         * The ticket ID. You can call the [ListOrders](~~465867~~) operation to query the ticket ID.
          */
         public Builder orderId(Long orderId) {
             this.putQueryParameter("OrderId", orderId);
@@ -102,10 +102,10 @@ public class GetPermApplyOrderDetailRequest extends Request {
         }
 
         /**
-         * The ID of the tenant.
+         * The tenant ID.
          * <p>
          * 
-         * > To view the ID of the tenant, log on to the Data Management (DMS) console and move the pointer over the profile picture in the upper-right corner. For more information, see [Manage DMS tenants](~~181330~~).
+         * > To view the tenant ID, move the pointer over the profile picture in the upper-right corner of the Data Management (DMS) console. For more information, see the [View information about the current tenant](~~181330~~) section of the "Manage DMS tenants" topic.
          */
         public Builder tid(Long tid) {
             this.putQueryParameter("Tid", tid);

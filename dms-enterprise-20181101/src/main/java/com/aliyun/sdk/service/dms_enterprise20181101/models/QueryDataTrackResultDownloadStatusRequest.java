@@ -108,7 +108,7 @@ public class QueryDataTrackResultDownloadStatusRequest extends Request {
         }
 
         /**
-         * DownloadKeyId.
+         * The ID of the download key, which is used to identify the parsing progress of data tracking logs. You can call the DownloadDataTrackResult operation to query the ID of the key.
          */
         public Builder downloadKeyId(String downloadKeyId) {
             this.putQueryParameter("DownloadKeyId", downloadKeyId);
@@ -117,7 +117,7 @@ public class QueryDataTrackResultDownloadStatusRequest extends Request {
         }
 
         /**
-         * OrderId.
+         * The ID of the ticket. You can call the [ListOrders](~~144643~~) operation to query the ID of the ticket.
          */
         public Builder orderId(Long orderId) {
             this.putQueryParameter("OrderId", orderId);
@@ -126,7 +126,7 @@ public class QueryDataTrackResultDownloadStatusRequest extends Request {
         }
 
         /**
-         * Tid.
+         * The ID of the tenant. You can call the [GetUserActiveTenant](~~198073~~) or [ListUserTenants](~~198074~~) operation to query the ID of the tenant.
          */
         public Builder tid(Long tid) {
             this.putQueryParameter("Tid", tid);

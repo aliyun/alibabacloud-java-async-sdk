@@ -93,7 +93,7 @@ public class GetDataTrackJobTableMetaRequest extends Request {
         }
 
         /**
-         * OrderId.
+         * The ID of the ticket. You can call the [ListOrders](~~144643~~) operation to query the ID of the ticket.
          */
         public Builder orderId(Long orderId) {
             this.putQueryParameter("OrderId", orderId);
@@ -102,7 +102,7 @@ public class GetDataTrackJobTableMetaRequest extends Request {
         }
 
         /**
-         * Tid.
+         * The ID of the tenant. You can call the [GetUserActiveTenant](~~198073~~) operation to query the ID of the tenant.
          */
         public Builder tid(Long tid) {
             this.putQueryParameter("Tid", tid);

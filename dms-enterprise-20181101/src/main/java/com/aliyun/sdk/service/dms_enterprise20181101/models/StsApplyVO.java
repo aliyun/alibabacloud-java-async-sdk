@@ -50,7 +50,7 @@ public class StsApplyVO extends TeaModel {
         private Long duration; 
 
         /**
-         * 阿里云id
+         * AliyunId.
          */
         public Builder aliyunId(String aliyunId) {
             this.aliyunId = aliyunId;
@@ -58,7 +58,7 @@ public class StsApplyVO extends TeaModel {
         }
 
         /**
-         * 持续时间
+         * Duration.
          */
         public Builder duration(Long duration) {
             this.duration = duration;

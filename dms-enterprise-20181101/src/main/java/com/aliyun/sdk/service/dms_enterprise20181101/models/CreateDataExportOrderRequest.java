@@ -149,7 +149,7 @@ public class CreateDataExportOrderRequest extends Request {
         }
 
         /**
-         * AttachmentKey.
+         * The key of the attachment that provides more instructions for the ticket. You can call the [GetUserUploadFileJob](~~206069~~) operation to obtain the attachment key.
          */
         public Builder attachmentKey(String attachmentKey) {
             this.putQueryParameter("AttachmentKey", attachmentKey);
@@ -158,7 +158,7 @@ public class CreateDataExportOrderRequest extends Request {
         }
 
         /**
-         * Comment.
+         * The purpose or objective of the ticket. This parameter helps reduce unnecessary communication.
          */
         public Builder comment(String comment) {
             this.putQueryParameter("Comment", comment);
@@ -167,7 +167,7 @@ public class CreateDataExportOrderRequest extends Request {
         }
 
         /**
-         * ParentId.
+         * The ID of the parent ticket.
          */
         public Builder parentId(Long parentId) {
             this.putQueryParameter("ParentId", parentId);
@@ -176,7 +176,7 @@ public class CreateDataExportOrderRequest extends Request {
         }
 
         /**
-         * PluginParam.
+         * The parameters of the ticket.
          */
         public Builder pluginParam(PluginParam pluginParam) {
             String pluginParamShrink = shrink(pluginParam, "PluginParam", "json");
@@ -186,7 +186,7 @@ public class CreateDataExportOrderRequest extends Request {
         }
 
         /**
-         * RelatedUserList.
+         * The stakeholders involved in this operation.
          */
         public Builder relatedUserList(java.util.List < Long > relatedUserList) {
             String relatedUserListShrink = shrink(relatedUserList, "RelatedUserList", "json");
@@ -196,7 +196,10 @@ public class CreateDataExportOrderRequest extends Request {
         }
 
         /**
-         * Tid.
+         * The tenant ID.
+         * <p>
+         * 
+         * > To view the ID of the tenant, move the pointer over the profile picture in the upper-right corner of the DMS console. For more information, see the [View information about the current tenant](~~181330~~) section of the "Manage DMS tenants" topic.
          */
         public Builder tid(Long tid) {
             this.putQueryParameter("Tid", tid);
@@ -286,7 +289,7 @@ public class CreateDataExportOrderRequest extends Request {
             private java.util.List < String > watermarkTypes; 
 
             /**
-             * ColumnName.
+             * The field into which the watermark is to be embedded.
              */
             public Builder columnName(String columnName) {
                 this.columnName = columnName;
@@ -294,7 +297,7 @@ public class CreateDataExportOrderRequest extends Request {
             }
 
             /**
-             * DataWatermark.
+             * The information to be embedded as a watermark into data.
              */
             public Builder dataWatermark(String dataWatermark) {
                 this.dataWatermark = dataWatermark;
@@ -302,7 +305,7 @@ public class CreateDataExportOrderRequest extends Request {
             }
 
             /**
-             * FileWatermark.
+             * The information to be embedded as a watermark into files.
              */
             public Builder fileWatermark(String fileWatermark) {
                 this.fileWatermark = fileWatermark;
@@ -310,7 +313,7 @@ public class CreateDataExportOrderRequest extends Request {
             }
 
             /**
-             * Keys.
+             * One or more primary keys or unique keys.
              */
             public Builder keys(java.util.List < String > keys) {
                 this.keys = keys;
@@ -318,7 +321,7 @@ public class CreateDataExportOrderRequest extends Request {
             }
 
             /**
-             * WatermarkTypes.
+             * The methods in which the watermark is embedded.
              */
             public Builder watermarkTypes(java.util.List < String > watermarkTypes) {
                 this.watermarkTypes = watermarkTypes;
@@ -462,7 +465,7 @@ public class CreateDataExportOrderRequest extends Request {
             private Watermark watermark; 
 
             /**
-             * AffectRows.
+             * The estimated number of data rows to be affected.
              */
             public Builder affectRows(Long affectRows) {
                 this.affectRows = affectRows;
@@ -470,7 +473,7 @@ public class CreateDataExportOrderRequest extends Request {
             }
 
             /**
-             * Classify.
+             * The reason for the export ticket.
              */
             public Builder classify(String classify) {
                 this.classify = classify;
@@ -478,7 +481,7 @@ public class CreateDataExportOrderRequest extends Request {
             }
 
             /**
-             * DbId.
+             * The database ID.
              */
             public Builder dbId(Long dbId) {
                 this.dbId = dbId;
@@ -486,7 +489,7 @@ public class CreateDataExportOrderRequest extends Request {
             }
 
             /**
-             * ExeSQL.
+             * The SQL statements that can be executed.
              */
             public Builder exeSQL(String exeSQL) {
                 this.exeSQL = exeSQL;
@@ -494,7 +497,11 @@ public class CreateDataExportOrderRequest extends Request {
             }
 
             /**
-             * IgnoreAffectRows.
+             * Specifies whether to skip verification. Valid values:
+             * <p>
+             * 
+             * *   **true**
+             * *   **false**
              */
             public Builder ignoreAffectRows(Boolean ignoreAffectRows) {
                 this.ignoreAffectRows = ignoreAffectRows;
@@ -502,7 +509,7 @@ public class CreateDataExportOrderRequest extends Request {
             }
 
             /**
-             * IgnoreAffectRowsReason.
+             * The reason for skipping verification. This parameter is required if you set IgnoreAffectRows to true.
              */
             public Builder ignoreAffectRowsReason(String ignoreAffectRowsReason) {
                 this.ignoreAffectRowsReason = ignoreAffectRowsReason;
@@ -510,7 +517,7 @@ public class CreateDataExportOrderRequest extends Request {
             }
 
             /**
-             * InstanceId.
+             * The instance ID.
              */
             public Builder instanceId(Long instanceId) {
                 this.instanceId = instanceId;
@@ -518,7 +525,13 @@ public class CreateDataExportOrderRequest extends Request {
             }
 
             /**
-             * Logic.
+             * Specifies whether the database is a logical database. Valid values:
+             * <p>
+             * 
+             * *   **true**
+             * *   **false**
+             * 
+             * > If you set this parameter to **true**, the database that you specify must be a logical database.
              */
             public Builder logic(Boolean logic) {
                 this.logic = logic;
@@ -526,7 +539,7 @@ public class CreateDataExportOrderRequest extends Request {
             }
 
             /**
-             * Watermark.
+             * The information about the watermarks.
              */
             public Builder watermark(Watermark watermark) {
                 this.watermark = watermark;

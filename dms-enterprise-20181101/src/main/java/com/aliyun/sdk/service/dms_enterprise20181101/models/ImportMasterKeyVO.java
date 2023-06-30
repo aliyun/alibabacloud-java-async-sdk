@@ -62,7 +62,7 @@ public class ImportMasterKeyVO extends TeaModel {
         private java.util.List < Long > projectId; 
 
         /**
-         * 加密的主密钥base64信封格式
+         * EncryptMekDataBase64.
          */
         public Builder encryptMekDataBase64(String encryptMekDataBase64) {
             this.encryptMekDataBase64 = encryptMekDataBase64;
@@ -70,7 +70,7 @@ public class ImportMasterKeyVO extends TeaModel {
         }
 
         /**
-         * 主密钥 id
+         * MekId.
          */
         public Builder mekId(Long mekId) {
             this.mekId = mekId;
@@ -78,7 +78,7 @@ public class ImportMasterKeyVO extends TeaModel {
         }
 
         /**
-         * 可以使用该主密钥的项目列表
+         * ProjectId.
          */
         public Builder projectId(java.util.List < Long > projectId) {
             this.projectId = projectId;

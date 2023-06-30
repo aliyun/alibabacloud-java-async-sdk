@@ -74,7 +74,7 @@ public class StsTokenVO extends TeaModel {
         private String securityToken; 
 
         /**
-         * 临时AK
+         * AccessKeyId.
          */
         public Builder accessKeyId(String accessKeyId) {
             this.accessKeyId = accessKeyId;
@@ -82,7 +82,7 @@ public class StsTokenVO extends TeaModel {
         }
 
         /**
-         * 临时SK
+         * AccessKeySecret.
          */
         public Builder accessKeySecret(String accessKeySecret) {
             this.accessKeySecret = accessKeySecret;
@@ -90,7 +90,7 @@ public class StsTokenVO extends TeaModel {
         }
 
         /**
-         * 过期时间
+         * Expiration.
          */
         public Builder expiration(String expiration) {
             this.expiration = expiration;
@@ -98,7 +98,7 @@ public class StsTokenVO extends TeaModel {
         }
 
         /**
-         * 临时Token
+         * SecurityToken.
          */
         public Builder securityToken(String securityToken) {
             this.securityToken = securityToken;

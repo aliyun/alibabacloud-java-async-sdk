@@ -180,6 +180,9 @@ public class ListTaskFlowsByPageResponseBody extends TeaModel {
         @NameInMap("DagName")
         private String dagName;
 
+        @NameInMap("DagOwnerId")
+        private String dagOwnerId;
+
         @NameInMap("DagOwnerNickName")
         private String dagOwnerNickName;
 
@@ -222,6 +225,7 @@ public class ListTaskFlowsByPageResponseBody extends TeaModel {
             this.cronSwitch = builder.cronSwitch;
             this.cronType = builder.cronType;
             this.dagName = builder.dagName;
+            this.dagOwnerId = builder.dagOwnerId;
             this.dagOwnerNickName = builder.dagOwnerNickName;
             this.deployId = builder.deployId;
             this.description = builder.description;
@@ -297,6 +301,13 @@ public class ListTaskFlowsByPageResponseBody extends TeaModel {
          */
         public String getDagName() {
             return this.dagName;
+        }
+
+        /**
+         * @return dagOwnerId
+         */
+        public String getDagOwnerId() {
+            return this.dagOwnerId;
         }
 
         /**
@@ -385,6 +396,7 @@ public class ListTaskFlowsByPageResponseBody extends TeaModel {
             private Boolean cronSwitch; 
             private Integer cronType; 
             private String dagName; 
+            private String dagOwnerId; 
             private String dagOwnerNickName; 
             private Long deployId; 
             private String description; 
@@ -458,6 +470,14 @@ public class ListTaskFlowsByPageResponseBody extends TeaModel {
              */
             public Builder dagName(String dagName) {
                 this.dagName = dagName;
+                return this;
+            }
+
+            /**
+             * DagOwnerId.
+             */
+            public Builder dagOwnerId(String dagOwnerId) {
+                this.dagOwnerId = dagOwnerId;
                 return this;
             }
 

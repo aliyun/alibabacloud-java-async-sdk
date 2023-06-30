@@ -50,7 +50,7 @@ public class ProjectDetailsLiteVO extends TeaModel {
         private String projectName; 
 
         /**
-         * id
+         * Id.
          */
         public Builder id(Long id) {
             this.id = id;
@@ -58,7 +58,7 @@ public class ProjectDetailsLiteVO extends TeaModel {
         }
 
         /**
-         * 项目名
+         * ProjectName.
          */
         public Builder projectName(String projectName) {
             this.projectName = projectName;

@@ -800,7 +800,7 @@ public class ListInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * 为true，敏感数据保护开启，否则未开启
+             * SellSitd.
              */
             public Builder sellSitd(Boolean sellSitd) {
                 this.sellSitd = sellSitd;

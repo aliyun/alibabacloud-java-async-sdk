@@ -149,7 +149,7 @@ public class CreateDatabaseExportOrderRequest extends Request {
         }
 
         /**
-         * AttachmentKey.
+         * The key of the attachment that provides more instructions for the ticket. You can call the [GetUserUploadFileJob](~~206069~~) operation to obtain the attachment key.
          */
         public Builder attachmentKey(String attachmentKey) {
             this.putQueryParameter("AttachmentKey", attachmentKey);
@@ -158,7 +158,7 @@ public class CreateDatabaseExportOrderRequest extends Request {
         }
 
         /**
-         * Comment.
+         * The purpose or objective of the ticket. This parameter helps reduce unnecessary communication.
          */
         public Builder comment(String comment) {
             this.putQueryParameter("Comment", comment);
@@ -167,7 +167,7 @@ public class CreateDatabaseExportOrderRequest extends Request {
         }
 
         /**
-         * ParentId.
+         * The ID of the parent ticket.
          */
         public Builder parentId(Long parentId) {
             this.putQueryParameter("ParentId", parentId);
@@ -176,7 +176,7 @@ public class CreateDatabaseExportOrderRequest extends Request {
         }
 
         /**
-         * PluginParam.
+         * The parameters of the ticket.
          */
         public Builder pluginParam(PluginParam pluginParam) {
             String pluginParamShrink = shrink(pluginParam, "PluginParam", "json");
@@ -186,7 +186,7 @@ public class CreateDatabaseExportOrderRequest extends Request {
         }
 
         /**
-         * RelatedUserList.
+         * The stakeholders involved in this operation.
          */
         public Builder relatedUserList(java.util.List < Long > relatedUserList) {
             String relatedUserListShrink = shrink(relatedUserList, "RelatedUserList", "json");
@@ -196,7 +196,10 @@ public class CreateDatabaseExportOrderRequest extends Request {
         }
 
         /**
-         * Tid.
+         * The tenant ID.
+         * <p>
+         * 
+         * > To view the ID of the tenant, move the pointer over the profile picture in the upper-right corner of the DMS console. For more information, see the [View information about the current tenant](~~181330~~) section of the "Manage DMS tenants" topic.
          */
         public Builder tid(Long tid) {
             this.putQueryParameter("Tid", tid);
@@ -314,7 +317,7 @@ public class CreateDatabaseExportOrderRequest extends Request {
             private String targetOption; 
 
             /**
-             * DataOption.
+             * The export options for big data. The options are used to filter the big data to be exported. You can leave this parameter empty.
              */
             public Builder dataOption(java.util.List < String > dataOption) {
                 this.dataOption = dataOption;
@@ -322,7 +325,12 @@ public class CreateDatabaseExportOrderRequest extends Request {
             }
 
             /**
-             * ExportContent.
+             * The type of data that you want to export. Valid values:
+             * <p>
+             * 
+             * *   **DATA**: The data of the database is exported.
+             * *   **STRUCT**: The schema of the database is exported.
+             * *   **DATA_STRUCT**: The data and schema of the database are exported.
              */
             public Builder exportContent(String exportContent) {
                 this.exportContent = exportContent;
@@ -330,7 +338,7 @@ public class CreateDatabaseExportOrderRequest extends Request {
             }
 
             /**
-             * ExportTypes.
+             * The types of schemas that you want to export.
              */
             public Builder exportTypes(java.util.List < String > exportTypes) {
                 this.exportTypes = exportTypes;
@@ -338,7 +346,7 @@ public class CreateDatabaseExportOrderRequest extends Request {
             }
 
             /**
-             * SQLExtOption.
+             * The extension options of the SQL script. You can leave this parameter empty.
              */
             public Builder SQLExtOption(java.util.List < String > SQLExtOption) {
                 this.SQLExtOption = SQLExtOption;
@@ -346,7 +354,7 @@ public class CreateDatabaseExportOrderRequest extends Request {
             }
 
             /**
-             * SelectedTables.
+             * The tables that you want to export.
              */
             public Builder selectedTables(java.util.List < String > selectedTables) {
                 this.selectedTables = selectedTables;
@@ -354,7 +362,7 @@ public class CreateDatabaseExportOrderRequest extends Request {
             }
 
             /**
-             * Tables.
+             * The conditions used to filter the tables to be exported.
              */
             public Builder tables(java.util.Map < String, String > tables) {
                 this.tables = tables;
@@ -362,7 +370,12 @@ public class CreateDatabaseExportOrderRequest extends Request {
             }
 
             /**
-             * TargetOption.
+             * The format in which the database is exported. Valid values:
+             * <p>
+             * 
+             * *   **SQL**
+             * *   **CSV**
+             * *   **XLSX**
              */
             public Builder targetOption(String targetOption) {
                 this.targetOption = targetOption;
@@ -469,7 +482,7 @@ public class CreateDatabaseExportOrderRequest extends Request {
             private String searchName; 
 
             /**
-             * Classify.
+             * The reason for the database export.
              */
             public Builder classify(String classify) {
                 this.classify = classify;
@@ -477,7 +490,7 @@ public class CreateDatabaseExportOrderRequest extends Request {
             }
 
             /**
-             * Config.
+             * The configurations for database export.
              */
             public Builder config(Config config) {
                 this.config = config;
@@ -485,7 +498,7 @@ public class CreateDatabaseExportOrderRequest extends Request {
             }
 
             /**
-             * DbId.
+             * The database ID.
              */
             public Builder dbId(Long dbId) {
                 this.dbId = dbId;
@@ -493,7 +506,7 @@ public class CreateDatabaseExportOrderRequest extends Request {
             }
 
             /**
-             * InstanceId.
+             * The instance ID.
              */
             public Builder instanceId(Long instanceId) {
                 this.instanceId = instanceId;
@@ -501,7 +514,11 @@ public class CreateDatabaseExportOrderRequest extends Request {
             }
 
             /**
-             * Logic.
+             * Specifies whether the database is a logical database. Valid values:
+             * <p>
+             * 
+             * *   **true**
+             * *   **false**
              */
             public Builder logic(Boolean logic) {
                 this.logic = logic;
@@ -509,7 +526,7 @@ public class CreateDatabaseExportOrderRequest extends Request {
             }
 
             /**
-             * SearchName.
+             * The name that is used to search for the database.
              */
             public Builder searchName(String searchName) {
                 this.searchName = searchName;

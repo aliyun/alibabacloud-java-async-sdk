@@ -86,7 +86,7 @@ public class GetDatabaseExportOrderDetailResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * DatabaseExportOrderDetail.
+         * The details of the database export ticket.
          */
         public Builder databaseExportOrderDetail(DatabaseExportOrderDetail databaseExportOrderDetail) {
             this.databaseExportOrderDetail = databaseExportOrderDetail;
@@ -94,7 +94,7 @@ public class GetDatabaseExportOrderDetailResponseBody extends TeaModel {
         }
 
         /**
-         * ErrorCode.
+         * The error code.
          */
         public Builder errorCode(String errorCode) {
             this.errorCode = errorCode;
@@ -102,7 +102,7 @@ public class GetDatabaseExportOrderDetailResponseBody extends TeaModel {
         }
 
         /**
-         * ErrorMessage.
+         * The error message returned if the request failed.
          */
         public Builder errorMessage(String errorMessage) {
             this.errorMessage = errorMessage;
@@ -110,7 +110,7 @@ public class GetDatabaseExportOrderDetailResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The request ID. You can use the ID to query logs and troubleshoot issues.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -118,7 +118,11 @@ public class GetDatabaseExportOrderDetailResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * Indicates whether the request was successful. Valid values:
+         * <p>
+         * 
+         * *   **true**
+         * *   **false**
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -341,7 +345,7 @@ public class GetDatabaseExportOrderDetailResponseBody extends TeaModel {
             private String targetOption; 
 
             /**
-             * DbName.
+             * The database name.
              */
             public Builder dbName(String dbName) {
                 this.dbName = dbName;
@@ -349,7 +353,12 @@ public class GetDatabaseExportOrderDetailResponseBody extends TeaModel {
             }
 
             /**
-             * ExportContent.
+             * The type of data that was exported. Valid values:
+             * <p>
+             * 
+             * *   **DATA**: The data of the database was exported.
+             * *   **STRUCT**: The schema of the database was exported.
+             * *   **DATA_STRUCT**: The data and schema of the database were exported.
              */
             public Builder exportContent(String exportContent) {
                 this.exportContent = exportContent;
@@ -357,7 +366,7 @@ public class GetDatabaseExportOrderDetailResponseBody extends TeaModel {
             }
 
             /**
-             * ExportTypes.
+             * The type of schema that was exported.
              */
             public Builder exportTypes(ExportTypes exportTypes) {
                 this.exportTypes = exportTypes;
@@ -365,7 +374,7 @@ public class GetDatabaseExportOrderDetailResponseBody extends TeaModel {
             }
 
             /**
-             * SQLExtOption.
+             * The extension options of the SQL script.
              */
             public Builder SQLExtOption(SQLExtOption SQLExtOption) {
                 this.SQLExtOption = SQLExtOption;
@@ -373,7 +382,7 @@ public class GetDatabaseExportOrderDetailResponseBody extends TeaModel {
             }
 
             /**
-             * SelectedTables.
+             * The tables that were exported from the database.
              */
             public Builder selectedTables(SelectedTables selectedTables) {
                 this.selectedTables = selectedTables;
@@ -381,7 +390,12 @@ public class GetDatabaseExportOrderDetailResponseBody extends TeaModel {
             }
 
             /**
-             * TargetOption.
+             * The format in which the database was exported. Valid values:
+             * <p>
+             * 
+             * *   **SQL**
+             * *   **CSV**
+             * *   **XLSX**
              */
             public Builder targetOption(String targetOption) {
                 this.targetOption = targetOption;
@@ -458,7 +472,7 @@ public class GetDatabaseExportOrderDetailResponseBody extends TeaModel {
             private String downloadURL; 
 
             /**
-             * AuditDate.
+             * The time when the ticket was submitted.
              */
             public Builder auditDate(String auditDate) {
                 this.auditDate = auditDate;
@@ -466,7 +480,7 @@ public class GetDatabaseExportOrderDetailResponseBody extends TeaModel {
             }
 
             /**
-             * Config.
+             * The configuration information about the ticket.
              */
             public Builder config(Config config) {
                 this.config = config;
@@ -474,7 +488,7 @@ public class GetDatabaseExportOrderDetailResponseBody extends TeaModel {
             }
 
             /**
-             * DbId.
+             * The database ID.
              */
             public Builder dbId(Long dbId) {
                 this.dbId = dbId;
@@ -482,7 +496,7 @@ public class GetDatabaseExportOrderDetailResponseBody extends TeaModel {
             }
 
             /**
-             * DownloadURL.
+             * The URL that is used to download the export result.
              */
             public Builder downloadURL(String downloadURL) {
                 this.downloadURL = downloadURL;
@@ -619,7 +633,7 @@ public class GetDatabaseExportOrderDetailResponseBody extends TeaModel {
             private String workflowStatusDesc; 
 
             /**
-             * Comment.
+             * The business background information of the database export ticket.
              */
             public Builder comment(String comment) {
                 this.comment = comment;
@@ -627,7 +641,7 @@ public class GetDatabaseExportOrderDetailResponseBody extends TeaModel {
             }
 
             /**
-             * Committer.
+             * The user who submitted the ticket.
              */
             public Builder committer(String committer) {
                 this.committer = committer;
@@ -635,7 +649,7 @@ public class GetDatabaseExportOrderDetailResponseBody extends TeaModel {
             }
 
             /**
-             * CommitterId.
+             * The ID of the user who submitted the ticket. This ID is a user ID and is not the ID of an Alibaba Cloud account.
              */
             public Builder committerId(String committerId) {
                 this.committerId = committerId;
@@ -643,7 +657,7 @@ public class GetDatabaseExportOrderDetailResponseBody extends TeaModel {
             }
 
             /**
-             * Id.
+             * The ticket ID.
              */
             public Builder id(Long id) {
                 this.id = id;
@@ -651,7 +665,7 @@ public class GetDatabaseExportOrderDetailResponseBody extends TeaModel {
             }
 
             /**
-             * KeyInfo.
+             * The key information about the ticket.
              */
             public Builder keyInfo(KeyInfo keyInfo) {
                 this.keyInfo = keyInfo;
@@ -659,7 +673,7 @@ public class GetDatabaseExportOrderDetailResponseBody extends TeaModel {
             }
 
             /**
-             * Log.
+             * The execution logs.
              */
             public Builder log(String log) {
                 this.log = log;
@@ -667,7 +681,7 @@ public class GetDatabaseExportOrderDetailResponseBody extends TeaModel {
             }
 
             /**
-             * SearchName.
+             * The name that is used to search for the database.
              */
             public Builder searchName(String searchName) {
                 this.searchName = searchName;
@@ -675,7 +689,7 @@ public class GetDatabaseExportOrderDetailResponseBody extends TeaModel {
             }
 
             /**
-             * StatusDesc.
+             * The status description of the ticket.
              */
             public Builder statusDesc(String statusDesc) {
                 this.statusDesc = statusDesc;
@@ -683,7 +697,7 @@ public class GetDatabaseExportOrderDetailResponseBody extends TeaModel {
             }
 
             /**
-             * WorkflowStatusDesc.
+             * The status description of the workflow.
              */
             public Builder workflowStatusDesc(String workflowStatusDesc) {
                 this.workflowStatusDesc = workflowStatusDesc;

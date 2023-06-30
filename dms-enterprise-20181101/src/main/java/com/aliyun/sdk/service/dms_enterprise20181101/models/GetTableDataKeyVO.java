@@ -98,7 +98,7 @@ public class GetTableDataKeyVO extends TeaModel {
         private String userName; 
 
         /**
-         * 数据库表特定列名
+         * ColName.
          */
         public Builder colName(String colName) {
             this.colName = colName;
@@ -106,7 +106,7 @@ public class GetTableDataKeyVO extends TeaModel {
         }
 
         /**
-         * 数据库名
+         * DbName.
          */
         public Builder dbName(String dbName) {
             this.dbName = dbName;
@@ -114,7 +114,7 @@ public class GetTableDataKeyVO extends TeaModel {
         }
 
         /**
-         * 用户 mek 对应的密钥仓库 Id
+         * MekId.
          */
         public Builder mekId(Long mekId) {
             this.mekId = mekId;
@@ -122,7 +122,7 @@ public class GetTableDataKeyVO extends TeaModel {
         }
 
         /**
-         * 数据库 schema 名
+         * SchemaName.
          */
         public Builder schemaName(String schemaName) {
             this.schemaName = schemaName;
@@ -130,7 +130,7 @@ public class GetTableDataKeyVO extends TeaModel {
         }
 
         /**
-         * 数据库表名。密态数据集中使用 dataset_id
+         * TblName.
          */
         public Builder tblName(String tblName) {
             this.tblName = tblName;
@@ -138,7 +138,7 @@ public class GetTableDataKeyVO extends TeaModel {
         }
 
         /**
-         * 用户名
+         * UserName.
          */
         public Builder userName(String userName) {
             this.userName = userName;

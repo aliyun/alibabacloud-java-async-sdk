@@ -89,6 +89,10 @@ public interface AsyncClient extends SdkAutoCloseable {
      */
     CompletableFuture<CreateDataImportOrderResponse> createDataImportOrder(CreateDataImportOrderRequest request);
 
+    /**
+      * This operation is available only for instances that are managed in Security Collaboration mode.
+      *
+     */
     CompletableFuture<CreateDataTrackOrderResponse> createDataTrackOrder(CreateDataTrackOrderRequest request);
 
     CompletableFuture<CreateDatabaseExportOrderResponse> createDatabaseExportOrder(CreateDatabaseExportOrderRequest request);
