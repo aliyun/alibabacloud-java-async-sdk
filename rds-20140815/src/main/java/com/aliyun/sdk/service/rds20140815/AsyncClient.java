@@ -1221,6 +1221,8 @@ public interface AsyncClient extends SdkAutoCloseable {
      */
     CompletableFuture<ModifyDBInstanceAutoUpgradeMinorVersionResponse> modifyDBInstanceAutoUpgradeMinorVersion(ModifyDBInstanceAutoUpgradeMinorVersionRequest request);
 
+    CompletableFuture<ModifyDBInstanceConfigResponse> modifyDBInstanceConfig(ModifyDBInstanceConfigRequest request);
+
     /**
       * > The API has been taken offline
       *
