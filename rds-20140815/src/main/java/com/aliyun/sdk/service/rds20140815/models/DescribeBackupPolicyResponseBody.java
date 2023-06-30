@@ -30,6 +30,9 @@ public class DescribeBackupPolicyResponseBody extends TeaModel {
     @NameInMap("BackupMethod")
     private String backupMethod;
 
+    @NameInMap("BackupPriority")
+    private Integer backupPriority;
+
     @NameInMap("BackupRetentionPeriod")
     private Integer backupRetentionPeriod;
 
@@ -78,6 +81,9 @@ public class DescribeBackupPolicyResponseBody extends TeaModel {
     @NameInMap("RequestId")
     private String requestId;
 
+    @NameInMap("SupportModifyBackupPriority")
+    private Boolean supportModifyBackupPriority;
+
     @NameInMap("SupportReleasedKeep")
     private Integer supportReleasedKeep;
 
@@ -91,6 +97,7 @@ public class DescribeBackupPolicyResponseBody extends TeaModel {
         this.backupInterval = builder.backupInterval;
         this.backupLog = builder.backupLog;
         this.backupMethod = builder.backupMethod;
+        this.backupPriority = builder.backupPriority;
         this.backupRetentionPeriod = builder.backupRetentionPeriod;
         this.category = builder.category;
         this.compressType = builder.compressType;
@@ -107,6 +114,7 @@ public class DescribeBackupPolicyResponseBody extends TeaModel {
         this.preferredNextBackupTime = builder.preferredNextBackupTime;
         this.releasedKeepPolicy = builder.releasedKeepPolicy;
         this.requestId = builder.requestId;
+        this.supportModifyBackupPriority = builder.supportModifyBackupPriority;
         this.supportReleasedKeep = builder.supportReleasedKeep;
         this.supportVolumeShadowCopy = builder.supportVolumeShadowCopy;
     }
@@ -159,6 +167,13 @@ public class DescribeBackupPolicyResponseBody extends TeaModel {
      */
     public String getBackupMethod() {
         return this.backupMethod;
+    }
+
+    /**
+     * @return backupPriority
+     */
+    public Integer getBackupPriority() {
+        return this.backupPriority;
     }
 
     /**
@@ -274,6 +289,13 @@ public class DescribeBackupPolicyResponseBody extends TeaModel {
     }
 
     /**
+     * @return supportModifyBackupPriority
+     */
+    public Boolean getSupportModifyBackupPriority() {
+        return this.supportModifyBackupPriority;
+    }
+
+    /**
      * @return supportReleasedKeep
      */
     public Integer getSupportReleasedKeep() {
@@ -294,6 +316,7 @@ public class DescribeBackupPolicyResponseBody extends TeaModel {
         private String backupInterval; 
         private String backupLog; 
         private String backupMethod; 
+        private Integer backupPriority; 
         private Integer backupRetentionPeriod; 
         private String category; 
         private String compressType; 
@@ -310,6 +333,7 @@ public class DescribeBackupPolicyResponseBody extends TeaModel {
         private String preferredNextBackupTime; 
         private String releasedKeepPolicy; 
         private String requestId; 
+        private Boolean supportModifyBackupPriority; 
         private Integer supportReleasedKeep; 
         private Integer supportVolumeShadowCopy; 
 
@@ -372,6 +396,14 @@ public class DescribeBackupPolicyResponseBody extends TeaModel {
          */
         public Builder backupMethod(String backupMethod) {
             this.backupMethod = backupMethod;
+            return this;
+        }
+
+        /**
+         * BackupPriority.
+         */
+        public Builder backupPriority(Integer backupPriority) {
+            this.backupPriority = backupPriority;
             return this;
         }
 
@@ -545,6 +577,14 @@ public class DescribeBackupPolicyResponseBody extends TeaModel {
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
+            return this;
+        }
+
+        /**
+         * SupportModifyBackupPriority.
+         */
+        public Builder supportModifyBackupPriority(Boolean supportModifyBackupPriority) {
+            this.supportModifyBackupPriority = supportModifyBackupPriority;
             return this;
         }
 

@@ -41,6 +41,10 @@ public class ModifyBackupPolicyRequest extends Request {
     private String backupPolicyMode;
 
     @Query
+    @NameInMap("BackupPriority")
+    private Integer backupPriority;
+
+    @Query
     @NameInMap("BackupRetentionPeriod")
     private String backupRetentionPeriod;
 
@@ -126,6 +130,7 @@ public class ModifyBackupPolicyRequest extends Request {
         this.backupLog = builder.backupLog;
         this.backupMethod = builder.backupMethod;
         this.backupPolicyMode = builder.backupPolicyMode;
+        this.backupPriority = builder.backupPriority;
         this.backupRetentionPeriod = builder.backupRetentionPeriod;
         this.category = builder.category;
         this.compressType = builder.compressType;
@@ -207,6 +212,13 @@ public class ModifyBackupPolicyRequest extends Request {
      */
     public String getBackupPolicyMode() {
         return this.backupPolicyMode;
+    }
+
+    /**
+     * @return backupPriority
+     */
+    public Integer getBackupPriority() {
+        return this.backupPriority;
     }
 
     /**
@@ -350,6 +362,7 @@ public class ModifyBackupPolicyRequest extends Request {
         private String backupLog; 
         private String backupMethod; 
         private String backupPolicyMode; 
+        private Integer backupPriority; 
         private String backupRetentionPeriod; 
         private String category; 
         private String compressType; 
@@ -383,6 +396,7 @@ public class ModifyBackupPolicyRequest extends Request {
             this.backupLog = request.backupLog;
             this.backupMethod = request.backupMethod;
             this.backupPolicyMode = request.backupPolicyMode;
+            this.backupPriority = request.backupPriority;
             this.backupRetentionPeriod = request.backupRetentionPeriod;
             this.category = request.category;
             this.compressType = request.compressType;
@@ -530,6 +544,15 @@ public class ModifyBackupPolicyRequest extends Request {
         public Builder backupPolicyMode(String backupPolicyMode) {
             this.putQueryParameter("BackupPolicyMode", backupPolicyMode);
             this.backupPolicyMode = backupPolicyMode;
+            return this;
+        }
+
+        /**
+         * BackupPriority.
+         */
+        public Builder backupPriority(Integer backupPriority) {
+            this.putQueryParameter("BackupPriority", backupPriority);
+            this.backupPriority = backupPriority;
             return this;
         }
 
