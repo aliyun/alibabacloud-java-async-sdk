@@ -248,7 +248,7 @@ public class CreateAsyncPredictRequest extends Request {
         }
 
         /**
-         * 根据服务名称和服务版本创建异步预测的时候，此参数不必传；否则必传；
+         * ModelId.
          */
         public Builder modelId(Integer modelId) {
             this.putBodyParameter("ModelId", modelId);
@@ -266,7 +266,7 @@ public class CreateAsyncPredictRequest extends Request {
         }
 
         /**
-         * 服务名称
+         * ServiceName.
          */
         public Builder serviceName(String serviceName) {
             this.putBodyParameter("ServiceName", serviceName);
@@ -275,7 +275,7 @@ public class CreateAsyncPredictRequest extends Request {
         }
 
         /**
-         * 服务版本
+         * ServiceVersion.
          */
         public Builder serviceVersion(String serviceVersion) {
             this.putBodyParameter("ServiceVersion", serviceVersion);

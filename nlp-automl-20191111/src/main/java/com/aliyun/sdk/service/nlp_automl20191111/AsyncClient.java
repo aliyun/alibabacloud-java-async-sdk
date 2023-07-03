@@ -20,10 +20,14 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<CreateAsyncPredictResponse> createAsyncPredict(CreateAsyncPredictRequest request);
 
+    CompletableFuture<FindUserReport4AlinlpResponse> findUserReport4Alinlp(FindUserReport4AlinlpRequest request);
+
     CompletableFuture<GetAsyncPredictResponse> getAsyncPredict(GetAsyncPredictRequest request);
 
     CompletableFuture<GetPredictResultResponse> getPredictResult(GetPredictResultRequest request);
 
     CompletableFuture<RunPreTrainServiceResponse> runPreTrainService(RunPreTrainServiceRequest request);
+
+    CompletableFuture<RunPreTrainServiceNewResponse> runPreTrainServiceNew(RunPreTrainServiceNewRequest request);
 
 }

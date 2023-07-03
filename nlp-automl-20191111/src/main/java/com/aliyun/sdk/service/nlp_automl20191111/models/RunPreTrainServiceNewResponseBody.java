@@ -7,11 +7,11 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
- * {@link RunPreTrainServiceResponseBody} extends {@link TeaModel}
+ * {@link RunPreTrainServiceNewResponseBody} extends {@link TeaModel}
  *
- * <p>RunPreTrainServiceResponseBody</p>
+ * <p>RunPreTrainServiceNewResponseBody</p>
  */
-public class RunPreTrainServiceResponseBody extends TeaModel {
+public class RunPreTrainServiceNewResponseBody extends TeaModel {
     @NameInMap("BillingCount")
     private Integer billingCount;
 
@@ -21,7 +21,7 @@ public class RunPreTrainServiceResponseBody extends TeaModel {
     @NameInMap("RequestId")
     private String requestId;
 
-    private RunPreTrainServiceResponseBody(Builder builder) {
+    private RunPreTrainServiceNewResponseBody(Builder builder) {
         this.billingCount = builder.billingCount;
         this.predictResult = builder.predictResult;
         this.requestId = builder.requestId;
@@ -31,7 +31,7 @@ public class RunPreTrainServiceResponseBody extends TeaModel {
         return new Builder();
     }
 
-    public static RunPreTrainServiceResponseBody create() {
+    public static RunPreTrainServiceNewResponseBody create() {
         return builder().build();
     }
 
@@ -85,8 +85,8 @@ public class RunPreTrainServiceResponseBody extends TeaModel {
             return this;
         }
 
-        public RunPreTrainServiceResponseBody build() {
-            return new RunPreTrainServiceResponseBody(this);
+        public RunPreTrainServiceNewResponseBody build() {
+            return new RunPreTrainServiceNewResponseBody(this);
         } 
 
     } 
