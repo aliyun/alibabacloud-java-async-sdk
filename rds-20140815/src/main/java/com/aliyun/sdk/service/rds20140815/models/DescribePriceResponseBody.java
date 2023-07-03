@@ -24,11 +24,19 @@ public class DescribePriceResponseBody extends TeaModel {
     @NameInMap("ShowDiscount")
     private Boolean showDiscount;
 
+    @NameInMap("TradeMaxRCUAmount")
+    private Float tradeMaxRCUAmount;
+
+    @NameInMap("TradeMinRCUAmount")
+    private Float tradeMinRCUAmount;
+
     private DescribePriceResponseBody(Builder builder) {
         this.priceInfo = builder.priceInfo;
         this.requestId = builder.requestId;
         this.rules = builder.rules;
         this.showDiscount = builder.showDiscount;
+        this.tradeMaxRCUAmount = builder.tradeMaxRCUAmount;
+        this.tradeMinRCUAmount = builder.tradeMinRCUAmount;
     }
 
     public static Builder builder() {
@@ -67,11 +75,27 @@ public class DescribePriceResponseBody extends TeaModel {
         return this.showDiscount;
     }
 
+    /**
+     * @return tradeMaxRCUAmount
+     */
+    public Float getTradeMaxRCUAmount() {
+        return this.tradeMaxRCUAmount;
+    }
+
+    /**
+     * @return tradeMinRCUAmount
+     */
+    public Float getTradeMinRCUAmount() {
+        return this.tradeMinRCUAmount;
+    }
+
     public static final class Builder {
         private PriceInfo priceInfo; 
         private String requestId; 
         private Rules rules; 
         private Boolean showDiscount; 
+        private Float tradeMaxRCUAmount; 
+        private Float tradeMinRCUAmount; 
 
         /**
          * The information about the price.
@@ -102,6 +126,22 @@ public class DescribePriceResponseBody extends TeaModel {
          */
         public Builder showDiscount(Boolean showDiscount) {
             this.showDiscount = showDiscount;
+            return this;
+        }
+
+        /**
+         * TradeMaxRCUAmount.
+         */
+        public Builder tradeMaxRCUAmount(Float tradeMaxRCUAmount) {
+            this.tradeMaxRCUAmount = tradeMaxRCUAmount;
+            return this;
+        }
+
+        /**
+         * TradeMinRCUAmount.
+         */
+        public Builder tradeMinRCUAmount(Float tradeMinRCUAmount) {
+            this.tradeMinRCUAmount = tradeMinRCUAmount;
             return this;
         }
 

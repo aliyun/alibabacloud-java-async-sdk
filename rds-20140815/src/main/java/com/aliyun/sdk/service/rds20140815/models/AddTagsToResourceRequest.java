@@ -212,7 +212,7 @@ public class AddTagsToResourceRequest extends Request {
         }
 
         /**
-         * OwnerAccount.
+         * The logon name of the RAM user.
          */
         public Builder ownerAccount(String ownerAccount) {
             this.putQueryParameter("OwnerAccount", ownerAccount);

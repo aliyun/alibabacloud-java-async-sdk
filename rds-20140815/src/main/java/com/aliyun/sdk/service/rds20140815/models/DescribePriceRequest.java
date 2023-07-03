@@ -90,6 +90,10 @@ public class DescribePriceRequest extends Request {
     private Long resourceOwnerId;
 
     @Query
+    @NameInMap("ServerlessConfig")
+    private ServerlessConfig serverlessConfig;
+
+    @Query
     @NameInMap("TimeType")
     private String timeType;
 
@@ -122,6 +126,7 @@ public class DescribePriceRequest extends Request {
         this.regionId = builder.regionId;
         this.resourceOwnerAccount = builder.resourceOwnerAccount;
         this.resourceOwnerId = builder.resourceOwnerId;
+        this.serverlessConfig = builder.serverlessConfig;
         this.timeType = builder.timeType;
         this.usedTime = builder.usedTime;
         this.zoneId = builder.zoneId;
@@ -267,6 +272,13 @@ public class DescribePriceRequest extends Request {
     }
 
     /**
+     * @return serverlessConfig
+     */
+    public ServerlessConfig getServerlessConfig() {
+        return this.serverlessConfig;
+    }
+
+    /**
      * @return timeType
      */
     public String getTimeType() {
@@ -306,6 +318,7 @@ public class DescribePriceRequest extends Request {
         private String regionId; 
         private String resourceOwnerAccount; 
         private Long resourceOwnerId; 
+        private ServerlessConfig serverlessConfig; 
         private String timeType; 
         private Integer usedTime; 
         private String zoneId; 
@@ -334,6 +347,7 @@ public class DescribePriceRequest extends Request {
             this.regionId = request.regionId;
             this.resourceOwnerAccount = request.resourceOwnerAccount;
             this.resourceOwnerId = request.resourceOwnerId;
+            this.serverlessConfig = request.serverlessConfig;
             this.timeType = request.timeType;
             this.usedTime = request.usedTime;
             this.zoneId = request.zoneId;
@@ -553,6 +567,16 @@ public class DescribePriceRequest extends Request {
         }
 
         /**
+         * ServerlessConfig.
+         */
+        public Builder serverlessConfig(ServerlessConfig serverlessConfig) {
+            String serverlessConfigShrink = shrink(serverlessConfig, "ServerlessConfig", "json");
+            this.putQueryParameter("ServerlessConfig", serverlessConfigShrink);
+            this.serverlessConfig = serverlessConfig;
+            return this;
+        }
+
+        /**
          * The unit that is used to calculate the subscription duration of the instance. If you set the **CommodityCode** parameter to **RDS**, **rds_rordspre_public_cn**, **rds_intl**, or **rds_rordspre_public_intl**, you must also specify this parameter. Valid values:
          * <p>
          * 
@@ -655,6 +679,67 @@ public class DescribePriceRequest extends Request {
 
             public DBNode build() {
                 return new DBNode(this);
+            } 
+
+        } 
+
+    }
+    public static class ServerlessConfig extends TeaModel {
+        @NameInMap("MaxCapacity")
+        private Double maxCapacity;
+
+        @NameInMap("MinCapacity")
+        private Double minCapacity;
+
+        private ServerlessConfig(Builder builder) {
+            this.maxCapacity = builder.maxCapacity;
+            this.minCapacity = builder.minCapacity;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static ServerlessConfig create() {
+            return builder().build();
+        }
+
+        /**
+         * @return maxCapacity
+         */
+        public Double getMaxCapacity() {
+            return this.maxCapacity;
+        }
+
+        /**
+         * @return minCapacity
+         */
+        public Double getMinCapacity() {
+            return this.minCapacity;
+        }
+
+        public static final class Builder {
+            private Double maxCapacity; 
+            private Double minCapacity; 
+
+            /**
+             * MaxCapacity.
+             */
+            public Builder maxCapacity(Double maxCapacity) {
+                this.maxCapacity = maxCapacity;
+                return this;
+            }
+
+            /**
+             * MinCapacity.
+             */
+            public Builder minCapacity(Double minCapacity) {
+                this.minCapacity = minCapacity;
+                return this;
+            }
+
+            public ServerlessConfig build() {
+                return new ServerlessConfig(this);
             } 
 
         } 
