@@ -26,7 +26,11 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<CheckMobilesCardSupportResponse> checkMobilesCardSupport(CheckMobilesCardSupportRequest request);
 
+    CompletableFuture<ConversionDataIntlResponse> conversionDataIntl(ConversionDataIntlRequest request);
+
     CompletableFuture<CreateCardSmsTemplateResponse> createCardSmsTemplate(CreateCardSmsTemplateRequest request);
+
+    CompletableFuture<CreateSmartShortUrlResponse> createSmartShortUrl(CreateSmartShortUrlRequest request);
 
     CompletableFuture<DeleteShortUrlResponse> deleteShortUrl(DeleteShortUrlRequest request);
 
@@ -52,6 +56,8 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<QueryMobilesCardSupportResponse> queryMobilesCardSupport(QueryMobilesCardSupportRequest request);
 
+    CompletableFuture<QueryPageSmartShortUrlLogResponse> queryPageSmartShortUrlLog(QueryPageSmartShortUrlLogRequest request);
+
     CompletableFuture<QuerySendDetailsResponse> querySendDetails(QuerySendDetailsRequest request);
 
     CompletableFuture<QuerySendStatisticsResponse> querySendStatistics(QuerySendStatisticsRequest request);
@@ -73,6 +79,8 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<SendCardSmsResponse> sendCardSms(SendCardSmsRequest request);
 
     CompletableFuture<SendSmsResponse> sendSms(SendSmsRequest request);
+
+    CompletableFuture<SmsConversionIntlResponse> smsConversionIntl(SmsConversionIntlRequest request);
 
     CompletableFuture<TagResourcesResponse> tagResources(TagResourcesRequest request);
 
