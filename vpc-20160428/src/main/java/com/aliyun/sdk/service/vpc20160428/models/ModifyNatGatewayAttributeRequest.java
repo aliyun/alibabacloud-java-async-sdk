@@ -182,7 +182,10 @@ public class ModifyNatGatewayAttributeRequest extends Request {
         } 
 
         /**
-         * Description.
+         * The description of the NAT gateway.
+         * <p>
+         * 
+         * The description must be 1 to 128 characters in length, and cannot start with `http://` or `https://`.
          */
         public Builder description(String description) {
             this.putQueryParameter("Description", description);
@@ -191,7 +194,13 @@ public class ModifyNatGatewayAttributeRequest extends Request {
         }
 
         /**
-         * EipBindMode.
+         * The mode in which the NAT gateway is associated with an elastic IP address (EIP). You can leave this parameter empty. If you want to specify a value for this parameter, set the value to **NAT**, which indicates that the NAT gateway is associated with the EIP in NAT mode.
+         * <p>
+         * 
+         * > 
+         * *   If the EipBindMode parameter is set to MULTI_BINDED when the NAT gateway is created, you can change the value of this parameter from **MULTI_BINDED** to **NAT**. If the EipBindMode parameter is set to NAT when the NAT gateway is created, you cannot change the value of this parameter from **NAT** to **MULTI_BINDED**. For more information about **MULTI_BINDED**, see [CreateNatGateway](~~120219~~).
+         * *   When the mode in which the NAT gateway is associated with an EIP is being changed, a transient connection that lasts a few seconds may occur. If the number of EIPs with which the NAT gateway is associated increases, the transient connection lasts longer. You can change the mode only for a NAT gateway that is associated with up to five EIPs. We recommend that you change the mode during off-peak hours.
+         * *   After the mode is changed to **NAT**, the Internet NAT gateway is compatible with the IPv4 gateway. However, if you associate an EIP with the NAT gateway, the EIP occupies one private IP address on the vSwitch of the NAT gateway. Make sure that the vSwitch has sufficient private IP addresses. Otherwise, the EIP fails to be associated with the NAT gateway.
          */
         public Builder eipBindMode(String eipBindMode) {
             this.putQueryParameter("EipBindMode", eipBindMode);
@@ -200,7 +209,11 @@ public class ModifyNatGatewayAttributeRequest extends Request {
         }
 
         /**
-         * IcmpReplyEnabled.
+         * Specifies whether to enable the Internet control message protocol (ICMP) non-retrieval feature. Valid values:
+         * <p>
+         * 
+         * *   **false**: disables the ICMP non-retrieval feature. This is the default value.
+         * *   **true**: enables the ICMP non-retrieval feature.
          */
         public Builder icmpReplyEnabled(Boolean icmpReplyEnabled) {
             this.putQueryParameter("IcmpReplyEnabled", icmpReplyEnabled);
@@ -209,7 +222,10 @@ public class ModifyNatGatewayAttributeRequest extends Request {
         }
 
         /**
-         * Name.
+         * The name of the NAT gateway.
+         * <p>
+         * 
+         * The name must be 1 to 128 characters in length, and cannot start with `http://` or `https://`.
          */
         public Builder name(String name) {
             this.putQueryParameter("Name", name);
@@ -218,7 +234,7 @@ public class ModifyNatGatewayAttributeRequest extends Request {
         }
 
         /**
-         * NatGatewayId.
+         * The ID of the NAT gateway.
          */
         public Builder natGatewayId(String natGatewayId) {
             this.putQueryParameter("NatGatewayId", natGatewayId);
@@ -245,7 +261,10 @@ public class ModifyNatGatewayAttributeRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * The region ID of the NAT gateway.
+         * <p>
+         * 
+         * You can call the [DescribeRegions](~~36063~~) operation to query the most recent region list.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);

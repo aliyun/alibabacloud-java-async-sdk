@@ -140,7 +140,10 @@ public class DeletePhysicalConnectionRequest extends Request {
         } 
 
         /**
-         * ClientToken.
+         * The client token that is used to ensure the idempotence of the request.
+         * <p>
+         * 
+         * You can use the client to generate the value, but you must make sure that it is unique among different requests. The token can contain only ASCII characters and cannot exceed 64 characters in length.
          */
         public Builder clientToken(String clientToken) {
             this.putQueryParameter("ClientToken", clientToken);
@@ -167,7 +170,7 @@ public class DeletePhysicalConnectionRequest extends Request {
         }
 
         /**
-         * PhysicalConnectionId.
+         * The ID of the Express Connect circuit.
          */
         public Builder physicalConnectionId(String physicalConnectionId) {
             this.putQueryParameter("PhysicalConnectionId", physicalConnectionId);
@@ -176,7 +179,10 @@ public class DeletePhysicalConnectionRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * The region ID of the Express Connect circuit.
+         * <p>
+         * 
+         * You can call the [DescribeRegions](~~36063~~) operation to query the most recent region list.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);

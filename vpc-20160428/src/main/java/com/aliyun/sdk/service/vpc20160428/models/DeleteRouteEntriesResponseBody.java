@@ -74,7 +74,7 @@ public class DeleteRouteEntriesResponseBody extends TeaModel {
         private Integer successCount; 
 
         /**
-         * FailedCount.
+         * The number of route entries that failed to be deleted.
          */
         public Builder failedCount(Integer failedCount) {
             this.failedCount = failedCount;
@@ -82,7 +82,7 @@ public class DeleteRouteEntriesResponseBody extends TeaModel {
         }
 
         /**
-         * FailedRouteEntries.
+         * The information about the route entry that failed to be deleted.
          */
         public Builder failedRouteEntries(java.util.List < FailedRouteEntries> failedRouteEntries) {
             this.failedRouteEntries = failedRouteEntries;
@@ -90,7 +90,7 @@ public class DeleteRouteEntriesResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -98,7 +98,7 @@ public class DeleteRouteEntriesResponseBody extends TeaModel {
         }
 
         /**
-         * SuccessCount.
+         * The number of route entries that were deleted.
          */
         public Builder successCount(Integer successCount) {
             this.successCount = successCount;
@@ -186,7 +186,7 @@ public class DeleteRouteEntriesResponseBody extends TeaModel {
             private String routeEntryId; 
 
             /**
-             * DstCidrBlock.
+             * The destination CIDR block of the route entry that failed to be deleted. IPv4 and IPv6 CIDR blocks are supported.
              */
             public Builder dstCidrBlock(String dstCidrBlock) {
                 this.dstCidrBlock = dstCidrBlock;
@@ -194,7 +194,7 @@ public class DeleteRouteEntriesResponseBody extends TeaModel {
             }
 
             /**
-             * FailedCode.
+             * The error code.
              */
             public Builder failedCode(String failedCode) {
                 this.failedCode = failedCode;
@@ -202,7 +202,7 @@ public class DeleteRouteEntriesResponseBody extends TeaModel {
             }
 
             /**
-             * FailedMessage.
+             * The error message.
              */
             public Builder failedMessage(String failedMessage) {
                 this.failedMessage = failedMessage;
@@ -210,7 +210,7 @@ public class DeleteRouteEntriesResponseBody extends TeaModel {
             }
 
             /**
-             * NextHop.
+             * The ID of the next hop that failed to be deleted.
              */
             public Builder nextHop(String nextHop) {
                 this.nextHop = nextHop;
@@ -218,7 +218,7 @@ public class DeleteRouteEntriesResponseBody extends TeaModel {
             }
 
             /**
-             * RouteEntryId.
+             * The ID of the route entry that failed to be deleted.
              */
             public Builder routeEntryId(String routeEntryId) {
                 this.routeEntryId = routeEntryId;

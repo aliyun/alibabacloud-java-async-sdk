@@ -210,7 +210,10 @@ public class DescribeVpnSslServerLogsRequest extends Request {
         } 
 
         /**
-         * From.
+         * The beginning of the time range to query. The value must be a unix timestamp. For example, 1600738962 specifies 09:42:42 (UTC+8) on September 22, 2020.
+         * <p>
+         * 
+         * >  If you specify **From**, you must also specify **To** or **MinutePeriod**.
          */
         public Builder from(Integer from) {
             this.putQueryParameter("From", from);
@@ -219,7 +222,10 @@ public class DescribeVpnSslServerLogsRequest extends Request {
         }
 
         /**
-         * MinutePeriod.
+         * The interval at which log data is queried. Unit: minutes.
+         * <p>
+         * 
+         * >  If both **From** and **To** are not specified, you must specify **MinutePeriod**.
          */
         public Builder minutePeriod(Integer minutePeriod) {
             this.putQueryParameter("MinutePeriod", minutePeriod);
@@ -246,7 +252,7 @@ public class DescribeVpnSslServerLogsRequest extends Request {
         }
 
         /**
-         * PageNumber.
+         * The number of the page to return. Default value: **1**.
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -255,7 +261,7 @@ public class DescribeVpnSslServerLogsRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * The number of entries to return on each page. Maximum value: **50**. Default value: **10**.
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -264,7 +270,7 @@ public class DescribeVpnSslServerLogsRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * The ID of the region where the SSL server is created. You can call the [DescribeRegions](~~36063~~) operation to query the most recent region list.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -291,7 +297,7 @@ public class DescribeVpnSslServerLogsRequest extends Request {
         }
 
         /**
-         * SslVpnClientCertId.
+         * The ID of the SSL client certificate.
          */
         public Builder sslVpnClientCertId(String sslVpnClientCertId) {
             this.putQueryParameter("SslVpnClientCertId", sslVpnClientCertId);
@@ -300,7 +306,10 @@ public class DescribeVpnSslServerLogsRequest extends Request {
         }
 
         /**
-         * To.
+         * The end of the time range to query. The value must be a unix timestamp. For example, 1600738962 specifies 09:42:42 (UTC+8) on September 22, 2020.
+         * <p>
+         * 
+         * >  If you specify **To**, you must also specify **From** or **MinutePeriod**.
          */
         public Builder to(Integer to) {
             this.putQueryParameter("To", to);
@@ -309,7 +318,7 @@ public class DescribeVpnSslServerLogsRequest extends Request {
         }
 
         /**
-         * VpnSslServerId.
+         * The ID of the SSL server.
          */
         public Builder vpnSslServerId(String vpnSslServerId) {
             this.putQueryParameter("VpnSslServerId", vpnSslServerId);

@@ -155,7 +155,10 @@ public class AddIPv6TranslatorAclListEntryRequest extends Request {
         } 
 
         /**
-         * AclEntryComment.
+         * The remarks of the ACL entry.
+         * <p>
+         * 
+         * It must be 2 to 100 characters in length, and can contain letters, digits, underscores (\_), and hyphens (-). It must start with a letter.
          */
         public Builder aclEntryComment(String aclEntryComment) {
             this.putQueryParameter("AclEntryComment", aclEntryComment);
@@ -164,7 +167,7 @@ public class AddIPv6TranslatorAclListEntryRequest extends Request {
         }
 
         /**
-         * AclEntryIp.
+         * The IPv6 address or IPv6 CIDR block that you want to add to the ACL entry, for example, 12XX:0:0:XXXX::0102 or 12XX:0:0:XXXX::/60.
          */
         public Builder aclEntryIp(String aclEntryIp) {
             this.putQueryParameter("AclEntryIp", aclEntryIp);
@@ -173,7 +176,7 @@ public class AddIPv6TranslatorAclListEntryRequest extends Request {
         }
 
         /**
-         * AclId.
+         * The ID of the ACL to which you want to add the IP entry.
          */
         public Builder aclId(String aclId) {
             this.putQueryParameter("AclId", aclId);
@@ -200,7 +203,7 @@ public class AddIPv6TranslatorAclListEntryRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * The region ID of the ACL.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);

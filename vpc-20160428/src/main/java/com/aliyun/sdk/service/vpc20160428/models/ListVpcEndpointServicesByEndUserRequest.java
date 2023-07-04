@@ -154,7 +154,7 @@ public class ListVpcEndpointServicesByEndUserRequest extends Request {
         } 
 
         /**
-         * MaxResults.
+         * The ID of the request.
          */
         public Builder maxResults(Long maxResults) {
             this.putQueryParameter("MaxResults", maxResults);
@@ -163,7 +163,10 @@ public class ListVpcEndpointServicesByEndUserRequest extends Request {
         }
 
         /**
-         * NextToken.
+         * The region ID of the gateway endpoint.
+         * <p>
+         * 
+         * You can call the [DescribeRegions](~~36063~~) operation to query the most recent region list.
          */
         public Builder nextToken(String nextToken) {
             this.putQueryParameter("NextToken", nextToken);
@@ -190,7 +193,11 @@ public class ListVpcEndpointServicesByEndUserRequest extends Request {
         }
 
         /**
-         * 地域
+         * The token that is used for the next query. Valid values:
+         * <p>
+         * 
+         * *   If no value is returned for **NextToken**, no next queries are sent.
+         * *   If **NextToken** is returned, the value is the token that is used for the next query.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -217,7 +224,7 @@ public class ListVpcEndpointServicesByEndUserRequest extends Request {
         }
 
         /**
-         * ServiceName.
+         * The number of entries to return per page. Valid values: **1** to **100**. Default value: **20**.
          */
         public Builder serviceName(String serviceName) {
             this.putQueryParameter("ServiceName", serviceName);

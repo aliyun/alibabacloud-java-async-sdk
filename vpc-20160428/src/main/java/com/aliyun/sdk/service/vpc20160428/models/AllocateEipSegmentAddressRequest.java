@@ -62,6 +62,10 @@ public class AllocateEipSegmentAddressRequest extends Request {
     @NameInMap("ResourceOwnerId")
     private Long resourceOwnerId;
 
+    @Query
+    @NameInMap("Zone")
+    private String zone;
+
     private AllocateEipSegmentAddressRequest(Builder builder) {
         super(builder);
         this.bandwidth = builder.bandwidth;
@@ -76,6 +80,7 @@ public class AllocateEipSegmentAddressRequest extends Request {
         this.resourceGroupId = builder.resourceGroupId;
         this.resourceOwnerAccount = builder.resourceOwnerAccount;
         this.resourceOwnerId = builder.resourceOwnerId;
+        this.zone = builder.zone;
     }
 
     public static Builder builder() {
@@ -175,6 +180,13 @@ public class AllocateEipSegmentAddressRequest extends Request {
         return this.resourceOwnerId;
     }
 
+    /**
+     * @return zone
+     */
+    public String getZone() {
+        return this.zone;
+    }
+
     public static final class Builder extends Request.Builder<AllocateEipSegmentAddressRequest, Builder> {
         private String bandwidth; 
         private String clientToken; 
@@ -188,6 +200,7 @@ public class AllocateEipSegmentAddressRequest extends Request {
         private String resourceGroupId; 
         private String resourceOwnerAccount; 
         private Long resourceOwnerId; 
+        private String zone; 
 
         private Builder() {
             super();
@@ -207,10 +220,20 @@ public class AllocateEipSegmentAddressRequest extends Request {
             this.resourceGroupId = request.resourceGroupId;
             this.resourceOwnerAccount = request.resourceOwnerAccount;
             this.resourceOwnerId = request.resourceOwnerId;
+            this.zone = request.zone;
         } 
 
         /**
-         * Bandwidth.
+         * The subnet mask length of the contiguous EIPs. Valid values:
+         * <p>
+         * 
+         * - **28**: applies for 16 contiguous EIPs in each call.
+         * - **27**: applies for 32 contiguous EIPs in each call.
+         * - **26**: applies for 64 contiguous EIPs each call.
+         * - **25**: applies for 128 contiguous EIPs in each call.
+         * - **24**: applies for 256 contiguous EIPs in each call.
+         * 
+         * >  The number of contiguous EIPs allocated by the system may be less than the requested number because one, three, or four EIPs may be reserved.
          */
         public Builder bandwidth(String bandwidth) {
             this.putQueryParameter("Bandwidth", bandwidth);
@@ -219,7 +242,14 @@ public class AllocateEipSegmentAddressRequest extends Request {
         }
 
         /**
-         * ClientToken.
+         * The maximum bandwidth of the EIP. Unit: Mbit/s.
+         * <p>
+         * 
+         * *   When **InstanceChargeType** is set to **PostPaid** and **InternetChargeType** is set to **PayByBandwidth**, the valid values for **Bandwidth** are **1** to **500**.
+         * *   When **InstanceChargeType** is set to **PostPaid** and **InternetChargeType** is set to **PayByTraffic**, the valid values for **Bandwidth** are **1** to **200**.
+         * *   When **InstanceChargeType** is set to **PrePaid**, the valid values for **Bandwidth** are **1** to **1000**.
+         * 
+         * Default value: **5**. Unit: Mbit/s.
          */
         public Builder clientToken(String clientToken) {
             this.putQueryParameter("ClientToken", clientToken);
@@ -228,7 +258,11 @@ public class AllocateEipSegmentAddressRequest extends Request {
         }
 
         /**
-         * EipMask.
+         * The metering method of the contiguous EIPs. Valid values:
+         * <p>
+         * 
+         * *   **PayByBandwidth** (default): pay-by-bandwidth
+         * *   **PayByTraffic**: pay-by-data-transfer
          */
         public Builder eipMask(String eipMask) {
             this.putQueryParameter("EipMask", eipMask);
@@ -237,7 +271,24 @@ public class AllocateEipSegmentAddressRequest extends Request {
         }
 
         /**
-         * InternetChargeType.
+         * The line type. Valid values:
+         * <p>
+         * 
+         * *   **BGP** (default): BGP (Multi-ISP) lines All regions support BGP (Multi-ISP) EIPs.
+         * *   **BGP_PRO**: BGP (Multi-ISP) Pro lines. Only the following regions support BGP (Multi-ISP) Pro lines: China (Hong Kong), Singapore, Malaysia (Kuala Lumpur), Philippines (Manila), Indonesia (Jakarta), and Thailand (Bangkok).
+         * 
+         * For more information about BGP (Multi-ISP) and BGP (Multi-ISP) Pro, see [EIP line types](~~32321~~).
+         * 
+         * If you are allowed to use single-ISP bandwidth, you can also choose one of the following values:
+         * 
+         * *   **ChinaTelecom**: China Telecom
+         * *   **ChinaUnicom**: China Unicom
+         * *   **ChinaMobile**: China Mobile
+         * *   **ChinaTelecom_L2**: China Telecom L2
+         * *   **ChinaUnicom_L2**: China Unicom L2
+         * *   **ChinaMobile_L2**: China Mobile L2
+         * 
+         * If your services are deployed in China East 1 Finance, this parameter is required and you must set the value to **BGP_FinanceCloud**.
          */
         public Builder internetChargeType(String internetChargeType) {
             this.putQueryParameter("InternetChargeType", internetChargeType);
@@ -246,7 +297,7 @@ public class AllocateEipSegmentAddressRequest extends Request {
         }
 
         /**
-         * Isp.
+         * The ID of the contiguous EIP group.
          */
         public Builder isp(String isp) {
             this.putQueryParameter("Isp", isp);
@@ -255,7 +306,7 @@ public class AllocateEipSegmentAddressRequest extends Request {
         }
 
         /**
-         * Netmode.
+         * The ID of the resource group.
          */
         public Builder netmode(String netmode) {
             this.putQueryParameter("Netmode", netmode);
@@ -282,7 +333,7 @@ public class AllocateEipSegmentAddressRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * Set the value to **public**, which specifies the Internet.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -291,7 +342,7 @@ public class AllocateEipSegmentAddressRequest extends Request {
         }
 
         /**
-         * ResourceGroupId.
+         * The ID of the request.
          */
         public Builder resourceGroupId(String resourceGroupId) {
             this.putQueryParameter("ResourceGroupId", resourceGroupId);
@@ -314,6 +365,15 @@ public class AllocateEipSegmentAddressRequest extends Request {
         public Builder resourceOwnerId(Long resourceOwnerId) {
             this.putQueryParameter("ResourceOwnerId", resourceOwnerId);
             this.resourceOwnerId = resourceOwnerId;
+            return this;
+        }
+
+        /**
+         * Zone.
+         */
+        public Builder zone(String zone) {
+            this.putQueryParameter("Zone", zone);
+            this.zone = zone;
             return this;
         }
 

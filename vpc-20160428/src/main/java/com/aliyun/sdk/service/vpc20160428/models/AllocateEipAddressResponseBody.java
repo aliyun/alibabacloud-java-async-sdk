@@ -102,7 +102,7 @@ public class AllocateEipAddressResponseBody extends TeaModel {
         }
 
         /**
-         * OrderId.
+         * The ID of the EIP.
          */
         public Builder orderId(Long orderId) {
             this.orderId = orderId;
@@ -110,7 +110,7 @@ public class AllocateEipAddressResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The EIP that is allocated. This parameter is returned only when **InstanceChargeType** is set to **PostPaid**.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

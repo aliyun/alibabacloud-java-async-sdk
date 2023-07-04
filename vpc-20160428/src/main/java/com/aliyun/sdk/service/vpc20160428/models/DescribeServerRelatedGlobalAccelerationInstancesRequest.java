@@ -158,7 +158,10 @@ public class DescribeServerRelatedGlobalAccelerationInstancesRequest extends Req
         }
 
         /**
-         * RegionId.
+         * The region ID of the GA instance.
+         * <p>
+         * 
+         * You can call the [DescribeRegions](~~36063~~) operation to query the most recent region list.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -185,7 +188,7 @@ public class DescribeServerRelatedGlobalAccelerationInstancesRequest extends Req
         }
 
         /**
-         * ServerId.
+         * The ID of the backend service instance.
          */
         public Builder serverId(String serverId) {
             this.putQueryParameter("ServerId", serverId);
@@ -194,7 +197,11 @@ public class DescribeServerRelatedGlobalAccelerationInstancesRequest extends Req
         }
 
         /**
-         * ServerType.
+         * The type of the backend service instance. Valid values:
+         * <p>
+         * 
+         * *   **EcsInstance** (default): Elastic Compute Service (ECS)
+         * *   **SlbInstance**: Server Load Balancer (SLB)
          */
         public Builder serverType(String serverType) {
             this.putQueryParameter("ServerType", serverType);

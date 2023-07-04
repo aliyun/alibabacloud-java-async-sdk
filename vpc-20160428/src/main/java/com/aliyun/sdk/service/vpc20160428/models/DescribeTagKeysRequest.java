@@ -182,7 +182,7 @@ public class DescribeTagKeysRequest extends Request {
         } 
 
         /**
-         * Keyword.
+         * The tag keys.
          */
         public Builder keyword(String keyword) {
             this.putQueryParameter("Keyword", keyword);
@@ -191,7 +191,7 @@ public class DescribeTagKeysRequest extends Request {
         }
 
         /**
-         * MaxResult.
+         * The number of entries to return on each page. Valid values: 1 to 50. Default value: 50.
          */
         public Builder maxResult(Integer maxResult) {
             this.putQueryParameter("MaxResult", maxResult);
@@ -200,7 +200,11 @@ public class DescribeTagKeysRequest extends Request {
         }
 
         /**
-         * NextToken.
+         * The token that is used for the next query. Valid values:
+         * <p>
+         * 
+         * *   If this is your first query or no next query is to be sent, ignore this parameter.
+         * *   If a subsequent query is to be sent, set the parameter to the value of NextToken that is returned from the last call.
          */
         public Builder nextToken(String nextToken) {
             this.putQueryParameter("NextToken", nextToken);
@@ -227,7 +231,10 @@ public class DescribeTagKeysRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * The region ID of the resource.
+         * <p>
+         * 
+         * You can call the [DescribeRegions](~~36063~~) operation to query the most recent region list.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -263,7 +270,16 @@ public class DescribeTagKeysRequest extends Request {
         }
 
         /**
-         * ResourceType.
+         * The resource type. Valid values:
+         * <p>
+         * 
+         * *   **VPC**: virtual private cloud (VPC)
+         * *   **VSWITCH**: vSwitch
+         * *   **ROUTETABLE**: route table
+         * *   **EIP**: elastic IP address (EIP)
+         * *   **VpnGateway**: VPN gateway
+         * *   **NATGATEWAY**: NAT gateway
+         * *   **COMMONBANDWIDTHPACKAGE**: EIP bandwidth plan
          */
         public Builder resourceType(String resourceType) {
             this.putQueryParameter("ResourceType", resourceType);

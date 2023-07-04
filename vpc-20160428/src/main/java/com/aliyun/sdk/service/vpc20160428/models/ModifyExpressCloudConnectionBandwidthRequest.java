@@ -140,7 +140,7 @@ public class ModifyExpressCloudConnectionBandwidthRequest extends Request {
         } 
 
         /**
-         * Bandwidth.
+         * The bandwidth of the ECC instance.
          */
         public Builder bandwidth(String bandwidth) {
             this.putQueryParameter("Bandwidth", bandwidth);
@@ -149,7 +149,7 @@ public class ModifyExpressCloudConnectionBandwidthRequest extends Request {
         }
 
         /**
-         * EccId.
+         * The ID of the ECC instance.
          */
         public Builder eccId(String eccId) {
             this.putQueryParameter("EccId", eccId);
@@ -176,7 +176,7 @@ public class ModifyExpressCloudConnectionBandwidthRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * The region ID.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);

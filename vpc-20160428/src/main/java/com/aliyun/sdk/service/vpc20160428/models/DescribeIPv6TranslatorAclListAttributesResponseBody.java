@@ -110,7 +110,7 @@ public class DescribeIPv6TranslatorAclListAttributesResponseBody extends TeaMode
         private Integer totalCount; 
 
         /**
-         * AclEntries.
+         * The ACLs.
          */
         public Builder aclEntries(AclEntries aclEntries) {
             this.aclEntries = aclEntries;
@@ -118,7 +118,7 @@ public class DescribeIPv6TranslatorAclListAttributesResponseBody extends TeaMode
         }
 
         /**
-         * AclId.
+         * The ACL ID.
          */
         public Builder aclId(String aclId) {
             this.aclId = aclId;
@@ -126,7 +126,7 @@ public class DescribeIPv6TranslatorAclListAttributesResponseBody extends TeaMode
         }
 
         /**
-         * AclName.
+         * The name of the ACL.
          */
         public Builder aclName(String aclName) {
             this.aclName = aclName;
@@ -134,7 +134,7 @@ public class DescribeIPv6TranslatorAclListAttributesResponseBody extends TeaMode
         }
 
         /**
-         * PageNumber.
+         * The page number of the returned page.
          */
         public Builder pageNumber(Integer pageNumber) {
             this.pageNumber = pageNumber;
@@ -142,7 +142,7 @@ public class DescribeIPv6TranslatorAclListAttributesResponseBody extends TeaMode
         }
 
         /**
-         * PageSize.
+         * The number of entries returned per page.
          */
         public Builder pageSize(Integer pageSize) {
             this.pageSize = pageSize;
@@ -150,7 +150,7 @@ public class DescribeIPv6TranslatorAclListAttributesResponseBody extends TeaMode
         }
 
         /**
-         * RequestId.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -158,7 +158,7 @@ public class DescribeIPv6TranslatorAclListAttributesResponseBody extends TeaMode
         }
 
         /**
-         * TotalCount.
+         * The total number of entries returned.
          */
         public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;
@@ -222,7 +222,7 @@ public class DescribeIPv6TranslatorAclListAttributesResponseBody extends TeaMode
             private String aclEntryIp; 
 
             /**
-             * AclEntryComment.
+             * The remarks of the ACL entry.
              */
             public Builder aclEntryComment(String aclEntryComment) {
                 this.aclEntryComment = aclEntryComment;
@@ -230,7 +230,7 @@ public class DescribeIPv6TranslatorAclListAttributesResponseBody extends TeaMode
             }
 
             /**
-             * AclEntryId.
+             * The ID of the ACL entry.
              */
             public Builder aclEntryId(String aclEntryId) {
                 this.aclEntryId = aclEntryId;
@@ -238,7 +238,7 @@ public class DescribeIPv6TranslatorAclListAttributesResponseBody extends TeaMode
             }
 
             /**
-             * AclEntryIp.
+             * The IP address specified in the ACL entry.
              */
             public Builder aclEntryIp(String aclEntryIp) {
                 this.aclEntryIp = aclEntryIp;

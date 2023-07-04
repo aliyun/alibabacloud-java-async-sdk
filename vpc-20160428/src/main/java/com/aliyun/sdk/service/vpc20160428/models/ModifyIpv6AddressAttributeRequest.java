@@ -154,7 +154,10 @@ public class ModifyIpv6AddressAttributeRequest extends Request {
         } 
 
         /**
-         * Description.
+         * The description of the IPv6 address.
+         * <p>
+         * 
+         * It must be 2 to 256 characters in length, and can contain letters, digits, periods (.), underscores (\_), and hyphens (-). It must start with a letter. The name must start with a letter but cannot start with `http://` or `https://`.
          */
         public Builder description(String description) {
             this.putQueryParameter("Description", description);
@@ -163,7 +166,7 @@ public class ModifyIpv6AddressAttributeRequest extends Request {
         }
 
         /**
-         * Ipv6AddressId.
+         * The ID of the IPv6 address.
          */
         public Builder ipv6AddressId(String ipv6AddressId) {
             this.putQueryParameter("Ipv6AddressId", ipv6AddressId);
@@ -172,7 +175,10 @@ public class ModifyIpv6AddressAttributeRequest extends Request {
         }
 
         /**
-         * Name.
+         * The name of the IPv6 address.
+         * <p>
+         * 
+         * The name must be 2 to 128 characters in length, and can contain letters, digits, periods (.), underscores (\_), and hyphens (-). The name must start with a letter. The name must start with a letter but cannot start with `http://` or `https://`.
          */
         public Builder name(String name) {
             this.putQueryParameter("Name", name);
@@ -199,7 +205,7 @@ public class ModifyIpv6AddressAttributeRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * The region ID of the IPv6 address. You can call the [DescribeRegions](~~36063~~) operation to query the most recent region list.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);

@@ -66,6 +66,10 @@ public class DescribeCommonBandwidthPackagesRequest extends Request {
     @NameInMap("SecurityProtectionEnabled")
     private Boolean securityProtectionEnabled;
 
+    @Query
+    @NameInMap("Tag")
+    private java.util.List < Tag> tag;
+
     private DescribeCommonBandwidthPackagesRequest(Builder builder) {
         super(builder);
         this.bandwidthPackageId = builder.bandwidthPackageId;
@@ -81,6 +85,7 @@ public class DescribeCommonBandwidthPackagesRequest extends Request {
         this.resourceOwnerAccount = builder.resourceOwnerAccount;
         this.resourceOwnerId = builder.resourceOwnerId;
         this.securityProtectionEnabled = builder.securityProtectionEnabled;
+        this.tag = builder.tag;
     }
 
     public static Builder builder() {
@@ -187,6 +192,13 @@ public class DescribeCommonBandwidthPackagesRequest extends Request {
         return this.securityProtectionEnabled;
     }
 
+    /**
+     * @return tag
+     */
+    public java.util.List < Tag> getTag() {
+        return this.tag;
+    }
+
     public static final class Builder extends Request.Builder<DescribeCommonBandwidthPackagesRequest, Builder> {
         private String bandwidthPackageId; 
         private Boolean dryRun; 
@@ -201,6 +213,7 @@ public class DescribeCommonBandwidthPackagesRequest extends Request {
         private String resourceOwnerAccount; 
         private Long resourceOwnerId; 
         private Boolean securityProtectionEnabled; 
+        private java.util.List < Tag> tag; 
 
         private Builder() {
             super();
@@ -221,10 +234,11 @@ public class DescribeCommonBandwidthPackagesRequest extends Request {
             this.resourceOwnerAccount = request.resourceOwnerAccount;
             this.resourceOwnerId = request.resourceOwnerId;
             this.securityProtectionEnabled = request.securityProtectionEnabled;
+            this.tag = request.tag;
         } 
 
         /**
-         * BandwidthPackageId.
+         * The number of the page to return. Default value: **1**.
          */
         public Builder bandwidthPackageId(String bandwidthPackageId) {
             this.putQueryParameter("BandwidthPackageId", bandwidthPackageId);
@@ -233,7 +247,7 @@ public class DescribeCommonBandwidthPackagesRequest extends Request {
         }
 
         /**
-         * DryRun.
+         * The ID of the request.
          */
         public Builder dryRun(Boolean dryRun) {
             this.putQueryParameter("DryRun", dryRun);
@@ -242,7 +256,7 @@ public class DescribeCommonBandwidthPackagesRequest extends Request {
         }
 
         /**
-         * IncludeReservationData.
+         * The ID of the resource group.
          */
         public Builder includeReservationData(Boolean includeReservationData) {
             this.putQueryParameter("IncludeReservationData", includeReservationData);
@@ -251,7 +265,11 @@ public class DescribeCommonBandwidthPackagesRequest extends Request {
         }
 
         /**
-         * Name.
+         * Specifies whether to perform a dry run. Valid values:
+         * <p>
+         * 
+         * *   **true**: performs a dry run. The system checks the required parameters, request syntax, and instance status. If the request fails the dry run, an error message is returned. If the request passes the dry run, the `DryRunOperation` error code is returned.
+         * *   **false**: performs a dry run and sends the request. If the request passes the dry run, an HTTP 2xx status code is returned and the operation is performed. This is the default value.
          */
         public Builder name(String name) {
             this.putQueryParameter("Name", name);
@@ -278,7 +296,11 @@ public class DescribeCommonBandwidthPackagesRequest extends Request {
         }
 
         /**
-         * PageNumber.
+         * Specifies whether to enable Anti-DDoS Pro/Premium. Valid values:
+         * <p>
+         * 
+         * *   **false**: disables Anti-DDoS Pro/Premium. This is the default value.
+         * *   **true**: enables Anti-DDoS Pro/Premium.
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -287,7 +309,7 @@ public class DescribeCommonBandwidthPackagesRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * The number of entries returned per page.
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -296,7 +318,7 @@ public class DescribeCommonBandwidthPackagesRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * The name of the EIP bandwidth plan.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -305,7 +327,7 @@ public class DescribeCommonBandwidthPackagesRequest extends Request {
         }
 
         /**
-         * ResourceGroupId.
+         * The number of entries to return on each page. Maximum value: **50**. Default value: **10**.
          */
         public Builder resourceGroupId(String resourceGroupId) {
             this.putQueryParameter("ResourceGroupId", resourceGroupId);
@@ -332,11 +354,20 @@ public class DescribeCommonBandwidthPackagesRequest extends Request {
         }
 
         /**
-         * 是否开启安全防护
+         * The number of the returned page.
          */
         public Builder securityProtectionEnabled(Boolean securityProtectionEnabled) {
             this.putQueryParameter("SecurityProtectionEnabled", securityProtectionEnabled);
             this.securityProtectionEnabled = securityProtectionEnabled;
+            return this;
+        }
+
+        /**
+         * Tag.
+         */
+        public Builder tag(java.util.List < Tag> tag) {
+            this.putQueryParameter("Tag", tag);
+            this.tag = tag;
             return this;
         }
 
@@ -347,4 +378,65 @@ public class DescribeCommonBandwidthPackagesRequest extends Request {
 
     } 
 
+    public static class Tag extends TeaModel {
+        @NameInMap("Key")
+        private String key;
+
+        @NameInMap("Value")
+        private String value;
+
+        private Tag(Builder builder) {
+            this.key = builder.key;
+            this.value = builder.value;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static Tag create() {
+            return builder().build();
+        }
+
+        /**
+         * @return key
+         */
+        public String getKey() {
+            return this.key;
+        }
+
+        /**
+         * @return value
+         */
+        public String getValue() {
+            return this.value;
+        }
+
+        public static final class Builder {
+            private String key; 
+            private String value; 
+
+            /**
+             * Key.
+             */
+            public Builder key(String key) {
+                this.key = key;
+                return this;
+            }
+
+            /**
+             * Value.
+             */
+            public Builder value(String value) {
+                this.value = value;
+                return this;
+            }
+
+            public Tag build() {
+                return new Tag(this);
+            } 
+
+        } 
+
+    }
 }

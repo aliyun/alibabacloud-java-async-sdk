@@ -36,6 +36,9 @@ public class DescribeVpnConnectionResponseBody extends TeaModel {
     @NameInMap("EnableNatTraversal")
     private Boolean enableNatTraversal;
 
+    @NameInMap("EnableTunnelsBgp")
+    private Boolean enableTunnelsBgp;
+
     @NameInMap("IkeConfig")
     private IkeConfig ikeConfig;
 
@@ -81,6 +84,9 @@ public class DescribeVpnConnectionResponseBody extends TeaModel {
     @NameInMap("TransitRouterName")
     private String transitRouterName;
 
+    @NameInMap("TunnelOptionsSpecification")
+    private TunnelOptionsSpecification tunnelOptionsSpecification;
+
     @NameInMap("VcoHealthCheck")
     private VcoHealthCheck vcoHealthCheck;
 
@@ -105,6 +111,7 @@ public class DescribeVpnConnectionResponseBody extends TeaModel {
         this.effectImmediately = builder.effectImmediately;
         this.enableDpd = builder.enableDpd;
         this.enableNatTraversal = builder.enableNatTraversal;
+        this.enableTunnelsBgp = builder.enableTunnelsBgp;
         this.ikeConfig = builder.ikeConfig;
         this.internetIp = builder.internetIp;
         this.ipsecConfig = builder.ipsecConfig;
@@ -120,6 +127,7 @@ public class DescribeVpnConnectionResponseBody extends TeaModel {
         this.tags = builder.tags;
         this.transitRouterId = builder.transitRouterId;
         this.transitRouterName = builder.transitRouterName;
+        this.tunnelOptionsSpecification = builder.tunnelOptionsSpecification;
         this.vcoHealthCheck = builder.vcoHealthCheck;
         this.vpnBgpConfig = builder.vpnBgpConfig;
         this.vpnConnectionId = builder.vpnConnectionId;
@@ -189,6 +197,13 @@ public class DescribeVpnConnectionResponseBody extends TeaModel {
      */
     public Boolean getEnableNatTraversal() {
         return this.enableNatTraversal;
+    }
+
+    /**
+     * @return enableTunnelsBgp
+     */
+    public Boolean getEnableTunnelsBgp() {
+        return this.enableTunnelsBgp;
     }
 
     /**
@@ -297,6 +312,13 @@ public class DescribeVpnConnectionResponseBody extends TeaModel {
     }
 
     /**
+     * @return tunnelOptionsSpecification
+     */
+    public TunnelOptionsSpecification getTunnelOptionsSpecification() {
+        return this.tunnelOptionsSpecification;
+    }
+
+    /**
      * @return vcoHealthCheck
      */
     public VcoHealthCheck getVcoHealthCheck() {
@@ -340,6 +362,7 @@ public class DescribeVpnConnectionResponseBody extends TeaModel {
         private Boolean effectImmediately; 
         private Boolean enableDpd; 
         private Boolean enableNatTraversal; 
+        private Boolean enableTunnelsBgp; 
         private IkeConfig ikeConfig; 
         private String internetIp; 
         private IpsecConfig ipsecConfig; 
@@ -355,6 +378,7 @@ public class DescribeVpnConnectionResponseBody extends TeaModel {
         private Tags tags; 
         private String transitRouterId; 
         private String transitRouterName; 
+        private TunnelOptionsSpecification tunnelOptionsSpecification; 
         private VcoHealthCheck vcoHealthCheck; 
         private VpnBgpConfig vpnBgpConfig; 
         private String vpnConnectionId; 
@@ -362,7 +386,7 @@ public class DescribeVpnConnectionResponseBody extends TeaModel {
         private String zoneNo; 
 
         /**
-         * AttachInstanceId.
+         * The ID of the CEN instance to which the transit router belongs.
          */
         public Builder attachInstanceId(String attachInstanceId) {
             this.attachInstanceId = attachInstanceId;
@@ -370,7 +394,12 @@ public class DescribeVpnConnectionResponseBody extends TeaModel {
         }
 
         /**
-         * AttachType.
+         * The type of resource that is associated with the IPsec-VPN connection. Valid values:
+         * <p>
+         * 
+         * *   **CEN**: indicates that the IPsec-VPN connection is associated with a transit router of a Cloud Enterprise Network (CEN) instance.
+         * *   **NO_ASSOCIATED**: indicates that the IPsec-VPN connection is not associated with a resource.
+         * *   **VPNGW**: indicates that the IPsec-VPN connection is associated with a VPN gateway.
          */
         public Builder attachType(String attachType) {
             this.attachType = attachType;
@@ -378,7 +407,10 @@ public class DescribeVpnConnectionResponseBody extends TeaModel {
         }
 
         /**
-         * CreateTime.
+         * The timestamp that indicates when the IPsec-VPN connection was established. Unit: milliseconds.
+         * <p>
+         * 
+         * This value is a UNIX timestamp representing the number of milliseconds that have elapsed since the epoch time January 1, 1970, 00:00:00 UTC.
          */
         public Builder createTime(Long createTime) {
             this.createTime = createTime;
@@ -386,7 +418,11 @@ public class DescribeVpnConnectionResponseBody extends TeaModel {
         }
 
         /**
-         * CrossAccountAuthorized.
+         * Indicates whether the IPsec-VPN connection is associated with a transit router that belongs to another Alibaba Cloud account. Valid values:
+         * <p>
+         * 
+         * *   **true**: yes
+         * *   **false**: no
          */
         public Builder crossAccountAuthorized(Boolean crossAccountAuthorized) {
             this.crossAccountAuthorized = crossAccountAuthorized;
@@ -394,7 +430,7 @@ public class DescribeVpnConnectionResponseBody extends TeaModel {
         }
 
         /**
-         * CustomerGatewayId.
+         * The ID of the customer gateway.
          */
         public Builder customerGatewayId(String customerGatewayId) {
             this.customerGatewayId = customerGatewayId;
@@ -402,7 +438,11 @@ public class DescribeVpnConnectionResponseBody extends TeaModel {
         }
 
         /**
-         * EffectImmediately.
+         * Indicates whether IPsec negotiations immediately start.
+         * <p>
+         * 
+         * *   **true**: Negotiations are reinitiated after the configuration is changed.
+         * *   **false**: Negotiations are reinitiated when traffic is detected.
          */
         public Builder effectImmediately(Boolean effectImmediately) {
             this.effectImmediately = effectImmediately;
@@ -410,7 +450,13 @@ public class DescribeVpnConnectionResponseBody extends TeaModel {
         }
 
         /**
-         * EnableDpd.
+         * Indicates whether dead peer detection (DPD) is enabled.
+         * <p>
+         * 
+         * *   **false**: disabled
+         * *   **true**: enabled
+         * 
+         * After you enable DPD, the initiator of the IPsec-VPN connection sends DPD packets to check the existence and availability of the peer. If no response is received from the peer within a specified period of time, the connection fails. Then, the ISAKMP SA, IPsec SA, and IPsec tunnel are deleted.
          */
         public Builder enableDpd(Boolean enableDpd) {
             this.enableDpd = enableDpd;
@@ -418,7 +464,13 @@ public class DescribeVpnConnectionResponseBody extends TeaModel {
         }
 
         /**
-         * EnableNatTraversal.
+         * Indicates whether NAT traversal is enabled. Valid values:
+         * <p>
+         * 
+         * *   **true**: NAT traversal is enabled.
+         * *   **false**: NAT traversal is disabled.
+         * 
+         * After NAT traversal is enabled, the initiator does not check the UDP ports during IKE negotiations and can automatically discover NAT gateway devices along the VPN tunnel.
          */
         public Builder enableNatTraversal(Boolean enableNatTraversal) {
             this.enableNatTraversal = enableNatTraversal;
@@ -426,7 +478,15 @@ public class DescribeVpnConnectionResponseBody extends TeaModel {
         }
 
         /**
-         * IkeConfig.
+         * EnableTunnelsBgp.
+         */
+        public Builder enableTunnelsBgp(Boolean enableTunnelsBgp) {
+            this.enableTunnelsBgp = enableTunnelsBgp;
+            return this;
+        }
+
+        /**
+         * The configurations of Phase 1 negotiations.
          */
         public Builder ikeConfig(IkeConfig ikeConfig) {
             this.ikeConfig = ikeConfig;
@@ -434,7 +494,7 @@ public class DescribeVpnConnectionResponseBody extends TeaModel {
         }
 
         /**
-         * InternetIp.
+         * The gateway IP address of the IPsec-VPN connection.
          */
         public Builder internetIp(String internetIp) {
             this.internetIp = internetIp;
@@ -442,7 +502,7 @@ public class DescribeVpnConnectionResponseBody extends TeaModel {
         }
 
         /**
-         * IpsecConfig.
+         * The configuration of phase 2 negotiations.
          */
         public Builder ipsecConfig(IpsecConfig ipsecConfig) {
             this.ipsecConfig = ipsecConfig;
@@ -450,7 +510,10 @@ public class DescribeVpnConnectionResponseBody extends TeaModel {
         }
 
         /**
-         * LocalSubnet.
+         * The CIDR block on the Alibaba Cloud side.
+         * <p>
+         * 
+         * CIDR blocks are separated with commas (,).
          */
         public Builder localSubnet(String localSubnet) {
             this.localSubnet = localSubnet;
@@ -458,7 +521,7 @@ public class DescribeVpnConnectionResponseBody extends TeaModel {
         }
 
         /**
-         * Name.
+         * The name of the IPsec-VPN connection.
          */
         public Builder name(String name) {
             this.name = name;
@@ -466,7 +529,11 @@ public class DescribeVpnConnectionResponseBody extends TeaModel {
         }
 
         /**
-         * NetworkType.
+         * The network type of the IPsec-VPN connection. Valid values:
+         * <p>
+         * 
+         * *   **public**: an encrypted connection over the Internet.
+         * *   **private**: an encrypted connection over private networks.
          */
         public Builder networkType(String networkType) {
             this.networkType = networkType;
@@ -474,7 +541,7 @@ public class DescribeVpnConnectionResponseBody extends TeaModel {
         }
 
         /**
-         * RemoteCaCertificate.
+         * The CA certificate of the peer.
          */
         public Builder remoteCaCertificate(String remoteCaCertificate) {
             this.remoteCaCertificate = remoteCaCertificate;
@@ -482,7 +549,10 @@ public class DescribeVpnConnectionResponseBody extends TeaModel {
         }
 
         /**
-         * RemoteSubnet.
+         * The CIDR block on the data center side.
+         * <p>
+         * 
+         * CIDR blocks are separated with commas (,).
          */
         public Builder remoteSubnet(String remoteSubnet) {
             this.remoteSubnet = remoteSubnet;
@@ -490,7 +560,7 @@ public class DescribeVpnConnectionResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -498,7 +568,7 @@ public class DescribeVpnConnectionResponseBody extends TeaModel {
         }
 
         /**
-         * Spec.
+         * The bandwidth specification of the IPsec-VPN connection. Unit: **Mbit/s**.
          */
         public Builder spec(String spec) {
             this.spec = spec;
@@ -506,7 +576,19 @@ public class DescribeVpnConnectionResponseBody extends TeaModel {
         }
 
         /**
-         * State.
+         * The association status of the IPsec-VPN connection. Valid values:
+         * <p>
+         * 
+         * *   **active**: The IPsec-VPN connection is associated with a VPN gateway.
+         * *   **init**: The IPsec-VPN connection is not associated with a resource and is being initialized.
+         * *   **attaching**: The IPsec-VPN connection is being associated with a transit router.
+         * *   **attached**: The IPsec-VPN connection is associated with a transit router.
+         * *   **detaching**: The IPsec-VPN connection is being disassociated from a transit router.
+         * *   **financialLocked**: The IPsec-VPN connection is locked due to overdue payments.
+         * *   **provisioning**: The IPsec-VPN connection is being prepared.
+         * *   **updating**: The IPsec-VPN connection is being updated.
+         * *   **Upgrading**: The IPsec-VPN connection is being upgraded.
+         * *   **deleted**: The IPsec-VPN connection is deleted.
          */
         public Builder state(String state) {
             this.state = state;
@@ -514,7 +596,13 @@ public class DescribeVpnConnectionResponseBody extends TeaModel {
         }
 
         /**
-         * Status.
+         * The status of the IPsec-VPN connection. Valid values:
+         * <p>
+         * 
+         * *   **ike_sa_not_established**: Phase 1 negotiations failed.
+         * *   **ike_sa_established**: Phase 1 negotiations were successful.
+         * *   **ipsec_sa_not_established**: Phase 2 negotiations failed.
+         * *   **ipsec_sa_established**: Phase 2 negotiations were successful.
          */
         public Builder status(String status) {
             this.status = status;
@@ -522,7 +610,7 @@ public class DescribeVpnConnectionResponseBody extends TeaModel {
         }
 
         /**
-         * Tags.
+         * The list of tags added to the IPsec-VPN connection.
          */
         public Builder tags(Tags tags) {
             this.tags = tags;
@@ -530,7 +618,7 @@ public class DescribeVpnConnectionResponseBody extends TeaModel {
         }
 
         /**
-         * TransitRouterId.
+         * The ID of the transit router with which the IPsec-VPN connection is associated.
          */
         public Builder transitRouterId(String transitRouterId) {
             this.transitRouterId = transitRouterId;
@@ -538,7 +626,7 @@ public class DescribeVpnConnectionResponseBody extends TeaModel {
         }
 
         /**
-         * TransitRouterName.
+         * The name of the transit router.
          */
         public Builder transitRouterName(String transitRouterName) {
             this.transitRouterName = transitRouterName;
@@ -546,7 +634,15 @@ public class DescribeVpnConnectionResponseBody extends TeaModel {
         }
 
         /**
-         * VcoHealthCheck.
+         * TunnelOptionsSpecification.
+         */
+        public Builder tunnelOptionsSpecification(TunnelOptionsSpecification tunnelOptionsSpecification) {
+            this.tunnelOptionsSpecification = tunnelOptionsSpecification;
+            return this;
+        }
+
+        /**
+         * The information about health checks.
          */
         public Builder vcoHealthCheck(VcoHealthCheck vcoHealthCheck) {
             this.vcoHealthCheck = vcoHealthCheck;
@@ -554,7 +650,7 @@ public class DescribeVpnConnectionResponseBody extends TeaModel {
         }
 
         /**
-         * VpnBgpConfig.
+         * The configurations of the BGP routing protocol.
          */
         public Builder vpnBgpConfig(VpnBgpConfig vpnBgpConfig) {
             this.vpnBgpConfig = vpnBgpConfig;
@@ -562,7 +658,7 @@ public class DescribeVpnConnectionResponseBody extends TeaModel {
         }
 
         /**
-         * VpnConnectionId.
+         * The ID of the IPsec-VPN connection.
          */
         public Builder vpnConnectionId(String vpnConnectionId) {
             this.vpnConnectionId = vpnConnectionId;
@@ -570,7 +666,7 @@ public class DescribeVpnConnectionResponseBody extends TeaModel {
         }
 
         /**
-         * VpnGatewayId.
+         * The ID of the VPN gateway.
          */
         public Builder vpnGatewayId(String vpnGatewayId) {
             this.vpnGatewayId = vpnGatewayId;
@@ -578,7 +674,10 @@ public class DescribeVpnConnectionResponseBody extends TeaModel {
         }
 
         /**
-         * ZoneNo.
+         * The ID of the zone where the IPsec-VPN connection is deployed.
+         * <p>
+         * 
+         * You can call [DescribeZones](~~36064~~) to query zone IDs.
          */
         public Builder zoneNo(String zoneNo) {
             this.zoneNo = zoneNo;
@@ -714,7 +813,7 @@ public class DescribeVpnConnectionResponseBody extends TeaModel {
             private String remoteId; 
 
             /**
-             * IkeAuthAlg.
+             * The IKE authentication algorithm.
              */
             public Builder ikeAuthAlg(String ikeAuthAlg) {
                 this.ikeAuthAlg = ikeAuthAlg;
@@ -722,7 +821,7 @@ public class DescribeVpnConnectionResponseBody extends TeaModel {
             }
 
             /**
-             * IkeEncAlg.
+             * The IKE encryption algorithm.
              */
             public Builder ikeEncAlg(String ikeEncAlg) {
                 this.ikeEncAlg = ikeEncAlg;
@@ -730,7 +829,7 @@ public class DescribeVpnConnectionResponseBody extends TeaModel {
             }
 
             /**
-             * IkeLifetime.
+             * The IKE lifetime. Unit: seconds.
              */
             public Builder ikeLifetime(Long ikeLifetime) {
                 this.ikeLifetime = ikeLifetime;
@@ -738,7 +837,11 @@ public class DescribeVpnConnectionResponseBody extends TeaModel {
             }
 
             /**
-             * IkeMode.
+             * The IKE negotiation mode.
+             * <p>
+             * 
+             * *   **main**: This mode offers higher security during negotiations.
+             * *   **aggressive**: This mode is faster and has a higher success rate.
              */
             public Builder ikeMode(String ikeMode) {
                 this.ikeMode = ikeMode;
@@ -746,7 +849,7 @@ public class DescribeVpnConnectionResponseBody extends TeaModel {
             }
 
             /**
-             * IkePfs.
+             * The DH group.
              */
             public Builder ikePfs(String ikePfs) {
                 this.ikePfs = ikePfs;
@@ -754,7 +857,13 @@ public class DescribeVpnConnectionResponseBody extends TeaModel {
             }
 
             /**
-             * IkeVersion.
+             * The version of the IKE protocol.
+             * <p>
+             * 
+             * *   **ikev1**
+             * *   **ikev2**
+             * 
+             * Compared with IKEv1, IKEv2 simplifies the SA negotiation process and is more suitable for scenarios in which multiple CIDR blocks are used.
              */
             public Builder ikeVersion(String ikeVersion) {
                 this.ikeVersion = ikeVersion;
@@ -762,7 +871,7 @@ public class DescribeVpnConnectionResponseBody extends TeaModel {
             }
 
             /**
-             * LocalId.
+             * The identifier on the data center side.
              */
             public Builder localId(String localId) {
                 this.localId = localId;
@@ -770,7 +879,7 @@ public class DescribeVpnConnectionResponseBody extends TeaModel {
             }
 
             /**
-             * Psk.
+             * The pre-shared key.
              */
             public Builder psk(String psk) {
                 this.psk = psk;
@@ -778,7 +887,7 @@ public class DescribeVpnConnectionResponseBody extends TeaModel {
             }
 
             /**
-             * RemoteId.
+             * The identifier on the Alibaba Cloud side.
              */
             public Builder remoteId(String remoteId) {
                 this.remoteId = remoteId;
@@ -855,7 +964,7 @@ public class DescribeVpnConnectionResponseBody extends TeaModel {
             private String ipsecPfs; 
 
             /**
-             * IpsecAuthAlg.
+             * The IPsec authentication algorithm.
              */
             public Builder ipsecAuthAlg(String ipsecAuthAlg) {
                 this.ipsecAuthAlg = ipsecAuthAlg;
@@ -863,7 +972,7 @@ public class DescribeVpnConnectionResponseBody extends TeaModel {
             }
 
             /**
-             * IpsecEncAlg.
+             * The IPsec encryption algorithm.
              */
             public Builder ipsecEncAlg(String ipsecEncAlg) {
                 this.ipsecEncAlg = ipsecEncAlg;
@@ -871,7 +980,7 @@ public class DescribeVpnConnectionResponseBody extends TeaModel {
             }
 
             /**
-             * IpsecLifetime.
+             * The IPsec lifetime. Unit: seconds.
              */
             public Builder ipsecLifetime(Long ipsecLifetime) {
                 this.ipsecLifetime = ipsecLifetime;
@@ -879,7 +988,7 @@ public class DescribeVpnConnectionResponseBody extends TeaModel {
             }
 
             /**
-             * IpsecPfs.
+             * The DH group.
              */
             public Builder ipsecPfs(String ipsecPfs) {
                 this.ipsecPfs = ipsecPfs;
@@ -932,7 +1041,7 @@ public class DescribeVpnConnectionResponseBody extends TeaModel {
             private String value; 
 
             /**
-             * Key.
+             * The tag key.
              */
             public Builder key(String key) {
                 this.key = key;
@@ -940,7 +1049,7 @@ public class DescribeVpnConnectionResponseBody extends TeaModel {
             }
 
             /**
-             * Value.
+             * The tag value.
              */
             public Builder value(String value) {
                 this.value = value;
@@ -990,6 +1099,834 @@ public class DescribeVpnConnectionResponseBody extends TeaModel {
 
             public Tags build() {
                 return new Tags(this);
+            } 
+
+        } 
+
+    }
+    public static class TunnelBgpConfig extends TeaModel {
+        @NameInMap("BgpStatus")
+        private String bgpStatus;
+
+        @NameInMap("EnableBgp")
+        private String enableBgp;
+
+        @NameInMap("LocalAsn")
+        private String localAsn;
+
+        @NameInMap("LocalBgpIp")
+        private String localBgpIp;
+
+        @NameInMap("PeerAsn")
+        private String peerAsn;
+
+        @NameInMap("PeerBgpIp")
+        private String peerBgpIp;
+
+        @NameInMap("TunnelCidr")
+        private String tunnelCidr;
+
+        private TunnelBgpConfig(Builder builder) {
+            this.bgpStatus = builder.bgpStatus;
+            this.enableBgp = builder.enableBgp;
+            this.localAsn = builder.localAsn;
+            this.localBgpIp = builder.localBgpIp;
+            this.peerAsn = builder.peerAsn;
+            this.peerBgpIp = builder.peerBgpIp;
+            this.tunnelCidr = builder.tunnelCidr;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static TunnelBgpConfig create() {
+            return builder().build();
+        }
+
+        /**
+         * @return bgpStatus
+         */
+        public String getBgpStatus() {
+            return this.bgpStatus;
+        }
+
+        /**
+         * @return enableBgp
+         */
+        public String getEnableBgp() {
+            return this.enableBgp;
+        }
+
+        /**
+         * @return localAsn
+         */
+        public String getLocalAsn() {
+            return this.localAsn;
+        }
+
+        /**
+         * @return localBgpIp
+         */
+        public String getLocalBgpIp() {
+            return this.localBgpIp;
+        }
+
+        /**
+         * @return peerAsn
+         */
+        public String getPeerAsn() {
+            return this.peerAsn;
+        }
+
+        /**
+         * @return peerBgpIp
+         */
+        public String getPeerBgpIp() {
+            return this.peerBgpIp;
+        }
+
+        /**
+         * @return tunnelCidr
+         */
+        public String getTunnelCidr() {
+            return this.tunnelCidr;
+        }
+
+        public static final class Builder {
+            private String bgpStatus; 
+            private String enableBgp; 
+            private String localAsn; 
+            private String localBgpIp; 
+            private String peerAsn; 
+            private String peerBgpIp; 
+            private String tunnelCidr; 
+
+            /**
+             * BgpStatus.
+             */
+            public Builder bgpStatus(String bgpStatus) {
+                this.bgpStatus = bgpStatus;
+                return this;
+            }
+
+            /**
+             * EnableBgp.
+             */
+            public Builder enableBgp(String enableBgp) {
+                this.enableBgp = enableBgp;
+                return this;
+            }
+
+            /**
+             * LocalAsn.
+             */
+            public Builder localAsn(String localAsn) {
+                this.localAsn = localAsn;
+                return this;
+            }
+
+            /**
+             * LocalBgpIp.
+             */
+            public Builder localBgpIp(String localBgpIp) {
+                this.localBgpIp = localBgpIp;
+                return this;
+            }
+
+            /**
+             * PeerAsn.
+             */
+            public Builder peerAsn(String peerAsn) {
+                this.peerAsn = peerAsn;
+                return this;
+            }
+
+            /**
+             * PeerBgpIp.
+             */
+            public Builder peerBgpIp(String peerBgpIp) {
+                this.peerBgpIp = peerBgpIp;
+                return this;
+            }
+
+            /**
+             * TunnelCidr.
+             */
+            public Builder tunnelCidr(String tunnelCidr) {
+                this.tunnelCidr = tunnelCidr;
+                return this;
+            }
+
+            public TunnelBgpConfig build() {
+                return new TunnelBgpConfig(this);
+            } 
+
+        } 
+
+    }
+    public static class TunnelIkeConfig extends TeaModel {
+        @NameInMap("IkeAuthAlg")
+        private String ikeAuthAlg;
+
+        @NameInMap("IkeEncAlg")
+        private String ikeEncAlg;
+
+        @NameInMap("IkeLifetime")
+        private String ikeLifetime;
+
+        @NameInMap("IkeMode")
+        private String ikeMode;
+
+        @NameInMap("IkePfs")
+        private String ikePfs;
+
+        @NameInMap("IkeVersion")
+        private String ikeVersion;
+
+        @NameInMap("LocalId")
+        private String localId;
+
+        @NameInMap("Psk")
+        private String psk;
+
+        @NameInMap("RemoteId")
+        private String remoteId;
+
+        private TunnelIkeConfig(Builder builder) {
+            this.ikeAuthAlg = builder.ikeAuthAlg;
+            this.ikeEncAlg = builder.ikeEncAlg;
+            this.ikeLifetime = builder.ikeLifetime;
+            this.ikeMode = builder.ikeMode;
+            this.ikePfs = builder.ikePfs;
+            this.ikeVersion = builder.ikeVersion;
+            this.localId = builder.localId;
+            this.psk = builder.psk;
+            this.remoteId = builder.remoteId;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static TunnelIkeConfig create() {
+            return builder().build();
+        }
+
+        /**
+         * @return ikeAuthAlg
+         */
+        public String getIkeAuthAlg() {
+            return this.ikeAuthAlg;
+        }
+
+        /**
+         * @return ikeEncAlg
+         */
+        public String getIkeEncAlg() {
+            return this.ikeEncAlg;
+        }
+
+        /**
+         * @return ikeLifetime
+         */
+        public String getIkeLifetime() {
+            return this.ikeLifetime;
+        }
+
+        /**
+         * @return ikeMode
+         */
+        public String getIkeMode() {
+            return this.ikeMode;
+        }
+
+        /**
+         * @return ikePfs
+         */
+        public String getIkePfs() {
+            return this.ikePfs;
+        }
+
+        /**
+         * @return ikeVersion
+         */
+        public String getIkeVersion() {
+            return this.ikeVersion;
+        }
+
+        /**
+         * @return localId
+         */
+        public String getLocalId() {
+            return this.localId;
+        }
+
+        /**
+         * @return psk
+         */
+        public String getPsk() {
+            return this.psk;
+        }
+
+        /**
+         * @return remoteId
+         */
+        public String getRemoteId() {
+            return this.remoteId;
+        }
+
+        public static final class Builder {
+            private String ikeAuthAlg; 
+            private String ikeEncAlg; 
+            private String ikeLifetime; 
+            private String ikeMode; 
+            private String ikePfs; 
+            private String ikeVersion; 
+            private String localId; 
+            private String psk; 
+            private String remoteId; 
+
+            /**
+             * The IKE authentication algorithm.
+             */
+            public Builder ikeAuthAlg(String ikeAuthAlg) {
+                this.ikeAuthAlg = ikeAuthAlg;
+                return this;
+            }
+
+            /**
+             * The IKE encryption algorithm.
+             */
+            public Builder ikeEncAlg(String ikeEncAlg) {
+                this.ikeEncAlg = ikeEncAlg;
+                return this;
+            }
+
+            /**
+             * The IKE lifetime. Unit: seconds.
+             */
+            public Builder ikeLifetime(String ikeLifetime) {
+                this.ikeLifetime = ikeLifetime;
+                return this;
+            }
+
+            /**
+             * The IKE negotiation mode.
+             * <p>
+             * 
+             * *   **main**: This mode offers higher security during negotiations.
+             * *   **aggressive**: This mode is faster and has a higher success rate.
+             */
+            public Builder ikeMode(String ikeMode) {
+                this.ikeMode = ikeMode;
+                return this;
+            }
+
+            /**
+             * The DH group.
+             */
+            public Builder ikePfs(String ikePfs) {
+                this.ikePfs = ikePfs;
+                return this;
+            }
+
+            /**
+             * The version of the IKE protocol.
+             * <p>
+             * 
+             * *   **ikev1**
+             * *   **ikev2**
+             * 
+             * Compared with IKEv1, IKEv2 simplifies the SA negotiation process and is more suitable for scenarios in which multiple CIDR blocks are used.
+             */
+            public Builder ikeVersion(String ikeVersion) {
+                this.ikeVersion = ikeVersion;
+                return this;
+            }
+
+            /**
+             * The identifier on the data center side.
+             */
+            public Builder localId(String localId) {
+                this.localId = localId;
+                return this;
+            }
+
+            /**
+             * The pre-shared key.
+             */
+            public Builder psk(String psk) {
+                this.psk = psk;
+                return this;
+            }
+
+            /**
+             * The identifier on the Alibaba Cloud side.
+             */
+            public Builder remoteId(String remoteId) {
+                this.remoteId = remoteId;
+                return this;
+            }
+
+            public TunnelIkeConfig build() {
+                return new TunnelIkeConfig(this);
+            } 
+
+        } 
+
+    }
+    public static class TunnelIpsecConfig extends TeaModel {
+        @NameInMap("IpsecAuthAlg")
+        private String ipsecAuthAlg;
+
+        @NameInMap("IpsecEncAlg")
+        private String ipsecEncAlg;
+
+        @NameInMap("IpsecLifetime")
+        private String ipsecLifetime;
+
+        @NameInMap("IpsecPfs")
+        private String ipsecPfs;
+
+        private TunnelIpsecConfig(Builder builder) {
+            this.ipsecAuthAlg = builder.ipsecAuthAlg;
+            this.ipsecEncAlg = builder.ipsecEncAlg;
+            this.ipsecLifetime = builder.ipsecLifetime;
+            this.ipsecPfs = builder.ipsecPfs;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static TunnelIpsecConfig create() {
+            return builder().build();
+        }
+
+        /**
+         * @return ipsecAuthAlg
+         */
+        public String getIpsecAuthAlg() {
+            return this.ipsecAuthAlg;
+        }
+
+        /**
+         * @return ipsecEncAlg
+         */
+        public String getIpsecEncAlg() {
+            return this.ipsecEncAlg;
+        }
+
+        /**
+         * @return ipsecLifetime
+         */
+        public String getIpsecLifetime() {
+            return this.ipsecLifetime;
+        }
+
+        /**
+         * @return ipsecPfs
+         */
+        public String getIpsecPfs() {
+            return this.ipsecPfs;
+        }
+
+        public static final class Builder {
+            private String ipsecAuthAlg; 
+            private String ipsecEncAlg; 
+            private String ipsecLifetime; 
+            private String ipsecPfs; 
+
+            /**
+             * The IPsec authentication algorithm.
+             */
+            public Builder ipsecAuthAlg(String ipsecAuthAlg) {
+                this.ipsecAuthAlg = ipsecAuthAlg;
+                return this;
+            }
+
+            /**
+             * The IPsec encryption algorithm.
+             */
+            public Builder ipsecEncAlg(String ipsecEncAlg) {
+                this.ipsecEncAlg = ipsecEncAlg;
+                return this;
+            }
+
+            /**
+             * The IPsec lifetime. Unit: seconds.
+             */
+            public Builder ipsecLifetime(String ipsecLifetime) {
+                this.ipsecLifetime = ipsecLifetime;
+                return this;
+            }
+
+            /**
+             * The DH group.
+             */
+            public Builder ipsecPfs(String ipsecPfs) {
+                this.ipsecPfs = ipsecPfs;
+                return this;
+            }
+
+            public TunnelIpsecConfig build() {
+                return new TunnelIpsecConfig(this);
+            } 
+
+        } 
+
+    }
+    public static class TunnelOptions extends TeaModel {
+        @NameInMap("CustomerGatewayId")
+        private String customerGatewayId;
+
+        @NameInMap("EnableDpd")
+        private String enableDpd;
+
+        @NameInMap("EnableNatTraversal")
+        private String enableNatTraversal;
+
+        @NameInMap("InternetIp")
+        private String internetIp;
+
+        @NameInMap("RemoteCaCertificate")
+        private String remoteCaCertificate;
+
+        @NameInMap("Role")
+        private String role;
+
+        @NameInMap("State")
+        private String state;
+
+        @NameInMap("Status")
+        private String status;
+
+        @NameInMap("TunnelBgpConfig")
+        private TunnelBgpConfig tunnelBgpConfig;
+
+        @NameInMap("TunnelId")
+        private String tunnelId;
+
+        @NameInMap("TunnelIkeConfig")
+        private TunnelIkeConfig tunnelIkeConfig;
+
+        @NameInMap("TunnelIpsecConfig")
+        private TunnelIpsecConfig tunnelIpsecConfig;
+
+        @NameInMap("ZoneNo")
+        private String zoneNo;
+
+        private TunnelOptions(Builder builder) {
+            this.customerGatewayId = builder.customerGatewayId;
+            this.enableDpd = builder.enableDpd;
+            this.enableNatTraversal = builder.enableNatTraversal;
+            this.internetIp = builder.internetIp;
+            this.remoteCaCertificate = builder.remoteCaCertificate;
+            this.role = builder.role;
+            this.state = builder.state;
+            this.status = builder.status;
+            this.tunnelBgpConfig = builder.tunnelBgpConfig;
+            this.tunnelId = builder.tunnelId;
+            this.tunnelIkeConfig = builder.tunnelIkeConfig;
+            this.tunnelIpsecConfig = builder.tunnelIpsecConfig;
+            this.zoneNo = builder.zoneNo;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static TunnelOptions create() {
+            return builder().build();
+        }
+
+        /**
+         * @return customerGatewayId
+         */
+        public String getCustomerGatewayId() {
+            return this.customerGatewayId;
+        }
+
+        /**
+         * @return enableDpd
+         */
+        public String getEnableDpd() {
+            return this.enableDpd;
+        }
+
+        /**
+         * @return enableNatTraversal
+         */
+        public String getEnableNatTraversal() {
+            return this.enableNatTraversal;
+        }
+
+        /**
+         * @return internetIp
+         */
+        public String getInternetIp() {
+            return this.internetIp;
+        }
+
+        /**
+         * @return remoteCaCertificate
+         */
+        public String getRemoteCaCertificate() {
+            return this.remoteCaCertificate;
+        }
+
+        /**
+         * @return role
+         */
+        public String getRole() {
+            return this.role;
+        }
+
+        /**
+         * @return state
+         */
+        public String getState() {
+            return this.state;
+        }
+
+        /**
+         * @return status
+         */
+        public String getStatus() {
+            return this.status;
+        }
+
+        /**
+         * @return tunnelBgpConfig
+         */
+        public TunnelBgpConfig getTunnelBgpConfig() {
+            return this.tunnelBgpConfig;
+        }
+
+        /**
+         * @return tunnelId
+         */
+        public String getTunnelId() {
+            return this.tunnelId;
+        }
+
+        /**
+         * @return tunnelIkeConfig
+         */
+        public TunnelIkeConfig getTunnelIkeConfig() {
+            return this.tunnelIkeConfig;
+        }
+
+        /**
+         * @return tunnelIpsecConfig
+         */
+        public TunnelIpsecConfig getTunnelIpsecConfig() {
+            return this.tunnelIpsecConfig;
+        }
+
+        /**
+         * @return zoneNo
+         */
+        public String getZoneNo() {
+            return this.zoneNo;
+        }
+
+        public static final class Builder {
+            private String customerGatewayId; 
+            private String enableDpd; 
+            private String enableNatTraversal; 
+            private String internetIp; 
+            private String remoteCaCertificate; 
+            private String role; 
+            private String state; 
+            private String status; 
+            private TunnelBgpConfig tunnelBgpConfig; 
+            private String tunnelId; 
+            private TunnelIkeConfig tunnelIkeConfig; 
+            private TunnelIpsecConfig tunnelIpsecConfig; 
+            private String zoneNo; 
+
+            /**
+             * The ID of the customer gateway.
+             */
+            public Builder customerGatewayId(String customerGatewayId) {
+                this.customerGatewayId = customerGatewayId;
+                return this;
+            }
+
+            /**
+             * Indicates whether dead peer detection (DPD) is enabled.
+             * <p>
+             * 
+             * *   **false**: disabled
+             * *   **true**: enabled
+             * 
+             * After you enable DPD, the initiator of the IPsec-VPN connection sends DPD packets to check the existence and availability of the peer. If no response is received from the peer within a specified period of time, the connection fails. Then, the ISAKMP SA, IPsec SA, and IPsec tunnel are deleted.
+             */
+            public Builder enableDpd(String enableDpd) {
+                this.enableDpd = enableDpd;
+                return this;
+            }
+
+            /**
+             * Indicates whether NAT traversal is enabled. Valid values:
+             * <p>
+             * 
+             * *   **true**: NAT traversal is enabled.
+             * *   **false**: NAT traversal is disabled.
+             * 
+             * After NAT traversal is enabled, the initiator does not check the UDP ports during IKE negotiations and can automatically discover NAT gateway devices along the VPN tunnel.
+             */
+            public Builder enableNatTraversal(String enableNatTraversal) {
+                this.enableNatTraversal = enableNatTraversal;
+                return this;
+            }
+
+            /**
+             * The gateway IP address of the IPsec-VPN connection.
+             */
+            public Builder internetIp(String internetIp) {
+                this.internetIp = internetIp;
+                return this;
+            }
+
+            /**
+             * The CA certificate of the peer.
+             */
+            public Builder remoteCaCertificate(String remoteCaCertificate) {
+                this.remoteCaCertificate = remoteCaCertificate;
+                return this;
+            }
+
+            /**
+             * Role.
+             */
+            public Builder role(String role) {
+                this.role = role;
+                return this;
+            }
+
+            /**
+             * The association status of the IPsec-VPN connection. Valid values:
+             * <p>
+             * 
+             * *   **active**: The IPsec-VPN connection is associated with a VPN gateway.
+             * *   **init**: The IPsec-VPN connection is not associated with a resource and is being initialized.
+             * *   **attaching**: The IPsec-VPN connection is being associated with a transit router.
+             * *   **attached**: The IPsec-VPN connection is associated with a transit router.
+             * *   **detaching**: The IPsec-VPN connection is being disassociated from a transit router.
+             * *   **financialLocked**: The IPsec-VPN connection is locked due to overdue payments.
+             * *   **provisioning**: The IPsec-VPN connection is being prepared.
+             * *   **updating**: The IPsec-VPN connection is being updated.
+             * *   **Upgrading**: The IPsec-VPN connection is being upgraded.
+             * *   **deleted**: The IPsec-VPN connection is deleted.
+             */
+            public Builder state(String state) {
+                this.state = state;
+                return this;
+            }
+
+            /**
+             * The status of the IPsec-VPN connection. Valid values:
+             * <p>
+             * 
+             * *   **ike_sa_not_established**: Phase 1 negotiations failed.
+             * *   **ike_sa_established**: Phase 1 negotiations were successful.
+             * *   **ipsec_sa_not_established**: Phase 2 negotiations failed.
+             * *   **ipsec_sa_established**: Phase 2 negotiations were successful.
+             */
+            public Builder status(String status) {
+                this.status = status;
+                return this;
+            }
+
+            /**
+             * TunnelBgpConfig.
+             */
+            public Builder tunnelBgpConfig(TunnelBgpConfig tunnelBgpConfig) {
+                this.tunnelBgpConfig = tunnelBgpConfig;
+                return this;
+            }
+
+            /**
+             * TunnelId.
+             */
+            public Builder tunnelId(String tunnelId) {
+                this.tunnelId = tunnelId;
+                return this;
+            }
+
+            /**
+             * TunnelIkeConfig.
+             */
+            public Builder tunnelIkeConfig(TunnelIkeConfig tunnelIkeConfig) {
+                this.tunnelIkeConfig = tunnelIkeConfig;
+                return this;
+            }
+
+            /**
+             * TunnelIpsecConfig.
+             */
+            public Builder tunnelIpsecConfig(TunnelIpsecConfig tunnelIpsecConfig) {
+                this.tunnelIpsecConfig = tunnelIpsecConfig;
+                return this;
+            }
+
+            /**
+             * The ID of the zone where the IPsec-VPN connection is deployed.
+             * <p>
+             * 
+             * You can call [DescribeZones](~~36064~~) to query zone IDs.
+             */
+            public Builder zoneNo(String zoneNo) {
+                this.zoneNo = zoneNo;
+                return this;
+            }
+
+            public TunnelOptions build() {
+                return new TunnelOptions(this);
+            } 
+
+        } 
+
+    }
+    public static class TunnelOptionsSpecification extends TeaModel {
+        @NameInMap("TunnelOptions")
+        private java.util.List < TunnelOptions> tunnelOptions;
+
+        private TunnelOptionsSpecification(Builder builder) {
+            this.tunnelOptions = builder.tunnelOptions;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static TunnelOptionsSpecification create() {
+            return builder().build();
+        }
+
+        /**
+         * @return tunnelOptions
+         */
+        public java.util.List < TunnelOptions> getTunnelOptions() {
+            return this.tunnelOptions;
+        }
+
+        public static final class Builder {
+            private java.util.List < TunnelOptions> tunnelOptions; 
+
+            /**
+             * TunnelOptions.
+             */
+            public Builder tunnelOptions(java.util.List < TunnelOptions> tunnelOptions) {
+                this.tunnelOptions = tunnelOptions;
+                return this;
+            }
+
+            public TunnelOptionsSpecification build() {
+                return new TunnelOptionsSpecification(this);
             } 
 
         } 
@@ -1094,7 +2031,7 @@ public class DescribeVpnConnectionResponseBody extends TeaModel {
             private String status; 
 
             /**
-             * Dip.
+             * The destination IP address.
              */
             public Builder dip(String dip) {
                 this.dip = dip;
@@ -1102,7 +2039,11 @@ public class DescribeVpnConnectionResponseBody extends TeaModel {
             }
 
             /**
-             * Enable.
+             * Indicates whether health checks are enabled.
+             * <p>
+             * 
+             * *   **false**: disabled
+             * *   **true**: enabled
              */
             public Builder enable(String enable) {
                 this.enable = enable;
@@ -1110,7 +2051,7 @@ public class DescribeVpnConnectionResponseBody extends TeaModel {
             }
 
             /**
-             * Interval.
+             * The interval of health check retries. Unit: seconds.
              */
             public Builder interval(Integer interval) {
                 this.interval = interval;
@@ -1118,7 +2059,11 @@ public class DescribeVpnConnectionResponseBody extends TeaModel {
             }
 
             /**
-             * Policy.
+             * Indicates whether advertised routes are withdrawn when the health check fails.
+             * <p>
+             * 
+             * *   **revoke_route**: published routes are withdrawn.
+             * *   **reserve_route**: published routes are not withdrawn.
              */
             public Builder policy(String policy) {
                 this.policy = policy;
@@ -1126,7 +2071,7 @@ public class DescribeVpnConnectionResponseBody extends TeaModel {
             }
 
             /**
-             * Retry.
+             * The maximum number of health check retries.
              */
             public Builder retry(Integer retry) {
                 this.retry = retry;
@@ -1134,7 +2079,7 @@ public class DescribeVpnConnectionResponseBody extends TeaModel {
             }
 
             /**
-             * Sip.
+             * The source IP address.
              */
             public Builder sip(String sip) {
                 this.sip = sip;
@@ -1142,7 +2087,11 @@ public class DescribeVpnConnectionResponseBody extends TeaModel {
             }
 
             /**
-             * Status.
+             * The status of the health check.
+             * <p>
+             * 
+             * *   **failed**: abnormal
+             * *   **success**: normal
              */
             public Builder status(String status) {
                 this.status = status;
@@ -1267,7 +2216,7 @@ public class DescribeVpnConnectionResponseBody extends TeaModel {
             private String tunnelCidr; 
 
             /**
-             * AuthKey.
+             * The authentication key of the BGP routing protocol.
              */
             public Builder authKey(String authKey) {
                 this.authKey = authKey;
@@ -1275,7 +2224,11 @@ public class DescribeVpnConnectionResponseBody extends TeaModel {
             }
 
             /**
-             * EnableBgp.
+             * The status of the BGP routing protocol. Valid values:
+             * <p>
+             * 
+             * *   **true**: enabled
+             * *   **false**: disabled
              */
             public Builder enableBgp(String enableBgp) {
                 this.enableBgp = enableBgp;
@@ -1283,7 +2236,7 @@ public class DescribeVpnConnectionResponseBody extends TeaModel {
             }
 
             /**
-             * LocalAsn.
+             * The ASN on the Alibaba Cloud side.
              */
             public Builder localAsn(Long localAsn) {
                 this.localAsn = localAsn;
@@ -1291,7 +2244,7 @@ public class DescribeVpnConnectionResponseBody extends TeaModel {
             }
 
             /**
-             * LocalBgpIp.
+             * The BGP IP address on the Alibaba Cloud side.
              */
             public Builder localBgpIp(String localBgpIp) {
                 this.localBgpIp = localBgpIp;
@@ -1299,7 +2252,7 @@ public class DescribeVpnConnectionResponseBody extends TeaModel {
             }
 
             /**
-             * PeerAsn.
+             * The autonomous system number (ASN) of the peer.
              */
             public Builder peerAsn(Long peerAsn) {
                 this.peerAsn = peerAsn;
@@ -1307,7 +2260,7 @@ public class DescribeVpnConnectionResponseBody extends TeaModel {
             }
 
             /**
-             * PeerBgpIp.
+             * The BGP IP address of the peer.
              */
             public Builder peerBgpIp(String peerBgpIp) {
                 this.peerBgpIp = peerBgpIp;
@@ -1315,7 +2268,11 @@ public class DescribeVpnConnectionResponseBody extends TeaModel {
             }
 
             /**
-             * Status.
+             * The negotiation status of the BGP routing protocol.
+             * <p>
+             * 
+             * *   **success**: normal
+             * *   **failed**: abnormal
              */
             public Builder status(String status) {
                 this.status = status;
@@ -1323,7 +2280,7 @@ public class DescribeVpnConnectionResponseBody extends TeaModel {
             }
 
             /**
-             * TunnelCidr.
+             * The CIDR block of the IPsec tunnel. The CIDR block belongs to 169.254.0.0/16. The mask of the CIDR block is 30 bits in length.
              */
             public Builder tunnelCidr(String tunnelCidr) {
                 this.tunnelCidr = tunnelCidr;

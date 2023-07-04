@@ -142,7 +142,10 @@ public class DeleteRouteEntriesRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * The region ID of the route table.
+         * <p>
+         * 
+         * You can call the [DescribeRegions](~~36063~~) operation to query the most recent region list.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -248,7 +251,10 @@ public class DeleteRouteEntriesRequest extends Request {
             private String routeTableId; 
 
             /**
-             * DstCidrBlock.
+             * The destination CIDR block of the route entry that you want to delete. IPv4 and IPv6 CIDR blocks are supported. You can specify up to 50 destination CIDR blocks.
+             * <p>
+             * 
+             * >  If the **RouteEntryId** parameter is not specified, you must specify the **DstCidrBlock** and **NextHop** parameters.
              */
             public Builder dstCidrBlock(String dstCidrBlock) {
                 this.dstCidrBlock = dstCidrBlock;
@@ -256,7 +262,10 @@ public class DeleteRouteEntriesRequest extends Request {
             }
 
             /**
-             * NextHop.
+             * The ID of the next hop that you want to delete. You can specify up to 50 next hop IDs.
+             * <p>
+             * 
+             * >  If the **RouteEntryId** parameter is not specified, you must specify the **DstCidrBlock** and **NextHop** parameters.
              */
             public Builder nextHop(String nextHop) {
                 this.nextHop = nextHop;
@@ -264,7 +273,10 @@ public class DeleteRouteEntriesRequest extends Request {
             }
 
             /**
-             * RouteEntryId.
+             * The ID of the route entry that you want to delete. You can specify up to 50 route entry IDs.
+             * <p>
+             * 
+             * >  If the **RouteEntryId** parameter is not specified, you must specify the **DstCidrBlock** and **NextHop** parameters.
              */
             public Builder routeEntryId(String routeEntryId) {
                 this.routeEntryId = routeEntryId;
@@ -272,7 +284,7 @@ public class DeleteRouteEntriesRequest extends Request {
             }
 
             /**
-             * RouteTableId.
+             * The ID of the route table in which the route entry to be deleted resides. You can specify up to 50 route table IDs.
              */
             public Builder routeTableId(String routeTableId) {
                 this.routeTableId = routeTableId;

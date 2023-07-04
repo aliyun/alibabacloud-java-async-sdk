@@ -127,7 +127,10 @@ public class UpdateVirtualPhysicalConnectionRequest extends Request {
         } 
 
         /**
-         * DryRun
+         * The region ID of the hosted connection.
+         * <p>
+         * 
+         * You can call the [DescribeRegions](~~36063~~) operation to query the most recent region list.
          */
         public Builder dryRun(Boolean dryRun) {
             this.putQueryParameter("DryRun", dryRun);
@@ -136,7 +139,7 @@ public class UpdateVirtualPhysicalConnectionRequest extends Request {
         }
 
         /**
-         * ExpectSpec
+         * The ID of the request.
          */
         public Builder expectSpec(String expectSpec) {
             this.putQueryParameter("ExpectSpec", expectSpec);
@@ -145,7 +148,11 @@ public class UpdateVirtualPhysicalConnectionRequest extends Request {
         }
 
         /**
-         * Vpconn的实例ID
+         * Specifies whether to check the request without performing the operation. Valid values:
+         * <p>
+         * 
+         * *   **true**: checks the request without performing the operation. The VLAN ID of the hosted connection is not changed. The system checks the required parameters, request syntax, and instance status. If the check fails, the corresponding error message is returned. If the request passes the check, the system returns the ID of the request.
+         * *   **false** (default): sends the request. If the request passes the check, the VLAN ID of the hosted connection is changed.
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -154,7 +161,11 @@ public class UpdateVirtualPhysicalConnectionRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * Indicates whether the VLAN ID of the hosted connection is changed. Valid values:
+         * <p>
+         * 
+         * *   **true**: The VLAN ID of the hosted connection is changed.
+         * *   **false**: The VLAN ID of the hosted connection is not changed.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -163,7 +174,14 @@ public class UpdateVirtualPhysicalConnectionRequest extends Request {
         }
 
         /**
-         * 幂等Token
+         * The estimated bandwidth value of the hosted connection. The estimated bandwidth value takes effect after the payment is completed.
+         * <p>
+         * 
+         * Valid values: **50M**, **100M**, **200M**, **300M**, **400M**, **500M**, **1G**, **2G**, **5G**, **8G**, and **10G**.
+         * 
+         * >  By default, the values of **2G**, **5G**, **8G**, and **10G** are unavailable. If you want to specify these values, contact your customer manager.
+         * 
+         * **M** indicates Mbit/s and **G** indicates Gbit/s.
          */
         public Builder token(String token) {
             this.putQueryParameter("Token", token);
@@ -172,7 +190,12 @@ public class UpdateVirtualPhysicalConnectionRequest extends Request {
         }
 
         /**
-         * vpconn的VlanID
+         * The client token that is used to ensure the idempotence of the request.
+         * <p>
+         * 
+         * You can use the client to generate the value, but you must make sure that it is unique among all requests. The token can contain only ASCII characters.
+         * 
+         * >  If you do not specify this parameter, the system automatically uses **RequestId** as **ClientToken**. The value of **RequestId** in each API request may be different.
          */
         public Builder vlanId(Long vlanId) {
             this.putQueryParameter("VlanId", vlanId);

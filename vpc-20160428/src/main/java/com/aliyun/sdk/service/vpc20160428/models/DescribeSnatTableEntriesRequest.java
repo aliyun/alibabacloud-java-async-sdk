@@ -238,7 +238,10 @@ public class DescribeSnatTableEntriesRequest extends Request {
         } 
 
         /**
-         * NatGatewayId.
+         * The ID of the NAT gateway.
+         * <p>
+         * 
+         * >  You must set at least one of the **SnatTableId** and **NatGatewayId** parameters.
          */
         public Builder natGatewayId(String natGatewayId) {
             this.putQueryParameter("NatGatewayId", natGatewayId);
@@ -265,7 +268,7 @@ public class DescribeSnatTableEntriesRequest extends Request {
         }
 
         /**
-         * PageNumber.
+         * The number of the page to return. Default value: **1**.
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -274,7 +277,7 @@ public class DescribeSnatTableEntriesRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * The number of entries to return on each page. Maximum value: **50**. Default value: **10**.
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -283,7 +286,10 @@ public class DescribeSnatTableEntriesRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * The region ID of the NAT gateway.
+         * <p>
+         * 
+         * You can call the [DescribeRegions](~~36063~~) operation to query the most recent region list.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -310,7 +316,7 @@ public class DescribeSnatTableEntriesRequest extends Request {
         }
 
         /**
-         * SnatEntryId.
+         * The ID of the SNAT entry.
          */
         public Builder snatEntryId(String snatEntryId) {
             this.putQueryParameter("SnatEntryId", snatEntryId);
@@ -319,7 +325,10 @@ public class DescribeSnatTableEntriesRequest extends Request {
         }
 
         /**
-         * SnatEntryName.
+         * The name of the SNAT entry.
+         * <p>
+         * 
+         * The name must be 2 to 128 characters in length, and can contain digits, underscores (\_), and hyphens (-). The name must start with a letter.
          */
         public Builder snatEntryName(String snatEntryName) {
             this.putQueryParameter("SnatEntryName", snatEntryName);
@@ -328,7 +337,9 @@ public class DescribeSnatTableEntriesRequest extends Request {
         }
 
         /**
-         * SnatIp.
+         * *   When you query SNAT entries of Internet NAT gateways, this parameter specifies the EIP in an SNAT entry.
+         * <p>
+         * *   When you query SNAT entries of VPC NAT gateways, this parameter specifies the NAT IP address in an SNAT entry.
          */
         public Builder snatIp(String snatIp) {
             this.putQueryParameter("SnatIp", snatIp);
@@ -337,7 +348,10 @@ public class DescribeSnatTableEntriesRequest extends Request {
         }
 
         /**
-         * SnatTableId.
+         * The ID of the SNAT table.
+         * <p>
+         * 
+         * >  You must set at least one of the **SnatTableId** and **NatGatewayId** parameters.
          */
         public Builder snatTableId(String snatTableId) {
             this.putQueryParameter("SnatTableId", snatTableId);
@@ -346,7 +360,7 @@ public class DescribeSnatTableEntriesRequest extends Request {
         }
 
         /**
-         * SourceCIDR.
+         * The source CIDR block specified in the SNAT entry.
          */
         public Builder sourceCIDR(String sourceCIDR) {
             this.putQueryParameter("SourceCIDR", sourceCIDR);
@@ -355,7 +369,11 @@ public class DescribeSnatTableEntriesRequest extends Request {
         }
 
         /**
-         * SourceVSwitchId.
+         * The ID of the vSwitch.
+         * <p>
+         * 
+         * *   When you query SNAT entries of Internet NAT gateways, this parameter specifies that Elastic Compute Service (ECS) instances in the vSwitch can use SNAT entries to access the Internet.
+         * *   When you query SNAT entries of virtual private cloud (VPC) NAT gateways, this parameter specifies that ECS instances in the vSwitch can use SNAT entries to access external networks.
          */
         public Builder sourceVSwitchId(String sourceVSwitchId) {
             this.putQueryParameter("SourceVSwitchId", sourceVSwitchId);

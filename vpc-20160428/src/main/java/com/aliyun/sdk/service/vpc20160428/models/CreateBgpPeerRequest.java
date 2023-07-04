@@ -196,7 +196,12 @@ public class CreateBgpPeerRequest extends Request {
         } 
 
         /**
-         * BfdMultiHop.
+         * The BFD hop count. Valid values: **1** to **255**.
+         * <p>
+         * 
+         * This parameter is required only if you enable BFD.
+         * 
+         * The parameter specifies the maximum number of network devices that a packet can traverse from the source to the destination. Set a value based on your network topology.
          */
         public Builder bfdMultiHop(Integer bfdMultiHop) {
             this.putQueryParameter("BfdMultiHop", bfdMultiHop);
@@ -205,7 +210,7 @@ public class CreateBgpPeerRequest extends Request {
         }
 
         /**
-         * BgpGroupId.
+         * The ID of the BGP group.
          */
         public Builder bgpGroupId(String bgpGroupId) {
             this.putQueryParameter("BgpGroupId", bgpGroupId);
@@ -214,7 +219,12 @@ public class CreateBgpPeerRequest extends Request {
         }
 
         /**
-         * ClientToken.
+         * The client token that is used to ensure the idempotence of the request.
+         * <p>
+         * 
+         * You can use the client to generate the value, but you must make sure that the value is unique among different requests. The token can contain only ASCII characters and cannot exceed 64 characters in length.
+         * 
+         * >  If you do not set this parameter, the system uses the value of **RequestId** as **ClientToken**. The value of **RequestId** for each API request is different.
          */
         public Builder clientToken(String clientToken) {
             this.putQueryParameter("ClientToken", clientToken);
@@ -223,7 +233,11 @@ public class CreateBgpPeerRequest extends Request {
         }
 
         /**
-         * EnableBfd.
+         * Specifies whether to enable the Bidirectional Forwarding Detection (BFD) feature. Valid values:
+         * <p>
+         * 
+         * *   **true**: enables BFD.
+         * *   **false**: disables BFD.
          */
         public Builder enableBfd(Boolean enableBfd) {
             this.putQueryParameter("EnableBfd", enableBfd);
@@ -232,7 +246,11 @@ public class CreateBgpPeerRequest extends Request {
         }
 
         /**
-         * IpVersion.
+         * The IP version. Valid values:
+         * <p>
+         * 
+         * *   **IPv4**: This is the default value.
+         * *   **IPv6**: IPv6 is supported only if the VBR for which you want to create the BGP group has IPv6 enabled.
          */
         public Builder ipVersion(String ipVersion) {
             this.putQueryParameter("IpVersion", ipVersion);
@@ -259,7 +277,7 @@ public class CreateBgpPeerRequest extends Request {
         }
 
         /**
-         * PeerIpAddress.
+         * The IP address of the BGP peer.
          */
         public Builder peerIpAddress(String peerIpAddress) {
             this.putQueryParameter("PeerIpAddress", peerIpAddress);
@@ -268,7 +286,10 @@ public class CreateBgpPeerRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * The ID of the region to which the BGP group belongs.
+         * <p>
+         * 
+         * You can call the [DescribeRegions](~~36063~~) operation to query the most recent region list.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);

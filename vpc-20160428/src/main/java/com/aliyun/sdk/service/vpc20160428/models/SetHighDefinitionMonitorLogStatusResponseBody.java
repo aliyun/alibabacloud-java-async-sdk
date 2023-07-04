@@ -50,7 +50,7 @@ public class SetHighDefinitionMonitorLogStatusResponseBody extends TeaModel {
         private String success; 
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -58,7 +58,11 @@ public class SetHighDefinitionMonitorLogStatusResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * Indicates whether the operation is performed. Valid values:
+         * <p>
+         * 
+         * *   **true**: yes
+         * *   **false**: no
          */
         public Builder success(String success) {
             this.success = success;

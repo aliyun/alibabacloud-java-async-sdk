@@ -154,7 +154,7 @@ public class DeleteNatIpRequest extends Request {
         } 
 
         /**
-         * ClientToken.
+         * The ID of the request.
          */
         public Builder clientToken(String clientToken) {
             this.putQueryParameter("ClientToken", clientToken);
@@ -163,7 +163,7 @@ public class DeleteNatIpRequest extends Request {
         }
 
         /**
-         * DryRun.
+         * The operation that you want to perform. Set the value to **DeleteNatIp**.
          */
         public Builder dryRun(Boolean dryRun) {
             this.putQueryParameter("DryRun", dryRun);
@@ -172,7 +172,12 @@ public class DeleteNatIpRequest extends Request {
         }
 
         /**
-         * NatIpId.
+         * The client token that is used to ensure the idempotence of the request.
+         * <p>
+         * 
+         * You can use the client to generate the value, but you must make sure that it is unique among different requests. The token can contain only ASCII characters.
+         * 
+         * >  If you do not set this parameter, **ClientToken** is set to the value of **RequestId**. **RequestId** of each API request may be different.
          */
         public Builder natIpId(String natIpId) {
             this.putQueryParameter("NatIpId", natIpId);
@@ -199,7 +204,11 @@ public class DeleteNatIpRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * Specifies whether to check the request without performing the operation. Valid values:
+         * <p>
+         * 
+         * *   **true**: checks the request without performing the operation. The system checks your AccessKey pair, the RAM user permissions, and the required parameters If the request fails to pass the check, the corresponding error message is returned. If the request passes the check, the `DryRunOperation` error code is returned.
+         * *   **false**: sends the request. This is the default value. After the request passes the precheck, a 2XX HTTP status code is returned and the NAT IP address is deleted.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);

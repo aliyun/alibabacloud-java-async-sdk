@@ -86,7 +86,7 @@ public class DescribeIPv6TranslatorAclListsResponseBody extends TeaModel {
         private Integer totalCount; 
 
         /**
-         * Ipv6TranslatorAcls.
+         * The list of network ACLs.
          */
         public Builder ipv6TranslatorAcls(Ipv6TranslatorAcls ipv6TranslatorAcls) {
             this.ipv6TranslatorAcls = ipv6TranslatorAcls;
@@ -94,7 +94,7 @@ public class DescribeIPv6TranslatorAclListsResponseBody extends TeaModel {
         }
 
         /**
-         * PageNumber.
+         * The page number.
          */
         public Builder pageNumber(Integer pageNumber) {
             this.pageNumber = pageNumber;
@@ -102,7 +102,7 @@ public class DescribeIPv6TranslatorAclListsResponseBody extends TeaModel {
         }
 
         /**
-         * PageSize.
+         * The number of entries per page.
          */
         public Builder pageSize(Integer pageSize) {
             this.pageSize = pageSize;
@@ -110,7 +110,7 @@ public class DescribeIPv6TranslatorAclListsResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -118,7 +118,7 @@ public class DescribeIPv6TranslatorAclListsResponseBody extends TeaModel {
         }
 
         /**
-         * TotalCount.
+         * The total number of entries returned.
          */
         public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;
@@ -170,7 +170,7 @@ public class DescribeIPv6TranslatorAclListsResponseBody extends TeaModel {
             private String aclName; 
 
             /**
-             * AclId.
+             * The ACL ID.
              */
             public Builder aclId(String aclId) {
                 this.aclId = aclId;
@@ -178,7 +178,7 @@ public class DescribeIPv6TranslatorAclListsResponseBody extends TeaModel {
             }
 
             /**
-             * AclName.
+             * The ACL name.
              */
             public Builder aclName(String aclName) {
                 this.aclName = aclName;

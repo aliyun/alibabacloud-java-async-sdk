@@ -47,12 +47,20 @@ public class ListDhcpOptionsSetsRequest extends Request {
     private String regionId;
 
     @Query
+    @NameInMap("ResourceGroupId")
+    private String resourceGroupId;
+
+    @Query
     @NameInMap("ResourceOwnerAccount")
     private String resourceOwnerAccount;
 
     @Query
     @NameInMap("ResourceOwnerId")
     private Long resourceOwnerId;
+
+    @Query
+    @NameInMap("Tags")
+    private java.util.List < Tags> tags;
 
     private ListDhcpOptionsSetsRequest(Builder builder) {
         super(builder);
@@ -64,8 +72,10 @@ public class ListDhcpOptionsSetsRequest extends Request {
         this.ownerAccount = builder.ownerAccount;
         this.ownerId = builder.ownerId;
         this.regionId = builder.regionId;
+        this.resourceGroupId = builder.resourceGroupId;
         this.resourceOwnerAccount = builder.resourceOwnerAccount;
         this.resourceOwnerId = builder.resourceOwnerId;
+        this.tags = builder.tags;
     }
 
     public static Builder builder() {
@@ -138,6 +148,13 @@ public class ListDhcpOptionsSetsRequest extends Request {
     }
 
     /**
+     * @return resourceGroupId
+     */
+    public String getResourceGroupId() {
+        return this.resourceGroupId;
+    }
+
+    /**
      * @return resourceOwnerAccount
      */
     public String getResourceOwnerAccount() {
@@ -151,6 +168,13 @@ public class ListDhcpOptionsSetsRequest extends Request {
         return this.resourceOwnerId;
     }
 
+    /**
+     * @return tags
+     */
+    public java.util.List < Tags> getTags() {
+        return this.tags;
+    }
+
     public static final class Builder extends Request.Builder<ListDhcpOptionsSetsRequest, Builder> {
         private java.util.List < String > dhcpOptionsSetId; 
         private String dhcpOptionsSetName; 
@@ -160,8 +184,10 @@ public class ListDhcpOptionsSetsRequest extends Request {
         private String ownerAccount; 
         private Long ownerId; 
         private String regionId; 
+        private String resourceGroupId; 
         private String resourceOwnerAccount; 
         private Long resourceOwnerId; 
+        private java.util.List < Tags> tags; 
 
         private Builder() {
             super();
@@ -177,8 +203,10 @@ public class ListDhcpOptionsSetsRequest extends Request {
             this.ownerAccount = request.ownerAccount;
             this.ownerId = request.ownerId;
             this.regionId = request.regionId;
+            this.resourceGroupId = request.resourceGroupId;
             this.resourceOwnerAccount = request.resourceOwnerAccount;
             this.resourceOwnerId = request.resourceOwnerId;
+            this.tags = request.tags;
         } 
 
         /**
@@ -191,7 +219,7 @@ public class ListDhcpOptionsSetsRequest extends Request {
         }
 
         /**
-         * DhcpOptionsSetName.
+         * The list of the DHCP options sets.
          */
         public Builder dhcpOptionsSetName(String dhcpOptionsSetName) {
             this.putQueryParameter("DhcpOptionsSetName", dhcpOptionsSetName);
@@ -200,7 +228,7 @@ public class ListDhcpOptionsSetsRequest extends Request {
         }
 
         /**
-         * DomainName.
+         * The ID of the request.
          */
         public Builder domainName(String domainName) {
             this.putQueryParameter("DomainName", domainName);
@@ -209,7 +237,11 @@ public class ListDhcpOptionsSetsRequest extends Request {
         }
 
         /**
-         * MaxResults.
+         * The token that is used for the next query. Valid values:
+         * <p>
+         * 
+         * *   If **NextToken** is empty, it indicates that no next query is to be sent.
+         * *   If a value is returned for **NextToken**, the value is the token that is used for the next query.
          */
         public Builder maxResults(Integer maxResults) {
             this.putQueryParameter("MaxResults", maxResults);
@@ -218,7 +250,7 @@ public class ListDhcpOptionsSetsRequest extends Request {
         }
 
         /**
-         * NextToken.
+         * The operation that you want to perform. Set the value to **ListDhcpOptionsSets**.
          */
         public Builder nextToken(String nextToken) {
             this.putQueryParameter("NextToken", nextToken);
@@ -245,11 +277,20 @@ public class ListDhcpOptionsSetsRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * The ID of the DHCP options set. You can specify at most 20 IDs.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
             this.regionId = regionId;
+            return this;
+        }
+
+        /**
+         * ResourceGroupId.
+         */
+        public Builder resourceGroupId(String resourceGroupId) {
+            this.putQueryParameter("ResourceGroupId", resourceGroupId);
+            this.resourceGroupId = resourceGroupId;
             return this;
         }
 
@@ -271,6 +312,15 @@ public class ListDhcpOptionsSetsRequest extends Request {
             return this;
         }
 
+        /**
+         * Tags.
+         */
+        public Builder tags(java.util.List < Tags> tags) {
+            this.putQueryParameter("Tags", tags);
+            this.tags = tags;
+            return this;
+        }
+
         @Override
         public ListDhcpOptionsSetsRequest build() {
             return new ListDhcpOptionsSetsRequest(this);
@@ -278,4 +328,65 @@ public class ListDhcpOptionsSetsRequest extends Request {
 
     } 
 
+    public static class Tags extends TeaModel {
+        @NameInMap("Key")
+        private String key;
+
+        @NameInMap("Value")
+        private String value;
+
+        private Tags(Builder builder) {
+            this.key = builder.key;
+            this.value = builder.value;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static Tags create() {
+            return builder().build();
+        }
+
+        /**
+         * @return key
+         */
+        public String getKey() {
+            return this.key;
+        }
+
+        /**
+         * @return value
+         */
+        public String getValue() {
+            return this.value;
+        }
+
+        public static final class Builder {
+            private String key; 
+            private String value; 
+
+            /**
+             * Key.
+             */
+            public Builder key(String key) {
+                this.key = key;
+                return this;
+            }
+
+            /**
+             * Value.
+             */
+            public Builder value(String value) {
+                this.value = value;
+                return this;
+            }
+
+            public Tags build() {
+                return new Tags(this);
+            } 
+
+        } 
+
+    }
 }

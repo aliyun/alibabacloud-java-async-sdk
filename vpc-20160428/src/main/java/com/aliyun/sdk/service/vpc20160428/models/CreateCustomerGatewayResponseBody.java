@@ -98,7 +98,10 @@ public class CreateCustomerGatewayResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * CreateTime.
+         * The timestamp generated when the customer gateway was created. Unit: milliseconds.
+         * <p>
+         * 
+         * This value is a UNIX timestamp representing the number of milliseconds that have elapsed since the epoch time January 1, 1970, 00:00:00 UTC.
          */
         public Builder createTime(Long createTime) {
             this.createTime = createTime;
@@ -106,7 +109,7 @@ public class CreateCustomerGatewayResponseBody extends TeaModel {
         }
 
         /**
-         * CustomerGatewayId.
+         * The ID of the customer gateway.
          */
         public Builder customerGatewayId(String customerGatewayId) {
             this.customerGatewayId = customerGatewayId;
@@ -114,7 +117,7 @@ public class CreateCustomerGatewayResponseBody extends TeaModel {
         }
 
         /**
-         * Description.
+         * The description of the customer gateway.
          */
         public Builder description(String description) {
             this.description = description;
@@ -122,7 +125,7 @@ public class CreateCustomerGatewayResponseBody extends TeaModel {
         }
 
         /**
-         * IpAddress.
+         * The static public IP address of the gateway device in the data center.
          */
         public Builder ipAddress(String ipAddress) {
             this.ipAddress = ipAddress;
@@ -130,7 +133,7 @@ public class CreateCustomerGatewayResponseBody extends TeaModel {
         }
 
         /**
-         * Name.
+         * The name of the customer gateway.
          */
         public Builder name(String name) {
             this.name = name;
@@ -138,7 +141,7 @@ public class CreateCustomerGatewayResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

@@ -154,7 +154,10 @@ public class ModifyRouteTableAttributesRequest extends Request {
         } 
 
         /**
-         * Description.
+         * The description of the route table.
+         * <p>
+         * 
+         * The description must be 1 to 256 characters in length, and cannot start with `http://` or `https://`.
          */
         public Builder description(String description) {
             this.putQueryParameter("Description", description);
@@ -181,7 +184,10 @@ public class ModifyRouteTableAttributesRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * The region ID of the virtual private cloud (VPC) to which the route table belongs.
+         * <p>
+         * 
+         * You can call the [DescribeRegions](~~36063~~) operation to query the most recent region list.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -208,7 +214,7 @@ public class ModifyRouteTableAttributesRequest extends Request {
         }
 
         /**
-         * RouteTableId.
+         * The ID of the route table.
          */
         public Builder routeTableId(String routeTableId) {
             this.putQueryParameter("RouteTableId", routeTableId);
@@ -217,7 +223,10 @@ public class ModifyRouteTableAttributesRequest extends Request {
         }
 
         /**
-         * RouteTableName.
+         * The name of the route table.
+         * <p>
+         * 
+         * The name must be 1 to 128 characters in length, and cannot start with `http://` or `https://`.
          */
         public Builder routeTableName(String routeTableName) {
             this.putQueryParameter("RouteTableName", routeTableName);

@@ -140,7 +140,12 @@ public class ReleaseEipSegmentAddressRequest extends Request {
         } 
 
         /**
-         * ClientToken.
+         * The client token that is used to ensure the idempotence of the request.
+         * <p>
+         * 
+         * You can use the client to generate the value, but you must make sure that it is unique among different requests. The client token can contain only ASCII characters.
+         * 
+         * >  If you do not set this parameter, the system uses **RequestId** as **ClientToken**. The value of **RequestId** for each API request may be different.
          */
         public Builder clientToken(String clientToken) {
             this.putQueryParameter("ClientToken", clientToken);
@@ -167,7 +172,7 @@ public class ReleaseEipSegmentAddressRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * The region ID of the contiguous EIPs. You can call the [DescribeRegions](~~36063~~) operation to query the most recent region list.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -194,7 +199,10 @@ public class ReleaseEipSegmentAddressRequest extends Request {
         }
 
         /**
-         * SegmentInstanceId.
+         * The ID of the group to which the contiguous EIPs to be released belongs.
+         * <p>
+         * 
+         * The system releases all EIPs in the group.
          */
         public Builder segmentInstanceId(String segmentInstanceId) {
             this.putQueryParameter("SegmentInstanceId", segmentInstanceId);

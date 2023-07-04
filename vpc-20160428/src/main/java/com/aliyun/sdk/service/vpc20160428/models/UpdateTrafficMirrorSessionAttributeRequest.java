@@ -33,6 +33,10 @@ public class UpdateTrafficMirrorSessionAttributeRequest extends Request {
     private Long ownerId;
 
     @Query
+    @NameInMap("PacketLength")
+    private Integer packetLength;
+
+    @Query
     @NameInMap("Priority")
     private Integer priority;
 
@@ -85,6 +89,7 @@ public class UpdateTrafficMirrorSessionAttributeRequest extends Request {
         this.enabled = builder.enabled;
         this.ownerAccount = builder.ownerAccount;
         this.ownerId = builder.ownerId;
+        this.packetLength = builder.packetLength;
         this.priority = builder.priority;
         this.regionId = builder.regionId;
         this.resourceOwnerAccount = builder.resourceOwnerAccount;
@@ -144,6 +149,13 @@ public class UpdateTrafficMirrorSessionAttributeRequest extends Request {
      */
     public Long getOwnerId() {
         return this.ownerId;
+    }
+
+    /**
+     * @return packetLength
+     */
+    public Integer getPacketLength() {
+        return this.packetLength;
     }
 
     /**
@@ -229,6 +241,7 @@ public class UpdateTrafficMirrorSessionAttributeRequest extends Request {
         private Boolean enabled; 
         private String ownerAccount; 
         private Long ownerId; 
+        private Integer packetLength; 
         private Integer priority; 
         private String regionId; 
         private String resourceOwnerAccount; 
@@ -252,6 +265,7 @@ public class UpdateTrafficMirrorSessionAttributeRequest extends Request {
             this.enabled = request.enabled;
             this.ownerAccount = request.ownerAccount;
             this.ownerId = request.ownerId;
+            this.packetLength = request.packetLength;
             this.priority = request.priority;
             this.regionId = request.regionId;
             this.resourceOwnerAccount = request.resourceOwnerAccount;
@@ -266,7 +280,7 @@ public class UpdateTrafficMirrorSessionAttributeRequest extends Request {
         } 
 
         /**
-         * ClientToken.
+         * The ID of the traffic mirror session.
          */
         public Builder clientToken(String clientToken) {
             this.putQueryParameter("ClientToken", clientToken);
@@ -275,7 +289,7 @@ public class UpdateTrafficMirrorSessionAttributeRequest extends Request {
         }
 
         /**
-         * DryRun.
+         * The ID of the traffic mirror destination.
          */
         public Builder dryRun(Boolean dryRun) {
             this.putQueryParameter("DryRun", dryRun);
@@ -284,7 +298,7 @@ public class UpdateTrafficMirrorSessionAttributeRequest extends Request {
         }
 
         /**
-         * Enabled.
+         * The ID of the request.
          */
         public Builder enabled(Boolean enabled) {
             this.putQueryParameter("Enabled", enabled);
@@ -311,7 +325,16 @@ public class UpdateTrafficMirrorSessionAttributeRequest extends Request {
         }
 
         /**
-         * Priority.
+         * PacketLength.
+         */
+        public Builder packetLength(Integer packetLength) {
+            this.putQueryParameter("PacketLength", packetLength);
+            this.packetLength = packetLength;
+            return this;
+        }
+
+        /**
+         * The region ID of the traffic mirror session. You can call the [DescribeRegions](~~36063~~) operation to query the most recent region list. For more information about regions that support traffic mirroring, see [Overview of traffic mirroring](~~207513~~).
          */
         public Builder priority(Integer priority) {
             this.putQueryParameter("Priority", priority);
@@ -347,7 +370,10 @@ public class UpdateTrafficMirrorSessionAttributeRequest extends Request {
         }
 
         /**
-         * TrafficMirrorFilterId.
+         * The priority of the traffic mirror session. Valid values: **1** to **32766**.
+         * <p>
+         * 
+         * A smaller value specifies a higher priority. You cannot specify identical priorities for traffic mirror sessions that are created in the same region by using the same account.
          */
         public Builder trafficMirrorFilterId(String trafficMirrorFilterId) {
             this.putQueryParameter("TrafficMirrorFilterId", trafficMirrorFilterId);
@@ -356,7 +382,12 @@ public class UpdateTrafficMirrorSessionAttributeRequest extends Request {
         }
 
         /**
-         * TrafficMirrorSessionDescription.
+         * The client token that is used to ensure the idempotence of the request.
+         * <p>
+         * 
+         * You can use the client to generate the value, but you must make sure that it is unique among different requests. The token can contain only ASCII characters.
+         * 
+         * >  If you do not specify this parameter, the system uses **RequestId** as **ClientToken**. **RequestId** may be different for each API request.
          */
         public Builder trafficMirrorSessionDescription(String trafficMirrorSessionDescription) {
             this.putQueryParameter("TrafficMirrorSessionDescription", trafficMirrorSessionDescription);
@@ -365,7 +396,11 @@ public class UpdateTrafficMirrorSessionAttributeRequest extends Request {
         }
 
         /**
-         * TrafficMirrorSessionId.
+         * The type of the traffic mirror destination. Valid values:
+         * <p>
+         * 
+         * *   **NetworkInterface**: an ENI
+         * *   **SLB**: an internal-facing Server Load Balancer (SLB) instance
          */
         public Builder trafficMirrorSessionId(String trafficMirrorSessionId) {
             this.putQueryParameter("TrafficMirrorSessionId", trafficMirrorSessionId);
@@ -374,7 +409,11 @@ public class UpdateTrafficMirrorSessionAttributeRequest extends Request {
         }
 
         /**
-         * TrafficMirrorSessionName.
+         * Specifies whether to precheck the request without performing the operation. Valid values:
+         * <p>
+         * 
+         * *   **true**: checks the request without performing the operation. The system prechecks the required parameters, request syntax, and limits. If the request fails the precheck, an error message is returned. If the request passes the precheck, the `DryRunOperation` error code is returned.
+         * *   **false**: sends the request. If the request passes the check, a 2xx HTTP status code is returned and the operation is performed. This is the default value.
          */
         public Builder trafficMirrorSessionName(String trafficMirrorSessionName) {
             this.putQueryParameter("TrafficMirrorSessionName", trafficMirrorSessionName);
@@ -383,7 +422,7 @@ public class UpdateTrafficMirrorSessionAttributeRequest extends Request {
         }
 
         /**
-         * TrafficMirrorTargetId.
+         * The ID of the traffic mirror filter.
          */
         public Builder trafficMirrorTargetId(String trafficMirrorTargetId) {
             this.putQueryParameter("TrafficMirrorTargetId", trafficMirrorTargetId);
@@ -392,7 +431,10 @@ public class UpdateTrafficMirrorSessionAttributeRequest extends Request {
         }
 
         /**
-         * TrafficMirrorTargetType.
+         * The VXLAN network identifier (VNI) that is used to distinguish different mirrored traffic. Valid values: **0** to **16777215**.
+         * <p>
+         * 
+         * You can use VNIs to identify mirrored traffic from different sessions at the traffic mirror destination. If you do not specify a VNI, the system randomly allocates a VNI. If you want the system to randomly allocate a VNI, ignore this parameter.
          */
         public Builder trafficMirrorTargetType(String trafficMirrorTargetType) {
             this.putQueryParameter("TrafficMirrorTargetType", trafficMirrorTargetType);
@@ -401,7 +443,11 @@ public class UpdateTrafficMirrorSessionAttributeRequest extends Request {
         }
 
         /**
-         * VirtualNetworkId.
+         * Specifies whether to enable the traffic mirror session.
+         * <p>
+         * 
+         * *   **false**: disables the traffic mirror session. This is the default value.
+         * *   **true**: enables the traffic mirror session.
          */
         public Builder virtualNetworkId(Integer virtualNetworkId) {
             this.putQueryParameter("VirtualNetworkId", virtualNetworkId);

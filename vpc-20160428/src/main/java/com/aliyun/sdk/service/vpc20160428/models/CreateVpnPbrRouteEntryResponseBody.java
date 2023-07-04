@@ -158,7 +158,10 @@ public class CreateVpnPbrRouteEntryResponseBody extends TeaModel {
         private Integer weight; 
 
         /**
-         * CreateTime.
+         * The timestamp generated when the policy-based route was created. Unit: milliseconds.
+         * <p>
+         * 
+         * This value is a UNIX timestamp representing the number of milliseconds that have elapsed since the epoch time January 1, 1970, 00:00:00 UTC.
          */
         public Builder createTime(Long createTime) {
             this.createTime = createTime;
@@ -166,7 +169,7 @@ public class CreateVpnPbrRouteEntryResponseBody extends TeaModel {
         }
 
         /**
-         * Description.
+         * The description of the policy-based route.
          */
         public Builder description(String description) {
             this.description = description;
@@ -174,7 +177,7 @@ public class CreateVpnPbrRouteEntryResponseBody extends TeaModel {
         }
 
         /**
-         * NextHop.
+         * The next hop of the policy-based route.
          */
         public Builder nextHop(String nextHop) {
             this.nextHop = nextHop;
@@ -182,7 +185,7 @@ public class CreateVpnPbrRouteEntryResponseBody extends TeaModel {
         }
 
         /**
-         * OverlayMode.
+         * The tunneling protocol. The value is set to **Ipsec**, which indicates the IPsec tunneling protocol.
          */
         public Builder overlayMode(String overlayMode) {
             this.overlayMode = overlayMode;
@@ -190,7 +193,7 @@ public class CreateVpnPbrRouteEntryResponseBody extends TeaModel {
         }
 
         /**
-         * Priority.
+         * The priority of the policy-based route.
          */
         public Builder priority(Integer priority) {
             this.priority = priority;
@@ -198,7 +201,7 @@ public class CreateVpnPbrRouteEntryResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -206,7 +209,7 @@ public class CreateVpnPbrRouteEntryResponseBody extends TeaModel {
         }
 
         /**
-         * RouteDest.
+         * The destination CIDR block of the policy-based route.
          */
         public Builder routeDest(String routeDest) {
             this.routeDest = routeDest;
@@ -214,7 +217,7 @@ public class CreateVpnPbrRouteEntryResponseBody extends TeaModel {
         }
 
         /**
-         * RouteSource.
+         * The source CIDR block of the policy-based route.
          */
         public Builder routeSource(String routeSource) {
             this.routeSource = routeSource;
@@ -222,7 +225,11 @@ public class CreateVpnPbrRouteEntryResponseBody extends TeaModel {
         }
 
         /**
-         * State.
+         * The status of the policy-based route. Valid values:
+         * <p>
+         * 
+         * *   **published**: advertised to the VPC route table.
+         * *   **normal**: not advertised to the VPC route table.
          */
         public Builder state(String state) {
             this.state = state;
@@ -230,7 +237,7 @@ public class CreateVpnPbrRouteEntryResponseBody extends TeaModel {
         }
 
         /**
-         * VpnInstanceId.
+         * The ID of the VPN gateway.
          */
         public Builder vpnInstanceId(String vpnInstanceId) {
             this.vpnInstanceId = vpnInstanceId;
@@ -238,7 +245,11 @@ public class CreateVpnPbrRouteEntryResponseBody extends TeaModel {
         }
 
         /**
-         * Weight.
+         * The weight of the policy-based route.
+         * <p>
+         * 
+         * *   **100**: The IPsec-VPN connection associated with the policy-based route serves as an active connection.
+         * *   **0**: The IPsec-VPN connection associated with the policy-based route serves as a standby connection.
          */
         public Builder weight(Integer weight) {
             this.weight = weight;

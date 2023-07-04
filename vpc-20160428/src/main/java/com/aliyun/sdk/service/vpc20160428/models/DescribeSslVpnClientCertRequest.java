@@ -144,7 +144,7 @@ public class DescribeSslVpnClientCertRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * The region ID of the SSL client certificate. You can call the [DescribeRegions](~~36063~~) operation to query the most recent region list.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -171,7 +171,7 @@ public class DescribeSslVpnClientCertRequest extends Request {
         }
 
         /**
-         * SslVpnClientCertId.
+         * The ID of the SSL client certificate that you want to query.
          */
         public Builder sslVpnClientCertId(String sslVpnClientCertId) {
             this.putQueryParameter("SslVpnClientCertId", sslVpnClientCertId);

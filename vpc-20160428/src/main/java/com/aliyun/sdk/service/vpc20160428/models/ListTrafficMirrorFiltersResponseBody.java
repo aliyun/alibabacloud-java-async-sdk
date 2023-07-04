@@ -12,6 +12,12 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ListTrafficMirrorFiltersResponseBody</p>
  */
 public class ListTrafficMirrorFiltersResponseBody extends TeaModel {
+    @NameInMap("Count")
+    private Integer count;
+
+    @NameInMap("MaxResults")
+    private Integer maxResults;
+
     @NameInMap("NextToken")
     private String nextToken;
 
@@ -25,6 +31,8 @@ public class ListTrafficMirrorFiltersResponseBody extends TeaModel {
     private java.util.List < TrafficMirrorFilters> trafficMirrorFilters;
 
     private ListTrafficMirrorFiltersResponseBody(Builder builder) {
+        this.count = builder.count;
+        this.maxResults = builder.maxResults;
         this.nextToken = builder.nextToken;
         this.requestId = builder.requestId;
         this.totalCount = builder.totalCount;
@@ -37,6 +45,20 @@ public class ListTrafficMirrorFiltersResponseBody extends TeaModel {
 
     public static ListTrafficMirrorFiltersResponseBody create() {
         return builder().build();
+    }
+
+    /**
+     * @return count
+     */
+    public Integer getCount() {
+        return this.count;
+    }
+
+    /**
+     * @return maxResults
+     */
+    public Integer getMaxResults() {
+        return this.maxResults;
     }
 
     /**
@@ -68,13 +90,35 @@ public class ListTrafficMirrorFiltersResponseBody extends TeaModel {
     }
 
     public static final class Builder {
+        private Integer count; 
+        private Integer maxResults; 
         private String nextToken; 
         private String requestId; 
         private String totalCount; 
         private java.util.List < TrafficMirrorFilters> trafficMirrorFilters; 
 
         /**
-         * NextToken.
+         * Count.
+         */
+        public Builder count(Integer count) {
+            this.count = count;
+            return this;
+        }
+
+        /**
+         * MaxResults.
+         */
+        public Builder maxResults(Integer maxResults) {
+            this.maxResults = maxResults;
+            return this;
+        }
+
+        /**
+         * The token that is used for the next query. Valid values:
+         * <p>
+         * 
+         * *   If no value is returned for **NextToken**, no next queries are sent.
+         * *   If the return value of **NextToken** is not empty, the value indicates the token that is used for the next query.
          */
         public Builder nextToken(String nextToken) {
             this.nextToken = nextToken;
@@ -82,7 +126,7 @@ public class ListTrafficMirrorFiltersResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -90,7 +134,7 @@ public class ListTrafficMirrorFiltersResponseBody extends TeaModel {
         }
 
         /**
-         * TotalCount.
+         * The number of entries returned.
          */
         public Builder totalCount(String totalCount) {
             this.totalCount = totalCount;
@@ -98,7 +142,7 @@ public class ListTrafficMirrorFiltersResponseBody extends TeaModel {
         }
 
         /**
-         * TrafficMirrorFilters.
+         * The details about the filters.
          */
         public Builder trafficMirrorFilters(java.util.List < TrafficMirrorFilters> trafficMirrorFilters) {
             this.trafficMirrorFilters = trafficMirrorFilters;
@@ -258,7 +302,11 @@ public class ListTrafficMirrorFiltersResponseBody extends TeaModel {
             private String trafficMirrorFilterRuleStatus; 
 
             /**
-             * Action.
+             * The action of the outbound rule. Valid values:
+             * <p>
+             * 
+             * *   **accept**: collects network traffic.
+             * *   **drop**: does not collect network traffic.
              */
             public Builder action(String action) {
                 this.action = action;
@@ -266,7 +314,7 @@ public class ListTrafficMirrorFiltersResponseBody extends TeaModel {
             }
 
             /**
-             * DestinationCidrBlock.
+             * The destination CIDR block of the outbound traffic.
              */
             public Builder destinationCidrBlock(String destinationCidrBlock) {
                 this.destinationCidrBlock = destinationCidrBlock;
@@ -274,7 +322,7 @@ public class ListTrafficMirrorFiltersResponseBody extends TeaModel {
             }
 
             /**
-             * DestinationPortRange.
+             * The destination port range of the outbound traffic.
              */
             public Builder destinationPortRange(String destinationPortRange) {
                 this.destinationPortRange = destinationPortRange;
@@ -282,7 +330,7 @@ public class ListTrafficMirrorFiltersResponseBody extends TeaModel {
             }
 
             /**
-             * Priority.
+             * The priority of the outbound rule. A smaller value indicates a higher priority.
              */
             public Builder priority(Integer priority) {
                 this.priority = priority;
@@ -290,7 +338,13 @@ public class ListTrafficMirrorFiltersResponseBody extends TeaModel {
             }
 
             /**
-             * Protocol.
+             * The protocol that is used by the outbound traffic to be mirrored. Valid values:
+             * <p>
+             * 
+             * *   **ALL**: all protocols
+             * *   **ICMP**: ICMP
+             * *   **TCP**: TCP
+             * *   **UDP**: UDP
              */
             public Builder protocol(String protocol) {
                 this.protocol = protocol;
@@ -298,7 +352,7 @@ public class ListTrafficMirrorFiltersResponseBody extends TeaModel {
             }
 
             /**
-             * SourceCidrBlock.
+             * The source CIDR block of the outbound traffic.
              */
             public Builder sourceCidrBlock(String sourceCidrBlock) {
                 this.sourceCidrBlock = sourceCidrBlock;
@@ -306,7 +360,7 @@ public class ListTrafficMirrorFiltersResponseBody extends TeaModel {
             }
 
             /**
-             * SourcePortRange.
+             * The source port range of the outbound traffic.
              */
             public Builder sourcePortRange(String sourcePortRange) {
                 this.sourcePortRange = sourcePortRange;
@@ -314,7 +368,11 @@ public class ListTrafficMirrorFiltersResponseBody extends TeaModel {
             }
 
             /**
-             * TrafficDirection.
+             * The direction of the network traffic. Valid values:
+             * <p>
+             * 
+             * *   **egress**: outbound
+             * *   **ingress**: inbound
              */
             public Builder trafficDirection(String trafficDirection) {
                 this.trafficDirection = trafficDirection;
@@ -322,7 +380,7 @@ public class ListTrafficMirrorFiltersResponseBody extends TeaModel {
             }
 
             /**
-             * TrafficMirrorFilterId.
+             * The ID of the filter associated with the outbound rule.
              */
             public Builder trafficMirrorFilterId(String trafficMirrorFilterId) {
                 this.trafficMirrorFilterId = trafficMirrorFilterId;
@@ -330,7 +388,7 @@ public class ListTrafficMirrorFiltersResponseBody extends TeaModel {
             }
 
             /**
-             * TrafficMirrorFilterRuleId.
+             * The ID of the outbound rule.
              */
             public Builder trafficMirrorFilterRuleId(String trafficMirrorFilterRuleId) {
                 this.trafficMirrorFilterRuleId = trafficMirrorFilterRuleId;
@@ -338,7 +396,13 @@ public class ListTrafficMirrorFiltersResponseBody extends TeaModel {
             }
 
             /**
-             * TrafficMirrorFilterRuleStatus.
+             * The status of the outbound rule. Valid values:
+             * <p>
+             * 
+             * *   **Creating**
+             * *   **Created**
+             * *   **Modifying**
+             * *   **Deleting**
              */
             public Builder trafficMirrorFilterRuleStatus(String trafficMirrorFilterRuleStatus) {
                 this.trafficMirrorFilterRuleStatus = trafficMirrorFilterRuleStatus;
@@ -499,7 +563,11 @@ public class ListTrafficMirrorFiltersResponseBody extends TeaModel {
             private String trafficMirrorFilterRuleStatus; 
 
             /**
-             * Action.
+             * The action of the inbound rule. Valid values:
+             * <p>
+             * 
+             * *   **accept**: accepts network traffic.
+             * *   **drop**: does not collect network traffic.
              */
             public Builder action(String action) {
                 this.action = action;
@@ -507,7 +575,7 @@ public class ListTrafficMirrorFiltersResponseBody extends TeaModel {
             }
 
             /**
-             * DestinationCidrBlock.
+             * The destination CIDR block of the inbound traffic.
              */
             public Builder destinationCidrBlock(String destinationCidrBlock) {
                 this.destinationCidrBlock = destinationCidrBlock;
@@ -515,7 +583,7 @@ public class ListTrafficMirrorFiltersResponseBody extends TeaModel {
             }
 
             /**
-             * DestinationPortRange.
+             * The destination port range of the inbound traffic.
              */
             public Builder destinationPortRange(String destinationPortRange) {
                 this.destinationPortRange = destinationPortRange;
@@ -523,7 +591,7 @@ public class ListTrafficMirrorFiltersResponseBody extends TeaModel {
             }
 
             /**
-             * Priority.
+             * The priority of the inbound rule. A smaller value indicates a higher priority.
              */
             public Builder priority(Integer priority) {
                 this.priority = priority;
@@ -531,7 +599,13 @@ public class ListTrafficMirrorFiltersResponseBody extends TeaModel {
             }
 
             /**
-             * Protocol.
+             * The protocol that is used by the inbound traffic to be mirrored. Valid values:
+             * <p>
+             * 
+             * *   **ALL**: all protocols
+             * *   **ICMP**: ICMP
+             * *   **TCP**: TCP
+             * *   **UDP**: UDP
              */
             public Builder protocol(String protocol) {
                 this.protocol = protocol;
@@ -539,7 +613,7 @@ public class ListTrafficMirrorFiltersResponseBody extends TeaModel {
             }
 
             /**
-             * SourceCidrBlock.
+             * The source CIDR block of the inbound traffic.
              */
             public Builder sourceCidrBlock(String sourceCidrBlock) {
                 this.sourceCidrBlock = sourceCidrBlock;
@@ -547,7 +621,7 @@ public class ListTrafficMirrorFiltersResponseBody extends TeaModel {
             }
 
             /**
-             * SourcePortRange.
+             * The destination port range of the inbound traffic.
              */
             public Builder sourcePortRange(String sourcePortRange) {
                 this.sourcePortRange = sourcePortRange;
@@ -555,7 +629,11 @@ public class ListTrafficMirrorFiltersResponseBody extends TeaModel {
             }
 
             /**
-             * TrafficDirection.
+             * The direction of the network traffic. Valid values:
+             * <p>
+             * 
+             * *   **egress**: outbound
+             * *   **ingress**: inbound
              */
             public Builder trafficDirection(String trafficDirection) {
                 this.trafficDirection = trafficDirection;
@@ -563,7 +641,7 @@ public class ListTrafficMirrorFiltersResponseBody extends TeaModel {
             }
 
             /**
-             * TrafficMirrorFilterId.
+             * The ID of the filter associated with the inbound rule.
              */
             public Builder trafficMirrorFilterId(String trafficMirrorFilterId) {
                 this.trafficMirrorFilterId = trafficMirrorFilterId;
@@ -571,7 +649,7 @@ public class ListTrafficMirrorFiltersResponseBody extends TeaModel {
             }
 
             /**
-             * TrafficMirrorFilterRuleId.
+             * The ID of the inbound rule.
              */
             public Builder trafficMirrorFilterRuleId(String trafficMirrorFilterRuleId) {
                 this.trafficMirrorFilterRuleId = trafficMirrorFilterRuleId;
@@ -579,7 +657,13 @@ public class ListTrafficMirrorFiltersResponseBody extends TeaModel {
             }
 
             /**
-             * TrafficMirrorFilterRuleStatus.
+             * The status of the inbound rule. Valid values:
+             * <p>
+             * 
+             * *   **Creating**
+             * *   **Created**
+             * *   **Modifying**
+             * *   **Deleting**
              */
             public Builder trafficMirrorFilterRuleStatus(String trafficMirrorFilterRuleStatus) {
                 this.trafficMirrorFilterRuleStatus = trafficMirrorFilterRuleStatus;
@@ -632,7 +716,7 @@ public class ListTrafficMirrorFiltersResponseBody extends TeaModel {
             private String value; 
 
             /**
-             * Key.
+             * The tag key.
              */
             public Builder key(String key) {
                 this.key = key;
@@ -640,7 +724,7 @@ public class ListTrafficMirrorFiltersResponseBody extends TeaModel {
             }
 
             /**
-             * Value.
+             * The tag value.
              */
             public Builder value(String value) {
                 this.value = value;
@@ -765,7 +849,7 @@ public class ListTrafficMirrorFiltersResponseBody extends TeaModel {
             private String trafficMirrorFilterStatus; 
 
             /**
-             * EgressRules.
+             * The details about the outbound rules.
              */
             public Builder egressRules(java.util.List < EgressRules> egressRules) {
                 this.egressRules = egressRules;
@@ -773,7 +857,7 @@ public class ListTrafficMirrorFiltersResponseBody extends TeaModel {
             }
 
             /**
-             * IngressRules.
+             * The details about the inbound rules.
              */
             public Builder ingressRules(java.util.List < IngressRules> ingressRules) {
                 this.ingressRules = ingressRules;
@@ -781,7 +865,7 @@ public class ListTrafficMirrorFiltersResponseBody extends TeaModel {
             }
 
             /**
-             * ResourceGroupId.
+             * The ID of the resource group.
              */
             public Builder resourceGroupId(String resourceGroupId) {
                 this.resourceGroupId = resourceGroupId;
@@ -789,7 +873,7 @@ public class ListTrafficMirrorFiltersResponseBody extends TeaModel {
             }
 
             /**
-             * Tags.
+             * The list of tags.
              */
             public Builder tags(java.util.List < Tags> tags) {
                 this.tags = tags;
@@ -797,7 +881,7 @@ public class ListTrafficMirrorFiltersResponseBody extends TeaModel {
             }
 
             /**
-             * TrafficMirrorFilterDescription.
+             * The description of the filter.
              */
             public Builder trafficMirrorFilterDescription(String trafficMirrorFilterDescription) {
                 this.trafficMirrorFilterDescription = trafficMirrorFilterDescription;
@@ -805,7 +889,7 @@ public class ListTrafficMirrorFiltersResponseBody extends TeaModel {
             }
 
             /**
-             * TrafficMirrorFilterId.
+             * The ID of the filter.
              */
             public Builder trafficMirrorFilterId(String trafficMirrorFilterId) {
                 this.trafficMirrorFilterId = trafficMirrorFilterId;
@@ -813,7 +897,7 @@ public class ListTrafficMirrorFiltersResponseBody extends TeaModel {
             }
 
             /**
-             * TrafficMirrorFilterName.
+             * The name of the filter.
              */
             public Builder trafficMirrorFilterName(String trafficMirrorFilterName) {
                 this.trafficMirrorFilterName = trafficMirrorFilterName;
@@ -821,7 +905,13 @@ public class ListTrafficMirrorFiltersResponseBody extends TeaModel {
             }
 
             /**
-             * TrafficMirrorFilterStatus.
+             * The status of the filter. Valid values:
+             * <p>
+             * 
+             * *   **Creating**
+             * *   **Created**
+             * *   **Modifying**
+             * *   **Deleting**
              */
             public Builder trafficMirrorFilterStatus(String trafficMirrorFilterStatus) {
                 this.trafficMirrorFilterStatus = trafficMirrorFilterStatus;

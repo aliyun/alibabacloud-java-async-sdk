@@ -46,6 +46,10 @@ public class CreateVpcGatewayEndpointRequest extends Request {
     private String regionId;
 
     @Query
+    @NameInMap("ResourceGroupId")
+    private String resourceGroupId;
+
+    @Query
     @NameInMap("ResourceOwnerAccount")
     private String resourceOwnerAccount;
 
@@ -73,6 +77,7 @@ public class CreateVpcGatewayEndpointRequest extends Request {
         this.ownerId = builder.ownerId;
         this.policyDocument = builder.policyDocument;
         this.regionId = builder.regionId;
+        this.resourceGroupId = builder.resourceGroupId;
         this.resourceOwnerAccount = builder.resourceOwnerAccount;
         this.resourceOwnerId = builder.resourceOwnerId;
         this.serviceName = builder.serviceName;
@@ -149,6 +154,13 @@ public class CreateVpcGatewayEndpointRequest extends Request {
     }
 
     /**
+     * @return resourceGroupId
+     */
+    public String getResourceGroupId() {
+        return this.resourceGroupId;
+    }
+
+    /**
      * @return resourceOwnerAccount
      */
     public String getResourceOwnerAccount() {
@@ -185,6 +197,7 @@ public class CreateVpcGatewayEndpointRequest extends Request {
         private Long ownerId; 
         private String policyDocument; 
         private String regionId; 
+        private String resourceGroupId; 
         private String resourceOwnerAccount; 
         private Long resourceOwnerId; 
         private String serviceName; 
@@ -204,6 +217,7 @@ public class CreateVpcGatewayEndpointRequest extends Request {
             this.ownerId = request.ownerId;
             this.policyDocument = request.policyDocument;
             this.regionId = request.regionId;
+            this.resourceGroupId = request.resourceGroupId;
             this.resourceOwnerAccount = request.resourceOwnerAccount;
             this.resourceOwnerId = request.resourceOwnerId;
             this.serviceName = request.serviceName;
@@ -211,7 +225,7 @@ public class CreateVpcGatewayEndpointRequest extends Request {
         } 
 
         /**
-         * 幂等参数
+         * ClientToken.
          */
         public Builder clientToken(String clientToken) {
             this.putQueryParameter("ClientToken", clientToken);
@@ -220,7 +234,7 @@ public class CreateVpcGatewayEndpointRequest extends Request {
         }
 
         /**
-         * 是否只预检此次请求
+         * DryRun.
          */
         public Builder dryRun(Boolean dryRun) {
             this.putQueryParameter("DryRun", dryRun);
@@ -229,7 +243,7 @@ public class CreateVpcGatewayEndpointRequest extends Request {
         }
 
         /**
-         * 网关节点描述
+         * EndpointDescription.
          */
         public Builder endpointDescription(String endpointDescription) {
             this.putQueryParameter("EndpointDescription", endpointDescription);
@@ -238,7 +252,7 @@ public class CreateVpcGatewayEndpointRequest extends Request {
         }
 
         /**
-         * 网关节点名称
+         * EndpointName.
          */
         public Builder endpointName(String endpointName) {
             this.putQueryParameter("EndpointName", endpointName);
@@ -265,7 +279,7 @@ public class CreateVpcGatewayEndpointRequest extends Request {
         }
 
         /**
-         * 访问云服务的权限控制策略
+         * PolicyDocument.
          */
         public Builder policyDocument(String policyDocument) {
             this.putQueryParameter("PolicyDocument", policyDocument);
@@ -274,11 +288,20 @@ public class CreateVpcGatewayEndpointRequest extends Request {
         }
 
         /**
-         * 地域
+         * RegionId.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
             this.regionId = regionId;
+            return this;
+        }
+
+        /**
+         * ResourceGroupId.
+         */
+        public Builder resourceGroupId(String resourceGroupId) {
+            this.putQueryParameter("ResourceGroupId", resourceGroupId);
+            this.resourceGroupId = resourceGroupId;
             return this;
         }
 
@@ -301,7 +324,7 @@ public class CreateVpcGatewayEndpointRequest extends Request {
         }
 
         /**
-         * 网关节点服务的名称
+         * The time when the gateway endpoint was created. The time follows the ISO 8601 standard in the YYYY-MM-DDThh:mm:ssZ format. The time must be in UTC.
          */
         public Builder serviceName(String serviceName) {
             this.putQueryParameter("ServiceName", serviceName);
@@ -310,7 +333,7 @@ public class CreateVpcGatewayEndpointRequest extends Request {
         }
 
         /**
-         * 专有网络实例ID
+         * The name of the gateway endpoint.
          */
         public Builder vpcId(String vpcId) {
             this.putQueryParameter("VpcId", vpcId);

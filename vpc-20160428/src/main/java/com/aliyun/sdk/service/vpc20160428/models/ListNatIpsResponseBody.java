@@ -74,7 +74,7 @@ public class ListNatIpsResponseBody extends TeaModel {
         private String totalCount; 
 
         /**
-         * NatIps.
+         * The list of IP addresses of the NAT gateway.
          */
         public Builder natIps(java.util.List < NatIps> natIps) {
             this.natIps = natIps;
@@ -82,7 +82,11 @@ public class ListNatIpsResponseBody extends TeaModel {
         }
 
         /**
-         * NextToken.
+         * The token that is used for the next query. Valid values:
+         * <p>
+         * 
+         * *   If the value of **NextToken** is not returned, it indicates that no next query is to be sent.
+         * *   If the value of **NextToken** is returned, the value indicates the token that is used for the next query.
          */
         public Builder nextToken(String nextToken) {
             this.nextToken = nextToken;
@@ -90,7 +94,7 @@ public class ListNatIpsResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -98,7 +102,7 @@ public class ListNatIpsResponseBody extends TeaModel {
         }
 
         /**
-         * TotalCount.
+         * The number of IP addresses that are returned.
          */
         public Builder totalCount(String totalCount) {
             this.totalCount = totalCount;
@@ -222,7 +226,11 @@ public class ListNatIpsResponseBody extends TeaModel {
             private String natIpStatus; 
 
             /**
-             * IsDefault.
+             * Indicates whether the IP address is the default IP address of the NAT gateway. Valid values:
+             * <p>
+             * 
+             * *   **true**: yes
+             * *   **false**: no
              */
             public Builder isDefault(Boolean isDefault) {
                 this.isDefault = isDefault;
@@ -230,7 +238,7 @@ public class ListNatIpsResponseBody extends TeaModel {
             }
 
             /**
-             * NatGatewayId.
+             * The ID of the Virtual Private Cloud (VPC) NAT gateway to which the IP address is assigned.
              */
             public Builder natGatewayId(String natGatewayId) {
                 this.natGatewayId = natGatewayId;
@@ -238,7 +246,7 @@ public class ListNatIpsResponseBody extends TeaModel {
             }
 
             /**
-             * NatIp.
+             * The IP address.
              */
             public Builder natIp(String natIp) {
                 this.natIp = natIp;
@@ -246,7 +254,7 @@ public class ListNatIpsResponseBody extends TeaModel {
             }
 
             /**
-             * NatIpCidr.
+             * The CIDR block to which the IP address belongs.
              */
             public Builder natIpCidr(String natIpCidr) {
                 this.natIpCidr = natIpCidr;
@@ -254,7 +262,7 @@ public class ListNatIpsResponseBody extends TeaModel {
             }
 
             /**
-             * NatIpDescription.
+             * The description of the IP address.
              */
             public Builder natIpDescription(String natIpDescription) {
                 this.natIpDescription = natIpDescription;
@@ -262,7 +270,7 @@ public class ListNatIpsResponseBody extends TeaModel {
             }
 
             /**
-             * NatIpId.
+             * The ID of the IP address.
              */
             public Builder natIpId(String natIpId) {
                 this.natIpId = natIpId;
@@ -270,7 +278,7 @@ public class ListNatIpsResponseBody extends TeaModel {
             }
 
             /**
-             * NatIpName.
+             * The name of the IP address.
              */
             public Builder natIpName(String natIpName) {
                 this.natIpName = natIpName;
@@ -278,7 +286,15 @@ public class ListNatIpsResponseBody extends TeaModel {
             }
 
             /**
-             * NatIpStatus.
+             * The status of the IP address. Valid values:
+             * <p>
+             * 
+             * *   **Available**: available
+             * *   **Deleted**: deleted
+             * *   **Deleting**: deleting
+             * *   **Creating**: creating
+             * *   **Associated**: specified in an SNAT or DNAT entry
+             * *   **Associating**: being specified in an SNAT or DNAT entry
              */
             public Builder natIpStatus(String natIpStatus) {
                 this.natIpStatus = natIpStatus;

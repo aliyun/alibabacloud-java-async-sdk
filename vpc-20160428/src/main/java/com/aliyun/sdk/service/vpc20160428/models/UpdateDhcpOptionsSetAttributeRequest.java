@@ -238,7 +238,12 @@ public class UpdateDhcpOptionsSetAttributeRequest extends Request {
         } 
 
         /**
-         * ClientToken.
+         * The client token that is used to ensure the idempotence of the request.
+         * <p>
+         * 
+         * You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters.
+         * 
+         * >  If you do not set this parameter, **ClientToken** is set to the value of **RequestId**. The value of **RequestId** for each API request may be different.
          */
         public Builder clientToken(String clientToken) {
             this.putQueryParameter("ClientToken", clientToken);
@@ -247,7 +252,10 @@ public class UpdateDhcpOptionsSetAttributeRequest extends Request {
         }
 
         /**
-         * DhcpOptionsSetDescription.
+         * Enter a description for the DHCP options set.
+         * <p>
+         * 
+         * The description must be 2 to 256 characters in length. It must start with a letter and cannot start with `http://` or `https://`. You can also leave the description empty.
          */
         public Builder dhcpOptionsSetDescription(String dhcpOptionsSetDescription) {
             this.putQueryParameter("DhcpOptionsSetDescription", dhcpOptionsSetDescription);
@@ -256,7 +264,7 @@ public class UpdateDhcpOptionsSetAttributeRequest extends Request {
         }
 
         /**
-         * DhcpOptionsSetId.
+         * The ID of the DHCP options set.
          */
         public Builder dhcpOptionsSetId(String dhcpOptionsSetId) {
             this.putQueryParameter("DhcpOptionsSetId", dhcpOptionsSetId);
@@ -265,7 +273,10 @@ public class UpdateDhcpOptionsSetAttributeRequest extends Request {
         }
 
         /**
-         * DhcpOptionsSetName.
+         * The name of the DHCP options set.
+         * <p>
+         * 
+         * The name must be 2 to 128 characters in length, and can contain letters, digits, underscores (\_), and hyphens (-). The name must start with a letter.
          */
         public Builder dhcpOptionsSetName(String dhcpOptionsSetName) {
             this.putQueryParameter("DhcpOptionsSetName", dhcpOptionsSetName);
@@ -274,7 +285,10 @@ public class UpdateDhcpOptionsSetAttributeRequest extends Request {
         }
 
         /**
-         * DomainName.
+         * The root domain. For example, you can set the value to example.com.
+         * <p>
+         * 
+         * After a DHCP options set is associated with a virtual private cloud (VPC), the root domain in the DHCP options set is automatically synchronized with the ECS instances in the VPC.
          */
         public Builder domainName(String domainName) {
             this.putQueryParameter("DomainName", domainName);
@@ -283,7 +297,10 @@ public class UpdateDhcpOptionsSetAttributeRequest extends Request {
         }
 
         /**
-         * DomainNameServers.
+         * The IP address of the DNS server. You can enter at most four DNS server IP addresses. Separate IP addresses with commas (,).
+         * <p>
+         * 
+         * >  If you do not specify a DNS server IP address, Elastic Compute Service (ECS) instances use the IP addresses of the Alibaba Cloud DNS servers, which are 100.100.2.136 and 100.100.2.138.
          */
         public Builder domainNameServers(String domainNameServers) {
             this.putQueryParameter("DomainNameServers", domainNameServers);
@@ -292,7 +309,12 @@ public class UpdateDhcpOptionsSetAttributeRequest extends Request {
         }
 
         /**
-         * DryRun.
+         * Specifies whether to perform a dry run. Valid values:
+         * <p>
+         * 
+         * **true**: performs a dry run. The system checks the required parameters, request format, and limits. If the request fails the dry run, an error message is returned. If the request passes the dry run, the `DryRunOperation` error code is returned.
+         * 
+         * **false** (default): performs a dry run and sends the request. If the request passes the dry run, a 2xx HTTP status code is returned and the operation is performed.
          */
         public Builder dryRun(Boolean dryRun) {
             this.putQueryParameter("DryRun", dryRun);
@@ -301,7 +323,13 @@ public class UpdateDhcpOptionsSetAttributeRequest extends Request {
         }
 
         /**
-         * Ipv6LeaseTime.
+         * The lease time of the IPv6 addresses for the DHCP options set.
+         * <p>
+         * 
+         * *   If you use hours as the unit, valid values are **24h to 1176h** and **87600h to 175200h**. Default value: **87600h**.
+         * *   If you use days as the unit, valid values are **1d to 49d** and **3650d to 7300d**. Default value: **3650d**.
+         * 
+         * >  If you specify a value, you must also specify the unit.
          */
         public Builder ipv6LeaseTime(String ipv6LeaseTime) {
             this.putQueryParameter("Ipv6LeaseTime", ipv6LeaseTime);
@@ -310,7 +338,13 @@ public class UpdateDhcpOptionsSetAttributeRequest extends Request {
         }
 
         /**
-         * LeaseTime.
+         * The lease time of the IPv4 addresses for the DHCP options set.
+         * <p>
+         * 
+         * *   If you use hours as the unit, valid values are **24h to 1176h** and **87600h to 175200h**. Default value: **87600h**.
+         * *   If you use days as the unit, valid values are **1d to 49d** and **3650d to 7300d**. Default value: **3650d**.
+         * 
+         * >  If you specify a value, you must also specify the unit.
          */
         public Builder leaseTime(String leaseTime) {
             this.putQueryParameter("LeaseTime", leaseTime);
@@ -337,7 +371,7 @@ public class UpdateDhcpOptionsSetAttributeRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * The region where the DHCP options set is deployed. You can call the [DescribeRegions](~~36063~~) operation to query the most recent region list.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);

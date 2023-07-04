@@ -37,6 +37,10 @@ public class ModifyVpnConnectionAttributeRequest extends Request {
     private Boolean enableNatTraversal;
 
     @Query
+    @NameInMap("EnableTunnelsBgp")
+    private Boolean enableTunnelsBgp;
+
+    @Query
     @NameInMap("HealthCheckConfig")
     private String healthCheckConfig;
 
@@ -85,6 +89,10 @@ public class ModifyVpnConnectionAttributeRequest extends Request {
     @NameInMap("ResourceOwnerId")
     private Long resourceOwnerId;
 
+    @Body
+    @NameInMap("TunnelOptionsSpecification")
+    private java.util.List < TunnelOptionsSpecification> tunnelOptionsSpecification;
+
     @Query
     @NameInMap("VpnConnectionId")
     @Validation(required = true)
@@ -98,6 +106,7 @@ public class ModifyVpnConnectionAttributeRequest extends Request {
         this.effectImmediately = builder.effectImmediately;
         this.enableDpd = builder.enableDpd;
         this.enableNatTraversal = builder.enableNatTraversal;
+        this.enableTunnelsBgp = builder.enableTunnelsBgp;
         this.healthCheckConfig = builder.healthCheckConfig;
         this.ikeConfig = builder.ikeConfig;
         this.ipsecConfig = builder.ipsecConfig;
@@ -110,6 +119,7 @@ public class ModifyVpnConnectionAttributeRequest extends Request {
         this.remoteSubnet = builder.remoteSubnet;
         this.resourceOwnerAccount = builder.resourceOwnerAccount;
         this.resourceOwnerId = builder.resourceOwnerId;
+        this.tunnelOptionsSpecification = builder.tunnelOptionsSpecification;
         this.vpnConnectionId = builder.vpnConnectionId;
     }
 
@@ -166,6 +176,13 @@ public class ModifyVpnConnectionAttributeRequest extends Request {
      */
     public Boolean getEnableNatTraversal() {
         return this.enableNatTraversal;
+    }
+
+    /**
+     * @return enableTunnelsBgp
+     */
+    public Boolean getEnableTunnelsBgp() {
+        return this.enableTunnelsBgp;
     }
 
     /**
@@ -253,6 +270,13 @@ public class ModifyVpnConnectionAttributeRequest extends Request {
     }
 
     /**
+     * @return tunnelOptionsSpecification
+     */
+    public java.util.List < TunnelOptionsSpecification> getTunnelOptionsSpecification() {
+        return this.tunnelOptionsSpecification;
+    }
+
+    /**
      * @return vpnConnectionId
      */
     public String getVpnConnectionId() {
@@ -266,6 +290,7 @@ public class ModifyVpnConnectionAttributeRequest extends Request {
         private Boolean effectImmediately; 
         private Boolean enableDpd; 
         private Boolean enableNatTraversal; 
+        private Boolean enableTunnelsBgp; 
         private String healthCheckConfig; 
         private String ikeConfig; 
         private String ipsecConfig; 
@@ -278,6 +303,7 @@ public class ModifyVpnConnectionAttributeRequest extends Request {
         private String remoteSubnet; 
         private String resourceOwnerAccount; 
         private Long resourceOwnerId; 
+        private java.util.List < TunnelOptionsSpecification> tunnelOptionsSpecification; 
         private String vpnConnectionId; 
 
         private Builder() {
@@ -292,6 +318,7 @@ public class ModifyVpnConnectionAttributeRequest extends Request {
             this.effectImmediately = request.effectImmediately;
             this.enableDpd = request.enableDpd;
             this.enableNatTraversal = request.enableNatTraversal;
+            this.enableTunnelsBgp = request.enableTunnelsBgp;
             this.healthCheckConfig = request.healthCheckConfig;
             this.ikeConfig = request.ikeConfig;
             this.ipsecConfig = request.ipsecConfig;
@@ -304,11 +331,16 @@ public class ModifyVpnConnectionAttributeRequest extends Request {
             this.remoteSubnet = request.remoteSubnet;
             this.resourceOwnerAccount = request.resourceOwnerAccount;
             this.resourceOwnerId = request.resourceOwnerId;
+            this.tunnelOptionsSpecification = request.tunnelOptionsSpecification;
             this.vpnConnectionId = request.vpnConnectionId;
         } 
 
         /**
-         * AutoConfigRoute.
+         * Specifies whether to automatically advertise routes. Valid values:
+         * <p>
+         * 
+         * *   **true:** automatically advertise routes.
+         * *   **false:** does not automatically advertise routes.
          */
         public Builder autoConfigRoute(Boolean autoConfigRoute) {
             this.putQueryParameter("AutoConfigRoute", autoConfigRoute);
@@ -317,7 +349,18 @@ public class ModifyVpnConnectionAttributeRequest extends Request {
         }
 
         /**
-         * BgpConfig.
+         * The Border Gateway Protocol (BGP) configurations:
+         * <p>
+         * 
+         * *   **BgpConfig.EnableBgp:** specifies whether to enable BGP. Valid values: **true** and **false**.
+         * *   **BgpConfig.LocalAsn:** the autonomous system number (ASN) on the Alibaba Cloud side. Valid values: **1** to **4294967295**.
+         * *   **BgpConfig.TunnelCidr:** the CIDR block of the IPsec tunnel. The CIDR block must belong to 169.254.0.0/16. The subnet mask of the CIDR block must be 30 bits in length.
+         * *   **LocalBgpIp:** the BGP IP address on the Alibaba Cloud side. This IP address must fall within the CIDR block of the IPsec tunnel.
+         * 
+         * > 
+         * *   This parameter is required when the VPN gateway has dynamic BGP enabled.
+         * *   Before you configure BGP, we recommend that you learn about how BGP works and the limits. For more information, see [VPN Gateway supports BGP dynamic routing](~~170235~~).
+         * *   We recommend that you use a private ASN to establish a connection to Alibaba Cloud over BGP. Refer to the relevant documentation for the private ASN range.
          */
         public Builder bgpConfig(String bgpConfig) {
             this.putQueryParameter("BgpConfig", bgpConfig);
@@ -326,7 +369,12 @@ public class ModifyVpnConnectionAttributeRequest extends Request {
         }
 
         /**
-         * ClientToken.
+         * The client token that you want to use to ensure the idempotence of the request.
+         * <p>
+         * 
+         * You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters.
+         * 
+         * >  If you do not specify this parameter, the system uses the value of **RequestId** as the value of **ClientToken**. The value of the **RequestId** parameter may be different for each API request.
          */
         public Builder clientToken(String clientToken) {
             this.putQueryParameter("ClientToken", clientToken);
@@ -335,7 +383,11 @@ public class ModifyVpnConnectionAttributeRequest extends Request {
         }
 
         /**
-         * EffectImmediately.
+         * Specifies whether to immediately start IPsec negotiations after the configuration takes effect. Valid values:
+         * <p>
+         * 
+         * *   **true:** immediately starts IPsec negotiations after the configuration takes effect.
+         * *   **false:** starts IPsec negotiations when inbound traffic is detected.
          */
         public Builder effectImmediately(Boolean effectImmediately) {
             this.putQueryParameter("EffectImmediately", effectImmediately);
@@ -344,7 +396,11 @@ public class ModifyVpnConnectionAttributeRequest extends Request {
         }
 
         /**
-         * EnableDpd.
+         * Specifies whether to enable the dead peer detection (DPD) feature. Valid values:
+         * <p>
+         * 
+         * *   **true:** enables the DPD feature. The initiator of the IPsec-VPN connection sends DPD packets to verify the peer is active. If no feedback is received from the peer within a specified period of time, the connection fails, and ISAKMP SA, IPsec SA, and security tunnel are deleted.
+         * *   **false:** disables the DPD feature. The initiator of the IPsec-VPN connection does not send DPD packets.
          */
         public Builder enableDpd(Boolean enableDpd) {
             this.putQueryParameter("EnableDpd", enableDpd);
@@ -353,7 +409,11 @@ public class ModifyVpnConnectionAttributeRequest extends Request {
         }
 
         /**
-         * EnableNatTraversal.
+         * Specifies whether to enable NAT traversal. Valid values:
+         * <p>
+         * 
+         * *   **true:** enables NAT traversal. After NAT traversal is enabled, the initiator does not check the UDP ports during IKE negotiations and can automatically discover NAT gateway devices along the IPsec tunnel.
+         * *   **false:** disables NAT traversal.
          */
         public Builder enableNatTraversal(Boolean enableNatTraversal) {
             this.putQueryParameter("EnableNatTraversal", enableNatTraversal);
@@ -362,7 +422,23 @@ public class ModifyVpnConnectionAttributeRequest extends Request {
         }
 
         /**
-         * HealthCheckConfig.
+         * EnableTunnelsBgp.
+         */
+        public Builder enableTunnelsBgp(Boolean enableTunnelsBgp) {
+            this.putQueryParameter("EnableTunnelsBgp", enableTunnelsBgp);
+            this.enableTunnelsBgp = enableTunnelsBgp;
+            return this;
+        }
+
+        /**
+         * The health check configurations:
+         * <p>
+         * 
+         * *   **HealthCheckConfig.enable:** specifies whether to enable the health check feature. Valid values: **true** and **false**.
+         * *   **HealthCheckConfig.dip:** the destination IP address that is used for health checks.
+         * *   **HealthCheckConfig.sip:** the source IP address that is used for health checks.
+         * *   **HealthCheckConfig.interval:** the interval between two consecutive health checks. Unit: seconds.
+         * *   **HealthCheckConfig.retry:** the maximum number of health check retries.
          */
         public Builder healthCheckConfig(String healthCheckConfig) {
             this.putQueryParameter("HealthCheckConfig", healthCheckConfig);
@@ -371,7 +447,30 @@ public class ModifyVpnConnectionAttributeRequest extends Request {
         }
 
         /**
-         * IkeConfig.
+         * The configurations of Phase 1 negotiations:
+         * <p>
+         * 
+         * *   **IkeConfig.Psk:** The pre-shared key that is used for authentication between the VPN gateway and the data center. The key must be 1 to 100 characters in length.
+         * 
+         *     If you do not specify a pre-shared key, the system generates a random 16-bit string as the pre-shared key. You can call the [DescribeVpnConnection](~~120374~~) operation to query the pre-shared key that is generated by the system.
+         * 
+         * > The pre-shared key of the IPsec-VPN connection must be the same as the authentication key of the data center. Otherwise, you cannot establish a connection between the data center and the VPN gateway.
+         * 
+         * *   **IkeConfig.IkeVersion:** the version of the IKE protocol. Valid values: **ikev1** and **ikev2**.
+         * 
+         * *   **IkeConfig.IkeMode:** the negotiation mode of IKE V1. Valid values: **main** and **aggressive**.
+         * 
+         * *   **IkeConfig.IkeEncAlg:** the encryption algorithm that is used in Phase 1 negotiations. Valid values: **aes**, **aes192**, **aes256**, **des**, and **3des**.
+         * 
+         * *   **IkeConfig.IkeAuthAlg:** the authentication algorithm that is used in Phase 1 negotiations. Valid values: **md5**, **sha1**, **sha256**, **sha384**, and **sha512**.
+         * 
+         * *   **IkeConfig.IkePfs:** the Diffie-Hellman key exchange algorithm that is used in Phase 1 negotiations. Valid values: **group1**, **group2**, **group5**, and **group14**.
+         * 
+         * *   **IkeConfig.IkeLifetime:** the security association (SA) lifetime that is determined by Phase 1 negotiations. Unit: seconds. Valid values: **0 to 86400**.
+         * 
+         * *   **IkeConfig.LocalId:** the identifier of the VPN gateway. The identifier cannot exceed 100 characters in length. The default value is the IP address of the VPN gateway.
+         * 
+         * *   **IkeConfig.RemoteId:** the identifier of the customer gateway. The identifier cannot exceed 100 characters in length. The default value is the IP address of the customer gateway.
          */
         public Builder ikeConfig(String ikeConfig) {
             this.putQueryParameter("IkeConfig", ikeConfig);
@@ -380,7 +479,13 @@ public class ModifyVpnConnectionAttributeRequest extends Request {
         }
 
         /**
-         * IpsecConfig.
+         * The configurations of Phase 2 negotiations:
+         * <p>
+         * 
+         * *   **IpsecConfig.IpsecEncAlg:** the encryption algorithm that is used in Phase 2 negotiations. Valid values: **aes**, **aes192**, **aes256**, **des**, and **3des**.
+         * *   **IpsecConfig. IpsecAuthAlg:** the authentication algorithm that is used in Phase 2 negotiations. Valid values: **md5**, **sha1**, **sha256**, **sha384**, and **sha512**.
+         * *   **IpsecConfig. IpsecPfs:** the Diffie-Hellman key exchange algorithm that is used in Phase 1 negotiations. If you specify this parameter, packets of all protocols are forwarded. Valid values: **disabled**, **group1**, **group2**, **group5**, and **group14**.
+         * *   **IpsecConfig. IpsecLifetime:** the SA lifetime that is determined by Phase 2 negotiations. Unit: seconds. Valid values: **0 to 86400**.
          */
         public Builder ipsecConfig(String ipsecConfig) {
             this.putQueryParameter("IpsecConfig", ipsecConfig);
@@ -389,7 +494,15 @@ public class ModifyVpnConnectionAttributeRequest extends Request {
         }
 
         /**
-         * LocalSubnet.
+         * The CIDR block on the virtual private cloud (VPC) side. The CIDR block is used in Phase 2 negotiations.
+         * <p>
+         * 
+         * Separate multiple CIDR blocks with commas (,). Example: 192.168.1.0/24,192.168.2.0/24.
+         * 
+         * The following routing modes are supported:
+         * 
+         * *   If you set **LocalSubnet** and **RemoteSubnet** to 0.0.0.0/0, the routing mode of the IPsec-VPN connection is set to Destination Routing Mode.
+         * *   If you set **LocalSubnet** and **RemoteSubnet** to specific CIDR blocks, the routing mode of the IPsec-VPN connection is set to Protected Data Flows.
          */
         public Builder localSubnet(String localSubnet) {
             this.putQueryParameter("LocalSubnet", localSubnet);
@@ -398,7 +511,10 @@ public class ModifyVpnConnectionAttributeRequest extends Request {
         }
 
         /**
-         * Name.
+         * The name of the IPsec-VPN connection.
+         * <p>
+         * 
+         * The name must be 1 to 100 characters in length and cannot start with `http://` or `https://`.
          */
         public Builder name(String name) {
             this.putQueryParameter("Name", name);
@@ -425,7 +541,10 @@ public class ModifyVpnConnectionAttributeRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * The ID of the region where the IPsec-VPN connection is established.
+         * <p>
+         * 
+         * You can call the [DescribeRegions](~~36063~~) operation to query the IDs of available regions.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -434,7 +553,11 @@ public class ModifyVpnConnectionAttributeRequest extends Request {
         }
 
         /**
-         * RemoteCaCertificate.
+         * The peer CA certificate when a ShangMi (SM) VPN gateway is used to establish the IPsec-VPN connection.
+         * <p>
+         * 
+         * *   This parameter is required when an SM VPN gateway is used to establish the IPsec-VPN connection.
+         * *   You can ignore this parameter when a standard VPN gateway is used to establish the IPsec-VPN connection.
          */
         public Builder remoteCaCertificate(String remoteCaCertificate) {
             this.putQueryParameter("RemoteCaCertificate", remoteCaCertificate);
@@ -443,7 +566,15 @@ public class ModifyVpnConnectionAttributeRequest extends Request {
         }
 
         /**
-         * RemoteSubnet.
+         * The CIDR block on the data center side. This CIDR block is used in Phase 2 negotiations.
+         * <p>
+         * 
+         * Separate multiple CIDR blocks with commas (,). Example: 192.168.3.0/24,192.168.4.0/24.
+         * 
+         * The following routing modes are supported:
+         * 
+         * *   If you set **LocalSubnet** and **RemoteSubnet** to 0.0.0.0/0, the routing mode of the IPsec-VPN connection is set to Destination Routing Mode.
+         * *   If you set **LocalSubnet** and **RemoteSubnet** to specific CIDR blocks, the routing mode of the IPsec-VPN connection is set to Protected Data Flows.
          */
         public Builder remoteSubnet(String remoteSubnet) {
             this.putQueryParameter("RemoteSubnet", remoteSubnet);
@@ -470,7 +601,16 @@ public class ModifyVpnConnectionAttributeRequest extends Request {
         }
 
         /**
-         * VpnConnectionId.
+         * TunnelOptionsSpecification.
+         */
+        public Builder tunnelOptionsSpecification(java.util.List < TunnelOptionsSpecification> tunnelOptionsSpecification) {
+            this.putBodyParameter("TunnelOptionsSpecification", tunnelOptionsSpecification);
+            this.tunnelOptionsSpecification = tunnelOptionsSpecification;
+            return this;
+        }
+
+        /**
+         * The ID of the IPsec-VPN connection.
          */
         public Builder vpnConnectionId(String vpnConnectionId) {
             this.putQueryParameter("VpnConnectionId", vpnConnectionId);
@@ -485,4 +625,560 @@ public class ModifyVpnConnectionAttributeRequest extends Request {
 
     } 
 
+    public static class TunnelBgpConfig extends TeaModel {
+        @NameInMap("LocalAsn")
+        private Long localAsn;
+
+        @NameInMap("LocalBgpIp")
+        private String localBgpIp;
+
+        @NameInMap("TunnelCidr")
+        private String tunnelCidr;
+
+        private TunnelBgpConfig(Builder builder) {
+            this.localAsn = builder.localAsn;
+            this.localBgpIp = builder.localBgpIp;
+            this.tunnelCidr = builder.tunnelCidr;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static TunnelBgpConfig create() {
+            return builder().build();
+        }
+
+        /**
+         * @return localAsn
+         */
+        public Long getLocalAsn() {
+            return this.localAsn;
+        }
+
+        /**
+         * @return localBgpIp
+         */
+        public String getLocalBgpIp() {
+            return this.localBgpIp;
+        }
+
+        /**
+         * @return tunnelCidr
+         */
+        public String getTunnelCidr() {
+            return this.tunnelCidr;
+        }
+
+        public static final class Builder {
+            private Long localAsn; 
+            private String localBgpIp; 
+            private String tunnelCidr; 
+
+            /**
+             * LocalAsn.
+             */
+            public Builder localAsn(Long localAsn) {
+                this.localAsn = localAsn;
+                return this;
+            }
+
+            /**
+             * LocalBgpIp.
+             */
+            public Builder localBgpIp(String localBgpIp) {
+                this.localBgpIp = localBgpIp;
+                return this;
+            }
+
+            /**
+             * TunnelCidr.
+             */
+            public Builder tunnelCidr(String tunnelCidr) {
+                this.tunnelCidr = tunnelCidr;
+                return this;
+            }
+
+            public TunnelBgpConfig build() {
+                return new TunnelBgpConfig(this);
+            } 
+
+        } 
+
+    }
+    public static class TunnelIkeConfig extends TeaModel {
+        @NameInMap("IkeAuthAlg")
+        private String ikeAuthAlg;
+
+        @NameInMap("IkeEncAlg")
+        private String ikeEncAlg;
+
+        @NameInMap("IkeLifetime")
+        private Long ikeLifetime;
+
+        @NameInMap("IkeMode")
+        private String ikeMode;
+
+        @NameInMap("IkePfs")
+        private String ikePfs;
+
+        @NameInMap("IkeVersion")
+        private String ikeVersion;
+
+        @NameInMap("LocalId")
+        private String localId;
+
+        @NameInMap("Psk")
+        private String psk;
+
+        @NameInMap("RemoteId")
+        private String remoteId;
+
+        private TunnelIkeConfig(Builder builder) {
+            this.ikeAuthAlg = builder.ikeAuthAlg;
+            this.ikeEncAlg = builder.ikeEncAlg;
+            this.ikeLifetime = builder.ikeLifetime;
+            this.ikeMode = builder.ikeMode;
+            this.ikePfs = builder.ikePfs;
+            this.ikeVersion = builder.ikeVersion;
+            this.localId = builder.localId;
+            this.psk = builder.psk;
+            this.remoteId = builder.remoteId;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static TunnelIkeConfig create() {
+            return builder().build();
+        }
+
+        /**
+         * @return ikeAuthAlg
+         */
+        public String getIkeAuthAlg() {
+            return this.ikeAuthAlg;
+        }
+
+        /**
+         * @return ikeEncAlg
+         */
+        public String getIkeEncAlg() {
+            return this.ikeEncAlg;
+        }
+
+        /**
+         * @return ikeLifetime
+         */
+        public Long getIkeLifetime() {
+            return this.ikeLifetime;
+        }
+
+        /**
+         * @return ikeMode
+         */
+        public String getIkeMode() {
+            return this.ikeMode;
+        }
+
+        /**
+         * @return ikePfs
+         */
+        public String getIkePfs() {
+            return this.ikePfs;
+        }
+
+        /**
+         * @return ikeVersion
+         */
+        public String getIkeVersion() {
+            return this.ikeVersion;
+        }
+
+        /**
+         * @return localId
+         */
+        public String getLocalId() {
+            return this.localId;
+        }
+
+        /**
+         * @return psk
+         */
+        public String getPsk() {
+            return this.psk;
+        }
+
+        /**
+         * @return remoteId
+         */
+        public String getRemoteId() {
+            return this.remoteId;
+        }
+
+        public static final class Builder {
+            private String ikeAuthAlg; 
+            private String ikeEncAlg; 
+            private Long ikeLifetime; 
+            private String ikeMode; 
+            private String ikePfs; 
+            private String ikeVersion; 
+            private String localId; 
+            private String psk; 
+            private String remoteId; 
+
+            /**
+             * IkeAuthAlg.
+             */
+            public Builder ikeAuthAlg(String ikeAuthAlg) {
+                this.ikeAuthAlg = ikeAuthAlg;
+                return this;
+            }
+
+            /**
+             * IkeEncAlg.
+             */
+            public Builder ikeEncAlg(String ikeEncAlg) {
+                this.ikeEncAlg = ikeEncAlg;
+                return this;
+            }
+
+            /**
+             * IkeLifetime.
+             */
+            public Builder ikeLifetime(Long ikeLifetime) {
+                this.ikeLifetime = ikeLifetime;
+                return this;
+            }
+
+            /**
+             * IkeMode.
+             */
+            public Builder ikeMode(String ikeMode) {
+                this.ikeMode = ikeMode;
+                return this;
+            }
+
+            /**
+             * IkePfs.
+             */
+            public Builder ikePfs(String ikePfs) {
+                this.ikePfs = ikePfs;
+                return this;
+            }
+
+            /**
+             * IkeVersion.
+             */
+            public Builder ikeVersion(String ikeVersion) {
+                this.ikeVersion = ikeVersion;
+                return this;
+            }
+
+            /**
+             * LocalId.
+             */
+            public Builder localId(String localId) {
+                this.localId = localId;
+                return this;
+            }
+
+            /**
+             * Psk.
+             */
+            public Builder psk(String psk) {
+                this.psk = psk;
+                return this;
+            }
+
+            /**
+             * RemoteId.
+             */
+            public Builder remoteId(String remoteId) {
+                this.remoteId = remoteId;
+                return this;
+            }
+
+            public TunnelIkeConfig build() {
+                return new TunnelIkeConfig(this);
+            } 
+
+        } 
+
+    }
+    public static class TunnelIpsecConfig extends TeaModel {
+        @NameInMap("IpsecAuthAlg")
+        private String ipsecAuthAlg;
+
+        @NameInMap("IpsecEncAlg")
+        private String ipsecEncAlg;
+
+        @NameInMap("IpsecLifetime")
+        private Integer ipsecLifetime;
+
+        @NameInMap("IpsecPfs")
+        private String ipsecPfs;
+
+        private TunnelIpsecConfig(Builder builder) {
+            this.ipsecAuthAlg = builder.ipsecAuthAlg;
+            this.ipsecEncAlg = builder.ipsecEncAlg;
+            this.ipsecLifetime = builder.ipsecLifetime;
+            this.ipsecPfs = builder.ipsecPfs;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static TunnelIpsecConfig create() {
+            return builder().build();
+        }
+
+        /**
+         * @return ipsecAuthAlg
+         */
+        public String getIpsecAuthAlg() {
+            return this.ipsecAuthAlg;
+        }
+
+        /**
+         * @return ipsecEncAlg
+         */
+        public String getIpsecEncAlg() {
+            return this.ipsecEncAlg;
+        }
+
+        /**
+         * @return ipsecLifetime
+         */
+        public Integer getIpsecLifetime() {
+            return this.ipsecLifetime;
+        }
+
+        /**
+         * @return ipsecPfs
+         */
+        public String getIpsecPfs() {
+            return this.ipsecPfs;
+        }
+
+        public static final class Builder {
+            private String ipsecAuthAlg; 
+            private String ipsecEncAlg; 
+            private Integer ipsecLifetime; 
+            private String ipsecPfs; 
+
+            /**
+             * IpsecAuthAlg.
+             */
+            public Builder ipsecAuthAlg(String ipsecAuthAlg) {
+                this.ipsecAuthAlg = ipsecAuthAlg;
+                return this;
+            }
+
+            /**
+             * IpsecEncAlg.
+             */
+            public Builder ipsecEncAlg(String ipsecEncAlg) {
+                this.ipsecEncAlg = ipsecEncAlg;
+                return this;
+            }
+
+            /**
+             * IpsecLifetime.
+             */
+            public Builder ipsecLifetime(Integer ipsecLifetime) {
+                this.ipsecLifetime = ipsecLifetime;
+                return this;
+            }
+
+            /**
+             * IpsecPfs.
+             */
+            public Builder ipsecPfs(String ipsecPfs) {
+                this.ipsecPfs = ipsecPfs;
+                return this;
+            }
+
+            public TunnelIpsecConfig build() {
+                return new TunnelIpsecConfig(this);
+            } 
+
+        } 
+
+    }
+    public static class TunnelOptionsSpecification extends TeaModel {
+        @NameInMap("EnableDpd")
+        private Boolean enableDpd;
+
+        @NameInMap("EnableNatTraversal")
+        private Boolean enableNatTraversal;
+
+        @NameInMap("RemoteCaCertificate")
+        private String remoteCaCertificate;
+
+        @NameInMap("TunnelBgpConfig")
+        private TunnelBgpConfig tunnelBgpConfig;
+
+        @NameInMap("TunnelId")
+        private String tunnelId;
+
+        @NameInMap("TunnelIkeConfig")
+        private TunnelIkeConfig tunnelIkeConfig;
+
+        @NameInMap("TunnelIpsecConfig")
+        private TunnelIpsecConfig tunnelIpsecConfig;
+
+        private TunnelOptionsSpecification(Builder builder) {
+            this.enableDpd = builder.enableDpd;
+            this.enableNatTraversal = builder.enableNatTraversal;
+            this.remoteCaCertificate = builder.remoteCaCertificate;
+            this.tunnelBgpConfig = builder.tunnelBgpConfig;
+            this.tunnelId = builder.tunnelId;
+            this.tunnelIkeConfig = builder.tunnelIkeConfig;
+            this.tunnelIpsecConfig = builder.tunnelIpsecConfig;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static TunnelOptionsSpecification create() {
+            return builder().build();
+        }
+
+        /**
+         * @return enableDpd
+         */
+        public Boolean getEnableDpd() {
+            return this.enableDpd;
+        }
+
+        /**
+         * @return enableNatTraversal
+         */
+        public Boolean getEnableNatTraversal() {
+            return this.enableNatTraversal;
+        }
+
+        /**
+         * @return remoteCaCertificate
+         */
+        public String getRemoteCaCertificate() {
+            return this.remoteCaCertificate;
+        }
+
+        /**
+         * @return tunnelBgpConfig
+         */
+        public TunnelBgpConfig getTunnelBgpConfig() {
+            return this.tunnelBgpConfig;
+        }
+
+        /**
+         * @return tunnelId
+         */
+        public String getTunnelId() {
+            return this.tunnelId;
+        }
+
+        /**
+         * @return tunnelIkeConfig
+         */
+        public TunnelIkeConfig getTunnelIkeConfig() {
+            return this.tunnelIkeConfig;
+        }
+
+        /**
+         * @return tunnelIpsecConfig
+         */
+        public TunnelIpsecConfig getTunnelIpsecConfig() {
+            return this.tunnelIpsecConfig;
+        }
+
+        public static final class Builder {
+            private Boolean enableDpd; 
+            private Boolean enableNatTraversal; 
+            private String remoteCaCertificate; 
+            private TunnelBgpConfig tunnelBgpConfig; 
+            private String tunnelId; 
+            private TunnelIkeConfig tunnelIkeConfig; 
+            private TunnelIpsecConfig tunnelIpsecConfig; 
+
+            /**
+             * Specifies whether to enable the dead peer detection (DPD) feature. Valid values:
+             * <p>
+             * 
+             * *   **true:** enables the DPD feature. The initiator of the IPsec-VPN connection sends DPD packets to verify the peer is active. If no feedback is received from the peer within a specified period of time, the connection fails, and ISAKMP SA, IPsec SA, and security tunnel are deleted.
+             * *   **false:** disables the DPD feature. The initiator of the IPsec-VPN connection does not send DPD packets.
+             */
+            public Builder enableDpd(Boolean enableDpd) {
+                this.enableDpd = enableDpd;
+                return this;
+            }
+
+            /**
+             * Specifies whether to enable NAT traversal. Valid values:
+             * <p>
+             * 
+             * *   **true:** enables NAT traversal. After NAT traversal is enabled, the initiator does not check the UDP ports during IKE negotiations and can automatically discover NAT gateway devices along the IPsec tunnel.
+             * *   **false:** disables NAT traversal.
+             */
+            public Builder enableNatTraversal(Boolean enableNatTraversal) {
+                this.enableNatTraversal = enableNatTraversal;
+                return this;
+            }
+
+            /**
+             * The peer CA certificate when a ShangMi (SM) VPN gateway is used to establish the IPsec-VPN connection.
+             * <p>
+             * 
+             * *   This parameter is required when an SM VPN gateway is used to establish the IPsec-VPN connection.
+             * *   You can ignore this parameter when a standard VPN gateway is used to establish the IPsec-VPN connection.
+             */
+            public Builder remoteCaCertificate(String remoteCaCertificate) {
+                this.remoteCaCertificate = remoteCaCertificate;
+                return this;
+            }
+
+            /**
+             * TunnelBgpConfig.
+             */
+            public Builder tunnelBgpConfig(TunnelBgpConfig tunnelBgpConfig) {
+                this.tunnelBgpConfig = tunnelBgpConfig;
+                return this;
+            }
+
+            /**
+             * TunnelId.
+             */
+            public Builder tunnelId(String tunnelId) {
+                this.tunnelId = tunnelId;
+                return this;
+            }
+
+            /**
+             * TunnelIkeConfig.
+             */
+            public Builder tunnelIkeConfig(TunnelIkeConfig tunnelIkeConfig) {
+                this.tunnelIkeConfig = tunnelIkeConfig;
+                return this;
+            }
+
+            /**
+             * TunnelIpsecConfig.
+             */
+            public Builder tunnelIpsecConfig(TunnelIpsecConfig tunnelIpsecConfig) {
+                this.tunnelIpsecConfig = tunnelIpsecConfig;
+                return this;
+            }
+
+            public TunnelOptionsSpecification build() {
+                return new TunnelOptionsSpecification(this);
+            } 
+
+        } 
+
+    }
 }

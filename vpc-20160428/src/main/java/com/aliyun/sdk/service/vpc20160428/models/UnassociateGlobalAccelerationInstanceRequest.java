@@ -140,7 +140,7 @@ public class UnassociateGlobalAccelerationInstanceRequest extends Request {
         } 
 
         /**
-         * GlobalAccelerationInstanceId.
+         * The ID of the GA instance.
          */
         public Builder globalAccelerationInstanceId(String globalAccelerationInstanceId) {
             this.putQueryParameter("GlobalAccelerationInstanceId", globalAccelerationInstanceId);
@@ -149,7 +149,12 @@ public class UnassociateGlobalAccelerationInstanceRequest extends Request {
         }
 
         /**
-         * InstanceType.
+         * The backend server type. Valid values:
+         * <p>
+         * 
+         * *   **RemoteEcsInstance**: Elastic Compute Service (ECS) instance
+         * *   **RemoteSlbInstance**: Server Load Balancer (SLB) instance
+         * *   **RemoteEniInstance**: elastic network interface (ENI)
          */
         public Builder instanceType(String instanceType) {
             this.putQueryParameter("InstanceType", instanceType);
@@ -176,7 +181,10 @@ public class UnassociateGlobalAccelerationInstanceRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * The region ID of the GA instance.
+         * <p>
+         * 
+         * You can call the [DescribeRegions](~~36063~~) operation to query the most recent region list.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);

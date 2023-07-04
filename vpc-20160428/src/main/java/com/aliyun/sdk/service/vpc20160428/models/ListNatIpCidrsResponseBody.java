@@ -74,7 +74,7 @@ public class ListNatIpCidrsResponseBody extends TeaModel {
         private String totalCount; 
 
         /**
-         * NatIpCidrs.
+         * The CIDR blocks of the NAT gateway.
          */
         public Builder natIpCidrs(java.util.List < NatIpCidrs> natIpCidrs) {
             this.natIpCidrs = natIpCidrs;
@@ -82,7 +82,11 @@ public class ListNatIpCidrsResponseBody extends TeaModel {
         }
 
         /**
-         * NextToken.
+         * The token that is used for the next query. Valid values:
+         * <p>
+         * 
+         * *   If the value of **NextToken** is not returned, it indicates that no next query is to be sent.
+         * *   If the value of **NextToken** is returned, the value indicates the token that is used for the next query.
          */
         public Builder nextToken(String nextToken) {
             this.nextToken = nextToken;
@@ -90,7 +94,7 @@ public class ListNatIpCidrsResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -98,7 +102,7 @@ public class ListNatIpCidrsResponseBody extends TeaModel {
         }
 
         /**
-         * TotalCount.
+         * The number of CIDR blocks that are returned.
          */
         public Builder totalCount(String totalCount) {
             this.totalCount = totalCount;
@@ -222,7 +226,7 @@ public class ListNatIpCidrsResponseBody extends TeaModel {
             private String natIpCidrStatus; 
 
             /**
-             * CreationTime.
+             * The time when the CIDR block was created.
              */
             public Builder creationTime(String creationTime) {
                 this.creationTime = creationTime;
@@ -230,7 +234,11 @@ public class ListNatIpCidrsResponseBody extends TeaModel {
             }
 
             /**
-             * IsDefault.
+             * Indicates whether the CIDR block is the default CIDR block of the NAT gateway. Valid values:
+             * <p>
+             * 
+             * *   **true**: The CIDR block is the default CIDR block of the NAT gateway.
+             * *   **false**: The CIDR block is not the default CIDR block of the NAT gateway.
              */
             public Builder isDefault(Boolean isDefault) {
                 this.isDefault = isDefault;
@@ -238,7 +246,7 @@ public class ListNatIpCidrsResponseBody extends TeaModel {
             }
 
             /**
-             * NatGatewayId.
+             * The ID of the VPC NAT gateway.
              */
             public Builder natGatewayId(String natGatewayId) {
                 this.natGatewayId = natGatewayId;
@@ -246,7 +254,7 @@ public class ListNatIpCidrsResponseBody extends TeaModel {
             }
 
             /**
-             * NatIpCidr.
+             * The CIDR block of the NAT gateway.
              */
             public Builder natIpCidr(String natIpCidr) {
                 this.natIpCidr = natIpCidr;
@@ -254,7 +262,7 @@ public class ListNatIpCidrsResponseBody extends TeaModel {
             }
 
             /**
-             * NatIpCidrDescription.
+             * The description of the CIDR block of the NAT gateway.
              */
             public Builder natIpCidrDescription(String natIpCidrDescription) {
                 this.natIpCidrDescription = natIpCidrDescription;
@@ -262,7 +270,7 @@ public class ListNatIpCidrsResponseBody extends TeaModel {
             }
 
             /**
-             * NatIpCidrId.
+             * The ID of the CIDR block of the NAT gateway.
              */
             public Builder natIpCidrId(String natIpCidrId) {
                 this.natIpCidrId = natIpCidrId;
@@ -270,7 +278,7 @@ public class ListNatIpCidrsResponseBody extends TeaModel {
             }
 
             /**
-             * NatIpCidrName.
+             * The name of the CIDR block of the NAT gateway.
              */
             public Builder natIpCidrName(String natIpCidrName) {
                 this.natIpCidrName = natIpCidrName;
@@ -278,7 +286,7 @@ public class ListNatIpCidrsResponseBody extends TeaModel {
             }
 
             /**
-             * NatIpCidrStatus.
+             * The status of the CIDR block of the NAT gateway. If **Available** is returned, it indicates that the CIDR block is available.
              */
             public Builder natIpCidrStatus(String natIpCidrStatus) {
                 this.natIpCidrStatus = natIpCidrStatus;

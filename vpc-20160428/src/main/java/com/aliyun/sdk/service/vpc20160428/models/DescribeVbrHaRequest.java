@@ -167,7 +167,10 @@ public class DescribeVbrHaRequest extends Request {
         } 
 
         /**
-         * ClientToken.
+         * The client token that is used to ensure the idempotence of the request.
+         * <p>
+         * 
+         * You can use the client to generate the value, but you must ensure that it is unique among different requests. The token can contain only ASCII characters and cannot exceed 64 characters in length.
          */
         public Builder clientToken(String clientToken) {
             this.putQueryParameter("ClientToken", clientToken);
@@ -176,7 +179,11 @@ public class DescribeVbrHaRequest extends Request {
         }
 
         /**
-         * DryRun.
+         * Specifies whether to precheck the request. Valid values:
+         * <p>
+         * 
+         * *   **true**: prechecks the request without performing the operation. The system checks the request format, instance status, and whether the required parameters are specified. An error message is returned if the request fails the precheck. If the request passes the precheck, `DRYRUN.SUCCESS` is returned.
+         * *   **false**: prechecks the request. After the request passes the precheck, the operation is performed.
          */
         public Builder dryRun(Boolean dryRun) {
             this.putQueryParameter("DryRun", dryRun);
@@ -203,7 +210,7 @@ public class DescribeVbrHaRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * The ID of the region where the VBR is deployed.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -230,7 +237,7 @@ public class DescribeVbrHaRequest extends Request {
         }
 
         /**
-         * VbrHaId.
+         * The ID of the VBR failover group.
          */
         public Builder vbrHaId(String vbrHaId) {
             this.putQueryParameter("VbrHaId", vbrHaId);
@@ -239,7 +246,7 @@ public class DescribeVbrHaRequest extends Request {
         }
 
         /**
-         * VbrId.
+         * The ID of the VBR.
          */
         public Builder vbrId(String vbrId) {
             this.putQueryParameter("VbrId", vbrId);

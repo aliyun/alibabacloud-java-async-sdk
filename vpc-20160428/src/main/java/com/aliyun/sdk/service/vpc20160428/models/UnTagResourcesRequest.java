@@ -169,7 +169,11 @@ public class UnTagResourcesRequest extends Request {
         } 
 
         /**
-         * All.
+         * Specifies whether to remove all tags from the specified resource. Valid values:
+         * <p>
+         * 
+         * *   **true**: removes all tags from the specified resource.
+         * *   **false**: does not remove all tags from the specified resource. This is the default value.
          */
         public Builder all(Boolean all) {
             this.putQueryParameter("All", all);
@@ -196,7 +200,10 @@ public class UnTagResourcesRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * The ID of the region to which the resource belongs.
+         * <p>
+         * 
+         * You can call the [DescribeRegions](~~36063~~) operation to query the most recent region list.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -232,7 +239,16 @@ public class UnTagResourcesRequest extends Request {
         }
 
         /**
-         * ResourceType.
+         * The resource type. Valid values:
+         * <p>
+         * 
+         * *   **VPC**: a virtual private cloud (VPC)
+         * *   **VSWITCH**: a vSwitch
+         * *   **ROUTETABLE**: a route table
+         * *   **EIP**: an elastic IP address (EIP)
+         * *   **VpnGateway**: a VPN gateway
+         * *   **NATGATEWAY**: a NAT gateway
+         * *   **COMMONBANDWIDTHPACKAGE**: an EIP bandwidth plan
          */
         public Builder resourceType(String resourceType) {
             this.putQueryParameter("ResourceType", resourceType);

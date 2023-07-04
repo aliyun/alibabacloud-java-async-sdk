@@ -86,7 +86,7 @@ public class DescribeVpnRouteEntriesResponseBody extends TeaModel {
         private VpnRouteEntries vpnRouteEntries; 
 
         /**
-         * PageNumber.
+         * The page number of the returned page.
          */
         public Builder pageNumber(Integer pageNumber) {
             this.pageNumber = pageNumber;
@@ -94,7 +94,7 @@ public class DescribeVpnRouteEntriesResponseBody extends TeaModel {
         }
 
         /**
-         * PageSize.
+         * The number of entries returned per page.
          */
         public Builder pageSize(Integer pageSize) {
             this.pageSize = pageSize;
@@ -102,7 +102,7 @@ public class DescribeVpnRouteEntriesResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -110,7 +110,7 @@ public class DescribeVpnRouteEntriesResponseBody extends TeaModel {
         }
 
         /**
-         * TotalCount.
+         * The total number of entries returned.
          */
         public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;
@@ -118,7 +118,7 @@ public class DescribeVpnRouteEntriesResponseBody extends TeaModel {
         }
 
         /**
-         * VpnRouteEntries.
+         * The list of route entries.
          */
         public Builder vpnRouteEntries(VpnRouteEntries vpnRouteEntries) {
             this.vpnRouteEntries = vpnRouteEntries;
@@ -144,6 +144,9 @@ public class DescribeVpnRouteEntriesResponseBody extends TeaModel {
         @NameInMap("NextHop")
         private String nextHop;
 
+        @NameInMap("NextHopTunnelId")
+        private String nextHopTunnelId;
+
         @NameInMap("RouteDest")
         private String routeDest;
 
@@ -167,6 +170,7 @@ public class DescribeVpnRouteEntriesResponseBody extends TeaModel {
             this.community = builder.community;
             this.createTime = builder.createTime;
             this.nextHop = builder.nextHop;
+            this.nextHopTunnelId = builder.nextHopTunnelId;
             this.routeDest = builder.routeDest;
             this.routeEntryType = builder.routeEntryType;
             this.source = builder.source;
@@ -209,6 +213,13 @@ public class DescribeVpnRouteEntriesResponseBody extends TeaModel {
          */
         public String getNextHop() {
             return this.nextHop;
+        }
+
+        /**
+         * @return nextHopTunnelId
+         */
+        public String getNextHopTunnelId() {
+            return this.nextHopTunnelId;
         }
 
         /**
@@ -258,6 +269,7 @@ public class DescribeVpnRouteEntriesResponseBody extends TeaModel {
             private String community; 
             private Long createTime; 
             private String nextHop; 
+            private String nextHopTunnelId; 
             private String routeDest; 
             private String routeEntryType; 
             private String source; 
@@ -266,7 +278,7 @@ public class DescribeVpnRouteEntriesResponseBody extends TeaModel {
             private Integer weight; 
 
             /**
-             * AsPath.
+             * The AS path of the route entry.
              */
             public Builder asPath(String asPath) {
                 this.asPath = asPath;
@@ -274,7 +286,7 @@ public class DescribeVpnRouteEntriesResponseBody extends TeaModel {
             }
 
             /**
-             * Community.
+             * The community attributes of the route entry.
              */
             public Builder community(String community) {
                 this.community = community;
@@ -282,7 +294,7 @@ public class DescribeVpnRouteEntriesResponseBody extends TeaModel {
             }
 
             /**
-             * CreateTime.
+             * The timestamp when the route entry was created.
              */
             public Builder createTime(Long createTime) {
                 this.createTime = createTime;
@@ -290,7 +302,7 @@ public class DescribeVpnRouteEntriesResponseBody extends TeaModel {
             }
 
             /**
-             * NextHop.
+             * The next hop of the route entry.
              */
             public Builder nextHop(String nextHop) {
                 this.nextHop = nextHop;
@@ -298,7 +310,15 @@ public class DescribeVpnRouteEntriesResponseBody extends TeaModel {
             }
 
             /**
-             * RouteDest.
+             * NextHopTunnelId.
+             */
+            public Builder nextHopTunnelId(String nextHopTunnelId) {
+                this.nextHopTunnelId = nextHopTunnelId;
+                return this;
+            }
+
+            /**
+             * The destination CIDR block of the route entry.
              */
             public Builder routeDest(String routeDest) {
                 this.routeDest = routeDest;
@@ -306,7 +326,11 @@ public class DescribeVpnRouteEntriesResponseBody extends TeaModel {
             }
 
             /**
-             * RouteEntryType.
+             * The type of the route entry. Valid values:
+             * <p>
+             * 
+             * *   **Custom**: custom
+             * *   **System**: system
              */
             public Builder routeEntryType(String routeEntryType) {
                 this.routeEntryType = routeEntryType;
@@ -314,7 +338,7 @@ public class DescribeVpnRouteEntriesResponseBody extends TeaModel {
             }
 
             /**
-             * Source.
+             * The source CIDR block of the route entry.
              */
             public Builder source(String source) {
                 this.source = source;
@@ -322,7 +346,11 @@ public class DescribeVpnRouteEntriesResponseBody extends TeaModel {
             }
 
             /**
-             * State.
+             * The status of the route entry. Valid values:
+             * <p>
+             * 
+             * *   **published**: advertised
+             * *   **normal**: not advertised
              */
             public Builder state(String state) {
                 this.state = state;
@@ -330,7 +358,7 @@ public class DescribeVpnRouteEntriesResponseBody extends TeaModel {
             }
 
             /**
-             * VpnInstanceId.
+             * The ID of the VPN gateway.
              */
             public Builder vpnInstanceId(String vpnInstanceId) {
                 this.vpnInstanceId = vpnInstanceId;
@@ -338,7 +366,11 @@ public class DescribeVpnRouteEntriesResponseBody extends TeaModel {
             }
 
             /**
-             * Weight.
+             * The weight of the route entry. Valid values: **0** and **100**.
+             * <p>
+             * 
+             * *   **0**: a low priority
+             * *   **100**: a high priority
              */
             public Builder weight(Integer weight) {
                 this.weight = weight;

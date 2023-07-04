@@ -50,7 +50,7 @@ public class CreateIpv6EgressOnlyRuleResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * Ipv6EgressRuleId.
+         * The ID of the egress-only rule.
          */
         public Builder ipv6EgressRuleId(String ipv6EgressRuleId) {
             this.ipv6EgressRuleId = ipv6EgressRuleId;
@@ -58,7 +58,7 @@ public class CreateIpv6EgressOnlyRuleResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

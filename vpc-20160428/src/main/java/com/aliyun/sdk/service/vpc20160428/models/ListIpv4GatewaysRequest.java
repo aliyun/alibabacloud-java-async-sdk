@@ -209,7 +209,7 @@ public class ListIpv4GatewaysRequest extends Request {
         } 
 
         /**
-         * Ipv4GatewayId.
+         * The ID of the IPv4 gateway.
          */
         public Builder ipv4GatewayId(String ipv4GatewayId) {
             this.putQueryParameter("Ipv4GatewayId", ipv4GatewayId);
@@ -218,7 +218,10 @@ public class ListIpv4GatewaysRequest extends Request {
         }
 
         /**
-         * Ipv4GatewayName.
+         * The name of the IPv4 gateway.
+         * <p>
+         * 
+         * The name must be 1 to 128 characters in length, and cannot start with `http://` or `https://`.
          */
         public Builder ipv4GatewayName(String ipv4GatewayName) {
             this.putQueryParameter("Ipv4GatewayName", ipv4GatewayName);
@@ -227,7 +230,7 @@ public class ListIpv4GatewaysRequest extends Request {
         }
 
         /**
-         * MaxResults.
+         * The number of entries to return on each page. Valid values: **1** to **100**. Default value: **10**.
          */
         public Builder maxResults(Integer maxResults) {
             this.putQueryParameter("MaxResults", maxResults);
@@ -236,7 +239,11 @@ public class ListIpv4GatewaysRequest extends Request {
         }
 
         /**
-         * NextToken.
+         * The token that is used for the next query. Valid values:
+         * <p>
+         * 
+         * *   If this is your first query and no next queries are to be sent, ignore this parameter.
+         * *   If a next query is to be sent, set the value to the value of NextToken that is returned from the last call.
          */
         public Builder nextToken(String nextToken) {
             this.putQueryParameter("NextToken", nextToken);
@@ -263,7 +270,10 @@ public class ListIpv4GatewaysRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * The ID of the region where the IPv4 gateways to be queried are deployed.
+         * <p>
+         * 
+         * You can call the [DescribeRegions](~~36063~~) operation to query the most recent region list.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -272,7 +282,7 @@ public class ListIpv4GatewaysRequest extends Request {
         }
 
         /**
-         * ResourceGroupId.
+         * The ID of the resource group to which the IPv4 gateway belongs.
          */
         public Builder resourceGroupId(String resourceGroupId) {
             this.putQueryParameter("ResourceGroupId", resourceGroupId);
@@ -308,7 +318,7 @@ public class ListIpv4GatewaysRequest extends Request {
         }
 
         /**
-         * VpcId.
+         * The ID of the virtual private cloud (VPC) with which the IPv4 gateway is associated.
          */
         public Builder vpcId(String vpcId) {
             this.putQueryParameter("VpcId", vpcId);
@@ -362,7 +372,10 @@ public class ListIpv4GatewaysRequest extends Request {
             private String value; 
 
             /**
-             * Key.
+             * The tag key. You can specify at most 20 tag keys. The tag key cannot be an empty string.
+             * <p>
+             * 
+             * The key cannot exceed 64 characters in length, and can contain digits, periods (.), underscores (\_), and hyphens (-). The key must start with a letter but cannot start with `aliyun` or `acs:`. The key cannot contain `http://` or `https://`.
              */
             public Builder key(String key) {
                 this.key = key;
@@ -370,7 +383,10 @@ public class ListIpv4GatewaysRequest extends Request {
             }
 
             /**
-             * Value.
+             * The tag value. You can specify at most 20 tag values. It can be an empty string.
+             * <p>
+             * 
+             * The tag value cannot exceed 128 characters in length, and can contain digits, periods (.), underscores (\_), and hyphens (-). It must start with a letter but cannot start with `aliyun` or `acs:`. It cannot contain `http://` or `https://`.
              */
             public Builder value(String value) {
                 this.value = value;

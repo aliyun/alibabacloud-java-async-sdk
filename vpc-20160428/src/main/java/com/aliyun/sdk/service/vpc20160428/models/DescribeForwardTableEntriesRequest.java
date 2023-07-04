@@ -266,7 +266,9 @@ public class DescribeForwardTableEntriesRequest extends Request {
         } 
 
         /**
-         * ExternalIp.
+         * *   The elastic IP addresses (EIPs) that can be accessed over the Internet when you query DNAT entries of Internet NAT gateways.
+         * <p>
+         * *   The NAT IP addresses that can be accessed by external networks when you query DNAT entries of Virtual Private Cloud (VPC) NAT gateways.
          */
         public Builder externalIp(String externalIp) {
             this.putQueryParameter("ExternalIp", externalIp);
@@ -275,7 +277,14 @@ public class DescribeForwardTableEntriesRequest extends Request {
         }
 
         /**
-         * ExternalPort.
+         * *   The external port or port range that is used for port forwarding when you query DNAT entries of Internet NAT gateways.
+         * <p>
+         * 
+         *     *   Valid values: **1** to **65535**.
+         *     *   If you want to query a port range, separate the first port and last port with a forward slash (/), such as `10/20`.
+         *     *   If you set **ExternalPort** to a port range, you must also set **InternalPort** to a port range, and the number of ports specified by these parameters must be the same. For example, if you set **ExternalPort** to `10/20`, you can set **InternalPort** to `80/90`.
+         * 
+         * *   The port that is used when the NAT IP address can be accessed by external networks when you query DNAT entries of VPC NAT gateways. Valid values: **1** to **65535**.
          */
         public Builder externalPort(String externalPort) {
             this.putQueryParameter("ExternalPort", externalPort);
@@ -284,7 +293,7 @@ public class DescribeForwardTableEntriesRequest extends Request {
         }
 
         /**
-         * ForwardEntryId.
+         * The ID of the DNAT entry.
          */
         public Builder forwardEntryId(String forwardEntryId) {
             this.putQueryParameter("ForwardEntryId", forwardEntryId);
@@ -293,7 +302,10 @@ public class DescribeForwardTableEntriesRequest extends Request {
         }
 
         /**
-         * ForwardEntryName.
+         * The name of the DNAT entry.
+         * <p>
+         * 
+         * The name must be 2 to 128 characters in length, and can contain digits, periods (.), underscores (\_), and hyphens (-). It must start with a letter.
          */
         public Builder forwardEntryName(String forwardEntryName) {
             this.putQueryParameter("ForwardEntryName", forwardEntryName);
@@ -302,7 +314,10 @@ public class DescribeForwardTableEntriesRequest extends Request {
         }
 
         /**
-         * ForwardTableId.
+         * The ID of the DNAT table.
+         * <p>
+         * 
+         * >  You must set at least one of the **ForwardTableId** and **NatGatewayId** parameters.
          */
         public Builder forwardTableId(String forwardTableId) {
             this.putQueryParameter("ForwardTableId", forwardTableId);
@@ -311,7 +326,11 @@ public class DescribeForwardTableEntriesRequest extends Request {
         }
 
         /**
-         * InternalIp.
+         * The private IP address.
+         * <p>
+         * 
+         * *   The private IP address of the ECS instance that uses DNAT entries to communicate with the Internet when you query DNAT entries of Internet NAT gateways.
+         * *   The private IP address that uses DNAT entries for communication when you query DNAT entries of VPC NAT gateways.
          */
         public Builder internalIp(String internalIp) {
             this.putQueryParameter("InternalIp", internalIp);
@@ -320,7 +339,9 @@ public class DescribeForwardTableEntriesRequest extends Request {
         }
 
         /**
-         * InternalPort.
+         * *   The internal port or port range that is used for port forwarding when you query DNAT entries of Internet NAT gateways. Valid values: **1** to **65535**.
+         * <p>
+         * *   The port of the destination ECS instance to be mapped when you query DNAT entries of VPC NAT gateways. Valid values: **1** to **65535**.
          */
         public Builder internalPort(String internalPort) {
             this.putQueryParameter("InternalPort", internalPort);
@@ -329,7 +350,12 @@ public class DescribeForwardTableEntriesRequest extends Request {
         }
 
         /**
-         * IpProtocol.
+         * The protocol. Valid values:
+         * <p>
+         * 
+         * *   **TCP**: The NAT gateway forwards TCP packets.
+         * *   **UDP**: The NAT gateway forwards UDP packets.
+         * *   **Any**: The NAT gateway forwards packets of all protocols.
          */
         public Builder ipProtocol(String ipProtocol) {
             this.putQueryParameter("IpProtocol", ipProtocol);
@@ -338,7 +364,10 @@ public class DescribeForwardTableEntriesRequest extends Request {
         }
 
         /**
-         * NatGatewayId.
+         * The ID of the NAT gateway.
+         * <p>
+         * 
+         * >  You must set at least one of the **ForwardTableId** and **NatGatewayId** parameters.
          */
         public Builder natGatewayId(String natGatewayId) {
             this.putQueryParameter("NatGatewayId", natGatewayId);
@@ -365,7 +394,7 @@ public class DescribeForwardTableEntriesRequest extends Request {
         }
 
         /**
-         * PageNumber.
+         * The page number of the page to return. Default value: **1**.
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -374,7 +403,7 @@ public class DescribeForwardTableEntriesRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * The number of entries to return on each page. Maximum value: **50**. Default value: **10**.
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -383,7 +412,10 @@ public class DescribeForwardTableEntriesRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * The region ID of the NAT gateway.
+         * <p>
+         * 
+         * You can call the [DescribeRegions](~~36063~~) operation to query the most recent region list.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);

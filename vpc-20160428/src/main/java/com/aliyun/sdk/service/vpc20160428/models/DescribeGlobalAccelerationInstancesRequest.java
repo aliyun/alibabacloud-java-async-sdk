@@ -252,7 +252,11 @@ public class DescribeGlobalAccelerationInstancesRequest extends Request {
         } 
 
         /**
-         * BandwidthType.
+         * The bandwidth type of the GA instance. Valid values:
+         * <p>
+         * 
+         * *   **Sharing**
+         * *   **Exclusive** (default)
          */
         public Builder bandwidthType(String bandwidthType) {
             this.putQueryParameter("BandwidthType", bandwidthType);
@@ -261,7 +265,7 @@ public class DescribeGlobalAccelerationInstancesRequest extends Request {
         }
 
         /**
-         * GlobalAccelerationInstanceId.
+         * The ID of the GA instance.
          */
         public Builder globalAccelerationInstanceId(String globalAccelerationInstanceId) {
             this.putQueryParameter("GlobalAccelerationInstanceId", globalAccelerationInstanceId);
@@ -270,7 +274,11 @@ public class DescribeGlobalAccelerationInstancesRequest extends Request {
         }
 
         /**
-         * IncludeReservationData.
+         * Specifies whether to return information about pending orders. Valid values:
+         * <p>
+         * 
+         * *   **false** (default)
+         * *   **true**
          */
         public Builder includeReservationData(Boolean includeReservationData) {
             this.putQueryParameter("IncludeReservationData", includeReservationData);
@@ -279,7 +287,7 @@ public class DescribeGlobalAccelerationInstancesRequest extends Request {
         }
 
         /**
-         * IpAddress.
+         * The public IP address of the GA instance.
          */
         public Builder ipAddress(String ipAddress) {
             this.putQueryParameter("IpAddress", ipAddress);
@@ -288,7 +296,7 @@ public class DescribeGlobalAccelerationInstancesRequest extends Request {
         }
 
         /**
-         * Name.
+         * The name of the GA instance.
          */
         public Builder name(String name) {
             this.putQueryParameter("Name", name);
@@ -315,7 +323,7 @@ public class DescribeGlobalAccelerationInstancesRequest extends Request {
         }
 
         /**
-         * PageNumber.
+         * The number of the page to return. Default value: **1**.
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -324,7 +332,7 @@ public class DescribeGlobalAccelerationInstancesRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * The number of entries to return on each page. Maximum value: **100**. Default value: **10**.
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -333,7 +341,7 @@ public class DescribeGlobalAccelerationInstancesRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * The region ID of the GA instance. You can call the [DescribeRegions](~~36063~~) operation to query the most recent region list.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -360,7 +368,7 @@ public class DescribeGlobalAccelerationInstancesRequest extends Request {
         }
 
         /**
-         * ServerId.
+         * The ID of the backend service instance.
          */
         public Builder serverId(String serverId) {
             this.putQueryParameter("ServerId", serverId);
@@ -369,7 +377,13 @@ public class DescribeGlobalAccelerationInstancesRequest extends Request {
         }
 
         /**
-         * ServiceLocation.
+         * The region of the backend service. Valid values:
+         * <p>
+         * 
+         * *   **china-mainland**
+         * *   **north-america**
+         * *   **asia-pacific**
+         * *   **europe**
          */
         public Builder serviceLocation(String serviceLocation) {
             this.putQueryParameter("ServiceLocation", serviceLocation);
@@ -378,7 +392,13 @@ public class DescribeGlobalAccelerationInstancesRequest extends Request {
         }
 
         /**
-         * Status.
+         * The status of the GA instance. Valid values:
+         * <p>
+         * 
+         * *   **Available**
+         * *   **Inuse**
+         * *   **Associating**
+         * *   **Unassociating**
          */
         public Builder status(String status) {
             this.putQueryParameter("Status", status);

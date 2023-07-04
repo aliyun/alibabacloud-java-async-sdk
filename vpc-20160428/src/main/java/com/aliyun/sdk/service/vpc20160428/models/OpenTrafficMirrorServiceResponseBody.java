@@ -12,14 +12,18 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>OpenTrafficMirrorServiceResponseBody</p>
  */
 public class OpenTrafficMirrorServiceResponseBody extends TeaModel {
-    @NameInMap("OrderId")
-    private String orderId;
+    @NameInMap("Code")
+    private String code;
+
+    @NameInMap("Message")
+    private String message;
 
     @NameInMap("RequestId")
     private String requestId;
 
     private OpenTrafficMirrorServiceResponseBody(Builder builder) {
-        this.orderId = builder.orderId;
+        this.code = builder.code;
+        this.message = builder.message;
         this.requestId = builder.requestId;
     }
 
@@ -32,10 +36,17 @@ public class OpenTrafficMirrorServiceResponseBody extends TeaModel {
     }
 
     /**
-     * @return orderId
+     * @return code
      */
-    public String getOrderId() {
-        return this.orderId;
+    public String getCode() {
+        return this.code;
+    }
+
+    /**
+     * @return message
+     */
+    public String getMessage() {
+        return this.message;
     }
 
     /**
@@ -46,19 +57,28 @@ public class OpenTrafficMirrorServiceResponseBody extends TeaModel {
     }
 
     public static final class Builder {
-        private String orderId; 
+        private String code; 
+        private String message; 
         private String requestId; 
 
         /**
-         * OrderId.
+         * Code.
          */
-        public Builder orderId(String orderId) {
-            this.orderId = orderId;
+        public Builder code(String code) {
+            this.code = code;
             return this;
         }
 
         /**
-         * RequestId.
+         * Message.
+         */
+        public Builder message(String message) {
+            this.message = message;
+            return this;
+        }
+
+        /**
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

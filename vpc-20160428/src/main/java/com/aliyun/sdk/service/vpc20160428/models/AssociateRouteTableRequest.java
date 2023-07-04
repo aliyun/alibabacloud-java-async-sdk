@@ -155,7 +155,12 @@ public class AssociateRouteTableRequest extends Request {
         } 
 
         /**
-         * ClientToken.
+         * The client token that is used to ensure the idempotence of the request.
+         * <p>
+         * 
+         * You can use the client to generate the value, but you must make sure that it is unique among all requests. The token can contain only ASCII characters.
+         * 
+         * >  If you do not specify this parameter, **ClientToken** is set to the value of **RequestId**. **RequestId** might be different for each API request.
          */
         public Builder clientToken(String clientToken) {
             this.putQueryParameter("ClientToken", clientToken);
@@ -182,7 +187,10 @@ public class AssociateRouteTableRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * The region ID of the VPC to which the route table belongs.
+         * <p>
+         * 
+         * You can call the [DescribeRegions](~~36063~~) operation to query the most recent region list.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -209,7 +217,7 @@ public class AssociateRouteTableRequest extends Request {
         }
 
         /**
-         * RouteTableId.
+         * The ID of the route table.
          */
         public Builder routeTableId(String routeTableId) {
             this.putQueryParameter("RouteTableId", routeTableId);
@@ -218,7 +226,7 @@ public class AssociateRouteTableRequest extends Request {
         }
 
         /**
-         * VSwitchId.
+         * The ID of the vSwitch.
          */
         public Builder vSwitchId(String vSwitchId) {
             this.putQueryParameter("VSwitchId", vSwitchId);

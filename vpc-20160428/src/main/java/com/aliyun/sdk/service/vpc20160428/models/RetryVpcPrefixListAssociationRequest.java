@@ -184,7 +184,12 @@ public class RetryVpcPrefixListAssociationRequest extends Request {
         } 
 
         /**
-         * ClientToken.
+         * The client token that is used to ensure the idempotence of the request.
+         * <p>
+         * 
+         * You can use the client to generate the value, but you must make sure that it is unique among different requests. The token can contain only ASCII characters.
+         * 
+         * >  If you do not set this parameter, the system automatically uses **RequestId** as **ClientToken**. **RequestId** may be different for each API request.
          */
         public Builder clientToken(String clientToken) {
             this.putQueryParameter("ClientToken", clientToken);
@@ -193,7 +198,11 @@ public class RetryVpcPrefixListAssociationRequest extends Request {
         }
 
         /**
-         * DryRun.
+         * Specifies whether to only precheck the request. Valid values:
+         * <p>
+         * 
+         * *   **true**: prechecks the request without associating the prefix list. The system prechecks the required parameters, request syntax, and limits. If the request fails the precheck, an error message is returned. If the request passes the precheck, the `DryRunOperation` error code is returned.
+         * *   **false**: sends the request. If the request passes the precheck, a 2xx HTTP status code is returned and the prefix list is associated. This is the default value.
          */
         public Builder dryRun(Boolean dryRun) {
             this.putQueryParameter("DryRun", dryRun);
@@ -220,7 +229,7 @@ public class RetryVpcPrefixListAssociationRequest extends Request {
         }
 
         /**
-         * PrefixListId.
+         * The ID of the prefix list that you want to re-apply.
          */
         public Builder prefixListId(String prefixListId) {
             this.putQueryParameter("PrefixListId", prefixListId);
@@ -229,7 +238,10 @@ public class RetryVpcPrefixListAssociationRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * The region ID of the prefix list that you want to re-apply.
+         * <p>
+         * 
+         * You can call the [DescribeRegions](~~36063~~) operation to query the most recent region list.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -238,7 +250,7 @@ public class RetryVpcPrefixListAssociationRequest extends Request {
         }
 
         /**
-         * ResourceId.
+         * The ID of the associated resource.
          */
         public Builder resourceId(String resourceId) {
             this.putQueryParameter("ResourceId", resourceId);
@@ -265,7 +277,11 @@ public class RetryVpcPrefixListAssociationRequest extends Request {
         }
 
         /**
-         * ResourceType.
+         * The type of the resource with which the prefix list is associated. Valid values:
+         * <p>
+         * 
+         * *   **vpcRouteTable**: VPC route table
+         * *   **trRouteTable**: route table of a transit router
          */
         public Builder resourceType(String resourceType) {
             this.putQueryParameter("ResourceType", resourceType);

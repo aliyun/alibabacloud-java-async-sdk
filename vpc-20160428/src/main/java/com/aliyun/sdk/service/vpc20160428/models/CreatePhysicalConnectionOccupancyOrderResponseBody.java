@@ -50,7 +50,7 @@ public class CreatePhysicalConnectionOccupancyOrderResponseBody extends TeaModel
         private String requestId; 
 
         /**
-         * Data.
+         * The details.
          */
         public Builder data(Data data) {
             this.data = data;
@@ -58,7 +58,7 @@ public class CreatePhysicalConnectionOccupancyOrderResponseBody extends TeaModel
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -98,7 +98,7 @@ public class CreatePhysicalConnectionOccupancyOrderResponseBody extends TeaModel
             private String orderId; 
 
             /**
-             * OrderId.
+             * The ID of the order that is placed.
              */
             public Builder orderId(String orderId) {
                 this.orderId = orderId;

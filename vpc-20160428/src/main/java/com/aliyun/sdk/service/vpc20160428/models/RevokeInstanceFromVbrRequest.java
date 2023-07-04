@@ -129,7 +129,11 @@ public class RevokeInstanceFromVbrRequest extends Request {
         } 
 
         /**
-         * GrantType.
+         * The VBRs for which you want to revoke permissions on the VPC. Valid values:
+         * <p>
+         * 
+         * *   **ALL**: Permissions on the VPC are revoked for all VBRs in the specified region. **VbrInstanceIds** can be left empty.
+         * *   **Specify**: Permissions on the VPC are revoked for the specified VBRs. **VbrInstanceIds** must be assigned a value.
          */
         public Builder grantType(String grantType) {
             this.putQueryParameter("GrantType", grantType);
@@ -138,7 +142,7 @@ public class RevokeInstanceFromVbrRequest extends Request {
         }
 
         /**
-         * InstanceId.
+         * The VPC ID.
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -147,7 +151,10 @@ public class RevokeInstanceFromVbrRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * The ID of the region where the VPC is deployed.
+         * <p>
+         * 
+         * You can call the [DescribeRegions](~~36063~~) operation to query the most recent region list.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -156,7 +163,7 @@ public class RevokeInstanceFromVbrRequest extends Request {
         }
 
         /**
-         * VbrInstanceIds.
+         * The IDs of the VBRs for which you want to revoke the permissions.
          */
         public Builder vbrInstanceIds(java.util.List < String > vbrInstanceIds) {
             String vbrInstanceIdsShrink = shrink(vbrInstanceIds, "VbrInstanceIds", "simple");
@@ -166,7 +173,7 @@ public class RevokeInstanceFromVbrRequest extends Request {
         }
 
         /**
-         * VbrOwnerUid.
+         * The ID of the Alibaba Cloud account to which the VBR belongs.
          */
         public Builder vbrOwnerUid(String vbrOwnerUid) {
             this.putQueryParameter("VbrOwnerUid", vbrOwnerUid);
@@ -175,7 +182,7 @@ public class RevokeInstanceFromVbrRequest extends Request {
         }
 
         /**
-         * VbrRegionNo.
+         * The ID of the region where the VBR is deployed.
          */
         public Builder vbrRegionNo(String vbrRegionNo) {
             this.putQueryParameter("VbrRegionNo", vbrRegionNo);

@@ -74,7 +74,7 @@ public class CreateFlowLogResponseBody extends TeaModel {
         private String success; 
 
         /**
-         * FlowLogId.
+         * The ID of the flow log.
          */
         public Builder flowLogId(String flowLogId) {
             this.flowLogId = flowLogId;
@@ -82,7 +82,7 @@ public class CreateFlowLogResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -90,7 +90,7 @@ public class CreateFlowLogResponseBody extends TeaModel {
         }
 
         /**
-         * ResourceGroupId.
+         * The ID of the resource group.
          */
         public Builder resourceGroupId(String resourceGroupId) {
             this.resourceGroupId = resourceGroupId;
@@ -98,7 +98,11 @@ public class CreateFlowLogResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * Indicates whether the operation is successful. Valid values:
+         * <p>
+         * 
+         * *   **true**: yes
+         * *   **false**: no
          */
         public Builder success(String success) {
             this.success = success;

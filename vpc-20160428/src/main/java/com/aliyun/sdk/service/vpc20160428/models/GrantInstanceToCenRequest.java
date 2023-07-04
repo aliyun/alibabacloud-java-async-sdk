@@ -185,7 +185,7 @@ public class GrantInstanceToCenRequest extends Request {
         } 
 
         /**
-         * CenId.
+         * The ID of the CEN instance to which you want to grant permissions.
          */
         public Builder cenId(String cenId) {
             this.putQueryParameter("CenId", cenId);
@@ -194,7 +194,7 @@ public class GrantInstanceToCenRequest extends Request {
         }
 
         /**
-         * CenOwnerId.
+         * The user ID (UID) of the Alibaba Cloud account to which the CEN instance belongs.
          */
         public Builder cenOwnerId(Long cenOwnerId) {
             this.putQueryParameter("CenOwnerId", cenOwnerId);
@@ -203,7 +203,12 @@ public class GrantInstanceToCenRequest extends Request {
         }
 
         /**
-         * ClientToken.
+         * The client token that is used to ensure the idempotence of the request.
+         * <p>
+         * 
+         * You can use the client to generate the value, but you must ensure that the value is unique among all requests. The token can contain only ASCII characters.
+         * 
+         * >  If you do not specify this parameter, the system uses **RequestId** as **ClientToken**. **RequestId** may be different for each API request.
          */
         public Builder clientToken(String clientToken) {
             this.putQueryParameter("ClientToken", clientToken);
@@ -212,7 +217,7 @@ public class GrantInstanceToCenRequest extends Request {
         }
 
         /**
-         * InstanceId.
+         * The ID of the network instance.
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -221,7 +226,11 @@ public class GrantInstanceToCenRequest extends Request {
         }
 
         /**
-         * InstanceType.
+         * The type of the network instance. Valid values:
+         * <p>
+         * 
+         * *   **VPC**: a VPC
+         * *   **VBR**: a VBR
          */
         public Builder instanceType(String instanceType) {
             this.putQueryParameter("InstanceType", instanceType);
@@ -248,7 +257,10 @@ public class GrantInstanceToCenRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * The ID of the region where the network instance is deployed.
+         * <p>
+         * 
+         * You can call the [DescribeRegions](~~36063~~) operation to query the most recent region list.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);

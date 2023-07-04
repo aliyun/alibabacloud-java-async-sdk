@@ -126,7 +126,7 @@ public class DeleteGlobalAccelerationInstanceRequest extends Request {
         } 
 
         /**
-         * GlobalAccelerationInstanceId.
+         * The ID of the GA instance.
          */
         public Builder globalAccelerationInstanceId(String globalAccelerationInstanceId) {
             this.putQueryParameter("GlobalAccelerationInstanceId", globalAccelerationInstanceId);
@@ -153,7 +153,10 @@ public class DeleteGlobalAccelerationInstanceRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * The region ID of the GA instance.
+         * <p>
+         * 
+         * You can call the [DescribeRegions](~~36063~~) operation to query the most recent region list.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);

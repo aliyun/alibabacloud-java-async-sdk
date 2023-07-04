@@ -214,7 +214,12 @@ public class ModifyVpnRouteEntryWeightRequest extends Request {
         } 
 
         /**
-         * ClientToken.
+         * The client token that is used to ensure the idempotence of the request.
+         * <p>
+         * 
+         * You can use the client to generate the value, but you must make sure that it is unique among different requests. The client token can contain only ASCII characters.
+         * 
+         * >  If you do not set this parameter, the system automatically uses **RequestId** as **ClientToken**. **RequestId** of each API request may be different.
          */
         public Builder clientToken(String clientToken) {
             this.putQueryParameter("ClientToken", clientToken);
@@ -223,7 +228,11 @@ public class ModifyVpnRouteEntryWeightRequest extends Request {
         }
 
         /**
-         * NewWeight.
+         * The new weight that you want to set for the destination-based route. Valid values:
+         * <p>
+         * 
+         * *   **0**: a low priority
+         * *   **100**: a high priority
          */
         public Builder newWeight(Integer newWeight) {
             this.putQueryParameter("NewWeight", newWeight);
@@ -232,7 +241,7 @@ public class ModifyVpnRouteEntryWeightRequest extends Request {
         }
 
         /**
-         * NextHop.
+         * The next hop of the destination-based route.
          */
         public Builder nextHop(String nextHop) {
             this.putQueryParameter("NextHop", nextHop);
@@ -241,7 +250,7 @@ public class ModifyVpnRouteEntryWeightRequest extends Request {
         }
 
         /**
-         * OverlayMode.
+         * The tunneling protocol. Set the value to **Ipsec**.
          */
         public Builder overlayMode(String overlayMode) {
             this.putQueryParameter("OverlayMode", overlayMode);
@@ -268,7 +277,7 @@ public class ModifyVpnRouteEntryWeightRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * The ID of the region where the VPN gateway is created. You can call the [DescribeRegions](~~36063~~) operation to query the most recent region list.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -295,7 +304,7 @@ public class ModifyVpnRouteEntryWeightRequest extends Request {
         }
 
         /**
-         * RouteDest.
+         * The destination CIDR block of the destination-based route.
          */
         public Builder routeDest(String routeDest) {
             this.putQueryParameter("RouteDest", routeDest);
@@ -304,7 +313,7 @@ public class ModifyVpnRouteEntryWeightRequest extends Request {
         }
 
         /**
-         * VpnGatewayId.
+         * The ID of the VPN gateway.
          */
         public Builder vpnGatewayId(String vpnGatewayId) {
             this.putQueryParameter("VpnGatewayId", vpnGatewayId);
@@ -313,7 +322,11 @@ public class ModifyVpnRouteEntryWeightRequest extends Request {
         }
 
         /**
-         * Weight.
+         * The previous weight of the destination-based route. Valid values:
+         * <p>
+         * 
+         * *   **0**: a low priority
+         * *   **100**: a high priority
          */
         public Builder weight(Integer weight) {
             this.putQueryParameter("Weight", weight);

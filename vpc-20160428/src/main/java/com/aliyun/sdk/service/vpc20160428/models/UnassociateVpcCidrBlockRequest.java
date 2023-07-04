@@ -154,7 +154,10 @@ public class UnassociateVpcCidrBlockRequest extends Request {
         } 
 
         /**
-         * IPv6CidrBlock.
+         * The secondary IPv6 CIDR block to be deleted.
+         * <p>
+         * 
+         * >  You must set one of the **Ipv6CidrBlock** and **SecondaryCidrBlock** parameters.
          */
         public Builder iPv6CidrBlock(String iPv6CidrBlock) {
             this.putQueryParameter("IPv6CidrBlock", iPv6CidrBlock);
@@ -181,7 +184,10 @@ public class UnassociateVpcCidrBlockRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * The region ID of the VPC to which the secondary CIDR block to be deleted belongs.
+         * <p>
+         * 
+         * You can call the [DescribeRegions](~~36063~~) operation to query the most recent region list.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -208,7 +214,10 @@ public class UnassociateVpcCidrBlockRequest extends Request {
         }
 
         /**
-         * SecondaryCidrBlock.
+         * The secondary IPv4 CIDR block to be deleted.
+         * <p>
+         * 
+         * >  You must set one of the **SecondaryCidrBlock** and **Ipv6CidrBlock** parameters.
          */
         public Builder secondaryCidrBlock(String secondaryCidrBlock) {
             this.putQueryParameter("SecondaryCidrBlock", secondaryCidrBlock);
@@ -217,7 +226,7 @@ public class UnassociateVpcCidrBlockRequest extends Request {
         }
 
         /**
-         * VpcId.
+         * The ID of the VPC from which you want to delete a secondary CIDR block.
          */
         public Builder vpcId(String vpcId) {
             this.putQueryParameter("VpcId", vpcId);

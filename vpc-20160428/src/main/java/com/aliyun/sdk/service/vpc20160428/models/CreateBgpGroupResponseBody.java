@@ -50,7 +50,7 @@ public class CreateBgpGroupResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * BgpGroupId.
+         * The ID of the BGP group.
          */
         public Builder bgpGroupId(String bgpGroupId) {
             this.bgpGroupId = bgpGroupId;
@@ -58,7 +58,7 @@ public class CreateBgpGroupResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

@@ -243,7 +243,12 @@ public class ModifyVpnPbrRouteEntryWeightRequest extends Request {
         } 
 
         /**
-         * ClientToken.
+         * The client token that is used to ensure the idempotence of the request.
+         * <p>
+         * 
+         * You can use the client to generate the value, but you must make sure that the value is unique among different requests. The client token can contain only ASCII characters.
+         * 
+         * >  If you do not set this parameter, **ClientToken** is set to the value of **RequestId**. The value of **RequestId** may be different for each API request.
          */
         public Builder clientToken(String clientToken) {
             this.putQueryParameter("ClientToken", clientToken);
@@ -252,7 +257,11 @@ public class ModifyVpnPbrRouteEntryWeightRequest extends Request {
         }
 
         /**
-         * NewWeight.
+         * The new weight of the policy-based route. Valid values:
+         * <p>
+         * 
+         * *   **100**: The IPsec-VPN connection associated with the policy-based route serves as an active connection.
+         * *   **0**: The IPsec-VPN connection associated with the policy-based route serves as a standby connection.
          */
         public Builder newWeight(Integer newWeight) {
             this.putQueryParameter("NewWeight", newWeight);
@@ -261,7 +270,7 @@ public class ModifyVpnPbrRouteEntryWeightRequest extends Request {
         }
 
         /**
-         * NextHop.
+         * The next hop of the policy-based route.
          */
         public Builder nextHop(String nextHop) {
             this.putQueryParameter("NextHop", nextHop);
@@ -270,7 +279,7 @@ public class ModifyVpnPbrRouteEntryWeightRequest extends Request {
         }
 
         /**
-         * OverlayMode.
+         * The tunneling protocol. Set the value to **Ipsec**.
          */
         public Builder overlayMode(String overlayMode) {
             this.putQueryParameter("OverlayMode", overlayMode);
@@ -297,7 +306,14 @@ public class ModifyVpnPbrRouteEntryWeightRequest extends Request {
         }
 
         /**
-         * Priority.
+         * The priority of the policy-based route.
+         * <p>
+         * 
+         * *   If the route was not assigned a priority, this parameter is optional.
+         * 
+         * *   If the route was assigned a priority, this parameter is optional.
+         * 
+         *     If you set this parameter, set the value to the priority that was assigned to the route. Otherwise, the operation fails.
          */
         public Builder priority(Integer priority) {
             this.putQueryParameter("Priority", priority);
@@ -306,7 +322,7 @@ public class ModifyVpnPbrRouteEntryWeightRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * The ID of the region where the VPN gateway is created. You can call the [DescribeRegions](~~36063~~) operation to query the most recent region list.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -333,7 +349,7 @@ public class ModifyVpnPbrRouteEntryWeightRequest extends Request {
         }
 
         /**
-         * RouteDest.
+         * The destination CIDR block of the policy-based route.
          */
         public Builder routeDest(String routeDest) {
             this.putQueryParameter("RouteDest", routeDest);
@@ -342,7 +358,7 @@ public class ModifyVpnPbrRouteEntryWeightRequest extends Request {
         }
 
         /**
-         * RouteSource.
+         * The source CIDR block of the policy-based route.
          */
         public Builder routeSource(String routeSource) {
             this.putQueryParameter("RouteSource", routeSource);
@@ -351,7 +367,7 @@ public class ModifyVpnPbrRouteEntryWeightRequest extends Request {
         }
 
         /**
-         * VpnGatewayId.
+         * The ID of the VPN gateway.
          */
         public Builder vpnGatewayId(String vpnGatewayId) {
             this.putQueryParameter("VpnGatewayId", vpnGatewayId);
@@ -360,7 +376,11 @@ public class ModifyVpnPbrRouteEntryWeightRequest extends Request {
         }
 
         /**
-         * Weight.
+         * The original weight of the policy-based route. Valid values:
+         * <p>
+         * 
+         * *   **100**: The IPsec-VPN connection associated with the policy-based route serves as an active connection.
+         * *   **0**: The IPsec-VPN connection associated with the policy-based route serves as a standby connection.
          */
         public Builder weight(Integer weight) {
             this.putQueryParameter("Weight", weight);

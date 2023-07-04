@@ -86,7 +86,7 @@ public class ListVpnCertificateAssociationsResponseBody extends TeaModel {
         private java.util.List < VpnCertificateRelations> vpnCertificateRelations; 
 
         /**
-         * MaxResults.
+         * The number of entries returned per page.
          */
         public Builder maxResults(Integer maxResults) {
             this.maxResults = maxResults;
@@ -94,7 +94,11 @@ public class ListVpnCertificateAssociationsResponseBody extends TeaModel {
         }
 
         /**
-         * NextToken.
+         * The returned value of NextToken is a pagination token, which can be used in the next request to retrieve a new page of results. Valid values:
+         * <p>
+         * 
+         * *   If **NextToken** is empty, no next page exists.
+         * *   If **NextToken** is not empty, the value indicates the token that is used for the next query.
          */
         public Builder nextToken(String nextToken) {
             this.nextToken = nextToken;
@@ -102,7 +106,7 @@ public class ListVpnCertificateAssociationsResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -110,7 +114,7 @@ public class ListVpnCertificateAssociationsResponseBody extends TeaModel {
         }
 
         /**
-         * TotalCount.
+         * The total number of entries returned.
          */
         public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;
@@ -118,7 +122,7 @@ public class ListVpnCertificateAssociationsResponseBody extends TeaModel {
         }
 
         /**
-         * VpnCertificateRelations.
+         * The association information.
          */
         public Builder vpnCertificateRelations(java.util.List < VpnCertificateRelations> vpnCertificateRelations) {
             this.vpnCertificateRelations = vpnCertificateRelations;
@@ -206,7 +210,10 @@ public class ListVpnCertificateAssociationsResponseBody extends TeaModel {
             private String vpnGatewayId; 
 
             /**
-             * AssociationTime.
+             * The time when the certificate was associated.
+             * <p>
+             * 
+             * The time follows the ISO8601 standard in the YYYY-MM-DDThh:mmZ format. The time is displayed in UTC.
              */
             public Builder associationTime(String associationTime) {
                 this.associationTime = associationTime;
@@ -214,7 +221,7 @@ public class ListVpnCertificateAssociationsResponseBody extends TeaModel {
             }
 
             /**
-             * CertificateId.
+             * The certificate ID.
              */
             public Builder certificateId(String certificateId) {
                 this.certificateId = certificateId;
@@ -222,7 +229,11 @@ public class ListVpnCertificateAssociationsResponseBody extends TeaModel {
             }
 
             /**
-             * CertificateType.
+             * The certificate type.
+             * <p>
+             * 
+             * *   **Encryption**
+             * *   **Signature**
              */
             public Builder certificateType(String certificateType) {
                 this.certificateType = certificateType;
@@ -230,7 +241,7 @@ public class ListVpnCertificateAssociationsResponseBody extends TeaModel {
             }
 
             /**
-             * RegionId.
+             * The ID of the region where the VPN gateway is created.
              */
             public Builder regionId(String regionId) {
                 this.regionId = regionId;
@@ -238,7 +249,7 @@ public class ListVpnCertificateAssociationsResponseBody extends TeaModel {
             }
 
             /**
-             * VpnGatewayId.
+             * The ID of the VPN gateway.
              */
             public Builder vpnGatewayId(String vpnGatewayId) {
                 this.vpnGatewayId = vpnGatewayId;

@@ -155,7 +155,10 @@ public class ModifyIpv6GatewaySpecRequest extends Request {
         } 
 
         /**
-         * ClientToken.
+         * The client token that is used to ensure the idempotence of the request.
+         * <p>
+         * 
+         * You can use the client to generate the value, but you must make sure that the value is unique among different requests. The client token can contain only ASCII characters and cannot exceed 64 characters in length.
          */
         public Builder clientToken(String clientToken) {
             this.putQueryParameter("ClientToken", clientToken);
@@ -164,7 +167,7 @@ public class ModifyIpv6GatewaySpecRequest extends Request {
         }
 
         /**
-         * Ipv6GatewayId.
+         * The ID of the IPv6 gateway.
          */
         public Builder ipv6GatewayId(String ipv6GatewayId) {
             this.putQueryParameter("Ipv6GatewayId", ipv6GatewayId);
@@ -191,7 +194,7 @@ public class ModifyIpv6GatewaySpecRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * The ID of the region where the IPv6 gateway is deployed. You can call the [DescribeRegions](~~36063~~) operation to query the available regions.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -218,7 +221,7 @@ public class ModifyIpv6GatewaySpecRequest extends Request {
         }
 
         /**
-         * Spec.
+         * This parameter is no longer used because no specifications options are available for the IPv6 gateway.
          */
         public Builder spec(String spec) {
             this.putQueryParameter("Spec", spec);

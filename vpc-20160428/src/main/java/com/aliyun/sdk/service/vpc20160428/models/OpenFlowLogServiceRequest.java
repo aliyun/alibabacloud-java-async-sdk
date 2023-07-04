@@ -125,7 +125,12 @@ public class OpenFlowLogServiceRequest extends Request {
         } 
 
         /**
-         * ClientToken.
+         * The client token that is used to ensure the idempotence of the request.
+         * <p>
+         * 
+         * You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters.
+         * 
+         * >  If you do not set this parameter, the system automatically set **ClientToken** to the value of **RequestId**. The value of **RequestId** for each API request is different.
          */
         public Builder clientToken(String clientToken) {
             this.putQueryParameter("ClientToken", clientToken);
@@ -152,7 +157,10 @@ public class OpenFlowLogServiceRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * The region ID of the flow log.
+         * <p>
+         * 
+         * You can call the [DescribeRegions](~~36063~~) operation to query the most recent region list.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);

@@ -129,7 +129,11 @@ public class GrantInstanceToVbrRequest extends Request {
         } 
 
         /**
-         * GrantType.
+         * The VBRs that need to acquire permissions on the VPC. Valid values:
+         * <p>
+         * 
+         * *   **All**: Permissions on the VPC are granted to all VBRs that belong to the specified region and Alibaba Cloud account. In this case, you can leave **VbrInstanceIds** empty.
+         * *   **Specify**: Permissions on the VPC are granted to the specified VBRs. **VbrInstanceIds** must be assigned a value.
          */
         public Builder grantType(String grantType) {
             this.putQueryParameter("GrantType", grantType);
@@ -138,7 +142,7 @@ public class GrantInstanceToVbrRequest extends Request {
         }
 
         /**
-         * InstanceId.
+         * The ID of the VPC.
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -147,7 +151,10 @@ public class GrantInstanceToVbrRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * The ID of the region where the VPC is deployed.
+         * <p>
+         * 
+         * You can call the [DescribeRegions](~~36063~~) operation to query the most recent region list.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -156,7 +163,7 @@ public class GrantInstanceToVbrRequest extends Request {
         }
 
         /**
-         * VbrInstanceIds.
+         * The information about the VBRs.
          */
         public Builder vbrInstanceIds(java.util.List < String > vbrInstanceIds) {
             String vbrInstanceIdsShrink = shrink(vbrInstanceIds, "VbrInstanceIds", "simple");
@@ -166,7 +173,7 @@ public class GrantInstanceToVbrRequest extends Request {
         }
 
         /**
-         * VbrOwnerUid.
+         * The ID of the Alibaba Cloud account to which the VBR belongs.
          */
         public Builder vbrOwnerUid(Long vbrOwnerUid) {
             this.putQueryParameter("VbrOwnerUid", vbrOwnerUid);
@@ -175,7 +182,7 @@ public class GrantInstanceToVbrRequest extends Request {
         }
 
         /**
-         * VbrRegionNo.
+         * The ID of the region where the VBR is deployed.
          */
         public Builder vbrRegionNo(String vbrRegionNo) {
             this.putQueryParameter("VbrRegionNo", vbrRegionNo);

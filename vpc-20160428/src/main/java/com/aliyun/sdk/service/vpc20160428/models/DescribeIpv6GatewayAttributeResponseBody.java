@@ -182,7 +182,12 @@ public class DescribeIpv6GatewayAttributeResponseBody extends TeaModel {
         private String vpcId; 
 
         /**
-         * BusinessStatus.
+         * The service status of the IPv6 gateway. Valid values:
+         * <p>
+         * 
+         * *   **Normal**: The IPv6 gateway runs as expected.
+         * *   **FinacialLocked**: The IPv6 gateway is locked due to overdue payments.
+         * *   **SecurityLocked**: The IPv6 gateway is locked due to security reasons.
          */
         public Builder businessStatus(String businessStatus) {
             this.businessStatus = businessStatus;
@@ -190,7 +195,7 @@ public class DescribeIpv6GatewayAttributeResponseBody extends TeaModel {
         }
 
         /**
-         * CreationTime.
+         * The time when the IPv6 gateway was created.
          */
         public Builder creationTime(String creationTime) {
             this.creationTime = creationTime;
@@ -198,7 +203,7 @@ public class DescribeIpv6GatewayAttributeResponseBody extends TeaModel {
         }
 
         /**
-         * Description.
+         * The description of the IPv6 gateway.
          */
         public Builder description(String description) {
             this.description = description;
@@ -206,7 +211,7 @@ public class DescribeIpv6GatewayAttributeResponseBody extends TeaModel {
         }
 
         /**
-         * ExpiredTime.
+         * The time when the IPv6 gateway expires.
          */
         public Builder expiredTime(String expiredTime) {
             this.expiredTime = expiredTime;
@@ -214,7 +219,7 @@ public class DescribeIpv6GatewayAttributeResponseBody extends TeaModel {
         }
 
         /**
-         * InstanceChargeType.
+         * The metering method of the IPv6 gateway.
          */
         public Builder instanceChargeType(String instanceChargeType) {
             this.instanceChargeType = instanceChargeType;
@@ -222,7 +227,7 @@ public class DescribeIpv6GatewayAttributeResponseBody extends TeaModel {
         }
 
         /**
-         * Ipv6GatewayId.
+         * The ID of the IPv6 gateway.
          */
         public Builder ipv6GatewayId(String ipv6GatewayId) {
             this.ipv6GatewayId = ipv6GatewayId;
@@ -230,7 +235,7 @@ public class DescribeIpv6GatewayAttributeResponseBody extends TeaModel {
         }
 
         /**
-         * Name.
+         * The name of the IPv6 gateway.
          */
         public Builder name(String name) {
             this.name = name;
@@ -238,7 +243,7 @@ public class DescribeIpv6GatewayAttributeResponseBody extends TeaModel {
         }
 
         /**
-         * RegionId.
+         * The ID of the region where the IPv6 gateway is deployed.
          */
         public Builder regionId(String regionId) {
             this.regionId = regionId;
@@ -246,7 +251,7 @@ public class DescribeIpv6GatewayAttributeResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -254,7 +259,7 @@ public class DescribeIpv6GatewayAttributeResponseBody extends TeaModel {
         }
 
         /**
-         * ResourceGroupId.
+         * The ID of the resource group.
          */
         public Builder resourceGroupId(String resourceGroupId) {
             this.resourceGroupId = resourceGroupId;
@@ -262,7 +267,11 @@ public class DescribeIpv6GatewayAttributeResponseBody extends TeaModel {
         }
 
         /**
-         * Status.
+         * The status of the IPv6 gateway. Valid values:
+         * <p>
+         * 
+         * *   **Pending**
+         * *   **Available**
          */
         public Builder status(String status) {
             this.status = status;
@@ -270,7 +279,7 @@ public class DescribeIpv6GatewayAttributeResponseBody extends TeaModel {
         }
 
         /**
-         * Tags.
+         * The list of tags.
          */
         public Builder tags(Tags tags) {
             this.tags = tags;
@@ -278,7 +287,7 @@ public class DescribeIpv6GatewayAttributeResponseBody extends TeaModel {
         }
 
         /**
-         * VpcId.
+         * The ID of the virtual private cloud (VPC) to which the IPv6 gateway belongs.
          */
         public Builder vpcId(String vpcId) {
             this.vpcId = vpcId;
@@ -330,7 +339,7 @@ public class DescribeIpv6GatewayAttributeResponseBody extends TeaModel {
             private String value; 
 
             /**
-             * Key.
+             * The tag key.
              */
             public Builder key(String key) {
                 this.key = key;
@@ -338,7 +347,7 @@ public class DescribeIpv6GatewayAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * Value.
+             * The tag value.
              */
             public Builder value(String value) {
                 this.value = value;

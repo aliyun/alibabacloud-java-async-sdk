@@ -253,7 +253,7 @@ public class ModifyForwardEntryRequest extends Request {
         } 
 
         /**
-         * ClientToken.
+         * The ID of the request.
          */
         public Builder clientToken(String clientToken) {
             this.putQueryParameter("ClientToken", clientToken);
@@ -262,7 +262,9 @@ public class ModifyForwardEntryRequest extends Request {
         }
 
         /**
-         * ExternalIp.
+         * *   The private IP address of the ECS instance that uses DNAT entries to communicate with the Internet when you modify DNAT entries of Internet NAT gateways.
+         * <p>
+         * *   The private IP address that uses DNAT entries to communicate when you modify DNAT entries of VPC NAT gateways.
          */
         public Builder externalIp(String externalIp) {
             this.putQueryParameter("ExternalIp", externalIp);
@@ -271,7 +273,9 @@ public class ModifyForwardEntryRequest extends Request {
         }
 
         /**
-         * ExternalPort.
+         * *   The internal port or port range that is used to forward traffic when you modify DNAT entries of Internet NAT gateways. Valid values: **1** to **65535**.
+         * <p>
+         * *   The port of the destination ECS instance to be mapped when you modify DNAT entries of VPC NAT gateways. Valid values: **1** to **65535**.
          */
         public Builder externalPort(String externalPort) {
             this.putQueryParameter("ExternalPort", externalPort);
@@ -280,7 +284,14 @@ public class ModifyForwardEntryRequest extends Request {
         }
 
         /**
-         * ForwardEntryId.
+         * *   The external port that is used to forward traffic when you modify DNAT entries of Internet NAT gateways.
+         * <p>
+         * 
+         *     *   Valid values: **1** to **65535**.
+         *     *   If you want to modify the port range, separate port numbers with a forward slash (/), such as `10/20`.
+         *     *   If you want to modify **ExternalPort** and **InternalPort** at the same time, and set **ExternalPort** to a port range, you must also set **InternalPort** to a port range. For example, you can set **ExternalPort** to `10/20` and set **InternalPor** to `80/90`.
+         * 
+         * *   The port that is accessed by external networks when you modify DNAT entries of VPC NAT gateways. Valid values: **1** to **65535**.
          */
         public Builder forwardEntryId(String forwardEntryId) {
             this.putQueryParameter("ForwardEntryId", forwardEntryId);
@@ -289,7 +300,12 @@ public class ModifyForwardEntryRequest extends Request {
         }
 
         /**
-         * ForwardEntryName.
+         * The client token that is used to ensure the idempotence of the request.
+         * <p>
+         * 
+         * You can use the client to generate the value, but you must make sure that it is unique among all requests. ClientToken can contain only ASCII characters.
+         * 
+         * >  If you do not specify this parameter, **ClientToken** is set to the value of **RequestId**. The value of **RequestId** for each API request may be different.
          */
         public Builder forwardEntryName(String forwardEntryName) {
             this.putQueryParameter("ForwardEntryName", forwardEntryName);
@@ -298,7 +314,9 @@ public class ModifyForwardEntryRequest extends Request {
         }
 
         /**
-         * ForwardTableId.
+         * *   When you modify DNAT entries of Internet NAT gateways, this parameter specifies the elastic IP addresses (EIPs) that are used to access the Internet.
+         * <p>
+         * *   When you modify DNAT entries of Virtual Private Cloud (VPC) NAT gateways, this parameter specifies the NAT IP addresses that are accessed by external networks.
          */
         public Builder forwardTableId(String forwardTableId) {
             this.putQueryParameter("ForwardTableId", forwardTableId);
@@ -307,7 +325,12 @@ public class ModifyForwardEntryRequest extends Request {
         }
 
         /**
-         * InternalIp.
+         * The protocol type. Valid values:
+         * <p>
+         * 
+         * *   **TCP**: The NAT gateway forwards TCP packets.
+         * *   **UDP**: The NAT gateway forwards UDP packets.
+         * *   **Any**: The NAT gateway forwards packets of all protocols.
          */
         public Builder internalIp(String internalIp) {
             this.putQueryParameter("InternalIp", internalIp);
@@ -316,7 +339,10 @@ public class ModifyForwardEntryRequest extends Request {
         }
 
         /**
-         * InternalPort.
+         * The new name of the DNAT entry.
+         * <p>
+         * 
+         * The name must be 2 to 128 characters in length. It must start with a letter but cannot start with `http://` or `https://`.
          */
         public Builder internalPort(String internalPort) {
             this.putQueryParameter("InternalPort", internalPort);
@@ -325,7 +351,10 @@ public class ModifyForwardEntryRequest extends Request {
         }
 
         /**
-         * IpProtocol.
+         * The region ID of the NAT gateway.
+         * <p>
+         * 
+         * You can call the [DescribeRegions](~~36063~~) operation to query the most recent region list.
          */
         public Builder ipProtocol(String ipProtocol) {
             this.putQueryParameter("IpProtocol", ipProtocol);
@@ -361,7 +390,11 @@ public class ModifyForwardEntryRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * Specifies whether to remove limits on the port range. Valid values:
+         * <p>
+         * 
+         * *   **true**: yes
+         * *   **false**: no If an SNAT entry and a DNAT entry use the same public IP address, and you want to specify a port number greater than `1024`, set `PortBreak` to `true`.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);

@@ -257,7 +257,12 @@ public class CreateVpnPbrRouteEntryRequest extends Request {
         } 
 
         /**
-         * ClientToken.
+         * The client token that is used to ensure the idempotence of the request.
+         * <p>
+         * 
+         * You can use the client to generate the value, but you must make sure that the value is unique among different requests. The client token can contain only ASCII characters.
+         * 
+         * >  If you do not set this parameter, **ClientToken** is set to the value of **RequestId**. The value of **RequestId** may be different for each API request.
          */
         public Builder clientToken(String clientToken) {
             this.putQueryParameter("ClientToken", clientToken);
@@ -266,7 +271,10 @@ public class CreateVpnPbrRouteEntryRequest extends Request {
         }
 
         /**
-         * Description.
+         * The description of the policy-based route.
+         * <p>
+         * 
+         * The description must be 1 to 100 characters in length, and cannot start with http:// or https://.
          */
         public Builder description(String description) {
             this.putQueryParameter("Description", description);
@@ -275,7 +283,7 @@ public class CreateVpnPbrRouteEntryRequest extends Request {
         }
 
         /**
-         * NextHop.
+         * The next hop of the policy-based route.
          */
         public Builder nextHop(String nextHop) {
             this.putQueryParameter("NextHop", nextHop);
@@ -284,7 +292,7 @@ public class CreateVpnPbrRouteEntryRequest extends Request {
         }
 
         /**
-         * OverlayMode.
+         * The tunneling protocol. Set the value to **Ipsec**.
          */
         public Builder overlayMode(String overlayMode) {
             this.putQueryParameter("OverlayMode", overlayMode);
@@ -311,7 +319,12 @@ public class CreateVpnPbrRouteEntryRequest extends Request {
         }
 
         /**
-         * Priority.
+         * The priority of the policy-based route. Valid values: **1** to **100**. Default value: **10**.
+         * <p>
+         * 
+         * A smaller value indicates a higher priority.
+         * 
+         * >  Only some VPN gateways in specific regions allow you to configure priorities for policy-based routes. For more information about the regions, see [Match rules of policy-based routes](~~110777~~).
          */
         public Builder priority(Integer priority) {
             this.putQueryParameter("Priority", priority);
@@ -320,7 +333,11 @@ public class CreateVpnPbrRouteEntryRequest extends Request {
         }
 
         /**
-         * PublishVpc.
+         * Specifies whether to advertise the policy-based route to a virtual private cloud (VPC) route table. Valid values:
+         * <p>
+         * 
+         * *   **true**: yes
+         * *   **false**: no
          */
         public Builder publishVpc(Boolean publishVpc) {
             this.putQueryParameter("PublishVpc", publishVpc);
@@ -329,7 +346,7 @@ public class CreateVpnPbrRouteEntryRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * The ID of the region where the VPN gateway is created. You can call the [DescribeRegions](~~36063~~) operation to query the most recent region list.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -356,7 +373,7 @@ public class CreateVpnPbrRouteEntryRequest extends Request {
         }
 
         /**
-         * RouteDest.
+         * The destination CIDR block of the policy-based route.
          */
         public Builder routeDest(String routeDest) {
             this.putQueryParameter("RouteDest", routeDest);
@@ -365,7 +382,7 @@ public class CreateVpnPbrRouteEntryRequest extends Request {
         }
 
         /**
-         * RouteSource.
+         * The source CIDR block of the policy-based route.
          */
         public Builder routeSource(String routeSource) {
             this.putQueryParameter("RouteSource", routeSource);
@@ -374,7 +391,7 @@ public class CreateVpnPbrRouteEntryRequest extends Request {
         }
 
         /**
-         * VpnGatewayId.
+         * The ID of the VPN gateway.
          */
         public Builder vpnGatewayId(String vpnGatewayId) {
             this.putQueryParameter("VpnGatewayId", vpnGatewayId);
@@ -383,7 +400,17 @@ public class CreateVpnPbrRouteEntryRequest extends Request {
         }
 
         /**
-         * Weight.
+         * The weight of the policy-based route.
+         * <p>
+         * 
+         * If you use the same VPN gateway to establish active/standby IPsec-VPN connections, you can configure route weights to specify which connection is active. A value of 100 specifies the active connection while a value of 0 specifies the standby connection.
+         * 
+         * You can configure health checks to automatically check the connection connectivity. If the active connection is down, the standby connection automatically takes over. For more information, see [CreateVpnConnection](~~120391~~).
+         * 
+         * *   **100**: The IPsec-VPN connection associated with the policy-based route serves as an active connection.
+         * *   **0**: The IPsec-VPN connection associated with the policy-based route serves as a standby connection.
+         * 
+         * >  When you specify the active or standby connection, the primary route and secondary route must use the same source CIDR block and destination CIDR block.
          */
         public Builder weight(Integer weight) {
             this.putQueryParameter("Weight", weight);

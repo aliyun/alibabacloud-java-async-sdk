@@ -134,7 +134,7 @@ public class DescribePublicIpAddressResponseBody extends TeaModel {
         private Integer totalCount; 
 
         /**
-         * Code.
+         * The HTTP status code.
          */
         public Builder code(String code) {
             this.code = code;
@@ -142,7 +142,7 @@ public class DescribePublicIpAddressResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * The response message.
          */
         public Builder message(String message) {
             this.message = message;
@@ -150,7 +150,7 @@ public class DescribePublicIpAddressResponseBody extends TeaModel {
         }
 
         /**
-         * PageNumber.
+         * The page number of the returned page.
          */
         public Builder pageNumber(Integer pageNumber) {
             this.pageNumber = pageNumber;
@@ -158,7 +158,7 @@ public class DescribePublicIpAddressResponseBody extends TeaModel {
         }
 
         /**
-         * PageSize.
+         * The number of entries returned per page.
          */
         public Builder pageSize(Integer pageSize) {
             this.pageSize = pageSize;
@@ -166,7 +166,7 @@ public class DescribePublicIpAddressResponseBody extends TeaModel {
         }
 
         /**
-         * PublicIpAddress.
+         * The range of the public IP addresses of the VPC in the region.
          */
         public Builder publicIpAddress(java.util.List < String > publicIpAddress) {
             this.publicIpAddress = publicIpAddress;
@@ -174,7 +174,7 @@ public class DescribePublicIpAddressResponseBody extends TeaModel {
         }
 
         /**
-         * RegionId.
+         * The ID of the region to which the public IP addresses belong.
          */
         public Builder regionId(String regionId) {
             this.regionId = regionId;
@@ -182,7 +182,7 @@ public class DescribePublicIpAddressResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -190,7 +190,11 @@ public class DescribePublicIpAddressResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * Indicates whether the call is successful. Valid values:
+         * <p>
+         * 
+         * *   **true**: yes
+         * *   **false**: no
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -198,7 +202,7 @@ public class DescribePublicIpAddressResponseBody extends TeaModel {
         }
 
         /**
-         * TotalCount.
+         * The total number of entries returned.
          */
         public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;

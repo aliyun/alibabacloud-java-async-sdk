@@ -143,7 +143,10 @@ public class DeleteVSwitchRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * The region ID of the vSwitch.
+         * <p>
+         * 
+         * You can call the [DescribeRegions](~~36063~~) operation to query the most recent region list.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -170,7 +173,7 @@ public class DeleteVSwitchRequest extends Request {
         }
 
         /**
-         * VSwitchId.
+         * The ID of the vSwitch that you want to delete.
          */
         public Builder vSwitchId(String vSwitchId) {
             this.putQueryParameter("VSwitchId", vSwitchId);

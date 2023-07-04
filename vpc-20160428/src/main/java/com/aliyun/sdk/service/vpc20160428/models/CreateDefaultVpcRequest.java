@@ -167,7 +167,12 @@ public class CreateDefaultVpcRequest extends Request {
         } 
 
         /**
-         * ClientToken.
+         * The client token that is used to ensure the idempotence of the request.
+         * <p>
+         * 
+         * You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters.
+         * 
+         * > If you do not specify this parameter, the system automatically uses the **request ID** as the **client token**. The **request ID** may be different for each request.
          */
         public Builder clientToken(String clientToken) {
             this.putQueryParameter("ClientToken", clientToken);
@@ -176,7 +181,11 @@ public class CreateDefaultVpcRequest extends Request {
         }
 
         /**
-         * EnableIpv6.
+         * Specifies whether to enable IPv6. Valid values:
+         * <p>
+         * 
+         * *   **false** (default)
+         * *   **true**
          */
         public Builder enableIpv6(Boolean enableIpv6) {
             this.putQueryParameter("EnableIpv6", enableIpv6);
@@ -185,7 +194,10 @@ public class CreateDefaultVpcRequest extends Request {
         }
 
         /**
-         * Ipv6CidrBlock.
+         * The IPv6 CIDR block of the default VPC.
+         * <p>
+         * 
+         * > When **EnableIpv6** is set to **true**, this parameter is required.
          */
         public Builder ipv6CidrBlock(String ipv6CidrBlock) {
             this.putQueryParameter("Ipv6CidrBlock", ipv6CidrBlock);
@@ -212,7 +224,10 @@ public class CreateDefaultVpcRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * The ID of the region to which the default VPC belongs.
+         * <p>
+         * 
+         * You can call the [DescribeRegions](~~36063~~) operation to query the most recent region list.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -221,7 +236,7 @@ public class CreateDefaultVpcRequest extends Request {
         }
 
         /**
-         * ResourceGroupId.
+         * The ID of the resource group.
          */
         public Builder resourceGroupId(String resourceGroupId) {
             this.putQueryParameter("ResourceGroupId", resourceGroupId);

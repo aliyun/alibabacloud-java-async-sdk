@@ -74,7 +74,7 @@ public class DeleteVpnAttachmentResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * Code.
+         * The status code returned for the operation. A value of **200** indicates that the operation is performed.
          */
         public Builder code(String code) {
             this.code = code;
@@ -82,7 +82,7 @@ public class DeleteVpnAttachmentResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * The information returned for the operation.
          */
         public Builder message(String message) {
             this.message = message;
@@ -90,7 +90,7 @@ public class DeleteVpnAttachmentResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -98,7 +98,11 @@ public class DeleteVpnAttachmentResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * Indicates whether the operation is performed.
+         * <p>
+         * 
+         * *   **true**: yes
+         * *   **false**: no
          */
         public Builder success(Boolean success) {
             this.success = success;

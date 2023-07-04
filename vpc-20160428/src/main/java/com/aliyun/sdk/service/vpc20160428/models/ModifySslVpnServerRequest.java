@@ -280,7 +280,13 @@ public class ModifySslVpnServerRequest extends Request {
         } 
 
         /**
-         * Cipher.
+         * The encryption algorithm that is used by the SSL server. Valid values:
+         * <p>
+         * 
+         * *   **AES-128-CBC** (default): AES-128-CBC
+         * *   **AES-192-CBC**: AES-192-CBC
+         * *   **AES-256-CBC**: AES-256-CBC
+         * *   **none**: does not use an encryption algorithm.
          */
         public Builder cipher(String cipher) {
             this.putQueryParameter("Cipher", cipher);
@@ -289,7 +295,7 @@ public class ModifySslVpnServerRequest extends Request {
         }
 
         /**
-         * ClientIpPool.
+         * The client IP address pool.
          */
         public Builder clientIpPool(String clientIpPool) {
             this.putQueryParameter("ClientIpPool", clientIpPool);
@@ -298,7 +304,12 @@ public class ModifySslVpnServerRequest extends Request {
         }
 
         /**
-         * ClientToken.
+         * The client token that is used to ensure the idempotence of the request.
+         * <p>
+         * 
+         * You can use the client to generate the value, but you must make sure that it is unique among different requests. ClientToken can contain only ASCII characters.
+         * 
+         * >  If you do not set this parameter, **ClientToken** is set to the value of **RequestId**. The value of **RequestId** may be different for each API request.
          */
         public Builder clientToken(String clientToken) {
             this.putQueryParameter("ClientToken", clientToken);
@@ -307,7 +318,11 @@ public class ModifySslVpnServerRequest extends Request {
         }
 
         /**
-         * Compress.
+         * Specifies whether to enable data compression. Valid values:
+         * <p>
+         * 
+         * *   **true** (default): yes
+         * *   **false**: no
          */
         public Builder compress(Boolean compress) {
             this.putQueryParameter("Compress", compress);
@@ -316,7 +331,11 @@ public class ModifySslVpnServerRequest extends Request {
         }
 
         /**
-         * EnableMultiFactorAuth.
+         * Specifies whether to enable two-factor authentication.
+         * <p>
+         * 
+         * *   **true**: yes
+         * *   **false** (default): no
          */
         public Builder enableMultiFactorAuth(Boolean enableMultiFactorAuth) {
             this.putQueryParameter("EnableMultiFactorAuth", enableMultiFactorAuth);
@@ -325,7 +344,7 @@ public class ModifySslVpnServerRequest extends Request {
         }
 
         /**
-         * IDaaSInstanceId.
+         * The ID of the Identity as a Service (IDaaS) instance.
          */
         public Builder iDaaSInstanceId(String iDaaSInstanceId) {
             this.putQueryParameter("IDaaSInstanceId", iDaaSInstanceId);
@@ -334,7 +353,7 @@ public class ModifySslVpnServerRequest extends Request {
         }
 
         /**
-         * IDaaSRegionId.
+         * The ID of the region where the IDaaS instance is created.
          */
         public Builder iDaaSRegionId(String iDaaSRegionId) {
             this.putQueryParameter("IDaaSRegionId", iDaaSRegionId);
@@ -343,7 +362,7 @@ public class ModifySslVpnServerRequest extends Request {
         }
 
         /**
-         * LocalSubnet.
+         * The CIDR block of the client.
          */
         public Builder localSubnet(String localSubnet) {
             this.putQueryParameter("LocalSubnet", localSubnet);
@@ -352,7 +371,10 @@ public class ModifySslVpnServerRequest extends Request {
         }
 
         /**
-         * Name.
+         * The name of the SSL server.
+         * <p>
+         * 
+         * The name must be 1 to 100 characters in length and cannot start with `http://` or `https://`.
          */
         public Builder name(String name) {
             this.putQueryParameter("Name", name);
@@ -379,7 +401,10 @@ public class ModifySslVpnServerRequest extends Request {
         }
 
         /**
-         * Port.
+         * The port used by the SSL server. Default value: **1194**. The following ports are not supported:
+         * <p>
+         * 
+         * **22, 2222, 22222, 9000, 9001, 9002, 7505, 80, 443, 53, 68, 123, 4510, 4560, 500, and 4500**.
          */
         public Builder port(Integer port) {
             this.putQueryParameter("Port", port);
@@ -388,7 +413,11 @@ public class ModifySslVpnServerRequest extends Request {
         }
 
         /**
-         * Proto.
+         * The protocol that is used by the SSL server. Valid values:
+         * <p>
+         * 
+         * *   **TCP**: TCP
+         * *   **UDP** (default): UDP
          */
         public Builder proto(String proto) {
             this.putQueryParameter("Proto", proto);
@@ -397,7 +426,10 @@ public class ModifySslVpnServerRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * The ID of the region where the VPN gateway is created.
+         * <p>
+         * 
+         * You can call the [DescribeRegions](~~36063~~) operation to query the most recent region list.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -424,7 +456,7 @@ public class ModifySslVpnServerRequest extends Request {
         }
 
         /**
-         * SslVpnServerId.
+         * The ID of the SSL server.
          */
         public Builder sslVpnServerId(String sslVpnServerId) {
             this.putQueryParameter("SslVpnServerId", sslVpnServerId);

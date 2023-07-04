@@ -228,7 +228,12 @@ public class CreateVpnRouteEntryRequest extends Request {
         } 
 
         /**
-         * ClientToken.
+         * The client token that is used to ensure the idempotence of the request.
+         * <p>
+         * 
+         * You can use the client to generate the value, but you must make sure that the value is unique among different requests. The client token can contain only ASCII characters.
+         * 
+         * >  If you do not specify this parameter, the system automatically uses **RequestId** as **ClientToken**. The value of **RequestId** may be different for each API request.
          */
         public Builder clientToken(String clientToken) {
             this.putQueryParameter("ClientToken", clientToken);
@@ -237,7 +242,10 @@ public class CreateVpnRouteEntryRequest extends Request {
         }
 
         /**
-         * Description.
+         * The description of the destination-based route.
+         * <p>
+         * 
+         * The description must be **1** to **100** characters in length, and cannot start with `http://` or `https://`.
          */
         public Builder description(String description) {
             this.putQueryParameter("Description", description);
@@ -246,7 +254,7 @@ public class CreateVpnRouteEntryRequest extends Request {
         }
 
         /**
-         * NextHop.
+         * The next hop of the destination-based route.
          */
         public Builder nextHop(String nextHop) {
             this.putQueryParameter("NextHop", nextHop);
@@ -255,7 +263,7 @@ public class CreateVpnRouteEntryRequest extends Request {
         }
 
         /**
-         * OverlayMode.
+         * The tunneling protocol. Set the value to **Ipsec**.
          */
         public Builder overlayMode(String overlayMode) {
             this.putQueryParameter("OverlayMode", overlayMode);
@@ -282,7 +290,11 @@ public class CreateVpnRouteEntryRequest extends Request {
         }
 
         /**
-         * PublishVpc.
+         * Specifies whether to advertise the destination-based route to a virtual private cloud (VPC) route table. Valid values:
+         * <p>
+         * 
+         * *   **true**: yes
+         * *   **false**: no
          */
         public Builder publishVpc(Boolean publishVpc) {
             this.putQueryParameter("PublishVpc", publishVpc);
@@ -291,7 +303,10 @@ public class CreateVpnRouteEntryRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * The ID of the region where the VPN gateway is created.
+         * <p>
+         * 
+         * You can call the [DescribeRegions](~~36063~~) operation to query the most recent region list.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -318,7 +333,7 @@ public class CreateVpnRouteEntryRequest extends Request {
         }
 
         /**
-         * RouteDest.
+         * The destination CIDR block of the destination-based route.
          */
         public Builder routeDest(String routeDest) {
             this.putQueryParameter("RouteDest", routeDest);
@@ -327,7 +342,7 @@ public class CreateVpnRouteEntryRequest extends Request {
         }
 
         /**
-         * VpnGatewayId.
+         * The ID of the VPN gateway.
          */
         public Builder vpnGatewayId(String vpnGatewayId) {
             this.putQueryParameter("VpnGatewayId", vpnGatewayId);
@@ -336,7 +351,11 @@ public class CreateVpnRouteEntryRequest extends Request {
         }
 
         /**
-         * Weight.
+         * The weight of the destination-based route. Valid values:
+         * <p>
+         * 
+         * *   **100**: a high priority
+         * *   **0**: a low priority
          */
         public Builder weight(Integer weight) {
             this.putQueryParameter("Weight", weight);

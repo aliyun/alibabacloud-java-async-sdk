@@ -62,7 +62,11 @@ public class DescribeTagKeysForExpressConnectResponseBody extends TeaModel {
         private TagKeys tagKeys; 
 
         /**
-         * NextToken.
+         * The token that is used for the next query. Valid values:
+         * <p>
+         * 
+         * *   If no value is returned for **NextToken**, no next queries are sent.
+         * *   If a value is returned for **NextToken**, the value is the token that is used for the next query.
          */
         public Builder nextToken(String nextToken) {
             this.nextToken = nextToken;
@@ -70,7 +74,7 @@ public class DescribeTagKeysForExpressConnectResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -78,7 +82,7 @@ public class DescribeTagKeysForExpressConnectResponseBody extends TeaModel {
         }
 
         /**
-         * TagKeys.
+         * The list of tag keys.
          */
         public Builder tagKeys(TagKeys tagKeys) {
             this.tagKeys = tagKeys;
@@ -130,7 +134,7 @@ public class DescribeTagKeysForExpressConnectResponseBody extends TeaModel {
             private String type; 
 
             /**
-             * TagKey.
+             * The tag key.
              */
             public Builder tagKey(String tagKey) {
                 this.tagKey = tagKey;
@@ -138,7 +142,7 @@ public class DescribeTagKeysForExpressConnectResponseBody extends TeaModel {
             }
 
             /**
-             * Type.
+             * The type of the resource. The value is set to **PHYSICALCONNECTION**, which indicates an Express Connect circuit.
              */
             public Builder type(String type) {
                 this.type = type;
@@ -179,7 +183,7 @@ public class DescribeTagKeysForExpressConnectResponseBody extends TeaModel {
             private java.util.List < TagKey> tagKey; 
 
             /**
-             * TagKey.
+             * The tag key.
              */
             public Builder tagKey(java.util.List < TagKey> tagKey) {
                 this.tagKey = tagKey;

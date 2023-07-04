@@ -112,7 +112,7 @@ public class DescribeEcGrantRelationRequest extends Request {
         } 
 
         /**
-         * InstanceId.
+         * The number of the page to return. Default value: **1**.
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -121,7 +121,11 @@ public class DescribeEcGrantRelationRequest extends Request {
         }
 
         /**
-         * InstanceType.
+         * The ID of the instance.
+         * <p>
+         * 
+         * *   If you set **InstanceType** to **VBR**, specify a VBR ID.
+         * *   If you set **InstanceType** to **VPC**, specify a VPC ID.
          */
         public Builder instanceType(String instanceType) {
             this.putQueryParameter("InstanceType", instanceType);
@@ -130,7 +134,7 @@ public class DescribeEcGrantRelationRequest extends Request {
         }
 
         /**
-         * PageNumber.
+         * The number of entries to return on each page. Maximum value: **50**. Default value: **10**.
          */
         public Builder pageNumber(Long pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -139,7 +143,11 @@ public class DescribeEcGrantRelationRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * The ID of the region where the instance is deployed.
+         * <p>
+         * 
+         * *   If **InstanceType** is set to **VBR**, this parameter is required.
+         * *   If **InstanceType** is set to **VPC**, you can ignore this parameter.
          */
         public Builder pageSize(Long pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -148,7 +156,7 @@ public class DescribeEcGrantRelationRequest extends Request {
         }
 
         /**
-         * VbrRegionNo.
+         * The ID of the request.
          */
         public Builder vbrRegionNo(String vbrRegionNo) {
             this.putQueryParameter("VbrRegionNo", vbrRegionNo);

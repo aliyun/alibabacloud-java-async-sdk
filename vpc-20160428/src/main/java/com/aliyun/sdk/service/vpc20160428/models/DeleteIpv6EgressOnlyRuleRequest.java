@@ -140,7 +140,12 @@ public class DeleteIpv6EgressOnlyRuleRequest extends Request {
         } 
 
         /**
-         * ClientToken.
+         * The client token that is used to ensure the idempotence of the request.
+         * <p>
+         * 
+         * You can use the client to generate a value, but you must make sure that the value is unique among all requests. The token can contain only ASCII characters.
+         * 
+         * >  If you do not specify this parameter, the system uses **RequestId** as **ClientToken**. **RequestId** might be different for each API request.
          */
         public Builder clientToken(String clientToken) {
             this.putQueryParameter("ClientToken", clientToken);
@@ -149,7 +154,7 @@ public class DeleteIpv6EgressOnlyRuleRequest extends Request {
         }
 
         /**
-         * Ipv6EgressOnlyRuleId.
+         * The ID of the egress-only rule that you want to delete.
          */
         public Builder ipv6EgressOnlyRuleId(String ipv6EgressOnlyRuleId) {
             this.putQueryParameter("Ipv6EgressOnlyRuleId", ipv6EgressOnlyRuleId);
@@ -176,7 +181,7 @@ public class DeleteIpv6EgressOnlyRuleRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * The ID of the IPv6 gateway.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);

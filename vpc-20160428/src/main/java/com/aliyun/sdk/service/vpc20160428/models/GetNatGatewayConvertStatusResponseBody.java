@@ -74,7 +74,7 @@ public class GetNatGatewayConvertStatusResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * ConvertSteps.
+         * The status during the switch.
          */
         public Builder convertSteps(java.util.List < ConvertSteps> convertSteps) {
             this.convertSteps = convertSteps;
@@ -82,7 +82,7 @@ public class GetNatGatewayConvertStatusResponseBody extends TeaModel {
         }
 
         /**
-         * DstNatType.
+         * The type of the NAT gateway. Set the value to **Enhanced**, which specifies an enhanced Internet NAT gateway.
          */
         public Builder dstNatType(String dstNatType) {
             this.dstNatType = dstNatType;
@@ -90,7 +90,7 @@ public class GetNatGatewayConvertStatusResponseBody extends TeaModel {
         }
 
         /**
-         * NatGatewayId.
+         * The ID of the Internet NAT gateway.
          */
         public Builder natGatewayId(String natGatewayId) {
             this.natGatewayId = natGatewayId;
@@ -98,7 +98,7 @@ public class GetNatGatewayConvertStatusResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -162,7 +162,17 @@ public class GetNatGatewayConvertStatusResponseBody extends TeaModel {
             private String stepStatus; 
 
             /**
-             * StepName.
+             * Valid values:
+             * <p>
+             * 
+             * *   **init**: initializing
+             * *   **check**: checking configurations
+             * *   **configure**: pushing configurations
+             * *   **activate**: switching
+             * *   **conf_delete**: deleting configurations
+             * *   **rollback**: rolling back
+             * *   **end_success**: switched
+             * *   **end_fail**: failed
              */
             public Builder stepName(String stepName) {
                 this.stepName = stepName;
@@ -170,7 +180,7 @@ public class GetNatGatewayConvertStatusResponseBody extends TeaModel {
             }
 
             /**
-             * StepStartTime.
+             * The time when the switch started.
              */
             public Builder stepStartTime(String stepStartTime) {
                 this.stepStartTime = stepStartTime;
@@ -178,7 +188,12 @@ public class GetNatGatewayConvertStatusResponseBody extends TeaModel {
             }
 
             /**
-             * StepStatus.
+             * The switch status. Valid values:
+             * <p>
+             * 
+             * *   **processing**: switching
+             * *   **successful**: switched
+             * *   **failed**: failed
              */
             public Builder stepStatus(String stepStatus) {
                 this.stepStatus = stepStatus;

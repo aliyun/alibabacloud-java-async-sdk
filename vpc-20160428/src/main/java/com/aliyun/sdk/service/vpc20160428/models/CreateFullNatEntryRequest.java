@@ -272,7 +272,11 @@ public class CreateFullNatEntryRequest extends Request {
         } 
 
         /**
-         * 需要进行转发的后端IP
+         * The protocol of the packets that are forwarded by the port. Valid values:
+         * <p>
+         * 
+         * *   **TCP**: forwards TCP packets.
+         * *   **UDP**: forwards UDP packets.
          */
         public Builder accessIp(String accessIp) {
             this.putQueryParameter("AccessIp", accessIp);
@@ -281,7 +285,7 @@ public class CreateFullNatEntryRequest extends Request {
         }
 
         /**
-         * 需要进行端口转发的内部端口，取值范围：1~65535。
+         * The name of the FULLNAT entry. The name must be 2 to 128 characters in length. It must start with a letter but cannot start with http:// or https://.
          */
         public Builder accessPort(String accessPort) {
             this.putQueryParameter("AccessPort", accessPort);
@@ -290,7 +294,7 @@ public class CreateFullNatEntryRequest extends Request {
         }
 
         /**
-         * ClientToken.
+         * The ID of the FULLNAT table to which the FULLNAT entry belongs.
          */
         public Builder clientToken(String clientToken) {
             this.putQueryParameter("ClientToken", clientToken);
@@ -299,7 +303,7 @@ public class CreateFullNatEntryRequest extends Request {
         }
 
         /**
-         * DryRun.
+         * The ID of the request.
          */
         public Builder dryRun(Boolean dryRun) {
             this.putQueryParameter("DryRun", dryRun);
@@ -308,7 +312,10 @@ public class CreateFullNatEntryRequest extends Request {
         }
 
         /**
-         * FullNatEntryDescription.
+         * The region ID of the Virtual Private Cloud (VPC) NAT gateway to which the FULLNAT entry to be added belongs.
+         * <p>
+         * 
+         * You can call the [DescribeRegions](~~36063~~) operation to query the most recent region list.
          */
         public Builder fullNatEntryDescription(String fullNatEntryDescription) {
             this.putQueryParameter("FullNatEntryDescription", fullNatEntryDescription);
@@ -317,7 +324,11 @@ public class CreateFullNatEntryRequest extends Request {
         }
 
         /**
-         * FULLNAT规则的名称。 长度为2~128个字符，必须以大小写字母或中文开头，但不能以http://或https://开头。
+         * Specifies whether only to precheck this request. Valid values:
+         * <p>
+         * 
+         * *   **true**: prechecks the request but does not add the FULLNAT entry. The system checks your AccessKey pair, the RAM user permissions, and the required parameters. If the request fails the precheck, an error code is returned. If the request passes the check, the `DryRunOperation` error code is returned.
+         * *   **false**: sends the API request. After the request passes the precheck, a 2XX HTTP status code is returned and the FULLNAT entry is added. This is the default value.
          */
         public Builder fullNatEntryName(String fullNatEntryName) {
             this.putQueryParameter("FullNatEntryName", fullNatEntryName);
@@ -326,7 +337,7 @@ public class CreateFullNatEntryRequest extends Request {
         }
 
         /**
-         * FullNAT条目所属的FullNAT列表的ID。
+         * The NAT IP address that provides address translation.
          */
         public Builder fullNatTableId(String fullNatTableId) {
             this.putQueryParameter("FullNatTableId", fullNatTableId);
@@ -335,7 +346,10 @@ public class CreateFullNatEntryRequest extends Request {
         }
 
         /**
-         * 协议类型，取值： • TCP：转发TCP协议的报文。 • UDP：转发UDP协议的报文。
+         * The description of the FULLNAT entry.
+         * <p>
+         * 
+         * This parameter is optional. If you enter a description, the description must be 2 to 256 characters in length, and cannot start with `http://` or `https://`.
          */
         public Builder ipProtocol(String ipProtocol) {
             this.putQueryParameter("IpProtocol", ipProtocol);
@@ -344,7 +358,7 @@ public class CreateFullNatEntryRequest extends Request {
         }
 
         /**
-         * 提供入方向访问的IP地址，该公网IP需要是当前VpcNat下的NatIP
+         * The backend IP address to be modified in FULLNAT address translation.
          */
         public Builder natIp(String natIp) {
             this.putQueryParameter("NatIp", natIp);
@@ -353,7 +367,7 @@ public class CreateFullNatEntryRequest extends Request {
         }
 
         /**
-         * 需要进行端口转发的外部端口，取值范围：1~65535。
+         * The backend port to be modified in FULLNAT port mapping. Valid values: **1** to **65535**.
          */
         public Builder natIpPort(String natIpPort) {
             this.putQueryParameter("NatIpPort", natIpPort);
@@ -362,7 +376,7 @@ public class CreateFullNatEntryRequest extends Request {
         }
 
         /**
-         * NetworkInterfaceId.
+         * The frontend port to be modified in FULLNAT port mapping. Valid values: **1** to **65535**.
          */
         public Builder networkInterfaceId(String networkInterfaceId) {
             this.putQueryParameter("NetworkInterfaceId", networkInterfaceId);
@@ -389,7 +403,7 @@ public class CreateFullNatEntryRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * The ID of the FULLNAT entry.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);

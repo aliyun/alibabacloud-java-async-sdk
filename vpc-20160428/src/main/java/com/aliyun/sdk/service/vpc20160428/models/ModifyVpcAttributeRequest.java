@@ -209,7 +209,12 @@ public class ModifyVpcAttributeRequest extends Request {
         } 
 
         /**
-         * CidrBlock.
+         * The new IPv4 CIDR block of the VPC.
+         * <p>
+         * 
+         * You can specify a larger or smaller IPv4 CIDR block than the IPv4 CIDR block of the VPC. The subnet mask must be 8 to 28 bits in length. If you specify a smaller IPv4 CIDR block and existing IP addresses do not fall within the CIDR block, the modification fails.
+         * 
+         * >  Your services are not affected when you modify the VPC CIDR block.
          */
         public Builder cidrBlock(String cidrBlock) {
             this.putQueryParameter("CidrBlock", cidrBlock);
@@ -218,7 +223,10 @@ public class ModifyVpcAttributeRequest extends Request {
         }
 
         /**
-         * Description.
+         * The new description of the VPC.
+         * <p>
+         * 
+         * The description must be 1 to 256 characters in length, and cannot start with `http://` or `https://`.
          */
         public Builder description(String description) {
             this.putQueryParameter("Description", description);
@@ -227,7 +235,11 @@ public class ModifyVpcAttributeRequest extends Request {
         }
 
         /**
-         * EnableIPv6.
+         * Specifies whether to enable IPv6 CIDR blocks. Valid values:
+         * <p>
+         * 
+         * *   **true**: yes
+         * *   **false** (default): no
          */
         public Builder enableIPv6(Boolean enableIPv6) {
             this.putQueryParameter("EnableIPv6", enableIPv6);
@@ -236,7 +248,7 @@ public class ModifyVpcAttributeRequest extends Request {
         }
 
         /**
-         * Ipv6CidrBlock.
+         * The IPv6 CIDR block of the VPC.
          */
         public Builder ipv6CidrBlock(String ipv6CidrBlock) {
             this.putQueryParameter("Ipv6CidrBlock", ipv6CidrBlock);
@@ -245,7 +257,15 @@ public class ModifyVpcAttributeRequest extends Request {
         }
 
         /**
-         * Ipv6Isp.
+         * The type of IPv6 CIDR block. Valid values:
+         * <p>
+         * 
+         * *   **BGP** (default): Alibaba Cloud Border Gateway Protocol (BGP) IPv6
+         * *   **ChinaMobile**: China Mobile (single ISP)
+         * *   **ChinaUnicom**: China Unicom (single ISP)
+         * *   **ChinaTelecom**: China Telecom (single ISP)
+         * 
+         * >  If your Alibaba Cloud account is allowed to use single-ISP bandwidth, valid values are: **ChinaTelecom**, **ChinaUnicom**, and **ChinaMobile**.
          */
         public Builder ipv6Isp(String ipv6Isp) {
             this.putQueryParameter("Ipv6Isp", ipv6Isp);
@@ -272,7 +292,10 @@ public class ModifyVpcAttributeRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * The region ID of the VPC.
+         * <p>
+         * 
+         * You can call the [DescribeRegions](~~36063~~) operation to query the most recent region list.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -299,7 +322,7 @@ public class ModifyVpcAttributeRequest extends Request {
         }
 
         /**
-         * VpcId.
+         * The ID of the VPC that you want to modify.
          */
         public Builder vpcId(String vpcId) {
             this.putQueryParameter("VpcId", vpcId);
@@ -308,7 +331,10 @@ public class ModifyVpcAttributeRequest extends Request {
         }
 
         /**
-         * VpcName.
+         * The new name of the VPC.
+         * <p>
+         * 
+         * The name must be 1 to 128 characters in length, and cannot start with `http://` or `https://`.
          */
         public Builder vpcName(String vpcName) {
             this.putQueryParameter("VpcName", vpcName);

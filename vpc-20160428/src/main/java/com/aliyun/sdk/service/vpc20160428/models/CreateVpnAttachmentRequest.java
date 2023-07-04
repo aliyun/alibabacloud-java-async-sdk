@@ -324,7 +324,11 @@ public class CreateVpnAttachmentRequest extends Request {
         } 
 
         /**
-         * AutoConfigRoute.
+         * Specifies whether to automatically configure routes. Valid values:
+         * <p>
+         * 
+         * *   **true** (default): automatically configures routes.
+         * *   **false**: does not automatically configure routes.
          */
         public Builder autoConfigRoute(Boolean autoConfigRoute) {
             this.putQueryParameter("AutoConfigRoute", autoConfigRoute);
@@ -333,7 +337,17 @@ public class CreateVpnAttachmentRequest extends Request {
         }
 
         /**
-         * BgpConfig.
+         * The Border Gateway Protocol (BGP) configuration:
+         * <p>
+         * 
+         * *   **BgpConfig.EnableBgp**: specifies whether to enable BGP. Valid values: **true** and **false**. Default value: false.
+         * *   **BgpConfig.LocalAsn**: the ASN on the Alibaba Cloud side. Valid values: **1** to **4294967295**. Default value: **45104**.
+         * *   **BgpConfig.TunnelCidr**: the CIDR block of the IPsec tunnel. The CIDR block must belong to 169.254.0.0/16. The subnet mask of the CIDR block must be 30 bits in length.
+         * *   **LocalBgpIp**: the BGP IP address on the Alibaba Cloud side. This IP address must fall within the CIDR block of the IPsec tunnel.
+         * 
+         * > 
+         * *   Before you configure BGP, we recommend that you learn about how BGP works and the limits. For more information, see [BGP dynamic routing](~~170235~~).
+         * *   We recommend that you use a private ASN to establish a connection to Alibaba Cloud over BGP. Refer to the relevant documentation for the valid range of a private ASN.
          */
         public Builder bgpConfig(String bgpConfig) {
             this.putQueryParameter("BgpConfig", bgpConfig);
@@ -342,7 +356,12 @@ public class CreateVpnAttachmentRequest extends Request {
         }
 
         /**
-         * ClientToken.
+         * The client token that you want to use to ensure the idempotence of the request.
+         * <p>
+         * 
+         * You can use the client to generate the value, but you must make sure that it is unique among different requests. The token can contain only ASCII characters.
+         * 
+         * >  If you do not set this parameter, the system automatically uses **RequestId** as **ClientToken**. The value of **RequestId** for each API request may be different.
          */
         public Builder clientToken(String clientToken) {
             this.putQueryParameter("ClientToken", clientToken);
@@ -351,7 +370,7 @@ public class CreateVpnAttachmentRequest extends Request {
         }
 
         /**
-         * CustomerGatewayId.
+         * The ID of the customer gateway.
          */
         public Builder customerGatewayId(String customerGatewayId) {
             this.putQueryParameter("CustomerGatewayId", customerGatewayId);
@@ -360,7 +379,11 @@ public class CreateVpnAttachmentRequest extends Request {
         }
 
         /**
-         * 立即生效
+         * Specifies whether to immediately start IPsec negotiations. Valid values:
+         * <p>
+         * 
+         * *   **true**: immediately starts IPsec negotiations after the configuration is complete.
+         * *   **false**: starts IPsec negotiations when inbound traffic is detected. This is the default value.
          */
         public Builder effectImmediately(Boolean effectImmediately) {
             this.putQueryParameter("EffectImmediately", effectImmediately);
@@ -369,7 +392,11 @@ public class CreateVpnAttachmentRequest extends Request {
         }
 
         /**
-         * EnableDpd.
+         * Specifies whether to enable the dead peer detection (DPD) feature. Valid values:
+         * <p>
+         * 
+         * *   **true** (default): enables DPD. The initiator of the IPsec-VPN connection sends DPD packets to verify the existence and availability of the peer. If no response is received from the peer within a specified period of time, the connection fails. ISAKMP SAs and IPsec SAs are deleted. The IPsec tunnel is also deleted.
+         * *   **false**: disables DPD. The initiator of the IPsec-VPN connection does not send DPD packets.
          */
         public Builder enableDpd(Boolean enableDpd) {
             this.putQueryParameter("EnableDpd", enableDpd);
@@ -378,7 +405,11 @@ public class CreateVpnAttachmentRequest extends Request {
         }
 
         /**
-         * EnableNatTraversal.
+         * Specifies whether to enable NAT traversal. Valid values:
+         * <p>
+         * 
+         * *   **true** (default): enables NAT traversal. After NAT traversal is enabled, the initiator does not check the UDP ports during IKE negotiations and can automatically discover NAT gateway devices along the VPN tunnel.
+         * *   **false**: disables NAT traversal.
          */
         public Builder enableNatTraversal(Boolean enableNatTraversal) {
             this.putQueryParameter("EnableNatTraversal", enableNatTraversal);
@@ -387,7 +418,23 @@ public class CreateVpnAttachmentRequest extends Request {
         }
 
         /**
-         * HealthCheckConfig.
+         * The health check configuration:
+         * <p>
+         * 
+         * *   **HealthCheckConfig.enable**: specifies whether to enable health checks. Valid values: **true** and **false**. Default value: false.
+         * 
+         * *   **HealthCheckConfig.dip**: the destination IP address that is used for health checks. Enter the IP address on the data center side that the VPC can communicate with through the IPsec-VPN connection.
+         * 
+         * *   **HealthCheckConfig.sip**: the source IP address that is used for health checks. Enter the IP address on the VPC side that the data center can communicate with through the IPsec-VPN connection.
+         * 
+         * *   **HealthCheckConfig.interval**: the interval between two consecutive health checks. Unit: seconds. Default value: **3**.
+         * 
+         * *   **HealthCheckConfig.retry**: the maximum number of health check retries. Default value: **3**.
+         * 
+         * *   **HealthCheckConfig.Policy**: specifies whether to withdraw published routes when health checks fail. Valid values:
+         * 
+         *     *   **revoke_route** (default): withdraws published routes.
+         *     *   **reserve_route**: does not withdraw published routes.
          */
         public Builder healthCheckConfig(String healthCheckConfig) {
             this.putQueryParameter("HealthCheckConfig", healthCheckConfig);
@@ -396,7 +443,30 @@ public class CreateVpnAttachmentRequest extends Request {
         }
 
         /**
-         * IkeConfig.
+         * The configuration of Phase 1 negotiations:
+         * <p>
+         * 
+         * *   **IkeConfig.Psk**: The pre-shared key that is used for authentication between the VPN gateway and the data center. The key must be 1 to 100 characters in length.
+         * 
+         *     If you do not specify a pre-shared key, the system generates a random 16-bit string as the pre-shared key. You can call the [DescribeVpnConnection](~~120374~~) operation to query the pre-shared key that is generated by the system.
+         * 
+         * > The pre-shared key of the IPsec-VPN connection must be the same as the authentication key of the data center. Otherwise, you cannot establish a connection between the data center and the VPN gateway.
+         * 
+         * *   **IkeConfig.IkeVersion**: the version of the IKE protocol. Valid values: **ikev1** and **ikev2**. Default value: **ikev1**.
+         * 
+         * *   **IkeConfig.IkeMode**: the negotiation mode. Valid values: **main** and **aggressive**. Default value: **main**.
+         * 
+         * *   **IkeConfig.IkeEncAlg**: the encryption algorithm that is used in Phase 1 negotiations. Valid values: **aes**, **aes192**, **aes256**, **des**, and **3des**. Default value: **aes**.
+         * 
+         * *   **IkeConfig.IkeAuthAlg**: the authentication algorithm that is used in Phase 1 negotiations. Valid values: **md5**, **sha1**, **sha256**, **sha384**, and **sha512**. Default value: **md5**.
+         * 
+         * *   **IkeConfig.IkePfs**: The Diffie-Hellman key exchange algorithm that is used in Phase 1 negotiations. Valid values: **group1**, **group2**, **group5**, and **group14**. Default value: **group2**.
+         * 
+         * *   **IkeConfig.IkeLifetime**: the SA lifetime determined by Phase 1 negotiations. Unit: seconds. Valid values: **0** to **86400**. Default value: **86400**.
+         * 
+         * *   **IkeConfig.LocalId**: the identifier on the Alibaba Cloud side. The identifier cannot exceed 100 characters in length. This parameter is empty by default.
+         * 
+         * *   **IkeConfig.RemoteId**: the identifier on the data center side. The identifier cannot exceed 100 characters in length. The default value is the IP address of the customer gateway.
          */
         public Builder ikeConfig(String ikeConfig) {
             this.putQueryParameter("IkeConfig", ikeConfig);
@@ -405,7 +475,13 @@ public class CreateVpnAttachmentRequest extends Request {
         }
 
         /**
-         * IpsecConfig.
+         * The configuration of Phase 2 negotiations:
+         * <p>
+         * 
+         * *   **IpsecConfig.IpsecEncAlg**: the encryption algorithm that is used in Phase 2 negotiations. Valid values: **aes**, **aes192**, **aes256**, **des**, and **3des**. Default value: **aes**.
+         * *   **IpsecConfig. IpsecAuthAlg**: the authentication algorithm that is used in Phase 2 negotiations. Valid values: **md5**, **sha1**, **sha256**, **sha384**, and **sha512**. Default value: **md5**.
+         * *   **IpsecConfig. IpsecPfs**: the Diffie-Hellman key exchange algorithm that is used in Phase 2 negotiations. Valid values: **disabled**, **group1**, **group2**, **group5**, and **group14**. Default value: **group2**.
+         * *   **IpsecConfig. IpsecLifetime**: the SA lifetime that is determined by Phase 2 negotiations. Unit: seconds. Valid values: **0** to **86400**. Default value: **86400**.
          */
         public Builder ipsecConfig(String ipsecConfig) {
             this.putQueryParameter("IpsecConfig", ipsecConfig);
@@ -414,7 +490,15 @@ public class CreateVpnAttachmentRequest extends Request {
         }
 
         /**
-         * 路由模式为感兴趣流模式时，设置本端ip和对端ip
+         * The CIDR block on the VPC side. The CIDR block is used in Phase 2 negotiations.
+         * <p>
+         * 
+         * Separate multiple CIDR blocks with commas (,). Example: 192.168.1.0/24,192.168.2.0/24.
+         * 
+         * The following routing modes are supported:
+         * 
+         * *   If you set **LocalSubnet** and **RemoteSubnet** to 0.0.0.0/0, the routing mode of the IPsec-VPN connection is set to Destination Routing Mode.
+         * *   If you set **LocalSubnet** and **RemoteSubnet** to specific CIDR blocks, the routing mode of the IPsec-VPN connection is set to Protected Data Flows.
          */
         public Builder localSubnet(String localSubnet) {
             this.putQueryParameter("LocalSubnet", localSubnet);
@@ -423,7 +507,10 @@ public class CreateVpnAttachmentRequest extends Request {
         }
 
         /**
-         * Name.
+         * The name of the IPsec-VPN connection.
+         * <p>
+         * 
+         * The name must be 1 to 100 characters in length, and cannot start with `http://` or `https://`.
          */
         public Builder name(String name) {
             this.putQueryParameter("Name", name);
@@ -432,7 +519,11 @@ public class CreateVpnAttachmentRequest extends Request {
         }
 
         /**
-         * public/private
+         * The network type of the IPsec-VPN connection. Valid values:
+         * <p>
+         * 
+         * *   **public**: an encrypted connection over the Internet. This is the default value.
+         * *   **private**: an encrypted connection over private networks.
          */
         public Builder networkType(String networkType) {
             this.putQueryParameter("NetworkType", networkType);
@@ -450,7 +541,10 @@ public class CreateVpnAttachmentRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * The ID of the region to which the IPsec-VPN connection belongs.
+         * <p>
+         * 
+         * You can call the [DescribeRegions](~~36063~~) operation to query the most recent list of regions.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -459,7 +553,7 @@ public class CreateVpnAttachmentRequest extends Request {
         }
 
         /**
-         * RemoteCaCert.
+         * The peer CA certificate when a ShangMi (SM) VPN gateway is used to create the IPsec-VPN connection.
          */
         public Builder remoteCaCert(String remoteCaCert) {
             this.putQueryParameter("RemoteCaCert", remoteCaCert);
@@ -468,7 +562,15 @@ public class CreateVpnAttachmentRequest extends Request {
         }
 
         /**
-         * RemoteSubnet.
+         * The CIDR block on the data center side. This CIDR block is used in Phase 2 negotiations.
+         * <p>
+         * 
+         * Separate multiple CIDR blocks with commas (,). Example: 192.168.3.0/24,192.168.4.0/24.
+         * 
+         * The following routing modes are supported:
+         * 
+         * *   If you set **LocalSubnet** and **RemoteSubnet** to 0.0.0.0/0, the routing mode of the IPsec-VPN connection is set to Destination Routing Mode.
+         * *   If you set **LocalSubnet** and **RemoteSubnet** to specific CIDR blocks, the routing mode of the IPsec-VPN connection is set to Protected Data Flows.
          */
         public Builder remoteSubnet(String remoteSubnet) {
             this.putQueryParameter("RemoteSubnet", remoteSubnet);
@@ -549,7 +651,12 @@ public class CreateVpnAttachmentRequest extends Request {
             private String value; 
 
             /**
-             * Key.
+             * The tag key. The tag key cannot be an empty string.
+             * <p>
+             * 
+             * It can be at most 64 characters in length, and cannot contain `http://` or `https://`. It cannot start with `aliyun` or `acs:`.
+             * 
+             * You can specify at most 20 tag keys in each call.
              */
             public Builder key(String key) {
                 this.key = key;
@@ -557,7 +664,12 @@ public class CreateVpnAttachmentRequest extends Request {
             }
 
             /**
-             * Value.
+             * The tag value.
+             * <p>
+             * 
+             * The tag value can be an empty string and cannot exceed 128 characters in length. It cannot start with `aliyun` or `acs:`, and cannot contain `http://` or `https://`.
+             * 
+             * Each tag key corresponds to one tag value. You can specify at most 20 tag values in each call.
              */
             public Builder value(String value) {
                 this.value = value;

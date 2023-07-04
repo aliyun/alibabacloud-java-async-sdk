@@ -251,7 +251,7 @@ public class DescribeIPv6TranslatorsRequest extends Request {
         } 
 
         /**
-         * AllocateIpv4Addr.
+         * The IPv4 address allocated to the IPv6 Translation Service instance.
          */
         public Builder allocateIpv4Addr(String allocateIpv4Addr) {
             this.putQueryParameter("AllocateIpv4Addr", allocateIpv4Addr);
@@ -260,7 +260,7 @@ public class DescribeIPv6TranslatorsRequest extends Request {
         }
 
         /**
-         * AllocateIpv6Addr.
+         * The IPv6 address allocated to the IPv6 Translation Service instance.
          */
         public Builder allocateIpv6Addr(String allocateIpv6Addr) {
             this.putQueryParameter("AllocateIpv6Addr", allocateIpv6Addr);
@@ -269,7 +269,11 @@ public class DescribeIPv6TranslatorsRequest extends Request {
         }
 
         /**
-         * BusinessStatus.
+         * The business status of the IPv6 Translation Service instance. Valid values:
+         * <p>
+         * 
+         * *   **Normal**
+         * *   **FinancialLocked**
          */
         public Builder businessStatus(String businessStatus) {
             this.putQueryParameter("BusinessStatus", businessStatus);
@@ -278,7 +282,7 @@ public class DescribeIPv6TranslatorsRequest extends Request {
         }
 
         /**
-         * Ipv6TranslatorId.
+         * The ID of the IPv6 Translation Service instance.
          */
         public Builder ipv6TranslatorId(String ipv6TranslatorId) {
             this.putQueryParameter("Ipv6TranslatorId", ipv6TranslatorId);
@@ -287,7 +291,7 @@ public class DescribeIPv6TranslatorsRequest extends Request {
         }
 
         /**
-         * Name.
+         * The name of the IPv6 Translation Service instance.
          */
         public Builder name(String name) {
             this.putQueryParameter("Name", name);
@@ -314,7 +318,7 @@ public class DescribeIPv6TranslatorsRequest extends Request {
         }
 
         /**
-         * PageNumber.
+         * The number of the page to return. Default value: **1**.
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -323,7 +327,7 @@ public class DescribeIPv6TranslatorsRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * The number of entries to return on each page. Maximum value: **50**. Default value: **10**.
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -332,7 +336,11 @@ public class DescribeIPv6TranslatorsRequest extends Request {
         }
 
         /**
-         * PayType.
+         * The billing method of the IPv6 Translation Service instance. Valid values:
+         * <p>
+         * 
+         * *   **Prepay**: subscription
+         * *   **Postpay**: pay-as-you-go
          */
         public Builder payType(String payType) {
             this.putQueryParameter("PayType", payType);
@@ -341,7 +349,7 @@ public class DescribeIPv6TranslatorsRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * The region of the IPv6 Translation Service instance. You can call the [DescribeRegions](~~36063~~) operation to query the most recent region list.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -368,7 +376,7 @@ public class DescribeIPv6TranslatorsRequest extends Request {
         }
 
         /**
-         * Spec.
+         * The specification of the IPv6 Translation Service instance. Set the value to **small**.
          */
         public Builder spec(String spec) {
             this.putQueryParameter("Spec", spec);
@@ -377,7 +385,16 @@ public class DescribeIPv6TranslatorsRequest extends Request {
         }
 
         /**
-         * Status.
+         * The status of the IPv6 Translation Service instance. Valid values:
+         * <p>
+         * 
+         * *   **init**
+         * *   **provisioning**
+         * *   **active**
+         * *   **updating**
+         * *   **upgrading**
+         * *   **deleting**
+         * *   **deleted**
          */
         public Builder status(String status) {
             this.putQueryParameter("Status", status);

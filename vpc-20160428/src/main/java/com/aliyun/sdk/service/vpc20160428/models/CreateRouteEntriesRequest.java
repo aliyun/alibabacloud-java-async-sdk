@@ -143,7 +143,7 @@ public class CreateRouteEntriesRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * The ID of the next hop of the custom route entry. You can specify up to 50 next hop IDs.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -186,8 +186,8 @@ public class CreateRouteEntriesRequest extends Request {
     } 
 
     public static class RouteEntries extends TeaModel {
-        @NameInMap("Describption")
-        private String describption;
+        @NameInMap("Description")
+        private String description;
 
         @NameInMap("DstCidrBlock")
         @Validation(required = true)
@@ -212,7 +212,7 @@ public class CreateRouteEntriesRequest extends Request {
         private String routeTableId;
 
         private RouteEntries(Builder builder) {
-            this.describption = builder.describption;
+            this.description = builder.description;
             this.dstCidrBlock = builder.dstCidrBlock;
             this.ipVersion = builder.ipVersion;
             this.name = builder.name;
@@ -230,10 +230,10 @@ public class CreateRouteEntriesRequest extends Request {
         }
 
         /**
-         * @return describption
+         * @return description
          */
-        public String getDescribption() {
-            return this.describption;
+        public String getDescription() {
+            return this.description;
         }
 
         /**
@@ -279,7 +279,7 @@ public class CreateRouteEntriesRequest extends Request {
         }
 
         public static final class Builder {
-            private String describption; 
+            private String description; 
             private String dstCidrBlock; 
             private Integer ipVersion; 
             private String name; 
@@ -288,15 +288,26 @@ public class CreateRouteEntriesRequest extends Request {
             private String routeTableId; 
 
             /**
-             * Describption.
+             * Description.
              */
-            public Builder describption(String describption) {
-                this.describption = describption;
+            public Builder description(String description) {
+                this.description = description;
                 return this;
             }
 
             /**
-             * DstCidrBlock.
+             * The type of next hop. You can specify up to 50 next hop types. Valid values:
+             * <p>
+             * 
+             * *   **Instance**: Elastic Compute Service (ECS) instance. This is the default value.
+             * *   **HaVip**: high-availability virtual IP address (HAVIP).
+             * *   **RouterInterface**: router interface.
+             * *   **NetworkInterface**: elastic network interface (ENI).
+             * *   **VpnGateway**: VPN gateway.
+             * *   **IPv6Gateway**: IPv6 gateway.
+             * *   **NatGateway**: NAT gateway.
+             * *   **Attachment**: transit router.
+             * *   **VpcPeer**: VPC peering connection.
              */
             public Builder dstCidrBlock(String dstCidrBlock) {
                 this.dstCidrBlock = dstCidrBlock;
@@ -304,7 +315,10 @@ public class CreateRouteEntriesRequest extends Request {
             }
 
             /**
-             * IpVersion.
+             * The description of the custom route entry. You can specify up to 50 descriptions.
+             * <p>
+             * 
+             * The description must be 1 to 256 characters in length, and cannot start with `http://` or `https://`.
              */
             public Builder ipVersion(Integer ipVersion) {
                 this.ipVersion = ipVersion;
@@ -312,7 +326,7 @@ public class CreateRouteEntriesRequest extends Request {
             }
 
             /**
-             * Name.
+             * The ID of the request.
              */
             public Builder name(String name) {
                 this.name = name;
@@ -320,7 +334,7 @@ public class CreateRouteEntriesRequest extends Request {
             }
 
             /**
-             * NextHop.
+             * The number of custom route entries that were successfully added.
              */
             public Builder nextHop(String nextHop) {
                 this.nextHop = nextHop;
@@ -328,7 +342,7 @@ public class CreateRouteEntriesRequest extends Request {
             }
 
             /**
-             * NextHopType.
+             * The number of custom route entries that failed to be added.
              */
             public Builder nextHopType(String nextHopType) {
                 this.nextHopType = nextHopType;
@@ -336,7 +350,10 @@ public class CreateRouteEntriesRequest extends Request {
             }
 
             /**
-             * RouteTableId.
+             * The name of the custom route entry that you want to add. You can specify up to 50 names.
+             * <p>
+             * 
+             * The name must be 1 to 128 characters in length, and cannot start with `http://` or `https://`.
              */
             public Builder routeTableId(String routeTableId) {
                 this.routeTableId = routeTableId;

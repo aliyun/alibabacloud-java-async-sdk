@@ -140,7 +140,7 @@ public class AssociateNetworkAclRequest extends Request {
         } 
 
         /**
-         * ClientToken.
+         * The ID of the request.
          */
         public Builder clientToken(String clientToken) {
             this.putQueryParameter("ClientToken", clientToken);
@@ -149,7 +149,12 @@ public class AssociateNetworkAclRequest extends Request {
         }
 
         /**
-         * NetworkAclId.
+         * The client token that is used to ensure the idempotence of the request.
+         * <p>
+         * 
+         * You can use the client to generate the value, but you must make sure that it is unique among all requests. ClientToken can contain only ASCII characters.
+         * 
+         * >  If you do not set this parameter, **ClientToken** is set to the value of **RequestId**. The value of **RequestId** may be different for each API request.
          */
         public Builder networkAclId(String networkAclId) {
             this.putQueryParameter("NetworkAclId", networkAclId);
@@ -167,7 +172,7 @@ public class AssociateNetworkAclRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * The operation that you want to perform. Set the value to **AssociateNetworkAcl**.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -248,7 +253,7 @@ public class AssociateNetworkAclRequest extends Request {
             private String resourceType; 
 
             /**
-             * ResourceId.
+             * The region ID of the network ACL. You can call the [DescribeRegions](~~36063~~) operation to query the most recent region list.
              */
             public Builder resourceId(String resourceId) {
                 this.resourceId = resourceId;
@@ -256,7 +261,7 @@ public class AssociateNetworkAclRequest extends Request {
             }
 
             /**
-             * ResourceType.
+             * The ID of the network ACL.
              */
             public Builder resourceType(String resourceType) {
                 this.resourceType = resourceType;

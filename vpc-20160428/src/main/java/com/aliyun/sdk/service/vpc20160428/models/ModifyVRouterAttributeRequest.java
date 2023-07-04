@@ -180,7 +180,10 @@ public class ModifyVRouterAttributeRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * The description of the vRouter.
+         * <p>
+         * 
+         * The description must be 1 to 256 characters in length and cannot start with `http://` or `https://`.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -207,7 +210,7 @@ public class ModifyVRouterAttributeRequest extends Request {
         }
 
         /**
-         * VRouterId.
+         * The ID of the request.
          */
         public Builder vRouterId(String vRouterId) {
             this.putQueryParameter("VRouterId", vRouterId);

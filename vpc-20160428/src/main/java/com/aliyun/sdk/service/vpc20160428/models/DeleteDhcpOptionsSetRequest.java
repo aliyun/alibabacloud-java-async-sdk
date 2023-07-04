@@ -154,7 +154,12 @@ public class DeleteDhcpOptionsSetRequest extends Request {
         } 
 
         /**
-         * ClientToken.
+         * The client token that is used to ensure the idempotence of the request.
+         * <p>
+         * 
+         * You can use the client to generate the value, but you must make sure that it is unique among different requests. The client token can contain only ASCII characters.
+         * 
+         * >  If you do not set this parameter, the system uses **RequestId** as **ClientToken**. **RequestId** may be different for each API request.
          */
         public Builder clientToken(String clientToken) {
             this.putQueryParameter("ClientToken", clientToken);
@@ -163,7 +168,7 @@ public class DeleteDhcpOptionsSetRequest extends Request {
         }
 
         /**
-         * DhcpOptionsSetId.
+         * The ID of the DHCP options set to be deleted.
          */
         public Builder dhcpOptionsSetId(String dhcpOptionsSetId) {
             this.putQueryParameter("DhcpOptionsSetId", dhcpOptionsSetId);
@@ -172,7 +177,12 @@ public class DeleteDhcpOptionsSetRequest extends Request {
         }
 
         /**
-         * DryRun.
+         * Specifies whether to check the request without performing the operation. Valid values:
+         * <p>
+         * 
+         * **true**: checks the request without performing the operation. The system checks the required parameters, request format, and limits. If the request fails the check, an error message is returned. If the request passes the check, the `DryRunOperation` error code is returned.
+         * 
+         * **false** (default): sends the request. After the request passes the check, the operation is performed.
          */
         public Builder dryRun(Boolean dryRun) {
             this.putQueryParameter("DryRun", dryRun);
@@ -199,7 +209,7 @@ public class DeleteDhcpOptionsSetRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * The region of the DHCP options set to be deleted. You can call the [DescribeRegions](~~36063~~) operation to query the most recent region list.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);

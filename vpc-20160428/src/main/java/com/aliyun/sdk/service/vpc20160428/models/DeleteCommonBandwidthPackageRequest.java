@@ -140,7 +140,7 @@ public class DeleteCommonBandwidthPackageRequest extends Request {
         } 
 
         /**
-         * BandwidthPackageId.
+         * The ID of the EIP bandwidth plan.
          */
         public Builder bandwidthPackageId(String bandwidthPackageId) {
             this.putQueryParameter("BandwidthPackageId", bandwidthPackageId);
@@ -149,7 +149,11 @@ public class DeleteCommonBandwidthPackageRequest extends Request {
         }
 
         /**
-         * Force.
+         * Specifies whether to forcibly delete the EIP bandwidth plan. Valid values:
+         * <p>
+         * 
+         * *   **false** (default): deletes the EIP bandwidth plan only when no EIPs are associated with the EIP bandwidth plan.
+         * *   **true**: disassociates all EIPs from the EIP bandwidth plan and deletes the EIP bandwidth plan.
          */
         public Builder force(String force) {
             this.putQueryParameter("Force", force);
@@ -176,7 +180,10 @@ public class DeleteCommonBandwidthPackageRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * The ID of the region where the EIP bandwidth plan is created.
+         * <p>
+         * 
+         * You can call the [DescribeRegions](~~36063~~) operation to query the most recent region list.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);

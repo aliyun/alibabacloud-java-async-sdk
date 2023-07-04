@@ -223,7 +223,12 @@ public class CreateVpcPrefixListRequest extends Request {
         } 
 
         /**
-         * ClientToken.
+         * The client token that is used to ensure the idempotence of the request.
+         * <p>
+         * 
+         * You can use the client to generate the value, but you must make sure that it is unique among all requests. ClientToken can contain only ASCII characters.
+         * 
+         * >  If you do not specify this parameter, **ClientToken** is set to the value of **RequestId**. The value of **RequestId** for each API request may be different.
          */
         public Builder clientToken(String clientToken) {
             this.putQueryParameter("ClientToken", clientToken);
@@ -232,7 +237,11 @@ public class CreateVpcPrefixListRequest extends Request {
         }
 
         /**
-         * DryRun.
+         * Specifies whether to perform a dry run. Valid values:
+         * <p>
+         * 
+         * *   **true**: performs a dry run. The system checks the required parameters, request syntax, and limits. If the request fails the dry run, an error message is returned. If the request passes the dry run, the `DryRunOperation` error code is returned.
+         * *   **false** (default): performs a dry run and sends the request. If the request passes the dry run, a 2xx HTTP status code is returned and the operation is performed.
          */
         public Builder dryRun(Boolean dryRun) {
             this.putQueryParameter("DryRun", dryRun);
@@ -241,7 +250,11 @@ public class CreateVpcPrefixListRequest extends Request {
         }
 
         /**
-         * IpVersion.
+         * The IP version. Valid values:
+         * <p>
+         * 
+         * *   **IPv4** (default)
+         * *   **IPv6**
          */
         public Builder ipVersion(String ipVersion) {
             this.putQueryParameter("IpVersion", ipVersion);
@@ -250,7 +263,7 @@ public class CreateVpcPrefixListRequest extends Request {
         }
 
         /**
-         * MaxEntries.
+         * The maximum number of CIDR blocks that you can specify in the prefix list. Default value: 50.
          */
         public Builder maxEntries(Integer maxEntries) {
             this.putQueryParameter("MaxEntries", maxEntries);
@@ -277,7 +290,10 @@ public class CreateVpcPrefixListRequest extends Request {
         }
 
         /**
-         * PrefixListDescription.
+         * The description of the prefix list.
+         * <p>
+         * 
+         * The description must be 1 to 256 characters in length and cannot start with `http://` or `https://`.
          */
         public Builder prefixListDescription(String prefixListDescription) {
             this.putQueryParameter("PrefixListDescription", prefixListDescription);
@@ -295,7 +311,10 @@ public class CreateVpcPrefixListRequest extends Request {
         }
 
         /**
-         * PrefixListName.
+         * The name of the prefix list.
+         * <p>
+         * 
+         * The name must be 1 to 128 characters in length, and cannot start with `http://` or `https://`.
          */
         public Builder prefixListName(String prefixListName) {
             this.putQueryParameter("PrefixListName", prefixListName);
@@ -304,7 +323,10 @@ public class CreateVpcPrefixListRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * The ID of the region where you want to create the prefix list.
+         * <p>
+         * 
+         * You can call the [DescribeRegions](~~36063~~) operation to query the most recent region list.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -313,7 +335,7 @@ public class CreateVpcPrefixListRequest extends Request {
         }
 
         /**
-         * ResourceGroupId.
+         * The ID of the resource group to which the prefix list belongs.
          */
         public Builder resourceGroupId(String resourceGroupId) {
             this.putQueryParameter("ResourceGroupId", resourceGroupId);
@@ -385,7 +407,7 @@ public class CreateVpcPrefixListRequest extends Request {
             private String description; 
 
             /**
-             * Cidr.
+             * The CIDR block specified in the prefix list.
              */
             public Builder cidr(String cidr) {
                 this.cidr = cidr;
@@ -393,7 +415,10 @@ public class CreateVpcPrefixListRequest extends Request {
             }
 
             /**
-             * Description.
+             * The description of the CIDR block specified in the prefix list.
+             * <p>
+             * 
+             * The description must be 1 to 256 characters in length and cannot start with `http://` or `https://`.
              */
             public Builder description(String description) {
                 this.description = description;

@@ -54,6 +54,10 @@ public class DescribeVpnConnectionLogsRequest extends Request {
     private Integer to;
 
     @Query
+    @NameInMap("TunnelId")
+    private String tunnelId;
+
+    @Query
     @NameInMap("VpnConnectionId")
     @Validation(required = true)
     private String vpnConnectionId;
@@ -70,6 +74,7 @@ public class DescribeVpnConnectionLogsRequest extends Request {
         this.resourceOwnerAccount = builder.resourceOwnerAccount;
         this.resourceOwnerId = builder.resourceOwnerId;
         this.to = builder.to;
+        this.tunnelId = builder.tunnelId;
         this.vpnConnectionId = builder.vpnConnectionId;
     }
 
@@ -157,6 +162,13 @@ public class DescribeVpnConnectionLogsRequest extends Request {
     }
 
     /**
+     * @return tunnelId
+     */
+    public String getTunnelId() {
+        return this.tunnelId;
+    }
+
+    /**
      * @return vpnConnectionId
      */
     public String getVpnConnectionId() {
@@ -174,6 +186,7 @@ public class DescribeVpnConnectionLogsRequest extends Request {
         private String resourceOwnerAccount; 
         private Long resourceOwnerId; 
         private Integer to; 
+        private String tunnelId; 
         private String vpnConnectionId; 
 
         private Builder() {
@@ -192,11 +205,15 @@ public class DescribeVpnConnectionLogsRequest extends Request {
             this.resourceOwnerAccount = request.resourceOwnerAccount;
             this.resourceOwnerId = request.resourceOwnerId;
             this.to = request.to;
+            this.tunnelId = request.tunnelId;
             this.vpnConnectionId = request.vpnConnectionId;
         } 
 
         /**
-         * From.
+         * The beginning of the time range to query. The value must be a UNIX timestamp. For example, 1671003744 specifies 15:42:24 (UTC+8) on December 14, 2022.
+         * <p>
+         * 
+         * >  If you specify **From**, you must also specify **To** or **MinutePeriod**.
          */
         public Builder from(Integer from) {
             this.putQueryParameter("From", from);
@@ -205,7 +222,10 @@ public class DescribeVpnConnectionLogsRequest extends Request {
         }
 
         /**
-         * MinutePeriod.
+         * The interval at which log data is queried. Valid values: **1** to **10**. Unit: minutes.
+         * <p>
+         * 
+         * >  If both **From** and **To** are not specified, you must specify **MinutePeriod**.
          */
         public Builder minutePeriod(Integer minutePeriod) {
             this.putQueryParameter("MinutePeriod", minutePeriod);
@@ -232,7 +252,7 @@ public class DescribeVpnConnectionLogsRequest extends Request {
         }
 
         /**
-         * PageNumber.
+         * The number of the page to return. Default value: **1**.
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -241,7 +261,7 @@ public class DescribeVpnConnectionLogsRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * The number of entries to return on each page. Valid values: **1** to **50**. Default value: **10**.
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -250,7 +270,10 @@ public class DescribeVpnConnectionLogsRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * The ID of the region to which the IPsec-VPN connection belongs.
+         * <p>
+         * 
+         * You can call the [DescribeRegions](~~36063~~) operation to query the most recent region list.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -277,7 +300,10 @@ public class DescribeVpnConnectionLogsRequest extends Request {
         }
 
         /**
-         * To.
+         * The end of the time range to query. The value must be a UNIX timestamp. For example, 1671004344 specifies 15:52:24 (UTC+8) on December 14, 2022.
+         * <p>
+         * 
+         * >  If you specify **To**, you must also specify **From** or **MinutePeriod**.
          */
         public Builder to(Integer to) {
             this.putQueryParameter("To", to);
@@ -286,7 +312,16 @@ public class DescribeVpnConnectionLogsRequest extends Request {
         }
 
         /**
-         * VpnConnectionId.
+         * TunnelId.
+         */
+        public Builder tunnelId(String tunnelId) {
+            this.putQueryParameter("TunnelId", tunnelId);
+            this.tunnelId = tunnelId;
+            return this;
+        }
+
+        /**
+         * The ID of the IPsec-VPN connection.
          */
         public Builder vpnConnectionId(String vpnConnectionId) {
             this.putQueryParameter("VpnConnectionId", vpnConnectionId);

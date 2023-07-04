@@ -50,7 +50,7 @@ public class UpdateVirtualPhysicalConnectionResponseBody extends TeaModel {
         private String success; 
 
         /**
-         * Id of the request
+         * RequestId.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -58,7 +58,7 @@ public class UpdateVirtualPhysicalConnectionResponseBody extends TeaModel {
         }
 
         /**
-         * 是否修改成功
+         * Success.
          */
         public Builder success(String success) {
             this.success = success;

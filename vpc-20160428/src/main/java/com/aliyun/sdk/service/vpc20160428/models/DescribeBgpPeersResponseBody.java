@@ -86,7 +86,7 @@ public class DescribeBgpPeersResponseBody extends TeaModel {
         private Integer totalCount; 
 
         /**
-         * BgpPeers.
+         * The detailed information about the BGP peers.
          */
         public Builder bgpPeers(BgpPeers bgpPeers) {
             this.bgpPeers = bgpPeers;
@@ -94,7 +94,7 @@ public class DescribeBgpPeersResponseBody extends TeaModel {
         }
 
         /**
-         * PageNumber.
+         * The page number of the returned page.
          */
         public Builder pageNumber(Integer pageNumber) {
             this.pageNumber = pageNumber;
@@ -102,7 +102,7 @@ public class DescribeBgpPeersResponseBody extends TeaModel {
         }
 
         /**
-         * PageSize.
+         * The number of entries returned per page.
          */
         public Builder pageSize(Integer pageSize) {
             this.pageSize = pageSize;
@@ -110,7 +110,7 @@ public class DescribeBgpPeersResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -118,7 +118,7 @@ public class DescribeBgpPeersResponseBody extends TeaModel {
         }
 
         /**
-         * TotalCount.
+         * The number of entries returned.
          */
         public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;
@@ -410,7 +410,7 @@ public class DescribeBgpPeersResponseBody extends TeaModel {
             private String status; 
 
             /**
-             * AdvertisedRouteCount.
+             * The number of advertised routes.
              */
             public Builder advertisedRouteCount(Integer advertisedRouteCount) {
                 this.advertisedRouteCount = advertisedRouteCount;
@@ -418,7 +418,7 @@ public class DescribeBgpPeersResponseBody extends TeaModel {
             }
 
             /**
-             * AuthKey.
+             * The authentication key of the BGP group.
              */
             public Builder authKey(String authKey) {
                 this.authKey = authKey;
@@ -426,7 +426,7 @@ public class DescribeBgpPeersResponseBody extends TeaModel {
             }
 
             /**
-             * BfdMultiHop.
+             * The Bidirectional Forwarding Detection (BFD) hop count.
              */
             public Builder bfdMultiHop(Integer bfdMultiHop) {
                 this.bfdMultiHop = bfdMultiHop;
@@ -434,7 +434,7 @@ public class DescribeBgpPeersResponseBody extends TeaModel {
             }
 
             /**
-             * BgpGroupId.
+             * The ID of the BGP group.
              */
             public Builder bgpGroupId(String bgpGroupId) {
                 this.bgpGroupId = bgpGroupId;
@@ -442,7 +442,7 @@ public class DescribeBgpPeersResponseBody extends TeaModel {
             }
 
             /**
-             * BgpPeerId.
+             * The ID of the BGP peer.
              */
             public Builder bgpPeerId(String bgpPeerId) {
                 this.bgpPeerId = bgpPeerId;
@@ -450,7 +450,14 @@ public class DescribeBgpPeersResponseBody extends TeaModel {
             }
 
             /**
-             * BgpStatus.
+             * The status of the BGP connection. Valid values:
+             * <p>
+             * 
+             * *   **Idle**: not connected
+             * *   **Connect**: in use
+             * *   **Active**: available
+             * *   **Established**: established
+             * *   **Down**: unavailable
              */
             public Builder bgpStatus(String bgpStatus) {
                 this.bgpStatus = bgpStatus;
@@ -458,7 +465,7 @@ public class DescribeBgpPeersResponseBody extends TeaModel {
             }
 
             /**
-             * Description.
+             * The description of the BGP group.
              */
             public Builder description(String description) {
                 this.description = description;
@@ -466,7 +473,11 @@ public class DescribeBgpPeersResponseBody extends TeaModel {
             }
 
             /**
-             * EnableBfd.
+             * Indicates whether BFD is enabled. Valid values:
+             * <p>
+             * 
+             * *   **true**: enabled
+             * *   **false**: disabled
              */
             public Builder enableBfd(Boolean enableBfd) {
                 this.enableBfd = enableBfd;
@@ -474,7 +485,7 @@ public class DescribeBgpPeersResponseBody extends TeaModel {
             }
 
             /**
-             * GmtModified.
+             * The time when the BGP peer is modified.
              */
             public Builder gmtModified(String gmtModified) {
                 this.gmtModified = gmtModified;
@@ -482,7 +493,7 @@ public class DescribeBgpPeersResponseBody extends TeaModel {
             }
 
             /**
-             * Hold.
+             * The hold time.
              */
             public Builder hold(String hold) {
                 this.hold = hold;
@@ -490,7 +501,7 @@ public class DescribeBgpPeersResponseBody extends TeaModel {
             }
 
             /**
-             * IpVersion.
+             * The version of the IP address.
              */
             public Builder ipVersion(String ipVersion) {
                 this.ipVersion = ipVersion;
@@ -498,7 +509,11 @@ public class DescribeBgpPeersResponseBody extends TeaModel {
             }
 
             /**
-             * IsFake.
+             * Indicates whether a fake ASN is used. Valid values:
+             * <p>
+             * 
+             * *   **true**: yes
+             * *   **false**: no
              */
             public Builder isFake(Boolean isFake) {
                 this.isFake = isFake;
@@ -506,7 +521,7 @@ public class DescribeBgpPeersResponseBody extends TeaModel {
             }
 
             /**
-             * Keepalive.
+             * The Keepalive interval.
              */
             public Builder keepalive(String keepalive) {
                 this.keepalive = keepalive;
@@ -514,7 +529,7 @@ public class DescribeBgpPeersResponseBody extends TeaModel {
             }
 
             /**
-             * LocalAsn.
+             * The AS number of the device on the Alibaba Cloud side.
              */
             public Builder localAsn(String localAsn) {
                 this.localAsn = localAsn;
@@ -522,7 +537,7 @@ public class DescribeBgpPeersResponseBody extends TeaModel {
             }
 
             /**
-             * Name.
+             * The name of the BGP peer.
              */
             public Builder name(String name) {
                 this.name = name;
@@ -530,7 +545,7 @@ public class DescribeBgpPeersResponseBody extends TeaModel {
             }
 
             /**
-             * PeerAsn.
+             * The autonomous system (AS) number of the BGP peer.
              */
             public Builder peerAsn(String peerAsn) {
                 this.peerAsn = peerAsn;
@@ -538,7 +553,7 @@ public class DescribeBgpPeersResponseBody extends TeaModel {
             }
 
             /**
-             * PeerIpAddress.
+             * The IP address of the BGP peer.
              */
             public Builder peerIpAddress(String peerIpAddress) {
                 this.peerIpAddress = peerIpAddress;
@@ -546,7 +561,7 @@ public class DescribeBgpPeersResponseBody extends TeaModel {
             }
 
             /**
-             * ReceivedRouteCount.
+             * The number of received routes.
              */
             public Builder receivedRouteCount(Integer receivedRouteCount) {
                 this.receivedRouteCount = receivedRouteCount;
@@ -554,7 +569,7 @@ public class DescribeBgpPeersResponseBody extends TeaModel {
             }
 
             /**
-             * RegionId.
+             * The ID of the region to which the BGP group belongs.
              */
             public Builder regionId(String regionId) {
                 this.regionId = regionId;
@@ -562,7 +577,7 @@ public class DescribeBgpPeersResponseBody extends TeaModel {
             }
 
             /**
-             * RouteLimit.
+             * The limit on routes.
              */
             public Builder routeLimit(String routeLimit) {
                 this.routeLimit = routeLimit;
@@ -570,7 +585,7 @@ public class DescribeBgpPeersResponseBody extends TeaModel {
             }
 
             /**
-             * RouterId.
+             * The ID of the router.
              */
             public Builder routerId(String routerId) {
                 this.routerId = routerId;
@@ -578,7 +593,14 @@ public class DescribeBgpPeersResponseBody extends TeaModel {
             }
 
             /**
-             * Status.
+             * The status of the BGP peer. Valid values:
+             * <p>
+             * 
+             * *   **Pending**
+             * *   **Available**
+             * *   **Modifying**
+             * *   **Deleting**
+             * *   **Deleted**
              */
             public Builder status(String status) {
                 this.status = status;

@@ -86,7 +86,7 @@ public class DescribeNatGatewaysResponseBody extends TeaModel {
         private Integer totalCount; 
 
         /**
-         * NatGateways.
+         * The details about the NAT gateway.
          */
         public Builder natGateways(NatGateways natGateways) {
             this.natGateways = natGateways;
@@ -94,7 +94,7 @@ public class DescribeNatGatewaysResponseBody extends TeaModel {
         }
 
         /**
-         * PageNumber.
+         * The page number of the returned page.
          */
         public Builder pageNumber(Integer pageNumber) {
             this.pageNumber = pageNumber;
@@ -102,7 +102,7 @@ public class DescribeNatGatewaysResponseBody extends TeaModel {
         }
 
         /**
-         * PageSize.
+         * The number of entries returned per page.
          */
         public Builder pageSize(Integer pageSize) {
             this.pageSize = pageSize;
@@ -110,7 +110,7 @@ public class DescribeNatGatewaysResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -118,7 +118,7 @@ public class DescribeNatGatewaysResponseBody extends TeaModel {
         }
 
         /**
-         * TotalCount.
+         * The number of NAT gateway entries that are returned.
          */
         public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;
@@ -288,7 +288,7 @@ public class DescribeNatGatewaysResponseBody extends TeaModel {
             private String usingStatus; 
 
             /**
-             * AllocationId.
+             * The ID of the EIP associated with the NAT gateway.
              */
             public Builder allocationId(String allocationId) {
                 this.allocationId = allocationId;
@@ -296,7 +296,7 @@ public class DescribeNatGatewaysResponseBody extends TeaModel {
             }
 
             /**
-             * IpAddress.
+             * The IP address of the EIP associated with the NAT gateway.
              */
             public Builder ipAddress(String ipAddress) {
                 this.ipAddress = ipAddress;
@@ -304,7 +304,7 @@ public class DescribeNatGatewaysResponseBody extends TeaModel {
             }
 
             /**
-             * PrivateIpAddress.
+             * The private IP address of the NAT gateway.
              */
             public Builder privateIpAddress(String privateIpAddress) {
                 this.privateIpAddress = privateIpAddress;
@@ -312,7 +312,11 @@ public class DescribeNatGatewaysResponseBody extends TeaModel {
             }
 
             /**
-             * SnatEntryEnabled.
+             * Indicates whether IP addresses that are used in DNAT entries can be specified in SNAT entries. Valid values:
+             * <p>
+             * 
+             * *   **true**: yes
+             * *   **false**: no
              */
             public Builder snatEntryEnabled(Boolean snatEntryEnabled) {
                 this.snatEntryEnabled = snatEntryEnabled;
@@ -320,7 +324,13 @@ public class DescribeNatGatewaysResponseBody extends TeaModel {
             }
 
             /**
-             * UsingStatus.
+             * The association between the EIP and the Internet NAT gateway. Valid values:
+             * <p>
+             * 
+             * *   **UsedByForwardTable**: The EIP is specified in a DNAT entry.
+             * *   **UsedBySnatTable**: The EIP is specified in an SNAT entry.
+             * *   **UsedByForwardSnatTable**: The EIP is specified in both an SNAT entry and a DNAT entry.
+             * *   **Idle**: The EIP is not specified in a DNAT or SNAT entry.
              */
             public Builder usingStatus(String usingStatus) {
                 this.usingStatus = usingStatus;
@@ -486,7 +496,7 @@ public class DescribeNatGatewaysResponseBody extends TeaModel {
             private String vswitchId; 
 
             /**
-             * EniInstanceId.
+             * The ID of the elastic network interface (ENI).
              */
             public Builder eniInstanceId(String eniInstanceId) {
                 this.eniInstanceId = eniInstanceId;
@@ -494,7 +504,11 @@ public class DescribeNatGatewaysResponseBody extends TeaModel {
             }
 
             /**
-             * EniType.
+             * The mode in which the ENI is associated with the NAT gateway.
+             * <p>
+             * 
+             * *   **indirect**: non-cut-through mode
+             * *   If an empty value is returned, it indicates that the cut-through mode is used.
              */
             public Builder eniType(String eniType) {
                 this.eniType = eniType;
@@ -502,7 +516,7 @@ public class DescribeNatGatewaysResponseBody extends TeaModel {
             }
 
             /**
-             * IzNo.
+             * The zone to which the NAT gateway belongs.
              */
             public Builder izNo(String izNo) {
                 this.izNo = izNo;
@@ -510,7 +524,7 @@ public class DescribeNatGatewaysResponseBody extends TeaModel {
             }
 
             /**
-             * MaxBandwidth.
+             * The maximum bandwidth. Unit: Mbit/s.
              */
             public Builder maxBandwidth(Integer maxBandwidth) {
                 this.maxBandwidth = maxBandwidth;
@@ -518,7 +532,7 @@ public class DescribeNatGatewaysResponseBody extends TeaModel {
             }
 
             /**
-             * MaxSessionEstablishRate.
+             * The number of new connections to the NAT gateway. Unit: connections per second.
              */
             public Builder maxSessionEstablishRate(Integer maxSessionEstablishRate) {
                 this.maxSessionEstablishRate = maxSessionEstablishRate;
@@ -526,7 +540,7 @@ public class DescribeNatGatewaysResponseBody extends TeaModel {
             }
 
             /**
-             * MaxSessionQuota.
+             * The number of concurrent connections to the NAT gateway. Unit: connections.
              */
             public Builder maxSessionQuota(Integer maxSessionQuota) {
                 this.maxSessionQuota = maxSessionQuota;
@@ -534,7 +548,7 @@ public class DescribeNatGatewaysResponseBody extends TeaModel {
             }
 
             /**
-             * PrivateIpAddress.
+             * The private IP address.
              */
             public Builder privateIpAddress(String privateIpAddress) {
                 this.privateIpAddress = privateIpAddress;
@@ -542,7 +556,7 @@ public class DescribeNatGatewaysResponseBody extends TeaModel {
             }
 
             /**
-             * VswitchId.
+             * The ID of the vSwitch to which the NAT gateway belongs.
              */
             public Builder vswitchId(String vswitchId) {
                 this.vswitchId = vswitchId;
@@ -636,7 +650,7 @@ public class DescribeNatGatewaysResponseBody extends TeaModel {
             private String tagValue; 
 
             /**
-             * TagKey.
+             * The tag key of the instance.
              */
             public Builder tagKey(String tagKey) {
                 this.tagKey = tagKey;
@@ -644,7 +658,7 @@ public class DescribeNatGatewaysResponseBody extends TeaModel {
             }
 
             /**
-             * TagValue.
+             * The tag value of the instance.
              */
             public Builder tagValue(String tagValue) {
                 this.tagValue = tagValue;
@@ -1062,7 +1076,11 @@ public class DescribeNatGatewaysResponseBody extends TeaModel {
             private String vpcId; 
 
             /**
-             * AutoPay.
+             * Indicates whether automatic payment is enabled. Valid values:
+             * <p>
+             * 
+             * *   **false**: no
+             * *   **true**: yes
              */
             public Builder autoPay(Boolean autoPay) {
                 this.autoPay = autoPay;
@@ -1070,7 +1088,11 @@ public class DescribeNatGatewaysResponseBody extends TeaModel {
             }
 
             /**
-             * BusinessStatus.
+             * The status of the NAT gateway. Valid values:
+             * <p>
+             * 
+             * *   **Normal**: normal
+             * *   **FinancialLocked**: locked due to overdue payments
              */
             public Builder businessStatus(String businessStatus) {
                 this.businessStatus = businessStatus;
@@ -1078,7 +1100,7 @@ public class DescribeNatGatewaysResponseBody extends TeaModel {
             }
 
             /**
-             * CreationTime.
+             * The time when the NAT gateway was created.
              */
             public Builder creationTime(String creationTime) {
                 this.creationTime = creationTime;
@@ -1086,7 +1108,11 @@ public class DescribeNatGatewaysResponseBody extends TeaModel {
             }
 
             /**
-             * DeletionProtection.
+             * Indicates whether the deletion protection feature is enabled. Valid values:
+             * <p>
+             * 
+             * *   **true**: yes
+             * *   **false**: no
              */
             public Builder deletionProtection(Boolean deletionProtection) {
                 this.deletionProtection = deletionProtection;
@@ -1094,7 +1120,7 @@ public class DescribeNatGatewaysResponseBody extends TeaModel {
             }
 
             /**
-             * Description.
+             * The description of the NAT gateway.
              */
             public Builder description(String description) {
                 this.description = description;
@@ -1102,7 +1128,11 @@ public class DescribeNatGatewaysResponseBody extends TeaModel {
             }
 
             /**
-             * EcsMetricEnabled.
+             * Indicates whether the traffic monitoring feature is enabled. Valid values:
+             * <p>
+             * 
+             * *   **true**: yes
+             * *   **false**: no
              */
             public Builder ecsMetricEnabled(Boolean ecsMetricEnabled) {
                 this.ecsMetricEnabled = ecsMetricEnabled;
@@ -1110,12 +1140,13 @@ public class DescribeNatGatewaysResponseBody extends TeaModel {
             }
 
             /**
-             * NAT网关的EIP绑定模式，取值：
+             * The mode in which the NAT gateway is associated with an elastic IP address (EIP). Valid values:
              * <p>
              * 
-             * MULTI_BINDED：多EIP网卡可见模式。
-             * NAT：EIP普通模式，兼容IPv4网关。
-             * 说明 NAT网关的EIP绑定模式为EIP普通模式时，EIP将占用NAT网关所在交换机的一个私网IP，请确保NAT网关所在交换机内私网IP地址充足，如果NAT网关所在的交换机没有可用的空闲私网地址时，将无法绑定新的EIP。NAT网关的EIP绑定模式为EIP普通模式时，NAT网关支持绑定的EIP数量上限为50个。
+             * *   **MULTI_BINDED**: multi-EIP-to-ENI mode
+             * *   **NAT**: NAT mode, which is compatible with IPv4 addresses.
+             * 
+             * >  Note: If you use the NAT mode, the EIP occupies one private IP address on the vSwitch of the NAT gateway. Make sure that the vSwitch has sufficient private IP addresses. Otherwise, the NAT gateway fails to be associated with the EIP. In NAT mode, you can associate a NAT gateway with up to 50 EIPs.
              */
             public Builder eipBindMode(String eipBindMode) {
                 this.eipBindMode = eipBindMode;
@@ -1123,7 +1154,7 @@ public class DescribeNatGatewaysResponseBody extends TeaModel {
             }
 
             /**
-             * ExpiredTime.
+             * The time when the NAT gateway expires.
              */
             public Builder expiredTime(String expiredTime) {
                 this.expiredTime = expiredTime;
@@ -1131,7 +1162,7 @@ public class DescribeNatGatewaysResponseBody extends TeaModel {
             }
 
             /**
-             * ForwardTableIds.
+             * The ID of the DNAT table.
              */
             public Builder forwardTableIds(ForwardTableIds forwardTableIds) {
                 this.forwardTableIds = forwardTableIds;
@@ -1139,7 +1170,7 @@ public class DescribeNatGatewaysResponseBody extends TeaModel {
             }
 
             /**
-             * FullNatTableIds.
+             * The ID of the FULLNAT table.
              */
             public Builder fullNatTableIds(FullNatTableIds fullNatTableIds) {
                 this.fullNatTableIds = fullNatTableIds;
@@ -1147,7 +1178,11 @@ public class DescribeNatGatewaysResponseBody extends TeaModel {
             }
 
             /**
-             * IcmpReplyEnabled.
+             * Indicates whether the ICMP non-retrieval feature is enabled. Valid values:
+             * <p>
+             * 
+             * *   **true**: yes
+             * *   **false**: no
              */
             public Builder icmpReplyEnabled(Boolean icmpReplyEnabled) {
                 this.icmpReplyEnabled = icmpReplyEnabled;
@@ -1155,7 +1190,7 @@ public class DescribeNatGatewaysResponseBody extends TeaModel {
             }
 
             /**
-             * InstanceChargeType.
+             * The billing method of the NAT gateway. The value is set to **PostPaid**, which indicates the pay-as-you-go billing method.
              */
             public Builder instanceChargeType(String instanceChargeType) {
                 this.instanceChargeType = instanceChargeType;
@@ -1163,7 +1198,11 @@ public class DescribeNatGatewaysResponseBody extends TeaModel {
             }
 
             /**
-             * InternetChargeType.
+             * The metering method of the NAT gateway. Valid values:
+             * <p>
+             * 
+             * *   **PayBySpec**: pay-by-specification
+             * *   **PayByLcu**: pay-by-CU
              */
             public Builder internetChargeType(String internetChargeType) {
                 this.internetChargeType = internetChargeType;
@@ -1171,7 +1210,7 @@ public class DescribeNatGatewaysResponseBody extends TeaModel {
             }
 
             /**
-             * IpLists.
+             * The list of elastic IP addresses (EIPs) that are associated with the Internet NAT gateway.
              */
             public Builder ipLists(IpLists ipLists) {
                 this.ipLists = ipLists;
@@ -1179,7 +1218,7 @@ public class DescribeNatGatewaysResponseBody extends TeaModel {
             }
 
             /**
-             * Name.
+             * The name of the NAT gateway.
              */
             public Builder name(String name) {
                 this.name = name;
@@ -1187,7 +1226,7 @@ public class DescribeNatGatewaysResponseBody extends TeaModel {
             }
 
             /**
-             * NatGatewayId.
+             * The ID of the NAT gateway.
              */
             public Builder natGatewayId(String natGatewayId) {
                 this.natGatewayId = natGatewayId;
@@ -1195,7 +1234,10 @@ public class DescribeNatGatewaysResponseBody extends TeaModel {
             }
 
             /**
-             * NatGatewayPrivateInfo.
+             * The private network information about the enhanced Internet NAT gateway.
+             * <p>
+             * 
+             * >  If **NatType** is set to **Normal**, all parameters returned in this list are empty.
              */
             public Builder natGatewayPrivateInfo(NatGatewayPrivateInfo natGatewayPrivateInfo) {
                 this.natGatewayPrivateInfo = natGatewayPrivateInfo;
@@ -1203,7 +1245,7 @@ public class DescribeNatGatewaysResponseBody extends TeaModel {
             }
 
             /**
-             * NatType.
+             * The type of the NAT gateway. The value is set to **Enhanced** (enhanced NAT gateway).
              */
             public Builder natType(String natType) {
                 this.natType = natType;
@@ -1211,7 +1253,11 @@ public class DescribeNatGatewaysResponseBody extends TeaModel {
             }
 
             /**
-             * NetworkType.
+             * The type of NAT gateway. Valid values:
+             * <p>
+             * 
+             * *   **internet**: an Internet NAT gateway
+             * *   **intranet**: a VPC NAT gateway
              */
             public Builder networkType(String networkType) {
                 this.networkType = networkType;
@@ -1219,7 +1265,11 @@ public class DescribeNatGatewaysResponseBody extends TeaModel {
             }
 
             /**
-             * 默认不支持私网链接。设置为1则意味着支持私网链接
+             * Indicates whether the NAT gateway supports PrivateLink. Valid values:
+             * <p>
+             * 
+             * *   **true**: yes
+             * *   **false**: no
              */
             public Builder privateLinkEnabled(Boolean privateLinkEnabled) {
                 this.privateLinkEnabled = privateLinkEnabled;
@@ -1227,7 +1277,11 @@ public class DescribeNatGatewaysResponseBody extends TeaModel {
             }
 
             /**
-             * Fullnat：使用FullNat模式 Geneve：使用Geneve模式。 预估大部分场景都是非Geneve模式的。
+             * The mode that is used by PrivateLink. Valid values:
+             * <p>
+             * 
+             * *   **FullNat**: the FULLNAT mode
+             * *   **Geneve**: the GENEVE mode
              */
             public Builder privateLinkMode(String privateLinkMode) {
                 this.privateLinkMode = privateLinkMode;
@@ -1235,7 +1289,7 @@ public class DescribeNatGatewaysResponseBody extends TeaModel {
             }
 
             /**
-             * RegionId.
+             * The ID of the region where the NAT gateway is deployed.
              */
             public Builder regionId(String regionId) {
                 this.regionId = regionId;
@@ -1243,7 +1297,7 @@ public class DescribeNatGatewaysResponseBody extends TeaModel {
             }
 
             /**
-             * ResourceGroupId.
+             * The ID of the resource group to which the contiguous EIP group belongs.
              */
             public Builder resourceGroupId(String resourceGroupId) {
                 this.resourceGroupId = resourceGroupId;
@@ -1251,7 +1305,11 @@ public class DescribeNatGatewaysResponseBody extends TeaModel {
             }
 
             /**
-             * SecurityProtectionEnabled.
+             * Indicates whether the firewall feature is enabled. Valid values:
+             * <p>
+             * 
+             * *   **false**: no
+             * *   **true**: yes
              */
             public Builder securityProtectionEnabled(Boolean securityProtectionEnabled) {
                 this.securityProtectionEnabled = securityProtectionEnabled;
@@ -1259,7 +1317,7 @@ public class DescribeNatGatewaysResponseBody extends TeaModel {
             }
 
             /**
-             * SnatTableIds.
+             * The ID of the SNAT table of the NAT gateway.
              */
             public Builder snatTableIds(SnatTableIds snatTableIds) {
                 this.snatTableIds = snatTableIds;
@@ -1267,7 +1325,10 @@ public class DescribeNatGatewaysResponseBody extends TeaModel {
             }
 
             /**
-             * Spec.
+             * The size of the NAT gateway. An empty value is returned for the parameter.
+             * <p>
+             * 
+             * If **InternetChargeType** is set to **PayByLcu**, an empty value is returned.
              */
             public Builder spec(String spec) {
                 this.spec = spec;
@@ -1275,7 +1336,14 @@ public class DescribeNatGatewaysResponseBody extends TeaModel {
             }
 
             /**
-             * Status.
+             * The status of the NAT gateway. Valid values:
+             * <p>
+             * 
+             * *   **Creating**: After you send a request to create a NAT gateway, the system creates the NAT gateway in the background. The NAT gateway remains in the Creating state until the operation is completed.
+             * *   **Available**: The NAT gateway remains in a stable state after the NAT gateway is created.
+             * *   **Modifying**: After you send a request to modify a NAT gateway, the system modifies the NAT gateway in the background. The NAT gateway remains in the Modifying state until the operation is completed.
+             * *   **Deleting**: After you send a request to delete a NAT gateway, the system deletes the NAT gateway in the background. The NAT gateway remains in the Deleting state until the operation is completed.
+             * *   **Converting**: After you send a request to upgrade a standard NAT gateway to an enhanced NAT gateway, the system upgrades the NAT gateway in the background. The NAT gateway remains in the Converting state until the operation is completed.
              */
             public Builder status(String status) {
                 this.status = status;
@@ -1283,7 +1351,7 @@ public class DescribeNatGatewaysResponseBody extends TeaModel {
             }
 
             /**
-             * Tags.
+             * The tags that are added to the resource group.
              */
             public Builder tags(Tags tags) {
                 this.tags = tags;
@@ -1291,7 +1359,7 @@ public class DescribeNatGatewaysResponseBody extends TeaModel {
             }
 
             /**
-             * VpcId.
+             * The ID of the VPC where the NAT gateway is deployed.
              */
             public Builder vpcId(String vpcId) {
                 this.vpcId = vpcId;

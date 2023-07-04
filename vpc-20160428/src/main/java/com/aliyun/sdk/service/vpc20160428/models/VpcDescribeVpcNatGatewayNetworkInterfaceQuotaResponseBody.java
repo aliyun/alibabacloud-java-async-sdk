@@ -50,7 +50,7 @@ public class VpcDescribeVpcNatGatewayNetworkInterfaceQuotaResponseBody extends T
         private String requestId; 
 
         /**
-         * 分页大小
+         * The number of endpoints that can be created.
          */
         public Builder quota(Long quota) {
             this.quota = quota;
@@ -58,7 +58,7 @@ public class VpcDescribeVpcNatGatewayNetworkInterfaceQuotaResponseBody extends T
         }
 
         /**
-         * Id of the request
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

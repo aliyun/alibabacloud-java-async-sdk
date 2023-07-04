@@ -90,7 +90,10 @@ public class CreateVpnGatewayResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the order.
+         * <p>
+         * 
+         * If automatic payment is disabled, you must manually complete the payment for the VPN gateway in the [Alibaba Cloud Management console](https://usercenter2-intl.aliyun.com/billing/#/account/overview).
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -98,7 +101,7 @@ public class CreateVpnGatewayResponseBody extends TeaModel {
         }
 
         /**
-         * VpnGatewayId.
+         * The name of the VPN gateway.
          */
         public Builder vpnGatewayId(String vpnGatewayId) {
             this.vpnGatewayId = vpnGatewayId;

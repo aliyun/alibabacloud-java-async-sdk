@@ -126,7 +126,7 @@ public class GetVpcGatewayEndpointAttributeRequest extends Request {
         } 
 
         /**
-         * VPC网关实例ID
+         * The description of the gateway endpoint.
          */
         public Builder endpointId(String endpointId) {
             this.putQueryParameter("EndpointId", endpointId);
@@ -153,7 +153,7 @@ public class GetVpcGatewayEndpointAttributeRequest extends Request {
         }
 
         /**
-         * 地域
+         * The name of the endpoint service.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);

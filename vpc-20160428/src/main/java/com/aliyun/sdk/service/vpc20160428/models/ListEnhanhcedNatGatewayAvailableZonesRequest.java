@@ -125,7 +125,11 @@ public class ListEnhanhcedNatGatewayAvailableZonesRequest extends Request {
         } 
 
         /**
-         * AcceptLanguage.
+         * The language to display the results. Valid values:
+         * <p>
+         * 
+         * *   **zh-CN** (default): Chinese
+         * *   **en-US**: English
          */
         public Builder acceptLanguage(String acceptLanguage) {
             this.putQueryParameter("AcceptLanguage", acceptLanguage);
@@ -152,7 +156,12 @@ public class ListEnhanhcedNatGatewayAvailableZonesRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * The ID of the region that you want to query.
+         * <p>
+         * 
+         * You can call the [DescribeRegions](~~36063~~) operation to query the most recent region list.
+         * 
+         * In this example, zones that support NAT gateways in the UAE (Dubai) region are queried.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);

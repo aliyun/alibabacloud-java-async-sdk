@@ -210,7 +210,7 @@ public class DescribeIpv6GatewaysRequest extends Request {
         } 
 
         /**
-         * Ipv6GatewayId.
+         * The ID of the IPv6 gateway.
          */
         public Builder ipv6GatewayId(String ipv6GatewayId) {
             this.putQueryParameter("Ipv6GatewayId", ipv6GatewayId);
@@ -219,7 +219,10 @@ public class DescribeIpv6GatewaysRequest extends Request {
         }
 
         /**
-         * Name.
+         * The name of the IPv6 gateway.
+         * <p>
+         * 
+         * The name must be 2 to 256 characters in length, and can contain letters, digits, periods (.), underscores (\_), and hyphens (-). The name must start with a letter. It cannot start with `http://` or `https://`.
          */
         public Builder name(String name) {
             this.putQueryParameter("Name", name);
@@ -246,7 +249,7 @@ public class DescribeIpv6GatewaysRequest extends Request {
         }
 
         /**
-         * PageNumber.
+         * The number of the page to return.
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -255,7 +258,7 @@ public class DescribeIpv6GatewaysRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * The number of entries to return on each page.
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -264,7 +267,10 @@ public class DescribeIpv6GatewaysRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * The ID of the region where the IPv6 gateway is deployed.
+         * <p>
+         * 
+         * >  IPv6 gateways are available in the following regions: China (Qingdao), China (Beijing), China (Zhangjiakou), China (Hohhot), China (Ulanqab), China (Hangzhou), China (Shanghai), China (Shenzhen), China (Heyuan), China (Guangzhou), China (Chengdu), China (Hong Kong), Philippines (Manila), Singapore, US (Virginia), and Germany (Frankfurt).
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -273,7 +279,7 @@ public class DescribeIpv6GatewaysRequest extends Request {
         }
 
         /**
-         * ResourceGroupId.
+         * The ID of the resource group.
          */
         public Builder resourceGroupId(String resourceGroupId) {
             this.putQueryParameter("ResourceGroupId", resourceGroupId);
@@ -309,7 +315,7 @@ public class DescribeIpv6GatewaysRequest extends Request {
         }
 
         /**
-         * VpcId.
+         * The ID of the virtual private cloud (VPC) to which the IPv6 gateway belongs.
          */
         public Builder vpcId(String vpcId) {
             this.putQueryParameter("VpcId", vpcId);
@@ -363,7 +369,12 @@ public class DescribeIpv6GatewaysRequest extends Request {
             private String value; 
 
             /**
-             * Key.
+             * The key of the tag. The tag key cannot be an empty string.
+             * <p>
+             * 
+             * It must be 1 to 64 characters in length, and cannot contain `http://` or `https://`. It cannot start with `aliyun` or `acs:`.
+             * 
+             * You can specify at most 20 tag keys in each call.
              */
             public Builder key(String key) {
                 this.key = key;
@@ -371,7 +382,12 @@ public class DescribeIpv6GatewaysRequest extends Request {
             }
 
             /**
-             * Value.
+             * The value of the tag.
+             * <p>
+             * 
+             * The tag value can be an empty string and must be 1 to 128 characters in length. It cannot start with `aliyun` or `acs:`, and cannot contain `http://` or `https://`.
+             * 
+             * Each tag key corresponds to one tag value. You can specify at most 20 tag values in each call.
              */
             public Builder value(String value) {
                 this.value = value;

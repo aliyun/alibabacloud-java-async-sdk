@@ -153,7 +153,11 @@ public class DeleteVpcRequest extends Request {
         } 
 
         /**
-         * DryRun.
+         * Specifies whether to perform a dry run. Valid values:
+         * <p>
+         * 
+         * - **true**: performs a dry run. The system checks the required parameters, request syntax, and limits. If the request fails the dry run, an error message is returned. If the request passes the dry run, the `DryRunOperation` error code is returned.
+         * - **false** (default): performs a dry run and sends the request. If the request passes the dry run, a 2xx HTTP status code is returned and the operation is performed.
          */
         public Builder dryRun(Boolean dryRun) {
             this.putQueryParameter("DryRun", dryRun);
@@ -162,7 +166,16 @@ public class DeleteVpcRequest extends Request {
         }
 
         /**
-         * ForceDelete.
+         * Specifies whether to forcefully delete the VPC. Valid values:
+         * <p>
+         * 
+         * - **true**: yes
+         * - **false** (default): no
+         * 
+         * You can forcefully delete a VPC in the following scenarios:
+         * 
+         * - Only an IPv4 gateway and routes that point to the IPv4 gateway exist in the VPC.
+         * - Only an IPv6 gateway and routes that point to the IPv6 gateway exist in the VPC.
          */
         public Builder forceDelete(Boolean forceDelete) {
             this.putQueryParameter("ForceDelete", forceDelete);
@@ -189,7 +202,10 @@ public class DeleteVpcRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * The ID of the region where the VPC is deployed.
+         * <p>
+         * 
+         * You can call the [DescribeRegions](~~36063~~) operation to query the most recent region list.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -216,7 +232,7 @@ public class DeleteVpcRequest extends Request {
         }
 
         /**
-         * VpcId.
+         * The ID of the VPC that you want to delete.
          */
         public Builder vpcId(String vpcId) {
             this.putQueryParameter("VpcId", vpcId);

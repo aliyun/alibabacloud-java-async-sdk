@@ -43,6 +43,10 @@ public class ListVpcGatewayEndpointsRequest extends Request {
     private String regionId;
 
     @Query
+    @NameInMap("ResourceGroupId")
+    private String resourceGroupId;
+
+    @Query
     @NameInMap("ResourceOwnerAccount")
     private String resourceOwnerAccount;
 
@@ -54,6 +58,10 @@ public class ListVpcGatewayEndpointsRequest extends Request {
     @NameInMap("ServiceName")
     private String serviceName;
 
+    @Query
+    @NameInMap("Tags")
+    private java.util.List < Tags> tags;
+
     private ListVpcGatewayEndpointsRequest(Builder builder) {
         super(builder);
         this.endpointId = builder.endpointId;
@@ -63,9 +71,11 @@ public class ListVpcGatewayEndpointsRequest extends Request {
         this.ownerAccount = builder.ownerAccount;
         this.ownerId = builder.ownerId;
         this.regionId = builder.regionId;
+        this.resourceGroupId = builder.resourceGroupId;
         this.resourceOwnerAccount = builder.resourceOwnerAccount;
         this.resourceOwnerId = builder.resourceOwnerId;
         this.serviceName = builder.serviceName;
+        this.tags = builder.tags;
     }
 
     public static Builder builder() {
@@ -131,6 +141,13 @@ public class ListVpcGatewayEndpointsRequest extends Request {
     }
 
     /**
+     * @return resourceGroupId
+     */
+    public String getResourceGroupId() {
+        return this.resourceGroupId;
+    }
+
+    /**
      * @return resourceOwnerAccount
      */
     public String getResourceOwnerAccount() {
@@ -151,6 +168,13 @@ public class ListVpcGatewayEndpointsRequest extends Request {
         return this.serviceName;
     }
 
+    /**
+     * @return tags
+     */
+    public java.util.List < Tags> getTags() {
+        return this.tags;
+    }
+
     public static final class Builder extends Request.Builder<ListVpcGatewayEndpointsRequest, Builder> {
         private String endpointId; 
         private String endpointName; 
@@ -159,9 +183,11 @@ public class ListVpcGatewayEndpointsRequest extends Request {
         private String ownerAccount; 
         private Long ownerId; 
         private String regionId; 
+        private String resourceGroupId; 
         private String resourceOwnerAccount; 
         private Long resourceOwnerId; 
         private String serviceName; 
+        private java.util.List < Tags> tags; 
 
         private Builder() {
             super();
@@ -176,13 +202,15 @@ public class ListVpcGatewayEndpointsRequest extends Request {
             this.ownerAccount = request.ownerAccount;
             this.ownerId = request.ownerId;
             this.regionId = request.regionId;
+            this.resourceGroupId = request.resourceGroupId;
             this.resourceOwnerAccount = request.resourceOwnerAccount;
             this.resourceOwnerId = request.resourceOwnerId;
             this.serviceName = request.serviceName;
+            this.tags = request.tags;
         } 
 
         /**
-         * VPC网关实例ID
+         * The number of entries to return per page. Valid values: **1** to **100**. Default value: **20**.
          */
         public Builder endpointId(String endpointId) {
             this.putQueryParameter("EndpointId", endpointId);
@@ -191,7 +219,10 @@ public class ListVpcGatewayEndpointsRequest extends Request {
         }
 
         /**
-         * VPC网关实例名称
+         * The region ID of the gateway endpoint.
+         * <p>
+         * 
+         * You can call the [DescribeRegions](~~36063~~) operation to query the most recent region list.
          */
         public Builder endpointName(String endpointName) {
             this.putQueryParameter("EndpointName", endpointName);
@@ -200,7 +231,7 @@ public class ListVpcGatewayEndpointsRequest extends Request {
         }
 
         /**
-         * MaxResults.
+         * The total number of entries returned.
          */
         public Builder maxResults(Long maxResults) {
             this.putQueryParameter("MaxResults", maxResults);
@@ -209,7 +240,11 @@ public class ListVpcGatewayEndpointsRequest extends Request {
         }
 
         /**
-         * NextToken.
+         * The token that is used for the next query. Valid values:
+         * <p>
+         * 
+         * *   If no value is returned for **NextToken**, no next queries are sent.
+         * *   If **NextToken** is not empty, the value indicates the token that is used for the next query.
          */
         public Builder nextToken(String nextToken) {
             this.putQueryParameter("NextToken", nextToken);
@@ -236,11 +271,20 @@ public class ListVpcGatewayEndpointsRequest extends Request {
         }
 
         /**
-         * 地域
+         * The list of gateway endpoints.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
             this.regionId = regionId;
+            return this;
+        }
+
+        /**
+         * ResourceGroupId.
+         */
+        public Builder resourceGroupId(String resourceGroupId) {
+            this.putQueryParameter("ResourceGroupId", resourceGroupId);
+            this.resourceGroupId = resourceGroupId;
             return this;
         }
 
@@ -263,11 +307,20 @@ public class ListVpcGatewayEndpointsRequest extends Request {
         }
 
         /**
-         * 后端的服务名称
+         * The ID of the request.
          */
         public Builder serviceName(String serviceName) {
             this.putQueryParameter("ServiceName", serviceName);
             this.serviceName = serviceName;
+            return this;
+        }
+
+        /**
+         * Tags.
+         */
+        public Builder tags(java.util.List < Tags> tags) {
+            this.putQueryParameter("Tags", tags);
+            this.tags = tags;
             return this;
         }
 
@@ -278,4 +331,65 @@ public class ListVpcGatewayEndpointsRequest extends Request {
 
     } 
 
+    public static class Tags extends TeaModel {
+        @NameInMap("Key")
+        private String key;
+
+        @NameInMap("Value")
+        private String value;
+
+        private Tags(Builder builder) {
+            this.key = builder.key;
+            this.value = builder.value;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static Tags create() {
+            return builder().build();
+        }
+
+        /**
+         * @return key
+         */
+        public String getKey() {
+            return this.key;
+        }
+
+        /**
+         * @return value
+         */
+        public String getValue() {
+            return this.value;
+        }
+
+        public static final class Builder {
+            private String key; 
+            private String value; 
+
+            /**
+             * Key.
+             */
+            public Builder key(String key) {
+                this.key = key;
+                return this;
+            }
+
+            /**
+             * Value.
+             */
+            public Builder value(String value) {
+                this.value = value;
+                return this;
+            }
+
+            public Tags build() {
+                return new Tags(this);
+            } 
+
+        } 
+
+    }
 }

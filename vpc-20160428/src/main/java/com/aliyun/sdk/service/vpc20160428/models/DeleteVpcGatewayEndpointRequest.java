@@ -154,7 +154,7 @@ public class DeleteVpcGatewayEndpointRequest extends Request {
         } 
 
         /**
-         * 幂等参数
+         * ClientToken.
          */
         public Builder clientToken(String clientToken) {
             this.putQueryParameter("ClientToken", clientToken);
@@ -163,7 +163,7 @@ public class DeleteVpcGatewayEndpointRequest extends Request {
         }
 
         /**
-         * 是否只预检此次请求
+         * DryRun.
          */
         public Builder dryRun(Boolean dryRun) {
             this.putQueryParameter("DryRun", dryRun);
@@ -172,7 +172,7 @@ public class DeleteVpcGatewayEndpointRequest extends Request {
         }
 
         /**
-         * VPC网关实例ID
+         * EndpointId.
          */
         public Builder endpointId(String endpointId) {
             this.putQueryParameter("EndpointId", endpointId);
@@ -199,7 +199,7 @@ public class DeleteVpcGatewayEndpointRequest extends Request {
         }
 
         /**
-         * 地域
+         * RegionId.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);

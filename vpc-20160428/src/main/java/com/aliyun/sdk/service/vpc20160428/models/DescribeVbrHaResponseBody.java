@@ -134,7 +134,7 @@ public class DescribeVbrHaResponseBody extends TeaModel {
         private String vbrId; 
 
         /**
-         * CreationTime.
+         * The time when the VBR was created.
          */
         public Builder creationTime(String creationTime) {
             this.creationTime = creationTime;
@@ -142,7 +142,10 @@ public class DescribeVbrHaResponseBody extends TeaModel {
         }
 
         /**
-         * Description.
+         * The description of the VBR failover group.
+         * <p>
+         * 
+         * The description must be 2 to 256 characters in length. It must start with a letter and cannot start with `http://`or `https://`.
          */
         public Builder description(String description) {
             this.description = description;
@@ -150,7 +153,7 @@ public class DescribeVbrHaResponseBody extends TeaModel {
         }
 
         /**
-         * Name.
+         * The name of the VBR failover group.
          */
         public Builder name(String name) {
             this.name = name;
@@ -158,7 +161,7 @@ public class DescribeVbrHaResponseBody extends TeaModel {
         }
 
         /**
-         * PeerVbrId.
+         * The ID of the other VBR in the VBR failover group.
          */
         public Builder peerVbrId(String peerVbrId) {
             this.peerVbrId = peerVbrId;
@@ -166,7 +169,7 @@ public class DescribeVbrHaResponseBody extends TeaModel {
         }
 
         /**
-         * RegionId.
+         * The ID of the region where the VBR is deployed.
          */
         public Builder regionId(String regionId) {
             this.regionId = regionId;
@@ -174,7 +177,7 @@ public class DescribeVbrHaResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -182,7 +185,11 @@ public class DescribeVbrHaResponseBody extends TeaModel {
         }
 
         /**
-         * Status.
+         * The state of the VBR failover group.
+         * <p>
+         * 
+         * *   **Creating**: The VBR failover group is being created.
+         * *   **Active**: The VBR failover group is running as expected.
          */
         public Builder status(String status) {
             this.status = status;
@@ -190,7 +197,7 @@ public class DescribeVbrHaResponseBody extends TeaModel {
         }
 
         /**
-         * VbrHaId.
+         * The ID of the VBR failover group.
          */
         public Builder vbrHaId(String vbrHaId) {
             this.vbrHaId = vbrHaId;
@@ -198,7 +205,7 @@ public class DescribeVbrHaResponseBody extends TeaModel {
         }
 
         /**
-         * VbrId.
+         * The ID of the VBR.
          */
         public Builder vbrId(String vbrId) {
             this.vbrId = vbrId;

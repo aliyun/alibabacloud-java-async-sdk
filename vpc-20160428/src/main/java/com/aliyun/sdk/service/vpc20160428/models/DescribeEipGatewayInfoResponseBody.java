@@ -74,7 +74,7 @@ public class DescribeEipGatewayInfoResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * Code.
+         * The status code of the operation.
          */
         public Builder code(String code) {
             this.code = code;
@@ -82,7 +82,7 @@ public class DescribeEipGatewayInfoResponseBody extends TeaModel {
         }
 
         /**
-         * EipInfos.
+         * The detailed information about the EIP.
          */
         public Builder eipInfos(EipInfos eipInfos) {
             this.eipInfos = eipInfos;
@@ -90,7 +90,7 @@ public class DescribeEipGatewayInfoResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * The result of the operation.
          */
         public Builder message(String message) {
             this.message = message;
@@ -98,7 +98,7 @@ public class DescribeEipGatewayInfoResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -162,7 +162,7 @@ public class DescribeEipGatewayInfoResponseBody extends TeaModel {
             private String ipMask; 
 
             /**
-             * Ip.
+             * The IP address of the EIP.
              */
             public Builder ip(String ip) {
                 this.ip = ip;
@@ -170,7 +170,7 @@ public class DescribeEipGatewayInfoResponseBody extends TeaModel {
             }
 
             /**
-             * IpGw.
+             * The IP address of the gateway that is associated with the EIP.
              */
             public Builder ipGw(String ipGw) {
                 this.ipGw = ipGw;
@@ -178,7 +178,7 @@ public class DescribeEipGatewayInfoResponseBody extends TeaModel {
             }
 
             /**
-             * IpMask.
+             * The subnet mask of the EIP.
              */
             public Builder ipMask(String ipMask) {
                 this.ipMask = ipMask;

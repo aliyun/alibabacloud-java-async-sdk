@@ -196,7 +196,12 @@ public class CreateIpv4GatewayRequest extends Request {
         } 
 
         /**
-         * ClientToken.
+         * The client token that is used to ensure the idempotence of the request.
+         * <p>
+         * 
+         * You can use the client to generate the value, but you must make sure that it is unique among different requests. ClientToken can contain only ASCII characters.
+         * 
+         * >  If you do not set this parameter, the system sets **ClientToken** to the value of **RequestId**. The value of **RequestId** for each API request is different.
          */
         public Builder clientToken(String clientToken) {
             this.putQueryParameter("ClientToken", clientToken);
@@ -205,7 +210,11 @@ public class CreateIpv4GatewayRequest extends Request {
         }
 
         /**
-         * DryRun.
+         * Specifies whether to perform a dry run. Valid values:
+         * <p>
+         * 
+         * *   **true**: performs a dry run. The system checks the required parameters, request syntax, and limits. If the request fails the dry run, an error message is returned. If the request passes the dry run, the `DryRunOperation` error code is returned.
+         * *   **false** (default): performs a dry run and sends the request. If the request passes the dry run, a 2xx HTTP status code is returned and the operation is performed.
          */
         public Builder dryRun(Boolean dryRun) {
             this.putQueryParameter("DryRun", dryRun);
@@ -214,7 +223,10 @@ public class CreateIpv4GatewayRequest extends Request {
         }
 
         /**
-         * Ipv4GatewayDescription.
+         * The description of the IPv4 gateway.
+         * <p>
+         * 
+         * The description must be 1 to 256 characters in length and cannot start with `http://` or `https://`.
          */
         public Builder ipv4GatewayDescription(String ipv4GatewayDescription) {
             this.putQueryParameter("Ipv4GatewayDescription", ipv4GatewayDescription);
@@ -223,7 +235,10 @@ public class CreateIpv4GatewayRequest extends Request {
         }
 
         /**
-         * Ipv4GatewayName.
+         * The name of the IPv4 gateway.
+         * <p>
+         * 
+         * The name must be 1 to 128 characters in length, and cannot start with `http://` or `https://`.
          */
         public Builder ipv4GatewayName(String ipv4GatewayName) {
             this.putQueryParameter("Ipv4GatewayName", ipv4GatewayName);
@@ -250,7 +265,10 @@ public class CreateIpv4GatewayRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * The ID of the region where you want to create the IPv4 gateway.
+         * <p>
+         * 
+         * You can call the [DescribeRegions](~~36063~~) operation to query the most recent region list.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -259,7 +277,7 @@ public class CreateIpv4GatewayRequest extends Request {
         }
 
         /**
-         * ResourceGroupId.
+         * The ID of the resource group.
          */
         public Builder resourceGroupId(String resourceGroupId) {
             this.putQueryParameter("ResourceGroupId", resourceGroupId);
@@ -286,7 +304,10 @@ public class CreateIpv4GatewayRequest extends Request {
         }
 
         /**
-         * VpcId.
+         * The ID of the VPC where you want to create the IPv4 gateway.
+         * <p>
+         * 
+         * You can create only one IPv4 gateway in a VPC.
          */
         public Builder vpcId(String vpcId) {
             this.putQueryParameter("VpcId", vpcId);

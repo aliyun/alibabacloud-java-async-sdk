@@ -126,7 +126,7 @@ public class DescribeEipGatewayInfoRequest extends Request {
         } 
 
         /**
-         * InstanceId.
+         * The ID of the secondary ENI that is associated with the EIP.
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -153,7 +153,7 @@ public class DescribeEipGatewayInfoRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * The region to which the EIP that you want to query belongs. You can call the [DescribeRegions](~~36063~~) operation to query the most recent region list.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);

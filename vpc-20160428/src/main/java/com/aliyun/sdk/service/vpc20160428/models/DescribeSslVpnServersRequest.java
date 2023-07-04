@@ -181,7 +181,10 @@ public class DescribeSslVpnServersRequest extends Request {
         } 
 
         /**
-         * Name.
+         * The name of the SSL-VPN server.
+         * <p>
+         * 
+         * The name must be 1 to 100 characters in length and cannot start with `http://` or `https://`.
          */
         public Builder name(String name) {
             this.putQueryParameter("Name", name);
@@ -208,7 +211,7 @@ public class DescribeSslVpnServersRequest extends Request {
         }
 
         /**
-         * PageNumber.
+         * The number of the returned page. Default value: **1**.
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -217,7 +220,7 @@ public class DescribeSslVpnServersRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * The number of entries to return on each page. Maximum value: **50**. Default value: **10**.
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -226,7 +229,10 @@ public class DescribeSslVpnServersRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * The ID of the region where the SSL servers are created.
+         * <p>
+         * 
+         * You can call the [DescribeRegions](~~36063~~) operation to query the most recent region list.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -253,7 +259,7 @@ public class DescribeSslVpnServersRequest extends Request {
         }
 
         /**
-         * SslVpnServerId.
+         * The ID of the SSL-VPN server.
          */
         public Builder sslVpnServerId(String sslVpnServerId) {
             this.putQueryParameter("SslVpnServerId", sslVpnServerId);
@@ -262,7 +268,7 @@ public class DescribeSslVpnServersRequest extends Request {
         }
 
         /**
-         * VpnGatewayId.
+         * The ID of the VPN gateway.
          */
         public Builder vpnGatewayId(String vpnGatewayId) {
             this.putQueryParameter("VpnGatewayId", vpnGatewayId);

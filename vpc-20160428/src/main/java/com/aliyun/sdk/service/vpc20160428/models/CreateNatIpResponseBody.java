@@ -62,7 +62,7 @@ public class CreateNatIpResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * NatIp.
+         * The ID of the NAT IP address.
          */
         public Builder natIp(String natIp) {
             this.natIp = natIp;

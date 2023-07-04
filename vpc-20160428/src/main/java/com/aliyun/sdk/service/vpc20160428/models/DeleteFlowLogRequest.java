@@ -126,7 +126,7 @@ public class DeleteFlowLogRequest extends Request {
         } 
 
         /**
-         * FlowLogId.
+         * The ID of the flow log.
          */
         public Builder flowLogId(String flowLogId) {
             this.putQueryParameter("FlowLogId", flowLogId);
@@ -153,7 +153,7 @@ public class DeleteFlowLogRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * The region ID of the flow log. You can call the [DescribeRegions](~~36063~~) operation to query the most recent region list.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);

@@ -168,7 +168,10 @@ public class ModifyIPv6TranslatorAttributeRequest extends Request {
         } 
 
         /**
-         * ClientToken.
+         * The client token that is used to ensure the idempotence of the request.
+         * <p>
+         * 
+         * You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters.
          */
         public Builder clientToken(String clientToken) {
             this.putQueryParameter("ClientToken", clientToken);
@@ -177,7 +180,7 @@ public class ModifyIPv6TranslatorAttributeRequest extends Request {
         }
 
         /**
-         * Description.
+         * The description of IPv6 Translation Service. This parameter is empty by default. It must be 2 to 100 characters in length, and can contain letters, digits, periods (.), underscores (\_), and hyphens (-). It cannot start with http:// or [https://](https://。).
          */
         public Builder description(String description) {
             this.putQueryParameter("Description", description);
@@ -186,7 +189,7 @@ public class ModifyIPv6TranslatorAttributeRequest extends Request {
         }
 
         /**
-         * Ipv6TranslatorId.
+         * The ID of the IPv6 Translation Service instance.
          */
         public Builder ipv6TranslatorId(String ipv6TranslatorId) {
             this.putQueryParameter("Ipv6TranslatorId", ipv6TranslatorId);
@@ -195,7 +198,7 @@ public class ModifyIPv6TranslatorAttributeRequest extends Request {
         }
 
         /**
-         * Name.
+         * The name of the IPv6 Translation Service instance. The default name is the instance ID. It must be 2 to 100 characters in length, and can contain letters, digits, periods (.), underscores (\_), and hyphens (-). It cannot start with http:// or [https://](https://。).
          */
         public Builder name(String name) {
             this.putQueryParameter("Name", name);
@@ -222,7 +225,7 @@ public class ModifyIPv6TranslatorAttributeRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * The region of the IPv6 Translation Service instance. You can call the **DescribeRegions** operation to query the most recent region list.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);

@@ -350,7 +350,7 @@ public class CreateNatGatewayRequest extends Request {
         } 
 
         /**
-         * AutoPay.
+         * Subscription Internet NAT gateways are no longer available for purchase. Ignore this parameter.
          */
         public Builder autoPay(Boolean autoPay) {
             this.putQueryParameter("AutoPay", autoPay);
@@ -359,7 +359,12 @@ public class CreateNatGatewayRequest extends Request {
         }
 
         /**
-         * ClientToken.
+         * The client token that is used to ensure the idempotence of the request.
+         * <p>
+         * 
+         * You can use the client to generate the token, but you must make sure that the token is unique among different requests.
+         * 
+         * >  If you do not specify this parameter, the system automatically sets **ClientToken** to the value of **RequestId**. **RequestId** might be different for each API request.
          */
         public Builder clientToken(String clientToken) {
             this.putQueryParameter("ClientToken", clientToken);
@@ -368,7 +373,10 @@ public class CreateNatGatewayRequest extends Request {
         }
 
         /**
-         * Description.
+         * The description of the NAT gateway.
+         * <p>
+         * 
+         * You can leave this parameter empty or enter a description. If you enter a description, the description must be 2 to 256 characters in length and cannot start with `http://` or `https://`.
          */
         public Builder description(String description) {
             this.putQueryParameter("Description", description);
@@ -377,7 +385,7 @@ public class CreateNatGatewayRequest extends Request {
         }
 
         /**
-         * Duration.
+         * Subscription Internet NAT gateways are no longer available for purchase. Ignore this parameter.
          */
         public Builder duration(String duration) {
             this.putQueryParameter("Duration", duration);
@@ -386,9 +394,14 @@ public class CreateNatGatewayRequest extends Request {
         }
 
         /**
-         * NAT：NAT模式，支持SNAT/访问DANT，最多支持绑定50个EIP，支持ingress routing;
+         * The mode in which the EIP is associated with the NAT gateway. Valid values:
          * <p>
-         * MULTI_BINDED：多EIP网卡可见模式。
+         * 
+         * *   **MULTI_BINDED** (default): Multi-EIP-to-ENI mode.
+         * 
+         * *   **NAT**: NAT mode. IPv4 gateways are supported.
+         * 
+         * > If you use the NAT mode, the EIP occupies one private IP address on the vSwitch of the NAT gateway. Make sure that the vSwitch has sufficient private IP addresses. Otherwise, the NAT gateway fails to be associated with the EIP. In NAT mode, you can associate a NAT gateway with at most 50 EIPs.
          */
         public Builder eipBindMode(String eipBindMode) {
             this.putQueryParameter("EipBindMode", eipBindMode);
@@ -397,7 +410,11 @@ public class CreateNatGatewayRequest extends Request {
         }
 
         /**
-         * IcmpReplyEnabled.
+         * Specifies whether to enable the ICMP non-retrieval feature. Valid values:
+         * <p>
+         * 
+         * *   **false** (default): no
+         * *   **true**: yes
          */
         public Builder icmpReplyEnabled(Boolean icmpReplyEnabled) {
             this.putQueryParameter("IcmpReplyEnabled", icmpReplyEnabled);
@@ -406,7 +423,12 @@ public class CreateNatGatewayRequest extends Request {
         }
 
         /**
-         * InstanceChargeType.
+         * The billing method of the NAT gateway.
+         * <p>
+         * 
+         * Set the value to **PostPaid** (pay-as-you-go), which is the default value.
+         * 
+         * For more information, see [Internet NAT gateway billing](~~48126~~) and [VPC NAT gateway billing](~~270913~~).
          */
         public Builder instanceChargeType(String instanceChargeType) {
             this.putQueryParameter("InstanceChargeType", instanceChargeType);
@@ -415,7 +437,7 @@ public class CreateNatGatewayRequest extends Request {
         }
 
         /**
-         * InternetChargeType.
+         * The metering method of the NAT gateway. Set the value to **PayByLcu**, which specifies the pay-by-CU metering method.
          */
         public Builder internetChargeType(String internetChargeType) {
             this.putQueryParameter("InternetChargeType", internetChargeType);
@@ -424,7 +446,12 @@ public class CreateNatGatewayRequest extends Request {
         }
 
         /**
-         * Name.
+         * The name of the NAT gateway.
+         * <p>
+         * 
+         * The name must be 2 to 128 characters in length and can contain letters, digits, underscores (\_), and hyphens (-). The name must start with a letter.
+         * 
+         * If this parameter is not set, the system assigns a default name to the NAT gateway.
          */
         public Builder name(String name) {
             this.putQueryParameter("Name", name);
@@ -433,7 +460,7 @@ public class CreateNatGatewayRequest extends Request {
         }
 
         /**
-         * NatType.
+         * The type of NAT gateway. Set the value to **Enhanced** (enhanced NAT gateway).
          */
         public Builder natType(String natType) {
             this.putQueryParameter("NatType", natType);
@@ -442,7 +469,11 @@ public class CreateNatGatewayRequest extends Request {
         }
 
         /**
-         * NetworkType.
+         * The network type of the NAT gateway. Valid values:
+         * <p>
+         * 
+         * *   **internet**: an Internet NAT gateway
+         * *   **intranet**: a VPC NAT gateway
          */
         public Builder networkType(String networkType) {
             this.putQueryParameter("NetworkType", networkType);
@@ -469,7 +500,7 @@ public class CreateNatGatewayRequest extends Request {
         }
 
         /**
-         * PricingCycle.
+         * Subscription Internet NAT gateways are no longer available for purchase. Ignore this parameter.
          */
         public Builder pricingCycle(String pricingCycle) {
             this.putQueryParameter("PricingCycle", pricingCycle);
@@ -478,7 +509,10 @@ public class CreateNatGatewayRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * The ID of the region where you want to create the NAT gateway.
+         * <p>
+         * 
+         * You can call the [DescribeRegions](~~36063~~) operation to query the most recent region list.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -505,7 +539,11 @@ public class CreateNatGatewayRequest extends Request {
         }
 
         /**
-         * SecurityProtectionEnabled.
+         * Specifies whether to enable the firewall feature. Valid values:
+         * <p>
+         * 
+         * *   **false** (default): no
+         * *   **true**: yes
          */
         public Builder securityProtectionEnabled(Boolean securityProtectionEnabled) {
             this.putQueryParameter("SecurityProtectionEnabled", securityProtectionEnabled);
@@ -514,7 +552,7 @@ public class CreateNatGatewayRequest extends Request {
         }
 
         /**
-         * Spec.
+         * Subscription Internet NAT gateways are no longer available for purchase. Ignore this parameter.
          */
         public Builder spec(String spec) {
             this.putQueryParameter("Spec", spec);
@@ -523,7 +561,7 @@ public class CreateNatGatewayRequest extends Request {
         }
 
         /**
-         * Tag.
+         * The list of Tag entries.
          */
         public Builder tag(java.util.List < Tag> tag) {
             this.putQueryParameter("Tag", tag);
@@ -532,7 +570,15 @@ public class CreateNatGatewayRequest extends Request {
         }
 
         /**
-         * VSwitchId.
+         * The ID of the vSwitch to which the NAT gateway is attached.
+         * <p>
+         * 
+         * When you create a NAT gateway, you must specify a vSwitch for the NAT gateway. Then, the system assigns an idle private IP address from the vSwitch to the NAT gateway.
+         * 
+         * *   To attach the NAT gateway to an existing vSwitch, make sure that the zone to which the vSwitch belongs supports NAT gateways. In addition, the vSwitch must have idle IP addresses.
+         * *   If no vSwitch exists in the VPC, create a vSwitch in a zone that supports NAT gateways. Then, specify the vSwitch for the NAT gateway.
+         * 
+         * >  You can query the zones that support NAT gateways by calling the [ListEnhanhcedNatGatewayAvailableZones](~~182292~~) operation. You can query the number of available IP addresses in a vSwitch by calling the [DescribeVSwitches](~~35748~~) operation.
          */
         public Builder vSwitchId(String vSwitchId) {
             this.putQueryParameter("VSwitchId", vSwitchId);
@@ -541,7 +587,7 @@ public class CreateNatGatewayRequest extends Request {
         }
 
         /**
-         * VpcId.
+         * The ID of the VPC where you want to create the NAT gateway.
          */
         public Builder vpcId(String vpcId) {
             this.putQueryParameter("VpcId", vpcId);
@@ -595,7 +641,7 @@ public class CreateNatGatewayRequest extends Request {
             private String value; 
 
             /**
-             * Key.
+             * The tag key. The format of Tag.N.Key when you call the operation. Valid values of N: 1 to 20. It cannot be an empty string. It can be up to 128 characters in length and cannot start with acs: or aliyun. It cannot contain http:// or https://.
              */
             public Builder key(String key) {
                 this.key = key;
@@ -603,7 +649,7 @@ public class CreateNatGatewayRequest extends Request {
             }
 
             /**
-             * Value.
+             * The tag value. The format of Tag.N.Value when you call the operation. Valid values of N: 1 to 20. It cannot be an empty string. It can be up to 128 characters in length and cannot start with acs: or aliyun. It cannot contain http:// or https://.
              */
             public Builder value(String value) {
                 this.value = value;

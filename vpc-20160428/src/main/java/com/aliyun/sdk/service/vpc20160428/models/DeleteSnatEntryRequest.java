@@ -155,7 +155,12 @@ public class DeleteSnatEntryRequest extends Request {
         } 
 
         /**
-         * ClientToken.
+         * The client token that is used to ensure the idempotence of the request.
+         * <p>
+         * 
+         * You can use the client to generate the value, but you must make sure that it is unique among different requests. The client token can contain only ASCII characters.
+         * 
+         * >  If you do not set this parameter, the system automatically uses **RequestId** as **ClientToken**. **RequestId** may be different for each API request.
          */
         public Builder clientToken(String clientToken) {
             this.putQueryParameter("ClientToken", clientToken);
@@ -182,7 +187,10 @@ public class DeleteSnatEntryRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * The region ID of the NAT gateway.
+         * <p>
+         * 
+         * You can call the [DescribeRegions](~~36063~~) operation to query the most recent region list.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -209,7 +217,7 @@ public class DeleteSnatEntryRequest extends Request {
         }
 
         /**
-         * SnatEntryId.
+         * The ID of the SNAT entry that you want to delete.
          */
         public Builder snatEntryId(String snatEntryId) {
             this.putQueryParameter("SnatEntryId", snatEntryId);
@@ -218,7 +226,7 @@ public class DeleteSnatEntryRequest extends Request {
         }
 
         /**
-         * SnatTableId.
+         * The ID of the SNAT table to which the SNAT entry belongs.
          */
         public Builder snatTableId(String snatTableId) {
             this.putQueryParameter("SnatTableId", snatTableId);

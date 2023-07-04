@@ -86,7 +86,7 @@ public class ListVpcGatewayEndpointsResponseBody extends TeaModel {
         private Long totalCount; 
 
         /**
-         * Endpoints.
+         * The name of the endpoint service.
          */
         public Builder endpoints(java.util.List < Endpoints> endpoints) {
             this.endpoints = endpoints;
@@ -94,7 +94,7 @@ public class ListVpcGatewayEndpointsResponseBody extends TeaModel {
         }
 
         /**
-         * 本次请求最大数量
+         * MaxResults.
          */
         public Builder maxResults(Long maxResults) {
             this.maxResults = maxResults;
@@ -102,7 +102,7 @@ public class ListVpcGatewayEndpointsResponseBody extends TeaModel {
         }
 
         /**
-         * NextToken.
+         * The name of the gateway endpoint.
          */
         public Builder nextToken(String nextToken) {
             this.nextToken = nextToken;
@@ -110,7 +110,7 @@ public class ListVpcGatewayEndpointsResponseBody extends TeaModel {
         }
 
         /**
-         * Id of the request
+         * The ID of the gateway endpoint.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -118,7 +118,7 @@ public class ListVpcGatewayEndpointsResponseBody extends TeaModel {
         }
 
         /**
-         * TotalCount.
+         * The description of the gateway endpoint.
          */
         public Builder totalCount(Long totalCount) {
             this.totalCount = totalCount;
@@ -131,6 +131,67 @@ public class ListVpcGatewayEndpointsResponseBody extends TeaModel {
 
     } 
 
+    public static class Tags extends TeaModel {
+        @NameInMap("Key")
+        private String key;
+
+        @NameInMap("Value")
+        private String value;
+
+        private Tags(Builder builder) {
+            this.key = builder.key;
+            this.value = builder.value;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static Tags create() {
+            return builder().build();
+        }
+
+        /**
+         * @return key
+         */
+        public String getKey() {
+            return this.key;
+        }
+
+        /**
+         * @return value
+         */
+        public String getValue() {
+            return this.value;
+        }
+
+        public static final class Builder {
+            private String key; 
+            private String value; 
+
+            /**
+             * Key.
+             */
+            public Builder key(String key) {
+                this.key = key;
+                return this;
+            }
+
+            /**
+             * Value.
+             */
+            public Builder value(String value) {
+                this.value = value;
+                return this;
+            }
+
+            public Tags build() {
+                return new Tags(this);
+            } 
+
+        } 
+
+    }
     public static class Endpoints extends TeaModel {
         @NameInMap("AssociatedRouteTables")
         private java.util.List < String > associatedRouteTables;
@@ -153,8 +214,14 @@ public class ListVpcGatewayEndpointsResponseBody extends TeaModel {
         @NameInMap("PolicyDocument")
         private String policyDocument;
 
+        @NameInMap("ResourceGroupId")
+        private String resourceGroupId;
+
         @NameInMap("ServiceName")
         private String serviceName;
+
+        @NameInMap("Tags")
+        private java.util.List < Tags> tags;
 
         @NameInMap("VpcId")
         private String vpcId;
@@ -167,7 +234,9 @@ public class ListVpcGatewayEndpointsResponseBody extends TeaModel {
             this.endpointName = builder.endpointName;
             this.endpointStatus = builder.endpointStatus;
             this.policyDocument = builder.policyDocument;
+            this.resourceGroupId = builder.resourceGroupId;
             this.serviceName = builder.serviceName;
+            this.tags = builder.tags;
             this.vpcId = builder.vpcId;
         }
 
@@ -229,10 +298,24 @@ public class ListVpcGatewayEndpointsResponseBody extends TeaModel {
         }
 
         /**
+         * @return resourceGroupId
+         */
+        public String getResourceGroupId() {
+            return this.resourceGroupId;
+        }
+
+        /**
          * @return serviceName
          */
         public String getServiceName() {
             return this.serviceName;
+        }
+
+        /**
+         * @return tags
+         */
+        public java.util.List < Tags> getTags() {
+            return this.tags;
         }
 
         /**
@@ -250,7 +333,9 @@ public class ListVpcGatewayEndpointsResponseBody extends TeaModel {
             private String endpointName; 
             private String endpointStatus; 
             private String policyDocument; 
+            private String resourceGroupId; 
             private String serviceName; 
+            private java.util.List < Tags> tags; 
             private String vpcId; 
 
             /**
@@ -270,7 +355,7 @@ public class ListVpcGatewayEndpointsResponseBody extends TeaModel {
             }
 
             /**
-             * EndpointDescription.
+             * The time when the endpoint was created. The time follows the ISO 8601 standard in the YYYY-MM-DDThh:mm:ssZ format. The time must be in UTC.
              */
             public Builder endpointDescription(String endpointDescription) {
                 this.endpointDescription = endpointDescription;
@@ -278,7 +363,7 @@ public class ListVpcGatewayEndpointsResponseBody extends TeaModel {
             }
 
             /**
-             * EndpointId.
+             * The ID of the virtual private cloud (VPC) to which the gateway endpoint belongs.
              */
             public Builder endpointId(String endpointId) {
                 this.endpointId = endpointId;
@@ -286,7 +371,10 @@ public class ListVpcGatewayEndpointsResponseBody extends TeaModel {
             }
 
             /**
-             * EndpointName.
+             * The access policy for the cloud service.
+             * <p>
+             * 
+             * For more information about the syntax and structure of the access policy, see [Policy syntax and structure](~~93739~~).
              */
             public Builder endpointName(String endpointName) {
                 this.endpointName = endpointName;
@@ -302,7 +390,7 @@ public class ListVpcGatewayEndpointsResponseBody extends TeaModel {
             }
 
             /**
-             * PolicyDocument.
+             * The number of entries returned per page.
              */
             public Builder policyDocument(String policyDocument) {
                 this.policyDocument = policyDocument;
@@ -310,7 +398,23 @@ public class ListVpcGatewayEndpointsResponseBody extends TeaModel {
             }
 
             /**
-             * ServiceName.
+             * ResourceGroupId.
+             */
+            public Builder resourceGroupId(String resourceGroupId) {
+                this.resourceGroupId = resourceGroupId;
+                return this;
+            }
+
+            /**
+             * The status of the gateway endpoint. Valid values:
+             * <p>
+             * 
+             * *   **Creating**
+             * *   **Created**
+             * *   **Modifying**
+             * *   **Associating**
+             * *   **Dissociating**
+             * *   **Deleting**
              */
             public Builder serviceName(String serviceName) {
                 this.serviceName = serviceName;
@@ -318,7 +422,15 @@ public class ListVpcGatewayEndpointsResponseBody extends TeaModel {
             }
 
             /**
-             * VpcId.
+             * Tags.
+             */
+            public Builder tags(java.util.List < Tags> tags) {
+                this.tags = tags;
+                return this;
+            }
+
+            /**
+             * The ID of the route table associated with the gateway endpoint.
              */
             public Builder vpcId(String vpcId) {
                 this.vpcId = vpcId;

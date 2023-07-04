@@ -62,7 +62,7 @@ public class CreatePublicIpAddressPoolResponseBody extends TeaModel {
         private String resourceGroupId; 
 
         /**
-         * PulbicIpAddressPoolId.
+         * The ID of the IP address pool.
          */
         public Builder pulbicIpAddressPoolId(String pulbicIpAddressPoolId) {
             this.pulbicIpAddressPoolId = pulbicIpAddressPoolId;
@@ -70,7 +70,7 @@ public class CreatePublicIpAddressPoolResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -78,7 +78,7 @@ public class CreatePublicIpAddressPoolResponseBody extends TeaModel {
         }
 
         /**
-         * ResourceGroupId.
+         * The ID of the resource group to which the IP address pool belongs.
          */
         public Builder resourceGroupId(String resourceGroupId) {
             this.resourceGroupId = resourceGroupId;

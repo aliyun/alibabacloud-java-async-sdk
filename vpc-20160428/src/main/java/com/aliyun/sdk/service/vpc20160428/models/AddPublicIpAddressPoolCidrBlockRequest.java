@@ -182,7 +182,7 @@ public class AddPublicIpAddressPoolCidrBlockRequest extends Request {
         } 
 
         /**
-         * CidrBlock.
+         * The region ID of the IP address pool to which you want to add the CIDR block.
          */
         public Builder cidrBlock(String cidrBlock) {
             this.putQueryParameter("CidrBlock", cidrBlock);
@@ -200,7 +200,14 @@ public class AddPublicIpAddressPoolCidrBlockRequest extends Request {
         }
 
         /**
-         * ClientToken.
+         * The subnet mask of the CIDR block.
+         * <p>
+         * 
+         * After you enter the subnet mask, the system automatically allocates IP addresses.
+         * 
+         * Valid values: **24** to **30**.
+         * 
+         * >  You cannot set the **CidrBlock** and **CidrMask** parameters at the same time. Set one of them.
          */
         public Builder clientToken(String clientToken) {
             this.putQueryParameter("ClientToken", clientToken);
@@ -209,7 +216,7 @@ public class AddPublicIpAddressPoolCidrBlockRequest extends Request {
         }
 
         /**
-         * DryRun.
+         * The ID of the request.
          */
         public Builder dryRun(Boolean dryRun) {
             this.putQueryParameter("DryRun", dryRun);
@@ -236,7 +243,11 @@ public class AddPublicIpAddressPoolCidrBlockRequest extends Request {
         }
 
         /**
-         * PublicIpAddressPoolId.
+         * Specifies whether to perform a dry run. Valid values:
+         * <p>
+         * 
+         * *   **true**: performs a dry run. The system checks the required parameters, request syntax, and limits. If the request fails the dry run, an error message is returned. If the request passes the dry run, the `DryRunOperation` error code is returned.
+         * *   **false** (default): performs a dry run and sends the request. If the request passes the dry run, a 2xx HTTP status code is returned and the operation is performed.
          */
         public Builder publicIpAddressPoolId(String publicIpAddressPoolId) {
             this.putQueryParameter("PublicIpAddressPoolId", publicIpAddressPoolId);

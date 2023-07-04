@@ -126,7 +126,7 @@ public class GetNatGatewayAttributeRequest extends Request {
         } 
 
         /**
-         * NatGatewayId.
+         * The ID of the NAT gateway.
          */
         public Builder natGatewayId(String natGatewayId) {
             this.putQueryParameter("NatGatewayId", natGatewayId);
@@ -153,7 +153,10 @@ public class GetNatGatewayAttributeRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * The ID of the region where the NAT gateway is deployed.
+         * <p>
+         * 
+         * You can call the [DescribeRegions](~~36063~~) operation to query the most recent region list.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);

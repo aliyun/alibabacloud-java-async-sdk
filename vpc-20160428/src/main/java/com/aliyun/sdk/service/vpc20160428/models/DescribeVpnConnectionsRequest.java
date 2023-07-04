@@ -195,7 +195,7 @@ public class DescribeVpnConnectionsRequest extends Request {
         } 
 
         /**
-         * CustomerGatewayId.
+         * The ID of the customer gateway.
          */
         public Builder customerGatewayId(String customerGatewayId) {
             this.putQueryParameter("CustomerGatewayId", customerGatewayId);
@@ -222,7 +222,7 @@ public class DescribeVpnConnectionsRequest extends Request {
         }
 
         /**
-         * PageNumber.
+         * The number of the page to return. Default value: **1**.
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -231,7 +231,7 @@ public class DescribeVpnConnectionsRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * The number of entries to return on each page. Default value: **10**. Valid values: **1** to **50**.
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -240,7 +240,10 @@ public class DescribeVpnConnectionsRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * The ID of the region where the IPsec-VPN connection is established.
+         * <p>
+         * 
+         * You can call the [DescribeRegions](~~36063~~) operation to query the most recent region list.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -276,7 +279,7 @@ public class DescribeVpnConnectionsRequest extends Request {
         }
 
         /**
-         * VpnConnectionId.
+         * The ID of the IPsec-VPN connection.
          */
         public Builder vpnConnectionId(String vpnConnectionId) {
             this.putQueryParameter("VpnConnectionId", vpnConnectionId);
@@ -285,7 +288,7 @@ public class DescribeVpnConnectionsRequest extends Request {
         }
 
         /**
-         * VpnGatewayId.
+         * The ID of the VPN gateway.
          */
         public Builder vpnGatewayId(String vpnGatewayId) {
             this.putQueryParameter("VpnGatewayId", vpnGatewayId);
@@ -339,7 +342,12 @@ public class DescribeVpnConnectionsRequest extends Request {
             private String value; 
 
             /**
-             * Key.
+             * The tag key. The tag key cannot be an empty string.
+             * <p>
+             * 
+             * It can be at most 64 characters in length, and cannot contain `http://` or `https://`. It cannot start with `aliyun` or `acs:`.
+             * 
+             * You can specify at most 20 tag keys in each call.
              */
             public Builder key(String key) {
                 this.key = key;
@@ -347,7 +355,12 @@ public class DescribeVpnConnectionsRequest extends Request {
             }
 
             /**
-             * Value.
+             * The tag value.
+             * <p>
+             * 
+             * The tag value can be an empty string and cannot exceed 128 characters in length. It cannot start with `aliyun` or `acs:`, and cannot contain `http://` or `https://`.
+             * 
+             * Each tag key corresponds to one tag value. You can specify at most 20 tag values in each call.
              */
             public Builder value(String value) {
                 this.value = value;

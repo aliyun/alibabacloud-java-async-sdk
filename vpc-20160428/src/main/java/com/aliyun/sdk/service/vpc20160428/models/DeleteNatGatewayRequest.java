@@ -149,7 +149,7 @@ public class DeleteNatGatewayRequest extends Request {
         }
 
         /**
-         * NatGatewayId.
+         * The ID of the request.
          */
         public Builder natGatewayId(String natGatewayId) {
             this.putQueryParameter("NatGatewayId", natGatewayId);
@@ -176,7 +176,22 @@ public class DeleteNatGatewayRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * Specifies whether to forcefully delete the NAT gateway. Valid values:
+         * <p>
+         * 
+         * *   **true**: yes If you set the value to **true**:
+         * 
+         *     *   If the NAT gateway has SNAT entries, the system automatically deletes them.
+         *     *   If the NAT gateway has DNAT entries, the system automatically deletes them.
+         *     *   If the NAT gateway is associated with an elastic IP address (EIP), the system automatically disassociates the EIP from the NAT gateway.
+         *     *   If the NAT gateway is associated with a NAT bandwidth plan, the system automatically disassociates the NAT bandwidth plan from the NAT gateway.
+         * 
+         * *   **false**(default): no If you set the value to **false**:
+         * 
+         *     *   If the NAT gateway is associated with a NAT bandwidth plan, disassociate the NAT gateway from the NAT bandwidth plan first.
+         *     *   If the NAT gateway has SNAT entries, delete them first.
+         *     *   If the NAT gateway has DNAT entries, delete them first.
+         *     *   If the NAT gateway is associated with an EIP, disassociate the EIP from the NAT gateway first.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);

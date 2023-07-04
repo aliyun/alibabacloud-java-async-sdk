@@ -50,7 +50,7 @@ public class CreateBgpPeerResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * BgpPeerId.
+         * The ID of the BGP peer.
          */
         public Builder bgpPeerId(String bgpPeerId) {
             this.bgpPeerId = bgpPeerId;
@@ -58,7 +58,7 @@ public class CreateBgpPeerResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

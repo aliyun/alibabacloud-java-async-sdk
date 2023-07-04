@@ -140,7 +140,12 @@ public class DeleteHaVipRequest extends Request {
         } 
 
         /**
-         * ClientToken.
+         * The client token that is used to ensure the idempotence of the request.
+         * <p>
+         * 
+         * You can use the client to generate the value, but you must make sure that it is unique among different requests. The client token can contain only ASCII characters.
+         * 
+         * >  If you do not set this parameter, the system uses **RequestId** as **ClientToken**. The value of **RequestId** in each API request may be different.
          */
         public Builder clientToken(String clientToken) {
             this.putQueryParameter("ClientToken", clientToken);
@@ -149,7 +154,7 @@ public class DeleteHaVipRequest extends Request {
         }
 
         /**
-         * HaVipId.
+         * The ID of the HAVIP that you want to delete.
          */
         public Builder haVipId(String haVipId) {
             this.putQueryParameter("HaVipId", haVipId);
@@ -176,7 +181,7 @@ public class DeleteHaVipRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * The ID of the region where the HAVIP is deployed. You can call the [DescribeRegions](~~36063~~) operation to query the most recent region list.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);

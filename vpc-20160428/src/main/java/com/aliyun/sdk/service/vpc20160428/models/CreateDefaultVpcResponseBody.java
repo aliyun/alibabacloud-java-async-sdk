@@ -74,7 +74,7 @@ public class CreateDefaultVpcResponseBody extends TeaModel {
         private String vpcId; 
 
         /**
-         * RequestId.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -82,7 +82,7 @@ public class CreateDefaultVpcResponseBody extends TeaModel {
         }
 
         /**
-         * RouteTableId.
+         * The route table ID that is automatically created by the system after you create a default VPC.
          */
         public Builder routeTableId(String routeTableId) {
             this.routeTableId = routeTableId;
@@ -90,7 +90,7 @@ public class CreateDefaultVpcResponseBody extends TeaModel {
         }
 
         /**
-         * VRouterId.
+         * The vRouter ID that is automatically created by the system after you create a default VPC.
          */
         public Builder vRouterId(String vRouterId) {
             this.vRouterId = vRouterId;
@@ -98,7 +98,7 @@ public class CreateDefaultVpcResponseBody extends TeaModel {
         }
 
         /**
-         * VpcId.
+         * The ID of the default VPC.
          */
         public Builder vpcId(String vpcId) {
             this.vpcId = vpcId;

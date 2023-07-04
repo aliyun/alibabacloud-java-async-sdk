@@ -110,7 +110,7 @@ public class ListFullNatEntriesResponseBody extends TeaModel {
         private Long totalCount; 
 
         /**
-         * FullNatEntries.
+         * The frontend port that is used for port mapping in FULLNAT entries. Valid values: **1** to **65535**.
          */
         public Builder fullNatEntries(java.util.List < FullNatEntries> fullNatEntries) {
             this.fullNatEntries = fullNatEntries;
@@ -118,7 +118,11 @@ public class ListFullNatEntriesResponseBody extends TeaModel {
         }
 
         /**
-         * FullNatTableId.
+         * Indicates whether the token for the next query exists. Valid values:
+         * <p>
+         * 
+         * *   If the value of **NextToken** is empty, no next queries are sent.
+         * *   If the value of **NextToken** is returned, the value indicates the token that is used for the next query.
          */
         public Builder fullNatTableId(String fullNatTableId) {
             this.fullNatTableId = fullNatTableId;
@@ -126,7 +130,7 @@ public class ListFullNatEntriesResponseBody extends TeaModel {
         }
 
         /**
-         * MaxResults.
+         * The NAT IP address that is used for address translation in FULLNAT entries.
          */
         public Builder maxResults(Long maxResults) {
             this.maxResults = maxResults;
@@ -134,7 +138,7 @@ public class ListFullNatEntriesResponseBody extends TeaModel {
         }
 
         /**
-         * NatGatewayId.
+         * The number of FULLNAT entries returned.
          */
         public Builder natGatewayId(String natGatewayId) {
             this.natGatewayId = natGatewayId;
@@ -142,7 +146,7 @@ public class ListFullNatEntriesResponseBody extends TeaModel {
         }
 
         /**
-         * NextToken.
+         * The information about the FULLNAT entries that are queried.
          */
         public Builder nextToken(String nextToken) {
             this.nextToken = nextToken;
@@ -150,7 +154,7 @@ public class ListFullNatEntriesResponseBody extends TeaModel {
         }
 
         /**
-         * Id of the request
+         * The ID of the FULLNAT table to which the queried FULLNAT entries belong.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -158,7 +162,7 @@ public class ListFullNatEntriesResponseBody extends TeaModel {
         }
 
         /**
-         * TotalCount.
+         * The maximum number of entries returned.
          */
         public Builder totalCount(Long totalCount) {
             this.totalCount = totalCount;
@@ -342,7 +346,11 @@ public class ListFullNatEntriesResponseBody extends TeaModel {
             private String networkInterfaceType; 
 
             /**
-             * 通过DNAT条目进行公网通信的ECS实例的私网IP地址。
+             * The protocol of the packets that are forwarded. Valid values:
+             * <p>
+             * 
+             * *   **TCP**
+             * *   **UDP**
              */
             public Builder accessIp(String accessIp) {
                 this.accessIp = accessIp;
@@ -350,7 +358,7 @@ public class ListFullNatEntriesResponseBody extends TeaModel {
             }
 
             /**
-             * DNAT条目中进行端口转发的内部端口，取值范围：1-65535。
+             * The ID of the ENI.
              */
             public Builder accessPort(String accessPort) {
                 this.accessPort = accessPort;
@@ -358,7 +366,13 @@ public class ListFullNatEntriesResponseBody extends TeaModel {
             }
 
             /**
-             * CreationTime.
+             * The status of the FULLNAT entry. Valid values:
+             * <p>
+             * 
+             * *   **Pending**: The FULLNAT entry is being configured.
+             * *   **Available**: The FULLNAT entry is available.
+             * *   **Deleting**: The FULLNAT entry is being deleted.
+             * *   **Deleted**: The FULLNAT entry is deleted.
              */
             public Builder creationTime(String creationTime) {
                 this.creationTime = creationTime;
@@ -366,7 +380,7 @@ public class ListFullNatEntriesResponseBody extends TeaModel {
             }
 
             /**
-             * FullNatEntryDescription.
+             * The ID of the FULLNAT entry.
              */
             public Builder fullNatEntryDescription(String fullNatEntryDescription) {
                 this.fullNatEntryDescription = fullNatEntryDescription;
@@ -374,7 +388,7 @@ public class ListFullNatEntriesResponseBody extends TeaModel {
             }
 
             /**
-             * FullNatEntryId.
+             * The ID of the FULLNAT table to which the FULLNAT entry belongs.
              */
             public Builder fullNatEntryId(String fullNatEntryId) {
                 this.fullNatEntryId = fullNatEntryId;
@@ -382,7 +396,7 @@ public class ListFullNatEntriesResponseBody extends TeaModel {
             }
 
             /**
-             * FULLNAT规则的名称。 长度为2~128个字符，必须以大小写字母或中文开头，但不能以http://或https://开头。
+             * The time when the FULLNAT entry was created.
              */
             public Builder fullNatEntryName(String fullNatEntryName) {
                 this.fullNatEntryName = fullNatEntryName;
@@ -398,7 +412,11 @@ public class ListFullNatEntriesResponseBody extends TeaModel {
             }
 
             /**
-             * FullNatTableId.
+             * Indicates whether the token for the next query exists. Valid values:
+             * <p>
+             * 
+             * *   If the value of **NextToken** is empty, no next queries are sent.
+             * *   If the value of **NextToken** is returned, the value indicates the token that is used for the next query.
              */
             public Builder fullNatTableId(String fullNatTableId) {
                 this.fullNatTableId = fullNatTableId;
@@ -406,7 +424,7 @@ public class ListFullNatEntriesResponseBody extends TeaModel {
             }
 
             /**
-             * 协议类型，取值： • TCP：转发TCP协议的报文。 • UDP：转发UDP协议的报文。
+             * The type of the ENI. The value is set to **Endpoint**, which indicates a reverse endpoint.
              */
             public Builder ipProtocol(String ipProtocol) {
                 this.ipProtocol = ipProtocol;
@@ -414,7 +432,7 @@ public class ListFullNatEntriesResponseBody extends TeaModel {
             }
 
             /**
-             * DNAT条目中提供公网访问的公网IP地址。
+             * The backend IP address that is used for FULLNAT address translation in FULLNAT entries.
              */
             public Builder natIp(String natIp) {
                 this.natIp = natIp;
@@ -422,7 +440,7 @@ public class ListFullNatEntriesResponseBody extends TeaModel {
             }
 
             /**
-             * DNAT条目中进行端口转发的外部端口，取值范围：1~65535。
+             * The backend port that is used for port mapping in FULLNAT entries. Valid values: **1** to **65535**.
              */
             public Builder natIpPort(String natIpPort) {
                 this.natIpPort = natIpPort;
@@ -430,7 +448,10 @@ public class ListFullNatEntriesResponseBody extends TeaModel {
             }
 
             /**
-             * 当前VpcNat作为服务资源所加入的eni
+             * The name of the FULLNAT entry.
+             * <p>
+             * 
+             * The name must be 2 to 128 characters in length and can contain letters, digits, underscores (\_), and hyphens (-). The name must start with a letter.
              */
             public Builder networkInterfaceId(String networkInterfaceId) {
                 this.networkInterfaceId = networkInterfaceId;
@@ -438,7 +459,10 @@ public class ListFullNatEntriesResponseBody extends TeaModel {
             }
 
             /**
-             * ENI类型，目前仅支持Endpoint
+             * The description of the FULLNAT entry.
+             * <p>
+             * 
+             * The name must be 2 to 128 characters in length. It must start with a letter but cannot start with `http://` or `https://`.
              */
             public Builder networkInterfaceType(String networkInterfaceType) {
                 this.networkInterfaceType = networkInterfaceType;

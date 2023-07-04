@@ -50,7 +50,7 @@ public class CreateVirtualPhysicalConnectionResponseBody extends TeaModel {
         private String virtualPhysicalConnection; 
 
         /**
-         * Id of the request
+         * RequestId.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -58,7 +58,7 @@ public class CreateVirtualPhysicalConnectionResponseBody extends TeaModel {
         }
 
         /**
-         * Vpconn的实例ID
+         * VirtualPhysicalConnection.
          */
         public Builder virtualPhysicalConnection(String virtualPhysicalConnection) {
             this.virtualPhysicalConnection = virtualPhysicalConnection;

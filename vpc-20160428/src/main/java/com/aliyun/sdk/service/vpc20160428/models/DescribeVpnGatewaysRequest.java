@@ -223,7 +223,7 @@ public class DescribeVpnGatewaysRequest extends Request {
         } 
 
         /**
-         * BusinessStatus.
+         * The page number of the returned page.
          */
         public Builder businessStatus(String businessStatus) {
             this.putQueryParameter("BusinessStatus", businessStatus);
@@ -232,7 +232,10 @@ public class DescribeVpnGatewaysRequest extends Request {
         }
 
         /**
-         * IncludeReservationData.
+         * The type of the VPN gateway.
+         * <p>
+         * 
+         * The value is set to **Normal**, which indicates a standard NAT gateway.
          */
         public Builder includeReservationData(Boolean includeReservationData) {
             this.putQueryParameter("IncludeReservationData", includeReservationData);
@@ -259,7 +262,7 @@ public class DescribeVpnGatewaysRequest extends Request {
         }
 
         /**
-         * PageNumber.
+         * The total number of entries returned.
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -268,7 +271,7 @@ public class DescribeVpnGatewaysRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * The list of VPN gateways.
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -277,7 +280,12 @@ public class DescribeVpnGatewaysRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * The tag key. The tag key cannot be an empty string.
+         * <p>
+         * 
+         * It can be at most 64 characters in length, and cannot contain `http://` or `https://`. It cannot start with `aliyun` or `acs:`.
+         * 
+         * You can specify at most 20 tag keys in each call.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -304,7 +312,7 @@ public class DescribeVpnGatewaysRequest extends Request {
         }
 
         /**
-         * Status.
+         * The ID of the request.
          */
         public Builder status(String status) {
             this.putQueryParameter("Status", status);
@@ -322,7 +330,12 @@ public class DescribeVpnGatewaysRequest extends Request {
         }
 
         /**
-         * VpcId.
+         * The tag value.
+         * <p>
+         * 
+         * The tag value can be an empty string and cannot exceed 128 characters in length. It cannot start with `aliyun` or `acs:`, and cannot contain `http://` or `https://`.
+         * 
+         * Each tag key corresponds to one tag value. You can specify at most 20 tag values in each call.
          */
         public Builder vpcId(String vpcId) {
             this.putQueryParameter("VpcId", vpcId);
@@ -331,7 +344,7 @@ public class DescribeVpnGatewaysRequest extends Request {
         }
 
         /**
-         * VpnGatewayId.
+         * The number of entries returned per page.
          */
         public Builder vpnGatewayId(String vpnGatewayId) {
             this.putQueryParameter("VpnGatewayId", vpnGatewayId);
@@ -385,7 +398,11 @@ public class DescribeVpnGatewaysRequest extends Request {
             private String value; 
 
             /**
-             * Key.
+             * The status of the pending order.
+             * <p>
+             * 
+             * *   **1**: indicates that the order for renewal or the order for renewal with a specification change has not taken effect.
+             * *   **2**: indicates that the order for a temporary upgrade has taken effect. After the temporary upgrade expires, the system restores the VPN gateway to its previous specifications. In this case, **ReservationIpsec**, **ReservationMaxConnections**, **ReservationSpec**, and **ReservationSsl** indicate the previous specification.
              */
             public Builder key(String key) {
                 this.key = key;
@@ -393,7 +410,7 @@ public class DescribeVpnGatewaysRequest extends Request {
             }
 
             /**
-             * Value.
+             * The ID of the VPC to which the VPN gateway belongs.
              */
             public Builder value(String value) {
                 this.value = value;

@@ -134,7 +134,10 @@ public class CreateVcoRouteEntryResponseBody extends TeaModel {
         private Integer weight; 
 
         /**
-         * CreateTime.
+         * The timestamp when the destination-based route was created. Unit: milliseconds.
+         * <p>
+         * 
+         * This value is a UNIX timestamp representing the number of milliseconds that have elapsed since the epoch time January 1, 1970, 00:00:00 UTC.
          */
         public Builder createTime(Long createTime) {
             this.createTime = createTime;
@@ -142,7 +145,7 @@ public class CreateVcoRouteEntryResponseBody extends TeaModel {
         }
 
         /**
-         * Description.
+         * The description of the destination-based route.
          */
         public Builder description(String description) {
             this.description = description;
@@ -150,7 +153,7 @@ public class CreateVcoRouteEntryResponseBody extends TeaModel {
         }
 
         /**
-         * NextHop.
+         * The next hop of the destination-based route.
          */
         public Builder nextHop(String nextHop) {
             this.nextHop = nextHop;
@@ -158,7 +161,10 @@ public class CreateVcoRouteEntryResponseBody extends TeaModel {
         }
 
         /**
-         * OverlayMode.
+         * The tunneling protocol.
+         * <p>
+         * 
+         * The value is set to **Ipsec**, which indicates the IPsec tunneling protocol.
          */
         public Builder overlayMode(String overlayMode) {
             this.overlayMode = overlayMode;
@@ -166,7 +172,7 @@ public class CreateVcoRouteEntryResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -174,7 +180,7 @@ public class CreateVcoRouteEntryResponseBody extends TeaModel {
         }
 
         /**
-         * RouteDest.
+         * The destination CIDR block of the destination-based route.
          */
         public Builder routeDest(String routeDest) {
             this.routeDest = routeDest;
@@ -182,7 +188,10 @@ public class CreateVcoRouteEntryResponseBody extends TeaModel {
         }
 
         /**
-         * State.
+         * The status of the destination-based route.
+         * <p>
+         * 
+         * Only **published** is returned, which indicates that the current route is published to the transit router.
          */
         public Builder state(String state) {
             this.state = state;
@@ -190,7 +199,7 @@ public class CreateVcoRouteEntryResponseBody extends TeaModel {
         }
 
         /**
-         * VpnConnectionId.
+         * The ID of the IPsec-VPN connection.
          */
         public Builder vpnConnectionId(String vpnConnectionId) {
             this.vpnConnectionId = vpnConnectionId;
@@ -198,7 +207,11 @@ public class CreateVcoRouteEntryResponseBody extends TeaModel {
         }
 
         /**
-         * Weight.
+         * The weight of the destination-based route.
+         * <p>
+         * 
+         * *   **0**: a low priority
+         * *   **100**: a high priority
          */
         public Builder weight(Integer weight) {
             this.weight = weight;

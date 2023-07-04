@@ -97,7 +97,12 @@ public class GetVpnGatewayDiagnoseResultRequest extends Request {
         } 
 
         /**
-         * system param
+         * The client token that is used to ensure the idempotence of the request.
+         * <p>
+         * 
+         * You can use the client to generate the value, but you must make sure that it is unique among different requests. ClientToken can contain only ASCII characters.
+         * 
+         * >  If you do not set this parameter, ClientToken is set to the value of RequestId. The ID of each request may be different.
          */
         public Builder clientToken(String clientToken) {
             this.putQueryParameter("ClientToken", clientToken);
@@ -106,7 +111,10 @@ public class GetVpnGatewayDiagnoseResultRequest extends Request {
         }
 
         /**
-         * DiagnoseId
+         * The ID of the diagnostic.
+         * <p>
+         * 
+         * When you call the [DiagnoseVpnGateway](~~469751~~) operation, the system returns a corresponding ID.
          */
         public Builder diagnoseId(String diagnoseId) {
             this.putQueryParameter("DiagnoseId", diagnoseId);
@@ -115,7 +123,10 @@ public class GetVpnGatewayDiagnoseResultRequest extends Request {
         }
 
         /**
-         * RegionId
+         * The region ID of the VPN gateway.
+         * <p>
+         * 
+         * You can call the [DescribeRegions](~~36063~~) operation to obtain the region ID.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -124,7 +135,7 @@ public class GetVpnGatewayDiagnoseResultRequest extends Request {
         }
 
         /**
-         * VpnGatewayId
+         * The ID of the VPN gateway.
          */
         public Builder vpnGatewayId(String vpnGatewayId) {
             this.putQueryParameter("VpnGatewayId", vpnGatewayId);

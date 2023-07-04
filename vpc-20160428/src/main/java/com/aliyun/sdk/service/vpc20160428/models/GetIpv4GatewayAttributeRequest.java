@@ -126,7 +126,7 @@ public class GetIpv4GatewayAttributeRequest extends Request {
         } 
 
         /**
-         * Ipv4GatewayId.
+         * The ID of the virtual private cloud (VPC) with which the IPv4 gateway is associated.
          */
         public Builder ipv4GatewayId(String ipv4GatewayId) {
             this.putQueryParameter("Ipv4GatewayId", ipv4GatewayId);
@@ -153,7 +153,7 @@ public class GetIpv4GatewayAttributeRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * The operation that you want to perform. Set the value to **GetIpv4GatewayAttribute**.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);

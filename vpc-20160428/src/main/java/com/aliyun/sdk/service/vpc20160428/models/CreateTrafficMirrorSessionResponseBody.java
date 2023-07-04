@@ -78,7 +78,7 @@ public class CreateTrafficMirrorSessionResponseBody extends TeaModel {
         }
 
         /**
-         * TrafficMirrorSessionId.
+         * The ID of the resource group to which the mirrored traffic belongs.
          */
         public Builder trafficMirrorSessionId(String trafficMirrorSessionId) {
             this.trafficMirrorSessionId = trafficMirrorSessionId;

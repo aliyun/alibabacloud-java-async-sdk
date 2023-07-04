@@ -86,7 +86,7 @@ public class GetVpcPrefixListAssociationsResponseBody extends TeaModel {
         private Long totalCount; 
 
         /**
-         * Count.
+         * The number of entries returned.
          */
         public Builder count(Long count) {
             this.count = count;
@@ -94,7 +94,11 @@ public class GetVpcPrefixListAssociationsResponseBody extends TeaModel {
         }
 
         /**
-         * NextToken.
+         * The token that determines the start point of the next query. Valid values:
+         * <p>
+         * 
+         * *   If no value is returned for **NextToken**, no next queries are sent.
+         * *   If **NextToken** is not empty, the value indicates the token that is used for the next query.
          */
         public Builder nextToken(String nextToken) {
             this.nextToken = nextToken;
@@ -102,7 +106,7 @@ public class GetVpcPrefixListAssociationsResponseBody extends TeaModel {
         }
 
         /**
-         * PrefixListAssociation.
+         * The information about the network instances that are associated with the prefix list.
          */
         public Builder prefixListAssociation(java.util.List < PrefixListAssociation> prefixListAssociation) {
             this.prefixListAssociation = prefixListAssociation;
@@ -110,7 +114,7 @@ public class GetVpcPrefixListAssociationsResponseBody extends TeaModel {
         }
 
         /**
-         * Id of the request
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -118,7 +122,7 @@ public class GetVpcPrefixListAssociationsResponseBody extends TeaModel {
         }
 
         /**
-         * TotalCount.
+         * The total number of entries returned.
          */
         public Builder totalCount(Long totalCount) {
             this.totalCount = totalCount;
@@ -242,7 +246,7 @@ public class GetVpcPrefixListAssociationsResponseBody extends TeaModel {
             private String status; 
 
             /**
-             * OwnerId.
+             * The ID of the Alibaba Cloud account to which the prefix list belongs.
              */
             public Builder ownerId(String ownerId) {
                 this.ownerId = ownerId;
@@ -250,7 +254,7 @@ public class GetVpcPrefixListAssociationsResponseBody extends TeaModel {
             }
 
             /**
-             * 前缀列表的实例ID
+             * The ID of the prefix list.
              */
             public Builder prefixListId(String prefixListId) {
                 this.prefixListId = prefixListId;
@@ -258,7 +262,7 @@ public class GetVpcPrefixListAssociationsResponseBody extends TeaModel {
             }
 
             /**
-             * Reason.
+             * The reason why the association failed.
              */
             public Builder reason(String reason) {
                 this.reason = reason;
@@ -266,7 +270,7 @@ public class GetVpcPrefixListAssociationsResponseBody extends TeaModel {
             }
 
             /**
-             * RegionId.
+             * The region ID of the prefix list.
              */
             public Builder regionId(String regionId) {
                 this.regionId = regionId;
@@ -274,7 +278,7 @@ public class GetVpcPrefixListAssociationsResponseBody extends TeaModel {
             }
 
             /**
-             * 状态
+             * The ID of the associated resource.
              */
             public Builder resourceId(String resourceId) {
                 this.resourceId = resourceId;
@@ -282,7 +286,11 @@ public class GetVpcPrefixListAssociationsResponseBody extends TeaModel {
             }
 
             /**
-             * 名称
+             * The type of the associated resource. Valid values:
+             * <p>
+             * 
+             * *   **vpcRouteTable** :VPC route table.
+             * *   **trRouteTable**: route table of a transit router.
              */
             public Builder resourceType(String resourceType) {
                 this.resourceType = resourceType;
@@ -290,7 +298,7 @@ public class GetVpcPrefixListAssociationsResponseBody extends TeaModel {
             }
 
             /**
-             * ResourceUid.
+             * The ID of the Alibaba Cloud account to which the resource associated with the prefix list belongs.
              */
             public Builder resourceUid(String resourceUid) {
                 this.resourceUid = resourceUid;
@@ -298,7 +306,15 @@ public class GetVpcPrefixListAssociationsResponseBody extends TeaModel {
             }
 
             /**
-             * IpVersion
+             * The status of the prefix list. Valid values:
+             * <p>
+             * 
+             * *   **Created**
+             * *   **ModifyFailed**
+             * *   **Creating**
+             * *   **Modifying**
+             * *   **Deleting**
+             * *   **Deleted**
              */
             public Builder status(String status) {
                 this.status = status;

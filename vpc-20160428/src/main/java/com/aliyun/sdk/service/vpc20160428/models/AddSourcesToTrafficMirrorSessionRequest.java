@@ -169,7 +169,7 @@ public class AddSourcesToTrafficMirrorSessionRequest extends Request {
         } 
 
         /**
-         * ClientToken.
+         * The ID of the traffic mirror session.
          */
         public Builder clientToken(String clientToken) {
             this.putQueryParameter("ClientToken", clientToken);
@@ -178,7 +178,7 @@ public class AddSourcesToTrafficMirrorSessionRequest extends Request {
         }
 
         /**
-         * DryRun.
+         * The ID of the traffic mirror source. You can specify only an elastic network interface (ENI) as the traffic mirror source. The default value of **N** is **1**, which indicates that you can add only one traffic mirror source to a traffic mirror session.
          */
         public Builder dryRun(Boolean dryRun) {
             this.putQueryParameter("DryRun", dryRun);
@@ -232,7 +232,12 @@ public class AddSourcesToTrafficMirrorSessionRequest extends Request {
         }
 
         /**
-         * TrafficMirrorSessionId.
+         * The ID of the region to which the traffic mirror session belongs.
+         * <p>
+         * 
+         * You can call the [DescribeRegions](~~36063~~) operation to query the most recent region list.
+         * 
+         * For more information about regions that support traffic mirroring, see [Overview of traffic mirroring](~~207513~~).
          */
         public Builder trafficMirrorSessionId(String trafficMirrorSessionId) {
             this.putQueryParameter("TrafficMirrorSessionId", trafficMirrorSessionId);

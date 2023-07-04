@@ -168,7 +168,12 @@ public class CompletePhysicalConnectionLOARequest extends Request {
         } 
 
         /**
-         * ClientToken.
+         * The client token that is used to ensure the idempotence of the request.
+         * <p>
+         * 
+         * You can use the client to generate the value, but you must ensure that it is unique among different requests.
+         * 
+         * >  If you do not set this parameter, the system automatically uses **RequestId** as **ClientToken**. **RequestId** of each API request may be different.
          */
         public Builder clientToken(String clientToken) {
             this.putQueryParameter("ClientToken", clientToken);
@@ -177,7 +182,7 @@ public class CompletePhysicalConnectionLOARequest extends Request {
         }
 
         /**
-         * InstanceId.
+         * The ID of the Express Connect circuit.
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -186,7 +191,7 @@ public class CompletePhysicalConnectionLOARequest extends Request {
         }
 
         /**
-         * LineCode.
+         * The circuit code provided by the connectivity provider.
          */
         public Builder lineCode(String lineCode) {
             this.putQueryParameter("LineCode", lineCode);
@@ -195,7 +200,7 @@ public class CompletePhysicalConnectionLOARequest extends Request {
         }
 
         /**
-         * LineLabel.
+         * The label of the cable in the data center.
          */
         public Builder lineLabel(String lineLabel) {
             this.putQueryParameter("LineLabel", lineLabel);
@@ -222,7 +227,10 @@ public class CompletePhysicalConnectionLOARequest extends Request {
         }
 
         /**
-         * RegionId.
+         * The region ID of the Express Connect circuit.
+         * <p>
+         * 
+         * You can call the [DescribeRegions](~~36063~~) operation to query the most recent region list.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);

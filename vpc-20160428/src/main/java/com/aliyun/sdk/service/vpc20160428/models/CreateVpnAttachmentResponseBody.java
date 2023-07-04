@@ -110,7 +110,7 @@ public class CreateVpnAttachmentResponseBody extends TeaModel {
         private String vpnConnectionId; 
 
         /**
-         * Code.
+         * The status code returned by the current operation. **200** indicates that the operation is successful.
          */
         public Builder code(String code) {
             this.code = code;
@@ -118,7 +118,10 @@ public class CreateVpnAttachmentResponseBody extends TeaModel {
         }
 
         /**
-         * CreateTime.
+         * The timestamp generated when the IPsec-VPN connection was established. Unit: milliseconds.
+         * <p>
+         * 
+         * This value is a UNIX timestamp representing the number of milliseconds that have elapsed since the epoch time January 1, 1970, 00:00:00 UTC.
          */
         public Builder createTime(Long createTime) {
             this.createTime = createTime;
@@ -126,7 +129,7 @@ public class CreateVpnAttachmentResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * The information returned by the current operation.
          */
         public Builder message(String message) {
             this.message = message;
@@ -134,7 +137,7 @@ public class CreateVpnAttachmentResponseBody extends TeaModel {
         }
 
         /**
-         * Name.
+         * The name of the IPsec-VPN connection.
          */
         public Builder name(String name) {
             this.name = name;
@@ -142,7 +145,7 @@ public class CreateVpnAttachmentResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -150,7 +153,11 @@ public class CreateVpnAttachmentResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * Indicates whether the current operation is successful.
+         * <p>
+         * 
+         * *   **true**: The operation is successful.
+         * *   **false**: The operation failed.
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -158,7 +165,7 @@ public class CreateVpnAttachmentResponseBody extends TeaModel {
         }
 
         /**
-         * VpnConnectionId.
+         * The ID of the IPsec-VPN connection.
          */
         public Builder vpnConnectionId(String vpnConnectionId) {
             this.vpnConnectionId = vpnConnectionId;

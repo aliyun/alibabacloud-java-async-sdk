@@ -62,7 +62,7 @@ public class CreateHaVipResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * HaVipId.
+         * The ID of the HAVIP.
          */
         public Builder haVipId(String haVipId) {
             this.haVipId = haVipId;
@@ -70,7 +70,7 @@ public class CreateHaVipResponseBody extends TeaModel {
         }
 
         /**
-         * IpAddress.
+         * The IP address of the HAVIP.
          */
         public Builder ipAddress(String ipAddress) {
             this.ipAddress = ipAddress;
@@ -78,7 +78,7 @@ public class CreateHaVipResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

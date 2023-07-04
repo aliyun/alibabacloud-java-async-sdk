@@ -134,7 +134,7 @@ public class DescribeCustomerGatewayResponseBody extends TeaModel {
         private Tags tags; 
 
         /**
-         * Asn.
+         * The autonomous system number (ASN) of the gateway device in the data center.
          */
         public Builder asn(Long asn) {
             this.asn = asn;
@@ -142,7 +142,7 @@ public class DescribeCustomerGatewayResponseBody extends TeaModel {
         }
 
         /**
-         * AuthKey.
+         * The authentication key of the BGP routing protocol for the gateway device in the data center.
          */
         public Builder authKey(String authKey) {
             this.authKey = authKey;
@@ -150,7 +150,10 @@ public class DescribeCustomerGatewayResponseBody extends TeaModel {
         }
 
         /**
-         * CreateTime.
+         * The timestamp generated when the customer gateway was created. Unit: milliseconds.
+         * <p>
+         * 
+         * This value is a UNIX timestamp representing the number of milliseconds that have elapsed since the epoch time January 1, 1970, 00:00:00 UTC.
          */
         public Builder createTime(Long createTime) {
             this.createTime = createTime;
@@ -158,7 +161,7 @@ public class DescribeCustomerGatewayResponseBody extends TeaModel {
         }
 
         /**
-         * CustomerGatewayId.
+         * The ID of the customer gateway.
          */
         public Builder customerGatewayId(String customerGatewayId) {
             this.customerGatewayId = customerGatewayId;
@@ -166,7 +169,7 @@ public class DescribeCustomerGatewayResponseBody extends TeaModel {
         }
 
         /**
-         * Description.
+         * The description of the customer gateway.
          */
         public Builder description(String description) {
             this.description = description;
@@ -174,7 +177,7 @@ public class DescribeCustomerGatewayResponseBody extends TeaModel {
         }
 
         /**
-         * IpAddress.
+         * The public IP address of the gateway device in the data center.
          */
         public Builder ipAddress(String ipAddress) {
             this.ipAddress = ipAddress;
@@ -182,7 +185,7 @@ public class DescribeCustomerGatewayResponseBody extends TeaModel {
         }
 
         /**
-         * Name.
+         * The name of the customer gateway.
          */
         public Builder name(String name) {
             this.name = name;
@@ -190,7 +193,7 @@ public class DescribeCustomerGatewayResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -198,7 +201,7 @@ public class DescribeCustomerGatewayResponseBody extends TeaModel {
         }
 
         /**
-         * Tags.
+         * The list of tags added to the customer gateway.
          */
         public Builder tags(Tags tags) {
             this.tags = tags;
@@ -250,7 +253,7 @@ public class DescribeCustomerGatewayResponseBody extends TeaModel {
             private String value; 
 
             /**
-             * Key.
+             * The tag key.
              */
             public Builder key(String key) {
                 this.key = key;
@@ -258,7 +261,7 @@ public class DescribeCustomerGatewayResponseBody extends TeaModel {
             }
 
             /**
-             * Value.
+             * The tag value.
              */
             public Builder value(String value) {
                 this.value = value;

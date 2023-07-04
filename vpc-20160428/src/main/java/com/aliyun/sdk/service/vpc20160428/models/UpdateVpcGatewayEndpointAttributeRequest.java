@@ -196,7 +196,10 @@ public class UpdateVpcGatewayEndpointAttributeRequest extends Request {
         } 
 
         /**
-         * 幂等参数
+         * The region ID of the gateway endpoint.
+         * <p>
+         * 
+         * You can call the [DescribeRegions](~~36063~~) operation to query the most recent region list.
          */
         public Builder clientToken(String clientToken) {
             this.putQueryParameter("ClientToken", clientToken);
@@ -205,7 +208,7 @@ public class UpdateVpcGatewayEndpointAttributeRequest extends Request {
         }
 
         /**
-         * 是否只预检此次请求
+         * The ID of the request.
          */
         public Builder dryRun(Boolean dryRun) {
             this.putQueryParameter("DryRun", dryRun);
@@ -214,7 +217,12 @@ public class UpdateVpcGatewayEndpointAttributeRequest extends Request {
         }
 
         /**
-         * 网关节点描述
+         * The client token that is used to ensure the idempotence of the request.
+         * <p>
+         * 
+         * You can use the client to generate the token, but you must make sure that the token is unique among all requests. The token can contain only ASCII characters.
+         * 
+         * >  If you do not set this parameter, the system uses **RequestId** as **ClientToken**. The value of **RequestId** of each API request may be different.
          */
         public Builder endpointDescription(String endpointDescription) {
             this.putQueryParameter("EndpointDescription", endpointDescription);
@@ -223,7 +231,10 @@ public class UpdateVpcGatewayEndpointAttributeRequest extends Request {
         }
 
         /**
-         * VPC网关实例ID
+         * The new description of the gateway endpoint.
+         * <p>
+         * 
+         * The description must be 1 to 255 characters in length.
          */
         public Builder endpointId(String endpointId) {
             this.putQueryParameter("EndpointId", endpointId);
@@ -232,7 +243,10 @@ public class UpdateVpcGatewayEndpointAttributeRequest extends Request {
         }
 
         /**
-         * 网关节点名称
+         * The access policy for the cloud service.
+         * <p>
+         * 
+         * For more information about the syntax and structure of the access policy, see [Policy syntax and structure](~~93739~~).
          */
         public Builder endpointName(String endpointName) {
             this.putQueryParameter("EndpointName", endpointName);
@@ -259,7 +273,11 @@ public class UpdateVpcGatewayEndpointAttributeRequest extends Request {
         }
 
         /**
-         * 访问云服务的权限控制策略
+         * Specifies whether to perform a dry run. Valid values:
+         * <p>
+         * 
+         * *   **true**: performs a dry run. The system checks your AccessKey pair, the RAM user permissions, and the required parameters If the request fails the dry run, the corresponding error message is returned. If the request passes the dry run, the `DryRunOperation` error code is returned.
+         * *   **false** (default): performs a dry run and sends the request. If the request passes the dry run, a 2xx HTTP status code is returned and the operation is performed.
          */
         public Builder policyDocument(String policyDocument) {
             this.putQueryParameter("PolicyDocument", policyDocument);
@@ -268,7 +286,7 @@ public class UpdateVpcGatewayEndpointAttributeRequest extends Request {
         }
 
         /**
-         * 地域
+         * RegionId.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);

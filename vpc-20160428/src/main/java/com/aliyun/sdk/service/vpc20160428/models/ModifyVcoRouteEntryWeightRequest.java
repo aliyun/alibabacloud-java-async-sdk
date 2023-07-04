@@ -200,7 +200,12 @@ public class ModifyVcoRouteEntryWeightRequest extends Request {
         } 
 
         /**
-         * ClientToken.
+         * The client token that is used to ensure the idempotence of the request.
+         * <p>
+         * 
+         * You can use the client to generate the value, but you must make sure that it is unique among all requests. The token can contain only ASCII characters.
+         * 
+         * >  If you do not set this parameter, **ClientToken** is set to the value of **RequestId**. The value of **RequestId** for each API request may be different.
          */
         public Builder clientToken(String clientToken) {
             this.putQueryParameter("ClientToken", clientToken);
@@ -209,7 +214,11 @@ public class ModifyVcoRouteEntryWeightRequest extends Request {
         }
 
         /**
-         * NewWeight.
+         * The new weight of the destination-based route that you want to modify. Valid values:
+         * <p>
+         * 
+         * *   **0**: a low priority
+         * *   **100**: a high priority
          */
         public Builder newWeight(Integer newWeight) {
             this.putQueryParameter("NewWeight", newWeight);
@@ -218,7 +227,7 @@ public class ModifyVcoRouteEntryWeightRequest extends Request {
         }
 
         /**
-         * NextHop.
+         * The next hop of the destination-based route that you want to modify.
          */
         public Builder nextHop(String nextHop) {
             this.putQueryParameter("NextHop", nextHop);
@@ -227,7 +236,7 @@ public class ModifyVcoRouteEntryWeightRequest extends Request {
         }
 
         /**
-         * OverlayMode.
+         * The tunneling protocol. Set the value to **Ipsec**, which specifies the IPsec tunneling protocol.
          */
         public Builder overlayMode(String overlayMode) {
             this.putQueryParameter("OverlayMode", overlayMode);
@@ -245,7 +254,10 @@ public class ModifyVcoRouteEntryWeightRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * The ID of the region to which the IPsec-VPN connection belongs.
+         * <p>
+         * 
+         * You can call the [DescribeRegions](~~36063~~) operation to query the most recent region list.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -272,7 +284,7 @@ public class ModifyVcoRouteEntryWeightRequest extends Request {
         }
 
         /**
-         * RouteDest.
+         * The destination CIDR block of the destination-based route that you want to modify.
          */
         public Builder routeDest(String routeDest) {
             this.putQueryParameter("RouteDest", routeDest);
@@ -281,7 +293,7 @@ public class ModifyVcoRouteEntryWeightRequest extends Request {
         }
 
         /**
-         * VpnConnectionId.
+         * The ID of the IPsec-VPN connection.
          */
         public Builder vpnConnectionId(String vpnConnectionId) {
             this.putQueryParameter("VpnConnectionId", vpnConnectionId);
@@ -290,7 +302,11 @@ public class ModifyVcoRouteEntryWeightRequest extends Request {
         }
 
         /**
-         * Weight.
+         * The current weight of the destination-based route that you want to modify. Valid values:
+         * <p>
+         * 
+         * *   **0**: a low priority
+         * *   **100**: a high priority
          */
         public Builder weight(Integer weight) {
             this.putQueryParameter("Weight", weight);

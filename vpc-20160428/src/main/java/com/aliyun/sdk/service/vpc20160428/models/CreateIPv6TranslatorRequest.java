@@ -223,7 +223,7 @@ public class CreateIPv6TranslatorRequest extends Request {
         } 
 
         /**
-         * AutoPay.
+         * Specifies whether to enable automatic payment. Valid values: **true and false**.
          */
         public Builder autoPay(Boolean autoPay) {
             this.putQueryParameter("AutoPay", autoPay);
@@ -232,7 +232,10 @@ public class CreateIPv6TranslatorRequest extends Request {
         }
 
         /**
-         * Bandwidth.
+         * The bandwidth of the IPv6 Translation Service instance. Unit: Mbit/s. Valid values: **1** to **200**. If you do not specify the bandwidth for the mapping entry, the bandwidth is shared with the mapping entry.
+         * <p>
+         * 
+         * > If you do not specify this parameter, the default bandwidth is 10 Mbit/s.
          */
         public Builder bandwidth(Integer bandwidth) {
             this.putQueryParameter("Bandwidth", bandwidth);
@@ -241,7 +244,7 @@ public class CreateIPv6TranslatorRequest extends Request {
         }
 
         /**
-         * ClientToken.
+         * The client token that is used to ensure the idempotence of the request. You can use the client to generate the value, but you must ensure that it is unique among different requests. The token can contain only ASCII characters and cannot exceed 64 characters in length.
          */
         public Builder clientToken(String clientToken) {
             this.putQueryParameter("ClientToken", clientToken);
@@ -250,7 +253,11 @@ public class CreateIPv6TranslatorRequest extends Request {
         }
 
         /**
-         * Duration.
+         * The subscription duration.
+         * <p>
+         * 
+         * *   If the billing cycle is **Month**, valid values are **1** to **9**.
+         * *   If the billing cycle is **Year**, set the value to **3**.
          */
         public Builder duration(Integer duration) {
             this.putQueryParameter("Duration", duration);
@@ -259,7 +266,7 @@ public class CreateIPv6TranslatorRequest extends Request {
         }
 
         /**
-         * Name.
+         * The name of the IPv6 Translation Service instance. The default name is the instance ID. It must be 2 to 100 characters in length and must start with a letter. It can contain letters, digits, periods (.), underscores (\_), and hyphens (-). It cannot start with `http://` or `https://`.
          */
         public Builder name(String name) {
             this.putQueryParameter("Name", name);
@@ -286,7 +293,11 @@ public class CreateIPv6TranslatorRequest extends Request {
         }
 
         /**
-         * PayType.
+         * The billing method of the IPv6 Translation Service instance. Valid values:
+         * <p>
+         * 
+         * *   **PREPAY**: subscription
+         * *   **POSTPAY**: pay-as-you-go
          */
         public Builder payType(String payType) {
             this.putQueryParameter("PayType", payType);
@@ -295,7 +306,11 @@ public class CreateIPv6TranslatorRequest extends Request {
         }
 
         /**
-         * PricingCycle.
+         * The billing cycle of the subscription. Valid values:
+         * <p>
+         * 
+         * *   **Month** (default)
+         * *   **Year**
          */
         public Builder pricingCycle(String pricingCycle) {
             this.putQueryParameter("PricingCycle", pricingCycle);
@@ -304,7 +319,7 @@ public class CreateIPv6TranslatorRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * The region of the IPv6 Translation Service instance. You can call the [DescribeRegions](~~36063~~) operation to query the most recent region list.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -331,7 +346,7 @@ public class CreateIPv6TranslatorRequest extends Request {
         }
 
         /**
-         * Spec.
+         * The specification of the IPv6 Translation Service instance. Set the value to **small**.
          */
         public Builder spec(String spec) {
             this.putQueryParameter("Spec", spec);

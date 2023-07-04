@@ -243,7 +243,7 @@ public class CreateForwardEntryRequest extends Request {
         } 
 
         /**
-         * ClientToken.
+         * The ID of the DNAT entry.
          */
         public Builder clientToken(String clientToken) {
             this.putQueryParameter("ClientToken", clientToken);
@@ -252,7 +252,13 @@ public class CreateForwardEntryRequest extends Request {
         }
 
         /**
-         * ExternalIp.
+         * *   The private IP address of the ECS instance that needs to communicate with the Internet when you configure a DNAT entry for an Internet NAT gateway. The private IP address must meet the following requirements:
+         * <p>
+         * 
+         *     *   It must belong to the CIDR block of the VPC where the NAT gateway is deployed.
+         *     *   The DNAT entry takes effect only if the private IP address is assigned to an ECS instance and the ECS instance is not associated with an EIP.
+         * 
+         * *   The private IP address that uses DNAT when you add a DNAT entry to a VPC NAT gateway.
          */
         public Builder externalIp(String externalIp) {
             this.putQueryParameter("ExternalIp", externalIp);
@@ -261,7 +267,9 @@ public class CreateForwardEntryRequest extends Request {
         }
 
         /**
-         * ExternalPort.
+         * *   The internal port or port range that is used for port forwarding when you configure a DNAT entry for an Internet NAT gateway. Valid values: **1** to **65535**.
+         * <p>
+         * *   The port of the destination ECS instance to be mapped when you configure a DNAT entry for a VPC NAT gateway. Valid values: **1** to **65535**.
          */
         public Builder externalPort(String externalPort) {
             this.putQueryParameter("ExternalPort", externalPort);
@@ -270,7 +278,13 @@ public class CreateForwardEntryRequest extends Request {
         }
 
         /**
-         * ForwardEntryName.
+         * Specifies whether to remove limits on the port range. Valid values:
+         * <p>
+         * 
+         * *   **true**: yes
+         * *   **false** (default): no
+         * 
+         * >  If an SNAT entry and a DNAT entry use the same public IP address, and you want to specify a port number greater than 1024, set **Portbreak** to **true**.
          */
         public Builder forwardEntryName(String forwardEntryName) {
             this.putQueryParameter("ForwardEntryName", forwardEntryName);
@@ -279,7 +293,14 @@ public class CreateForwardEntryRequest extends Request {
         }
 
         /**
-         * ForwardTableId.
+         * *   The external port range that is used for port forwarding when you configure a DNAT entry for an Internet NAT gateway.
+         * <p>
+         * 
+         *     *   Valid values: **1** to **65535**.
+         *     *   To specify a port range, separate the first port and the last port with a forward slash (/), for example, `10/20`.
+         *     *   If you set **ExternalPort** to a port range, you must also set **InternalPort** to a port range, and the number of ports specified by these parameters must be the same. For example, if you set **ExternalPort** to `10/20`, you can set **InternalPort** to `80/90`.
+         * 
+         * *   The port that can be accessed by external networks when you configure a DNAT entry for a VPC NAT gateway. Valid values: **1** to **65535**.
          */
         public Builder forwardTableId(String forwardTableId) {
             this.putQueryParameter("ForwardTableId", forwardTableId);
@@ -288,7 +309,12 @@ public class CreateForwardEntryRequest extends Request {
         }
 
         /**
-         * InternalIp.
+         * The protocol. Valid values:
+         * <p>
+         * 
+         * *   **TCP**: The NAT gateway forwards TCP packets.
+         * *   **UDP**: The NAT gateway forwards UDP packets.
+         * *   **Any**: The NAT gateway forwards packets of all protocols. If you set **IpProtocol** to **Any**, you must also set **ExternalPort** and **InternalPort** to **Any** to implement DNAT IP mapping.
          */
         public Builder internalIp(String internalIp) {
             this.putQueryParameter("InternalIp", internalIp);
@@ -297,7 +323,10 @@ public class CreateForwardEntryRequest extends Request {
         }
 
         /**
-         * InternalPort.
+         * The name of the DNAT entry.
+         * <p>
+         * 
+         * The name must be 2 to 128 characters in length. It must start with a letter but cannot start with `http://` or `https://`.
          */
         public Builder internalPort(String internalPort) {
             this.putQueryParameter("InternalPort", internalPort);
@@ -306,7 +335,12 @@ public class CreateForwardEntryRequest extends Request {
         }
 
         /**
-         * IpProtocol.
+         * The client token that is used to ensure the idempotence of the request.
+         * <p>
+         * 
+         * You can use the client to generate the value, but you must make sure that it is unique among different requests. The client token can contain only ASCII characters.
+         * 
+         * >  If you do not set this parameter, the system automatically uses **RequestId** as **ClientToken**. The value of **RequestId** in each API request may be different.
          */
         public Builder ipProtocol(String ipProtocol) {
             this.putQueryParameter("IpProtocol", ipProtocol);
@@ -333,7 +367,7 @@ public class CreateForwardEntryRequest extends Request {
         }
 
         /**
-         * PortBreak.
+         * The ID of the request.
          */
         public Builder portBreak(Boolean portBreak) {
             this.putQueryParameter("PortBreak", portBreak);
@@ -342,7 +376,9 @@ public class CreateForwardEntryRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * *   The EIP that can be accessed over the Internet when you configure a DNAT entry for an Internet NAT gateway.
+         * <p>
+         * *   The NAT IP address that can be accessed by external networks when you configure a DNAT entry for a VPC NAT gateway.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);

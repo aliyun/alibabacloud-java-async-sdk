@@ -238,7 +238,12 @@ public class ListNatIpsRequest extends Request {
         } 
 
         /**
-         * ClientToken.
+         * The client token that is used to ensure the idempotence of the request.
+         * <p>
+         * 
+         * You can use the client to generate the value, but you must make sure that it is unique among different requests. The token can contain only ASCII characters and cannot exceed 64 characters in length.
+         * 
+         * >  If you do not set this parameter, the system automatically uses **RequestId** as **ClientToken**. **RequestId** may be different for each API request.
          */
         public Builder clientToken(String clientToken) {
             this.putQueryParameter("ClientToken", clientToken);
@@ -247,7 +252,11 @@ public class ListNatIpsRequest extends Request {
         }
 
         /**
-         * DryRun.
+         * Specifies whether to only precheck the request. Valid values:
+         * <p>
+         * 
+         * *   **true**: checks the API request. IP addresses are not queried. The system checks the required parameters, request syntax, and limits. If the request fails to pass the precheck, the corresponding error message is returned. If the request passes the precheck, the `DryRunOperation` error code is returned.
+         * *   **false** (default): sends the request. If the request passes the precheck, a 2xx HTTP status code is returned and the operation is performed.
          */
         public Builder dryRun(Boolean dryRun) {
             this.putQueryParameter("DryRun", dryRun);
@@ -256,7 +265,7 @@ public class ListNatIpsRequest extends Request {
         }
 
         /**
-         * MaxResults.
+         * The number of entries to return on each page. Valid values: **1** to **100**. Default value: **20**.
          */
         public Builder maxResults(String maxResults) {
             this.putQueryParameter("MaxResults", maxResults);
@@ -265,7 +274,7 @@ public class ListNatIpsRequest extends Request {
         }
 
         /**
-         * NatGatewayId.
+         * The ID of the NAT gateway.
          */
         public Builder natGatewayId(String natGatewayId) {
             this.putQueryParameter("NatGatewayId", natGatewayId);
@@ -274,7 +283,7 @@ public class ListNatIpsRequest extends Request {
         }
 
         /**
-         * NatIpCidr.
+         * The CIDR block to which the IP address belongs.
          */
         public Builder natIpCidr(String natIpCidr) {
             this.putQueryParameter("NatIpCidr", natIpCidr);
@@ -283,7 +292,7 @@ public class ListNatIpsRequest extends Request {
         }
 
         /**
-         * NatIpIds.
+         * The ID of the IP address. Valid values of **N**: **1** to **20**.
          */
         public Builder natIpIds(java.util.List < String > natIpIds) {
             this.putQueryParameter("NatIpIds", natIpIds);
@@ -292,7 +301,7 @@ public class ListNatIpsRequest extends Request {
         }
 
         /**
-         * NatIpName.
+         * The name of the IP address. Valid values of **N**: **1** to **20**.
          */
         public Builder natIpName(java.util.List < String > natIpName) {
             this.putQueryParameter("NatIpName", natIpName);
@@ -301,7 +310,12 @@ public class ListNatIpsRequest extends Request {
         }
 
         /**
-         * NatIpStatus.
+         * The status of the IP address. Valid values:
+         * <p>
+         * 
+         * *   **Available**
+         * *   **Deleting**
+         * *   **Creating**
          */
         public Builder natIpStatus(String natIpStatus) {
             this.putQueryParameter("NatIpStatus", natIpStatus);
@@ -310,7 +324,11 @@ public class ListNatIpsRequest extends Request {
         }
 
         /**
-         * NextToken.
+         * The token that is used for the next query. Valid values:
+         * <p>
+         * 
+         * *   If this is your first query or no next query is to be sent, ignore this parameter.
+         * *   If a next query is to be sent, set the value to the value of NextToken that is returned from the last call.
          */
         public Builder nextToken(String nextToken) {
             this.putQueryParameter("NextToken", nextToken);
@@ -337,7 +355,10 @@ public class ListNatIpsRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * The ID of the region where the NAT gateway is deployed.
+         * <p>
+         * 
+         * You can call the [DescribeRegions](~~36063~~) operation to query the most recent region list.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);

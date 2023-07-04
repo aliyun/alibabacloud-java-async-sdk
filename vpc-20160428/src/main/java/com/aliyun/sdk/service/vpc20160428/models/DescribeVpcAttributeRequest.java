@@ -154,7 +154,7 @@ public class DescribeVpcAttributeRequest extends Request {
         } 
 
         /**
-         * DryRun.
+         * The region ID of the VPC.
          */
         public Builder dryRun(Boolean dryRun) {
             this.putQueryParameter("DryRun", dryRun);
@@ -163,7 +163,7 @@ public class DescribeVpcAttributeRequest extends Request {
         }
 
         /**
-         * IsDefault.
+         * The name of the VPC.
          */
         public Builder isDefault(Boolean isDefault) {
             this.putQueryParameter("IsDefault", isDefault);
@@ -190,7 +190,7 @@ public class DescribeVpcAttributeRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * The ID of the Alibaba Cloud account to which the VPC belongs.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -217,7 +217,11 @@ public class DescribeVpcAttributeRequest extends Request {
         }
 
         /**
-         * VpcId.
+         * Indicates whether the ClassicLink feature is enabled. Valid values:
+         * <p>
+         * 
+         * *   **true**: yes
+         * *   **false** (default): no
          */
         public Builder vpcId(String vpcId) {
             this.putQueryParameter("VpcId", vpcId);

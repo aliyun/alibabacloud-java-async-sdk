@@ -185,7 +185,7 @@ public class SetHighDefinitionMonitorLogStatusRequest extends Request {
         } 
 
         /**
-         * InstanceId.
+         * The ID of the instance for which you want to configure fine-grained monitoring.
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -194,7 +194,7 @@ public class SetHighDefinitionMonitorLogStatusRequest extends Request {
         }
 
         /**
-         * InstanceType.
+         * The type of the instance. Set the value to **EIP**.
          */
         public Builder instanceType(String instanceType) {
             this.putQueryParameter("InstanceType", instanceType);
@@ -203,7 +203,7 @@ public class SetHighDefinitionMonitorLogStatusRequest extends Request {
         }
 
         /**
-         * LogProject.
+         * The name of the project of Log Service.
          */
         public Builder logProject(String logProject) {
             this.putQueryParameter("LogProject", logProject);
@@ -212,7 +212,7 @@ public class SetHighDefinitionMonitorLogStatusRequest extends Request {
         }
 
         /**
-         * LogStore.
+         * The name of the Logstore of Log Service.
          */
         public Builder logStore(String logStore) {
             this.putQueryParameter("LogStore", logStore);
@@ -239,7 +239,10 @@ public class SetHighDefinitionMonitorLogStatusRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * The ID of the region where the instance is deployed.
+         * <p>
+         * 
+         * You can call the [DescribeRegions](~~36063~~) operation to query the most recent region list.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -266,7 +269,11 @@ public class SetHighDefinitionMonitorLogStatusRequest extends Request {
         }
 
         /**
-         * Status.
+         * The status of fine-grained monitoring. Valid values:
+         * <p>
+         * 
+         * *   **ON**: enables fine-grained monitoring.
+         * *   **OFF**: disables fine-grained monitoring.
          */
         public Builder status(String status) {
             this.putQueryParameter("Status", status);

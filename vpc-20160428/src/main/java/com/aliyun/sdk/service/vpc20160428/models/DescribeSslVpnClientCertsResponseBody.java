@@ -86,7 +86,7 @@ public class DescribeSslVpnClientCertsResponseBody extends TeaModel {
         private Integer totalCount; 
 
         /**
-         * PageNumber.
+         * The number of the returned page.
          */
         public Builder pageNumber(Integer pageNumber) {
             this.pageNumber = pageNumber;
@@ -94,7 +94,7 @@ public class DescribeSslVpnClientCertsResponseBody extends TeaModel {
         }
 
         /**
-         * PageSize.
+         * The number of entries returned per page.
          */
         public Builder pageSize(Integer pageSize) {
             this.pageSize = pageSize;
@@ -102,7 +102,7 @@ public class DescribeSslVpnClientCertsResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -110,7 +110,7 @@ public class DescribeSslVpnClientCertsResponseBody extends TeaModel {
         }
 
         /**
-         * SslVpnClientCertKeys.
+         * The information about the SSL client certificates.
          */
         public Builder sslVpnClientCertKeys(SslVpnClientCertKeys sslVpnClientCertKeys) {
             this.sslVpnClientCertKeys = sslVpnClientCertKeys;
@@ -118,7 +118,7 @@ public class DescribeSslVpnClientCertsResponseBody extends TeaModel {
         }
 
         /**
-         * TotalCount.
+         * The number of entries returned.
          */
         public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;
@@ -230,7 +230,10 @@ public class DescribeSslVpnClientCertsResponseBody extends TeaModel {
             private String status; 
 
             /**
-             * CreateTime.
+             * The timestamp that indicates when the SSL client certificate was created. Unit: milliseconds.
+             * <p>
+             * 
+             * This value is a UNIX timestamp representing the number of milliseconds that have elapsed since the epoch time January 1, 1970, 00:00:00 UTC.
              */
             public Builder createTime(Long createTime) {
                 this.createTime = createTime;
@@ -238,7 +241,10 @@ public class DescribeSslVpnClientCertsResponseBody extends TeaModel {
             }
 
             /**
-             * EndTime.
+             * The timestamp that indicates when the SSL client certificate expires. Unit: milliseconds.
+             * <p>
+             * 
+             * This value is a UNIX timestamp representing the number of milliseconds that have elapsed since the epoch time January 1, 1970, 00:00:00 UTC.
              */
             public Builder endTime(Long endTime) {
                 this.endTime = endTime;
@@ -246,7 +252,7 @@ public class DescribeSslVpnClientCertsResponseBody extends TeaModel {
             }
 
             /**
-             * Name.
+             * The name of the SSL client certificate.
              */
             public Builder name(String name) {
                 this.name = name;
@@ -254,7 +260,7 @@ public class DescribeSslVpnClientCertsResponseBody extends TeaModel {
             }
 
             /**
-             * RegionId.
+             * The region where the SSL client certificate is created.
              */
             public Builder regionId(String regionId) {
                 this.regionId = regionId;
@@ -262,7 +268,7 @@ public class DescribeSslVpnClientCertsResponseBody extends TeaModel {
             }
 
             /**
-             * SslVpnClientCertId.
+             * The ID of the SSL client certificate.
              */
             public Builder sslVpnClientCertId(String sslVpnClientCertId) {
                 this.sslVpnClientCertId = sslVpnClientCertId;
@@ -270,7 +276,7 @@ public class DescribeSslVpnClientCertsResponseBody extends TeaModel {
             }
 
             /**
-             * SslVpnServerId.
+             * The ID of the SSL server.
              */
             public Builder sslVpnServerId(String sslVpnServerId) {
                 this.sslVpnServerId = sslVpnServerId;
@@ -278,7 +284,12 @@ public class DescribeSslVpnClientCertsResponseBody extends TeaModel {
             }
 
             /**
-             * Status.
+             * The status of the SSL client certificate. Valid values:
+             * <p>
+             * 
+             * *   **expiring-soon**: The certificate expires in one week.
+             * *   **normal**: The certificate is active.
+             * *   **expired**: The certificate has expired.
              */
             public Builder status(String status) {
                 this.status = status;

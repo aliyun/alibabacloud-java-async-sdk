@@ -196,7 +196,7 @@ public class DescribeBgpPeersRequest extends Request {
         } 
 
         /**
-         * BgpGroupId.
+         * The ID of the BGP group to which the BGP peer that you want to query belongs.
          */
         public Builder bgpGroupId(String bgpGroupId) {
             this.putQueryParameter("BgpGroupId", bgpGroupId);
@@ -205,7 +205,7 @@ public class DescribeBgpPeersRequest extends Request {
         }
 
         /**
-         * BgpPeerId.
+         * The ID of the BGP peer that you want to query.
          */
         public Builder bgpPeerId(String bgpPeerId) {
             this.putQueryParameter("BgpPeerId", bgpPeerId);
@@ -214,7 +214,11 @@ public class DescribeBgpPeersRequest extends Request {
         }
 
         /**
-         * IsDefault.
+         * Specifies whether the BGP group is the default BGP group. Valid values:
+         * <p>
+         * 
+         * *   **true**: The BGP group is the default BGP group.
+         * *   **false**: The BGP group is not the default BGP group.
          */
         public Builder isDefault(Boolean isDefault) {
             this.putQueryParameter("IsDefault", isDefault);
@@ -241,7 +245,7 @@ public class DescribeBgpPeersRequest extends Request {
         }
 
         /**
-         * PageNumber.
+         * The number of the page to return. Default value: **1**.
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -250,7 +254,7 @@ public class DescribeBgpPeersRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * The number of entries to return on each page. Maximum value: **50**. Default value: **10**.
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -259,7 +263,10 @@ public class DescribeBgpPeersRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * The region ID of the BGP group to which the BGP peer that you want to query belongs.
+         * <p>
+         * 
+         * You can call the [DescribeRegions](~~36063~~) operation to query the most recent region list.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -286,7 +293,7 @@ public class DescribeBgpPeersRequest extends Request {
         }
 
         /**
-         * RouterId.
+         * The ID of the virtual border router (VBR) that is associated with the BGP peer that you want to query.
          */
         public Builder routerId(String routerId) {
             this.putQueryParameter("RouterId", routerId);

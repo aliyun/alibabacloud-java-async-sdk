@@ -182,7 +182,10 @@ public class ModifyCustomerGatewayAttributeRequest extends Request {
         } 
 
         /**
-         * AuthKey.
+         * The authentication key of the BGP routing protocol for the gateway device in the data center.
+         * <p>
+         * 
+         * The key must be 1 to 64 characters in length. It can contain only ASCII characters and cannot contain spaces or question marks (?).
          */
         public Builder authKey(String authKey) {
             this.putQueryParameter("AuthKey", authKey);
@@ -191,7 +194,12 @@ public class ModifyCustomerGatewayAttributeRequest extends Request {
         }
 
         /**
-         * ClientToken.
+         * The client token that is used to ensure the idempotence of the request.
+         * <p>
+         * 
+         * You can use the client to generate the value, but you must make sure that it is unique among different requests. ClientToken can contain only ASCII characters.
+         * 
+         * >  If you do not set this parameter, **ClientToken** is set to the value of **RequestId**. The value of **RequestId** may be different for each API request.
          */
         public Builder clientToken(String clientToken) {
             this.putQueryParameter("ClientToken", clientToken);
@@ -200,7 +208,7 @@ public class ModifyCustomerGatewayAttributeRequest extends Request {
         }
 
         /**
-         * CustomerGatewayId.
+         * The ID of the customer gateway.
          */
         public Builder customerGatewayId(String customerGatewayId) {
             this.putQueryParameter("CustomerGatewayId", customerGatewayId);
@@ -209,7 +217,10 @@ public class ModifyCustomerGatewayAttributeRequest extends Request {
         }
 
         /**
-         * Description.
+         * The description of the customer gateway.
+         * <p>
+         * 
+         * The description must be 1 to 100 characters in length, and cannot start with `http://` or `https://`.
          */
         public Builder description(String description) {
             this.putQueryParameter("Description", description);
@@ -218,7 +229,10 @@ public class ModifyCustomerGatewayAttributeRequest extends Request {
         }
 
         /**
-         * Name.
+         * The name of the customer gateway.
+         * <p>
+         * 
+         * The name must be 1 to 100 characters in length, and cannot start with `http://` or `https://`.
          */
         public Builder name(String name) {
             this.putQueryParameter("Name", name);
@@ -245,7 +259,10 @@ public class ModifyCustomerGatewayAttributeRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * The ID of the region where the NAT gateway is deployed.
+         * <p>
+         * 
+         * You can call the [DescribeRegions](~~36063~~) operation to query the most recent region list.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);

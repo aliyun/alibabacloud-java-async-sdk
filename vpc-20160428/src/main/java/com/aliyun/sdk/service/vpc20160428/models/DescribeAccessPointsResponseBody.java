@@ -86,7 +86,7 @@ public class DescribeAccessPointsResponseBody extends TeaModel {
         private Integer totalCount; 
 
         /**
-         * AccessPointSet.
+         * The information about the access point.
          */
         public Builder accessPointSet(AccessPointSet accessPointSet) {
             this.accessPointSet = accessPointSet;
@@ -94,7 +94,7 @@ public class DescribeAccessPointsResponseBody extends TeaModel {
         }
 
         /**
-         * PageNumber.
+         * The number of the returned page. Default value: **1**.
          */
         public Builder pageNumber(Integer pageNumber) {
             this.pageNumber = pageNumber;
@@ -102,7 +102,7 @@ public class DescribeAccessPointsResponseBody extends TeaModel {
         }
 
         /**
-         * PageSize.
+         * The number of entries returned on each page. Maximum value: **50**. Default value: **10**.
          */
         public Builder pageSize(Integer pageSize) {
             this.pageSize = pageSize;
@@ -110,7 +110,7 @@ public class DescribeAccessPointsResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -118,7 +118,7 @@ public class DescribeAccessPointsResponseBody extends TeaModel {
         }
 
         /**
-         * TotalCount.
+         * The total number of entries.
          */
         public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;
@@ -170,7 +170,7 @@ public class DescribeAccessPointsResponseBody extends TeaModel {
             private String featureValue; 
 
             /**
-             * FeatureKey.
+             * The feature of the access point.
              */
             public Builder featureKey(String featureKey) {
                 this.featureKey = featureKey;
@@ -178,7 +178,7 @@ public class DescribeAccessPointsResponseBody extends TeaModel {
             }
 
             /**
-             * FeatureValue.
+             * The feature value of the access point.
              */
             public Builder featureValue(String featureValue) {
                 this.featureValue = featureValue;
@@ -356,7 +356,7 @@ public class DescribeAccessPointsResponseBody extends TeaModel {
             private String type; 
 
             /**
-             * AccessPointFeatureModels.
+             * The feature model of the access point.
              */
             public Builder accessPointFeatureModels(AccessPointFeatureModels accessPointFeatureModels) {
                 this.accessPointFeatureModels = accessPointFeatureModels;
@@ -364,7 +364,7 @@ public class DescribeAccessPointsResponseBody extends TeaModel {
             }
 
             /**
-             * AccessPointId.
+             * The ID of the access point.
              */
             public Builder accessPointId(String accessPointId) {
                 this.accessPointId = accessPointId;
@@ -372,7 +372,7 @@ public class DescribeAccessPointsResponseBody extends TeaModel {
             }
 
             /**
-             * AttachedRegionNo.
+             * The region ID of the access point.
              */
             public Builder attachedRegionNo(String attachedRegionNo) {
                 this.attachedRegionNo = attachedRegionNo;
@@ -380,7 +380,7 @@ public class DescribeAccessPointsResponseBody extends TeaModel {
             }
 
             /**
-             * Description.
+             * The description of the access point.
              */
             public Builder description(String description) {
                 this.description = description;
@@ -388,7 +388,7 @@ public class DescribeAccessPointsResponseBody extends TeaModel {
             }
 
             /**
-             * HostOperator.
+             * The colocation provider of the access point.
              */
             public Builder hostOperator(String hostOperator) {
                 this.hostOperator = hostOperator;
@@ -396,7 +396,7 @@ public class DescribeAccessPointsResponseBody extends TeaModel {
             }
 
             /**
-             * Location.
+             * The location of the access point.
              */
             public Builder location(String location) {
                 this.location = location;
@@ -404,7 +404,7 @@ public class DescribeAccessPointsResponseBody extends TeaModel {
             }
 
             /**
-             * Name.
+             * The name of the access point.
              */
             public Builder name(String name) {
                 this.name = name;
@@ -412,7 +412,13 @@ public class DescribeAccessPointsResponseBody extends TeaModel {
             }
 
             /**
-             * Status.
+             * The status of the access point. Valid values:
+             * <p>
+             * 
+             * *   **Recommended**: The access point is ready for use.
+             * *   **hot**: A large number of Express Connect circuits are connected to the access point.
+             * *   **full**: The number of Express Connect circuits connected to the access point has reached the upper limit.
+             * *   **disabled**: The access point is unavailable.
              */
             public Builder status(String status) {
                 this.status = status;
@@ -420,7 +426,7 @@ public class DescribeAccessPointsResponseBody extends TeaModel {
             }
 
             /**
-             * Type.
+             * The network type of the Express Connect circuit. Default value: **VPC**.
              */
             public Builder type(String type) {
                 this.type = type;

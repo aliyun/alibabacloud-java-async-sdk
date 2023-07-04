@@ -241,7 +241,7 @@ public class DescribeRouteTableListRequest extends Request {
         }
 
         /**
-         * PageNumber.
+         * The number of entries to return on each page. Maximum value: **50**. Default value: **10**.
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -250,7 +250,7 @@ public class DescribeRouteTableListRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * The ID of the resource group to which the route table to be queried belongs.
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -259,7 +259,7 @@ public class DescribeRouteTableListRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * The ID of the request.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -268,7 +268,7 @@ public class DescribeRouteTableListRequest extends Request {
         }
 
         /**
-         * ResourceGroupId.
+         * The operation that you want to perform. Set the value to **DescribeRouteTableList**.
          */
         public Builder resourceGroupId(String resourceGroupId) {
             this.putQueryParameter("ResourceGroupId", resourceGroupId);
@@ -295,7 +295,7 @@ public class DescribeRouteTableListRequest extends Request {
         }
 
         /**
-         * RouteTableId.
+         * The name of the route table that you want to query.
          */
         public Builder routeTableId(String routeTableId) {
             this.putQueryParameter("RouteTableId", routeTableId);
@@ -304,7 +304,7 @@ public class DescribeRouteTableListRequest extends Request {
         }
 
         /**
-         * RouteTableName.
+         * The number of the page to return. Default value: **1**.
          */
         public Builder routeTableName(String routeTableName) {
             this.putQueryParameter("RouteTableName", routeTableName);
@@ -313,7 +313,10 @@ public class DescribeRouteTableListRequest extends Request {
         }
 
         /**
-         * RouterId.
+         * The ID of the virtual private cloud (VPC) to which the route table belongs.
+         * <p>
+         * 
+         * After this parameter is set, the value of the **RouterType** parameter is automatically set to **VRouter**.
          */
         public Builder routerId(String routerId) {
             this.putQueryParameter("RouterId", routerId);
@@ -322,7 +325,7 @@ public class DescribeRouteTableListRequest extends Request {
         }
 
         /**
-         * RouterType.
+         * The ID of the router to which the route table belongs.
          */
         public Builder routerType(String routerType) {
             this.putQueryParameter("RouterType", routerType);
@@ -331,7 +334,7 @@ public class DescribeRouteTableListRequest extends Request {
         }
 
         /**
-         * VpcId.
+         * The ID of the route table that you want to query.
          */
         public Builder vpcId(String vpcId) {
             this.putQueryParameter("VpcId", vpcId);

@@ -169,7 +169,7 @@ public class RemoveSourcesFromTrafficMirrorSessionRequest extends Request {
         } 
 
         /**
-         * ClientToken.
+         * The ID of the traffic mirror session from which you want to delete a traffic mirror source.
          */
         public Builder clientToken(String clientToken) {
             this.putQueryParameter("ClientToken", clientToken);
@@ -178,7 +178,7 @@ public class RemoveSourcesFromTrafficMirrorSessionRequest extends Request {
         }
 
         /**
-         * DryRun.
+         * The ID of the traffic mirror source to be deleted. Maximum value of **N**: **10**.
          */
         public Builder dryRun(Boolean dryRun) {
             this.putQueryParameter("DryRun", dryRun);
@@ -232,7 +232,7 @@ public class RemoveSourcesFromTrafficMirrorSessionRequest extends Request {
         }
 
         /**
-         * TrafficMirrorSessionId.
+         * The ID of the region to which the traffic mirror session belongs. You can call the [DescribeRegions](~~36063~~) operation to query the most recent region list. For more information about regions that support traffic mirroring, see [Overview of traffic mirroring](~~207513~~).
          */
         public Builder trafficMirrorSessionId(String trafficMirrorSessionId) {
             this.putQueryParameter("TrafficMirrorSessionId", trafficMirrorSessionId);

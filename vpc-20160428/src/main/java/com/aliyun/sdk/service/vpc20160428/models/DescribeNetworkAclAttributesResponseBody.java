@@ -50,7 +50,14 @@ public class DescribeNetworkAclAttributesResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * NetworkAclAttribute.
+         * The protocol. Valid values:
+         * <p>
+         * 
+         * *   **icmp**: ICMP
+         * *   **gre**: GRE
+         * *   **tcp**: TCP
+         * *   **udp**: UDP
+         * *   **all**: all protocols
          */
         public Builder networkAclAttribute(NetworkAclAttribute networkAclAttribute) {
             this.networkAclAttribute = networkAclAttribute;
@@ -58,7 +65,7 @@ public class DescribeNetworkAclAttributesResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The source CIDR block.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -372,7 +379,7 @@ public class DescribeNetworkAclAttributesResponseBody extends TeaModel {
             private String sourceCidrIp; 
 
             /**
-             * Description.
+             * The tag list.
              */
             public Builder description(String description) {
                 this.description = description;
@@ -380,7 +387,12 @@ public class DescribeNetworkAclAttributesResponseBody extends TeaModel {
             }
 
             /**
-             * NetworkAclEntryId.
+             * The status of the associated resource. Valid values:
+             * <p>
+             * 
+             * - **BINDED**: The resource is associated with the network ACL.
+             * - **BINDING**: The resource is being associated with the network ACL.
+             * - **UNBINDING**: The resource is disassociated from the network ACL.
              */
             public Builder networkAclEntryId(String networkAclEntryId) {
                 this.networkAclEntryId = networkAclEntryId;
@@ -388,7 +400,7 @@ public class DescribeNetworkAclAttributesResponseBody extends TeaModel {
             }
 
             /**
-             * NetworkAclEntryName.
+             * The type of resource with which you want to associate the network ACL. The value is set to **VSwitch**.
              */
             public Builder networkAclEntryName(String networkAclEntryName) {
                 this.networkAclEntryName = networkAclEntryName;
@@ -396,7 +408,7 @@ public class DescribeNetworkAclAttributesResponseBody extends TeaModel {
             }
 
             /**
-             * Policy.
+             * The ID of the associated resource.
              */
             public Builder policy(String policy) {
                 this.policy = policy;
@@ -412,7 +424,7 @@ public class DescribeNetworkAclAttributesResponseBody extends TeaModel {
             }
 
             /**
-             * Protocol.
+             * The tag value.
              */
             public Builder protocol(String protocol) {
                 this.protocol = protocol;
@@ -420,7 +432,7 @@ public class DescribeNetworkAclAttributesResponseBody extends TeaModel {
             }
 
             /**
-             * SourceCidrIp.
+             * The tag key.
              */
             public Builder sourceCidrIp(String sourceCidrIp) {
                 this.sourceCidrIp = sourceCidrIp;
@@ -858,7 +870,7 @@ public class DescribeNetworkAclAttributesResponseBody extends TeaModel {
             private String vpcId; 
 
             /**
-             * CreationTime.
+             * The ID of the outbound rule.
              */
             public Builder creationTime(String creationTime) {
                 this.creationTime = creationTime;
@@ -866,7 +878,7 @@ public class DescribeNetworkAclAttributesResponseBody extends TeaModel {
             }
 
             /**
-             * Description.
+             * The name of the outbound rule.
              */
             public Builder description(String description) {
                 this.description = description;
@@ -882,7 +894,7 @@ public class DescribeNetworkAclAttributesResponseBody extends TeaModel {
             }
 
             /**
-             * IngressAclEntries.
+             * The details about the resource that is associated with the network ACL.
              */
             public Builder ingressAclEntries(IngressAclEntries ingressAclEntries) {
                 this.ingressAclEntries = ingressAclEntries;
@@ -890,7 +902,7 @@ public class DescribeNetworkAclAttributesResponseBody extends TeaModel {
             }
 
             /**
-             * NetworkAclId.
+             * The description of the outbound rule.
              */
             public Builder networkAclId(String networkAclId) {
                 this.networkAclId = networkAclId;
@@ -898,7 +910,11 @@ public class DescribeNetworkAclAttributesResponseBody extends TeaModel {
             }
 
             /**
-             * NetworkAclName.
+             * The action to be performed on network traffic that matches the rule. Valid values:
+             * <p>
+             * 
+             * - **accept**: allows network traffic.
+             * - **drop**: blocks network traffic.
              */
             public Builder networkAclName(String networkAclName) {
                 this.networkAclName = networkAclName;
@@ -906,7 +922,14 @@ public class DescribeNetworkAclAttributesResponseBody extends TeaModel {
             }
 
             /**
-             * OwnerId.
+             * The protocol. Valid values:
+             * <p>
+             * 
+             * - **icmp**: ICMP
+             * - **gre**: GRE
+             * - **tcp**: TCP
+             * - **udp**: UDP
+             * - **all**: all protocols
              */
             public Builder ownerId(Long ownerId) {
                 this.ownerId = ownerId;
@@ -914,7 +937,7 @@ public class DescribeNetworkAclAttributesResponseBody extends TeaModel {
             }
 
             /**
-             * RegionId.
+             * The destination CIDR block.
              */
             public Builder regionId(String regionId) {
                 this.regionId = regionId;
@@ -930,7 +953,11 @@ public class DescribeNetworkAclAttributesResponseBody extends TeaModel {
             }
 
             /**
-             * Status.
+             * The destination port range of the inbound traffic.
+             * <p>
+             * 
+             * *   If **Protocol** of the inbound rule is set to **all**, **icmp**, or **gre**, the port range is **-1/-1**, which indicates all ports.
+             * *   If **Protocol** of the inbound rule is set to **tcp** or **udp**, the port range is in the following format: **1/200** or **80/80**, which indicates port 1 to port 200, or port 80. Valid values for a port: **1** to **65535**.
              */
             public Builder status(String status) {
                 this.status = status;
@@ -946,7 +973,7 @@ public class DescribeNetworkAclAttributesResponseBody extends TeaModel {
             }
 
             /**
-             * VpcId.
+             * The information about the outbound rules of the network ACL.
              */
             public Builder vpcId(String vpcId) {
                 this.vpcId = vpcId;

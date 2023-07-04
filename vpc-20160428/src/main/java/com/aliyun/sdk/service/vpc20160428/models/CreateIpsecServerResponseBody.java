@@ -98,7 +98,10 @@ public class CreateIpsecServerResponseBody extends TeaModel {
         private String vpnGatewayId; 
 
         /**
-         * CreationTime.
+         * The time when the IPsec server was created.
+         * <p>
+         * 
+         * T is used as a delimiter. Z indicates that the time is in UTC.
          */
         public Builder creationTime(String creationTime) {
             this.creationTime = creationTime;
@@ -106,7 +109,7 @@ public class CreateIpsecServerResponseBody extends TeaModel {
         }
 
         /**
-         * IpsecServerId.
+         * The ID of the IPsec server.
          */
         public Builder ipsecServerId(String ipsecServerId) {
             this.ipsecServerId = ipsecServerId;
@@ -114,7 +117,7 @@ public class CreateIpsecServerResponseBody extends TeaModel {
         }
 
         /**
-         * IpsecServerName.
+         * The name of the IPsec server.
          */
         public Builder ipsecServerName(String ipsecServerName) {
             this.ipsecServerName = ipsecServerName;
@@ -122,7 +125,7 @@ public class CreateIpsecServerResponseBody extends TeaModel {
         }
 
         /**
-         * RegionId.
+         * The ID of the region where the VPN gateway is deployed.
          */
         public Builder regionId(String regionId) {
             this.regionId = regionId;
@@ -130,7 +133,7 @@ public class CreateIpsecServerResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -138,7 +141,7 @@ public class CreateIpsecServerResponseBody extends TeaModel {
         }
 
         /**
-         * VpnGatewayId.
+         * The ID of the VPN gateway.
          */
         public Builder vpnGatewayId(String vpnGatewayId) {
             this.vpnGatewayId = vpnGatewayId;

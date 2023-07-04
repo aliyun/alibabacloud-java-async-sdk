@@ -62,7 +62,11 @@ public class DescribeTagKeysResponseBody extends TeaModel {
         private TagKeys tagKeys; 
 
         /**
-         * NextToken.
+         * The token that is used for the next query. Valid values:
+         * <p>
+         * 
+         * *   If the value of **NextToken** is not returned, it indicates that no next query is to be sent.
+         * *   If a value of **NextToken** is returned, the value is the token that is used for the subsequent query.
          */
         public Builder nextToken(String nextToken) {
             this.nextToken = nextToken;
@@ -70,7 +74,7 @@ public class DescribeTagKeysResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -78,7 +82,7 @@ public class DescribeTagKeysResponseBody extends TeaModel {
         }
 
         /**
-         * TagKeys.
+         * The list of tag keys.
          */
         public Builder tagKeys(TagKeys tagKeys) {
             this.tagKeys = tagKeys;
@@ -130,7 +134,7 @@ public class DescribeTagKeysResponseBody extends TeaModel {
             private String type; 
 
             /**
-             * TagKey.
+             * The tag key.
              */
             public Builder tagKey(String tagKey) {
                 this.tagKey = tagKey;
@@ -138,7 +142,11 @@ public class DescribeTagKeysResponseBody extends TeaModel {
             }
 
             /**
-             * Type.
+             * The type of the tag key. Valid values:
+             * <p>
+             * 
+             * *   **Custom**: custom
+             * *   **System**: system
              */
             public Builder type(String type) {
                 this.type = type;
@@ -179,7 +187,7 @@ public class DescribeTagKeysResponseBody extends TeaModel {
             private java.util.List < TagKey> tagKey; 
 
             /**
-             * TagKey.
+             * The tag key.
              */
             public Builder tagKey(java.util.List < TagKey> tagKey) {
                 this.tagKey = tagKey;

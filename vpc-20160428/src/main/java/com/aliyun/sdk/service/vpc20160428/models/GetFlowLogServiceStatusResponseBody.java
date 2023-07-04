@@ -50,7 +50,11 @@ public class GetFlowLogServiceStatusResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * Enabled.
+         * Indicates whether the flow log feature is enabled. Valid values:
+         * <p>
+         * 
+         * *   **true**: yes
+         * *   **false**: no You can call the [OpenFlowLogService](~~449637~~) operation to enable the flow log feature.
          */
         public Builder enabled(Boolean enabled) {
             this.enabled = enabled;
@@ -58,7 +62,7 @@ public class GetFlowLogServiceStatusResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

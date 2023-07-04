@@ -174,7 +174,10 @@ public class TagResourcesForExpressConnectRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * The region ID of the resource to which you want to create and add tags.
+         * <p>
+         * 
+         * You can call the [DescribeRegions](~~36063~~) operation to query the most recent region list.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -210,7 +213,7 @@ public class TagResourcesForExpressConnectRequest extends Request {
         }
 
         /**
-         * ResourceType.
+         * The type of the resource. Set the value to **PHYSICALCONNECTION**, which indicates the Express Connect circuit.
          */
         public Builder resourceType(String resourceType) {
             this.putQueryParameter("ResourceType", resourceType);
@@ -273,7 +276,10 @@ public class TagResourcesForExpressConnectRequest extends Request {
             private String value; 
 
             /**
-             * Key.
+             * The key of tag N that is added to the resource. You can specify up to 20 tag keys. The tag key cannot be an empty string.
+             * <p>
+             * 
+             * The key can be up to 64 characters in length and can contain letters, digits, periods (.), underscores (\_), and hyphens (-). The key must start with a letter but cannot start with `aliyun` or `acs:`. The key cannot contain `http://` or `https://`.
              */
             public Builder key(String key) {
                 this.key = key;
@@ -281,7 +287,10 @@ public class TagResourcesForExpressConnectRequest extends Request {
             }
 
             /**
-             * Value.
+             * The value of tag N that is added to the resource. You can specify up to 20 tag values. The tag value can be an empty string.
+             * <p>
+             * 
+             * The value can be up to 128 characters in length and can contain letters, digits, periods (.), underscores (\_), and hyphens (-). The value must start with a letter but cannot start with `aliyun` or `acs:`. The value cannot contain `http://` or `https://`.
              */
             public Builder value(String value) {
                 this.value = value;

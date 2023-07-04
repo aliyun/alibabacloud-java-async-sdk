@@ -253,7 +253,7 @@ public class CreateCommonBandwidthPackageRequest extends Request {
         } 
 
         /**
-         * Bandwidth.
+         * The billing method of the EIP bandwidth plan. Set the value to **PayByTraffic**, which refers to the pay-by-data-transfer metering method.
          */
         public Builder bandwidth(Integer bandwidth) {
             this.putQueryParameter("Bandwidth", bandwidth);
@@ -262,7 +262,10 @@ public class CreateCommonBandwidthPackageRequest extends Request {
         }
 
         /**
-         * ClientToken.
+         * The maximum bandwidth of the EIP bandwidth plan.
+         * <p>
+         * 
+         * Valid values: **1** to **1000**. Unit: Mbit/s.
          */
         public Builder clientToken(String clientToken) {
             this.putQueryParameter("ClientToken", clientToken);
@@ -271,7 +274,7 @@ public class CreateCommonBandwidthPackageRequest extends Request {
         }
 
         /**
-         * Description.
+         * The ID of the resource group.
          */
         public Builder description(String description) {
             this.putQueryParameter("Description", description);
@@ -280,7 +283,10 @@ public class CreateCommonBandwidthPackageRequest extends Request {
         }
 
         /**
-         * ISP.
+         * The description of the EIP bandwidth plan.
+         * <p>
+         * 
+         * The description must be 2 to 256 characters in length. It must start with a letter but cannot start with `http://` or `https://`.
          */
         public Builder ISP(String ISP) {
             this.putQueryParameter("ISP", ISP);
@@ -289,7 +295,7 @@ public class CreateCommonBandwidthPackageRequest extends Request {
         }
 
         /**
-         * InternetChargeType.
+         * The ID of the EIP bandwidth plan.
          */
         public Builder internetChargeType(String internetChargeType) {
             this.putQueryParameter("InternetChargeType", internetChargeType);
@@ -298,7 +304,12 @@ public class CreateCommonBandwidthPackageRequest extends Request {
         }
 
         /**
-         * Name.
+         * The client token that is used to ensure the idempotence of the request.
+         * <p>
+         * 
+         * You can use the client to generate the value, but you must make sure that it is unique among different requests. The token can contain only ASCII characters.
+         * 
+         * >  If you do not set this parameter, the system automatically sets the **ClientToken** parameter to the value of **RequestId**. The value of **RequestId** may be different for each API request.
          */
         public Builder name(String name) {
             this.putQueryParameter("Name", name);
@@ -325,7 +336,13 @@ public class CreateCommonBandwidthPackageRequest extends Request {
         }
 
         /**
-         * Ratio.
+         * The edition of Anti-DDoS.
+         * <p>
+         * 
+         * *   If you do not set this parameter, Anti-DDoS Origin Basic is used.
+         * *   If you set the value to **AntiDDoS_Enhanced**, Anti-DDoS Pro/Premium is used.
+         * 
+         * Valid values of **N**: **1** to **10**. You can specify only one Anti-DDoS edition. If you specify more than one edition, the operation may fail.
          */
         public Builder ratio(Integer ratio) {
             this.putQueryParameter("Ratio", ratio);
@@ -334,7 +351,22 @@ public class CreateCommonBandwidthPackageRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * The line type. Valid values:
+         * <p>
+         * 
+         * *   **BGP**: BGP (Multi-ISP) lines. BGP (Multi-ISP) lines are available in all regions.
+         * *   **BGP_PRO**: BGP (Multi-ISP) Pro lines. BGP (Multi-ISP) Pro is available only in the China (Hong Kong), Singapore, Philippines (Manila), Malaysia (Kuala Lumpur), Indonesia (Jakarta), and Thailand (Bangkok) regions.
+         * 
+         * If you are allowed to use single-ISP bandwidth, you can also choose one of the following values:
+         * 
+         * *   **ChinaTelecom**: China Telecom
+         * *   **ChinaUnicom**: China Unicom
+         * *   **ChinaMobile**: China Mobile
+         * *   **ChinaTelecom_L2**: China Telecom L2
+         * *   **ChinaUnicom_L2**: China Unicom L2
+         * *   **ChinaMobile_L2**: China Mobile L2
+         * 
+         * If your services are deployed in China East 1 Finance, you must set this parameter to **BGP_FinanceCloud**.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -343,7 +375,10 @@ public class CreateCommonBandwidthPackageRequest extends Request {
         }
 
         /**
-         * ResourceGroupId.
+         * The percentage of the minimum bandwidth commitment. Set the parameter to **20**.
+         * <p>
+         * 
+         * >  This parameter is available only on the Alibaba Cloud China site.
          */
         public Builder resourceGroupId(String resourceGroupId) {
             this.putQueryParameter("ResourceGroupId", resourceGroupId);
@@ -379,7 +414,10 @@ public class CreateCommonBandwidthPackageRequest extends Request {
         }
 
         /**
-         * Zone.
+         * The name of the EIP bandwidth plan.
+         * <p>
+         * 
+         * The name must be 2 to 128 characters in length, and can contain letters, digits, underscores (\_), and hyphens (-). The name must start with a letter.
          */
         public Builder zone(String zone) {
             this.putQueryParameter("Zone", zone);

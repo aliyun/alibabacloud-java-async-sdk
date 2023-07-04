@@ -144,7 +144,10 @@ public class DeleteRouteTableRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * The region ID of the virtual private cloud (VPC) to which the custom route table belongs.
+         * <p>
+         * 
+         * You can call the [DescribeRegions](~~36063~~) operation to query the most recent region list.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -171,7 +174,7 @@ public class DeleteRouteTableRequest extends Request {
         }
 
         /**
-         * RouteTableId.
+         * The ID of the custom route table.
          */
         public Builder routeTableId(String routeTableId) {
             this.putQueryParameter("RouteTableId", routeTableId);

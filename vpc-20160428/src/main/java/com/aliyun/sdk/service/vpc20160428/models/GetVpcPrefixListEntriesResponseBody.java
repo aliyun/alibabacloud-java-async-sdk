@@ -86,7 +86,7 @@ public class GetVpcPrefixListEntriesResponseBody extends TeaModel {
         private Long totalCount; 
 
         /**
-         * Count.
+         * The number of entries.
          */
         public Builder count(Long count) {
             this.count = count;
@@ -94,7 +94,11 @@ public class GetVpcPrefixListEntriesResponseBody extends TeaModel {
         }
 
         /**
-         * NextToken.
+         * The token that is used for the next query. Valid values:
+         * <p>
+         * 
+         * *   If no value is returned for **NextToken**, no next queries are sent.
+         * *   If **NextToken** is not empty, the value indicates the token that is used for the next query.
          */
         public Builder nextToken(String nextToken) {
             this.nextToken = nextToken;
@@ -102,7 +106,7 @@ public class GetVpcPrefixListEntriesResponseBody extends TeaModel {
         }
 
         /**
-         * PrefixListEntry.
+         * The information about the prefix list.
          */
         public Builder prefixListEntry(java.util.List < PrefixListEntry> prefixListEntry) {
             this.prefixListEntry = prefixListEntry;
@@ -110,7 +114,7 @@ public class GetVpcPrefixListEntriesResponseBody extends TeaModel {
         }
 
         /**
-         * Id of the request
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -118,7 +122,7 @@ public class GetVpcPrefixListEntriesResponseBody extends TeaModel {
         }
 
         /**
-         * TotalCount.
+         * The total number of entries returned.
          */
         public Builder totalCount(Long totalCount) {
             this.totalCount = totalCount;
@@ -194,7 +198,7 @@ public class GetVpcPrefixListEntriesResponseBody extends TeaModel {
             private String regionId; 
 
             /**
-             * 状态
+             * The CIDR blocks specified in the prefix list.
              */
             public Builder cidr(String cidr) {
                 this.cidr = cidr;
@@ -202,7 +206,7 @@ public class GetVpcPrefixListEntriesResponseBody extends TeaModel {
             }
 
             /**
-             * 名称
+             * The description of the prefix list.
              */
             public Builder description(String description) {
                 this.description = description;
@@ -210,7 +214,7 @@ public class GetVpcPrefixListEntriesResponseBody extends TeaModel {
             }
 
             /**
-             * 前缀列表的实例ID
+             * The ID of the prefix list.
              */
             public Builder prefixListId(String prefixListId) {
                 this.prefixListId = prefixListId;
@@ -218,7 +222,7 @@ public class GetVpcPrefixListEntriesResponseBody extends TeaModel {
             }
 
             /**
-             * RegionId.
+             * The region ID of the prefix list.
              */
             public Builder regionId(String regionId) {
                 this.regionId = regionId;

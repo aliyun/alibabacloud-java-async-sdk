@@ -155,7 +155,12 @@ public class UnassociatePhysicalConnectionFromVirtualBorderRouterRequest extends
         } 
 
         /**
-         * ClientToken.
+         * The client token that is used to ensure the idempotence of the request.
+         * <p>
+         * 
+         * You can use the client to generate the value, but you must ensure that the value is unique among all requests. The token can contain only ASCII characters.
+         * 
+         * >  If you do not specify this parameter, the system uses **RequestId** as **ClientToken**. **RequestId** may be different for each API request.
          */
         public Builder clientToken(String clientToken) {
             this.putQueryParameter("ClientToken", clientToken);
@@ -182,7 +187,7 @@ public class UnassociatePhysicalConnectionFromVirtualBorderRouterRequest extends
         }
 
         /**
-         * PhysicalConnectionId.
+         * The ID of the Express Connect circuit.
          */
         public Builder physicalConnectionId(String physicalConnectionId) {
             this.putQueryParameter("PhysicalConnectionId", physicalConnectionId);
@@ -191,7 +196,10 @@ public class UnassociatePhysicalConnectionFromVirtualBorderRouterRequest extends
         }
 
         /**
-         * RegionId.
+         * The region ID of the Express Connect circuit.
+         * <p>
+         * 
+         * You can call the [DescribeRegions](~~36063~~) operation to query the most recent region list.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -218,7 +226,7 @@ public class UnassociatePhysicalConnectionFromVirtualBorderRouterRequest extends
         }
 
         /**
-         * VbrId.
+         * The ID of the VBR that you want to disassociate from the Express Connect circuit.
          */
         public Builder vbrId(String vbrId) {
             this.putQueryParameter("VbrId", vbrId);

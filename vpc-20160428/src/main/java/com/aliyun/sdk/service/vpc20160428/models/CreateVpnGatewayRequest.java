@@ -26,6 +26,10 @@ public class CreateVpnGatewayRequest extends Request {
     private String clientToken;
 
     @Query
+    @NameInMap("DisasterRecoveryVSwitchId")
+    private String disasterRecoveryVSwitchId;
+
+    @Query
     @NameInMap("EnableIpsec")
     private Boolean enableIpsec;
 
@@ -92,6 +96,7 @@ public class CreateVpnGatewayRequest extends Request {
         this.autoPay = builder.autoPay;
         this.bandwidth = builder.bandwidth;
         this.clientToken = builder.clientToken;
+        this.disasterRecoveryVSwitchId = builder.disasterRecoveryVSwitchId;
         this.enableIpsec = builder.enableIpsec;
         this.enableSsl = builder.enableSsl;
         this.instanceChargeType = builder.instanceChargeType;
@@ -141,6 +146,13 @@ public class CreateVpnGatewayRequest extends Request {
      */
     public String getClientToken() {
         return this.clientToken;
+    }
+
+    /**
+     * @return disasterRecoveryVSwitchId
+     */
+    public String getDisasterRecoveryVSwitchId() {
+        return this.disasterRecoveryVSwitchId;
     }
 
     /**
@@ -252,6 +264,7 @@ public class CreateVpnGatewayRequest extends Request {
         private Boolean autoPay; 
         private Integer bandwidth; 
         private String clientToken; 
+        private String disasterRecoveryVSwitchId; 
         private Boolean enableIpsec; 
         private Boolean enableSsl; 
         private String instanceChargeType; 
@@ -277,6 +290,7 @@ public class CreateVpnGatewayRequest extends Request {
             this.autoPay = request.autoPay;
             this.bandwidth = request.bandwidth;
             this.clientToken = request.clientToken;
+            this.disasterRecoveryVSwitchId = request.disasterRecoveryVSwitchId;
             this.enableIpsec = request.enableIpsec;
             this.enableSsl = request.enableSsl;
             this.instanceChargeType = request.instanceChargeType;
@@ -295,7 +309,11 @@ public class CreateVpnGatewayRequest extends Request {
         } 
 
         /**
-         * AutoPay.
+         * Specifies whether to enable the IPsec-VPN feature. Valid values:
+         * <p>
+         * 
+         * *   **true** (default): yes
+         * *   **false**: no
          */
         public Builder autoPay(Boolean autoPay) {
             this.putQueryParameter("AutoPay", autoPay);
@@ -304,7 +322,11 @@ public class CreateVpnGatewayRequest extends Request {
         }
 
         /**
-         * Bandwidth.
+         * Specifies whether to enable the SSL-VPN feature for the VPN gateway. Valid values:
+         * <p>
+         * 
+         * *   **true**: yes
+         * *   **false** (default): no
          */
         public Builder bandwidth(Integer bandwidth) {
             this.putQueryParameter("Bandwidth", bandwidth);
@@ -313,7 +335,7 @@ public class CreateVpnGatewayRequest extends Request {
         }
 
         /**
-         * ClientToken.
+         * The ID of the VPN gateway.
          */
         public Builder clientToken(String clientToken) {
             this.putQueryParameter("ClientToken", clientToken);
@@ -322,7 +344,16 @@ public class CreateVpnGatewayRequest extends Request {
         }
 
         /**
-         * EnableIpsec.
+         * DisasterRecoveryVSwitchId.
+         */
+        public Builder disasterRecoveryVSwitchId(String disasterRecoveryVSwitchId) {
+            this.putQueryParameter("DisasterRecoveryVSwitchId", disasterRecoveryVSwitchId);
+            this.disasterRecoveryVSwitchId = disasterRecoveryVSwitchId;
+            return this;
+        }
+
+        /**
+         * The maximum number of clients that can be connected at the same time. Valid values: **5** (default), **10**, **20**, **50**, **100**, **200**, **500**, and **1000**.
          */
         public Builder enableIpsec(Boolean enableIpsec) {
             this.putQueryParameter("EnableIpsec", enableIpsec);
@@ -331,7 +362,7 @@ public class CreateVpnGatewayRequest extends Request {
         }
 
         /**
-         * EnableSsl.
+         * The ID of the vSwitch to which the VPN gateway belongs.
          */
         public Builder enableSsl(Boolean enableSsl) {
             this.putQueryParameter("EnableSsl", enableSsl);
@@ -340,7 +371,11 @@ public class CreateVpnGatewayRequest extends Request {
         }
 
         /**
-         * InstanceChargeType.
+         * Specifies whether to enable automatic payment for the VPN gateway. Valid values:
+         * <p>
+         * 
+         * *   **true**: yes
+         * *   **false** (default): no
          */
         public Builder instanceChargeType(String instanceChargeType) {
             this.putQueryParameter("InstanceChargeType", instanceChargeType);
@@ -349,7 +384,7 @@ public class CreateVpnGatewayRequest extends Request {
         }
 
         /**
-         * Name.
+         * The billing method of the VPN gateway. Set the value to **POSTPAY**, which specifies the pay-as-you-go billing method.
          */
         public Builder name(String name) {
             this.putQueryParameter("Name", name);
@@ -358,7 +393,7 @@ public class CreateVpnGatewayRequest extends Request {
         }
 
         /**
-         * NetworkType.
+         * The ID of the request.
          */
         public Builder networkType(String networkType) {
             this.putQueryParameter("NetworkType", networkType);
@@ -385,7 +420,13 @@ public class CreateVpnGatewayRequest extends Request {
         }
 
         /**
-         * Period.
+         * The maximum bandwidth of the VPN gateway. Unit: Mbit/s.
+         * <p>
+         * 
+         * *   If you want to create a public VPN gateway, valid values are **10**, **100**, **200**, **500**, and **1000**.
+         * *   If you want to create a private VPN gateway, valid values are **200** and **1000**.
+         * 
+         * >  In some regions, the maximum bandwidth supported by a VPN gateway is 200 Mbit/s. For more information, see [Limits on VPN gateways](~~65290~~).
          */
         public Builder period(Integer period) {
             this.putQueryParameter("Period", period);
@@ -394,7 +435,7 @@ public class CreateVpnGatewayRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * The ID of the virtual private cloud (VPC) where you want to create the VPN gateway.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -421,7 +462,10 @@ public class CreateVpnGatewayRequest extends Request {
         }
 
         /**
-         * SslConnections.
+         * The type of the VPN gateway. Valid values:
+         * <p>
+         * 
+         * *   **Normal** (default): standard
          */
         public Builder sslConnections(Integer sslConnections) {
             this.putQueryParameter("SslConnections", sslConnections);
@@ -430,7 +474,12 @@ public class CreateVpnGatewayRequest extends Request {
         }
 
         /**
-         * VSwitchId.
+         * The client token that is used to ensure the idempotence of the request.
+         * <p>
+         * 
+         * You can use the client to generate the value, but you must make sure that it is unique among different requests. The token can contain only ASCII characters.
+         * 
+         * >  If you do not set this parameter, the system sets **ClientToken** to the value of **RequestId**. The value of **RequestId** may be different for each API request.
          */
         public Builder vSwitchId(String vSwitchId) {
             this.putQueryParameter("VSwitchId", vSwitchId);
@@ -439,7 +488,7 @@ public class CreateVpnGatewayRequest extends Request {
         }
 
         /**
-         * VpcId.
+         * The subscription duration. Unit: months. Valid values: **1** to **9**, **12**, **24**, and **36**.
          */
         public Builder vpcId(String vpcId) {
             this.putQueryParameter("VpcId", vpcId);
@@ -448,7 +497,11 @@ public class CreateVpnGatewayRequest extends Request {
         }
 
         /**
-         * VpnType.
+         * The network type of the VPN gateway. Valid values:
+         * <p>
+         * 
+         * *   **public** (default): public VPN gateway
+         * *   **private**: private VPN gateway
          */
         public Builder vpnType(String vpnType) {
             this.putQueryParameter("VpnType", vpnType);

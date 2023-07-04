@@ -210,7 +210,12 @@ public class CreateCustomerGatewayRequest extends Request {
         } 
 
         /**
-         * Asn.
+         * The autonomous system number (ASN) of the gateway device in the data center.
+         * <p>
+         * 
+         * **Asn** is a 4-byte number. You can enter the number in two segments and separate the first 16 bits from the following 16 bits with a period (.). Enter the number in each segment in the decimal format.
+         * 
+         * For example, if you enter 123.456, the ASN is: 123 × 65536 + 456 = 8061384.
          */
         public Builder asn(String asn) {
             this.putQueryParameter("Asn", asn);
@@ -219,7 +224,10 @@ public class CreateCustomerGatewayRequest extends Request {
         }
 
         /**
-         * AuthKey.
+         * The authentication key of the BGP routing protocol for the gateway device in the data center.
+         * <p>
+         * 
+         * The key must be 1 to 64 characters in length. It can contain only ASCII characters and cannot contain spaces or question marks (?).
          */
         public Builder authKey(String authKey) {
             this.putQueryParameter("AuthKey", authKey);
@@ -228,7 +236,12 @@ public class CreateCustomerGatewayRequest extends Request {
         }
 
         /**
-         * ClientToken.
+         * The client token that is used to ensure the idempotence of the request.
+         * <p>
+         * 
+         * You can use the client to generate the value, but you must make sure that it is unique among different requests. The token can contain only ASCII characters and cannot exceed 64 characters in length.
+         * 
+         * >  If you do not set this parameter, **ClientToken** is set to the value of **RequestId**. The value of **RequestId** for each API request may be different.
          */
         public Builder clientToken(String clientToken) {
             this.putQueryParameter("ClientToken", clientToken);
@@ -237,7 +250,10 @@ public class CreateCustomerGatewayRequest extends Request {
         }
 
         /**
-         * Description.
+         * The description of the customer gateway.
+         * <p>
+         * 
+         * The description must be 1 to 100 characters in length, and cannot start with `http://` or `https://`.
          */
         public Builder description(String description) {
             this.putQueryParameter("Description", description);
@@ -246,7 +262,7 @@ public class CreateCustomerGatewayRequest extends Request {
         }
 
         /**
-         * IpAddress.
+         * The static public IP address of the gateway device in the data center.
          */
         public Builder ipAddress(String ipAddress) {
             this.putQueryParameter("IpAddress", ipAddress);
@@ -255,7 +271,10 @@ public class CreateCustomerGatewayRequest extends Request {
         }
 
         /**
-         * Name.
+         * The name of the customer gateway.
+         * <p>
+         * 
+         * The name must be 1 to 100 characters in length, and cannot start with `http://` or `https://`.
          */
         public Builder name(String name) {
             this.putQueryParameter("Name", name);
@@ -282,7 +301,10 @@ public class CreateCustomerGatewayRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * The region ID of the customer gateway.
+         * <p>
+         * 
+         * You can call the [DescribeRegions](~~36063~~) operation to query the most recent region list.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -363,7 +385,12 @@ public class CreateCustomerGatewayRequest extends Request {
             private String value; 
 
             /**
-             * Key.
+             * The tag key. The tag key cannot be an empty string.
+             * <p>
+             * 
+             * It can be at most 64 characters in length, and cannot contain `http://` or `https://`. It cannot start with `aliyun` or `acs:`.
+             * 
+             * You can specify at most 20 tag keys in each call.
              */
             public Builder key(String key) {
                 this.key = key;
@@ -371,7 +398,12 @@ public class CreateCustomerGatewayRequest extends Request {
             }
 
             /**
-             * Value.
+             * The tag value.
+             * <p>
+             * 
+             * The tag value can be an empty string and cannot exceed 128 characters in length. It cannot start with `aliyun` or `acs:`, and cannot contain `http://` or `https://`.
+             * 
+             * Each tag key corresponds to one tag value. You can specify at most 20 tag values in each call.
              */
             public Builder value(String value) {
                 this.value = value;

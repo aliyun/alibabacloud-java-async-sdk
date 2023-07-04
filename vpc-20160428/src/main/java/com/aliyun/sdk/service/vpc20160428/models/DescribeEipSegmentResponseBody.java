@@ -86,7 +86,7 @@ public class DescribeEipSegmentResponseBody extends TeaModel {
         private Integer totalCount; 
 
         /**
-         * EipSegments.
+         * The details of the contiguous EIP group.
          */
         public Builder eipSegments(EipSegments eipSegments) {
             this.eipSegments = eipSegments;
@@ -94,7 +94,7 @@ public class DescribeEipSegmentResponseBody extends TeaModel {
         }
 
         /**
-         * PageNumber.
+         * The page number of the returned page.
          */
         public Builder pageNumber(Integer pageNumber) {
             this.pageNumber = pageNumber;
@@ -102,7 +102,7 @@ public class DescribeEipSegmentResponseBody extends TeaModel {
         }
 
         /**
-         * PageSize.
+         * The number of entries returned per page.
          */
         public Builder pageSize(Integer pageSize) {
             this.pageSize = pageSize;
@@ -110,7 +110,7 @@ public class DescribeEipSegmentResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -118,7 +118,7 @@ public class DescribeEipSegmentResponseBody extends TeaModel {
         }
 
         /**
-         * TotalCount.
+         * The number of entries returned.
          */
         public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;
@@ -156,6 +156,9 @@ public class DescribeEipSegmentResponseBody extends TeaModel {
         @NameInMap("Status")
         private String status;
 
+        @NameInMap("Zone")
+        private String zone;
+
         private EipSegment(Builder builder) {
             this.creationTime = builder.creationTime;
             this.descritpion = builder.descritpion;
@@ -165,6 +168,7 @@ public class DescribeEipSegmentResponseBody extends TeaModel {
             this.regionId = builder.regionId;
             this.segment = builder.segment;
             this.status = builder.status;
+            this.zone = builder.zone;
         }
 
         public static Builder builder() {
@@ -231,6 +235,13 @@ public class DescribeEipSegmentResponseBody extends TeaModel {
             return this.status;
         }
 
+        /**
+         * @return zone
+         */
+        public String getZone() {
+            return this.zone;
+        }
+
         public static final class Builder {
             private String creationTime; 
             private String descritpion; 
@@ -240,9 +251,10 @@ public class DescribeEipSegmentResponseBody extends TeaModel {
             private String regionId; 
             private String segment; 
             private String status; 
+            private String zone; 
 
             /**
-             * CreationTime.
+             * The time when the contiguous EIP group was created. The time is displayed in the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time is in UTC.
              */
             public Builder creationTime(String creationTime) {
                 this.creationTime = creationTime;
@@ -250,7 +262,7 @@ public class DescribeEipSegmentResponseBody extends TeaModel {
             }
 
             /**
-             * Descritpion.
+             * The description of the contiguous EIP group.
              */
             public Builder descritpion(String descritpion) {
                 this.descritpion = descritpion;
@@ -258,7 +270,7 @@ public class DescribeEipSegmentResponseBody extends TeaModel {
             }
 
             /**
-             * InstanceId.
+             * The ID of the contiguous EIP group.
              */
             public Builder instanceId(String instanceId) {
                 this.instanceId = instanceId;
@@ -266,7 +278,7 @@ public class DescribeEipSegmentResponseBody extends TeaModel {
             }
 
             /**
-             * IpCount.
+             * The number of EIPs in the contiguous EIP group.
              */
             public Builder ipCount(String ipCount) {
                 this.ipCount = ipCount;
@@ -274,7 +286,7 @@ public class DescribeEipSegmentResponseBody extends TeaModel {
             }
 
             /**
-             * Name.
+             * The name of the contiguous EIP group.
              */
             public Builder name(String name) {
                 this.name = name;
@@ -282,7 +294,7 @@ public class DescribeEipSegmentResponseBody extends TeaModel {
             }
 
             /**
-             * RegionId.
+             * The ID of the region to which the contiguous EIP group belongs.
              */
             public Builder regionId(String regionId) {
                 this.regionId = regionId;
@@ -290,7 +302,7 @@ public class DescribeEipSegmentResponseBody extends TeaModel {
             }
 
             /**
-             * Segment.
+             * The CIDR block and mask of the contiguous EIP group.
              */
             public Builder segment(String segment) {
                 this.segment = segment;
@@ -298,10 +310,23 @@ public class DescribeEipSegmentResponseBody extends TeaModel {
             }
 
             /**
-             * Status.
+             * The status of the contiguous EIP group.
+             * <p>
+             * 
+             * *   **Allocating**: being allocated
+             * *   **Allocated**: allocated
+             * *   **Releasing**: being released
              */
             public Builder status(String status) {
                 this.status = status;
+                return this;
+            }
+
+            /**
+             * Zone.
+             */
+            public Builder zone(String zone) {
+                this.zone = zone;
                 return this;
             }
 

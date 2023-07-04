@@ -86,7 +86,7 @@ public class ListIpsecServersResponseBody extends TeaModel {
         private Integer totalCount; 
 
         /**
-         * IpsecServers.
+         * The list of IPsec servers.
          */
         public Builder ipsecServers(java.util.List < IpsecServers> ipsecServers) {
             this.ipsecServers = ipsecServers;
@@ -94,7 +94,7 @@ public class ListIpsecServersResponseBody extends TeaModel {
         }
 
         /**
-         * MaxResults.
+         * The number of entries returned on each page.
          */
         public Builder maxResults(Integer maxResults) {
             this.maxResults = maxResults;
@@ -102,7 +102,11 @@ public class ListIpsecServersResponseBody extends TeaModel {
         }
 
         /**
-         * NextToken.
+         * The token that is used for the next query. Valid values:
+         * <p>
+         * 
+         * *   If a value of **NextToken** is not returned, it indicates that no subsequent query is to be sent.
+         * *   If a value of **NextToken** is returned, the value is the token that is used for the subsequent query.
          */
         public Builder nextToken(String nextToken) {
             this.nextToken = nextToken;
@@ -110,7 +114,7 @@ public class ListIpsecServersResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -118,7 +122,7 @@ public class ListIpsecServersResponseBody extends TeaModel {
         }
 
         /**
-         * TotalCount.
+         * The number of entries returned.
          */
         public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;
@@ -242,7 +246,7 @@ public class ListIpsecServersResponseBody extends TeaModel {
             private String remoteId; 
 
             /**
-             * IkeAuthAlg.
+             * The IKE authentication algorithm.
              */
             public Builder ikeAuthAlg(String ikeAuthAlg) {
                 this.ikeAuthAlg = ikeAuthAlg;
@@ -250,7 +254,7 @@ public class ListIpsecServersResponseBody extends TeaModel {
             }
 
             /**
-             * IkeEncAlg.
+             * The IKE encryption algorithm.
              */
             public Builder ikeEncAlg(String ikeEncAlg) {
                 this.ikeEncAlg = ikeEncAlg;
@@ -258,7 +262,7 @@ public class ListIpsecServersResponseBody extends TeaModel {
             }
 
             /**
-             * IkeLifetime.
+             * The IKE lifetime. Unit: seconds.
              */
             public Builder ikeLifetime(Long ikeLifetime) {
                 this.ikeLifetime = ikeLifetime;
@@ -266,7 +270,10 @@ public class ListIpsecServersResponseBody extends TeaModel {
             }
 
             /**
-             * IkeMode.
+             * The IKE negotiation mode. Valid values:
+             * <p>
+             * 
+             * **main**: This mode offers higher security during negotiations.
              */
             public Builder ikeMode(String ikeMode) {
                 this.ikeMode = ikeMode;
@@ -274,7 +281,7 @@ public class ListIpsecServersResponseBody extends TeaModel {
             }
 
             /**
-             * IkePfs.
+             * The Diffie-Hellman key exchange algorithm.
              */
             public Builder ikePfs(String ikePfs) {
                 this.ikePfs = ikePfs;
@@ -282,7 +289,7 @@ public class ListIpsecServersResponseBody extends TeaModel {
             }
 
             /**
-             * IkeVersion.
+             * The IKE version.
              */
             public Builder ikeVersion(String ikeVersion) {
                 this.ikeVersion = ikeVersion;
@@ -290,7 +297,7 @@ public class ListIpsecServersResponseBody extends TeaModel {
             }
 
             /**
-             * LocalId.
+             * The ID of the IPsec server. The default value is the public IP address of the VPN gateway. Both FQDNs and IP addresses are supported.
              */
             public Builder localId(String localId) {
                 this.localId = localId;
@@ -298,7 +305,7 @@ public class ListIpsecServersResponseBody extends TeaModel {
             }
 
             /**
-             * RemoteId.
+             * The identifier of the customer gateway. Both fully qualified domain names (FQDNs) and IP addresses are supported. By default, this parameter is empty.
              */
             public Builder remoteId(String remoteId) {
                 this.remoteId = remoteId;
@@ -375,7 +382,7 @@ public class ListIpsecServersResponseBody extends TeaModel {
             private String ipsecPfs; 
 
             /**
-             * IpsecAuthAlg.
+             * The IPsec authentication algorithm.
              */
             public Builder ipsecAuthAlg(String ipsecAuthAlg) {
                 this.ipsecAuthAlg = ipsecAuthAlg;
@@ -383,7 +390,7 @@ public class ListIpsecServersResponseBody extends TeaModel {
             }
 
             /**
-             * IpsecEncAlg.
+             * The IPsec encryption algorithm.
              */
             public Builder ipsecEncAlg(String ipsecEncAlg) {
                 this.ipsecEncAlg = ipsecEncAlg;
@@ -391,7 +398,7 @@ public class ListIpsecServersResponseBody extends TeaModel {
             }
 
             /**
-             * IpsecLifetime.
+             * The IPsec lifetime. Unit: seconds.
              */
             public Builder ipsecLifetime(Long ipsecLifetime) {
                 this.ipsecLifetime = ipsecLifetime;
@@ -399,7 +406,7 @@ public class ListIpsecServersResponseBody extends TeaModel {
             }
 
             /**
-             * IpsecPfs.
+             * The Diffie-Hellman key exchange algorithm.
              */
             public Builder ipsecPfs(String ipsecPfs) {
                 this.ipsecPfs = ipsecPfs;
@@ -632,7 +639,7 @@ public class ListIpsecServersResponseBody extends TeaModel {
             private String vpnGatewayId; 
 
             /**
-             * ClientIpPool.
+             * The client CIDR block. It refers to the CIDR block that is allocated to the virtual interface of the client.
              */
             public Builder clientIpPool(String clientIpPool) {
                 this.clientIpPool = clientIpPool;
@@ -640,7 +647,10 @@ public class ListIpsecServersResponseBody extends TeaModel {
             }
 
             /**
-             * CreationTime.
+             * The time when the IPsec server was created.
+             * <p>
+             * 
+             * T is used as a delimiter. Z indicates that the time is in UTC.
              */
             public Builder creationTime(String creationTime) {
                 this.creationTime = creationTime;
@@ -648,7 +658,11 @@ public class ListIpsecServersResponseBody extends TeaModel {
             }
 
             /**
-             * EffectImmediately.
+             * Indicates whether the current IPsec tunnel is deleted and negotiations are reinitiated. Valid values:
+             * <p>
+             * 
+             * *   **true**: immediately initiates negotiations after the configuration is completed.
+             * *   **false**: initiates negotiations when inbound traffic is detected.
              */
             public Builder effectImmediately(Boolean effectImmediately) {
                 this.effectImmediately = effectImmediately;
@@ -656,7 +670,7 @@ public class ListIpsecServersResponseBody extends TeaModel {
             }
 
             /**
-             * IDaaSInstanceId.
+             * The ID of the Identity as a Service (IDaaS) instance.
              */
             public Builder iDaaSInstanceId(String iDaaSInstanceId) {
                 this.iDaaSInstanceId = iDaaSInstanceId;
@@ -664,7 +678,7 @@ public class ListIpsecServersResponseBody extends TeaModel {
             }
 
             /**
-             * IkeConfig.
+             * The configurations of phase 1 negotiations.
              */
             public Builder ikeConfig(IkeConfig ikeConfig) {
                 this.ikeConfig = ikeConfig;
@@ -672,7 +686,7 @@ public class ListIpsecServersResponseBody extends TeaModel {
             }
 
             /**
-             * InternetIp.
+             * The public IP address of the VPN gateway.
              */
             public Builder internetIp(String internetIp) {
                 this.internetIp = internetIp;
@@ -680,7 +694,7 @@ public class ListIpsecServersResponseBody extends TeaModel {
             }
 
             /**
-             * IpsecConfig.
+             * The configuration of phase 2 negotiations.
              */
             public Builder ipsecConfig(IpsecConfig ipsecConfig) {
                 this.ipsecConfig = ipsecConfig;
@@ -688,7 +702,7 @@ public class ListIpsecServersResponseBody extends TeaModel {
             }
 
             /**
-             * IpsecServerId.
+             * The ID of the IPsec server.
              */
             public Builder ipsecServerId(String ipsecServerId) {
                 this.ipsecServerId = ipsecServerId;
@@ -696,7 +710,7 @@ public class ListIpsecServersResponseBody extends TeaModel {
             }
 
             /**
-             * IpsecServerName.
+             * The name of the IPsec server.
              */
             public Builder ipsecServerName(String ipsecServerName) {
                 this.ipsecServerName = ipsecServerName;
@@ -704,7 +718,7 @@ public class ListIpsecServersResponseBody extends TeaModel {
             }
 
             /**
-             * LocalSubnet.
+             * The local CIDR blocks, which refer to the CIDR blocks on the virtual private cloud (VPC) side.
              */
             public Builder localSubnet(String localSubnet) {
                 this.localSubnet = localSubnet;
@@ -712,7 +726,10 @@ public class ListIpsecServersResponseBody extends TeaModel {
             }
 
             /**
-             * MaxConnections.
+             * The number of SSL-VPN connections supported by the VPN gateway.
+             * <p>
+             * 
+             * >  The number of SSL-VPN connections specified in this parameter includes both SSL-VPN and IPsec-VPN connections. For example, if a VPN gateway supports up to five SSL-VPN connections, and three SSL-VPN connections are already established to SSL clients. In this case, you can establish at most two connections to IPsec servers.
              */
             public Builder maxConnections(Integer maxConnections) {
                 this.maxConnections = maxConnections;
@@ -720,7 +737,11 @@ public class ListIpsecServersResponseBody extends TeaModel {
             }
 
             /**
-             * MultiFactorAuthEnabled.
+             * Indicates whether two-factor authentication is enabled. Valid values:
+             * <p>
+             * 
+             * *   **true**: yes
+             * *   **false**: no
              */
             public Builder multiFactorAuthEnabled(Boolean multiFactorAuthEnabled) {
                 this.multiFactorAuthEnabled = multiFactorAuthEnabled;
@@ -728,7 +749,7 @@ public class ListIpsecServersResponseBody extends TeaModel {
             }
 
             /**
-             * OnlineClientCount.
+             * The number of clients that are connected to the IPsec server.
              */
             public Builder onlineClientCount(Integer onlineClientCount) {
                 this.onlineClientCount = onlineClientCount;
@@ -736,7 +757,7 @@ public class ListIpsecServersResponseBody extends TeaModel {
             }
 
             /**
-             * Psk.
+             * The pre-shared key.
              */
             public Builder psk(String psk) {
                 this.psk = psk;
@@ -744,7 +765,7 @@ public class ListIpsecServersResponseBody extends TeaModel {
             }
 
             /**
-             * PskEnabled.
+             * Indicates whether pre-shared key authentication is enabled. Pre-shared key authentication is enabled only when the value is set to **true**.
              */
             public Builder pskEnabled(Boolean pskEnabled) {
                 this.pskEnabled = pskEnabled;
@@ -752,7 +773,7 @@ public class ListIpsecServersResponseBody extends TeaModel {
             }
 
             /**
-             * RegionId.
+             * The ID of the region where the IPsec server is created.
              */
             public Builder regionId(String regionId) {
                 this.regionId = regionId;
@@ -760,7 +781,7 @@ public class ListIpsecServersResponseBody extends TeaModel {
             }
 
             /**
-             * VpnGatewayId.
+             * The ID of the VPN gateway.
              */
             public Builder vpnGatewayId(String vpnGatewayId) {
                 this.vpnGatewayId = vpnGatewayId;

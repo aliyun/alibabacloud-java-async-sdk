@@ -253,7 +253,7 @@ public class CreateBgpGroupRequest extends Request {
         } 
 
         /**
-         * AuthKey.
+         * The authentication key of the BGP group.
          */
         public Builder authKey(String authKey) {
             this.putQueryParameter("AuthKey", authKey);
@@ -262,7 +262,12 @@ public class CreateBgpGroupRequest extends Request {
         }
 
         /**
-         * ClientToken.
+         * The client token that is used to ensure the idempotence of the request.
+         * <p>
+         * 
+         * You can use the client to generate the value, but you must make sure that it is unique among all requests. ClientToken can contain only ASCII characters.
+         * 
+         * >  If you do not set this parameter, **ClientToken** is set to the value of **RequestId**. The value of **RequestId** for each API request may be different.
          */
         public Builder clientToken(String clientToken) {
             this.putQueryParameter("ClientToken", clientToken);
@@ -271,7 +276,10 @@ public class CreateBgpGroupRequest extends Request {
         }
 
         /**
-         * Description.
+         * The description of the BGP group.
+         * <p>
+         * 
+         * The description must be 2 to 256 characters in length. It must start with a letter and cannot start with `http://` or `https://`.
          */
         public Builder description(String description) {
             this.putQueryParameter("Description", description);
@@ -280,7 +288,11 @@ public class CreateBgpGroupRequest extends Request {
         }
 
         /**
-         * IpVersion.
+         * The IP version. Valid values:
+         * <p>
+         * 
+         * *   **IPv4**: This is the default value.
+         * *   **IPv6**: IPv6 is supported only if the VBR for which you want to create the BGP group has IPv6 enabled.
          */
         public Builder ipVersion(String ipVersion) {
             this.putQueryParameter("IpVersion", ipVersion);
@@ -289,7 +301,13 @@ public class CreateBgpGroupRequest extends Request {
         }
 
         /**
-         * IsFakeAsn.
+         * Specifies whether to use a fake ASN. Valid values:
+         * <p>
+         * 
+         * *   **false** (default): no
+         * *   **true**: yes
+         * 
+         * >  In most cases, a router that runs BGP belongs to only one AS. If you want to use a different ASN to communicate with the peer but you cannot modify the BGP configuration because it may cause service downtime, you can use a fake ASN. For example, you can use a fake ASN to communicate with the peer when you migrate or merge ASs. This prevents service interruptions.
          */
         public Builder isFakeAsn(Boolean isFakeAsn) {
             this.putQueryParameter("IsFakeAsn", isFakeAsn);
@@ -298,7 +316,14 @@ public class CreateBgpGroupRequest extends Request {
         }
 
         /**
-         * LocalAsn.
+         * The custom ASN on the Alibaba Cloud side. Valid values:
+         * <p>
+         * 
+         * *   **45104**
+         * *   **64512~65534**
+         * *   **4200000000~4294967294**
+         * 
+         * >  **65025** is reserved by Alibaba Cloud. By default, Alibaba Cloud uses **45104** as **LocalAsn**. If you use a custom **LocalAsn** in scenarios where multiple connections are used, BGP loops may occur. Proceed with caution.
          */
         public Builder localAsn(Long localAsn) {
             this.putQueryParameter("LocalAsn", localAsn);
@@ -307,7 +332,10 @@ public class CreateBgpGroupRequest extends Request {
         }
 
         /**
-         * Name.
+         * The name of the BGP group.
+         * <p>
+         * 
+         * The name must be 2 to 128 characters in length, and can contain letters, digits, periods (.), underscores (\_), and hyphens (-). The name must start with a letter.
          */
         public Builder name(String name) {
             this.putQueryParameter("Name", name);
@@ -334,7 +362,7 @@ public class CreateBgpGroupRequest extends Request {
         }
 
         /**
-         * PeerAsn.
+         * The ASN of the gateway device in the data center.
          */
         public Builder peerAsn(Long peerAsn) {
             this.putQueryParameter("PeerAsn", peerAsn);
@@ -343,7 +371,10 @@ public class CreateBgpGroupRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * The region ID of the VBR.
+         * <p>
+         * 
+         * You can call the [DescribeRegions](~~36063~~) operation to query the most recent region list.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -370,7 +401,7 @@ public class CreateBgpGroupRequest extends Request {
         }
 
         /**
-         * RouteQuota.
+         * The maximum number of routes supported by a BGP peer. Default value: **110**.
          */
         public Builder routeQuota(Integer routeQuota) {
             this.putQueryParameter("RouteQuota", routeQuota);
@@ -379,7 +410,7 @@ public class CreateBgpGroupRequest extends Request {
         }
 
         /**
-         * RouterId.
+         * The ID of the VBR.
          */
         public Builder routerId(String routerId) {
             this.putQueryParameter("RouterId", routerId);

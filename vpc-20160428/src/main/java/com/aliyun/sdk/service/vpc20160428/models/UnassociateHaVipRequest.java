@@ -183,7 +183,7 @@ public class UnassociateHaVipRequest extends Request {
         } 
 
         /**
-         * ClientToken.
+         * The ID of the HAVIP that you want to disassociate.
          */
         public Builder clientToken(String clientToken) {
             this.putQueryParameter("ClientToken", clientToken);
@@ -192,7 +192,7 @@ public class UnassociateHaVipRequest extends Request {
         }
 
         /**
-         * Force.
+         * The ID of the request.
          */
         public Builder force(String force) {
             this.putQueryParameter("Force", force);
@@ -201,7 +201,13 @@ public class UnassociateHaVipRequest extends Request {
         }
 
         /**
-         * HaVipId.
+         * Specifies whether to forcefully disassociate the HAVIP from the ECS instance or ENI. Valid values:
+         * <p>
+         * 
+         * *   **True**: yes
+         * *   **False** (default): no
+         * 
+         * >  If you set the value to **False**, you cannot disassociate the HAVIP from the primary instance.
          */
         public Builder haVipId(String haVipId) {
             this.putQueryParameter("HaVipId", haVipId);
@@ -210,7 +216,13 @@ public class UnassociateHaVipRequest extends Request {
         }
 
         /**
-         * InstanceId.
+         * The type of the instance from which you want to disassociate the HAVIP. Valid values:
+         * <p>
+         * 
+         * *   **EcsInstance**: an ECS instance
+         * *   **NetworkInterface**: an ENI
+         * 
+         * >  If you want to disassociate the HAVIP from an ENI, this parameter is required.
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -246,7 +258,7 @@ public class UnassociateHaVipRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * The ID of the ECS instance or ENI from which you want to disassociate the HAVIP.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);

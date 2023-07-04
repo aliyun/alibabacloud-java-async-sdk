@@ -169,7 +169,11 @@ public class ModifyNatGatewaySpecRequest extends Request {
         } 
 
         /**
-         * AutoPay.
+         * Specifies whether to automatically complete the payment.
+         * <p>
+         * 
+         * *   **true**: enables automatic payment. Payments are automatically completed.
+         * *   **false** (default): disables automatic payment. If you select this option, you must go to the Order Center to complete the payment after an order is generated.
          */
         public Builder autoPay(Boolean autoPay) {
             this.putQueryParameter("AutoPay", autoPay);
@@ -178,7 +182,10 @@ public class ModifyNatGatewaySpecRequest extends Request {
         }
 
         /**
-         * ClientToken.
+         * The client token that is used to ensure the idempotence of the request.
+         * <p>
+         * 
+         * You can use the client to generate the value, but you must make sure that it is unique among different requests. The token can contain only ASCII characters.
          */
         public Builder clientToken(String clientToken) {
             this.putQueryParameter("ClientToken", clientToken);
@@ -187,7 +194,7 @@ public class ModifyNatGatewaySpecRequest extends Request {
         }
 
         /**
-         * NatGatewayId.
+         * The ID of the Internet NAT gateway that you want to upgrade.
          */
         public Builder natGatewayId(String natGatewayId) {
             this.putQueryParameter("NatGatewayId", natGatewayId);
@@ -214,7 +221,10 @@ public class ModifyNatGatewaySpecRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * The ID of the region where the Internet NAT gateway is deployed.
+         * <p>
+         * 
+         * You can call the [DescribeRegions](~~36063~~) operation to query the most recent region list.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -241,7 +251,12 @@ public class ModifyNatGatewaySpecRequest extends Request {
         }
 
         /**
-         * Spec.
+         * The size of the Internet NAT gateway. Valid values:
+         * <p>
+         * 
+         * *   **Small**: small
+         * *   **Middle**: medium
+         * *   **Large**: large
          */
         public Builder spec(String spec) {
             this.putQueryParameter("Spec", spec);

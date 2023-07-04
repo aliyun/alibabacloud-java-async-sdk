@@ -140,7 +140,7 @@ public class DeleteIPv6TranslatorAclListRequest extends Request {
         } 
 
         /**
-         * AclId.
+         * The ID of the ACL that you want to delete.
          */
         public Builder aclId(String aclId) {
             this.putQueryParameter("AclId", aclId);
@@ -149,7 +149,10 @@ public class DeleteIPv6TranslatorAclListRequest extends Request {
         }
 
         /**
-         * ClientToken.
+         * The client token that is used to ensure the idempotence of the request.
+         * <p>
+         * 
+         * You can use the client to generate the token, but you must make sure that the token is unique among all requests. The token can contain only ASCII characters.
          */
         public Builder clientToken(String clientToken) {
             this.putQueryParameter("ClientToken", clientToken);
@@ -176,7 +179,7 @@ public class DeleteIPv6TranslatorAclListRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * The region of the IPv6 translation service instance.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);

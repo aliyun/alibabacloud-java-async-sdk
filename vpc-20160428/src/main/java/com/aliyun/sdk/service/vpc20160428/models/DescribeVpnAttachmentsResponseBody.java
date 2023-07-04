@@ -86,7 +86,7 @@ public class DescribeVpnAttachmentsResponseBody extends TeaModel {
         private java.util.List < VpnAttachments> vpnAttachments; 
 
         /**
-         * PageNumber.
+         * The page number of the returned page.
          */
         public Builder pageNumber(Integer pageNumber) {
             this.pageNumber = pageNumber;
@@ -94,7 +94,7 @@ public class DescribeVpnAttachmentsResponseBody extends TeaModel {
         }
 
         /**
-         * PageSize.
+         * The number of entries returned per page.
          */
         public Builder pageSize(Integer pageSize) {
             this.pageSize = pageSize;
@@ -102,7 +102,7 @@ public class DescribeVpnAttachmentsResponseBody extends TeaModel {
         }
 
         /**
-         * Id of the request
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -110,7 +110,7 @@ public class DescribeVpnAttachmentsResponseBody extends TeaModel {
         }
 
         /**
-         * TotalCount.
+         * The number of entries returned.
          */
         public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;
@@ -118,7 +118,7 @@ public class DescribeVpnAttachmentsResponseBody extends TeaModel {
         }
 
         /**
-         * VpnAttachments.
+         * The list of IPsec-VPN connections associated with the transit router.
          */
         public Builder vpnAttachments(java.util.List < VpnAttachments> vpnAttachments) {
             this.vpnAttachments = vpnAttachments;
@@ -230,7 +230,7 @@ public class DescribeVpnAttachmentsResponseBody extends TeaModel {
             private String transitRouterName; 
 
             /**
-             * AttachType.
+             * The type of resource that is associated with the IPsec-VPN connection. The value is set to **CEN**, which indicates that the IPsec-VPN connection is associated with a transit router.
              */
             public Builder attachType(String attachType) {
                 this.attachType = attachType;
@@ -238,7 +238,11 @@ public class DescribeVpnAttachmentsResponseBody extends TeaModel {
             }
 
             /**
-             * CrossAccountAuthorized.
+             * Indicates whether the IPsec-VPN connection is associated with a transit router that belongs to another Alibaba Cloud account. Valid values:
+             * <p>
+             * 
+             * *   **true**: yes
+             * *   **false**: no
              */
             public Builder crossAccountAuthorized(Boolean crossAccountAuthorized) {
                 this.crossAccountAuthorized = crossAccountAuthorized;
@@ -246,7 +250,7 @@ public class DescribeVpnAttachmentsResponseBody extends TeaModel {
             }
 
             /**
-             * Description.
+             * The description of the IPsec-VPN connection.
              */
             public Builder description(String description) {
                 this.description = description;
@@ -254,7 +258,7 @@ public class DescribeVpnAttachmentsResponseBody extends TeaModel {
             }
 
             /**
-             * InstanceId.
+             * The ID of the IPsec-VPN connection.
              */
             public Builder instanceId(String instanceId) {
                 this.instanceId = instanceId;
@@ -262,7 +266,7 @@ public class DescribeVpnAttachmentsResponseBody extends TeaModel {
             }
 
             /**
-             * Name.
+             * The name of the IPsec-VPN connection.
              */
             public Builder name(String name) {
                 this.name = name;
@@ -270,7 +274,7 @@ public class DescribeVpnAttachmentsResponseBody extends TeaModel {
             }
 
             /**
-             * TransitRouterId.
+             * The ID of the transit router with which the IPsec-VPN connection is associated.
              */
             public Builder transitRouterId(String transitRouterId) {
                 this.transitRouterId = transitRouterId;
@@ -278,7 +282,7 @@ public class DescribeVpnAttachmentsResponseBody extends TeaModel {
             }
 
             /**
-             * TransitRouterName.
+             * The name of the transit router.
              */
             public Builder transitRouterName(String transitRouterName) {
                 this.transitRouterName = transitRouterName;

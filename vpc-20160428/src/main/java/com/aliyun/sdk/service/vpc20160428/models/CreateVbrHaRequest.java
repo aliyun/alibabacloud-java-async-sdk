@@ -197,7 +197,10 @@ public class CreateVbrHaRequest extends Request {
         } 
 
         /**
-         * ClientToken.
+         * The client token that is used to ensure the idempotence of the request.
+         * <p>
+         * 
+         * The client token must be unique among different requests. It can contain only ASCII characters and cannot exceed 64 characters in length.
          */
         public Builder clientToken(String clientToken) {
             this.putQueryParameter("ClientToken", clientToken);
@@ -206,7 +209,10 @@ public class CreateVbrHaRequest extends Request {
         }
 
         /**
-         * Description.
+         * The description of the VBR failover group.
+         * <p>
+         * 
+         * The description must be 2 to 256 characters in length. It must start with a letter and cannot start with `http://`or `https://`.
          */
         public Builder description(String description) {
             this.putQueryParameter("Description", description);
@@ -215,7 +221,11 @@ public class CreateVbrHaRequest extends Request {
         }
 
         /**
-         * DryRun.
+         * Specifies whether to precheck the request. Valid values:
+         * <p>
+         * 
+         * *   **true**: prechecks the request without performing the operation. The system checks the request format, instance status, and whether the required parameters are specified. An error message is returned if the request fails the precheck. If the request passes the precheck, `DRYRUN.SUCCESS` is returned.
+         * *   **false**: prechecks the request. After the request passes the precheck, the operation is performed.
          */
         public Builder dryRun(Boolean dryRun) {
             this.putQueryParameter("DryRun", dryRun);
@@ -224,7 +234,7 @@ public class CreateVbrHaRequest extends Request {
         }
 
         /**
-         * Name.
+         * The name of the VBR failover group.
          */
         public Builder name(String name) {
             this.putQueryParameter("Name", name);
@@ -251,7 +261,7 @@ public class CreateVbrHaRequest extends Request {
         }
 
         /**
-         * PeerVbrId.
+         * The ID of the other VBR in the VBR failover group.
          */
         public Builder peerVbrId(String peerVbrId) {
             this.putQueryParameter("PeerVbrId", peerVbrId);
@@ -260,7 +270,7 @@ public class CreateVbrHaRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * The ID of the region where the VBR is deployed.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -287,7 +297,7 @@ public class CreateVbrHaRequest extends Request {
         }
 
         /**
-         * VbrId.
+         * The ID of the VBR.
          */
         public Builder vbrId(String vbrId) {
             this.putQueryParameter("VbrId", vbrId);

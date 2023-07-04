@@ -168,7 +168,7 @@ public class ModifyFlowLogAttributeRequest extends Request {
         } 
 
         /**
-         * AggregationInterval.
+         * The new sampling interval of the flow log. Unit: seconds. Valid values: **1**, **5**, and **10**.
          */
         public Builder aggregationInterval(Integer aggregationInterval) {
             this.putQueryParameter("AggregationInterval", aggregationInterval);
@@ -177,7 +177,10 @@ public class ModifyFlowLogAttributeRequest extends Request {
         }
 
         /**
-         * Description.
+         * The new description of the flow log.
+         * <p>
+         * 
+         * The description must be 1 to 256 characters in length, and cannot start with `http://` or `https://`.
          */
         public Builder description(String description) {
             this.putQueryParameter("Description", description);
@@ -186,7 +189,7 @@ public class ModifyFlowLogAttributeRequest extends Request {
         }
 
         /**
-         * FlowLogId.
+         * The ID of the flow log.
          */
         public Builder flowLogId(String flowLogId) {
             this.putQueryParameter("FlowLogId", flowLogId);
@@ -195,7 +198,10 @@ public class ModifyFlowLogAttributeRequest extends Request {
         }
 
         /**
-         * FlowLogName.
+         * The new name of the flow log.
+         * <p>
+         * 
+         * The name must be 1 to 128 characters in length, and cannot start with `http://` or `https://`.
          */
         public Builder flowLogName(String flowLogName) {
             this.putQueryParameter("FlowLogName", flowLogName);
@@ -222,7 +228,10 @@ public class ModifyFlowLogAttributeRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * The ID of the region where the flow log is created.
+         * <p>
+         * 
+         * You can call the [DescribeRegions](~~36063~~) operation to query the most recent region list.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);

@@ -86,7 +86,7 @@ public class DescribeVpnGatewaysResponseBody extends TeaModel {
         private VpnGateways vpnGateways; 
 
         /**
-         * PageNumber.
+         * The public IP address of the VPN gateway.
          */
         public Builder pageNumber(Integer pageNumber) {
             this.pageNumber = pageNumber;
@@ -94,7 +94,7 @@ public class DescribeVpnGatewaysResponseBody extends TeaModel {
         }
 
         /**
-         * PageSize.
+         * The number of SSL-VPN connections supported by the VPN gateway.
          */
         public Builder pageSize(Integer pageSize) {
             this.pageSize = pageSize;
@@ -102,7 +102,7 @@ public class DescribeVpnGatewaysResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The maximum bandwidth of the VPN gateway. **M** indicates Mbit/s.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -110,7 +110,10 @@ public class DescribeVpnGatewaysResponseBody extends TeaModel {
         }
 
         /**
-         * TotalCount.
+         * The timestamp when the VPN gateway was created. Unit: milliseconds.
+         * <p>
+         * 
+         * This value is a UNIX timestamp representing the number of milliseconds that have elapsed since the epoch time January 1, 1970, 00:00:00 UTC.
          */
         public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;
@@ -118,7 +121,11 @@ public class DescribeVpnGatewaysResponseBody extends TeaModel {
         }
 
         /**
-         * VpnGateways.
+         * Indicates whether BGP routes are automatically advertised to the VPC. Valid values:
+         * <p>
+         * 
+         * *   **true**: yes
+         * *   **false**: no
          */
         public Builder vpnGateways(VpnGateways vpnGateways) {
             this.vpnGateways = vpnGateways;
@@ -331,7 +338,7 @@ public class DescribeVpnGatewaysResponseBody extends TeaModel {
             private String value; 
 
             /**
-             * Key.
+             * The maximum number of concurrent SSL-VPN connections of the pending order.
              */
             public Builder key(String key) {
                 this.key = key;
@@ -339,7 +346,10 @@ public class DescribeVpnGatewaysResponseBody extends TeaModel {
             }
 
             /**
-             * Value.
+             * If the order type is **TEMP_UPGRADE** (temporary upgrade), this parameter specifies the time when the temporary upgrade expires. 
+             * <p>
+             * 
+             * If the order type is **RENEWCHANGE** (renewal with an upgrade or a downgrade) or **RENEW** (renewal), this parameter indicates the time when the renewal or renewal with an upgrade or a downgrade takes effect.
              */
             public Builder value(String value) {
                 this.value = value;
@@ -410,6 +420,12 @@ public class DescribeVpnGatewaysResponseBody extends TeaModel {
         @NameInMap("Description")
         private String description;
 
+        @NameInMap("DisasterRecoveryInternetIp")
+        private String disasterRecoveryInternetIp;
+
+        @NameInMap("DisasterRecoveryVSwitchId")
+        private String disasterRecoveryVSwitchId;
+
         @NameInMap("EnableBgp")
         private Boolean enableBgp;
 
@@ -440,6 +456,9 @@ public class DescribeVpnGatewaysResponseBody extends TeaModel {
         @NameInMap("SslVpn")
         private String sslVpn;
 
+        @NameInMap("SslVpnInternetIp")
+        private String sslVpnInternetIp;
+
         @NameInMap("Status")
         private String status;
 
@@ -467,6 +486,8 @@ public class DescribeVpnGatewaysResponseBody extends TeaModel {
             this.chargeType = builder.chargeType;
             this.createTime = builder.createTime;
             this.description = builder.description;
+            this.disasterRecoveryInternetIp = builder.disasterRecoveryInternetIp;
+            this.disasterRecoveryVSwitchId = builder.disasterRecoveryVSwitchId;
             this.enableBgp = builder.enableBgp;
             this.endTime = builder.endTime;
             this.internetIp = builder.internetIp;
@@ -477,6 +498,7 @@ public class DescribeVpnGatewaysResponseBody extends TeaModel {
             this.spec = builder.spec;
             this.sslMaxConnections = builder.sslMaxConnections;
             this.sslVpn = builder.sslVpn;
+            this.sslVpnInternetIp = builder.sslVpnInternetIp;
             this.status = builder.status;
             this.tag = builder.tag;
             this.tags = builder.tags;
@@ -527,6 +549,20 @@ public class DescribeVpnGatewaysResponseBody extends TeaModel {
          */
         public String getDescription() {
             return this.description;
+        }
+
+        /**
+         * @return disasterRecoveryInternetIp
+         */
+        public String getDisasterRecoveryInternetIp() {
+            return this.disasterRecoveryInternetIp;
+        }
+
+        /**
+         * @return disasterRecoveryVSwitchId
+         */
+        public String getDisasterRecoveryVSwitchId() {
+            return this.disasterRecoveryVSwitchId;
         }
 
         /**
@@ -600,6 +636,13 @@ public class DescribeVpnGatewaysResponseBody extends TeaModel {
         }
 
         /**
+         * @return sslVpnInternetIp
+         */
+        public String getSslVpnInternetIp() {
+            return this.sslVpnInternetIp;
+        }
+
+        /**
          * @return status
          */
         public String getStatus() {
@@ -654,6 +697,8 @@ public class DescribeVpnGatewaysResponseBody extends TeaModel {
             private String chargeType; 
             private Long createTime; 
             private String description; 
+            private String disasterRecoveryInternetIp; 
+            private String disasterRecoveryVSwitchId; 
             private Boolean enableBgp; 
             private Long endTime; 
             private String internetIp; 
@@ -664,6 +709,7 @@ public class DescribeVpnGatewaysResponseBody extends TeaModel {
             private String spec; 
             private Long sslMaxConnections; 
             private String sslVpn; 
+            private String sslVpnInternetIp; 
             private String status; 
             private String tag; 
             private Tags tags; 
@@ -673,7 +719,11 @@ public class DescribeVpnGatewaysResponseBody extends TeaModel {
             private String vpnType; 
 
             /**
-             * AutoPropagate.
+             * The BGP status of the VPN gateway.
+             * <p>
+             * 
+             * *   **true**: enabled
+             * *   **false**: disabled
              */
             public Builder autoPropagate(Boolean autoPropagate) {
                 this.autoPropagate = autoPropagate;
@@ -681,7 +731,11 @@ public class DescribeVpnGatewaysResponseBody extends TeaModel {
             }
 
             /**
-             * BusinessStatus.
+             * The status of the pending order. 
+             * <p>
+             * 
+             * - **1**: indicates that the order for renewal or the order for renewal with a specification change has not taken effect.
+             * - **2**: indicates that the order for a temporary upgrade has taken effect. After the temporary upgrade expires, the system restores the VPN gateway to its previous specifications. In this case, **ReservationIpsec**, **ReservationMaxConnections**, **ReservationSpec**, and **ReservationSsl** indicate the previous specification.
              */
             public Builder businessStatus(String businessStatus) {
                 this.businessStatus = businessStatus;
@@ -689,7 +743,11 @@ public class DescribeVpnGatewaysResponseBody extends TeaModel {
             }
 
             /**
-             * ChargeType.
+             * The payment status of the VPN gateway.
+             * <p>
+             * 
+             * *   **Normal:** The VPN gateway is running as expected.
+             * *   **FinancialLocked**: The VPN gateway is locked due to overdue payments.
              */
             public Builder chargeType(String chargeType) {
                 this.chargeType = chargeType;
@@ -697,7 +755,7 @@ public class DescribeVpnGatewaysResponseBody extends TeaModel {
             }
 
             /**
-             * CreateTime.
+             * The description of the VPN gateway.
              */
             public Builder createTime(Long createTime) {
                 this.createTime = createTime;
@@ -705,7 +763,7 @@ public class DescribeVpnGatewaysResponseBody extends TeaModel {
             }
 
             /**
-             * Description.
+             * The tag value.
              */
             public Builder description(String description) {
                 this.description = description;
@@ -713,7 +771,26 @@ public class DescribeVpnGatewaysResponseBody extends TeaModel {
             }
 
             /**
-             * EnableBgp.
+             * DisasterRecoveryInternetIp.
+             */
+            public Builder disasterRecoveryInternetIp(String disasterRecoveryInternetIp) {
+                this.disasterRecoveryInternetIp = disasterRecoveryInternetIp;
+                return this;
+            }
+
+            /**
+             * DisasterRecoveryVSwitchId.
+             */
+            public Builder disasterRecoveryVSwitchId(String disasterRecoveryVSwitchId) {
+                this.disasterRecoveryVSwitchId = disasterRecoveryVSwitchId;
+                return this;
+            }
+
+            /**
+             * The information about the pending orders. 
+             * <p>
+             * 
+             * >  This parameter is returned only when **IncludeReservationData** is set to **true**.
              */
             public Builder enableBgp(Boolean enableBgp) {
                 this.enableBgp = enableBgp;
@@ -721,7 +798,7 @@ public class DescribeVpnGatewaysResponseBody extends TeaModel {
             }
 
             /**
-             * EndTime.
+             * The list of tags added to the VPN gateway.
              */
             public Builder endTime(Long endTime) {
                 this.endTime = endTime;
@@ -729,7 +806,7 @@ public class DescribeVpnGatewaysResponseBody extends TeaModel {
             }
 
             /**
-             * InternetIp.
+             * The ID of the vSwitch to which the VPN gateway belongs.
              */
             public Builder internetIp(String internetIp) {
                 this.internetIp = internetIp;
@@ -737,7 +814,11 @@ public class DescribeVpnGatewaysResponseBody extends TeaModel {
             }
 
             /**
-             * IpsecVpn.
+             * The network type of the VPN gateway.
+             * <p>
+             * 
+             * *   **public**: public VPN gateway
+             * *   **private**: private VPN gateway
              */
             public Builder ipsecVpn(String ipsecVpn) {
                 this.ipsecVpn = ipsecVpn;
@@ -745,7 +826,11 @@ public class DescribeVpnGatewaysResponseBody extends TeaModel {
             }
 
             /**
-             * Name.
+             * The IPsec-VPN status of the order that has not taken effect. Valid values: 
+             * <p>
+             * 
+             * - **enable**: enabled
+             * - **disable**: disabled
              */
             public Builder name(String name) {
                 this.name = name;
@@ -753,7 +838,7 @@ public class DescribeVpnGatewaysResponseBody extends TeaModel {
             }
 
             /**
-             * NetworkType.
+             * The bandwidth specification of the order that has not taken effect. Unit: Mbit/s.
              */
             public Builder networkType(String networkType) {
                 this.networkType = networkType;
@@ -769,7 +854,10 @@ public class DescribeVpnGatewaysResponseBody extends TeaModel {
             }
 
             /**
-             * Spec.
+             * The timestamp when the VPN gateway expires. Unit: milliseconds.
+             * <p>
+             * 
+             * This value is a UNIX timestamp representing the number of milliseconds that have elapsed since the epoch time January 1, 1970, 00:00:00 UTC.
              */
             public Builder spec(String spec) {
                 this.spec = spec;
@@ -777,7 +865,11 @@ public class DescribeVpnGatewaysResponseBody extends TeaModel {
             }
 
             /**
-             * SslMaxConnections.
+             * Indicates whether IPsec-VPN is enabled for the VPN gateway.
+             * <p>
+             * 
+             * *   **enable**: enabled
+             * *   **disable**: disabled
              */
             public Builder sslMaxConnections(Long sslMaxConnections) {
                 this.sslMaxConnections = sslMaxConnections;
@@ -785,7 +877,12 @@ public class DescribeVpnGatewaysResponseBody extends TeaModel {
             }
 
             /**
-             * SslVpn.
+             * The type of the order that has not taken effect. Valid values: 
+             * <p>
+             * 
+             * - **RENEWCHANGE**: renewal with a specification change
+             * - **TEMP_UPGRADE**: temporary upgrade
+             * - **RENEW**: renewal
              */
             public Builder sslVpn(String sslVpn) {
                 this.sslVpn = sslVpn;
@@ -793,7 +890,15 @@ public class DescribeVpnGatewaysResponseBody extends TeaModel {
             }
 
             /**
-             * Status.
+             * SslVpnInternetIp.
+             */
+            public Builder sslVpnInternetIp(String sslVpnInternetIp) {
+                this.sslVpnInternetIp = sslVpnInternetIp;
+                return this;
+            }
+
+            /**
+             * The ID of the VPN gateway.
              */
             public Builder status(String status) {
                 this.status = status;
@@ -801,7 +906,7 @@ public class DescribeVpnGatewaysResponseBody extends TeaModel {
             }
 
             /**
-             * Tag.
+             * The name of the VPN gateway.
              */
             public Builder tag(String tag) {
                 this.tag = tag;
@@ -809,7 +914,11 @@ public class DescribeVpnGatewaysResponseBody extends TeaModel {
             }
 
             /**
-             * Tags.
+             * The SSL-VPN status of the order that has not taken effect. Valid values: 
+             * <p>
+             * 
+             * - **enable**: enabled
+             * - **disable**: disabled
              */
             public Builder tags(Tags tags) {
                 this.tags = tags;
@@ -817,7 +926,7 @@ public class DescribeVpnGatewaysResponseBody extends TeaModel {
             }
 
             /**
-             * VSwitchId.
+             * The tag key.
              */
             public Builder vSwitchId(String vSwitchId) {
                 this.vSwitchId = vSwitchId;
@@ -825,7 +934,32 @@ public class DescribeVpnGatewaysResponseBody extends TeaModel {
             }
 
             /**
-             * VpcId.
+             * The automatically generated tag of the VPN gateway.
+             * <p>
+             * 
+             * *   **VpnEnableBgp**: indicates whether the VPN gateway supports BGP. Valid values:
+             * 
+             *     *   **true**: yes
+             *     *   **false**: no
+             * 
+             * *   **VisuallySsl**: indicates whether the VPN gateway allows you to view information about connected SSL clients.
+             * 
+             *     *   **true**: yes
+             *     *   **false**: no
+             * 
+             * *   **PbrPriority**: indicates whether the VPN gateway allows you to configure priorities for policy-based routes.
+             * 
+             *     *   **true**: yes
+             *     *   **false**: no
+             * 
+             * *   **VpnNewImage**: indicates whether the VPN gateway is upgraded.
+             * 
+             *     *   **true**: yes
+             *     *   **false**: no
+             * 
+             * *   **description**: the description of the VPN gateway. This parameter is for internal system use only.
+             * 
+             * *   **VpnVersion**: the version of the VPN gateway.
              */
             public Builder vpcId(String vpcId) {
                 this.vpcId = vpcId;
@@ -833,7 +967,11 @@ public class DescribeVpnGatewaysResponseBody extends TeaModel {
             }
 
             /**
-             * VpnGatewayId.
+             * Indicates whether SSL-VPN is enabled for the VPN gateway.
+             * <p>
+             * 
+             * *   **enable**: enabled
+             * *   **disable**: disabled
              */
             public Builder vpnGatewayId(String vpnGatewayId) {
                 this.vpnGatewayId = vpnGatewayId;
@@ -841,7 +979,10 @@ public class DescribeVpnGatewaysResponseBody extends TeaModel {
             }
 
             /**
-             * VpnType.
+             * The billing method of the VPN gateway.
+             * <p>
+             * 
+             * The value is set to **POSTPAY**, which indicates the pay-as-you-go billing method.
              */
             public Builder vpnType(String vpnType) {
                 this.vpnType = vpnType;

@@ -168,7 +168,7 @@ public class ListGatewayRouteTableEntriesRequest extends Request {
         } 
 
         /**
-         * DestinationCidrBlock.
+         * The request ID.
          */
         public Builder destinationCidrBlock(String destinationCidrBlock) {
             this.putQueryParameter("DestinationCidrBlock", destinationCidrBlock);
@@ -177,7 +177,11 @@ public class ListGatewayRouteTableEntriesRequest extends Request {
         }
 
         /**
-         * GatewayRouteTableId.
+         * The token that determines the start point of the query. Valid values:
+         * <p>
+         * 
+         * *   If no value is returned for **NextToken**, no next queries are sent.
+         * *   If a value of **NextToken** is returned, the value is the token that is used for the subsequent query.
          */
         public Builder gatewayRouteTableId(String gatewayRouteTableId) {
             this.putQueryParameter("GatewayRouteTableId", gatewayRouteTableId);
@@ -186,7 +190,7 @@ public class ListGatewayRouteTableEntriesRequest extends Request {
         }
 
         /**
-         * MaxResults.
+         * The ID of the gateway route table that you want to query.
          */
         public Builder maxResults(Integer maxResults) {
             this.putQueryParameter("MaxResults", maxResults);
@@ -195,7 +199,7 @@ public class ListGatewayRouteTableEntriesRequest extends Request {
         }
 
         /**
-         * NextToken.
+         * The destination CIDR block of the route in the gateway route table.
          */
         public Builder nextToken(String nextToken) {
             this.putQueryParameter("NextToken", nextToken);
@@ -222,7 +226,11 @@ public class ListGatewayRouteTableEntriesRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * The token that determines the start point of the query. Valid values:
+         * <p>
+         * 
+         * *   If this is your first query and no next queries are to be sent, ignore this parameter.
+         * *   If a next query is to be sent, set the parameter to the value of NextToken that is returned from the last call.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);

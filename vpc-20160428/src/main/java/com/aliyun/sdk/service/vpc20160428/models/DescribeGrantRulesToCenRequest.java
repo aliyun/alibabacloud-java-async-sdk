@@ -198,7 +198,12 @@ public class DescribeGrantRulesToCenRequest extends Request {
         } 
 
         /**
-         * ClientToken.
+         * The client token that is used to ensure the idempotence of the request.
+         * <p>
+         * 
+         * You can use the client to generate the value, but you must make sure that it is unique among all requests. ClientToken can contain only ASCII characters.
+         * 
+         * >  If you do not specify this parameter, **ClientToken** is set to the value of **RequestId**. The value of **RequestId** for each API request may be different.
          */
         public Builder clientToken(String clientToken) {
             this.putQueryParameter("ClientToken", clientToken);
@@ -207,7 +212,7 @@ public class DescribeGrantRulesToCenRequest extends Request {
         }
 
         /**
-         * InstanceId.
+         * The ID of the network instance that you want to query.
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -216,7 +221,12 @@ public class DescribeGrantRulesToCenRequest extends Request {
         }
 
         /**
-         * InstanceType.
+         * The type of the network instance. Valid values:
+         * <p>
+         * 
+         * *   **VPC**
+         * *   **VBR**
+         * *   **CCN**
          */
         public Builder instanceType(String instanceType) {
             this.putQueryParameter("InstanceType", instanceType);
@@ -243,7 +253,7 @@ public class DescribeGrantRulesToCenRequest extends Request {
         }
 
         /**
-         * PageNumber.
+         * The number of the page to return. Default value: **1**.
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -252,7 +262,7 @@ public class DescribeGrantRulesToCenRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * The number of entries returned per page.
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -261,7 +271,7 @@ public class DescribeGrantRulesToCenRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * The region ID of the network instance that you want to query.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -270,7 +280,7 @@ public class DescribeGrantRulesToCenRequest extends Request {
         }
 
         /**
-         * ResourceGroupId.
+         * The ID of the resource group to which the network instance belongs.
          */
         public Builder resourceGroupId(String resourceGroupId) {
             this.putQueryParameter("ResourceGroupId", resourceGroupId);

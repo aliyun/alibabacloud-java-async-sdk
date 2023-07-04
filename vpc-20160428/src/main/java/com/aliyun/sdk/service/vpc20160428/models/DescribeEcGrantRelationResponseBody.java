@@ -98,7 +98,7 @@ public class DescribeEcGrantRelationResponseBody extends TeaModel {
         private Integer totalCount; 
 
         /**
-         * Count.
+         * The number of the returned page.
          */
         public Builder count(Integer count) {
             this.count = count;
@@ -106,7 +106,7 @@ public class DescribeEcGrantRelationResponseBody extends TeaModel {
         }
 
         /**
-         * EcGrantRelations.
+         * The ID of the Alibaba Cloud account to which the VBR belongs.
          */
         public Builder ecGrantRelations(java.util.List < EcGrantRelations> ecGrantRelations) {
             this.ecGrantRelations = ecGrantRelations;
@@ -114,7 +114,7 @@ public class DescribeEcGrantRelationResponseBody extends TeaModel {
         }
 
         /**
-         * Page.
+         * The number of entries returned on each page.
          */
         public Builder page(Integer page) {
             this.page = page;
@@ -130,7 +130,7 @@ public class DescribeEcGrantRelationResponseBody extends TeaModel {
         }
 
         /**
-         * Id of the request
+         * The query results.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -138,7 +138,7 @@ public class DescribeEcGrantRelationResponseBody extends TeaModel {
         }
 
         /**
-         * TotalCount.
+         * The total number of entries returned.
          */
         public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;
@@ -298,7 +298,7 @@ public class DescribeEcGrantRelationResponseBody extends TeaModel {
             private String vbrRegionNo; 
 
             /**
-             * AliUid.
+             * The ID of the region where the VPC is deployed.
              */
             public Builder aliUid(Long aliUid) {
                 this.aliUid = aliUid;
@@ -306,7 +306,11 @@ public class DescribeEcGrantRelationResponseBody extends TeaModel {
             }
 
             /**
-             * GmtCreate.
+             * The VBRs that have permissions on the VPC. Valid values:
+             * <p>
+             * 
+             * *   **All**: VBRs that reside in the specified region and belong to the specified Alibaba Cloud account all have permissions on the VPC.
+             * *   **Specify**: Only the specified VBR has permissions on the VPC.
              */
             public Builder gmtCreate(String gmtCreate) {
                 this.gmtCreate = gmtCreate;
@@ -314,7 +318,7 @@ public class DescribeEcGrantRelationResponseBody extends TeaModel {
             }
 
             /**
-             * GrantType.
+             * The total number of entries returned.
              */
             public Builder grantType(String grantType) {
                 this.grantType = grantType;
@@ -322,7 +326,7 @@ public class DescribeEcGrantRelationResponseBody extends TeaModel {
             }
 
             /**
-             * InstanceId.
+             * The ID of the Alibaba Cloud account to which the VPC belongs.
              */
             public Builder instanceId(String instanceId) {
                 this.instanceId = instanceId;
@@ -330,7 +334,7 @@ public class DescribeEcGrantRelationResponseBody extends TeaModel {
             }
 
             /**
-             * InstanceName.
+             * The ID of the vRouter.
              */
             public Builder instanceName(String instanceName) {
                 this.instanceName = instanceName;
@@ -338,7 +342,7 @@ public class DescribeEcGrantRelationResponseBody extends TeaModel {
             }
 
             /**
-             * InstanceRouterId.
+             * The ID of the region where the VBR is deployed.
              */
             public Builder instanceRouterId(String instanceRouterId) {
                 this.instanceRouterId = instanceRouterId;
@@ -346,7 +350,11 @@ public class DescribeEcGrantRelationResponseBody extends TeaModel {
             }
 
             /**
-             * RegionNo.
+             * The query result. Valid values:
+             * <p>
+             * 
+             * *   **Created**: The VBR has permissions on the VPC.
+             * *   **Deleted**: The VBR does not have permissions on the VPC.
              */
             public Builder regionNo(String regionNo) {
                 this.regionNo = regionNo;
@@ -354,7 +362,7 @@ public class DescribeEcGrantRelationResponseBody extends TeaModel {
             }
 
             /**
-             * Status.
+             * The name of the VPC.
              */
             public Builder status(String status) {
                 this.status = status;
@@ -362,7 +370,7 @@ public class DescribeEcGrantRelationResponseBody extends TeaModel {
             }
 
             /**
-             * VbrInstanceId.
+             * The ID of the VPC.
              */
             public Builder vbrInstanceId(String vbrInstanceId) {
                 this.vbrInstanceId = vbrInstanceId;
@@ -370,7 +378,7 @@ public class DescribeEcGrantRelationResponseBody extends TeaModel {
             }
 
             /**
-             * VbrOwnerUid.
+             * The ID of the VBR.
              */
             public Builder vbrOwnerUid(Long vbrOwnerUid) {
                 this.vbrOwnerUid = vbrOwnerUid;
@@ -378,7 +386,7 @@ public class DescribeEcGrantRelationResponseBody extends TeaModel {
             }
 
             /**
-             * VbrRegionNo.
+             * The time when permissions on the VPC were granted to the VBR.
              */
             public Builder vbrRegionNo(String vbrRegionNo) {
                 this.vbrRegionNo = vbrRegionNo;

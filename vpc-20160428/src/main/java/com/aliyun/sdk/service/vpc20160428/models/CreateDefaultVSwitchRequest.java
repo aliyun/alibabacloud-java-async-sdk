@@ -154,7 +154,12 @@ public class CreateDefaultVSwitchRequest extends Request {
         } 
 
         /**
-         * ClientToken.
+         * The client token that is used to ensure the idempotence of the request.
+         * <p>
+         * 
+         * You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters.
+         * 
+         * >  If you do not set this parameter, the system automatically uses the **request ID** as the **client token**. The **request ID** may be different for each request.
          */
         public Builder clientToken(String clientToken) {
             this.putQueryParameter("ClientToken", clientToken);
@@ -163,7 +168,7 @@ public class CreateDefaultVSwitchRequest extends Request {
         }
 
         /**
-         * Ipv6CidrBlock.
+         * The last eight bits of the IPv6 CIDR block of the vSwitch. Valid values: **0** to **255**.
          */
         public Builder ipv6CidrBlock(Integer ipv6CidrBlock) {
             this.putQueryParameter("Ipv6CidrBlock", ipv6CidrBlock);
@@ -190,7 +195,10 @@ public class CreateDefaultVSwitchRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * The region ID of the default vSwitch.
+         * <p>
+         * 
+         * You can call the [DescribeRegions](~~36063~~) operation to query the most recent region list.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -217,7 +225,10 @@ public class CreateDefaultVSwitchRequest extends Request {
         }
 
         /**
-         * ZoneId.
+         * The zone ID of the default vSwitch.
+         * <p>
+         * 
+         * You can call the [DescribeZones](~~36064~~) operation to query the most recent zone list.
          */
         public Builder zoneId(String zoneId) {
             this.putQueryParameter("ZoneId", zoneId);

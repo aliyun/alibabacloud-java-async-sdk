@@ -12,9 +12,6 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>CreateRouteTableResponseBody</p>
  */
 public class CreateRouteTableResponseBody extends TeaModel {
-    @NameInMap("AssociateType")
-    private String associateType;
-
     @NameInMap("RequestId")
     private String requestId;
 
@@ -22,7 +19,6 @@ public class CreateRouteTableResponseBody extends TeaModel {
     private String routeTableId;
 
     private CreateRouteTableResponseBody(Builder builder) {
-        this.associateType = builder.associateType;
         this.requestId = builder.requestId;
         this.routeTableId = builder.routeTableId;
     }
@@ -33,13 +29,6 @@ public class CreateRouteTableResponseBody extends TeaModel {
 
     public static CreateRouteTableResponseBody create() {
         return builder().build();
-    }
-
-    /**
-     * @return associateType
-     */
-    public String getAssociateType() {
-        return this.associateType;
     }
 
     /**
@@ -57,20 +46,11 @@ public class CreateRouteTableResponseBody extends TeaModel {
     }
 
     public static final class Builder {
-        private String associateType; 
         private String requestId; 
         private String routeTableId; 
 
         /**
-         * AssociateType.
-         */
-        public Builder associateType(String associateType) {
-            this.associateType = associateType;
-            return this;
-        }
-
-        /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -78,7 +58,7 @@ public class CreateRouteTableResponseBody extends TeaModel {
         }
 
         /**
-         * RouteTableId.
+         * The IDs of the route tables.
          */
         public Builder routeTableId(String routeTableId) {
             this.routeTableId = routeTableId;

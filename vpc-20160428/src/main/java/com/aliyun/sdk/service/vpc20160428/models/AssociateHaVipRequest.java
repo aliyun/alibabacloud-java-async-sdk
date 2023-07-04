@@ -169,7 +169,12 @@ public class AssociateHaVipRequest extends Request {
         } 
 
         /**
-         * ClientToken.
+         * The client token that is used to ensure the idempotence of the request.
+         * <p>
+         * 
+         * You can use the client to generate the value, but you must make sure that it is unique among different requests. The client token can contain only ASCII characters.
+         * 
+         * >  If you do not set this parameter, the system uses **RequestId** as **ClientToken**. The value of **RequestId** in each API request may be different.
          */
         public Builder clientToken(String clientToken) {
             this.putQueryParameter("ClientToken", clientToken);
@@ -178,7 +183,7 @@ public class AssociateHaVipRequest extends Request {
         }
 
         /**
-         * HaVipId.
+         * The ID of the HAVIP.
          */
         public Builder haVipId(String haVipId) {
             this.putQueryParameter("HaVipId", haVipId);
@@ -187,7 +192,7 @@ public class AssociateHaVipRequest extends Request {
         }
 
         /**
-         * InstanceId.
+         * The ID of the ECS instance to be associated with the HAVIP.
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -196,7 +201,11 @@ public class AssociateHaVipRequest extends Request {
         }
 
         /**
-         * InstanceType.
+         * The type of the instance to be associated with the HAVIP. Valid values:
+         * <p>
+         * 
+         * *   **EcsInstance**: an ECS instance
+         * *   **NetworkInterface**: an ENI. If you want to associate the HAVIP with an ENI, this parameter is required.
          */
         public Builder instanceType(String instanceType) {
             this.putQueryParameter("InstanceType", instanceType);
@@ -223,7 +232,10 @@ public class AssociateHaVipRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * The ID of the region to which the HAVIP belongs.
+         * <p>
+         * 
+         * You can call the [DescribeRegions](~~36063~~) operation to query the most recent region list.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);

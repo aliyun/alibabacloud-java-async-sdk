@@ -134,7 +134,10 @@ public class CreateVpnRouteEntryResponseBody extends TeaModel {
         private Integer weight; 
 
         /**
-         * CreateTime.
+         * The timestamp when the destination-based route was created. Unit: milliseconds.
+         * <p>
+         * 
+         * This value is a UNIX timestamp representing the number of milliseconds that have elapsed since the epoch time January 1, 1970, 00:00:00 UTC.
          */
         public Builder createTime(Long createTime) {
             this.createTime = createTime;
@@ -142,7 +145,7 @@ public class CreateVpnRouteEntryResponseBody extends TeaModel {
         }
 
         /**
-         * Description.
+         * The description of the destination-based route.
          */
         public Builder description(String description) {
             this.description = description;
@@ -150,7 +153,7 @@ public class CreateVpnRouteEntryResponseBody extends TeaModel {
         }
 
         /**
-         * NextHop.
+         * The next hop of the destination-based route.
          */
         public Builder nextHop(String nextHop) {
             this.nextHop = nextHop;
@@ -158,7 +161,7 @@ public class CreateVpnRouteEntryResponseBody extends TeaModel {
         }
 
         /**
-         * OverlayMode.
+         * The tunneling protocol. The value is set to **Ipsec**, which indicates the IPsec tunneling protocol.
          */
         public Builder overlayMode(String overlayMode) {
             this.overlayMode = overlayMode;
@@ -166,7 +169,7 @@ public class CreateVpnRouteEntryResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -174,7 +177,7 @@ public class CreateVpnRouteEntryResponseBody extends TeaModel {
         }
 
         /**
-         * RouteDest.
+         * The destination CIDR block of the destination-based route.
          */
         public Builder routeDest(String routeDest) {
             this.routeDest = routeDest;
@@ -182,7 +185,11 @@ public class CreateVpnRouteEntryResponseBody extends TeaModel {
         }
 
         /**
-         * State.
+         * The status of the destination-based route.
+         * <p>
+         * 
+         * *   **published**: advertised to the VPC route table.
+         * *   **normal**: not advertised to the VPC route table.
          */
         public Builder state(String state) {
             this.state = state;
@@ -190,7 +197,7 @@ public class CreateVpnRouteEntryResponseBody extends TeaModel {
         }
 
         /**
-         * VpnInstanceId.
+         * The ID of the VPN gateway.
          */
         public Builder vpnInstanceId(String vpnInstanceId) {
             this.vpnInstanceId = vpnInstanceId;
@@ -198,7 +205,11 @@ public class CreateVpnRouteEntryResponseBody extends TeaModel {
         }
 
         /**
-         * Weight.
+         * The weight of the destination-based route. Valid values:
+         * <p>
+         * 
+         * *   **100**: a high priority
+         * *   **0**: a low priority
          */
         public Builder weight(Integer weight) {
             this.weight = weight;

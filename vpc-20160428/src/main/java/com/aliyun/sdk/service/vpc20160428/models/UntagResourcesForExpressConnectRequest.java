@@ -169,7 +169,11 @@ public class UntagResourcesForExpressConnectRequest extends Request {
         } 
 
         /**
-         * All.
+         * Specifies whether to remove all tags from the specified resource. Valid values:
+         * <p>
+         * 
+         * *   **true**: removes all tags from the specified resource.
+         * *   **false**: does not remove all tags from the specified resource. This is the default value.
          */
         public Builder all(Boolean all) {
             this.putQueryParameter("All", all);
@@ -196,7 +200,10 @@ public class UntagResourcesForExpressConnectRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * The region ID of the resource.
+         * <p>
+         * 
+         * You can call the [DescribeRegions](~~36063~~) operation to query the most recent region list.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -232,7 +239,7 @@ public class UntagResourcesForExpressConnectRequest extends Request {
         }
 
         /**
-         * ResourceType.
+         * The type of the resource. Set the value to **PHYSICALCONNECTION**, which indicates the Express Connect circuit.
          */
         public Builder resourceType(String resourceType) {
             this.putQueryParameter("ResourceType", resourceType);

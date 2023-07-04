@@ -86,7 +86,7 @@ public class DescribeIpv6EgressOnlyRulesResponseBody extends TeaModel {
         private Integer totalCount; 
 
         /**
-         * Ipv6EgressOnlyRules.
+         * The details about the egress-only rules.
          */
         public Builder ipv6EgressOnlyRules(Ipv6EgressOnlyRules ipv6EgressOnlyRules) {
             this.ipv6EgressOnlyRules = ipv6EgressOnlyRules;
@@ -94,7 +94,7 @@ public class DescribeIpv6EgressOnlyRulesResponseBody extends TeaModel {
         }
 
         /**
-         * PageNumber.
+         * The number of the returned page. Default value: **1**.
          */
         public Builder pageNumber(Integer pageNumber) {
             this.pageNumber = pageNumber;
@@ -102,7 +102,7 @@ public class DescribeIpv6EgressOnlyRulesResponseBody extends TeaModel {
         }
 
         /**
-         * PageSize.
+         * The number of entries returned per page. Maximum value: **50**. Default value: **10**.
          */
         public Builder pageSize(Integer pageSize) {
             this.pageSize = pageSize;
@@ -110,7 +110,7 @@ public class DescribeIpv6EgressOnlyRulesResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -118,7 +118,7 @@ public class DescribeIpv6EgressOnlyRulesResponseBody extends TeaModel {
         }
 
         /**
-         * TotalCount.
+         * The total number of entries returned.
          */
         public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;
@@ -218,7 +218,7 @@ public class DescribeIpv6EgressOnlyRulesResponseBody extends TeaModel {
             private String status; 
 
             /**
-             * Description.
+             * The description of the egress-only rule.
              */
             public Builder description(String description) {
                 this.description = description;
@@ -226,7 +226,7 @@ public class DescribeIpv6EgressOnlyRulesResponseBody extends TeaModel {
             }
 
             /**
-             * InstanceId.
+             * The ID of the instance to which the egress-only rule applies.
              */
             public Builder instanceId(String instanceId) {
                 this.instanceId = instanceId;
@@ -234,7 +234,7 @@ public class DescribeIpv6EgressOnlyRulesResponseBody extends TeaModel {
             }
 
             /**
-             * InstanceType.
+             * The type of the instance to which the egress-only rule applies.
              */
             public Builder instanceType(String instanceType) {
                 this.instanceType = instanceType;
@@ -242,7 +242,7 @@ public class DescribeIpv6EgressOnlyRulesResponseBody extends TeaModel {
             }
 
             /**
-             * Ipv6EgressOnlyRuleId.
+             * The ID of the egress-only rule.
              */
             public Builder ipv6EgressOnlyRuleId(String ipv6EgressOnlyRuleId) {
                 this.ipv6EgressOnlyRuleId = ipv6EgressOnlyRuleId;
@@ -250,7 +250,7 @@ public class DescribeIpv6EgressOnlyRulesResponseBody extends TeaModel {
             }
 
             /**
-             * Name.
+             * The name of the egress-only rule.
              */
             public Builder name(String name) {
                 this.name = name;
@@ -258,7 +258,7 @@ public class DescribeIpv6EgressOnlyRulesResponseBody extends TeaModel {
             }
 
             /**
-             * Status.
+             * The status of the egress-only rule.
              */
             public Builder status(String status) {
                 this.status = status;

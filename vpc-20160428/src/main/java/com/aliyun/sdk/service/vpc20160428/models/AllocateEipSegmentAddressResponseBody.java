@@ -15,15 +15,11 @@ public class AllocateEipSegmentAddressResponseBody extends TeaModel {
     @NameInMap("EipSegmentInstanceId")
     private String eipSegmentInstanceId;
 
-    @NameInMap("OrderId")
-    private Long orderId;
-
     @NameInMap("RequestId")
     private String requestId;
 
     private AllocateEipSegmentAddressResponseBody(Builder builder) {
         this.eipSegmentInstanceId = builder.eipSegmentInstanceId;
-        this.orderId = builder.orderId;
         this.requestId = builder.requestId;
     }
 
@@ -43,13 +39,6 @@ public class AllocateEipSegmentAddressResponseBody extends TeaModel {
     }
 
     /**
-     * @return orderId
-     */
-    public Long getOrderId() {
-        return this.orderId;
-    }
-
-    /**
      * @return requestId
      */
     public String getRequestId() {
@@ -58,7 +47,6 @@ public class AllocateEipSegmentAddressResponseBody extends TeaModel {
 
     public static final class Builder {
         private String eipSegmentInstanceId; 
-        private Long orderId; 
         private String requestId; 
 
         /**
@@ -66,14 +54,6 @@ public class AllocateEipSegmentAddressResponseBody extends TeaModel {
          */
         public Builder eipSegmentInstanceId(String eipSegmentInstanceId) {
             this.eipSegmentInstanceId = eipSegmentInstanceId;
-            return this;
-        }
-
-        /**
-         * OrderId.
-         */
-        public Builder orderId(Long orderId) {
-            this.orderId = orderId;
             return this;
         }
 

@@ -169,7 +169,7 @@ public class AddCommonBandwidthPackageIpRequest extends Request {
         } 
 
         /**
-         * BandwidthPackageId.
+         * The ID of the EIP bandwidth plan.
          */
         public Builder bandwidthPackageId(String bandwidthPackageId) {
             this.putQueryParameter("BandwidthPackageId", bandwidthPackageId);
@@ -178,7 +178,12 @@ public class AddCommonBandwidthPackageIpRequest extends Request {
         }
 
         /**
-         * ClientToken.
+         * The client token that is used to ensure the idempotence of the request.
+         * <p>
+         * 
+         * You can use the client to generate the value, but you must make sure that it is unique among different requests. The client token can contain only ASCII characters.
+         * 
+         * >  If you do not set this parameter, the system uses **RequestId** as **ClientToken**. The value of **RequestId** for each API request may be different.
          */
         public Builder clientToken(String clientToken) {
             this.putQueryParameter("ClientToken", clientToken);
@@ -187,7 +192,10 @@ public class AddCommonBandwidthPackageIpRequest extends Request {
         }
 
         /**
-         * IpInstanceId.
+         * The ID of the EIP.
+         * <p>
+         * 
+         * You can call the [DescribeEipAddresses](~~36018~~) operation to query the most recent region list.
          */
         public Builder ipInstanceId(String ipInstanceId) {
             this.putQueryParameter("IpInstanceId", ipInstanceId);
@@ -196,7 +204,7 @@ public class AddCommonBandwidthPackageIpRequest extends Request {
         }
 
         /**
-         * IpType.
+         * The type of IP address. Set the value to **EIP** to associate an EIP with the EIP bandwidth plan.
          */
         public Builder ipType(String ipType) {
             this.putQueryParameter("IpType", ipType);
@@ -223,7 +231,10 @@ public class AddCommonBandwidthPackageIpRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * The region ID of the EIP bandwidth plan.
+         * <p>
+         * 
+         * You can call the [DescribeRegions](~~36063~~) operation to query the most recent region list.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);

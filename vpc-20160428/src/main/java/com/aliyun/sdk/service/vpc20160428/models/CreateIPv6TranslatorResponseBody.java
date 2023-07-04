@@ -86,7 +86,7 @@ public class CreateIPv6TranslatorResponseBody extends TeaModel {
         private String spec; 
 
         /**
-         * Ipv6TranslatorId.
+         * The ID of the IPv6 Translation Service instance.
          */
         public Builder ipv6TranslatorId(String ipv6TranslatorId) {
             this.ipv6TranslatorId = ipv6TranslatorId;
@@ -94,7 +94,7 @@ public class CreateIPv6TranslatorResponseBody extends TeaModel {
         }
 
         /**
-         * Name.
+         * The name of the IPv6 Translation Service instance.
          */
         public Builder name(String name) {
             this.name = name;
@@ -102,7 +102,7 @@ public class CreateIPv6TranslatorResponseBody extends TeaModel {
         }
 
         /**
-         * OrderId.
+         * The order ID.
          */
         public Builder orderId(Long orderId) {
             this.orderId = orderId;
@@ -110,7 +110,7 @@ public class CreateIPv6TranslatorResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -118,7 +118,7 @@ public class CreateIPv6TranslatorResponseBody extends TeaModel {
         }
 
         /**
-         * Spec.
+         * The specification of the IPv6 Translation Service instance.
          */
         public Builder spec(String spec) {
             this.spec = spec;

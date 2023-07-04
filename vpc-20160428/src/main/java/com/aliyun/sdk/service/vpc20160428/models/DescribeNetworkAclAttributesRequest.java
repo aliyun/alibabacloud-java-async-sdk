@@ -126,7 +126,11 @@ public class DescribeNetworkAclAttributesRequest extends Request {
         } 
 
         /**
-         * ClientToken.
+         * The action to be performed on network traffic that matches the rule. Valid values:
+         * <p>
+         * 
+         * *   **accept**: allows network traffic.
+         * *   **drop**: blocks network traffic.
          */
         public Builder clientToken(String clientToken) {
             this.putQueryParameter("ClientToken", clientToken);
@@ -135,7 +139,7 @@ public class DescribeNetworkAclAttributesRequest extends Request {
         }
 
         /**
-         * NetworkAclId.
+         * The ID of the inbound rule.
          */
         public Builder networkAclId(String networkAclId) {
             this.putQueryParameter("NetworkAclId", networkAclId);
@@ -153,7 +157,7 @@ public class DescribeNetworkAclAttributesRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * The name of the inbound rule.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);

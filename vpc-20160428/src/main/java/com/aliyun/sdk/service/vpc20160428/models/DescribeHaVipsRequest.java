@@ -209,7 +209,7 @@ public class DescribeHaVipsRequest extends Request {
         }
 
         /**
-         * PageNumber.
+         * The number of the page to return. Default value: **1**.
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -218,7 +218,7 @@ public class DescribeHaVipsRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * The number of entries to return on each page. Maximum value: **50**. Default value: **10**.
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -227,7 +227,10 @@ public class DescribeHaVipsRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * The ID of the region to which the HAVIP belongs.
+         * <p>
+         * 
+         * You can call the [DescribeRegions](~~36063~~) operation to query the most recent region list.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -236,7 +239,7 @@ public class DescribeHaVipsRequest extends Request {
         }
 
         /**
-         * ResourceGroupId.
+         * The ID of the resource group to which the HAVIP belongs.
          */
         public Builder resourceGroupId(String resourceGroupId) {
             this.putQueryParameter("ResourceGroupId", resourceGroupId);
@@ -317,7 +320,20 @@ public class DescribeHaVipsRequest extends Request {
             private java.util.List < String > value; 
 
             /**
-             * Key.
+             * The filter keys. You can specify at most five filter keys. Valid values of **N**: **1 to 5**.
+             * <p>
+             * 
+             * The following filter keys are supported:
+             * 
+             * *   **VpcId**: virtual private cloud (VPC) ID
+             * *   **VSwitchId**: vSwitch ID
+             * *   **Status**: HAVIP status
+             * *   **HaVipId**: HAVIP ID
+             * *   **HaVipAddress**: HAVIP IP address
+             * 
+             * You can specify multiple values for each filter key. The logical operator among multiple values is OR. If one value is matched, the filter key is matched.
+             * 
+             * The logical operator among multiple filter keys is AND. HAVIPs can be queried only if all filter keys are matched.
              */
             public Builder key(String key) {
                 this.key = key;
@@ -378,7 +394,10 @@ public class DescribeHaVipsRequest extends Request {
             private String value; 
 
             /**
-             * Key.
+             * The tag key. You can specify at most 20 tag keys. It cannot be an empty string.
+             * <p>
+             * 
+             * The key cannot exceed 64 characters in length, and can contain digits, periods (.), underscores (\_), and hyphens (-). The key must start with a letter but cannot start with `aliyun` or `acs:`. The key cannot contain `http://` or `https://`.
              */
             public Builder key(String key) {
                 this.key = key;
@@ -386,7 +405,10 @@ public class DescribeHaVipsRequest extends Request {
             }
 
             /**
-             * Value.
+             * The tag value. You can specify at most 20 tag values. It can be an empty string.
+             * <p>
+             * 
+             * The tag value cannot exceed 128 characters in length, and can contain digits, periods (.), underscores (\_), and hyphens (-). It must start with a letter but cannot start with `aliyun` or `acs:`. It cannot contain `http://` or `https://`.
              */
             public Builder value(String value) {
                 this.value = value;

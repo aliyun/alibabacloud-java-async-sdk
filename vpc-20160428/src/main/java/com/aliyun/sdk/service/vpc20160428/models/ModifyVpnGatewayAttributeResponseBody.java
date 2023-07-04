@@ -24,6 +24,12 @@ public class ModifyVpnGatewayAttributeResponseBody extends TeaModel {
     @NameInMap("Description")
     private String description;
 
+    @NameInMap("DisasterRecoveryInternetIp")
+    private String disasterRecoveryInternetIp;
+
+    @NameInMap("DisasterRecoveryVSwitchId")
+    private String disasterRecoveryVSwitchId;
+
     @NameInMap("EnableBgp")
     private Boolean enableBgp;
 
@@ -45,6 +51,9 @@ public class ModifyVpnGatewayAttributeResponseBody extends TeaModel {
     @NameInMap("Spec")
     private String spec;
 
+    @NameInMap("SslVpnInternetIp")
+    private String sslVpnInternetIp;
+
     @NameInMap("Status")
     private String status;
 
@@ -62,6 +71,8 @@ public class ModifyVpnGatewayAttributeResponseBody extends TeaModel {
         this.businessStatus = builder.businessStatus;
         this.createTime = builder.createTime;
         this.description = builder.description;
+        this.disasterRecoveryInternetIp = builder.disasterRecoveryInternetIp;
+        this.disasterRecoveryVSwitchId = builder.disasterRecoveryVSwitchId;
         this.enableBgp = builder.enableBgp;
         this.endTime = builder.endTime;
         this.internetIp = builder.internetIp;
@@ -69,6 +80,7 @@ public class ModifyVpnGatewayAttributeResponseBody extends TeaModel {
         this.name = builder.name;
         this.requestId = builder.requestId;
         this.spec = builder.spec;
+        this.sslVpnInternetIp = builder.sslVpnInternetIp;
         this.status = builder.status;
         this.vSwitchId = builder.vSwitchId;
         this.vpcId = builder.vpcId;
@@ -109,6 +121,20 @@ public class ModifyVpnGatewayAttributeResponseBody extends TeaModel {
      */
     public String getDescription() {
         return this.description;
+    }
+
+    /**
+     * @return disasterRecoveryInternetIp
+     */
+    public String getDisasterRecoveryInternetIp() {
+        return this.disasterRecoveryInternetIp;
+    }
+
+    /**
+     * @return disasterRecoveryVSwitchId
+     */
+    public String getDisasterRecoveryVSwitchId() {
+        return this.disasterRecoveryVSwitchId;
     }
 
     /**
@@ -161,6 +187,13 @@ public class ModifyVpnGatewayAttributeResponseBody extends TeaModel {
     }
 
     /**
+     * @return sslVpnInternetIp
+     */
+    public String getSslVpnInternetIp() {
+        return this.sslVpnInternetIp;
+    }
+
+    /**
      * @return status
      */
     public String getStatus() {
@@ -193,6 +226,8 @@ public class ModifyVpnGatewayAttributeResponseBody extends TeaModel {
         private String businessStatus; 
         private Long createTime; 
         private String description; 
+        private String disasterRecoveryInternetIp; 
+        private String disasterRecoveryVSwitchId; 
         private Boolean enableBgp; 
         private Long endTime; 
         private String internetIp; 
@@ -200,13 +235,18 @@ public class ModifyVpnGatewayAttributeResponseBody extends TeaModel {
         private String name; 
         private String requestId; 
         private String spec; 
+        private String sslVpnInternetIp; 
         private String status; 
         private String vSwitchId; 
         private String vpcId; 
         private String vpnGatewayId; 
 
         /**
-         * AutoPropagate.
+         * Indicates whether BGP routes are automatically advertised to the VPC. Valid values:
+         * <p>
+         * 
+         * *   **true:** yes.
+         * *   **false:** no.
          */
         public Builder autoPropagate(Boolean autoPropagate) {
             this.autoPropagate = autoPropagate;
@@ -214,7 +254,11 @@ public class ModifyVpnGatewayAttributeResponseBody extends TeaModel {
         }
 
         /**
-         * BusinessStatus.
+         * The payment status of the VPN gateway. Valid values:
+         * <p>
+         * 
+         * *   **Normal:** The VPN gateway is running as expected.
+         * *   **FinancialLocked:** The VPN gateway is locked due to overdue payments.
          */
         public Builder businessStatus(String businessStatus) {
             this.businessStatus = businessStatus;
@@ -222,7 +266,10 @@ public class ModifyVpnGatewayAttributeResponseBody extends TeaModel {
         }
 
         /**
-         * CreateTime.
+         * The timestamp generated when the VPN gateway was created. Unit: milliseconds.
+         * <p>
+         * 
+         * This value is a UNIX timestamp representing the number of milliseconds that have elapsed since the epoch time January 1, 1970, 00:00:00 UTC.
          */
         public Builder createTime(Long createTime) {
             this.createTime = createTime;
@@ -230,7 +277,7 @@ public class ModifyVpnGatewayAttributeResponseBody extends TeaModel {
         }
 
         /**
-         * Description.
+         * The description of the VPN gateway.
          */
         public Builder description(String description) {
             this.description = description;
@@ -238,7 +285,27 @@ public class ModifyVpnGatewayAttributeResponseBody extends TeaModel {
         }
 
         /**
-         * EnableBgp.
+         * DisasterRecoveryInternetIp.
+         */
+        public Builder disasterRecoveryInternetIp(String disasterRecoveryInternetIp) {
+            this.disasterRecoveryInternetIp = disasterRecoveryInternetIp;
+            return this;
+        }
+
+        /**
+         * DisasterRecoveryVSwitchId.
+         */
+        public Builder disasterRecoveryVSwitchId(String disasterRecoveryVSwitchId) {
+            this.disasterRecoveryVSwitchId = disasterRecoveryVSwitchId;
+            return this;
+        }
+
+        /**
+         * The BGP status of the VPN gateway. Valid values:
+         * <p>
+         * 
+         * *   **true:** enabled.
+         * *   **false:** disabled.
          */
         public Builder enableBgp(Boolean enableBgp) {
             this.enableBgp = enableBgp;
@@ -246,7 +313,10 @@ public class ModifyVpnGatewayAttributeResponseBody extends TeaModel {
         }
 
         /**
-         * EndTime.
+         * The timestamp generated when the VPN gateway expires. Unit: milliseconds.
+         * <p>
+         * 
+         * This value is a UNIX timestamp representing the number of milliseconds that have elapsed since the epoch time January 1, 1970, 00:00:00 UTC.
          */
         public Builder endTime(Long endTime) {
             this.endTime = endTime;
@@ -254,7 +324,7 @@ public class ModifyVpnGatewayAttributeResponseBody extends TeaModel {
         }
 
         /**
-         * InternetIp.
+         * The public IP address of the VPN gateway.
          */
         public Builder internetIp(String internetIp) {
             this.internetIp = internetIp;
@@ -262,7 +332,7 @@ public class ModifyVpnGatewayAttributeResponseBody extends TeaModel {
         }
 
         /**
-         * IntranetIp.
+         * The private IP address of the VPN gateway.
          */
         public Builder intranetIp(String intranetIp) {
             this.intranetIp = intranetIp;
@@ -270,7 +340,7 @@ public class ModifyVpnGatewayAttributeResponseBody extends TeaModel {
         }
 
         /**
-         * Name.
+         * The name of the VPN gateway.
          */
         public Builder name(String name) {
             this.name = name;
@@ -278,7 +348,7 @@ public class ModifyVpnGatewayAttributeResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -286,7 +356,7 @@ public class ModifyVpnGatewayAttributeResponseBody extends TeaModel {
         }
 
         /**
-         * Spec.
+         * The maximum bandwidth of the VPN gateway. Unit: Mbit/s.
          */
         public Builder spec(String spec) {
             this.spec = spec;
@@ -294,7 +364,22 @@ public class ModifyVpnGatewayAttributeResponseBody extends TeaModel {
         }
 
         /**
-         * Status.
+         * SslVpnInternetIp.
+         */
+        public Builder sslVpnInternetIp(String sslVpnInternetIp) {
+            this.sslVpnInternetIp = sslVpnInternetIp;
+            return this;
+        }
+
+        /**
+         * The status of the VPN gateway. Valid values:
+         * <p>
+         * 
+         * *   **init:** The VPN gateway is being initialized.
+         * *   **provisioning:** The VPN gateway is being prepared.
+         * *   **active:** The VPN gateway is ready.
+         * *   **updating:** The VPN gateway is being updated.
+         * *   **deleting:** The VPN gateway is being deleted.
          */
         public Builder status(String status) {
             this.status = status;
@@ -302,7 +387,7 @@ public class ModifyVpnGatewayAttributeResponseBody extends TeaModel {
         }
 
         /**
-         * VSwitchId.
+         * The ID of the vSwitch to which the VPN gateway belongs.
          */
         public Builder vSwitchId(String vSwitchId) {
             this.vSwitchId = vSwitchId;
@@ -310,7 +395,7 @@ public class ModifyVpnGatewayAttributeResponseBody extends TeaModel {
         }
 
         /**
-         * VpcId.
+         * The ID of the VPC to which the VPN gateway belongs.
          */
         public Builder vpcId(String vpcId) {
             this.vpcId = vpcId;
@@ -318,7 +403,7 @@ public class ModifyVpnGatewayAttributeResponseBody extends TeaModel {
         }
 
         /**
-         * VpnGatewayId.
+         * The ID of the VPN gateway.
          */
         public Builder vpnGatewayId(String vpnGatewayId) {
             this.vpnGatewayId = vpnGatewayId;

@@ -196,7 +196,7 @@ public class ModifyExpressCloudConnectionAttributeRequest extends Request {
         } 
 
         /**
-         * BgpAs.
+         * The BGP autonomous system number (ASN) to be configured for the Smart Access Gateway (SAG) device.
          */
         public Builder bgpAs(String bgpAs) {
             this.putQueryParameter("BgpAs", bgpAs);
@@ -205,7 +205,7 @@ public class ModifyExpressCloudConnectionAttributeRequest extends Request {
         }
 
         /**
-         * CeIp.
+         * The peer IP address when the SAG device is connected to the cloud.
          */
         public Builder ceIp(String ceIp) {
             this.putQueryParameter("CeIp", ceIp);
@@ -214,7 +214,7 @@ public class ModifyExpressCloudConnectionAttributeRequest extends Request {
         }
 
         /**
-         * Description.
+         * Descriptions of ECC.
          */
         public Builder description(String description) {
             this.putQueryParameter("Description", description);
@@ -223,7 +223,7 @@ public class ModifyExpressCloudConnectionAttributeRequest extends Request {
         }
 
         /**
-         * EccId.
+         * The ID of the ECC instance.
          */
         public Builder eccId(String eccId) {
             this.putQueryParameter("EccId", eccId);
@@ -232,7 +232,7 @@ public class ModifyExpressCloudConnectionAttributeRequest extends Request {
         }
 
         /**
-         * Name.
+         * The name of the ECC instance.
          */
         public Builder name(String name) {
             this.putQueryParameter("Name", name);
@@ -259,7 +259,7 @@ public class ModifyExpressCloudConnectionAttributeRequest extends Request {
         }
 
         /**
-         * PeIp.
+         * The on-premises IP address when the SAG device is connected to the cloud.
          */
         public Builder peIp(String peIp) {
             this.putQueryParameter("PeIp", peIp);
@@ -268,7 +268,7 @@ public class ModifyExpressCloudConnectionAttributeRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * The region ID of the ECC instance.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);

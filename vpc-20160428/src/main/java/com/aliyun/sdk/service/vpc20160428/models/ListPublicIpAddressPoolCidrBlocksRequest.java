@@ -182,7 +182,7 @@ public class ListPublicIpAddressPoolCidrBlocksRequest extends Request {
         } 
 
         /**
-         * CidrBlock.
+         * The CIDR blocks.
          */
         public Builder cidrBlock(String cidrBlock) {
             this.putQueryParameter("CidrBlock", cidrBlock);
@@ -191,7 +191,11 @@ public class ListPublicIpAddressPoolCidrBlocksRequest extends Request {
         }
 
         /**
-         * DryRun.
+         * Specifies whether to perform a dry run. Valid values:
+         * <p>
+         * 
+         * *   **true**: performs a dry run. The system checks the required parameters, request syntax, and limits. If the request fails the dry run, an error message is returned. If the request passes the dry run, the `DryRunOperation` error code is returned.
+         * *   **false** (default): performs a dry run and sends the request. If the request passes the dry run, a 2xx HTTP status code is returned and the operation is performed.
          */
         public Builder dryRun(Boolean dryRun) {
             this.putQueryParameter("DryRun", dryRun);
@@ -200,7 +204,7 @@ public class ListPublicIpAddressPoolCidrBlocksRequest extends Request {
         }
 
         /**
-         * MaxResults.
+         * The maximum number of entries to return. Valid values: **10** to **100**. Default value: **10**.
          */
         public Builder maxResults(Integer maxResults) {
             this.putQueryParameter("MaxResults", maxResults);
@@ -209,7 +213,11 @@ public class ListPublicIpAddressPoolCidrBlocksRequest extends Request {
         }
 
         /**
-         * NextToken.
+         * The token that is used for the next query. Valid values:
+         * <p>
+         * 
+         * *   If this is your first query and no next queries are to be sent, ignore this parameter.
+         * *   If a subsequent query is to be sent, set the parameter to the value of NextToken that is returned from the last call.
          */
         public Builder nextToken(String nextToken) {
             this.putQueryParameter("NextToken", nextToken);
@@ -236,7 +244,7 @@ public class ListPublicIpAddressPoolCidrBlocksRequest extends Request {
         }
 
         /**
-         * PublicIpAddressPoolId.
+         * The ID of the IP address pool.
          */
         public Builder publicIpAddressPoolId(String publicIpAddressPoolId) {
             this.putQueryParameter("PublicIpAddressPoolId", publicIpAddressPoolId);
@@ -245,7 +253,7 @@ public class ListPublicIpAddressPoolCidrBlocksRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * The region ID of the CIDR blocks.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);

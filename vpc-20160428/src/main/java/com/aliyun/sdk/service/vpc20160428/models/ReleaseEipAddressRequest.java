@@ -125,7 +125,7 @@ public class ReleaseEipAddressRequest extends Request {
         } 
 
         /**
-         * AllocationId.
+         * The ID of the EIP that you want to release.
          */
         public Builder allocationId(String allocationId) {
             this.putQueryParameter("AllocationId", allocationId);
@@ -152,7 +152,7 @@ public class ReleaseEipAddressRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * The ID of the region to which the EIP belongs. You can call the [DescribeRegions](~~36063~~) operation to query the most recent region list.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);

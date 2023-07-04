@@ -62,7 +62,7 @@ public class CreateGlobalAccelerationInstanceResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * GlobalAccelerationInstanceId.
+         * The ID of the GA instance.
          */
         public Builder globalAccelerationInstanceId(String globalAccelerationInstanceId) {
             this.globalAccelerationInstanceId = globalAccelerationInstanceId;
@@ -70,7 +70,10 @@ public class CreateGlobalAccelerationInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * IpAddress.
+         * The public IP address of the GA instance.
+         * <p>
+         * 
+         * If **BandwidthType** is set to **Sharing**, this parameter is not returned.
          */
         public Builder ipAddress(String ipAddress) {
             this.ipAddress = ipAddress;
@@ -78,7 +81,7 @@ public class CreateGlobalAccelerationInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

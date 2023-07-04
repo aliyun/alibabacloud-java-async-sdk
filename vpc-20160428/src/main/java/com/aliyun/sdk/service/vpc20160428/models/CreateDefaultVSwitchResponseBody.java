@@ -50,7 +50,7 @@ public class CreateDefaultVSwitchResponseBody extends TeaModel {
         private String vSwitchId; 
 
         /**
-         * RequestId.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -58,7 +58,7 @@ public class CreateDefaultVSwitchResponseBody extends TeaModel {
         }
 
         /**
-         * VSwitchId.
+         * The ID of the default vSwitch.
          */
         public Builder vSwitchId(String vSwitchId) {
             this.vSwitchId = vSwitchId;

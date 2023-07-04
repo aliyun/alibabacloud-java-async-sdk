@@ -12,9 +12,6 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ListPublicIpAddressPoolCidrBlocksResponseBody</p>
  */
 public class ListPublicIpAddressPoolCidrBlocksResponseBody extends TeaModel {
-    @NameInMap("MaxResults")
-    private Integer maxResults;
-
     @NameInMap("NextToken")
     private String nextToken;
 
@@ -28,7 +25,6 @@ public class ListPublicIpAddressPoolCidrBlocksResponseBody extends TeaModel {
     private Integer totalCount;
 
     private ListPublicIpAddressPoolCidrBlocksResponseBody(Builder builder) {
-        this.maxResults = builder.maxResults;
         this.nextToken = builder.nextToken;
         this.publicIpPoolCidrBlockList = builder.publicIpPoolCidrBlockList;
         this.requestId = builder.requestId;
@@ -41,13 +37,6 @@ public class ListPublicIpAddressPoolCidrBlocksResponseBody extends TeaModel {
 
     public static ListPublicIpAddressPoolCidrBlocksResponseBody create() {
         return builder().build();
-    }
-
-    /**
-     * @return maxResults
-     */
-    public Integer getMaxResults() {
-        return this.maxResults;
     }
 
     /**
@@ -79,22 +68,17 @@ public class ListPublicIpAddressPoolCidrBlocksResponseBody extends TeaModel {
     }
 
     public static final class Builder {
-        private Integer maxResults; 
         private String nextToken; 
         private java.util.List < PublicIpPoolCidrBlockList> publicIpPoolCidrBlockList; 
         private String requestId; 
         private Integer totalCount; 
 
         /**
-         * MaxResults.
-         */
-        public Builder maxResults(Integer maxResults) {
-            this.maxResults = maxResults;
-            return this;
-        }
-
-        /**
-         * NextToken.
+         * The token that is used for the next query. Valid values:
+         * <p>
+         * 
+         * *   If **NextToken** was not returned, it indicates that no additional results exist.
+         * *   If **NextToken** is returned, the value is the token that is used for the next query.
          */
         public Builder nextToken(String nextToken) {
             this.nextToken = nextToken;
@@ -102,7 +86,7 @@ public class ListPublicIpAddressPoolCidrBlocksResponseBody extends TeaModel {
         }
 
         /**
-         * PublicIpPoolCidrBlockList.
+         * The total number of entries returned.
          */
         public Builder publicIpPoolCidrBlockList(java.util.List < PublicIpPoolCidrBlockList> publicIpPoolCidrBlockList) {
             this.publicIpPoolCidrBlockList = publicIpPoolCidrBlockList;
@@ -110,7 +94,7 @@ public class ListPublicIpAddressPoolCidrBlocksResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -118,7 +102,7 @@ public class ListPublicIpAddressPoolCidrBlocksResponseBody extends TeaModel {
         }
 
         /**
-         * TotalCount.
+         * The maximum number of entries returned. Valid values: **10** to **100**. Default value: **10**.
          */
         public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;
@@ -218,7 +202,7 @@ public class ListPublicIpAddressPoolCidrBlocksResponseBody extends TeaModel {
             private Integer usedIpNum; 
 
             /**
-             * CidrBlock.
+             * The ID of the IP address pool.
              */
             public Builder cidrBlock(String cidrBlock) {
                 this.cidrBlock = cidrBlock;
@@ -226,7 +210,7 @@ public class ListPublicIpAddressPoolCidrBlocksResponseBody extends TeaModel {
             }
 
             /**
-             * CreationTime.
+             * The CIDR blocks.
              */
             public Builder creationTime(String creationTime) {
                 this.creationTime = creationTime;
@@ -234,7 +218,7 @@ public class ListPublicIpAddressPoolCidrBlocksResponseBody extends TeaModel {
             }
 
             /**
-             * PublicIpAddressPoolId.
+             * The information about the CIDR blocks.
              */
             public Builder publicIpAddressPoolId(String publicIpAddressPoolId) {
                 this.publicIpAddressPoolId = publicIpAddressPoolId;
@@ -242,7 +226,7 @@ public class ListPublicIpAddressPoolCidrBlocksResponseBody extends TeaModel {
             }
 
             /**
-             * Status.
+             * The time when the CIDR block was created. The time is displayed in `YYYY-MM-DDThh:mm:ssZ` format.
              */
             public Builder status(String status) {
                 this.status = status;
@@ -250,7 +234,7 @@ public class ListPublicIpAddressPoolCidrBlocksResponseBody extends TeaModel {
             }
 
             /**
-             * TotalIpNum.
+             * The total number of available IP addresses in the CIDR block.
              */
             public Builder totalIpNum(Integer totalIpNum) {
                 this.totalIpNum = totalIpNum;
@@ -258,7 +242,12 @@ public class ListPublicIpAddressPoolCidrBlocksResponseBody extends TeaModel {
             }
 
             /**
-             * UsedIpNum.
+             * The status of the CIDR block in the IP address pool. Valid values:
+             * <p>
+             * 
+             * *   **Created**: available
+             * *   **Deleting**: being deleted
+             * *   **Modifying**: being modified
              */
             public Builder usedIpNum(Integer usedIpNum) {
                 this.usedIpNum = usedIpNum;

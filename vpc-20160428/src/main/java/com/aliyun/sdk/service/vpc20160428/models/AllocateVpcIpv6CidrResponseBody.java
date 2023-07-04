@@ -50,7 +50,7 @@ public class AllocateVpcIpv6CidrResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * Ipv6CidrBlock.
+         * The IPv6 CIDR block that is reserved.
          */
         public Builder ipv6CidrBlock(String ipv6CidrBlock) {
             this.ipv6CidrBlock = ipv6CidrBlock;
@@ -58,7 +58,7 @@ public class AllocateVpcIpv6CidrResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

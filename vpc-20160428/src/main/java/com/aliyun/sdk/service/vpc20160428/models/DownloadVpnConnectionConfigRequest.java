@@ -144,7 +144,10 @@ public class DownloadVpnConnectionConfigRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * The ID of the region where you want to create the IPsec-VPN connection.
+         * <p>
+         * 
+         * You can call the [DescribeRegions](~~36063~~) operation to query the most recent region list.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -171,7 +174,7 @@ public class DownloadVpnConnectionConfigRequest extends Request {
         }
 
         /**
-         * VpnConnectionId.
+         * The ID of the IPsec-VPN connection.
          */
         public Builder vpnConnectionId(String vpnConnectionId) {
             this.putQueryParameter("VpnConnectionId", vpnConnectionId);

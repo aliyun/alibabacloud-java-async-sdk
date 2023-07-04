@@ -69,6 +69,9 @@ public class DescribeVpcAttributeResponseBody extends TeaModel {
     @NameInMap("SupportIpv4Gateway")
     private Boolean supportIpv4Gateway;
 
+    @NameInMap("Tags")
+    private Tags tags;
+
     @NameInMap("UserCidrs")
     private UserCidrs userCidrs;
 
@@ -104,6 +107,7 @@ public class DescribeVpcAttributeResponseBody extends TeaModel {
         this.secondaryCidrBlocks = builder.secondaryCidrBlocks;
         this.status = builder.status;
         this.supportIpv4Gateway = builder.supportIpv4Gateway;
+        this.tags = builder.tags;
         this.userCidrs = builder.userCidrs;
         this.vRouterId = builder.vRouterId;
         this.vSwitchIds = builder.vSwitchIds;
@@ -253,6 +257,13 @@ public class DescribeVpcAttributeResponseBody extends TeaModel {
     }
 
     /**
+     * @return tags
+     */
+    public Tags getTags() {
+        return this.tags;
+    }
+
+    /**
      * @return userCidrs
      */
     public UserCidrs getUserCidrs() {
@@ -307,6 +318,7 @@ public class DescribeVpcAttributeResponseBody extends TeaModel {
         private SecondaryCidrBlocks secondaryCidrBlocks; 
         private String status; 
         private Boolean supportIpv4Gateway; 
+        private Tags tags; 
         private UserCidrs userCidrs; 
         private String vRouterId; 
         private VSwitchIds vSwitchIds; 
@@ -314,7 +326,15 @@ public class DescribeVpcAttributeResponseBody extends TeaModel {
         private String vpcName; 
 
         /**
-         * AssociatedCens.
+         * The type of the IPv6 CIDR block. Valid values:
+         * <p>
+         * 
+         * - **BGP** (default): an IPv6 CIDR block provided by Alibaba Cloud over Border Gateway Protocol (BGP)
+         * - **ChinaMobile**: an IPv6 CIDR block provided by China Mobile (single ISP)
+         * - **ChinaUnicom**: an IPv6 CIDR block provided by China Unicom (single ISP)
+         * - **ChinaTelecom**: an IPv6 CIDR block provided by China Telecom (single ISP)
+         * 
+         * >  If your Alibaba Cloud account is allowed to activate single-ISP bandwidth, valid values are: **ChinaTelecom**, **ChinaUnicom**, and **ChinaMobile**.
          */
         public Builder associatedCens(AssociatedCens associatedCens) {
             this.associatedCens = associatedCens;
@@ -322,7 +342,7 @@ public class DescribeVpcAttributeResponseBody extends TeaModel {
         }
 
         /**
-         * CidrBlock.
+         * The secondary IPv4 CIDR block of the VPC.
          */
         public Builder cidrBlock(String cidrBlock) {
             this.cidrBlock = cidrBlock;
@@ -330,7 +350,7 @@ public class DescribeVpcAttributeResponseBody extends TeaModel {
         }
 
         /**
-         * ClassicLinkEnabled.
+         * The description of the VPC.
          */
         public Builder classicLinkEnabled(Boolean classicLinkEnabled) {
             this.classicLinkEnabled = classicLinkEnabled;
@@ -346,7 +366,7 @@ public class DescribeVpcAttributeResponseBody extends TeaModel {
         }
 
         /**
-         * CreationTime.
+         * The ID of the vRouter that belongs to the VPC.
          */
         public Builder creationTime(String creationTime) {
             this.creationTime = creationTime;
@@ -354,7 +374,7 @@ public class DescribeVpcAttributeResponseBody extends TeaModel {
         }
 
         /**
-         * Description.
+         * The ID of the Alibaba Cloud account to which the CEN instance belongs.
          */
         public Builder description(String description) {
             this.description = description;
@@ -362,7 +382,10 @@ public class DescribeVpcAttributeResponseBody extends TeaModel {
         }
 
         /**
-         * DhcpOptionsSetId.
+         * The status of the CEN instance to which the VPC is attached.
+         * <p>
+         * 
+         * **Attached** is returned only if the VPC is attached to a CEN instance.
          */
         public Builder dhcpOptionsSetId(String dhcpOptionsSetId) {
             this.dhcpOptionsSetId = dhcpOptionsSetId;
@@ -370,7 +393,7 @@ public class DescribeVpcAttributeResponseBody extends TeaModel {
         }
 
         /**
-         * DhcpOptionsSetStatus.
+         * The user CIDR block. Multiple CIDR blocks are separated by commas (,). At most three CIDR blocks are returned.
          */
         public Builder dhcpOptionsSetStatus(String dhcpOptionsSetStatus) {
             this.dhcpOptionsSetStatus = dhcpOptionsSetStatus;
@@ -386,7 +409,7 @@ public class DescribeVpcAttributeResponseBody extends TeaModel {
         }
 
         /**
-         * Ipv6CidrBlock.
+         * The list of resources deployed in the VPC.
          */
         public Builder ipv6CidrBlock(String ipv6CidrBlock) {
             this.ipv6CidrBlock = ipv6CidrBlock;
@@ -402,7 +425,7 @@ public class DescribeVpcAttributeResponseBody extends TeaModel {
         }
 
         /**
-         * IsDefault.
+         * The ID of the request.
          */
         public Builder isDefault(Boolean isDefault) {
             this.isDefault = isDefault;
@@ -410,7 +433,7 @@ public class DescribeVpcAttributeResponseBody extends TeaModel {
         }
 
         /**
-         * OwnerId.
+         * The ID of the resource group.
          */
         public Builder ownerId(Long ownerId) {
             this.ownerId = ownerId;
@@ -418,7 +441,7 @@ public class DescribeVpcAttributeResponseBody extends TeaModel {
         }
 
         /**
-         * RegionId.
+         * The ID of the DHCP options set.
          */
         public Builder regionId(String regionId) {
             this.regionId = regionId;
@@ -426,7 +449,10 @@ public class DescribeVpcAttributeResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The list of Cloud Enterprise Network (CEN) instances to which the VPC is attached.
+         * <p>
+         * 
+         * If the VPC is not attached to a CEN instance, the parameter is not returned.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -434,7 +460,7 @@ public class DescribeVpcAttributeResponseBody extends TeaModel {
         }
 
         /**
-         * ResourceGroupId.
+         * The ID of the CEN instance to which the VPC is attached.
          */
         public Builder resourceGroupId(String resourceGroupId) {
             this.resourceGroupId = resourceGroupId;
@@ -442,7 +468,7 @@ public class DescribeVpcAttributeResponseBody extends TeaModel {
         }
 
         /**
-         * SecondaryCidrBlocks.
+         * The information about the IPv6 CIDR blocks of the VPC.
          */
         public Builder secondaryCidrBlocks(SecondaryCidrBlocks secondaryCidrBlocks) {
             this.secondaryCidrBlocks = secondaryCidrBlocks;
@@ -450,7 +476,13 @@ public class DescribeVpcAttributeResponseBody extends TeaModel {
         }
 
         /**
-         * Status.
+         * The status of the DHCP options set. Valid values:
+         * <p>
+         * 
+         * *   **Available**: available
+         * *   **InUse**: in use
+         * *   **Deleted**: deleted
+         * *   **Pending**: being configured
          */
         public Builder status(String status) {
             this.status = status;
@@ -466,7 +498,20 @@ public class DescribeVpcAttributeResponseBody extends TeaModel {
         }
 
         /**
-         * UserCidrs.
+         * Tags.
+         */
+        public Builder tags(Tags tags) {
+            this.tags = tags;
+            return this;
+        }
+
+        /**
+         * The type of resources deployed in the VPC. Valid values:
+         * <p>
+         * 
+         * - **VSwitch**: vSwitches
+         * - **VRouter**: vRouters
+         * - **RouteTable**: route tables
          */
         public Builder userCidrs(UserCidrs userCidrs) {
             this.userCidrs = userCidrs;
@@ -474,7 +519,7 @@ public class DescribeVpcAttributeResponseBody extends TeaModel {
         }
 
         /**
-         * VRouterId.
+         * The list of vSwitches deployed in the VPC.
          */
         public Builder vRouterId(String vRouterId) {
             this.vRouterId = vRouterId;
@@ -482,7 +527,7 @@ public class DescribeVpcAttributeResponseBody extends TeaModel {
         }
 
         /**
-         * VSwitchIds.
+         * The number of resources deployed in the VPC.
          */
         public Builder vSwitchIds(VSwitchIds vSwitchIds) {
             this.vSwitchIds = vSwitchIds;
@@ -490,7 +535,7 @@ public class DescribeVpcAttributeResponseBody extends TeaModel {
         }
 
         /**
-         * VpcId.
+         * The IPv4 CIDR block of the VPC.
          */
         public Builder vpcId(String vpcId) {
             this.vpcId = vpcId;
@@ -498,7 +543,7 @@ public class DescribeVpcAttributeResponseBody extends TeaModel {
         }
 
         /**
-         * VpcName.
+         * The IPv6 CIDR block of the VPC.
          */
         public Builder vpcName(String vpcName) {
             this.vpcName = vpcName;
@@ -562,7 +607,11 @@ public class DescribeVpcAttributeResponseBody extends TeaModel {
             private String cenStatus; 
 
             /**
-             * CenId.
+             * Indicates whether the VPC supports IPv4 gateways. 
+             * <p>
+             * 
+             * - **true**: yes
+             * - **false**: no
              */
             public Builder cenId(String cenId) {
                 this.cenId = cenId;
@@ -570,7 +619,7 @@ public class DescribeVpcAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * CenOwnerId.
+             * The IPv6 CIDR block of the VPC.
              */
             public Builder cenOwnerId(Long cenOwnerId) {
                 this.cenOwnerId = cenOwnerId;
@@ -578,7 +627,7 @@ public class DescribeVpcAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * CenStatus.
+             * The ID of the IPv4 gateway.
              */
             public Builder cenStatus(String cenStatus) {
                 this.cenStatus = cenStatus;
@@ -774,7 +823,7 @@ public class DescribeVpcAttributeResponseBody extends TeaModel {
             private String ipv6Isp; 
 
             /**
-             * Ipv6CidrBlock.
+             * The list of resources deployed in the VPC.
              */
             public Builder ipv6CidrBlock(String ipv6CidrBlock) {
                 this.ipv6CidrBlock = ipv6CidrBlock;
@@ -823,7 +872,7 @@ public class DescribeVpcAttributeResponseBody extends TeaModel {
             private java.util.List < Ipv6CidrBlock> ipv6CidrBlock; 
 
             /**
-             * Ipv6CidrBlock.
+             * The list of resources deployed in the VPC.
              */
             public Builder ipv6CidrBlock(java.util.List < Ipv6CidrBlock> ipv6CidrBlock) {
                 this.ipv6CidrBlock = ipv6CidrBlock;
@@ -873,6 +922,108 @@ public class DescribeVpcAttributeResponseBody extends TeaModel {
 
             public SecondaryCidrBlocks build() {
                 return new SecondaryCidrBlocks(this);
+            } 
+
+        } 
+
+    }
+    public static class Tag extends TeaModel {
+        @NameInMap("Key")
+        private String key;
+
+        @NameInMap("Value")
+        private String value;
+
+        private Tag(Builder builder) {
+            this.key = builder.key;
+            this.value = builder.value;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static Tag create() {
+            return builder().build();
+        }
+
+        /**
+         * @return key
+         */
+        public String getKey() {
+            return this.key;
+        }
+
+        /**
+         * @return value
+         */
+        public String getValue() {
+            return this.value;
+        }
+
+        public static final class Builder {
+            private String key; 
+            private String value; 
+
+            /**
+             * Key.
+             */
+            public Builder key(String key) {
+                this.key = key;
+                return this;
+            }
+
+            /**
+             * Value.
+             */
+            public Builder value(String value) {
+                this.value = value;
+                return this;
+            }
+
+            public Tag build() {
+                return new Tag(this);
+            } 
+
+        } 
+
+    }
+    public static class Tags extends TeaModel {
+        @NameInMap("Tag")
+        private java.util.List < Tag> tag;
+
+        private Tags(Builder builder) {
+            this.tag = builder.tag;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static Tags create() {
+            return builder().build();
+        }
+
+        /**
+         * @return tag
+         */
+        public java.util.List < Tag> getTag() {
+            return this.tag;
+        }
+
+        public static final class Builder {
+            private java.util.List < Tag> tag; 
+
+            /**
+             * Tag.
+             */
+            public Builder tag(java.util.List < Tag> tag) {
+                this.tag = tag;
+                return this;
+            }
+
+            public Tags build() {
+                return new Tags(this);
             } 
 
         } 

@@ -126,7 +126,7 @@ public class GetDhcpOptionsSetRequest extends Request {
         } 
 
         /**
-         * DhcpOptionsSetId.
+         * The ID of the request.
          */
         public Builder dhcpOptionsSetId(String dhcpOptionsSetId) {
             this.putQueryParameter("DhcpOptionsSetId", dhcpOptionsSetId);
@@ -153,7 +153,13 @@ public class GetDhcpOptionsSetRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * The status of the DHCP options set. Valid values:
+         * <p>
+         * 
+         * *   **Available**: available
+         * *   **InUse**: in use
+         * *   **Deleted**: deleted
+         * *   **Pending**: being configured
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);

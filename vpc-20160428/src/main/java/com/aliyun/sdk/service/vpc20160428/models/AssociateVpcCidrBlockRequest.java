@@ -21,6 +21,10 @@ public class AssociateVpcCidrBlockRequest extends Request {
     private String ipVersion;
 
     @Query
+    @NameInMap("IpamPoolId")
+    private String ipamPoolId;
+
+    @Query
     @NameInMap("Ipv6Isp")
     private String ipv6Isp;
 
@@ -58,6 +62,7 @@ public class AssociateVpcCidrBlockRequest extends Request {
         super(builder);
         this.iPv6CidrBlock = builder.iPv6CidrBlock;
         this.ipVersion = builder.ipVersion;
+        this.ipamPoolId = builder.ipamPoolId;
         this.ipv6Isp = builder.ipv6Isp;
         this.ownerAccount = builder.ownerAccount;
         this.ownerId = builder.ownerId;
@@ -93,6 +98,13 @@ public class AssociateVpcCidrBlockRequest extends Request {
      */
     public String getIpVersion() {
         return this.ipVersion;
+    }
+
+    /**
+     * @return ipamPoolId
+     */
+    public String getIpamPoolId() {
+        return this.ipamPoolId;
     }
 
     /**
@@ -154,6 +166,7 @@ public class AssociateVpcCidrBlockRequest extends Request {
     public static final class Builder extends Request.Builder<AssociateVpcCidrBlockRequest, Builder> {
         private String iPv6CidrBlock; 
         private String ipVersion; 
+        private String ipamPoolId; 
         private String ipv6Isp; 
         private String ownerAccount; 
         private Long ownerId; 
@@ -171,6 +184,7 @@ public class AssociateVpcCidrBlockRequest extends Request {
             super(request);
             this.iPv6CidrBlock = request.iPv6CidrBlock;
             this.ipVersion = request.ipVersion;
+            this.ipamPoolId = request.ipamPoolId;
             this.ipv6Isp = request.ipv6Isp;
             this.ownerAccount = request.ownerAccount;
             this.ownerId = request.ownerId;
@@ -182,7 +196,18 @@ public class AssociateVpcCidrBlockRequest extends Request {
         } 
 
         /**
-         * IPv6CidrBlock.
+         * The secondary IPv4 CIDR block. Take note of the following requirements:
+         * <p>
+         * 
+         * *   You can specify one of the following standard IPv4 CIDR blocks or their subnets as the secondary IPv4 CIDR block: 192.168.0.0/16, 172.16.0.0/12, and 10.0.0.0/8.
+         * *   You can also use a custom CIDR block other than 100.64.0.0/10, 224.0.0.0/4, 127.0.0.0/8, 169.254.0.0/16, or their subnets as the secondary IPv4 CIDR block of the VPC.
+         * 
+         * In addition, the following requirements must be met:
+         * 
+         * *   The CIDR block cannot start with 0. The subnet mask must be 8 to 28 bits in length.
+         * *   The secondary CIDR block cannot overlap with the primary CIDR block or an existing secondary CIDR block.
+         * 
+         * >  You must set one of the **SecondaryCidrBlock** and **Ipv6CidrBlock** parameters.
          */
         public Builder iPv6CidrBlock(String iPv6CidrBlock) {
             this.putQueryParameter("IPv6CidrBlock", iPv6CidrBlock);
@@ -191,7 +216,15 @@ public class AssociateVpcCidrBlockRequest extends Request {
         }
 
         /**
-         * IpVersion.
+         * The type of the IPv6 CIDR block. Valid values:
+         * <p>
+         * 
+         * *   **BGP** (default): Alibaba Cloud Border Gateway Protocol (BGP) IPv6
+         * *   **ChinaMobile**: China Mobile (single line)
+         * *   **ChinaUnicom**: China Unicom (single line)
+         * *   **ChinaTelecom**: China Telecom (single line)
+         * 
+         * >  If your Alibaba Cloud account is allowed to use single-ISP bandwidth, valid values are: **ChinaTelecom**, **ChinaUnicom**, and **ChinaMobile**.
          */
         public Builder ipVersion(String ipVersion) {
             this.putQueryParameter("IpVersion", ipVersion);
@@ -200,7 +233,19 @@ public class AssociateVpcCidrBlockRequest extends Request {
         }
 
         /**
-         * Ipv6Isp.
+         * IpamPoolId.
+         */
+        public Builder ipamPoolId(String ipamPoolId) {
+            this.putQueryParameter("IpamPoolId", ipamPoolId);
+            this.ipamPoolId = ipamPoolId;
+            return this;
+        }
+
+        /**
+         * The IPv6 CIDR block.
+         * <p>
+         * 
+         * >  You must set one of the **SecondaryCidrBlock** and **Ipv6CidrBlock** parameters.
          */
         public Builder ipv6Isp(String ipv6Isp) {
             this.putQueryParameter("Ipv6Isp", ipv6Isp);
@@ -227,7 +272,13 @@ public class AssociateVpcCidrBlockRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * *   The following list describes the limits on the maximum number of secondary CIDR blocks that can be added:
+         * <p>
+         * 
+         *     *   You can add up to five secondary IPv4 CIDR blocks to each VPC.
+         *     *   You can add up to three secondary IPv6 CIDR blocks to each VPC.
+         * 
+         * *   You cannot repeatedly call the **AssociateVpcCidrBlock** operation to add secondary CIDR blocks to a VPC within the specified period of time.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -254,7 +305,7 @@ public class AssociateVpcCidrBlockRequest extends Request {
         }
 
         /**
-         * SecondaryCidrBlock.
+         * The ID of the VPC.
          */
         public Builder secondaryCidrBlock(String secondaryCidrBlock) {
             this.putQueryParameter("SecondaryCidrBlock", secondaryCidrBlock);
@@ -263,7 +314,10 @@ public class AssociateVpcCidrBlockRequest extends Request {
         }
 
         /**
-         * VpcId.
+         * The region ID of the VPC to which you want to add a secondary CIDR block.
+         * <p>
+         * 
+         * You can call the [DescribeRegions](~~36063~~) operation to query the most recent region list.
          */
         public Builder vpcId(String vpcId) {
             this.putQueryParameter("VpcId", vpcId);

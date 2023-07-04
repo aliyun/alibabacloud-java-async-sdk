@@ -181,7 +181,7 @@ public class DescribeSslVpnClientCertsRequest extends Request {
         } 
 
         /**
-         * Name.
+         * The name of the SSL client certificate.
          */
         public Builder name(String name) {
             this.putQueryParameter("Name", name);
@@ -208,7 +208,7 @@ public class DescribeSslVpnClientCertsRequest extends Request {
         }
 
         /**
-         * PageNumber.
+         * The number of the page to return. Default value: **1**.
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -217,7 +217,7 @@ public class DescribeSslVpnClientCertsRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * The number of entries to return on each page. Default value: **10**. Valid values: **1** to **50**.
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -226,7 +226,10 @@ public class DescribeSslVpnClientCertsRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * The region ID of the SSL client certificates to be queried.
+         * <p>
+         * 
+         * You can call the [DescribeRegions](~~36063~~) operation to query the most recent region list.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -253,7 +256,7 @@ public class DescribeSslVpnClientCertsRequest extends Request {
         }
 
         /**
-         * SslVpnClientCertId.
+         * The ID of the SSL client certificate.
          */
         public Builder sslVpnClientCertId(String sslVpnClientCertId) {
             this.putQueryParameter("SslVpnClientCertId", sslVpnClientCertId);
@@ -262,7 +265,7 @@ public class DescribeSslVpnClientCertsRequest extends Request {
         }
 
         /**
-         * SslVpnServerId.
+         * The ID of the SSL server.
          */
         public Builder sslVpnServerId(String sslVpnServerId) {
             this.putQueryParameter("SslVpnServerId", sslVpnServerId);

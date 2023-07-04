@@ -86,7 +86,7 @@ public class ListPrefixListsResponseBody extends TeaModel {
         private Long totalCount; 
 
         /**
-         * MaxResults.
+         * The number of entries returned per page. Valid values: **1** to **100**. Default value: **20**.
          */
         public Builder maxResults(Long maxResults) {
             this.maxResults = maxResults;
@@ -94,7 +94,11 @@ public class ListPrefixListsResponseBody extends TeaModel {
         }
 
         /**
-         * NextToken.
+         * The token that is used for the next query. Valid values:
+         * <p>
+         * 
+         * *   If no value is returned for **NextToken**, no next queries are sent.
+         * *   If a value is returned for **NextToken**, the value indicates the token that is used for the next query.
          */
         public Builder nextToken(String nextToken) {
             this.nextToken = nextToken;
@@ -102,7 +106,7 @@ public class ListPrefixListsResponseBody extends TeaModel {
         }
 
         /**
-         * PrefixLists.
+         * The information about the prefix lists.
          */
         public Builder prefixLists(java.util.List < PrefixLists> prefixLists) {
             this.prefixLists = prefixLists;
@@ -110,7 +114,7 @@ public class ListPrefixListsResponseBody extends TeaModel {
         }
 
         /**
-         * Id of the request
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -118,7 +122,7 @@ public class ListPrefixListsResponseBody extends TeaModel {
         }
 
         /**
-         * TotalCount.
+         * The total number of entries returned.
          */
         public Builder totalCount(Long totalCount) {
             this.totalCount = totalCount;
@@ -170,7 +174,7 @@ public class ListPrefixListsResponseBody extends TeaModel {
             private String value; 
 
             /**
-             * Key.
+             * The tag key.
              */
             public Builder key(String key) {
                 this.key = key;
@@ -178,7 +182,7 @@ public class ListPrefixListsResponseBody extends TeaModel {
             }
 
             /**
-             * Value.
+             * The tag value.
              */
             public Builder value(String value) {
                 this.value = value;
@@ -375,7 +379,7 @@ public class ListPrefixListsResponseBody extends TeaModel {
             private java.util.List < Tags> tags; 
 
             /**
-             * 前缀列表包含的网段
+             * The CIDR block specified in the prefix list.
              */
             public Builder cidrBlocks(java.util.List < String > cidrBlocks) {
                 this.cidrBlocks = cidrBlocks;
@@ -383,7 +387,7 @@ public class ListPrefixListsResponseBody extends TeaModel {
             }
 
             /**
-             * 创建时间
+             * The time when the prefix list was created.
              */
             public Builder creationTime(String creationTime) {
                 this.creationTime = creationTime;
@@ -391,7 +395,11 @@ public class ListPrefixListsResponseBody extends TeaModel {
             }
 
             /**
-             * IpVersion
+             * The IP version of the prefix list. Valid values:
+             * <p>
+             * 
+             * *   **IPv4**
+             * *   **IPV6**
              */
             public Builder ipVersion(String ipVersion) {
                 this.ipVersion = ipVersion;
@@ -399,7 +407,7 @@ public class ListPrefixListsResponseBody extends TeaModel {
             }
 
             /**
-             * MaxEntries.
+             * The maximum number of CIDR blocks that you can specify in the prefix list.
              */
             public Builder maxEntries(Integer maxEntries) {
                 this.maxEntries = maxEntries;
@@ -407,7 +415,7 @@ public class ListPrefixListsResponseBody extends TeaModel {
             }
 
             /**
-             * OwnerId.
+             * The Alibaba Cloud account to which the prefix list belongs.
              */
             public Builder ownerId(String ownerId) {
                 this.ownerId = ownerId;
@@ -415,7 +423,7 @@ public class ListPrefixListsResponseBody extends TeaModel {
             }
 
             /**
-             * 描述
+             * The description of the prefix list.
              */
             public Builder prefixListDescription(String prefixListDescription) {
                 this.prefixListDescription = prefixListDescription;
@@ -423,7 +431,7 @@ public class ListPrefixListsResponseBody extends TeaModel {
             }
 
             /**
-             * 前缀列表的实例ID
+             * The ID of the prefix list.
              */
             public Builder prefixListId(String prefixListId) {
                 this.prefixListId = prefixListId;
@@ -431,7 +439,7 @@ public class ListPrefixListsResponseBody extends TeaModel {
             }
 
             /**
-             * 名称
+             * The name of the prefix list.
              */
             public Builder prefixListName(String prefixListName) {
                 this.prefixListName = prefixListName;
@@ -439,7 +447,14 @@ public class ListPrefixListsResponseBody extends TeaModel {
             }
 
             /**
-             * PrefixListStatus.
+             * The status of the prefix list. Valid values:
+             * <p>
+             * 
+             * *   **Created**
+             * *   **Deleted**
+             * *   **Modifying**
+             * 
+             * >  This parameter is the same as the **Status** parameter.
              */
             public Builder prefixListStatus(String prefixListStatus) {
                 this.prefixListStatus = prefixListStatus;
@@ -447,7 +462,7 @@ public class ListPrefixListsResponseBody extends TeaModel {
             }
 
             /**
-             * RegionId.
+             * The region ID of the prefix list.
              */
             public Builder regionId(String regionId) {
                 this.regionId = regionId;
@@ -455,7 +470,7 @@ public class ListPrefixListsResponseBody extends TeaModel {
             }
 
             /**
-             * ResourceGroupId.
+             * The ID of the resource group to which the prefix list belongs.
              */
             public Builder resourceGroupId(String resourceGroupId) {
                 this.resourceGroupId = resourceGroupId;
@@ -463,7 +478,11 @@ public class ListPrefixListsResponseBody extends TeaModel {
             }
 
             /**
-             * ShareType.
+             * Indicates whether the prefix list is shared. Valid values:
+             * <p>
+             * 
+             * *   **Shared**: The prefix list is shared.
+             * *   If an empty value is returned, it indicates that the prefix list is not shared.
              */
             public Builder shareType(String shareType) {
                 this.shareType = shareType;
@@ -471,7 +490,12 @@ public class ListPrefixListsResponseBody extends TeaModel {
             }
 
             /**
-             * Status.
+             * The status of the prefix list. Valid values:
+             * <p>
+             * 
+             * *   **Created**
+             * *   **Deleted**
+             * *   **Modifying**
              */
             public Builder status(String status) {
                 this.status = status;
@@ -479,7 +503,7 @@ public class ListPrefixListsResponseBody extends TeaModel {
             }
 
             /**
-             * Tags.
+             * The list of tags that are added to the resource group.
              */
             public Builder tags(java.util.List < Tags> tags) {
                 this.tags = tags;

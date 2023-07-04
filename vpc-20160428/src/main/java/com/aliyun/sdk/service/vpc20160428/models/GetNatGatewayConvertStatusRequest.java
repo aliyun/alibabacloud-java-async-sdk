@@ -126,7 +126,7 @@ public class GetNatGatewayConvertStatusRequest extends Request {
         } 
 
         /**
-         * NatGatewayId.
+         * The ID of the Internet NAT gateway to be queried.
          */
         public Builder natGatewayId(String natGatewayId) {
             this.putQueryParameter("NatGatewayId", natGatewayId);
@@ -153,7 +153,7 @@ public class GetNatGatewayConvertStatusRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * The ID of the region to which the NAT gateway belongs.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);

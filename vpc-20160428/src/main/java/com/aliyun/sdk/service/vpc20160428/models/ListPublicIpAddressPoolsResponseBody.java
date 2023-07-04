@@ -12,9 +12,6 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ListPublicIpAddressPoolsResponseBody</p>
  */
 public class ListPublicIpAddressPoolsResponseBody extends TeaModel {
-    @NameInMap("MaxResults")
-    private Integer maxResults;
-
     @NameInMap("NextToken")
     private String nextToken;
 
@@ -28,7 +25,6 @@ public class ListPublicIpAddressPoolsResponseBody extends TeaModel {
     private Integer totalCount;
 
     private ListPublicIpAddressPoolsResponseBody(Builder builder) {
-        this.maxResults = builder.maxResults;
         this.nextToken = builder.nextToken;
         this.publicIpAddressPoolList = builder.publicIpAddressPoolList;
         this.requestId = builder.requestId;
@@ -41,13 +37,6 @@ public class ListPublicIpAddressPoolsResponseBody extends TeaModel {
 
     public static ListPublicIpAddressPoolsResponseBody create() {
         return builder().build();
-    }
-
-    /**
-     * @return maxResults
-     */
-    public Integer getMaxResults() {
-        return this.maxResults;
     }
 
     /**
@@ -79,22 +68,17 @@ public class ListPublicIpAddressPoolsResponseBody extends TeaModel {
     }
 
     public static final class Builder {
-        private Integer maxResults; 
         private String nextToken; 
         private java.util.List < PublicIpAddressPoolList> publicIpAddressPoolList; 
         private String requestId; 
         private Integer totalCount; 
 
         /**
-         * MaxResults.
-         */
-        public Builder maxResults(Integer maxResults) {
-            this.maxResults = maxResults;
-            return this;
-        }
-
-        /**
-         * NextToken.
+         * The token that determines the start point of the next query. Valid values:
+         * <p>
+         * 
+         * *   If **NextToken** is returned, it indicates that no additional results exist.
+         * *   If **NextToken** is returned, the value indicates the token that is used for the next query.
          */
         public Builder nextToken(String nextToken) {
             this.nextToken = nextToken;
@@ -102,7 +86,7 @@ public class ListPublicIpAddressPoolsResponseBody extends TeaModel {
         }
 
         /**
-         * PublicIpAddressPoolList.
+         * The total number of entries returned.
          */
         public Builder publicIpAddressPoolList(java.util.List < PublicIpAddressPoolList> publicIpAddressPoolList) {
             this.publicIpAddressPoolList = publicIpAddressPoolList;
@@ -110,7 +94,7 @@ public class ListPublicIpAddressPoolsResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -118,7 +102,7 @@ public class ListPublicIpAddressPoolsResponseBody extends TeaModel {
         }
 
         /**
-         * TotalCount.
+         * The maximum number of entries returned.
          */
         public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;
@@ -170,7 +154,7 @@ public class ListPublicIpAddressPoolsResponseBody extends TeaModel {
             private String value; 
 
             /**
-             * Key.
+             * The list of tags.
              */
             public Builder key(String key) {
                 this.key = key;
@@ -178,7 +162,7 @@ public class ListPublicIpAddressPoolsResponseBody extends TeaModel {
             }
 
             /**
-             * Value.
+             * The key of the tag.
              */
             public Builder value(String value) {
                 this.value = value;
@@ -235,6 +219,9 @@ public class ListPublicIpAddressPoolsResponseBody extends TeaModel {
         @NameInMap("UsedIpNum")
         private Integer usedIpNum;
 
+        @NameInMap("UserType")
+        private Boolean userType;
+
         private PublicIpAddressPoolList(Builder builder) {
             this.creationTime = builder.creationTime;
             this.description = builder.description;
@@ -250,6 +237,7 @@ public class ListPublicIpAddressPoolsResponseBody extends TeaModel {
             this.tags = builder.tags;
             this.totalIpNum = builder.totalIpNum;
             this.usedIpNum = builder.usedIpNum;
+            this.userType = builder.userType;
         }
 
         public static Builder builder() {
@@ -358,6 +346,13 @@ public class ListPublicIpAddressPoolsResponseBody extends TeaModel {
             return this.usedIpNum;
         }
 
+        /**
+         * @return userType
+         */
+        public Boolean getUserType() {
+            return this.userType;
+        }
+
         public static final class Builder {
             private String creationTime; 
             private String description; 
@@ -373,9 +368,10 @@ public class ListPublicIpAddressPoolsResponseBody extends TeaModel {
             private java.util.List < Tags> tags; 
             private Integer totalIpNum; 
             private Integer usedIpNum; 
+            private Boolean userType; 
 
             /**
-             * CreationTime.
+             * The region ID of the IP address pool.
              */
             public Builder creationTime(String creationTime) {
                 this.creationTime = creationTime;
@@ -383,7 +379,12 @@ public class ListPublicIpAddressPoolsResponseBody extends TeaModel {
             }
 
             /**
-             * Description.
+             * The status of the IP address pool. Valid values:
+             * <p>
+             * 
+             * *   **Created**: The IP address pool is available.
+             * *   **Deleting**: The IP address pool is being deleted.
+             * *   **Modifying**: The IP address pool is being modified.
              */
             public Builder description(String description) {
                 this.description = description;
@@ -391,7 +392,7 @@ public class ListPublicIpAddressPoolsResponseBody extends TeaModel {
             }
 
             /**
-             * IpAddressRemaining.
+             * The number of occupied IP addresses in the public IP address pool.
              */
             public Builder ipAddressRemaining(Boolean ipAddressRemaining) {
                 this.ipAddressRemaining = ipAddressRemaining;
@@ -399,7 +400,7 @@ public class ListPublicIpAddressPoolsResponseBody extends TeaModel {
             }
 
             /**
-             * Isp.
+             * The time when the IP address pool was created. The time is displayed in `YYYY-MM-DDThh:mm:ssZ` format.
              */
             public Builder isp(String isp) {
                 this.isp = isp;
@@ -407,7 +408,24 @@ public class ListPublicIpAddressPoolsResponseBody extends TeaModel {
             }
 
             /**
-             * Name.
+             * The line type.
+             * <p>
+             * 
+             * *   **BGP**: BGP (Multi-ISP) lines
+             * *   **BGP_PRO**: BGP (Multi-ISP) Pro lines
+             * 
+             * For more information about BGP (Multi-ISP) and BGP (Multi-ISP) Pro, see [EIP line types](~~32321~~).
+             * 
+             * If you are allowed to use single-ISP bandwidth, one of the following values is returned:
+             * 
+             * *   **ChinaTelecom**: China Telecom
+             * *   **ChinaUnicom**: China Unicom
+             * *   **ChinaMobile**: China Mobile
+             * *   **ChinaTelecom_L2**: China Telecom L2
+             * *   **ChinaUnicom_L2**: China Unicom L2
+             * *   **ChinaMobile_L2**: China Mobile L2
+             * 
+             * If your services are deployed in China East 1 Finance, **BGP_FinanceCloud** is returned.
              */
             public Builder name(String name) {
                 this.name = name;
@@ -415,7 +433,11 @@ public class ListPublicIpAddressPoolsResponseBody extends TeaModel {
             }
 
             /**
-             * OwnerId.
+             * Indicates whether the IP address pool has idle IP addresses. Valid values:
+             * <p>
+             * 
+             * *   **true**: yes
+             * *   **false**: no
              */
             public Builder ownerId(Long ownerId) {
                 this.ownerId = ownerId;
@@ -423,7 +445,7 @@ public class ListPublicIpAddressPoolsResponseBody extends TeaModel {
             }
 
             /**
-             * PublicIpAddressPoolId.
+             * The list of IP address pools.
              */
             public Builder publicIpAddressPoolId(String publicIpAddressPoolId) {
                 this.publicIpAddressPoolId = publicIpAddressPoolId;
@@ -431,7 +453,7 @@ public class ListPublicIpAddressPoolsResponseBody extends TeaModel {
             }
 
             /**
-             * RegionId.
+             * The ID of the IP address pool.
              */
             public Builder regionId(String regionId) {
                 this.regionId = regionId;
@@ -439,7 +461,11 @@ public class ListPublicIpAddressPoolsResponseBody extends TeaModel {
             }
 
             /**
-             * ResourceGroupId.
+             * Indicates whether the IP address pool is shared.
+             * <p>
+             * 
+             * *   **Shared**: The IP address pool is shared.
+             * *   An empty value indicates that the IP address pool is not shared.
              */
             public Builder resourceGroupId(String resourceGroupId) {
                 this.resourceGroupId = resourceGroupId;
@@ -447,7 +473,7 @@ public class ListPublicIpAddressPoolsResponseBody extends TeaModel {
             }
 
             /**
-             * ShareType.
+             * The Alibaba Cloud account to which the IP address pool belongs.
              */
             public Builder shareType(String shareType) {
                 this.shareType = shareType;
@@ -455,7 +481,7 @@ public class ListPublicIpAddressPoolsResponseBody extends TeaModel {
             }
 
             /**
-             * Status.
+             * The name of the IP address pool.
              */
             public Builder status(String status) {
                 this.status = status;
@@ -463,7 +489,7 @@ public class ListPublicIpAddressPoolsResponseBody extends TeaModel {
             }
 
             /**
-             * Tags.
+             * The ID of the resource group to which the IP address pool belongs.
              */
             public Builder tags(java.util.List < Tags> tags) {
                 this.tags = tags;
@@ -471,7 +497,7 @@ public class ListPublicIpAddressPoolsResponseBody extends TeaModel {
             }
 
             /**
-             * TotalIpNum.
+             * The description of the IP address pool.
              */
             public Builder totalIpNum(Integer totalIpNum) {
                 this.totalIpNum = totalIpNum;
@@ -479,10 +505,18 @@ public class ListPublicIpAddressPoolsResponseBody extends TeaModel {
             }
 
             /**
-             * UsedIpNum.
+             * The total number of IP addresses in the public IP address pool.
              */
             public Builder usedIpNum(Integer usedIpNum) {
                 this.usedIpNum = usedIpNum;
+                return this;
+            }
+
+            /**
+             * UserType.
+             */
+            public Builder userType(Boolean userType) {
+                this.userType = userType;
                 return this;
             }
 

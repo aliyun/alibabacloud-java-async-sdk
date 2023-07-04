@@ -167,7 +167,10 @@ public class DescribeVpnAttachmentsRequest extends Request {
         } 
 
         /**
-         * AttachType.
+         * The type of resource that is associated with the IPsec-VPN connection. Default value: **CEN**.
+         * <p>
+         * 
+         * Set the value to **CEN**, which specifies to query IPsec-VPN connections associated with the transit router.
          */
         public Builder attachType(String attachType) {
             this.putQueryParameter("AttachType", attachType);
@@ -194,7 +197,7 @@ public class DescribeVpnAttachmentsRequest extends Request {
         }
 
         /**
-         * PageNumber.
+         * The number of the page to return. Default value: **1**.
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -203,7 +206,7 @@ public class DescribeVpnAttachmentsRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * The number of entries to return on each page. Default value: **10**. Valid values: **1** to **50**.
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -212,7 +215,10 @@ public class DescribeVpnAttachmentsRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * The ID of the region to which the IPsec-VPN connection belongs.
+         * <p>
+         * 
+         * You can call the [DescribeRegions](~~36063~~) operation to query the most recent region list.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -239,7 +245,10 @@ public class DescribeVpnAttachmentsRequest extends Request {
         }
 
         /**
-         * VpnConnectionId.
+         * The ID of the IPsec-VPN connection.
+         * <p>
+         * 
+         * >  If you do not specify an ID, the system queries all IPsec-VPN connections associated with the transit router in the region.
          */
         public Builder vpnConnectionId(String vpnConnectionId) {
             this.putQueryParameter("VpnConnectionId", vpnConnectionId);

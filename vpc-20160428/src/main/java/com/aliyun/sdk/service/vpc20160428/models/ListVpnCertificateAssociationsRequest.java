@@ -127,7 +127,10 @@ public class ListVpnCertificateAssociationsRequest extends Request {
         } 
 
         /**
-         * CertificateId.
+         * The list of certificate IDs.
+         * <p>
+         * 
+         * You can query the association between at most 20 SSL certificates and VPN gateways.
          */
         public Builder certificateId(java.util.List < String > certificateId) {
             this.putQueryParameter("CertificateId", certificateId);
@@ -136,7 +139,11 @@ public class ListVpnCertificateAssociationsRequest extends Request {
         }
 
         /**
-         * CertificateType.
+         * The certificate type. Valid values:
+         * <p>
+         * 
+         * *   **Encryption**
+         * *   **Signature**
          */
         public Builder certificateType(String certificateType) {
             this.putQueryParameter("CertificateType", certificateType);
@@ -145,7 +152,7 @@ public class ListVpnCertificateAssociationsRequest extends Request {
         }
 
         /**
-         * MaxResults.
+         * The number of entries to return on each page. Valid values: **1** to **20**. Default value: **1**.
          */
         public Builder maxResults(Integer maxResults) {
             this.putQueryParameter("MaxResults", maxResults);
@@ -154,7 +161,11 @@ public class ListVpnCertificateAssociationsRequest extends Request {
         }
 
         /**
-         * NextToken.
+         * The pagination token that is used in the next request to retrieve a new page of results. Valid values:
+         * <p>
+         * 
+         * *   You do not need to specify this parameter for the first request.
+         * *   You must specify the token that is obtained from the previous query as the value of **NextToken**.
          */
         public Builder nextToken(String nextToken) {
             this.putQueryParameter("NextToken", nextToken);
@@ -163,7 +174,10 @@ public class ListVpnCertificateAssociationsRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * The region ID of the VPN gateway.
+         * <p>
+         * 
+         * You can call the [DescribeRegions](~~36063~~) operation to query the most recent region list.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -172,7 +186,10 @@ public class ListVpnCertificateAssociationsRequest extends Request {
         }
 
         /**
-         * VpnGatewayId.
+         * The list of VPN gateway IDs.
+         * <p>
+         * 
+         * You can query the association between at most 20 VPN gateways and SSL certificates.
          */
         public Builder vpnGatewayId(java.util.List < String > vpnGatewayId) {
             this.putQueryParameter("VpnGatewayId", vpnGatewayId);

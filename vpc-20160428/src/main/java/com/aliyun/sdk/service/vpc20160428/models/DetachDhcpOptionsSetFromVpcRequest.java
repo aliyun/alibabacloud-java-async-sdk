@@ -169,7 +169,7 @@ public class DetachDhcpOptionsSetFromVpcRequest extends Request {
         } 
 
         /**
-         * ClientToken.
+         * The ID of the request.
          */
         public Builder clientToken(String clientToken) {
             this.putQueryParameter("ClientToken", clientToken);
@@ -178,7 +178,12 @@ public class DetachDhcpOptionsSetFromVpcRequest extends Request {
         }
 
         /**
-         * DhcpOptionsSetId.
+         * The client token that is used to ensure the idempotence of the request.
+         * <p>
+         * 
+         * You can use the client to generate the value, but you must make sure that it is unique among different requests. The client token can contain only ASCII characters.
+         * 
+         * >  If you do not set this parameter, the system uses **RequestId** as **ClientToken**. **RequestId** may be different for each API request.
          */
         public Builder dhcpOptionsSetId(String dhcpOptionsSetId) {
             this.putQueryParameter("DhcpOptionsSetId", dhcpOptionsSetId);
@@ -214,7 +219,7 @@ public class DetachDhcpOptionsSetFromVpcRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * The ID of the VPC.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -241,7 +246,12 @@ public class DetachDhcpOptionsSetFromVpcRequest extends Request {
         }
 
         /**
-         * VpcId.
+         * Specifies whether to check the request without performing the operation. Valid values:
+         * <p>
+         * 
+         * **true**: checks the request without performing the operation. The system checks your AccessKey pair, the Resource Access Management (RAM) user permissions, and the required parameters. If the request fails to pass the check, the corresponding error message is returned. If the request passes the check, the `DryRunOperation` error code is returned.
+         * 
+         * **false** (default): sends the request. If the request passes the check, a 2XX HTTP status code is returned and the operation is performed.
          */
         public Builder vpcId(String vpcId) {
             this.putQueryParameter("VpcId", vpcId);

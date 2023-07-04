@@ -86,7 +86,7 @@ public class DescribeRouterInterfacesResponseBody extends TeaModel {
         private Integer totalCount; 
 
         /**
-         * PageNumber.
+         * The number of the returned page. Default value: **1**.
          */
         public Builder pageNumber(Integer pageNumber) {
             this.pageNumber = pageNumber;
@@ -94,7 +94,7 @@ public class DescribeRouterInterfacesResponseBody extends TeaModel {
         }
 
         /**
-         * PageSize.
+         * The number of entries returned per page. Maximum value: **50**. Default value: **10**.
          */
         public Builder pageSize(Integer pageSize) {
             this.pageSize = pageSize;
@@ -102,7 +102,7 @@ public class DescribeRouterInterfacesResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -110,7 +110,7 @@ public class DescribeRouterInterfacesResponseBody extends TeaModel {
         }
 
         /**
-         * RouterInterfaceSet.
+         * The details of the router interface.
          */
         public Builder routerInterfaceSet(RouterInterfaceSet routerInterfaceSet) {
             this.routerInterfaceSet = routerInterfaceSet;
@@ -118,7 +118,7 @@ public class DescribeRouterInterfacesResponseBody extends TeaModel {
         }
 
         /**
-         * TotalCount.
+         * The total number of entries returned.
          */
         public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;
@@ -614,7 +614,7 @@ public class DescribeRouterInterfacesResponseBody extends TeaModel {
             private String vpcInstanceId; 
 
             /**
-             * AccessPointId.
+             * The ID of the access point.
              */
             public Builder accessPointId(String accessPointId) {
                 this.accessPointId = accessPointId;
@@ -622,7 +622,7 @@ public class DescribeRouterInterfacesResponseBody extends TeaModel {
             }
 
             /**
-             * Bandwidth.
+             * The bandwidth of the router interface. Unit: Mbit/s.
              */
             public Builder bandwidth(Integer bandwidth) {
                 this.bandwidth = bandwidth;
@@ -630,7 +630,12 @@ public class DescribeRouterInterfacesResponseBody extends TeaModel {
             }
 
             /**
-             * BusinessStatus.
+             * The service status of the router interface. Valid values:
+             * <p>
+             * 
+             * *   **Normal**: normal
+             * *   **FinancialLocked**: locked due to overdue payments
+             * *   **SecurityLocked**: locked due to security reasons
              */
             public Builder businessStatus(String businessStatus) {
                 this.businessStatus = businessStatus;
@@ -638,7 +643,7 @@ public class DescribeRouterInterfacesResponseBody extends TeaModel {
             }
 
             /**
-             * ChargeType.
+             * The metering method.
              */
             public Builder chargeType(String chargeType) {
                 this.chargeType = chargeType;
@@ -646,7 +651,10 @@ public class DescribeRouterInterfacesResponseBody extends TeaModel {
             }
 
             /**
-             * ConnectedTime.
+             * The time when the connection was established.
+             * <p>
+             * 
+             * The time follows the ISO8601 standard in the `YYYY-MM-DDThh:mmZ` format. The time is displayed in UTC.
              */
             public Builder connectedTime(String connectedTime) {
                 this.connectedTime = connectedTime;
@@ -654,7 +662,10 @@ public class DescribeRouterInterfacesResponseBody extends TeaModel {
             }
 
             /**
-             * CreationTime.
+             * The time when the route table was created.
+             * <p>
+             * 
+             * The time follows the ISO8601 standard in the `YYYY-MM-DDThh:mmZ` format. The time is displayed in UTC.
              */
             public Builder creationTime(String creationTime) {
                 this.creationTime = creationTime;
@@ -662,7 +673,7 @@ public class DescribeRouterInterfacesResponseBody extends TeaModel {
             }
 
             /**
-             * CrossBorder.
+             * Indicates whether the connection is a cross-border connection.
              */
             public Builder crossBorder(Boolean crossBorder) {
                 this.crossBorder = crossBorder;
@@ -670,7 +681,7 @@ public class DescribeRouterInterfacesResponseBody extends TeaModel {
             }
 
             /**
-             * Description.
+             * The description of the router interface.
              */
             public Builder description(String description) {
                 this.description = description;
@@ -678,7 +689,10 @@ public class DescribeRouterInterfacesResponseBody extends TeaModel {
             }
 
             /**
-             * EndTime.
+             * The end of the time range queried.
+             * <p>
+             * 
+             * The time follows the ISO8601 standard in the `YYYY-MM-DDThh:mmZ` format. The time is displayed in UTC.
              */
             public Builder endTime(String endTime) {
                 this.endTime = endTime;
@@ -686,7 +700,11 @@ public class DescribeRouterInterfacesResponseBody extends TeaModel {
             }
 
             /**
-             * FastLinkMode.
+             * Indicates whether the VBR that is created in the Fast Link mode is uplinked to the router interface. The Fast Link mode helps automatically connect router interfaces that are created for the VBR and its peer VPC. Default value: false. Valid values:
+             * <p>
+             * 
+             * *   **true**
+             * *   **false**
              */
             public Builder fastLinkMode(Boolean fastLinkMode) {
                 this.fastLinkMode = fastLinkMode;
@@ -694,7 +712,7 @@ public class DescribeRouterInterfacesResponseBody extends TeaModel {
             }
 
             /**
-             * HasReservationData.
+             * Indicates whether renewal data is included.
              */
             public Builder hasReservationData(String hasReservationData) {
                 this.hasReservationData = hasReservationData;
@@ -702,7 +720,7 @@ public class DescribeRouterInterfacesResponseBody extends TeaModel {
             }
 
             /**
-             * HcRate.
+             * The rate of the heath check.
              */
             public Builder hcRate(Integer hcRate) {
                 this.hcRate = hcRate;
@@ -710,7 +728,7 @@ public class DescribeRouterInterfacesResponseBody extends TeaModel {
             }
 
             /**
-             * HcThreshold.
+             * The health check threshold.
              */
             public Builder hcThreshold(Integer hcThreshold) {
                 this.hcThreshold = hcThreshold;
@@ -718,7 +736,7 @@ public class DescribeRouterInterfacesResponseBody extends TeaModel {
             }
 
             /**
-             * HealthCheckSourceIp.
+             * The source IP address that is used for the health check.
              */
             public Builder healthCheckSourceIp(String healthCheckSourceIp) {
                 this.healthCheckSourceIp = healthCheckSourceIp;
@@ -726,7 +744,7 @@ public class DescribeRouterInterfacesResponseBody extends TeaModel {
             }
 
             /**
-             * HealthCheckTargetIp.
+             * The destination IP address that is used for the health check.
              */
             public Builder healthCheckTargetIp(String healthCheckTargetIp) {
                 this.healthCheckTargetIp = healthCheckTargetIp;
@@ -734,7 +752,12 @@ public class DescribeRouterInterfacesResponseBody extends TeaModel {
             }
 
             /**
-             * Ipv6Status.
+             * Indicates whether protection against malicious IPv6 traffic is enabled. Valid values:
+             * <p>
+             * 
+             * *   **on**
+             * *   **off**
+             * *   **unsupport**
              */
             public Builder ipv6Status(String ipv6Status) {
                 this.ipv6Status = ipv6Status;
@@ -742,7 +765,7 @@ public class DescribeRouterInterfacesResponseBody extends TeaModel {
             }
 
             /**
-             * Name.
+             * The custom name.
              */
             public Builder name(String name) {
                 this.name = name;
@@ -750,7 +773,7 @@ public class DescribeRouterInterfacesResponseBody extends TeaModel {
             }
 
             /**
-             * OppositeAccessPointId.
+             * The ID of the peer access point.
              */
             public Builder oppositeAccessPointId(String oppositeAccessPointId) {
                 this.oppositeAccessPointId = oppositeAccessPointId;
@@ -758,7 +781,7 @@ public class DescribeRouterInterfacesResponseBody extends TeaModel {
             }
 
             /**
-             * OppositeBandwidth.
+             * The maximum bandwidth of the peer router interface. Unit: Mbit/s.
              */
             public Builder oppositeBandwidth(Integer oppositeBandwidth) {
                 this.oppositeBandwidth = oppositeBandwidth;
@@ -766,7 +789,7 @@ public class DescribeRouterInterfacesResponseBody extends TeaModel {
             }
 
             /**
-             * OppositeInterfaceBusinessStatus.
+             * The service status of the peer router interface.
              */
             public Builder oppositeInterfaceBusinessStatus(String oppositeInterfaceBusinessStatus) {
                 this.oppositeInterfaceBusinessStatus = oppositeInterfaceBusinessStatus;
@@ -774,7 +797,7 @@ public class DescribeRouterInterfacesResponseBody extends TeaModel {
             }
 
             /**
-             * OppositeInterfaceId.
+             * The ID of the peer router interface.
              */
             public Builder oppositeInterfaceId(String oppositeInterfaceId) {
                 this.oppositeInterfaceId = oppositeInterfaceId;
@@ -782,7 +805,7 @@ public class DescribeRouterInterfacesResponseBody extends TeaModel {
             }
 
             /**
-             * OppositeInterfaceOwnerId.
+             * The ID of the Alibaba Cloud account to which the peer router interface belongs.
              */
             public Builder oppositeInterfaceOwnerId(String oppositeInterfaceOwnerId) {
                 this.oppositeInterfaceOwnerId = oppositeInterfaceOwnerId;
@@ -790,7 +813,7 @@ public class DescribeRouterInterfacesResponseBody extends TeaModel {
             }
 
             /**
-             * OppositeInterfaceSpec.
+             * The specification of the peer router interface.
              */
             public Builder oppositeInterfaceSpec(String oppositeInterfaceSpec) {
                 this.oppositeInterfaceSpec = oppositeInterfaceSpec;
@@ -798,7 +821,7 @@ public class DescribeRouterInterfacesResponseBody extends TeaModel {
             }
 
             /**
-             * OppositeInterfaceStatus.
+             * The status of the peer router interface.
              */
             public Builder oppositeInterfaceStatus(String oppositeInterfaceStatus) {
                 this.oppositeInterfaceStatus = oppositeInterfaceStatus;
@@ -806,7 +829,7 @@ public class DescribeRouterInterfacesResponseBody extends TeaModel {
             }
 
             /**
-             * OppositeRegionId.
+             * The region ID of the peer router interface.
              */
             public Builder oppositeRegionId(String oppositeRegionId) {
                 this.oppositeRegionId = oppositeRegionId;
@@ -814,7 +837,7 @@ public class DescribeRouterInterfacesResponseBody extends TeaModel {
             }
 
             /**
-             * OppositeRouterId.
+             * The ID of the router to which the peer router interface belongs.
              */
             public Builder oppositeRouterId(String oppositeRouterId) {
                 this.oppositeRouterId = oppositeRouterId;
@@ -822,7 +845,7 @@ public class DescribeRouterInterfacesResponseBody extends TeaModel {
             }
 
             /**
-             * OppositeRouterType.
+             * The type of the router to which the peer router interface belongs.
              */
             public Builder oppositeRouterType(String oppositeRouterType) {
                 this.oppositeRouterType = oppositeRouterType;
@@ -830,7 +853,7 @@ public class DescribeRouterInterfacesResponseBody extends TeaModel {
             }
 
             /**
-             * OppositeVpcInstanceId.
+             * The ID of the peer VPC.
              */
             public Builder oppositeVpcInstanceId(String oppositeVpcInstanceId) {
                 this.oppositeVpcInstanceId = oppositeVpcInstanceId;
@@ -838,7 +861,10 @@ public class DescribeRouterInterfacesResponseBody extends TeaModel {
             }
 
             /**
-             * ReservationActiveTime.
+             * The time when the renewal takes effect.
+             * <p>
+             * 
+             * The time follows the ISO8601 standard in the `YYYY-MM-DDThh:mmZ` format. The time is displayed in UTC.
              */
             public Builder reservationActiveTime(String reservationActiveTime) {
                 this.reservationActiveTime = reservationActiveTime;
@@ -846,7 +872,7 @@ public class DescribeRouterInterfacesResponseBody extends TeaModel {
             }
 
             /**
-             * ReservationBandwidth.
+             * The bandwidth after the renewal takes effect. Unit: Mbit/s.
              */
             public Builder reservationBandwidth(String reservationBandwidth) {
                 this.reservationBandwidth = reservationBandwidth;
@@ -854,7 +880,7 @@ public class DescribeRouterInterfacesResponseBody extends TeaModel {
             }
 
             /**
-             * ReservationInternetChargeType.
+             * The metering method that is used after the renewal takes effect.
              */
             public Builder reservationInternetChargeType(String reservationInternetChargeType) {
                 this.reservationInternetChargeType = reservationInternetChargeType;
@@ -862,7 +888,7 @@ public class DescribeRouterInterfacesResponseBody extends TeaModel {
             }
 
             /**
-             * ReservationOrderType.
+             * The type of the renewal order.
              */
             public Builder reservationOrderType(String reservationOrderType) {
                 this.reservationOrderType = reservationOrderType;
@@ -870,7 +896,7 @@ public class DescribeRouterInterfacesResponseBody extends TeaModel {
             }
 
             /**
-             * Role.
+             * Indicates whether the router interface is the initiator or acceptor of the peering connection.
              */
             public Builder role(String role) {
                 this.role = role;
@@ -878,7 +904,7 @@ public class DescribeRouterInterfacesResponseBody extends TeaModel {
             }
 
             /**
-             * RouterId.
+             * The ID of the router to which the route entry belongs.
              */
             public Builder routerId(String routerId) {
                 this.routerId = routerId;
@@ -886,7 +912,7 @@ public class DescribeRouterInterfacesResponseBody extends TeaModel {
             }
 
             /**
-             * RouterInterfaceId.
+             * The ID of the router interface.
              */
             public Builder routerInterfaceId(String routerInterfaceId) {
                 this.routerInterfaceId = routerInterfaceId;
@@ -894,7 +920,11 @@ public class DescribeRouterInterfacesResponseBody extends TeaModel {
             }
 
             /**
-             * RouterType.
+             * The type of the router to which the route table belongs. Valid values:
+             * <p>
+             * 
+             * *   **VRouter**
+             * *   **VBR**
              */
             public Builder routerType(String routerType) {
                 this.routerType = routerType;
@@ -902,7 +932,7 @@ public class DescribeRouterInterfacesResponseBody extends TeaModel {
             }
 
             /**
-             * Spec.
+             * The specification of the router interface.
              */
             public Builder spec(String spec) {
                 this.spec = spec;
@@ -910,7 +940,7 @@ public class DescribeRouterInterfacesResponseBody extends TeaModel {
             }
 
             /**
-             * Status.
+             * The status of the router interface.
              */
             public Builder status(String status) {
                 this.status = status;
@@ -918,7 +948,7 @@ public class DescribeRouterInterfacesResponseBody extends TeaModel {
             }
 
             /**
-             * VpcInstanceId.
+             * The ID of the local virtual private cloud (VPC) in the peering connection.
              */
             public Builder vpcInstanceId(String vpcInstanceId) {
                 this.vpcInstanceId = vpcInstanceId;

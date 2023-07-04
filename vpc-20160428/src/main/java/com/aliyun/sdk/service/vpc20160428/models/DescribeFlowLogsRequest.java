@@ -307,7 +307,10 @@ public class DescribeFlowLogsRequest extends Request {
         } 
 
         /**
-         * Description.
+         * The description of the flow log.
+         * <p>
+         * 
+         * The description must be 1 to 256 characters in length and cannot start with `http://` or `https://`.
          */
         public Builder description(String description) {
             this.putQueryParameter("Description", description);
@@ -316,7 +319,7 @@ public class DescribeFlowLogsRequest extends Request {
         }
 
         /**
-         * FlowLogId.
+         * The ID of the flow log.
          */
         public Builder flowLogId(String flowLogId) {
             this.putQueryParameter("FlowLogId", flowLogId);
@@ -325,7 +328,10 @@ public class DescribeFlowLogsRequest extends Request {
         }
 
         /**
-         * FlowLogName.
+         * The name of the flow log.
+         * <p>
+         * 
+         * The name must be 1 to 128 characters in length and cannot start with `http://` or `https://`.
          */
         public Builder flowLogName(String flowLogName) {
             this.putQueryParameter("FlowLogName", flowLogName);
@@ -334,7 +340,7 @@ public class DescribeFlowLogsRequest extends Request {
         }
 
         /**
-         * LogStoreName.
+         * The Logstore that stores the captured traffic data.
          */
         public Builder logStoreName(String logStoreName) {
             this.putQueryParameter("LogStoreName", logStoreName);
@@ -361,7 +367,7 @@ public class DescribeFlowLogsRequest extends Request {
         }
 
         /**
-         * PageNumber.
+         * The number of the page to return. Default value: **1**.
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -370,7 +376,7 @@ public class DescribeFlowLogsRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * The number of entries to return on each page. Maximum value: **50**. Default value: **20**.
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -379,7 +385,7 @@ public class DescribeFlowLogsRequest extends Request {
         }
 
         /**
-         * ProjectName.
+         * The project that manages the captured traffic data.
          */
         public Builder projectName(String projectName) {
             this.putQueryParameter("ProjectName", projectName);
@@ -388,7 +394,10 @@ public class DescribeFlowLogsRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * The region ID of the flow log.
+         * <p>
+         * 
+         * You can call the [DescribeRegions](~~36063~~) operation to query the most recent region list.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -397,7 +406,7 @@ public class DescribeFlowLogsRequest extends Request {
         }
 
         /**
-         * ResourceGroupId.
+         * The ID of the resource group to which the flow log belongs.
          */
         public Builder resourceGroupId(String resourceGroupId) {
             this.putQueryParameter("ResourceGroupId", resourceGroupId);
@@ -406,7 +415,7 @@ public class DescribeFlowLogsRequest extends Request {
         }
 
         /**
-         * ResourceId.
+         * The ID of the resource from which traffic is captured.
          */
         public Builder resourceId(String resourceId) {
             this.putQueryParameter("ResourceId", resourceId);
@@ -433,7 +442,12 @@ public class DescribeFlowLogsRequest extends Request {
         }
 
         /**
-         * ResourceType.
+         * The type of the resource from which traffic is captured. Valid values:
+         * <p>
+         * 
+         * *   **NetworkInterface**: elastic network interface (ENI)
+         * *   **VSwitch**: all ENIs in a vSwitch
+         * *   **VPC**: all ENIs in a virtual private cloud (VPC)
          */
         public Builder resourceType(String resourceType) {
             this.putQueryParameter("ResourceType", resourceType);
@@ -442,7 +456,12 @@ public class DescribeFlowLogsRequest extends Request {
         }
 
         /**
-         * Status.
+         * The status of the flow log. Valid values:
+         * <p>
+         * 
+         * *   **Active**: enabled
+         * *   **Activating**: being enabled
+         * *   **Inactive**: disabled
          */
         public Builder status(String status) {
             this.putQueryParameter("Status", status);
@@ -460,7 +479,12 @@ public class DescribeFlowLogsRequest extends Request {
         }
 
         /**
-         * TrafficType.
+         * The type of traffic that is captured. Valid values:
+         * <p>
+         * 
+         * *   **All**: all traffic
+         * *   **Allow**: traffic that is allowed by access control
+         * *   **Drop**: traffic that is denied by access control
          */
         public Builder trafficType(String trafficType) {
             this.putQueryParameter("TrafficType", trafficType);
@@ -469,7 +493,7 @@ public class DescribeFlowLogsRequest extends Request {
         }
 
         /**
-         * VpcId.
+         * The ID of the VPC to which the flow log belongs.
          */
         public Builder vpcId(String vpcId) {
             this.putQueryParameter("VpcId", vpcId);
@@ -523,7 +547,10 @@ public class DescribeFlowLogsRequest extends Request {
             private String value; 
 
             /**
-             * Key.
+             * The tag key. You can specify at most 20 tag keys. The tag key cannot be an empty string.
+             * <p>
+             * 
+             * The key cannot exceed 64 characters in length, and can contain digits, periods (.), underscores (\_), and hyphens (-). The key must start with a letter but cannot start with `aliyun` or `acs:`. The key cannot contain `http://` or `https://`.
              */
             public Builder key(String key) {
                 this.key = key;
@@ -531,7 +558,10 @@ public class DescribeFlowLogsRequest extends Request {
             }
 
             /**
-             * Value.
+             * The tag value. You can specify at most 20 tag values. The tag value can be an empty string.
+             * <p>
+             * 
+             * The tag value cannot exceed 128 characters in length, and can contain digits, periods (.), underscores (\_), and hyphens (-). It must start with a letter but cannot start with `aliyun` or `acs:`. It cannot contain `http://` or `https://`.
              */
             public Builder value(String value) {
                 this.value = value;

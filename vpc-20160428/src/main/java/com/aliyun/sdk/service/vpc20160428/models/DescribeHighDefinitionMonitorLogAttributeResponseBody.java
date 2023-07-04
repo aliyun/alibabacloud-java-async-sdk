@@ -98,7 +98,7 @@ public class DescribeHighDefinitionMonitorLogAttributeResponseBody extends TeaMo
         private String success; 
 
         /**
-         * InstanceId.
+         * The ID of the fine-grained monitoring instance.
          */
         public Builder instanceId(String instanceId) {
             this.instanceId = instanceId;
@@ -106,7 +106,7 @@ public class DescribeHighDefinitionMonitorLogAttributeResponseBody extends TeaMo
         }
 
         /**
-         * InstanceType.
+         * The type of the monitoring instance that is queried. The value is set to **EIP**.
          */
         public Builder instanceType(String instanceType) {
             this.instanceType = instanceType;
@@ -114,7 +114,7 @@ public class DescribeHighDefinitionMonitorLogAttributeResponseBody extends TeaMo
         }
 
         /**
-         * LogProject.
+         * The name of the log project of Log Service.
          */
         public Builder logProject(String logProject) {
             this.logProject = logProject;
@@ -122,7 +122,7 @@ public class DescribeHighDefinitionMonitorLogAttributeResponseBody extends TeaMo
         }
 
         /**
-         * LogStore.
+         * The name of the Logstore of Log Service.
          */
         public Builder logStore(String logStore) {
             this.logStore = logStore;
@@ -130,7 +130,7 @@ public class DescribeHighDefinitionMonitorLogAttributeResponseBody extends TeaMo
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -138,7 +138,11 @@ public class DescribeHighDefinitionMonitorLogAttributeResponseBody extends TeaMo
         }
 
         /**
-         * Success.
+         * Indicates whether the operation is performed. Valid values:
+         * <p>
+         * 
+         * *   **true**: The operation is performed.
+         * *   **false**: The operation is not performed.
          */
         public Builder success(String success) {
             this.success = success;

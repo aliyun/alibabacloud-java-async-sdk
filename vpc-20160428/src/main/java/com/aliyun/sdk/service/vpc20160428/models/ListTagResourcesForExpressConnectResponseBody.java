@@ -62,7 +62,11 @@ public class ListTagResourcesForExpressConnectResponseBody extends TeaModel {
         private TagResources tagResources; 
 
         /**
-         * NextToken.
+         * The token that is used for the next query. Valid values:
+         * <p>
+         * 
+         * *   If the return value of **NextToken** is empty, no next query is to be sent.
+         * *   If a value is returned for **NextToken**, the value is the token that is used for the next query.
          */
         public Builder nextToken(String nextToken) {
             this.nextToken = nextToken;
@@ -70,7 +74,7 @@ public class ListTagResourcesForExpressConnectResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -78,7 +82,7 @@ public class ListTagResourcesForExpressConnectResponseBody extends TeaModel {
         }
 
         /**
-         * TagResources.
+         * The details about the tag.
          */
         public Builder tagResources(TagResources tagResources) {
             this.tagResources = tagResources;
@@ -154,7 +158,7 @@ public class ListTagResourcesForExpressConnectResponseBody extends TeaModel {
             private String tagValue; 
 
             /**
-             * ResourceId.
+             * The ID of the resource.
              */
             public Builder resourceId(String resourceId) {
                 this.resourceId = resourceId;
@@ -162,7 +166,7 @@ public class ListTagResourcesForExpressConnectResponseBody extends TeaModel {
             }
 
             /**
-             * ResourceType.
+             * The type of the resource. The value is set to **PHYSICALCONNECTION**, which indicates the Express Connect circuit.
              */
             public Builder resourceType(String resourceType) {
                 this.resourceType = resourceType;
@@ -170,7 +174,7 @@ public class ListTagResourcesForExpressConnectResponseBody extends TeaModel {
             }
 
             /**
-             * TagKey.
+             * The key of the tag that is added to the resource.
              */
             public Builder tagKey(String tagKey) {
                 this.tagKey = tagKey;
@@ -178,7 +182,7 @@ public class ListTagResourcesForExpressConnectResponseBody extends TeaModel {
             }
 
             /**
-             * TagValue.
+             * The value of the tag that is added to the resource.
              */
             public Builder tagValue(String tagValue) {
                 this.tagValue = tagValue;

@@ -128,7 +128,10 @@ public class DissociateVpnGatewayWithCertificateRequest extends Request {
         } 
 
         /**
-         * CertificateId.
+         * The certificate ID.
+         * <p>
+         * 
+         * > The certificate ID is generated after the SSL certificate is associated with the VPN gateway. It is not the ID of the SSL certificate. You can call [ListVpnCertificateAssociations](~~203359~~) to query certificate IDs.
          */
         public Builder certificateId(String certificateId) {
             this.putQueryParameter("CertificateId", certificateId);
@@ -137,7 +140,11 @@ public class DissociateVpnGatewayWithCertificateRequest extends Request {
         }
 
         /**
-         * CertificateType.
+         * The certificate type. Valid values:
+         * <p>
+         * 
+         * *   **Encryption**
+         * *   **Signature**
          */
         public Builder certificateType(String certificateType) {
             this.putQueryParameter("CertificateType", certificateType);
@@ -146,7 +153,12 @@ public class DissociateVpnGatewayWithCertificateRequest extends Request {
         }
 
         /**
-         * ClientToken.
+         * The client token that is used to ensure the idempotence of the request.
+         * <p>
+         * 
+         * You can use the client to generate the token, but you must make sure that the token is unique among different requests. The client token can contain only ASCII characters.
+         * 
+         * > If you do not specify this parameter, the system automatically uses the **request ID** as the **client token**. The **request ID** may be different for each request.
          */
         public Builder clientToken(String clientToken) {
             this.putQueryParameter("ClientToken", clientToken);
@@ -155,7 +167,11 @@ public class DissociateVpnGatewayWithCertificateRequest extends Request {
         }
 
         /**
-         * DryRun.
+         * Specifies whether to perform a dry run, without performing the actual request. Valid values:
+         * <p>
+         * 
+         * *   **true**: performs a dry run. The system checks the request for potential issues, including missing parameter values, incorrect request syntax, and service limits. If the request passes the dry run, the `DryRunOperation` error code is returned. Otherwise, an error message is returned.
+         * *   **false** (default): performs a dry run and performs the actual request. If the request passes the dry run, a 2xx HTTP status code is returned and the operation is performed.
          */
         public Builder dryRun(Boolean dryRun) {
             this.putQueryParameter("DryRun", dryRun);
@@ -164,7 +180,10 @@ public class DissociateVpnGatewayWithCertificateRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * The region ID of the VPN gateway.
+         * <p>
+         * 
+         * You can call the [DescribeRegions](~~36063~~) operation to query the most recent region list.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -173,7 +192,7 @@ public class DissociateVpnGatewayWithCertificateRequest extends Request {
         }
 
         /**
-         * VpnGatewayId.
+         * The ID of the VPN gateway.
          */
         public Builder vpnGatewayId(String vpnGatewayId) {
             this.putQueryParameter("VpnGatewayId", vpnGatewayId);

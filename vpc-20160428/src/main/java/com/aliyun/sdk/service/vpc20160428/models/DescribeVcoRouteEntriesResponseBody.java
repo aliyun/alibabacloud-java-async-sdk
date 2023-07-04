@@ -86,7 +86,7 @@ public class DescribeVcoRouteEntriesResponseBody extends TeaModel {
         private java.util.List < VcoRouteEntries> vcoRouteEntries; 
 
         /**
-         * PageNumber.
+         * The number of the returned page.
          */
         public Builder pageNumber(Integer pageNumber) {
             this.pageNumber = pageNumber;
@@ -94,7 +94,7 @@ public class DescribeVcoRouteEntriesResponseBody extends TeaModel {
         }
 
         /**
-         * PageSize.
+         * The number of entries returned per page.
          */
         public Builder pageSize(Integer pageSize) {
             this.pageSize = pageSize;
@@ -102,7 +102,7 @@ public class DescribeVcoRouteEntriesResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -110,7 +110,7 @@ public class DescribeVcoRouteEntriesResponseBody extends TeaModel {
         }
 
         /**
-         * TotalCount.
+         * The number of entries returned.
          */
         public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;
@@ -118,7 +118,7 @@ public class DescribeVcoRouteEntriesResponseBody extends TeaModel {
         }
 
         /**
-         * VcoRouteEntries.
+         * The list of routes.
          */
         public Builder vcoRouteEntries(java.util.List < VcoRouteEntries> vcoRouteEntries) {
             this.vcoRouteEntries = vcoRouteEntries;
@@ -266,7 +266,7 @@ public class DescribeVcoRouteEntriesResponseBody extends TeaModel {
             private Integer weight; 
 
             /**
-             * AsPath.
+             * The list of autonomous system (AS) numbers that the BGP route goes through.
              */
             public Builder asPath(String asPath) {
                 this.asPath = asPath;
@@ -274,7 +274,7 @@ public class DescribeVcoRouteEntriesResponseBody extends TeaModel {
             }
 
             /**
-             * Community.
+             * The community value carried by the BGP route.
              */
             public Builder community(String community) {
                 this.community = community;
@@ -282,7 +282,10 @@ public class DescribeVcoRouteEntriesResponseBody extends TeaModel {
             }
 
             /**
-             * CreateTime.
+             * The timestamp when the route was created.
+             * <p>
+             * 
+             * This value is a UNIX timestamp representing the number of milliseconds that have elapsed since the epoch time January 1, 1970, 00:00:00 UTC.
              */
             public Builder createTime(Long createTime) {
                 this.createTime = createTime;
@@ -290,7 +293,7 @@ public class DescribeVcoRouteEntriesResponseBody extends TeaModel {
             }
 
             /**
-             * NextHop.
+             * The next hop of the route.
              */
             public Builder nextHop(String nextHop) {
                 this.nextHop = nextHop;
@@ -298,7 +301,7 @@ public class DescribeVcoRouteEntriesResponseBody extends TeaModel {
             }
 
             /**
-             * RouteDest.
+             * The destination CIDR block of the route.
              */
             public Builder routeDest(String routeDest) {
                 this.routeDest = routeDest;
@@ -306,7 +309,11 @@ public class DescribeVcoRouteEntriesResponseBody extends TeaModel {
             }
 
             /**
-             * RouteEntryType.
+             * The route type. Valid values:
+             * <p>
+             * 
+             * *   **custom**: a destination-based route
+             * *   **bgp**: a BGP route
              */
             public Builder routeEntryType(String routeEntryType) {
                 this.routeEntryType = routeEntryType;
@@ -314,7 +321,11 @@ public class DescribeVcoRouteEntriesResponseBody extends TeaModel {
             }
 
             /**
-             * Source.
+             * The source of the BGP route. Valid values:
+             * <p>
+             * 
+             * *   **CLOUD**: indicates that the current BGP route is learned by the IPsec-VPN connection from the transit router.
+             * *   **VPN_BGP**: indicates that the current BGP route is learned by the IPsec-VPN connection from the data center.
              */
             public Builder source(String source) {
                 this.source = source;
@@ -322,7 +333,11 @@ public class DescribeVcoRouteEntriesResponseBody extends TeaModel {
             }
 
             /**
-             * State.
+             * The status of the route.
+             * <p>
+             * 
+             * *   **published**: indicates that the current route is advertised to the transit router.
+             * *   **Active**: indicates that the current BGP route is available.
              */
             public Builder state(String state) {
                 this.state = state;
@@ -330,7 +345,7 @@ public class DescribeVcoRouteEntriesResponseBody extends TeaModel {
             }
 
             /**
-             * VpnConnectionId.
+             * The ID of the IPsec-VPN connection.
              */
             public Builder vpnConnectionId(String vpnConnectionId) {
                 this.vpnConnectionId = vpnConnectionId;
@@ -338,7 +353,11 @@ public class DescribeVcoRouteEntriesResponseBody extends TeaModel {
             }
 
             /**
-             * Weight.
+             * The weight of the destination-based route. Valid values:
+             * <p>
+             * 
+             * *   **0**: a low priority
+             * *   **100**: a high priority
              */
             public Builder weight(Integer weight) {
                 this.weight = weight;

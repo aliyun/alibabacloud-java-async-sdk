@@ -298,7 +298,7 @@ public class CreateTrafficMirrorSessionRequest extends Request {
         } 
 
         /**
-         * ClientToken.
+         * The ID of the traffic mirror destination. You can specify only an elastic network interface (ENI) or a Server Load Balancer (SLB) instance as a traffic mirror destination.
          */
         public Builder clientToken(String clientToken) {
             this.putQueryParameter("ClientToken", clientToken);
@@ -307,7 +307,11 @@ public class CreateTrafficMirrorSessionRequest extends Request {
         }
 
         /**
-         * DryRun.
+         * The type of the traffic mirror destination. Valid values:
+         * <p>
+         * 
+         * *   **NetworkInterface**: an ENI
+         * *   **SLB**: an SLB instance
          */
         public Builder dryRun(Boolean dryRun) {
             this.putQueryParameter("DryRun", dryRun);
@@ -316,7 +320,7 @@ public class CreateTrafficMirrorSessionRequest extends Request {
         }
 
         /**
-         * Enabled.
+         * The ID of the traffic mirror source. You can specify only an ENI as the traffic mirror source. The default value of **N** is **1**, which means that you can add only one traffic mirror source to a traffic mirror session.
          */
         public Builder enabled(Boolean enabled) {
             this.putQueryParameter("Enabled", enabled);
@@ -343,7 +347,7 @@ public class CreateTrafficMirrorSessionRequest extends Request {
         }
 
         /**
-         * PacketLength.
+         * The ID of the region to which the traffic mirror session belongs. You can call the [DescribeRegions](~~36063~~) operation to query the most recent region list. For more information about regions that support traffic mirroring, see [Overview of traffic mirroring](~~207513~~).
          */
         public Builder packetLength(Integer packetLength) {
             this.putQueryParameter("PacketLength", packetLength);
@@ -352,7 +356,7 @@ public class CreateTrafficMirrorSessionRequest extends Request {
         }
 
         /**
-         * Priority.
+         * The maximum transmission unit (MTU). Default value: **1500**.
          */
         public Builder priority(Integer priority) {
             this.putQueryParameter("Priority", priority);
@@ -361,7 +365,7 @@ public class CreateTrafficMirrorSessionRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * The ID of the traffic mirror session.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -370,7 +374,7 @@ public class CreateTrafficMirrorSessionRequest extends Request {
         }
 
         /**
-         * ResourceGroupId.
+         * The ID of the request.
          */
         public Builder resourceGroupId(String resourceGroupId) {
             this.putQueryParameter("ResourceGroupId", resourceGroupId);
@@ -397,7 +401,10 @@ public class CreateTrafficMirrorSessionRequest extends Request {
         }
 
         /**
-         * TrafficMirrorFilterId.
+         * The priority of the traffic mirror session. Valid values: **1** to **32766**.
+         * <p>
+         * 
+         * A smaller value indicates a higher priority. You cannot specify identical priorities for traffic mirror sessions that are created in the same region by using the same account.
          */
         public Builder trafficMirrorFilterId(String trafficMirrorFilterId) {
             this.putQueryParameter("TrafficMirrorFilterId", trafficMirrorFilterId);
@@ -406,7 +413,12 @@ public class CreateTrafficMirrorSessionRequest extends Request {
         }
 
         /**
-         * TrafficMirrorSessionDescription.
+         * The client token that is used to ensure the idempotence of the request.
+         * <p>
+         * 
+         * You can use the client to generate the value, but you must ensure that the value is unique among all requests. The client token can contain only ASCII characters.
+         * 
+         * >  If you do not set this parameter, the system uses **RequestId** as **ClientToken**. **RequestId** might be different for each API request.
          */
         public Builder trafficMirrorSessionDescription(String trafficMirrorSessionDescription) {
             this.putQueryParameter("TrafficMirrorSessionDescription", trafficMirrorSessionDescription);
@@ -415,7 +427,11 @@ public class CreateTrafficMirrorSessionRequest extends Request {
         }
 
         /**
-         * TrafficMirrorSessionName.
+         * Specifies whether to perform a dry run. Valid values:
+         * <p>
+         * 
+         * *   **true**: performs a dry run. The system checks the required parameters, request format, and limits. If the request fails the dry run, an error message is returned. If the request passes the dry run, the `DryRunOperation` error code is returned.
+         * *   **false** (default): performs a dry run and sends the request. If the request passes the dry run, the operation is performed.
          */
         public Builder trafficMirrorSessionName(String trafficMirrorSessionName) {
             this.putQueryParameter("TrafficMirrorSessionName", trafficMirrorSessionName);
@@ -433,7 +449,7 @@ public class CreateTrafficMirrorSessionRequest extends Request {
         }
 
         /**
-         * TrafficMirrorTargetId.
+         * The ID of the filter.
          */
         public Builder trafficMirrorTargetId(String trafficMirrorTargetId) {
             this.putQueryParameter("TrafficMirrorTargetId", trafficMirrorTargetId);
@@ -442,7 +458,10 @@ public class CreateTrafficMirrorSessionRequest extends Request {
         }
 
         /**
-         * TrafficMirrorTargetType.
+         * The VXLAN network identifier (VNI). Valid values: **0** to **16777215**.
+         * <p>
+         * 
+         * You can use VNIs to identify mirrored traffic from different sessions at the traffic mirror destination. You can specify a custom VNI or use a random VNI allocated by the system. If you want the system to randomly allocate a VNI, do not enter a value.
          */
         public Builder trafficMirrorTargetType(String trafficMirrorTargetType) {
             this.putQueryParameter("TrafficMirrorTargetType", trafficMirrorTargetType);
@@ -451,7 +470,11 @@ public class CreateTrafficMirrorSessionRequest extends Request {
         }
 
         /**
-         * VirtualNetworkId.
+         * Specifies whether to enable the traffic mirror session. Valid values:
+         * <p>
+         * 
+         * *   **false** (default): does not enable the traffic mirror session.
+         * *   **true**: enables the traffic mirror session.
          */
         public Builder virtualNetworkId(Integer virtualNetworkId) {
             this.putQueryParameter("VirtualNetworkId", virtualNetworkId);

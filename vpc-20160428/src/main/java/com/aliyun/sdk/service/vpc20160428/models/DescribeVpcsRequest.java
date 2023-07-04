@@ -238,7 +238,11 @@ public class DescribeVpcsRequest extends Request {
         } 
 
         /**
-         * DhcpOptionsSetId.
+         * Indicates whether the VPC is the default VPC in the region. Valid values:
+         * <p>
+         * 
+         * *   **true**: yes
+         * *   **false**: no
          */
         public Builder dhcpOptionsSetId(String dhcpOptionsSetId) {
             this.putQueryParameter("DhcpOptionsSetId", dhcpOptionsSetId);
@@ -247,7 +251,7 @@ public class DescribeVpcsRequest extends Request {
         }
 
         /**
-         * DryRun.
+         * The number of entries returned.
          */
         public Builder dryRun(Boolean dryRun) {
             this.putQueryParameter("DryRun", dryRun);
@@ -256,7 +260,7 @@ public class DescribeVpcsRequest extends Request {
         }
 
         /**
-         * IsDefault.
+         * The number of the returned page.
          */
         public Builder isDefault(Boolean isDefault) {
             this.putQueryParameter("IsDefault", isDefault);
@@ -283,7 +287,7 @@ public class DescribeVpcsRequest extends Request {
         }
 
         /**
-         * PageNumber.
+         * The time when the VPC was created.
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -292,7 +296,11 @@ public class DescribeVpcsRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * The status of the VPC. Valid values:
+         * <p>
+         * 
+         * *   **Pending**: being configured
+         * *   **Available**: available
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -301,7 +309,7 @@ public class DescribeVpcsRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * The number of entries returned per page.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -310,7 +318,7 @@ public class DescribeVpcsRequest extends Request {
         }
 
         /**
-         * ResourceGroupId.
+         * The details of the VPCs.
          */
         public Builder resourceGroupId(String resourceGroupId) {
             this.putQueryParameter("ResourceGroupId", resourceGroupId);
@@ -337,7 +345,7 @@ public class DescribeVpcsRequest extends Request {
         }
 
         /**
-         * VpcId.
+         * The ID of the DHCP options set.
          */
         public Builder vpcId(String vpcId) {
             this.putQueryParameter("VpcId", vpcId);
@@ -346,7 +354,7 @@ public class DescribeVpcsRequest extends Request {
         }
 
         /**
-         * VpcName.
+         * The ID of the request.
          */
         public Builder vpcName(String vpcName) {
             this.putQueryParameter("VpcName", vpcName);
@@ -355,7 +363,7 @@ public class DescribeVpcsRequest extends Request {
         }
 
         /**
-         * VpcOwnerId.
+         * The ID of the VPC.
          */
         public Builder vpcOwnerId(Long vpcOwnerId) {
             this.putQueryParameter("VpcOwnerId", vpcOwnerId);

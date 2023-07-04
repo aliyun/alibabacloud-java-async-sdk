@@ -195,7 +195,10 @@ public class ModifyVSwitchAttributeRequest extends Request {
         } 
 
         /**
-         * Description.
+         * The new description for the vSwitch.
+         * <p>
+         * 
+         * The description must be 1 to 256 characters in length and cannot start with `http://` or `https://`.
          */
         public Builder description(String description) {
             this.putQueryParameter("Description", description);
@@ -204,7 +207,11 @@ public class ModifyVSwitchAttributeRequest extends Request {
         }
 
         /**
-         * EnableIPv6.
+         * Specifies whether to enable the IPv6 feature for the vSwitch. Valid values:
+         * <p>
+         * 
+         * *   **true**: enables the IPv6 feature.
+         * *   **false**: disables the IPv6 feature. This is the default value.
          */
         public Builder enableIPv6(Boolean enableIPv6) {
             this.putQueryParameter("EnableIPv6", enableIPv6);
@@ -213,7 +220,10 @@ public class ModifyVSwitchAttributeRequest extends Request {
         }
 
         /**
-         * Ipv6CidrBlock.
+         * The last eight bits of the IPv6 CIDR block of the vSwitch. Valid values: **0** to **255**.
+         * <p>
+         * 
+         * You can set this parameter only when the IPv6 feature is enabled for the virtual private cloud (VPC) to which the vSwitch belongs.
          */
         public Builder ipv6CidrBlock(Integer ipv6CidrBlock) {
             this.putQueryParameter("Ipv6CidrBlock", ipv6CidrBlock);
@@ -240,7 +250,7 @@ public class ModifyVSwitchAttributeRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * The ID of the region where the vSwitch is deployed. You can call the [DescribeRegions](~~36063~~) operation to query the most recent region list.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -267,7 +277,7 @@ public class ModifyVSwitchAttributeRequest extends Request {
         }
 
         /**
-         * VSwitchId.
+         * The ID of the vSwitch.
          */
         public Builder vSwitchId(String vSwitchId) {
             this.putQueryParameter("VSwitchId", vSwitchId);
@@ -276,7 +286,10 @@ public class ModifyVSwitchAttributeRequest extends Request {
         }
 
         /**
-         * VSwitchName.
+         * The new name for the vSwitch.
+         * <p>
+         * 
+         * The name must be 1 to 128 characters in length, and cannot start with `http://` or `https://`.
          */
         public Builder vSwitchName(String vSwitchName) {
             this.putQueryParameter("VSwitchName", vSwitchName);
@@ -285,7 +298,10 @@ public class ModifyVSwitchAttributeRequest extends Request {
         }
 
         /**
-         * VpcIpv6CidrBlock.
+         * The IPv6 CIDR block of the VPC to which the vSwitch belongs.
+         * <p>
+         * 
+         * You can set this parameter only when the IPv6 feature is enabled for the VPC.
          */
         public Builder vpcIpv6CidrBlock(String vpcIpv6CidrBlock) {
             this.putQueryParameter("VpcIpv6CidrBlock", vpcIpv6CidrBlock);

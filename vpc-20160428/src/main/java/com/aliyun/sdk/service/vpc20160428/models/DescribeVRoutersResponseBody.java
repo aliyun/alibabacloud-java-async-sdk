@@ -86,7 +86,7 @@ public class DescribeVRoutersResponseBody extends TeaModel {
         private VRouters vRouters; 
 
         /**
-         * PageNumber.
+         * The page number of the returned page.
          */
         public Builder pageNumber(Integer pageNumber) {
             this.pageNumber = pageNumber;
@@ -94,7 +94,7 @@ public class DescribeVRoutersResponseBody extends TeaModel {
         }
 
         /**
-         * PageSize.
+         * The number of entries returned per page.
          */
         public Builder pageSize(Integer pageSize) {
             this.pageSize = pageSize;
@@ -102,7 +102,7 @@ public class DescribeVRoutersResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -110,7 +110,7 @@ public class DescribeVRoutersResponseBody extends TeaModel {
         }
 
         /**
-         * TotalCount.
+         * The number of entries returned.
          */
         public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;
@@ -118,7 +118,7 @@ public class DescribeVRoutersResponseBody extends TeaModel {
         }
 
         /**
-         * VRouters.
+         * The details about the vRouters.
          */
         public Builder vRouters(VRouters vRouters) {
             this.vRouters = vRouters;
@@ -271,7 +271,7 @@ public class DescribeVRoutersResponseBody extends TeaModel {
             private String vpcId; 
 
             /**
-             * CreationTime.
+             * The time when the vRouter was created.
              */
             public Builder creationTime(String creationTime) {
                 this.creationTime = creationTime;
@@ -279,7 +279,7 @@ public class DescribeVRoutersResponseBody extends TeaModel {
             }
 
             /**
-             * Description.
+             * The description of the vRouter.
              */
             public Builder description(String description) {
                 this.description = description;
@@ -287,7 +287,7 @@ public class DescribeVRoutersResponseBody extends TeaModel {
             }
 
             /**
-             * RegionId.
+             * The region to which the vRouter belongs.
              */
             public Builder regionId(String regionId) {
                 this.regionId = regionId;
@@ -295,7 +295,7 @@ public class DescribeVRoutersResponseBody extends TeaModel {
             }
 
             /**
-             * RouteTableIds.
+             * The ID of the route table in the vRouter.
              */
             public Builder routeTableIds(RouteTableIds routeTableIds) {
                 this.routeTableIds = routeTableIds;
@@ -303,7 +303,7 @@ public class DescribeVRoutersResponseBody extends TeaModel {
             }
 
             /**
-             * VRouterId.
+             * The ID of the vRouter.
              */
             public Builder vRouterId(String vRouterId) {
                 this.vRouterId = vRouterId;
@@ -311,7 +311,7 @@ public class DescribeVRoutersResponseBody extends TeaModel {
             }
 
             /**
-             * VRouterName.
+             * The name of the vRouter.
              */
             public Builder vRouterName(String vRouterName) {
                 this.vRouterName = vRouterName;
@@ -319,7 +319,7 @@ public class DescribeVRoutersResponseBody extends TeaModel {
             }
 
             /**
-             * VpcId.
+             * The ID of the virtual private cloud (VPC) to which the vRouter belongs.
              */
             public Builder vpcId(String vpcId) {
                 this.vpcId = vpcId;

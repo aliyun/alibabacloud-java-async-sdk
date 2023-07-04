@@ -50,7 +50,7 @@ public class CreateExpressCloudConnectionResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * EccId.
+         * The ID of the ECC instance.
          */
         public Builder eccId(String eccId) {
             this.eccId = eccId;
@@ -58,7 +58,7 @@ public class CreateExpressCloudConnectionResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

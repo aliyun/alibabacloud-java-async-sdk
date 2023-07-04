@@ -182,7 +182,7 @@ public class DescribeTagKeysForExpressConnectRequest extends Request {
         } 
 
         /**
-         * Keyword.
+         * The keyword of the tag. The keyword is used to perform a fuzzy match. You can specify a keyword to query all tags that contain the keyword.
          */
         public Builder keyword(String keyword) {
             this.putQueryParameter("Keyword", keyword);
@@ -191,7 +191,7 @@ public class DescribeTagKeysForExpressConnectRequest extends Request {
         }
 
         /**
-         * MaxResult.
+         * The number of entries to return on each page. Valid values: **1** to **100**. Default value: **20**.
          */
         public Builder maxResult(Integer maxResult) {
             this.putQueryParameter("MaxResult", maxResult);
@@ -200,7 +200,11 @@ public class DescribeTagKeysForExpressConnectRequest extends Request {
         }
 
         /**
-         * NextToken.
+         * The token that is used for the next query. Valid values:
+         * <p>
+         * 
+         * *   If this is your first query and no next queries are to be sent, ignore this parameter.
+         * *   If a next query is to be sent, set the parameter to the value of NextToken that is returned from the last call.
          */
         public Builder nextToken(String nextToken) {
             this.putQueryParameter("NextToken", nextToken);
@@ -227,7 +231,10 @@ public class DescribeTagKeysForExpressConnectRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * The ID of the region to which the resource belongs.
+         * <p>
+         * 
+         * You can call the [DescribeRegions](~~36063~~) operation to query the most recent region list.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -263,7 +270,7 @@ public class DescribeTagKeysForExpressConnectRequest extends Request {
         }
 
         /**
-         * ResourceType.
+         * The type of the resource. Set the value to **PHYSICALCONNECTION**, which specifies an Express Connect circuit.
          */
         public Builder resourceType(String resourceType) {
             this.putQueryParameter("ResourceType", resourceType);

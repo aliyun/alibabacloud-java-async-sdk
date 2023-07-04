@@ -129,7 +129,10 @@ public class GetPhysicalConnectionServiceStatusRequest extends Request {
         }
 
         /**
-         * 地域
+         * The ID of the region for which you want to query the status of outbound data transfer billing.
+         * <p>
+         * 
+         * You can call the [DescribeRegions](~~36063~~) operation to query the most recent region list.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);

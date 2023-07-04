@@ -86,7 +86,7 @@ public class DescribeIpv6AddressesResponseBody extends TeaModel {
         private Integer totalCount; 
 
         /**
-         * Ipv6Addresses.
+         * The details about the IPv6 addresses.
          */
         public Builder ipv6Addresses(Ipv6Addresses ipv6Addresses) {
             this.ipv6Addresses = ipv6Addresses;
@@ -94,7 +94,7 @@ public class DescribeIpv6AddressesResponseBody extends TeaModel {
         }
 
         /**
-         * PageNumber.
+         * The number of the returned page. Default value: **1**.
          */
         public Builder pageNumber(Integer pageNumber) {
             this.pageNumber = pageNumber;
@@ -102,7 +102,7 @@ public class DescribeIpv6AddressesResponseBody extends TeaModel {
         }
 
         /**
-         * PageSize.
+         * The number of entries returned on each page. Maximum value: **50**. Default value: **10**.
          */
         public Builder pageSize(Integer pageSize) {
             this.pageSize = pageSize;
@@ -110,7 +110,7 @@ public class DescribeIpv6AddressesResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -118,7 +118,7 @@ public class DescribeIpv6AddressesResponseBody extends TeaModel {
         }
 
         /**
-         * TotalCount.
+         * The total number of entries returned.
          */
         public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;
@@ -138,6 +138,9 @@ public class DescribeIpv6AddressesResponseBody extends TeaModel {
         @NameInMap("BusinessStatus")
         private String businessStatus;
 
+        @NameInMap("HasReservationData")
+        private Boolean hasReservationData;
+
         @NameInMap("InstanceChargeType")
         private String instanceChargeType;
 
@@ -147,12 +150,29 @@ public class DescribeIpv6AddressesResponseBody extends TeaModel {
         @NameInMap("Ipv6InternetBandwidthId")
         private String ipv6InternetBandwidthId;
 
+        @NameInMap("ReservationActiveTime")
+        private String reservationActiveTime;
+
+        @NameInMap("ReservationBandwidth")
+        private Long reservationBandwidth;
+
+        @NameInMap("ReservationInternetChargeType")
+        private String reservationInternetChargeType;
+
+        @NameInMap("ReservationOrderType")
+        private String reservationOrderType;
+
         private Ipv6InternetBandwidth(Builder builder) {
             this.bandwidth = builder.bandwidth;
             this.businessStatus = builder.businessStatus;
+            this.hasReservationData = builder.hasReservationData;
             this.instanceChargeType = builder.instanceChargeType;
             this.internetChargeType = builder.internetChargeType;
             this.ipv6InternetBandwidthId = builder.ipv6InternetBandwidthId;
+            this.reservationActiveTime = builder.reservationActiveTime;
+            this.reservationBandwidth = builder.reservationBandwidth;
+            this.reservationInternetChargeType = builder.reservationInternetChargeType;
+            this.reservationOrderType = builder.reservationOrderType;
         }
 
         public static Builder builder() {
@@ -178,6 +198,13 @@ public class DescribeIpv6AddressesResponseBody extends TeaModel {
         }
 
         /**
+         * @return hasReservationData
+         */
+        public Boolean getHasReservationData() {
+            return this.hasReservationData;
+        }
+
+        /**
          * @return instanceChargeType
          */
         public String getInstanceChargeType() {
@@ -198,15 +225,48 @@ public class DescribeIpv6AddressesResponseBody extends TeaModel {
             return this.ipv6InternetBandwidthId;
         }
 
+        /**
+         * @return reservationActiveTime
+         */
+        public String getReservationActiveTime() {
+            return this.reservationActiveTime;
+        }
+
+        /**
+         * @return reservationBandwidth
+         */
+        public Long getReservationBandwidth() {
+            return this.reservationBandwidth;
+        }
+
+        /**
+         * @return reservationInternetChargeType
+         */
+        public String getReservationInternetChargeType() {
+            return this.reservationInternetChargeType;
+        }
+
+        /**
+         * @return reservationOrderType
+         */
+        public String getReservationOrderType() {
+            return this.reservationOrderType;
+        }
+
         public static final class Builder {
             private Integer bandwidth; 
             private String businessStatus; 
+            private Boolean hasReservationData; 
             private String instanceChargeType; 
             private String internetChargeType; 
             private String ipv6InternetBandwidthId; 
+            private String reservationActiveTime; 
+            private Long reservationBandwidth; 
+            private String reservationInternetChargeType; 
+            private String reservationOrderType; 
 
             /**
-             * Bandwidth.
+             * The exclusive Internet bandwidth of the IPv6 address. Unit: Mbit/s.
              */
             public Builder bandwidth(Integer bandwidth) {
                 this.bandwidth = bandwidth;
@@ -214,7 +274,12 @@ public class DescribeIpv6AddressesResponseBody extends TeaModel {
             }
 
             /**
-             * BusinessStatus.
+             * The status of the Internet bandwidth of the IPv6 address. Valid values:
+             * <p>
+             * 
+             * *   **Normal**: normal
+             * *   **FinancialLocked**: locked due to overdue payments
+             * *   **SecurityLocked**: locked due to security reasons
              */
             public Builder businessStatus(String businessStatus) {
                 this.businessStatus = businessStatus;
@@ -222,7 +287,18 @@ public class DescribeIpv6AddressesResponseBody extends TeaModel {
             }
 
             /**
-             * InstanceChargeType.
+             * HasReservationData.
+             */
+            public Builder hasReservationData(Boolean hasReservationData) {
+                this.hasReservationData = hasReservationData;
+                return this;
+            }
+
+            /**
+             * The billing method of the Internet bandwidth of the IPv6 address. Valid values:
+             * <p>
+             * 
+             * **PostPaid**: pay-as-you-go
              */
             public Builder instanceChargeType(String instanceChargeType) {
                 this.instanceChargeType = instanceChargeType;
@@ -230,7 +306,11 @@ public class DescribeIpv6AddressesResponseBody extends TeaModel {
             }
 
             /**
-             * InternetChargeType.
+             * The billing method of the Internet bandwidth of the IPv6 address. Valid values:
+             * <p>
+             * 
+             * *   **PayByTraffic**: pay-by-data-transfer
+             * *   **PayByBandwidth**: pay-by-bandwidth
              */
             public Builder internetChargeType(String internetChargeType) {
                 this.internetChargeType = internetChargeType;
@@ -238,10 +318,42 @@ public class DescribeIpv6AddressesResponseBody extends TeaModel {
             }
 
             /**
-             * Ipv6InternetBandwidthId.
+             * The instance ID of the Internet bandwidth of the IPv6 address.
              */
             public Builder ipv6InternetBandwidthId(String ipv6InternetBandwidthId) {
                 this.ipv6InternetBandwidthId = ipv6InternetBandwidthId;
+                return this;
+            }
+
+            /**
+             * ReservationActiveTime.
+             */
+            public Builder reservationActiveTime(String reservationActiveTime) {
+                this.reservationActiveTime = reservationActiveTime;
+                return this;
+            }
+
+            /**
+             * ReservationBandwidth.
+             */
+            public Builder reservationBandwidth(Long reservationBandwidth) {
+                this.reservationBandwidth = reservationBandwidth;
+                return this;
+            }
+
+            /**
+             * ReservationInternetChargeType.
+             */
+            public Builder reservationInternetChargeType(String reservationInternetChargeType) {
+                this.reservationInternetChargeType = reservationInternetChargeType;
+                return this;
+            }
+
+            /**
+             * ReservationOrderType.
+             */
+            public Builder reservationOrderType(String reservationOrderType) {
+                this.reservationOrderType = reservationOrderType;
                 return this;
             }
 
@@ -435,7 +547,7 @@ public class DescribeIpv6AddressesResponseBody extends TeaModel {
             private String vpcId; 
 
             /**
-             * AllocationTime.
+             * The time when the IPv6 address was created.
              */
             public Builder allocationTime(String allocationTime) {
                 this.allocationTime = allocationTime;
@@ -443,7 +555,7 @@ public class DescribeIpv6AddressesResponseBody extends TeaModel {
             }
 
             /**
-             * AssociatedInstanceId.
+             * The ID of the instance that is assigned the IPv6 address.
              */
             public Builder associatedInstanceId(String associatedInstanceId) {
                 this.associatedInstanceId = associatedInstanceId;
@@ -451,7 +563,7 @@ public class DescribeIpv6AddressesResponseBody extends TeaModel {
             }
 
             /**
-             * AssociatedInstanceType.
+             * The type of the instance that is assigned the IPv6 address.
              */
             public Builder associatedInstanceType(String associatedInstanceType) {
                 this.associatedInstanceType = associatedInstanceType;
@@ -459,7 +571,7 @@ public class DescribeIpv6AddressesResponseBody extends TeaModel {
             }
 
             /**
-             * Ipv6Address.
+             * The IPv6 address.
              */
             public Builder ipv6Address(String ipv6Address) {
                 this.ipv6Address = ipv6Address;
@@ -467,7 +579,7 @@ public class DescribeIpv6AddressesResponseBody extends TeaModel {
             }
 
             /**
-             * Ipv6AddressId.
+             * The ID of the IPv6 address.
              */
             public Builder ipv6AddressId(String ipv6AddressId) {
                 this.ipv6AddressId = ipv6AddressId;
@@ -475,7 +587,7 @@ public class DescribeIpv6AddressesResponseBody extends TeaModel {
             }
 
             /**
-             * Ipv6AddressName.
+             * The name of the IPv6 address.
              */
             public Builder ipv6AddressName(String ipv6AddressName) {
                 this.ipv6AddressName = ipv6AddressName;
@@ -483,7 +595,7 @@ public class DescribeIpv6AddressesResponseBody extends TeaModel {
             }
 
             /**
-             * Ipv6GatewayId.
+             * The ID of the IPv6 gateway to which the IPv6 address belongs.
              */
             public Builder ipv6GatewayId(String ipv6GatewayId) {
                 this.ipv6GatewayId = ipv6GatewayId;
@@ -491,7 +603,7 @@ public class DescribeIpv6AddressesResponseBody extends TeaModel {
             }
 
             /**
-             * Ipv6InternetBandwidth.
+             * The information about the Internet bandwidth of the IPv6 address.
              */
             public Builder ipv6InternetBandwidth(Ipv6InternetBandwidth ipv6InternetBandwidth) {
                 this.ipv6InternetBandwidth = ipv6InternetBandwidth;
@@ -499,7 +611,13 @@ public class DescribeIpv6AddressesResponseBody extends TeaModel {
             }
 
             /**
-             * Ipv6Isp.
+             * The service provider of the IPv6 address. Valid values:
+             * <p>
+             * 
+             * *   **BGP**: Alibaba Cloud Border Gateway Protocol (BGP) IPv6. This is the default value.
+             * *   **ChinaMobile**: China Mobile (single ISP).
+             * *   **ChinaUnicom**: China Unicom (single ISP).
+             * *   **ChinaTelecom**: China Telecom (single ISP).
              */
             public Builder ipv6Isp(String ipv6Isp) {
                 this.ipv6Isp = ipv6Isp;
@@ -507,7 +625,11 @@ public class DescribeIpv6AddressesResponseBody extends TeaModel {
             }
 
             /**
-             * NetworkType.
+             * The type of communication supported by the IPv6 address. Valid values:
+             * <p>
+             * 
+             * *   **Private**: communication within private networks
+             * *   **Public**: communication over the Internet
              */
             public Builder networkType(String networkType) {
                 this.networkType = networkType;
@@ -515,7 +637,12 @@ public class DescribeIpv6AddressesResponseBody extends TeaModel {
             }
 
             /**
-             * RealBandwidth.
+             * The maximum bandwidth value of the IPv6 address.
+             * <p>
+             * 
+             * *   If the IPv6 address is associated with an EIP bandwidth plan, the value of **RealBandwidth** is the maximum bandwidth value of the EIP bandwidth plan.
+             * *   If the IPv6 address is not associated with an EIP bandwidth plan, the value of **RealBandwidth** is the maximum bandwidth value of the Internet bandwidth of the IPv6 address.
+             * *   If the IPv6 address is not associated with an EIP bandwidth plan or an Internet bandwidth plan, the values of **RealBandwidth** and **Bandwidth** are both 0.
              */
             public Builder realBandwidth(Integer realBandwidth) {
                 this.realBandwidth = realBandwidth;
@@ -523,7 +650,11 @@ public class DescribeIpv6AddressesResponseBody extends TeaModel {
             }
 
             /**
-             * Status.
+             * The status of the IPv6 address. Valid values:
+             * <p>
+             * 
+             * *   **Pending**: being configured
+             * *   **Available**: available
              */
             public Builder status(String status) {
                 this.status = status;
@@ -531,7 +662,7 @@ public class DescribeIpv6AddressesResponseBody extends TeaModel {
             }
 
             /**
-             * VSwitchId.
+             * The ID of the vSwitch to which the IPv6 address belongs.
              */
             public Builder vSwitchId(String vSwitchId) {
                 this.vSwitchId = vSwitchId;
@@ -539,7 +670,7 @@ public class DescribeIpv6AddressesResponseBody extends TeaModel {
             }
 
             /**
-             * VpcId.
+             * The ID of the VPC to which the IPv6 address belongs.
              */
             public Builder vpcId(String vpcId) {
                 this.vpcId = vpcId;
@@ -580,7 +711,7 @@ public class DescribeIpv6AddressesResponseBody extends TeaModel {
             private java.util.List < Ipv6Address> ipv6Address; 
 
             /**
-             * Ipv6Address.
+             * The IPv6 address.
              */
             public Builder ipv6Address(java.util.List < Ipv6Address> ipv6Address) {
                 this.ipv6Address = ipv6Address;

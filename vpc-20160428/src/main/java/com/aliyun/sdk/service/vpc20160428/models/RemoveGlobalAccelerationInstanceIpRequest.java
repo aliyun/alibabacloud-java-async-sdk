@@ -141,7 +141,7 @@ public class RemoveGlobalAccelerationInstanceIpRequest extends Request {
         } 
 
         /**
-         * GlobalAccelerationInstanceId.
+         * The ID of the shared-bandwidth instance.
          */
         public Builder globalAccelerationInstanceId(String globalAccelerationInstanceId) {
             this.putQueryParameter("GlobalAccelerationInstanceId", globalAccelerationInstanceId);
@@ -150,7 +150,10 @@ public class RemoveGlobalAccelerationInstanceIpRequest extends Request {
         }
 
         /**
-         * IpInstanceId.
+         * The ID of the EIP.
+         * <p>
+         * 
+         * To query the EIP ID, call DescribeEipAddresses.
          */
         public Builder ipInstanceId(String ipInstanceId) {
             this.putQueryParameter("IpInstanceId", ipInstanceId);
@@ -177,7 +180,10 @@ public class RemoveGlobalAccelerationInstanceIpRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * The ID of the region where the shared-bandwidth instance is located.
+         * <p>
+         * 
+         * To query the region ID, call DescribeRegions.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);

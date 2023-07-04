@@ -184,7 +184,7 @@ public class AllocateIpv6InternetBandwidthRequest extends Request {
         } 
 
         /**
-         * Bandwidth.
+         * The Internet bandwidth that you want to purchase for the IPv6 gateway. Valid values: **1 to 5000**. Unit: Mbit/s.
          */
         public Builder bandwidth(Integer bandwidth) {
             this.putQueryParameter("Bandwidth", bandwidth);
@@ -193,7 +193,12 @@ public class AllocateIpv6InternetBandwidthRequest extends Request {
         }
 
         /**
-         * ClientToken.
+         * The client token that is used to ensure the idempotence of the request.
+         * <p>
+         * 
+         * You can use the client to generate the value, but you must ensure that the value is unique among all requests. ClientToken can contain only ASCII characters.
+         * 
+         * >  If you do not set this parameter, **ClientToken** is set to the value of **RequestId**. The value of **RequestId** may be different for each API request.
          */
         public Builder clientToken(String clientToken) {
             this.putQueryParameter("ClientToken", clientToken);
@@ -202,7 +207,11 @@ public class AllocateIpv6InternetBandwidthRequest extends Request {
         }
 
         /**
-         * InternetChargeType.
+         * The metering method of the Internet bandwidth of the IPv6 gateway. Valid values:
+         * <p>
+         * 
+         * *   **PayByTraffic**: the pay-by-data-transfer metering method
+         * *   **PayByBandwidth**: the pay-by-bandwidth metering method
          */
         public Builder internetChargeType(String internetChargeType) {
             this.putQueryParameter("InternetChargeType", internetChargeType);
@@ -211,7 +220,7 @@ public class AllocateIpv6InternetBandwidthRequest extends Request {
         }
 
         /**
-         * Ipv6AddressId.
+         * The ID of the IPv6 address.
          */
         public Builder ipv6AddressId(String ipv6AddressId) {
             this.putQueryParameter("Ipv6AddressId", ipv6AddressId);
@@ -220,7 +229,7 @@ public class AllocateIpv6InternetBandwidthRequest extends Request {
         }
 
         /**
-         * Ipv6GatewayId.
+         * The ID of the IPv6 gateway.
          */
         public Builder ipv6GatewayId(String ipv6GatewayId) {
             this.putQueryParameter("Ipv6GatewayId", ipv6GatewayId);
@@ -247,7 +256,7 @@ public class AllocateIpv6InternetBandwidthRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * The ID of the region where the IPv6 gateway is deployed. You can call the [DescribeRegions](~~36063~~) operation to obtain the region ID.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);

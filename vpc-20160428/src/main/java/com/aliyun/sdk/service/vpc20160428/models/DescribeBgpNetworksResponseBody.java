@@ -86,7 +86,7 @@ public class DescribeBgpNetworksResponseBody extends TeaModel {
         private Integer totalCount; 
 
         /**
-         * BgpNetworks.
+         * BGP networks.
          */
         public Builder bgpNetworks(BgpNetworks bgpNetworks) {
             this.bgpNetworks = bgpNetworks;
@@ -94,7 +94,7 @@ public class DescribeBgpNetworksResponseBody extends TeaModel {
         }
 
         /**
-         * PageNumber.
+         * The page number of the returned page.
          */
         public Builder pageNumber(Integer pageNumber) {
             this.pageNumber = pageNumber;
@@ -102,7 +102,7 @@ public class DescribeBgpNetworksResponseBody extends TeaModel {
         }
 
         /**
-         * PageSize.
+         * The number of entries returned per page.
          */
         public Builder pageSize(Integer pageSize) {
             this.pageSize = pageSize;
@@ -110,7 +110,7 @@ public class DescribeBgpNetworksResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -118,7 +118,7 @@ public class DescribeBgpNetworksResponseBody extends TeaModel {
         }
 
         /**
-         * TotalCount.
+         * The total number of advertised BGP networks.
          */
         public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;
@@ -194,7 +194,7 @@ public class DescribeBgpNetworksResponseBody extends TeaModel {
             private String vpcId; 
 
             /**
-             * DstCidrBlock.
+             * The CIDR block of the advertised BGP network.
              */
             public Builder dstCidrBlock(String dstCidrBlock) {
                 this.dstCidrBlock = dstCidrBlock;
@@ -202,7 +202,7 @@ public class DescribeBgpNetworksResponseBody extends TeaModel {
             }
 
             /**
-             * RouterId.
+             * The ID of the VBR.
              */
             public Builder routerId(String routerId) {
                 this.routerId = routerId;
@@ -210,7 +210,7 @@ public class DescribeBgpNetworksResponseBody extends TeaModel {
             }
 
             /**
-             * Status.
+             * The status of the advertised BGP network.
              */
             public Builder status(String status) {
                 this.status = status;
@@ -218,7 +218,7 @@ public class DescribeBgpNetworksResponseBody extends TeaModel {
             }
 
             /**
-             * VpcId.
+             * The ID of the virtual private cloud (VPC).
              */
             public Builder vpcId(String vpcId) {
                 this.vpcId = vpcId;

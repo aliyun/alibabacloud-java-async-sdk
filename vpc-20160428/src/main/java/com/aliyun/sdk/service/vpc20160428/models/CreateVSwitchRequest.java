@@ -225,7 +225,7 @@ public class CreateVSwitchRequest extends Request {
         } 
 
         /**
-         * CidrBlock.
+         * The ID of the VPC where you want to create the vSwitch.
          */
         public Builder cidrBlock(String cidrBlock) {
             this.putQueryParameter("CidrBlock", cidrBlock);
@@ -234,7 +234,7 @@ public class CreateVSwitchRequest extends Request {
         }
 
         /**
-         * ClientToken.
+         * The ID of the vSwitch.
          */
         public Builder clientToken(String clientToken) {
             this.putQueryParameter("ClientToken", clientToken);
@@ -243,7 +243,7 @@ public class CreateVSwitchRequest extends Request {
         }
 
         /**
-         * Description.
+         * The IPv6 CIDR block of the VPC.
          */
         public Builder description(String description) {
             this.putQueryParameter("Description", description);
@@ -252,7 +252,10 @@ public class CreateVSwitchRequest extends Request {
         }
 
         /**
-         * Ipv6CidrBlock.
+         * The name of the vSwitch.
+         * <p>
+         * 
+         * The name must be 1 to 128 characters in length, and cannot start with `http://` or `https://`.
          */
         public Builder ipv6CidrBlock(Integer ipv6CidrBlock) {
             this.putQueryParameter("Ipv6CidrBlock", ipv6CidrBlock);
@@ -279,7 +282,7 @@ public class CreateVSwitchRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * The last eight bits of the IPv6 CIDR block of the vSwitch. Valid values: **0** to **255**.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -306,7 +309,12 @@ public class CreateVSwitchRequest extends Request {
         }
 
         /**
-         * VSwitchName.
+         * The client token that is used to ensure the idempotence of the request.
+         * <p>
+         * 
+         * You can use the client to generate the value, but you must make sure that it is unique among all requests. The token can contain only ASCII characters.
+         * 
+         * >  If you do not specify this parameter, **ClientToken** is set to the value of **RequestId**. The value of **RequestId** may be different for each API request.
          */
         public Builder vSwitchName(String vSwitchName) {
             this.putQueryParameter("VSwitchName", vSwitchName);
@@ -315,7 +323,10 @@ public class CreateVSwitchRequest extends Request {
         }
 
         /**
-         * VpcId.
+         * The description of the vSwitch.
+         * <p>
+         * 
+         * The description must be 1 to 256 characters in length and cannot start with `http://` or `https://`.
          */
         public Builder vpcId(String vpcId) {
             this.putQueryParameter("VpcId", vpcId);
@@ -324,7 +335,7 @@ public class CreateVSwitchRequest extends Request {
         }
 
         /**
-         * VpcIpv6CidrBlock.
+         * The ID of the request.
          */
         public Builder vpcIpv6CidrBlock(String vpcIpv6CidrBlock) {
             this.putQueryParameter("VpcIpv6CidrBlock", vpcIpv6CidrBlock);
@@ -333,7 +344,12 @@ public class CreateVSwitchRequest extends Request {
         }
 
         /**
-         * ZoneId.
+         * The CIDR block of the vSwitch. Take note of the following limits:
+         * <p>
+         * 
+         * *   The subnet mask of the CIDR block must be 16 to 29 bits in length.
+         * *   The CIDR block of the vSwitch must fall within the CIDR block of the VPC to which the vSwitch belongs.
+         * *   The CIDR block of a vSwitch cannot be the same as the destination CIDR block in a route entry of the VPC. However, it can be a subset of the destination CIDR block.
          */
         public Builder zoneId(String zoneId) {
             this.putQueryParameter("ZoneId", zoneId);

@@ -154,7 +154,7 @@ public class ModifyIpv6GatewayAttributeRequest extends Request {
         } 
 
         /**
-         * Description.
+         * The description of the IPv6 gateway.
          */
         public Builder description(String description) {
             this.putQueryParameter("Description", description);
@@ -163,7 +163,7 @@ public class ModifyIpv6GatewayAttributeRequest extends Request {
         }
 
         /**
-         * Ipv6GatewayId.
+         * The ID of the IPv6 gateway that you want to modify.
          */
         public Builder ipv6GatewayId(String ipv6GatewayId) {
             this.putQueryParameter("Ipv6GatewayId", ipv6GatewayId);
@@ -172,7 +172,10 @@ public class ModifyIpv6GatewayAttributeRequest extends Request {
         }
 
         /**
-         * Name.
+         * The name of the IPv6 gateway.
+         * <p>
+         * 
+         * It must be 2 to 256 characters in length, and can contain letters, digits, periods (.), underscores (\_), and hyphens (-). It must start with a letter. The name must start with a letter but cannot start with `http://` or `https://`.
          */
         public Builder name(String name) {
             this.putQueryParameter("Name", name);
@@ -199,7 +202,7 @@ public class ModifyIpv6GatewayAttributeRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * The ID of the region where the IPv6 gateway is deployed. You can call the [DescribeRegions](~~36063~~) operation to query the most recent region list.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);

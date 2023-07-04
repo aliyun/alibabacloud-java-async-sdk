@@ -154,7 +154,7 @@ public class CreateNetworkAclRequest extends Request {
         } 
 
         /**
-         * ClientToken.
+         * The details about the inbound rule.
          */
         public Builder clientToken(String clientToken) {
             this.putQueryParameter("ClientToken", clientToken);
@@ -163,7 +163,7 @@ public class CreateNetworkAclRequest extends Request {
         }
 
         /**
-         * Description.
+         * The ID of the network ACL.
          */
         public Builder description(String description) {
             this.putQueryParameter("Description", description);
@@ -172,7 +172,7 @@ public class CreateNetworkAclRequest extends Request {
         }
 
         /**
-         * NetworkAclName.
+         * The name of the network ACL.
          */
         public Builder networkAclName(String networkAclName) {
             this.putQueryParameter("NetworkAclName", networkAclName);
@@ -190,7 +190,7 @@ public class CreateNetworkAclRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * The region ID of the network ACL.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -217,7 +217,7 @@ public class CreateNetworkAclRequest extends Request {
         }
 
         /**
-         * VpcId.
+         * The description of the network ACL.
          */
         public Builder vpcId(String vpcId) {
             this.putQueryParameter("VpcId", vpcId);

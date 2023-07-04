@@ -126,7 +126,7 @@ public class DescribeCustomerGatewayRequest extends Request {
         } 
 
         /**
-         * CustomerGatewayId.
+         * The ID of the customer gateway.
          */
         public Builder customerGatewayId(String customerGatewayId) {
             this.putQueryParameter("CustomerGatewayId", customerGatewayId);
@@ -153,7 +153,10 @@ public class DescribeCustomerGatewayRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * The ID of the region where the customer gateway is deployed.
+         * <p>
+         * 
+         * You can call the [DescribeRegions](~~36063~~) operation to query the most recent region list.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);

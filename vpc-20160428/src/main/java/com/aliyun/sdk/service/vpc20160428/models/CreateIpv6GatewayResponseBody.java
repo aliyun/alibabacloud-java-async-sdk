@@ -62,7 +62,7 @@ public class CreateIpv6GatewayResponseBody extends TeaModel {
         private String resourceGroupId; 
 
         /**
-         * Ipv6GatewayId.
+         * The ID of the IPv6 gateway.
          */
         public Builder ipv6GatewayId(String ipv6GatewayId) {
             this.ipv6GatewayId = ipv6GatewayId;
@@ -70,7 +70,7 @@ public class CreateIpv6GatewayResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -78,7 +78,7 @@ public class CreateIpv6GatewayResponseBody extends TeaModel {
         }
 
         /**
-         * ResourceGroupId.
+         * The ID of the resource group.
          */
         public Builder resourceGroupId(String resourceGroupId) {
             this.resourceGroupId = resourceGroupId;

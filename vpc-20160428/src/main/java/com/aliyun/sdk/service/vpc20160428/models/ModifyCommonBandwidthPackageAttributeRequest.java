@@ -154,7 +154,7 @@ public class ModifyCommonBandwidthPackageAttributeRequest extends Request {
         } 
 
         /**
-         * BandwidthPackageId.
+         * The ID of the EIP bandwidth plan.
          */
         public Builder bandwidthPackageId(String bandwidthPackageId) {
             this.putQueryParameter("BandwidthPackageId", bandwidthPackageId);
@@ -163,7 +163,7 @@ public class ModifyCommonBandwidthPackageAttributeRequest extends Request {
         }
 
         /**
-         * Description.
+         * The description of the EIP bandwidth plan. The description must be 2 to 256 characters in length. It must start with a letter but cannot start with `http://` or `https://`.
          */
         public Builder description(String description) {
             this.putQueryParameter("Description", description);
@@ -172,7 +172,7 @@ public class ModifyCommonBandwidthPackageAttributeRequest extends Request {
         }
 
         /**
-         * Name.
+         * The name of the EIP bandwidth plan. The name must be 2 to 128 characters in length and can contain letters, digits, periods (.), underscores (\_), and hyphens (-). It must start with a letter. It cannot start with `http://` or `https://`.
          */
         public Builder name(String name) {
             this.putQueryParameter("Name", name);
@@ -199,7 +199,10 @@ public class ModifyCommonBandwidthPackageAttributeRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * The ID of the region where the EIP bandwidth plan is created.
+         * <p>
+         * 
+         * You can call the [DescribeRegions](~~36063~~) operation to query the most recent region list.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);

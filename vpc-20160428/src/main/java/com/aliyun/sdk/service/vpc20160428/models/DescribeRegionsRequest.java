@@ -124,7 +124,11 @@ public class DescribeRegionsRequest extends Request {
         } 
 
         /**
-         * AcceptLanguage.
+         * The language of the response. Valid values:
+         * <p>
+         * 
+         * *   **zh-CN** (default): Chinese
+         * *   **en-US**: English
          */
         public Builder acceptLanguage(String acceptLanguage) {
             this.putQueryParameter("AcceptLanguage", acceptLanguage);
@@ -151,7 +155,7 @@ public class DescribeRegionsRequest extends Request {
         }
 
         /**
-         * ProductType.
+         * The service type. Default value: **VPC**.
          */
         public Builder productType(String productType) {
             this.putQueryParameter("ProductType", productType);

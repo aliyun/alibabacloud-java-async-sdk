@@ -168,7 +168,12 @@ public class ModifyHaVipAttributeRequest extends Request {
         } 
 
         /**
-         * ClientToken.
+         * The client token that is used to ensure the idempotence of the request.
+         * <p>
+         * 
+         * You can use the client to generate the value, but you must make sure that it is unique among all requests. ClientToken can contain only ASCII characters.
+         * 
+         * >  If you do not specify this parameter, **ClientToken** is set to the value of **RequestId**. The value of **RequestId** for each API request may be different.
          */
         public Builder clientToken(String clientToken) {
             this.putQueryParameter("ClientToken", clientToken);
@@ -177,7 +182,10 @@ public class ModifyHaVipAttributeRequest extends Request {
         }
 
         /**
-         * Description.
+         * The description of the HAVIP.
+         * <p>
+         * 
+         * The description must be 1 to 256 characters in length and cannot start with `http://` or `https://`.
          */
         public Builder description(String description) {
             this.putQueryParameter("Description", description);
@@ -186,7 +194,7 @@ public class ModifyHaVipAttributeRequest extends Request {
         }
 
         /**
-         * HaVipId.
+         * The ID of the HAVIP.
          */
         public Builder haVipId(String haVipId) {
             this.putQueryParameter("HaVipId", haVipId);
@@ -195,7 +203,10 @@ public class ModifyHaVipAttributeRequest extends Request {
         }
 
         /**
-         * Name.
+         * The name of the HAVIP.
+         * <p>
+         * 
+         * The name must be 1 to 128 characters in length, and cannot start with `http://` or `https://`.
          */
         public Builder name(String name) {
             this.putQueryParameter("Name", name);
@@ -222,7 +233,10 @@ public class ModifyHaVipAttributeRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * The ID of the region to which the HAVIP belongs.
+         * <p>
+         * 
+         * You can call the [DescribeRegions](~~36063~~) operation to query the most recent region list.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);

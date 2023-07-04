@@ -50,7 +50,7 @@ public class ListEnhanhcedNatGatewayAvailableZonesResponseBody extends TeaModel 
         private java.util.List < Zones> zones; 
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -58,7 +58,7 @@ public class ListEnhanhcedNatGatewayAvailableZonesResponseBody extends TeaModel 
         }
 
         /**
-         * Zones.
+         * The list of zones.
          */
         public Builder zones(java.util.List < Zones> zones) {
             this.zones = zones;
@@ -110,7 +110,7 @@ public class ListEnhanhcedNatGatewayAvailableZonesResponseBody extends TeaModel 
             private String zoneId; 
 
             /**
-             * LocalName.
+             * The name of the zone.
              */
             public Builder localName(String localName) {
                 this.localName = localName;
@@ -118,7 +118,7 @@ public class ListEnhanhcedNatGatewayAvailableZonesResponseBody extends TeaModel 
             }
 
             /**
-             * ZoneId.
+             * The ID of the zone where the instance is deployed.
              */
             public Builder zoneId(String zoneId) {
                 this.zoneId = zoneId;

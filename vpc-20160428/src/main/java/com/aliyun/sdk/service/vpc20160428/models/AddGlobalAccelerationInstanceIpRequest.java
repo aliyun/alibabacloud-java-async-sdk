@@ -141,7 +141,7 @@ public class AddGlobalAccelerationInstanceIpRequest extends Request {
         } 
 
         /**
-         * GlobalAccelerationInstanceId.
+         * The ID of the shared-bandwidth GA instance.
          */
         public Builder globalAccelerationInstanceId(String globalAccelerationInstanceId) {
             this.putQueryParameter("GlobalAccelerationInstanceId", globalAccelerationInstanceId);
@@ -150,7 +150,10 @@ public class AddGlobalAccelerationInstanceIpRequest extends Request {
         }
 
         /**
-         * IpInstanceId.
+         * The EIP ID. You can call the [DescribeEipAddresses](~~36018~~) operation to query EIP IDs.
+         * <p>
+         * 
+         * >  Make sure that the billing method of the EIP is pay-as-you-go, and the EIP and the shared-bandwidth GA instance belong to the same region.
          */
         public Builder ipInstanceId(String ipInstanceId) {
             this.putQueryParameter("IpInstanceId", ipInstanceId);
@@ -177,7 +180,10 @@ public class AddGlobalAccelerationInstanceIpRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * The region of the shared-bandwidth GA instance.
+         * <p>
+         * 
+         * You can call the **DescribeRegions** operation to query the most recent region list.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);

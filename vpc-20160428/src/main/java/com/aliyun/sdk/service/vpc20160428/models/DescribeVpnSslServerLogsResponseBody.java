@@ -98,7 +98,7 @@ public class DescribeVpnSslServerLogsResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * Count.
+         * The number of log entries.
          */
         public Builder count(Integer count) {
             this.count = count;
@@ -106,7 +106,10 @@ public class DescribeVpnSslServerLogsResponseBody extends TeaModel {
         }
 
         /**
-         * Data.
+         * An array of strings.
+         * <p>
+         * 
+         * Each item in the array is a log entry.
          */
         public Builder data(Data data) {
             this.data = data;
@@ -114,7 +117,11 @@ public class DescribeVpnSslServerLogsResponseBody extends TeaModel {
         }
 
         /**
-         * IsCompleted.
+         * Indicates whether the log is accurate. Valid values:
+         * <p>
+         * 
+         * *   **true**: accurate
+         * *   **false**: inaccurate
          */
         public Builder isCompleted(Boolean isCompleted) {
             this.isCompleted = isCompleted;
@@ -122,7 +129,7 @@ public class DescribeVpnSslServerLogsResponseBody extends TeaModel {
         }
 
         /**
-         * PageNumber.
+         * The page number of the returned page.
          */
         public Builder pageNumber(Integer pageNumber) {
             this.pageNumber = pageNumber;
@@ -130,7 +137,7 @@ public class DescribeVpnSslServerLogsResponseBody extends TeaModel {
         }
 
         /**
-         * PageSize.
+         * The number of entries returned per page.
          */
         public Builder pageSize(Integer pageSize) {
             this.pageSize = pageSize;
@@ -138,7 +145,7 @@ public class DescribeVpnSslServerLogsResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

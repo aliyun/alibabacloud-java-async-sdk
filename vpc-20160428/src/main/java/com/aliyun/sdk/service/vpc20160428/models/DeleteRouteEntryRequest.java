@@ -180,7 +180,7 @@ public class DeleteRouteEntryRequest extends Request {
         } 
 
         /**
-         * DestinationCidrBlock.
+         * The destination CIDR block of the route entry. IPv4 and IPv6 CIDR blocks are supported.
          */
         public Builder destinationCidrBlock(String destinationCidrBlock) {
             this.putQueryParameter("DestinationCidrBlock", destinationCidrBlock);
@@ -189,7 +189,11 @@ public class DeleteRouteEntryRequest extends Request {
         }
 
         /**
-         * NextHopId.
+         * The ID of the next hop.
+         * <p>
+         * 
+         * *   To delete a route other than an equal-cost multi-path (ECMP) route, set the **NextHopId** parameter and ignore the **NextHopList** parameter.
+         * *   To delete an ECMP route, set the **NextHopList** parameter and ignore the **NextHopId** parameter.
          */
         public Builder nextHopId(String nextHopId) {
             this.putQueryParameter("NextHopId", nextHopId);
@@ -225,7 +229,10 @@ public class DeleteRouteEntryRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * The region ID of the route table.
+         * <p>
+         * 
+         * You can call the [DescribeRegions](~~36063~~) operation to query the most recent region list.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -252,7 +259,7 @@ public class DeleteRouteEntryRequest extends Request {
         }
 
         /**
-         * RouteEntryId.
+         * The ID of the route that you want to delete.
          */
         public Builder routeEntryId(String routeEntryId) {
             this.putQueryParameter("RouteEntryId", routeEntryId);
@@ -261,7 +268,7 @@ public class DeleteRouteEntryRequest extends Request {
         }
 
         /**
-         * RouteTableId.
+         * The ID of the route table to which the route belongs.
          */
         public Builder routeTableId(String routeTableId) {
             this.putQueryParameter("RouteTableId", routeTableId);
@@ -315,7 +322,7 @@ public class DeleteRouteEntryRequest extends Request {
             private String nextHopType; 
 
             /**
-             * NextHopId.
+             * The ID of the next hop that is configured for ECMP routing. You can specify information about at most 16 next hops.
              */
             public Builder nextHopId(String nextHopId) {
                 this.nextHopId = nextHopId;
@@ -323,7 +330,7 @@ public class DeleteRouteEntryRequest extends Request {
             }
 
             /**
-             * NextHopType.
+             * The type of the next hop that is configured for ECMP routing. Set the value to **RouterInterface**. You can specify information about at most 16 next hops.
              */
             public Builder nextHopType(String nextHopType) {
                 this.nextHopType = nextHopType;

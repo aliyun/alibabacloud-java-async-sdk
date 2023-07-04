@@ -86,7 +86,7 @@ public class DescribeGrantRulesToCenResponseBody extends TeaModel {
         private Integer totalCount; 
 
         /**
-         * CenGrantRules.
+         * The ID of the authorized CEN instance.
          */
         public Builder cenGrantRules(CenGrantRules cenGrantRules) {
             this.cenGrantRules = cenGrantRules;
@@ -94,7 +94,7 @@ public class DescribeGrantRulesToCenResponseBody extends TeaModel {
         }
 
         /**
-         * PageNumber.
+         * The total number of entries returned.
          */
         public Builder pageNumber(Integer pageNumber) {
             this.pageNumber = pageNumber;
@@ -102,7 +102,7 @@ public class DescribeGrantRulesToCenResponseBody extends TeaModel {
         }
 
         /**
-         * PageSize.
+         * The ID of the request.
          */
         public Builder pageSize(Integer pageSize) {
             this.pageSize = pageSize;
@@ -110,7 +110,7 @@ public class DescribeGrantRulesToCenResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The page number of the returned page.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -118,7 +118,7 @@ public class DescribeGrantRulesToCenResponseBody extends TeaModel {
         }
 
         /**
-         * TotalCount.
+         * The information about the authorization.
          */
         public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;
@@ -182,7 +182,7 @@ public class DescribeGrantRulesToCenResponseBody extends TeaModel {
             private String creationTime; 
 
             /**
-             * CenInstanceId.
+             * The UID of the Alibaba Cloud account to which the authorized CEN instance belongs.
              */
             public Builder cenInstanceId(String cenInstanceId) {
                 this.cenInstanceId = cenInstanceId;
@@ -190,7 +190,7 @@ public class DescribeGrantRulesToCenResponseBody extends TeaModel {
             }
 
             /**
-             * CenOwnerId.
+             * The time when the instance was created.
              */
             public Builder cenOwnerId(Long cenOwnerId) {
                 this.cenOwnerId = cenOwnerId;

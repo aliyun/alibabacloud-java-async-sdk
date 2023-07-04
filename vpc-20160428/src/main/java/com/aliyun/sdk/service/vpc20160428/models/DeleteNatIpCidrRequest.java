@@ -169,7 +169,12 @@ public class DeleteNatIpCidrRequest extends Request {
         } 
 
         /**
-         * ClientToken.
+         * The client token that is used to ensure the idempotence of the request.
+         * <p>
+         * 
+         * You can use the client to generate the value, but you must make sure that it is unique among different requests. The client token can contain only ASCII characters.
+         * 
+         * >  If you do not set this parameter, **ClientToken** is set to the value of **RequestId**. The value of **RequestId** for each API request may be different.
          */
         public Builder clientToken(String clientToken) {
             this.putQueryParameter("ClientToken", clientToken);
@@ -178,7 +183,11 @@ public class DeleteNatIpCidrRequest extends Request {
         }
 
         /**
-         * DryRun.
+         * Specifies whether only to precheck this request. Valid values:
+         * <p>
+         * 
+         * *   **true**: sends the precheck request but does delete the NAT CIDR block. The system checks your AccessKey pair, the RAM user permissions, and the required parameters. If the request fails the precheck, an error code is returned. If the request passes the check, the `DryRunOperation` error code is returned.
+         * *   **false**: sends the API request. This is the default value. If the request passes the precheck, a 2XX HTTP status code is returned and the NAT CIDR block is deleted.
          */
         public Builder dryRun(Boolean dryRun) {
             this.putQueryParameter("DryRun", dryRun);
@@ -187,7 +196,7 @@ public class DeleteNatIpCidrRequest extends Request {
         }
 
         /**
-         * NatGatewayId.
+         * The ID of the NAT gateway to which the NAT CIDR block to be deleted belongs.
          */
         public Builder natGatewayId(String natGatewayId) {
             this.putQueryParameter("NatGatewayId", natGatewayId);
@@ -196,7 +205,11 @@ public class DeleteNatIpCidrRequest extends Request {
         }
 
         /**
-         * NatIpCidr.
+         * The NAT CIDR block to be deleted.
+         * <p>
+         * 
+         * *   Before you delete a NAT CIDR block, you must delete all NAT IP addresses from the CIDR block.
+         * *   The default NAT CIDR block cannot be deleted.
          */
         public Builder natIpCidr(String natIpCidr) {
             this.putQueryParameter("NatIpCidr", natIpCidr);
@@ -223,7 +236,10 @@ public class DeleteNatIpCidrRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * The region ID of the NAT gateway to which the NAT CIDR block to be deleted belongs.
+         * <p>
+         * 
+         * You can call the [DescribeRegions](~~36063~~) operation to query the most recent region list.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);

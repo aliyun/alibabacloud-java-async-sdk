@@ -172,7 +172,7 @@ public class DescribeBgpNetworksRequest extends Request {
         }
 
         /**
-         * PageNumber.
+         * The number of the page to return. Default value: **1**.
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -181,7 +181,7 @@ public class DescribeBgpNetworksRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * The number of entries to return on each page. Maximum value: **50**. Default value: **10**.
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -190,7 +190,10 @@ public class DescribeBgpNetworksRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * The ID of the region where the BGP group is deployed.
+         * <p>
+         * 
+         * You can call the [DescribeRegions](~~36063~~) operation to query the most recent region list.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -217,7 +220,7 @@ public class DescribeBgpNetworksRequest extends Request {
         }
 
         /**
-         * RouterId.
+         * The ID of the virtual border router (VBR).
          */
         public Builder routerId(String routerId) {
             this.putQueryParameter("RouterId", routerId);

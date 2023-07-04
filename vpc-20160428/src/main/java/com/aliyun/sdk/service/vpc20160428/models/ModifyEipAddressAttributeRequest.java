@@ -167,7 +167,10 @@ public class ModifyEipAddressAttributeRequest extends Request {
         } 
 
         /**
-         * AllocationId.
+         * The region ID of the EIP.
+         * <p>
+         * 
+         * You can call the [DescribeRegions](~~36063~~) operation to query the most recent region list.
          */
         public Builder allocationId(String allocationId) {
             this.putQueryParameter("AllocationId", allocationId);
@@ -176,7 +179,10 @@ public class ModifyEipAddressAttributeRequest extends Request {
         }
 
         /**
-         * Bandwidth.
+         * The new name of the EIP.
+         * <p>
+         * 
+         * The name must be 1 to 128 characters in length, and can contain digits, periods (.), underscores (\_), and hyphens (-).
          */
         public Builder bandwidth(String bandwidth) {
             this.putQueryParameter("Bandwidth", bandwidth);
@@ -194,7 +200,7 @@ public class ModifyEipAddressAttributeRequest extends Request {
         }
 
         /**
-         * Name.
+         * The ID of the request.
          */
         public Builder name(String name) {
             this.putQueryParameter("Name", name);
@@ -221,7 +227,10 @@ public class ModifyEipAddressAttributeRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * The new description of the EIP.
+         * <p>
+         * 
+         * The description must be 2 to 256 characters in length. It must start with a letter but cannot start with `http://` or `https://`.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);

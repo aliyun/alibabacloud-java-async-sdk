@@ -308,7 +308,11 @@ public class DescribeNatGatewaysRequest extends Request {
         } 
 
         /**
-         * DryRun.
+         * Specifies whether to perform a dry run. Valid values:
+         * <p>
+         * 
+         * - **true**: performs a dry run. The system prechecks whether your AccessKey pair is valid, whether the RAM user is authorized, and whether the required parameters are specified. If the request fails the dry run, an error message is returned. If the request passes the dry run, the `DryRunOperation` error code is returned.
+         * - **false** (default): performs a dry run and sends the request. If the request passes the dry run, a 2xx HTTP status code is returned and the operation is performed.
          */
         public Builder dryRun(Boolean dryRun) {
             this.putQueryParameter("DryRun", dryRun);
@@ -317,7 +321,7 @@ public class DescribeNatGatewaysRequest extends Request {
         }
 
         /**
-         * InstanceChargeType.
+         * The billing method of the NAT gateway. Set the value to **PostPaid**, which specifies the pay-as-you-go billing method.
          */
         public Builder instanceChargeType(String instanceChargeType) {
             this.putQueryParameter("InstanceChargeType", instanceChargeType);
@@ -326,7 +330,12 @@ public class DescribeNatGatewaysRequest extends Request {
         }
 
         /**
-         * Name.
+         * The name of the NAT gateway. 
+         * <p>
+         * 
+         * The name must be 1 to 128 characters in length, and cannot start with `http://` or `https://`. 
+         * 
+         * If this parameter is not set, the system automatically assigns a name to the NAT gateway.
          */
         public Builder name(String name) {
             this.putQueryParameter("Name", name);
@@ -335,7 +344,7 @@ public class DescribeNatGatewaysRequest extends Request {
         }
 
         /**
-         * NatGatewayId.
+         * The ID of the NAT gateway.
          */
         public Builder natGatewayId(String natGatewayId) {
             this.putQueryParameter("NatGatewayId", natGatewayId);
@@ -344,7 +353,7 @@ public class DescribeNatGatewaysRequest extends Request {
         }
 
         /**
-         * NatType.
+         * The type of NAT gateway. Set the value to **Enhanced** (enhanced NAT gateway).
          */
         public Builder natType(String natType) {
             this.putQueryParameter("NatType", natType);
@@ -353,7 +362,11 @@ public class DescribeNatGatewaysRequest extends Request {
         }
 
         /**
-         * NetworkType.
+         * The type of the NAT gateway. Valid values:
+         * <p>
+         * 
+         * *   **internet**: an Internet NAT gateway
+         * *   **intranet**: a VPC NAT gateway
          */
         public Builder networkType(String networkType) {
             this.putQueryParameter("NetworkType", networkType);
@@ -380,7 +393,7 @@ public class DescribeNatGatewaysRequest extends Request {
         }
 
         /**
-         * PageNumber.
+         * The number of the page to return. Default value: **1**.
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -389,7 +402,7 @@ public class DescribeNatGatewaysRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * The number of entries to return on each page. Maximum value: **50**. Default value: **10**.
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -398,7 +411,10 @@ public class DescribeNatGatewaysRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * The region ID of the NAT gateways that you want to query.
+         * <p>
+         * 
+         * You can call the [DescribeRegions](~~36063~~) operation to query the most recent region list.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -407,7 +423,7 @@ public class DescribeNatGatewaysRequest extends Request {
         }
 
         /**
-         * ResourceGroupId.
+         * The ID of the resource group to which the NAT gateway belongs.
          */
         public Builder resourceGroupId(String resourceGroupId) {
             this.putQueryParameter("ResourceGroupId", resourceGroupId);
@@ -434,7 +450,7 @@ public class DescribeNatGatewaysRequest extends Request {
         }
 
         /**
-         * Spec.
+         * The size of the NAT gateway. Ignore this parameter.
          */
         public Builder spec(String spec) {
             this.putQueryParameter("Spec", spec);
@@ -443,7 +459,14 @@ public class DescribeNatGatewaysRequest extends Request {
         }
 
         /**
-         * Status.
+         * The status of the NAT gateway. Valid values:
+         * <p>
+         * 
+         * *   **Creating**: After you send a request to create a NAT gateway, the system creates the NAT gateway in the background. The NAT gateway remains in the **Creating** state until the operation is completed.
+         * *   **Available**: The NAT gateway remains in a stable state after the NAT gateway is created.
+         * *   **Modifying**: After you send a request to modify a NAT gateway, the system modifies the NAT gateway in the background. The NAT gateway remains in the **Modifying** state until the operation is completed.
+         * *   **Deleting**: After you send a request to delete a NAT gateway, the system deletes the NAT gateway in the background. The NAT gateway remains in the **Deleting** state until the operation is completed.
+         * *   **Converting**: After you send a request to upgrade a standard NAT gateway to an enhanced NAT gateway, the system upgrades the NAT gateway in the background. The NAT gateway remains in the **Converting** state until the operation is completed.
          */
         public Builder status(String status) {
             this.putQueryParameter("Status", status);
@@ -452,7 +475,7 @@ public class DescribeNatGatewaysRequest extends Request {
         }
 
         /**
-         * Tag.
+         * The tags.
          */
         public Builder tag(java.util.List < Tag> tag) {
             this.putQueryParameter("Tag", tag);
@@ -461,7 +484,7 @@ public class DescribeNatGatewaysRequest extends Request {
         }
 
         /**
-         * VpcId.
+         * The ID of the VPC to which the NAT gateway belongs.
          */
         public Builder vpcId(String vpcId) {
             this.putQueryParameter("VpcId", vpcId);
@@ -470,7 +493,7 @@ public class DescribeNatGatewaysRequest extends Request {
         }
 
         /**
-         * 可用区
+         * The ID of the zone to which the NAT gateway belongs.
          */
         public Builder zoneId(String zoneId) {
             this.putQueryParameter("ZoneId", zoneId);
@@ -524,7 +547,10 @@ public class DescribeNatGatewaysRequest extends Request {
             private String value; 
 
             /**
-             * Key.
+             * The tag keys of the NAT gateway. You can specify up to 20 tag keys.
+             * <p>
+             * 
+             * Each tag key cannot exceed 64 characters in length, and cannot start with `aliyun` or `acs:`. It cannot contain `http://` or `https://`.
              */
             public Builder key(String key) {
                 this.key = key;
@@ -532,7 +558,10 @@ public class DescribeNatGatewaysRequest extends Request {
             }
 
             /**
-             * Value.
+             * The tag values of the NAT gateway. You can specify up to 20 tag values.
+             * <p>
+             * 
+             * The tag value cannot exceed 128 characters in length, and cannot start with `aliyun` or `acs:`. The value cannot contain `http://` or `https://`.
              */
             public Builder value(String value) {
                 this.value = value;

@@ -50,7 +50,7 @@ public class GetVpcRouteEntrySummaryResponseBody extends TeaModel {
         private java.util.List < RouteEntrySummarys> routeEntrySummarys; 
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -58,7 +58,7 @@ public class GetVpcRouteEntrySummaryResponseBody extends TeaModel {
         }
 
         /**
-         * RouteEntrySummarys.
+         * The information about the routes in the route tables.
          */
         public Builder routeEntrySummarys(java.util.List < RouteEntrySummarys> routeEntrySummarys) {
             this.routeEntrySummarys = routeEntrySummarys;
@@ -110,7 +110,7 @@ public class GetVpcRouteEntrySummaryResponseBody extends TeaModel {
             private String routeEntryType; 
 
             /**
-             * Count.
+             * The number of entries returned.
              */
             public Builder count(Integer count) {
                 this.count = count;
@@ -118,7 +118,14 @@ public class GetVpcRouteEntrySummaryResponseBody extends TeaModel {
             }
 
             /**
-             * RouteEntryType.
+             * The type of the route. Valid values:
+             * <p>
+             * 
+             * *   **All**: all route types
+             * *   **Custom**: a custom route
+             * *   **System**: a system route
+             * *   **BGP**: a BGP route
+             * *   **CEN**: a CEN route
              */
             public Builder routeEntryType(String routeEntryType) {
                 this.routeEntryType = routeEntryType;
@@ -171,7 +178,7 @@ public class GetVpcRouteEntrySummaryResponseBody extends TeaModel {
             private String routeTableId; 
 
             /**
-             * EntrySummarys.
+             * The information about the routes of different types in one route table.
              */
             public Builder entrySummarys(java.util.List < EntrySummarys> entrySummarys) {
                 this.entrySummarys = entrySummarys;
@@ -179,7 +186,7 @@ public class GetVpcRouteEntrySummaryResponseBody extends TeaModel {
             }
 
             /**
-             * RouteTableId.
+             * The ID of the route table.
              */
             public Builder routeTableId(String routeTableId) {
                 this.routeTableId = routeTableId;

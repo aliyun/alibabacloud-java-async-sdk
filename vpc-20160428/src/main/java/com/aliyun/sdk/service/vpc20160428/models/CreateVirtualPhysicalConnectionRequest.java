@@ -49,6 +49,10 @@ public class CreateVirtualPhysicalConnectionRequest extends Request {
     private String spec;
 
     @Query
+    @NameInMap("Tag")
+    private java.util.List < Tag> tag;
+
+    @Query
     @NameInMap("Token")
     private String token;
 
@@ -72,6 +76,7 @@ public class CreateVirtualPhysicalConnectionRequest extends Request {
         this.regionId = builder.regionId;
         this.resourceGroupId = builder.resourceGroupId;
         this.spec = builder.spec;
+        this.tag = builder.tag;
         this.token = builder.token;
         this.vlanId = builder.vlanId;
         this.vpconnAliUid = builder.vpconnAliUid;
@@ -147,6 +152,13 @@ public class CreateVirtualPhysicalConnectionRequest extends Request {
     }
 
     /**
+     * @return tag
+     */
+    public java.util.List < Tag> getTag() {
+        return this.tag;
+    }
+
+    /**
      * @return token
      */
     public String getToken() {
@@ -176,6 +188,7 @@ public class CreateVirtualPhysicalConnectionRequest extends Request {
         private String regionId; 
         private String resourceGroupId; 
         private String spec; 
+        private java.util.List < Tag> tag; 
         private String token; 
         private Long vlanId; 
         private Long vpconnAliUid; 
@@ -194,13 +207,14 @@ public class CreateVirtualPhysicalConnectionRequest extends Request {
             this.regionId = request.regionId;
             this.resourceGroupId = request.resourceGroupId;
             this.spec = request.spec;
+            this.tag = request.tag;
             this.token = request.token;
             this.vlanId = request.vlanId;
             this.vpconnAliUid = request.vpconnAliUid;
         } 
 
         /**
-         * Vpconn的description
+         * The ID of the request.
          */
         public Builder description(String description) {
             this.putQueryParameter("Description", description);
@@ -209,7 +223,10 @@ public class CreateVirtualPhysicalConnectionRequest extends Request {
         }
 
         /**
-         * DryRun
+         * The region ID of the hosted connection.
+         * <p>
+         * 
+         * You can call the [DescribeRegions](~~36063~~) operation to obtain the region ID.
          */
         public Builder dryRun(Boolean dryRun) {
             this.putQueryParameter("DryRun", dryRun);
@@ -218,7 +235,11 @@ public class CreateVirtualPhysicalConnectionRequest extends Request {
         }
 
         /**
-         * Vpconn的name
+         * Specifies whether to check the request without performing the operation. Valid values:
+         * <p>
+         * 
+         * *   **true**: checks the request without performing the operation. The hosted connection is not created. The system checks the required parameters, request syntax, and instance status. If the request fails the check, an error message is returned. If the request passes the check, `DRYRUN.SUCCESS` is returned.
+         * *   **false**: sends the request. If the request passes the check, the hosted connection is created. This is the default value.
          */
         public Builder name(String name) {
             this.putQueryParameter("Name", name);
@@ -227,7 +248,14 @@ public class CreateVirtualPhysicalConnectionRequest extends Request {
         }
 
         /**
-         * vpconn的支付方
+         * The bandwidth value of the hosted connection.
+         * <p>
+         * 
+         * Valid values: **50M**, **100M**, **200M**, **300M**, **400M**, **500M**, **1G**, **2G**, **5G**, **8G**, and **10G**.
+         * 
+         * >  By default, the values of **2G**, **5G**, **8G**, and **10G** are unavailable. If you want to specify these values, contact your customer manager.
+         * 
+         * **M** indicates Mbit/s, and **G** indicates Gbit/s.
          */
         public Builder orderMode(String orderMode) {
             this.putQueryParameter("OrderMode", orderMode);
@@ -236,7 +264,12 @@ public class CreateVirtualPhysicalConnectionRequest extends Request {
         }
 
         /**
-         * Vpconn的主Pconn
+         * The client token that is used to ensure the idempotence of the request.
+         * <p>
+         * 
+         * You can use the client to generate the value, but you must make sure that the value is unique among different requests. The client token can contain only ASCII characters.
+         * 
+         * >  If you do not set this parameter, the system automatically sets **ClientToken** to the value of **RequestId**. The value of **RequestId** may be different for each API request.
          */
         public Builder physicalConnectionId(String physicalConnectionId) {
             this.putQueryParameter("PhysicalConnectionId", physicalConnectionId);
@@ -245,7 +278,7 @@ public class CreateVirtualPhysicalConnectionRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * The ID of the hosted connection.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -263,7 +296,7 @@ public class CreateVirtualPhysicalConnectionRequest extends Request {
         }
 
         /**
-         * vpconn规格
+         * The ID of the Express Connect circuit over which the hosted connection is created.
          */
         public Builder spec(String spec) {
             this.putQueryParameter("Spec", spec);
@@ -272,7 +305,19 @@ public class CreateVirtualPhysicalConnectionRequest extends Request {
         }
 
         /**
-         * 幂等Token
+         * Tag.
+         */
+        public Builder tag(java.util.List < Tag> tag) {
+            this.putQueryParameter("Tag", tag);
+            this.tag = tag;
+            return this;
+        }
+
+        /**
+         * The description of the hosted connection.
+         * <p>
+         * 
+         * The description must be 2 to 256 characters in length. The description must start with a letter but cannot start with `http://` or `https://`.
          */
         public Builder token(String token) {
             this.putQueryParameter("Token", token);
@@ -281,7 +326,7 @@ public class CreateVirtualPhysicalConnectionRequest extends Request {
         }
 
         /**
-         * vpconn的VlanID
+         * The Alibaba Cloud account ID of the tenant.
          */
         public Builder vlanId(Long vlanId) {
             this.putQueryParameter("VlanId", vlanId);
@@ -290,7 +335,10 @@ public class CreateVirtualPhysicalConnectionRequest extends Request {
         }
 
         /**
-         * Vpconn拥有者
+         * The name of the hosted connection.
+         * <p>
+         * 
+         * The name must be 2 to 128 characters in length, and can contain letters, digits, underscores (\_), and hyphens (-). The name must start with a letter but cannot start with `http://` or `https://`.
          */
         public Builder vpconnAliUid(Long vpconnAliUid) {
             this.putQueryParameter("VpconnAliUid", vpconnAliUid);
@@ -305,4 +353,65 @@ public class CreateVirtualPhysicalConnectionRequest extends Request {
 
     } 
 
+    public static class Tag extends TeaModel {
+        @NameInMap("Key")
+        private String key;
+
+        @NameInMap("Value")
+        private String value;
+
+        private Tag(Builder builder) {
+            this.key = builder.key;
+            this.value = builder.value;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static Tag create() {
+            return builder().build();
+        }
+
+        /**
+         * @return key
+         */
+        public String getKey() {
+            return this.key;
+        }
+
+        /**
+         * @return value
+         */
+        public String getValue() {
+            return this.value;
+        }
+
+        public static final class Builder {
+            private String key; 
+            private String value; 
+
+            /**
+             * Key.
+             */
+            public Builder key(String key) {
+                this.key = key;
+                return this;
+            }
+
+            /**
+             * Value.
+             */
+            public Builder value(String value) {
+                this.value = value;
+                return this;
+            }
+
+            public Tag build() {
+                return new Tag(this);
+            } 
+
+        } 
+
+    }
 }

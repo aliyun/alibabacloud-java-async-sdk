@@ -21,6 +21,10 @@ public class DescribeIpv6AddressesRequest extends Request {
     private String associatedInstanceType;
 
     @Query
+    @NameInMap("IncludeReservationData")
+    private Boolean includeReservationData;
+
+    @Query
     @NameInMap("Ipv6Address")
     private String ipv6Address;
 
@@ -82,6 +86,7 @@ public class DescribeIpv6AddressesRequest extends Request {
         super(builder);
         this.associatedInstanceId = builder.associatedInstanceId;
         this.associatedInstanceType = builder.associatedInstanceType;
+        this.includeReservationData = builder.includeReservationData;
         this.ipv6Address = builder.ipv6Address;
         this.ipv6AddressId = builder.ipv6AddressId;
         this.ipv6InternetBandwidthId = builder.ipv6InternetBandwidthId;
@@ -123,6 +128,13 @@ public class DescribeIpv6AddressesRequest extends Request {
      */
     public String getAssociatedInstanceType() {
         return this.associatedInstanceType;
+    }
+
+    /**
+     * @return includeReservationData
+     */
+    public Boolean getIncludeReservationData() {
+        return this.includeReservationData;
     }
 
     /**
@@ -226,6 +238,7 @@ public class DescribeIpv6AddressesRequest extends Request {
     public static final class Builder extends Request.Builder<DescribeIpv6AddressesRequest, Builder> {
         private String associatedInstanceId; 
         private String associatedInstanceType; 
+        private Boolean includeReservationData; 
         private String ipv6Address; 
         private String ipv6AddressId; 
         private String ipv6InternetBandwidthId; 
@@ -249,6 +262,7 @@ public class DescribeIpv6AddressesRequest extends Request {
             super(request);
             this.associatedInstanceId = request.associatedInstanceId;
             this.associatedInstanceType = request.associatedInstanceType;
+            this.includeReservationData = request.includeReservationData;
             this.ipv6Address = request.ipv6Address;
             this.ipv6AddressId = request.ipv6AddressId;
             this.ipv6InternetBandwidthId = request.ipv6InternetBandwidthId;
@@ -266,7 +280,7 @@ public class DescribeIpv6AddressesRequest extends Request {
         } 
 
         /**
-         * AssociatedInstanceId.
+         * The ID of the instance that is assigned the IPv6 address.
          */
         public Builder associatedInstanceId(String associatedInstanceId) {
             this.putQueryParameter("AssociatedInstanceId", associatedInstanceId);
@@ -275,7 +289,10 @@ public class DescribeIpv6AddressesRequest extends Request {
         }
 
         /**
-         * AssociatedInstanceType.
+         * The type of the instance that is assigned the IPv6 address.
+         * <p>
+         * 
+         * Set the value to **EcsInstance**, which specifies an Elastic Compute Service (ECS) instance in a virtual private cloud (VPC). This is the default value.
          */
         public Builder associatedInstanceType(String associatedInstanceType) {
             this.putQueryParameter("AssociatedInstanceType", associatedInstanceType);
@@ -284,7 +301,16 @@ public class DescribeIpv6AddressesRequest extends Request {
         }
 
         /**
-         * Ipv6Address.
+         * IncludeReservationData.
+         */
+        public Builder includeReservationData(Boolean includeReservationData) {
+            this.putQueryParameter("IncludeReservationData", includeReservationData);
+            this.includeReservationData = includeReservationData;
+            return this;
+        }
+
+        /**
+         * The IPv6 address that you want to query.
          */
         public Builder ipv6Address(String ipv6Address) {
             this.putQueryParameter("Ipv6Address", ipv6Address);
@@ -293,7 +319,7 @@ public class DescribeIpv6AddressesRequest extends Request {
         }
 
         /**
-         * Ipv6AddressId.
+         * The ID of the IPv6 address that you want to query. You can enter at most 20 IPv6 IDs in each API request. Separate IPv6 IDs with commas (,).
          */
         public Builder ipv6AddressId(String ipv6AddressId) {
             this.putQueryParameter("Ipv6AddressId", ipv6AddressId);
@@ -302,7 +328,7 @@ public class DescribeIpv6AddressesRequest extends Request {
         }
 
         /**
-         * Ipv6InternetBandwidthId.
+         * The ID of the Internet bandwidth that you purchased for the IPv6 address.
          */
         public Builder ipv6InternetBandwidthId(String ipv6InternetBandwidthId) {
             this.putQueryParameter("Ipv6InternetBandwidthId", ipv6InternetBandwidthId);
@@ -311,7 +337,10 @@ public class DescribeIpv6AddressesRequest extends Request {
         }
 
         /**
-         * Name.
+         * The name of the IPv6 address that you want to query.
+         * <p>
+         * 
+         * The name must be 2 to 128 characters in length, and can contain letters, digits, periods (.), underscores (\_), and hyphens (-). The name must start with a letter but cannot start with `http://` or `https://`.
          */
         public Builder name(String name) {
             this.putQueryParameter("Name", name);
@@ -320,7 +349,11 @@ public class DescribeIpv6AddressesRequest extends Request {
         }
 
         /**
-         * NetworkType.
+         * The type of communication supported by the IPv6 address. Valid values:
+         * <p>
+         * 
+         * *   **Private**: communication within private networks
+         * *   **Public**: communication over the Internet
          */
         public Builder networkType(String networkType) {
             this.putQueryParameter("NetworkType", networkType);
@@ -347,7 +380,7 @@ public class DescribeIpv6AddressesRequest extends Request {
         }
 
         /**
-         * PageNumber.
+         * The number of the page to return. Default value: **1**.
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -356,7 +389,7 @@ public class DescribeIpv6AddressesRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * The number of entries to return per page. Maximum value: **50**. Default value: **10**.
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -365,7 +398,7 @@ public class DescribeIpv6AddressesRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * The ID of the region in which you want to query IPv6 addresses. You can call the [DescribeRegions](~~36063~~) operation to query the most recent region list.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -392,7 +425,7 @@ public class DescribeIpv6AddressesRequest extends Request {
         }
 
         /**
-         * VSwitchId.
+         * The ID of the vSwitch to which the IPv6 address belongs.
          */
         public Builder vSwitchId(String vSwitchId) {
             this.putQueryParameter("VSwitchId", vSwitchId);
@@ -401,7 +434,7 @@ public class DescribeIpv6AddressesRequest extends Request {
         }
 
         /**
-         * VpcId.
+         * The ID of the VPC to which the IPv6 address belongs.
          */
         public Builder vpcId(String vpcId) {
             this.putQueryParameter("VpcId", vpcId);

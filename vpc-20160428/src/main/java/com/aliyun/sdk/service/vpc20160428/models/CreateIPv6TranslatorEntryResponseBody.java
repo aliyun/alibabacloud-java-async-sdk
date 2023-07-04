@@ -50,7 +50,7 @@ public class CreateIPv6TranslatorEntryResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * Ipv6TranslatorEntryId.
+         * The ID of the IPv6 Translation Service instance.
          */
         public Builder ipv6TranslatorEntryId(String ipv6TranslatorEntryId) {
             this.ipv6TranslatorEntryId = ipv6TranslatorEntryId;
@@ -58,7 +58,7 @@ public class CreateIPv6TranslatorEntryResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

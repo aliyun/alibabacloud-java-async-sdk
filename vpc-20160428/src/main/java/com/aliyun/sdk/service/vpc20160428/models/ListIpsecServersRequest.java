@@ -135,7 +135,10 @@ public class ListIpsecServersRequest extends Request {
         }
 
         /**
-         * IpsecServerName.
+         * The name of the IPsec server.
+         * <p>
+         * 
+         * The name must be 1 to 100 characters in length, and cannot start with `http://` or `https://`.
          */
         public Builder ipsecServerName(String ipsecServerName) {
             this.putQueryParameter("IpsecServerName", ipsecServerName);
@@ -144,7 +147,7 @@ public class ListIpsecServersRequest extends Request {
         }
 
         /**
-         * MaxResults.
+         * The number of entries to return on each page. Valid values: **1** to **20**. Default value: **10**.
          */
         public Builder maxResults(Integer maxResults) {
             this.putQueryParameter("MaxResults", maxResults);
@@ -153,7 +156,11 @@ public class ListIpsecServersRequest extends Request {
         }
 
         /**
-         * NextToken.
+         * The token that is used for the next query. Valid values:
+         * <p>
+         * 
+         * *   If this is your first query or no subsequent query is to be sent, ignore this parameter.
+         * *   If a subsequent query is to be sent, set the value to the value of **NextToken** that is returned from the last call.
          */
         public Builder nextToken(String nextToken) {
             this.putQueryParameter("NextToken", nextToken);
@@ -162,7 +169,10 @@ public class ListIpsecServersRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * The ID of the region where the IPsec server is created.
+         * <p>
+         * 
+         * You can call the [DescribeRegions](~~36063~~) operation to query the most recent region list.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -171,7 +181,7 @@ public class ListIpsecServersRequest extends Request {
         }
 
         /**
-         * VpnGatewayId.
+         * The ID of the VPN gateway.
          */
         public Builder vpnGatewayId(String vpnGatewayId) {
             this.putQueryParameter("VpnGatewayId", vpnGatewayId);

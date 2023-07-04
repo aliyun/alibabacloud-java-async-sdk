@@ -170,7 +170,7 @@ public class DescribeSslVpnClientCertResponseBody extends TeaModel {
         private String status; 
 
         /**
-         * CaCert.
+         * The CA certificate.
          */
         public Builder caCert(String caCert) {
             this.caCert = caCert;
@@ -178,7 +178,7 @@ public class DescribeSslVpnClientCertResponseBody extends TeaModel {
         }
 
         /**
-         * ClientCert.
+         * The client certificate.
          */
         public Builder clientCert(String clientCert) {
             this.clientCert = clientCert;
@@ -186,7 +186,7 @@ public class DescribeSslVpnClientCertResponseBody extends TeaModel {
         }
 
         /**
-         * ClientConfig.
+         * The configuration of the client.
          */
         public Builder clientConfig(String clientConfig) {
             this.clientConfig = clientConfig;
@@ -194,7 +194,7 @@ public class DescribeSslVpnClientCertResponseBody extends TeaModel {
         }
 
         /**
-         * ClientKey.
+         * The key of the client.
          */
         public Builder clientKey(String clientKey) {
             this.clientKey = clientKey;
@@ -202,7 +202,10 @@ public class DescribeSslVpnClientCertResponseBody extends TeaModel {
         }
 
         /**
-         * CreateTime.
+         * The timestamp that indicates when the SSL client certificate was created. Unit: milliseconds.
+         * <p>
+         * 
+         * This value is a UNIX timestamp representing the number of milliseconds that have elapsed since the epoch time January 1, 1970, 00:00:00 UTC.
          */
         public Builder createTime(Long createTime) {
             this.createTime = createTime;
@@ -210,7 +213,10 @@ public class DescribeSslVpnClientCertResponseBody extends TeaModel {
         }
 
         /**
-         * EndTime.
+         * The timestamp that indicates when the SSL client certificate expires. Unit: milliseconds.
+         * <p>
+         * 
+         * This value is a UNIX timestamp representing the number of milliseconds that have elapsed since the epoch time January 1, 1970, 00:00:00 UTC.
          */
         public Builder endTime(Long endTime) {
             this.endTime = endTime;
@@ -218,7 +224,7 @@ public class DescribeSslVpnClientCertResponseBody extends TeaModel {
         }
 
         /**
-         * Name.
+         * The name of the SSL client certificate.
          */
         public Builder name(String name) {
             this.name = name;
@@ -226,7 +232,7 @@ public class DescribeSslVpnClientCertResponseBody extends TeaModel {
         }
 
         /**
-         * RegionId.
+         * The ID of the region where the SSL client certificate is created.
          */
         public Builder regionId(String regionId) {
             this.regionId = regionId;
@@ -234,7 +240,7 @@ public class DescribeSslVpnClientCertResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -242,7 +248,7 @@ public class DescribeSslVpnClientCertResponseBody extends TeaModel {
         }
 
         /**
-         * SslVpnClientCertId.
+         * The ID of the SSL client certificate.
          */
         public Builder sslVpnClientCertId(String sslVpnClientCertId) {
             this.sslVpnClientCertId = sslVpnClientCertId;
@@ -250,7 +256,7 @@ public class DescribeSslVpnClientCertResponseBody extends TeaModel {
         }
 
         /**
-         * SslVpnServerId.
+         * The ID of the SSL server.
          */
         public Builder sslVpnServerId(String sslVpnServerId) {
             this.sslVpnServerId = sslVpnServerId;
@@ -258,7 +264,12 @@ public class DescribeSslVpnClientCertResponseBody extends TeaModel {
         }
 
         /**
-         * Status.
+         * The status of the SSL client certificate. Valid values:
+         * <p>
+         * 
+         * *   **expiring-soon**: The certificate expires in one week.
+         * *   **normal**: The certificate is active.
+         * *   **expired**: The certificate has expired.
          */
         public Builder status(String status) {
             this.status = status;

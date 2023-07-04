@@ -112,7 +112,7 @@ public class DescribeRouterInterfaceAttributeRequest extends Request {
         } 
 
         /**
-         * InstanceId.
+         * The ID of the router interface.
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -130,7 +130,10 @@ public class DescribeRouterInterfaceAttributeRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * The ID of the region to which the router interface belongs.
+         * <p>
+         * 
+         * You can call the [DescribeRegions](~~36063~~) operation to query the most recent region list.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);

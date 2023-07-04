@@ -282,7 +282,11 @@ public class AssociatePhysicalConnectionToVirtualBorderRouterRequest extends Req
         } 
 
         /**
-         * CircuitCode.
+         * The IP address of the gateway device in the data center.
+         * <p>
+         * 
+         * *   Only the owner of the VBR can set or modify this parameter.
+         * *   When you create a VBR for the owner of the Express Connect circuit, this parameter is required.
          */
         public Builder circuitCode(String circuitCode) {
             this.putQueryParameter("CircuitCode", circuitCode);
@@ -291,7 +295,11 @@ public class AssociatePhysicalConnectionToVirtualBorderRouterRequest extends Req
         }
 
         /**
-         * ClientToken.
+         * The IPv6 address of the gateway device in the data center.
+         * <p>
+         * 
+         * *   Only the owner of the VBR can set or modify this parameter.
+         * *   When you create a VBR for the owner of the Express Connect circuit, this parameter is required.
          */
         public Builder clientToken(String clientToken) {
             this.putQueryParameter("ClientToken", clientToken);
@@ -309,7 +317,10 @@ public class AssociatePhysicalConnectionToVirtualBorderRouterRequest extends Req
         }
 
         /**
-         * LocalGatewayIp.
+         * The subnet mask of the IP addresses of the VBR and the gateway device in the data center.
+         * <p>
+         * 
+         * The two IP addresses must fall within the same subnet.
          */
         public Builder localGatewayIp(String localGatewayIp) {
             this.putQueryParameter("LocalGatewayIp", localGatewayIp);
@@ -318,7 +329,10 @@ public class AssociatePhysicalConnectionToVirtualBorderRouterRequest extends Req
         }
 
         /**
-         * LocalIpv6GatewayIp.
+         * The subnet mask of the IPv6 addresses of the VBR and the gateway device in the data center.
+         * <p>
+         * 
+         * The two IPv6 addresses must fall within the same subnet.
          */
         public Builder localIpv6GatewayIp(String localIpv6GatewayIp) {
             this.putQueryParameter("LocalIpv6GatewayIp", localIpv6GatewayIp);
@@ -345,7 +359,7 @@ public class AssociatePhysicalConnectionToVirtualBorderRouterRequest extends Req
         }
 
         /**
-         * PeerGatewayIp.
+         * The operation that you want to perform. Set the value to **AssociatePhysicalConnectionToVirtualBorderRouter**.
          */
         public Builder peerGatewayIp(String peerGatewayIp) {
             this.putQueryParameter("PeerGatewayIp", peerGatewayIp);
@@ -354,7 +368,11 @@ public class AssociatePhysicalConnectionToVirtualBorderRouterRequest extends Req
         }
 
         /**
-         * PeerIpv6GatewayIp.
+         * Specifies whether to enable IPv6. Valid values:
+         * <p>
+         * 
+         * *   **true**: enables IPv6
+         * *   **false** (default): disables IPv6
          */
         public Builder peerIpv6GatewayIp(String peerIpv6GatewayIp) {
             this.putQueryParameter("PeerIpv6GatewayIp", peerIpv6GatewayIp);
@@ -363,7 +381,7 @@ public class AssociatePhysicalConnectionToVirtualBorderRouterRequest extends Req
         }
 
         /**
-         * PeeringIpv6SubnetMask.
+         * The ID of the request.
          */
         public Builder peeringIpv6SubnetMask(String peeringIpv6SubnetMask) {
             this.putQueryParameter("PeeringIpv6SubnetMask", peeringIpv6SubnetMask);
@@ -372,7 +390,12 @@ public class AssociatePhysicalConnectionToVirtualBorderRouterRequest extends Req
         }
 
         /**
-         * PeeringSubnetMask.
+         * The client token that is used to ensure the idempotence of the request.
+         * <p>
+         * 
+         * You can use the client to generate the value, but you must make sure that it is unique among different requests. The token can contain only ASCII characters and cannot exceed 64 characters in length.
+         * 
+         * >  If you do not set this parameter, the system automatically uses **RequestId** as **ClientToken**. **RequestId** may be different for each API request.
          */
         public Builder peeringSubnetMask(String peeringSubnetMask) {
             this.putQueryParameter("PeeringSubnetMask", peeringSubnetMask);
@@ -381,7 +404,10 @@ public class AssociatePhysicalConnectionToVirtualBorderRouterRequest extends Req
         }
 
         /**
-         * PhysicalConnectionId.
+         * The circuit code of the Express Connect circuit. The circuit code is provided by the connectivity provider.
+         * <p>
+         * 
+         * >  Only the owner of the Express Connect circuit can set this parameter.
          */
         public Builder physicalConnectionId(String physicalConnectionId) {
             this.putQueryParameter("PhysicalConnectionId", physicalConnectionId);
@@ -390,7 +416,7 @@ public class AssociatePhysicalConnectionToVirtualBorderRouterRequest extends Req
         }
 
         /**
-         * RegionId.
+         * The ID of the Express Connect circuit.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -417,7 +443,10 @@ public class AssociatePhysicalConnectionToVirtualBorderRouterRequest extends Req
         }
 
         /**
-         * VbrId.
+         * The VLAN ID of the VBR. Valid values: **0 to 2999**.
+         * <p>
+         * 
+         * >  Only the owner of the Express Connect circuit can set this parameter. The VLAN IDs of two VBRs of the same the Express Connect circuit must be different.
          */
         public Builder vbrId(String vbrId) {
             this.putQueryParameter("VbrId", vbrId);
@@ -426,7 +455,7 @@ public class AssociatePhysicalConnectionToVirtualBorderRouterRequest extends Req
         }
 
         /**
-         * VlanId.
+         * The IP address of the VBR.
          */
         public Builder vlanId(String vlanId) {
             this.putQueryParameter("VlanId", vlanId);

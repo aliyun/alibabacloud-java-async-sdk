@@ -270,7 +270,7 @@ public class CreateIPv6TranslatorEntryRequest extends Request {
         } 
 
         /**
-         * AclId.
+         * The ID of the associated ACL.
          */
         public Builder aclId(String aclId) {
             this.putQueryParameter("AclId", aclId);
@@ -279,7 +279,11 @@ public class CreateIPv6TranslatorEntryRequest extends Request {
         }
 
         /**
-         * AclStatus.
+         * Specifies whether to enable access control lists (ACLs). Valid values:
+         * <p>
+         * 
+         * *   **on**
+         * *   **off**
          */
         public Builder aclStatus(String aclStatus) {
             this.putQueryParameter("AclStatus", aclStatus);
@@ -288,7 +292,11 @@ public class CreateIPv6TranslatorEntryRequest extends Request {
         }
 
         /**
-         * AclType.
+         * Specifies whether to enable ACLs. Valid values:
+         * <p>
+         * 
+         * *   **white**: a whitelist. IPv6 addresses in the ACL are allowed to access backend services.
+         * *   **black**: a blacklist. IPv6 addresses in the ACL are not allowed to access backend services.
          */
         public Builder aclType(String aclType) {
             this.putQueryParameter("AclType", aclType);
@@ -297,7 +305,7 @@ public class CreateIPv6TranslatorEntryRequest extends Request {
         }
 
         /**
-         * AllocateIpv6Port.
+         * The port that is used by the IPv6 address allocated to the IPv6 Translation Service instance.
          */
         public Builder allocateIpv6Port(Integer allocateIpv6Port) {
             this.putQueryParameter("AllocateIpv6Port", allocateIpv6Port);
@@ -306,7 +314,7 @@ public class CreateIPv6TranslatorEntryRequest extends Request {
         }
 
         /**
-         * BackendIpv4Addr.
+         * The public IPv4 address that needs to provide IPv6 services.
          */
         public Builder backendIpv4Addr(String backendIpv4Addr) {
             this.putQueryParameter("BackendIpv4Addr", backendIpv4Addr);
@@ -315,7 +323,7 @@ public class CreateIPv6TranslatorEntryRequest extends Request {
         }
 
         /**
-         * BackendIpv4Port.
+         * The port of the public IPv4 address that needs to provide IPv6 services.
          */
         public Builder backendIpv4Port(Integer backendIpv4Port) {
             this.putQueryParameter("BackendIpv4Port", backendIpv4Port);
@@ -324,7 +332,13 @@ public class CreateIPv6TranslatorEntryRequest extends Request {
         }
 
         /**
-         * EntryBandwidth.
+         * The maximum bandwidth specified in the IPv6 mapping entry. Valid values:
+         * <p>
+         * 
+         * *   \-1 (default): does not limit the maximum bandwidth specified in the IPv6 mapping entry.
+         * *   1 to 200: the bandwidth value specified in the IPv6 mapping entry. Unit: Mbit/s.
+         * 
+         * > The sum of the maximum bandwidth values specified in all IPv6 entries cannot exceed the maximum bandwidth supported by the instance.
          */
         public Builder entryBandwidth(Integer entryBandwidth) {
             this.putQueryParameter("EntryBandwidth", entryBandwidth);
@@ -333,7 +347,7 @@ public class CreateIPv6TranslatorEntryRequest extends Request {
         }
 
         /**
-         * EntryDescription.
+         * The description of the IPv6 mapping entry.
          */
         public Builder entryDescription(String entryDescription) {
             this.putQueryParameter("EntryDescription", entryDescription);
@@ -342,7 +356,7 @@ public class CreateIPv6TranslatorEntryRequest extends Request {
         }
 
         /**
-         * EntryName.
+         * The name of the IPv6 mapping entry. It must be 2 to 100 characters in length and can contain letters, digits, periods (.), underscores (\_), and hyphens (-). It must start with a letter. It cannot start with `http://` or `https://`.
          */
         public Builder entryName(String entryName) {
             this.putQueryParameter("EntryName", entryName);
@@ -351,7 +365,7 @@ public class CreateIPv6TranslatorEntryRequest extends Request {
         }
 
         /**
-         * Ipv6TranslatorId.
+         * The ID of the IPv6 Translation Service instance.
          */
         public Builder ipv6TranslatorId(String ipv6TranslatorId) {
             this.putQueryParameter("Ipv6TranslatorId", ipv6TranslatorId);
@@ -378,7 +392,7 @@ public class CreateIPv6TranslatorEntryRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * The region of the IPv6 Translation Service instance. You can call the **DescribeRegions** operation to query the most recent region list.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -405,7 +419,11 @@ public class CreateIPv6TranslatorEntryRequest extends Request {
         }
 
         /**
-         * TransProtocol.
+         * The protocol. Valid values:
+         * <p>
+         * 
+         * *   **tcp**
+         * *   **udp**
          */
         public Builder transProtocol(String transProtocol) {
             this.putQueryParameter("TransProtocol", transProtocol);

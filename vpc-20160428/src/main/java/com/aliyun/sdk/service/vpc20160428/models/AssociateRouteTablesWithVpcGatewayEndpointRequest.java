@@ -169,7 +169,10 @@ public class AssociateRouteTablesWithVpcGatewayEndpointRequest extends Request {
         } 
 
         /**
-         * 幂等参数
+         * The region ID of the gateway endpoint.
+         * <p>
+         * 
+         * You can call the [DescribeRegions](~~36063~~) operation to query the most recent region list.
          */
         public Builder clientToken(String clientToken) {
             this.putQueryParameter("ClientToken", clientToken);
@@ -178,7 +181,7 @@ public class AssociateRouteTablesWithVpcGatewayEndpointRequest extends Request {
         }
 
         /**
-         * 是否只预检此次请求
+         * The ID of the request.
          */
         public Builder dryRun(Boolean dryRun) {
             this.putQueryParameter("DryRun", dryRun);
@@ -187,7 +190,10 @@ public class AssociateRouteTablesWithVpcGatewayEndpointRequest extends Request {
         }
 
         /**
-         * VPC网关实例ID
+         * The client token that is used to ensure the idempotence of the request. You can use the client to generate a client token. Make sure that a unique client token is used for each request. The **client token** can contain only ASCII characters and cannot exceed 64 characters in length.
+         * <p>
+         * 
+         * >  If you do not set this parameter, the system uses **RequestId** as **ClientToken**. The value of **RequestId** of each API request may be different.
          */
         public Builder endpointId(String endpointId) {
             this.putQueryParameter("EndpointId", endpointId);
@@ -214,7 +220,7 @@ public class AssociateRouteTablesWithVpcGatewayEndpointRequest extends Request {
         }
 
         /**
-         * 地域
+         * RegionId.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -241,7 +247,7 @@ public class AssociateRouteTablesWithVpcGatewayEndpointRequest extends Request {
         }
 
         /**
-         * 路由表列表
+         * RouteTableIds.
          */
         public Builder routeTableIds(java.util.List < String > routeTableIds) {
             this.putQueryParameter("RouteTableIds", routeTableIds);

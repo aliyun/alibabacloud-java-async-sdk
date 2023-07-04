@@ -182,7 +182,7 @@ public class UpdatePublicIpAddressPoolAttributeRequest extends Request {
         } 
 
         /**
-         * ClientToken.
+         * The region ID of the IP address pool that you want to modify.
          */
         public Builder clientToken(String clientToken) {
             this.putQueryParameter("ClientToken", clientToken);
@@ -191,7 +191,11 @@ public class UpdatePublicIpAddressPoolAttributeRequest extends Request {
         }
 
         /**
-         * Description.
+         * Specifies whether to perform a dry run. Valid values:
+         * <p>
+         * 
+         * *   **true**: performs a dry run. The system checks the required parameters, request syntax, and limits. If the request fails the dry run, an error message is returned. If the request passes the dry run, the `DryRunOperation` error code is returned.
+         * *   **false** (default): performs a dry run and sends the request. If the request passes the dry run, a 2xx HTTP status code is returned and the operation is performed.
          */
         public Builder description(String description) {
             this.putQueryParameter("Description", description);
@@ -200,7 +204,7 @@ public class UpdatePublicIpAddressPoolAttributeRequest extends Request {
         }
 
         /**
-         * DryRun.
+         * The ID of the request.
          */
         public Builder dryRun(Boolean dryRun) {
             this.putQueryParameter("DryRun", dryRun);
@@ -209,7 +213,12 @@ public class UpdatePublicIpAddressPoolAttributeRequest extends Request {
         }
 
         /**
-         * Name.
+         * The client token that is used to ensure the idempotence of the request.
+         * <p>
+         * 
+         * You can use the client to generate the value, but you must make sure that it is unique among different requests. The token can contain only ASCII characters.
+         * 
+         * >  If you do not specify this parameter, the system uses **RequestId** as **ClientToken**. The value of **RequestId** may be different for each API request.
          */
         public Builder name(String name) {
             this.putQueryParameter("Name", name);
@@ -236,7 +245,10 @@ public class UpdatePublicIpAddressPoolAttributeRequest extends Request {
         }
 
         /**
-         * PublicIpAddressPoolId.
+         * The description of the IP address pool.
+         * <p>
+         * 
+         * This parameter is optional. If you enter a description, the description must be 2 to 256 characters in length, and cannot start with http:// or https://.
          */
         public Builder publicIpAddressPoolId(String publicIpAddressPoolId) {
             this.putQueryParameter("PublicIpAddressPoolId", publicIpAddressPoolId);

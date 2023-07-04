@@ -62,7 +62,7 @@ public class CreateVpcPrefixListResponseBody extends TeaModel {
         private String resourceGroupId; 
 
         /**
-         * PrefixListId.
+         * The ID of the prefix list.
          */
         public Builder prefixListId(String prefixListId) {
             this.prefixListId = prefixListId;
@@ -70,7 +70,7 @@ public class CreateVpcPrefixListResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -78,7 +78,7 @@ public class CreateVpcPrefixListResponseBody extends TeaModel {
         }
 
         /**
-         * ResourceGroupId.
+         * The ID of the resource group to which the prefix list belongs.
          */
         public Builder resourceGroupId(String resourceGroupId) {
             this.resourceGroupId = resourceGroupId;

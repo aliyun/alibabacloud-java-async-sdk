@@ -195,7 +195,14 @@ public class UnassociateEipAddressRequest extends Request {
         } 
 
         /**
-         * AllocationId.
+         * The type of instance from which you want to disassociate the EIP. Valid values:
+         * <p>
+         * 
+         * *   **EcsInstance** (default): an Elastic Compute Service (ECS) instance in a virtual private cloud (VPC)
+         * *   **SlbInstance**: a Server Load Balancer (SLB) instance in a VPC
+         * *   **NetworkInterface**: a secondary elastic network interface (ENI) in a VPC
+         * *   **Nat**: a NAT gateway
+         * *   **HaVip**: a high-availability virtual IP address (HAVIP)
          */
         public Builder allocationId(String allocationId) {
             this.putQueryParameter("AllocationId", allocationId);
@@ -213,7 +220,7 @@ public class UnassociateEipAddressRequest extends Request {
         }
 
         /**
-         * Force.
+         * The ID of the EIP that you want to disassociate.
          */
         public Builder force(Boolean force) {
             this.putQueryParameter("Force", force);
@@ -222,7 +229,7 @@ public class UnassociateEipAddressRequest extends Request {
         }
 
         /**
-         * InstanceId.
+         * The private IP address of the ECS instance or the secondary ENI from which you want to disassociate the EIP.
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -231,7 +238,12 @@ public class UnassociateEipAddressRequest extends Request {
         }
 
         /**
-         * InstanceType.
+         * The client token that is used to ensure the idempotence of the request.
+         * <p>
+         * 
+         * You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters.
+         * 
+         * >  If you do not set this parameter, the system uses **RequestId** as **ClientToken**. **RequestId** might be different for each API request.
          */
         public Builder instanceType(String instanceType) {
             this.putQueryParameter("InstanceType", instanceType);
@@ -258,7 +270,7 @@ public class UnassociateEipAddressRequest extends Request {
         }
 
         /**
-         * PrivateIpAddress.
+         * The ID of the request.
          */
         public Builder privateIpAddress(String privateIpAddress) {
             this.putQueryParameter("PrivateIpAddress", privateIpAddress);
@@ -267,7 +279,7 @@ public class UnassociateEipAddressRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * The ID of the instance from which you want to disassociate the EIP.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);

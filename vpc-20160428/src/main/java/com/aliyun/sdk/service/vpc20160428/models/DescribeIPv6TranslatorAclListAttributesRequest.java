@@ -154,7 +154,7 @@ public class DescribeIPv6TranslatorAclListAttributesRequest extends Request {
         } 
 
         /**
-         * AclId.
+         * The ACL ID.
          */
         public Builder aclId(String aclId) {
             this.putQueryParameter("AclId", aclId);
@@ -181,7 +181,7 @@ public class DescribeIPv6TranslatorAclListAttributesRequest extends Request {
         }
 
         /**
-         * PageNumber.
+         * The number of the page to return. Default value: **1**.
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -190,7 +190,7 @@ public class DescribeIPv6TranslatorAclListAttributesRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * The number of entries to return on each page. Maximum value: **50**. Default value: **10**.
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -199,7 +199,7 @@ public class DescribeIPv6TranslatorAclListAttributesRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * The region of the ACL.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);

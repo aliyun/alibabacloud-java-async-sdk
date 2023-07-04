@@ -197,7 +197,7 @@ public class ModifyNatIpCidrAttributeRequest extends Request {
         } 
 
         /**
-         * ClientToken.
+         * The ID of the Virtual Private Cloud (VPC) NAT gateway to which the NAT CIDR block belongs.
          */
         public Builder clientToken(String clientToken) {
             this.putQueryParameter("ClientToken", clientToken);
@@ -206,7 +206,10 @@ public class ModifyNatIpCidrAttributeRequest extends Request {
         }
 
         /**
-         * DryRun.
+         * The new description of the NAT CIDR block.
+         * <p>
+         * 
+         * The description must be 2 to 256 characters in length. It must start with a letter but cannot start with `http://` or `https://`.
          */
         public Builder dryRun(Boolean dryRun) {
             this.putQueryParameter("DryRun", dryRun);
@@ -215,7 +218,7 @@ public class ModifyNatIpCidrAttributeRequest extends Request {
         }
 
         /**
-         * NatGatewayId.
+         * The operation that you want to perform. Set the value to **ModifyNatIpCidrAttribute**.
          */
         public Builder natGatewayId(String natGatewayId) {
             this.putQueryParameter("NatGatewayId", natGatewayId);
@@ -224,7 +227,7 @@ public class ModifyNatIpCidrAttributeRequest extends Request {
         }
 
         /**
-         * NatIpCidr.
+         * The ID of the request.
          */
         public Builder natIpCidr(String natIpCidr) {
             this.putQueryParameter("NatIpCidr", natIpCidr);
@@ -233,7 +236,7 @@ public class ModifyNatIpCidrAttributeRequest extends Request {
         }
 
         /**
-         * NatIpCidrDescription.
+         * The NAT CIDR block whose name and description you want to modify.
          */
         public Builder natIpCidrDescription(String natIpCidrDescription) {
             this.putQueryParameter("NatIpCidrDescription", natIpCidrDescription);
@@ -242,7 +245,12 @@ public class ModifyNatIpCidrAttributeRequest extends Request {
         }
 
         /**
-         * NatIpCidrName.
+         * The client token that is used to ensure the idempotence of the request.
+         * <p>
+         * 
+         * You can use the client to generate the value, but you must make sure that it is unique among different requests. ClientToken can contain only ASCII characters.
+         * 
+         * >  If you do not set this parameter, the system automatically uses **RequestId** as **ClientToken**. **RequestId** may be different for each API request.
          */
         public Builder natIpCidrName(String natIpCidrName) {
             this.putQueryParameter("NatIpCidrName", natIpCidrName);
@@ -269,7 +277,11 @@ public class ModifyNatIpCidrAttributeRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * Specifies whether to check the request without performing the operation. Valid values:
+         * <p>
+         * 
+         * *   **true**: checks the request but does not modify information about the NAT CIDR block. The system checks whether your AccessKey pair is valid, whether RAM users are granted required permissions, and whether the required parameters are set. If the request fails the check, an error message is returned. If the request passes the check, the `DryRunOperation` error code is returned.
+         * *   **false**: sends the request. This is the default value. If the request passes the check, a 2xx HTTP status code is returned and information about the NAT CIDR block is modified.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);

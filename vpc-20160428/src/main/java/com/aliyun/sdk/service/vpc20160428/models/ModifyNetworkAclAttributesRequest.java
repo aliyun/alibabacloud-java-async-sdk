@@ -154,7 +154,12 @@ public class ModifyNetworkAclAttributesRequest extends Request {
         } 
 
         /**
-         * ClientToken.
+         * The client token that is used to ensure the idempotence of the request.
+         * <p>
+         * 
+         * You can use the client to generate the value, but you must make sure that it is unique among different requests. The token can contain only ASCII characters.
+         * 
+         * >  If you do not specify this parameter, the system uses **RequestId** as **ClientToken**. **RequestId** may be different for each API request.
          */
         public Builder clientToken(String clientToken) {
             this.putQueryParameter("ClientToken", clientToken);
@@ -163,7 +168,10 @@ public class ModifyNetworkAclAttributesRequest extends Request {
         }
 
         /**
-         * Description.
+         * The description of the network ACL.
+         * <p>
+         * 
+         * The description must be 1 to 256 characters in length and cannot start with `http://` or `https://`.
          */
         public Builder description(String description) {
             this.putQueryParameter("Description", description);
@@ -172,7 +180,7 @@ public class ModifyNetworkAclAttributesRequest extends Request {
         }
 
         /**
-         * NetworkAclId.
+         * The ID of the network ACL.
          */
         public Builder networkAclId(String networkAclId) {
             this.putQueryParameter("NetworkAclId", networkAclId);
@@ -181,7 +189,10 @@ public class ModifyNetworkAclAttributesRequest extends Request {
         }
 
         /**
-         * NetworkAclName.
+         * The name of the network ACL.
+         * <p>
+         * 
+         * The name must be 1 to 128 characters in length and cannot start with `http://` or `https://`.
          */
         public Builder networkAclName(String networkAclName) {
             this.putQueryParameter("NetworkAclName", networkAclName);
@@ -199,7 +210,10 @@ public class ModifyNetworkAclAttributesRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * The region ID of the network ACL.
+         * <p>
+         * 
+         * You can call the [DescribeRegions](~~36063~~) operation to query the most recent region list.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);

@@ -62,7 +62,7 @@ public class AllocateIpv6InternetBandwidthResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * InternetBandwidthId.
+         * The ID of the Internet bandwidth that you purchased for the IPv6 gateway.
          */
         public Builder internetBandwidthId(String internetBandwidthId) {
             this.internetBandwidthId = internetBandwidthId;
@@ -70,7 +70,7 @@ public class AllocateIpv6InternetBandwidthResponseBody extends TeaModel {
         }
 
         /**
-         * Ipv6AddressId.
+         * The ID of the IPv6 address.
          */
         public Builder ipv6AddressId(String ipv6AddressId) {
             this.ipv6AddressId = ipv6AddressId;
@@ -78,7 +78,7 @@ public class AllocateIpv6InternetBandwidthResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

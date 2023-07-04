@@ -141,7 +141,7 @@ public class ModifyGlobalAccelerationInstanceSpecRequest extends Request {
         } 
 
         /**
-         * Bandwidth.
+         * The maximum bandwidth of the GA instance. Unit: Mbit/s. Set the value to **10**.
          */
         public Builder bandwidth(String bandwidth) {
             this.putQueryParameter("Bandwidth", bandwidth);
@@ -150,7 +150,7 @@ public class ModifyGlobalAccelerationInstanceSpecRequest extends Request {
         }
 
         /**
-         * GlobalAccelerationInstanceId.
+         * The ID of the GA instance.
          */
         public Builder globalAccelerationInstanceId(String globalAccelerationInstanceId) {
             this.putQueryParameter("GlobalAccelerationInstanceId", globalAccelerationInstanceId);
@@ -177,7 +177,10 @@ public class ModifyGlobalAccelerationInstanceSpecRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * The region ID of the GA instance.
+         * <p>
+         * 
+         * You can call the [DescribeRegions](~~36063~~) operation to query the most recent region list.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);

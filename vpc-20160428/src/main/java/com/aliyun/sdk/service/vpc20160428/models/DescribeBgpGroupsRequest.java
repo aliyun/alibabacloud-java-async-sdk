@@ -182,7 +182,7 @@ public class DescribeBgpGroupsRequest extends Request {
         } 
 
         /**
-         * BgpGroupId.
+         * The ID of the BGP group.
          */
         public Builder bgpGroupId(String bgpGroupId) {
             this.putQueryParameter("BgpGroupId", bgpGroupId);
@@ -191,7 +191,11 @@ public class DescribeBgpGroupsRequest extends Request {
         }
 
         /**
-         * IsDefault.
+         * Specifies whether the BGP group is the default one. Valid values:
+         * <p>
+         * 
+         * *   **false**: yes
+         * *   **true**: no
          */
         public Builder isDefault(Boolean isDefault) {
             this.putQueryParameter("IsDefault", isDefault);
@@ -218,7 +222,7 @@ public class DescribeBgpGroupsRequest extends Request {
         }
 
         /**
-         * PageNumber.
+         * The number of the page to return. Default value: **1**.
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -227,7 +231,7 @@ public class DescribeBgpGroupsRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * The number of entries to return on each page. Maximum value: **50**. Default value: **10**.
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -236,7 +240,10 @@ public class DescribeBgpGroupsRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * The region ID of the VBR.
+         * <p>
+         * 
+         * You can call the [DescribeRegions](~~36063~~) operation to query the most recent region list.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -263,7 +270,7 @@ public class DescribeBgpGroupsRequest extends Request {
         }
 
         /**
-         * RouterId.
+         * The ID of the virtual border router (VBR) that is associated with the BGP group.
          */
         public Builder routerId(String routerId) {
             this.putQueryParameter("RouterId", routerId);

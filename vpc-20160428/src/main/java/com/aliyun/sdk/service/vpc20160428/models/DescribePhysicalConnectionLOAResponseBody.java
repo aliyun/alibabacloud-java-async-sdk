@@ -50,7 +50,7 @@ public class DescribePhysicalConnectionLOAResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * PhysicalConnectionLOAType.
+         * The LOA information about the Express Connect circuit.
          */
         public Builder physicalConnectionLOAType(PhysicalConnectionLOAType physicalConnectionLOAType) {
             this.physicalConnectionLOAType = physicalConnectionLOAType;
@@ -58,7 +58,7 @@ public class DescribePhysicalConnectionLOAResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -146,7 +146,7 @@ public class DescribePhysicalConnectionLOAResponseBody extends TeaModel {
             private String PMName; 
 
             /**
-             * PMCertificateNo.
+             * The identity document number of the construction worker.
              */
             public Builder PMCertificateNo(String PMCertificateNo) {
                 this.PMCertificateNo = PMCertificateNo;
@@ -154,7 +154,12 @@ public class DescribePhysicalConnectionLOAResponseBody extends TeaModel {
             }
 
             /**
-             * PMCertificateType.
+             * The identity document type of the construction worker. Valid values:
+             * <p>
+             * 
+             * *   **IDCard**: identity card
+             * *   **Passport**: passport
+             * *   **Other**: other identity documents
              */
             public Builder PMCertificateType(String PMCertificateType) {
                 this.PMCertificateType = PMCertificateType;
@@ -162,7 +167,7 @@ public class DescribePhysicalConnectionLOAResponseBody extends TeaModel {
             }
 
             /**
-             * PMContactInfo.
+             * The phone number of the construction worker.
              */
             public Builder PMContactInfo(String PMContactInfo) {
                 this.PMContactInfo = PMContactInfo;
@@ -170,7 +175,11 @@ public class DescribePhysicalConnectionLOAResponseBody extends TeaModel {
             }
 
             /**
-             * PMGender.
+             * The gender of the construction worker. Valid values:
+             * <p>
+             * 
+             * *   **Male**: male
+             * *   **Female**: female
              */
             public Builder PMGender(String PMGender) {
                 this.PMGender = PMGender;
@@ -178,7 +187,7 @@ public class DescribePhysicalConnectionLOAResponseBody extends TeaModel {
             }
 
             /**
-             * PMName.
+             * The name of the construction worker.
              */
             public Builder PMName(String PMName) {
                 this.PMName = PMName;
@@ -380,7 +389,7 @@ public class DescribePhysicalConnectionLOAResponseBody extends TeaModel {
             private String status; 
 
             /**
-             * CompanyLocalizedName.
+             * The name of the construction company.
              */
             public Builder companyLocalizedName(String companyLocalizedName) {
                 this.companyLocalizedName = companyLocalizedName;
@@ -388,7 +397,7 @@ public class DescribePhysicalConnectionLOAResponseBody extends TeaModel {
             }
 
             /**
-             * CompanyName.
+             * The name of the organization that requires the Express Connect circuit.
              */
             public Builder companyName(String companyName) {
                 this.companyName = companyName;
@@ -396,7 +405,7 @@ public class DescribePhysicalConnectionLOAResponseBody extends TeaModel {
             }
 
             /**
-             * ConstructionTime.
+             * The time when construction starts.
              */
             public Builder constructionTime(String constructionTime) {
                 this.constructionTime = constructionTime;
@@ -404,7 +413,7 @@ public class DescribePhysicalConnectionLOAResponseBody extends TeaModel {
             }
 
             /**
-             * InstanceId.
+             * The ID of the Express Connect circuit.
              */
             public Builder instanceId(String instanceId) {
                 this.instanceId = instanceId;
@@ -412,7 +421,7 @@ public class DescribePhysicalConnectionLOAResponseBody extends TeaModel {
             }
 
             /**
-             * LineCode.
+             * The circuit code provided by the connectivity provider.
              */
             public Builder lineCode(String lineCode) {
                 this.lineCode = lineCode;
@@ -420,7 +429,7 @@ public class DescribePhysicalConnectionLOAResponseBody extends TeaModel {
             }
 
             /**
-             * LineLabel.
+             * The label of the cable in the data center.
              */
             public Builder lineLabel(String lineLabel) {
                 this.lineLabel = lineLabel;
@@ -428,7 +437,13 @@ public class DescribePhysicalConnectionLOAResponseBody extends TeaModel {
             }
 
             /**
-             * LineType.
+             * The type of the Express Connect circuit. Valid values:
+             * <p>
+             * 
+             * *   **MSTP**
+             * *   **MPLSVPN**
+             * *   **FIBRE**
+             * *   **Other**
              */
             public Builder lineType(String lineType) {
                 this.lineType = lineType;
@@ -436,7 +451,7 @@ public class DescribePhysicalConnectionLOAResponseBody extends TeaModel {
             }
 
             /**
-             * LoaUrl.
+             * The download URL of the LOA file.
              */
             public Builder loaUrl(String loaUrl) {
                 this.loaUrl = loaUrl;
@@ -444,7 +459,7 @@ public class DescribePhysicalConnectionLOAResponseBody extends TeaModel {
             }
 
             /**
-             * PMInfo.
+             * The information about the construction workers.
              */
             public Builder PMInfo(PhysicalConnectionLOATypePMInfo PMInfo) {
                 this.PMInfo = PMInfo;
@@ -452,7 +467,7 @@ public class DescribePhysicalConnectionLOAResponseBody extends TeaModel {
             }
 
             /**
-             * SI.
+             * The on-site construction company.
              */
             public Builder si(String si) {
                 this.si = si;
@@ -460,7 +475,16 @@ public class DescribePhysicalConnectionLOAResponseBody extends TeaModel {
             }
 
             /**
-             * Status.
+             * The status of the LOA. Valid values:
+             * <p>
+             * 
+             * *   **Applying**: The LOA is pending for approval.
+             * *   **Accept**: The LOA is approved.
+             * *   **Available**: The LOA is available.
+             * *   **Rejected**: The LOA is rejected.
+             * *   **Completing**: The Express Connect circuit is under construction.
+             * *   **Complete**: The Express Connect circuit is installed.
+             * *   **Deleted**: The LOA is deleted.
              */
             public Builder status(String status) {
                 this.status = status;

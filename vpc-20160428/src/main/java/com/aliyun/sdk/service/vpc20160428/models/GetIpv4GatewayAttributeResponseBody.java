@@ -158,7 +158,7 @@ public class GetIpv4GatewayAttributeResponseBody extends TeaModel {
         private String vpcId; 
 
         /**
-         * CreateTime.
+         * The tag list.
          */
         public Builder createTime(String createTime) {
             this.createTime = createTime;
@@ -166,7 +166,7 @@ public class GetIpv4GatewayAttributeResponseBody extends TeaModel {
         }
 
         /**
-         * Enabled.
+         * The name of the IPv4 gateway.
          */
         public Builder enabled(Boolean enabled) {
             this.enabled = enabled;
@@ -174,7 +174,7 @@ public class GetIpv4GatewayAttributeResponseBody extends TeaModel {
         }
 
         /**
-         * Ipv4GatewayDescription.
+         * The ID of the route table associated with the IPv4 gateway.
          */
         public Builder ipv4GatewayDescription(String ipv4GatewayDescription) {
             this.ipv4GatewayDescription = ipv4GatewayDescription;
@@ -182,7 +182,7 @@ public class GetIpv4GatewayAttributeResponseBody extends TeaModel {
         }
 
         /**
-         * Ipv4GatewayId.
+         * The description of the IPv4 gateway.
          */
         public Builder ipv4GatewayId(String ipv4GatewayId) {
             this.ipv4GatewayId = ipv4GatewayId;
@@ -190,7 +190,7 @@ public class GetIpv4GatewayAttributeResponseBody extends TeaModel {
         }
 
         /**
-         * Ipv4GatewayName.
+         * The ID of the resource group to which the IPv4 gateway belongs.
          */
         public Builder ipv4GatewayName(String ipv4GatewayName) {
             this.ipv4GatewayName = ipv4GatewayName;
@@ -198,7 +198,7 @@ public class GetIpv4GatewayAttributeResponseBody extends TeaModel {
         }
 
         /**
-         * Ipv4GatewayRouteTableId.
+         * The time when the IPv4 gateway was created.
          */
         public Builder ipv4GatewayRouteTableId(String ipv4GatewayRouteTableId) {
             this.ipv4GatewayRouteTableId = ipv4GatewayRouteTableId;
@@ -206,7 +206,11 @@ public class GetIpv4GatewayAttributeResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * Indicates whether the IPv4 gateway is activated. Valid values:
+         * <p>
+         * 
+         * *   **true**: yes
+         * *   **false**: no
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -214,7 +218,7 @@ public class GetIpv4GatewayAttributeResponseBody extends TeaModel {
         }
 
         /**
-         * ResourceGroupId.
+         * The tag key.
          */
         public Builder resourceGroupId(String resourceGroupId) {
             this.resourceGroupId = resourceGroupId;
@@ -222,7 +226,7 @@ public class GetIpv4GatewayAttributeResponseBody extends TeaModel {
         }
 
         /**
-         * Status.
+         * The ID of the request.
          */
         public Builder status(String status) {
             this.status = status;
@@ -230,7 +234,7 @@ public class GetIpv4GatewayAttributeResponseBody extends TeaModel {
         }
 
         /**
-         * Tags.
+         * The tag value.
          */
         public Builder tags(java.util.List < Tags> tags) {
             this.tags = tags;
@@ -238,7 +242,7 @@ public class GetIpv4GatewayAttributeResponseBody extends TeaModel {
         }
 
         /**
-         * VpcId.
+         * The ID of the IPv4 gateway.
          */
         public Builder vpcId(String vpcId) {
             this.vpcId = vpcId;

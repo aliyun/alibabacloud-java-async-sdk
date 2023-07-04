@@ -154,7 +154,10 @@ public class DeleteVpcPrefixListRequest extends Request {
         } 
 
         /**
-         * ClientToken.
+         * The region ID of the prefix list.
+         * <p>
+         * 
+         * You can call the [DescribeRegions](~~36063~~) operation to query the most recent region list.
          */
         public Builder clientToken(String clientToken) {
             this.putQueryParameter("ClientToken", clientToken);
@@ -163,7 +166,7 @@ public class DeleteVpcPrefixListRequest extends Request {
         }
 
         /**
-         * DryRun.
+         * The ID of the request.
          */
         public Builder dryRun(Boolean dryRun) {
             this.putQueryParameter("DryRun", dryRun);
@@ -190,7 +193,11 @@ public class DeleteVpcPrefixListRequest extends Request {
         }
 
         /**
-         * PrefixListId.
+         * Specifies whether to check the request without performing the operation. Valid values:
+         * <p>
+         * 
+         * *   **true**: checks the request without performing the operation. The system checks the required parameters, request syntax, and limits. If the request fails to pass the check, an error message is returned. If the request passes the check, the `DryRunOperation` error code is returned.
+         * *   **false** (default): sends the request. If the request passes the check, a 2xx HTTP status code is returned and the operation is performed.
          */
         public Builder prefixListId(String prefixListId) {
             this.putQueryParameter("PrefixListId", prefixListId);

@@ -168,7 +168,7 @@ public class EnableVpcIpv4GatewayRequest extends Request {
         } 
 
         /**
-         * ClientToken.
+         * The ID of the request.
          */
         public Builder clientToken(String clientToken) {
             this.putQueryParameter("ClientToken", clientToken);
@@ -177,7 +177,10 @@ public class EnableVpcIpv4GatewayRequest extends Request {
         }
 
         /**
-         * DryRun.
+         * The list of route tables. The system adds a 0.0.0.0/0 route that points to the IPv4 gateway to the route tables. The system supports at most 10 route tables.
+         * <p>
+         * 
+         * >  The route table and the IPv4 gateway must belong to the same virtual private cloud (VPC).
          */
         public Builder dryRun(Boolean dryRun) {
             this.putQueryParameter("DryRun", dryRun);
@@ -186,7 +189,11 @@ public class EnableVpcIpv4GatewayRequest extends Request {
         }
 
         /**
-         * Ipv4GatewayId.
+         * Specifies whether to check the request without performing the operation. Valid values:
+         * <p>
+         * 
+         * *   **true**: checks the request without performing the operation. The system checks the required parameters, request syntax, and limits. If the request fails the check, an error message is returned. If the request passes the check, the `DryRunOperation` error code is returned.
+         * *   **false** (default): sends the API request. After the request passes the check, a 2xx HTTP status code is returned and the operation is performed.
          */
         public Builder ipv4GatewayId(String ipv4GatewayId) {
             this.putQueryParameter("Ipv4GatewayId", ipv4GatewayId);
@@ -213,7 +220,12 @@ public class EnableVpcIpv4GatewayRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * The client token that is used to ensure the idempotence of the request.
+         * <p>
+         * 
+         * You can use the client to generate the value, but you must make sure that it is unique among different requests. The client token can contain only ASCII characters.
+         * 
+         * >  If you do not set this parameter, the system uses **RequestId** as **ClientToken**. **RequestId** may be different for each API request.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);

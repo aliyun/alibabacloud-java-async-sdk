@@ -182,7 +182,12 @@ public class UpdateNetworkAclEntriesRequest extends Request {
         } 
 
         /**
-         * ClientToken.
+         * The client token that is used to ensure the idempotence of the request.
+         * <p>
+         * 
+         * You can use the client to generate the value, but you must make sure that it is unique among different requests. The token can contain only ASCII characters.
+         * 
+         * >  If you do not specify this parameter, the system uses **RequestId** as **ClientToken**. **RequestId** may be different for each API request.
          */
         public Builder clientToken(String clientToken) {
             this.putQueryParameter("ClientToken", clientToken);
@@ -209,7 +214,7 @@ public class UpdateNetworkAclEntriesRequest extends Request {
         }
 
         /**
-         * NetworkAclId.
+         * The ID of the network ACL.
          */
         public Builder networkAclId(String networkAclId) {
             this.putQueryParameter("NetworkAclId", networkAclId);
@@ -227,7 +232,10 @@ public class UpdateNetworkAclEntriesRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * The region ID of the network ACL.
+         * <p>
+         * 
+         * You can call the [DescribeRegions](~~36063~~) operation to query the most recent region list.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -254,7 +262,11 @@ public class UpdateNetworkAclEntriesRequest extends Request {
         }
 
         /**
-         * UpdateEgressAclEntries.
+         * Specifies whether to update outbound rules. Valid values:
+         * <p>
+         * 
+         * *   **true**: yes
+         * *   **false** (default): no
          */
         public Builder updateEgressAclEntries(Boolean updateEgressAclEntries) {
             this.putQueryParameter("UpdateEgressAclEntries", updateEgressAclEntries);
@@ -263,7 +275,11 @@ public class UpdateNetworkAclEntriesRequest extends Request {
         }
 
         /**
-         * UpdateIngressAclEntries.
+         * Specifies whether to update inbound rules. Valid values:
+         * <p>
+         * 
+         * *   **true**: yes
+         * *   **false** (default): no
          */
         public Builder updateIngressAclEntries(Boolean updateIngressAclEntries) {
             this.putQueryParameter("UpdateIngressAclEntries", updateIngressAclEntries);
@@ -389,7 +405,10 @@ public class UpdateNetworkAclEntriesRequest extends Request {
             private String protocol; 
 
             /**
-             * Description.
+             * The description of the outbound rule.
+             * <p>
+             * 
+             * The description must be 1 to 256 characters in length, and cannot start with `http://` or `https://`.
              */
             public Builder description(String description) {
                 this.description = description;
@@ -397,7 +416,7 @@ public class UpdateNetworkAclEntriesRequest extends Request {
             }
 
             /**
-             * DestinationCidrIp.
+             * The destination CIDR block.
              */
             public Builder destinationCidrIp(String destinationCidrIp) {
                 this.destinationCidrIp = destinationCidrIp;
@@ -405,7 +424,7 @@ public class UpdateNetworkAclEntriesRequest extends Request {
             }
 
             /**
-             * EntryType.
+             * The type of the rule. Set the value to **custom**, which specifies custom rules.
              */
             public Builder entryType(String entryType) {
                 this.entryType = entryType;
@@ -413,7 +432,10 @@ public class UpdateNetworkAclEntriesRequest extends Request {
             }
 
             /**
-             * NetworkAclEntryId.
+             * The ID of the outbound rule.
+             * <p>
+             * 
+             * Valid values of **N**: **0** to **29**. You can update at most 30 outbound rules.
              */
             public Builder networkAclEntryId(String networkAclEntryId) {
                 this.networkAclEntryId = networkAclEntryId;
@@ -421,7 +443,10 @@ public class UpdateNetworkAclEntriesRequest extends Request {
             }
 
             /**
-             * NetworkAclEntryName.
+             * The name of the outbound rule.
+             * <p>
+             * 
+             * The name must be 1 to 128 characters in length, and cannot start with `http://` or `https://`.
              */
             public Builder networkAclEntryName(String networkAclEntryName) {
                 this.networkAclEntryName = networkAclEntryName;
@@ -429,7 +454,11 @@ public class UpdateNetworkAclEntriesRequest extends Request {
             }
 
             /**
-             * Policy.
+             * The action to be performed on network traffic that matches the rule. Valid values:
+             * <p>
+             * 
+             * *   **accept**: allows the network traffic.
+             * *   **drop**: blocks the network traffic.
              */
             public Builder policy(String policy) {
                 this.policy = policy;
@@ -437,7 +466,11 @@ public class UpdateNetworkAclEntriesRequest extends Request {
             }
 
             /**
-             * Port.
+             * The destination port range of the outbound rule.
+             * <p>
+             * 
+             * *   If **Protocol** of the outbound rule is set to **all**, **icmp**, or **gre**, the port range is **-1/-1**, which specifies all ports.
+             * *   If **Protocol** of the outbound rule is set to **tcp** or **udp**, set the port range in the following format: **1/200** or **80/80**, which specifies port 1 to port 200 or port 80. Valid values for a port: **1** to **65535**.
              */
             public Builder port(String port) {
                 this.port = port;
@@ -445,7 +478,14 @@ public class UpdateNetworkAclEntriesRequest extends Request {
             }
 
             /**
-             * Protocol.
+             * The protocol type. Valid values:
+             * <p>
+             * 
+             * *   **icmp**: ICMP
+             * *   **gre**: GRE
+             * *   **tcp**: TCP
+             * *   **udp**: UDP
+             * *   **all**: all protocols
              */
             public Builder protocol(String protocol) {
                 this.protocol = protocol;
@@ -570,7 +610,10 @@ public class UpdateNetworkAclEntriesRequest extends Request {
             private String sourceCidrIp; 
 
             /**
-             * Description.
+             * The description of the inbound rule.
+             * <p>
+             * 
+             * The description must be 1 to 256 characters in length, and cannot start with `http://` or `https://`.
              */
             public Builder description(String description) {
                 this.description = description;
@@ -578,7 +621,7 @@ public class UpdateNetworkAclEntriesRequest extends Request {
             }
 
             /**
-             * EntryType.
+             * The type of the rule. Set the value to **custom**, which specifies custom rules.
              */
             public Builder entryType(String entryType) {
                 this.entryType = entryType;
@@ -586,7 +629,10 @@ public class UpdateNetworkAclEntriesRequest extends Request {
             }
 
             /**
-             * NetworkAclEntryId.
+             * The ID of the inbound rule.
+             * <p>
+             * 
+             * Valid values of **N**: **0** to **29**. You can update at most 30 inbound rules.
              */
             public Builder networkAclEntryId(String networkAclEntryId) {
                 this.networkAclEntryId = networkAclEntryId;
@@ -594,7 +640,10 @@ public class UpdateNetworkAclEntriesRequest extends Request {
             }
 
             /**
-             * NetworkAclEntryName.
+             * The name of the inbound rule.
+             * <p>
+             * 
+             * The name must be 1 to 128 characters in length, and cannot start with `http://` or `https://`.
              */
             public Builder networkAclEntryName(String networkAclEntryName) {
                 this.networkAclEntryName = networkAclEntryName;
@@ -602,7 +651,11 @@ public class UpdateNetworkAclEntriesRequest extends Request {
             }
 
             /**
-             * Policy.
+             * The action to be performed on network traffic that matches the rule. Valid values:
+             * <p>
+             * 
+             * *   **accept**: allows the network traffic.
+             * *   **drop**: blocks the network traffic.
              */
             public Builder policy(String policy) {
                 this.policy = policy;
@@ -610,7 +663,11 @@ public class UpdateNetworkAclEntriesRequest extends Request {
             }
 
             /**
-             * Port.
+             * The source port range of the inbound rule.
+             * <p>
+             * 
+             * *   If **Protocol** of the inbound rule is set to **all**, **icmp**, or **gre**, the port range is **-1/-1**, which specifies all ports.
+             * *   If **Protocol** of the inbound rule is set to **tcp** or **udp**, set the port range in the following format: **1/200** or **80/80**, which specifies port 1 to port 200 or port 80. Valid values for a port: **1** to **65535**.
              */
             public Builder port(String port) {
                 this.port = port;
@@ -618,7 +675,14 @@ public class UpdateNetworkAclEntriesRequest extends Request {
             }
 
             /**
-             * Protocol.
+             * The protocol type. Valid values:
+             * <p>
+             * 
+             * *   **icmp**: Internet Control Message Protocol (ICMP)
+             * *   **gre**: Generic Routing Encapsulation (GRE)
+             * *   **tcp**: TCP
+             * *   **udp**: UDP
+             * *   **all**: all protocols
              */
             public Builder protocol(String protocol) {
                 this.protocol = protocol;
@@ -626,7 +690,7 @@ public class UpdateNetworkAclEntriesRequest extends Request {
             }
 
             /**
-             * SourceCidrIp.
+             * The source CIDR block.
              */
             public Builder sourceCidrIp(String sourceCidrIp) {
                 this.sourceCidrIp = sourceCidrIp;

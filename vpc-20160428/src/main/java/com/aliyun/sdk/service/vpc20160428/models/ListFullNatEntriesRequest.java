@@ -237,7 +237,10 @@ public class ListFullNatEntriesRequest extends Request {
         } 
 
         /**
-         * ClientToken.
+         * The ID of the FULLNAT table to which the FULLNAT entries to be queried belong.
+         * <p>
+         * 
+         * >  You must specify at least one of the **FullNatTableId** and **NatGatewayId** parameters.
          */
         public Builder clientToken(String clientToken) {
             this.putQueryParameter("ClientToken", clientToken);
@@ -246,7 +249,7 @@ public class ListFullNatEntriesRequest extends Request {
         }
 
         /**
-         * FullNatEntryId.
+         * The ID of the elastic network interface (ENI) that you want to query. You can specify up to 20 ENIs.
          */
         public Builder fullNatEntryId(String fullNatEntryId) {
             this.putQueryParameter("FullNatEntryId", fullNatEntryId);
@@ -264,7 +267,10 @@ public class ListFullNatEntriesRequest extends Request {
         }
 
         /**
-         * FullNatTableId.
+         * The name of the FULLNAT entry that you want to query. You can enter the names of up to 20 FULLNAT entries.
+         * <p>
+         * 
+         * The name must be 2 to 128 characters in length and can contain letters, digits, underscores (\_), and hyphens (-). The name must start with a letter.
          */
         public Builder fullNatTableId(String fullNatTableId) {
             this.putQueryParameter("FullNatTableId", fullNatTableId);
@@ -273,7 +279,7 @@ public class ListFullNatEntriesRequest extends Request {
         }
 
         /**
-         * IpProtocol.
+         * The ID of the request.
          */
         public Builder ipProtocol(String ipProtocol) {
             this.putQueryParameter("IpProtocol", ipProtocol);
@@ -282,7 +288,11 @@ public class ListFullNatEntriesRequest extends Request {
         }
 
         /**
-         * MaxResults.
+         * The protocol of the packets that are forwarded by the port. Valid values:
+         * <p>
+         * 
+         * *   **TCP**
+         * *   **UDP**
          */
         public Builder maxResults(Long maxResults) {
             this.putQueryParameter("MaxResults", maxResults);
@@ -291,7 +301,7 @@ public class ListFullNatEntriesRequest extends Request {
         }
 
         /**
-         * NatGatewayId.
+         * The ID of the VPC NAT gateway.
          */
         public Builder natGatewayId(String natGatewayId) {
             this.putQueryParameter("NatGatewayId", natGatewayId);
@@ -309,7 +319,10 @@ public class ListFullNatEntriesRequest extends Request {
         }
 
         /**
-         * NextToken.
+         * The region ID of the virtual private cloud (VPC) NAT gateway to which the FULLNAT entries to be queried belong.
+         * <p>
+         * 
+         * You can call the [DescribeRegions](~~36063~~) operation to query the most recent region list.
          */
         public Builder nextToken(String nextToken) {
             this.putQueryParameter("NextToken", nextToken);
@@ -336,7 +349,10 @@ public class ListFullNatEntriesRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * The ID of the NAT gateway.
+         * <p>
+         * 
+         * >  You must specify at least one of the **FullNatTableId** and **NatGatewayId** parameters.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);

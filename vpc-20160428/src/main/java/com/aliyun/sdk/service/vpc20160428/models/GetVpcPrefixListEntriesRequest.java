@@ -155,7 +155,7 @@ public class GetVpcPrefixListEntriesRequest extends Request {
         } 
 
         /**
-         * MaxResults.
+         * The number of entries to return on each page. Valid values: **1** to **100**. Default value: **20**.
          */
         public Builder maxResults(Long maxResults) {
             this.putQueryParameter("MaxResults", maxResults);
@@ -164,7 +164,11 @@ public class GetVpcPrefixListEntriesRequest extends Request {
         }
 
         /**
-         * NextToken.
+         * The token that is used for the next query. Valid values:
+         * <p>
+         * 
+         * *   If this is your first query and no next queries are to be sent, ignore this parameter.
+         * *   If a next query is to be performed, set the value to the NextToken value returned in the last call to the ListenerCertificates operation.
          */
         public Builder nextToken(String nextToken) {
             this.putQueryParameter("NextToken", nextToken);
@@ -191,7 +195,7 @@ public class GetVpcPrefixListEntriesRequest extends Request {
         }
 
         /**
-         * PrefixListId.
+         * The ID of the prefix list that you want to query.
          */
         public Builder prefixListId(String prefixListId) {
             this.putQueryParameter("PrefixListId", prefixListId);
@@ -200,7 +204,10 @@ public class GetVpcPrefixListEntriesRequest extends Request {
         }
 
         /**
-         * 地域
+         * The region ID of the prefix list.
+         * <p>
+         * 
+         * You can call the [DescribeRegions](~~36063~~) operation to query available regions.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);

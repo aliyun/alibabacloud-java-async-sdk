@@ -62,7 +62,11 @@ public class DescribeTagsResponseBody extends TeaModel {
         private TagResources tagResources; 
 
         /**
-         * NextToken.
+         * The token that is used for the next query. Valid values:
+         * <p>
+         * 
+         * *   If the value of **NextToken** is not returned, it indicates that no next query is to be sent.
+         * *   If a value of **NextToken** is returned, the value is the token that is used for the subsequent query.
          */
         public Builder nextToken(String nextToken) {
             this.nextToken = nextToken;
@@ -70,7 +74,7 @@ public class DescribeTagsResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -78,7 +82,7 @@ public class DescribeTagsResponseBody extends TeaModel {
         }
 
         /**
-         * TagResources.
+         * The list of tags that meet the filter conditions.
          */
         public Builder tagResources(TagResources tagResources) {
             this.tagResources = tagResources;
@@ -130,7 +134,7 @@ public class DescribeTagsResponseBody extends TeaModel {
             private String tagValue; 
 
             /**
-             * TagKey.
+             * The tag key.
              */
             public Builder tagKey(String tagKey) {
                 this.tagKey = tagKey;
@@ -138,7 +142,7 @@ public class DescribeTagsResponseBody extends TeaModel {
             }
 
             /**
-             * TagValue.
+             * The tag value.
              */
             public Builder tagValue(String tagValue) {
                 this.tagValue = tagValue;

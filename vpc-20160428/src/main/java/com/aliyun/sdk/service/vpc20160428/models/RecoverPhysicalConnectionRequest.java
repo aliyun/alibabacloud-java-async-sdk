@@ -98,7 +98,7 @@ public class RecoverPhysicalConnectionRequest extends Request {
         } 
 
         /**
-         * DryRun
+         * The ID of the request.
          */
         public Builder dryRun(Boolean dryRun) {
             this.putQueryParameter("DryRun", dryRun);
@@ -107,7 +107,11 @@ public class RecoverPhysicalConnectionRequest extends Request {
         }
 
         /**
-         * 恢复的Pconn
+         * Specifies whether to precheck the request only. Valid values:
+         * <p>
+         * 
+         * *   **true**: only prechecks the request but does not resume the Express Connect circuit. The system prechecks the request syntax, instance status, and whether the required parameters are specified. An error message is returned if the request fails to pass the precheck. If the request passes the precheck, the system returns the ID of the request.
+         * *   **false** (default): sends the request. If the request passes the precheck, the Express Connect circuit is resumed.
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -125,7 +129,10 @@ public class RecoverPhysicalConnectionRequest extends Request {
         }
 
         /**
-         * 幂等Token
+         * The region ID of the Express Connect circuit.
+         * <p>
+         * 
+         * You can call the [DescribeRegions](~~36063~~) operation to query the most recent region list.
          */
         public Builder token(String token) {
             this.putQueryParameter("Token", token);

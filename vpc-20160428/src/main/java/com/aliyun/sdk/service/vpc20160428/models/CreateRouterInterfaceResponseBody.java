@@ -62,7 +62,7 @@ public class CreateRouterInterfaceResponseBody extends TeaModel {
         private String routerInterfaceId; 
 
         /**
-         * OrderId.
+         * The order number. This parameter is returned if InstanceChargeType is set to PrePaid.
          */
         public Builder orderId(Long orderId) {
             this.orderId = orderId;
@@ -70,7 +70,7 @@ public class CreateRouterInterfaceResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -78,7 +78,7 @@ public class CreateRouterInterfaceResponseBody extends TeaModel {
         }
 
         /**
-         * RouterInterfaceId.
+         * The ID of the router interface.
          */
         public Builder routerInterfaceId(String routerInterfaceId) {
             this.routerInterfaceId = routerInterfaceId;

@@ -140,7 +140,12 @@ public class DeleteRouterInterfaceRequest extends Request {
         } 
 
         /**
-         * ClientToken.
+         * The client token that is used to ensure the idempotence of the request.
+         * <p>
+         * 
+         * You can use the client to generate the value, but you must make sure that it is unique among different requests. The token can contain only ASCII characters.
+         * 
+         * >  If you do not set this parameter, the system uses **RequestId** as **ClientToken**. The value of **RequestId** in each API request may be different.
          */
         public Builder clientToken(String clientToken) {
             this.putQueryParameter("ClientToken", clientToken);
@@ -167,7 +172,10 @@ public class DeleteRouterInterfaceRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * The ID of the region where the router interface is deployed.
+         * <p>
+         * 
+         * You can call the [DescribeRegions](~~36063~~) operation to query the most recent region list.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -194,7 +202,7 @@ public class DeleteRouterInterfaceRequest extends Request {
         }
 
         /**
-         * RouterInterfaceId.
+         * The ID of the router interface.
          */
         public Builder routerInterfaceId(String routerInterfaceId) {
             this.putQueryParameter("RouterInterfaceId", routerInterfaceId);

@@ -140,7 +140,10 @@ public class DeleteVbrHaRequest extends Request {
         } 
 
         /**
-         * ClientToken.
+         * The client token that is used to ensure the idempotence of the request.
+         * <p>
+         * 
+         * You can use the client to generate the value, but you must ensure that it is unique among different requests. The token can contain only ASCII characters and cannot exceed 64 characters in length.
          */
         public Builder clientToken(String clientToken) {
             this.putQueryParameter("ClientToken", clientToken);
@@ -149,7 +152,7 @@ public class DeleteVbrHaRequest extends Request {
         }
 
         /**
-         * InstanceId.
+         * The ID of the VBR failover group.
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -176,7 +179,7 @@ public class DeleteVbrHaRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * The ID of the region where the VBR is deployed.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);

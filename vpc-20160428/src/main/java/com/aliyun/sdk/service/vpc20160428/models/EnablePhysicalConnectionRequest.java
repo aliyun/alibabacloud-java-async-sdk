@@ -140,7 +140,7 @@ public class EnablePhysicalConnectionRequest extends Request {
         } 
 
         /**
-         * ClientToken.
+         * The ID of the request.
          */
         public Builder clientToken(String clientToken) {
             this.putQueryParameter("ClientToken", clientToken);
@@ -167,7 +167,10 @@ public class EnablePhysicalConnectionRequest extends Request {
         }
 
         /**
-         * PhysicalConnectionId.
+         * The operation that you want to perform.
+         * <p>
+         * 
+         * Set the value to **EnablePhysicalConnection**.
          */
         public Builder physicalConnectionId(String physicalConnectionId) {
             this.putQueryParameter("PhysicalConnectionId", physicalConnectionId);
@@ -176,7 +179,7 @@ public class EnablePhysicalConnectionRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * The ID of the Express Connect circuit.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);

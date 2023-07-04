@@ -50,7 +50,11 @@ public class GetPhysicalConnectionServiceStatusResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * 是否开通出云流量服务
+         * Indicates whether billing for outbound data transfer is enabled. Valid values:
+         * <p>
+         * 
+         * *   **true**: yes
+         * *   **false**: no
          */
         public Builder enabled(Boolean enabled) {
             this.enabled = enabled;
@@ -58,7 +62,7 @@ public class GetPhysicalConnectionServiceStatusResponseBody extends TeaModel {
         }
 
         /**
-         * Id of the request
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

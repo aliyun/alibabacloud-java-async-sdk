@@ -252,7 +252,7 @@ public class ModifyPhysicalConnectionAttributeRequest extends Request {
         } 
 
         /**
-         * CircuitCode.
+         * The circuit code of the Express Connect circuit. The circuit code is provided by the connectivity provider.
          */
         public Builder circuitCode(String circuitCode) {
             this.putQueryParameter("CircuitCode", circuitCode);
@@ -261,7 +261,7 @@ public class ModifyPhysicalConnectionAttributeRequest extends Request {
         }
 
         /**
-         * ClientToken.
+         * The client token that is used to ensure the idempotence of the request. You can use the client to generate a token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters and cannot exceed 64 characters in length.
          */
         public Builder clientToken(String clientToken) {
             this.putQueryParameter("ClientToken", clientToken);
@@ -270,7 +270,10 @@ public class ModifyPhysicalConnectionAttributeRequest extends Request {
         }
 
         /**
-         * Description.
+         * The description of the Express Connect circuit.
+         * <p>
+         * 
+         * The description must be 2 to 256 characters in length. It must start with a letter but cannot start with `http://` or `https://`.
          */
         public Builder description(String description) {
             this.putQueryParameter("Description", description);
@@ -279,7 +282,15 @@ public class ModifyPhysicalConnectionAttributeRequest extends Request {
         }
 
         /**
-         * LineOperator.
+         * The connectivity provider of the Express Connect circuit. Valid values:
+         * <p>
+         * 
+         * *   **CT**: China Telecom
+         * *   **CU**: China Unicom
+         * *   **CM**: China Mobile
+         * *   **CO**: other connectivity providers in the Chinese mainland
+         * *   **Equinix**: Equinix
+         * *   **Other**: other connectivity providers outside the Chinese Mainland
          */
         public Builder lineOperator(String lineOperator) {
             this.putQueryParameter("LineOperator", lineOperator);
@@ -288,7 +299,10 @@ public class ModifyPhysicalConnectionAttributeRequest extends Request {
         }
 
         /**
-         * Name.
+         * The name of the Express Connect circuit.
+         * <p>
+         * 
+         * The name must be 2 to 128 characters in length and can contain letters, digits, periods (.), underscores (\_), and hyphens (-). The name must start with a letter but cannot start with `http://` or `https://`.
          */
         public Builder name(String name) {
             this.putQueryParameter("Name", name);
@@ -315,7 +329,7 @@ public class ModifyPhysicalConnectionAttributeRequest extends Request {
         }
 
         /**
-         * PeerLocation.
+         * The geographical location of the data center.
          */
         public Builder peerLocation(String peerLocation) {
             this.putQueryParameter("PeerLocation", peerLocation);
@@ -324,7 +338,7 @@ public class ModifyPhysicalConnectionAttributeRequest extends Request {
         }
 
         /**
-         * PhysicalConnectionId.
+         * The ID of the Express Connect circuit.
          */
         public Builder physicalConnectionId(String physicalConnectionId) {
             this.putQueryParameter("PhysicalConnectionId", physicalConnectionId);
@@ -333,7 +347,18 @@ public class ModifyPhysicalConnectionAttributeRequest extends Request {
         }
 
         /**
-         * PortType.
+         * The port type of the Express Connect circuit. Valid values:
+         * <p>
+         * 
+         * *   **100Base-T**: 100 Mbit/s copper Ethernet port
+         * *   **1000Base-T** (default): 1,000 Mbit/s copper Ethernet port
+         * *   **1000Base-LX**: 1,000 Mbit/s single-mode optical port (10 kilometers)
+         * *   **10GBase-T**: 10,000 Mbit/s copper Ethernet port
+         * *   **10GBase-LR**: 10,000 Mbit/s single-mode optical port (10 kilometers)
+         * *   **40GBase-LR**: 40,000 Mbit/s single-mode optical port
+         * *   **100GBase-LR**: 100,000 Mbit/s single-mode optical port
+         * 
+         * >  If you want to use the 40GBase-LR or 100GBase-LR port for an Express Connect circuit, you must first contact your account manager to obtain information about resource supplies.
          */
         public Builder portType(String portType) {
             this.putQueryParameter("PortType", portType);
@@ -342,7 +367,7 @@ public class ModifyPhysicalConnectionAttributeRequest extends Request {
         }
 
         /**
-         * RedundantPhysicalConnectionId.
+         * The ID of the redundant Express Connect circuit. The redundant Express Connect circuit must be in the **Allocated**, **Confirmed**, or **Enabled** state.
          */
         public Builder redundantPhysicalConnectionId(String redundantPhysicalConnectionId) {
             this.putQueryParameter("RedundantPhysicalConnectionId", redundantPhysicalConnectionId);
@@ -351,7 +376,10 @@ public class ModifyPhysicalConnectionAttributeRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * The region ID of the Express Connect circuit.
+         * <p>
+         * 
+         * You can call the [DescribeRegions](~~36063~~) operation to query the most recent region list.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -378,7 +406,7 @@ public class ModifyPhysicalConnectionAttributeRequest extends Request {
         }
 
         /**
-         * bandwidth.
+         * The bandwidth value for the connection over the Express Connect circuit. Unit: Mbit/s. Valid values: 2 to 10240.
          */
         public Builder bandwidth(Integer bandwidth) {
             this.putQueryParameter("bandwidth", bandwidth);

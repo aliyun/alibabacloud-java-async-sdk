@@ -154,7 +154,7 @@ public class DeleteTrafficMirrorSessionRequest extends Request {
         } 
 
         /**
-         * ClientToken.
+         * The ID of the traffic mirror session.
          */
         public Builder clientToken(String clientToken) {
             this.putQueryParameter("ClientToken", clientToken);
@@ -163,7 +163,7 @@ public class DeleteTrafficMirrorSessionRequest extends Request {
         }
 
         /**
-         * DryRun.
+         * The ID of the region to which the traffic mirror session belongs. You can call the [DescribeRegions](~~36063~~) operation to query the most recent region list. For more information about regions that support traffic mirroring, see [Overview of traffic mirroring](~~207513~~).
          */
         public Builder dryRun(Boolean dryRun) {
             this.putQueryParameter("DryRun", dryRun);
@@ -217,7 +217,7 @@ public class DeleteTrafficMirrorSessionRequest extends Request {
         }
 
         /**
-         * TrafficMirrorSessionId.
+         * The ID of the request.
          */
         public Builder trafficMirrorSessionId(String trafficMirrorSessionId) {
             this.putQueryParameter("TrafficMirrorSessionId", trafficMirrorSessionId);

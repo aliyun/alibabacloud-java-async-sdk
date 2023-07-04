@@ -170,7 +170,10 @@ public class AssociateEipAddressBatchRequest extends Request {
         } 
 
         /**
-         * BindedInstanceId.
+         * The ID of the instance to be associated with EIPs.
+         * <p>
+         * 
+         * The instance can be a NAT gateway or a secondary ENI.
          */
         public Builder bindedInstanceId(String bindedInstanceId) {
             this.putQueryParameter("BindedInstanceId", bindedInstanceId);
@@ -179,7 +182,11 @@ public class AssociateEipAddressBatchRequest extends Request {
         }
 
         /**
-         * BindedInstanceType.
+         * The type of instance with which you want to associate the EIPs. Valid values:
+         * <p>
+         * 
+         * *   **Nat**: a NAT gateway
+         * *   **NetworkInterface**: a secondary ENI
          */
         public Builder bindedInstanceType(String bindedInstanceType) {
             this.putQueryParameter("BindedInstanceType", bindedInstanceType);
@@ -188,7 +195,12 @@ public class AssociateEipAddressBatchRequest extends Request {
         }
 
         /**
-         * ClientToken.
+         * The client token that is used to ensure the idempotence of the request.
+         * <p>
+         * 
+         * You can use the client to generate the value, but you must make sure that it is unique among all requests. The token can only contain ASCII characters.
+         * 
+         * >  If you do not specify this parameter, the system automatically uses **RequestId** as **ClientToken**. **RequestId** might be different for each API request.
          */
         public Builder clientToken(String clientToken) {
             this.putQueryParameter("ClientToken", clientToken);
@@ -206,7 +218,10 @@ public class AssociateEipAddressBatchRequest extends Request {
         }
 
         /**
-         * Mode.
+         * The association mode. Set the value to **MULTI_BINDED**, which specifies the Multi-EIP-to-ENI mode.
+         * <p>
+         * 
+         * This parameter is required only if **InstanceType** is set to **NetworkInterface**.
          */
         public Builder mode(String mode) {
             this.putQueryParameter("Mode", mode);
@@ -224,7 +239,10 @@ public class AssociateEipAddressBatchRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * The ID of the region to which the EIPs belong.
+         * <p>
+         * 
+         * You can call the [DescribeRegions](~~36063~~) operation to obtain the region ID.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);

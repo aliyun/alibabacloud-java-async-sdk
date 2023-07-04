@@ -173,7 +173,10 @@ public class GetVpcRouteEntrySummaryRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * The region ID of the route table.
+         * <p>
+         * 
+         * You can call the [DescribeRegions](~~36063~~) operation to query the most recent region list.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -200,7 +203,14 @@ public class GetVpcRouteEntrySummaryRequest extends Request {
         }
 
         /**
-         * RouteEntryType.
+         * The type of the route. Valid values:
+         * <p>
+         * 
+         * *   **All**: all route types
+         * *   **Custom**: a custom route
+         * *   **System**: a system route
+         * *   **BGP**: a BGP route
+         * *   **CEN**: a Cloud Enterprise Network (CEN) route
          */
         public Builder routeEntryType(String routeEntryType) {
             this.putQueryParameter("RouteEntryType", routeEntryType);
@@ -209,7 +219,7 @@ public class GetVpcRouteEntrySummaryRequest extends Request {
         }
 
         /**
-         * RouteTableId.
+         * The ID of the route table that you want to query.
          */
         public Builder routeTableId(String routeTableId) {
             this.putQueryParameter("RouteTableId", routeTableId);
@@ -218,7 +228,7 @@ public class GetVpcRouteEntrySummaryRequest extends Request {
         }
 
         /**
-         * VpcId.
+         * The ID of the virtual private cloud (VPC) to which the route table belongs.
          */
         public Builder vpcId(String vpcId) {
             this.putQueryParameter("VpcId", vpcId);

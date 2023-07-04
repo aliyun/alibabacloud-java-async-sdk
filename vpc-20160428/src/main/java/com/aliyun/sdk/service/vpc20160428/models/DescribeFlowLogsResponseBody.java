@@ -98,7 +98,7 @@ public class DescribeFlowLogsResponseBody extends TeaModel {
         private String totalCount; 
 
         /**
-         * FlowLogs.
+         * The information about the flow logs.
          */
         public Builder flowLogs(FlowLogs flowLogs) {
             this.flowLogs = flowLogs;
@@ -106,7 +106,7 @@ public class DescribeFlowLogsResponseBody extends TeaModel {
         }
 
         /**
-         * PageNumber.
+         * The number of the returned page.
          */
         public Builder pageNumber(String pageNumber) {
             this.pageNumber = pageNumber;
@@ -114,7 +114,7 @@ public class DescribeFlowLogsResponseBody extends TeaModel {
         }
 
         /**
-         * PageSize.
+         * The number of entries returned per page.
          */
         public Builder pageSize(String pageSize) {
             this.pageSize = pageSize;
@@ -122,7 +122,7 @@ public class DescribeFlowLogsResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -130,7 +130,11 @@ public class DescribeFlowLogsResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * Indicates whether the operation is successful. Valid values:
+         * <p>
+         * 
+         * *   **true**: yes
+         * *   **false**: no
          */
         public Builder success(String success) {
             this.success = success;
@@ -138,7 +142,7 @@ public class DescribeFlowLogsResponseBody extends TeaModel {
         }
 
         /**
-         * TotalCount.
+         * The number of flow logs that are queried.
          */
         public Builder totalCount(String totalCount) {
             this.totalCount = totalCount;
@@ -190,7 +194,7 @@ public class DescribeFlowLogsResponseBody extends TeaModel {
             private String value; 
 
             /**
-             * Key.
+             * The tag key.
              */
             public Builder key(String key) {
                 this.key = key;
@@ -198,7 +202,7 @@ public class DescribeFlowLogsResponseBody extends TeaModel {
             }
 
             /**
-             * Value.
+             * The tag value.
              */
             public Builder value(String value) {
                 this.value = value;
@@ -513,7 +517,7 @@ public class DescribeFlowLogsResponseBody extends TeaModel {
             private String trafficType; 
 
             /**
-             * AggregationInterval.
+             * The sampling interval of the flow log. Unit: seconds.
              */
             public Builder aggregationInterval(Integer aggregationInterval) {
                 this.aggregationInterval = aggregationInterval;
@@ -521,7 +525,11 @@ public class DescribeFlowLogsResponseBody extends TeaModel {
             }
 
             /**
-             * BusinessStatus.
+             * The business status of the flow log. Valid values:
+             * <p>
+             * 
+             * *   **Normal**: active
+             * *   **FinancialLocked**: locked due to overdue payments
              */
             public Builder businessStatus(String businessStatus) {
                 this.businessStatus = businessStatus;
@@ -529,7 +537,7 @@ public class DescribeFlowLogsResponseBody extends TeaModel {
             }
 
             /**
-             * CreationTime.
+             * The time when the flow log was created.
              */
             public Builder creationTime(String creationTime) {
                 this.creationTime = creationTime;
@@ -537,7 +545,7 @@ public class DescribeFlowLogsResponseBody extends TeaModel {
             }
 
             /**
-             * Description.
+             * The description of the flow log.
              */
             public Builder description(String description) {
                 this.description = description;
@@ -545,7 +553,7 @@ public class DescribeFlowLogsResponseBody extends TeaModel {
             }
 
             /**
-             * FlowLogId.
+             * The ID of the flow log.
              */
             public Builder flowLogId(String flowLogId) {
                 this.flowLogId = flowLogId;
@@ -553,7 +561,7 @@ public class DescribeFlowLogsResponseBody extends TeaModel {
             }
 
             /**
-             * FlowLogName.
+             * The name of the flow log.
              */
             public Builder flowLogName(String flowLogName) {
                 this.flowLogName = flowLogName;
@@ -561,7 +569,7 @@ public class DescribeFlowLogsResponseBody extends TeaModel {
             }
 
             /**
-             * LogStoreName.
+             * The Logstore that stores the captured traffic data.
              */
             public Builder logStoreName(String logStoreName) {
                 this.logStoreName = logStoreName;
@@ -569,7 +577,7 @@ public class DescribeFlowLogsResponseBody extends TeaModel {
             }
 
             /**
-             * ProjectName.
+             * The project that manages the captured traffic data.
              */
             public Builder projectName(String projectName) {
                 this.projectName = projectName;
@@ -577,7 +585,7 @@ public class DescribeFlowLogsResponseBody extends TeaModel {
             }
 
             /**
-             * RegionId.
+             * The region ID of the flow log.
              */
             public Builder regionId(String regionId) {
                 this.regionId = regionId;
@@ -585,7 +593,7 @@ public class DescribeFlowLogsResponseBody extends TeaModel {
             }
 
             /**
-             * ResourceGroupId.
+             * The ID of the resource group to which the flow log belongs.
              */
             public Builder resourceGroupId(String resourceGroupId) {
                 this.resourceGroupId = resourceGroupId;
@@ -593,7 +601,7 @@ public class DescribeFlowLogsResponseBody extends TeaModel {
             }
 
             /**
-             * ResourceId.
+             * The ID of the resource from which traffic is captured.
              */
             public Builder resourceId(String resourceId) {
                 this.resourceId = resourceId;
@@ -601,7 +609,12 @@ public class DescribeFlowLogsResponseBody extends TeaModel {
             }
 
             /**
-             * ResourceType.
+             * The type of the resource from which traffic is captured. Valid values:
+             * <p>
+             * 
+             * *   **NetworkInterface**: an ENI
+             * *   **VSwitch**: all ENIs in a vSwitch
+             * *   **VPC**: all ENIs in a VPC
              */
             public Builder resourceType(String resourceType) {
                 this.resourceType = resourceType;
@@ -609,7 +622,13 @@ public class DescribeFlowLogsResponseBody extends TeaModel {
             }
 
             /**
-             * ServiceType.
+             * The hosting type of the cloud service.
+             * <p>
+             * 
+             * *   This parameter can be empty, which indicates that the flow log is created by the user.
+             * *   If this parameter is not empty, the value is fixed as **sls**. The value sls indicates that the flow log is created in the Log Service console.
+             * 
+             * >  A flow log that is created in the Log Service console can be displayed in the VPC list. However, you cannot modify, start, stop, or delete the flow log in the VPC console. If you want to manage the flow log, you can log on to the [Log Service console](https://sls.console.aliyun.com) and perform required operations.
              */
             public Builder serviceType(String serviceType) {
                 this.serviceType = serviceType;
@@ -617,7 +636,12 @@ public class DescribeFlowLogsResponseBody extends TeaModel {
             }
 
             /**
-             * Status.
+             * The status of the flow log. Valid values:
+             * <p>
+             * 
+             * *   **Active**: enabled
+             * *   **Activating**: being enabled
+             * *   **Inactive**: disabled
              */
             public Builder status(String status) {
                 this.status = status;
@@ -625,7 +649,7 @@ public class DescribeFlowLogsResponseBody extends TeaModel {
             }
 
             /**
-             * Tags.
+             * An array that consists of the details of the returned tags.
              */
             public Builder tags(Tags tags) {
                 this.tags = tags;
@@ -633,7 +657,13 @@ public class DescribeFlowLogsResponseBody extends TeaModel {
             }
 
             /**
-             * TrafficPath.
+             * The scope of the traffic that you want to capture. Valid values:
+             * <p>
+             * 
+             * *   **all** (default value): all traffic
+             * *   **internetGateway**: Internet traffic
+             * 
+             * >  By default, the traffic path feature is unavailable. To use this feature, [submit a ticket](https://workorder-intl.console.aliyun.com/?spm=5176.11182188.console-base-top.dworkorder.18ae4882n3v6ZW#/ticket/createIndex).
              */
             public Builder trafficPath(TrafficPath trafficPath) {
                 this.trafficPath = trafficPath;
@@ -641,7 +671,12 @@ public class DescribeFlowLogsResponseBody extends TeaModel {
             }
 
             /**
-             * TrafficType.
+             * The type of traffic that is captured by the flow log. Valid values:
+             * <p>
+             * 
+             * *   **All**: all traffic
+             * *   **Allow**: traffic that is allowed by access control
+             * *   **Drop**: traffic that is denied by access control
              */
             public Builder trafficType(String trafficType) {
                 this.trafficType = trafficType;

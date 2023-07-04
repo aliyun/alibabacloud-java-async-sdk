@@ -209,7 +209,12 @@ public class CreateTrafficMirrorFilterRequest extends Request {
         } 
 
         /**
-         * ClientToken.
+         * The client token that is used to ensure the idempotence of the request.
+         * <p>
+         * 
+         * You can use the client to generate the value, but you must ensure that the value is unique among all requests. The client token can contain only ASCII characters.
+         * 
+         * >  If you do not set this parameter, the system uses **RequestId** as **ClientToken**. **RequestId** may be different for each API request.
          */
         public Builder clientToken(String clientToken) {
             this.putQueryParameter("ClientToken", clientToken);
@@ -218,7 +223,11 @@ public class CreateTrafficMirrorFilterRequest extends Request {
         }
 
         /**
-         * DryRun.
+         * Specifies whether to perform a dry run. Valid values:
+         * <p>
+         * 
+         * *   **true**: performs a dry run. The system checks the required parameters, request syntax, and limits. If the request fails the dry run, an error message is returned. If the request passes the dry run, the `DryRunOperation` error code is returned.
+         * *   **false**: performs a dry run and sends the request. If the request passes the dry run, a 2xx HTTP status code is returned and the operation is performed. This is the default value.
          */
         public Builder dryRun(Boolean dryRun) {
             this.putQueryParameter("DryRun", dryRun);
@@ -263,7 +272,10 @@ public class CreateTrafficMirrorFilterRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * The ID of the region to which the mirrored traffic belongs.
+         * <p>
+         * 
+         * You can call the [DescribeRegions](~~36063~~) operation to query the most recent region list. For more information about regions that support traffic mirroring, see [Overview of traffic mirroring](~~207513~~).
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -272,7 +284,7 @@ public class CreateTrafficMirrorFilterRequest extends Request {
         }
 
         /**
-         * ResourceGroupId.
+         * The ID of the resource group to which the mirrored traffic belongs.
          */
         public Builder resourceGroupId(String resourceGroupId) {
             this.putQueryParameter("ResourceGroupId", resourceGroupId);
@@ -299,7 +311,10 @@ public class CreateTrafficMirrorFilterRequest extends Request {
         }
 
         /**
-         * TrafficMirrorFilterDescription.
+         * The description of the filter.
+         * <p>
+         * 
+         * The description must be 1 to 256 characters in length and cannot start with `http://` or `https://`.
          */
         public Builder trafficMirrorFilterDescription(String trafficMirrorFilterDescription) {
             this.putQueryParameter("TrafficMirrorFilterDescription", trafficMirrorFilterDescription);
@@ -308,7 +323,10 @@ public class CreateTrafficMirrorFilterRequest extends Request {
         }
 
         /**
-         * TrafficMirrorFilterName.
+         * The name of the filter.
+         * <p>
+         * 
+         * The name must be 1 to 128 characters in length, and cannot start with `http://` or `https://`.
          */
         public Builder trafficMirrorFilterName(String trafficMirrorFilterName) {
             this.putQueryParameter("TrafficMirrorFilterName", trafficMirrorFilterName);
@@ -422,7 +440,11 @@ public class CreateTrafficMirrorFilterRequest extends Request {
             private String sourcePortRange; 
 
             /**
-             * Action.
+             * The action of the outbound rule. Valid values:
+             * <p>
+             * 
+             * *   **accept**: collects network traffic.
+             * *   **drop**: does not collect network traffic.
              */
             public Builder action(String action) {
                 this.action = action;
@@ -430,7 +452,7 @@ public class CreateTrafficMirrorFilterRequest extends Request {
             }
 
             /**
-             * DestinationCidrBlock.
+             * The destination CIDR block of the outbound traffic.
              */
             public Builder destinationCidrBlock(String destinationCidrBlock) {
                 this.destinationCidrBlock = destinationCidrBlock;
@@ -438,7 +460,10 @@ public class CreateTrafficMirrorFilterRequest extends Request {
             }
 
             /**
-             * DestinationPortRange.
+             * The destination port range of the outbound traffic. Valid values for a port: **1** to **65535**. Separate the first port and the last port with a forward slash (/). Examples: **1/200** and **80/80**. You cannot set this parameter to only **-1/-1**. The value -1/-1 specifies all ports.
+             * <p>
+             * 
+             * >  If you set **EgressRules.N.Protocol** to **ALL** or **ICMP**, you do not need to set this parameter. In this case, all ports are available.
              */
             public Builder destinationPortRange(String destinationPortRange) {
                 this.destinationPortRange = destinationPortRange;
@@ -446,7 +471,10 @@ public class CreateTrafficMirrorFilterRequest extends Request {
             }
 
             /**
-             * Priority.
+             * The priority of the outbound rule. A smaller value indicates a higher priority.
+             * <p>
+             * 
+             * The maximum value of **N** is **10**. You can configure up to 10 outbound rules for a filter.
              */
             public Builder priority(Integer priority) {
                 this.priority = priority;
@@ -454,7 +482,13 @@ public class CreateTrafficMirrorFilterRequest extends Request {
             }
 
             /**
-             * Protocol.
+             * The protocol that is used by the outbound traffic to be mirrored. Valid values:
+             * <p>
+             * 
+             * *   **ALL**: all protocols
+             * *   **ICMP**: ICMP
+             * *   **TCP**: TCP
+             * *   **UDP**: UDP
              */
             public Builder protocol(String protocol) {
                 this.protocol = protocol;
@@ -462,7 +496,7 @@ public class CreateTrafficMirrorFilterRequest extends Request {
             }
 
             /**
-             * SourceCidrBlock.
+             * The source CIDR block of the outbound traffic.
              */
             public Builder sourceCidrBlock(String sourceCidrBlock) {
                 this.sourceCidrBlock = sourceCidrBlock;
@@ -470,7 +504,10 @@ public class CreateTrafficMirrorFilterRequest extends Request {
             }
 
             /**
-             * SourcePortRange.
+             * The source port range of the outbound traffic. Valid values for a port: **1** to **65535**. Separate the first port and the last port with a forward slash (/). Examples: **1/200** and **80/80**. You cannot set this parameter to only **-1/-1**. The value -1/-1 specifies all ports.
+             * <p>
+             * 
+             * >  If you set **EgressRules.N.Protocol** to **ALL** or **ICMP**, you do not need to set this parameter. In this case, all ports are available.
              */
             public Builder sourcePortRange(String sourcePortRange) {
                 this.sourcePortRange = sourcePortRange;
@@ -583,7 +620,11 @@ public class CreateTrafficMirrorFilterRequest extends Request {
             private String sourcePortRange; 
 
             /**
-             * Action.
+             * The action of the inbound rule. Valid values:
+             * <p>
+             * 
+             * *   **accept**: collects network traffic.
+             * *   **drop**: does not collect network traffic.
              */
             public Builder action(String action) {
                 this.action = action;
@@ -591,7 +632,7 @@ public class CreateTrafficMirrorFilterRequest extends Request {
             }
 
             /**
-             * DestinationCidrBlock.
+             * The destination CIDR block of the inbound traffic.
              */
             public Builder destinationCidrBlock(String destinationCidrBlock) {
                 this.destinationCidrBlock = destinationCidrBlock;
@@ -599,7 +640,10 @@ public class CreateTrafficMirrorFilterRequest extends Request {
             }
 
             /**
-             * DestinationPortRange.
+             * The destination port range of the inbound traffic. Valid values for a port: **1** to **65535**. Separate the first port and the last port with a forward slash (/). Examples: **1/200** and **80/80**.
+             * <p>
+             * 
+             * >  If you set **IngressRules.N.Protocol** to **ALL** or **ICMP**, you do not need to set this parameter. In this case, all ports are available.
              */
             public Builder destinationPortRange(String destinationPortRange) {
                 this.destinationPortRange = destinationPortRange;
@@ -607,7 +651,10 @@ public class CreateTrafficMirrorFilterRequest extends Request {
             }
 
             /**
-             * Priority.
+             * The priority of the inbound rule. A smaller value indicates a higher priority.
+             * <p>
+             * 
+             * The maximum value of **N** is **10**. You can configure up to 10 inbound rules for a filter.
              */
             public Builder priority(Integer priority) {
                 this.priority = priority;
@@ -615,7 +662,13 @@ public class CreateTrafficMirrorFilterRequest extends Request {
             }
 
             /**
-             * Protocol.
+             * The protocol that is used by the inbound traffic to be mirrored. Valid values:
+             * <p>
+             * 
+             * *   **ALL**: all protocols
+             * *   **ICMP**: ICMP
+             * *   **TCP**: TCP
+             * *   **UDP**: UDP
              */
             public Builder protocol(String protocol) {
                 this.protocol = protocol;
@@ -623,7 +676,7 @@ public class CreateTrafficMirrorFilterRequest extends Request {
             }
 
             /**
-             * SourceCidrBlock.
+             * The source CIDR block of the inbound traffic.
              */
             public Builder sourceCidrBlock(String sourceCidrBlock) {
                 this.sourceCidrBlock = sourceCidrBlock;
@@ -631,7 +684,10 @@ public class CreateTrafficMirrorFilterRequest extends Request {
             }
 
             /**
-             * SourcePortRange.
+             * The source port range of the inbound traffic. Valid values for a port: **1** to **65535**. Separate the first port and the last port with a forward slash (/). Examples: **1/200** and **80/80**.
+             * <p>
+             * 
+             * >  If you set **IngressRules.N.Protocol** to **ALL** or **ICMP**, you do not need to set this parameter. In this case, all ports are available.
              */
             public Builder sourcePortRange(String sourcePortRange) {
                 this.sourcePortRange = sourcePortRange;

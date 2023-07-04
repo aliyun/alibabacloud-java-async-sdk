@@ -169,7 +169,11 @@ public class DeletePublicIpAddressPoolCidrBlockRequest extends Request {
         } 
 
         /**
-         * CidrBlock.
+         * Specifies whether to perform a dry run. Valid values:
+         * <p>
+         * 
+         * *   **true**: performs a dry run. The system checks the required parameters, request syntax, and limits. If the request fails the dry run, an error message is returned. If the request passes the dry run, the `DryRunOperation` error code is returned.
+         * *   **false** (default): performs a dry run and sends the request. If the request passes the dry run, a 2xx HTTP status code is returned and the operation is performed.
          */
         public Builder cidrBlock(String cidrBlock) {
             this.putQueryParameter("CidrBlock", cidrBlock);
@@ -178,7 +182,7 @@ public class DeletePublicIpAddressPoolCidrBlockRequest extends Request {
         }
 
         /**
-         * ClientToken.
+         * The region ID of the IP address pool from which you want to delete a CIDR block.
          */
         public Builder clientToken(String clientToken) {
             this.putQueryParameter("ClientToken", clientToken);
@@ -187,7 +191,7 @@ public class DeletePublicIpAddressPoolCidrBlockRequest extends Request {
         }
 
         /**
-         * DryRun.
+         * The ID of the request.
          */
         public Builder dryRun(Boolean dryRun) {
             this.putQueryParameter("DryRun", dryRun);
@@ -214,7 +218,10 @@ public class DeletePublicIpAddressPoolCidrBlockRequest extends Request {
         }
 
         /**
-         * PublicIpAddressPoolId.
+         * The client token that is used to ensure the idempotence of the request.
+         * <p>
+         * 
+         * You can use the client to generate the value, but you must make sure that it is unique among different requests. The client token can contain only ASCII characters.
          */
         public Builder publicIpAddressPoolId(String publicIpAddressPoolId) {
             this.putQueryParameter("PublicIpAddressPoolId", publicIpAddressPoolId);

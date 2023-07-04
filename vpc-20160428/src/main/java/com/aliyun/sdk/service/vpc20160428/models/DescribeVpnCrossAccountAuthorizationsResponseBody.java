@@ -86,7 +86,7 @@ public class DescribeVpnCrossAccountAuthorizationsResponseBody extends TeaModel 
         private Integer totalCount; 
 
         /**
-         * CrossAccountAuthorizations.
+         * The cross-account authorization information about the IPsec-VPN connection.
          */
         public Builder crossAccountAuthorizations(java.util.List < CrossAccountAuthorizations> crossAccountAuthorizations) {
             this.crossAccountAuthorizations = crossAccountAuthorizations;
@@ -94,7 +94,7 @@ public class DescribeVpnCrossAccountAuthorizationsResponseBody extends TeaModel 
         }
 
         /**
-         * PageNumber.
+         * The page number of the returned page.
          */
         public Builder pageNumber(Integer pageNumber) {
             this.pageNumber = pageNumber;
@@ -102,7 +102,7 @@ public class DescribeVpnCrossAccountAuthorizationsResponseBody extends TeaModel 
         }
 
         /**
-         * PageSize.
+         * The number of entries returned per page.
          */
         public Builder pageSize(Integer pageSize) {
             this.pageSize = pageSize;
@@ -110,7 +110,7 @@ public class DescribeVpnCrossAccountAuthorizationsResponseBody extends TeaModel 
         }
 
         /**
-         * Id of the request
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -118,7 +118,7 @@ public class DescribeVpnCrossAccountAuthorizationsResponseBody extends TeaModel 
         }
 
         /**
-         * TotalCount.
+         * The number of entries returned.
          */
         public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;
@@ -218,7 +218,7 @@ public class DescribeVpnCrossAccountAuthorizationsResponseBody extends TeaModel 
             private String vpnConnectionId; 
 
             /**
-             * AliUid.
+             * The ID of the Alibaba Cloud account to which the IPsec-VPN connection belongs.
              */
             public Builder aliUid(Long aliUid) {
                 this.aliUid = aliUid;
@@ -226,7 +226,7 @@ public class DescribeVpnCrossAccountAuthorizationsResponseBody extends TeaModel 
             }
 
             /**
-             * BindInstance.
+             * The ID of the CEN instance.
              */
             public Builder bindInstance(String bindInstance) {
                 this.bindInstance = bindInstance;
@@ -234,7 +234,10 @@ public class DescribeVpnCrossAccountAuthorizationsResponseBody extends TeaModel 
             }
 
             /**
-             * BindProduct.
+             * The resource type of the authorization.
+             * <p>
+             * 
+             * The value is set to **CEN**, which indicates that the IPsec-VPN connection can be associated with a transit router of a Cloud Enterprise Network (CEN) instance that belongs to another Alibaba Cloud account.
              */
             public Builder bindProduct(String bindProduct) {
                 this.bindProduct = bindProduct;
@@ -242,7 +245,7 @@ public class DescribeVpnCrossAccountAuthorizationsResponseBody extends TeaModel 
             }
 
             /**
-             * BindUid.
+             * The ID of the Alibaba Cloud account whose resource the IPsec-VPN connection can be associated with.
              */
             public Builder bindUid(Long bindUid) {
                 this.bindUid = bindUid;
@@ -250,7 +253,10 @@ public class DescribeVpnCrossAccountAuthorizationsResponseBody extends TeaModel 
             }
 
             /**
-             * CreationTime.
+             * The timestamp when the authorization for the IPsec-VPN connection was created.
+             * <p>
+             * 
+             * This value is a UNIX timestamp representing the number of milliseconds that have elapsed since the epoch time January 1, 1970, 00:00:00 UTC.
              */
             public Builder creationTime(Long creationTime) {
                 this.creationTime = creationTime;
@@ -258,7 +264,7 @@ public class DescribeVpnCrossAccountAuthorizationsResponseBody extends TeaModel 
             }
 
             /**
-             * VpnConnectionId.
+             * The ID of the IPsec-VPN connection.
              */
             public Builder vpnConnectionId(String vpnConnectionId) {
                 this.vpnConnectionId = vpnConnectionId;

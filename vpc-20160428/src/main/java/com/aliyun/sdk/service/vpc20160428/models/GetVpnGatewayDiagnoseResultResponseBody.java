@@ -146,7 +146,10 @@ public class GetVpnGatewayDiagnoseResultResponseBody extends TeaModel {
         private String vpnGatewayId; 
 
         /**
-         * FinishTime
+         * The time when the diagnostic started.
+         * <p>
+         * 
+         * The time follows the ISO8601 standard in the `YYYY-MM-DDThh:mm:ssZ` format. The time is displayed in UTC.
          */
         public Builder beginTime(String beginTime) {
             this.beginTime = beginTime;
@@ -154,7 +157,7 @@ public class GetVpnGatewayDiagnoseResultResponseBody extends TeaModel {
         }
 
         /**
-         * DiagnoseId
+         * The ID of the diagnostic.
          */
         public Builder diagnoseId(String diagnoseId) {
             this.diagnoseId = diagnoseId;
@@ -162,7 +165,7 @@ public class GetVpnGatewayDiagnoseResultResponseBody extends TeaModel {
         }
 
         /**
-         * DiagnoseResult
+         * The information about the diagnostic items.
          */
         public Builder diagnoseResult(java.util.List < DiagnoseResult> diagnoseResult) {
             this.diagnoseResult = diagnoseResult;
@@ -170,7 +173,10 @@ public class GetVpnGatewayDiagnoseResultResponseBody extends TeaModel {
         }
 
         /**
-         * FinishTime
+         * The timestamp when the system finishes diagnosing the item.
+         * <p>
+         * 
+         * The time follows the ISO8601 standard in the `YYYY-MM-DDThh:mm:ssZ` format. The time is displayed in UTC.
          */
         public Builder finishTime(String finishTime) {
             this.finishTime = finishTime;
@@ -178,7 +184,7 @@ public class GetVpnGatewayDiagnoseResultResponseBody extends TeaModel {
         }
 
         /**
-         * FinishedCount
+         * The number of diagnostic items that have been diagnosed.
          */
         public Builder finishedCount(Integer finishedCount) {
             this.finishedCount = finishedCount;
@@ -186,7 +192,7 @@ public class GetVpnGatewayDiagnoseResultResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -194,7 +200,7 @@ public class GetVpnGatewayDiagnoseResultResponseBody extends TeaModel {
         }
 
         /**
-         * ResourceInstanceId
+         * The ID of the resource that is diagnosed.
          */
         public Builder resourceInstanceId(String resourceInstanceId) {
             this.resourceInstanceId = resourceInstanceId;
@@ -202,7 +208,10 @@ public class GetVpnGatewayDiagnoseResultResponseBody extends TeaModel {
         }
 
         /**
-         * ResourceType
+         * The type of the resource.
+         * <p>
+         * 
+         * The value is set to **IPsec**, which indicates an IPsec-VPN connection.
          */
         public Builder resourceType(String resourceType) {
             this.resourceType = resourceType;
@@ -210,7 +219,7 @@ public class GetVpnGatewayDiagnoseResultResponseBody extends TeaModel {
         }
 
         /**
-         * TotalCount
+         * The total number of diagnostic items.
          */
         public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;
@@ -218,7 +227,7 @@ public class GetVpnGatewayDiagnoseResultResponseBody extends TeaModel {
         }
 
         /**
-         * VpnGatewayId
+         * The ID of the VPN gateway.
          */
         public Builder vpnGatewayId(String vpnGatewayId) {
             this.vpnGatewayId = vpnGatewayId;
@@ -282,7 +291,18 @@ public class GetVpnGatewayDiagnoseResultResponseBody extends TeaModel {
             private String diagnoseResultLevel; 
 
             /**
-             * diagnoseName
+             * The diagnostic item.
+             * <p>
+             * 
+             * *   **RouteEntryConflict**: route conflicts.
+             * *   **VpnRouteQuota**: the quota of destination-based routes for the VPN gateway.
+             * *   **VpnIPsecQuota**: the quota of IPsec-VPN connections for the VPN gateway.
+             * *   **VpnPbrRouteQuota**: the quota of policy-based routes for the VPN gateway.
+             * *   **VcoConfigConsistency**: the consistency of the IPsec-VPN connection.
+             * *   **VcoUserInternetIpConnectivity**: Internet connectivity of the customer gateway.
+             * *   **VcoPrivateConnectivity**: private network connectivity.
+             * 
+             * For more information about the diagnostic items, see [Background information about quick diagnostics](~~190330~~).
              */
             public Builder diagnoseName(String diagnoseName) {
                 this.diagnoseName = diagnoseName;
@@ -290,7 +310,50 @@ public class GetVpnGatewayDiagnoseResultResponseBody extends TeaModel {
             }
 
             /**
-             * DiagnoseResultDescription
+             * The diagnostic result.
+             * <p>
+             * 
+             * The system returns different results for each diagnostic item.
+             * 
+             * *   **RouteEntryConflict**: information about route conflicts.
+             * 
+             * *   **VpnRouteQuota**:
+             * 
+             *     *   **quotaName**: the quota ID of destination-based routes.
+             *     *   **quantity**: the quota of destination-based routes for the VPN gateway.
+             *     *   **used**: the number of destination-based routes created for the VPN gateway.
+             * 
+             * *   **VpnIPsecQuota**:
+             * 
+             *     *   **quotaName**: the quota ID of IPsec-VPN connections.
+             *     *   **quantity**: the quota of IPsec-VPN connections for the VPN gateway.
+             *     *   **used**: the number of IPsec-VPN connections created for the VPN gateway.
+             * 
+             * *   **VpnPbrRouteQuota**:
+             * 
+             *     *   **quotaName**: the quota ID of policy-based routes.
+             *     *   **quantity**: the quota of policy-based routes for the VPN gateway.
+             *     *   **used**: the number of policy-based routes created for the VPN gateway.
+             * 
+             * *   **VcoConfigConsistency**:
+             * 
+             *     *   **vcoLackConf**: The system cannot obtain the configuration of the peer of the IPsec-VPN connection.
+             *     *   **vcoRunningConf**: the configurations that have been added to the peer of the IPsec-VPN connection.
+             *     *   **vcoDiffConf**: the configurations that are inconsistent between the local end and the peer.
+             *     *   **vcoConf**: the configurations that have been added to the local end.
+             * 
+             * *   **VcoUserInternetIpConnectivity**:
+             * 
+             *     *   **targetIp**: the public IP address of the customer gateway.
+             *     *   **rtt**: the latency when the system accesses the public IP address of the customer gateway. Unit: milliseconds.
+             *     *   **lossRate**: the packet loss when the system accesses the public IP address of the customer gateway.
+             * 
+             * *   **VcoPrivateConnectivity**:
+             * 
+             *     *   **targetIp**: the source IP address.
+             *     *   **srcIp**: the destination IP address.
+             *     *   **rtt**: the latency when the source IP address accesses the destination IP address. Unit: milliseconds.
+             *     *   **lossRate**: the packet loss when the source IP address accesses the destination IP address.
              */
             public Builder diagnoseResultDescription(String diagnoseResultDescription) {
                 this.diagnoseResultDescription = diagnoseResultDescription;
@@ -298,7 +361,14 @@ public class GetVpnGatewayDiagnoseResultResponseBody extends TeaModel {
             }
 
             /**
-             * DiagnoseResultLevel
+             * The diagnostic result level.
+             * <p>
+             * 
+             * *   **normal**
+             * *   **warning**
+             * *   **error**
+             * 
+             * For more information, see [Background information about quick diagnostics](~~190330~~).
              */
             public Builder diagnoseResultLevel(String diagnoseResultLevel) {
                 this.diagnoseResultLevel = diagnoseResultLevel;

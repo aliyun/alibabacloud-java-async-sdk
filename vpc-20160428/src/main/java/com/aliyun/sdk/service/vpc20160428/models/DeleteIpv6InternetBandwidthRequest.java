@@ -139,7 +139,10 @@ public class DeleteIpv6InternetBandwidthRequest extends Request {
         } 
 
         /**
-         * Ipv6AddressId.
+         * The ID of the IPv6 address.
+         * <p>
+         * 
+         * >  You must set one of the **Ipv6AddressId** and **Ipv6InternetBandwidthId** parameters.
          */
         public Builder ipv6AddressId(String ipv6AddressId) {
             this.putQueryParameter("Ipv6AddressId", ipv6AddressId);
@@ -148,7 +151,10 @@ public class DeleteIpv6InternetBandwidthRequest extends Request {
         }
 
         /**
-         * Ipv6InternetBandwidthId.
+         * The ID of the Internet bandwidth that you purchase for the IPv6 gateway.
+         * <p>
+         * 
+         * >  You must set one of the **Ipv6AddressId** and **Ipv6InternetBandwidthId** parameters.
          */
         public Builder ipv6InternetBandwidthId(String ipv6InternetBandwidthId) {
             this.putQueryParameter("Ipv6InternetBandwidthId", ipv6InternetBandwidthId);
@@ -175,7 +181,10 @@ public class DeleteIpv6InternetBandwidthRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * The ID of the region where the IPv6 gateway is deployed.
+         * <p>
+         * 
+         * You can call the [DescribeRegions](~~36063~~) operation to obtain the region ID.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);

@@ -167,7 +167,10 @@ public class DescribeCustomerGatewaysRequest extends Request {
         } 
 
         /**
-         * CustomerGatewayId.
+         * The ID of the customer gateway.
+         * <p>
+         * 
+         * >  If you do not specify a customer gateway ID, the system queries all customer gateways in the current region by default.
          */
         public Builder customerGatewayId(String customerGatewayId) {
             this.putQueryParameter("CustomerGatewayId", customerGatewayId);
@@ -194,7 +197,7 @@ public class DescribeCustomerGatewaysRequest extends Request {
         }
 
         /**
-         * PageNumber.
+         * The number of the page to return. Default value: **1**.
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -203,7 +206,7 @@ public class DescribeCustomerGatewaysRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * The number of entries to return on each page. Maximum value: **50**. Default value: **10**.
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -212,7 +215,10 @@ public class DescribeCustomerGatewaysRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * The region ID of the customer gateway.
+         * <p>
+         * 
+         * You can call the [DescribeRegions](~~36063~~) operation to query the most recent region list.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -293,7 +299,12 @@ public class DescribeCustomerGatewaysRequest extends Request {
             private String value; 
 
             /**
-             * Key.
+             * The tag key. The tag key cannot be an empty string.
+             * <p>
+             * 
+             * It can be at most 64 characters in length, and cannot contain `http://` or `https://`. It cannot start with `aliyun` or `acs:`.
+             * 
+             * You can specify at most 20 tag keys in each call.
              */
             public Builder key(String key) {
                 this.key = key;
@@ -301,7 +312,12 @@ public class DescribeCustomerGatewaysRequest extends Request {
             }
 
             /**
-             * Value.
+             * The tag value.
+             * <p>
+             * 
+             * The tag value can be an empty string and cannot exceed 128 characters in length. It cannot start with `aliyun` or `acs:`, and cannot contain `http://` or `https://`.
+             * 
+             * Each tag key corresponds to one tag value. You can specify at most 20 tag values in each call.
              */
             public Builder value(String value) {
                 this.value = value;

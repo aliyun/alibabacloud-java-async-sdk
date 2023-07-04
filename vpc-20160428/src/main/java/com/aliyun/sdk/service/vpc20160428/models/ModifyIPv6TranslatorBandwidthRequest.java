@@ -169,7 +169,11 @@ public class ModifyIPv6TranslatorBandwidthRequest extends Request {
         } 
 
         /**
-         * AutoPay.
+         * Specifies whether to enable auto-payment for the instance. Valid values:
+         * <p>
+         * 
+         * *   **true**
+         * *   **false** (default)
          */
         public Builder autoPay(Boolean autoPay) {
             this.putQueryParameter("AutoPay", autoPay);
@@ -178,7 +182,7 @@ public class ModifyIPv6TranslatorBandwidthRequest extends Request {
         }
 
         /**
-         * Bandwidth.
+         * The maximum bandwidth of the IPv6 Translation Service instance. Valid values: **1** to **200**. Unit: Mbit/s.
          */
         public Builder bandwidth(Integer bandwidth) {
             this.putQueryParameter("Bandwidth", bandwidth);
@@ -187,7 +191,10 @@ public class ModifyIPv6TranslatorBandwidthRequest extends Request {
         }
 
         /**
-         * ClientToken.
+         * The client token that is used to ensure the idempotence of the request.
+         * <p>
+         * 
+         * You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters.
          */
         public Builder clientToken(String clientToken) {
             this.putQueryParameter("ClientToken", clientToken);
@@ -196,7 +203,7 @@ public class ModifyIPv6TranslatorBandwidthRequest extends Request {
         }
 
         /**
-         * Ipv6TranslatorId.
+         * The ID of the IPv6 Translation Service instance.
          */
         public Builder ipv6TranslatorId(String ipv6TranslatorId) {
             this.putQueryParameter("Ipv6TranslatorId", ipv6TranslatorId);
@@ -223,7 +230,7 @@ public class ModifyIPv6TranslatorBandwidthRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * The region of the IPv6 Translation Service instance. You can call the **DescribeRegions** operation to query the most recent region list.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);

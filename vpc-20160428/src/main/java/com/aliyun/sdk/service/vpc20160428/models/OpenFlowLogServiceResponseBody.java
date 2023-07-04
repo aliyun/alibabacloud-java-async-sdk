@@ -62,7 +62,7 @@ public class OpenFlowLogServiceResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * Code.
+         * The HTTP status code.
          */
         public Builder code(String code) {
             this.code = code;
@@ -70,7 +70,7 @@ public class OpenFlowLogServiceResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * The information returned after the flow log feature is enabled.
          */
         public Builder message(String message) {
             this.message = message;
@@ -78,7 +78,7 @@ public class OpenFlowLogServiceResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

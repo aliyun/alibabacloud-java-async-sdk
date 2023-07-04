@@ -156,7 +156,10 @@ public class MoveResourceGroupRequest extends Request {
         } 
 
         /**
-         * NewResourceGroupId.
+         * The ID of the resource group to which the cloud resource is to be moved.
+         * <p>
+         * 
+         * >  You can use resource groups to manage resources owned by your Alibaba Cloud account. Resource groups simplify the resource and permission management of your Alibaba Cloud account. For more information, see [What is resource management?](~~94475~~).
          */
         public Builder newResourceGroupId(String newResourceGroupId) {
             this.putQueryParameter("NewResourceGroupId", newResourceGroupId);
@@ -183,7 +186,10 @@ public class MoveResourceGroupRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * The ID of the region to which the cloud resource belongs.
+         * <p>
+         * 
+         * You can call the [DescribeRegions](~~36063~~) operation to query the most recent region list.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -192,7 +198,7 @@ public class MoveResourceGroupRequest extends Request {
         }
 
         /**
-         * ResourceId.
+         * The ID of the instance that you want to move.
          */
         public Builder resourceId(String resourceId) {
             this.putQueryParameter("ResourceId", resourceId);
@@ -219,7 +225,12 @@ public class MoveResourceGroupRequest extends Request {
         }
 
         /**
-         * ResourceType.
+         * The type of the resource. Valid values:
+         * <p>
+         * 
+         * *   **vpc**: a virtual private cloud (VPC)
+         * *   **eip**: an elastic IP address (EIP)
+         * *   **bandwidthpackage**: an EIP bandwidth plan
          */
         public Builder resourceType(String resourceType) {
             this.putQueryParameter("ResourceType", resourceType);

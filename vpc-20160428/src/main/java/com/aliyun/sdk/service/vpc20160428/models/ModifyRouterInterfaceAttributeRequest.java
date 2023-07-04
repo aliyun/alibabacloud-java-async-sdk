@@ -266,7 +266,11 @@ public class ModifyRouterInterfaceAttributeRequest extends Request {
         } 
 
         /**
-         * DeleteHealthCheckIp.
+         * Specifies whether to delete the health check IP addresses configured on the router interface. Valid values:
+         * <p>
+         * 
+         * *   **true**: yes
+         * *   **false** (default): no
          */
         public Builder deleteHealthCheckIp(Boolean deleteHealthCheckIp) {
             this.putQueryParameter("DeleteHealthCheckIp", deleteHealthCheckIp);
@@ -275,7 +279,10 @@ public class ModifyRouterInterfaceAttributeRequest extends Request {
         }
 
         /**
-         * Description.
+         * The description of the router interface.
+         * <p>
+         * 
+         * The value must be 2 to 256 characters in length. It must start with a letter but cannot start with `http://` or `https://`.
          */
         public Builder description(String description) {
             this.putQueryParameter("Description", description);
@@ -284,7 +291,10 @@ public class ModifyRouterInterfaceAttributeRequest extends Request {
         }
 
         /**
-         * HcRate.
+         * The rate of the heath check. Unit: milliseconds. The recommended value is **2000**. This value specifies the interval at which probe packets are sent during a health check.
+         * <p>
+         * 
+         * In this example, **HcThreshold** is set to **8** and **HcRate** is set to **2000**. In this example, probe packets are sent from **HealthCheckSourceIp** (source address) to **HealthCheckTargetIp** (destination address) every 2,000 seconds. If no response is returned for eight consecutive times, the health check fails.
          */
         public Builder hcRate(Integer hcRate) {
             this.putQueryParameter("HcRate", hcRate);
@@ -293,7 +303,7 @@ public class ModifyRouterInterfaceAttributeRequest extends Request {
         }
 
         /**
-         * HcThreshold.
+         * The health check threshold. Unit: packets. We recommend that you set the value to **8**. This value specifies the number of probe packets that are sent during a health check.
          */
         public Builder hcThreshold(Integer hcThreshold) {
             this.putQueryParameter("HcThreshold", hcThreshold);
@@ -302,7 +312,10 @@ public class ModifyRouterInterfaceAttributeRequest extends Request {
         }
 
         /**
-         * HealthCheckSourceIp.
+         * The source IP address that is used to perform health checks. The source IP address must be an idle IP address of the local virtual private cloud (VPC).
+         * <p>
+         * 
+         * >  You can set this parameter if an Express Connect circuit is used.
          */
         public Builder healthCheckSourceIp(String healthCheckSourceIp) {
             this.putQueryParameter("HealthCheckSourceIp", healthCheckSourceIp);
@@ -311,7 +324,10 @@ public class ModifyRouterInterfaceAttributeRequest extends Request {
         }
 
         /**
-         * HealthCheckTargetIp.
+         * The destination IP address that is used to perform health checks.
+         * <p>
+         * 
+         * >  This parameter is required when the **HealthCheckSourceIp** parameter is set.
          */
         public Builder healthCheckTargetIp(String healthCheckTargetIp) {
             this.putQueryParameter("HealthCheckTargetIp", healthCheckTargetIp);
@@ -320,7 +336,10 @@ public class ModifyRouterInterfaceAttributeRequest extends Request {
         }
 
         /**
-         * Name.
+         * The name of the router interface.
+         * <p>
+         * 
+         * The name must be 2 to 128 characters in length, and can contain letters, digits, underscores (\_), and hyphens (-). The name must start with a letter.
          */
         public Builder name(String name) {
             this.putQueryParameter("Name", name);
@@ -329,7 +348,7 @@ public class ModifyRouterInterfaceAttributeRequest extends Request {
         }
 
         /**
-         * OppositeInterfaceId.
+         * The ID of the peer router interface.
          */
         public Builder oppositeInterfaceId(String oppositeInterfaceId) {
             this.putQueryParameter("OppositeInterfaceId", oppositeInterfaceId);
@@ -338,7 +357,7 @@ public class ModifyRouterInterfaceAttributeRequest extends Request {
         }
 
         /**
-         * OppositeInterfaceOwnerId.
+         * The ID of the Alibaba Cloud account to which the peer router interface belongs.
          */
         public Builder oppositeInterfaceOwnerId(Long oppositeInterfaceOwnerId) {
             this.putQueryParameter("OppositeInterfaceOwnerId", oppositeInterfaceOwnerId);
@@ -347,7 +366,7 @@ public class ModifyRouterInterfaceAttributeRequest extends Request {
         }
 
         /**
-         * OppositeRouterId.
+         * The ID of the peer router.
          */
         public Builder oppositeRouterId(String oppositeRouterId) {
             this.putQueryParameter("OppositeRouterId", oppositeRouterId);
@@ -356,7 +375,11 @@ public class ModifyRouterInterfaceAttributeRequest extends Request {
         }
 
         /**
-         * OppositeRouterType.
+         * The type of router to which the peer router interface belongs. Valid values:
+         * <p>
+         * 
+         * *   **VRouter**: vRouter
+         * *   **VBR** (default): virtual border router (VBR)
          */
         public Builder oppositeRouterType(String oppositeRouterType) {
             this.putQueryParameter("OppositeRouterType", oppositeRouterType);
@@ -374,7 +397,10 @@ public class ModifyRouterInterfaceAttributeRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * The ID of the region to which the router interface belongs.
+         * <p>
+         * 
+         * You can call the [DescribeRegions](~~36063~~) operation to query the most recent region list.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -401,7 +427,7 @@ public class ModifyRouterInterfaceAttributeRequest extends Request {
         }
 
         /**
-         * RouterInterfaceId.
+         * The ID of the router interface.
          */
         public Builder routerInterfaceId(String routerInterfaceId) {
             this.putQueryParameter("RouterInterfaceId", routerInterfaceId);

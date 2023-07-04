@@ -229,7 +229,12 @@ public class ModifyVpnPbrRouteEntryPriorityRequest extends Request {
         } 
 
         /**
-         * ClientToken.
+         * The client token that is used to ensure the idempotence of the request.
+         * <p>
+         * 
+         * You can use the client to generate the value, but you must make sure that it is unique among different requests. The token can contain only ASCII characters.
+         * 
+         * >  If you do not set this parameter, the system sets **ClientToken** to the value of **RequestId**. The value of **RequestId** may be different for each API request.
          */
         public Builder clientToken(String clientToken) {
             this.putQueryParameter("ClientToken", clientToken);
@@ -238,7 +243,10 @@ public class ModifyVpnPbrRouteEntryPriorityRequest extends Request {
         }
 
         /**
-         * NewPriority.
+         * The new priority of the policy-based route. Valid values: **1** to **100**.
+         * <p>
+         * 
+         * A smaller value indicates a higher priority.
          */
         public Builder newPriority(Integer newPriority) {
             this.putQueryParameter("NewPriority", newPriority);
@@ -247,7 +255,7 @@ public class ModifyVpnPbrRouteEntryPriorityRequest extends Request {
         }
 
         /**
-         * NextHop.
+         * The next hop of the policy-based route.
          */
         public Builder nextHop(String nextHop) {
             this.putQueryParameter("NextHop", nextHop);
@@ -274,7 +282,10 @@ public class ModifyVpnPbrRouteEntryPriorityRequest extends Request {
         }
 
         /**
-         * Priority.
+         * The original priority of the policy-based route. Valid values: **1** to **100**.
+         * <p>
+         * 
+         * A smaller value indicates a higher priority.
          */
         public Builder priority(Integer priority) {
             this.putQueryParameter("Priority", priority);
@@ -283,7 +294,10 @@ public class ModifyVpnPbrRouteEntryPriorityRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * The ID of the region where the VPN gateway is created.
+         * <p>
+         * 
+         * You can call the [DescribeRegions](~~36063~~) operation to query the most recent region list.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -310,7 +324,7 @@ public class ModifyVpnPbrRouteEntryPriorityRequest extends Request {
         }
 
         /**
-         * RouteDest.
+         * The destination CIDR block of the policy-based route.
          */
         public Builder routeDest(String routeDest) {
             this.putQueryParameter("RouteDest", routeDest);
@@ -319,7 +333,7 @@ public class ModifyVpnPbrRouteEntryPriorityRequest extends Request {
         }
 
         /**
-         * RouteSource.
+         * The source CIDR block of the policy-based route.
          */
         public Builder routeSource(String routeSource) {
             this.putQueryParameter("RouteSource", routeSource);
@@ -328,7 +342,7 @@ public class ModifyVpnPbrRouteEntryPriorityRequest extends Request {
         }
 
         /**
-         * VpnGatewayId.
+         * The ID of the VPN gateway.
          */
         public Builder vpnGatewayId(String vpnGatewayId) {
             this.putQueryParameter("VpnGatewayId", vpnGatewayId);
@@ -337,7 +351,7 @@ public class ModifyVpnPbrRouteEntryPriorityRequest extends Request {
         }
 
         /**
-         * Weight.
+         * The weight of the policy-based route.
          */
         public Builder weight(Integer weight) {
             this.putQueryParameter("Weight", weight);

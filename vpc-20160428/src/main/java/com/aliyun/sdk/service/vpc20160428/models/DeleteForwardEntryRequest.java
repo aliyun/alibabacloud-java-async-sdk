@@ -164,7 +164,7 @@ public class DeleteForwardEntryRequest extends Request {
         }
 
         /**
-         * ForwardEntryId.
+         * The ID of the request.
          */
         public Builder forwardEntryId(String forwardEntryId) {
             this.putQueryParameter("ForwardEntryId", forwardEntryId);
@@ -173,7 +173,12 @@ public class DeleteForwardEntryRequest extends Request {
         }
 
         /**
-         * ForwardTableId.
+         * The client token that is used to ensure the idempotence of the request.
+         * <p>
+         * 
+         * You can use the client to generate the value, but you must make sure that it is unique among different requests. The token can contain only ASCII characters.
+         * 
+         * >  If you do not specify this parameter, the system uses **RequestId** as **ClientToken**. **RequestId** may be different for each API request.
          */
         public Builder forwardTableId(String forwardTableId) {
             this.putQueryParameter("ForwardTableId", forwardTableId);
@@ -200,7 +205,7 @@ public class DeleteForwardEntryRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * The ID of the DNAT entry to be deleted.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);

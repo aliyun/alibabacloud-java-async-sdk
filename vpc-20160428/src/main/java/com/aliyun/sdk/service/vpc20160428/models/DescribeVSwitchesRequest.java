@@ -265,7 +265,7 @@ public class DescribeVSwitchesRequest extends Request {
         } 
 
         /**
-         * DryRun.
+         * The ID of the resource group to which the vSwitch belongs.
          */
         public Builder dryRun(Boolean dryRun) {
             this.putQueryParameter("DryRun", dryRun);
@@ -274,7 +274,7 @@ public class DescribeVSwitchesRequest extends Request {
         }
 
         /**
-         * IsDefault.
+         * The number of the page to return. Default value: **1**.
          */
         public Builder isDefault(Boolean isDefault) {
             this.putQueryParameter("IsDefault", isDefault);
@@ -301,7 +301,7 @@ public class DescribeVSwitchesRequest extends Request {
         }
 
         /**
-         * PageNumber.
+         * The number of entries returned per page.
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -310,7 +310,7 @@ public class DescribeVSwitchesRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * The ID of the request.
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -319,7 +319,13 @@ public class DescribeVSwitchesRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * Specifies whether to query the default vSwitch in the specified region. Valid values:
+         * <p>
+         * 
+         * *   **true**: queries the default vSwitch in the specified region.
+         * *   **false**: does not query the default vSwitch in the specified region.
+         * 
+         * If you do not specify this parameter, the system queries all vSwitches in the specified region by default.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -328,7 +334,7 @@ public class DescribeVSwitchesRequest extends Request {
         }
 
         /**
-         * ResourceGroupId.
+         * The ID of the Alibaba Cloud account to which the resource belongs.
          */
         public Builder resourceGroupId(String resourceGroupId) {
             this.putQueryParameter("ResourceGroupId", resourceGroupId);
@@ -355,7 +361,7 @@ public class DescribeVSwitchesRequest extends Request {
         }
 
         /**
-         * RouteTableId.
+         * The number of entries to return on each page. Maximum value: **50**. Default value: **10**.
          */
         public Builder routeTableId(String routeTableId) {
             this.putQueryParameter("RouteTableId", routeTableId);
@@ -364,7 +370,10 @@ public class DescribeVSwitchesRequest extends Request {
         }
 
         /**
-         * VSwitchId.
+         * The name of the vSwitch.
+         * <p>
+         * 
+         * The name must be 1 to 128 characters in length, and cannot start with `http://` or `https://`.
          */
         public Builder vSwitchId(String vSwitchId) {
             this.putQueryParameter("VSwitchId", vSwitchId);
@@ -373,7 +382,7 @@ public class DescribeVSwitchesRequest extends Request {
         }
 
         /**
-         * VSwitchName.
+         * The ID of the route table.
          */
         public Builder vSwitchName(String vSwitchName) {
             this.putQueryParameter("VSwitchName", vSwitchName);
@@ -382,7 +391,7 @@ public class DescribeVSwitchesRequest extends Request {
         }
 
         /**
-         * VSwitchOwnerId.
+         * The page number of the returned page.
          */
         public Builder vSwitchOwnerId(Long vSwitchOwnerId) {
             this.putQueryParameter("VSwitchOwnerId", vSwitchOwnerId);
@@ -391,7 +400,10 @@ public class DescribeVSwitchesRequest extends Request {
         }
 
         /**
-         * VpcId.
+         * The region ID of the vSwitch. You can call the [DescribeRegions](~~36063~~) operation to query the most recent region list.
+         * <p>
+         * 
+         * >  You must set at least one of the **RegionId** and **VpcId** parameters.
          */
         public Builder vpcId(String vpcId) {
             this.putQueryParameter("VpcId", vpcId);
@@ -400,7 +412,11 @@ public class DescribeVSwitchesRequest extends Request {
         }
 
         /**
-         * ZoneId.
+         * Specifies whether to check the request without performing the operation. Valid values:
+         * <p>
+         * 
+         * *   **true**: checks the request without performing the operation. The system checks the required parameters, request syntax, and limits. If the request fails check, an error message is returned. If the request passes the check, the `DryRunOperation` error code is returned.
+         * *   **false**: sends the request. If the request passes the precheck, an HTTP 2xx status code is returned and the operation is performed. This is the default value.
          */
         public Builder zoneId(String zoneId) {
             this.putQueryParameter("ZoneId", zoneId);

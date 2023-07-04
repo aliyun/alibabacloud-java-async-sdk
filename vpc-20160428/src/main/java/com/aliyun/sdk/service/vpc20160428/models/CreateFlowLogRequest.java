@@ -256,7 +256,7 @@ public class CreateFlowLogRequest extends Request {
         } 
 
         /**
-         * AggregationInterval.
+         * The sampling interval of the flow log. Unit: seconds. Valid values: **1**, **5**, and **10** (default).
          */
         public Builder aggregationInterval(Integer aggregationInterval) {
             this.putQueryParameter("AggregationInterval", aggregationInterval);
@@ -265,7 +265,10 @@ public class CreateFlowLogRequest extends Request {
         }
 
         /**
-         * Description.
+         * The description of the flow log.
+         * <p>
+         * 
+         * The description must be 1 to 256 characters in length and cannot start with `http://` or `https://`.
          */
         public Builder description(String description) {
             this.putQueryParameter("Description", description);
@@ -274,7 +277,10 @@ public class CreateFlowLogRequest extends Request {
         }
 
         /**
-         * FlowLogName.
+         * The name of the flow log.
+         * <p>
+         * 
+         * The name must be 1 to 128 characters in length and cannot start with `http://` or `https://`.
          */
         public Builder flowLogName(String flowLogName) {
             this.putQueryParameter("FlowLogName", flowLogName);
@@ -283,7 +289,12 @@ public class CreateFlowLogRequest extends Request {
         }
 
         /**
-         * LogStoreName.
+         * The name of the Logstore that stores the captured traffic data.
+         * <p>
+         * 
+         * *   The name can contain only lowercase letters, digits, hyphens (-), and underscores (\_).
+         * *   The name must start and end with a lowercase letter or a digit.
+         * *   The name must be 3 to 63 characters in length.
          */
         public Builder logStoreName(String logStoreName) {
             this.putQueryParameter("LogStoreName", logStoreName);
@@ -310,7 +321,12 @@ public class CreateFlowLogRequest extends Request {
         }
 
         /**
-         * ProjectName.
+         * The name of the project that stores the captured traffic data.
+         * <p>
+         * 
+         * *   The name can contain only lowercase letters, digits, and hyphens (-).
+         * *   The name must start and end with a lowercase letter or a digit.
+         * *   The name must be 3 to 63 characters in length.
          */
         public Builder projectName(String projectName) {
             this.putQueryParameter("ProjectName", projectName);
@@ -319,7 +335,7 @@ public class CreateFlowLogRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * The ID of the region where you want to create the flow log. You can call the [DescribeRegions](~~36063~~) operation to query the most recent region list.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -328,7 +344,7 @@ public class CreateFlowLogRequest extends Request {
         }
 
         /**
-         * ResourceGroupId.
+         * The ID of the resource group.
          */
         public Builder resourceGroupId(String resourceGroupId) {
             this.putQueryParameter("ResourceGroupId", resourceGroupId);
@@ -337,7 +353,7 @@ public class CreateFlowLogRequest extends Request {
         }
 
         /**
-         * ResourceId.
+         * The ID of the resource whose traffic you want to capture.
          */
         public Builder resourceId(String resourceId) {
             this.putQueryParameter("ResourceId", resourceId);
@@ -364,7 +380,12 @@ public class CreateFlowLogRequest extends Request {
         }
 
         /**
-         * ResourceType.
+         * The type of the resource whose traffic you want to capture. Valid values:
+         * <p>
+         * 
+         * *   **NetworkInterface**: elastic network interface (ENI)
+         * *   **VSwitch**: all ENIs in a vSwitch
+         * *   **VPC**: all ENIs in a virtual private cloud (VPC)
          */
         public Builder resourceType(String resourceType) {
             this.putQueryParameter("ResourceType", resourceType);
@@ -382,7 +403,12 @@ public class CreateFlowLogRequest extends Request {
         }
 
         /**
-         * TrafficType.
+         * The type of traffic that you want to capture. Valid values:
+         * <p>
+         * 
+         * *   **All**: all traffic
+         * *   **Allow**: traffic that is allowed
+         * *   **Drop**: traffic that is rejected
          */
         public Builder trafficType(String trafficType) {
             this.putQueryParameter("TrafficType", trafficType);

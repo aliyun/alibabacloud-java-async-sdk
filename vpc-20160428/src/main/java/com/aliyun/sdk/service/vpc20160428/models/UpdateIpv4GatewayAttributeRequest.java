@@ -182,7 +182,7 @@ public class UpdateIpv4GatewayAttributeRequest extends Request {
         } 
 
         /**
-         * ClientToken.
+         * The new description of the IPv4 gateway.
          */
         public Builder clientToken(String clientToken) {
             this.putQueryParameter("ClientToken", clientToken);
@@ -191,7 +191,10 @@ public class UpdateIpv4GatewayAttributeRequest extends Request {
         }
 
         /**
-         * DryRun.
+         * The region ID of the IPv4 gateway whose name or description you want to modify.
+         * <p>
+         * 
+         * You can call the [DescribeRegions](~~36063~~) operation to query the most recent region list.
          */
         public Builder dryRun(Boolean dryRun) {
             this.putQueryParameter("DryRun", dryRun);
@@ -200,7 +203,7 @@ public class UpdateIpv4GatewayAttributeRequest extends Request {
         }
 
         /**
-         * Ipv4GatewayDescription.
+         * The ID of the request.
          */
         public Builder ipv4GatewayDescription(String ipv4GatewayDescription) {
             this.putQueryParameter("Ipv4GatewayDescription", ipv4GatewayDescription);
@@ -209,7 +212,12 @@ public class UpdateIpv4GatewayAttributeRequest extends Request {
         }
 
         /**
-         * Ipv4GatewayId.
+         * The client token that is used to ensure the idempotence of the request.
+         * <p>
+         * 
+         * You can use the client to generate the value, but you must make sure that it is unique among different requests. The client token can contain only ASCII characters.
+         * 
+         * >  If you do not set this parameter, the system uses **RequestId** as **ClientToken**. **RequestId** may be different for each API request.
          */
         public Builder ipv4GatewayId(String ipv4GatewayId) {
             this.putQueryParameter("Ipv4GatewayId", ipv4GatewayId);
@@ -218,7 +226,11 @@ public class UpdateIpv4GatewayAttributeRequest extends Request {
         }
 
         /**
-         * Ipv4GatewayName.
+         * Specifies whether to check the request without performing the operation. Valid values:
+         * <p>
+         * 
+         * *   **true**: checks the request without performing the operation. The system checks the required parameters, request syntax, and limits. If the request fails the check, an error message is returned. If the request passes the check, the `DryRunOperation` error code is returned.
+         * *   **false** (default): sends the request. If the request passes the check, a 2xx HTTP status code is returned and the operation is performed.
          */
         public Builder ipv4GatewayName(String ipv4GatewayName) {
             this.putQueryParameter("Ipv4GatewayName", ipv4GatewayName);

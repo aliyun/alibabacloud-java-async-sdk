@@ -238,7 +238,12 @@ public class ListNatIpCidrsRequest extends Request {
         } 
 
         /**
-         * ClientToken.
+         * The client token that is used to ensure the idempotence of the request.
+         * <p>
+         * 
+         * You can use the client to generate the value, but you must make sure that it is unique among different requests. The token can contain only ASCII characters and cannot exceed 64 characters in length.
+         * 
+         * >  If you do not set this parameter, the system automatically uses **RequestId** as **ClientToken**. **RequestId** may be different for each API request.
          */
         public Builder clientToken(String clientToken) {
             this.putQueryParameter("ClientToken", clientToken);
@@ -247,7 +252,11 @@ public class ListNatIpCidrsRequest extends Request {
         }
 
         /**
-         * DryRun.
+         * Specifies whether to only precheck this request. Valid values:
+         * <p>
+         * 
+         * *   **true**: checks the API request. The CIDR blocks of the NAT gateway are not queried if the API request passes the precheck. The system checks whether your AccessKey pair is valid, whether the Resource Access Management (RAM) user is authorized, and whether the required parameters are set. If the request fails to pass the precheck, the corresponding error message is returned. If the check succeeds, the DryRunOperation error code is returned.
+         * *   **false**: sends the API request. If the request passes the precheck, 2xx HTTP status code is returned and the CIDR blocks of the NAT gateway are queried. This is the default value.
          */
         public Builder dryRun(Boolean dryRun) {
             this.putQueryParameter("DryRun", dryRun);
@@ -256,7 +265,7 @@ public class ListNatIpCidrsRequest extends Request {
         }
 
         /**
-         * MaxResults.
+         * The number of entries to return on each page. Valid values: **1** to **100**. Default value: **20**.
          */
         public Builder maxResults(String maxResults) {
             this.putQueryParameter("MaxResults", maxResults);
@@ -265,7 +274,7 @@ public class ListNatIpCidrsRequest extends Request {
         }
 
         /**
-         * NatGatewayId.
+         * The ID of the VPC NAT gateway that you want to query.
          */
         public Builder natGatewayId(String natGatewayId) {
             this.putQueryParameter("NatGatewayId", natGatewayId);
@@ -274,7 +283,7 @@ public class ListNatIpCidrsRequest extends Request {
         }
 
         /**
-         * NatIpCidr.
+         * The CIDR block of the NAT gateway that you want to query.
          */
         public Builder natIpCidr(String natIpCidr) {
             this.putQueryParameter("NatIpCidr", natIpCidr);
@@ -283,7 +292,7 @@ public class ListNatIpCidrsRequest extends Request {
         }
 
         /**
-         * NatIpCidrName.
+         * The name of the CIDR block that you want to query. Valid values of **N**: **1** to **20**.
          */
         public Builder natIpCidrName(java.util.List < String > natIpCidrName) {
             this.putQueryParameter("NatIpCidrName", natIpCidrName);
@@ -292,7 +301,7 @@ public class ListNatIpCidrsRequest extends Request {
         }
 
         /**
-         * NatIpCidrStatus.
+         * The status of the CIDR block that you want to query. Set the value to **Available**.
          */
         public Builder natIpCidrStatus(String natIpCidrStatus) {
             this.putQueryParameter("NatIpCidrStatus", natIpCidrStatus);
@@ -301,7 +310,7 @@ public class ListNatIpCidrsRequest extends Request {
         }
 
         /**
-         * NatIpCidrs.
+         * The CIDR block of the NAT gateway that you want to query. Valid values of **N**: **1** to **20**.
          */
         public Builder natIpCidrs(java.util.List < String > natIpCidrs) {
             this.putQueryParameter("NatIpCidrs", natIpCidrs);
@@ -310,7 +319,11 @@ public class ListNatIpCidrsRequest extends Request {
         }
 
         /**
-         * NextToken.
+         * The token that is used for the next query. Set the value as needed.
+         * <p>
+         * 
+         * *   If this is your first query or no next query is to be sent, ignore this parameter.
+         * *   If a next query is to be sent, set the value to the value of NextToken that is returned from the last call.
          */
         public Builder nextToken(String nextToken) {
             this.putQueryParameter("NextToken", nextToken);
@@ -337,7 +350,10 @@ public class ListNatIpCidrsRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * The region ID of the Virtual Private Cloud (VPC) NAT gateway that you want to query.
+         * <p>
+         * 
+         * You can call the [DescribeRegions](~~36063~~) operation to query the most recent region list.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);

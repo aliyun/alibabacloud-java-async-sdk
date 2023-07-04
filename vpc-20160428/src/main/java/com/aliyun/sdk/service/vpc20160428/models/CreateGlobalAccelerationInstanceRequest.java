@@ -197,7 +197,7 @@ public class CreateGlobalAccelerationInstanceRequest extends Request {
         } 
 
         /**
-         * Bandwidth.
+         * The maximum bandwidth of the GA instance. Set the value to **10**. Unit: Mbit/s.
          */
         public Builder bandwidth(String bandwidth) {
             this.putQueryParameter("Bandwidth", bandwidth);
@@ -206,7 +206,11 @@ public class CreateGlobalAccelerationInstanceRequest extends Request {
         }
 
         /**
-         * BandwidthType.
+         * The bandwidth type. Valid values:
+         * <p>
+         * 
+         * *   **Sharing**
+         * *   **Exclusive**
          */
         public Builder bandwidthType(String bandwidthType) {
             this.putQueryParameter("BandwidthType", bandwidthType);
@@ -215,7 +219,10 @@ public class CreateGlobalAccelerationInstanceRequest extends Request {
         }
 
         /**
-         * ClientToken.
+         * The client token that is used to ensure the idempotence of the request.
+         * <p>
+         * 
+         * You can use the client to generate the value, but you must make sure that it is unique among different requests. The token can contain only ASCII characters and cannot exceed 64 characters in length.
          */
         public Builder clientToken(String clientToken) {
             this.putQueryParameter("ClientToken", clientToken);
@@ -224,7 +231,10 @@ public class CreateGlobalAccelerationInstanceRequest extends Request {
         }
 
         /**
-         * Description.
+         * The description of the GA instance.
+         * <p>
+         * 
+         * The description must be 2 to 256 characters in length. It must start with a letter but cannot start with `http://` or `https://`.
          */
         public Builder description(String description) {
             this.putQueryParameter("Description", description);
@@ -233,7 +243,10 @@ public class CreateGlobalAccelerationInstanceRequest extends Request {
         }
 
         /**
-         * Name.
+         * The name of the GA instance.
+         * <p>
+         * 
+         * The name must be 2 to 128 characters in length and can contain letters, digits, periods (.), underscores (\_), and hyphens (-). It must start with a letter and cannot start with `http://` or `https://`.
          */
         public Builder name(String name) {
             this.putQueryParameter("Name", name);
@@ -260,7 +273,10 @@ public class CreateGlobalAccelerationInstanceRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * The region ID of the GA instance.
+         * <p>
+         * 
+         * You can call the [DescribeRegions](~~36063~~) operation to query the most recent region list.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -287,7 +303,13 @@ public class CreateGlobalAccelerationInstanceRequest extends Request {
         }
 
         /**
-         * ServiceLocation.
+         * The acceleration area. Valid values:
+         * <p>
+         * 
+         * *   **china-mainland**
+         * *   **north-america**
+         * *   **asia-pacific**
+         * *   **europe**
          */
         public Builder serviceLocation(String serviceLocation) {
             this.putQueryParameter("ServiceLocation", serviceLocation);

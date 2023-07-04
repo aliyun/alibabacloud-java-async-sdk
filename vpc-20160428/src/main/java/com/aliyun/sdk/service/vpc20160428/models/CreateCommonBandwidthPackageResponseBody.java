@@ -62,7 +62,7 @@ public class CreateCommonBandwidthPackageResponseBody extends TeaModel {
         private String resourceGroupId; 
 
         /**
-         * BandwidthPackageId.
+         * The ID of the resource group.
          */
         public Builder bandwidthPackageId(String bandwidthPackageId) {
             this.bandwidthPackageId = bandwidthPackageId;

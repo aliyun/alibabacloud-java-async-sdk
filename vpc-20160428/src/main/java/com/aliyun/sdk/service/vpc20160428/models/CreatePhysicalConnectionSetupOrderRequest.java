@@ -197,7 +197,7 @@ public class CreatePhysicalConnectionSetupOrderRequest extends Request {
         } 
 
         /**
-         * AccessPointId.
+         * The ID of the access point.
          */
         public Builder accessPointId(String accessPointId) {
             this.putQueryParameter("AccessPointId", accessPointId);
@@ -206,7 +206,11 @@ public class CreatePhysicalConnectionSetupOrderRequest extends Request {
         }
 
         /**
-         * AutoPay.
+         * Specifies whether to enable automatic payment. Valid values:
+         * <p>
+         * 
+         * *   **false** (default): disables automatic payment.
+         * *   **true**: enables automatic payment.
          */
         public Builder autoPay(Boolean autoPay) {
             this.putQueryParameter("AutoPay", autoPay);
@@ -215,7 +219,12 @@ public class CreatePhysicalConnectionSetupOrderRequest extends Request {
         }
 
         /**
-         * ClientToken.
+         * The client token that is used to ensure the idempotence of the request.
+         * <p>
+         * 
+         * You can use the client to generate the value, but you must make sure that it is unique among different requests. ClientToken can contain only ASCII characters.
+         * 
+         * >  If you do not set this parameter, the system automatically uses **RequestId** as **ClientToken**. **RequestId** of each API request may be different.
          */
         public Builder clientToken(String clientToken) {
             this.putQueryParameter("ClientToken", clientToken);
@@ -224,7 +233,15 @@ public class CreatePhysicalConnectionSetupOrderRequest extends Request {
         }
 
         /**
-         * LineOperator.
+         * The connectivity provider of the Express Connect circuit. Valid values:
+         * <p>
+         * 
+         * *   **CT**: China Telecom
+         * *   **CU**: China Unicom
+         * *   **CM**: China Mobile
+         * *   **CO**: other connectivity providers in the Chinese mainland
+         * *   **Equinix**: Equinix
+         * *   **Other**: other connectivity providers outside the Chinese mainland
          */
         public Builder lineOperator(String lineOperator) {
             this.putQueryParameter("LineOperator", lineOperator);
@@ -251,7 +268,18 @@ public class CreatePhysicalConnectionSetupOrderRequest extends Request {
         }
 
         /**
-         * PortType.
+         * The port type. Valid values:
+         * <p>
+         * 
+         * *   **100Base-T**: 100 Mbit/s copper Ethernet port
+         * *   **1000Base-T** (default): 1,000 Mbit/s copper Ethernet port
+         * *   **1000Base-LX**: 1,000 Mbit/s single-mode optical port (10 km)
+         * *   **10GBase-T**: 10,000 Mbit/s copper Ethernet port
+         * *   **10GBase-LR**: 10,000 Mbit/s single-mode optical port (10 km)
+         * *   **40GBase-LR**: 40,000 Mbit/s single-mode optical port
+         * *   **100GBase-LR**: 100,000 Mbit/s single-mode optical port
+         * 
+         * >  Whether 40GBase-LR and 100GBase-LR ports can be created is based on resource supplies. For more information, contact your business manager.
          */
         public Builder portType(String portType) {
             this.putQueryParameter("PortType", portType);
@@ -260,7 +288,7 @@ public class CreatePhysicalConnectionSetupOrderRequest extends Request {
         }
 
         /**
-         * RedundantPhysicalConnectionId.
+         * The ID of the redundant Express Connect circuit. The redundant Express Connect circuit must be in the **Allocated**, **Confirmed**, or **Enabled** state.
          */
         public Builder redundantPhysicalConnectionId(String redundantPhysicalConnectionId) {
             this.putQueryParameter("RedundantPhysicalConnectionId", redundantPhysicalConnectionId);
@@ -269,7 +297,10 @@ public class CreatePhysicalConnectionSetupOrderRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * The region ID of the Express Connect circuit.
+         * <p>
+         * 
+         * You can call the [DescribeRegions](~~36063~~) operation to query the most recent region list.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);

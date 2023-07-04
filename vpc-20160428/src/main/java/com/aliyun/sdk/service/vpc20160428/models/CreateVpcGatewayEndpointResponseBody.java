@@ -24,6 +24,9 @@ public class CreateVpcGatewayEndpointResponseBody extends TeaModel {
     @NameInMap("RequestId")
     private String requestId;
 
+    @NameInMap("ResourceGroupId")
+    private String resourceGroupId;
+
     @NameInMap("ServiceName")
     private String serviceName;
 
@@ -32,6 +35,7 @@ public class CreateVpcGatewayEndpointResponseBody extends TeaModel {
         this.endpointId = builder.endpointId;
         this.endpointName = builder.endpointName;
         this.requestId = builder.requestId;
+        this.resourceGroupId = builder.resourceGroupId;
         this.serviceName = builder.serviceName;
     }
 
@@ -72,6 +76,13 @@ public class CreateVpcGatewayEndpointResponseBody extends TeaModel {
     }
 
     /**
+     * @return resourceGroupId
+     */
+    public String getResourceGroupId() {
+        return this.resourceGroupId;
+    }
+
+    /**
      * @return serviceName
      */
     public String getServiceName() {
@@ -83,6 +94,7 @@ public class CreateVpcGatewayEndpointResponseBody extends TeaModel {
         private String endpointId; 
         private String endpointName; 
         private String requestId; 
+        private String resourceGroupId; 
         private String serviceName; 
 
         /**
@@ -110,10 +122,18 @@ public class CreateVpcGatewayEndpointResponseBody extends TeaModel {
         }
 
         /**
-         * Id of the request
+         * RequestId.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
+            return this;
+        }
+
+        /**
+         * ResourceGroupId.
+         */
+        public Builder resourceGroupId(String resourceGroupId) {
+            this.resourceGroupId = resourceGroupId;
             return this;
         }
 

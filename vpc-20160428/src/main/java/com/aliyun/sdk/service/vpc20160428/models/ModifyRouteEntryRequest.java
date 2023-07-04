@@ -154,7 +154,10 @@ public class ModifyRouteEntryRequest extends Request {
         } 
 
         /**
-         * Description.
+         * The description of the route entry.
+         * <p>
+         * 
+         * The description must be 1 to 256 characters in length, and cannot start with `http://` or `https://`.
          */
         public Builder description(String description) {
             this.putQueryParameter("Description", description);
@@ -181,7 +184,10 @@ public class ModifyRouteEntryRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * The ID of the region to which the route belongs.
+         * <p>
+         * 
+         * You can call the [DescribeRegions](~~36063~~) operation to query the most recent region list.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -208,7 +214,7 @@ public class ModifyRouteEntryRequest extends Request {
         }
 
         /**
-         * RouteEntryId.
+         * The ID of the custom route entry.
          */
         public Builder routeEntryId(String routeEntryId) {
             this.putQueryParameter("RouteEntryId", routeEntryId);
@@ -217,7 +223,10 @@ public class ModifyRouteEntryRequest extends Request {
         }
 
         /**
-         * RouteEntryName.
+         * The name of the route entry.
+         * <p>
+         * 
+         * The name must be 1 to 128 characters in length, and cannot start with `http://` or `https://`.
          */
         public Builder routeEntryName(String routeEntryName) {
             this.putQueryParameter("RouteEntryName", routeEntryName);

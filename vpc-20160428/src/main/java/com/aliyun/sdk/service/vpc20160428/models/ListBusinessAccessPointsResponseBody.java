@@ -50,7 +50,7 @@ public class ListBusinessAccessPointsResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * BusinessAccessPoints.
+         * The list of access points.
          */
         public Builder businessAccessPoints(java.util.List < BusinessAccessPoints> businessAccessPoints) {
             this.businessAccessPoints = businessAccessPoints;
@@ -58,7 +58,7 @@ public class ListBusinessAccessPointsResponseBody extends TeaModel {
         }
 
         /**
-         * Id of the request
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -170,7 +170,7 @@ public class ListBusinessAccessPointsResponseBody extends TeaModel {
             private String supportPortTypes; 
 
             /**
-             * AccessPointId.
+             * The ID of the access point.
              */
             public Builder accessPointId(String accessPointId) {
                 this.accessPointId = accessPointId;
@@ -178,7 +178,7 @@ public class ListBusinessAccessPointsResponseBody extends TeaModel {
             }
 
             /**
-             * AccessPointName.
+             * The name of the access point.
              */
             public Builder accessPointName(String accessPointName) {
                 this.accessPointName = accessPointName;
@@ -186,7 +186,10 @@ public class ListBusinessAccessPointsResponseBody extends TeaModel {
             }
 
             /**
-             * CloudBoxInstanceIds.
+             * The ID of the cloud box.
+             * <p>
+             * 
+             * >  This parameter is available if the Express Connect circuit supports cloud boxes and the access point supports cloud boxes.
              */
             public Builder cloudBoxInstanceIds(String cloudBoxInstanceIds) {
                 this.cloudBoxInstanceIds = cloudBoxInstanceIds;
@@ -194,7 +197,7 @@ public class ListBusinessAccessPointsResponseBody extends TeaModel {
             }
 
             /**
-             * Latitude.
+             * The latitude of the access point.
              */
             public Builder latitude(Double latitude) {
                 this.latitude = latitude;
@@ -202,7 +205,7 @@ public class ListBusinessAccessPointsResponseBody extends TeaModel {
             }
 
             /**
-             * Longitude.
+             * The longitude of the access point.
              */
             public Builder longitude(Double longitude) {
                 this.longitude = longitude;
@@ -210,7 +213,15 @@ public class ListBusinessAccessPointsResponseBody extends TeaModel {
             }
 
             /**
-             * SupportLineOperator.
+             * The connectivity provider of the Express Connect circuit. Valid values:
+             * <p>
+             * 
+             * *   **CT**: China Telecom
+             * *   **CU**: China Unicom
+             * *   **CM**: China Mobile
+             * *   **CO**: other connectivity providers in the Chinese mainland
+             * *   **Equinix**: Equinix
+             * *   **Other**: other connectivity providers outside the Chinese mainland
              */
             public Builder supportLineOperator(String supportLineOperator) {
                 this.supportLineOperator = supportLineOperator;
@@ -218,7 +229,18 @@ public class ListBusinessAccessPointsResponseBody extends TeaModel {
             }
 
             /**
-             * SupportPortTypes.
+             * The port type supported by the access point. Valid values:
+             * <p>
+             * 
+             * *   **100Base-T**: 100 Mbit/s copper Ethernet port
+             * *   **1000Base-T**: 1,000 Mbit/s copper Ethernet port
+             * *   **1000Base-LX**: 1,000 Mbit/s single-mode optical port (10 km)
+             * *   **10GBase-T**: 10,000 Mbit/s copper Ethernet port
+             * *   **10GBase-LR**: 10,000 Mbit/s single-mode optical port (10 kilometers)
+             * *   **40GBase-LR**: 40,000 Mbit/s single-mode optical port
+             * *   **100GBase-LR**: 100,000 Mbit/s single-mode optical port
+             * 
+             * >  If you want to use the 40GBase-LR or 100GBase-LR port for an Express Connect circuit, you must first contact your account manager to obtain information about resource supplies.
              */
             public Builder supportPortTypes(String supportPortTypes) {
                 this.supportPortTypes = supportPortTypes;

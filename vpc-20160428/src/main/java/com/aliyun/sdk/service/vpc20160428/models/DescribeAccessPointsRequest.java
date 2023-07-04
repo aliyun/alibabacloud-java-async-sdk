@@ -13,6 +13,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class DescribeAccessPointsRequest extends Request {
     @Query
+    @NameInMap("AcceptLanguage")
+    private String acceptLanguage;
+
+    @Query
     @NameInMap("OwnerId")
     private Long ownerId;
 
@@ -40,6 +44,7 @@ public class DescribeAccessPointsRequest extends Request {
 
     private DescribeAccessPointsRequest(Builder builder) {
         super(builder);
+        this.acceptLanguage = builder.acceptLanguage;
         this.ownerId = builder.ownerId;
         this.pageNumber = builder.pageNumber;
         this.pageSize = builder.pageSize;
@@ -59,6 +64,13 @@ public class DescribeAccessPointsRequest extends Request {
     @Override
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return acceptLanguage
+     */
+    public String getAcceptLanguage() {
+        return this.acceptLanguage;
     }
 
     /**
@@ -104,6 +116,7 @@ public class DescribeAccessPointsRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<DescribeAccessPointsRequest, Builder> {
+        private String acceptLanguage; 
         private Long ownerId; 
         private Integer pageNumber; 
         private Integer pageSize; 
@@ -117,6 +130,7 @@ public class DescribeAccessPointsRequest extends Request {
 
         private Builder(DescribeAccessPointsRequest request) {
             super(request);
+            this.acceptLanguage = request.acceptLanguage;
             this.ownerId = request.ownerId;
             this.pageNumber = request.pageNumber;
             this.pageSize = request.pageSize;
@@ -124,6 +138,15 @@ public class DescribeAccessPointsRequest extends Request {
             this.resourceOwnerAccount = request.resourceOwnerAccount;
             this.resourceOwnerId = request.resourceOwnerId;
         } 
+
+        /**
+         * AcceptLanguage.
+         */
+        public Builder acceptLanguage(String acceptLanguage) {
+            this.putQueryParameter("AcceptLanguage", acceptLanguage);
+            this.acceptLanguage = acceptLanguage;
+            return this;
+        }
 
         /**
          * OwnerId.
@@ -135,7 +158,7 @@ public class DescribeAccessPointsRequest extends Request {
         }
 
         /**
-         * PageNumber.
+         * The number of the page to return. Default value: **1**.
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -144,7 +167,7 @@ public class DescribeAccessPointsRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * The number of entries to return on each page. Maximum value: **50**. Default value: **10**.
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -153,7 +176,10 @@ public class DescribeAccessPointsRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * The region ID of the access point.
+         * <p>
+         * 
+         * You can call the [DescribeRegions](~~36063~~) operation to query the most recent region list.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);

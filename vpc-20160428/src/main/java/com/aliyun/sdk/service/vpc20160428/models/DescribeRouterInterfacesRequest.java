@@ -163,7 +163,11 @@ public class DescribeRouterInterfacesRequest extends Request {
         }
 
         /**
-         * IncludeReservationData.
+         * Specifies whether renewal data is included. Default value: false. Valid values:
+         * <p>
+         * 
+         * *   **true**
+         * *   **false**
          */
         public Builder includeReservationData(Boolean includeReservationData) {
             this.putQueryParameter("IncludeReservationData", includeReservationData);
@@ -181,7 +185,7 @@ public class DescribeRouterInterfacesRequest extends Request {
         }
 
         /**
-         * PageNumber.
+         * The number of the page to return. Default value: **1**.
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -190,7 +194,7 @@ public class DescribeRouterInterfacesRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * The number of entries to return on each page. Maximum value: **50**. Default value: **10**.
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -199,7 +203,10 @@ public class DescribeRouterInterfacesRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * The region ID of the router interface.
+         * <p>
+         * 
+         * You can call the [DescribeRegions](~~36063~~) operation to query the most recent region list.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -271,7 +278,21 @@ public class DescribeRouterInterfacesRequest extends Request {
             private java.util.List < String > value; 
 
             /**
-             * Key.
+             * The filter conditions. You can specify up to five filter conditions. The following filter conditions are supported:
+             * <p>
+             * 
+             * *   **RouterInterfaceId**: the ID of the router interface.
+             * *   **RouterId**: the ID of the router.
+             * *   **RouterType**: the router type. Valid values: **VRouter** and **VBR**.
+             * *   **RouterInterfaceOwnerId**: the ID of the Alibaba Cloud account to which the router interface belongs.
+             * *   **OppositeInterfaceId**: the ID of the peer router interface.
+             * *   **OppositeRouterType**: the type of the peer router interface. Valid values: **VRouter** and **VBR**.
+             * *   **OppositeRouterId**: the ID of the peer router.
+             * *   **OppositeInterfaceOwnerId**: the ID of the Alibaba Cloud account to which the peer router interface belongs.
+             * *   **Status**: the status of the router interface.
+             * *   **Name**: the name of the router interface.
+             * 
+             * >  The logical operator between multiple values in the filter condition is OR. In this case, the filter condition is met if one of the values is matched. The logical operator between filter conditions is AND, which means that a result is returned only when all conditions are met.
              */
             public Builder key(String key) {
                 this.key = key;

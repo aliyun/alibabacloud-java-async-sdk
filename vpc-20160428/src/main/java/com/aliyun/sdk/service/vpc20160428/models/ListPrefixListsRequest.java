@@ -196,7 +196,7 @@ public class ListPrefixListsRequest extends Request {
         } 
 
         /**
-         * MaxResults.
+         * The number of entries to return on each page. Valid values: **1** to **100**. Default value: **20**.
          */
         public Builder maxResults(Long maxResults) {
             this.putQueryParameter("MaxResults", maxResults);
@@ -205,7 +205,11 @@ public class ListPrefixListsRequest extends Request {
         }
 
         /**
-         * NextToken.
+         * The token that is used for the next query. Valid values:
+         * <p>
+         * 
+         * *   If this is your first query and no next queries are to be sent, ignore this parameter.
+         * *   If a subsequent query is to be sent, set the parameter to the value of NextToken that is returned from the last call.
          */
         public Builder nextToken(String nextToken) {
             this.putQueryParameter("NextToken", nextToken);
@@ -232,7 +236,7 @@ public class ListPrefixListsRequest extends Request {
         }
 
         /**
-         * 前缀列表的实例ID
+         * PrefixListIds.
          */
         public Builder prefixListIds(java.util.List < String > prefixListIds) {
             this.putQueryParameter("PrefixListIds", prefixListIds);
@@ -241,7 +245,10 @@ public class ListPrefixListsRequest extends Request {
         }
 
         /**
-         * PrefixListName.
+         * The name of the prefix list to query.
+         * <p>
+         * 
+         * The name must be 1 to 128 characters in length, and cannot start with `http://` or `https://`.
          */
         public Builder prefixListName(String prefixListName) {
             this.putQueryParameter("PrefixListName", prefixListName);
@@ -250,7 +257,10 @@ public class ListPrefixListsRequest extends Request {
         }
 
         /**
-         * 地域
+         * The ID of the region where you want to query prefix lists.
+         * <p>
+         * 
+         * You can call the [DescribeRegions](~~36063~~) operation to query the most recent region list.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -259,7 +269,7 @@ public class ListPrefixListsRequest extends Request {
         }
 
         /**
-         * ResourceGroupId.
+         * The ID of the resource group to which the prefix list belongs.
          */
         public Builder resourceGroupId(String resourceGroupId) {
             this.putQueryParameter("ResourceGroupId", resourceGroupId);
@@ -340,7 +350,10 @@ public class ListPrefixListsRequest extends Request {
             private String value; 
 
             /**
-             * Key.
+             * The tag key. You can specify at most 20 tag keys. The tag key cannot be an empty string.
+             * <p>
+             * 
+             * The key cannot exceed 64 characters in length, and can contain digits, periods (.), underscores (\_), and hyphens (-). The key must start with a letter but cannot start with `aliyun` or `acs:`. The key cannot contain `http://` or `https://`.
              */
             public Builder key(String key) {
                 this.key = key;
@@ -348,7 +361,10 @@ public class ListPrefixListsRequest extends Request {
             }
 
             /**
-             * Value.
+             * The tag value. You can specify at most 20 tag values. It can be an empty string.
+             * <p>
+             * 
+             * The tag value cannot exceed 128 characters in length, and can contain digits, periods (.), underscores (\_), and hyphens (-). It must start with a letter but cannot start with `aliyun` or `acs:`. It cannot contain `http://` or `https://`.
              */
             public Builder value(String value) {
                 this.value = value;

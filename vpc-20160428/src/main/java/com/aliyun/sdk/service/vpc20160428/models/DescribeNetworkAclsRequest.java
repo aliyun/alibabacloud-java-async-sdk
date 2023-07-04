@@ -223,7 +223,7 @@ public class DescribeNetworkAclsRequest extends Request {
         } 
 
         /**
-         * ClientToken.
+         * The ID of the inbound rule.
          */
         public Builder clientToken(String clientToken) {
             this.putQueryParameter("ClientToken", clientToken);
@@ -232,7 +232,7 @@ public class DescribeNetworkAclsRequest extends Request {
         }
 
         /**
-         * NetworkAclId.
+         * The total number of entries returned.
          */
         public Builder networkAclId(String networkAclId) {
             this.putQueryParameter("NetworkAclId", networkAclId);
@@ -241,7 +241,7 @@ public class DescribeNetworkAclsRequest extends Request {
         }
 
         /**
-         * NetworkAclName.
+         * The details about the network ACL.
          */
         public Builder networkAclName(String networkAclName) {
             this.putQueryParameter("NetworkAclName", networkAclName);
@@ -259,7 +259,7 @@ public class DescribeNetworkAclsRequest extends Request {
         }
 
         /**
-         * PageNumber.
+         * The description of the network ACL.
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -268,7 +268,7 @@ public class DescribeNetworkAclsRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * The name of the network ACL.
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -277,7 +277,7 @@ public class DescribeNetworkAclsRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * The ID of the network ACL.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -286,7 +286,7 @@ public class DescribeNetworkAclsRequest extends Request {
         }
 
         /**
-         * ResourceId.
+         * The time when the network ACL was created.
          */
         public Builder resourceId(String resourceId) {
             this.putQueryParameter("ResourceId", resourceId);
@@ -313,7 +313,7 @@ public class DescribeNetworkAclsRequest extends Request {
         }
 
         /**
-         * ResourceType.
+         * The ID of the associated VPC.
          */
         public Builder resourceType(String resourceType) {
             this.putQueryParameter("ResourceType", resourceType);
@@ -331,7 +331,11 @@ public class DescribeNetworkAclsRequest extends Request {
         }
 
         /**
-         * VpcId.
+         * The status of the network ACL. Valid values:
+         * <p>
+         * 
+         * *   **Available**
+         * *   **Modifying**
          */
         public Builder vpcId(String vpcId) {
             this.putQueryParameter("VpcId", vpcId);
@@ -385,7 +389,7 @@ public class DescribeNetworkAclsRequest extends Request {
             private String value; 
 
             /**
-             * Key.
+             * The ID of the Alibaba Cloud account to which the network ACL belongs.
              */
             public Builder key(String key) {
                 this.key = key;
@@ -393,7 +397,7 @@ public class DescribeNetworkAclsRequest extends Request {
             }
 
             /**
-             * Value.
+             * The region ID of the network ACL.
              */
             public Builder value(String value) {
                 this.value = value;

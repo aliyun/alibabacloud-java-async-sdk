@@ -140,7 +140,10 @@ public class ListIpsecServerLogsRequest extends Request {
         } 
 
         /**
-         * From.
+         * The beginning of the time range to query. The value must be a UNIX timestamp. For example, 1671003744 specifies 15:42:24 (UTC+8) on December 14, 2022.
+         * <p>
+         * 
+         * >  If you specify **From**, you must also specify **To** or **MinutePeriod**.
          */
         public Builder from(Integer from) {
             this.putQueryParameter("From", from);
@@ -149,7 +152,7 @@ public class ListIpsecServerLogsRequest extends Request {
         }
 
         /**
-         * IpsecServerId.
+         * The ID of the IPsec server.
          */
         public Builder ipsecServerId(String ipsecServerId) {
             this.putQueryParameter("IpsecServerId", ipsecServerId);
@@ -158,7 +161,10 @@ public class ListIpsecServerLogsRequest extends Request {
         }
 
         /**
-         * MinutePeriod.
+         * The interval at which log data is queried. Valid values: **1** to **10**. Unit: minutes.
+         * <p>
+         * 
+         * >  If both **From** and **To** are not specified, you must specify **MinutePeriod**.
          */
         public Builder minutePeriod(Integer minutePeriod) {
             this.putQueryParameter("MinutePeriod", minutePeriod);
@@ -167,7 +173,7 @@ public class ListIpsecServerLogsRequest extends Request {
         }
 
         /**
-         * PageNumber.
+         * The number of the page to return. Default value: **1**.
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -176,7 +182,7 @@ public class ListIpsecServerLogsRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * The number of entries to return on each page. Valid values: **1** to **50**. Default value: **10**.
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -185,7 +191,10 @@ public class ListIpsecServerLogsRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * The ID of the region where the IPsec server is created.
+         * <p>
+         * 
+         * You can call the [DescribeRegions](~~36063~~) operation to obtain the region ID.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -194,7 +203,10 @@ public class ListIpsecServerLogsRequest extends Request {
         }
 
         /**
-         * To.
+         * The end of the time range to query. The value must be a unix timestamp. For example, 1671004344 specifies 15:52:24 (UTC+8) on December 14, 2022.
+         * <p>
+         * 
+         * >  If you specify **To**, you must also specify **From** or **MinutePeriod**.
          */
         public Builder to(Integer to) {
             this.putQueryParameter("To", to);

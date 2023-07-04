@@ -76,6 +76,10 @@ public class CreatePhysicalConnectionRequest extends Request {
     private Long resourceOwnerId;
 
     @Query
+    @NameInMap("Tag")
+    private java.util.List < Tag> tag;
+
+    @Query
     @NameInMap("Type")
     private String type;
 
@@ -100,6 +104,7 @@ public class CreatePhysicalConnectionRequest extends Request {
         this.resourceGroupId = builder.resourceGroupId;
         this.resourceOwnerAccount = builder.resourceOwnerAccount;
         this.resourceOwnerId = builder.resourceOwnerId;
+        this.tag = builder.tag;
         this.type = builder.type;
         this.bandwidth = builder.bandwidth;
     }
@@ -223,6 +228,13 @@ public class CreatePhysicalConnectionRequest extends Request {
     }
 
     /**
+     * @return tag
+     */
+    public java.util.List < Tag> getTag() {
+        return this.tag;
+    }
+
+    /**
      * @return type
      */
     public String getType() {
@@ -252,6 +264,7 @@ public class CreatePhysicalConnectionRequest extends Request {
         private String resourceGroupId; 
         private String resourceOwnerAccount; 
         private Long resourceOwnerId; 
+        private java.util.List < Tag> tag; 
         private String type; 
         private Integer bandwidth; 
 
@@ -276,12 +289,21 @@ public class CreatePhysicalConnectionRequest extends Request {
             this.resourceGroupId = request.resourceGroupId;
             this.resourceOwnerAccount = request.resourceOwnerAccount;
             this.resourceOwnerId = request.resourceOwnerId;
+            this.tag = request.tag;
             this.type = request.type;
             this.bandwidth = request.bandwidth;
         } 
 
         /**
-         * AccessPointId.
+         * The connectivity provider of the Express Connect circuit. Valid values:
+         * <p>
+         * 
+         * *   **CT**: China Telecom
+         * *   **CU**: China Unicom
+         * *   **CM**: China Mobile
+         * *   **CO**: other connectivity providers in the Chinese mainland
+         * *   **Equinix**: Equinix
+         * *   **Other**: other connectivity providers outside the Chinese mainland
          */
         public Builder accessPointId(String accessPointId) {
             this.putQueryParameter("AccessPointId", accessPointId);
@@ -290,7 +312,7 @@ public class CreatePhysicalConnectionRequest extends Request {
         }
 
         /**
-         * CircuitCode.
+         * The operation that you want to perform. Set the value to **CreatePhysicalConnection**.
          */
         public Builder circuitCode(String circuitCode) {
             this.putQueryParameter("CircuitCode", circuitCode);
@@ -299,7 +321,7 @@ public class CreatePhysicalConnectionRequest extends Request {
         }
 
         /**
-         * ClientToken.
+         * The ID of the resource group to which the Express Connect circuit belongs.
          */
         public Builder clientToken(String clientToken) {
             this.putQueryParameter("ClientToken", clientToken);
@@ -308,7 +330,7 @@ public class CreatePhysicalConnectionRequest extends Request {
         }
 
         /**
-         * Description.
+         * The circuit code of the Express Connect circuit. The circuit code is provided by the connectivity provider.
          */
         public Builder description(String description) {
             this.putQueryParameter("Description", description);
@@ -317,7 +339,7 @@ public class CreatePhysicalConnectionRequest extends Request {
         }
 
         /**
-         * LineOperator.
+         * The geographical location of the data center.
          */
         public Builder lineOperator(String lineOperator) {
             this.putQueryParameter("LineOperator", lineOperator);
@@ -326,7 +348,12 @@ public class CreatePhysicalConnectionRequest extends Request {
         }
 
         /**
-         * Name.
+         * The client token that is used to ensure the idempotence of the request.
+         * <p>
+         * 
+         * You can use the client to generate the value, but you must ensure that the value is unique among all requests. The client token can contain only ASCII characters.
+         * 
+         * >  If you do not set this parameter, the system uses **RequestId** as **ClientToken**. **RequestId** might be different for each API request.
          */
         public Builder name(String name) {
             this.putQueryParameter("Name", name);
@@ -353,7 +380,7 @@ public class CreatePhysicalConnectionRequest extends Request {
         }
 
         /**
-         * PeerLocation.
+         * The ID of the redundant Express Connect circuit. The redundant Express Connect circuit must be in the **Allocated**, **Confirmed**, or **Enabled** state.
          */
         public Builder peerLocation(String peerLocation) {
             this.putQueryParameter("PeerLocation", peerLocation);
@@ -362,7 +389,10 @@ public class CreatePhysicalConnectionRequest extends Request {
         }
 
         /**
-         * PortType.
+         * The description of the Express Connect circuit.
+         * <p>
+         * 
+         * The description must be 2 to 256 characters in length. The description must start with a letter but cannot start with `http://` or `https://`.
          */
         public Builder portType(String portType) {
             this.putQueryParameter("PortType", portType);
@@ -371,7 +401,10 @@ public class CreatePhysicalConnectionRequest extends Request {
         }
 
         /**
-         * RedundantPhysicalConnectionId.
+         * The name of the Express Connect circuit.
+         * <p>
+         * 
+         * The name must be 2 to 128 characters in length, and can contain letters, digits, underscores (\_), and hyphens (-). The name must start with a letter but cannot start with `http://` or `https://`.
          */
         public Builder redundantPhysicalConnectionId(String redundantPhysicalConnectionId) {
             this.putQueryParameter("RedundantPhysicalConnectionId", redundantPhysicalConnectionId);
@@ -380,7 +413,7 @@ public class CreatePhysicalConnectionRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * The type of the Express Connect circuit. Default value: **VPC**.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -389,7 +422,7 @@ public class CreatePhysicalConnectionRequest extends Request {
         }
 
         /**
-         * ResourceGroupId.
+         * The ID of the request.
          */
         public Builder resourceGroupId(String resourceGroupId) {
             this.putQueryParameter("ResourceGroupId", resourceGroupId);
@@ -416,7 +449,19 @@ public class CreatePhysicalConnectionRequest extends Request {
         }
 
         /**
-         * Type.
+         * Tag.
+         */
+        public Builder tag(java.util.List < Tag> tag) {
+            this.putQueryParameter("Tag", tag);
+            this.tag = tag;
+            return this;
+        }
+
+        /**
+         * The maximum bandwidth of the hosted connection. Unit: Mbit/s.
+         * <p>
+         * 
+         * Valid values: **50**, **100**, **200**, **300**, **400**, **500**, **1000**, **2000**, **4000**, **5000**, **8000**, and **10000**.
          */
         public Builder type(String type) {
             this.putQueryParameter("Type", type);
@@ -425,7 +470,18 @@ public class CreatePhysicalConnectionRequest extends Request {
         }
 
         /**
-         * bandwidth.
+         * The port type of the Express Connect circuit. Valid values:
+         * <p>
+         * 
+         * *   **100Base-T**: 100 Mbit/s copper Ethernet port
+         * *   **1000Base-T**: 1,000 Mbit/s copper Ethernet port
+         * *   **1000Base-LX**: 1,000 Mbit/s single-mode optical port (10 km)
+         * *   **10GBase-T**: 10,000 Mbit/s copper Ethernet port
+         * *   **10GBase-LR**: 10,000 Mbit/s single-mode optical port (10 kilometers)
+         * *   **40GBase-LR**: 40,000 Mbit/s single-mode optical port
+         * *   **100GBase-LR**: 100,000 Mbit/s single-mode optical port
+         * 
+         * >  If you want to use the 40GBase-LR or 100GBase-LR port for an Express Connect circuit, you must first contact your account manager to obtain information about resource supplies.
          */
         public Builder bandwidth(Integer bandwidth) {
             this.putQueryParameter("bandwidth", bandwidth);
@@ -440,4 +496,65 @@ public class CreatePhysicalConnectionRequest extends Request {
 
     } 
 
+    public static class Tag extends TeaModel {
+        @NameInMap("Key")
+        private String key;
+
+        @NameInMap("Value")
+        private String value;
+
+        private Tag(Builder builder) {
+            this.key = builder.key;
+            this.value = builder.value;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static Tag create() {
+            return builder().build();
+        }
+
+        /**
+         * @return key
+         */
+        public String getKey() {
+            return this.key;
+        }
+
+        /**
+         * @return value
+         */
+        public String getValue() {
+            return this.value;
+        }
+
+        public static final class Builder {
+            private String key; 
+            private String value; 
+
+            /**
+             * Key.
+             */
+            public Builder key(String key) {
+                this.key = key;
+                return this;
+            }
+
+            /**
+             * Value.
+             */
+            public Builder value(String value) {
+                this.value = value;
+                return this;
+            }
+
+            public Tag build() {
+                return new Tag(this);
+            } 
+
+        } 
+
+    }
 }

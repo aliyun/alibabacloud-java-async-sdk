@@ -307,7 +307,7 @@ public class DescribeIPv6TranslatorEntriesRequest extends Request {
         } 
 
         /**
-         * AclId.
+         * The ID of the network ACL.
          */
         public Builder aclId(String aclId) {
             this.putQueryParameter("AclId", aclId);
@@ -316,7 +316,11 @@ public class DescribeIPv6TranslatorEntriesRequest extends Request {
         }
 
         /**
-         * AclStatus.
+         * Specifies whether to enable access control lists (ACLs). Valid values:
+         * <p>
+         * 
+         * *   **on**
+         * *   **off**
          */
         public Builder aclStatus(String aclStatus) {
             this.putQueryParameter("AclStatus", aclStatus);
@@ -325,7 +329,11 @@ public class DescribeIPv6TranslatorEntriesRequest extends Request {
         }
 
         /**
-         * AclType.
+         * The ACL type. Valid values:
+         * <p>
+         * 
+         * *   **white**: a whitelist. IPv6 addresses in the ACL are allowed to access backend services.
+         * *   **black**: a blacklist. IPv6 addresses in the ACL are not allowed to access backend services.
          */
         public Builder aclType(String aclType) {
             this.putQueryParameter("AclType", aclType);
@@ -334,7 +342,7 @@ public class DescribeIPv6TranslatorEntriesRequest extends Request {
         }
 
         /**
-         * AllocateIpv6Addr.
+         * The IPv6 address allocated to the IPv6 Translation Service instance.
          */
         public Builder allocateIpv6Addr(String allocateIpv6Addr) {
             this.putQueryParameter("AllocateIpv6Addr", allocateIpv6Addr);
@@ -343,7 +351,7 @@ public class DescribeIPv6TranslatorEntriesRequest extends Request {
         }
 
         /**
-         * AllocateIpv6Port.
+         * The port used by the IPv6 address allocated to the IPv6 Translation Service instance.
          */
         public Builder allocateIpv6Port(Integer allocateIpv6Port) {
             this.putQueryParameter("AllocateIpv6Port", allocateIpv6Port);
@@ -352,7 +360,7 @@ public class DescribeIPv6TranslatorEntriesRequest extends Request {
         }
 
         /**
-         * BackendIpv4Addr.
+         * The public IPv4 address that needs to provide IPv6 services.
          */
         public Builder backendIpv4Addr(String backendIpv4Addr) {
             this.putQueryParameter("BackendIpv4Addr", backendIpv4Addr);
@@ -361,7 +369,7 @@ public class DescribeIPv6TranslatorEntriesRequest extends Request {
         }
 
         /**
-         * BackendIpv4Port.
+         * The port used by the public IPv4 address that needs to provide IPv6 services.
          */
         public Builder backendIpv4Port(Integer backendIpv4Port) {
             this.putQueryParameter("BackendIpv4Port", backendIpv4Port);
@@ -370,7 +378,10 @@ public class DescribeIPv6TranslatorEntriesRequest extends Request {
         }
 
         /**
-         * ClientToken.
+         * The client token that is used to ensure the idempotence of the request.
+         * <p>
+         * 
+         * You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters.
          */
         public Builder clientToken(String clientToken) {
             this.putQueryParameter("ClientToken", clientToken);
@@ -379,7 +390,7 @@ public class DescribeIPv6TranslatorEntriesRequest extends Request {
         }
 
         /**
-         * EntryName.
+         * The name of the IPv6 mapping entry.
          */
         public Builder entryName(String entryName) {
             this.putQueryParameter("EntryName", entryName);
@@ -388,7 +399,10 @@ public class DescribeIPv6TranslatorEntriesRequest extends Request {
         }
 
         /**
-         * Ipv6TranslatorEntryId.
+         * The ID of the IPv6 mapping entry.
+         * <p>
+         * 
+         * > If **Ipv6TranslatorId** and **Ipv6TranslatorEntryId** are empty, information about all IPv6 mapping entries is returned. If only **Ipv6TranslatorEntryId** is empty, information about the IPv6 mapping entries of the current IPv6 Translation Service instance is returned.
          */
         public Builder ipv6TranslatorEntryId(String ipv6TranslatorEntryId) {
             this.putQueryParameter("Ipv6TranslatorEntryId", ipv6TranslatorEntryId);
@@ -397,7 +411,7 @@ public class DescribeIPv6TranslatorEntriesRequest extends Request {
         }
 
         /**
-         * Ipv6TranslatorId.
+         * The ID of the IPv6 Translation Service instance.
          */
         public Builder ipv6TranslatorId(String ipv6TranslatorId) {
             this.putQueryParameter("Ipv6TranslatorId", ipv6TranslatorId);
@@ -424,7 +438,7 @@ public class DescribeIPv6TranslatorEntriesRequest extends Request {
         }
 
         /**
-         * PageNumber.
+         * The number of the page to return. Default value: 1.
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -433,7 +447,7 @@ public class DescribeIPv6TranslatorEntriesRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * The number of entries to return on each page. Maximum value: **50**. Default value: **10**.
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -442,7 +456,7 @@ public class DescribeIPv6TranslatorEntriesRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * The region of the IPv6 Translation Service instance. You can call the **DescribeRegions** operation to query the most recent region list.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -469,7 +483,7 @@ public class DescribeIPv6TranslatorEntriesRequest extends Request {
         }
 
         /**
-         * TransProtocol.
+         * The protocol used by the data to be forwarded.
          */
         public Builder transProtocol(String transProtocol) {
             this.putQueryParameter("TransProtocol", transProtocol);

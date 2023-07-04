@@ -50,7 +50,7 @@ public class CreateIPv6TranslatorAclListResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * AclId.
+         * The ACL ID.
          */
         public Builder aclId(String aclId) {
             this.aclId = aclId;
@@ -58,7 +58,7 @@ public class CreateIPv6TranslatorAclListResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

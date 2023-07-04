@@ -290,7 +290,7 @@ public class DescribeRouteEntryListRequest extends Request {
         }
 
         /**
-         * DestinationCidrBlock.
+         * The destination CIDR block of the route. IPv4 and IPv6 CIDR blocks are supported.
          */
         public Builder destinationCidrBlock(String destinationCidrBlock) {
             this.putQueryParameter("DestinationCidrBlock", destinationCidrBlock);
@@ -299,7 +299,11 @@ public class DescribeRouteEntryListRequest extends Request {
         }
 
         /**
-         * IpVersion.
+         * The IP version. Valid values:
+         * <p>
+         * 
+         * *   **IPv4**
+         * *   **IPv6**
          */
         public Builder ipVersion(String ipVersion) {
             this.putQueryParameter("IpVersion", ipVersion);
@@ -308,7 +312,7 @@ public class DescribeRouteEntryListRequest extends Request {
         }
 
         /**
-         * MaxResult.
+         * The number of entries to return on each page. Valid values: **1** to **100**. Default value: **10**.
          */
         public Builder maxResult(Integer maxResult) {
             this.putQueryParameter("MaxResult", maxResult);
@@ -317,7 +321,7 @@ public class DescribeRouteEntryListRequest extends Request {
         }
 
         /**
-         * NextHopId.
+         * The ID of the next hop.
          */
         public Builder nextHopId(String nextHopId) {
             this.putQueryParameter("NextHopId", nextHopId);
@@ -326,7 +330,17 @@ public class DescribeRouteEntryListRequest extends Request {
         }
 
         /**
-         * NextHopType.
+         * The type of the next hop. Valid values:
+         * <p>
+         * 
+         * *   **Instance** (default): an Elastic Compute Service (ECS) instance
+         * *   **HaVip**: a high-availability virtual IP address (HAVIP)
+         * *   **VpnGateway**: a VPN gateway
+         * *   **NatGateway**: a NAT gateway
+         * *   **NetworkInterface**: a secondary elastic network interface (ENI)
+         * *   **RouterInterface**: a router interface
+         * *   **IPv6Gateway**: an IPv6 gateway
+         * *   **Attachment**: a transit router
          */
         public Builder nextHopType(String nextHopType) {
             this.putQueryParameter("NextHopType", nextHopType);
@@ -335,7 +349,11 @@ public class DescribeRouteEntryListRequest extends Request {
         }
 
         /**
-         * NextToken.
+         * The token that is used for the next query. Valid values:
+         * <p>
+         * 
+         * *   If this is your first query and no next queries are to be sent, ignore this parameter.
+         * *   If a next query is to be sent, set the parameter to the value of NextToken that is returned from the last call.
          */
         public Builder nextToken(String nextToken) {
             this.putQueryParameter("NextToken", nextToken);
@@ -362,7 +380,10 @@ public class DescribeRouteEntryListRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * The region ID of the route table.
+         * <p>
+         * 
+         * You can call the [DescribeRegions](~~36063~~) operation to query the most recent region list.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -389,7 +410,7 @@ public class DescribeRouteEntryListRequest extends Request {
         }
 
         /**
-         * RouteEntryId.
+         * The ID of the route that you want to query.
          */
         public Builder routeEntryId(String routeEntryId) {
             this.putQueryParameter("RouteEntryId", routeEntryId);
@@ -398,7 +419,10 @@ public class DescribeRouteEntryListRequest extends Request {
         }
 
         /**
-         * RouteEntryName.
+         * The name of the route.
+         * <p>
+         * 
+         * The name must be 1 to 128 characters in length, and cannot start with `http://` or `https://`.
          */
         public Builder routeEntryName(String routeEntryName) {
             this.putQueryParameter("RouteEntryName", routeEntryName);
@@ -407,7 +431,13 @@ public class DescribeRouteEntryListRequest extends Request {
         }
 
         /**
-         * RouteEntryType.
+         * The type of the route. Valid values:
+         * <p>
+         * 
+         * *   **Custom**: a custom route
+         * *   **System**: a system route
+         * *   **BGP**: a BGP route
+         * *   **CEN**: a Cloud Enterprise Network (CEN) route
          */
         public Builder routeEntryType(String routeEntryType) {
             this.putQueryParameter("RouteEntryType", routeEntryType);
@@ -416,7 +446,7 @@ public class DescribeRouteEntryListRequest extends Request {
         }
 
         /**
-         * RouteTableId.
+         * The ID of the route table.
          */
         public Builder routeTableId(String routeTableId) {
             this.putQueryParameter("RouteTableId", routeTableId);
@@ -425,7 +455,10 @@ public class DescribeRouteEntryListRequest extends Request {
         }
 
         /**
-         * ServiceType.
+         * Specifies whether to host the route. If the parameter is empty, the route is not hosted.
+         * <p>
+         * 
+         * If you set the value to **TR**, the route is hosted by a transit router.
          */
         public Builder serviceType(String serviceType) {
             this.putQueryParameter("ServiceType", serviceType);

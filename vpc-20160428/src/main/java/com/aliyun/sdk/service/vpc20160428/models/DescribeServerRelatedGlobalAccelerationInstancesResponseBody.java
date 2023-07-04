@@ -50,7 +50,7 @@ public class DescribeServerRelatedGlobalAccelerationInstancesResponseBody extend
         private String requestId; 
 
         /**
-         * GlobalAccelerationInstances.
+         * The list of GA instances.
          */
         public Builder globalAccelerationInstances(GlobalAccelerationInstances globalAccelerationInstances) {
             this.globalAccelerationInstances = globalAccelerationInstances;
@@ -58,7 +58,7 @@ public class DescribeServerRelatedGlobalAccelerationInstancesResponseBody extend
         }
 
         /**
-         * RequestId.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -134,7 +134,7 @@ public class DescribeServerRelatedGlobalAccelerationInstancesResponseBody extend
             private String serverIpAddress; 
 
             /**
-             * GlobalAccelerationInstanceId.
+             * The ID of the GA instance.
              */
             public Builder globalAccelerationInstanceId(String globalAccelerationInstanceId) {
                 this.globalAccelerationInstanceId = globalAccelerationInstanceId;
@@ -142,7 +142,7 @@ public class DescribeServerRelatedGlobalAccelerationInstancesResponseBody extend
             }
 
             /**
-             * IpAddress.
+             * The public IP address of the GA instance.
              */
             public Builder ipAddress(String ipAddress) {
                 this.ipAddress = ipAddress;
@@ -150,7 +150,7 @@ public class DescribeServerRelatedGlobalAccelerationInstancesResponseBody extend
             }
 
             /**
-             * RegionId.
+             * The region ID of the GA instance.
              */
             public Builder regionId(String regionId) {
                 this.regionId = regionId;
@@ -158,7 +158,7 @@ public class DescribeServerRelatedGlobalAccelerationInstancesResponseBody extend
             }
 
             /**
-             * ServerIpAddress.
+             * The IP address of the backend service.
              */
             public Builder serverIpAddress(String serverIpAddress) {
                 this.serverIpAddress = serverIpAddress;

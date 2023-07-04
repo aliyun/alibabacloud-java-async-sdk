@@ -140,7 +140,10 @@ public class DeleteIPv6TranslatorRequest extends Request {
         } 
 
         /**
-         * ClientToken.
+         * The client token that is used to ensure the idempotence of the request.
+         * <p>
+         * 
+         * You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters.
          */
         public Builder clientToken(String clientToken) {
             this.putQueryParameter("ClientToken", clientToken);
@@ -149,7 +152,7 @@ public class DeleteIPv6TranslatorRequest extends Request {
         }
 
         /**
-         * Ipv6TranslatorId.
+         * The ID of the IPv6 Translation Service instance.
          */
         public Builder ipv6TranslatorId(String ipv6TranslatorId) {
             this.putQueryParameter("Ipv6TranslatorId", ipv6TranslatorId);
@@ -176,7 +179,7 @@ public class DeleteIPv6TranslatorRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * The region ID of the IPv6 Translation Service instance.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);

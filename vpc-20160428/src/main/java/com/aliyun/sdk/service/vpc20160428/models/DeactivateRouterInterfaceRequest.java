@@ -121,7 +121,10 @@ public class DeactivateRouterInterfaceRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * The ID of the region where the router interface is deployed.
+         * <p>
+         * 
+         * You can call the [DescribeRegions](~~36063~~) operation to query the most recent region list.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -148,7 +151,7 @@ public class DeactivateRouterInterfaceRequest extends Request {
         }
 
         /**
-         * RouterInterfaceId.
+         * The ID of the router interface.
          */
         public Builder routerInterfaceId(String routerInterfaceId) {
             this.putQueryParameter("RouterInterfaceId", routerInterfaceId);

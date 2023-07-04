@@ -140,7 +140,7 @@ public class UnassociateNetworkAclRequest extends Request {
         } 
 
         /**
-         * ClientToken.
+         * The ID of the request.
          */
         public Builder clientToken(String clientToken) {
             this.putQueryParameter("ClientToken", clientToken);
@@ -149,7 +149,12 @@ public class UnassociateNetworkAclRequest extends Request {
         }
 
         /**
-         * NetworkAclId.
+         * The client token that is used to ensure the idempotence of the request.
+         * <p>
+         * 
+         * You can use the client to generate the value, but you must make sure that the value is unique among different requests. The token can contain only ASCII characters and cannot exceed 64 characters in length.
+         * 
+         * >  If you do not set this parameter, the system uses the value of **RequestId** as **ClientToken**. The value of **RequestId** may be different for each API request.
          */
         public Builder networkAclId(String networkAclId) {
             this.putQueryParameter("NetworkAclId", networkAclId);
@@ -167,7 +172,7 @@ public class UnassociateNetworkAclRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * The operation that you want to perform. Set the value to **UnassociateNetworkAcl**.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -248,7 +253,7 @@ public class UnassociateNetworkAclRequest extends Request {
             private String resourceType; 
 
             /**
-             * ResourceId.
+             * The region ID of the network ACL. You can call the [DescribeRegions](~~36063~~) operation to query the most recent region list.
              */
             public Builder resourceId(String resourceId) {
                 this.resourceId = resourceId;
@@ -256,7 +261,7 @@ public class UnassociateNetworkAclRequest extends Request {
             }
 
             /**
-             * ResourceType.
+             * The ID of the network ACL that you want to disassociate from a resource.
              */
             public Builder resourceType(String resourceType) {
                 this.resourceType = resourceType;

@@ -167,7 +167,10 @@ public class AllocateVpcIpv6CidrRequest extends Request {
         } 
 
         /**
-         * AddressPoolType.
+         * The type of the IPv6 address pool. Set the value to **custom**.
+         * <p>
+         * 
+         * >  This parameter is required.
          */
         public Builder addressPoolType(String addressPoolType) {
             this.putQueryParameter("AddressPoolType", addressPoolType);
@@ -176,7 +179,10 @@ public class AllocateVpcIpv6CidrRequest extends Request {
         }
 
         /**
-         * ClientToken.
+         * The client token that is used to ensure the idempotence of the request. You can use the client to generate the value, but you must make sure that it is unique among different requests. The client token can contain only ASCII characters.
+         * <p>
+         * 
+         * >  If you do not set this parameter, the system automatically uses **RequestId** as **ClientToken**. **RequestId** of each API request may be different.
          */
         public Builder clientToken(String clientToken) {
             this.putQueryParameter("ClientToken", clientToken);
@@ -185,7 +191,7 @@ public class AllocateVpcIpv6CidrRequest extends Request {
         }
 
         /**
-         * Ipv6CidrBlock.
+         * The IPv6 CIDR block that you want to reserve.
          */
         public Builder ipv6CidrBlock(String ipv6CidrBlock) {
             this.putQueryParameter("Ipv6CidrBlock", ipv6CidrBlock);
@@ -194,7 +200,18 @@ public class AllocateVpcIpv6CidrRequest extends Request {
         }
 
         /**
-         * Ipv6Isp.
+         * The type of the IPv6 CIDR block. Valid values:
+         * <p>
+         * 
+         * *   **BGP**: Alibaba Cloud Border Gateway Protocol (BGP) IPv6. This is the default value.
+         * *   **ChinaMobile**: China Mobile (single ISP).
+         * *   **ChinaUnicom**: China Unicom (single ISP).
+         * *   **ChinaTelecom**: China Telecom (single ISP).
+         * 
+         * > 
+         * 
+         * *   If your Alibaba Cloud account is allowed to use single-ISP bandwidth, valid values are: **ChinaTelecom**, **ChinaUnicom**, and **ChinaMobile**.
+         * *   You can reserve only one IPv6 CIDR block of each type. After a reserved IPv6 CIDR block of a type is allocated to a VPC, you can reserve another IPv6 CIDR of the type.
          */
         public Builder ipv6Isp(String ipv6Isp) {
             this.putQueryParameter("Ipv6Isp", ipv6Isp);
@@ -221,7 +238,10 @@ public class AllocateVpcIpv6CidrRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * The ID of the region to which the VPC belongs.
+         * <p>
+         * 
+         * You can call the [DescribeRegions](~~36063~~) operation to query the most recent region list.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);

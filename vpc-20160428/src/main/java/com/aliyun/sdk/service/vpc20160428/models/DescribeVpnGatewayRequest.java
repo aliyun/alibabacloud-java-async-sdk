@@ -140,7 +140,10 @@ public class DescribeVpnGatewayRequest extends Request {
         } 
 
         /**
-         * IncludeReservationData.
+         * The type of the VPN gateway.
+         * <p>
+         * 
+         * The value is set to **Normal**, which indicates a standard NAT gateway.
          */
         public Builder includeReservationData(Boolean includeReservationData) {
             this.putQueryParameter("IncludeReservationData", includeReservationData);
@@ -167,7 +170,7 @@ public class DescribeVpnGatewayRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * The ID of the VPN gateway.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -194,7 +197,11 @@ public class DescribeVpnGatewayRequest extends Request {
         }
 
         /**
-         * VpnGatewayId.
+         * Specifies whether to return information about pending orders. Valid values:
+         * <p>
+         * 
+         * *   **false** (default): no
+         * *   **true**: yes
          */
         public Builder vpnGatewayId(String vpnGatewayId) {
             this.putQueryParameter("VpnGatewayId", vpnGatewayId);

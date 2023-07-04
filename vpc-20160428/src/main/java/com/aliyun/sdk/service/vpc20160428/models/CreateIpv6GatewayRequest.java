@@ -182,7 +182,12 @@ public class CreateIpv6GatewayRequest extends Request {
         } 
 
         /**
-         * ClientToken.
+         * The client token that is used to ensure the idempotence of the request.
+         * <p>
+         * 
+         * You can use the client to generate the value, but you must ensure that the value is unique among different requests. ClientToken can contain only ASCII characters.
+         * 
+         * >  If you do not set this parameter, the system sets **ClientToken** to the value of **RequestId**. The value of **RequestId** for each API request may be different.
          */
         public Builder clientToken(String clientToken) {
             this.putQueryParameter("ClientToken", clientToken);
@@ -191,7 +196,10 @@ public class CreateIpv6GatewayRequest extends Request {
         }
 
         /**
-         * Description.
+         * The description of the IPv6 gateway.
+         * <p>
+         * 
+         * The description must be 2 to 256 characters in length and cannot start with `http://` or `https://`.
          */
         public Builder description(String description) {
             this.putQueryParameter("Description", description);
@@ -200,7 +208,10 @@ public class CreateIpv6GatewayRequest extends Request {
         }
 
         /**
-         * Name.
+         * The name of the IPv6 gateway.
+         * <p>
+         * 
+         * The name must be 2 to 128 characters in length, and can contain letters, digits, underscores (\_), and hyphens (-). The name must start with a letter but cannot start with `http://` or `https://`.
          */
         public Builder name(String name) {
             this.putQueryParameter("Name", name);
@@ -227,7 +238,7 @@ public class CreateIpv6GatewayRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * The ID of the region where the IPv6 gateway is deployed. You can call the [DescribeRegions](~~36063~~) operation to obtain the region ID.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -236,7 +247,7 @@ public class CreateIpv6GatewayRequest extends Request {
         }
 
         /**
-         * ResourceGroupId.
+         * The ID of the resource group.
          */
         public Builder resourceGroupId(String resourceGroupId) {
             this.putQueryParameter("ResourceGroupId", resourceGroupId);
@@ -263,7 +274,7 @@ public class CreateIpv6GatewayRequest extends Request {
         }
 
         /**
-         * VpcId.
+         * The ID of the VPC for which you want to create the IPv6 gateway.
          */
         public Builder vpcId(String vpcId) {
             this.putQueryParameter("VpcId", vpcId);

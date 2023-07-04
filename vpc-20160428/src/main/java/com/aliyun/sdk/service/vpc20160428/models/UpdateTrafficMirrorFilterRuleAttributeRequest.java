@@ -252,7 +252,7 @@ public class UpdateTrafficMirrorFilterRuleAttributeRequest extends Request {
         } 
 
         /**
-         * ClientToken.
+         * The new priority of the inbound or outbound rule. A smaller value indicates a higher priority.
          */
         public Builder clientToken(String clientToken) {
             this.putQueryParameter("ClientToken", clientToken);
@@ -261,7 +261,10 @@ public class UpdateTrafficMirrorFilterRuleAttributeRequest extends Request {
         }
 
         /**
-         * DestinationCidrBlock.
+         * The new destination port range of the inbound or outbound traffic.
+         * <p>
+         * 
+         * >  If you set **Protocol** to **ICMP**, you cannot change the port range.
          */
         public Builder destinationCidrBlock(String destinationCidrBlock) {
             this.putQueryParameter("DestinationCidrBlock", destinationCidrBlock);
@@ -270,7 +273,10 @@ public class UpdateTrafficMirrorFilterRuleAttributeRequest extends Request {
         }
 
         /**
-         * DestinationPortRange.
+         * The ID of the region to which the mirrored traffic belongs.
+         * <p>
+         * 
+         * You can call the [DescribeRegions](~~36063~~) operation to query the most recent region list. For more information about regions that support traffic mirroring, see [Overview of traffic mirroring](~~207513~~).
          */
         public Builder destinationPortRange(String destinationPortRange) {
             this.putQueryParameter("DestinationPortRange", destinationPortRange);
@@ -279,7 +285,13 @@ public class UpdateTrafficMirrorFilterRuleAttributeRequest extends Request {
         }
 
         /**
-         * DryRun.
+         * The new protocol that is used by the traffic to be mirrored by the inbound or outbound rule. Valid values:
+         * <p>
+         * 
+         * *   **ALL**: all protocols
+         * *   **ICMP**: Internet Control Message Protocol (ICMP)
+         * *   **TCP**: TCP
+         * *   **UDP**: User Datagram Protocol (UDP)
          */
         public Builder dryRun(Boolean dryRun) {
             this.putQueryParameter("DryRun", dryRun);
@@ -306,7 +318,11 @@ public class UpdateTrafficMirrorFilterRuleAttributeRequest extends Request {
         }
 
         /**
-         * Priority.
+         * The new action of the inbound or outbound rule. Valid values:
+         * <p>
+         * 
+         * *   **accept**: accepts network traffic.
+         * *   **drop**: drops network traffic.
          */
         public Builder priority(Integer priority) {
             this.putQueryParameter("Priority", priority);
@@ -315,7 +331,7 @@ public class UpdateTrafficMirrorFilterRuleAttributeRequest extends Request {
         }
 
         /**
-         * Protocol.
+         * The new destination CIDR block of the inbound or outbound traffic.
          */
         public Builder protocol(String protocol) {
             this.putQueryParameter("Protocol", protocol);
@@ -351,7 +367,7 @@ public class UpdateTrafficMirrorFilterRuleAttributeRequest extends Request {
         }
 
         /**
-         * RuleAction.
+         * The new source CIDR block of the inbound or outbound traffic.
          */
         public Builder ruleAction(String ruleAction) {
             this.putQueryParameter("RuleAction", ruleAction);
@@ -360,7 +376,10 @@ public class UpdateTrafficMirrorFilterRuleAttributeRequest extends Request {
         }
 
         /**
-         * SourceCidrBlock.
+         * The new source port range of the inbound or outbound traffic.
+         * <p>
+         * 
+         * >  If you set **Protocol** to **ICMP**, you cannot change the port range.
          */
         public Builder sourceCidrBlock(String sourceCidrBlock) {
             this.putQueryParameter("SourceCidrBlock", sourceCidrBlock);
@@ -369,7 +388,7 @@ public class UpdateTrafficMirrorFilterRuleAttributeRequest extends Request {
         }
 
         /**
-         * SourcePortRange.
+         * The ID of the request.
          */
         public Builder sourcePortRange(String sourcePortRange) {
             this.putQueryParameter("SourcePortRange", sourcePortRange);
@@ -378,7 +397,11 @@ public class UpdateTrafficMirrorFilterRuleAttributeRequest extends Request {
         }
 
         /**
-         * TrafficMirrorFilterRuleId.
+         * Specifies whether to check the request without performing the operation. Valid values:
+         * <p>
+         * 
+         * *   **true**: only checks the API request. The configuration of the inbound or outbound rule is not modified. The system checks the required parameters, request syntax, and limits. If the request fails to pass the check, an error message is returned. If the request passes the precheck, the `DryRunOperation` error code is returned.
+         * *   **false**: sends the request. This is the default value. If the request passes the check, a 2xx HTTP status code is returned and the configuration of the inbound or outbound rule is modified.
          */
         public Builder trafficMirrorFilterRuleId(String trafficMirrorFilterRuleId) {
             this.putQueryParameter("TrafficMirrorFilterRuleId", trafficMirrorFilterRuleId);

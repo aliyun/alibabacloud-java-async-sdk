@@ -211,7 +211,7 @@ public class DescribeIpv6EgressOnlyRulesRequest extends Request {
         } 
 
         /**
-         * InstanceId.
+         * The ID of the instance that is associated with the IPv6 address to which the egress-only rule is applied.
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -220,7 +220,10 @@ public class DescribeIpv6EgressOnlyRulesRequest extends Request {
         }
 
         /**
-         * InstanceType.
+         * The type of the instance to which you want to apply the egress-only rule. Set the value to
+         * <p>
+         * 
+         * **Ipv6Address**, which specifies that the egress-only rule applies to an IPv6 address.
          */
         public Builder instanceType(String instanceType) {
             this.putQueryParameter("InstanceType", instanceType);
@@ -229,7 +232,7 @@ public class DescribeIpv6EgressOnlyRulesRequest extends Request {
         }
 
         /**
-         * Ipv6EgressOnlyRuleId.
+         * The ID of the egress-only rule that you want to query.
          */
         public Builder ipv6EgressOnlyRuleId(String ipv6EgressOnlyRuleId) {
             this.putQueryParameter("Ipv6EgressOnlyRuleId", ipv6EgressOnlyRuleId);
@@ -238,7 +241,7 @@ public class DescribeIpv6EgressOnlyRulesRequest extends Request {
         }
 
         /**
-         * Ipv6GatewayId.
+         * The ID of the IPv6 gateway.
          */
         public Builder ipv6GatewayId(String ipv6GatewayId) {
             this.putQueryParameter("Ipv6GatewayId", ipv6GatewayId);
@@ -247,7 +250,7 @@ public class DescribeIpv6EgressOnlyRulesRequest extends Request {
         }
 
         /**
-         * Name.
+         * The name of the rule.
          */
         public Builder name(String name) {
             this.putQueryParameter("Name", name);
@@ -274,7 +277,7 @@ public class DescribeIpv6EgressOnlyRulesRequest extends Request {
         }
 
         /**
-         * PageNumber.
+         * The number of the page to return. Default value: **1**.
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -283,7 +286,7 @@ public class DescribeIpv6EgressOnlyRulesRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * The number of entries to return on each page. Maximum value: **50**. Default value: **10**.
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -292,7 +295,7 @@ public class DescribeIpv6EgressOnlyRulesRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * The ID of the region where the IPv6 gateway is deployed. You can call the [DescribeRegions](~~36063~~) operation to query the most recent region list.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);

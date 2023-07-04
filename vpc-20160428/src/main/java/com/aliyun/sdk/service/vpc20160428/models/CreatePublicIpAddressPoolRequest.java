@@ -195,7 +195,12 @@ public class CreatePublicIpAddressPoolRequest extends Request {
         } 
 
         /**
-         * ClientToken.
+         * The client token that you want to use to ensure the idempotence of the request.
+         * <p>
+         * 
+         * You can use the client to generate the value, but you must make sure that the value is unique among all requests. ClientToken can contain only ASCII characters.
+         * 
+         * >  If you do not specify this parameter, the system uses **RequestId** as **ClientToken**. The value of **RequestId** for each API request may be different.
          */
         public Builder clientToken(String clientToken) {
             this.putQueryParameter("ClientToken", clientToken);
@@ -204,7 +209,10 @@ public class CreatePublicIpAddressPoolRequest extends Request {
         }
 
         /**
-         * Description.
+         * The description of the IP address pool.
+         * <p>
+         * 
+         * This parameter is optional. The description must be 2 to 256 characters in length, and cannot start with http:// or https://.
          */
         public Builder description(String description) {
             this.putQueryParameter("Description", description);
@@ -213,7 +221,11 @@ public class CreatePublicIpAddressPoolRequest extends Request {
         }
 
         /**
-         * DryRun.
+         * Specifies whether to perform a dry run. Valid values:
+         * <p>
+         * 
+         * *   **true**: performs a dry run. The system checks the required parameters, request syntax, and limits. If the request fails the dry run, an error message is returned. If the request passes the dry run, the `DryRunOperation` error code is returned.
+         * *   **false** (default): performs a dry run and sends the request. If the request passes the dry run, a 2xx HTTP status code is returned and the operation is performed.
          */
         public Builder dryRun(Boolean dryRun) {
             this.putQueryParameter("DryRun", dryRun);
@@ -222,7 +234,24 @@ public class CreatePublicIpAddressPoolRequest extends Request {
         }
 
         /**
-         * Isp.
+         * The line type. Valid values:
+         * <p>
+         * 
+         * *   **BGP** (default): BGP (Multi-ISP) lines.
+         * *   **BGP_PRO**: BGP (Multi-ISP) Pro lines
+         * 
+         * For more information about BGP (Multi-ISP) and BGP (Multi-ISP) Pro, see [EIP line types](~~32321~~).
+         * 
+         * *   If you are allowed to use single-ISP bandwidth, you can also choose one of the following values:
+         * 
+         *     *   **ChinaTelecom**: China Telecom
+         *     *   **ChinaUnicom**: China Unicom
+         *     *   **ChinaMobile**: China Mobile
+         *     *   **ChinaTelecom_L2**: China Telecom L2
+         *     *   **ChinaUnicom_L2**: China Unicom L2
+         *     *   **ChinaMobile_L2**: China Mobile L2
+         * 
+         * *   If your services are deployed in China East 1 Finance, this parameter is required and you must set the value to **BGP_FinanceCloud**.
          */
         public Builder isp(String isp) {
             this.putQueryParameter("Isp", isp);
@@ -231,7 +260,10 @@ public class CreatePublicIpAddressPoolRequest extends Request {
         }
 
         /**
-         * Name.
+         * The name of the IP address pool.
+         * <p>
+         * 
+         * This parameter is optional. The name must be 1 to 128 characters in length, and can contain digits, periods (.), underscores (\_), and hyphens (-). The name must start with a letter but cannot start with `http://` or `https://`.
          */
         public Builder name(String name) {
             this.putQueryParameter("Name", name);
@@ -258,7 +290,7 @@ public class CreatePublicIpAddressPoolRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * The ID of the region where you want to create the IP address pool.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -267,7 +299,7 @@ public class CreatePublicIpAddressPoolRequest extends Request {
         }
 
         /**
-         * ResourceGroupId.
+         * The ID of the resource group to which the IP address pool belongs.
          */
         public Builder resourceGroupId(String resourceGroupId) {
             this.putQueryParameter("ResourceGroupId", resourceGroupId);

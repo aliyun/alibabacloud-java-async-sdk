@@ -170,7 +170,7 @@ public class AssociateGlobalAccelerationInstanceRequest extends Request {
         } 
 
         /**
-         * BackendServerId.
+         * The ID of the backend server.
          */
         public Builder backendServerId(String backendServerId) {
             this.putQueryParameter("BackendServerId", backendServerId);
@@ -179,7 +179,7 @@ public class AssociateGlobalAccelerationInstanceRequest extends Request {
         }
 
         /**
-         * BackendServerRegionId.
+         * The region of the backend server. The region must belong to the service area of the GA instance.
          */
         public Builder backendServerRegionId(String backendServerRegionId) {
             this.putQueryParameter("BackendServerRegionId", backendServerRegionId);
@@ -188,7 +188,11 @@ public class AssociateGlobalAccelerationInstanceRequest extends Request {
         }
 
         /**
-         * BackendServerType.
+         * The backend server type. Valid values:
+         * <p>
+         * 
+         * *   **EcsInstance** (default): ECS instance
+         * *   **SlbInstance**: SLB instance
          */
         public Builder backendServerType(String backendServerType) {
             this.putQueryParameter("BackendServerType", backendServerType);
@@ -197,7 +201,7 @@ public class AssociateGlobalAccelerationInstanceRequest extends Request {
         }
 
         /**
-         * GlobalAccelerationInstanceId.
+         * The ID of the GA instance.
          */
         public Builder globalAccelerationInstanceId(String globalAccelerationInstanceId) {
             this.putQueryParameter("GlobalAccelerationInstanceId", globalAccelerationInstanceId);
@@ -224,7 +228,7 @@ public class AssociateGlobalAccelerationInstanceRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * The region ID of the GA instance. You can call the [DescribeRegions](~~36063~~) operation to query the most recent region list.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);

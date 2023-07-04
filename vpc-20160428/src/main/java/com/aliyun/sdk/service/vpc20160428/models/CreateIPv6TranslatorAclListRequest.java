@@ -140,7 +140,7 @@ public class CreateIPv6TranslatorAclListRequest extends Request {
         } 
 
         /**
-         * AclName.
+         * The ACL name.
          */
         public Builder aclName(String aclName) {
             this.putQueryParameter("AclName", aclName);
@@ -176,7 +176,7 @@ public class CreateIPv6TranslatorAclListRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * The region of the IPv6 Translation Service instance. You can call the DescribeRegions operation to query the most recent region list.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);

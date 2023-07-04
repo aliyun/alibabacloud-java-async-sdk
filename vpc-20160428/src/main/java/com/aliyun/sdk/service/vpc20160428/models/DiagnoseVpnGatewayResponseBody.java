@@ -50,7 +50,7 @@ public class DiagnoseVpnGatewayResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * DiagnoseId
+         * The ID of the diagnostic operation.
          */
         public Builder diagnoseId(String diagnoseId) {
             this.diagnoseId = diagnoseId;
@@ -58,7 +58,7 @@ public class DiagnoseVpnGatewayResponseBody extends TeaModel {
         }
 
         /**
-         * Id of the request
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

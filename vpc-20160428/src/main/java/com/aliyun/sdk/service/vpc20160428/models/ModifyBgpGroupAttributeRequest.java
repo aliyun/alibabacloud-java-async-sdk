@@ -252,7 +252,7 @@ public class ModifyBgpGroupAttributeRequest extends Request {
         } 
 
         /**
-         * AuthKey.
+         * The authentication key of the BGP group.
          */
         public Builder authKey(String authKey) {
             this.putQueryParameter("AuthKey", authKey);
@@ -261,7 +261,7 @@ public class ModifyBgpGroupAttributeRequest extends Request {
         }
 
         /**
-         * BgpGroupId.
+         * The ID of the BGP group.
          */
         public Builder bgpGroupId(String bgpGroupId) {
             this.putQueryParameter("BgpGroupId", bgpGroupId);
@@ -270,7 +270,11 @@ public class ModifyBgpGroupAttributeRequest extends Request {
         }
 
         /**
-         * ClearAuthKey.
+         * Specifies whether to clear the secret key. Valid values:
+         * <p>
+         * 
+         * *   **true:** clears the secret key.
+         * *   **false:** does not clear the secret key.
          */
         public Builder clearAuthKey(Boolean clearAuthKey) {
             this.putQueryParameter("ClearAuthKey", clearAuthKey);
@@ -279,7 +283,12 @@ public class ModifyBgpGroupAttributeRequest extends Request {
         }
 
         /**
-         * ClientToken.
+         * The client token that is used to ensure the idempotence of the request.
+         * <p>
+         * 
+         * You can use the client to generate the value, but you must make sure that the value is unique among different requests. The ClientToken value can contain only ASCII characters.
+         * 
+         * >  If you do not set this parameter, **ClientToken** is set to the value of **RequestId**. The value of **RequestId** may be different for each API request.
          */
         public Builder clientToken(String clientToken) {
             this.putQueryParameter("ClientToken", clientToken);
@@ -288,7 +297,10 @@ public class ModifyBgpGroupAttributeRequest extends Request {
         }
 
         /**
-         * Description.
+         * The description of the BGP group.
+         * <p>
+         * 
+         * The description must be 2 to 256 characters in length. It must start with a letter and cannot start with `http://` or `https://`.
          */
         public Builder description(String description) {
             this.putQueryParameter("Description", description);
@@ -297,7 +309,13 @@ public class ModifyBgpGroupAttributeRequest extends Request {
         }
 
         /**
-         * IsFakeAsn.
+         * Specifies whether to use a fake ASN. Valid values:
+         * <p>
+         * 
+         * *   **false:** does not use a fake ASN.
+         * *   **true:** uses a fake ASN.
+         * 
+         * >  A router that runs BGP typically belongs to only one autonomous system. If you want to use a different ASN to communicate with the peer but you cannot modify the BGP configuration because it may cause service interruptions, you can use a fake ASN. For example, you can use a fake ASN to communicate with the peer when you migrate or merge autonomous systems. This prevents service interruptions.
          */
         public Builder isFakeAsn(Boolean isFakeAsn) {
             this.putQueryParameter("IsFakeAsn", isFakeAsn);
@@ -306,7 +324,14 @@ public class ModifyBgpGroupAttributeRequest extends Request {
         }
 
         /**
-         * LocalAsn.
+         * The custom autonomous system number (ASN) of the BGP on the Alibaba Cloud side. Default value: 45104. Valid values:
+         * <p>
+         * 
+         * *   **45104**
+         * *   **64512~65534**
+         * *   **4200000000~4294967294**
+         * 
+         * >  The value of **65025** is reserved by Alibaba Cloud. If you do not use the default value (45104) in scenarios where multiple connections are established, BGP loops may occur. Proceed with caution.
          */
         public Builder localAsn(Long localAsn) {
             this.putQueryParameter("LocalAsn", localAsn);
@@ -315,7 +340,10 @@ public class ModifyBgpGroupAttributeRequest extends Request {
         }
 
         /**
-         * Name.
+         * The name of the BGP group.
+         * <p>
+         * 
+         * The name must be 2 to 128 characters in length, and can contain digits, periods (.), underscores (\_), and hyphens (-). The name must start with a letter and cannot start with `http://` or `https://`.
          */
         public Builder name(String name) {
             this.putQueryParameter("Name", name);
@@ -342,7 +370,7 @@ public class ModifyBgpGroupAttributeRequest extends Request {
         }
 
         /**
-         * PeerAsn.
+         * The ASN of the gateway device in the data center.
          */
         public Builder peerAsn(Long peerAsn) {
             this.putQueryParameter("PeerAsn", peerAsn);
@@ -351,7 +379,10 @@ public class ModifyBgpGroupAttributeRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * The ID of the region to which the BGP group belongs.
+         * <p>
+         * 
+         * You can call the [DescribeRegions](~~36063~~) operation to obtain the region ID.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -378,7 +409,7 @@ public class ModifyBgpGroupAttributeRequest extends Request {
         }
 
         /**
-         * RouteQuota.
+         * The maximum number of routes supported by a BGP peer. Default value: **110**.
          */
         public Builder routeQuota(Integer routeQuota) {
             this.putQueryParameter("RouteQuota", routeQuota);

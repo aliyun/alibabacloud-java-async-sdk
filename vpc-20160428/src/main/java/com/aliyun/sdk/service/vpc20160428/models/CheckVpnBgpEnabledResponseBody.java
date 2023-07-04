@@ -50,7 +50,11 @@ public class CheckVpnBgpEnabledResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * BgpEnabled.
+         * Indicates whether the BGP feature is supported in the current region.
+         * <p>
+         * 
+         * *   **true**: supported.
+         * *   **false**: not supported.
          */
         public Builder bgpEnabled(Boolean bgpEnabled) {
             this.bgpEnabled = bgpEnabled;
@@ -58,7 +62,7 @@ public class CheckVpnBgpEnabledResponseBody extends TeaModel {
         }
 
         /**
-         * Id of the request
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

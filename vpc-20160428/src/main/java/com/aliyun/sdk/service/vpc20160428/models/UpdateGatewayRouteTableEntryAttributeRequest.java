@@ -226,7 +226,7 @@ public class UpdateGatewayRouteTableEntryAttributeRequest extends Request {
         } 
 
         /**
-         * ClientToken.
+         * The destination CIDR block of the route entry.
          */
         public Builder clientToken(String clientToken) {
             this.putQueryParameter("ClientToken", clientToken);
@@ -244,7 +244,14 @@ public class UpdateGatewayRouteTableEntryAttributeRequest extends Request {
         }
 
         /**
-         * DestinationCidrBlock.
+         * The next hop ID of the route entry after the route entry is modified.
+         * <p>
+         * 
+         * *   If you set **NextHopType** to **Instance**, specify an ECS instance ID for the **NextHopId** parameter.
+         * *   If you set **NextHopType** to **NetworkInterface**, specify an ENI ID for the **NextHopId** parameter.
+         * *   If you set **NextHopType** to **Local**, leave the **NextHopId** parameter empty, which specifies a local next hop.
+         * 
+         * >  If you want to modify a route entry whose next hop type is **Instance** or **NetworkInterface**, you must first change the value of the **NextHopType** parameter to **Local**. Then, change the value of **NextHopType** to **Instance** or **NetworkInterface** and specify the **NextHopId** parameter. When you modify a route entry whose next hop type is Instance or NetworkInterface, you cannot directly specify a different ENI ID or ECS instance ID for the NextHopId parameter.
          */
         public Builder destinationCidrBlock(String destinationCidrBlock) {
             this.putQueryParameter("DestinationCidrBlock", destinationCidrBlock);
@@ -253,7 +260,12 @@ public class UpdateGatewayRouteTableEntryAttributeRequest extends Request {
         }
 
         /**
-         * DryRun.
+         * The next hop type of the route entry after the route entry is modified. Valid values:
+         * <p>
+         * 
+         * *   **EcsInstance**: an Elastic Compute Service (ECS) instance
+         * *   **NetworkInterface**: an elastic network interface (ENI)
+         * *   **Local**: a local next hop
          */
         public Builder dryRun(Boolean dryRun) {
             this.putQueryParameter("DryRun", dryRun);
@@ -262,7 +274,11 @@ public class UpdateGatewayRouteTableEntryAttributeRequest extends Request {
         }
 
         /**
-         * IPv4GatewayRouteTableId.
+         * Specifies whether to check the request without performing the operation. Valid values:
+         * <p>
+         * 
+         * *   **true**: checks the request but does not modify the route entry. The system checks the required parameters, request syntax, and limits. If the request fails to pass the check, an error message is returned. If the request passes the check, the `DryRunOperation` error code is returned.
+         * *   **false** (default): sends the request. If the request passes the check, a 2xx HTTP status code is returned and the route entry is modified.
          */
         public Builder iPv4GatewayRouteTableId(String iPv4GatewayRouteTableId) {
             this.putQueryParameter("IPv4GatewayRouteTableId", iPv4GatewayRouteTableId);
@@ -271,7 +287,7 @@ public class UpdateGatewayRouteTableEntryAttributeRequest extends Request {
         }
 
         /**
-         * Name.
+         * The ID of the request.
          */
         public Builder name(String name) {
             this.putQueryParameter("Name", name);
@@ -280,7 +296,10 @@ public class UpdateGatewayRouteTableEntryAttributeRequest extends Request {
         }
 
         /**
-         * NextHopId.
+         * The description of the gateway route table.
+         * <p>
+         * 
+         * The description must be 2 to 256 characters in length. The description must start with a letter but cannot start with `http://` or `https://`.
          */
         public Builder nextHopId(String nextHopId) {
             this.putQueryParameter("NextHopId", nextHopId);
@@ -289,7 +308,10 @@ public class UpdateGatewayRouteTableEntryAttributeRequest extends Request {
         }
 
         /**
-         * NextHopType.
+         * The name of the gateway route table.
+         * <p>
+         * 
+         * The name must be 2 to 128 characters in length and can contain letter, digits, periods (.), underscores (\_), and hyphens (-). The name must start with a letter.
          */
         public Builder nextHopType(String nextHopType) {
             this.putQueryParameter("NextHopType", nextHopType);
@@ -316,7 +338,12 @@ public class UpdateGatewayRouteTableEntryAttributeRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * The client token that is used to ensure the idempotence of the request.
+         * <p>
+         * 
+         * You can use the client to generate the value, but you must make sure that it is unique among all requests. The client token can contain only ASCII characters.
+         * 
+         * >  If you do not specify this parameter, the system automatically uses the value of **RequestId** as the value of **ClientToken**. The value of **RequestId** may be different for each API request.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);

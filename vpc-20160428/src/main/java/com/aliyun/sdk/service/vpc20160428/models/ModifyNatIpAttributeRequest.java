@@ -182,7 +182,7 @@ public class ModifyNatIpAttributeRequest extends Request {
         } 
 
         /**
-         * ClientToken.
+         * The ID of the request.
          */
         public Builder clientToken(String clientToken) {
             this.putQueryParameter("ClientToken", clientToken);
@@ -191,7 +191,7 @@ public class ModifyNatIpAttributeRequest extends Request {
         }
 
         /**
-         * DryRun.
+         * The operation that you want to perform. Set the value to **ModifyNatIpAttribute**.
          */
         public Builder dryRun(Boolean dryRun) {
             this.putQueryParameter("DryRun", dryRun);
@@ -200,7 +200,12 @@ public class ModifyNatIpAttributeRequest extends Request {
         }
 
         /**
-         * NatIpDescription.
+         * The client token that is used to ensure the idempotence of the request.
+         * <p>
+         * 
+         * You can use the client to generate the value, but you must make sure that it is unique among different requests. The client token can contain only ASCII characters.
+         * 
+         * >  If you do not set this parameter, **ClientToken** is set to the value of **RequestId**. The value of **RequestId** for each API request may be different.
          */
         public Builder natIpDescription(String natIpDescription) {
             this.putQueryParameter("NatIpDescription", natIpDescription);
@@ -209,7 +214,10 @@ public class ModifyNatIpAttributeRequest extends Request {
         }
 
         /**
-         * NatIpId.
+         * The description of the NAT IP address that you want to modify.
+         * <p>
+         * 
+         * The description must be 2 to 256 characters in length. It must start with a letter but cannot start with `http://` or `https://`.
          */
         public Builder natIpId(String natIpId) {
             this.putQueryParameter("NatIpId", natIpId);
@@ -218,7 +226,11 @@ public class ModifyNatIpAttributeRequest extends Request {
         }
 
         /**
-         * NatIpName.
+         * Specifies whether only to precheck this request. Valid values:
+         * <p>
+         * 
+         * *   **true**: sends the precheck request but does not modify the name or description of the NAT IP address. The system checks your AccessKey pair, the Resource Access Management (RAM) user permissions, and the required parameters. If the request fails the precheck, an error message is returned. If the request passes the precheck, the `DryRunOperation` error code is returned.
+         * *   **false** (default): sends the request. If the request passes the precheck, a 2xx HTTP status code is returned and the name and description of the NAT IP address are modified.
          */
         public Builder natIpName(String natIpName) {
             this.putQueryParameter("NatIpName", natIpName);
@@ -245,7 +257,10 @@ public class ModifyNatIpAttributeRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * The name of the NAT IP address that you want to modify.
+         * <p>
+         * 
+         * The name must be 2 to 128 characters in length, and can contain letters, digits, periods (.), underscores (\_), and hyphens (-). It must start with a letter. It cannot start with `http://` or `https://`.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);

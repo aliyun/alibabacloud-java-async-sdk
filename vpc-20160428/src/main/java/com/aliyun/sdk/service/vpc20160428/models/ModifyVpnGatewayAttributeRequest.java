@@ -182,7 +182,11 @@ public class ModifyVpnGatewayAttributeRequest extends Request {
         } 
 
         /**
-         * AutoPropagate.
+         * Specifies whether to automatically advertise BGP routes to the virtual private cloud (VPC). Valid values:
+         * <p>
+         * 
+         * *   **true:** yes.
+         * *   **false:** no.
          */
         public Builder autoPropagate(Boolean autoPropagate) {
             this.putQueryParameter("AutoPropagate", autoPropagate);
@@ -191,7 +195,12 @@ public class ModifyVpnGatewayAttributeRequest extends Request {
         }
 
         /**
-         * ClientToken.
+         * The client token that is used to ensure the idempotence of the request.
+         * <p>
+         * 
+         * You can use the client to generate the value, but you must ensure that it is unique among all requests. ClientToken can contain only ASCII characters.
+         * 
+         * >  If you do not specify this parameter, the system automatically uses the request ID as the client token. The value of RequestId may be different for each API request.
          */
         public Builder clientToken(String clientToken) {
             this.putQueryParameter("ClientToken", clientToken);
@@ -200,7 +209,10 @@ public class ModifyVpnGatewayAttributeRequest extends Request {
         }
 
         /**
-         * Description.
+         * The new description of the VPN gateway.
+         * <p>
+         * 
+         * The description must be 1 to 100 characters in length and cannot start with `http://` or `https://`.
          */
         public Builder description(String description) {
             this.putQueryParameter("Description", description);
@@ -209,7 +221,10 @@ public class ModifyVpnGatewayAttributeRequest extends Request {
         }
 
         /**
-         * Name.
+         * The new name of the VPN gateway.
+         * <p>
+         * 
+         * The name must be 1 to 100 characters in length, and cannot start with `http://` or `https://`.
          */
         public Builder name(String name) {
             this.putQueryParameter("Name", name);
@@ -236,7 +251,7 @@ public class ModifyVpnGatewayAttributeRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * The ID of the region where the VPN gateway is created. You can call the [DescribeRegions](~~36063~~) operation to query the most recent region list.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -263,7 +278,7 @@ public class ModifyVpnGatewayAttributeRequest extends Request {
         }
 
         /**
-         * VpnGatewayId.
+         * The ID of the VPN gateway.
          */
         public Builder vpnGatewayId(String vpnGatewayId) {
             this.putQueryParameter("VpnGatewayId", vpnGatewayId);

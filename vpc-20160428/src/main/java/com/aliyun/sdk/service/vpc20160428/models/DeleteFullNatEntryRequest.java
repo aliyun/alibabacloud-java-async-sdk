@@ -169,7 +169,7 @@ public class DeleteFullNatEntryRequest extends Request {
         } 
 
         /**
-         * ClientToken.
+         * The ID of the FULLNAT table to which the FULLNAT entry to be deleted belongs.
          */
         public Builder clientToken(String clientToken) {
             this.putQueryParameter("ClientToken", clientToken);
@@ -178,7 +178,7 @@ public class DeleteFullNatEntryRequest extends Request {
         }
 
         /**
-         * DryRun.
+         * The ID of the request.
          */
         public Builder dryRun(Boolean dryRun) {
             this.putQueryParameter("DryRun", dryRun);
@@ -187,7 +187,10 @@ public class DeleteFullNatEntryRequest extends Request {
         }
 
         /**
-         * 要修改的DNAT条目的ID。
+         * The region ID of the VPC NAT gateway to which the FULLNAT entry to be deleted belongs.
+         * <p>
+         * 
+         * You can call the [DescribeRegions](~~36063~~) operation to query the most recent region list.
          */
         public Builder fullNatEntryId(String fullNatEntryId) {
             this.putQueryParameter("FullNatEntryId", fullNatEntryId);
@@ -196,7 +199,11 @@ public class DeleteFullNatEntryRequest extends Request {
         }
 
         /**
-         * FullNAT条目所属的FullNAT列表的ID。
+         * Specifies whether to to perform a dry run. Valid values:
+         * <p>
+         * 
+         * *   **true**: performs a dry run. The system checks your AccessKey pair, the RAM user permissions, and the required parameters. If the request fails the dry run, an error message is returned. If the request passes the dry run, the DryRunOperation error code is returned.
+         * *   **false** (default): performs a dry run and sends the request. If the request passes the dry run, a 2xx HTTP status code is returned and the operation is performed.
          */
         public Builder fullNatTableId(String fullNatTableId) {
             this.putQueryParameter("FullNatTableId", fullNatTableId);

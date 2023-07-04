@@ -86,7 +86,7 @@ public class DescribeIPv6TranslatorsResponseBody extends TeaModel {
         private Integer totalCount; 
 
         /**
-         * Ipv6Translators.
+         * The list of IPv6 Translation Service instances.
          */
         public Builder ipv6Translators(Ipv6Translators ipv6Translators) {
             this.ipv6Translators = ipv6Translators;
@@ -94,7 +94,7 @@ public class DescribeIPv6TranslatorsResponseBody extends TeaModel {
         }
 
         /**
-         * PageNumber.
+         * The page number of the returned page.
          */
         public Builder pageNumber(Integer pageNumber) {
             this.pageNumber = pageNumber;
@@ -102,7 +102,7 @@ public class DescribeIPv6TranslatorsResponseBody extends TeaModel {
         }
 
         /**
-         * PageSize.
+         * The number of entries returned per page.
          */
         public Builder pageSize(Integer pageSize) {
             this.pageSize = pageSize;
@@ -110,7 +110,7 @@ public class DescribeIPv6TranslatorsResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -118,7 +118,7 @@ public class DescribeIPv6TranslatorsResponseBody extends TeaModel {
         }
 
         /**
-         * TotalCount.
+         * The number of returned entries.
          */
         public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;
@@ -367,7 +367,7 @@ public class DescribeIPv6TranslatorsResponseBody extends TeaModel {
             private String status; 
 
             /**
-             * AllocateIpv4Addr.
+             * The IPv4 address allocated to the IPv6 Translation Service instance.
              */
             public Builder allocateIpv4Addr(String allocateIpv4Addr) {
                 this.allocateIpv4Addr = allocateIpv4Addr;
@@ -375,7 +375,7 @@ public class DescribeIPv6TranslatorsResponseBody extends TeaModel {
             }
 
             /**
-             * AllocateIpv6Addr.
+             * The IPv6 address allocated to the IPv6 Translation Service instance.
              */
             public Builder allocateIpv6Addr(String allocateIpv6Addr) {
                 this.allocateIpv6Addr = allocateIpv6Addr;
@@ -383,7 +383,7 @@ public class DescribeIPv6TranslatorsResponseBody extends TeaModel {
             }
 
             /**
-             * AvailableBandwidth.
+             * The bandwidth of the IPv6 Translation Service instance.
              */
             public Builder availableBandwidth(String availableBandwidth) {
                 this.availableBandwidth = availableBandwidth;
@@ -391,7 +391,7 @@ public class DescribeIPv6TranslatorsResponseBody extends TeaModel {
             }
 
             /**
-             * Bandwidth.
+             * The bandwidth of the IPv6 Translation Service instance. Unit: Mbit/s.
              */
             public Builder bandwidth(Integer bandwidth) {
                 this.bandwidth = bandwidth;
@@ -399,7 +399,11 @@ public class DescribeIPv6TranslatorsResponseBody extends TeaModel {
             }
 
             /**
-             * BusinessStatus.
+             * The business status of the IPv6 Translation Service instance. Valid values:
+             * <p>
+             * 
+             * *   **Normal**
+             * *   **FinancialLocked**
              */
             public Builder businessStatus(String businessStatus) {
                 this.businessStatus = businessStatus;
@@ -407,7 +411,7 @@ public class DescribeIPv6TranslatorsResponseBody extends TeaModel {
             }
 
             /**
-             * CreateTime.
+             * The timestamp when the IPv6 Translation Service instance was created.
              */
             public Builder createTime(Long createTime) {
                 this.createTime = createTime;
@@ -415,7 +419,7 @@ public class DescribeIPv6TranslatorsResponseBody extends TeaModel {
             }
 
             /**
-             * Description.
+             * The description of the IPv6 Translation Service instance.
              */
             public Builder description(String description) {
                 this.description = description;
@@ -423,7 +427,7 @@ public class DescribeIPv6TranslatorsResponseBody extends TeaModel {
             }
 
             /**
-             * EndTime.
+             * The timestamp when IPv6 Translation Service instance expires.
              */
             public Builder endTime(Long endTime) {
                 this.endTime = endTime;
@@ -431,7 +435,7 @@ public class DescribeIPv6TranslatorsResponseBody extends TeaModel {
             }
 
             /**
-             * Ipv6TranslatorEntryIds.
+             * The IDs of IPv6 mapping entries of the IPv6 Translation Service instance.
              */
             public Builder ipv6TranslatorEntryIds(Ipv6TranslatorEntryIds ipv6TranslatorEntryIds) {
                 this.ipv6TranslatorEntryIds = ipv6TranslatorEntryIds;
@@ -439,7 +443,7 @@ public class DescribeIPv6TranslatorsResponseBody extends TeaModel {
             }
 
             /**
-             * Ipv6TranslatorId.
+             * The ID of the IPv6 Translation Service instance.
              */
             public Builder ipv6TranslatorId(String ipv6TranslatorId) {
                 this.ipv6TranslatorId = ipv6TranslatorId;
@@ -447,7 +451,7 @@ public class DescribeIPv6TranslatorsResponseBody extends TeaModel {
             }
 
             /**
-             * Name.
+             * The name of the IPv6 Translation Service instance.
              */
             public Builder name(String name) {
                 this.name = name;
@@ -455,7 +459,11 @@ public class DescribeIPv6TranslatorsResponseBody extends TeaModel {
             }
 
             /**
-             * PayType.
+             * The billing method of the IPv6 Translation Service instance.
+             * <p>
+             * 
+             * *   **Prepay**: subscription
+             * *   **Postpay**: pay-as-you-go
              */
             public Builder payType(String payType) {
                 this.payType = payType;
@@ -463,7 +471,7 @@ public class DescribeIPv6TranslatorsResponseBody extends TeaModel {
             }
 
             /**
-             * RegionId.
+             * The region of the IPv6 Translation Service instance.
              */
             public Builder regionId(String regionId) {
                 this.regionId = regionId;
@@ -471,7 +479,7 @@ public class DescribeIPv6TranslatorsResponseBody extends TeaModel {
             }
 
             /**
-             * Spec.
+             * The specification of the IPv6 Translation Service instance.
              */
             public Builder spec(String spec) {
                 this.spec = spec;
@@ -479,7 +487,7 @@ public class DescribeIPv6TranslatorsResponseBody extends TeaModel {
             }
 
             /**
-             * Status.
+             * The status of the IPv6 Translation Service instance.
              */
             public Builder status(String status) {
                 this.status = status;

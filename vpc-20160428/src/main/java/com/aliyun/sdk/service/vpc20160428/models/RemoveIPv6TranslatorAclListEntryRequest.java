@@ -155,7 +155,7 @@ public class RemoveIPv6TranslatorAclListEntryRequest extends Request {
         } 
 
         /**
-         * AclEntryId.
+         * The ID of the ACL entry to be deleted.
          */
         public Builder aclEntryId(String aclEntryId) {
             this.putQueryParameter("AclEntryId", aclEntryId);
@@ -164,7 +164,7 @@ public class RemoveIPv6TranslatorAclListEntryRequest extends Request {
         }
 
         /**
-         * AclId.
+         * The ID of the ACL to which the ACL entry belongs.
          */
         public Builder aclId(String aclId) {
             this.putQueryParameter("AclId", aclId);
@@ -173,7 +173,10 @@ public class RemoveIPv6TranslatorAclListEntryRequest extends Request {
         }
 
         /**
-         * ClientToken.
+         * The client token that is used to ensure the idempotence of the request.
+         * <p>
+         * 
+         * You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters.
          */
         public Builder clientToken(String clientToken) {
             this.putQueryParameter("ClientToken", clientToken);
@@ -200,7 +203,7 @@ public class RemoveIPv6TranslatorAclListEntryRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * The region of the ACL.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);

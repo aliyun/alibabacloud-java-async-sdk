@@ -102,7 +102,7 @@ public class AllocateEipAddressProResponseBody extends TeaModel {
         }
 
         /**
-         * OrderId.
+         * The IP address of the requested EIP.
          */
         public Builder orderId(Long orderId) {
             this.orderId = orderId;
@@ -110,7 +110,7 @@ public class AllocateEipAddressProResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the resource group.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -118,7 +118,7 @@ public class AllocateEipAddressProResponseBody extends TeaModel {
         }
 
         /**
-         * ResourceGroupId.
+         * The ID of the specified EIP.
          */
         public Builder resourceGroupId(String resourceGroupId) {
             this.resourceGroupId = resourceGroupId;

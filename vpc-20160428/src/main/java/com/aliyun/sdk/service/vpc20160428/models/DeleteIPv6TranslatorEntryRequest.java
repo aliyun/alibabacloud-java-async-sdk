@@ -153,7 +153,10 @@ public class DeleteIPv6TranslatorEntryRequest extends Request {
         } 
 
         /**
-         * ClientToken.
+         * The client token that is used to ensure the idempotence of the request.
+         * <p>
+         * 
+         * You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters.
          */
         public Builder clientToken(String clientToken) {
             this.putQueryParameter("ClientToken", clientToken);
@@ -162,7 +165,7 @@ public class DeleteIPv6TranslatorEntryRequest extends Request {
         }
 
         /**
-         * Ipv6TranslatorEntryId.
+         * The ID of the IPv6 mapping entry to be deleted.
          */
         public Builder ipv6TranslatorEntryId(String ipv6TranslatorEntryId) {
             this.putQueryParameter("Ipv6TranslatorEntryId", ipv6TranslatorEntryId);
@@ -171,7 +174,10 @@ public class DeleteIPv6TranslatorEntryRequest extends Request {
         }
 
         /**
-         * Ipv6TranslatorId.
+         * The ID of the IPv6 Translation Service instance.
+         * <p>
+         * 
+         * > If you do not specify **Ipv6TranslatorEntryId**, all mapping entries in the specified instance are deleted.
          */
         public Builder ipv6TranslatorId(String ipv6TranslatorId) {
             this.putQueryParameter("Ipv6TranslatorId", ipv6TranslatorId);
@@ -198,7 +204,7 @@ public class DeleteIPv6TranslatorEntryRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * The region of the IPv6 Translation Service instance. You can call the **DescribeRegions** operation to query the most recent region list.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);

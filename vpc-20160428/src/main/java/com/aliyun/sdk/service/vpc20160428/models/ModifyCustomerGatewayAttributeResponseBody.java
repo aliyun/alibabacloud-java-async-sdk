@@ -98,7 +98,7 @@ public class ModifyCustomerGatewayAttributeResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * CreateTime.
+         * The timestamp generated when the customer gateway was created.
          */
         public Builder createTime(Long createTime) {
             this.createTime = createTime;
@@ -106,7 +106,7 @@ public class ModifyCustomerGatewayAttributeResponseBody extends TeaModel {
         }
 
         /**
-         * CustomerGatewayId.
+         * The ID of the customer gateway.
          */
         public Builder customerGatewayId(String customerGatewayId) {
             this.customerGatewayId = customerGatewayId;
@@ -114,7 +114,7 @@ public class ModifyCustomerGatewayAttributeResponseBody extends TeaModel {
         }
 
         /**
-         * Description.
+         * The description of the customer gateway.
          */
         public Builder description(String description) {
             this.description = description;
@@ -122,7 +122,7 @@ public class ModifyCustomerGatewayAttributeResponseBody extends TeaModel {
         }
 
         /**
-         * IpAddress.
+         * The public IP address of the gateway device in the data center.
          */
         public Builder ipAddress(String ipAddress) {
             this.ipAddress = ipAddress;
@@ -130,7 +130,7 @@ public class ModifyCustomerGatewayAttributeResponseBody extends TeaModel {
         }
 
         /**
-         * Name.
+         * The name of the customer gateway.
          */
         public Builder name(String name) {
             this.name = name;
@@ -138,7 +138,7 @@ public class ModifyCustomerGatewayAttributeResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

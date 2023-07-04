@@ -156,7 +156,10 @@ public class ModifyIPv6TranslatorAclListEntryRequest extends Request {
         } 
 
         /**
-         * AclEntryComment.
+         * The remarks of the ACL rule.
+         * <p>
+         * 
+         * It must be 2 to 100 characters in length, and can contain digits, underscores (\_), and hyphens (-). It must start with a letter.
          */
         public Builder aclEntryComment(String aclEntryComment) {
             this.putQueryParameter("AclEntryComment", aclEntryComment);
@@ -165,7 +168,7 @@ public class ModifyIPv6TranslatorAclListEntryRequest extends Request {
         }
 
         /**
-         * AclEntryId.
+         * The ID of the ACL rule to which the IP entry belongs.
          */
         public Builder aclEntryId(String aclEntryId) {
             this.putQueryParameter("AclEntryId", aclEntryId);
@@ -174,7 +177,7 @@ public class ModifyIPv6TranslatorAclListEntryRequest extends Request {
         }
 
         /**
-         * AclId.
+         * The ID of the ACL to which the IP entry belongs.
          */
         public Builder aclId(String aclId) {
             this.putQueryParameter("AclId", aclId);
@@ -201,7 +204,7 @@ public class ModifyIPv6TranslatorAclListEntryRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * The region of the ACL.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);

@@ -70,7 +70,7 @@ public class CreateTrafficMirrorFilterRulesResponseBody extends TeaModel {
         }
 
         /**
-         * IngressRules.
+         * The list of outbound rules.
          */
         public Builder ingressRules(java.util.List < IngressRules> ingressRules) {
             this.ingressRules = ingressRules;
@@ -78,7 +78,7 @@ public class CreateTrafficMirrorFilterRulesResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the inbound rule.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -159,7 +159,7 @@ public class CreateTrafficMirrorFilterRulesResponseBody extends TeaModel {
             private String instanceId; 
 
             /**
-             * InstanceId.
+             * The ID of the outbound rule.
              */
             public Builder instanceId(String instanceId) {
                 this.instanceId = instanceId;

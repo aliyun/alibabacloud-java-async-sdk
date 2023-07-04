@@ -196,7 +196,10 @@ public class ListTrafficMirrorFiltersRequest extends Request {
         } 
 
         /**
-         * MaxResults.
+         * The maximum number of entries to return.
+         * <p>
+         * 
+         * Valid values: **1** to **100**. Default value: **10**.
          */
         public Builder maxResults(Integer maxResults) {
             this.putQueryParameter("MaxResults", maxResults);
@@ -205,7 +208,11 @@ public class ListTrafficMirrorFiltersRequest extends Request {
         }
 
         /**
-         * NextToken.
+         * The token that is used for the next query. Valid values:
+         * <p>
+         * 
+         * *   If this is your first query and no next queries are to be sent, ignore this parameter.
+         * *   If a next query is to be performed, set the value to the NextToken value returned in the last call to the ListListenerCertificates operation.
          */
         public Builder nextToken(String nextToken) {
             this.putQueryParameter("NextToken", nextToken);
@@ -232,7 +239,10 @@ public class ListTrafficMirrorFiltersRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * The ID of the region to which the mirrored traffic belongs.
+         * <p>
+         * 
+         * You can call the [DescribeRegions](~~36063~~) operation to query the most recent region list. For more information about regions that support traffic mirroring, see [Overview of traffic mirroring](~~207513~~).
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -241,7 +251,7 @@ public class ListTrafficMirrorFiltersRequest extends Request {
         }
 
         /**
-         * ResourceGroupId.
+         * The ID of the resource group to which the mirrored traffic belongs.
          */
         public Builder resourceGroupId(String resourceGroupId) {
             this.putQueryParameter("ResourceGroupId", resourceGroupId);
@@ -286,7 +296,7 @@ public class ListTrafficMirrorFiltersRequest extends Request {
         }
 
         /**
-         * TrafficMirrorFilterName.
+         * The name of the filter.
          */
         public Builder trafficMirrorFilterName(String trafficMirrorFilterName) {
             this.putQueryParameter("TrafficMirrorFilterName", trafficMirrorFilterName);
@@ -340,7 +350,10 @@ public class ListTrafficMirrorFiltersRequest extends Request {
             private String value; 
 
             /**
-             * Key.
+             * The tag key. You can specify at most 20 tag keys. The tag key cannot be an empty string.
+             * <p>
+             * 
+             * The key cannot exceed 64 characters in length, and can contain digits, periods (.), underscores (\_), and hyphens (-). The key must start with a letter but cannot start with `aliyun` or `acs:`. The key cannot contain `http://` or `https://`.
              */
             public Builder key(String key) {
                 this.key = key;
@@ -348,7 +361,10 @@ public class ListTrafficMirrorFiltersRequest extends Request {
             }
 
             /**
-             * Value.
+             * The tag value. You can specify at most 20 tag values. The tag value can be an empty string.
+             * <p>
+             * 
+             * The tag value cannot exceed 128 characters in length, and can contain digits, periods (.), underscores (\_), and hyphens (-). It must start with a letter but cannot start with `aliyun` or `acs:`. It cannot contain `http://` or `https://`.
              */
             public Builder value(String value) {
                 this.value = value;

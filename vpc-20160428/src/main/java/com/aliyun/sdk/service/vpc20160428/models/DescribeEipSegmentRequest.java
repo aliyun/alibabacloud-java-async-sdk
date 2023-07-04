@@ -168,7 +168,12 @@ public class DescribeEipSegmentRequest extends Request {
         } 
 
         /**
-         * ClientToken.
+         * The client token that is used to ensure the idempotence of the request.
+         * <p>
+         * 
+         * You can use the client to generate the value, but you must make sure that it is unique among different requests. The client token can contain only ASCII characters.
+         * 
+         * >  If you do not set this parameter, the system uses **RequestId** as **ClientToken**. **RequestId** may be different for each API request.
          */
         public Builder clientToken(String clientToken) {
             this.putQueryParameter("ClientToken", clientToken);
@@ -195,7 +200,7 @@ public class DescribeEipSegmentRequest extends Request {
         }
 
         /**
-         * PageNumber.
+         * The number of the page to return. Default value: **1**.
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -204,7 +209,7 @@ public class DescribeEipSegmentRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * The number of entries to return on each page. Maximum value: **50**. Default value: **10**.
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -213,7 +218,7 @@ public class DescribeEipSegmentRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * The ID of the region to which the contiguous EIP group belongs. You can call the [DescribeRegions](~~36063~~) operation to query the most recent region list.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -240,7 +245,7 @@ public class DescribeEipSegmentRequest extends Request {
         }
 
         /**
-         * SegmentInstanceId.
+         * The ID of the contiguous EIP group that you want to query.
          */
         public Builder segmentInstanceId(String segmentInstanceId) {
             this.putQueryParameter("SegmentInstanceId", segmentInstanceId);

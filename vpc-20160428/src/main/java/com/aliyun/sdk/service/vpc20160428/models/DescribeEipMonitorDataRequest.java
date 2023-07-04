@@ -169,7 +169,7 @@ public class DescribeEipMonitorDataRequest extends Request {
         } 
 
         /**
-         * AllocationId.
+         * The ID of the EIP.
          */
         public Builder allocationId(String allocationId) {
             this.putQueryParameter("AllocationId", allocationId);
@@ -178,7 +178,10 @@ public class DescribeEipMonitorDataRequest extends Request {
         }
 
         /**
-         * EndTime.
+         * The end of the time range to query. The time must be in UTC. Specify the time in the ISO 8601 standard in `YYYY-MM-DDThh:mm:ssZ` format. For example, `2013-01-10T12:00:00Z` specifies 20:00:00 (UTC+8) on January 10, 2013.
+         * <p>
+         * 
+         * If the value of seconds (ss) is not 00, the end time is automatically rounded up to the next minute.
          */
         public Builder endTime(String endTime) {
             this.putQueryParameter("EndTime", endTime);
@@ -205,7 +208,11 @@ public class DescribeEipMonitorDataRequest extends Request {
         }
 
         /**
-         * Period.
+         * The duration of each monitoring data entry. Unit: seconds. Valid values: **60** (default), **300**, **900**, and **3600**.
+         * <p>
+         * 
+         * *   If the value of **(EndTime** - **StartTime**)/**Period** is greater than 200, a maximum of 200 monitoring data entries are returned at a time.
+         * *   If the value of (**EndTime** - **StartTime**)/**Period** is less than or equal to 200, only the monitoring data collected between the start time and end time is returned.
          */
         public Builder period(Integer period) {
             this.putQueryParameter("Period", period);
@@ -214,7 +221,10 @@ public class DescribeEipMonitorDataRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * The ID of the region to which the EIP belongs.
+         * <p>
+         * 
+         * You can call the [DescribeRegions](~~36063~~) operation to query available regions.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -241,7 +251,10 @@ public class DescribeEipMonitorDataRequest extends Request {
         }
 
         /**
-         * StartTime.
+         * The beginning of the time range to query. The time must be in UTC. Specify the time in the ISO 8601 standard in `YYYY-MM-DDThh:mm:ssZ` format. For example, `2013-01-10T12:00:00Z` specifies 20:00:00 (UTC+8) on January 10, 2013.
+         * <p>
+         * 
+         * If the value of seconds (ss) is not 00, the start time is automatically rounded up to the next minute.
          */
         public Builder startTime(String startTime) {
             this.putQueryParameter("StartTime", startTime);

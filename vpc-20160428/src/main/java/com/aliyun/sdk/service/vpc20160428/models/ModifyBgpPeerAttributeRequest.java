@@ -196,7 +196,12 @@ public class ModifyBgpPeerAttributeRequest extends Request {
         } 
 
         /**
-         * BfdMultiHop.
+         * The BFD hop count. Valid values: **1** to **255**.
+         * <p>
+         * 
+         * This parameter is required only if you enable BFD.
+         * 
+         * The parameter specifies the maximum number of network devices that a packet can traverse from the source to the destination. You can set a proper value based on the factors that affect the physical connection.
          */
         public Builder bfdMultiHop(Integer bfdMultiHop) {
             this.putQueryParameter("BfdMultiHop", bfdMultiHop);
@@ -205,7 +210,7 @@ public class ModifyBgpPeerAttributeRequest extends Request {
         }
 
         /**
-         * BgpGroupId.
+         * The ID of the BGP group to which the BGP peer that you want to modify belongs.
          */
         public Builder bgpGroupId(String bgpGroupId) {
             this.putQueryParameter("BgpGroupId", bgpGroupId);
@@ -214,7 +219,7 @@ public class ModifyBgpPeerAttributeRequest extends Request {
         }
 
         /**
-         * BgpPeerId.
+         * The ID of the BGP peer that you want to modify.
          */
         public Builder bgpPeerId(String bgpPeerId) {
             this.putQueryParameter("BgpPeerId", bgpPeerId);
@@ -223,7 +228,12 @@ public class ModifyBgpPeerAttributeRequest extends Request {
         }
 
         /**
-         * ClientToken.
+         * The client token that is used to ensure the idempotence of the request.
+         * <p>
+         * 
+         * You can use the client to generate the value, but you must make sure that it is unique among different requests. The token can contain only ASCII characters and cannot exceed 64 characters in length.
+         * 
+         * >  If you do not set this parameter, the system automatically uses **RequestId** as **ClientToken**. **RequestId** may be different for each API request.
          */
         public Builder clientToken(String clientToken) {
             this.putQueryParameter("ClientToken", clientToken);
@@ -232,7 +242,11 @@ public class ModifyBgpPeerAttributeRequest extends Request {
         }
 
         /**
-         * EnableBfd.
+         * Specifies whether to enable the Bidirectional Forwarding Detection (BFD) feature. Valid values:
+         * <p>
+         * 
+         * *   **true**: enables BFD.
+         * *   **false**: disables BFD. This is the default value.
          */
         public Builder enableBfd(Boolean enableBfd) {
             this.putQueryParameter("EnableBfd", enableBfd);
@@ -259,7 +273,7 @@ public class ModifyBgpPeerAttributeRequest extends Request {
         }
 
         /**
-         * PeerIpAddress.
+         * The IP address of the BGP peer that you want to modify.
          */
         public Builder peerIpAddress(String peerIpAddress) {
             this.putQueryParameter("PeerIpAddress", peerIpAddress);
@@ -268,7 +282,10 @@ public class ModifyBgpPeerAttributeRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * The region ID of the BGP group to which the BGP peer that you want to modify belongs.
+         * <p>
+         * 
+         * You can call the [DescribeRegions](~~36063~~) operation to query the most recent region list.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);

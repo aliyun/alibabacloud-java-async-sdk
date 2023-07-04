@@ -155,7 +155,7 @@ public class ModifyIPv6TranslatorAclAttributeRequest extends Request {
         } 
 
         /**
-         * AclId.
+         * The ID of the ACL that you want to modify.
          */
         public Builder aclId(String aclId) {
             this.putQueryParameter("AclId", aclId);
@@ -164,7 +164,7 @@ public class ModifyIPv6TranslatorAclAttributeRequest extends Request {
         }
 
         /**
-         * AclName.
+         * The name of the ACL.
          */
         public Builder aclName(String aclName) {
             this.putQueryParameter("AclName", aclName);
@@ -173,7 +173,10 @@ public class ModifyIPv6TranslatorAclAttributeRequest extends Request {
         }
 
         /**
-         * ClientToken.
+         * The client token that is used to ensure the idempotence of the request.
+         * <p>
+         * 
+         * You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters.
          */
         public Builder clientToken(String clientToken) {
             this.putQueryParameter("ClientToken", clientToken);
@@ -200,7 +203,7 @@ public class ModifyIPv6TranslatorAclAttributeRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * The region of the IPv6 Translation Service instance. You can call the DescribeRegions operation to query the most recent region list.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);

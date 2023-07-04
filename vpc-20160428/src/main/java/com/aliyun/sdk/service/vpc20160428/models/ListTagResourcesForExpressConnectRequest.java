@@ -183,7 +183,7 @@ public class ListTagResourcesForExpressConnectRequest extends Request {
         } 
 
         /**
-         * MaxResults.
+         * The number of entries to return per page. Valid values: **1** to **100**. Default value: **20**.
          */
         public Builder maxResults(Integer maxResults) {
             this.putQueryParameter("MaxResults", maxResults);
@@ -192,7 +192,11 @@ public class ListTagResourcesForExpressConnectRequest extends Request {
         }
 
         /**
-         * NextToken.
+         * The token that is used for the next query. Valid values:
+         * <p>
+         * 
+         * *   If this is your first query or no next query is to be sent, ignore this parameter.
+         * *   If a next query is to be sent, set the value to the value of **NextToken** that is returned in the last call.
          */
         public Builder nextToken(String nextToken) {
             this.putQueryParameter("NextToken", nextToken);
@@ -219,7 +223,10 @@ public class ListTagResourcesForExpressConnectRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * The region ID of the resource.
+         * <p>
+         * 
+         * You can call the [DescribeRegions](~~36063~~) operation to query the most recent region list.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -255,7 +262,7 @@ public class ListTagResourcesForExpressConnectRequest extends Request {
         }
 
         /**
-         * ResourceType.
+         * The type of the resource. Set the value to **PHYSICALCONNECTION**, which specifies the Express Connect circuit.
          */
         public Builder resourceType(String resourceType) {
             this.putQueryParameter("ResourceType", resourceType);
@@ -318,7 +325,10 @@ public class ListTagResourcesForExpressConnectRequest extends Request {
             private String value; 
 
             /**
-             * Key.
+             * The key of tag N that is added to the resource. You can specify up to 20 tag keys. The tag key cannot be an empty string.
+             * <p>
+             * 
+             * The key cannot exceed 64 characters in length, and can contain digits, periods (.), underscores (\_), and hyphens (-). The key must start with a letter but cannot start with `aliyun` or `acs:`. The key cannot contain `http://` or `https://`.
              */
             public Builder key(String key) {
                 this.key = key;
@@ -326,7 +336,10 @@ public class ListTagResourcesForExpressConnectRequest extends Request {
             }
 
             /**
-             * Value.
+             * The value of tag N that is added to the resource. You can specify up to 20 tag values. The tag value can be an empty string.
+             * <p>
+             * 
+             * The value cannot exceed 128 characters in length and can contain digits, periods (.), underscores (\_), and hyphens (-). The value must start with a letter but cannot start with `aliyun` or `acs:`. The value cannot contain `http://` or `https://`.
              */
             public Builder value(String value) {
                 this.value = value;

@@ -113,7 +113,11 @@ public class AttachVbrToVpconnRequest extends Request {
         } 
 
         /**
-         * DryRun
+         * Specifies whether to precheck the request only. Valid values:
+         * <p>
+         * 
+         * *   **true**: only prechecks the request but does not associate the VBR with the hosted connection. The system prechecks the request syntax, instance status, and whether the required parameters are specified. An error message is returned if the request fails to pass the precheck. If the request passes the precheck, the system returns the ID of the request.
+         * *   **false** (default): sends the request. If the request passes the precheck, the VBR is associated with the hosted connection.
          */
         public Builder dryRun(Boolean dryRun) {
             this.putQueryParameter("DryRun", dryRun);
@@ -122,7 +126,10 @@ public class AttachVbrToVpconnRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * The region ID of the hosted connection.
+         * <p>
+         * 
+         * You can call the [DescribeRegions](~~36063~~) operation to query the most recent region list.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -131,7 +138,10 @@ public class AttachVbrToVpconnRequest extends Request {
         }
 
         /**
-         * 幂等Token
+         * The client token that is used to ensure the idempotence of the request.
+         * <p>
+         * 
+         * The client token must be unique among different requests. It can contain only ASCII characters and cannot exceed 64 characters in length.
          */
         public Builder token(String token) {
             this.putQueryParameter("Token", token);
@@ -140,7 +150,7 @@ public class AttachVbrToVpconnRequest extends Request {
         }
 
         /**
-         * 待迁移的vbr
+         * The ID of the VBR.
          */
         public Builder vbrId(String vbrId) {
             this.putQueryParameter("VbrId", vbrId);
@@ -149,7 +159,7 @@ public class AttachVbrToVpconnRequest extends Request {
         }
 
         /**
-         * 迁移到目标vpconn
+         * The ID of the hosted connection.
          */
         public Builder vpconnId(String vpconnId) {
             this.putQueryParameter("VpconnId", vpconnId);

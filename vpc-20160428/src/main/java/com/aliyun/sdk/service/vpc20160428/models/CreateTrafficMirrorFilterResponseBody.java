@@ -62,7 +62,7 @@ public class CreateTrafficMirrorFilterResponseBody extends TeaModel {
         private String trafficMirrorFilterId; 
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -70,7 +70,7 @@ public class CreateTrafficMirrorFilterResponseBody extends TeaModel {
         }
 
         /**
-         * ResourceGroupId.
+         * The ID of the resource group to which the mirrored traffic belongs.
          */
         public Builder resourceGroupId(String resourceGroupId) {
             this.resourceGroupId = resourceGroupId;
@@ -78,7 +78,7 @@ public class CreateTrafficMirrorFilterResponseBody extends TeaModel {
         }
 
         /**
-         * TrafficMirrorFilterId.
+         * The ID of the filter.
          */
         public Builder trafficMirrorFilterId(String trafficMirrorFilterId) {
             this.trafficMirrorFilterId = trafficMirrorFilterId;

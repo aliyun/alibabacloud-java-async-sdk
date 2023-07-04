@@ -156,7 +156,12 @@ public class DeletionProtectionRequest extends Request {
         } 
 
         /**
-         * ClientToken.
+         * The client token that is used to ensure the idempotence of the request.
+         * <p>
+         * 
+         * You can use the client to generate the value, but you must make sure that it is unique among all requests. ClientToken can contain only ASCII characters.
+         * 
+         * >  If you do not set this parameter, **ClientToken** is set to the value of **RequestId**. The value of **RequestId** may be different for each API request.
          */
         public Builder clientToken(String clientToken) {
             this.putQueryParameter("ClientToken", clientToken);
@@ -165,7 +170,7 @@ public class DeletionProtectionRequest extends Request {
         }
 
         /**
-         * InstanceId.
+         * The ID of the instance for which you want to enable deletion protection.
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -183,7 +188,11 @@ public class DeletionProtectionRequest extends Request {
         }
 
         /**
-         * ProtectionEnable.
+         * Specifies whether to enable deletion protection. Valid values:
+         * <p>
+         * 
+         * *   **true**: yes
+         * *   **false**: no
          */
         public Builder protectionEnable(Boolean protectionEnable) {
             this.putQueryParameter("ProtectionEnable", protectionEnable);
@@ -192,7 +201,7 @@ public class DeletionProtectionRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * The ID of the region where the instance for which you want to enable deletion protection is deployed. You can call the [DescribeRegions](~~36063~~) operation to query the most recent region list.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -219,7 +228,12 @@ public class DeletionProtectionRequest extends Request {
         }
 
         /**
-         * Type.
+         * The type of instance. Valid values:
+         * <p>
+         * 
+         * *   **EIP**: Elastic IP Address (EIP)
+         * *   **CBWP**: EIP bandwidth plan
+         * *   **NATGW**: NAT gateway
          */
         public Builder type(String type) {
             this.putQueryParameter("Type", type);

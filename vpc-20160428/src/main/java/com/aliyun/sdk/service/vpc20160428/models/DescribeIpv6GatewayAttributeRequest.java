@@ -126,7 +126,7 @@ public class DescribeIpv6GatewayAttributeRequest extends Request {
         } 
 
         /**
-         * Ipv6GatewayId.
+         * The ID of the IPv6 gateway that you want to query.
          */
         public Builder ipv6GatewayId(String ipv6GatewayId) {
             this.putQueryParameter("Ipv6GatewayId", ipv6GatewayId);
@@ -153,7 +153,7 @@ public class DescribeIpv6GatewayAttributeRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * The ID of the region where the IPv6 gateway is deployed. You can call the [DescribeRegions](~~36063~~) operation to query the most recent region list.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);

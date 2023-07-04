@@ -50,7 +50,7 @@ public class DescribeEipMonitorDataResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * EipMonitorDatas.
+         * The detailed information about the monitoring data of the EIP.
          */
         public Builder eipMonitorDatas(EipMonitorDatas eipMonitorDatas) {
             this.eipMonitorDatas = eipMonitorDatas;
@@ -58,7 +58,7 @@ public class DescribeEipMonitorDataResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -166,7 +166,7 @@ public class DescribeEipMonitorDataResponseBody extends TeaModel {
             }
 
             /**
-             * EipFlow.
+             * The sum of inbound and outbound traffic.
              */
             public Builder eipFlow(Long eipFlow) {
                 this.eipFlow = eipFlow;
@@ -174,7 +174,7 @@ public class DescribeEipMonitorDataResponseBody extends TeaModel {
             }
 
             /**
-             * EipPackets.
+             * The number of packets.
              */
             public Builder eipPackets(Integer eipPackets) {
                 this.eipPackets = eipPackets;
@@ -182,7 +182,7 @@ public class DescribeEipMonitorDataResponseBody extends TeaModel {
             }
 
             /**
-             * EipRX.
+             * The inbound traffic. Unit: bytes.
              */
             public Builder eipRX(Long eipRX) {
                 this.eipRX = eipRX;
@@ -190,7 +190,7 @@ public class DescribeEipMonitorDataResponseBody extends TeaModel {
             }
 
             /**
-             * EipTX.
+             * The outbound traffic. Unit: bytes.
              */
             public Builder eipTX(Long eipTX) {
                 this.eipTX = eipTX;
@@ -198,7 +198,7 @@ public class DescribeEipMonitorDataResponseBody extends TeaModel {
             }
 
             /**
-             * TimeStamp.
+             * The timestamp of the monitoring data. Specify the time in the ISO8601 standard. Example: `2020-01-21T09:50:23Z`.
              */
             public Builder timeStamp(String timeStamp) {
                 this.timeStamp = timeStamp;

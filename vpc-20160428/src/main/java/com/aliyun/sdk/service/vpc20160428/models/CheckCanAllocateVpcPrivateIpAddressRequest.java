@@ -155,7 +155,11 @@ public class CheckCanAllocateVpcPrivateIpAddressRequest extends Request {
         } 
 
         /**
-         * IpVersion
+         * Indicates whether the private IP address is available. Valid values:
+         * <p>
+         * 
+         * *   **true**: yes
+         * *   **false**: no
          */
         public Builder ipVersion(String ipVersion) {
             this.putQueryParameter("IpVersion", ipVersion);
@@ -182,7 +186,7 @@ public class CheckCanAllocateVpcPrivateIpAddressRequest extends Request {
         }
 
         /**
-         * PrivateIpAddress
+         * The operation that you want to perform. Set the value to **CheckCanAllocateVpcPrivateIpAddress**.
          */
         public Builder privateIpAddress(String privateIpAddress) {
             this.putQueryParameter("PrivateIpAddress", privateIpAddress);
@@ -191,7 +195,7 @@ public class CheckCanAllocateVpcPrivateIpAddressRequest extends Request {
         }
 
         /**
-         * RegionId
+         * To query whether a private IP address is available, the private IP address must belong to the vSwitch specified by the **VSwitchId** parameter.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -218,7 +222,11 @@ public class CheckCanAllocateVpcPrivateIpAddressRequest extends Request {
         }
 
         /**
-         * VSwitchId
+         * The version of the private IP address. Valid values:
+         * <p>
+         * 
+         * *   **ipv4**: IPv4 If you want to query an IPv4 address, this parameter is optional.
+         * *   **ipv6**: IPv6 If you want to query an IPv6 address, this parameter is required.
          */
         public Builder vSwitchId(String vSwitchId) {
             this.putQueryParameter("VSwitchId", vSwitchId);

@@ -209,7 +209,11 @@ public class ListVirtualPhysicalConnectionsRequest extends Request {
         } 
 
         /**
-         * Vpconn是否被确认
+         * Specifies whether the hosted connection is accepted by the tenant. Valid values:
+         * <p>
+         * 
+         * *   **true**: yes
+         * *   **false**: no
          */
         public Builder isConfirmed(Boolean isConfirmed) {
             this.putQueryParameter("IsConfirmed", isConfirmed);
@@ -218,7 +222,7 @@ public class ListVirtualPhysicalConnectionsRequest extends Request {
         }
 
         /**
-         * 单次查询最大量
+         * The number of entries to return on each page. Valid values: **1** to **100**. Default value: **20**.
          */
         public Builder maxResults(Integer maxResults) {
             this.putQueryParameter("MaxResults", maxResults);
@@ -227,7 +231,11 @@ public class ListVirtualPhysicalConnectionsRequest extends Request {
         }
 
         /**
-         * 单次查询最大量
+         * The token that is used for the next query. Valid values:
+         * <p>
+         * 
+         * *   If this is your first query or no subsequent query is to be sent, ignore this parameter.
+         * *   If a subsequent query is to be sent, set the parameter to the value of NextToken that is returned from the last call.
          */
         public Builder nextToken(String nextToken) {
             this.putQueryParameter("NextToken", nextToken);
@@ -236,7 +244,10 @@ public class ListVirtualPhysicalConnectionsRequest extends Request {
         }
 
         /**
-         * Vpconn的主Pconn
+         * The ID of the Express Connect circuit over which the hosted connection is created.
+         * <p>
+         * 
+         * Express Connect circuits in this topic refer to Express Connect circuits over which hosted connections are created.
          */
         public Builder physicalConnectionId(String physicalConnectionId) {
             this.putQueryParameter("PhysicalConnectionId", physicalConnectionId);
@@ -245,7 +256,10 @@ public class ListVirtualPhysicalConnectionsRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * The region ID of the hosted connection.
+         * <p>
+         * 
+         * You can call the [DescribeRegions](~~36063~~) operation to query the most recent region list.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -272,7 +286,7 @@ public class ListVirtualPhysicalConnectionsRequest extends Request {
         }
 
         /**
-         * Vpconn的OwnerUid
+         * VirtualPhysicalConnectionAliUids.
          */
         public Builder virtualPhysicalConnectionAliUids(java.util.List < String > virtualPhysicalConnectionAliUids) {
             this.putQueryParameter("VirtualPhysicalConnectionAliUids", virtualPhysicalConnectionAliUids);
@@ -281,7 +295,12 @@ public class ListVirtualPhysicalConnectionsRequest extends Request {
         }
 
         /**
-         * Vpconn的商业状态
+         * The business status of the hosted connection. Valid values:
+         * <p>
+         * 
+         * *   **Normal**: normal
+         * *   **FinancialLocked**: locked due to overdue payments
+         * *   **SecurityLocked**: locked for security reasons
          */
         public Builder virtualPhysicalConnectionBusinessStatus(String virtualPhysicalConnectionBusinessStatus) {
             this.putQueryParameter("VirtualPhysicalConnectionBusinessStatus", virtualPhysicalConnectionBusinessStatus);
@@ -290,7 +309,7 @@ public class ListVirtualPhysicalConnectionsRequest extends Request {
         }
 
         /**
-         * 根据Vpconn的ID列表过滤
+         * VirtualPhysicalConnectionIds.
          */
         public Builder virtualPhysicalConnectionIds(java.util.List < String > virtualPhysicalConnectionIds) {
             this.putQueryParameter("VirtualPhysicalConnectionIds", virtualPhysicalConnectionIds);
@@ -299,7 +318,7 @@ public class ListVirtualPhysicalConnectionsRequest extends Request {
         }
 
         /**
-         * Vpconn的状态
+         * VirtualPhysicalConnectionStatuses.
          */
         public Builder virtualPhysicalConnectionStatuses(java.util.List < String > virtualPhysicalConnectionStatuses) {
             this.putQueryParameter("VirtualPhysicalConnectionStatuses", virtualPhysicalConnectionStatuses);
@@ -308,7 +327,7 @@ public class ListVirtualPhysicalConnectionsRequest extends Request {
         }
 
         /**
-         * Vpconn的vlanId
+         * VlanIds.
          */
         public Builder vlanIds(java.util.List < String > vlanIds) {
             this.putQueryParameter("VlanIds", vlanIds);
@@ -362,7 +381,10 @@ public class ListVirtualPhysicalConnectionsRequest extends Request {
             private String value; 
 
             /**
-             * Key.
+             * The key of the tag that is added to the resource. You can specify at most 20 tag keys. The tag key cannot be an empty string.
+             * <p>
+             * 
+             * The key cannot exceed 64 characters in length, and can contain digits, periods (.), underscores (\_), and hyphens (-). The key must start with a letter but cannot start with `aliyun` or `acs:`. The key cannot contain `http://` or `https://`.
              */
             public Builder key(String key) {
                 this.key = key;
@@ -370,7 +392,10 @@ public class ListVirtualPhysicalConnectionsRequest extends Request {
             }
 
             /**
-             * Value.
+             * The value of the tag that is added to the resource. You can specify at most 20 tag values. The tag value can be an empty string.
+             * <p>
+             * 
+             * The value cannot exceed 128 characters in length and can contain digits, periods (.), underscores (\_), and hyphens (-). The value must start with a letter but cannot start with `aliyun` or `acs:`. The value cannot contain `http://` or `https://`.
              */
             public Builder value(String value) {
                 this.value = value;

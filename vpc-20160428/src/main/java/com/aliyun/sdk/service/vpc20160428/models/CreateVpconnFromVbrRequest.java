@@ -112,7 +112,7 @@ public class CreateVpconnFromVbrRequest extends Request {
         } 
 
         /**
-         * DryRun
+         * The ID of the request.
          */
         public Builder dryRun(Boolean dryRun) {
             this.putQueryParameter("DryRun", dryRun);
@@ -121,7 +121,10 @@ public class CreateVpconnFromVbrRequest extends Request {
         }
 
         /**
-         * vpconn的支付方
+         * The client token that is used to ensure the idempotence of the request.
+         * <p>
+         * 
+         * You can use the client to generate the value, but you must ensure that it is unique among different requests. The token can contain only ASCII characters and cannot exceed 64 characters in length.
          */
         public Builder orderMode(String orderMode) {
             this.putQueryParameter("OrderMode", orderMode);
@@ -130,7 +133,7 @@ public class CreateVpconnFromVbrRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * The ID of the shared Express Connect circuit.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -139,7 +142,10 @@ public class CreateVpconnFromVbrRequest extends Request {
         }
 
         /**
-         * 幂等Token
+         * The region ID of the shared Express Connect circuit.
+         * <p>
+         * 
+         * You can call the [DescribeRegions](~~36063~~) operation to query the most recent region list.
          */
         public Builder token(String token) {
             this.putQueryParameter("Token", token);
@@ -148,7 +154,11 @@ public class CreateVpconnFromVbrRequest extends Request {
         }
 
         /**
-         * 跨帐号的VBR
+         * Specifies whether to only precheck the request. Valid values:
+         * <p>
+         * 
+         * *   **true**: checks the API request. If the request passes the precheck, the operation is not performed. Check items include the request format, instance status, and whether the required parameters are specified. If the request fails the precheck, the system returns an error. If the request passes the precheck, the system returns the ID of the request.
+         * *   **false** (default): sends the API request. If the request passes the precheck, the operation is performed.
          */
         public Builder vbrId(String vbrId) {
             this.putQueryParameter("VbrId", vbrId);

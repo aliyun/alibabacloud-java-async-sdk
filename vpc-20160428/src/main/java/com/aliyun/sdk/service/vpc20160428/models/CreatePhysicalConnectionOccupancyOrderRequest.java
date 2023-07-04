@@ -196,7 +196,11 @@ public class CreatePhysicalConnectionOccupancyOrderRequest extends Request {
         } 
 
         /**
-         * AutoPay.
+         * Specifies whether to enable automatic payments. Valid values:
+         * <p>
+         * 
+         * *   **true**: yes Make sure that you have a sufficient balance in your account. Otherwise, your order becomes invalid and is automatically canceled.
+         * *   **false**: disables automatic payment. This is the default value.
          */
         public Builder autoPay(Boolean autoPay) {
             this.putQueryParameter("AutoPay", autoPay);
@@ -205,7 +209,10 @@ public class CreatePhysicalConnectionOccupancyOrderRequest extends Request {
         }
 
         /**
-         * ClientToken.
+         * The client token that is used to ensure the idempotence of the request.
+         * <p>
+         * 
+         * You can use the client to generate the value, but you must ensure that it is unique among different requests.
          */
         public Builder clientToken(String clientToken) {
             this.putQueryParameter("ClientToken", clientToken);
@@ -214,7 +221,10 @@ public class CreatePhysicalConnectionOccupancyOrderRequest extends Request {
         }
 
         /**
-         * InstanceChargeType.
+         * The billing method of the Express Connect circuit. Set the value to
+         * <p>
+         * 
+         * **PrePaid**, which specifies the subscription billing method. If you choose this billing method, make sure that your Alibaba Cloud account supports balance payments or credit payments.
          */
         public Builder instanceChargeType(String instanceChargeType) {
             this.putQueryParameter("InstanceChargeType", instanceChargeType);
@@ -241,7 +251,11 @@ public class CreatePhysicalConnectionOccupancyOrderRequest extends Request {
         }
 
         /**
-         * Period.
+         * The subscription duration.
+         * <p>
+         * 
+         * *   If **PricingCycle** is set to **Month**, set **Period** to a value from **1 to 9**.
+         * *   If **PricingCycle** is set to **Year**, set **Period** to a value from **1 to 5**.
          */
         public Builder period(Integer period) {
             this.putQueryParameter("Period", period);
@@ -250,7 +264,7 @@ public class CreatePhysicalConnectionOccupancyOrderRequest extends Request {
         }
 
         /**
-         * PhysicalConnectionId.
+         * The ID of the Express Connect circuit.
          */
         public Builder physicalConnectionId(String physicalConnectionId) {
             this.putQueryParameter("PhysicalConnectionId", physicalConnectionId);
@@ -259,7 +273,11 @@ public class CreatePhysicalConnectionOccupancyOrderRequest extends Request {
         }
 
         /**
-         * PricingCycle.
+         * The billing cycle of the subscription. Valid values:
+         * <p>
+         * 
+         * *   **Month**: Bills are paid on a monthly basis. This is the default value.
+         * *   **Year**: Bills are paid on an annual basis.
          */
         public Builder pricingCycle(String pricingCycle) {
             this.putQueryParameter("PricingCycle", pricingCycle);
@@ -268,7 +286,10 @@ public class CreatePhysicalConnectionOccupancyOrderRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * The region ID of the Express Connect circuit.
+         * <p>
+         * 
+         * You can call the [DescribeRegions](~~36063~~) operation to query the most recent region list.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
