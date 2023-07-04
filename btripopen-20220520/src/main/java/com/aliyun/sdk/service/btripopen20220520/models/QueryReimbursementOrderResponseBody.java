@@ -155,6 +155,9 @@ public class QueryReimbursementOrderResponseBody extends TeaModel {
         @NameInMap("bill_settlement_id")
         private Long billSettlementId;
 
+        @NameInMap("capital_direction")
+        private String capitalDirection;
+
         @NameInMap("fee_type")
         private String feeType;
 
@@ -175,6 +178,7 @@ public class QueryReimbursementOrderResponseBody extends TeaModel {
 
         private ExpenseCompositions(Builder builder) {
             this.billSettlementId = builder.billSettlementId;
+            this.capitalDirection = builder.capitalDirection;
             this.feeType = builder.feeType;
             this.remark = builder.remark;
             this.remindTagList = builder.remindTagList;
@@ -196,6 +200,13 @@ public class QueryReimbursementOrderResponseBody extends TeaModel {
          */
         public Long getBillSettlementId() {
             return this.billSettlementId;
+        }
+
+        /**
+         * @return capitalDirection
+         */
+        public String getCapitalDirection() {
+            return this.capitalDirection;
         }
 
         /**
@@ -242,6 +253,7 @@ public class QueryReimbursementOrderResponseBody extends TeaModel {
 
         public static final class Builder {
             private Long billSettlementId; 
+            private String capitalDirection; 
             private String feeType; 
             private String remark; 
             private java.util.List < String > remindTagList; 
@@ -254,6 +266,14 @@ public class QueryReimbursementOrderResponseBody extends TeaModel {
              */
             public Builder billSettlementId(Long billSettlementId) {
                 this.billSettlementId = billSettlementId;
+                return this;
+            }
+
+            /**
+             * capital_direction.
+             */
+            public Builder capitalDirection(String capitalDirection) {
+                this.capitalDirection = capitalDirection;
                 return this;
             }
 
