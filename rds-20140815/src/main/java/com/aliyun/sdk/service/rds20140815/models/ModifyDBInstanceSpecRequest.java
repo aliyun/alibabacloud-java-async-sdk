@@ -13,6 +13,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class ModifyDBInstanceSpecRequest extends Request {
     @Query
+    @NameInMap("AutoUseCoupon")
+    private Boolean autoUseCoupon;
+
+    @Query
     @NameInMap("BurstingEnabled")
     private Boolean burstingEnabled;
 
@@ -100,6 +104,7 @@ public class ModifyDBInstanceSpecRequest extends Request {
 
     private ModifyDBInstanceSpecRequest(Builder builder) {
         super(builder);
+        this.autoUseCoupon = builder.autoUseCoupon;
         this.burstingEnabled = builder.burstingEnabled;
         this.category = builder.category;
         this.DBInstanceClass = builder.DBInstanceClass;
@@ -134,6 +139,13 @@ public class ModifyDBInstanceSpecRequest extends Request {
     @Override
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return autoUseCoupon
+     */
+    public Boolean getAutoUseCoupon() {
+        return this.autoUseCoupon;
     }
 
     /**
@@ -284,6 +296,7 @@ public class ModifyDBInstanceSpecRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<ModifyDBInstanceSpecRequest, Builder> {
+        private Boolean autoUseCoupon; 
         private Boolean burstingEnabled; 
         private String category; 
         private String DBInstanceClass; 
@@ -312,6 +325,7 @@ public class ModifyDBInstanceSpecRequest extends Request {
 
         private Builder(ModifyDBInstanceSpecRequest request) {
             super(request);
+            this.autoUseCoupon = request.autoUseCoupon;
             this.burstingEnabled = request.burstingEnabled;
             this.category = request.category;
             this.DBInstanceClass = request.DBInstanceClass;
@@ -334,6 +348,15 @@ public class ModifyDBInstanceSpecRequest extends Request {
             this.usedTime = request.usedTime;
             this.zoneId = request.zoneId;
         } 
+
+        /**
+         * AutoUseCoupon.
+         */
+        public Builder autoUseCoupon(Boolean autoUseCoupon) {
+            this.putQueryParameter("AutoUseCoupon", autoUseCoupon);
+            this.autoUseCoupon = autoUseCoupon;
+            return this;
+        }
 
         /**
          * BurstingEnabled.
