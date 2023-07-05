@@ -40,6 +40,8 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<CreateOAuthTokenResponse> createOAuthToken(CreateOAuthTokenRequest request);
 
+    CompletableFuture<CreatePipelineResponse> createPipeline(CreatePipelineRequest request);
+
     CompletableFuture<CreatePipelineGroupResponse> createPipelineGroup(CreatePipelineGroupRequest request);
 
     CompletableFuture<CreateProjectResponse> createProject(CreateProjectRequest request);
@@ -319,6 +321,8 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<UpdateGroupMemberResponse> updateGroupMember(UpdateGroupMemberRequest request);
 
     CompletableFuture<UpdateHostGroupResponse> updateHostGroup(UpdateHostGroupRequest request);
+
+    CompletableFuture<UpdatePipelineResponse> updatePipeline(UpdatePipelineRequest request);
 
     CompletableFuture<UpdatePipelineBaseInfoResponse> updatePipelineBaseInfo(UpdatePipelineBaseInfoRequest request);
 
