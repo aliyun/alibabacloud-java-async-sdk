@@ -309,12 +309,16 @@ public class SubmitAudioTo3DAvatarVideoTaskRequest extends Request {
         @NameInMap("Code")
         private String code;
 
+        @NameInMap("IndustryCode")
+        private String industryCode;
+
         @NameInMap("Locate")
         private Integer locate;
 
         private AvatarInfo(Builder builder) {
             this.angle = builder.angle;
             this.code = builder.code;
+            this.industryCode = builder.industryCode;
             this.locate = builder.locate;
         }
 
@@ -341,6 +345,13 @@ public class SubmitAudioTo3DAvatarVideoTaskRequest extends Request {
         }
 
         /**
+         * @return industryCode
+         */
+        public String getIndustryCode() {
+            return this.industryCode;
+        }
+
+        /**
          * @return locate
          */
         public Integer getLocate() {
@@ -350,6 +361,7 @@ public class SubmitAudioTo3DAvatarVideoTaskRequest extends Request {
         public static final class Builder {
             private Integer angle; 
             private String code; 
+            private String industryCode; 
             private Integer locate; 
 
             /**
@@ -365,6 +377,14 @@ public class SubmitAudioTo3DAvatarVideoTaskRequest extends Request {
              */
             public Builder code(String code) {
                 this.code = code;
+                return this;
+            }
+
+            /**
+             * IndustryCode.
+             */
+            public Builder industryCode(String industryCode) {
+                this.industryCode = industryCode;
                 return this;
             }
 

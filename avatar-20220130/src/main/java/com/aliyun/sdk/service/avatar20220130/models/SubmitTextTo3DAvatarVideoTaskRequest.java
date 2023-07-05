@@ -18,8 +18,24 @@ public class SubmitTextTo3DAvatarVideoTaskRequest extends Request {
     private App app;
 
     @Query
+    @NameInMap("AudioInfo")
+    private AudioInfo audioInfo;
+
+    @Query
     @NameInMap("AvatarInfo")
     private AvatarInfo avatarInfo;
+
+    @Query
+    @NameInMap("Callback")
+    private Boolean callback;
+
+    @Query
+    @NameInMap("CallbackParams")
+    private String callbackParams;
+
+    @Query
+    @NameInMap("ExtParams")
+    private String extParams;
 
     @Query
     @NameInMap("TenantId")
@@ -43,7 +59,11 @@ public class SubmitTextTo3DAvatarVideoTaskRequest extends Request {
     private SubmitTextTo3DAvatarVideoTaskRequest(Builder builder) {
         super(builder);
         this.app = builder.app;
+        this.audioInfo = builder.audioInfo;
         this.avatarInfo = builder.avatarInfo;
+        this.callback = builder.callback;
+        this.callbackParams = builder.callbackParams;
+        this.extParams = builder.extParams;
         this.tenantId = builder.tenantId;
         this.text = builder.text;
         this.title = builder.title;
@@ -71,10 +91,38 @@ public class SubmitTextTo3DAvatarVideoTaskRequest extends Request {
     }
 
     /**
+     * @return audioInfo
+     */
+    public AudioInfo getAudioInfo() {
+        return this.audioInfo;
+    }
+
+    /**
      * @return avatarInfo
      */
     public AvatarInfo getAvatarInfo() {
         return this.avatarInfo;
+    }
+
+    /**
+     * @return callback
+     */
+    public Boolean getCallback() {
+        return this.callback;
+    }
+
+    /**
+     * @return callbackParams
+     */
+    public String getCallbackParams() {
+        return this.callbackParams;
+    }
+
+    /**
+     * @return extParams
+     */
+    public String getExtParams() {
+        return this.extParams;
     }
 
     /**
@@ -107,7 +155,11 @@ public class SubmitTextTo3DAvatarVideoTaskRequest extends Request {
 
     public static final class Builder extends Request.Builder<SubmitTextTo3DAvatarVideoTaskRequest, Builder> {
         private App app; 
+        private AudioInfo audioInfo; 
         private AvatarInfo avatarInfo; 
+        private Boolean callback; 
+        private String callbackParams; 
+        private String extParams; 
         private Long tenantId; 
         private String text; 
         private String title; 
@@ -120,7 +172,11 @@ public class SubmitTextTo3DAvatarVideoTaskRequest extends Request {
         private Builder(SubmitTextTo3DAvatarVideoTaskRequest request) {
             super(request);
             this.app = request.app;
+            this.audioInfo = request.audioInfo;
             this.avatarInfo = request.avatarInfo;
+            this.callback = request.callback;
+            this.callbackParams = request.callbackParams;
+            this.extParams = request.extParams;
             this.tenantId = request.tenantId;
             this.text = request.text;
             this.title = request.title;
@@ -138,12 +194,49 @@ public class SubmitTextTo3DAvatarVideoTaskRequest extends Request {
         }
 
         /**
+         * AudioInfo.
+         */
+        public Builder audioInfo(AudioInfo audioInfo) {
+            String audioInfoShrink = shrink(audioInfo, "AudioInfo", "json");
+            this.putQueryParameter("AudioInfo", audioInfoShrink);
+            this.audioInfo = audioInfo;
+            return this;
+        }
+
+        /**
          * AvatarInfo.
          */
         public Builder avatarInfo(AvatarInfo avatarInfo) {
             String avatarInfoShrink = shrink(avatarInfo, "AvatarInfo", "json");
             this.putQueryParameter("AvatarInfo", avatarInfoShrink);
             this.avatarInfo = avatarInfo;
+            return this;
+        }
+
+        /**
+         * Callback.
+         */
+        public Builder callback(Boolean callback) {
+            this.putQueryParameter("Callback", callback);
+            this.callback = callback;
+            return this;
+        }
+
+        /**
+         * CallbackParams.
+         */
+        public Builder callbackParams(String callbackParams) {
+            this.putQueryParameter("CallbackParams", callbackParams);
+            this.callbackParams = callbackParams;
+            return this;
+        }
+
+        /**
+         * ExtParams.
+         */
+        public Builder extParams(String extParams) {
+            this.putQueryParameter("ExtParams", extParams);
+            this.extParams = extParams;
             return this;
         }
 
@@ -233,6 +326,107 @@ public class SubmitTextTo3DAvatarVideoTaskRequest extends Request {
         } 
 
     }
+    public static class AudioInfo extends TeaModel {
+        @NameInMap("PitchRate")
+        private Integer pitchRate;
+
+        @NameInMap("SpeechRate")
+        private Integer speechRate;
+
+        @NameInMap("Voice")
+        private String voice;
+
+        @NameInMap("Volume")
+        private Integer volume;
+
+        private AudioInfo(Builder builder) {
+            this.pitchRate = builder.pitchRate;
+            this.speechRate = builder.speechRate;
+            this.voice = builder.voice;
+            this.volume = builder.volume;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static AudioInfo create() {
+            return builder().build();
+        }
+
+        /**
+         * @return pitchRate
+         */
+        public Integer getPitchRate() {
+            return this.pitchRate;
+        }
+
+        /**
+         * @return speechRate
+         */
+        public Integer getSpeechRate() {
+            return this.speechRate;
+        }
+
+        /**
+         * @return voice
+         */
+        public String getVoice() {
+            return this.voice;
+        }
+
+        /**
+         * @return volume
+         */
+        public Integer getVolume() {
+            return this.volume;
+        }
+
+        public static final class Builder {
+            private Integer pitchRate; 
+            private Integer speechRate; 
+            private String voice; 
+            private Integer volume; 
+
+            /**
+             * PitchRate.
+             */
+            public Builder pitchRate(Integer pitchRate) {
+                this.pitchRate = pitchRate;
+                return this;
+            }
+
+            /**
+             * SpeechRate.
+             */
+            public Builder speechRate(Integer speechRate) {
+                this.speechRate = speechRate;
+                return this;
+            }
+
+            /**
+             * Voice.
+             */
+            public Builder voice(String voice) {
+                this.voice = voice;
+                return this;
+            }
+
+            /**
+             * Volume.
+             */
+            public Builder volume(Integer volume) {
+                this.volume = volume;
+                return this;
+            }
+
+            public AudioInfo build() {
+                return new AudioInfo(this);
+            } 
+
+        } 
+
+    }
     public static class AvatarInfo extends TeaModel {
         @NameInMap("Angle")
         private Integer angle;
@@ -240,12 +434,16 @@ public class SubmitTextTo3DAvatarVideoTaskRequest extends Request {
         @NameInMap("Code")
         private String code;
 
+        @NameInMap("IndustryCode")
+        private String industryCode;
+
         @NameInMap("Locate")
         private Integer locate;
 
         private AvatarInfo(Builder builder) {
             this.angle = builder.angle;
             this.code = builder.code;
+            this.industryCode = builder.industryCode;
             this.locate = builder.locate;
         }
 
@@ -272,6 +470,13 @@ public class SubmitTextTo3DAvatarVideoTaskRequest extends Request {
         }
 
         /**
+         * @return industryCode
+         */
+        public String getIndustryCode() {
+            return this.industryCode;
+        }
+
+        /**
          * @return locate
          */
         public Integer getLocate() {
@@ -281,6 +486,7 @@ public class SubmitTextTo3DAvatarVideoTaskRequest extends Request {
         public static final class Builder {
             private Integer angle; 
             private String code; 
+            private String industryCode; 
             private Integer locate; 
 
             /**
@@ -296,6 +502,14 @@ public class SubmitTextTo3DAvatarVideoTaskRequest extends Request {
              */
             public Builder code(String code) {
                 this.code = code;
+                return this;
+            }
+
+            /**
+             * IndustryCode.
+             */
+            public Builder industryCode(String industryCode) {
+                this.industryCode = industryCode;
                 return this;
             }
 
