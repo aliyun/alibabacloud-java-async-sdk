@@ -13,13 +13,13 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class CreateCustomDomainRequest extends Request {
     @Body
-    @NameInMap("request")
+    @NameInMap("body")
     @Validation(required = true)
-    private CreateCustomDomainInput request;
+    private CreateCustomDomainInput body;
 
     private CreateCustomDomainRequest(Builder builder) {
         super(builder);
-        this.request = builder.request;
+        this.body = builder.body;
     }
 
     public static Builder builder() {
@@ -36,14 +36,14 @@ public class CreateCustomDomainRequest extends Request {
     }
 
     /**
-     * @return request
+     * @return body
      */
-    public CreateCustomDomainInput getRequest() {
-        return this.request;
+    public CreateCustomDomainInput getBody() {
+        return this.body;
     }
 
     public static final class Builder extends Request.Builder<CreateCustomDomainRequest, Builder> {
-        private CreateCustomDomainInput request; 
+        private CreateCustomDomainInput body; 
 
         private Builder() {
             super();
@@ -51,15 +51,15 @@ public class CreateCustomDomainRequest extends Request {
 
         private Builder(CreateCustomDomainRequest request) {
             super(request);
-            this.request = request.request;
+            this.body = request.body;
         } 
 
         /**
-         * request.
+         * body.
          */
-        public Builder request(CreateCustomDomainInput request) {
-            this.putBodyParameter("request", request);
-            this.request = request;
+        public Builder body(CreateCustomDomainInput body) {
+            this.putBodyParameter("body", body);
+            this.body = body;
             return this;
         }
 

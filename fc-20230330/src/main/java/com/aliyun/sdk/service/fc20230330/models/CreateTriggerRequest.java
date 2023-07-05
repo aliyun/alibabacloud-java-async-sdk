@@ -18,14 +18,14 @@ public class CreateTriggerRequest extends Request {
     private String functionName;
 
     @Body
-    @NameInMap("request")
+    @NameInMap("body")
     @Validation(required = true)
-    private CreateTriggerInput request;
+    private CreateTriggerInput body;
 
     private CreateTriggerRequest(Builder builder) {
         super(builder);
         this.functionName = builder.functionName;
-        this.request = builder.request;
+        this.body = builder.body;
     }
 
     public static Builder builder() {
@@ -49,15 +49,15 @@ public class CreateTriggerRequest extends Request {
     }
 
     /**
-     * @return request
+     * @return body
      */
-    public CreateTriggerInput getRequest() {
-        return this.request;
+    public CreateTriggerInput getBody() {
+        return this.body;
     }
 
     public static final class Builder extends Request.Builder<CreateTriggerRequest, Builder> {
         private String functionName; 
-        private CreateTriggerInput request; 
+        private CreateTriggerInput body; 
 
         private Builder() {
             super();
@@ -66,7 +66,7 @@ public class CreateTriggerRequest extends Request {
         private Builder(CreateTriggerRequest request) {
             super(request);
             this.functionName = request.functionName;
-            this.request = request.request;
+            this.body = request.body;
         } 
 
         /**
@@ -79,11 +79,11 @@ public class CreateTriggerRequest extends Request {
         }
 
         /**
-         * request.
+         * body.
          */
-        public Builder request(CreateTriggerInput request) {
-            this.putBodyParameter("request", request);
-            this.request = request;
+        public Builder body(CreateTriggerInput body) {
+            this.putBodyParameter("body", body);
+            this.body = body;
             return this;
         }
 

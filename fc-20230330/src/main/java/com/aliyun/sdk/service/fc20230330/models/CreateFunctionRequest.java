@@ -13,13 +13,13 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class CreateFunctionRequest extends Request {
     @Body
-    @NameInMap("request")
+    @NameInMap("body")
     @Validation(required = true)
-    private CreateFunctionInput request;
+    private CreateFunctionInput body;
 
     private CreateFunctionRequest(Builder builder) {
         super(builder);
-        this.request = builder.request;
+        this.body = builder.body;
     }
 
     public static Builder builder() {
@@ -36,14 +36,14 @@ public class CreateFunctionRequest extends Request {
     }
 
     /**
-     * @return request
+     * @return body
      */
-    public CreateFunctionInput getRequest() {
-        return this.request;
+    public CreateFunctionInput getBody() {
+        return this.body;
     }
 
     public static final class Builder extends Request.Builder<CreateFunctionRequest, Builder> {
-        private CreateFunctionInput request; 
+        private CreateFunctionInput body; 
 
         private Builder() {
             super();
@@ -51,15 +51,15 @@ public class CreateFunctionRequest extends Request {
 
         private Builder(CreateFunctionRequest request) {
             super(request);
-            this.request = request.request;
+            this.body = request.body;
         } 
 
         /**
-         * request.
+         * body.
          */
-        public Builder request(CreateFunctionInput request) {
-            this.putBodyParameter("request", request);
-            this.request = request;
+        public Builder body(CreateFunctionInput body) {
+            this.putBodyParameter("body", body);
+            this.body = body;
             return this;
         }
 

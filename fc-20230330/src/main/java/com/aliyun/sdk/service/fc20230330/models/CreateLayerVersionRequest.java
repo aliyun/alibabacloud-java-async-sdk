@@ -18,14 +18,14 @@ public class CreateLayerVersionRequest extends Request {
     private String layerName;
 
     @Body
-    @NameInMap("request")
+    @NameInMap("body")
     @Validation(required = true)
-    private CreateLayerVersionInput request;
+    private CreateLayerVersionInput body;
 
     private CreateLayerVersionRequest(Builder builder) {
         super(builder);
         this.layerName = builder.layerName;
-        this.request = builder.request;
+        this.body = builder.body;
     }
 
     public static Builder builder() {
@@ -49,15 +49,15 @@ public class CreateLayerVersionRequest extends Request {
     }
 
     /**
-     * @return request
+     * @return body
      */
-    public CreateLayerVersionInput getRequest() {
-        return this.request;
+    public CreateLayerVersionInput getBody() {
+        return this.body;
     }
 
     public static final class Builder extends Request.Builder<CreateLayerVersionRequest, Builder> {
         private String layerName; 
-        private CreateLayerVersionInput request; 
+        private CreateLayerVersionInput body; 
 
         private Builder() {
             super();
@@ -66,7 +66,7 @@ public class CreateLayerVersionRequest extends Request {
         private Builder(CreateLayerVersionRequest request) {
             super(request);
             this.layerName = request.layerName;
-            this.request = request.request;
+            this.body = request.body;
         } 
 
         /**
@@ -79,11 +79,11 @@ public class CreateLayerVersionRequest extends Request {
         }
 
         /**
-         * request.
+         * body.
          */
-        public Builder request(CreateLayerVersionInput request) {
-            this.putBodyParameter("request", request);
-            this.request = request;
+        public Builder body(CreateLayerVersionInput body) {
+            this.putBodyParameter("body", body);
+            this.body = body;
             return this;
         }
 

@@ -18,14 +18,14 @@ public class CreateAliasRequest extends Request {
     private String functionName;
 
     @Body
-    @NameInMap("request")
+    @NameInMap("body")
     @Validation(required = true)
-    private CreateAliasInput request;
+    private CreateAliasInput body;
 
     private CreateAliasRequest(Builder builder) {
         super(builder);
         this.functionName = builder.functionName;
-        this.request = builder.request;
+        this.body = builder.body;
     }
 
     public static Builder builder() {
@@ -49,15 +49,15 @@ public class CreateAliasRequest extends Request {
     }
 
     /**
-     * @return request
+     * @return body
      */
-    public CreateAliasInput getRequest() {
-        return this.request;
+    public CreateAliasInput getBody() {
+        return this.body;
     }
 
     public static final class Builder extends Request.Builder<CreateAliasRequest, Builder> {
         private String functionName; 
-        private CreateAliasInput request; 
+        private CreateAliasInput body; 
 
         private Builder() {
             super();
@@ -66,7 +66,7 @@ public class CreateAliasRequest extends Request {
         private Builder(CreateAliasRequest request) {
             super(request);
             this.functionName = request.functionName;
-            this.request = request.request;
+            this.body = request.body;
         } 
 
         /**
@@ -79,11 +79,11 @@ public class CreateAliasRequest extends Request {
         }
 
         /**
-         * request.
+         * body.
          */
-        public Builder request(CreateAliasInput request) {
-            this.putBodyParameter("request", request);
-            this.request = request;
+        public Builder body(CreateAliasInput body) {
+            this.putBodyParameter("body", body);
+            this.body = body;
             return this;
         }
 

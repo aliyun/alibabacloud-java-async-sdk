@@ -23,15 +23,15 @@ public class UpdateTriggerRequest extends Request {
     private String triggerName;
 
     @Body
-    @NameInMap("request")
+    @NameInMap("body")
     @Validation(required = true)
-    private UpdateTriggerInput request;
+    private UpdateTriggerInput body;
 
     private UpdateTriggerRequest(Builder builder) {
         super(builder);
         this.functionName = builder.functionName;
         this.triggerName = builder.triggerName;
-        this.request = builder.request;
+        this.body = builder.body;
     }
 
     public static Builder builder() {
@@ -62,16 +62,16 @@ public class UpdateTriggerRequest extends Request {
     }
 
     /**
-     * @return request
+     * @return body
      */
-    public UpdateTriggerInput getRequest() {
-        return this.request;
+    public UpdateTriggerInput getBody() {
+        return this.body;
     }
 
     public static final class Builder extends Request.Builder<UpdateTriggerRequest, Builder> {
         private String functionName; 
         private String triggerName; 
-        private UpdateTriggerInput request; 
+        private UpdateTriggerInput body; 
 
         private Builder() {
             super();
@@ -81,7 +81,7 @@ public class UpdateTriggerRequest extends Request {
             super(request);
             this.functionName = request.functionName;
             this.triggerName = request.triggerName;
-            this.request = request.request;
+            this.body = request.body;
         } 
 
         /**
@@ -103,11 +103,11 @@ public class UpdateTriggerRequest extends Request {
         }
 
         /**
-         * request.
+         * body.
          */
-        public Builder request(UpdateTriggerInput request) {
-            this.putBodyParameter("request", request);
-            this.request = request;
+        public Builder body(UpdateTriggerInput body) {
+            this.putBodyParameter("body", body);
+            this.body = body;
             return this;
         }
 

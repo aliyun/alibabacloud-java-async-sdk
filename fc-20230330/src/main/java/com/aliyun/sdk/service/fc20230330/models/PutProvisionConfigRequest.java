@@ -17,20 +17,20 @@ public class PutProvisionConfigRequest extends Request {
     @Validation(required = true)
     private String functionName;
 
+    @Body
+    @NameInMap("body")
+    @Validation(required = true)
+    private PutProvisionConfigInput body;
+
     @Query
     @NameInMap("qualifier")
     private String qualifier;
 
-    @Body
-    @NameInMap("request")
-    @Validation(required = true)
-    private PutProvisionConfigInput request;
-
     private PutProvisionConfigRequest(Builder builder) {
         super(builder);
         this.functionName = builder.functionName;
+        this.body = builder.body;
         this.qualifier = builder.qualifier;
-        this.request = builder.request;
     }
 
     public static Builder builder() {
@@ -54,23 +54,23 @@ public class PutProvisionConfigRequest extends Request {
     }
 
     /**
+     * @return body
+     */
+    public PutProvisionConfigInput getBody() {
+        return this.body;
+    }
+
+    /**
      * @return qualifier
      */
     public String getQualifier() {
         return this.qualifier;
     }
 
-    /**
-     * @return request
-     */
-    public PutProvisionConfigInput getRequest() {
-        return this.request;
-    }
-
     public static final class Builder extends Request.Builder<PutProvisionConfigRequest, Builder> {
         private String functionName; 
+        private PutProvisionConfigInput body; 
         private String qualifier; 
-        private PutProvisionConfigInput request; 
 
         private Builder() {
             super();
@@ -79,8 +79,8 @@ public class PutProvisionConfigRequest extends Request {
         private Builder(PutProvisionConfigRequest request) {
             super(request);
             this.functionName = request.functionName;
+            this.body = request.body;
             this.qualifier = request.qualifier;
-            this.request = request.request;
         } 
 
         /**
@@ -93,20 +93,20 @@ public class PutProvisionConfigRequest extends Request {
         }
 
         /**
+         * body.
+         */
+        public Builder body(PutProvisionConfigInput body) {
+            this.putBodyParameter("body", body);
+            this.body = body;
+            return this;
+        }
+
+        /**
          * qualifier.
          */
         public Builder qualifier(String qualifier) {
             this.putQueryParameter("qualifier", qualifier);
             this.qualifier = qualifier;
-            return this;
-        }
-
-        /**
-         * request.
-         */
-        public Builder request(PutProvisionConfigInput request) {
-            this.putBodyParameter("request", request);
-            this.request = request;
             return this;
         }
 

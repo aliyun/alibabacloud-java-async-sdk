@@ -17,20 +17,20 @@ public class PutAsyncInvokeConfigRequest extends Request {
     @Validation(required = true)
     private String functionName;
 
+    @Body
+    @NameInMap("body")
+    @Validation(required = true)
+    private PutAsyncInvokeConfigInput body;
+
     @Query
     @NameInMap("qualifier")
     private String qualifier;
 
-    @Body
-    @NameInMap("request")
-    @Validation(required = true)
-    private PutAsyncInvokeConfigInput request;
-
     private PutAsyncInvokeConfigRequest(Builder builder) {
         super(builder);
         this.functionName = builder.functionName;
+        this.body = builder.body;
         this.qualifier = builder.qualifier;
-        this.request = builder.request;
     }
 
     public static Builder builder() {
@@ -54,23 +54,23 @@ public class PutAsyncInvokeConfigRequest extends Request {
     }
 
     /**
+     * @return body
+     */
+    public PutAsyncInvokeConfigInput getBody() {
+        return this.body;
+    }
+
+    /**
      * @return qualifier
      */
     public String getQualifier() {
         return this.qualifier;
     }
 
-    /**
-     * @return request
-     */
-    public PutAsyncInvokeConfigInput getRequest() {
-        return this.request;
-    }
-
     public static final class Builder extends Request.Builder<PutAsyncInvokeConfigRequest, Builder> {
         private String functionName; 
+        private PutAsyncInvokeConfigInput body; 
         private String qualifier; 
-        private PutAsyncInvokeConfigInput request; 
 
         private Builder() {
             super();
@@ -79,8 +79,8 @@ public class PutAsyncInvokeConfigRequest extends Request {
         private Builder(PutAsyncInvokeConfigRequest request) {
             super(request);
             this.functionName = request.functionName;
+            this.body = request.body;
             this.qualifier = request.qualifier;
-            this.request = request.request;
         } 
 
         /**
@@ -93,20 +93,20 @@ public class PutAsyncInvokeConfigRequest extends Request {
         }
 
         /**
+         * body.
+         */
+        public Builder body(PutAsyncInvokeConfigInput body) {
+            this.putBodyParameter("body", body);
+            this.body = body;
+            return this;
+        }
+
+        /**
          * qualifier.
          */
         public Builder qualifier(String qualifier) {
             this.putQueryParameter("qualifier", qualifier);
             this.qualifier = qualifier;
-            return this;
-        }
-
-        /**
-         * request.
-         */
-        public Builder request(PutAsyncInvokeConfigInput request) {
-            this.putBodyParameter("request", request);
-            this.request = request;
             return this;
         }
 

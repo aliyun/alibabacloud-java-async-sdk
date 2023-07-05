@@ -13,13 +13,13 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class TagResourceRequest extends Request {
     @Body
-    @NameInMap("request")
+    @NameInMap("body")
     @Validation(required = true)
-    private TagResourceInput request;
+    private TagResourceInput body;
 
     private TagResourceRequest(Builder builder) {
         super(builder);
-        this.request = builder.request;
+        this.body = builder.body;
     }
 
     public static Builder builder() {
@@ -36,14 +36,14 @@ public class TagResourceRequest extends Request {
     }
 
     /**
-     * @return request
+     * @return body
      */
-    public TagResourceInput getRequest() {
-        return this.request;
+    public TagResourceInput getBody() {
+        return this.body;
     }
 
     public static final class Builder extends Request.Builder<TagResourceRequest, Builder> {
-        private TagResourceInput request; 
+        private TagResourceInput body; 
 
         private Builder() {
             super();
@@ -51,15 +51,15 @@ public class TagResourceRequest extends Request {
 
         private Builder(TagResourceRequest request) {
             super(request);
-            this.request = request.request;
+            this.body = request.body;
         } 
 
         /**
-         * request.
+         * body.
          */
-        public Builder request(TagResourceInput request) {
-            this.putBodyParameter("request", request);
-            this.request = request;
+        public Builder body(TagResourceInput body) {
+            this.putBodyParameter("body", body);
+            this.body = body;
             return this;
         }
 

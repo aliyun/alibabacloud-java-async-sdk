@@ -17,13 +17,13 @@ public class InvokeFunctionRequest extends Request {
     @Validation(required = true)
     private String functionName;
 
+    @Body
+    @NameInMap("body")
+    private java.io.InputStream body;
+
     @Query
     @NameInMap("qualifier")
     private String qualifier;
-
-    @Body
-    @NameInMap("request")
-    private java.io.InputStream request;
 
     @Header
     @NameInMap("x-fc-invocation-type")
@@ -36,8 +36,8 @@ public class InvokeFunctionRequest extends Request {
     private InvokeFunctionRequest(Builder builder) {
         super(builder);
         this.functionName = builder.functionName;
+        this.body = builder.body;
         this.qualifier = builder.qualifier;
-        this.request = builder.request;
         this.xFcInvocationType = builder.xFcInvocationType;
         this.xFcLogType = builder.xFcLogType;
     }
@@ -63,17 +63,17 @@ public class InvokeFunctionRequest extends Request {
     }
 
     /**
+     * @return body
+     */
+    public java.io.InputStream getBody() {
+        return this.body;
+    }
+
+    /**
      * @return qualifier
      */
     public String getQualifier() {
         return this.qualifier;
-    }
-
-    /**
-     * @return request
-     */
-    public java.io.InputStream getRequest() {
-        return this.request;
     }
 
     /**
@@ -92,8 +92,8 @@ public class InvokeFunctionRequest extends Request {
 
     public static final class Builder extends Request.Builder<InvokeFunctionRequest, Builder> {
         private String functionName; 
+        private java.io.InputStream body; 
         private String qualifier; 
-        private java.io.InputStream request; 
         private String xFcInvocationType; 
         private String xFcLogType; 
 
@@ -104,8 +104,8 @@ public class InvokeFunctionRequest extends Request {
         private Builder(InvokeFunctionRequest request) {
             super(request);
             this.functionName = request.functionName;
+            this.body = request.body;
             this.qualifier = request.qualifier;
-            this.request = request.request;
             this.xFcInvocationType = request.xFcInvocationType;
             this.xFcLogType = request.xFcLogType;
         } 
@@ -120,20 +120,20 @@ public class InvokeFunctionRequest extends Request {
         }
 
         /**
+         * body.
+         */
+        public Builder body(java.io.InputStream body) {
+            this.putBodyParameter("body", body);
+            this.body = body;
+            return this;
+        }
+
+        /**
          * qualifier.
          */
         public Builder qualifier(String qualifier) {
             this.putQueryParameter("qualifier", qualifier);
             this.qualifier = qualifier;
-            return this;
-        }
-
-        /**
-         * request.
-         */
-        public Builder request(java.io.InputStream request) {
-            this.putBodyParameter("request", request);
-            this.request = request;
             return this;
         }
 

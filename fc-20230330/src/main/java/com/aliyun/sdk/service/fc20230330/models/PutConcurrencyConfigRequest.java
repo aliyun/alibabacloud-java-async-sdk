@@ -18,14 +18,14 @@ public class PutConcurrencyConfigRequest extends Request {
     private String functionName;
 
     @Body
-    @NameInMap("request")
+    @NameInMap("body")
     @Validation(required = true)
-    private PutConcurrencyInput request;
+    private PutConcurrencyInput body;
 
     private PutConcurrencyConfigRequest(Builder builder) {
         super(builder);
         this.functionName = builder.functionName;
-        this.request = builder.request;
+        this.body = builder.body;
     }
 
     public static Builder builder() {
@@ -49,15 +49,15 @@ public class PutConcurrencyConfigRequest extends Request {
     }
 
     /**
-     * @return request
+     * @return body
      */
-    public PutConcurrencyInput getRequest() {
-        return this.request;
+    public PutConcurrencyInput getBody() {
+        return this.body;
     }
 
     public static final class Builder extends Request.Builder<PutConcurrencyConfigRequest, Builder> {
         private String functionName; 
-        private PutConcurrencyInput request; 
+        private PutConcurrencyInput body; 
 
         private Builder() {
             super();
@@ -66,7 +66,7 @@ public class PutConcurrencyConfigRequest extends Request {
         private Builder(PutConcurrencyConfigRequest request) {
             super(request);
             this.functionName = request.functionName;
-            this.request = request.request;
+            this.body = request.body;
         } 
 
         /**
@@ -79,11 +79,11 @@ public class PutConcurrencyConfigRequest extends Request {
         }
 
         /**
-         * request.
+         * body.
          */
-        public Builder request(PutConcurrencyInput request) {
-            this.putBodyParameter("request", request);
-            this.request = request;
+        public Builder body(PutConcurrencyInput body) {
+            this.putBodyParameter("body", body);
+            this.body = body;
             return this;
         }
 

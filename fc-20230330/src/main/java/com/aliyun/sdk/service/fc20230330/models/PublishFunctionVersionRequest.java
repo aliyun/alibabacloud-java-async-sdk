@@ -18,14 +18,14 @@ public class PublishFunctionVersionRequest extends Request {
     private String functionName;
 
     @Body
-    @NameInMap("request")
+    @NameInMap("body")
     @Validation(required = true)
-    private PublishVersionInput request;
+    private PublishVersionInput body;
 
     private PublishFunctionVersionRequest(Builder builder) {
         super(builder);
         this.functionName = builder.functionName;
-        this.request = builder.request;
+        this.body = builder.body;
     }
 
     public static Builder builder() {
@@ -49,15 +49,15 @@ public class PublishFunctionVersionRequest extends Request {
     }
 
     /**
-     * @return request
+     * @return body
      */
-    public PublishVersionInput getRequest() {
-        return this.request;
+    public PublishVersionInput getBody() {
+        return this.body;
     }
 
     public static final class Builder extends Request.Builder<PublishFunctionVersionRequest, Builder> {
         private String functionName; 
-        private PublishVersionInput request; 
+        private PublishVersionInput body; 
 
         private Builder() {
             super();
@@ -66,7 +66,7 @@ public class PublishFunctionVersionRequest extends Request {
         private Builder(PublishFunctionVersionRequest request) {
             super(request);
             this.functionName = request.functionName;
-            this.request = request.request;
+            this.body = request.body;
         } 
 
         /**
@@ -79,11 +79,11 @@ public class PublishFunctionVersionRequest extends Request {
         }
 
         /**
-         * request.
+         * body.
          */
-        public Builder request(PublishVersionInput request) {
-            this.putBodyParameter("request", request);
-            this.request = request;
+        public Builder body(PublishVersionInput body) {
+            this.putBodyParameter("body", body);
+            this.body = body;
             return this;
         }
 

@@ -18,14 +18,14 @@ public class UpdateCustomDomainRequest extends Request {
     private String domainName;
 
     @Body
-    @NameInMap("request")
+    @NameInMap("body")
     @Validation(required = true)
-    private UpdateCustomDomainInput request;
+    private UpdateCustomDomainInput body;
 
     private UpdateCustomDomainRequest(Builder builder) {
         super(builder);
         this.domainName = builder.domainName;
-        this.request = builder.request;
+        this.body = builder.body;
     }
 
     public static Builder builder() {
@@ -49,15 +49,15 @@ public class UpdateCustomDomainRequest extends Request {
     }
 
     /**
-     * @return request
+     * @return body
      */
-    public UpdateCustomDomainInput getRequest() {
-        return this.request;
+    public UpdateCustomDomainInput getBody() {
+        return this.body;
     }
 
     public static final class Builder extends Request.Builder<UpdateCustomDomainRequest, Builder> {
         private String domainName; 
-        private UpdateCustomDomainInput request; 
+        private UpdateCustomDomainInput body; 
 
         private Builder() {
             super();
@@ -66,7 +66,7 @@ public class UpdateCustomDomainRequest extends Request {
         private Builder(UpdateCustomDomainRequest request) {
             super(request);
             this.domainName = request.domainName;
-            this.request = request.request;
+            this.body = request.body;
         } 
 
         /**
@@ -79,11 +79,11 @@ public class UpdateCustomDomainRequest extends Request {
         }
 
         /**
-         * request.
+         * body.
          */
-        public Builder request(UpdateCustomDomainInput request) {
-            this.putBodyParameter("request", request);
-            this.request = request;
+        public Builder body(UpdateCustomDomainInput body) {
+            this.putBodyParameter("body", body);
+            this.body = body;
             return this;
         }
 
