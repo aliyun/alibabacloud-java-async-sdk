@@ -97,7 +97,7 @@ public class RecognizeIdcardRequest extends Request {
         } 
 
         /**
-         * 是否需要图案检测功能，默认不需要
+         * OutputFigure.
          */
         public Builder outputFigure(Boolean outputFigure) {
             this.putQueryParameter("OutputFigure", outputFigure);
@@ -106,7 +106,7 @@ public class RecognizeIdcardRequest extends Request {
         }
 
         /**
-         * 是否需要输出身份证质量检测信息
+         * OutputQualityInfo.
          */
         public Builder outputQualityInfo(Boolean outputQualityInfo) {
             this.putQueryParameter("OutputQualityInfo", outputQualityInfo);
@@ -115,7 +115,7 @@ public class RecognizeIdcardRequest extends Request {
         }
 
         /**
-         * 图片链接（长度不超 2048，不支持 base64）
+         * Url.
          */
         public Builder url(String url) {
             this.putQueryParameter("Url", url);
@@ -124,7 +124,7 @@ public class RecognizeIdcardRequest extends Request {
         }
 
         /**
-         * 图片二进制字节流，最大10MB
+         * body.
          */
         public Builder body(java.io.InputStream body) {
             this.putBodyParameter("body", body);

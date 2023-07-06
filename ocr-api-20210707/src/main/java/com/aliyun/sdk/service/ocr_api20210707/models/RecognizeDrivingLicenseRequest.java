@@ -69,7 +69,7 @@ public class RecognizeDrivingLicenseRequest extends Request {
         } 
 
         /**
-         * 图片链接（长度不超 2048，不支持 base64）
+         * Url.
          */
         public Builder url(String url) {
             this.putQueryParameter("Url", url);
@@ -78,7 +78,7 @@ public class RecognizeDrivingLicenseRequest extends Request {
         }
 
         /**
-         * 图片二进制字节流，最大10MB
+         * body.
          */
         public Builder body(java.io.InputStream body) {
             this.putBodyParameter("body", body);

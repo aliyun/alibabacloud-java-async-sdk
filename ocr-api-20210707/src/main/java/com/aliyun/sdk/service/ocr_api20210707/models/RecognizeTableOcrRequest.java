@@ -134,7 +134,7 @@ public class RecognizeTableOcrRequest extends Request {
         }
 
         /**
-         * 是否无线条
+         * LineLess.
          */
         public Builder lineLess(Boolean lineLess) {
             this.putQueryParameter("LineLess", lineLess);
@@ -143,7 +143,7 @@ public class RecognizeTableOcrRequest extends Request {
         }
 
         /**
-         * 是否需要自动旋转功能，默认需要
+         * NeedRotate.
          */
         public Builder needRotate(Boolean needRotate) {
             this.putQueryParameter("NeedRotate", needRotate);
@@ -152,7 +152,7 @@ public class RecognizeTableOcrRequest extends Request {
         }
 
         /**
-         * 是否跳过表格识别，如果没有检测到表格，可以设置"skip_detection":true
+         * SkipDetection.
          */
         public Builder skipDetection(Boolean skipDetection) {
             this.putQueryParameter("SkipDetection", skipDetection);
@@ -161,7 +161,7 @@ public class RecognizeTableOcrRequest extends Request {
         }
 
         /**
-         * 图片链接（长度不超 2048，不支持 base64）
+         * Url.
          */
         public Builder url(String url) {
             this.putQueryParameter("Url", url);
@@ -170,7 +170,7 @@ public class RecognizeTableOcrRequest extends Request {
         }
 
         /**
-         * 图片二进制字节流，最大10MB
+         * body.
          */
         public Builder body(java.io.InputStream body) {
             this.putBodyParameter("body", body);

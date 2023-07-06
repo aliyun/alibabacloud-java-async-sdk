@@ -110,7 +110,7 @@ public class RecognizeRussianRequest extends Request {
         } 
 
         /**
-         * 是否需要自动旋转功能(结构化检测、混贴场景、教育相关场景会自动做旋转，无需设置)，返回角度信息
+         * NeedRotate.
          */
         public Builder needRotate(Boolean needRotate) {
             this.putQueryParameter("NeedRotate", needRotate);
@@ -119,7 +119,7 @@ public class RecognizeRussianRequest extends Request {
         }
 
         /**
-         * 是否输出单字识别结果
+         * OutputCharInfo.
          */
         public Builder outputCharInfo(Boolean outputCharInfo) {
             this.putQueryParameter("OutputCharInfo", outputCharInfo);
@@ -128,7 +128,7 @@ public class RecognizeRussianRequest extends Request {
         }
 
         /**
-         * 是否输出表格识别结果，包含单元格信息
+         * OutputTable.
          */
         public Builder outputTable(Boolean outputTable) {
             this.putQueryParameter("OutputTable", outputTable);
@@ -137,7 +137,7 @@ public class RecognizeRussianRequest extends Request {
         }
 
         /**
-         * 图片链接（长度不超 2048，不支持 base64）
+         * Url.
          */
         public Builder url(String url) {
             this.putQueryParameter("Url", url);
@@ -146,7 +146,7 @@ public class RecognizeRussianRequest extends Request {
         }
 
         /**
-         * 图片二进制字节流，最大10MB
+         * body.
          */
         public Builder body(java.io.InputStream body) {
             this.putBodyParameter("body", body);

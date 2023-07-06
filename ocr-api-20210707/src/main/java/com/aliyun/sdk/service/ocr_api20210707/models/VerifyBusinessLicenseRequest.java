@@ -85,7 +85,7 @@ public class VerifyBusinessLicenseRequest extends Request {
         } 
 
         /**
-         * 企业名称
+         * CompanyName.
          */
         public Builder companyName(String companyName) {
             this.putQueryParameter("CompanyName", companyName);
@@ -94,7 +94,7 @@ public class VerifyBusinessLicenseRequest extends Request {
         }
 
         /**
-         * 工商注册号/统一社会信用代码
+         * CreditCode.
          */
         public Builder creditCode(String creditCode) {
             this.putQueryParameter("CreditCode", creditCode);
@@ -103,7 +103,7 @@ public class VerifyBusinessLicenseRequest extends Request {
         }
 
         /**
-         * 企业法人姓名
+         * LegalPerson.
          */
         public Builder legalPerson(String legalPerson) {
             this.putQueryParameter("LegalPerson", legalPerson);

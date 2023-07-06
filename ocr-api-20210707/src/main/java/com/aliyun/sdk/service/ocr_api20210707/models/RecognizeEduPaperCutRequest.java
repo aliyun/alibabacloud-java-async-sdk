@@ -113,7 +113,7 @@ public class RecognizeEduPaperCutRequest extends Request {
         } 
 
         /**
-         * 切题类型
+         * CutType.
          */
         public Builder cutType(String cutType) {
             this.putQueryParameter("CutType", cutType);
@@ -122,7 +122,7 @@ public class RecognizeEduPaperCutRequest extends Request {
         }
 
         /**
-         * 图片类型
+         * ImageType.
          */
         public Builder imageType(String imageType) {
             this.putQueryParameter("ImageType", imageType);
@@ -131,7 +131,7 @@ public class RecognizeEduPaperCutRequest extends Request {
         }
 
         /**
-         * 年级学科
+         * Subject.
          */
         public Builder subject(String subject) {
             this.putQueryParameter("Subject", subject);
@@ -140,7 +140,7 @@ public class RecognizeEduPaperCutRequest extends Request {
         }
 
         /**
-         * 图片链接（长度不超 2048，不支持 base64）
+         * Url.
          */
         public Builder url(String url) {
             this.putQueryParameter("Url", url);
@@ -149,7 +149,7 @@ public class RecognizeEduPaperCutRequest extends Request {
         }
 
         /**
-         * 图片二进制字节流，最大10MB
+         * body.
          */
         public Builder body(java.io.InputStream body) {
             this.putBodyParameter("body", body);

@@ -194,7 +194,7 @@ public class RecognizeDocumentStructureRequest extends Request {
         } 
 
         /**
-         * 是否需要自动旋转功能(结构化检测、混贴场景、教育相关场景会自动做旋转，无需设置)，返回角度信息
+         * NeedRotate.
          */
         public Builder needRotate(Boolean needRotate) {
             this.putQueryParameter("NeedRotate", needRotate);
@@ -203,7 +203,7 @@ public class RecognizeDocumentStructureRequest extends Request {
         }
 
         /**
-         * 是否按顺序输出文字块。false表示从左往右，从上到下的顺序；true表示从上到下，从左往右的顺序
+         * NeedSortPage.
          */
         public Builder needSortPage(Boolean needSortPage) {
             this.putQueryParameter("NeedSortPage", needSortPage);
@@ -212,7 +212,7 @@ public class RecognizeDocumentStructureRequest extends Request {
         }
 
         /**
-         * 是否需要去除印章功能，默认不需要。true：需要 false：不需要
+         * NoStamp.
          */
         public Builder noStamp(Boolean noStamp) {
             this.putQueryParameter("NoStamp", noStamp);
@@ -221,7 +221,7 @@ public class RecognizeDocumentStructureRequest extends Request {
         }
 
         /**
-         * 是否输出单字识别结果
+         * OutputCharInfo.
          */
         public Builder outputCharInfo(Boolean outputCharInfo) {
             this.putQueryParameter("OutputCharInfo", outputCharInfo);
@@ -230,7 +230,7 @@ public class RecognizeDocumentStructureRequest extends Request {
         }
 
         /**
-         * 是否输出表格识别结果，包含单元格信息
+         * OutputTable.
          */
         public Builder outputTable(Boolean outputTable) {
             this.putQueryParameter("OutputTable", outputTable);
@@ -239,7 +239,7 @@ public class RecognizeDocumentStructureRequest extends Request {
         }
 
         /**
-         * 是否需要分页功能，默认不需要。 true：需要 false：不需要
+         * Page.
          */
         public Builder page(Boolean page) {
             this.putQueryParameter("Page", page);
@@ -248,7 +248,7 @@ public class RecognizeDocumentStructureRequest extends Request {
         }
 
         /**
-         * 是否需要分段功能，默认不需要。true：需要 false：不需要
+         * Paragraph.
          */
         public Builder paragraph(Boolean paragraph) {
             this.putQueryParameter("Paragraph", paragraph);
@@ -257,7 +257,7 @@ public class RecognizeDocumentStructureRequest extends Request {
         }
 
         /**
-         * 是否需要成行返回功能，默认不需要。true：需要 false：不需要
+         * Row.
          */
         public Builder row(Boolean row) {
             this.putQueryParameter("Row", row);
@@ -266,7 +266,7 @@ public class RecognizeDocumentStructureRequest extends Request {
         }
 
         /**
-         * 图片链接（长度不超 2048，不支持 base64）
+         * Url.
          */
         public Builder url(String url) {
             this.putQueryParameter("Url", url);
@@ -275,7 +275,7 @@ public class RecognizeDocumentStructureRequest extends Request {
         }
 
         /**
-         * 是否返回新版格式输出
+         * UseNewStyleOutput.
          */
         public Builder useNewStyleOutput(Boolean useNewStyleOutput) {
             this.putQueryParameter("UseNewStyleOutput", useNewStyleOutput);

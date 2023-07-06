@@ -13,6 +13,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class RecognizeMixedInvoicesRequest extends Request {
     @Query
+    @NameInMap("PageNo")
+    private Integer pageNo;
+
+    @Query
     @NameInMap("Url")
     private String url;
 
@@ -22,6 +26,7 @@ public class RecognizeMixedInvoicesRequest extends Request {
 
     private RecognizeMixedInvoicesRequest(Builder builder) {
         super(builder);
+        this.pageNo = builder.pageNo;
         this.url = builder.url;
         this.body = builder.body;
     }
@@ -40,6 +45,13 @@ public class RecognizeMixedInvoicesRequest extends Request {
     }
 
     /**
+     * @return pageNo
+     */
+    public Integer getPageNo() {
+        return this.pageNo;
+    }
+
+    /**
      * @return url
      */
     public String getUrl() {
@@ -54,6 +66,7 @@ public class RecognizeMixedInvoicesRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<RecognizeMixedInvoicesRequest, Builder> {
+        private Integer pageNo; 
         private String url; 
         private java.io.InputStream body; 
 
@@ -63,12 +76,22 @@ public class RecognizeMixedInvoicesRequest extends Request {
 
         private Builder(RecognizeMixedInvoicesRequest request) {
             super(request);
+            this.pageNo = request.pageNo;
             this.url = request.url;
             this.body = request.body;
         } 
 
         /**
-         * 图片链接（长度不超 2048，不支持 base64）
+         * PageNo.
+         */
+        public Builder pageNo(Integer pageNo) {
+            this.putQueryParameter("PageNo", pageNo);
+            this.pageNo = pageNo;
+            return this;
+        }
+
+        /**
+         * Url.
          */
         public Builder url(String url) {
             this.putQueryParameter("Url", url);
@@ -77,7 +100,7 @@ public class RecognizeMixedInvoicesRequest extends Request {
         }
 
         /**
-         * 图片二进制字节流，最大10MB
+         * body.
          */
         public Builder body(java.io.InputStream body) {
             this.putBodyParameter("body", body);

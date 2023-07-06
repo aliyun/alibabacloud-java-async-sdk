@@ -83,7 +83,7 @@ public class RecognizeExitEntryPermitToMainlandRequest extends Request {
         } 
 
         /**
-         * 图案坐标信息输出，针对结构化，如身份证人脸头像
+         * OutputFigure.
          */
         public Builder outputFigure(Boolean outputFigure) {
             this.putQueryParameter("OutputFigure", outputFigure);
@@ -92,7 +92,7 @@ public class RecognizeExitEntryPermitToMainlandRequest extends Request {
         }
 
         /**
-         * 图片链接（长度不超 2048，不支持 base64）
+         * Url.
          */
         public Builder url(String url) {
             this.putQueryParameter("Url", url);
@@ -101,7 +101,7 @@ public class RecognizeExitEntryPermitToMainlandRequest extends Request {
         }
 
         /**
-         * 图片二进制字节流，最大10MB
+         * body.
          */
         public Builder body(java.io.InputStream body) {
             this.putBodyParameter("body", body);

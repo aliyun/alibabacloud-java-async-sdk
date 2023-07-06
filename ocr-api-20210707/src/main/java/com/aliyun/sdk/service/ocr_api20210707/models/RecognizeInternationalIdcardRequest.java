@@ -84,7 +84,7 @@ public class RecognizeInternationalIdcardRequest extends Request {
         } 
 
         /**
-         * 国家名称
+         * Country.
          */
         public Builder country(String country) {
             this.putQueryParameter("Country", country);
@@ -93,7 +93,7 @@ public class RecognizeInternationalIdcardRequest extends Request {
         }
 
         /**
-         * 图片链接（长度不超 2048，不支持 base64）
+         * Url.
          */
         public Builder url(String url) {
             this.putQueryParameter("Url", url);
@@ -102,7 +102,7 @@ public class RecognizeInternationalIdcardRequest extends Request {
         }
 
         /**
-         * 图片二进制字节流，最大10MB
+         * body.
          */
         public Builder body(java.io.InputStream body) {
             this.putBodyParameter("body", body);

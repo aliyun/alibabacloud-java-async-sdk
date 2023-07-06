@@ -74,7 +74,7 @@ public class RecognizeChinesePassportResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * 错误码
+         * Code.
          */
         public Builder code(String code) {
             this.code = code;
@@ -82,7 +82,7 @@ public class RecognizeChinesePassportResponseBody extends TeaModel {
         }
 
         /**
-         * 返回数据
+         * Data.
          */
         public Builder data(String data) {
             this.data = data;
@@ -90,7 +90,7 @@ public class RecognizeChinesePassportResponseBody extends TeaModel {
         }
 
         /**
-         * 错误提示
+         * Message.
          */
         public Builder message(String message) {
             this.message = message;
@@ -98,7 +98,7 @@ public class RecognizeChinesePassportResponseBody extends TeaModel {
         }
 
         /**
-         * 请求唯一 ID
+         * RequestId.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
