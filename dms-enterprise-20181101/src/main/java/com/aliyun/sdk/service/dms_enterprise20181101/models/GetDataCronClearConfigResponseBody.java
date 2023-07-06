@@ -86,7 +86,7 @@ public class GetDataCronClearConfigResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * DataCronClearConfig.
+         * Data configuration.
          */
         public Builder dataCronClearConfig(DataCronClearConfig dataCronClearConfig) {
             this.dataCronClearConfig = dataCronClearConfig;
@@ -94,7 +94,7 @@ public class GetDataCronClearConfigResponseBody extends TeaModel {
         }
 
         /**
-         * ErrorCode.
+         * The error code.
          */
         public Builder errorCode(String errorCode) {
             this.errorCode = errorCode;

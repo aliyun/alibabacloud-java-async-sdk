@@ -426,7 +426,7 @@ public class ListTaskFlowsByPageResponseBody extends TeaModel {
             }
 
             /**
-             * CronBeginDate.
+             * The start time of scheduled scheduling. The task flow is not scheduled before this point in time.
              */
             public Builder cronBeginDate(String cronBeginDate) {
                 this.cronBeginDate = cronBeginDate;
@@ -434,7 +434,7 @@ public class ListTaskFlowsByPageResponseBody extends TeaModel {
             }
 
             /**
-             * CronEndDate.
+             * The end time of scheduled scheduling. The task flow is not scheduled after this point in time.
              */
             public Builder cronEndDate(String cronEndDate) {
                 this.cronEndDate = cronEndDate;
@@ -442,7 +442,7 @@ public class ListTaskFlowsByPageResponseBody extends TeaModel {
             }
 
             /**
-             * CronStr.
+             * Scheduled Cron.
              */
             public Builder cronStr(String cronStr) {
                 this.cronStr = cronStr;
@@ -450,7 +450,7 @@ public class ListTaskFlowsByPageResponseBody extends TeaModel {
             }
 
             /**
-             * CronSwitch.
+             * Whether to enable scheduled scheduling.
              */
             public Builder cronSwitch(Boolean cronSwitch) {
                 this.cronSwitch = cronSwitch;
@@ -458,7 +458,12 @@ public class ListTaskFlowsByPageResponseBody extends TeaModel {
             }
 
             /**
-             * CronType.
+             * Scheduling cycle type. Valid values:
+             * <p>
+             * - **2**: Hourly scheduling
+             * - **3**: Daily scheduling
+             * - **4**: Weekly scheduling
+             * - **5**: Monthly scheduling
              */
             public Builder cronType(Integer cronType) {
                 this.cronType = cronType;
@@ -474,7 +479,7 @@ public class ListTaskFlowsByPageResponseBody extends TeaModel {
             }
 
             /**
-             * DagOwnerId.
+             * The user ID of the task flow owner.
              */
             public Builder dagOwnerId(String dagOwnerId) {
                 this.dagOwnerId = dagOwnerId;
@@ -535,7 +540,7 @@ public class ListTaskFlowsByPageResponseBody extends TeaModel {
             }
 
             /**
-             * ScenarioId.
+             * The ID of the application scenario.
              */
             public Builder scenarioId(String scenarioId) {
                 this.scenarioId = scenarioId;
@@ -543,7 +548,7 @@ public class ListTaskFlowsByPageResponseBody extends TeaModel {
             }
 
             /**
-             * ScheduleParam.
+             * Event scheduling configuration, JSON string format.
              */
             public Builder scheduleParam(String scheduleParam) {
                 this.scheduleParam = scheduleParam;
@@ -564,7 +569,7 @@ public class ListTaskFlowsByPageResponseBody extends TeaModel {
             }
 
             /**
-             * TimeZoneId.
+             * Time zone setting. Default value: East 8(Asia/Shanghai).
              */
             public Builder timeZoneId(String timeZoneId) {
                 this.timeZoneId = timeZoneId;
@@ -572,7 +577,10 @@ public class ListTaskFlowsByPageResponseBody extends TeaModel {
             }
 
             /**
-             * TriggerType.
+             * The trigger type. Valid values:
+             * <p>
+             * - **0**: Periodic scheduling
+             * - **1**: Run manually
              */
             public Builder triggerType(Integer triggerType) {
                 this.triggerType = triggerType;

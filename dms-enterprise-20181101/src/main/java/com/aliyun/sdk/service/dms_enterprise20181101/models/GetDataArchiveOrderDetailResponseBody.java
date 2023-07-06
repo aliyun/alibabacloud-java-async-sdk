@@ -1718,6 +1718,9 @@ public class GetDataArchiveOrderDetailResponseBody extends TeaModel {
         @NameInMap("PageSize")
         private Long pageSize;
 
+        @NameInMap("TempTableNameMap")
+        private java.util.Map < String, ? > tempTableNameMap;
+
         private PluginExtraData(Builder builder) {
             this.dagInfo = builder.dagInfo;
             this.dbBaseInfo = builder.dbBaseInfo;
@@ -1726,6 +1729,7 @@ public class GetDataArchiveOrderDetailResponseBody extends TeaModel {
             this.nextFireTimeResult = builder.nextFireTimeResult;
             this.pageIndex = builder.pageIndex;
             this.pageSize = builder.pageSize;
+            this.tempTableNameMap = builder.tempTableNameMap;
         }
 
         public static Builder builder() {
@@ -1785,6 +1789,13 @@ public class GetDataArchiveOrderDetailResponseBody extends TeaModel {
             return this.pageSize;
         }
 
+        /**
+         * @return tempTableNameMap
+         */
+        public java.util.Map < String, ? > getTempTableNameMap() {
+            return this.tempTableNameMap;
+        }
+
         public static final class Builder {
             private DagInfo dagInfo; 
             private DbBaseInfo dbBaseInfo; 
@@ -1793,6 +1804,7 @@ public class GetDataArchiveOrderDetailResponseBody extends TeaModel {
             private NextFireTimeResult nextFireTimeResult; 
             private Long pageIndex; 
             private Long pageSize; 
+            private java.util.Map < String, ? > tempTableNameMap; 
 
             /**
              * DagInfo.
@@ -1847,6 +1859,14 @@ public class GetDataArchiveOrderDetailResponseBody extends TeaModel {
              */
             public Builder pageSize(Long pageSize) {
                 this.pageSize = pageSize;
+                return this;
+            }
+
+            /**
+             * TempTableNameMap.
+             */
+            public Builder tempTableNameMap(java.util.Map < String, ? > tempTableNameMap) {
+                this.tempTableNameMap = tempTableNameMap;
                 return this;
             }
 

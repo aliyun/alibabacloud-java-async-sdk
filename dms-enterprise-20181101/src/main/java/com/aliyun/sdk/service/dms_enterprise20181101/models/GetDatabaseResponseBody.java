@@ -510,7 +510,7 @@ public class GetDatabaseResponseBody extends TeaModel {
             }
 
             /**
-             * InstanceAlias.
+             * The alias of the instance.
              */
             public Builder instanceAlias(String instanceAlias) {
                 this.instanceAlias = instanceAlias;

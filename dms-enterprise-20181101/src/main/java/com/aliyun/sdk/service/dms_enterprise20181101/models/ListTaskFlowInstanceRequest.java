@@ -238,7 +238,20 @@ public class ListTaskFlowInstanceRequest extends Request {
         }
 
         /**
-         * Status.
+         * The running status of the task node. Valid values:
+         * <p>
+         * 
+         * - **0**: Waiting for scheduling
+         * 
+         * - **1**: Running
+         * 
+         * - **2**: Suspend
+         * 
+         * - **3**: Failed to run
+         * 
+         * - **4**: Run successfully
+         * 
+         * - **5**: Completed
          */
         public Builder status(Integer status) {
             this.putQueryParameter("Status", status);
@@ -269,7 +282,12 @@ public class ListTaskFlowInstanceRequest extends Request {
         }
 
         /**
-         * UseBizDate.
+         * Adjust filter conditions:
+         * <p>
+         * 
+         * - true: StartTimeBegin and StartTimeEnd are the time range for filtering services.
+         * 
+         * - false: StartTimeBegin and StartTimeEnd are the time range for the task to run.
          */
         public Builder useBizDate(Boolean useBizDate) {
             this.putQueryParameter("UseBizDate", useBizDate);

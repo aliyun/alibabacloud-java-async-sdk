@@ -222,7 +222,7 @@ public class ListTaskFlowCooperatorsResponseBody extends TeaModel {
             }
 
             /**
-             * 用户ID。
+             * userId.
              */
             public Builder userId(String userId) {
                 this.userId = userId;

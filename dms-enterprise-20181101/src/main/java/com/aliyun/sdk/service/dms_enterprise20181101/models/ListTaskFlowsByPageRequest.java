@@ -148,7 +148,7 @@ public class ListTaskFlowsByPageRequest extends Request {
         }
 
         /**
-         * DagIdList.
+         * Filter condition, task flow ID list.
          */
         public Builder dagIdList(java.util.List < Long > dagIdList) {
             String dagIdListShrink = shrink(dagIdList, "DagIdList", "json");
@@ -176,7 +176,7 @@ public class ListTaskFlowsByPageRequest extends Request {
         }
 
         /**
-         * ScenarioId.
+         * Filter condition, application scenario ID.
          */
         public Builder scenarioId(Long scenarioId) {
             this.putQueryParameter("ScenarioId", scenarioId);

@@ -268,7 +268,7 @@ public class BackFillRequest extends Request {
         }
 
         /**
-         * FilterNodeIds.
+         * Filter condition, which specifies the list of node IDs in the task flow that do not need to supplement data.
          */
         public Builder filterNodeIds(java.util.List < Long > filterNodeIds) {
             String filterNodeIdsShrink = shrink(filterNodeIds, "FilterNodeIds", "json");

@@ -338,7 +338,7 @@ public class ListTaskFlowInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * DagVersion.
+             * The version of the task flow.
              */
             public Builder dagVersion(String dagVersion) {
                 this.dagVersion = dagVersion;
@@ -414,7 +414,7 @@ public class ListTaskFlowInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * startTime.
+             * The time when the execution of the task flow was start. The time is displayed in the yyyy-MM-DD HH:mm:ss format.
              */
             public Builder startTime(String startTime) {
                 this.startTime = startTime;

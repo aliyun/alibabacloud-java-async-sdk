@@ -17,6 +17,14 @@ public class ApproveOrderRequest extends Request {
     private String regionId;
 
     @Query
+    @NameInMap("ApprovalNodeId")
+    private Long approvalNodeId;
+
+    @Query
+    @NameInMap("ApprovalNodePos")
+    private String approvalNodePos;
+
+    @Query
     @NameInMap("ApprovalType")
     @Validation(required = true)
     private String approvalType;
@@ -24,6 +32,14 @@ public class ApproveOrderRequest extends Request {
     @Query
     @NameInMap("Comment")
     private String comment;
+
+    @Query
+    @NameInMap("NewApprover")
+    private Long newApprover;
+
+    @Query
+    @NameInMap("OldApprover")
+    private Long oldApprover;
 
     @Query
     @NameInMap("Tid")
@@ -37,8 +53,12 @@ public class ApproveOrderRequest extends Request {
     private ApproveOrderRequest(Builder builder) {
         super(builder);
         this.regionId = builder.regionId;
+        this.approvalNodeId = builder.approvalNodeId;
+        this.approvalNodePos = builder.approvalNodePos;
         this.approvalType = builder.approvalType;
         this.comment = builder.comment;
+        this.newApprover = builder.newApprover;
+        this.oldApprover = builder.oldApprover;
         this.tid = builder.tid;
         this.workflowInstanceId = builder.workflowInstanceId;
     }
@@ -64,6 +84,20 @@ public class ApproveOrderRequest extends Request {
     }
 
     /**
+     * @return approvalNodeId
+     */
+    public Long getApprovalNodeId() {
+        return this.approvalNodeId;
+    }
+
+    /**
+     * @return approvalNodePos
+     */
+    public String getApprovalNodePos() {
+        return this.approvalNodePos;
+    }
+
+    /**
      * @return approvalType
      */
     public String getApprovalType() {
@@ -75,6 +109,20 @@ public class ApproveOrderRequest extends Request {
      */
     public String getComment() {
         return this.comment;
+    }
+
+    /**
+     * @return newApprover
+     */
+    public Long getNewApprover() {
+        return this.newApprover;
+    }
+
+    /**
+     * @return oldApprover
+     */
+    public Long getOldApprover() {
+        return this.oldApprover;
     }
 
     /**
@@ -93,8 +141,12 @@ public class ApproveOrderRequest extends Request {
 
     public static final class Builder extends Request.Builder<ApproveOrderRequest, Builder> {
         private String regionId; 
+        private Long approvalNodeId; 
+        private String approvalNodePos; 
         private String approvalType; 
         private String comment; 
+        private Long newApprover; 
+        private Long oldApprover; 
         private Long tid; 
         private Long workflowInstanceId; 
 
@@ -105,8 +157,12 @@ public class ApproveOrderRequest extends Request {
         private Builder(ApproveOrderRequest request) {
             super(request);
             this.regionId = request.regionId;
+            this.approvalNodeId = request.approvalNodeId;
+            this.approvalNodePos = request.approvalNodePos;
             this.approvalType = request.approvalType;
             this.comment = request.comment;
+            this.newApprover = request.newApprover;
+            this.oldApprover = request.oldApprover;
             this.tid = request.tid;
             this.workflowInstanceId = request.workflowInstanceId;
         } 
@@ -117,6 +173,24 @@ public class ApproveOrderRequest extends Request {
         public Builder regionId(String regionId) {
             this.putHostParameter("RegionId", regionId);
             this.regionId = regionId;
+            return this;
+        }
+
+        /**
+         * ApprovalNodeId.
+         */
+        public Builder approvalNodeId(Long approvalNodeId) {
+            this.putQueryParameter("ApprovalNodeId", approvalNodeId);
+            this.approvalNodeId = approvalNodeId;
+            return this;
+        }
+
+        /**
+         * ApprovalNodePos.
+         */
+        public Builder approvalNodePos(String approvalNodePos) {
+            this.putQueryParameter("ApprovalNodePos", approvalNodePos);
+            this.approvalNodePos = approvalNodePos;
             return this;
         }
 
@@ -140,6 +214,24 @@ public class ApproveOrderRequest extends Request {
         public Builder comment(String comment) {
             this.putQueryParameter("Comment", comment);
             this.comment = comment;
+            return this;
+        }
+
+        /**
+         * NewApprover.
+         */
+        public Builder newApprover(Long newApprover) {
+            this.putQueryParameter("NewApprover", newApprover);
+            this.newApprover = newApprover;
+            return this;
+        }
+
+        /**
+         * OldApprover.
+         */
+        public Builder oldApprover(Long oldApprover) {
+            this.putQueryParameter("OldApprover", oldApprover);
+            this.oldApprover = oldApprover;
             return this;
         }
 

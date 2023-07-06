@@ -186,7 +186,7 @@ public class AddTaskFlowEdgesRequest extends Request {
             private Long nodeFrom; 
 
             /**
-             * The error code returned if the request failed.
+             * The ID of the node where the end node of the edge is located.
              */
             public Builder nodeEnd(Long nodeEnd) {
                 this.nodeEnd = nodeEnd;
@@ -194,7 +194,7 @@ public class AddTaskFlowEdgesRequest extends Request {
             }
 
             /**
-             * The ID of the request. You can use the ID to query logs and troubleshoot issues.
+             * The ID of the node where the start node of the edge is located.
              */
             public Builder nodeFrom(Long nodeFrom) {
                 this.nodeFrom = nodeFrom;

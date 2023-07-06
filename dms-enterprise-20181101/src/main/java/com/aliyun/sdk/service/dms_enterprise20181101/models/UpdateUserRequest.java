@@ -189,7 +189,7 @@ public class UpdateUserRequest extends Request {
         }
 
         /**
-         * The roles that the user assumes. For more information about the valid values, see the Request parameters section in the [RegisterUser](~~141565~~) topic.
+         * The roles that the user assumes. For more information about the valid values, see the Request parameters section in the [UpdateUser](~~465812~~) topic.
          */
         public Builder roleNames(String roleNames) {
             this.putQueryParameter("RoleNames", roleNames);

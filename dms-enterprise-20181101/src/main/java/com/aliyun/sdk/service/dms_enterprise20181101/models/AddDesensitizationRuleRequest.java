@@ -151,7 +151,7 @@ public class AddDesensitizationRuleRequest extends Request {
         }
 
         /**
-         * FunctionParams.
+         * Algorithm parameters.
          */
         public Builder functionParams(java.util.List < java.util.Map<String, String>> functionParams) {
             this.putBodyParameter("FunctionParams", functionParams);

@@ -90,7 +90,7 @@ public class DeleteUserResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -98,9 +98,11 @@ public class DeleteUserResponseBody extends TeaModel {
         }
 
         /**
-         * *   **true**: The account was deleted.
+         * Indicates whether the request was successful. Valid values:
          * <p>
-         * *   **false**: The account failed to be deleted.
+         * 
+         * *   **true**: The request was successful.
+         * *   **false**: The request failed.
          */
         public Builder success(Boolean success) {
             this.success = success;

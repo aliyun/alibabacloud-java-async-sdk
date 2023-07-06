@@ -86,7 +86,7 @@ public class AddTaskFlowEdgesResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * EdgeIds.
+         * The list of task flow edge IDs.
          */
         public Builder edgeIds(EdgeIds edgeIds) {
             this.edgeIds = edgeIds;
@@ -94,7 +94,7 @@ public class AddTaskFlowEdgesResponseBody extends TeaModel {
         }
 
         /**
-         * AddTaskFlowEdges
+         * The error code returned if the request failed.
          */
         public Builder errorCode(String errorCode) {
             this.errorCode = errorCode;
@@ -102,7 +102,7 @@ public class AddTaskFlowEdgesResponseBody extends TeaModel {
         }
 
         /**
-         * ErrorMessage.
+         * The error message returned if the request failed.
          */
         public Builder errorMessage(String errorMessage) {
             this.errorMessage = errorMessage;
@@ -110,7 +110,7 @@ public class AddTaskFlowEdgesResponseBody extends TeaModel {
         }
 
         /**
-         * Adds directed edges for an existing task node.
+         * The ID of the request. You can use the ID to query logs and troubleshoot issues.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -118,7 +118,11 @@ public class AddTaskFlowEdgesResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * Indicates whether the request was successful. Valid values:
+         * <p>
+         * 
+         * *   **true**: The request was successful.
+         * *   **false**: The request failed.
          */
         public Builder success(Boolean success) {
             this.success = success;

@@ -780,7 +780,12 @@ public class GetInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * SellSitd.
+             * Whether sensitive data protection is enabled.  Valid values:
+             * <p>
+             * 
+             * - **true**: Enable.
+             * 
+             * - **false**: Close.
              */
             public Builder sellSitd(String sellSitd) {
                 this.sellSitd = sellSitd;
