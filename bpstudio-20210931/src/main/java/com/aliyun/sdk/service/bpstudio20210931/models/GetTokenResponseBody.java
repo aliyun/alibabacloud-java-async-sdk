@@ -206,7 +206,7 @@ public class GetTokenResponseBody extends TeaModel {
             }
 
             /**
-             * The AccessKey secret that is used to access OSS.
+             * The AccessKey secret used to access OSS.
              */
             public Builder accessKeySecret(String accessKeySecret) {
                 this.accessKeySecret = accessKeySecret;

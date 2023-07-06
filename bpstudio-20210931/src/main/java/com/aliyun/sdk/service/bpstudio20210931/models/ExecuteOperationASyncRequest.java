@@ -126,7 +126,7 @@ public class ExecuteOperationASyncRequest extends Request {
         }
 
         /**
-         * The HTTP status code. A value of 200 indicates that the request is successful, and other values indicate that the request fails.
+         * The type of the service. If you want to perform operations on an Elastic Compute Service (ECS) instance, set ServiceType to ecs.
          */
         public Builder serviceType(String serviceType) {
             this.putBodyParameter("ServiceType", serviceType);

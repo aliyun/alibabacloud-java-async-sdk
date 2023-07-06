@@ -172,7 +172,7 @@ public class ListApplicationRequest extends Request {
         }
 
         /**
-         * Status.
+         * The status of the applications to be returned.
          */
         public Builder status(String status) {
             this.putBodyParameter("Status", status);

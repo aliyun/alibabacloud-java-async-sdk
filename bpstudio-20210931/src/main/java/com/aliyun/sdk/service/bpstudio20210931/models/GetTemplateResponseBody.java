@@ -82,7 +82,7 @@ public class GetTemplateResponseBody extends TeaModel {
         }
 
         /**
-         * Data.
+         * The details of the template.
          */
         public Builder data(Data data) {
             this.data = data;
@@ -174,7 +174,7 @@ public class GetTemplateResponseBody extends TeaModel {
             private String variable; 
 
             /**
-             * 变量名
+             * Attribute.
              */
             public Builder attribute(String attribute) {
                 this.attribute = attribute;
@@ -182,7 +182,7 @@ public class GetTemplateResponseBody extends TeaModel {
             }
 
             /**
-             * 变量类型
+             * DataType.
              */
             public Builder dataType(String dataType) {
                 this.dataType = dataType;
@@ -190,7 +190,7 @@ public class GetTemplateResponseBody extends TeaModel {
             }
 
             /**
-             * 默认值
+             * DefaultValue.
              */
             public Builder defaultValue(String defaultValue) {
                 this.defaultValue = defaultValue;
@@ -198,7 +198,7 @@ public class GetTemplateResponseBody extends TeaModel {
             }
 
             /**
-             * 变量值
+             * Variable.
              */
             public Builder variable(String variable) {
                 this.variable = variable;

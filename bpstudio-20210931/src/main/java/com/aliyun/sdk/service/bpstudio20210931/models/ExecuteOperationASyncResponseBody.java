@@ -82,7 +82,7 @@ public class ExecuteOperationASyncResponseBody extends TeaModel {
         }
 
         /**
-         * Data.
+         * The ID of the operation.
          */
         public Builder data(String data) {
             this.data = data;

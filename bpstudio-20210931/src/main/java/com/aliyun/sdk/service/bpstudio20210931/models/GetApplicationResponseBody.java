@@ -13,7 +13,7 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class GetApplicationResponseBody extends TeaModel {
     @NameInMap("Code")
-    private Integer code;
+    private String code;
 
     @NameInMap("Data")
     private Data data;
@@ -42,7 +42,7 @@ public class GetApplicationResponseBody extends TeaModel {
     /**
      * @return code
      */
-    public Integer getCode() {
+    public String getCode() {
         return this.code;
     }
 
@@ -68,7 +68,7 @@ public class GetApplicationResponseBody extends TeaModel {
     }
 
     public static final class Builder {
-        private Integer code; 
+        private String code; 
         private Data data; 
         private String message; 
         private String requestId; 
@@ -76,13 +76,13 @@ public class GetApplicationResponseBody extends TeaModel {
         /**
          * The deployment result.
          */
-        public Builder code(Integer code) {
+        public Builder code(String code) {
             this.code = code;
             return this;
         }
 
         /**
-         * The ID of the resource group.
+         * The details of the application.
          */
         public Builder data(Data data) {
             this.data = data;
@@ -338,6 +338,9 @@ public class GetApplicationResponseBody extends TeaModel {
         @NameInMap("Specification")
         private String specification;
 
+        @NameInMap("type")
+        private String type;
+
         private PriceList(Builder builder) {
             this.chargeType = builder.chargeType;
             this.count = builder.count;
@@ -352,6 +355,7 @@ public class GetApplicationResponseBody extends TeaModel {
             this.remark = builder.remark;
             this.resourceCode = builder.resourceCode;
             this.specification = builder.specification;
+            this.type = builder.type;
         }
 
         public static Builder builder() {
@@ -453,6 +457,13 @@ public class GetApplicationResponseBody extends TeaModel {
             return this.specification;
         }
 
+        /**
+         * @return type
+         */
+        public String getType() {
+            return this.type;
+        }
+
         public static final class Builder {
             private String chargeType; 
             private Long count; 
@@ -467,6 +478,7 @@ public class GetApplicationResponseBody extends TeaModel {
             private String remark; 
             private String resourceCode; 
             private String specification; 
+            private String type; 
 
             /**
              * The price unit.
@@ -565,10 +577,21 @@ public class GetApplicationResponseBody extends TeaModel {
             }
 
             /**
-             * The total price.
+             * The instance type. This parameter indicates the information about the instance type. For example, 192.168.0.0/16 may be returned for a virtual private cloud (VPC), ecs.g5.large may be returned for an Elastic Compute Service (ECS) instance, and slb.s1.small may be returned for a Server Load Balancer (SLB) instance. If the resource does not have a specific type, an empty value is returned.
              */
             public Builder specification(String specification) {
                 this.specification = specification;
+                return this;
+            }
+
+            /**
+             * 创建类型：
+             * <p>
+             * </br>新建-1
+             * </br>导入-2
+             */
+            public Builder type(String type) {
+                this.type = type;
                 return this;
             }
 
@@ -959,7 +982,7 @@ public class GetApplicationResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the request.
+             * The URL of the image in the database.
              */
             public Builder imageURL(String imageURL) {
                 this.imageURL = imageURL;
@@ -975,7 +998,7 @@ public class GetApplicationResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the template associated with the application.
+             * The billing results.
              */
             public Builder priceList(java.util.List < PriceList> priceList) {
                 this.priceList = priceList;

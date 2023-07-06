@@ -106,7 +106,7 @@ public class ListApplicationResponseBody extends TeaModel {
         }
 
         /**
-         * Data.
+         * The information about the applications.
          */
         public Builder data(java.util.List < Data> data) {
             this.data = data;
@@ -278,7 +278,7 @@ public class ListApplicationResponseBody extends TeaModel {
             }
 
             /**
-             * Status.
+             * The status of the application.
              */
             public Builder status(String status) {
                 this.status = status;

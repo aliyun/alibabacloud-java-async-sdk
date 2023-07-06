@@ -85,7 +85,7 @@ public class ChangeResourceGroupRequest extends Request {
         } 
 
         /**
-         * rg-aek2ajbjoloa23q
+         * The ID of the new resource group.
          */
         public Builder newResourceGroupId(String newResourceGroupId) {
             this.putBodyParameter("NewResourceGroupId", newResourceGroupId);
@@ -94,7 +94,7 @@ public class ChangeResourceGroupRequest extends Request {
         }
 
         /**
-         * P7RMVSVM9LOVYQOM
+         * The ID of the resource.
          */
         public Builder resourceId(String resourceId) {
             this.putBodyParameter("ResourceId", resourceId);
@@ -103,7 +103,7 @@ public class ChangeResourceGroupRequest extends Request {
         }
 
         /**
-         * APPLICATION
+         * The resource type.
          */
         public Builder resourceType(String resourceType) {
             this.putBodyParameter("ResourceType", resourceType);

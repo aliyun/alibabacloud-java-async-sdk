@@ -170,11 +170,14 @@ public class ListTemplateRequest extends Request {
         }
 
         /**
-         * The criterion by which the templates are sorted. Valid values:
+         * The criterion by which the returned templates are sorted. Valid values:
          * <p>
          * 
-         * *   1: modification time
-         * *   2: creation time
+         * *   1: The templates are sorted by the time when they are updated.
+         * *   2: The templates are sorted by the time when they are created.
+         * *   3: The templates are sorted by the system.
+         * *   4: The templates are sorted by the number of times that they are used.
+         * *   If you specify an integer other than 1, 2, 3, and 4 or do not specify any value, the templates are sorted by the system.
          */
         public Builder orderType(Long orderType) {
             this.putBodyParameter("OrderType", orderType);
@@ -192,7 +195,7 @@ public class ListTemplateRequest extends Request {
         }
 
         /**
-         * The tag of the template.
+         * The tag that you want to use to query templates.
          */
         public Builder tagList(Integer tagList) {
             this.putBodyParameter("TagList", tagList);
@@ -201,7 +204,7 @@ public class ListTemplateRequest extends Request {
         }
 
         /**
-         * The type of the template.
+         * The type of the templates to be returned. Valid values: public and private
          */
         public Builder type(String type) {
             this.putBodyParameter("Type", type);

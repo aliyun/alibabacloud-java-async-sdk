@@ -22,6 +22,10 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<CreateApplicationResponse> createApplication(CreateApplicationRequest request);
 
+    /**
+      * Before you call this operation to delete an application, make sure that the application is in the `Destroyed_Success` state. Otherwise, the application fails to be deleted.`` You can call the [GetApplication](https://www.alibabacloud.com/help/zh/bp-studio/latest/api-doc-bpstudio-2021-09-31-api-doc-getapplication) operation to query the status of an application.
+      *
+     */
     CompletableFuture<DeleteApplicationResponse> deleteApplication(DeleteApplicationRequest request);
 
     CompletableFuture<DeployApplicationResponse> deployApplication(DeployApplicationRequest request);

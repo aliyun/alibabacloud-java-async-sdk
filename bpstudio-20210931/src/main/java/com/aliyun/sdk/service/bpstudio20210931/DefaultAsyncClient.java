@@ -67,6 +67,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+      * Before you call this operation to delete an application, make sure that the application is in the `Destroyed_Success` state. Otherwise, the application fails to be deleted.`` You can call the [GetApplication](https://www.alibabacloud.com/help/zh/bp-studio/latest/api-doc-bpstudio-2021-09-31-api-doc-getapplication) operation to query the status of an application.
+      *
+     */
     @Override
     public CompletableFuture<DeleteApplicationResponse> deleteApplication(DeleteApplicationRequest request) {
         try {

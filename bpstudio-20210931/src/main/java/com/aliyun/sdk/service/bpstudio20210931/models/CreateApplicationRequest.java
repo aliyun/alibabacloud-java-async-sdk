@@ -193,7 +193,11 @@ public class CreateApplicationRequest extends Request {
         }
 
         /**
-         * The name of the application that you want to create.
+         * The name of the application.
+         * <p>
+         * 
+         * *   The application name must be unique. You can call the [ListApplication](https://www.alibabacloud.com/help/zh/bp-studio/latest/api-doc-bpstudio-2021-09-31-api-doc-listapplication) operation to query the existing applications.
+         * *   The application name must be 2 to 128 characters in length. The name must start with a letter and cannot start with [http:// or https://. The name can contain letters, digits, underscores (\_), and hyphens (-).](http://https://。、（\_）、（-）。)
          */
         public Builder name(String name) {
             this.putBodyParameter("Name", name);

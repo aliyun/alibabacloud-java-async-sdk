@@ -82,7 +82,7 @@ public class GetExecuteOperationResultResponseBody extends TeaModel {
         }
 
         /**
-         * The details of the operation.
+         * The detailed result of the queried operation.
          */
         public Builder data(Data data) {
             this.data = data;

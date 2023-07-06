@@ -74,7 +74,7 @@ public class ChangeResourceGroupResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * Code.
+         * The HTTP status code. A value of 200 indicates that the request is successful. Other values indicate that the request failed.
          */
         public Builder code(Long code) {
             this.code = code;
@@ -82,7 +82,7 @@ public class ChangeResourceGroupResponseBody extends TeaModel {
         }
 
         /**
-         * Data.
+         * No business data is returned for this parameter.
          */
         public Builder data(String data) {
             this.data = data;
@@ -90,7 +90,7 @@ public class ChangeResourceGroupResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * The error message returned if the request failed.
          */
         public Builder message(String message) {
             this.message = message;
@@ -98,7 +98,7 @@ public class ChangeResourceGroupResponseBody extends TeaModel {
         }
 
         /**
-         * Id of the request
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
