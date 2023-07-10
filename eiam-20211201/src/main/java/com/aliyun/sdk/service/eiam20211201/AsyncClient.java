@@ -40,6 +40,8 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<CreateInstanceResponse> createInstance(CreateInstanceRequest request);
 
+    CompletableFuture<CreateNetworkAccessEndpointResponse> createNetworkAccessEndpoint(CreateNetworkAccessEndpointRequest request);
+
     CompletableFuture<CreateOrganizationalUnitResponse> createOrganizationalUnit(CreateOrganizationalUnitRequest request);
 
     CompletableFuture<CreateUserResponse> createUser(CreateUserRequest request);
@@ -59,6 +61,8 @@ public interface AsyncClient extends SdkAutoCloseable {
       *
      */
     CompletableFuture<DeleteInstanceResponse> deleteInstance(DeleteInstanceRequest request);
+
+    CompletableFuture<DeleteNetworkAccessEndpointResponse> deleteNetworkAccessEndpoint(DeleteNetworkAccessEndpointRequest request);
 
     CompletableFuture<DeleteOrganizationalUnitResponse> deleteOrganizationalUnit(DeleteOrganizationalUnitRequest request);
 
@@ -102,6 +106,8 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<GetInstanceResponse> getInstance(GetInstanceRequest request);
 
+    CompletableFuture<GetNetworkAccessEndpointResponse> getNetworkAccessEndpoint(GetNetworkAccessEndpointRequest request);
+
     CompletableFuture<GetOrganizationalUnitResponse> getOrganizationalUnit(GetOrganizationalUnitRequest request);
 
     CompletableFuture<GetPasswordComplexityConfigurationResponse> getPasswordComplexityConfiguration(GetPasswordComplexityConfigurationRequest request);
@@ -135,6 +141,14 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<ListGroupsForUserResponse> listGroupsForUser(ListGroupsForUserRequest request);
 
     CompletableFuture<ListInstancesResponse> listInstances(ListInstancesRequest request);
+
+    CompletableFuture<ListNetworkAccessEndpointAvailableRegionsResponse> listNetworkAccessEndpointAvailableRegions(ListNetworkAccessEndpointAvailableRegionsRequest request);
+
+    CompletableFuture<ListNetworkAccessEndpointAvailableZonesResponse> listNetworkAccessEndpointAvailableZones(ListNetworkAccessEndpointAvailableZonesRequest request);
+
+    CompletableFuture<ListNetworkAccessEndpointsResponse> listNetworkAccessEndpoints(ListNetworkAccessEndpointsRequest request);
+
+    CompletableFuture<ListNetworkAccessPathsResponse> listNetworkAccessPaths(ListNetworkAccessPathsRequest request);
 
     CompletableFuture<ListOrganizationalUnitParentsResponse> listOrganizationalUnitParents(ListOrganizationalUnitParentsRequest request);
 
@@ -195,6 +209,8 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<UpdateGroupDescriptionResponse> updateGroupDescription(UpdateGroupDescriptionRequest request);
 
     CompletableFuture<UpdateInstanceDescriptionResponse> updateInstanceDescription(UpdateInstanceDescriptionRequest request);
+
+    CompletableFuture<UpdateNetworkAccessEndpointNameResponse> updateNetworkAccessEndpointName(UpdateNetworkAccessEndpointNameRequest request);
 
     CompletableFuture<UpdateOrganizationalUnitResponse> updateOrganizationalUnit(UpdateOrganizationalUnitRequest request);
 

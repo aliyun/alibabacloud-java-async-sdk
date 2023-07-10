@@ -736,6 +736,9 @@ public class GetApplicationSsoConfigResponseBody extends TeaModel {
 
     }
     public static class SamlSsoConfig extends TeaModel {
+        @NameInMap("AssertionSigned")
+        private Boolean assertionSigned;
+
         @NameInMap("AttributeStatements")
         private java.util.List < AttributeStatements> attributeStatements;
 
@@ -748,6 +751,9 @@ public class GetApplicationSsoConfigResponseBody extends TeaModel {
         @NameInMap("NameIdValueExpression")
         private String nameIdValueExpression;
 
+        @NameInMap("ResponseSigned")
+        private Boolean responseSigned;
+
         @NameInMap("SignatureAlgorithm")
         private String signatureAlgorithm;
 
@@ -758,10 +764,12 @@ public class GetApplicationSsoConfigResponseBody extends TeaModel {
         private String spSsoAcsUrl;
 
         private SamlSsoConfig(Builder builder) {
+            this.assertionSigned = builder.assertionSigned;
             this.attributeStatements = builder.attributeStatements;
             this.defaultRelayState = builder.defaultRelayState;
             this.nameIdFormat = builder.nameIdFormat;
             this.nameIdValueExpression = builder.nameIdValueExpression;
+            this.responseSigned = builder.responseSigned;
             this.signatureAlgorithm = builder.signatureAlgorithm;
             this.spEntityId = builder.spEntityId;
             this.spSsoAcsUrl = builder.spSsoAcsUrl;
@@ -773,6 +781,13 @@ public class GetApplicationSsoConfigResponseBody extends TeaModel {
 
         public static SamlSsoConfig create() {
             return builder().build();
+        }
+
+        /**
+         * @return assertionSigned
+         */
+        public Boolean getAssertionSigned() {
+            return this.assertionSigned;
         }
 
         /**
@@ -804,6 +819,13 @@ public class GetApplicationSsoConfigResponseBody extends TeaModel {
         }
 
         /**
+         * @return responseSigned
+         */
+        public Boolean getResponseSigned() {
+            return this.responseSigned;
+        }
+
+        /**
          * @return signatureAlgorithm
          */
         public String getSignatureAlgorithm() {
@@ -825,13 +847,23 @@ public class GetApplicationSsoConfigResponseBody extends TeaModel {
         }
 
         public static final class Builder {
+            private Boolean assertionSigned; 
             private java.util.List < AttributeStatements> attributeStatements; 
             private String defaultRelayState; 
             private String nameIdFormat; 
             private String nameIdValueExpression; 
+            private Boolean responseSigned; 
             private String signatureAlgorithm; 
             private String spEntityId; 
             private String spSsoAcsUrl; 
+
+            /**
+             * assertion是否签名
+             */
+            public Builder assertionSigned(Boolean assertionSigned) {
+                this.assertionSigned = assertionSigned;
+                return this;
+            }
 
             /**
              * The additional user attributes in the SAML assertion.
@@ -868,6 +900,14 @@ public class GetApplicationSsoConfigResponseBody extends TeaModel {
              */
             public Builder nameIdValueExpression(String nameIdValueExpression) {
                 this.nameIdValueExpression = nameIdValueExpression;
+                return this;
+            }
+
+            /**
+             * response是否签名
+             */
+            public Builder responseSigned(Boolean responseSigned) {
+                this.responseSigned = responseSigned;
                 return this;
             }
 
