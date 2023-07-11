@@ -12,6 +12,9 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeVersionConfigResponseBody</p>
  */
 public class DescribeVersionConfigResponseBody extends TeaModel {
+    @NameInMap("AgentlessCapacity")
+    private Long agentlessCapacity;
+
     @NameInMap("AllowPartialBuy")
     private Integer allowPartialBuy;
 
@@ -23,6 +26,9 @@ public class DescribeVersionConfigResponseBody extends TeaModel {
 
     @NameInMap("AssetLevel")
     private Integer assetLevel;
+
+    @NameInMap("CspmCapacity")
+    private Long cspmCapacity;
 
     @NameInMap("HighestVersion")
     private Integer highestVersion;
@@ -60,6 +66,9 @@ public class DescribeVersionConfigResponseBody extends TeaModel {
     @NameInMap("OpenTime")
     private Long openTime;
 
+    @NameInMap("RaspCapacity")
+    private Long raspCapacity;
+
     @NameInMap("ReleaseTime")
     private Long releaseTime;
 
@@ -87,6 +96,9 @@ public class DescribeVersionConfigResponseBody extends TeaModel {
     @NameInMap("VmCores")
     private Integer vmCores;
 
+    @NameInMap("VulFixCapacity")
+    private Long vulFixCapacity;
+
     @NameInMap("WebLock")
     private Integer webLock;
 
@@ -94,10 +106,12 @@ public class DescribeVersionConfigResponseBody extends TeaModel {
     private Long webLockAuthCount;
 
     private DescribeVersionConfigResponseBody(Builder builder) {
+        this.agentlessCapacity = builder.agentlessCapacity;
         this.allowPartialBuy = builder.allowPartialBuy;
         this.appWhiteList = builder.appWhiteList;
         this.appWhiteListAuthCount = builder.appWhiteListAuthCount;
         this.assetLevel = builder.assetLevel;
+        this.cspmCapacity = builder.cspmCapacity;
         this.highestVersion = builder.highestVersion;
         this.honeypotCapacity = builder.honeypotCapacity;
         this.imageScanCapacity = builder.imageScanCapacity;
@@ -110,6 +124,7 @@ public class DescribeVersionConfigResponseBody extends TeaModel {
         this.MVAuthCount = builder.MVAuthCount;
         this.MVUnusedAuthCount = builder.MVUnusedAuthCount;
         this.openTime = builder.openTime;
+        this.raspCapacity = builder.raspCapacity;
         this.releaseTime = builder.releaseTime;
         this.requestId = builder.requestId;
         this.sasLog = builder.sasLog;
@@ -119,6 +134,7 @@ public class DescribeVersionConfigResponseBody extends TeaModel {
         this.userDefinedAlarms = builder.userDefinedAlarms;
         this.version = builder.version;
         this.vmCores = builder.vmCores;
+        this.vulFixCapacity = builder.vulFixCapacity;
         this.webLock = builder.webLock;
         this.webLockAuthCount = builder.webLockAuthCount;
     }
@@ -129,6 +145,13 @@ public class DescribeVersionConfigResponseBody extends TeaModel {
 
     public static DescribeVersionConfigResponseBody create() {
         return builder().build();
+    }
+
+    /**
+     * @return agentlessCapacity
+     */
+    public Long getAgentlessCapacity() {
+        return this.agentlessCapacity;
     }
 
     /**
@@ -157,6 +180,13 @@ public class DescribeVersionConfigResponseBody extends TeaModel {
      */
     public Integer getAssetLevel() {
         return this.assetLevel;
+    }
+
+    /**
+     * @return cspmCapacity
+     */
+    public Long getCspmCapacity() {
+        return this.cspmCapacity;
     }
 
     /**
@@ -244,6 +274,13 @@ public class DescribeVersionConfigResponseBody extends TeaModel {
     }
 
     /**
+     * @return raspCapacity
+     */
+    public Long getRaspCapacity() {
+        return this.raspCapacity;
+    }
+
+    /**
      * @return releaseTime
      */
     public Long getReleaseTime() {
@@ -307,6 +344,13 @@ public class DescribeVersionConfigResponseBody extends TeaModel {
     }
 
     /**
+     * @return vulFixCapacity
+     */
+    public Long getVulFixCapacity() {
+        return this.vulFixCapacity;
+    }
+
+    /**
      * @return webLock
      */
     public Integer getWebLock() {
@@ -321,10 +365,12 @@ public class DescribeVersionConfigResponseBody extends TeaModel {
     }
 
     public static final class Builder {
+        private Long agentlessCapacity; 
         private Integer allowPartialBuy; 
         private Integer appWhiteList; 
         private Long appWhiteListAuthCount; 
         private Integer assetLevel; 
+        private Long cspmCapacity; 
         private Integer highestVersion; 
         private Long honeypotCapacity; 
         private Long imageScanCapacity; 
@@ -337,6 +383,7 @@ public class DescribeVersionConfigResponseBody extends TeaModel {
         private Integer MVAuthCount; 
         private Integer MVUnusedAuthCount; 
         private Long openTime; 
+        private Long raspCapacity; 
         private Long releaseTime; 
         private String requestId; 
         private Integer sasLog; 
@@ -346,8 +393,17 @@ public class DescribeVersionConfigResponseBody extends TeaModel {
         private Integer userDefinedAlarms; 
         private Integer version; 
         private Integer vmCores; 
+        private Long vulFixCapacity; 
         private Integer webLock; 
         private Long webLockAuthCount; 
+
+        /**
+         * AgentlessCapacity.
+         */
+        public Builder agentlessCapacity(Long agentlessCapacity) {
+            this.agentlessCapacity = agentlessCapacity;
+            return this;
+        }
 
         /**
          * Indicates whether the pay-as-you-go billing method is supported.
@@ -377,7 +433,7 @@ public class DescribeVersionConfigResponseBody extends TeaModel {
          * The quota for the application whitelist feature.
          * <p>
          * 
-         * > The quantity of servers that are allowed by the quota is deducted by one each time you apply an application whitelist to a server. After you enable the application whitelist feature, the quota is 20 by default.
+         * >  The quantity of servers that are allowed by the quota is deducted by one each time you apply an application whitelist to a server. After you enable the application whitelist feature, the quota is 20 by default.
          */
         public Builder appWhiteListAuthCount(Long appWhiteListAuthCount) {
             this.appWhiteListAuthCount = appWhiteListAuthCount;
@@ -393,6 +449,14 @@ public class DescribeVersionConfigResponseBody extends TeaModel {
         }
 
         /**
+         * CspmCapacity.
+         */
+        public Builder cspmCapacity(Long cspmCapacity) {
+            this.cspmCapacity = cspmCapacity;
+            return this;
+        }
+
+        /**
          * The most advanced edition that is used. Valid values:
          * <p>
          * 
@@ -403,7 +467,7 @@ public class DescribeVersionConfigResponseBody extends TeaModel {
          * *   **7**: Ultimate edition
          * *   **10**: Value-added Plan edition
          * 
-         * > If you purchase the Multi-version edition of Security Center, the value indicates the most advanced edition that is used in the Multi-version edition. If you do not purchase the Multi-version edition of Security Center, the value indicates the edition of Security Center.
+         * >  If you purchase the Multi-version edition of Security Center, the value indicates the most advanced edition that is used in the Multi-version edition. If you do not purchase the Multi-version edition of Security Center, the value indicates the edition of Security Center.
          */
         public Builder highestVersion(Integer highestVersion) {
             this.highestVersion = highestVersion;
@@ -447,11 +511,11 @@ public class DescribeVersionConfigResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether Security Center runs the latest version of the Multi-version edition.
+         * Indicates whether Security Center runs the latest version of the Multi-version edition. Valid values:
          * <p>
          * 
-         * *   **true**: yes
-         * *   **false**: no
+         * *   **true**
+         * *   **false**
          */
         public Builder isNewMultiVersion(Boolean isNewMultiVersion) {
             this.isNewMultiVersion = isNewMultiVersion;
@@ -515,10 +579,18 @@ public class DescribeVersionConfigResponseBody extends TeaModel {
         }
 
         /**
+         * RaspCapacity.
+         */
+        public Builder raspCapacity(Long raspCapacity) {
+            this.raspCapacity = raspCapacity;
+            return this;
+        }
+
+        /**
          * The timestamp when Security Center is released. Unit: milliseconds. The value of this parameter is seven days after Security Center expires.
          * <p>
          * 
-         * > If you do not renew the subscription within seven days after the expiration date, the Value-added Plan, Anti-virus, Advanced, or Enterprise edition is downgraded to the Basic edition. In this case, you can no longer view the existing configurations or statistics such as DDoS alerts. You must purchase the Anti-virus, Advanced, or Enterprise edition to continue using relevant features. For more information, see [Purchase Security Center](~~42308~~).
+         * > If you do not renew the subscription within seven days after the expiration date, the Value-added Plan, Basic Anti-Virus, Advanced, or Enterprise edition is downgraded to the Basic edition. In this case, you can no longer view the existing configurations or statistics such as DDoS alerts. You must purchase the Anti-virus, Advanced, or Enterprise edition to continue using relevant features. For more information, see [Purchase Security Center](~~42308~~).
          */
         public Builder releaseTime(Long releaseTime) {
             this.releaseTime = releaseTime;
@@ -526,7 +598,7 @@ public class DescribeVersionConfigResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -534,7 +606,7 @@ public class DescribeVersionConfigResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether the log analysis feature is purchased. Valid values:
+         * Indicates whether log analysis is purchased. Valid values:
          * <p>
          * 
          * *   **0**: no
@@ -574,7 +646,7 @@ public class DescribeVersionConfigResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether the custom alerting feature is enabled. Valid values:
+         * Indicates whether the custom alert feature is enabled. Valid values:
          * <p>
          * 
          * *   **0**: no
@@ -611,6 +683,14 @@ public class DescribeVersionConfigResponseBody extends TeaModel {
         }
 
         /**
+         * VulFixCapacity.
+         */
+        public Builder vulFixCapacity(Long vulFixCapacity) {
+            this.vulFixCapacity = vulFixCapacity;
+            return this;
+        }
+
+        /**
          * Indicates whether the web tamper proofing feature is enabled. Valid values:
          * <p>
          * 
@@ -623,10 +703,10 @@ public class DescribeVersionConfigResponseBody extends TeaModel {
         }
 
         /**
-         * The quota for the web tamper proofing feature. The quantity of servers that are allowed by the quota is deducted by one each time you enable the web tamper proofing feature for a server. Valid values: 0 to N.
+         * The quota for the web tamper proofing feature. The quantity of servers that are allowed by the quota is deducted by one each time a server is protected by the web tamper proofing feature. Valid values: 0 to N.
          * <p>
          * 
-         * > N indicates the number of servers that you own.
+         * >  N indicates the number of servers that you own.
          */
         public Builder webLockAuthCount(Long webLockAuthCount) {
             this.webLockAuthCount = webLockAuthCount;

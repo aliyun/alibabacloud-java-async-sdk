@@ -37,6 +37,10 @@ public class DescribeCloudCenterInstancesRequest extends Request {
     private String machineTypes;
 
     @Query
+    @NameInMap("NextToken")
+    private String nextToken;
+
+    @Query
     @NameInMap("NoGroupTrace")
     private Boolean noGroupTrace;
 
@@ -48,6 +52,10 @@ public class DescribeCloudCenterInstancesRequest extends Request {
     @NameInMap("RegionId")
     private String regionId;
 
+    @Query
+    @NameInMap("UseNextToken")
+    private Boolean useNextToken;
+
     private DescribeCloudCenterInstancesRequest(Builder builder) {
         super(builder);
         this.criteria = builder.criteria;
@@ -56,9 +64,11 @@ public class DescribeCloudCenterInstancesRequest extends Request {
         this.lang = builder.lang;
         this.logicalExp = builder.logicalExp;
         this.machineTypes = builder.machineTypes;
+        this.nextToken = builder.nextToken;
         this.noGroupTrace = builder.noGroupTrace;
         this.pageSize = builder.pageSize;
         this.regionId = builder.regionId;
+        this.useNextToken = builder.useNextToken;
     }
 
     public static Builder builder() {
@@ -117,6 +127,13 @@ public class DescribeCloudCenterInstancesRequest extends Request {
     }
 
     /**
+     * @return nextToken
+     */
+    public String getNextToken() {
+        return this.nextToken;
+    }
+
+    /**
      * @return noGroupTrace
      */
     public Boolean getNoGroupTrace() {
@@ -137,6 +154,13 @@ public class DescribeCloudCenterInstancesRequest extends Request {
         return this.regionId;
     }
 
+    /**
+     * @return useNextToken
+     */
+    public Boolean getUseNextToken() {
+        return this.useNextToken;
+    }
+
     public static final class Builder extends Request.Builder<DescribeCloudCenterInstancesRequest, Builder> {
         private String criteria; 
         private Integer currentPage; 
@@ -144,9 +168,11 @@ public class DescribeCloudCenterInstancesRequest extends Request {
         private String lang; 
         private String logicalExp; 
         private String machineTypes; 
+        private String nextToken; 
         private Boolean noGroupTrace; 
         private Integer pageSize; 
         private String regionId; 
+        private Boolean useNextToken; 
 
         private Builder() {
             super();
@@ -160,9 +186,11 @@ public class DescribeCloudCenterInstancesRequest extends Request {
             this.lang = request.lang;
             this.logicalExp = request.logicalExp;
             this.machineTypes = request.machineTypes;
+            this.nextToken = request.nextToken;
             this.noGroupTrace = request.noGroupTrace;
             this.pageSize = request.pageSize;
             this.regionId = request.regionId;
+            this.useNextToken = request.useNextToken;
         } 
 
         /**
@@ -240,6 +268,15 @@ public class DescribeCloudCenterInstancesRequest extends Request {
         }
 
         /**
+         * NextToken.
+         */
+        public Builder nextToken(String nextToken) {
+            this.putQueryParameter("NextToken", nextToken);
+            this.nextToken = nextToken;
+            return this;
+        }
+
+        /**
          * Specifies whether to internationalize the name of the **default** group. Default value: **false**. Valid values:
          * <p>
          * 
@@ -267,6 +304,15 @@ public class DescribeCloudCenterInstancesRequest extends Request {
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
             this.regionId = regionId;
+            return this;
+        }
+
+        /**
+         * UseNextToken.
+         */
+        public Builder useNextToken(Boolean useNextToken) {
+            this.putQueryParameter("UseNextToken", useNextToken);
+            this.useNextToken = useNextToken;
             return this;
         }
 

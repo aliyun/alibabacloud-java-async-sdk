@@ -1211,6 +1211,9 @@ public class DescribeCloudCenterInstancesResponseBody extends TeaModel {
         @NameInMap("CurrentPage")
         private Integer currentPage;
 
+        @NameInMap("NextToken")
+        private String nextToken;
+
         @NameInMap("PageSize")
         private Integer pageSize;
 
@@ -1220,6 +1223,7 @@ public class DescribeCloudCenterInstancesResponseBody extends TeaModel {
         private PageInfo(Builder builder) {
             this.count = builder.count;
             this.currentPage = builder.currentPage;
+            this.nextToken = builder.nextToken;
             this.pageSize = builder.pageSize;
             this.totalCount = builder.totalCount;
         }
@@ -1247,6 +1251,13 @@ public class DescribeCloudCenterInstancesResponseBody extends TeaModel {
         }
 
         /**
+         * @return nextToken
+         */
+        public String getNextToken() {
+            return this.nextToken;
+        }
+
+        /**
          * @return pageSize
          */
         public Integer getPageSize() {
@@ -1263,6 +1274,7 @@ public class DescribeCloudCenterInstancesResponseBody extends TeaModel {
         public static final class Builder {
             private Integer count; 
             private Integer currentPage; 
+            private String nextToken; 
             private Integer pageSize; 
             private Integer totalCount; 
 
@@ -1279,6 +1291,14 @@ public class DescribeCloudCenterInstancesResponseBody extends TeaModel {
              */
             public Builder currentPage(Integer currentPage) {
                 this.currentPage = currentPage;
+                return this;
+            }
+
+            /**
+             * NextToken.
+             */
+            public Builder nextToken(String nextToken) {
+                this.nextToken = nextToken;
                 return this;
             }
 

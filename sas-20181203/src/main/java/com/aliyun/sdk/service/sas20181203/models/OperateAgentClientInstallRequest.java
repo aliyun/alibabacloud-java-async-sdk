@@ -21,6 +21,14 @@ public class OperateAgentClientInstallRequest extends Request {
     private String lang;
 
     @Query
+    @NameInMap("Os")
+    private String os;
+
+    @Query
+    @NameInMap("Region")
+    private String region;
+
+    @Query
     @NameInMap("Uuids")
     private String uuids;
 
@@ -28,6 +36,8 @@ public class OperateAgentClientInstallRequest extends Request {
         super(builder);
         this.instanceIds = builder.instanceIds;
         this.lang = builder.lang;
+        this.os = builder.os;
+        this.region = builder.region;
         this.uuids = builder.uuids;
     }
 
@@ -59,6 +69,20 @@ public class OperateAgentClientInstallRequest extends Request {
     }
 
     /**
+     * @return os
+     */
+    public String getOs() {
+        return this.os;
+    }
+
+    /**
+     * @return region
+     */
+    public String getRegion() {
+        return this.region;
+    }
+
+    /**
      * @return uuids
      */
     public String getUuids() {
@@ -68,6 +92,8 @@ public class OperateAgentClientInstallRequest extends Request {
     public static final class Builder extends Request.Builder<OperateAgentClientInstallRequest, Builder> {
         private String instanceIds; 
         private String lang; 
+        private String os; 
+        private String region; 
         private String uuids; 
 
         private Builder() {
@@ -78,6 +104,8 @@ public class OperateAgentClientInstallRequest extends Request {
             super(request);
             this.instanceIds = request.instanceIds;
             this.lang = request.lang;
+            this.os = request.os;
+            this.region = request.region;
             this.uuids = request.uuids;
         } 
 
@@ -103,6 +131,24 @@ public class OperateAgentClientInstallRequest extends Request {
         public Builder lang(String lang) {
             this.putQueryParameter("Lang", lang);
             this.lang = lang;
+            return this;
+        }
+
+        /**
+         * Os.
+         */
+        public Builder os(String os) {
+            this.putQueryParameter("Os", os);
+            this.os = os;
+            return this;
+        }
+
+        /**
+         * Region.
+         */
+        public Builder region(String region) {
+            this.putQueryParameter("Region", region);
+            this.region = region;
             return this;
         }
 

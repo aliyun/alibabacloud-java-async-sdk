@@ -13,6 +13,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class ChangeCheckConfigRequest extends Request {
     @Query
+    @NameInMap("CycleDays")
+    private java.util.List < Integer > cycleDays;
+
+    @Query
     @NameInMap("EndTime")
     private Integer endTime;
 
@@ -30,6 +34,7 @@ public class ChangeCheckConfigRequest extends Request {
 
     private ChangeCheckConfigRequest(Builder builder) {
         super(builder);
+        this.cycleDays = builder.cycleDays;
         this.endTime = builder.endTime;
         this.regionId = builder.regionId;
         this.standardIds = builder.standardIds;
@@ -47,6 +52,13 @@ public class ChangeCheckConfigRequest extends Request {
     @Override
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return cycleDays
+     */
+    public java.util.List < Integer > getCycleDays() {
+        return this.cycleDays;
     }
 
     /**
@@ -78,6 +90,7 @@ public class ChangeCheckConfigRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<ChangeCheckConfigRequest, Builder> {
+        private java.util.List < Integer > cycleDays; 
         private Integer endTime; 
         private String regionId; 
         private java.util.List < Long > standardIds; 
@@ -89,11 +102,21 @@ public class ChangeCheckConfigRequest extends Request {
 
         private Builder(ChangeCheckConfigRequest request) {
             super(request);
+            this.cycleDays = request.cycleDays;
             this.endTime = request.endTime;
             this.regionId = request.regionId;
             this.standardIds = request.standardIds;
             this.startTime = request.startTime;
         } 
+
+        /**
+         * CycleDays.
+         */
+        public Builder cycleDays(java.util.List < Integer > cycleDays) {
+            this.putQueryParameter("CycleDays", cycleDays);
+            this.cycleDays = cycleDays;
+            return this;
+        }
 
         /**
          * The end time of the check. The value specifies a point in time in a day. The time period that is specified by the start time and end time must be one of the following time periods:

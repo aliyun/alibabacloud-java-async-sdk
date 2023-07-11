@@ -13,12 +13,17 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class OperationCancelIgnoreSuspEventRequest extends Request {
     @Query
+    @NameInMap("Remark")
+    private String remark;
+
+    @Query
     @NameInMap("SecurityEventIds")
     @Validation(required = true)
     private java.util.List < Long > securityEventIds;
 
     private OperationCancelIgnoreSuspEventRequest(Builder builder) {
         super(builder);
+        this.remark = builder.remark;
         this.securityEventIds = builder.securityEventIds;
     }
 
@@ -36,6 +41,13 @@ public class OperationCancelIgnoreSuspEventRequest extends Request {
     }
 
     /**
+     * @return remark
+     */
+    public String getRemark() {
+        return this.remark;
+    }
+
+    /**
      * @return securityEventIds
      */
     public java.util.List < Long > getSecurityEventIds() {
@@ -43,6 +55,7 @@ public class OperationCancelIgnoreSuspEventRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<OperationCancelIgnoreSuspEventRequest, Builder> {
+        private String remark; 
         private java.util.List < Long > securityEventIds; 
 
         private Builder() {
@@ -51,8 +64,18 @@ public class OperationCancelIgnoreSuspEventRequest extends Request {
 
         private Builder(OperationCancelIgnoreSuspEventRequest request) {
             super(request);
+            this.remark = request.remark;
             this.securityEventIds = request.securityEventIds;
         } 
+
+        /**
+         * Remark.
+         */
+        public Builder remark(String remark) {
+            this.putQueryParameter("Remark", remark);
+            this.remark = remark;
+            return this;
+        }
 
         /**
          * The IDs of alert events.

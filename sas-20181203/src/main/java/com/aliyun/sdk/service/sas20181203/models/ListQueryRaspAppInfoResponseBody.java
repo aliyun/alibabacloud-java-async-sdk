@@ -226,7 +226,7 @@ public class ListQueryRaspAppInfoResponseBody extends TeaModel {
             private String uuid; 
 
             /**
-             * rasp 应用名称
+             * RaspAppName.
              */
             public Builder raspAppName(String raspAppName) {
                 this.raspAppName = raspAppName;
@@ -234,7 +234,7 @@ public class ListQueryRaspAppInfoResponseBody extends TeaModel {
             }
 
             /**
-             * rasp 在线状态
+             * RaspOnlineStatus.
              */
             public Builder raspOnlineStatus(Integer raspOnlineStatus) {
                 this.raspOnlineStatus = raspOnlineStatus;

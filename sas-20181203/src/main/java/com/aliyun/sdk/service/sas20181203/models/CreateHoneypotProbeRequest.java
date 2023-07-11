@@ -197,7 +197,7 @@ public class CreateHoneypotProbeRequest extends Request {
         } 
 
         /**
-         * 检查类型 arp
+         * Arp.
          */
         public Builder arp(Boolean arp) {
             this.putQueryParameter("Arp", arp);
@@ -206,7 +206,7 @@ public class CreateHoneypotProbeRequest extends Request {
         }
 
         /**
-         * 业务分组
+         * BusinessGroupId.
          */
         public Builder businessGroupId(String businessGroupId) {
             this.putQueryParameter("BusinessGroupId", businessGroupId);
@@ -215,7 +215,7 @@ public class CreateHoneypotProbeRequest extends Request {
         }
 
         /**
-         * 管理节点id
+         * ControlNodeId.
          */
         public Builder controlNodeId(String controlNodeId) {
             this.putQueryParameter("ControlNodeId", controlNodeId);
@@ -224,7 +224,7 @@ public class CreateHoneypotProbeRequest extends Request {
         }
 
         /**
-         * 探针名称
+         * DisplayName.
          */
         public Builder displayName(String displayName) {
             this.putQueryParameter("DisplayName", displayName);
@@ -233,7 +233,7 @@ public class CreateHoneypotProbeRequest extends Request {
         }
 
         /**
-         * 蜜罐绑定信息
+         * HoneypotBindList.
          */
         public Builder honeypotBindList(java.util.List < HoneypotBindList> honeypotBindList) {
             this.putQueryParameter("HoneypotBindList", honeypotBindList);
@@ -242,7 +242,7 @@ public class CreateHoneypotProbeRequest extends Request {
         }
 
         /**
-         * 检测类型 ping
+         * Ping.
          */
         public Builder ping(Boolean ping) {
             this.putQueryParameter("Ping", ping);
@@ -251,7 +251,7 @@ public class CreateHoneypotProbeRequest extends Request {
         }
 
         /**
-         * 探针类型 主机探针 VPC黑洞探针
+         * ProbeType.
          */
         public Builder probeType(String probeType) {
             this.putQueryParameter("ProbeType", probeType);
@@ -260,7 +260,7 @@ public class CreateHoneypotProbeRequest extends Request {
         }
 
         /**
-         * 探针版本
+         * ProbeVersion.
          */
         public Builder probeVersion(String probeVersion) {
             this.putQueryParameter("ProbeVersion", probeVersion);
@@ -278,7 +278,7 @@ public class CreateHoneypotProbeRequest extends Request {
         }
 
         /**
-         * 实例
+         * Uuid.
          */
         public Builder uuid(String uuid) {
             this.putQueryParameter("Uuid", uuid);
@@ -287,7 +287,7 @@ public class CreateHoneypotProbeRequest extends Request {
         }
 
         /**
-         * vpcId
+         * VpcId.
          */
         public Builder vpcId(String vpcId) {
             this.putQueryParameter("VpcId", vpcId);

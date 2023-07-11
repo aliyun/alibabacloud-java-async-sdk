@@ -461,7 +461,7 @@ public class DescribeAffectedMaliciousFileImagesRequest extends Request {
          * The ID of the image repository.
          * <p>
          * 
-         * >  You can call the [ListRepository](~~ListRepository~~) operation to query the IDs of image repositories from the value of the **RepoId** response parameter.
+         * >  You can call the [ListRepository](~~451339~~) operation to query the IDs of image repositories from the value of the **RepoId** response parameter.
          */
         public Builder repoId(String repoId) {
             this.putQueryParameter("RepoId", repoId);
@@ -473,7 +473,7 @@ public class DescribeAffectedMaliciousFileImagesRequest extends Request {
          * The ID of the container image.
          * <p>
          * 
-         * >  You can call the [ListRepository](~~ListRepository~~) operation to query the IDs of container images from the value of the **InstanceId** response parameter.
+         * >  You can call the [ListRepository](~~451339~~) operation to query the IDs of container images from the value of the **InstanceId** response parameter.
          */
         public Builder repoInstanceId(String repoInstanceId) {
             this.putQueryParameter("RepoInstanceId", repoInstanceId);

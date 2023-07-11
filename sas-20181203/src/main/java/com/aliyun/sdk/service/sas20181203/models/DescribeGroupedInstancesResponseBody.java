@@ -107,6 +107,9 @@ public class DescribeGroupedInstancesResponseBody extends TeaModel {
         @NameInMap("InstanceCount")
         private String instanceCount;
 
+        @NameInMap("Os")
+        private String os;
+
         @NameInMap("RiskInstanceCount")
         private String riskInstanceCount;
 
@@ -119,6 +122,7 @@ public class DescribeGroupedInstancesResponseBody extends TeaModel {
             this.fieldAliasName = builder.fieldAliasName;
             this.groupFlag = builder.groupFlag;
             this.instanceCount = builder.instanceCount;
+            this.os = builder.os;
             this.riskInstanceCount = builder.riskInstanceCount;
             this.unProtectedInstanceCount = builder.unProtectedInstanceCount;
         }
@@ -167,6 +171,13 @@ public class DescribeGroupedInstancesResponseBody extends TeaModel {
         }
 
         /**
+         * @return os
+         */
+        public String getOs() {
+            return this.os;
+        }
+
+        /**
          * @return riskInstanceCount
          */
         public String getRiskInstanceCount() {
@@ -186,6 +197,7 @@ public class DescribeGroupedInstancesResponseBody extends TeaModel {
             private String fieldAliasName; 
             private Integer groupFlag; 
             private String instanceCount; 
+            private String os; 
             private String riskInstanceCount; 
             private String unProtectedInstanceCount; 
 
@@ -233,6 +245,14 @@ public class DescribeGroupedInstancesResponseBody extends TeaModel {
              */
             public Builder instanceCount(String instanceCount) {
                 this.instanceCount = instanceCount;
+                return this;
+            }
+
+            /**
+             * Os.
+             */
+            public Builder os(String os) {
+                this.os = os;
                 return this;
             }
 

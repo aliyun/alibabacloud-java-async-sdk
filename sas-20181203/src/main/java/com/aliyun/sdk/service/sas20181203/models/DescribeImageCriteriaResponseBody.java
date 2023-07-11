@@ -50,7 +50,7 @@ public class DescribeImageCriteriaResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * CriteriaList.
+         * The list of the search conditions.
          */
         public Builder criteriaList(java.util.List < CriteriaList> criteriaList) {
             this.criteriaList = criteriaList;
@@ -58,7 +58,7 @@ public class DescribeImageCriteriaResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -122,7 +122,14 @@ public class DescribeImageCriteriaResponseBody extends TeaModel {
             private String values; 
 
             /**
-             * Name.
+             * The name of the search condition.
+             * <p>
+             * - **tag**: the tag of the image
+             * - **digest**: the digest of the image
+             * - **vulStatus**: the status of the vulnerability
+             * - **alarmStatus**: the status of the alert
+             * - **riskStatus**: the status of the risk
+             * - **registryType**: the type of the image repository
              */
             public Builder name(String name) {
                 this.name = name;
@@ -130,7 +137,10 @@ public class DescribeImageCriteriaResponseBody extends TeaModel {
             }
 
             /**
-             * Type.
+             * The type of the search condition. Valid values:
+             * <p>
+             * - **input**: The search condition needs to be specified.
+             * - **select**: The search condition is an option that can be selected from the drop-down list.
              */
             public Builder type(String type) {
                 this.type = type;
@@ -138,7 +148,9 @@ public class DescribeImageCriteriaResponseBody extends TeaModel {
             }
 
             /**
-             * Values.
+             * The values of the search condition. This parameter is returned only if the value of Type is select.
+             * <p>
+             * > If the value of **Type** is **input**, the value of this parameter is an empty string.
              */
             public Builder values(String values) {
                 this.values = values;

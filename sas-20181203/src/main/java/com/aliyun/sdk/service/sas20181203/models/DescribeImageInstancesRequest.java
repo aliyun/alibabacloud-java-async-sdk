@@ -122,7 +122,7 @@ public class DescribeImageInstancesRequest extends Request {
          *     *   **OR**: The search conditions use a logical **OR**.
          *     *   **AND**: The search conditions use a logical **AND**.
          * 
-         * > You can call the [DescribeImageCriteria](~~DescribeImageCriteria~~) operation to query the supported search conditions.
+         * > You can call the [DescribeImageCriteria](~~471822~~) operation to query the supported search conditions.
          */
         public Builder criteria(String criteria) {
             this.putQueryParameter("Criteria", criteria);

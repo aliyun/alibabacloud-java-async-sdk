@@ -225,7 +225,7 @@ public class DescribeImageListBySensitiveFileRequest extends Request {
          * The ID of the container image.
          * <p>
          * 
-         * > You can call the [ListRepository](~~ListRepository~~) operation to query the IDs of container images from the value of the InstanceId response parameter.
+         * > You can call the [ListRepository](~~451339~~) operation to query the IDs of container images from the value of the InstanceId response parameter.
          */
         public Builder repoInstanceId(String repoInstanceId) {
             this.putQueryParameter("RepoInstanceId", repoInstanceId);

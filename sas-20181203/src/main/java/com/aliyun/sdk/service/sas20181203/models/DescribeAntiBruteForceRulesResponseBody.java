@@ -193,8 +193,8 @@ public class DescribeAntiBruteForceRulesResponseBody extends TeaModel {
 
     }
     public static class Rules extends TeaModel {
-        @NameInMap("CreateTime")
-        private String createTime;
+        @NameInMap("CreateTimestamp")
+        private Long createTimestamp;
 
         @NameInMap("DefaultRule")
         private Boolean defaultRule;
@@ -224,7 +224,7 @@ public class DescribeAntiBruteForceRulesResponseBody extends TeaModel {
         private java.util.List < String > uuidList;
 
         private Rules(Builder builder) {
-            this.createTime = builder.createTime;
+            this.createTimestamp = builder.createTimestamp;
             this.defaultRule = builder.defaultRule;
             this.enableSmartRule = builder.enableSmartRule;
             this.failCount = builder.failCount;
@@ -245,10 +245,10 @@ public class DescribeAntiBruteForceRulesResponseBody extends TeaModel {
         }
 
         /**
-         * @return createTime
+         * @return createTimestamp
          */
-        public String getCreateTime() {
-            return this.createTime;
+        public Long getCreateTimestamp() {
+            return this.createTimestamp;
         }
 
         /**
@@ -315,7 +315,7 @@ public class DescribeAntiBruteForceRulesResponseBody extends TeaModel {
         }
 
         public static final class Builder {
-            private String createTime; 
+            private Long createTimestamp; 
             private Boolean defaultRule; 
             private Boolean enableSmartRule; 
             private Integer failCount; 
@@ -327,10 +327,10 @@ public class DescribeAntiBruteForceRulesResponseBody extends TeaModel {
             private java.util.List < String > uuidList; 
 
             /**
-             * CreateTime.
+             * CreateTimestamp.
              */
-            public Builder createTime(String createTime) {
-                this.createTime = createTime;
+            public Builder createTimestamp(Long createTimestamp) {
+                this.createTimestamp = createTimestamp;
                 return this;
             }
 

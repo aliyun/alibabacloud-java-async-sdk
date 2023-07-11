@@ -26,6 +26,10 @@ public class HandleSimilarSecurityEventsRequest extends Request {
     private String operationParams;
 
     @Query
+    @NameInMap("Remark")
+    private String remark;
+
+    @Query
     @NameInMap("ResourceOwnerId")
     private Long resourceOwnerId;
 
@@ -43,6 +47,7 @@ public class HandleSimilarSecurityEventsRequest extends Request {
         this.markMissParam = builder.markMissParam;
         this.operationCode = builder.operationCode;
         this.operationParams = builder.operationParams;
+        this.remark = builder.remark;
         this.resourceOwnerId = builder.resourceOwnerId;
         this.sourceIp = builder.sourceIp;
         this.taskId = builder.taskId;
@@ -83,6 +88,13 @@ public class HandleSimilarSecurityEventsRequest extends Request {
     }
 
     /**
+     * @return remark
+     */
+    public String getRemark() {
+        return this.remark;
+    }
+
+    /**
      * @return resourceOwnerId
      */
     public Long getResourceOwnerId() {
@@ -107,6 +119,7 @@ public class HandleSimilarSecurityEventsRequest extends Request {
         private String markMissParam; 
         private String operationCode; 
         private String operationParams; 
+        private String remark; 
         private Long resourceOwnerId; 
         private String sourceIp; 
         private Long taskId; 
@@ -120,6 +133,7 @@ public class HandleSimilarSecurityEventsRequest extends Request {
             this.markMissParam = request.markMissParam;
             this.operationCode = request.operationCode;
             this.operationParams = request.operationParams;
+            this.remark = request.remark;
             this.resourceOwnerId = request.resourceOwnerId;
             this.sourceIp = request.sourceIp;
             this.taskId = request.taskId;
@@ -170,6 +184,15 @@ public class HandleSimilarSecurityEventsRequest extends Request {
         public Builder operationParams(String operationParams) {
             this.putQueryParameter("OperationParams", operationParams);
             this.operationParams = operationParams;
+            return this;
+        }
+
+        /**
+         * Remark.
+         */
+        public Builder remark(String remark) {
+            this.putQueryParameter("Remark", remark);
+            this.remark = remark;
             return this;
         }
 

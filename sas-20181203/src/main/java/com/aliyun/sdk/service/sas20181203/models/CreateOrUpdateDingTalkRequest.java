@@ -140,7 +140,17 @@ public class CreateOrUpdateDingTalkRequest extends Request {
         } 
 
         /**
-         * ConfigList.
+         * The alerts for which you want the chatbot to send notifications. The value is a JSON array that contains the following fields:
+         * <p>
+         * 
+         * *   **type**: the types of alerts. The valid values are listed in the "Additional description of parameters" section in this topic.
+         * 
+         * *   **configItemList**: the list of check items. The value is a JSON array that contains the following fields:
+         * 
+         *     *   **key**: the key of the check item.
+         *     *   **valueList**: the values of the check item. The value of valueList is a JSON array.
+         * 
+         * > For more information about the value of this parameter, see the "Addition description of parameters" section in this topic.
          */
         public Builder configList(String configList) {
             this.putQueryParameter("ConfigList", configList);
@@ -149,7 +159,11 @@ public class CreateOrUpdateDingTalkRequest extends Request {
         }
 
         /**
-         * DingTalkLang.
+         * The language of the notifications. Valid values:
+         * <p>
+         * 
+         * *   **zh**: Chinese
+         * *   **en**: English
          */
         public Builder dingTalkLang(String dingTalkLang) {
             this.putQueryParameter("DingTalkLang", dingTalkLang);
@@ -158,7 +172,10 @@ public class CreateOrUpdateDingTalkRequest extends Request {
         }
 
         /**
-         * GroupIdList.
+         * The IDs of asset groups for which you want the chatbot to send notifications. The value is a JSON array.
+         * <p>
+         * 
+         * > You can call the [DescribeGroupStruct](~~DescribeGroupStruct~~) operation to query the IDs of asset groups.
          */
         public Builder groupIdList(String groupIdList) {
             this.putQueryParameter("GroupIdList", groupIdList);
@@ -167,7 +184,10 @@ public class CreateOrUpdateDingTalkRequest extends Request {
         }
 
         /**
-         * Id.
+         * The ID of the chatbot.
+         * <p>
+         * 
+         * > You can call the [DescribeDingTalk](~~DescribeDingTalk~~) operation to query the IDs of chatbots.
          */
         public Builder id(Long id) {
             this.putQueryParameter("Id", id);
@@ -176,7 +196,10 @@ public class CreateOrUpdateDingTalkRequest extends Request {
         }
 
         /**
-         * IntervalTime.
+         * The time interval at which the chatbot sends notifications.
+         * <p>
+         * 
+         * > The value **0** indicates unlimited.
          */
         public Builder intervalTime(Long intervalTime) {
             this.putQueryParameter("IntervalTime", intervalTime);
@@ -185,7 +208,10 @@ public class CreateOrUpdateDingTalkRequest extends Request {
         }
 
         /**
-         * RuleActionName.
+         * The name of the chatbot.
+         * <p>
+         * 
+         * > The name of a chatbot must be 2 to 64 characters in length.
          */
         public Builder ruleActionName(String ruleActionName) {
             this.putQueryParameter("RuleActionName", ruleActionName);
@@ -194,7 +220,7 @@ public class CreateOrUpdateDingTalkRequest extends Request {
         }
 
         /**
-         * SendUrl.
+         * The webhook URL.
          */
         public Builder sendUrl(String sendUrl) {
             this.putQueryParameter("SendUrl", sendUrl);

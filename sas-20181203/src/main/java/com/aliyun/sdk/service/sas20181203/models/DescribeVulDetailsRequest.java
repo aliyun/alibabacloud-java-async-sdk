@@ -99,7 +99,7 @@ public class DescribeVulDetailsRequest extends Request {
         } 
 
         /**
-         * The name in the **vulnerability introduction**.
+         * The vulnerability announcement.
          */
         public Builder aliasName(String aliasName) {
             this.putQueryParameter("AliasName", aliasName);
@@ -122,6 +122,9 @@ public class DescribeVulDetailsRequest extends Request {
 
         /**
          * The name of the vulnerability.
+         * <p>
+         * 
+         * > You can call the [DescribeGroupedVul](~~DescribeGroupedVul~~) or [DescribeVulList](~~DescribeVulList~~) operation to query the names of vulnerabilities.
          */
         public Builder name(String name) {
             this.putQueryParameter("Name", name);

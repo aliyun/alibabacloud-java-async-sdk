@@ -54,7 +54,10 @@ public class DescribeImageCriteriaRequest extends Request {
         } 
 
         /**
-         * Value.
+         * The keyword that you specify for fuzzy search when you query the image.
+         * <p>
+         * 
+         * > The value of this parameter can be an image ID, image tag, image instance ID, image repository name, image repository ID, image repository namespace, image region, image digest, or image repository type.
          */
         public Builder value(String value) {
             this.putQueryParameter("Value", value);

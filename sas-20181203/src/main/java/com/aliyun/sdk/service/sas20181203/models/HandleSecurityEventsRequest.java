@@ -30,6 +30,10 @@ public class HandleSecurityEventsRequest extends Request {
     private String operationParams;
 
     @Query
+    @NameInMap("Remark")
+    private String remark;
+
+    @Query
     @NameInMap("SecurityEventIds")
     @Validation(required = true)
     private java.util.List < String > securityEventIds;
@@ -44,6 +48,7 @@ public class HandleSecurityEventsRequest extends Request {
         this.markMissParam = builder.markMissParam;
         this.operationCode = builder.operationCode;
         this.operationParams = builder.operationParams;
+        this.remark = builder.remark;
         this.securityEventIds = builder.securityEventIds;
         this.sourceIp = builder.sourceIp;
     }
@@ -90,6 +95,13 @@ public class HandleSecurityEventsRequest extends Request {
     }
 
     /**
+     * @return remark
+     */
+    public String getRemark() {
+        return this.remark;
+    }
+
+    /**
      * @return securityEventIds
      */
     public java.util.List < String > getSecurityEventIds() {
@@ -108,6 +120,7 @@ public class HandleSecurityEventsRequest extends Request {
         private String markMissParam; 
         private String operationCode; 
         private String operationParams; 
+        private String remark; 
         private java.util.List < String > securityEventIds; 
         private String sourceIp; 
 
@@ -121,6 +134,7 @@ public class HandleSecurityEventsRequest extends Request {
             this.markMissParam = request.markMissParam;
             this.operationCode = request.operationCode;
             this.operationParams = request.operationParams;
+            this.remark = request.remark;
             this.securityEventIds = request.securityEventIds;
             this.sourceIp = request.sourceIp;
         } 
@@ -197,6 +211,15 @@ public class HandleSecurityEventsRequest extends Request {
         public Builder operationParams(String operationParams) {
             this.putQueryParameter("OperationParams", operationParams);
             this.operationParams = operationParams;
+            return this;
+        }
+
+        /**
+         * Remark.
+         */
+        public Builder remark(String remark) {
+            this.putQueryParameter("Remark", remark);
+            this.remark = remark;
             return this;
         }
 

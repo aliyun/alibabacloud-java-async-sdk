@@ -113,6 +113,12 @@ public class DescribeContainerInstancesResponseBody extends TeaModel {
         @NameInMap("CreateTimestamp")
         private Long createTimestamp;
 
+        @NameInMap("Exposed")
+        private Integer exposed;
+
+        @NameInMap("ExposedDetail")
+        private String exposedDetail;
+
         @NameInMap("HcCount")
         private Integer hcCount;
 
@@ -187,6 +193,8 @@ public class DescribeContainerInstancesResponseBody extends TeaModel {
             this.clusterName = builder.clusterName;
             this.containerId = builder.containerId;
             this.createTimestamp = builder.createTimestamp;
+            this.exposed = builder.exposed;
+            this.exposedDetail = builder.exposedDetail;
             this.hcCount = builder.hcCount;
             this.hcStatus = builder.hcStatus;
             this.hostIp = builder.hostIp;
@@ -266,6 +274,20 @@ public class DescribeContainerInstancesResponseBody extends TeaModel {
          */
         public Long getCreateTimestamp() {
             return this.createTimestamp;
+        }
+
+        /**
+         * @return exposed
+         */
+        public Integer getExposed() {
+            return this.exposed;
+        }
+
+        /**
+         * @return exposedDetail
+         */
+        public String getExposedDetail() {
+            return this.exposedDetail;
         }
 
         /**
@@ -430,6 +452,8 @@ public class DescribeContainerInstancesResponseBody extends TeaModel {
             private String clusterName; 
             private String containerId; 
             private Long createTimestamp; 
+            private Integer exposed; 
+            private String exposedDetail; 
             private Integer hcCount; 
             private String hcStatus; 
             private String hostIp; 
@@ -510,6 +534,22 @@ public class DescribeContainerInstancesResponseBody extends TeaModel {
              */
             public Builder createTimestamp(Long createTimestamp) {
                 this.createTimestamp = createTimestamp;
+                return this;
+            }
+
+            /**
+             * Exposed.
+             */
+            public Builder exposed(Integer exposed) {
+                this.exposed = exposed;
+                return this;
+            }
+
+            /**
+             * ExposedDetail.
+             */
+            public Builder exposedDetail(String exposedDetail) {
+                this.exposedDetail = exposedDetail;
                 return this;
             }
 

@@ -436,7 +436,7 @@ public class ListCheckItemWarningMachineResponseBody extends TeaModel {
             }
 
             /**
-             * ContainerId.
+             * The ID of the container.
              */
             public Builder containerId(String containerId) {
                 this.containerId = containerId;
@@ -444,7 +444,7 @@ public class ListCheckItemWarningMachineResponseBody extends TeaModel {
             }
 
             /**
-             * ContainerName.
+             * The name of the container.
              */
             public Builder containerName(String containerName) {
                 this.containerName = containerName;
@@ -520,10 +520,8 @@ public class ListCheckItemWarningMachineResponseBody extends TeaModel {
             }
 
             /**
-             * The status of the check item.
+             * The status of the check item. Valid values:
              * <p>
-             * 
-             * > Valid values:
              * 
              * *   1: failed
              * 

@@ -273,10 +273,8 @@ public class ListCheckItemWarningMachineRequest extends Request {
         }
 
         /**
-         * The status of the check item.
+         * The status of the check item. Valid values:
          * <p>
-         * 
-         * > Valid values:
          * 
          * *   1: failed
          * 

@@ -354,7 +354,11 @@ public class DescribeCheckWarningSummaryResponseBody extends TeaModel {
             }
 
             /**
-             * ContainerRisk.
+             * Indicates  whether the risk item is a container runtime risk item. Valid values:
+             * <p>
+             * 
+             * *   **true**: yes
+             * *   **false**: no
              */
             public Builder containerRisk(Boolean containerRisk) {
                 this.containerRisk = containerRisk;

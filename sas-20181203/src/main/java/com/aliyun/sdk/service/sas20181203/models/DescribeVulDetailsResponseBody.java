@@ -50,7 +50,7 @@ public class DescribeVulDetailsResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * An array that consists of the details about the vulnerability.
+         * The details of the vulnerability.
          */
         public Builder cves(java.util.List < Cves> cves) {
             this.cves = cves;
@@ -463,7 +463,7 @@ public class DescribeVulDetailsResponseBody extends TeaModel {
             }
 
             /**
-             * An array that consists of vulnerability types.
+             * The vulnerability types.
              */
             public Builder classifys(java.util.List < Classifys> classifys) {
                 this.classifys = classifys;
@@ -524,7 +524,10 @@ public class DescribeVulDetailsResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the server.
+             * The instance name of the server.
+             * <p>
+             * 
+             * > This parameter is deprecated. You can call the [DescribeVulList](~~DescribeVulList~~) operation to query the instances that are affected by vulnerabilities.
              */
             public Builder instanceName(String instanceName) {
                 this.instanceName = instanceName;
@@ -533,6 +536,9 @@ public class DescribeVulDetailsResponseBody extends TeaModel {
 
             /**
              * The public IP address of the server.
+             * <p>
+             * 
+             * > This parameter is deprecated. You can call the [DescribeVulList](~~DescribeVulList~~) operation to query the instances that are affected by vulnerabilities.
              */
             public Builder internetIp(String internetIp) {
                 this.internetIp = internetIp;
@@ -541,6 +547,9 @@ public class DescribeVulDetailsResponseBody extends TeaModel {
 
             /**
              * The private IP address of the server.
+             * <p>
+             * 
+             * > This parameter is deprecated. You can call the [DescribeVulList](~~DescribeVulList~~) operation to query the instances that are affected by vulnerabilities.
              */
             public Builder intranetIp(String intranetIp) {
                 this.intranetIp = intranetIp;

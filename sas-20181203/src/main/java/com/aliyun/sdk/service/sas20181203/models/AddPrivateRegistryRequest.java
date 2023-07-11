@@ -286,7 +286,7 @@ public class AddPrivateRegistryRequest extends Request {
          * The ID of the region.
          * <p>
          * 
-         * > You can call the [ListImageRegistryRegions](~~ListImageRegistryRegions~~) operation to query the IDs of supported regions.
+         * > You can call the [ListImageRegistryRegion](~~ListImageRegistryRegion~~) operation to query the IDs of supported regions.
          */
         public Builder registryRegionId(String registryRegionId) {
             this.putQueryParameter("RegistryRegionId", registryRegionId);

@@ -71,7 +71,7 @@ public class DescribeVersionConfigRequest extends Request {
          * The ID of the Alibaba Cloud account that uses Security Center.
          * <p>
          * 
-         * > You can call the [GetUser](~~28681~~) operation to query the IDs of Alibaba Cloud accounts.
+         * >  You can call the [GetUser](~~28681~~) operation to query the IDs of Alibaba Cloud accounts.
          */
         public Builder resourceDirectoryAccountId(String resourceDirectoryAccountId) {
             this.putQueryParameter("ResourceDirectoryAccountId", resourceDirectoryAccountId);

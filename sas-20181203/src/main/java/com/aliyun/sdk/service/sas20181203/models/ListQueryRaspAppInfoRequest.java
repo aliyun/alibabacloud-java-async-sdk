@@ -77,7 +77,7 @@ public class ListQueryRaspAppInfoRequest extends Request {
         }
 
         /**
-         * uuids 列表，逗号分割
+         * Uuids.
          */
         public Builder uuids(String uuids) {
             this.putQueryParameter("Uuids", uuids);

@@ -62,7 +62,7 @@ public class DescribeImageListWithBaselineNameResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * An array that consists of the images returned.
+         * The timestamp when the last baseline check was performed. Unit: milliseconds.
          */
         public Builder imageInfos(java.util.List < ImageInfos> imageInfos) {
             this.imageInfos = imageInfos;
@@ -578,7 +578,7 @@ public class DescribeImageListWithBaselineNameResponseBody extends TeaModel {
             }
 
             /**
-             * InstanceName.
+             * The instance name of the server.
              */
             public Builder instanceName(String instanceName) {
                 this.instanceName = instanceName;
@@ -586,7 +586,7 @@ public class DescribeImageListWithBaselineNameResponseBody extends TeaModel {
             }
 
             /**
-             * InternetIp.
+             * The public IP address of the server.
              */
             public Builder internetIp(String internetIp) {
                 this.internetIp = internetIp;
@@ -594,7 +594,7 @@ public class DescribeImageListWithBaselineNameResponseBody extends TeaModel {
             }
 
             /**
-             * IntranetIp.
+             * The private IP address of the server.
              */
             public Builder intranetIp(String intranetIp) {
                 this.intranetIp = intranetIp;
@@ -602,7 +602,7 @@ public class DescribeImageListWithBaselineNameResponseBody extends TeaModel {
             }
 
             /**
-             * LastScanTime.
+             * The timestamp when the last baseline check was performed. Unit: milliseconds.
              */
             public Builder lastScanTime(Long lastScanTime) {
                 this.lastScanTime = lastScanTime;
@@ -710,7 +710,7 @@ public class DescribeImageListWithBaselineNameResponseBody extends TeaModel {
             }
 
             /**
-             * TargetId.
+             * The ID of the asset on which the baseline check is performed.
              */
             public Builder targetId(String targetId) {
                 this.targetId = targetId;
@@ -718,7 +718,7 @@ public class DescribeImageListWithBaselineNameResponseBody extends TeaModel {
             }
 
             /**
-             * TargetName.
+             * The name of the asset on which the baseline check is performed.
              */
             public Builder targetName(String targetName) {
                 this.targetName = targetName;
@@ -726,7 +726,11 @@ public class DescribeImageListWithBaselineNameResponseBody extends TeaModel {
             }
 
             /**
-             * TargetType.
+             * The type of the asset on which the baseline check is performed. Valid values:
+             * <p>
+             * 
+             * - ECS_IMAGE: image
+             * - ECS_SNAPSHOT: snapshot
              */
             public Builder targetType(String targetType) {
                 this.targetType = targetType;

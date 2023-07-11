@@ -18,9 +18,13 @@ public class DescribeUuidsByVulNamesResponseBody extends TeaModel {
     @NameInMap("RequestId")
     private String requestId;
 
+    @NameInMap("VulCount")
+    private Integer vulCount;
+
     private DescribeUuidsByVulNamesResponseBody(Builder builder) {
         this.machineInfoStatistics = builder.machineInfoStatistics;
         this.requestId = builder.requestId;
+        this.vulCount = builder.vulCount;
     }
 
     public static Builder builder() {
@@ -45,9 +49,17 @@ public class DescribeUuidsByVulNamesResponseBody extends TeaModel {
         return this.requestId;
     }
 
+    /**
+     * @return vulCount
+     */
+    public Integer getVulCount() {
+        return this.vulCount;
+    }
+
     public static final class Builder {
         private java.util.List < MachineInfoStatistics> machineInfoStatistics; 
         private String requestId; 
+        private Integer vulCount; 
 
         /**
          * An array that consists of the statistics about the assets.
@@ -62,6 +74,14 @@ public class DescribeUuidsByVulNamesResponseBody extends TeaModel {
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
+            return this;
+        }
+
+        /**
+         * VulCount.
+         */
+        public Builder vulCount(Integer vulCount) {
+            this.vulCount = vulCount;
             return this;
         }
 

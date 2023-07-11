@@ -295,7 +295,10 @@ public class DescribeCheckWarningSummaryRequest extends Request {
         }
 
         /**
-         * GroupId.
+         * The ID of the asset group.
+         * <p>
+         * 
+         * > You can call the [DescribeAllGroups](~~DescribeAllGroups~~) operation to query the IDs of asset groups.
          */
         public Builder groupId(Long groupId) {
             this.putQueryParameter("GroupId", groupId);

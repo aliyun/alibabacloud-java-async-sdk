@@ -60,6 +60,8 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<ConfirmVirusEventsResponse> confirmVirusEvents(ConfirmVirusEventsRequest request);
 
+    CompletableFuture<CreateAgentlessScanTaskResponse> createAgentlessScanTask(CreateAgentlessScanTaskRequest request);
+
     CompletableFuture<CreateAntiBruteForceRuleResponse> createAntiBruteForceRule(CreateAntiBruteForceRuleRequest request);
 
     CompletableFuture<CreateAssetSelectionConfigResponse> createAssetSelectionConfig(CreateAssetSelectionConfigRequest request);
@@ -117,6 +119,8 @@ public interface AsyncClient extends SdkAutoCloseable {
      */
     CompletableFuture<CreateServiceLinkedRoleResponse> createServiceLinkedRole(CreateServiceLinkedRoleRequest request);
 
+    CompletableFuture<CreateServiceTrailResponse> createServiceTrail(CreateServiceTrailRequest request);
+
     CompletableFuture<CreateSimilarSecurityEventsQueryTaskResponse> createSimilarSecurityEventsQueryTask(CreateSimilarSecurityEventsQueryTaskRequest request);
 
     CompletableFuture<CreateSuspEventNoteResponse> createSuspEventNote(CreateSuspEventNoteRequest request);
@@ -164,6 +168,8 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<DeletePrivateRegistryResponse> deletePrivateRegistry(DeletePrivateRegistryRequest request);
 
     CompletableFuture<DeleteSecurityEventMarkMissListResponse> deleteSecurityEventMarkMissList(DeleteSecurityEventMarkMissListRequest request);
+
+    CompletableFuture<DeleteServiceTrailResponse> deleteServiceTrail(DeleteServiceTrailRequest request);
 
     CompletableFuture<DeleteStrategyResponse> deleteStrategy(DeleteStrategyRequest request);
 
@@ -561,6 +567,8 @@ public interface AsyncClient extends SdkAutoCloseable {
      */
     CompletableFuture<DescribeSecurityCheckScheduleConfigResponse> describeSecurityCheckScheduleConfig(DescribeSecurityCheckScheduleConfigRequest request);
 
+    CompletableFuture<DescribeSecurityEventMarkMissListResponse> describeSecurityEventMarkMissList(DescribeSecurityEventMarkMissListRequest request);
+
     CompletableFuture<DescribeSecurityEventOperationStatusResponse> describeSecurityEventOperationStatus(DescribeSecurityEventOperationStatusRequest request);
 
     CompletableFuture<DescribeSecurityEventOperationsResponse> describeSecurityEventOperations(DescribeSecurityEventOperationsRequest request);
@@ -736,6 +744,8 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<GenerateOnceTaskResponse> generateOnceTask(GenerateOnceTaskRequest request);
 
+    CompletableFuture<GetAgentlessTaskCountResponse> getAgentlessTaskCount(GetAgentlessTaskCountRequest request);
+
     CompletableFuture<GetAlarmMachineCountResponse> getAlarmMachineCount(GetAlarmMachineCountRequest request);
 
     CompletableFuture<GetAppNetworkResponse> getAppNetwork(GetAppNetworkRequest request);
@@ -759,6 +769,8 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<GetCheckRiskStatisticsResponse> getCheckRiskStatistics(GetCheckRiskStatisticsRequest request);
 
     CompletableFuture<GetCheckSummaryResponse> getCheckSummary(GetCheckSummaryRequest request);
+
+    CompletableFuture<GetClientRatioStatisticResponse> getClientRatioStatistic(GetClientRatioStatisticRequest request);
 
     CompletableFuture<GetClientUserDefineRuleResponse> getClientUserDefineRule(GetClientUserDefineRuleRequest request);
 
@@ -806,6 +818,8 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<GetRulesCountResponse> getRulesCount(GetRulesCountRequest request);
 
+    CompletableFuture<GetServiceTrailResponse> getServiceTrail(GetServiceTrailRequest request);
+
     CompletableFuture<GetSuspiciousStatisticsResponse> getSuspiciousStatistics(GetSuspiciousStatisticsRequest request);
 
     CompletableFuture<GetVulStatisticsResponse> getVulStatistics(GetVulStatisticsRequest request);
@@ -833,6 +847,14 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<InstallUniBackupAgentResponse> installUniBackupAgent(InstallUniBackupAgentRequest request);
 
     CompletableFuture<JoinWebLockProcessWhiteListResponse> joinWebLockProcessWhiteList(JoinWebLockProcessWhiteListRequest request);
+
+    CompletableFuture<ListAgentlessRegionResponse> listAgentlessRegion(ListAgentlessRegionRequest request);
+
+    CompletableFuture<ListAgentlessRelateMaliciousResponse> listAgentlessRelateMalicious(ListAgentlessRelateMaliciousRequest request);
+
+    CompletableFuture<ListAgentlessRiskUuidResponse> listAgentlessRiskUuid(ListAgentlessRiskUuidRequest request);
+
+    CompletableFuture<ListAgentlessTaskResponse> listAgentlessTask(ListAgentlessTaskRequest request);
 
     CompletableFuture<ListAssetSelectionSelectedTargetResponse> listAssetSelectionSelectedTarget(ListAssetSelectionSelectedTargetRequest request);
 

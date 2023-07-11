@@ -50,7 +50,7 @@ public class DescribeVpcHoneyPotCriteriaResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * CriteriaList.
+         * An array that consists of the search conditions.
          */
         public Builder criteriaList(java.util.List < CriteriaList> criteriaList) {
             this.criteriaList = criteriaList;
@@ -58,7 +58,7 @@ public class DescribeVpcHoneyPotCriteriaResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request, which is used to locate and troubleshoot issues.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -122,7 +122,7 @@ public class DescribeVpcHoneyPotCriteriaResponseBody extends TeaModel {
             private String values; 
 
             /**
-             * Name.
+             * The name of the search condition.
              */
             public Builder name(String name) {
                 this.name = name;
@@ -130,7 +130,11 @@ public class DescribeVpcHoneyPotCriteriaResponseBody extends TeaModel {
             }
 
             /**
-             * Type.
+             * The type of the search condition. Valid values:
+             * <p>
+             * 
+             * *   **input**: You must manually enter the search condition.
+             * *   **select**: You must select a search condition from the **Values** drop-down list.
              */
             public Builder type(String type) {
                 this.type = type;
@@ -138,7 +142,10 @@ public class DescribeVpcHoneyPotCriteriaResponseBody extends TeaModel {
             }
 
             /**
-             * Values.
+             * The values of the search condition. This parameter is returned only if the value of **Type** is **select**.
+             * <p>
+             * 
+             * > If the value of **Type** is **input**, the value of this parameter is an empty string.
              */
             public Builder values(String values) {
                 this.values = values;

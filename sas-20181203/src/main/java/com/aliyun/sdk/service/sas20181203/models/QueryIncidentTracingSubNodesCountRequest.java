@@ -53,7 +53,7 @@ public class QueryIncidentTracingSubNodesCountRequest extends Request {
         } 
 
         /**
-         * vertexIdAndTypeList
+         * VertexIdAndTypeList.
          */
         public Builder vertexIdAndTypeList(java.util.List < java.util.List < String > > vertexIdAndTypeList) {
             this.vertexIdAndTypeList = vertexIdAndTypeList;

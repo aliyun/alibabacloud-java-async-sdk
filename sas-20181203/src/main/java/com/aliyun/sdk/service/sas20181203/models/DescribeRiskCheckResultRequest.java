@@ -245,7 +245,7 @@ public class DescribeRiskCheckResultRequest extends Request {
         }
 
         /**
-         * ItemIds.
+         * The ID of the check item. For more information about the check item, see the check item table in the "Response parameters" section of this topic.
          */
         public Builder itemIds(java.util.List < String > itemIds) {
             this.putQueryParameter("ItemIds", itemIds);
