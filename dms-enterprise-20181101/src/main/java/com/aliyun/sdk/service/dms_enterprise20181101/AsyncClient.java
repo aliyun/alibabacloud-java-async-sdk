@@ -70,6 +70,8 @@ public interface AsyncClient extends SdkAutoCloseable {
      */
     CompletableFuture<CreateAuthorityTemplateResponse> createAuthorityTemplate(CreateAuthorityTemplateRequest request);
 
+    CompletableFuture<CreateDataArchiveOrderResponse> createDataArchiveOrder(CreateDataArchiveOrderRequest request);
+
     /**
       * For more information about the Normal Data Modify feature, see [Change regular data](~~58419~~).
       *
@@ -264,6 +266,8 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<GetDBTaskSQLJobLogResponse> getDBTaskSQLJobLog(GetDBTaskSQLJobLogRequest request);
 
     CompletableFuture<GetDBTopologyResponse> getDBTopology(GetDBTopologyRequest request);
+
+    CompletableFuture<GetDataArchiveCountResponse> getDataArchiveCount(GetDataArchiveCountRequest request);
 
     CompletableFuture<GetDataArchiveOrderDetailResponse> getDataArchiveOrderDetail(GetDataArchiveOrderDetailRequest request);
 
