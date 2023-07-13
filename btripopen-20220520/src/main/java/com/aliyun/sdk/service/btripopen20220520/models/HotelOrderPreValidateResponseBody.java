@@ -729,6 +729,9 @@ public class HotelOrderPreValidateResponseBody extends TeaModel {
         @NameInMap("latest_check_out_time")
         private String latestCheckOutTime;
 
+        @NameInMap("max_booking_num")
+        private Integer maxBookingNum;
+
         @NameInMap("max_occupancy_num")
         private Integer maxOccupancyNum;
 
@@ -752,6 +755,7 @@ public class HotelOrderPreValidateResponseBody extends TeaModel {
             this.btripHotelCancelPolicyDTO = builder.btripHotelCancelPolicyDTO;
             this.earliestCheckInTime = builder.earliestCheckInTime;
             this.latestCheckOutTime = builder.latestCheckOutTime;
+            this.maxBookingNum = builder.maxBookingNum;
             this.maxOccupancyNum = builder.maxOccupancyNum;
             this.needCertificate = builder.needCertificate;
             this.needEmail = builder.needEmail;
@@ -794,6 +798,13 @@ public class HotelOrderPreValidateResponseBody extends TeaModel {
          */
         public String getLatestCheckOutTime() {
             return this.latestCheckOutTime;
+        }
+
+        /**
+         * @return maxBookingNum
+         */
+        public Integer getMaxBookingNum() {
+            return this.maxBookingNum;
         }
 
         /**
@@ -843,6 +854,7 @@ public class HotelOrderPreValidateResponseBody extends TeaModel {
             private BtripHotelCancelPolicyDTO btripHotelCancelPolicyDTO; 
             private String earliestCheckInTime; 
             private String latestCheckOutTime; 
+            private Integer maxBookingNum; 
             private Integer maxOccupancyNum; 
             private Boolean needCertificate; 
             private Boolean needEmail; 
@@ -879,6 +891,14 @@ public class HotelOrderPreValidateResponseBody extends TeaModel {
              */
             public Builder latestCheckOutTime(String latestCheckOutTime) {
                 this.latestCheckOutTime = latestCheckOutTime;
+                return this;
+            }
+
+            /**
+             * max_booking_num.
+             */
+            public Builder maxBookingNum(Integer maxBookingNum) {
+                this.maxBookingNum = maxBookingNum;
                 return this;
             }
 
