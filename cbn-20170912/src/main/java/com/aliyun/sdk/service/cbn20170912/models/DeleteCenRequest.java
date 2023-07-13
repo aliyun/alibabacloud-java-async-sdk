@@ -111,7 +111,7 @@ public class DeleteCenRequest extends Request {
         } 
 
         /**
-         * CenId.
+         * The ID of the CEN instance.
          */
         public Builder cenId(String cenId) {
             this.putQueryParameter("CenId", cenId);

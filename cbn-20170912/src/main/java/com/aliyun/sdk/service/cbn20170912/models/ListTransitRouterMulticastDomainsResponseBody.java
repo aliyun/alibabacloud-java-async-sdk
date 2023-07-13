@@ -207,6 +207,12 @@ public class ListTransitRouterMulticastDomainsResponseBody extends TeaModel {
 
     }
     public static class TransitRouterMulticastDomains extends TeaModel {
+        @NameInMap("CenId")
+        private String cenId;
+
+        @NameInMap("RegionId")
+        private String regionId;
+
         @NameInMap("Status")
         private String status;
 
@@ -226,6 +232,8 @@ public class ListTransitRouterMulticastDomainsResponseBody extends TeaModel {
         private String transitRouterMulticastDomainName;
 
         private TransitRouterMulticastDomains(Builder builder) {
+            this.cenId = builder.cenId;
+            this.regionId = builder.regionId;
             this.status = builder.status;
             this.tags = builder.tags;
             this.transitRouterId = builder.transitRouterId;
@@ -240,6 +248,20 @@ public class ListTransitRouterMulticastDomainsResponseBody extends TeaModel {
 
         public static TransitRouterMulticastDomains create() {
             return builder().build();
+        }
+
+        /**
+         * @return cenId
+         */
+        public String getCenId() {
+            return this.cenId;
+        }
+
+        /**
+         * @return regionId
+         */
+        public String getRegionId() {
+            return this.regionId;
         }
 
         /**
@@ -285,12 +307,30 @@ public class ListTransitRouterMulticastDomainsResponseBody extends TeaModel {
         }
 
         public static final class Builder {
+            private String cenId; 
+            private String regionId; 
             private String status; 
             private java.util.List < Tags> tags; 
             private String transitRouterId; 
             private String transitRouterMulticastDomainDescription; 
             private String transitRouterMulticastDomainId; 
             private String transitRouterMulticastDomainName; 
+
+            /**
+             * CenId.
+             */
+            public Builder cenId(String cenId) {
+                this.cenId = cenId;
+                return this;
+            }
+
+            /**
+             * RegionId.
+             */
+            public Builder regionId(String regionId) {
+                this.regionId = regionId;
+                return this;
+            }
 
             /**
              * WB656982

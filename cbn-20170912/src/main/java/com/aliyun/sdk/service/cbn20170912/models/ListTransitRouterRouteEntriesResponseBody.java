@@ -135,12 +135,156 @@ public class ListTransitRouterRouteEntriesResponseBody extends TeaModel {
 
     } 
 
+    public static class PathAttributes extends TeaModel {
+        @NameInMap("AsPaths")
+        private java.util.List < String > asPaths;
+
+        @NameInMap("Communities")
+        private java.util.List < String > communities;
+
+        @NameInMap("OriginInstanceId")
+        private String originInstanceId;
+
+        @NameInMap("OriginInstanceType")
+        private String originInstanceType;
+
+        @NameInMap("OriginRouteType")
+        private String originRouteType;
+
+        @NameInMap("Preference")
+        private Integer preference;
+
+        private PathAttributes(Builder builder) {
+            this.asPaths = builder.asPaths;
+            this.communities = builder.communities;
+            this.originInstanceId = builder.originInstanceId;
+            this.originInstanceType = builder.originInstanceType;
+            this.originRouteType = builder.originRouteType;
+            this.preference = builder.preference;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static PathAttributes create() {
+            return builder().build();
+        }
+
+        /**
+         * @return asPaths
+         */
+        public java.util.List < String > getAsPaths() {
+            return this.asPaths;
+        }
+
+        /**
+         * @return communities
+         */
+        public java.util.List < String > getCommunities() {
+            return this.communities;
+        }
+
+        /**
+         * @return originInstanceId
+         */
+        public String getOriginInstanceId() {
+            return this.originInstanceId;
+        }
+
+        /**
+         * @return originInstanceType
+         */
+        public String getOriginInstanceType() {
+            return this.originInstanceType;
+        }
+
+        /**
+         * @return originRouteType
+         */
+        public String getOriginRouteType() {
+            return this.originRouteType;
+        }
+
+        /**
+         * @return preference
+         */
+        public Integer getPreference() {
+            return this.preference;
+        }
+
+        public static final class Builder {
+            private java.util.List < String > asPaths; 
+            private java.util.List < String > communities; 
+            private String originInstanceId; 
+            private String originInstanceType; 
+            private String originRouteType; 
+            private Integer preference; 
+
+            /**
+             * AsPaths.
+             */
+            public Builder asPaths(java.util.List < String > asPaths) {
+                this.asPaths = asPaths;
+                return this;
+            }
+
+            /**
+             * Communities.
+             */
+            public Builder communities(java.util.List < String > communities) {
+                this.communities = communities;
+                return this;
+            }
+
+            /**
+             * OriginInstanceId.
+             */
+            public Builder originInstanceId(String originInstanceId) {
+                this.originInstanceId = originInstanceId;
+                return this;
+            }
+
+            /**
+             * OriginInstanceType.
+             */
+            public Builder originInstanceType(String originInstanceType) {
+                this.originInstanceType = originInstanceType;
+                return this;
+            }
+
+            /**
+             * OriginRouteType.
+             */
+            public Builder originRouteType(String originRouteType) {
+                this.originRouteType = originRouteType;
+                return this;
+            }
+
+            /**
+             * Preference.
+             */
+            public Builder preference(Integer preference) {
+                this.preference = preference;
+                return this;
+            }
+
+            public PathAttributes build() {
+                return new PathAttributes(this);
+            } 
+
+        } 
+
+    }
     public static class TransitRouterRouteEntries extends TeaModel {
         @NameInMap("CreateTime")
         private String createTime;
 
         @NameInMap("OperationalMode")
         private Boolean operationalMode;
+
+        @NameInMap("PathAttributes")
+        private PathAttributes pathAttributes;
 
         @NameInMap("PrefixListId")
         private String prefixListId;
@@ -187,6 +331,7 @@ public class ListTransitRouterRouteEntriesResponseBody extends TeaModel {
         private TransitRouterRouteEntries(Builder builder) {
             this.createTime = builder.createTime;
             this.operationalMode = builder.operationalMode;
+            this.pathAttributes = builder.pathAttributes;
             this.prefixListId = builder.prefixListId;
             this.tag = builder.tag;
             this.transitRouterRouteEntryDescription = builder.transitRouterRouteEntryDescription;
@@ -223,6 +368,13 @@ public class ListTransitRouterRouteEntriesResponseBody extends TeaModel {
          */
         public Boolean getOperationalMode() {
             return this.operationalMode;
+        }
+
+        /**
+         * @return pathAttributes
+         */
+        public PathAttributes getPathAttributes() {
+            return this.pathAttributes;
         }
 
         /**
@@ -326,6 +478,7 @@ public class ListTransitRouterRouteEntriesResponseBody extends TeaModel {
         public static final class Builder {
             private String createTime; 
             private Boolean operationalMode; 
+            private PathAttributes pathAttributes; 
             private String prefixListId; 
             private String tag; 
             private String transitRouterRouteEntryDescription; 
@@ -363,6 +516,14 @@ public class ListTransitRouterRouteEntriesResponseBody extends TeaModel {
              */
             public Builder operationalMode(Boolean operationalMode) {
                 this.operationalMode = operationalMode;
+                return this;
+            }
+
+            /**
+             * PathAttributes.
+             */
+            public Builder pathAttributes(PathAttributes pathAttributes) {
+                this.pathAttributes = pathAttributes;
                 return this;
             }
 

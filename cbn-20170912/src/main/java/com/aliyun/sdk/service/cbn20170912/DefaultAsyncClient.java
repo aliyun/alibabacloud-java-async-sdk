@@ -467,8 +467,10 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * The name of the inter-region connection.
-      * The name must be 2 to 128 characters in length, and can contain letters, digits, underscores (\\_), and hyphens (-). The name must start with a letter.
+      * You must purchase a bandwidth plan before you can create an inter-region connection. For more information, see [CreateCenBandwidthPackage](https://www.alibabacloud.com/help/en/cloud-enterprise-network/latest/api-doc-cbn-2017-09-12-api-doc-createcenbandwidthpackage).
+      * **CreateTransitRouterPeerAttachment** is an asynchronous operation. After you send a request, the system returns an inter-region connection ID and runs the task in the background. You can call the **ListTransitRouterPeerAttachments** operation to query the status of an inter-region connection.
+      * *   If an inter-region connection is in the **Attaching** state, the inter-region connection is being created. You can query the inter-region connection but cannot perform other regions.
+      * *   If an inter-region connection is in the **Attached** state, the inter-region connection is created.
       *
      */
     @Override
@@ -510,7 +512,9 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * The ID of the request.
+      * **CreateTransitRouterRouteEntry** is an asynchronous operation. After you send a request, the route ID is returned but the operation is still being performed in the system background. You can call **ListTransitRouterRouteEntries** to query the status of a route.
+      * *   If a route is in the **Creating** state, the route is being created. In this case, you can query the route but cannot perform other operations.
+      * *   If a route is in the **Active** state, the route is created.
       *
      */
     @Override
@@ -641,7 +645,17 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * DeleteCen
+      * **DeleteCen** is an asynchronous operation. After you send a request, the **request ID** is returned but the operation is still being performed in the system background. You can call **DescribeCens** to query the status of a CEN instance.   
+      * - If a CEN instance is in the **Deleting** state, the CEN instance is being deleted. In this case, you can query the CEN instance but cannot perform other operations.
+      * - If a CEN instance cannot be found, the CEN instance is deleted.
+      * ## Prerequisites
+      * The CEN instance that you want to delete is not associated with a bandwidth plan, and the transit router associated with the CEN instance does not have a network instance connection or a custom route table. 
+      * - For more information about how to detach a network instance, see the following topics:   - [DeleteTransitRouterVpcAttachment](https://www.alibabacloud.com/help/en/cloud-enterprise-network/latest/deletetransitroutervpcattachment)
+      *   - [DeleteTransitRouterVbrAttachment](https://www.alibabacloud.com/help/en/cloud-enterprise-network/latest/deletetransitroutervbrattachment)
+      *   - [DeleteTransitRouterVpnAttachment](https://www.alibabacloud.com/help/en/cloud-enterprise-network/latest/deletetransitroutervpnattachment)
+      *   - [DeleteTransitRouterPeerAttachment](https://www.alibabacloud.com/help/en/cloud-enterprise-network/latest/deletetransitrouterpeerattachment)>  For more information about how to detach network instances from a Basic Edition transit router, see [DetachCenChildInstance](https://www.alibabacloud.com/help/en/cloud-enterprise-network/latest/api-doc-cbn-2017-09-12-api-doc-detachcenchildinstance).
+      * - For more information about how to delete a custom route table, see [DeleteTransitRouterRouteTable](https://www.alibabacloud.com/help/en/cloud-enterprise-network/latest/deletetransitrouterroutetable).
+      * - For more information about how to disassociate a bandwidth plan from a CEN instance, see [UnassociateCenBandwidthPackage](https://www.alibabacloud.com/help/en/cloud-enterprise-network/latest/api-doc-cbn-2017-09-12-api-doc-unassociatecenbandwidthpackage).
       *
      */
     @Override
@@ -2296,7 +2310,14 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * The operation that you want to perform. Set the value to **RevokeInstanceFromTransitRouter**.
+      * ## Usage notes
+      * `RevokeInstanceFromTransitRouter` disallows transit routers only from connecting to virtual private clouds (VPCs), virtual border routers (VBRs), and IPsec-VPN connections.  
+      * If you want to disallow transit routers from connecting to Cloud Connect Network (CCN) instances, call the [RevokeInstanceFromCbn](https://www.alibabacloud.com/help/en/smart-access-gateway/latest/revokeinstancefromcbn) operation.  
+      * ## Prerequisites
+      * Before you call `RevokeInstanceFromTransitRouter`, you must detach the network instances from the transit router.  
+      * - For more information about how to detach VPCs from an Enterprise Edition transit router, see [DeleteTransitRouterVpcAttachment](https://www.alibabacloud.com/help/en/cloud-enterprise-network/latest/deletetransitroutervpcattachment).
+      * - For more information about how to detach VBRs from an Enterprise Edition transit router, see [DeleteTransitRouterVbrAttachment](https://www.alibabacloud.com/help/en/cloud-enterprise-network/latest/deletetransitroutervbrattachment).
+      * - For more information about how to detach network instances from a Basic Edition transit router, see [DetachCenChildInstance](https://www.alibabacloud.com/help/en/cloud-enterprise-network/latest/api-doc-cbn-2017-09-12-api-doc-detachcenchildinstance).
       *
      */
     @Override

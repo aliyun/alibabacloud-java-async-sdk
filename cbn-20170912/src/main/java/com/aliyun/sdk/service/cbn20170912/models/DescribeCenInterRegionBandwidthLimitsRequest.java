@@ -40,6 +40,10 @@ public class DescribeCenInterRegionBandwidthLimitsRequest extends Request {
     @NameInMap("ResourceOwnerId")
     private Long resourceOwnerId;
 
+    @Query
+    @NameInMap("TrRegionId")
+    private String trRegionId;
+
     private DescribeCenInterRegionBandwidthLimitsRequest(Builder builder) {
         super(builder);
         this.cenId = builder.cenId;
@@ -49,6 +53,7 @@ public class DescribeCenInterRegionBandwidthLimitsRequest extends Request {
         this.pageSize = builder.pageSize;
         this.resourceOwnerAccount = builder.resourceOwnerAccount;
         this.resourceOwnerId = builder.resourceOwnerId;
+        this.trRegionId = builder.trRegionId;
     }
 
     public static Builder builder() {
@@ -113,6 +118,13 @@ public class DescribeCenInterRegionBandwidthLimitsRequest extends Request {
         return this.resourceOwnerId;
     }
 
+    /**
+     * @return trRegionId
+     */
+    public String getTrRegionId() {
+        return this.trRegionId;
+    }
+
     public static final class Builder extends Request.Builder<DescribeCenInterRegionBandwidthLimitsRequest, Builder> {
         private String cenId; 
         private String ownerAccount; 
@@ -121,6 +133,7 @@ public class DescribeCenInterRegionBandwidthLimitsRequest extends Request {
         private Integer pageSize; 
         private String resourceOwnerAccount; 
         private Long resourceOwnerId; 
+        private String trRegionId; 
 
         private Builder() {
             super();
@@ -135,6 +148,7 @@ public class DescribeCenInterRegionBandwidthLimitsRequest extends Request {
             this.pageSize = request.pageSize;
             this.resourceOwnerAccount = request.resourceOwnerAccount;
             this.resourceOwnerId = request.resourceOwnerId;
+            this.trRegionId = request.trRegionId;
         } 
 
         /**
@@ -200,6 +214,15 @@ public class DescribeCenInterRegionBandwidthLimitsRequest extends Request {
         public Builder resourceOwnerId(Long resourceOwnerId) {
             this.putQueryParameter("ResourceOwnerId", resourceOwnerId);
             this.resourceOwnerId = resourceOwnerId;
+            return this;
+        }
+
+        /**
+         * TrRegionId.
+         */
+        public Builder trRegionId(String trRegionId) {
+            this.putQueryParameter("TrRegionId", trRegionId);
+            this.trRegionId = trRegionId;
             return this;
         }
 
