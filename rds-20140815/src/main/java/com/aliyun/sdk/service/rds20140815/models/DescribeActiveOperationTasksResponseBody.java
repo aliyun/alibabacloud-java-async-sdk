@@ -204,6 +204,9 @@ public class DescribeActiveOperationTasksResponseBody extends TeaModel {
         @NameInMap("SwitchTime")
         private String switchTime;
 
+        @NameInMap("TaskParams")
+        private String taskParams;
+
         @NameInMap("TaskType")
         private String taskType;
 
@@ -238,6 +241,7 @@ public class DescribeActiveOperationTasksResponseBody extends TeaModel {
             this.status = builder.status;
             this.subInsNames = builder.subInsNames;
             this.switchTime = builder.switchTime;
+            this.taskParams = builder.taskParams;
             this.taskType = builder.taskType;
             this.taskTypeEn = builder.taskTypeEn;
             this.taskTypeZh = builder.taskTypeZh;
@@ -420,6 +424,13 @@ public class DescribeActiveOperationTasksResponseBody extends TeaModel {
         }
 
         /**
+         * @return taskParams
+         */
+        public String getTaskParams() {
+            return this.taskParams;
+        }
+
+        /**
          * @return taskType
          */
         public String getTaskType() {
@@ -465,6 +476,7 @@ public class DescribeActiveOperationTasksResponseBody extends TeaModel {
             private Integer status; 
             private java.util.List < String > subInsNames; 
             private String switchTime; 
+            private String taskParams; 
             private String taskType; 
             private String taskTypeEn; 
             private String taskTypeZh; 
@@ -665,6 +677,14 @@ public class DescribeActiveOperationTasksResponseBody extends TeaModel {
              */
             public Builder switchTime(String switchTime) {
                 this.switchTime = switchTime;
+                return this;
+            }
+
+            /**
+             * TaskParams.
+             */
+            public Builder taskParams(String taskParams) {
+                this.taskParams = taskParams;
                 return this;
             }
 

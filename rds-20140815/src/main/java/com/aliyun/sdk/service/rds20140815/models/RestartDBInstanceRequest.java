@@ -22,6 +22,10 @@ public class RestartDBInstanceRequest extends Request {
     private String DBInstanceId;
 
     @Query
+    @NameInMap("NodeId")
+    private String nodeId;
+
+    @Query
     @NameInMap("OwnerAccount")
     private String ownerAccount;
 
@@ -41,6 +45,7 @@ public class RestartDBInstanceRequest extends Request {
         super(builder);
         this.clientToken = builder.clientToken;
         this.DBInstanceId = builder.DBInstanceId;
+        this.nodeId = builder.nodeId;
         this.ownerAccount = builder.ownerAccount;
         this.ownerId = builder.ownerId;
         this.resourceOwnerAccount = builder.resourceOwnerAccount;
@@ -75,6 +80,13 @@ public class RestartDBInstanceRequest extends Request {
     }
 
     /**
+     * @return nodeId
+     */
+    public String getNodeId() {
+        return this.nodeId;
+    }
+
+    /**
      * @return ownerAccount
      */
     public String getOwnerAccount() {
@@ -105,6 +117,7 @@ public class RestartDBInstanceRequest extends Request {
     public static final class Builder extends Request.Builder<RestartDBInstanceRequest, Builder> {
         private String clientToken; 
         private String DBInstanceId; 
+        private String nodeId; 
         private String ownerAccount; 
         private Long ownerId; 
         private String resourceOwnerAccount; 
@@ -118,6 +131,7 @@ public class RestartDBInstanceRequest extends Request {
             super(request);
             this.clientToken = request.clientToken;
             this.DBInstanceId = request.DBInstanceId;
+            this.nodeId = request.nodeId;
             this.ownerAccount = request.ownerAccount;
             this.ownerId = request.ownerId;
             this.resourceOwnerAccount = request.resourceOwnerAccount;
@@ -139,6 +153,15 @@ public class RestartDBInstanceRequest extends Request {
         public Builder DBInstanceId(String DBInstanceId) {
             this.putQueryParameter("DBInstanceId", DBInstanceId);
             this.DBInstanceId = DBInstanceId;
+            return this;
+        }
+
+        /**
+         * NodeId.
+         */
+        public Builder nodeId(String nodeId) {
+            this.putQueryParameter("NodeId", nodeId);
+            this.nodeId = nodeId;
             return this;
         }
 
