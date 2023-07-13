@@ -41,6 +41,10 @@ public class ModifyClusterAttributesRequest extends Request {
     @NameInMap("RamRoleName")
     private String ramRoleName;
 
+    @Query
+    @NameInMap("WinAdPar")
+    private WinAdPar winAdPar;
+
     private ModifyClusterAttributesRequest(Builder builder) {
         super(builder);
         this.clusterId = builder.clusterId;
@@ -50,6 +54,7 @@ public class ModifyClusterAttributesRequest extends Request {
         this.name = builder.name;
         this.ramNodeTypes = builder.ramNodeTypes;
         this.ramRoleName = builder.ramRoleName;
+        this.winAdPar = builder.winAdPar;
     }
 
     public static Builder builder() {
@@ -114,6 +119,13 @@ public class ModifyClusterAttributesRequest extends Request {
         return this.ramRoleName;
     }
 
+    /**
+     * @return winAdPar
+     */
+    public WinAdPar getWinAdPar() {
+        return this.winAdPar;
+    }
+
     public static final class Builder extends Request.Builder<ModifyClusterAttributesRequest, Builder> {
         private String clusterId; 
         private String description; 
@@ -122,6 +134,7 @@ public class ModifyClusterAttributesRequest extends Request {
         private String name; 
         private java.util.List < String > ramNodeTypes; 
         private String ramRoleName; 
+        private WinAdPar winAdPar; 
 
         private Builder() {
             super();
@@ -136,10 +149,11 @@ public class ModifyClusterAttributesRequest extends Request {
             this.name = request.name;
             this.ramNodeTypes = request.ramNodeTypes;
             this.ramRoleName = request.ramRoleName;
+            this.winAdPar = request.winAdPar;
         } 
 
         /**
-         * The ID of the cluster that you want to modify.
+         * The ID of the image.
          */
         public Builder clusterId(String clusterId) {
             this.putQueryParameter("ClusterId", clusterId);
@@ -148,7 +162,7 @@ public class ModifyClusterAttributesRequest extends Request {
         }
 
         /**
-         * The new cluster description.
+         * Description.
          */
         public Builder description(String description) {
             this.putQueryParameter("Description", description);
@@ -157,7 +171,7 @@ public class ModifyClusterAttributesRequest extends Request {
         }
 
         /**
-         * The ID of the image.
+         * ImageId.
          */
         public Builder imageId(String imageId) {
             this.putQueryParameter("ImageId", imageId);
@@ -166,13 +180,7 @@ public class ModifyClusterAttributesRequest extends Request {
         }
 
         /**
-         * The new image type of the cluster. Valid values:
-         * <p>
-         * 
-         * *   system: public image
-         * *   self: custom image
-         * *   others: shared image
-         * *   marketplace: Alibaba Cloud Marketplace image
+         * ImageOwnerAlias.
          */
         public Builder imageOwnerAlias(String imageOwnerAlias) {
             this.putQueryParameter("ImageOwnerAlias", imageOwnerAlias);
@@ -181,7 +189,7 @@ public class ModifyClusterAttributesRequest extends Request {
         }
 
         /**
-         * The new cluster name.
+         * The ID of the request.
          */
         public Builder name(String name) {
             this.putQueryParameter("Name", name);
@@ -190,7 +198,7 @@ public class ModifyClusterAttributesRequest extends Request {
         }
 
         /**
-         * RamNodeTypes.
+         * 授权实例配置时，要绑定RAM角色的节点类型。
          */
         public Builder ramNodeTypes(java.util.List < String > ramNodeTypes) {
             this.putQueryParameter("RamNodeTypes", ramNodeTypes);
@@ -199,11 +207,20 @@ public class ModifyClusterAttributesRequest extends Request {
         }
 
         /**
-         * RamRoleName.
+         * 授权实例配置时，实例RAM角色的名称。
          */
         public Builder ramRoleName(String ramRoleName) {
             this.putQueryParameter("RamRoleName", ramRoleName);
             this.ramRoleName = ramRoleName;
+            return this;
+        }
+
+        /**
+         * WinAdPar.
+         */
+        public Builder winAdPar(WinAdPar winAdPar) {
+            this.putQueryParameter("WinAdPar", winAdPar);
+            this.winAdPar = winAdPar;
             return this;
         }
 
@@ -214,4 +231,125 @@ public class ModifyClusterAttributesRequest extends Request {
 
     } 
 
+    public static class WinAdPar extends TeaModel {
+        @NameInMap("AdDc")
+        private String adDc;
+
+        @NameInMap("AdIp")
+        private String adIp;
+
+        @NameInMap("AdUser")
+        private String adUser;
+
+        @NameInMap("AdUserPasswd")
+        private String adUserPasswd;
+
+        @NameInMap("FallbackHomeDir")
+        private String fallbackHomeDir;
+
+        private WinAdPar(Builder builder) {
+            this.adDc = builder.adDc;
+            this.adIp = builder.adIp;
+            this.adUser = builder.adUser;
+            this.adUserPasswd = builder.adUserPasswd;
+            this.fallbackHomeDir = builder.fallbackHomeDir;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static WinAdPar create() {
+            return builder().build();
+        }
+
+        /**
+         * @return adDc
+         */
+        public String getAdDc() {
+            return this.adDc;
+        }
+
+        /**
+         * @return adIp
+         */
+        public String getAdIp() {
+            return this.adIp;
+        }
+
+        /**
+         * @return adUser
+         */
+        public String getAdUser() {
+            return this.adUser;
+        }
+
+        /**
+         * @return adUserPasswd
+         */
+        public String getAdUserPasswd() {
+            return this.adUserPasswd;
+        }
+
+        /**
+         * @return fallbackHomeDir
+         */
+        public String getFallbackHomeDir() {
+            return this.fallbackHomeDir;
+        }
+
+        public static final class Builder {
+            private String adDc; 
+            private String adIp; 
+            private String adUser; 
+            private String adUserPasswd; 
+            private String fallbackHomeDir; 
+
+            /**
+             * AdDc.
+             */
+            public Builder adDc(String adDc) {
+                this.adDc = adDc;
+                return this;
+            }
+
+            /**
+             * AdIp.
+             */
+            public Builder adIp(String adIp) {
+                this.adIp = adIp;
+                return this;
+            }
+
+            /**
+             * AdUser.
+             */
+            public Builder adUser(String adUser) {
+                this.adUser = adUser;
+                return this;
+            }
+
+            /**
+             * AdUserPasswd.
+             */
+            public Builder adUserPasswd(String adUserPasswd) {
+                this.adUserPasswd = adUserPasswd;
+                return this;
+            }
+
+            /**
+             * FallbackHomeDir.
+             */
+            public Builder fallbackHomeDir(String fallbackHomeDir) {
+                this.fallbackHomeDir = fallbackHomeDir;
+                return this;
+            }
+
+            public WinAdPar build() {
+                return new WinAdPar(this);
+            } 
+
+        } 
+
+    }
 }

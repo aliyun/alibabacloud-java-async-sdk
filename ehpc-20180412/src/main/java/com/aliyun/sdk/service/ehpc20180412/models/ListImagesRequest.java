@@ -77,7 +77,7 @@ public class ListImagesRequest extends Request {
         }
 
         /**
-         * The instance type of the node.
+         * The instance type.
          * <p>
          * 
          * *   If a value is passed to the parameter, the list of images that are supported by the specified instance type is queried.

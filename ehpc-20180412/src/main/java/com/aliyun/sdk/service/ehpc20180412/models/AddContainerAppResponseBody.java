@@ -50,7 +50,7 @@ public class AddContainerAppResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The ID of the container.
+         * ContainerId.
          */
         public Builder containerId(ContainerId containerId) {
             this.containerId = containerId;
@@ -58,7 +58,7 @@ public class AddContainerAppResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * The ID of the container.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -98,7 +98,7 @@ public class AddContainerAppResponseBody extends TeaModel {
             private java.util.List < String > containerId; 
 
             /**
-             * The ID of the container.
+             * ContainerId.
              */
             public Builder containerId(java.util.List < String > containerId) {
                 this.containerId = containerId;

@@ -70,7 +70,7 @@ public class SyncUsersRequest extends Request {
         } 
 
         /**
-         * The ID of the cluster.
+         * The cluster ID.
          * <p>
          * 
          * You can call the [ListClusters](~~87116~~) operation to query the list of E-HPC clusters.
@@ -82,10 +82,10 @@ public class SyncUsersRequest extends Request {
         }
 
         /**
-         * The ID of the region where the cluster resides.
+         * The region ID.
          * <p>
          * 
-         * You can call the [ListRegions](~~188593~~) operation to query the list of regions where E-HPC is available.
+         * You can call the [ListRegions](~~188593~~) operation to query the list of regions where E-HPC is supported.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);

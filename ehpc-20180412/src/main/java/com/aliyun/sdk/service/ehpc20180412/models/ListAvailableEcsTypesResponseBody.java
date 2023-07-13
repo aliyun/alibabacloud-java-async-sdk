@@ -70,7 +70,7 @@ public class ListAvailableEcsTypesResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -343,7 +343,7 @@ public class ListAvailableEcsTypesResponseBody extends TeaModel {
             }
 
             /**
-             * The inbound packet forwarding rate over the internal network. Unit: pps
+             * The inbound packet forwarding rate over the internal network. Unit: pps.
              */
             public Builder instancePpsRx(Integer instancePpsRx) {
                 this.instancePpsRx = instancePpsRx;
@@ -351,7 +351,7 @@ public class ListAvailableEcsTypesResponseBody extends TeaModel {
             }
 
             /**
-             * The outbound packet forwarding rate over the internal network. Unit: pps
+             * The outbound packet forwarding rate over the internal network. Unit: pps.
              */
             public Builder instancePpsTx(Integer instancePpsTx) {
                 this.instancePpsTx = instancePpsTx;
@@ -367,7 +367,7 @@ public class ListAvailableEcsTypesResponseBody extends TeaModel {
             }
 
             /**
-             * The memory size of the ECS instance. Unit: GiB
+             * The memory size of the ECS instance. Unit: GiB.
              */
             public Builder memorySize(Integer memorySize) {
                 this.memorySize = memorySize;

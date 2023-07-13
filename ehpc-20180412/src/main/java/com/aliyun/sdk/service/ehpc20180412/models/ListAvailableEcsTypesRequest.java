@@ -115,7 +115,7 @@ public class ListAvailableEcsTypesRequest extends Request {
          * *   false: available
          * *   true: sold out
          * 
-         * Default value: false
+         * Default value: false.
          */
         public Builder showSoldOut(Boolean showSoldOut) {
             this.putQueryParameter("ShowSoldOut", showSoldOut);
@@ -129,7 +129,7 @@ public class ListAvailableEcsTypesRequest extends Request {
          * 
          * *   NoSpot: The ECS instances are pay-as-you-go instances.
          * *   SpotWithPriceLimit: The ECS instances are preemptible instances that have a user-defined maximum hourly price.
-         * *   SpotAsPriceGo: The ECS instances are preemptible instances for which the market price at the time of purchase is used as the bid price.
+         * *   SpotAsPriceGo: The compute nodes are preemptible instances for which the market price at the time of purchase is used as the bid price.
          */
         public Builder spotStrategy(String spotStrategy) {
             this.putQueryParameter("SpotStrategy", spotStrategy);

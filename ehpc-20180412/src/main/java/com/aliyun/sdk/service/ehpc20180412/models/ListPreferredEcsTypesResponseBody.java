@@ -62,7 +62,7 @@ public class ListPreferredEcsTypesResponseBody extends TeaModel {
         private Boolean supportSpotInstance; 
 
         /**
-         * The ID of the request.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -70,7 +70,7 @@ public class ListPreferredEcsTypesResponseBody extends TeaModel {
         }
 
         /**
-         * The list of recommended ECS instances. Each SeriesInfo element contains the recommended ECS instance types for various nodes of the E-HPC cluster.
+         * The list of recommended ECS instances. Each series contains the recommended ECS instance types for various nodes of the E-HPC cluster.
          */
         public Builder series(Series series) {
             this.series = series;
@@ -78,7 +78,7 @@ public class ListPreferredEcsTypesResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether spot instances are supported.
+         * Indicates whether preemptible instances are supported.
          */
         public Builder supportSpotInstance(Boolean supportSpotInstance) {
             this.supportSpotInstance = supportSpotInstance;
@@ -346,7 +346,7 @@ public class ListPreferredEcsTypesResponseBody extends TeaModel {
             private String seriesName; 
 
             /**
-             * The recommended ECS instance types for various nodes of the E-HPC cluster.
+             * Recommended instance types for nodes in an E-HPC cluser.
              */
             public Builder roles(Roles roles) {
                 this.roles = roles;
@@ -354,13 +354,13 @@ public class ListPreferredEcsTypesResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the ECS instance series. Valid values:
+             * The ECS instance series ID. Valid values:
              * <p>
              * 
-             * *   HighCompute: high computing
-             * *   HighMem: high storage
-             * *   GPU
-             * *   All: all options.
+             * *   HighCompute: compute-optimized instance families
+             * *   HighMem: memory-optimized instance families
+             * *   GPU: GPU-accelerated instance families
+             * *   All: all instance families
              */
             public Builder seriesId(String seriesId) {
                 this.seriesId = seriesId;
@@ -368,7 +368,7 @@ public class ListPreferredEcsTypesResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the instance series. Valid values:
+             * The instance series name. Valid values:
              * <p>
              * 
              * *   SeriesHighCompute

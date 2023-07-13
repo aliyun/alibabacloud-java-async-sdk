@@ -22,6 +22,10 @@ public class UpdateQueueConfigRequest extends Request {
     private String computeInstanceType;
 
     @Query
+    @NameInMap("DeploymentSetId")
+    private String deploymentSetId;
+
+    @Query
     @NameInMap("QueueName")
     @Validation(required = true)
     private String queueName;
@@ -35,6 +39,7 @@ public class UpdateQueueConfigRequest extends Request {
         super(builder);
         this.clusterId = builder.clusterId;
         this.computeInstanceType = builder.computeInstanceType;
+        this.deploymentSetId = builder.deploymentSetId;
         this.queueName = builder.queueName;
         this.resourceGroupId = builder.resourceGroupId;
     }
@@ -67,6 +72,13 @@ public class UpdateQueueConfigRequest extends Request {
     }
 
     /**
+     * @return deploymentSetId
+     */
+    public String getDeploymentSetId() {
+        return this.deploymentSetId;
+    }
+
+    /**
      * @return queueName
      */
     public String getQueueName() {
@@ -83,6 +95,7 @@ public class UpdateQueueConfigRequest extends Request {
     public static final class Builder extends Request.Builder<UpdateQueueConfigRequest, Builder> {
         private String clusterId; 
         private String computeInstanceType; 
+        private String deploymentSetId; 
         private String queueName; 
         private String resourceGroupId; 
 
@@ -94,6 +107,7 @@ public class UpdateQueueConfigRequest extends Request {
             super(request);
             this.clusterId = request.clusterId;
             this.computeInstanceType = request.computeInstanceType;
+            this.deploymentSetId = request.deploymentSetId;
             this.queueName = request.queueName;
             this.resourceGroupId = request.resourceGroupId;
         } 
@@ -119,6 +133,15 @@ public class UpdateQueueConfigRequest extends Request {
         public Builder computeInstanceType(String computeInstanceType) {
             this.putQueryParameter("ComputeInstanceType", computeInstanceType);
             this.computeInstanceType = computeInstanceType;
+            return this;
+        }
+
+        /**
+         * DeploymentSetId.
+         */
+        public Builder deploymentSetId(String deploymentSetId) {
+            this.putQueryParameter("DeploymentSetId", deploymentSetId);
+            this.deploymentSetId = deploymentSetId;
             return this;
         }
 

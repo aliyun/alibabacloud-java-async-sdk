@@ -118,7 +118,7 @@ public class UnTagResourcesRequest extends Request {
          * *   true
          * *   false
          * 
-         * Default value: false
+         * Default value: false.
          */
         public Builder all(Boolean all) {
             this.putQueryParameter("All", all);
@@ -127,7 +127,7 @@ public class UnTagResourcesRequest extends Request {
         }
 
         /**
-         * The ID of the region to which the resource belongs.
+         * The region ID of the resource.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -136,7 +136,7 @@ public class UnTagResourcesRequest extends Request {
         }
 
         /**
-         * ResourceId.
+         * The resource IDs. You can specify up to 50 resource IDs.
          */
         public Builder resourceId(java.util.List < String > resourceId) {
             this.putQueryParameter("ResourceId", resourceId);
@@ -145,7 +145,7 @@ public class UnTagResourcesRequest extends Request {
         }
 
         /**
-         * The type of the resource. Set the value to cluster, which indicates E-HPC clusters.
+         * The type of the resource from which you want to remove tags. Set the value to cluster, which indicates E-HPC clusters.
          */
         public Builder resourceType(String resourceType) {
             this.putQueryParameter("ResourceType", resourceType);
@@ -154,7 +154,7 @@ public class UnTagResourcesRequest extends Request {
         }
 
         /**
-         * TagKey.
+         * The tag key of the resource. You can specify up to 20 tag keys.
          */
         public Builder tagKey(java.util.List < String > tagKey) {
             this.putQueryParameter("TagKey", tagKey);

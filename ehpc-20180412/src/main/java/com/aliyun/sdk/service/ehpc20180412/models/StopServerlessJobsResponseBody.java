@@ -7,15 +7,15 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
- * {@link GetUserImageResponseBody} extends {@link TeaModel}
+ * {@link StopServerlessJobsResponseBody} extends {@link TeaModel}
  *
- * <p>GetUserImageResponseBody</p>
+ * <p>StopServerlessJobsResponseBody</p>
  */
-public class GetUserImageResponseBody extends TeaModel {
+public class StopServerlessJobsResponseBody extends TeaModel {
     @NameInMap("RequestId")
     private String requestId;
 
-    private GetUserImageResponseBody(Builder builder) {
+    private StopServerlessJobsResponseBody(Builder builder) {
         this.requestId = builder.requestId;
     }
 
@@ -23,7 +23,7 @@ public class GetUserImageResponseBody extends TeaModel {
         return new Builder();
     }
 
-    public static GetUserImageResponseBody create() {
+    public static StopServerlessJobsResponseBody create() {
         return builder().build();
     }
 
@@ -38,15 +38,15 @@ public class GetUserImageResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The request ID.
+         * RequestId.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
             return this;
         }
 
-        public GetUserImageResponseBody build() {
-            return new GetUserImageResponseBody(this);
+        public StopServerlessJobsResponseBody build() {
+            return new StopServerlessJobsResponseBody(this);
         } 
 
     } 

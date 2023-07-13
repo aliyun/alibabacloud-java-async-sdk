@@ -18,6 +18,14 @@ public class AddQueueRequest extends Request {
     private String clusterId;
 
     @Query
+    @NameInMap("DeploymentSetId")
+    private String deploymentSetId;
+
+    @Query
+    @NameInMap("NetworkInterfaceTrafficMode")
+    private String networkInterfaceTrafficMode;
+
+    @Query
     @NameInMap("QueueName")
     @Validation(required = true)
     private String queueName;
@@ -25,6 +33,8 @@ public class AddQueueRequest extends Request {
     private AddQueueRequest(Builder builder) {
         super(builder);
         this.clusterId = builder.clusterId;
+        this.deploymentSetId = builder.deploymentSetId;
+        this.networkInterfaceTrafficMode = builder.networkInterfaceTrafficMode;
         this.queueName = builder.queueName;
     }
 
@@ -49,6 +59,20 @@ public class AddQueueRequest extends Request {
     }
 
     /**
+     * @return deploymentSetId
+     */
+    public String getDeploymentSetId() {
+        return this.deploymentSetId;
+    }
+
+    /**
+     * @return networkInterfaceTrafficMode
+     */
+    public String getNetworkInterfaceTrafficMode() {
+        return this.networkInterfaceTrafficMode;
+    }
+
+    /**
      * @return queueName
      */
     public String getQueueName() {
@@ -57,6 +81,8 @@ public class AddQueueRequest extends Request {
 
     public static final class Builder extends Request.Builder<AddQueueRequest, Builder> {
         private String clusterId; 
+        private String deploymentSetId; 
+        private String networkInterfaceTrafficMode; 
         private String queueName; 
 
         private Builder() {
@@ -66,6 +92,8 @@ public class AddQueueRequest extends Request {
         private Builder(AddQueueRequest request) {
             super(request);
             this.clusterId = request.clusterId;
+            this.deploymentSetId = request.deploymentSetId;
+            this.networkInterfaceTrafficMode = request.networkInterfaceTrafficMode;
             this.queueName = request.queueName;
         } 
 
@@ -78,6 +106,24 @@ public class AddQueueRequest extends Request {
         public Builder clusterId(String clusterId) {
             this.putQueryParameter("ClusterId", clusterId);
             this.clusterId = clusterId;
+            return this;
+        }
+
+        /**
+         * DeploymentSetId.
+         */
+        public Builder deploymentSetId(String deploymentSetId) {
+            this.putQueryParameter("DeploymentSetId", deploymentSetId);
+            this.deploymentSetId = deploymentSetId;
+            return this;
+        }
+
+        /**
+         * NetworkInterfaceTrafficMode.
+         */
+        public Builder networkInterfaceTrafficMode(String networkInterfaceTrafficMode) {
+            this.putQueryParameter("NetworkInterfaceTrafficMode", networkInterfaceTrafficMode);
+            this.networkInterfaceTrafficMode = networkInterfaceTrafficMode;
             return this;
         }
 

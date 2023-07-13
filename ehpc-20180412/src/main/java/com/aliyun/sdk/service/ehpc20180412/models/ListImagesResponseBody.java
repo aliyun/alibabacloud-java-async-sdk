@@ -210,7 +210,7 @@ public class ListImagesResponseBody extends TeaModel {
             }
 
             /**
-             * OSName.
+             * The name of the image.
              */
             public Builder OSName(String OSName) {
                 this.OSName = OSName;
@@ -218,7 +218,7 @@ public class ListImagesResponseBody extends TeaModel {
             }
 
             /**
-             * OSNameEn.
+             * The name of the image in English.
              */
             public Builder OSNameEn(String OSNameEn) {
                 this.OSNameEn = OSNameEn;
@@ -226,7 +226,7 @@ public class ListImagesResponseBody extends TeaModel {
             }
 
             /**
-             * The image tag of the cluster.
+             * The tag that is added to the image.
              */
             public Builder osTag(String osTag) {
                 this.osTag = osTag;

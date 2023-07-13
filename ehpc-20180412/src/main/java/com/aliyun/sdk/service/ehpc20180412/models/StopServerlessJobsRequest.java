@@ -7,26 +7,32 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
- * {@link GetAutoScaleConfigRequest} extends {@link RequestModel}
+ * {@link StopServerlessJobsRequest} extends {@link RequestModel}
  *
- * <p>GetAutoScaleConfigRequest</p>
+ * <p>StopServerlessJobsRequest</p>
  */
-public class GetAutoScaleConfigRequest extends Request {
+public class StopServerlessJobsRequest extends Request {
     @Query
     @NameInMap("ClusterId")
     @Validation(required = true)
     private String clusterId;
 
-    private GetAutoScaleConfigRequest(Builder builder) {
+    @Query
+    @NameInMap("JobIds")
+    @Validation(required = true)
+    private java.util.List < String > jobIds;
+
+    private StopServerlessJobsRequest(Builder builder) {
         super(builder);
         this.clusterId = builder.clusterId;
+        this.jobIds = builder.jobIds;
     }
 
     public static Builder builder() {
         return new Builder();
     }
 
-    public static GetAutoScaleConfigRequest create() {
+    public static StopServerlessJobsRequest create() {
         return builder().build();
     }
 
@@ -42,16 +48,25 @@ public class GetAutoScaleConfigRequest extends Request {
         return this.clusterId;
     }
 
-    public static final class Builder extends Request.Builder<GetAutoScaleConfigRequest, Builder> {
+    /**
+     * @return jobIds
+     */
+    public java.util.List < String > getJobIds() {
+        return this.jobIds;
+    }
+
+    public static final class Builder extends Request.Builder<StopServerlessJobsRequest, Builder> {
         private String clusterId; 
+        private java.util.List < String > jobIds; 
 
         private Builder() {
             super();
         } 
 
-        private Builder(GetAutoScaleConfigRequest request) {
+        private Builder(StopServerlessJobsRequest request) {
             super(request);
             this.clusterId = request.clusterId;
+            this.jobIds = request.jobIds;
         } 
 
         /**
@@ -63,9 +78,18 @@ public class GetAutoScaleConfigRequest extends Request {
             return this;
         }
 
+        /**
+         * JobIds.
+         */
+        public Builder jobIds(java.util.List < String > jobIds) {
+            this.putQueryParameter("JobIds", jobIds);
+            this.jobIds = jobIds;
+            return this;
+        }
+
         @Override
-        public GetAutoScaleConfigRequest build() {
-            return new GetAutoScaleConfigRequest(this);
+        public StopServerlessJobsRequest build() {
+            return new StopServerlessJobsRequest(this);
         } 
 
     } 

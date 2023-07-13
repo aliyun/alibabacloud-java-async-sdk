@@ -74,7 +74,7 @@ public class ListUpgradeClientsResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The upgrade records of the cluster.
+         * The time when the operation was performed.
          */
         public Builder clientRecords(java.util.List < ClientRecords> clientRecords) {
             this.clientRecords = clientRecords;
@@ -82,7 +82,7 @@ public class ListUpgradeClientsResponseBody extends TeaModel {
         }
 
         /**
-         * The current version of the E-HPC client.
+         * CurrentVersion.
          */
         public Builder currentVersion(String currentVersion) {
             this.currentVersion = currentVersion;
@@ -90,7 +90,7 @@ public class ListUpgradeClientsResponseBody extends TeaModel {
         }
 
         /**
-         * The latest version of the E-HPC client.
+         * The version of the E-HPC client after the upgrade.
          */
         public Builder latestVersion(String latestVersion) {
             this.latestVersion = latestVersion;
@@ -98,7 +98,7 @@ public class ListUpgradeClientsResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * The version of the E-HPC client before the upgrade.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -174,7 +174,7 @@ public class ListUpgradeClientsResponseBody extends TeaModel {
             private String updateTime; 
 
             /**
-             * The version of the E-HPC client after the upgrade.
+             * NewVersion.
              */
             public Builder newVersion(String newVersion) {
                 this.newVersion = newVersion;
@@ -182,7 +182,7 @@ public class ListUpgradeClientsResponseBody extends TeaModel {
             }
 
             /**
-             * The version of the E-HPC client before the upgrade.
+             * OldVersion.
              */
             public Builder oldVersion(String oldVersion) {
                 this.oldVersion = oldVersion;
@@ -190,7 +190,7 @@ public class ListUpgradeClientsResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the user that upgraded the E-HPC client.
+             * SubUid.
              */
             public Builder subUid(String subUid) {
                 this.subUid = subUid;
@@ -198,7 +198,7 @@ public class ListUpgradeClientsResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the operation was performed.
+             * UpdateTime.
              */
             public Builder updateTime(String updateTime) {
                 this.updateTime = updateTime;

@@ -154,7 +154,7 @@ public class GetUserImageRequest extends Request {
         }
 
         /**
-         * The ID of the cluster.
+         * The cluster ID.
          */
         public Builder clusterId(String clusterId) {
             this.putQueryParameter("ClusterId", clusterId);
@@ -172,7 +172,7 @@ public class GetUserImageRequest extends Request {
         }
 
         /**
-         * The name of the image.
+         * The image name.
          */
         public Builder imageName(String imageName) {
             this.putQueryParameter("ImageName", imageName);
@@ -199,7 +199,7 @@ public class GetUserImageRequest extends Request {
         }
 
         /**
-         * The endpoint of OSS.
+         * The OSS endpoint.
          */
         public Builder OSSEndPoint(String OSSEndPoint) {
             this.putQueryParameter("OSSEndPoint", OSSEndPoint);

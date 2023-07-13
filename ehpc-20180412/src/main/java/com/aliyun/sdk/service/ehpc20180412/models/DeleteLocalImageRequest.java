@@ -109,7 +109,7 @@ public class DeleteLocalImageRequest extends Request {
         }
 
         /**
-         * The ID of the cluster from which that you want to delete the image.
+         * ClusterId.
          */
         public Builder clusterId(String clusterId) {
             this.putQueryParameter("ClusterId", clusterId);
@@ -118,7 +118,7 @@ public class DeleteLocalImageRequest extends Request {
         }
 
         /**
-         * The type of the image. Set the value to singularity.
+         * ContainerType.
          */
         public Builder containerType(String containerType) {
             this.putQueryParameter("ContainerType", containerType);
@@ -127,7 +127,7 @@ public class DeleteLocalImageRequest extends Request {
         }
 
         /**
-         * The name of the image that you want to delete.
+         * ImageName.
          */
         public Builder imageName(String imageName) {
             this.putQueryParameter("ImageName", imageName);

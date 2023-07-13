@@ -49,6 +49,10 @@ public class CreateHybridClusterRequest extends Request {
     private String ehpcVersion;
 
     @Query
+    @NameInMap("HybridClusterOpMode")
+    private String hybridClusterOpMode;
+
+    @Query
     @NameInMap("ImageId")
     private String imageId;
 
@@ -183,6 +187,7 @@ public class CreateHybridClusterRequest extends Request {
         this.description = builder.description;
         this.domain = builder.domain;
         this.ehpcVersion = builder.ehpcVersion;
+        this.hybridClusterOpMode = builder.hybridClusterOpMode;
         this.imageId = builder.imageId;
         this.imageOwnerAlias = builder.imageOwnerAlias;
         this.jobQueue = builder.jobQueue;
@@ -289,6 +294,13 @@ public class CreateHybridClusterRequest extends Request {
      */
     public String getEhpcVersion() {
         return this.ehpcVersion;
+    }
+
+    /**
+     * @return hybridClusterOpMode
+     */
+    public String getHybridClusterOpMode() {
+        return this.hybridClusterOpMode;
     }
 
     /**
@@ -511,6 +523,7 @@ public class CreateHybridClusterRequest extends Request {
         private String description; 
         private String domain; 
         private String ehpcVersion; 
+        private String hybridClusterOpMode; 
         private String imageId; 
         private String imageOwnerAlias; 
         private String jobQueue; 
@@ -557,6 +570,7 @@ public class CreateHybridClusterRequest extends Request {
             this.description = request.description;
             this.domain = request.domain;
             this.ehpcVersion = request.ehpcVersion;
+            this.hybridClusterOpMode = request.hybridClusterOpMode;
             this.imageId = request.imageId;
             this.imageOwnerAlias = request.imageOwnerAlias;
             this.jobQueue = request.jobQueue;
@@ -599,7 +613,7 @@ public class CreateHybridClusterRequest extends Request {
         }
 
         /**
-         * Application.
+         * An array that consists of the information about the software.
          */
         public Builder application(java.util.List < Application> application) {
             this.putQueryParameter("Application", application);
@@ -608,7 +622,7 @@ public class CreateHybridClusterRequest extends Request {
         }
 
         /**
-         * The client token that is used to ensure the idempotence of the request. You can use the client to generate the value, but you must make sure that the value is unique among different requests. The ClientToken value can contain only ASCII characters and cannot exceed 64 characters in length. For more information, see [How to ensure the idempotence of a request](~~25693~~).
+         * The client token that is used to ensure the idempotence of the request. You can use the client to generate the token, but make sure that the token is unique among different requests. The token can contain only ASCII characters and cannot exceed 64 characters in length. For more information, see [How do I ensure the idempotence of a request?](~~25693~~)
          */
         public Builder clientToken(String clientToken) {
             this.putQueryParameter("ClientToken", clientToken);
@@ -639,10 +653,10 @@ public class CreateHybridClusterRequest extends Request {
          * <p>
          * 
          * *   NoSpot: The compute nodes are pay-as-you-go instances.
-         * *   SpotWithPriceLimit: The instances of the compute node are preemptible instances. These types of instances have a specified maximum hourly price.
-         * *   SpotAsPriceGo: The instances of the compute node are preemptible instances. The price of these instances is based on the current market price.
+         * *   SpotWithPriceLimit: The instance is created as a preemptible instance with a user-defined maximum hourly price.
+         * *   SpotAsPriceGo: The instance is created as a preemptible instance for which the market price at the time of purchase is automatically used as the bidding price.
          * 
-         * Default value: NoSpot
+         * Default value: NoSpot.
          */
         public Builder computeSpotStrategy(String computeSpotStrategy) {
             this.putQueryParameter("ComputeSpotStrategy", computeSpotStrategy);
@@ -651,10 +665,10 @@ public class CreateHybridClusterRequest extends Request {
         }
 
         /**
-         * The description of the cluster. The description must be 2 to 256 characters in length. It cannot start with http:// or https://.
+         * The description of the E-HPC cluster. The description must be 2 to 256 characters in length and cannot start with [http:// or https://](http://https://。).
          * <p>
          * 
-         * Default value: null
+         * This parameter is empty by default.
          */
         public Builder description(String description) {
             this.putQueryParameter("Description", description);
@@ -669,7 +683,7 @@ public class CreateHybridClusterRequest extends Request {
          * *   nis
          * *   ldap
          * 
-         * Default value: nis
+         * Default value: nis.
          */
         public Builder domain(String domain) {
             this.putQueryParameter("Domain", domain);
@@ -687,7 +701,20 @@ public class CreateHybridClusterRequest extends Request {
         }
 
         /**
-         * The ID of the image.
+         * The mode in which the proxy node manages the offline nodes. Valid values:
+         * <p>
+         * 
+         * *   SSH: indicates management via SSH logon.
+         * *   CA: indicates management through Cloud Assistant.
+         */
+        public Builder hybridClusterOpMode(String hybridClusterOpMode) {
+            this.putQueryParameter("HybridClusterOpMode", hybridClusterOpMode);
+            this.hybridClusterOpMode = hybridClusterOpMode;
+            return this;
+        }
+
+        /**
+         * The IDs of the images.
          */
         public Builder imageId(String imageId) {
             this.putQueryParameter("ImageId", imageId);
@@ -720,10 +747,10 @@ public class CreateHybridClusterRequest extends Request {
         }
 
         /**
-         * The name of the AccessKey pair. The name must be 2 to 128 characters in length. It must start with a letter and cannot start with http:// or https://. It can contain letters, digits, colons (:), underscores (\_), and hyphens (-).
+         * The name of the key pair. The name must be 2 to 128 characters in length, and can contain letters, digits, colons (:), underscores (\_), and hyphens (-). It must start with a letter and cannot start with http:// or https://.[](http://https://。、（:）、（\_）（-）。)
          * <p>
          * 
-         * >  For more information, see [Create an SSH key pair](~~51793~~).
+         * > To use an SSH key pair, see [Create an SSH key pair](~~51793~~).
          */
         public Builder keyPairName(String keyPairName) {
             this.putQueryParameter("KeyPairName", keyPairName);
@@ -747,7 +774,7 @@ public class CreateHybridClusterRequest extends Request {
          * *   true
          * *   false
          * 
-         * Default value: false
+         * Default value: false.
          */
         public Builder multiOs(Boolean multiOs) {
             this.putQueryParameter("MultiOs", multiOs);
@@ -765,7 +792,7 @@ public class CreateHybridClusterRequest extends Request {
         }
 
         /**
-         * Nodes.
+         * The information about the nodes in the local cluster.
          */
         public Builder nodes(java.util.List < Nodes> nodes) {
             this.putQueryParameter("Nodes", nodes);
@@ -810,7 +837,7 @@ public class CreateHybridClusterRequest extends Request {
         }
 
         /**
-         * OpenldapPar.
+         * The parameter that is used to connect to the OpenLDAP server.
          */
         public Builder openldapPar(OpenldapPar openldapPar) {
             this.putQueryParameter("OpenldapPar", openldapPar);
@@ -828,12 +855,10 @@ public class CreateHybridClusterRequest extends Request {
         }
 
         /**
-         * The root password of the logon node. The password must be 8 to 30 characters in length and contain at least three of the following items: uppercase letters, lowercase letters, digits, and special characters. The password can contain the following special characters:
+         * The root password of the logon node. The password must be 8 to 30 characters in length and contain at least three of the following items: uppercase letters, lowercase letters, digits, and special characters. The following special characters are supported: `() ~ ! @ # $ % ^ & * - = + | { } [ ] : ; ‘ < > , . ? /`
          * <p>
          * 
-         * `() ~ ! @ # $ % ^ & * - = + | { } [ ] : ; ‘ < > , . ? /`
-         * 
-         * >  We recommend that you use HTTPS to call the API operation to prevent password leakage.
+         * > We recommend that you use HTTPS to call the API operation to prevent password leakage.
          */
         public Builder password(String password) {
             this.putQueryParameter("Password", password);
@@ -842,7 +867,19 @@ public class CreateHybridClusterRequest extends Request {
         }
 
         /**
-         * Plugin.
+         * The mode configurations of the plug-in. This parameter takes effect only when the SchedulerType parameter is set to custom.
+         * <p>
+         * 
+         * The value must be a JSON string. The parameter contains the following parameters: pluginMod, pluginLocalPath, and pluginOssPath.
+         * 
+         * *   pluginMod: the mode of the plug-in. The following modes are supported:
+         * 
+         *     *   oss: The plug-in is downloaded and decompressed from OSS to a local path. The local path is specified by the pluginLocalPath parameter.
+         *     *   image: By default, the plug-in is stored in a pre-defined local path. The local path is specified by the pluginLocalPath parameter.
+         * 
+         * *   pluginLocalPath: the local path where the plug-in is stored. We recommend that you select a shared directory in oss mode and a non-shared directory in image mode.
+         * 
+         * *   pluginOssPath: the remote path where the plug-in is stored in OSS. This parameter takes effect only when the pluginMod parameter is set to oss.
          */
         public Builder plugin(String plugin) {
             this.putQueryParameter("Plugin", plugin);
@@ -851,7 +888,7 @@ public class CreateHybridClusterRequest extends Request {
         }
 
         /**
-         * PostInstallScript.
+         * The list of post-installation script information.
          */
         public Builder postInstallScript(java.util.List < PostInstallScript> postInstallScript) {
             this.putQueryParameter("PostInstallScript", postInstallScript);
@@ -891,10 +928,12 @@ public class CreateHybridClusterRequest extends Request {
         }
 
         /**
-         * You can select an existing security group.
+         * You can select an existing security group by its ID.
          * <p>
          * 
-         * >  If you specify this parameter, you cannot specify the `SecurityGroupName` parameter at the same time.
+         * **
+         * 
+         * **If you specify this parameter, you cannot specify the **SecurityGroupName`  parameter. `
          */
         public Builder securityGroupId(String securityGroupId) {
             this.putQueryParameter("SecurityGroupId", securityGroupId);
@@ -906,7 +945,7 @@ public class CreateHybridClusterRequest extends Request {
          * If you do not use an existing security group, set the parameter to the name of a new security group. A default policy is applied to the new security group.
          * <p>
          * 
-         * >  If you specify this parameter, you cannot specify the `SecurityGroupId` parameter at the same time.
+         * > If you specify this parameter, you cannot specify the `SecurityGroupId` parameter.
          */
         public Builder securityGroupName(String securityGroupName) {
             this.putQueryParameter("SecurityGroupName", securityGroupName);
@@ -915,7 +954,7 @@ public class CreateHybridClusterRequest extends Request {
         }
 
         /**
-         * The ID of the vSwitch.
+         * The ID of the vSwitch to which the instance connects to.
          */
         public Builder vSwitchId(String vSwitchId) {
             this.putQueryParameter("VSwitchId", vSwitchId);
@@ -933,7 +972,7 @@ public class CreateHybridClusterRequest extends Request {
         }
 
         /**
-         * The mount target of the file system. Mount targets cannot be automatically created for NAS file systems.
+         * The mount target of the NAS file system. The mount target is of the VPC type. Mount targets cannot be automatically created for NAS file systems.
          */
         public Builder volumeMountpoint(String volumeMountpoint) {
             this.putQueryParameter("VolumeMountpoint", volumeMountpoint);
@@ -942,7 +981,7 @@ public class CreateHybridClusterRequest extends Request {
         }
 
         /**
-         * The type of the protocol that is used by the file system. Only NFS is supported.
+         * The type of the protocol that is used by the NAS file system. Only NFS is supported.
          */
         public Builder volumeProtocol(String volumeProtocol) {
             this.putQueryParameter("VolumeProtocol", volumeProtocol);
@@ -960,7 +999,7 @@ public class CreateHybridClusterRequest extends Request {
         }
 
         /**
-         * The ID of the virtual private cloud (VPC) to which the cluster belongs.
+         * The ID of the virtual private cloud (VPC) to which the E-HPC cluster belongs.
          */
         public Builder vpcId(String vpcId) {
             this.putQueryParameter("VpcId", vpcId);
@@ -969,7 +1008,7 @@ public class CreateHybridClusterRequest extends Request {
         }
 
         /**
-         * WinAdPar.
+         * The parameter that is used to connect to the Windows AD server.
          */
         public Builder winAdPar(WinAdPar winAdPar) {
             this.putQueryParameter("WinAdPar", winAdPar);
@@ -1062,7 +1101,7 @@ public class CreateHybridClusterRequest extends Request {
             private String instanceType; 
 
             /**
-             * The instance type of the management node on the cloud. Only Proxy Mode is supported.
+             * The instance type of the management node. Only Proxy Mode is supported.
              */
             public Builder instanceType(String instanceType) {
                 this.instanceType = instanceType;
@@ -1166,7 +1205,7 @@ public class CreateHybridClusterRequest extends Request {
             private String tag; 
 
             /**
-             * The tag of the application. Valid values of N: 1 to 5.
+             * The tag of the software.
              */
             public Builder tag(String tag) {
                 this.tag = tag;
@@ -1273,7 +1312,7 @@ public class CreateHybridClusterRequest extends Request {
              * *   nis
              * *   ldap
              * 
-             * Default value: nis
+             * Default value: nis.
              */
             public Builder accountType(String accountType) {
                 this.accountType = accountType;
@@ -1326,7 +1365,7 @@ public class CreateHybridClusterRequest extends Request {
              * *   opengridscheduler
              * *   deadline
              * 
-             * Default value: pbs
+             * Default value: pbs.
              */
             public Builder schedulerType(String schedulerType) {
                 this.schedulerType = schedulerType;
@@ -1344,11 +1383,15 @@ public class CreateHybridClusterRequest extends Request {
         @NameInMap("BaseDn")
         private String baseDn;
 
+        @NameInMap("FallbackHomeDir")
+        private String fallbackHomeDir;
+
         @NameInMap("LdapServerIp")
         private String ldapServerIp;
 
         private OpenldapPar(Builder builder) {
             this.baseDn = builder.baseDn;
+            this.fallbackHomeDir = builder.fallbackHomeDir;
             this.ldapServerIp = builder.ldapServerIp;
         }
 
@@ -1368,6 +1411,13 @@ public class CreateHybridClusterRequest extends Request {
         }
 
         /**
+         * @return fallbackHomeDir
+         */
+        public String getFallbackHomeDir() {
+            return this.fallbackHomeDir;
+        }
+
+        /**
          * @return ldapServerIp
          */
         public String getLdapServerIp() {
@@ -1376,10 +1426,11 @@ public class CreateHybridClusterRequest extends Request {
 
         public static final class Builder {
             private String baseDn; 
+            private String fallbackHomeDir; 
             private String ldapServerIp; 
 
             /**
-             * BaseDn.
+             * The BaseDN of the LDAP server.
              */
             public Builder baseDn(String baseDn) {
                 this.baseDn = baseDn;
@@ -1387,7 +1438,15 @@ public class CreateHybridClusterRequest extends Request {
             }
 
             /**
-             * LdapServerIp.
+             * The home directory of the Linux server.
+             */
+            public Builder fallbackHomeDir(String fallbackHomeDir) {
+                this.fallbackHomeDir = fallbackHomeDir;
+                return this;
+            }
+
+            /**
+             * The IP address of the LDAP server.
              */
             public Builder ldapServerIp(String ldapServerIp) {
                 this.ldapServerIp = ldapServerIp;
@@ -1440,7 +1499,7 @@ public class CreateHybridClusterRequest extends Request {
             private String url; 
 
             /**
-             * The parameters that are used to run the post-installation script. Valid values of N: 1 to 16.
+             * The parameter that is used to run the script after the cluster is created.
              */
             public Builder args(String args) {
                 this.args = args;
@@ -1448,7 +1507,7 @@ public class CreateHybridClusterRequest extends Request {
             }
 
             /**
-             * The full path of the post-installation script. Valid values of N: 1 to 16.
+             * The full path of the post-installation script.
              */
             public Builder url(String url) {
                 this.url = url;
@@ -1525,7 +1584,7 @@ public class CreateHybridClusterRequest extends Request {
             private String adUserPasswd; 
 
             /**
-             * AdDc.
+             * The name of the AD domain.
              */
             public Builder adDc(String adDc) {
                 this.adDc = adDc;
@@ -1533,7 +1592,7 @@ public class CreateHybridClusterRequest extends Request {
             }
 
             /**
-             * AdIp.
+             * The IP address of the AD domain.
              */
             public Builder adIp(String adIp) {
                 this.adIp = adIp;
@@ -1541,7 +1600,7 @@ public class CreateHybridClusterRequest extends Request {
             }
 
             /**
-             * AdUser.
+             * The AD user.
              */
             public Builder adUser(String adUser) {
                 this.adUser = adUser;
@@ -1549,7 +1608,7 @@ public class CreateHybridClusterRequest extends Request {
             }
 
             /**
-             * AdUserPasswd.
+             * The password of the AD user.
              */
             public Builder adUserPasswd(String adUserPasswd) {
                 this.adUserPasswd = adUserPasswd;

@@ -84,7 +84,10 @@ public class ModifyUserPasswordsRequest extends Request {
         } 
 
         /**
-         * Async.
+         * Specifies whether to enable the asynchronous mode for this request.
+         * <p>
+         * 
+         * Default value: false.
          */
         public Builder async(Boolean async) {
             this.putQueryParameter("Async", async);
@@ -93,10 +96,10 @@ public class ModifyUserPasswordsRequest extends Request {
         }
 
         /**
-         * The ID of the E-HPC cluster.
+         * The cluster ID.
          * <p>
          * 
-         * You can call the [ListClusters](~~87116~~) operation to query the cluster ID.
+         * You can call the [ListClusters](~~87116~~) operation to obtain the cluster ID.
          */
         public Builder clusterId(String clusterId) {
             this.putQueryParameter("ClusterId", clusterId);
@@ -105,7 +108,7 @@ public class ModifyUserPasswordsRequest extends Request {
         }
 
         /**
-         * User.
+         * The information about the user.
          */
         public Builder user(java.util.List < User> user) {
             this.putQueryParameter("User", user);
@@ -159,7 +162,7 @@ public class ModifyUserPasswordsRequest extends Request {
             private String password; 
 
             /**
-             * The name of the Nth user whose password you want to modify. Valid values of N: 1 to 100.
+             * The name of the user N whose password you want to modify. Valid values of N: 1 to 100.
              * <p>
              * 
              * You can call the [ListUsers](~~188572~~) operation to query the users of the cluster.
@@ -178,9 +181,9 @@ public class ModifyUserPasswordsRequest extends Request {
              * *   Digit
              * *   Special character: `()~!@#$%^&*-_+=|{}[]:;\"/<>,.?/`
              * 
-             * Valid values of N: 1 to 100
+             * Valid values of N: 1 to 100.
              * 
-             * >  We recommend that you use HTTPS to call the AddUsers operation to ensure that the password remains confidential.
+             * >  We recommend that you use HTTPS to call API operations to avoid password leaks.
              */
             public Builder password(String password) {
                 this.password = password;

@@ -105,7 +105,7 @@ public class ApplyNodesResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the task.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -121,7 +121,7 @@ public class ApplyNodesResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * The ID of the task.
          */
         public Builder taskId(String taskId) {
             this.taskId = taskId;

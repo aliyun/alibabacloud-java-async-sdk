@@ -83,10 +83,10 @@ public class ListJobTemplatesRequest extends Request {
         } 
 
         /**
-         * The name of the job template.
+         * The number of the page to return. Page numbers start from 1.
          * <p>
          * 
-         * You can call the [ListJobTemplates](~~87248~~) operation to obtain the job template name.
+         * Default value: 1
          */
         public Builder name(String name) {
             this.putQueryParameter("Name", name);
@@ -95,10 +95,10 @@ public class ListJobTemplatesRequest extends Request {
         }
 
         /**
-         * The number of the page to return. Page numbers start from 1.
+         * The number of entries to return on each page. Maximum value: 50.
          * <p>
          * 
-         * Default value: 1
+         * Default value: 10
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -107,10 +107,7 @@ public class ListJobTemplatesRequest extends Request {
         }
 
         /**
-         * The number of entries to return on each page. Maximum value: 50.
-         * <p>
-         * 
-         * Default value: 10
+         * The number of entries returned per page.
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);

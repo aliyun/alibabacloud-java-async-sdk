@@ -112,20 +112,11 @@ public class AddContainerAppRequest extends Request {
         } 
 
         /**
-         * The type of the container. Set the value to singularity.
+         * The ID of the request.
          */
         public Builder containerType(String containerType) {
             this.putQueryParameter("ContainerType", containerType);
             this.containerType = containerType;
-            return this;
-        }
-
-        /**
-         * The description of the container.
-         */
-        public Builder description(String description) {
-            this.putQueryParameter("Description", description);
-            this.description = description;
             return this;
         }
 
@@ -137,18 +128,18 @@ public class AddContainerAppRequest extends Request {
          * 
          * Default value: latest
          */
-        public Builder imageTag(String imageTag) {
-            this.putQueryParameter("ImageTag", imageTag);
-            this.imageTag = imageTag;
+        public Builder description(String description) {
+            this.putQueryParameter("Description", description);
+            this.description = description;
             return this;
         }
 
         /**
-         * The name of the container. The name must be 2 to 64 characters in length. It must start with a letter and can contain letters, digits, hyphens (-), and underscores (\_).
+         * The type of the container. Set the value to singularity.
          */
-        public Builder name(String name) {
-            this.putQueryParameter("Name", name);
-            this.name = name;
+        public Builder imageTag(String imageTag) {
+            this.putQueryParameter("ImageTag", imageTag);
+            this.imageTag = imageTag;
             return this;
         }
 
@@ -157,6 +148,15 @@ public class AddContainerAppRequest extends Request {
          * <p>
          * 
          * For information about image names, visit [Docker Hub official website](https://hub.docker.com/search?q=\&type=image).
+         */
+        public Builder name(String name) {
+            this.putQueryParameter("Name", name);
+            this.name = name;
+            return this;
+        }
+
+        /**
+         * The description of the container.
          */
         public Builder repository(String repository) {
             this.putQueryParameter("Repository", repository);

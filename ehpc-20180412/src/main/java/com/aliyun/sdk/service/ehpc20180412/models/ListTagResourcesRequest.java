@@ -121,7 +121,7 @@ public class ListTagResourcesRequest extends Request {
         }
 
         /**
-         * The ID of the region to which the resource belongs.
+         * The region ID of the resource.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -130,7 +130,7 @@ public class ListTagResourcesRequest extends Request {
         }
 
         /**
-         * 资源ID,最多 50个子项
+         * The resource IDs. You can specify up to 50 IDs.
          */
         public Builder resourceId(java.util.List < String > resourceId) {
             this.putQueryParameter("ResourceId", resourceId);
@@ -139,7 +139,7 @@ public class ListTagResourcesRequest extends Request {
         }
 
         /**
-         * The type of the resource. Set the value to cluster, which indicates E-HPC clusters.
+         * The resource type. Set the value to cluster, which indicates E-HPC clusters.
          */
         public Builder resourceType(String resourceType) {
             this.putQueryParameter("ResourceType", resourceType);
@@ -148,7 +148,7 @@ public class ListTagResourcesRequest extends Request {
         }
 
         /**
-         * 标签列表，最多包含20个子项
+         * The resource tags. You can specify up to 20 tags.
          */
         public Builder tag(java.util.List < Tag> tag) {
             this.putQueryParameter("Tag", tag);
@@ -202,7 +202,7 @@ public class ListTagResourcesRequest extends Request {
             private String value; 
 
             /**
-             * The key of the tag.
+             * The tag key.
              */
             public Builder key(String key) {
                 this.key = key;
@@ -210,7 +210,7 @@ public class ListTagResourcesRequest extends Request {
             }
 
             /**
-             * The value of the tag.
+             * The tag value.
              */
             public Builder value(String value) {
                 this.value = value;

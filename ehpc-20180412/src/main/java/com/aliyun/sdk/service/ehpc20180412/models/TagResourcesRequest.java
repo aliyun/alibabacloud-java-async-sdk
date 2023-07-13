@@ -100,7 +100,7 @@ public class TagResourcesRequest extends Request {
         } 
 
         /**
-         * The ID of the region to which the resource belongs.
+         * The key of the tag. The tag key cannot be an empty string. It can be up to 128 characters in length and cannot contain `http://` or `https://`. It must not start with `acs:` or `aliyun`.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -109,7 +109,7 @@ public class TagResourcesRequest extends Request {
         }
 
         /**
-         * 资源ID,最多 50个子项
+         * The ID of the request.
          */
         public Builder resourceId(java.util.List < String > resourceId) {
             this.putQueryParameter("ResourceId", resourceId);
@@ -118,7 +118,7 @@ public class TagResourcesRequest extends Request {
         }
 
         /**
-         * The type of the resource. Set the value to cluster, which indicates E-HPC clusters.
+         * The value of the tag. The tag key cannot be an empty string. It can be up to 128 characters in length and cannot contain `http://` or `https://`. It must not start with `acs:` or `aliyun`.
          */
         public Builder resourceType(String resourceType) {
             this.putQueryParameter("ResourceType", resourceType);
@@ -127,7 +127,7 @@ public class TagResourcesRequest extends Request {
         }
 
         /**
-         * 标签列表，最多包含20个子项
+         * Tag.
          */
         public Builder tag(java.util.List < Tag> tag) {
             this.putQueryParameter("Tag", tag);
@@ -181,7 +181,7 @@ public class TagResourcesRequest extends Request {
             private String value; 
 
             /**
-             * The key of the tag. The tag key cannot be an empty string. It can be up to 128 characters in length and cannot contain `http://` or `https://`. It must not start with `acs:` or `aliyun`.
+             * Key.
              */
             public Builder key(String key) {
                 this.key = key;
@@ -189,7 +189,7 @@ public class TagResourcesRequest extends Request {
             }
 
             /**
-             * The value of the tag. The tag key cannot be an empty string. It can be up to 128 characters in length and cannot contain `http://` or `https://`. It must not start with `acs:` or `aliyun`.
+             * Value.
              */
             public Builder value(String value) {
                 this.value = value;

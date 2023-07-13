@@ -86,7 +86,7 @@ public class ListClustersResponseBody extends TeaModel {
         private Integer totalCount; 
 
         /**
-         * The list of clusters.
+         * The ID of the virtual private cloud (VPC).
          */
         public Builder clusters(Clusters clusters) {
             this.clusters = clusters;
@@ -94,7 +94,7 @@ public class ListClustersResponseBody extends TeaModel {
         }
 
         /**
-         * The number of the returned page.
+         * The total number of returned entries.
          */
         public Builder pageNumber(Integer pageNumber) {
             this.pageNumber = pageNumber;
@@ -102,7 +102,7 @@ public class ListClustersResponseBody extends TeaModel {
         }
 
         /**
-         * The number of entries returned per page.
+         * The ID of the request.
          */
         public Builder pageSize(Integer pageSize) {
             this.pageSize = pageSize;
@@ -110,7 +110,7 @@ public class ListClustersResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * The number of the returned page.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -118,7 +118,7 @@ public class ListClustersResponseBody extends TeaModel {
         }
 
         /**
-         * The total number of returned entries.
+         * The list of clusters.
          */
         public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;
@@ -206,7 +206,7 @@ public class ListClustersResponseBody extends TeaModel {
             private Integer total; 
 
             /**
-             * The number of abnormal nodes.
+             * The number of stopped nodes.
              */
             public Builder exceptionCount(Integer exceptionCount) {
                 this.exceptionCount = exceptionCount;
@@ -214,7 +214,7 @@ public class ListClustersResponseBody extends TeaModel {
             }
 
             /**
-             * The number of normal nodes.
+             * The statistics of all resources in the cluster.
              */
             public Builder normalCount(Integer normalCount) {
                 this.normalCount = normalCount;
@@ -222,7 +222,7 @@ public class ListClustersResponseBody extends TeaModel {
             }
 
             /**
-             * The number of nodes that are being used in the queue. This includes those that are being initialized, installed, or released.
+             * The number of abnormal nodes.
              */
             public Builder operatingCount(Integer operatingCount) {
                 this.operatingCount = operatingCount;
@@ -230,7 +230,7 @@ public class ListClustersResponseBody extends TeaModel {
             }
 
             /**
-             * The number of stopped nodes.
+             * The total number of nodes.
              */
             public Builder stoppedCount(Integer stoppedCount) {
                 this.stoppedCount = stoppedCount;
@@ -238,7 +238,7 @@ public class ListClustersResponseBody extends TeaModel {
             }
 
             /**
-             * The total number of nodes.
+             * The number of normal nodes.
              */
             public Builder total(Integer total) {
                 this.total = total;
@@ -327,7 +327,7 @@ public class ListClustersResponseBody extends TeaModel {
             private Integer total; 
 
             /**
-             * The number of abnormal nodes.
+             * The number of stopped nodes.
              */
             public Builder exceptionCount(Integer exceptionCount) {
                 this.exceptionCount = exceptionCount;
@@ -335,7 +335,7 @@ public class ListClustersResponseBody extends TeaModel {
             }
 
             /**
-             * The number of normal nodes.
+             * The information about compute nodes.
              */
             public Builder normalCount(Integer normalCount) {
                 this.normalCount = normalCount;
@@ -343,7 +343,7 @@ public class ListClustersResponseBody extends TeaModel {
             }
 
             /**
-             * The number of nodes that are being used in the queue. This includes those that are being initialized, installed, or released.
+             * The number of abnormal nodes.
              */
             public Builder operatingCount(Integer operatingCount) {
                 this.operatingCount = operatingCount;
@@ -351,7 +351,7 @@ public class ListClustersResponseBody extends TeaModel {
             }
 
             /**
-             * The number of stopped nodes.
+             * The total number of management nodes.
              */
             public Builder stoppedCount(Integer stoppedCount) {
                 this.stoppedCount = stoppedCount;
@@ -359,7 +359,7 @@ public class ListClustersResponseBody extends TeaModel {
             }
 
             /**
-             * The total number of management nodes.
+             * The number of normal nodes.
              */
             public Builder total(Integer total) {
                 this.total = total;
@@ -424,7 +424,7 @@ public class ListClustersResponseBody extends TeaModel {
             private Integer memory; 
 
             /**
-             * The number of CPU cores. Unit: cores.
+             * The memory size. Unit: MiB.
              */
             public Builder cpu(Integer cpu) {
                 this.cpu = cpu;
@@ -432,7 +432,7 @@ public class ListClustersResponseBody extends TeaModel {
             }
 
             /**
-             * The number of GPU cards. Unit: cards.
+             * The number of CPU cores. Unit: cores.
              */
             public Builder gpu(Integer gpu) {
                 this.gpu = gpu;
@@ -440,7 +440,7 @@ public class ListClustersResponseBody extends TeaModel {
             }
 
             /**
-             * The memory size. Unit: MiB.
+             * The number of consumed resources in the cluster.
              */
             public Builder memory(Integer memory) {
                 this.memory = memory;
@@ -505,7 +505,7 @@ public class ListClustersResponseBody extends TeaModel {
             private Integer memory; 
 
             /**
-             * The number of CPU cores. Unit: cores.
+             * The memory size. Unit: MiB.
              */
             public Builder cpu(Integer cpu) {
                 this.cpu = cpu;
@@ -513,7 +513,7 @@ public class ListClustersResponseBody extends TeaModel {
             }
 
             /**
-             * The number of GPU cards. Unit: cards.
+             * The number of CPU cores. Unit: cores.
              */
             public Builder gpu(Integer gpu) {
                 this.gpu = gpu;
@@ -521,7 +521,13 @@ public class ListClustersResponseBody extends TeaModel {
             }
 
             /**
-             * The memory size. Unit: MiB.
+             * Indicates whether plug-ins were used in the cluster. Valid values:
+             * <p>
+             * 
+             * *   true: Plug-ins are used.
+             * *   false: Plug-ins are not used.
+             * 
+             * Default value: false
              */
             public Builder memory(Integer memory) {
                 this.memory = memory;
@@ -614,6 +620,9 @@ public class ListClustersResponseBody extends TeaModel {
         @NameInMap("RegionId")
         private String regionId;
 
+        @NameInMap("ResourceGroupId")
+        private String resourceGroupId;
+
         @NameInMap("SchedulerType")
         private String schedulerType;
 
@@ -662,6 +671,7 @@ public class ListClustersResponseBody extends TeaModel {
             this.nodeSuffix = builder.nodeSuffix;
             this.osTag = builder.osTag;
             this.regionId = builder.regionId;
+            this.resourceGroupId = builder.resourceGroupId;
             this.schedulerType = builder.schedulerType;
             this.status = builder.status;
             this.totalResources = builder.totalResources;
@@ -862,6 +872,13 @@ public class ListClustersResponseBody extends TeaModel {
         }
 
         /**
+         * @return resourceGroupId
+         */
+        public String getResourceGroupId() {
+            return this.resourceGroupId;
+        }
+
+        /**
          * @return schedulerType
          */
         public String getSchedulerType() {
@@ -937,6 +954,7 @@ public class ListClustersResponseBody extends TeaModel {
             private String nodeSuffix; 
             private String osTag; 
             private String regionId; 
+            private String resourceGroupId; 
             private String schedulerType; 
             private String status; 
             private TotalResources totalResources; 
@@ -946,11 +964,7 @@ public class ListClustersResponseBody extends TeaModel {
             private String zoneId; 
 
             /**
-             * The server type of the account. Valid values:
-             * <p>
-             * 
-             * *   nis
-             * *   ldap
+             * The number of compute nodes in the cluster.
              */
             public Builder accountType(String accountType) {
                 this.accountType = accountType;
@@ -958,7 +972,7 @@ public class ListClustersResponseBody extends TeaModel {
             }
 
             /**
-             * The operating system tag of the base image. The tag was used only by the management node.
+             * The name of the cluster.
              */
             public Builder baseOsTag(String baseOsTag) {
                 this.baseOsTag = baseOsTag;
@@ -966,229 +980,10 @@ public class ListClustersResponseBody extends TeaModel {
             }
 
             /**
-             * The version of the client.
+             * The list of management nodes.
              */
             public Builder clientVersion(String clientVersion) {
                 this.clientVersion = clientVersion;
-                return this;
-            }
-
-            /**
-             * The maximum hourly price for the ECS instance under the compute node. The return value can be accurate to three decimal places.
-             */
-            public Builder computeSpotPriceLimit(Float computeSpotPriceLimit) {
-                this.computeSpotPriceLimit = computeSpotPriceLimit;
-                return this;
-            }
-
-            /**
-             * The bidding method of the compute nodes. Valid values:
-             * <p>
-             * 
-             * *   NoSpot: The instances of the compute node are pay-as-you-go instances.
-             * *   SpotWithPriceLimit: The instances of the compute node are preemptible instances. These types of instances have a specified maximum hourly price.
-             * *   SpotAsPriceGo: The instances of the compute node are preemptible instances. The price of these instances is based on the current market price.
-             */
-            public Builder computeSpotStrategy(String computeSpotStrategy) {
-                this.computeSpotStrategy = computeSpotStrategy;
-                return this;
-            }
-
-            /**
-             * The information about compute nodes.
-             */
-            public Builder computes(Computes computes) {
-                this.computes = computes;
-                return this;
-            }
-
-            /**
-             * The number of compute nodes in the cluster.
-             */
-            public Builder count(Integer count) {
-                this.count = count;
-                return this;
-            }
-
-            /**
-             * The time when the instance was created.
-             */
-            public Builder createTime(String createTime) {
-                this.createTime = createTime;
-                return this;
-            }
-
-            /**
-             * The mode in which the cluster was deployed. Valid values:
-             * <p>
-             * 
-             * *   Standard: An account node, a scheduling node, a logon node, and multiple compute nodes are separately deployed.
-             * *   Advanced: Two high availability (HA) account nodes, two HA scheduler nodes, one logon node, and multiple compute nodes are separately deployed.
-             * *   Simple: A management node, a logon node, and multiple compute nodes are deployed. The management node consists of an account node and a scheduling node. The logon node and compute nodes are separately deployed.
-             * *   Tiny: A management node and multiple compute nodes are deployed. The management node consists of an account node, a scheduling node, and a logon node. The compute nodes are separately deployed.
-             */
-            public Builder deployMode(String deployMode) {
-                this.deployMode = deployMode;
-                return this;
-            }
-
-            /**
-             * The description of the cluster.
-             */
-            public Builder description(String description) {
-                this.description = description;
-                return this;
-            }
-
-            /**
-             * The version of E-HPC.
-             */
-            public Builder ehpcVersion(String ehpcVersion) {
-                this.ehpcVersion = ehpcVersion;
-                return this;
-            }
-
-            /**
-             * Indicates whether plug-ins were used in the cluster. Valid values:
-             * <p>
-             * 
-             * *   true: Plug-ins are used.
-             * *   false: Plug-ins are not used.
-             * 
-             * Default value: false
-             */
-            public Builder hasPlugin(Boolean hasPlugin) {
-                this.hasPlugin = hasPlugin;
-                return this;
-            }
-
-            /**
-             * The ID of the cluster.
-             */
-            public Builder id(String id) {
-                this.id = id;
-                return this;
-            }
-
-            /**
-             * The ID of the image.
-             */
-            public Builder imageId(String imageId) {
-                this.imageId = imageId;
-                return this;
-            }
-
-            /**
-             * The type of the image. Valid values:
-             * <p>
-             * 
-             * *   system: public image
-             * *   self: custom image
-             * *   others: shared image
-             * *   marketplace: Alibaba Cloud Marketplace image
-             */
-            public Builder imageOwnerAlias(String imageOwnerAlias) {
-                this.imageOwnerAlias = imageOwnerAlias;
-                return this;
-            }
-
-            /**
-             * The billing method of the nodes in the cluster. Valid values:
-             * <p>
-             * 
-             * *   PostPaid: pay-as-you-go
-             * *   PrePaid: subscription
-             */
-            public Builder instanceChargeType(String instanceChargeType) {
-                this.instanceChargeType = instanceChargeType;
-                return this;
-            }
-
-            /**
-             * The instance type of the compute nodes.
-             */
-            public Builder instanceType(String instanceType) {
-                this.instanceType = instanceType;
-                return this;
-            }
-
-            /**
-             * Indicates whether a scaling group was enabled. Valid values:
-             * <p>
-             * 
-             * *   true: A scaling group is enabled.
-             * *   false: No scaling group is enabled.
-             */
-            public Builder isComputeEss(Boolean isComputeEss) {
-                this.isComputeEss = isComputeEss;
-                return this;
-            }
-
-            /**
-             * The location where the cluster was deployed. Valid values:
-             * <p>
-             * 
-             * *   OnPremise: The cluster is deployed on a hybrid cloud.
-             * *   PublicCloud: The cluster is deployed on a public cloud.
-             */
-            public Builder location(String location) {
-                this.location = location;
-                return this;
-            }
-
-            /**
-             * The list of logon nodes.
-             */
-            public Builder loginNodes(String loginNodes) {
-                this.loginNodes = loginNodes;
-                return this;
-            }
-
-            /**
-             * The list of management nodes.
-             */
-            public Builder managers(Managers managers) {
-                this.managers = managers;
-                return this;
-            }
-
-            /**
-             * The name of the cluster.
-             */
-            public Builder name(String name) {
-                this.name = name;
-                return this;
-            }
-
-            /**
-             * The prefix of the node.
-             */
-            public Builder nodePrefix(String nodePrefix) {
-                this.nodePrefix = nodePrefix;
-                return this;
-            }
-
-            /**
-             * The suffix of the node.
-             */
-            public Builder nodeSuffix(String nodeSuffix) {
-                this.nodeSuffix = nodeSuffix;
-                return this;
-            }
-
-            /**
-             * The operating system tag of the image.
-             */
-            public Builder osTag(String osTag) {
-                this.osTag = osTag;
-                return this;
-            }
-
-            /**
-             * The ID of the region.
-             */
-            public Builder regionId(String regionId) {
-                this.regionId = regionId;
                 return this;
             }
 
@@ -1201,8 +996,265 @@ public class ListClustersResponseBody extends TeaModel {
              * *   opengridscheduler
              * *   deadline
              */
+            public Builder computeSpotPriceLimit(Float computeSpotPriceLimit) {
+                this.computeSpotPriceLimit = computeSpotPriceLimit;
+                return this;
+            }
+
+            /**
+             * The server type of the account. Valid values:
+             * <p>
+             * 
+             * *   nis
+             * *   ldap
+             */
+            public Builder computeSpotStrategy(String computeSpotStrategy) {
+                this.computeSpotStrategy = computeSpotStrategy;
+                return this;
+            }
+
+            /**
+             * The number of nodes that are being used in the queue. This includes those that are being initialized, installed, or released.
+             */
+            public Builder computes(Computes computes) {
+                this.computes = computes;
+                return this;
+            }
+
+            /**
+             * The version of E-HPC.
+             */
+            public Builder count(Integer count) {
+                this.count = count;
+                return this;
+            }
+
+            /**
+             * Indicates whether a scaling group was enabled. Valid values:
+             * <p>
+             * 
+             * *   true: A scaling group is enabled.
+             * *   false: No scaling group is enabled.
+             */
+            public Builder createTime(String createTime) {
+                this.createTime = createTime;
+                return this;
+            }
+
+            /**
+             * The suffix of the node.
+             */
+            public Builder deployMode(String deployMode) {
+                this.deployMode = deployMode;
+                return this;
+            }
+
+            /**
+             * The operating system tag of the base image. The tag was used only by the management node.
+             */
+            public Builder description(String description) {
+                this.description = description;
+                return this;
+            }
+
+            /**
+             * The description of the cluster.
+             */
+            public Builder ehpcVersion(String ehpcVersion) {
+                this.ehpcVersion = ehpcVersion;
+                return this;
+            }
+
+            /**
+             * HasPlugin.
+             */
+            public Builder hasPlugin(Boolean hasPlugin) {
+                this.hasPlugin = hasPlugin;
+                return this;
+            }
+
+            /**
+             * The location where the cluster was deployed. Valid values:
+             * <p>
+             * 
+             * *   OnPremise: The cluster is deployed on a hybrid cloud.
+             * *   PublicCloud: The cluster is deployed on a public cloud.
+             */
+            public Builder id(String id) {
+                this.id = id;
+                return this;
+            }
+
+            /**
+             * The maximum hourly price for the ECS instance under the compute node. The return value can be accurate to three decimal places.
+             */
+            public Builder imageId(String imageId) {
+                this.imageId = imageId;
+                return this;
+            }
+
+            /**
+             * The operating system tag of the image.
+             */
+            public Builder imageOwnerAlias(String imageOwnerAlias) {
+                this.imageOwnerAlias = imageOwnerAlias;
+                return this;
+            }
+
+            /**
+             * The ID of the vSwitch.
+             */
+            public Builder instanceChargeType(String instanceChargeType) {
+                this.instanceChargeType = instanceChargeType;
+                return this;
+            }
+
+            /**
+             * The ID of the region.
+             */
+            public Builder instanceType(String instanceType) {
+                this.instanceType = instanceType;
+                return this;
+            }
+
+            /**
+             * The bidding method of the compute nodes. Valid values:
+             * <p>
+             * 
+             * *   NoSpot: The instances of the compute node are pay-as-you-go instances.
+             * *   SpotWithPriceLimit: The instances of the compute node are preemptible instances. These types of instances have a specified maximum hourly price.
+             * *   SpotAsPriceGo: The instances of the compute node are preemptible instances. The price of these instances is based on the current market price.
+             */
+            public Builder isComputeEss(Boolean isComputeEss) {
+                this.isComputeEss = isComputeEss;
+                return this;
+            }
+
+            /**
+             * The version of the client.
+             */
+            public Builder location(String location) {
+                this.location = location;
+                return this;
+            }
+
+            /**
+             * The ID of the cluster.
+             */
+            public Builder loginNodes(String loginNodes) {
+                this.loginNodes = loginNodes;
+                return this;
+            }
+
+            /**
+             * The number of nodes that are being used in the queue. This includes those that are being initialized, installed, or released.
+             */
+            public Builder managers(Managers managers) {
+                this.managers = managers;
+                return this;
+            }
+
+            /**
+             * The ID of the image.
+             */
+            public Builder name(String name) {
+                this.name = name;
+                return this;
+            }
+
+            /**
+             * The instance type of the compute nodes.
+             */
+            public Builder nodePrefix(String nodePrefix) {
+                this.nodePrefix = nodePrefix;
+                return this;
+            }
+
+            /**
+             * The type of the image. Valid values:
+             * <p>
+             * 
+             * *   system: public image
+             * *   self: custom image
+             * *   others: shared image
+             * *   marketplace: Alibaba Cloud Marketplace image
+             */
+            public Builder nodeSuffix(String nodeSuffix) {
+                this.nodeSuffix = nodeSuffix;
+                return this;
+            }
+
+            /**
+             * The prefix of the node.
+             */
+            public Builder osTag(String osTag) {
+                this.osTag = osTag;
+                return this;
+            }
+
+            /**
+             * The billing method of the nodes in the cluster. Valid values:
+             * <p>
+             * 
+             * *   PostPaid: pay-as-you-go
+             * *   PrePaid: subscription
+             */
+            public Builder regionId(String regionId) {
+                this.regionId = regionId;
+                return this;
+            }
+
+            /**
+             * ResourceGroupId.
+             */
+            public Builder resourceGroupId(String resourceGroupId) {
+                this.resourceGroupId = resourceGroupId;
+                return this;
+            }
+
+            /**
+             * The mode in which the cluster was deployed. Valid values:
+             * <p>
+             * 
+             * *   Standard: An account node, a scheduling node, a logon node, and multiple compute nodes are separately deployed.
+             * *   Advanced: Two high availability (HA) account nodes, two HA scheduler nodes, one logon node, and multiple compute nodes are separately deployed.
+             * *   Simple: A management node, a logon node, and multiple compute nodes are deployed. The management node consists of an account node and a scheduling node. The logon node and compute nodes are separately deployed.
+             * *   Tiny: A management node and multiple compute nodes are deployed. The management node consists of an account node, a scheduling node, and a logon node. The compute nodes are separately deployed.
+             */
             public Builder schedulerType(String schedulerType) {
                 this.schedulerType = schedulerType;
+                return this;
+            }
+
+            /**
+             * The time when the instance was created.
+             */
+            public Builder status(String status) {
+                this.status = status;
+                return this;
+            }
+
+            /**
+             * The number of GPU cards. Unit: cards.
+             */
+            public Builder totalResources(TotalResources totalResources) {
+                this.totalResources = totalResources;
+                return this;
+            }
+
+            /**
+             * The number of GPU cards. Unit: cards.
+             */
+            public Builder usedResources(UsedResources usedResources) {
+                this.usedResources = usedResources;
+                return this;
+            }
+
+            /**
+             * The ID of the zone.
+             */
+            public Builder vSwitchId(String vSwitchId) {
+                this.vSwitchId = vSwitchId;
                 return this;
             }
 
@@ -1217,45 +1269,13 @@ public class ListClustersResponseBody extends TeaModel {
              * *   exception: The cluster encounters an exception.
              * *   releasing: The cluster is being released.
              */
-            public Builder status(String status) {
-                this.status = status;
-                return this;
-            }
-
-            /**
-             * The statistics of all resources in the cluster.
-             */
-            public Builder totalResources(TotalResources totalResources) {
-                this.totalResources = totalResources;
-                return this;
-            }
-
-            /**
-             * The number of consumed resources in the cluster.
-             */
-            public Builder usedResources(UsedResources usedResources) {
-                this.usedResources = usedResources;
-                return this;
-            }
-
-            /**
-             * The ID of the vSwitch.
-             */
-            public Builder vSwitchId(String vSwitchId) {
-                this.vSwitchId = vSwitchId;
-                return this;
-            }
-
-            /**
-             * The ID of the virtual private cloud (VPC).
-             */
             public Builder vpcId(String vpcId) {
                 this.vpcId = vpcId;
                 return this;
             }
 
             /**
-             * The ID of the zone.
+             * The list of logon nodes.
              */
             public Builder zoneId(String zoneId) {
                 this.zoneId = zoneId;

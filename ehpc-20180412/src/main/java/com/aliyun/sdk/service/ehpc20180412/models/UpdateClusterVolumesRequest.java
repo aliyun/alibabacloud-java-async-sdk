@@ -69,7 +69,7 @@ public class UpdateClusterVolumesRequest extends Request {
         } 
 
         /**
-         * AdditionalVolumes.
+         * The operation that you want to perform. Set the value to UpdateClusterVolumes
          */
         public Builder additionalVolumes(java.util.List < AdditionalVolumes> additionalVolumes) {
             this.putQueryParameter("AdditionalVolumes", additionalVolumes);
@@ -78,7 +78,7 @@ public class UpdateClusterVolumesRequest extends Request {
         }
 
         /**
-         * The ID of the cluster.
+         * The ID of the request.
          */
         public Builder clusterId(String clusterId) {
             this.putQueryParameter("ClusterId", clusterId);
@@ -274,7 +274,7 @@ public class UpdateClusterVolumesRequest extends Request {
             private String volumeType; 
 
             /**
-             * The queue name of the nth attached mounted filesystem.
+             * The ID of the cluster.
              */
             public Builder jobQueue(String jobQueue) {
                 this.jobQueue = jobQueue;
@@ -310,7 +310,7 @@ public class UpdateClusterVolumesRequest extends Request {
             }
 
             /**
-             * Roles.
+             * The ID of the nth additional mounted file system.
              */
             public Builder roles(java.util.List < Roles> roles) {
                 this.roles = roles;
@@ -318,7 +318,7 @@ public class UpdateClusterVolumesRequest extends Request {
             }
 
             /**
-             * The ID of the nth additional mounted file system.
+             * The queue name of the nth attached mounted filesystem.
              */
             public Builder volumeId(String volumeId) {
                 this.volumeId = volumeId;

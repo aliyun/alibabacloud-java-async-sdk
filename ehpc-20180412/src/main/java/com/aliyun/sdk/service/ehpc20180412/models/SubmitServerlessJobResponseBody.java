@@ -7,15 +7,19 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
- * {@link GetUserImageResponseBody} extends {@link TeaModel}
+ * {@link SubmitServerlessJobResponseBody} extends {@link TeaModel}
  *
- * <p>GetUserImageResponseBody</p>
+ * <p>SubmitServerlessJobResponseBody</p>
  */
-public class GetUserImageResponseBody extends TeaModel {
+public class SubmitServerlessJobResponseBody extends TeaModel {
+    @NameInMap("JobId")
+    private String jobId;
+
     @NameInMap("RequestId")
     private String requestId;
 
-    private GetUserImageResponseBody(Builder builder) {
+    private SubmitServerlessJobResponseBody(Builder builder) {
+        this.jobId = builder.jobId;
         this.requestId = builder.requestId;
     }
 
@@ -23,8 +27,15 @@ public class GetUserImageResponseBody extends TeaModel {
         return new Builder();
     }
 
-    public static GetUserImageResponseBody create() {
+    public static SubmitServerlessJobResponseBody create() {
         return builder().build();
+    }
+
+    /**
+     * @return jobId
+     */
+    public String getJobId() {
+        return this.jobId;
     }
 
     /**
@@ -35,18 +46,27 @@ public class GetUserImageResponseBody extends TeaModel {
     }
 
     public static final class Builder {
+        private String jobId; 
         private String requestId; 
 
         /**
-         * The request ID.
+         * JobId.
+         */
+        public Builder jobId(String jobId) {
+            this.jobId = jobId;
+            return this;
+        }
+
+        /**
+         * RequestId.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
             return this;
         }
 
-        public GetUserImageResponseBody build() {
-            return new GetUserImageResponseBody(this);
+        public SubmitServerlessJobResponseBody build() {
+            return new SubmitServerlessJobResponseBody(this);
         } 
 
     } 

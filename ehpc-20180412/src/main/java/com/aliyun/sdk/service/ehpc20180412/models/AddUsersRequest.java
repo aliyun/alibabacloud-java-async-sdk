@@ -84,7 +84,10 @@ public class AddUsersRequest extends Request {
         } 
 
         /**
-         * Async.
+         * Specifies whether to enable the asynchronous mode for this request.
+         * <p>
+         * 
+         * Default value: false.
          */
         public Builder async(Boolean async) {
             this.putQueryParameter("Async", async);
@@ -93,10 +96,10 @@ public class AddUsersRequest extends Request {
         }
 
         /**
-         * The ID of the cluster.
+         * The cluster ID.
          * <p>
          * 
-         * You can call the [ListClusters](~~87116~~) operation to query the cluster ID.
+         * You can call the [ListClusters](~~87116~~) operation to obtain the cluster ID.
          */
         public Builder clusterId(String clusterId) {
             this.putQueryParameter("ClusterId", clusterId);
@@ -105,7 +108,7 @@ public class AddUsersRequest extends Request {
         }
 
         /**
-         * User.
+         * The information about the user.
          */
         public Builder user(java.util.List < User> user) {
             this.putQueryParameter("User", user);
@@ -171,13 +174,13 @@ public class AddUsersRequest extends Request {
             private String password; 
 
             /**
-             * The permission group to which the user belongs. Valid values:
+             * The permission group to which the user N belongs. Valid values:
              * <p>
              * 
              * *   users: an ordinary permission group. It is applicable to ordinary users that need only to submit and debug jobs.
              * *   wheel: a sudo permission group. It is applicable to the administrator who needs to manage the cluster. In addition to submitting and debugging jobs, users who have sudo permissions can run sudo commands to install software and restart nodes.
              * 
-             * Valid values of N: 1 to 100
+             * Valid values of N: 1 to 100.
              */
             public Builder group(String group) {
                 this.group = group;
@@ -188,7 +191,7 @@ public class AddUsersRequest extends Request {
              * The name of the user that you want to add. The name must be 6 to 30 characters in length and can contain letters, digits, and periods (.). It must start with a letter.
              * <p>
              * 
-             * Valid values of N: 1 to 100
+             * Valid values of N: 1 to 100.
              */
             public Builder name(String name) {
                 this.name = name;
@@ -196,7 +199,7 @@ public class AddUsersRequest extends Request {
             }
 
             /**
-             * The password of the user. The password must be 8 to 30 characters in length and contain three of the following items:
+             * The password of the Nth user. The password must be 8 to 30 characters in length and contain three of the following items:
              * <p>
              * 
              * *   Uppercase letter
@@ -204,9 +207,9 @@ public class AddUsersRequest extends Request {
              * *   Digit
              * *   Special character: `()~!@#$%^&*-_+=|{}[]:;\"/<>,.?/`
              * 
-             * Valid values of N: 1 to 100
+             * Valid values of N: 1 to 100.
              * 
-             * >  We recommend that you use HTTPS to call the AddUsers operation to ensure that the password remains confidential.
+             * >  We recommend that you use HTTPS to call API operations to avoid password leaks.
              */
             public Builder password(String password) {
                 this.password = password;

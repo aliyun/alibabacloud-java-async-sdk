@@ -112,7 +112,7 @@ public class InvokeShellCommandRequest extends Request {
         } 
 
         /**
-         * The ID of the cluster.
+         * The cluster ID.
          * <p>
          * 
          * You can call the [ListClusters](~~87116~~) operation to query the cluster ID.
@@ -124,7 +124,7 @@ public class InvokeShellCommandRequest extends Request {
         }
 
         /**
-         * The content of the command. The value must be 2 to 2,048 characters in length.
+         * The content of the command. The content must be 2 to 2,048 characters in length.
          */
         public Builder command(String command) {
             this.putQueryParameter("Command", command);
@@ -133,7 +133,7 @@ public class InvokeShellCommandRequest extends Request {
         }
 
         /**
-         * Instance.
+         * The information of nodes on which the command is run.
          */
         public Builder instance(java.util.List < Instance> instance) {
             this.putQueryParameter("Instance", instance);
@@ -142,10 +142,10 @@ public class InvokeShellCommandRequest extends Request {
         }
 
         /**
-         * The timeout period. If a command times out, the command process is terminated. Unit: seconds.
+         * The timeout period. If a command times out, the command process will be terminated. Unit: seconds.
          * <p>
          * 
-         * Default value: 60
+         * Default value: 60.
          */
         public Builder timeout(Integer timeout) {
             this.putQueryParameter("Timeout", timeout);
@@ -154,7 +154,7 @@ public class InvokeShellCommandRequest extends Request {
         }
 
         /**
-         * The working directory of the command. Default value: /root.
+         * The working directory of the command. Default value: `/root`.
          */
         public Builder workingDir(String workingDir) {
             this.putQueryParameter("WorkingDir", workingDir);
@@ -196,10 +196,10 @@ public class InvokeShellCommandRequest extends Request {
             private String id; 
 
             /**
-             * The ID of the node on which the command is run.
+             * The ID of the Nth node instance on which the command is run.
              * <p>
              * 
-             * >  The Instance.N.Id parameter specifies the node on which the command is run. If it is not specified, the command is run on all nodes of the cluster.
+             * > This parameter specifies the node on which the command is run. If it is not specified, the command will be run on all nodes of the cluster.
              */
             public Builder id(String id) {
                 this.id = id;

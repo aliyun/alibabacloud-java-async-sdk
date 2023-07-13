@@ -84,10 +84,10 @@ public class SetPostScriptsRequest extends Request {
         } 
 
         /**
-         * The ID of the cluster.
+         * The cluster ID.
          * <p>
          * 
-         * You can call the [ListClusters](~~87116~~) operation to query the cluster ID.
+         * You can call the [ListClusters](~~87116~~) operation to obtain the cluster ID.
          */
         public Builder clusterId(String clusterId) {
             this.putQueryParameter("ClusterId", clusterId);
@@ -96,7 +96,7 @@ public class SetPostScriptsRequest extends Request {
         }
 
         /**
-         * PostInstallScripts.
+         * The post-processing scripts.
          */
         public Builder postInstallScripts(java.util.List < PostInstallScripts> postInstallScripts) {
             this.putQueryParameter("PostInstallScripts", postInstallScripts);
@@ -159,7 +159,7 @@ public class SetPostScriptsRequest extends Request {
             private String url; 
 
             /**
-             * The parameter that is used to run the Nth post-installation script. Valid values of N: 1 to 16.
+             * The parameter that is used to run the post-processing script.
              */
             public Builder args(String args) {
                 this.args = args;
@@ -167,7 +167,7 @@ public class SetPostScriptsRequest extends Request {
             }
 
             /**
-             * The URL that is used to download the Nth post-installation script. Valid values of N: 1 to 16.
+             * The URL that is used to download the post-processing script.
              */
             public Builder url(String url) {
                 this.url = url;

@@ -62,7 +62,7 @@ public class CreateHybridClusterResponseBody extends TeaModel {
         private String taskId; 
 
         /**
-         * The ID of the cluster.
+         * The ID of cluster.
          */
         public Builder clusterId(String clusterId) {
             this.clusterId = clusterId;

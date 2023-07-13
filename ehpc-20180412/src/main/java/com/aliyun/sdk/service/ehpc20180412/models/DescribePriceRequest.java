@@ -113,7 +113,7 @@ public class DescribePriceRequest extends Request {
         }
 
         /**
-         * Commodities.
+         * Product List
          */
         public Builder commodities(java.util.List < Commodities> commodities) {
             this.putQueryParameter("Commodities", commodities);
@@ -481,7 +481,7 @@ public class DescribePriceRequest extends Request {
             }
 
             /**
-             * DataDisks.
+             * The list of data disks created with the node.
              */
             public Builder dataDisks(java.util.List < DataDisks> dataDisks) {
                 this.dataDisks = dataDisks;

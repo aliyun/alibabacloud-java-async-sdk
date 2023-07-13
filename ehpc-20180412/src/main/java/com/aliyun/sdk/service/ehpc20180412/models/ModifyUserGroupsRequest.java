@@ -84,7 +84,10 @@ public class ModifyUserGroupsRequest extends Request {
         } 
 
         /**
-         * Async.
+         * Specifies whether to enable the asynchronous mode for this request.
+         * <p>
+         * 
+         * Default value: false.
          */
         public Builder async(Boolean async) {
             this.putQueryParameter("Async", async);
@@ -93,10 +96,10 @@ public class ModifyUserGroupsRequest extends Request {
         }
 
         /**
-         * The ID of the cluster.
+         * The cluster ID.
          * <p>
          * 
-         * You can call the [ListClusters](~~87116~~) operation to query the cluster ID.
+         * You can call the [ListClusters](~~87116~~) operation to obtain the cluster ID.
          */
         public Builder clusterId(String clusterId) {
             this.putQueryParameter("ClusterId", clusterId);
@@ -105,7 +108,7 @@ public class ModifyUserGroupsRequest extends Request {
         }
 
         /**
-         * User.
+         * The information about the user.
          */
         public Builder user(java.util.List < User> user) {
             this.putQueryParameter("User", user);
@@ -159,7 +162,7 @@ public class ModifyUserGroupsRequest extends Request {
             private String name; 
 
             /**
-             * The new permission group of the user. Valid values:
+             * The new permission group of the user N. Valid values:
              * <p>
              * 
              * *   users: an ordinary permission group. It is applicable to ordinary users that need only to submit and debug jobs.
@@ -171,7 +174,7 @@ public class ModifyUserGroupsRequest extends Request {
             }
 
             /**
-             * The name of the user whose permissions you want to modify. Valid values of N: 1 to 100.
+             * The name of the user N whose permissions you want to modify. Valid values of N: 1 to 100.
              * <p>
              * 
              * You can call the [ListUsers](~~188572~~) operation to query the users of the cluster.

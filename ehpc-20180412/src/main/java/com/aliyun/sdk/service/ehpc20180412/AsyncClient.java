@@ -19,7 +19,7 @@ public interface AsyncClient extends SdkAutoCloseable {
     }
 
     /**
-      * If you select an image for a new containerized application, the image is pulled from Docker Hub by default. However, the version of the image may not be up to date. You can call the [PullImage](~~159052~~) operation to pull the latest image.
+      * The operation that you want to perform. Set the value to AddContainerApp.
       *
      */
     CompletableFuture<AddContainerAppResponse> addContainerApp(AddContainerAppRequest request);
@@ -49,7 +49,8 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<ApplyNodesResponse> applyNodes(ApplyNodesRequest request);
 
     /**
-      * After you create an Elastic High Performance Computing (E-HPC) cluster, you are charged for the cluster resources that you use. We recommend that you learn about the billing methods of E-HPC in advance. For more information, see [Billing overview](~~57844~~).
+      * The ID of the zone.
+      * You can call the [ListRegions](~~188593~~) and [DescribeZones](~~25610~~) operations to query IDs of the zones where E-HPC is supported.
       *
      */
     CompletableFuture<CreateClusterResponse> createCluster(CreateClusterRequest request);
@@ -97,7 +98,8 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<DeleteSecurityGroupResponse> deleteSecurityGroup(DeleteSecurityGroupRequest request);
 
     /**
-      * If you delete a user, only its information is deleted. The files stored in the /home directory for the user are still retained. For example, if you delete a user named user1, the files in the `/home/user1/` directory of the cluster are not deleted. However, a deleted user cannot be recovered. Even if you create another user that has the same name, the data that was retained for the deleted user is not reused.
+      * ## Description
+      * If you delete a user, only its information is deleted. The files stored in the /home directory for the user are retained. For example, if you delete a user named user1, the files in the `/home/user1/` directory of the cluster are not deleted. However, a deleted user cannot be recovered. Even if you create another user that has the same name, the data retained for the deleted user is not reused.
       *
      */
     CompletableFuture<DeleteUsersResponse> deleteUsers(DeleteUsersRequest request);
@@ -128,11 +130,9 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<DescribeNFSClientStatusResponse> describeNFSClientStatus(DescribeNFSClientStatusRequest request);
 
-    /**
-      * ****
-      *
-     */
     CompletableFuture<DescribePriceResponse> describePrice(DescribePriceRequest request);
+
+    CompletableFuture<DescribeServerlessJobsResponse> describeServerlessJobs(DescribeServerlessJobsRequest request);
 
     CompletableFuture<EditJobTemplateResponse> editJobTemplate(EditJobTemplateRequest request);
 
@@ -226,6 +226,8 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<ListSecurityGroupsResponse> listSecurityGroups(ListSecurityGroupsRequest request);
 
+    CompletableFuture<ListServerlessJobsResponse> listServerlessJobs(ListServerlessJobsRequest request);
+
     CompletableFuture<ListSoftwaresResponse> listSoftwares(ListSoftwaresRequest request);
 
     CompletableFuture<ListTagResourcesResponse> listTagResources(ListTagResourcesRequest request);
@@ -245,7 +247,7 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<ListVolumesResponse> listVolumes(ListVolumesRequest request);
 
     /**
-      * Before you modify the basic information of a cluster, you can call the [DescribeCluster](~~87126~~) operation to query details of the selected cluster.
+      * The new cluster name.
       *
      */
     CompletableFuture<ModifyClusterAttributesResponse> modifyClusterAttributes(ModifyClusterAttributesRequest request);
@@ -287,7 +289,7 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<RunCloudMetricProfilingResponse> runCloudMetricProfiling(RunCloudMetricProfilingRequest request);
 
     /**
-      * If you specify different auto scaling settings in the Queue Configuration section and Global Configurations section on the Auto Scale page, the settings in the Queue Configuration section prevail.
+      * Configures the auto scaling settings of a cluster.
       *
      */
     CompletableFuture<SetAutoScaleConfigResponse> setAutoScaleConfig(SetAutoScaleConfigRequest request);
@@ -324,6 +326,8 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<StopNodesResponse> stopNodes(StopNodesRequest request);
 
+    CompletableFuture<StopServerlessJobsResponse> stopServerlessJobs(StopServerlessJobsRequest request);
+
     CompletableFuture<StopVisualServiceResponse> stopVisualService(StopVisualServiceRequest request);
 
     /**
@@ -332,6 +336,8 @@ public interface AsyncClient extends SdkAutoCloseable {
       *
      */
     CompletableFuture<SubmitJobResponse> submitJob(SubmitJobRequest request);
+
+    CompletableFuture<SubmitServerlessJobResponse> submitServerlessJob(SubmitServerlessJobRequest request);
 
     CompletableFuture<SummaryImagesResponse> summaryImages(SummaryImagesRequest request);
 

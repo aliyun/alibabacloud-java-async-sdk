@@ -21,6 +21,10 @@ public class CreateClusterRequest extends Request {
     private String accountType;
 
     @Query
+    @NameInMap("AddOns")
+    private java.util.List < AddOns> addOns;
+
+    @Query
     @NameInMap("AdditionalVolumes")
     private java.util.List < AdditionalVolumes> additionalVolumes;
 
@@ -63,6 +67,10 @@ public class CreateClusterRequest extends Request {
     @Query
     @NameInMap("DeployMode")
     private String deployMode;
+
+    @Query
+    @NameInMap("DeploymentSetId")
+    private String deploymentSetId;
 
     @Query
     @NameInMap("Description")
@@ -119,7 +127,6 @@ public class CreateClusterRequest extends Request {
 
     @Query
     @NameInMap("OsTag")
-    @Validation(required = true)
     private String osTag;
 
     @Query
@@ -231,6 +238,10 @@ public class CreateClusterRequest extends Request {
     private Boolean withoutElasticIp;
 
     @Query
+    @NameInMap("WithoutNas")
+    private Boolean withoutNas;
+
+    @Query
     @NameInMap("ZoneId")
     private String zoneId;
 
@@ -238,6 +249,7 @@ public class CreateClusterRequest extends Request {
         super(builder);
         this.ecsOrder = builder.ecsOrder;
         this.accountType = builder.accountType;
+        this.addOns = builder.addOns;
         this.additionalVolumes = builder.additionalVolumes;
         this.application = builder.application;
         this.autoRenew = builder.autoRenew;
@@ -249,6 +261,7 @@ public class CreateClusterRequest extends Request {
         this.computeSpotPriceLimit = builder.computeSpotPriceLimit;
         this.computeSpotStrategy = builder.computeSpotStrategy;
         this.deployMode = builder.deployMode;
+        this.deploymentSetId = builder.deploymentSetId;
         this.description = builder.description;
         this.domain = builder.domain;
         this.ecsChargeType = builder.ecsChargeType;
@@ -290,6 +303,7 @@ public class CreateClusterRequest extends Request {
         this.vpcId = builder.vpcId;
         this.withoutAgent = builder.withoutAgent;
         this.withoutElasticIp = builder.withoutElasticIp;
+        this.withoutNas = builder.withoutNas;
         this.zoneId = builder.zoneId;
     }
 
@@ -318,6 +332,13 @@ public class CreateClusterRequest extends Request {
      */
     public String getAccountType() {
         return this.accountType;
+    }
+
+    /**
+     * @return addOns
+     */
+    public java.util.List < AddOns> getAddOns() {
+        return this.addOns;
     }
 
     /**
@@ -395,6 +416,13 @@ public class CreateClusterRequest extends Request {
      */
     public String getDeployMode() {
         return this.deployMode;
+    }
+
+    /**
+     * @return deploymentSetId
+     */
+    public String getDeploymentSetId() {
+        return this.deploymentSetId;
     }
 
     /**
@@ -685,6 +713,13 @@ public class CreateClusterRequest extends Request {
     }
 
     /**
+     * @return withoutNas
+     */
+    public Boolean getWithoutNas() {
+        return this.withoutNas;
+    }
+
+    /**
      * @return zoneId
      */
     public String getZoneId() {
@@ -694,6 +729,7 @@ public class CreateClusterRequest extends Request {
     public static final class Builder extends Request.Builder<CreateClusterRequest, Builder> {
         private EcsOrder ecsOrder; 
         private String accountType; 
+        private java.util.List < AddOns> addOns; 
         private java.util.List < AdditionalVolumes> additionalVolumes; 
         private java.util.List < Application> application; 
         private String autoRenew; 
@@ -705,6 +741,7 @@ public class CreateClusterRequest extends Request {
         private String computeSpotPriceLimit; 
         private String computeSpotStrategy; 
         private String deployMode; 
+        private String deploymentSetId; 
         private String description; 
         private String domain; 
         private String ecsChargeType; 
@@ -746,6 +783,7 @@ public class CreateClusterRequest extends Request {
         private String vpcId; 
         private Boolean withoutAgent; 
         private Boolean withoutElasticIp; 
+        private Boolean withoutNas; 
         private String zoneId; 
 
         private Builder() {
@@ -756,6 +794,7 @@ public class CreateClusterRequest extends Request {
             super(request);
             this.ecsOrder = request.ecsOrder;
             this.accountType = request.accountType;
+            this.addOns = request.addOns;
             this.additionalVolumes = request.additionalVolumes;
             this.application = request.application;
             this.autoRenew = request.autoRenew;
@@ -767,6 +806,7 @@ public class CreateClusterRequest extends Request {
             this.computeSpotPriceLimit = request.computeSpotPriceLimit;
             this.computeSpotStrategy = request.computeSpotStrategy;
             this.deployMode = request.deployMode;
+            this.deploymentSetId = request.deploymentSetId;
             this.description = request.description;
             this.domain = request.domain;
             this.ecsChargeType = request.ecsChargeType;
@@ -808,6 +848,7 @@ public class CreateClusterRequest extends Request {
             this.vpcId = request.vpcId;
             this.withoutAgent = request.withoutAgent;
             this.withoutElasticIp = request.withoutElasticIp;
+            this.withoutNas = request.withoutNas;
             this.zoneId = request.zoneId;
         } 
 
@@ -821,13 +862,10 @@ public class CreateClusterRequest extends Request {
         }
 
         /**
-         * The type of the domain account service. Valid values:
+         * The domain name of the on-premises E-HPC cluster.
          * <p>
          * 
-         * *   nis
-         * *   ldap
-         * 
-         * Default value: nis
+         * This parameter takes effect only when the AccoutType parameter is set to Idap.
          */
         public Builder accountType(String accountType) {
             this.putQueryParameter("AccountType", accountType);
@@ -836,7 +874,21 @@ public class CreateClusterRequest extends Request {
         }
 
         /**
-         * AdditionalVolumes.
+         * AddOns.
+         */
+        public Builder addOns(java.util.List < AddOns> addOns) {
+            this.putQueryParameter("AddOns", addOns);
+            this.addOns = addOns;
+            return this;
+        }
+
+        /**
+         * The type of the nodes to which the additional file system is attached.
+         * <p>
+         * 
+         * Valid values of N in AdditionalVolumes.N.Roles: 1 to 10
+         * 
+         * Valid values of N in Roles.N.Name: 0 to 8
          */
         public Builder additionalVolumes(java.util.List < AdditionalVolumes> additionalVolumes) {
             this.putQueryParameter("AdditionalVolumes", additionalVolumes);
@@ -845,7 +897,10 @@ public class CreateClusterRequest extends Request {
         }
 
         /**
-         * Application.
+         * The queue of the nodes to which the additional file system is attached.
+         * <p>
+         * 
+         * Valid values of N: 1 to 10
          */
         public Builder application(java.util.List < Application> application) {
             this.putQueryParameter("Application", application);
@@ -854,13 +909,7 @@ public class CreateClusterRequest extends Request {
         }
 
         /**
-         * Specifies whether to enable auto-renewal for the subscription. Valid values:
-         * <p>
-         * 
-         * *   true
-         * *   false
-         * 
-         * Default value: false
+         * The auto-renewal period of the subscription compute nodes. The parameter takes effect when AutoRenew is set to true.
          */
         public Builder autoRenew(String autoRenew) {
             this.putQueryParameter("AutoRenew", autoRenew);
@@ -869,7 +918,7 @@ public class CreateClusterRequest extends Request {
         }
 
         /**
-         * The auto-renewal period of the subscription compute nodes. The parameter takes effect when AutoRenew is set to true.
+         * The URL of the job files that are uploaded to an Object Storage Service (OSS) bucket.
          */
         public Builder autoRenewPeriod(Integer autoRenewPeriod) {
             this.putQueryParameter("AutoRenewPeriod", autoRenewPeriod);
@@ -878,7 +927,7 @@ public class CreateClusterRequest extends Request {
         }
 
         /**
-         * The client token that is used to ensure the idempotence of the request. You can use the client to generate the value, but you must ensure that the value is unique among different requests. The token can only contain ASCII characters and cannot exceed 64 characters in length. For more information, see [How do I ensure the idempotence of a request?](~~25693~~)
+         * Specifies whether the logon node uses an elastic IP address (EIP). Default value: false
          */
         public Builder clientToken(String clientToken) {
             this.putQueryParameter("ClientToken", clientToken);
@@ -887,10 +936,7 @@ public class CreateClusterRequest extends Request {
         }
 
         /**
-         * The version of the E-HPC client. By default, the parameter is set to the latest version number.
-         * <p>
-         * 
-         * You can call the [ListCurrentClientVersion](~~87223~~) operation to query the latest version of the E-HPC client.
+         * The operating system tag of the image.
          */
         public Builder clientVersion(String clientVersion) {
             this.putQueryParameter("ClientVersion", clientVersion);
@@ -899,14 +945,32 @@ public class CreateClusterRequest extends Request {
         }
 
         /**
-         * The version of the E-HPC cluster.
+         * The tag of the software.
          * <p>
          * 
-         * Default value: 1.0
+         * Valid values of N: 0 to 100
+         * 
+         * You can call the [ListSoftwares](~~87216~~) operation to query the tag of the software.
          */
         public Builder clusterVersion(String clusterVersion) {
             this.putQueryParameter("ClusterVersion", clusterVersion);
             this.clusterVersion = clusterVersion;
+            return this;
+        }
+
+        /**
+         * The duration of the subscription. The unit of the duration is specified by the `PeriodUnit` parameter.
+         * <p>
+         * 
+         * *   If you set PriceUnit to Year, the valid values of the Period parameter are 1, 2, and 3.
+         * *   If you set PriceUnit to Month, the valid values of the Period parameter are 1, 2, 3, 4, 5, 6, 7, 8, and 9.
+         * *   If you set PriceUnit to Hour, the valid value of the Period parameter is 1.
+         * 
+         * Default value: 1
+         */
+        public Builder computeEnableHt(Boolean computeEnableHt) {
+            this.putQueryParameter("ComputeEnableHt", computeEnableHt);
+            this.computeEnableHt = computeEnableHt;
             return this;
         }
 
@@ -919,15 +983,6 @@ public class CreateClusterRequest extends Request {
          * 
          * Default value: true
          */
-        public Builder computeEnableHt(Boolean computeEnableHt) {
-            this.putQueryParameter("ComputeEnableHt", computeEnableHt);
-            this.computeEnableHt = computeEnableHt;
-            return this;
-        }
-
-        /**
-         * The maximum hourly price of the compute nodes. A maximum of three decimal places can be used in the value of the parameter. The parameter is valid only when the ComputeSpotStrategy parameter is set to SpotWithPriceLimit.
-         */
         public Builder computeSpotPriceLimit(String computeSpotPriceLimit) {
             this.putQueryParameter("ComputeSpotPriceLimit", computeSpotPriceLimit);
             this.computeSpotPriceLimit = computeSpotPriceLimit;
@@ -935,79 +990,11 @@ public class CreateClusterRequest extends Request {
         }
 
         /**
-         * The bidding method of the compute nodes. Valid values:
-         * <p>
-         * 
-         * *   NoSpot: The compute nodes are pay-as-you-go instances.
-         * *   SpotWithPriceLimit: The compute nodes are preemptible instances that have a user-defined maximum hourly price.
-         * *   SpotAsPriceGo: The compute nodes are preemptible instances for which the market price at the time of purchase is used as the bid price.
-         * 
-         * Default value: NoSpot
+         * The maximum hourly price of the compute nodes. A maximum of three decimal places can be used in the value of the parameter. The parameter is valid only when the ComputeSpotStrategy parameter is set to SpotWithPriceLimit.
          */
         public Builder computeSpotStrategy(String computeSpotStrategy) {
             this.putQueryParameter("ComputeSpotStrategy", computeSpotStrategy);
             this.computeSpotStrategy = computeSpotStrategy;
-            return this;
-        }
-
-        /**
-         * The mode in which the E-HPC cluster is deployed. Valid values:
-         * <p>
-         * 
-         * *   Standard: An account node, a scheduling node, a logon node, and multiple compute nodes are separately deployed.
-         * *   Simple: A management node, a logon node, and multiple compute nodes are deployed. The management node consists of an account node and a scheduling node. The logon node and compute nodes are separately deployed.
-         * *   Tiny: A management node and multiple compute nodes are deployed. The management node consists of an account node, a scheduling node, and a logon node. The compute nodes are separately deployed.
-         * 
-         * Default value: Standard
-         */
-        public Builder deployMode(String deployMode) {
-            this.putQueryParameter("DeployMode", deployMode);
-            this.deployMode = deployMode;
-            return this;
-        }
-
-        /**
-         * The description of the E-HPC cluster. The description must be 2 to 256 characters in length. It cannot start with http:// or https://.
-         */
-        public Builder description(String description) {
-            this.putQueryParameter("Description", description);
-            this.description = description;
-            return this;
-        }
-
-        /**
-         * The domain name of the on-premises E-HPC cluster.
-         * <p>
-         * 
-         * This parameter takes effect only when the AccoutType parameter is set to Idap.
-         */
-        public Builder domain(String domain) {
-            this.putQueryParameter("Domain", domain);
-            this.domain = domain;
-            return this;
-        }
-
-        /**
-         * The billing method of the nodes. Valid values:
-         * <p>
-         * 
-         * *   PostPaid: pay-as-you-go
-         * *   PrePaid: subscription
-         * 
-         * If you set the parameter to PrePaid, auto-renewal is enabled by default.
-         */
-        public Builder ecsChargeType(String ecsChargeType) {
-            this.putQueryParameter("EcsChargeType", ecsChargeType);
-            this.ecsChargeType = ecsChargeType;
-            return this;
-        }
-
-        /**
-         * The version of E-HPC. By default, the parameter is set to the latest version number.
-         */
-        public Builder ehpcVersion(String ehpcVersion) {
-            this.putQueryParameter("EhpcVersion", ehpcVersion);
-            this.ehpcVersion = ehpcVersion;
             return this;
         }
 
@@ -1022,9 +1009,96 @@ public class CreateClusterRequest extends Request {
          * 
          * >  If high availability is enabled, a primary management node and a secondary management node are used.
          */
+        public Builder deployMode(String deployMode) {
+            this.putQueryParameter("DeployMode", deployMode);
+            this.deployMode = deployMode;
+            return this;
+        }
+
+        /**
+         * DeploymentSetId.
+         */
+        public Builder deploymentSetId(String deploymentSetId) {
+            this.putQueryParameter("DeploymentSetId", deploymentSetId);
+            this.deploymentSetId = deploymentSetId;
+            return this;
+        }
+
+        /**
+         * The version of E-HPC. By default, the parameter is set to the latest version number.
+         */
+        public Builder description(String description) {
+            this.putQueryParameter("Description", description);
+            this.description = description;
+            return this;
+        }
+
+        /**
+         * The type of the scheduler. Valid values:
+         * <p>
+         * 
+         * *   pbs
+         * *   slurm
+         * *   opengridscheduler
+         * *   deadline
+         * 
+         * Default value: pbs
+         */
+        public Builder domain(String domain) {
+            this.putQueryParameter("Domain", domain);
+            this.domain = domain;
+            return this;
+        }
+
+        /**
+         * The root password of the logon node. The password must be 8 to 30 characters in length and contain at least three of the following items: uppercase letters, lowercase letters, digits, and special characters. The password can contain the following special characters:
+         * <p>
+         * 
+         * `( ) ~ ! @ # $ % ^ & * - + = | { } [ ] : ; ‘ < > , . ? /`
+         * 
+         * You must specify either Password or KeyPairName. If both are specified, the Password parameter prevails.
+         * 
+         * >  We recommend that you use HTTPS to call the API operation to prevent password leakages.
+         */
+        public Builder ecsChargeType(String ecsChargeType) {
+            this.putQueryParameter("EcsChargeType", ecsChargeType);
+            this.ecsChargeType = ecsChargeType;
+            return this;
+        }
+
+        /**
+         * The version of the E-HPC client. By default, the parameter is set to the latest version number.
+         * <p>
+         * 
+         * You can call the [ListCurrentClientVersion](~~87223~~) operation to query the latest version of the E-HPC client.
+         */
+        public Builder ehpcVersion(String ehpcVersion) {
+            this.putQueryParameter("EhpcVersion", ehpcVersion);
+            this.ehpcVersion = ehpcVersion;
+            return this;
+        }
+
+        /**
+         * The billing method of the nodes. Valid values:
+         * <p>
+         * 
+         * *   PostPaid: pay-as-you-go
+         * *   PrePaid: subscription
+         * 
+         * If you set the parameter to PrePaid, auto-renewal is enabled by default.
+         */
         public Builder haEnable(Boolean haEnable) {
             this.putQueryParameter("HaEnable", haEnable);
             this.haEnable = haEnable;
+            return this;
+        }
+
+        /**
+         * The number of the management nodes. Valid values: 1 and 2.
+         */
+        public Builder imageId(String imageId) {
+            this.putQueryParameter("ImageId", imageId);
+            this.imageId = imageId;
             return this;
         }
 
@@ -1034,9 +1108,47 @@ public class CreateClusterRequest extends Request {
          * 
          * You can call the [ListImages](~~87213~~) and [ListCustomImages](~~87215~~) operations to query the images that are supported by E-HPC.
          */
-        public Builder imageId(String imageId) {
-            this.putQueryParameter("ImageId", imageId);
-            this.imageId = imageId;
+        public Builder imageOwnerAlias(String imageOwnerAlias) {
+            this.putQueryParameter("ImageOwnerAlias", imageOwnerAlias);
+            this.imageOwnerAlias = imageOwnerAlias;
+            return this;
+        }
+
+        /**
+         * The queue to which the compute nodes are added.
+         */
+        public Builder inputFileUrl(String inputFileUrl) {
+            this.putQueryParameter("InputFileUrl", inputFileUrl);
+            this.inputFileUrl = inputFileUrl;
+            return this;
+        }
+
+        /**
+         * The version of the E-HPC cluster.
+         * <p>
+         * 
+         * Default value: 1.0
+         */
+        public Builder isComputeEss(Boolean isComputeEss) {
+            this.putQueryParameter("IsComputeEss", isComputeEss);
+            this.isComputeEss = isComputeEss;
+            return this;
+        }
+
+        /**
+         * The type of the system disk. Valid values:
+         * <p>
+         * 
+         * *   cloud_efficiency: ultra disk.
+         * *   cloud_ssd: standard SSD.
+         * *   cloud_essd: enhanced SSD (ESSD).
+         * *   cloud: basic disk. Disks of this type are retired.
+         * 
+         * Default value: cloud_ssd
+         */
+        public Builder jobQueue(String jobQueue) {
+            this.putQueryParameter("JobQueue", jobQueue);
+            this.jobQueue = jobQueue;
             return this;
         }
 
@@ -1050,51 +1162,6 @@ public class CreateClusterRequest extends Request {
          * 
          * Default value: system
          */
-        public Builder imageOwnerAlias(String imageOwnerAlias) {
-            this.putQueryParameter("ImageOwnerAlias", imageOwnerAlias);
-            this.imageOwnerAlias = imageOwnerAlias;
-            return this;
-        }
-
-        /**
-         * The URL of the job files that are uploaded to an Object Storage Service (OSS) bucket.
-         */
-        public Builder inputFileUrl(String inputFileUrl) {
-            this.putQueryParameter("InputFileUrl", inputFileUrl);
-            this.inputFileUrl = inputFileUrl;
-            return this;
-        }
-
-        /**
-         * Specifies whether to enable auto scaling. Valid values:
-         * <p>
-         * 
-         * *   true
-         * *   false
-         * 
-         * Default value: false
-         */
-        public Builder isComputeEss(Boolean isComputeEss) {
-            this.putQueryParameter("IsComputeEss", isComputeEss);
-            this.isComputeEss = isComputeEss;
-            return this;
-        }
-
-        /**
-         * The queue to which the compute nodes are added.
-         */
-        public Builder jobQueue(String jobQueue) {
-            this.putQueryParameter("JobQueue", jobQueue);
-            this.jobQueue = jobQueue;
-            return this;
-        }
-
-        /**
-         * The name of the AccessKey pair.
-         * <p>
-         * 
-         * >  For more information, see [Create an SSH key pair](~~51793~~).
-         */
         public Builder keyPairName(String keyPairName) {
             this.putQueryParameter("KeyPairName", keyPairName);
             this.keyPairName = keyPairName;
@@ -1102,7 +1169,7 @@ public class CreateClusterRequest extends Request {
         }
 
         /**
-         * The name of the E-HPC cluster. The name must be 2 to 64 characters in length.
+         * The description of the E-HPC cluster. The description must be 2 to 256 characters in length. It cannot start with http:// or https://.
          */
         public Builder name(String name) {
             this.putQueryParameter("Name", name);
@@ -1120,7 +1187,13 @@ public class CreateClusterRequest extends Request {
         }
 
         /**
-         * The operating system tag of the image.
+         * The type of the domain account service. Valid values:
+         * <p>
+         * 
+         * *   nis
+         * *   ldap
+         * 
+         * Default value: nis
          */
         public Builder osTag(String osTag) {
             this.putQueryParameter("OsTag", osTag);
@@ -1129,34 +1202,14 @@ public class CreateClusterRequest extends Request {
         }
 
         /**
-         * The root password of the logon node. The password must be 8 to 30 characters in length and contain at least three of the following items: uppercase letters, lowercase letters, digits, and special characters. The password can contain the following special characters:
+         * The name of the AccessKey pair.
          * <p>
          * 
-         * `( ) ~ ! @ # $ % ^ & * - + = | { } [ ] : ; ‘ < > , . ? /`
-         * 
-         * You must specify either Password or KeyPairName. If both are specified, the Password parameter prevails.
-         * 
-         * >  We recommend that you use HTTPS to call the API operation to prevent password leakages.
+         * >  For more information, see [Create an SSH key pair](~~51793~~).
          */
         public Builder password(String password) {
             this.putQueryParameter("Password", password);
             this.password = password;
-            return this;
-        }
-
-        /**
-         * The duration of the subscription. The unit of the duration is specified by the `PeriodUnit` parameter.
-         * <p>
-         * 
-         * *   If you set PriceUnit to Year, the valid values of the Period parameter are 1, 2, and 3.
-         * *   If you set PriceUnit to Month, the valid values of the Period parameter are 1, 2, 3, 4, 5, 6, 7, 8, and 9.
-         * *   If you set PriceUnit to Hour, the valid value of the Period parameter is 1.
-         * 
-         * Default value: 1
-         */
-        public Builder period(Integer period) {
-            this.putQueryParameter("Period", period);
-            this.period = period;
             return this;
         }
 
@@ -1170,6 +1223,21 @@ public class CreateClusterRequest extends Request {
          * 
          * Default value: Month
          */
+        public Builder period(Integer period) {
+            this.putQueryParameter("Period", period);
+            this.period = period;
+            return this;
+        }
+
+        /**
+         * Specifies whether to enable auto-renewal for the subscription. Valid values:
+         * <p>
+         * 
+         * *   true
+         * *   false
+         * 
+         * Default value: false
+         */
         public Builder periodUnit(String periodUnit) {
             this.putQueryParameter("PeriodUnit", periodUnit);
             this.periodUnit = periodUnit;
@@ -1177,19 +1245,7 @@ public class CreateClusterRequest extends Request {
         }
 
         /**
-         * The mode configurations of the plug-in. This parameter takes effect only when the SchedulerType parameter is set to custom.
-         * <p>
-         * 
-         * The value must be a JSON string. The parameter contains the following parameters: pluginMod, pluginLocalPath, and pluginOssPath.
-         * 
-         * *   pluginMod: the mode of the plug-in. The following modes are supported:
-         * 
-         *     *   oss: The plug-in is downloaded and decompressed from OSS to a local path. The local path is specified by the pluginLocalPath parameter.
-         *     *   image: By default, the plug-in is stored in a pre-defined local path. The local path is specified by the pluginLocalPath parameter.
-         * 
-         * *   pluginLocalPath: the local path where the plug-in is stored. We recommend that you select a shared directory in oss mode and a non-shared directory in image mode.
-         * 
-         * *   pluginOssPath: the remote path where the plug-in is stored in OSS. This parameter takes effect only when the pluginMod parameter is set to oss.
+         * The value of the tag.
          */
         public Builder plugin(String plugin) {
             this.putQueryParameter("Plugin", plugin);
@@ -1198,7 +1254,10 @@ public class CreateClusterRequest extends Request {
         }
 
         /**
-         * PostInstallScript.
+         * The name of the Resource Access Management (RAM) role.
+         * <p>
+         * 
+         * You can call the [ListRoles](~~28713~~) operation provided by RAM to query the created RAM roles.
          */
         public Builder postInstallScript(java.util.List < PostInstallScript> postInstallScript) {
             this.putQueryParameter("PostInstallScript", postInstallScript);
@@ -1216,10 +1275,10 @@ public class CreateClusterRequest extends Request {
         }
 
         /**
-         * The name of the Resource Access Management (RAM) role.
+         * The ID of the task.
          * <p>
          * 
-         * You can call the [ListRoles](~~28713~~) operation provided by RAM to query the created RAM roles.
+         * >  CreateCluster is an asynchronous API operation. If a request succeeds, a response is immediately generated before nodes are created. You can call the [ListTasks](~~268225~~) operation to query the result of the task.
          */
         public Builder ramRoleName(String ramRoleName) {
             this.putQueryParameter("RamRoleName", ramRoleName);
@@ -1228,11 +1287,103 @@ public class CreateClusterRequest extends Request {
         }
 
         /**
-         * The remote directory on which the file system is mounted.
+         * The mode in which the E-HPC cluster is deployed. Valid values:
+         * <p>
+         * 
+         * *   Standard: An account node, a scheduling node, a logon node, and multiple compute nodes are separately deployed.
+         * *   Simple: A management node, a logon node, and multiple compute nodes are deployed. The management node consists of an account node and a scheduling node. The logon node and compute nodes are separately deployed.
+         * *   Tiny: A management node and multiple compute nodes are deployed. The management node consists of an account node, a scheduling node, and a logon node. The compute nodes are separately deployed.
+         * 
+         * Default value: Standard
          */
         public Builder remoteDirectory(String remoteDirectory) {
             this.putQueryParameter("RemoteDirectory", remoteDirectory);
             this.remoteDirectory = remoteDirectory;
+            return this;
+        }
+
+        /**
+         * The ID of the resource group.
+         * <p>
+         * 
+         * You can call the [ListResourceGroups](~~158855~~) operation to obtain the ID of the resource group.
+         */
+        public Builder remoteVisEnable(String remoteVisEnable) {
+            this.putQueryParameter("RemoteVisEnable", remoteVisEnable);
+            this.remoteVisEnable = remoteVisEnable;
+            return this;
+        }
+
+        /**
+         * The client token that is used to ensure the idempotence of the request. You can use the client to generate the value, but you must ensure that the value is unique among different requests. The token can only contain ASCII characters and cannot exceed 64 characters in length. For more information, see [How do I ensure the idempotence of a request?](~~25693~~)
+         */
+        public Builder resourceGroupId(String resourceGroupId) {
+            this.putQueryParameter("ResourceGroupId", resourceGroupId);
+            this.resourceGroupId = resourceGroupId;
+            return this;
+        }
+
+        /**
+         * The bidding method of the compute nodes. Valid values:
+         * <p>
+         * 
+         * *   NoSpot: The compute nodes are pay-as-you-go instances.
+         * *   SpotWithPriceLimit: The compute nodes are preemptible instances that have a user-defined maximum hourly price.
+         * *   SpotAsPriceGo: The compute nodes are preemptible instances for which the market price at the time of purchase is used as the bid price.
+         * 
+         * Default value: NoSpot
+         */
+        public Builder sccClusterId(String sccClusterId) {
+            this.putQueryParameter("SccClusterId", sccClusterId);
+            this.sccClusterId = sccClusterId;
+            return this;
+        }
+
+        /**
+         * The ID of the security group to which the E-HPC cluster belongs.
+         * <p>
+         * 
+         * You can call the [DescribeSecurityGroups](~~25556~~) operation to query available security groups in the current region.
+         */
+        public Builder schedulerType(String schedulerType) {
+            this.putQueryParameter("SchedulerType", schedulerType);
+            this.schedulerType = schedulerType;
+            return this;
+        }
+
+        /**
+         * If you do not use an existing security group, set the parameter to the name of a new security group. A default policy is applied to the new security group.
+         */
+        public Builder securityGroupId(String securityGroupId) {
+            this.putQueryParameter("SecurityGroupId", securityGroupId);
+            this.securityGroupId = securityGroupId;
+            return this;
+        }
+
+        /**
+         * The ID of the virtual private cloud (VPC) to which the E-HPC cluster belongs.
+         * <p>
+         * 
+         * You can call the [DescribeVpcs](~~35739~~) operation to query available VPCs.
+         */
+        public Builder securityGroupName(String securityGroupName) {
+            this.putQueryParameter("SecurityGroupName", securityGroupName);
+            this.securityGroupName = securityGroupName;
+            return this;
+        }
+
+        /**
+         * Specifies whether to enable auto scaling. Valid values:
+         * <p>
+         * 
+         * *   true
+         * *   false
+         * 
+         * Default value: false
+         */
+        public Builder systemDiskLevel(String systemDiskLevel) {
+            this.putQueryParameter("SystemDiskLevel", systemDiskLevel);
+            this.systemDiskLevel = systemDiskLevel;
             return this;
         }
 
@@ -1245,71 +1396,123 @@ public class CreateClusterRequest extends Request {
          * 
          * Default value: false
          */
-        public Builder remoteVisEnable(String remoteVisEnable) {
-            this.putQueryParameter("RemoteVisEnable", remoteVisEnable);
-            this.remoteVisEnable = remoteVisEnable;
+        public Builder systemDiskSize(Integer systemDiskSize) {
+            this.putQueryParameter("SystemDiskSize", systemDiskSize);
+            this.systemDiskSize = systemDiskSize;
             return this;
         }
 
         /**
-         * The ID of the resource group.
+         * The size of the system disk. Unit: GB.
          * <p>
          * 
-         * You can call the [ListResourceGroups](~~158855~~) operation to obtain the ID of the resource group.
+         * Valid values: 40 to 500
+         * 
+         * Default value: 40
          */
-        public Builder resourceGroupId(String resourceGroupId) {
-            this.putQueryParameter("ResourceGroupId", resourceGroupId);
-            this.resourceGroupId = resourceGroupId;
+        public Builder systemDiskType(String systemDiskType) {
+            this.putQueryParameter("SystemDiskType", systemDiskType);
+            this.systemDiskType = systemDiskType;
             return this;
         }
 
         /**
-         * The ID of the Super Computing Cluster (SCC) instance.
+         * Tag.
+         */
+        public Builder tag(java.util.List < Tag> tag) {
+            this.putQueryParameter("Tag", tag);
+            this.tag = tag;
+            return this;
+        }
+
+        /**
+         * The type of the shared storage. Set the value to `nas`, which indicates a NAS file system.
+         */
+        public Builder vSwitchId(String vSwitchId) {
+            this.putQueryParameter("VSwitchId", vSwitchId);
+            this.vSwitchId = vSwitchId;
+            return this;
+        }
+
+        /**
+         * The type of the protocol that is used by the file system. Valid values:
          * <p>
          * 
-         * If you specify the parameter, the SCC instance is moved to a new SCC cluster.
+         * *   NFS
+         * *   SMB
+         * 
+         * Default value: NFS
          */
-        public Builder sccClusterId(String sccClusterId) {
-            this.putQueryParameter("SccClusterId", sccClusterId);
-            this.sccClusterId = sccClusterId;
+        public Builder volumeId(String volumeId) {
+            this.putQueryParameter("VolumeId", volumeId);
+            this.volumeId = volumeId;
             return this;
         }
 
         /**
-         * The type of the scheduler. Valid values:
+         * The remote directory on which the file system is mounted.
+         */
+        public Builder volumeMountOption(String volumeMountOption) {
+            this.putQueryParameter("VolumeMountOption", volumeMountOption);
+            this.volumeMountOption = volumeMountOption;
+            return this;
+        }
+
+        /**
+         * The mount options of the NFS file system that you want to mount by running the mount command.
          * <p>
          * 
-         * *   pbs
-         * *   slurm
-         * *   opengridscheduler
-         * *   deadline
-         * 
-         * Default value: pbs
+         * For more information, see [Mount an NFS file system on a Linux ECS instance](https://www.alibabacloud.com/help/en/nas/latest/mount-an-nfs-file-system-on-a-linux-ecs-instance#section-jyi-hyd-hbr).
          */
-        public Builder schedulerType(String schedulerType) {
-            this.putQueryParameter("SchedulerType", schedulerType);
-            this.schedulerType = schedulerType;
+        public Builder volumeMountpoint(String volumeMountpoint) {
+            this.putQueryParameter("VolumeMountpoint", volumeMountpoint);
+            this.volumeMountpoint = volumeMountpoint;
             return this;
         }
 
         /**
-         * The ID of the security group to which the E-HPC cluster belongs.
+         * The mount target of the file system. Take note of the following information:
          * <p>
          * 
-         * You can call the [DescribeSecurityGroups](~~25556~~) operation to query available security groups in the current region.
+         * *   If you do not specify the VolumeId parameter, you can leave the VolumeMountpoint parameter empty. A mount target is created by default.
+         * *   If you specify the VolumeId parameter, the VolumeMountpoint parameter is required. You can call the [ListFileSystemWithMountTargets](~~204364~~) operation to query available mount targets.
          */
-        public Builder securityGroupId(String securityGroupId) {
-            this.putQueryParameter("SecurityGroupId", securityGroupId);
-            this.securityGroupId = securityGroupId;
+        public Builder volumeProtocol(String volumeProtocol) {
+            this.putQueryParameter("VolumeProtocol", volumeProtocol);
+            this.volumeProtocol = volumeProtocol;
             return this;
         }
 
         /**
-         * If you do not use an existing security group, set the parameter to the name of a new security group. A default policy is applied to the new security group.
+         * The ID of the file system. If you leave the parameter empty, a Performance NAS file system is created by default.
+         * <p>
+         * 
+         * You can call the [ListFileSystemWithMountTargets](~~204364~~) operation to query available mount targets.
          */
-        public Builder securityGroupName(String securityGroupName) {
-            this.putQueryParameter("SecurityGroupName", securityGroupName);
-            this.securityGroupName = securityGroupName;
+        public Builder volumeType(String volumeType) {
+            this.putQueryParameter("VolumeType", volumeType);
+            this.volumeType = volumeType;
+            return this;
+        }
+
+        /**
+         * The ID of the vSwitch. E-HPC supports only VPC networks.
+         * <p>
+         * 
+         * You can call the [DescribeVSwitches](~~35748~~) operation to query available vSwitches.
+         */
+        public Builder vpcId(String vpcId) {
+            this.putQueryParameter("VpcId", vpcId);
+            this.vpcId = vpcId;
+            return this;
+        }
+
+        /**
+         * The ID of the request.
+         */
+        public Builder withoutAgent(Boolean withoutAgent) {
+            this.putQueryParameter("WithoutAgent", withoutAgent);
+            this.withoutAgent = withoutAgent;
             return this;
         }
 
@@ -1326,155 +1529,6 @@ public class CreateClusterRequest extends Request {
          * 
          * For more information, see [ESSDs](~~122389~~).
          */
-        public Builder systemDiskLevel(String systemDiskLevel) {
-            this.putQueryParameter("SystemDiskLevel", systemDiskLevel);
-            this.systemDiskLevel = systemDiskLevel;
-            return this;
-        }
-
-        /**
-         * The size of the system disk. Unit: GB.
-         * <p>
-         * 
-         * Valid values: 40 to 500
-         * 
-         * Default value: 40
-         */
-        public Builder systemDiskSize(Integer systemDiskSize) {
-            this.putQueryParameter("SystemDiskSize", systemDiskSize);
-            this.systemDiskSize = systemDiskSize;
-            return this;
-        }
-
-        /**
-         * The type of the system disk. Valid values:
-         * <p>
-         * 
-         * *   cloud_efficiency: ultra disk.
-         * *   cloud_ssd: standard SSD.
-         * *   cloud_essd: enhanced SSD (ESSD).
-         * *   cloud: basic disk. Disks of this type are retired.
-         * 
-         * Default value: cloud_ssd
-         */
-        public Builder systemDiskType(String systemDiskType) {
-            this.putQueryParameter("SystemDiskType", systemDiskType);
-            this.systemDiskType = systemDiskType;
-            return this;
-        }
-
-        /**
-         * 标签列表，最多包含20个子项
-         */
-        public Builder tag(java.util.List < Tag> tag) {
-            this.putQueryParameter("Tag", tag);
-            this.tag = tag;
-            return this;
-        }
-
-        /**
-         * The ID of the vSwitch. E-HPC supports only VPC networks.
-         * <p>
-         * 
-         * You can call the [DescribeVSwitches](~~35748~~) operation to query available vSwitches.
-         */
-        public Builder vSwitchId(String vSwitchId) {
-            this.putQueryParameter("VSwitchId", vSwitchId);
-            this.vSwitchId = vSwitchId;
-            return this;
-        }
-
-        /**
-         * The ID of the file system. If you leave the parameter empty, a Performance NAS file system is created by default.
-         * <p>
-         * 
-         * You can call the [ListFileSystemWithMountTargets](~~204364~~) operation to query available mount targets.
-         */
-        public Builder volumeId(String volumeId) {
-            this.putQueryParameter("VolumeId", volumeId);
-            this.volumeId = volumeId;
-            return this;
-        }
-
-        /**
-         * The mount options of the NFS file system that you want to mount by running the mount command.
-         * <p>
-         * 
-         * For more information, see [Mount an NFS file system on a Linux ECS instance](https://www.alibabacloud.com/help/en/nas/latest/mount-an-nfs-file-system-on-a-linux-ecs-instance#section-jyi-hyd-hbr).
-         */
-        public Builder volumeMountOption(String volumeMountOption) {
-            this.putQueryParameter("VolumeMountOption", volumeMountOption);
-            this.volumeMountOption = volumeMountOption;
-            return this;
-        }
-
-        /**
-         * The mount target of the file system. Take note of the following information:
-         * <p>
-         * 
-         * *   If you do not specify the VolumeId parameter, you can leave the VolumeMountpoint parameter empty. A mount target is created by default.
-         * *   If you specify the VolumeId parameter, the VolumeMountpoint parameter is required. You can call the [ListFileSystemWithMountTargets](~~204364~~) operation to query available mount targets.
-         */
-        public Builder volumeMountpoint(String volumeMountpoint) {
-            this.putQueryParameter("VolumeMountpoint", volumeMountpoint);
-            this.volumeMountpoint = volumeMountpoint;
-            return this;
-        }
-
-        /**
-         * The type of the protocol that is used by the file system. Valid values:
-         * <p>
-         * 
-         * *   NFS
-         * *   SMB
-         * 
-         * Default value: NFS
-         */
-        public Builder volumeProtocol(String volumeProtocol) {
-            this.putQueryParameter("VolumeProtocol", volumeProtocol);
-            this.volumeProtocol = volumeProtocol;
-            return this;
-        }
-
-        /**
-         * The type of the shared storage. Set the value to `nas`, which indicates a NAS file system.
-         */
-        public Builder volumeType(String volumeType) {
-            this.putQueryParameter("VolumeType", volumeType);
-            this.volumeType = volumeType;
-            return this;
-        }
-
-        /**
-         * The ID of the virtual private cloud (VPC) to which the E-HPC cluster belongs.
-         * <p>
-         * 
-         * You can call the [DescribeVpcs](~~35739~~) operation to query available VPCs.
-         */
-        public Builder vpcId(String vpcId) {
-            this.putQueryParameter("VpcId", vpcId);
-            this.vpcId = vpcId;
-            return this;
-        }
-
-        /**
-         * Specifies whether not to install the agent.
-         * <p>
-         * 
-         * *   true: The agent is not installed.
-         * *   false: The agent is installed.
-         * 
-         * Default value: false
-         */
-        public Builder withoutAgent(Boolean withoutAgent) {
-            this.putQueryParameter("WithoutAgent", withoutAgent);
-            this.withoutAgent = withoutAgent;
-            return this;
-        }
-
-        /**
-         * Specifies whether the logon node uses an elastic IP address (EIP). Default value: false
-         */
         public Builder withoutElasticIp(Boolean withoutElasticIp) {
             this.putQueryParameter("WithoutElasticIp", withoutElasticIp);
             this.withoutElasticIp = withoutElasticIp;
@@ -1482,10 +1536,16 @@ public class CreateClusterRequest extends Request {
         }
 
         /**
-         * The ID of the zone.
-         * <p>
-         * 
-         * You can call the [ListRegions](~~188593~~) and [DescribeZones](~~25610~~) operations to query IDs of the zones where E-HPC is supported.
+         * WithoutNas.
+         */
+        public Builder withoutNas(Boolean withoutNas) {
+            this.putQueryParameter("WithoutNas", withoutNas);
+            this.withoutNas = withoutNas;
+            return this;
+        }
+
+        /**
+         * The name of the E-HPC cluster. The name must be 2 to 64 characters in length.
          */
         public Builder zoneId(String zoneId) {
             this.putQueryParameter("ZoneId", zoneId);
@@ -1502,11 +1562,9 @@ public class CreateClusterRequest extends Request {
 
     public static class Compute extends TeaModel {
         @NameInMap("Count")
-        @Validation(required = true)
         private Integer count;
 
         @NameInMap("InstanceType")
-        @Validation(required = true)
         private String instanceType;
 
         private Compute(Builder builder) {
@@ -1541,7 +1599,10 @@ public class CreateClusterRequest extends Request {
             private String instanceType; 
 
             /**
-             * The number of the compute nodes. Valid values: 1 to 99.
+             * The instance type of the compute nodes.
+             * <p>
+             * 
+             * You can call the [ListPreferredEcsTypes](~~188592~~) operation to query the recommended instance types.
              */
             public Builder count(Integer count) {
                 this.count = count;
@@ -1549,10 +1610,7 @@ public class CreateClusterRequest extends Request {
             }
 
             /**
-             * The instance type of the compute nodes.
-             * <p>
-             * 
-             * You can call the [ListPreferredEcsTypes](~~188592~~) operation to query the recommended instance types.
+             * The number of the logon nodes. Valid value: 1.
              */
             public Builder instanceType(String instanceType) {
                 this.instanceType = instanceType;
@@ -1568,11 +1626,9 @@ public class CreateClusterRequest extends Request {
     }
     public static class Login extends TeaModel {
         @NameInMap("Count")
-        @Validation(required = true)
         private Integer count;
 
         @NameInMap("InstanceType")
-        @Validation(required = true)
         private String instanceType;
 
         private Login(Builder builder) {
@@ -1607,7 +1663,10 @@ public class CreateClusterRequest extends Request {
             private String instanceType; 
 
             /**
-             * The number of the logon nodes. Valid value: 1.
+             * The instance type of the logon nodes.
+             * <p>
+             * 
+             * You can call the [ListPreferredEcsTypes](~~188592~~) operation to query the recommended instance types.
              */
             public Builder count(Integer count) {
                 this.count = count;
@@ -1615,10 +1674,10 @@ public class CreateClusterRequest extends Request {
             }
 
             /**
-             * The instance type of the logon nodes.
+             * The ID of the Super Computing Cluster (SCC) instance.
              * <p>
              * 
-             * You can call the [ListPreferredEcsTypes](~~188592~~) operation to query the recommended instance types.
+             * If you specify the parameter, the SCC instance is moved to a new SCC cluster.
              */
             public Builder instanceType(String instanceType) {
                 this.instanceType = instanceType;
@@ -1637,7 +1696,6 @@ public class CreateClusterRequest extends Request {
         private Integer count;
 
         @NameInMap("InstanceType")
-        @Validation(required = true)
         private String instanceType;
 
         private Manager(Builder builder) {
@@ -1672,7 +1730,10 @@ public class CreateClusterRequest extends Request {
             private String instanceType; 
 
             /**
-             * The number of the management nodes. Valid values: 1 and 2.
+             * The instance type of the management nodes.
+             * <p>
+             * 
+             * You can call the [ListPreferredEcsTypes](~~188592~~) operation to query the recommended instance types.
              */
             public Builder count(Integer count) {
                 this.count = count;
@@ -1680,10 +1741,7 @@ public class CreateClusterRequest extends Request {
             }
 
             /**
-             * The instance type of the management nodes.
-             * <p>
-             * 
-             * You can call the [ListPreferredEcsTypes](~~188592~~) operation to query the recommended instance types.
+             * The number of the compute nodes. Valid values: 1 to 99.
              */
             public Builder instanceType(String instanceType) {
                 this.instanceType = instanceType;
@@ -1781,6 +1839,175 @@ public class CreateClusterRequest extends Request {
         } 
 
     }
+    public static class AddOns extends TeaModel {
+        @NameInMap("ConfigFile")
+        private String configFile;
+
+        @NameInMap("DBType")
+        private String DBType;
+
+        @NameInMap("DefaultStart")
+        private Boolean defaultStart;
+
+        @NameInMap("DeployMode")
+        private String deployMode;
+
+        @NameInMap("Name")
+        private String name;
+
+        @NameInMap("Port")
+        private Float port;
+
+        @NameInMap("Version")
+        private String version;
+
+        private AddOns(Builder builder) {
+            this.configFile = builder.configFile;
+            this.DBType = builder.DBType;
+            this.defaultStart = builder.defaultStart;
+            this.deployMode = builder.deployMode;
+            this.name = builder.name;
+            this.port = builder.port;
+            this.version = builder.version;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static AddOns create() {
+            return builder().build();
+        }
+
+        /**
+         * @return configFile
+         */
+        public String getConfigFile() {
+            return this.configFile;
+        }
+
+        /**
+         * @return DBType
+         */
+        public String getDBType() {
+            return this.DBType;
+        }
+
+        /**
+         * @return defaultStart
+         */
+        public Boolean getDefaultStart() {
+            return this.defaultStart;
+        }
+
+        /**
+         * @return deployMode
+         */
+        public String getDeployMode() {
+            return this.deployMode;
+        }
+
+        /**
+         * @return name
+         */
+        public String getName() {
+            return this.name;
+        }
+
+        /**
+         * @return port
+         */
+        public Float getPort() {
+            return this.port;
+        }
+
+        /**
+         * @return version
+         */
+        public String getVersion() {
+            return this.version;
+        }
+
+        public static final class Builder {
+            private String configFile; 
+            private String DBType; 
+            private Boolean defaultStart; 
+            private String deployMode; 
+            private String name; 
+            private Float port; 
+            private String version; 
+
+            /**
+             * ConfigFile.
+             */
+            public Builder configFile(String configFile) {
+                this.configFile = configFile;
+                return this;
+            }
+
+            /**
+             * DBType.
+             */
+            public Builder DBType(String DBType) {
+                this.DBType = DBType;
+                return this;
+            }
+
+            /**
+             * DefaultStart.
+             */
+            public Builder defaultStart(Boolean defaultStart) {
+                this.defaultStart = defaultStart;
+                return this;
+            }
+
+            /**
+             * Specifies whether to enable the high availability feature. Valid values:
+             * <p>
+             * 
+             * *   true
+             * *   false
+             * 
+             * Default value: false
+             * 
+             * >  If high availability is enabled, a primary management node and a secondary management node are used.
+             */
+            public Builder deployMode(String deployMode) {
+                this.deployMode = deployMode;
+                return this;
+            }
+
+            /**
+             * The description of the E-HPC cluster. The description must be 2 to 256 characters in length. It cannot start with http:// or https://.
+             */
+            public Builder name(String name) {
+                this.name = name;
+                return this;
+            }
+
+            /**
+             * Port.
+             */
+            public Builder port(Float port) {
+                this.port = port;
+                return this;
+            }
+
+            /**
+             * Version.
+             */
+            public Builder version(String version) {
+                this.version = version;
+                return this;
+            }
+
+            public AddOns build() {
+                return new AddOns(this);
+            } 
+
+        } 
+
+    }
     public static class Roles extends TeaModel {
         @NameInMap("Name")
         private String name;
@@ -1808,12 +2035,10 @@ public class CreateClusterRequest extends Request {
             private String name; 
 
             /**
-             * The type of the nodes to which the additional file system is attached.
+             * The type of the additional shared storage. Only NAS file systems are supported.
              * <p>
              * 
-             * Valid values of N in AdditionalVolumes.N.Roles: 1 to 10
-             * 
-             * Valid values of N in Roles.N.Name: 0 to 8
+             * Valid values of N: 1 to 10
              */
             public Builder name(String name) {
                 this.name = name;
@@ -1962,7 +2187,7 @@ public class CreateClusterRequest extends Request {
             private String volumeType; 
 
             /**
-             * The queue of the nodes to which the additional file system is attached.
+             * The mount target of the additional file system.
              * <p>
              * 
              * Valid values of N: 1 to 10
@@ -1973,10 +2198,10 @@ public class CreateClusterRequest extends Request {
             }
 
             /**
-             * The local directory on which the additional file system is mounted.
+             * The URL that is used to download the script after the E-HPC cluster is created.
              * <p>
              * 
-             * Valid values of N: 1 to 10
+             * Valid values of N: 0 to 16
              */
             public Builder localDirectory(String localDirectory) {
                 this.localDirectory = localDirectory;
@@ -1984,10 +2209,13 @@ public class CreateClusterRequest extends Request {
             }
 
             /**
-             * The type of the E-HPC cluster. Set the value to PublicCloud.
+             * Specifies whether not to install the agent.
              * <p>
              * 
-             * Valid values of N: 1 to 10
+             * *   true: The agent is not installed.
+             * *   false: The agent is installed.
+             * 
+             * Default value: false
              */
             public Builder location(String location) {
                 this.location = location;
@@ -1995,7 +2223,7 @@ public class CreateClusterRequest extends Request {
             }
 
             /**
-             * The remote directory on which the additional file system is mounted.
+             * The type of the E-HPC cluster. Set the value to PublicCloud.
              * <p>
              * 
              * Valid values of N: 1 to 10
@@ -2006,21 +2234,13 @@ public class CreateClusterRequest extends Request {
             }
 
             /**
-             * Roles.
-             */
-            public Builder roles(java.util.List < Roles> roles) {
-                this.roles = roles;
-                return this;
-            }
-
-            /**
-             * The ID of the additional file system.
+             * The remote directory on which the additional file system is mounted.
              * <p>
              * 
              * Valid values of N: 1 to 10
              */
-            public Builder volumeId(String volumeId) {
-                this.volumeId = volumeId;
+            public Builder roles(java.util.List < Roles> roles) {
+                this.roles = roles;
                 return this;
             }
 
@@ -2030,19 +2250,8 @@ public class CreateClusterRequest extends Request {
              * 
              * Valid values of N: 1 to 10
              */
-            public Builder volumeMountOption(String volumeMountOption) {
-                this.volumeMountOption = volumeMountOption;
-                return this;
-            }
-
-            /**
-             * The mount target of the additional file system.
-             * <p>
-             * 
-             * Valid values of N: 1 to 10
-             */
-            public Builder volumeMountpoint(String volumeMountpoint) {
-                this.volumeMountpoint = volumeMountpoint;
+            public Builder volumeId(String volumeId) {
+                this.volumeId = volumeId;
                 return this;
             }
 
@@ -2057,16 +2266,47 @@ public class CreateClusterRequest extends Request {
              * 
              * Default value: NFS
              */
+            public Builder volumeMountOption(String volumeMountOption) {
+                this.volumeMountOption = volumeMountOption;
+                return this;
+            }
+
+            /**
+             * The local directory on which the additional file system is mounted.
+             * <p>
+             * 
+             * Valid values of N: 1 to 10
+             */
+            public Builder volumeMountpoint(String volumeMountpoint) {
+                this.volumeMountpoint = volumeMountpoint;
+                return this;
+            }
+
+            /**
+             * The mode configurations of the plug-in. This parameter takes effect only when the SchedulerType parameter is set to custom.
+             * <p>
+             * 
+             * The value must be a JSON string. The parameter contains the following parameters: pluginMod, pluginLocalPath, and pluginOssPath.
+             * 
+             * *   pluginMod: the mode of the plug-in. The following modes are supported:
+             * 
+             *     *   oss: The plug-in is downloaded and decompressed from OSS to a local path. The local path is specified by the pluginLocalPath parameter.
+             *     *   image: By default, the plug-in is stored in a pre-defined local path. The local path is specified by the pluginLocalPath parameter.
+             * 
+             * *   pluginLocalPath: the local path where the plug-in is stored. We recommend that you select a shared directory in oss mode and a non-shared directory in image mode.
+             * 
+             * *   pluginOssPath: the remote path where the plug-in is stored in OSS. This parameter takes effect only when the pluginMod parameter is set to oss.
+             */
             public Builder volumeProtocol(String volumeProtocol) {
                 this.volumeProtocol = volumeProtocol;
                 return this;
             }
 
             /**
-             * The type of the additional shared storage. Only NAS file systems are supported.
+             * The parameter that is used to run the script after the E-HPC cluster is created.
              * <p>
              * 
-             * Valid values of N: 1 to 10
+             * Valid values of N: 0 to 16
              */
             public Builder volumeType(String volumeType) {
                 this.volumeType = volumeType;
@@ -2107,12 +2347,10 @@ public class CreateClusterRequest extends Request {
             private String tag; 
 
             /**
-             * The tag of the software.
+             * The ID of the additional file system.
              * <p>
              * 
-             * Valid values of N: 0 to 100
-             * 
-             * You can call the [ListSoftwares](~~87216~~) operation to query the tag of the software.
+             * Valid values of N: 1 to 10
              */
             public Builder tag(String tag) {
                 this.tag = tag;
@@ -2165,10 +2403,14 @@ public class CreateClusterRequest extends Request {
             private String url; 
 
             /**
-             * The parameter that is used to run the script after the E-HPC cluster is created.
+             * The node of the RAM role.
              * <p>
              * 
-             * Valid values of N: 0 to 16
+             * Valid values of N: 0 to 4
+             * 
+             * *   If the DeployMode parameter is set to Standard, the following values are valid: scheduler, account, login, and compute. Separate multiple values with commas (,).
+             * *   If the DeployMode parameter is set to Simple, the following values are valid: manager, login, and compute. Separate multiple values with commas (,).
+             * *   If the DeployMode parameter is set to Tiny, the following values are valid: manager and compute.
              */
             public Builder args(String args) {
                 this.args = args;
@@ -2176,10 +2418,7 @@ public class CreateClusterRequest extends Request {
             }
 
             /**
-             * The URL that is used to download the script after the E-HPC cluster is created.
-             * <p>
-             * 
-             * Valid values of N: 0 to 16
+             * The key of the tag.
              */
             public Builder url(String url) {
                 this.url = url;
@@ -2232,7 +2471,7 @@ public class CreateClusterRequest extends Request {
             private String value; 
 
             /**
-             * The key of the tag.
+             * Key.
              */
             public Builder key(String key) {
                 this.key = key;
@@ -2240,7 +2479,7 @@ public class CreateClusterRequest extends Request {
             }
 
             /**
-             * The value of the tag.
+             * Value.
              */
             public Builder value(String value) {
                 this.value = value;

@@ -98,7 +98,7 @@ public class ListCommandsRequest extends Request {
         } 
 
         /**
-         * The ID of the cluster.
+         * The cluster ID.
          * <p>
          * 
          * You can call the [ListClusters](~~87116~~) operation to query the cluster ID.
@@ -119,7 +119,7 @@ public class ListCommandsRequest extends Request {
         }
 
         /**
-         * The page number of the returned page.
+         * The page number of the page to return.
          * <p>
          * 
          * Page number starts from page 1.
@@ -133,11 +133,9 @@ public class ListCommandsRequest extends Request {
         }
 
         /**
-         * The number of entries to return on each page.
+         * The number of entries to return on each page.\
          * <p>
-         * 
-         * Valid values: 1 to 50.
-         * 
+         * Valid values: 1 to 50.\
          * Default value: 10.
          */
         public Builder pageSize(Integer pageSize) {

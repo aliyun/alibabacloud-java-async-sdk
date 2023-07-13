@@ -74,7 +74,7 @@ public class GetJobLogResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The content of the error logs. The content is encoded in Base64.
+         * ErrorLog.
          */
         public Builder errorLog(String errorLog) {
             this.errorLog = errorLog;
@@ -82,7 +82,7 @@ public class GetJobLogResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the job.
+         * JobId.
          */
         public Builder jobId(String jobId) {
             this.jobId = jobId;
@@ -90,7 +90,7 @@ public class GetJobLogResponseBody extends TeaModel {
         }
 
         /**
-         * The content of the output logs. The content is encoded in Base64.
+         * OutputLog.
          */
         public Builder outputLog(String outputLog) {
             this.outputLog = outputLog;
@@ -98,7 +98,7 @@ public class GetJobLogResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the task.
+         * The content of the error logs. The content is encoded in Base64.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
