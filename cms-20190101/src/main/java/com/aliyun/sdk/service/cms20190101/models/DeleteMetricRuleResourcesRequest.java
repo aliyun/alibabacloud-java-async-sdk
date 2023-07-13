@@ -1,0 +1,100 @@
+// This file is auto-generated, don't edit it. Thanks.
+package com.aliyun.sdk.service.cms20190101.models;
+
+import com.aliyun.core.annotation.*;
+import darabonba.core.RequestModel;
+import darabonba.core.TeaModel;
+import com.aliyun.sdk.gateway.pop.models.*;
+
+/**
+ * {@link DeleteMetricRuleResourcesRequest} extends {@link RequestModel}
+ *
+ * <p>DeleteMetricRuleResourcesRequest</p>
+ */
+public class DeleteMetricRuleResourcesRequest extends Request {
+    @Query
+    @NameInMap("Resources")
+    @Validation(required = true)
+    private String resources;
+
+    @Query
+    @NameInMap("RuleId")
+    @Validation(required = true)
+    private String ruleId;
+
+    private DeleteMetricRuleResourcesRequest(Builder builder) {
+        super(builder);
+        this.resources = builder.resources;
+        this.ruleId = builder.ruleId;
+    }
+
+    public static Builder builder() {
+        return new Builder();
+    }
+
+    public static DeleteMetricRuleResourcesRequest create() {
+        return builder().build();
+    }
+
+    @Override
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
+    /**
+     * @return resources
+     */
+    public String getResources() {
+        return this.resources;
+    }
+
+    /**
+     * @return ruleId
+     */
+    public String getRuleId() {
+        return this.ruleId;
+    }
+
+    public static final class Builder extends Request.Builder<DeleteMetricRuleResourcesRequest, Builder> {
+        private String resources; 
+        private String ruleId; 
+
+        private Builder() {
+            super();
+        } 
+
+        private Builder(DeleteMetricRuleResourcesRequest request) {
+            super(request);
+            this.resources = request.resources;
+            this.ruleId = request.ruleId;
+        } 
+
+        /**
+         * The HTTP status code.
+         * <p>
+         * 
+         * >  The status code 200 indicates that the call was successful.
+         */
+        public Builder resources(String resources) {
+            this.putQueryParameter("Resources", resources);
+            this.resources = resources;
+            return this;
+        }
+
+        /**
+         * The resources to be disassociated from the alert rule.
+         */
+        public Builder ruleId(String ruleId) {
+            this.putQueryParameter("RuleId", ruleId);
+            this.ruleId = ruleId;
+            return this;
+        }
+
+        @Override
+        public DeleteMetricRuleResourcesRequest build() {
+            return new DeleteMetricRuleResourcesRequest(this);
+        } 
+
+    } 
+
+}

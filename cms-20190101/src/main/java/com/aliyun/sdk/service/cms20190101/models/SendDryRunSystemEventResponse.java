@@ -1,0 +1,104 @@
+// This file is auto-generated, don't edit it. Thanks.
+package com.aliyun.sdk.service.cms20190101.models;
+
+import com.aliyun.core.annotation.*;
+import darabonba.core.RequestModel;
+import darabonba.core.TeaModel;
+import com.aliyun.sdk.gateway.pop.models.*;
+
+/**
+ * {@link SendDryRunSystemEventResponse} extends {@link TeaModel}
+ *
+ * <p>SendDryRunSystemEventResponse</p>
+ */
+public class SendDryRunSystemEventResponse extends Response {
+    @NameInMap("headers")
+    @Validation(required = true)
+    private java.util.Map < String, String > headers;
+
+    @NameInMap("body")
+    @Validation(required = true)
+    private SendDryRunSystemEventResponseBody body;
+
+    private SendDryRunSystemEventResponse(BuilderImpl builder) {
+        super(builder);
+        this.headers = builder.headers;
+        this.body = builder.body;
+    }
+
+    public static SendDryRunSystemEventResponse create() {
+        return new BuilderImpl().build();
+    }
+
+    @Override
+    public Builder toBuilder() {
+        return new BuilderImpl(this);
+    }
+
+    /**
+     * @return headers
+     */
+    public java.util.Map < String, String > getHeaders() {
+        return this.headers;
+    }
+
+    /**
+     * @return body
+     */
+    public SendDryRunSystemEventResponseBody getBody() {
+        return this.body;
+    }
+
+    public interface Builder extends Response.Builder<SendDryRunSystemEventResponse, Builder> {
+
+        Builder headers(java.util.Map < String, String > headers);
+
+        Builder body(SendDryRunSystemEventResponseBody body);
+
+        @Override
+        SendDryRunSystemEventResponse build();
+
+    } 
+
+    private static final class BuilderImpl
+            extends Response.BuilderImpl<SendDryRunSystemEventResponse, Builder>
+            implements Builder {
+        private java.util.Map < String, String > headers; 
+        private SendDryRunSystemEventResponseBody body; 
+
+        private BuilderImpl() {
+            super();
+        } 
+
+        private BuilderImpl(SendDryRunSystemEventResponse response) {
+            super(response);
+            this.headers = response.headers;
+            this.body = response.body;
+        } 
+
+        /**
+         * headers.
+         */
+        @Override
+        public Builder headers(java.util.Map < String, String > headers) {
+            this.headers = headers;
+            return this;
+        }
+
+        /**
+         * body.
+         */
+        @Override
+        public Builder body(SendDryRunSystemEventResponseBody body) {
+            this.body = body;
+            return this;
+        }
+
+        @Override
+        public SendDryRunSystemEventResponse build() {
+            return new SendDryRunSystemEventResponse(this);
+        } 
+
+    } 
+
+}
