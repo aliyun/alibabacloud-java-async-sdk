@@ -74,6 +74,8 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<CreateWorkitemRecordResponse> createWorkitemRecord(CreateWorkitemRecordRequest request);
 
+    CompletableFuture<CreateWorkitemV2Response> createWorkitemV2(CreateWorkitemV2Request request);
+
     CompletableFuture<CreateWorkspaceResponse> createWorkspace(CreateWorkspaceRequest request);
 
     CompletableFuture<DeleteBranchResponse> deleteBranch(DeleteBranchRequest request);
@@ -185,6 +187,8 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<GetWorkItemInfoResponse> getWorkItemInfo(GetWorkItemInfoRequest request);
 
     CompletableFuture<GetWorkItemWorkFlowInfoResponse> getWorkItemWorkFlowInfo(GetWorkItemWorkFlowInfoRequest request);
+
+    CompletableFuture<GetWorkitemAttachmentCreatemetaResponse> getWorkitemAttachmentCreatemeta(GetWorkitemAttachmentCreatemetaRequest request);
 
     CompletableFuture<GetWorkitemCommentListResponse> getWorkitemCommentList(GetWorkitemCommentListRequest request);
 
@@ -351,5 +355,7 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<UpdateWorkitemCommentResponse> updateWorkitemComment(UpdateWorkitemCommentRequest request);
 
     CompletableFuture<UpdateWorkitemFieldResponse> updateWorkitemField(UpdateWorkitemFieldRequest request);
+
+    CompletableFuture<WorkitemAttachmentCreateResponse> workitemAttachmentCreate(WorkitemAttachmentCreateRequest request);
 
 }
