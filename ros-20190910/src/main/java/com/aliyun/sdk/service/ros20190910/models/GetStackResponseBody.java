@@ -1410,6 +1410,12 @@ public class GetStackResponseBody extends TeaModel {
         @NameInMap("PendingResourceCount")
         private Integer pendingResourceCount;
 
+        @NameInMap("StackActionProgress")
+        private Float stackActionProgress;
+
+        @NameInMap("StackOperationProgress")
+        private Float stackOperationProgress;
+
         @NameInMap("SuccessResourceCount")
         private Integer successResourceCount;
 
@@ -1421,6 +1427,8 @@ public class GetStackResponseBody extends TeaModel {
             this.inProgressResourceCount = builder.inProgressResourceCount;
             this.inProgressResourceDetails = builder.inProgressResourceDetails;
             this.pendingResourceCount = builder.pendingResourceCount;
+            this.stackActionProgress = builder.stackActionProgress;
+            this.stackOperationProgress = builder.stackOperationProgress;
             this.successResourceCount = builder.successResourceCount;
             this.totalResourceCount = builder.totalResourceCount;
         }
@@ -1462,6 +1470,20 @@ public class GetStackResponseBody extends TeaModel {
         }
 
         /**
+         * @return stackActionProgress
+         */
+        public Float getStackActionProgress() {
+            return this.stackActionProgress;
+        }
+
+        /**
+         * @return stackOperationProgress
+         */
+        public Float getStackOperationProgress() {
+            return this.stackOperationProgress;
+        }
+
+        /**
          * @return successResourceCount
          */
         public Integer getSuccessResourceCount() {
@@ -1480,6 +1502,8 @@ public class GetStackResponseBody extends TeaModel {
             private Integer inProgressResourceCount; 
             private java.util.List < InProgressResourceDetails> inProgressResourceDetails; 
             private Integer pendingResourceCount; 
+            private Float stackActionProgress; 
+            private Float stackOperationProgress; 
             private Integer successResourceCount; 
             private Integer totalResourceCount; 
 
@@ -1512,6 +1536,22 @@ public class GetStackResponseBody extends TeaModel {
              */
             public Builder pendingResourceCount(Integer pendingResourceCount) {
                 this.pendingResourceCount = pendingResourceCount;
+                return this;
+            }
+
+            /**
+             * StackActionProgress.
+             */
+            public Builder stackActionProgress(Float stackActionProgress) {
+                this.stackActionProgress = stackActionProgress;
+                return this;
+            }
+
+            /**
+             * StackOperationProgress.
+             */
+            public Builder stackOperationProgress(Float stackOperationProgress) {
+                this.stackOperationProgress = stackOperationProgress;
                 return this;
             }
 
