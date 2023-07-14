@@ -254,7 +254,7 @@ public class CallChainInfo extends TeaModel {
         private String traceId; 
 
         /**
-         * additionalInfo
+         * AdditionalInfo.
          */
         public Builder additionalInfo(String additionalInfo) {
             this.additionalInfo = additionalInfo;
@@ -262,7 +262,7 @@ public class CallChainInfo extends TeaModel {
         }
 
         /**
-         * appName
+         * AppName.
          */
         public Builder appName(String appName) {
             this.appName = appName;
@@ -270,7 +270,7 @@ public class CallChainInfo extends TeaModel {
         }
 
         /**
-         * appType
+         * AppType.
          */
         public Builder appType(String appType) {
             this.appType = appType;
@@ -278,7 +278,7 @@ public class CallChainInfo extends TeaModel {
         }
 
         /**
-         * children
+         * Children.
          */
         public Builder children(java.util.List < CallChainInfo > children) {
             this.children = children;
@@ -286,7 +286,7 @@ public class CallChainInfo extends TeaModel {
         }
 
         /**
-         * haveSpan
+         * HaveSpan.
          */
         public Builder haveSpan(Boolean haveSpan) {
             this.haveSpan = haveSpan;
@@ -294,7 +294,7 @@ public class CallChainInfo extends TeaModel {
         }
 
         /**
-         * logMap
+         * LogMap.
          */
         public Builder logMap(java.util.Map < String, java.util.Map<String, ?>> logMap) {
             this.logMap = logMap;
@@ -302,7 +302,7 @@ public class CallChainInfo extends TeaModel {
         }
 
         /**
-         * logTime
+         * LogTime.
          */
         public Builder logTime(Long logTime) {
             this.logTime = logTime;
@@ -310,7 +310,7 @@ public class CallChainInfo extends TeaModel {
         }
 
         /**
-         * parentSpanId
+         * ParentSpanId.
          */
         public Builder parentSpanId(String parentSpanId) {
             this.parentSpanId = parentSpanId;
@@ -318,7 +318,7 @@ public class CallChainInfo extends TeaModel {
         }
 
         /**
-         * pid
+         * Pid.
          */
         public Builder pid(String pid) {
             this.pid = pid;
@@ -326,7 +326,7 @@ public class CallChainInfo extends TeaModel {
         }
 
         /**
-         * regionId
+         * RegionId.
          */
         public Builder regionId(String regionId) {
             this.regionId = regionId;
@@ -334,7 +334,7 @@ public class CallChainInfo extends TeaModel {
         }
 
         /**
-         * resultCode
+         * ResultCode.
          */
         public Builder resultCode(String resultCode) {
             this.resultCode = resultCode;
@@ -342,7 +342,7 @@ public class CallChainInfo extends TeaModel {
         }
 
         /**
-         * rpc
+         * Rpc.
          */
         public Builder rpc(String rpc) {
             this.rpc = rpc;
@@ -350,7 +350,7 @@ public class CallChainInfo extends TeaModel {
         }
 
         /**
-         * rpcId
+         * RpcId.
          */
         public Builder rpcId(String rpcId) {
             this.rpcId = rpcId;
@@ -358,7 +358,7 @@ public class CallChainInfo extends TeaModel {
         }
 
         /**
-         * rpcType
+         * RpcType.
          */
         public Builder rpcType(Long rpcType) {
             this.rpcType = rpcType;
@@ -366,7 +366,7 @@ public class CallChainInfo extends TeaModel {
         }
 
         /**
-         * serverIp
+         * ServerIp.
          */
         public Builder serverIp(String serverIp) {
             this.serverIp = serverIp;
@@ -374,7 +374,7 @@ public class CallChainInfo extends TeaModel {
         }
 
         /**
-         * span
+         * Span.
          */
         public Builder span(Long span) {
             this.span = span;
@@ -382,7 +382,7 @@ public class CallChainInfo extends TeaModel {
         }
 
         /**
-         * spanId
+         * SpanId.
          */
         public Builder spanId(String spanId) {
             this.spanId = spanId;
@@ -390,7 +390,7 @@ public class CallChainInfo extends TeaModel {
         }
 
         /**
-         * tagMap
+         * TagMap.
          */
         public Builder tagMap(java.util.Map < String, String > tagMap) {
             this.tagMap = tagMap;
@@ -398,7 +398,7 @@ public class CallChainInfo extends TeaModel {
         }
 
         /**
-         * traceId
+         * TraceId.
          */
         public Builder traceId(String traceId) {
             this.traceId = traceId;

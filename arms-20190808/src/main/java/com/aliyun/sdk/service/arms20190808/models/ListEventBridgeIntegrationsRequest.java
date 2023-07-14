@@ -84,7 +84,7 @@ public class ListEventBridgeIntegrationsRequest extends Request {
         } 
 
         /**
-         * Name.
+         * The name of the EventBridge integration.
          */
         public Builder name(String name) {
             this.putQueryParameter("Name", name);
@@ -93,7 +93,7 @@ public class ListEventBridgeIntegrationsRequest extends Request {
         }
 
         /**
-         * Page.
+         * The number of the page to return.
          */
         public Builder page(Long page) {
             this.putQueryParameter("Page", page);
@@ -102,7 +102,7 @@ public class ListEventBridgeIntegrationsRequest extends Request {
         }
 
         /**
-         * Size.
+         * The number of entries to return on each page.
          */
         public Builder size(Long size) {
             this.putQueryParameter("Size", size);

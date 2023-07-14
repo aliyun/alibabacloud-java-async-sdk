@@ -196,7 +196,7 @@ public class ListAlertsRequest extends Request {
         } 
 
         /**
-         * 告警名称
+         * AlertName.
          */
         public Builder alertName(String alertName) {
             this.putQueryParameter("AlertName", alertName);
@@ -205,7 +205,7 @@ public class ListAlertsRequest extends Request {
         }
 
         /**
-         * 通知策略ID
+         * DispatchRuleId.
          */
         public Builder dispatchRuleId(Long dispatchRuleId) {
             this.putQueryParameter("DispatchRuleId", dispatchRuleId);
@@ -214,7 +214,7 @@ public class ListAlertsRequest extends Request {
         }
 
         /**
-         * 查询告警发送历史记录的开始时间，时间格式：YYYY-MM-DD HH:mm:ss
+         * EndTime.
          */
         public Builder endTime(String endTime) {
             this.putQueryParameter("EndTime", endTime);
@@ -223,7 +223,7 @@ public class ListAlertsRequest extends Request {
         }
 
         /**
-         * 集成类型
+         * IntegrationType.
          */
         public Builder integrationType(String integrationType) {
             this.putQueryParameter("IntegrationType", integrationType);
@@ -232,7 +232,7 @@ public class ListAlertsRequest extends Request {
         }
 
         /**
-         * 页数
+         * Page.
          */
         public Builder page(Long page) {
             this.putQueryParameter("Page", page);
@@ -241,7 +241,7 @@ public class ListAlertsRequest extends Request {
         }
 
         /**
-         * 告警等级(P1~P6)
+         * Severity.
          */
         public Builder severity(String severity) {
             this.putQueryParameter("Severity", severity);
@@ -250,7 +250,7 @@ public class ListAlertsRequest extends Request {
         }
 
         /**
-         * 默认不查活动记录，showActivities=true才查，只查最近3天的内容
+         * ShowActivities.
          */
         public Builder showActivities(Boolean showActivities) {
             this.putQueryParameter("ShowActivities", showActivities);
@@ -259,7 +259,7 @@ public class ListAlertsRequest extends Request {
         }
 
         /**
-         * 默认不查事件，showEvents=true才查
+         * ShowEvents.
          */
         public Builder showEvents(Boolean showEvents) {
             this.putQueryParameter("ShowEvents", showEvents);
@@ -268,7 +268,7 @@ public class ListAlertsRequest extends Request {
         }
 
         /**
-         * 每页展示数目
+         * Size.
          */
         public Builder size(Long size) {
             this.putQueryParameter("Size", size);
@@ -277,7 +277,7 @@ public class ListAlertsRequest extends Request {
         }
 
         /**
-         * 查询告警发送历史记录的开始时间，时间格式：YYYY-MM-DD HH:mm:ss
+         * StartTime.
          */
         public Builder startTime(String startTime) {
             this.putQueryParameter("StartTime", startTime);
@@ -286,7 +286,7 @@ public class ListAlertsRequest extends Request {
         }
 
         /**
-         * 告警状态(0 - 待处理， 1 - 处理中， 2 - 已处理)
+         * State.
          */
         public Builder state(Long state) {
             this.putQueryParameter("State", state);

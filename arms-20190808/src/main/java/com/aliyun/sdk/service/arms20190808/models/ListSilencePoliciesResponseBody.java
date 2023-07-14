@@ -50,7 +50,7 @@ public class ListSilencePoliciesResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * 分页对象
+         * The value of the matching condition.
          */
         public Builder pageBean(PageBean pageBean) {
             this.pageBean = pageBean;
@@ -58,7 +58,15 @@ public class ListSilencePoliciesResponseBody extends TeaModel {
         }
 
         /**
-         * 请求ID
+         * The logical operator of the matching condition. Valid values:
+         * <p>
+         * 
+         * *   `eq`: equal to.
+         * *   `neq`: not equal to.
+         * *   `in`: contains.
+         * *   `nin`: does not contain.
+         * *   `re`: regular expression match.
+         * *   `nre`: regular expression mismatch.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -122,7 +130,7 @@ public class ListSilencePoliciesResponseBody extends TeaModel {
             private String value; 
 
             /**
-             * 条件字段
+             * Key.
              */
             public Builder key(String key) {
                 this.key = key;
@@ -130,7 +138,7 @@ public class ListSilencePoliciesResponseBody extends TeaModel {
             }
 
             /**
-             * 对应关系
+             * Operator.
              */
             public Builder operator(String operator) {
                 this.operator = operator;
@@ -138,7 +146,7 @@ public class ListSilencePoliciesResponseBody extends TeaModel {
             }
 
             /**
-             * 条件字段值
+             * Value.
              */
             public Builder value(String value) {
                 this.value = value;
@@ -179,7 +187,7 @@ public class ListSilencePoliciesResponseBody extends TeaModel {
             private java.util.List < MatchingConditions> matchingConditions; 
 
             /**
-             * 匹配条件
+             * The ID of the request.
              */
             public Builder matchingConditions(java.util.List < MatchingConditions> matchingConditions) {
                 this.matchingConditions = matchingConditions;
@@ -244,7 +252,7 @@ public class ListSilencePoliciesResponseBody extends TeaModel {
             private String name; 
 
             /**
-             * 静默策略ID
+             * The name of the silence policy.
              */
             public Builder id(Long id) {
                 this.id = id;
@@ -252,7 +260,11 @@ public class ListSilencePoliciesResponseBody extends TeaModel {
             }
 
             /**
-             * 事件匹配规则列表
+             * Specifies whether to query the details of a silence policy. Valid values:
+             * <p>
+             * 
+             * *   `true`: Details of the silence policy are queried.
+             * *   `false`: Details of the silence policy are not queried.
              */
             public Builder matchingRules(java.util.List < MatchingRules> matchingRules) {
                 this.matchingRules = matchingRules;
@@ -260,7 +272,7 @@ public class ListSilencePoliciesResponseBody extends TeaModel {
             }
 
             /**
-             * 静默策略名称
+             * An array of returned objects.
              */
             public Builder name(String name) {
                 this.name = name;
@@ -337,7 +349,7 @@ public class ListSilencePoliciesResponseBody extends TeaModel {
             private Long total; 
 
             /**
-             * 页数
+             * The name of the silence policy.
              */
             public Builder page(Long page) {
                 this.page = page;
@@ -345,7 +357,7 @@ public class ListSilencePoliciesResponseBody extends TeaModel {
             }
 
             /**
-             * 静默策略列表
+             * The number of silence policies that were returned.
              */
             public Builder silencePolicies(java.util.List < SilencePolicies> silencePolicies) {
                 this.silencePolicies = silencePolicies;
@@ -353,7 +365,7 @@ public class ListSilencePoliciesResponseBody extends TeaModel {
             }
 
             /**
-             * 每页数目
+             * The number of entries that were returned on each page.
              */
             public Builder size(Long size) {
                 this.size = size;
@@ -361,7 +373,7 @@ public class ListSilencePoliciesResponseBody extends TeaModel {
             }
 
             /**
-             * 总数
+             * An array of matching rule objects.
              */
             public Builder total(Long total) {
                 this.total = total;

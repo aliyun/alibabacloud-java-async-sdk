@@ -70,7 +70,7 @@ public class SendTTSVerifyLinkRequest extends Request {
         } 
 
         /**
-         * 告警联系人ID
+         * The ID of the alert contact.
          */
         public Builder contactId(Long contactId) {
             this.putBodyParameter("ContactId", contactId);
@@ -79,7 +79,7 @@ public class SendTTSVerifyLinkRequest extends Request {
         }
 
         /**
-         * 告警联系人手机号码
+         * The mobile number of the alert contact.
          */
         public Builder phone(String phone) {
             this.putBodyParameter("Phone", phone);

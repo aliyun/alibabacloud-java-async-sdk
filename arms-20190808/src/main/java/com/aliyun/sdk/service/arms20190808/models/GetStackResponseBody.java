@@ -50,7 +50,7 @@ public class GetStackResponseBody extends TeaModel {
         private java.util.List < StackInfo> stackInfo; 
 
         /**
-         * RequestId.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -58,7 +58,7 @@ public class GetStackResponseBody extends TeaModel {
         }
 
         /**
-         * StackInfo.
+         * The information of the method stack.
          */
         public Builder stackInfo(java.util.List < StackInfo> stackInfo) {
             this.stackInfo = stackInfo;
@@ -110,7 +110,7 @@ public class GetStackResponseBody extends TeaModel {
             private String type; 
 
             /**
-             * Info.
+             * The content of the custom parameter.
              */
             public Builder info(String info) {
                 this.info = info;
@@ -118,7 +118,7 @@ public class GetStackResponseBody extends TeaModel {
             }
 
             /**
-             * Type.
+             * The type of the custom parameter.
              */
             public Builder type(String type) {
                 this.type = type;
@@ -243,7 +243,7 @@ public class GetStackResponseBody extends TeaModel {
             private Long startTime; 
 
             /**
-             * Api.
+             * The name of the operation.
              */
             public Builder api(String api) {
                 this.api = api;
@@ -251,7 +251,7 @@ public class GetStackResponseBody extends TeaModel {
             }
 
             /**
-             * Duration.
+             * The duration. Unit: milliseconds.
              */
             public Builder duration(Long duration) {
                 this.duration = duration;
@@ -259,7 +259,7 @@ public class GetStackResponseBody extends TeaModel {
             }
 
             /**
-             * Exception.
+             * The error message.
              */
             public Builder exception(String exception) {
                 this.exception = exception;
@@ -267,7 +267,7 @@ public class GetStackResponseBody extends TeaModel {
             }
 
             /**
-             * ExtInfo.
+             * The information about the array object.
              */
             public Builder extInfo(ExtInfo extInfo) {
                 this.extInfo = extInfo;
@@ -275,7 +275,7 @@ public class GetStackResponseBody extends TeaModel {
             }
 
             /**
-             * Line.
+             * The number of rows in the method stack information.
              */
             public Builder line(String line) {
                 this.line = line;
@@ -283,7 +283,7 @@ public class GetStackResponseBody extends TeaModel {
             }
 
             /**
-             * RpcId.
+             * The ID of the RPC mode.
              */
             public Builder rpcId(String rpcId) {
                 this.rpcId = rpcId;
@@ -291,7 +291,7 @@ public class GetStackResponseBody extends TeaModel {
             }
 
             /**
-             * ServiceName.
+             * The name of the service.
              */
             public Builder serviceName(String serviceName) {
                 this.serviceName = serviceName;
@@ -299,7 +299,7 @@ public class GetStackResponseBody extends TeaModel {
             }
 
             /**
-             * StartTime.
+             * The start time of the call method.
              */
             public Builder startTime(Long startTime) {
                 this.startTime = startTime;

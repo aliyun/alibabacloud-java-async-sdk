@@ -50,7 +50,7 @@ public class ListEscalationPoliciesResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * 分页对象
+         * The returned objects.
          */
         public Builder pageBean(PageBean pageBean) {
             this.pageBean = pageBean;
@@ -58,7 +58,7 @@ public class ListEscalationPoliciesResponseBody extends TeaModel {
         }
 
         /**
-         * Id of the request
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -110,7 +110,7 @@ public class ListEscalationPoliciesResponseBody extends TeaModel {
             private String name; 
 
             /**
-             * Id.
+             * The ID of the escalation policy.
              */
             public Builder id(Long id) {
                 this.id = id;
@@ -118,7 +118,7 @@ public class ListEscalationPoliciesResponseBody extends TeaModel {
             }
 
             /**
-             * Name.
+             * The name of the escalation policy.
              */
             public Builder name(String name) {
                 this.name = name;
@@ -195,7 +195,7 @@ public class ListEscalationPoliciesResponseBody extends TeaModel {
             private Long total; 
 
             /**
-             * EscalationPolicies.
+             * The list of escalation policies.
              */
             public Builder escalationPolicies(java.util.List < EscalationPolicies> escalationPolicies) {
                 this.escalationPolicies = escalationPolicies;
@@ -203,7 +203,7 @@ public class ListEscalationPoliciesResponseBody extends TeaModel {
             }
 
             /**
-             * 页数
+             * The page number of the returned page.
              */
             public Builder page(Long page) {
                 this.page = page;
@@ -211,7 +211,7 @@ public class ListEscalationPoliciesResponseBody extends TeaModel {
             }
 
             /**
-             * 每页展示数目
+             * The number of entries returned per page.
              */
             public Builder size(Long size) {
                 this.size = size;
@@ -219,7 +219,7 @@ public class ListEscalationPoliciesResponseBody extends TeaModel {
             }
 
             /**
-             * 总数
+             * The total number of returned entries.
              */
             public Builder total(Long total) {
                 this.total = total;

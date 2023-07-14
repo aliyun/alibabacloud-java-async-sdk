@@ -50,7 +50,7 @@ public class DescribeWebhookContactsResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * 分页对象
+         * The returned objects.
          */
         public Builder pageBean(PageBean pageBean) {
             this.pageBean = pageBean;
@@ -58,7 +58,7 @@ public class DescribeWebhookContactsResponseBody extends TeaModel {
         }
 
         /**
-         * Id of the request
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -158,7 +158,7 @@ public class DescribeWebhookContactsResponseBody extends TeaModel {
             private String url; 
 
             /**
-             * HTTP请求头
+             * The header of the HTTP request.
              */
             public Builder bizHeaders(java.util.Map < String, ? > bizHeaders) {
                 this.bizHeaders = bizHeaders;
@@ -166,7 +166,7 @@ public class DescribeWebhookContactsResponseBody extends TeaModel {
             }
 
             /**
-             * HTTP请求参数
+             * The parameters in the HTTP request.
              */
             public Builder bizParams(java.util.Map < String, ? > bizParams) {
                 this.bizParams = bizParams;
@@ -174,7 +174,7 @@ public class DescribeWebhookContactsResponseBody extends TeaModel {
             }
 
             /**
-             * 告警通知模板
+             * The alert notification template.
              */
             public Builder body(String body) {
                 this.body = body;
@@ -182,7 +182,11 @@ public class DescribeWebhookContactsResponseBody extends TeaModel {
             }
 
             /**
-             * http请求方式
+             * The HTTP request method.
+             * <p>
+             * 
+             * *   Get
+             * *   Post
              */
             public Builder method(String method) {
                 this.method = method;
@@ -190,7 +194,7 @@ public class DescribeWebhookContactsResponseBody extends TeaModel {
             }
 
             /**
-             * 告警恢复模板
+             * The notification template for clearing alerts.
              */
             public Builder recoverBody(String recoverBody) {
                 this.recoverBody = recoverBody;
@@ -198,7 +202,7 @@ public class DescribeWebhookContactsResponseBody extends TeaModel {
             }
 
             /**
-             * Url
+             * The URL of the request method.
              */
             public Builder url(String url) {
                 this.url = url;
@@ -263,7 +267,7 @@ public class DescribeWebhookContactsResponseBody extends TeaModel {
             private String webhookName; 
 
             /**
-             * webhook对象
+             * The details of the webhook alert contact.
              */
             public Builder webhook(Webhook webhook) {
                 this.webhook = webhook;
@@ -271,7 +275,7 @@ public class DescribeWebhookContactsResponseBody extends TeaModel {
             }
 
             /**
-             * 告警webhookID
+             * The ID of the webhook alert contact.
              */
             public Builder webhookId(Float webhookId) {
                 this.webhookId = webhookId;
@@ -279,7 +283,7 @@ public class DescribeWebhookContactsResponseBody extends TeaModel {
             }
 
             /**
-             * 告警webhook名称
+             * The name of the webhook alert contact.
              */
             public Builder webhookName(String webhookName) {
                 this.webhookName = webhookName;
@@ -356,7 +360,7 @@ public class DescribeWebhookContactsResponseBody extends TeaModel {
             private java.util.List < WebhookContacts> webhookContacts; 
 
             /**
-             * 页数
+             * The page number of the returned page.
              */
             public Builder page(Long page) {
                 this.page = page;
@@ -364,7 +368,7 @@ public class DescribeWebhookContactsResponseBody extends TeaModel {
             }
 
             /**
-             * 每一页数目
+             * The number of alert contacts displayed on each page.
              */
             public Builder size(Long size) {
                 this.size = size;
@@ -372,7 +376,7 @@ public class DescribeWebhookContactsResponseBody extends TeaModel {
             }
 
             /**
-             * 总数
+             * The total number of alert contacts.
              */
             public Builder total(Long total) {
                 this.total = total;
@@ -380,7 +384,7 @@ public class DescribeWebhookContactsResponseBody extends TeaModel {
             }
 
             /**
-             * 告警webhook联系人列表
+             * The list of webhook alert contacts.
              */
             public Builder webhookContacts(java.util.List < WebhookContacts> webhookContacts) {
                 this.webhookContacts = webhookContacts;

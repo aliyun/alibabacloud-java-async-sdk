@@ -55,7 +55,7 @@ public class DeleteContactRequest extends Request {
         } 
 
         /**
-         * 告警联系人ID
+         * The operation that you want to perform. Set the value to **DeleteContact**.
          */
         public Builder contactId(Long contactId) {
             this.putQueryParameter("ContactId", contactId);

@@ -50,7 +50,7 @@ public class DelAuthTokenResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * Data.
+         * Indicates whether the call was successful.
          */
         public Builder data(String data) {
             this.data = data;
@@ -58,7 +58,7 @@ public class DelAuthTokenResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

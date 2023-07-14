@@ -12,15 +12,27 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>AddPrometheusInstanceResponseBody</p>
  */
 public class AddPrometheusInstanceResponseBody extends TeaModel {
+    @NameInMap("Code")
+    private Integer code;
+
     @NameInMap("Data")
     private String data;
+
+    @NameInMap("Message")
+    private String message;
 
     @NameInMap("RequestId")
     private String requestId;
 
+    @NameInMap("Success")
+    private Boolean success;
+
     private AddPrometheusInstanceResponseBody(Builder builder) {
+        this.code = builder.code;
         this.data = builder.data;
+        this.message = builder.message;
         this.requestId = builder.requestId;
+        this.success = builder.success;
     }
 
     public static Builder builder() {
@@ -32,10 +44,24 @@ public class AddPrometheusInstanceResponseBody extends TeaModel {
     }
 
     /**
+     * @return code
+     */
+    public Integer getCode() {
+        return this.code;
+    }
+
+    /**
      * @return data
      */
     public String getData() {
         return this.data;
+    }
+
+    /**
+     * @return message
+     */
+    public String getMessage() {
+        return this.message;
     }
 
     /**
@@ -45,12 +71,30 @@ public class AddPrometheusInstanceResponseBody extends TeaModel {
         return this.requestId;
     }
 
+    /**
+     * @return success
+     */
+    public Boolean getSuccess() {
+        return this.success;
+    }
+
     public static final class Builder {
+        private Integer code; 
         private String data; 
+        private String message; 
         private String requestId; 
+        private Boolean success; 
 
         /**
-         * Data.
+         * Code.
+         */
+        public Builder code(Integer code) {
+            this.code = code;
+            return this;
+        }
+
+        /**
+         * The returned struct. { "RequestId": the request ID, "Data": "{ "clusterType": the cluster type, "remoteWriteUrl": the public URL for remote write, "internetGrafanaUrl": the internal URL for Grafana, "authToken": indicates whether authentication is enabled, "internetPushGatewayUrl": the internal URL for Pushgateway, "clusterId": the cluster ID, "internetRemoteReadUrl": the internal URL for remote read, "remoteReadUrl": the public URL for remote read, "grafanaUrl": the public URL for Grafana, "pushGatewayUrl": the public URL for Pushgateway, "internetRemoteWriteUrl": the internal URL for remote write}" }
          */
         public Builder data(String data) {
             this.data = data;
@@ -58,10 +102,26 @@ public class AddPrometheusInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * Message.
+         */
+        public Builder message(String message) {
+            this.message = message;
+            return this;
+        }
+
+        /**
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
+            return this;
+        }
+
+        /**
+         * Success.
+         */
+        public Builder success(Boolean success) {
+            this.success = success;
             return this;
         }
 

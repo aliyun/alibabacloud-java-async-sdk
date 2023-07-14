@@ -70,7 +70,7 @@ public class DeletePrometheusGlobalViewRequest extends Request {
         } 
 
         /**
-         * GlobalViewClusterId.
+         * The ID of the global aggregation instance.
          */
         public Builder globalViewClusterId(String globalViewClusterId) {
             this.putQueryParameter("GlobalViewClusterId", globalViewClusterId);
@@ -79,7 +79,7 @@ public class DeletePrometheusGlobalViewRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * The region ID.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);

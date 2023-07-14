@@ -127,7 +127,7 @@ public class GetStackRequest extends Request {
         } 
 
         /**
-         * EndTime.
+         * The end time of the call method.
          */
         public Builder endTime(Long endTime) {
             this.putQueryParameter("EndTime", endTime);
@@ -136,7 +136,7 @@ public class GetStackRequest extends Request {
         }
 
         /**
-         * Pid.
+         * The process identifier (PID) of the application. For more information about how to obtain the PID, see [Obtain the PID of an application](https://www.alibabacloud.com/help/zh/doc-detail/186100.htm?spm=a2cdw.13409063.0.0.7a72281f0bkTfx#title-imy-7gj-qhr).
          */
         public Builder pid(String pid) {
             this.putQueryParameter("Pid", pid);
@@ -145,7 +145,7 @@ public class GetStackRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * The region ID.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -154,7 +154,7 @@ public class GetStackRequest extends Request {
         }
 
         /**
-         * RpcID.
+         * The ID of the remote procedure call (RPC) mode. You can obtain the ID by calling the **GetTrace** operation.
          */
         public Builder rpcID(String rpcID) {
             this.putQueryParameter("RpcID", rpcID);
@@ -163,7 +163,7 @@ public class GetStackRequest extends Request {
         }
 
         /**
-         * StartTime.
+         * The start time of the call method.
          */
         public Builder startTime(Long startTime) {
             this.putQueryParameter("StartTime", startTime);
@@ -172,7 +172,7 @@ public class GetStackRequest extends Request {
         }
 
         /**
-         * TraceID.
+         * The trace ID. You can log on to the Application Real-Time Monitoring Service (ARMS) console and obtain the trace ID on the **Trace Query** page.
          */
         public Builder traceID(String traceID) {
             this.putQueryParameter("TraceID", traceID);

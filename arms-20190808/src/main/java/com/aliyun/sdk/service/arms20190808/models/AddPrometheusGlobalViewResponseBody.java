@@ -12,14 +12,22 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>AddPrometheusGlobalViewResponseBody</p>
  */
 public class AddPrometheusGlobalViewResponseBody extends TeaModel {
+    @NameInMap("Code")
+    private Integer code;
+
     @NameInMap("Data")
     private Data data;
+
+    @NameInMap("Message")
+    private String message;
 
     @NameInMap("RequestId")
     private String requestId;
 
     private AddPrometheusGlobalViewResponseBody(Builder builder) {
+        this.code = builder.code;
         this.data = builder.data;
+        this.message = builder.message;
         this.requestId = builder.requestId;
     }
 
@@ -32,10 +40,24 @@ public class AddPrometheusGlobalViewResponseBody extends TeaModel {
     }
 
     /**
+     * @return code
+     */
+    public Integer getCode() {
+        return this.code;
+    }
+
+    /**
      * @return data
      */
     public Data getData() {
         return this.data;
+    }
+
+    /**
+     * @return message
+     */
+    public String getMessage() {
+        return this.message;
     }
 
     /**
@@ -46,11 +68,21 @@ public class AddPrometheusGlobalViewResponseBody extends TeaModel {
     }
 
     public static final class Builder {
+        private Integer code; 
         private Data data; 
+        private String message; 
         private String requestId; 
 
         /**
-         * Data.
+         * Code.
+         */
+        public Builder code(Integer code) {
+            this.code = code;
+            return this;
+        }
+
+        /**
+         * The information about the array object.
          */
         public Builder data(Data data) {
             this.data = data;
@@ -58,7 +90,15 @@ public class AddPrometheusGlobalViewResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * Message.
+         */
+        public Builder message(String message) {
+            this.message = message;
+            return this;
+        }
+
+        /**
+         * The request ID. You can use the ID to query logs and troubleshoot issues.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -71,9 +111,90 @@ public class AddPrometheusGlobalViewResponseBody extends TeaModel {
 
     } 
 
+    public static class Info extends TeaModel {
+        @NameInMap("FailedInstances")
+        private String failedInstances;
+
+        @NameInMap("GlobalViewClusterId")
+        private String globalViewClusterId;
+
+        @NameInMap("RegionId")
+        private String regionId;
+
+        private Info(Builder builder) {
+            this.failedInstances = builder.failedInstances;
+            this.globalViewClusterId = builder.globalViewClusterId;
+            this.regionId = builder.regionId;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static Info create() {
+            return builder().build();
+        }
+
+        /**
+         * @return failedInstances
+         */
+        public String getFailedInstances() {
+            return this.failedInstances;
+        }
+
+        /**
+         * @return globalViewClusterId
+         */
+        public String getGlobalViewClusterId() {
+            return this.globalViewClusterId;
+        }
+
+        /**
+         * @return regionId
+         */
+        public String getRegionId() {
+            return this.regionId;
+        }
+
+        public static final class Builder {
+            private String failedInstances; 
+            private String globalViewClusterId; 
+            private String regionId; 
+
+            /**
+             * The list of instances that failed to be added.
+             */
+            public Builder failedInstances(String failedInstances) {
+                this.failedInstances = failedInstances;
+                return this;
+            }
+
+            /**
+             * The ID of the global aggregation instance.
+             */
+            public Builder globalViewClusterId(String globalViewClusterId) {
+                this.globalViewClusterId = globalViewClusterId;
+                return this;
+            }
+
+            /**
+             * The region ID.
+             */
+            public Builder regionId(String regionId) {
+                this.regionId = regionId;
+                return this;
+            }
+
+            public Info build() {
+                return new Info(this);
+            } 
+
+        } 
+
+    }
     public static class Data extends TeaModel {
         @NameInMap("Info")
-        private String info;
+        private Info info;
 
         @NameInMap("Msg")
         private String msg;
@@ -98,7 +219,7 @@ public class AddPrometheusGlobalViewResponseBody extends TeaModel {
         /**
          * @return info
          */
-        public String getInfo() {
+        public Info getInfo() {
             return this.info;
         }
 
@@ -117,20 +238,20 @@ public class AddPrometheusGlobalViewResponseBody extends TeaModel {
         }
 
         public static final class Builder {
-            private String info; 
+            private Info info; 
             private String msg; 
             private Boolean success; 
 
             /**
-             * Info.
+             * The Info-level information.
              */
-            public Builder info(String info) {
+            public Builder info(Info info) {
                 this.info = info;
                 return this;
             }
 
             /**
-             * Msg.
+             * The additional information.
              */
             public Builder msg(String msg) {
                 this.msg = msg;
@@ -138,7 +259,11 @@ public class AddPrometheusGlobalViewResponseBody extends TeaModel {
             }
 
             /**
-             * Success.
+             * Indicates whether the request was successful. Valid values:
+             * <p>
+             * 
+             * *   `true`
+             * *   `false`
              */
             public Builder success(Boolean success) {
                 this.success = success;

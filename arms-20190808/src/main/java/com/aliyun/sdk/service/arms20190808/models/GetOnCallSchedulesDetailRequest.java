@@ -83,7 +83,7 @@ public class GetOnCallSchedulesDetailRequest extends Request {
         } 
 
         /**
-         * String.Class	查询排班人结束时间:yyyy-MM-dd
+         * The date on which the shift ends. Format: `yyyy-MM-dd`.
          */
         public Builder endTime(String endTime) {
             this.putQueryParameter("EndTime", endTime);
@@ -92,7 +92,7 @@ public class GetOnCallSchedulesDetailRequest extends Request {
         }
 
         /**
-         * 排班策略ID
+         * The ID of the scheduling policy.
          */
         public Builder id(Long id) {
             this.putQueryParameter("Id", id);
@@ -101,7 +101,7 @@ public class GetOnCallSchedulesDetailRequest extends Request {
         }
 
         /**
-         * 查询排班人开始时间:yyyy-MM-dd
+         * The date from which the shift starts. Format: `yyyy-MM-dd`.
          */
         public Builder startTime(String startTime) {
             this.putQueryParameter("StartTime", startTime);

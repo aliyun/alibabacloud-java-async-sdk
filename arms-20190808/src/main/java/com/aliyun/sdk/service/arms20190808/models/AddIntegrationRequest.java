@@ -85,7 +85,7 @@ public class AddIntegrationRequest extends Request {
         } 
 
         /**
-         * ClusterId.
+         * The ID of an Alibaba Cloud Container Service for Kubernetes cluster.
          */
         public Builder clusterId(String clusterId) {
             this.putQueryParameter("ClusterId", clusterId);
@@ -94,7 +94,7 @@ public class AddIntegrationRequest extends Request {
         }
 
         /**
-         * Integration.
+         * The software abbreviation that is supported by ARMS. Valid values (case-insensitive): `ASM`, `IoT`, and `Flink`.
          */
         public Builder integration(String integration) {
             this.putQueryParameter("Integration", integration);
@@ -103,7 +103,7 @@ public class AddIntegrationRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * The region ID of the instance.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);

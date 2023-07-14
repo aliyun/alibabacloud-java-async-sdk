@@ -12,14 +12,22 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>UninstallPromClusterResponseBody</p>
  */
 public class UninstallPromClusterResponseBody extends TeaModel {
+    @NameInMap("Code")
+    private Integer code;
+
     @NameInMap("Data")
-    private Boolean data;
+    private String data;
+
+    @NameInMap("Message")
+    private String message;
 
     @NameInMap("RequestId")
     private String requestId;
 
     private UninstallPromClusterResponseBody(Builder builder) {
+        this.code = builder.code;
         this.data = builder.data;
+        this.message = builder.message;
         this.requestId = builder.requestId;
     }
 
@@ -32,10 +40,24 @@ public class UninstallPromClusterResponseBody extends TeaModel {
     }
 
     /**
+     * @return code
+     */
+    public Integer getCode() {
+        return this.code;
+    }
+
+    /**
      * @return data
      */
-    public Boolean getData() {
+    public String getData() {
         return this.data;
+    }
+
+    /**
+     * @return message
+     */
+    public String getMessage() {
+        return this.message;
     }
 
     /**
@@ -46,19 +68,37 @@ public class UninstallPromClusterResponseBody extends TeaModel {
     }
 
     public static final class Builder {
-        private Boolean data; 
+        private Integer code; 
+        private String data; 
+        private String message; 
         private String requestId; 
 
         /**
-         * Data.
+         * The status code returned. The status code 200 indicates that the request was successful.
          */
-        public Builder data(Boolean data) {
+        public Builder code(Integer code) {
+            this.code = code;
+            return this;
+        }
+
+        /**
+         * Indicates whether the request was successful.
+         */
+        public Builder data(String data) {
             this.data = data;
             return this;
         }
 
         /**
-         * RequestId.
+         * The message returned.
+         */
+        public Builder message(String message) {
+            this.message = message;
+            return this;
+        }
+
+        /**
+         * The request ID. You can use the ID to query logs and troubleshoot issues.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

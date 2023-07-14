@@ -52,6 +52,10 @@ public class GetAlertRulesRequest extends Request {
     @Validation(required = true)
     private Long size;
 
+    @Query
+    @NameInMap("Tags")
+    private java.util.List < Tags> tags;
+
     private GetAlertRulesRequest(Builder builder) {
         super(builder);
         this.alertIds = builder.alertIds;
@@ -63,6 +67,7 @@ public class GetAlertRulesRequest extends Request {
         this.productCode = builder.productCode;
         this.regionId = builder.regionId;
         this.size = builder.size;
+        this.tags = builder.tags;
     }
 
     public static Builder builder() {
@@ -141,6 +146,13 @@ public class GetAlertRulesRequest extends Request {
         return this.size;
     }
 
+    /**
+     * @return tags
+     */
+    public java.util.List < Tags> getTags() {
+        return this.tags;
+    }
+
     public static final class Builder extends Request.Builder<GetAlertRulesRequest, Builder> {
         private String alertIds; 
         private String alertNames; 
@@ -151,6 +163,7 @@ public class GetAlertRulesRequest extends Request {
         private String productCode; 
         private String regionId; 
         private Long size; 
+        private java.util.List < Tags> tags; 
 
         private Builder() {
             super();
@@ -167,10 +180,11 @@ public class GetAlertRulesRequest extends Request {
             this.productCode = request.productCode;
             this.regionId = request.regionId;
             this.size = request.size;
+            this.tags = request.tags;
         } 
 
         /**
-         * 告警规则ID
+         * AlertIds.
          */
         public Builder alertIds(String alertIds) {
             this.putQueryParameter("AlertIds", alertIds);
@@ -179,7 +193,7 @@ public class GetAlertRulesRequest extends Request {
         }
 
         /**
-         * 告警规则名称
+         * AlertNames.
          */
         public Builder alertNames(String alertNames) {
             this.putQueryParameter("AlertNames", alertNames);
@@ -188,7 +202,7 @@ public class GetAlertRulesRequest extends Request {
         }
 
         /**
-         * 告警规则运行状态
+         * AlertStatus.
          */
         public Builder alertStatus(String alertStatus) {
             this.putQueryParameter("AlertStatus", alertStatus);
@@ -197,7 +211,7 @@ public class GetAlertRulesRequest extends Request {
         }
 
         /**
-         * 告警规则类型
+         * AlertType.
          */
         public Builder alertType(String alertType) {
             this.putQueryParameter("AlertType", alertType);
@@ -215,7 +229,7 @@ public class GetAlertRulesRequest extends Request {
         }
 
         /**
-         * 页数
+         * Page.
          */
         public Builder page(Long page) {
             this.putQueryParameter("Page", page);
@@ -233,7 +247,7 @@ public class GetAlertRulesRequest extends Request {
         }
 
         /**
-         * 地域
+         * RegionId.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -242,11 +256,20 @@ public class GetAlertRulesRequest extends Request {
         }
 
         /**
-         * 每一页大小
+         * Size.
          */
         public Builder size(Long size) {
             this.putQueryParameter("Size", size);
             this.size = size;
+            return this;
+        }
+
+        /**
+         * Tags.
+         */
+        public Builder tags(java.util.List < Tags> tags) {
+            this.putQueryParameter("Tags", tags);
+            this.tags = tags;
             return this;
         }
 
@@ -257,4 +280,65 @@ public class GetAlertRulesRequest extends Request {
 
     } 
 
+    public static class Tags extends TeaModel {
+        @NameInMap("Key")
+        private String key;
+
+        @NameInMap("Value")
+        private String value;
+
+        private Tags(Builder builder) {
+            this.key = builder.key;
+            this.value = builder.value;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static Tags create() {
+            return builder().build();
+        }
+
+        /**
+         * @return key
+         */
+        public String getKey() {
+            return this.key;
+        }
+
+        /**
+         * @return value
+         */
+        public String getValue() {
+            return this.value;
+        }
+
+        public static final class Builder {
+            private String key; 
+            private String value; 
+
+            /**
+             * Key.
+             */
+            public Builder key(String key) {
+                this.key = key;
+                return this;
+            }
+
+            /**
+             * Value.
+             */
+            public Builder value(String value) {
+                this.value = value;
+                return this;
+            }
+
+            public Tags build() {
+                return new Tags(this);
+            } 
+
+        } 
+
+    }
 }

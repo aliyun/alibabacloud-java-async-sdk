@@ -50,7 +50,7 @@ public class GetOnCallSchedulesDetailResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * 排班策略详情信息
+         * The information about the scheduling policy.
          */
         public Builder data(Data data) {
             this.data = data;
@@ -58,7 +58,7 @@ public class GetOnCallSchedulesDetailResponseBody extends TeaModel {
         }
 
         /**
-         * 请求ID
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -110,7 +110,7 @@ public class GetOnCallSchedulesDetailResponseBody extends TeaModel {
             private String name; 
 
             /**
-             * Id.
+             * The ID of the user on duty.
              */
             public Builder id(Long id) {
                 this.id = id;
@@ -118,7 +118,7 @@ public class GetOnCallSchedulesDetailResponseBody extends TeaModel {
             }
 
             /**
-             * Name.
+             * The name of the user on duty.
              */
             public Builder name(String name) {
                 this.name = name;
@@ -183,7 +183,7 @@ public class GetOnCallSchedulesDetailResponseBody extends TeaModel {
             private String start; 
 
             /**
-             * End.
+             * The date on which the user completed shift work.
              */
             public Builder end(String end) {
                 this.end = end;
@@ -191,7 +191,7 @@ public class GetOnCallSchedulesDetailResponseBody extends TeaModel {
             }
 
             /**
-             * SimpleContact.
+             * The information about the user on duty.
              */
             public Builder simpleContact(SimpleContact simpleContact) {
                 this.simpleContact = simpleContact;
@@ -199,7 +199,7 @@ public class GetOnCallSchedulesDetailResponseBody extends TeaModel {
             }
 
             /**
-             * Start.
+             * The date from which the user started shift work.
              */
             public Builder start(String start) {
                 this.start = start;
@@ -252,7 +252,7 @@ public class GetOnCallSchedulesDetailResponseBody extends TeaModel {
             private String name; 
 
             /**
-             * Id.
+             * The ID of the scheduled user.
              */
             public Builder id(Long id) {
                 this.id = id;
@@ -260,7 +260,7 @@ public class GetOnCallSchedulesDetailResponseBody extends TeaModel {
             }
 
             /**
-             * Name.
+             * The name of the scheduled user.
              */
             public Builder name(String name) {
                 this.name = name;
@@ -325,7 +325,7 @@ public class GetOnCallSchedulesDetailResponseBody extends TeaModel {
             private RenderedLayerEntriesSimpleContact simpleContact; 
 
             /**
-             * Start.
+             * The date from which the scheduled user was supposed to start shift work.
              */
             public Builder start(String start) {
                 this.start = start;
@@ -333,7 +333,7 @@ public class GetOnCallSchedulesDetailResponseBody extends TeaModel {
             }
 
             /**
-             * End.
+             * The date on which the scheduled user was supposed to complete shift work.
              */
             public Builder end(String end) {
                 this.end = end;
@@ -341,7 +341,7 @@ public class GetOnCallSchedulesDetailResponseBody extends TeaModel {
             }
 
             /**
-             * SimpleContact.
+             * The information about the scheduled user.
              */
             public Builder simpleContact(RenderedLayerEntriesSimpleContact simpleContact) {
                 this.simpleContact = simpleContact;
@@ -394,7 +394,7 @@ public class GetOnCallSchedulesDetailResponseBody extends TeaModel {
             private String name; 
 
             /**
-             * Id.
+             * The ID of the substitute.
              */
             public Builder id(Long id) {
                 this.id = id;
@@ -402,7 +402,7 @@ public class GetOnCallSchedulesDetailResponseBody extends TeaModel {
             }
 
             /**
-             * Name.
+             * The name of the substitute.
              */
             public Builder name(String name) {
                 this.name = name;
@@ -467,7 +467,7 @@ public class GetOnCallSchedulesDetailResponseBody extends TeaModel {
             private String start; 
 
             /**
-             * End.
+             * The date on which the substitute was supposed to complete shift work.
              */
             public Builder end(String end) {
                 this.end = end;
@@ -475,7 +475,7 @@ public class GetOnCallSchedulesDetailResponseBody extends TeaModel {
             }
 
             /**
-             * SimpleContact.
+             * The information about the substitute.
              */
             public Builder simpleContact(RenderedSubstitudeEntriesSimpleContact simpleContact) {
                 this.simpleContact = simpleContact;
@@ -483,7 +483,7 @@ public class GetOnCallSchedulesDetailResponseBody extends TeaModel {
             }
 
             /**
-             * Start.
+             * The date from which the substitute was supposed to start shift work.
              */
             public Builder start(String start) {
                 this.start = start;
@@ -548,7 +548,7 @@ public class GetOnCallSchedulesDetailResponseBody extends TeaModel {
             private String startTimeOfDay; 
 
             /**
-             * EndTimeOfDay.
+             * The end time of the shift per day.
              */
             public Builder endTimeOfDay(String endTimeOfDay) {
                 this.endTimeOfDay = endTimeOfDay;
@@ -556,7 +556,11 @@ public class GetOnCallSchedulesDetailResponseBody extends TeaModel {
             }
 
             /**
-             * RestrictionType.
+             * The type of the limit. Valid values:
+             * <p>
+             * 
+             * *   daily_restriction
+             * *   weekly_restriction
              */
             public Builder restrictionType(String restrictionType) {
                 this.restrictionType = restrictionType;
@@ -564,7 +568,7 @@ public class GetOnCallSchedulesDetailResponseBody extends TeaModel {
             }
 
             /**
-             * StartTimeOfDay.
+             * The start time of the shift per day.
              */
             public Builder startTimeOfDay(String startTimeOfDay) {
                 this.startTimeOfDay = startTimeOfDay;
@@ -653,7 +657,7 @@ public class GetOnCallSchedulesDetailResponseBody extends TeaModel {
             private String startTime; 
 
             /**
-             * ContactIds.
+             * The ID list of users on duty.
              */
             public Builder contactIds(java.util.List < Long > contactIds) {
                 this.contactIds = contactIds;
@@ -661,7 +665,7 @@ public class GetOnCallSchedulesDetailResponseBody extends TeaModel {
             }
 
             /**
-             * Restrictions.
+             * The limit on the time of the shift.
              */
             public Builder restrictions(java.util.List < Restrictions> restrictions) {
                 this.restrictions = restrictions;
@@ -669,7 +673,12 @@ public class GetOnCallSchedulesDetailResponseBody extends TeaModel {
             }
 
             /**
-             * RotationType.
+             * The type of the shift. Valid values:
+             * <p>
+             * 
+             * *   DAY
+             * *   WEEK
+             * *   CUSTOM
              */
             public Builder rotationType(String rotationType) {
                 this.rotationType = rotationType;
@@ -677,7 +686,7 @@ public class GetOnCallSchedulesDetailResponseBody extends TeaModel {
             }
 
             /**
-             * ShiftLength.
+             * The shift cycle. Unit: hours.
              */
             public Builder shiftLength(Long shiftLength) {
                 this.shiftLength = shiftLength;
@@ -685,7 +694,7 @@ public class GetOnCallSchedulesDetailResponseBody extends TeaModel {
             }
 
             /**
-             * StartTime.
+             * The date on which the shift change took effect.
              */
             public Builder startTime(String startTime) {
                 this.startTime = startTime;
@@ -810,7 +819,7 @@ public class GetOnCallSchedulesDetailResponseBody extends TeaModel {
             private java.util.List < ScheduleLayers> scheduleLayers; 
 
             /**
-             * AlertRobotId.
+             * The URL of the DingTalk chatbot, which is used to receive notifications about shift changes.
              */
             public Builder alertRobotId(Long alertRobotId) {
                 this.alertRobotId = alertRobotId;
@@ -818,7 +827,7 @@ public class GetOnCallSchedulesDetailResponseBody extends TeaModel {
             }
 
             /**
-             * 描述
+             * The description of the scheduling policy.
              */
             public Builder description(String description) {
                 this.description = description;
@@ -826,7 +835,7 @@ public class GetOnCallSchedulesDetailResponseBody extends TeaModel {
             }
 
             /**
-             * 排班策略ID
+             * The ID of the scheduling policy.
              */
             public Builder id(Long id) {
                 this.id = id;
@@ -834,7 +843,7 @@ public class GetOnCallSchedulesDetailResponseBody extends TeaModel {
             }
 
             /**
-             * 排名策略名称
+             * The name of the scheduling policy.
              */
             public Builder name(String name) {
                 this.name = name;
@@ -842,7 +851,7 @@ public class GetOnCallSchedulesDetailResponseBody extends TeaModel {
             }
 
             /**
-             * RenderedFinnalEntries.
+             * The information about the final user on duty.
              */
             public Builder renderedFinnalEntries(java.util.List < RenderedFinnalEntries> renderedFinnalEntries) {
                 this.renderedFinnalEntries = renderedFinnalEntries;
@@ -850,7 +859,7 @@ public class GetOnCallSchedulesDetailResponseBody extends TeaModel {
             }
 
             /**
-             * RenderedLayerEntries.
+             * The scheduled users on duty within a time range.
              */
             public Builder renderedLayerEntries(java.util.List < java.util.List < RenderedLayerEntries> > renderedLayerEntries) {
                 this.renderedLayerEntries = renderedLayerEntries;
@@ -858,7 +867,7 @@ public class GetOnCallSchedulesDetailResponseBody extends TeaModel {
             }
 
             /**
-             * RenderedSubstitudeEntries.
+             * The information about the substitutes within a time range.
              */
             public Builder renderedSubstitudeEntries(java.util.List < RenderedSubstitudeEntries> renderedSubstitudeEntries) {
                 this.renderedSubstitudeEntries = renderedSubstitudeEntries;
@@ -866,7 +875,7 @@ public class GetOnCallSchedulesDetailResponseBody extends TeaModel {
             }
 
             /**
-             * ScheduleLayers.
+             * The information about the shift.
              */
             public Builder scheduleLayers(java.util.List < ScheduleLayers> scheduleLayers) {
                 this.scheduleLayers = scheduleLayers;

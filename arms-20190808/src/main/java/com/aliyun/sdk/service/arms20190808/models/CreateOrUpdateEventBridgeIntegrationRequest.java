@@ -166,7 +166,7 @@ public class CreateOrUpdateEventBridgeIntegrationRequest extends Request {
         } 
 
         /**
-         * AccessKey.
+         * The AccessKey ID that is used to connect to EventBridge.
          */
         public Builder accessKey(String accessKey) {
             this.putBodyParameter("AccessKey", accessKey);
@@ -175,7 +175,7 @@ public class CreateOrUpdateEventBridgeIntegrationRequest extends Request {
         }
 
         /**
-         * AccessSecret.
+         * The AccessKey secret that is used to connect to EventBridge.
          */
         public Builder accessSecret(String accessSecret) {
             this.putBodyParameter("AccessSecret", accessSecret);
@@ -184,7 +184,7 @@ public class CreateOrUpdateEventBridgeIntegrationRequest extends Request {
         }
 
         /**
-         * Description.
+         * The description of the EventBridge integration.
          */
         public Builder description(String description) {
             this.putBodyParameter("Description", description);
@@ -193,7 +193,7 @@ public class CreateOrUpdateEventBridgeIntegrationRequest extends Request {
         }
 
         /**
-         * Endpoint.
+         * The public endpoint of EventBridge.
          */
         public Builder endpoint(String endpoint) {
             this.putBodyParameter("Endpoint", endpoint);
@@ -202,7 +202,7 @@ public class CreateOrUpdateEventBridgeIntegrationRequest extends Request {
         }
 
         /**
-         * EventBusName.
+         * The name of the event bus.
          */
         public Builder eventBusName(String eventBusName) {
             this.putBodyParameter("EventBusName", eventBusName);
@@ -211,7 +211,7 @@ public class CreateOrUpdateEventBridgeIntegrationRequest extends Request {
         }
 
         /**
-         * EventBusRegionId.
+         * The region ID of the event bus.
          */
         public Builder eventBusRegionId(String eventBusRegionId) {
             this.putBodyParameter("EventBusRegionId", eventBusRegionId);
@@ -220,7 +220,11 @@ public class CreateOrUpdateEventBridgeIntegrationRequest extends Request {
         }
 
         /**
-         * Id.
+         * The ID of the EventBridge integration.
+         * <p>
+         * 
+         * *   If you do not specify this parameter, an EventBridge integration is created.
+         * *   If you specify this parameter, the specified EventBridge integration is modified.
          */
         public Builder id(Long id) {
             this.putBodyParameter("Id", id);
@@ -229,7 +233,7 @@ public class CreateOrUpdateEventBridgeIntegrationRequest extends Request {
         }
 
         /**
-         * Name.
+         * The name of the EventBridge integration.
          */
         public Builder name(String name) {
             this.putBodyParameter("Name", name);
@@ -238,7 +242,7 @@ public class CreateOrUpdateEventBridgeIntegrationRequest extends Request {
         }
 
         /**
-         * Source.
+         * The event source.
          */
         public Builder source(String source) {
             this.putBodyParameter("Source", source);

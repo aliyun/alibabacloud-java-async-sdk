@@ -55,7 +55,7 @@ public class DeleteIntegrationsRequest extends Request {
         } 
 
         /**
-         * 集成ID
+         * IntegrationId.
          */
         public Builder integrationId(Long integrationId) {
             this.putQueryParameter("IntegrationId", integrationId);

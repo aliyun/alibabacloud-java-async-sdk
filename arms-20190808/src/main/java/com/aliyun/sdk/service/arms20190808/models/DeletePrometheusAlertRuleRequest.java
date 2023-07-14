@@ -17,9 +17,14 @@ public class DeletePrometheusAlertRuleRequest extends Request {
     @Validation(required = true)
     private Long alertId;
 
+    @Query
+    @NameInMap("ClusterId")
+    private String clusterId;
+
     private DeletePrometheusAlertRuleRequest(Builder builder) {
         super(builder);
         this.alertId = builder.alertId;
+        this.clusterId = builder.clusterId;
     }
 
     public static Builder builder() {
@@ -42,8 +47,16 @@ public class DeletePrometheusAlertRuleRequest extends Request {
         return this.alertId;
     }
 
+    /**
+     * @return clusterId
+     */
+    public String getClusterId() {
+        return this.clusterId;
+    }
+
     public static final class Builder extends Request.Builder<DeletePrometheusAlertRuleRequest, Builder> {
         private Long alertId; 
+        private String clusterId; 
 
         private Builder() {
             super();
@@ -52,14 +65,28 @@ public class DeletePrometheusAlertRuleRequest extends Request {
         private Builder(DeletePrometheusAlertRuleRequest request) {
             super(request);
             this.alertId = request.alertId;
+            this.clusterId = request.clusterId;
         } 
 
         /**
-         * AlertId.
+         * Indicates whether the alert rule was deleted. Valid values:
+         * <p>
+         * 
+         * *   `true`: The alert rule was deleted.
+         * *   `false`: The alert rule failed to be deleted.
          */
         public Builder alertId(Long alertId) {
             this.putQueryParameter("AlertId", alertId);
             this.alertId = alertId;
+            return this;
+        }
+
+        /**
+         * ClusterId.
+         */
+        public Builder clusterId(String clusterId) {
+            this.putQueryParameter("ClusterId", clusterId);
+            this.clusterId = clusterId;
             return this;
         }
 

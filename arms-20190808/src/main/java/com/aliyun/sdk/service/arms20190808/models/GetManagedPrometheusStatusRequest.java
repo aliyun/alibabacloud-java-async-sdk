@@ -14,15 +14,22 @@ import com.aliyun.sdk.gateway.pop.models.*;
 public class GetManagedPrometheusStatusRequest extends Request {
     @Query
     @NameInMap("ClusterId")
+    @Validation(required = true)
     private String clusterId;
 
     @Query
     @NameInMap("ClusterType")
+    @Validation(required = true)
     private String clusterType;
 
     @Query
     @NameInMap("RegionId")
+    @Validation(required = true)
     private String regionId;
+
+    @Query
+    @NameInMap("ResourceGroupId")
+    private String resourceGroupId;
 
     @Query
     @NameInMap("VpcId")
@@ -33,6 +40,7 @@ public class GetManagedPrometheusStatusRequest extends Request {
         this.clusterId = builder.clusterId;
         this.clusterType = builder.clusterType;
         this.regionId = builder.regionId;
+        this.resourceGroupId = builder.resourceGroupId;
         this.vpcId = builder.vpcId;
     }
 
@@ -71,6 +79,13 @@ public class GetManagedPrometheusStatusRequest extends Request {
     }
 
     /**
+     * @return resourceGroupId
+     */
+    public String getResourceGroupId() {
+        return this.resourceGroupId;
+    }
+
+    /**
      * @return vpcId
      */
     public String getVpcId() {
@@ -81,6 +96,7 @@ public class GetManagedPrometheusStatusRequest extends Request {
         private String clusterId; 
         private String clusterType; 
         private String regionId; 
+        private String resourceGroupId; 
         private String vpcId; 
 
         private Builder() {
@@ -92,11 +108,12 @@ public class GetManagedPrometheusStatusRequest extends Request {
             this.clusterId = request.clusterId;
             this.clusterType = request.clusterType;
             this.regionId = request.regionId;
+            this.resourceGroupId = request.resourceGroupId;
             this.vpcId = request.vpcId;
         } 
 
         /**
-         * ClusterType为“ask”时，必填。
+         * __null__
          */
         public Builder clusterId(String clusterId) {
             this.putQueryParameter("ClusterId", clusterId);
@@ -105,7 +122,7 @@ public class GetManagedPrometheusStatusRequest extends Request {
         }
 
         /**
-         * 可选值：ask、ecs
+         * ClusterType.
          */
         public Builder clusterType(String clusterType) {
             this.putQueryParameter("ClusterType", clusterType);
@@ -114,7 +131,7 @@ public class GetManagedPrometheusStatusRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * code!=200
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -123,7 +140,16 @@ public class GetManagedPrometheusStatusRequest extends Request {
         }
 
         /**
-         * ClusterType为“ecs”时，必填。
+         * ResourceGroupId.
+         */
+        public Builder resourceGroupId(String resourceGroupId) {
+            this.putQueryParameter("ResourceGroupId", resourceGroupId);
+            this.resourceGroupId = resourceGroupId;
+            return this;
+        }
+
+        /**
+         * VpcId.
          */
         public Builder vpcId(String vpcId) {
             this.putQueryParameter("VpcId", vpcId);

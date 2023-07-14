@@ -50,7 +50,7 @@ public class CreateOrUpdateContactGroupResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * AlertContactGroup.
+         * The information about the alert contact group.
          */
         public Builder alertContactGroup(AlertContactGroup alertContactGroup) {
             this.alertContactGroup = alertContactGroup;
@@ -58,7 +58,7 @@ public class CreateOrUpdateContactGroupResponseBody extends TeaModel {
         }
 
         /**
-         * Id of the request
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -122,7 +122,7 @@ public class CreateOrUpdateContactGroupResponseBody extends TeaModel {
             private String contactIds; 
 
             /**
-             * 告警联系人组ID
+             * The ID of the alert contact group.
              */
             public Builder contactGroupId(Float contactGroupId) {
                 this.contactGroupId = contactGroupId;
@@ -130,7 +130,7 @@ public class CreateOrUpdateContactGroupResponseBody extends TeaModel {
             }
 
             /**
-             * 告警联系人组名称
+             * The name of the alert contact group.
              */
             public Builder contactGroupName(String contactGroupName) {
                 this.contactGroupName = contactGroupName;
@@ -138,7 +138,7 @@ public class CreateOrUpdateContactGroupResponseBody extends TeaModel {
             }
 
             /**
-             * 告警联系人ids
+             * The IDs of the contacts that are included in the alert contact group.
              */
             public Builder contactIds(String contactIds) {
                 this.contactIds = contactIds;

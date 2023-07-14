@@ -121,7 +121,7 @@ public class InstallCmsExporterRequest extends Request {
         }
 
         /**
-         * 云监控接入方式支持的参数，多个产品名用#分隔
+         * CmsArgs.
          */
         public Builder cmsArgs(String cmsArgs) {
             this.putQueryParameter("CmsArgs", cmsArgs);
@@ -130,7 +130,7 @@ public class InstallCmsExporterRequest extends Request {
         }
 
         /**
-         * 一方接入方式支持的参数，多个产品名用#分隔
+         * DirectArgs.
          */
         public Builder directArgs(String directArgs) {
             this.putQueryParameter("DirectArgs", directArgs);

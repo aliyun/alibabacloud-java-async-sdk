@@ -182,7 +182,7 @@ public class CreateOrUpdateIMRobotRequest extends Request {
         } 
 
         /**
-         * 卡片模版配置信息
+         * The configurations of the alert card template. For more information about the parameters in the template, see the following section.
          */
         public Builder cardTemplate(String cardTemplate) {
             this.putBodyParameter("CardTemplate", cardTemplate);
@@ -191,7 +191,11 @@ public class CreateOrUpdateIMRobotRequest extends Request {
         }
 
         /**
-         * 是否发送每日统计信息
+         * Specifies whether to send daily statistics. Valid values:
+         * <p>
+         * 
+         * *   `false` (default): Daily statistics are not sent.
+         * *   `true`: Daily statistics are sent. If you set the value to `true`, the **DailyNocTime** parameter is required.
          */
         public Builder dailyNoc(Boolean dailyNoc) {
             this.putBodyParameter("DailyNoc", dailyNoc);
@@ -200,7 +204,7 @@ public class CreateOrUpdateIMRobotRequest extends Request {
         }
 
         /**
-         * 每日统计发送时间
+         * The points in time at which the daily statistics are sent. Separate multiple points in time with commas (,). The points in time are in the HH:SS format. The information that ARMS sends at the specified points in time includes the total number of alerts generated on the current day, the number of cleared alerts, and the number of alerts to be cleared.
          */
         public Builder dailyNocTime(String dailyNocTime) {
             this.putBodyParameter("DailyNocTime", dailyNocTime);
@@ -209,7 +213,7 @@ public class CreateOrUpdateIMRobotRequest extends Request {
         }
 
         /**
-         * DingSignKey.
+         * The signature key of DingTalk. If you specify a signature key, DingTalk authentication is performed by using the signature key. If you do not specify a signature key, a whitelist is used for authentication by default. The keyword of the whitelist is **Alert**.
          */
         public Builder dingSignKey(String dingSignKey) {
             this.putBodyParameter("DingSignKey", dingSignKey);
@@ -218,7 +222,7 @@ public class CreateOrUpdateIMRobotRequest extends Request {
         }
 
         /**
-         * EnableOutgoing.
+         * Specifies whether to enable the Outgoing feature.
          */
         public Builder enableOutgoing(Boolean enableOutgoing) {
             this.putBodyParameter("EnableOutgoing", enableOutgoing);
@@ -227,7 +231,7 @@ public class CreateOrUpdateIMRobotRequest extends Request {
         }
 
         /**
-         * 告警机器人地址
+         * The webhook URL of the IM chatbot.
          */
         public Builder robotAddress(String robotAddress) {
             this.putBodyParameter("RobotAddress", robotAddress);
@@ -236,7 +240,11 @@ public class CreateOrUpdateIMRobotRequest extends Request {
         }
 
         /**
-         * 告警机器人ID
+         * The ID of the IM chatbot.
+         * <p>
+         * 
+         * - If you do not specify the parameter, a new IM chatbot is created.
+         * - If you specify this parameter, the specified IM chatbot is modified.
          */
         public Builder robotId(Long robotId) {
             this.putBodyParameter("RobotId", robotId);
@@ -245,7 +253,7 @@ public class CreateOrUpdateIMRobotRequest extends Request {
         }
 
         /**
-         * 告警机器人名称
+         * The name of the IM chatbot.
          */
         public Builder robotName(String robotName) {
             this.putBodyParameter("RobotName", robotName);
@@ -254,7 +262,7 @@ public class CreateOrUpdateIMRobotRequest extends Request {
         }
 
         /**
-         * Token.
+         * The token required to enable the Outgoing feature.
          */
         public Builder token(String token) {
             this.putBodyParameter("Token", token);
@@ -263,7 +271,11 @@ public class CreateOrUpdateIMRobotRequest extends Request {
         }
 
         /**
-         * 告警机器人类型:dingding/wechat
+         * The type of the IM chatbot. Valid values:
+         * <p>
+         * 
+         * *   `dingding`: DingTalk chatbot
+         * *   `wechat`: WeCom chatbot
          */
         public Builder type(String type) {
             this.putBodyParameter("Type", type);

@@ -50,7 +50,7 @@ public class ListDashboardsResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * DashboardVos.
+         * The information about the Grafana dashboard.
          */
         public Builder dashboardVos(java.util.List < DashboardVos> dashboardVos) {
             this.dashboardVos = dashboardVos;
@@ -58,7 +58,7 @@ public class ListDashboardsResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -290,7 +290,7 @@ public class ListDashboardsResponseBody extends TeaModel {
             private String version; 
 
             /**
-             * DashboardType.
+             * The type of the Grafana dashboard. This parameter has the same effect as the Exporter parameter whereas provides clearer implication.
              */
             public Builder dashboardType(String dashboardType) {
                 this.dashboardType = dashboardType;
@@ -298,7 +298,25 @@ public class ListDashboardsResponseBody extends TeaModel {
             }
 
             /**
-             * Exporter.
+             * The type of the exporter access source. Valid values:
+             * <p>
+             * 
+             * *   Prometheus
+             * *   Node
+             * *   GPU
+             * *   Redis
+             * *   MySQL
+             * *   Kafka
+             * *   NGINX V2
+             * *   Nginx
+             * *   ZooKeeper
+             * *   MongoDB
+             * *   RabbitMQ
+             * *   PostgreSQL
+             * *   Kubernetes
+             * *   Client Library
+             * *   Elasticsearch
+             * *   RocketMQ
              */
             public Builder exporter(String exporter) {
                 this.exporter = exporter;
@@ -306,7 +324,7 @@ public class ListDashboardsResponseBody extends TeaModel {
             }
 
             /**
-             * HttpUrl.
+             * The URL of the Grafana dashboard.
              */
             public Builder httpUrl(String httpUrl) {
                 this.httpUrl = httpUrl;
@@ -314,7 +332,7 @@ public class ListDashboardsResponseBody extends TeaModel {
             }
 
             /**
-             * HttpsUrl.
+             * The URL of the Grafana dashboard.
              */
             public Builder httpsUrl(String httpsUrl) {
                 this.httpsUrl = httpsUrl;
@@ -322,7 +340,7 @@ public class ListDashboardsResponseBody extends TeaModel {
             }
 
             /**
-             * Id.
+             * The ID of the Grafana dashboard. The value is unique only when you install the Grafana dashboard.
              */
             public Builder id(String id) {
                 this.id = id;
@@ -330,7 +348,11 @@ public class ListDashboardsResponseBody extends TeaModel {
             }
 
             /**
-             * IsArmsExporter.
+             * Indicates whether the exporter was provided by ARMS. Valid values:
+             * <p>
+             * 
+             * *   `true`: The exporter is provided by ARMS.
+             * *   `false`: The exporter is not provided by ARMS.
              */
             public Builder isArmsExporter(Boolean isArmsExporter) {
                 this.isArmsExporter = isArmsExporter;
@@ -338,7 +360,7 @@ public class ListDashboardsResponseBody extends TeaModel {
             }
 
             /**
-             * Kind.
+             * The category of the Grafana dashboard. Valid values: BASIC, THIRD, LIMIT, and CUSTOM.
              */
             public Builder kind(String kind) {
                 this.kind = kind;
@@ -346,7 +368,7 @@ public class ListDashboardsResponseBody extends TeaModel {
             }
 
             /**
-             * Language.
+             * The language of the Grafana dashboard.
              */
             public Builder language(String language) {
                 this.language = language;
@@ -354,7 +376,7 @@ public class ListDashboardsResponseBody extends TeaModel {
             }
 
             /**
-             * Name.
+             * The name of the Grafana dashboard. This parameter is different from the **Title** parameter as this parameter cannot be changed.
              */
             public Builder name(String name) {
                 this.name = name;
@@ -362,7 +384,7 @@ public class ListDashboardsResponseBody extends TeaModel {
             }
 
             /**
-             * NeedUpdate.
+             * Indicates whether the Grafana dashboard has a new version that was available for upgrade.
              */
             public Builder needUpdate(Boolean needUpdate) {
                 this.needUpdate = needUpdate;
@@ -370,7 +392,7 @@ public class ListDashboardsResponseBody extends TeaModel {
             }
 
             /**
-             * Tags.
+             * The tags of the Grafana dashboard.
              */
             public Builder tags(java.util.List < String > tags) {
                 this.tags = tags;
@@ -378,7 +400,7 @@ public class ListDashboardsResponseBody extends TeaModel {
             }
 
             /**
-             * Time.
+             * The timestamp when the Grafana dashboard was created.
              */
             public Builder time(String time) {
                 this.time = time;
@@ -386,7 +408,7 @@ public class ListDashboardsResponseBody extends TeaModel {
             }
 
             /**
-             * Title.
+             * The title of the Grafana dashboard.
              */
             public Builder title(String title) {
                 this.title = title;
@@ -394,7 +416,11 @@ public class ListDashboardsResponseBody extends TeaModel {
             }
 
             /**
-             * Type.
+             * The type of the Grafana dashboard. Valid values:
+             * <p>
+             * 
+             * *   `dash-db`: a dashboard
+             * *   `dash-folder`: a folder that can include a dashboard
              */
             public Builder type(String type) {
                 this.type = type;
@@ -402,7 +428,7 @@ public class ListDashboardsResponseBody extends TeaModel {
             }
 
             /**
-             * Uid.
+             * The unique identifier of a dashboard when multiple Grafana dashboards were installed. It is a unique business ID displayed on the page.
              */
             public Builder uid(String uid) {
                 this.uid = uid;
@@ -410,7 +436,7 @@ public class ListDashboardsResponseBody extends TeaModel {
             }
 
             /**
-             * Url.
+             * The complete URL of the Grafana dashboard.
              */
             public Builder url(String url) {
                 this.url = url;
@@ -418,7 +444,7 @@ public class ListDashboardsResponseBody extends TeaModel {
             }
 
             /**
-             * Version.
+             * The version of the Grafana dashboard. The combination of version and name uniquely identifies a dashboard.
              */
             public Builder version(String version) {
                 this.version = version;
@@ -663,7 +689,7 @@ public class ListDashboardsResponseBody extends TeaModel {
             private String version; 
 
             /**
-             * DashboardType.
+             * The type of the Grafana dashboard. This parameter has the same effect as the Exporter parameter whereas provides clearer implication.
              */
             public Builder dashboardType(String dashboardType) {
                 this.dashboardType = dashboardType;
@@ -671,7 +697,25 @@ public class ListDashboardsResponseBody extends TeaModel {
             }
 
             /**
-             * Exporter.
+             * The type of the exporter access source. Valid values:
+             * <p>
+             * 
+             * *   Prometheus
+             * *   Node
+             * *   GPU
+             * *   Redis
+             * *   MySQL
+             * *   Kafka
+             * *   NGINX V2
+             * *   Nginx
+             * *   ZooKeeper
+             * *   MongoDB
+             * *   RabbitMQ
+             * *   PostgreSQL
+             * *   Kubernetes
+             * *   Client Library
+             * *   Elasticsearch
+             * *   RocketMQ
              */
             public Builder exporter(String exporter) {
                 this.exporter = exporter;
@@ -679,7 +723,7 @@ public class ListDashboardsResponseBody extends TeaModel {
             }
 
             /**
-             * HttpUrl.
+             * The URL of the Grafana dashboard.
              */
             public Builder httpUrl(String httpUrl) {
                 this.httpUrl = httpUrl;
@@ -687,7 +731,7 @@ public class ListDashboardsResponseBody extends TeaModel {
             }
 
             /**
-             * HttpsUrl.
+             * The URL of the Grafana dashboard.
              */
             public Builder httpsUrl(String httpsUrl) {
                 this.httpsUrl = httpsUrl;
@@ -695,7 +739,7 @@ public class ListDashboardsResponseBody extends TeaModel {
             }
 
             /**
-             * I18nChild.
+             * The information about the Grafana dashboards.
              */
             public Builder i18nChild(I18nChild i18nChild) {
                 this.i18nChild = i18nChild;
@@ -703,7 +747,7 @@ public class ListDashboardsResponseBody extends TeaModel {
             }
 
             /**
-             * Id.
+             * The ID of the Grafana dashboard. The value is unique only when you install the Grafana dashboard.
              */
             public Builder id(String id) {
                 this.id = id;
@@ -711,7 +755,11 @@ public class ListDashboardsResponseBody extends TeaModel {
             }
 
             /**
-             * IsArmsExporter.
+             * Indicates whether the exporter was provided by ARMS. Valid values:
+             * <p>
+             * 
+             * *   `true`: The exporter is provided by ARMS.
+             * *   `false`: The exporter is not provided by ARMS.
              */
             public Builder isArmsExporter(Boolean isArmsExporter) {
                 this.isArmsExporter = isArmsExporter;
@@ -719,7 +767,7 @@ public class ListDashboardsResponseBody extends TeaModel {
             }
 
             /**
-             * Kind.
+             * The type of the dashboard. Valid values: BASIC, THIRD, LIMIT, and CUSTOM. BASIC indicates a basic dashboard. THIRD indicates a third-party dashboard. LIMIT indicates a time-limited free dashboard. CUSTOM indicates a custom dashboard.
              */
             public Builder kind(String kind) {
                 this.kind = kind;
@@ -727,7 +775,7 @@ public class ListDashboardsResponseBody extends TeaModel {
             }
 
             /**
-             * Language.
+             * The language of the Grafana dashboard.
              */
             public Builder language(String language) {
                 this.language = language;
@@ -735,7 +783,7 @@ public class ListDashboardsResponseBody extends TeaModel {
             }
 
             /**
-             * Name.
+             * The name of the Grafana dashboard. This parameter is different from the **Title** parameter as this parameter cannot be changed.
              */
             public Builder name(String name) {
                 this.name = name;
@@ -743,7 +791,7 @@ public class ListDashboardsResponseBody extends TeaModel {
             }
 
             /**
-             * NeedUpdate.
+             * Indicates whether the Grafana dashboard has a new version that was available for upgrade.
              */
             public Builder needUpdate(Boolean needUpdate) {
                 this.needUpdate = needUpdate;
@@ -751,7 +799,7 @@ public class ListDashboardsResponseBody extends TeaModel {
             }
 
             /**
-             * Tags.
+             * The tags of the Grafana dashboard.
              */
             public Builder tags(java.util.List < String > tags) {
                 this.tags = tags;
@@ -759,7 +807,7 @@ public class ListDashboardsResponseBody extends TeaModel {
             }
 
             /**
-             * Time.
+             * The timestamp generated when the Grafana dashboard was created. Unit: seconds
              */
             public Builder time(String time) {
                 this.time = time;
@@ -767,7 +815,7 @@ public class ListDashboardsResponseBody extends TeaModel {
             }
 
             /**
-             * Title.
+             * The title of the Grafana dashboard.
              */
             public Builder title(String title) {
                 this.title = title;
@@ -775,7 +823,11 @@ public class ListDashboardsResponseBody extends TeaModel {
             }
 
             /**
-             * Type.
+             * The type of the Grafana dashboard. Valid values:
+             * <p>
+             * 
+             * *   `dash-db`: a dashboard
+             * *   `dash-folder`: a folder that can include a dashboard
              */
             public Builder type(String type) {
                 this.type = type;
@@ -783,7 +835,7 @@ public class ListDashboardsResponseBody extends TeaModel {
             }
 
             /**
-             * Uid.
+             * The unique identifier of a dashboard when multiple Grafana dashboards were installed. It is a unique business ID displayed on the page.
              */
             public Builder uid(String uid) {
                 this.uid = uid;
@@ -791,7 +843,7 @@ public class ListDashboardsResponseBody extends TeaModel {
             }
 
             /**
-             * Url.
+             * The complete URL of the Grafana dashboard.
              */
             public Builder url(String url) {
                 this.url = url;
@@ -799,7 +851,7 @@ public class ListDashboardsResponseBody extends TeaModel {
             }
 
             /**
-             * Version.
+             * The version of the Grafana dashboard. The combination of version and name uniquely identifies a dashboard.
              */
             public Builder version(String version) {
                 this.version = version;

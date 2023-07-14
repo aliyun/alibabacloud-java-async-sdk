@@ -50,7 +50,7 @@ public class ListScenarioResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * ArmsScenarios.
+         * The detailed information of the business monitoring job.
          */
         public Builder armsScenarios(java.util.List < ArmsScenarios> armsScenarios) {
             this.armsScenarios = armsScenarios;
@@ -58,7 +58,7 @@ public class ListScenarioResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -194,7 +194,7 @@ public class ListScenarioResponseBody extends TeaModel {
             private String userId; 
 
             /**
-             * AppId.
+             * The ID of the application.
              */
             public Builder appId(String appId) {
                 this.appId = appId;
@@ -202,7 +202,7 @@ public class ListScenarioResponseBody extends TeaModel {
             }
 
             /**
-             * CreateTime.
+             * The time when the business monitoring job was created.
              */
             public Builder createTime(String createTime) {
                 this.createTime = createTime;
@@ -210,7 +210,7 @@ public class ListScenarioResponseBody extends TeaModel {
             }
 
             /**
-             * Extensions.
+             * The extended information. The value is a JSON string.
              */
             public Builder extensions(String extensions) {
                 this.extensions = extensions;
@@ -218,7 +218,7 @@ public class ListScenarioResponseBody extends TeaModel {
             }
 
             /**
-             * Id.
+             * The ID of the business monitoring job.
              */
             public Builder id(Long id) {
                 this.id = id;
@@ -226,7 +226,7 @@ public class ListScenarioResponseBody extends TeaModel {
             }
 
             /**
-             * Name.
+             * The name of the business monitoring job.
              */
             public Builder name(String name) {
                 this.name = name;
@@ -234,7 +234,7 @@ public class ListScenarioResponseBody extends TeaModel {
             }
 
             /**
-             * RegionId.
+             * The ID of the region.
              */
             public Builder regionId(String regionId) {
                 this.regionId = regionId;
@@ -242,7 +242,7 @@ public class ListScenarioResponseBody extends TeaModel {
             }
 
             /**
-             * Sign.
+             * The code of the business monitoring job.
              */
             public Builder sign(String sign) {
                 this.sign = sign;
@@ -250,7 +250,7 @@ public class ListScenarioResponseBody extends TeaModel {
             }
 
             /**
-             * UpdateTime.
+             * The time when the business monitoring job was updated.
              */
             public Builder updateTime(String updateTime) {
                 this.updateTime = updateTime;
@@ -258,7 +258,7 @@ public class ListScenarioResponseBody extends TeaModel {
             }
 
             /**
-             * UserId.
+             * The ID of the user.
              */
             public Builder userId(String userId) {
                 this.userId = userId;

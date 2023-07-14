@@ -50,7 +50,11 @@ public class SendTTSVerifyLinkResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * IsSuccess.
+         * Indicates whether the text message was sent.
+         * <p>
+         * 
+         * *   `true`
+         * *   `false`
          */
         public Builder isSuccess(Boolean isSuccess) {
             this.isSuccess = isSuccess;
@@ -58,7 +62,7 @@ public class SendTTSVerifyLinkResponseBody extends TeaModel {
         }
 
         /**
-         * Id of the request
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

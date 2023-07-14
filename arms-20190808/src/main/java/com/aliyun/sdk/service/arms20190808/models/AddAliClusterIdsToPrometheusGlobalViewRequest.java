@@ -100,7 +100,7 @@ public class AddAliClusterIdsToPrometheusGlobalViewRequest extends Request {
         } 
 
         /**
-         * ClusterIds.
+         * The IDs of clusters. Separate multiple IDs with commas (,).
          */
         public Builder clusterIds(String clusterIds) {
             this.putQueryParameter("ClusterIds", clusterIds);
@@ -109,7 +109,7 @@ public class AddAliClusterIdsToPrometheusGlobalViewRequest extends Request {
         }
 
         /**
-         * GlobalViewClusterId.
+         * The ID of the global aggregation instance.
          */
         public Builder globalViewClusterId(String globalViewClusterId) {
             this.putQueryParameter("GlobalViewClusterId", globalViewClusterId);
@@ -118,7 +118,7 @@ public class AddAliClusterIdsToPrometheusGlobalViewRequest extends Request {
         }
 
         /**
-         * GroupName.
+         * The name of the global aggregation instance.
          */
         public Builder groupName(String groupName) {
             this.putQueryParameter("GroupName", groupName);
@@ -127,7 +127,7 @@ public class AddAliClusterIdsToPrometheusGlobalViewRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * The region ID.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);

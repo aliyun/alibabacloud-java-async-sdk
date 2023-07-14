@@ -17,9 +17,14 @@ public class DescribePrometheusAlertRuleRequest extends Request {
     @Validation(required = true)
     private Long alertId;
 
+    @Query
+    @NameInMap("ClusterId")
+    private String clusterId;
+
     private DescribePrometheusAlertRuleRequest(Builder builder) {
         super(builder);
         this.alertId = builder.alertId;
+        this.clusterId = builder.clusterId;
     }
 
     public static Builder builder() {
@@ -42,8 +47,16 @@ public class DescribePrometheusAlertRuleRequest extends Request {
         return this.alertId;
     }
 
+    /**
+     * @return clusterId
+     */
+    public String getClusterId() {
+        return this.clusterId;
+    }
+
     public static final class Builder extends Request.Builder<DescribePrometheusAlertRuleRequest, Builder> {
         private Long alertId; 
+        private String clusterId; 
 
         private Builder() {
             super();
@@ -52,6 +65,7 @@ public class DescribePrometheusAlertRuleRequest extends Request {
         private Builder(DescribePrometheusAlertRuleRequest request) {
             super(request);
             this.alertId = request.alertId;
+            this.clusterId = request.clusterId;
         } 
 
         /**
@@ -60,6 +74,15 @@ public class DescribePrometheusAlertRuleRequest extends Request {
         public Builder alertId(Long alertId) {
             this.putQueryParameter("AlertId", alertId);
             this.alertId = alertId;
+            return this;
+        }
+
+        /**
+         * ClusterId.
+         */
+        public Builder clusterId(String clusterId) {
+            this.putQueryParameter("ClusterId", clusterId);
+            this.clusterId = clusterId;
             return this;
         }
 

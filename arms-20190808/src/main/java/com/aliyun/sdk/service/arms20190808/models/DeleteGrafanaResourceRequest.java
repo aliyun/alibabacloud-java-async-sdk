@@ -85,7 +85,7 @@ public class DeleteGrafanaResourceRequest extends Request {
         } 
 
         /**
-         * ClusterId.
+         * The instance ID.
          */
         public Builder clusterId(String clusterId) {
             this.putBodyParameter("ClusterId", clusterId);
@@ -94,7 +94,7 @@ public class DeleteGrafanaResourceRequest extends Request {
         }
 
         /**
-         * ClusterName.
+         * The instance name.
          */
         public Builder clusterName(String clusterName) {
             this.putBodyParameter("ClusterName", clusterName);
@@ -103,7 +103,7 @@ public class DeleteGrafanaResourceRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * The region ID.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);

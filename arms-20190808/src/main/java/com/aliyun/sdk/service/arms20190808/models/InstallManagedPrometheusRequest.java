@@ -22,6 +22,7 @@ public class InstallManagedPrometheusRequest extends Request {
 
     @Query
     @NameInMap("ClusterType")
+    @Validation(required = true)
     private String clusterType;
 
     @Query
@@ -37,15 +38,22 @@ public class InstallManagedPrometheusRequest extends Request {
     private String regionId;
 
     @Query
+    @NameInMap("ResourceGroupId")
+    private String resourceGroupId;
+
+    @Query
     @NameInMap("SecurityGroupId")
+    @Validation(required = true)
     private String securityGroupId;
 
     @Query
     @NameInMap("VSwitchId")
+    @Validation(required = true)
     private String vSwitchId;
 
     @Query
     @NameInMap("VpcId")
+    @Validation(required = true)
     private String vpcId;
 
     private InstallManagedPrometheusRequest(Builder builder) {
@@ -56,6 +64,7 @@ public class InstallManagedPrometheusRequest extends Request {
         this.grafanaInstanceId = builder.grafanaInstanceId;
         this.kubeConfig = builder.kubeConfig;
         this.regionId = builder.regionId;
+        this.resourceGroupId = builder.resourceGroupId;
         this.securityGroupId = builder.securityGroupId;
         this.vSwitchId = builder.vSwitchId;
         this.vpcId = builder.vpcId;
@@ -117,6 +126,13 @@ public class InstallManagedPrometheusRequest extends Request {
     }
 
     /**
+     * @return resourceGroupId
+     */
+    public String getResourceGroupId() {
+        return this.resourceGroupId;
+    }
+
+    /**
      * @return securityGroupId
      */
     public String getSecurityGroupId() {
@@ -144,6 +160,7 @@ public class InstallManagedPrometheusRequest extends Request {
         private String grafanaInstanceId; 
         private String kubeConfig; 
         private String regionId; 
+        private String resourceGroupId; 
         private String securityGroupId; 
         private String vSwitchId; 
         private String vpcId; 
@@ -160,13 +177,14 @@ public class InstallManagedPrometheusRequest extends Request {
             this.grafanaInstanceId = request.grafanaInstanceId;
             this.kubeConfig = request.kubeConfig;
             this.regionId = request.regionId;
+            this.resourceGroupId = request.resourceGroupId;
             this.securityGroupId = request.securityGroupId;
             this.vSwitchId = request.vSwitchId;
             this.vpcId = request.vpcId;
         } 
 
         /**
-         * ClusterId.
+         * The response object.
          */
         public Builder clusterId(String clusterId) {
             this.putQueryParameter("ClusterId", clusterId);
@@ -175,7 +193,7 @@ public class InstallManagedPrometheusRequest extends Request {
         }
 
         /**
-         * 仅ClusterType为“ecs”时生效：ecs实例的名称
+         * The request ID.
          */
         public Builder clusterName(String clusterName) {
             this.putQueryParameter("ClusterName", clusterName);
@@ -184,7 +202,7 @@ public class InstallManagedPrometheusRequest extends Request {
         }
 
         /**
-         * 可选值：ask、ecs
+         * The response content. In most cases, the installation status of the Prometheus agent is returned.
          */
         public Builder clusterType(String clusterType) {
             this.putQueryParameter("ClusterType", clusterType);
@@ -193,7 +211,7 @@ public class InstallManagedPrometheusRequest extends Request {
         }
 
         /**
-         * 绑定托管版Grafana工作区Id。为空或“free”时，表示绑定到“共享版Grafana”。
+         * success=false
          */
         public Builder grafanaInstanceId(String grafanaInstanceId) {
             this.putQueryParameter("GrafanaInstanceId", grafanaInstanceId);
@@ -202,7 +220,7 @@ public class InstallManagedPrometheusRequest extends Request {
         }
 
         /**
-         * KubeConfig.
+         * __null__
          */
         public Builder kubeConfig(String kubeConfig) {
             this.putQueryParameter("KubeConfig", kubeConfig);
@@ -211,7 +229,7 @@ public class InstallManagedPrometheusRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * The parameter is not supported.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -220,7 +238,16 @@ public class InstallManagedPrometheusRequest extends Request {
         }
 
         /**
-         * SecurityGroupId.
+         * Prometheus实例的资源组ID。
+         */
+        public Builder resourceGroupId(String resourceGroupId) {
+            this.putQueryParameter("ResourceGroupId", resourceGroupId);
+            this.resourceGroupId = resourceGroupId;
+            return this;
+        }
+
+        /**
+         * The status code. The status code 200 indicates that the request was successful. If another status code is returned, the request failed.
          */
         public Builder securityGroupId(String securityGroupId) {
             this.putQueryParameter("SecurityGroupId", securityGroupId);
@@ -229,7 +256,7 @@ public class InstallManagedPrometheusRequest extends Request {
         }
 
         /**
-         * VSwitchId.
+         * The error message returned if the Prometheus agent failed to be installed.
          */
         public Builder vSwitchId(String vSwitchId) {
             this.putQueryParameter("VSwitchId", vSwitchId);
@@ -238,7 +265,7 @@ public class InstallManagedPrometheusRequest extends Request {
         }
 
         /**
-         * VpcId.
+         * Indicates whether the Prometheus agent was installed.
          */
         public Builder vpcId(String vpcId) {
             this.putQueryParameter("VpcId", vpcId);

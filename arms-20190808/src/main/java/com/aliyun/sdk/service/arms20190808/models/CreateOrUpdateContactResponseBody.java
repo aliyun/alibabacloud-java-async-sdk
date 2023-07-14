@@ -50,7 +50,7 @@ public class CreateOrUpdateContactResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * AlertContact.
+         * The object of the alert contact.
          */
         public Builder alertContact(AlertContact alertContact) {
             this.alertContact = alertContact;
@@ -58,7 +58,7 @@ public class CreateOrUpdateContactResponseBody extends TeaModel {
         }
 
         /**
-         * Id of the request
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -78,6 +78,9 @@ public class CreateOrUpdateContactResponseBody extends TeaModel {
         @NameInMap("ContactName")
         private String contactName;
 
+        @NameInMap("DingRobotUrl")
+        private String dingRobotUrl;
+
         @NameInMap("Email")
         private String email;
 
@@ -96,6 +99,7 @@ public class CreateOrUpdateContactResponseBody extends TeaModel {
         private AlertContact(Builder builder) {
             this.contactId = builder.contactId;
             this.contactName = builder.contactName;
+            this.dingRobotUrl = builder.dingRobotUrl;
             this.email = builder.email;
             this.isVerify = builder.isVerify;
             this.phone = builder.phone;
@@ -123,6 +127,13 @@ public class CreateOrUpdateContactResponseBody extends TeaModel {
          */
         public String getContactName() {
             return this.contactName;
+        }
+
+        /**
+         * @return dingRobotUrl
+         */
+        public String getDingRobotUrl() {
+            return this.dingRobotUrl;
         }
 
         /**
@@ -163,6 +174,7 @@ public class CreateOrUpdateContactResponseBody extends TeaModel {
         public static final class Builder {
             private Float contactId; 
             private String contactName; 
+            private String dingRobotUrl; 
             private String email; 
             private Boolean isVerify; 
             private String phone; 
@@ -170,7 +182,7 @@ public class CreateOrUpdateContactResponseBody extends TeaModel {
             private Boolean isEmailVerify; 
 
             /**
-             * 告警联系人ID
+             * The ID of the alert contact.
              */
             public Builder contactId(Float contactId) {
                 this.contactId = contactId;
@@ -178,7 +190,7 @@ public class CreateOrUpdateContactResponseBody extends TeaModel {
             }
 
             /**
-             * 告警联系人名称
+             * The name of the alert contact.
              */
             public Builder contactName(String contactName) {
                 this.contactName = contactName;
@@ -186,7 +198,15 @@ public class CreateOrUpdateContactResponseBody extends TeaModel {
             }
 
             /**
-             * 告警联系人邮箱
+             * The webhook URL of the DingTalk chatbot.
+             */
+            public Builder dingRobotUrl(String dingRobotUrl) {
+                this.dingRobotUrl = dingRobotUrl;
+                return this;
+            }
+
+            /**
+             * The email address of the alert contact.
              */
             public Builder email(String email) {
                 this.email = email;
@@ -194,7 +214,13 @@ public class CreateOrUpdateContactResponseBody extends TeaModel {
             }
 
             /**
-             * 手机号码验证标识
+             * Indicates whether the mobile number was verified. Valid values:
+             * <p>
+             * 
+             * *   `false` (default value): No
+             * *   `true`: Yes
+             * 
+             * You can call the **SendTTSVerifyLink** operation to verify the mobile number of an alert contact. Only verified mobile numbers can be specified in a notification policy to receive phone calls.
              */
             public Builder isVerify(Boolean isVerify) {
                 this.isVerify = isVerify;
@@ -202,7 +228,7 @@ public class CreateOrUpdateContactResponseBody extends TeaModel {
             }
 
             /**
-             * 告警联系人手机号
+             * The mobile number of the alert contact.
              */
             public Builder phone(String phone) {
                 this.phone = phone;
@@ -210,7 +236,7 @@ public class CreateOrUpdateContactResponseBody extends TeaModel {
             }
 
             /**
-             * 电话通知失败补发类型：0. 不补发   1. 重复拨打一次电话   2. 发送短信通知   3. 使用全局默认值（当前为不补发）
+             * The operation that you want to perform if phone calls fail to be answered. Valid values: 0: No operation is performed. 1: A phone call is made again. 2: A text message is sent. 3 (default value): The global default value is used.
              */
             public Builder reissueSendNotice(Long reissueSendNotice) {
                 this.reissueSendNotice = reissueSendNotice;
@@ -218,7 +244,7 @@ public class CreateOrUpdateContactResponseBody extends TeaModel {
             }
 
             /**
-             * isEmailVerify.
+             * Indicates whether the email address was verified.
              */
             public Builder isEmailVerify(Boolean isEmailVerify) {
                 this.isEmailVerify = isEmailVerify;

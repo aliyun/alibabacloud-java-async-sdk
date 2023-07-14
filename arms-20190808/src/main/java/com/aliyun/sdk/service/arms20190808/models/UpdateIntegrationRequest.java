@@ -13,11 +13,6 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class UpdateIntegrationRequest extends Request {
     @Body
-    @NameInMap("ApiEndpoint")
-    @Validation(required = true)
-    private String apiEndpoint;
-
-    @Body
     @NameInMap("AutoRecover")
     private Boolean autoRecover;
 
@@ -69,11 +64,6 @@ public class UpdateIntegrationRequest extends Request {
     private Long recoverTime;
 
     @Body
-    @NameInMap("ShortToken")
-    @Validation(required = true)
-    private String shortToken;
-
-    @Body
     @NameInMap("Stat")
     private String stat;
 
@@ -83,7 +73,6 @@ public class UpdateIntegrationRequest extends Request {
 
     private UpdateIntegrationRequest(Builder builder) {
         super(builder);
-        this.apiEndpoint = builder.apiEndpoint;
         this.autoRecover = builder.autoRecover;
         this.description = builder.description;
         this.duplicateKey = builder.duplicateKey;
@@ -96,7 +85,6 @@ public class UpdateIntegrationRequest extends Request {
         this.integrationProductType = builder.integrationProductType;
         this.liveness = builder.liveness;
         this.recoverTime = builder.recoverTime;
-        this.shortToken = builder.shortToken;
         this.stat = builder.stat;
         this.state = builder.state;
     }
@@ -112,13 +100,6 @@ public class UpdateIntegrationRequest extends Request {
     @Override
     public Builder toBuilder() {
         return new Builder(this);
-    }
-
-    /**
-     * @return apiEndpoint
-     */
-    public String getApiEndpoint() {
-        return this.apiEndpoint;
     }
 
     /**
@@ -206,13 +187,6 @@ public class UpdateIntegrationRequest extends Request {
     }
 
     /**
-     * @return shortToken
-     */
-    public String getShortToken() {
-        return this.shortToken;
-    }
-
-    /**
      * @return stat
      */
     public String getStat() {
@@ -227,7 +201,6 @@ public class UpdateIntegrationRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<UpdateIntegrationRequest, Builder> {
-        private String apiEndpoint; 
         private Boolean autoRecover; 
         private String description; 
         private String duplicateKey; 
@@ -240,7 +213,6 @@ public class UpdateIntegrationRequest extends Request {
         private String integrationProductType; 
         private String liveness; 
         private Long recoverTime; 
-        private String shortToken; 
         private String stat; 
         private Boolean state; 
 
@@ -250,7 +222,6 @@ public class UpdateIntegrationRequest extends Request {
 
         private Builder(UpdateIntegrationRequest request) {
             super(request);
-            this.apiEndpoint = request.apiEndpoint;
             this.autoRecover = request.autoRecover;
             this.description = request.description;
             this.duplicateKey = request.duplicateKey;
@@ -263,22 +234,16 @@ public class UpdateIntegrationRequest extends Request {
             this.integrationProductType = request.integrationProductType;
             this.liveness = request.liveness;
             this.recoverTime = request.recoverTime;
-            this.shortToken = request.shortToken;
             this.stat = request.stat;
             this.state = request.state;
         } 
 
         /**
-         * ApiEndpoint.
-         */
-        public Builder apiEndpoint(String apiEndpoint) {
-            this.putBodyParameter("ApiEndpoint", apiEndpoint);
-            this.apiEndpoint = apiEndpoint;
-            return this;
-        }
-
-        /**
-         * AutoRecover.
+         * Specifies whether to automatically clear alert events. Valid values:
+         * <p>
+         * 
+         * *   true (default)
+         * *   false
          */
         public Builder autoRecover(Boolean autoRecover) {
             this.putBodyParameter("AutoRecover", autoRecover);
@@ -287,7 +252,7 @@ public class UpdateIntegrationRequest extends Request {
         }
 
         /**
-         * Description.
+         * The description of the alert integration.
          */
         public Builder description(String description) {
             this.putBodyParameter("Description", description);
@@ -296,7 +261,7 @@ public class UpdateIntegrationRequest extends Request {
         }
 
         /**
-         * DuplicateKey.
+         * The fields whose values are deduplicated.
          */
         public Builder duplicateKey(String duplicateKey) {
             this.putBodyParameter("DuplicateKey", duplicateKey);
@@ -305,7 +270,7 @@ public class UpdateIntegrationRequest extends Request {
         }
 
         /**
-         * ExtendedFieldRedefineRules.
+         * The extended mapped fields are mapped to the fields of ARMS alerts. For more information, see the description of the ExtendedFieldRedefineRules parameter.
          */
         public Builder extendedFieldRedefineRules(String extendedFieldRedefineRules) {
             this.putBodyParameter("ExtendedFieldRedefineRules", extendedFieldRedefineRules);
@@ -314,7 +279,7 @@ public class UpdateIntegrationRequest extends Request {
         }
 
         /**
-         * FieldRedefineRules.
+         * The predefined mapped fields are mapped to the fields of ARMS alerts. The predefined mapped fields were generated when the alert integration was created. For more information, see the description of the FieldRedefineRules parameter.
          */
         public Builder fieldRedefineRules(String fieldRedefineRules) {
             this.putBodyParameter("FieldRedefineRules", fieldRedefineRules);
@@ -323,7 +288,10 @@ public class UpdateIntegrationRequest extends Request {
         }
 
         /**
-         * InitiativeRecoverField.
+         * The field for clearing alert events. The system queries alert events based on the field of alert clearing events and clears the alert events.
+         * <p>
+         * 
+         * > Only the Log Service alert integration supports the parameter.
          */
         public Builder initiativeRecoverField(String initiativeRecoverField) {
             this.putBodyParameter("InitiativeRecoverField", initiativeRecoverField);
@@ -332,7 +300,10 @@ public class UpdateIntegrationRequest extends Request {
         }
 
         /**
-         * InitiativeRecoverValue.
+         * The value of the field for clearing alert events. The system queries alert events based on the field of alert clearing events and clears the alert events.
+         * <p>
+         * 
+         * > Only the Log Service alert integration supports the parameter.
          */
         public Builder initiativeRecoverValue(String initiativeRecoverValue) {
             this.putBodyParameter("InitiativeRecoverValue", initiativeRecoverValue);
@@ -341,7 +312,7 @@ public class UpdateIntegrationRequest extends Request {
         }
 
         /**
-         * IntegrationId.
+         * The ID of the alert integration.
          */
         public Builder integrationId(Long integrationId) {
             this.putBodyParameter("IntegrationId", integrationId);
@@ -350,7 +321,7 @@ public class UpdateIntegrationRequest extends Request {
         }
 
         /**
-         * IntegrationName.
+         * The name of the alert integration.
          */
         public Builder integrationName(String integrationName) {
             this.putBodyParameter("IntegrationName", integrationName);
@@ -359,7 +330,11 @@ public class UpdateIntegrationRequest extends Request {
         }
 
         /**
-         * IntegrationProductType.
+         * The service of the alert integration. Valid values:
+         * <p>
+         * 
+         * *   CLOUD_MONITOR: CloudMonitor
+         * *   LOG_SERVICE: Log Service
          */
         public Builder integrationProductType(String integrationProductType) {
             this.putBodyParameter("IntegrationProductType", integrationProductType);
@@ -368,7 +343,7 @@ public class UpdateIntegrationRequest extends Request {
         }
 
         /**
-         * Liveness.
+         * The activity of the alert integration
          */
         public Builder liveness(String liveness) {
             this.putBodyParameter("Liveness", liveness);
@@ -377,7 +352,7 @@ public class UpdateIntegrationRequest extends Request {
         }
 
         /**
-         * RecoverTime.
+         * The period of time within which alert events are automatically cleared. Unit: seconds. Default value: 300.
          */
         public Builder recoverTime(Long recoverTime) {
             this.putBodyParameter("RecoverTime", recoverTime);
@@ -386,16 +361,7 @@ public class UpdateIntegrationRequest extends Request {
         }
 
         /**
-         * ShortToken.
-         */
-        public Builder shortToken(String shortToken) {
-            this.putBodyParameter("ShortToken", shortToken);
-            this.shortToken = shortToken;
-            return this;
-        }
-
-        /**
-         * Stat.
+         * The total number of alert events and the number of abnormal alert events in the last hour.
          */
         public Builder stat(String stat) {
             this.putBodyParameter("Stat", stat);
@@ -404,7 +370,11 @@ public class UpdateIntegrationRequest extends Request {
         }
 
         /**
-         * State.
+         * Indicates whether the alert integration was enabled. Valid values:
+         * <p>
+         * 
+         * *   true
+         * *   false
          */
         public Builder state(Boolean state) {
             this.putBodyParameter("State", state);

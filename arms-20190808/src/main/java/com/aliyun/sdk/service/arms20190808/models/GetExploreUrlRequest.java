@@ -98,7 +98,7 @@ public class GetExploreUrlRequest extends Request {
         } 
 
         /**
-         * ClusterId.
+         * The cluster ID.
          */
         public Builder clusterId(String clusterId) {
             this.putQueryParameter("ClusterId", clusterId);
@@ -107,7 +107,7 @@ public class GetExploreUrlRequest extends Request {
         }
 
         /**
-         * Expression.
+         * The query statement that corresponds to the data source.
          */
         public Builder expression(String expression) {
             this.putQueryParameter("Expression", expression);
@@ -116,7 +116,7 @@ public class GetExploreUrlRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * The region ID.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -125,7 +125,7 @@ public class GetExploreUrlRequest extends Request {
         }
 
         /**
-         * Type.
+         * The type of the Grafana data source.
          */
         public Builder type(String type) {
             this.putQueryParameter("Type", type);

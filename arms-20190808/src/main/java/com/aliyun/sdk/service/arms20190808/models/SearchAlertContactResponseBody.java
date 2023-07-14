@@ -93,6 +93,9 @@ public class SearchAlertContactResponseBody extends TeaModel {
         @NameInMap("Phone")
         private String phone;
 
+        @NameInMap("ResourceGroupId")
+        private String resourceGroupId;
+
         @NameInMap("SystemNoc")
         private Boolean systemNoc;
 
@@ -113,6 +116,7 @@ public class SearchAlertContactResponseBody extends TeaModel {
             this.dingRobot = builder.dingRobot;
             this.email = builder.email;
             this.phone = builder.phone;
+            this.resourceGroupId = builder.resourceGroupId;
             this.systemNoc = builder.systemNoc;
             this.updateTime = builder.updateTime;
             this.userId = builder.userId;
@@ -177,6 +181,13 @@ public class SearchAlertContactResponseBody extends TeaModel {
         }
 
         /**
+         * @return resourceGroupId
+         */
+        public String getResourceGroupId() {
+            return this.resourceGroupId;
+        }
+
+        /**
          * @return systemNoc
          */
         public Boolean getSystemNoc() {
@@ -212,6 +223,7 @@ public class SearchAlertContactResponseBody extends TeaModel {
             private String dingRobot; 
             private String email; 
             private String phone; 
+            private String resourceGroupId; 
             private Boolean systemNoc; 
             private Long updateTime; 
             private String userId; 
@@ -270,6 +282,14 @@ public class SearchAlertContactResponseBody extends TeaModel {
              */
             public Builder phone(String phone) {
                 this.phone = phone;
+                return this;
+            }
+
+            /**
+             * ResourceGroupId.
+             */
+            public Builder resourceGroupId(String resourceGroupId) {
+                this.resourceGroupId = resourceGroupId;
                 return this;
             }
 

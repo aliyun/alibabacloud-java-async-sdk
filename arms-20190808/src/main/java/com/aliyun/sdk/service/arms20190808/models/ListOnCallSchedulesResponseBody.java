@@ -50,7 +50,7 @@ public class ListOnCallSchedulesResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * 分页对象
+         * The objects that were returned.
          */
         public Builder pageBean(PageBean pageBean) {
             this.pageBean = pageBean;
@@ -58,7 +58,7 @@ public class ListOnCallSchedulesResponseBody extends TeaModel {
         }
 
         /**
-         * Id of the request
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -122,7 +122,7 @@ public class ListOnCallSchedulesResponseBody extends TeaModel {
             private String name; 
 
             /**
-             * 排班策略描述
+             * The description of the scheduling policy.
              */
             public Builder description(String description) {
                 this.description = description;
@@ -130,7 +130,7 @@ public class ListOnCallSchedulesResponseBody extends TeaModel {
             }
 
             /**
-             * 排班策略ID
+             * The ID of the scheduling policy.
              */
             public Builder id(Long id) {
                 this.id = id;
@@ -138,7 +138,7 @@ public class ListOnCallSchedulesResponseBody extends TeaModel {
             }
 
             /**
-             * 排班策略名称
+             * The name of the scheduling policy.
              */
             public Builder name(String name) {
                 this.name = name;
@@ -215,7 +215,7 @@ public class ListOnCallSchedulesResponseBody extends TeaModel {
             private Long total; 
 
             /**
-             * OnCallSchedules.
+             * The information about the scheduling policy.
              */
             public Builder onCallSchedules(java.util.List < OnCallSchedules> onCallSchedules) {
                 this.onCallSchedules = onCallSchedules;
@@ -223,7 +223,7 @@ public class ListOnCallSchedulesResponseBody extends TeaModel {
             }
 
             /**
-             * 页数
+             * The page number of the returned page.
              */
             public Builder page(Long page) {
                 this.page = page;
@@ -231,7 +231,7 @@ public class ListOnCallSchedulesResponseBody extends TeaModel {
             }
 
             /**
-             * 每页展示数目
+             * The number of entries returned per page.
              */
             public Builder size(Long size) {
                 this.size = size;
@@ -239,7 +239,7 @@ public class ListOnCallSchedulesResponseBody extends TeaModel {
             }
 
             /**
-             * 总数
+             * The total number of returned entries.
              */
             public Builder total(Long total) {
                 this.total = total;

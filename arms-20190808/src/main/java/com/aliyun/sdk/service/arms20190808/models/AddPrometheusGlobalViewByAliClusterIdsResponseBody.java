@@ -12,14 +12,22 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>AddPrometheusGlobalViewByAliClusterIdsResponseBody</p>
  */
 public class AddPrometheusGlobalViewByAliClusterIdsResponseBody extends TeaModel {
+    @NameInMap("Code")
+    private Integer code;
+
     @NameInMap("Data")
     private Data data;
+
+    @NameInMap("Message")
+    private String message;
 
     @NameInMap("RequestId")
     private String requestId;
 
     private AddPrometheusGlobalViewByAliClusterIdsResponseBody(Builder builder) {
+        this.code = builder.code;
         this.data = builder.data;
+        this.message = builder.message;
         this.requestId = builder.requestId;
     }
 
@@ -32,10 +40,24 @@ public class AddPrometheusGlobalViewByAliClusterIdsResponseBody extends TeaModel
     }
 
     /**
+     * @return code
+     */
+    public Integer getCode() {
+        return this.code;
+    }
+
+    /**
      * @return data
      */
     public Data getData() {
         return this.data;
+    }
+
+    /**
+     * @return message
+     */
+    public String getMessage() {
+        return this.message;
     }
 
     /**
@@ -46,14 +68,32 @@ public class AddPrometheusGlobalViewByAliClusterIdsResponseBody extends TeaModel
     }
 
     public static final class Builder {
+        private Integer code; 
         private Data data; 
+        private String message; 
         private String requestId; 
+
+        /**
+         * Code.
+         */
+        public Builder code(Integer code) {
+            this.code = code;
+            return this;
+        }
 
         /**
          * Data.
          */
         public Builder data(Data data) {
             this.data = data;
+            return this;
+        }
+
+        /**
+         * Message.
+         */
+        public Builder message(String message) {
+            this.message = message;
             return this;
         }
 

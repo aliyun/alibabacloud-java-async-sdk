@@ -50,7 +50,7 @@ public class SearchTraceAppByPageResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * PageBean.
+         * The information about the array object.
          */
         public Builder pageBean(PageBean pageBean) {
             this.pageBean = pageBean;
@@ -58,7 +58,7 @@ public class SearchTraceAppByPageResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -71,6 +71,67 @@ public class SearchTraceAppByPageResponseBody extends TeaModel {
 
     } 
 
+    public static class Tags extends TeaModel {
+        @NameInMap("Key")
+        private String key;
+
+        @NameInMap("Value")
+        private String value;
+
+        private Tags(Builder builder) {
+            this.key = builder.key;
+            this.value = builder.value;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static Tags create() {
+            return builder().build();
+        }
+
+        /**
+         * @return key
+         */
+        public String getKey() {
+            return this.key;
+        }
+
+        /**
+         * @return value
+         */
+        public String getValue() {
+            return this.value;
+        }
+
+        public static final class Builder {
+            private String key; 
+            private String value; 
+
+            /**
+             * The tag key.
+             */
+            public Builder key(String key) {
+                this.key = key;
+                return this;
+            }
+
+            /**
+             * The tag value.
+             */
+            public Builder value(String value) {
+                this.value = value;
+                return this;
+            }
+
+            public Tags build() {
+                return new Tags(this);
+            } 
+
+        } 
+
+    }
     public static class TraceApps extends TeaModel {
         @NameInMap("AppId")
         private Long appId;
@@ -90,8 +151,14 @@ public class SearchTraceAppByPageResponseBody extends TeaModel {
         @NameInMap("RegionId")
         private String regionId;
 
+        @NameInMap("ResourceGroupId")
+        private String resourceGroupId;
+
         @NameInMap("Show")
         private Boolean show;
+
+        @NameInMap("Tags")
+        private java.util.List < Tags> tags;
 
         @NameInMap("Type")
         private String type;
@@ -109,7 +176,9 @@ public class SearchTraceAppByPageResponseBody extends TeaModel {
             this.labels = builder.labels;
             this.pid = builder.pid;
             this.regionId = builder.regionId;
+            this.resourceGroupId = builder.resourceGroupId;
             this.show = builder.show;
+            this.tags = builder.tags;
             this.type = builder.type;
             this.updateTime = builder.updateTime;
             this.userId = builder.userId;
@@ -166,10 +235,24 @@ public class SearchTraceAppByPageResponseBody extends TeaModel {
         }
 
         /**
+         * @return resourceGroupId
+         */
+        public String getResourceGroupId() {
+            return this.resourceGroupId;
+        }
+
+        /**
          * @return show
          */
         public Boolean getShow() {
             return this.show;
+        }
+
+        /**
+         * @return tags
+         */
+        public java.util.List < Tags> getTags() {
+            return this.tags;
         }
 
         /**
@@ -200,13 +283,15 @@ public class SearchTraceAppByPageResponseBody extends TeaModel {
             private java.util.List < String > labels; 
             private String pid; 
             private String regionId; 
+            private String resourceGroupId; 
             private Boolean show; 
+            private java.util.List < Tags> tags; 
             private String type; 
             private Long updateTime; 
             private String userId; 
 
             /**
-             * AppId.
+             * The application ID.
              */
             public Builder appId(Long appId) {
                 this.appId = appId;
@@ -214,7 +299,7 @@ public class SearchTraceAppByPageResponseBody extends TeaModel {
             }
 
             /**
-             * AppName.
+             * The name of the application.
              */
             public Builder appName(String appName) {
                 this.appName = appName;
@@ -222,7 +307,7 @@ public class SearchTraceAppByPageResponseBody extends TeaModel {
             }
 
             /**
-             * CreateTime.
+             * The timestamp generated when the task was created.
              */
             public Builder createTime(Long createTime) {
                 this.createTime = createTime;
@@ -230,7 +315,7 @@ public class SearchTraceAppByPageResponseBody extends TeaModel {
             }
 
             /**
-             * Labels.
+             * The aliases of the application.
              */
             public Builder labels(java.util.List < String > labels) {
                 this.labels = labels;
@@ -238,7 +323,7 @@ public class SearchTraceAppByPageResponseBody extends TeaModel {
             }
 
             /**
-             * Pid.
+             * The process identifier (PID) of the application.
              */
             public Builder pid(String pid) {
                 this.pid = pid;
@@ -246,7 +331,7 @@ public class SearchTraceAppByPageResponseBody extends TeaModel {
             }
 
             /**
-             * RegionId.
+             * The region ID.
              */
             public Builder regionId(String regionId) {
                 this.regionId = regionId;
@@ -254,7 +339,19 @@ public class SearchTraceAppByPageResponseBody extends TeaModel {
             }
 
             /**
-             * Show.
+             * The resource group ID.
+             */
+            public Builder resourceGroupId(String resourceGroupId) {
+                this.resourceGroupId = resourceGroupId;
+                return this;
+            }
+
+            /**
+             * Indicates whether the application is displayed in the Application Real-Time Monitoring Service (ARMS) console. Valid values:
+             * <p>
+             * 
+             * *   `true`: yes
+             * *   `false`: no
              */
             public Builder show(Boolean show) {
                 this.show = show;
@@ -262,7 +359,19 @@ public class SearchTraceAppByPageResponseBody extends TeaModel {
             }
 
             /**
-             * Type.
+             * A list of tags.
+             */
+            public Builder tags(java.util.List < Tags> tags) {
+                this.tags = tags;
+                return this;
+            }
+
+            /**
+             * The type of the monitoring task. Valid values:
+             * <p>
+             * 
+             * *   `TRACE`: Application Monitoring
+             * *   `RETCODE`: Browser Monitoring
              */
             public Builder type(String type) {
                 this.type = type;
@@ -270,7 +379,7 @@ public class SearchTraceAppByPageResponseBody extends TeaModel {
             }
 
             /**
-             * UpdateTime.
+             * The timestamp generated when the task information was updated.
              */
             public Builder updateTime(Long updateTime) {
                 this.updateTime = updateTime;
@@ -278,7 +387,7 @@ public class SearchTraceAppByPageResponseBody extends TeaModel {
             }
 
             /**
-             * UserId.
+             * The user ID.
              */
             public Builder userId(String userId) {
                 this.userId = userId;
@@ -355,7 +464,7 @@ public class SearchTraceAppByPageResponseBody extends TeaModel {
             private java.util.List < TraceApps> traceApps; 
 
             /**
-             * PageNumber.
+             * The page number of the returned page.
              */
             public Builder pageNumber(Integer pageNumber) {
                 this.pageNumber = pageNumber;
@@ -363,7 +472,7 @@ public class SearchTraceAppByPageResponseBody extends TeaModel {
             }
 
             /**
-             * PageSize.
+             * The number of entries returned per page.
              */
             public Builder pageSize(Integer pageSize) {
                 this.pageSize = pageSize;
@@ -371,7 +480,7 @@ public class SearchTraceAppByPageResponseBody extends TeaModel {
             }
 
             /**
-             * TotalCount.
+             * The total number of entries returned.
              */
             public Builder totalCount(Integer totalCount) {
                 this.totalCount = totalCount;
@@ -379,7 +488,7 @@ public class SearchTraceAppByPageResponseBody extends TeaModel {
             }
 
             /**
-             * TraceApps.
+             * The information about the monitoring task.
              */
             public Builder traceApps(java.util.List < TraceApps> traceApps) {
                 this.traceApps = traceApps;

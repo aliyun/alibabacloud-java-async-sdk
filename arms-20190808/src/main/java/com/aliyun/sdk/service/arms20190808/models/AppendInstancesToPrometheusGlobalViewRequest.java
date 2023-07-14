@@ -100,7 +100,7 @@ public class AppendInstancesToPrometheusGlobalViewRequest extends Request {
         } 
 
         /**
-         * Clusters.
+         * The list of global aggregation instances. The value is a JSON string.
          */
         public Builder clusters(String clusters) {
             this.putQueryParameter("Clusters", clusters);
@@ -109,7 +109,7 @@ public class AppendInstancesToPrometheusGlobalViewRequest extends Request {
         }
 
         /**
-         * GlobalViewClusterId.
+         * The ID of the global aggregation instance.
          */
         public Builder globalViewClusterId(String globalViewClusterId) {
             this.putQueryParameter("GlobalViewClusterId", globalViewClusterId);
@@ -118,7 +118,7 @@ public class AppendInstancesToPrometheusGlobalViewRequest extends Request {
         }
 
         /**
-         * GroupName.
+         * The name of the global aggregation instance.
          */
         public Builder groupName(String groupName) {
             this.putQueryParameter("GroupName", groupName);
@@ -127,7 +127,7 @@ public class AppendInstancesToPrometheusGlobalViewRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * The region ID.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);

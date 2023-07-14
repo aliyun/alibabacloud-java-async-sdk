@@ -50,7 +50,11 @@ public class CheckServiceStatusResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * Data.
+         * Indicates whether the request was successful. Valid values:
+         * <p>
+         * 
+         * *   true
+         * *   false
          */
         public Builder data(String data) {
             this.data = data;
@@ -58,7 +62,7 @@ public class CheckServiceStatusResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The request ID. You can use the ID to query logs and troubleshoot issues.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

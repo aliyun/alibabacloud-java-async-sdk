@@ -50,7 +50,7 @@ public class GetSyntheticTaskDetailResponseBody extends TeaModel {
         private TaskDetail taskDetail; 
 
         /**
-         * Id of the request
+         * 请求ID。
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -58,7 +58,7 @@ public class GetSyntheticTaskDetailResponseBody extends TeaModel {
         }
 
         /**
-         * TaskDetail.
+         * 任务详情。
          */
         public Builder taskDetail(TaskDetail taskDetail) {
             this.taskDetail = taskDetail;
@@ -693,7 +693,17 @@ public class GetSyntheticTaskDetailResponseBody extends TeaModel {
             private String startTime; 
 
             /**
-             * Days.
+             * 拨测执行周期。
+             * <p>
+             * 
+             * - -1：每天
+             * - 0：周日
+             * - 1：周一
+             * - 2：周二
+             * - 3：周三
+             * - 4：周四
+             * - 5：周五
+             * - 6：周六
              */
             public Builder days(java.util.List < Long > days) {
                 this.days = days;
@@ -701,7 +711,7 @@ public class GetSyntheticTaskDetailResponseBody extends TeaModel {
             }
 
             /**
-             * EndMinute.
+             * 当天结束分钟数。
              */
             public Builder endMinute(Long endMinute) {
                 this.endMinute = endMinute;
@@ -717,7 +727,7 @@ public class GetSyntheticTaskDetailResponseBody extends TeaModel {
             }
 
             /**
-             * Endhour.
+             * 当天结束小时数。
              */
             public Builder endhour(Long endhour) {
                 this.endhour = endhour;
@@ -725,7 +735,7 @@ public class GetSyntheticTaskDetailResponseBody extends TeaModel {
             }
 
             /**
-             * StartHour.
+             * 当天开始拨测时间的小时数。
              */
             public Builder startHour(Long startHour) {
                 this.startHour = startHour;
@@ -733,7 +743,7 @@ public class GetSyntheticTaskDetailResponseBody extends TeaModel {
             }
 
             /**
-             * StartMinute.
+             * 当天开始拨测时间的分钟数。
              */
             public Builder startMinute(Long startMinute) {
                 this.startMinute = startMinute;
@@ -818,7 +828,7 @@ public class GetSyntheticTaskDetailResponseBody extends TeaModel {
             private Long sendCount; 
 
             /**
-             * CityCode.
+             * 城市编码。
              */
             public Builder cityCode(Long cityCode) {
                 this.cityCode = cityCode;
@@ -2587,7 +2597,7 @@ public class GetSyntheticTaskDetailResponseBody extends TeaModel {
             }
 
             /**
-             * Download.
+             * 文件下载任务。
              */
             public Builder download(Download download) {
                 this.download = download;
@@ -2595,7 +2605,7 @@ public class GetSyntheticTaskDetailResponseBody extends TeaModel {
             }
 
             /**
-             * ExtendInterval.
+             * 自定义扩展频率。
              */
             public Builder extendInterval(ExtendInterval extendInterval) {
                 this.extendInterval = extendInterval;
@@ -2603,7 +2613,23 @@ public class GetSyntheticTaskDetailResponseBody extends TeaModel {
             }
 
             /**
-             * IntervalTime.
+             * 拨测频率，单位为分钟。可选频率如下：
+             * <p>
+             * 
+             * - 1
+             * - 5
+             * - 10
+             * - 15
+             * - 20
+             * - 30
+             * - 60
+             * - 120
+             * - 180
+             * - 240
+             * - 360
+             * - 480
+             * - 720
+             * - 1440
              */
             public Builder intervalTime(Long intervalTime) {
                 this.intervalTime = intervalTime;
@@ -2667,7 +2693,7 @@ public class GetSyntheticTaskDetailResponseBody extends TeaModel {
             }
 
             /**
-             * TaskId.
+             * 云拨测任务ID。
              */
             public Builder taskId(Long taskId) {
                 this.taskId = taskId;
@@ -2675,7 +2701,7 @@ public class GetSyntheticTaskDetailResponseBody extends TeaModel {
             }
 
             /**
-             * TaskName.
+             * 任务名称。
              */
             public Builder taskName(String taskName) {
                 this.taskName = taskName;
@@ -2691,7 +2717,7 @@ public class GetSyntheticTaskDetailResponseBody extends TeaModel {
             }
 
             /**
-             * Url.
+             * 拨测地址。
              */
             public Builder url(String url) {
                 this.url = url;

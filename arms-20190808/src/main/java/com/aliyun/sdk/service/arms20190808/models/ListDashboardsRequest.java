@@ -152,7 +152,7 @@ public class ListDashboardsRequest extends Request {
         } 
 
         /**
-         * ClusterId.
+         * The ID of the ACK cluster.
          */
         public Builder clusterId(String clusterId) {
             this.putQueryParameter("ClusterId", clusterId);
@@ -161,7 +161,7 @@ public class ListDashboardsRequest extends Request {
         }
 
         /**
-         * ClusterType.
+         * Valid values: ACK, ASK, cloud-product-prometheus, and Node. You can query the dashboards of a virtual cluster by specifying the cluster type. For InfluxDB, set this parameter to `cloud-product-prometheus`.
          */
         public Builder clusterType(String clusterType) {
             this.putQueryParameter("ClusterType", clusterType);
@@ -170,7 +170,7 @@ public class ListDashboardsRequest extends Request {
         }
 
         /**
-         * DashboardName.
+         * The unique names of the dashboards. You can query dashboards by specifying their names. The **dashboard title** can be changed whereas the **dashboard name** cannot. You can specify multiple names and separate them with commas (,), for example, `k8s-event,k8s-overview`. A dashboard may have multiple versions. If you want to specify a version, you can add version information after the name, for example, `k8s-event:v1,k8s-overview:latest`.
          */
         public Builder dashboardName(String dashboardName) {
             this.putQueryParameter("DashboardName", dashboardName);
@@ -179,7 +179,7 @@ public class ListDashboardsRequest extends Request {
         }
 
         /**
-         * Language.
+         * The language of the returned Grafana dashboard. Valid values: en and zh. Default value: en.
          */
         public Builder language(String language) {
             this.putQueryParameter("Language", language);
@@ -188,7 +188,7 @@ public class ListDashboardsRequest extends Request {
         }
 
         /**
-         * Product.
+         * The cloud service code. This parameter is required if you set the ClusterType parameter to `cloud-product-prometheus`. The following cloud services are available: Serverless App Engine, Microservices Engine, Message Queue for Apache RocketMQ, Lindorm, Message Queue for Apache Kafka, ApsaraDB for ClickHouse, Data Lake Analytics, Message Queue for RabbitMQ, ApsaraDB for MongoDB, Time Series Database (TSDB) for InfluxDB, MSE Cloud-native Gateway, Grafana Service, SchedulerX, Global Transaction Service, Enterprise Distributed Application Service, Machine Learning Platform for AI - Elastic Algorithm Service (EAS), Application High Availability Service, and Performance Testing.
          */
         public Builder product(String product) {
             this.putQueryParameter("Product", product);
@@ -197,7 +197,7 @@ public class ListDashboardsRequest extends Request {
         }
 
         /**
-         * RecreateSwitch.
+         * Specifies whether to create or query a virtual cluster. This parameter provides backward compatibility.
          */
         public Builder recreateSwitch(Boolean recreateSwitch) {
             this.putQueryParameter("RecreateSwitch", recreateSwitch);
@@ -206,7 +206,7 @@ public class ListDashboardsRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * The region ID.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -215,7 +215,7 @@ public class ListDashboardsRequest extends Request {
         }
 
         /**
-         * Title.
+         * The dashboard title. The dashboard title can be changed. We recommend that you specify the **DashboardName** parameter.
          */
         public Builder title(String title) {
             this.putQueryParameter("Title", title);

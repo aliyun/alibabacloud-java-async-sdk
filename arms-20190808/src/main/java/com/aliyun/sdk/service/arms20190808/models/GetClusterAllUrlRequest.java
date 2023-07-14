@@ -70,7 +70,7 @@ public class GetClusterAllUrlRequest extends Request {
         } 
 
         /**
-         * ClusterId.
+         * The cluster ID.
          */
         public Builder clusterId(String clusterId) {
             this.putQueryParameter("ClusterId", clusterId);
@@ -79,7 +79,7 @@ public class GetClusterAllUrlRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * The region ID. Default value: cn-hangzhou.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);

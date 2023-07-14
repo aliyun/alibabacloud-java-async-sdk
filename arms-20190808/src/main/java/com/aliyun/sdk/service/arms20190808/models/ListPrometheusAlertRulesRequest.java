@@ -35,6 +35,10 @@ public class ListPrometheusAlertRulesRequest extends Request {
     private Integer status;
 
     @Query
+    @NameInMap("Tags")
+    private java.util.List < Tags> tags;
+
+    @Query
     @NameInMap("Type")
     private String type;
 
@@ -45,6 +49,7 @@ public class ListPrometheusAlertRulesRequest extends Request {
         this.name = builder.name;
         this.regionId = builder.regionId;
         this.status = builder.status;
+        this.tags = builder.tags;
         this.type = builder.type;
     }
 
@@ -97,6 +102,13 @@ public class ListPrometheusAlertRulesRequest extends Request {
     }
 
     /**
+     * @return tags
+     */
+    public java.util.List < Tags> getTags() {
+        return this.tags;
+    }
+
+    /**
      * @return type
      */
     public String getType() {
@@ -109,6 +121,7 @@ public class ListPrometheusAlertRulesRequest extends Request {
         private String name; 
         private String regionId; 
         private Integer status; 
+        private java.util.List < Tags> tags; 
         private String type; 
 
         private Builder() {
@@ -122,6 +135,7 @@ public class ListPrometheusAlertRulesRequest extends Request {
             this.name = request.name;
             this.regionId = request.regionId;
             this.status = request.status;
+            this.tags = request.tags;
             this.type = request.type;
         } 
 
@@ -171,6 +185,15 @@ public class ListPrometheusAlertRulesRequest extends Request {
         }
 
         /**
+         * Tags.
+         */
+        public Builder tags(java.util.List < Tags> tags) {
+            this.putQueryParameter("Tags", tags);
+            this.tags = tags;
+            return this;
+        }
+
+        /**
          * Type.
          */
         public Builder type(String type) {
@@ -186,4 +209,65 @@ public class ListPrometheusAlertRulesRequest extends Request {
 
     } 
 
+    public static class Tags extends TeaModel {
+        @NameInMap("Key")
+        private String key;
+
+        @NameInMap("Value")
+        private String value;
+
+        private Tags(Builder builder) {
+            this.key = builder.key;
+            this.value = builder.value;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static Tags create() {
+            return builder().build();
+        }
+
+        /**
+         * @return key
+         */
+        public String getKey() {
+            return this.key;
+        }
+
+        /**
+         * @return value
+         */
+        public String getValue() {
+            return this.value;
+        }
+
+        public static final class Builder {
+            private String key; 
+            private String value; 
+
+            /**
+             * Key.
+             */
+            public Builder key(String key) {
+                this.key = key;
+                return this;
+            }
+
+            /**
+             * Value.
+             */
+            public Builder value(String value) {
+                this.value = value;
+                return this;
+            }
+
+            public Tags build() {
+                return new Tags(this);
+            } 
+
+        } 
+
+    }
 }

@@ -26,6 +26,14 @@ public class SearchTraceAppByPageRequest extends Request {
     private String regionId;
 
     @Query
+    @NameInMap("ResourceGroupId")
+    private String resourceGroupId;
+
+    @Query
+    @NameInMap("Tags")
+    private java.util.List < Tags> tags;
+
+    @Query
     @NameInMap("TraceAppName")
     private String traceAppName;
 
@@ -34,6 +42,8 @@ public class SearchTraceAppByPageRequest extends Request {
         this.pageNumber = builder.pageNumber;
         this.pageSize = builder.pageSize;
         this.regionId = builder.regionId;
+        this.resourceGroupId = builder.resourceGroupId;
+        this.tags = builder.tags;
         this.traceAppName = builder.traceAppName;
     }
 
@@ -72,6 +82,20 @@ public class SearchTraceAppByPageRequest extends Request {
     }
 
     /**
+     * @return resourceGroupId
+     */
+    public String getResourceGroupId() {
+        return this.resourceGroupId;
+    }
+
+    /**
+     * @return tags
+     */
+    public java.util.List < Tags> getTags() {
+        return this.tags;
+    }
+
+    /**
      * @return traceAppName
      */
     public String getTraceAppName() {
@@ -82,6 +106,8 @@ public class SearchTraceAppByPageRequest extends Request {
         private Integer pageNumber; 
         private Integer pageSize; 
         private String regionId; 
+        private String resourceGroupId; 
+        private java.util.List < Tags> tags; 
         private String traceAppName; 
 
         private Builder() {
@@ -93,11 +119,13 @@ public class SearchTraceAppByPageRequest extends Request {
             this.pageNumber = request.pageNumber;
             this.pageSize = request.pageSize;
             this.regionId = request.regionId;
+            this.resourceGroupId = request.resourceGroupId;
+            this.tags = request.tags;
             this.traceAppName = request.traceAppName;
         } 
 
         /**
-         * PageNumber.
+         * The number of the page to return. Default value: `1`.
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -106,7 +134,7 @@ public class SearchTraceAppByPageRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * The number of entries to return on each page. Default value: `10`.
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -115,7 +143,7 @@ public class SearchTraceAppByPageRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * The region ID.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -124,7 +152,25 @@ public class SearchTraceAppByPageRequest extends Request {
         }
 
         /**
-         * TraceAppName.
+         * The resource group ID.
+         */
+        public Builder resourceGroupId(String resourceGroupId) {
+            this.putQueryParameter("ResourceGroupId", resourceGroupId);
+            this.resourceGroupId = resourceGroupId;
+            return this;
+        }
+
+        /**
+         * A list of tags.
+         */
+        public Builder tags(java.util.List < Tags> tags) {
+            this.putQueryParameter("Tags", tags);
+            this.tags = tags;
+            return this;
+        }
+
+        /**
+         * The name of the application.
          */
         public Builder traceAppName(String traceAppName) {
             this.putQueryParameter("TraceAppName", traceAppName);
@@ -139,4 +185,65 @@ public class SearchTraceAppByPageRequest extends Request {
 
     } 
 
+    public static class Tags extends TeaModel {
+        @NameInMap("Key")
+        private String key;
+
+        @NameInMap("Value")
+        private String value;
+
+        private Tags(Builder builder) {
+            this.key = builder.key;
+            this.value = builder.value;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static Tags create() {
+            return builder().build();
+        }
+
+        /**
+         * @return key
+         */
+        public String getKey() {
+            return this.key;
+        }
+
+        /**
+         * @return value
+         */
+        public String getValue() {
+            return this.value;
+        }
+
+        public static final class Builder {
+            private String key; 
+            private String value; 
+
+            /**
+             * The tag key.
+             */
+            public Builder key(String key) {
+                this.key = key;
+                return this;
+            }
+
+            /**
+             * The tag value.
+             */
+            public Builder value(String value) {
+                this.value = value;
+                return this;
+            }
+
+            public Tags build() {
+                return new Tags(this);
+            } 
+
+        } 
+
+    }
 }

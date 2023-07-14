@@ -97,7 +97,11 @@ public class CreateOrUpdateSilencePolicyRequest extends Request {
         } 
 
         /**
-         * 静默策略ID
+         * The ID of the silence policy.
+         * <p>
+         * 
+         * *   If you do not configure this parameter, a new silence policy is created.
+         * *   If you configure this parameter, the specified silence policy is modified.
          */
         public Builder id(Long id) {
             this.putBodyParameter("Id", id);
@@ -106,7 +110,20 @@ public class CreateOrUpdateSilencePolicyRequest extends Request {
         }
 
         /**
-         * 分派规则
+         * The matching rules. The following code shows the format of matching rules:
+         * <p>
+         * 
+         *     [
+         *          {
+         *     	 "matchingConditions": [
+         *     	 {
+         *     	 "value": "test", // The value of the matching condition. 
+         *     	 "key": "altertname", // The key of the matching condition. 
+         *     	 "operator": "eq" // The logical operator of the matching condition, including eq (equal to), neq (not equal to), in (contains), nin (does not contain), re (regular expression match), and nre (regular expression mismatch).   
+         *     	 }
+         *     	 ]
+         *          }
+         *     	 ]
          */
         public Builder matchingRules(String matchingRules) {
             this.putBodyParameter("MatchingRules", matchingRules);
@@ -115,7 +132,7 @@ public class CreateOrUpdateSilencePolicyRequest extends Request {
         }
 
         /**
-         * 静默策略名称
+         * The name of the silence policy.
          */
         public Builder name(String name) {
             this.putBodyParameter("Name", name);

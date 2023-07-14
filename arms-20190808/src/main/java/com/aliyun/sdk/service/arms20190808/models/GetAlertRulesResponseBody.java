@@ -50,7 +50,7 @@ public class GetAlertRulesResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * 分页对象
+         * PageBean.
          */
         public Builder pageBean(PageBean pageBean) {
             this.pageBean = pageBean;
@@ -58,7 +58,7 @@ public class GetAlertRulesResponseBody extends TeaModel {
         }
 
         /**
-         * 请求ID
+         * RequestId.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -146,7 +146,7 @@ public class GetAlertRulesResponseBody extends TeaModel {
             private String value; 
 
             /**
-             * 应用监控/前端监控-聚合方式
+             * Aggregate.
              */
             public Builder aggregate(String aggregate) {
                 this.aggregate = aggregate;
@@ -154,7 +154,7 @@ public class GetAlertRulesResponseBody extends TeaModel {
             }
 
             /**
-             * 应用监控/前端监控-具体告警条件的指标
+             * MetricKey.
              */
             public Builder metricKey(String metricKey) {
                 this.metricKey = metricKey;
@@ -162,7 +162,7 @@ public class GetAlertRulesResponseBody extends TeaModel {
             }
 
             /**
-             * 应用监控/前端监控-最近N分钟
+             * N.
              */
             public Builder n(Float n) {
                 this.n = n;
@@ -170,7 +170,7 @@ public class GetAlertRulesResponseBody extends TeaModel {
             }
 
             /**
-             * 应用监控/前端监控-判断条件
+             * Operator.
              */
             public Builder operator(String operator) {
                 this.operator = operator;
@@ -178,7 +178,7 @@ public class GetAlertRulesResponseBody extends TeaModel {
             }
 
             /**
-             * 应用监控/前端监控-阈值
+             * Value.
              */
             public Builder value(String value) {
                 this.value = value;
@@ -231,7 +231,7 @@ public class GetAlertRulesResponseBody extends TeaModel {
             private String condition; 
 
             /**
-             * 应用监控/前端监控-告警条件
+             * AlertRuleItems.
              */
             public Builder alertRuleItems(java.util.List < AlertRuleItems> alertRuleItems) {
                 this.alertRuleItems = alertRuleItems;
@@ -239,7 +239,7 @@ public class GetAlertRulesResponseBody extends TeaModel {
             }
 
             /**
-             * 应用监控/前端监控-多个告警条件触发逻辑
+             * Condition.
              */
             public Builder condition(String condition) {
                 this.condition = condition;
@@ -292,7 +292,7 @@ public class GetAlertRulesResponseBody extends TeaModel {
             private String value; 
 
             /**
-             * 键
+             * Name.
              */
             public Builder name(String name) {
                 this.name = name;
@@ -300,7 +300,7 @@ public class GetAlertRulesResponseBody extends TeaModel {
             }
 
             /**
-             * 值
+             * Value.
              */
             public Builder value(String value) {
                 this.value = value;
@@ -421,7 +421,7 @@ public class GetAlertRulesResponseBody extends TeaModel {
             }
 
             /**
-             * 值
+             * Value.
              */
             public Builder value(String value) {
                 this.value = value;
@@ -656,7 +656,7 @@ public class GetAlertRulesResponseBody extends TeaModel {
             private String value; 
 
             /**
-             * 键
+             * Name.
              */
             public Builder name(String name) {
                 this.name = name;
@@ -664,7 +664,7 @@ public class GetAlertRulesResponseBody extends TeaModel {
             }
 
             /**
-             * 值
+             * Value.
              */
             public Builder value(String value) {
                 this.value = value;
@@ -673,6 +673,67 @@ public class GetAlertRulesResponseBody extends TeaModel {
 
             public Labels build() {
                 return new Labels(this);
+            } 
+
+        } 
+
+    }
+    public static class Tags extends TeaModel {
+        @NameInMap("Key")
+        private String key;
+
+        @NameInMap("Value")
+        private String value;
+
+        private Tags(Builder builder) {
+            this.key = builder.key;
+            this.value = builder.value;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static Tags create() {
+            return builder().build();
+        }
+
+        /**
+         * @return key
+         */
+        public String getKey() {
+            return this.key;
+        }
+
+        /**
+         * @return value
+         */
+        public String getValue() {
+            return this.value;
+        }
+
+        public static final class Builder {
+            private String key; 
+            private String value; 
+
+            /**
+             * Key.
+             */
+            public Builder key(String key) {
+                this.key = key;
+                return this;
+            }
+
+            /**
+             * Value.
+             */
+            public Builder value(String value) {
+                this.value = value;
+                return this;
+            }
+
+            public Tags build() {
+                return new Tags(this);
             } 
 
         } 
@@ -745,6 +806,9 @@ public class GetAlertRulesResponseBody extends TeaModel {
         @NameInMap("RegionId")
         private String regionId;
 
+        @NameInMap("Tags")
+        private java.util.List < Tags> tags;
+
         @NameInMap("UpdatedTime")
         private Long updatedTime;
 
@@ -774,6 +838,7 @@ public class GetAlertRulesResponseBody extends TeaModel {
             this.pids = builder.pids;
             this.promQL = builder.promQL;
             this.regionId = builder.regionId;
+            this.tags = builder.tags;
             this.updatedTime = builder.updatedTime;
             this.userId = builder.userId;
         }
@@ -941,6 +1006,13 @@ public class GetAlertRulesResponseBody extends TeaModel {
         }
 
         /**
+         * @return tags
+         */
+        public java.util.List < Tags> getTags() {
+            return this.tags;
+        }
+
+        /**
          * @return updatedTime
          */
         public Long getUpdatedTime() {
@@ -977,11 +1049,12 @@ public class GetAlertRulesResponseBody extends TeaModel {
             private java.util.List < String > pids; 
             private String promQL; 
             private String regionId; 
+            private java.util.List < Tags> tags; 
             private Long updatedTime; 
             private String userId; 
 
             /**
-             * Prometheus告警-告警检查类型
+             * AlertCheckType.
              */
             public Builder alertCheckType(String alertCheckType) {
                 this.alertCheckType = alertCheckType;
@@ -989,7 +1062,7 @@ public class GetAlertRulesResponseBody extends TeaModel {
             }
 
             /**
-             * Prometheus告警-告警分组ID
+             * AlertGroup.
              */
             public Builder alertGroup(Long alertGroup) {
                 this.alertGroup = alertGroup;
@@ -1005,7 +1078,7 @@ public class GetAlertRulesResponseBody extends TeaModel {
             }
 
             /**
-             * 告警规则名称
+             * AlertName.
              */
             public Builder alertName(String alertName) {
                 this.alertName = alertName;
@@ -1013,7 +1086,7 @@ public class GetAlertRulesResponseBody extends TeaModel {
             }
 
             /**
-             * 应用监控/前端监控-告警规则内容
+             * AlertRuleContent.
              */
             public Builder alertRuleContent(AlertRuleContent alertRuleContent) {
                 this.alertRuleContent = alertRuleContent;
@@ -1021,7 +1094,7 @@ public class GetAlertRulesResponseBody extends TeaModel {
             }
 
             /**
-             * 告警规则状态
+             * AlertStatus.
              */
             public Builder alertStatus(String alertStatus) {
                 this.alertStatus = alertStatus;
@@ -1029,7 +1102,7 @@ public class GetAlertRulesResponseBody extends TeaModel {
             }
 
             /**
-             * 告警规则类型
+             * AlertType.
              */
             public Builder alertType(String alertType) {
                 this.alertType = alertType;
@@ -1037,7 +1110,7 @@ public class GetAlertRulesResponseBody extends TeaModel {
             }
 
             /**
-             * Prometheus告警-Annotation
+             * Annotations.
              */
             public Builder annotations(java.util.List < Annotations> annotations) {
                 this.annotations = annotations;
@@ -1045,7 +1118,7 @@ public class GetAlertRulesResponseBody extends TeaModel {
             }
 
             /**
-             * 应用监控/前端监控-是否开启新创建应用追加到此告警规则
+             * AutoAddNewApplication.
              */
             public Builder autoAddNewApplication(Boolean autoAddNewApplication) {
                 this.autoAddNewApplication = autoAddNewApplication;
@@ -1053,7 +1126,7 @@ public class GetAlertRulesResponseBody extends TeaModel {
             }
 
             /**
-             * Prometheus告警-集群ID
+             * ClusterId.
              */
             public Builder clusterId(String clusterId) {
                 this.clusterId = clusterId;
@@ -1061,7 +1134,7 @@ public class GetAlertRulesResponseBody extends TeaModel {
             }
 
             /**
-             * 创建时间
+             * CreatedTime.
              */
             public Builder createdTime(Long createdTime) {
                 this.createdTime = createdTime;
@@ -1069,7 +1142,7 @@ public class GetAlertRulesResponseBody extends TeaModel {
             }
 
             /**
-             * Prometheus告警-持续时间
+             * Duration.
              */
             public Builder duration(String duration) {
                 this.duration = duration;
@@ -1077,7 +1150,7 @@ public class GetAlertRulesResponseBody extends TeaModel {
             }
 
             /**
-             * 扩展字段
+             * Extend.
              */
             public Builder extend(String extend) {
                 this.extend = extend;
@@ -1085,7 +1158,7 @@ public class GetAlertRulesResponseBody extends TeaModel {
             }
 
             /**
-             * 应用监控/前端监控-告警条件-过滤项
+             * Filters.
              */
             public Builder filters(Filters filters) {
                 this.filters = filters;
@@ -1093,7 +1166,7 @@ public class GetAlertRulesResponseBody extends TeaModel {
             }
 
             /**
-             * Prometheus告警-Label
+             * Labels.
              */
             public Builder labels(java.util.List < Labels> labels) {
                 this.labels = labels;
@@ -1101,7 +1174,7 @@ public class GetAlertRulesResponseBody extends TeaModel {
             }
 
             /**
-             * Prometheus告警-等级
+             * Level.
              */
             public Builder level(String level) {
                 this.level = level;
@@ -1109,7 +1182,7 @@ public class GetAlertRulesResponseBody extends TeaModel {
             }
 
             /**
-             * Prometheus告警-告警内容
+             * Message.
              */
             public Builder message(String message) {
                 this.message = message;
@@ -1117,7 +1190,7 @@ public class GetAlertRulesResponseBody extends TeaModel {
             }
 
             /**
-             * 应用监控/前端监控-告警指标类型
+             * MetricsType.
              */
             public Builder metricsType(String metricsType) {
                 this.metricsType = metricsType;
@@ -1125,7 +1198,7 @@ public class GetAlertRulesResponseBody extends TeaModel {
             }
 
             /**
-             * 通知策略ID
+             * NotifyStrategy.
              */
             public Builder notifyStrategy(String notifyStrategy) {
                 this.notifyStrategy = notifyStrategy;
@@ -1133,7 +1206,7 @@ public class GetAlertRulesResponseBody extends TeaModel {
             }
 
             /**
-             * 应用监控/前端监控-告警关联应用ID
+             * Pids.
              */
             public Builder pids(java.util.List < String > pids) {
                 this.pids = pids;
@@ -1141,7 +1214,7 @@ public class GetAlertRulesResponseBody extends TeaModel {
             }
 
             /**
-             * Prometheus告警-PromQL语句
+             * PromQL.
              */
             public Builder promQL(String promQL) {
                 this.promQL = promQL;
@@ -1149,7 +1222,7 @@ public class GetAlertRulesResponseBody extends TeaModel {
             }
 
             /**
-             * 地域
+             * RegionId.
              */
             public Builder regionId(String regionId) {
                 this.regionId = regionId;
@@ -1157,7 +1230,15 @@ public class GetAlertRulesResponseBody extends TeaModel {
             }
 
             /**
-             * 更新时间
+             * Tags.
+             */
+            public Builder tags(java.util.List < Tags> tags) {
+                this.tags = tags;
+                return this;
+            }
+
+            /**
+             * UpdatedTime.
              */
             public Builder updatedTime(Long updatedTime) {
                 this.updatedTime = updatedTime;
@@ -1165,7 +1246,7 @@ public class GetAlertRulesResponseBody extends TeaModel {
             }
 
             /**
-             * 用户UID
+             * UserId.
              */
             public Builder userId(String userId) {
                 this.userId = userId;
@@ -1242,7 +1323,7 @@ public class GetAlertRulesResponseBody extends TeaModel {
             private Long total; 
 
             /**
-             * 告警规则列表
+             * AlertRules.
              */
             public Builder alertRules(java.util.List < AlertRules> alertRules) {
                 this.alertRules = alertRules;
@@ -1250,7 +1331,7 @@ public class GetAlertRulesResponseBody extends TeaModel {
             }
 
             /**
-             * 页数
+             * Page.
              */
             public Builder page(Long page) {
                 this.page = page;
@@ -1258,7 +1339,7 @@ public class GetAlertRulesResponseBody extends TeaModel {
             }
 
             /**
-             * 每一页大小
+             * Size.
              */
             public Builder size(Long size) {
                 this.size = size;
@@ -1266,7 +1347,7 @@ public class GetAlertRulesResponseBody extends TeaModel {
             }
 
             /**
-             * 总数
+             * Total.
              */
             public Builder total(Long total) {
                 this.total = total;

@@ -50,7 +50,7 @@ public class ListRetcodeAppsResponseBody extends TeaModel {
         private java.util.List < RetcodeApps> retcodeApps; 
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -58,7 +58,7 @@ public class ListRetcodeAppsResponseBody extends TeaModel {
         }
 
         /**
-         * RetcodeApps.
+         * The list of applications monitored by Browser Monitoring.
          */
         public Builder retcodeApps(java.util.List < RetcodeApps> retcodeApps) {
             this.retcodeApps = retcodeApps;
@@ -71,6 +71,67 @@ public class ListRetcodeAppsResponseBody extends TeaModel {
 
     } 
 
+    public static class Tags extends TeaModel {
+        @NameInMap("Key")
+        private String key;
+
+        @NameInMap("Value")
+        private String value;
+
+        private Tags(Builder builder) {
+            this.key = builder.key;
+            this.value = builder.value;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static Tags create() {
+            return builder().build();
+        }
+
+        /**
+         * @return key
+         */
+        public String getKey() {
+            return this.key;
+        }
+
+        /**
+         * @return value
+         */
+        public String getValue() {
+            return this.value;
+        }
+
+        public static final class Builder {
+            private String key; 
+            private String value; 
+
+            /**
+             * The tag key.
+             */
+            public Builder key(String key) {
+                this.key = key;
+                return this;
+            }
+
+            /**
+             * The tag value.
+             */
+            public Builder value(String value) {
+                this.value = value;
+                return this;
+            }
+
+            public Tags build() {
+                return new Tags(this);
+            } 
+
+        } 
+
+    }
     public static class RetcodeApps extends TeaModel {
         @NameInMap("AppId")
         private Long appId;
@@ -84,15 +145,23 @@ public class ListRetcodeAppsResponseBody extends TeaModel {
         @NameInMap("Pid")
         private String pid;
 
+        @NameInMap("ResourceGroupId")
+        private String resourceGroupId;
+
         @NameInMap("RetcodeAppType")
         private String retcodeAppType;
+
+        @NameInMap("Tags")
+        private java.util.List < Tags> tags;
 
         private RetcodeApps(Builder builder) {
             this.appId = builder.appId;
             this.appName = builder.appName;
             this.nickName = builder.nickName;
             this.pid = builder.pid;
+            this.resourceGroupId = builder.resourceGroupId;
             this.retcodeAppType = builder.retcodeAppType;
+            this.tags = builder.tags;
         }
 
         public static Builder builder() {
@@ -132,10 +201,24 @@ public class ListRetcodeAppsResponseBody extends TeaModel {
         }
 
         /**
+         * @return resourceGroupId
+         */
+        public String getResourceGroupId() {
+            return this.resourceGroupId;
+        }
+
+        /**
          * @return retcodeAppType
          */
         public String getRetcodeAppType() {
             return this.retcodeAppType;
+        }
+
+        /**
+         * @return tags
+         */
+        public java.util.List < Tags> getTags() {
+            return this.tags;
         }
 
         public static final class Builder {
@@ -143,10 +226,12 @@ public class ListRetcodeAppsResponseBody extends TeaModel {
             private String appName; 
             private String nickName; 
             private String pid; 
+            private String resourceGroupId; 
             private String retcodeAppType; 
+            private java.util.List < Tags> tags; 
 
             /**
-             * AppId.
+             * The ID of the application. The parameter is an auto-increment parameter.
              */
             public Builder appId(Long appId) {
                 this.appId = appId;
@@ -154,7 +239,7 @@ public class ListRetcodeAppsResponseBody extends TeaModel {
             }
 
             /**
-             * AppName.
+             * The name of the application.
              */
             public Builder appName(String appName) {
                 this.appName = appName;
@@ -162,7 +247,7 @@ public class ListRetcodeAppsResponseBody extends TeaModel {
             }
 
             /**
-             * NickName.
+             * The alias of the application monitored by Browser Monitoring.
              */
             public Builder nickName(String nickName) {
                 this.nickName = nickName;
@@ -170,7 +255,7 @@ public class ListRetcodeAppsResponseBody extends TeaModel {
             }
 
             /**
-             * Pid.
+             * The PID of the application.
              */
             public Builder pid(String pid) {
                 this.pid = pid;
@@ -178,10 +263,34 @@ public class ListRetcodeAppsResponseBody extends TeaModel {
             }
 
             /**
-             * RetcodeAppType.
+             * The ID of the resource group.
+             */
+            public Builder resourceGroupId(String resourceGroupId) {
+                this.resourceGroupId = resourceGroupId;
+                return this;
+            }
+
+            /**
+             * The type of the application. Valid values:
+             * <p>
+             * 
+             * *   `web`: web application
+             * *   `weex`: Weex mobile app
+             * *   `mini_dd`: DingTalk mini program
+             * *   `mini_alipay`: Alipay mini program
+             * *   `mini_wx`: WeChat mini program
+             * *   `mini_common`: mini program on other platforms
              */
             public Builder retcodeAppType(String retcodeAppType) {
                 this.retcodeAppType = retcodeAppType;
+                return this;
+            }
+
+            /**
+             * The tags.
+             */
+            public Builder tags(java.util.List < Tags> tags) {
+                this.tags = tags;
                 return this;
             }
 

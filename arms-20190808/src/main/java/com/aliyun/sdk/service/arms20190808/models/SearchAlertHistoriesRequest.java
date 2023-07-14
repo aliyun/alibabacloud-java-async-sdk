@@ -139,7 +139,7 @@ public class SearchAlertHistoriesRequest extends Request {
         } 
 
         /**
-         * AlertId.
+         * The ID of the alert rule. You can call the SearchAlertRules operation and view the `Id` parameter in the response. For more information, see [SearchAlertRules](~~175825~~).
          */
         public Builder alertId(Long alertId) {
             this.putQueryParameter("AlertId", alertId);
@@ -148,7 +148,17 @@ public class SearchAlertHistoriesRequest extends Request {
         }
 
         /**
-         * AlertType.
+         * The type of the alert rule. Valid values:
+         * <p>
+         * 
+         * *   `1`: a custom alert rule that is used to monitor drill-down data sets
+         * *   `3`: a custom alert rule that is used to monitor tiled data sets
+         * *   `4`: an alert rule that is used to monitor web pages, including the default alert rule for browser monitoring
+         * *   `5`: an alert rule that is used to monitor applications, including the default alert rule for application monitoring
+         * *   `6`: the default alert rule for browser monitoring
+         * *   `7`: the default alert rule for application monitoring
+         * *   `8`: a Tracing Analysis alert rule
+         * *   `101`: a Prometheus alert rule
          */
         public Builder alertType(Integer alertType) {
             this.putQueryParameter("AlertType", alertType);
@@ -157,7 +167,7 @@ public class SearchAlertHistoriesRequest extends Request {
         }
 
         /**
-         * CurrentPage.
+         * The number of the page to return. Default value: `1`.
          */
         public Builder currentPage(Integer currentPage) {
             this.putQueryParameter("CurrentPage", currentPage);
@@ -166,7 +176,7 @@ public class SearchAlertHistoriesRequest extends Request {
         }
 
         /**
-         * EndTime.
+         * The end of the time range to query. The value is a UNIX timestamp of the LONG data type. Unit: milliseconds. The default value is the current time.
          */
         public Builder endTime(Long endTime) {
             this.putQueryParameter("EndTime", endTime);
@@ -175,7 +185,7 @@ public class SearchAlertHistoriesRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * The number of entries to return on each page. Default value: `10`.
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -184,7 +194,7 @@ public class SearchAlertHistoriesRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * The ID of the region. Default value: `cn-hangzhou`.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -193,7 +203,7 @@ public class SearchAlertHistoriesRequest extends Request {
         }
 
         /**
-         * StartTime.
+         * The beginning of the time range to query. The value is a UNIX timestamp of the LONG data type. Unit: milliseconds. The default value is 10 minutes before the current time.
          */
         public Builder startTime(Long startTime) {
             this.putQueryParameter("StartTime", startTime);

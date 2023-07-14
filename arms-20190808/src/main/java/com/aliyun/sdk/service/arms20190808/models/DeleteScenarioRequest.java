@@ -69,7 +69,7 @@ public class DeleteScenarioRequest extends Request {
         } 
 
         /**
-         * RegionId.
+         * The ID of the region.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -78,7 +78,7 @@ public class DeleteScenarioRequest extends Request {
         }
 
         /**
-         * ScenarioId.
+         * The ID of the business monitoring job. You can obtain the ID by calling the ListScenario operation.
          */
         public Builder scenarioId(Long scenarioId) {
             this.putQueryParameter("ScenarioId", scenarioId);

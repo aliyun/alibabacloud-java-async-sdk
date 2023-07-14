@@ -85,7 +85,7 @@ public class DeleteIntegrationRequest extends Request {
         } 
 
         /**
-         * ClusterId.
+         * The ID of the ACK cluster.
          */
         public Builder clusterId(String clusterId) {
             this.putQueryParameter("ClusterId", clusterId);
@@ -94,7 +94,7 @@ public class DeleteIntegrationRequest extends Request {
         }
 
         /**
-         * Integration.
+         * The abbreviation of the software that is supported by Application Real-Time Monitoring Service (ARMS). Valid values (case-insensitive): `ASM`, `IoT`, and `Flink`.
          */
         public Builder integration(String integration) {
             this.putQueryParameter("Integration", integration);
@@ -103,7 +103,7 @@ public class DeleteIntegrationRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * The region ID.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);

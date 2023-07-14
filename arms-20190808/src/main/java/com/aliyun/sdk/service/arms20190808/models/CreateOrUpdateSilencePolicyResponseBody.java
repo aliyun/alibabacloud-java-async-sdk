@@ -50,7 +50,7 @@ public class CreateOrUpdateSilencePolicyResponseBody extends TeaModel {
         private SilencePolicy silencePolicy; 
 
         /**
-         * 请求ID
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -58,7 +58,7 @@ public class CreateOrUpdateSilencePolicyResponseBody extends TeaModel {
         }
 
         /**
-         * 静默策略对象
+         * A list of silence policies.
          */
         public Builder silencePolicy(SilencePolicy silencePolicy) {
             this.silencePolicy = silencePolicy;
@@ -122,7 +122,7 @@ public class CreateOrUpdateSilencePolicyResponseBody extends TeaModel {
             private String value; 
 
             /**
-             * 条件字段
+             * The key of the matching condition.
              */
             public Builder key(String key) {
                 this.key = key;
@@ -130,7 +130,15 @@ public class CreateOrUpdateSilencePolicyResponseBody extends TeaModel {
             }
 
             /**
-             * 对应关系
+             * The logical operator of the matching condition. Valid values:
+             * <p>
+             * 
+             * *   `eq`: equal to
+             * *   `neq`: not equal to
+             * *   `in`: contains
+             * *   `nin`: does not contain
+             * *   `re`: regular expression match
+             * *   `nre`: regular expression mismatch
              */
             public Builder operator(String operator) {
                 this.operator = operator;
@@ -138,7 +146,7 @@ public class CreateOrUpdateSilencePolicyResponseBody extends TeaModel {
             }
 
             /**
-             * 条件字段值
+             * The value of the matching condition.
              */
             public Builder value(String value) {
                 this.value = value;
@@ -179,7 +187,7 @@ public class CreateOrUpdateSilencePolicyResponseBody extends TeaModel {
             private java.util.List < MatchingConditions> matchingConditions; 
 
             /**
-             * 分派条件
+             * A list of matching conditions.
              */
             public Builder matchingConditions(java.util.List < MatchingConditions> matchingConditions) {
                 this.matchingConditions = matchingConditions;
@@ -244,7 +252,7 @@ public class CreateOrUpdateSilencePolicyResponseBody extends TeaModel {
             private String name; 
 
             /**
-             * 静默策略ID
+             * The ID of the silence policy.
              */
             public Builder id(Long id) {
                 this.id = id;
@@ -252,7 +260,7 @@ public class CreateOrUpdateSilencePolicyResponseBody extends TeaModel {
             }
 
             /**
-             * 分派规则
+             * A list of matching rules.
              */
             public Builder matchingRules(java.util.List < MatchingRules> matchingRules) {
                 this.matchingRules = matchingRules;
@@ -260,7 +268,7 @@ public class CreateOrUpdateSilencePolicyResponseBody extends TeaModel {
             }
 
             /**
-             * 静默策略名称
+             * The name of the silence policy.
              */
             public Builder name(String name) {
                 this.name = name;

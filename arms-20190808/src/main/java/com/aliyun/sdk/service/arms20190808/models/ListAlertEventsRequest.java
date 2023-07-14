@@ -140,7 +140,7 @@ public class ListAlertEventsRequest extends Request {
         } 
 
         /**
-         * 告警名称
+         * The name of the alert.
          */
         public Builder alertName(String alertName) {
             this.putQueryParameter("AlertName", alertName);
@@ -149,7 +149,7 @@ public class ListAlertEventsRequest extends Request {
         }
 
         /**
-         * 查询告警发送历史记录的开始时间，时间格式：YYYY-MM-DD HH:mm:ss
+         * The end time of the alert events that you want to query. Specify the time in the YYYY-MM-DD HH:mm:ss format.
          */
         public Builder endTime(String endTime) {
             this.putQueryParameter("EndTime", endTime);
@@ -158,7 +158,7 @@ public class ListAlertEventsRequest extends Request {
         }
 
         /**
-         * 事件匹配规则列表
+         * The list of matching conditions.
          */
         public Builder matchingConditions(String matchingConditions) {
             this.putQueryParameter("MatchingConditions", matchingConditions);
@@ -167,7 +167,7 @@ public class ListAlertEventsRequest extends Request {
         }
 
         /**
-         * 页数
+         * The number of the page to return.
          */
         public Builder page(Long page) {
             this.putQueryParameter("Page", page);
@@ -176,7 +176,7 @@ public class ListAlertEventsRequest extends Request {
         }
 
         /**
-         * 每页展示数目
+         * The number of entries to return on each page.
          */
         public Builder size(Long size) {
             this.putQueryParameter("Size", size);
@@ -185,7 +185,7 @@ public class ListAlertEventsRequest extends Request {
         }
 
         /**
-         * 查询告警发送历史记录的开始时间，时间格式：YYYY-MM-DD HH:mm:ss
+         * The start time of the alert events that you want to query. Specify the time in the YYYY-MM-DD HH:mm:ss format.
          */
         public Builder startTime(String startTime) {
             this.putQueryParameter("StartTime", startTime);
@@ -194,7 +194,12 @@ public class ListAlertEventsRequest extends Request {
         }
 
         /**
-         * Status.
+         * The status of the alert events. Valid values:
+         * <p>
+         * 
+         * *   Active
+         * *   Silenced
+         * *   Resolved
          */
         public Builder status(String status) {
             this.putQueryParameter("Status", status);

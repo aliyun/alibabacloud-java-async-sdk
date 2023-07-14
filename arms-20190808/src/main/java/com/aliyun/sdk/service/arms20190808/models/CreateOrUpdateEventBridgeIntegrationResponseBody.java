@@ -50,7 +50,7 @@ public class CreateOrUpdateEventBridgeIntegrationResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * EventBridgeIntegration.
+         * The information about the EventBridge integration.
          */
         public Builder eventBridgeIntegration(EventBridgeIntegration eventBridgeIntegration) {
             this.eventBridgeIntegration = eventBridgeIntegration;
@@ -58,7 +58,7 @@ public class CreateOrUpdateEventBridgeIntegrationResponseBody extends TeaModel {
         }
 
         /**
-         * Id of the request
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -194,7 +194,7 @@ public class CreateOrUpdateEventBridgeIntegrationResponseBody extends TeaModel {
             private String source; 
 
             /**
-             * AccessKey.
+             * The AccessKey ID that is used to connect to EventBridge.
              */
             public Builder accessKey(String accessKey) {
                 this.accessKey = accessKey;
@@ -202,7 +202,7 @@ public class CreateOrUpdateEventBridgeIntegrationResponseBody extends TeaModel {
             }
 
             /**
-             * AccessSecret.
+             * The AccessKey secret that is used to connect to EventBridge.
              */
             public Builder accessSecret(String accessSecret) {
                 this.accessSecret = accessSecret;
@@ -210,7 +210,7 @@ public class CreateOrUpdateEventBridgeIntegrationResponseBody extends TeaModel {
             }
 
             /**
-             * Description.
+             * The description of the EventBridge integration.
              */
             public Builder description(String description) {
                 this.description = description;
@@ -218,7 +218,7 @@ public class CreateOrUpdateEventBridgeIntegrationResponseBody extends TeaModel {
             }
 
             /**
-             * Endpoint.
+             * The public endpoint of EventBridge.
              */
             public Builder endpoint(String endpoint) {
                 this.endpoint = endpoint;
@@ -226,7 +226,7 @@ public class CreateOrUpdateEventBridgeIntegrationResponseBody extends TeaModel {
             }
 
             /**
-             * EventBusName.
+             * The name of the event bus.
              */
             public Builder eventBusName(String eventBusName) {
                 this.eventBusName = eventBusName;
@@ -234,7 +234,7 @@ public class CreateOrUpdateEventBridgeIntegrationResponseBody extends TeaModel {
             }
 
             /**
-             * EventBusRegionId.
+             * The region ID of the event bus.
              */
             public Builder eventBusRegionId(String eventBusRegionId) {
                 this.eventBusRegionId = eventBusRegionId;
@@ -242,7 +242,7 @@ public class CreateOrUpdateEventBridgeIntegrationResponseBody extends TeaModel {
             }
 
             /**
-             * Id.
+             * The ID of the EventBridge integration.
              */
             public Builder id(Long id) {
                 this.id = id;
@@ -250,7 +250,7 @@ public class CreateOrUpdateEventBridgeIntegrationResponseBody extends TeaModel {
             }
 
             /**
-             * Name.
+             * The name of the EventBridge integration.
              */
             public Builder name(String name) {
                 this.name = name;
@@ -258,7 +258,7 @@ public class CreateOrUpdateEventBridgeIntegrationResponseBody extends TeaModel {
             }
 
             /**
-             * Source.
+             * The event source.
              */
             public Builder source(String source) {
                 this.source = source;

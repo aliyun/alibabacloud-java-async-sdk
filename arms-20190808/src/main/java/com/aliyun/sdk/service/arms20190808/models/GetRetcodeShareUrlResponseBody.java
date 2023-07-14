@@ -50,7 +50,7 @@ public class GetRetcodeShareUrlResponseBody extends TeaModel {
         private String url; 
 
         /**
-         * RequestId.
+         * Queries the logon-free URL of a Browser Monitoring application.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -58,7 +58,7 @@ public class GetRetcodeShareUrlResponseBody extends TeaModel {
         }
 
         /**
-         * Url.
+         * The ID of the request.
          */
         public Builder url(String url) {
             this.url = url;

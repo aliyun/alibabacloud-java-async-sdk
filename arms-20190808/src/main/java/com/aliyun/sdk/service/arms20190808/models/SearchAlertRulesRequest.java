@@ -13,6 +13,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class SearchAlertRulesRequest extends Request {
     @Query
+    @NameInMap("AlertRuleId")
+    private String alertRuleId;
+
+    @Query
     @NameInMap("AppType")
     private String appType;
 
@@ -34,8 +38,16 @@ public class SearchAlertRulesRequest extends Request {
     private String regionId;
 
     @Query
+    @NameInMap("ResourceGroupId")
+    private String resourceGroupId;
+
+    @Query
     @NameInMap("SystemRegionId")
     private String systemRegionId;
+
+    @Query
+    @NameInMap("Tags")
+    private java.util.List < Tags> tags;
 
     @Query
     @NameInMap("Title")
@@ -47,12 +59,15 @@ public class SearchAlertRulesRequest extends Request {
 
     private SearchAlertRulesRequest(Builder builder) {
         super(builder);
+        this.alertRuleId = builder.alertRuleId;
         this.appType = builder.appType;
         this.currentPage = builder.currentPage;
         this.pageSize = builder.pageSize;
         this.pid = builder.pid;
         this.regionId = builder.regionId;
+        this.resourceGroupId = builder.resourceGroupId;
         this.systemRegionId = builder.systemRegionId;
+        this.tags = builder.tags;
         this.title = builder.title;
         this.type = builder.type;
     }
@@ -68,6 +83,13 @@ public class SearchAlertRulesRequest extends Request {
     @Override
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return alertRuleId
+     */
+    public String getAlertRuleId() {
+        return this.alertRuleId;
     }
 
     /**
@@ -106,10 +128,24 @@ public class SearchAlertRulesRequest extends Request {
     }
 
     /**
+     * @return resourceGroupId
+     */
+    public String getResourceGroupId() {
+        return this.resourceGroupId;
+    }
+
+    /**
      * @return systemRegionId
      */
     public String getSystemRegionId() {
         return this.systemRegionId;
+    }
+
+    /**
+     * @return tags
+     */
+    public java.util.List < Tags> getTags() {
+        return this.tags;
     }
 
     /**
@@ -127,12 +163,15 @@ public class SearchAlertRulesRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<SearchAlertRulesRequest, Builder> {
+        private String alertRuleId; 
         private String appType; 
         private Integer currentPage; 
         private Integer pageSize; 
         private String pid; 
         private String regionId; 
+        private String resourceGroupId; 
         private String systemRegionId; 
+        private java.util.List < Tags> tags; 
         private String title; 
         private String type; 
 
@@ -142,15 +181,27 @@ public class SearchAlertRulesRequest extends Request {
 
         private Builder(SearchAlertRulesRequest request) {
             super(request);
+            this.alertRuleId = request.alertRuleId;
             this.appType = request.appType;
             this.currentPage = request.currentPage;
             this.pageSize = request.pageSize;
             this.pid = request.pid;
             this.regionId = request.regionId;
+            this.resourceGroupId = request.resourceGroupId;
             this.systemRegionId = request.systemRegionId;
+            this.tags = request.tags;
             this.title = request.title;
             this.type = request.type;
         } 
+
+        /**
+         * AlertRuleId.
+         */
+        public Builder alertRuleId(String alertRuleId) {
+            this.putQueryParameter("AlertRuleId", alertRuleId);
+            this.alertRuleId = alertRuleId;
+            return this;
+        }
 
         /**
          * AppType.
@@ -198,11 +249,29 @@ public class SearchAlertRulesRequest extends Request {
         }
 
         /**
+         * ResourceGroupId.
+         */
+        public Builder resourceGroupId(String resourceGroupId) {
+            this.putQueryParameter("ResourceGroupId", resourceGroupId);
+            this.resourceGroupId = resourceGroupId;
+            return this;
+        }
+
+        /**
          * SystemRegionId.
          */
         public Builder systemRegionId(String systemRegionId) {
             this.putQueryParameter("SystemRegionId", systemRegionId);
             this.systemRegionId = systemRegionId;
+            return this;
+        }
+
+        /**
+         * Tags.
+         */
+        public Builder tags(java.util.List < Tags> tags) {
+            this.putQueryParameter("Tags", tags);
+            this.tags = tags;
             return this;
         }
 
@@ -231,4 +300,65 @@ public class SearchAlertRulesRequest extends Request {
 
     } 
 
+    public static class Tags extends TeaModel {
+        @NameInMap("Key")
+        private String key;
+
+        @NameInMap("Value")
+        private String value;
+
+        private Tags(Builder builder) {
+            this.key = builder.key;
+            this.value = builder.value;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static Tags create() {
+            return builder().build();
+        }
+
+        /**
+         * @return key
+         */
+        public String getKey() {
+            return this.key;
+        }
+
+        /**
+         * @return value
+         */
+        public String getValue() {
+            return this.value;
+        }
+
+        public static final class Builder {
+            private String key; 
+            private String value; 
+
+            /**
+             * Key.
+             */
+            public Builder key(String key) {
+                this.key = key;
+                return this;
+            }
+
+            /**
+             * Value.
+             */
+            public Builder value(String value) {
+                this.value = value;
+                return this;
+            }
+
+            public Tags build() {
+                return new Tags(this);
+            } 
+
+        } 
+
+    }
 }

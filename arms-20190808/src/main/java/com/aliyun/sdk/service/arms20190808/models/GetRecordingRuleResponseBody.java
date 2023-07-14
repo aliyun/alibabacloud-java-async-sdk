@@ -12,14 +12,22 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>GetRecordingRuleResponseBody</p>
  */
 public class GetRecordingRuleResponseBody extends TeaModel {
+    @NameInMap("Code")
+    private Integer code;
+
     @NameInMap("Data")
     private String data;
+
+    @NameInMap("Message")
+    private String message;
 
     @NameInMap("RequestId")
     private String requestId;
 
     private GetRecordingRuleResponseBody(Builder builder) {
+        this.code = builder.code;
         this.data = builder.data;
+        this.message = builder.message;
         this.requestId = builder.requestId;
     }
 
@@ -32,10 +40,24 @@ public class GetRecordingRuleResponseBody extends TeaModel {
     }
 
     /**
+     * @return code
+     */
+    public Integer getCode() {
+        return this.code;
+    }
+
+    /**
      * @return data
      */
     public String getData() {
         return this.data;
+    }
+
+    /**
+     * @return message
+     */
+    public String getMessage() {
+        return this.message;
     }
 
     /**
@@ -46,11 +68,21 @@ public class GetRecordingRuleResponseBody extends TeaModel {
     }
 
     public static final class Builder {
+        private Integer code; 
         private String data; 
+        private String message; 
         private String requestId; 
 
         /**
-         * Data.
+         * Code.
+         */
+        public Builder code(Integer code) {
+            this.code = code;
+            return this;
+        }
+
+        /**
+         * The recording rule.
          */
         public Builder data(String data) {
             this.data = data;
@@ -58,7 +90,15 @@ public class GetRecordingRuleResponseBody extends TeaModel {
         }
 
         /**
-         * Id of the request
+         * Message.
+         */
+        public Builder message(String message) {
+            this.message = message;
+            return this;
+        }
+
+        /**
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

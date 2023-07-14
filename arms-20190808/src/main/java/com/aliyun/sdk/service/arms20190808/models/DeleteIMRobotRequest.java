@@ -55,7 +55,7 @@ public class DeleteIMRobotRequest extends Request {
         } 
 
         /**
-         * 告警机器人ID
+         * RobotId.
          */
         public Builder robotId(Long robotId) {
             this.putQueryParameter("RobotId", robotId);

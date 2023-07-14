@@ -50,7 +50,7 @@ public class CreateOrUpdateIMRobotResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * AlertRobot.
+         * The information about the IM chatbot.
          */
         public Builder alertRobot(AlertRobot alertRobot) {
             this.alertRobot = alertRobot;
@@ -58,7 +58,7 @@ public class CreateOrUpdateIMRobotResponseBody extends TeaModel {
         }
 
         /**
-         * Id of the request
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -194,7 +194,7 @@ public class CreateOrUpdateIMRobotResponseBody extends TeaModel {
             private String type; 
 
             /**
-             * 卡片模版配置信息
+             * The configurations of the alert card template.
              */
             public Builder cardTemplate(String cardTemplate) {
                 this.cardTemplate = cardTemplate;
@@ -202,7 +202,11 @@ public class CreateOrUpdateIMRobotResponseBody extends TeaModel {
             }
 
             /**
-             * 是否发送每日统计信息
+             * Indicates whether daily statistics are sent. Valid values:
+             * <p>
+             * 
+             * *   `false` (default): Daily statistics are not sent.
+             * *   `true`: Daily statistics are sent.
              */
             public Builder dailyNoc(Boolean dailyNoc) {
                 this.dailyNoc = dailyNoc;
@@ -210,7 +214,7 @@ public class CreateOrUpdateIMRobotResponseBody extends TeaModel {
             }
 
             /**
-             * 每日统计发送时间
+             * The point in time at which the daily statistics are sent. The information that ARMS sends at the specified points in time includes the total number of alerts generated on the current day, the number of cleared alerts, and the number of alerts to be cleared.
              */
             public Builder dailyNocTime(String dailyNocTime) {
                 this.dailyNocTime = dailyNocTime;
@@ -218,7 +222,7 @@ public class CreateOrUpdateIMRobotResponseBody extends TeaModel {
             }
 
             /**
-             * EnableOutgoing.
+             * Indicates whether the Outgoing feature is enabled.
              */
             public Builder enableOutgoing(Boolean enableOutgoing) {
                 this.enableOutgoing = enableOutgoing;
@@ -226,7 +230,7 @@ public class CreateOrUpdateIMRobotResponseBody extends TeaModel {
             }
 
             /**
-             * 告警机器人地址
+             * The webhook URL of the IM chatbot.
              */
             public Builder robotAddress(String robotAddress) {
                 this.robotAddress = robotAddress;
@@ -234,7 +238,7 @@ public class CreateOrUpdateIMRobotResponseBody extends TeaModel {
             }
 
             /**
-             * 告警机器人ID
+             * The ID of the IM chatbot.
              */
             public Builder robotId(Float robotId) {
                 this.robotId = robotId;
@@ -242,7 +246,7 @@ public class CreateOrUpdateIMRobotResponseBody extends TeaModel {
             }
 
             /**
-             * 告警机器人名称
+             * The name of the IM chatbot.
              */
             public Builder robotName(String robotName) {
                 this.robotName = robotName;
@@ -250,7 +254,7 @@ public class CreateOrUpdateIMRobotResponseBody extends TeaModel {
             }
 
             /**
-             * Token.
+             * The token required to enable the Outgoing feature.
              */
             public Builder token(String token) {
                 this.token = token;
@@ -258,7 +262,11 @@ public class CreateOrUpdateIMRobotResponseBody extends TeaModel {
             }
 
             /**
-             * 告警机器人类型:dingding/wechat
+             * The type of the IM chatbot. Valid values:
+             * <p>
+             * 
+             * *   `dingding`: DingTalk chatbot
+             * *   `wechat`: WeCom chatbot
              */
             public Builder type(String type) {
                 this.type = type;

@@ -55,7 +55,7 @@ public class GetRetcodeShareUrlRequest extends Request {
         } 
 
         /**
-         * Pid.
+         * The logon-free URL of the application.
          */
         public Builder pid(String pid) {
             this.putQueryParameter("Pid", pid);

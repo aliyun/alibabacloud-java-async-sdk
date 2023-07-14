@@ -50,7 +50,7 @@ public class SwitchSyntheticTaskStatusResponseBody extends TeaModel {
         private String result; 
 
         /**
-         * Id of the request
+         * RequestId.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

@@ -113,7 +113,7 @@ public class ListIntegrationRequest extends Request {
         } 
 
         /**
-         * 集成名称
+         * IntegrationName.
          */
         public Builder integrationName(String integrationName) {
             this.putQueryParameter("IntegrationName", integrationName);
@@ -122,7 +122,7 @@ public class ListIntegrationRequest extends Request {
         }
 
         /**
-         * 集成产品类型，CLOUD_MONITOR，LOG_SERVICE
+         * IntegrationProductType.
          */
         public Builder integrationProductType(String integrationProductType) {
             this.putQueryParameter("IntegrationProductType", integrationProductType);
@@ -131,7 +131,7 @@ public class ListIntegrationRequest extends Request {
         }
 
         /**
-         * 是否展示详情
+         * IsDetail.
          */
         public Builder isDetail(Boolean isDetail) {
             this.putQueryParameter("IsDetail", isDetail);
@@ -140,7 +140,7 @@ public class ListIntegrationRequest extends Request {
         }
 
         /**
-         * 页数
+         * Page.
          */
         public Builder page(Long page) {
             this.putQueryParameter("Page", page);
@@ -149,7 +149,7 @@ public class ListIntegrationRequest extends Request {
         }
 
         /**
-         * 条数
+         * Size.
          */
         public Builder size(Long size) {
             this.putQueryParameter("Size", size);

@@ -50,7 +50,7 @@ public class DeleteNotificationPolicyResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * IsSuccess.
+         * The ID of the request.
          */
         public Builder isSuccess(Boolean isSuccess) {
             this.isSuccess = isSuccess;
@@ -58,7 +58,7 @@ public class DeleteNotificationPolicyResponseBody extends TeaModel {
         }
 
         /**
-         * Id of the request
+         * The ID of the notification policy.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

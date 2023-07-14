@@ -13,6 +13,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class ListPrometheusInstancesRequest extends Request {
     @Query
+    @NameInMap("ClusterType")
+    private String clusterType;
+
+    @Query
     @NameInMap("RegionId")
     @Validation(required = true)
     private String regionId;
@@ -24,6 +28,7 @@ public class ListPrometheusInstancesRequest extends Request {
 
     private ListPrometheusInstancesRequest(Builder builder) {
         super(builder);
+        this.clusterType = builder.clusterType;
         this.regionId = builder.regionId;
         this.showGlobalView = builder.showGlobalView;
     }
@@ -42,6 +47,13 @@ public class ListPrometheusInstancesRequest extends Request {
     }
 
     /**
+     * @return clusterType
+     */
+    public String getClusterType() {
+        return this.clusterType;
+    }
+
+    /**
      * @return regionId
      */
     public String getRegionId() {
@@ -56,6 +68,7 @@ public class ListPrometheusInstancesRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<ListPrometheusInstancesRequest, Builder> {
+        private String clusterType; 
         private String regionId; 
         private Boolean showGlobalView; 
 
@@ -65,12 +78,22 @@ public class ListPrometheusInstancesRequest extends Request {
 
         private Builder(ListPrometheusInstancesRequest request) {
             super(request);
+            this.clusterType = request.clusterType;
             this.regionId = request.regionId;
             this.showGlobalView = request.showGlobalView;
         } 
 
         /**
-         * RegionId.
+         * 实例类型
+         */
+        public Builder clusterType(String clusterType) {
+            this.putQueryParameter("ClusterType", clusterType);
+            this.clusterType = clusterType;
+            return this;
+        }
+
+        /**
+         * The region ID.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -79,7 +102,11 @@ public class ListPrometheusInstancesRequest extends Request {
         }
 
         /**
-         * ShowGlobalView.
+         * Specifies whether to query global aggregation instances. Valid values:
+         * <p>
+         * 
+         * *   true
+         * *   false
          */
         public Builder showGlobalView(Boolean showGlobalView) {
             this.putQueryParameter("ShowGlobalView", showGlobalView);

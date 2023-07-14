@@ -30,6 +30,10 @@ public class DescribeContactGroupsRequest extends Request {
     private Long page;
 
     @Query
+    @NameInMap("RegionId")
+    private String regionId;
+
+    @Query
     @NameInMap("Size")
     @Validation(required = true)
     private Long size;
@@ -40,6 +44,7 @@ public class DescribeContactGroupsRequest extends Request {
         this.groupIds = builder.groupIds;
         this.isDetail = builder.isDetail;
         this.page = builder.page;
+        this.regionId = builder.regionId;
         this.size = builder.size;
     }
 
@@ -85,6 +90,13 @@ public class DescribeContactGroupsRequest extends Request {
     }
 
     /**
+     * @return regionId
+     */
+    public String getRegionId() {
+        return this.regionId;
+    }
+
+    /**
      * @return size
      */
     public Long getSize() {
@@ -96,6 +108,7 @@ public class DescribeContactGroupsRequest extends Request {
         private String groupIds; 
         private Boolean isDetail; 
         private Long page; 
+        private String regionId; 
         private Long size; 
 
         private Builder() {
@@ -108,11 +121,12 @@ public class DescribeContactGroupsRequest extends Request {
             this.groupIds = request.groupIds;
             this.isDetail = request.isDetail;
             this.page = request.page;
+            this.regionId = request.regionId;
             this.size = request.size;
         } 
 
         /**
-         * 告警联系人组名称
+         * The ID of the alert contact.
          */
         public Builder contactGroupName(String contactGroupName) {
             this.putQueryParameter("ContactGroupName", contactGroupName);
@@ -130,7 +144,7 @@ public class DescribeContactGroupsRequest extends Request {
         }
 
         /**
-         * 是否返回联系人分组中包含的所有联系人。默认不返回所有联系人。
+         * IsDetail.
          */
         public Builder isDetail(Boolean isDetail) {
             this.putQueryParameter("IsDetail", isDetail);
@@ -139,11 +153,20 @@ public class DescribeContactGroupsRequest extends Request {
         }
 
         /**
-         * Page.
+         * The ID of the alert contact group.
          */
         public Builder page(Long page) {
             this.putQueryParameter("Page", page);
             this.page = page;
+            return this;
+        }
+
+        /**
+         * RegionId.
+         */
+        public Builder regionId(String regionId) {
+            this.putQueryParameter("RegionId", regionId);
+            this.regionId = regionId;
             return this;
         }
 

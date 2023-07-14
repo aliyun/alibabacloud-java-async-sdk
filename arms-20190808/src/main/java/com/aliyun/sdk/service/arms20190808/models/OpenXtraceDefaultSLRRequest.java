@@ -55,7 +55,11 @@ public class OpenXtraceDefaultSLRRequest extends Request {
         } 
 
         /**
-         * RegionId.
+         * Indicates whether the request was successful. Valid values:
+         * <p>
+         * 
+         * *   `true`: The request was successful.
+         * *   `false`: The request failed.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);

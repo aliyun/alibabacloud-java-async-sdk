@@ -110,7 +110,7 @@ public class GetRetcodeDataByQueryResponseBody extends TeaModel {
         }
 
         /**
-         * Id of the request
+         * RequestId.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

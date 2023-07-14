@@ -112,7 +112,7 @@ public class CreateIntegrationRequest extends Request {
         } 
 
         /**
-         * 是否开启恢复，默认true
+         * AutoRecover.
          */
         public Builder autoRecover(Boolean autoRecover) {
             this.putBodyParameter("AutoRecover", autoRecover);
@@ -121,7 +121,7 @@ public class CreateIntegrationRequest extends Request {
         }
 
         /**
-         * 集成描述
+         * Description.
          */
         public Builder description(String description) {
             this.putBodyParameter("Description", description);
@@ -130,7 +130,7 @@ public class CreateIntegrationRequest extends Request {
         }
 
         /**
-         * 集成名称
+         * IntegrationName.
          */
         public Builder integrationName(String integrationName) {
             this.putBodyParameter("IntegrationName", integrationName);
@@ -139,7 +139,7 @@ public class CreateIntegrationRequest extends Request {
         }
 
         /**
-         * 集成产品类型
+         * IntegrationProductType.
          */
         public Builder integrationProductType(String integrationProductType) {
             this.putBodyParameter("IntegrationProductType", integrationProductType);
@@ -148,7 +148,7 @@ public class CreateIntegrationRequest extends Request {
         }
 
         /**
-         * 恢复时间，默认300s
+         * RecoverTime.
          */
         public Builder recoverTime(Long recoverTime) {
             this.putBodyParameter("RecoverTime", recoverTime);

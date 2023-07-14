@@ -12,6 +12,12 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>GetIntegrationStateResponseBody</p>
  */
 public class GetIntegrationStateResponseBody extends TeaModel {
+    @NameInMap("Code")
+    private Integer code;
+
+    @NameInMap("Message")
+    private String message;
+
     @NameInMap("RequestId")
     private String requestId;
 
@@ -19,6 +25,8 @@ public class GetIntegrationStateResponseBody extends TeaModel {
     private Boolean state;
 
     private GetIntegrationStateResponseBody(Builder builder) {
+        this.code = builder.code;
+        this.message = builder.message;
         this.requestId = builder.requestId;
         this.state = builder.state;
     }
@@ -29,6 +37,20 @@ public class GetIntegrationStateResponseBody extends TeaModel {
 
     public static GetIntegrationStateResponseBody create() {
         return builder().build();
+    }
+
+    /**
+     * @return code
+     */
+    public Integer getCode() {
+        return this.code;
+    }
+
+    /**
+     * @return message
+     */
+    public String getMessage() {
+        return this.message;
     }
 
     /**
@@ -46,11 +68,29 @@ public class GetIntegrationStateResponseBody extends TeaModel {
     }
 
     public static final class Builder {
+        private Integer code; 
+        private String message; 
         private String requestId; 
         private Boolean state; 
 
         /**
-         * Id of the request
+         * 状态码。200为成功，其他状态码为异常。
+         */
+        public Builder code(Integer code) {
+            this.code = code;
+            return this;
+        }
+
+        /**
+         * 返回结果的提示信息。
+         */
+        public Builder message(String message) {
+            this.message = message;
+            return this;
+        }
+
+        /**
+         * RequestId.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

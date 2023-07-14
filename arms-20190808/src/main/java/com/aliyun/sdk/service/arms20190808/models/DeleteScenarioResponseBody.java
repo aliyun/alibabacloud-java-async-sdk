@@ -50,7 +50,7 @@ public class DeleteScenarioResponseBody extends TeaModel {
         private Boolean result; 
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -58,7 +58,11 @@ public class DeleteScenarioResponseBody extends TeaModel {
         }
 
         /**
-         * Result.
+         * Indicates whether the request is successful.
+         * <p>
+         * 
+         * *   `true`: successful
+         * *   `false`: failed
          */
         public Builder result(Boolean result) {
             this.result = result;

@@ -55,7 +55,7 @@ public class DeleteContactGroupRequest extends Request {
         } 
 
         /**
-         * 告警联系人组ID
+         * ContactGroupId.
          */
         public Builder contactGroupId(Long contactGroupId) {
             this.putQueryParameter("ContactGroupId", contactGroupId);

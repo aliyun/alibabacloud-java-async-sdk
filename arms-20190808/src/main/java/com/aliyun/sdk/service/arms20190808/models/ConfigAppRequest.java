@@ -26,11 +26,16 @@ public class ConfigAppRequest extends Request {
     @Validation(required = true)
     private String regionId;
 
+    @Query
+    @NameInMap("Type")
+    private String type;
+
     private ConfigAppRequest(Builder builder) {
         super(builder);
         this.appIds = builder.appIds;
         this.enable = builder.enable;
         this.regionId = builder.regionId;
+        this.type = builder.type;
     }
 
     public static Builder builder() {
@@ -67,10 +72,18 @@ public class ConfigAppRequest extends Request {
         return this.regionId;
     }
 
+    /**
+     * @return type
+     */
+    public String getType() {
+        return this.type;
+    }
+
     public static final class Builder extends Request.Builder<ConfigAppRequest, Builder> {
         private String appIds; 
         private String enable; 
         private String regionId; 
+        private String type; 
 
         private Builder() {
             super();
@@ -81,10 +94,11 @@ public class ConfigAppRequest extends Request {
             this.appIds = request.appIds;
             this.enable = request.enable;
             this.regionId = request.regionId;
+            this.type = request.type;
         } 
 
         /**
-         * AppIds.
+         * The process identifier (PID) of the application. Separate multiple PIDs with commas (,).
          */
         public Builder appIds(String appIds) {
             this.putQueryParameter("AppIds", appIds);
@@ -93,7 +107,11 @@ public class ConfigAppRequest extends Request {
         }
 
         /**
-         * Enable.
+         * Specifies whether to turn on or turn off the main switch of the ARMS agent. The monitoring stops after the switch is turned off. If you do not specify this parameter, the main switch status of the ARMS agent is queried.
+         * <p>
+         * 
+         * *   `true`
+         * *   `false`
          */
         public Builder enable(String enable) {
             this.putQueryParameter("Enable", enable);
@@ -102,11 +120,20 @@ public class ConfigAppRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * The region ID.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
             this.regionId = regionId;
+            return this;
+        }
+
+        /**
+         * The type of the application. Set the value to **TRACE**.
+         */
+        public Builder type(String type) {
+            this.putQueryParameter("Type", type);
+            this.type = type;
             return this;
         }
 

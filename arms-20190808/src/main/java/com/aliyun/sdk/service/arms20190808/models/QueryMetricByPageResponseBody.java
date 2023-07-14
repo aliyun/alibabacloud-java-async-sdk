@@ -86,7 +86,13 @@ public class QueryMetricByPageResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * Code.
+         * The HTTP status code returned for the request. Valid values:
+         * <p>
+         * 
+         * *   2XX: The request was successful.
+         * *   3XX: A redirection message was returned.
+         * *   4XX: The request was invalid.
+         * *   5XX: A server error occurred.
          */
         public Builder code(String code) {
             this.code = code;
@@ -94,7 +100,7 @@ public class QueryMetricByPageResponseBody extends TeaModel {
         }
 
         /**
-         * Data.
+         * The information about the array object.
          */
         public Builder data(Data data) {
             this.data = data;
@@ -102,7 +108,7 @@ public class QueryMetricByPageResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * The error message returned if the call fails.
          */
         public Builder message(String message) {
             this.message = message;
@@ -110,7 +116,7 @@ public class QueryMetricByPageResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -118,7 +124,11 @@ public class QueryMetricByPageResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * Indicates whether the call was successful. Valid values:
+         * <p>
+         * 
+         * *   `true`: The call was successful.
+         * *   `false`: The call failed.
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -132,6 +142,9 @@ public class QueryMetricByPageResponseBody extends TeaModel {
     } 
 
     public static class Data extends TeaModel {
+        @NameInMap("Completed")
+        private Boolean completed;
+
         @NameInMap("Items")
         private java.util.List < java.util.Map<String, ?>> items;
 
@@ -145,6 +158,7 @@ public class QueryMetricByPageResponseBody extends TeaModel {
         private Integer total;
 
         private Data(Builder builder) {
+            this.completed = builder.completed;
             this.items = builder.items;
             this.page = builder.page;
             this.pageSize = builder.pageSize;
@@ -157,6 +171,13 @@ public class QueryMetricByPageResponseBody extends TeaModel {
 
         public static Data create() {
             return builder().build();
+        }
+
+        /**
+         * @return completed
+         */
+        public Boolean getCompleted() {
+            return this.completed;
         }
 
         /**
@@ -188,13 +209,22 @@ public class QueryMetricByPageResponseBody extends TeaModel {
         }
 
         public static final class Builder {
+            private Boolean completed; 
             private java.util.List < java.util.Map<String, ?>> items; 
             private Integer page; 
             private Integer pageSize; 
             private Integer total; 
 
             /**
-             * Items.
+             * Completed.
+             */
+            public Builder completed(Boolean completed) {
+                this.completed = completed;
+                return this;
+            }
+
+            /**
+             * The data entries returned.
              */
             public Builder items(java.util.List < java.util.Map<String, ?>> items) {
                 this.items = items;
@@ -202,7 +232,7 @@ public class QueryMetricByPageResponseBody extends TeaModel {
             }
 
             /**
-             * Page.
+             * The page number of the returned page.
              */
             public Builder page(Integer page) {
                 this.page = page;
@@ -210,7 +240,7 @@ public class QueryMetricByPageResponseBody extends TeaModel {
             }
 
             /**
-             * PageSize.
+             * The number of entries returned per page.
              */
             public Builder pageSize(Integer pageSize) {
                 this.pageSize = pageSize;
@@ -218,7 +248,7 @@ public class QueryMetricByPageResponseBody extends TeaModel {
             }
 
             /**
-             * Total.
+             * The total number of entries returned.
              */
             public Builder total(Integer total) {
                 this.total = total;

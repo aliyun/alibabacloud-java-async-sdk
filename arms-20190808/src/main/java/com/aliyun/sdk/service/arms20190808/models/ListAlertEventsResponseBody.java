@@ -50,7 +50,7 @@ public class ListAlertEventsResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * 返回结构体
+         * The struct returned.
          */
         public Builder pageBean(PageBean pageBean) {
             this.pageBean = pageBean;
@@ -58,7 +58,7 @@ public class ListAlertEventsResponseBody extends TeaModel {
         }
 
         /**
-         * 请求ID
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -134,7 +134,7 @@ public class ListAlertEventsResponseBody extends TeaModel {
             private Integer state; 
 
             /**
-             * 告警ID
+             * The ID of the alert.
              */
             public Builder alarmId(Long alarmId) {
                 this.alarmId = alarmId;
@@ -142,7 +142,7 @@ public class ListAlertEventsResponseBody extends TeaModel {
             }
 
             /**
-             * 告警名称
+             * The name of the alert.
              */
             public Builder alarmName(String alarmName) {
                 this.alarmName = alarmName;
@@ -150,7 +150,7 @@ public class ListAlertEventsResponseBody extends TeaModel {
             }
 
             /**
-             * 告警创建时间
+             * The time when the alert was created.
              */
             public Builder createTime(String createTime) {
                 this.createTime = createTime;
@@ -158,7 +158,12 @@ public class ListAlertEventsResponseBody extends TeaModel {
             }
 
             /**
-             * 告警状态(0-待处理，1-处理中，2-已解决）
+             * The status of the alert. Valid values:
+             * <p>
+             * 
+             * *   0: The alert is pending.
+             * *   1: The alert is being handled.
+             * *   2: The alert is cleared.
              */
             public Builder state(Integer state) {
                 this.state = state;
@@ -355,7 +360,7 @@ public class ListAlertEventsResponseBody extends TeaModel {
             private String status; 
 
             /**
-             * 关联告警
+             * The list of associated alerts.
              */
             public Builder alarms(java.util.List < Alarms> alarms) {
                 this.alarms = alarms;
@@ -363,7 +368,7 @@ public class ListAlertEventsResponseBody extends TeaModel {
             }
 
             /**
-             * 告警名称
+             * The name of the alert.
              */
             public Builder alertName(String alertName) {
                 this.alertName = alertName;
@@ -371,7 +376,7 @@ public class ListAlertEventsResponseBody extends TeaModel {
             }
 
             /**
-             * 注释列表
+             * The list of annotations.
              */
             public Builder annotations(String annotations) {
                 this.annotations = annotations;
@@ -379,7 +384,7 @@ public class ListAlertEventsResponseBody extends TeaModel {
             }
 
             /**
-             * 事件描述
+             * The description of the alert event.
              */
             public Builder description(String description) {
                 this.description = description;
@@ -387,7 +392,7 @@ public class ListAlertEventsResponseBody extends TeaModel {
             }
 
             /**
-             * 结束时间
+             * The end time of the alert event.
              */
             public Builder endTime(String endTime) {
                 this.endTime = endTime;
@@ -395,7 +400,7 @@ public class ListAlertEventsResponseBody extends TeaModel {
             }
 
             /**
-             * 事件地址
+             * The URL of the alert event.
              */
             public Builder generatorURL(String generatorURL) {
                 this.generatorURL = generatorURL;
@@ -403,7 +408,7 @@ public class ListAlertEventsResponseBody extends TeaModel {
             }
 
             /**
-             * HandlerName.
+             * The user who handled the alert.
              */
             public Builder handlerName(String handlerName) {
                 this.handlerName = handlerName;
@@ -411,7 +416,7 @@ public class ListAlertEventsResponseBody extends TeaModel {
             }
 
             /**
-             * 集成名称
+             * The name of the alert integration.
              */
             public Builder integrationName(String integrationName) {
                 this.integrationName = integrationName;
@@ -419,7 +424,7 @@ public class ListAlertEventsResponseBody extends TeaModel {
             }
 
             /**
-             * 集成类型
+             * The type of the alert integration.
              */
             public Builder integrationType(String integrationType) {
                 this.integrationType = integrationType;
@@ -427,7 +432,7 @@ public class ListAlertEventsResponseBody extends TeaModel {
             }
 
             /**
-             * 标签列表
+             * The list of tags.
              */
             public Builder labels(String labels) {
                 this.labels = labels;
@@ -435,7 +440,7 @@ public class ListAlertEventsResponseBody extends TeaModel {
             }
 
             /**
-             * 事件接受时间
+             * The time when the alert event was received.
              */
             public Builder receiveTime(String receiveTime) {
                 this.receiveTime = receiveTime;
@@ -443,7 +448,14 @@ public class ListAlertEventsResponseBody extends TeaModel {
             }
 
             /**
-             * 告警等级(critical - p1 , error - p2, warning - p3, page - p4, default - p6)
+             * The severity level of the alert. Valid value:
+             * <p>
+             * 
+             * *   critical: P1
+             * *   error: P2
+             * *   warning: P3
+             * *   page: P4
+             * *   default: P6
              */
             public Builder severity(String severity) {
                 this.severity = severity;
@@ -451,7 +463,7 @@ public class ListAlertEventsResponseBody extends TeaModel {
             }
 
             /**
-             * 开始时间
+             * The start time of the alert event.
              */
             public Builder startTime(String startTime) {
                 this.startTime = startTime;
@@ -459,7 +471,12 @@ public class ListAlertEventsResponseBody extends TeaModel {
             }
 
             /**
-             * 告警状态(Active - 正在发生, Silenced - 被静默, Resolved - 已恢复 )
+             * The status of the alert event. Valid values:
+             * <p>
+             * 
+             * *   Active
+             * *   Silenced
+             * *   Resolved
              */
             public Builder status(String status) {
                 this.status = status;
@@ -536,7 +553,7 @@ public class ListAlertEventsResponseBody extends TeaModel {
             private Long total; 
 
             /**
-             * 告警事件历史信息组
+             * The list of information about historical alert events.
              */
             public Builder events(java.util.List < Events> events) {
                 this.events = events;
@@ -544,7 +561,7 @@ public class ListAlertEventsResponseBody extends TeaModel {
             }
 
             /**
-             * 页数
+             * The number of the page returned.
              */
             public Builder page(Long page) {
                 this.page = page;
@@ -552,7 +569,7 @@ public class ListAlertEventsResponseBody extends TeaModel {
             }
 
             /**
-             * 每页展示数目
+             * The number of entries returned per page.
              */
             public Builder size(Long size) {
                 this.size = size;
@@ -560,7 +577,7 @@ public class ListAlertEventsResponseBody extends TeaModel {
             }
 
             /**
-             * 总数
+             * The total number of returned entries.
              */
             public Builder total(Long total) {
                 this.total = total;

@@ -50,7 +50,7 @@ public class DescribeIMRobotsResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * 分页对象
+         * The returned objects.
          */
         public Builder pageBean(PageBean pageBean) {
             this.pageBean = pageBean;
@@ -58,7 +58,7 @@ public class DescribeIMRobotsResponseBody extends TeaModel {
         }
 
         /**
-         * Id of the request
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -71,7 +71,71 @@ public class DescribeIMRobotsResponseBody extends TeaModel {
 
     } 
 
+    public static class DispatchRules extends TeaModel {
+        @NameInMap("id")
+        private Long id;
+
+        @NameInMap("name")
+        private String name;
+
+        private DispatchRules(Builder builder) {
+            this.id = builder.id;
+            this.name = builder.name;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static DispatchRules create() {
+            return builder().build();
+        }
+
+        /**
+         * @return id
+         */
+        public Long getId() {
+            return this.id;
+        }
+
+        /**
+         * @return name
+         */
+        public String getName() {
+            return this.name;
+        }
+
+        public static final class Builder {
+            private Long id; 
+            private String name; 
+
+            /**
+             * The ID of the notification policy.
+             */
+            public Builder id(Long id) {
+                this.id = id;
+                return this;
+            }
+
+            /**
+             * The name of the notification policy.
+             */
+            public Builder name(String name) {
+                this.name = name;
+                return this;
+            }
+
+            public DispatchRules build() {
+                return new DispatchRules(this);
+            } 
+
+        } 
+
+    }
     public static class AlertIMRobots extends TeaModel {
+        @NameInMap("CreateTime")
+        private String createTime;
+
         @NameInMap("DailyNoc")
         private Boolean dailyNoc;
 
@@ -80,6 +144,9 @@ public class DescribeIMRobotsResponseBody extends TeaModel {
 
         @NameInMap("DingSignKey")
         private String dingSignKey;
+
+        @NameInMap("DispatchRules")
+        private java.util.List < DispatchRules> dispatchRules;
 
         @NameInMap("RobotAddr")
         private String robotAddr;
@@ -94,9 +161,11 @@ public class DescribeIMRobotsResponseBody extends TeaModel {
         private String type;
 
         private AlertIMRobots(Builder builder) {
+            this.createTime = builder.createTime;
             this.dailyNoc = builder.dailyNoc;
             this.dailyNocTime = builder.dailyNocTime;
             this.dingSignKey = builder.dingSignKey;
+            this.dispatchRules = builder.dispatchRules;
             this.robotAddr = builder.robotAddr;
             this.robotId = builder.robotId;
             this.robotName = builder.robotName;
@@ -109,6 +178,13 @@ public class DescribeIMRobotsResponseBody extends TeaModel {
 
         public static AlertIMRobots create() {
             return builder().build();
+        }
+
+        /**
+         * @return createTime
+         */
+        public String getCreateTime() {
+            return this.createTime;
         }
 
         /**
@@ -130,6 +206,13 @@ public class DescribeIMRobotsResponseBody extends TeaModel {
          */
         public String getDingSignKey() {
             return this.dingSignKey;
+        }
+
+        /**
+         * @return dispatchRules
+         */
+        public java.util.List < DispatchRules> getDispatchRules() {
+            return this.dispatchRules;
         }
 
         /**
@@ -161,16 +244,30 @@ public class DescribeIMRobotsResponseBody extends TeaModel {
         }
 
         public static final class Builder {
+            private String createTime; 
             private Boolean dailyNoc; 
             private String dailyNocTime; 
             private String dingSignKey; 
+            private java.util.List < DispatchRules> dispatchRules; 
             private String robotAddr; 
             private Float robotId; 
             private String robotName; 
             private String type; 
 
             /**
-             * 是否发送每日统计信息
+             * The time when the IM chatbot was created.
+             */
+            public Builder createTime(String createTime) {
+                this.createTime = createTime;
+                return this;
+            }
+
+            /**
+             * Indicates whether daily statistics are sent. Valid values:
+             * <p>
+             * 
+             * *   `false` (default): Daily statistics are not sent.
+             * *   `true`: Daily statistics are sent.
              */
             public Builder dailyNoc(Boolean dailyNoc) {
                 this.dailyNoc = dailyNoc;
@@ -178,7 +275,7 @@ public class DescribeIMRobotsResponseBody extends TeaModel {
             }
 
             /**
-             * 每日统计发送时间
+             * The point in time at which the daily statistics are sent. The information that ARMS sends at the specified points in time includes the total number of alerts generated on the current day, the number of cleared alerts, and the number of alerts to be cleared.
              */
             public Builder dailyNocTime(String dailyNocTime) {
                 this.dailyNocTime = dailyNocTime;
@@ -186,7 +283,7 @@ public class DescribeIMRobotsResponseBody extends TeaModel {
             }
 
             /**
-             * DingSignKey.
+             * The signature key of DingTalk. If you specify a signature key, DingTalk authentication is performed by using the signature key. If you do not specify a signature key, a whitelist is used for authentication by default. The keyword of the whitelist is **Alert**.
              */
             public Builder dingSignKey(String dingSignKey) {
                 this.dingSignKey = dingSignKey;
@@ -194,7 +291,15 @@ public class DescribeIMRobotsResponseBody extends TeaModel {
             }
 
             /**
-             * 告警机器人地址
+             * The notification policies.
+             */
+            public Builder dispatchRules(java.util.List < DispatchRules> dispatchRules) {
+                this.dispatchRules = dispatchRules;
+                return this;
+            }
+
+            /**
+             * The webhook URL of the IM chatbot.
              */
             public Builder robotAddr(String robotAddr) {
                 this.robotAddr = robotAddr;
@@ -202,7 +307,7 @@ public class DescribeIMRobotsResponseBody extends TeaModel {
             }
 
             /**
-             * 告警机器人ID
+             * The ID of the IM chatbot.
              */
             public Builder robotId(Float robotId) {
                 this.robotId = robotId;
@@ -210,7 +315,7 @@ public class DescribeIMRobotsResponseBody extends TeaModel {
             }
 
             /**
-             * 告警机器人名称
+             * The name of the IM chatbot.
              */
             public Builder robotName(String robotName) {
                 this.robotName = robotName;
@@ -218,7 +323,11 @@ public class DescribeIMRobotsResponseBody extends TeaModel {
             }
 
             /**
-             * 告警机器人类型
+             * The type of the IM chatbot. Valid values:
+             * <p>
+             * 
+             * *   `dingding`: DingTalk chatbot
+             * *   `wechat`: WeCom chatbot
              */
             public Builder type(String type) {
                 this.type = type;
@@ -295,7 +404,7 @@ public class DescribeIMRobotsResponseBody extends TeaModel {
             private Long total; 
 
             /**
-             * AlertIMRobots.
+             * The queried IM chatbots.
              */
             public Builder alertIMRobots(java.util.List < AlertIMRobots> alertIMRobots) {
                 this.alertIMRobots = alertIMRobots;
@@ -303,7 +412,7 @@ public class DescribeIMRobotsResponseBody extends TeaModel {
             }
 
             /**
-             * 页数
+             * The page number of the returned page.
              */
             public Builder page(Long page) {
                 this.page = page;
@@ -311,7 +420,7 @@ public class DescribeIMRobotsResponseBody extends TeaModel {
             }
 
             /**
-             * 每一页数目
+             * The number of IM chatbots returned per page.
              */
             public Builder size(Long size) {
                 this.size = size;
@@ -319,7 +428,7 @@ public class DescribeIMRobotsResponseBody extends TeaModel {
             }
 
             /**
-             * 总数
+             * The total number of queried IM chatbots.
              */
             public Builder total(Long total) {
                 this.total = total;

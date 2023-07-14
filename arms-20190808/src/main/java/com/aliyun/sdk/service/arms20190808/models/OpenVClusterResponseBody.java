@@ -50,7 +50,7 @@ public class OpenVClusterResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * Data.
+         * The cluster ID.
          */
         public Builder data(String data) {
             this.data = data;
@@ -58,7 +58,7 @@ public class OpenVClusterResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The request ID. You can use the ID to query logs and troubleshoot issues.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

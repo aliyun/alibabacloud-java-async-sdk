@@ -50,7 +50,7 @@ public class ConfigAppResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * Data.
+         * The result of turning on or turning off the main switch of the ARMS agent or the main switch status of the ARMS agent.
          */
         public Builder data(String data) {
             this.data = data;
@@ -58,7 +58,7 @@ public class ConfigAppResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

@@ -50,7 +50,7 @@ public class ListNotificationPoliciesResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * 分页对象
+         * The pages that are returned.
          */
         public Builder pageBean(PageBean pageBean) {
             this.pageBean = pageBean;
@@ -58,7 +58,7 @@ public class ListNotificationPoliciesResponseBody extends TeaModel {
         }
 
         /**
-         * 请求ID
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -122,7 +122,7 @@ public class ListNotificationPoliciesResponseBody extends TeaModel {
             private java.util.List < String > groupingFields; 
 
             /**
-             * 分组间隔时间，选填，默认是30s
+             * The time interval for grouping. Unit: seconds. Default value: 30.
              */
             public Builder groupInterval(Long groupInterval) {
                 this.groupInterval = groupInterval;
@@ -130,7 +130,7 @@ public class ListNotificationPoliciesResponseBody extends TeaModel {
             }
 
             /**
-             * 分组等待时间，选填，默认是5秒
+             * The waiting time for grouping. Unit: seconds. Default value: 5.
              */
             public Builder groupWait(Long groupWait) {
                 this.groupWait = groupWait;
@@ -138,7 +138,7 @@ public class ListNotificationPoliciesResponseBody extends TeaModel {
             }
 
             /**
-             * 分组字段,为空则不分组，默认按照alertname分组
+             * The fields that are used to group events.
              */
             public Builder groupingFields(java.util.List < String > groupingFields) {
                 this.groupingFields = groupingFields;
@@ -203,7 +203,7 @@ public class ListNotificationPoliciesResponseBody extends TeaModel {
             private String value; 
 
             /**
-             * 条件字段
+             * The key of the matching condition.
              */
             public Builder key(String key) {
                 this.key = key;
@@ -211,7 +211,15 @@ public class ListNotificationPoliciesResponseBody extends TeaModel {
             }
 
             /**
-             * 对应关系
+             * The logical operator of the matching condition. Valid values:
+             * <p>
+             * 
+             * *   `eq`: equal to.
+             * *   `neq`: not equal to.
+             * *   `in`: contains.
+             * *   `nin`: does not contain.
+             * *   `re`: regular expression match.
+             * *   `nre`: regular expression mismatch.
              */
             public Builder operator(String operator) {
                 this.operator = operator;
@@ -219,7 +227,7 @@ public class ListNotificationPoliciesResponseBody extends TeaModel {
             }
 
             /**
-             * 条件字段值
+             * The value of the matching condition.
              */
             public Builder value(String value) {
                 this.value = value;
@@ -260,7 +268,7 @@ public class ListNotificationPoliciesResponseBody extends TeaModel {
             private java.util.List < MatchingConditions> matchingConditions; 
 
             /**
-             * 匹配条件
+             * The alert event matching conditions.
              */
             public Builder matchingConditions(java.util.List < MatchingConditions> matchingConditions) {
                 this.matchingConditions = matchingConditions;
@@ -275,6 +283,9 @@ public class ListNotificationPoliciesResponseBody extends TeaModel {
 
     }
     public static class NotifyObjects extends TeaModel {
+        @NameInMap("NotifyChannels")
+        private java.util.List < String > notifyChannels;
+
         @NameInMap("NotifyObjectId")
         private Long notifyObjectId;
 
@@ -285,6 +296,7 @@ public class ListNotificationPoliciesResponseBody extends TeaModel {
         private String notifyObjectType;
 
         private NotifyObjects(Builder builder) {
+            this.notifyChannels = builder.notifyChannels;
             this.notifyObjectId = builder.notifyObjectId;
             this.notifyObjectName = builder.notifyObjectName;
             this.notifyObjectType = builder.notifyObjectType;
@@ -296,6 +308,13 @@ public class ListNotificationPoliciesResponseBody extends TeaModel {
 
         public static NotifyObjects create() {
             return builder().build();
+        }
+
+        /**
+         * @return notifyChannels
+         */
+        public java.util.List < String > getNotifyChannels() {
+            return this.notifyChannels;
         }
 
         /**
@@ -320,12 +339,21 @@ public class ListNotificationPoliciesResponseBody extends TeaModel {
         }
 
         public static final class Builder {
+            private java.util.List < String > notifyChannels; 
             private Long notifyObjectId; 
             private String notifyObjectName; 
             private String notifyObjectType; 
 
             /**
-             * 通知对象ID
+             * 通知对象为联系人时单独的联系方式
+             */
+            public Builder notifyChannels(java.util.List < String > notifyChannels) {
+                this.notifyChannels = notifyChannels;
+                return this;
+            }
+
+            /**
+             * The ID of the contact.
              */
             public Builder notifyObjectId(Long notifyObjectId) {
                 this.notifyObjectId = notifyObjectId;
@@ -333,7 +361,7 @@ public class ListNotificationPoliciesResponseBody extends TeaModel {
             }
 
             /**
-             * 通知对象名称
+             * The name of the contact.
              */
             public Builder notifyObjectName(String notifyObjectName) {
                 this.notifyObjectName = notifyObjectName;
@@ -341,7 +369,13 @@ public class ListNotificationPoliciesResponseBody extends TeaModel {
             }
 
             /**
-             * 通知对象类型，CONTACT, CONTACT_GROUP, ARMS_CONTACT, DING_ROBOT
+             * The type of the contact. Valid values: 
+             * <p>
+             * 
+             * - CONTACT: an individual contact
+             * - CONTACT_GROUP: a contact group
+             * - DING_ROBOT: an instant messaging (IM) robot
+             * - CONTACT_SCHEDULE: a person on duty based on an established schedule
              */
             public Builder notifyObjectType(String notifyObjectType) {
                 this.notifyObjectType = notifyObjectType;
@@ -418,7 +452,7 @@ public class ListNotificationPoliciesResponseBody extends TeaModel {
             private String notifyStartTime; 
 
             /**
-             * 通知渠道
+             * The notification method.
              */
             public Builder notifyChannels(java.util.List < String > notifyChannels) {
                 this.notifyChannels = notifyChannels;
@@ -426,7 +460,7 @@ public class ListNotificationPoliciesResponseBody extends TeaModel {
             }
 
             /**
-             * 通知时间段结束时间
+             * The end time of the notification window.
              */
             public Builder notifyEndTime(String notifyEndTime) {
                 this.notifyEndTime = notifyEndTime;
@@ -434,7 +468,7 @@ public class ListNotificationPoliciesResponseBody extends TeaModel {
             }
 
             /**
-             * 通知对象
+             * The contacts.
              */
             public Builder notifyObjects(java.util.List < NotifyObjects> notifyObjects) {
                 this.notifyObjects = notifyObjects;
@@ -442,7 +476,7 @@ public class ListNotificationPoliciesResponseBody extends TeaModel {
             }
 
             /**
-             * 通知时间段开始时间
+             * The start time of the notification window.
              */
             public Builder notifyStartTime(String notifyStartTime) {
                 this.notifyStartTime = notifyStartTime;
@@ -579,7 +613,7 @@ public class ListNotificationPoliciesResponseBody extends TeaModel {
             private String ttsRecoverContent; 
 
             /**
-             * 邮件内容
+             * The content of the alert notification sent by email.
              */
             public Builder emailContent(String emailContent) {
                 this.emailContent = emailContent;
@@ -587,7 +621,7 @@ public class ListNotificationPoliciesResponseBody extends TeaModel {
             }
 
             /**
-             * 恢复告警邮件内容
+             * The content of the alert resolution notification sent by email.
              */
             public Builder emailRecoverContent(String emailRecoverContent) {
                 this.emailRecoverContent = emailRecoverContent;
@@ -595,7 +629,7 @@ public class ListNotificationPoliciesResponseBody extends TeaModel {
             }
 
             /**
-             * 恢复告警邮件标题
+             * The title of the alert resolution notification sent by email.
              */
             public Builder emailRecoverTitle(String emailRecoverTitle) {
                 this.emailRecoverTitle = emailRecoverTitle;
@@ -603,7 +637,7 @@ public class ListNotificationPoliciesResponseBody extends TeaModel {
             }
 
             /**
-             * 邮件标题
+             * The title of the alert notification sent by email.
              */
             public Builder emailTitle(String emailTitle) {
                 this.emailTitle = emailTitle;
@@ -611,7 +645,7 @@ public class ListNotificationPoliciesResponseBody extends TeaModel {
             }
 
             /**
-             * 机器人告警内容
+             * The content of the alert notification sent by an IM robot.
              */
             public Builder robotContent(String robotContent) {
                 this.robotContent = robotContent;
@@ -619,7 +653,7 @@ public class ListNotificationPoliciesResponseBody extends TeaModel {
             }
 
             /**
-             * 短信内容
+             * The content of the alert notification sent by text message.
              */
             public Builder smsContent(String smsContent) {
                 this.smsContent = smsContent;
@@ -627,7 +661,7 @@ public class ListNotificationPoliciesResponseBody extends TeaModel {
             }
 
             /**
-             * 恢复告警短信内容
+             * The content of the alert resolution notification sent by text message.
              */
             public Builder smsRecoverContent(String smsRecoverContent) {
                 this.smsRecoverContent = smsRecoverContent;
@@ -635,7 +669,7 @@ public class ListNotificationPoliciesResponseBody extends TeaModel {
             }
 
             /**
-             * 智能语音告警内容
+             * The content of the alert notification sent by phone.
              */
             public Builder ttsContent(String ttsContent) {
                 this.ttsContent = ttsContent;
@@ -643,7 +677,7 @@ public class ListNotificationPoliciesResponseBody extends TeaModel {
             }
 
             /**
-             * 智能语音恢复告警内容
+             * The content of the alert resolution notification sent by phone.
              */
             public Builder ttsRecoverContent(String ttsRecoverContent) {
                 this.ttsRecoverContent = ttsRecoverContent;
@@ -804,7 +838,7 @@ public class ListNotificationPoliciesResponseBody extends TeaModel {
             private Boolean sendRecoverMessage; 
 
             /**
-             * 升级规则ID
+             * The ID of the escalation rule.
              */
             public Builder escalationPolicyId(Long escalationPolicyId) {
                 this.escalationPolicyId = escalationPolicyId;
@@ -812,7 +846,7 @@ public class ListNotificationPoliciesResponseBody extends TeaModel {
             }
 
             /**
-             * 分组规则
+             * The grouping rule for alert events.
              */
             public Builder groupRule(GroupRule groupRule) {
                 this.groupRule = groupRule;
@@ -820,7 +854,7 @@ public class ListNotificationPoliciesResponseBody extends TeaModel {
             }
 
             /**
-             * 通知策略ID
+             * The ID of the notification policy.
              */
             public Builder id(Long id) {
                 this.id = id;
@@ -828,7 +862,7 @@ public class ListNotificationPoliciesResponseBody extends TeaModel {
             }
 
             /**
-             * 集成ID
+             * The integration ID of the ticket system to which alerts are pushed.
              */
             public Builder integrationId(Long integrationId) {
                 this.integrationId = integrationId;
@@ -836,7 +870,7 @@ public class ListNotificationPoliciesResponseBody extends TeaModel {
             }
 
             /**
-             * 事件匹配规则列表
+             * The alert event matching rules.
              */
             public Builder matchingRules(java.util.List < MatchingRules> matchingRules) {
                 this.matchingRules = matchingRules;
@@ -844,7 +878,7 @@ public class ListNotificationPoliciesResponseBody extends TeaModel {
             }
 
             /**
-             * 通知策略名称
+             * The name of the notification policy.
              */
             public Builder name(String name) {
                 this.name = name;
@@ -852,7 +886,7 @@ public class ListNotificationPoliciesResponseBody extends TeaModel {
             }
 
             /**
-             * 通知规则
+             * The notification rules.
              */
             public Builder notifyRule(NotifyRule notifyRule) {
                 this.notifyRule = notifyRule;
@@ -860,7 +894,7 @@ public class ListNotificationPoliciesResponseBody extends TeaModel {
             }
 
             /**
-             * 通知模板
+             * The notification templates.
              */
             public Builder notifyTemplate(NotifyTemplate notifyTemplate) {
                 this.notifyTemplate = notifyTemplate;
@@ -868,7 +902,11 @@ public class ListNotificationPoliciesResponseBody extends TeaModel {
             }
 
             /**
-             * 是否重复通知
+             * Indicates whether the system repeatedly sends notifications for a long-lasting unresolved alert. Default value: true. Valid values:  
+             * <p>
+             * 
+             * - `true`: The system repeatedly sends notifications for a long-lasting unresolved alert at a specified time interval.
+             * - `false`: The system sends a notification for a long-lasting unresolved alert based on an escalation policy.
              */
             public Builder repeat(Boolean repeat) {
                 this.repeat = repeat;
@@ -876,7 +914,7 @@ public class ListNotificationPoliciesResponseBody extends TeaModel {
             }
 
             /**
-             * 重复通知时间间隔
+             * The time interval at which notifications are sent for a long-lasting unresolved alert. Unit: seconds.
              */
             public Builder repeatInterval(Long repeatInterval) {
                 this.repeatInterval = repeatInterval;
@@ -884,7 +922,11 @@ public class ListNotificationPoliciesResponseBody extends TeaModel {
             }
 
             /**
-             * 是否发送恢复通知
+             * Specifies whether the status of an alert automatically changes to Resolved when all events related to the alert change to the Restored state. The system notifies contacts when the alert status changes to Resolved.  
+             * <p>
+             * 
+             * - `true`: The system sends a notification. This is the default value.
+             * - `false`: The system does not send a notification.
              */
             public Builder sendRecoverMessage(Boolean sendRecoverMessage) {
                 this.sendRecoverMessage = sendRecoverMessage;
@@ -961,7 +1003,7 @@ public class ListNotificationPoliciesResponseBody extends TeaModel {
             private Long total; 
 
             /**
-             * 通知策略对象
+             * The information about the notification policies.
              */
             public Builder notificationPolicies(java.util.List < NotificationPolicies> notificationPolicies) {
                 this.notificationPolicies = notificationPolicies;
@@ -969,7 +1011,7 @@ public class ListNotificationPoliciesResponseBody extends TeaModel {
             }
 
             /**
-             * 页数
+             * The number of the page returned.
              */
             public Builder page(Long page) {
                 this.page = page;
@@ -977,7 +1019,7 @@ public class ListNotificationPoliciesResponseBody extends TeaModel {
             }
 
             /**
-             * 每页展示数目
+             * The number of entries that are returned on each page.
              */
             public Builder size(Long size) {
                 this.size = size;
@@ -985,7 +1027,7 @@ public class ListNotificationPoliciesResponseBody extends TeaModel {
             }
 
             /**
-             * 总数
+             * The number of notification policies that are returned.
              */
             public Builder total(Long total) {
                 this.total = total;

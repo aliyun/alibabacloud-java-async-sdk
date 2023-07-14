@@ -112,7 +112,7 @@ public class ListScenarioRequest extends Request {
         } 
 
         /**
-         * AppId.
+         * The ID of the application.
          */
         public Builder appId(String appId) {
             this.putQueryParameter("AppId", appId);
@@ -121,7 +121,7 @@ public class ListScenarioRequest extends Request {
         }
 
         /**
-         * Name.
+         * The name of the business monitoring job.
          */
         public Builder name(String name) {
             this.putQueryParameter("Name", name);
@@ -130,7 +130,7 @@ public class ListScenarioRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * The ID of the region.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -139,7 +139,13 @@ public class ListScenarioRequest extends Request {
         }
 
         /**
-         * Scenario.
+         * The scenario where the business monitoring job is used. Valid values:
+         * <p>
+         * 
+         * *   `USER-DEFINED`: user-defined. This is the default value.
+         * *   `EDAS-ROLLOUT`: application release in Enterprise Distributed Application Service (EDAS)
+         * *   `OAM-ROLLOUT`: application release based on Open Application Model (OAM)
+         * *   `MSC-CANARY`: canary release based on Microservice Engine (MSE)
          */
         public Builder scenario(String scenario) {
             this.putQueryParameter("Scenario", scenario);
@@ -148,7 +154,7 @@ public class ListScenarioRequest extends Request {
         }
 
         /**
-         * Sign.
+         * The code of the business monitoring job. Set this parameter when you know the code of the business monitoring job you want to query.
          */
         public Builder sign(String sign) {
             this.putQueryParameter("Sign", sign);

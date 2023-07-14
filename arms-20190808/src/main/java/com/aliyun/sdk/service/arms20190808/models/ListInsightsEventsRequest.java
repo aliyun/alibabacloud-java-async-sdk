@@ -113,7 +113,7 @@ public class ListInsightsEventsRequest extends Request {
         } 
 
         /**
-         * EndTime.
+         * The details of the event.
          */
         public Builder endTime(String endTime) {
             this.putQueryParameter("EndTime", endTime);
@@ -122,7 +122,7 @@ public class ListInsightsEventsRequest extends Request {
         }
 
         /**
-         * InsightsTypes.
+         * Average response-time spikes of application services.
          */
         public Builder insightsTypes(String insightsTypes) {
             this.putQueryParameter("InsightsTypes", insightsTypes);
@@ -131,7 +131,13 @@ public class ListInsightsEventsRequest extends Request {
         }
 
         /**
-         * Pid.
+         * The types of the events that you want to query. Separate multiple event types with commas (,). If you do not specify this parameter, all events are queried.
+         * <p>
+         * 
+         * *   errorIncrease: API error-rate spike events. Examples: HTTP API error-rate spike events and Dubbo API error-rate spike events.
+         * *   topErrorIncrease: the top five API error-rate spike events with the highest traffic.
+         * *   topRtIncrease: API response-time spike events. Examples: HTTP API response-time spike events and Dubbo API response-time spike events.
+         * *   rtIncrease: the top five API response-time spike events with the highest traffic.
          */
         public Builder pid(String pid) {
             this.putQueryParameter("Pid", pid);
@@ -140,7 +146,7 @@ public class ListInsightsEventsRequest extends Request {
         }
 
         /**
-         * 地域
+         * The end of the time range to query. The value is a timestamp.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -149,7 +155,7 @@ public class ListInsightsEventsRequest extends Request {
         }
 
         /**
-         * StartTime.
+         * The ID of the request.
          */
         public Builder startTime(String startTime) {
             this.putQueryParameter("StartTime", startTime);

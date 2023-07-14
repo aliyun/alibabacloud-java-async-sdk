@@ -55,7 +55,7 @@ public class DeleteNotificationPolicyRequest extends Request {
         } 
 
         /**
-         * 通知策略ID
+         * Deletes a notification policy based on its ID.
          */
         public Builder id(Long id) {
             this.putQueryParameter("Id", id);

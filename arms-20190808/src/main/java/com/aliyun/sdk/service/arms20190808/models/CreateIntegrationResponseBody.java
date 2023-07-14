@@ -58,7 +58,7 @@ public class CreateIntegrationResponseBody extends TeaModel {
         }
 
         /**
-         * Id of the request
+         * RequestId.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -158,7 +158,7 @@ public class CreateIntegrationResponseBody extends TeaModel {
             private Long recoverTime; 
 
             /**
-             * 是否开启恢复，默认true
+             * AutoRecover.
              */
             public Builder autoRecover(Boolean autoRecover) {
                 this.autoRecover = autoRecover;
@@ -166,7 +166,7 @@ public class CreateIntegrationResponseBody extends TeaModel {
             }
 
             /**
-             * 集成描述
+             * Description.
              */
             public Builder description(String description) {
                 this.description = description;
@@ -174,7 +174,7 @@ public class CreateIntegrationResponseBody extends TeaModel {
             }
 
             /**
-             * 集成ID
+             * IntegrationId.
              */
             public Builder integrationId(Long integrationId) {
                 this.integrationId = integrationId;
@@ -182,7 +182,7 @@ public class CreateIntegrationResponseBody extends TeaModel {
             }
 
             /**
-             * 集成名称
+             * IntegrationName.
              */
             public Builder integrationName(String integrationName) {
                 this.integrationName = integrationName;
@@ -190,7 +190,7 @@ public class CreateIntegrationResponseBody extends TeaModel {
             }
 
             /**
-             * 集成产品类型
+             * IntegrationProductType.
              */
             public Builder integrationProductType(String integrationProductType) {
                 this.integrationProductType = integrationProductType;
@@ -198,7 +198,7 @@ public class CreateIntegrationResponseBody extends TeaModel {
             }
 
             /**
-             * 恢复时间，默认300s
+             * RecoverTime.
              */
             public Builder recoverTime(Long recoverTime) {
                 this.recoverTime = recoverTime;

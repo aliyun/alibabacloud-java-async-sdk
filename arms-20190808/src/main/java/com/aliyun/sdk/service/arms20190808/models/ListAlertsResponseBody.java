@@ -50,7 +50,7 @@ public class ListAlertsResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * 返回结构体
+         * PageBean.
          */
         public Builder pageBean(PageBean pageBean) {
             this.pageBean = pageBean;
@@ -58,7 +58,7 @@ public class ListAlertsResponseBody extends TeaModel {
         }
 
         /**
-         * 请求ID
+         * RequestId.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -146,7 +146,7 @@ public class ListAlertsResponseBody extends TeaModel {
             private Long type; 
 
             /**
-             * 通知内容
+             * Content.
              */
             public Builder content(String content) {
                 this.content = content;
@@ -154,7 +154,7 @@ public class ListAlertsResponseBody extends TeaModel {
             }
 
             /**
-             * 描述
+             * Description.
              */
             public Builder description(String description) {
                 this.description = description;
@@ -162,7 +162,7 @@ public class ListAlertsResponseBody extends TeaModel {
             }
 
             /**
-             * 处理人名称
+             * HandlerName.
              */
             public Builder handlerName(String handlerName) {
                 this.handlerName = handlerName;
@@ -170,7 +170,7 @@ public class ListAlertsResponseBody extends TeaModel {
             }
 
             /**
-             * 时间
+             * Time.
              */
             public Builder time(String time) {
                 this.time = time;
@@ -178,7 +178,7 @@ public class ListAlertsResponseBody extends TeaModel {
             }
 
             /**
-             * 活动类型
+             * Type.
              */
             public Builder type(Long type) {
                 this.type = type;
@@ -351,7 +351,7 @@ public class ListAlertsResponseBody extends TeaModel {
             private String state; 
 
             /**
-             * 事件名称
+             * AlertName.
              */
             public Builder alertName(String alertName) {
                 this.alertName = alertName;
@@ -359,7 +359,7 @@ public class ListAlertsResponseBody extends TeaModel {
             }
 
             /**
-             * 注释列表
+             * Annotations.
              */
             public Builder annotations(String annotations) {
                 this.annotations = annotations;
@@ -367,7 +367,7 @@ public class ListAlertsResponseBody extends TeaModel {
             }
 
             /**
-             * 事件描述
+             * Description.
              */
             public Builder description(String description) {
                 this.description = description;
@@ -375,7 +375,7 @@ public class ListAlertsResponseBody extends TeaModel {
             }
 
             /**
-             * 结束时间
+             * EndTime.
              */
             public Builder endTime(String endTime) {
                 this.endTime = endTime;
@@ -383,7 +383,7 @@ public class ListAlertsResponseBody extends TeaModel {
             }
 
             /**
-             * 事件地址
+             * GeneratorURL.
              */
             public Builder generatorURL(String generatorURL) {
                 this.generatorURL = generatorURL;
@@ -391,7 +391,7 @@ public class ListAlertsResponseBody extends TeaModel {
             }
 
             /**
-             * 集成名称
+             * IntegrationName.
              */
             public Builder integrationName(String integrationName) {
                 this.integrationName = integrationName;
@@ -399,7 +399,7 @@ public class ListAlertsResponseBody extends TeaModel {
             }
 
             /**
-             * 集成类型
+             * IntegrationType.
              */
             public Builder integrationType(String integrationType) {
                 this.integrationType = integrationType;
@@ -407,7 +407,7 @@ public class ListAlertsResponseBody extends TeaModel {
             }
 
             /**
-             * 标签列表
+             * Labels.
              */
             public Builder labels(String labels) {
                 this.labels = labels;
@@ -415,7 +415,7 @@ public class ListAlertsResponseBody extends TeaModel {
             }
 
             /**
-             * 事件接受时间
+             * ReceiveTime.
              */
             public Builder receiveTime(String receiveTime) {
                 this.receiveTime = receiveTime;
@@ -423,7 +423,7 @@ public class ListAlertsResponseBody extends TeaModel {
             }
 
             /**
-             * 事件等级
+             * Severity.
              */
             public Builder severity(String severity) {
                 this.severity = severity;
@@ -431,7 +431,7 @@ public class ListAlertsResponseBody extends TeaModel {
             }
 
             /**
-             * 开始时间
+             * StartTime.
              */
             public Builder startTime(String startTime) {
                 this.startTime = startTime;
@@ -439,7 +439,7 @@ public class ListAlertsResponseBody extends TeaModel {
             }
 
             /**
-             * 告警状态Active("Active"),      * Inhibited("Inhibited"),      * Silenced("Silenced"),      * Resolved("Resolved")
+             * State.
              */
             public Builder state(String state) {
                 this.state = state;
@@ -478,6 +478,9 @@ public class ListAlertsResponseBody extends TeaModel {
         @NameInMap("Severity")
         private String severity;
 
+        @NameInMap("Solution")
+        private String solution;
+
         @NameInMap("State")
         private Long state;
 
@@ -490,6 +493,7 @@ public class ListAlertsResponseBody extends TeaModel {
             this.dispatchRuleId = builder.dispatchRuleId;
             this.dispatchRuleName = builder.dispatchRuleName;
             this.severity = builder.severity;
+            this.solution = builder.solution;
             this.state = builder.state;
         }
 
@@ -558,6 +562,13 @@ public class ListAlertsResponseBody extends TeaModel {
         }
 
         /**
+         * @return solution
+         */
+        public String getSolution() {
+            return this.solution;
+        }
+
+        /**
          * @return state
          */
         public Long getState() {
@@ -573,10 +584,11 @@ public class ListAlertsResponseBody extends TeaModel {
             private Float dispatchRuleId; 
             private String dispatchRuleName; 
             private String severity; 
+            private String solution; 
             private Long state; 
 
             /**
-             * 活动列表
+             * Activities.
              */
             public Builder activities(java.util.List < Activities> activities) {
                 this.activities = activities;
@@ -584,7 +596,7 @@ public class ListAlertsResponseBody extends TeaModel {
             }
 
             /**
-             * 事件列表
+             * AlertEvents.
              */
             public Builder alertEvents(java.util.List < AlertEvents> alertEvents) {
                 this.alertEvents = alertEvents;
@@ -592,7 +604,7 @@ public class ListAlertsResponseBody extends TeaModel {
             }
 
             /**
-             * 告警ID
+             * AlertId.
              */
             public Builder alertId(Long alertId) {
                 this.alertId = alertId;
@@ -600,7 +612,7 @@ public class ListAlertsResponseBody extends TeaModel {
             }
 
             /**
-             * 告警名称
+             * AlertName.
              */
             public Builder alertName(String alertName) {
                 this.alertName = alertName;
@@ -608,7 +620,7 @@ public class ListAlertsResponseBody extends TeaModel {
             }
 
             /**
-             * 创建时间
+             * CreateTime.
              */
             public Builder createTime(String createTime) {
                 this.createTime = createTime;
@@ -616,7 +628,7 @@ public class ListAlertsResponseBody extends TeaModel {
             }
 
             /**
-             * 通知策略ID
+             * DispatchRuleId.
              */
             public Builder dispatchRuleId(Float dispatchRuleId) {
                 this.dispatchRuleId = dispatchRuleId;
@@ -624,7 +636,7 @@ public class ListAlertsResponseBody extends TeaModel {
             }
 
             /**
-             * 通知策略名称
+             * DispatchRuleName.
              */
             public Builder dispatchRuleName(String dispatchRuleName) {
                 this.dispatchRuleName = dispatchRuleName;
@@ -632,7 +644,7 @@ public class ListAlertsResponseBody extends TeaModel {
             }
 
             /**
-             * 告警等级(P1~P6)
+             * Severity.
              */
             public Builder severity(String severity) {
                 this.severity = severity;
@@ -640,7 +652,15 @@ public class ListAlertsResponseBody extends TeaModel {
             }
 
             /**
-             * 告警状态(0 - 待处理， 1 - 处理中， 2 - 已处理)
+             * Solution.
+             */
+            public Builder solution(String solution) {
+                this.solution = solution;
+                return this;
+            }
+
+            /**
+             * State.
              */
             public Builder state(Long state) {
                 this.state = state;
@@ -717,7 +737,7 @@ public class ListAlertsResponseBody extends TeaModel {
             private Long total; 
 
             /**
-             * 告警发送历史信息组
+             * ListAlerts.
              */
             public Builder listAlerts(java.util.List < ListAlerts> listAlerts) {
                 this.listAlerts = listAlerts;
@@ -725,7 +745,7 @@ public class ListAlertsResponseBody extends TeaModel {
             }
 
             /**
-             * 页数
+             * Page.
              */
             public Builder page(Long page) {
                 this.page = page;
@@ -733,7 +753,7 @@ public class ListAlertsResponseBody extends TeaModel {
             }
 
             /**
-             * 每页展示数目
+             * Size.
              */
             public Builder size(Long size) {
                 this.size = size;
@@ -741,7 +761,7 @@ public class ListAlertsResponseBody extends TeaModel {
             }
 
             /**
-             * 总数
+             * Total.
              */
             public Builder total(Long total) {
                 this.total = total;

@@ -126,7 +126,7 @@ public class ListNotificationPoliciesRequest extends Request {
         } 
 
         /**
-         * Ids.
+         * The ID of the notification policy.
          */
         public Builder ids(String ids) {
             this.putQueryParameter("Ids", ids);
@@ -135,7 +135,11 @@ public class ListNotificationPoliciesRequest extends Request {
         }
 
         /**
-         * 是否查询详情信息
+         * Specifies whether to query the details about notification policies. Valid values:
+         * <p>
+         * 
+         * *   `true`: Details about notification policies are queried.
+         * *   `false`: Details about notification policies are not queried.
          */
         public Builder isDetail(Boolean isDetail) {
             this.putQueryParameter("IsDetail", isDetail);
@@ -144,7 +148,7 @@ public class ListNotificationPoliciesRequest extends Request {
         }
 
         /**
-         * 通知策略名称
+         * The name of the notification policy.
          */
         public Builder name(String name) {
             this.putQueryParameter("Name", name);
@@ -153,7 +157,7 @@ public class ListNotificationPoliciesRequest extends Request {
         }
 
         /**
-         * 页数
+         * The number of the page to return.
          */
         public Builder page(Long page) {
             this.putQueryParameter("Page", page);
@@ -162,7 +166,7 @@ public class ListNotificationPoliciesRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * The ID of the region.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -171,7 +175,7 @@ public class ListNotificationPoliciesRequest extends Request {
         }
 
         /**
-         * 每页展示数目
+         * The number of entries to return on each page.
          */
         public Builder size(Long size) {
             this.putQueryParameter("Size", size);

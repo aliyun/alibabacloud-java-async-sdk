@@ -50,7 +50,7 @@ public class SearchTracesResponseBody extends TeaModel {
         private java.util.List < TraceInfos> traceInfos; 
 
         /**
-         * RequestId.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -58,7 +58,7 @@ public class SearchTracesResponseBody extends TeaModel {
         }
 
         /**
-         * TraceInfos.
+         * The details of the returned traces.
          */
         public Builder traceInfos(java.util.List < TraceInfos> traceInfos) {
             this.traceInfos = traceInfos;
@@ -158,7 +158,7 @@ public class SearchTracesResponseBody extends TeaModel {
             private String traceID; 
 
             /**
-             * Duration.
+             * The amount of time consumed by the trace. Unit: milliseconds.
              */
             public Builder duration(Long duration) {
                 this.duration = duration;
@@ -166,7 +166,7 @@ public class SearchTracesResponseBody extends TeaModel {
             }
 
             /**
-             * OperationName.
+             * The name of the traced span.
              */
             public Builder operationName(String operationName) {
                 this.operationName = operationName;
@@ -174,7 +174,7 @@ public class SearchTracesResponseBody extends TeaModel {
             }
 
             /**
-             * ServiceIp.
+             * The IP address of the host where the application resides.
              */
             public Builder serviceIp(String serviceIp) {
                 this.serviceIp = serviceIp;
@@ -182,7 +182,7 @@ public class SearchTracesResponseBody extends TeaModel {
             }
 
             /**
-             * ServiceName.
+             * The name of the application.
              */
             public Builder serviceName(String serviceName) {
                 this.serviceName = serviceName;
@@ -190,7 +190,7 @@ public class SearchTracesResponseBody extends TeaModel {
             }
 
             /**
-             * Timestamp.
+             * The timestamp.
              */
             public Builder timestamp(Long timestamp) {
                 this.timestamp = timestamp;
@@ -198,7 +198,7 @@ public class SearchTracesResponseBody extends TeaModel {
             }
 
             /**
-             * TraceID.
+             * The trace ID.
              */
             public Builder traceID(String traceID) {
                 this.traceID = traceID;

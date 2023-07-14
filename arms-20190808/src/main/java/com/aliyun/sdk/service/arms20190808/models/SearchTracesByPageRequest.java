@@ -22,6 +22,10 @@ public class SearchTracesByPageRequest extends Request {
     private java.util.List < ExclusionFilters> exclusionFilters;
 
     @Query
+    @NameInMap("IsError")
+    private Boolean isError;
+
+    @Query
     @NameInMap("MinDuration")
     private Long minDuration;
 
@@ -71,6 +75,7 @@ public class SearchTracesByPageRequest extends Request {
         super(builder);
         this.endTime = builder.endTime;
         this.exclusionFilters = builder.exclusionFilters;
+        this.isError = builder.isError;
         this.minDuration = builder.minDuration;
         this.operationName = builder.operationName;
         this.pageNumber = builder.pageNumber;
@@ -109,6 +114,13 @@ public class SearchTracesByPageRequest extends Request {
      */
     public java.util.List < ExclusionFilters> getExclusionFilters() {
         return this.exclusionFilters;
+    }
+
+    /**
+     * @return isError
+     */
+    public Boolean getIsError() {
+        return this.isError;
     }
 
     /**
@@ -191,6 +203,7 @@ public class SearchTracesByPageRequest extends Request {
     public static final class Builder extends Request.Builder<SearchTracesByPageRequest, Builder> {
         private Long endTime; 
         private java.util.List < ExclusionFilters> exclusionFilters; 
+        private Boolean isError; 
         private Long minDuration; 
         private String operationName; 
         private Integer pageNumber; 
@@ -211,6 +224,7 @@ public class SearchTracesByPageRequest extends Request {
             super(request);
             this.endTime = request.endTime;
             this.exclusionFilters = request.exclusionFilters;
+            this.isError = request.isError;
             this.minDuration = request.minDuration;
             this.operationName = request.operationName;
             this.pageNumber = request.pageNumber;
@@ -225,7 +239,7 @@ public class SearchTracesByPageRequest extends Request {
         } 
 
         /**
-         * EndTime.
+         * The end of the time range to query. Unit: milliseconds.
          */
         public Builder endTime(Long endTime) {
             this.putQueryParameter("EndTime", endTime);
@@ -234,7 +248,7 @@ public class SearchTracesByPageRequest extends Request {
         }
 
         /**
-         * ExclusionFilters.
+         * The filter conditions.
          */
         public Builder exclusionFilters(java.util.List < ExclusionFilters> exclusionFilters) {
             this.putQueryParameter("ExclusionFilters", exclusionFilters);
@@ -243,7 +257,19 @@ public class SearchTracesByPageRequest extends Request {
         }
 
         /**
-         * MinDuration.
+         * 是否过滤错误的调用链。
+         * <p>
+         * - `true`：过滤
+         * - `false`（默认）：不过滤
+         */
+        public Builder isError(Boolean isError) {
+            this.putQueryParameter("IsError", isError);
+            this.isError = isError;
+            return this;
+        }
+
+        /**
+         * The minimum amount of time consumed by traces. Unit: milliseconds.
          */
         public Builder minDuration(Long minDuration) {
             this.putQueryParameter("MinDuration", minDuration);
@@ -252,7 +278,7 @@ public class SearchTracesByPageRequest extends Request {
         }
 
         /**
-         * OperationName.
+         * The name of the traced span.
          */
         public Builder operationName(String operationName) {
             this.putQueryParameter("OperationName", operationName);
@@ -261,7 +287,7 @@ public class SearchTracesByPageRequest extends Request {
         }
 
         /**
-         * PageNumber.
+         * The number of the page to return.
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -270,7 +296,7 @@ public class SearchTracesByPageRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * The number of entries to return on each page. Maximum value: 100.
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -279,7 +305,7 @@ public class SearchTracesByPageRequest extends Request {
         }
 
         /**
-         * Pid.
+         * The application ID.
          */
         public Builder pid(String pid) {
             this.putQueryParameter("Pid", pid);
@@ -288,7 +314,7 @@ public class SearchTracesByPageRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * The region ID.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -297,7 +323,11 @@ public class SearchTracesByPageRequest extends Request {
         }
 
         /**
-         * Reverse.
+         * Specifies whether to sort the query results in chronological order or reverse chronological order. Default value: `false`.
+         * <p>
+         * 
+         * *   `true`: sorts the query results in reverse chronological order.
+         * *   `false`: sorts the query results in chronological order.
          */
         public Builder reverse(Boolean reverse) {
             this.putQueryParameter("Reverse", reverse);
@@ -306,7 +336,7 @@ public class SearchTracesByPageRequest extends Request {
         }
 
         /**
-         * ServiceIp.
+         * The IP address of the host where the application resides.
          */
         public Builder serviceIp(String serviceIp) {
             this.putQueryParameter("ServiceIp", serviceIp);
@@ -315,7 +345,7 @@ public class SearchTracesByPageRequest extends Request {
         }
 
         /**
-         * ServiceName.
+         * The name of the application.
          */
         public Builder serviceName(String serviceName) {
             this.putQueryParameter("ServiceName", serviceName);
@@ -324,7 +354,7 @@ public class SearchTracesByPageRequest extends Request {
         }
 
         /**
-         * StartTime.
+         * The beginning of the time range to query. Unit: milliseconds.
          */
         public Builder startTime(Long startTime) {
             this.putQueryParameter("StartTime", startTime);
@@ -333,7 +363,7 @@ public class SearchTracesByPageRequest extends Request {
         }
 
         /**
-         * Tags.
+         * The list of tags.
          */
         public Builder tags(java.util.List < Tags> tags) {
             this.putQueryParameter("Tags", tags);
@@ -387,7 +417,7 @@ public class SearchTracesByPageRequest extends Request {
             private String value; 
 
             /**
-             * Key.
+             * The key that is used to filter the query results.
              */
             public Builder key(String key) {
                 this.key = key;
@@ -395,7 +425,7 @@ public class SearchTracesByPageRequest extends Request {
             }
 
             /**
-             * Value.
+             * The value of the key that is used to filter the query results.
              */
             public Builder value(String value) {
                 this.value = value;
@@ -448,7 +478,19 @@ public class SearchTracesByPageRequest extends Request {
             private String value; 
 
             /**
-             * Key.
+             * The key of the tag. The following system preset fields are provided:
+             * <p>
+             * 
+             * *   traceId: the ID of the trace.
+             * *   serverApp: the name of the server application.
+             * *   clientApp: the name of the client application.
+             * *   service: the name of the operation.
+             * *   rpc: the type of the call.
+             * *   msOfSpan: the duration exceeds a specific value.
+             * *   clientIp: the IP address of the client.
+             * *   serverIp: the IP address of the server.
+             * *   isError: specifies whether the call is abnormal.
+             * *   hasTprof: contains only thread profiling.
              */
             public Builder key(String key) {
                 this.key = key;
@@ -456,7 +498,7 @@ public class SearchTracesByPageRequest extends Request {
             }
 
             /**
-             * Value.
+             * The value of the tag.
              */
             public Builder value(String value) {
                 this.value = value;

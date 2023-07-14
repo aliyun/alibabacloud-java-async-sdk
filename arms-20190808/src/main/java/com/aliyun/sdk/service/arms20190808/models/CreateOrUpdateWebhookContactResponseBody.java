@@ -50,7 +50,7 @@ public class CreateOrUpdateWebhookContactResponseBody extends TeaModel {
         private WebhookContact webhookContact; 
 
         /**
-         * Id of the request
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -58,7 +58,7 @@ public class CreateOrUpdateWebhookContactResponseBody extends TeaModel {
         }
 
         /**
-         * WebhookContact.
+         * The returned webhook alert contact.
          */
         public Builder webhookContact(WebhookContact webhookContact) {
             this.webhookContact = webhookContact;
@@ -158,7 +158,7 @@ public class CreateOrUpdateWebhookContactResponseBody extends TeaModel {
             private String url; 
 
             /**
-             * http请求头
+             * The HTTP request headers.
              */
             public Builder bizHeaders(String bizHeaders) {
                 this.bizHeaders = bizHeaders;
@@ -166,7 +166,7 @@ public class CreateOrUpdateWebhookContactResponseBody extends TeaModel {
             }
 
             /**
-             * http请求参数
+             * The parameters in the HTTP request.
              */
             public Builder bizParams(String bizParams) {
                 this.bizParams = bizParams;
@@ -174,7 +174,7 @@ public class CreateOrUpdateWebhookContactResponseBody extends TeaModel {
             }
 
             /**
-             * 告警通知模板
+             * The alert notification template.
              */
             public Builder body(String body) {
                 this.body = body;
@@ -182,7 +182,11 @@ public class CreateOrUpdateWebhookContactResponseBody extends TeaModel {
             }
 
             /**
-             * Http请求方法
+             * The HTTP request method.
+             * <p>
+             * 
+             * *   Post
+             * *   Get
              */
             public Builder method(String method) {
                 this.method = method;
@@ -190,7 +194,7 @@ public class CreateOrUpdateWebhookContactResponseBody extends TeaModel {
             }
 
             /**
-             * 告警恢复模板
+             * The notification template for clearing alerts.
              */
             public Builder recoverBody(String recoverBody) {
                 this.recoverBody = recoverBody;
@@ -198,7 +202,7 @@ public class CreateOrUpdateWebhookContactResponseBody extends TeaModel {
             }
 
             /**
-             * url
+             * The URL of the request method.
              */
             public Builder url(String url) {
                 this.url = url;
@@ -263,7 +267,7 @@ public class CreateOrUpdateWebhookContactResponseBody extends TeaModel {
             private String webhookName; 
 
             /**
-             * Webhook.
+             * The information about the webhook alert contact.
              */
             public Builder webhook(Webhook webhook) {
                 this.webhook = webhook;
@@ -271,7 +275,7 @@ public class CreateOrUpdateWebhookContactResponseBody extends TeaModel {
             }
 
             /**
-             * 告警webhook ID
+             * The ID of the webhook alert contact.
              */
             public Builder webhookId(Float webhookId) {
                 this.webhookId = webhookId;
@@ -279,7 +283,7 @@ public class CreateOrUpdateWebhookContactResponseBody extends TeaModel {
             }
 
             /**
-             * 告警webhook名称
+             * The name of the webhook alert contact.
              */
             public Builder webhookName(String webhookName) {
                 this.webhookName = webhookName;

@@ -86,7 +86,13 @@ public class ListTraceAppsResponseBody extends TeaModel {
         private java.util.List < TraceApps> traceApps; 
 
         /**
-         * Code.
+         * The HTTP status code returned for the request. Valid values:
+         * <p>
+         * 
+         * *   `2XX`: The request is successful.
+         * *   `3XX`: A redirection message is returned.
+         * *   `4XX`: The request is invalid.
+         * *   `5XX`: A server error occurs.
          */
         public Builder code(Integer code) {
             this.code = code;
@@ -94,7 +100,7 @@ public class ListTraceAppsResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * The error message returned if the request parameters are invalid.
          */
         public Builder message(String message) {
             this.message = message;
@@ -102,7 +108,7 @@ public class ListTraceAppsResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -110,7 +116,11 @@ public class ListTraceAppsResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * Indicates whether the call was successful. Valid values:
+         * <p>
+         * 
+         * *   `true`: The call was successful.
+         * *   `false`: The call failed.
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -118,7 +128,7 @@ public class ListTraceAppsResponseBody extends TeaModel {
         }
 
         /**
-         * TraceApps.
+         * The list of Application Monitoring tasks.
          */
         public Builder traceApps(java.util.List < TraceApps> traceApps) {
             this.traceApps = traceApps;
@@ -132,15 +142,15 @@ public class ListTraceAppsResponseBody extends TeaModel {
     } 
 
     public static class Tags extends TeaModel {
-        @NameInMap("TagKey")
-        private String tagKey;
+        @NameInMap("Key")
+        private String key;
 
-        @NameInMap("TagValue")
-        private String tagValue;
+        @NameInMap("Value")
+        private String value;
 
         private Tags(Builder builder) {
-            this.tagKey = builder.tagKey;
-            this.tagValue = builder.tagValue;
+            this.key = builder.key;
+            this.value = builder.value;
         }
 
         public static Builder builder() {
@@ -152,36 +162,36 @@ public class ListTraceAppsResponseBody extends TeaModel {
         }
 
         /**
-         * @return tagKey
+         * @return key
          */
-        public String getTagKey() {
-            return this.tagKey;
+        public String getKey() {
+            return this.key;
         }
 
         /**
-         * @return tagValue
+         * @return value
          */
-        public String getTagValue() {
-            return this.tagValue;
+        public String getValue() {
+            return this.value;
         }
 
         public static final class Builder {
-            private String tagKey; 
-            private String tagValue; 
+            private String key; 
+            private String value; 
 
             /**
-             * TagKey.
+             * The tag key.
              */
-            public Builder tagKey(String tagKey) {
-                this.tagKey = tagKey;
+            public Builder key(String key) {
+                this.key = key;
                 return this;
             }
 
             /**
-             * TagValue.
+             * The tag value.
              */
-            public Builder tagValue(String tagValue) {
-                this.tagValue = tagValue;
+            public Builder value(String value) {
+                this.value = value;
                 return this;
             }
 
@@ -211,8 +221,14 @@ public class ListTraceAppsResponseBody extends TeaModel {
         @NameInMap("RegionId")
         private String regionId;
 
+        @NameInMap("ResourceGroupId")
+        private String resourceGroupId;
+
         @NameInMap("Show")
         private Boolean show;
+
+        @NameInMap("Source")
+        private String source;
 
         @NameInMap("Tags")
         private java.util.List < Tags> tags;
@@ -233,7 +249,9 @@ public class ListTraceAppsResponseBody extends TeaModel {
             this.labels = builder.labels;
             this.pid = builder.pid;
             this.regionId = builder.regionId;
+            this.resourceGroupId = builder.resourceGroupId;
             this.show = builder.show;
+            this.source = builder.source;
             this.tags = builder.tags;
             this.type = builder.type;
             this.updateTime = builder.updateTime;
@@ -291,10 +309,24 @@ public class ListTraceAppsResponseBody extends TeaModel {
         }
 
         /**
+         * @return resourceGroupId
+         */
+        public String getResourceGroupId() {
+            return this.resourceGroupId;
+        }
+
+        /**
          * @return show
          */
         public Boolean getShow() {
             return this.show;
+        }
+
+        /**
+         * @return source
+         */
+        public String getSource() {
+            return this.source;
         }
 
         /**
@@ -332,14 +364,16 @@ public class ListTraceAppsResponseBody extends TeaModel {
             private java.util.List < String > labels; 
             private String pid; 
             private String regionId; 
+            private String resourceGroupId; 
             private Boolean show; 
+            private String source; 
             private java.util.List < Tags> tags; 
             private String type; 
             private Long updateTime; 
             private String userId; 
 
             /**
-             * AppId.
+             * The application ID.
              */
             public Builder appId(Long appId) {
                 this.appId = appId;
@@ -347,7 +381,7 @@ public class ListTraceAppsResponseBody extends TeaModel {
             }
 
             /**
-             * AppName.
+             * The name of the application.
              */
             public Builder appName(String appName) {
                 this.appName = appName;
@@ -355,7 +389,7 @@ public class ListTraceAppsResponseBody extends TeaModel {
             }
 
             /**
-             * CreateTime.
+             * The time when the monitoring task was created. The value is a timestamp. Unit: milliseconds.
              */
             public Builder createTime(Long createTime) {
                 this.createTime = createTime;
@@ -363,7 +397,7 @@ public class ListTraceAppsResponseBody extends TeaModel {
             }
 
             /**
-             * Labels.
+             * The labels of the application.
              */
             public Builder labels(java.util.List < String > labels) {
                 this.labels = labels;
@@ -371,7 +405,7 @@ public class ListTraceAppsResponseBody extends TeaModel {
             }
 
             /**
-             * Pid.
+             * The process identifier (PID) of the application.
              */
             public Builder pid(String pid) {
                 this.pid = pid;
@@ -379,7 +413,7 @@ public class ListTraceAppsResponseBody extends TeaModel {
             }
 
             /**
-             * RegionId.
+             * The region ID.
              */
             public Builder regionId(String regionId) {
                 this.regionId = regionId;
@@ -387,7 +421,19 @@ public class ListTraceAppsResponseBody extends TeaModel {
             }
 
             /**
-             * Show.
+             * The resource group ID.
+             */
+            public Builder resourceGroupId(String resourceGroupId) {
+                this.resourceGroupId = resourceGroupId;
+                return this;
+            }
+
+            /**
+             * Indicates whether the application is displayed in the Application Real-Time Monitoring Service (ARMS) console. Valid values:
+             * <p>
+             * 
+             * *   `true`: yes
+             * *   `false`: no
              */
             public Builder show(Boolean show) {
                 this.show = show;
@@ -395,7 +441,15 @@ public class ListTraceAppsResponseBody extends TeaModel {
             }
 
             /**
-             * Tags.
+             * The application source.
+             */
+            public Builder source(String source) {
+                this.source = source;
+                return this;
+            }
+
+            /**
+             * The tags.
              */
             public Builder tags(java.util.List < Tags> tags) {
                 this.tags = tags;
@@ -403,7 +457,11 @@ public class ListTraceAppsResponseBody extends TeaModel {
             }
 
             /**
-             * Type.
+             * The type of the monitoring task. Valid values:
+             * <p>
+             * 
+             * *   `TRACE`: Application Monitoring
+             * *   `RETCODE`: Browser Monitoring
              */
             public Builder type(String type) {
                 this.type = type;
@@ -411,7 +469,7 @@ public class ListTraceAppsResponseBody extends TeaModel {
             }
 
             /**
-             * UpdateTime.
+             * The time when the monitoring task was updated. The value is a timestamp. Unit: milliseconds.
              */
             public Builder updateTime(Long updateTime) {
                 this.updateTime = updateTime;
@@ -419,7 +477,7 @@ public class ListTraceAppsResponseBody extends TeaModel {
             }
 
             /**
-             * UserId.
+             * The user ID.
              */
             public Builder userId(String userId) {
                 this.userId = userId;

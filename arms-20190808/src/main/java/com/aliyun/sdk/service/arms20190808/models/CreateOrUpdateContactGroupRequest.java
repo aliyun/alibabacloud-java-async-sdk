@@ -83,7 +83,11 @@ public class CreateOrUpdateContactGroupRequest extends Request {
         } 
 
         /**
-         * 告警联系人组ID
+         * The ID of the alert contact group.
+         * <p>
+         * 
+         * *   If you do not specify this parameter, an alert contact group is created.
+         * *   If you specify this parameter, the specified alert contact group is modified.
          */
         public Builder contactGroupId(Long contactGroupId) {
             this.putBodyParameter("ContactGroupId", contactGroupId);
@@ -92,7 +96,7 @@ public class CreateOrUpdateContactGroupRequest extends Request {
         }
 
         /**
-         * 告警联系人组名称
+         * The name of the alert contact group.
          */
         public Builder contactGroupName(String contactGroupName) {
             this.putBodyParameter("ContactGroupName", contactGroupName);
@@ -101,7 +105,7 @@ public class CreateOrUpdateContactGroupRequest extends Request {
         }
 
         /**
-         * 告警联系人ids
+         * The ID of the contact that you want to add to the contact group. Separate multiple IDs with commas (,).
          */
         public Builder contactIds(String contactIds) {
             this.putBodyParameter("ContactIds", contactIds);

@@ -50,7 +50,7 @@ public class DescribeContactGroupsResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * 分页对象
+         * PageBean.
          */
         public Builder pageBean(PageBean pageBean) {
             this.pageBean = pageBean;
@@ -58,7 +58,7 @@ public class DescribeContactGroupsResponseBody extends TeaModel {
         }
 
         /**
-         * Id of the request
+         * RequestId.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -154,7 +154,7 @@ public class DescribeContactGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * 联系人ID
+             * ContactId.
              */
             public Builder contactId(Float contactId) {
                 this.contactId = contactId;
@@ -162,7 +162,7 @@ public class DescribeContactGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * 联系人名称
+             * ContactName.
              */
             public Builder contactName(String contactName) {
                 this.contactName = contactName;
@@ -170,7 +170,7 @@ public class DescribeContactGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * 联系人邮箱
+             * Email.
              */
             public Builder email(String email) {
                 this.email = email;
@@ -178,7 +178,7 @@ public class DescribeContactGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * 联系人手机号码
+             * Phone.
              */
             public Builder phone(String phone) {
                 this.phone = phone;
@@ -263,7 +263,7 @@ public class DescribeContactGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * 告警联系人组ID
+             * ContactGroupId.
              */
             public Builder contactGroupId(Float contactGroupId) {
                 this.contactGroupId = contactGroupId;
@@ -271,7 +271,7 @@ public class DescribeContactGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * 告警联系人组名称
+             * ContactGroupName.
              */
             public Builder contactGroupName(String contactGroupName) {
                 this.contactGroupName = contactGroupName;
@@ -279,7 +279,7 @@ public class DescribeContactGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * 联系人对象
+             * Contacts.
              */
             public Builder contacts(java.util.List < Contacts> contacts) {
                 this.contacts = contacts;
@@ -356,7 +356,7 @@ public class DescribeContactGroupsResponseBody extends TeaModel {
             private Long total; 
 
             /**
-             * 告警联系人组列表
+             * AlertContactGroups.
              */
             public Builder alertContactGroups(java.util.List < AlertContactGroups> alertContactGroups) {
                 this.alertContactGroups = alertContactGroups;
@@ -364,7 +364,7 @@ public class DescribeContactGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * 页数
+             * Page.
              */
             public Builder page(Long page) {
                 this.page = page;
@@ -372,7 +372,7 @@ public class DescribeContactGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * 每一页数目
+             * Size.
              */
             public Builder size(Long size) {
                 this.size = size;
@@ -380,7 +380,7 @@ public class DescribeContactGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * 总数
+             * Total.
              */
             public Builder total(Long total) {
                 this.total = total;

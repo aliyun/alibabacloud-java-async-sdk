@@ -50,7 +50,7 @@ public class QueryPromInstallStatusResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * Data.
+         * The returned struct.
          */
         public Builder data(Data data) {
             this.data = data;
@@ -58,7 +58,7 @@ public class QueryPromInstallStatusResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -98,7 +98,10 @@ public class QueryPromInstallStatusResponseBody extends TeaModel {
             private Boolean isControllerInstalled; 
 
             /**
-             * isControllerInstalled.
+             * Indicates whether the call was successful. Valid values:
+             * <p>
+             * 
+             * true: The call was successful. false: The call fails.
              */
             public Builder isControllerInstalled(Boolean isControllerInstalled) {
                 this.isControllerInstalled = isControllerInstalled;

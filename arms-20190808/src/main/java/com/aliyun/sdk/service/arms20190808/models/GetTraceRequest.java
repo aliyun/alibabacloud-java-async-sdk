@@ -98,7 +98,10 @@ public class GetTraceRequest extends Request {
         } 
 
         /**
-         * EndTime.
+         * The end of the time range to query. Unit: milliseconds.
+         * <p>
+         * 
+         * > If the ID of the trace is 30 characters in length, this parameter is optional. Otherwise, this parameter is required.
          */
         public Builder endTime(Long endTime) {
             this.putQueryParameter("EndTime", endTime);
@@ -107,7 +110,7 @@ public class GetTraceRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * The region ID.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -116,7 +119,10 @@ public class GetTraceRequest extends Request {
         }
 
         /**
-         * StartTime.
+         * The beginning of the time range to query. Unit: milliseconds.
+         * <p>
+         * 
+         * > If the ID of the trace is 30 characters in length, this parameter is optional. Otherwise, this parameter is required.
          */
         public Builder startTime(Long startTime) {
             this.putQueryParameter("StartTime", startTime);
@@ -125,7 +131,7 @@ public class GetTraceRequest extends Request {
         }
 
         /**
-         * TraceID.
+         * The trace ID. You can log on to the ARMS console and obtain the trace ID on the **Trace Query** page or **Interface Snapshot** tab.
          */
         public Builder traceID(String traceID) {
             this.putQueryParameter("TraceID", traceID);

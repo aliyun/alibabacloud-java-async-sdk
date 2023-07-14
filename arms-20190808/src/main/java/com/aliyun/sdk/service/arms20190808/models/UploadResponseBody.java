@@ -50,7 +50,7 @@ public class UploadResponseBody extends TeaModel {
         private UploadResult uploadResult; 
 
         /**
-         * Id of the request
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -58,7 +58,7 @@ public class UploadResponseBody extends TeaModel {
         }
 
         /**
-         * UploadResult.
+         * The returned data.
          */
         public Builder uploadResult(UploadResult uploadResult) {
             this.uploadResult = uploadResult;
@@ -122,7 +122,7 @@ public class UploadResponseBody extends TeaModel {
             private String uploadTime; 
 
             /**
-             * Fid.
+             * The ID of the SourceMap file.
              */
             public Builder fid(String fid) {
                 this.fid = fid;
@@ -130,7 +130,7 @@ public class UploadResponseBody extends TeaModel {
             }
 
             /**
-             * FileName.
+             * The name of the SourceMap file.
              */
             public Builder fileName(String fileName) {
                 this.fileName = fileName;
@@ -138,7 +138,7 @@ public class UploadResponseBody extends TeaModel {
             }
 
             /**
-             * UploadTime.
+             * The time when the file was uploaded.
              */
             public Builder uploadTime(String uploadTime) {
                 this.uploadTime = uploadTime;

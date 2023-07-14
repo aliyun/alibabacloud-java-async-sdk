@@ -85,7 +85,7 @@ public class SyncRecordingRulesRequest extends Request {
         } 
 
         /**
-         * ClusterId.
+         * The ID of the cluster whose aggregation rule you want to synchronize.
          */
         public Builder clusterId(String clusterId) {
             this.putQueryParameter("ClusterId", clusterId);
@@ -94,7 +94,7 @@ public class SyncRecordingRulesRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * The ID of the region. The destination region can be the same as the source region.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -103,7 +103,7 @@ public class SyncRecordingRulesRequest extends Request {
         }
 
         /**
-         * TargetClusters.
+         * The IDs of clusters to which you want to synchronize the aggregation rule.
          */
         public Builder targetClusters(String targetClusters) {
             this.putQueryParameter("TargetClusters", targetClusters);

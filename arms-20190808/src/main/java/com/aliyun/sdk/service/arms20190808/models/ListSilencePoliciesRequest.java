@@ -112,7 +112,7 @@ public class ListSilencePoliciesRequest extends Request {
         } 
 
         /**
-         * 是否查询详情信息
+         * The operation that you want to perform. Set the value to **ListSilencePolicies**.
          */
         public Builder isDetail(Boolean isDetail) {
             this.putQueryParameter("IsDetail", isDetail);
@@ -121,7 +121,7 @@ public class ListSilencePoliciesRequest extends Request {
         }
 
         /**
-         * 静默策略名称
+         * An array of matching condition objects.
          */
         public Builder name(String name) {
             this.putQueryParameter("Name", name);
@@ -130,7 +130,7 @@ public class ListSilencePoliciesRequest extends Request {
         }
 
         /**
-         * 页数
+         * The number of entries to return on each page.
          */
         public Builder page(Long page) {
             this.putQueryParameter("Page", page);
@@ -148,7 +148,7 @@ public class ListSilencePoliciesRequest extends Request {
         }
 
         /**
-         * 每页战术数目
+         * The ID of the silence policy.
          */
         public Builder size(Long size) {
             this.putQueryParameter("Size", size);

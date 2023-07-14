@@ -14,8 +14,11 @@ import com.aliyun.sdk.gateway.pop.models.*;
 public class SearchTraceAppByNameRequest extends Request {
     @Query
     @NameInMap("RegionId")
-    @Validation(required = true)
     private String regionId;
+
+    @Query
+    @NameInMap("Tags")
+    private java.util.List < Tags> tags;
 
     @Query
     @NameInMap("TraceAppName")
@@ -24,6 +27,7 @@ public class SearchTraceAppByNameRequest extends Request {
     private SearchTraceAppByNameRequest(Builder builder) {
         super(builder);
         this.regionId = builder.regionId;
+        this.tags = builder.tags;
         this.traceAppName = builder.traceAppName;
     }
 
@@ -48,6 +52,13 @@ public class SearchTraceAppByNameRequest extends Request {
     }
 
     /**
+     * @return tags
+     */
+    public java.util.List < Tags> getTags() {
+        return this.tags;
+    }
+
+    /**
      * @return traceAppName
      */
     public String getTraceAppName() {
@@ -56,6 +67,7 @@ public class SearchTraceAppByNameRequest extends Request {
 
     public static final class Builder extends Request.Builder<SearchTraceAppByNameRequest, Builder> {
         private String regionId; 
+        private java.util.List < Tags> tags; 
         private String traceAppName; 
 
         private Builder() {
@@ -65,11 +77,12 @@ public class SearchTraceAppByNameRequest extends Request {
         private Builder(SearchTraceAppByNameRequest request) {
             super(request);
             this.regionId = request.regionId;
+            this.tags = request.tags;
             this.traceAppName = request.traceAppName;
         } 
 
         /**
-         * RegionId.
+         * The region ID.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -78,7 +91,19 @@ public class SearchTraceAppByNameRequest extends Request {
         }
 
         /**
-         * TraceAppName.
+         * The list of tags.
+         */
+        public Builder tags(java.util.List < Tags> tags) {
+            this.putQueryParameter("Tags", tags);
+            this.tags = tags;
+            return this;
+        }
+
+        /**
+         * The name of the application.
+         * <p>
+         * 
+         * > If you do not specify this parameter, all application monitoring tasks in the specified region are queried.
          */
         public Builder traceAppName(String traceAppName) {
             this.putQueryParameter("TraceAppName", traceAppName);
@@ -93,4 +118,65 @@ public class SearchTraceAppByNameRequest extends Request {
 
     } 
 
+    public static class Tags extends TeaModel {
+        @NameInMap("Key")
+        private String key;
+
+        @NameInMap("Value")
+        private String value;
+
+        private Tags(Builder builder) {
+            this.key = builder.key;
+            this.value = builder.value;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static Tags create() {
+            return builder().build();
+        }
+
+        /**
+         * @return key
+         */
+        public String getKey() {
+            return this.key;
+        }
+
+        /**
+         * @return value
+         */
+        public String getValue() {
+            return this.value;
+        }
+
+        public static final class Builder {
+            private String key; 
+            private String value; 
+
+            /**
+             * The tag key.
+             */
+            public Builder key(String key) {
+                this.key = key;
+                return this;
+            }
+
+            /**
+             * The tag value.
+             */
+            public Builder value(String value) {
+                this.value = value;
+                return this;
+            }
+
+            public Tags build() {
+                return new Tags(this);
+            } 
+
+        } 
+
+    }
 }

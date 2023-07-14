@@ -14,6 +14,7 @@ import com.aliyun.sdk.gateway.pop.models.*;
 public class DeleteTraceAppRequest extends Request {
     @Query
     @NameInMap("AppId")
+    @Validation(required = true)
     private String appId;
 
     @Query
@@ -99,7 +100,7 @@ public class DeleteTraceAppRequest extends Request {
         } 
 
         /**
-         * AppId.
+         * The ID of the application that you want to delete. You can call the SearchTraceAppByName operation to query the application ID. For more information, see [SearchTraceAppByName](~~130676~~).
          */
         public Builder appId(String appId) {
             this.putQueryParameter("AppId", appId);
@@ -108,7 +109,7 @@ public class DeleteTraceAppRequest extends Request {
         }
 
         /**
-         * Pid.
+         * The PID of the application that you want to delete. For more information about how to obtain the PID, see [Obtain the PID of an application](https://www.alibabacloud.com/help/zh/doc-detail/186100.htm?spm=a2cdw.13409063.0.0.7a72281f0bkTfx#title-imy-7gj-qhr).
          */
         public Builder pid(String pid) {
             this.putQueryParameter("Pid", pid);
@@ -117,7 +118,7 @@ public class DeleteTraceAppRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * The ID of the region.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -126,7 +127,11 @@ public class DeleteTraceAppRequest extends Request {
         }
 
         /**
-         * Type.
+         * The type of the application that you want to delete. You can call the SearchTraceAppByName operation to query the application type. For more information, see [SearchTraceAppByName](~~130676~~). Valid values:
+         * <p>
+         * 
+         * *   `TRACE`: application monitoring
+         * *   `RETCODE`: frontend monitoring
          */
         public Builder type(String type) {
             this.putQueryParameter("Type", type);

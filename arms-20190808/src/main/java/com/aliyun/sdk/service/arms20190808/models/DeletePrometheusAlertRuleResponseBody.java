@@ -58,7 +58,7 @@ public class DeletePrometheusAlertRuleResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * The ID of the request.
          */
         public Builder success(Boolean success) {
             this.success = success;

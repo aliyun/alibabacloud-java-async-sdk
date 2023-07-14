@@ -50,7 +50,7 @@ public class ListIntegrationResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * 分页信息
+         * PageInfo.
          */
         public Builder pageInfo(PageInfo pageInfo) {
             this.pageInfo = pageInfo;
@@ -58,7 +58,7 @@ public class ListIntegrationResponseBody extends TeaModel {
         }
 
         /**
-         * Id of the request
+         * RequestId.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -194,7 +194,7 @@ public class ListIntegrationResponseBody extends TeaModel {
             private java.util.List < Long > stat; 
 
             /**
-             * 是否设置恢复告警事件
+             * AutoRecover.
              */
             public Builder autoRecover(Boolean autoRecover) {
                 this.autoRecover = autoRecover;
@@ -202,7 +202,7 @@ public class ListIntegrationResponseBody extends TeaModel {
             }
 
             /**
-             * 集成描述
+             * Description.
              */
             public Builder description(String description) {
                 this.description = description;
@@ -210,7 +210,7 @@ public class ListIntegrationResponseBody extends TeaModel {
             }
 
             /**
-             * 去重得字段
+             * DuplicateKey.
              */
             public Builder duplicateKey(String duplicateKey) {
                 this.duplicateKey = duplicateKey;
@@ -250,7 +250,7 @@ public class ListIntegrationResponseBody extends TeaModel {
             }
 
             /**
-             * 恢复时间
+             * RecoverTime.
              */
             public Builder recoverTime(Long recoverTime) {
                 this.recoverTime = recoverTime;
@@ -395,7 +395,7 @@ public class ListIntegrationResponseBody extends TeaModel {
             private Boolean state; 
 
             /**
-             * 接口配置url
+             * ApiEndpoint.
              */
             public Builder apiEndpoint(String apiEndpoint) {
                 this.apiEndpoint = apiEndpoint;
@@ -403,7 +403,7 @@ public class ListIntegrationResponseBody extends TeaModel {
             }
 
             /**
-             * 创建时间
+             * CreateTime.
              */
             public Builder createTime(String createTime) {
                 this.createTime = createTime;
@@ -411,7 +411,7 @@ public class ListIntegrationResponseBody extends TeaModel {
             }
 
             /**
-             * 集成详情对象信息
+             * IntegrationDetail.
              */
             public Builder integrationDetail(IntegrationDetail integrationDetail) {
                 this.integrationDetail = integrationDetail;
@@ -419,7 +419,7 @@ public class ListIntegrationResponseBody extends TeaModel {
             }
 
             /**
-             * 集成ID
+             * IntegrationId.
              */
             public Builder integrationId(Long integrationId) {
                 this.integrationId = integrationId;
@@ -427,7 +427,7 @@ public class ListIntegrationResponseBody extends TeaModel {
             }
 
             /**
-             * 集成名称
+             * IntegrationName.
              */
             public Builder integrationName(String integrationName) {
                 this.integrationName = integrationName;
@@ -435,7 +435,7 @@ public class ListIntegrationResponseBody extends TeaModel {
             }
 
             /**
-             * 集成产品类型，CLOUD_MONITOR，LOG_SERVICE
+             * IntegrationProductType.
              */
             public Builder integrationProductType(String integrationProductType) {
                 this.integrationProductType = integrationProductType;
@@ -443,7 +443,7 @@ public class ListIntegrationResponseBody extends TeaModel {
             }
 
             /**
-             * 就绪
+             * Liveness.
              */
             public Builder liveness(String liveness) {
                 this.liveness = liveness;
@@ -451,7 +451,7 @@ public class ListIntegrationResponseBody extends TeaModel {
             }
 
             /**
-             * 接口配置token
+             * ShortToken.
              */
             public Builder shortToken(String shortToken) {
                 this.shortToken = shortToken;
@@ -459,7 +459,7 @@ public class ListIntegrationResponseBody extends TeaModel {
             }
 
             /**
-             * 是否启用，true/false
+             * State.
              */
             public Builder state(Boolean state) {
                 this.state = state;
@@ -544,7 +544,7 @@ public class ListIntegrationResponseBody extends TeaModel {
             }
 
             /**
-             * 页数
+             * Page.
              */
             public Builder page(Long page) {
                 this.page = page;
@@ -552,7 +552,7 @@ public class ListIntegrationResponseBody extends TeaModel {
             }
 
             /**
-             * 条数
+             * Size.
              */
             public Builder size(Long size) {
                 this.size = size;
@@ -560,7 +560,7 @@ public class ListIntegrationResponseBody extends TeaModel {
             }
 
             /**
-             * 总数
+             * Total.
              */
             public Builder total(Long total) {
                 this.total = total;

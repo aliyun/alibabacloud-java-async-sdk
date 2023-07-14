@@ -210,7 +210,7 @@ public class CreateOrUpdateNotificationPolicyRequest extends Request {
         } 
 
         /**
-         * 升级规则ID
+         * The ID of the escalation policy.
          */
         public Builder escalationPolicyId(Long escalationPolicyId) {
             this.putBodyParameter("EscalationPolicyId", escalationPolicyId);
@@ -219,7 +219,23 @@ public class CreateOrUpdateNotificationPolicyRequest extends Request {
         }
 
         /**
-         * 分组规则
+         * An array of alert event group objects.
+         * <p>
+         * 
+         * *   If you do not specify the groupingFields field, all alerts will be sent to contacts based on `alertname`.
+         * 
+         * *   If you specify the groupingFields field, alerts with the same field will be sent to contacts in one notification.
+         * 
+         *     Sample statement:
+         * 
+         * ```
+         * 
+         * { 
+         * "groupWait":5,    // The waiting time for grouping. 
+         * "groupInterval":30,     // The time interval of grouping. 
+         * "groupingFields":["alertname"]       // The field that is used to group alert events. 
+         * }
+         * ```
          */
         public Builder groupRule(String groupRule) {
             this.putBodyParameter("GroupRule", groupRule);
@@ -228,7 +244,11 @@ public class CreateOrUpdateNotificationPolicyRequest extends Request {
         }
 
         /**
-         * 通知策略ID
+         * The ID of the notification policy.
+         * <p>
+         * 
+         * *   If you do not specify this parameter, a new notification policy is created.
+         * *   If you specify this parameter, the specified notification policy is modified.
          */
         public Builder id(Long id) {
             this.putBodyParameter("Id", id);
@@ -237,7 +257,7 @@ public class CreateOrUpdateNotificationPolicyRequest extends Request {
         }
 
         /**
-         * 集成ID
+         * The integration ID of the ticket system to which alerts are pushed.
          */
         public Builder integrationId(Long integrationId) {
             this.putBodyParameter("IntegrationId", integrationId);
@@ -246,7 +266,23 @@ public class CreateOrUpdateNotificationPolicyRequest extends Request {
         }
 
         /**
-         * 事件匹配规则列表
+         * The matching rules. Sample statement:
+         * <p>
+         * 
+         * ```
+         * 
+         * [
+         *  {
+         *  "matchingConditions": [
+         *  { 
+         *  "value": "test",    // The value of the matching condition. 
+         *  "key": "alertname",     // The key of the matching condition. 
+         *  "operator": "eq"   // The logical operator of the matching condition, including eq (equal to), neq (not equal to), in (contains), nin (does not contain), re (regular expression match), and nre (regular expression mismatch).   
+         *  }
+         *  ]
+         *  } 
+         *  ]
+         * ```
          */
         public Builder matchingRules(String matchingRules) {
             this.putBodyParameter("MatchingRules", matchingRules);
@@ -255,7 +291,7 @@ public class CreateOrUpdateNotificationPolicyRequest extends Request {
         }
 
         /**
-         * 通知策略名称
+         * The name of the notification policy.
          */
         public Builder name(String name) {
             this.putBodyParameter("Name", name);
@@ -264,7 +300,23 @@ public class CreateOrUpdateNotificationPolicyRequest extends Request {
         }
 
         /**
-         * 通知规则,通知对象，必填
+         * An array of notification rule objects. Format:
+         * <p>
+         * 
+         *     { 
+         *      "notifyStartTime":"00:00",      // The start time of the notification window. 
+         *      "notifyEndTime":"23:59",       // The end time of the notification window. 
+         *      "notifyChannels":["dingTalk", "email", "sms", "tts", "webhook"],       // The notification methods. Valid values: dingTalk, email, sms, tts, and webhook. 
+         *      "notifyObjects":[{       // An array of notification objects. 
+         *      "notifyObjectType":"CONTACT",       // The type of the notification object. Valid values: CONTACT (contact), CONTACT_GROUP (contact group), ARMS_CONTACT (ARMS contact), ARMS_CONTACT_GROUP (ARMS contact group), DING_ROBOT_GROUP (DingTalk, Lark, WeCom, or IM chatbot), and CONTACT_SCHEDULE (user on duty defined by a schedule). 
+         *      "notifyObjectId":123,       // The ID of the notification object. 
+         *      "notifyObjectName":"test"       // The name of the notification object. 
+         *      "notifyChannels": [ // The notification methods specified for a contact. Valid values: email, sms, and tts.
+         *                     "email",		
+         *                     "sms",
+         *                     "tts"
+         *                 ],
+         *      }]
          */
         public Builder notifyRule(String notifyRule) {
             this.putBodyParameter("NotifyRule", notifyRule);
@@ -273,7 +325,7 @@ public class CreateOrUpdateNotificationPolicyRequest extends Request {
         }
 
         /**
-         * 通知模板
+         * The notification template. The default notification template is provided below the table.
          */
         public Builder notifyTemplate(String notifyTemplate) {
             this.putBodyParameter("NotifyTemplate", notifyTemplate);
@@ -282,7 +334,7 @@ public class CreateOrUpdateNotificationPolicyRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * The ID of the region.
          */
         public Builder regionId(String regionId) {
             this.putBodyParameter("RegionId", regionId);
@@ -291,7 +343,11 @@ public class CreateOrUpdateNotificationPolicyRequest extends Request {
         }
 
         /**
-         * 是否重复通知,不填默认为true，需要必填重复通知时间间隔；false，需要必填升级规则ID
+         * Specifies whether to resend a notification for a long-lasting unresolved alert. Default value: true. Valid values:
+         * <p>
+         * 
+         * *   `true`: If you set this parameter to `true`, you must set **RepeatInterval**.
+         * *   `false`: If you set this parameter to `false`, you must set **EscalationPolicyId**.
          */
         public Builder repeat(Boolean repeat) {
             this.putBodyParameter("Repeat", repeat);
@@ -300,7 +356,7 @@ public class CreateOrUpdateNotificationPolicyRequest extends Request {
         }
 
         /**
-         * 重复通知时间间隔,单位：s
+         * The time interval at which a notification is resent for a long-lasting unresolved alert. Unit: seconds.
          */
         public Builder repeatInterval(Long repeatInterval) {
             this.putBodyParameter("RepeatInterval", repeatInterval);
@@ -309,7 +365,11 @@ public class CreateOrUpdateNotificationPolicyRequest extends Request {
         }
 
         /**
-         * 是否发送恢,不填默认为：true复通知
+         * Indicates whether the system sends a notification to the contacts when the status of an alert changes to Resolved. Default value: true. Valid values:
+         * <p>
+         * 
+         * *   `true`: The system sends a notification.
+         * *   `false`: The system does not send a notification.
          */
         public Builder sendRecoverMessage(Boolean sendRecoverMessage) {
             this.putBodyParameter("SendRecoverMessage", sendRecoverMessage);

@@ -84,7 +84,7 @@ public class ListOnCallSchedulesRequest extends Request {
         } 
 
         /**
-         * 排班策略名称
+         * The name of the scheduling policy.
          */
         public Builder name(String name) {
             this.putQueryParameter("Name", name);
@@ -93,7 +93,7 @@ public class ListOnCallSchedulesRequest extends Request {
         }
 
         /**
-         * 页数
+         * The number of the page to return.
          */
         public Builder page(Long page) {
             this.putQueryParameter("Page", page);
@@ -102,7 +102,7 @@ public class ListOnCallSchedulesRequest extends Request {
         }
 
         /**
-         * 展示数目
+         * The number of entries to return on each page.
          */
         public Builder size(Long size) {
             this.putQueryParameter("Size", size);

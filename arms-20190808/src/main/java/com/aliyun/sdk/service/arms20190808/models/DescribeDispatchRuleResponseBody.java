@@ -50,7 +50,7 @@ public class DescribeDispatchRuleResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * DispatchRule.
+         * The collection of dispatch rules.
          */
         public Builder dispatchRule(DispatchRule dispatchRule) {
             this.dispatchRule = dispatchRule;
@@ -58,7 +58,7 @@ public class DescribeDispatchRuleResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the dispatch policy.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -146,7 +146,7 @@ public class DescribeDispatchRuleResponseBody extends TeaModel {
             private Long repeatInterval; 
 
             /**
-             * GroupId.
+             * The struct returned.
              */
             public Builder groupId(Long groupId) {
                 this.groupId = groupId;
@@ -154,7 +154,7 @@ public class DescribeDispatchRuleResponseBody extends TeaModel {
             }
 
             /**
-             * GroupInterval.
+             * The information about the dispatch rule.
              */
             public Builder groupInterval(Long groupInterval) {
                 this.groupInterval = groupInterval;
@@ -162,7 +162,7 @@ public class DescribeDispatchRuleResponseBody extends TeaModel {
             }
 
             /**
-             * GroupWaitTime.
+             * The information about groups.
              */
             public Builder groupWaitTime(Long groupWaitTime) {
                 this.groupWaitTime = groupWaitTime;
@@ -170,7 +170,7 @@ public class DescribeDispatchRuleResponseBody extends TeaModel {
             }
 
             /**
-             * GroupingFields.
+             * Queries the information about a dispatch policy.
              */
             public Builder groupingFields(java.util.List < String > groupingFields) {
                 this.groupingFields = groupingFields;
@@ -616,7 +616,7 @@ public class DescribeDispatchRuleResponseBody extends TeaModel {
             }
 
             /**
-             * GroupRules.
+             * The ID of the region.
              */
             public Builder groupRules(java.util.List < GroupRules> groupRules) {
                 this.groupRules = groupRules;
@@ -640,7 +640,7 @@ public class DescribeDispatchRuleResponseBody extends TeaModel {
             }
 
             /**
-             * Name.
+             * The grouping interval.
              */
             public Builder name(String name) {
                 this.name = name;
@@ -656,7 +656,7 @@ public class DescribeDispatchRuleResponseBody extends TeaModel {
             }
 
             /**
-             * RuleId.
+             * The waiting time for grouping.
              */
             public Builder ruleId(Long ruleId) {
                 this.ruleId = ruleId;
@@ -664,7 +664,7 @@ public class DescribeDispatchRuleResponseBody extends TeaModel {
             }
 
             /**
-             * State.
+             * The grouping fields.
              */
             public Builder state(String state) {
                 this.state = state;

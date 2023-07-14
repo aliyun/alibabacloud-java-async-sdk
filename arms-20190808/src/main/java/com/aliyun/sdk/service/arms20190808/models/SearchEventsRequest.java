@@ -181,7 +181,7 @@ public class SearchEventsRequest extends Request {
         } 
 
         /**
-         * AlertId.
+         * The ID of the region.
          */
         public Builder alertId(Long alertId) {
             this.putQueryParameter("AlertId", alertId);
@@ -190,7 +190,7 @@ public class SearchEventsRequest extends Request {
         }
 
         /**
-         * AlertType.
+         * The total number of entries returned.
          */
         public Builder alertType(Integer alertType) {
             this.putQueryParameter("AlertType", alertType);
@@ -199,7 +199,17 @@ public class SearchEventsRequest extends Request {
         }
 
         /**
-         * AppType.
+         * The type of the alert rule. This parameter is not returned. Valid values:
+         * <p>
+         * 
+         * *   `1`: custom alert rules to monitor drill-down data sets
+         * *   `3`: custom alert rules to monitor tiled data sets
+         * *   `4`: alert rules to monitor the frontend, including the default frontend alert rules
+         * *   `5`: alert rules to monitor applications, including the default application alert rules
+         * *   `6`: the default frontend alert rules
+         * *   `7`: the default application alert rules
+         * *   `8`: Tracing Analysis alert rules
+         * *   `101`: Prometheus alert rules
          */
         public Builder appType(String appType) {
             this.putQueryParameter("AppType", appType);
@@ -208,7 +218,7 @@ public class SearchEventsRequest extends Request {
         }
 
         /**
-         * CurrentPage.
+         * The ID of the alert rule. You can call the SearchAlertRules operation and view the `Id` parameter in the response. For more information, see [SearchAlertRules](~~175825~~).
          */
         public Builder currentPage(Integer currentPage) {
             this.putQueryParameter("CurrentPage", currentPage);
@@ -217,7 +227,11 @@ public class SearchEventsRequest extends Request {
         }
 
         /**
-         * EndTime.
+         * Specifies whether the alert event is triggered. If you do not set this parameter, all alert events are queried. Valid values:
+         * <p>
+         * 
+         * *   `1`: The event is triggered.
+         * *   `0`: The event is not triggered.
          */
         public Builder endTime(Long endTime) {
             this.putQueryParameter("EndTime", endTime);
@@ -226,7 +240,7 @@ public class SearchEventsRequest extends Request {
         }
 
         /**
-         * IsTrigger.
+         * The timestamp when the event occurred.
          */
         public Builder isTrigger(Integer isTrigger) {
             this.putQueryParameter("IsTrigger", isTrigger);
@@ -235,7 +249,7 @@ public class SearchEventsRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * The information about the alert events.
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -244,7 +258,11 @@ public class SearchEventsRequest extends Request {
         }
 
         /**
-         * Pid.
+         * The type of the application that is associated with the alert rule. Valid values:
+         * <p>
+         * 
+         * *   `TRACE`: application monitoring
+         * *   `RETCODE`: frontend monitoring
          */
         public Builder pid(String pid) {
             this.putQueryParameter("Pid", pid);
@@ -253,7 +271,11 @@ public class SearchEventsRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * Specifies whether the alert event is triggered. If you do not set this parameter, all alert events are queried. Valid values:
+         * <p>
+         * 
+         * *   `1`: The event is triggered.
+         * *   `0`: The event is not triggered.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -262,7 +284,7 @@ public class SearchEventsRequest extends Request {
         }
 
         /**
-         * StartTime.
+         * The number of entries returned per page.
          */
         public Builder startTime(Long startTime) {
             this.putQueryParameter("StartTime", startTime);

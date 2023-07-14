@@ -12,14 +12,22 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>AddAliClusterIdsToPrometheusGlobalViewResponseBody</p>
  */
 public class AddAliClusterIdsToPrometheusGlobalViewResponseBody extends TeaModel {
+    @NameInMap("Code")
+    private Integer code;
+
     @NameInMap("Data")
     private Data data;
+
+    @NameInMap("Message")
+    private String message;
 
     @NameInMap("RequestId")
     private String requestId;
 
     private AddAliClusterIdsToPrometheusGlobalViewResponseBody(Builder builder) {
+        this.code = builder.code;
         this.data = builder.data;
+        this.message = builder.message;
         this.requestId = builder.requestId;
     }
 
@@ -32,10 +40,24 @@ public class AddAliClusterIdsToPrometheusGlobalViewResponseBody extends TeaModel
     }
 
     /**
+     * @return code
+     */
+    public Integer getCode() {
+        return this.code;
+    }
+
+    /**
      * @return data
      */
     public Data getData() {
         return this.data;
+    }
+
+    /**
+     * @return message
+     */
+    public String getMessage() {
+        return this.message;
     }
 
     /**
@@ -46,11 +68,21 @@ public class AddAliClusterIdsToPrometheusGlobalViewResponseBody extends TeaModel
     }
 
     public static final class Builder {
+        private Integer code; 
         private Data data; 
+        private String message; 
         private String requestId; 
 
         /**
-         * Data.
+         * Code.
+         */
+        public Builder code(Integer code) {
+            this.code = code;
+            return this;
+        }
+
+        /**
+         * The information about the array object.
          */
         public Builder data(Data data) {
             this.data = data;
@@ -58,7 +90,15 @@ public class AddAliClusterIdsToPrometheusGlobalViewResponseBody extends TeaModel
         }
 
         /**
-         * RequestId.
+         * Message.
+         */
+        public Builder message(String message) {
+            this.message = message;
+            return this;
+        }
+
+        /**
+         * The request ID. You can use the ID to query logs and troubleshoot issues.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -122,7 +162,7 @@ public class AddAliClusterIdsToPrometheusGlobalViewResponseBody extends TeaModel
             private Boolean success; 
 
             /**
-             * Info.
+             * The Info-level information.
              */
             public Builder info(String info) {
                 this.info = info;
@@ -130,7 +170,7 @@ public class AddAliClusterIdsToPrometheusGlobalViewResponseBody extends TeaModel
             }
 
             /**
-             * Msg.
+             * The additional information.
              */
             public Builder msg(String msg) {
                 this.msg = msg;
@@ -138,7 +178,11 @@ public class AddAliClusterIdsToPrometheusGlobalViewResponseBody extends TeaModel
             }
 
             /**
-             * Success.
+             * Indicates whether the request was successful.
+             * <p>
+             * 
+             * *   `true`: The request was successful.
+             * *   `false`: The request failed.
              */
             public Builder success(Boolean success) {
                 this.success = success;

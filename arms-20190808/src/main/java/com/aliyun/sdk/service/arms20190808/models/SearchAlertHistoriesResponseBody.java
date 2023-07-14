@@ -50,7 +50,7 @@ public class SearchAlertHistoriesResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * PageBean.
+         * The returned struct.
          */
         public Builder pageBean(PageBean pageBean) {
             this.pageBean = pageBean;
@@ -58,7 +58,7 @@ public class SearchAlertHistoriesResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -218,7 +218,7 @@ public class SearchAlertHistoriesResponseBody extends TeaModel {
             private String userId; 
 
             /**
-             * AlarmContent.
+             * The content of the alert notification.
              */
             public Builder alarmContent(String alarmContent) {
                 this.alarmContent = alarmContent;
@@ -226,7 +226,7 @@ public class SearchAlertHistoriesResponseBody extends TeaModel {
             }
 
             /**
-             * AlarmResponseCode.
+             * The response code returned after the alert notification was sent.
              */
             public Builder alarmResponseCode(Integer alarmResponseCode) {
                 this.alarmResponseCode = alarmResponseCode;
@@ -234,7 +234,7 @@ public class SearchAlertHistoriesResponseBody extends TeaModel {
             }
 
             /**
-             * AlarmSources.
+             * The webhook URL, such as the webhook URL of a DingTalk chatbot.
              */
             public Builder alarmSources(String alarmSources) {
                 this.alarmSources = alarmSources;
@@ -242,7 +242,7 @@ public class SearchAlertHistoriesResponseBody extends TeaModel {
             }
 
             /**
-             * AlarmTime.
+             * The time when the alert notification was sent.
              */
             public Builder alarmTime(Long alarmTime) {
                 this.alarmTime = alarmTime;
@@ -250,7 +250,17 @@ public class SearchAlertHistoriesResponseBody extends TeaModel {
             }
 
             /**
-             * AlarmType.
+             * The type of the alert rule. Default value: 4. Valid values:
+             * <p>
+             * 
+             * *   `1`: a custom alert rule that is used to monitor drill-down data sets
+             * *   `3`: a custom alert rule that is used to monitor tiled data sets
+             * *   `4`: an alert rule that is used to monitor web pages, including the default alert rule for browser monitoring
+             * *   `5`: an alert rule that is used to monitor applications, including the default alert rule for application monitoring
+             * *   `6`: the default alert rule for browser monitoring
+             * *   `7`: the default alert rule for application monitoring
+             * *   `8`: a Tracing Analysis alert rule
+             * *   `101`: a Prometheus alert rule
              */
             public Builder alarmType(Integer alarmType) {
                 this.alarmType = alarmType;
@@ -258,7 +268,7 @@ public class SearchAlertHistoriesResponseBody extends TeaModel {
             }
 
             /**
-             * Emails.
+             * The email address of the alert contact.
              */
             public Builder emails(String emails) {
                 this.emails = emails;
@@ -266,7 +276,7 @@ public class SearchAlertHistoriesResponseBody extends TeaModel {
             }
 
             /**
-             * Id.
+             * The ID of the alert notification.
              */
             public Builder id(Long id) {
                 this.id = id;
@@ -274,7 +284,7 @@ public class SearchAlertHistoriesResponseBody extends TeaModel {
             }
 
             /**
-             * Phones.
+             * The mobile phone number of the alert contact.
              */
             public Builder phones(String phones) {
                 this.phones = phones;
@@ -282,7 +292,7 @@ public class SearchAlertHistoriesResponseBody extends TeaModel {
             }
 
             /**
-             * StrategyId.
+             * The internal fields.
              */
             public Builder strategyId(String strategyId) {
                 this.strategyId = strategyId;
@@ -290,7 +300,7 @@ public class SearchAlertHistoriesResponseBody extends TeaModel {
             }
 
             /**
-             * Target.
+             * The internal fields.
              */
             public Builder target(String target) {
                 this.target = target;
@@ -298,7 +308,7 @@ public class SearchAlertHistoriesResponseBody extends TeaModel {
             }
 
             /**
-             * UserId.
+             * The ID of the user.
              */
             public Builder userId(String userId) {
                 this.userId = userId;
@@ -375,7 +385,7 @@ public class SearchAlertHistoriesResponseBody extends TeaModel {
             private Integer totalCount; 
 
             /**
-             * AlarmHistories.
+             * The information about alert records.
              */
             public Builder alarmHistories(java.util.List < AlarmHistories> alarmHistories) {
                 this.alarmHistories = alarmHistories;
@@ -383,7 +393,7 @@ public class SearchAlertHistoriesResponseBody extends TeaModel {
             }
 
             /**
-             * PageNumber.
+             * The page number of the returned page.
              */
             public Builder pageNumber(Integer pageNumber) {
                 this.pageNumber = pageNumber;
@@ -391,7 +401,7 @@ public class SearchAlertHistoriesResponseBody extends TeaModel {
             }
 
             /**
-             * PageSize.
+             * The number of entries returned per page.
              */
             public Builder pageSize(Integer pageSize) {
                 this.pageSize = pageSize;
@@ -399,7 +409,7 @@ public class SearchAlertHistoriesResponseBody extends TeaModel {
             }
 
             /**
-             * TotalCount.
+             * The total number of returned entries.
              */
             public Builder totalCount(Integer totalCount) {
                 this.totalCount = totalCount;

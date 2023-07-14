@@ -12,14 +12,22 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ListDashboardsByNameResponseBody</p>
  */
 public class ListDashboardsByNameResponseBody extends TeaModel {
+    @NameInMap("Code")
+    private Integer code;
+
     @NameInMap("Data")
     private String data;
+
+    @NameInMap("Message")
+    private String message;
 
     @NameInMap("RequestId")
     private String requestId;
 
     private ListDashboardsByNameResponseBody(Builder builder) {
+        this.code = builder.code;
         this.data = builder.data;
+        this.message = builder.message;
         this.requestId = builder.requestId;
     }
 
@@ -32,10 +40,24 @@ public class ListDashboardsByNameResponseBody extends TeaModel {
     }
 
     /**
+     * @return code
+     */
+    public Integer getCode() {
+        return this.code;
+    }
+
+    /**
      * @return data
      */
     public String getData() {
         return this.data;
+    }
+
+    /**
+     * @return message
+     */
+    public String getMessage() {
+        return this.message;
     }
 
     /**
@@ -46,14 +68,32 @@ public class ListDashboardsByNameResponseBody extends TeaModel {
     }
 
     public static final class Builder {
+        private Integer code; 
         private String data; 
+        private String message; 
         private String requestId; 
+
+        /**
+         * 状态码。说明 200表示成功。
+         */
+        public Builder code(Integer code) {
+            this.code = code;
+            return this;
+        }
 
         /**
          * Data.
          */
         public Builder data(String data) {
             this.data = data;
+            return this;
+        }
+
+        /**
+         * 返回结果的提示信息。
+         */
+        public Builder message(String message) {
+            this.message = message;
             return this;
         }
 

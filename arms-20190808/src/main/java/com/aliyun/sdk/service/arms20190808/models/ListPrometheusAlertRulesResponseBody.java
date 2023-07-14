@@ -193,6 +193,67 @@ public class ListPrometheusAlertRulesResponseBody extends TeaModel {
         } 
 
     }
+    public static class Tags extends TeaModel {
+        @NameInMap("Key")
+        private String key;
+
+        @NameInMap("Value")
+        private String value;
+
+        private Tags(Builder builder) {
+            this.key = builder.key;
+            this.value = builder.value;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static Tags create() {
+            return builder().build();
+        }
+
+        /**
+         * @return key
+         */
+        public String getKey() {
+            return this.key;
+        }
+
+        /**
+         * @return value
+         */
+        public String getValue() {
+            return this.value;
+        }
+
+        public static final class Builder {
+            private String key; 
+            private String value; 
+
+            /**
+             * Key.
+             */
+            public Builder key(String key) {
+                this.key = key;
+                return this;
+            }
+
+            /**
+             * Value.
+             */
+            public Builder value(String value) {
+                this.value = value;
+                return this;
+            }
+
+            public Tags build() {
+                return new Tags(this);
+            } 
+
+        } 
+
+    }
     public static class PrometheusAlertRules extends TeaModel {
         @NameInMap("AlertId")
         private Long alertId;
@@ -227,6 +288,9 @@ public class ListPrometheusAlertRulesResponseBody extends TeaModel {
         @NameInMap("Status")
         private Integer status;
 
+        @NameInMap("Tags")
+        private java.util.List < Tags> tags;
+
         @NameInMap("Type")
         private String type;
 
@@ -242,6 +306,7 @@ public class ListPrometheusAlertRulesResponseBody extends TeaModel {
             this.message = builder.message;
             this.notifyType = builder.notifyType;
             this.status = builder.status;
+            this.tags = builder.tags;
             this.type = builder.type;
         }
 
@@ -331,6 +396,13 @@ public class ListPrometheusAlertRulesResponseBody extends TeaModel {
         }
 
         /**
+         * @return tags
+         */
+        public java.util.List < Tags> getTags() {
+            return this.tags;
+        }
+
+        /**
          * @return type
          */
         public String getType() {
@@ -349,6 +421,7 @@ public class ListPrometheusAlertRulesResponseBody extends TeaModel {
             private String message; 
             private String notifyType; 
             private Integer status; 
+            private java.util.List < Tags> tags; 
             private String type; 
 
             /**
@@ -436,6 +509,14 @@ public class ListPrometheusAlertRulesResponseBody extends TeaModel {
              */
             public Builder status(Integer status) {
                 this.status = status;
+                return this;
+            }
+
+            /**
+             * Tags.
+             */
+            public Builder tags(java.util.List < Tags> tags) {
+                this.tags = tags;
                 return this;
             }
 

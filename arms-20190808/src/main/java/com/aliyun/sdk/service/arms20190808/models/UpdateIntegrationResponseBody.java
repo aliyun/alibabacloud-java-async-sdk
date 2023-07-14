@@ -50,7 +50,7 @@ public class UpdateIntegrationResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * Integration.
+         * The Information about the alert integration.
          */
         public Builder integration(Integration integration) {
             this.integration = integration;
@@ -58,7 +58,7 @@ public class UpdateIntegrationResponseBody extends TeaModel {
         }
 
         /**
-         * Id of the request
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -278,7 +278,7 @@ public class UpdateIntegrationResponseBody extends TeaModel {
             private Boolean state; 
 
             /**
-             * ApiEndpoint.
+             * The endpoint of the alert integration.
              */
             public Builder apiEndpoint(String apiEndpoint) {
                 this.apiEndpoint = apiEndpoint;
@@ -286,7 +286,11 @@ public class UpdateIntegrationResponseBody extends TeaModel {
             }
 
             /**
-             * AutoRecover.
+             * Indicates whether alert events are automatically cleared. Valid values:
+             * <p>
+             * 
+             * *   true (default)
+             * *   false
              */
             public Builder autoRecover(Boolean autoRecover) {
                 this.autoRecover = autoRecover;
@@ -294,7 +298,7 @@ public class UpdateIntegrationResponseBody extends TeaModel {
             }
 
             /**
-             * Description.
+             * The description of the alert integration.
              */
             public Builder description(String description) {
                 this.description = description;
@@ -302,7 +306,7 @@ public class UpdateIntegrationResponseBody extends TeaModel {
             }
 
             /**
-             * DuplicateKey.
+             * The fields whose values are deduplicated.
              */
             public Builder duplicateKey(String duplicateKey) {
                 this.duplicateKey = duplicateKey;
@@ -310,7 +314,7 @@ public class UpdateIntegrationResponseBody extends TeaModel {
             }
 
             /**
-             * ExtendedFieldRedefineRules.
+             * The extended mapped fields of the alert source.
              */
             public Builder extendedFieldRedefineRules(java.util.List < java.util.Map<String, ?>> extendedFieldRedefineRules) {
                 this.extendedFieldRedefineRules = extendedFieldRedefineRules;
@@ -318,7 +322,7 @@ public class UpdateIntegrationResponseBody extends TeaModel {
             }
 
             /**
-             * FieldRedefineRules.
+             * The predefined mapped fields of the alert source.
              */
             public Builder fieldRedefineRules(java.util.List < java.util.Map<String, ?>> fieldRedefineRules) {
                 this.fieldRedefineRules = fieldRedefineRules;
@@ -326,7 +330,10 @@ public class UpdateIntegrationResponseBody extends TeaModel {
             }
 
             /**
-             * InitiativeRecoverField.
+             * The field for clearing alert events. The system queries alert events based on the field of alert clearing events and clears the alert events.
+             * <p>
+             * 
+             * > Only Log Service supports this parameter.
              */
             public Builder initiativeRecoverField(String initiativeRecoverField) {
                 this.initiativeRecoverField = initiativeRecoverField;
@@ -334,7 +341,10 @@ public class UpdateIntegrationResponseBody extends TeaModel {
             }
 
             /**
-             * InitiativeRecoverValue.
+             * The value of the field for clearing alert events. The system queries alert events based on the field of alert clearing events and clears the alert events.
+             * <p>
+             * 
+             * > Only Log Service supports this parameter.
              */
             public Builder initiativeRecoverValue(String initiativeRecoverValue) {
                 this.initiativeRecoverValue = initiativeRecoverValue;
@@ -342,7 +352,7 @@ public class UpdateIntegrationResponseBody extends TeaModel {
             }
 
             /**
-             * IntegrationId.
+             * The ID of the alert integration.
              */
             public Builder integrationId(Long integrationId) {
                 this.integrationId = integrationId;
@@ -350,7 +360,7 @@ public class UpdateIntegrationResponseBody extends TeaModel {
             }
 
             /**
-             * IntegrationName.
+             * The name of the alert integration.
              */
             public Builder integrationName(String integrationName) {
                 this.integrationName = integrationName;
@@ -358,7 +368,11 @@ public class UpdateIntegrationResponseBody extends TeaModel {
             }
 
             /**
-             * IntegrationProductType.
+             * The service of the alert integration. Valid values:
+             * <p>
+             * 
+             * *   CLOUD_MONITOR: CloudMonitor
+             * *   LOG_SERVICE: Log Service
              */
             public Builder integrationProductType(String integrationProductType) {
                 this.integrationProductType = integrationProductType;
@@ -366,7 +380,7 @@ public class UpdateIntegrationResponseBody extends TeaModel {
             }
 
             /**
-             * Liveness.
+             * The activity of the alert integration
              */
             public Builder liveness(String liveness) {
                 this.liveness = liveness;
@@ -374,7 +388,7 @@ public class UpdateIntegrationResponseBody extends TeaModel {
             }
 
             /**
-             * RecoverTime.
+             * The time when alert events are automatically cleared. Unit: seconds. Default value: 300.
              */
             public Builder recoverTime(Long recoverTime) {
                 this.recoverTime = recoverTime;
@@ -382,7 +396,7 @@ public class UpdateIntegrationResponseBody extends TeaModel {
             }
 
             /**
-             * ShortToken.
+             * The authentication token of the alert integration.
              */
             public Builder shortToken(String shortToken) {
                 this.shortToken = shortToken;
@@ -390,7 +404,7 @@ public class UpdateIntegrationResponseBody extends TeaModel {
             }
 
             /**
-             * Stat.
+             * The total number of alert events and the number of abnormal alert events in the last hour.
              */
             public Builder stat(java.util.List < Long > stat) {
                 this.stat = stat;
@@ -398,7 +412,11 @@ public class UpdateIntegrationResponseBody extends TeaModel {
             }
 
             /**
-             * State.
+             * Indicates whether the alert integration is enabled. Valid values:
+             * <p>
+             * 
+             * *   true
+             * *   false
              */
             public Builder state(Boolean state) {
                 this.state = state;

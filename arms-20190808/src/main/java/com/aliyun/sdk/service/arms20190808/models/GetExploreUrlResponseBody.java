@@ -12,15 +12,27 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>GetExploreUrlResponseBody</p>
  */
 public class GetExploreUrlResponseBody extends TeaModel {
+    @NameInMap("Code")
+    private Integer code;
+
     @NameInMap("Data")
     private String data;
+
+    @NameInMap("Message")
+    private String message;
 
     @NameInMap("RequestId")
     private String requestId;
 
+    @NameInMap("Success")
+    private Boolean success;
+
     private GetExploreUrlResponseBody(Builder builder) {
+        this.code = builder.code;
         this.data = builder.data;
+        this.message = builder.message;
         this.requestId = builder.requestId;
+        this.success = builder.success;
     }
 
     public static Builder builder() {
@@ -32,10 +44,24 @@ public class GetExploreUrlResponseBody extends TeaModel {
     }
 
     /**
+     * @return code
+     */
+    public Integer getCode() {
+        return this.code;
+    }
+
+    /**
      * @return data
      */
     public String getData() {
         return this.data;
+    }
+
+    /**
+     * @return message
+     */
+    public String getMessage() {
+        return this.message;
     }
 
     /**
@@ -45,12 +71,30 @@ public class GetExploreUrlResponseBody extends TeaModel {
         return this.requestId;
     }
 
+    /**
+     * @return success
+     */
+    public Boolean getSuccess() {
+        return this.success;
+    }
+
     public static final class Builder {
+        private Integer code; 
         private String data; 
+        private String message; 
         private String requestId; 
+        private Boolean success; 
 
         /**
-         * Data.
+         * Code.
+         */
+        public Builder code(Integer code) {
+            this.code = code;
+            return this;
+        }
+
+        /**
+         * Response parameters
          */
         public Builder data(String data) {
             this.data = data;
@@ -58,10 +102,26 @@ public class GetExploreUrlResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * Message.
+         */
+        public Builder message(String message) {
+            this.message = message;
+            return this;
+        }
+
+        /**
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
+            return this;
+        }
+
+        /**
+         * Success.
+         */
+        public Builder success(Boolean success) {
+            this.success = success;
             return this;
         }
 

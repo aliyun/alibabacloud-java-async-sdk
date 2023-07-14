@@ -50,7 +50,7 @@ public class ListClusterFromGrafanaResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * PromClusterList.
+         * The cluster information.
          */
         public Builder promClusterList(java.util.List < PromClusterList> promClusterList) {
             this.promClusterList = promClusterList;
@@ -58,7 +58,7 @@ public class ListClusterFromGrafanaResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The request ID. You can use the ID to query logs and troubleshoot issues.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -302,7 +302,12 @@ public class ListClusterFromGrafanaResponseBody extends TeaModel {
             private String userId; 
 
             /**
-             * AgentStatus.
+             * The status of the Prometheus agent on the cluster. Valid values:
+             * <p>
+             * 
+             * *   INSTALL_FAILED: The Prometheus agent failed to be installed.
+             * *   INSTALL_SUCCEED: The Prometheus agent was installed.
+             * *   NOT_REGISTER: You have not registered an Alibaba Cloud account.
              */
             public Builder agentStatus(String agentStatus) {
                 this.agentStatus = agentStatus;
@@ -310,7 +315,7 @@ public class ListClusterFromGrafanaResponseBody extends TeaModel {
             }
 
             /**
-             * ClusterId.
+             * The cluster ID.
              */
             public Builder clusterId(String clusterId) {
                 this.clusterId = clusterId;
@@ -318,7 +323,7 @@ public class ListClusterFromGrafanaResponseBody extends TeaModel {
             }
 
             /**
-             * ClusterName.
+             * The name of the cluster.
              */
             public Builder clusterName(String clusterName) {
                 this.clusterName = clusterName;
@@ -326,7 +331,7 @@ public class ListClusterFromGrafanaResponseBody extends TeaModel {
             }
 
             /**
-             * ClusterType.
+             * The type of the cluster.
              */
             public Builder clusterType(String clusterType) {
                 this.clusterType = clusterType;
@@ -334,7 +339,7 @@ public class ListClusterFromGrafanaResponseBody extends TeaModel {
             }
 
             /**
-             * ControllerId.
+             * The controller ID.
              */
             public Builder controllerId(String controllerId) {
                 this.controllerId = controllerId;
@@ -342,7 +347,7 @@ public class ListClusterFromGrafanaResponseBody extends TeaModel {
             }
 
             /**
-             * CreateTime.
+             * The time when the dashboard was created.
              */
             public Builder createTime(Long createTime) {
                 this.createTime = createTime;
@@ -350,7 +355,7 @@ public class ListClusterFromGrafanaResponseBody extends TeaModel {
             }
 
             /**
-             * Extra.
+             * The extended fields. This parameter is a JSON string.
              */
             public Builder extra(String extra) {
                 this.extra = extra;
@@ -358,7 +363,7 @@ public class ListClusterFromGrafanaResponseBody extends TeaModel {
             }
 
             /**
-             * Id.
+             * The ID of a database in the cluster.
              */
             public Builder id(Long id) {
                 this.id = id;
@@ -366,7 +371,7 @@ public class ListClusterFromGrafanaResponseBody extends TeaModel {
             }
 
             /**
-             * InstallTime.
+             * The timestamp when the Prometheus agent was installed.
              */
             public Builder installTime(Long installTime) {
                 this.installTime = installTime;
@@ -374,7 +379,11 @@ public class ListClusterFromGrafanaResponseBody extends TeaModel {
             }
 
             /**
-             * IsControllerInstalled.
+             * Indicates whether the Prometheus agent was installed. Valid values:
+             * <p>
+             * 
+             * *   true: The Prometheus agent was installed.
+             * *   false: The Prometheus agent was not installed.
              */
             public Builder isControllerInstalled(Boolean isControllerInstalled) {
                 this.isControllerInstalled = isControllerInstalled;
@@ -382,7 +391,7 @@ public class ListClusterFromGrafanaResponseBody extends TeaModel {
             }
 
             /**
-             * LastHeartBeatTime.
+             * The time when the last heartbeat was reported.
              */
             public Builder lastHeartBeatTime(Long lastHeartBeatTime) {
                 this.lastHeartBeatTime = lastHeartBeatTime;
@@ -390,7 +399,7 @@ public class ListClusterFromGrafanaResponseBody extends TeaModel {
             }
 
             /**
-             * NodeNum.
+             * The number of nodes.
              */
             public Builder nodeNum(Integer nodeNum) {
                 this.nodeNum = nodeNum;
@@ -398,7 +407,7 @@ public class ListClusterFromGrafanaResponseBody extends TeaModel {
             }
 
             /**
-             * Options.
+             * The custom parameter.
              */
             public Builder options(String options) {
                 this.options = options;
@@ -406,7 +415,7 @@ public class ListClusterFromGrafanaResponseBody extends TeaModel {
             }
 
             /**
-             * PluginsJsonArray.
+             * The list of nodejsonar logs.
              */
             public Builder pluginsJsonArray(String pluginsJsonArray) {
                 this.pluginsJsonArray = pluginsJsonArray;
@@ -414,7 +423,7 @@ public class ListClusterFromGrafanaResponseBody extends TeaModel {
             }
 
             /**
-             * RegionId.
+             * The region ID.
              */
             public Builder regionId(String regionId) {
                 this.regionId = regionId;
@@ -422,7 +431,7 @@ public class ListClusterFromGrafanaResponseBody extends TeaModel {
             }
 
             /**
-             * StateJson.
+             * The information about applications deployed in the cluster.
              */
             public Builder stateJson(String stateJson) {
                 this.stateJson = stateJson;
@@ -430,7 +439,7 @@ public class ListClusterFromGrafanaResponseBody extends TeaModel {
             }
 
             /**
-             * UpdateTime.
+             * The time when the dashboard was updated.
              */
             public Builder updateTime(Long updateTime) {
                 this.updateTime = updateTime;
@@ -438,7 +447,7 @@ public class ListClusterFromGrafanaResponseBody extends TeaModel {
             }
 
             /**
-             * UserId.
+             * The ID of the Alibaba Cloud account to which the cluster belongs.
              */
             public Builder userId(String userId) {
                 this.userId = userId;

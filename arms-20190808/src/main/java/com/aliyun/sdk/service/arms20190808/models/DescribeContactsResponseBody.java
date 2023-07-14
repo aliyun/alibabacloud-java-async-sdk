@@ -50,7 +50,7 @@ public class DescribeContactsResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * 分页对象
+         * PageBean.
          */
         public Builder pageBean(PageBean pageBean) {
             this.pageBean = pageBean;
@@ -58,7 +58,7 @@ public class DescribeContactsResponseBody extends TeaModel {
         }
 
         /**
-         * Id of the request
+         * RequestId.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -190,7 +190,7 @@ public class DescribeContactsResponseBody extends TeaModel {
             }
 
             /**
-             * 告警联系人ID
+             * ContactId.
              */
             public Builder contactId(Float contactId) {
                 this.contactId = contactId;
@@ -198,7 +198,7 @@ public class DescribeContactsResponseBody extends TeaModel {
             }
 
             /**
-             * 告警联系人名称
+             * ContactName.
              */
             public Builder contactName(String contactName) {
                 this.contactName = contactName;
@@ -206,7 +206,7 @@ public class DescribeContactsResponseBody extends TeaModel {
             }
 
             /**
-             * 告警联系人邮箱
+             * Email.
              */
             public Builder email(String email) {
                 this.email = email;
@@ -222,7 +222,7 @@ public class DescribeContactsResponseBody extends TeaModel {
             }
 
             /**
-             * 手机号码是否验证标识
+             * IsVerify.
              */
             public Builder isVerify(Boolean isVerify) {
                 this.isVerify = isVerify;
@@ -230,7 +230,7 @@ public class DescribeContactsResponseBody extends TeaModel {
             }
 
             /**
-             * 告警联系人手机号码
+             * Phone.
              */
             public Builder phone(String phone) {
                 this.phone = phone;
@@ -238,7 +238,7 @@ public class DescribeContactsResponseBody extends TeaModel {
             }
 
             /**
-             * 电话通知失败补发类型：0. 不补发   1. 重复拨打一次电话   2. 发送短信通知   3. 使用全局默认值（当前为不补发）
+             * ReissueSendNotice.
              */
             public Builder reissueSendNotice(Long reissueSendNotice) {
                 this.reissueSendNotice = reissueSendNotice;
@@ -315,7 +315,7 @@ public class DescribeContactsResponseBody extends TeaModel {
             private Long total; 
 
             /**
-             * 告警联系人列表
+             * AlertContacts.
              */
             public Builder alertContacts(java.util.List < AlertContacts> alertContacts) {
                 this.alertContacts = alertContacts;
@@ -323,7 +323,7 @@ public class DescribeContactsResponseBody extends TeaModel {
             }
 
             /**
-             * 页数
+             * Page.
              */
             public Builder page(Long page) {
                 this.page = page;
@@ -331,7 +331,7 @@ public class DescribeContactsResponseBody extends TeaModel {
             }
 
             /**
-             * 每一页大小
+             * Size.
              */
             public Builder size(Long size) {
                 this.size = size;
@@ -339,7 +339,7 @@ public class DescribeContactsResponseBody extends TeaModel {
             }
 
             /**
-             * 总数
+             * Total.
              */
             public Builder total(Long total) {
                 this.total = total;

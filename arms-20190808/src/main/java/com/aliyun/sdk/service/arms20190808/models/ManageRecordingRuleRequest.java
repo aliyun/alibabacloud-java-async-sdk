@@ -100,7 +100,7 @@ public class ManageRecordingRuleRequest extends Request {
         } 
 
         /**
-         * ClusterId.
+         * The cluster ID.
          */
         public Builder clusterId(String clusterId) {
             this.putQueryParameter("ClusterId", clusterId);
@@ -109,7 +109,7 @@ public class ManageRecordingRuleRequest extends Request {
         }
 
         /**
-         * QueryUserId.
+         * The user ID.
          */
         public Builder queryUserId(String queryUserId) {
             this.putQueryParameter("QueryUserId", queryUserId);
@@ -118,7 +118,7 @@ public class ManageRecordingRuleRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * The region ID.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -127,7 +127,7 @@ public class ManageRecordingRuleRequest extends Request {
         }
 
         /**
-         * RuleYaml.
+         * The recording rule.
          */
         public Builder ruleYaml(String ruleYaml) {
             this.putQueryParameter("RuleYaml", ruleYaml);

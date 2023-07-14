@@ -50,7 +50,7 @@ public class SearchRetcodeAppByPageResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * PageBean.
+         * The returned page information.
          */
         public Builder pageBean(PageBean pageBean) {
             this.pageBean = pageBean;
@@ -58,7 +58,7 @@ public class SearchRetcodeAppByPageResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -71,6 +71,67 @@ public class SearchRetcodeAppByPageResponseBody extends TeaModel {
 
     } 
 
+    public static class Tags extends TeaModel {
+        @NameInMap("Key")
+        private String key;
+
+        @NameInMap("Value")
+        private String value;
+
+        private Tags(Builder builder) {
+            this.key = builder.key;
+            this.value = builder.value;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static Tags create() {
+            return builder().build();
+        }
+
+        /**
+         * @return key
+         */
+        public String getKey() {
+            return this.key;
+        }
+
+        /**
+         * @return value
+         */
+        public String getValue() {
+            return this.value;
+        }
+
+        public static final class Builder {
+            private String key; 
+            private String value; 
+
+            /**
+             * The tag key.
+             */
+            public Builder key(String key) {
+                this.key = key;
+                return this;
+            }
+
+            /**
+             * The tag value.
+             */
+            public Builder value(String value) {
+                this.value = value;
+                return this;
+            }
+
+            public Tags build() {
+                return new Tags(this);
+            } 
+
+        } 
+
+    }
     public static class RetcodeApps extends TeaModel {
         @NameInMap("AppId")
         private Long appId;
@@ -90,8 +151,14 @@ public class SearchRetcodeAppByPageResponseBody extends TeaModel {
         @NameInMap("RegionId")
         private String regionId;
 
+        @NameInMap("ResourceGroupId")
+        private String resourceGroupId;
+
         @NameInMap("RetcodeAppType")
         private String retcodeAppType;
+
+        @NameInMap("Tags")
+        private java.util.List < Tags> tags;
 
         @NameInMap("Type")
         private String type;
@@ -109,7 +176,9 @@ public class SearchRetcodeAppByPageResponseBody extends TeaModel {
             this.nickName = builder.nickName;
             this.pid = builder.pid;
             this.regionId = builder.regionId;
+            this.resourceGroupId = builder.resourceGroupId;
             this.retcodeAppType = builder.retcodeAppType;
+            this.tags = builder.tags;
             this.type = builder.type;
             this.updateTime = builder.updateTime;
             this.userId = builder.userId;
@@ -166,10 +235,24 @@ public class SearchRetcodeAppByPageResponseBody extends TeaModel {
         }
 
         /**
+         * @return resourceGroupId
+         */
+        public String getResourceGroupId() {
+            return this.resourceGroupId;
+        }
+
+        /**
          * @return retcodeAppType
          */
         public String getRetcodeAppType() {
             return this.retcodeAppType;
+        }
+
+        /**
+         * @return tags
+         */
+        public java.util.List < Tags> getTags() {
+            return this.tags;
         }
 
         /**
@@ -200,13 +283,15 @@ public class SearchRetcodeAppByPageResponseBody extends TeaModel {
             private String nickName; 
             private String pid; 
             private String regionId; 
+            private String resourceGroupId; 
             private String retcodeAppType; 
+            private java.util.List < Tags> tags; 
             private String type; 
             private Long updateTime; 
             private String userId; 
 
             /**
-             * AppId.
+             * The ID of the application. The parameter is an auto-increment parameter.
              */
             public Builder appId(Long appId) {
                 this.appId = appId;
@@ -214,7 +299,7 @@ public class SearchRetcodeAppByPageResponseBody extends TeaModel {
             }
 
             /**
-             * AppName.
+             * The name of the application.
              */
             public Builder appName(String appName) {
                 this.appName = appName;
@@ -222,7 +307,7 @@ public class SearchRetcodeAppByPageResponseBody extends TeaModel {
             }
 
             /**
-             * CreateTime.
+             * The time when the task was created.
              */
             public Builder createTime(Long createTime) {
                 this.createTime = createTime;
@@ -230,7 +315,7 @@ public class SearchRetcodeAppByPageResponseBody extends TeaModel {
             }
 
             /**
-             * NickName.
+             * The alias of the application.
              */
             public Builder nickName(String nickName) {
                 this.nickName = nickName;
@@ -238,7 +323,7 @@ public class SearchRetcodeAppByPageResponseBody extends TeaModel {
             }
 
             /**
-             * Pid.
+             * The PID of the application.
              */
             public Builder pid(String pid) {
                 this.pid = pid;
@@ -246,7 +331,7 @@ public class SearchRetcodeAppByPageResponseBody extends TeaModel {
             }
 
             /**
-             * RegionId.
+             * The ID of the region.
              */
             public Builder regionId(String regionId) {
                 this.regionId = regionId;
@@ -254,7 +339,23 @@ public class SearchRetcodeAppByPageResponseBody extends TeaModel {
             }
 
             /**
-             * RetcodeAppType.
+             * The ID of the resource group.
+             */
+            public Builder resourceGroupId(String resourceGroupId) {
+                this.resourceGroupId = resourceGroupId;
+                return this;
+            }
+
+            /**
+             * The type of the application. Valid values:
+             * <p>
+             * 
+             * *   `web`: web application
+             * *   `weex`: Weex mobile app
+             * *   `mini_dd`: DingTalk mini program
+             * *   `mini_alipay`: Alipay mini program
+             * *   `mini_wx`: WeChat mini program
+             * *   `mini_common`: mini program on other platforms
              */
             public Builder retcodeAppType(String retcodeAppType) {
                 this.retcodeAppType = retcodeAppType;
@@ -262,7 +363,19 @@ public class SearchRetcodeAppByPageResponseBody extends TeaModel {
             }
 
             /**
-             * Type.
+             * The tags.
+             */
+            public Builder tags(java.util.List < Tags> tags) {
+                this.tags = tags;
+                return this;
+            }
+
+            /**
+             * The type of the monitoring task. Valid values:
+             * <p>
+             * 
+             * *   `TRACE`: Application Monitoring
+             * *   `RETCODE`: Browser Monitoring
              */
             public Builder type(String type) {
                 this.type = type;
@@ -270,7 +383,7 @@ public class SearchRetcodeAppByPageResponseBody extends TeaModel {
             }
 
             /**
-             * UpdateTime.
+             * The time when the task was updated.
              */
             public Builder updateTime(Long updateTime) {
                 this.updateTime = updateTime;
@@ -278,7 +391,7 @@ public class SearchRetcodeAppByPageResponseBody extends TeaModel {
             }
 
             /**
-             * UserId.
+             * The ID of the user.
              */
             public Builder userId(String userId) {
                 this.userId = userId;
@@ -355,7 +468,7 @@ public class SearchRetcodeAppByPageResponseBody extends TeaModel {
             private Integer totalCount; 
 
             /**
-             * PageNumber.
+             * The page number of the returned page.
              */
             public Builder pageNumber(Integer pageNumber) {
                 this.pageNumber = pageNumber;
@@ -363,7 +476,7 @@ public class SearchRetcodeAppByPageResponseBody extends TeaModel {
             }
 
             /**
-             * PageSize.
+             * The number of entries returned per page.
              */
             public Builder pageSize(Integer pageSize) {
                 this.pageSize = pageSize;
@@ -371,7 +484,7 @@ public class SearchRetcodeAppByPageResponseBody extends TeaModel {
             }
 
             /**
-             * RetcodeApps.
+             * The Browser Monitoring tasks that are returned.
              */
             public Builder retcodeApps(java.util.List < RetcodeApps> retcodeApps) {
                 this.retcodeApps = retcodeApps;
@@ -379,7 +492,7 @@ public class SearchRetcodeAppByPageResponseBody extends TeaModel {
             }
 
             /**
-             * TotalCount.
+             * The total number of returned entries.
              */
             public Builder totalCount(Integer totalCount) {
                 this.totalCount = totalCount;

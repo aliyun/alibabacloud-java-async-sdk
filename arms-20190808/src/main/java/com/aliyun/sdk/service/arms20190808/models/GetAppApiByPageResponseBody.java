@@ -86,7 +86,7 @@ public class GetAppApiByPageResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * Code.
+         * The number of entries returned per page.
          */
         public Builder code(Integer code) {
             this.code = code;
@@ -102,7 +102,7 @@ public class GetAppApiByPageResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * The number of the page to return.
          */
         public Builder message(String message) {
             this.message = message;
@@ -110,7 +110,7 @@ public class GetAppApiByPageResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The struct returned.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -118,7 +118,7 @@ public class GetAppApiByPageResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * The ID of the request.
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -132,6 +132,9 @@ public class GetAppApiByPageResponseBody extends TeaModel {
     } 
 
     public static class Data extends TeaModel {
+        @NameInMap("Completed")
+        private Boolean completed;
+
         @NameInMap("Items")
         private java.util.List < java.util.Map<String, ?>> items;
 
@@ -145,6 +148,7 @@ public class GetAppApiByPageResponseBody extends TeaModel {
         private String total;
 
         private Data(Builder builder) {
+            this.completed = builder.completed;
             this.items = builder.items;
             this.page = builder.page;
             this.pageSize = builder.pageSize;
@@ -157,6 +161,13 @@ public class GetAppApiByPageResponseBody extends TeaModel {
 
         public static Data create() {
             return builder().build();
+        }
+
+        /**
+         * @return completed
+         */
+        public Boolean getCompleted() {
+            return this.completed;
         }
 
         /**
@@ -188,10 +199,19 @@ public class GetAppApiByPageResponseBody extends TeaModel {
         }
 
         public static final class Builder {
+            private Boolean completed; 
             private java.util.List < java.util.Map<String, ?>> items; 
             private Integer page; 
             private Integer pageSize; 
             private String total; 
+
+            /**
+             * Completed.
+             */
+            public Builder completed(Boolean completed) {
+                this.completed = completed;
+                return this;
+            }
 
             /**
              * Items.

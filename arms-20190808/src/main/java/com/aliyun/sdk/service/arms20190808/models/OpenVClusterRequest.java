@@ -112,7 +112,7 @@ public class OpenVClusterRequest extends Request {
         } 
 
         /**
-         * ClusterType.
+         * The type of the cluster. For cloud services, set this parameter to `cloud-product-prometheus`.
          */
         public Builder clusterType(String clusterType) {
             this.putQueryParameter("ClusterType", clusterType);
@@ -121,7 +121,7 @@ public class OpenVClusterRequest extends Request {
         }
 
         /**
-         * Length.
+         * The length of the cluster ID. Default value: 10.
          */
         public Builder length(Integer length) {
             this.putQueryParameter("Length", length);
@@ -130,7 +130,7 @@ public class OpenVClusterRequest extends Request {
         }
 
         /**
-         * Product.
+         * The name of the cloud service. This parameter must be specified when ClusterType is set to `cloud-product-prometheus`. Valid values: influxdb, mongodb, and DLA. You cannot specify multiple service names.
          */
         public Builder product(String product) {
             this.putQueryParameter("Product", product);
@@ -139,7 +139,7 @@ public class OpenVClusterRequest extends Request {
         }
 
         /**
-         * RecreateSwitch.
+         * Specifies whether to create or query a virtual cluster. This parameter provides backward compatibility.
          */
         public Builder recreateSwitch(Boolean recreateSwitch) {
             this.putQueryParameter("RecreateSwitch", recreateSwitch);
@@ -148,7 +148,7 @@ public class OpenVClusterRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * The region ID.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);

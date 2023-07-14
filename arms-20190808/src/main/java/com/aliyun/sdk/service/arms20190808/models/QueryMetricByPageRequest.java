@@ -238,7 +238,7 @@ public class QueryMetricByPageRequest extends Request {
         }
 
         /**
-         * CurrentPage.
+         * The number of the page to return. Default value: `1`.
          */
         public Builder currentPage(Integer currentPage) {
             this.putQueryParameter("CurrentPage", currentPage);
@@ -247,7 +247,7 @@ public class QueryMetricByPageRequest extends Request {
         }
 
         /**
-         * CustomFilters.
+         * Custom filter conditions.
          */
         public Builder customFilters(java.util.List < String > customFilters) {
             this.putQueryParameter("CustomFilters", customFilters);
@@ -256,7 +256,7 @@ public class QueryMetricByPageRequest extends Request {
         }
 
         /**
-         * Dimensions.
+         * The dimensions of the metric that you want to query.
          */
         public Builder dimensions(java.util.List < String > dimensions) {
             this.putQueryParameter("Dimensions", dimensions);
@@ -265,7 +265,7 @@ public class QueryMetricByPageRequest extends Request {
         }
 
         /**
-         * EndTime.
+         * The end of the time range to query. Unit: milliseconds.
          */
         public Builder endTime(Long endTime) {
             this.putQueryParameter("EndTime", endTime);
@@ -274,7 +274,7 @@ public class QueryMetricByPageRequest extends Request {
         }
 
         /**
-         * Filters.
+         * The filter conditions.
          */
         public Builder filters(java.util.List < Filters> filters) {
             this.putQueryParameter("Filters", filters);
@@ -283,7 +283,7 @@ public class QueryMetricByPageRequest extends Request {
         }
 
         /**
-         * IntervalInSec.
+         * The time interval at which data entries are aggregated. Unit: milliseconds. Minimum value: 60000.
          */
         public Builder intervalInSec(Integer intervalInSec) {
             this.putQueryParameter("IntervalInSec", intervalInSec);
@@ -292,7 +292,7 @@ public class QueryMetricByPageRequest extends Request {
         }
 
         /**
-         * Measures.
+         * The measures of the metric that you want to query.
          */
         public Builder measures(java.util.List < String > measures) {
             this.putQueryParameter("Measures", measures);
@@ -301,7 +301,7 @@ public class QueryMetricByPageRequest extends Request {
         }
 
         /**
-         * Metric.
+         * The metric that you want to query. You cannot specify a custom metric. For more information, see the "Application monitoring metrics that can be queried" section.
          */
         public Builder metric(String metric) {
             this.putQueryParameter("Metric", metric);
@@ -310,7 +310,13 @@ public class QueryMetricByPageRequest extends Request {
         }
 
         /**
-         * Order.
+         * The order in which measures are sorted. Valid values:
+         * <p>
+         * 
+         * *   `ASC`: ascending order
+         * *   `DESC`: descending order
+         * 
+         * > If you do not specify the parameter, data is not sorted.
          */
         public Builder order(String order) {
             this.putQueryParameter("Order", order);
@@ -319,7 +325,7 @@ public class QueryMetricByPageRequest extends Request {
         }
 
         /**
-         * OrderBy.
+         * The dimension from which metrics are sorted. You can set this parameter to a supported dimension.
          */
         public Builder orderBy(String orderBy) {
             this.putQueryParameter("OrderBy", orderBy);
@@ -328,7 +334,7 @@ public class QueryMetricByPageRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * The number of entries to return on each page. This parameter is no longer supported. The number of entries to return on each page.
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -337,7 +343,7 @@ public class QueryMetricByPageRequest extends Request {
         }
 
         /**
-         * StartTime.
+         * The start of the time range to query. Unit: milliseconds.
          */
         public Builder startTime(Long startTime) {
             this.putQueryParameter("StartTime", startTime);
@@ -391,7 +397,7 @@ public class QueryMetricByPageRequest extends Request {
             private String value; 
 
             /**
-             * Key.
+             * The key of the filter condition. You must set the key to `pid` or `regionId`.
              */
             public Builder key(String key) {
                 this.key = key;
@@ -399,7 +405,7 @@ public class QueryMetricByPageRequest extends Request {
             }
 
             /**
-             * Value.
+             * The value of the filter condition. You must set the value of the `pid` or `regionId` condition. For information about how to obtain the `pid`, see the "Obtain the PID of an application" section.
              */
             public Builder value(String value) {
                 this.value = value;

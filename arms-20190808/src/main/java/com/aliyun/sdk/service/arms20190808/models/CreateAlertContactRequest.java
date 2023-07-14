@@ -34,6 +34,10 @@ public class CreateAlertContactRequest extends Request {
     private String regionId;
 
     @Query
+    @NameInMap("ResourceGroupId")
+    private String resourceGroupId;
+
+    @Query
     @NameInMap("SystemNoc")
     private Boolean systemNoc;
 
@@ -44,6 +48,7 @@ public class CreateAlertContactRequest extends Request {
         this.email = builder.email;
         this.phoneNum = builder.phoneNum;
         this.regionId = builder.regionId;
+        this.resourceGroupId = builder.resourceGroupId;
         this.systemNoc = builder.systemNoc;
     }
 
@@ -96,6 +101,13 @@ public class CreateAlertContactRequest extends Request {
     }
 
     /**
+     * @return resourceGroupId
+     */
+    public String getResourceGroupId() {
+        return this.resourceGroupId;
+    }
+
+    /**
      * @return systemNoc
      */
     public Boolean getSystemNoc() {
@@ -108,6 +120,7 @@ public class CreateAlertContactRequest extends Request {
         private String email; 
         private String phoneNum; 
         private String regionId; 
+        private String resourceGroupId; 
         private Boolean systemNoc; 
 
         private Builder() {
@@ -121,6 +134,7 @@ public class CreateAlertContactRequest extends Request {
             this.email = request.email;
             this.phoneNum = request.phoneNum;
             this.regionId = request.regionId;
+            this.resourceGroupId = request.resourceGroupId;
             this.systemNoc = request.systemNoc;
         } 
 
@@ -166,6 +180,15 @@ public class CreateAlertContactRequest extends Request {
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
             this.regionId = regionId;
+            return this;
+        }
+
+        /**
+         * ResourceGroupId.
+         */
+        public Builder resourceGroupId(String resourceGroupId) {
+            this.putQueryParameter("ResourceGroupId", resourceGroupId);
+            this.resourceGroupId = resourceGroupId;
             return this;
         }
 

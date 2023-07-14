@@ -85,7 +85,7 @@ public class AddRecordingRuleRequest extends Request {
         } 
 
         /**
-         * ClusterId.
+         * The cluster ID.
          */
         public Builder clusterId(String clusterId) {
             this.putQueryParameter("ClusterId", clusterId);
@@ -94,7 +94,7 @@ public class AddRecordingRuleRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * The region ID.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -103,7 +103,7 @@ public class AddRecordingRuleRequest extends Request {
         }
 
         /**
-         * RuleYaml.
+         * The custom recording rule. The value is in the YAML format.
          */
         public Builder ruleYaml(String ruleYaml) {
             this.putQueryParameter("RuleYaml", ruleYaml);

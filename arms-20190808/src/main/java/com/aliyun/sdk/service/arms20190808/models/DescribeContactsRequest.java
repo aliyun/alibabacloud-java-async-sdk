@@ -34,6 +34,10 @@ public class DescribeContactsRequest extends Request {
     private String phone;
 
     @Query
+    @NameInMap("RegionId")
+    private String regionId;
+
+    @Query
     @NameInMap("Size")
     @Validation(required = true)
     private Long size;
@@ -49,6 +53,7 @@ public class DescribeContactsRequest extends Request {
         this.email = builder.email;
         this.page = builder.page;
         this.phone = builder.phone;
+        this.regionId = builder.regionId;
         this.size = builder.size;
         this.verbose = builder.verbose;
     }
@@ -102,6 +107,13 @@ public class DescribeContactsRequest extends Request {
     }
 
     /**
+     * @return regionId
+     */
+    public String getRegionId() {
+        return this.regionId;
+    }
+
+    /**
      * @return size
      */
     public Long getSize() {
@@ -121,6 +133,7 @@ public class DescribeContactsRequest extends Request {
         private String email; 
         private Long page; 
         private String phone; 
+        private String regionId; 
         private Long size; 
         private String verbose; 
 
@@ -135,6 +148,7 @@ public class DescribeContactsRequest extends Request {
             this.email = request.email;
             this.page = request.page;
             this.phone = request.phone;
+            this.regionId = request.regionId;
             this.size = request.size;
             this.verbose = request.verbose;
         } 
@@ -149,7 +163,7 @@ public class DescribeContactsRequest extends Request {
         }
 
         /**
-         * 告警联系人名称
+         * Indicates whether the email address was verified.
          */
         public Builder contactName(String contactName) {
             this.putQueryParameter("ContactName", contactName);
@@ -158,7 +172,7 @@ public class DescribeContactsRequest extends Request {
         }
 
         /**
-         * 告警联系人邮箱
+         * Email.
          */
         public Builder email(String email) {
             this.putQueryParameter("Email", email);
@@ -176,11 +190,20 @@ public class DescribeContactsRequest extends Request {
         }
 
         /**
-         * 告警联系人手机号码
+         * The ID of the alert contact.
          */
         public Builder phone(String phone) {
             this.putQueryParameter("Phone", phone);
             this.phone = phone;
+            return this;
+        }
+
+        /**
+         * RegionId.
+         */
+        public Builder regionId(String regionId) {
+            this.putQueryParameter("RegionId", regionId);
+            this.regionId = regionId;
             return this;
         }
 

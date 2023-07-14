@@ -14,8 +14,15 @@ import com.aliyun.sdk.gateway.pop.models.*;
 public class DeleteRetcodeAppRequest extends Request {
     @Query
     @NameInMap("AppId")
-    @Validation(required = true)
     private String appId;
+
+    @Query
+    @NameInMap("AppName")
+    private String appName;
+
+    @Query
+    @NameInMap("Pid")
+    private String pid;
 
     @Query
     @NameInMap("RegionId")
@@ -25,6 +32,8 @@ public class DeleteRetcodeAppRequest extends Request {
     private DeleteRetcodeAppRequest(Builder builder) {
         super(builder);
         this.appId = builder.appId;
+        this.appName = builder.appName;
+        this.pid = builder.pid;
         this.regionId = builder.regionId;
     }
 
@@ -49,6 +58,20 @@ public class DeleteRetcodeAppRequest extends Request {
     }
 
     /**
+     * @return appName
+     */
+    public String getAppName() {
+        return this.appName;
+    }
+
+    /**
+     * @return pid
+     */
+    public String getPid() {
+        return this.pid;
+    }
+
+    /**
      * @return regionId
      */
     public String getRegionId() {
@@ -57,6 +80,8 @@ public class DeleteRetcodeAppRequest extends Request {
 
     public static final class Builder extends Request.Builder<DeleteRetcodeAppRequest, Builder> {
         private String appId; 
+        private String appName; 
+        private String pid; 
         private String regionId; 
 
         private Builder() {
@@ -66,6 +91,8 @@ public class DeleteRetcodeAppRequest extends Request {
         private Builder(DeleteRetcodeAppRequest request) {
             super(request);
             this.appId = request.appId;
+            this.appName = request.appName;
+            this.pid = request.pid;
             this.regionId = request.regionId;
         } 
 
@@ -75,6 +102,24 @@ public class DeleteRetcodeAppRequest extends Request {
         public Builder appId(String appId) {
             this.putQueryParameter("AppId", appId);
             this.appId = appId;
+            return this;
+        }
+
+        /**
+         * AppName.
+         */
+        public Builder appName(String appName) {
+            this.putQueryParameter("AppName", appName);
+            this.appName = appName;
+            return this;
+        }
+
+        /**
+         * Pid.
+         */
+        public Builder pid(String pid) {
+            this.putQueryParameter("Pid", pid);
+            this.pid = pid;
             return this;
         }
 

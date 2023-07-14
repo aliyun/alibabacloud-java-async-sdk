@@ -50,7 +50,7 @@ public class ListEventBridgeIntegrationsResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * PageBean.
+         * The information about EventBridge integrations that is returned on each page.
          */
         public Builder pageBean(PageBean pageBean) {
             this.pageBean = pageBean;
@@ -58,7 +58,7 @@ public class ListEventBridgeIntegrationsResponseBody extends TeaModel {
         }
 
         /**
-         * Id of the request
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -122,7 +122,7 @@ public class ListEventBridgeIntegrationsResponseBody extends TeaModel {
             private String name; 
 
             /**
-             * Description.
+             * The description of the EventBridge integration.
              */
             public Builder description(String description) {
                 this.description = description;
@@ -130,7 +130,7 @@ public class ListEventBridgeIntegrationsResponseBody extends TeaModel {
             }
 
             /**
-             * Id.
+             * The ID of the EventBridge integration.
              */
             public Builder id(Long id) {
                 this.id = id;
@@ -138,7 +138,7 @@ public class ListEventBridgeIntegrationsResponseBody extends TeaModel {
             }
 
             /**
-             * Name.
+             * The name of the EventBridge integration.
              */
             public Builder name(String name) {
                 this.name = name;
@@ -215,7 +215,7 @@ public class ListEventBridgeIntegrationsResponseBody extends TeaModel {
             private Long total; 
 
             /**
-             * EventBridgeIntegrations.
+             * The EventBridge integrations.
              */
             public Builder eventBridgeIntegrations(java.util.List < EventBridgeIntegrations> eventBridgeIntegrations) {
                 this.eventBridgeIntegrations = eventBridgeIntegrations;
@@ -223,7 +223,7 @@ public class ListEventBridgeIntegrationsResponseBody extends TeaModel {
             }
 
             /**
-             * Page.
+             * The number of the returned page.
              */
             public Builder page(Long page) {
                 this.page = page;
@@ -231,7 +231,7 @@ public class ListEventBridgeIntegrationsResponseBody extends TeaModel {
             }
 
             /**
-             * Size.
+             * The number of entries returned per page.
              */
             public Builder size(Long size) {
                 this.size = size;
@@ -239,7 +239,7 @@ public class ListEventBridgeIntegrationsResponseBody extends TeaModel {
             }
 
             /**
-             * Total.
+             * The total number of EventBridge integrations that are returned.
              */
             public Builder total(Long total) {
                 this.total = total;

@@ -54,7 +54,7 @@ public class DeleteEventBridgeIntegrationRequest extends Request {
         } 
 
         /**
-         * Id.
+         * The ID of the EventBridge integration. You can call the **ListEventBridgeIntegrations** operation to query the ID.
          */
         public Builder id(Long id) {
             this.putBodyParameter("Id", id);

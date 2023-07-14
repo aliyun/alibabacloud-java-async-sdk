@@ -155,7 +155,7 @@ public class CreateOrUpdateWebhookContactRequest extends Request {
         } 
 
         /**
-         * http请求头
+         * The HTTP request headers.
          */
         public Builder bizHeaders(String bizHeaders) {
             this.putBodyParameter("BizHeaders", bizHeaders);
@@ -164,7 +164,7 @@ public class CreateOrUpdateWebhookContactRequest extends Request {
         }
 
         /**
-         * http请求参数
+         * The parameters in the HTTP request.
          */
         public Builder bizParams(String bizParams) {
             this.putBodyParameter("BizParams", bizParams);
@@ -173,7 +173,7 @@ public class CreateOrUpdateWebhookContactRequest extends Request {
         }
 
         /**
-         * 告警通知模板
+         * The notification template that is sent when an alert is triggered. This parameter is required if the **Method** parameter is set to **Post**. You can use the `$content` placeholder to specify the notification content. The content cannot exceed 500 characters in length. For more information, see [Variable description of a notification template](~~251834~~).\\
          */
         public Builder body(String body) {
             this.putBodyParameter("Body", body);
@@ -182,7 +182,11 @@ public class CreateOrUpdateWebhookContactRequest extends Request {
         }
 
         /**
-         * Http请求方法
+         * The HTTP request method.
+         * <p>
+         * 
+         * *   Post
+         * *   Get
          */
         public Builder method(String method) {
             this.putBodyParameter("Method", method);
@@ -191,7 +195,7 @@ public class CreateOrUpdateWebhookContactRequest extends Request {
         }
 
         /**
-         * 告警恢复模板
+         * The notification template that is sent when an alert is resolved. This parameter is required if the **Method** parameter is set to **Post**. You can use the `$content` placeholder to specify the notification content. The content cannot exceed 500 characters in length. For more information, see [Variable description of a notification template](~~251834~~).
          */
         public Builder recoverBody(String recoverBody) {
             this.putBodyParameter("RecoverBody", recoverBody);
@@ -200,7 +204,7 @@ public class CreateOrUpdateWebhookContactRequest extends Request {
         }
 
         /**
-         * Url
+         * The URL of the HTTP request **method**.
          */
         public Builder url(String url) {
             this.putBodyParameter("Url", url);
@@ -209,7 +213,11 @@ public class CreateOrUpdateWebhookContactRequest extends Request {
         }
 
         /**
-         * 告警webhook ID
+         * The ID of the webhook alert contact.
+         * <p>
+         * 
+         * *   If you do not specify this parameter, a new webhook alert contact is created.
+         * * If you specify this parameter, the specified webhook alert contact is modified.
          */
         public Builder webhookId(Long webhookId) {
             this.putBodyParameter("WebhookId", webhookId);
@@ -218,7 +226,7 @@ public class CreateOrUpdateWebhookContactRequest extends Request {
         }
 
         /**
-         * 告警webhook名称
+         * The name of the webhook alert contact.
          */
         public Builder webhookName(String webhookName) {
             this.putBodyParameter("WebhookName", webhookName);

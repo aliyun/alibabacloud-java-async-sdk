@@ -55,7 +55,7 @@ public class GetAgentDownloadUrlRequest extends Request {
         } 
 
         /**
-         * RegionId.
+         * The download URL of the ARMS agent.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);

@@ -98,7 +98,7 @@ public class DescribeIMRobotsRequest extends Request {
         } 
 
         /**
-         * Page.
+         * The number of the page to return.
          */
         public Builder page(Long page) {
             this.putQueryParameter("Page", page);
@@ -107,7 +107,7 @@ public class DescribeIMRobotsRequest extends Request {
         }
 
         /**
-         * RobotIds.
+         * The chatbot IDs.
          */
         public Builder robotIds(String robotIds) {
             this.putQueryParameter("RobotIds", robotIds);
@@ -116,7 +116,7 @@ public class DescribeIMRobotsRequest extends Request {
         }
 
         /**
-         * 告警机器人名称
+         * The name of the IM chatbot.
          */
         public Builder robotName(String robotName) {
             this.putQueryParameter("RobotName", robotName);
@@ -125,7 +125,7 @@ public class DescribeIMRobotsRequest extends Request {
         }
 
         /**
-         * Size.
+         * The number of IM chatbots to return on each page.
          */
         public Builder size(Long size) {
             this.putQueryParameter("Size", size);

@@ -50,7 +50,7 @@ public class GetAgentDownloadUrlResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * ArmsAgentDownloadUrl.
+         * The ID of the request.
          */
         public Builder armsAgentDownloadUrl(String armsAgentDownloadUrl) {
             this.armsAgentDownloadUrl = armsAgentDownloadUrl;
@@ -58,7 +58,7 @@ public class GetAgentDownloadUrlResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * Obtains the download URL of the Application Real-Time Monitoring Service (ARMS) agent.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

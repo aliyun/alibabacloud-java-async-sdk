@@ -98,7 +98,7 @@ public class DescribeWebhookContactsRequest extends Request {
         } 
 
         /**
-         * ContactIds.
+         * The ID of the alert contact.
          */
         public Builder contactIds(String contactIds) {
             this.putQueryParameter("ContactIds", contactIds);
@@ -107,7 +107,7 @@ public class DescribeWebhookContactsRequest extends Request {
         }
 
         /**
-         * Page.
+         * The number of the page to return.
          */
         public Builder page(Long page) {
             this.putQueryParameter("Page", page);
@@ -116,7 +116,7 @@ public class DescribeWebhookContactsRequest extends Request {
         }
 
         /**
-         * Size.
+         * The number of alert contacts displayed on each page.
          */
         public Builder size(Long size) {
             this.putQueryParameter("Size", size);
@@ -125,7 +125,7 @@ public class DescribeWebhookContactsRequest extends Request {
         }
 
         /**
-         * 告警webhook名称
+         * The name of the webhook alert contact.
          */
         public Builder webhookName(String webhookName) {
             this.putQueryParameter("WebhookName", webhookName);

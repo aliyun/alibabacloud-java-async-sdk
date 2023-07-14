@@ -55,7 +55,7 @@ public class DeleteSilencePolicyRequest extends Request {
         } 
 
         /**
-         * 静默策略ID
+         * The ID of the request.
          */
         public Builder id(Long id) {
             this.putQueryParameter("Id", id);

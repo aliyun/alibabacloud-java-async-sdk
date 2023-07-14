@@ -69,7 +69,7 @@ public class CheckServiceStatusRequest extends Request {
         } 
 
         /**
-         * RegionId.
+         * The region ID.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -78,7 +78,7 @@ public class CheckServiceStatusRequest extends Request {
         }
 
         /**
-         * SvcCode.
+         * The service code of an Alibaba Cloud service. The service code of Prometheus Service is prometheus.
          */
         public Builder svcCode(String svcCode) {
             this.putQueryParameter("SvcCode", svcCode);

@@ -50,7 +50,11 @@ public class DeleteSilencePolicyResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * 删除静默策略是否成功
+         * Indicates whether the silence policy was deleted successfully. Valid values:
+         * <p>
+         * 
+         * *   `true`: The silence policy was deleted successfully.
+         * *   `false`: The silence policy failed to be deleted.
          */
         public Builder isSuccess(Boolean isSuccess) {
             this.isSuccess = isSuccess;
@@ -58,7 +62,7 @@ public class DeleteSilencePolicyResponseBody extends TeaModel {
         }
 
         /**
-         * Id of the request
+         * The operation that you want to perform. Set the value to **DeleteSilencePolicy**.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

@@ -50,7 +50,7 @@ public class DeleteIntegrationsResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * 删除成功或者失败
+         * IsSuccess.
          */
         public Builder isSuccess(Boolean isSuccess) {
             this.isSuccess = isSuccess;
@@ -58,7 +58,7 @@ public class DeleteIntegrationsResponseBody extends TeaModel {
         }
 
         /**
-         * 请求ID
+         * RequestId.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

@@ -62,7 +62,7 @@ public class SearchEventsResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * IsTrigger.
+         * The process identifier (PID) of the application that is associated with the alert rule.
          */
         public Builder isTrigger(Integer isTrigger) {
             this.isTrigger = isTrigger;
@@ -70,7 +70,7 @@ public class SearchEventsResponseBody extends TeaModel {
         }
 
         /**
-         * PageBean.
+         * The event content. The parameter value is a JSON string. Each key indicates a dimension and each value indicates the alert content in the dimension.
          */
         public Builder pageBean(PageBean pageBean) {
             this.pageBean = pageBean;
@@ -78,7 +78,7 @@ public class SearchEventsResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The severity of the event.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -230,7 +230,7 @@ public class SearchEventsResponseBody extends TeaModel {
             }
 
             /**
-             * AlertRule.
+             * The ID of the request.
              */
             public Builder alertRule(String alertRule) {
                 this.alertRule = alertRule;
@@ -238,7 +238,7 @@ public class SearchEventsResponseBody extends TeaModel {
             }
 
             /**
-             * AlertType.
+             * The name of the alert rule that is associated with the event.
              */
             public Builder alertType(Integer alertType) {
                 this.alertType = alertType;
@@ -246,7 +246,7 @@ public class SearchEventsResponseBody extends TeaModel {
             }
 
             /**
-             * EventLevel.
+             * The number of entries to return on each page. Default value: `10`.
              */
             public Builder eventLevel(String eventLevel) {
                 this.eventLevel = eventLevel;
@@ -254,7 +254,7 @@ public class SearchEventsResponseBody extends TeaModel {
             }
 
             /**
-             * EventTime.
+             * The struct returned.
              */
             public Builder eventTime(Long eventTime) {
                 this.eventTime = eventTime;
@@ -278,7 +278,7 @@ public class SearchEventsResponseBody extends TeaModel {
             }
 
             /**
-             * Message.
+             * The condition of the alert rule.
              */
             public Builder message(String message) {
                 this.message = message;
@@ -355,7 +355,7 @@ public class SearchEventsResponseBody extends TeaModel {
             private Integer totalCount; 
 
             /**
-             * Event.
+             * The ID of the event record.
              */
             public Builder event(java.util.List < Event> event) {
                 this.event = event;
@@ -363,7 +363,7 @@ public class SearchEventsResponseBody extends TeaModel {
             }
 
             /**
-             * PageNumber.
+             * The number of the page to return. Default value: `1`.
              */
             public Builder pageNumber(Integer pageNumber) {
                 this.pageNumber = pageNumber;
@@ -371,7 +371,17 @@ public class SearchEventsResponseBody extends TeaModel {
             }
 
             /**
-             * PageSize.
+             * The type of the alert rule. Valid values:
+             * <p>
+             * 
+             * *   `1`: custom alert rules to monitor drill-down data sets
+             * *   `3`: custom alert rules to monitor tiled data sets
+             * *   `4`: alert rules to monitor the frontend, including the default frontend alert rules
+             * *   `5`: alert rules to monitor applications, including the default application alert rules
+             * *   `6`: the default frontend alert rules
+             * *   `7`: the default application alert rules
+             * *   `8`: Tracing Analysis alert rules
+             * *   `101`: Prometheus alert rules
              */
             public Builder pageSize(Integer pageSize) {
                 this.pageSize = pageSize;
@@ -379,7 +389,7 @@ public class SearchEventsResponseBody extends TeaModel {
             }
 
             /**
-             * TotalCount.
+             * The beginning of the time range to query. Specify a UNIX timestamp of the LONG data type, in milliseconds. The default value is 10 minutes before the current time.
              */
             public Builder totalCount(Integer totalCount) {
                 this.totalCount = totalCount;

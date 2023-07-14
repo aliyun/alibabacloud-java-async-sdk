@@ -726,6 +726,9 @@ public class SearchAlertRulesResponseBody extends TeaModel {
         @NameInMap("RegionId")
         private String regionId;
 
+        @NameInMap("ResourceGroupId")
+        private String resourceGroupId;
+
         @NameInMap("Status")
         private String status;
 
@@ -761,6 +764,7 @@ public class SearchAlertRulesResponseBody extends TeaModel {
             this.metricParam = builder.metricParam;
             this.notice = builder.notice;
             this.regionId = builder.regionId;
+            this.resourceGroupId = builder.resourceGroupId;
             this.status = builder.status;
             this.taskId = builder.taskId;
             this.taskStatus = builder.taskStatus;
@@ -890,6 +894,13 @@ public class SearchAlertRulesResponseBody extends TeaModel {
         }
 
         /**
+         * @return resourceGroupId
+         */
+        public String getResourceGroupId() {
+            return this.resourceGroupId;
+        }
+
+        /**
          * @return status
          */
         public String getStatus() {
@@ -948,6 +959,7 @@ public class SearchAlertRulesResponseBody extends TeaModel {
             private MetricParam metricParam; 
             private Notice notice; 
             private String regionId; 
+            private String resourceGroupId; 
             private String status; 
             private Long taskId; 
             private String taskStatus; 
@@ -1080,6 +1092,14 @@ public class SearchAlertRulesResponseBody extends TeaModel {
              */
             public Builder regionId(String regionId) {
                 this.regionId = regionId;
+                return this;
+            }
+
+            /**
+             * ResourceGroupId.
+             */
+            public Builder resourceGroupId(String resourceGroupId) {
+                this.resourceGroupId = resourceGroupId;
                 return this;
             }
 

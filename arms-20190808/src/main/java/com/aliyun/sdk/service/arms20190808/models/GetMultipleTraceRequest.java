@@ -13,9 +13,17 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class GetMultipleTraceRequest extends Request {
     @Query
+    @NameInMap("EndTime")
+    private Long endTime;
+
+    @Query
     @NameInMap("RegionId")
     @Validation(required = true)
     private String regionId;
+
+    @Query
+    @NameInMap("StartTime")
+    private Long startTime;
 
     @Query
     @NameInMap("TraceIDs")
@@ -23,7 +31,9 @@ public class GetMultipleTraceRequest extends Request {
 
     private GetMultipleTraceRequest(Builder builder) {
         super(builder);
+        this.endTime = builder.endTime;
         this.regionId = builder.regionId;
+        this.startTime = builder.startTime;
         this.traceIDs = builder.traceIDs;
     }
 
@@ -41,10 +51,24 @@ public class GetMultipleTraceRequest extends Request {
     }
 
     /**
+     * @return endTime
+     */
+    public Long getEndTime() {
+        return this.endTime;
+    }
+
+    /**
      * @return regionId
      */
     public String getRegionId() {
         return this.regionId;
+    }
+
+    /**
+     * @return startTime
+     */
+    public Long getStartTime() {
+        return this.startTime;
     }
 
     /**
@@ -55,7 +79,9 @@ public class GetMultipleTraceRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<GetMultipleTraceRequest, Builder> {
+        private Long endTime; 
         private String regionId; 
+        private Long startTime; 
         private java.util.List < String > traceIDs; 
 
         private Builder() {
@@ -64,9 +90,20 @@ public class GetMultipleTraceRequest extends Request {
 
         private Builder(GetMultipleTraceRequest request) {
             super(request);
+            this.endTime = request.endTime;
             this.regionId = request.regionId;
+            this.startTime = request.startTime;
             this.traceIDs = request.traceIDs;
         } 
+
+        /**
+         * EndTime.
+         */
+        public Builder endTime(Long endTime) {
+            this.putQueryParameter("EndTime", endTime);
+            this.endTime = endTime;
+            return this;
+        }
 
         /**
          * RegionId.
@@ -74,6 +111,15 @@ public class GetMultipleTraceRequest extends Request {
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
             this.regionId = regionId;
+            return this;
+        }
+
+        /**
+         * StartTime.
+         */
+        public Builder startTime(Long startTime) {
+            this.putQueryParameter("StartTime", startTime);
+            this.startTime = startTime;
             return this;
         }
 

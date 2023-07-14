@@ -12,14 +12,22 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DeletePrometheusGlobalViewResponseBody</p>
  */
 public class DeletePrometheusGlobalViewResponseBody extends TeaModel {
+    @NameInMap("Code")
+    private Integer code;
+
     @NameInMap("Data")
     private String data;
+
+    @NameInMap("Message")
+    private String message;
 
     @NameInMap("RequestId")
     private String requestId;
 
     private DeletePrometheusGlobalViewResponseBody(Builder builder) {
+        this.code = builder.code;
         this.data = builder.data;
+        this.message = builder.message;
         this.requestId = builder.requestId;
     }
 
@@ -32,10 +40,24 @@ public class DeletePrometheusGlobalViewResponseBody extends TeaModel {
     }
 
     /**
+     * @return code
+     */
+    public Integer getCode() {
+        return this.code;
+    }
+
+    /**
      * @return data
      */
     public String getData() {
         return this.data;
+    }
+
+    /**
+     * @return message
+     */
+    public String getMessage() {
+        return this.message;
     }
 
     /**
@@ -46,11 +68,21 @@ public class DeletePrometheusGlobalViewResponseBody extends TeaModel {
     }
 
     public static final class Builder {
+        private Integer code; 
         private String data; 
+        private String message; 
         private String requestId; 
 
         /**
-         * Data.
+         * Code.
+         */
+        public Builder code(Integer code) {
+            this.code = code;
+            return this;
+        }
+
+        /**
+         * The response parameters in the JSON format.
          */
         public Builder data(String data) {
             this.data = data;
@@ -58,7 +90,15 @@ public class DeletePrometheusGlobalViewResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * Message.
+         */
+        public Builder message(String message) {
+            this.message = message;
+            return this;
+        }
+
+        /**
+         * The request ID. You can use the ID to query logs and troubleshoot issues.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
