@@ -212,6 +212,9 @@ public class GetWorkflowInstanceResponseBody extends TeaModel {
         @NameInMap("JobInstanceId")
         private Long jobInstanceId;
 
+        @NameInMap("JobName")
+        private String jobName;
+
         @NameInMap("Result")
         private String result;
 
@@ -233,6 +236,7 @@ public class GetWorkflowInstanceResponseBody extends TeaModel {
             this.endTime = builder.endTime;
             this.jobId = builder.jobId;
             this.jobInstanceId = builder.jobInstanceId;
+            this.jobName = builder.jobName;
             this.result = builder.result;
             this.scheduleTime = builder.scheduleTime;
             this.startTime = builder.startTime;
@@ -284,6 +288,13 @@ public class GetWorkflowInstanceResponseBody extends TeaModel {
         }
 
         /**
+         * @return jobName
+         */
+        public String getJobName() {
+            return this.jobName;
+        }
+
+        /**
          * @return result
          */
         public String getResult() {
@@ -324,6 +335,7 @@ public class GetWorkflowInstanceResponseBody extends TeaModel {
             private String endTime; 
             private Long jobId; 
             private Long jobInstanceId; 
+            private String jobName; 
             private String result; 
             private String scheduleTime; 
             private String startTime; 
@@ -367,6 +379,14 @@ public class GetWorkflowInstanceResponseBody extends TeaModel {
              */
             public Builder jobInstanceId(Long jobInstanceId) {
                 this.jobInstanceId = jobInstanceId;
+                return this;
+            }
+
+            /**
+             * JobName.
+             */
+            public Builder jobName(String jobName) {
+                this.jobName = jobName;
                 return this;
             }
 
