@@ -1,0 +1,1263 @@
+// This file is auto-generated, don't edit it. Thanks.
+package com.aliyun.sdk.service.paistudio20220112.models;
+
+import com.aliyun.core.annotation.*;
+import darabonba.core.RequestModel;
+import darabonba.core.TeaModel;
+import com.aliyun.sdk.gateway.pop.models.*;
+
+/**
+ * {@link GetTrainingJobResponseBody} extends {@link TeaModel}
+ *
+ * <p>GetTrainingJobResponseBody</p>
+ */
+public class GetTrainingJobResponseBody extends TeaModel {
+    @NameInMap("AlgorithmId")
+    private String algorithmId;
+
+    @NameInMap("AlgorithmName")
+    private String algorithmName;
+
+    @NameInMap("AlgorithmProvider")
+    private String algorithmProvider;
+
+    @NameInMap("AlgorithmSpec")
+    private AlgorithmSpec algorithmSpec;
+
+    @NameInMap("AlgorithmVersion")
+    private String algorithmVersion;
+
+    @NameInMap("ComputeResource")
+    private ComputeResource computeResource;
+
+    @NameInMap("GmtCreateTime")
+    private String gmtCreateTime;
+
+    @NameInMap("GmtModifiedTime")
+    private String gmtModifiedTime;
+
+    @NameInMap("HyperParameters")
+    private java.util.List < HyperParameters> hyperParameters;
+
+    @NameInMap("InputChannels")
+    private java.util.List < InputChannels> inputChannels;
+
+    @NameInMap("Instances")
+    private java.util.List < Instances> instances;
+
+    @NameInMap("IsTempAlgo")
+    private Boolean isTempAlgo;
+
+    @NameInMap("Labels")
+    private java.util.List < Labels> labels;
+
+    @NameInMap("LatestMetrics")
+    private java.util.List < LatestMetrics> latestMetrics;
+
+    @NameInMap("OutputChannels")
+    private java.util.List < OutputChannels> outputChannels;
+
+    @NameInMap("ReasonCode")
+    private String reasonCode;
+
+    @NameInMap("ReasonMessage")
+    private String reasonMessage;
+
+    @NameInMap("RequestId")
+    private String requestId;
+
+    @NameInMap("RoleArn")
+    private String roleArn;
+
+    @NameInMap("Scheduler")
+    private Scheduler scheduler;
+
+    @NameInMap("Status")
+    private String status;
+
+    @NameInMap("StatusTransitions")
+    private java.util.List < StatusTransitions> statusTransitions;
+
+    @NameInMap("TrainingJobDescription")
+    private String trainingJobDescription;
+
+    @NameInMap("TrainingJobId")
+    private String trainingJobId;
+
+    @NameInMap("TrainingJobName")
+    private String trainingJobName;
+
+    @NameInMap("TrainingJobUrl")
+    private String trainingJobUrl;
+
+    @NameInMap("UserId")
+    private String userId;
+
+    @NameInMap("WorkspaceId")
+    private String workspaceId;
+
+    private GetTrainingJobResponseBody(Builder builder) {
+        this.algorithmId = builder.algorithmId;
+        this.algorithmName = builder.algorithmName;
+        this.algorithmProvider = builder.algorithmProvider;
+        this.algorithmSpec = builder.algorithmSpec;
+        this.algorithmVersion = builder.algorithmVersion;
+        this.computeResource = builder.computeResource;
+        this.gmtCreateTime = builder.gmtCreateTime;
+        this.gmtModifiedTime = builder.gmtModifiedTime;
+        this.hyperParameters = builder.hyperParameters;
+        this.inputChannels = builder.inputChannels;
+        this.instances = builder.instances;
+        this.isTempAlgo = builder.isTempAlgo;
+        this.labels = builder.labels;
+        this.latestMetrics = builder.latestMetrics;
+        this.outputChannels = builder.outputChannels;
+        this.reasonCode = builder.reasonCode;
+        this.reasonMessage = builder.reasonMessage;
+        this.requestId = builder.requestId;
+        this.roleArn = builder.roleArn;
+        this.scheduler = builder.scheduler;
+        this.status = builder.status;
+        this.statusTransitions = builder.statusTransitions;
+        this.trainingJobDescription = builder.trainingJobDescription;
+        this.trainingJobId = builder.trainingJobId;
+        this.trainingJobName = builder.trainingJobName;
+        this.trainingJobUrl = builder.trainingJobUrl;
+        this.userId = builder.userId;
+        this.workspaceId = builder.workspaceId;
+    }
+
+    public static Builder builder() {
+        return new Builder();
+    }
+
+    public static GetTrainingJobResponseBody create() {
+        return builder().build();
+    }
+
+    /**
+     * @return algorithmId
+     */
+    public String getAlgorithmId() {
+        return this.algorithmId;
+    }
+
+    /**
+     * @return algorithmName
+     */
+    public String getAlgorithmName() {
+        return this.algorithmName;
+    }
+
+    /**
+     * @return algorithmProvider
+     */
+    public String getAlgorithmProvider() {
+        return this.algorithmProvider;
+    }
+
+    /**
+     * @return algorithmSpec
+     */
+    public AlgorithmSpec getAlgorithmSpec() {
+        return this.algorithmSpec;
+    }
+
+    /**
+     * @return algorithmVersion
+     */
+    public String getAlgorithmVersion() {
+        return this.algorithmVersion;
+    }
+
+    /**
+     * @return computeResource
+     */
+    public ComputeResource getComputeResource() {
+        return this.computeResource;
+    }
+
+    /**
+     * @return gmtCreateTime
+     */
+    public String getGmtCreateTime() {
+        return this.gmtCreateTime;
+    }
+
+    /**
+     * @return gmtModifiedTime
+     */
+    public String getGmtModifiedTime() {
+        return this.gmtModifiedTime;
+    }
+
+    /**
+     * @return hyperParameters
+     */
+    public java.util.List < HyperParameters> getHyperParameters() {
+        return this.hyperParameters;
+    }
+
+    /**
+     * @return inputChannels
+     */
+    public java.util.List < InputChannels> getInputChannels() {
+        return this.inputChannels;
+    }
+
+    /**
+     * @return instances
+     */
+    public java.util.List < Instances> getInstances() {
+        return this.instances;
+    }
+
+    /**
+     * @return isTempAlgo
+     */
+    public Boolean getIsTempAlgo() {
+        return this.isTempAlgo;
+    }
+
+    /**
+     * @return labels
+     */
+    public java.util.List < Labels> getLabels() {
+        return this.labels;
+    }
+
+    /**
+     * @return latestMetrics
+     */
+    public java.util.List < LatestMetrics> getLatestMetrics() {
+        return this.latestMetrics;
+    }
+
+    /**
+     * @return outputChannels
+     */
+    public java.util.List < OutputChannels> getOutputChannels() {
+        return this.outputChannels;
+    }
+
+    /**
+     * @return reasonCode
+     */
+    public String getReasonCode() {
+        return this.reasonCode;
+    }
+
+    /**
+     * @return reasonMessage
+     */
+    public String getReasonMessage() {
+        return this.reasonMessage;
+    }
+
+    /**
+     * @return requestId
+     */
+    public String getRequestId() {
+        return this.requestId;
+    }
+
+    /**
+     * @return roleArn
+     */
+    public String getRoleArn() {
+        return this.roleArn;
+    }
+
+    /**
+     * @return scheduler
+     */
+    public Scheduler getScheduler() {
+        return this.scheduler;
+    }
+
+    /**
+     * @return status
+     */
+    public String getStatus() {
+        return this.status;
+    }
+
+    /**
+     * @return statusTransitions
+     */
+    public java.util.List < StatusTransitions> getStatusTransitions() {
+        return this.statusTransitions;
+    }
+
+    /**
+     * @return trainingJobDescription
+     */
+    public String getTrainingJobDescription() {
+        return this.trainingJobDescription;
+    }
+
+    /**
+     * @return trainingJobId
+     */
+    public String getTrainingJobId() {
+        return this.trainingJobId;
+    }
+
+    /**
+     * @return trainingJobName
+     */
+    public String getTrainingJobName() {
+        return this.trainingJobName;
+    }
+
+    /**
+     * @return trainingJobUrl
+     */
+    public String getTrainingJobUrl() {
+        return this.trainingJobUrl;
+    }
+
+    /**
+     * @return userId
+     */
+    public String getUserId() {
+        return this.userId;
+    }
+
+    /**
+     * @return workspaceId
+     */
+    public String getWorkspaceId() {
+        return this.workspaceId;
+    }
+
+    public static final class Builder {
+        private String algorithmId; 
+        private String algorithmName; 
+        private String algorithmProvider; 
+        private AlgorithmSpec algorithmSpec; 
+        private String algorithmVersion; 
+        private ComputeResource computeResource; 
+        private String gmtCreateTime; 
+        private String gmtModifiedTime; 
+        private java.util.List < HyperParameters> hyperParameters; 
+        private java.util.List < InputChannels> inputChannels; 
+        private java.util.List < Instances> instances; 
+        private Boolean isTempAlgo; 
+        private java.util.List < Labels> labels; 
+        private java.util.List < LatestMetrics> latestMetrics; 
+        private java.util.List < OutputChannels> outputChannels; 
+        private String reasonCode; 
+        private String reasonMessage; 
+        private String requestId; 
+        private String roleArn; 
+        private Scheduler scheduler; 
+        private String status; 
+        private java.util.List < StatusTransitions> statusTransitions; 
+        private String trainingJobDescription; 
+        private String trainingJobId; 
+        private String trainingJobName; 
+        private String trainingJobUrl; 
+        private String userId; 
+        private String workspaceId; 
+
+        /**
+         * AlgorithmId.
+         */
+        public Builder algorithmId(String algorithmId) {
+            this.algorithmId = algorithmId;
+            return this;
+        }
+
+        /**
+         * AlgorithmName.
+         */
+        public Builder algorithmName(String algorithmName) {
+            this.algorithmName = algorithmName;
+            return this;
+        }
+
+        /**
+         * AlgorithmProvider.
+         */
+        public Builder algorithmProvider(String algorithmProvider) {
+            this.algorithmProvider = algorithmProvider;
+            return this;
+        }
+
+        /**
+         * AlgorithmSpec.
+         */
+        public Builder algorithmSpec(AlgorithmSpec algorithmSpec) {
+            this.algorithmSpec = algorithmSpec;
+            return this;
+        }
+
+        /**
+         * AlgorithmVersion.
+         */
+        public Builder algorithmVersion(String algorithmVersion) {
+            this.algorithmVersion = algorithmVersion;
+            return this;
+        }
+
+        /**
+         * ComputeResource.
+         */
+        public Builder computeResource(ComputeResource computeResource) {
+            this.computeResource = computeResource;
+            return this;
+        }
+
+        /**
+         * GmtCreateTime.
+         */
+        public Builder gmtCreateTime(String gmtCreateTime) {
+            this.gmtCreateTime = gmtCreateTime;
+            return this;
+        }
+
+        /**
+         * GmtModifiedTime.
+         */
+        public Builder gmtModifiedTime(String gmtModifiedTime) {
+            this.gmtModifiedTime = gmtModifiedTime;
+            return this;
+        }
+
+        /**
+         * HyperParameters.
+         */
+        public Builder hyperParameters(java.util.List < HyperParameters> hyperParameters) {
+            this.hyperParameters = hyperParameters;
+            return this;
+        }
+
+        /**
+         * InputChannels.
+         */
+        public Builder inputChannels(java.util.List < InputChannels> inputChannels) {
+            this.inputChannels = inputChannels;
+            return this;
+        }
+
+        /**
+         * Instances.
+         */
+        public Builder instances(java.util.List < Instances> instances) {
+            this.instances = instances;
+            return this;
+        }
+
+        /**
+         * IsTempAlgo.
+         */
+        public Builder isTempAlgo(Boolean isTempAlgo) {
+            this.isTempAlgo = isTempAlgo;
+            return this;
+        }
+
+        /**
+         * Labels.
+         */
+        public Builder labels(java.util.List < Labels> labels) {
+            this.labels = labels;
+            return this;
+        }
+
+        /**
+         * LatestMetrics.
+         */
+        public Builder latestMetrics(java.util.List < LatestMetrics> latestMetrics) {
+            this.latestMetrics = latestMetrics;
+            return this;
+        }
+
+        /**
+         * OutputChannels.
+         */
+        public Builder outputChannels(java.util.List < OutputChannels> outputChannels) {
+            this.outputChannels = outputChannels;
+            return this;
+        }
+
+        /**
+         * ReasonCode.
+         */
+        public Builder reasonCode(String reasonCode) {
+            this.reasonCode = reasonCode;
+            return this;
+        }
+
+        /**
+         * ReasonMessage.
+         */
+        public Builder reasonMessage(String reasonMessage) {
+            this.reasonMessage = reasonMessage;
+            return this;
+        }
+
+        /**
+         * RequestId.
+         */
+        public Builder requestId(String requestId) {
+            this.requestId = requestId;
+            return this;
+        }
+
+        /**
+         * RoleArn.
+         */
+        public Builder roleArn(String roleArn) {
+            this.roleArn = roleArn;
+            return this;
+        }
+
+        /**
+         * Scheduler.
+         */
+        public Builder scheduler(Scheduler scheduler) {
+            this.scheduler = scheduler;
+            return this;
+        }
+
+        /**
+         * Status.
+         */
+        public Builder status(String status) {
+            this.status = status;
+            return this;
+        }
+
+        /**
+         * StatusTransitions.
+         */
+        public Builder statusTransitions(java.util.List < StatusTransitions> statusTransitions) {
+            this.statusTransitions = statusTransitions;
+            return this;
+        }
+
+        /**
+         * TrainingJobDescription.
+         */
+        public Builder trainingJobDescription(String trainingJobDescription) {
+            this.trainingJobDescription = trainingJobDescription;
+            return this;
+        }
+
+        /**
+         * TrainingJobId.
+         */
+        public Builder trainingJobId(String trainingJobId) {
+            this.trainingJobId = trainingJobId;
+            return this;
+        }
+
+        /**
+         * TrainingJobName.
+         */
+        public Builder trainingJobName(String trainingJobName) {
+            this.trainingJobName = trainingJobName;
+            return this;
+        }
+
+        /**
+         * TrainingJobUrl.
+         */
+        public Builder trainingJobUrl(String trainingJobUrl) {
+            this.trainingJobUrl = trainingJobUrl;
+            return this;
+        }
+
+        /**
+         * UserId.
+         */
+        public Builder userId(String userId) {
+            this.userId = userId;
+            return this;
+        }
+
+        /**
+         * WorkspaceId.
+         */
+        public Builder workspaceId(String workspaceId) {
+            this.workspaceId = workspaceId;
+            return this;
+        }
+
+        public GetTrainingJobResponseBody build() {
+            return new GetTrainingJobResponseBody(this);
+        } 
+
+    } 
+
+    public static class ComputeResource extends TeaModel {
+        @NameInMap("EcsCount")
+        private Long ecsCount;
+
+        @NameInMap("EcsSpec")
+        private String ecsSpec;
+
+        private ComputeResource(Builder builder) {
+            this.ecsCount = builder.ecsCount;
+            this.ecsSpec = builder.ecsSpec;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static ComputeResource create() {
+            return builder().build();
+        }
+
+        /**
+         * @return ecsCount
+         */
+        public Long getEcsCount() {
+            return this.ecsCount;
+        }
+
+        /**
+         * @return ecsSpec
+         */
+        public String getEcsSpec() {
+            return this.ecsSpec;
+        }
+
+        public static final class Builder {
+            private Long ecsCount; 
+            private String ecsSpec; 
+
+            /**
+             * EcsCount.
+             */
+            public Builder ecsCount(Long ecsCount) {
+                this.ecsCount = ecsCount;
+                return this;
+            }
+
+            /**
+             * EcsSpec.
+             */
+            public Builder ecsSpec(String ecsSpec) {
+                this.ecsSpec = ecsSpec;
+                return this;
+            }
+
+            public ComputeResource build() {
+                return new ComputeResource(this);
+            } 
+
+        } 
+
+    }
+    public static class HyperParameters extends TeaModel {
+        @NameInMap("Name")
+        private String name;
+
+        @NameInMap("Value")
+        private String value;
+
+        private HyperParameters(Builder builder) {
+            this.name = builder.name;
+            this.value = builder.value;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static HyperParameters create() {
+            return builder().build();
+        }
+
+        /**
+         * @return name
+         */
+        public String getName() {
+            return this.name;
+        }
+
+        /**
+         * @return value
+         */
+        public String getValue() {
+            return this.value;
+        }
+
+        public static final class Builder {
+            private String name; 
+            private String value; 
+
+            /**
+             * Name.
+             */
+            public Builder name(String name) {
+                this.name = name;
+                return this;
+            }
+
+            /**
+             * Value.
+             */
+            public Builder value(String value) {
+                this.value = value;
+                return this;
+            }
+
+            public HyperParameters build() {
+                return new HyperParameters(this);
+            } 
+
+        } 
+
+    }
+    public static class InputChannels extends TeaModel {
+        @NameInMap("DatasetId")
+        private String datasetId;
+
+        @NameInMap("InputUri")
+        private String inputUri;
+
+        @NameInMap("Name")
+        private String name;
+
+        private InputChannels(Builder builder) {
+            this.datasetId = builder.datasetId;
+            this.inputUri = builder.inputUri;
+            this.name = builder.name;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static InputChannels create() {
+            return builder().build();
+        }
+
+        /**
+         * @return datasetId
+         */
+        public String getDatasetId() {
+            return this.datasetId;
+        }
+
+        /**
+         * @return inputUri
+         */
+        public String getInputUri() {
+            return this.inputUri;
+        }
+
+        /**
+         * @return name
+         */
+        public String getName() {
+            return this.name;
+        }
+
+        public static final class Builder {
+            private String datasetId; 
+            private String inputUri; 
+            private String name; 
+
+            /**
+             * DatasetId.
+             */
+            public Builder datasetId(String datasetId) {
+                this.datasetId = datasetId;
+                return this;
+            }
+
+            /**
+             * InputUri.
+             */
+            public Builder inputUri(String inputUri) {
+                this.inputUri = inputUri;
+                return this;
+            }
+
+            /**
+             * Name.
+             */
+            public Builder name(String name) {
+                this.name = name;
+                return this;
+            }
+
+            public InputChannels build() {
+                return new InputChannels(this);
+            } 
+
+        } 
+
+    }
+    public static class Instances extends TeaModel {
+        @NameInMap("Name")
+        private String name;
+
+        @NameInMap("Role")
+        private String role;
+
+        @NameInMap("Status")
+        private String status;
+
+        private Instances(Builder builder) {
+            this.name = builder.name;
+            this.role = builder.role;
+            this.status = builder.status;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static Instances create() {
+            return builder().build();
+        }
+
+        /**
+         * @return name
+         */
+        public String getName() {
+            return this.name;
+        }
+
+        /**
+         * @return role
+         */
+        public String getRole() {
+            return this.role;
+        }
+
+        /**
+         * @return status
+         */
+        public String getStatus() {
+            return this.status;
+        }
+
+        public static final class Builder {
+            private String name; 
+            private String role; 
+            private String status; 
+
+            /**
+             * Name.
+             */
+            public Builder name(String name) {
+                this.name = name;
+                return this;
+            }
+
+            /**
+             * Role.
+             */
+            public Builder role(String role) {
+                this.role = role;
+                return this;
+            }
+
+            /**
+             * Status.
+             */
+            public Builder status(String status) {
+                this.status = status;
+                return this;
+            }
+
+            public Instances build() {
+                return new Instances(this);
+            } 
+
+        } 
+
+    }
+    public static class Labels extends TeaModel {
+        @NameInMap("Key")
+        private String key;
+
+        @NameInMap("Value")
+        private String value;
+
+        private Labels(Builder builder) {
+            this.key = builder.key;
+            this.value = builder.value;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static Labels create() {
+            return builder().build();
+        }
+
+        /**
+         * @return key
+         */
+        public String getKey() {
+            return this.key;
+        }
+
+        /**
+         * @return value
+         */
+        public String getValue() {
+            return this.value;
+        }
+
+        public static final class Builder {
+            private String key; 
+            private String value; 
+
+            /**
+             * Key.
+             */
+            public Builder key(String key) {
+                this.key = key;
+                return this;
+            }
+
+            /**
+             * Value.
+             */
+            public Builder value(String value) {
+                this.value = value;
+                return this;
+            }
+
+            public Labels build() {
+                return new Labels(this);
+            } 
+
+        } 
+
+    }
+    public static class LatestMetrics extends TeaModel {
+        @NameInMap("Name")
+        private String name;
+
+        @NameInMap("Timestamp")
+        private String timestamp;
+
+        @NameInMap("Value")
+        private Double value;
+
+        private LatestMetrics(Builder builder) {
+            this.name = builder.name;
+            this.timestamp = builder.timestamp;
+            this.value = builder.value;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static LatestMetrics create() {
+            return builder().build();
+        }
+
+        /**
+         * @return name
+         */
+        public String getName() {
+            return this.name;
+        }
+
+        /**
+         * @return timestamp
+         */
+        public String getTimestamp() {
+            return this.timestamp;
+        }
+
+        /**
+         * @return value
+         */
+        public Double getValue() {
+            return this.value;
+        }
+
+        public static final class Builder {
+            private String name; 
+            private String timestamp; 
+            private Double value; 
+
+            /**
+             * Name.
+             */
+            public Builder name(String name) {
+                this.name = name;
+                return this;
+            }
+
+            /**
+             * Timestamp.
+             */
+            public Builder timestamp(String timestamp) {
+                this.timestamp = timestamp;
+                return this;
+            }
+
+            /**
+             * Value.
+             */
+            public Builder value(Double value) {
+                this.value = value;
+                return this;
+            }
+
+            public LatestMetrics build() {
+                return new LatestMetrics(this);
+            } 
+
+        } 
+
+    }
+    public static class OutputChannels extends TeaModel {
+        @NameInMap("DatasetId")
+        private String datasetId;
+
+        @NameInMap("Name")
+        private String name;
+
+        @NameInMap("OutputUri")
+        private String outputUri;
+
+        private OutputChannels(Builder builder) {
+            this.datasetId = builder.datasetId;
+            this.name = builder.name;
+            this.outputUri = builder.outputUri;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static OutputChannels create() {
+            return builder().build();
+        }
+
+        /**
+         * @return datasetId
+         */
+        public String getDatasetId() {
+            return this.datasetId;
+        }
+
+        /**
+         * @return name
+         */
+        public String getName() {
+            return this.name;
+        }
+
+        /**
+         * @return outputUri
+         */
+        public String getOutputUri() {
+            return this.outputUri;
+        }
+
+        public static final class Builder {
+            private String datasetId; 
+            private String name; 
+            private String outputUri; 
+
+            /**
+             * DatasetId.
+             */
+            public Builder datasetId(String datasetId) {
+                this.datasetId = datasetId;
+                return this;
+            }
+
+            /**
+             * Name.
+             */
+            public Builder name(String name) {
+                this.name = name;
+                return this;
+            }
+
+            /**
+             * OutputUri.
+             */
+            public Builder outputUri(String outputUri) {
+                this.outputUri = outputUri;
+                return this;
+            }
+
+            public OutputChannels build() {
+                return new OutputChannels(this);
+            } 
+
+        } 
+
+    }
+    public static class Scheduler extends TeaModel {
+        @NameInMap("MaxRunningTimeInSeconds")
+        private Long maxRunningTimeInSeconds;
+
+        private Scheduler(Builder builder) {
+            this.maxRunningTimeInSeconds = builder.maxRunningTimeInSeconds;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static Scheduler create() {
+            return builder().build();
+        }
+
+        /**
+         * @return maxRunningTimeInSeconds
+         */
+        public Long getMaxRunningTimeInSeconds() {
+            return this.maxRunningTimeInSeconds;
+        }
+
+        public static final class Builder {
+            private Long maxRunningTimeInSeconds; 
+
+            /**
+             * MaxRunningTimeInSeconds.
+             */
+            public Builder maxRunningTimeInSeconds(Long maxRunningTimeInSeconds) {
+                this.maxRunningTimeInSeconds = maxRunningTimeInSeconds;
+                return this;
+            }
+
+            public Scheduler build() {
+                return new Scheduler(this);
+            } 
+
+        } 
+
+    }
+    public static class StatusTransitions extends TeaModel {
+        @NameInMap("EndTime")
+        private String endTime;
+
+        @NameInMap("ReasonCode")
+        private String reasonCode;
+
+        @NameInMap("ReasonMessage")
+        private String reasonMessage;
+
+        @NameInMap("StartTime")
+        private String startTime;
+
+        @NameInMap("Status")
+        private String status;
+
+        private StatusTransitions(Builder builder) {
+            this.endTime = builder.endTime;
+            this.reasonCode = builder.reasonCode;
+            this.reasonMessage = builder.reasonMessage;
+            this.startTime = builder.startTime;
+            this.status = builder.status;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static StatusTransitions create() {
+            return builder().build();
+        }
+
+        /**
+         * @return endTime
+         */
+        public String getEndTime() {
+            return this.endTime;
+        }
+
+        /**
+         * @return reasonCode
+         */
+        public String getReasonCode() {
+            return this.reasonCode;
+        }
+
+        /**
+         * @return reasonMessage
+         */
+        public String getReasonMessage() {
+            return this.reasonMessage;
+        }
+
+        /**
+         * @return startTime
+         */
+        public String getStartTime() {
+            return this.startTime;
+        }
+
+        /**
+         * @return status
+         */
+        public String getStatus() {
+            return this.status;
+        }
+
+        public static final class Builder {
+            private String endTime; 
+            private String reasonCode; 
+            private String reasonMessage; 
+            private String startTime; 
+            private String status; 
+
+            /**
+             * EndTime.
+             */
+            public Builder endTime(String endTime) {
+                this.endTime = endTime;
+                return this;
+            }
+
+            /**
+             * ReasonCode.
+             */
+            public Builder reasonCode(String reasonCode) {
+                this.reasonCode = reasonCode;
+                return this;
+            }
+
+            /**
+             * ReasonMessage.
+             */
+            public Builder reasonMessage(String reasonMessage) {
+                this.reasonMessage = reasonMessage;
+                return this;
+            }
+
+            /**
+             * StartTime.
+             */
+            public Builder startTime(String startTime) {
+                this.startTime = startTime;
+                return this;
+            }
+
+            /**
+             * Status.
+             */
+            public Builder status(String status) {
+                this.status = status;
+                return this;
+            }
+
+            public StatusTransitions build() {
+                return new StatusTransitions(this);
+            } 
+
+        } 
+
+    }
+}
