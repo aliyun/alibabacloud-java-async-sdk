@@ -221,6 +221,9 @@ public class GetWorkflowInstanceResponseBody extends TeaModel {
         @NameInMap("StartTime")
         private String startTime;
 
+        @NameInMap("Status")
+        private Integer status;
+
         @NameInMap("WorkAddr")
         private String workAddr;
 
@@ -233,6 +236,7 @@ public class GetWorkflowInstanceResponseBody extends TeaModel {
             this.result = builder.result;
             this.scheduleTime = builder.scheduleTime;
             this.startTime = builder.startTime;
+            this.status = builder.status;
             this.workAddr = builder.workAddr;
         }
 
@@ -301,6 +305,13 @@ public class GetWorkflowInstanceResponseBody extends TeaModel {
         }
 
         /**
+         * @return status
+         */
+        public Integer getStatus() {
+            return this.status;
+        }
+
+        /**
          * @return workAddr
          */
         public String getWorkAddr() {
@@ -316,6 +327,7 @@ public class GetWorkflowInstanceResponseBody extends TeaModel {
             private String result; 
             private String scheduleTime; 
             private String startTime; 
+            private Integer status; 
             private String workAddr; 
 
             /**
@@ -379,6 +391,14 @@ public class GetWorkflowInstanceResponseBody extends TeaModel {
              */
             public Builder startTime(String startTime) {
                 this.startTime = startTime;
+                return this;
+            }
+
+            /**
+             * Status.
+             */
+            public Builder status(Integer status) {
+                this.status = status;
                 return this;
             }
 

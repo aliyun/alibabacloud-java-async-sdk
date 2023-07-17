@@ -151,6 +151,12 @@ public class GetJobInstanceResponseBody extends TeaModel {
         @NameInMap("JobId")
         private Long jobId;
 
+        @NameInMap("JobName")
+        private String jobName;
+
+        @NameInMap("Parameters")
+        private String parameters;
+
         @NameInMap("Progress")
         private String progress;
 
@@ -169,6 +175,9 @@ public class GetJobInstanceResponseBody extends TeaModel {
         @NameInMap("TimeType")
         private Integer timeType;
 
+        @NameInMap("TraceId")
+        private String traceId;
+
         @NameInMap("TriggerType")
         private Integer triggerType;
 
@@ -181,12 +190,15 @@ public class GetJobInstanceResponseBody extends TeaModel {
             this.executor = builder.executor;
             this.instanceId = builder.instanceId;
             this.jobId = builder.jobId;
+            this.jobName = builder.jobName;
+            this.parameters = builder.parameters;
             this.progress = builder.progress;
             this.result = builder.result;
             this.scheduleTime = builder.scheduleTime;
             this.startTime = builder.startTime;
             this.status = builder.status;
             this.timeType = builder.timeType;
+            this.traceId = builder.traceId;
             this.triggerType = builder.triggerType;
             this.workAddr = builder.workAddr;
         }
@@ -235,6 +247,20 @@ public class GetJobInstanceResponseBody extends TeaModel {
         }
 
         /**
+         * @return jobName
+         */
+        public String getJobName() {
+            return this.jobName;
+        }
+
+        /**
+         * @return parameters
+         */
+        public String getParameters() {
+            return this.parameters;
+        }
+
+        /**
          * @return progress
          */
         public String getProgress() {
@@ -277,6 +303,13 @@ public class GetJobInstanceResponseBody extends TeaModel {
         }
 
         /**
+         * @return traceId
+         */
+        public String getTraceId() {
+            return this.traceId;
+        }
+
+        /**
          * @return triggerType
          */
         public Integer getTriggerType() {
@@ -296,12 +329,15 @@ public class GetJobInstanceResponseBody extends TeaModel {
             private String executor; 
             private Long instanceId; 
             private Long jobId; 
+            private String jobName; 
+            private String parameters; 
             private String progress; 
             private String result; 
             private String scheduleTime; 
             private String startTime; 
             private Integer status; 
             private Integer timeType; 
+            private String traceId; 
             private Integer triggerType; 
             private String workAddr; 
 
@@ -342,6 +378,22 @@ public class GetJobInstanceResponseBody extends TeaModel {
              */
             public Builder jobId(Long jobId) {
                 this.jobId = jobId;
+                return this;
+            }
+
+            /**
+             * JobName.
+             */
+            public Builder jobName(String jobName) {
+                this.jobName = jobName;
+                return this;
+            }
+
+            /**
+             * Parameters.
+             */
+            public Builder parameters(String parameters) {
+                this.parameters = parameters;
                 return this;
             }
 
@@ -407,6 +459,14 @@ public class GetJobInstanceResponseBody extends TeaModel {
              */
             public Builder timeType(Integer timeType) {
                 this.timeType = timeType;
+                return this;
+            }
+
+            /**
+             * TraceId.
+             */
+            public Builder traceId(String traceId) {
+                this.traceId = traceId;
                 return this;
             }
 

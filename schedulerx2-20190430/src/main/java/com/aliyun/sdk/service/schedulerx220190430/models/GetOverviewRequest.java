@@ -156,9 +156,7 @@ public class GetOverviewRequest extends Request {
         } 
 
         /**
-         * 数据结束时间戳（单位：秒），如：1684166400 
-         * <p>
-         * 不填默认为当前时间
+         * EndTime.
          */
         public Builder endTime(Long endTime) {
             this.putQueryParameter("EndTime", endTime);
@@ -167,7 +165,7 @@ public class GetOverviewRequest extends Request {
         }
 
         /**
-         * 应用分组ID
+         * GroupId.
          */
         public Builder groupId(String groupId) {
             this.putQueryParameter("GroupId", groupId);
@@ -176,10 +174,7 @@ public class GetOverviewRequest extends Request {
         }
 
         /**
-         * 可选项
-         * <p>
-         * 0:任务类基础信息
-         * 1:任务运行信息
+         * MetricType.
          */
         public Builder metricType(Integer metricType) {
             this.putQueryParameter("MetricType", metricType);
@@ -188,7 +183,7 @@ public class GetOverviewRequest extends Request {
         }
 
         /**
-         * 命名空间UID
+         * Namespace.
          */
         public Builder namespace(String namespace) {
             this.putQueryParameter("Namespace", namespace);
@@ -206,10 +201,7 @@ public class GetOverviewRequest extends Request {
         }
 
         /**
-         * 可选项
-         * <p>
-         * query:查询区间数据
-         * query_range:查询区间时许数据
+         * Operate.
          */
         public Builder operate(String operate) {
             this.putQueryParameter("Operate", operate);
@@ -218,7 +210,7 @@ public class GetOverviewRequest extends Request {
         }
 
         /**
-         * 区域Region ID
+         * RegionId.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -227,7 +219,7 @@ public class GetOverviewRequest extends Request {
         }
 
         /**
-         * 数据起始时间戳（单位：秒），如：1684166400
+         * StartTime.
          */
         public Builder startTime(Long startTime) {
             this.putQueryParameter("StartTime", startTime);
