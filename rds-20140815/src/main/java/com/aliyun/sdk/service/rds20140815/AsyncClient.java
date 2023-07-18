@@ -303,6 +303,8 @@ public interface AsyncClient extends SdkAutoCloseable {
      */
     CompletableFuture<CreateParameterGroupResponse> createParameterGroup(CreateParameterGroupRequest request);
 
+    CompletableFuture<CreatePostgresExtensionsResponse> createPostgresExtensions(CreatePostgresExtensionsRequest request);
+
     /**
       * **Before you call this operation, take note of the following limits:**
       * *   The primary instance cannot belong to a dedicated cluster and must run one of the following database engine versions and RDS editions:
@@ -419,6 +421,8 @@ public interface AsyncClient extends SdkAutoCloseable {
       *
      */
     CompletableFuture<DeleteParameterGroupResponse> deleteParameterGroup(DeleteParameterGroupRequest request);
+
+    CompletableFuture<DeletePostgresExtensionsResponse> deletePostgresExtensions(DeletePostgresExtensionsRequest request);
 
     CompletableFuture<DeleteSecretResponse> deleteSecret(DeleteSecretRequest request);
 
@@ -917,6 +921,8 @@ public interface AsyncClient extends SdkAutoCloseable {
       *
      */
     CompletableFuture<DescribeParametersResponse> describeParameters(DescribeParametersRequest request);
+
+    CompletableFuture<DescribePostgresExtensionsResponse> describePostgresExtensions(DescribePostgresExtensionsRequest request);
 
     CompletableFuture<DescribePriceResponse> describePrice(DescribePriceRequest request);
 
@@ -1760,6 +1766,8 @@ public interface AsyncClient extends SdkAutoCloseable {
       *
      */
     CompletableFuture<UntagResourcesResponse> untagResources(UntagResourcesRequest request);
+
+    CompletableFuture<UpdatePostgresExtensionsResponse> updatePostgresExtensions(UpdatePostgresExtensionsRequest request);
 
     /**
       * > A full backup file contains the data of a self-managed MySQL database. You can restore the data of a self-managed MySQL database from a full backup file to an ApsaraDB RDS for MySQL instance. For more information, see [Migrate the data of a self-managed MySQL 5.7 instance to the cloud](~~251779~~).
