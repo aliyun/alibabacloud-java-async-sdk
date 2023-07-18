@@ -92,6 +92,9 @@ public class ListFileResponseBody extends TeaModel {
     } 
 
     public static class DataList extends TeaModel {
+        @NameInMap("AuthDelta")
+        private Integer authDelta;
+
         @NameInMap("GmtCreate")
         private String gmtCreate;
 
@@ -114,6 +117,7 @@ public class ListFileResponseBody extends TeaModel {
         private String url;
 
         private DataList(Builder builder) {
+            this.authDelta = builder.authDelta;
             this.gmtCreate = builder.gmtCreate;
             this.gmtModified = builder.gmtModified;
             this.id = builder.id;
@@ -129,6 +133,13 @@ public class ListFileResponseBody extends TeaModel {
 
         public static DataList create() {
             return builder().build();
+        }
+
+        /**
+         * @return authDelta
+         */
+        public Integer getAuthDelta() {
+            return this.authDelta;
         }
 
         /**
@@ -181,6 +192,7 @@ public class ListFileResponseBody extends TeaModel {
         }
 
         public static final class Builder {
+            private Integer authDelta; 
             private String gmtCreate; 
             private String gmtModified; 
             private String id; 
@@ -188,6 +200,14 @@ public class ListFileResponseBody extends TeaModel {
             private Integer size; 
             private String type; 
             private String url; 
+
+            /**
+             * AuthDelta.
+             */
+            public Builder authDelta(Integer authDelta) {
+                this.authDelta = authDelta;
+                return this;
+            }
 
             /**
              * GmtCreate.

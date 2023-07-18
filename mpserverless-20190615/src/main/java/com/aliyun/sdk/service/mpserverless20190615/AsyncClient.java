@@ -66,6 +66,8 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<DeployFunctionResponse> deployFunction(DeployFunctionRequest request);
 
+    CompletableFuture<DescribeCdnDomainResponse> describeCdnDomain(DescribeCdnDomainRequest request);
+
     CompletableFuture<DescribeFCOpenStatusResponse> describeFCOpenStatus(DescribeFCOpenStatusRequest request);
 
     CompletableFuture<DescribeFileUploadSignedUrlResponse> describeFileUploadSignedUrl(DescribeFileUploadSignedUrlRequest request);
@@ -161,6 +163,8 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<SaveAntOpenPlatformConfigResponse> saveAntOpenPlatformConfig(SaveAntOpenPlatformConfigRequest request);
 
     CompletableFuture<SaveAppAuthTokenResponse> saveAppAuthToken(SaveAppAuthTokenRequest request);
+
+    CompletableFuture<SaveCdnDomainConfigResponse> saveCdnDomainConfig(SaveCdnDomainConfigRequest request);
 
     CompletableFuture<SaveWebHostingCustomDomainConfigResponse> saveWebHostingCustomDomainConfig(SaveWebHostingCustomDomainConfigRequest request);
 

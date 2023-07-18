@@ -13,6 +13,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class ListFileRequest extends Request {
     @Body
+    @NameInMap("AuthDelta")
+    private Integer authDelta;
+
+    @Body
     @NameInMap("FileId")
     private String fileId;
 
@@ -44,6 +48,7 @@ public class ListFileRequest extends Request {
 
     private ListFileRequest(Builder builder) {
         super(builder);
+        this.authDelta = builder.authDelta;
         this.fileId = builder.fileId;
         this.keyword = builder.keyword;
         this.mode = builder.mode;
@@ -64,6 +69,13 @@ public class ListFileRequest extends Request {
     @Override
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return authDelta
+     */
+    public Integer getAuthDelta() {
+        return this.authDelta;
     }
 
     /**
@@ -116,6 +128,7 @@ public class ListFileRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<ListFileRequest, Builder> {
+        private Integer authDelta; 
         private String fileId; 
         private String keyword; 
         private String mode; 
@@ -130,6 +143,7 @@ public class ListFileRequest extends Request {
 
         private Builder(ListFileRequest request) {
             super(request);
+            this.authDelta = request.authDelta;
             this.fileId = request.fileId;
             this.keyword = request.keyword;
             this.mode = request.mode;
@@ -138,6 +152,15 @@ public class ListFileRequest extends Request {
             this.prefix = request.prefix;
             this.spaceId = request.spaceId;
         } 
+
+        /**
+         * AuthDelta.
+         */
+        public Builder authDelta(Integer authDelta) {
+            this.putBodyParameter("AuthDelta", authDelta);
+            this.authDelta = authDelta;
+            return this;
+        }
 
         /**
          * FileId.
