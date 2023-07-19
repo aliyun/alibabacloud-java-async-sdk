@@ -62,7 +62,7 @@ public class DescribeInstancesResponseBody extends TeaModel {
         private Long totalCount; 
 
         /**
-         * Instances.
+         * An array that consists of the details of the instances.
          */
         public Builder instances(java.util.List < Instances> instances) {
             this.instances = instances;
@@ -70,7 +70,7 @@ public class DescribeInstancesResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request, which is used to locate and troubleshoot issues.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -78,7 +78,7 @@ public class DescribeInstancesResponseBody extends TeaModel {
         }
 
         /**
-         * TotalCount.
+         * The total number of the instances.
          */
         public Builder totalCount(Long totalCount) {
             this.totalCount = totalCount;
@@ -110,6 +110,9 @@ public class DescribeInstancesResponseBody extends TeaModel {
         @NameInMap("InstanceId")
         private String instanceId;
 
+        @NameInMap("Ip")
+        private String ip;
+
         @NameInMap("IpMode")
         private String ipMode;
 
@@ -135,6 +138,7 @@ public class DescribeInstancesResponseBody extends TeaModel {
             this.enabled = builder.enabled;
             this.expireTime = builder.expireTime;
             this.instanceId = builder.instanceId;
+            this.ip = builder.ip;
             this.ipMode = builder.ipMode;
             this.ipVersion = builder.ipVersion;
             this.isFirstOpenBw = builder.isFirstOpenBw;
@@ -194,6 +198,13 @@ public class DescribeInstancesResponseBody extends TeaModel {
         }
 
         /**
+         * @return ip
+         */
+        public String getIp() {
+            return this.ip;
+        }
+
+        /**
          * @return ipMode
          */
         public String getIpMode() {
@@ -242,6 +253,7 @@ public class DescribeInstancesResponseBody extends TeaModel {
             private Integer enabled; 
             private Long expireTime; 
             private String instanceId; 
+            private String ip; 
             private String ipMode; 
             private String ipVersion; 
             private Long isFirstOpenBw; 
@@ -250,7 +262,7 @@ public class DescribeInstancesResponseBody extends TeaModel {
             private Integer status; 
 
             /**
-             * CreateTime.
+             * The time when the instance is created. This value is a UNIX timestamp. Unit: milliseconds.
              */
             public Builder createTime(Long createTime) {
                 this.createTime = createTime;
@@ -258,7 +270,7 @@ public class DescribeInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * DebtStatus.
+             * The overdue status of the instance. The value is fixed as **0**, which indicates that your Alibaba Cloud account does not have overdue payments. The instance supports only the subscription billing method.
              */
             public Builder debtStatus(Integer debtStatus) {
                 this.debtStatus = debtStatus;
@@ -266,7 +278,13 @@ public class DescribeInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * Edition.
+             * The mitigation plan of the instance. Valid values:
+             * <p>
+             * 
+             * *   **0**: Anti-DDoS Premium instance of the Insurance mitigation plan
+             * *   **1**: Anti-DDoS Premium instance of the Unlimited mitigation plan
+             * *   **2**: Anti-DDoS Premium instance of the MCA mitigation plan
+             * *   **9**: Anti-DDoS Pro instance of the Profession mitigation plan
              */
             public Builder edition(Integer edition) {
                 this.edition = edition;
@@ -274,7 +292,11 @@ public class DescribeInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * Enabled.
+             * The forwarding status of the instance. Valid values:
+             * <p>
+             * 
+             * *   **0**: The instance no longer forwards service traffic.
+             * *   **1**: The instance forwards service traffic as expected.
              */
             public Builder enabled(Integer enabled) {
                 this.enabled = enabled;
@@ -282,7 +304,7 @@ public class DescribeInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * ExpireTime.
+             * The time when the instance expires. This value is a UNIX timestamp. Unit: milliseconds.
              */
             public Builder expireTime(Long expireTime) {
                 this.expireTime = expireTime;
@@ -290,7 +312,7 @@ public class DescribeInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * InstanceId.
+             * The ID of the instance.
              */
             public Builder instanceId(String instanceId) {
                 this.instanceId = instanceId;
@@ -298,7 +320,19 @@ public class DescribeInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * IpMode.
+             * The IP address of the instance.
+             */
+            public Builder ip(String ip) {
+                this.ip = ip;
+                return this;
+            }
+
+            /**
+             * The IP address-based forwarding mode of the instance. Valid values:
+             * <p>
+             * 
+             * *   **fnat**: Requests from IPv4 addresses are forwarded to origin servers that use IPv4 addresses and requests from IPv6 addresses are forwarded to origin servers that use IPv6 addresses.
+             * *   **v6tov4**: All requests are forwarded to origin servers that use IPv4 addresses.
              */
             public Builder ipMode(String ipMode) {
                 this.ipMode = ipMode;
@@ -306,7 +340,11 @@ public class DescribeInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * IpVersion.
+             * The IP version of the instance. Valid values:
+             * <p>
+             * 
+             * *   **Ipv4**: IPv4
+             * *   **Ipv6**: IPv6
              */
             public Builder ipVersion(String ipVersion) {
                 this.ipVersion = ipVersion;
@@ -314,7 +352,11 @@ public class DescribeInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * IsFirstOpenBw.
+             * Indicates whether the 95th percentile metering method has been enabled for the instance. Valid values:
+             * <p>
+             * 
+             * *   0: The 95th percentile metering method has not been enabled for the instance.
+             * *   1: The 95th percentile metering method has been enabled for the instance.
              */
             public Builder isFirstOpenBw(Long isFirstOpenBw) {
                 this.isFirstOpenBw = isFirstOpenBw;
@@ -322,7 +364,11 @@ public class DescribeInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * IsFirstOpenQps.
+             * Indicates whether the metering method of the 95th percentile burstable QPS is enabled for the instance. Valid values:
+             * <p>
+             * 
+             * - 0: no
+             * - 1: yes
              */
             public Builder isFirstOpenQps(Long isFirstOpenQps) {
                 this.isFirstOpenQps = isFirstOpenQps;
@@ -330,7 +376,7 @@ public class DescribeInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * Remark.
+             * The remarks of the instance.
              */
             public Builder remark(String remark) {
                 this.remark = remark;
@@ -338,7 +384,11 @@ public class DescribeInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * Status.
+             * The status of the instance. Valid values:
+             * <p>
+             * 
+             * *   **1**: normal
+             * *   **2**: expired
              */
             public Builder status(Integer status) {
                 this.status = status;

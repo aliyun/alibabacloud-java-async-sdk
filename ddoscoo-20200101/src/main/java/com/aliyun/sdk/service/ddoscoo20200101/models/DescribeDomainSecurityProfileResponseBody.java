@@ -50,7 +50,7 @@ public class DescribeDomainSecurityProfileResponseBody extends TeaModel {
         private java.util.List < Result> result; 
 
         /**
-         * Id of the request
+         * The ID of the request, which is used to locate and troubleshoot issues.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -58,7 +58,7 @@ public class DescribeDomainSecurityProfileResponseBody extends TeaModel {
         }
 
         /**
-         * Result.
+         * The returned results.
          */
         public Builder result(java.util.List < Result> result) {
             this.result = result;
@@ -110,7 +110,11 @@ public class DescribeDomainSecurityProfileResponseBody extends TeaModel {
             private String globalMode; 
 
             /**
-             * GlobalEnable.
+             * Indicates whether the global mitigation policy is enabled. Valid values:
+             * <p>
+             * 
+             * *   **true**
+             * *   **false**
              */
             public Builder globalEnable(Boolean globalEnable) {
                 this.globalEnable = globalEnable;
@@ -118,7 +122,12 @@ public class DescribeDomainSecurityProfileResponseBody extends TeaModel {
             }
 
             /**
-             * GlobalMode.
+             * The mode of the global mitigation policy. Valid values:
+             * <p>
+             * 
+             * *   **weak**: the Low mode
+             * *   **default**: the Normal mode
+             * *   **hard**: the Strict mode
              */
             public Builder globalMode(String globalMode) {
                 this.globalMode = globalMode;

@@ -38,7 +38,7 @@ public class ModifyHeadersResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * RequestId.
+         * The unique ID of the request, which is used to locate and troubleshoot issues.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

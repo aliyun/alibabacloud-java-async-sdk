@@ -92,7 +92,10 @@ public class DescribeHeadersRequest extends Request {
         }
 
         /**
-         * Domain.
+         * The domain name that you want to query.
+         * <p>
+         * 
+         * > You can call the [DescribeDomains](~~91724~~) operation to query all the domain names that are added to Anti-DDoS Pro or Anti-DDoS Premium.
          */
         public Builder domain(String domain) {
             this.putQueryParameter("Domain", domain);
@@ -101,7 +104,7 @@ public class DescribeHeadersRequest extends Request {
         }
 
         /**
-         * ResourceGroupId.
+         * The ID of the resource group to which the instance belongs in Resource Management. This parameter is empty by default, which indicates that the instance belongs to the default resource group.
          */
         public Builder resourceGroupId(String resourceGroupId) {
             this.putQueryParameter("ResourceGroupId", resourceGroupId);

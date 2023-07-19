@@ -50,7 +50,7 @@ public class DescribeDomainStatusCodeListResponseBody extends TeaModel {
         private java.util.List < StatusCodeList> statusCodeList; 
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -58,7 +58,7 @@ public class DescribeDomainStatusCodeListResponseBody extends TeaModel {
         }
 
         /**
-         * StatusCodeList.
+         * The statistics on response status codes.
          */
         public Builder statusCodeList(java.util.List < StatusCodeList> statusCodeList) {
             this.statusCodeList = statusCodeList;
@@ -254,7 +254,7 @@ public class DescribeDomainStatusCodeListResponseBody extends TeaModel {
             private Long time; 
 
             /**
-             * Index.
+             * The index number of the returned data.
              */
             public Builder index(Integer index) {
                 this.index = index;
@@ -262,7 +262,7 @@ public class DescribeDomainStatusCodeListResponseBody extends TeaModel {
             }
 
             /**
-             * Status200.
+             * The number of 200 status codes.
              */
             public Builder status200(Long status200) {
                 this.status200 = status200;
@@ -270,7 +270,7 @@ public class DescribeDomainStatusCodeListResponseBody extends TeaModel {
             }
 
             /**
-             * Status2XX.
+             * The number of 2xx status codes.
              */
             public Builder status2XX(Long status2XX) {
                 this.status2XX = status2XX;
@@ -278,7 +278,7 @@ public class DescribeDomainStatusCodeListResponseBody extends TeaModel {
             }
 
             /**
-             * Status3XX.
+             * The number of 3xx status codes.
              */
             public Builder status3XX(Long status3XX) {
                 this.status3XX = status3XX;
@@ -286,7 +286,7 @@ public class DescribeDomainStatusCodeListResponseBody extends TeaModel {
             }
 
             /**
-             * Status403.
+             * The number of 403 status codes.
              */
             public Builder status403(Long status403) {
                 this.status403 = status403;
@@ -294,7 +294,7 @@ public class DescribeDomainStatusCodeListResponseBody extends TeaModel {
             }
 
             /**
-             * Status404.
+             * The number of 404 status codes.
              */
             public Builder status404(Long status404) {
                 this.status404 = status404;
@@ -302,7 +302,7 @@ public class DescribeDomainStatusCodeListResponseBody extends TeaModel {
             }
 
             /**
-             * Status405.
+             * The number of 405 status codes.
              */
             public Builder status405(Long status405) {
                 this.status405 = status405;
@@ -310,7 +310,7 @@ public class DescribeDomainStatusCodeListResponseBody extends TeaModel {
             }
 
             /**
-             * Status4XX.
+             * The number of 4xx status codes.
              */
             public Builder status4XX(Long status4XX) {
                 this.status4XX = status4XX;
@@ -318,7 +318,7 @@ public class DescribeDomainStatusCodeListResponseBody extends TeaModel {
             }
 
             /**
-             * Status501.
+             * The number of 501 status codes.
              */
             public Builder status501(Long status501) {
                 this.status501 = status501;
@@ -326,7 +326,7 @@ public class DescribeDomainStatusCodeListResponseBody extends TeaModel {
             }
 
             /**
-             * Status502.
+             * The number of 502 status codes.
              */
             public Builder status502(Long status502) {
                 this.status502 = status502;
@@ -334,7 +334,7 @@ public class DescribeDomainStatusCodeListResponseBody extends TeaModel {
             }
 
             /**
-             * Status503.
+             * The number of 503 status codes.
              */
             public Builder status503(Long status503) {
                 this.status503 = status503;
@@ -342,7 +342,7 @@ public class DescribeDomainStatusCodeListResponseBody extends TeaModel {
             }
 
             /**
-             * Status504.
+             * The number of 504 status codes.
              */
             public Builder status504(Long status504) {
                 this.status504 = status504;
@@ -350,7 +350,7 @@ public class DescribeDomainStatusCodeListResponseBody extends TeaModel {
             }
 
             /**
-             * Status5XX.
+             * The number of 5xx status codes.
              */
             public Builder status5XX(Long status5XX) {
                 this.status5XX = status5XX;
@@ -358,7 +358,7 @@ public class DescribeDomainStatusCodeListResponseBody extends TeaModel {
             }
 
             /**
-             * Time.
+             * The time when the data was collected. The value is a UNIX timestamp. Unit: seconds.
              */
             public Builder time(Long time) {
                 this.time = time;

@@ -310,6 +310,9 @@ public class DescribeWebRulesResponseBody extends TeaModel {
         @NameInMap("CertName")
         private String certName;
 
+        @NameInMap("CertRegion")
+        private String certRegion;
+
         @NameInMap("Cname")
         private String cname;
 
@@ -370,6 +373,7 @@ public class DescribeWebRulesResponseBody extends TeaModel {
             this.ccRuleEnabled = builder.ccRuleEnabled;
             this.ccTemplate = builder.ccTemplate;
             this.certName = builder.certName;
+            this.certRegion = builder.certRegion;
             this.cname = builder.cname;
             this.customCiphers = builder.customCiphers;
             this.domain = builder.domain;
@@ -431,6 +435,13 @@ public class DescribeWebRulesResponseBody extends TeaModel {
          */
         public String getCertName() {
             return this.certName;
+        }
+
+        /**
+         * @return certRegion
+         */
+        public String getCertRegion() {
+            return this.certRegion;
         }
 
         /**
@@ -565,6 +576,7 @@ public class DescribeWebRulesResponseBody extends TeaModel {
             private Boolean ccRuleEnabled; 
             private String ccTemplate; 
             private String certName; 
+            private String certRegion; 
             private String cname; 
             private java.util.List < String > customCiphers; 
             private String domain; 
@@ -621,6 +633,14 @@ public class DescribeWebRulesResponseBody extends TeaModel {
              */
             public Builder certName(String certName) {
                 this.certName = certName;
+                return this;
+            }
+
+            /**
+             * CertRegion.
+             */
+            public Builder certRegion(String certRegion) {
+                this.certRegion = certRegion;
                 return this;
             }
 

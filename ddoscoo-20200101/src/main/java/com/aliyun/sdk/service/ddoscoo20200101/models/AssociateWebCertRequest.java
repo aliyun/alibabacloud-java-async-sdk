@@ -25,8 +25,16 @@ public class AssociateWebCertRequest extends Request {
     private Integer certId;
 
     @Query
+    @NameInMap("CertIdentifier")
+    private String certIdentifier;
+
+    @Query
     @NameInMap("CertName")
     private String certName;
+
+    @Query
+    @NameInMap("CertRegion")
+    private String certRegion;
 
     @Query
     @NameInMap("Domain")
@@ -46,7 +54,9 @@ public class AssociateWebCertRequest extends Request {
         this.regionId = builder.regionId;
         this.cert = builder.cert;
         this.certId = builder.certId;
+        this.certIdentifier = builder.certIdentifier;
         this.certName = builder.certName;
+        this.certRegion = builder.certRegion;
         this.domain = builder.domain;
         this.key = builder.key;
         this.resourceGroupId = builder.resourceGroupId;
@@ -87,10 +97,24 @@ public class AssociateWebCertRequest extends Request {
     }
 
     /**
+     * @return certIdentifier
+     */
+    public String getCertIdentifier() {
+        return this.certIdentifier;
+    }
+
+    /**
      * @return certName
      */
     public String getCertName() {
         return this.certName;
+    }
+
+    /**
+     * @return certRegion
+     */
+    public String getCertRegion() {
+        return this.certRegion;
     }
 
     /**
@@ -118,7 +142,9 @@ public class AssociateWebCertRequest extends Request {
         private String regionId; 
         private String cert; 
         private Integer certId; 
+        private String certIdentifier; 
         private String certName; 
+        private String certRegion; 
         private String domain; 
         private String key; 
         private String resourceGroupId; 
@@ -132,7 +158,9 @@ public class AssociateWebCertRequest extends Request {
             this.regionId = request.regionId;
             this.cert = request.cert;
             this.certId = request.certId;
+            this.certIdentifier = request.certIdentifier;
             this.certName = request.certName;
+            this.certRegion = request.certRegion;
             this.domain = request.domain;
             this.key = request.key;
             this.resourceGroupId = request.resourceGroupId;
@@ -172,6 +200,15 @@ public class AssociateWebCertRequest extends Request {
         }
 
         /**
+         * CertIdentifier.
+         */
+        public Builder certIdentifier(String certIdentifier) {
+            this.putQueryParameter("CertIdentifier", certIdentifier);
+            this.certIdentifier = certIdentifier;
+            return this;
+        }
+
+        /**
          * The name of the certificate that you want to associate. This parameter must be used together with the **Cert** and **Key** parameters.
          * <p>
          * 
@@ -180,6 +217,15 @@ public class AssociateWebCertRequest extends Request {
         public Builder certName(String certName) {
             this.putQueryParameter("CertName", certName);
             this.certName = certName;
+            return this;
+        }
+
+        /**
+         * CertRegion.
+         */
+        public Builder certRegion(String certRegion) {
+            this.putQueryParameter("CertRegion", certRegion);
+            this.certRegion = certRegion;
             return this;
         }
 

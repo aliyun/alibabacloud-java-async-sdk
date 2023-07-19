@@ -62,7 +62,7 @@ public class DescribeTotalAttackMaxFlowResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * Bps.
+         * The peak bandwidth of attack traffic. Unit: bit/s.
          */
         public Builder bps(Long bps) {
             this.bps = bps;
@@ -70,7 +70,7 @@ public class DescribeTotalAttackMaxFlowResponseBody extends TeaModel {
         }
 
         /**
-         * Pps.
+         * The peak packet rate of attack traffic . Unit: packets per second (pps).
          */
         public Builder pps(Long pps) {
             this.pps = pps;
@@ -78,7 +78,7 @@ public class DescribeTotalAttackMaxFlowResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request, which is used to locate and troubleshoot issues.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

@@ -93,7 +93,10 @@ public class ModifyOcspStatusRequest extends Request {
         }
 
         /**
-         * Domain.
+         * The domain name for which you want to configure the Static Page Caching policy.
+         * <p>
+         * 
+         * > You can call the [DescribeDomains](~~91724~~) operation to query all the domain names that are added to Anti-DDoS Pro or Anti-DDoS Premium.
          */
         public Builder domain(String domain) {
             this.putQueryParameter("Domain", domain);
@@ -102,7 +105,11 @@ public class ModifyOcspStatusRequest extends Request {
         }
 
         /**
-         * Enable.
+         * Specifies whether to enable the OCSP feature. Valid values:
+         * <p>
+         * 
+         * *   **1**: yes
+         * *   **0**: no
          */
         public Builder enable(Integer enable) {
             this.putQueryParameter("Enable", enable);

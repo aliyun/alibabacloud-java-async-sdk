@@ -50,7 +50,7 @@ public class DescribeHeadersResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * CustomHeader.
+         * The information about the custom header.
          */
         public Builder customHeader(CustomHeader customHeader) {
             this.customHeader = customHeader;
@@ -58,7 +58,7 @@ public class DescribeHeadersResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request, which is used to locate and troubleshoot issues.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -110,7 +110,7 @@ public class DescribeHeadersResponseBody extends TeaModel {
             private String headers; 
 
             /**
-             * Domain.
+             * The domain name of the website.
              */
             public Builder domain(String domain) {
                 this.domain = domain;
@@ -118,7 +118,7 @@ public class DescribeHeadersResponseBody extends TeaModel {
             }
 
             /**
-             * Headers.
+             * The header of the response.
              */
             public Builder headers(String headers) {
                 this.headers = headers;

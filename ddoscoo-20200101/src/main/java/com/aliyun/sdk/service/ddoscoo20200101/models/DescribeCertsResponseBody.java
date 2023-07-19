@@ -72,6 +72,9 @@ public class DescribeCertsResponseBody extends TeaModel {
     } 
 
     public static class Certs extends TeaModel {
+        @NameInMap("CertIdentifier")
+        private String certIdentifier;
+
         @NameInMap("Common")
         private String common;
 
@@ -94,6 +97,7 @@ public class DescribeCertsResponseBody extends TeaModel {
         private String startDate;
 
         private Certs(Builder builder) {
+            this.certIdentifier = builder.certIdentifier;
             this.common = builder.common;
             this.domainRelated = builder.domainRelated;
             this.endDate = builder.endDate;
@@ -109,6 +113,13 @@ public class DescribeCertsResponseBody extends TeaModel {
 
         public static Certs create() {
             return builder().build();
+        }
+
+        /**
+         * @return certIdentifier
+         */
+        public String getCertIdentifier() {
+            return this.certIdentifier;
         }
 
         /**
@@ -161,6 +172,7 @@ public class DescribeCertsResponseBody extends TeaModel {
         }
 
         public static final class Builder {
+            private String certIdentifier; 
             private String common; 
             private Boolean domainRelated; 
             private String endDate; 
@@ -168,6 +180,14 @@ public class DescribeCertsResponseBody extends TeaModel {
             private String issuer; 
             private String name; 
             private String startDate; 
+
+            /**
+             * CertIdentifier.
+             */
+            public Builder certIdentifier(String certIdentifier) {
+                this.certIdentifier = certIdentifier;
+                return this;
+            }
 
             /**
              * The domain name that is associated with the certificate.

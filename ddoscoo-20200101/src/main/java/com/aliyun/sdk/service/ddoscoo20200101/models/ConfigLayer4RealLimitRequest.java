@@ -93,7 +93,10 @@ public class ConfigLayer4RealLimitRequest extends Request {
         }
 
         /**
-         * InstanceId.
+         * The ID of the Anti-DDoS Pro or Anti-DDoS Premium instance.
+         * <p>
+         * 
+         * > You can call the [DescribeInstanceIds](~~157459~~) operation to query the IDs of all instances.
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -102,7 +105,7 @@ public class ConfigLayer4RealLimitRequest extends Request {
         }
 
         /**
-         * LimitValue.
+         * Specifies the threshold of the clean bandwidth. Valid values: 0 to 15360. The value 0 indicates that rate limiting is never triggered. Unit: Mbit/s
          */
         public Builder limitValue(Long limitValue) {
             this.putQueryParameter("LimitValue", limitValue);

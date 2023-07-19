@@ -93,7 +93,10 @@ public class ModifyBizBandWidthModeRequest extends Request {
         }
 
         /**
-         * InstanceId.
+         * The ID of the instance.
+         * <p>
+         * 
+         * > You can call the [DescribeInstanceIds](~~157459~~) operation to query the IDs of all instances.
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -102,7 +105,11 @@ public class ModifyBizBandWidthModeRequest extends Request {
         }
 
         /**
-         * Mode.
+         * The metering method of the burstable clean bandwidth feature. Valid values:
+         * <p>
+         * 
+         * *   **month**: the metering method of monthly 95th percentile
+         * *   **day**: the metering method of daily 95th percentile
          */
         public Builder mode(String mode) {
             this.putQueryParameter("Mode", mode);

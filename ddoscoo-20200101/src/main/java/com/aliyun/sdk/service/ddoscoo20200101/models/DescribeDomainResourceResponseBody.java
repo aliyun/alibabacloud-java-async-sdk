@@ -78,7 +78,7 @@ public class DescribeDomainResourceResponseBody extends TeaModel {
         }
 
         /**
-         * An array that consists of the configurations of the forwarding rule.
+         * The configurations of the forwarding rule.
          */
         public Builder webRules(java.util.List < WebRules> webRules) {
             this.webRules = webRules;
@@ -130,7 +130,7 @@ public class DescribeDomainResourceResponseBody extends TeaModel {
             private String proxyType; 
 
             /**
-             * An array that consists of the port numbers.
+             * The port numbers.
              */
             public Builder proxyPorts(java.util.List < String > proxyPorts) {
                 this.proxyPorts = proxyPorts;
@@ -198,6 +198,9 @@ public class DescribeDomainResourceResponseBody extends TeaModel {
         @NameInMap("InstanceIds")
         private java.util.List < String > instanceIds;
 
+        @NameInMap("OcspEnabled")
+        private Boolean ocspEnabled;
+
         @NameInMap("PolicyMode")
         private String policyMode;
 
@@ -245,6 +248,7 @@ public class DescribeDomainResourceResponseBody extends TeaModel {
             this.https2HttpEnable = builder.https2HttpEnable;
             this.httpsExt = builder.httpsExt;
             this.instanceIds = builder.instanceIds;
+            this.ocspEnabled = builder.ocspEnabled;
             this.policyMode = builder.policyMode;
             this.proxyEnabled = builder.proxyEnabled;
             this.proxyTypes = builder.proxyTypes;
@@ -358,6 +362,13 @@ public class DescribeDomainResourceResponseBody extends TeaModel {
         }
 
         /**
+         * @return ocspEnabled
+         */
+        public Boolean getOcspEnabled() {
+            return this.ocspEnabled;
+        }
+
+        /**
          * @return policyMode
          */
         public String getPolicyMode() {
@@ -448,6 +459,7 @@ public class DescribeDomainResourceResponseBody extends TeaModel {
             private Boolean https2HttpEnable; 
             private String httpsExt; 
             private java.util.List < String > instanceIds; 
+            private Boolean ocspEnabled; 
             private String policyMode; 
             private Boolean proxyEnabled; 
             private java.util.List < ProxyTypes> proxyTypes; 
@@ -461,7 +473,7 @@ public class DescribeDomainResourceResponseBody extends TeaModel {
             private java.util.List < String > whiteList; 
 
             /**
-             * An array consisting of the IP addresses that are included in the blacklist of the domain name.
+             * The IP addresses that are included in the blacklist of the domain name.
              */
             public Builder blackList(java.util.List < String > blackList) {
                 this.blackList = blackList;
@@ -472,8 +484,8 @@ public class DescribeDomainResourceResponseBody extends TeaModel {
              * Indicates whether the Frequency Control policy is enabled. Valid values:
              * <p>
              * 
-             * *   **true**: yes
-             * *   **false**: no
+             * *   **true**
+             * *   **false**
              */
             public Builder ccEnabled(Boolean ccEnabled) {
                 this.ccEnabled = ccEnabled;
@@ -484,8 +496,8 @@ public class DescribeDomainResourceResponseBody extends TeaModel {
              * Indicates whether the Custom Rule switch of the Frequency Control policy is turned on. Valid values:
              * <p>
              * 
-             * *   **true**: yes
-             * *   **false**: no
+             * *   **true**
+             * *   **false**
              */
             public Builder ccRuleEnabled(Boolean ccRuleEnabled) {
                 this.ccRuleEnabled = ccRuleEnabled;
@@ -523,7 +535,7 @@ public class DescribeDomainResourceResponseBody extends TeaModel {
             }
 
             /**
-             * An array that consists of custom cipher suites.
+             * The custom cipher suites.
              */
             public Builder customCiphers(java.util.List < String > customCiphers) {
                 this.customCiphers = customCiphers;
@@ -542,8 +554,8 @@ public class DescribeDomainResourceResponseBody extends TeaModel {
              * Indicates whether Enable HTTP/2 is turned on. Valid values:
              * <p>
              * 
-             * *   **true**: yes
-             * *   **false**: no
+             * *   **true**
+             * *   **false**
              */
             public Builder http2Enable(Boolean http2Enable) {
                 this.http2Enable = http2Enable;
@@ -554,8 +566,8 @@ public class DescribeDomainResourceResponseBody extends TeaModel {
              * Indicates whether Enforce HTTPS Routing is turned on. Valid values:
              * <p>
              * 
-             * *   **true**: yes
-             * *   **false**: no
+             * *   **true**
+             * *   **false**
              */
             public Builder http2HttpsEnable(Boolean http2HttpsEnable) {
                 this.http2HttpsEnable = http2HttpsEnable;
@@ -566,8 +578,8 @@ public class DescribeDomainResourceResponseBody extends TeaModel {
              * Indicates whether Enable HTTP is turned on. Valid values:
              * <p>
              * 
-             * *   **true**: yes
-             * *   **false**: no
+             * *   **true**
+             * *   **false**
              */
             public Builder https2HttpEnable(Boolean https2HttpEnable) {
                 this.https2HttpEnable = https2HttpEnable;
@@ -588,7 +600,7 @@ public class DescribeDomainResourceResponseBody extends TeaModel {
             }
 
             /**
-             * An array consisting of the IDs of the instances to which the domain name is added.
+             * The IDs of the instances to which the domain name is added.
              */
             public Builder instanceIds(java.util.List < String > instanceIds) {
                 this.instanceIds = instanceIds;
@@ -596,7 +608,18 @@ public class DescribeDomainResourceResponseBody extends TeaModel {
             }
 
             /**
-             * The scheduling algorithm for back-to-origin traffic. Valid values:
+             * Indicates whether the Online Certificate Status Protocol (OCSP) feature is enabled. Valid values:
+             * <p>
+             * - **true**: yes
+             * - **false**: no
+             */
+            public Builder ocspEnabled(Boolean ocspEnabled) {
+                this.ocspEnabled = ocspEnabled;
+                return this;
+            }
+
+            /**
+             * The load balancing algorithm for back-to-origin traffic. Valid values:
              * <p>
              * 
              * *   **ip_hash**: the IP hash algorithm. This algorithm is used to redirect the requests from the same IP address to the same origin server.
@@ -612,7 +635,7 @@ public class DescribeDomainResourceResponseBody extends TeaModel {
              * Indicates whether the instance forwards the traffic that is destined for the website. Valid values:
              * <p>
              * 
-             * *   **true**: yes
+             * *   **true**: Anti-DDoS Pro or Anti-DDoS Premium forwards the traffic that is destined for the website.
              * *   **false**: no
              */
             public Builder proxyEnabled(Boolean proxyEnabled) {
@@ -621,7 +644,7 @@ public class DescribeDomainResourceResponseBody extends TeaModel {
             }
 
             /**
-             * An array that consists of the details of the protocol type and port number.
+             * The details about the protocol type and port number.
              */
             public Builder proxyTypes(java.util.List < ProxyTypes> proxyTypes) {
                 this.proxyTypes = proxyTypes;
@@ -632,7 +655,7 @@ public class DescribeDomainResourceResponseBody extends TeaModel {
              * The reason why the domain name is invalid. Valid values:
              * <p>
              * 
-             * *   **1**: No ICP filing is completed for the domain name.
+             * *   **1**: No Content Provider (ICP) filing is completed for the domain name.
              * *   **2**: The business for which you registered the domain name does not meet regulatory requirements.
              * 
              * If the two reasons are both involved, the value **2** is returned.
@@ -655,7 +678,7 @@ public class DescribeDomainResourceResponseBody extends TeaModel {
             }
 
             /**
-             * An array that consists of the addresses of the origin servers.
+             * The addresses of origin servers.
              */
             public Builder realServers(java.util.List < String > realServers) {
                 this.realServers = realServers;
@@ -678,8 +701,8 @@ public class DescribeDomainResourceResponseBody extends TeaModel {
              * Indicates whether TLS 1.3 is supported. Valid values:
              * <p>
              * 
-             * *   **true**: yes
-             * *   **false**: no
+             * *   **true**
+             * *   **false**
              */
             public Builder ssl13Enabled(Boolean ssl13Enabled) {
                 this.ssl13Enabled = ssl13Enabled;
@@ -713,7 +736,7 @@ public class DescribeDomainResourceResponseBody extends TeaModel {
             }
 
             /**
-             * An array consisting of the IP addresses that are included in the whitelist of the domain name.
+             * The IP addresses that are included in the whitelist of the domain name.
              */
             public Builder whiteList(java.util.List < String > whiteList) {
                 this.whiteList = whiteList;

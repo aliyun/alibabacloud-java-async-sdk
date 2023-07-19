@@ -150,7 +150,10 @@ public class DescribeDomainStatusCodeListRequest extends Request {
         }
 
         /**
-         * Domain.
+         * The domain name of the website. If you do not specify this parameter, the statistics on response status codes of all domain names are queried.
+         * <p>
+         * 
+         * > A forwarding rule must be configured for the domain name. You can call the [DescribeDomains](~~91724~~) operation to query all domain names.
          */
         public Builder domain(String domain) {
             this.putQueryParameter("Domain", domain);
@@ -159,7 +162,10 @@ public class DescribeDomainStatusCodeListRequest extends Request {
         }
 
         /**
-         * EndTime.
+         * The end of the time range to query. The value is a UNIX timestamp. Unit: seconds.
+         * <p>
+         * 
+         * > This UNIX timestamp must indicate a point in time that is accurate to the minute.
          */
         public Builder endTime(Long endTime) {
             this.putQueryParameter("EndTime", endTime);
@@ -168,7 +174,7 @@ public class DescribeDomainStatusCodeListRequest extends Request {
         }
 
         /**
-         * Interval.
+         * The interval for returning data. Unit: seconds.
          */
         public Builder interval(Long interval) {
             this.putQueryParameter("Interval", interval);
@@ -177,7 +183,11 @@ public class DescribeDomainStatusCodeListRequest extends Request {
         }
 
         /**
-         * QueryType.
+         * The source of the statistics. Valid values:
+         * <p>
+         * 
+         * *   **gf**: Anti-DDoS Pro or Anti-DDoS Premium
+         * *   **upstrem**: origin server
          */
         public Builder queryType(String queryType) {
             this.putQueryParameter("QueryType", queryType);
@@ -186,7 +196,7 @@ public class DescribeDomainStatusCodeListRequest extends Request {
         }
 
         /**
-         * ResourceGroupId.
+         * The ID of the resource group to which the instance belongs in Resource Management. This parameter is empty by default, which indicates that the instance belongs to the default resource group.
          */
         public Builder resourceGroupId(String resourceGroupId) {
             this.putQueryParameter("ResourceGroupId", resourceGroupId);
@@ -195,7 +205,10 @@ public class DescribeDomainStatusCodeListRequest extends Request {
         }
 
         /**
-         * StartTime.
+         * The start time of the event. The value is a UNIX timestamp. Unit: seconds.
+         * <p>
+         * 
+         * > This UNIX timestamp must indicate a point in time that is accurate to the minute.
          */
         public Builder startTime(Long startTime) {
             this.putQueryParameter("StartTime", startTime);
