@@ -158,9 +158,8 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<ListCustomImagesResponse> listCustomImages(ListCustomImagesRequest request);
 
     /**
+      * ## Usage notes
       * You can specify multiple request parameters such as `InstanceId` and `DiskIds`. Specified parameters have logical AND relations. Only the specified parameters are included in the filter conditions.
-      * ## QPS limits
-      * You can call this API operation up to 10 times per minute per account. Requests that exceed this limit are dropped and you will experience service interruptions. We recommend that you take note of this limit when you call this operation. For more information, see [QPS limits](/help/en/simple-application-server/latest/qps-limit-1).
       *
      */
     CompletableFuture<ListDisksResponse> listDisks(ListDisksRequest request);
@@ -231,9 +230,10 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<ListRegionsResponse> listRegions(ListRegionsRequest request);
 
     /**
-      * You can specify multiple request parameters such as `InstanceId`, `DiskId`, and `SnapshotIds` to be queried. Specified parameters have logical AND relations. Only the specified parameters are included in the filter conditions.
-      * ## QPS limits
-      * The queries per second (QPS) limit for a single user for the API operation is 10 calls per minute. If the number of calls to the API operation per minute exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation. For more information, see [QPS limit](/help/en/simple-application-server/latest/qps-limit-1).
+      * ## Description
+      * You can configure multiple request parameters such as `InstanceId`, `DiskId`, and `SnapshotIds` to query snapshots. Configured parameters have logical AND relations. Only the configured parameters are included in the filter conditions.
+      * ### QPS limits
+      * You can call this API operation up to 10 times per minute per account. Requests that exceed this limit are dropped and you may experience service interruptions. We recommend that you take note of this limit when you call this operation. For more information, see [QPS limits](~~347607~~).
       *
      */
     CompletableFuture<ListSnapshotsResponse> listSnapshots(ListSnapshotsRequest request);
@@ -347,6 +347,8 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<StartInstanceResponse> startInstance(StartInstanceRequest request);
 
     CompletableFuture<StartInstancesResponse> startInstances(StartInstancesRequest request);
+
+    CompletableFuture<StartTerminalSessionResponse> startTerminalSession(StartTerminalSessionRequest request);
 
     CompletableFuture<StopDatabaseInstanceResponse> stopDatabaseInstance(StopDatabaseInstanceRequest request);
 

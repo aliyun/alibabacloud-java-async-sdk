@@ -141,7 +141,7 @@ public class ListSnapshotsRequest extends Request {
         } 
 
         /**
-         * The ID of the source disk.
+         * The disk ID.
          */
         public Builder diskId(String diskId) {
             this.putQueryParameter("DiskId", diskId);
@@ -159,7 +159,7 @@ public class ListSnapshotsRequest extends Request {
         }
 
         /**
-         * The number of the page to return.
+         * The page number.
          * <p>
          * 
          * Default value: 1.
@@ -171,7 +171,7 @@ public class ListSnapshotsRequest extends Request {
         }
 
         /**
-         * The number of entries to return on each page. Maximum value: 100.
+         * The number of entries per page. Valid values: 1 to 100.
          * <p>
          * 
          * Default value: 10.
@@ -183,7 +183,7 @@ public class ListSnapshotsRequest extends Request {
         }
 
         /**
-         * The region ID of the simple application server.
+         * The region ID of the simple application server that corresponds to the snapshots.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -192,7 +192,7 @@ public class ListSnapshotsRequest extends Request {
         }
 
         /**
-         * The IDs of the snapshots. The value can be a JSON array that consists of up to 100 snapshot IDs. Separate the snapshot IDs with commas (,).
+         * The snapshot IDs. The value can be a JSON array that consists of up to 100 snapshot IDs. Separate multiple snapshot IDs with commas (,).
          */
         public Builder snapshotIds(String snapshotIds) {
             this.putQueryParameter("SnapshotIds", snapshotIds);

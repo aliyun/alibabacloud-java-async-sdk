@@ -86,7 +86,7 @@ public class ListDisksResponseBody extends TeaModel {
         private Integer totalCount; 
 
         /**
-         * Details about the disks.
+         * The region ID of the disks.
          */
         public Builder disks(java.util.List < Disks> disks) {
             this.disks = disks;
@@ -94,7 +94,7 @@ public class ListDisksResponseBody extends TeaModel {
         }
 
         /**
-         * The page number of the returned page.
+         * The page number.
          */
         public Builder pageNumber(Integer pageNumber) {
             this.pageNumber = pageNumber;
@@ -102,7 +102,7 @@ public class ListDisksResponseBody extends TeaModel {
         }
 
         /**
-         * The number of entries returned per page.
+         * The number of entries per page.
          */
         public Builder pageSize(Integer pageSize) {
             this.pageSize = pageSize;
@@ -118,7 +118,7 @@ public class ListDisksResponseBody extends TeaModel {
         }
 
         /**
-         * The total number of disks.
+         * The total number of entries returned.
          */
         public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;
@@ -374,7 +374,7 @@ public class ListDisksResponseBody extends TeaModel {
             }
 
             /**
-             * InstanceName.
+             * 轻量应用服务器名称。
              */
             public Builder instanceName(String instanceName) {
                 this.instanceName = instanceName;
@@ -390,7 +390,7 @@ public class ListDisksResponseBody extends TeaModel {
             }
 
             /**
-             * Remark.
+             * 磁盘备注。
              */
             public Builder remark(String remark) {
                 this.remark = remark;

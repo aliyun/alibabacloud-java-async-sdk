@@ -3,7 +3,7 @@
   <modelVersion>4.0.0</modelVersion>
   <groupId>com.aliyun</groupId>
   <artifactId>alibabacloud-swas_open20200601</artifactId>
-  <version>1.0.5</version>
+  <version>1.0.6</version>
   <packaging>jar</packaging>
   <name>alibabacloud-swas_open20200601</name>
   <description>Alibaba Cloud SWAS-OPEN (20200601) Async SDK for Java

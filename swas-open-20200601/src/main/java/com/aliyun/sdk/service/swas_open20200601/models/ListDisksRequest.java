@@ -127,7 +127,7 @@ public class ListDisksRequest extends Request {
         } 
 
         /**
-         * The IDs of the disks. The value can be a JSON array that consists of up to 100 disk IDs. Separate the disk IDs with commas (,).
+         * The IDs of the disks. The value can be a JSON array that consists of up to 100 disk IDs. Separate multiple disk IDs with commas (,).
          */
         public Builder diskIds(String diskIds) {
             this.putQueryParameter("DiskIds", diskIds);
@@ -136,7 +136,14 @@ public class ListDisksRequest extends Request {
         }
 
         /**
-         * DiskType.
+         * 磁盘类型。可能值：
+         * <p>
+         * 
+         * - System：系统盘
+         * 
+         * - Data：数据盘
+         * 
+         * 默认全量查询
          */
         public Builder diskType(String diskType) {
             this.putQueryParameter("DiskType", diskType);
@@ -154,7 +161,7 @@ public class ListDisksRequest extends Request {
         }
 
         /**
-         * The number of the page to return.
+         * The page number.
          * <p>
          * 
          * Default value: 1.
@@ -166,10 +173,10 @@ public class ListDisksRequest extends Request {
         }
 
         /**
-         * The number of entries to return on each page.
+         * The number of entries per page.
          * <p>
          * 
-         * Maximum value: 100.
+         * Valid values: 1 to 100.
          * 
          * Default value: 10.
          */

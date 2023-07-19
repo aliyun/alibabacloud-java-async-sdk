@@ -39,6 +39,10 @@ public class ListInstancesRequest extends Request {
     @Validation(required = true)
     private String regionId;
 
+    @Query
+    @NameInMap("Status")
+    private String status;
+
     private ListInstancesRequest(Builder builder) {
         super(builder);
         this.chargeType = builder.chargeType;
@@ -47,6 +51,7 @@ public class ListInstancesRequest extends Request {
         this.pageSize = builder.pageSize;
         this.publicIpAddresses = builder.publicIpAddresses;
         this.regionId = builder.regionId;
+        this.status = builder.status;
     }
 
     public static Builder builder() {
@@ -104,6 +109,13 @@ public class ListInstancesRequest extends Request {
         return this.regionId;
     }
 
+    /**
+     * @return status
+     */
+    public String getStatus() {
+        return this.status;
+    }
+
     public static final class Builder extends Request.Builder<ListInstancesRequest, Builder> {
         private String chargeType; 
         private String instanceIds; 
@@ -111,6 +123,7 @@ public class ListInstancesRequest extends Request {
         private Integer pageSize; 
         private String publicIpAddresses; 
         private String regionId; 
+        private String status; 
 
         private Builder() {
             super();
@@ -124,6 +137,7 @@ public class ListInstancesRequest extends Request {
             this.pageSize = request.pageSize;
             this.publicIpAddresses = request.publicIpAddresses;
             this.regionId = request.regionId;
+            this.status = request.status;
         } 
 
         /**
@@ -192,6 +206,15 @@ public class ListInstancesRequest extends Request {
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
             this.regionId = regionId;
+            return this;
+        }
+
+        /**
+         * Status.
+         */
+        public Builder status(String status) {
+            this.putQueryParameter("Status", status);
+            this.status = status;
             return this;
         }
 
