@@ -50,7 +50,7 @@ public class FreeResourceDetail extends TeaModel {
         private String resourceType; 
 
         /**
-         * 资源数量
+         * Amount.
          */
         public Builder amount(Integer amount) {
             this.amount = amount;
@@ -58,7 +58,7 @@ public class FreeResourceDetail extends TeaModel {
         }
 
         /**
-         * 资源类型
+         * ResourceType.
          */
         public Builder resourceType(String resourceType) {
             this.resourceType = resourceType;

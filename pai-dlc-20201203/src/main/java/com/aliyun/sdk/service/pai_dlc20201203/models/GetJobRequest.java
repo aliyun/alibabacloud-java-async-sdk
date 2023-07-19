@@ -69,7 +69,7 @@ public class GetJobRequest extends Request {
         } 
 
         /**
-         * 作业Id
+         * JobId.
          */
         public Builder jobId(String jobId) {
             this.putPathParameter("JobId", jobId);
@@ -78,7 +78,7 @@ public class GetJobRequest extends Request {
         }
 
         /**
-         * 是否返回作业详情信息，默认为true
+         * NeedDetail.
          */
         public Builder needDetail(Boolean needDetail) {
             this.putQueryParameter("NeedDetail", needDetail);

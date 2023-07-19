@@ -122,7 +122,7 @@ public class JobSpec extends TeaModel {
         private Boolean useSpotInstance; 
 
         /**
-         * Ecs实例规格
+         * EcsSpec.
          */
         public Builder ecsSpec(String ecsSpec) {
             this.ecsSpec = ecsSpec;
@@ -130,7 +130,7 @@ public class JobSpec extends TeaModel {
         }
 
         /**
-         * 额外的Pod配置
+         * ExtraPodSpec.
          */
         public Builder extraPodSpec(ExtraPodSpec extraPodSpec) {
             this.extraPodSpec = extraPodSpec;
@@ -138,7 +138,7 @@ public class JobSpec extends TeaModel {
         }
 
         /**
-         * 镜像
+         * Image.
          */
         public Builder image(String image) {
             this.image = image;
@@ -146,7 +146,7 @@ public class JobSpec extends TeaModel {
         }
 
         /**
-         * 私有镜像配置
+         * ImageConfig.
          */
         public Builder imageConfig(ImageConfig imageConfig) {
             this.imageConfig = imageConfig;
@@ -154,7 +154,7 @@ public class JobSpec extends TeaModel {
         }
 
         /**
-         * 实例数量
+         * PodCount.
          */
         public Builder podCount(Long podCount) {
             this.podCount = podCount;
@@ -162,7 +162,7 @@ public class JobSpec extends TeaModel {
         }
 
         /**
-         * 资源配置
+         * ResourceConfig.
          */
         public Builder resourceConfig(ResourceConfig resourceConfig) {
             this.resourceConfig = resourceConfig;
@@ -170,7 +170,7 @@ public class JobSpec extends TeaModel {
         }
 
         /**
-         * 类型
+         * Type.
          */
         public Builder type(String type) {
             this.type = type;
@@ -178,7 +178,7 @@ public class JobSpec extends TeaModel {
         }
 
         /**
-         * 是否使用竞价实例
+         * UseSpotInstance.
          */
         public Builder useSpotInstance(Boolean useSpotInstance) {
             this.useSpotInstance = useSpotInstance;

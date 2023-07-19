@@ -74,7 +74,7 @@ public class CreateTensorboardResponseBody extends TeaModel {
         private String tensorboardId; 
 
         /**
-         * DataSourceId
+         * DataSourceId.
          */
         public Builder dataSourceId(String dataSourceId) {
             this.dataSourceId = dataSourceId;
@@ -82,7 +82,7 @@ public class CreateTensorboardResponseBody extends TeaModel {
         }
 
         /**
-         * 任务Id
+         * JobId.
          */
         public Builder jobId(String jobId) {
             this.jobId = jobId;
@@ -90,7 +90,7 @@ public class CreateTensorboardResponseBody extends TeaModel {
         }
 
         /**
-         * 请求Id
+         * RequestId.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -98,7 +98,7 @@ public class CreateTensorboardResponseBody extends TeaModel {
         }
 
         /**
-         * Tensorboard id
+         * TensorboardId.
          */
         public Builder tensorboardId(String tensorboardId) {
             this.tensorboardId = tensorboardId;

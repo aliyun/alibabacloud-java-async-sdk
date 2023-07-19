@@ -194,7 +194,7 @@ public class DebuggerJob extends TeaModel {
         private String workspaceName; 
 
         /**
-         * debugger分析作业ID
+         * DebuggerJobId.
          */
         public Builder debuggerJobId(String debuggerJobId) {
             this.debuggerJobId = debuggerJobId;
@@ -202,7 +202,7 @@ public class DebuggerJob extends TeaModel {
         }
 
         /**
-         * 作业显示名
+         * DisplayName.
          */
         public Builder displayName(String displayName) {
             this.displayName = displayName;
@@ -210,7 +210,7 @@ public class DebuggerJob extends TeaModel {
         }
 
         /**
-         * 作业运行的时长（单位秒）
+         * Duration.
          */
         public Builder duration(String duration) {
             this.duration = duration;
@@ -218,7 +218,7 @@ public class DebuggerJob extends TeaModel {
         }
 
         /**
-         * 创建时间（UTC）
+         * GmtCreateTime.
          */
         public Builder gmtCreateTime(String gmtCreateTime) {
             this.gmtCreateTime = gmtCreateTime;
@@ -226,7 +226,7 @@ public class DebuggerJob extends TeaModel {
         }
 
         /**
-         * 失败时间（UTC）
+         * GmtFailedTime.
          */
         public Builder gmtFailedTime(String gmtFailedTime) {
             this.gmtFailedTime = gmtFailedTime;
@@ -234,7 +234,7 @@ public class DebuggerJob extends TeaModel {
         }
 
         /**
-         * 任务完成时间（UTC）
+         * GmtFinishTime.
          */
         public Builder gmtFinishTime(String gmtFinishTime) {
             this.gmtFinishTime = gmtFinishTime;
@@ -242,7 +242,7 @@ public class DebuggerJob extends TeaModel {
         }
 
         /**
-         * 运行开始时间（UTC）
+         * GmtRunningTime.
          */
         public Builder gmtRunningTime(String gmtRunningTime) {
             this.gmtRunningTime = gmtRunningTime;
@@ -250,7 +250,7 @@ public class DebuggerJob extends TeaModel {
         }
 
         /**
-         * 结束时间（UTC）
+         * GmtStoppedTime.
          */
         public Builder gmtStoppedTime(String gmtStoppedTime) {
             this.gmtStoppedTime = gmtStoppedTime;
@@ -258,7 +258,7 @@ public class DebuggerJob extends TeaModel {
         }
 
         /**
-         * 提交时间（UTC）
+         * GmtSubmittedTime.
          */
         public Builder gmtSubmittedTime(String gmtSubmittedTime) {
             this.gmtSubmittedTime = gmtSubmittedTime;
@@ -266,7 +266,7 @@ public class DebuggerJob extends TeaModel {
         }
 
         /**
-         * 成功结束时间（UTC）
+         * GmtSucceedTime.
          */
         public Builder gmtSucceedTime(String gmtSucceedTime) {
             this.gmtSucceedTime = gmtSucceedTime;
@@ -274,7 +274,7 @@ public class DebuggerJob extends TeaModel {
         }
 
         /**
-         * 作业运行状态
+         * Status.
          */
         public Builder status(String status) {
             this.status = status;
@@ -282,7 +282,7 @@ public class DebuggerJob extends TeaModel {
         }
 
         /**
-         * 用户ID
+         * UserId.
          */
         public Builder userId(String userId) {
             this.userId = userId;
@@ -290,7 +290,7 @@ public class DebuggerJob extends TeaModel {
         }
 
         /**
-         * 作业所属的运行工作空间
+         * WorkspaceId.
          */
         public Builder workspaceId(String workspaceId) {
             this.workspaceId = workspaceId;
@@ -298,7 +298,7 @@ public class DebuggerJob extends TeaModel {
         }
 
         /**
-         * 作业所属的运行工作空间名称
+         * WorkspaceName.
          */
         public Builder workspaceName(String workspaceName) {
             this.workspaceName = workspaceName;

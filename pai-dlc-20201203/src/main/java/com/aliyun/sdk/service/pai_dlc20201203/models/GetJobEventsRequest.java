@@ -98,7 +98,7 @@ public class GetJobEventsRequest extends Request {
         } 
 
         /**
-         * 作业ID
+         * JobId.
          */
         public Builder jobId(String jobId) {
             this.putPathParameter("JobId", jobId);
@@ -107,7 +107,7 @@ public class GetJobEventsRequest extends Request {
         }
 
         /**
-         * 查询事件的时间区间的截止时间，默认值是当前。
+         * EndTime.
          */
         public Builder endTime(String endTime) {
             this.putQueryParameter("EndTime", endTime);
@@ -116,7 +116,7 @@ public class GetJobEventsRequest extends Request {
         }
 
         /**
-         * 获取事件的最大数目，默认值：2000
+         * MaxEventsNum.
          */
         public Builder maxEventsNum(Integer maxEventsNum) {
             this.putQueryParameter("MaxEventsNum", maxEventsNum);
@@ -125,7 +125,7 @@ public class GetJobEventsRequest extends Request {
         }
 
         /**
-         * 查询事件的时间区间的起始时间，默认值是7天前。
+         * StartTime.
          */
         public Builder startTime(String startTime) {
             this.putQueryParameter("StartTime", startTime);

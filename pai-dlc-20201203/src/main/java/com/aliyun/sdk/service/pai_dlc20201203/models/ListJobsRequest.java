@@ -297,7 +297,7 @@ public class ListJobsRequest extends Request {
         } 
 
         /**
-         * 作业关联用户ID
+         * BusinessUserId.
          */
         public Builder businessUserId(String businessUserId) {
             this.putQueryParameter("BusinessUserId", businessUserId);
@@ -306,7 +306,7 @@ public class ListJobsRequest extends Request {
         }
 
         /**
-         * 调用方
+         * Caller.
          */
         public Builder caller(String caller) {
             this.putQueryParameter("Caller", caller);
@@ -315,7 +315,7 @@ public class ListJobsRequest extends Request {
         }
 
         /**
-         * 作业显示名称，支持模糊查询
+         * DisplayName.
          */
         public Builder displayName(String displayName) {
             this.putQueryParameter("DisplayName", displayName);
@@ -324,7 +324,7 @@ public class ListJobsRequest extends Request {
         }
 
         /**
-         * 截止时间
+         * EndTime.
          */
         public Builder endTime(String endTime) {
             this.putQueryParameter("EndTime", endTime);
@@ -351,7 +351,7 @@ public class ListJobsRequest extends Request {
         }
 
         /**
-         * 作业类型
+         * JobType.
          */
         public Builder jobType(String jobType) {
             this.putQueryParameter("JobType", jobType);
@@ -360,7 +360,7 @@ public class ListJobsRequest extends Request {
         }
 
         /**
-         * 排序顺序
+         * Order.
          */
         public Builder order(String order) {
             this.putQueryParameter("Order", order);
@@ -369,7 +369,7 @@ public class ListJobsRequest extends Request {
         }
 
         /**
-         * 当前页
+         * PageNumber.
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -378,7 +378,7 @@ public class ListJobsRequest extends Request {
         }
 
         /**
-         * 每页返回的作业数
+         * PageSize.
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -387,7 +387,7 @@ public class ListJobsRequest extends Request {
         }
 
         /**
-         * 工作流ID
+         * PipelineId.
          */
         public Builder pipelineId(String pipelineId) {
             this.putQueryParameter("PipelineId", pipelineId);
@@ -396,7 +396,7 @@ public class ListJobsRequest extends Request {
         }
 
         /**
-         * 资源组ID
+         * ResourceId.
          */
         public Builder resourceId(String resourceId) {
             this.putQueryParameter("ResourceId", resourceId);
@@ -405,7 +405,7 @@ public class ListJobsRequest extends Request {
         }
 
         /**
-         * 是否只返回当前登录者所提交的作业
+         * ShowOwn.
          */
         public Builder showOwn(Boolean showOwn) {
             this.putQueryParameter("ShowOwn", showOwn);
@@ -414,7 +414,7 @@ public class ListJobsRequest extends Request {
         }
 
         /**
-         * 按返回字段排序
+         * SortBy.
          */
         public Builder sortBy(String sortBy) {
             this.putQueryParameter("SortBy", sortBy);
@@ -423,7 +423,7 @@ public class ListJobsRequest extends Request {
         }
 
         /**
-         * 起始时间
+         * StartTime.
          */
         public Builder startTime(String startTime) {
             this.putQueryParameter("StartTime", startTime);
@@ -432,7 +432,7 @@ public class ListJobsRequest extends Request {
         }
 
         /**
-         * 作业状态
+         * Status.
          */
         public Builder status(String status) {
             this.putQueryParameter("Status", status);
@@ -441,7 +441,7 @@ public class ListJobsRequest extends Request {
         }
 
         /**
-         * 自定义标签
+         * Tags.
          */
         public Builder tags(java.util.Map < String, String > tags) {
             String tagsShrink = shrink(tags, "Tags", "json");
@@ -451,7 +451,7 @@ public class ListJobsRequest extends Request {
         }
 
         /**
-         * 工作空间ID
+         * WorkspaceId.
          */
         public Builder workspaceId(String workspaceId) {
             this.putQueryParameter("WorkspaceId", workspaceId);

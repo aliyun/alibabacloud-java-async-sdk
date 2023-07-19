@@ -110,7 +110,7 @@ public class DebuggerResult extends TeaModel {
         private String jobUserId; 
 
         /**
-         * 配置项细节，json结构
+         * DebuggerConfigContent.
          */
         public Builder debuggerConfigContent(String debuggerConfigContent) {
             this.debuggerConfigContent = debuggerConfigContent;
@@ -118,7 +118,7 @@ public class DebuggerResult extends TeaModel {
         }
 
         /**
-         * 规则报告细节信息
+         * DebuggerJobIssues.
          */
         public Builder debuggerJobIssues(String debuggerJobIssues) {
             this.debuggerJobIssues = debuggerJobIssues;
@@ -126,7 +126,7 @@ public class DebuggerResult extends TeaModel {
         }
 
         /**
-         * debugger job运行状态描述
+         * DebuggerJobStatus.
          */
         public Builder debuggerJobStatus(String debuggerJobStatus) {
             this.debuggerJobStatus = debuggerJobStatus;
@@ -134,7 +134,7 @@ public class DebuggerResult extends TeaModel {
         }
 
         /**
-         * 报告文件下载地址
+         * DebuggerReportURL.
          */
         public Builder debuggerReportURL(String debuggerReportURL) {
             this.debuggerReportURL = debuggerReportURL;
@@ -142,7 +142,7 @@ public class DebuggerResult extends TeaModel {
         }
 
         /**
-         * 作业显示名
+         * JobDisplayName.
          */
         public Builder jobDisplayName(String jobDisplayName) {
             this.jobDisplayName = jobDisplayName;
@@ -150,7 +150,7 @@ public class DebuggerResult extends TeaModel {
         }
 
         /**
-         * 作业ID
+         * JobId.
          */
         public Builder jobId(String jobId) {
             this.jobId = jobId;
@@ -158,7 +158,7 @@ public class DebuggerResult extends TeaModel {
         }
 
         /**
-         * 用户ID
+         * JobUserId.
          */
         public Builder jobUserId(String jobUserId) {
             this.jobUserId = jobUserId;

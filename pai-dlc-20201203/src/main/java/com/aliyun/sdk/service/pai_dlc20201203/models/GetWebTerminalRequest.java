@@ -7,40 +7,41 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
- * {@link GetPodLogsResponseBody} extends {@link TeaModel}
+ * {@link GetWebTerminalRequest} extends {@link RequestModel}
  *
- * <p>GetPodLogsResponseBody</p>
+ * <p>GetWebTerminalRequest</p>
  */
-public class GetPodLogsResponseBody extends TeaModel {
+public class GetWebTerminalRequest extends Request {
+    @Path
     @NameInMap("JobId")
     private String jobId;
 
-    @NameInMap("Logs")
-    private java.util.List < String > logs;
-
+    @Path
     @NameInMap("PodId")
     private String podId;
 
+    @Query
     @NameInMap("PodUid")
     private String podUid;
 
-    @NameInMap("RequestId")
-    private String requestId;
-
-    private GetPodLogsResponseBody(Builder builder) {
+    private GetWebTerminalRequest(Builder builder) {
+        super(builder);
         this.jobId = builder.jobId;
-        this.logs = builder.logs;
         this.podId = builder.podId;
         this.podUid = builder.podUid;
-        this.requestId = builder.requestId;
     }
 
     public static Builder builder() {
         return new Builder();
     }
 
-    public static GetPodLogsResponseBody create() {
+    public static GetWebTerminalRequest create() {
         return builder().build();
+    }
+
+    @Override
+    public Builder toBuilder() {
+        return new Builder(this);
     }
 
     /**
@@ -48,13 +49,6 @@ public class GetPodLogsResponseBody extends TeaModel {
      */
     public String getJobId() {
         return this.jobId;
-    }
-
-    /**
-     * @return logs
-     */
-    public java.util.List < String > getLogs() {
-        return this.logs;
     }
 
     /**
@@ -71,33 +65,28 @@ public class GetPodLogsResponseBody extends TeaModel {
         return this.podUid;
     }
 
-    /**
-     * @return requestId
-     */
-    public String getRequestId() {
-        return this.requestId;
-    }
-
-    public static final class Builder {
+    public static final class Builder extends Request.Builder<GetWebTerminalRequest, Builder> {
         private String jobId; 
-        private java.util.List < String > logs; 
         private String podId; 
         private String podUid; 
-        private String requestId; 
+
+        private Builder() {
+            super();
+        } 
+
+        private Builder(GetWebTerminalRequest request) {
+            super(request);
+            this.jobId = request.jobId;
+            this.podId = request.podId;
+            this.podUid = request.podUid;
+        } 
 
         /**
          * JobId.
          */
         public Builder jobId(String jobId) {
+            this.putPathParameter("JobId", jobId);
             this.jobId = jobId;
-            return this;
-        }
-
-        /**
-         * Logs.
-         */
-        public Builder logs(java.util.List < String > logs) {
-            this.logs = logs;
             return this;
         }
 
@@ -105,28 +94,23 @@ public class GetPodLogsResponseBody extends TeaModel {
          * PodId.
          */
         public Builder podId(String podId) {
+            this.putPathParameter("PodId", podId);
             this.podId = podId;
             return this;
         }
 
         /**
-         * PodUid.
+         * Pod UID。
          */
         public Builder podUid(String podUid) {
+            this.putQueryParameter("PodUid", podUid);
             this.podUid = podUid;
             return this;
         }
 
-        /**
-         * RequestId.
-         */
-        public Builder requestId(String requestId) {
-            this.requestId = requestId;
-            return this;
-        }
-
-        public GetPodLogsResponseBody build() {
-            return new GetPodLogsResponseBody(this);
+        @Override
+        public GetWebTerminalRequest build() {
+            return new GetWebTerminalRequest(this);
         } 
 
     } 

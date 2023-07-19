@@ -87,7 +87,7 @@ public class GetPodEventsResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * 事件列表
+         * Events.
          */
         public Builder events(java.util.List < String > events) {
             this.events = events;
@@ -95,7 +95,7 @@ public class GetPodEventsResponseBody extends TeaModel {
         }
 
         /**
-         * 作业ID
+         * JobId.
          */
         public Builder jobId(String jobId) {
             this.jobId = jobId;
@@ -103,7 +103,7 @@ public class GetPodEventsResponseBody extends TeaModel {
         }
 
         /**
-         * 运行示例ID
+         * PodId.
          */
         public Builder podId(String podId) {
             this.podId = podId;
@@ -119,7 +119,7 @@ public class GetPodEventsResponseBody extends TeaModel {
         }
 
         /**
-         * 请求ID
+         * RequestId.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

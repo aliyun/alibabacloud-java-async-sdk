@@ -170,7 +170,7 @@ public class DataSourceItem extends TeaModel {
         private String userId; 
 
         /**
-         * 数据源Id
+         * DataSourceId.
          */
         public Builder dataSourceId(String dataSourceId) {
             this.dataSourceId = dataSourceId;
@@ -178,7 +178,7 @@ public class DataSourceItem extends TeaModel {
         }
 
         /**
-         * 数据源类型
+         * DataSourceType.
          */
         public Builder dataSourceType(String dataSourceType) {
             this.dataSourceType = dataSourceType;
@@ -186,7 +186,7 @@ public class DataSourceItem extends TeaModel {
         }
 
         /**
-         * 数据源描述
+         * Description.
          */
         public Builder description(String description) {
             this.description = description;
@@ -194,7 +194,7 @@ public class DataSourceItem extends TeaModel {
         }
 
         /**
-         * 数据源显示名称
+         * DisplayName.
          */
         public Builder displayName(String displayName) {
             this.displayName = displayName;
@@ -202,7 +202,7 @@ public class DataSourceItem extends TeaModel {
         }
 
         /**
-         * 阿里云OSS文件系统服务端点
+         * Endpoint.
          */
         public Builder endpoint(String endpoint) {
             this.endpoint = endpoint;
@@ -210,7 +210,7 @@ public class DataSourceItem extends TeaModel {
         }
 
         /**
-         * 阿里云NAS文件系统Id
+         * FileSystemId.
          */
         public Builder fileSystemId(String fileSystemId) {
             this.fileSystemId = fileSystemId;
@@ -218,7 +218,7 @@ public class DataSourceItem extends TeaModel {
         }
 
         /**
-         * 创建时间（UTC）
+         * GmtCreateTime.
          */
         public Builder gmtCreateTime(String gmtCreateTime) {
             this.gmtCreateTime = gmtCreateTime;
@@ -226,7 +226,7 @@ public class DataSourceItem extends TeaModel {
         }
 
         /**
-         * 修改时间（UTC）
+         * GmtModifyTime.
          */
         public Builder gmtModifyTime(String gmtModifyTime) {
             this.gmtModifyTime = gmtModifyTime;
@@ -234,7 +234,7 @@ public class DataSourceItem extends TeaModel {
         }
 
         /**
-         * 本地挂载目录
+         * MountPath.
          */
         public Builder mountPath(String mountPath) {
             this.mountPath = mountPath;
@@ -242,7 +242,7 @@ public class DataSourceItem extends TeaModel {
         }
 
         /**
-         * 阿里云OSS文件系统配置选项
+         * Options.
          */
         public Builder options(String options) {
             this.options = options;
@@ -250,7 +250,7 @@ public class DataSourceItem extends TeaModel {
         }
 
         /**
-         * 阿里云OSS文件系统路径
+         * Path.
          */
         public Builder path(String path) {
             this.path = path;
@@ -258,7 +258,7 @@ public class DataSourceItem extends TeaModel {
         }
 
         /**
-         * 创建人Id
+         * UserId.
          */
         public Builder userId(String userId) {
             this.userId = userId;

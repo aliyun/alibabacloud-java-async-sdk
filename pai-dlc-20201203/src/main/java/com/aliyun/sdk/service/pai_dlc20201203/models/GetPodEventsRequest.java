@@ -126,7 +126,7 @@ public class GetPodEventsRequest extends Request {
         } 
 
         /**
-         * 作业ID
+         * JobId.
          */
         public Builder jobId(String jobId) {
             this.putPathParameter("JobId", jobId);
@@ -135,7 +135,7 @@ public class GetPodEventsRequest extends Request {
         }
 
         /**
-         * 运行实例ID
+         * PodId.
          */
         public Builder podId(String podId) {
             this.putPathParameter("PodId", podId);
@@ -144,7 +144,7 @@ public class GetPodEventsRequest extends Request {
         }
 
         /**
-         * 截止时间
+         * EndTime.
          */
         public Builder endTime(String endTime) {
             this.putQueryParameter("EndTime", endTime);
@@ -153,7 +153,7 @@ public class GetPodEventsRequest extends Request {
         }
 
         /**
-         * 返回的事件最大数量
+         * MaxEventsNum.
          */
         public Builder maxEventsNum(Integer maxEventsNum) {
             this.putQueryParameter("MaxEventsNum", maxEventsNum);
@@ -162,7 +162,7 @@ public class GetPodEventsRequest extends Request {
         }
 
         /**
-         * 运行实例UID
+         * PodUid.
          */
         public Builder podUid(String podUid) {
             this.putQueryParameter("PodUid", podUid);
@@ -171,7 +171,7 @@ public class GetPodEventsRequest extends Request {
         }
 
         /**
-         * 起始时间
+         * StartTime.
          */
         public Builder startTime(String startTime) {
             this.putQueryParameter("StartTime", startTime);

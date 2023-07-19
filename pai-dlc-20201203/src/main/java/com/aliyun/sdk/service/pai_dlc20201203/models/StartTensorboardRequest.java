@@ -69,7 +69,7 @@ public class StartTensorboardRequest extends Request {
         } 
 
         /**
-         * Tensorboad Id
+         * TensorboardId.
          */
         public Builder tensorboardId(String tensorboardId) {
             this.putPathParameter("TensorboardId", tensorboardId);
@@ -78,7 +78,7 @@ public class StartTensorboardRequest extends Request {
         }
 
         /**
-         * 工作空间ID
+         * WorkspaceId.
          */
         public Builder workspaceId(String workspaceId) {
             this.putQueryParameter("WorkspaceId", workspaceId);

@@ -62,7 +62,7 @@ public class ListEcsSpecsResponseBody extends TeaModel {
         private Long totalCount; 
 
         /**
-         * ECS规格列表
+         * EcsSpecs.
          */
         public Builder ecsSpecs(java.util.List < EcsSpec > ecsSpecs) {
             this.ecsSpecs = ecsSpecs;
@@ -70,7 +70,7 @@ public class ListEcsSpecsResponseBody extends TeaModel {
         }
 
         /**
-         * 请求Id
+         * RequestId.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -78,7 +78,7 @@ public class ListEcsSpecsResponseBody extends TeaModel {
         }
 
         /**
-         * 符合过滤条件的总数量
+         * TotalCount.
          */
         public Builder totalCount(Long totalCount) {
             this.totalCount = totalCount;

@@ -398,7 +398,7 @@ public class JobItem extends TeaModel {
         private String workspaceName; 
 
         /**
-         * 代码源配置
+         * CodeSource.
          */
         public Builder codeSource(CodeSource codeSource) {
             this.codeSource = codeSource;
@@ -406,7 +406,7 @@ public class JobItem extends TeaModel {
         }
 
         /**
-         * 数据源配置列表
+         * DataSources.
          */
         public Builder dataSources(java.util.List < DataSources> dataSources) {
             this.dataSources = dataSources;
@@ -414,7 +414,7 @@ public class JobItem extends TeaModel {
         }
 
         /**
-         * 作业显示名称
+         * DisplayName.
          */
         public Builder displayName(String displayName) {
             this.displayName = displayName;
@@ -422,7 +422,7 @@ public class JobItem extends TeaModel {
         }
 
         /**
-         * 作业运行时长，单位：秒
+         * Duration.
          */
         public Builder duration(Long duration) {
             this.duration = duration;
@@ -430,7 +430,7 @@ public class JobItem extends TeaModel {
         }
 
         /**
-         * 是否开启了debugger分析
+         * EnabledDebugger.
          */
         public Builder enabledDebugger(Boolean enabledDebugger) {
             this.enabledDebugger = enabledDebugger;
@@ -438,7 +438,7 @@ public class JobItem extends TeaModel {
         }
 
         /**
-         * 环境变量配置
+         * Envs.
          */
         public Builder envs(java.util.Map < String, String > envs) {
             this.envs = envs;
@@ -446,7 +446,7 @@ public class JobItem extends TeaModel {
         }
 
         /**
-         * 作业创建时间（UTC）
+         * GmtCreateTime.
          */
         public Builder gmtCreateTime(String gmtCreateTime) {
             this.gmtCreateTime = gmtCreateTime;
@@ -454,7 +454,7 @@ public class JobItem extends TeaModel {
         }
 
         /**
-         * 作业失败时间（UTC）
+         * GmtFailedTime.
          */
         public Builder gmtFailedTime(String gmtFailedTime) {
             this.gmtFailedTime = gmtFailedTime;
@@ -462,7 +462,7 @@ public class JobItem extends TeaModel {
         }
 
         /**
-         * 作业结束时间（UTC）
+         * GmtFinishTime.
          */
         public Builder gmtFinishTime(String gmtFinishTime) {
             this.gmtFinishTime = gmtFinishTime;
@@ -470,7 +470,7 @@ public class JobItem extends TeaModel {
         }
 
         /**
-         * 作业开始运行时间（UTC）
+         * GmtRunningTime.
          */
         public Builder gmtRunningTime(String gmtRunningTime) {
             this.gmtRunningTime = gmtRunningTime;
@@ -478,7 +478,7 @@ public class JobItem extends TeaModel {
         }
 
         /**
-         * 作业停止时间（UTC）
+         * GmtStoppedTime.
          */
         public Builder gmtStoppedTime(String gmtStoppedTime) {
             this.gmtStoppedTime = gmtStoppedTime;
@@ -486,7 +486,7 @@ public class JobItem extends TeaModel {
         }
 
         /**
-         * 作业提交时间（UTC）
+         * GmtSubmittedTime.
          */
         public Builder gmtSubmittedTime(String gmtSubmittedTime) {
             this.gmtSubmittedTime = gmtSubmittedTime;
@@ -494,7 +494,7 @@ public class JobItem extends TeaModel {
         }
 
         /**
-         * 作业成功完成时间（UTC）
+         * GmtSuccessedTime.
          */
         public Builder gmtSuccessedTime(String gmtSuccessedTime) {
             this.gmtSuccessedTime = gmtSuccessedTime;
@@ -502,7 +502,7 @@ public class JobItem extends TeaModel {
         }
 
         /**
-         * 作业Id
+         * JobId.
          */
         public Builder jobId(String jobId) {
             this.jobId = jobId;
@@ -510,7 +510,7 @@ public class JobItem extends TeaModel {
         }
 
         /**
-         * 作业规格配置
+         * JobSpecs.
          */
         public Builder jobSpecs(java.util.List < JobSpec > jobSpecs) {
             this.jobSpecs = jobSpecs;
@@ -518,7 +518,7 @@ public class JobItem extends TeaModel {
         }
 
         /**
-         * 作业类型
+         * JobType.
          */
         public Builder jobType(String jobType) {
             this.jobType = jobType;
@@ -526,7 +526,7 @@ public class JobItem extends TeaModel {
         }
 
         /**
-         * 任务优先级
+         * Priority.
          */
         public Builder priority(Integer priority) {
             this.priority = priority;
@@ -534,7 +534,7 @@ public class JobItem extends TeaModel {
         }
 
         /**
-         * 状态详情码
+         * ReasonCode.
          */
         public Builder reasonCode(String reasonCode) {
             this.reasonCode = reasonCode;
@@ -542,7 +542,7 @@ public class JobItem extends TeaModel {
         }
 
         /**
-         * 状态详情
+         * ReasonMessage.
          */
         public Builder reasonMessage(String reasonMessage) {
             this.reasonMessage = reasonMessage;
@@ -550,7 +550,7 @@ public class JobItem extends TeaModel {
         }
 
         /**
-         * 作业运行所在的资源组ID
+         * ResourceId.
          */
         public Builder resourceId(String resourceId) {
             this.resourceId = resourceId;
@@ -558,7 +558,7 @@ public class JobItem extends TeaModel {
         }
 
         /**
-         * 作业运行时的资源级别
+         * ResourceLevel.
          */
         public Builder resourceLevel(String resourceLevel) {
             this.resourceLevel = resourceLevel;
@@ -566,7 +566,7 @@ public class JobItem extends TeaModel {
         }
 
         /**
-         * 作业运行的资源名称
+         * ResourceName.
          */
         public Builder resourceName(String resourceName) {
             this.resourceName = resourceName;
@@ -574,7 +574,7 @@ public class JobItem extends TeaModel {
         }
 
         /**
-         * 作业额外参数
+         * Settings.
          */
         public Builder settings(JobSettings settings) {
             this.settings = settings;
@@ -582,7 +582,7 @@ public class JobItem extends TeaModel {
         }
 
         /**
-         * 作业状态
+         * Status.
          */
         public Builder status(String status) {
             this.status = status;
@@ -590,7 +590,7 @@ public class JobItem extends TeaModel {
         }
 
         /**
-         * 作业子状态，如抢占重试状态
+         * SubStatus.
          */
         public Builder subStatus(String subStatus) {
             this.subStatus = subStatus;
@@ -598,7 +598,7 @@ public class JobItem extends TeaModel {
         }
 
         /**
-         * 三方库(requirements.txt)文件路径
+         * ThirdpartyLibDir.
          */
         public Builder thirdpartyLibDir(String thirdpartyLibDir) {
             this.thirdpartyLibDir = thirdpartyLibDir;
@@ -606,7 +606,7 @@ public class JobItem extends TeaModel {
         }
 
         /**
-         * 三方库配置列表
+         * ThirdpartyLibs.
          */
         public Builder thirdpartyLibs(java.util.List < String > thirdpartyLibs) {
             this.thirdpartyLibs = thirdpartyLibs;
@@ -614,7 +614,7 @@ public class JobItem extends TeaModel {
         }
 
         /**
-         * 用户命令
+         * UserCommand.
          */
         public Builder userCommand(String userCommand) {
             this.userCommand = userCommand;
@@ -622,7 +622,7 @@ public class JobItem extends TeaModel {
         }
 
         /**
-         * 作业提交人Id
+         * UserId.
          */
         public Builder userId(String userId) {
             this.userId = userId;
@@ -630,7 +630,7 @@ public class JobItem extends TeaModel {
         }
 
         /**
-         * 作业所属工作空间ID
+         * WorkspaceId.
          */
         public Builder workspaceId(String workspaceId) {
             this.workspaceId = workspaceId;
@@ -638,7 +638,7 @@ public class JobItem extends TeaModel {
         }
 
         /**
-         * 作业所属工作空间名称
+         * WorkspaceName.
          */
         public Builder workspaceName(String workspaceName) {
             this.workspaceName = workspaceName;
@@ -714,7 +714,7 @@ public class JobItem extends TeaModel {
             private String mountPath; 
 
             /**
-             * 代码分支
+             * Branch.
              */
             public Builder branch(String branch) {
                 this.branch = branch;
@@ -722,7 +722,7 @@ public class JobItem extends TeaModel {
             }
 
             /**
-             * 代码源Id
+             * CodeSourceId.
              */
             public Builder codeSourceId(String codeSourceId) {
                 this.codeSourceId = codeSourceId;
@@ -730,7 +730,7 @@ public class JobItem extends TeaModel {
             }
 
             /**
-             * 代码Commit
+             * Commit.
              */
             public Builder commit(String commit) {
                 this.commit = commit;
@@ -738,7 +738,7 @@ public class JobItem extends TeaModel {
             }
 
             /**
-             * 本地挂载路径
+             * MountPath.
              */
             public Builder mountPath(String mountPath) {
                 this.mountPath = mountPath;
@@ -791,7 +791,7 @@ public class JobItem extends TeaModel {
             private String mountPath; 
 
             /**
-             * 数据源Id
+             * DataSourceId.
              */
             public Builder dataSourceId(String dataSourceId) {
                 this.dataSourceId = dataSourceId;
@@ -799,7 +799,7 @@ public class JobItem extends TeaModel {
             }
 
             /**
-             * 本地挂载路径
+             * MountPath.
              */
             public Builder mountPath(String mountPath) {
                 this.mountPath = mountPath;

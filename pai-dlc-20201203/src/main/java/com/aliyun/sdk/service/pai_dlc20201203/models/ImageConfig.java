@@ -74,7 +74,7 @@ public class ImageConfig extends TeaModel {
         private String username; 
 
         /**
-         * 镜像仓库认证信息
+         * Auth.
          */
         public Builder auth(String auth) {
             this.auth = auth;
@@ -82,7 +82,7 @@ public class ImageConfig extends TeaModel {
         }
 
         /**
-         * 镜像仓库地址
+         * DockerRegistry.
          */
         public Builder dockerRegistry(String dockerRegistry) {
             this.dockerRegistry = dockerRegistry;
@@ -90,7 +90,7 @@ public class ImageConfig extends TeaModel {
         }
 
         /**
-         * 镜像仓库密码
+         * Password.
          */
         public Builder password(String password) {
             this.password = password;
@@ -98,7 +98,7 @@ public class ImageConfig extends TeaModel {
         }
 
         /**
-         * 镜像仓库用户名
+         * Username.
          */
         public Builder username(String username) {
             this.username = username;

@@ -55,7 +55,7 @@ public class DeleteJobRequest extends Request {
         } 
 
         /**
-         * 作业Id
+         * JobId.
          */
         public Builder jobId(String jobId) {
             this.putPathParameter("JobId", jobId);

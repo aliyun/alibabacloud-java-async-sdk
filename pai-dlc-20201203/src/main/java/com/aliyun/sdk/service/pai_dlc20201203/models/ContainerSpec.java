@@ -110,7 +110,7 @@ public class ContainerSpec extends TeaModel {
         private String workingDir; 
 
         /**
-         * 命令参数
+         * Args.
          */
         public Builder args(java.util.List < String > args) {
             this.args = args;
@@ -118,7 +118,7 @@ public class ContainerSpec extends TeaModel {
         }
 
         /**
-         * 用户命令
+         * Command.
          */
         public Builder command(java.util.List < String > command) {
             this.command = command;
@@ -126,7 +126,7 @@ public class ContainerSpec extends TeaModel {
         }
 
         /**
-         * 环境变量
+         * Env.
          */
         public Builder env(java.util.List < EnvVar > env) {
             this.env = env;
@@ -134,7 +134,7 @@ public class ContainerSpec extends TeaModel {
         }
 
         /**
-         * 容器镜像地址
+         * Image.
          */
         public Builder image(String image) {
             this.image = image;
@@ -142,7 +142,7 @@ public class ContainerSpec extends TeaModel {
         }
 
         /**
-         * 容器名称
+         * Name.
          */
         public Builder name(String name) {
             this.name = name;
@@ -150,7 +150,7 @@ public class ContainerSpec extends TeaModel {
         }
 
         /**
-         * 容器资源
+         * Resources.
          */
         public Builder resources(ResourceRequirements resources) {
             this.resources = resources;
@@ -158,7 +158,7 @@ public class ContainerSpec extends TeaModel {
         }
 
         /**
-         * 容器内工作目录
+         * WorkingDir.
          */
         public Builder workingDir(String workingDir) {
             this.workingDir = workingDir;

@@ -86,7 +86,7 @@ public class ResourceConfig extends TeaModel {
         private String sharedMemory; 
 
         /**
-         * CPU核心数
+         * CPU.
          */
         public Builder CPU(String CPU) {
             this.CPU = CPU;
@@ -94,7 +94,7 @@ public class ResourceConfig extends TeaModel {
         }
 
         /**
-         * GPU核心数
+         * GPU.
          */
         public Builder GPU(String GPU) {
             this.GPU = GPU;
@@ -102,7 +102,7 @@ public class ResourceConfig extends TeaModel {
         }
 
         /**
-         * 显卡类型
+         * GPUType.
          */
         public Builder GPUType(String GPUType) {
             this.GPUType = GPUType;
@@ -110,7 +110,7 @@ public class ResourceConfig extends TeaModel {
         }
 
         /**
-         * 内存容量
+         * Memory.
          */
         public Builder memory(String memory) {
             this.memory = memory;
@@ -118,7 +118,7 @@ public class ResourceConfig extends TeaModel {
         }
 
         /**
-         * 共享内存容量
+         * SharedMemory.
          */
         public Builder sharedMemory(String sharedMemory) {
             this.sharedMemory = sharedMemory;

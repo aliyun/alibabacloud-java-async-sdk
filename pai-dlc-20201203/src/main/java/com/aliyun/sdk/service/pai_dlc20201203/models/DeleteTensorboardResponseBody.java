@@ -50,7 +50,7 @@ public class DeleteTensorboardResponseBody extends TeaModel {
         private String tensorboardId; 
 
         /**
-         * 请求Id
+         * RequestId.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -58,7 +58,7 @@ public class DeleteTensorboardResponseBody extends TeaModel {
         }
 
         /**
-         * Tensorboad Id
+         * TensorboardId.
          */
         public Builder tensorboardId(String tensorboardId) {
             this.tensorboardId = tensorboardId;

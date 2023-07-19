@@ -206,7 +206,7 @@ public class JobElasticSpec extends TeaModel {
         private Integer PSMinParallelism; 
 
         /**
-         * aimaster docker镜像
+         * AIMasterDockerImage.
          */
         public Builder AIMasterDockerImage(String AIMasterDockerImage) {
             this.AIMasterDockerImage = AIMasterDockerImage;
@@ -214,7 +214,7 @@ public class JobElasticSpec extends TeaModel {
         }
 
         /**
-         * aimaster角色使用的资源规格
+         * AIMasterType.
          */
         public Builder AIMasterType(String AIMasterType) {
             this.AIMasterType = AIMasterType;
@@ -222,7 +222,7 @@ public class JobElasticSpec extends TeaModel {
         }
 
         /**
-         * EDP最大并行度
+         * EDPMaxParallelism.
          */
         public Builder EDPMaxParallelism(Integer EDPMaxParallelism) {
             this.EDPMaxParallelism = EDPMaxParallelism;
@@ -230,7 +230,7 @@ public class JobElasticSpec extends TeaModel {
         }
 
         /**
-         * EDP最小并行度
+         * EDPMinParallelism.
          */
         public Builder EDPMinParallelism(Integer EDPMinParallelism) {
             this.EDPMinParallelism = EDPMinParallelism;
@@ -238,7 +238,7 @@ public class JobElasticSpec extends TeaModel {
         }
 
         /**
-         * 弹性训练策略
+         * ElasticStrategy.
          */
         public Builder elasticStrategy(String elasticStrategy) {
             this.elasticStrategy = elasticStrategy;
@@ -246,7 +246,7 @@ public class JobElasticSpec extends TeaModel {
         }
 
         /**
-         * 是否打开AIMaster
+         * EnableAIMaster.
          */
         public Builder enableAIMaster(Boolean enableAIMaster) {
             this.enableAIMaster = enableAIMaster;
@@ -254,7 +254,7 @@ public class JobElasticSpec extends TeaModel {
         }
 
         /**
-         * 是否打开EDP
+         * EnableEDP.
          */
         public Builder enableEDP(Boolean enableEDP) {
             this.enableEDP = enableEDP;
@@ -262,7 +262,7 @@ public class JobElasticSpec extends TeaModel {
         }
 
         /**
-         * 打开弹性训练
+         * EnableElasticTraining.
          */
         public Builder enableElasticTraining(Boolean enableElasticTraining) {
             this.enableElasticTraining = enableElasticTraining;
@@ -270,7 +270,7 @@ public class JobElasticSpec extends TeaModel {
         }
 
         /**
-         * 是否打开弹性PS功能
+         * EnablePsJobElasticPS.
          */
         public Builder enablePsJobElasticPS(Boolean enablePsJobElasticPS) {
             this.enablePsJobElasticPS = enablePsJobElasticPS;
@@ -278,7 +278,7 @@ public class JobElasticSpec extends TeaModel {
         }
 
         /**
-         * 是否开启弹性Worker对于PS作业
+         * EnablePsJobElasticWorker.
          */
         public Builder enablePsJobElasticWorker(Boolean enablePsJobElasticWorker) {
             this.enablePsJobElasticWorker = enablePsJobElasticWorker;
@@ -286,7 +286,7 @@ public class JobElasticSpec extends TeaModel {
         }
 
         /**
-         * 是否打开PS资源预估
+         * EnablePsResourceEstimate.
          */
         public Builder enablePsResourceEstimate(Boolean enablePsResourceEstimate) {
             this.enablePsResourceEstimate = enablePsResourceEstimate;
@@ -294,7 +294,7 @@ public class JobElasticSpec extends TeaModel {
         }
 
         /**
-         * 最大并行度
+         * MaxParallelism.
          */
         public Builder maxParallelism(Integer maxParallelism) {
             this.maxParallelism = maxParallelism;
@@ -302,7 +302,7 @@ public class JobElasticSpec extends TeaModel {
         }
 
         /**
-         * 最小并行度
+         * MinParallelism.
          */
         public Builder minParallelism(Integer minParallelism) {
             this.minParallelism = minParallelism;
@@ -310,7 +310,7 @@ public class JobElasticSpec extends TeaModel {
         }
 
         /**
-         * PS最大并行度
+         * PSMaxParallelism.
          */
         public Builder PSMaxParallelism(Integer PSMaxParallelism) {
             this.PSMaxParallelism = PSMaxParallelism;
@@ -318,7 +318,7 @@ public class JobElasticSpec extends TeaModel {
         }
 
         /**
-         * PS最小并行度
+         * PSMinParallelism.
          */
         public Builder PSMinParallelism(Integer PSMinParallelism) {
             this.PSMinParallelism = PSMinParallelism;

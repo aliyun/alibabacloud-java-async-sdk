@@ -50,7 +50,7 @@ public class DeleteJobResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * 作业Id
+         * JobId.
          */
         public Builder jobId(String jobId) {
             this.jobId = jobId;
@@ -58,7 +58,7 @@ public class DeleteJobResponseBody extends TeaModel {
         }
 
         /**
-         * 请求Id
+         * RequestId.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

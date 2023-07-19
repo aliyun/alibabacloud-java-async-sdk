@@ -110,7 +110,7 @@ public class ImageItem extends TeaModel {
         private String imageUrlVpc; 
 
         /**
-         * 加速器类型
+         * AcceleratorType.
          */
         public Builder acceleratorType(String acceleratorType) {
             this.acceleratorType = acceleratorType;
@@ -118,7 +118,7 @@ public class ImageItem extends TeaModel {
         }
 
         /**
-         * 镜像作者
+         * AuthorId.
          */
         public Builder authorId(String authorId) {
             this.authorId = authorId;
@@ -126,7 +126,7 @@ public class ImageItem extends TeaModel {
         }
 
         /**
-         * 镜像包含的框架类型
+         * Framework.
          */
         public Builder framework(String framework) {
             this.framework = framework;
@@ -134,7 +134,7 @@ public class ImageItem extends TeaModel {
         }
 
         /**
-         * 镜像类型
+         * ImageProviderType.
          */
         public Builder imageProviderType(String imageProviderType) {
             this.imageProviderType = imageProviderType;
@@ -142,7 +142,7 @@ public class ImageItem extends TeaModel {
         }
 
         /**
-         * 镜像Tag
+         * ImageTag.
          */
         public Builder imageTag(String imageTag) {
             this.imageTag = imageTag;
@@ -150,7 +150,7 @@ public class ImageItem extends TeaModel {
         }
 
         /**
-         * 镜像地址
+         * ImageUrl.
          */
         public Builder imageUrl(String imageUrl) {
             this.imageUrl = imageUrl;
@@ -158,7 +158,7 @@ public class ImageItem extends TeaModel {
         }
 
         /**
-         * 镜像vpc地址
+         * ImageUrlVpc.
          */
         public Builder imageUrlVpc(String imageUrlVpc) {
             this.imageUrlVpc = imageUrlVpc;

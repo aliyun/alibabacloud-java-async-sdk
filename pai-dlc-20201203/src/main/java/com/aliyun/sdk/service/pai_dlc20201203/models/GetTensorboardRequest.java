@@ -83,7 +83,7 @@ public class GetTensorboardRequest extends Request {
         } 
 
         /**
-         * TensorboardId Id
+         * TensorboardId.
          */
         public Builder tensorboardId(String tensorboardId) {
             this.putPathParameter("TensorboardId", tensorboardId);
@@ -92,7 +92,7 @@ public class GetTensorboardRequest extends Request {
         }
 
         /**
-         * JodId
+         * JodId.
          */
         public Builder jodId(String jodId) {
             this.putQueryParameter("JodId", jodId);
@@ -101,7 +101,7 @@ public class GetTensorboardRequest extends Request {
         }
 
         /**
-         * 工作空间ID
+         * WorkspaceId.
          */
         public Builder workspaceId(String workspaceId) {
             this.putQueryParameter("WorkspaceId", workspaceId);

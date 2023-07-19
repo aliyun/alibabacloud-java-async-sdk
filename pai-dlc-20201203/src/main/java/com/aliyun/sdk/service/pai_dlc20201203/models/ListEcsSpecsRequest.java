@@ -110,7 +110,7 @@ public class ListEcsSpecsRequest extends Request {
         } 
 
         /**
-         * 按加速器类型过滤
+         * AcceleratorType.
          */
         public Builder acceleratorType(String acceleratorType) {
             this.putQueryParameter("AcceleratorType", acceleratorType);
@@ -119,7 +119,7 @@ public class ListEcsSpecsRequest extends Request {
         }
 
         /**
-         * 排序顺序
+         * Order.
          */
         public Builder order(String order) {
             this.putQueryParameter("Order", order);
@@ -128,7 +128,7 @@ public class ListEcsSpecsRequest extends Request {
         }
 
         /**
-         * 查询第几页数据
+         * PageNumber.
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -137,7 +137,7 @@ public class ListEcsSpecsRequest extends Request {
         }
 
         /**
-         * 设置查询的分页大写
+         * PageSize.
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -146,7 +146,7 @@ public class ListEcsSpecsRequest extends Request {
         }
 
         /**
-         * 按返回字段排序
+         * SortBy.
          */
         public Builder sortBy(String sortBy) {
             this.putQueryParameter("SortBy", sortBy);

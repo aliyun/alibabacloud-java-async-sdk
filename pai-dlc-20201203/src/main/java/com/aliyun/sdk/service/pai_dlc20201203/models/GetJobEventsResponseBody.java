@@ -62,7 +62,7 @@ public class GetJobEventsResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * 事件
+         * Events.
          */
         public Builder events(java.util.List < String > events) {
             this.events = events;
@@ -70,7 +70,7 @@ public class GetJobEventsResponseBody extends TeaModel {
         }
 
         /**
-         * 作业ID
+         * JobId.
          */
         public Builder jobId(String jobId) {
             this.jobId = jobId;
@@ -78,7 +78,7 @@ public class GetJobEventsResponseBody extends TeaModel {
         }
 
         /**
-         * 请求ID
+         * RequestId.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

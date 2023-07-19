@@ -74,7 +74,7 @@ public class JobDebuggerConfig extends TeaModel {
         private String jobId; 
 
         /**
-         * debugger配置信息
+         * DebuggerConfigContent.
          */
         public Builder debuggerConfigContent(String debuggerConfigContent) {
             this.debuggerConfigContent = debuggerConfigContent;
@@ -82,7 +82,7 @@ public class JobDebuggerConfig extends TeaModel {
         }
 
         /**
-         * debugger配置项ID
+         * DebuggerConfigId.
          */
         public Builder debuggerConfigId(String debuggerConfigId) {
             this.debuggerConfigId = debuggerConfigId;
@@ -90,7 +90,7 @@ public class JobDebuggerConfig extends TeaModel {
         }
 
         /**
-         * debugger配置创建的时间
+         * GmtCreateTime.
          */
         public Builder gmtCreateTime(String gmtCreateTime) {
             this.gmtCreateTime = gmtCreateTime;
@@ -98,7 +98,7 @@ public class JobDebuggerConfig extends TeaModel {
         }
 
         /**
-         * 作业ID
+         * JobId.
          */
         public Builder jobId(String jobId) {
             this.jobId = jobId;

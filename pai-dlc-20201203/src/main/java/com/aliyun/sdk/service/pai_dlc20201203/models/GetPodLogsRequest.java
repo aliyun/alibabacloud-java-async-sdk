@@ -140,7 +140,7 @@ public class GetPodLogsRequest extends Request {
         } 
 
         /**
-         * 作业ID
+         * JobId.
          */
         public Builder jobId(String jobId) {
             this.putPathParameter("JobId", jobId);
@@ -149,7 +149,7 @@ public class GetPodLogsRequest extends Request {
         }
 
         /**
-         * 实例ID
+         * PodId.
          */
         public Builder podId(String podId) {
             this.putPathParameter("PodId", podId);
@@ -158,7 +158,7 @@ public class GetPodLogsRequest extends Request {
         }
 
         /**
-         * 是否下载日志文件，默认：false。
+         * DownloadToFile.
          */
         public Builder downloadToFile(Boolean downloadToFile) {
             this.putQueryParameter("DownloadToFile", downloadToFile);
@@ -167,7 +167,7 @@ public class GetPodLogsRequest extends Request {
         }
 
         /**
-         * 查询的截止时间，默认值：当前。
+         * EndTime.
          */
         public Builder endTime(String endTime) {
             this.putQueryParameter("EndTime", endTime);
@@ -176,7 +176,7 @@ public class GetPodLogsRequest extends Request {
         }
 
         /**
-         * 返回的日志的最大行数，默认值：2000。
+         * MaxLines.
          */
         public Builder maxLines(Integer maxLines) {
             this.putQueryParameter("MaxLines", maxLines);
@@ -194,7 +194,7 @@ public class GetPodLogsRequest extends Request {
         }
 
         /**
-         * 查询的起始时间，默认值：7天前。
+         * StartTime.
          */
         public Builder startTime(String startTime) {
             this.putQueryParameter("StartTime", startTime);

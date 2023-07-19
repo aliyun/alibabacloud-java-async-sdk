@@ -86,7 +86,7 @@ public class ExtraPodSpec extends TeaModel {
         private java.util.List < ContainerSpec > sideCarContainers; 
 
         /**
-         * 初始化容器
+         * InitContainers.
          */
         public Builder initContainers(java.util.List < ContainerSpec > initContainers) {
             this.initContainers = initContainers;
@@ -94,7 +94,7 @@ public class ExtraPodSpec extends TeaModel {
         }
 
         /**
-         * Pod注解
+         * PodAnnotations.
          */
         public Builder podAnnotations(java.util.Map < String, String > podAnnotations) {
             this.podAnnotations = podAnnotations;
@@ -102,7 +102,7 @@ public class ExtraPodSpec extends TeaModel {
         }
 
         /**
-         * Pod标签
+         * PodLabels.
          */
         public Builder podLabels(java.util.Map < String, String > podLabels) {
             this.podLabels = podLabels;
@@ -110,7 +110,7 @@ public class ExtraPodSpec extends TeaModel {
         }
 
         /**
-         * 容器间共享的本地目录
+         * SharedVolumeMountPaths.
          */
         public Builder sharedVolumeMountPaths(java.util.List < String > sharedVolumeMountPaths) {
             this.sharedVolumeMountPaths = sharedVolumeMountPaths;
@@ -118,7 +118,7 @@ public class ExtraPodSpec extends TeaModel {
         }
 
         /**
-         * 伴随容器
+         * SideCarContainers.
          */
         public Builder sideCarContainers(java.util.List < ContainerSpec > sideCarContainers) {
             this.sideCarContainers = sideCarContainers;

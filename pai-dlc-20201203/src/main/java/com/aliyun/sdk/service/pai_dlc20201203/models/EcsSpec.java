@@ -110,7 +110,7 @@ public class EcsSpec extends TeaModel {
         private Integer memory; 
 
         /**
-         * 加速器类型
+         * AcceleratorType.
          */
         public Builder acceleratorType(String acceleratorType) {
             this.acceleratorType = acceleratorType;
@@ -118,7 +118,7 @@ public class EcsSpec extends TeaModel {
         }
 
         /**
-         * cpu数量
+         * Cpu.
          */
         public Builder cpu(Integer cpu) {
             this.cpu = cpu;
@@ -126,7 +126,7 @@ public class EcsSpec extends TeaModel {
         }
 
         /**
-         * gpu数量
+         * Gpu.
          */
         public Builder gpu(Integer gpu) {
             this.gpu = gpu;
@@ -134,7 +134,7 @@ public class EcsSpec extends TeaModel {
         }
 
         /**
-         * gpu类型
+         * GpuType.
          */
         public Builder gpuType(String gpuType) {
             this.gpuType = gpuType;
@@ -142,7 +142,7 @@ public class EcsSpec extends TeaModel {
         }
 
         /**
-         * 规格类型
+         * InstanceType.
          */
         public Builder instanceType(String instanceType) {
             this.instanceType = instanceType;
@@ -150,7 +150,7 @@ public class EcsSpec extends TeaModel {
         }
 
         /**
-         * 是否有库存
+         * IsAvailable.
          */
         public Builder isAvailable(Boolean isAvailable) {
             this.isAvailable = isAvailable;
@@ -158,7 +158,7 @@ public class EcsSpec extends TeaModel {
         }
 
         /**
-         * Memory数量
+         * Memory.
          */
         public Builder memory(Integer memory) {
             this.memory = memory;

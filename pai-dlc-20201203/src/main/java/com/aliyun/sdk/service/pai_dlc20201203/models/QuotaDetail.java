@@ -98,7 +98,7 @@ public class QuotaDetail extends TeaModel {
         private String memory; 
 
         /**
-         * CPU核数
+         * CPU.
          */
         public Builder CPU(String CPU) {
             this.CPU = CPU;
@@ -106,7 +106,7 @@ public class QuotaDetail extends TeaModel {
         }
 
         /**
-         * GPU卡数
+         * GPU.
          */
         public Builder GPU(String GPU) {
             this.GPU = GPU;
@@ -114,7 +114,7 @@ public class QuotaDetail extends TeaModel {
         }
 
         /**
-         * GPU详情
+         * GPUDetails.
          */
         public Builder GPUDetails(java.util.List < GPUDetail > GPUDetails) {
             this.GPUDetails = GPUDetails;
@@ -122,7 +122,7 @@ public class QuotaDetail extends TeaModel {
         }
 
         /**
-         * GPU卡型
+         * GPUType.
          */
         public Builder GPUType(String GPUType) {
             this.GPUType = GPUType;
@@ -130,7 +130,7 @@ public class QuotaDetail extends TeaModel {
         }
 
         /**
-         * GPU卡型全名
+         * GPUTypeFullName.
          */
         public Builder GPUTypeFullName(String GPUTypeFullName) {
             this.GPUTypeFullName = GPUTypeFullName;
@@ -138,7 +138,7 @@ public class QuotaDetail extends TeaModel {
         }
 
         /**
-         * 内存容量
+         * Memory.
          */
         public Builder memory(String memory) {
             this.memory = memory;

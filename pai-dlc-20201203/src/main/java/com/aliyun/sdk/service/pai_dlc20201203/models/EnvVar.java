@@ -50,7 +50,7 @@ public class EnvVar extends TeaModel {
         private String value; 
 
         /**
-         * 环境变量名称
+         * Name.
          */
         public Builder name(String name) {
             this.name = name;
@@ -58,7 +58,7 @@ public class EnvVar extends TeaModel {
         }
 
         /**
-         * 环境变量值
+         * Value.
          */
         public Builder value(String value) {
             this.value = value;

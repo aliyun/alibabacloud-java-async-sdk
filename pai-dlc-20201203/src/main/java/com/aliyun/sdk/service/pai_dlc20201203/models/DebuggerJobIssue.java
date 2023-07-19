@@ -110,7 +110,7 @@ public class DebuggerJobIssue extends TeaModel {
         private String ruleName; 
 
         /**
-         * 规则报告的具体json描述
+         * DebuggerJobIssue.
          */
         public Builder debuggerJobIssue(String debuggerJobIssue) {
             this.debuggerJobIssue = debuggerJobIssue;
@@ -118,7 +118,7 @@ public class DebuggerJobIssue extends TeaModel {
         }
 
         /**
-         * 创建时间（UTC）
+         * GmtCreateTime.
          */
         public Builder gmtCreateTime(String gmtCreateTime) {
             this.gmtCreateTime = gmtCreateTime;
@@ -126,7 +126,7 @@ public class DebuggerJobIssue extends TeaModel {
         }
 
         /**
-         * event的全局唯一ID
+         * JobDebuggerIssueId.
          */
         public Builder jobDebuggerIssueId(String jobDebuggerIssueId) {
             this.jobDebuggerIssueId = jobDebuggerIssueId;
@@ -134,7 +134,7 @@ public class DebuggerJobIssue extends TeaModel {
         }
 
         /**
-         * 作业ID
+         * JobId.
          */
         public Builder jobId(String jobId) {
             this.jobId = jobId;
@@ -142,7 +142,7 @@ public class DebuggerJobIssue extends TeaModel {
         }
 
         /**
-         * 规则触发原因的编码
+         * ReasonCode.
          */
         public Builder reasonCode(String reasonCode) {
             this.reasonCode = reasonCode;
@@ -150,7 +150,7 @@ public class DebuggerJobIssue extends TeaModel {
         }
 
         /**
-         * 规则触发的原因
+         * ReasonMessage.
          */
         public Builder reasonMessage(String reasonMessage) {
             this.reasonMessage = reasonMessage;
@@ -158,7 +158,7 @@ public class DebuggerJobIssue extends TeaModel {
         }
 
         /**
-         * 规则名称
+         * RuleName.
          */
         public Builder ruleName(String ruleName) {
             this.ruleName = ruleName;

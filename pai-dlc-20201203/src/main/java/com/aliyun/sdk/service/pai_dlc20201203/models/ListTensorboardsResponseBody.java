@@ -62,7 +62,7 @@ public class ListTensorboardsResponseBody extends TeaModel {
         private Long totalCount; 
 
         /**
-         * 请求Id
+         * RequestId.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -70,7 +70,7 @@ public class ListTensorboardsResponseBody extends TeaModel {
         }
 
         /**
-         * Tensorboard 列表
+         * Tensorboards.
          */
         public Builder tensorboards(java.util.List < Tensorboard > tensorboards) {
             this.tensorboards = tensorboards;
@@ -78,7 +78,7 @@ public class ListTensorboardsResponseBody extends TeaModel {
         }
 
         /**
-         * 符合条件的数据源总数量
+         * TotalCount.
          */
         public Builder totalCount(Long totalCount) {
             this.totalCount = totalCount;

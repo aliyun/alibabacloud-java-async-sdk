@@ -50,7 +50,7 @@ public class Member extends TeaModel {
         private String memberType; 
 
         /**
-         * 成员id
+         * MemberId.
          */
         public Builder memberId(String memberId) {
             this.memberId = memberId;
@@ -58,7 +58,7 @@ public class Member extends TeaModel {
         }
 
         /**
-         * 成员角色
+         * MemberType.
          */
         public Builder memberType(String memberType) {
             this.memberType = memberType;

@@ -68,7 +68,7 @@ public class UpdateJobRequest extends Request {
         } 
 
         /**
-         * 作业ID
+         * JobId.
          */
         public Builder jobId(String jobId) {
             this.putPathParameter("JobId", jobId);
@@ -77,7 +77,7 @@ public class UpdateJobRequest extends Request {
         }
 
         /**
-         * 设置优先级
+         * Priority.
          */
         public Builder priority(Integer priority) {
             this.putBodyParameter("Priority", priority);

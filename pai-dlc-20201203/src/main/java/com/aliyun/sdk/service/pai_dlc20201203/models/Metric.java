@@ -50,7 +50,7 @@ public class Metric extends TeaModel {
         private Float value; 
 
         /**
-         * 时间戳（毫秒）
+         * Time.
          */
         public Builder time(Long time) {
             this.time = time;
@@ -58,7 +58,7 @@ public class Metric extends TeaModel {
         }
 
         /**
-         * 样本值
+         * Value.
          */
         public Builder value(Float value) {
             this.value = value;

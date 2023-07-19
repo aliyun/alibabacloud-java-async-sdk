@@ -134,7 +134,7 @@ public class PodItem extends TeaModel {
         private String type; 
 
         /**
-         * Pod创建时间（UTC）
+         * GmtCreateTime.
          */
         public Builder gmtCreateTime(String gmtCreateTime) {
             this.gmtCreateTime = gmtCreateTime;
@@ -142,7 +142,7 @@ public class PodItem extends TeaModel {
         }
 
         /**
-         * Pod结束时间（UTC）
+         * GmtFinishTime.
          */
         public Builder gmtFinishTime(String gmtFinishTime) {
             this.gmtFinishTime = gmtFinishTime;
@@ -150,7 +150,7 @@ public class PodItem extends TeaModel {
         }
 
         /**
-         * Pod启动时间（UTC）
+         * GmtStartTime.
          */
         public Builder gmtStartTime(String gmtStartTime) {
             this.gmtStartTime = gmtStartTime;
@@ -158,7 +158,7 @@ public class PodItem extends TeaModel {
         }
 
         /**
-         * 历史Pods
+         * HistoryPods.
          */
         public Builder historyPods(java.util.List < PodItem > historyPods) {
             this.historyPods = historyPods;
@@ -166,7 +166,7 @@ public class PodItem extends TeaModel {
         }
 
         /**
-         * Pod Ip
+         * Ip.
          */
         public Builder ip(String ip) {
             this.ip = ip;
@@ -174,7 +174,7 @@ public class PodItem extends TeaModel {
         }
 
         /**
-         * Pod Id
+         * PodId.
          */
         public Builder podId(String podId) {
             this.podId = podId;
@@ -182,7 +182,7 @@ public class PodItem extends TeaModel {
         }
 
         /**
-         * Pod Uid
+         * PodUid.
          */
         public Builder podUid(String podUid) {
             this.podUid = podUid;
@@ -190,7 +190,7 @@ public class PodItem extends TeaModel {
         }
 
         /**
-         * Pod状态
+         * Status.
          */
         public Builder status(String status) {
             this.status = status;
@@ -198,7 +198,7 @@ public class PodItem extends TeaModel {
         }
 
         /**
-         * Pod类型
+         * Type.
          */
         public Builder type(String type) {
             this.type = type;

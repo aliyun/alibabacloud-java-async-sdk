@@ -158,7 +158,7 @@ public class CodeSourceItem extends TeaModel {
         private String userId; 
 
         /**
-         * 代码分支
+         * CodeBranch.
          */
         public Builder codeBranch(String codeBranch) {
             this.codeBranch = codeBranch;
@@ -166,7 +166,7 @@ public class CodeSourceItem extends TeaModel {
         }
 
         /**
-         * 代码Commit ID
+         * CodeCommit.
          */
         public Builder codeCommit(String codeCommit) {
             this.codeCommit = codeCommit;
@@ -174,7 +174,7 @@ public class CodeSourceItem extends TeaModel {
         }
 
         /**
-         * 代码仓库地址
+         * CodeRepo.
          */
         public Builder codeRepo(String codeRepo) {
             this.codeRepo = codeRepo;
@@ -182,7 +182,7 @@ public class CodeSourceItem extends TeaModel {
         }
 
         /**
-         * 访问代码仓库所用的AccessToken
+         * CodeRepoAccessToken.
          */
         public Builder codeRepoAccessToken(String codeRepoAccessToken) {
             this.codeRepoAccessToken = codeRepoAccessToken;
@@ -190,7 +190,7 @@ public class CodeSourceItem extends TeaModel {
         }
 
         /**
-         * 访问代码仓库的用户名
+         * CodeRepoUserName.
          */
         public Builder codeRepoUserName(String codeRepoUserName) {
             this.codeRepoUserName = codeRepoUserName;
@@ -198,7 +198,7 @@ public class CodeSourceItem extends TeaModel {
         }
 
         /**
-         * 代码源ID
+         * CodeSourceId.
          */
         public Builder codeSourceId(String codeSourceId) {
             this.codeSourceId = codeSourceId;
@@ -206,7 +206,7 @@ public class CodeSourceItem extends TeaModel {
         }
 
         /**
-         * 代码源详细描述
+         * Description.
          */
         public Builder description(String description) {
             this.description = description;
@@ -214,7 +214,7 @@ public class CodeSourceItem extends TeaModel {
         }
 
         /**
-         * 代码源配置的名字
+         * DisplayName.
          */
         public Builder displayName(String displayName) {
             this.displayName = displayName;
@@ -222,7 +222,7 @@ public class CodeSourceItem extends TeaModel {
         }
 
         /**
-         * 创建时间
+         * GmtCreateTime.
          */
         public Builder gmtCreateTime(String gmtCreateTime) {
             this.gmtCreateTime = gmtCreateTime;
@@ -230,7 +230,7 @@ public class CodeSourceItem extends TeaModel {
         }
 
         /**
-         * 修改时间
+         * GmtModifyTime.
          */
         public Builder gmtModifyTime(String gmtModifyTime) {
             this.gmtModifyTime = gmtModifyTime;
@@ -238,7 +238,7 @@ public class CodeSourceItem extends TeaModel {
         }
 
         /**
-         * 代码源配置的用户ID
+         * UserId.
          */
         public Builder userId(String userId) {
             this.userId = userId;

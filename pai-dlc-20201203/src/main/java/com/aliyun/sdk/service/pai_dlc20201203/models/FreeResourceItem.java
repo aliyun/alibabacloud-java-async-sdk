@@ -122,7 +122,7 @@ public class FreeResourceItem extends TeaModel {
         private String resourceType; 
 
         /**
-         * 资源数量
+         * AvailableNumber.
          */
         public Builder availableNumber(Long availableNumber) {
             this.availableNumber = availableNumber;
@@ -130,7 +130,7 @@ public class FreeResourceItem extends TeaModel {
         }
 
         /**
-         * 集群Id
+         * ClusterID.
          */
         public Builder clusterID(String clusterID) {
             this.clusterID = clusterID;
@@ -138,7 +138,7 @@ public class FreeResourceItem extends TeaModel {
         }
 
         /**
-         * 集群名
+         * ClusterName.
          */
         public Builder clusterName(String clusterName) {
             this.clusterName = clusterName;
@@ -146,7 +146,7 @@ public class FreeResourceItem extends TeaModel {
         }
 
         /**
-         * 空闲资源Id
+         * FreeResourceId.
          */
         public Builder freeResourceId(String freeResourceId) {
             this.freeResourceId = freeResourceId;
@@ -154,7 +154,7 @@ public class FreeResourceItem extends TeaModel {
         }
 
         /**
-         * 创建时间
+         * GmtCreateTime.
          */
         public Builder gmtCreateTime(String gmtCreateTime) {
             this.gmtCreateTime = gmtCreateTime;
@@ -162,7 +162,7 @@ public class FreeResourceItem extends TeaModel {
         }
 
         /**
-         * 修改时间
+         * GmtModifyTime.
          */
         public Builder gmtModifyTime(String gmtModifyTime) {
             this.gmtModifyTime = gmtModifyTime;
@@ -170,7 +170,7 @@ public class FreeResourceItem extends TeaModel {
         }
 
         /**
-         * 域Id
+         * RegionID.
          */
         public Builder regionID(String regionID) {
             this.regionID = regionID;
@@ -178,7 +178,7 @@ public class FreeResourceItem extends TeaModel {
         }
 
         /**
-         * 资源类型
+         * ResourceType.
          */
         public Builder resourceType(String resourceType) {
             this.resourceType = resourceType;

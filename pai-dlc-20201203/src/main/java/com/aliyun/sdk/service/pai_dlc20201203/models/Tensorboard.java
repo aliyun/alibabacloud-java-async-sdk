@@ -194,7 +194,7 @@ public class Tensorboard extends TeaModel {
         private String userId; 
 
         /**
-         * 数据源Id
+         * DataSourceId.
          */
         public Builder dataSourceId(String dataSourceId) {
             this.dataSourceId = dataSourceId;
@@ -202,7 +202,7 @@ public class Tensorboard extends TeaModel {
         }
 
         /**
-         * 展示名称
+         * DisplayName.
          */
         public Builder displayName(String displayName) {
             this.displayName = displayName;
@@ -210,7 +210,7 @@ public class Tensorboard extends TeaModel {
         }
 
         /**
-         * 运行时长
+         * Duration.
          */
         public Builder duration(String duration) {
             this.duration = duration;
@@ -218,7 +218,7 @@ public class Tensorboard extends TeaModel {
         }
 
         /**
-         * 创建时间（UTC）
+         * GmtCreateTime.
          */
         public Builder gmtCreateTime(String gmtCreateTime) {
             this.gmtCreateTime = gmtCreateTime;
@@ -226,7 +226,7 @@ public class Tensorboard extends TeaModel {
         }
 
         /**
-         * 修改时间（UTC）
+         * GmtModifyTime.
          */
         public Builder gmtModifyTime(String gmtModifyTime) {
             this.gmtModifyTime = gmtModifyTime;
@@ -234,7 +234,7 @@ public class Tensorboard extends TeaModel {
         }
 
         /**
-         * 任务Id
+         * JobId.
          */
         public Builder jobId(String jobId) {
             this.jobId = jobId;
@@ -242,7 +242,7 @@ public class Tensorboard extends TeaModel {
         }
 
         /**
-         * 状态详情码
+         * ReasonCode.
          */
         public Builder reasonCode(String reasonCode) {
             this.reasonCode = reasonCode;
@@ -250,7 +250,7 @@ public class Tensorboard extends TeaModel {
         }
 
         /**
-         * 状态详情
+         * ReasonMessage.
          */
         public Builder reasonMessage(String reasonMessage) {
             this.reasonMessage = reasonMessage;
@@ -258,7 +258,7 @@ public class Tensorboard extends TeaModel {
         }
 
         /**
-         * 请求Id
+         * RequestId.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -266,7 +266,7 @@ public class Tensorboard extends TeaModel {
         }
 
         /**
-         * 状态
+         * Status.
          */
         public Builder status(String status) {
             this.status = status;
@@ -274,7 +274,7 @@ public class Tensorboard extends TeaModel {
         }
 
         /**
-         * 文件路径
+         * SummaryPath.
          */
         public Builder summaryPath(String summaryPath) {
             this.summaryPath = summaryPath;
@@ -282,7 +282,7 @@ public class Tensorboard extends TeaModel {
         }
 
         /**
-         * Tensorboard Id
+         * TensorboardId.
          */
         public Builder tensorboardId(String tensorboardId) {
             this.tensorboardId = tensorboardId;
@@ -290,7 +290,7 @@ public class Tensorboard extends TeaModel {
         }
 
         /**
-         * Tensorboard URL
+         * TensorboardUrl.
          */
         public Builder tensorboardUrl(String tensorboardUrl) {
             this.tensorboardUrl = tensorboardUrl;
@@ -298,7 +298,7 @@ public class Tensorboard extends TeaModel {
         }
 
         /**
-         * 创建者
+         * UserId.
          */
         public Builder userId(String userId) {
             this.userId = userId;

@@ -98,7 +98,7 @@ public class DebuggerConfig extends TeaModel {
         private String gmtModifyTime; 
 
         /**
-         * 配置项细节，json结构
+         * Content.
          */
         public Builder content(String content) {
             this.content = content;
@@ -106,7 +106,7 @@ public class DebuggerConfig extends TeaModel {
         }
 
         /**
-         * 系统生成的debug config唯一ID
+         * DebuggerConfigId.
          */
         public Builder debuggerConfigId(String debuggerConfigId) {
             this.debuggerConfigId = debuggerConfigId;
@@ -114,7 +114,7 @@ public class DebuggerConfig extends TeaModel {
         }
 
         /**
-         * 配置项描述
+         * Description.
          */
         public Builder description(String description) {
             this.description = description;
@@ -122,7 +122,7 @@ public class DebuggerConfig extends TeaModel {
         }
 
         /**
-         * 模板配置项名称
+         * DisplayName.
          */
         public Builder displayName(String displayName) {
             this.displayName = displayName;
@@ -130,7 +130,7 @@ public class DebuggerConfig extends TeaModel {
         }
 
         /**
-         * 创建时间（UTC）
+         * GmtCreateTime.
          */
         public Builder gmtCreateTime(String gmtCreateTime) {
             this.gmtCreateTime = gmtCreateTime;
@@ -138,7 +138,7 @@ public class DebuggerConfig extends TeaModel {
         }
 
         /**
-         * 修改时间（UTC）
+         * GmtModifyTime.
          */
         public Builder gmtModifyTime(String gmtModifyTime) {
             this.gmtModifyTime = gmtModifyTime;

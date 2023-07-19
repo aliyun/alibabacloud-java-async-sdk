@@ -86,7 +86,7 @@ public class QuotaConfig extends TeaModel {
         private String resourceLevel; 
 
         /**
-         * 允许的最大优先级
+         * AllowedMaxPriority.
          */
         public Builder allowedMaxPriority(Integer allowedMaxPriority) {
             this.allowedMaxPriority = allowedMaxPriority;
@@ -94,7 +94,7 @@ public class QuotaConfig extends TeaModel {
         }
 
         /**
-         * 是否开启DLC
+         * EnableDLC.
          */
         public Builder enableDLC(Boolean enableDLC) {
             this.enableDLC = enableDLC;
@@ -102,7 +102,7 @@ public class QuotaConfig extends TeaModel {
         }
 
         /**
-         * 是否开启DSW
+         * EnableDSW.
          */
         public Builder enableDSW(Boolean enableDSW) {
             this.enableDSW = enableDSW;
@@ -110,7 +110,7 @@ public class QuotaConfig extends TeaModel {
         }
 
         /**
-         * 是否使用潮汐资源
+         * EnableTideResource.
          */
         public Builder enableTideResource(Boolean enableTideResource) {
             this.enableTideResource = enableTideResource;
@@ -118,7 +118,7 @@ public class QuotaConfig extends TeaModel {
         }
 
         /**
-         * 资源级别(L0, L1)
+         * ResourceLevel.
          */
         public Builder resourceLevel(String resourceLevel) {
             this.resourceLevel = resourceLevel;

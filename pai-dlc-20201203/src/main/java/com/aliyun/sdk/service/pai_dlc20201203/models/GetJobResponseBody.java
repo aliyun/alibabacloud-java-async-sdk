@@ -446,7 +446,7 @@ public class GetJobResponseBody extends TeaModel {
         private String workspaceName; 
 
         /**
-         * 集群ID
+         * ClusterId.
          */
         public Builder clusterId(String clusterId) {
             this.clusterId = clusterId;
@@ -454,7 +454,7 @@ public class GetJobResponseBody extends TeaModel {
         }
 
         /**
-         * 代码源配置
+         * CodeSource.
          */
         public Builder codeSource(CodeSource codeSource) {
             this.codeSource = codeSource;
@@ -462,7 +462,7 @@ public class GetJobResponseBody extends TeaModel {
         }
 
         /**
-         * 数据源配置列表
+         * DataSources.
          */
         public Builder dataSources(java.util.List < DataSources> dataSources) {
             this.dataSources = dataSources;
@@ -470,7 +470,7 @@ public class GetJobResponseBody extends TeaModel {
         }
 
         /**
-         * 作业显示名称
+         * DisplayName.
          */
         public Builder displayName(String displayName) {
             this.displayName = displayName;
@@ -478,7 +478,7 @@ public class GetJobResponseBody extends TeaModel {
         }
 
         /**
-         * 作业运行时长（s）
+         * Duration.
          */
         public Builder duration(Long duration) {
             this.duration = duration;
@@ -486,7 +486,7 @@ public class GetJobResponseBody extends TeaModel {
         }
 
         /**
-         * 弹性任务参数
+         * ElasticSpec.
          */
         public Builder elasticSpec(JobElasticSpec elasticSpec) {
             this.elasticSpec = elasticSpec;
@@ -494,7 +494,7 @@ public class GetJobResponseBody extends TeaModel {
         }
 
         /**
-         * 是否开启debugger任务
+         * EnabledDebugger.
          */
         public Builder enabledDebugger(Boolean enabledDebugger) {
             this.enabledDebugger = enabledDebugger;
@@ -502,7 +502,7 @@ public class GetJobResponseBody extends TeaModel {
         }
 
         /**
-         * 环境变量配置
+         * Envs.
          */
         public Builder envs(java.util.Map < String, String > envs) {
             this.envs = envs;
@@ -510,7 +510,7 @@ public class GetJobResponseBody extends TeaModel {
         }
 
         /**
-         * 作业创建时间（UTC）
+         * GmtCreateTime.
          */
         public Builder gmtCreateTime(String gmtCreateTime) {
             this.gmtCreateTime = gmtCreateTime;
@@ -526,7 +526,7 @@ public class GetJobResponseBody extends TeaModel {
         }
 
         /**
-         * 作业结束时间（UTC）
+         * GmtFinishTime.
          */
         public Builder gmtFinishTime(String gmtFinishTime) {
             this.gmtFinishTime = gmtFinishTime;
@@ -566,7 +566,7 @@ public class GetJobResponseBody extends TeaModel {
         }
 
         /**
-         * 作业Id
+         * JobId.
          */
         public Builder jobId(String jobId) {
             this.jobId = jobId;
@@ -574,7 +574,7 @@ public class GetJobResponseBody extends TeaModel {
         }
 
         /**
-         * 作业规格配置
+         * JobSpecs.
          */
         public Builder jobSpecs(java.util.List < JobSpec > jobSpecs) {
             this.jobSpecs = jobSpecs;
@@ -582,7 +582,7 @@ public class GetJobResponseBody extends TeaModel {
         }
 
         /**
-         * 作业类型
+         * JobType.
          */
         public Builder jobType(String jobType) {
             this.jobType = jobType;
@@ -590,7 +590,7 @@ public class GetJobResponseBody extends TeaModel {
         }
 
         /**
-         * 作业所以运行Pod列表
+         * Pods.
          */
         public Builder pods(java.util.List < Pods> pods) {
             this.pods = pods;
@@ -598,7 +598,7 @@ public class GetJobResponseBody extends TeaModel {
         }
 
         /**
-         * 任务的优先级
+         * Priority.
          */
         public Builder priority(Integer priority) {
             this.priority = priority;
@@ -606,7 +606,7 @@ public class GetJobResponseBody extends TeaModel {
         }
 
         /**
-         * 状态详情码
+         * ReasonCode.
          */
         public Builder reasonCode(String reasonCode) {
             this.reasonCode = reasonCode;
@@ -614,7 +614,7 @@ public class GetJobResponseBody extends TeaModel {
         }
 
         /**
-         * 状态详情
+         * ReasonMessage.
          */
         public Builder reasonMessage(String reasonMessage) {
             this.reasonMessage = reasonMessage;
@@ -622,7 +622,7 @@ public class GetJobResponseBody extends TeaModel {
         }
 
         /**
-         * 请求Id
+         * RequestId.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -630,7 +630,7 @@ public class GetJobResponseBody extends TeaModel {
         }
 
         /**
-         * 作业运行所在的资源组ID
+         * ResourceId.
          */
         public Builder resourceId(String resourceId) {
             this.resourceId = resourceId;
@@ -638,7 +638,7 @@ public class GetJobResponseBody extends TeaModel {
         }
 
         /**
-         * 作业运行时使用的资源级别
+         * ResourceLevel.
          */
         public Builder resourceLevel(String resourceLevel) {
             this.resourceLevel = resourceLevel;
@@ -646,7 +646,7 @@ public class GetJobResponseBody extends TeaModel {
         }
 
         /**
-         * 作业已使用的重试次数和最大重试次数
+         * RestartTimes.
          */
         public Builder restartTimes(String restartTimes) {
             this.restartTimes = restartTimes;
@@ -654,7 +654,7 @@ public class GetJobResponseBody extends TeaModel {
         }
 
         /**
-         * 作业额外参数配置
+         * Settings.
          */
         public Builder settings(JobSettings settings) {
             this.settings = settings;
@@ -662,7 +662,7 @@ public class GetJobResponseBody extends TeaModel {
         }
 
         /**
-         * 作业状态
+         * Status.
          */
         public Builder status(String status) {
             this.status = status;
@@ -670,7 +670,7 @@ public class GetJobResponseBody extends TeaModel {
         }
 
         /**
-         * 作业子状态，如抢占重试状态
+         * SubStatus.
          */
         public Builder subStatus(String subStatus) {
             this.subStatus = subStatus;
@@ -678,7 +678,7 @@ public class GetJobResponseBody extends TeaModel {
         }
 
         /**
-         * 三方库(requirements.txt)文件路径
+         * ThirdpartyLibDir.
          */
         public Builder thirdpartyLibDir(String thirdpartyLibDir) {
             this.thirdpartyLibDir = thirdpartyLibDir;
@@ -686,7 +686,7 @@ public class GetJobResponseBody extends TeaModel {
         }
 
         /**
-         * 三方库配置列表
+         * ThirdpartyLibs.
          */
         public Builder thirdpartyLibs(java.util.List < String > thirdpartyLibs) {
             this.thirdpartyLibs = thirdpartyLibs;
@@ -694,7 +694,7 @@ public class GetJobResponseBody extends TeaModel {
         }
 
         /**
-         * 用户命令
+         * UserCommand.
          */
         public Builder userCommand(String userCommand) {
             this.userCommand = userCommand;
@@ -702,7 +702,7 @@ public class GetJobResponseBody extends TeaModel {
         }
 
         /**
-         * 作业提交人Id
+         * UserId.
          */
         public Builder userId(String userId) {
             this.userId = userId;
@@ -710,7 +710,7 @@ public class GetJobResponseBody extends TeaModel {
         }
 
         /**
-         * 作业所属工作空间ID
+         * WorkspaceId.
          */
         public Builder workspaceId(String workspaceId) {
             this.workspaceId = workspaceId;
@@ -718,7 +718,7 @@ public class GetJobResponseBody extends TeaModel {
         }
 
         /**
-         * 作业所属工作空间名称
+         * WorkspaceName.
          */
         public Builder workspaceName(String workspaceName) {
             this.workspaceName = workspaceName;
@@ -794,7 +794,7 @@ public class GetJobResponseBody extends TeaModel {
             private String mountPath; 
 
             /**
-             * 代码分支
+             * Branch.
              */
             public Builder branch(String branch) {
                 this.branch = branch;
@@ -802,7 +802,7 @@ public class GetJobResponseBody extends TeaModel {
             }
 
             /**
-             * 代码源Id
+             * CodeSourceId.
              */
             public Builder codeSourceId(String codeSourceId) {
                 this.codeSourceId = codeSourceId;
@@ -810,7 +810,7 @@ public class GetJobResponseBody extends TeaModel {
             }
 
             /**
-             * 代码Commit
+             * Commit.
              */
             public Builder commit(String commit) {
                 this.commit = commit;
@@ -818,7 +818,7 @@ public class GetJobResponseBody extends TeaModel {
             }
 
             /**
-             * 本地挂载路径
+             * MountPath.
              */
             public Builder mountPath(String mountPath) {
                 this.mountPath = mountPath;
@@ -871,7 +871,7 @@ public class GetJobResponseBody extends TeaModel {
             private String mountPath; 
 
             /**
-             * 数据源Id
+             * DataSourceId.
              */
             public Builder dataSourceId(String dataSourceId) {
                 this.dataSourceId = dataSourceId;
@@ -879,7 +879,7 @@ public class GetJobResponseBody extends TeaModel {
             }
 
             /**
-             * 本地挂载路径
+             * MountPath.
              */
             public Builder mountPath(String mountPath) {
                 this.mountPath = mountPath;
@@ -1028,7 +1028,7 @@ public class GetJobResponseBody extends TeaModel {
             private String type; 
 
             /**
-             * Pod创建时间（UTC）
+             * GmtCreateTime.
              */
             public Builder gmtCreateTime(String gmtCreateTime) {
                 this.gmtCreateTime = gmtCreateTime;
@@ -1036,7 +1036,7 @@ public class GetJobResponseBody extends TeaModel {
             }
 
             /**
-             * Pod结束时间（UTC）
+             * GmtFinishTime.
              */
             public Builder gmtFinishTime(String gmtFinishTime) {
                 this.gmtFinishTime = gmtFinishTime;
@@ -1044,7 +1044,7 @@ public class GetJobResponseBody extends TeaModel {
             }
 
             /**
-             * Pod启动时间（UTC）
+             * GmtStartTime.
              */
             public Builder gmtStartTime(String gmtStartTime) {
                 this.gmtStartTime = gmtStartTime;
@@ -1052,7 +1052,7 @@ public class GetJobResponseBody extends TeaModel {
             }
 
             /**
-             * Pod Ip
+             * Ip.
              */
             public Builder ip(String ip) {
                 this.ip = ip;
@@ -1060,7 +1060,7 @@ public class GetJobResponseBody extends TeaModel {
             }
 
             /**
-             * Pod Id
+             * PodId.
              */
             public Builder podId(String podId) {
                 this.podId = podId;
@@ -1068,7 +1068,7 @@ public class GetJobResponseBody extends TeaModel {
             }
 
             /**
-             * Pod UId
+             * PodUid.
              */
             public Builder podUid(String podUid) {
                 this.podUid = podUid;
@@ -1076,7 +1076,7 @@ public class GetJobResponseBody extends TeaModel {
             }
 
             /**
-             * Pod资源使用类型
+             * ResourceType.
              */
             public Builder resourceType(String resourceType) {
                 this.resourceType = resourceType;
@@ -1084,7 +1084,7 @@ public class GetJobResponseBody extends TeaModel {
             }
 
             /**
-             * Pod状态
+             * Status.
              */
             public Builder status(String status) {
                 this.status = status;
@@ -1092,7 +1092,7 @@ public class GetJobResponseBody extends TeaModel {
             }
 
             /**
-             * Pod子状态，如抢占状态
+             * SubStatus.
              */
             public Builder subStatus(String subStatus) {
                 this.subStatus = subStatus;
@@ -1100,7 +1100,7 @@ public class GetJobResponseBody extends TeaModel {
             }
 
             /**
-             * Pod类型
+             * Type.
              */
             public Builder type(String type) {
                 this.type = type;
@@ -1261,7 +1261,7 @@ public class GetJobResponseBody extends TeaModel {
             private String type; 
 
             /**
-             * Pod创建时间（UTC）
+             * GmtCreateTime.
              */
             public Builder gmtCreateTime(String gmtCreateTime) {
                 this.gmtCreateTime = gmtCreateTime;
@@ -1269,7 +1269,7 @@ public class GetJobResponseBody extends TeaModel {
             }
 
             /**
-             * Pod结束时间（UTC）
+             * GmtFinishTime.
              */
             public Builder gmtFinishTime(String gmtFinishTime) {
                 this.gmtFinishTime = gmtFinishTime;
@@ -1277,7 +1277,7 @@ public class GetJobResponseBody extends TeaModel {
             }
 
             /**
-             * Pod启动时间（UTC）
+             * GmtStartTime.
              */
             public Builder gmtStartTime(String gmtStartTime) {
                 this.gmtStartTime = gmtStartTime;
@@ -1285,7 +1285,7 @@ public class GetJobResponseBody extends TeaModel {
             }
 
             /**
-             * 历史Pods
+             * HistoryPods.
              */
             public Builder historyPods(java.util.List < HistoryPods> historyPods) {
                 this.historyPods = historyPods;
@@ -1293,7 +1293,7 @@ public class GetJobResponseBody extends TeaModel {
             }
 
             /**
-             * Pod Ip
+             * Ip.
              */
             public Builder ip(String ip) {
                 this.ip = ip;
@@ -1301,7 +1301,7 @@ public class GetJobResponseBody extends TeaModel {
             }
 
             /**
-             * Pod Id
+             * PodId.
              */
             public Builder podId(String podId) {
                 this.podId = podId;
@@ -1309,7 +1309,7 @@ public class GetJobResponseBody extends TeaModel {
             }
 
             /**
-             * Pod UId
+             * PodUid.
              */
             public Builder podUid(String podUid) {
                 this.podUid = podUid;
@@ -1317,7 +1317,7 @@ public class GetJobResponseBody extends TeaModel {
             }
 
             /**
-             * Pod资源使用类型
+             * ResourceType.
              */
             public Builder resourceType(String resourceType) {
                 this.resourceType = resourceType;
@@ -1325,7 +1325,7 @@ public class GetJobResponseBody extends TeaModel {
             }
 
             /**
-             * Pod状态
+             * Status.
              */
             public Builder status(String status) {
                 this.status = status;
@@ -1333,7 +1333,7 @@ public class GetJobResponseBody extends TeaModel {
             }
 
             /**
-             * Pod子状态，如抢占状态
+             * SubStatus.
              */
             public Builder subStatus(String subStatus) {
                 this.subStatus = subStatus;
@@ -1341,7 +1341,7 @@ public class GetJobResponseBody extends TeaModel {
             }
 
             /**
-             * Pod类型
+             * Type.
              */
             public Builder type(String type) {
                 this.type = type;

@@ -62,7 +62,7 @@ public class Resources extends TeaModel {
         private String memory; 
 
         /**
-         * CPU核心数
+         * CPU.
          */
         public Builder CPU(String CPU) {
             this.CPU = CPU;
@@ -70,7 +70,7 @@ public class Resources extends TeaModel {
         }
 
         /**
-         * GPU卡数
+         * GPU.
          */
         public Builder GPU(String GPU) {
             this.GPU = GPU;
@@ -78,7 +78,7 @@ public class Resources extends TeaModel {
         }
 
         /**
-         * 内存大小
+         * Memory.
          */
         public Builder memory(String memory) {
             this.memory = memory;

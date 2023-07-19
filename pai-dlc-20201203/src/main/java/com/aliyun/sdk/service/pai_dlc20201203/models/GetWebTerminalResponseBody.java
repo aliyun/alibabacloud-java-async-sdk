@@ -7,19 +7,19 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
- * {@link StopJobResponseBody} extends {@link TeaModel}
+ * {@link GetWebTerminalResponseBody} extends {@link TeaModel}
  *
- * <p>StopJobResponseBody</p>
+ * <p>GetWebTerminalResponseBody</p>
  */
-public class StopJobResponseBody extends TeaModel {
-    @NameInMap("JobId")
-    private String jobId;
+public class GetWebTerminalResponseBody extends TeaModel {
+    @NameInMap("URL")
+    private String URL;
 
-    @NameInMap("RequestId")
+    @NameInMap("requestId")
     private String requestId;
 
-    private StopJobResponseBody(Builder builder) {
-        this.jobId = builder.jobId;
+    private GetWebTerminalResponseBody(Builder builder) {
+        this.URL = builder.URL;
         this.requestId = builder.requestId;
     }
 
@@ -27,15 +27,15 @@ public class StopJobResponseBody extends TeaModel {
         return new Builder();
     }
 
-    public static StopJobResponseBody create() {
+    public static GetWebTerminalResponseBody create() {
         return builder().build();
     }
 
     /**
-     * @return jobId
+     * @return URL
      */
-    public String getJobId() {
-        return this.jobId;
+    public String getURL() {
+        return this.URL;
     }
 
     /**
@@ -46,27 +46,27 @@ public class StopJobResponseBody extends TeaModel {
     }
 
     public static final class Builder {
-        private String jobId; 
+        private String URL; 
         private String requestId; 
 
         /**
-         * JobId.
+         * URL.
          */
-        public Builder jobId(String jobId) {
-            this.jobId = jobId;
+        public Builder URL(String URL) {
+            this.URL = URL;
             return this;
         }
 
         /**
-         * RequestId.
+         * requestId.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
             return this;
         }
 
-        public StopJobResponseBody build() {
-            return new StopJobResponseBody(this);
+        public GetWebTerminalResponseBody build() {
+            return new GetWebTerminalResponseBody(this);
         } 
 
     } 

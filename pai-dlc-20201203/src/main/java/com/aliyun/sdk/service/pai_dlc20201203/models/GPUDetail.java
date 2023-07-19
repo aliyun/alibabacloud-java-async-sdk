@@ -62,7 +62,7 @@ public class GPUDetail extends TeaModel {
         private String GPUTypeFullName; 
 
         /**
-         * GPU卡数
+         * GPU.
          */
         public Builder GPU(String GPU) {
             this.GPU = GPU;
@@ -70,7 +70,7 @@ public class GPUDetail extends TeaModel {
         }
 
         /**
-         * GPU卡型
+         * GPUType.
          */
         public Builder GPUType(String GPUType) {
             this.GPUType = GPUType;
@@ -78,7 +78,7 @@ public class GPUDetail extends TeaModel {
         }
 
         /**
-         * GPU卡型全名
+         * GPUTypeFullName.
          */
         public Builder GPUTypeFullName(String GPUTypeFullName) {
             this.GPUTypeFullName = GPUTypeFullName;

@@ -122,7 +122,7 @@ public class FreeResourceClusterControlItem extends TeaModel {
         private String regionID; 
 
         /**
-         * 集群ID
+         * ClusterID.
          */
         public Builder clusterID(String clusterID) {
             this.clusterID = clusterID;
@@ -130,7 +130,7 @@ public class FreeResourceClusterControlItem extends TeaModel {
         }
 
         /**
-         * 集群名
+         * ClusterName.
          */
         public Builder clusterName(String clusterName) {
             this.clusterName = clusterName;
@@ -138,7 +138,7 @@ public class FreeResourceClusterControlItem extends TeaModel {
         }
 
         /**
-         * 是否允许跨集群超卖
+         * CrossClusters.
          */
         public Builder crossClusters(Boolean crossClusters) {
             this.crossClusters = crossClusters;
@@ -146,7 +146,7 @@ public class FreeResourceClusterControlItem extends TeaModel {
         }
 
         /**
-         * 是否打开集群超卖
+         * EnableFreeResource.
          */
         public Builder enableFreeResource(Boolean enableFreeResource) {
             this.enableFreeResource = enableFreeResource;
@@ -154,7 +154,7 @@ public class FreeResourceClusterControlItem extends TeaModel {
         }
 
         /**
-         * 超卖资源集群控制Id
+         * FreeResourceClusterControlId.
          */
         public Builder freeResourceClusterControlId(String freeResourceClusterControlId) {
             this.freeResourceClusterControlId = freeResourceClusterControlId;
@@ -162,7 +162,7 @@ public class FreeResourceClusterControlItem extends TeaModel {
         }
 
         /**
-         * 创建时间
+         * GmtCreateTime.
          */
         public Builder gmtCreateTime(String gmtCreateTime) {
             this.gmtCreateTime = gmtCreateTime;
@@ -170,7 +170,7 @@ public class FreeResourceClusterControlItem extends TeaModel {
         }
 
         /**
-         * 修改时间
+         * GmtModifyTime.
          */
         public Builder gmtModifyTime(String gmtModifyTime) {
             this.gmtModifyTime = gmtModifyTime;
@@ -178,7 +178,7 @@ public class FreeResourceClusterControlItem extends TeaModel {
         }
 
         /**
-         * 区域id
+         * RegionID.
          */
         public Builder regionID(String regionID) {
             this.regionID = regionID;

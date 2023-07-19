@@ -310,7 +310,7 @@ public class CreateJobRequest extends Request {
         } 
 
         /**
-         * 代码源配置
+         * CodeSource.
          */
         public Builder codeSource(CodeSource codeSource) {
             this.putBodyParameter("CodeSource", codeSource);
@@ -319,7 +319,7 @@ public class CreateJobRequest extends Request {
         }
 
         /**
-         * 数据源配置列表
+         * DataSources.
          */
         public Builder dataSources(java.util.List < DataSources> dataSources) {
             this.putBodyParameter("DataSources", dataSources);
@@ -328,7 +328,7 @@ public class CreateJobRequest extends Request {
         }
 
         /**
-         * debugger参数
+         * DebuggerConfigContent.
          */
         public Builder debuggerConfigContent(String debuggerConfigContent) {
             this.putBodyParameter("DebuggerConfigContent", debuggerConfigContent);
@@ -337,7 +337,7 @@ public class CreateJobRequest extends Request {
         }
 
         /**
-         * 作业显示名称
+         * DisplayName.
          */
         public Builder displayName(String displayName) {
             this.putBodyParameter("DisplayName", displayName);
@@ -355,7 +355,7 @@ public class CreateJobRequest extends Request {
         }
 
         /**
-         * 环境变量配置
+         * Envs.
          */
         public Builder envs(java.util.Map < String, String > envs) {
             this.putBodyParameter("Envs", envs);
@@ -364,7 +364,7 @@ public class CreateJobRequest extends Request {
         }
 
         /**
-         * 作业最大运行时间
+         * JobMaxRunningTimeMinutes.
          */
         public Builder jobMaxRunningTimeMinutes(Long jobMaxRunningTimeMinutes) {
             this.putBodyParameter("JobMaxRunningTimeMinutes", jobMaxRunningTimeMinutes);
@@ -373,7 +373,7 @@ public class CreateJobRequest extends Request {
         }
 
         /**
-         * 作业规格配置
+         * JobSpecs.
          */
         public Builder jobSpecs(java.util.List < JobSpec > jobSpecs) {
             this.putBodyParameter("JobSpecs", jobSpecs);
@@ -382,7 +382,7 @@ public class CreateJobRequest extends Request {
         }
 
         /**
-         * 作业类型
+         * JobType.
          */
         public Builder jobType(String jobType) {
             this.putBodyParameter("JobType", jobType);
@@ -400,7 +400,7 @@ public class CreateJobRequest extends Request {
         }
 
         /**
-         * 作业优先级
+         * Priority.
          */
         public Builder priority(Integer priority) {
             this.putBodyParameter("Priority", priority);
@@ -409,7 +409,7 @@ public class CreateJobRequest extends Request {
         }
 
         /**
-         * 资源组编号
+         * ResourceId.
          */
         public Builder resourceId(String resourceId) {
             this.putBodyParameter("ResourceId", resourceId);
@@ -436,7 +436,7 @@ public class CreateJobRequest extends Request {
         }
 
         /**
-         * 三方库(requirements.txt)文件路径
+         * ThirdpartyLibDir.
          */
         public Builder thirdpartyLibDir(String thirdpartyLibDir) {
             this.putBodyParameter("ThirdpartyLibDir", thirdpartyLibDir);
@@ -445,7 +445,7 @@ public class CreateJobRequest extends Request {
         }
 
         /**
-         * 三方库配置列表
+         * ThirdpartyLibs.
          */
         public Builder thirdpartyLibs(java.util.List < String > thirdpartyLibs) {
             this.putBodyParameter("ThirdpartyLibs", thirdpartyLibs);
@@ -454,7 +454,7 @@ public class CreateJobRequest extends Request {
         }
 
         /**
-         * 作业命令
+         * UserCommand.
          */
         public Builder userCommand(String userCommand) {
             this.putBodyParameter("UserCommand", userCommand);
@@ -463,7 +463,7 @@ public class CreateJobRequest extends Request {
         }
 
         /**
-         * 用户VPC
+         * UserVpc.
          */
         public Builder userVpc(UserVpc userVpc) {
             this.putBodyParameter("UserVpc", userVpc);
@@ -472,7 +472,7 @@ public class CreateJobRequest extends Request {
         }
 
         /**
-         * 工作空间编号
+         * WorkspaceId.
          */
         public Builder workspaceId(String workspaceId) {
             this.putBodyParameter("WorkspaceId", workspaceId);
@@ -550,7 +550,7 @@ public class CreateJobRequest extends Request {
             private String mountPath; 
 
             /**
-             * 代码分支
+             * Branch.
              */
             public Builder branch(String branch) {
                 this.branch = branch;
@@ -558,7 +558,7 @@ public class CreateJobRequest extends Request {
             }
 
             /**
-             * 代码源Id
+             * CodeSourceId.
              */
             public Builder codeSourceId(String codeSourceId) {
                 this.codeSourceId = codeSourceId;
@@ -566,7 +566,7 @@ public class CreateJobRequest extends Request {
             }
 
             /**
-             * 代码Commit
+             * Commit.
              */
             public Builder commit(String commit) {
                 this.commit = commit;
@@ -574,7 +574,7 @@ public class CreateJobRequest extends Request {
             }
 
             /**
-             * 本地挂载路径
+             * MountPath.
              */
             public Builder mountPath(String mountPath) {
                 this.mountPath = mountPath;
@@ -627,7 +627,7 @@ public class CreateJobRequest extends Request {
             private String mountPath; 
 
             /**
-             * 数据源Id
+             * DataSourceId.
              */
             public Builder dataSourceId(String dataSourceId) {
                 this.dataSourceId = dataSourceId;
@@ -635,7 +635,7 @@ public class CreateJobRequest extends Request {
             }
 
             /**
-             * 本地挂载路径
+             * MountPath.
              */
             public Builder mountPath(String mountPath) {
                 this.mountPath = mountPath;
@@ -712,7 +712,7 @@ public class CreateJobRequest extends Request {
             private String vpcId; 
 
             /**
-             * 扩展网段
+             * ExtendedCIDRs.
              */
             public Builder extendedCIDRs(java.util.List < String > extendedCIDRs) {
                 this.extendedCIDRs = extendedCIDRs;
@@ -720,7 +720,7 @@ public class CreateJobRequest extends Request {
             }
 
             /**
-             * 用户安全组的id
+             * SecurityGroupId.
              */
             public Builder securityGroupId(String securityGroupId) {
                 this.securityGroupId = securityGroupId;
@@ -728,7 +728,7 @@ public class CreateJobRequest extends Request {
             }
 
             /**
-             * 用户交换机的id
+             * SwitchId.
              */
             public Builder switchId(String switchId) {
                 this.switchId = switchId;
@@ -736,7 +736,7 @@ public class CreateJobRequest extends Request {
             }
 
             /**
-             * 用户VPC的id
+             * VpcId.
              */
             public Builder vpcId(String vpcId) {
                 this.vpcId = vpcId;

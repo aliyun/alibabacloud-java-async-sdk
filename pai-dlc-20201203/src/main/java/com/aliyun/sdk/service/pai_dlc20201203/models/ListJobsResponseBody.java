@@ -62,7 +62,7 @@ public class ListJobsResponseBody extends TeaModel {
         private Long totalCount; 
 
         /**
-         * 作业列表
+         * Jobs.
          */
         public Builder jobs(java.util.List < JobItem > jobs) {
             this.jobs = jobs;
@@ -70,7 +70,7 @@ public class ListJobsResponseBody extends TeaModel {
         }
 
         /**
-         * 请求Id
+         * RequestId.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -78,7 +78,7 @@ public class ListJobsResponseBody extends TeaModel {
         }
 
         /**
-         * 符合过滤条件的总作业数
+         * TotalCount.
          */
         public Builder totalCount(Long totalCount) {
             this.totalCount = totalCount;

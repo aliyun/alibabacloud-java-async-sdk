@@ -38,6 +38,8 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<GetTensorboardResponse> getTensorboard(GetTensorboardRequest request);
 
+    CompletableFuture<GetWebTerminalResponse> getWebTerminal(GetWebTerminalRequest request);
+
     CompletableFuture<ListEcsSpecsResponse> listEcsSpecs(ListEcsSpecsRequest request);
 
     CompletableFuture<ListJobsResponse> listJobs(ListJobsRequest request);

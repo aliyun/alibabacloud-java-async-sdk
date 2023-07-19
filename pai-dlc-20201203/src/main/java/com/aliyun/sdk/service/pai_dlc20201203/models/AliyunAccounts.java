@@ -74,7 +74,7 @@ public class AliyunAccounts extends TeaModel {
         private String gmtModifyTime; 
 
         /**
-         * Aliyun账号的UID
+         * AliyunUid.
          */
         public Builder aliyunUid(String aliyunUid) {
             this.aliyunUid = aliyunUid;
@@ -82,7 +82,7 @@ public class AliyunAccounts extends TeaModel {
         }
 
         /**
-         * 弹内用户的工号
+         * EmployeeId.
          */
         public Builder employeeId(String employeeId) {
             this.employeeId = employeeId;
@@ -90,7 +90,7 @@ public class AliyunAccounts extends TeaModel {
         }
 
         /**
-         * 这条记录的创建时间
+         * GmtCreateTime.
          */
         public Builder gmtCreateTime(String gmtCreateTime) {
             this.gmtCreateTime = gmtCreateTime;
@@ -98,7 +98,7 @@ public class AliyunAccounts extends TeaModel {
         }
 
         /**
-         * 这条记录的上次修改时间
+         * GmtModifyTime.
          */
         public Builder gmtModifyTime(String gmtModifyTime) {
             this.gmtModifyTime = gmtModifyTime;

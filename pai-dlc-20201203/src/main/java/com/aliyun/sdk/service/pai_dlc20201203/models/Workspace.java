@@ -134,7 +134,7 @@ public class Workspace extends TeaModel {
         private String workspaceName; 
 
         /**
-         * 创建者
+         * Creator.
          */
         public Builder creator(String creator) {
             this.creator = creator;
@@ -142,7 +142,7 @@ public class Workspace extends TeaModel {
         }
 
         /**
-         * 创建时间
+         * GmtCreateTime.
          */
         public Builder gmtCreateTime(String gmtCreateTime) {
             this.gmtCreateTime = gmtCreateTime;
@@ -150,7 +150,7 @@ public class Workspace extends TeaModel {
         }
 
         /**
-         * 最近修改时间
+         * GmtModifyTime.
          */
         public Builder gmtModifyTime(String gmtModifyTime) {
             this.gmtModifyTime = gmtModifyTime;
@@ -158,7 +158,7 @@ public class Workspace extends TeaModel {
         }
 
         /**
-         * 成员列表
+         * Members.
          */
         public Builder members(java.util.List < Member > members) {
             this.members = members;
@@ -166,7 +166,7 @@ public class Workspace extends TeaModel {
         }
 
         /**
-         * 资源配额列表
+         * Quotas.
          */
         public Builder quotas(java.util.List < Quota > quotas) {
             this.quotas = quotas;
@@ -174,7 +174,7 @@ public class Workspace extends TeaModel {
         }
 
         /**
-         * 资源总量
+         * TotalResources.
          */
         public Builder totalResources(Resources totalResources) {
             this.totalResources = totalResources;
@@ -182,7 +182,7 @@ public class Workspace extends TeaModel {
         }
 
         /**
-         * 管理员列表
+         * WorkspaceAdmins.
          */
         public Builder workspaceAdmins(java.util.List < Member > workspaceAdmins) {
             this.workspaceAdmins = workspaceAdmins;
@@ -190,7 +190,7 @@ public class Workspace extends TeaModel {
         }
 
         /**
-         * 工作空间id
+         * WorkspaceId.
          */
         public Builder workspaceId(String workspaceId) {
             this.workspaceId = workspaceId;
@@ -198,7 +198,7 @@ public class Workspace extends TeaModel {
         }
 
         /**
-         * 工作空间名称
+         * WorkspaceName.
          */
         public Builder workspaceName(String workspaceName) {
             this.workspaceName = workspaceName;

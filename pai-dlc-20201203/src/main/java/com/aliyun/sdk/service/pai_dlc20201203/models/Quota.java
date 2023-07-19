@@ -146,7 +146,7 @@ public class Quota extends TeaModel {
         private QuotaDetail usedTideQuota; 
 
         /**
-         * 集群id
+         * ClusterId.
          */
         public Builder clusterId(String clusterId) {
             this.clusterId = clusterId;
@@ -154,7 +154,7 @@ public class Quota extends TeaModel {
         }
 
         /**
-         * 集群名称
+         * ClusterName.
          */
         public Builder clusterName(String clusterName) {
             this.clusterName = clusterName;
@@ -162,7 +162,7 @@ public class Quota extends TeaModel {
         }
 
         /**
-         * 资源配额设置
+         * QuotaConfig.
          */
         public Builder quotaConfig(QuotaConfig quotaConfig) {
             this.quotaConfig = quotaConfig;
@@ -170,7 +170,7 @@ public class Quota extends TeaModel {
         }
 
         /**
-         * 资源配额id
+         * QuotaId.
          */
         public Builder quotaId(String quotaId) {
             this.quotaId = quotaId;
@@ -178,7 +178,7 @@ public class Quota extends TeaModel {
         }
 
         /**
-         * 资源配额名称
+         * QuotaName.
          */
         public Builder quotaName(String quotaName) {
             this.quotaName = quotaName;
@@ -186,7 +186,7 @@ public class Quota extends TeaModel {
         }
 
         /**
-         * 资源配额类型
+         * QuotaType.
          */
         public Builder quotaType(String quotaType) {
             this.quotaType = quotaType;
@@ -194,7 +194,7 @@ public class Quota extends TeaModel {
         }
 
         /**
-         * 资源总量
+         * TotalQuota.
          */
         public Builder totalQuota(QuotaDetail totalQuota) {
             this.totalQuota = totalQuota;
@@ -202,7 +202,7 @@ public class Quota extends TeaModel {
         }
 
         /**
-         * 潮汐资源总量
+         * TotalTideQuota.
          */
         public Builder totalTideQuota(QuotaDetail totalTideQuota) {
             this.totalTideQuota = totalTideQuota;
@@ -210,7 +210,7 @@ public class Quota extends TeaModel {
         }
 
         /**
-         * 资源用量
+         * UsedQuota.
          */
         public Builder usedQuota(QuotaDetail usedQuota) {
             this.usedQuota = usedQuota;
@@ -218,7 +218,7 @@ public class Quota extends TeaModel {
         }
 
         /**
-         * 潮汐资源用量
+         * UsedTideQuota.
          */
         public Builder usedTideQuota(QuotaDetail usedTideQuota) {
             this.usedTideQuota = usedTideQuota;

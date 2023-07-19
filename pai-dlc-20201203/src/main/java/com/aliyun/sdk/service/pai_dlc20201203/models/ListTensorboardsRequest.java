@@ -238,7 +238,7 @@ public class ListTensorboardsRequest extends Request {
         } 
 
         /**
-         * 展示名称
+         * DisplayName.
          */
         public Builder displayName(String displayName) {
             this.putQueryParameter("DisplayName", displayName);
@@ -247,7 +247,7 @@ public class ListTensorboardsRequest extends Request {
         }
 
         /**
-         * 截止时间
+         * EndTime.
          */
         public Builder endTime(String endTime) {
             this.putQueryParameter("EndTime", endTime);
@@ -256,7 +256,7 @@ public class ListTensorboardsRequest extends Request {
         }
 
         /**
-         * JobId
+         * JobId.
          */
         public Builder jobId(String jobId) {
             this.putQueryParameter("JobId", jobId);
@@ -265,7 +265,7 @@ public class ListTensorboardsRequest extends Request {
         }
 
         /**
-         * 排序顺序
+         * Order.
          */
         public Builder order(String order) {
             this.putQueryParameter("Order", order);
@@ -274,7 +274,7 @@ public class ListTensorboardsRequest extends Request {
         }
 
         /**
-         * 当前页
+         * PageNumber.
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -283,7 +283,7 @@ public class ListTensorboardsRequest extends Request {
         }
 
         /**
-         * 每页返回的作业数
+         * PageSize.
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -292,7 +292,7 @@ public class ListTensorboardsRequest extends Request {
         }
 
         /**
-         * 按返回字段排序
+         * SortBy.
          */
         public Builder sortBy(String sortBy) {
             this.putQueryParameter("SortBy", sortBy);
@@ -319,7 +319,7 @@ public class ListTensorboardsRequest extends Request {
         }
 
         /**
-         * 起始时间
+         * StartTime.
          */
         public Builder startTime(String startTime) {
             this.putQueryParameter("StartTime", startTime);
@@ -328,7 +328,7 @@ public class ListTensorboardsRequest extends Request {
         }
 
         /**
-         * 根据状态过滤
+         * Status.
          */
         public Builder status(String status) {
             this.putQueryParameter("Status", status);
@@ -337,7 +337,7 @@ public class ListTensorboardsRequest extends Request {
         }
 
         /**
-         * TensorboardId
+         * TensorboardId.
          */
         public Builder tensorboardId(String tensorboardId) {
             this.putQueryParameter("TensorboardId", tensorboardId);
@@ -346,7 +346,7 @@ public class ListTensorboardsRequest extends Request {
         }
 
         /**
-         * 是否显示详情
+         * Verbose.
          */
         public Builder verbose(Boolean verbose) {
             this.putQueryParameter("Verbose", verbose);
@@ -355,7 +355,7 @@ public class ListTensorboardsRequest extends Request {
         }
 
         /**
-         * 工作空间ID
+         * WorkspaceId.
          */
         public Builder workspaceId(String workspaceId) {
             this.putQueryParameter("WorkspaceId", workspaceId);

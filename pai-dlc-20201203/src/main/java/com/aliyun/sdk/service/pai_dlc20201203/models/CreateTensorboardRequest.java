@@ -259,7 +259,7 @@ public class CreateTensorboardRequest extends Request {
         }
 
         /**
-         * DataSource Id
+         * DataSourceId.
          */
         public Builder dataSourceId(String dataSourceId) {
             this.putBodyParameter("DataSourceId", dataSourceId);
@@ -286,7 +286,7 @@ public class CreateTensorboardRequest extends Request {
         }
 
         /**
-         * Tensorboard名称
+         * DisplayName.
          */
         public Builder displayName(String displayName) {
             this.putBodyParameter("DisplayName", displayName);
@@ -295,7 +295,7 @@ public class CreateTensorboardRequest extends Request {
         }
 
         /**
-         * 任务Id
+         * JobId.
          */
         public Builder jobId(String jobId) {
             this.putBodyParameter("JobId", jobId);
@@ -304,7 +304,7 @@ public class CreateTensorboardRequest extends Request {
         }
 
         /**
-         * 最长运行时长
+         * MaxRunningTimeMinutes.
          */
         public Builder maxRunningTimeMinutes(Long maxRunningTimeMinutes) {
             this.putBodyParameter("MaxRunningTimeMinutes", maxRunningTimeMinutes);
@@ -349,7 +349,7 @@ public class CreateTensorboardRequest extends Request {
         }
 
         /**
-         * Summary 目录
+         * SummaryPath.
          */
         public Builder summaryPath(String summaryPath) {
             this.putBodyParameter("SummaryPath", summaryPath);

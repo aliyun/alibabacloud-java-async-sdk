@@ -50,7 +50,7 @@ public class PodMetric extends TeaModel {
         private String podId; 
 
         /**
-         * 监控指标样本序列
+         * Metrics.
          */
         public Builder metrics(java.util.List < Metric > metrics) {
             this.metrics = metrics;
@@ -58,7 +58,7 @@ public class PodMetric extends TeaModel {
         }
 
         /**
-         * Pod编号
+         * PodId.
          */
         public Builder podId(String podId) {
             this.podId = podId;

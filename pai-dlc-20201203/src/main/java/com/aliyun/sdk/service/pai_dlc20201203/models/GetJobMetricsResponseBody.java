@@ -62,7 +62,7 @@ public class GetJobMetricsResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * 作业ID
+         * JobId.
          */
         public Builder jobId(String jobId) {
             this.jobId = jobId;
@@ -70,7 +70,7 @@ public class GetJobMetricsResponseBody extends TeaModel {
         }
 
         /**
-         * 任务监控指标序列集合
+         * PodMetrics.
          */
         public Builder podMetrics(java.util.List < PodMetric > podMetrics) {
             this.podMetrics = podMetrics;
@@ -78,7 +78,7 @@ public class GetJobMetricsResponseBody extends TeaModel {
         }
 
         /**
-         * 请求ID
+         * RequestId.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

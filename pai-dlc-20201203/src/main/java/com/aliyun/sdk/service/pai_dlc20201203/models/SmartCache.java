@@ -218,7 +218,7 @@ public class SmartCache extends TeaModel {
         private String userId; 
 
         /**
-         * cache worker的数量单位是个
+         * CacheWorkerNum.
          */
         public Builder cacheWorkerNum(Long cacheWorkerNum) {
             this.cacheWorkerNum = cacheWorkerNum;
@@ -226,7 +226,7 @@ public class SmartCache extends TeaModel {
         }
 
         /**
-         * 每个cache worker的cache大小单位是GB
+         * CacheWorkerSize.
          */
         public Builder cacheWorkerSize(Long cacheWorkerSize) {
             this.cacheWorkerSize = cacheWorkerSize;
@@ -234,7 +234,7 @@ public class SmartCache extends TeaModel {
         }
 
         /**
-         * SmartCache 描述
+         * Description.
          */
         public Builder description(String description) {
             this.description = description;
@@ -242,7 +242,7 @@ public class SmartCache extends TeaModel {
         }
 
         /**
-         * SmartCache 名称
+         * DisplayName.
          */
         public Builder displayName(String displayName) {
             this.displayName = displayName;
@@ -250,7 +250,7 @@ public class SmartCache extends TeaModel {
         }
 
         /**
-         * 已运行时长
+         * Duration.
          */
         public Builder duration(String duration) {
             this.duration = duration;
@@ -258,7 +258,7 @@ public class SmartCache extends TeaModel {
         }
 
         /**
-         * OSS Endpoint
+         * Endpoint.
          */
         public Builder endpoint(String endpoint) {
             this.endpoint = endpoint;
@@ -266,7 +266,7 @@ public class SmartCache extends TeaModel {
         }
 
         /**
-         * 阿里云的NAS文件系统ID
+         * FileSystemId.
          */
         public Builder fileSystemId(String fileSystemId) {
             this.fileSystemId = fileSystemId;
@@ -274,7 +274,7 @@ public class SmartCache extends TeaModel {
         }
 
         /**
-         * 创建时间（UTC）
+         * GmtCreateTime.
          */
         public Builder gmtCreateTime(String gmtCreateTime) {
             this.gmtCreateTime = gmtCreateTime;
@@ -282,7 +282,7 @@ public class SmartCache extends TeaModel {
         }
 
         /**
-         * 修改时间（UTC）
+         * GmtModifyTime.
          */
         public Builder gmtModifyTime(String gmtModifyTime) {
             this.gmtModifyTime = gmtModifyTime;
@@ -290,7 +290,7 @@ public class SmartCache extends TeaModel {
         }
 
         /**
-         * 数据源本地挂载目录
+         * MountPath.
          */
         public Builder mountPath(String mountPath) {
             this.mountPath = mountPath;
@@ -298,7 +298,7 @@ public class SmartCache extends TeaModel {
         }
 
         /**
-         * 可选的超参数
+         * Options.
          */
         public Builder options(String options) {
             this.options = options;
@@ -306,7 +306,7 @@ public class SmartCache extends TeaModel {
         }
 
         /**
-         * OSS数据源路径
+         * Path.
          */
         public Builder path(String path) {
             this.path = path;
@@ -314,7 +314,7 @@ public class SmartCache extends TeaModel {
         }
 
         /**
-         * SmartCacheId
+         * SmartCacheId.
          */
         public Builder smartCacheId(String smartCacheId) {
             this.smartCacheId = smartCacheId;
@@ -322,7 +322,7 @@ public class SmartCache extends TeaModel {
         }
 
         /**
-         * 运行状态
+         * Status.
          */
         public Builder status(String status) {
             this.status = status;
@@ -330,7 +330,7 @@ public class SmartCache extends TeaModel {
         }
 
         /**
-         * 挂载的数据类型
+         * Type.
          */
         public Builder type(String type) {
             this.type = type;
@@ -338,7 +338,7 @@ public class SmartCache extends TeaModel {
         }
 
         /**
-         * 创建者Id
+         * UserId.
          */
         public Builder userId(String userId) {
             this.userId = userId;

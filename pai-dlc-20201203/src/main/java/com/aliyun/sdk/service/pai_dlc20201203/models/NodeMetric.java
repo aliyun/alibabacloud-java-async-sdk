@@ -50,7 +50,7 @@ public class NodeMetric extends TeaModel {
         private String nodeName; 
 
         /**
-         * 监控指标样本序列
+         * Metrics.
          */
         public Builder metrics(java.util.List < Metric > metrics) {
             this.metrics = metrics;
@@ -58,7 +58,7 @@ public class NodeMetric extends TeaModel {
         }
 
         /**
-         * 节点名称
+         * NodeName.
          */
         public Builder nodeName(String nodeName) {
             this.nodeName = nodeName;

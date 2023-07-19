@@ -126,7 +126,7 @@ public class GetJobMetricsRequest extends Request {
         } 
 
         /**
-         * 作业ID
+         * JobId.
          */
         public Builder jobId(String jobId) {
             this.putPathParameter("JobId", jobId);
@@ -135,7 +135,7 @@ public class GetJobMetricsRequest extends Request {
         }
 
         /**
-         * 截止时间
+         * EndTime.
          */
         public Builder endTime(String endTime) {
             this.putQueryParameter("EndTime", endTime);
@@ -144,7 +144,7 @@ public class GetJobMetricsRequest extends Request {
         }
 
         /**
-         * 指标类型
+         * MetricType.
          */
         public Builder metricType(String metricType) {
             this.putQueryParameter("MetricType", metricType);
@@ -153,7 +153,7 @@ public class GetJobMetricsRequest extends Request {
         }
 
         /**
-         * 起始时间
+         * StartTime.
          */
         public Builder startTime(String startTime) {
             this.putQueryParameter("StartTime", startTime);
@@ -162,7 +162,7 @@ public class GetJobMetricsRequest extends Request {
         }
 
         /**
-         * 时间间隔
+         * TimeStep.
          */
         public Builder timeStep(String timeStep) {
             this.putQueryParameter("TimeStep", timeStep);
@@ -171,7 +171,7 @@ public class GetJobMetricsRequest extends Request {
         }
 
         /**
-         * Token
+         * Token.
          */
         public Builder token(String token) {
             this.putQueryParameter("Token", token);

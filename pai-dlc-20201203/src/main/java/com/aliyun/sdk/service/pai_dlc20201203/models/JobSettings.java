@@ -158,7 +158,7 @@ public class JobSettings extends TeaModel {
         private java.util.Map < String, String > tags; 
 
         /**
-         * 额外高级参数配置
+         * AdvancedSettings.
          */
         public Builder advancedSettings(java.util.Map < String, ? > advancedSettings) {
             this.advancedSettings = advancedSettings;
@@ -166,7 +166,7 @@ public class JobSettings extends TeaModel {
         }
 
         /**
-         * 作业关联用户ID
+         * BusinessUserId.
          */
         public Builder businessUserId(String businessUserId) {
             this.businessUserId = businessUserId;
@@ -174,7 +174,7 @@ public class JobSettings extends TeaModel {
         }
 
         /**
-         * 调用方
+         * Caller.
          */
         public Builder caller(String caller) {
             this.caller = caller;
@@ -182,7 +182,7 @@ public class JobSettings extends TeaModel {
         }
 
         /**
-         * 允许打开作业容错监控
+         * EnableErrorMonitoringInAIMaster.
          */
         public Builder enableErrorMonitoringInAIMaster(Boolean enableErrorMonitoringInAIMaster) {
             this.enableErrorMonitoringInAIMaster = enableErrorMonitoringInAIMaster;
@@ -190,7 +190,7 @@ public class JobSettings extends TeaModel {
         }
 
         /**
-         * 运行oss追加写
+         * EnableOssAppend.
          */
         public Builder enableOssAppend(Boolean enableOssAppend) {
             this.enableOssAppend = enableOssAppend;
@@ -198,7 +198,7 @@ public class JobSettings extends TeaModel {
         }
 
         /**
-         * 允许作业使用RDMA
+         * EnableRDMA.
          */
         public Builder enableRDMA(Boolean enableRDMA) {
             this.enableRDMA = enableRDMA;
@@ -206,7 +206,7 @@ public class JobSettings extends TeaModel {
         }
 
         /**
-         * 允许作业使用潮汐资源
+         * EnableTideResource.
          */
         public Builder enableTideResource(Boolean enableTideResource) {
             this.enableTideResource = enableTideResource;
@@ -214,7 +214,7 @@ public class JobSettings extends TeaModel {
         }
 
         /**
-         * 用户指定容错监控的配置参数，比如指定是否启动基于log hang的检测
+         * ErrorMonitoringArgs.
          */
         public Builder errorMonitoringArgs(String errorMonitoringArgs) {
             this.errorMonitoringArgs = errorMonitoringArgs;
@@ -222,7 +222,7 @@ public class JobSettings extends TeaModel {
         }
 
         /**
-         * 作业的超卖资源使用方式（不接受/可接受/只接受）
+         * OversoldType.
          */
         public Builder oversoldType(String oversoldType) {
             this.oversoldType = oversoldType;
@@ -230,7 +230,7 @@ public class JobSettings extends TeaModel {
         }
 
         /**
-         * 工作流ID
+         * PipelineId.
          */
         public Builder pipelineId(String pipelineId) {
             this.pipelineId = pipelineId;
@@ -238,7 +238,7 @@ public class JobSettings extends TeaModel {
         }
 
         /**
-         * 自定义标签
+         * Tags.
          */
         public Builder tags(java.util.Map < String, String > tags) {
             this.tags = tags;
