@@ -111,6 +111,147 @@ public class DescribeDesktopsResponseBody extends TeaModel {
 
     } 
 
+    public static class DesktopDurationList extends TeaModel {
+        @NameInMap("PackageCreationTime")
+        private String packageCreationTime;
+
+        @NameInMap("PackageExpiredTime")
+        private String packageExpiredTime;
+
+        @NameInMap("PackageId")
+        private String packageId;
+
+        @NameInMap("PackageStatus")
+        private String packageStatus;
+
+        @NameInMap("TotalDuration")
+        private Long totalDuration;
+
+        @NameInMap("UsedDuration")
+        private Long usedDuration;
+
+        private DesktopDurationList(Builder builder) {
+            this.packageCreationTime = builder.packageCreationTime;
+            this.packageExpiredTime = builder.packageExpiredTime;
+            this.packageId = builder.packageId;
+            this.packageStatus = builder.packageStatus;
+            this.totalDuration = builder.totalDuration;
+            this.usedDuration = builder.usedDuration;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static DesktopDurationList create() {
+            return builder().build();
+        }
+
+        /**
+         * @return packageCreationTime
+         */
+        public String getPackageCreationTime() {
+            return this.packageCreationTime;
+        }
+
+        /**
+         * @return packageExpiredTime
+         */
+        public String getPackageExpiredTime() {
+            return this.packageExpiredTime;
+        }
+
+        /**
+         * @return packageId
+         */
+        public String getPackageId() {
+            return this.packageId;
+        }
+
+        /**
+         * @return packageStatus
+         */
+        public String getPackageStatus() {
+            return this.packageStatus;
+        }
+
+        /**
+         * @return totalDuration
+         */
+        public Long getTotalDuration() {
+            return this.totalDuration;
+        }
+
+        /**
+         * @return usedDuration
+         */
+        public Long getUsedDuration() {
+            return this.usedDuration;
+        }
+
+        public static final class Builder {
+            private String packageCreationTime; 
+            private String packageExpiredTime; 
+            private String packageId; 
+            private String packageStatus; 
+            private Long totalDuration; 
+            private Long usedDuration; 
+
+            /**
+             * PackageCreationTime.
+             */
+            public Builder packageCreationTime(String packageCreationTime) {
+                this.packageCreationTime = packageCreationTime;
+                return this;
+            }
+
+            /**
+             * PackageExpiredTime.
+             */
+            public Builder packageExpiredTime(String packageExpiredTime) {
+                this.packageExpiredTime = packageExpiredTime;
+                return this;
+            }
+
+            /**
+             * PackageId.
+             */
+            public Builder packageId(String packageId) {
+                this.packageId = packageId;
+                return this;
+            }
+
+            /**
+             * PackageStatus.
+             */
+            public Builder packageStatus(String packageStatus) {
+                this.packageStatus = packageStatus;
+                return this;
+            }
+
+            /**
+             * TotalDuration.
+             */
+            public Builder totalDuration(Long totalDuration) {
+                this.totalDuration = totalDuration;
+                return this;
+            }
+
+            /**
+             * UsedDuration.
+             */
+            public Builder usedDuration(Long usedDuration) {
+                this.usedDuration = usedDuration;
+                return this;
+            }
+
+            public DesktopDurationList build() {
+                return new DesktopDurationList(this);
+            } 
+
+        } 
+
+    }
     public static class Disks extends TeaModel {
         @NameInMap("DiskId")
         private String diskId;
@@ -230,6 +371,12 @@ public class DescribeDesktopsResponseBody extends TeaModel {
         @NameInMap("ReleaseNote")
         private String releaseNote;
 
+        @NameInMap("ReleaseNoteEn")
+        private String releaseNoteEn;
+
+        @NameInMap("ReleaseNoteJp")
+        private String releaseNoteJp;
+
         @NameInMap("Size")
         private Long size;
 
@@ -237,6 +384,8 @@ public class DescribeDesktopsResponseBody extends TeaModel {
             this.currentAppVersion = builder.currentAppVersion;
             this.newAppVersion = builder.newAppVersion;
             this.releaseNote = builder.releaseNote;
+            this.releaseNoteEn = builder.releaseNoteEn;
+            this.releaseNoteJp = builder.releaseNoteJp;
             this.size = builder.size;
         }
 
@@ -270,6 +419,20 @@ public class DescribeDesktopsResponseBody extends TeaModel {
         }
 
         /**
+         * @return releaseNoteEn
+         */
+        public String getReleaseNoteEn() {
+            return this.releaseNoteEn;
+        }
+
+        /**
+         * @return releaseNoteJp
+         */
+        public String getReleaseNoteJp() {
+            return this.releaseNoteJp;
+        }
+
+        /**
          * @return size
          */
         public Long getSize() {
@@ -280,6 +443,8 @@ public class DescribeDesktopsResponseBody extends TeaModel {
             private String currentAppVersion; 
             private String newAppVersion; 
             private String releaseNote; 
+            private String releaseNoteEn; 
+            private String releaseNoteJp; 
             private Long size; 
 
             /**
@@ -303,6 +468,22 @@ public class DescribeDesktopsResponseBody extends TeaModel {
              */
             public Builder releaseNote(String releaseNote) {
                 this.releaseNote = releaseNote;
+                return this;
+            }
+
+            /**
+             * ReleaseNoteEn.
+             */
+            public Builder releaseNoteEn(String releaseNoteEn) {
+                this.releaseNoteEn = releaseNoteEn;
+                return this;
+            }
+
+            /**
+             * ReleaseNoteJp.
+             */
+            public Builder releaseNoteJp(String releaseNoteJp) {
+                this.releaseNoteJp = releaseNoteJp;
                 return this;
             }
 
@@ -491,6 +672,9 @@ public class DescribeDesktopsResponseBody extends TeaModel {
         @NameInMap("DataDiskSize")
         private String dataDiskSize;
 
+        @NameInMap("DesktopDurationList")
+        private java.util.List < DesktopDurationList> desktopDurationList;
+
         @NameInMap("DesktopGroupId")
         private String desktopGroupId;
 
@@ -651,6 +835,7 @@ public class DescribeDesktopsResponseBody extends TeaModel {
             this.creationTime = builder.creationTime;
             this.dataDiskCategory = builder.dataDiskCategory;
             this.dataDiskSize = builder.dataDiskSize;
+            this.desktopDurationList = builder.desktopDurationList;
             this.desktopGroupId = builder.desktopGroupId;
             this.desktopId = builder.desktopId;
             this.desktopName = builder.desktopName;
@@ -772,6 +957,13 @@ public class DescribeDesktopsResponseBody extends TeaModel {
          */
         public String getDataDiskSize() {
             return this.dataDiskSize;
+        }
+
+        /**
+         * @return desktopDurationList
+         */
+        public java.util.List < DesktopDurationList> getDesktopDurationList() {
+            return this.desktopDurationList;
         }
 
         /**
@@ -1134,6 +1326,7 @@ public class DescribeDesktopsResponseBody extends TeaModel {
             private String creationTime; 
             private String dataDiskCategory; 
             private String dataDiskSize; 
+            private java.util.List < DesktopDurationList> desktopDurationList; 
             private String desktopGroupId; 
             private String desktopId; 
             private String desktopName; 
@@ -1254,6 +1447,14 @@ public class DescribeDesktopsResponseBody extends TeaModel {
              */
             public Builder dataDiskSize(String dataDiskSize) {
                 this.dataDiskSize = dataDiskSize;
+                return this;
+            }
+
+            /**
+             * DesktopDurationList.
+             */
+            public Builder desktopDurationList(java.util.List < DesktopDurationList> desktopDurationList) {
+                this.desktopDurationList = desktopDurationList;
                 return this;
             }
 

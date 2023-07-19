@@ -140,7 +140,16 @@ public class ModifyOfficeSiteAttributeRequest extends Request {
         } 
 
         /**
-         * DesktopAccessType.
+         * The method that you want to use to connect the Alibaba Cloud Workspace client to cloud desktops. Valid values:
+         * <p>
+         * 
+         * *   INTERNET: connects the client to cloud desktops only over the Internet.
+         * *   VPC: connects the client to cloud desktops only over a VPC.
+         * *   Any: connects clients to cloud desktops over the Internet or a VPC. You can select a connection method based on your business requirements when you connect to a cloud desktop from the client.
+         * 
+         * Default value: INTERNET.
+         * 
+         * > VPC connections are established by using Alibaba Cloud PrivateLink. You can use PrivateLink for free. When you set this parameter to VPC or Any, PrivateLink is automatically activated.
          */
         public Builder desktopAccessType(String desktopAccessType) {
             this.putQueryParameter("DesktopAccessType", desktopAccessType);
@@ -158,7 +167,7 @@ public class ModifyOfficeSiteAttributeRequest extends Request {
         }
 
         /**
-         * NeedVerifyLoginRisk.
+         * This parameter is only applicable to a workspace of the convenience account type, which indicates whether to require two-factor verification when you log on to the client. If two-factor verification is enabled, the system checks whether security risks exist within the logon account when a convenience user logs on to the client. If risks are detected, the system sends a verification code to the email address that is associated with the account. Then, the convenience user can log on to the client only after the verification code is correctly entered.
          */
         public Builder needVerifyLoginRisk(Boolean needVerifyLoginRisk) {
             this.putQueryParameter("NeedVerifyLoginRisk", needVerifyLoginRisk);
@@ -167,7 +176,7 @@ public class ModifyOfficeSiteAttributeRequest extends Request {
         }
 
         /**
-         * NeedVerifyZeroDevice.
+         * This parameter is only applicable to a workspace of the convenience account type, which indicates whether to require device verification when you log on to the client. For a workspace of the enterprise Active Directory (AD) account type, the value of this parameter is empty.
          */
         public Builder needVerifyZeroDevice(Boolean needVerifyZeroDevice) {
             this.putQueryParameter("NeedVerifyZeroDevice", needVerifyZeroDevice);
@@ -176,7 +185,7 @@ public class ModifyOfficeSiteAttributeRequest extends Request {
         }
 
         /**
-         * OfficeSiteId.
+         * The ID of the workspace.
          */
         public Builder officeSiteId(String officeSiteId) {
             this.putQueryParameter("OfficeSiteId", officeSiteId);
@@ -185,7 +194,7 @@ public class ModifyOfficeSiteAttributeRequest extends Request {
         }
 
         /**
-         * OfficeSiteName.
+         * The name of the workspace. We recommend that you specify a name that is easy to identify. The name must be 2 to 255 characters in length. The name can contain letters, digits, colons (:), underscores (\_), and hyphens (-). It must start with a letter but cannot start with http:// or https://.
          */
         public Builder officeSiteName(String officeSiteName) {
             this.putQueryParameter("OfficeSiteName", officeSiteName);
@@ -194,7 +203,7 @@ public class ModifyOfficeSiteAttributeRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * The ID of the region.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);

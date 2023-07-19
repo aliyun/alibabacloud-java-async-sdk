@@ -42,6 +42,10 @@ public class ModifyDesktopChargeTypeRequest extends Request {
     @Validation(required = true)
     private String regionId;
 
+    @Query
+    @NameInMap("UseDuration")
+    private Integer useDuration;
+
     private ModifyDesktopChargeTypeRequest(Builder builder) {
         super(builder);
         this.autoPay = builder.autoPay;
@@ -51,6 +55,7 @@ public class ModifyDesktopChargeTypeRequest extends Request {
         this.periodUnit = builder.periodUnit;
         this.promotionId = builder.promotionId;
         this.regionId = builder.regionId;
+        this.useDuration = builder.useDuration;
     }
 
     public static Builder builder() {
@@ -115,6 +120,13 @@ public class ModifyDesktopChargeTypeRequest extends Request {
         return this.regionId;
     }
 
+    /**
+     * @return useDuration
+     */
+    public Integer getUseDuration() {
+        return this.useDuration;
+    }
+
     public static final class Builder extends Request.Builder<ModifyDesktopChargeTypeRequest, Builder> {
         private Boolean autoPay; 
         private String chargeType; 
@@ -123,6 +135,7 @@ public class ModifyDesktopChargeTypeRequest extends Request {
         private String periodUnit; 
         private String promotionId; 
         private String regionId; 
+        private Integer useDuration; 
 
         private Builder() {
             super();
@@ -137,6 +150,7 @@ public class ModifyDesktopChargeTypeRequest extends Request {
             this.periodUnit = request.periodUnit;
             this.promotionId = request.promotionId;
             this.regionId = request.regionId;
+            this.useDuration = request.useDuration;
         } 
 
         /**
@@ -204,6 +218,15 @@ public class ModifyDesktopChargeTypeRequest extends Request {
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
             this.regionId = regionId;
+            return this;
+        }
+
+        /**
+         * UseDuration.
+         */
+        public Builder useDuration(Integer useDuration) {
+            this.putQueryParameter("UseDuration", useDuration);
+            this.useDuration = useDuration;
             return this;
         }
 

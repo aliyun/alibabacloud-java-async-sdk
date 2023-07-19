@@ -27,8 +27,24 @@ public class DescribePriceRequest extends Request {
     private java.util.List < BundleModels> bundleModels;
 
     @Query
+    @NameInMap("EduCdsSize")
+    private Integer eduCdsSize;
+
+    @Query
     @NameInMap("EduCommittedTime")
     private Integer eduCommittedTime;
+
+    @Query
+    @NameInMap("EduDesktopBundleId")
+    private String eduDesktopBundleId;
+
+    @Query
+    @NameInMap("EduDesktopNum")
+    private Integer eduDesktopNum;
+
+    @Query
+    @NameInMap("EduRoomClassify")
+    private String eduRoomClassify;
 
     @Query
     @NameInMap("EduStudentBundleId")
@@ -126,7 +142,11 @@ public class DescribePriceRequest extends Request {
         this.amount = builder.amount;
         this.bandwidth = builder.bandwidth;
         this.bundleModels = builder.bundleModels;
+        this.eduCdsSize = builder.eduCdsSize;
         this.eduCommittedTime = builder.eduCommittedTime;
+        this.eduDesktopBundleId = builder.eduDesktopBundleId;
+        this.eduDesktopNum = builder.eduDesktopNum;
+        this.eduRoomClassify = builder.eduRoomClassify;
         this.eduStudentBundleId = builder.eduStudentBundleId;
         this.eduStudentNum = builder.eduStudentNum;
         this.eduTeacherBundleId = builder.eduTeacherBundleId;
@@ -186,10 +206,38 @@ public class DescribePriceRequest extends Request {
     }
 
     /**
+     * @return eduCdsSize
+     */
+    public Integer getEduCdsSize() {
+        return this.eduCdsSize;
+    }
+
+    /**
      * @return eduCommittedTime
      */
     public Integer getEduCommittedTime() {
         return this.eduCommittedTime;
+    }
+
+    /**
+     * @return eduDesktopBundleId
+     */
+    public String getEduDesktopBundleId() {
+        return this.eduDesktopBundleId;
+    }
+
+    /**
+     * @return eduDesktopNum
+     */
+    public Integer getEduDesktopNum() {
+        return this.eduDesktopNum;
+    }
+
+    /**
+     * @return eduRoomClassify
+     */
+    public String getEduRoomClassify() {
+        return this.eduRoomClassify;
     }
 
     /**
@@ -350,7 +398,11 @@ public class DescribePriceRequest extends Request {
         private Integer amount; 
         private Integer bandwidth; 
         private java.util.List < BundleModels> bundleModels; 
+        private Integer eduCdsSize; 
         private Integer eduCommittedTime; 
+        private String eduDesktopBundleId; 
+        private Integer eduDesktopNum; 
+        private String eduRoomClassify; 
         private String eduStudentBundleId; 
         private Integer eduStudentNum; 
         private String eduTeacherBundleId; 
@@ -383,7 +435,11 @@ public class DescribePriceRequest extends Request {
             this.amount = request.amount;
             this.bandwidth = request.bandwidth;
             this.bundleModels = request.bundleModels;
+            this.eduCdsSize = request.eduCdsSize;
             this.eduCommittedTime = request.eduCommittedTime;
+            this.eduDesktopBundleId = request.eduDesktopBundleId;
+            this.eduDesktopNum = request.eduDesktopNum;
+            this.eduRoomClassify = request.eduRoomClassify;
             this.eduStudentBundleId = request.eduStudentBundleId;
             this.eduStudentNum = request.eduStudentNum;
             this.eduTeacherBundleId = request.eduTeacherBundleId;
@@ -440,11 +496,47 @@ public class DescribePriceRequest extends Request {
         }
 
         /**
+         * EduCdsSize.
+         */
+        public Builder eduCdsSize(Integer eduCdsSize) {
+            this.putQueryParameter("EduCdsSize", eduCdsSize);
+            this.eduCdsSize = eduCdsSize;
+            return this;
+        }
+
+        /**
          * EduCommittedTime.
          */
         public Builder eduCommittedTime(Integer eduCommittedTime) {
             this.putQueryParameter("EduCommittedTime", eduCommittedTime);
             this.eduCommittedTime = eduCommittedTime;
+            return this;
+        }
+
+        /**
+         * EduDesktopBundleId.
+         */
+        public Builder eduDesktopBundleId(String eduDesktopBundleId) {
+            this.putQueryParameter("EduDesktopBundleId", eduDesktopBundleId);
+            this.eduDesktopBundleId = eduDesktopBundleId;
+            return this;
+        }
+
+        /**
+         * EduDesktopNum.
+         */
+        public Builder eduDesktopNum(Integer eduDesktopNum) {
+            this.putQueryParameter("EduDesktopNum", eduDesktopNum);
+            this.eduDesktopNum = eduDesktopNum;
+            return this;
+        }
+
+        /**
+         * EduRoomClassify.
+         */
+        public Builder eduRoomClassify(String eduRoomClassify) {
+            this.putQueryParameter("EduRoomClassify", eduRoomClassify);
+            this.eduRoomClassify = eduRoomClassify;
             return this;
         }
 
@@ -723,9 +815,13 @@ public class DescribePriceRequest extends Request {
         @NameInMap("BundleId")
         private String bundleId;
 
+        @NameInMap("Duration")
+        private Integer duration;
+
         private BundleModels(Builder builder) {
             this.amount = builder.amount;
             this.bundleId = builder.bundleId;
+            this.duration = builder.duration;
         }
 
         public static Builder builder() {
@@ -750,9 +846,17 @@ public class DescribePriceRequest extends Request {
             return this.bundleId;
         }
 
+        /**
+         * @return duration
+         */
+        public Integer getDuration() {
+            return this.duration;
+        }
+
         public static final class Builder {
             private Integer amount; 
             private String bundleId; 
+            private Integer duration; 
 
             /**
              * The number of the resources. Default value: 1.
@@ -767,6 +871,14 @@ public class DescribePriceRequest extends Request {
              */
             public Builder bundleId(String bundleId) {
                 this.bundleId = bundleId;
+                return this;
+            }
+
+            /**
+             * Duration.
+             */
+            public Builder duration(Integer duration) {
+                this.duration = duration;
                 return this;
             }
 

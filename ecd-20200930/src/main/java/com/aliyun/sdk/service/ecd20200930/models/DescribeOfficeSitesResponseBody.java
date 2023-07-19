@@ -62,7 +62,7 @@ public class DescribeOfficeSitesResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * NextToken.
+         * The token that determines the start point of the next query. If this parameter is empty, all results are returned.
          */
         public Builder nextToken(String nextToken) {
             this.nextToken = nextToken;
@@ -70,7 +70,7 @@ public class DescribeOfficeSitesResponseBody extends TeaModel {
         }
 
         /**
-         * OfficeSites.
+         * Details of the workspaces.
          */
         public Builder officeSites(java.util.List < OfficeSites> officeSites) {
             this.officeSites = officeSites;
@@ -78,7 +78,7 @@ public class DescribeOfficeSitesResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -178,7 +178,7 @@ public class DescribeOfficeSitesResponseBody extends TeaModel {
             private String vSwitchId; 
 
             /**
-             * ADConnectorAddress.
+             * The IP address of the AD connector.
              */
             public Builder ADConnectorAddress(String ADConnectorAddress) {
                 this.ADConnectorAddress = ADConnectorAddress;
@@ -186,7 +186,7 @@ public class DescribeOfficeSitesResponseBody extends TeaModel {
             }
 
             /**
-             * ConnectorStatus.
+             * The state of the AD connector.
              */
             public Builder connectorStatus(String connectorStatus) {
                 this.connectorStatus = connectorStatus;
@@ -194,7 +194,7 @@ public class DescribeOfficeSitesResponseBody extends TeaModel {
             }
 
             /**
-             * NetworkInterfaceId.
+             * The ID of the network interface controller (NIC) that is associated with the AD connector.
              */
             public Builder networkInterfaceId(String networkInterfaceId) {
                 this.networkInterfaceId = networkInterfaceId;
@@ -202,7 +202,7 @@ public class DescribeOfficeSitesResponseBody extends TeaModel {
             }
 
             /**
-             * Specification.
+             * The type of the AD connector.
              */
             public Builder specification(String specification) {
                 this.specification = specification;
@@ -210,7 +210,7 @@ public class DescribeOfficeSitesResponseBody extends TeaModel {
             }
 
             /**
-             * TrustKey.
+             * The trust password that is specified when you configured the AD trust relationship.
              */
             public Builder trustKey(String trustKey) {
                 this.trustKey = trustKey;
@@ -218,7 +218,7 @@ public class DescribeOfficeSitesResponseBody extends TeaModel {
             }
 
             /**
-             * VSwitchId.
+             * The ID of the vSwitch that corresponds to the network of the AD connector.
              */
             public Builder vSwitchId(String vSwitchId) {
                 this.vSwitchId = vSwitchId;
@@ -295,7 +295,7 @@ public class DescribeOfficeSitesResponseBody extends TeaModel {
             private String timeStamp; 
 
             /**
-             * Level.
+             * The log level.
              */
             public Builder level(String level) {
                 this.level = level;
@@ -303,7 +303,7 @@ public class DescribeOfficeSitesResponseBody extends TeaModel {
             }
 
             /**
-             * Message.
+             * Details of the log entry.
              */
             public Builder message(String message) {
                 this.message = message;
@@ -311,7 +311,7 @@ public class DescribeOfficeSitesResponseBody extends TeaModel {
             }
 
             /**
-             * Step.
+             * The step that corresponds to the log entry.
              */
             public Builder step(String step) {
                 this.step = step;
@@ -319,7 +319,7 @@ public class DescribeOfficeSitesResponseBody extends TeaModel {
             }
 
             /**
-             * TimeStamp.
+             * The time when the log entry was printed.
              */
             public Builder timeStamp(String timeStamp) {
                 this.timeStamp = timeStamp;
@@ -342,6 +342,9 @@ public class DescribeOfficeSitesResponseBody extends TeaModel {
 
         @NameInMap("Bandwidth")
         private Integer bandwidth;
+
+        @NameInMap("CenAttachStatus")
+        private String cenAttachStatus;
 
         @NameInMap("CenId")
         private String cenId;
@@ -470,6 +473,7 @@ public class DescribeOfficeSitesResponseBody extends TeaModel {
             this.ADConnectors = builder.ADConnectors;
             this.adHostname = builder.adHostname;
             this.bandwidth = builder.bandwidth;
+            this.cenAttachStatus = builder.cenAttachStatus;
             this.cenId = builder.cenId;
             this.cidrBlock = builder.cidrBlock;
             this.cloudBoxOfficeSite = builder.cloudBoxOfficeSite;
@@ -540,6 +544,13 @@ public class DescribeOfficeSitesResponseBody extends TeaModel {
          */
         public Integer getBandwidth() {
             return this.bandwidth;
+        }
+
+        /**
+         * @return cenAttachStatus
+         */
+        public String getCenAttachStatus() {
+            return this.cenAttachStatus;
         }
 
         /**
@@ -833,6 +844,7 @@ public class DescribeOfficeSitesResponseBody extends TeaModel {
             private java.util.List < ADConnectors> ADConnectors; 
             private String adHostname; 
             private Integer bandwidth; 
+            private String cenAttachStatus; 
             private String cenId; 
             private String cidrBlock; 
             private Boolean cloudBoxOfficeSite; 
@@ -876,7 +888,7 @@ public class DescribeOfficeSitesResponseBody extends TeaModel {
             private String vpcType; 
 
             /**
-             * ADConnectors.
+             * Details of the AD connectors.
              */
             public Builder ADConnectors(java.util.List < ADConnectors> ADConnectors) {
                 this.ADConnectors = ADConnectors;
@@ -884,7 +896,7 @@ public class DescribeOfficeSitesResponseBody extends TeaModel {
             }
 
             /**
-             * AdHostname.
+             * The hostname of the domain controller. The hostname must comply with the naming conventions for hostnames in Windows.
              */
             public Builder adHostname(String adHostname) {
                 this.adHostname = adHostname;
@@ -892,7 +904,9 @@ public class DescribeOfficeSitesResponseBody extends TeaModel {
             }
 
             /**
-             * Bandwidth.
+             * The maximum public bandwidth of the Internet access package. Valid values: 0 to 1000.\
+             * <p>
+             * If the value of this parameter is 0, Internet access is disabled.
              */
             public Builder bandwidth(Integer bandwidth) {
                 this.bandwidth = bandwidth;
@@ -900,7 +914,15 @@ public class DescribeOfficeSitesResponseBody extends TeaModel {
             }
 
             /**
-             * CenId.
+             * CenAttachStatus.
+             */
+            public Builder cenAttachStatus(String cenAttachStatus) {
+                this.cenAttachStatus = cenAttachStatus;
+                return this;
+            }
+
+            /**
+             * The ID of the Cloud Enterprise Network (CEN) instance.
              */
             public Builder cenId(String cenId) {
                 this.cenId = cenId;
@@ -908,7 +930,7 @@ public class DescribeOfficeSitesResponseBody extends TeaModel {
             }
 
             /**
-             * CidrBlock.
+             * The IPv4 CIDR block that is included in the secure office network of the workspace.
              */
             public Builder cidrBlock(String cidrBlock) {
                 this.cidrBlock = cidrBlock;
@@ -916,7 +938,7 @@ public class DescribeOfficeSitesResponseBody extends TeaModel {
             }
 
             /**
-             * CloudBoxOfficeSite.
+             * Indicates whether the workspace is created for cloud desktops on a cloud box.
              */
             public Builder cloudBoxOfficeSite(Boolean cloudBoxOfficeSite) {
                 this.cloudBoxOfficeSite = cloudBoxOfficeSite;
@@ -924,7 +946,7 @@ public class DescribeOfficeSitesResponseBody extends TeaModel {
             }
 
             /**
-             * CreationTime.
+             * The time when the workspace was created.
              */
             public Builder creationTime(String creationTime) {
                 this.creationTime = creationTime;
@@ -932,7 +954,7 @@ public class DescribeOfficeSitesResponseBody extends TeaModel {
             }
 
             /**
-             * CustomSecurityGroupId.
+             * The ID of the security group.
              */
             public Builder customSecurityGroupId(String customSecurityGroupId) {
                 this.customSecurityGroupId = customSecurityGroupId;
@@ -940,7 +962,7 @@ public class DescribeOfficeSitesResponseBody extends TeaModel {
             }
 
             /**
-             * DesktopAccessType.
+             * The method used to connect the Alibaba Cloud Workspace client to cloud desktops.
              */
             public Builder desktopAccessType(String desktopAccessType) {
                 this.desktopAccessType = desktopAccessType;
@@ -948,7 +970,7 @@ public class DescribeOfficeSitesResponseBody extends TeaModel {
             }
 
             /**
-             * DesktopCount.
+             * The number of cloud desktops that are created.
              */
             public Builder desktopCount(Long desktopCount) {
                 this.desktopCount = desktopCount;
@@ -956,7 +978,7 @@ public class DescribeOfficeSitesResponseBody extends TeaModel {
             }
 
             /**
-             * DesktopVpcEndpoint.
+             * The endpoint that is used to connect to cloud desktops over a VPC.
              */
             public Builder desktopVpcEndpoint(String desktopVpcEndpoint) {
                 this.desktopVpcEndpoint = desktopVpcEndpoint;
@@ -964,7 +986,7 @@ public class DescribeOfficeSitesResponseBody extends TeaModel {
             }
 
             /**
-             * DnsAddress.
+             * The DNS addresses of the AD domains.
              */
             public Builder dnsAddress(java.util.List < String > dnsAddress) {
                 this.dnsAddress = dnsAddress;
@@ -972,7 +994,7 @@ public class DescribeOfficeSitesResponseBody extends TeaModel {
             }
 
             /**
-             * DnsUserName.
+             * The username of the DNS account.
              */
             public Builder dnsUserName(String dnsUserName) {
                 this.dnsUserName = dnsUserName;
@@ -980,7 +1002,7 @@ public class DescribeOfficeSitesResponseBody extends TeaModel {
             }
 
             /**
-             * DomainName.
+             * The domain name of the enterprise Active Directory (AD) system.
              */
             public Builder domainName(String domainName) {
                 this.domainName = domainName;
@@ -988,7 +1010,7 @@ public class DescribeOfficeSitesResponseBody extends TeaModel {
             }
 
             /**
-             * DomainPassword.
+             * The password of the domain administrator.
              */
             public Builder domainPassword(String domainPassword) {
                 this.domainPassword = domainPassword;
@@ -996,7 +1018,7 @@ public class DescribeOfficeSitesResponseBody extends TeaModel {
             }
 
             /**
-             * DomainUserName.
+             * The username of the domain administrator.
              */
             public Builder domainUserName(String domainUserName) {
                 this.domainUserName = domainUserName;
@@ -1004,7 +1026,7 @@ public class DescribeOfficeSitesResponseBody extends TeaModel {
             }
 
             /**
-             * EnableAdminAccess.
+             * Indicates whether the permissions of the desktop administrator are granted to the user of the cloud desktop.
              */
             public Builder enableAdminAccess(Boolean enableAdminAccess) {
                 this.enableAdminAccess = enableAdminAccess;
@@ -1012,7 +1034,7 @@ public class DescribeOfficeSitesResponseBody extends TeaModel {
             }
 
             /**
-             * EnableCrossDesktopAccess.
+             * Indicates whether the desktop communication feature is enabled for cloud desktops in the same workspace. If the feature is enabled, cloud desktops in the same workspace can access each other.
              */
             public Builder enableCrossDesktopAccess(Boolean enableCrossDesktopAccess) {
                 this.enableCrossDesktopAccess = enableCrossDesktopAccess;
@@ -1020,7 +1042,7 @@ public class DescribeOfficeSitesResponseBody extends TeaModel {
             }
 
             /**
-             * EnableInternetAccess.
+             * Indicates whether Internet access is enabled.
              */
             public Builder enableInternetAccess(Boolean enableInternetAccess) {
                 this.enableInternetAccess = enableInternetAccess;
@@ -1028,7 +1050,7 @@ public class DescribeOfficeSitesResponseBody extends TeaModel {
             }
 
             /**
-             * FileSystemIds.
+             * The IDs of the Apsara File Storage NAS (NAS) file systems.
              */
             public Builder fileSystemIds(java.util.List < String > fileSystemIds) {
                 this.fileSystemIds = fileSystemIds;
@@ -1036,7 +1058,7 @@ public class DescribeOfficeSitesResponseBody extends TeaModel {
             }
 
             /**
-             * Logs.
+             * Details of the registration logs.
              */
             public Builder logs(java.util.List < Logs> logs) {
                 this.logs = logs;
@@ -1044,7 +1066,7 @@ public class DescribeOfficeSitesResponseBody extends TeaModel {
             }
 
             /**
-             * MfaEnabled.
+             * Indicates whether multi-factor authentication (MFA) is enabled.
              */
             public Builder mfaEnabled(Boolean mfaEnabled) {
                 this.mfaEnabled = mfaEnabled;
@@ -1052,7 +1074,7 @@ public class DescribeOfficeSitesResponseBody extends TeaModel {
             }
 
             /**
-             * Name.
+             * The name of the workspace. The name is unique in the same region.
              */
             public Builder name(String name) {
                 this.name = name;
@@ -1060,7 +1082,9 @@ public class DescribeOfficeSitesResponseBody extends TeaModel {
             }
 
             /**
-             * NeedVerifyLoginRisk.
+             * Indicates whether two-factor verification for logons is enabled. This parameter is returned only for workspaces of the convenience account type.\
+             * <p>
+             * If two-factor verification is enabled, the system checks whether security risks exist within the logon account when a convenience user logs on to an Alibaba Cloud Workspace client. If risks are detected, the system sends a verification code to the email address that is associated with the account. Then, the convenience user can log on to the client only after the user enters the correct verification code.
              */
             public Builder needVerifyLoginRisk(Boolean needVerifyLoginRisk) {
                 this.needVerifyLoginRisk = needVerifyLoginRisk;
@@ -1068,7 +1092,7 @@ public class DescribeOfficeSitesResponseBody extends TeaModel {
             }
 
             /**
-             * NeedVerifyZeroDevice.
+             * Indicates whether trusted device verification is enabled.
              */
             public Builder needVerifyZeroDevice(Boolean needVerifyZeroDevice) {
                 this.needVerifyZeroDevice = needVerifyZeroDevice;
@@ -1076,7 +1100,7 @@ public class DescribeOfficeSitesResponseBody extends TeaModel {
             }
 
             /**
-             * NetworkPackageId.
+             * The ID of the Internet access package.
              */
             public Builder networkPackageId(String networkPackageId) {
                 this.networkPackageId = networkPackageId;
@@ -1084,7 +1108,7 @@ public class DescribeOfficeSitesResponseBody extends TeaModel {
             }
 
             /**
-             * OfficeSiteId.
+             * The ID of the workspace.
              */
             public Builder officeSiteId(String officeSiteId) {
                 this.officeSiteId = officeSiteId;
@@ -1092,7 +1116,7 @@ public class DescribeOfficeSitesResponseBody extends TeaModel {
             }
 
             /**
-             * OfficeSiteType.
+             * The account type of the workspace.
              */
             public Builder officeSiteType(String officeSiteType) {
                 this.officeSiteType = officeSiteType;
@@ -1100,7 +1124,7 @@ public class DescribeOfficeSitesResponseBody extends TeaModel {
             }
 
             /**
-             * OuName.
+             * The name of the organizational unit (OU) that is connected to the AD domain.
              */
             public Builder ouName(String ouName) {
                 this.ouName = ouName;
@@ -1108,7 +1132,7 @@ public class DescribeOfficeSitesResponseBody extends TeaModel {
             }
 
             /**
-             * ProtocolType.
+             * The type of the protocol.
              */
             public Builder protocolType(String protocolType) {
                 this.protocolType = protocolType;
@@ -1140,7 +1164,7 @@ public class DescribeOfficeSitesResponseBody extends TeaModel {
             }
 
             /**
-             * SsoEnabled.
+             * Indicates whether single sign-on (SSO) is enabled.
              */
             public Builder ssoEnabled(Boolean ssoEnabled) {
                 this.ssoEnabled = ssoEnabled;
@@ -1148,7 +1172,7 @@ public class DescribeOfficeSitesResponseBody extends TeaModel {
             }
 
             /**
-             * SsoType.
+             * The type of SSO.
              */
             public Builder ssoType(String ssoType) {
                 this.ssoType = ssoType;
@@ -1156,7 +1180,7 @@ public class DescribeOfficeSitesResponseBody extends TeaModel {
             }
 
             /**
-             * Status.
+             * The state of the workspace.
              */
             public Builder status(String status) {
                 this.status = status;
@@ -1164,7 +1188,7 @@ public class DescribeOfficeSitesResponseBody extends TeaModel {
             }
 
             /**
-             * SubDnsAddress.
+             * The DNS addresses of the AD subdomains.
              */
             public Builder subDnsAddress(java.util.List < String > subDnsAddress) {
                 this.subDnsAddress = subDnsAddress;
@@ -1172,7 +1196,7 @@ public class DescribeOfficeSitesResponseBody extends TeaModel {
             }
 
             /**
-             * SubDomainName.
+             * The username of a Domain Name System (DNS) account in the AD subdomain.
              */
             public Builder subDomainName(String subDomainName) {
                 this.subDomainName = subDomainName;
@@ -1196,7 +1220,7 @@ public class DescribeOfficeSitesResponseBody extends TeaModel {
             }
 
             /**
-             * TrustPassword.
+             * > This parameter is unavailable.
              */
             public Builder trustPassword(String trustPassword) {
                 this.trustPassword = trustPassword;
@@ -1204,7 +1228,7 @@ public class DescribeOfficeSitesResponseBody extends TeaModel {
             }
 
             /**
-             * VSwitchIds.
+             * The IDs of the vSwitches.
              */
             public Builder vSwitchIds(java.util.List < String > vSwitchIds) {
                 this.vSwitchIds = vSwitchIds;
@@ -1212,7 +1236,7 @@ public class DescribeOfficeSitesResponseBody extends TeaModel {
             }
 
             /**
-             * VpcId.
+             * The ID of the secure office network of the workspace. The ID is also the ID of the virtual private cloud (VPC) used by the workspace.
              */
             public Builder vpcId(String vpcId) {
                 this.vpcId = vpcId;
@@ -1220,7 +1244,7 @@ public class DescribeOfficeSitesResponseBody extends TeaModel {
             }
 
             /**
-             * VpcType.
+             * The VPC type.
              */
             public Builder vpcType(String vpcType) {
                 this.vpcType = vpcType;

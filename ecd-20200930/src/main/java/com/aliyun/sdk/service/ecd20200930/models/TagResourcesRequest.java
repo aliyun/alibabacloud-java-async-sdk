@@ -100,7 +100,7 @@ public class TagResourcesRequest extends Request {
         } 
 
         /**
-         * The IDs of the resources. You can specify 1 to 50 resource IDs.
+         * The region ID.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -109,7 +109,7 @@ public class TagResourcesRequest extends Request {
         }
 
         /**
-         * The ID of the request.
+         * The resource ID, namely the cloud desktop ID. Valid values of N: 1 to 50.
          */
         public Builder resourceId(java.util.List < String > resourceId) {
             this.putQueryParameter("ResourceId", resourceId);
@@ -118,7 +118,7 @@ public class TagResourcesRequest extends Request {
         }
 
         /**
-         * The tags. You can specify 1 to 20 tags.
+         * The resource type. Valid value: ALIYUN::GWS::INSTANCE.
          */
         public Builder resourceType(String resourceType) {
             this.putQueryParameter("ResourceType", resourceType);
@@ -127,10 +127,7 @@ public class TagResourcesRequest extends Request {
         }
 
         /**
-         * The key of tag.
-         * <p>
-         * 
-         * The tag key cannot be an empty string. It can be up to 128 characters in length and cannot start with `acs:` or `aliyun`. It cannot contain `http://` or `https://`.
+         * The tags.
          */
         public Builder tag(java.util.List < Tag> tag) {
             this.putQueryParameter("Tag", tag);
@@ -184,7 +181,9 @@ public class TagResourcesRequest extends Request {
             private String value; 
 
             /**
-             * Key.
+             * The keys of a tag. Valid values of N: 1 to 20.\
+             * <p>
+             * You cannot enter an empty string as the parameter value. The tag key can be up to 128 characters in length and cannot contain `http://` or `https://`. The key cannot start with `aliyun` and `acs:`.
              */
             public Builder key(String key) {
                 this.key = key;
@@ -192,7 +191,9 @@ public class TagResourcesRequest extends Request {
             }
 
             /**
-             * Value.
+             * The tag value. Valid values of N: 1 to 20.\
+             * <p>
+             * You can enter an empty string as the parameter value. The tag value must be up to 128 characters in length and cannot contain `http://` or `https://`. The value cannot start with `acs:`.
              */
             public Builder value(String value) {
                 this.value = value;

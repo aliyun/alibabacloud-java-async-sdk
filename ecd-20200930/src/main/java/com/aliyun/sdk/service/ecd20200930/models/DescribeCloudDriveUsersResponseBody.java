@@ -95,6 +95,9 @@ public class DescribeCloudDriveUsersResponseBody extends TeaModel {
         @NameInMap("DriveId")
         private String driveId;
 
+        @NameInMap("EndUserId")
+        private String endUserId;
+
         @NameInMap("Status")
         private String status;
 
@@ -112,6 +115,7 @@ public class DescribeCloudDriveUsersResponseBody extends TeaModel {
 
         private CloudDriveUsers(Builder builder) {
             this.driveId = builder.driveId;
+            this.endUserId = builder.endUserId;
             this.status = builder.status;
             this.totalSize = builder.totalSize;
             this.usedSize = builder.usedSize;
@@ -132,6 +136,13 @@ public class DescribeCloudDriveUsersResponseBody extends TeaModel {
          */
         public String getDriveId() {
             return this.driveId;
+        }
+
+        /**
+         * @return endUserId
+         */
+        public String getEndUserId() {
+            return this.endUserId;
         }
 
         /**
@@ -171,6 +182,7 @@ public class DescribeCloudDriveUsersResponseBody extends TeaModel {
 
         public static final class Builder {
             private String driveId; 
+            private String endUserId; 
             private String status; 
             private Long totalSize; 
             private Long usedSize; 
@@ -182,6 +194,14 @@ public class DescribeCloudDriveUsersResponseBody extends TeaModel {
              */
             public Builder driveId(String driveId) {
                 this.driveId = driveId;
+                return this;
+            }
+
+            /**
+             * EndUserId.
+             */
+            public Builder endUserId(String endUserId) {
+                this.endUserId = endUserId;
                 return this;
             }
 

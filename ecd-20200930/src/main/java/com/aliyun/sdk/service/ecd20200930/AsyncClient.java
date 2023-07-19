@@ -240,6 +240,8 @@ public interface AsyncClient extends SdkAutoCloseable {
      */
     CompletableFuture<DeleteVirtualMFADeviceResponse> deleteVirtualMFADevice(DeleteVirtualMFADeviceRequest request);
 
+    CompletableFuture<DescribeAclEntriesResponse> describeAclEntries(DescribeAclEntriesRequest request);
+
     CompletableFuture<DescribeAlarmEventStackInfoResponse> describeAlarmEventStackInfo(DescribeAlarmEventStackInfoRequest request);
 
     /**
@@ -448,6 +450,8 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<ModifyADConnectorDirectoryResponse> modifyADConnectorDirectory(ModifyADConnectorDirectoryRequest request);
 
     CompletableFuture<ModifyADConnectorOfficeSiteResponse> modifyADConnectorOfficeSite(ModifyADConnectorOfficeSiteRequest request);
+
+    CompletableFuture<ModifyAclEntriesResponse> modifyAclEntries(ModifyAclEntriesRequest request);
 
     CompletableFuture<ModifyAutoSnapshotPolicyResponse> modifyAutoSnapshotPolicy(ModifyAutoSnapshotPolicyRequest request);
 
@@ -682,7 +686,7 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<StopInvocationResponse> stopInvocation(StopInvocationRequest request);
 
     /**
-      * The ID of the resource, which is the ID of the cloud desktop.
+      * If TagKey is specified, the new TagValue value overrides the original TagValue value.
       *
      */
     CompletableFuture<TagResourcesResponse> tagResources(TagResourcesRequest request);
