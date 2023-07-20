@@ -17,6 +17,10 @@ public class DescribeAssetDetailByUuidsRequest extends Request {
     private String lang;
 
     @Query
+    @NameInMap("ResourceDirectoryAccountId")
+    private Long resourceDirectoryAccountId;
+
+    @Query
     @NameInMap("Uuids")
     @Validation(required = true)
     private String uuids;
@@ -24,6 +28,7 @@ public class DescribeAssetDetailByUuidsRequest extends Request {
     private DescribeAssetDetailByUuidsRequest(Builder builder) {
         super(builder);
         this.lang = builder.lang;
+        this.resourceDirectoryAccountId = builder.resourceDirectoryAccountId;
         this.uuids = builder.uuids;
     }
 
@@ -48,6 +53,13 @@ public class DescribeAssetDetailByUuidsRequest extends Request {
     }
 
     /**
+     * @return resourceDirectoryAccountId
+     */
+    public Long getResourceDirectoryAccountId() {
+        return this.resourceDirectoryAccountId;
+    }
+
+    /**
      * @return uuids
      */
     public String getUuids() {
@@ -56,6 +68,7 @@ public class DescribeAssetDetailByUuidsRequest extends Request {
 
     public static final class Builder extends Request.Builder<DescribeAssetDetailByUuidsRequest, Builder> {
         private String lang; 
+        private Long resourceDirectoryAccountId; 
         private String uuids; 
 
         private Builder() {
@@ -65,6 +78,7 @@ public class DescribeAssetDetailByUuidsRequest extends Request {
         private Builder(DescribeAssetDetailByUuidsRequest request) {
             super(request);
             this.lang = request.lang;
+            this.resourceDirectoryAccountId = request.resourceDirectoryAccountId;
             this.uuids = request.uuids;
         } 
 
@@ -78,6 +92,15 @@ public class DescribeAssetDetailByUuidsRequest extends Request {
         public Builder lang(String lang) {
             this.putQueryParameter("Lang", lang);
             this.lang = lang;
+            return this;
+        }
+
+        /**
+         * ResourceDirectoryAccountId.
+         */
+        public Builder resourceDirectoryAccountId(Long resourceDirectoryAccountId) {
+            this.putQueryParameter("ResourceDirectoryAccountId", resourceDirectoryAccountId);
+            this.resourceDirectoryAccountId = resourceDirectoryAccountId;
             return this;
         }
 

@@ -21,6 +21,10 @@ public class ListCheckResultRequest extends Request {
     private Integer currentPage;
 
     @Query
+    @NameInMap("CustomParam")
+    private Boolean customParam;
+
+    @Query
     @NameInMap("InstanceIds")
     private java.util.List < String > instanceIds;
 
@@ -72,6 +76,7 @@ public class ListCheckResultRequest extends Request {
         super(builder);
         this.checkKey = builder.checkKey;
         this.currentPage = builder.currentPage;
+        this.customParam = builder.customParam;
         this.instanceIds = builder.instanceIds;
         this.instanceTypes = builder.instanceTypes;
         this.lang = builder.lang;
@@ -111,6 +116,13 @@ public class ListCheckResultRequest extends Request {
      */
     public Integer getCurrentPage() {
         return this.currentPage;
+    }
+
+    /**
+     * @return customParam
+     */
+    public Boolean getCustomParam() {
+        return this.customParam;
     }
 
     /**
@@ -200,6 +212,7 @@ public class ListCheckResultRequest extends Request {
     public static final class Builder extends Request.Builder<ListCheckResultRequest, Builder> {
         private String checkKey; 
         private Integer currentPage; 
+        private Boolean customParam; 
         private java.util.List < String > instanceIds; 
         private java.util.List < String > instanceTypes; 
         private String lang; 
@@ -221,6 +234,7 @@ public class ListCheckResultRequest extends Request {
             super(request);
             this.checkKey = request.checkKey;
             this.currentPage = request.currentPage;
+            this.customParam = request.customParam;
             this.instanceIds = request.instanceIds;
             this.instanceTypes = request.instanceTypes;
             this.lang = request.lang;
@@ -250,6 +264,15 @@ public class ListCheckResultRequest extends Request {
         public Builder currentPage(Integer currentPage) {
             this.putQueryParameter("CurrentPage", currentPage);
             this.currentPage = currentPage;
+            return this;
+        }
+
+        /**
+         * CustomParam.
+         */
+        public Builder customParam(Boolean customParam) {
+            this.putQueryParameter("CustomParam", customParam);
+            this.customParam = customParam;
             return this;
         }
 

@@ -257,6 +257,9 @@ public class ListCheckResultResponseBody extends TeaModel {
         @NameInMap("Status")
         private String status;
 
+        @NameInMap("StatusMessage")
+        private String statusMessage;
+
         @NameInMap("TaskId")
         private String taskId;
 
@@ -278,6 +281,7 @@ public class ListCheckResultResponseBody extends TeaModel {
             this.lastCheckTime = builder.lastCheckTime;
             this.riskLevel = builder.riskLevel;
             this.status = builder.status;
+            this.statusMessage = builder.statusMessage;
             this.taskId = builder.taskId;
             this.trialPermission = builder.trialPermission;
             this.vendor = builder.vendor;
@@ -349,6 +353,13 @@ public class ListCheckResultResponseBody extends TeaModel {
         }
 
         /**
+         * @return statusMessage
+         */
+        public String getStatusMessage() {
+            return this.statusMessage;
+        }
+
+        /**
          * @return taskId
          */
         public String getTaskId() {
@@ -385,6 +396,7 @@ public class ListCheckResultResponseBody extends TeaModel {
             private Long lastCheckTime; 
             private String riskLevel; 
             private String status; 
+            private String statusMessage; 
             private String taskId; 
             private Boolean trialPermission; 
             private String vendor; 
@@ -514,6 +526,14 @@ public class ListCheckResultResponseBody extends TeaModel {
              */
             public Builder status(String status) {
                 this.status = status;
+                return this;
+            }
+
+            /**
+             * StatusMessage.
+             */
+            public Builder statusMessage(String statusMessage) {
+                this.statusMessage = statusMessage;
                 return this;
             }
 

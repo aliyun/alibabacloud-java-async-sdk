@@ -7,15 +7,15 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
- * {@link ValidateHcWarningsResponseBody} extends {@link TeaModel}
+ * {@link DeleteBinarySecurityPolicyResponseBody} extends {@link TeaModel}
  *
- * <p>ValidateHcWarningsResponseBody</p>
+ * <p>DeleteBinarySecurityPolicyResponseBody</p>
  */
-public class ValidateHcWarningsResponseBody extends TeaModel {
+public class DeleteBinarySecurityPolicyResponseBody extends TeaModel {
     @NameInMap("RequestId")
     private String requestId;
 
-    private ValidateHcWarningsResponseBody(Builder builder) {
+    private DeleteBinarySecurityPolicyResponseBody(Builder builder) {
         this.requestId = builder.requestId;
     }
 
@@ -23,7 +23,7 @@ public class ValidateHcWarningsResponseBody extends TeaModel {
         return new Builder();
     }
 
-    public static ValidateHcWarningsResponseBody create() {
+    public static DeleteBinarySecurityPolicyResponseBody create() {
         return builder().build();
     }
 
@@ -38,15 +38,15 @@ public class ValidateHcWarningsResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The request ID.
+         * RequestId.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
             return this;
         }
 
-        public ValidateHcWarningsResponseBody build() {
-            return new ValidateHcWarningsResponseBody(this);
+        public DeleteBinarySecurityPolicyResponseBody build() {
+            return new DeleteBinarySecurityPolicyResponseBody(this);
         } 
 
     } 

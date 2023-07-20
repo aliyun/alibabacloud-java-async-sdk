@@ -93,6 +93,10 @@ public class DescribeSuspEventsRequest extends Request {
     private String remark;
 
     @Query
+    @NameInMap("ResourceDirectoryAccountId")
+    private Long resourceDirectoryAccountId;
+
+    @Query
     @NameInMap("SortColumn")
     private String sortColumn;
 
@@ -158,6 +162,7 @@ public class DescribeSuspEventsRequest extends Request {
         this.pageSize = builder.pageSize;
         this.parentEventTypes = builder.parentEventTypes;
         this.remark = builder.remark;
+        this.resourceDirectoryAccountId = builder.resourceDirectoryAccountId;
         this.sortColumn = builder.sortColumn;
         this.sortType = builder.sortType;
         this.source = builder.source;
@@ -325,6 +330,13 @@ public class DescribeSuspEventsRequest extends Request {
     }
 
     /**
+     * @return resourceDirectoryAccountId
+     */
+    public Long getResourceDirectoryAccountId() {
+        return this.resourceDirectoryAccountId;
+    }
+
+    /**
      * @return sortColumn
      */
     public String getSortColumn() {
@@ -422,6 +434,7 @@ public class DescribeSuspEventsRequest extends Request {
         private String pageSize; 
         private String parentEventTypes; 
         private String remark; 
+        private Long resourceDirectoryAccountId; 
         private String sortColumn; 
         private String sortType; 
         private String source; 
@@ -460,6 +473,7 @@ public class DescribeSuspEventsRequest extends Request {
             this.pageSize = request.pageSize;
             this.parentEventTypes = request.parentEventTypes;
             this.remark = request.remark;
+            this.resourceDirectoryAccountId = request.resourceDirectoryAccountId;
             this.sortColumn = request.sortColumn;
             this.sortType = request.sortType;
             this.source = request.source;
@@ -708,6 +722,15 @@ public class DescribeSuspEventsRequest extends Request {
         public Builder remark(String remark) {
             this.putQueryParameter("Remark", remark);
             this.remark = remark;
+            return this;
+        }
+
+        /**
+         * ResourceDirectoryAccountId.
+         */
+        public Builder resourceDirectoryAccountId(Long resourceDirectoryAccountId) {
+            this.putQueryParameter("ResourceDirectoryAccountId", resourceDirectoryAccountId);
+            this.resourceDirectoryAccountId = resourceDirectoryAccountId;
             return this;
         }
 

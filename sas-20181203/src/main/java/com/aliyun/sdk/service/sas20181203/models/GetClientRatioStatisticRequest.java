@@ -13,6 +13,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class GetClientRatioStatisticRequest extends Request {
     @Query
+    @NameInMap("ResourceDirectoryAccountId")
+    private Long resourceDirectoryAccountId;
+
+    @Query
     @NameInMap("StatisticTypes")
     private java.util.List < String > statisticTypes;
 
@@ -28,6 +32,7 @@ public class GetClientRatioStatisticRequest extends Request {
 
     private GetClientRatioStatisticRequest(Builder builder) {
         super(builder);
+        this.resourceDirectoryAccountId = builder.resourceDirectoryAccountId;
         this.statisticTypes = builder.statisticTypes;
         this.timeEnd = builder.timeEnd;
         this.timeStart = builder.timeStart;
@@ -44,6 +49,13 @@ public class GetClientRatioStatisticRequest extends Request {
     @Override
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return resourceDirectoryAccountId
+     */
+    public Long getResourceDirectoryAccountId() {
+        return this.resourceDirectoryAccountId;
     }
 
     /**
@@ -68,6 +80,7 @@ public class GetClientRatioStatisticRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<GetClientRatioStatisticRequest, Builder> {
+        private Long resourceDirectoryAccountId; 
         private java.util.List < String > statisticTypes; 
         private Long timeEnd; 
         private Long timeStart; 
@@ -78,10 +91,20 @@ public class GetClientRatioStatisticRequest extends Request {
 
         private Builder(GetClientRatioStatisticRequest request) {
             super(request);
+            this.resourceDirectoryAccountId = request.resourceDirectoryAccountId;
             this.statisticTypes = request.statisticTypes;
             this.timeEnd = request.timeEnd;
             this.timeStart = request.timeStart;
         } 
+
+        /**
+         * ResourceDirectoryAccountId.
+         */
+        public Builder resourceDirectoryAccountId(Long resourceDirectoryAccountId) {
+            this.putQueryParameter("ResourceDirectoryAccountId", resourceDirectoryAccountId);
+            this.resourceDirectoryAccountId = resourceDirectoryAccountId;
+            return this;
+        }
 
         /**
          * StatisticTypes.

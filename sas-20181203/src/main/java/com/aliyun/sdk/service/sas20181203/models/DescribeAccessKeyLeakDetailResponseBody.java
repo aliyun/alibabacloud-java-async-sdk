@@ -66,11 +66,17 @@ public class DescribeAccessKeyLeakDetailResponseBody extends TeaModel {
     @NameInMap("Source")
     private String source;
 
+    @NameInMap("TokenValid")
+    private Integer tokenValid;
+
     @NameInMap("Type")
     private String type;
 
     @NameInMap("WhitelistStatus")
     private String whitelistStatus;
+
+    @NameInMap("WhitelistTime")
+    private Long whitelistTime;
 
     private DescribeAccessKeyLeakDetailResponseBody(Builder builder) {
         this.accesskeyId = builder.accesskeyId;
@@ -91,8 +97,10 @@ public class DescribeAccessKeyLeakDetailResponseBody extends TeaModel {
         this.remark = builder.remark;
         this.requestId = builder.requestId;
         this.source = builder.source;
+        this.tokenValid = builder.tokenValid;
         this.type = builder.type;
         this.whitelistStatus = builder.whitelistStatus;
+        this.whitelistTime = builder.whitelistTime;
     }
 
     public static Builder builder() {
@@ -230,6 +238,13 @@ public class DescribeAccessKeyLeakDetailResponseBody extends TeaModel {
     }
 
     /**
+     * @return tokenValid
+     */
+    public Integer getTokenValid() {
+        return this.tokenValid;
+    }
+
+    /**
      * @return type
      */
     public String getType() {
@@ -241,6 +256,13 @@ public class DescribeAccessKeyLeakDetailResponseBody extends TeaModel {
      */
     public String getWhitelistStatus() {
         return this.whitelistStatus;
+    }
+
+    /**
+     * @return whitelistTime
+     */
+    public Long getWhitelistTime() {
+        return this.whitelistTime;
     }
 
     public static final class Builder {
@@ -262,8 +284,10 @@ public class DescribeAccessKeyLeakDetailResponseBody extends TeaModel {
         private String remark; 
         private String requestId; 
         private String source; 
+        private Integer tokenValid; 
         private String type; 
         private String whitelistStatus; 
+        private Long whitelistTime; 
 
         /**
          * AccesskeyId.
@@ -410,6 +434,14 @@ public class DescribeAccessKeyLeakDetailResponseBody extends TeaModel {
         }
 
         /**
+         * TokenValid.
+         */
+        public Builder tokenValid(Integer tokenValid) {
+            this.tokenValid = tokenValid;
+            return this;
+        }
+
+        /**
          * Type.
          */
         public Builder type(String type) {
@@ -422,6 +454,14 @@ public class DescribeAccessKeyLeakDetailResponseBody extends TeaModel {
          */
         public Builder whitelistStatus(String whitelistStatus) {
             this.whitelistStatus = whitelistStatus;
+            return this;
+        }
+
+        /**
+         * WhitelistTime.
+         */
+        public Builder whitelistTime(Long whitelistTime) {
+            this.whitelistTime = whitelistTime;
             return this;
         }
 

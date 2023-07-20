@@ -26,6 +26,8 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<AddClientUserDefineRuleResponse> addClientUserDefineRule(AddClientUserDefineRuleRequest request);
 
+    CompletableFuture<AddImageVulWhiteListResponse> addImageVulWhiteList(AddImageVulWhiteListRequest request);
+
     CompletableFuture<AddInstallCodeResponse> addInstallCode(AddInstallCodeRequest request);
 
     CompletableFuture<AddPrivateRegistryResponse> addPrivateRegistry(AddPrivateRegistryRequest request);
@@ -47,6 +49,8 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<BindAuthToMachineResponse> bindAuthToMachine(BindAuthToMachineRequest request);
 
     CompletableFuture<CancelOnceTaskResponse> cancelOnceTask(CancelOnceTaskRequest request);
+
+    CompletableFuture<ChangeAssetRefreshTaskConfigResponse> changeAssetRefreshTaskConfig(ChangeAssetRefreshTaskConfigRequest request);
 
     CompletableFuture<ChangeCheckConfigResponse> changeCheckConfig(ChangeCheckConfigRequest request);
 
@@ -76,7 +80,10 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
       * You can call this operation to push a file to the cloud for detection. Before you call this operation, make sure that the file is uploaded. You can call the CreateFileDetectUploadUrl operation to upload the file.
-      * The HashKey parameter is included in all API operations that are related to the file detection feature. The parameter specifies the unique identifier of a file. Only MD5 hash values are supported. Before you call this operation, calculate the MD5 hash value of the file.
+      * The HashKey parameter is included in all API operations that are related to the file detection feature. The parameter specifies the unique identifier of a file. Only hexadecimal MD5 hash values of complete file content are supported. You must calculate the MD5 hash value before you call this operation.
+      * To calculate the hexadecimal MD5 hash value for a file, you can perform the following steps:
+      * 1\\. Use the MD5 algorithm to encrypt data and generate a 128-bit hash value. You can use a tool such as MessageDigest for Java and the hashlib module for Python.
+      * 2\\. Convert the hash value to a hexadecimal string. You can use a tool such as Codec for Java and the hex() function for Python.
       *
      */
     CompletableFuture<CreateFileDetectResponse> createFileDetect(CreateFileDetectRequest request);
@@ -136,6 +143,8 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<DeleteBackupPolicyResponse> deleteBackupPolicy(DeleteBackupPolicyRequest request);
 
     CompletableFuture<DeleteBackupPolicyMachineResponse> deleteBackupPolicyMachine(DeleteBackupPolicyMachineRequest request);
+
+    CompletableFuture<DeleteBinarySecurityPolicyResponse> deleteBinarySecurityPolicy(DeleteBinarySecurityPolicyRequest request);
 
     CompletableFuture<DeleteClientUserDefineRuleResponse> deleteClientUserDefineRule(DeleteClientUserDefineRuleRequest request);
 
@@ -422,6 +431,8 @@ public interface AsyncClient extends SdkAutoCloseable {
      */
     CompletableFuture<DescribeImageVulListResponse> describeImageVulList(DescribeImageVulListRequest request);
 
+    CompletableFuture<DescribeImageVulWhiteListResponse> describeImageVulWhiteList(DescribeImageVulWhiteListRequest request);
+
     CompletableFuture<DescribeInstallCaptchaResponse> describeInstallCaptcha(DescribeInstallCaptchaRequest request);
 
     CompletableFuture<DescribeInstallCodeResponse> describeInstallCode(DescribeInstallCodeRequest request);
@@ -457,6 +468,8 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<DescribeMachineCanRebootResponse> describeMachineCanReboot(DescribeMachineCanRebootRequest request);
 
     CompletableFuture<DescribeModuleConfigResponse> describeModuleConfig(DescribeModuleConfigRequest request);
+
+    CompletableFuture<DescribeMonitorAccountsResponse> describeMonitorAccounts(DescribeMonitorAccountsRequest request);
 
     CompletableFuture<DescribeNoticeConfigResponse> describeNoticeConfig(DescribeNoticeConfigRequest request);
 
@@ -855,6 +868,8 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<ListAgentlessRiskUuidResponse> listAgentlessRiskUuid(ListAgentlessRiskUuidRequest request);
 
     CompletableFuture<ListAgentlessTaskResponse> listAgentlessTask(ListAgentlessTaskRequest request);
+
+    CompletableFuture<ListAssetRefreshTaskConfigResponse> listAssetRefreshTaskConfig(ListAssetRefreshTaskConfigRequest request);
 
     CompletableFuture<ListAssetSelectionSelectedTargetResponse> listAssetSelectionSelectedTarget(ListAssetSelectionSelectedTargetRequest request);
 

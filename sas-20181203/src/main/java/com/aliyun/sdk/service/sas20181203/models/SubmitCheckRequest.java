@@ -12,8 +12,13 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>SubmitCheckRequest</p>
  */
 public class SubmitCheckRequest extends Request {
+    @Query
+    @NameInMap("ScanRange")
+    private String scanRange;
+
     private SubmitCheckRequest(Builder builder) {
         super(builder);
+        this.scanRange = builder.scanRange;
     }
 
     public static Builder builder() {
@@ -29,7 +34,15 @@ public class SubmitCheckRequest extends Request {
         return new Builder(this);
     }
 
+    /**
+     * @return scanRange
+     */
+    public String getScanRange() {
+        return this.scanRange;
+    }
+
     public static final class Builder extends Request.Builder<SubmitCheckRequest, Builder> {
+        private String scanRange; 
 
         private Builder() {
             super();
@@ -37,7 +50,17 @@ public class SubmitCheckRequest extends Request {
 
         private Builder(SubmitCheckRequest request) {
             super(request);
+            this.scanRange = request.scanRange;
         } 
+
+        /**
+         * ScanRange.
+         */
+        public Builder scanRange(String scanRange) {
+            this.putQueryParameter("ScanRange", scanRange);
+            this.scanRange = scanRange;
+            return this;
+        }
 
         @Override
         public SubmitCheckRequest build() {

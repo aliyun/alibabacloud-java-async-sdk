@@ -20,10 +20,15 @@ public class DescribeFieldStatisticsRequest extends Request {
     @NameInMap("RegionId")
     private String regionId;
 
+    @Query
+    @NameInMap("ResourceDirectoryAccountId")
+    private Long resourceDirectoryAccountId;
+
     private DescribeFieldStatisticsRequest(Builder builder) {
         super(builder);
         this.machineTypes = builder.machineTypes;
         this.regionId = builder.regionId;
+        this.resourceDirectoryAccountId = builder.resourceDirectoryAccountId;
     }
 
     public static Builder builder() {
@@ -53,9 +58,17 @@ public class DescribeFieldStatisticsRequest extends Request {
         return this.regionId;
     }
 
+    /**
+     * @return resourceDirectoryAccountId
+     */
+    public Long getResourceDirectoryAccountId() {
+        return this.resourceDirectoryAccountId;
+    }
+
     public static final class Builder extends Request.Builder<DescribeFieldStatisticsRequest, Builder> {
         private String machineTypes; 
         private String regionId; 
+        private Long resourceDirectoryAccountId; 
 
         private Builder() {
             super();
@@ -65,6 +78,7 @@ public class DescribeFieldStatisticsRequest extends Request {
             super(request);
             this.machineTypes = request.machineTypes;
             this.regionId = request.regionId;
+            this.resourceDirectoryAccountId = request.resourceDirectoryAccountId;
         } 
 
         /**
@@ -82,6 +96,15 @@ public class DescribeFieldStatisticsRequest extends Request {
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
             this.regionId = regionId;
+            return this;
+        }
+
+        /**
+         * ResourceDirectoryAccountId.
+         */
+        public Builder resourceDirectoryAccountId(Long resourceDirectoryAccountId) {
+            this.putQueryParameter("ResourceDirectoryAccountId", resourceDirectoryAccountId);
+            this.resourceDirectoryAccountId = resourceDirectoryAccountId;
             return this;
         }
 

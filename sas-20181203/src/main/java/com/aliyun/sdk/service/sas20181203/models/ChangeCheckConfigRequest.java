@@ -13,8 +13,20 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class ChangeCheckConfigRequest extends Request {
     @Query
+    @NameInMap("AddedCheck")
+    private java.util.List < AddedCheck> addedCheck;
+
+    @Query
     @NameInMap("CycleDays")
     private java.util.List < Integer > cycleDays;
+
+    @Query
+    @NameInMap("EnableAddCheck")
+    private Boolean enableAddCheck;
+
+    @Query
+    @NameInMap("EnableAutoCheck")
+    private Boolean enableAutoCheck;
 
     @Query
     @NameInMap("EndTime")
@@ -23,6 +35,10 @@ public class ChangeCheckConfigRequest extends Request {
     @Query
     @NameInMap("RegionId")
     private String regionId;
+
+    @Query
+    @NameInMap("RemovedCheck")
+    private java.util.List < RemovedCheck> removedCheck;
 
     @Query
     @NameInMap("StandardIds")
@@ -34,9 +50,13 @@ public class ChangeCheckConfigRequest extends Request {
 
     private ChangeCheckConfigRequest(Builder builder) {
         super(builder);
+        this.addedCheck = builder.addedCheck;
         this.cycleDays = builder.cycleDays;
+        this.enableAddCheck = builder.enableAddCheck;
+        this.enableAutoCheck = builder.enableAutoCheck;
         this.endTime = builder.endTime;
         this.regionId = builder.regionId;
+        this.removedCheck = builder.removedCheck;
         this.standardIds = builder.standardIds;
         this.startTime = builder.startTime;
     }
@@ -55,10 +75,31 @@ public class ChangeCheckConfigRequest extends Request {
     }
 
     /**
+     * @return addedCheck
+     */
+    public java.util.List < AddedCheck> getAddedCheck() {
+        return this.addedCheck;
+    }
+
+    /**
      * @return cycleDays
      */
     public java.util.List < Integer > getCycleDays() {
         return this.cycleDays;
+    }
+
+    /**
+     * @return enableAddCheck
+     */
+    public Boolean getEnableAddCheck() {
+        return this.enableAddCheck;
+    }
+
+    /**
+     * @return enableAutoCheck
+     */
+    public Boolean getEnableAutoCheck() {
+        return this.enableAutoCheck;
     }
 
     /**
@@ -76,6 +117,13 @@ public class ChangeCheckConfigRequest extends Request {
     }
 
     /**
+     * @return removedCheck
+     */
+    public java.util.List < RemovedCheck> getRemovedCheck() {
+        return this.removedCheck;
+    }
+
+    /**
      * @return standardIds
      */
     public java.util.List < Long > getStandardIds() {
@@ -90,9 +138,13 @@ public class ChangeCheckConfigRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<ChangeCheckConfigRequest, Builder> {
+        private java.util.List < AddedCheck> addedCheck; 
         private java.util.List < Integer > cycleDays; 
+        private Boolean enableAddCheck; 
+        private Boolean enableAutoCheck; 
         private Integer endTime; 
         private String regionId; 
+        private java.util.List < RemovedCheck> removedCheck; 
         private java.util.List < Long > standardIds; 
         private Integer startTime; 
 
@@ -102,12 +154,25 @@ public class ChangeCheckConfigRequest extends Request {
 
         private Builder(ChangeCheckConfigRequest request) {
             super(request);
+            this.addedCheck = request.addedCheck;
             this.cycleDays = request.cycleDays;
+            this.enableAddCheck = request.enableAddCheck;
+            this.enableAutoCheck = request.enableAutoCheck;
             this.endTime = request.endTime;
             this.regionId = request.regionId;
+            this.removedCheck = request.removedCheck;
             this.standardIds = request.standardIds;
             this.startTime = request.startTime;
         } 
+
+        /**
+         * AddedCheck.
+         */
+        public Builder addedCheck(java.util.List < AddedCheck> addedCheck) {
+            this.putQueryParameter("AddedCheck", addedCheck);
+            this.addedCheck = addedCheck;
+            return this;
+        }
 
         /**
          * CycleDays.
@@ -115,6 +180,24 @@ public class ChangeCheckConfigRequest extends Request {
         public Builder cycleDays(java.util.List < Integer > cycleDays) {
             this.putQueryParameter("CycleDays", cycleDays);
             this.cycleDays = cycleDays;
+            return this;
+        }
+
+        /**
+         * EnableAddCheck.
+         */
+        public Builder enableAddCheck(Boolean enableAddCheck) {
+            this.putQueryParameter("EnableAddCheck", enableAddCheck);
+            this.enableAddCheck = enableAddCheck;
+            return this;
+        }
+
+        /**
+         * EnableAutoCheck.
+         */
+        public Builder enableAutoCheck(Boolean enableAutoCheck) {
+            this.putQueryParameter("EnableAutoCheck", enableAutoCheck);
+            this.enableAutoCheck = enableAutoCheck;
             return this;
         }
 
@@ -146,6 +229,15 @@ public class ChangeCheckConfigRequest extends Request {
         }
 
         /**
+         * RemovedCheck.
+         */
+        public Builder removedCheck(java.util.List < RemovedCheck> removedCheck) {
+            this.putQueryParameter("RemovedCheck", removedCheck);
+            this.removedCheck = removedCheck;
+            return this;
+        }
+
+        /**
          * An array that consists of the information about the check item.
          */
         public Builder standardIds(java.util.List < Long > standardIds) {
@@ -170,4 +262,126 @@ public class ChangeCheckConfigRequest extends Request {
 
     } 
 
+    public static class AddedCheck extends TeaModel {
+        @NameInMap("CheckId")
+        private Long checkId;
+
+        @NameInMap("SectionId")
+        private Long sectionId;
+
+        private AddedCheck(Builder builder) {
+            this.checkId = builder.checkId;
+            this.sectionId = builder.sectionId;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static AddedCheck create() {
+            return builder().build();
+        }
+
+        /**
+         * @return checkId
+         */
+        public Long getCheckId() {
+            return this.checkId;
+        }
+
+        /**
+         * @return sectionId
+         */
+        public Long getSectionId() {
+            return this.sectionId;
+        }
+
+        public static final class Builder {
+            private Long checkId; 
+            private Long sectionId; 
+
+            /**
+             * CheckId.
+             */
+            public Builder checkId(Long checkId) {
+                this.checkId = checkId;
+                return this;
+            }
+
+            /**
+             * SectionId.
+             */
+            public Builder sectionId(Long sectionId) {
+                this.sectionId = sectionId;
+                return this;
+            }
+
+            public AddedCheck build() {
+                return new AddedCheck(this);
+            } 
+
+        } 
+
+    }
+    public static class RemovedCheck extends TeaModel {
+        @NameInMap("CheckId")
+        private Long checkId;
+
+        @NameInMap("SectionId")
+        private Long sectionId;
+
+        private RemovedCheck(Builder builder) {
+            this.checkId = builder.checkId;
+            this.sectionId = builder.sectionId;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static RemovedCheck create() {
+            return builder().build();
+        }
+
+        /**
+         * @return checkId
+         */
+        public Long getCheckId() {
+            return this.checkId;
+        }
+
+        /**
+         * @return sectionId
+         */
+        public Long getSectionId() {
+            return this.sectionId;
+        }
+
+        public static final class Builder {
+            private Long checkId; 
+            private Long sectionId; 
+
+            /**
+             * CheckId.
+             */
+            public Builder checkId(Long checkId) {
+                this.checkId = checkId;
+                return this;
+            }
+
+            /**
+             * SectionId.
+             */
+            public Builder sectionId(Long sectionId) {
+                this.sectionId = sectionId;
+                return this;
+            }
+
+            public RemovedCheck build() {
+                return new RemovedCheck(this);
+            } 
+
+        } 
+
+    }
 }

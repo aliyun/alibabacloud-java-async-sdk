@@ -386,7 +386,7 @@ public class DescribeWarningMachinesResponseBody extends TeaModel {
             }
 
             /**
-             * ContainerId.
+             * The ID of the container.
              */
             public Builder containerId(String containerId) {
                 this.containerId = containerId;
@@ -394,7 +394,7 @@ public class DescribeWarningMachinesResponseBody extends TeaModel {
             }
 
             /**
-             * ContainerName.
+             * The name of container.
              */
             public Builder containerName(String containerName) {
                 this.containerName = containerName;

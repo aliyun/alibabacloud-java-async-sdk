@@ -12,6 +12,12 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>GetAgentlessTaskCountResponseBody</p>
  */
 public class GetAgentlessTaskCountResponseBody extends TeaModel {
+    @NameInMap("BaselineCheckCount")
+    private Integer baselineCheckCount;
+
+    @NameInMap("CveVulCount")
+    private Integer cveVulCount;
+
     @NameInMap("LastTaskTime")
     private Long lastTaskTime;
 
@@ -24,6 +30,9 @@ public class GetAgentlessTaskCountResponseBody extends TeaModel {
     @NameInMap("RiskMachine")
     private Integer riskMachine;
 
+    @NameInMap("ScaVulCount")
+    private Integer scaVulCount;
+
     @NameInMap("ScanMachine")
     private Integer scanMachine;
 
@@ -31,10 +40,13 @@ public class GetAgentlessTaskCountResponseBody extends TeaModel {
     private Integer vulnerability;
 
     private GetAgentlessTaskCountResponseBody(Builder builder) {
+        this.baselineCheckCount = builder.baselineCheckCount;
+        this.cveVulCount = builder.cveVulCount;
         this.lastTaskTime = builder.lastTaskTime;
         this.maliciousFile = builder.maliciousFile;
         this.requestId = builder.requestId;
         this.riskMachine = builder.riskMachine;
+        this.scaVulCount = builder.scaVulCount;
         this.scanMachine = builder.scanMachine;
         this.vulnerability = builder.vulnerability;
     }
@@ -45,6 +57,20 @@ public class GetAgentlessTaskCountResponseBody extends TeaModel {
 
     public static GetAgentlessTaskCountResponseBody create() {
         return builder().build();
+    }
+
+    /**
+     * @return baselineCheckCount
+     */
+    public Integer getBaselineCheckCount() {
+        return this.baselineCheckCount;
+    }
+
+    /**
+     * @return cveVulCount
+     */
+    public Integer getCveVulCount() {
+        return this.cveVulCount;
     }
 
     /**
@@ -76,6 +102,13 @@ public class GetAgentlessTaskCountResponseBody extends TeaModel {
     }
 
     /**
+     * @return scaVulCount
+     */
+    public Integer getScaVulCount() {
+        return this.scaVulCount;
+    }
+
+    /**
      * @return scanMachine
      */
     public Integer getScanMachine() {
@@ -90,12 +123,31 @@ public class GetAgentlessTaskCountResponseBody extends TeaModel {
     }
 
     public static final class Builder {
+        private Integer baselineCheckCount; 
+        private Integer cveVulCount; 
         private Long lastTaskTime; 
         private Integer maliciousFile; 
         private String requestId; 
         private Integer riskMachine; 
+        private Integer scaVulCount; 
         private Integer scanMachine; 
         private Integer vulnerability; 
+
+        /**
+         * BaselineCheckCount.
+         */
+        public Builder baselineCheckCount(Integer baselineCheckCount) {
+            this.baselineCheckCount = baselineCheckCount;
+            return this;
+        }
+
+        /**
+         * CveVulCount.
+         */
+        public Builder cveVulCount(Integer cveVulCount) {
+            this.cveVulCount = cveVulCount;
+            return this;
+        }
 
         /**
          * LastTaskTime.
@@ -126,6 +178,14 @@ public class GetAgentlessTaskCountResponseBody extends TeaModel {
          */
         public Builder riskMachine(Integer riskMachine) {
             this.riskMachine = riskMachine;
+            return this;
+        }
+
+        /**
+         * ScaVulCount.
+         */
+        public Builder scaVulCount(Integer scaVulCount) {
+            this.scaVulCount = scaVulCount;
             return this;
         }
 

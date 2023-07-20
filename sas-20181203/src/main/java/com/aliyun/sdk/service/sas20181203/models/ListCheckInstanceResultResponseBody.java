@@ -147,12 +147,16 @@ public class ListCheckInstanceResultResponseBody extends TeaModel {
         @NameInMap("Status")
         private String status;
 
+        @NameInMap("StatusMessage")
+        private String statusMessage;
+
         private BasicData(Builder builder) {
             this.id = builder.id;
             this.instanceId = builder.instanceId;
             this.instanceName = builder.instanceName;
             this.regionId = builder.regionId;
             this.status = builder.status;
+            this.statusMessage = builder.statusMessage;
         }
 
         public static Builder builder() {
@@ -198,12 +202,20 @@ public class ListCheckInstanceResultResponseBody extends TeaModel {
             return this.status;
         }
 
+        /**
+         * @return statusMessage
+         */
+        public String getStatusMessage() {
+            return this.statusMessage;
+        }
+
         public static final class Builder {
             private Long id; 
             private String instanceId; 
             private String instanceName; 
             private String regionId; 
             private String status; 
+            private String statusMessage; 
 
             /**
              * The check result ID of the instance.
@@ -249,6 +261,14 @@ public class ListCheckInstanceResultResponseBody extends TeaModel {
              */
             public Builder status(String status) {
                 this.status = status;
+                return this;
+            }
+
+            /**
+             * StatusMessage.
+             */
+            public Builder statusMessage(String statusMessage) {
+                this.statusMessage = statusMessage;
                 return this;
             }
 

@@ -22,6 +22,10 @@ public class DescribeSuspEventDetailRequest extends Request {
     private String lang;
 
     @Query
+    @NameInMap("ResourceDirectoryAccountId")
+    private Long resourceDirectoryAccountId;
+
+    @Query
     @NameInMap("SourceIp")
     private String sourceIp;
 
@@ -34,6 +38,7 @@ public class DescribeSuspEventDetailRequest extends Request {
         super(builder);
         this.from = builder.from;
         this.lang = builder.lang;
+        this.resourceDirectoryAccountId = builder.resourceDirectoryAccountId;
         this.sourceIp = builder.sourceIp;
         this.suspiciousEventId = builder.suspiciousEventId;
     }
@@ -66,6 +71,13 @@ public class DescribeSuspEventDetailRequest extends Request {
     }
 
     /**
+     * @return resourceDirectoryAccountId
+     */
+    public Long getResourceDirectoryAccountId() {
+        return this.resourceDirectoryAccountId;
+    }
+
+    /**
      * @return sourceIp
      */
     public String getSourceIp() {
@@ -82,6 +94,7 @@ public class DescribeSuspEventDetailRequest extends Request {
     public static final class Builder extends Request.Builder<DescribeSuspEventDetailRequest, Builder> {
         private String from; 
         private String lang; 
+        private Long resourceDirectoryAccountId; 
         private String sourceIp; 
         private Integer suspiciousEventId; 
 
@@ -93,6 +106,7 @@ public class DescribeSuspEventDetailRequest extends Request {
             super(request);
             this.from = request.from;
             this.lang = request.lang;
+            this.resourceDirectoryAccountId = request.resourceDirectoryAccountId;
             this.sourceIp = request.sourceIp;
             this.suspiciousEventId = request.suspiciousEventId;
         } 
@@ -116,6 +130,15 @@ public class DescribeSuspEventDetailRequest extends Request {
         public Builder lang(String lang) {
             this.putQueryParameter("Lang", lang);
             this.lang = lang;
+            return this;
+        }
+
+        /**
+         * ResourceDirectoryAccountId.
+         */
+        public Builder resourceDirectoryAccountId(Long resourceDirectoryAccountId) {
+            this.putQueryParameter("ResourceDirectoryAccountId", resourceDirectoryAccountId);
+            this.resourceDirectoryAccountId = resourceDirectoryAccountId;
             return this;
         }
 

@@ -22,6 +22,10 @@ public class DescribeAlarmEventStackInfoRequest extends Request {
     private String lang;
 
     @Query
+    @NameInMap("ResourceDirectoryAccountId")
+    private Long resourceDirectoryAccountId;
+
+    @Query
     @NameInMap("SourceIp")
     private String sourceIp;
 
@@ -39,6 +43,7 @@ public class DescribeAlarmEventStackInfoRequest extends Request {
         super(builder);
         this.eventName = builder.eventName;
         this.lang = builder.lang;
+        this.resourceDirectoryAccountId = builder.resourceDirectoryAccountId;
         this.sourceIp = builder.sourceIp;
         this.uniqueInfo = builder.uniqueInfo;
         this.uuid = builder.uuid;
@@ -72,6 +77,13 @@ public class DescribeAlarmEventStackInfoRequest extends Request {
     }
 
     /**
+     * @return resourceDirectoryAccountId
+     */
+    public Long getResourceDirectoryAccountId() {
+        return this.resourceDirectoryAccountId;
+    }
+
+    /**
      * @return sourceIp
      */
     public String getSourceIp() {
@@ -95,6 +107,7 @@ public class DescribeAlarmEventStackInfoRequest extends Request {
     public static final class Builder extends Request.Builder<DescribeAlarmEventStackInfoRequest, Builder> {
         private String eventName; 
         private String lang; 
+        private Long resourceDirectoryAccountId; 
         private String sourceIp; 
         private String uniqueInfo; 
         private String uuid; 
@@ -107,6 +120,7 @@ public class DescribeAlarmEventStackInfoRequest extends Request {
             super(request);
             this.eventName = request.eventName;
             this.lang = request.lang;
+            this.resourceDirectoryAccountId = request.resourceDirectoryAccountId;
             this.sourceIp = request.sourceIp;
             this.uniqueInfo = request.uniqueInfo;
             this.uuid = request.uuid;
@@ -134,6 +148,15 @@ public class DescribeAlarmEventStackInfoRequest extends Request {
         public Builder lang(String lang) {
             this.putQueryParameter("Lang", lang);
             this.lang = lang;
+            return this;
+        }
+
+        /**
+         * ResourceDirectoryAccountId.
+         */
+        public Builder resourceDirectoryAccountId(Long resourceDirectoryAccountId) {
+            this.putQueryParameter("ResourceDirectoryAccountId", resourceDirectoryAccountId);
+            this.resourceDirectoryAccountId = resourceDirectoryAccountId;
             return this;
         }
 

@@ -112,7 +112,7 @@ public class CreateFileDetectRequest extends Request {
         } 
 
         /**
-         * DownloadUrl.
+         * The URL that is used to download the file. You can specify this parameter to trigger file detection without the need to upload the file in advance.
          */
         public Builder downloadUrl(String downloadUrl) {
             this.putQueryParameter("DownloadUrl", downloadUrl);
@@ -130,7 +130,7 @@ public class CreateFileDetectRequest extends Request {
         }
 
         /**
-         * The key of the file that is stored in the Object Storage Service (OSS) bucket. You can call the [CreateFileDetectUploadUrl](~~CreateFileDetectUploadUrl~~) operation to query the keys of files.
+         * The key of the file that is stored in the Object Storage Service (OSS) bucket. If you specify the DownloadUrl parameter, you can leave this parameter empty. You can call the [CreateFileDetectUploadUrl](~~CreateFileDetectUploadUrl~~) operation to query the keys of files.
          */
         public Builder ossKey(String ossKey) {
             this.putQueryParameter("OssKey", ossKey);

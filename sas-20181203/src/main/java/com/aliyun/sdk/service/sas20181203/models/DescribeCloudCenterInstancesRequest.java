@@ -53,6 +53,10 @@ public class DescribeCloudCenterInstancesRequest extends Request {
     private String regionId;
 
     @Query
+    @NameInMap("ResourceDirectoryAccountId")
+    private Long resourceDirectoryAccountId;
+
+    @Query
     @NameInMap("UseNextToken")
     private Boolean useNextToken;
 
@@ -68,6 +72,7 @@ public class DescribeCloudCenterInstancesRequest extends Request {
         this.noGroupTrace = builder.noGroupTrace;
         this.pageSize = builder.pageSize;
         this.regionId = builder.regionId;
+        this.resourceDirectoryAccountId = builder.resourceDirectoryAccountId;
         this.useNextToken = builder.useNextToken;
     }
 
@@ -155,6 +160,13 @@ public class DescribeCloudCenterInstancesRequest extends Request {
     }
 
     /**
+     * @return resourceDirectoryAccountId
+     */
+    public Long getResourceDirectoryAccountId() {
+        return this.resourceDirectoryAccountId;
+    }
+
+    /**
      * @return useNextToken
      */
     public Boolean getUseNextToken() {
@@ -172,6 +184,7 @@ public class DescribeCloudCenterInstancesRequest extends Request {
         private Boolean noGroupTrace; 
         private Integer pageSize; 
         private String regionId; 
+        private Long resourceDirectoryAccountId; 
         private Boolean useNextToken; 
 
         private Builder() {
@@ -190,6 +203,7 @@ public class DescribeCloudCenterInstancesRequest extends Request {
             this.noGroupTrace = request.noGroupTrace;
             this.pageSize = request.pageSize;
             this.regionId = request.regionId;
+            this.resourceDirectoryAccountId = request.resourceDirectoryAccountId;
             this.useNextToken = request.useNextToken;
         } 
 
@@ -304,6 +318,15 @@ public class DescribeCloudCenterInstancesRequest extends Request {
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
             this.regionId = regionId;
+            return this;
+        }
+
+        /**
+         * ResourceDirectoryAccountId.
+         */
+        public Builder resourceDirectoryAccountId(Long resourceDirectoryAccountId) {
+            this.putQueryParameter("ResourceDirectoryAccountId", resourceDirectoryAccountId);
+            this.resourceDirectoryAccountId = resourceDirectoryAccountId;
             return this;
         }
 

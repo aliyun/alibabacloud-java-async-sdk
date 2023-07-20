@@ -83,7 +83,10 @@ public class ValidateHcWarningsRequest extends Request {
         } 
 
         /**
-         * CheckIds.
+         * The IDs of the check items. Separate multiple IDs with commas (,).
+         * <p>
+         * 
+         * > You can call the [DescribeCheckWarningSummary](~~116179~~) operation to query the IDs of check items.
          */
         public Builder checkIds(String checkIds) {
             this.putQueryParameter("CheckIds", checkIds);
@@ -92,7 +95,10 @@ public class ValidateHcWarningsRequest extends Request {
         }
 
         /**
-         * The IDs of risk items that you want to verify. Separate multiple IDs with commas (,).
+         * The list of IDs of the risk items that you want to verify. Separate multiple IDs with commas (,).
+         * <p>
+         * 
+         * > You can call the [DescribeCheckWarnings](~~DescribeCheckWarnings~~) operation to query the IDs of risk items.
          */
         public Builder riskIds(String riskIds) {
             this.putQueryParameter("RiskIds", riskIds);
@@ -101,7 +107,10 @@ public class ValidateHcWarningsRequest extends Request {
         }
 
         /**
-         * The UUIDs of servers on which you want to verify risk items.
+         * The UUIDs of the servers on which you want to verify the risk items. Separate multiple UUIDs with commas (,).
+         * <p>
+         * 
+         * > You can call the [DescribeCloudCenterInstances](~~DescribeCloudCenterInstances~~) operation to query the UUIDs of servers.
          */
         public Builder uuids(String uuids) {
             this.putQueryParameter("Uuids", uuids);

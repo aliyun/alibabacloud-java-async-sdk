@@ -290,7 +290,10 @@ public class ListCheckItemWarningSummaryResponseBody extends TeaModel {
             }
 
             /**
-             * ContainerCheckItem.
+             * Checks if the item belongs to the container runtime category.Valid values:
+             * <p>
+             * *   **true**
+             * *  **false**
              */
             public Builder containerCheckItem(Boolean containerCheckItem) {
                 this.containerCheckItem = containerCheckItem;

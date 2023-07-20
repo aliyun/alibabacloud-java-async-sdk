@@ -15,11 +15,20 @@ public class GetCheckConfigResponseBody extends TeaModel {
     @NameInMap("CycleDays")
     private java.util.List < Integer > cycleDays;
 
+    @NameInMap("EnableAddCheck")
+    private Boolean enableAddCheck;
+
+    @NameInMap("EnableAutoCheck")
+    private Boolean enableAutoCheck;
+
     @NameInMap("EndTime")
     private Integer endTime;
 
     @NameInMap("RequestId")
     private String requestId;
+
+    @NameInMap("SelectedChecks")
+    private java.util.List < SelectedChecks> selectedChecks;
 
     @NameInMap("Standards")
     private java.util.List < Standards> standards;
@@ -29,8 +38,11 @@ public class GetCheckConfigResponseBody extends TeaModel {
 
     private GetCheckConfigResponseBody(Builder builder) {
         this.cycleDays = builder.cycleDays;
+        this.enableAddCheck = builder.enableAddCheck;
+        this.enableAutoCheck = builder.enableAutoCheck;
         this.endTime = builder.endTime;
         this.requestId = builder.requestId;
+        this.selectedChecks = builder.selectedChecks;
         this.standards = builder.standards;
         this.startTime = builder.startTime;
     }
@@ -51,6 +63,20 @@ public class GetCheckConfigResponseBody extends TeaModel {
     }
 
     /**
+     * @return enableAddCheck
+     */
+    public Boolean getEnableAddCheck() {
+        return this.enableAddCheck;
+    }
+
+    /**
+     * @return enableAutoCheck
+     */
+    public Boolean getEnableAutoCheck() {
+        return this.enableAutoCheck;
+    }
+
+    /**
      * @return endTime
      */
     public Integer getEndTime() {
@@ -62,6 +88,13 @@ public class GetCheckConfigResponseBody extends TeaModel {
      */
     public String getRequestId() {
         return this.requestId;
+    }
+
+    /**
+     * @return selectedChecks
+     */
+    public java.util.List < SelectedChecks> getSelectedChecks() {
+        return this.selectedChecks;
     }
 
     /**
@@ -80,8 +113,11 @@ public class GetCheckConfigResponseBody extends TeaModel {
 
     public static final class Builder {
         private java.util.List < Integer > cycleDays; 
+        private Boolean enableAddCheck; 
+        private Boolean enableAutoCheck; 
         private Integer endTime; 
         private String requestId; 
+        private java.util.List < SelectedChecks> selectedChecks; 
         private java.util.List < Standards> standards; 
         private Integer startTime; 
 
@@ -90,6 +126,22 @@ public class GetCheckConfigResponseBody extends TeaModel {
          */
         public Builder cycleDays(java.util.List < Integer > cycleDays) {
             this.cycleDays = cycleDays;
+            return this;
+        }
+
+        /**
+         * EnableAddCheck.
+         */
+        public Builder enableAddCheck(Boolean enableAddCheck) {
+            this.enableAddCheck = enableAddCheck;
+            return this;
+        }
+
+        /**
+         * EnableAutoCheck.
+         */
+        public Builder enableAutoCheck(Boolean enableAutoCheck) {
+            this.enableAutoCheck = enableAutoCheck;
             return this;
         }
 
@@ -116,6 +168,14 @@ public class GetCheckConfigResponseBody extends TeaModel {
         }
 
         /**
+         * SelectedChecks.
+         */
+        public Builder selectedChecks(java.util.List < SelectedChecks> selectedChecks) {
+            this.selectedChecks = selectedChecks;
+            return this;
+        }
+
+        /**
          * An array that consists of the information about the check items.
          */
         public Builder standards(java.util.List < Standards> standards) {
@@ -137,6 +197,67 @@ public class GetCheckConfigResponseBody extends TeaModel {
 
     } 
 
+    public static class SelectedChecks extends TeaModel {
+        @NameInMap("CheckId")
+        private Long checkId;
+
+        @NameInMap("SectionId")
+        private Long sectionId;
+
+        private SelectedChecks(Builder builder) {
+            this.checkId = builder.checkId;
+            this.sectionId = builder.sectionId;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static SelectedChecks create() {
+            return builder().build();
+        }
+
+        /**
+         * @return checkId
+         */
+        public Long getCheckId() {
+            return this.checkId;
+        }
+
+        /**
+         * @return sectionId
+         */
+        public Long getSectionId() {
+            return this.sectionId;
+        }
+
+        public static final class Builder {
+            private Long checkId; 
+            private Long sectionId; 
+
+            /**
+             * CheckId.
+             */
+            public Builder checkId(Long checkId) {
+                this.checkId = checkId;
+                return this;
+            }
+
+            /**
+             * SectionId.
+             */
+            public Builder sectionId(Long sectionId) {
+                this.sectionId = sectionId;
+                return this;
+            }
+
+            public SelectedChecks build() {
+                return new SelectedChecks(this);
+            } 
+
+        } 
+
+    }
     public static class Standards extends TeaModel {
         @NameInMap("Id")
         private Long id;
