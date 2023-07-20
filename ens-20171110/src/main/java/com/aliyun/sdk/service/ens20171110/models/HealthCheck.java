@@ -176,7 +176,7 @@ public class HealthCheck extends TeaModel {
         private Integer unhealthyThreshold; 
 
         /**
-         * 是否开启健康检查。  取值：on | off。
+         * HealthCheck.
          */
         public Builder healthCheck(String healthCheck) {
             this.healthCheck = healthCheck;
@@ -184,7 +184,7 @@ public class HealthCheck extends TeaModel {
         }
 
         /**
-         * 健康检查的后端服务器的端口。  取值： 1~65535。    说明 在HealthCheck值为on时才会有效。
+         * HealthCheckConnectPort.
          */
         public Builder healthCheckConnectPort(Integer healthCheckConnectPort) {
             this.healthCheckConnectPort = healthCheckConnectPort;
@@ -192,7 +192,7 @@ public class HealthCheck extends TeaModel {
         }
 
         /**
-         * 每次健康检查响应的最大超时时间。  取值：1~300（秒）。  默认值：5。
+         * HealthCheckConnectTimeout.
          */
         public Builder healthCheckConnectTimeout(Integer healthCheckConnectTimeout) {
             this.healthCheckConnectTimeout = healthCheckConnectTimeout;
@@ -200,7 +200,7 @@ public class HealthCheck extends TeaModel {
         }
 
         /**
-         * 用于健康检查的域名，取值：  $_ip： 后端服务器的私网IP。当指定了IP或该参数未指定时，负载均衡会使用各后端服务器的私网IP当做健康检查使用的域名。是否要支持？ domain：域名长度为1-80字符，只能包含字母、数字、点号（.）和连字符（-）。   说明 在HealthCheck值为on时才会有效。
+         * HealthCheckDomain.
          */
         public Builder healthCheckDomain(String healthCheckDomain) {
             this.healthCheckDomain = healthCheckDomain;
@@ -208,7 +208,7 @@ public class HealthCheck extends TeaModel {
         }
 
         /**
-         * 健康检查正常的HTTP状态码，多个状态码用逗号分隔。  默认值为http_2xx。  取值：http_2xx | http_3xx | http_4xx | http_5xx。   说明 在HealthCheck值为on时才会有效。
+         * HealthCheckHttpCode.
          */
         public Builder healthCheckHttpCode(String healthCheckHttpCode) {
             this.healthCheckHttpCode = healthCheckHttpCode;
@@ -216,7 +216,7 @@ public class HealthCheck extends TeaModel {
         }
 
         /**
-         * 健康检查的时间间隔。  取值： 1~50（秒）。   说明 在HealthCheck值为on时才会有效。
+         * HealthCheckInterval.
          */
         public Builder healthCheckInterval(Integer healthCheckInterval) {
             this.healthCheckInterval = healthCheckInterval;
@@ -224,7 +224,7 @@ public class HealthCheck extends TeaModel {
         }
 
         /**
-         * 健康检查的method
+         * HealthCheckMethod.
          */
         public Builder healthCheckMethod(String healthCheckMethod) {
             this.healthCheckMethod = healthCheckMethod;
@@ -232,7 +232,7 @@ public class HealthCheck extends TeaModel {
         }
 
         /**
-         * 接收来自运行状况检查的响应需要等待的时间。如果后端ECS在指定的时间内没有正确响应，则判定为健康检查失败。在HealthCheck值为on时才会有效。  取值：1~300（秒）。   说明 如果HealthCHeckTimeout的值小于HealthCheckInterval的值，则HealthCHeckTimeout无效，超时时间为HealthCheckInterval的值。
+         * HealthCheckTimeout.
          */
         public Builder healthCheckTimeout(Integer healthCheckTimeout) {
             this.healthCheckTimeout = healthCheckTimeout;
@@ -240,7 +240,7 @@ public class HealthCheck extends TeaModel {
         }
 
         /**
-         * 健康检查类型。  取值：tcp（默认值） | http。
+         * HealthCheckType.
          */
         public Builder healthCheckType(String healthCheckType) {
             this.healthCheckType = healthCheckType;
@@ -248,7 +248,7 @@ public class HealthCheck extends TeaModel {
         }
 
         /**
-         * 用于健康检查的URI。  长度限制为1~80，只能使用字母、数字和”-/.%?#&amp;“这些字符。 URL不能只为”/“，但必须以”/“开头。    说明 在HealthCheck值为on时才会有效。
+         * HealthCheckURI.
          */
         public Builder healthCheckURI(String healthCheckURI) {
             this.healthCheckURI = healthCheckURI;
@@ -256,7 +256,7 @@ public class HealthCheck extends TeaModel {
         }
 
         /**
-         * 健康检查连续成功多少次后，将后端服务器的健康检查状态由fail判定为success。  取值：2~10。    说明 在HealthCheck值为on时才会有效。
+         * HealthyThreshold.
          */
         public Builder healthyThreshold(Integer healthyThreshold) {
             this.healthyThreshold = healthyThreshold;
@@ -264,7 +264,7 @@ public class HealthCheck extends TeaModel {
         }
 
         /**
-         * 健康检查连续失败多少次后，将后端服务器的健康检查状态由success判定为fail。  取值：2~10。   说明 在HealthCheck值为on时才会有效。
+         * UnhealthyThreshold.
          */
         public Builder unhealthyThreshold(Integer unhealthyThreshold) {
             this.unhealthyThreshold = unhealthyThreshold;

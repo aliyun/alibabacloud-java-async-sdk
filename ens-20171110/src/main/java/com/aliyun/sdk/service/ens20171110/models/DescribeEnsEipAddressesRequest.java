@@ -45,6 +45,10 @@ public class DescribeEnsEipAddressesRequest extends Request {
     @Validation(maximum = 100)
     private Integer pageSize;
 
+    @Query
+    @NameInMap("Standby")
+    private String standby;
+
     private DescribeEnsEipAddressesRequest(Builder builder) {
         super(builder);
         this.allocationId = builder.allocationId;
@@ -55,6 +59,7 @@ public class DescribeEnsEipAddressesRequest extends Request {
         this.ensRegionId = builder.ensRegionId;
         this.pageNumber = builder.pageNumber;
         this.pageSize = builder.pageSize;
+        this.standby = builder.standby;
     }
 
     public static Builder builder() {
@@ -126,6 +131,13 @@ public class DescribeEnsEipAddressesRequest extends Request {
         return this.pageSize;
     }
 
+    /**
+     * @return standby
+     */
+    public String getStandby() {
+        return this.standby;
+    }
+
     public static final class Builder extends Request.Builder<DescribeEnsEipAddressesRequest, Builder> {
         private String allocationId; 
         private String associatedInstanceId; 
@@ -135,6 +147,7 @@ public class DescribeEnsEipAddressesRequest extends Request {
         private String ensRegionId; 
         private Integer pageNumber; 
         private Integer pageSize; 
+        private String standby; 
 
         private Builder() {
             super();
@@ -150,10 +163,11 @@ public class DescribeEnsEipAddressesRequest extends Request {
             this.ensRegionId = request.ensRegionId;
             this.pageNumber = request.pageNumber;
             this.pageSize = request.pageSize;
+            this.standby = request.standby;
         } 
 
         /**
-         * 要查询的EIP实例的ID。  最多支持输入50个EIP实例ID，实例ID之间用逗号（,）分隔。
+         * AllocationId.
          */
         public Builder allocationId(String allocationId) {
             this.putQueryParameter("AllocationId", allocationId);
@@ -180,7 +194,7 @@ public class DescribeEnsEipAddressesRequest extends Request {
         }
 
         /**
-         * 要查询的EIP的IP地址。  最多支持输入50个EIP的IP地址，IP地址之间用逗号（,）分隔。
+         * EipAddress.
          */
         public Builder eipAddress(String eipAddress) {
             this.putQueryParameter("EipAddress", eipAddress);
@@ -198,7 +212,7 @@ public class DescribeEnsEipAddressesRequest extends Request {
         }
 
         /**
-         * ENS节点ID
+         * EnsRegionId.
          */
         public Builder ensRegionId(String ensRegionId) {
             this.putQueryParameter("EnsRegionId", ensRegionId);
@@ -207,7 +221,7 @@ public class DescribeEnsEipAddressesRequest extends Request {
         }
 
         /**
-         * 列表的页码，默认值为1。
+         * PageNumber.
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -216,11 +230,20 @@ public class DescribeEnsEipAddressesRequest extends Request {
         }
 
         /**
-         * 分页查询时每页的行数，最大值为100，默认值为10。
+         * PageSize.
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
             this.pageSize = pageSize;
+            return this;
+        }
+
+        /**
+         * Standby.
+         */
+        public Builder standby(String standby) {
+            this.putQueryParameter("Standby", standby);
+            this.standby = standby;
             return this;
         }
 

@@ -84,7 +84,7 @@ public class GetDeviceInternetPortRequest extends Request {
         } 
 
         /**
-         * A short description of struct
+         * InstanceId.
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);

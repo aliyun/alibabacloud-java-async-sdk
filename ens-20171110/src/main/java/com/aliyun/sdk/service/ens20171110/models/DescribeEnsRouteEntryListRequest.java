@@ -168,7 +168,7 @@ public class DescribeEnsRouteEntryListRequest extends Request {
         } 
 
         /**
-         * 路由条目的目标网段
+         * DestinationCidrBlock.
          */
         public Builder destinationCidrBlock(String destinationCidrBlock) {
             this.putQueryParameter("DestinationCidrBlock", destinationCidrBlock);
@@ -177,7 +177,7 @@ public class DescribeEnsRouteEntryListRequest extends Request {
         }
 
         /**
-         * 下一跳实例ID。
+         * NextHopId.
          */
         public Builder nextHopId(String nextHopId) {
             this.putQueryParameter("NextHopId", nextHopId);
@@ -186,7 +186,7 @@ public class DescribeEnsRouteEntryListRequest extends Request {
         }
 
         /**
-         * 下一跳类型
+         * NextHopType.
          */
         public Builder nextHopType(String nextHopType) {
             this.putQueryParameter("NextHopType", nextHopType);
@@ -195,7 +195,7 @@ public class DescribeEnsRouteEntryListRequest extends Request {
         }
 
         /**
-         * 列表的页码，默认值为1。
+         * PageNumber.
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -204,7 +204,7 @@ public class DescribeEnsRouteEntryListRequest extends Request {
         }
 
         /**
-         * 分页查询时每页的行数，最大值为100，默认值为10。
+         * PageSize.
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -213,7 +213,7 @@ public class DescribeEnsRouteEntryListRequest extends Request {
         }
 
         /**
-         * 要查询的路由条目的ID。
+         * RouteEntryId.
          */
         public Builder routeEntryId(String routeEntryId) {
             this.putQueryParameter("RouteEntryId", routeEntryId);
@@ -222,7 +222,7 @@ public class DescribeEnsRouteEntryListRequest extends Request {
         }
 
         /**
-         * 路由条目的名称。
+         * RouteEntryName.
          */
         public Builder routeEntryName(String routeEntryName) {
             this.putQueryParameter("RouteEntryName", routeEntryName);
@@ -231,7 +231,7 @@ public class DescribeEnsRouteEntryListRequest extends Request {
         }
 
         /**
-         * 路由条目的类型
+         * RouteEntryType.
          */
         public Builder routeEntryType(String routeEntryType) {
             this.putQueryParameter("RouteEntryType", routeEntryType);
@@ -240,7 +240,7 @@ public class DescribeEnsRouteEntryListRequest extends Request {
         }
 
         /**
-         * 要查询的路由表的ID。
+         * RouteTableId.
          */
         public Builder routeTableId(String routeTableId) {
             this.putQueryParameter("RouteTableId", routeTableId);

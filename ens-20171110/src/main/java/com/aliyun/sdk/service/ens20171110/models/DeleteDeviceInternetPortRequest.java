@@ -85,7 +85,7 @@ public class DeleteDeviceInternetPortRequest extends Request {
         } 
 
         /**
-         * InstanceId
+         * InstanceId.
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -94,7 +94,7 @@ public class DeleteDeviceInternetPortRequest extends Request {
         }
 
         /**
-         * NatType
+         * NatType.
          */
         public Builder natType(String natType) {
             this.putQueryParameter("NatType", natType);
@@ -103,7 +103,7 @@ public class DeleteDeviceInternetPortRequest extends Request {
         }
 
         /**
-         * RuleId
+         * RuleId.
          */
         public Builder ruleId(String ruleId) {
             this.putQueryParameter("RuleId", ruleId);

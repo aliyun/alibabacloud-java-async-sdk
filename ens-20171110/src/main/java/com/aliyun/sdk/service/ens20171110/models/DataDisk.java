@@ -38,7 +38,7 @@ public class DataDisk extends TeaModel {
         private Long size; 
 
         /**
-         * 数据盘
+         * Size.
          */
         public Builder size(Long size) {
             this.size = size;

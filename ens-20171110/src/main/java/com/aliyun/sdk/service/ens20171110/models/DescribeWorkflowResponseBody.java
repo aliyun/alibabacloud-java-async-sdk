@@ -50,7 +50,7 @@ public class DescribeWorkflowResponseBody extends TeaModel {
         private java.util.List < WorkFlowInfo> workFlowInfo; 
 
         /**
-         * Id of the request
+         * RequestId.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

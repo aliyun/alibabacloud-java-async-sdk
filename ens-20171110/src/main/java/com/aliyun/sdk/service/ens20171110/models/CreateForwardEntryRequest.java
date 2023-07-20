@@ -51,6 +51,10 @@ public class CreateForwardEntryRequest extends Request {
     @Validation(required = true)
     private String natGatewayId;
 
+    @Query
+    @NameInMap("StandbyExternalIp")
+    private String standbyExternalIp;
+
     private CreateForwardEntryRequest(Builder builder) {
         super(builder);
         this.externalIp = builder.externalIp;
@@ -61,6 +65,7 @@ public class CreateForwardEntryRequest extends Request {
         this.internalPort = builder.internalPort;
         this.ipProtocol = builder.ipProtocol;
         this.natGatewayId = builder.natGatewayId;
+        this.standbyExternalIp = builder.standbyExternalIp;
     }
 
     public static Builder builder() {
@@ -132,6 +137,13 @@ public class CreateForwardEntryRequest extends Request {
         return this.natGatewayId;
     }
 
+    /**
+     * @return standbyExternalIp
+     */
+    public String getStandbyExternalIp() {
+        return this.standbyExternalIp;
+    }
+
     public static final class Builder extends Request.Builder<CreateForwardEntryRequest, Builder> {
         private String externalIp; 
         private String externalPort; 
@@ -141,6 +153,7 @@ public class CreateForwardEntryRequest extends Request {
         private String internalPort; 
         private String ipProtocol; 
         private String natGatewayId; 
+        private String standbyExternalIp; 
 
         private Builder() {
             super();
@@ -156,6 +169,7 @@ public class CreateForwardEntryRequest extends Request {
             this.internalPort = request.internalPort;
             this.ipProtocol = request.ipProtocol;
             this.natGatewayId = request.natGatewayId;
+            this.standbyExternalIp = request.standbyExternalIp;
         } 
 
         /**
@@ -227,6 +241,15 @@ public class CreateForwardEntryRequest extends Request {
         public Builder natGatewayId(String natGatewayId) {
             this.putQueryParameter("NatGatewayId", natGatewayId);
             this.natGatewayId = natGatewayId;
+            return this;
+        }
+
+        /**
+         * StandbyExternalIp.
+         */
+        public Builder standbyExternalIp(String standbyExternalIp) {
+            this.putQueryParameter("StandbyExternalIp", standbyExternalIp);
+            this.standbyExternalIp = standbyExternalIp;
             return this;
         }
 

@@ -86,7 +86,7 @@ public class DescribeFileSystemsResponseBody extends TeaModel {
         private Integer totalCount; 
 
         /**
-         * 文件系统信息集合。
+         * FileSystems.
          */
         public Builder fileSystems(java.util.List < FileSystems> fileSystems) {
             this.fileSystems = fileSystems;
@@ -94,7 +94,7 @@ public class DescribeFileSystemsResponseBody extends TeaModel {
         }
 
         /**
-         * 页码。
+         * PageNumber.
          */
         public Builder pageNumber(Integer pageNumber) {
             this.pageNumber = pageNumber;
@@ -102,7 +102,7 @@ public class DescribeFileSystemsResponseBody extends TeaModel {
         }
 
         /**
-         * 单页行数。
+         * PageSize.
          */
         public Builder pageSize(Integer pageSize) {
             this.pageSize = pageSize;
@@ -118,7 +118,7 @@ public class DescribeFileSystemsResponseBody extends TeaModel {
         }
 
         /**
-         * 总数。
+         * TotalCount.
          */
         public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;
@@ -194,7 +194,7 @@ public class DescribeFileSystemsResponseBody extends TeaModel {
             private String status; 
 
             /**
-             * 挂载点路径。
+             * MountTargetDomain.
              */
             public Builder mountTargetDomain(String mountTargetDomain) {
                 this.mountTargetDomain = mountTargetDomain;
@@ -202,7 +202,7 @@ public class DescribeFileSystemsResponseBody extends TeaModel {
             }
 
             /**
-             * 挂载点名称。
+             * MountTargetName.
              */
             public Builder mountTargetName(String mountTargetName) {
                 this.mountTargetName = mountTargetName;
@@ -210,7 +210,7 @@ public class DescribeFileSystemsResponseBody extends TeaModel {
             }
 
             /**
-             * 网络ID。
+             * NetWorkId.
              */
             public Builder netWorkId(String netWorkId) {
                 this.netWorkId = netWorkId;
@@ -218,13 +218,7 @@ public class DescribeFileSystemsResponseBody extends TeaModel {
             }
 
             /**
-             * 挂载点状态。
-             * <p>
-             * 包括：
-             * active：可用
-             * inactive：不可用
-             * pending：任务处理中
-             * deleting：删除中
+             * Status.
              */
             public Builder status(String status) {
                 this.status = status;
@@ -385,9 +379,7 @@ public class DescribeFileSystemsResponseBody extends TeaModel {
             private String storageType; 
 
             /**
-             * 容量。
-             * <p>
-             * 单位：GIB。
+             * Capacity.
              */
             public Builder capacity(Long capacity) {
                 this.capacity = capacity;
@@ -395,7 +387,7 @@ public class DescribeFileSystemsResponseBody extends TeaModel {
             }
 
             /**
-             * 文件系统创建时间。
+             * CreationTime.
              */
             public Builder creationTime(String creationTime) {
                 this.creationTime = creationTime;
@@ -403,7 +395,7 @@ public class DescribeFileSystemsResponseBody extends TeaModel {
             }
 
             /**
-             * 地域ID。
+             * EnsRegionId.
              */
             public Builder ensRegionId(String ensRegionId) {
                 this.ensRegionId = ensRegionId;
@@ -411,7 +403,7 @@ public class DescribeFileSystemsResponseBody extends TeaModel {
             }
 
             /**
-             * 文件系统ID。
+             * FileSystemId.
              */
             public Builder fileSystemId(String fileSystemId) {
                 this.fileSystemId = fileSystemId;
@@ -419,7 +411,7 @@ public class DescribeFileSystemsResponseBody extends TeaModel {
             }
 
             /**
-             * 文件系统名称。
+             * FileSystemName.
              */
             public Builder fileSystemName(String fileSystemName) {
                 this.fileSystemName = fileSystemName;
@@ -427,9 +419,7 @@ public class DescribeFileSystemsResponseBody extends TeaModel {
             }
 
             /**
-             * 文件系统的使用量。
-             * <p>
-             * 非实时使用量，为上一小时最大使用量，单位：Byte。
+             * MeteredSize.
              */
             public Builder meteredSize(Long meteredSize) {
                 this.meteredSize = meteredSize;
@@ -437,7 +427,7 @@ public class DescribeFileSystemsResponseBody extends TeaModel {
             }
 
             /**
-             * 挂载点信息集合
+             * MountTargets.
              */
             public Builder mountTargets(java.util.List < MountTargets> mountTargets) {
                 this.mountTargets = mountTargets;
@@ -445,9 +435,7 @@ public class DescribeFileSystemsResponseBody extends TeaModel {
             }
 
             /**
-             * 付费类型
-             * <p>
-             * PostPaid：后付费
+             * PayType.
              */
             public Builder payType(String payType) {
                 this.payType = payType;
@@ -455,11 +443,7 @@ public class DescribeFileSystemsResponseBody extends TeaModel {
             }
 
             /**
-             * 文件系统协议类型。
-             * <p>
-             * 包括：
-             * nfs：nfs文件协议
-             * smb：smb文件协议
+             * ProtocolType.
              */
             public Builder protocolType(String protocolType) {
                 this.protocolType = protocolType;
@@ -467,14 +451,7 @@ public class DescribeFileSystemsResponseBody extends TeaModel {
             }
 
             /**
-             * 文件系统状态
-             * <p>
-             * pending：当前文件系统正在处理任务中。
-             * running：当前文件系统可用，当状态为running时才可以进行后续操作（例如：创建挂载点等）。
-             * stopped：当前文件系统不可用。
-             * extending：当前文件系统扩容中。
-             * stopping：当前文件系统停机中。
-             * deleting：当前文件系统删除中。
+             * Status.
              */
             public Builder status(String status) {
                 this.status = status;
@@ -482,9 +459,7 @@ public class DescribeFileSystemsResponseBody extends TeaModel {
             }
 
             /**
-             * 存储类型
-             * <p>
-             * capacity：容量型
+             * StorageType.
              */
             public Builder storageType(String storageType) {
                 this.storageType = storageType;

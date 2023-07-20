@@ -129,7 +129,7 @@ public class CreateLoadBalancerRequest extends Request {
         } 
 
         /**
-         * ENS节点ID。
+         * EnsRegionId.
          */
         public Builder ensRegionId(String ensRegionId) {
             this.putQueryParameter("EnsRegionId", ensRegionId);
@@ -138,7 +138,7 @@ public class CreateLoadBalancerRequest extends Request {
         }
 
         /**
-         * 负载均衡实例的名称。
+         * LoadBalancerName.
          */
         public Builder loadBalancerName(String loadBalancerName) {
             this.putQueryParameter("LoadBalancerName", loadBalancerName);
@@ -147,7 +147,7 @@ public class CreateLoadBalancerRequest extends Request {
         }
 
         /**
-         * 负载均衡实例的名称。
+         * LoadBalancerSpec.
          */
         public Builder loadBalancerSpec(String loadBalancerSpec) {
             this.putQueryParameter("LoadBalancerSpec", loadBalancerSpec);
@@ -156,7 +156,7 @@ public class CreateLoadBalancerRequest extends Request {
         }
 
         /**
-         * 要创建的ELB实例的网络ID
+         * NetworkId.
          */
         public Builder networkId(String networkId) {
             this.putQueryParameter("NetworkId", networkId);
@@ -165,7 +165,7 @@ public class CreateLoadBalancerRequest extends Request {
         }
 
         /**
-         * 付费类型。PostPaid（目前只支持此种）：按量付费
+         * PayType.
          */
         public Builder payType(String payType) {
             this.putQueryParameter("PayType", payType);
@@ -174,7 +174,7 @@ public class CreateLoadBalancerRequest extends Request {
         }
 
         /**
-         * 专有网络实例的所属的交换机ID。
+         * VSwitchId.
          */
         public Builder vSwitchId(String vSwitchId) {
             this.putQueryParameter("VSwitchId", vSwitchId);

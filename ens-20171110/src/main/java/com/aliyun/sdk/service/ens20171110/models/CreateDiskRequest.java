@@ -113,7 +113,7 @@ public class CreateDiskRequest extends Request {
         } 
 
         /**
-         * 磁盘种类 高效云盘:cloud_efficiency 全闪云盘:cloud_ssd
+         * Category.
          */
         public Builder category(String category) {
             this.putQueryParameter("Category", category);
@@ -122,7 +122,7 @@ public class CreateDiskRequest extends Request {
         }
 
         /**
-         * 节点ID
+         * EnsRegionId.
          */
         public Builder ensRegionId(String ensRegionId) {
             this.putQueryParameter("EnsRegionId", ensRegionId);
@@ -131,7 +131,7 @@ public class CreateDiskRequest extends Request {
         }
 
         /**
-         * 实例付费方式，取值 PrePaid:预付费，包年包月 PostPaid:按量付费。目前只支持：PostPaid
+         * InstanceChargeType.
          */
         public Builder instanceChargeType(String instanceChargeType) {
             this.putQueryParameter("InstanceChargeType", instanceChargeType);
@@ -140,7 +140,7 @@ public class CreateDiskRequest extends Request {
         }
 
         /**
-         * 磁盘大小,单位GB
+         * Size.
          */
         public Builder size(String size) {
             this.putQueryParameter("Size", size);

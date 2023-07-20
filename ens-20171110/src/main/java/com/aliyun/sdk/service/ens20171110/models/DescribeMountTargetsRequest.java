@@ -113,7 +113,7 @@ public class DescribeMountTargetsRequest extends Request {
         } 
 
         /**
-         * 地域ID。
+         * EnsRegionId.
          */
         public Builder ensRegionId(String ensRegionId) {
             this.putQueryParameter("EnsRegionId", ensRegionId);
@@ -122,7 +122,7 @@ public class DescribeMountTargetsRequest extends Request {
         }
 
         /**
-         * 文件系统ID。
+         * FileSystemId.
          */
         public Builder fileSystemId(String fileSystemId) {
             this.putQueryParameter("FileSystemId", fileSystemId);
@@ -131,7 +131,7 @@ public class DescribeMountTargetsRequest extends Request {
         }
 
         /**
-         * 挂载点名称。
+         * MountTargetName.
          */
         public Builder mountTargetName(String mountTargetName) {
             this.putQueryParameter("MountTargetName", mountTargetName);
@@ -140,9 +140,7 @@ public class DescribeMountTargetsRequest extends Request {
         }
 
         /**
-         * 页码，起始值为1。
-         * <p>
-         * 默认值：1。
+         * PageNumber.
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -151,9 +149,7 @@ public class DescribeMountTargetsRequest extends Request {
         }
 
         /**
-         * 每页行数，最大值为100行。
-         * <p>
-         * 默认值：10。
+         * PageSize.
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);

@@ -394,7 +394,7 @@ public class DescribeLoadBalancerTCPListenerAttributeResponseBody extends TeaMod
         }
 
         /**
-         * Id of the request
+         * RequestId.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

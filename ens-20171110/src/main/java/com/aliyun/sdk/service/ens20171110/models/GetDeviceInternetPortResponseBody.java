@@ -62,7 +62,7 @@ public class GetDeviceInternetPortResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * InstanceId
+         * InstanceId.
          */
         public Builder instanceId(String instanceId) {
             this.instanceId = instanceId;
@@ -78,7 +78,7 @@ public class GetDeviceInternetPortResponseBody extends TeaModel {
         }
 
         /**
-         * Id of the request
+         * RequestId.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

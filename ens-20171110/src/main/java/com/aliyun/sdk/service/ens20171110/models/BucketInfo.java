@@ -159,7 +159,7 @@ public class BucketInfo extends TeaModel {
         private String storageClass; 
 
         /**
-         * Bucket读写权限类型： public-read-write：公共读写 public-read：公共读 private：私有（默认值）
+         * BucketAcl.
          */
         public Builder bucketAcl(String bucketAcl) {
             this.bucketAcl = bucketAcl;
@@ -167,7 +167,7 @@ public class BucketInfo extends TeaModel {
         }
 
         /**
-         * Bucket名称。 3~50 个字符，只允许小写字母、数字、短横线（-），且不能以短横线开头或结尾。
+         * BucketName.
          */
         public Builder bucketName(String bucketName) {
             this.bucketName = bucketName;
@@ -175,7 +175,7 @@ public class BucketInfo extends TeaModel {
         }
 
         /**
-         * 备注。 1-128个字符或汉字，UTF-8编码。
+         * Comment.
          */
         public Builder comment(String comment) {
             this.comment = comment;
@@ -183,7 +183,7 @@ public class BucketInfo extends TeaModel {
         }
 
         /**
-         * Bucket创建时间。 （格式：yyyy-mm-ddThh:mm:ss.timezone, 例如 2011-12-01T12:27:13.000Z）
+         * CreateTime.
          */
         public Builder createTime(String createTime) {
             this.createTime = createTime;
@@ -191,7 +191,7 @@ public class BucketInfo extends TeaModel {
         }
 
         /**
-         * 指定Bucket的数据容灾类型。 取值范围： LRS（默认值）。本地冗余LRS ZRS 同城冗余ZRS采用多可用区（AZ）机制。
+         * DataRedundancyType.
          */
         public Builder dataRedundancyType(String dataRedundancyType) {
             this.dataRedundancyType = dataRedundancyType;
@@ -199,7 +199,7 @@ public class BucketInfo extends TeaModel {
         }
 
         /**
-         * Bucket的调度类型： node：节点(同城) area：区域(多城市) global：全局(全国)
+         * DispatcherType.
          */
         public Builder dispatcherType(String dispatcherType) {
             this.dispatcherType = dispatcherType;
@@ -207,7 +207,7 @@ public class BucketInfo extends TeaModel {
         }
 
         /**
-         * 访问域名，边缘存储取值： eos.aliyuncs.com
+         * Endpoint.
          */
         public Builder endpoint(String endpoint) {
             this.endpoint = endpoint;
@@ -215,7 +215,7 @@ public class BucketInfo extends TeaModel {
         }
 
         /**
-         * 节点区域id，如果为空表示全局
+         * EnsRegionId.
          */
         public Builder ensRegionId(String ensRegionId) {
             this.ensRegionId = ensRegionId;
@@ -223,7 +223,7 @@ public class BucketInfo extends TeaModel {
         }
 
         /**
-         * Bucket修改时间。 （格式：yyyy-mm-ddThh:mm:ss.timezone, 例如 2011-12-01T12:27:13.000Z）
+         * ModifyTime.
          */
         public Builder modifyTime(String modifyTime) {
             this.modifyTime = modifyTime;
@@ -231,7 +231,7 @@ public class BucketInfo extends TeaModel {
         }
 
         /**
-         * 指定Bucket的资源类型。 取值范围： general：通用 national-network：国网
+         * ResourceType.
          */
         public Builder resourceType(String resourceType) {
             this.resourceType = resourceType;
@@ -239,7 +239,7 @@ public class BucketInfo extends TeaModel {
         }
 
         /**
-         * Bucket存储类型，支持Standard
+         * StorageClass.
          */
         public Builder storageClass(String storageClass) {
             this.storageClass = storageClass;

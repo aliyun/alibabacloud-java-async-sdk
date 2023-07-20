@@ -55,7 +55,7 @@ public class DeleteEnsRouteEntryRequest extends Request {
         } 
 
         /**
-         * 要删除的路由条目ID。
+         * RouteEntryId.
          */
         public Builder routeEntryId(String routeEntryId) {
             this.putQueryParameter("RouteEntryId", routeEntryId);

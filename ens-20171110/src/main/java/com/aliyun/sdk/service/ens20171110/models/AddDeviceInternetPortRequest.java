@@ -137,7 +137,7 @@ public class AddDeviceInternetPortRequest extends Request {
         }
 
         /**
-         * 实例ID
+         * InstanceId.
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);

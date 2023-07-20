@@ -62,7 +62,7 @@ public class CreateDiskResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * 实列ID集合
+         * InstanceIds.
          */
         public Builder instanceIds(java.util.List < String > instanceIds) {
             this.instanceIds = instanceIds;
@@ -70,7 +70,7 @@ public class CreateDiskResponseBody extends TeaModel {
         }
 
         /**
-         * 订单id,多个以逗号分割，可以直接跳转到收银行台 只有预付费返回订单号，后付费不返回
+         * OrderId.
          */
         public Builder orderId(String orderId) {
             this.orderId = orderId;
@@ -78,7 +78,7 @@ public class CreateDiskResponseBody extends TeaModel {
         }
 
         /**
-         * 请求唯一ID
+         * RequestId.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

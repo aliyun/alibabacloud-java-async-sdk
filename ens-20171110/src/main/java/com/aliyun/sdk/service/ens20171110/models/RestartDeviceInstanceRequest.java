@@ -70,7 +70,7 @@ public class RestartDeviceInstanceRequest extends Request {
         } 
 
         /**
-         * App ID
+         * AppId.
          */
         public Builder appId(String appId) {
             this.putQueryParameter("AppId", appId);
@@ -79,7 +79,7 @@ public class RestartDeviceInstanceRequest extends Request {
         }
 
         /**
-         * Instance ID
+         * InstanceId.
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);

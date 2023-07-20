@@ -189,7 +189,7 @@ public class DescribePriceRequest extends Request {
         }
 
         /**
-         * 如果DataDisk.1.Size为空且此字段不为空时的则以此字段为准
+         * DataDisks.
          */
         public Builder dataDisks(java.util.List < DataDisks> dataDisks) {
             String dataDisksShrink = shrink(dataDisks, "DataDisks", "json");
@@ -199,7 +199,7 @@ public class DescribePriceRequest extends Request {
         }
 
         /**
-         * 节点ID。
+         * EnsRegionId.
          */
         public Builder ensRegionId(String ensRegionId) {
             this.putQueryParameter("EnsRegionId", ensRegionId);
@@ -208,7 +208,7 @@ public class DescribePriceRequest extends Request {
         }
 
         /**
-         * 实列规格。
+         * InstanceType.
          */
         public Builder instanceType(String instanceType) {
             this.putQueryParameter("InstanceType", instanceType);
@@ -217,7 +217,7 @@ public class DescribePriceRequest extends Request {
         }
 
         /**
-         * 带宽计费方式
+         * InternetChargeType.
          */
         public Builder internetChargeType(String internetChargeType) {
             this.putQueryParameter("InternetChargeType", internetChargeType);
@@ -226,7 +226,7 @@ public class DescribePriceRequest extends Request {
         }
 
         /**
-         * 购买资源的时长，如果不指定PeriodUnit，则默认按月购买。目前只支持按Days和Month。如果PeriodUnit=Day时，Period仅可以3。如果PeriodUnit=Monthc时，则Period可以为1-9,12。
+         * Period.
          */
         public Builder period(Integer period) {
             this.putQueryParameter("Period", period);
@@ -235,10 +235,7 @@ public class DescribePriceRequest extends Request {
         }
 
         /**
-         * 查询云服务器ENS不同计费周期的价格。取值范围：
-         * <p>
-         * Month（默认）：按月计费的价格单位。
-         * Day：按天计费的价格单位。
+         * PeriodUnit.
          */
         public Builder periodUnit(String periodUnit) {
             this.putQueryParameter("PeriodUnit", periodUnit);
@@ -247,7 +244,7 @@ public class DescribePriceRequest extends Request {
         }
 
         /**
-         * 数量。
+         * Quantity.
          */
         public Builder quantity(Integer quantity) {
             this.putQueryParameter("Quantity", quantity);
@@ -289,7 +286,7 @@ public class DescribePriceRequest extends Request {
             private Integer size; 
 
             /**
-             * 数据盘大小，单位GB。如果此字段不为空，则以此段为准。
+             * Size.
              */
             public Builder size(Integer size) {
                 this.size = size;
@@ -331,7 +328,7 @@ public class DescribePriceRequest extends Request {
             private Integer size; 
 
             /**
-             * 系统盘大小，单位：GB
+             * Size.
              */
             public Builder size(Integer size) {
                 this.size = size;
@@ -384,7 +381,7 @@ public class DescribePriceRequest extends Request {
             private Long size; 
 
             /**
-             * 磁盘类型
+             * Category.
              */
             public Builder category(String category) {
                 this.category = category;
@@ -392,7 +389,7 @@ public class DescribePriceRequest extends Request {
             }
 
             /**
-             * 系统盘大小，单位：GB
+             * Size.
              */
             public Builder size(Long size) {
                 this.size = size;

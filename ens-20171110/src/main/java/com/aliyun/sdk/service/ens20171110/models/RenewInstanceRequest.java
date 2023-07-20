@@ -70,7 +70,7 @@ public class RenewInstanceRequest extends Request {
         } 
 
         /**
-         * 需要续费的实例ID。
+         * InstanceId.
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -79,7 +79,7 @@ public class RenewInstanceRequest extends Request {
         }
 
         /**
-         * 包年包月续费时长。
+         * Period.
          */
         public Builder period(Long period) {
             this.putQueryParameter("Period", period);

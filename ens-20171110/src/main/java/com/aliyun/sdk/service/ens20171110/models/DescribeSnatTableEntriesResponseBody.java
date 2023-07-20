@@ -102,7 +102,7 @@ public class DescribeSnatTableEntriesResponseBody extends TeaModel {
         }
 
         /**
-         * Id of the request
+         * RequestId.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -147,6 +147,12 @@ public class DescribeSnatTableEntriesResponseBody extends TeaModel {
         @NameInMap("SourceCIDR")
         private String sourceCIDR;
 
+        @NameInMap("StandbySnatIp")
+        private String standbySnatIp;
+
+        @NameInMap("StandbyStatus")
+        private String standbyStatus;
+
         @NameInMap("Status")
         private String status;
 
@@ -156,6 +162,8 @@ public class DescribeSnatTableEntriesResponseBody extends TeaModel {
             this.snatEntryName = builder.snatEntryName;
             this.snatIp = builder.snatIp;
             this.sourceCIDR = builder.sourceCIDR;
+            this.standbySnatIp = builder.standbySnatIp;
+            this.standbyStatus = builder.standbyStatus;
             this.status = builder.status;
         }
 
@@ -203,6 +211,20 @@ public class DescribeSnatTableEntriesResponseBody extends TeaModel {
         }
 
         /**
+         * @return standbySnatIp
+         */
+        public String getStandbySnatIp() {
+            return this.standbySnatIp;
+        }
+
+        /**
+         * @return standbyStatus
+         */
+        public String getStandbyStatus() {
+            return this.standbyStatus;
+        }
+
+        /**
          * @return status
          */
         public String getStatus() {
@@ -215,6 +237,8 @@ public class DescribeSnatTableEntriesResponseBody extends TeaModel {
             private String snatEntryName; 
             private String snatIp; 
             private String sourceCIDR; 
+            private String standbySnatIp; 
+            private String standbyStatus; 
             private String status; 
 
             /**
@@ -254,6 +278,22 @@ public class DescribeSnatTableEntriesResponseBody extends TeaModel {
              */
             public Builder sourceCIDR(String sourceCIDR) {
                 this.sourceCIDR = sourceCIDR;
+                return this;
+            }
+
+            /**
+             * StandbySnatIp.
+             */
+            public Builder standbySnatIp(String standbySnatIp) {
+                this.standbySnatIp = standbySnatIp;
+                return this;
+            }
+
+            /**
+             * StandbyStatus.
+             */
+            public Builder standbyStatus(String standbyStatus) {
+                this.standbyStatus = standbyStatus;
                 return this;
             }
 

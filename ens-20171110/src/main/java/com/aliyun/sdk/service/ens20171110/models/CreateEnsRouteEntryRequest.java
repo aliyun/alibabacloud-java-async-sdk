@@ -129,7 +129,7 @@ public class CreateEnsRouteEntryRequest extends Request {
         } 
 
         /**
-         * 自定义路由条目的描述信息。
+         * Description.
          */
         public Builder description(String description) {
             this.putQueryParameter("Description", description);
@@ -138,7 +138,7 @@ public class CreateEnsRouteEntryRequest extends Request {
         }
 
         /**
-         * 自定义路由条目的目标网段。
+         * DestinationCidrBlock.
          */
         public Builder destinationCidrBlock(String destinationCidrBlock) {
             this.putQueryParameter("DestinationCidrBlock", destinationCidrBlock);
@@ -147,7 +147,7 @@ public class CreateEnsRouteEntryRequest extends Request {
         }
 
         /**
-         * 自定义路由条目的下一跳实例的ID。
+         * NextHopId.
          */
         public Builder nextHopId(String nextHopId) {
             this.putQueryParameter("NextHopId", nextHopId);
@@ -156,7 +156,7 @@ public class CreateEnsRouteEntryRequest extends Request {
         }
 
         /**
-         * 自定义路由条目的下一跳的类型
+         * NextHopType.
          */
         public Builder nextHopType(String nextHopType) {
             this.putQueryParameter("NextHopType", nextHopType);
@@ -165,7 +165,7 @@ public class CreateEnsRouteEntryRequest extends Request {
         }
 
         /**
-         * 要创建的自定义路由条目的名称。
+         * RouteEntryName.
          */
         public Builder routeEntryName(String routeEntryName) {
             this.putQueryParameter("RouteEntryName", routeEntryName);
@@ -174,7 +174,7 @@ public class CreateEnsRouteEntryRequest extends Request {
         }
 
         /**
-         * 要创建自定义路由条目的路由表ID。
+         * RouteTableId.
          */
         public Builder routeTableId(String routeTableId) {
             this.putQueryParameter("RouteTableId", routeTableId);

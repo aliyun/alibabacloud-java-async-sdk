@@ -85,7 +85,7 @@ public class ResetDeviceInstanceRequest extends Request {
         } 
 
         /**
-         * A short description of struct
+         * AppId.
          */
         public Builder appId(String appId) {
             this.putQueryParameter("AppId", appId);

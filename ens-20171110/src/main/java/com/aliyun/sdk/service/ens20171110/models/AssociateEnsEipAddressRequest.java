@@ -26,11 +26,16 @@ public class AssociateEnsEipAddressRequest extends Request {
     @NameInMap("InstanceType")
     private String instanceType;
 
+    @Query
+    @NameInMap("Standby")
+    private Boolean standby;
+
     private AssociateEnsEipAddressRequest(Builder builder) {
         super(builder);
         this.allocationId = builder.allocationId;
         this.instanceId = builder.instanceId;
         this.instanceType = builder.instanceType;
+        this.standby = builder.standby;
     }
 
     public static Builder builder() {
@@ -67,10 +72,18 @@ public class AssociateEnsEipAddressRequest extends Request {
         return this.instanceType;
     }
 
+    /**
+     * @return standby
+     */
+    public Boolean getStandby() {
+        return this.standby;
+    }
+
     public static final class Builder extends Request.Builder<AssociateEnsEipAddressRequest, Builder> {
         private String allocationId; 
         private String instanceId; 
         private String instanceType; 
+        private Boolean standby; 
 
         private Builder() {
             super();
@@ -81,6 +94,7 @@ public class AssociateEnsEipAddressRequest extends Request {
             this.allocationId = request.allocationId;
             this.instanceId = request.instanceId;
             this.instanceType = request.instanceType;
+            this.standby = request.standby;
         } 
 
         /**
@@ -107,6 +121,15 @@ public class AssociateEnsEipAddressRequest extends Request {
         public Builder instanceType(String instanceType) {
             this.putQueryParameter("InstanceType", instanceType);
             this.instanceType = instanceType;
+            return this;
+        }
+
+        /**
+         * Standby.
+         */
+        public Builder standby(Boolean standby) {
+            this.putQueryParameter("Standby", standby);
+            this.standby = standby;
             return this;
         }
 

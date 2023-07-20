@@ -110,7 +110,7 @@ public class DescribeSelfImagesRequest extends Request {
         } 
 
         /**
-         * 镜像ID,支持模糊查询。
+         * ImageId.
          */
         public Builder imageId(String imageId) {
             this.putQueryParameter("ImageId", imageId);
@@ -119,7 +119,7 @@ public class DescribeSelfImagesRequest extends Request {
         }
 
         /**
-         * 镜像名称，支持模糊查询。
+         * ImageName.
          */
         public Builder imageName(String imageName) {
             this.putQueryParameter("ImageName", imageName);

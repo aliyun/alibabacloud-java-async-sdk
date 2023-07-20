@@ -135,7 +135,7 @@ public class SecurityGroupRule extends TeaModel {
         private Integer priority; 
 
         /**
-         * 描述
+         * Description.
          */
         public Builder description(String description) {
             this.description = description;
@@ -143,7 +143,7 @@ public class SecurityGroupRule extends TeaModel {
         }
 
         /**
-         * 目标网段
+         * DestCidrIp.
          */
         public Builder destCidrIp(String destCidrIp) {
             this.destCidrIp = destCidrIp;
@@ -151,7 +151,7 @@ public class SecurityGroupRule extends TeaModel {
         }
 
         /**
-         * 方向
+         * Direction.
          */
         public Builder direction(String direction) {
             this.direction = direction;
@@ -159,7 +159,7 @@ public class SecurityGroupRule extends TeaModel {
         }
 
         /**
-         * 协议
+         * IpProtocol.
          */
         public Builder ipProtocol(String ipProtocol) {
             this.ipProtocol = ipProtocol;
@@ -167,7 +167,7 @@ public class SecurityGroupRule extends TeaModel {
         }
 
         /**
-         * 授权策略
+         * Policy.
          */
         public Builder policy(String policy) {
             this.policy = policy;
@@ -175,7 +175,7 @@ public class SecurityGroupRule extends TeaModel {
         }
 
         /**
-         * 目的端口
+         * PortRange.
          */
         public Builder portRange(String portRange) {
             this.portRange = portRange;
@@ -183,7 +183,7 @@ public class SecurityGroupRule extends TeaModel {
         }
 
         /**
-         * 源网段
+         * SourceCidrIp.
          */
         public Builder sourceCidrIp(String sourceCidrIp) {
             this.sourceCidrIp = sourceCidrIp;
@@ -191,7 +191,7 @@ public class SecurityGroupRule extends TeaModel {
         }
 
         /**
-         * 源端口
+         * SourcePortRange.
          */
         public Builder sourcePortRange(String sourcePortRange) {
             this.sourcePortRange = sourcePortRange;
@@ -199,7 +199,7 @@ public class SecurityGroupRule extends TeaModel {
         }
 
         /**
-         * 优先级
+         * priority.
          */
         public Builder priority(Integer priority) {
             this.priority = priority;

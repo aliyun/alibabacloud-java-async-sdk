@@ -50,7 +50,7 @@ public class DescribeEnsSaleControlAvailableResourceResponseBody extends TeaMode
         private java.util.List < SaleControlAvailableResource> saleControlAvailableResource; 
 
         /**
-         * Id of the request
+         * RequestId.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -136,19 +136,31 @@ public class DescribeEnsSaleControlAvailableResourceResponseBody extends TeaMode
         @NameInMap("Area")
         private String area;
 
+        @NameInMap("City")
+        private String city;
+
+        @NameInMap("Country")
+        private String country;
+
         @NameInMap("EnsRegionId")
         private String ensRegionId;
 
         @NameInMap("EnsRegionName")
         private String ensRegionName;
 
+        @NameInMap("Isp")
+        private String isp;
+
         @NameInMap("Province")
         private String province;
 
         private AvailableRegion(Builder builder) {
             this.area = builder.area;
+            this.city = builder.city;
+            this.country = builder.country;
             this.ensRegionId = builder.ensRegionId;
             this.ensRegionName = builder.ensRegionName;
+            this.isp = builder.isp;
             this.province = builder.province;
         }
 
@@ -168,6 +180,20 @@ public class DescribeEnsSaleControlAvailableResourceResponseBody extends TeaMode
         }
 
         /**
+         * @return city
+         */
+        public String getCity() {
+            return this.city;
+        }
+
+        /**
+         * @return country
+         */
+        public String getCountry() {
+            return this.country;
+        }
+
+        /**
          * @return ensRegionId
          */
         public String getEnsRegionId() {
@@ -182,6 +208,13 @@ public class DescribeEnsSaleControlAvailableResourceResponseBody extends TeaMode
         }
 
         /**
+         * @return isp
+         */
+        public String getIsp() {
+            return this.isp;
+        }
+
+        /**
          * @return province
          */
         public String getProvince() {
@@ -190,8 +223,11 @@ public class DescribeEnsSaleControlAvailableResourceResponseBody extends TeaMode
 
         public static final class Builder {
             private String area; 
+            private String city; 
+            private String country; 
             private String ensRegionId; 
             private String ensRegionName; 
+            private String isp; 
             private String province; 
 
             /**
@@ -199,6 +235,22 @@ public class DescribeEnsSaleControlAvailableResourceResponseBody extends TeaMode
              */
             public Builder area(String area) {
                 this.area = area;
+                return this;
+            }
+
+            /**
+             * City.
+             */
+            public Builder city(String city) {
+                this.city = city;
+                return this;
+            }
+
+            /**
+             * Country.
+             */
+            public Builder country(String country) {
+                this.country = country;
                 return this;
             }
 
@@ -215,6 +267,14 @@ public class DescribeEnsSaleControlAvailableResourceResponseBody extends TeaMode
              */
             public Builder ensRegionName(String ensRegionName) {
                 this.ensRegionName = ensRegionName;
+                return this;
+            }
+
+            /**
+             * Isp.
+             */
+            public Builder isp(String isp) {
+                this.isp = isp;
                 return this;
             }
 

@@ -50,7 +50,7 @@ public class DescribeEnsSaleControlResponseBody extends TeaModel {
         private java.util.List < SaleControl> saleControl; 
 
         /**
-         * Id of the request
+         * RequestId.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

@@ -100,7 +100,7 @@ public class CreateMountTargetRequest extends Request {
         } 
 
         /**
-         * 地域ID。
+         * EnsRegionId.
          */
         public Builder ensRegionId(String ensRegionId) {
             this.putQueryParameter("EnsRegionId", ensRegionId);
@@ -109,7 +109,7 @@ public class CreateMountTargetRequest extends Request {
         }
 
         /**
-         * 文件系统ID。
+         * FileSystemId.
          */
         public Builder fileSystemId(String fileSystemId) {
             this.putQueryParameter("FileSystemId", fileSystemId);
@@ -118,7 +118,7 @@ public class CreateMountTargetRequest extends Request {
         }
 
         /**
-         * 挂载点名称。
+         * MountTargetName.
          */
         public Builder mountTargetName(String mountTargetName) {
             this.putQueryParameter("MountTargetName", mountTargetName);
@@ -127,7 +127,7 @@ public class CreateMountTargetRequest extends Request {
         }
 
         /**
-         * 网络ID。
+         * NetWorkId.
          */
         public Builder netWorkId(String netWorkId) {
             this.putQueryParameter("NetWorkId", netWorkId);

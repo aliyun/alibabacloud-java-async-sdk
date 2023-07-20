@@ -68,7 +68,7 @@ public class ModifyPrepayInstanceSpecRequest extends Request {
         } 
 
         /**
-         * 变配实例id
+         * InstanceId.
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -77,7 +77,7 @@ public class ModifyPrepayInstanceSpecRequest extends Request {
         }
 
         /**
-         * 更新的配置
+         * InstanceType.
          */
         public Builder instanceType(String instanceType) {
             this.putQueryParameter("InstanceType", instanceType);

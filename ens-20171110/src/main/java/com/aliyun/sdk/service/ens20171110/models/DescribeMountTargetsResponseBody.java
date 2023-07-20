@@ -86,7 +86,7 @@ public class DescribeMountTargetsResponseBody extends TeaModel {
         private Integer totalCount; 
 
         /**
-         * 挂载点信息集合。
+         * MountTargets.
          */
         public Builder mountTargets(java.util.List < MountTargets> mountTargets) {
             this.mountTargets = mountTargets;
@@ -94,7 +94,7 @@ public class DescribeMountTargetsResponseBody extends TeaModel {
         }
 
         /**
-         * 页码。
+         * PageNumber.
          */
         public Builder pageNumber(Integer pageNumber) {
             this.pageNumber = pageNumber;
@@ -102,7 +102,7 @@ public class DescribeMountTargetsResponseBody extends TeaModel {
         }
 
         /**
-         * 单页行数。
+         * PageSize.
          */
         public Builder pageSize(Integer pageSize) {
             this.pageSize = pageSize;
@@ -110,7 +110,7 @@ public class DescribeMountTargetsResponseBody extends TeaModel {
         }
 
         /**
-         * 请求ID
+         * RequestId.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -118,7 +118,7 @@ public class DescribeMountTargetsResponseBody extends TeaModel {
         }
 
         /**
-         * 总数。
+         * TotalCount.
          */
         public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;
@@ -218,7 +218,7 @@ public class DescribeMountTargetsResponseBody extends TeaModel {
             private String status; 
 
             /**
-             * 地域ID。
+             * EnsRegionId.
              */
             public Builder ensRegionId(String ensRegionId) {
                 this.ensRegionId = ensRegionId;
@@ -226,7 +226,7 @@ public class DescribeMountTargetsResponseBody extends TeaModel {
             }
 
             /**
-             * 文件系统ID。
+             * FileSystemId.
              */
             public Builder fileSystemId(String fileSystemId) {
                 this.fileSystemId = fileSystemId;
@@ -234,9 +234,7 @@ public class DescribeMountTargetsResponseBody extends TeaModel {
             }
 
             /**
-             * 挂载点路径。
-             * <p>
-             * LB:/fileSystemName/mountTargetName
+             * MountTargetDomain.
              */
             public Builder mountTargetDomain(String mountTargetDomain) {
                 this.mountTargetDomain = mountTargetDomain;
@@ -244,7 +242,7 @@ public class DescribeMountTargetsResponseBody extends TeaModel {
             }
 
             /**
-             * 挂载点名称
+             * MountTargetName.
              */
             public Builder mountTargetName(String mountTargetName) {
                 this.mountTargetName = mountTargetName;
@@ -252,9 +250,7 @@ public class DescribeMountTargetsResponseBody extends TeaModel {
             }
 
             /**
-             * 网络ID。
-             * <p>
-             * n-***
+             * NetWorkId.
              */
             public Builder netWorkId(String netWorkId) {
                 this.netWorkId = netWorkId;
@@ -262,13 +258,7 @@ public class DescribeMountTargetsResponseBody extends TeaModel {
             }
 
             /**
-             * 状态。
-             * <p>
-             * 包括：
-             * active：可用
-             * inactive：不可用
-             * pending：任务排队中
-             * deleting：删除中
+             * Status.
              */
             public Builder status(String status) {
                 this.status = status;

@@ -322,7 +322,7 @@ public class DescribeDisksRequest extends Request {
         }
 
         /**
-         * 云盘所挂载的实列。
+         * InstanceId.
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);

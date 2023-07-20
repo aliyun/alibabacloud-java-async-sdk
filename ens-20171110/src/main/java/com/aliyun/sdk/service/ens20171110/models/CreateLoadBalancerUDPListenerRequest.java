@@ -233,7 +233,7 @@ public class CreateLoadBalancerUDPListenerRequest extends Request {
         } 
 
         /**
-         * 负载均衡实例后端使用的端口，取值：1~65535
+         * BackendServerPort.
          */
         public Builder backendServerPort(Integer backendServerPort) {
             this.putQueryParameter("BackendServerPort", backendServerPort);
@@ -242,7 +242,7 @@ public class CreateLoadBalancerUDPListenerRequest extends Request {
         }
 
         /**
-         * 设置监听的描述信息。  长度限制为1-80个字符，允许包含字母、数字、“-”、“/”、“.”和“_”等字符。支持中文描述。
+         * Description.
          */
         public Builder description(String description) {
             this.putQueryParameter("Description", description);
@@ -260,7 +260,7 @@ public class CreateLoadBalancerUDPListenerRequest extends Request {
         }
 
         /**
-         * 健康检查使用的端口。取值：1-65535  不设置此参数时，表示使用后端服务端口（BackendServerPort）
+         * HealthCheckConnectPort.
          */
         public Builder healthCheckConnectPort(Integer healthCheckConnectPort) {
             this.putQueryParameter("HealthCheckConnectPort", healthCheckConnectPort);
@@ -269,7 +269,7 @@ public class CreateLoadBalancerUDPListenerRequest extends Request {
         }
 
         /**
-         * 接收来自运行状况检查的响应需要等待的时间。  如果后端ENS在指定的时间内没有正确响应，则判定为健康检查失败。  取值：1-300（秒）。默认为5秒
+         * HealthCheckConnectTimeout.
          */
         public Builder healthCheckConnectTimeout(Integer healthCheckConnectTimeout) {
             this.putQueryParameter("HealthCheckConnectTimeout", healthCheckConnectTimeout);
@@ -278,7 +278,7 @@ public class CreateLoadBalancerUDPListenerRequest extends Request {
         }
 
         /**
-         * UDP监听健康检查的响应串，只允许包含字母、数字，最大长度限制为64个字符。
+         * HealthCheckExp.
          */
         public Builder healthCheckExp(String healthCheckExp) {
             this.putQueryParameter("HealthCheckExp", healthCheckExp);
@@ -287,7 +287,7 @@ public class CreateLoadBalancerUDPListenerRequest extends Request {
         }
 
         /**
-         * 健康检查的时间间隔。  取值：1-50（秒）。
+         * HealthCheckInterval.
          */
         public Builder healthCheckInterval(Integer healthCheckInterval) {
             this.putQueryParameter("HealthCheckInterval", healthCheckInterval);
@@ -296,7 +296,7 @@ public class CreateLoadBalancerUDPListenerRequest extends Request {
         }
 
         /**
-         * UDP监听健康检查的请求串，只允许包含字母、数字，最大长度限制为64个字符。
+         * HealthCheckReq.
          */
         public Builder healthCheckReq(String healthCheckReq) {
             this.putQueryParameter("HealthCheckReq", healthCheckReq);
@@ -305,7 +305,7 @@ public class CreateLoadBalancerUDPListenerRequest extends Request {
         }
 
         /**
-         * 健康检查连续成功多少次后，将后端服务器的健康检查状态由fail判定为success。  取值：2-10。
+         * HealthyThreshold.
          */
         public Builder healthyThreshold(Integer healthyThreshold) {
             this.putQueryParameter("HealthyThreshold", healthyThreshold);
@@ -314,7 +314,7 @@ public class CreateLoadBalancerUDPListenerRequest extends Request {
         }
 
         /**
-         * 负载均衡实例前端使用的端口。  取值：1-65535。
+         * ListenerPort.
          */
         public Builder listenerPort(Integer listenerPort) {
             this.putQueryParameter("ListenerPort", listenerPort);
@@ -323,7 +323,7 @@ public class CreateLoadBalancerUDPListenerRequest extends Request {
         }
 
         /**
-         * 负载均衡实例的ID。
+         * LoadBalancerId.
          */
         public Builder loadBalancerId(String loadBalancerId) {
             this.putQueryParameter("LoadBalancerId", loadBalancerId);
@@ -332,7 +332,7 @@ public class CreateLoadBalancerUDPListenerRequest extends Request {
         }
 
         /**
-         * 调度算法。取值：  wrr（默认值）：权重值越高的后端服务器，被轮询到的次数（概率）也越高。 wlc：除了根据每台后端服务器设定的权重值来进行轮询，同时还考虑后端服务器的实际负载（即连接数）。当权重值相同时，当前连接数越小的后端服务器被轮询到的次数（概率）也越高。 rr：按照访问顺序依次将外部请求依序分发到后端服务器。 sch：基于源IP地址的一致性hash，相同的源地址会调度到相同的后端服务器。
+         * Scheduler.
          */
         public Builder scheduler(String scheduler) {
             this.putQueryParameter("Scheduler", scheduler);
@@ -341,7 +341,7 @@ public class CreateLoadBalancerUDPListenerRequest extends Request {
         }
 
         /**
-         * 健康检查连续失败多少次后，将后端服务器的健康检查状态由success判定为fail。  取值：2-10。
+         * UnhealthyThreshold.
          */
         public Builder unhealthyThreshold(Integer unhealthyThreshold) {
             this.putQueryParameter("UnhealthyThreshold", unhealthyThreshold);

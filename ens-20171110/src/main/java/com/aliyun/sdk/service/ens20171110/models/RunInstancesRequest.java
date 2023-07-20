@@ -465,7 +465,7 @@ public class RunInstancesRequest extends Request {
         } 
 
         /**
-         * 数量
+         * Amount.
          */
         public Builder amount(Long amount) {
             this.putQueryParameter("Amount", amount);
@@ -474,7 +474,7 @@ public class RunInstancesRequest extends Request {
         }
 
         /**
-         * 是否自动续费，默认为false
+         * AutoRenew.
          */
         public Builder autoRenew(Boolean autoRenew) {
             this.putQueryParameter("AutoRenew", autoRenew);
@@ -483,7 +483,7 @@ public class RunInstancesRequest extends Request {
         }
 
         /**
-         * 运营商
+         * Carrier.
          */
         public Builder carrier(String carrier) {
             this.putQueryParameter("Carrier", carrier);
@@ -492,7 +492,7 @@ public class RunInstancesRequest extends Request {
         }
 
         /**
-         * 数据盘规格
+         * DataDisk.
          */
         public Builder dataDisk(java.util.List < DataDisk> dataDisk) {
             String dataDiskShrink = shrink(dataDisk, "DataDisk", "json");
@@ -502,7 +502,7 @@ public class RunInstancesRequest extends Request {
         }
 
         /**
-         * 节点id
+         * EnsRegionId.
          */
         public Builder ensRegionId(String ensRegionId) {
             this.putQueryParameter("EnsRegionId", ensRegionId);
@@ -511,7 +511,7 @@ public class RunInstancesRequest extends Request {
         }
 
         /**
-         * 主机名称
+         * HostName.
          */
         public Builder hostName(String hostName) {
             this.putQueryParameter("HostName", hostName);
@@ -520,7 +520,7 @@ public class RunInstancesRequest extends Request {
         }
 
         /**
-         * 镜像id
+         * ImageId.
          */
         public Builder imageId(String imageId) {
             this.putQueryParameter("ImageId", imageId);
@@ -538,7 +538,7 @@ public class RunInstancesRequest extends Request {
         }
 
         /**
-         * 实例付费方式，PrePaid:预付费，包年包月 PostPaid:按量付费
+         * InstanceChargeType.
          */
         public Builder instanceChargeType(String instanceChargeType) {
             this.putQueryParameter("InstanceChargeType", instanceChargeType);
@@ -547,7 +547,7 @@ public class RunInstancesRequest extends Request {
         }
 
         /**
-         * 实例名称。长度为2~128个字符，必须以大小字母或中文开头，不能以http://和https://开头。可以包含中文、英文、数字、半角冒号（:）、下划线（_）、点号（.）或者连字符（-）。默认值为实例的InstanceId
+         * InstanceName.
          */
         public Builder instanceName(String instanceName) {
             this.putQueryParameter("InstanceName", instanceName);
@@ -556,7 +556,7 @@ public class RunInstancesRequest extends Request {
         }
 
         /**
-         * 实例规格
+         * InstanceType.
          */
         public Builder instanceType(String instanceType) {
             this.putQueryParameter("InstanceType", instanceType);
@@ -565,7 +565,7 @@ public class RunInstancesRequest extends Request {
         }
 
         /**
-         * 带宽计费方式
+         * InternetChargeType.
          */
         public Builder internetChargeType(String internetChargeType) {
             this.putQueryParameter("InternetChargeType", internetChargeType);
@@ -574,7 +574,7 @@ public class RunInstancesRequest extends Request {
         }
 
         /**
-         * 公网最大带宽，如果参数InternetMaxBandwidthOut的值大于0，则自动为实例分配公网IP。
+         * InternetMaxBandwidthOut.
          */
         public Builder internetMaxBandwidthOut(Long internetMaxBandwidthOut) {
             this.putQueryParameter("InternetMaxBandwidthOut", internetMaxBandwidthOut);
@@ -583,7 +583,7 @@ public class RunInstancesRequest extends Request {
         }
 
         /**
-         * 密钥对名称
+         * KeyPairName.
          */
         public Builder keyPairName(String keyPairName) {
             this.putQueryParameter("KeyPairName", keyPairName);
@@ -592,7 +592,7 @@ public class RunInstancesRequest extends Request {
         }
 
         /**
-         * 地区code
+         * NetDistrictCode.
          */
         public Builder netDistrictCode(String netDistrictCode) {
             this.putQueryParameter("NetDistrictCode", netDistrictCode);
@@ -601,7 +601,7 @@ public class RunInstancesRequest extends Request {
         }
 
         /**
-         * 网络id
+         * NetWorkId.
          */
         public Builder netWorkId(String netWorkId) {
             this.putQueryParameter("NetWorkId", netWorkId);
@@ -610,7 +610,7 @@ public class RunInstancesRequest extends Request {
         }
 
         /**
-         * 实例密码
+         * Password.
          */
         public Builder password(String password) {
             this.putQueryParameter("Password", password);
@@ -628,7 +628,7 @@ public class RunInstancesRequest extends Request {
         }
 
         /**
-         * 购买资源的时长，单位为：月
+         * Period.
          */
         public Builder period(Long period) {
             this.putQueryParameter("Period", period);
@@ -637,10 +637,7 @@ public class RunInstancesRequest extends Request {
         }
 
         /**
-         * 查询云服务器ENS不同计费周期的价格。取值范围：
-         * <p>
-         * Month（默认）：按月计费的价格单位。
-         * Day：按天计费的价格单位。
+         * PeriodUnit.
          */
         public Builder periodUnit(String periodUnit) {
             this.putQueryParameter("PeriodUnit", periodUnit);
@@ -649,7 +646,7 @@ public class RunInstancesRequest extends Request {
         }
 
         /**
-         * 私网ip
+         * PrivateIpAddress.
          */
         public Builder privateIpAddress(String privateIpAddress) {
             this.putQueryParameter("PrivateIpAddress", privateIpAddress);
@@ -667,7 +664,7 @@ public class RunInstancesRequest extends Request {
         }
 
         /**
-         * 调度层级
+         * ScheduleAreaLevel.
          */
         public Builder scheduleAreaLevel(String scheduleAreaLevel) {
             this.putQueryParameter("ScheduleAreaLevel", scheduleAreaLevel);
@@ -676,7 +673,7 @@ public class RunInstancesRequest extends Request {
         }
 
         /**
-         * 调度价格策略
+         * SchedulingPriceStrategy.
          */
         public Builder schedulingPriceStrategy(String schedulingPriceStrategy) {
             this.putQueryParameter("SchedulingPriceStrategy", schedulingPriceStrategy);
@@ -685,7 +682,7 @@ public class RunInstancesRequest extends Request {
         }
 
         /**
-         * 调度策略
+         * SchedulingStrategy.
          */
         public Builder schedulingStrategy(String schedulingStrategy) {
             this.putQueryParameter("SchedulingStrategy", schedulingStrategy);
@@ -694,7 +691,7 @@ public class RunInstancesRequest extends Request {
         }
 
         /**
-         * 安全组id
+         * SecurityId.
          */
         public Builder securityId(String securityId) {
             this.putQueryParameter("SecurityId", securityId);
@@ -703,7 +700,7 @@ public class RunInstancesRequest extends Request {
         }
 
         /**
-         * 系统盘规格
+         * SystemDisk.
          */
         public Builder systemDisk(SystemDisk systemDisk) {
             String systemDiskShrink = shrink(systemDisk, "SystemDisk", "json");
@@ -713,7 +710,7 @@ public class RunInstancesRequest extends Request {
         }
 
         /**
-         * 是否为HostName和InstanceName添加有序后缀，有序后缀从001开始递增，最大不能超过999
+         * UniqueSuffix.
          */
         public Builder uniqueSuffix(Boolean uniqueSuffix) {
             this.putQueryParameter("UniqueSuffix", uniqueSuffix);
@@ -722,7 +719,7 @@ public class RunInstancesRequest extends Request {
         }
 
         /**
-         * 用户自定义数据，最大支持16KB 您可传入UserData信息。UserData以Base64的方式编码
+         * UserData.
          */
         public Builder userData(String userData) {
             this.putQueryParameter("UserData", userData);
@@ -731,7 +728,7 @@ public class RunInstancesRequest extends Request {
         }
 
         /**
-         * 交换机id
+         * VSwitchId.
          */
         public Builder vSwitchId(String vSwitchId) {
             this.putQueryParameter("VSwitchId", vSwitchId);

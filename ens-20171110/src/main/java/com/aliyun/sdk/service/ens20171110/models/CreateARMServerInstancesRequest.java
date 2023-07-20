@@ -245,7 +245,7 @@ public class CreateARMServerInstancesRequest extends Request {
         } 
 
         /**
-         * 数量，最大支持10
+         * Amount.
          */
         public Builder amount(Integer amount) {
             this.putQueryParameter("Amount", amount);
@@ -254,7 +254,7 @@ public class CreateARMServerInstancesRequest extends Request {
         }
 
         /**
-         * 是否自动续费，默认为false。
+         * AutoRenew.
          */
         public Builder autoRenew(Boolean autoRenew) {
             this.putQueryParameter("AutoRenew", autoRenew);
@@ -263,7 +263,7 @@ public class CreateARMServerInstancesRequest extends Request {
         }
 
         /**
-         * ENS节点ID。
+         * EnsRegionId.
          */
         public Builder ensRegionId(String ensRegionId) {
             this.putQueryParameter("EnsRegionId", ensRegionId);
@@ -281,7 +281,7 @@ public class CreateARMServerInstancesRequest extends Request {
         }
 
         /**
-         * 镜像ID。
+         * ImageId.
          */
         public Builder imageId(String imageId) {
             this.putQueryParameter("ImageId", imageId);
@@ -290,7 +290,7 @@ public class CreateARMServerInstancesRequest extends Request {
         }
 
         /**
-         * AIC容器实例规格。
+         * InstanceType.
          */
         public Builder instanceType(String instanceType) {
             this.putQueryParameter("InstanceType", instanceType);
@@ -299,7 +299,7 @@ public class CreateARMServerInstancesRequest extends Request {
         }
 
         /**
-         * keypair名称
+         * KeyPairName.
          */
         public Builder keyPairName(String keyPairName) {
             this.putQueryParameter("KeyPairName", keyPairName);
@@ -317,7 +317,7 @@ public class CreateARMServerInstancesRequest extends Request {
         }
 
         /**
-         * 付费类型。PrePaid（目前只支持此种）：包年包月
+         * PayType.
          */
         public Builder payType(String payType) {
             this.putQueryParameter("PayType", payType);
@@ -326,7 +326,7 @@ public class CreateARMServerInstancesRequest extends Request {
         }
 
         /**
-         * 购买周期。
+         * Period.
          */
         public Builder period(Integer period) {
             this.putQueryParameter("Period", period);
@@ -335,7 +335,7 @@ public class CreateARMServerInstancesRequest extends Request {
         }
 
         /**
-         * Month（默认）：按月计费的价格单位。
+         * PeriodUnit.
          */
         public Builder periodUnit(String periodUnit) {
             this.putQueryParameter("PeriodUnit", periodUnit);
@@ -344,12 +344,7 @@ public class CreateARMServerInstancesRequest extends Request {
         }
 
         /**
-         * 分辨率。目前取值
-         * <p>
-         * 1920*1080
-         * 1280*720
-         * 1080*1920
-         * 720*1280
+         * Resolution.
          */
         public Builder resolution(String resolution) {
             this.putQueryParameter("Resolution", resolution);
@@ -367,7 +362,7 @@ public class CreateARMServerInstancesRequest extends Request {
         }
 
         /**
-         * 服务器规格。
+         * ServerType.
          */
         public Builder serverType(String serverType) {
             this.putQueryParameter("ServerType", serverType);

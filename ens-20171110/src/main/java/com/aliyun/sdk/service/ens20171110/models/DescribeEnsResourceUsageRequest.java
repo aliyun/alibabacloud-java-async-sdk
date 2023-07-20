@@ -68,7 +68,7 @@ public class DescribeEnsResourceUsageRequest extends Request {
         } 
 
         /**
-         * vm实例使用结束时间查询结束范围，，格式： yyyy-MM-dd或yyyy-MM-dd HH:mm:ss
+         * ExpiredEndTime.
          */
         public Builder expiredEndTime(String expiredEndTime) {
             this.putQueryParameter("ExpiredEndTime", expiredEndTime);
@@ -77,7 +77,7 @@ public class DescribeEnsResourceUsageRequest extends Request {
         }
 
         /**
-         * vm实例使用结束时间查询开始范围，格式： yyyy-MM-dd或yyyy-MM-dd HH:mm:ss
+         * ExpiredStartTime.
          */
         public Builder expiredStartTime(String expiredStartTime) {
             this.putQueryParameter("ExpiredStartTime", expiredStartTime);

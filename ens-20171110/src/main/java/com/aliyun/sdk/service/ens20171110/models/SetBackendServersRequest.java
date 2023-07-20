@@ -156,7 +156,7 @@ public class SetBackendServersRequest extends Request {
             }
 
             /**
-             * 后端服务器类型。  ens：ENS实例（默认）
+             * Type.
              */
             public Builder type(String type) {
                 this.type = type;
@@ -164,7 +164,7 @@ public class SetBackendServersRequest extends Request {
             }
 
             /**
-             * 后端服务器的权重。  取值：0~100  默认值为100，如果值为0，则不会将请求转发给该后端服务器。
+             * Weight.
              */
             public Builder weight(Integer weight) {
                 this.weight = weight;

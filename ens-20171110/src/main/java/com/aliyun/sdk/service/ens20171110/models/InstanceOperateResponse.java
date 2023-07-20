@@ -90,7 +90,7 @@ public class InstanceOperateResponse extends Response {
         } 
 
         /**
-         * code
+         * Code.
          */
         @Override
         public Builder code(Long code) {
@@ -99,7 +99,7 @@ public class InstanceOperateResponse extends Response {
         }
 
         /**
-         * instance id
+         * InstanceId.
          */
         @Override
         public Builder instanceId(String instanceId) {
@@ -108,7 +108,7 @@ public class InstanceOperateResponse extends Response {
         }
 
         /**
-         * message
+         * Message.
          */
         @Override
         public Builder message(String message) {

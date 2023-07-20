@@ -1,3 +1,6 @@
+2023-07-20 Version: 1.0.13
+- Support clouddisk API.
+
 2023-06-13 Version: 1.0.12
 - Support AIC API.
 

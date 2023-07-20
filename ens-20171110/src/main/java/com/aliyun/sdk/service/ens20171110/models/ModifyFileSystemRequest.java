@@ -85,7 +85,7 @@ public class ModifyFileSystemRequest extends Request {
         } 
 
         /**
-         * 文件系统描述符。
+         * Description.
          */
         public Builder description(String description) {
             this.putQueryParameter("Description", description);
@@ -103,7 +103,7 @@ public class ModifyFileSystemRequest extends Request {
         }
 
         /**
-         * 文件系统ID。
+         * FileSystemId.
          */
         public Builder fileSystemId(String fileSystemId) {
             this.putQueryParameter("FileSystemId", fileSystemId);

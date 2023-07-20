@@ -70,7 +70,7 @@ public class ExportMeasurementDataRequest extends Request {
         } 
 
         /**
-         * 结束时间，UTC格式
+         * EndDate.
          */
         public Builder endDate(String endDate) {
             this.putQueryParameter("EndDate", endDate);
@@ -79,7 +79,7 @@ public class ExportMeasurementDataRequest extends Request {
         }
 
         /**
-         * 开始时间，UTC格式
+         * StartDate.
          */
         public Builder startDate(String startDate) {
             this.putQueryParameter("StartDate", startDate);

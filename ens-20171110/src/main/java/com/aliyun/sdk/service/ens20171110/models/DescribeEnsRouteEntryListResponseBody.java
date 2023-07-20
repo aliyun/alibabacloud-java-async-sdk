@@ -110,7 +110,7 @@ public class DescribeEnsRouteEntryListResponseBody extends TeaModel {
         }
 
         /**
-         * 路由条目信息。
+         * RouteEntrys.
          */
         public Builder routeEntrys(java.util.List < RouteEntrys> routeEntrys) {
             this.routeEntrys = routeEntrys;
@@ -170,7 +170,7 @@ public class DescribeEnsRouteEntryListResponseBody extends TeaModel {
             private String nextHopType; 
 
             /**
-             * 下一跳实例ID。
+             * NextHopId.
              */
             public Builder nextHopId(String nextHopId) {
                 this.nextHopId = nextHopId;
@@ -178,7 +178,7 @@ public class DescribeEnsRouteEntryListResponseBody extends TeaModel {
             }
 
             /**
-             * 下一跳类型
+             * NextHopType.
              */
             public Builder nextHopType(String nextHopType) {
                 this.nextHopType = nextHopType;
@@ -303,7 +303,7 @@ public class DescribeEnsRouteEntryListResponseBody extends TeaModel {
             private String type; 
 
             /**
-             * 路由条目的描述信息。
+             * Description.
              */
             public Builder description(String description) {
                 this.description = description;
@@ -311,7 +311,7 @@ public class DescribeEnsRouteEntryListResponseBody extends TeaModel {
             }
 
             /**
-             * 路由条目的目标网段。
+             * DestinationCidrBlock.
              */
             public Builder destinationCidrBlock(String destinationCidrBlock) {
                 this.destinationCidrBlock = destinationCidrBlock;
@@ -319,7 +319,7 @@ public class DescribeEnsRouteEntryListResponseBody extends TeaModel {
             }
 
             /**
-             * 下一跳
+             * NextHops.
              */
             public Builder nextHops(java.util.List < NextHops> nextHops) {
                 this.nextHops = nextHops;
@@ -327,7 +327,7 @@ public class DescribeEnsRouteEntryListResponseBody extends TeaModel {
             }
 
             /**
-             * 路由条目的ID。
+             * RouteEntryId.
              */
             public Builder routeEntryId(String routeEntryId) {
                 this.routeEntryId = routeEntryId;
@@ -335,7 +335,7 @@ public class DescribeEnsRouteEntryListResponseBody extends TeaModel {
             }
 
             /**
-             * 路由条目的名称。
+             * RouteEntryName.
              */
             public Builder routeEntryName(String routeEntryName) {
                 this.routeEntryName = routeEntryName;
@@ -343,7 +343,7 @@ public class DescribeEnsRouteEntryListResponseBody extends TeaModel {
             }
 
             /**
-             * 路由表ID。
+             * RouteTableId.
              */
             public Builder routeTableId(String routeTableId) {
                 this.routeTableId = routeTableId;
@@ -351,7 +351,7 @@ public class DescribeEnsRouteEntryListResponseBody extends TeaModel {
             }
 
             /**
-             * 路由条目的状态
+             * Status.
              */
             public Builder status(String status) {
                 this.status = status;
@@ -359,7 +359,7 @@ public class DescribeEnsRouteEntryListResponseBody extends TeaModel {
             }
 
             /**
-             * 路由条目的类型
+             * Type.
              */
             public Builder type(String type) {
                 this.type = type;

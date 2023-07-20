@@ -179,6 +179,9 @@ public class DescribeDisksResponseBody extends TeaModel {
         @NameInMap("Portable")
         private Boolean portable;
 
+        @NameInMap("SerialId")
+        private String serialId;
+
         @NameInMap("Size")
         private Integer size;
 
@@ -201,6 +204,7 @@ public class DescribeDisksResponseBody extends TeaModel {
             this.instanceId = builder.instanceId;
             this.instanceName = builder.instanceName;
             this.portable = builder.portable;
+            this.serialId = builder.serialId;
             this.size = builder.size;
             this.snapshotId = builder.snapshotId;
             this.status = builder.status;
@@ -279,6 +283,13 @@ public class DescribeDisksResponseBody extends TeaModel {
         }
 
         /**
+         * @return serialId
+         */
+        public String getSerialId() {
+            return this.serialId;
+        }
+
+        /**
          * @return size
          */
         public Integer getSize() {
@@ -316,6 +327,7 @@ public class DescribeDisksResponseBody extends TeaModel {
             private String instanceId; 
             private String instanceName; 
             private Boolean portable; 
+            private String serialId; 
             private Integer size; 
             private String snapshotId; 
             private String status; 
@@ -390,6 +402,14 @@ public class DescribeDisksResponseBody extends TeaModel {
              */
             public Builder portable(Boolean portable) {
                 this.portable = portable;
+                return this;
+            }
+
+            /**
+             * SerialId.
+             */
+            public Builder serialId(String serialId) {
+                this.serialId = serialId;
                 return this;
             }
 

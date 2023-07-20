@@ -36,6 +36,12 @@ public class DescribeSnatAttributeResponseBody extends TeaModel {
     @NameInMap("SourceCIDR")
     private String sourceCIDR;
 
+    @NameInMap("StandbySnatIp")
+    private String standbySnatIp;
+
+    @NameInMap("StandbyStatus")
+    private String standbyStatus;
+
     @NameInMap("Status")
     private String status;
 
@@ -48,6 +54,8 @@ public class DescribeSnatAttributeResponseBody extends TeaModel {
         this.snatIp = builder.snatIp;
         this.snatIps = builder.snatIps;
         this.sourceCIDR = builder.sourceCIDR;
+        this.standbySnatIp = builder.standbySnatIp;
+        this.standbyStatus = builder.standbyStatus;
         this.status = builder.status;
     }
 
@@ -116,6 +124,20 @@ public class DescribeSnatAttributeResponseBody extends TeaModel {
     }
 
     /**
+     * @return standbySnatIp
+     */
+    public String getStandbySnatIp() {
+        return this.standbySnatIp;
+    }
+
+    /**
+     * @return standbyStatus
+     */
+    public String getStandbyStatus() {
+        return this.standbyStatus;
+    }
+
+    /**
      * @return status
      */
     public String getStatus() {
@@ -131,6 +153,8 @@ public class DescribeSnatAttributeResponseBody extends TeaModel {
         private String snatIp; 
         private java.util.List < SnatIps> snatIps; 
         private String sourceCIDR; 
+        private String standbySnatIp; 
+        private String standbyStatus; 
         private String status; 
 
         /**
@@ -194,6 +218,22 @@ public class DescribeSnatAttributeResponseBody extends TeaModel {
          */
         public Builder sourceCIDR(String sourceCIDR) {
             this.sourceCIDR = sourceCIDR;
+            return this;
+        }
+
+        /**
+         * StandbySnatIp.
+         */
+        public Builder standbySnatIp(String standbySnatIp) {
+            this.standbySnatIp = standbySnatIp;
+            return this;
+        }
+
+        /**
+         * StandbyStatus.
+         */
+        public Builder standbyStatus(String standbyStatus) {
+            this.standbyStatus = standbyStatus;
             return this;
         }
 

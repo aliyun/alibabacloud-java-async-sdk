@@ -50,7 +50,7 @@ public class CreateMountTargetResponseBody extends TeaModel {
         private String status; 
 
         /**
-         * Id of the request
+         * RequestId.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

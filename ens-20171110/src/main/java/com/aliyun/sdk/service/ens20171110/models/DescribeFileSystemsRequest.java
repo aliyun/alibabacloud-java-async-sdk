@@ -112,7 +112,7 @@ public class DescribeFileSystemsRequest extends Request {
         } 
 
         /**
-         * 地域ID。
+         * EnsRegionId.
          */
         public Builder ensRegionId(String ensRegionId) {
             this.putQueryParameter("EnsRegionId", ensRegionId);
@@ -121,7 +121,7 @@ public class DescribeFileSystemsRequest extends Request {
         }
 
         /**
-         * 文件系统ID。
+         * FileSystemId.
          */
         public Builder fileSystemId(String fileSystemId) {
             this.putQueryParameter("FileSystemId", fileSystemId);
@@ -130,10 +130,7 @@ public class DescribeFileSystemsRequest extends Request {
         }
 
         /**
-         * 文件系统名称。
-         * <p>
-         * 参与挂载点路径，创建后不允许修改。
-         * LB:/fileSystemName/mountTargetName
+         * FileSystemName.
          */
         public Builder fileSystemName(String fileSystemName) {
             this.putQueryParameter("FileSystemName", fileSystemName);
@@ -142,9 +139,7 @@ public class DescribeFileSystemsRequest extends Request {
         }
 
         /**
-         * 页码，起始值为1。
-         * <p>
-         * 默认值：1。
+         * PageNumber.
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -153,9 +148,7 @@ public class DescribeFileSystemsRequest extends Request {
         }
 
         /**
-         * 每页行数，最大值为100行。
-         * <p>
-         * 默认值：10。
+         * PageSize.
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);

@@ -110,7 +110,7 @@ public class DescribeForwardTableEntriesResponseBody extends TeaModel {
         }
 
         /**
-         * Id of the request
+         * RequestId.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -159,6 +159,12 @@ public class DescribeForwardTableEntriesResponseBody extends TeaModel {
         @NameInMap("NatGatewayId")
         private String natGatewayId;
 
+        @NameInMap("StandbyExternalIp")
+        private String standbyExternalIp;
+
+        @NameInMap("StandbyStatus")
+        private String standbyStatus;
+
         @NameInMap("Status")
         private String status;
 
@@ -172,6 +178,8 @@ public class DescribeForwardTableEntriesResponseBody extends TeaModel {
             this.internalPort = builder.internalPort;
             this.ipProtocol = builder.ipProtocol;
             this.natGatewayId = builder.natGatewayId;
+            this.standbyExternalIp = builder.standbyExternalIp;
+            this.standbyStatus = builder.standbyStatus;
             this.status = builder.status;
         }
 
@@ -247,6 +255,20 @@ public class DescribeForwardTableEntriesResponseBody extends TeaModel {
         }
 
         /**
+         * @return standbyExternalIp
+         */
+        public String getStandbyExternalIp() {
+            return this.standbyExternalIp;
+        }
+
+        /**
+         * @return standbyStatus
+         */
+        public String getStandbyStatus() {
+            return this.standbyStatus;
+        }
+
+        /**
          * @return status
          */
         public String getStatus() {
@@ -263,6 +285,8 @@ public class DescribeForwardTableEntriesResponseBody extends TeaModel {
             private String internalPort; 
             private String ipProtocol; 
             private String natGatewayId; 
+            private String standbyExternalIp; 
+            private String standbyStatus; 
             private String status; 
 
             /**
@@ -334,6 +358,22 @@ public class DescribeForwardTableEntriesResponseBody extends TeaModel {
              */
             public Builder natGatewayId(String natGatewayId) {
                 this.natGatewayId = natGatewayId;
+                return this;
+            }
+
+            /**
+             * StandbyExternalIp.
+             */
+            public Builder standbyExternalIp(String standbyExternalIp) {
+                this.standbyExternalIp = standbyExternalIp;
+                return this;
+            }
+
+            /**
+             * StandbyStatus.
+             */
+            public Builder standbyStatus(String standbyStatus) {
+                this.standbyStatus = standbyStatus;
                 return this;
             }
 

@@ -58,7 +58,7 @@ public class CreateEnsRouteEntryResponseBody extends TeaModel {
         }
 
         /**
-         * 路由条目id。
+         * RouteEntryId.
          */
         public Builder routeEntryId(String routeEntryId) {
             this.routeEntryId = routeEntryId;

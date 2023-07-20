@@ -55,7 +55,7 @@ public class ReleaseInstanceRequest extends Request {
         } 
 
         /**
-         * 实例id
+         * InstanceId.
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);

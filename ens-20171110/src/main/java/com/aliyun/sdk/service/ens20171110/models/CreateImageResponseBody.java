@@ -70,7 +70,7 @@ public class CreateImageResponseBody extends TeaModel {
         }
 
         /**
-         * 镜像ID
+         * ImageId.
          */
         public Builder imageId(String imageId) {
             this.imageId = imageId;

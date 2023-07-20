@@ -91,7 +91,7 @@ public class UdpCheck extends TeaModel {
         private Integer unhealthyThreshold; 
 
         /**
-         * 健康检查使用的端口。取值：1-65535  不设置此参数时，表示使用后端服务端口（BackendServerPort）。
+         * HealthCheckConnectPort.
          */
         public Builder healthCheckConnectPort(Integer healthCheckConnectPort) {
             this.healthCheckConnectPort = healthCheckConnectPort;
@@ -99,7 +99,7 @@ public class UdpCheck extends TeaModel {
         }
 
         /**
-         * 接收来自运行状况检查的响应需要等待的时间。  如果后端ENS在指定的时间内没有正确响应，则判定为健康检查失败。  取值：1-300（秒）。默认为5秒
+         * HealthCheckConnectTimeout.
          */
         public Builder healthCheckConnectTimeout(Integer healthCheckConnectTimeout) {
             this.healthCheckConnectTimeout = healthCheckConnectTimeout;
@@ -107,7 +107,7 @@ public class UdpCheck extends TeaModel {
         }
 
         /**
-         * 健康检查的时间间隔。  取值：1-50（秒）。
+         * HealthCheckInterval.
          */
         public Builder healthCheckInterval(Integer healthCheckInterval) {
             this.healthCheckInterval = healthCheckInterval;
@@ -115,7 +115,7 @@ public class UdpCheck extends TeaModel {
         }
 
         /**
-         * 健康检查连续成功多少次后，将后端服务器的健康检查状态由fail判定为success。  取值：2-10。
+         * HealthyThreshold.
          */
         public Builder healthyThreshold(Integer healthyThreshold) {
             this.healthyThreshold = healthyThreshold;
@@ -123,7 +123,7 @@ public class UdpCheck extends TeaModel {
         }
 
         /**
-         * 健康检查连续失败多少次后，将后端服务器的健康检查状态由success判定为fail。  取值：2-10。
+         * UnhealthyThreshold.
          */
         public Builder unhealthyThreshold(Integer unhealthyThreshold) {
             this.unhealthyThreshold = unhealthyThreshold;

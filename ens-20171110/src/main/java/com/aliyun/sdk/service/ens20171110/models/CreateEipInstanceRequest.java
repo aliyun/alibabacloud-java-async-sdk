@@ -128,7 +128,7 @@ public class CreateEipInstanceRequest extends Request {
         } 
 
         /**
-         * EIP的带宽峰值
+         * Bandwidth.
          */
         public Builder bandwidth(Long bandwidth) {
             this.putQueryParameter("Bandwidth", bandwidth);
@@ -137,7 +137,7 @@ public class CreateEipInstanceRequest extends Request {
         }
 
         /**
-         * ENS节点ID
+         * EnsRegionId.
          */
         public Builder ensRegionId(String ensRegionId) {
             this.putQueryParameter("EnsRegionId", ensRegionId);
@@ -146,7 +146,7 @@ public class CreateEipInstanceRequest extends Request {
         }
 
         /**
-         * EIP的计费方式，取值：  PrePaid：包年包月。 PostPaid（默认值）：按量计费。 当InstanceChargeType取值为PostPaid时，InternetChargeType不能为PayByBandwidth
+         * InstanceChargeType.
          */
         public Builder instanceChargeType(String instanceChargeType) {
             this.putQueryParameter("InstanceChargeType", instanceChargeType);
@@ -155,7 +155,7 @@ public class CreateEipInstanceRequest extends Request {
         }
 
         /**
-         * EIP的计量方式，取值：  PayByBandwidth（默认值）：按带宽计费。 取值：95BandwidthByMonth：月95。
+         * InternetChargeType.
          */
         public Builder internetChargeType(String internetChargeType) {
             this.putQueryParameter("InternetChargeType", internetChargeType);
@@ -164,7 +164,7 @@ public class CreateEipInstanceRequest extends Request {
         }
 
         /**
-         * 运营商信息
+         * Isp.
          */
         public Builder isp(String isp) {
             this.putQueryParameter("Isp", isp);
@@ -173,7 +173,7 @@ public class CreateEipInstanceRequest extends Request {
         }
 
         /**
-         * EIP实例名称。
+         * Name.
          */
         public Builder name(String name) {
             this.putQueryParameter("Name", name);

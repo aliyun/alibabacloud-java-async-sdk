@@ -50,7 +50,7 @@ public class CreateEipInstanceResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * EIP的ID。
+         * AllocationId.
          */
         public Builder allocationId(String allocationId) {
             this.allocationId = allocationId;
@@ -58,7 +58,7 @@ public class CreateEipInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * Id of the request
+         * RequestId.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

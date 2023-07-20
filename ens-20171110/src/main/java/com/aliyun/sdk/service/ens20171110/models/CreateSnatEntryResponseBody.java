@@ -50,7 +50,7 @@ public class CreateSnatEntryResponseBody extends TeaModel {
         private String snatEntryId; 
 
         /**
-         * Id of the request
+         * RequestId.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

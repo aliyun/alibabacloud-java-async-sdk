@@ -22,6 +22,10 @@ public class DescribeEnsSaleControlStockRequest extends Request {
     private String commodityCode;
 
     @Query
+    @NameInMap("CustomAccount")
+    private String customAccount;
+
+    @Query
     @NameInMap("ModuleCode")
     private String moduleCode;
 
@@ -33,6 +37,7 @@ public class DescribeEnsSaleControlStockRequest extends Request {
         super(builder);
         this.aliUidAccount = builder.aliUidAccount;
         this.commodityCode = builder.commodityCode;
+        this.customAccount = builder.customAccount;
         this.moduleCode = builder.moduleCode;
         this.orderType = builder.orderType;
     }
@@ -65,6 +70,13 @@ public class DescribeEnsSaleControlStockRequest extends Request {
     }
 
     /**
+     * @return customAccount
+     */
+    public String getCustomAccount() {
+        return this.customAccount;
+    }
+
+    /**
      * @return moduleCode
      */
     public String getModuleCode() {
@@ -81,6 +93,7 @@ public class DescribeEnsSaleControlStockRequest extends Request {
     public static final class Builder extends Request.Builder<DescribeEnsSaleControlStockRequest, Builder> {
         private String aliUidAccount; 
         private String commodityCode; 
+        private String customAccount; 
         private String moduleCode; 
         private String orderType; 
 
@@ -92,6 +105,7 @@ public class DescribeEnsSaleControlStockRequest extends Request {
             super(request);
             this.aliUidAccount = request.aliUidAccount;
             this.commodityCode = request.commodityCode;
+            this.customAccount = request.customAccount;
             this.moduleCode = request.moduleCode;
             this.orderType = request.orderType;
         } 
@@ -111,6 +125,15 @@ public class DescribeEnsSaleControlStockRequest extends Request {
         public Builder commodityCode(String commodityCode) {
             this.putQueryParameter("CommodityCode", commodityCode);
             this.commodityCode = commodityCode;
+            return this;
+        }
+
+        /**
+         * CustomAccount.
+         */
+        public Builder customAccount(String customAccount) {
+            this.putQueryParameter("CustomAccount", customAccount);
+            this.customAccount = customAccount;
             return this;
         }
 

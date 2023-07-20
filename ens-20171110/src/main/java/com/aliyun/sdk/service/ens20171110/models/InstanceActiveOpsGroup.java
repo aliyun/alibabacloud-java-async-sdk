@@ -38,7 +38,7 @@ public class InstanceActiveOpsGroup extends TeaModel {
         private java.util.List < String > instanceIds; 
 
         /**
-         * the instance list of instance active group
+         * InstanceIds.
          */
         public Builder instanceIds(java.util.List < String > instanceIds) {
             this.instanceIds = instanceIds;

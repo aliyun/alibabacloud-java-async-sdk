@@ -38,6 +38,10 @@ public class CreateSnatEntryRequest extends Request {
     @NameInMap("SourceVSwitchId")
     private String sourceVSwitchId;
 
+    @Query
+    @NameInMap("StandbySnatIp")
+    private String standbySnatIp;
+
     private CreateSnatEntryRequest(Builder builder) {
         super(builder);
         this.natGatewayId = builder.natGatewayId;
@@ -46,6 +50,7 @@ public class CreateSnatEntryRequest extends Request {
         this.sourceCIDR = builder.sourceCIDR;
         this.sourceNetworkId = builder.sourceNetworkId;
         this.sourceVSwitchId = builder.sourceVSwitchId;
+        this.standbySnatIp = builder.standbySnatIp;
     }
 
     public static Builder builder() {
@@ -103,6 +108,13 @@ public class CreateSnatEntryRequest extends Request {
         return this.sourceVSwitchId;
     }
 
+    /**
+     * @return standbySnatIp
+     */
+    public String getStandbySnatIp() {
+        return this.standbySnatIp;
+    }
+
     public static final class Builder extends Request.Builder<CreateSnatEntryRequest, Builder> {
         private String natGatewayId; 
         private String snatEntryName; 
@@ -110,6 +122,7 @@ public class CreateSnatEntryRequest extends Request {
         private String sourceCIDR; 
         private String sourceNetworkId; 
         private String sourceVSwitchId; 
+        private String standbySnatIp; 
 
         private Builder() {
             super();
@@ -123,6 +136,7 @@ public class CreateSnatEntryRequest extends Request {
             this.sourceCIDR = request.sourceCIDR;
             this.sourceNetworkId = request.sourceNetworkId;
             this.sourceVSwitchId = request.sourceVSwitchId;
+            this.standbySnatIp = request.standbySnatIp;
         } 
 
         /**
@@ -176,6 +190,15 @@ public class CreateSnatEntryRequest extends Request {
         public Builder sourceVSwitchId(String sourceVSwitchId) {
             this.putQueryParameter("SourceVSwitchId", sourceVSwitchId);
             this.sourceVSwitchId = sourceVSwitchId;
+            return this;
+        }
+
+        /**
+         * StandbySnatIp.
+         */
+        public Builder standbySnatIp(String standbySnatIp) {
+            this.putQueryParameter("StandbySnatIp", standbySnatIp);
+            this.standbySnatIp = standbySnatIp;
             return this;
         }
 

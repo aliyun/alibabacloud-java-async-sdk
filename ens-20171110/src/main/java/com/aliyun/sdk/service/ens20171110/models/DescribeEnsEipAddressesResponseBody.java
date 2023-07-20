@@ -110,7 +110,7 @@ public class DescribeEnsEipAddressesResponseBody extends TeaModel {
         }
 
         /**
-         * Id of the request
+         * RequestId.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -162,11 +162,17 @@ public class DescribeEnsEipAddressesResponseBody extends TeaModel {
         @NameInMap("IpAddress")
         private String ipAddress;
 
+        @NameInMap("IpStatus")
+        private String ipStatus;
+
         @NameInMap("Isp")
         private String isp;
 
         @NameInMap("Name")
         private String name;
+
+        @NameInMap("Standby")
+        private Boolean standby;
 
         @NameInMap("Status")
         private String status;
@@ -182,8 +188,10 @@ public class DescribeEnsEipAddressesResponseBody extends TeaModel {
             this.instanceType = builder.instanceType;
             this.internetChargeType = builder.internetChargeType;
             this.ipAddress = builder.ipAddress;
+            this.ipStatus = builder.ipStatus;
             this.isp = builder.isp;
             this.name = builder.name;
+            this.standby = builder.standby;
             this.status = builder.status;
         }
 
@@ -266,6 +274,13 @@ public class DescribeEnsEipAddressesResponseBody extends TeaModel {
         }
 
         /**
+         * @return ipStatus
+         */
+        public String getIpStatus() {
+            return this.ipStatus;
+        }
+
+        /**
          * @return isp
          */
         public String getIsp() {
@@ -277,6 +292,13 @@ public class DescribeEnsEipAddressesResponseBody extends TeaModel {
          */
         public String getName() {
             return this.name;
+        }
+
+        /**
+         * @return standby
+         */
+        public Boolean getStandby() {
+            return this.standby;
         }
 
         /**
@@ -297,8 +319,10 @@ public class DescribeEnsEipAddressesResponseBody extends TeaModel {
             private String instanceType; 
             private String internetChargeType; 
             private String ipAddress; 
+            private String ipStatus; 
             private String isp; 
             private String name; 
+            private Boolean standby; 
             private String status; 
 
             /**
@@ -382,6 +406,14 @@ public class DescribeEnsEipAddressesResponseBody extends TeaModel {
             }
 
             /**
+             * IpStatus.
+             */
+            public Builder ipStatus(String ipStatus) {
+                this.ipStatus = ipStatus;
+                return this;
+            }
+
+            /**
              * Isp.
              */
             public Builder isp(String isp) {
@@ -394,6 +426,14 @@ public class DescribeEnsEipAddressesResponseBody extends TeaModel {
              */
             public Builder name(String name) {
                 this.name = name;
+                return this;
+            }
+
+            /**
+             * Standby.
+             */
+            public Builder standby(Boolean standby) {
+                this.standby = standby;
                 return this;
             }
 
