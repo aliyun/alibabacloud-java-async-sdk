@@ -50,7 +50,7 @@ public class CreateServiceCronScalerResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * 操作成功消息
+         * Message.
          */
         public Builder message(String message) {
             this.message = message;
@@ -58,7 +58,7 @@ public class CreateServiceCronScalerResponseBody extends TeaModel {
         }
 
         /**
-         * 请求ID
+         * RequestId.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

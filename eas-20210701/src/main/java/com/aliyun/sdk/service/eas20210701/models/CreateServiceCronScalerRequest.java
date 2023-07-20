@@ -99,7 +99,7 @@ public class CreateServiceCronScalerRequest extends Request {
         } 
 
         /**
-         * 服务所在区域
+         * ClusterId.
          */
         public Builder clusterId(String clusterId) {
             this.putPathParameter("ClusterId", clusterId);
@@ -108,7 +108,7 @@ public class CreateServiceCronScalerRequest extends Request {
         }
 
         /**
-         * 服务名字
+         * ServiceName.
          */
         public Builder serviceName(String serviceName) {
             this.putPathParameter("ServiceName", serviceName);
@@ -117,7 +117,7 @@ public class CreateServiceCronScalerRequest extends Request {
         }
 
         /**
-         * 需要排除的时间点的cron表达式
+         * ExcludeDates.
          */
         public Builder excludeDates(java.util.List < String > excludeDates) {
             this.putBodyParameter("ExcludeDates", excludeDates);
@@ -126,7 +126,7 @@ public class CreateServiceCronScalerRequest extends Request {
         }
 
         /**
-         * 定时伸缩任务描述
+         * ScaleJobs.
          */
         public Builder scaleJobs(java.util.List < ScaleJobs> scaleJobs) {
             this.putBodyParameter("ScaleJobs", scaleJobs);
@@ -202,7 +202,7 @@ public class CreateServiceCronScalerRequest extends Request {
             }
 
             /**
-             * 要执行伸缩任务的cron表达式
+             * Schedule.
              */
             public Builder schedule(String schedule) {
                 this.schedule = schedule;
@@ -210,7 +210,7 @@ public class CreateServiceCronScalerRequest extends Request {
             }
 
             /**
-             * 执行伸缩任务的目标replica
+             * TargetSize.
              */
             public Builder targetSize(Integer targetSize) {
                 this.targetSize = targetSize;

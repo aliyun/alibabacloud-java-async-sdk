@@ -128,7 +128,7 @@ public class CreateResourceRequest extends Request {
         } 
 
         /**
-         * 是否自动续费
+         * AutoRenewal.
          */
         public Builder autoRenewal(Boolean autoRenewal) {
             this.putBodyParameter("AutoRenewal", autoRenewal);
@@ -137,7 +137,7 @@ public class CreateResourceRequest extends Request {
         }
 
         /**
-         * 付费类型，预付费PrePaid，后付费PostPaid
+         * ChargeType.
          */
         public Builder chargeType(String chargeType) {
             this.putBodyParameter("ChargeType", chargeType);
@@ -146,7 +146,7 @@ public class CreateResourceRequest extends Request {
         }
 
         /**
-         * 实例数量
+         * EcsInstanceCount.
          */
         public Builder ecsInstanceCount(Integer ecsInstanceCount) {
             this.putBodyParameter("EcsInstanceCount", ecsInstanceCount);
@@ -155,7 +155,7 @@ public class CreateResourceRequest extends Request {
         }
 
         /**
-         * 实例机型，对应ecs机型
+         * EcsInstanceType.
          */
         public Builder ecsInstanceType(String ecsInstanceType) {
             this.putBodyParameter("EcsInstanceType", ecsInstanceType);
@@ -164,7 +164,7 @@ public class CreateResourceRequest extends Request {
         }
 
         /**
-         * 系统盘大小(200-2000GB)。不传默认为200。
+         * SystemDiskSize.
          */
         public Builder systemDiskSize(Integer systemDiskSize) {
             this.putBodyParameter("SystemDiskSize", systemDiskSize);

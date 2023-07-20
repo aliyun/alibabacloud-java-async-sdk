@@ -156,7 +156,7 @@ public class UpdateServiceAutoScalerRequest extends Request {
         }
 
         /**
-         * 最大 replica 数，需要大于MinReplica
+         * max.
          */
         public Builder max(Integer max) {
             this.putBodyParameter("max", max);
@@ -165,7 +165,7 @@ public class UpdateServiceAutoScalerRequest extends Request {
         }
 
         /**
-         * 最小 replica 数，需要大于0
+         * min.
          */
         public Builder min(Integer min) {
             this.putBodyParameter("min", min);

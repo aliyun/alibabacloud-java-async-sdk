@@ -50,7 +50,7 @@ public class CommitServiceResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * 执行结果。
+         * Message.
          */
         public Builder message(String message) {
             this.message = message;
@@ -58,7 +58,7 @@ public class CommitServiceResponseBody extends TeaModel {
         }
 
         /**
-         * Id of the request
+         * RequestId.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

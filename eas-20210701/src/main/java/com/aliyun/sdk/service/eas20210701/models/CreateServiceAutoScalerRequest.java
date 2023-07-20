@@ -129,7 +129,7 @@ public class CreateServiceAutoScalerRequest extends Request {
         } 
 
         /**
-         * 服务所在区域
+         * ClusterId.
          */
         public Builder clusterId(String clusterId) {
             this.putPathParameter("ClusterId", clusterId);
@@ -138,7 +138,7 @@ public class CreateServiceAutoScalerRequest extends Request {
         }
 
         /**
-         * 服务名字
+         * ServiceName.
          */
         public Builder serviceName(String serviceName) {
             this.putPathParameter("ServiceName", serviceName);
@@ -156,7 +156,7 @@ public class CreateServiceAutoScalerRequest extends Request {
         }
 
         /**
-         * 最大 replica 数，需要大于MinReplica
+         * max.
          */
         public Builder max(Integer max) {
             this.putBodyParameter("max", max);
@@ -165,7 +165,7 @@ public class CreateServiceAutoScalerRequest extends Request {
         }
 
         /**
-         * 最小 replica 数，需要大于0
+         * min.
          */
         public Builder min(Integer min) {
             this.putBodyParameter("min", min);

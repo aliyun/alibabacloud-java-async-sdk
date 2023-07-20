@@ -62,7 +62,7 @@ public class UpdateResourceResponseBody extends TeaModel {
         private String resourceName; 
 
         /**
-         * Id of the request
+         * RequestId.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

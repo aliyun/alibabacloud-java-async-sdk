@@ -85,7 +85,7 @@ public class UpdateServiceLabelRequest extends Request {
         } 
 
         /**
-         * 服务所在区域
+         * ClusterId.
          */
         public Builder clusterId(String clusterId) {
             this.putPathParameter("ClusterId", clusterId);
@@ -94,7 +94,7 @@ public class UpdateServiceLabelRequest extends Request {
         }
 
         /**
-         * 服务名字
+         * ServiceName.
          */
         public Builder serviceName(String serviceName) {
             this.putPathParameter("ServiceName", serviceName);
@@ -103,7 +103,7 @@ public class UpdateServiceLabelRequest extends Request {
         }
 
         /**
-         * 自定义服务标签
+         * Labels.
          */
         public Builder labels(java.util.Map < String, String > labels) {
             this.putBodyParameter("Labels", labels);

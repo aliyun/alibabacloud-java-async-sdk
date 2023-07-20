@@ -86,7 +86,7 @@ public class DescribeResourceLogResponseBody extends TeaModel {
         private String status; 
 
         /**
-         * sls日志库
+         * LogStore.
          */
         public Builder logStore(String logStore) {
             this.logStore = logStore;
@@ -94,7 +94,7 @@ public class DescribeResourceLogResponseBody extends TeaModel {
         }
 
         /**
-         * sls日志信息
+         * Message.
          */
         public Builder message(String message) {
             this.message = message;
@@ -102,7 +102,7 @@ public class DescribeResourceLogResponseBody extends TeaModel {
         }
 
         /**
-         * 资源组对应的sls日志管理项目
+         * ProjectName.
          */
         public Builder projectName(String projectName) {
             this.projectName = projectName;
@@ -110,7 +110,7 @@ public class DescribeResourceLogResponseBody extends TeaModel {
         }
 
         /**
-         * Id of the request
+         * RequestId.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -118,7 +118,7 @@ public class DescribeResourceLogResponseBody extends TeaModel {
         }
 
         /**
-         * 资源组状态
+         * Status.
          */
         public Builder status(String status) {
             this.status = status;

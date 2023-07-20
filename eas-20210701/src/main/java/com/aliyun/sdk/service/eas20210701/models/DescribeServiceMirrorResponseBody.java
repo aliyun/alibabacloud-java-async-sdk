@@ -74,7 +74,7 @@ public class DescribeServiceMirrorResponseBody extends TeaModel {
         private String target; 
 
         /**
-         * 比例[0,100]
+         * Ratio.
          */
         public Builder ratio(String ratio) {
             this.ratio = ratio;
@@ -82,7 +82,7 @@ public class DescribeServiceMirrorResponseBody extends TeaModel {
         }
 
         /**
-         * Id of the request
+         * RequestId.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -90,7 +90,7 @@ public class DescribeServiceMirrorResponseBody extends TeaModel {
         }
 
         /**
-         * 服务名字
+         * ServiceName.
          */
         public Builder serviceName(String serviceName) {
             this.serviceName = serviceName;
@@ -98,7 +98,7 @@ public class DescribeServiceMirrorResponseBody extends TeaModel {
         }
 
         /**
-         * 设置流量镜像对服务列表
+         * Target.
          */
         public Builder target(String target) {
             this.target = target;

@@ -223,7 +223,7 @@ public class DescribeServiceLogRequest extends Request {
         }
 
         /**
-         * 查询的结束时间
+         * EndTime.
          */
         public Builder endTime(String endTime) {
             this.putQueryParameter("EndTime", endTime);
@@ -241,7 +241,7 @@ public class DescribeServiceLogRequest extends Request {
         }
 
         /**
-         * 要查询的机器ip
+         * Ip.
          */
         public Builder ip(String ip) {
             this.putQueryParameter("Ip", ip);
@@ -250,7 +250,7 @@ public class DescribeServiceLogRequest extends Request {
         }
 
         /**
-         * 查询的关键字
+         * Keyword.
          */
         public Builder keyword(String keyword) {
             this.putQueryParameter("Keyword", keyword);
@@ -259,7 +259,7 @@ public class DescribeServiceLogRequest extends Request {
         }
 
         /**
-         * 请求的页码（默认为1）
+         * PageNum.
          */
         public Builder pageNum(Long pageNum) {
             this.putQueryParameter("PageNum", pageNum);
@@ -268,7 +268,7 @@ public class DescribeServiceLogRequest extends Request {
         }
 
         /**
-         * 每页的大小（默认为500）
+         * PageSize.
          */
         public Builder pageSize(Long pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -286,7 +286,7 @@ public class DescribeServiceLogRequest extends Request {
         }
 
         /**
-         * 查询的开始时间
+         * StartTime.
          */
         public Builder startTime(String startTime) {
             this.putQueryParameter("StartTime", startTime);

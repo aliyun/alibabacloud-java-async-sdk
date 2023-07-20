@@ -23,15 +23,25 @@ public class DeleteServiceInstancesRequest extends Request {
     private String serviceName;
 
     @Query
+    @NameInMap("Container")
+    private String container;
+
+    @Query
     @NameInMap("InstanceList")
     @Validation(required = true)
     private String instanceList;
+
+    @Query
+    @NameInMap("SoftRestart")
+    private Boolean softRestart;
 
     private DeleteServiceInstancesRequest(Builder builder) {
         super(builder);
         this.clusterId = builder.clusterId;
         this.serviceName = builder.serviceName;
+        this.container = builder.container;
         this.instanceList = builder.instanceList;
+        this.softRestart = builder.softRestart;
     }
 
     public static Builder builder() {
@@ -62,16 +72,32 @@ public class DeleteServiceInstancesRequest extends Request {
     }
 
     /**
+     * @return container
+     */
+    public String getContainer() {
+        return this.container;
+    }
+
+    /**
      * @return instanceList
      */
     public String getInstanceList() {
         return this.instanceList;
     }
 
+    /**
+     * @return softRestart
+     */
+    public Boolean getSoftRestart() {
+        return this.softRestart;
+    }
+
     public static final class Builder extends Request.Builder<DeleteServiceInstancesRequest, Builder> {
         private String clusterId; 
         private String serviceName; 
+        private String container; 
         private String instanceList; 
+        private Boolean softRestart; 
 
         private Builder() {
             super();
@@ -81,11 +107,13 @@ public class DeleteServiceInstancesRequest extends Request {
             super(request);
             this.clusterId = request.clusterId;
             this.serviceName = request.serviceName;
+            this.container = request.container;
             this.instanceList = request.instanceList;
+            this.softRestart = request.softRestart;
         } 
 
         /**
-         * 服务所在区域
+         * ClusterId.
          */
         public Builder clusterId(String clusterId) {
             this.putPathParameter("ClusterId", clusterId);
@@ -94,7 +122,7 @@ public class DeleteServiceInstancesRequest extends Request {
         }
 
         /**
-         * 服务名字
+         * ServiceName.
          */
         public Builder serviceName(String serviceName) {
             this.putPathParameter("ServiceName", serviceName);
@@ -103,11 +131,29 @@ public class DeleteServiceInstancesRequest extends Request {
         }
 
         /**
-         * 删除的实例列表，多个实例名字之间逗号隔开
+         * Container.
+         */
+        public Builder container(String container) {
+            this.putQueryParameter("Container", container);
+            this.container = container;
+            return this;
+        }
+
+        /**
+         * InstanceList.
          */
         public Builder instanceList(String instanceList) {
             this.putQueryParameter("InstanceList", instanceList);
             this.instanceList = instanceList;
+            return this;
+        }
+
+        /**
+         * SoftRestart.
+         */
+        public Builder softRestart(Boolean softRestart) {
+            this.putQueryParameter("SoftRestart", softRestart);
+            this.softRestart = softRestart;
             return this;
         }
 

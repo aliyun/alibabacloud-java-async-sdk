@@ -128,7 +128,7 @@ public class UpdateResourceDLinkRequest extends Request {
         } 
 
         /**
-         * 资源组所在的集群ID
+         * ClusterId.
          */
         public Builder clusterId(String clusterId) {
             this.putPathParameter("ClusterId", clusterId);
@@ -137,7 +137,7 @@ public class UpdateResourceDLinkRequest extends Request {
         }
 
         /**
-         * 资源组的Id
+         * ResourceId.
          */
         public Builder resourceId(String resourceId) {
             this.putPathParameter("ResourceId", resourceId);
@@ -146,7 +146,7 @@ public class UpdateResourceDLinkRequest extends Request {
         }
 
         /**
-         * 要打通的客户端的网段信息，会将该网段加入到服务端的回包路由中，与VSwitchIdList可二选一
+         * DestinationCIDRs.
          */
         public Builder destinationCIDRs(String destinationCIDRs) {
             this.putBodyParameter("DestinationCIDRs", destinationCIDRs);
@@ -155,7 +155,7 @@ public class UpdateResourceDLinkRequest extends Request {
         }
 
         /**
-         * 客户端ECS归属的安全组
+         * SecurityGroupId.
          */
         public Builder securityGroupId(String securityGroupId) {
             this.putBodyParameter("SecurityGroupId", securityGroupId);
@@ -164,7 +164,7 @@ public class UpdateResourceDLinkRequest extends Request {
         }
 
         /**
-         * 对端的主VSwitchID，会在该vswitch中创建ENI
+         * VSwitchId.
          */
         public Builder vSwitchId(String vSwitchId) {
             this.putBodyParameter("VSwitchId", vSwitchId);
@@ -173,7 +173,7 @@ public class UpdateResourceDLinkRequest extends Request {
         }
 
         /**
-         * 要打通的客户端的vswitch列表，会将这些vswitch对应的网段加入到服务端的回包路由中
+         * VSwitchIdList.
          */
         public Builder vSwitchIdList(java.util.List < String > vSwitchIdList) {
             this.putBodyParameter("VSwitchIdList", vSwitchIdList);

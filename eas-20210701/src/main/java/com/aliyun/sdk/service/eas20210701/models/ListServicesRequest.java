@@ -286,7 +286,7 @@ public class ListServicesRequest extends Request {
         }
 
         /**
-         * 服务组名称过滤
+         * GroupName.
          */
         public Builder groupName(String groupName) {
             this.putQueryParameter("GroupName", groupName);
@@ -323,7 +323,7 @@ public class ListServicesRequest extends Request {
         }
 
         /**
-         * 每页的大小（默认为100）
+         * PageSize.
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);

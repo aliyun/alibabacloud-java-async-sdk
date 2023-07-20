@@ -266,7 +266,7 @@ public class Instance extends TeaModel {
         private Integer totalProcesses; 
 
         /**
-         * 竞价实例当前小时价
+         * CurrentAmount.
          */
         public Builder currentAmount(Float currentAmount) {
             this.currentAmount = currentAmount;
@@ -274,7 +274,7 @@ public class Instance extends TeaModel {
         }
 
         /**
-         * 实例所在的宿主机IP
+         * HostIP.
          */
         public Builder hostIP(String hostIP) {
             this.hostIP = hostIP;
@@ -282,7 +282,7 @@ public class Instance extends TeaModel {
         }
 
         /**
-         * 实例所在的宿主机名字
+         * HostName.
          */
         public Builder hostName(String hostName) {
             this.hostName = hostName;
@@ -290,7 +290,7 @@ public class Instance extends TeaModel {
         }
 
         /**
-         * 实例的内网IP
+         * InnerIP.
          */
         public Builder innerIP(String innerIP) {
             this.innerIP = innerIP;
@@ -298,7 +298,7 @@ public class Instance extends TeaModel {
         }
 
         /**
-         * 实例的名字
+         * InstanceName.
          */
         public Builder instanceName(String instanceName) {
             this.instanceName = instanceName;
@@ -306,7 +306,7 @@ public class Instance extends TeaModel {
         }
 
         /**
-         * 实例的网络端口
+         * InstancePort.
          */
         public Builder instancePort(Integer instancePort) {
             this.instancePort = instancePort;
@@ -314,7 +314,7 @@ public class Instance extends TeaModel {
         }
 
         /**
-         * 是否为竞价实例
+         * IsSpot.
          */
         public Builder isSpot(Boolean isSpot) {
             this.isSpot = isSpot;
@@ -322,7 +322,7 @@ public class Instance extends TeaModel {
         }
 
         /**
-         * 实例上一次退出的状态
+         * LastState.
          */
         public Builder lastState(java.util.List < java.util.Map<String, ?>> lastState) {
             this.lastState = lastState;
@@ -330,7 +330,7 @@ public class Instance extends TeaModel {
         }
 
         /**
-         * 实例的命名空间
+         * Namespace.
          */
         public Builder namespace(String namespace) {
             this.namespace = namespace;
@@ -338,7 +338,7 @@ public class Instance extends TeaModel {
         }
 
         /**
-         * 竞价实例折前原价
+         * OriginalAmount.
          */
         public Builder originalAmount(Float originalAmount) {
             this.originalAmount = originalAmount;
@@ -346,7 +346,7 @@ public class Instance extends TeaModel {
         }
 
         /**
-         * 实例已经启动完成的进程数
+         * ReadyProcesses.
          */
         public Builder readyProcesses(Integer readyProcesses) {
             this.readyProcesses = readyProcesses;
@@ -354,7 +354,7 @@ public class Instance extends TeaModel {
         }
 
         /**
-         * 实例当前状态的标识
+         * Reason.
          */
         public Builder reason(String reason) {
             this.reason = reason;
@@ -362,7 +362,7 @@ public class Instance extends TeaModel {
         }
 
         /**
-         * 实例所属的资源组类型，包括PublicResource和PrivateResource
+         * ResourceType.
          */
         public Builder resourceType(String resourceType) {
             this.resourceType = resourceType;
@@ -370,7 +370,7 @@ public class Instance extends TeaModel {
         }
 
         /**
-         * 实例重启次数
+         * RestartCount.
          */
         public Builder restartCount(Integer restartCount) {
             this.restartCount = restartCount;
@@ -378,7 +378,7 @@ public class Instance extends TeaModel {
         }
 
         /**
-         * 实例所属的服务角色，包括Queue, DataLoader, Standard等角色
+         * Role.
          */
         public Builder role(String role) {
             this.role = role;
@@ -386,7 +386,7 @@ public class Instance extends TeaModel {
         }
 
         /**
-         * 实例的启动时间
+         * StartAt.
          */
         public Builder startAt(String startAt) {
             this.startAt = startAt;
@@ -394,7 +394,7 @@ public class Instance extends TeaModel {
         }
 
         /**
-         * 实例状态
+         * Status.
          */
         public Builder status(String status) {
             this.status = status;
@@ -402,7 +402,7 @@ public class Instance extends TeaModel {
         }
 
         /**
-         * 宿主机所在的vpc分配的地址
+         * TenantHostIP.
          */
         public Builder tenantHostIP(String tenantHostIP) {
             this.tenantHostIP = tenantHostIP;
@@ -410,7 +410,7 @@ public class Instance extends TeaModel {
         }
 
         /**
-         * 实例所在的VPC分配的IP
+         * TenantInstanceIP.
          */
         public Builder tenantInstanceIP(String tenantInstanceIP) {
             this.tenantInstanceIP = tenantInstanceIP;
@@ -418,7 +418,7 @@ public class Instance extends TeaModel {
         }
 
         /**
-         * 实例总的进程数
+         * TotalProcesses.
          */
         public Builder totalProcesses(Integer totalProcesses) {
             this.totalProcesses = totalProcesses;

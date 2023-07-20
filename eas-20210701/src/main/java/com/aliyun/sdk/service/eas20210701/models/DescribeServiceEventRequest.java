@@ -154,7 +154,7 @@ public class DescribeServiceEventRequest extends Request {
         } 
 
         /**
-         * 服务对应区域
+         * ClusterId.
          */
         public Builder clusterId(String clusterId) {
             this.putPathParameter("ClusterId", clusterId);
@@ -163,7 +163,7 @@ public class DescribeServiceEventRequest extends Request {
         }
 
         /**
-         * 服务对应名称
+         * ServiceName.
          */
         public Builder serviceName(String serviceName) {
             this.putPathParameter("ServiceName", serviceName);
@@ -172,7 +172,7 @@ public class DescribeServiceEventRequest extends Request {
         }
 
         /**
-         * 日志查询终止时刻（默认当前时刻）
+         * EndTime.
          */
         public Builder endTime(String endTime) {
             this.putQueryParameter("EndTime", endTime);
@@ -199,7 +199,7 @@ public class DescribeServiceEventRequest extends Request {
         }
 
         /**
-         * 请求页码（默认1）
+         * PageNum.
          */
         public Builder pageNum(String pageNum) {
             this.putQueryParameter("PageNum", pageNum);
@@ -208,7 +208,7 @@ public class DescribeServiceEventRequest extends Request {
         }
 
         /**
-         * 每页的大小（默认为100）
+         * PageSize.
          */
         public Builder pageSize(String pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -217,7 +217,7 @@ public class DescribeServiceEventRequest extends Request {
         }
 
         /**
-         * 日志查询起始时刻（默认7天前）
+         * StartTime.
          */
         public Builder startTime(String startTime) {
             this.putQueryParameter("StartTime", startTime);

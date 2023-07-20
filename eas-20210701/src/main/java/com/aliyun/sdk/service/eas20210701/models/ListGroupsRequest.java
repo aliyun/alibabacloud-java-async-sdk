@@ -82,7 +82,7 @@ public class ListGroupsRequest extends Request {
         } 
 
         /**
-         * 名字过滤
+         * Filter.
          */
         public Builder filter(String filter) {
             this.putQueryParameter("Filter", filter);
@@ -91,7 +91,7 @@ public class ListGroupsRequest extends Request {
         }
 
         /**
-         * 页码数，默认1
+         * PageNumber.
          */
         public Builder pageNumber(String pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -100,7 +100,7 @@ public class ListGroupsRequest extends Request {
         }
 
         /**
-         * 每页大小，默认100
+         * PageSize.
          */
         public Builder pageSize(String pageSize) {
             this.putQueryParameter("PageSize", pageSize);

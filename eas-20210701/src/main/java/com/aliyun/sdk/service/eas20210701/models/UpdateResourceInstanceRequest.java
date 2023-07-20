@@ -100,7 +100,7 @@ public class UpdateResourceInstanceRequest extends Request {
         } 
 
         /**
-         * 实例所属集群
+         * ClusterId.
          */
         public Builder clusterId(String clusterId) {
             this.putPathParameter("ClusterId", clusterId);
@@ -109,7 +109,7 @@ public class UpdateResourceInstanceRequest extends Request {
         }
 
         /**
-         * 实例所属资源组Id
+         * ResourceId.
          */
         public Builder resourceId(String resourceId) {
             this.putPathParameter("ResourceId", resourceId);
@@ -118,7 +118,7 @@ public class UpdateResourceInstanceRequest extends Request {
         }
 
         /**
-         * 实例Id
+         * InstanceId.
          */
         public Builder instanceId(String instanceId) {
             this.putPathParameter("InstanceId", instanceId);
@@ -127,7 +127,7 @@ public class UpdateResourceInstanceRequest extends Request {
         }
 
         /**
-         * 更新服务的行为：Cordon, Uncordon, Drain
+         * Action.
          */
         public Builder action(String action) {
             this.putBodyParameter("Action", action);

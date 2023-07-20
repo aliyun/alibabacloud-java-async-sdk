@@ -126,7 +126,7 @@ public class DescribeServiceAutoScalerResponseBody extends TeaModel {
         }
 
         /**
-         * 服务最大实例数
+         * MaxReplica.
          */
         public Builder maxReplica(Integer maxReplica) {
             this.maxReplica = maxReplica;
@@ -134,7 +134,7 @@ public class DescribeServiceAutoScalerResponseBody extends TeaModel {
         }
 
         /**
-         * 服务最小实例数
+         * MinReplica.
          */
         public Builder minReplica(Integer minReplica) {
             this.minReplica = minReplica;
@@ -142,7 +142,7 @@ public class DescribeServiceAutoScalerResponseBody extends TeaModel {
         }
 
         /**
-         * Id of the request
+         * RequestId.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -158,7 +158,7 @@ public class DescribeServiceAutoScalerResponseBody extends TeaModel {
         }
 
         /**
-         * 服务名字
+         * ServiceName.
          */
         public Builder serviceName(String serviceName) {
             this.serviceName = serviceName;

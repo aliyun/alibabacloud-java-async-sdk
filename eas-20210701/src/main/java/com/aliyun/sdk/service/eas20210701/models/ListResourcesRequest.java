@@ -96,7 +96,7 @@ public class ListResourcesRequest extends Request {
         } 
 
         /**
-         * 请求的页码（默认为1）
+         * PageNumber.
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -105,7 +105,7 @@ public class ListResourcesRequest extends Request {
         }
 
         /**
-         * 每页的大小（默认为100）
+         * PageSize.
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);

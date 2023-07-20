@@ -98,7 +98,7 @@ public class UpdateServiceMirrorRequest extends Request {
         } 
 
         /**
-         * 服务所在区域
+         * ClusterId.
          */
         public Builder clusterId(String clusterId) {
             this.putPathParameter("ClusterId", clusterId);
@@ -107,7 +107,7 @@ public class UpdateServiceMirrorRequest extends Request {
         }
 
         /**
-         * 服务名字
+         * ServiceName.
          */
         public Builder serviceName(String serviceName) {
             this.putPathParameter("ServiceName", serviceName);
@@ -116,7 +116,7 @@ public class UpdateServiceMirrorRequest extends Request {
         }
 
         /**
-         * 比例 [0, 100]
+         * Ratio.
          */
         public Builder ratio(Integer ratio) {
             this.putBodyParameter("Ratio", ratio);
@@ -125,7 +125,7 @@ public class UpdateServiceMirrorRequest extends Request {
         }
 
         /**
-         * 服务实例列表
+         * Target.
          */
         public Builder target(java.util.List < String > target) {
             this.putBodyParameter("Target", target);

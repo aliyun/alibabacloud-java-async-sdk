@@ -68,7 +68,7 @@ public class CommitServiceRequest extends Request {
         } 
 
         /**
-         * 集群Id。
+         * ClusterId.
          */
         public Builder clusterId(String clusterId) {
             this.putPathParameter("ClusterId", clusterId);
@@ -77,7 +77,7 @@ public class CommitServiceRequest extends Request {
         }
 
         /**
-         * 服务名。
+         * ServiceName.
          */
         public Builder serviceName(String serviceName) {
             this.putPathParameter("ServiceName", serviceName);

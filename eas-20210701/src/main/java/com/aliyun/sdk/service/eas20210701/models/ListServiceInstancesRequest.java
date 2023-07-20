@@ -252,7 +252,7 @@ public class ListServiceInstancesRequest extends Request {
         } 
 
         /**
-         * 服务所在区域
+         * ClusterId.
          */
         public Builder clusterId(String clusterId) {
             this.putPathParameter("ClusterId", clusterId);
@@ -261,7 +261,7 @@ public class ListServiceInstancesRequest extends Request {
         }
 
         /**
-         * 服务名字
+         * ServiceName.
          */
         public Builder serviceName(String serviceName) {
             this.putPathParameter("ServiceName", serviceName);
@@ -342,7 +342,7 @@ public class ListServiceInstancesRequest extends Request {
         }
 
         /**
-         * 请求的页码（默认为1）
+         * PageNumber.
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -351,7 +351,7 @@ public class ListServiceInstancesRequest extends Request {
         }
 
         /**
-         * 每页的大小（默认为100）
+         * PageSize.
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);

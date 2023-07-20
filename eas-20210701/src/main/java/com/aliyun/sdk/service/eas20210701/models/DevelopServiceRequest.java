@@ -84,7 +84,7 @@ public class DevelopServiceRequest extends Request {
         } 
 
         /**
-         * 集群Id。
+         * ClusterId.
          */
         public Builder clusterId(String clusterId) {
             this.putPathParameter("ClusterId", clusterId);
@@ -93,7 +93,7 @@ public class DevelopServiceRequest extends Request {
         }
 
         /**
-         * 服务名
+         * ServiceName.
          */
         public Builder serviceName(String serviceName) {
             this.putPathParameter("ServiceName", serviceName);
@@ -102,7 +102,7 @@ public class DevelopServiceRequest extends Request {
         }
 
         /**
-         * 是否退出开发模式
+         * Exit.
          */
         public Builder exit(String exit) {
             this.putQueryParameter("Exit", exit);

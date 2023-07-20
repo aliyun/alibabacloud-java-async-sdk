@@ -98,7 +98,7 @@ public class ReleaseServiceRequest extends Request {
         } 
 
         /**
-         * 服务所在区域
+         * ClusterId.
          */
         public Builder clusterId(String clusterId) {
             this.putPathParameter("ClusterId", clusterId);
@@ -107,7 +107,7 @@ public class ReleaseServiceRequest extends Request {
         }
 
         /**
-         * 服务名字
+         * ServiceName.
          */
         public Builder serviceName(String serviceName) {
             this.putPathParameter("ServiceName", serviceName);
@@ -125,7 +125,7 @@ public class ReleaseServiceRequest extends Request {
         }
 
         /**
-         * 灰度权重，范围 [0, 100]
+         * Weight.
          */
         public Builder weight(Integer weight) {
             this.putBodyParameter("Weight", weight);

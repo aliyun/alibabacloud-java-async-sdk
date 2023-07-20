@@ -86,7 +86,7 @@ public class ListResourceInstanceWorkerResponseBody extends TeaModel {
         private Integer totalCount; 
 
         /**
-         * 当前页码
+         * PageNumber.
          */
         public Builder pageNumber(Integer pageNumber) {
             this.pageNumber = pageNumber;
@@ -94,7 +94,7 @@ public class ListResourceInstanceWorkerResponseBody extends TeaModel {
         }
 
         /**
-         * 每页大小
+         * PageSize.
          */
         public Builder pageSize(Integer pageSize) {
             this.pageSize = pageSize;
@@ -102,7 +102,7 @@ public class ListResourceInstanceWorkerResponseBody extends TeaModel {
         }
 
         /**
-         * pod列表
+         * Pods.
          */
         public Builder pods(java.util.List < ResourceInstanceWorker > pods) {
             this.pods = pods;
@@ -110,7 +110,7 @@ public class ListResourceInstanceWorkerResponseBody extends TeaModel {
         }
 
         /**
-         * Id of the request
+         * RequestId.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -118,7 +118,7 @@ public class ListResourceInstanceWorkerResponseBody extends TeaModel {
         }
 
         /**
-         * pod总数
+         * TotalCount.
          */
         public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;

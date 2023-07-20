@@ -182,7 +182,7 @@ public class Resource extends TeaModel {
         private String updateTime; 
 
         /**
-         * 资源组所在的集群
+         * ClusterId.
          */
         public Builder clusterId(String clusterId) {
             this.clusterId = clusterId;
@@ -190,7 +190,7 @@ public class Resource extends TeaModel {
         }
 
         /**
-         * 资源组CPU数量
+         * CpuCount.
          */
         public Builder cpuCount(Integer cpuCount) {
             this.cpuCount = cpuCount;
@@ -198,7 +198,7 @@ public class Resource extends TeaModel {
         }
 
         /**
-         * 资源组创建时间
+         * CreateTime.
          */
         public Builder createTime(String createTime) {
             this.createTime = createTime;
@@ -206,7 +206,7 @@ public class Resource extends TeaModel {
         }
 
         /**
-         * 资源组自定义数据
+         * ExtraData.
          */
         public Builder extraData(java.util.Map < String, ? > extraData) {
             this.extraData = extraData;
@@ -214,7 +214,7 @@ public class Resource extends TeaModel {
         }
 
         /**
-         * 资源组GPU个数
+         * GpuCount.
          */
         public Builder gpuCount(Integer gpuCount) {
             this.gpuCount = gpuCount;
@@ -222,7 +222,7 @@ public class Resource extends TeaModel {
         }
 
         /**
-         * 资源组实例个数
+         * InstanceCount.
          */
         public Builder instanceCount(Integer instanceCount) {
             this.instanceCount = instanceCount;
@@ -230,7 +230,7 @@ public class Resource extends TeaModel {
         }
 
         /**
-         * 资源组摘要信息
+         * Message.
          */
         public Builder message(String message) {
             this.message = message;
@@ -238,7 +238,7 @@ public class Resource extends TeaModel {
         }
 
         /**
-         * 资源组按量付费实例个数
+         * PostPaidInstanceCount.
          */
         public Builder postPaidInstanceCount(Integer postPaidInstanceCount) {
             this.postPaidInstanceCount = postPaidInstanceCount;
@@ -246,7 +246,7 @@ public class Resource extends TeaModel {
         }
 
         /**
-         * 资源组预付费实例个数
+         * PrePaidInstanceCount.
          */
         public Builder prePaidInstanceCount(Integer prePaidInstanceCount) {
             this.prePaidInstanceCount = prePaidInstanceCount;
@@ -254,7 +254,7 @@ public class Resource extends TeaModel {
         }
 
         /**
-         * 资源组ID
+         * ResourceId.
          */
         public Builder resourceId(String resourceId) {
             this.resourceId = resourceId;
@@ -262,7 +262,7 @@ public class Resource extends TeaModel {
         }
 
         /**
-         * 资源组名字
+         * ResourceName.
          */
         public Builder resourceName(String resourceName) {
             this.resourceName = resourceName;
@@ -270,7 +270,7 @@ public class Resource extends TeaModel {
         }
 
         /**
-         * 资源组的状态
+         * Status.
          */
         public Builder status(String status) {
             this.status = status;
@@ -278,7 +278,7 @@ public class Resource extends TeaModel {
         }
 
         /**
-         * 资源组更新时间
+         * UpdateTime.
          */
         public Builder updateTime(String updateTime) {
             this.updateTime = updateTime;

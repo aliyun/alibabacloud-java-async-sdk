@@ -98,7 +98,7 @@ public class DescribeResourceDLinkResponseBody extends TeaModel {
         private String vpcId; 
 
         /**
-         * 已打通直连的副VSwitch ID
+         * AuxVSwitchList.
          */
         public Builder auxVSwitchList(java.util.List < String > auxVSwitchList) {
             this.auxVSwitchList = auxVSwitchList;
@@ -106,7 +106,7 @@ public class DescribeResourceDLinkResponseBody extends TeaModel {
         }
 
         /**
-         * 要打通的客户端的网段信息，会将该网段加入到服务端的回包路由中，与VSwitchIdList可二选一
+         * DestinationCIDRs.
          */
         public Builder destinationCIDRs(String destinationCIDRs) {
             this.destinationCIDRs = destinationCIDRs;
@@ -114,7 +114,7 @@ public class DescribeResourceDLinkResponseBody extends TeaModel {
         }
 
         /**
-         * Id of the request
+         * RequestId.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -122,7 +122,7 @@ public class DescribeResourceDLinkResponseBody extends TeaModel {
         }
 
         /**
-         * 已打通直连的安全组
+         * SecurityGroupId.
          */
         public Builder securityGroupId(String securityGroupId) {
             this.securityGroupId = securityGroupId;
@@ -130,7 +130,7 @@ public class DescribeResourceDLinkResponseBody extends TeaModel {
         }
 
         /**
-         * 已打通直连的主VSwitch ID
+         * VSwitchId.
          */
         public Builder vSwitchId(String vSwitchId) {
             this.vSwitchId = vSwitchId;
@@ -138,7 +138,7 @@ public class DescribeResourceDLinkResponseBody extends TeaModel {
         }
 
         /**
-         * 已打通直接的Vpc ID
+         * VpcId.
          */
         public Builder vpcId(String vpcId) {
             this.vpcId = vpcId;

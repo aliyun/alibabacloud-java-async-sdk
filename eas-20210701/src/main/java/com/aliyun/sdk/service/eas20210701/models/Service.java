@@ -90,6 +90,12 @@ public class Service extends TeaModel {
     @NameInMap("SafetyLock")
     private String safetyLock;
 
+    @NameInMap("SecondaryInternetEndpoint")
+    private String secondaryInternetEndpoint;
+
+    @NameInMap("SecondaryIntranetEndpoint")
+    private String secondaryIntranetEndpoint;
+
     @NameInMap("ServiceConfig")
     private String serviceConfig;
 
@@ -147,6 +153,8 @@ public class Service extends TeaModel {
         this.roleAttrs = builder.roleAttrs;
         this.runningInstance = builder.runningInstance;
         this.safetyLock = builder.safetyLock;
+        this.secondaryInternetEndpoint = builder.secondaryInternetEndpoint;
+        this.secondaryIntranetEndpoint = builder.secondaryIntranetEndpoint;
         this.serviceConfig = builder.serviceConfig;
         this.serviceGroup = builder.serviceGroup;
         this.serviceId = builder.serviceId;
@@ -350,6 +358,20 @@ public class Service extends TeaModel {
     }
 
     /**
+     * @return secondaryInternetEndpoint
+     */
+    public String getSecondaryInternetEndpoint() {
+        return this.secondaryInternetEndpoint;
+    }
+
+    /**
+     * @return secondaryIntranetEndpoint
+     */
+    public String getSecondaryIntranetEndpoint() {
+        return this.secondaryIntranetEndpoint;
+    }
+
+    /**
      * @return serviceConfig
      */
     public String getServiceConfig() {
@@ -446,6 +468,8 @@ public class Service extends TeaModel {
         private String roleAttrs; 
         private Integer runningInstance; 
         private String safetyLock; 
+        private String secondaryInternetEndpoint; 
+        private String secondaryIntranetEndpoint; 
         private String serviceConfig; 
         private String serviceGroup; 
         private String serviceId; 
@@ -458,7 +482,7 @@ public class Service extends TeaModel {
         private Integer weight; 
 
         /**
-         * 服务的请求Token
+         * AccessToken.
          */
         public Builder accessToken(String accessToken) {
             this.accessToken = accessToken;
@@ -466,7 +490,7 @@ public class Service extends TeaModel {
         }
 
         /**
-         * 服务创建账号的UID
+         * CallerUid.
          */
         public Builder callerUid(String callerUid) {
             this.callerUid = callerUid;
@@ -474,7 +498,7 @@ public class Service extends TeaModel {
         }
 
         /**
-         * 每个实例申请的cpu
+         * Cpu.
          */
         public Builder cpu(Integer cpu) {
             this.cpu = cpu;
@@ -482,7 +506,7 @@ public class Service extends TeaModel {
         }
 
         /**
-         * 服务的创建时间
+         * CreateTime.
          */
         public Builder createTime(String createTime) {
             this.createTime = createTime;
@@ -490,7 +514,7 @@ public class Service extends TeaModel {
         }
 
         /**
-         * 当前运行的模型版本
+         * CurrentVersion.
          */
         public Builder currentVersion(Integer currentVersion) {
             this.currentVersion = currentVersion;
@@ -498,7 +522,7 @@ public class Service extends TeaModel {
         }
 
         /**
-         * 服务的额外信息
+         * ExtraData.
          */
         public Builder extraData(String extraData) {
             this.extraData = extraData;
@@ -506,7 +530,7 @@ public class Service extends TeaModel {
         }
 
         /**
-         * 每个实例申请的gpu
+         * Gpu.
          */
         public Builder gpu(Integer gpu) {
             this.gpu = gpu;
@@ -514,7 +538,7 @@ public class Service extends TeaModel {
         }
 
         /**
-         * 服务的数据镜像
+         * Image.
          */
         public Builder image(String image) {
             this.image = image;
@@ -522,7 +546,7 @@ public class Service extends TeaModel {
         }
 
         /**
-         * 服务的公网endpoint
+         * InternetEndpoint.
          */
         public Builder internetEndpoint(String internetEndpoint) {
             this.internetEndpoint = internetEndpoint;
@@ -530,7 +554,7 @@ public class Service extends TeaModel {
         }
 
         /**
-         * 服务内网endpoint
+         * IntranetEndpoint.
          */
         public Builder intranetEndpoint(String intranetEndpoint) {
             this.intranetEndpoint = intranetEndpoint;
@@ -538,7 +562,7 @@ public class Service extends TeaModel {
         }
 
         /**
-         * 服务标签列表
+         * Labels.
          */
         public Builder labels(java.util.List < Labels> labels) {
             this.labels = labels;
@@ -546,7 +570,7 @@ public class Service extends TeaModel {
         }
 
         /**
-         * 服务最新版本号
+         * LatestVersion.
          */
         public Builder latestVersion(Integer latestVersion) {
             this.latestVersion = latestVersion;
@@ -554,7 +578,7 @@ public class Service extends TeaModel {
         }
 
         /**
-         * 每个worker需要的内存大小，单位为M
+         * Memory.
          */
         public Builder memory(Integer memory) {
             this.memory = memory;
@@ -562,7 +586,7 @@ public class Service extends TeaModel {
         }
 
         /**
-         * 服务的摘要信息
+         * Message.
          */
         public Builder message(String message) {
             this.message = message;
@@ -570,7 +594,7 @@ public class Service extends TeaModel {
         }
 
         /**
-         * 服务所在的命名空间
+         * Namespace.
          */
         public Builder namespace(String namespace) {
             this.namespace = namespace;
@@ -578,7 +602,7 @@ public class Service extends TeaModel {
         }
 
         /**
-         * 服务创建账号的主账号UID
+         * ParentUid.
          */
         public Builder parentUid(String parentUid) {
             this.parentUid = parentUid;
@@ -586,7 +610,7 @@ public class Service extends TeaModel {
         }
 
         /**
-         * 被挂起的服务的实例个数
+         * PendingInstance.
          */
         public Builder pendingInstance(Integer pendingInstance) {
             this.pendingInstance = pendingInstance;
@@ -594,7 +618,7 @@ public class Service extends TeaModel {
         }
 
         /**
-         * 服务的状态信息
+         * Reason.
          */
         public Builder reason(String reason) {
             this.reason = reason;
@@ -602,7 +626,7 @@ public class Service extends TeaModel {
         }
 
         /**
-         * 服务所在的区域
+         * Region.
          */
         public Builder region(String region) {
             this.region = region;
@@ -610,7 +634,7 @@ public class Service extends TeaModel {
         }
 
         /**
-         * 请求ID
+         * RequestId.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -618,7 +642,7 @@ public class Service extends TeaModel {
         }
 
         /**
-         * 服务所在的资源组
+         * Resource.
          */
         public Builder resource(String resource) {
             this.resource = resource;
@@ -626,7 +650,7 @@ public class Service extends TeaModel {
         }
 
         /**
-         * 服务所在的资源组别名
+         * ResourceAlias.
          */
         public Builder resourceAlias(String resourceAlias) {
             this.resourceAlias = resourceAlias;
@@ -634,7 +658,7 @@ public class Service extends TeaModel {
         }
 
         /**
-         * 服务角色
+         * Role.
          */
         public Builder role(String role) {
             this.role = role;
@@ -642,7 +666,7 @@ public class Service extends TeaModel {
         }
 
         /**
-         * 服务角色额外属性
+         * RoleAttrs.
          */
         public Builder roleAttrs(String roleAttrs) {
             this.roleAttrs = roleAttrs;
@@ -650,7 +674,7 @@ public class Service extends TeaModel {
         }
 
         /**
-         * 正在运行的服务的实例个数
+         * RunningInstance.
          */
         public Builder runningInstance(Integer runningInstance) {
             this.runningInstance = runningInstance;
@@ -658,7 +682,7 @@ public class Service extends TeaModel {
         }
 
         /**
-         * 服务安全锁
+         * SafetyLock.
          */
         public Builder safetyLock(String safetyLock) {
             this.safetyLock = safetyLock;
@@ -666,7 +690,23 @@ public class Service extends TeaModel {
         }
 
         /**
-         * 服务的配置信息
+         * SecondaryInternetEndpoint.
+         */
+        public Builder secondaryInternetEndpoint(String secondaryInternetEndpoint) {
+            this.secondaryInternetEndpoint = secondaryInternetEndpoint;
+            return this;
+        }
+
+        /**
+         * SecondaryIntranetEndpoint.
+         */
+        public Builder secondaryIntranetEndpoint(String secondaryIntranetEndpoint) {
+            this.secondaryIntranetEndpoint = secondaryIntranetEndpoint;
+            return this;
+        }
+
+        /**
+         * ServiceConfig.
          */
         public Builder serviceConfig(String serviceConfig) {
             this.serviceConfig = serviceConfig;
@@ -674,7 +714,7 @@ public class Service extends TeaModel {
         }
 
         /**
-         * 服务所在分组
+         * ServiceGroup.
          */
         public Builder serviceGroup(String serviceGroup) {
             this.serviceGroup = serviceGroup;
@@ -682,7 +722,7 @@ public class Service extends TeaModel {
         }
 
         /**
-         * 服务ID
+         * ServiceId.
          */
         public Builder serviceId(String serviceId) {
             this.serviceId = serviceId;
@@ -690,7 +730,7 @@ public class Service extends TeaModel {
         }
 
         /**
-         * 服务的名字
+         * ServiceName.
          */
         public Builder serviceName(String serviceName) {
             this.serviceName = serviceName;
@@ -698,7 +738,7 @@ public class Service extends TeaModel {
         }
 
         /**
-         * 服务ID，同ServiceId
+         * ServiceUid.
          */
         public Builder serviceUid(String serviceUid) {
             this.serviceUid = serviceUid;
@@ -706,7 +746,7 @@ public class Service extends TeaModel {
         }
 
         /**
-         * 服务的部署来源
+         * Source.
          */
         public Builder source(String source) {
             this.source = source;
@@ -714,7 +754,7 @@ public class Service extends TeaModel {
         }
 
         /**
-         * 服务的状态
+         * Status.
          */
         public Builder status(String status) {
             this.status = status;
@@ -722,7 +762,7 @@ public class Service extends TeaModel {
         }
 
         /**
-         * 服务的所有实例总个数
+         * TotalInstance.
          */
         public Builder totalInstance(Integer totalInstance) {
             this.totalInstance = totalInstance;
@@ -730,7 +770,7 @@ public class Service extends TeaModel {
         }
 
         /**
-         * 服务的更新时间
+         * UpdateTime.
          */
         public Builder updateTime(String updateTime) {
             this.updateTime = updateTime;
@@ -738,7 +778,7 @@ public class Service extends TeaModel {
         }
 
         /**
-         * 服务灰度发布的权重值
+         * Weight.
          */
         public Builder weight(Integer weight) {
             this.weight = weight;
@@ -790,7 +830,7 @@ public class Service extends TeaModel {
             private String labelValue; 
 
             /**
-             * 服务标签键
+             * LabelKey.
              */
             public Builder labelKey(String labelKey) {
                 this.labelKey = labelKey;
@@ -798,7 +838,7 @@ public class Service extends TeaModel {
             }
 
             /**
-             * 服务标签值
+             * LabelValue.
              */
             public Builder labelValue(String labelValue) {
                 this.labelValue = labelValue;

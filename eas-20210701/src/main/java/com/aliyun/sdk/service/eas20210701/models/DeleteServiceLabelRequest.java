@@ -85,7 +85,7 @@ public class DeleteServiceLabelRequest extends Request {
         } 
 
         /**
-         * 服务所在区域。
+         * ClusterId.
          */
         public Builder clusterId(String clusterId) {
             this.putPathParameter("ClusterId", clusterId);
@@ -94,7 +94,7 @@ public class DeleteServiceLabelRequest extends Request {
         }
 
         /**
-         * 服务名字。
+         * ServiceName.
          */
         public Builder serviceName(String serviceName) {
             this.putPathParameter("ServiceName", serviceName);
@@ -103,7 +103,7 @@ public class DeleteServiceLabelRequest extends Request {
         }
 
         /**
-         * 要删除的服务标签。
+         * Keys.
          */
         public Builder keys(java.util.List < String > keys) {
             String keysShrink = shrink(keys, "Keys", "simple");

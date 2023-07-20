@@ -122,7 +122,7 @@ public class Group extends TeaModel {
         private String updateTime; 
 
         /**
-         * 服务组流量入口Token
+         * AccessToken.
          */
         public Builder accessToken(String accessToken) {
             this.accessToken = accessToken;
@@ -130,7 +130,7 @@ public class Group extends TeaModel {
         }
 
         /**
-         * 服务组所在集群
+         * ClusterId.
          */
         public Builder clusterId(String clusterId) {
             this.clusterId = clusterId;
@@ -138,7 +138,7 @@ public class Group extends TeaModel {
         }
 
         /**
-         * 服务组创建时间
+         * CreateTime.
          */
         public Builder createTime(String createTime) {
             this.createTime = createTime;
@@ -146,7 +146,7 @@ public class Group extends TeaModel {
         }
 
         /**
-         * 服务组公网地址
+         * InternetEndpoint.
          */
         public Builder internetEndpoint(String internetEndpoint) {
             this.internetEndpoint = internetEndpoint;
@@ -154,7 +154,7 @@ public class Group extends TeaModel {
         }
 
         /**
-         * 服务组内网地址
+         * IntranetEndpoint.
          */
         public Builder intranetEndpoint(String intranetEndpoint) {
             this.intranetEndpoint = intranetEndpoint;
@@ -162,7 +162,7 @@ public class Group extends TeaModel {
         }
 
         /**
-         * 服务组名称
+         * Name.
          */
         public Builder name(String name) {
             this.name = name;
@@ -170,7 +170,7 @@ public class Group extends TeaModel {
         }
 
         /**
-         * 服务组包含的队列服务
+         * QueueService.
          */
         public Builder queueService(String queueService) {
             this.queueService = queueService;
@@ -178,7 +178,7 @@ public class Group extends TeaModel {
         }
 
         /**
-         * 服务组更新时间
+         * UpdateTime.
          */
         public Builder updateTime(String updateTime) {
             this.updateTime = updateTime;

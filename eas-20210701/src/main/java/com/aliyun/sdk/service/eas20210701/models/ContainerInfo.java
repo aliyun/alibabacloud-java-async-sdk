@@ -158,7 +158,7 @@ public class ContainerInfo extends TeaModel {
         private Integer restartCount; 
 
         /**
-         * 当前状态-原因
+         * CurrentReaon.
          */
         public Builder currentReaon(String currentReaon) {
             this.currentReaon = currentReaon;
@@ -166,7 +166,7 @@ public class ContainerInfo extends TeaModel {
         }
 
         /**
-         * 当前状态-状态
+         * CurrentStatus.
          */
         public Builder currentStatus(String currentStatus) {
             this.currentStatus = currentStatus;
@@ -174,7 +174,7 @@ public class ContainerInfo extends TeaModel {
         }
 
         /**
-         * 当前状态-时间
+         * CurrentTimestamp.
          */
         public Builder currentTimestamp(String currentTimestamp) {
             this.currentTimestamp = currentTimestamp;
@@ -182,7 +182,7 @@ public class ContainerInfo extends TeaModel {
         }
 
         /**
-         * 镜像
+         * Image.
          */
         public Builder image(String image) {
             this.image = image;
@@ -190,7 +190,7 @@ public class ContainerInfo extends TeaModel {
         }
 
         /**
-         * 上次状态-原因
+         * LastReason.
          */
         public Builder lastReason(String lastReason) {
             this.lastReason = lastReason;
@@ -198,7 +198,7 @@ public class ContainerInfo extends TeaModel {
         }
 
         /**
-         * 上次状态-状态
+         * LastStatus.
          */
         public Builder lastStatus(String lastStatus) {
             this.lastStatus = lastStatus;
@@ -206,7 +206,7 @@ public class ContainerInfo extends TeaModel {
         }
 
         /**
-         * 上次状态-时间
+         * LastTimestamp.
          */
         public Builder lastTimestamp(String lastTimestamp) {
             this.lastTimestamp = lastTimestamp;
@@ -214,7 +214,7 @@ public class ContainerInfo extends TeaModel {
         }
 
         /**
-         * 容器名称
+         * Name.
          */
         public Builder name(String name) {
             this.name = name;
@@ -222,7 +222,7 @@ public class ContainerInfo extends TeaModel {
         }
 
         /**
-         * 端口
+         * Port.
          */
         public Builder port(Integer port) {
             this.port = port;
@@ -230,7 +230,7 @@ public class ContainerInfo extends TeaModel {
         }
 
         /**
-         * 健康检查是否通过
+         * Ready.
          */
         public Builder ready(Boolean ready) {
             this.ready = ready;
@@ -238,7 +238,7 @@ public class ContainerInfo extends TeaModel {
         }
 
         /**
-         * 重启次数
+         * RestartCount.
          */
         public Builder restartCount(Integer restartCount) {
             this.restartCount = restartCount;

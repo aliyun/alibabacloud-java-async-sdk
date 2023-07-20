@@ -98,7 +98,7 @@ public class CreateResourceResponseBody extends TeaModel {
         private String resourceName; 
 
         /**
-         * 资源组所在集群ID
+         * ClusterId.
          */
         public Builder clusterId(String clusterId) {
             this.clusterId = clusterId;
@@ -114,7 +114,7 @@ public class CreateResourceResponseBody extends TeaModel {
         }
 
         /**
-         * 资源组的Owner UID
+         * OwnerUid.
          */
         public Builder ownerUid(String ownerUid) {
             this.ownerUid = ownerUid;
@@ -122,7 +122,7 @@ public class CreateResourceResponseBody extends TeaModel {
         }
 
         /**
-         * Id of the request
+         * RequestId.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -130,7 +130,7 @@ public class CreateResourceResponseBody extends TeaModel {
         }
 
         /**
-         * 资源组ID
+         * ResourceId.
          */
         public Builder resourceId(String resourceId) {
             this.resourceId = resourceId;
@@ -138,7 +138,7 @@ public class CreateResourceResponseBody extends TeaModel {
         }
 
         /**
-         * 资源组名称
+         * ResourceName.
          */
         public Builder resourceName(String resourceName) {
             this.resourceName = resourceName;

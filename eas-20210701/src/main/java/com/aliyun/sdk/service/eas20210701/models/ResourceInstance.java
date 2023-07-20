@@ -302,7 +302,7 @@ public class ResourceInstance extends TeaModel {
         private String zone; 
 
         /**
-         * 实例系统架构
+         * Arch.
          */
         public Builder arch(String arch) {
             this.arch = arch;
@@ -310,7 +310,7 @@ public class ResourceInstance extends TeaModel {
         }
 
         /**
-         * 实例是否自动续费
+         * AutoRenewal.
          */
         public Builder autoRenewal(Boolean autoRenewal) {
             this.autoRenewal = autoRenewal;
@@ -318,7 +318,7 @@ public class ResourceInstance extends TeaModel {
         }
 
         /**
-         * 实例的计费类型
+         * ChargeType.
          */
         public Builder chargeType(String chargeType) {
             this.chargeType = chargeType;
@@ -326,7 +326,7 @@ public class ResourceInstance extends TeaModel {
         }
 
         /**
-         * 实例的创建时间
+         * CreateTime.
          */
         public Builder createTime(String createTime) {
             this.createTime = createTime;
@@ -334,7 +334,7 @@ public class ResourceInstance extends TeaModel {
         }
 
         /**
-         * 实例过期时间
+         * ExpiredTime.
          */
         public Builder expiredTime(String expiredTime) {
             this.expiredTime = expiredTime;
@@ -342,7 +342,7 @@ public class ResourceInstance extends TeaModel {
         }
 
         /**
-         * 实例的Cpu个数
+         * InstanceCpuCount.
          */
         public Builder instanceCpuCount(Integer instanceCpuCount) {
             this.instanceCpuCount = instanceCpuCount;
@@ -350,7 +350,7 @@ public class ResourceInstance extends TeaModel {
         }
 
         /**
-         * 实例的Gpu个数
+         * InstanceGpuCount.
          */
         public Builder instanceGpuCount(Integer instanceGpuCount) {
             this.instanceGpuCount = instanceGpuCount;
@@ -358,7 +358,7 @@ public class ResourceInstance extends TeaModel {
         }
 
         /**
-         * 实例的显存大小
+         * InstanceGpuMemory.
          */
         public Builder instanceGpuMemory(String instanceGpuMemory) {
             this.instanceGpuMemory = instanceGpuMemory;
@@ -366,7 +366,7 @@ public class ResourceInstance extends TeaModel {
         }
 
         /**
-         * 实例ID
+         * InstanceId.
          */
         public Builder instanceId(String instanceId) {
             this.instanceId = instanceId;
@@ -374,7 +374,7 @@ public class ResourceInstance extends TeaModel {
         }
 
         /**
-         * 实例IP
+         * InstanceIp.
          */
         public Builder instanceIp(String instanceIp) {
             this.instanceIp = instanceIp;
@@ -382,7 +382,7 @@ public class ResourceInstance extends TeaModel {
         }
 
         /**
-         * 实例的内存大小
+         * InstanceMemory.
          */
         public Builder instanceMemory(String instanceMemory) {
             this.instanceMemory = instanceMemory;
@@ -390,7 +390,7 @@ public class ResourceInstance extends TeaModel {
         }
 
         /**
-         * 实例名称
+         * InstanceName.
          */
         public Builder instanceName(String instanceName) {
             this.instanceName = instanceName;
@@ -398,7 +398,7 @@ public class ResourceInstance extends TeaModel {
         }
 
         /**
-         * 实例状态
+         * InstanceStatus.
          */
         public Builder instanceStatus(String instanceStatus) {
             this.instanceStatus = instanceStatus;
@@ -406,7 +406,7 @@ public class ResourceInstance extends TeaModel {
         }
 
         /**
-         * 实例的系统盘大小
+         * InstanceSystemDiskSize.
          */
         public Builder instanceSystemDiskSize(Integer instanceSystemDiskSize) {
             this.instanceSystemDiskSize = instanceSystemDiskSize;
@@ -414,7 +414,7 @@ public class ResourceInstance extends TeaModel {
         }
 
         /**
-         * 实例专属网络IP
+         * InstanceTenantIp.
          */
         public Builder instanceTenantIp(String instanceTenantIp) {
             this.instanceTenantIp = instanceTenantIp;
@@ -422,7 +422,7 @@ public class ResourceInstance extends TeaModel {
         }
 
         /**
-         * 实例的机型
+         * InstanceType.
          */
         public Builder instanceType(String instanceType) {
             this.instanceType = instanceType;
@@ -430,7 +430,7 @@ public class ResourceInstance extends TeaModel {
         }
 
         /**
-         * 实例已使用的CPU数量
+         * InstanceUsedCpu.
          */
         public Builder instanceUsedCpu(Float instanceUsedCpu) {
             this.instanceUsedCpu = instanceUsedCpu;
@@ -438,7 +438,7 @@ public class ResourceInstance extends TeaModel {
         }
 
         /**
-         * 实例已使用的GPU数量
+         * InstanceUsedGpu.
          */
         public Builder instanceUsedGpu(Float instanceUsedGpu) {
             this.instanceUsedGpu = instanceUsedGpu;
@@ -446,7 +446,7 @@ public class ResourceInstance extends TeaModel {
         }
 
         /**
-         * 实例已使用的显存大小
+         * InstanceUsedGpuMemory.
          */
         public Builder instanceUsedGpuMemory(String instanceUsedGpuMemory) {
             this.instanceUsedGpuMemory = instanceUsedGpuMemory;
@@ -454,7 +454,7 @@ public class ResourceInstance extends TeaModel {
         }
 
         /**
-         * 实例已使用的内存大小
+         * InstanceUsedMemory.
          */
         public Builder instanceUsedMemory(String instanceUsedMemory) {
             this.instanceUsedMemory = instanceUsedMemory;
@@ -462,7 +462,7 @@ public class ResourceInstance extends TeaModel {
         }
 
         /**
-         * 实例所属区域
+         * Region.
          */
         public Builder region(String region) {
             this.region = region;
@@ -470,7 +470,7 @@ public class ResourceInstance extends TeaModel {
         }
 
         /**
-         * 实例所属资源组ID
+         * ResourceId.
          */
         public Builder resourceId(String resourceId) {
             this.resourceId = resourceId;
@@ -478,7 +478,7 @@ public class ResourceInstance extends TeaModel {
         }
 
         /**
-         * 实例所属可用区
+         * Zone.
          */
         public Builder zone(String zone) {
             this.zone = zone;

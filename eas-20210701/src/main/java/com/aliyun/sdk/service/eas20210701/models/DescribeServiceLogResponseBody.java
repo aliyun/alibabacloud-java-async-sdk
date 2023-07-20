@@ -86,7 +86,7 @@ public class DescribeServiceLogResponseBody extends TeaModel {
         private Long totalPageNum; 
 
         /**
-         * 返回的日志信息
+         * Logs.
          */
         public Builder logs(java.util.List < String > logs) {
             this.logs = logs;
@@ -94,7 +94,7 @@ public class DescribeServiceLogResponseBody extends TeaModel {
         }
 
         /**
-         * 当前页码
+         * PageNum.
          */
         public Builder pageNum(Long pageNum) {
             this.pageNum = pageNum;
@@ -102,7 +102,7 @@ public class DescribeServiceLogResponseBody extends TeaModel {
         }
 
         /**
-         * Id of the request
+         * RequestId.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -110,7 +110,7 @@ public class DescribeServiceLogResponseBody extends TeaModel {
         }
 
         /**
-         * 总计数量
+         * TotalCount.
          */
         public Builder totalCount(Long totalCount) {
             this.totalCount = totalCount;
@@ -118,7 +118,7 @@ public class DescribeServiceLogResponseBody extends TeaModel {
         }
 
         /**
-         * 总计页码
+         * TotalPageNum.
          */
         public Builder totalPageNum(Long totalPageNum) {
             this.totalPageNum = totalPageNum;

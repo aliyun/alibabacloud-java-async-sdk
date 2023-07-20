@@ -62,7 +62,7 @@ public class UpdateResourceInstanceResponseBody extends TeaModel {
         private String resourceId; 
 
         /**
-         * 实例名
+         * InstanceId.
          */
         public Builder instanceId(String instanceId) {
             this.instanceId = instanceId;
@@ -70,7 +70,7 @@ public class UpdateResourceInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * 请求ID
+         * RequestId.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -78,7 +78,7 @@ public class UpdateResourceInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * 资源组ID
+         * ResourceId.
          */
         public Builder resourceId(String resourceId) {
             this.resourceId = resourceId;

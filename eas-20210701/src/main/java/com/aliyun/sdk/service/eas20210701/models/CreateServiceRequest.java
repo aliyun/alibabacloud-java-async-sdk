@@ -82,7 +82,7 @@ public class CreateServiceRequest extends Request {
         } 
 
         /**
-         * 是否进入开发模式。
+         * Develop.
          */
         public Builder develop(String develop) {
             this.putQueryParameter("Develop", develop);

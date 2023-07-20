@@ -172,7 +172,7 @@ public class CreateResourceInstancesRequest extends Request {
         } 
 
         /**
-         * 资源组所在的集群ID
+         * ClusterId.
          */
         public Builder clusterId(String clusterId) {
             this.putPathParameter("ClusterId", clusterId);
@@ -181,7 +181,7 @@ public class CreateResourceInstancesRequest extends Request {
         }
 
         /**
-         * 资源组ID
+         * ResourceId.
          */
         public Builder resourceId(String resourceId) {
             this.putPathParameter("ResourceId", resourceId);
@@ -190,7 +190,7 @@ public class CreateResourceInstancesRequest extends Request {
         }
 
         /**
-         * 是否自动续费
+         * AutoRenewal.
          */
         public Builder autoRenewal(Boolean autoRenewal) {
             this.putBodyParameter("AutoRenewal", autoRenewal);
@@ -199,7 +199,7 @@ public class CreateResourceInstancesRequest extends Request {
         }
 
         /**
-         * 付费类型，预付费PrePaid，后付费PostPaid
+         * ChargeType.
          */
         public Builder chargeType(String chargeType) {
             this.putBodyParameter("ChargeType", chargeType);
@@ -208,7 +208,7 @@ public class CreateResourceInstancesRequest extends Request {
         }
 
         /**
-         * 新创建的实例个数，(0, 100]
+         * EcsInstanceCount.
          */
         public Builder ecsInstanceCount(Integer ecsInstanceCount) {
             this.putBodyParameter("EcsInstanceCount", ecsInstanceCount);
@@ -217,7 +217,7 @@ public class CreateResourceInstancesRequest extends Request {
         }
 
         /**
-         * 实例机型，对应ecs机型
+         * EcsInstanceType.
          */
         public Builder ecsInstanceType(String ecsInstanceType) {
             this.putBodyParameter("EcsInstanceType", ecsInstanceType);
@@ -226,7 +226,7 @@ public class CreateResourceInstancesRequest extends Request {
         }
 
         /**
-         * 系统盘大小(200-2000)GB，不传默认为200
+         * SystemDiskSize.
          */
         public Builder systemDiskSize(Integer systemDiskSize) {
             this.putBodyParameter("SystemDiskSize", systemDiskSize);
@@ -235,7 +235,7 @@ public class CreateResourceInstancesRequest extends Request {
         }
 
         /**
-         * 用户自这义数据，小于 16KB
+         * UserData.
          */
         public Builder userData(String userData) {
             this.putBodyParameter("UserData", userData);

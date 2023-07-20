@@ -116,7 +116,7 @@ public class CreateResourceLogRequest extends Request {
         }
 
         /**
-         * sls日志库
+         * LogStore.
          */
         public Builder logStore(String logStore) {
             this.putBodyParameter("LogStore", logStore);
@@ -125,7 +125,7 @@ public class CreateResourceLogRequest extends Request {
         }
 
         /**
-         * 资源组对应的sls日志管理项目
+         * ProjectName.
          */
         public Builder projectName(String projectName) {
             this.putBodyParameter("ProjectName", projectName);

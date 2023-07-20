@@ -170,7 +170,7 @@ public class ResourceInstanceWorker extends TeaModel {
         private String status; 
 
         /**
-         * CpuLimit
+         * CpuLimit.
          */
         public Builder cpuLimit(Integer cpuLimit) {
             this.cpuLimit = cpuLimit;
@@ -178,7 +178,7 @@ public class ResourceInstanceWorker extends TeaModel {
         }
 
         /**
-         * CpuRequest
+         * CpuRequest.
          */
         public Builder cpuRequest(Integer cpuRequest) {
             this.cpuRequest = cpuRequest;
@@ -186,7 +186,7 @@ public class ResourceInstanceWorker extends TeaModel {
         }
 
         /**
-         * GpuLimit
+         * GpuLimit.
          */
         public Builder gpuLimit(Integer gpuLimit) {
             this.gpuLimit = gpuLimit;
@@ -194,7 +194,7 @@ public class ResourceInstanceWorker extends TeaModel {
         }
 
         /**
-         * GpuRequest
+         * GpuRequest.
          */
         public Builder gpuRequest(Integer gpuRequest) {
             this.gpuRequest = gpuRequest;
@@ -202,7 +202,7 @@ public class ResourceInstanceWorker extends TeaModel {
         }
 
         /**
-         * MemoryLimit
+         * MemoryLimit.
          */
         public Builder memoryLimit(Integer memoryLimit) {
             this.memoryLimit = memoryLimit;
@@ -210,7 +210,7 @@ public class ResourceInstanceWorker extends TeaModel {
         }
 
         /**
-         * MemoryRquest
+         * MemoryRquest.
          */
         public Builder memoryRquest(Integer memoryRquest) {
             this.memoryRquest = memoryRquest;
@@ -218,7 +218,7 @@ public class ResourceInstanceWorker extends TeaModel {
         }
 
         /**
-         * pod名
+         * Name.
          */
         public Builder name(String name) {
             this.name = name;
@@ -226,7 +226,7 @@ public class ResourceInstanceWorker extends TeaModel {
         }
 
         /**
-         * 是否ready
+         * Ready.
          */
         public Builder ready(Boolean ready) {
             this.ready = ready;
@@ -234,7 +234,7 @@ public class ResourceInstanceWorker extends TeaModel {
         }
 
         /**
-         * RestartCount
+         * RestartCount.
          */
         public Builder restartCount(Integer restartCount) {
             this.restartCount = restartCount;
@@ -242,7 +242,7 @@ public class ResourceInstanceWorker extends TeaModel {
         }
 
         /**
-         * 服务名
+         * ServiceName.
          */
         public Builder serviceName(String serviceName) {
             this.serviceName = serviceName;
@@ -250,7 +250,7 @@ public class ResourceInstanceWorker extends TeaModel {
         }
 
         /**
-         * StartTime
+         * StartTime.
          */
         public Builder startTime(String startTime) {
             this.startTime = startTime;
@@ -258,7 +258,7 @@ public class ResourceInstanceWorker extends TeaModel {
         }
 
         /**
-         * pod状态
+         * Status.
          */
         public Builder status(String status) {
             this.status = status;

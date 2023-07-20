@@ -210,7 +210,7 @@ public class ListResourceInstancesRequest extends Request {
         } 
 
         /**
-         * 资源组所在的集群ID
+         * ClusterId.
          */
         public Builder clusterId(String clusterId) {
             this.putPathParameter("ClusterId", clusterId);
@@ -219,7 +219,7 @@ public class ListResourceInstancesRequest extends Request {
         }
 
         /**
-         * 资源组的ID
+         * ResourceId.
          */
         public Builder resourceId(String resourceId) {
             this.putPathParameter("ResourceId", resourceId);
@@ -228,10 +228,7 @@ public class ListResourceInstancesRequest extends Request {
         }
 
         /**
-         * 付费类型
-         * <p>
-         * PrePaid预付费
-         * PostPaid后付费
+         * ChargeType.
          */
         public Builder chargeType(String chargeType) {
             this.putQueryParameter("ChargeType", chargeType);
@@ -294,7 +291,7 @@ public class ListResourceInstancesRequest extends Request {
         }
 
         /**
-         * 请求的页码（默认为1）
+         * PageNumber.
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -303,7 +300,7 @@ public class ListResourceInstancesRequest extends Request {
         }
 
         /**
-         * 每页的大小（默认为100）
+         * PageSize.
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);

@@ -85,7 +85,7 @@ public class UpdateResourceRequest extends Request {
         } 
 
         /**
-         * 资源组所在的集群ID
+         * ClusterId.
          */
         public Builder clusterId(String clusterId) {
             this.putPathParameter("ClusterId", clusterId);
@@ -94,7 +94,7 @@ public class UpdateResourceRequest extends Request {
         }
 
         /**
-         * 资源组的ID
+         * ResourceId.
          */
         public Builder resourceId(String resourceId) {
             this.putPathParameter("ResourceId", resourceId);
@@ -103,7 +103,7 @@ public class UpdateResourceRequest extends Request {
         }
 
         /**
-         * 新的资源组名称
+         * ResourceName.
          */
         public Builder resourceName(String resourceName) {
             this.putBodyParameter("ResourceName", resourceName);

@@ -50,7 +50,7 @@ public class UpdateServiceLabelResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * 返回信息。
+         * Message.
          */
         public Builder message(String message) {
             this.message = message;
@@ -58,7 +58,7 @@ public class UpdateServiceLabelResponseBody extends TeaModel {
         }
 
         /**
-         * 请求Id
+         * RequestId.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
