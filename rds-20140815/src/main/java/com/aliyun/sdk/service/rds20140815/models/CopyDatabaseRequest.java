@@ -17,6 +17,10 @@ public class CopyDatabaseRequest extends Request {
     private Long ownerId;
 
     @Query
+    @NameInMap("ResourceGroupId")
+    private String resourceGroupId;
+
+    @Query
     @NameInMap("ResourceOwnerAccount")
     private String resourceOwnerAccount;
 
@@ -27,6 +31,7 @@ public class CopyDatabaseRequest extends Request {
     private CopyDatabaseRequest(Builder builder) {
         super(builder);
         this.ownerId = builder.ownerId;
+        this.resourceGroupId = builder.resourceGroupId;
         this.resourceOwnerAccount = builder.resourceOwnerAccount;
         this.resourceOwnerId = builder.resourceOwnerId;
     }
@@ -52,6 +57,13 @@ public class CopyDatabaseRequest extends Request {
     }
 
     /**
+     * @return resourceGroupId
+     */
+    public String getResourceGroupId() {
+        return this.resourceGroupId;
+    }
+
+    /**
      * @return resourceOwnerAccount
      */
     public String getResourceOwnerAccount() {
@@ -67,6 +79,7 @@ public class CopyDatabaseRequest extends Request {
 
     public static final class Builder extends Request.Builder<CopyDatabaseRequest, Builder> {
         private Long ownerId; 
+        private String resourceGroupId; 
         private String resourceOwnerAccount; 
         private Long resourceOwnerId; 
 
@@ -77,6 +90,7 @@ public class CopyDatabaseRequest extends Request {
         private Builder(CopyDatabaseRequest request) {
             super(request);
             this.ownerId = request.ownerId;
+            this.resourceGroupId = request.resourceGroupId;
             this.resourceOwnerAccount = request.resourceOwnerAccount;
             this.resourceOwnerId = request.resourceOwnerId;
         } 
@@ -87,6 +101,15 @@ public class CopyDatabaseRequest extends Request {
         public Builder ownerId(Long ownerId) {
             this.putQueryParameter("OwnerId", ownerId);
             this.ownerId = ownerId;
+            return this;
+        }
+
+        /**
+         * ResourceGroupId.
+         */
+        public Builder resourceGroupId(String resourceGroupId) {
+            this.putQueryParameter("ResourceGroupId", resourceGroupId);
+            this.resourceGroupId = resourceGroupId;
             return this;
         }
 
