@@ -164,8 +164,14 @@ public class CarOrderQueryResponseBody extends TeaModel {
         @NameInMap("car_level")
         private Integer carLevel;
 
+        @NameInMap("driver_card")
+        private String driverCard;
+
         @NameInMap("driver_confirm_time")
         private Long driverConfirmTime;
+
+        @NameInMap("driver_name")
+        private String driverName;
 
         @NameInMap("estimate_price")
         private Long estimatePrice;
@@ -223,7 +229,9 @@ public class CarOrderQueryResponseBody extends TeaModel {
             this.cancelTime = builder.cancelTime;
             this.carInfo = builder.carInfo;
             this.carLevel = builder.carLevel;
+            this.driverCard = builder.driverCard;
             this.driverConfirmTime = builder.driverConfirmTime;
+            this.driverName = builder.driverName;
             this.estimatePrice = builder.estimatePrice;
             this.fromAddress = builder.fromAddress;
             this.fromCityName = builder.fromCityName;
@@ -280,10 +288,24 @@ public class CarOrderQueryResponseBody extends TeaModel {
         }
 
         /**
+         * @return driverCard
+         */
+        public String getDriverCard() {
+            return this.driverCard;
+        }
+
+        /**
          * @return driverConfirmTime
          */
         public Long getDriverConfirmTime() {
             return this.driverConfirmTime;
+        }
+
+        /**
+         * @return driverName
+         */
+        public String getDriverName() {
+            return this.driverName;
         }
 
         /**
@@ -410,7 +432,9 @@ public class CarOrderQueryResponseBody extends TeaModel {
             private Long cancelTime; 
             private String carInfo; 
             private Integer carLevel; 
+            private String driverCard; 
             private Long driverConfirmTime; 
+            private String driverName; 
             private Long estimatePrice; 
             private String fromAddress; 
             private String fromCityName; 
@@ -462,10 +486,26 @@ public class CarOrderQueryResponseBody extends TeaModel {
             }
 
             /**
+             * driver_card.
+             */
+            public Builder driverCard(String driverCard) {
+                this.driverCard = driverCard;
+                return this;
+            }
+
+            /**
              * driver_confirm_time.
              */
             public Builder driverConfirmTime(Long driverConfirmTime) {
                 this.driverConfirmTime = driverConfirmTime;
+                return this;
+            }
+
+            /**
+             * driver_name.
+             */
+            public Builder driverName(String driverName) {
+                this.driverName = driverName;
                 return this;
             }
 

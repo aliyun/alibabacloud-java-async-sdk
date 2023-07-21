@@ -152,6 +152,9 @@ public class MonthBillGetResponseBody extends TeaModel {
     } 
 
     public static class MonthAccountBillDetail extends TeaModel {
+        @NameInMap("billConfirmed")
+        private Integer billConfirmed;
+
         @NameInMap("carAmount")
         private Double carAmount;
 
@@ -180,6 +183,7 @@ public class MonthBillGetResponseBody extends TeaModel {
         private Double trainAmount;
 
         private MonthAccountBillDetail(Builder builder) {
+            this.billConfirmed = builder.billConfirmed;
             this.carAmount = builder.carAmount;
             this.damageAmount = builder.damageAmount;
             this.flightAmount = builder.flightAmount;
@@ -197,6 +201,13 @@ public class MonthBillGetResponseBody extends TeaModel {
 
         public static MonthAccountBillDetail create() {
             return builder().build();
+        }
+
+        /**
+         * @return billConfirmed
+         */
+        public Integer getBillConfirmed() {
+            return this.billConfirmed;
         }
 
         /**
@@ -263,6 +274,7 @@ public class MonthBillGetResponseBody extends TeaModel {
         }
 
         public static final class Builder {
+            private Integer billConfirmed; 
             private Double carAmount; 
             private Double damageAmount; 
             private Double flightAmount; 
@@ -272,6 +284,14 @@ public class MonthBillGetResponseBody extends TeaModel {
             private Long mailBillDate; 
             private Double serviceAmount; 
             private Double trainAmount; 
+
+            /**
+             * billConfirmed.
+             */
+            public Builder billConfirmed(Integer billConfirmed) {
+                this.billConfirmed = billConfirmed;
+                return this;
+            }
 
             /**
              * 用车金额（单位：元）
