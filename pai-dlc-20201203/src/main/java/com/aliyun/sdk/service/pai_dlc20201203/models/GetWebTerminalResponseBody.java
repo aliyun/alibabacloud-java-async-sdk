@@ -12,15 +12,15 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>GetWebTerminalResponseBody</p>
  */
 public class GetWebTerminalResponseBody extends TeaModel {
-    @NameInMap("URL")
-    private String URL;
-
-    @NameInMap("requestId")
+    @NameInMap("RequestId")
     private String requestId;
 
+    @NameInMap("WebTerminalUrl")
+    private String webTerminalUrl;
+
     private GetWebTerminalResponseBody(Builder builder) {
-        this.URL = builder.URL;
         this.requestId = builder.requestId;
+        this.webTerminalUrl = builder.webTerminalUrl;
     }
 
     public static Builder builder() {
@@ -32,36 +32,36 @@ public class GetWebTerminalResponseBody extends TeaModel {
     }
 
     /**
-     * @return URL
-     */
-    public String getURL() {
-        return this.URL;
-    }
-
-    /**
      * @return requestId
      */
     public String getRequestId() {
         return this.requestId;
     }
 
+    /**
+     * @return webTerminalUrl
+     */
+    public String getWebTerminalUrl() {
+        return this.webTerminalUrl;
+    }
+
     public static final class Builder {
-        private String URL; 
         private String requestId; 
+        private String webTerminalUrl; 
 
         /**
-         * URL.
+         * RequestId.
          */
-        public Builder URL(String URL) {
-            this.URL = URL;
+        public Builder requestId(String requestId) {
+            this.requestId = requestId;
             return this;
         }
 
         /**
-         * requestId.
+         * WebTerminalUrl.
          */
-        public Builder requestId(String requestId) {
-            this.requestId = requestId;
+        public Builder webTerminalUrl(String webTerminalUrl) {
+            this.webTerminalUrl = webTerminalUrl;
             return this;
         }
 
