@@ -127,14 +127,35 @@ public class ListInvocationResultsRequest extends Request {
         } 
 
         /**
+         * The ID of the cluster.
+         * <p>
+         * 
+         * You can call the [ListClusters](~~87116~~) operation to query the cluster ID.
+         */
+        public Builder clusterId(String clusterId) {
+            this.putQueryParameter("ClusterId", clusterId);
+            this.clusterId = clusterId;
+            return this;
+        }
+
+        /**
          * The ID of the command.
          * <p>
          * 
          * You can call the [ListCommands](~~87388~~) operation to query the command ID.
          */
-        public Builder clusterId(String clusterId) {
-            this.putQueryParameter("ClusterId", clusterId);
-            this.clusterId = clusterId;
+        public Builder commandId(String commandId) {
+            this.putQueryParameter("CommandId", commandId);
+            this.commandId = commandId;
+            return this;
+        }
+
+        /**
+         * The information of nodes on which the command is run.
+         */
+        public Builder instance(java.util.List < Instance> instance) {
+            this.putQueryParameter("Instance", instance);
+            this.instance = instance;
             return this;
         }
 
@@ -147,18 +168,9 @@ public class ListInvocationResultsRequest extends Request {
          * *   Failed
          * *   Stopped
          */
-        public Builder commandId(String commandId) {
-            this.putQueryParameter("CommandId", commandId);
-            this.commandId = commandId;
-            return this;
-        }
-
-        /**
-         * Instance.
-         */
-        public Builder instance(java.util.List < Instance> instance) {
-            this.putQueryParameter("Instance", instance);
-            this.instance = instance;
+        public Builder invokeRecordStatus(String invokeRecordStatus) {
+            this.putQueryParameter("InvokeRecordStatus", invokeRecordStatus);
+            this.invokeRecordStatus = invokeRecordStatus;
             return this;
         }
 
@@ -170,9 +182,9 @@ public class ListInvocationResultsRequest extends Request {
          * 
          * Default value: 1
          */
-        public Builder invokeRecordStatus(String invokeRecordStatus) {
-            this.putQueryParameter("InvokeRecordStatus", invokeRecordStatus);
-            this.invokeRecordStatus = invokeRecordStatus;
+        public Builder pageNumber(Integer pageNumber) {
+            this.putQueryParameter("PageNumber", pageNumber);
+            this.pageNumber = pageNumber;
             return this;
         }
 
@@ -181,18 +193,6 @@ public class ListInvocationResultsRequest extends Request {
          * <p>
          * 
          * Default value: 10
-         */
-        public Builder pageNumber(Integer pageNumber) {
-            this.putQueryParameter("PageNumber", pageNumber);
-            this.pageNumber = pageNumber;
-            return this;
-        }
-
-        /**
-         * The ID of the node on which the command is run.
-         * <p>
-         * 
-         * >  The Instance.N.Id parameter specifies the node on which the command is run. If it is not specified, the command is run on all nodes of the cluster.
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -234,7 +234,10 @@ public class ListInvocationResultsRequest extends Request {
             private String id; 
 
             /**
-             * The number of entries returned per page.
+             * The ID of the node on which the command is run.
+             * <p>
+             * 
+             * >  The Instance.N.Id parameter specifies the node on which the command is run. If it is not specified, the command is run on all nodes of the cluster.
              */
             public Builder id(String id) {
                 this.id = id;

@@ -19,7 +19,7 @@ public interface AsyncClient extends SdkAutoCloseable {
     }
 
     /**
-      * The operation that you want to perform. Set the value to AddContainerApp.
+      * If you select an image for a new containerized application, the image is pulled from Docker Hub by default. However, the version of the image may not be up to date. You can call the [PullImage](~~159052~~) operation to pull the latest image.
       *
      */
     CompletableFuture<AddContainerAppResponse> addContainerApp(AddContainerAppRequest request);

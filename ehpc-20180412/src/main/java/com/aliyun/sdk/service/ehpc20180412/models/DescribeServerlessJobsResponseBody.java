@@ -4938,20 +4938,17 @@ public class DescribeServerlessJobsResponseBody extends TeaModel {
         @NameInMap("EndTime")
         private Long endTime;
 
-        @NameInMap("Id")
-        private String id;
-
         @NameInMap("IsArrayJob")
         private Boolean isArrayJob;
 
+        @NameInMap("JobId")
+        private String jobId;
+
+        @NameInMap("JobName")
+        private String jobName;
+
         @NameInMap("LastModifyTime")
         private Long lastModifyTime;
-
-        @NameInMap("Name")
-        private String name;
-
-        @NameInMap("Owner")
-        private String owner;
 
         @NameInMap("Priority")
         private Long priority;
@@ -4968,20 +4965,23 @@ public class DescribeServerlessJobsResponseBody extends TeaModel {
         @NameInMap("SubmitTime")
         private Long submitTime;
 
+        @NameInMap("User")
+        private String user;
+
         private JobInfos(Builder builder) {
             this.arrayProperties = builder.arrayProperties;
             this.containerGroups = builder.containerGroups;
             this.endTime = builder.endTime;
-            this.id = builder.id;
             this.isArrayJob = builder.isArrayJob;
+            this.jobId = builder.jobId;
+            this.jobName = builder.jobName;
             this.lastModifyTime = builder.lastModifyTime;
-            this.name = builder.name;
-            this.owner = builder.owner;
             this.priority = builder.priority;
             this.queue = builder.queue;
             this.startTime = builder.startTime;
             this.state = builder.state;
             this.submitTime = builder.submitTime;
+            this.user = builder.user;
         }
 
         public static Builder builder() {
@@ -5014,13 +5014,6 @@ public class DescribeServerlessJobsResponseBody extends TeaModel {
         }
 
         /**
-         * @return id
-         */
-        public String getId() {
-            return this.id;
-        }
-
-        /**
          * @return isArrayJob
          */
         public Boolean getIsArrayJob() {
@@ -5028,24 +5021,24 @@ public class DescribeServerlessJobsResponseBody extends TeaModel {
         }
 
         /**
+         * @return jobId
+         */
+        public String getJobId() {
+            return this.jobId;
+        }
+
+        /**
+         * @return jobName
+         */
+        public String getJobName() {
+            return this.jobName;
+        }
+
+        /**
          * @return lastModifyTime
          */
         public Long getLastModifyTime() {
             return this.lastModifyTime;
-        }
-
-        /**
-         * @return name
-         */
-        public String getName() {
-            return this.name;
-        }
-
-        /**
-         * @return owner
-         */
-        public String getOwner() {
-            return this.owner;
         }
 
         /**
@@ -5083,20 +5076,27 @@ public class DescribeServerlessJobsResponseBody extends TeaModel {
             return this.submitTime;
         }
 
+        /**
+         * @return user
+         */
+        public String getUser() {
+            return this.user;
+        }
+
         public static final class Builder {
             private ArrayProperties arrayProperties; 
             private java.util.List < ContainerGroups> containerGroups; 
             private Long endTime; 
-            private String id; 
             private Boolean isArrayJob; 
+            private String jobId; 
+            private String jobName; 
             private Long lastModifyTime; 
-            private String name; 
-            private String owner; 
             private Long priority; 
             private String queue; 
             private Long startTime; 
             private String state; 
             private Long submitTime; 
+            private String user; 
 
             /**
              * ArrayProperties.
@@ -5123,14 +5123,6 @@ public class DescribeServerlessJobsResponseBody extends TeaModel {
             }
 
             /**
-             * Id.
-             */
-            public Builder id(String id) {
-                this.id = id;
-                return this;
-            }
-
-            /**
              * IsArrayJob.
              */
             public Builder isArrayJob(Boolean isArrayJob) {
@@ -5139,26 +5131,26 @@ public class DescribeServerlessJobsResponseBody extends TeaModel {
             }
 
             /**
+             * JobId.
+             */
+            public Builder jobId(String jobId) {
+                this.jobId = jobId;
+                return this;
+            }
+
+            /**
+             * JobName.
+             */
+            public Builder jobName(String jobName) {
+                this.jobName = jobName;
+                return this;
+            }
+
+            /**
              * LastModifyTime.
              */
             public Builder lastModifyTime(Long lastModifyTime) {
                 this.lastModifyTime = lastModifyTime;
-                return this;
-            }
-
-            /**
-             * Name.
-             */
-            public Builder name(String name) {
-                this.name = name;
-                return this;
-            }
-
-            /**
-             * Owner.
-             */
-            public Builder owner(String owner) {
-                this.owner = owner;
                 return this;
             }
 
@@ -5199,6 +5191,14 @@ public class DescribeServerlessJobsResponseBody extends TeaModel {
              */
             public Builder submitTime(Long submitTime) {
                 this.submitTime = submitTime;
+                return this;
+            }
+
+            /**
+             * User.
+             */
+            public Builder user(String user) {
+                this.user = user;
                 return this;
             }
 

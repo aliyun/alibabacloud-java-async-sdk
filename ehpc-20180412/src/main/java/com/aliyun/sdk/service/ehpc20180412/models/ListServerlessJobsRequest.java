@@ -34,10 +34,6 @@ public class ListServerlessJobsRequest extends Request {
     private Long pageSize;
 
     @Query
-    @NameInMap("Queues")
-    private java.util.List < String > queues;
-
-    @Query
     @NameInMap("RegionId")
     private String regionId;
 
@@ -61,10 +57,6 @@ public class ListServerlessJobsRequest extends Request {
     @NameInMap("SubmitTimeStart")
     private String submitTimeStart;
 
-    @Query
-    @NameInMap("Users")
-    private java.util.List < String > users;
-
     private ListServerlessJobsRequest(Builder builder) {
         super(builder);
         this.clusterId = builder.clusterId;
@@ -72,14 +64,12 @@ public class ListServerlessJobsRequest extends Request {
         this.jobNames = builder.jobNames;
         this.pageNumber = builder.pageNumber;
         this.pageSize = builder.pageSize;
-        this.queues = builder.queues;
         this.regionId = builder.regionId;
         this.startOrder = builder.startOrder;
         this.state = builder.state;
         this.submitOrder = builder.submitOrder;
         this.submitTimeEnd = builder.submitTimeEnd;
         this.submitTimeStart = builder.submitTimeStart;
-        this.users = builder.users;
     }
 
     public static Builder builder() {
@@ -131,13 +121,6 @@ public class ListServerlessJobsRequest extends Request {
     }
 
     /**
-     * @return queues
-     */
-    public java.util.List < String > getQueues() {
-        return this.queues;
-    }
-
-    /**
      * @return regionId
      */
     public String getRegionId() {
@@ -179,27 +162,18 @@ public class ListServerlessJobsRequest extends Request {
         return this.submitTimeStart;
     }
 
-    /**
-     * @return users
-     */
-    public java.util.List < String > getUsers() {
-        return this.users;
-    }
-
     public static final class Builder extends Request.Builder<ListServerlessJobsRequest, Builder> {
         private String clusterId; 
         private java.util.List < String > jobIds; 
         private java.util.List < String > jobNames; 
         private Long pageNumber; 
         private Long pageSize; 
-        private java.util.List < String > queues; 
         private String regionId; 
         private String startOrder; 
         private String state; 
         private String submitOrder; 
         private String submitTimeEnd; 
         private String submitTimeStart; 
-        private java.util.List < String > users; 
 
         private Builder() {
             super();
@@ -212,14 +186,12 @@ public class ListServerlessJobsRequest extends Request {
             this.jobNames = request.jobNames;
             this.pageNumber = request.pageNumber;
             this.pageSize = request.pageSize;
-            this.queues = request.queues;
             this.regionId = request.regionId;
             this.startOrder = request.startOrder;
             this.state = request.state;
             this.submitOrder = request.submitOrder;
             this.submitTimeEnd = request.submitTimeEnd;
             this.submitTimeStart = request.submitTimeStart;
-            this.users = request.users;
         } 
 
         /**
@@ -264,15 +236,6 @@ public class ListServerlessJobsRequest extends Request {
         public Builder pageSize(Long pageSize) {
             this.putQueryParameter("PageSize", pageSize);
             this.pageSize = pageSize;
-            return this;
-        }
-
-        /**
-         * Queues.
-         */
-        public Builder queues(java.util.List < String > queues) {
-            this.putQueryParameter("Queues", queues);
-            this.queues = queues;
             return this;
         }
 
@@ -327,15 +290,6 @@ public class ListServerlessJobsRequest extends Request {
         public Builder submitTimeStart(String submitTimeStart) {
             this.putQueryParameter("SubmitTimeStart", submitTimeStart);
             this.submitTimeStart = submitTimeStart;
-            return this;
-        }
-
-        /**
-         * Users.
-         */
-        public Builder users(java.util.List < String > users) {
-            this.putQueryParameter("Users", users);
-            this.users = users;
             return this;
         }
 

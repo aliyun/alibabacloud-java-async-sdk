@@ -86,7 +86,7 @@ public class ListInvocationResultsResponseBody extends TeaModel {
         private Integer totalCount; 
 
         /**
-         * Indicates whether the command was run and its result was obtained.
+         * The result of the command.
          */
         public Builder invocationResults(InvocationResults invocationResults) {
             this.invocationResults = invocationResults;
@@ -94,7 +94,7 @@ public class ListInvocationResultsResponseBody extends TeaModel {
         }
 
         /**
-         * The total number of returned entries.
+         * The page number of the returned page.
          */
         public Builder pageNumber(Integer pageNumber) {
             this.pageNumber = pageNumber;
@@ -102,7 +102,7 @@ public class ListInvocationResultsResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * The number of entries returned per page.
          */
         public Builder pageSize(Integer pageSize) {
             this.pageSize = pageSize;
@@ -110,7 +110,7 @@ public class ListInvocationResultsResponseBody extends TeaModel {
         }
 
         /**
-         * The page number of the returned page.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -118,7 +118,7 @@ public class ListInvocationResultsResponseBody extends TeaModel {
         }
 
         /**
-         * The result of the command.
+         * The total number of returned entries.
          */
         public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;
@@ -230,7 +230,7 @@ public class ListInvocationResultsResponseBody extends TeaModel {
             private Boolean success; 
 
             /**
-             * The ID of the node on which the command was run.
+             * The ID of the command.
              */
             public Builder commandId(String commandId) {
                 this.commandId = commandId;
@@ -238,7 +238,7 @@ public class ListInvocationResultsResponseBody extends TeaModel {
             }
 
             /**
-             * ExitCode.
+             * The exit code.
              */
             public Builder exitCode(Integer exitCode) {
                 this.exitCode = exitCode;
@@ -246,10 +246,18 @@ public class ListInvocationResultsResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the command.
+             * The time at which the command entered the Finished state.
              */
             public Builder finishedTime(String finishedTime) {
                 this.finishedTime = finishedTime;
+                return this;
+            }
+
+            /**
+             * The ID of the node on which the command was run.
+             */
+            public Builder instanceId(String instanceId) {
+                this.instanceId = instanceId;
                 return this;
             }
 
@@ -262,21 +270,13 @@ public class ListInvocationResultsResponseBody extends TeaModel {
              * *   Failed
              * *   Stopped
              */
-            public Builder instanceId(String instanceId) {
-                this.instanceId = instanceId;
-                return this;
-            }
-
-            /**
-             * The exit code.
-             */
             public Builder invokeRecordStatus(String invokeRecordStatus) {
                 this.invokeRecordStatus = invokeRecordStatus;
                 return this;
             }
 
             /**
-             * The time at which the command entered the Finished state.
+             * The output result.
              */
             public Builder message(String message) {
                 this.message = message;
@@ -284,7 +284,7 @@ public class ListInvocationResultsResponseBody extends TeaModel {
             }
 
             /**
-             * The output result.
+             * Indicates whether the command was run and its result was obtained.
              */
             public Builder success(Boolean success) {
                 this.success = success;

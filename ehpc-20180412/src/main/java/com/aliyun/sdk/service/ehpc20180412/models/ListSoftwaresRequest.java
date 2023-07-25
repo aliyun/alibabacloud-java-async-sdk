@@ -68,10 +68,10 @@ public class ListSoftwaresRequest extends Request {
         } 
 
         /**
-         * The image tag of the cluster.
+         * The version of the E-HPC client.
          * <p>
          * 
-         * You can use the [ListImages](~~87213~~) to query the image tag of the cluster.
+         * You can call the [ListCurrentClientVersion](~~87223~~) operation to query the E-HPC client version.
          */
         public Builder ehpcVersion(String ehpcVersion) {
             this.putQueryParameter("EhpcVersion", ehpcVersion);
@@ -80,7 +80,10 @@ public class ListSoftwaresRequest extends Request {
         }
 
         /**
-         * The ID of the request.
+         * The image tag of the cluster.
+         * <p>
+         * 
+         * You can use the [ListImages](~~87213~~) to query the image tag of the cluster.
          */
         public Builder osTag(String osTag) {
             this.putQueryParameter("OsTag", osTag);

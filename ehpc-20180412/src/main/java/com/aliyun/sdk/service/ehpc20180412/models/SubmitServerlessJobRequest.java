@@ -481,14 +481,14 @@ public class SubmitServerlessJobRequest extends Request {
 
     }
     public static class EnvironmentVar extends TeaModel {
-        @NameInMap("Name")
-        private String name;
+        @NameInMap("Key")
+        private String key;
 
         @NameInMap("Value")
         private String value;
 
         private EnvironmentVar(Builder builder) {
-            this.name = builder.name;
+            this.key = builder.key;
             this.value = builder.value;
         }
 
@@ -501,10 +501,10 @@ public class SubmitServerlessJobRequest extends Request {
         }
 
         /**
-         * @return name
+         * @return key
          */
-        public String getName() {
-            return this.name;
+        public String getKey() {
+            return this.key;
         }
 
         /**
@@ -515,14 +515,14 @@ public class SubmitServerlessJobRequest extends Request {
         }
 
         public static final class Builder {
-            private String name; 
+            private String key; 
             private String value; 
 
             /**
-             * Name.
+             * Key.
              */
-            public Builder name(String name) {
-                this.name = name;
+            public Builder key(String key) {
+                this.key = key;
                 return this;
             }
 
@@ -541,163 +541,19 @@ public class SubmitServerlessJobRequest extends Request {
         } 
 
     }
-    public static class FlexVolume extends TeaModel {
-        @NameInMap("Driver")
-        private String driver;
-
-        @NameInMap("Options")
-        private String options;
-
-        private FlexVolume(Builder builder) {
-            this.driver = builder.driver;
-            this.options = builder.options;
-        }
-
-        public static Builder builder() {
-            return new Builder();
-        }
-
-        public static FlexVolume create() {
-            return builder().build();
-        }
-
-        /**
-         * @return driver
-         */
-        public String getDriver() {
-            return this.driver;
-        }
-
-        /**
-         * @return options
-         */
-        public String getOptions() {
-            return this.options;
-        }
-
-        public static final class Builder {
-            private String driver; 
-            private String options; 
-
-            /**
-             * Driver.
-             */
-            public Builder driver(String driver) {
-                this.driver = driver;
-                return this;
-            }
-
-            /**
-             * Options.
-             */
-            public Builder options(String options) {
-                this.options = options;
-                return this;
-            }
-
-            public FlexVolume build() {
-                return new FlexVolume(this);
-            } 
-
-        } 
-
-    }
-    public static class NFSVolume extends TeaModel {
-        @NameInMap("Path")
-        private String path;
-
-        @NameInMap("ReadOnly")
-        private Boolean readOnly;
-
-        @NameInMap("Server")
-        private String server;
-
-        private NFSVolume(Builder builder) {
-            this.path = builder.path;
-            this.readOnly = builder.readOnly;
-            this.server = builder.server;
-        }
-
-        public static Builder builder() {
-            return new Builder();
-        }
-
-        public static NFSVolume create() {
-            return builder().build();
-        }
-
-        /**
-         * @return path
-         */
-        public String getPath() {
-            return this.path;
-        }
-
-        /**
-         * @return readOnly
-         */
-        public Boolean getReadOnly() {
-            return this.readOnly;
-        }
-
-        /**
-         * @return server
-         */
-        public String getServer() {
-            return this.server;
-        }
-
-        public static final class Builder {
-            private String path; 
-            private Boolean readOnly; 
-            private String server; 
-
-            /**
-             * Path.
-             */
-            public Builder path(String path) {
-                this.path = path;
-                return this;
-            }
-
-            /**
-             * ReadOnly.
-             */
-            public Builder readOnly(Boolean readOnly) {
-                this.readOnly = readOnly;
-                return this;
-            }
-
-            /**
-             * Server.
-             */
-            public Builder server(String server) {
-                this.server = server;
-                return this;
-            }
-
-            public NFSVolume build() {
-                return new NFSVolume(this);
-            } 
-
-        } 
-
-    }
     public static class VolumeMount extends TeaModel {
-        @NameInMap("FlexVolume")
-        @Validation(required = true)
-        private FlexVolume flexVolume;
+        @NameInMap("FlexVolumeDriver")
+        private String flexVolumeDriver;
 
-        @NameInMap("NFSVolume")
-        @Validation(required = true)
-        private NFSVolume NFSVolume;
+        @NameInMap("FlexVolumeOptions")
+        private String flexVolumeOptions;
 
         @NameInMap("MountPath")
         private String mountPath;
 
         private VolumeMount(Builder builder) {
-            this.flexVolume = builder.flexVolume;
-            this.NFSVolume = builder.NFSVolume;
+            this.flexVolumeDriver = builder.flexVolumeDriver;
+            this.flexVolumeOptions = builder.flexVolumeOptions;
             this.mountPath = builder.mountPath;
         }
 
@@ -710,17 +566,17 @@ public class SubmitServerlessJobRequest extends Request {
         }
 
         /**
-         * @return flexVolume
+         * @return flexVolumeDriver
          */
-        public FlexVolume getFlexVolume() {
-            return this.flexVolume;
+        public String getFlexVolumeDriver() {
+            return this.flexVolumeDriver;
         }
 
         /**
-         * @return NFSVolume
+         * @return flexVolumeOptions
          */
-        public NFSVolume getNFSVolume() {
-            return this.NFSVolume;
+        public String getFlexVolumeOptions() {
+            return this.flexVolumeOptions;
         }
 
         /**
@@ -731,23 +587,23 @@ public class SubmitServerlessJobRequest extends Request {
         }
 
         public static final class Builder {
-            private FlexVolume flexVolume; 
-            private NFSVolume NFSVolume; 
+            private String flexVolumeDriver; 
+            private String flexVolumeOptions; 
             private String mountPath; 
 
             /**
-             * FlexVolume.
+             * FlexVolumeDriver.
              */
-            public Builder flexVolume(FlexVolume flexVolume) {
-                this.flexVolume = flexVolume;
+            public Builder flexVolumeDriver(String flexVolumeDriver) {
+                this.flexVolumeDriver = flexVolumeDriver;
                 return this;
             }
 
             /**
-             * NFSVolume.
+             * FlexVolumeOptions.
              */
-            public Builder NFSVolume(NFSVolume NFSVolume) {
-                this.NFSVolume = NFSVolume;
+            public Builder flexVolumeOptions(String flexVolumeOptions) {
+                this.flexVolumeOptions = flexVolumeOptions;
                 return this;
             }
 

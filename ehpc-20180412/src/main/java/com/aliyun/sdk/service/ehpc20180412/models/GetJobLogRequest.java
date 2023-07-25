@@ -112,12 +112,7 @@ public class GetJobLogRequest extends Request {
         } 
 
         /**
-         * The maximum size of logs that you can read in a single request.
-         * <p>
-         * 
-         * Unit: bits
-         * 
-         * Default value: 1024
+         * The ID of the cluster.
          */
         public Builder clusterId(String clusterId) {
             this.putQueryParameter("ClusterId", clusterId);
@@ -126,11 +121,24 @@ public class GetJobLogRequest extends Request {
         }
 
         /**
-         * The ID of the task.
+         * The node on which the job runs.
+         * <p>
+         * 
+         * *   If the job is completed, you do not need to specify the parameter.
+         * *   If the job is running, you must specify the parameter.
          */
         public Builder execHost(String execHost) {
             this.putQueryParameter("ExecHost", execHost);
             this.execHost = execHost;
+            return this;
+        }
+
+        /**
+         * The ID of the job.
+         */
+        public Builder jobId(String jobId) {
+            this.putQueryParameter("JobId", jobId);
+            this.jobId = jobId;
             return this;
         }
 
@@ -142,15 +150,6 @@ public class GetJobLogRequest extends Request {
          * 
          * Default value: 0
          */
-        public Builder jobId(String jobId) {
-            this.putQueryParameter("JobId", jobId);
-            this.jobId = jobId;
-            return this;
-        }
-
-        /**
-         * The content of the output logs. The content is encoded in Base64.
-         */
         public Builder offset(Long offset) {
             this.putQueryParameter("Offset", offset);
             this.offset = offset;
@@ -158,7 +157,12 @@ public class GetJobLogRequest extends Request {
         }
 
         /**
-         * The ID of the job.
+         * The maximum size of logs that you can read in a single request.
+         * <p>
+         * 
+         * Unit: bits
+         * 
+         * Default value: 1024
          */
         public Builder size(Integer size) {
             this.putQueryParameter("Size", size);

@@ -50,7 +50,7 @@ public class ListSoftwaresResponseBody extends TeaModel {
         private Softwares softwares; 
 
         /**
-         * The list of the information about the software installed in the cluster.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -58,19 +58,7 @@ public class ListSoftwaresResponseBody extends TeaModel {
         }
 
         /**
-         * The type of the scheduler. Valid values:
-         * <p>
-         * 
-         * *   pbs
-         * *   pbs19
-         * *   slurm
-         * *   slurm19
-         * *   slurm20
-         * *   opengridscheduler
-         * *   deadline
-         * *   gridengine
-         * *   cube
-         * *   custom
+         * The list of the information about the software installed in the cluster.
          */
         public Builder softwares(Softwares softwares) {
             this.softwares = softwares;
@@ -146,7 +134,7 @@ public class ListSoftwaresResponseBody extends TeaModel {
             private String version; 
 
             /**
-             * The version of the software.
+             * The name of the software.
              */
             public Builder name(String name) {
                 this.name = name;
@@ -154,7 +142,11 @@ public class ListSoftwaresResponseBody extends TeaModel {
             }
 
             /**
-             * The tag of the software.
+             * Indicates whether the software is required. Valid values:
+             * <p>
+             * 
+             * *   false: optional
+             * *   true: required
              */
             public Builder required(Boolean required) {
                 this.required = required;
@@ -162,7 +154,7 @@ public class ListSoftwaresResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the software.
+             * The tag of the software.
              */
             public Builder tag(String tag) {
                 this.tag = tag;
@@ -170,7 +162,7 @@ public class ListSoftwaresResponseBody extends TeaModel {
             }
 
             /**
-             * Version.
+             * The version of the software.
              */
             public Builder version(String version) {
                 this.version = version;
@@ -324,7 +316,11 @@ public class ListSoftwaresResponseBody extends TeaModel {
             private String schedulerVersion; 
 
             /**
-             * The version of the E-HPC client.
+             * The service type of the domain account. Valid values:
+             * <p>
+             * 
+             * *   nis
+             * *   ldap
              */
             public Builder accountType(String accountType) {
                 this.accountType = accountType;
@@ -332,11 +328,7 @@ public class ListSoftwaresResponseBody extends TeaModel {
             }
 
             /**
-             * The service type of the domain account. Valid values:
-             * <p>
-             * 
-             * *   nis
-             * *   ldap
+             * The version of the domain account service.
              */
             public Builder accountVersion(String accountVersion) {
                 this.accountVersion = accountVersion;
@@ -344,11 +336,7 @@ public class ListSoftwaresResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether the software is required. Valid values:
-             * <p>
-             * 
-             * *   false: optional
-             * *   true: required
+             * The list of the software in the cluster.
              */
             public Builder applications(Applications applications) {
                 this.applications = applications;
@@ -356,7 +344,7 @@ public class ListSoftwaresResponseBody extends TeaModel {
             }
 
             /**
-             * The list of the software in the cluster.
+             * The version of the E-HPC client.
              */
             public Builder ehpcVersion(String ehpcVersion) {
                 this.ehpcVersion = ehpcVersion;
@@ -364,7 +352,7 @@ public class ListSoftwaresResponseBody extends TeaModel {
             }
 
             /**
-             * The version of the scheduler.
+             * The image tag of the cluster.
              */
             public Builder osTag(String osTag) {
                 this.osTag = osTag;
@@ -372,7 +360,19 @@ public class ListSoftwaresResponseBody extends TeaModel {
             }
 
             /**
-             * The image tag of the cluster.
+             * The type of the scheduler. Valid values:
+             * <p>
+             * 
+             * *   pbs
+             * *   pbs19
+             * *   slurm
+             * *   slurm19
+             * *   slurm20
+             * *   opengridscheduler
+             * *   deadline
+             * *   gridengine
+             * *   cube
+             * *   custom
              */
             public Builder schedulerType(String schedulerType) {
                 this.schedulerType = schedulerType;
@@ -380,7 +380,7 @@ public class ListSoftwaresResponseBody extends TeaModel {
             }
 
             /**
-             * The version of the domain account service.
+             * The version of the scheduler.
              */
             public Builder schedulerVersion(String schedulerVersion) {
                 this.schedulerVersion = schedulerVersion;
