@@ -428,6 +428,9 @@ public class HotelGoodsQueryResponseBody extends TeaModel {
         @NameInMap("last_discounts_price")
         private Long lastDiscountsPrice;
 
+        @NameInMap("last_discounts_rounding_price")
+        private Long lastDiscountsRoundingPrice;
+
         @NameInMap("last_num")
         private Integer lastNum;
 
@@ -442,6 +445,7 @@ public class HotelGoodsQueryResponseBody extends TeaModel {
             this.breakfast = builder.breakfast;
             this.discountPrice = builder.discountPrice;
             this.lastDiscountsPrice = builder.lastDiscountsPrice;
+            this.lastDiscountsRoundingPrice = builder.lastDiscountsRoundingPrice;
             this.lastNum = builder.lastNum;
             this.rateStartTime = builder.rateStartTime;
             this.status = builder.status;
@@ -484,6 +488,13 @@ public class HotelGoodsQueryResponseBody extends TeaModel {
         }
 
         /**
+         * @return lastDiscountsRoundingPrice
+         */
+        public Long getLastDiscountsRoundingPrice() {
+            return this.lastDiscountsRoundingPrice;
+        }
+
+        /**
          * @return lastNum
          */
         public Integer getLastNum() {
@@ -509,6 +520,7 @@ public class HotelGoodsQueryResponseBody extends TeaModel {
             private String breakfast; 
             private Long discountPrice; 
             private Long lastDiscountsPrice; 
+            private Long lastDiscountsRoundingPrice; 
             private Integer lastNum; 
             private String rateStartTime; 
             private Integer status; 
@@ -542,6 +554,14 @@ public class HotelGoodsQueryResponseBody extends TeaModel {
              */
             public Builder lastDiscountsPrice(Long lastDiscountsPrice) {
                 this.lastDiscountsPrice = lastDiscountsPrice;
+                return this;
+            }
+
+            /**
+             * last_discounts_rounding_price.
+             */
+            public Builder lastDiscountsRoundingPrice(Long lastDiscountsRoundingPrice) {
+                this.lastDiscountsRoundingPrice = lastDiscountsRoundingPrice;
                 return this;
             }
 
