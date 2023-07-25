@@ -32,6 +32,10 @@ public class UpdateUserBackupFileRequest extends Request {
     private String regionId;
 
     @Query
+    @NameInMap("ResourceGroupId")
+    private String resourceGroupId;
+
+    @Query
     @NameInMap("ResourceOwnerAccount")
     private String resourceOwnerAccount;
 
@@ -49,6 +53,7 @@ public class UpdateUserBackupFileRequest extends Request {
         this.comment = builder.comment;
         this.ownerId = builder.ownerId;
         this.regionId = builder.regionId;
+        this.resourceGroupId = builder.resourceGroupId;
         this.resourceOwnerAccount = builder.resourceOwnerAccount;
         this.resourceOwnerId = builder.resourceOwnerId;
         this.retention = builder.retention;
@@ -96,6 +101,13 @@ public class UpdateUserBackupFileRequest extends Request {
     }
 
     /**
+     * @return resourceGroupId
+     */
+    public String getResourceGroupId() {
+        return this.resourceGroupId;
+    }
+
+    /**
      * @return resourceOwnerAccount
      */
     public String getResourceOwnerAccount() {
@@ -121,6 +133,7 @@ public class UpdateUserBackupFileRequest extends Request {
         private String comment; 
         private Long ownerId; 
         private String regionId; 
+        private String resourceGroupId; 
         private String resourceOwnerAccount; 
         private Long resourceOwnerId; 
         private Integer retention; 
@@ -135,6 +148,7 @@ public class UpdateUserBackupFileRequest extends Request {
             this.comment = request.comment;
             this.ownerId = request.ownerId;
             this.regionId = request.regionId;
+            this.resourceGroupId = request.resourceGroupId;
             this.resourceOwnerAccount = request.resourceOwnerAccount;
             this.resourceOwnerId = request.resourceOwnerId;
             this.retention = request.retention;
@@ -173,6 +187,15 @@ public class UpdateUserBackupFileRequest extends Request {
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
             this.regionId = regionId;
+            return this;
+        }
+
+        /**
+         * ResourceGroupId.
+         */
+        public Builder resourceGroupId(String resourceGroupId) {
+            this.putQueryParameter("ResourceGroupId", resourceGroupId);
+            this.resourceGroupId = resourceGroupId;
             return this;
         }
 

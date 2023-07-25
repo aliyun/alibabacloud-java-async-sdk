@@ -27,6 +27,10 @@ public class ModifyReadonlyInstanceDelayReplicationTimeRequest extends Request {
     private String readSQLReplicationTime;
 
     @Query
+    @NameInMap("ResourceGroupId")
+    private String resourceGroupId;
+
+    @Query
     @NameInMap("ResourceOwnerAccount")
     private String resourceOwnerAccount;
 
@@ -39,6 +43,7 @@ public class ModifyReadonlyInstanceDelayReplicationTimeRequest extends Request {
         this.DBInstanceId = builder.DBInstanceId;
         this.ownerId = builder.ownerId;
         this.readSQLReplicationTime = builder.readSQLReplicationTime;
+        this.resourceGroupId = builder.resourceGroupId;
         this.resourceOwnerAccount = builder.resourceOwnerAccount;
         this.resourceOwnerId = builder.resourceOwnerId;
     }
@@ -78,6 +83,13 @@ public class ModifyReadonlyInstanceDelayReplicationTimeRequest extends Request {
     }
 
     /**
+     * @return resourceGroupId
+     */
+    public String getResourceGroupId() {
+        return this.resourceGroupId;
+    }
+
+    /**
      * @return resourceOwnerAccount
      */
     public String getResourceOwnerAccount() {
@@ -95,6 +107,7 @@ public class ModifyReadonlyInstanceDelayReplicationTimeRequest extends Request {
         private String DBInstanceId; 
         private Long ownerId; 
         private String readSQLReplicationTime; 
+        private String resourceGroupId; 
         private String resourceOwnerAccount; 
         private Long resourceOwnerId; 
 
@@ -107,6 +120,7 @@ public class ModifyReadonlyInstanceDelayReplicationTimeRequest extends Request {
             this.DBInstanceId = request.DBInstanceId;
             this.ownerId = request.ownerId;
             this.readSQLReplicationTime = request.readSQLReplicationTime;
+            this.resourceGroupId = request.resourceGroupId;
             this.resourceOwnerAccount = request.resourceOwnerAccount;
             this.resourceOwnerId = request.resourceOwnerId;
         } 
@@ -135,6 +149,15 @@ public class ModifyReadonlyInstanceDelayReplicationTimeRequest extends Request {
         public Builder readSQLReplicationTime(String readSQLReplicationTime) {
             this.putQueryParameter("ReadSQLReplicationTime", readSQLReplicationTime);
             this.readSQLReplicationTime = readSQLReplicationTime;
+            return this;
+        }
+
+        /**
+         * ResourceGroupId.
+         */
+        public Builder resourceGroupId(String resourceGroupId) {
+            this.putQueryParameter("ResourceGroupId", resourceGroupId);
+            this.resourceGroupId = resourceGroupId;
             return this;
         }
 

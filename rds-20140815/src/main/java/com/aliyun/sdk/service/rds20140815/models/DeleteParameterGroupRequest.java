@@ -27,6 +27,10 @@ public class DeleteParameterGroupRequest extends Request {
     private String regionId;
 
     @Query
+    @NameInMap("ResourceGroupId")
+    private String resourceGroupId;
+
+    @Query
     @NameInMap("ResourceOwnerAccount")
     private String resourceOwnerAccount;
 
@@ -39,6 +43,7 @@ public class DeleteParameterGroupRequest extends Request {
         this.ownerId = builder.ownerId;
         this.parameterGroupId = builder.parameterGroupId;
         this.regionId = builder.regionId;
+        this.resourceGroupId = builder.resourceGroupId;
         this.resourceOwnerAccount = builder.resourceOwnerAccount;
         this.resourceOwnerId = builder.resourceOwnerId;
     }
@@ -78,6 +83,13 @@ public class DeleteParameterGroupRequest extends Request {
     }
 
     /**
+     * @return resourceGroupId
+     */
+    public String getResourceGroupId() {
+        return this.resourceGroupId;
+    }
+
+    /**
      * @return resourceOwnerAccount
      */
     public String getResourceOwnerAccount() {
@@ -95,6 +107,7 @@ public class DeleteParameterGroupRequest extends Request {
         private Long ownerId; 
         private String parameterGroupId; 
         private String regionId; 
+        private String resourceGroupId; 
         private String resourceOwnerAccount; 
         private Long resourceOwnerId; 
 
@@ -107,6 +120,7 @@ public class DeleteParameterGroupRequest extends Request {
             this.ownerId = request.ownerId;
             this.parameterGroupId = request.parameterGroupId;
             this.regionId = request.regionId;
+            this.resourceGroupId = request.resourceGroupId;
             this.resourceOwnerAccount = request.resourceOwnerAccount;
             this.resourceOwnerId = request.resourceOwnerId;
         } 
@@ -135,6 +149,15 @@ public class DeleteParameterGroupRequest extends Request {
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
             this.regionId = regionId;
+            return this;
+        }
+
+        /**
+         * ResourceGroupId.
+         */
+        public Builder resourceGroupId(String resourceGroupId) {
+            this.putQueryParameter("ResourceGroupId", resourceGroupId);
+            this.resourceGroupId = resourceGroupId;
             return this;
         }
 

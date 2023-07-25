@@ -26,11 +26,16 @@ public class DetachGadInstanceMemberRequest extends Request {
     @NameInMap("RegionId")
     private String regionId;
 
+    @Query
+    @NameInMap("ResourceGroupId")
+    private String resourceGroupId;
+
     private DetachGadInstanceMemberRequest(Builder builder) {
         super(builder);
         this.gadInstanceName = builder.gadInstanceName;
         this.memberInstanceName = builder.memberInstanceName;
         this.regionId = builder.regionId;
+        this.resourceGroupId = builder.resourceGroupId;
     }
 
     public static Builder builder() {
@@ -67,10 +72,18 @@ public class DetachGadInstanceMemberRequest extends Request {
         return this.regionId;
     }
 
+    /**
+     * @return resourceGroupId
+     */
+    public String getResourceGroupId() {
+        return this.resourceGroupId;
+    }
+
     public static final class Builder extends Request.Builder<DetachGadInstanceMemberRequest, Builder> {
         private String gadInstanceName; 
         private String memberInstanceName; 
         private String regionId; 
+        private String resourceGroupId; 
 
         private Builder() {
             super();
@@ -81,6 +94,7 @@ public class DetachGadInstanceMemberRequest extends Request {
             this.gadInstanceName = request.gadInstanceName;
             this.memberInstanceName = request.memberInstanceName;
             this.regionId = request.regionId;
+            this.resourceGroupId = request.resourceGroupId;
         } 
 
         /**
@@ -107,6 +121,15 @@ public class DetachGadInstanceMemberRequest extends Request {
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
             this.regionId = regionId;
+            return this;
+        }
+
+        /**
+         * ResourceGroupId.
+         */
+        public Builder resourceGroupId(String resourceGroupId) {
+            this.putQueryParameter("ResourceGroupId", resourceGroupId);
+            this.resourceGroupId = resourceGroupId;
             return this;
         }
 
